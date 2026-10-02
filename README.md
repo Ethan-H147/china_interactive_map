@@ -36,6 +36,14 @@ Hong Kong uses the Home Affairs Department's 18 district jurisdictions with Land
 
 `npm test` checks original source hashes, polygon closure, retained land parts, province/subdivision area agreement, unique boundary segments, bilingual names, flags, selection behavior, and lossless decompression. It also compares all 28 unaffected province borders with the previous version.
 
+## Population data
+
+The population panel uses revision 94716648 of Chinese Wikipedia’s [city population table](https://zh.wikipedia.org/w/index.php?title=中華人民共和國城市人口排名&oldid=94716648). The snapshot contains 684 rows, of which 317 match map regions by exact Chinese name and province. The table uses 2020 administrative boundaries. Mainland census figures are dated 1 November 2020; Hong Kong is dated end of 2020 and Macau the fourth quarter of 2020.
+
+`scripts/population-source.json` retains the extracted rows, revision, retrieval date, definitions, and downloaded HTML checksum. Run `node scripts/population.mjs` to regenerate the published dataset and match report. Pass a downloaded article HTML file as its first argument to import a new revision. The parser expands merged date cells and preserves missing values as `null`. It never estimates province totals or assigns a parent region’s population to its children.
+
+`scripts/population-match-report.json` records every unmatched row and four matched rows with inconsistent figures (Dezhou, Dingxi, Wuzhong, and Karamay). The panel flags those figures and retains the source values. A row called Linyi under Shanxi remains unmatched; it is not assigned to Linfen or to Shandong’s Linyi. The other unmatched rows belong to county-level cities absent from the map. `node scripts/validate-population.mjs` checks matching, dates, missing values, source errors, and selection scoping.
+
 ## UI copy
 
 Remove text that does not convey necessary information. Use plain, professional labels and factual descriptions. Do not add slogans, decorative headings, or promotional language.

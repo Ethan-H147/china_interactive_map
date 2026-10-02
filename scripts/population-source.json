@@ -1,0 +1,6172 @@
+{
+  "title": "中華人民共和國城市人口排名",
+  "url": "https://zh.wikipedia.org/wiki/中華人民共和國城市人口排名",
+  "revision": 94716648,
+  "revisionUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=94716648",
+  "retrieved": "2026-10-02",
+  "htmlSha256": "8352574ba61431b87b78b4940c47b70aa8b06917e5a24a00906458e5c1064f57",
+  "measures": {
+    "total": "Entire administrative region (地区人口)",
+    "towns": "Cities and towns (城镇人口)",
+    "urbanCore": "Urban core (城区人口)"
+  },
+  "boundaryYear": 2020,
+  "rows": [
+    {
+      "province": "重庆",
+      "name": "重庆市",
+      "type": "直辖市",
+      "total": 32054159,
+      "towns": 22264028,
+      "urbanCore": 16343989,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "上海",
+      "name": "上海市",
+      "type": "直辖市",
+      "total": 24870895,
+      "towns": 22209380,
+      "urbanCore": 19873080,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "北京",
+      "name": "北京市",
+      "type": "直辖市",
+      "total": 21893095,
+      "towns": 19166433,
+      "urbanCore": 17751681,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "深圳市",
+      "type": "副省级市",
+      "total": 17494398,
+      "towns": 17444609,
+      "urbanCore": 17438289,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "成都市",
+      "type": "副省级市",
+      "total": 20937757,
+      "towns": 16492980,
+      "urbanCore": 13340304,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "广州市",
+      "type": "副省级市",
+      "total": 18676605,
+      "towns": 16096724,
+      "urbanCore": 14878353,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "天津",
+      "name": "天津市",
+      "type": "直辖市",
+      "total": 13866009,
+      "towns": 11744440,
+      "urbanCore": 10933092,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "武汉市",
+      "type": "副省级市",
+      "total": 12447718,
+      "towns": 10494879,
+      "urbanCore": 9953005,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "苏州市",
+      "type": "地级市",
+      "total": 12748262,
+      "towns": 10418373,
+      "urbanCore": 3991180,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "杭州市",
+      "type": "副省级市",
+      "total": 11936010,
+      "towns": 9942081,
+      "urbanCore": 8741724,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "郑州市",
+      "type": "地级市",
+      "total": 12600574,
+      "towns": 9879029,
+      "urbanCore": 5344842,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "西安市",
+      "type": "副省级市",
+      "total": 12183280,
+      "towns": 9723308,
+      "urbanCore": 9283714,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "东莞市",
+      "type": "地级市",
+      "total": 10466625,
+      "towns": 9644871,
+      "urbanCore": 9557552,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "佛山市",
+      "type": "地级市",
+      "total": 9498863,
+      "towns": 9042509,
+      "urbanCore": 8538876,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "长沙市",
+      "type": "地级市",
+      "total": 10047914,
+      "towns": 8300000,
+      "urbanCore": 5546354,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "南京市",
+      "type": "副省级市",
+      "total": 9314685,
+      "towns": 8085241,
+      "urbanCore": 7914639,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "香港",
+      "name": "香港",
+      "type": "特别行政区",
+      "total": 7474200,
+      "towns": null,
+      "urbanCore": 7474200,
+      "date": "2020年底"
+    },
+    {
+      "province": "河北",
+      "name": "石家庄市",
+      "type": "地级市",
+      "total": 11235086,
+      "towns": 7884319,
+      "urbanCore": 4332382,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "合肥市",
+      "type": "地级市",
+      "total": 9369881,
+      "towns": 7709277,
+      "urbanCore": 3777623,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "青岛市",
+      "type": "副省级市",
+      "total": 10071722,
+      "towns": 7688474,
+      "urbanCore": 6007745,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "沈阳市",
+      "type": "副省级市",
+      "total": 9070093,
+      "towns": 7665638,
+      "urbanCore": 7067239,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "宁波市",
+      "type": "副省级市",
+      "total": 9404283,
+      "towns": 7335604,
+      "urbanCore": 3608835,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "哈尔滨市",
+      "type": "地级市",
+      "total": 10009854,
+      "towns": 7067709,
+      "urbanCore": 5499284,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "温州市",
+      "type": "地级市",
+      "total": 9572903,
+      "towns": 6907989,
+      "urbanCore": 2381811,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "济南市",
+      "type": "副省级市",
+      "total": 9202432,
+      "towns": 6760007,
+      "urbanCore": 5877987,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "昆明市",
+      "type": "地级市",
+      "total": 8460088,
+      "towns": 6740458,
+      "urbanCore": 5340881,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "保定市",
+      "type": "地级市",
+      "total": 11544036,
+      "towns": 6425944,
+      "urbanCore": 1896945,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "无锡市",
+      "type": "地级市",
+      "total": 7462135,
+      "towns": 6178208,
+      "urbanCore": 3570882,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "大连市",
+      "type": "副省级市",
+      "total": 7450785,
+      "towns": 6135727,
+      "urbanCore": 5208288,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "临沂市",
+      "type": "地级市",
+      "total": 11018365,
+      "towns": 6066355,
+      "urbanCore": 2467222,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "潍坊市",
+      "type": "地级市",
+      "total": 9386705,
+      "towns": 6046086,
+      "urbanCore": 1860989,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "南宁市",
+      "type": "地级市",
+      "total": 8741584,
+      "towns": 6023504,
+      "urbanCore": 4567493,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "泉州市",
+      "type": "地级市",
+      "total": 8782285,
+      "towns": 6012651,
+      "urbanCore": 1354018,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "福州市",
+      "type": "地级市",
+      "total": 8291268,
+      "towns": 6010242,
+      "urbanCore": 3535823,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "长春市",
+      "type": "副省级市",
+      "total": 9066906,
+      "towns": 5979069,
+      "urbanCore": 3425890,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "徐州市",
+      "type": "地级市",
+      "total": 9083790,
+      "towns": 5961888,
+      "urbanCore": 2055095,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "邯郸市",
+      "type": "地级市",
+      "total": 9413990,
+      "towns": 5485163,
+      "urbanCore": 1940903,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "南通市",
+      "type": "地级市",
+      "total": 7726635,
+      "towns": 5442932,
+      "urbanCore": 1582373,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "济宁市",
+      "type": "地级市",
+      "total": 8357897,
+      "towns": 5022190,
+      "urbanCore": 1301175,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "唐山市",
+      "type": "地级市",
+      "total": 7701983,
+      "towns": 4963907,
+      "urbanCore": 2135991,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "赣州市",
+      "type": "地级市",
+      "total": 8960600,
+      "towns": 4961719,
+      "urbanCore": 1639373,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "南阳市",
+      "type": "地级市",
+      "total": 9713112,
+      "towns": 4913994,
+      "urbanCore": 849688,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "南昌市",
+      "type": "地级市",
+      "total": 6255007,
+      "towns": 4883763,
+      "urbanCore": 3347548,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "金华市",
+      "type": "地级市",
+      "total": 7050683,
+      "towns": 4808140,
+      "urbanCore": 803612,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "贵阳市",
+      "type": "地级市",
+      "total": 5987018,
+      "towns": 4794071,
+      "urbanCore": 3826905,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "烟台市",
+      "type": "地级市",
+      "total": 7102116,
+      "towns": 4780207,
+      "urbanCore": 2009631,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "太原市",
+      "type": "地级市",
+      "total": 5304061,
+      "towns": 4723657,
+      "urbanCore": 4049693,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "厦门市",
+      "type": "副省级市",
+      "total": 5163970,
+      "towns": 4617251,
+      "urbanCore": 4363835,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "洛阳市",
+      "type": "地级市",
+      "total": 7056699,
+      "towns": 4585335,
+      "urbanCore": 1992681,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "菏泽市",
+      "type": "地级市",
+      "total": 8795939,
+      "towns": 4461825,
+      "urbanCore": 817123,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "惠州市",
+      "type": "地级市",
+      "total": 6042852,
+      "towns": 4399276,
+      "urbanCore": 2668887,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "盐城市",
+      "type": "地级市",
+      "total": 6709629,
+      "towns": 4301656,
+      "urbanCore": 1354398,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "台州市",
+      "type": "地级市",
+      "total": 6622888,
+      "towns": 4104712,
+      "urbanCore": 1338412,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "常州市",
+      "type": "地级市",
+      "total": 5278121,
+      "towns": 4067856,
+      "urbanCore": 3088169,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "汕头市",
+      "type": "地级市",
+      "total": 5502031,
+      "towns": 3890169,
+      "urbanCore": 2530788,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "乌鲁木齐市",
+      "type": "地级市",
+      "total": 4054369,
+      "towns": 3882487,
+      "urbanCore": 3730317,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "嘉兴市",
+      "type": "地级市",
+      "total": 5400868,
+      "towns": 3852932,
+      "urbanCore": 987564,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "周口市",
+      "type": "地级市",
+      "total": 9026015,
+      "towns": 3843349,
+      "urbanCore": 759576,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "中山市",
+      "type": "地级市",
+      "total": 4418060,
+      "towns": 3841873,
+      "urbanCore": 2742775,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "遵义市",
+      "type": "地级市",
+      "total": 6606675,
+      "towns": 3745222,
+      "urbanCore": 1467408,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "绍兴市",
+      "type": "地级市",
+      "total": 5270977,
+      "towns": 3743366,
+      "urbanCore": 2166695,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "沧州市",
+      "type": "地级市",
+      "total": 7300783,
+      "towns": 3733313,
+      "urbanCore": 810845,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "兰州市",
+      "type": "地级市",
+      "total": 4359446,
+      "towns": 3622550,
+      "urbanCore": 2889065,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "商丘市",
+      "type": "地级市",
+      "total": 7816831,
+      "towns": 3610205,
+      "urbanCore": 762026,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "衡阳市",
+      "type": "地级市",
+      "total": 6645243,
+      "towns": 3606453,
+      "urbanCore": 1025729,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "新乡市",
+      "type": "地级市",
+      "total": 6251929,
+      "towns": 3599703,
+      "urbanCore": 1093219,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "廊坊市",
+      "type": "地级市",
+      "total": 5465087,
+      "towns": 3543106,
+      "urbanCore": 659566,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "上饶市",
+      "type": "地级市",
+      "total": 6491088,
+      "towns": 3526049,
+      "urbanCore": 1196617,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "泰安市",
+      "type": "地级市",
+      "total": 5472217,
+      "towns": 3498112,
+      "urbanCore": 1159255,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "淄博市",
+      "type": "地级市",
+      "total": 4704138,
+      "towns": 3493664,
+      "urbanCore": 2395827,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "阜阳市",
+      "type": "地级市",
+      "total": 8200264,
+      "towns": 3441982,
+      "urbanCore": 861427,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "邵阳市",
+      "type": "地级市",
+      "total": 6563520,
+      "towns": 3423660,
+      "urbanCore": 632945,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "邢台市",
+      "type": "地级市",
+      "total": 7111106,
+      "towns": 3264141,
+      "urbanCore": 1172708,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "江门市",
+      "type": "地级市",
+      "total": 4798090,
+      "towns": 3244934,
+      "urbanCore": 1673178,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "扬州市",
+      "type": "地级市",
+      "total": 4559797,
+      "towns": 3238904,
+      "urbanCore": 1506910,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "襄阳市",
+      "type": "地级市",
+      "total": 5260951,
+      "towns": 3221846,
+      "urbanCore": 1463654,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "聊城市",
+      "type": "地级市",
+      "total": 5952128,
+      "towns": 3152954,
+      "urbanCore": 1090689,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "信阳市",
+      "type": "地级市",
+      "total": 6234401,
+      "towns": 3124683,
+      "urbanCore": 886838,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "宿迁市",
+      "type": "地级市",
+      "total": 4986192,
+      "towns": 3103531,
+      "urbanCore": 827263,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "漳州市",
+      "type": "地级市",
+      "total": 5054328,
+      "towns": 3101501,
+      "urbanCore": 765072,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "驻马店市",
+      "type": "地级市",
+      "total": 7008427,
+      "towns": 3093633,
+      "urbanCore": 481403,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "泰州市",
+      "type": "地级市",
+      "total": 4512762,
+      "towns": 3071179,
+      "urbanCore": 976684,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "岳阳市",
+      "type": "地级市",
+      "total": 5051922,
+      "towns": 3064473,
+      "urbanCore": 1067337,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "淮安市",
+      "type": "地级市",
+      "total": 4556230,
+      "towns": 2992223,
+      "urbanCore": 1303052,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "德州市",
+      "type": "地级市",
+      "total": 561194,
+      "towns": 2990953,
+      "urbanCore": 658512,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "常德市",
+      "type": "地级市",
+      "total": 5279102,
+      "towns": 2968067,
+      "urbanCore": 897644,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "柳州市",
+      "type": "地级市",
+      "total": 4157934,
+      "towns": 2907694,
+      "urbanCore": 2058881,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "毕节市",
+      "type": "地级市",
+      "total": 6899636,
+      "towns": 2906332,
+      "urbanCore": 609901,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "安阳市",
+      "type": "地级市",
+      "total": 5477614,
+      "towns": 2905280,
+      "urbanCore": 991347,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "荆州市",
+      "type": "地级市",
+      "total": 5231180,
+      "towns": 2904346,
+      "urbanCore": 826564,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "咸阳市",
+      "type": "地级市",
+      "total": 4983340,
+      "towns": 2899569,
+      "urbanCore": 1351034,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "玉林市",
+      "type": "地级市",
+      "total": 5796766,
+      "towns": 2883897,
+      "urbanCore": 730564,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "连云港市",
+      "type": "地级市",
+      "total": 4599360,
+      "towns": 2829565,
+      "urbanCore": 1022210,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "曲靖市",
+      "type": "地级市",
+      "total": 5765775,
+      "towns": 2827160,
+      "urbanCore": 972159,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "揭阳市",
+      "type": "地级市",
+      "total": 5577814,
+      "towns": 2825237,
+      "urbanCore": 947303,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "宜春市",
+      "type": "地级市",
+      "total": 5007702,
+      "towns": 2821642,
+      "urbanCore": 679153,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "南充市",
+      "type": "地级市",
+      "total": 5607565,
+      "towns": 2815934,
+      "urbanCore": 1193494,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "九江市",
+      "type": "地级市",
+      "total": 4600276,
+      "towns": 2814240,
+      "urbanCore": 895579,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "黄冈市",
+      "type": "地级市",
+      "total": 5882719,
+      "towns": 2797377,
+      "urbanCore": 320943,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "株洲市",
+      "type": "地级市",
+      "total": 3902738,
+      "towns": 2781072,
+      "urbanCore": 1315518,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "呼和浩特市",
+      "type": "地级市",
+      "total": 3446100,
+      "towns": 2727517,
+      "urbanCore": 2232683,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "张家口市",
+      "type": "地级市",
+      "total": 4118908,
+      "towns": 2722683,
+      "urbanCore": 1092783,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "郴州市",
+      "type": "地级市",
+      "total": 4667134,
+      "towns": 2715350,
+      "urbanCore": 770651,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "茂名市",
+      "type": "地级市",
+      "total": 6174050,
+      "towns": 2689580,
+      "urbanCore": 897785,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "达州市",
+      "type": "地级市",
+      "total": 5385422,
+      "towns": 2682166,
+      "urbanCore": 968931,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "平顶山市",
+      "type": "地级市",
+      "total": 4987137,
+      "towns": 2664125,
+      "urbanCore": 989981,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "芜湖市",
+      "type": "地级市",
+      "total": 3644420,
+      "towns": 2635348,
+      "urbanCore": 1217401,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "桂林市",
+      "type": "地级市",
+      "total": 4931137,
+      "towns": 2592914,
+      "urbanCore": 1253018,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "永州市",
+      "type": "地级市",
+      "total": 5289824,
+      "towns": 2583050,
+      "urbanCore": 583216,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "孝感市",
+      "type": "地级市",
+      "total": 4270371,
+      "towns": 2582246,
+      "urbanCore": 697017,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "鞍山市",
+      "type": "地级市",
+      "total": 3325372,
+      "towns": 2579691,
+      "urbanCore": 1457387,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "镇江市",
+      "type": "地级市",
+      "total": 3210418,
+      "towns": 2550827,
+      "urbanCore": 797942,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "绵阳市",
+      "type": "地级市",
+      "total": 4868243,
+      "towns": 2515103,
+      "urbanCore": 1382004,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "开封市",
+      "type": "地级市",
+      "total": 4824016,
+      "towns": 2500493,
+      "urbanCore": 1101705,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "滁州市",
+      "type": "地级市",
+      "total": 3987054,
+      "towns": 2465704,
+      "urbanCore": 446172,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "安庆市",
+      "type": "地级市",
+      "total": 4165284,
+      "towns": 2412500,
+      "urbanCore": 643353,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "宜昌市",
+      "type": "地级市",
+      "total": 3762407,
+      "towns": 2399242,
+      "urbanCore": 1222699,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "宜宾市",
+      "type": "地级市",
+      "total": 4588804,
+      "towns": 2358244,
+      "urbanCore": 1079605,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "运城市",
+      "type": "地级市",
+      "total": 4774508,
+      "towns": 2352523,
+      "urbanCore": 655620,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "海口市",
+      "type": "地级市",
+      "total": 2873358,
+      "towns": 2349239,
+      "urbanCore": 2089572,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "许昌市",
+      "type": "地级市",
+      "total": 4379998,
+      "towns": 2345380,
+      "urbanCore": 826346,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "滨州市",
+      "type": "地级市",
+      "total": 3928568,
+      "towns": 2343282,
+      "urbanCore": 742801,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "吉安市",
+      "type": "地级市",
+      "total": 4469176,
+      "towns": 2339591,
+      "urbanCore": 438828,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "包头市",
+      "type": "地级市",
+      "total": 2709378,
+      "towns": 2334393,
+      "urbanCore": 189779,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "宿州市",
+      "type": "地级市",
+      "total": 5324476,
+      "towns": 2330027,
+      "urbanCore": 638910,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "渭南市",
+      "type": "地级市",
+      "total": 4688744,
+      "towns": 2311932,
+      "urbanCore": 495833,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "潜山市",
+      "type": "县级市",
+      "total": 441224,
+      "towns": 2308099,
+      "urbanCore": 147683,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "衡水市",
+      "type": "地级市",
+      "total": 4212933,
+      "towns": 2306235,
+      "urbanCore": 838460,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "吉林市",
+      "type": "地级市",
+      "total": 3623713,
+      "towns": 2301426,
+      "urbanCore": 1296206,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "宁夏",
+      "name": "银川市",
+      "type": "地级市",
+      "total": 2859074,
+      "towns": 2293656,
+      "urbanCore": 1519150,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "枣庄市",
+      "type": "地级市",
+      "total": 3855601,
+      "towns": 2287321,
+      "urbanCore": 1075279,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "大同市",
+      "type": "地级市",
+      "total": 3105591,
+      "towns": 2257531,
+      "urbanCore": 1754682,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "峨眉山市",
+      "type": "县级市",
+      "total": 419107,
+      "towns": 2252682,
+      "urbanCore": 231785,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "榆林市",
+      "type": "地级市",
+      "total": 3624750,
+      "towns": 2232798,
+      "urbanCore": 827247,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "焦作市",
+      "type": "地级市",
+      "total": 3521078,
+      "towns": 2219389,
+      "urbanCore": 778039,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "湖州市",
+      "type": "地级市",
+      "total": 3367579,
+      "towns": 2210571,
+      "urbanCore": 745028,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "珠海市",
+      "type": "地级市",
+      "total": 2439585,
+      "towns": 2207090,
+      "urbanCore": 1898012,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "齐齐哈尔市",
+      "type": "地级市",
+      "total": 4067489,
+      "towns": 2181650,
+      "urbanCore": 1211530,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "怀化市",
+      "type": "地级市",
+      "total": 4587594,
+      "towns": 2164261,
+      "urbanCore": 586767,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "清远市",
+      "type": "地级市",
+      "total": 3969473,
+      "towns": 2163209,
+      "urbanCore": 890808,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "贵港市",
+      "type": "地级市",
+      "total": 4316262,
+      "towns": 2158124,
+      "urbanCore": 712012,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "赤峰市",
+      "type": "地级市",
+      "total": 4035967,
+      "towns": 2143486,
+      "urbanCore": 1013670,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "泸州市",
+      "type": "地级市",
+      "total": 4254149,
+      "towns": 2137464,
+      "urbanCore": 999809,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "六安市",
+      "type": "地级市",
+      "total": 4393699,
+      "towns": 2130346,
+      "urbanCore": 818023,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "亳州市",
+      "type": "地级市",
+      "total": 4996844,
+      "towns": 2123492,
+      "urbanCore": 634335,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "临沂市",
+      "type": "地级市",
+      "total": 3976481,
+      "towns": 2114457,
+      "urbanCore": 666185,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "肇庆市",
+      "type": "地级市",
+      "total": 4113594,
+      "towns": 2098614,
+      "urbanCore": 836895,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "抚州市",
+      "type": "地级市",
+      "total": 3614866,
+      "towns": 2058897,
+      "urbanCore": 786042,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "威海市",
+      "type": "地级市",
+      "total": 2906548,
+      "towns": 2040910,
+      "urbanCore": 667730,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "晋中市",
+      "type": "地级市",
+      "total": 3379498,
+      "towns": 2027808,
+      "urbanCore": 786456,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "大庆市",
+      "type": "地级市",
+      "total": 2781562,
+      "towns": 2016139,
+      "urbanCore": 1275974,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "莆田市",
+      "type": "地级市",
+      "total": 3210714,
+      "towns": 2013249,
+      "urbanCore": 1382456,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "昭通市",
+      "type": "地级市",
+      "total": 5092611,
+      "towns": 2012717,
+      "urbanCore": 375322,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "秦皇岛市",
+      "type": "地级市",
+      "total": 3136879,
+      "towns": 2006711,
+      "urbanCore": 1249303,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "梅州市",
+      "type": "地级市",
+      "total": 3873239,
+      "towns": 1997795,
+      "urbanCore": 65380,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "益阳市",
+      "type": "地级市",
+      "total": 3851564,
+      "towns": 1942517,
+      "urbanCore": 511966,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "青海",
+      "name": "西宁市",
+      "type": "地级市",
+      "total": 2467965,
+      "towns": 1940616,
+      "urbanCore": 1618954,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "德阳市",
+      "type": "地级市",
+      "total": 3456161,
+      "towns": 1934382,
+      "urbanCore": 664103,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "宁德市",
+      "type": "地级市",
+      "total": 3146789,
+      "towns": 1919132,
+      "urbanCore": 390652,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "承德市",
+      "type": "地级市",
+      "total": 3354444,
+      "towns": 1898080,
+      "urbanCore": 537583,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "宝鸡市",
+      "type": "地级市",
+      "total": 3321853,
+      "towns": 1894757,
+      "urbanCore": 854248,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "濮阳市",
+      "type": "地级市",
+      "total": 3772088,
+      "towns": 1884758,
+      "urbanCore": 642521,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "淮南市",
+      "type": "地级市",
+      "total": 3033528,
+      "towns": 1852729,
+      "urbanCore": 1085864,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "蚌埠市",
+      "type": "地级市",
+      "total": 3296408,
+      "towns": 1815557,
+      "urbanCore": 689398,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "日照市",
+      "type": "地级市",
+      "total": 2968365,
+      "towns": 1814663,
+      "urbanCore": 854826,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "吕梁市",
+      "type": "地级市",
+      "total": 3398431,
+      "towns": 1811822,
+      "urbanCore": 333778,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "娄底市",
+      "type": "地级市",
+      "total": 3826996,
+      "towns": 1796776,
+      "urbanCore": 543950,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "长治市",
+      "type": "地级市",
+      "total": 3180884,
+      "towns": 1796139,
+      "urbanCore": 1024148,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "湘潭市",
+      "type": "地级市",
+      "total": 2726181,
+      "towns": 1754969,
+      "urbanCore": 716064,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "龙岩市",
+      "type": "地级市",
+      "total": 2723637,
+      "towns": 1712623,
+      "urbanCore": 733581,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "乐山市",
+      "type": "地级市",
+      "total": 3160168,
+      "towns": 1678367,
+      "urbanCore": 701111,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "鄂尔多斯市",
+      "type": "地级市",
+      "total": 2153638,
+      "towns": 1667962,
+      "urbanCore": 668906,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "呼伦贝尔市",
+      "type": "地级市",
+      "total": 2242875,
+      "towns": 1656914,
+      "urbanCore": 432316,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "昆山市",
+      "type": "县级市",
+      "total": 2092496,
+      "towns": 1652159,
+      "urbanCore": 1414348,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "潮州市",
+      "type": "地级市",
+      "total": 2568387,
+      "towns": 1648643,
+      "urbanCore": 933560,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "绥化市",
+      "type": "地级市",
+      "total": 3756167,
+      "towns": 1639864,
+      "urbanCore": 316174,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "韶关市",
+      "type": "地级市",
+      "total": 2855131,
+      "towns": 1637895,
+      "urbanCore": 738654,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "汉中市",
+      "type": "地级市",
+      "total": 3211462,
+      "towns": 1636715,
+      "urbanCore": 529668,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "黄石市",
+      "type": "地级市",
+      "total": 2469079,
+      "towns": 1628537,
+      "urbanCore": 672423,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "遂宁市",
+      "type": "地级市",
+      "total": 2814196,
+      "towns": 1612641,
+      "urbanCore": 750216,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "南平市",
+      "type": "地级市",
+      "total": 2680645,
+      "towns": 1599098,
+      "urbanCore": 455927,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "梧州市",
+      "type": "地级市",
+      "total": 2820977,
+      "towns": 1595326,
+      "urbanCore": 613126,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "内江市",
+      "type": "地级市",
+      "total": 3140678,
+      "towns": 1572595,
+      "urbanCore": 443664,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "三明市",
+      "type": "地级市",
+      "total": 2486450,
+      "towns": 1571500,
+      "urbanCore": 361504,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "东营市",
+      "type": "地级市",
+      "total": 2193518,
+      "towns": 1567251,
+      "urbanCore": 930562,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "营口市",
+      "type": "地级市",
+      "total": 2328582,
+      "towns": 1564242,
+      "urbanCore": 956686,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "汕尾市",
+      "type": "地级市",
+      "total": 2738482,
+      "towns": 1561303,
+      "urbanCore": 303634,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "百色市",
+      "type": "地级市",
+      "total": 3571505,
+      "towns": 1551425,
+      "urbanCore": 494461,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "丽水市",
+      "type": "地级市",
+      "total": 2507396,
+      "towns": 1550182,
+      "urbanCore": 408801,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "马鞍山市",
+      "type": "地级市",
+      "total": 2159930,
+      "towns": 1548550,
+      "urbanCore": 863074,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "河池市",
+      "type": "地级市",
+      "total": 3417845,
+      "towns": 1533999,
+      "urbanCore": 456821,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "荆门市",
+      "type": "地级市",
+      "total": 2596927,
+      "towns": 1525278,
+      "urbanCore": 586477,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "宣城市",
+      "type": "地级市",
+      "total": 2500063,
+      "towns": 1520484,
+      "urbanCore": 256084,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "铜仁市",
+      "type": "地级市",
+      "total": 3298468,
+      "towns": 1518674,
+      "urbanCore": 417810,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "咸宁市",
+      "type": "地级市",
+      "total": 2685316,
+      "towns": 1508314,
+      "urbanCore": 451984,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "丹东市",
+      "type": "地级市",
+      "total": 2188436,
+      "towns": 1507471,
+      "urbanCore": 684536,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "牡丹江市",
+      "type": "地级市",
+      "total": 2290208,
+      "towns": 1507096,
+      "urbanCore": 733482,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "眉山市",
+      "type": "地级市",
+      "total": 2955219,
+      "towns": 1481605,
+      "urbanCore": 674734,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "六盘水市",
+      "type": "地级市",
+      "total": 3031602,
+      "towns": 1481555,
+      "urbanCore": 707389,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "义乌市",
+      "type": "县级市",
+      "total": 1859390,
+      "towns": 1481384,
+      "urbanCore": 1184150,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "慈溪市",
+      "type": "县级市",
+      "total": 1829488,
+      "towns": 1457510,
+      "urbanCore": 1061894,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "抚顺市",
+      "type": "地级市",
+      "total": 1861372,
+      "towns": 1457326,
+      "urbanCore": 1208021,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "忻州市",
+      "type": "地级市",
+      "total": 2689668,
+      "towns": 1446429,
+      "urbanCore": 368109,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "通辽市",
+      "type": "地级市",
+      "total": 2873168,
+      "towns": 1437489,
+      "urbanCore": 434037,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "朝阳市",
+      "type": "地级市",
+      "total": 2872857,
+      "towns": 1435268,
+      "urbanCore": 584880,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "广安市",
+      "type": "地级市",
+      "total": 3254883,
+      "towns": 1434388,
+      "urbanCore": 399907,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "晋江市",
+      "type": "县级市",
+      "total": 2061551,
+      "towns": 1416151,
+      "urbanCore": 1012524,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "阳江市",
+      "type": "地级市",
+      "total": 2602959,
+      "towns": 1409820,
+      "urbanCore": 743484,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "佳木斯市",
+      "type": "地级市",
+      "total": 2156505,
+      "towns": 1405396,
+      "urbanCore": 672876,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "延安市",
+      "type": "地级市",
+      "total": 2282581,
+      "towns": 1400750,
+      "urbanCore": 457152,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "钦州市",
+      "type": "地级市",
+      "total": 3302238,
+      "towns": 1387474,
+      "urbanCore": 518653,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "自贡市",
+      "type": "地级市",
+      "total": 2489256,
+      "towns": 1379139,
+      "urbanCore": 767786,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "晋城市",
+      "type": "地级市",
+      "total": 2194545,
+      "towns": 1376521,
+      "urbanCore": 604967,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "河源市",
+      "type": "地级市",
+      "total": 2837686,
+      "towns": 1376168,
+      "urbanCore": 631400,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "天水市",
+      "type": "地级市",
+      "total": 2984659,
+      "towns": 1360186,
+      "urbanCore": 657701,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "葫芦岛市",
+      "type": "地级市",
+      "total": 2434194,
+      "towns": 1332975,
+      "urbanCore": 642884,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "江阴市",
+      "type": "县级市",
+      "total": 1779515,
+      "towns": 1331352,
+      "urbanCore": 836429,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "铁岭市",
+      "type": "地级市",
+      "total": 2388294,
+      "towns": 1318021,
+      "urbanCore": 251693,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "衢州市",
+      "type": "地级市",
+      "total": 2276184,
+      "towns": 1310498,
+      "urbanCore": 532745,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "漯河市",
+      "type": "地级市",
+      "total": 2367490,
+      "towns": 1298358,
+      "urbanCore": 658697,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "淮北市",
+      "type": "地级市",
+      "total": 1970265,
+      "towns": 1264102,
+      "urbanCore": 815765,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "巴中市",
+      "type": "地级市",
+      "total": 2712894,
+      "towns": 1252293,
+      "urbanCore": 472166,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "安康市",
+      "type": "地级市",
+      "total": 2493436,
+      "towns": 1244784,
+      "urbanCore": 316416,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "常熟市",
+      "type": "县级市",
+      "total": 1677050,
+      "towns": 1230599,
+      "urbanCore": 828661,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "萍乡市",
+      "type": "地级市",
+      "total": 1804805,
+      "towns": 1223774,
+      "urbanCore": 614472,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "十堰市",
+      "type": "地级市",
+      "total": 3209004,
+      "towns": 1221419,
+      "urbanCore": 1084183,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "玉溪市",
+      "type": "地级市",
+      "total": 2249502,
+      "towns": 1210702,
+      "urbanCore": 512719,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "三门峡市",
+      "type": "地级市",
+      "total": 2034872,
+      "towns": 1165164,
+      "urbanCore": 382018,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "随州市",
+      "type": "地级市",
+      "total": 2047923,
+      "towns": 1163902,
+      "urbanCore": 444387,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "安顺市",
+      "type": "地级市",
+      "total": 2570630,
+      "towns": 1146615,
+      "urbanCore": 536236,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "鸡西市",
+      "type": "地级市",
+      "total": 1502060,
+      "towns": 1091891,
+      "urbanCore": 626019,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "锦州市",
+      "type": "地级市",
+      "total": 2703853,
+      "towns": 1090598,
+      "urbanCore": 1014814,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "通化市",
+      "type": "地级市",
+      "total": 1812114,
+      "towns": 1085368,
+      "urbanCore": 387426,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "广元市",
+      "type": "地级市",
+      "total": 2305657,
+      "towns": 1084525,
+      "urbanCore": 475784,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "盘锦市",
+      "type": "地级市",
+      "total": 1389691,
+      "towns": 1075688,
+      "urbanCore": 942809,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "辽阳市",
+      "type": "地级市",
+      "total": 1604580,
+      "towns": 1071626,
+      "urbanCore": 742592,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "松原市",
+      "type": "地级市",
+      "total": 2252994,
+      "towns": 1056361,
+      "urbanCore": 474062,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "张家港市",
+      "type": "县级市",
+      "total": 1432044,
+      "towns": 1055893,
+      "urbanCore": 506354,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "本溪市",
+      "type": "地级市",
+      "total": 1326018,
+      "towns": 1053426,
+      "urbanCore": 765932,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "景德镇市",
+      "type": "地级市",
+      "total": 1618979,
+      "towns": 1052588,
+      "urbanCore": 538991,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "乐平市",
+      "type": "县级市",
+      "total": 1618979,
+      "towns": 1052588,
+      "urbanCore": 538991,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "云浮市",
+      "type": "地级市",
+      "total": 2383350,
+      "towns": 1043289,
+      "urbanCore": 332445,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "乌兰察布市",
+      "type": "地级市",
+      "total": 1706328,
+      "towns": 1018617,
+      "urbanCore": 380206,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "阜新市",
+      "type": "地级市",
+      "total": 1647280,
+      "towns": 1015622,
+      "urbanCore": 696563,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "余姚市",
+      "type": "县级市",
+      "total": 1254032,
+      "towns": 1013866,
+      "urbanCore": 769271,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "瑞安市",
+      "type": "县级市",
+      "total": 1520386,
+      "towns": 1012731,
+      "urbanCore": 978740,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "来宾市",
+      "type": "地级市",
+      "total": 2074611,
+      "towns": 1005712,
+      "urbanCore": 400854,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "贺州市",
+      "type": "地级市",
+      "total": 2007858,
+      "towns": 989187,
+      "urbanCore": 338683,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "朔州市",
+      "type": "地级市",
+      "total": 1593444,
+      "towns": 985435,
+      "urbanCore": 41807,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "商洛市",
+      "type": "地级市",
+      "total": 2041231,
+      "towns": 980505,
+      "urbanCore": 170919,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "北海市",
+      "type": "地级市",
+      "total": 1853227,
+      "towns": 979305,
+      "urbanCore": 640164,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "普洱市",
+      "type": "地级市",
+      "total": 2404954,
+      "towns": 974845,
+      "urbanCore": 289662,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "定西市",
+      "type": "地级市",
+      "total": 425627,
+      "towns": 969084,
+      "urbanCore": 196987,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "鹤壁市",
+      "type": "地级市",
+      "total": 1565973,
+      "towns": 955004,
+      "urbanCore": 519716,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "资阳市",
+      "type": "地级市",
+      "total": 2308631,
+      "towns": 953225,
+      "urbanCore": 408262,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "乐清市",
+      "type": "县级市",
+      "total": 1452707,
+      "towns": 949585,
+      "urbanCore": 879088,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "滕州市",
+      "type": "县级市",
+      "total": 1574648,
+      "towns": 947438,
+      "urbanCore": 714085,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "阳泉市",
+      "type": "地级市",
+      "total": 1318505,
+      "towns": 939172,
+      "urbanCore": 508403,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "南安市",
+      "type": "县级市",
+      "total": 332148,
+      "towns": 936897,
+      "urbanCore": 267048,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "四平市",
+      "type": "地级市",
+      "total": 1814733,
+      "towns": 935799,
+      "urbanCore": 481333,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "普宁市",
+      "type": "县级市",
+      "total": 1998619,
+      "towns": 935668,
+      "urbanCore": 488503,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "巴彦淖尔市",
+      "type": "地级市",
+      "total": 1538715,
+      "towns": 922952,
+      "urbanCore": 399699,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "温岭市",
+      "type": "县级市",
+      "total": 1416199,
+      "towns": 920913,
+      "urbanCore": 654968,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "崇左市",
+      "type": "地级市",
+      "total": 2088692,
+      "towns": 917760,
+      "urbanCore": 218708,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "庆阳市",
+      "type": "地级市",
+      "total": 2179716,
+      "towns": 913075,
+      "urbanCore": 310421,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "宜兴市",
+      "type": "县级市",
+      "total": 1285785,
+      "towns": 889871,
+      "urbanCore": 596961,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "浏阳市",
+      "type": "县级市",
+      "total": 1429384,
+      "towns": 886257,
+      "urbanCore": 314088,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "新余市",
+      "type": "地级市",
+      "total": 1202499,
+      "towns": 884941,
+      "urbanCore": 681054,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "陇南市",
+      "type": "地级市",
+      "total": 2407272,
+      "towns": 870878,
+      "urbanCore": 185428,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "铜陵市",
+      "type": "地级市",
+      "total": 1311726,
+      "towns": 867982,
+      "urbanCore": 568928,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "白银市",
+      "type": "地级市",
+      "total": 1512110,
+      "towns": 855268,
+      "urbanCore": 433593,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "保山市",
+      "type": "地级市",
+      "total": 2431211,
+      "towns": 853166,
+      "urbanCore": 344187,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "邳州市",
+      "type": "县级市",
+      "total": 1462563,
+      "towns": 850815,
+      "urbanCore": 599010,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "白城市",
+      "type": "地级市",
+      "total": 1551378,
+      "towns": 844632,
+      "urbanCore": 244306,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "攀枝花市",
+      "type": "地级市",
+      "total": 1212203,
+      "towns": 843378,
+      "urbanCore": 670491,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "黑河市",
+      "type": "地级市",
+      "total": 1286401,
+      "towns": 838921,
+      "urbanCore": 175427,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "舟山市",
+      "type": "地级市",
+      "total": 1157817,
+      "towns": 832390,
+      "urbanCore": 596041,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "平凉市",
+      "type": "地级市",
+      "total": 1848607,
+      "towns": 827653,
+      "urbanCore": 323022,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "双鸭山市",
+      "type": "地级市",
+      "total": 1208803,
+      "towns": 826703,
+      "urbanCore": 361945,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "任丘市",
+      "type": "县级市",
+      "total": 816401,
+      "towns": 816401,
+      "urbanCore": 396603,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "池州市",
+      "type": "地级市",
+      "total": 1242764,
+      "towns": 801379,
+      "urbanCore": 380458,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "河间市",
+      "type": "县级市",
+      "total": 795198,
+      "towns": 795198,
+      "urbanCore": 382616,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "丹阳市",
+      "type": "县级市",
+      "total": 988900,
+      "towns": 792584,
+      "urbanCore": 396269,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "临沧市",
+      "type": "地级市",
+      "total": 2257991,
+      "towns": 792078,
+      "urbanCore": 197787,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "新郑市",
+      "type": "县级市",
+      "total": 1172237,
+      "towns": 787544,
+      "urbanCore": 358692,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "张家界市",
+      "type": "地级市",
+      "total": 1517027,
+      "towns": 783520,
+      "urbanCore": 349673,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "黄山市",
+      "type": "地级市",
+      "total": 1330565,
+      "towns": 775644,
+      "urbanCore": 369432,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "新泰市",
+      "type": "县级市",
+      "total": 1338254,
+      "towns": 774715,
+      "urbanCore": 460835,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "白山市",
+      "type": "地级市",
+      "total": 968373,
+      "towns": 771554,
+      "urbanCore": 349668,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "宁夏",
+      "name": "吴忠市",
+      "type": "地级市",
+      "total": 751389,
+      "towns": 771119,
+      "urbanCore": 372737,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "诸暨市",
+      "type": "县级市",
+      "total": 1218072,
+      "towns": 762917,
+      "urbanCore": 589056,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "如皋市",
+      "type": "县级市",
+      "total": 1238448,
+      "towns": 761879,
+      "urbanCore": 361585,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "三河市",
+      "type": "县级市",
+      "total": 965075,
+      "towns": 760107,
+      "urbanCore": 628784,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "宁乡市",
+      "type": "县级市",
+      "total": 1263332,
+      "towns": 759080,
+      "urbanCore": 489836,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "雅安市",
+      "type": "地级市",
+      "total": 1434603,
+      "towns": 757151,
+      "urbanCore": 290242,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "邹城市",
+      "type": "县级市",
+      "total": 1166559,
+      "towns": 755941,
+      "urbanCore": 455208,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "海宁市",
+      "type": "县级市",
+      "total": 1076199,
+      "towns": 752775,
+      "urbanCore": 424472,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "仙桃市",
+      "type": "县级市",
+      "total": 1268715,
+      "towns": 752155,
+      "urbanCore": 463632,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "福清市",
+      "type": "县级市",
+      "total": 1390487,
+      "towns": 744774,
+      "urbanCore": 478966,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "伊春市",
+      "type": "地级市",
+      "total": 878881,
+      "towns": 744000,
+      "urbanCore": 296248,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "鹰潭市",
+      "type": "地级市",
+      "total": 1154223,
+      "towns": 743407,
+      "urbanCore": 377162,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "东阳市",
+      "type": "县级市",
+      "total": 1087950,
+      "towns": 738721,
+      "urbanCore": 403055,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "鹤岗市",
+      "type": "地级市",
+      "total": 891271,
+      "towns": 736416,
+      "urbanCore": 502639,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "寿光市",
+      "type": "县级市",
+      "total": 1163364,
+      "towns": 728588,
+      "urbanCore": 507581,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "三亚市",
+      "type": "地级市",
+      "total": 1031396,
+      "towns": 724854,
+      "urbanCore": 696578,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "澳门",
+      "name": "澳门",
+      "type": "特别行政区",
+      "total": 683218,
+      "towns": null,
+      "urbanCore": 683218,
+      "date": "2020第四季度"
+    },
+    {
+      "province": "湖北",
+      "name": "鄂州市",
+      "type": "地级市",
+      "total": 1079353,
+      "towns": 715268,
+      "urbanCore": 449699,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "宣威市",
+      "type": "县级市",
+      "total": 1189813,
+      "towns": 691922,
+      "urbanCore": 389058,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "桐乡市",
+      "type": "县级市",
+      "total": 1029754,
+      "towns": 690641,
+      "urbanCore": 532934,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "武威市",
+      "type": "地级市",
+      "total": 1464955,
+      "towns": 688697,
+      "urbanCore": 393885,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "海城市",
+      "type": "县级市",
+      "total": 1067905,
+      "towns": 680033,
+      "urbanCore": 406359,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "诸城市",
+      "type": "县级市",
+      "total": 1078178,
+      "towns": 679204,
+      "urbanCore": 572073,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "酒泉市",
+      "type": "地级市",
+      "total": 1055706,
+      "towns": 677750,
+      "urbanCore": 307539,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "海门市",
+      "type": "县级市",
+      "total": 991782,
+      "towns": 661983,
+      "urbanCore": 367808,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "伊宁市",
+      "type": "县级市",
+      "total": 778047,
+      "towns": 653726,
+      "urbanCore": 627730,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "桂平市",
+      "type": "县级市",
+      "total": 1511011,
+      "towns": 652210,
+      "urbanCore": 223698,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "兴化市",
+      "type": "县级市",
+      "total": 1128204,
+      "towns": 649849,
+      "urbanCore": 318636,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "兴义市",
+      "type": "县级市",
+      "total": 1004132,
+      "towns": 649497,
+      "urbanCore": 569150,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "永城市",
+      "type": "县级市",
+      "total": 1256409,
+      "towns": 644718,
+      "urbanCore": 505208,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "防城港市",
+      "type": "地级市",
+      "total": 1046068,
+      "towns": 643635,
+      "urbanCore": 327733,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "永康市",
+      "type": "县级市",
+      "total": 964203,
+      "towns": 638563,
+      "urbanCore": 547723,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "西昌市",
+      "type": "县级市",
+      "total": 955041,
+      "towns": 636367,
+      "urbanCore": 544615,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "延吉市",
+      "type": "县级市",
+      "total": 68136,
+      "towns": 630612,
+      "urbanCore": 610911,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "泰兴市",
+      "type": "县级市",
+      "total": 994445,
+      "towns": 619033,
+      "urbanCore": 378692,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "胶州市",
+      "type": "县级市",
+      "total": 987820,
+      "towns": 613996,
+      "urbanCore": 552702,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "西藏",
+      "name": "拉萨市",
+      "type": "地级市",
+      "total": 867891,
+      "towns": 605511,
+      "urbanCore": 547879,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "海安市",
+      "type": "县级市",
+      "total": 874334,
+      "towns": 601165,
+      "urbanCore": 454639,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "肥城市",
+      "type": "县级市",
+      "total": 894115,
+      "towns": 600866,
+      "urbanCore": 408682,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "丽江市",
+      "type": "地级市",
+      "total": 1253878,
+      "towns": 597447,
+      "urbanCore": 233478,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "简阳市",
+      "type": "县级市",
+      "total": 1117265,
+      "towns": 591224,
+      "urbanCore": 563988,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "邵东市",
+      "type": "县级市",
+      "total": 1038416,
+      "towns": 590331,
+      "urbanCore": 358102,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "石狮市",
+      "type": "县级市",
+      "total": 685930,
+      "towns": 589902,
+      "urbanCore": 426674,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "太仓市",
+      "type": "县级市",
+      "total": 831113,
+      "towns": 586830,
+      "urbanCore": 349042,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "宁夏",
+      "name": "石嘴山市",
+      "type": "地级市",
+      "total": 2859074,
+      "towns": 585502,
+      "urbanCore": 365366,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "龙海市",
+      "type": "县级市",
+      "total": 952000,
+      "towns": 584371,
+      "urbanCore": 241955,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "启东市",
+      "type": "县级市",
+      "total": 967313,
+      "towns": 580157,
+      "urbanCore": 378393,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "张掖市",
+      "type": "地级市",
+      "total": 1131016,
+      "towns": 580117,
+      "urbanCore": 264770,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "定州市",
+      "type": "县级市",
+      "total": 1095986,
+      "towns": 577440,
+      "urbanCore": 405863,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "辽源市",
+      "type": "地级市",
+      "total": 996903,
+      "towns": 575248,
+      "urbanCore": 406463,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "泊头市",
+      "type": "县级市",
+      "total": 573842,
+      "towns": 573842,
+      "urbanCore": 284177,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "北流市",
+      "type": "县级市",
+      "total": 1211637,
+      "towns": 573761,
+      "urbanCore": 278655,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "醴陵市",
+      "type": "县级市",
+      "total": 885987,
+      "towns": 566537,
+      "urbanCore": 348301,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "禹州市",
+      "type": "县级市",
+      "total": 1109782,
+      "towns": 565152,
+      "urbanCore": 404047,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "高密市",
+      "type": "县级市",
+      "total": 877393,
+      "towns": 552844,
+      "urbanCore": 475498,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "临海市",
+      "type": "县级市",
+      "total": 1114146,
+      "towns": 551458,
+      "urbanCore": 417795,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "新沂市",
+      "type": "县级市",
+      "total": 969922,
+      "towns": 549911,
+      "urbanCore": 374405,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "大理市",
+      "type": "县级市",
+      "total": 771128,
+      "towns": 549189,
+      "urbanCore": 520016,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "青海",
+      "name": "海东市",
+      "type": "地级市",
+      "total": 1358471,
+      "towns": 548858,
+      "urbanCore": 190040,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "汉川市",
+      "type": "县级市",
+      "total": 903296,
+      "towns": 547969,
+      "urbanCore": 452989,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "陆丰市",
+      "type": "县级市",
+      "total": 1235827,
+      "towns": 545474,
+      "urbanCore": 224355,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "林州市",
+      "type": "县级市",
+      "total": 950939,
+      "towns": 539951,
+      "urbanCore": 429716,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "邓州市",
+      "type": "县级市",
+      "total": 1247807,
+      "towns": 534993,
+      "urbanCore": 366979,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "东台市",
+      "type": "县级市",
+      "total": 888410,
+      "towns": 534562,
+      "urbanCore": 332745,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "青州市",
+      "type": "县级市",
+      "total": 960882,
+      "towns": 534528,
+      "urbanCore": 478568,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "七台河市",
+      "type": "地级市",
+      "total": 689611,
+      "towns": 532136,
+      "urbanCore": 409432,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "乌海市",
+      "type": "地级市",
+      "total": 556621,
+      "towns": 530877,
+      "urbanCore": 513469,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "宁夏",
+      "name": "中卫市",
+      "type": "地级市",
+      "total": 1067336,
+      "towns": 530471,
+      "urbanCore": 231304,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "邹平市",
+      "type": "县级市",
+      "total": 774517,
+      "towns": 529857,
+      "urbanCore": 353923,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "耒阳市",
+      "type": "县级市",
+      "total": 1140675,
+      "towns": 529641,
+      "urbanCore": 475525,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "新密市",
+      "type": "县级市",
+      "total": 826031,
+      "towns": 529272,
+      "urbanCore": 342195,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "大冶市",
+      "type": "县级市",
+      "total": 871214,
+      "towns": 529170,
+      "urbanCore": 362213,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "长垣市",
+      "type": "县级市",
+      "total": 905436,
+      "towns": 521702,
+      "urbanCore": 401013,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "凯里市",
+      "type": "县级市",
+      "total": 709057,
+      "towns": 519243,
+      "urbanCore": 487109,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "龙口市",
+      "type": "县级市",
+      "total": 729880,
+      "towns": 516205,
+      "urbanCore": 379733,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "儋州市",
+      "type": "地级市",
+      "total": 954259,
+      "towns": 516043,
+      "urbanCore": 278672,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "巩义市",
+      "type": "县级市",
+      "total": 785242,
+      "towns": 511241,
+      "urbanCore": 328149,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "天门市",
+      "type": "县级市",
+      "total": 1158640,
+      "towns": 502908,
+      "urbanCore": 257349,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "丰城市",
+      "type": "县级市",
+      "total": 1065641,
+      "towns": 501475,
+      "urbanCore": 366070,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "宁夏",
+      "name": "固原市",
+      "type": "地级市",
+      "total": 1142142,
+      "towns": 497906,
+      "urbanCore": 246800,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "溧阳市",
+      "type": "县级市",
+      "total": 785092,
+      "towns": 495507,
+      "urbanCore": 350307,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "潜江市",
+      "type": "县级市",
+      "total": 886547,
+      "towns": 494334,
+      "urbanCore": 334961,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "项城市",
+      "type": "县级市",
+      "total": 973197,
+      "towns": 493654,
+      "urbanCore": 411252,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "巢湖市",
+      "type": "县级市",
+      "total": 727162,
+      "towns": 492952,
+      "urbanCore": 385211,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "恩施市",
+      "type": "县级市",
+      "total": 836781,
+      "towns": 492268,
+      "urbanCore": 460163,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "库尔勒市",
+      "type": "县级市",
+      "total": 779352,
+      "towns": 490961,
+      "urbanCore": 486090,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "济源市",
+      "type": "县级市",
+      "total": 727265,
+      "towns": 490682,
+      "urbanCore": 399536,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "高州市",
+      "type": "县级市",
+      "total": 1328657,
+      "towns": 490301,
+      "urbanCore": 318402,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "黄骅市",
+      "type": "县级市",
+      "total": 484413,
+      "towns": 484313,
+      "urbanCore": 230599,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "哈密市",
+      "type": "地级市",
+      "total": 673383,
+      "towns": 481690,
+      "urbanCore": 336237,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "克拉玛依市",
+      "type": "地级市",
+      "total": 390348,
+      "towns": 481249,
+      "urbanCore": 453669,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "枣阳市",
+      "type": "县级市",
+      "total": 888794,
+      "towns": 481004,
+      "urbanCore": 317354,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "化州市",
+      "type": "县级市",
+      "total": 1291668,
+      "towns": 472746,
+      "urbanCore": 285182,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "阿克苏市",
+      "type": "县级市",
+      "total": 715319,
+      "towns": 470601,
+      "urbanCore": 439374,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "玉环市",
+      "type": "县级市",
+      "total": 644014,
+      "towns": 468554,
+      "urbanCore": 452972,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "汝州市",
+      "type": "县级市",
+      "total": 974541,
+      "towns": 466464,
+      "urbanCore": 328060,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "迁安市",
+      "type": "县级市",
+      "total": 776752,
+      "towns": 466210,
+      "urbanCore": 378323,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "石河子市",
+      "type": "县级市",
+      "total": 498587,
+      "towns": 461663,
+      "urbanCore": 461663,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "安丘市",
+      "type": "县级市",
+      "total": 840554,
+      "towns": 458893,
+      "urbanCore": 391582,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "霸州市",
+      "type": "县级市",
+      "total": 743226,
+      "towns": 455923,
+      "urbanCore": 160178,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "瓦房店市",
+      "type": "县级市",
+      "total": 905082,
+      "towns": 454388,
+      "urbanCore": 378038,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "靖江市",
+      "type": "县级市",
+      "total": 663408,
+      "towns": 453970,
+      "urbanCore": 331555,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "武安市",
+      "type": "县级市",
+      "total": 811631,
+      "towns": 453442,
+      "urbanCore": 280061,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "四会市",
+      "type": "县级市",
+      "total": 640910,
+      "towns": 452536,
+      "urbanCore": 417226,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "昌吉市",
+      "type": "县级市",
+      "total": 607441,
+      "towns": 451234,
+      "urbanCore": 436965,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "莱州市",
+      "type": "县级市",
+      "total": 824708,
+      "towns": 450375,
+      "urbanCore": 304110,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "龙港市",
+      "type": "县级市",
+      "total": 464732,
+      "towns": 450286,
+      "urbanCore": 432043,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "平湖市",
+      "type": "县级市",
+      "total": 671326,
+      "towns": 449636,
+      "urbanCore": 292661,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "荣成市",
+      "type": "县级市",
+      "total": 714211,
+      "towns": 448370,
+      "urbanCore": 341086,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "铜川市",
+      "type": "地级市",
+      "total": 698322,
+      "towns": 444612,
+      "urbanCore": 323960,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "廉江市",
+      "type": "县级市",
+      "total": 1363470,
+      "towns": 443812,
+      "urbanCore": 253790,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "射洪市",
+      "type": "县级市",
+      "total": 732380,
+      "towns": 442852,
+      "urbanCore": 341992,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "钟祥市",
+      "type": "县级市",
+      "total": 868897,
+      "towns": 439394,
+      "urbanCore": 226457,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "都江堰市",
+      "type": "县级市",
+      "total": 710056,
+      "towns": 436619,
+      "urbanCore": 369855,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "临清市",
+      "type": "县级市",
+      "total": 794529,
+      "towns": 436304,
+      "urbanCore": 360707,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "麻城市",
+      "type": "县级市",
+      "total": 893654,
+      "towns": 435076,
+      "urbanCore": 303355,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "文山市",
+      "type": "县级市",
+      "total": 623772,
+      "towns": 434760,
+      "urbanCore": 394422,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "台山市",
+      "type": "县级市",
+      "total": 907744,
+      "towns": 433266,
+      "urbanCore": 357132,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "天长市",
+      "type": "县级市",
+      "total": 603780,
+      "towns": 433085,
+      "urbanCore": 241167,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "蒙自市",
+      "type": "县级市",
+      "total": 585976,
+      "towns": 430355,
+      "urbanCore": 391974,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "开平市",
+      "type": "县级市",
+      "total": 748777,
+      "towns": 430035,
+      "urbanCore": 337647,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "鹤山市",
+      "type": "县级市",
+      "total": 530684,
+      "towns": 430035,
+      "urbanCore": 337647,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "辉县市",
+      "type": "县级市",
+      "total": 845588,
+      "towns": 429057,
+      "urbanCore": 374288,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "楚雄市",
+      "type": "县级市",
+      "total": 631530,
+      "towns": 426823,
+      "urbanCore": 395083,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "登封市",
+      "type": "县级市",
+      "total": 729332,
+      "towns": 426744,
+      "urbanCore": 287635,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "莱阳市",
+      "type": "县级市",
+      "total": 794986,
+      "towns": 425631,
+      "urbanCore": 334552,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "荥阳市",
+      "type": "县级市",
+      "total": 730135,
+      "towns": 424072,
+      "urbanCore": 371711,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "高邮市",
+      "type": "县级市",
+      "total": 709572,
+      "towns": 422816,
+      "urbanCore": 307255,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "盘州市",
+      "type": "县级市",
+      "total": 1074073,
+      "towns": 420894,
+      "urbanCore": 272024,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "平度市",
+      "type": "县级市",
+      "total": 1191348,
+      "towns": 419957,
+      "urbanCore": 390084,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "信宜市",
+      "type": "县级市",
+      "total": 1014577,
+      "towns": 418731,
+      "urbanCore": 319352,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "无为市",
+      "type": "县级市",
+      "total": 817997,
+      "towns": 417265,
+      "urbanCore": 200696,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "高安市",
+      "type": "县级市",
+      "total": 744694,
+      "towns": 413419,
+      "urbanCore": 262920,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "句容市",
+      "type": "县级市",
+      "total": 639266,
+      "towns": 412996,
+      "urbanCore": 315837,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "雷州市",
+      "type": "县级市",
+      "total": 1321091,
+      "towns": 412291,
+      "urbanCore": 247281,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "神木市",
+      "type": "县级市",
+      "total": 571869,
+      "towns": 403133,
+      "urbanCore": 286118,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "安宁市",
+      "type": "县级市",
+      "total": 483753,
+      "towns": 399779,
+      "urbanCore": 312715,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "常宁市",
+      "type": "县级市",
+      "total": 790676,
+      "towns": 399286,
+      "urbanCore": 259488,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "桐城市",
+      "type": "县级市",
+      "total": 593629,
+      "towns": 398423,
+      "urbanCore": 293473,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "英德市",
+      "type": "县级市",
+      "total": 941325,
+      "towns": 398066,
+      "urbanCore": 205285,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "岑溪市",
+      "type": "县级市",
+      "total": 724364,
+      "towns": 397639,
+      "urbanCore": 254777,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "福安市",
+      "type": "县级市",
+      "total": 609779,
+      "towns": 397068,
+      "urbanCore": 260986,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "长葛市",
+      "type": "县级市",
+      "total": 710033,
+      "towns": 396741,
+      "urbanCore": 292945,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "曲阜市",
+      "type": "县级市",
+      "total": 621971,
+      "towns": 395524,
+      "urbanCore": 327793,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "遵化市",
+      "type": "县级市",
+      "total": 707047,
+      "towns": 392821,
+      "urbanCore": 248087,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "喀什市",
+      "type": "县级市",
+      "total": 4496377,
+      "towns": 392730,
+      "urbanCore": 378713,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "崇州市",
+      "type": "县级市",
+      "total": 735723,
+      "towns": 391259,
+      "urbanCore": 313988,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "莱西市",
+      "type": "县级市",
+      "total": 720103,
+      "towns": 389242,
+      "urbanCore": 317274,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "吴川市",
+      "type": "县级市",
+      "total": 907354,
+      "towns": 388714,
+      "urbanCore": 255358,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "江油市",
+      "type": "县级市",
+      "total": 731343,
+      "towns": 387892,
+      "urbanCore": 316176,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "广水市",
+      "type": "县级市",
+      "total": 710900,
+      "towns": 387070,
+      "urbanCore": 284238,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "嵊州市",
+      "type": "县级市",
+      "total": 675226,
+      "towns": 386087,
+      "urbanCore": 321718,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "公主岭市",
+      "type": "县级市",
+      "total": 862313,
+      "towns": 384715,
+      "urbanCore": 262653,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "彭州市",
+      "type": "县级市",
+      "total": 780399,
+      "towns": 383409,
+      "urbanCore": 324670,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "武穴市",
+      "type": "县级市",
+      "total": 676264,
+      "towns": 379040,
+      "urbanCore": 286493,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "广汉市",
+      "type": "县级市",
+      "total": 626132,
+      "towns": 368933,
+      "urbanCore": 262511,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "辛集市",
+      "type": "县级市",
+      "total": 594628,
+      "towns": 368208,
+      "urbanCore": 314028,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "涿州市",
+      "type": "县级市",
+      "total": 667678,
+      "towns": 365792,
+      "urbanCore": 320443,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "兴宁市",
+      "type": "县级市",
+      "total": 779411,
+      "towns": 365661,
+      "urbanCore": 294318,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "湘乡市",
+      "type": "县级市",
+      "total": 730103,
+      "towns": 361924,
+      "urbanCore": 222737,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "仁怀市",
+      "type": "县级市",
+      "total": 655300,
+      "towns": 361723,
+      "urbanCore": 302376,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "阳春市",
+      "type": "县级市",
+      "total": 875896,
+      "towns": 360359,
+      "urbanCore": 261732,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "景洪市",
+      "type": "县级市",
+      "total": 642737,
+      "towns": 358517,
+      "urbanCore": 270044,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "东港市",
+      "type": "县级市",
+      "total": 568566,
+      "towns": 357229,
+      "urbanCore": 228276,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "仪征市",
+      "type": "县级市",
+      "total": 532571,
+      "towns": 356995,
+      "urbanCore": 301099,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "偃师市",
+      "type": "县级市",
+      "total": 545632,
+      "towns": 352621,
+      "urbanCore": 323441,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "福鼎市",
+      "type": "县级市",
+      "total": 553132,
+      "towns": 351341,
+      "urbanCore": 227866,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "清镇市",
+      "type": "县级市",
+      "total": 629088,
+      "towns": 350665,
+      "urbanCore": 276031,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "都匀市",
+      "type": "县级市",
+      "total": 529688,
+      "towns": 348954,
+      "urbanCore": 319239,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "庄河市",
+      "type": "县级市",
+      "total": 742496,
+      "towns": 348028,
+      "urbanCore": 272133,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "金昌市",
+      "type": "地级市",
+      "total": 438026,
+      "towns": 339011,
+      "urbanCore": 236943,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "利川市",
+      "type": "县级市",
+      "total": 750670,
+      "towns": 337946,
+      "urbanCore": 272682,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "孝义市",
+      "type": "县级市",
+      "total": 477289,
+      "towns": 337489,
+      "urbanCore": 267857,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "恩平市",
+      "type": "县级市",
+      "total": 483907,
+      "towns": 334432,
+      "urbanCore": 257132,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "吐鲁番市",
+      "type": "地级市",
+      "total": 693988,
+      "towns": 333295,
+      "urbanCore": 117560,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "锡林浩特市",
+      "type": "县级市",
+      "total": 349953,
+      "towns": 327112,
+      "urbanCore": 325078,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "邛崃市",
+      "type": "县级市",
+      "total": 602973,
+      "towns": 322777,
+      "urbanCore": 267147,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "吉首市",
+      "type": "县级市",
+      "total": 408812,
+      "towns": 319566,
+      "urbanCore": 303610,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "兰溪市",
+      "type": "县级市",
+      "total": 584801,
+      "towns": 318165,
+      "urbanCore": 253055,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "乌兰浩特市",
+      "type": "县级市",
+      "total": 356035,
+      "towns": 318009,
+      "urbanCore": 301370,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "罗定市",
+      "type": "县级市",
+      "total": 936931,
+      "towns": 317060,
+      "urbanCore": 240502,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "武冈市",
+      "type": "县级市",
+      "total": 640181,
+      "towns": 316994,
+      "urbanCore": 217401,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "招远市",
+      "type": "县级市",
+      "total": 543127,
+      "towns": 316468,
+      "urbanCore": 281455,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "临夏市",
+      "type": "县级市",
+      "total": 355968,
+      "towns": 315082,
+      "urbanCore": 311436,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "广德市",
+      "type": "县级市",
+      "total": 499132,
+      "towns": 314649,
+      "urbanCore": 245362,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "昌邑市",
+      "type": "县级市",
+      "total": 564501,
+      "towns": 314094,
+      "urbanCore": 230035,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "肇东市",
+      "type": "县级市",
+      "total": 666532,
+      "towns": 312289,
+      "urbanCore": 259922,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "涟源市",
+      "type": "县级市",
+      "total": 862099,
+      "towns": 310829,
+      "urbanCore": 169700,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "个旧市",
+      "type": "县级市",
+      "total": 419324,
+      "towns": 310521,
+      "urbanCore": 29879,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "兴平市",
+      "type": "县级市",
+      "total": 494887,
+      "towns": 309463,
+      "urbanCore": 244969,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "高碑店市",
+      "type": "县级市",
+      "total": 532731,
+      "towns": 309413,
+      "urbanCore": 269691,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "大石桥市",
+      "type": "县级市",
+      "total": 607098,
+      "towns": 309066,
+      "urbanCore": 264053,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "界首市",
+      "type": "县级市",
+      "total": 650870,
+      "towns": 308493,
+      "urbanCore": 207420,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "瑞金市",
+      "type": "县级市",
+      "total": 613894,
+      "towns": 306368,
+      "urbanCore": 277409,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "松滋市",
+      "type": "县级市",
+      "total": 654762,
+      "towns": 306049,
+      "urbanCore": 179256,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "洪湖市",
+      "type": "县级市",
+      "total": 698188,
+      "towns": 305073,
+      "urbanCore": 156192,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "应城市",
+      "type": "县级市",
+      "total": 476596,
+      "towns": 304741,
+      "urbanCore": 256577,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "阆中市",
+      "type": "县级市",
+      "total": 6226267,
+      "towns": 303044,
+      "urbanCore": 268488,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "嘉峪关市",
+      "type": "地级市",
+      "total": 312663,
+      "towns": 295257,
+      "urbanCore": 291577,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "贵溪市",
+      "type": "县级市",
+      "total": 540572,
+      "towns": 294025,
+      "urbanCore": 198398,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "海阳市",
+      "type": "县级市",
+      "total": 582711,
+      "towns": 293099,
+      "urbanCore": 234109,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "和田市",
+      "type": "县级市",
+      "total": 501028,
+      "towns": 293056,
+      "urbanCore": 284419,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "介休市",
+      "type": "县级市",
+      "total": 432095,
+      "towns": 291393,
+      "urbanCore": 266180,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "梅河口市",
+      "type": "县级市",
+      "total": 509336,
+      "towns": 291138,
+      "urbanCore": 247329,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "赤壁市",
+      "type": "县级市",
+      "total": 470355,
+      "towns": 289798,
+      "urbanCore": 245925,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "江山市",
+      "type": "县级市",
+      "total": 494412,
+      "towns": 289269,
+      "urbanCore": 221269,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "弥勒市",
+      "type": "县级市",
+      "total": 538083,
+      "towns": 287637,
+      "urbanCore": 182577,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "新乐市",
+      "type": "县级市",
+      "total": 478529,
+      "towns": 281458,
+      "urbanCore": 198499,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "安陆市",
+      "type": "县级市",
+      "total": 498356,
+      "towns": 280695,
+      "urbanCore": 243003,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "沁阳市",
+      "type": "县级市",
+      "total": 447487,
+      "towns": 279809,
+      "urbanCore": 191763,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "灵宝市",
+      "type": "县级市",
+      "total": 656571,
+      "towns": 279168,
+      "urbanCore": 209265,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "滦州市",
+      "type": "县级市",
+      "total": 520102,
+      "towns": 278807,
+      "urbanCore": 189879,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "沅江市",
+      "type": "县级市",
+      "total": 567159,
+      "towns": 278146,
+      "urbanCore": 179825,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "平果市",
+      "type": "县级市",
+      "total": 455643,
+      "towns": 277500,
+      "urbanCore": 244529,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "隆昌市",
+      "type": "县级市",
+      "total": 568900,
+      "towns": 275419,
+      "urbanCore": 202474,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "京山市",
+      "type": "县级市",
+      "total": 544843,
+      "towns": 272963,
+      "urbanCore": 172134,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "樟树市",
+      "type": "县级市",
+      "total": 485649,
+      "towns": 271341,
+      "urbanCore": 235740,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "宁国市",
+      "type": "县级市",
+      "total": 384644,
+      "towns": 270991,
+      "urbanCore": 245362,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "安徽",
+      "name": "明光市",
+      "type": "县级市",
+      "total": 485627,
+      "towns": 269573,
+      "urbanCore": 192423,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "韩城市",
+      "type": "县级市",
+      "total": 383097,
+      "towns": 268583,
+      "urbanCore": 189877,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "开原市",
+      "type": "县级市",
+      "total": 460927,
+      "towns": 267822,
+      "urbanCore": 219370,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "沙河市",
+      "type": "县级市",
+      "total": 431746,
+      "towns": 265977,
+      "urbanCore": 232446,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "库车市",
+      "type": "县级市",
+      "total": 530328,
+      "towns": 262771,
+      "urbanCore": 245178,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "琼海市",
+      "type": "县级市",
+      "total": 528238,
+      "towns": 262524,
+      "urbanCore": 178091,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "丹江口市",
+      "type": "县级市",
+      "total": 409940,
+      "towns": 260570,
+      "urbanCore": 153532,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "冷水江市",
+      "type": "县级市",
+      "total": 329912,
+      "towns": 260400,
+      "urbanCore": 212139,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "东方市",
+      "type": "县级市",
+      "total": 444458,
+      "towns": 257936,
+      "urbanCore": 191890,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "五常市",
+      "type": "县级市",
+      "total": 724705,
+      "towns": 256842,
+      "urbanCore": 171900,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "临湘市",
+      "type": "县级市",
+      "total": 433200,
+      "towns": 253804,
+      "urbanCore": 168932,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "榆树市",
+      "type": "县级市",
+      "total": 836098,
+      "towns": 253344,
+      "urbanCore": 202198,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "乳山市",
+      "type": "县级市",
+      "total": 464078,
+      "towns": 252895,
+      "urbanCore": 189045,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "凤城市",
+      "type": "县级市",
+      "total": 469376,
+      "towns": 252821,
+      "urbanCore": 177841,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "湛江市",
+      "type": "地级市",
+      "total": 6981236,
+      "towns": 251742,
+      "urbanCore": 196122,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "永安市",
+      "type": "县级市",
+      "total": 344793,
+      "towns": 248425,
+      "urbanCore": 226520,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "怀仁市",
+      "type": "县级市",
+      "total": 348470,
+      "towns": 247612,
+      "urbanCore": 182227,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "凌源市",
+      "type": "县级市",
+      "total": 540832,
+      "towns": 247488,
+      "urbanCore": 206801,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "尚志市",
+      "type": "县级市",
+      "total": 463358,
+      "towns": 246880,
+      "urbanCore": 149072,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "瑞昌市",
+      "type": "县级市",
+      "total": 403655,
+      "towns": 246592,
+      "urbanCore": 152845,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "宜城市",
+      "type": "县级市",
+      "total": 469417,
+      "towns": 244410,
+      "urbanCore": 170637,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "枝江市",
+      "type": "县级市",
+      "total": 408487,
+      "towns": 243784,
+      "urbanCore": 174866,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "高平市",
+      "type": "县级市",
+      "total": 453054,
+      "towns": 243544,
+      "urbanCore": 166283,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "禹城市",
+      "type": "县级市",
+      "total": 488014,
+      "towns": 243123,
+      "urbanCore": 215656,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "敦化市",
+      "type": "县级市",
+      "total": 392486,
+      "towns": 241929,
+      "urbanCore": 195002,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "老河口市",
+      "type": "县级市",
+      "total": 420495,
+      "towns": 241431,
+      "urbanCore": 193539,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "富锦市",
+      "type": "县级市",
+      "total": 414090,
+      "towns": 240925,
+      "urbanCore": 125568,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "石首市",
+      "type": "县级市",
+      "total": 473707,
+      "towns": 240082,
+      "urbanCore": 164491,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "汨罗市",
+      "type": "县级市",
+      "total": 560725,
+      "towns": 239947,
+      "urbanCore": 182233,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "牙克石市",
+      "type": "县级市",
+      "total": 256396,
+      "towns": 239742,
+      "urbanCore": 140369,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "阿拉尔市",
+      "type": "县级市",
+      "total": 328241,
+      "towns": 239647,
+      "urbanCore": 133632,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "腾冲市",
+      "type": "县级市",
+      "total": 62481,
+      "towns": 238974,
+      "urbanCore": 165193,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "晋州市",
+      "type": "县级市",
+      "total": 507959,
+      "towns": 238153,
+      "urbanCore": 156800,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "建德市",
+      "type": "县级市",
+      "total": 442709,
+      "towns": 233658,
+      "urbanCore": 145118,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "绵竹市",
+      "type": "县级市",
+      "total": 439958,
+      "towns": 232761,
+      "urbanCore": 163870,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "平泉市",
+      "type": "县级市",
+      "total": 393378,
+      "towns": 228261,
+      "urbanCore": 165410,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "盖州市",
+      "type": "县级市",
+      "total": 559271,
+      "towns": 228059,
+      "urbanCore": 175409,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "开远市",
+      "type": "县级市",
+      "total": 323031,
+      "towns": 227231,
+      "urbanCore": 195244,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "卫辉市",
+      "type": "县级市",
+      "total": 476867,
+      "towns": 227143,
+      "urbanCore": 176080,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "建瓯市",
+      "type": "县级市",
+      "total": 434451,
+      "towns": 226100,
+      "urbanCore": 160067,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "河津市",
+      "type": "县级市",
+      "total": 392561,
+      "towns": 225809,
+      "urbanCore": 199884,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "文昌市",
+      "type": "县级市",
+      "total": 560894,
+      "towns": 225608,
+      "urbanCore": 163550,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "万宁市",
+      "type": "县级市",
+      "total": 545992,
+      "towns": 225608,
+      "urbanCore": 112075,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "奎屯市",
+      "type": "县级市",
+      "total": 229122,
+      "towns": 224471,
+      "urbanCore": 224471,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "当阳市",
+      "type": "县级市",
+      "total": 397465,
+      "towns": 224057,
+      "urbanCore": 182622,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "嫩江市",
+      "type": "县级市",
+      "total": 355528,
+      "towns": 223587,
+      "urbanCore": 155490,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "什邡市",
+      "type": "县级市",
+      "total": 406775,
+      "towns": 223320,
+      "urbanCore": 164000,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江苏",
+      "name": "扬中市",
+      "type": "县级市",
+      "total": 315462,
+      "towns": 221434,
+      "urbanCore": 178440,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "兴城市",
+      "type": "县级市",
+      "total": 490300,
+      "towns": 219545,
+      "urbanCore": 194074,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "新民市",
+      "type": "县级市",
+      "total": 565634,
+      "towns": 218041,
+      "urbanCore": 139080,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "邵武市",
+      "type": "县级市",
+      "total": 273721,
+      "towns": 217836,
+      "urbanCore": 192203,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "芒市",
+      "type": "县级市",
+      "total": 439931,
+      "towns": 216426,
+      "urbanCore": 196285,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "北安市",
+      "type": "县级市",
+      "total": 308237,
+      "towns": 213850,
+      "urbanCore": 127819,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "资兴市",
+      "type": "县级市",
+      "total": 322990,
+      "towns": 213615,
+      "urbanCore": 184455,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖北",
+      "name": "宜都市",
+      "type": "县级市",
+      "total": 347388,
+      "towns": 208903,
+      "urbanCore": 169726,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "乐陵市",
+      "type": "县级市",
+      "total": 559166,
+      "towns": 208689,
+      "urbanCore": 169646,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "瑞丽市",
+      "type": "县级市",
+      "total": 267638,
+      "towns": 208658,
+      "urbanCore": 184346,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "汾阳市",
+      "type": "县级市",
+      "total": 407647,
+      "towns": 207473,
+      "urbanCore": 171535,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "龙南市",
+      "type": "县级市",
+      "total": 319166,
+      "towns": 205179,
+      "urbanCore": 185521,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "德惠市",
+      "type": "县级市",
+      "total": 635476,
+      "towns": 202988,
+      "urbanCore": 191912,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "乐昌市",
+      "type": "县级市",
+      "total": 383498,
+      "towns": 199438,
+      "urbanCore": 102619,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "深州市",
+      "type": "县级市",
+      "total": 482289,
+      "towns": 197414,
+      "urbanCore": 138920,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "青海",
+      "name": "格尔木市",
+      "type": "县级市",
+      "total": 221863,
+      "towns": 197153,
+      "urbanCore": 154472,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "安达市",
+      "type": "县级市",
+      "total": 337535,
+      "towns": 196645,
+      "urbanCore": 167014,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "桦甸市",
+      "type": "县级市",
+      "total": 341038,
+      "towns": 194910,
+      "urbanCore": 153982,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "虎林市",
+      "type": "县级市",
+      "total": 267870,
+      "towns": 194294,
+      "urbanCore": 83113,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "德兴市",
+      "type": "县级市",
+      "total": 293596,
+      "towns": 193621,
+      "urbanCore": 173178,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "讷河市",
+      "type": "县级市",
+      "total": 436906,
+      "towns": 193396,
+      "urbanCore": 131572,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "孟州市",
+      "type": "县级市",
+      "total": 334213,
+      "towns": 190965,
+      "urbanCore": 141976,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "北票市",
+      "type": "县级市",
+      "total": 439998,
+      "towns": 190315,
+      "urbanCore": 163542,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "安国市",
+      "type": "县级市",
+      "total": 363091,
+      "towns": 189925,
+      "urbanCore": 162406,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "珲春市",
+      "type": "县级市",
+      "total": 239359,
+      "towns": 189760,
+      "urbanCore": 179047,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "密山市",
+      "type": "县级市",
+      "total": 339103,
+      "towns": 188287,
+      "urbanCore": 117481,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "灯塔市",
+      "type": "县级市",
+      "total": 354617,
+      "towns": 185623,
+      "urbanCore": 113090,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "西藏",
+      "name": "日喀则市",
+      "type": "地级市",
+      "total": 798153,
+      "towns": 184323,
+      "urbanCore": 94464,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "霍州市",
+      "type": "县级市",
+      "total": 272987,
+      "towns": 183575,
+      "urbanCore": 127406,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河北",
+      "name": "南宫市",
+      "type": "县级市",
+      "total": 396718,
+      "towns": 183540,
+      "urbanCore": 141104,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "永济市",
+      "type": "县级市",
+      "total": 394935,
+      "towns": 182248,
+      "urbanCore": 147640,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "海林市",
+      "type": "县级市",
+      "total": 292755,
+      "towns": 180669,
+      "urbanCore": 119807,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "调兵山市",
+      "type": "县级市",
+      "total": 206058,
+      "towns": 179480,
+      "urbanCore": 152660,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山东",
+      "name": "栖霞市",
+      "type": "县级市",
+      "total": 435405,
+      "towns": 179396,
+      "urbanCore": 102430,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "博乐市",
+      "type": "县级市",
+      "total": 246706,
+      "towns": 177536,
+      "urbanCore": 171713,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "舒兰市",
+      "type": "县级市",
+      "total": 406733,
+      "towns": 176692,
+      "urbanCore": 149478,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "连州市",
+      "type": "县级市",
+      "total": 377220,
+      "towns": 176572,
+      "urbanCore": 142007,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "侯马市",
+      "type": "县级市",
+      "total": 257854,
+      "towns": 175375,
+      "urbanCore": 171950,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "扎兰屯市",
+      "type": "县级市",
+      "total": 318933,
+      "towns": 174049,
+      "urbanCore": 139934,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "铁力市",
+      "type": "县级市",
+      "total": 225960,
+      "towns": 173360,
+      "urbanCore": 136375,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "舞钢市",
+      "type": "县级市",
+      "total": 294839,
+      "towns": 173152,
+      "urbanCore": 147254,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "万源市",
+      "type": "县级市",
+      "total": 406685,
+      "towns": 172148,
+      "urbanCore": 112925,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广东",
+      "name": "南雄市",
+      "type": "县级市",
+      "total": 353916,
+      "towns": 171215,
+      "urbanCore": 110974,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "兴仁市",
+      "type": "县级市",
+      "total": 425770,
+      "towns": 169210,
+      "urbanCore": 123375,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "蛟河市",
+      "type": "县级市",
+      "total": 328925,
+      "towns": 168313,
+      "urbanCore": 131058,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "凌海市",
+      "type": "县级市",
+      "total": 412513,
+      "towns": 167907,
+      "urbanCore": 136207,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "浙江",
+      "name": "龙泉市",
+      "type": "县级市",
+      "total": 248866,
+      "towns": 165567,
+      "urbanCore": 150542,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "海伦市",
+      "type": "县级市",
+      "total": 480216,
+      "towns": 164766,
+      "urbanCore": 135784,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "磐石市",
+      "type": "县级市",
+      "total": 370238,
+      "towns": 163592,
+      "urbanCore": 122854,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "彬州市",
+      "type": "县级市",
+      "total": 300226,
+      "towns": 160298,
+      "urbanCore": 126171,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "山西",
+      "name": "古交市",
+      "type": "县级市",
+      "total": 210757,
+      "towns": 159593,
+      "urbanCore": 143939,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "武夷山市",
+      "type": "县级市",
+      "total": 259668,
+      "towns": 159308,
+      "urbanCore": 141862,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "乌苏市",
+      "type": "县级市",
+      "total": 262906,
+      "towns": 156437,
+      "urbanCore": 117395,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "东兴市",
+      "type": "县级市",
+      "total": 216053,
+      "towns": 155538,
+      "urbanCore": 135271,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "福泉市",
+      "type": "县级市",
+      "total": 297899,
+      "towns": 153763,
+      "urbanCore": 106718,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "辽宁",
+      "name": "北镇市",
+      "type": "县级市",
+      "total": 422289,
+      "towns": 152033,
+      "urbanCore": 122193,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "满洲里市",
+      "type": "县级市",
+      "total": 150508,
+      "towns": 150508,
+      "urbanCore": 146348,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "靖西市",
+      "type": "县级市",
+      "total": 489163,
+      "towns": 150456,
+      "urbanCore": 120181,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "泸水市",
+      "type": "县级市",
+      "total": 203977,
+      "towns": 148759,
+      "urbanCore": 73750,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "福建",
+      "name": "漳平市",
+      "type": "县级市",
+      "total": 253394,
+      "towns": 147462,
+      "urbanCore": 125484,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "阿勒泰市",
+      "type": "县级市",
+      "total": 221454,
+      "towns": 147301,
+      "urbanCore": 80352,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "荔浦市",
+      "type": "县级市",
+      "total": 334527,
+      "towns": 146753,
+      "urbanCore": 93788,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "双辽市",
+      "type": "县级市",
+      "total": 996903,
+      "towns": 146716,
+      "urbanCore": 120197,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "华蓥市",
+      "type": "县级市",
+      "total": 272332,
+      "towns": 145959,
+      "urbanCore": 113458,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "共青城市",
+      "type": "县级市",
+      "total": 194689,
+      "towns": 143451,
+      "urbanCore": 141963,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "宁夏",
+      "name": "青铜峡市",
+      "type": "县级市",
+      "total": 1382713,
+      "towns": 142349,
+      "urbanCore": 115868,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "洪江市",
+      "type": "县级市",
+      "total": 341706,
+      "towns": 139505,
+      "urbanCore": 120842,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "庐山市",
+      "type": "县级市",
+      "total": 231525,
+      "towns": 139355,
+      "urbanCore": 88714,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "贵州",
+      "name": "赤水市",
+      "type": "县级市",
+      "total": 247287,
+      "towns": 138699,
+      "urbanCore": 104454,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "津市市",
+      "type": "县级市",
+      "total": 212739,
+      "towns": 137979,
+      "urbanCore": 109289,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "大安市",
+      "type": "县级市",
+      "total": 270911,
+      "towns": 136823,
+      "urbanCore": 103142,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "五大连池市",
+      "type": "县级市",
+      "total": 243283,
+      "towns": 135828,
+      "urbanCore": 53656,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "子长市",
+      "type": "县级市",
+      "total": 217735,
+      "towns": 135474,
+      "urbanCore": 127882,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "西藏",
+      "name": "昌都市",
+      "type": "地级市",
+      "total": 760966,
+      "towns": 133017,
+      "urbanCore": 53012,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "河南",
+      "name": "义马市",
+      "type": "县级市",
+      "total": 135819,
+      "towns": 131745,
+      "urbanCore": 121467,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "霍林郭勒市",
+      "type": "县级市",
+      "total": 138676,
+      "towns": 130239,
+      "urbanCore": 129922,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "敦煌市",
+      "type": "县级市",
+      "total": 185232,
+      "towns": 129853,
+      "urbanCore": 89210,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "图木舒克市",
+      "type": "县级市",
+      "total": 263245,
+      "towns": 128056,
+      "urbanCore": 56474,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "阜康市",
+      "type": "县级市",
+      "total": 181144,
+      "towns": 125080,
+      "urbanCore": 94092,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "扶余市",
+      "type": "县级市",
+      "total": 475017,
+      "towns": 124874,
+      "urbanCore": 93082,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "宁安市",
+      "type": "县级市",
+      "total": 322127,
+      "towns": 123311,
+      "urbanCore": 75578,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "塔城市",
+      "type": "县级市",
+      "total": 158098,
+      "towns": 122447,
+      "urbanCore": 106967,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "丰镇市",
+      "type": "县级市",
+      "total": 195229,
+      "towns": 122193,
+      "urbanCore": 113782,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "五家渠市",
+      "type": "县级市",
+      "total": 141065,
+      "towns": 118893,
+      "urbanCore": 102823,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "西藏",
+      "name": "那曲市",
+      "type": "地级市",
+      "total": 504838,
+      "towns": 116030,
+      "urbanCore": 29661,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "洮南市",
+      "type": "县级市",
+      "total": 307215,
+      "towns": 115946,
+      "urbanCore": 105179,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "西藏",
+      "name": "山南市",
+      "type": "地级市",
+      "total": 354035,
+      "towns": 114048,
+      "urbanCore": 52683,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "同江市",
+      "type": "县级市",
+      "total": 176112,
+      "towns": 112222,
+      "urbanCore": 47791,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "绥芬河市",
+      "type": "县级市",
+      "total": 114564,
+      "towns": 111455,
+      "urbanCore": 104941,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "华亭市",
+      "type": "县级市",
+      "total": 182449,
+      "towns": 110695,
+      "urbanCore": 81918,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "陕西",
+      "name": "华阴市",
+      "type": "县级市",
+      "total": 205119,
+      "towns": 109472,
+      "urbanCore": 70926,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "阿图什市",
+      "type": "县级市",
+      "total": 290936,
+      "towns": 105855,
+      "urbanCore": 90555,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "西藏",
+      "name": "林芝市",
+      "type": "地级市",
+      "total": 238936,
+      "towns": 97675,
+      "urbanCore": 57603,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "江西",
+      "name": "井冈山市",
+      "type": "县级市",
+      "total": 155976,
+      "towns": 97149,
+      "urbanCore": 47107,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "龙井市",
+      "type": "县级市",
+      "total": 129286,
+      "towns": 96972,
+      "urbanCore": 86037,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "东宁市",
+      "type": "县级市",
+      "total": 195489,
+      "towns": 96018,
+      "urbanCore": 57225,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "穆棱市",
+      "type": "县级市",
+      "total": 197065,
+      "towns": 92287,
+      "urbanCore": 63828,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "临江市",
+      "type": "县级市",
+      "total": 121616,
+      "towns": 87555,
+      "urbanCore": 81217,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "玉门市",
+      "type": "县级市",
+      "total": 137736,
+      "towns": 87544,
+      "urbanCore": 49384,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "青海",
+      "name": "玉树市",
+      "type": "县级市",
+      "total": 141308,
+      "towns": 85497,
+      "urbanCore": 81984,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "吉安市",
+      "type": "县级市",
+      "total": 169220,
+      "towns": 81982,
+      "urbanCore": 72426,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "凭祥市",
+      "type": "县级市",
+      "total": 129843,
+      "towns": 81773,
+      "urbanCore": 66932,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "澄江市",
+      "type": "县级市",
+      "total": 173161,
+      "towns": 81492,
+      "urbanCore": 43077,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "和龙市",
+      "type": "县级市",
+      "total": 117087,
+      "towns": 80419,
+      "urbanCore": 59261,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "抚远市",
+      "type": "县级市",
+      "total": 97329,
+      "towns": 79754,
+      "urbanCore": 44276,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "铁门关市",
+      "type": "县级市",
+      "total": 104746,
+      "towns": 77969,
+      "urbanCore": 24346,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "甘肃",
+      "name": "合作市",
+      "type": "县级市",
+      "total": 112173,
+      "towns": 75650,
+      "urbanCore": 72293,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "香格里拉市",
+      "type": "县级市",
+      "total": 387511,
+      "towns": 75300,
+      "urbanCore": 63776,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "二连浩特市",
+      "type": "县级市",
+      "total": 75794,
+      "towns": 74252,
+      "urbanCore": 73207,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "根河市",
+      "type": "县级市",
+      "total": 71437,
+      "towns": 71164,
+      "urbanCore": 41887,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "吉林",
+      "name": "图们市",
+      "type": "县级市",
+      "total": 85248,
+      "towns": 71023,
+      "urbanCore": 59388,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "康定市",
+      "type": "县级市",
+      "total": 126785,
+      "towns": 69728,
+      "urbanCore": 46041,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "云南",
+      "name": "水富市",
+      "type": "县级市",
+      "total": 103532,
+      "towns": 68389,
+      "urbanCore": 50825,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "五指山市",
+      "type": "县级市",
+      "total": 112269,
+      "towns": 67645,
+      "urbanCore": 51050,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "青海",
+      "name": "德令哈市",
+      "type": "县级市",
+      "total": 88227,
+      "towns": 65424,
+      "urbanCore": 63156,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "湖南",
+      "name": "韶山市",
+      "type": "县级市",
+      "total": 103357,
+      "towns": 57570,
+      "urbanCore": 52352,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "额尔古纳市",
+      "type": "县级市",
+      "total": 68482,
+      "towns": 54164,
+      "urbanCore": 43261,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "黑龙江",
+      "name": "漠河市",
+      "type": "县级市",
+      "total": 54036,
+      "towns": 53460,
+      "urbanCore": 31135,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "广西",
+      "name": "合山市",
+      "type": "县级市",
+      "total": 98938,
+      "towns": 48873,
+      "urbanCore": 38978,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "霍尔果斯市",
+      "type": "县级市",
+      "total": 71466,
+      "towns": 44701,
+      "urbanCore": 17719,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "双河市",
+      "type": "县级市",
+      "total": 54731,
+      "towns": 43263,
+      "urbanCore": 17419,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "可克达拉市",
+      "type": "县级市",
+      "total": 69524,
+      "towns": 39257,
+      "urbanCore": 5140,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "昆玉市",
+      "type": "县级市",
+      "total": 63487,
+      "towns": 32591,
+      "urbanCore": 15065,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "四川",
+      "name": "马尔康市",
+      "type": "县级市",
+      "total": 58390,
+      "towns": 31405,
+      "urbanCore": 31083,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "内蒙古",
+      "name": "阿尔山市",
+      "type": "县级市",
+      "total": 32301,
+      "towns": 29045,
+      "urbanCore": 18136,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "胡杨河市",
+      "type": "县级市",
+      "total": 29891,
+      "towns": 24769,
+      "urbanCore": 17906,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "青海",
+      "name": "茫崖市",
+      "type": "县级市",
+      "total": 18856,
+      "towns": 18856,
+      "urbanCore": 15477,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "北屯市",
+      "type": "县级市",
+      "total": 20414,
+      "towns": 13874,
+      "urbanCore": 5320,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "新疆",
+      "name": "阿拉山口市",
+      "type": "县级市",
+      "total": 11097,
+      "towns": 11097,
+      "urbanCore": 11097,
+      "date": "2020-11-01"
+    },
+    {
+      "province": "海南",
+      "name": "三沙市",
+      "type": "地级市",
+      "total": 2333,
+      "towns": 2333,
+      "urbanCore": null,
+      "date": "2020-11-01"
+    }
+  ]
+}

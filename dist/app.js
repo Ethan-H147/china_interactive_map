@@ -17,7 +17,7 @@ function syncLayers(){
 }
 const fillColors=['#efe2c8','#eee6d5','#f2e9d6','#e9ddc3','#f4e6d0','#e9e0ca'];
 const provinceLayers=new Map(),detailLayers=new Map(),regionIndex=[];
-let regionNames={},xinjiangAdministration;
+let regionNames={},regionPopulation,xinjiangAdministration;
 let provinceFeatures,manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
@@ -48,6 +48,20 @@ function renderRegionNames(p){
     const text=document.createElement('p');text.className='regional-text';text.lang=n.lang;text.dir=n.dir;text.dataset.vertical=String(n.vertical);text.textContent=n.text;
     row.append(caption,text);container.append(row);
   }
+}
+function renderPopulation(p){
+  const panel=$('population'),record=regionPopulation.regions[p.adcode];
+  panel.hidden=!record;
+  if(!record)return;
+  const format=value=>value===null?'Not reported':value.toLocaleString('en-US');
+  $('population-total').textContent=format(record.total);
+  $('population-towns').textContent=format(record.towns);
+  $('population-core').textContent=format(record.urbanCore);
+  const dates={'2020-11-01':'1 November 2020','2020年底':'End of 2020','2020第四季度':'Fourth quarter of 2020'};
+  $('population-date').textContent=dates[record.date]||record.date;
+  $('population-source').href=regionPopulation.source.revisionUrl;
+  $('population-source').title='Wikipedia: '+record.name;
+  $('population-quality').hidden=!record.inconsistent;
 }
 function isPrefectureLevel(p){return p.level==='taiwan-region'||p.level==='city'&&String(p.adcode).slice(2,4)!=='90';}
 function kind(p){
@@ -149,7 +163,7 @@ function selectRegion(layer,parentCode,shouldFit=true){
   if(!isProvince){const id=isPrefectureLevel(p)?'prefecture-layer':'other-layer';$(id).checked=true;syncLayers();}
   setRegionState(layer,{selected:true});clearHover();
   $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;$('tab-explore').hidden=false;showPanel('explore');
-  $('selection-kind').textContent=kind(p).toUpperCase();renderRegionFlag(p);renderRegionNames(p);renderDivisionNote(layer);
+  $('selection-kind').textContent=kind(p).toUpperCase();renderRegionFlag(p);renderRegionNames(p);renderPopulation(p);renderDivisionNote(layer);
   const coverage=manifest.coverage.find(c=>c.adcode===code);
   $('selection-meta').textContent=isProvince?(p.adcode===710000?'22 administrative divisions · 6 special municipalities, 3 cities, 13 counties':p.adcode===820000?'7 parishes · 4 other areas':coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${(detailLayers.get(code)||[]).filter(l=>l.feature.geometry).length} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct divisions'}`):p.boundaryAvailable===false?'Boundary unavailable':p.provinceCode===820000?'Macao government map area':`Administrative code ${p.officialCode||p.adcode}`;
   $('parent-context').hidden=isProvince;$('parent-region').hidden=isProvince;
@@ -235,7 +249,7 @@ map.on('mousemove',event=>{
 });
 map.getCanvas().addEventListener('mouseleave',clearHover);
 async function init(){try{
-  const [display,m,names,administration]=await Promise.all([boundaryData(),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),styleReady]);manifest=m;regionNames=names.regions;xinjiangAdministration=administration;
+  const [display,m,names,administration,population]=await Promise.all([boundaryData(),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),styleReady]);manifest=m;regionNames=names.regions;xinjiangAdministration=administration;regionPopulation=population;
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=display.provinces.features;
   const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
