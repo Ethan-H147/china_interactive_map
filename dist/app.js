@@ -10,7 +10,7 @@ map.getPane('province-stroke').style.pointerEvents='none';map.getPane('labels').
 const prefectureRenderer=L.svg({pane:'prefecture-shapes',padding:.5});
 const otherRenderer=L.svg({pane:'other-shapes',padding:.5});
 const strokeRenderer=L.svg({pane:'province-stroke',padding:.5});
-const geoOptions={noClip:true,smoothFactor:.25};
+const geoOptions={noClip:true,smoothFactor:0};
 function retainWholeBoundary(feature,layer){
   // Leaflet 1.9.4 still culls offscreen polygons with noClip enabled.
   // Keep every projected ring so long drags and flights cannot expose an empty rectangle.
@@ -18,10 +18,10 @@ function retainWholeBoundary(feature,layer){
   if(layer instanceof L.Polygon)layer._clipPoints=function(){this._parts=this._rings;};
 }
 const fillColors=['#efe2c8','#eee6d5','#f2e9d6','#e9ddc3','#f4e6d0','#e9e0ca'];
-function provinceStyle(feature){return{color:'#997544',weight:0,fillColor:fillColors[Number(feature.properties.adcode)/10000%fillColors.length|0],fillOpacity:1};}
-const detailStyle={color:'#b39a77',weight:.7,opacity:.85,fillColor:'#d6b974',fillOpacity:.025};
-const otherStyle={color:'#9f874e',weight:.7,opacity:.85,dashArray:'3 3',fillColor:'#dbc886',fillOpacity:.1};
-const selectedStyle={color:'#a43829',weight:1.7,fillColor:'#ca6a45',fillOpacity:.3};
+function provinceStyle(feature){return{stroke:false,color:'#997544',weight:0,fillColor:fillColors[Number(feature.properties.adcode)/10000%fillColors.length|0],fillOpacity:1};}
+const detailStyle={stroke:false,color:'#b39a77',weight:.7,opacity:.85,fillColor:'#d6b974',fillOpacity:.025};
+const otherStyle={stroke:false,color:'#9f874e',weight:.7,opacity:.85,dashArray:'3 3',fillColor:'#dbc886',fillOpacity:.1};
+const selectedStyle={stroke:true,color:'#a43829',weight:1.7,fillColor:'#ca6a45',fillOpacity:.3};
 const provinceLayers=new Map(),detailLayers=new Map(),regionIndex=[];
 let activeTooltip=null;
 map.on('tooltipopen',event=>{if(cameraBusy){map.closeTooltip(event.tooltip);return;}if(activeTooltip&&activeTooltip!==event.tooltip)map.closeTooltip(activeTooltip);activeTooltip=event.tooltip;});
@@ -114,13 +114,16 @@ function renderSearch(){
 for(const [code,s] of Object.entries(stories)){const b=document.createElement('button');b.className='discovery-card';b.type='button';b.dataset.nav='';b.disabled=true;const mark=document.createElement('span');mark.className='region-mark';mark.lang='zh';mark.setAttribute('aria-hidden','true');mark.textContent=s.mark;const content=document.createElement('span');const strong=document.createElement('strong');strong.textContent=s.name;const small=document.createElement('small');small.textContent=s.place;content.append(strong,small);b.append(mark,content);b.onclick=()=>selectRegion(provinceLayers.get(Number(code)),Number(code));$('discovery-cards').append(b);}
 async function json(url){const r=await fetch(url);if(!r.ok)throw new Error(`${url}: ${r.status}`);return r.json();}
 async function init(){try{
-  const [data,m]=await Promise.all([json('data/provinces.json'),json('data/manifest.json')]);manifest=m;$('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+  const [display,m]=await Promise.all([json('data/display-boundaries.json'),json('data/manifest.json')]);const data=display.provinces;manifest=m;$('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=data.features.filter(f=>f.properties.name&&f.properties.adcode);
   provinces=L.geoJSON({type:'FeatureCollection',features:provinceFeatures},{...geoOptions,renderer:shapeRenderer,style:provinceStyle,onEachFeature:(f,l)=>{provinceLayers.set(f.properties.adcode,l);bindRegion(f,l,f.properties.adcode);}}).addTo(map);
-  outline=L.geoJSON(data,{...geoOptions,style:{color:'#987343',weight:1.2,fill:false,opacity:.95},interactive:false,renderer:strokeRenderer,onEachFeature:retainWholeBoundary}).addTo(map);
+  const lineLayer=(geometry,renderer,style)=>L.geoJSON(geometry,{...geoOptions,style:{...style,stroke:true,fill:false,lineCap:'round',lineJoin:'round'},interactive:false,renderer});
+  outline=L.featureGroup([lineLayer(display.boundaries.province,strokeRenderer,{color:'#987343',weight:1.2,opacity:.95}),lineLayer(display.annotations,strokeRenderer,{color:'#987343',weight:1.2,opacity:.95})]).addTo(map);
+  lineLayer(display.boundaries.prefecture,prefectureRenderer,detailStyle).addTo(prefectures);
+  lineLayer(display.boundaries.other,otherRenderer,otherStyle).addTo(others);
   for(const f of [...provinceFeatures].sort((a,b)=>english[a.properties.adcode].localeCompare(english[b.properties.adcode]))){const p=f.properties,o=document.createElement('option');o.value=p.adcode;o.textContent=english[p.adcode]+' · '+p.name;$('province').append(o);}
   updateLabels();
-  const results=await Promise.allSettled(m.coverage.filter(c=>!c.unavailable).map(async c=>{const d=await json('data/'+c.adcode+'.json'),children=[];for(const feature of d.features){const pref=kind(feature.properties)==='Prefecture-level region';L.geoJSON(feature,{...geoOptions,renderer:pref?prefectureRenderer:otherRenderer,style:pref?detailStyle:otherStyle,onEachFeature:(f,l)=>{children.push(l);bindRegion(f,l,c.adcode);(pref?prefectures:others).addLayer(l);}});}detailLayers.set(c.adcode,children);}));
+  const results=await Promise.allSettled(m.coverage.filter(c=>!c.unavailable).map(async c=>{const d={features:display.subdivisions.features.filter(f=>f.properties.provinceCode===c.adcode)},children=[];for(const feature of d.features){const pref=kind(feature.properties)==='Prefecture-level region';L.geoJSON(feature,{...geoOptions,renderer:pref?prefectureRenderer:otherRenderer,style:pref?detailStyle:otherStyle,onEachFeature:(f,l)=>{children.push(l);bindRegion(f,l,c.adcode);(pref?prefectures:others).addLayer(l);}});}detailLayers.set(c.adcode,children);}));
   if(results.some(r=>r.status==='rejected'))throw new Error('Incomplete boundary data');allReady=true;controls();refreshStatus();updateLabels();
 }catch(e){console.error(e);$('status').textContent='Boundary data incomplete';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const code=Number(e.target.value);code?selectRegion(provinceLayers.get(code),code):reset();});
