@@ -64,8 +64,8 @@ $('map').addEventListener('wheel',event=>{if(cameraBusy){event.preventDefault();
 function showPanel(panel){for(const name of ['explore','layers']){$(name+'-panel').hidden=name!==panel;$('tab-'+name).setAttribute('aria-pressed',String(name===panel));}}
 function clearSelection(){if(selected){setRegionState(selected.layer,{selected:false});selected=null;}}
 function clearSearch(){$('search').value='';$('search-results').hidden=true;$('search-results').replaceChildren();}
-function reset(){if(cameraBusy)return;clearSelection();activeCode=null;$('province').value='';$('welcome').hidden=false;$('selection').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';clearSearch();showPanel('explore');setMode('province');return fitHome(true);}
-function setStory(code){const s=stories[code];$('story').hidden=!s;if(!s)return;$('story-title').textContent=s.place;$('story-text').textContent=s.text;$('story-source').href=s.source;}
+function reset(){if(cameraBusy)return;clearSelection();activeCode=null;$('province').value='';$('welcome').hidden=true;$('selection').hidden=true;$('tab-explore').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';clearSearch();showPanel('layers');setMode('province');return fitHome(true);}
+function setStory(code){const s=stories[code]||Object.values(stories).find(s=>s.subdivisionCodes.includes(code));$('story').hidden=!s;$('story-title').textContent=s?.place||'';$('story-text').textContent=s?.text||'';if(s)$('story-source').href=s.source;else $('story-source').removeAttribute('href');}
 function renderChildren(code){const children=detailLayers.get(code)||[];$('subdivisions').hidden=!children.length;$('subdivisions').open=false;$('subdivisions-title').textContent=`Subdivisions (${children.length})`;$('region-list').replaceChildren();for(const layer of children){const b=document.createElement('button');b.type='button';b.dataset.nav='';b.textContent=layer.feature.properties.name;b.onclick=()=>selectRegion(layer,code);$('region-list').append(b);}}
 function selectRegion(layer,parentCode,shouldFit=true){
   if(cameraBusy||!allReady)return Promise.resolve(false);
@@ -74,13 +74,13 @@ function selectRegion(layer,parentCode,shouldFit=true){
   activeCode=code;selected={layer};
   if(!isProvince){const id=isPrefectureLevel(p)?'prefecture-layer':'other-layer';$(id).checked=true;syncLayers();}
   setRegionState(layer,{selected:true});clearHover();
-  $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;showPanel('explore');
+  $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;$('tab-explore').hidden=false;showPanel('explore');
   $('selection-kind').textContent=kind(p).toUpperCase();$('selection-name').textContent=isProvince?english[code]:p.name;$('selection-chinese').textContent=isProvince?shortName(p.name):english[code];
   const coverage=manifest.coverage.find(c=>c.adcode===code);
   $('selection-meta').textContent=isProvince?(coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${coverage.count} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct counties'}`):`Administrative code ${p.adcode}`;
   $('parent-region').hidden=isProvince;$('parent-region').textContent='View '+english[code];$('parent-region').onclick=()=>selectRegion(provinceLayers.get(code),code);
   $('breadcrumb-region').hidden=false;$('breadcrumb-region').textContent=isProvince?english[code]:english[code]+' / '+p.name;$('map-shell').dataset.selected='true';
-  setStory(code);renderChildren(p.adcode);setMode('prefecture');refreshStatus();
+  setStory(p.adcode);renderChildren(p.adcode);setMode('prefecture');refreshStatus();
   document.querySelector('.sidebar-scroll').scrollTop=0;
   if(shouldFit)return navigateBounds(layer.getBounds(),{paddingTopLeft:[35,70],paddingBottomRight:[55,65],maxZoom:isProvince?8:10});
   updateLabels();return Promise.resolve(true);
@@ -175,4 +175,4 @@ $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>
 let previousSize;
 new ResizeObserver(()=>{const size=$('map').getBoundingClientRect();if(previousSize&&previousSize.width===size.width&&previousSize.height===size.height)return;previousSize={width:size.width,height:size.height};if(cameraBusy){map.stop();finishNavigation?.();}map.resize();if(!selected)fitHome(false);else map.fitBounds(selected.layer.getBounds(),{...navigationOptions({padding:[60,65],maxZoom:selected.layer.feature.properties.level==='province'?8:10}),duration:0});updateLabels();}).observe($('map'));
 if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'navigate_to_province',description:'Select a province, show its details, and zoom to its boundary. Returns when movement finishes.',inputSchema:{type:'object',properties:{adcode:{type:'integer',enum:Object.keys(english).map(Number)}},required:['adcode'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:async input=>{if(!input||!Number.isInteger(input.adcode)||!provinceLayers.has(input.adcode)||!allReady)throw new Error('A loaded province administrative code is required.');if(cameraBusy)throw new Error('The map is moving. Wait until the current navigation completes.');await selectRegion(provinceLayers.get(input.adcode),input.adcode);return{adcode:input.adcode,name:english[input.adcode]};}})).catch(()=>{});}catch{}}
-controls();init();
+showPanel('layers');controls();init();
