@@ -12,6 +12,10 @@ Automatic navigation locks map input and navigation controls until its movement 
 
 Calligraphic headings use bundled Ma Shan Zheng and Marck Script subsets, with their open font licenses in `dist/vendor`.
 
+## UI copy
+
+Remove text that does not convey necessary information. Use plain, professional labels and factual descriptions. Do not add slogans, decorative headings, or promotional language.
+
 ## Preview
 
 Run `node scripts/serve.mjs` and open http://127.0.0.1:4173.
