@@ -45,14 +45,19 @@ function isPrefectureLevel(p){return p.level==='city'&&String(p.adcode).slice(2,
 function kind(p){
   if(p.level==='province')return provinceTypes[p.adcode]||'Province';
   if(p.level==='district')return 'District';
-  if(String(p.adcode).slice(2,4)==='90')return 'Directly administered county';
+  if(String(p.adcode).slice(2,4)==='90'){
+    if(p.name.endsWith('市'))return 'Directly administered county-level city';
+    if(p.name.endsWith('自治县'))return 'Directly administered autonomous county';
+    if(p.name.endsWith('林区'))return 'Directly administered forestry district';
+    return 'Directly administered county';
+  }
   if(p.name.endsWith('自治州'))return 'Autonomous Prefecture';
   if(p.name.endsWith('地区'))return 'Prefecture';
   if(p.name.endsWith('盟'))return 'League';
   return 'Prefecture-level City';
 }
 function controls(){document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);}
-function setMode(mode){$('map-shell').dataset.level=mode;$('mode-province').setAttribute('aria-pressed',String(mode==='province'));$('mode-prefecture').setAttribute('aria-pressed',String(mode==='prefecture'));$('map-hint').textContent=mode==='province'?'Select a province':'Select a prefecture';}
+function setMode(mode){$('map-shell').dataset.level=mode;$('mode-province').setAttribute('aria-pressed',String(mode==='province'));$('mode-prefecture').setAttribute('aria-pressed',String(mode==='prefecture'));$('map-hint').textContent=mode==='province'?'Select a province':'Select a subdivision';}
 const interactionNames=['dragPan','scrollZoom','doubleClickZoom','touchZoomRotate','boxZoom','keyboard'];
 let enabledInteractions=[];
 function lockCamera(){
@@ -83,6 +88,17 @@ function clearSearch(){$('search').value='';$('search-results').hidden=true;$('s
 function reset(){if(cameraBusy)return;clearSelection();activeCode=null;$('province').value='';$('welcome').hidden=true;$('selection').hidden=true;$('tab-explore').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';clearSearch();showPanel('layers');setMode('province');return fitHome(true);}
 function setStory(code){const s=stories[code]||Object.values(stories).find(s=>s.subdivisionCodes.includes(code));$('story').hidden=!s;$('story-title').textContent=s?.place||'';$('story-text').textContent=s?.text||'';if(s)$('story-source').href=s.source;else $('story-source').removeAttribute('href');}
 function renderChildren(code){const children=detailLayers.get(code)||[];$('subdivisions').hidden=!children.length;$('subdivisions').open=false;$('subdivisions-title').textContent=`Subdivisions (${children.length})`;$('region-list').replaceChildren();for(const layer of children){const b=document.createElement('button');b.type='button';b.dataset.nav='';const en=document.createElement('span');en.textContent=englishName(layer.feature.properties);const zh=document.createElement('small');zh.lang='zh';zh.textContent=layer.feature.properties.name;b.append(en,zh);b.onclick=()=>selectRegion(layer,code);$('region-list').append(b);}}
+function renderDivisionNote(layer){
+  const p=layer.feature.properties,note=$('division-note');note.replaceChildren();note.hidden=true;
+  if(p.adcode===650000){
+    note.textContent='Some county-level cities are administered directly by Xinjiang. Their territories may have separate areas within surrounding prefectures.';
+  }else if(p.provinceCode===650000&&String(p.adcode).slice(2,4)==='90'){
+    const count=layer.feature.geometry.type==='MultiPolygon'?layer.feature.geometry.coordinates.length:1;
+    note.textContent=(p.adcode===659005?'Beitun is geographically within Altay and administered directly by Xinjiang. ':'Administered directly by Xinjiang. ')+(count>1?`The boundary dataset contains ${count} separate areas.`:'');
+    if(p.adcode===659005){const source=document.createElement('a');source.href='https://www.bts.gov.cn/c/2927/2927662.shtml';source.target='_blank';source.rel='noopener';source.textContent='Administrative details';note.append(document.createTextNode(' '),source);}
+  }
+  note.hidden=!note.textContent;
+}
 function selectRegion(layer,parentCode,shouldFit=true){
   if(cameraBusy||!allReady)return Promise.resolve(false);
   clearSelection();clearSearch();
@@ -91,9 +107,9 @@ function selectRegion(layer,parentCode,shouldFit=true){
   if(!isProvince){const id=isPrefectureLevel(p)?'prefecture-layer':'other-layer';$(id).checked=true;syncLayers();}
   setRegionState(layer,{selected:true});clearHover();
   $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;$('tab-explore').hidden=false;showPanel('explore');
-  $('selection-kind').textContent=kind(p).toUpperCase();renderRegionNames(p);
+  $('selection-kind').textContent=kind(p).toUpperCase();renderRegionNames(p);renderDivisionNote(layer);
   const coverage=manifest.coverage.find(c=>c.adcode===code);
-  $('selection-meta').textContent=isProvince?(coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${coverage.count} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct counties'}`):`Administrative code ${p.adcode}`;
+  $('selection-meta').textContent=isProvince?(coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${coverage.count} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct divisions'}`):`Administrative code ${p.adcode}`;
   $('parent-context').hidden=isProvince;$('parent-region').hidden=isProvince;
   const parent=provinceLayers.get(code).feature.properties;
   $('parent-kind').textContent=kind(parent);

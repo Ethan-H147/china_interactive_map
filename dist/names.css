@@ -21,3 +21,5 @@
 #region-list button small{display:block;font-size:12px;line-height:1.5;color:var(--muted);margin-top:3px;letter-spacing:0}
 @media(max-width:1100px){#selection-name{font-size:33px}#selection-name.long-name{font-size:26px}#selection-chinese{font-size:23px}}
 @media(max-width:760px){#selection-name{font-size:34px}#selection-name.long-name{font-size:27px}.regional-names{max-width:550px}.regional-text[data-vertical=true]{max-height:170px}}
+
+.division-note{font-size:13px;line-height:1.6;color:var(--muted);margin:16px 0 24px}.division-note a{font-size:12px;white-space:nowrap}
