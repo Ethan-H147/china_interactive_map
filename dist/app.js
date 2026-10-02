@@ -80,7 +80,7 @@ function selectRegion(layer,parentCode,shouldFit=true){
   $('selection-meta').textContent=isProvince?(coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${coverage.count} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct counties'}`):`Administrative code ${p.adcode}`;
   $('parent-region').hidden=isProvince;$('parent-region').textContent='View '+english[code];$('parent-region').onclick=()=>selectRegion(provinceLayers.get(code),code);
   $('breadcrumb-region').hidden=false;$('breadcrumb-region').textContent=isProvince?english[code]:english[code]+' / '+p.name;$('map-shell').dataset.selected='true';
-  setStory(code);renderChildren(code);setMode('prefecture');refreshStatus();
+  setStory(code);renderChildren(p.adcode);setMode('prefecture');refreshStatus();
   document.querySelector('.sidebar-scroll').scrollTop=0;
   if(shouldFit)return navigateBounds(layer.getBounds(),{paddingTopLeft:[35,70],paddingBottomRight:[55,65],maxZoom:isProvince?8:10});
   updateLabels();return Promise.resolve(true);
