@@ -6,7 +6,7 @@ map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
 map.addControl(new maplibregl.AttributionControl({compact:false,customAttribution:'Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV GeoAtlas</a>'}));
 const styleReady=new Promise(resolve=>map.once('load',resolve));
 const labels=[];
-const sourceFor=r=>r.feature.properties.level==='province'?'provinces':kind(r.feature.properties)==='Prefecture-level region'?'prefectures':'others';
+const sourceFor=r=>r.feature.properties.level==='province'?'provinces':isPrefectureLevel(r.feature.properties)?'prefectures':'others';
 function setRegionState(region,state){map.setFeatureState({source:sourceFor(region),id:region.feature.properties.adcode},state);}
 function layerVisible(id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');}
 function syncLayers(){
@@ -25,7 +25,16 @@ function clearHover(){if(hovered){setRegionState(hovered,{hover:false});hovered=
 map.on('movestart',clearHover);
 const shortName=n=>n.replace(/壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区|省|市/g,'');
 const provinceTypes={110000:'Municipality',120000:'Municipality',310000:'Municipality',500000:'Municipality',150000:'Autonomous Region',450000:'Zhuang Autonomous Region',540000:'Autonomous Region',640000:'Hui Autonomous Region',650000:'Uyghur Autonomous Region',810000:'Special Administrative Region',820000:'Special Administrative Region'};
-function kind(p){if(p.level==='province')return provinceTypes[p.adcode]||'Province';if(p.level==='district')return 'District';if(String(p.adcode).slice(2,4)==='90')return 'Directly administered county';return 'Prefecture-level region';}
+function isPrefectureLevel(p){return p.level==='city'&&String(p.adcode).slice(2,4)!=='90';}
+function kind(p){
+  if(p.level==='province')return provinceTypes[p.adcode]||'Province';
+  if(p.level==='district')return 'District';
+  if(String(p.adcode).slice(2,4)==='90')return 'Directly administered county';
+  if(p.name.endsWith('自治州'))return 'Autonomous Prefecture';
+  if(p.name.endsWith('地区'))return 'Prefecture';
+  if(p.name.endsWith('盟'))return 'League';
+  return 'Prefecture-level City';
+}
 function controls(){document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);}
 function setMode(mode){$('map-shell').dataset.level=mode;$('mode-province').setAttribute('aria-pressed',String(mode==='province'));$('mode-prefecture').setAttribute('aria-pressed',String(mode==='prefecture'));$('map-hint').textContent=mode==='province'?'Select a province':'Select a prefecture';}
 const interactionNames=['dragPan','scrollZoom','doubleClickZoom','touchZoomRotate','boxZoom','keyboard'];
@@ -63,7 +72,7 @@ function selectRegion(layer,parentCode,shouldFit=true){
   clearSelection();clearSearch();
   const p=layer.feature.properties,isProvince=p.level==='province',code=isProvince?p.adcode:parentCode;
   activeCode=code;selected={layer};
-  if(!isProvince){const id=kind(p)==='Prefecture-level region'?'prefecture-layer':'other-layer';$(id).checked=true;syncLayers();}
+  if(!isProvince){const id=isPrefectureLevel(p)?'prefecture-layer':'other-layer';$(id).checked=true;syncLayers();}
   setRegionState(layer,{selected:true});clearHover();
   $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;showPanel('explore');
   $('selection-kind').textContent=kind(p).toUpperCase();$('selection-name').textContent=isProvince?english[code]:p.name;$('selection-chinese').textContent=isProvince?shortName(p.name):english[code];
@@ -87,7 +96,7 @@ function updateLabels(){
   if(cameraBusy)return;
   labels.forEach(label=>label.remove());labels.length=0;if(!$('label-layer').checked||!provinceFeatures)return;
   const candidates=[],occupied=[];
-  if(activeCode&&map.getZoom()>=4){for(const layer of detailLayers.get(activeCode)||[]){const p=layer.feature.properties;if((kind(p)==='Prefecture-level region'&&$('prefecture-layer').checked)||(kind(p)!=='Prefecture-level region'&&$('other-layer').checked))candidates.push([p,p.name,null]);}}
+  if(activeCode&&map.getZoom()>=4){for(const layer of detailLayers.get(activeCode)||[]){const p=layer.feature.properties;if((isPrefectureLevel(p)&&$('prefecture-layer').checked)||(!isPrefectureLevel(p)&&$('other-layer').checked))candidates.push([p,p.name,null]);}}
   if(!candidates.length)for(const f of provinceFeatures)candidates.push([f.properties,english[f.properties.adcode],shortName(f.properties.name)]);
   for(const [p,text,small] of candidates){const xy=p.centroid||p.center;if(!xy)continue;const point=map.project(xy),size={x:map.getContainer().clientWidth,y:map.getContainer().clientHeight};if(point.x<25||point.x>size.x-30||point.y<75||point.y>size.y-45)continue;const width=Math.max(text.length*(small?6.6:12),small?small.length*12:0)+14,height=small?38:25;const rect={left:point.x-width/2,right:point.x+width/2,top:point.y-17,bottom:point.y-17+height};if(occupied.some(o=>rect.left<o.right&&rect.right>o.left&&rect.top<o.bottom&&rect.bottom>o.top))continue;occupied.push(rect);addLabel(p,text,small);}
 }
@@ -128,8 +137,8 @@ async function init(){try{
   const [display,m]=await Promise.all([json('data/display-boundaries.json'),json('data/manifest.json'),styleReady]);manifest=m;
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=display.provinces.features;
-  const prefFeatures=display.subdivisions.features.filter(f=>kind(f.properties)==='Prefecture-level region');
-  const otherFeatures=display.subdivisions.features.filter(f=>kind(f.properties)!=='Prefecture-level region');
+  const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
+  const otherFeatures=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
   addSource('provinces',display.provinces);addSource('prefectures',featureCollection(prefFeatures));addSource('others',featureCollection(otherFeatures));
   for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',feature(geometry));
   addSource('annotations',display.annotations);
@@ -149,7 +158,7 @@ $('province').addEventListener('change',e=>{const code=Number(e.target.value);co
 for(const id of ['province-layer','prefecture-layer','other-layer'])$(id).addEventListener('change',()=>{
   if(cameraBusy)return;clearHover();syncLayers();
   if(selected&&selected.layer.feature.properties.level!=='province'){
-    const checkbox=kind(selected.layer.feature.properties)==='Prefecture-level region'?'prefecture-layer':'other-layer';if(!$(checkbox).checked)selectRegion(provinceLayers.get(activeCode),activeCode,false);
+    const checkbox=isPrefectureLevel(selected.layer.feature.properties)?'prefecture-layer':'other-layer';if(!$(checkbox).checked)selectRegion(provinceLayers.get(activeCode),activeCode,false);
   }
   updateLabels();refreshStatus();
 });
