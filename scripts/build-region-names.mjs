@@ -6,13 +6,14 @@ const display=readData('display-boundaries.json');
 const wikidata=await read('name-sources/wikidata.json');
 const scripts=await read('name-sources/regional-scripts.json');
 const overrides=await read('name-sources/overrides.json');
+const manchu=await read('name-sources/manchu.json');
 const features=[...display.provinces.features,...display.subdivisions.features];
 const stat=code=>String(code).match(/.{2}/g).join(' ').replace(/(?: 00)+$/,'');
 const regionNames={};
 const languageCounts={};
 function local(text,lang,language,source,license='CC0'){
   languageCounts[language]=(languageCounts[language]||0)+1;
-  return {text,lang,language,dir:['ug','kk-Arab','ky-Arab'].includes(lang)?'rtl':'ltr',vertical:lang==='mn-Mong',source,license};
+  return {text,lang,language,dir:['ug','kk-Arab','ky-Arab'].includes(lang)?'rtl':'ltr',vertical:['mn-Mong','mnc-Mong'].includes(lang),source,license};
 }
 for(const {properties:p} of features){
   const rows=p.level==='taiwan-region'?[]:wikidata.records.filter(r=>r.code.value===stat(p.adcode));
@@ -49,6 +50,8 @@ for(const {properties:p} of features){
     if(text)entry.regional.push(local(text,'ug','Uyghur',item));
   }
   assert(!entry.regional.some(n=>n.lang==='mn-Mong'&&/[\u0400-\u04ff]/.test(n.text)));
+  const manchuName=manchu.regions[p.adcode];
+  if(manchuName)entry.regional.push({...local(manchuName.text,'mnc-Mong','Manchu',manchuName.source,manchu.license),romanization:manchuName.romanization,retrieved:manchu.retrieved});
   regionNames[p.adcode]=entry;
 }
 await fs.writeFile(new URL('../dist/data/region-names.json',import.meta.url),JSON.stringify({retrieved:wikidata.retrieved,regions:regionNames},null,2));

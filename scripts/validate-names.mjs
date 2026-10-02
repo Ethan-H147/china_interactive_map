@@ -18,7 +18,7 @@ for(const {properties:p} of features){
     const arabic=['ug','kk-Arab','ky-Arab'].includes(n.lang);
     assert.equal(n.dir,arabic?'rtl':'ltr');
     if(arabic)assert(/[\u0600-\u06ff]/.test(n.text));
-    assert.equal(n.vertical,n.lang==='mn-Mong');
+    assert.equal(n.vertical,['mn-Mong','mnc-Mong'].includes(n.lang));
     if(n.vertical){assert(/[\u1820-\u18aa]/.test(n.text));assert(!/[\u0400-\u04ff]/.test(n.text));}
     if(n.lang==='bo')assert(/[\u0f00-\u0fff]/.test(n.text));
     languageCounts[n.language]=(languageCounts[n.language]||0)+1;
@@ -29,6 +29,14 @@ assert(names[654000].regional.some(n=>n.lang==='kk-Arab'));
 assert(names[653000].regional.some(n=>n.lang==='ky-Arab'));
 for(const f of display.subdivisions.features.filter(f=>f.properties.provinceCode===150000))assert(names[f.properties.adcode].regional.some(n=>n.lang==='mn-Mong'));
 assert.equal(names[420100].regional.length,0);
+const manchu=read('name-sources/manchu.json');
+for(const [code,source] of Object.entries(manchu.regions)){
+  const name=names[code].regional.find(n=>n.lang==='mnc-Mong');
+  assert.equal(name?.text,source.text);
+  assert.equal(name?.source,source.source);
+  assert.equal(name?.language,'Manchu');
+}
+assert.equal(languageCounts.Manchu,3);
 const app=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
 const elements=new Map();
 function element(){return {hidden:false,textContent:'',children:[],dataset:{},classList:{toggle(){}},replaceChildren(){this.children=[];},append(...children){this.children.push(...children);}};}

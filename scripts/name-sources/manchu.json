@@ -1,0 +1,23 @@
+{
+  "retrieved": "2026-10-02",
+  "license": "CC BY-SA 4.0",
+  "note": "Published Manchu names, not claims about each Chinese name's linguistic origin. Spellings follow the linked articles' Manchu-name infoboxes.",
+  "regions": {
+    "230200": {
+      "text": "ᠴᡳᠴᡳᡤᠠᡵ",
+      "romanization": "Cicigar",
+      "source": "https://en.wikipedia.org/wiki/Qiqihar",
+      "note": "The infobox gives Cicigar; the etymology section also records Cicihar. Qiqihar is associated with a Daur name."
+    },
+    "230800": {
+      "text": "ᡤᡳᠶᠠᠮᡠᠰᡳ",
+      "romanization": "Giyamusi",
+      "source": "https://en.wikipedia.org/wiki/Jiamusi"
+    },
+    "231000": {
+      "text": "ᠮᡠᡩ᠋ᠠᠨ ᠪᡳᡵᠠ ᡥᠣᡨᠣᠨ",
+      "romanization": "Mudan bira hoton",
+      "source": "https://en.wikipedia.org/wiki/Mudanjiang"
+    }
+  }
+}

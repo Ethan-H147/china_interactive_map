@@ -723,7 +723,19 @@
       "en": "Qiqihar",
       "zh": "齐齐哈尔市",
       "source": "https://www.wikidata.org/wiki/Q205922",
-      "regional": []
+      "regional": [
+        {
+          "text": "ᠴᡳᠴᡳᡤᠠᡵ",
+          "lang": "mnc-Mong",
+          "language": "Manchu",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Qiqihar",
+          "license": "CC BY-SA 4.0",
+          "romanization": "Cicigar",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "230300": {
       "en": "Jixi",
@@ -759,7 +771,19 @@
       "en": "Jiamusi",
       "zh": "佳木斯市",
       "source": "https://www.wikidata.org/wiki/Q29003",
-      "regional": []
+      "regional": [
+        {
+          "text": "ᡤᡳᠶᠠᠮᡠᠰᡳ",
+          "lang": "mnc-Mong",
+          "language": "Manchu",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Jiamusi",
+          "license": "CC BY-SA 4.0",
+          "romanization": "Giyamusi",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "230900": {
       "en": "Qitaihe",
@@ -771,7 +795,19 @@
       "en": "Mudanjiang",
       "zh": "牡丹江市",
       "source": "https://www.wikidata.org/wiki/Q217646",
-      "regional": []
+      "regional": [
+        {
+          "text": "ᠮᡠᡩ᠋ᠠᠨ ᠪᡳᡵᠠ ᡥᠣᡨᠣᠨ",
+          "lang": "mnc-Mong",
+          "language": "Manchu",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Mudanjiang",
+          "license": "CC BY-SA 4.0",
+          "romanization": "Mudan bira hoton",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "231100": {
       "en": "Heihe",
