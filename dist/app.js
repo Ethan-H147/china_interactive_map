@@ -24,7 +24,8 @@ const tooltip=document.createElement('div');tooltip.className='region-tooltip gp
 function clearHover(){if(hovered){setRegionState(hovered,{hover:false});hovered=null;}tooltip.hidden=true;map.getCanvas().style.cursor='';}
 map.on('movestart',clearHover);
 const shortName=n=>n.replace(/壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区|省|市/g,'');
-function kind(p){if(p.level==='province')return 'Province-level region';if(p.level==='district')return 'District';if(String(p.adcode).slice(2,4)==='90')return 'Directly administered county';return 'Prefecture-level region';}
+const provinceTypes={110000:'Municipality',120000:'Municipality',310000:'Municipality',500000:'Municipality',150000:'Autonomous Region',450000:'Zhuang Autonomous Region',540000:'Autonomous Region',640000:'Hui Autonomous Region',650000:'Uyghur Autonomous Region',810000:'Special Administrative Region',820000:'Special Administrative Region'};
+function kind(p){if(p.level==='province')return provinceTypes[p.adcode]||'Province';if(p.level==='district')return 'District';if(String(p.adcode).slice(2,4)==='90')return 'Directly administered county';return 'Prefecture-level region';}
 function controls(){document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);}
 function setMode(mode){$('map-shell').dataset.level=mode;$('mode-province').setAttribute('aria-pressed',String(mode==='province'));$('mode-prefecture').setAttribute('aria-pressed',String(mode==='prefecture'));$('map-hint').textContent=mode==='province'?'Select a province':'Select a prefecture';}
 const interactionNames=['dragPan','scrollZoom','doubleClickZoom','touchZoomRotate','boxZoom','keyboard'];
