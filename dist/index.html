@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>China Atlas · Province & Prefecture Map</title>
+  <title>China · 中国</title>
   <meta name="description" content="Explore China's province and prefecture boundaries using published DataV GeoAtlas coordinates.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23172d43'/%3E%3Cpath d='M8 12l8-3 9 5 7-3v19l-7 3-9-5-8 3zM16 9v19m9-14v19' fill='none' stroke='%239ad0e1' stroke-width='2'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css">
@@ -10,8 +10,7 @@
 </head>
 <body>
   <aside class="sidebar">
-    <header><div class="brand-icon" aria-hidden="true">中</div><div><h1>China Atlas</h1><span class="eyebrow">PROVINCES & PREFECTURES</span></div></header>
-    <div class="intro"><span class="section-kicker">EXPLORE THE MAP</span><h2>A closer look<br>at every boundary.</h2><p>Pan, zoom, and select a region to explore its administrative outlines.</p></div>
+    <header class="china-heading"><h1><span class="china-english">China</span><span class="china-chinese" lang="zh">中国</span></h1></header>
     <label class="field-label" for="province">Go to a province-level region</label>
     <select id="province" disabled><option value="">All regions</option></select>
     <section class="layers" aria-labelledby="layers-title"><h3 id="layers-title">Map layers</h3>
@@ -26,7 +25,6 @@
   </aside>
   <main class="map-shell">
     <div id="map" aria-label="Interactive China administrative boundary map"></div>
-    <div class="map-heading"><span class="map-kicker">THE ADMINISTRATIVE ATLAS</span><div>中国行政区划</div></div>
     <div class="map-actions"><button id="home" title="Fit all regions" aria-label="Fit all regions">⌂</button><button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button><button id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button></div>
     <div class="north" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 32"><path d="M10 0L19 29 10 23 1 29Z" fill="currentColor"/><path d="M10 0v23L1 29Z" fill="#96aebe"/></svg></div>
     <div class="map-bottom"><span><i></i><span id="status" role="status">Loading boundary data…</span></span><span class="interaction-hint">Scroll to zoom · Drag to pan</span></div>

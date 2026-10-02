@@ -1,6 +1,7 @@
 const $=id=>document.getElementById(id);
 const english={110000:'Beijing',120000:'Tianjin',130000:'Hebei',140000:'Shanxi',150000:'Inner Mongolia',210000:'Liaoning',220000:'Jilin',230000:'Heilongjiang',310000:'Shanghai',320000:'Jiangsu',330000:'Zhejiang',340000:'Anhui',350000:'Fujian',360000:'Jiangxi',370000:'Shandong',410000:'Henan',420000:'Hubei',430000:'Hunan',440000:'Guangdong',450000:'Guangxi',460000:'Hainan',500000:'Chongqing',510000:'Sichuan',520000:'Guizhou',530000:'Yunnan',540000:'Tibet',610000:'Shaanxi',620000:'Gansu',630000:'Qinghai',640000:'Ningxia',650000:'Xinjiang',710000:'Taiwan',810000:'Hong Kong',820000:'Macao'};
-const map=L.map('map',{zoomControl:false,attributionControl:true,minZoom:2,maxZoom:12,zoomSnap:.25,preferCanvas:true,zoomAnimation:!matchMedia('(prefers-reduced-motion: reduce)').matches});
+const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+const map=L.map('map',{zoomControl:false,attributionControl:true,minZoom:2,maxZoom:12,zoomSnap:.25,preferCanvas:true,zoomAnimation:!reducedMotion.matches});
 map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
 map.attributionControl.addAttribution('Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV GeoAtlas</a>');
 map.createPane('provinceStroke');map.getPane('provinceStroke').style.zIndex=430;map.getPane('provinceStroke').style.pointerEvents='none';
@@ -13,12 +14,23 @@ let provinces,outline,provinceFeatures,manifest,selected=null,allReady=false;
 const prefectures=L.featureGroup().addTo(map),others=L.featureGroup(),labels=L.layerGroup().addTo(map);
 const provinceLayers=new Map(),detailLayers=new Map();
 const homeBounds=L.latLngBounds([[17.3,73],[54,135.5]]);
-function fitHome(){map.fitBounds(homeBounds,{paddingTopLeft:[25,95],paddingBottomRight:[40,65],animate:false});}
+let finishNavigation=null,navigating=false;
+function navigateBounds(bounds,options={},animate=true){
+  if(finishNavigation)finishNavigation();
+  map.stop();
+  if(!animate||reducedMotion.matches){map.fitBounds(bounds,{...options,animate:false});return Promise.resolve();}
+  return new Promise(resolve=>{
+    const finish=()=>{map.off('moveend',finish);if(finishNavigation===finish)finishNavigation=null;resolve();};
+    finishNavigation=finish;map.once('moveend',finish);
+    map.flyToBounds(bounds,{...options,animate:true,duration:.9,easeLinearity:.25});
+  });
+}
+function fitHome(animate=false){return navigateBounds(homeBounds,{paddingTopLeft:[25,55],paddingBottomRight:[40,65]},animate);}
 fitHome();
 const shortName=n=>n.replace(/壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区|省|市/g,'');
 function kind(p){if(p.level==='province')return 'Province-level region';if(p.level==='district')return 'District';if(String(p.adcode).slice(2,4)==='90')return 'Directly administered county';return 'Prefecture-level region';}
 function restoreSelection(){if(selected){selected.layer.setStyle(selected.base);selected=null;}}
-function reset(){restoreSelection();$('province').value='';$('selection-kind').textContent='NATIONAL VIEW';$('selection-name').innerHTML='China <span lang="zh">中国</span>';$('selection-description').textContent='Select an outline to see its name and administrative level.';$('selection-meta').textContent='';$('selection-reset').hidden=true;fitHome();updateLabels();}
+function reset(){restoreSelection();$('province').value='';$('selection-kind').textContent='NATIONAL VIEW';$('selection-name').innerHTML='China <span lang="zh">中国</span>';$('selection-description').textContent='Select an outline to see its name and administrative level.';$('selection-meta').textContent='';$('selection-reset').hidden=true;return fitHome(true);}
 function selectRegion(layer,parentCode,shouldFit=true){
   restoreSelection();const p=layer.feature.properties,isProvince=p.level==='province';
   const base=isProvince?fillStyle:p.level==='district'||String(p.adcode).slice(2,4)==='90'?otherStyle:detailStyle;
@@ -28,13 +40,13 @@ function selectRegion(layer,parentCode,shouldFit=true){
   const c=manifest?.coverage.find(c=>c.adcode===code);const region=provinceLayers.get(code)?.feature.properties.name;
   $('selection-description').textContent=isProvince?(c?.unavailable?'The source provides the outer outline only; internal divisions are unavailable.':c?.levels.district?`${c.count} district boundaries available in Other subdivisions.`:`${c?.count??0} prefecture-level and directly administered subdivisions in the source.`):`${region} · ${english[code]||''}`;
   $('selection-meta').textContent=`Administrative code ${p.adcode}`;$('selection-reset').hidden=false;
-  if(shouldFit)map.fitBounds(layer.getBounds(),{padding:[55,70],maxZoom:isProvince?8:10,animate:false});
+  if(shouldFit)return navigateBounds(layer.getBounds(),{padding:[55,70],maxZoom:isProvince?8:10});
   updateLabels();
 }
 function tooltip(layer,parentCode){const p=layer.feature.properties;const div=document.createElement('div');div.textContent=(english[p.adcode]?english[p.adcode]+' · ':'')+p.name;const sub=document.createElement('small');sub.textContent=kind(p);div.append(sub);layer.bindTooltip(div,{sticky:true,className:'region-tooltip'});layer.on('click',()=>selectRegion(layer,parentCode));layer.on('mouseover',()=>{if(selected?.layer!==layer)layer.setStyle({fillColor:'#8fc9dc',fillOpacity:.45});});layer.on('mouseout',()=>{if(selected?.layer!==layer)layer.setStyle(p.level==='province'?fillStyle:(kind(p)==='Prefecture-level region'?detailStyle:otherStyle));});}
 function addLabel(p,text,small){const xy=p.centroid||p.center;if(!xy)return;const div=document.createElement('div');div.textContent=text;if(small){const s=document.createElement('small');s.textContent=small;div.append(s);}labels.addLayer(L.marker([xy[1],xy[0]],{pane:'labels',interactive:false,keyboard:false,icon:L.divIcon({className:'province-label',html:div,iconSize:[140,30],iconAnchor:[70,15]})}));}
 function updateLabels(){
-  labels.clearLayers();if(!$('label-layer').checked||!provinceFeatures)return;
+  labels.clearLayers();if(navigating||!$('label-layer').checked||!provinceFeatures)return;
   const code=Number($('province').value),candidates=[],occupied=[];
   if(code&&detailLayers.has(code)){
     for(const layer of detailLayers.get(code)){const p=layer.feature.properties;if((kind(p)==='Prefecture-level region'&&$('prefecture-layer').checked)||(kind(p)!=='Prefecture-level region'&&$('other-layer').checked))candidates.push([p,p.name,null]);}
@@ -66,9 +78,12 @@ async function init(){try{
 }catch(e){console.error(e);$('status').textContent='Boundary data incomplete';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const l=provinceLayers.get(Number(e.target.value));l?selectRegion(l,Number(e.target.value)):reset();});
 for(const [id,getLayer] of [['province-layer',()=>outline],['prefecture-layer',()=>prefectures],['other-layer',()=>others]])$(id).addEventListener('change',e=>{const layer=getLayer();if(layer)e.target.checked?layer.addTo(map):map.removeLayer(layer);if(selected&&!map.hasLayer(selected.layer)&&selected.layer.feature.properties.level!=='province')restoreSelection();updateLabels();refreshStatus();});
-$('label-layer').addEventListener('change',updateLabels);map.on('zoomend moveend resize',updateLabels);
+$('label-layer').addEventListener('change',updateLabels);
+map.on('movestart',()=>{navigating=true;labels.clearLayers();});
+map.on('moveend',()=>{navigating=false;updateLabels();});
+map.on('resize',updateLabels);
 $('home').onclick=reset;$('selection-reset').onclick=reset;$('zoom-in').onclick=()=>map.zoomIn();$('zoom-out').onclick=()=>map.zoomOut();$('retry').onclick=()=>location.reload();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target===$('about')&&e.offsetX>=0&&e.offsetY>=0){const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();}});
 new ResizeObserver(()=>{map.invalidateSize();if(!selected)fitHome();}).observe($('map'));
-if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'navigate_to_province',description:'Select a province-level region and fit its boundary on the map.',inputSchema:{type:'object',properties:{adcode:{type:'integer',enum:Object.keys(english).map(Number)}},required:['adcode'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:async input=>{if(!input||!Number.isInteger(input.adcode)||!provinceLayers.has(input.adcode))throw new Error('A loaded province administrative code is required.');selectRegion(provinceLayers.get(input.adcode),input.adcode);return{adcode:input.adcode,name:english[input.adcode]};}})).catch(()=>{});}catch{}}
+if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'navigate_to_province',description:'Select a province-level region and fit its boundary on the map.',inputSchema:{type:'object',properties:{adcode:{type:'integer',enum:Object.keys(english).map(Number)}},required:['adcode'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:async input=>{if(!input||!Number.isInteger(input.adcode)||!provinceLayers.has(input.adcode))throw new Error('A loaded province administrative code is required.');await selectRegion(provinceLayers.get(input.adcode),input.adcode);return{adcode:input.adcode,name:english[input.adcode]};}})).catch(()=>{});}catch{}}
 init();
