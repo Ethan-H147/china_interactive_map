@@ -305,7 +305,17 @@ function randomPlace(){
 }
 $('surprise').onclick=randomPlace;
 $('home').onclick=()=>quiz.active?configureQuiz():reset();$('selection-reset').onclick=reset;$('fit-map').onclick=()=>quiz.active?fitQuizScope():reset();
-function zoomBy(amount){if(cameraBusy||!allReady)return;lockCamera();map.jumpTo({zoom:Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+amount))});unlockCamera();}
+function zoomBy(amount){
+  if(cameraBusy||!allReady)return;
+  map.stop();const zoom=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+amount));
+  if(zoom===map.getZoom())return;
+  if(reducedMotion.matches){map.jumpTo({zoom});updateLabels();return;}
+  lockCamera();
+  let timer;const finish=()=>{if(finishNavigation!==finish)return;map.off('moveend',finish);clearTimeout(timer);finishNavigation=null;unlockCamera();};
+  finishNavigation=finish;map.once('moveend',finish);
+  timer=setTimeout(()=>{map.stop();finish();},1200);
+  map.easeTo({zoom,duration:350,easing:t=>1-Math.pow(1-t,3)});
+}
 $('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);$('retry').onclick=()=>location.reload();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 function quizPool(settings={scope:$('quiz-scope').value,includeTaiwan:$('quiz-taiwan').checked}){return AtlasQuiz.candidates([...regionByCode.values()],settings);}
