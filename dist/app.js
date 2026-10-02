@@ -1,9 +1,9 @@
 const $=id=>document.getElementById(id);
 const english={110000:'Beijing',120000:'Tianjin',130000:'Hebei',140000:'Shanxi',150000:'Inner Mongolia',210000:'Liaoning',220000:'Jilin',230000:'Heilongjiang',310000:'Shanghai',320000:'Jiangsu',330000:'Zhejiang',340000:'Anhui',350000:'Fujian',360000:'Jiangxi',370000:'Shandong',410000:'Henan',420000:'Hubei',430000:'Hunan',440000:'Guangdong',450000:'Guangxi',460000:'Hainan',500000:'Chongqing',510000:'Sichuan',520000:'Guizhou',530000:'Yunnan',540000:'Tibet',610000:'Shaanxi',620000:'Gansu',630000:'Qinghai',640000:'Ningxia',650000:'Xinjiang',710000:'Taiwan',810000:'Hong Kong',820000:'Macao'};
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
-const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':'#f4f0e7'}}],transition:{duration:0,delay:0}},center:[105,36],zoom:3,minZoom:1,maxZoom:11,maxBounds:[[45,0],[165,68]],renderWorldCopies:false,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:{antialias:true},fadeDuration:0});
+const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':'#f4f0e7'}}],transition:{duration:0,delay:0}},center:[105,36],zoom:3,minZoom:1,maxZoom:16,maxBounds:[[45,0],[165,68]],renderWorldCopies:false,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:{antialias:true},fadeDuration:0});
 map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
-map.addControl(new maplibregl.AttributionControl({compact:false,customAttribution:'Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a>'}));
+map.addControl(new maplibregl.AttributionControl({compact:false,customAttribution:'Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">© HK SAR Government</a> · <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao Government</a>'}));
 const styleReady=new Promise(resolve=>map.once('load',resolve));
 const labels=[];
 const sourceFor=r=>r.feature.properties.level==='province'?'provinces':isPrefectureLevel(r.feature.properties)?'prefectures':'others';
@@ -24,7 +24,7 @@ const homeBounds=[[73,17.3],[135.5,54]];
 const tooltip=document.createElement('div');tooltip.className='region-tooltip gpu-tooltip';tooltip.hidden=true;$('map-shell').append(tooltip);
 function clearHover(){if(hovered){setRegionState(hovered,{hover:false});hovered=null;}tooltip.hidden=true;map.getCanvas().style.cursor='';}
 map.on('movestart',clearHover);
-const shortName=n=>n.replace(/壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区|省|市/g,'');
+const shortName=n=>n.replace(/壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区|特別行政區|省|市/g,'');
 const provinceTypes={110000:'Municipality',120000:'Municipality',310000:'Municipality',500000:'Municipality',150000:'Autonomous Region',450000:'Zhuang Autonomous Region',540000:'Autonomous Region',640000:'Hui Autonomous Region',650000:'Uyghur Autonomous Region',810000:'Special Administrative Region',820000:'Special Administrative Region'};
 function englishName(p){return p.level==='province'?english[p.adcode]:regionNames[p.adcode]?.en||p.name;}
 function bilingualName(p){return englishName(p)+' · '+p.name;}
@@ -39,6 +39,7 @@ function renderRegionNames(p){
   const name=englishName(p);
   $('selection-name').textContent=name;$('selection-name').classList.toggle('long-name',name.length>28);
   $('selection-chinese').textContent=p.name;
+  $('selection-chinese').lang=[710000,810000,820000].includes(p.provinceCode||p.adcode)?'zh-Hant':'zh-Hans';
   const container=$('selection-regional'),names=regionNames[p.adcode]?.regional||[];
   container.replaceChildren();container.hidden=!names.length;
   for(const n of names){
@@ -150,7 +151,7 @@ function selectRegion(layer,parentCode,shouldFit=true){
   $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;$('tab-explore').hidden=false;showPanel('explore');
   $('selection-kind').textContent=kind(p).toUpperCase();renderRegionFlag(p);renderRegionNames(p);renderDivisionNote(layer);
   const coverage=manifest.coverage.find(c=>c.adcode===code);
-  $('selection-meta').textContent=isProvince?(p.adcode===710000?'22 administrative divisions · 6 special municipalities, 3 cities, 13 counties':coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${(detailLayers.get(code)||[]).filter(l=>l.feature.geometry).length} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct divisions'}`):p.boundaryAvailable===false?'Boundary unavailable':`Administrative code ${p.officialCode||p.adcode}`;
+  $('selection-meta').textContent=isProvince?(p.adcode===710000?'22 administrative divisions · 6 special municipalities, 3 cities, 13 counties':p.adcode===820000?'7 parishes · 4 other areas':coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${(detailLayers.get(code)||[]).filter(l=>l.feature.geometry).length} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct divisions'}`):p.boundaryAvailable===false?'Boundary unavailable':p.provinceCode===820000?'Macao government map area':`Administrative code ${p.officialCode||p.adcode}`;
   $('parent-context').hidden=isProvince;$('parent-region').hidden=isProvince;
   const parent=provinceLayers.get(code).feature.properties;
   $('parent-kind').textContent=kind(parent);
@@ -158,9 +159,10 @@ function selectRegion(layer,parentCode,shouldFit=true){
   $('breadcrumb-region').hidden=false;$('breadcrumb-region').textContent=isProvince?bilingualName(p):english[code]+' / '+bilingualName(p);$('map-shell').dataset.selected='true';
   setStory(p.adcode);renderChildren(p.adcode);setMode('prefecture');refreshStatus();
   document.querySelector('.sidebar-scroll').scrollTop=0;
-  if(shouldFit&&layer.feature.geometry)return navigateBounds(layer.getBounds(),{paddingTopLeft:[35,70],paddingBottomRight:[55,65],maxZoom:isProvince?8:10});
+  if(shouldFit&&layer.feature.geometry)return navigateBounds(layer.getBounds(),{paddingTopLeft:[35,70],paddingBottomRight:[55,65],maxZoom:regionZoom(p)});
   updateLabels();return Promise.resolve(true);
 }
+function regionZoom(p){return [810000,820000].includes(p.provinceCode||p.adcode)?p.level==='province'?14:17:p.level==='province'?8:10;}
 function bindRegion(feature,parentCode){
   const bounds=new maplibregl.LngLatBounds();
   function extend(c){if(typeof c[0]==='number')bounds.extend(c);else c.forEach(extend);}if(feature.geometry)extend(feature.geometry.coordinates);
@@ -183,11 +185,11 @@ function updateLabels(){
   if(!candidates.length)for(const f of provinceFeatures)candidates.push([f.properties,english[f.properties.adcode],shortName(f.properties.name)]);
   for(const [p,text,small] of candidates){const xy=p.centroid||p.center;if(!xy)continue;const point=map.project(xy),size={x:map.getContainer().clientWidth,y:map.getContainer().clientHeight};if(point.x<25||point.x>size.x-30||point.y<75||point.y>size.y-45)continue;const width=Math.max(text.length*(small?6.6:12),small?small.length*12:0)+14,height=small?38:25;const rect={left:point.x-width/2,right:point.x+width/2,top:point.y-17,bottom:point.y-17+height};if(occupied.some(o=>rect.left<o.right&&rect.right>o.left&&rect.top<o.bottom&&rect.bottom>o.top))continue;occupied.push(rect);addLabel(p,text,small);}
 }
-function refreshStatus(){const pref=$('prefecture-layer').checked,other=$('other-layer').checked;$('status').textContent=allReady?`34 regions${pref?' · 333 prefecture-level areas · 22 Taiwan divisions':''}${other?' · 144 other divisions':''}`:'Loading boundaries…';}
+function refreshStatus(){const pref=$('prefecture-layer').checked,other=$('other-layer').checked;$('status').textContent=allReady?`34 regions${pref?' · 333 prefecture-level areas · 22 Taiwan divisions':''}${other?' · 147 other divisions':''}`:'Loading boundaries…';}
 function renderSearch(){
   const query=$('search').value.trim().toLowerCase();const results=$('search-results');results.replaceChildren();results.hidden=!query;if(!query)return;
   const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
-  const matches=regionIndex.filter(r=>(r.name+' '+r.english+' '+r.regional+' '+r.layer.feature.properties.adcode).toLowerCase().includes(query)||normalize(r.english).includes(normalize(query))).slice(0,12);
+  const matches=regionIndex.filter(r=>(r.name+' '+(r.layer.feature.properties.searchAliases||'')+' '+r.english+' '+r.regional+' '+r.layer.feature.properties.adcode).toLowerCase().includes(query)||normalize(r.english).includes(normalize(query))).slice(0,12);
   if(!matches.length){const p=document.createElement('p');p.textContent='No matches. Try an English province name or a Chinese place name.';results.append(p);return;}
   for(const r of matches){const b=document.createElement('button');b.type='button';b.className='search-result';b.dataset.nav='';const strong=document.createElement('strong');strong.textContent=r.english+' · '+r.name;const small=document.createElement('small');small.textContent=r.type+(r.layer.feature.properties.level==='province'?'':' · '+english[r.parentCode])+(r.layer.feature.geometry?'':' · Boundary unavailable');b.append(strong,small);b.onclick=()=>selectRegion(r.layer,r.parentCode);results.append(b);}
 }
@@ -273,6 +275,6 @@ function zoomBy(amount){if(cameraBusy||!allReady)return;lockCamera();map.jumpTo(
 $('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);$('retry').onclick=()=>location.reload();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 let previousSize;
-new ResizeObserver(()=>{const size=$('map').getBoundingClientRect();if(previousSize&&previousSize.width===size.width&&previousSize.height===size.height)return;previousSize={width:size.width,height:size.height};if(cameraBusy){map.stop();finishNavigation?.();}map.resize();if(!selected)fitHome(false);else if(selected.layer.feature.geometry)map.fitBounds(selected.layer.getBounds(),{...navigationOptions({padding:[60,65],maxZoom:selected.layer.feature.properties.level==='province'?8:10}),duration:0});updateLabels();}).observe($('map'));
+new ResizeObserver(()=>{const size=$('map').getBoundingClientRect();if(previousSize&&previousSize.width===size.width&&previousSize.height===size.height)return;previousSize={width:size.width,height:size.height};if(cameraBusy){map.stop();finishNavigation?.();}map.resize();if(!selected)fitHome(false);else if(selected.layer.feature.geometry)map.fitBounds(selected.layer.getBounds(),{...navigationOptions({padding:[60,65],maxZoom:regionZoom(selected.layer.feature.properties)}),duration:0});updateLabels();}).observe($('map'));
 if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'navigate_to_province',description:'Select a province, show its details, and zoom to its boundary. Returns when movement finishes.',inputSchema:{type:'object',properties:{adcode:{type:'integer',enum:Object.keys(english).map(Number)}},required:['adcode'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:async input=>{if(!input||!Number.isInteger(input.adcode)||!provinceLayers.has(input.adcode)||!allReady)throw new Error('A loaded province administrative code is required.');if(cameraBusy)throw new Error('The map is moving. Wait until the current navigation completes.');await selectRegion(provinceLayers.get(input.adcode),input.adcode);return{adcode:input.adcode,name:english[input.adcode]};}})).catch(()=>{});}catch{}}
 showPanel('layers');controls();init();

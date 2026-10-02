@@ -18,7 +18,7 @@ for(const {properties:p} of features){
   const rows=p.level==='taiwan-region'?[]:wikidata.records.filter(r=>r.code.value===stat(p.adcode));
   const english=[...new Set(rows.filter(r=>r.name['xml:lang']==='en').map(r=>r.name.value))];
   const item=rows[0]?.item.value.replace('http:','https:').replace('/entity/','/wiki/');
-  const override=p.level==='taiwan-region'?{text:p.englishName,source:'https://data.gov.tw/dataset/7442'}:overrides.english[p.adcode];
+  const override=p.level==='taiwan-region'?{text:p.englishName,source:'https://data.gov.tw/dataset/7442'}:p.provinceCode===820000?{text:p.englishName,source:'https://webmap.gis.gov.mo/MapGIS/index.html'}:overrides.english[p.adcode];
   assert(override||english.length===1,`Ambiguous or missing English: ${p.adcode}`);
   const entry={en:override?.text||english[0],zh:p.name,source:override?.source||item,regional:[]};
   const values=lang=>[...new Set(rows.flatMap(r=>[r.native,r.name].filter(Boolean).filter(v=>v['xml:lang']===lang).map(v=>v.value)))];

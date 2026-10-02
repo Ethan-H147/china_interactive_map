@@ -25,6 +25,38 @@
       "licenseURL": "https://data.gov.tw/license",
       "archiveSHA256": "0c6fca34a92b92ef3e9a41957e403cb89e814bb64942ca7c7e51c746f913d49d",
       "features": 22
+    },
+    {
+      "provider": "Hong Kong Home Affairs Department",
+      "url": "https://data.gov.hk/en-data/dataset/hk-had-json1-hong-kong-administrative-boundaries",
+      "download": "https://www.had.gov.hk/psi/hong-kong-administrative-boundaries/hksar_18_district_boundary.json",
+      "sourceFile": "hk-districts-official.json",
+      "sha256": "ab2123b5a48c2e39e29ce594a0c51590cf6081922ab2c5c14ff78338b788f760",
+      "features": 18,
+      "coordinateSystem": "WGS84",
+      "licenseURL": "https://data.gov.hk/en/terms-and-conditions"
+    },
+    {
+      "provider": "Hong Kong Lands Department",
+      "url": "https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html",
+      "download": "https://portal.csdi.gov.hk/server/rest/services/common/landsd_rcd_1637221775627_85634/MapServer/7/query?where=TYPE%3D%27SEF%27&outFields=CLASS%2CTYPE&outSR=4326&f=geojson",
+      "sourceFile": "hk-sea.json",
+      "sha256": "b4c2ec9d610dfc310cf455227ad539baebdc138005b9df7d648ca76bc668d03a",
+      "coordinateSystem": "WGS84",
+      "scale": "1:50,000",
+      "processing": "Sea polygons erased from official district jurisdictions; all coastline vertices retained.",
+      "licenseURL": "https://data.gov.hk/en/terms-and-conditions"
+    },
+    {
+      "provider": "Macao government online map",
+      "url": "https://webmap.gis.gov.mo/MapGIS/index.html",
+      "download": "https://webmap.gis.gov.mo/arcgis/rest/services/ThematicMap/Freg_stats/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&f=json",
+      "sourceFile": "mo-parish-native.json",
+      "sha256": "05b529e6948c1adaac16586562139e24f1b86685d3af6dd1b53d371b8b3e73d8",
+      "features": 11,
+      "coordinateSystem": "Macau Grid converted to WGS84 using official Annex I six-parameter transformation",
+      "coordinateReference": "https://www.dscc.gov.mo/files/geographical_level_point/PORT/Macaucoord_2009_web_PT_v201702.pdf",
+      "processing": "Seven parish polygons and four other areas, retaining all source vertices."
     }
   ],
   "missing": [
@@ -39,6 +71,7 @@
     "simplification": false,
     "xinjiang": "New cities clipped to the existing detailed Xinjiang extent, then erased from the older prefectures. Coincident overlay vertices joined within 1e-10 degrees.",
     "taiwan": "Official county/city polygons replace the coarse Taiwan outline. Overlapping older Fujian island components are replaced as whole components to prevent residual coastlines.",
+    "sar": "Official Hong Kong land-clipped districts and Macau parish/area polygons replace previous SAR geometry after legacy gap repair. Their land polygons are erased from neighboring Guangdong to prevent overlapping fills.",
     "replacedFujianIslandParts": [
       "350100-1",
       "350100-8",
@@ -47,6 +80,6 @@
       "350500-1",
       "350500-2"
     ],
-    "unchangedOtherProvinceBorders": 31
+    "unchangedOtherProvinceBorders": 28
   }
 }

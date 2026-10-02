@@ -6,7 +6,7 @@ const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
 const display=readData('display-boundaries.json');
 const names=read('../dist/data/region-names.json').regions;
 const features=[...display.provinces.features,...display.subdivisions.features];
-assert.equal(Object.keys(names).length,533);
+assert.equal(Object.keys(names).length,536);
 const languageCounts={};
 for(const {properties:p} of features){
   const entry=names[p.adcode];

@@ -1,0 +1,306 @@
+{
+ "currentVersion": 10.61,
+ "id": 0,
+ "name": "住戶每月平均消費支出",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPolygon",
+ "sourceSpatialReference": {"wkt": "PROJCS[\"MacauProj\",GEOGCS[\"MacauGrid\",DATUM[\"D_International_1924\",SPHEROID[\"International_1924\",6378388.0,297.0]],PRIMEM[\"<custom>\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",20000.0],PARAMETER[\"False_Northing\",20000.0],PARAMETER[\"Central_Meridian\",113.5364694444],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",22.2123972222],UNIT[\"Meter\",1.0]]"},
+ "copyrightText": "",
+ "parentLayer": null,
+ "subLayers": [],
+ "minScale": 0,
+ "maxScale": 0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "classBreaks",
+   "field": "Mon_house_expense",
+   "classificationMethod": "esriClassifyManual",
+   "minValue": 0,
+   "classBreakInfos": [
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       242,
+       248,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0.4
+      }
+     },
+     "classMaxValue": 0,
+     "label": "0",
+     "description": ""
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       255,
+       204,
+       225,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0.4
+      }
+     },
+     "classMaxValue": 24999,
+     "label": "<=25000",
+     "description": ""
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       240,
+       141,
+       177,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0.4
+      }
+     },
+     "classMaxValue": 35000,
+     "label": "25001 - 35000",
+     "description": ""
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       222,
+       84,
+       137,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0.4
+      }
+     },
+     "classMaxValue": 45000,
+     "label": "35001 - 45000",
+     "description": ""
+    },
+    {
+     "symbol": {
+      "type": "esriSFS",
+      "style": "esriSFSSolid",
+      "color": [
+       199,
+       0,
+       99,
+       255
+      ],
+      "outline": {
+       "type": "esriSLS",
+       "style": "esriSLSSolid",
+       "color": [
+        110,
+        110,
+        110,
+        255
+       ],
+       "width": 0.4
+      }
+     },
+     "classMaxValue": 45937,
+     "label": ">45000",
+     "description": ""
+    }
+   ]
+  },
+  "transparency": 0,
+  "labelingInfo": null
+ },
+ "defaultVisibility": true,
+ "extent": {
+  "xmin": 18895.161999999546,
+  "ymin": 8768.673000000417,
+  "xmax": 26063.66540000029,
+  "ymax": 20646.862800000235,
+  "spatialReference": {"wkt": "PROJCS[\"MacauProj\",GEOGCS[\"MacauGrid\",DATUM[\"D_International_1924\",SPHEROID[\"International_1924\",6378388.0,297.0]],PRIMEM[\"<custom>\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"False_Easting\",20000.0],PARAMETER[\"False_Northing\",20000.0],PARAMETER[\"Central_Meridian\",113.5364694444],PARAMETER[\"Scale_Factor\",1.0],PARAMETER[\"Latitude_Of_Origin\",22.2123972222],UNIT[\"Meter\",1.0]]"}
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "CNAME",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  },
+  {
+   "name": "FID_1",
+   "type": "esriFieldTypeSmallInteger",
+   "alias": "FID_1",
+   "domain": null
+  },
+  {
+   "name": "CNAME",
+   "type": "esriFieldTypeString",
+   "alias": "CNAME",
+   "length": 254,
+   "domain": null
+  },
+  {
+   "name": "PNAME",
+   "type": "esriFieldTypeString",
+   "alias": "PNAME",
+   "length": 254,
+   "domain": null
+  },
+  {
+   "name": "SNAME",
+   "type": "esriFieldTypeString",
+   "alias": "SNAME",
+   "length": 200,
+   "domain": null
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "length": 38,
+   "domain": null
+  },
+  {
+   "name": "Mon_house_expense",
+   "type": "esriFieldTypeInteger",
+   "alias": "Mon_house_expense",
+   "domain": null
+  },
+  {
+   "name": "Mon_house_income",
+   "type": "esriFieldTypeInteger",
+   "alias": "Mon_house_income",
+   "domain": null
+  },
+  {
+   "name": "ENAME",
+   "type": "esriFieldTypeString",
+   "alias": "ENAME",
+   "length": 200,
+   "domain": null
+  },
+  {
+   "name": "Shape.STArea()",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape.STArea()",
+   "domain": null
+  },
+  {
+   "name": "Shape.STLength()",
+   "type": "esriFieldTypeDouble",
+   "alias": "Shape.STLength()",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape"
+ },
+ "indexes": [
+  {
+   "name": "R163_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "UUID_163",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  },
+  {
+   "name": "S136_idx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": true,
+ "canScaleSymbols": false,
+ "hasLabels": true,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 1000,
+ "supportsStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, AMF, geoJSON",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsHavingClause": true,
+  "supportsCountDistinct": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsPagination": true,
+  "supportsTrueCurve": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true
+ },
+ "supportsDatumTransformation": true,
+ "supportsCoordinatesQuantization": true
+}

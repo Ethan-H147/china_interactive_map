@@ -1,6 +1,6 @@
 # China Atlas
 
-Interactive static map using DataV GeoAtlas, official NLSC Taiwan county/city boundaries, and AreaCity/Amap outlines for Xinxing and Baiyang. MapLibre GL JS 6.11.2 and the data snapshot are bundled, so the running map does not depend on a live map API or CDN.
+Interactive static map using DataV GeoAtlas, official Taiwan, Hong Kong and Macau boundaries, and AreaCity/Amap outlines for Xinxing and Baiyang. MapLibre GL JS 6.11.2 and the data snapshot are bundled, so the running map does not depend on a live map API or CDN.
 
 ## Exploring and rendering
 
@@ -10,15 +10,15 @@ Districts and directly administered county-level divisions are visible and selec
 
 `dist/data/xinjiang-administration.json` records 12 mapped XPCC city/division pairs, county-level status, Aral's rank terminology, and Ili's administration of Tacheng and Altay. Xinxing and Baiyang use published AreaCity/Amap polygons; their areas are removed from the older surrounding prefectures. Caohu has a searchable administrative entry with its official establishment announcement and an explicit missing-boundary notice. Selecting Caohu does not highlight or navigate to an invented outline. The Ili polygon represents its directly administered area; Tacheng and Altay remain separate polygons. XPCC city boundaries do not cover every farm under the corresponding division.
 
-All 533 mapped regions have English and Chinese names. Taiwan uses the official NLSC English and traditional Chinese names, with actual categories: 6 special municipalities, 3 cities, and 13 counties. Official Taiwan codes use a `TW-` namespace internally to avoid collisions with mainland identifiers. The sidebar shows a bilingual parent link and a PRC or ROC flag above the category label. Search accepts English, Chinese, codes, and sourced regional names.
+All 536 mapped regions have English and Chinese names. Taiwan uses the official NLSC English and traditional Chinese names, with actual categories: 6 special municipalities, 3 cities, and 13 counties. Hong Kong and Macau use traditional Chinese names on the map and in the sidebar; search also accepts simplified names. Official Taiwan codes use a `TW-` namespace internally to avoid collisions with mainland identifiers. The sidebar shows a bilingual parent link and the PRC, ROC, Hong Kong or Macau flag above the category label. Search accepts English, Chinese, codes, and sourced regional names.
 
 `dist/data/region-names.json` records sourced Tibetan, Uyghur, Kazakh, Kyrgyz, and traditional Mongolian spellings for relevant regions. It includes each name’s language, direction, source, and license. Regional names are attached to individual administrative codes, so they are not inherited from a parent. Traditional Mongolian uses vertical columns from left to right; Arabic scripts use right-to-left text. The Noto regional fonts and their SIL Open Font Licenses are bundled locally.
 
 To refresh names, run `node scripts/fetch-region-names.mjs` and `node scripts/fetch-regional-scripts.mjs`, review their snapshots and the explicit overrides in `scripts/name-sources`, then run `node scripts/build-region-names.mjs` and `node scripts/validate-names.mjs`. Wikidata records are matched by administrative code; supplemental regional script spellings come from the linked Wikipedia articles. The source snapshots are retained for review. Only sourced spellings are displayed; this is not complete language coverage for every autonomous division.
 
-MapLibre draws boundaries with WebGL. Geometry tiling and triangulation run in two workers, and panning moves GPU buffers instead of repainting full-country SVG paths. All sources use zero simplification tolerance and a maximum source zoom of 18. The map stops at zoom 11 (equivalent to the previous Leaflet zoom 12). Pixel ratio follows the device; no reduced-resolution canvas is used.
+MapLibre draws boundaries with WebGL. Geometry tiling and triangulation run in two workers, and panning moves GPU buffers instead of repainting full-country SVG paths. All sources use zero simplification tolerance and a maximum source zoom of 18. The map supports zoom 16, with closer automatic views for Hong Kong and Macau. Pixel ratio follows the device; no reduced-resolution canvas is used.
 
-The display dataset is stored as a lossless gzip stream split into three files below 4 MiB each. `display-boundaries.parts.json` records the uncompressed checksum. The browser decompresses the original coordinates before sending them to MapLibre. No vertices are removed. Hover queries are suspended during movement; labels update after movement ends.
+The display dataset is stored as a lossless gzip stream split into files below 4 MiB each. `display-boundaries.parts.json` records the uncompressed checksum. The browser decompresses the original coordinates before sending them to MapLibre. No vertices are removed. Hover queries are suspended during movement; labels update after movement ends.
 
 Automatic navigation locks map input and navigation controls until its movement completes, with a timeout recovery for background tabs. Reduced-motion preferences use an immediate move. Labels remain on the map during motion and their spacing is refreshed afterward. A single resize observer owns map sizing to avoid competing recenter operations.
 
@@ -30,9 +30,11 @@ Run `npm ci` then `node scripts/build-boundaries.mjs` after refreshing source da
 
 The source files use independently generalized edges: even neighboring provinces’ detailed files do not share identical coordinates. Mapshaper 0.7.72 reconciles overlaps (min-area rule) and enclosed gaps narrower than 250 m in a derived display dataset. It does not simplify geometry or close open coastal channels. This is display normalization, not an administrative boundary update. The original source files and checksums remain intact.
 
-Province fills, selection geometry, and boundary lines use one dataset. TopoJSON assembles three disjoint line networks so shared edges are drawn once. Supplemental overlays are applied after the original repair, preserving the exact borders of 31 unrelated regions. Overlapping older Fujian island components are replaced with NLSC outlines to prevent a second coastline around Kinmen and Matsu. Polygon fills have no base stroke, and renderer simplification is disabled. Taiwan camera views focus on nearby islands while retaining distant island geometry.
+Province fills, selection geometry, and boundary lines use one dataset. TopoJSON assembles three disjoint line networks so shared edges are drawn once. Supplemental overlays are applied after the original repair, preserving the exact borders of 28 unrelated regions. Overlapping older Fujian island components are replaced with NLSC outlines to prevent a second coastline around Kinmen and Matsu. Polygon fills have no base stroke, and renderer simplification is disabled. Taiwan camera views focus on nearby islands while retaining distant island geometry.
 
-`npm test` checks original source hashes, polygon closure, retained land parts, province/subdivision area agreement, unique boundary segments, bilingual names, flags, selection behavior, and lossless decompression. It also compares all 31 unaffected province borders with the previous version.
+Hong Kong uses the Home Affairs Department's 18 district jurisdictions with Lands Department sea polygons erased, preserving offshore islands and channels. Macau uses seven parishes plus Cotai, New Urban Zone A, the University of Macau site, and the Macau port administration area from the government map. The three added areas have internal map IDs 820009–820011; these are not official administrative codes. `node scripts/prepare-sar-boundaries.mjs` rebuilds these datasets from the retained government downloads. Macau Grid coordinates are converted with the official Annex I six-parameter transformation, checked against its three worked examples. SAR polygons enter the build after the legacy gap repair; overlaps are removed from Guangdong. `node scripts/validate-sar.mjs` checks source edge preservation, island coverage, water channels, names, and categories.
+
+`npm test` checks original source hashes, polygon closure, retained land parts, province/subdivision area agreement, unique boundary segments, bilingual names, flags, selection behavior, and lossless decompression. It also compares all 28 unaffected province borders with the previous version.
 
 ## UI copy
 
@@ -44,7 +46,7 @@ Run `node scripts/serve.mjs` and open http://127.0.0.1:4173.
 
 ## Boundary coverage
 
-The display contains 34 province/territory features, 333 prefecture-level areas, 112 districts, 32 directly administered county-level divisions, and 22 Taiwan divisions. Caohu is an additional administrative entry without polygon geometry. The original DataV snapshot is retained separately and still has its original coverage. Source dates vary; retrieval does not imply administrative currency.
+The display contains 34 province/territory features, 333 prefecture-level areas, 104 districts, 11 Macau parishes and areas, 32 directly administered county-level divisions, and 22 Taiwan divisions. Caohu is an additional administrative entry without polygon geometry. The original DataV snapshot is retained separately and still has its original coverage. Source dates vary; retrieval does not imply administrative currency.
 
 Source: https://datav.aliyun.com/portal/school/atlas/area_selector
 

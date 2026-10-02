@@ -3496,170 +3496,188 @@
     },
     "810000": {
       "en": "Hong Kong",
-      "zh": "香港特别行政区",
+      "zh": "香港特別行政區",
       "source": "https://www.wikidata.org/wiki/Q8646",
       "regional": []
     },
     "810001": {
       "en": "Central and Western",
-      "zh": "中西区",
+      "zh": "中西區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810002": {
       "en": "Wan Chai",
-      "zh": "湾仔区",
+      "zh": "灣仔區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810003": {
       "en": "Eastern",
-      "zh": "东区",
+      "zh": "東區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810004": {
       "en": "Southern",
-      "zh": "南区",
+      "zh": "南區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810005": {
       "en": "Yau Tsim Mong",
-      "zh": "油尖旺区",
+      "zh": "油尖旺區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810006": {
       "en": "Sham Shui Po",
-      "zh": "深水埗区",
+      "zh": "深水埗區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810007": {
       "en": "Kowloon City",
-      "zh": "九龙城区",
+      "zh": "九龍城區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810008": {
       "en": "Wong Tai Sin",
-      "zh": "黄大仙区",
+      "zh": "黃大仙區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810009": {
       "en": "Kwun Tong",
-      "zh": "观塘区",
+      "zh": "觀塘區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810010": {
       "en": "Tsuen Wan",
-      "zh": "荃湾区",
+      "zh": "荃灣區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810011": {
       "en": "Tuen Mun",
-      "zh": "屯门区",
+      "zh": "屯門區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810012": {
       "en": "Yuen Long",
-      "zh": "元朗区",
+      "zh": "元朗區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810013": {
       "en": "North",
-      "zh": "北区",
+      "zh": "北區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810014": {
       "en": "Tai Po",
-      "zh": "大埔区",
+      "zh": "大埔區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810015": {
       "en": "Sai Kung",
-      "zh": "西贡区",
+      "zh": "西貢區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810016": {
       "en": "Sha Tin",
-      "zh": "沙田区",
+      "zh": "沙田區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810017": {
       "en": "Kwai Tsing",
-      "zh": "葵青区",
+      "zh": "葵青區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "810018": {
       "en": "Islands",
-      "zh": "离岛区",
+      "zh": "離島區",
       "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
       "regional": []
     },
     "820000": {
       "en": "Macau",
-      "zh": "澳门特别行政区",
+      "zh": "澳門特別行政區",
       "source": "https://www.wikidata.org/wiki/Q14773",
       "regional": []
     },
     "820001": {
       "en": "Nossa Senhora de Fátima",
-      "zh": "花地玛堂区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "花地瑪堂區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "820002": {
       "en": "Santo António",
-      "zh": "花王堂区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "花王堂區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "820003": {
       "en": "São Lázaro",
-      "zh": "望德堂区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "望德堂區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "820004": {
       "en": "Sé",
-      "zh": "大堂区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "大堂區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "820005": {
       "en": "São Lourenço",
-      "zh": "风顺堂区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "風順堂區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "820006": {
       "en": "Nossa Senhora do Carmo",
-      "zh": "嘉模堂区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "嘉模堂區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "820007": {
       "en": "Cotai",
-      "zh": "路凼填海区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "路氹填海區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "820008": {
       "en": "São Francisco Xavier",
-      "zh": "圣方济各堂区",
-      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "zh": "聖方濟各堂區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
+      "regional": []
+    },
+    "820009": {
+      "en": "New Urban Zone A",
+      "zh": "新城A區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
+      "regional": []
+    },
+    "820010": {
+      "en": "University of Macau",
+      "zh": "澳門大學",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
+      "regional": []
+    },
+    "820011": {
+      "en": "Macau Port Administration Area",
+      "zh": "港珠澳大橋珠澳口岸人工島澳門口岸管理區",
+      "source": "https://webmap.gis.gov.mo/MapGIS/index.html",
       "regional": []
     },
     "TW-09007": {

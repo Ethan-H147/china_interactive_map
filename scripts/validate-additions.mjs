@@ -19,7 +19,7 @@ const previous=JSON.parse(original.stdout);
 const polygons=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 function edges(g){const values=[];for(const poly of polygons(g))for(const ring of poly)for(let i=1;i<ring.length;i++){const a=JSON.stringify(ring[i-1]),b=JSON.stringify(ring[i]);if(a!==b)values.push(a<b?a+'|'+b:b+'|'+a);}return createHash('sha256').update(values.sort().join('\n')).digest('hex');}
 let unchanged=0;
-for(const old of previous.provinces.features.filter(f=>![650000,350000,710000].includes(f.properties.adcode))){
+for(const old of previous.provinces.features.filter(f=>![650000,350000,710000,440000,810000,820000].includes(f.properties.adcode))){
   const current=display.provinces.features.find(f=>f.properties.adcode===old.properties.adcode);
   assert.equal(edges(current.geometry),edges(old.geometry),'Unrelated province changed: '+old.properties.name);unchanged++;
 }
@@ -45,4 +45,4 @@ const administration=read('dist/data/xinjiang-administration.json');
 assert.equal(administration.missingCities.length,1);assert.equal(administration.missingCities[0].adcode,659013);
 assert(!display.subdivisions.features.some(f=>f.properties.adcode===659013),'Caohu must not receive an invented polygon');
 assert.match(app,/if\(shouldFit&&layer.feature.geometry\)/);
-console.log(JSON.stringify({unchangedProvinceBorders:unchanged,taiwanDivisions:counts,newXinjiangOutlines:2,unmappedCaohu:'explicit',flagsVerified:533}));
+console.log(JSON.stringify({unchangedProvinceBorders:unchanged,taiwanDivisions:counts,newXinjiangOutlines:2,unmappedCaohu:'explicit',flagsVerified:display.provinces.features.length+display.subdivisions.features.length}));
