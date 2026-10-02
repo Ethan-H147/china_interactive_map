@@ -1,12 +1,14 @@
 # China Atlas
 
-Interactive static map derived from Alibaba Cloud DataV GeoAtlas GeoJSON. Leaflet 1.9.4 and the data snapshot are vendored, so the running map does not depend on a live map API or CDN.
+Interactive static map derived from Alibaba Cloud DataV GeoAtlas GeoJSON. MapLibre GL JS 6.11.2 and the data snapshot are vendored, so the running map does not depend on a live map API or CDN.
 
 ## Exploring and rendering
 
 The Discover panel includes six province stories with links to UNESCO World Heritage sources, a region search, and a list of subdivisions for the selected province. Province names can be searched in English or Chinese; prefecture and district names can be searched in Chinese or by administrative code.
 
-Boundary layers use SVG with visible overflow and complete polygon rings. Leaflet 1.9.4 normally rejects offscreen polygon bounds even when `noClip` is enabled. A scoped `_clipPoints` override on these polygon instances retains their rings during long pans and flights. Recheck this behavior before changing the pinned Leaflet version. Original downloaded files remain unchanged. Display geometry is derived as described below.
+MapLibre draws boundaries with WebGL. Geometry tiling and triangulation run in two workers, and panning moves GPU buffers instead of repainting full-country SVG paths. All sources use zero simplification tolerance and a maximum source zoom of 18. The map stops at zoom 11 (equivalent to the previous Leaflet zoom 12). Pixel ratio follows the device; no reduced-resolution canvas is used.
+
+The display-boundaries.json file is unchanged by the renderer migration (SHA-256: 7af3f1b451ba98675414149d6ad3a458330d67761e831350013c75265574225e). Hover queries are suspended during movement; labels update after movement ends. Original source files and the earlier boundary reconciliation remain unchanged.
 
 Automatic navigation locks map input and navigation controls until its movement completes, with a timeout recovery for background tabs. Reduced-motion preferences use an immediate move. Labels remain on the map during motion and their spacing is refreshed afterward. A single resize observer owns map sizing to avoid competing recenter operations.
 
@@ -18,7 +20,7 @@ Run `npm ci` then `node scripts/build-boundaries.mjs` after refreshing source da
 
 The source files use independently generalized edges: even neighboring provinces’ detailed files do not share identical coordinates. Mapshaper 0.7.72 reconciles overlaps (min-area rule) and enclosed gaps narrower than 250 m in a derived display dataset. It does not simplify geometry or close open coastal channels. This is display normalization, not an administrative boundary update. The original source files and checksums remain intact.
 
-Province fills, selection geometry, and boundary lines are derived from this single normalized dataset. TopoJSON assembles province polygons and three disjoint line networks so shared edges are stroked once. Polygon fills have no base stroke, and Leaflet simplification is disabled to keep selection edges aligned with line networks.
+Province fills, selection geometry, and boundary lines are derived from this single normalized dataset. TopoJSON assembles province polygons and three disjoint line networks so shared edges are stroked once. Polygon fills have no base stroke, and renderer simplification is disabled to keep selection edges aligned with line networks.
 
 `node scripts/validate-boundaries.mjs` checks subdivision counts, ring closure, matching province/subdivision areas, retained land polygon parts, unique line segments, shared province edges, removal of coarse province shapes, and a maximum 0.5% province area change from source data. Two source polygon parts overlap neighboring regions and are assigned to those neighbors by normalization; their land coverage remains present.
 
@@ -37,6 +39,12 @@ The snapshot contains 34 province-level features, 333 prefecture-level regions, 
 Source: https://datav.aliyun.com/portal/school/atlas/area_selector
 
 `dist/data/manifest.json` records every downloaded URL, retrieval date, byte count, SHA-256 checksum and regional coverage. Geometry is stored unchanged. Display follows the provider's territorial representation and is intended for geographic exploration. The provider retains rights in its data; no additional data license is asserted here. Leaflet's BSD license is preserved in `dist/vendor/leaflet-LICENSE.txt`.
+
+## Renderer assets
+
+Run `node scripts/vendor-renderer.mjs` after `npm ci` to copy the pinned MapLibre browser modules, worker, stylesheet, and license. These assets are served locally; the map does not load an external basemap or require an API key.
+
+The local `/benchmark` route runs four timed pans near Tianjin and reports animation-frame intervals. It is available only from the preview server and is excluded from production. Automation timings depend on browser throttling and do not represent the user's display refresh rate.
 
 ## Validate or refresh
 

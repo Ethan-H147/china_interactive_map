@@ -5,8 +5,8 @@
   <title>China · 中国</title>
   <meta name="description" content="Explore China's province and prefecture boundaries using published DataV GeoAtlas coordinates.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%239f3428'/%3E%3Cpath d='M8 12l8-3 9 5 7-3v19l-7 3-9-5-8 3zM16 9v19m9-14v19' fill='none' stroke='%23edd4a4' stroke-width='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="style.css">
-  <script src="vendor/leaflet.js" defer></script><script src="stories.js" defer></script><script src="app.js" defer></script>
+  <link rel="stylesheet" href="vendor/maplibre-gl.css"><link rel="stylesheet" href="style.css">
+  <script src="stories.js" defer></script><script type="module" src="gpu-loader.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -37,7 +37,7 @@
     <div class="north" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 32"><path d="M10 0L19 29 10 23 1 29Z" fill="currentColor"/><path d="M10 0v23L1 29Z" fill="#c9a364"/></svg></div>
     <div class="map-bottom"><span id="status" role="status">Loading boundaries…</span><span id="map-hint">Select a province</span></div>
     <div id="moving-indicator" hidden aria-live="polite">Moving map…</div>
-    <div id="load-error" hidden role="alert">Some boundaries could not load. <button id="retry">Try again</button></div>
+    <div id="load-error" hidden role="alert">The map could not load. <button id="retry">Try again</button></div>
   </main>
 </div>
   <dialog id="about"><div class="dialog-head"><button id="about-close" aria-label="Close data notes">×</button></div><h2>Sources and coverage</h2><p>Boundary data: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">Alibaba Cloud DataV GeoAtlas</a>. Province shapes are assembled from the detailed subdivisions. Shared-border overlaps and narrow gaps are reconciled for display. Taiwan uses the available province outline. Original source files are retained.</p><dl><dt>Province-level features</dt><dd>34 in the provider’s dataset</dd><dt>Prefecture-level features</dt><dd>333</dd><dt>Additional subdivisions</dt><dd>112 districts and 30 directly administered counties</dd><dt>Retrieved</dt><dd id="retrieved">2 October 2026</dd><dt>Boundary reference date</dt><dd>Not specified by the provider</dd></dl><p>The source includes Taiwan’s outer boundary but does not provide its internal divisions. Municipalities, Hong Kong, and Macao have district subdivisions instead of a prefecture layer.</p><p>The map follows the provider’s boundary and territory representation. Boundaries are generalized for display. The retrieval date does not confirm that recent administrative changes are included.</p><a class="manifest-link" href="data/manifest.json" target="_blank" rel="noopener">Source URLs, coverage, and file checksums</a></dialog>
