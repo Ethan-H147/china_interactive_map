@@ -26,7 +26,7 @@ function inRing([x,y],ring){
 }
 const parts=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 const inPolygon=(p,rings)=>inRing(p,rings[0])&&!rings.slice(1).some(r=>inRing(p,r));
-const context=vm.createContext({$:id=>elements.get(id),regionByCode,provinceTypes:{},map:{
+const context=vm.createContext({$:id=>elements.get(id),regionByCode,provinceTypes:{},quiz:{active:false},map:{
   queryRenderedFeatures(point,{layers}){
     return regions.filter(f=>parts(f.geometry).some(poly=>inPolygon(point,poly))).map(f=>({
       properties:f.properties,layer:{id:f.properties.level==='province'?'province-fill':context.isPrefectureLevel(f.properties)?'prefecture-fill':'other-fill'}

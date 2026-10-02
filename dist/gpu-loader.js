@@ -5,6 +5,7 @@ function loadError(error){
   document.getElementById('retry').onclick=()=>location.reload();
 }
 try{
+  window.AtlasQuiz=await import('./quiz-engine.mjs');
   const renderer=await import('./vendor/maplibre-gl.mjs');
   window.maplibregl=renderer;
   renderer.setWorkerCount(2);

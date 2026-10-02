@@ -24,6 +24,14 @@ Automatic navigation locks map input and navigation controls until its movement 
 
 Calligraphic headings use bundled Ma Shan Zheng and Marck Script subsets, with their open font licenses in `dist/vendor`.
 
+## Map quiz
+
+The Quiz tab asks users to locate named prefecture-level places on the existing GPU map. Scope can be all China, with or without Taiwan, or one province-level region that has eligible divisions. Taiwan uses its 22 city and county divisions. Municipal districts, SAR subdivisions, directly administered county-level divisions, and missing outlines are excluded. Questions show English and Chinese names; map labels and hover names stay hidden until the answer is revealed.
+
+Rounds contain 10, 20, or all eligible places, capped by scope size and shuffled without repeats. One click records each answer. Correct areas appear green, incorrect selections red; revealing an answer counts separately. Results show the score and provide buttons to review missed places. Users can pan and zoom, fit the selected scope, or end a round. Keyboard users can pan the focused map and press Enter to select the area under the crosshair. Quiz state is held only in the current browser tab.
+
+`dist/quiz-engine.mjs` handles eligibility, question order, and scoring. `node scripts/validate-quiz.mjs` checks province and Taiwan scopes, exclusion of county-level cities and districts, unique questions, ignored out-of-scope answers, and single scoring per question.
+
 ## Boundary rendering
 
 Run `npm ci` then `node scripts/build-boundaries.mjs` after refreshing source data. All 34 province/territory shapes are assembled from detailed subdivisions. `node scripts/prepare-additions.mjs` rebuilds the supplements from the retained official NLSC shapefile and the extracted AreaCity source records. Archive checksums and source licenses are recorded in `dist/data/additional-sources.json`.

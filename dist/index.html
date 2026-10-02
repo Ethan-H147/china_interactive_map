@@ -5,7 +5,7 @@
   <title>China · 中国</title>
   <meta name="description" content="Explore province, prefecture, and Taiwan administrative boundaries using published map data.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%239f3428'/%3E%3Cpath d='M8 12l8-3 9 5 7-3v19l-7 3-9-5-8 3zM16 9v19m9-14v19' fill='none' stroke='%23edd4a4' stroke-width='2'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="vendor/maplibre-gl.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="names.css">
+  <link rel="stylesheet" href="vendor/maplibre-gl.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="names.css"><link rel="stylesheet" href="quiz.css">
   <script src="stories.js" defer></script><script type="module" src="gpu-loader.js"></script>
 </head>
 <body>
@@ -19,7 +19,7 @@
       <label class="sr-only" for="search">Find a region</label>
       <div class="search-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Find a region" autocomplete="off" data-nav disabled></div>
       <div id="search-results" hidden aria-live="polite"></div>
-      <div class="panel-tabs"><button id="tab-explore" aria-pressed="false" hidden>Discover</button><button id="tab-layers" aria-pressed="true">Map settings</button></div>
+      <div class="panel-tabs"><button id="tab-explore" aria-pressed="false" hidden>Discover</button><button id="tab-layers" aria-pressed="true">Map settings</button><button id="tab-quiz" aria-pressed="false">Quiz</button></div>
     </div>
     <div class="sidebar-scroll">
       <section id="explore-panel" hidden>
@@ -35,6 +35,31 @@
 </section><section id="division-note" class="division-note" aria-label="Administrative details" hidden></section><div id="parent-context" class="parent-context" hidden><span class="name-caption" id="parent-kind"></span><button id="parent-region" class="quiet-button" data-nav hidden><span id="parent-english" lang="en"></span><span id="parent-chinese" lang="zh"></span></button></div><article id="story" class="story" hidden><h3 id="story-title"></h3><p id="story-text"></p><a id="story-source" target="_blank" rel="noopener">UNESCO: site details</a></article><details id="subdivisions"><summary id="subdivisions-title">Subdivisions</summary><div id="region-list"></div></details></section>
       </section>
       <section id="layers-panel"><label class="field-label" for="province">Region</label><select id="province" data-nav disabled><option value="">All China</option></select><section class="layers" aria-labelledby="layers-title"><h3 id="layers-title">Visible layers</h3><label><span><i class="line province-line"></i>Province outlines</span><input id="province-layer" type="checkbox" checked data-nav></label><label><span><i class="line prefecture-line"></i>Prefectures &amp; Taiwan divisions</span><input id="prefecture-layer" type="checkbox" checked data-nav></label><label><span><i class="line district-line"></i>Districts &amp; direct divisions</span><input id="other-layer" type="checkbox" checked data-nav></label><label><span><i class="label-icon">Aa</i>Region names</span><input id="label-layer" type="checkbox" checked data-nav></label><p>Includes municipal districts and directly administered county-level divisions.</p></section></section>
+      <section id="quiz-panel" hidden aria-labelledby="quiz-title">
+        <div id="quiz-setup">
+          <span class="eyebrow">MAP QUIZ</span><h2 id="quiz-title">Find the prefecture</h2>
+          <p>Click the named place on the map.</p>
+          <label class="field-label" for="quiz-scope">Scope</label><select id="quiz-scope" data-quiz-nav disabled><option value="">All China</option></select>
+          <label class="quiz-toggle" id="quiz-taiwan-option"><span>Include Taiwan</span><input id="quiz-taiwan" type="checkbox" checked data-quiz-nav disabled></label>
+          <p id="quiz-scope-note" class="quiz-note"></p>
+          <label class="field-label" for="quiz-length">Questions</label><select id="quiz-length" data-quiz-nav disabled><option value="10">10 places</option><option value="20">20 places</option><option value="all">All places</option></select>
+          <p id="quiz-count" class="quiz-note" aria-live="polite">Loading places…</p>
+          <button id="quiz-start" class="quiz-primary" data-quiz-nav disabled>Start quiz</button>
+        </div>
+        <section id="quiz-round" hidden aria-label="Current question">
+          <div class="quiz-progress"><span id="quiz-progress-text"></span><span id="quiz-score"></span></div>
+          <div class="quiz-progress-track" aria-hidden="true"><div id="quiz-progress-bar"></div></div>
+          <p class="quiz-instruction">Find on the map</p><h2 id="quiz-question" tabindex="-1"></h2><p id="quiz-question-chinese" lang="zh"></p>
+          <div id="quiz-feedback" class="quiz-feedback" role="status" aria-live="polite" hidden><strong id="quiz-feedback-title"></strong><p id="quiz-feedback-detail"></p></div>
+          <div class="quiz-round-actions"><button id="quiz-reveal" class="quiet-button" data-quiz-nav>Show answer</button><button id="quiz-view" class="quiet-button" data-quiz-nav hidden>View answer</button><button id="quiz-next" class="quiz-primary" data-quiz-nav hidden>Next question</button></div>
+          <button id="quiz-end" class="quiz-text-button" data-quiz-nav>End quiz</button>
+        </section>
+        <section id="quiz-results" hidden aria-labelledby="quiz-results-title">
+          <span class="eyebrow">QUIZ COMPLETE</span><h2 id="quiz-results-title" tabindex="-1">Results</h2><p id="quiz-result-score" class="quiz-result-score"></p><p id="quiz-result-detail"></p>
+          <div id="quiz-review" class="quiz-review"></div>
+          <button id="quiz-again" class="quiz-primary" data-quiz-nav>Play again</button><button id="quiz-configure" class="quiz-text-button" data-quiz-nav>Change scope</button>
+        </section>
+      </section>
     </div>
     <footer class="sidebar-footer"><button id="about-open">Sources & coverage</button><span class="creator-credit">Created by Ethan Hu</span></footer>
   </aside>
@@ -46,6 +71,8 @@
     <div class="map-bottom"><span id="status" role="status">Loading boundaries…</span><span id="map-hint">Select a province</span></div>
     <div id="moving-indicator" hidden role="status" aria-live="polite"><span class="sr-only">Map moving</span><span class="moving-dot" aria-hidden="true"></span><span class="moving-dot" aria-hidden="true"></span><span class="moving-dot" aria-hidden="true"></span></div>
     <div id="load-error" hidden role="alert">The map could not load. <button id="retry">Try again</button></div>
+    <div id="quiz-map-prompt" class="quiz-map-prompt" hidden><span id="quiz-map-progress"></span><strong id="quiz-map-name"></strong><span id="quiz-map-chinese" lang="zh"></span><span id="quiz-map-feedback" aria-hidden="true" hidden></span><button id="quiz-map-reveal" data-quiz-nav>Show answer</button><button id="quiz-map-next" data-quiz-nav hidden>Next</button></div>
+    <div id="quiz-crosshair" class="quiz-crosshair" aria-hidden="true" hidden></div>
   </main>
 </div>
   <dialog id="about"><div class="dialog-head"><button id="about-close" aria-label="Close data notes">×</button></div><h2>Sources and coverage</h2><p>Boundary data: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">Alibaba Cloud DataV GeoAtlas</a>. Province shapes are assembled from detailed subdivisions. Shared borders are reconciled for display. Original source files are retained.</p><p>Hong Kong uses the Home Affairs Department’s 18 district boundaries, clipped to the Lands Department’s coastline to exclude sea areas. Data © Hong Kong SAR Government, provided through <a href="https://data.gov.hk/" target="_blank" rel="noopener">DATA.GOV.HK</a> and <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">CSDI</a>. Macau uses seven parishes and four other areas from the <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao government map</a>. Government source geometry is retained without simplification. Chinese names for Hong Kong and Macau use traditional characters.</p><p>Taiwan’s 22 divisions use <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC county and city boundaries</a>, under the <a href="https://data.gov.tw/license" target="_blank" rel="noopener">Taiwan Open Government Data License 1.0</a>. The downloaded file is COUNTY_MOI_1090820.shp. Nearby islands are included in the initial Taiwan view; distant island polygons remain in the dataset.</p><p>Xinxing and Baiyang use the <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov/releases/tag/2025.251231.260403" target="_blank" rel="noopener">AreaCity / Amap boundary release of 3 April 2026</a> (MIT license). Their areas are cut out of the older surrounding prefectures. Caohu has an administrative entry, but its boundary is unavailable.</p><p>Chongming Island and the opposite northern river bank use detailed OpenStreetMap shorelines. The existing Shanghai–Jiangsu administrative boundary on the island is retained.</p><p>Region names: <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata (CC0)</a>, <a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia (CC BY-SA 4.0)</a>, NLSC, and Hong Kong’s Home Affairs Department. Sources are recorded in the <a href="data/region-names.json" target="_blank" rel="noopener">name dataset</a>. Fonts: Noto Serif Tibetan, Noto Sans Arabic, and Noto Sans Mongolian (SIL Open Font License). Flag assets: <a href="https://github.com/lipis/flag-icons" target="_blank" rel="noopener">flag-icons</a> (MIT license).</p><p>Population: <a href="https://zh.wikipedia.org/wiki/中華人民共和國城市人口排名" target="_blank" rel="noopener">Wikipedia’s city population table</a>, matched by city name and province. Figures use 2020 administrative boundaries; dates and population measures are shown on each matching region’s page. Missing values remain unreported. Inconsistent figures are flagged as published, and ambiguous names are excluded. <a href="data/region-population.json" target="_blank" rel="noopener">Population dataset and source revision</a>.</p><dl><dt>Province and territory features</dt><dd>34</dd><dt>Prefecture-level features</dt><dd>333</dd><dt>Taiwan administrative divisions</dt><dd>6 special municipalities, 3 cities, 13 counties</dd><dt>Additional mapped subdivisions</dt><dd>104 districts, 11 Macau parishes and areas, and 32 directly administered county-level divisions</dd><dt>Retrieved</dt><dd id="retrieved">2 October 2026</dd></dl><p>Municipalities and Hong Kong use district subdivisions. Macau shows parishes and other mapped areas. Source dates vary; the retrieval date does not confirm that all recent administrative changes are included.</p><a class="manifest-link" href="data/manifest.json" target="_blank" rel="noopener">Original DataV sources and checksums</a><br><a class="manifest-link" href="data/additional-sources.json" target="_blank" rel="noopener">Additional boundary sources and checksums</a></dialog>
