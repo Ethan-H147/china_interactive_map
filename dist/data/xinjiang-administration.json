@@ -1,0 +1,30 @@
+{
+  "checked": "2026-10-02",
+  "sources": {
+    "xpcc": "https://english.www.gov.cn/archive/white_paper/2014/10/05/content_281474992384669.htm",
+    "divisions": "https://en.wikipedia.org/wiki/Xinjiang_Production_and_Construction_Corps#Administrative_structure",
+    "rank": "https://en.wikipedia.org/wiki/Sub-prefectural_city",
+    "ili": "https://www.xjyl.gov.cn/xjylz/c112406/qjyl.shtml",
+    "aral": "https://zh.wikisource.org/wiki/国务院关于同意新疆维吾尔自治区设立县级阿拉尔市的批复",
+    "wujiaqu": "https://zh.wikisource.org/wiki/国务院关于同意新疆维吾尔自治区设立县级五家渠市的批复",
+    "beitun": "https://www.bts.gov.cn/c/2927/2927662.shtml"
+  },
+  "mappedCities": {
+    "659001": {"division": "8th", "formalLevel": "County-level city"},
+    "659002": {"division": "1st", "formalLevel": "County-level city", "note": "Aral is formally a county-level city directly under Xinjiang. The term ‘sub-prefectural’ describes administrative rank; it does not create a separate geographic level.", "sourceKey": "aral"},
+    "659003": {"division": "3rd", "formalLevel": "County-level city"},
+    "659004": {"division": "6th", "formalLevel": "County-level city", "note": "Wujiaqu is formally a county-level city directly under Xinjiang. Its city government and the XPCC 6th Division share administration (师市合一).", "sourceKey": "wujiaqu"},
+    "659005": {"division": "10th", "formalLevel": "County-level city", "note": "Beitun is geographically within Altay and administered directly by Xinjiang.", "sourceKey": "beitun"},
+    "659006": {"division": "2nd", "formalLevel": "County-level city"},
+    "659007": {"division": "5th", "formalLevel": "County-level city"},
+    "659008": {"division": "4th", "formalLevel": "County-level city"},
+    "659009": {"division": "14th", "formalLevel": "County-level city"},
+    "659010": {"division": "7th", "formalLevel": "County-level city"}
+  },
+  "iliPrefectures": [654200, 654300],
+  "missingCities": [
+    {"en": "Xinxing", "zh": "新星市", "announcementYear": 2021, "source": "https://www.xinjiang.gov.cn/xinjiang/gfxwj/202107/875adfbe358645db9d8ee08bb96f1352.shtml"},
+    {"en": "Baiyang", "zh": "白杨市", "announcementYear": 2023, "source": "https://www.xinjiang.gov.cn/xinjiang/tzgg/202301/8bd4c6578fae4c469680d068c187c7b0.shtml"},
+    {"en": "Caohu", "zh": "草湖市", "announcementYear": 2026, "source": "https://www.xinjiang.gov.cn/xinjiang/tzgg/202604/3691350b13064945947d8f78933ccb3e.shtml"}
+  ]
+}

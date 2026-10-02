@@ -17,7 +17,7 @@ function syncLayers(){
 }
 const fillColors=['#efe2c8','#eee6d5','#f2e9d6','#e9ddc3','#f4e6d0','#e9e0ca'];
 const provinceLayers=new Map(),detailLayers=new Map(),regionIndex=[];
-let regionNames={};
+let regionNames={},xinjiangAdministration;
 let provinceFeatures,manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
@@ -87,17 +87,44 @@ function clearSelection(){if(selected){setRegionState(selected.layer,{selected:f
 function clearSearch(){$('search').value='';$('search-results').hidden=true;$('search-results').replaceChildren();}
 function reset(){if(cameraBusy)return;clearSelection();activeCode=null;$('province').value='';$('welcome').hidden=true;$('selection').hidden=true;$('tab-explore').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';clearSearch();showPanel('layers');setMode('province');return fitHome(true);}
 function setStory(code){const s=stories[code]||Object.values(stories).find(s=>s.subdivisionCodes.includes(code));$('story').hidden=!s;$('story-title').textContent=s?.place||'';$('story-text').textContent=s?.text||'';if(s)$('story-source').href=s.source;else $('story-source').removeAttribute('href');}
-function renderChildren(code){const children=detailLayers.get(code)||[];$('subdivisions').hidden=!children.length;$('subdivisions').open=false;$('subdivisions-title').textContent=`Subdivisions (${children.length})`;$('region-list').replaceChildren();for(const layer of children){const b=document.createElement('button');b.type='button';b.dataset.nav='';const en=document.createElement('span');en.textContent=englishName(layer.feature.properties);const zh=document.createElement('small');zh.lang='zh';zh.textContent=layer.feature.properties.name;b.append(en,zh);b.onclick=()=>selectRegion(layer,code);$('region-list').append(b);}}
+function renderChildren(code){
+  const children=detailLayers.get(code)||[];$('subdivisions').hidden=!children.length;$('subdivisions').open=false;$('subdivisions-title').textContent=`Mapped divisions (${children.length})`;$('region-list').replaceChildren();
+  const groups=code===650000?[['Prefecture-level areas',children.filter(layer=>isPrefectureLevel(layer.feature.properties))],['Directly administered county-level cities',children.filter(layer=>!isPrefectureLevel(layer.feature.properties))]]:[['',children]];
+  for(const [title,layers] of groups){
+    if(title){const heading=document.createElement('h4');heading.textContent=`${title} (${layers.length})`;$('region-list').append(heading);}
+    for(const layer of layers){const b=document.createElement('button');b.type='button';b.dataset.nav='';const en=document.createElement('span');en.textContent=englishName(layer.feature.properties);const zh=document.createElement('small');zh.lang='zh';zh.textContent=layer.feature.properties.name;b.append(en,zh);b.onclick=()=>selectRegion(layer,code);$('region-list').append(b);}
+  }
+}
 function renderDivisionNote(layer){
   const p=layer.feature.properties,note=$('division-note');note.replaceChildren();note.hidden=true;
+  const data=xinjiangAdministration;
+  function paragraph(text){const el=document.createElement('p');el.textContent=text;note.append(el);return el;}
+  function source(label,url){const a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener';note.append(a);}
   if(p.adcode===650000){
-    note.textContent='Some county-level cities are administered directly by Xinjiang. Their territories may have separate areas within surrounding prefectures.';
-  }else if(p.provinceCode===650000&&String(p.adcode).slice(2,4)==='90'){
+    paragraph('Xinjiang’s prefecture-level areas and XPCC (Bingtuan) cities follow different administrative arrangements. XPCC cities are county-level cities directly under Xinjiang; their governments share administration with XPCC divisions (师市合一).');
+    source('XPCC administration',data.sources.xpcc);
+    paragraph('Ili also administers Tacheng and Altay. Their territories are shown separately on this map.');
+    source('Ili’s administrative structure',data.sources.ili);
+    paragraph(`Boundary coverage: ${Object.keys(data.mappedCities).length} of ${Object.keys(data.mappedCities).length+data.missingCities.length} directly administered cities are mapped. The dataset omits:`);
+    const list=document.createElement('ul');
+    for(const city of data.missingCities){const li=document.createElement('li'),a=document.createElement('a');a.textContent=`${city.en} · ${city.zh} (${city.announcementYear})`;a.href=city.source;a.target='_blank';a.rel='noopener';li.append(a);list.append(li);}note.append(list);
+  }else if(data.mappedCities[p.adcode]){
+    const city=data.mappedCities[p.adcode];
+    paragraph(`XPCC ${city.division} Division · 新疆生产建设兵团第${{1:'一',2:'二',3:'三',4:'四',5:'五',6:'六',7:'七',8:'八',10:'十',14:'十四'}[parseInt(city.division)]}师`);
+    paragraph(city.note||'A county-level city administered directly by Xinjiang, with its city government and XPCC division sharing administration (师市合一).');
+    source('Administrative details',data.sources[city.sourceKey||'xpcc']);
+    if(p.adcode===659002)source('Sub-prefectural rank',data.sources.rank);
+    source('XPCC division',data.sources.divisions);
     const count=layer.feature.geometry.type==='MultiPolygon'?layer.feature.geometry.coordinates.length:1;
-    note.textContent=(p.adcode===659005?'Beitun is geographically within Altay and administered directly by Xinjiang. ':'Administered directly by Xinjiang. ')+(count>1?`The boundary dataset contains ${count} separate areas.`:'');
-    if(p.adcode===659005){const source=document.createElement('a');source.href='https://www.bts.gov.cn/c/2927/2927662.shtml';source.target='_blank';source.rel='noopener';source.textContent='Administrative details';note.append(document.createTextNode(' '),source);}
+    if(count>1)paragraph(`This boundary snapshot contains ${count} separate areas. A city’s boundary does not represent every farm managed by its XPCC division.`);
+  }else if(p.adcode===654000){
+    paragraph('Ili Kazakh Autonomous Prefecture administers Tacheng and Altay as well as its directly administered counties and cities. This polygon shows the directly administered area; Tacheng and Altay have separate polygons.');
+    source('Ili’s administrative structure',data.sources.ili);
+  }else if(data.iliPrefectures.includes(p.adcode)){
+    paragraph(`${englishName(p)} is administered by Ili Kazakh Autonomous Prefecture (伊犁哈萨克自治州). It has a separate polygon in the boundary dataset.`);
+    source('Ili’s administrative structure',data.sources.ili);
   }
-  note.hidden=!note.textContent;
+  note.hidden=!note.childElementCount;
 }
 function selectRegion(layer,parentCode,shouldFit=true){
   if(cameraBusy||!allReady)return Promise.resolve(false);
@@ -170,7 +197,7 @@ map.on('mousemove',event=>{
 });
 map.getCanvas().addEventListener('mouseleave',clearHover);
 async function init(){try{
-  const [display,m,names]=await Promise.all([json('data/display-boundaries.json'),json('data/manifest.json'),json('data/region-names.json'),styleReady]);manifest=m;regionNames=names.regions;
+  const [display,m,names,administration]=await Promise.all([json('data/display-boundaries.json'),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),styleReady]);manifest=m;regionNames=names.regions;xinjiangAdministration=administration;
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=display.provinces.features;
   const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));

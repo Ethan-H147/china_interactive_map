@@ -8,6 +8,7 @@ const app=read('../dist/app.js'),html=read('../dist/index.html');
 const geometry=read('../dist/data/display-boundaries.json');
 assert.equal(createHash('sha256').update(geometry).digest('hex'),'7af3f1b451ba98675414149d6ad3a458330d67761e831350013c75265574225e');
 const display=JSON.parse(geometry);
+const administration=JSON.parse(read('../dist/data/xinjiang-administration.json'));
 const elements=new Map();
 for(const id of ['province-layer','prefecture-layer','other-layer']){
   const input=html.match(new RegExp(`<input id="${id}"[^>]*>`))[0];
@@ -69,3 +70,40 @@ assert.equal(context.pickedRegion(beitunPoint).feature.properties.adcode,650000)
 elements.get('other-layer').checked=true;
 assert.equal(context.pickedRegion(beitunPoint).feature.properties.adcode,659005);
 console.log(JSON.stringify({xinjiangCities:xinjiang.length,polygonPartsChecked:checkedParts,defaultSelection:'all mapped subdivisions',geometry:'unchanged'}));
+
+assert.deepEqual(Object.keys(administration.mappedCities).map(Number).sort(),xinjiang.map(f=>f.properties.adcode).sort());
+assert.equal(administration.mappedCities[659002].division,'1st');
+assert.equal(administration.mappedCities[659004].division,'6th');
+for(const city of Object.values(administration.mappedCities))assert.equal(city.formalLevel,'County-level city');
+assert.deepEqual(administration.iliPrefectures,[654200,654300]);
+assert.deepEqual(administration.missingCities.map(c=>c.en),['Xinxing','Baiyang','Caohu']);
+for(const city of administration.missingCities){assert(!xinjiang.some(f=>f.properties.name===city.zh));assert(city.source.startsWith('https://www.xinjiang.gov.cn/'));}
+
+function element(){return {hidden:false,textContent:'',children:[],dataset:{},get childElementCount(){return this.children.length;},replaceChildren(){this.children=[];this.textContent='';},append(...nodes){this.children.push(...nodes);}};}
+elements.set('division-note',element());
+elements.set('subdivisions',element());elements.set('subdivisions-title',element());elements.set('region-list',element());
+context.document={createElement:element};context.xinjiangAdministration=administration;
+context.englishName=p=>p.name;context.selectRegion=()=>{};
+context.detailLayers=new Map([[650000,display.subdivisions.features.filter(f=>f.properties.provinceCode===650000).map(feature=>({feature}))]]);
+vm.runInContext(app.slice(app.indexOf('function renderChildren('),app.indexOf('function selectRegion(')),context);
+const text=el=>[el.textContent,...el.children.map(text)].join(' ');
+for(const f of regions){
+  context.renderDivisionNote({feature:f});
+  const expected=f.properties.adcode===650000||f.properties.adcode===654000||administration.iliPrefectures.includes(f.properties.adcode)||!!administration.mappedCities[f.properties.adcode];
+  assert.equal(elements.get('division-note').hidden,!expected,`Note scoped to ${f.properties.adcode}`);
+}
+context.renderDivisionNote(regionByCode.get(659002));
+assert.match(text(elements.get('division-note')),/1st Division/);
+assert.match(text(elements.get('division-note')),/sub-prefectural/);
+context.renderDivisionNote(regionByCode.get(659004));
+assert.match(text(elements.get('division-note')),/6th Division/);
+assert(!text(elements.get('division-note')).includes('Aral'));
+context.renderDivisionNote(regionByCode.get(650000));
+assert.match(text(elements.get('division-note')),/10 of 13/);
+context.renderChildren(650000);
+assert.equal(elements.get('region-list').children.filter(el=>el.type==='button').length,24);
+assert.match(text(elements.get('region-list')),/Prefecture-level areas \(14\)/);
+assert.match(text(elements.get('region-list')),/Directly administered county-level cities \(10\)/);
+context.renderChildren(659002);
+assert.equal(elements.get('subdivisions').hidden,true);
+console.log(JSON.stringify({administrationNotesVerified:509,formalCityLevels:10,unmappedCities:3,iliHierarchy:'documented'}));

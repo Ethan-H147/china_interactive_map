@@ -23,3 +23,5 @@
 @media(max-width:760px){#selection-name{font-size:34px}#selection-name.long-name{font-size:27px}.regional-names{max-width:550px}.regional-text[data-vertical=true]{max-height:170px}}
 
 .division-note{font-size:13px;line-height:1.6;color:var(--muted);margin:16px 0 24px}.division-note a{font-size:12px;white-space:nowrap}
+
+.division-note p{margin:14px 0 8px}.division-note>a{display:inline-block;margin:0 14px 5px 0}.division-note ul{padding-left:18px;margin:8px 0}.division-note li{margin:5px 0}.division-note li a{white-space:normal}#region-list h4{font-size:12px;font-weight:600;line-height:1.5;margin:10px 0 5px}
