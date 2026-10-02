@@ -1,0 +1,95 @@
+{
+  "retrieved": "2026-10-02T23:14:28.965Z",
+  "relation": {
+    "id": "3292765",
+    "version": 16,
+    "timestamp": "2025-12-29T09:38:11Z",
+    "xmlSHA256": "6cdbdd8e83d5851e268b4c3f4eae1764d97dba2dadbfa74dffb9093bc0140aa1"
+  },
+  "ways": [
+    {
+      "id": "243633362",
+      "version": 9,
+      "timestamp": "2020-12-15T03:56:02Z",
+      "xmlSHA256": "9e61b585f435affc5d282a1df186e75a70b664be4476c82ea3406a1d1de1fc49"
+    },
+    {
+      "id": "8013710",
+      "version": 11,
+      "timestamp": "2022-05-04T18:48:29Z",
+      "xmlSHA256": "0282ab142af6b80fa2f294c0e71902442396ba7808cc76047c1ef72059798585"
+    },
+    {
+      "id": "370342705",
+      "version": 2,
+      "timestamp": "2020-12-16T04:38:50Z",
+      "xmlSHA256": "e373411706a2ec57b92c9ebf8df12cd0e458a324015a482f9576a75dcfb6eb84"
+    },
+    {
+      "id": "8002514",
+      "version": 6,
+      "timestamp": "2021-10-07T15:58:49Z",
+      "xmlSHA256": "3f17403c2b11462c86292c903a5a7fa002d5a039bdfe222c2d8834f9dd8e1ecc"
+    },
+    {
+      "id": "9997283",
+      "version": 2,
+      "timestamp": "2020-12-15T05:40:22Z",
+      "xmlSHA256": "922331b65e13f236f8a60181645604eb4767975b365d85b8478ffadb9656c8ae"
+    },
+    {
+      "id": "10004875",
+      "version": 2,
+      "timestamp": "2020-12-15T04:13:01Z",
+      "xmlSHA256": "614ffe053026cffcd75e56c45604fbc2acc9673d82f4c97f301976f775a956fb"
+    },
+    {
+      "id": "10014769",
+      "version": 4,
+      "timestamp": "2020-12-15T04:17:59Z",
+      "xmlSHA256": "768cf43e594680b8ebf15166960d203cb052897a08e95eadb018574c19202030"
+    },
+    {
+      "id": "9982816",
+      "version": 3,
+      "timestamp": "2020-07-01T11:17:10Z",
+      "xmlSHA256": "b06be97c420a823ea3d27b66c2642c41345bc7cc4fca6e63e32640cb5b3afba4"
+    },
+    {
+      "id": "9983315",
+      "version": 3,
+      "timestamp": "2020-12-15T10:31:17Z",
+      "xmlSHA256": "da03ad15eb67f20cb7b734c64aad160efa7244ed876bf3f07b16ee485c6bed54"
+    },
+    {
+      "id": "245609508",
+      "version": 5,
+      "timestamp": "2020-07-01T04:11:37Z",
+      "xmlSHA256": "80575afda2bb3bc10cddf0aeb19d1318d9e964760a8deec3e0245e0c143cd527"
+    },
+    {
+      "id": "885089575",
+      "version": 3,
+      "timestamp": "2026-01-17T20:10:04Z",
+      "xmlSHA256": "93952e6d60fb874c19484e7a3e12d97f15cf6f38079a1d17efc98ac22e2ca05e"
+    },
+    {
+      "id": "9987270",
+      "version": 24,
+      "timestamp": "2026-01-17T20:10:04Z",
+      "xmlSHA256": "46176299220803b96b4dd8225ddf2632c0a49958e8d2206f43ad4f959a2b873c"
+    },
+    {
+      "id": "683628707",
+      "version": 2,
+      "timestamp": "2020-06-29T09:37:34Z",
+      "xmlSHA256": "3061caafddca4ec93123dd453dc99daf93d80533620fef10a034ad0f87cb3608"
+    },
+    {
+      "id": "10014561",
+      "version": 32,
+      "timestamp": "2026-08-09T14:07:26Z",
+      "xmlSHA256": "1a7f49f6c80ba921da37aebb230ec0dc6feb209156162df51f3c62a43de8ca31"
+    }
+  ]
+}
