@@ -7,7 +7,9 @@
     "ili": "https://www.xjyl.gov.cn/xjylz/c112406/qjyl.shtml",
     "aral": "https://zh.wikisource.org/wiki/国务院关于同意新疆维吾尔自治区设立县级阿拉尔市的批复",
     "wujiaqu": "https://zh.wikisource.org/wiki/国务院关于同意新疆维吾尔自治区设立县级五家渠市的批复",
-    "beitun": "https://www.bts.gov.cn/c/2927/2927662.shtml"
+    "beitun": "https://www.bts.gov.cn/c/2927/2927662.shtml",
+    "xinxing": "https://www.xinjiang.gov.cn/xinjiang/gfxwj/202107/875adfbe358645db9d8ee08bb96f1352.shtml",
+    "baiyang": "https://www.xinjiang.gov.cn/xinjiang/tzgg/202301/8bd4c6578fae4c469680d068c187c7b0.shtml"
   },
   "mappedCities": {
     "659001": {"division": "8th", "formalLevel": "County-level city"},
@@ -19,12 +21,12 @@
     "659007": {"division": "5th", "formalLevel": "County-level city"},
     "659008": {"division": "4th", "formalLevel": "County-level city"},
     "659009": {"division": "14th", "formalLevel": "County-level city"},
-    "659010": {"division": "7th", "formalLevel": "County-level city"}
+    "659010": {"division": "7th", "formalLevel": "County-level city"},
+    "659011": {"division": "13th", "formalLevel": "County-level city", "sourceKey": "xinxing"},
+    "659012": {"division": "9th", "formalLevel": "County-level city", "sourceKey": "baiyang"}
   },
   "iliPrefectures": [654200, 654300],
   "missingCities": [
-    {"en": "Xinxing", "zh": "新星市", "announcementYear": 2021, "source": "https://www.xinjiang.gov.cn/xinjiang/gfxwj/202107/875adfbe358645db9d8ee08bb96f1352.shtml"},
-    {"en": "Baiyang", "zh": "白杨市", "announcementYear": 2023, "source": "https://www.xinjiang.gov.cn/xinjiang/tzgg/202301/8bd4c6578fae4c469680d068c187c7b0.shtml"},
-    {"en": "Caohu", "zh": "草湖市", "announcementYear": 2026, "source": "https://www.xinjiang.gov.cn/xinjiang/tzgg/202604/3691350b13064945947d8f78933ccb3e.shtml"}
+    {"adcode": 659013, "en": "Caohu", "zh": "草湖市", "announcementYear": 2026, "source": "https://www.xinjiang.gov.cn/xinjiang/tzgg/202604/3691350b13064945947d8f78933ccb3e.shtml"}
   ]
 }

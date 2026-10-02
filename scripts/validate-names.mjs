@@ -1,11 +1,12 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
+import {readData} from './read-data.mjs';
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url),'utf8'));
-const display=read('../dist/data/display-boundaries.json');
+const display=readData('display-boundaries.json');
 const names=read('../dist/data/region-names.json').regions;
 const features=[...display.provinces.features,...display.subdivisions.features];
-assert.equal(Object.keys(names).length,509);
+assert.equal(Object.keys(names).length,533);
 const languageCounts={};
 for(const {properties:p} of features){
   const entry=names[p.adcode];
@@ -43,4 +44,4 @@ for(const f of features){
   assert.equal($('selection-regional').hidden,names[f.properties.adcode].regional.length===0);
   assert.equal($('selection-regional').children.length,names[f.properties.adcode].regional.length);
 }
-console.log(JSON.stringify({regions:509,languageCounts,selectionNamesVerified:509}));
+console.log(JSON.stringify({regions:features.length,languageCounts,selectionNamesVerified:features.length}));

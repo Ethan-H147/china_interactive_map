@@ -1,0 +1,52 @@
+{
+  "retrieved": "2026-10-02",
+  "sources": [
+    {
+      "provider": "AreaCity / Amap",
+      "url": "https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov/releases/tag/2025.251231.260403",
+      "version": "2025.251231.260403",
+      "released": "2026-04-03",
+      "coordinateSystem": "GCJ-02",
+      "license": "MIT",
+      "archiveSHA256": "675c3e9b8dec6444994d3ef53259a145304f6a957db8a5e601e55c0b9e61e21a",
+      "features": 2,
+      "codes": [
+        659011,
+        659012
+      ]
+    },
+    {
+      "provider": "National Land Surveying and Mapping Center (NLSC), Ministry of the Interior",
+      "url": "https://data.gov.tw/dataset/7442",
+      "download": "https://maps.nlsc.gov.tw/download/縣市界線(TWD97經緯度).zip",
+      "sourceFile": "COUNTY_MOI_1090820.shp",
+      "coordinateSystem": "TWD97 geographic, converted to WGS84",
+      "license": "Taiwan Open Government Data License 1.0",
+      "licenseURL": "https://data.gov.tw/license",
+      "archiveSHA256": "0c6fca34a92b92ef3e9a41957e403cb89e814bb64942ca7c7e51c746f913d49d",
+      "features": 22
+    }
+  ],
+  "missing": [
+    {
+      "adcode": 659013,
+      "name": "草湖市",
+      "english": "Caohu",
+      "reason": "Established after AreaCity release; no reusable polygon boundary found in checked sources."
+    }
+  ],
+  "processing": {
+    "simplification": false,
+    "xinjiang": "New cities clipped to the existing detailed Xinjiang extent, then erased from the older prefectures. Coincident overlay vertices joined within 1e-10 degrees.",
+    "taiwan": "Official county/city polygons replace the coarse Taiwan outline. Overlapping older Fujian island components are replaced as whole components to prevent residual coastlines.",
+    "replacedFujianIslandParts": [
+      "350100-1",
+      "350100-8",
+      "350100-18",
+      "350300-11",
+      "350500-1",
+      "350500-2"
+    ],
+    "unchangedOtherProvinceBorders": 31
+  }
+}

@@ -9,5 +9,5 @@ http.createServer(async(req,res)=>{try{
   if(pathname==='/benchmark'){res.setHeader('Content-Type','text/html; charset=utf-8');res.end((await readFile(path.join(root,'index.html'),'utf8')).replace('</body>','<script src="/__benchmark.js" defer></script></body>'));return;}
   const file=path.resolve(root,'.'+(pathname==='/'?'/index.html':pathname));
   if(path.relative(root,file).startsWith('..')||path.isAbsolute(path.relative(root,file))){res.writeHead(403);res.end();return;}
-  const data=await readFile(file);res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json'})[path.extname(file)]||'application/octet-stream');res.end(data);
+  const data=await readFile(file);res.setHeader('Content-Type',({'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.woff2':'font/woff2'})[path.extname(file)]||'application/octet-stream');res.end(data);
 }catch{res.writeHead(404);res.end('Not found');}}).listen(4173,'127.0.0.1',()=>console.log('Local: http://127.0.0.1:4173'));

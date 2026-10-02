@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import {readData} from './read-data.mjs';
 const read=async path=>JSON.parse(await fs.readFile(new URL(path,import.meta.url),'utf8'));
-const display=await read('../dist/data/display-boundaries.json');
+const display=readData('display-boundaries.json');
 const wikidata=await read('name-sources/wikidata.json');
 const scripts=await read('name-sources/regional-scripts.json');
 const overrides=await read('name-sources/overrides.json');
@@ -14,10 +15,10 @@ function local(text,lang,language,source,license='CC0'){
   return {text,lang,language,dir:['ug','kk-Arab','ky-Arab'].includes(lang)?'rtl':'ltr',vertical:lang==='mn-Mong',source,license};
 }
 for(const {properties:p} of features){
-  const rows=wikidata.records.filter(r=>r.code.value===stat(p.adcode));
+  const rows=p.level==='taiwan-region'?[]:wikidata.records.filter(r=>r.code.value===stat(p.adcode));
   const english=[...new Set(rows.filter(r=>r.name['xml:lang']==='en').map(r=>r.name.value))];
   const item=rows[0]?.item.value.replace('http:','https:').replace('/entity/','/wiki/');
-  const override=overrides.english[p.adcode];
+  const override=p.level==='taiwan-region'?{text:p.englishName,source:'https://data.gov.tw/dataset/7442'}:overrides.english[p.adcode];
   assert(override||english.length===1,`Ambiguous or missing English: ${p.adcode}`);
   const entry={en:override?.text||english[0],zh:p.name,source:override?.source||item,regional:[]};
   const values=lang=>[...new Set(rows.flatMap(r=>[r.native,r.name].filter(Boolean).filter(v=>v['xml:lang']===lang).map(v=>v.value)))];

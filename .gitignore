@@ -1,1 +1,8 @@
 node_modules/
+scripts/additional-sources/ok_geo.csv
+scripts/additional-sources/osm-search.json
+scripts/additional-sources/ok_geo.csv.7z
+scripts/additional-sources/taiwan-counties-original.json
+dist/data/taiwan-regions.json
+dist/data/display-boundaries.json
+dist/data/display-boundaries.json.gz

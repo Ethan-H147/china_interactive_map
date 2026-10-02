@@ -3476,9 +3476,21 @@
       "source": "https://www.wikidata.org/wiki/Q9435117",
       "regional": []
     },
+    "659011": {
+      "en": "Xinxing",
+      "zh": "新星市",
+      "source": "https://www.xinjiang.gov.cn/xinjiang/gfxwj/202107/875adfbe358645db9d8ee08bb96f1352.shtml",
+      "regional": []
+    },
+    "659012": {
+      "en": "Baiyang",
+      "zh": "白杨市",
+      "source": "https://www.xinjiang.gov.cn/xinjiang/tzgg/202301/8bd4c6578fae4c469680d068c187c7b0.shtml",
+      "regional": []
+    },
     "710000": {
       "en": "Taiwan",
-      "zh": "台湾省",
+      "zh": "臺灣",
       "source": "https://www.wikidata.org/wiki/Q57251",
       "regional": []
     },
@@ -3648,6 +3660,138 @@
       "en": "São Francisco Xavier",
       "zh": "圣方济各堂区",
       "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "TW-09007": {
+      "en": "Lienchiang County",
+      "zh": "連江縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10002": {
+      "en": "Yilan County",
+      "zh": "宜蘭縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10007": {
+      "en": "Changhua County",
+      "zh": "彰化縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10008": {
+      "en": "Nantou County",
+      "zh": "南投縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10009": {
+      "en": "Yunlin County",
+      "zh": "雲林縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10017": {
+      "en": "Keelung City",
+      "zh": "基隆市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-63000": {
+      "en": "Taipei City",
+      "zh": "臺北市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-65000": {
+      "en": "New Taipei City",
+      "zh": "新北市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-66000": {
+      "en": "Taichung City",
+      "zh": "臺中市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-67000": {
+      "en": "Tainan City",
+      "zh": "臺南市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-68000": {
+      "en": "Taoyuan City",
+      "zh": "桃園市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10005": {
+      "en": "Miaoli County",
+      "zh": "苗栗縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10020": {
+      "en": "Chiayi City",
+      "zh": "嘉義市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10010": {
+      "en": "Chiayi County",
+      "zh": "嘉義縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-09020": {
+      "en": "Kinmen County",
+      "zh": "金門縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-64000": {
+      "en": "Kaohsiung City",
+      "zh": "高雄市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10014": {
+      "en": "Taitung County",
+      "zh": "臺東縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10015": {
+      "en": "Hualien County",
+      "zh": "花蓮縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10016": {
+      "en": "Penghu County",
+      "zh": "澎湖縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10018": {
+      "en": "Hsinchu City",
+      "zh": "新竹市",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10004": {
+      "en": "Hsinchu County",
+      "zh": "新竹縣",
+      "source": "https://data.gov.tw/dataset/7442",
+      "regional": []
+    },
+    "TW-10013": {
+      "en": "Pingtung County",
+      "zh": "屏東縣",
+      "source": "https://data.gov.tw/dataset/7442",
       "regional": []
     }
   }

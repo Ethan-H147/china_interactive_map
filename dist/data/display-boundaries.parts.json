@@ -1,0 +1,11 @@
+{
+  "compression": "gzip",
+  "parts": [
+    "display-boundaries.00.bin",
+    "display-boundaries.01.bin",
+    "display-boundaries.02.bin"
+  ],
+  "compressedBytes": 12554343,
+  "uncompressedBytes": 39929161,
+  "sha256": "03edfc416fe9aab0ad1747a3d95f22fd9c3d9f0554243e073902c2b79b1370da"
+}

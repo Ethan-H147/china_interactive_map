@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
-const display=JSON.parse(await fs.readFile(new URL('../dist/data/display-boundaries.json',import.meta.url),'utf8'));
-const features=[...display.provinces.features,...display.subdivisions.features];
+import {readData} from './read-data.mjs';
+const display=readData('display-boundaries.json');
+const features=[...display.provinces.features,...display.subdivisions.features].filter(f=>f.properties.level!=='taiwan-region');
 const statsCode=code=>String(code).match(/.{2}/g).join(' ').replace(/(?: 00)+$/,'');
 const codes=[...new Set(features.map(f=>statsCode(f.properties.adcode)))];
 const records=[];

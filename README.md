@@ -1,16 +1,16 @@
 # China Atlas
 
-Interactive static map derived from Alibaba Cloud DataV GeoAtlas GeoJSON. MapLibre GL JS 6.11.2 and the data snapshot are vendored, so the running map does not depend on a live map API or CDN.
+Interactive static map using DataV GeoAtlas, official NLSC Taiwan county/city boundaries, and AreaCity/Amap outlines for Xinxing and Baiyang. MapLibre GL JS 6.11.2 and the data snapshot are bundled, so the running map does not depend on a live map API or CDN.
 
 ## Exploring and rendering
 
 Map settings is the default panel. Selecting a region opens its details; Featured regions is temporarily hidden. Cultural cards are assigned to their province and specific subdivision codes. Subdivision lists appear only for a region whose children are included in the dataset.
 
-Districts and directly administered county-level divisions are visible and selectable by default. In subdivision mode, they take priority over the underlying province. All disconnected parts share their administrative code, selection state, and full-region bounds. Xinjiang's direct cities are identified as county-level cities; Beitun's note explains its direct administration and location within Altay, with a link to the city's official administrative history. Separate-area counts describe this boundary snapshot. Run `node scripts/validate-selection.mjs` to check every mapped part of Xinjiang's ten direct cities, both Beitun parts, layer visibility, selection priority, and the unchanged geometry checksum.
+Districts and directly administered county-level divisions are visible and selectable by default. In subdivision mode, they take priority over the underlying province. Disconnected parts share a region identity and selection state. Xinjiang's direct cities are identified as county-level cities. `node scripts/validate-selection.mjs` checks every part of its 12 mapped direct cities, layer visibility, and selection priority.
 
-`dist/data/xinjiang-administration.json` records the ten mapped XPCC city/division pairs, official county-level status, the rank terminology used for Aral, Ili's administration of Tacheng and Altay, and three missing cities with announcement sources. On 2 October 2026 the provider's live Xinjiang file still contained 24 features, omitting Xinxing (2021), Baiyang (2023), and Caohu (2026). The UI discloses these omissions. No geometry has been fabricated or updated. The Ili polygon represents its directly administered area; Tacheng and Altay remain separate map polygons. XPCC city boundaries do not cover every farm under the corresponding division. The selection validator checks note scope and the province's grouped division list.
+`dist/data/xinjiang-administration.json` records 12 mapped XPCC city/division pairs, county-level status, Aral's rank terminology, and Ili's administration of Tacheng and Altay. Xinxing and Baiyang use published AreaCity/Amap polygons; their areas are removed from the older surrounding prefectures. Caohu has a searchable administrative entry with its official establishment announcement and an explicit missing-boundary notice. Selecting Caohu does not highlight or navigate to an invented outline. The Ili polygon represents its directly administered area; Tacheng and Altay remain separate polygons. XPCC city boundaries do not cover every farm under the corresponding division.
 
-All 509 mapped regions have English and Chinese names. The sidebar shows the selected region in both languages and a bilingual link to its parent province. Search accepts English, Chinese, administrative codes, and the included regional names; English search also accepts spellings without diacritics.
+All 533 mapped regions have English and Chinese names. Taiwan uses the official NLSC English and traditional Chinese names, with actual categories: 6 special municipalities, 3 cities, and 13 counties. Official Taiwan codes use a `TW-` namespace internally to avoid collisions with mainland identifiers. The sidebar shows a bilingual parent link and a PRC or ROC flag above the category label. Search accepts English, Chinese, codes, and sourced regional names.
 
 `dist/data/region-names.json` records sourced Tibetan, Uyghur, Kazakh, Kyrgyz, and traditional Mongolian spellings for relevant regions. It includes each name’s language, direction, source, and license. Regional names are attached to individual administrative codes, so they are not inherited from a parent. Traditional Mongolian uses vertical columns from left to right; Arabic scripts use right-to-left text. The Noto regional fonts and their SIL Open Font Licenses are bundled locally.
 
@@ -18,7 +18,7 @@ To refresh names, run `node scripts/fetch-region-names.mjs` and `node scripts/fe
 
 MapLibre draws boundaries with WebGL. Geometry tiling and triangulation run in two workers, and panning moves GPU buffers instead of repainting full-country SVG paths. All sources use zero simplification tolerance and a maximum source zoom of 18. The map stops at zoom 11 (equivalent to the previous Leaflet zoom 12). Pixel ratio follows the device; no reduced-resolution canvas is used.
 
-The display-boundaries.json file is unchanged by the renderer migration (SHA-256: 7af3f1b451ba98675414149d6ad3a458330d67761e831350013c75265574225e). Hover queries are suspended during movement; labels update after movement ends. Original source files and the earlier boundary reconciliation remain unchanged.
+The display dataset is stored as a lossless gzip stream split into three files below 4 MiB each. `display-boundaries.parts.json` records the uncompressed checksum. The browser decompresses the original coordinates before sending them to MapLibre. No vertices are removed. Hover queries are suspended during movement; labels update after movement ends.
 
 Automatic navigation locks map input and navigation controls until its movement completes, with a timeout recovery for background tabs. Reduced-motion preferences use an immediate move. Labels remain on the map during motion and their spacing is refreshed afterward. A single resize observer owns map sizing to avoid competing recenter operations.
 
@@ -26,13 +26,13 @@ Calligraphic headings use bundled Ma Shan Zheng and Marck Script subsets, with t
 
 ## Boundary rendering
 
-Run `npm ci` then `node scripts/build-boundaries.mjs` after refreshing source data. The build uses the detailed subdivision polygons for 33 province-level regions. Taiwan retains its original outline because subdivision data is unavailable.
+Run `npm ci` then `node scripts/build-boundaries.mjs` after refreshing source data. All 34 province/territory shapes are assembled from detailed subdivisions. `node scripts/prepare-additions.mjs` rebuilds the supplements from the retained official NLSC shapefile and the extracted AreaCity source records. Archive checksums and source licenses are recorded in `dist/data/additional-sources.json`.
 
 The source files use independently generalized edges: even neighboring provinces’ detailed files do not share identical coordinates. Mapshaper 0.7.72 reconciles overlaps (min-area rule) and enclosed gaps narrower than 250 m in a derived display dataset. It does not simplify geometry or close open coastal channels. This is display normalization, not an administrative boundary update. The original source files and checksums remain intact.
 
-Province fills, selection geometry, and boundary lines are derived from this single normalized dataset. TopoJSON assembles province polygons and three disjoint line networks so shared edges are stroked once. Polygon fills have no base stroke, and renderer simplification is disabled to keep selection edges aligned with line networks.
+Province fills, selection geometry, and boundary lines use one dataset. TopoJSON assembles three disjoint line networks so shared edges are drawn once. Supplemental overlays are applied after the original repair, preserving the exact borders of 31 unrelated regions. Overlapping older Fujian island components are replaced with NLSC outlines to prevent a second coastline around Kinmen and Matsu. Polygon fills have no base stroke, and renderer simplification is disabled. Taiwan camera views focus on nearby islands while retaining distant island geometry.
 
-`node scripts/validate-boundaries.mjs` checks subdivision counts, ring closure, matching province/subdivision areas, retained land polygon parts, unique line segments, shared province edges, removal of coarse province shapes, and a maximum 0.5% province area change from source data. Two source polygon parts overlap neighboring regions and are assigned to those neighbors by normalization; their land coverage remains present.
+`npm test` checks original source hashes, polygon closure, retained land parts, province/subdivision area agreement, unique boundary segments, bilingual names, flags, selection behavior, and lossless decompression. It also compares all 31 unaffected province borders with the previous version.
 
 ## UI copy
 
@@ -44,11 +44,11 @@ Run `node scripts/serve.mjs` and open http://127.0.0.1:4173.
 
 ## Boundary coverage
 
-The snapshot contains 34 province-level features, 333 prefecture-level regions, 112 districts, and 30 directly administered county-level regions. The provider labels direct counties as `city`; the app distinguishes codes with `90` in the third and fourth positions. Municipalities, Hong Kong and Macao use district subdivisions. Taiwan has only an outer outline in this source. Boundary vintage is unspecified, so retrieval does not imply administrative currency.
+The display contains 34 province/territory features, 333 prefecture-level areas, 112 districts, 32 directly administered county-level divisions, and 22 Taiwan divisions. Caohu is an additional administrative entry without polygon geometry. The original DataV snapshot is retained separately and still has its original coverage. Source dates vary; retrieval does not imply administrative currency.
 
 Source: https://datav.aliyun.com/portal/school/atlas/area_selector
 
-`dist/data/manifest.json` records every downloaded URL, retrieval date, byte count, SHA-256 checksum and regional coverage. Geometry is stored unchanged. Display follows the provider's territorial representation and is intended for geographic exploration. The provider retains rights in its data; no additional data license is asserted here. Leaflet's BSD license is preserved in `dist/vendor/leaflet-LICENSE.txt`.
+`dist/data/manifest.json` records the original DataV URLs, hashes, and coverage. `additional-sources.json` records NLSC and AreaCity provenance and processing. NLSC uses the Taiwan Open Government Data License 1.0; AreaCity and flag-icons use MIT licenses. Original DataV files retain their original rights. Leaflet's earlier BSD license remains in `dist/vendor/leaflet-LICENSE.txt`.
 
 ## Renderer assets
 
