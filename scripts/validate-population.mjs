@@ -9,7 +9,7 @@ const display=readData('display-boundaries.json'),features=[...display.provinces
 const matched=matchRows(source.rows,features);
 assert.deepEqual(data.regions,matched.regions);
 assert.deepEqual(report.unmatched,matched.unmatched);
-assert.deepEqual(data.coverage,{sourceRows:684,matchedRegions:317,unmatchedRows:367});
+assert.deepEqual(data.coverage,{sourceRows:684,matchedRegions:318,unmatchedRows:366});
 assert.equal(data.coverage.sourceRows,data.coverage.matchedRegions+data.coverage.unmatchedRows);
 assert.equal(data.regions[420100].total,12447718);
 assert.equal(data.regions[320500].total,12748262); // Suzhou, Jiangsu
@@ -21,8 +21,16 @@ assert.equal(data.regions[820000].total,683218);
 assert.equal(data.regions[500000].total,32054159);
 assert.equal(data.regions[110000].total,21893095);
 assert.equal(data.regions[371300].total,11018365);
-assert(!data.regions[141000]); // Article labels Shanxi's row as Linyi; do not guess Linfen.
-assert(report.unmatched.some(r=>r.province==='山西'&&r.name==='临沂市'));
+assert.equal(data.regions[141000].name,'临汾市');
+assert.equal(data.regions[141000].total,3976481);
+assert.equal(data.regions[141000].towns,2114457);
+assert.equal(data.regions[141000].urbanCore,666185);
+assert.equal(data.regions[141000].date,'2020-11-01');
+assert(!report.unmatched.some(r=>r.province==='山西'&&r.name==='临汾市'));
+// The original misspelled row must remain unmatched; never guess a city or ignore its province.
+const misspelled=matchRows([{...source.rows[data.regions[141000].sourceRow-1],name:'临沂市'}],features);
+assert.equal(Object.keys(misspelled.regions).length,0);
+assert.deepEqual(misspelled.unmatched,[{row:1,province:'山西',name:'临沂市'}]);
 assert.deepEqual(report.flagged.map(r=>r.adcode),['371400','621100','640300','650200']);
 for(const [adcode,r] of Object.entries(data.regions)){
   const p=features.find(f=>String(f.properties.adcode)===adcode)?.properties;

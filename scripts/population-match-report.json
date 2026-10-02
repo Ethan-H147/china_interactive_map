@@ -1,8 +1,8 @@
 {
   "coverage": {
     "sourceRows": 684,
-    "matchedRegions": 317,
-    "unmatchedRows": 367
+    "matchedRegions": 318,
+    "unmatchedRows": 366
   },
   "unmatched": [
     {
@@ -14,11 +14,6 @@
       "row": 133,
       "province": "四川",
       "name": "峨眉山市"
-    },
-    {
-      "row": 146,
-      "province": "山西",
-      "name": "临沂市"
     },
     {
       "row": 174,

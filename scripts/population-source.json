@@ -1,10 +1,10 @@
 {
   "title": "中華人民共和國城市人口排名",
   "url": "https://zh.wikipedia.org/wiki/中華人民共和國城市人口排名",
-  "revision": 94716648,
-  "revisionUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=94716648",
+  "revision": 94716774,
+  "revisionUrl": "https://zh.wikipedia.org/w/index.php?title=%E4%B8%AD%E8%8F%AF%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9C%8B%E5%9F%8E%E5%B8%82%E4%BA%BA%E5%8F%A3%E6%8E%92%E5%90%8D&oldid=94716774",
   "retrieved": "2026-10-02",
-  "htmlSha256": "8352574ba61431b87b78b4940c47b70aa8b06917e5a24a00906458e5c1064f57",
+  "htmlSha256": "a8d6793bd5dccb6ec6f707f0aa22ca6c4e0bf413ce2b9b0406bee131b4bab775",
   "measures": {
     "total": "Entire administrative region (地区人口)",
     "towns": "Cities and towns (城镇人口)",
@@ -1319,7 +1319,7 @@
     },
     {
       "province": "山西",
-      "name": "临沂市",
+      "name": "临汾市",
       "type": "地级市",
       "total": 3976481,
       "towns": 2114457,
