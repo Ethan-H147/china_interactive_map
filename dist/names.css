@@ -10,7 +10,7 @@
 .regional-text{font-size:23px;color:var(--ink);line-height:1.7;margin:5px 0 0;letter-spacing:0;unicode-bidi:isolate;overflow-wrap:break-word}
 .regional-text:lang(bo){font-family:'Noto Serif Tibetan',serif;font-size:23px;line-height:1.9}
 .regional-text:lang(ug),.regional-text:lang(kk-Arab),.regional-text:lang(ky-Arab){font-family:'Noto Sans Arabic',sans-serif;font-size:24px;text-align:start}
-.regional-text[data-vertical=true]{font-family:'Noto Sans Mongolian',sans-serif;writing-mode:vertical-lr;text-orientation:sideways;height:max-content;max-height:185px;width:fit-content;max-width:100%;font-size:25px;line-height:1.6;white-space:normal;overflow-wrap:normal;word-break:normal;margin:9px 0 0}
+.regional-text[data-vertical=true]{font-family:'Noto Sans Mongolian',sans-serif;writing-mode:vertical-lr;text-orientation:sideways;height:min-content;width:fit-content;max-width:100%;font-size:25px;line-height:1.6;white-space:normal;overflow-wrap:normal;word-break:normal;margin:9px 0 0}
 .parent-context{margin:20px 0 0}
 #parent-region{display:flex;align-items:center;flex-wrap:wrap;gap:5px 10px;width:100%;text-align:left;font-size:14px;margin-top:7px;padding:12px}
 #parent-region span{letter-spacing:0;line-height:1.45}
@@ -20,7 +20,7 @@
 #region-list button span{display:block;line-height:1.4}
 #region-list button small{display:block;font-size:12px;line-height:1.5;color:var(--muted);margin-top:3px;letter-spacing:0}
 @media(max-width:1100px){#selection-name{font-size:33px}#selection-name.long-name{font-size:26px}#selection-chinese{font-size:23px}}
-@media(max-width:760px){#selection-name{font-size:34px}#selection-name.long-name{font-size:27px}.regional-names{max-width:550px}.regional-text[data-vertical=true]{max-height:170px}}
+@media(max-width:760px){#selection-name{font-size:34px}#selection-name.long-name{font-size:27px}.regional-names{max-width:550px}}
 
 .division-note{font-size:13px;line-height:1.6;color:var(--muted);margin:16px 0 24px}.division-note a{font-size:12px;white-space:nowrap}
 

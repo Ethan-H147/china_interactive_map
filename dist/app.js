@@ -199,7 +199,7 @@ function updateLabels(){
   if(!candidates.length)for(const f of provinceFeatures)candidates.push([f.properties,english[f.properties.adcode],shortName(f.properties.name)]);
   for(const [p,text,small] of candidates){const xy=p.centroid||p.center;if(!xy)continue;const point=map.project(xy),size={x:map.getContainer().clientWidth,y:map.getContainer().clientHeight};if(point.x<25||point.x>size.x-30||point.y<75||point.y>size.y-45)continue;const width=Math.max(text.length*(small?6.6:12),small?small.length*12:0)+14,height=small?38:25;const rect={left:point.x-width/2,right:point.x+width/2,top:point.y-17,bottom:point.y-17+height};if(occupied.some(o=>rect.left<o.right&&rect.right>o.left&&rect.top<o.bottom&&rect.bottom>o.top))continue;occupied.push(rect);addLabel(p,text,small);}
 }
-function refreshStatus(){const pref=$('prefecture-layer').checked,other=$('other-layer').checked;$('status').textContent=allReady?`34 regions${pref?' · 333 prefecture-level areas · 22 Taiwan divisions':''}${other?' · 147 other divisions':''}`:'Loading boundaries…';}
+function refreshStatus(){$('status').hidden=allReady;$('status').textContent=allReady?'':'Loading boundaries…';}
 function renderSearch(){
   const query=$('search').value.trim().toLowerCase();const results=$('search-results');results.replaceChildren();results.hidden=!query;if(!query)return;
   const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
@@ -283,7 +283,14 @@ $('mode-province').onclick=()=>{if(!cameraBusy){clearHover();setMode('province')
 $('mode-prefecture').onclick=()=>{if(!cameraBusy){clearHover();setMode('prefecture');$('prefecture-layer').checked=true;syncLayers();refreshStatus();}};
 $('tab-explore').onclick=()=>showPanel('explore');$('tab-layers').onclick=()=>showPanel('layers');
 $('search').addEventListener('input',renderSearch);$('search').addEventListener('keydown',e=>{if(e.key==='Escape')clearSearch();if(e.key==='Enter')$('search-results').querySelector('button')?.click();});
-$('surprise').onclick=()=>{if(cameraBusy)return;const codes=Object.keys(stories).map(Number).filter(c=>c!==activeCode);const code=codes[Math.floor(Math.random()*codes.length)];selectRegion(provinceLayers.get(code),code);};
+function randomPlace(){
+  if(cameraBusy||!allReady)return;
+  const places=regionIndex.filter(r=>r.layer.feature.geometry&&isPrefectureLevel(r.layer.feature.properties)&&r.layer!==selected?.layer);
+  if(!places.length)return;
+  const {layer}=places[Math.floor(Math.random()*places.length)];
+  return selectRegion(layer,layer.feature.properties.provinceCode);
+}
+$('surprise').onclick=randomPlace;
 $('home').onclick=reset;$('selection-reset').onclick=reset;$('fit-map').onclick=reset;
 function zoomBy(amount){if(cameraBusy||!allReady)return;lockCamera();map.jumpTo({zoom:Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+amount))});unlockCamera();}
 $('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);$('retry').onclick=()=>location.reload();
