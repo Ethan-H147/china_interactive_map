@@ -36,7 +36,7 @@
       </section>
       <section id="layers-panel"><label class="field-label" for="province">Region</label><select id="province" data-nav disabled><option value="">All China</option></select><section class="layers" aria-labelledby="layers-title"><h3 id="layers-title">Visible layers</h3><label><span><i class="line province-line"></i>Province outlines</span><input id="province-layer" type="checkbox" checked data-nav></label><label><span><i class="line prefecture-line"></i>Prefectures &amp; Taiwan divisions</span><input id="prefecture-layer" type="checkbox" checked data-nav></label><label><span><i class="line district-line"></i>Districts &amp; direct divisions</span><input id="other-layer" type="checkbox" checked data-nav></label><label><span><i class="label-icon">Aa</i>Region names</span><input id="label-layer" type="checkbox" checked data-nav></label><p>Includes municipal districts and directly administered county-level divisions.</p></section></section>
     </div>
-    <footer class="sidebar-footer"><button id="about-open">Sources & coverage</button></footer>
+    <footer class="sidebar-footer"><button id="about-open">Sources & coverage</button><span class="creator-credit">Created by Ethan Hu</span></footer>
   </aside>
   <main class="map-shell" id="map-shell" data-level="province" aria-busy="false">
     <div id="map" aria-label="Interactive China administrative boundary map"></div>
@@ -44,7 +44,7 @@
     <div class="map-actions"><button id="zoom-in" title="Zoom in" aria-label="Zoom in" data-nav>+</button><button id="zoom-out" title="Zoom out" aria-label="Zoom out" data-nav>−</button><button id="fit-map" title="Fit all regions" aria-label="Fit all regions" data-nav><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
     <div class="north" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 32"><path d="M10 0L19 29 10 23 1 29Z" fill="currentColor"/><path d="M10 0v23L1 29Z" fill="#c9a364"/></svg></div>
     <div class="map-bottom"><span id="status" role="status">Loading boundaries…</span><span id="map-hint">Select a province</span></div>
-    <div id="moving-indicator" hidden aria-live="polite">Moving map…</div>
+    <div id="moving-indicator" hidden role="status" aria-live="polite"><span class="sr-only">Map moving</span><span class="moving-dot" aria-hidden="true"></span><span class="moving-dot" aria-hidden="true"></span><span class="moving-dot" aria-hidden="true"></span></div>
     <div id="load-error" hidden role="alert">The map could not load. <button id="retry">Try again</button></div>
   </main>
 </div>
