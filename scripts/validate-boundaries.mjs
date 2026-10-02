@@ -1,13 +1,14 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {readData} from './read-data.mjs';
+import {transformFeature} from './coordinates.mjs';
 const root=new URL('../dist/data/',import.meta.url);
 const read=readData;
 const {provinces,subdivisions,boundaries}=read('display-boundaries.json');
 const manifest=read('manifest.json');
-const sourceProvinces=read('provinces.json');
+const sourceProvinces={...read('provinces.json'),features:read('provinces.json').features.map(transformFeature)};
 const supplementalTaiwan=read('taiwan-regions.json');
-const supplementalXinjiang=read('xinjiang-additions.json');
+const supplementalXinjiang={...read('xinjiang-additions.json'),features:read('xinjiang-additions.json').features.map(transformFeature)};
 const sar=new Map([810000,820000].map(code=>[code,read('sar-'+code+'.json').features]));
 const polygons=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 const key=p=>JSON.stringify(p);
@@ -26,7 +27,7 @@ let maxProvinceAreaChange=0,islandPartsChecked=0,overlappingPartsAssignedToNeigh
 for(const entry of manifest.coverage){
   const f=provinces.features.find(f=>f.properties.adcode===entry.adcode);
   const original=sourceProvinces.features.find(f=>f.properties.adcode===entry.adcode);
-  const sourceChildren=sar.get(entry.adcode)||(entry.adcode===710000?supplementalTaiwan.features:entry.unavailable?[original]:[...read(entry.adcode+'.json').features,...(entry.adcode===650000?supplementalXinjiang.features:[])]);
+  const sourceChildren=sar.get(entry.adcode)||(entry.adcode===710000?supplementalTaiwan.features:entry.unavailable?[original]:[...read(entry.adcode+'.json').features.map(transformFeature),...(entry.adcode===650000?supplementalXinjiang.features:[])]);
   const children=subdivisions.features.filter(f=>f.properties.provinceCode===entry.adcode);
   assert.equal(children.length,sourceChildren.length,'Lost subdivisions: '+entry.adcode);
   for(const child of children)for(const p of polygons(child.geometry))for(const ring of p)for(let i=1;i<ring.length;i++){

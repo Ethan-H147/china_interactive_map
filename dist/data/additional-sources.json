@@ -57,6 +57,54 @@
       "coordinateSystem": "Macau Grid converted to WGS84 using official Annex I six-parameter transformation",
       "coordinateReference": "https://www.dscc.gov.mo/files/geographical_level_point/PORT/Macaucoord_2009_web_PT_v201702.pdf",
       "processing": "Seven parish polygons and four other areas, retaining all source vertices."
+    },
+    {
+      "provider": "DataV Zhuhai districts",
+      "download": "https://geo.datav.aliyun.com/areas_v3/bound/440400_full.json",
+      "sourceFile": "zhuhai-districts.json",
+      "sha256": "80f0d1d5141d197b3a96b699876547246491fe8e89d36fd8bb3c93adef3a9193",
+      "coordinateSystem": "GCJ-02, numerically converted to WGS84",
+      "processing": "Districts dissolved into one city outline; used only in the coastal coverage window beside Macau."
+    },
+    {
+      "provider": "OpenStreetMap Zhuhai port coastline",
+      "url": "https://www.openstreetmap.org/way/230560846",
+      "download": "https://api.openstreetmap.org/api/0.6/map?bbox=113.57,22.195,113.599,22.224",
+      "sourceFile": "zhuhai-port-land.json",
+      "sha256": "fe136a726e9dcef8308a8eaa7da1e2e624ecb392652573bdb2429989bc7b4357",
+      "coordinateSystem": "WGS84",
+      "retrieved": "2026-10-02",
+      "ways": [
+        "230560846",
+        "1227614103",
+        "1227614101"
+      ],
+      "license": "ODbL 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "reusableDataset": "data/zhuhai-port-land.json",
+      "processing": "Connected coastline ways form the physical port island. Macau government jurisdiction is retained and erased from the Zhuhai portion."
+    },
+    {
+      "provider": "OpenStreetMap Wanzai coastline",
+      "url": "https://www.openstreetmap.org/way/667085646",
+      "sourceFile": "wanzai-coastline.json",
+      "sha256": "af042922e304559f6ec60c7805d60bbd2445df13db0a3b8107c50c1167a54f51",
+      "coordinateSystem": "WGS84",
+      "retrieved": "2026-10-02",
+      "ways": [
+        "667085646",
+        "915139248"
+      ],
+      "license": "ODbL 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "reusableDataset": "data/wanzai-coastline.json",
+      "coverageWindow": [
+        113.515,
+        22.17,
+        113.5365,
+        22.216
+      ],
+      "processing": "Physical shoreline replaces the coarse land fill beside Macau. Closure edges are inland or outside the replacement window."
     }
   ],
   "missing": [
@@ -69,17 +117,26 @@
   ],
   "processing": {
     "simplification": false,
+    "zhuhai": "Detailed DataV district union replaces coastal coverage within [113.48,22.08,113.61,22.26]. The entire old port island is replaced by the connected OpenStreetMap shoreline; Macau government polygons retain jurisdiction.",
+    "displayCoordinateSystem": "WGS84",
+    "mainland": "DataV and AreaCity GCJ-02 coordinates numerically converted to WGS84, retaining every source vertex before government overlays.",
+    "coordinateReference": "https://help.aliyun.com/en/datav/datav-7-0/user-guide/map-data-format-1",
     "xinjiang": "New cities clipped to the existing detailed Xinjiang extent, then erased from the older prefectures. Coincident overlay vertices joined within 1e-10 degrees.",
     "taiwan": "Official county/city polygons replace the coarse Taiwan outline. Overlapping older Fujian island components are replaced as whole components to prevent residual coastlines.",
     "sar": "Official Hong Kong land-clipped districts and Macau parish/area polygons replace previous SAR geometry after legacy gap repair. Their land polygons are erased from neighboring Guangdong to prevent overlapping fills.",
     "replacedFujianIslandParts": [
       "350100-1",
+      "350100-4",
+      "350100-5",
       "350100-8",
+      "350100-17",
       "350100-18",
+      "350100-22",
+      "350100-23",
       "350300-11",
       "350500-1",
       "350500-2"
     ],
-    "unchangedOtherProvinceBorders": 28
+    "retainedOtherProvinceBordersAfterCoordinateConversion": 28
   }
 }

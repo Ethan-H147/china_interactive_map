@@ -4,14 +4,16 @@ import {merge, mesh} from 'topojson-client';
 import mapshaper from 'mapshaper';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
+import {transformFeature} from './coordinates.mjs';
 
 const root=new URL('../dist/data/',import.meta.url);
 const read=name=>{const file=new URL(name,root);return JSON.parse(fs.existsSync(file)?fs.readFileSync(file):gunzipSync(fs.readFileSync(new URL(name+'.gz',root))));};
-const source=read('provinces.json');
+const source={...read('provinces.json'),features:read('provinces.json').features.map(transformFeature)};
 const manifest=read('manifest.json');
 const taiwan=read('taiwan-regions.json');
-const additions=read('xinjiang-additions.json');
+const additions={...read('xinjiang-additions.json'),features:read('xinjiang-additions.json').features.map(transformFeature)};
 const sar=[...read('sar-810000.json').features,...read('sar-820000.json').features];
+const zhuhaiDetailed=read('zhuhai-detailed.json');
 let features=[];
 for(const entry of manifest.coverage){
   const parts=entry.unavailable?[source.features.find(f=>f.properties.adcode===entry.adcode)]:read(entry.adcode+'.json').features;
@@ -25,6 +27,9 @@ const normalized=await mapshaper.applyCommands(
   {'input.json':{type:'FeatureCollection',features:features.filter(f=>f.properties.level!=='province')}}
 );
 features=JSON.parse(normalized['output.json']).features;
+// Convert the reconciled mainland mesh before overlaying WGS84 supplements.
+// Converting only Zhuhai would break its shared edges with neighboring cities.
+features=features.map(transformFeature);
 // Apply new sources after the existing border repair so unrelated geometry stays exact.
 const base=topology({regions:{type:'FeatureCollection',features}});
 const xinjiangExtent={type:'Feature',properties:{},geometry:merge(base,base.objects.regions.geometries.filter(g=>g.properties.provinceCode===650000))};
@@ -52,6 +57,17 @@ features.push(...taiwan.features);
 // Insert government SAR data after the legacy gap repair, which must never
 // bridge their narrow coastal channels or remove small islands.
 features=features.filter(f=>![810000,820000].includes(f.properties.provinceCode));
+// Replace coastal coverage beside Macau with the detailed district-derived land.
+// Keep Zhuhai's inland city boundaries and its neighbors' shared edges unchanged.
+const coastWindow={type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[[[113.48,22.08],[113.61,22.08],[113.61,22.26],[113.48,22.26],[113.48,22.08]]]}};
+const zhuhai=features.find(f=>f.properties.adcode===440400);
+const coastal=await mapshaper.applyCommands('-i input.json -clip extent.json -o output.json format=geojson',{'input.json':{...zhuhaiDetailed,features:zhuhaiDetailed.features.map(f=>({...f,properties:zhuhai.properties}))},'extent.json':coastWindow});
+const inland=await mapshaper.applyCommands('-i input.json -erase extent.json -o output.json format=geojson',{'input.json':{type:'FeatureCollection',features:[zhuhai]},'extent.json':coastWindow});
+const joined=await mapshaper.applyCommands('-i input.json -dissolve2 adcode copy-fields=name,level,provinceCode,center,centroid -o output.json format=geojson',{'input.json':{type:'FeatureCollection',features:[...JSON.parse(inland['output.json']).features,...JSON.parse(coastal['output.json']).features]}});
+features=features.filter(f=>f.properties.adcode!==440400).concat(JSON.parse(joined['output.json']).features);
+// Join only numerical overlay differences at the coastal coverage seam.
+const joinedGuangdong=await mapshaper.applyCommands('-i input.json -clean gap-width=0 snap-interval=0.0000000001 overlap-rule=min-area -o output.json format=geojson',{'input.json':{type:'FeatureCollection',features:features.filter(f=>f.properties.provinceCode===440000)}});
+features=features.filter(f=>f.properties.provinceCode!==440000).concat(JSON.parse(joinedGuangdong['output.json']).features);
 const guangdong=await mapshaper.applyCommands('-i old.json -erase sar.json -o output.json format=geojson',{'old.json':{type:'FeatureCollection',features:features.filter(f=>f.properties.provinceCode===440000)},'sar.json':{type:'FeatureCollection',features:sar}});
 features=features.filter(f=>f.properties.provinceCode!==440000).concat(JSON.parse(guangdong['output.json']).features,sar);
 const topo=topology({regions:{type:'FeatureCollection',features}});
@@ -79,6 +95,6 @@ const parts=[];for(let offset=0,index=0;offset<compressed.length;offset+=4*1024*
 }
 fs.writeFileSync(new URL('display-boundaries.parts.json',root),JSON.stringify({compression:'gzip',parts,compressedBytes:compressed.length,uncompressedBytes:serialized.length,sha256:createHash('sha256').update(serialized).digest('hex')},null,2));
 const provenance=read('additional-sources.json');
-provenance.processing={simplification:false,xinjiang:'New cities clipped to the existing detailed Xinjiang extent, then erased from the older prefectures. Coincident overlay vertices joined within 1e-10 degrees.',taiwan:'Official county/city polygons replace the coarse Taiwan outline. Overlapping older Fujian island components are replaced as whole components to prevent residual coastlines.',sar:'Official Hong Kong land-clipped districts and Macau parish/area polygons replace previous SAR geometry after legacy gap repair. Their land polygons are erased from neighboring Guangdong to prevent overlapping fills.',replacedFujianIslandParts:[...replaced],unchangedOtherProvinceBorders:28};
+provenance.processing={simplification:false,zhuhai:'Detailed DataV district union replaces coastal coverage within [113.48,22.08,113.61,22.26]. The entire old port island is replaced by the connected OpenStreetMap shoreline; Macau government polygons retain jurisdiction.',displayCoordinateSystem:'WGS84',mainland:'DataV and AreaCity GCJ-02 coordinates numerically converted to WGS84, retaining every source vertex before government overlays.',coordinateReference:'https://help.aliyun.com/en/datav/datav-7-0/user-guide/map-data-format-1',xinjiang:'New cities clipped to the existing detailed Xinjiang extent, then erased from the older prefectures. Coincident overlay vertices joined within 1e-10 degrees.',taiwan:'Official county/city polygons replace the coarse Taiwan outline. Overlapping older Fujian island components are replaced as whole components to prevent residual coastlines.',sar:'Official Hong Kong land-clipped districts and Macau parish/area polygons replace previous SAR geometry after legacy gap repair. Their land polygons are erased from neighboring Guangdong to prevent overlapping fills.',replacedFujianIslandParts:[...replaced],retainedOtherProvinceBordersAfterCoordinateConversion:28};
 fs.writeFileSync(new URL('additional-sources.json',root),JSON.stringify(provenance,null,2));
 console.log(JSON.stringify({provinces:provinces.features.length,sourceRegions:features.length,arcs:topo.arcs.length,meshes:Object.fromEntries(Object.entries(boundaries).map(([k,v])=>[k,v.coordinates.length]))}));

@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {readData,readDataText} from './read-data.mjs';
+import {transformGeometry} from './coordinates.mjs';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const display=readData('display-boundaries.json');
 const additions=read('dist/data/xinjiang-additions.json');
@@ -21,7 +22,7 @@ function edges(g){const values=[];for(const poly of polygons(g))for(const ring o
 let unchanged=0;
 for(const old of previous.provinces.features.filter(f=>![650000,350000,710000,440000,810000,820000].includes(f.properties.adcode))){
   const current=display.provinces.features.find(f=>f.properties.adcode===old.properties.adcode);
-  assert.equal(edges(current.geometry),edges(old.geometry),'Unrelated province changed: '+old.properties.name);unchanged++;
+  assert.equal(edges(current.geometry),edges(transformGeometry(old.geometry)),'Source border altered beyond coordinate conversion: '+old.properties.name);unchanged++;
 }
 assert.equal(additions.features.length,2);
 for(const f of additions.features){assert(f.geometry.coordinates.length>1);assert(display.subdivisions.features.some(g=>g.properties.adcode===f.properties.adcode));assert(names[f.properties.adcode]?.en);}
@@ -45,4 +46,4 @@ const administration=read('dist/data/xinjiang-administration.json');
 assert.equal(administration.missingCities.length,1);assert.equal(administration.missingCities[0].adcode,659013);
 assert(!display.subdivisions.features.some(f=>f.properties.adcode===659013),'Caohu must not receive an invented polygon');
 assert.match(app,/if\(shouldFit&&layer.feature.geometry\)/);
-console.log(JSON.stringify({unchangedProvinceBorders:unchanged,taiwanDivisions:counts,newXinjiangOutlines:2,unmappedCaohu:'explicit',flagsVerified:display.provinces.features.length+display.subdivisions.features.length}));
+console.log(JSON.stringify({provinceBordersRetainedAfterCoordinateConversion:unchanged,taiwanDivisions:counts,newXinjiangOutlines:2,unmappedCaohu:'explicit',flagsVerified:display.provinces.features.length+display.subdivisions.features.length}));
