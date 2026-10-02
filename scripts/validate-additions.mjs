@@ -33,7 +33,13 @@ for(const code of ['TW-09007','TW-09020'])assert(display.subdivisions.features.s
 const flag={};const context=vm.createContext({$:()=>flag});
 vm.runInContext(app.slice(app.indexOf('function renderRegionFlag('),app.indexOf('function renderRegionNames(')),context);
 for(const p of [...display.provinces.features,...display.subdivisions.features].map(f=>f.properties)){
-  context.renderRegionFlag(p);assert.equal(flag.src,p.adcode===710000||p.provinceCode===710000?'vendor/flag-roc.svg':'vendor/flag-prc.svg');
+  context.renderRegionFlag(p);
+  const code=p.provinceCode||p.adcode;
+  const asset=code===710000?'roc':code===810000?'hk':code===820000?'mo':'prc';
+  assert.equal(flag.src,'vendor/flag-'+asset+'.svg');
+  assert(fs.existsSync('dist/'+flag.src));
+  if(code===810000)assert.equal(flag.alt,'Flag of Hong Kong');
+  if(code===820000)assert.equal(flag.alt,'Flag of Macau');
 }
 const administration=read('dist/data/xinjiang-administration.json');
 assert.equal(administration.missingCities.length,1);assert.equal(administration.missingCities[0].adcode,659013);

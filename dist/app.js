@@ -29,10 +29,11 @@ const provinceTypes={110000:'Municipality',120000:'Municipality',310000:'Municip
 function englishName(p){return p.level==='province'?english[p.adcode]:regionNames[p.adcode]?.en||p.name;}
 function bilingualName(p){return englishName(p)+' · '+p.name;}
 function renderRegionFlag(p){
-  const roc=p.adcode===710000||p.provinceCode===710000,flag=$('selection-flag');
-  flag.src=roc?'vendor/flag-roc.svg':'vendor/flag-prc.svg';
-  flag.alt=roc?'Flag of the Republic of China':'Flag of the People’s Republic of China';
-  flag.title=roc?'Republic of China':'People’s Republic of China';
+  const flags={710000:['roc','Republic of China'],810000:['hk','Hong Kong'],820000:['mo','Macau']};
+  const [asset,name]=flags[p.provinceCode||p.adcode]||['prc','People’s Republic of China'],flag=$('selection-flag');
+  flag.src='vendor/flag-'+asset+'.svg';
+  flag.alt='Flag of '+(/China$/.test(name)?'the ':'')+name;
+  flag.title=name;
 }
 function renderRegionNames(p){
   const name=englishName(p);
