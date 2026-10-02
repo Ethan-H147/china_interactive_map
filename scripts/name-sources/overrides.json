@@ -1,0 +1,31 @@
+{
+  "english": {
+    "630200": {"text":"Haidong","source":"https://www.wikidata.org/wiki/Q984788"},
+    "810001": {"text":"Central and Western","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810002": {"text":"Wan Chai","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810003": {"text":"Eastern","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810004": {"text":"Southern","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810005": {"text":"Yau Tsim Mong","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810006": {"text":"Sham Shui Po","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810007": {"text":"Kowloon City","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810008": {"text":"Wong Tai Sin","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810009": {"text":"Kwun Tong","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810010": {"text":"Tsuen Wan","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810011": {"text":"Tuen Mun","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810012": {"text":"Yuen Long","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810013": {"text":"North","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810014": {"text":"Tai Po","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810015": {"text":"Sai Kung","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810016": {"text":"Sha Tin","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810017": {"text":"Kwai Tsing","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "810018": {"text":"Islands","source":"https://www.had.gov.hk/en/18_districts/my_map.htm"},
+    "820001": {"text":"Nossa Senhora de Fátima","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"},
+    "820002": {"text":"Santo António","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"},
+    "820003": {"text":"São Lázaro","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"},
+    "820004": {"text":"Sé","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"},
+    "820005": {"text":"São Lourenço","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"},
+    "820006": {"text":"Nossa Senhora do Carmo","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"},
+    "820007": {"text":"Cotai","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"},
+    "820008": {"text":"São Francisco Xavier","source":"https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau"}
+  }
+}

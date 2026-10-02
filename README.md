@@ -4,7 +4,13 @@ Interactive static map derived from Alibaba Cloud DataV GeoAtlas GeoJSON. MapLib
 
 ## Exploring and rendering
 
-The Discover panel includes six province stories with links to UNESCO World Heritage sources, a region search, and a list of subdivisions for the selected province. Province names can be searched in English or Chinese; prefecture and district names can be searched in Chinese or by administrative code.
+Map settings is the default panel. Selecting a region opens its details; Featured regions is temporarily hidden. Cultural cards are assigned to their province and specific subdivision codes. Subdivision lists appear only for a region whose children are included in the dataset.
+
+All 509 mapped regions have English and Chinese names. The sidebar shows the selected region in both languages and a bilingual link to its parent province. Search accepts English, Chinese, administrative codes, and the included regional names; English search also accepts spellings without diacritics.
+
+`dist/data/region-names.json` records sourced Tibetan, Uyghur, Kazakh, Kyrgyz, and traditional Mongolian spellings for relevant regions. It includes each name’s language, direction, source, and license. Regional names are attached to individual administrative codes, so they are not inherited from a parent. Traditional Mongolian uses vertical columns from left to right; Arabic scripts use right-to-left text. The Noto regional fonts and their SIL Open Font Licenses are bundled locally.
+
+To refresh names, run `node scripts/fetch-region-names.mjs` and `node scripts/fetch-regional-scripts.mjs`, review their snapshots and the explicit overrides in `scripts/name-sources`, then run `node scripts/build-region-names.mjs` and `node scripts/validate-names.mjs`. Wikidata records are matched by administrative code; supplemental regional script spellings come from the linked Wikipedia articles. The source snapshots are retained for review. Only sourced spellings are displayed; this is not complete language coverage for every autonomous division.
 
 MapLibre draws boundaries with WebGL. Geometry tiling and triangulation run in two workers, and panning moves GPU buffers instead of repainting full-country SVG paths. All sources use zero simplification tolerance and a maximum source zoom of 18. The map stops at zoom 11 (equivalent to the previous Leaflet zoom 12). Pixel ratio follows the device; no reduced-resolution canvas is used.
 

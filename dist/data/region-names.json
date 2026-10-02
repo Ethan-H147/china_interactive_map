@@ -1,0 +1,3654 @@
+{
+  "retrieved": "2026-10-02T20:25:34.929Z",
+  "regions": {
+    "110000": {
+      "en": "Beijing",
+      "zh": "北京市",
+      "source": "https://www.wikidata.org/wiki/Q956",
+      "regional": []
+    },
+    "110101": {
+      "en": "Dongcheng District",
+      "zh": "东城区",
+      "source": "https://www.wikidata.org/wiki/Q394681",
+      "regional": []
+    },
+    "110102": {
+      "en": "Xicheng District",
+      "zh": "西城区",
+      "source": "https://www.wikidata.org/wiki/Q30138",
+      "regional": []
+    },
+    "110105": {
+      "en": "Chaoyang District",
+      "zh": "朝阳区",
+      "source": "https://www.wikidata.org/wiki/Q394701",
+      "regional": []
+    },
+    "110106": {
+      "en": "Fengtai District",
+      "zh": "丰台区",
+      "source": "https://www.wikidata.org/wiki/Q393831",
+      "regional": []
+    },
+    "110107": {
+      "en": "Shijingshan District",
+      "zh": "石景山区",
+      "source": "https://www.wikidata.org/wiki/Q393475",
+      "regional": []
+    },
+    "110108": {
+      "en": "Haidian District",
+      "zh": "海淀区",
+      "source": "https://www.wikidata.org/wiki/Q393454",
+      "regional": []
+    },
+    "110109": {
+      "en": "Mentougou District",
+      "zh": "门头沟区",
+      "source": "https://www.wikidata.org/wiki/Q185584",
+      "regional": []
+    },
+    "110111": {
+      "en": "Fangshan District",
+      "zh": "房山区",
+      "source": "https://www.wikidata.org/wiki/Q393462",
+      "regional": []
+    },
+    "110112": {
+      "en": "Tongzhou District",
+      "zh": "通州区",
+      "source": "https://www.wikidata.org/wiki/Q393836",
+      "regional": []
+    },
+    "110113": {
+      "en": "Shunyi District",
+      "zh": "顺义区",
+      "source": "https://www.wikidata.org/wiki/Q393482",
+      "regional": []
+    },
+    "110114": {
+      "en": "Changping District",
+      "zh": "昌平区",
+      "source": "https://www.wikidata.org/wiki/Q393485",
+      "regional": []
+    },
+    "110115": {
+      "en": "Daxing District",
+      "zh": "大兴区",
+      "source": "https://www.wikidata.org/wiki/Q393445",
+      "regional": []
+    },
+    "110116": {
+      "en": "Huairou District",
+      "zh": "怀柔区",
+      "source": "https://www.wikidata.org/wiki/Q121911",
+      "regional": []
+    },
+    "110117": {
+      "en": "Pinggu District",
+      "zh": "平谷区",
+      "source": "https://www.wikidata.org/wiki/Q393469",
+      "regional": []
+    },
+    "110118": {
+      "en": "Miyun District",
+      "zh": "密云区",
+      "source": "https://www.wikidata.org/wiki/Q1022269",
+      "regional": []
+    },
+    "110119": {
+      "en": "Yanqing District",
+      "zh": "延庆区",
+      "source": "https://www.wikidata.org/wiki/Q596545",
+      "regional": []
+    },
+    "120000": {
+      "en": "Tianjin",
+      "zh": "天津市",
+      "source": "https://www.wikidata.org/wiki/Q11736",
+      "regional": []
+    },
+    "120101": {
+      "en": "Heping District",
+      "zh": "和平区",
+      "source": "https://www.wikidata.org/wiki/Q707965",
+      "regional": []
+    },
+    "120102": {
+      "en": "Hedong District",
+      "zh": "河东区",
+      "source": "https://www.wikidata.org/wiki/Q708069",
+      "regional": []
+    },
+    "120103": {
+      "en": "Hexi District",
+      "zh": "河西区",
+      "source": "https://www.wikidata.org/wiki/Q708102",
+      "regional": []
+    },
+    "120104": {
+      "en": "Nankai District",
+      "zh": "南开区",
+      "source": "https://www.wikidata.org/wiki/Q708155",
+      "regional": []
+    },
+    "120105": {
+      "en": "Hebei District",
+      "zh": "河北区",
+      "source": "https://www.wikidata.org/wiki/Q708195",
+      "regional": []
+    },
+    "120106": {
+      "en": "Hongqiao District",
+      "zh": "红桥区",
+      "source": "https://www.wikidata.org/wiki/Q708237",
+      "regional": []
+    },
+    "120110": {
+      "en": "Dongli District",
+      "zh": "东丽区",
+      "source": "https://www.wikidata.org/wiki/Q708282",
+      "regional": []
+    },
+    "120111": {
+      "en": "Xiqing District",
+      "zh": "西青区",
+      "source": "https://www.wikidata.org/wiki/Q708330",
+      "regional": []
+    },
+    "120112": {
+      "en": "Jinnan District",
+      "zh": "津南区",
+      "source": "https://www.wikidata.org/wiki/Q708413",
+      "regional": []
+    },
+    "120113": {
+      "en": "Beichen District",
+      "zh": "北辰区",
+      "source": "https://www.wikidata.org/wiki/Q708455",
+      "regional": []
+    },
+    "120114": {
+      "en": "Wuqing District",
+      "zh": "武清区",
+      "source": "https://www.wikidata.org/wiki/Q708496",
+      "regional": []
+    },
+    "120115": {
+      "en": "Baodi District",
+      "zh": "宝坻区",
+      "source": "https://www.wikidata.org/wiki/Q708537",
+      "regional": []
+    },
+    "120116": {
+      "en": "Binhai New Area",
+      "zh": "滨海新区",
+      "source": "https://www.wikidata.org/wiki/Q708605",
+      "regional": []
+    },
+    "120117": {
+      "en": "Ninghe District",
+      "zh": "宁河区",
+      "source": "https://www.wikidata.org/wiki/Q284031",
+      "regional": []
+    },
+    "120118": {
+      "en": "Jinghai District",
+      "zh": "静海区",
+      "source": "https://www.wikidata.org/wiki/Q1362013",
+      "regional": []
+    },
+    "120119": {
+      "en": "Jizhou District",
+      "zh": "蓟州区",
+      "source": "https://www.wikidata.org/wiki/Q1205847",
+      "regional": []
+    },
+    "130000": {
+      "en": "Hebei",
+      "zh": "河北省",
+      "source": "https://www.wikidata.org/wiki/Q21208",
+      "regional": []
+    },
+    "130100": {
+      "en": "Shijiazhuang",
+      "zh": "石家庄市",
+      "source": "https://www.wikidata.org/wiki/Q58401",
+      "regional": []
+    },
+    "130200": {
+      "en": "Tangshan",
+      "zh": "唐山市",
+      "source": "https://www.wikidata.org/wiki/Q58422",
+      "regional": []
+    },
+    "130300": {
+      "en": "Qinhuangdao",
+      "zh": "秦皇岛市",
+      "source": "https://www.wikidata.org/wiki/Q58560",
+      "regional": []
+    },
+    "130400": {
+      "en": "Handan",
+      "zh": "邯郸市",
+      "source": "https://www.wikidata.org/wiki/Q58570",
+      "regional": []
+    },
+    "130500": {
+      "en": "Xingtai",
+      "zh": "邢台市",
+      "source": "https://www.wikidata.org/wiki/Q58576",
+      "regional": []
+    },
+    "130600": {
+      "en": "Baoding",
+      "zh": "保定市",
+      "source": "https://www.wikidata.org/wiki/Q58584",
+      "regional": []
+    },
+    "130700": {
+      "en": "Zhangjiakou",
+      "zh": "张家口市",
+      "source": "https://www.wikidata.org/wiki/Q58650",
+      "regional": []
+    },
+    "130800": {
+      "en": "Chengde",
+      "zh": "承德市",
+      "source": "https://www.wikidata.org/wiki/Q58675",
+      "regional": []
+    },
+    "130900": {
+      "en": "Cangzhou",
+      "zh": "沧州市",
+      "source": "https://www.wikidata.org/wiki/Q58695",
+      "regional": []
+    },
+    "131000": {
+      "en": "Langfang",
+      "zh": "廊坊市",
+      "source": "https://www.wikidata.org/wiki/Q58710",
+      "regional": []
+    },
+    "131100": {
+      "en": "Hengshui",
+      "zh": "衡水市",
+      "source": "https://www.wikidata.org/wiki/Q58724",
+      "regional": []
+    },
+    "140000": {
+      "en": "Shanxi",
+      "zh": "山西省",
+      "source": "https://www.wikidata.org/wiki/Q46913",
+      "regional": []
+    },
+    "140100": {
+      "en": "Taiyuan",
+      "zh": "太原市",
+      "source": "https://www.wikidata.org/wiki/Q72778",
+      "regional": []
+    },
+    "140200": {
+      "en": "Datong",
+      "zh": "大同市",
+      "source": "https://www.wikidata.org/wiki/Q72877",
+      "regional": []
+    },
+    "140300": {
+      "en": "Yangquan",
+      "zh": "阳泉市",
+      "source": "https://www.wikidata.org/wiki/Q72907",
+      "regional": []
+    },
+    "140400": {
+      "en": "Changzhi",
+      "zh": "长治市",
+      "source": "https://www.wikidata.org/wiki/Q72945",
+      "regional": []
+    },
+    "140500": {
+      "en": "Jincheng",
+      "zh": "晋城市",
+      "source": "https://www.wikidata.org/wiki/Q72990",
+      "regional": []
+    },
+    "140600": {
+      "en": "Shuozhou",
+      "zh": "朔州市",
+      "source": "https://www.wikidata.org/wiki/Q73020",
+      "regional": []
+    },
+    "140700": {
+      "en": "Jinzhong",
+      "zh": "晋中市",
+      "source": "https://www.wikidata.org/wiki/Q73045",
+      "regional": []
+    },
+    "140800": {
+      "en": "Yuncheng",
+      "zh": "运城市",
+      "source": "https://www.wikidata.org/wiki/Q73073",
+      "regional": []
+    },
+    "140900": {
+      "en": "Xinzhou",
+      "zh": "忻州市",
+      "source": "https://www.wikidata.org/wiki/Q73119",
+      "regional": []
+    },
+    "141000": {
+      "en": "Linfen",
+      "zh": "临汾市",
+      "source": "https://www.wikidata.org/wiki/Q73156",
+      "regional": []
+    },
+    "141100": {
+      "en": "Lüliang",
+      "zh": "吕梁市",
+      "source": "https://www.wikidata.org/wiki/Q73186",
+      "regional": []
+    },
+    "150000": {
+      "en": "Inner Mongolia",
+      "zh": "内蒙古自治区",
+      "source": "https://www.wikidata.org/wiki/Q41079",
+      "regional": [
+        {
+          "text": "ᠥᠪᠥᠷ ᠮᠣᠩᠭᠣᠯ ᠤᠨ ᠥᠪᠡᠷᠲᠡᠭᠡᠨ ᠵᠠᠰᠠᠬᠤ ᠣᠷᠣᠨ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Inner_Mongolia",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150100": {
+      "en": "Hohhot",
+      "zh": "呼和浩特市",
+      "source": "https://www.wikidata.org/wiki/Q535534",
+      "regional": [
+        {
+          "text": "ᠬᠥᠬᠡᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Hohhot",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150200": {
+      "en": "Baotou",
+      "zh": "包头市",
+      "source": "https://www.wikidata.org/wiki/Q569907",
+      "regional": [
+        {
+          "text": "ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Baotou",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150300": {
+      "en": "Wuhai",
+      "zh": "乌海市",
+      "source": "https://www.wikidata.org/wiki/Q570768",
+      "regional": [
+        {
+          "text": "ᠦᠬᠠᠢ ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Wuhai",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150400": {
+      "en": "Chifeng",
+      "zh": "赤峰市",
+      "source": "https://www.wikidata.org/wiki/Q570829",
+      "regional": [
+        {
+          "text": "ᠤᠯᠠᠭᠠᠨᠬᠠᠳᠠ ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Chifeng",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150500": {
+      "en": "Tongliao",
+      "zh": "通辽市",
+      "source": "https://www.wikidata.org/wiki/Q570884",
+      "regional": [
+        {
+          "text": "ᠲᠦᠩᠯᠢᠶᠣᠤ ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Tongliao",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150600": {
+      "en": "Ordos City",
+      "zh": "鄂尔多斯市",
+      "source": "https://www.wikidata.org/wiki/Q570937",
+      "regional": [
+        {
+          "text": "ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Ordos_City",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150700": {
+      "en": "Hulunbuir",
+      "zh": "呼伦贝尔市",
+      "source": "https://www.wikidata.org/wiki/Q571033",
+      "regional": [
+        {
+          "text": "ᠬᠥᠯᠥᠨ ᠪᠤᠶᠢᠷ ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Hulunbuir",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150800": {
+      "en": "Bayannur",
+      "zh": "巴彦淖尔市",
+      "source": "https://www.wikidata.org/wiki/Q571126",
+      "regional": [
+        {
+          "text": "ᠪᠠᠶᠠᠨᠨᠠᠭᠤᠷ ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Bayannur",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "150900": {
+      "en": "Ulanqab",
+      "zh": "乌兰察布市",
+      "source": "https://www.wikidata.org/wiki/Q571219",
+      "regional": [
+        {
+          "text": "ᠤᠯᠠᠭᠠᠨᠴᠠᠪ ᠬᠣᠲᠠ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Ulanqab",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "152200": {
+      "en": "Hinggan League",
+      "zh": "兴安盟",
+      "source": "https://www.wikidata.org/wiki/Q1619433",
+      "regional": [
+        {
+          "text": "ᠬᠢᠩᠭᠠᠨ ᠠᠢᠮᠠᠭ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Hinggan_League",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "152500": {
+      "en": "Xilingol League",
+      "zh": "锡林郭勒盟",
+      "source": "https://www.wikidata.org/wiki/Q573124",
+      "regional": [
+        {
+          "text": "ᠰᠢᠯᠢ ᠶᠢᠨ ᠭᠣᠣᠯ ᠠᠶᠢᠮᠠᠭ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Xilingol_League",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "152900": {
+      "en": "Alxa League",
+      "zh": "阿拉善盟",
+      "source": "https://www.wikidata.org/wiki/Q449963",
+      "regional": [
+        {
+          "text": "ᠠᠯᠠᠱᠠ ᠠᠶᠢᠮᠠᠭ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Alxa_League",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "210000": {
+      "en": "Liaoning",
+      "zh": "辽宁省",
+      "source": "https://www.wikidata.org/wiki/Q43934",
+      "regional": []
+    },
+    "210100": {
+      "en": "Shenyang",
+      "zh": "沈阳市",
+      "source": "https://www.wikidata.org/wiki/Q11720",
+      "regional": []
+    },
+    "210200": {
+      "en": "Dalian",
+      "zh": "大连市",
+      "source": "https://www.wikidata.org/wiki/Q74881",
+      "regional": []
+    },
+    "210300": {
+      "en": "Anshan",
+      "zh": "鞍山市",
+      "source": "https://www.wikidata.org/wiki/Q74957",
+      "regional": []
+    },
+    "210400": {
+      "en": "Fushun",
+      "zh": "抚顺市",
+      "source": "https://www.wikidata.org/wiki/Q75026",
+      "regional": []
+    },
+    "210500": {
+      "en": "Benxi",
+      "zh": "本溪市",
+      "source": "https://www.wikidata.org/wiki/Q75091",
+      "regional": []
+    },
+    "210600": {
+      "en": "Dandong",
+      "zh": "丹东市",
+      "source": "https://www.wikidata.org/wiki/Q75110",
+      "regional": []
+    },
+    "210700": {
+      "en": "Jinzhou",
+      "zh": "锦州市",
+      "source": "https://www.wikidata.org/wiki/Q28996",
+      "regional": []
+    },
+    "210800": {
+      "en": "Yingkou",
+      "zh": "营口市",
+      "source": "https://www.wikidata.org/wiki/Q75150",
+      "regional": []
+    },
+    "210900": {
+      "en": "Fuxin",
+      "zh": "阜新市",
+      "source": "https://www.wikidata.org/wiki/Q34750",
+      "regional": []
+    },
+    "211000": {
+      "en": "Liaoyang",
+      "zh": "辽阳市",
+      "source": "https://www.wikidata.org/wiki/Q75203",
+      "regional": []
+    },
+    "211100": {
+      "en": "Panjin",
+      "zh": "盘锦市",
+      "source": "https://www.wikidata.org/wiki/Q75230",
+      "regional": []
+    },
+    "211200": {
+      "en": "Tieling",
+      "zh": "铁岭市",
+      "source": "https://www.wikidata.org/wiki/Q75268",
+      "regional": []
+    },
+    "211300": {
+      "en": "Chaoyang",
+      "zh": "朝阳市",
+      "source": "https://www.wikidata.org/wiki/Q75336",
+      "regional": []
+    },
+    "211400": {
+      "en": "Huludao",
+      "zh": "葫芦岛市",
+      "source": "https://www.wikidata.org/wiki/Q75379",
+      "regional": []
+    },
+    "220000": {
+      "en": "Jilin",
+      "zh": "吉林省",
+      "source": "https://www.wikidata.org/wiki/Q45208",
+      "regional": []
+    },
+    "220100": {
+      "en": "Changchun",
+      "zh": "长春市",
+      "source": "https://www.wikidata.org/wiki/Q92161",
+      "regional": []
+    },
+    "220200": {
+      "en": "Jilin City",
+      "zh": "吉林市",
+      "source": "https://www.wikidata.org/wiki/Q92277",
+      "regional": []
+    },
+    "220300": {
+      "en": "Siping",
+      "zh": "四平市",
+      "source": "https://www.wikidata.org/wiki/Q92297",
+      "regional": []
+    },
+    "220400": {
+      "en": "Liaoyuan",
+      "zh": "辽源市",
+      "source": "https://www.wikidata.org/wiki/Q92311",
+      "regional": []
+    },
+    "220500": {
+      "en": "Tonghua",
+      "zh": "通化市",
+      "source": "https://www.wikidata.org/wiki/Q92324",
+      "regional": []
+    },
+    "220600": {
+      "en": "Baishan",
+      "zh": "白山市",
+      "source": "https://www.wikidata.org/wiki/Q92348",
+      "regional": []
+    },
+    "220700": {
+      "en": "Songyuan",
+      "zh": "松原市",
+      "source": "https://www.wikidata.org/wiki/Q92364",
+      "regional": []
+    },
+    "220800": {
+      "en": "Baicheng",
+      "zh": "白城市",
+      "source": "https://www.wikidata.org/wiki/Q92381",
+      "regional": []
+    },
+    "222400": {
+      "en": "Yanbian Korean Autonomous Prefecture",
+      "zh": "延边朝鲜族自治州",
+      "source": "https://www.wikidata.org/wiki/Q714984",
+      "regional": []
+    },
+    "230000": {
+      "en": "Heilongjiang",
+      "zh": "黑龙江省",
+      "source": "https://www.wikidata.org/wiki/Q19206",
+      "regional": []
+    },
+    "230100": {
+      "en": "Harbin",
+      "zh": "哈尔滨市",
+      "source": "https://www.wikidata.org/wiki/Q42956",
+      "regional": []
+    },
+    "230200": {
+      "en": "Qiqihar",
+      "zh": "齐齐哈尔市",
+      "source": "https://www.wikidata.org/wiki/Q205922",
+      "regional": []
+    },
+    "230300": {
+      "en": "Jixi",
+      "zh": "鸡西市",
+      "source": "https://www.wikidata.org/wiki/Q28979",
+      "regional": []
+    },
+    "230400": {
+      "en": "Hegang",
+      "zh": "鹤岗市",
+      "source": "https://www.wikidata.org/wiki/Q349982",
+      "regional": []
+    },
+    "230500": {
+      "en": "Shuangyashan",
+      "zh": "双鸭山市",
+      "source": "https://www.wikidata.org/wiki/Q349973",
+      "regional": []
+    },
+    "230600": {
+      "en": "Daqing",
+      "zh": "大庆市",
+      "source": "https://www.wikidata.org/wiki/Q304848",
+      "regional": []
+    },
+    "230700": {
+      "en": "Yichun",
+      "zh": "伊春市",
+      "source": "https://www.wikidata.org/wiki/Q349976",
+      "regional": []
+    },
+    "230800": {
+      "en": "Jiamusi",
+      "zh": "佳木斯市",
+      "source": "https://www.wikidata.org/wiki/Q29003",
+      "regional": []
+    },
+    "230900": {
+      "en": "Qitaihe",
+      "zh": "七台河市",
+      "source": "https://www.wikidata.org/wiki/Q349979",
+      "regional": []
+    },
+    "231000": {
+      "en": "Mudanjiang",
+      "zh": "牡丹江市",
+      "source": "https://www.wikidata.org/wiki/Q217646",
+      "regional": []
+    },
+    "231100": {
+      "en": "Heihe",
+      "zh": "黑河市",
+      "source": "https://www.wikidata.org/wiki/Q349983",
+      "regional": []
+    },
+    "231200": {
+      "en": "Suihua",
+      "zh": "绥化市",
+      "source": "https://www.wikidata.org/wiki/Q349985",
+      "regional": []
+    },
+    "232700": {
+      "en": "Daxing'anling Prefecture",
+      "zh": "大兴安岭地区",
+      "source": "https://www.wikidata.org/wiki/Q984457",
+      "regional": []
+    },
+    "310000": {
+      "en": "Shanghai",
+      "zh": "上海市",
+      "source": "https://www.wikidata.org/wiki/Q8686",
+      "regional": []
+    },
+    "310101": {
+      "en": "Huangpu District",
+      "zh": "黄浦区",
+      "source": "https://www.wikidata.org/wiki/Q660185",
+      "regional": []
+    },
+    "310104": {
+      "en": "Xuhui District",
+      "zh": "徐汇区",
+      "source": "https://www.wikidata.org/wiki/Q57002",
+      "regional": []
+    },
+    "310105": {
+      "en": "Changning District",
+      "zh": "长宁区",
+      "source": "https://www.wikidata.org/wiki/Q660626",
+      "regional": []
+    },
+    "310106": {
+      "en": "Jing'an District",
+      "zh": "静安区",
+      "source": "https://www.wikidata.org/wiki/Q660789",
+      "regional": []
+    },
+    "310107": {
+      "en": "Putuo District",
+      "zh": "普陀区",
+      "source": "https://www.wikidata.org/wiki/Q660952",
+      "regional": []
+    },
+    "310109": {
+      "en": "Hongkou",
+      "zh": "虹口区",
+      "source": "https://www.wikidata.org/wiki/Q661364",
+      "regional": []
+    },
+    "310110": {
+      "en": "Yangpu District",
+      "zh": "杨浦区",
+      "source": "https://www.wikidata.org/wiki/Q661533",
+      "regional": []
+    },
+    "310112": {
+      "en": "Minhang District",
+      "zh": "闵行区",
+      "source": "https://www.wikidata.org/wiki/Q661695",
+      "regional": []
+    },
+    "310113": {
+      "en": "Baoshan District",
+      "zh": "宝山区",
+      "source": "https://www.wikidata.org/wiki/Q661828",
+      "regional": []
+    },
+    "310114": {
+      "en": "Jiading",
+      "zh": "嘉定区",
+      "source": "https://www.wikidata.org/wiki/Q662101",
+      "regional": []
+    },
+    "310115": {
+      "en": "Pudong",
+      "zh": "浦东新区",
+      "source": "https://www.wikidata.org/wiki/Q125378",
+      "regional": []
+    },
+    "310116": {
+      "en": "Jinshan District",
+      "zh": "金山区",
+      "source": "https://www.wikidata.org/wiki/Q662241",
+      "regional": []
+    },
+    "310117": {
+      "en": "Songjiang",
+      "zh": "松江区",
+      "source": "https://www.wikidata.org/wiki/Q662380",
+      "regional": []
+    },
+    "310118": {
+      "en": "Qingpu",
+      "zh": "青浦区",
+      "source": "https://www.wikidata.org/wiki/Q662548",
+      "regional": []
+    },
+    "310120": {
+      "en": "Fengxian District",
+      "zh": "奉贤区",
+      "source": "https://www.wikidata.org/wiki/Q662694",
+      "regional": []
+    },
+    "310151": {
+      "en": "Chongming District",
+      "zh": "崇明区",
+      "source": "https://www.wikidata.org/wiki/Q788812",
+      "regional": []
+    },
+    "320000": {
+      "en": "Jiangsu",
+      "zh": "江苏省",
+      "source": "https://www.wikidata.org/wiki/Q16963",
+      "regional": []
+    },
+    "320100": {
+      "en": "Nanjing",
+      "zh": "南京市",
+      "source": "https://www.wikidata.org/wiki/Q16666",
+      "regional": []
+    },
+    "320200": {
+      "en": "Wuxi",
+      "zh": "无锡市",
+      "source": "https://www.wikidata.org/wiki/Q42651",
+      "regional": []
+    },
+    "320300": {
+      "en": "Xuzhou",
+      "zh": "徐州市",
+      "source": "https://www.wikidata.org/wiki/Q57719",
+      "regional": []
+    },
+    "320400": {
+      "en": "Changzhou",
+      "zh": "常州市",
+      "source": "https://www.wikidata.org/wiki/Q57970",
+      "regional": []
+    },
+    "320500": {
+      "en": "Suzhou",
+      "zh": "苏州市",
+      "source": "https://www.wikidata.org/wiki/Q42622",
+      "regional": []
+    },
+    "320600": {
+      "en": "Nantong",
+      "zh": "南通市",
+      "source": "https://www.wikidata.org/wiki/Q57947",
+      "regional": []
+    },
+    "320700": {
+      "en": "Lianyungang",
+      "zh": "连云港市",
+      "source": "https://www.wikidata.org/wiki/Q57756",
+      "regional": []
+    },
+    "320800": {
+      "en": "Huai'an",
+      "zh": "淮安市",
+      "source": "https://www.wikidata.org/wiki/Q57818",
+      "regional": []
+    },
+    "320900": {
+      "en": "Yancheng",
+      "zh": "盐城市",
+      "source": "https://www.wikidata.org/wiki/Q57866",
+      "regional": []
+    },
+    "321000": {
+      "en": "Yangzhou",
+      "zh": "扬州市",
+      "source": "https://www.wikidata.org/wiki/Q57906",
+      "regional": []
+    },
+    "321100": {
+      "en": "Zhenjiang",
+      "zh": "镇江市",
+      "source": "https://www.wikidata.org/wiki/Q57958",
+      "regional": []
+    },
+    "321200": {
+      "en": "Taizhou",
+      "zh": "泰州市",
+      "source": "https://www.wikidata.org/wiki/Q57931",
+      "regional": []
+    },
+    "321300": {
+      "en": "Suqian",
+      "zh": "宿迁市",
+      "source": "https://www.wikidata.org/wiki/Q57787",
+      "regional": []
+    },
+    "330000": {
+      "en": "Zhejiang",
+      "zh": "浙江省",
+      "source": "https://www.wikidata.org/wiki/Q16967",
+      "regional": []
+    },
+    "330100": {
+      "en": "Hangzhou",
+      "zh": "杭州市",
+      "source": "https://www.wikidata.org/wiki/Q4970",
+      "regional": []
+    },
+    "330200": {
+      "en": "Ningbo",
+      "zh": "宁波市",
+      "source": "https://www.wikidata.org/wiki/Q42780",
+      "regional": []
+    },
+    "330300": {
+      "en": "Wenzhou",
+      "zh": "温州市",
+      "source": "https://www.wikidata.org/wiki/Q42635",
+      "regional": []
+    },
+    "330400": {
+      "en": "Jiaxing",
+      "zh": "嘉兴市",
+      "source": "https://www.wikidata.org/wiki/Q58178",
+      "regional": []
+    },
+    "330500": {
+      "en": "Huzhou",
+      "zh": "湖州市",
+      "source": "https://www.wikidata.org/wiki/Q42664",
+      "regional": []
+    },
+    "330600": {
+      "en": "Shaoxing",
+      "zh": "绍兴市",
+      "source": "https://www.wikidata.org/wiki/Q42666",
+      "regional": []
+    },
+    "330700": {
+      "en": "Jinhua",
+      "zh": "金华市",
+      "source": "https://www.wikidata.org/wiki/Q58210",
+      "regional": []
+    },
+    "330800": {
+      "en": "Quzhou",
+      "zh": "衢州市",
+      "source": "https://www.wikidata.org/wiki/Q58235",
+      "regional": []
+    },
+    "330900": {
+      "en": "Zhoushan",
+      "zh": "舟山市",
+      "source": "https://www.wikidata.org/wiki/Q58324",
+      "regional": []
+    },
+    "331000": {
+      "en": "Taizhou",
+      "zh": "台州市",
+      "source": "https://www.wikidata.org/wiki/Q58273",
+      "regional": []
+    },
+    "331100": {
+      "en": "Lishui",
+      "zh": "丽水市",
+      "source": "https://www.wikidata.org/wiki/Q58294",
+      "regional": []
+    },
+    "340000": {
+      "en": "Anhui",
+      "zh": "安徽省",
+      "source": "https://www.wikidata.org/wiki/Q40956",
+      "regional": []
+    },
+    "340100": {
+      "en": "Hefei",
+      "zh": "合肥市",
+      "source": "https://www.wikidata.org/wiki/Q185684",
+      "regional": []
+    },
+    "340200": {
+      "en": "Wuhu",
+      "zh": "芜湖市",
+      "source": "https://www.wikidata.org/wiki/Q359990",
+      "regional": []
+    },
+    "340300": {
+      "en": "Bengbu",
+      "zh": "蚌埠市",
+      "source": "https://www.wikidata.org/wiki/Q360069",
+      "regional": []
+    },
+    "340400": {
+      "en": "Huainan",
+      "zh": "淮南市",
+      "source": "https://www.wikidata.org/wiki/Q360178",
+      "regional": []
+    },
+    "340500": {
+      "en": "Ma'anshan",
+      "zh": "马鞍山市",
+      "source": "https://www.wikidata.org/wiki/Q360235",
+      "regional": []
+    },
+    "340600": {
+      "en": "Huaibei",
+      "zh": "淮北市",
+      "source": "https://www.wikidata.org/wiki/Q360268",
+      "regional": []
+    },
+    "340700": {
+      "en": "Tongling",
+      "zh": "铜陵市",
+      "source": "https://www.wikidata.org/wiki/Q360326",
+      "regional": []
+    },
+    "340800": {
+      "en": "Anqing",
+      "zh": "安庆市",
+      "source": "https://www.wikidata.org/wiki/Q360374",
+      "regional": []
+    },
+    "341000": {
+      "en": "Huangshan",
+      "zh": "黄山市",
+      "source": "https://www.wikidata.org/wiki/Q180470",
+      "regional": []
+    },
+    "341100": {
+      "en": "Chuzhou",
+      "zh": "滁州市",
+      "source": "https://www.wikidata.org/wiki/Q114045",
+      "regional": []
+    },
+    "341200": {
+      "en": "Fuyang",
+      "zh": "阜阳市",
+      "source": "https://www.wikidata.org/wiki/Q360584",
+      "regional": []
+    },
+    "341300": {
+      "en": "Suzhou",
+      "zh": "宿州市",
+      "source": "https://www.wikidata.org/wiki/Q360643",
+      "regional": []
+    },
+    "341500": {
+      "en": "Lu'an",
+      "zh": "六安市",
+      "source": "https://www.wikidata.org/wiki/Q360702",
+      "regional": []
+    },
+    "341600": {
+      "en": "Bozhou",
+      "zh": "亳州市",
+      "source": "https://www.wikidata.org/wiki/Q360769",
+      "regional": []
+    },
+    "341700": {
+      "en": "Chizhou",
+      "zh": "池州市",
+      "source": "https://www.wikidata.org/wiki/Q360870",
+      "regional": []
+    },
+    "341800": {
+      "en": "Xuancheng",
+      "zh": "宣城市",
+      "source": "https://www.wikidata.org/wiki/Q360942",
+      "regional": []
+    },
+    "350000": {
+      "en": "Fujian",
+      "zh": "福建省",
+      "source": "https://www.wikidata.org/wiki/Q41705",
+      "regional": []
+    },
+    "350100": {
+      "en": "Fuzhou",
+      "zh": "福州市",
+      "source": "https://www.wikidata.org/wiki/Q68481",
+      "regional": []
+    },
+    "350200": {
+      "en": "Xiamen",
+      "zh": "厦门市",
+      "source": "https://www.wikidata.org/wiki/Q68744",
+      "regional": []
+    },
+    "350300": {
+      "en": "Putian",
+      "zh": "莆田市",
+      "source": "https://www.wikidata.org/wiki/Q68579",
+      "regional": []
+    },
+    "350400": {
+      "en": "Sanming",
+      "zh": "三明市",
+      "source": "https://www.wikidata.org/wiki/Q68614",
+      "regional": []
+    },
+    "350500": {
+      "en": "Quanzhou",
+      "zh": "泉州市",
+      "source": "https://www.wikidata.org/wiki/Q68695",
+      "regional": []
+    },
+    "350600": {
+      "en": "Zhangzhou",
+      "zh": "漳州市",
+      "source": "https://www.wikidata.org/wiki/Q68814",
+      "regional": []
+    },
+    "350700": {
+      "en": "Nanping",
+      "zh": "南平市",
+      "source": "https://www.wikidata.org/wiki/Q68534",
+      "regional": []
+    },
+    "350800": {
+      "en": "Longyan",
+      "zh": "龙岩市",
+      "source": "https://www.wikidata.org/wiki/Q68862",
+      "regional": []
+    },
+    "350900": {
+      "en": "Ningde",
+      "zh": "宁德市",
+      "source": "https://www.wikidata.org/wiki/Q68919",
+      "regional": []
+    },
+    "360000": {
+      "en": "Jiangxi",
+      "zh": "江西省",
+      "source": "https://www.wikidata.org/wiki/Q57052",
+      "regional": []
+    },
+    "360100": {
+      "en": "Nanchang",
+      "zh": "南昌市",
+      "source": "https://www.wikidata.org/wiki/Q171943",
+      "regional": []
+    },
+    "360200": {
+      "en": "Jingdezhen",
+      "zh": "景德镇市",
+      "source": "https://www.wikidata.org/wiki/Q34405",
+      "regional": []
+    },
+    "360300": {
+      "en": "Pingxiang",
+      "zh": "萍乡市",
+      "source": "https://www.wikidata.org/wiki/Q362865",
+      "regional": []
+    },
+    "360400": {
+      "en": "Jiujiang",
+      "zh": "九江市",
+      "source": "https://www.wikidata.org/wiki/Q216077",
+      "regional": []
+    },
+    "360500": {
+      "en": "Xinyu",
+      "zh": "新余市",
+      "source": "https://www.wikidata.org/wiki/Q362959",
+      "regional": []
+    },
+    "360600": {
+      "en": "Yingtan",
+      "zh": "鹰潭市",
+      "source": "https://www.wikidata.org/wiki/Q363076",
+      "regional": []
+    },
+    "360700": {
+      "en": "Ganzhou",
+      "zh": "赣州市",
+      "source": "https://www.wikidata.org/wiki/Q363166",
+      "regional": []
+    },
+    "360800": {
+      "en": "Ji'an",
+      "zh": "吉安市",
+      "source": "https://www.wikidata.org/wiki/Q363262",
+      "regional": []
+    },
+    "360900": {
+      "en": "Yichun",
+      "zh": "宜春市",
+      "source": "https://www.wikidata.org/wiki/Q363326",
+      "regional": []
+    },
+    "361000": {
+      "en": "Fuzhou",
+      "zh": "抚州市",
+      "source": "https://www.wikidata.org/wiki/Q363391",
+      "regional": []
+    },
+    "361100": {
+      "en": "Shangrao",
+      "zh": "上饶市",
+      "source": "https://www.wikidata.org/wiki/Q363479",
+      "regional": []
+    },
+    "370000": {
+      "en": "Shandong",
+      "zh": "山东省",
+      "source": "https://www.wikidata.org/wiki/Q43407",
+      "regional": []
+    },
+    "370100": {
+      "en": "Jinan",
+      "zh": "济南市",
+      "source": "https://www.wikidata.org/wiki/Q170247",
+      "regional": []
+    },
+    "370200": {
+      "en": "Qingdao",
+      "zh": "青岛市",
+      "source": "https://www.wikidata.org/wiki/Q170322",
+      "regional": []
+    },
+    "370300": {
+      "en": "Zibo",
+      "zh": "淄博市",
+      "source": "https://www.wikidata.org/wiki/Q198370",
+      "regional": []
+    },
+    "370400": {
+      "en": "Zaozhuang",
+      "zh": "枣庄市",
+      "source": "https://www.wikidata.org/wiki/Q147187",
+      "regional": []
+    },
+    "370500": {
+      "en": "Dongying",
+      "zh": "东营市",
+      "source": "https://www.wikidata.org/wiki/Q372414",
+      "regional": []
+    },
+    "370600": {
+      "en": "Yantai",
+      "zh": "烟台市",
+      "source": "https://www.wikidata.org/wiki/Q210493",
+      "regional": []
+    },
+    "370700": {
+      "en": "Weifang",
+      "zh": "潍坊市",
+      "source": "https://www.wikidata.org/wiki/Q217698",
+      "regional": []
+    },
+    "370800": {
+      "en": "Jining",
+      "zh": "济宁市",
+      "source": "https://www.wikidata.org/wiki/Q372791",
+      "regional": []
+    },
+    "370900": {
+      "en": "Tai'an",
+      "zh": "泰安市",
+      "source": "https://www.wikidata.org/wiki/Q217681",
+      "regional": []
+    },
+    "371000": {
+      "en": "Weihai",
+      "zh": "威海市",
+      "source": "https://www.wikidata.org/wiki/Q373023",
+      "regional": []
+    },
+    "371100": {
+      "en": "Rizhao",
+      "zh": "日照市",
+      "source": "https://www.wikidata.org/wiki/Q373101",
+      "regional": []
+    },
+    "371300": {
+      "en": "Linyi",
+      "zh": "临沂市",
+      "source": "https://www.wikidata.org/wiki/Q373346",
+      "regional": []
+    },
+    "371400": {
+      "en": "Dezhou",
+      "zh": "德州市",
+      "source": "https://www.wikidata.org/wiki/Q162880",
+      "regional": []
+    },
+    "371500": {
+      "en": "Liaocheng",
+      "zh": "聊城市",
+      "source": "https://www.wikidata.org/wiki/Q373564",
+      "regional": []
+    },
+    "371600": {
+      "en": "Binzhou",
+      "zh": "滨州市",
+      "source": "https://www.wikidata.org/wiki/Q373687",
+      "regional": []
+    },
+    "371700": {
+      "en": "Heze",
+      "zh": "菏泽市",
+      "source": "https://www.wikidata.org/wiki/Q332753",
+      "regional": []
+    },
+    "410000": {
+      "en": "Henan",
+      "zh": "河南省",
+      "source": "https://www.wikidata.org/wiki/Q43684",
+      "regional": []
+    },
+    "410100": {
+      "en": "Zhengzhou",
+      "zh": "郑州市",
+      "source": "https://www.wikidata.org/wiki/Q30340",
+      "regional": []
+    },
+    "410200": {
+      "en": "Kaifeng",
+      "zh": "开封市",
+      "source": "https://www.wikidata.org/wiki/Q208471",
+      "regional": []
+    },
+    "410300": {
+      "en": "Luoyang",
+      "zh": "洛阳市",
+      "source": "https://www.wikidata.org/wiki/Q187136",
+      "regional": []
+    },
+    "410400": {
+      "en": "Pingdingshan",
+      "zh": "平顶山市",
+      "source": "https://www.wikidata.org/wiki/Q404116",
+      "regional": []
+    },
+    "410500": {
+      "en": "Anyang",
+      "zh": "安阳市",
+      "source": "https://www.wikidata.org/wiki/Q324293",
+      "regional": []
+    },
+    "410600": {
+      "en": "Hebi",
+      "zh": "鹤壁市",
+      "source": "https://www.wikidata.org/wiki/Q404301",
+      "regional": []
+    },
+    "410700": {
+      "en": "Xinxiang",
+      "zh": "新乡市",
+      "source": "https://www.wikidata.org/wiki/Q404362",
+      "regional": []
+    },
+    "410800": {
+      "en": "Jiaozuo",
+      "zh": "焦作市",
+      "source": "https://www.wikidata.org/wiki/Q404429",
+      "regional": []
+    },
+    "410900": {
+      "en": "Puyang",
+      "zh": "濮阳市",
+      "source": "https://www.wikidata.org/wiki/Q404484",
+      "regional": []
+    },
+    "411000": {
+      "en": "Xuchang",
+      "zh": "许昌市",
+      "source": "https://www.wikidata.org/wiki/Q404529",
+      "regional": []
+    },
+    "411100": {
+      "en": "Luohe",
+      "zh": "漯河市",
+      "source": "https://www.wikidata.org/wiki/Q404599",
+      "regional": []
+    },
+    "411200": {
+      "en": "Sanmenxia",
+      "zh": "三门峡市",
+      "source": "https://www.wikidata.org/wiki/Q404636",
+      "regional": []
+    },
+    "411300": {
+      "en": "Nanyang",
+      "zh": "南阳市",
+      "source": "https://www.wikidata.org/wiki/Q404763",
+      "regional": []
+    },
+    "411400": {
+      "en": "Shangqiu",
+      "zh": "商丘市",
+      "source": "https://www.wikidata.org/wiki/Q404817",
+      "regional": []
+    },
+    "411500": {
+      "en": "Xinyang",
+      "zh": "信阳市",
+      "source": "https://www.wikidata.org/wiki/Q404873",
+      "regional": []
+    },
+    "411600": {
+      "en": "Zhoukou",
+      "zh": "周口市",
+      "source": "https://www.wikidata.org/wiki/Q198061",
+      "regional": []
+    },
+    "411700": {
+      "en": "Zhumadian",
+      "zh": "驻马店市",
+      "source": "https://www.wikidata.org/wiki/Q198240",
+      "regional": []
+    },
+    "419001": {
+      "en": "Jiyuan",
+      "zh": "济源市",
+      "source": "https://www.wikidata.org/wiki/Q997623",
+      "regional": []
+    },
+    "420000": {
+      "en": "Hubei",
+      "zh": "湖北省",
+      "source": "https://www.wikidata.org/wiki/Q46862",
+      "regional": []
+    },
+    "420100": {
+      "en": "Wuhan",
+      "zh": "武汉市",
+      "source": "https://www.wikidata.org/wiki/Q11746",
+      "regional": []
+    },
+    "420200": {
+      "en": "Huangshi",
+      "zh": "黄石市",
+      "source": "https://www.wikidata.org/wiki/Q71204",
+      "regional": []
+    },
+    "420300": {
+      "en": "Shiyan",
+      "zh": "十堰市",
+      "source": "https://www.wikidata.org/wiki/Q71227",
+      "regional": []
+    },
+    "420500": {
+      "en": "Yichang",
+      "zh": "宜昌市",
+      "source": "https://www.wikidata.org/wiki/Q71266",
+      "regional": []
+    },
+    "420600": {
+      "en": "Xiangyang",
+      "zh": "襄阳市",
+      "source": "https://www.wikidata.org/wiki/Q71284",
+      "regional": []
+    },
+    "420700": {
+      "en": "Ezhou",
+      "zh": "鄂州市",
+      "source": "https://www.wikidata.org/wiki/Q71305",
+      "regional": []
+    },
+    "420800": {
+      "en": "Jingmen",
+      "zh": "荆门市",
+      "source": "https://www.wikidata.org/wiki/Q71323",
+      "regional": []
+    },
+    "420900": {
+      "en": "Xiaogan",
+      "zh": "孝感市",
+      "source": "https://www.wikidata.org/wiki/Q71339",
+      "regional": []
+    },
+    "421000": {
+      "en": "Jingzhou",
+      "zh": "荆州市",
+      "source": "https://www.wikidata.org/wiki/Q71247",
+      "regional": []
+    },
+    "421100": {
+      "en": "Huanggang",
+      "zh": "黄冈市",
+      "source": "https://www.wikidata.org/wiki/Q71355",
+      "regional": []
+    },
+    "421200": {
+      "en": "Xianning",
+      "zh": "咸宁市",
+      "source": "https://www.wikidata.org/wiki/Q71373",
+      "regional": []
+    },
+    "421300": {
+      "en": "Suizhou",
+      "zh": "随州市",
+      "source": "https://www.wikidata.org/wiki/Q71401",
+      "regional": []
+    },
+    "422800": {
+      "en": "Enshi Tujia and Miao Autonomous Prefecture",
+      "zh": "恩施土家族苗族自治州",
+      "source": "https://www.wikidata.org/wiki/Q71415",
+      "regional": []
+    },
+    "429004": {
+      "en": "Xiantao",
+      "zh": "仙桃市",
+      "source": "https://www.wikidata.org/wiki/Q71455",
+      "regional": []
+    },
+    "429005": {
+      "en": "Qianjiang",
+      "zh": "潜江市",
+      "source": "https://www.wikidata.org/wiki/Q71489",
+      "regional": []
+    },
+    "429006": {
+      "en": "Tianmen",
+      "zh": "天门市",
+      "source": "https://www.wikidata.org/wiki/Q71468",
+      "regional": []
+    },
+    "429021": {
+      "en": "Shennongjia",
+      "zh": "神农架林区",
+      "source": "https://www.wikidata.org/wiki/Q1359055",
+      "regional": []
+    },
+    "430000": {
+      "en": "Hunan",
+      "zh": "湖南省",
+      "source": "https://www.wikidata.org/wiki/Q45761",
+      "regional": []
+    },
+    "430100": {
+      "en": "Changsha",
+      "zh": "长沙市",
+      "source": "https://www.wikidata.org/wiki/Q174091",
+      "regional": []
+    },
+    "430200": {
+      "en": "Zhuzhou",
+      "zh": "株洲市",
+      "source": "https://www.wikidata.org/wiki/Q198266",
+      "regional": []
+    },
+    "430300": {
+      "en": "Xiangtan",
+      "zh": "湘潭市",
+      "source": "https://www.wikidata.org/wiki/Q215755",
+      "regional": []
+    },
+    "430400": {
+      "en": "Hengyang",
+      "zh": "衡阳市",
+      "source": "https://www.wikidata.org/wiki/Q144663",
+      "regional": []
+    },
+    "430500": {
+      "en": "Shaoyang",
+      "zh": "邵阳市",
+      "source": "https://www.wikidata.org/wiki/Q194531",
+      "regional": []
+    },
+    "430600": {
+      "en": "Yueyang",
+      "zh": "岳阳市",
+      "source": "https://www.wikidata.org/wiki/Q151958",
+      "regional": []
+    },
+    "430700": {
+      "en": "Changde",
+      "zh": "常德市",
+      "source": "https://www.wikidata.org/wiki/Q416544",
+      "regional": []
+    },
+    "430800": {
+      "en": "Zhangjiajie",
+      "zh": "张家界市",
+      "source": "https://www.wikidata.org/wiki/Q197379",
+      "regional": []
+    },
+    "430900": {
+      "en": "Yiyang",
+      "zh": "益阳市",
+      "source": "https://www.wikidata.org/wiki/Q416669",
+      "regional": []
+    },
+    "431000": {
+      "en": "Chenzhou",
+      "zh": "郴州市",
+      "source": "https://www.wikidata.org/wiki/Q416748",
+      "regional": []
+    },
+    "431100": {
+      "en": "Yongzhou",
+      "zh": "永州市",
+      "source": "https://www.wikidata.org/wiki/Q266014",
+      "regional": []
+    },
+    "431200": {
+      "en": "Huaihua",
+      "zh": "怀化市",
+      "source": "https://www.wikidata.org/wiki/Q416922",
+      "regional": []
+    },
+    "431300": {
+      "en": "Loudi",
+      "zh": "娄底市",
+      "source": "https://www.wikidata.org/wiki/Q416988",
+      "regional": []
+    },
+    "433100": {
+      "en": "Xiangxi Tujia and Miao Autonomous Prefecture",
+      "zh": "湘西土家族苗族自治州",
+      "source": "https://www.wikidata.org/wiki/Q763069",
+      "regional": []
+    },
+    "440000": {
+      "en": "Guangdong",
+      "zh": "广东省",
+      "source": "https://www.wikidata.org/wiki/Q15175",
+      "regional": []
+    },
+    "440100": {
+      "en": "Guangzhou",
+      "zh": "广州市",
+      "source": "https://www.wikidata.org/wiki/Q16572",
+      "regional": []
+    },
+    "440200": {
+      "en": "Shaoguan",
+      "zh": "韶关市",
+      "source": "https://www.wikidata.org/wiki/Q59107",
+      "regional": []
+    },
+    "440300": {
+      "en": "Shenzhen",
+      "zh": "深圳市",
+      "source": "https://www.wikidata.org/wiki/Q15174",
+      "regional": []
+    },
+    "440400": {
+      "en": "Zhuhai",
+      "zh": "珠海市",
+      "source": "https://www.wikidata.org/wiki/Q59095",
+      "regional": []
+    },
+    "440500": {
+      "en": "Shantou",
+      "zh": "汕头市",
+      "source": "https://www.wikidata.org/wiki/Q59100",
+      "regional": []
+    },
+    "440600": {
+      "en": "Foshan",
+      "zh": "佛山市",
+      "source": "https://www.wikidata.org/wiki/Q34412",
+      "regional": []
+    },
+    "440700": {
+      "en": "Jiangmen",
+      "zh": "江门市",
+      "source": "https://www.wikidata.org/wiki/Q59132",
+      "regional": []
+    },
+    "440800": {
+      "en": "Zhanjiang",
+      "zh": "湛江市",
+      "source": "https://www.wikidata.org/wiki/Q59144",
+      "regional": []
+    },
+    "440900": {
+      "en": "Maoming",
+      "zh": "茂名市",
+      "source": "https://www.wikidata.org/wiki/Q38927",
+      "regional": []
+    },
+    "441200": {
+      "en": "Zhaoqing",
+      "zh": "肇庆市",
+      "source": "https://www.wikidata.org/wiki/Q59164",
+      "regional": []
+    },
+    "441300": {
+      "en": "Huizhou",
+      "zh": "惠州市",
+      "source": "https://www.wikidata.org/wiki/Q59173",
+      "regional": []
+    },
+    "441400": {
+      "en": "Meizhou",
+      "zh": "梅州市",
+      "source": "https://www.wikidata.org/wiki/Q59184",
+      "regional": []
+    },
+    "441500": {
+      "en": "Shanwei",
+      "zh": "汕尾市",
+      "source": "https://www.wikidata.org/wiki/Q59189",
+      "regional": []
+    },
+    "441600": {
+      "en": "Heyuan",
+      "zh": "河源市",
+      "source": "https://www.wikidata.org/wiki/Q59205",
+      "regional": []
+    },
+    "441700": {
+      "en": "Yangjiang",
+      "zh": "阳江市",
+      "source": "https://www.wikidata.org/wiki/Q59209",
+      "regional": []
+    },
+    "441800": {
+      "en": "Qingyuan",
+      "zh": "清远市",
+      "source": "https://www.wikidata.org/wiki/Q59213",
+      "regional": []
+    },
+    "441900": {
+      "en": "Dongguan",
+      "zh": "东莞市",
+      "source": "https://www.wikidata.org/wiki/Q59218",
+      "regional": []
+    },
+    "442000": {
+      "en": "Zhongshan",
+      "zh": "中山市",
+      "source": "https://www.wikidata.org/wiki/Q59223",
+      "regional": []
+    },
+    "445100": {
+      "en": "Chaozhou",
+      "zh": "潮州市",
+      "source": "https://www.wikidata.org/wiki/Q59227",
+      "regional": []
+    },
+    "445200": {
+      "en": "Jieyang",
+      "zh": "揭阳市",
+      "source": "https://www.wikidata.org/wiki/Q26323",
+      "regional": []
+    },
+    "445300": {
+      "en": "Yunfu",
+      "zh": "云浮市",
+      "source": "https://www.wikidata.org/wiki/Q59233",
+      "regional": []
+    },
+    "450000": {
+      "en": "Guangxi",
+      "zh": "广西壮族自治区",
+      "source": "https://www.wikidata.org/wiki/Q15176",
+      "regional": []
+    },
+    "450100": {
+      "en": "Nanning",
+      "zh": "南宁市",
+      "source": "https://www.wikidata.org/wiki/Q179608",
+      "regional": []
+    },
+    "450200": {
+      "en": "Liuzhou",
+      "zh": "柳州市",
+      "source": "https://www.wikidata.org/wiki/Q38968",
+      "regional": []
+    },
+    "450300": {
+      "en": "Guilin",
+      "zh": "桂林市",
+      "source": "https://www.wikidata.org/wiki/Q189633",
+      "regional": []
+    },
+    "450400": {
+      "en": "Wuzhou",
+      "zh": "梧州市",
+      "source": "https://www.wikidata.org/wiki/Q571652",
+      "regional": []
+    },
+    "450500": {
+      "en": "Beihai",
+      "zh": "北海市",
+      "source": "https://www.wikidata.org/wiki/Q210365",
+      "regional": []
+    },
+    "450600": {
+      "en": "Fangchenggang",
+      "zh": "防城港市",
+      "source": "https://www.wikidata.org/wiki/Q571712",
+      "regional": []
+    },
+    "450700": {
+      "en": "Qinzhou",
+      "zh": "钦州市",
+      "source": "https://www.wikidata.org/wiki/Q571766",
+      "regional": []
+    },
+    "450800": {
+      "en": "Guigang",
+      "zh": "贵港市",
+      "source": "https://www.wikidata.org/wiki/Q571808",
+      "regional": []
+    },
+    "450900": {
+      "en": "Yulin",
+      "zh": "玉林市",
+      "source": "https://www.wikidata.org/wiki/Q571918",
+      "regional": []
+    },
+    "451000": {
+      "en": "Baise",
+      "zh": "百色市",
+      "source": "https://www.wikidata.org/wiki/Q571949",
+      "regional": []
+    },
+    "451100": {
+      "en": "Hezhou",
+      "zh": "贺州市",
+      "source": "https://www.wikidata.org/wiki/Q572014",
+      "regional": []
+    },
+    "451200": {
+      "en": "Hechi",
+      "zh": "河池市",
+      "source": "https://www.wikidata.org/wiki/Q572089",
+      "regional": []
+    },
+    "451300": {
+      "en": "Laibin",
+      "zh": "来宾市",
+      "source": "https://www.wikidata.org/wiki/Q572140",
+      "regional": []
+    },
+    "451400": {
+      "en": "Chongzuo",
+      "zh": "崇左市",
+      "source": "https://www.wikidata.org/wiki/Q572231",
+      "regional": []
+    },
+    "460000": {
+      "en": "Hainan",
+      "zh": "海南省",
+      "source": "https://www.wikidata.org/wiki/Q42200",
+      "regional": []
+    },
+    "460100": {
+      "en": "Haikou",
+      "zh": "海口市",
+      "source": "https://www.wikidata.org/wiki/Q189823",
+      "regional": []
+    },
+    "460200": {
+      "en": "Sanya",
+      "zh": "三亚市",
+      "source": "https://www.wikidata.org/wiki/Q319804",
+      "regional": []
+    },
+    "460300": {
+      "en": "Sansha",
+      "zh": "三沙市",
+      "source": "https://www.wikidata.org/wiki/Q264818",
+      "regional": []
+    },
+    "460400": {
+      "en": "Danzhou",
+      "zh": "儋州市",
+      "source": "https://www.wikidata.org/wiki/Q1015132",
+      "regional": []
+    },
+    "469001": {
+      "en": "Wuzhishan City",
+      "zh": "五指山市",
+      "source": "https://www.wikidata.org/wiki/Q1001424",
+      "regional": []
+    },
+    "469002": {
+      "en": "Qionghai",
+      "zh": "琼海市",
+      "source": "https://www.wikidata.org/wiki/Q1005059",
+      "regional": []
+    },
+    "469005": {
+      "en": "Wenchang",
+      "zh": "文昌市",
+      "source": "https://www.wikidata.org/wiki/Q997767",
+      "regional": []
+    },
+    "469006": {
+      "en": "Wanning",
+      "zh": "万宁市",
+      "source": "https://www.wikidata.org/wiki/Q997593",
+      "regional": []
+    },
+    "469007": {
+      "en": "Dongfang",
+      "zh": "东方市",
+      "source": "https://www.wikidata.org/wiki/Q174123",
+      "regional": []
+    },
+    "469021": {
+      "en": "Ding'an County",
+      "zh": "定安县",
+      "source": "https://www.wikidata.org/wiki/Q1022249",
+      "regional": []
+    },
+    "469022": {
+      "en": "Tunchang County",
+      "zh": "屯昌县",
+      "source": "https://www.wikidata.org/wiki/Q1022271",
+      "regional": []
+    },
+    "469023": {
+      "en": "Chengmai County",
+      "zh": "澄迈县",
+      "source": "https://www.wikidata.org/wiki/Q511654",
+      "regional": []
+    },
+    "469024": {
+      "en": "Lingao County",
+      "zh": "临高县",
+      "source": "https://www.wikidata.org/wiki/Q1028107",
+      "regional": []
+    },
+    "469025": {
+      "en": "Baisha Li Autonomous County",
+      "zh": "白沙黎族自治县",
+      "source": "https://www.wikidata.org/wiki/Q203510",
+      "regional": []
+    },
+    "469026": {
+      "en": "Changjiang Li Autonomous County",
+      "zh": "昌江黎族自治县",
+      "source": "https://www.wikidata.org/wiki/Q1027323",
+      "regional": []
+    },
+    "469027": {
+      "en": "Ledong Li Autonomous County",
+      "zh": "乐东黎族自治县",
+      "source": "https://www.wikidata.org/wiki/Q1027316",
+      "regional": []
+    },
+    "469028": {
+      "en": "Lingshui Li Autonomous County",
+      "zh": "陵水黎族自治县",
+      "source": "https://www.wikidata.org/wiki/Q944615",
+      "regional": []
+    },
+    "469029": {
+      "en": "Baoting Li and Miao Autonomous County",
+      "zh": "保亭黎族苗族自治县",
+      "source": "https://www.wikidata.org/wiki/Q807080",
+      "regional": []
+    },
+    "469030": {
+      "en": "Qiongzhong Li and Miao Autonomous County",
+      "zh": "琼中黎族苗族自治县",
+      "source": "https://www.wikidata.org/wiki/Q1027336",
+      "regional": []
+    },
+    "500000": {
+      "en": "Chongqing",
+      "zh": "重庆市",
+      "source": "https://www.wikidata.org/wiki/Q11725",
+      "regional": []
+    },
+    "500101": {
+      "en": "Wanzhou",
+      "zh": "万州区",
+      "source": "https://www.wikidata.org/wiki/Q713825",
+      "regional": []
+    },
+    "500102": {
+      "en": "Fuling District",
+      "zh": "涪陵区",
+      "source": "https://www.wikidata.org/wiki/Q553934",
+      "regional": []
+    },
+    "500103": {
+      "en": "Yuzhong District",
+      "zh": "渝中区",
+      "source": "https://www.wikidata.org/wiki/Q713343",
+      "regional": []
+    },
+    "500104": {
+      "en": "Dadukou District",
+      "zh": "大渡口区",
+      "source": "https://www.wikidata.org/wiki/Q713410",
+      "regional": []
+    },
+    "500105": {
+      "en": "Jiangbei District",
+      "zh": "江北区",
+      "source": "https://www.wikidata.org/wiki/Q249712",
+      "regional": []
+    },
+    "500106": {
+      "en": "Shapingba District",
+      "zh": "沙坪坝区",
+      "source": "https://www.wikidata.org/wiki/Q713728",
+      "regional": []
+    },
+    "500107": {
+      "en": "Jiulongpo District",
+      "zh": "九龙坡区",
+      "source": "https://www.wikidata.org/wiki/Q588451",
+      "regional": []
+    },
+    "500108": {
+      "en": "Nan'an District",
+      "zh": "南岸区",
+      "source": "https://www.wikidata.org/wiki/Q713491",
+      "regional": []
+    },
+    "500109": {
+      "en": "Beibei District",
+      "zh": "北碚区",
+      "source": "https://www.wikidata.org/wiki/Q713547",
+      "regional": []
+    },
+    "500110": {
+      "en": "Qijiang District",
+      "zh": "綦江区",
+      "source": "https://www.wikidata.org/wiki/Q714216",
+      "regional": []
+    },
+    "500111": {
+      "en": "Dazu District",
+      "zh": "大足区",
+      "source": "https://www.wikidata.org/wiki/Q714314",
+      "regional": []
+    },
+    "500112": {
+      "en": "Yubei District",
+      "zh": "渝北区",
+      "source": "https://www.wikidata.org/wiki/Q182866",
+      "regional": []
+    },
+    "500113": {
+      "en": "Banan District",
+      "zh": "巴南区",
+      "source": "https://www.wikidata.org/wiki/Q554491",
+      "regional": []
+    },
+    "500114": {
+      "en": "Qianjiang District",
+      "zh": "黔江区",
+      "source": "https://www.wikidata.org/wiki/Q713946",
+      "regional": []
+    },
+    "500115": {
+      "en": "Changshou District",
+      "zh": "长寿区",
+      "source": "https://www.wikidata.org/wiki/Q713691",
+      "regional": []
+    },
+    "500116": {
+      "en": "Jiangjin District",
+      "zh": "江津区",
+      "source": "https://www.wikidata.org/wiki/Q201723",
+      "regional": []
+    },
+    "500117": {
+      "en": "Hechuan District",
+      "zh": "合川区",
+      "source": "https://www.wikidata.org/wiki/Q714045",
+      "regional": []
+    },
+    "500118": {
+      "en": "Yongchuan District",
+      "zh": "永川区",
+      "source": "https://www.wikidata.org/wiki/Q713989",
+      "regional": []
+    },
+    "500119": {
+      "en": "Nanchuan District",
+      "zh": "南川区",
+      "source": "https://www.wikidata.org/wiki/Q714170",
+      "regional": []
+    },
+    "500120": {
+      "en": "Bishan District",
+      "zh": "璧山区",
+      "source": "https://www.wikidata.org/wiki/Q596229",
+      "regional": []
+    },
+    "500151": {
+      "en": "Tongliang District",
+      "zh": "铜梁区",
+      "source": "https://www.wikidata.org/wiki/Q1331358",
+      "regional": []
+    },
+    "500152": {
+      "en": "Tongnan District",
+      "zh": "潼南区",
+      "source": "https://www.wikidata.org/wiki/Q1363494",
+      "regional": []
+    },
+    "500153": {
+      "en": "Rongchang District",
+      "zh": "荣昌区",
+      "source": "https://www.wikidata.org/wiki/Q1331275",
+      "regional": []
+    },
+    "500154": {
+      "en": "Kaizhou District",
+      "zh": "开州区",
+      "source": "https://www.wikidata.org/wiki/Q1371311",
+      "regional": []
+    },
+    "500155": {
+      "en": "Liangping District",
+      "zh": "梁平区",
+      "source": "https://www.wikidata.org/wiki/Q1362558",
+      "regional": []
+    },
+    "500156": {
+      "en": "Wulong District",
+      "zh": "武隆区",
+      "source": "https://www.wikidata.org/wiki/Q1331251",
+      "regional": []
+    },
+    "500229": {
+      "en": "Chengkou County",
+      "zh": "城口县",
+      "source": "https://www.wikidata.org/wiki/Q1070004",
+      "regional": []
+    },
+    "500230": {
+      "en": "Fengdu County",
+      "zh": "丰都县",
+      "source": "https://www.wikidata.org/wiki/Q737865",
+      "regional": []
+    },
+    "500231": {
+      "en": "Dianjiang County",
+      "zh": "垫江县",
+      "source": "https://www.wikidata.org/wiki/Q1209039",
+      "regional": []
+    },
+    "500233": {
+      "en": "Zhong County",
+      "zh": "忠县",
+      "source": "https://www.wikidata.org/wiki/Q197804",
+      "regional": []
+    },
+    "500235": {
+      "en": "Yunyang County",
+      "zh": "云阳县",
+      "source": "https://www.wikidata.org/wiki/Q14447",
+      "regional": []
+    },
+    "500236": {
+      "en": "Fengjie County",
+      "zh": "奉节县",
+      "source": "https://www.wikidata.org/wiki/Q1362044",
+      "regional": []
+    },
+    "500237": {
+      "en": "Wushan County",
+      "zh": "巫山县",
+      "source": "https://www.wikidata.org/wiki/Q1262713",
+      "regional": []
+    },
+    "500238": {
+      "en": "Wuxi County",
+      "zh": "巫溪县",
+      "source": "https://www.wikidata.org/wiki/Q1365459",
+      "regional": []
+    },
+    "500240": {
+      "en": "Shizhu Tujia Autonomous County",
+      "zh": "石柱土家族自治县",
+      "source": "https://www.wikidata.org/wiki/Q1378010",
+      "regional": []
+    },
+    "500241": {
+      "en": "Xiushan Tujia and Miao Autonomous County",
+      "zh": "秀山土家族苗族自治县",
+      "source": "https://www.wikidata.org/wiki/Q1353498",
+      "regional": []
+    },
+    "500242": {
+      "en": "Youyang Tujia and Miao Autonomous County",
+      "zh": "酉阳土家族苗族自治县",
+      "source": "https://www.wikidata.org/wiki/Q1331332",
+      "regional": []
+    },
+    "500243": {
+      "en": "Pengshui Miao and Tujia Autonomous County",
+      "zh": "彭水苗族土家族自治县",
+      "source": "https://www.wikidata.org/wiki/Q1378017",
+      "regional": []
+    },
+    "510000": {
+      "en": "Sichuan",
+      "zh": "四川省",
+      "source": "https://www.wikidata.org/wiki/Q19770",
+      "regional": []
+    },
+    "510100": {
+      "en": "Chengdu",
+      "zh": "成都市",
+      "source": "https://www.wikidata.org/wiki/Q30002",
+      "regional": []
+    },
+    "510300": {
+      "en": "Zigong",
+      "zh": "自贡市",
+      "source": "https://www.wikidata.org/wiki/Q29015",
+      "regional": []
+    },
+    "510400": {
+      "en": "Panzhihua",
+      "zh": "攀枝花市",
+      "source": "https://www.wikidata.org/wiki/Q425415",
+      "regional": []
+    },
+    "510500": {
+      "en": "Luzhou",
+      "zh": "泸州市",
+      "source": "https://www.wikidata.org/wiki/Q425492",
+      "regional": []
+    },
+    "510600": {
+      "en": "Deyang",
+      "zh": "德阳市",
+      "source": "https://www.wikidata.org/wiki/Q425996",
+      "regional": []
+    },
+    "510700": {
+      "en": "Mianyang",
+      "zh": "绵阳市",
+      "source": "https://www.wikidata.org/wiki/Q426130",
+      "regional": []
+    },
+    "510800": {
+      "en": "Guangyuan",
+      "zh": "广元市",
+      "source": "https://www.wikidata.org/wiki/Q426237",
+      "regional": []
+    },
+    "510900": {
+      "en": "Suining",
+      "zh": "遂宁市",
+      "source": "https://www.wikidata.org/wiki/Q426644",
+      "regional": []
+    },
+    "511000": {
+      "en": "Neijiang",
+      "zh": "内江市",
+      "source": "https://www.wikidata.org/wiki/Q426756",
+      "regional": []
+    },
+    "511100": {
+      "en": "Leshan",
+      "zh": "乐山市",
+      "source": "https://www.wikidata.org/wiki/Q426868",
+      "regional": []
+    },
+    "511300": {
+      "en": "Nanchong",
+      "zh": "南充市",
+      "source": "https://www.wikidata.org/wiki/Q426996",
+      "regional": []
+    },
+    "511400": {
+      "en": "Meishan",
+      "zh": "眉山市",
+      "source": "https://www.wikidata.org/wiki/Q427097",
+      "regional": []
+    },
+    "511500": {
+      "en": "Yibin",
+      "zh": "宜宾市",
+      "source": "https://www.wikidata.org/wiki/Q427265",
+      "regional": []
+    },
+    "511600": {
+      "en": "Guang'an",
+      "zh": "广安市",
+      "source": "https://www.wikidata.org/wiki/Q427367",
+      "regional": []
+    },
+    "511700": {
+      "en": "Dazhou",
+      "zh": "达州市",
+      "source": "https://www.wikidata.org/wiki/Q427488",
+      "regional": []
+    },
+    "511800": {
+      "en": "Ya'an",
+      "zh": "雅安市",
+      "source": "https://www.wikidata.org/wiki/Q427557",
+      "regional": []
+    },
+    "511900": {
+      "en": "Bazhong",
+      "zh": "巴中市",
+      "source": "https://www.wikidata.org/wiki/Q178945",
+      "regional": []
+    },
+    "512000": {
+      "en": "Ziyang",
+      "zh": "资阳市",
+      "source": "https://www.wikidata.org/wiki/Q207030",
+      "regional": []
+    },
+    "513200": {
+      "en": "Ngawa Tibetan and Qiang Autonomous Prefecture",
+      "zh": "阿坝藏族羌族自治州",
+      "source": "https://www.wikidata.org/wiki/Q1012450",
+      "regional": [
+        {
+          "text": "རྔ་བ་བོད་རིགས་ཆ་བ༹ང་རིགས་རང་སྐྱོང་ཁུལ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q1012450",
+          "license": "CC0"
+        }
+      ]
+    },
+    "513300": {
+      "en": "Garzê Tibetan Autonomous Prefecture",
+      "zh": "甘孜藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q128104",
+      "regional": [
+        {
+          "text": "དཀར་མཛེས་བོད་རིགས་རང་སྐྱོང་ཁུལ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q128104",
+          "license": "CC0"
+        }
+      ]
+    },
+    "513400": {
+      "en": "Liangshan Yi Autonomous Prefecture",
+      "zh": "凉山彝族自治州",
+      "source": "https://www.wikidata.org/wiki/Q666884",
+      "regional": []
+    },
+    "520000": {
+      "en": "Guizhou",
+      "zh": "贵州省",
+      "source": "https://www.wikidata.org/wiki/Q47097",
+      "regional": []
+    },
+    "520100": {
+      "en": "Guiyang",
+      "zh": "贵阳市",
+      "source": "https://www.wikidata.org/wiki/Q192271",
+      "regional": []
+    },
+    "520200": {
+      "en": "Liupanshui",
+      "zh": "六盘水市",
+      "source": "https://www.wikidata.org/wiki/Q485918",
+      "regional": []
+    },
+    "520300": {
+      "en": "Zunyi",
+      "zh": "遵义市",
+      "source": "https://www.wikidata.org/wiki/Q28994",
+      "regional": []
+    },
+    "520400": {
+      "en": "Anshun",
+      "zh": "安顺市",
+      "source": "https://www.wikidata.org/wiki/Q486149",
+      "regional": []
+    },
+    "520500": {
+      "en": "Bijie",
+      "zh": "毕节市",
+      "source": "https://www.wikidata.org/wiki/Q486319",
+      "regional": []
+    },
+    "520600": {
+      "en": "Tongren",
+      "zh": "铜仁市",
+      "source": "https://www.wikidata.org/wiki/Q486235",
+      "regional": []
+    },
+    "522300": {
+      "en": "Qianxinan Buyei and Miao Autonomous Prefecture",
+      "zh": "黔西南布依族苗族自治州",
+      "source": "https://www.wikidata.org/wiki/Q988844",
+      "regional": []
+    },
+    "522600": {
+      "en": "Qiandongnan Miao and Dong Autonomous Prefecture",
+      "zh": "黔东南苗族侗族自治州",
+      "source": "https://www.wikidata.org/wiki/Q770297",
+      "regional": []
+    },
+    "522700": {
+      "en": "Qiannan Buyei and Miao Autonomous Prefecture",
+      "zh": "黔南布依族苗族自治州",
+      "source": "https://www.wikidata.org/wiki/Q1001390",
+      "regional": []
+    },
+    "530000": {
+      "en": "Yunnan",
+      "zh": "云南省",
+      "source": "https://www.wikidata.org/wiki/Q43194",
+      "regional": []
+    },
+    "530100": {
+      "en": "Kunming",
+      "zh": "昆明市",
+      "source": "https://www.wikidata.org/wiki/Q182852",
+      "regional": []
+    },
+    "530300": {
+      "en": "Qujing",
+      "zh": "曲靖市",
+      "source": "https://www.wikidata.org/wiki/Q496405",
+      "regional": []
+    },
+    "530400": {
+      "en": "Yuxi",
+      "zh": "玉溪市",
+      "source": "https://www.wikidata.org/wiki/Q496496",
+      "regional": []
+    },
+    "530500": {
+      "en": "Baoshan",
+      "zh": "保山市",
+      "source": "https://www.wikidata.org/wiki/Q496576",
+      "regional": []
+    },
+    "530600": {
+      "en": "Zhaotong",
+      "zh": "昭通市",
+      "source": "https://www.wikidata.org/wiki/Q197519",
+      "regional": []
+    },
+    "530700": {
+      "en": "Lijiang",
+      "zh": "丽江市",
+      "source": "https://www.wikidata.org/wiki/Q205914",
+      "regional": []
+    },
+    "530800": {
+      "en": "Pu'er City",
+      "zh": "普洱市",
+      "source": "https://www.wikidata.org/wiki/Q496765",
+      "regional": []
+    },
+    "530900": {
+      "en": "Lincang",
+      "zh": "临沧市",
+      "source": "https://www.wikidata.org/wiki/Q496837",
+      "regional": []
+    },
+    "532300": {
+      "en": "Chuxiong Yi Autonomous Prefecture",
+      "zh": "楚雄彝族自治州",
+      "source": "https://www.wikidata.org/wiki/Q999163",
+      "regional": []
+    },
+    "532500": {
+      "en": "Honghe Hani and Yi Autonomous Prefecture",
+      "zh": "红河哈尼族彝族自治州",
+      "source": "https://www.wikidata.org/wiki/Q999102",
+      "regional": []
+    },
+    "532600": {
+      "en": "Wenshan Zhuang and Miao Autonomous Prefecture",
+      "zh": "文山壮族苗族自治州",
+      "source": "https://www.wikidata.org/wiki/Q999145",
+      "regional": []
+    },
+    "532800": {
+      "en": "Xishuangbanna Dai Autonomous Prefecture",
+      "zh": "西双版纳傣族自治州",
+      "source": "https://www.wikidata.org/wiki/Q868046",
+      "regional": []
+    },
+    "532900": {
+      "en": "Dali Bai Autonomous Prefecture",
+      "zh": "大理白族自治州",
+      "source": "https://www.wikidata.org/wiki/Q999156",
+      "regional": []
+    },
+    "533100": {
+      "en": "Dehong Dai and Jingpo Autonomous Prefecture",
+      "zh": "德宏傣族景颇族自治州",
+      "source": "https://www.wikidata.org/wiki/Q999132",
+      "regional": []
+    },
+    "533300": {
+      "en": "Nujiang Lisu Autonomous Prefecture",
+      "zh": "怒江傈僳族自治州",
+      "source": "https://www.wikidata.org/wiki/Q767684",
+      "regional": []
+    },
+    "533400": {
+      "en": "Diqing Tibetan Autonomous Prefecture",
+      "zh": "迪庆藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q766073",
+      "regional": [
+        {
+          "text": "བདེ་ཆེན་བོད་རིགས་རང་སྐྱོང་ཁུལ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q766073",
+          "license": "CC0"
+        }
+      ]
+    },
+    "540000": {
+      "en": "Tibet Autonomous Region",
+      "zh": "西藏自治区",
+      "source": "https://www.wikidata.org/wiki/Q17269",
+      "regional": [
+        {
+          "text": "བོད་ཡུལ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q17269",
+          "license": "CC0"
+        }
+      ]
+    },
+    "540100": {
+      "en": "Lhasa",
+      "zh": "拉萨市",
+      "source": "https://www.wikidata.org/wiki/Q5869",
+      "regional": [
+        {
+          "text": "ལྷ་ས་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q5869",
+          "license": "CC0"
+        }
+      ]
+    },
+    "540200": {
+      "en": "Shigatse",
+      "zh": "日喀则市",
+      "source": "https://www.wikidata.org/wiki/Q1211183",
+      "regional": [
+        {
+          "text": "གཞིས་ཀ་རྩེ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q1211183",
+          "license": "CC0"
+        }
+      ]
+    },
+    "540300": {
+      "en": "Chamdo",
+      "zh": "昌都市",
+      "source": "https://www.wikidata.org/wiki/Q1012419",
+      "regional": [
+        {
+          "text": "ཆབ་མདོ་ས་ཁུལ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q1012419",
+          "license": "CC0"
+        }
+      ]
+    },
+    "540400": {
+      "en": "Nyingchi",
+      "zh": "林芝市",
+      "source": "https://www.wikidata.org/wiki/Q1012465",
+      "regional": [
+        {
+          "text": "ཉིང་ཁྲི་ས་ཁུལ",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q1012465",
+          "license": "CC0"
+        }
+      ]
+    },
+    "540500": {
+      "en": "Lhoka",
+      "zh": "山南市",
+      "source": "https://www.wikidata.org/wiki/Q777171",
+      "regional": [
+        {
+          "text": "ལྷོ་ཁ་གྲོང་ཁྱེར།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q777171",
+          "license": "CC0"
+        }
+      ]
+    },
+    "540600": {
+      "en": "Nagqu",
+      "zh": "那曲市",
+      "source": "https://www.wikidata.org/wiki/Q1012460",
+      "regional": [
+        {
+          "text": "ནག་ཆུ་ས་ཁུལ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q1012460",
+          "license": "CC0"
+        }
+      ]
+    },
+    "542500": {
+      "en": "Ngari Prefecture",
+      "zh": "阿里地区",
+      "source": "https://www.wikidata.org/wiki/Q577713",
+      "regional": [
+        {
+          "text": "མངའ་རིས་ས་ཁུལ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q577713",
+          "license": "CC0"
+        }
+      ]
+    },
+    "610000": {
+      "en": "Shaanxi",
+      "zh": "陕西省",
+      "source": "https://www.wikidata.org/wiki/Q47974",
+      "regional": []
+    },
+    "610100": {
+      "en": "Xi'an",
+      "zh": "西安市",
+      "source": "https://www.wikidata.org/wiki/Q5826",
+      "regional": []
+    },
+    "610200": {
+      "en": "Tongchuan",
+      "zh": "铜川市",
+      "source": "https://www.wikidata.org/wiki/Q514608",
+      "regional": []
+    },
+    "610300": {
+      "en": "Baoji",
+      "zh": "宝鸡市",
+      "source": "https://www.wikidata.org/wiki/Q514796",
+      "regional": []
+    },
+    "610400": {
+      "en": "Xianyang",
+      "zh": "咸阳市",
+      "source": "https://www.wikidata.org/wiki/Q497341",
+      "regional": []
+    },
+    "610500": {
+      "en": "Weinan",
+      "zh": "渭南市",
+      "source": "https://www.wikidata.org/wiki/Q126995",
+      "regional": []
+    },
+    "610600": {
+      "en": "Yan'an",
+      "zh": "延安市",
+      "source": "https://www.wikidata.org/wiki/Q515388",
+      "regional": []
+    },
+    "610700": {
+      "en": "Hanzhong",
+      "zh": "汉中市",
+      "source": "https://www.wikidata.org/wiki/Q515573",
+      "regional": []
+    },
+    "610800": {
+      "en": "Yulin",
+      "zh": "榆林市",
+      "source": "https://www.wikidata.org/wiki/Q515712",
+      "regional": []
+    },
+    "610900": {
+      "en": "Ankang",
+      "zh": "安康市",
+      "source": "https://www.wikidata.org/wiki/Q515846",
+      "regional": []
+    },
+    "611000": {
+      "en": "Shangluo",
+      "zh": "商洛市",
+      "source": "https://www.wikidata.org/wiki/Q515983",
+      "regional": []
+    },
+    "620000": {
+      "en": "Gansu",
+      "zh": "甘肃省",
+      "source": "https://www.wikidata.org/wiki/Q42392",
+      "regional": []
+    },
+    "620100": {
+      "en": "Lanzhou",
+      "zh": "兰州市",
+      "source": "https://www.wikidata.org/wiki/Q183584",
+      "regional": []
+    },
+    "620200": {
+      "en": "Jiayuguan City",
+      "zh": "嘉峪关市",
+      "source": "https://www.wikidata.org/wiki/Q532560",
+      "regional": []
+    },
+    "620300": {
+      "en": "Jinchang",
+      "zh": "金昌市",
+      "source": "https://www.wikidata.org/wiki/Q532776",
+      "regional": []
+    },
+    "620400": {
+      "en": "Baiyin",
+      "zh": "白银市",
+      "source": "https://www.wikidata.org/wiki/Q532981",
+      "regional": []
+    },
+    "620500": {
+      "en": "Tianshui",
+      "zh": "天水市",
+      "source": "https://www.wikidata.org/wiki/Q533157",
+      "regional": []
+    },
+    "620600": {
+      "en": "Wuwei",
+      "zh": "武威市",
+      "source": "https://www.wikidata.org/wiki/Q249007",
+      "regional": []
+    },
+    "620700": {
+      "en": "Zhangye",
+      "zh": "张掖市",
+      "source": "https://www.wikidata.org/wiki/Q197402",
+      "regional": []
+    },
+    "620800": {
+      "en": "Pingliang",
+      "zh": "平凉市",
+      "source": "https://www.wikidata.org/wiki/Q533985",
+      "regional": []
+    },
+    "620900": {
+      "en": "Jiuquan",
+      "zh": "酒泉市",
+      "source": "https://www.wikidata.org/wiki/Q533432",
+      "regional": []
+    },
+    "621000": {
+      "en": "Qingyang",
+      "zh": "庆阳市",
+      "source": "https://www.wikidata.org/wiki/Q533764",
+      "regional": []
+    },
+    "621100": {
+      "en": "Dingxi",
+      "zh": "定西市",
+      "source": "https://www.wikidata.org/wiki/Q186006",
+      "regional": []
+    },
+    "621200": {
+      "en": "Longnan",
+      "zh": "陇南市",
+      "source": "https://www.wikidata.org/wiki/Q519810",
+      "regional": []
+    },
+    "622900": {
+      "en": "Linxia Hui Autonomous Prefecture",
+      "zh": "临夏回族自治州",
+      "source": "https://www.wikidata.org/wiki/Q1001396",
+      "regional": []
+    },
+    "623000": {
+      "en": "Gannan Tibetan Autonomous Prefecture",
+      "zh": "甘南藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q1012462",
+      "regional": [
+        {
+          "text": "དཀར་ལྷོ་བོད་རིགས་རང་སྐྱོང་ཁུལ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q1012462",
+          "license": "CC0"
+        }
+      ]
+    },
+    "630000": {
+      "en": "Qinghai",
+      "zh": "青海省",
+      "source": "https://www.wikidata.org/wiki/Q45833",
+      "regional": []
+    },
+    "630100": {
+      "en": "Xining",
+      "zh": "西宁市",
+      "source": "https://www.wikidata.org/wiki/Q69060",
+      "regional": []
+    },
+    "630200": {
+      "en": "Haidong",
+      "zh": "海东市",
+      "source": "https://www.wikidata.org/wiki/Q984788",
+      "regional": []
+    },
+    "632200": {
+      "en": "Haibei Tibetan Autonomous Prefecture",
+      "zh": "海北藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q508594",
+      "regional": [
+        {
+          "text": "མཚོ་བྱང་བོད་རིགས་རང་སྐྱོང་ཁུལ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q508594",
+          "license": "CC0"
+        }
+      ]
+    },
+    "632300": {
+      "en": "Huangnan Tibetan Autonomous Prefecture",
+      "zh": "黄南藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q130023",
+      "regional": [
+        {
+          "text": "རྨ་ལྷོ་བོད་རིགས་རང་སྐྱོང་ཁུལ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q130023",
+          "license": "CC0"
+        }
+      ]
+    },
+    "632500": {
+      "en": "Hainan Tibetan Autonomous Prefecture",
+      "zh": "海南藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q1012428",
+      "regional": [
+        {
+          "text": "མཚོ་ལྷོ་བོད་རིགས་རང་སྐྱོང་ཁུལ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q1012428",
+          "license": "CC0"
+        }
+      ]
+    },
+    "632600": {
+      "en": "Golog Tibetan Autonomous Prefecture",
+      "zh": "果洛藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q115594",
+      "regional": [
+        {
+          "text": "མགོ་ལོག་བོད་རིགས་རང་སྐྱོང་ཁུལ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q115594",
+          "license": "CC0"
+        }
+      ]
+    },
+    "632700": {
+      "en": "Yushu Tibetan Autonomous Prefecture",
+      "zh": "玉树藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q602936",
+      "regional": [
+        {
+          "text": "ཡུལ་ཤུལ་བོད་རིགས་རང་སྐྱོང་ཁུལ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q602936",
+          "license": "CC0"
+        }
+      ]
+    },
+    "632800": {
+      "en": "Haixi Mongol and Tibetan Autonomous Prefecture",
+      "zh": "海西蒙古族藏族自治州",
+      "source": "https://www.wikidata.org/wiki/Q874334",
+      "regional": [
+        {
+          "text": "མཚོ་ནུབ་སོག་རིགས་དང་བོད་རིགས་རང་སྐྱོང་ཁུལ་",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q874334",
+          "license": "CC0"
+        },
+        {
+          "text": "ᠬᠠᠶᠢᠰᠢ ᠶᠢᠨ ᠮᠣᠩᠭᠣᠯ ᠲᠥᠪᠡᠳ ᠦᠨᠳᠦᠰᠦᠲᠡᠨ ᠦ ᠥᠪᠡᠷᠲᠡᠭᠡᠨ ᠵᠠᠰᠠᠬᠤ ᠵᠧᠦ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Haixi_Mongol_and_Tibetan_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0"
+        }
+      ]
+    },
+    "640000": {
+      "en": "Ningxia",
+      "zh": "宁夏回族自治区",
+      "source": "https://www.wikidata.org/wiki/Q57448",
+      "regional": []
+    },
+    "640100": {
+      "en": "Yinchuan",
+      "zh": "银川市",
+      "source": "https://www.wikidata.org/wiki/Q211243",
+      "regional": []
+    },
+    "640200": {
+      "en": "Shizuishan",
+      "zh": "石嘴山市",
+      "source": "https://www.wikidata.org/wiki/Q604385",
+      "regional": []
+    },
+    "640300": {
+      "en": "Wuzhong",
+      "zh": "吴忠市",
+      "source": "https://www.wikidata.org/wiki/Q604517",
+      "regional": []
+    },
+    "640400": {
+      "en": "Guyuan",
+      "zh": "固原市",
+      "source": "https://www.wikidata.org/wiki/Q604625",
+      "regional": []
+    },
+    "640500": {
+      "en": "Zhongwei",
+      "zh": "中卫市",
+      "source": "https://www.wikidata.org/wiki/Q197922",
+      "regional": []
+    },
+    "650000": {
+      "en": "Xinjiang",
+      "zh": "新疆维吾尔自治区",
+      "source": "https://www.wikidata.org/wiki/Q34800",
+      "regional": [
+        {
+          "text": "شىنجاڭ ئۇيغۇر ئاپتونوم رايونى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q34800",
+          "license": "CC0"
+        }
+      ]
+    },
+    "650100": {
+      "en": "Ürümqi",
+      "zh": "乌鲁木齐市",
+      "source": "https://www.wikidata.org/wiki/Q16959",
+      "regional": [
+        {
+          "text": "ئۈرۈمچى شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q16959",
+          "license": "CC0"
+        }
+      ]
+    },
+    "650200": {
+      "en": "Karamay",
+      "zh": "克拉玛依市",
+      "source": "https://www.wikidata.org/wiki/Q658240",
+      "regional": [
+        {
+          "text": "قاراماي شەھرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q658240",
+          "license": "CC0"
+        }
+      ]
+    },
+    "650400": {
+      "en": "Turpan",
+      "zh": "吐鲁番市",
+      "source": "https://www.wikidata.org/wiki/Q868527",
+      "regional": [
+        {
+          "text": "تۇرپان ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q868527",
+          "license": "CC0"
+        }
+      ]
+    },
+    "650500": {
+      "en": "Hami",
+      "zh": "哈密市",
+      "source": "https://www.wikidata.org/wiki/Q989892",
+      "regional": [
+        {
+          "text": "قۇمۇل ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q989892",
+          "license": "CC0"
+        }
+      ]
+    },
+    "652300": {
+      "en": "Changji Hui Autonomous Prefecture",
+      "zh": "昌吉回族自治州",
+      "source": "https://www.wikidata.org/wiki/Q989898",
+      "regional": [
+        {
+          "text": "سانجى خۇيزۇ ئاپتونوم ئوبلاستى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q989898",
+          "license": "CC0"
+        }
+      ]
+    },
+    "652700": {
+      "en": "Bortala Mongol Autonomous Prefecture",
+      "zh": "博尔塔拉蒙古自治州",
+      "source": "https://www.wikidata.org/wiki/Q874291",
+      "regional": [
+        {
+          "text": "ᠪᠣᠷᠣᠲᠠᠯ᠎ᠠ ᠮᠣᠩᠭᠣᠯ ᠥᠪᠡᠷᠲᠡᠭᠡᠨ ᠵᠠᠰᠠᠬᠤ ᠵᠧᠦ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Bortala_Mongol_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "text": "بۆرتالا موڭغۇل ئاپتونوم ئوبلاستى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q874291",
+          "license": "CC0"
+        }
+      ]
+    },
+    "652800": {
+      "en": "Bayingolin Mongol Autonomous Prefecture",
+      "zh": "巴音郭楞蒙古自治州",
+      "source": "https://www.wikidata.org/wiki/Q812564",
+      "regional": [
+        {
+          "text": "ᠪᠠᠶᠠᠨᠭᠣᠣᠯ ᠮᠣᠩᠭᠣᠯ ᠥᠪᠡᠷᠲᠡᠭᠡᠨ ᠵᠠᠰᠠᠬᠤ ᠵᠧᠦ",
+          "lang": "mn-Mong",
+          "language": "Mongolian",
+          "dir": "ltr",
+          "vertical": true,
+          "source": "https://en.wikipedia.org/wiki/Bayingolin_Mongol_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "text": "بايىنغولىن موڭغۇل ئاپتونوم ئوبلاستى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q812564",
+          "license": "CC0"
+        }
+      ]
+    },
+    "652900": {
+      "en": "Aksu Prefecture",
+      "zh": "阿克苏地区",
+      "source": "https://www.wikidata.org/wiki/Q421638",
+      "regional": [
+        {
+          "text": "ئاقسۇ ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q421638",
+          "license": "CC0"
+        }
+      ]
+    },
+    "653000": {
+      "en": "Kizilsu Kyrgyz Autonomous Prefecture",
+      "zh": "克孜勒苏柯尔克孜自治州",
+      "source": "https://www.wikidata.org/wiki/Q861035",
+      "regional": [
+        {
+          "text": "قىزىلسۇۇ قىرعىز اپتونوم وبلاسى",
+          "lang": "ky-Arab",
+          "language": "Kyrgyz",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Kizilsu_Kyrgyz_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0"
+        },
+        {
+          "text": "قىزىلسۇ قىرغىز ئاپتونوم ئوبلاستى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q861035",
+          "license": "CC0"
+        }
+      ]
+    },
+    "653100": {
+      "en": "Kashgar Prefecture",
+      "zh": "喀什地区",
+      "source": "https://www.wikidata.org/wiki/Q739890",
+      "regional": [
+        {
+          "text": "قەشقەر ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q739890",
+          "license": "CC0"
+        }
+      ]
+    },
+    "653200": {
+      "en": "Hotan Prefecture",
+      "zh": "和田地区",
+      "source": "https://www.wikidata.org/wiki/Q989885",
+      "regional": [
+        {
+          "text": "خوتەن ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q989885",
+          "license": "CC0"
+        }
+      ]
+    },
+    "654000": {
+      "en": "Ili Kazakh Autonomous Prefecture",
+      "zh": "伊犁哈萨克自治州",
+      "source": "https://www.wikidata.org/wiki/Q848127",
+      "regional": [
+        {
+          "text": "ىله قازاق اۆتونومىيالى وبلىسى",
+          "lang": "kk-Arab",
+          "language": "Kazakh",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q848127",
+          "license": "CC0"
+        },
+        {
+          "text": "ئىلى قازاق ئاپتونوم ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q848127",
+          "license": "CC0"
+        }
+      ]
+    },
+    "654200": {
+      "en": "Tacheng Prefecture",
+      "zh": "塔城地区",
+      "source": "https://www.wikidata.org/wiki/Q644863",
+      "regional": [
+        {
+          "text": "تارباغاتاي ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q644863",
+          "license": "CC0"
+        }
+      ]
+    },
+    "654300": {
+      "en": "Altay Prefecture",
+      "zh": "阿勒泰地区",
+      "source": "https://www.wikidata.org/wiki/Q776550",
+      "regional": [
+        {
+          "text": "ئالتاي ۋىلايىتى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q776550",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659001": {
+      "en": "Shihezi",
+      "zh": "石河子市",
+      "source": "https://www.wikidata.org/wiki/Q848680",
+      "regional": [
+        {
+          "text": "شىخەنزە شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q848680",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659002": {
+      "en": "Aral",
+      "zh": "阿拉尔市",
+      "source": "https://www.wikidata.org/wiki/Q625554",
+      "regional": [
+        {
+          "text": "ئارال شەھرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q625554",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659003": {
+      "en": "Tumxuk",
+      "zh": "图木舒克市",
+      "source": "https://www.wikidata.org/wiki/Q989606",
+      "regional": [
+        {
+          "text": "تۇمشۇق شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q989606",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659004": {
+      "en": "Wujiaqu",
+      "zh": "五家渠市",
+      "source": "https://www.wikidata.org/wiki/Q787317",
+      "regional": [
+        {
+          "text": "ۋۇجياچۈ شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q787317",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659005": {
+      "en": "Beitun",
+      "zh": "北屯市",
+      "source": "https://www.wikidata.org/wiki/Q814946",
+      "regional": [
+        {
+          "text": "بەيتۈن شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q814946",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659006": {
+      "en": "Tiemenguan City",
+      "zh": "铁门关市",
+      "source": "https://www.wikidata.org/wiki/Q5103019",
+      "regional": [
+        {
+          "text": "باشئەگىم شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q5103019",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659007": {
+      "en": "Shuanghe",
+      "zh": "双河市",
+      "source": "https://www.wikidata.org/wiki/Q10930847",
+      "regional": [
+        {
+          "text": "قوشئۆگۈز شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q10930847",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659008": {
+      "en": "Kokdala",
+      "zh": "可克达拉市",
+      "source": "https://www.wikidata.org/wiki/Q18651998",
+      "regional": [
+        {
+          "text": "كۆكدالا شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q18651998",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659009": {
+      "en": "Kunyu",
+      "zh": "昆玉市",
+      "source": "https://www.wikidata.org/wiki/Q22704998",
+      "regional": [
+        {
+          "text": "قۇرۇمقاش شەھىرى",
+          "lang": "ug",
+          "language": "Uyghur",
+          "dir": "rtl",
+          "vertical": false,
+          "source": "https://www.wikidata.org/wiki/Q22704998",
+          "license": "CC0"
+        }
+      ]
+    },
+    "659010": {
+      "en": "Huyanghe",
+      "zh": "胡杨河市",
+      "source": "https://www.wikidata.org/wiki/Q9435117",
+      "regional": []
+    },
+    "710000": {
+      "en": "Taiwan",
+      "zh": "台湾省",
+      "source": "https://www.wikidata.org/wiki/Q57251",
+      "regional": []
+    },
+    "810000": {
+      "en": "Hong Kong",
+      "zh": "香港特别行政区",
+      "source": "https://www.wikidata.org/wiki/Q8646",
+      "regional": []
+    },
+    "810001": {
+      "en": "Central and Western",
+      "zh": "中西区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810002": {
+      "en": "Wan Chai",
+      "zh": "湾仔区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810003": {
+      "en": "Eastern",
+      "zh": "东区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810004": {
+      "en": "Southern",
+      "zh": "南区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810005": {
+      "en": "Yau Tsim Mong",
+      "zh": "油尖旺区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810006": {
+      "en": "Sham Shui Po",
+      "zh": "深水埗区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810007": {
+      "en": "Kowloon City",
+      "zh": "九龙城区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810008": {
+      "en": "Wong Tai Sin",
+      "zh": "黄大仙区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810009": {
+      "en": "Kwun Tong",
+      "zh": "观塘区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810010": {
+      "en": "Tsuen Wan",
+      "zh": "荃湾区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810011": {
+      "en": "Tuen Mun",
+      "zh": "屯门区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810012": {
+      "en": "Yuen Long",
+      "zh": "元朗区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810013": {
+      "en": "North",
+      "zh": "北区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810014": {
+      "en": "Tai Po",
+      "zh": "大埔区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810015": {
+      "en": "Sai Kung",
+      "zh": "西贡区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810016": {
+      "en": "Sha Tin",
+      "zh": "沙田区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810017": {
+      "en": "Kwai Tsing",
+      "zh": "葵青区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "810018": {
+      "en": "Islands",
+      "zh": "离岛区",
+      "source": "https://www.had.gov.hk/en/18_districts/my_map.htm",
+      "regional": []
+    },
+    "820000": {
+      "en": "Macau",
+      "zh": "澳门特别行政区",
+      "source": "https://www.wikidata.org/wiki/Q14773",
+      "regional": []
+    },
+    "820001": {
+      "en": "Nossa Senhora de Fátima",
+      "zh": "花地玛堂区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "820002": {
+      "en": "Santo António",
+      "zh": "花王堂区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "820003": {
+      "en": "São Lázaro",
+      "zh": "望德堂区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "820004": {
+      "en": "Sé",
+      "zh": "大堂区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "820005": {
+      "en": "São Lourenço",
+      "zh": "风顺堂区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "820006": {
+      "en": "Nossa Senhora do Carmo",
+      "zh": "嘉模堂区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "820007": {
+      "en": "Cotai",
+      "zh": "路凼填海区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    },
+    "820008": {
+      "en": "São Francisco Xavier",
+      "zh": "圣方济各堂区",
+      "source": "https://en.wikipedia.org/wiki/Municipalities_and_parishes_of_Macau",
+      "regional": []
+    }
+  }
+}
