@@ -1,6 +1,10 @@
 @font-face{font-family:'Noto Serif Tibetan';src:url('vendor/noto-serif-tibetan.ttf') format('truetype');font-weight:100 900;font-display:swap}
 @font-face{font-family:'Noto Sans Arabic';src:url('vendor/noto-sans-arabic.ttf') format('truetype');font-weight:100 900;font-display:swap}
 @font-face{font-family:'Noto Sans Mongolian';src:url('vendor/noto-sans-mongolian.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'Noto Sans Yi';src:url('vendor/noto-sans-yi.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'Noto Sans Lisu';src:url('vendor/noto-sans-lisu.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Noto Sans Tai Le';src:url('vendor/noto-sans-tai-le.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'Noto Sans New Tai Lue';src:url('vendor/noto-sans-new-tai-lue.ttf') format('truetype');font-weight:100 900;font-display:swap}
 #selection-kind{display:block;font-size:10px;letter-spacing:.8px;line-height:1.5;margin-bottom:12px}
 #selection-name{font-size:36px;line-height:1.16;letter-spacing:-.5px;margin:0 0 8px;overflow-wrap:break-word;text-wrap:balance}
 #selection-name.long-name{font-size:28px;letter-spacing:-.25px}
@@ -9,6 +13,11 @@
 .regional-names{display:grid;gap:16px;margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}
 .regional-text{font-size:23px;color:var(--ink);line-height:1.7;margin:5px 0 0;letter-spacing:0;unicode-bidi:isolate;overflow-wrap:break-word}
 .regional-text:lang(bo){font-family:'Noto Serif Tibetan',serif;font-size:23px;line-height:1.9}
+.regional-text:lang(ko){font-family:'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif;word-break:keep-all;font-size:22px}
+.regional-text:lang(ii){font-family:'Noto Sans Yi',sans-serif}
+.regional-text:lang(lis){font-family:'Noto Sans Lisu',sans-serif}
+.regional-text:lang(tdd){font-family:'Noto Sans Tai Le',sans-serif}
+.regional-text:lang(khb){font-family:'Noto Sans New Tai Lue',sans-serif}
 .regional-text:lang(ug),.regional-text:lang(kk-Arab),.regional-text:lang(ky-Arab){font-family:'Noto Sans Arabic',sans-serif;font-size:24px;text-align:start}
 .regional-text[data-vertical=true]{font-family:'Noto Sans Mongolian',sans-serif;writing-mode:vertical-lr;text-orientation:sideways;height:min-content;width:fit-content;max-width:100%;font-size:25px;line-height:1.6;white-space:normal;overflow-wrap:normal;word-break:normal;margin:9px 0 0}
 .parent-context{margin:20px 0 0}

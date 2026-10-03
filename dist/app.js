@@ -10,11 +10,11 @@ const sourceFor=r=>r.feature.properties.level==='province'?'provinces':isPrefect
 function setRegionState(region,state){if(region.feature.geometry)map.setFeatureState({source:sourceFor(region),id:region.feature.properties.adcode},state);}
 function layerVisible(id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');}
 function syncLayers(){
-  if(quiz.active){for(const id of ['other-fill','other-lines','other-selection','province-selection','annotations'])layerVisible(id,false);for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','province-lines'])layerVisible(id,true);return;}
+  if(quiz.active){for(const id of ['other-fill','other-lines','other-selection','province-selection'])layerVisible(id,false);for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','province-lines'])layerVisible(id,true);return;}
   const pref=$('prefecture-layer').checked,other=$('other-layer').checked,prov=$('province-layer').checked;
   for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection'])layerVisible(id,pref);
   for(const id of ['other-fill','other-lines','other-selection'])layerVisible(id,other);
-  for(const id of ['province-lines','annotations'])layerVisible(id,prov);
+  layerVisible('province-lines',prov);
 }
 const fillColors=['#efe2c8','#eee6d5','#f2e9d6','#e9ddc3','#f4e6d0','#e9e0ca'];
 const provinceLayers=new Map(),detailLayers=new Map(),regionIndex=[];
@@ -269,12 +269,11 @@ async function init(){try{
   const otherFeatures=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
   addSource('provinces',display.provinces);addSource('prefectures',featureCollection(prefFeatures));addSource('others',featureCollection(otherFeatures));
   for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',feature(geometry));
-  addSource('annotations',display.annotations);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
   addFill('province-fill','provinces',colors,1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
   addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,.85);addLine('other-lines','other-boundaries','#9f874e',.7,.85,[3,3]);
   addSelection('province-selection','provinces');addSelection('prefecture-selection','prefectures');addSelection('other-selection','others');
-  addLine('province-lines','province-boundaries','#987343',1.2,.95);addLine('annotations','annotations','#987343',1.2,.95);
+  addLine('province-lines','province-boundaries','#987343',1.2,.95);
   for(const f of provinceFeatures){const code=f.properties.adcode;provinceLayers.set(code,bindRegion(f,code));}
   for(const f of display.subdivisions.features){const code=f.properties.provinceCode;if(!detailLayers.has(code))detailLayers.set(code,[]);detailLayers.get(code).push(bindRegion(f,code));}
   for(const city of administration.missingCities){regionNames[city.adcode]={en:city.en,zh:city.zh,source:city.source,regional:[]};detailLayers.get(650000).push(bindRegion({type:'Feature',properties:{adcode:city.adcode,name:city.zh,provinceCode:650000,level:'city',boundaryAvailable:false},geometry:null},650000));}

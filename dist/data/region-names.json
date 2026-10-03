@@ -705,7 +705,18 @@
       "en": "Yanbian Korean Autonomous Prefecture",
       "zh": "延边朝鲜族自治州",
       "source": "https://www.wikidata.org/wiki/Q714984",
-      "regional": []
+      "regional": [
+        {
+          "text": "연변조선족자치주",
+          "lang": "ko",
+          "language": "Korean",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Yanbian_Korean_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "230000": {
       "en": "Heilongjiang",
@@ -1617,7 +1628,28 @@
       "en": "Enshi Tujia and Miao Autonomous Prefecture",
       "zh": "恩施土家族苗族自治州",
       "source": "https://www.wikidata.org/wiki/Q71415",
-      "regional": []
+      "regional": [
+        {
+          "text": "Enrshiv bifzivkar befkar zifzifzoux",
+          "lang": "tji",
+          "language": "Tujia",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Enshi_Tujia_and_Miao_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Entshil tutjadcul maolcul zibzhibzhoud",
+          "lang": "und-Latn",
+          "language": "Miao",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Enshi_Tujia_and_Miao_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "429004": {
       "en": "Xiantao",
@@ -1731,7 +1763,28 @@
       "en": "Xiangxi Tujia and Miao Autonomous Prefecture",
       "zh": "湘西土家族苗族自治州",
       "source": "https://www.wikidata.org/wiki/Q763069",
-      "regional": []
+      "regional": [
+        {
+          "text": "Xianxxix bifzivkar befkar zifzifzoux",
+          "lang": "tji",
+          "language": "Tujia",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://zh.wikipedia.org/wiki/湘西土家族苗族自治州",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Xangdxid tutjadcul maolcul zibzhibzhoud",
+          "lang": "und-Latn",
+          "language": "Miao (Xiangxi)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://zh.wikipedia.org/wiki/湘西土家族苗族自治州",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "440000": {
       "en": "Guangdong",
@@ -2436,6 +2489,16 @@
           "vertical": false,
           "source": "https://www.wikidata.org/wiki/Q1012450",
           "license": "CC0"
+        },
+        {
+          "text": "Ggabba Shbea Rrmea nyujugvez zhou",
+          "lang": "und-Latn",
+          "language": "Qiang",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
         }
       ]
     },
@@ -2459,7 +2522,18 @@
       "en": "Liangshan Yi Autonomous Prefecture",
       "zh": "凉山彝族自治州",
       "source": "https://www.wikidata.org/wiki/Q666884",
-      "regional": []
+      "regional": [
+        {
+          "text": "ꆃꎭꆈꌠꊨꏦꏱꅉꍏ",
+          "lang": "ii",
+          "language": "Yi",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Liangshan_Yi_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "520000": {
       "en": "Guizhou",
@@ -2507,19 +2581,82 @@
       "en": "Qianxinan Buyei and Miao Autonomous Prefecture",
       "zh": "黔西南布依族苗族自治州",
       "source": "https://www.wikidata.org/wiki/Q988844",
-      "regional": []
+      "regional": [
+        {
+          "text": "Qianfxiynanf Buxqyaix Buxyeeuz Ziqziqzouy",
+          "lang": "buy",
+          "language": "Bouyei",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Qeef Xib Naif Dol Yat Dol Hmub Zid Zid Zeb",
+          "lang": "und-Latn",
+          "language": "Hmu (Miao)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "522600": {
       "en": "Qiandongnan Miao and Dong Autonomous Prefecture",
       "zh": "黔东南苗族侗族自治州",
       "source": "https://www.wikidata.org/wiki/Q770297",
-      "regional": []
+      "regional": [
+        {
+          "text": "Qeef Dongb Naif Dol Hmub Dol Gud Zid Zid Zeb",
+          "lang": "und-Latn",
+          "language": "Hmu (Miao)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Qiandongnan_Miao_and_Dong_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Qeens Donc Nanc Nyenc Miiul Nyenc Gaeml Zil Zil Zous",
+          "lang": "kmc",
+          "language": "Dong (Kam)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Qiandongnan_Miao_and_Dong_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "522700": {
       "en": "Qiannan Buyei and Miao Autonomous Prefecture",
       "zh": "黔南布依族苗族自治州",
       "source": "https://www.wikidata.org/wiki/Q1001390",
-      "regional": []
+      "regional": [
+        {
+          "text": "Qianfnanf Buxqyaix Buxyeeuz ziqziqzouy",
+          "lang": "buy",
+          "language": "Bouyei",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Qeef Naif Dol Yat Dol Hmub Zid Zid Zeb",
+          "lang": "und-Latn",
+          "language": "Hmu (Miao)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "530000": {
       "en": "Yunnan",
@@ -2579,43 +2716,160 @@
       "en": "Chuxiong Yi Autonomous Prefecture",
       "zh": "楚雄彝族自治州",
       "source": "https://www.wikidata.org/wiki/Q999163",
-      "regional": []
+      "regional": [
+        {
+          "text": "ꀒꇐꆈꌠꊨꏦꏱꅉꍏ",
+          "lang": "ii",
+          "language": "Yi",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "532500": {
       "en": "Honghe Hani and Yi Autonomous Prefecture",
       "zh": "红河哈尼族彝族自治州",
       "source": "https://www.wikidata.org/wiki/Q999102",
-      "regional": []
+      "regional": [
+        {
+          "text": "Haoqhoq Haqniqssaq Haqhholssaq Ziiqziifzel",
+          "lang": "hni",
+          "language": "Hani",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://zh.wikipedia.org/wiki/红河哈尼族彝族自治州",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "ꉼꉸꉳꆃꁈꆃꁈꊨꏦꍓ",
+          "lang": "ii",
+          "language": "Yi",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://zh.wikipedia.org/wiki/红河哈尼族彝族自治州",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "532600": {
       "en": "Wenshan Zhuang and Miao Autonomous Prefecture",
       "zh": "文山壮族苗族自治州",
       "source": "https://www.wikidata.org/wiki/Q999145",
-      "regional": []
+      "regional": [
+        {
+          "text": "Munzsanh Bouxcuengh Myauzcuz Swcicouh",
+          "lang": "za",
+          "language": "Zhuang",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Veej Sa Tsuaam Txhwj Mioj Txhwj Txim Tsim Tsawb",
+          "lang": "hmn",
+          "language": "Hmong (Miao)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "532800": {
       "en": "Xishuangbanna Dai Autonomous Prefecture",
       "zh": "西双版纳傣族自治州",
       "source": "https://www.wikidata.org/wiki/Q868046",
-      "regional": []
+      "regional": [
+        {
+          "text": "ᦈᦹᧈ ᦈᦹᧈ ᦵᦋᦲᧁᧈ ᦘᦱ ᦉᦱ ᦺᦑ ᧑᧒ ᦗᧃ ᦓᦱ",
+          "lang": "khb",
+          "language": "Dai (Tai Lü)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "532900": {
       "en": "Dali Bai Autonomous Prefecture",
       "zh": "大理白族自治州",
       "source": "https://www.wikidata.org/wiki/Q999156",
-      "regional": []
+      "regional": [
+        {
+          "text": "Darl•lit Baif•cuf zirl•zirl•zox",
+          "lang": "und-Latn",
+          "language": "Bai",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Dali_Bai_Autonomous_Prefecture",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "533100": {
       "en": "Dehong Dai and Jingpo Autonomous Prefecture",
       "zh": "德宏傣族景颇族自治州",
       "source": "https://www.wikidata.org/wiki/Q999132",
-      "regional": []
+      "regional": [
+        {
+          "text": "ᥖᥬᥲ ᥑᥨᥒᥰ",
+          "lang": "tdd",
+          "language": "Dai (Tai Nüa)",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://zh.wikipedia.org/wiki/德宏傣族景颇族自治州",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Sakhkung Sam Jinghpo Amyu Madu Uphkang Mungdo",
+          "lang": "kac",
+          "language": "Jingpo",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://zh.wikipedia.org/wiki/德宏傣族景颇族自治州",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        },
+        {
+          "text": "Sikung Sam Zaizo Amyvu Yvumsing Upkang Mau",
+          "lang": "atb",
+          "language": "Zaiwa",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://zh.wikipedia.org/wiki/德宏傣族景颇族自治州",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "533300": {
       "en": "Nujiang Lisu Autonomous Prefecture",
       "zh": "怒江傈僳族自治州",
       "source": "https://www.wikidata.org/wiki/Q767684",
-      "regional": []
+      "regional": [
+        {
+          "text": "ꓠꓳ-ꓟꓵ ꓡꓲ-ꓢꓴ ꓫꓵꓽ ꓚꓲꓸ ꓛꓬꓽ ꓗꓪꓼ ꓫꓵꓽ ꓝꓳꓴ",
+          "lang": "lis",
+          "language": "Lisu",
+          "dir": "ltr",
+          "vertical": false,
+          "source": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+          "license": "CC BY-SA 4.0",
+          "retrieved": "2026-10-02"
+        }
+      ]
     },
     "533400": {
       "en": "Diqing Tibetan Autonomous Prefecture",

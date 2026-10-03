@@ -37,6 +37,14 @@ for(const [code,source] of Object.entries(manchu.regions)){
   assert.equal(name?.language,'Manchu');
 }
 assert.equal(languageCounts.Manchu,3);
+const autonomous=read('name-sources/autonomous-prefectures.json');
+for(const [code,entries] of Object.entries(autonomous.regions))for(const entry of entries){
+  assert(names[code].regional.some(n=>n.text===entry.text&&n.lang===entry.lang&&n.language===entry.language),`Regional name missing: ${code} ${entry.language}`);
+}
+const prefectures=features.filter(f=>f.properties.name.includes('自治州'));
+assert.equal(prefectures.length,30);
+for(const f of prefectures)if(f.properties.adcode!==622900)assert(names[f.properties.adcode].regional.length,`Missing autonomous-prefecture names: ${f.properties.name}`);
+assert.equal(names[622900].regional.length,0,'Do not invent a separate Hui language for Linxia');
 const app=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
 const elements=new Map();
 function element(){return {hidden:false,textContent:'',children:[],dataset:{},classList:{toggle(){}},replaceChildren(){this.children=[];},append(...children){this.children.push(...children);}};}

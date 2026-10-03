@@ -7,6 +7,7 @@ const wikidata=await read('name-sources/wikidata.json');
 const scripts=await read('name-sources/regional-scripts.json');
 const overrides=await read('name-sources/overrides.json');
 const manchu=await read('name-sources/manchu.json');
+const autonomous=await read('name-sources/autonomous-prefectures.json');
 const features=[...display.provinces.features,...display.subdivisions.features];
 const stat=code=>String(code).match(/.{2}/g).join(' ').replace(/(?: 00)+$/,'');
 const regionNames={};
@@ -53,6 +54,7 @@ for(const {properties:p} of features){
   const manchuName=manchu.regions[p.adcode];
   if(manchuName)entry.regional.push({...local(manchuName.text,'mnc-Mong','Manchu',manchuName.source,manchu.license),romanization:manchuName.romanization,retrieved:manchu.retrieved});
   regionNames[p.adcode]=entry;
+  for(const n of autonomous.regions[p.adcode]||[])entry.regional.push({...local(n.text,n.lang,n.language,n.source||autonomous.defaultSource,autonomous.license),retrieved:autonomous.retrieved});
 }
 await fs.writeFile(new URL('../dist/data/region-names.json',import.meta.url),JSON.stringify({retrieved:wikidata.retrieved,regions:regionNames},null,2));
 console.log(JSON.stringify({regions:Object.keys(regionNames).length,regionalNames:languageCounts}));

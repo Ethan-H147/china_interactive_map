@@ -1,0 +1,48 @@
+{
+  "retrieved": "2026-10-02",
+  "license": "CC BY-SA 4.0",
+  "defaultSource": "https://en.wikipedia.org/wiki/Autonomous_prefecture#List_of_autonomous_prefectures",
+  "note": "Published regional names; orthographies and dialects vary. These are not claims of exclusive or official language status. Existing Tibetan, Mongolian, Kazakh, Kyrgyz and Uyghur entries are retained. Linxia's Hui population uses Chinese; no distinct Hui-language name is invented. Language tags remain und-Latn where the source does not identify a specific language variety.",
+  "regions": {
+    "222400": [{"language":"Korean","lang":"ko","text":"연변조선족자치주","source":"https://en.wikipedia.org/wiki/Yanbian_Korean_Autonomous_Prefecture"}],
+    "422800": [
+      {"language":"Tujia","lang":"tji","text":"Enrshiv bifzivkar befkar zifzifzoux","source":"https://en.wikipedia.org/wiki/Enshi_Tujia_and_Miao_Autonomous_Prefecture"},
+      {"language":"Miao","lang":"und-Latn","text":"Entshil tutjadcul maolcul zibzhibzhoud","source":"https://en.wikipedia.org/wiki/Enshi_Tujia_and_Miao_Autonomous_Prefecture"}
+    ],
+    "433100": [
+      {"language":"Tujia","lang":"tji","text":"Xianxxix bifzivkar befkar zifzifzoux","source":"https://zh.wikipedia.org/wiki/湘西土家族苗族自治州"},
+      {"language":"Miao (Xiangxi)","lang":"und-Latn","text":"Xangdxid tutjadcul maolcul zibzhibzhoud","source":"https://zh.wikipedia.org/wiki/湘西土家族苗族自治州"}
+    ],
+    "513200": [{"language":"Qiang","lang":"und-Latn","text":"Ggabba Shbea Rrmea nyujugvez zhou"}],
+    "513400": [{"language":"Yi","lang":"ii","text":"ꆃꎭꆈꌠꊨꏦꏱꅉꍏ","source":"https://en.wikipedia.org/wiki/Liangshan_Yi_Autonomous_Prefecture"}],
+    "522300": [
+      {"language":"Bouyei","lang":"buy","text":"Qianfxiynanf Buxqyaix Buxyeeuz Ziqziqzouy"},
+      {"language":"Hmu (Miao)","lang":"und-Latn","text":"Qeef Xib Naif Dol Yat Dol Hmub Zid Zid Zeb"}
+    ],
+    "522600": [
+      {"language":"Hmu (Miao)","lang":"und-Latn","text":"Qeef Dongb Naif Dol Hmub Dol Gud Zid Zid Zeb","source":"https://en.wikipedia.org/wiki/Qiandongnan_Miao_and_Dong_Autonomous_Prefecture"},
+      {"language":"Dong (Kam)","lang":"kmc","text":"Qeens Donc Nanc Nyenc Miiul Nyenc Gaeml Zil Zil Zous","source":"https://en.wikipedia.org/wiki/Qiandongnan_Miao_and_Dong_Autonomous_Prefecture"}
+    ],
+    "522700": [
+      {"language":"Bouyei","lang":"buy","text":"Qianfnanf Buxqyaix Buxyeeuz ziqziqzouy"},
+      {"language":"Hmu (Miao)","lang":"und-Latn","text":"Qeef Naif Dol Yat Dol Hmub Zid Zid Zeb"}
+    ],
+    "532300": [{"language":"Yi","lang":"ii","text":"ꀒꇐꆈꌠꊨꏦꏱꅉꍏ"}],
+    "532500": [
+      {"language":"Hani","lang":"hni","text":"Haoqhoq Haqniqssaq Haqhholssaq Ziiqziifzel","source":"https://zh.wikipedia.org/wiki/红河哈尼族彝族自治州"},
+      {"language":"Yi","lang":"ii","text":"ꉼꉸꉳꆃꁈꆃꁈꊨꏦꍓ","source":"https://zh.wikipedia.org/wiki/红河哈尼族彝族自治州"}
+    ],
+    "532600": [
+      {"language":"Zhuang","lang":"za","text":"Munzsanh Bouxcuengh Myauzcuz Swcicouh"},
+      {"language":"Hmong (Miao)","lang":"hmn","text":"Veej Sa Tsuaam Txhwj Mioj Txhwj Txim Tsim Tsawb"}
+    ],
+    "532800": [{"language":"Dai (Tai Lü)","lang":"khb","text":"ᦈᦹᧈ ᦈᦹᧈ ᦵᦋᦲᧁᧈ ᦘᦱ ᦉᦱ ᦺᦑ ᧑᧒ ᦗᧃ ᦓᦱ"}],
+    "532900": [{"language":"Bai","lang":"und-Latn","text":"Darl•lit Baif•cuf zirl•zirl•zox","source":"https://en.wikipedia.org/wiki/Dali_Bai_Autonomous_Prefecture"}],
+    "533100": [
+      {"language":"Dai (Tai Nüa)","lang":"tdd","text":"ᥖᥬᥲ ᥑᥨᥒᥰ","source":"https://zh.wikipedia.org/wiki/德宏傣族景颇族自治州"},
+      {"language":"Jingpo","lang":"kac","text":"Sakhkung Sam Jinghpo Amyu Madu Uphkang Mungdo","source":"https://zh.wikipedia.org/wiki/德宏傣族景颇族自治州"},
+      {"language":"Zaiwa","lang":"atb","text":"Sikung Sam Zaizo Amyvu Yvumsing Upkang Mau","source":"https://zh.wikipedia.org/wiki/德宏傣族景颇族自治州"}
+    ],
+    "533300": [{"language":"Lisu","lang":"lis","text":"ꓠꓳ-ꓟꓵ ꓡꓲ-ꓢꓴ ꓫꓵꓽ ꓚꓲꓸ ꓛꓬꓽ ꓗꓪꓼ ꓫꓵꓽ ꓝꓳꓴ"}]
+  }
+}
