@@ -10,8 +10,5 @@ export async function addKoreaPortal(map,host){
  const controller=createKoreaAtlas(map,host);
  const visit=()=>{if(!controller.active&&!host.isBusy())host.switchAtlas('korea');};
  map.on('click','korea-portal-fill',visit);
- const marker=(text,position,action)=>{const el=document.createElement('button');el.className='korea-portal-label';el.textContent=text;el.onclick=action;return new window.maplibregl.Marker({element:el}).setLngLat(position);};
- const korea=marker('Korea · 한반도',[128.05,38.7],visit).addTo(map);
- const china=marker('China · 中国',[105,36],()=>host.switchAtlas('china'));
- return Object.assign(controller,{context(active){map.setLayoutProperty('korea-portal-line','visibility',active?'none':'visible');if(active){korea.remove();china.addTo(map);}else{china.remove();korea.addTo(map);}}});
+ return Object.assign(controller,{context(active){map.setLayoutProperty('korea-portal-line','visibility',active?'none':'visible');}});
 }

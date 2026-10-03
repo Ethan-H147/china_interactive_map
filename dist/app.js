@@ -88,7 +88,6 @@ function kind(p){
 function controls(){
   const koreaLoading=atlasMode==='korea'&&!koreaAtlas?.ready;
   document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=cameraBusy||!allReady||koreaLoading||(quiz.active&&!['home','zoom-in','zoom-out','fit-map'].includes(el.id)));
-  $('atlas-switch').disabled=cameraBusy||!allReady||koreaLoading||!koreaAtlas||quiz.active;
   document.querySelectorAll('[data-quiz-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);
   for(const id of ['tab-explore','tab-layers'])$(id).disabled=quiz.active;
   if(allReady&&!quiz.active)$('quiz-start').disabled=cameraBusy||!quizPool().length;
@@ -197,7 +196,6 @@ async function changeAtlas(next,animate=true){
   document.getElementById('china-sidebar').hidden=korea;
   $('atlas-title-english').textContent=korea?'Korea':'China';$('atlas-title-english').className=korea?'korea-english':'china-english';
   $('atlas-title-local').textContent=korea?'한반도':'中国';$('atlas-title-local').className=korea?'korean-title':'china-chinese';$('atlas-title-local').lang=korea?'ko':'zh';
-  $('atlas-switch').textContent=korea?'China · 中国':'Korea · 한반도';$('atlas-switch').setAttribute('aria-label',korea?'Switch to China':'Switch to Korea');
   $('map').setAttribute('aria-label',korea?'Interactive map of North and South Korea':'Interactive China administrative boundary map');
   $('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
   map.setPaintProperty('province-fill','fill-color',korea?'#d7d7d3':fillPaint(normalProvinceColors,1)['fill-color']);
@@ -206,7 +204,6 @@ async function changeAtlas(next,animate=true){
   else{koreaAtlas.leave();$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province');refreshStatus();controls();if(animate)await fitHome(true);updateLabels();}
   return true;
 }
-$('atlas-switch').onclick=()=>changeAtlas(atlasMode==='china'?'korea':'china');
 function regionZoom(p){return [810000,820000].includes(p.provinceCode||p.adcode)?p.level==='province'?14:17:p.level==='province'?8:10;}
 function bindRegion(feature,parentCode){
   const bounds=new maplibregl.LngLatBounds();
