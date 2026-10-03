@@ -1,0 +1,33 @@
+{
+  "corrections": [
+    {
+      "id": "jiamusi-detached-part",
+      "checked": "2026-10-03",
+      "from": 230800,
+      "to": 230900,
+      "referenceDistrict": 230904,
+      "originalSource": "https://geo.datav.aliyun.com/areas_v3/bound/230000_full.json",
+      "originalGCJ02Extent": [
+        131.493321,
+        46.128391,
+        131.630375,
+        46.249264
+      ],
+      "reference": {
+        "provider": "AreaCity / Amap and Tencent",
+        "version": "2025.251231.260403",
+        "url": "https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov/releases/tag/2025.251231.260403",
+        "sourceRecord": "scripts/additional-sources/qiezihe-areacity-record.csv",
+        "sourceRecordSHA256": "370afacf79dd1fa55eefee53a4eab9df4e89430907e4ec20fd65a1c055a47331",
+        "reusableDataset": "data/qiezihe-reference.json.gz",
+        "sha256": "67befdc52a0777fb70f515d73ddeac14a4d0996b09a10dd88eecf9a9d6889613",
+        "coordinateSystem": "WGS84, converted from GCJ-02",
+        "license": "MIT",
+        "licenseFile": "vendor/areacity-LICENSE.txt",
+        "originalPartCoverageFraction": 0.9902921385453035,
+        "originalPartCoverageFractionGCJ02": 0.9902732500106636
+      },
+      "method": "Reassign only the detached 21-vertex DataV part to Qitaihe and dissolve its shared edges. Retain the original land extent and all coordinates. The newer county boundary covers about 99% of the old part; remaining differences reflect boundary geometry differences. All other subdivisions, provincial coverage and Korean geometry remain unchanged."
+    }
+  ]
+}

@@ -12,6 +12,8 @@ const show=file=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().
 const manifest=JSON.parse(show('display-boundaries.parts.json'));
 const old=JSON.parse(gunzipSync(Buffer.concat(manifest.parts.map(show))));
 const changed=new Set([210600,220500,220600,222400]);
+// The later Jiamusi ownership correction has its own exact preservation checks.
+changed.add(230800);changed.add(230900);
 for(const f of old.subdivisions.features){const now=china.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(now.properties,f.properties);if(!changed.has(f.properties.adcode))assert.deepEqual(now.geometry,f.geometry,'Unrelated China geometry must remain exact: '+f.properties.adcode);}
 function shared(features){
  const top=topology({regions:{type:'FeatureCollection',features}});
@@ -45,4 +47,4 @@ for(const geometry of Object.values(korea.boundaries)){
  assert(lines.features.every(f=>f.geometry.coordinates.length<=4096),'GPU line buffer stays safe');
 }
 assert.equal(adaptiveOpacity(.8)[0],'interpolate');
-console.log({interKorean,chinaNorth,unchangedChinaSubdivisions:498,adaptiveIslandDetail:true});
+console.log({interKorean,chinaNorth,unchangedChinaSubdivisions:496,adaptiveIslandDetail:true});

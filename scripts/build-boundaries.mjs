@@ -7,6 +7,7 @@ import {createHash} from 'node:crypto';
 import {transformFeature} from './coordinates.mjs';
 import {applyChongmingCoast} from './chongming-overlay.mjs';
 import {reconcileMacau} from './macau-topology.mjs';
+import {correctJiamusi} from './jiamusi-correction.mjs';
 
 const root=new URL('../dist/data/',import.meta.url);
 const read=name=>{const file=new URL(name,root);return JSON.parse(fs.existsSync(file)?fs.readFileSync(file):gunzipSync(fs.readFileSync(new URL(name+'.gz',root))));};
@@ -74,6 +75,7 @@ const guangdong=await mapshaper.applyCommands('-i old.json -erase sar.json -o ou
 features=features.filter(f=>f.properties.provinceCode!==440000).concat(JSON.parse(guangdong['output.json']).features,sar);
 // Insert detailed Chongming shorelines after gap repair, preserving river water.
 features=await applyChongmingCoast(features,read('chongming-island.json'),read('chongming-north-bank.json'));
+features=correctJiamusi(features);
 const topo=topology({regions:{type:'FeatureCollection',features}});
 const regions=topo.objects.regions;
 const provinces={type:'FeatureCollection',features:manifest.coverage.map(entry=>({
