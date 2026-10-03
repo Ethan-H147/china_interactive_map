@@ -60,7 +60,7 @@ Remove text that does not convey necessary information. Use plain, professional 
 
 ## Korea map
 
-Click the peninsula on the China map, or open `korea.html`. The Korea view includes 29 first-level regions and 428 mapped second-level areas, with Korean and English names, country scopes, search, layer controls and animated navigation.
+China and Korea use one map canvas. Click the gray Korean peninsula to zoom into Korea; China becomes gray while Korean divisions are active. Click China or use the header switch to return. The Korea view includes 29 first-level regions and 428 mapped second-level areas, with Korean and English names, country scopes, search, layer controls and animated navigation. Existing `korea.html` links open the integrated Korea view.
 
 South Korean boundaries use the July 2026 SGIS-derived release from [vuski/admdongkor](https://github.com/vuski/admdongkor/tree/master/ver20260701), including the Jeonnam–Gwangju merger. Administrative-dong geometry is dissolved into provinces and municipalities without simplification. Ordinary city districts are merged into their cities. Sejong has no second-level entry; Jeju’s two administrative cities are retained. Published English names come from southkorea-maps, supplemented with romanized names for newer districts and merged city geometry.
 

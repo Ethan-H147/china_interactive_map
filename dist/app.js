@@ -10,6 +10,7 @@ const sourceFor=r=>r.feature.properties.level==='province'?'provinces':isPrefect
 function setRegionState(region,state){if(region.feature.geometry)map.setFeatureState({source:sourceFor(region),id:region.feature.properties.adcode},state);}
 function layerVisible(id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');}
 function syncLayers(){
+  if(atlasMode!=='china'){for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','other-fill','other-lines','other-selection','province-selection','province-lines'])layerVisible(id,false);return;}
   if(quiz.active){for(const id of ['other-fill','other-lines','other-selection','province-selection'])layerVisible(id,false);for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','province-lines'])layerVisible(id,true);return;}
   const pref=$('prefecture-layer').checked,other=$('other-layer').checked,prov=$('province-layer').checked;
   for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection'])layerVisible(id,pref);
@@ -21,7 +22,7 @@ const provinceLayers=new Map(),detailLayers=new Map(),regionIndex=[];
 let regionNames={},regionPopulation,xinjiangAdministration;
 let provinceFeatures,manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 const quiz={active:false,round:null,pool:[],saved:null,highlighted:[],reviewLayer:null};
-let normalProvinceColors;
+let normalProvinceColors,atlasMode='china',koreaAtlas;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
 const tooltip=document.createElement('div');tooltip.className='region-tooltip gpu-tooltip';tooltip.hidden=true;$('map-shell').append(tooltip);
@@ -84,7 +85,9 @@ function kind(p){
   return 'Prefecture-level City';
 }
 function controls(){
-  document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=cameraBusy||!allReady||(quiz.active&&!['home','zoom-in','zoom-out','fit-map'].includes(el.id)));
+  const koreaLoading=atlasMode==='korea'&&!koreaAtlas?.ready;
+  document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=cameraBusy||!allReady||koreaLoading||(quiz.active&&!['home','zoom-in','zoom-out','fit-map'].includes(el.id)));
+  $('atlas-switch').disabled=cameraBusy||!allReady||koreaLoading||!koreaAtlas||quiz.active;
   document.querySelectorAll('[data-quiz-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);
   for(const id of ['tab-explore','tab-layers'])$(id).disabled=quiz.active;
   if(allReady&&!quiz.active)$('quiz-start').disabled=cameraBusy||!quizPool().length;
@@ -184,6 +187,25 @@ function selectRegion(layer,parentCode,shouldFit=true){
   if(shouldFit&&layer.feature.geometry)return navigateBounds(layer.getBounds(),{paddingTopLeft:[35,70],paddingBottomRight:[55,65],maxZoom:regionZoom(p)});
   updateLabels();return Promise.resolve(true);
 }
+async function changeAtlas(next,animate=true){
+  if(cameraBusy||!allReady||quiz.active||!koreaAtlas||next===atlasMode)return false;
+  clearHover();clearSelection();clearSearch();activeCode=null;atlasMode=next;
+  document.body.dataset.atlas=next;document.title=next==='korea'?'Korea · 한반도':'China · 中国';
+  const korea=next==='korea';
+  history.replaceState(null,'',location.pathname+location.search+(korea?'#korea':''));
+  document.getElementById('china-sidebar').hidden=korea;
+  $('atlas-title-english').textContent=korea?'Korea':'China';$('atlas-title-english').className=korea?'korea-english':'china-english';
+  $('atlas-title-local').textContent=korea?'한반도':'中国';$('atlas-title-local').className=korea?'korean-title':'china-chinese';$('atlas-title-local').lang=korea?'ko':'zh';
+  $('atlas-switch').textContent=korea?'China · 中国':'Korea · 한반도';$('atlas-switch').setAttribute('aria-label',korea?'Switch to China':'Switch to Korea');
+  $('map').setAttribute('aria-label',korea?'Interactive map of North and South Korea':'Interactive China administrative boundary map');
+  $('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
+  map.setPaintProperty('province-fill','fill-color',korea?'#d7d7d3':fillPaint(normalProvinceColors,1)['fill-color']);
+  syncLayers();updateLabels();koreaAtlas.context(korea);
+  if(korea){await koreaAtlas.enter();}
+  else{koreaAtlas.leave();$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province');refreshStatus();controls();if(animate)await fitHome(true);updateLabels();}
+  return true;
+}
+$('atlas-switch').onclick=()=>changeAtlas(atlasMode==='china'?'korea':'china');
 function regionZoom(p){return [810000,820000].includes(p.provinceCode||p.adcode)?p.level==='province'?14:17:p.level==='province'?8:10;}
 function bindRegion(feature,parentCode){
   const bounds=new maplibregl.LngLatBounds();
@@ -201,6 +223,7 @@ function bindRegion(feature,parentCode){
 function addLabel(p,text,small){const xy=p.centroid||p.center;if(!xy)return;const div=document.createElement('div');div.className='province-label';div.textContent=text;if(small){const el=document.createElement('small');el.textContent=small;div.append(el);}labels.push(new maplibregl.Marker({element:div,anchor:'center'}).setLngLat(xy).addTo(map));}
 function updateLabels(){
   if(cameraBusy)return;
+  if(atlasMode==='korea'){labels.forEach(label=>label.remove());labels.length=0;koreaAtlas?.updateLabels();return;}
   labels.forEach(label=>label.remove());labels.length=0;
   if(quiz.active){const layer=quiz.reviewLayer;if(layer){const p=layer.feature.properties;addLabel(p,englishName(p),p.name);}return;}
   if(!$('label-layer').checked||!provinceFeatures)return;
@@ -251,9 +274,9 @@ function pickedRegion(point){
   const hits=map.queryRenderedFeatures(point,{layers});
   for(const id of layers){const hit=hits.find(f=>f.layer.id===id);if(hit)return regionByCode.get(hit.properties.adcode);}
 }
-map.on('click',event=>{if(cameraBusy||!allReady)return;const region=pickedRegion(event.point);if(region){if(quiz.active)answerQuiz(region.feature.properties.adcode);else selectRegion(region,region.feature.properties.provinceCode||region.feature.properties.adcode);}});
+map.on('click',event=>{if(cameraBusy||!allReady)return;if(atlasMode==='korea'){if(map.queryRenderedFeatures(event.point,{layers:['province-fill']}).length)changeAtlas('china');return;}const region=pickedRegion(event.point);if(region){if(quiz.active)answerQuiz(region.feature.properties.adcode);else selectRegion(region,region.feature.properties.provinceCode||region.feature.properties.adcode);}});
 map.on('mousemove',event=>{
-  if(cameraBusy||!allReady||map.isMoving())return;
+  if(atlasMode!=='china'||cameraBusy||!allReady||map.isMoving())return;
   const region=pickedRegion(event.point);if(hovered!==region){clearHover();hovered=region;if(region)setRegionState(region,{hover:true});}
   if(!region)return;map.getCanvas().style.cursor='pointer';
   if(quiz.active)return;
@@ -284,7 +307,8 @@ async function init(){try{
   syncLayers();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   allReady=true;initQuiz();controls();refreshStatus();updateLabels();
-  window.AtlasKorea?.addKoreaPortal(map).catch(error=>console.error('Korea outline could not load',error));
+  koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
+  controls();if(location.hash==='#korea')changeAtlas('korea');
 }catch(e){console.error(e);$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const code=Number(e.target.value);code?selectRegion(provinceLayers.get(code),code):reset();});
 for(const id of ['province-layer','prefecture-layer','other-layer'])$(id).addEventListener('change',()=>{
@@ -295,8 +319,8 @@ for(const id of ['province-layer','prefecture-layer','other-layer'])$(id).addEve
   updateLabels();refreshStatus();
 });
 $('label-layer').addEventListener('change',updateLabels);map.on('moveend',updateLabels);
-$('mode-province').onclick=()=>{if(!cameraBusy){clearHover();setMode('province');}};
-$('mode-prefecture').onclick=()=>{if(!cameraBusy){clearHover();setMode('prefecture');$('prefecture-layer').checked=true;syncLayers();refreshStatus();}};
+$('mode-province').onclick=()=>{if(atlasMode==='korea')return koreaAtlas.setMode(1);if(!cameraBusy){clearHover();setMode('province');}};
+$('mode-prefecture').onclick=()=>{if(atlasMode==='korea')return koreaAtlas.setMode(2);if(!cameraBusy){clearHover();setMode('prefecture');$('prefecture-layer').checked=true;syncLayers();refreshStatus();}};
 $('tab-explore').onclick=()=>showPanel('explore');$('tab-layers').onclick=()=>showPanel('layers');$('tab-quiz').onclick=()=>{showPanel('quiz');updateQuizSetup();};
 $('search').addEventListener('input',renderSearch);$('search').addEventListener('keydown',e=>{if(e.key==='Escape')clearSearch();if(e.key==='Enter')$('search-results').querySelector('button')?.click();});
 function randomPlace(){
@@ -306,8 +330,8 @@ function randomPlace(){
   const {layer}=places[Math.floor(Math.random()*places.length)];
   return selectRegion(layer,layer.feature.properties.provinceCode);
 }
-$('surprise').onclick=randomPlace;
-$('home').onclick=()=>quiz.active?configureQuiz():reset();$('selection-reset').onclick=reset;$('fit-map').onclick=()=>quiz.active?fitQuizScope():reset();
+$('surprise').onclick=()=>atlasMode==='korea'?koreaAtlas.random():randomPlace();
+$('home').onclick=()=>atlasMode==='korea'?koreaAtlas.home():quiz.active?configureQuiz():reset();$('selection-reset').onclick=reset;$('fit-map').onclick=()=>atlasMode==='korea'?koreaAtlas.fit():quiz.active?fitQuizScope():reset();
 function zoomBy(amount){
   if(cameraBusy||!allReady)return;
   map.stop();const zoom=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+amount));
@@ -437,6 +461,6 @@ $('quiz-map-reveal').onclick=()=>answerQuiz();$('quiz-map-next').onclick=nextQui
 map.getCanvas().addEventListener('keydown',event=>{if(event.key==='Enter'&&quiz.active&&!cameraBusy){event.preventDefault();const region=pickedRegion([map.getContainer().clientWidth/2,map.getContainer().clientHeight/2]);if(region)answerQuiz(region.feature.properties.adcode);}});
 map.getCanvas().addEventListener('focus',()=>{$('quiz-crosshair').hidden=!quiz.active;});map.getCanvas().addEventListener('blur',()=>{$('quiz-crosshair').hidden=true;});
 let previousSize;
-new ResizeObserver(()=>{const size=$('map').getBoundingClientRect();if(previousSize&&previousSize.width===size.width&&previousSize.height===size.height)return;previousSize={width:size.width,height:size.height};if(cameraBusy){map.stop();finishNavigation?.();}map.resize();if(quiz.active)fitQuizScope(false);else if(!selected)fitHome(false);else if(selected.layer.feature.geometry)map.fitBounds(selected.layer.getBounds(),{...navigationOptions({padding:[60,65],maxZoom:regionZoom(selected.layer.feature.properties)}),duration:0});updateLabels();}).observe($('map'));
-if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'navigate_to_province',description:'Select a province, show its details, and zoom to its boundary. Returns when movement finishes.',inputSchema:{type:'object',properties:{adcode:{type:'integer',enum:Object.keys(english).map(Number)}},required:['adcode'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:async input=>{if(!input||!Number.isInteger(input.adcode)||!provinceLayers.has(input.adcode)||!allReady)throw new Error('A loaded province administrative code is required.');if(quiz.active)throw new Error("End the quiz before navigating to a region.");if(cameraBusy)throw new Error('The map is moving. Wait until the current navigation completes.');await selectRegion(provinceLayers.get(input.adcode),input.adcode);return{adcode:input.adcode,name:english[input.adcode]};}})).catch(()=>{});}catch{}}
+new ResizeObserver(()=>{const size=$('map').getBoundingClientRect();if(previousSize&&previousSize.width===size.width&&previousSize.height===size.height)return;previousSize={width:size.width,height:size.height};if(cameraBusy){map.stop();finishNavigation?.();}map.resize();if(atlasMode==='korea'){updateLabels();return;}if(quiz.active)fitQuizScope(false);else if(!selected)fitHome(false);else if(selected.layer.feature.geometry)map.fitBounds(selected.layer.getBounds(),{...navigationOptions({padding:[60,65],maxZoom:regionZoom(selected.layer.feature.properties)}),duration:0});updateLabels();}).observe($('map'));
+if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'navigate_to_province',description:'Select a province, show its details, and zoom to its boundary. Returns when movement finishes.',inputSchema:{type:'object',properties:{adcode:{type:'integer',enum:Object.keys(english).map(Number)}},required:['adcode'],additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute:async input=>{if(!input||!Number.isInteger(input.adcode)||!provinceLayers.has(input.adcode)||!allReady)throw new Error('A loaded province administrative code is required.');if(quiz.active)throw new Error("End the quiz before navigating to a region.");if(cameraBusy)throw new Error('The map is moving. Wait until the current navigation completes.');if(atlasMode==='korea')await changeAtlas('china',false);await selectRegion(provinceLayers.get(input.adcode),input.adcode);return{adcode:input.adcode,name:english[input.adcode]};}})).catch(()=>{});}catch{}}
 showPanel('layers');controls();init();
