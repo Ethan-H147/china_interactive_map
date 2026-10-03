@@ -2,13 +2,16 @@
   "devDependencies": {
     "maplibre-gl": "6.11.2",
     "mapshaper": "0.7.72",
+    "osmtogeojson": "^3.0.0-beta.5",
     "topojson-client": "3.1.0",
     "topojson-server": "3.0.1"
   },
   "private": true,
   "scripts": {
     "build": "node scripts/build-boundaries.mjs",
-    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs",
-    "start": "node scripts/serve.mjs"
+    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:korea",
+    "start": "node scripts/serve.mjs",
+    "build:korea": "node scripts/fetch-korea.mjs && node scripts/build-korea-coast.mjs && node scripts/build-korea.mjs",
+    "test:korea": "node --check dist/korea.js && node scripts/validate-korea.mjs"
   }
 }

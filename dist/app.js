@@ -281,6 +281,7 @@ async function init(){try{
   syncLayers();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   allReady=true;initQuiz();controls();refreshStatus();updateLabels();
+  window.AtlasKorea?.addKoreaPortal(map).catch(error=>console.error('Korea outline could not load',error));
 }catch(e){console.error(e);$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const code=Number(e.target.value);code?selectRegion(provinceLayers.get(code),code):reset();});
 for(const id of ['province-layer','prefecture-layer','other-layer'])$(id).addEventListener('change',()=>{

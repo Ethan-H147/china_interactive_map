@@ -6,6 +6,7 @@ function loadError(error){
 }
 try{
   window.AtlasQuiz=await import('./quiz-engine.mjs');
+  window.AtlasKorea=await import('./korea-portal.mjs');
   const renderer=await import('./vendor/maplibre-gl.mjs');
   window.maplibregl=renderer;
   renderer.setWorkerCount(2);

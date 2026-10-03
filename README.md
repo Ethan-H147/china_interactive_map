@@ -58,6 +58,18 @@ The population panel uses revision 94716774 of Chinese Wikipedia’s [city popul
 
 Remove text that does not convey necessary information. Use plain, professional labels and factual descriptions. Do not add slogans, decorative headings, or promotional language.
 
+## Korea map
+
+Click the peninsula on the China map, or open `korea.html`. The Korea view includes 29 first-level regions and 428 mapped second-level areas, with Korean and English names, country scopes, search, layer controls and animated navigation.
+
+South Korean boundaries use the July 2026 SGIS-derived release from [vuski/admdongkor](https://github.com/vuski/admdongkor/tree/master/ver20260701), including the Jeonnam–Gwangju merger. Administrative-dong geometry is dissolved into provinces and municipalities without simplification. Ordinary city districts are merged into their cities. Sejong has no second-level entry; Jeju’s two administrative cities are retained. Published English names come from southkorea-maps, supplemented with romanized names for newer districts and merged city geometry.
+
+North Korean boundaries use OpenStreetMap’s 13 first-level relations and their 199 direct subareas. These include mapped urban areas and districts with varying OSM administrative-level tags; the relation hierarchy determines their parent. Administrative polygons are clipped to 2,086 OSM coastline ways. Coastline direction identifies land, retaining islands and excluding maritime areas. Country and province outlines come from the displayed subdivision geometry, with uncovered portions taken from the source first-level region. Map data is a snapshot, not a guarantee of current legal boundaries.
+
+Run `npm run build:korea` to download cached inputs and rebuild. Delete only the intended cached source files before a deliberate source refresh. Run `npm run test:korea` to validate bilingual names, unique IDs, parent relationships, interior label positions, city grouping, known locations and sea exclusion. `dist/data/korea-sources.json` records licenses, counts and input checksums. The `.bin` files contain gzip-compressed GeoJSON datasets.
+
+Attribution: This data is derived from administrative-dong boundaries released by Statistics Korea SGIS (https://sgis.kostat.go.kr) under KOGL Type 1, modified by vuski/admdongkor (https://github.com/vuski/admdongkor), distributed under CC BY 4.0. North Korean boundaries and coastlines: © OpenStreetMap contributors, ODbL 1.0. Flags: flag-icons, MIT.
+
 ## Preview
 
 Run `node scripts/serve.mjs` and open http://127.0.0.1:4173.

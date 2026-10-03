@@ -1,0 +1,30 @@
+{
+  "retrieved": "2026-10-03T00:53:01.544Z",
+  "south": {
+    "url": "https://github.com/vuski/admdongkor/tree/master/ver20260701",
+    "date": "2026-07-01",
+    "license": "CC BY 4.0; upstream SGIS KOGL Type 1",
+    "attribution": "This data is derived from administrative-dong boundaries released by Statistics Korea SGIS (https://sgis.kostat.go.kr) under KOGL Type 1, modified by vuski/admdongkor (https://github.com/vuski/admdongkor), distributed under CC BY 4.0.",
+    "processing": "Dissolved administrative-dong geometry into first- and second-level areas without simplification. Ordinary city districts are merged into their parent city; Sejong has no second-level area.",
+    "names": "https://github.com/southkorea/southkorea-maps"
+  },
+  "north": {
+    "url": "https://www.openstreetmap.org/relation/192734",
+    "license": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors",
+    "processing": "Administrative relations clipped to detailed OpenStreetMap coastline. First-level outlines derived from their subdivisions; uncovered portions retain the source first-level geometry."
+  },
+  "counts": {
+    "first": 29,
+    "second": 428,
+    "northFirst": 13,
+    "southFirst": 16,
+    "northSecond": 199,
+    "southSecond": 229
+  },
+  "sha256": {
+    "south.geojson": "c01ef44a0eb00978662ba7a6240ccb1da287fb52abd85104a1758969d391132f",
+    "north-detailed.geojson": "2e35feb1f00ee18ced9cdc70b85f3a9c69460d495ef618d7c0d55720a64c1cc7",
+    "north-coast.json": "e382bb6b21c277ffcb84fcf92e3adeb2009686ee8c3db5006f9c46ee09844565"
+  }
+}

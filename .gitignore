@@ -6,3 +6,10 @@ scripts/additional-sources/taiwan-counties-original.json
 dist/data/taiwan-regions.json
 dist/data/display-boundaries.json
 dist/data/display-boundaries.json.gz
+scripts/korea-sources/osm/
+scripts/korea-sources/*.geojson
+scripts/korea-sources/north-osm.json
+scripts/korea-sources/north-sample.json
+scripts/korea-sources/north-coast.json
+scripts/korea-sources/north-metadata.json
+scripts/korea-sources/north-adm2-metadata.json
