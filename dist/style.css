@@ -13,3 +13,19 @@
 .maplibregl-canvas{outline:none}.maplibregl-control-container .maplibregl-ctrl-attrib{background:#f4f0e7df;color:#8a8275;font-size:10px;line-height:16px;padding:0 5px}.maplibregl-ctrl-attrib a{color:#736954}.maplibregl-marker.province-label{z-index:3}.gpu-tooltip{position:absolute;z-index:445;pointer-events:none;max-width:250px}.maplibregl-canvas-container{cursor:grab}.maplibregl-canvas-container.maplibregl-interactive:active{cursor:grabbing}
 
 .creator-credit{font-size:12px;line-height:1.5;white-space:nowrap}
+/* Capital markers follow MapLibre's camera without rebuilding during movement. */
+.capital-toggle-icon{width:21px;text-align:center;font-size:18px;color:#a67935;font-style:normal}
+.capital-legend{padding:2px 0 12px;display:grid;gap:7px;color:var(--muted);font-size:12px;line-height:1.4}
+.capital-legend[hidden]{display:none}
+.capital-key{display:flex;align-items:center;gap:8px}
+.capital-key svg{width:17px;height:17px;flex:none}
+.capital-marker{width:17px;height:17px;z-index:3;cursor:default;outline:none}
+.capital-marker.national{width:24px;height:24px;z-index:4}
+.capital-marker svg{display:block;width:100%;height:100%;overflow:visible}
+.capital-marker path,.capital-key path{fill:#a67935;stroke:#fff9ed;stroke-width:1.5;stroke-linejoin:round}
+.capital-marker.national path,.capital-key.national path{fill:#bf392b;stroke:#fff9ed;stroke-width:1}
+.capital-marker circle,.capital-key circle{fill:#fff9ed;stroke:#bf392b;stroke-width:1.4}
+.capital-tip{display:none;position:absolute;left:50%;bottom:calc(100% + 8px);transform:translateX(-50%);width:max-content;max-width:230px;padding:7px 10px;border:1px solid #d7c7ae;border-radius:5px;background:#fff9ed;color:#403c35;font:12px/1.5 system-ui,sans-serif;box-shadow:0 2px 8px #403c3515;text-align:center;pointer-events:none}
+.capital-marker:hover,.capital-marker:focus-visible{z-index:5}
+.capital-marker:hover .capital-tip,.capital-marker:focus-visible .capital-tip{display:block}
+.capital-marker:focus-visible svg{filter:drop-shadow(0 0 2px #bf392b)}

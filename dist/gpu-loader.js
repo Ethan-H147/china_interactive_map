@@ -8,6 +8,7 @@ try{
   window.AtlasQuiz=await import('./quiz-engine.mjs');
   window.AtlasKorea=await import('./korea-portal.mjs');
   window.AtlasLines=await import('./adaptive-lines.mjs');
+  window.AtlasCapitals=await import('./capitals.mjs');
   const renderer=await import('./vendor/maplibre-gl.mjs');
   window.maplibregl=renderer;
   renderer.setWorkerCount(2);

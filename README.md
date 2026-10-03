@@ -99,3 +99,9 @@ The local `/benchmark` route runs four timed pans near Tianjin and reports anima
 
 Country, province and internal boundary strokes are drawn separately, so coastlines are drawn once. `adaptive-lines.mjs` retains every original line segment in the source data, splits long GPU paths, and calculates each path's projected size. Tile simplification has a 0.65 pixel tolerance at the current tile zoom. Island outlines fade in between roughly 1.5 and 4 screen pixels; close views retain the detailed source geometry. Fill polygons and hit testing retain full precision. This applies to China, Korea, selected regions, Hong Kong and Macau.
 
+## Capital display
+
+The Capitals toggle is off by default and shared between China and Korea. Gold stars mark provincial capitals and regional government seats; larger red stars mark national capitals and Taipei’s central government seat. Names and roles appear on hover or keyboard focus. Municipalities use their city seat, without a second marker at a national capital. Stars are hidden during quizzes.
+
+`dist/data/capitals.json` stores curated seats with WGS84 city-centre coordinates and individual GeoNames references (CC BY 4.0). Jeonnam–Gwangju includes its government offices in Gwangju, Muan and Suncheon. Markers follow MapLibre’s camera and are rebuilt only when visibility or map mode changes. `npm run test:capitals` checks coverage, duplicate cities, coordinate containment and quiz visibility.
+

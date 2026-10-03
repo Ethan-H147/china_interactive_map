@@ -1,0 +1,896 @@
+{
+  "retrieved": "2026-10-02",
+  "coordinateSystem": "WGS84",
+  "coordinateSource": "https://download.geonames.org/export/dump/cities15000.zip",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "notes": "City-centre locations from GeoNames; capitals and regional seats curated explicitly. Municipalities use their own city seat. National markers replace coincident provincial markers. Taipei uses the national marker for the central government seat. Hong Kong and Macao have no separate capital city marker. Jeonnam–Gwangju retains government offices in Gwangju, Muan and Suncheon. Map boundaries are unchanged.",
+  "regionalSources": [
+    "https://www.gwangju.go.kr/main.do",
+    "https://www.jeonnam.go.kr/",
+    "https://www.korea.net/Resources/Website-Directory/view?firstSort=A090300&secondSort=A090305"
+  ],
+  "places": [
+    {
+      "atlas": "china",
+      "region": 110000,
+      "en": "Beijing",
+      "local": "北京",
+      "kind": "national",
+      "role": "National capital",
+      "coordinates": [
+        116.39723,
+        39.9075
+      ],
+      "geonamesId": 1816670,
+      "source": "https://www.geonames.org/1816670/"
+    },
+    {
+      "atlas": "china",
+      "region": 120000,
+      "en": "Tianjin",
+      "local": "天津",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        117.17667,
+        39.14222
+      ],
+      "geonamesId": 1792947,
+      "source": "https://www.geonames.org/1792947/"
+    },
+    {
+      "atlas": "china",
+      "region": 130000,
+      "en": "Shijiazhuang",
+      "local": "石家庄",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        114.47861,
+        38.04139
+      ],
+      "geonamesId": 1795270,
+      "source": "https://www.geonames.org/1795270/"
+    },
+    {
+      "atlas": "china",
+      "region": 140000,
+      "en": "Taiyuan",
+      "local": "太原",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        112.56028,
+        37.86944
+      ],
+      "geonamesId": 1793511,
+      "source": "https://www.geonames.org/1793511/"
+    },
+    {
+      "atlas": "china",
+      "region": 150000,
+      "en": "Hohhot",
+      "local": "呼和浩特",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        111.65222,
+        40.81056
+      ],
+      "geonamesId": 2036892,
+      "source": "https://www.geonames.org/2036892/"
+    },
+    {
+      "atlas": "china",
+      "region": 210000,
+      "en": "Shenyang",
+      "local": "沈阳",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        123.43278,
+        41.79222
+      ],
+      "geonamesId": 2034937,
+      "source": "https://www.geonames.org/2034937/"
+    },
+    {
+      "atlas": "china",
+      "region": 220000,
+      "en": "Changchun",
+      "local": "长春",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        125.32278,
+        43.88
+      ],
+      "geonamesId": 2038180,
+      "source": "https://www.geonames.org/2038180/"
+    },
+    {
+      "atlas": "china",
+      "region": 230000,
+      "en": "Harbin",
+      "local": "哈尔滨",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        126.65,
+        45.75
+      ],
+      "geonamesId": 2037013,
+      "source": "https://www.geonames.org/2037013/"
+    },
+    {
+      "atlas": "china",
+      "region": 310000,
+      "en": "Shanghai",
+      "local": "上海",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        121.45806,
+        31.22222
+      ],
+      "geonamesId": 1796236,
+      "source": "https://www.geonames.org/1796236/"
+    },
+    {
+      "atlas": "china",
+      "region": 320000,
+      "en": "Nanjing",
+      "local": "南京",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        118.77778,
+        32.06167
+      ],
+      "geonamesId": 1799962,
+      "source": "https://www.geonames.org/1799962/"
+    },
+    {
+      "atlas": "china",
+      "region": 330000,
+      "en": "Hangzhou",
+      "local": "杭州",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        120.16142,
+        30.29365
+      ],
+      "geonamesId": 1808926,
+      "source": "https://www.geonames.org/1808926/"
+    },
+    {
+      "atlas": "china",
+      "region": 340000,
+      "en": "Hefei",
+      "local": "合肥",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        117.28083,
+        31.86389
+      ],
+      "geonamesId": 1808722,
+      "source": "https://www.geonames.org/1808722/"
+    },
+    {
+      "atlas": "china",
+      "region": 350000,
+      "en": "Fuzhou",
+      "local": "福州",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        119.30611,
+        26.06139
+      ],
+      "geonamesId": 1810821,
+      "source": "https://www.geonames.org/1810821/"
+    },
+    {
+      "atlas": "china",
+      "region": 360000,
+      "en": "Nanchang",
+      "local": "南昌",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        115.85306,
+        28.68396
+      ],
+      "geonamesId": 1800163,
+      "source": "https://www.geonames.org/1800163/"
+    },
+    {
+      "atlas": "china",
+      "region": 370000,
+      "en": "Jinan",
+      "local": "济南",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        116.99722,
+        36.66833
+      ],
+      "geonamesId": 1805753,
+      "source": "https://www.geonames.org/1805753/"
+    },
+    {
+      "atlas": "china",
+      "region": 410000,
+      "en": "Zhengzhou",
+      "local": "郑州",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        113.64861,
+        34.75778
+      ],
+      "geonamesId": 1784658,
+      "source": "https://www.geonames.org/1784658/"
+    },
+    {
+      "atlas": "china",
+      "region": 420000,
+      "en": "Wuhan",
+      "local": "武汉",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        114.26667,
+        30.58333
+      ],
+      "geonamesId": 1791247,
+      "source": "https://www.geonames.org/1791247/"
+    },
+    {
+      "atlas": "china",
+      "region": 430000,
+      "en": "Changsha",
+      "local": "长沙",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        112.97087,
+        28.19874
+      ],
+      "geonamesId": 1815577,
+      "source": "https://www.geonames.org/1815577/"
+    },
+    {
+      "atlas": "china",
+      "region": 440000,
+      "en": "Guangzhou",
+      "local": "广州",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        113.25,
+        23.11667
+      ],
+      "geonamesId": 1809858,
+      "source": "https://www.geonames.org/1809858/"
+    },
+    {
+      "atlas": "china",
+      "region": 450000,
+      "en": "Nanning",
+      "local": "南宁",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        108.31667,
+        22.81667
+      ],
+      "geonamesId": 1799869,
+      "source": "https://www.geonames.org/1799869/"
+    },
+    {
+      "atlas": "china",
+      "region": 460000,
+      "en": "Haikou",
+      "local": "海口",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        110.34651,
+        20.03421
+      ],
+      "geonamesId": 1809078,
+      "source": "https://www.geonames.org/1809078/"
+    },
+    {
+      "atlas": "china",
+      "region": 500000,
+      "en": "Chongqing",
+      "local": "重庆",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        106.55771,
+        29.56026
+      ],
+      "geonamesId": 1814906,
+      "source": "https://www.geonames.org/1814906/"
+    },
+    {
+      "atlas": "china",
+      "region": 510000,
+      "en": "Chengdu",
+      "local": "成都",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        104.06667,
+        30.66667
+      ],
+      "geonamesId": 1815286,
+      "source": "https://www.geonames.org/1815286/"
+    },
+    {
+      "atlas": "china",
+      "region": 520000,
+      "en": "Guiyang",
+      "local": "贵阳",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        106.71667,
+        26.58333
+      ],
+      "geonamesId": 1809461,
+      "source": "https://www.geonames.org/1809461/"
+    },
+    {
+      "atlas": "china",
+      "region": 530000,
+      "en": "Kunming",
+      "local": "昆明",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        102.71833,
+        25.03889
+      ],
+      "geonamesId": 1804651,
+      "source": "https://www.geonames.org/1804651/"
+    },
+    {
+      "atlas": "china",
+      "region": 540000,
+      "en": "Lhasa",
+      "local": "拉萨",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        91.1,
+        29.65
+      ],
+      "geonamesId": 1280737,
+      "source": "https://www.geonames.org/1280737/"
+    },
+    {
+      "atlas": "china",
+      "region": 610000,
+      "en": "Xi’an",
+      "local": "西安",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        108.92861,
+        34.25833
+      ],
+      "geonamesId": 1790630,
+      "source": "https://www.geonames.org/1790630/"
+    },
+    {
+      "atlas": "china",
+      "region": 620000,
+      "en": "Lanzhou",
+      "local": "兰州",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        103.83987,
+        36.05701
+      ],
+      "geonamesId": 1804430,
+      "source": "https://www.geonames.org/1804430/"
+    },
+    {
+      "atlas": "china",
+      "region": 630000,
+      "en": "Xining",
+      "local": "西宁",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        101.75739,
+        36.62554
+      ],
+      "geonamesId": 1788852,
+      "source": "https://www.geonames.org/1788852/"
+    },
+    {
+      "atlas": "china",
+      "region": 640000,
+      "en": "Yinchuan",
+      "local": "银川",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        106.27306,
+        38.46806
+      ],
+      "geonamesId": 1786657,
+      "source": "https://www.geonames.org/1786657/"
+    },
+    {
+      "atlas": "china",
+      "region": 650000,
+      "en": "Ürümqi",
+      "local": "乌鲁木齐",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        87.60046,
+        43.80096
+      ],
+      "geonamesId": 1529102,
+      "source": "https://www.geonames.org/1529102/"
+    },
+    {
+      "atlas": "china",
+      "region": 710000,
+      "en": "Taipei",
+      "local": "臺北",
+      "kind": "national",
+      "role": "Seat of Taiwan’s central government",
+      "coordinates": [
+        121.52639,
+        25.05306
+      ],
+      "geonamesId": 1668341,
+      "source": "https://www.geonames.org/1668341/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-11",
+      "en": "Seoul",
+      "local": "서울",
+      "kind": "national",
+      "role": "National capital",
+      "coordinates": [
+        126.9784,
+        37.566
+      ],
+      "geonamesId": 1835848,
+      "source": "https://www.geonames.org/1835848/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-26",
+      "en": "Busan",
+      "local": "부산",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        129.03004,
+        35.10168
+      ],
+      "geonamesId": 1838524,
+      "source": "https://www.geonames.org/1838524/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-27",
+      "en": "Daegu",
+      "local": "대구",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        128.59111,
+        35.87028
+      ],
+      "geonamesId": 1835329,
+      "source": "https://www.geonames.org/1835329/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-28",
+      "en": "Incheon",
+      "local": "인천",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        126.70515,
+        37.45646
+      ],
+      "geonamesId": 1843564,
+      "source": "https://www.geonames.org/1843564/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-12",
+      "en": "Gwangju",
+      "local": "광주",
+      "kind": "provincial",
+      "role": "Regional government seat",
+      "coordinates": [
+        126.91556,
+        35.15472
+      ],
+      "geonamesId": 1841811,
+      "source": "https://www.geonames.org/1841811/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-12",
+      "en": "Muan",
+      "local": "무안",
+      "kind": "provincial",
+      "role": "Regional government seat",
+      "coordinates": [
+        126.47899,
+        34.99014
+      ],
+      "geonamesId": 1840982,
+      "source": "https://www.geonames.org/1840982/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-12",
+      "en": "Suncheon",
+      "local": "순천",
+      "kind": "provincial",
+      "role": "Regional government seat",
+      "coordinates": [
+        127.48784,
+        34.9505
+      ],
+      "geonamesId": 1835648,
+      "source": "https://www.geonames.org/1835648/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-30",
+      "en": "Daejeon",
+      "local": "대전",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        127.38493,
+        36.34913
+      ],
+      "geonamesId": 1835235,
+      "source": "https://www.geonames.org/1835235/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-31",
+      "en": "Ulsan",
+      "local": "울산",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        129.31667,
+        35.53722
+      ],
+      "geonamesId": 1833747,
+      "source": "https://www.geonames.org/1833747/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-36",
+      "en": "Sejong",
+      "local": "세종",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        127.29223,
+        36.59245
+      ],
+      "geonamesId": 11523293,
+      "source": "https://www.geonames.org/11523293/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-41",
+      "en": "Suwon",
+      "local": "수원",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        127.00889,
+        37.29111
+      ],
+      "geonamesId": 1835553,
+      "source": "https://www.geonames.org/1835553/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-51",
+      "en": "Chuncheon",
+      "local": "춘천",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        127.73417,
+        37.87472
+      ],
+      "geonamesId": 1845136,
+      "source": "https://www.geonames.org/1845136/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-43",
+      "en": "Cheongju",
+      "local": "청주",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        127.48972,
+        36.63722
+      ],
+      "geonamesId": 1845604,
+      "source": "https://www.geonames.org/1845604/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-44",
+      "en": "Hongseong",
+      "local": "홍성",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        126.665,
+        36.6009
+      ],
+      "geonamesId": 1844174,
+      "source": "https://www.geonames.org/1844174/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-47",
+      "en": "Andong",
+      "local": "안동",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        128.72275,
+        36.56636
+      ],
+      "geonamesId": 1846986,
+      "source": "https://www.geonames.org/1846986/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-48",
+      "en": "Changwon",
+      "local": "창원",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        128.68111,
+        35.22806
+      ],
+      "geonamesId": 1846326,
+      "source": "https://www.geonames.org/1846326/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-50",
+      "en": "Jeju",
+      "local": "제주",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        126.52194,
+        33.50972
+      ],
+      "geonamesId": 1846266,
+      "source": "https://www.geonames.org/1846266/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KR-52",
+      "en": "Jeonju",
+      "local": "전주",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        127.14889,
+        35.82194
+      ],
+      "geonamesId": 1845457,
+      "source": "https://www.geonames.org/1845457/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356535",
+      "en": "Wonsan",
+      "local": "원산",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        127.44361,
+        39.15278
+      ],
+      "geonamesId": 1866923,
+      "source": "https://www.geonames.org/1866923/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-5453650",
+      "en": "Nampo",
+      "local": "남포",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        125.40778,
+        38.7375
+      ],
+      "geonamesId": 1873757,
+      "source": "https://www.geonames.org/1873757/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-6648083",
+      "en": "Rajin",
+      "local": "라진",
+      "kind": "provincial",
+      "role": "Regional government seat",
+      "coordinates": [
+        130.28308,
+        42.25559
+      ],
+      "geonamesId": 2042645,
+      "source": "https://www.geonames.org/2042645/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356419",
+      "en": "Pyongsong",
+      "local": "평성",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        125.87194,
+        39.24639
+      ],
+      "geonamesId": 1871871,
+      "source": "https://www.geonames.org/1871871/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356540",
+      "en": "Sinuiju",
+      "local": "신의주",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        124.39806,
+        40.10056
+      ],
+      "geonamesId": 2040893,
+      "source": "https://www.geonames.org/2040893/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356443",
+      "en": "Pyongyang",
+      "local": "평양",
+      "kind": "national",
+      "role": "National capital",
+      "coordinates": [
+        125.75432,
+        39.03385
+      ],
+      "geonamesId": 1871859,
+      "source": "https://www.geonames.org/1871859/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356386",
+      "en": "Hamhung",
+      "local": "함흥",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        127.53639,
+        39.91833
+      ],
+      "geonamesId": 1877449,
+      "source": "https://www.geonames.org/1877449/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-3781418",
+      "en": "Chongjin",
+      "local": "청진",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        129.77583,
+        41.79556
+      ],
+      "geonamesId": 2044757,
+      "source": "https://www.geonames.org/2044757/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356533",
+      "en": "Haeju",
+      "local": "해주",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        125.71472,
+        38.04056
+      ],
+      "geonamesId": 1877615,
+      "source": "https://www.geonames.org/1877615/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356442",
+      "en": "Sariwon",
+      "local": "사리원",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        125.75583,
+        38.50722
+      ],
+      "geonamesId": 1870883,
+      "source": "https://www.geonames.org/1870883/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356392",
+      "en": "Kanggye",
+      "local": "강계",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        126.58523,
+        40.96946
+      ],
+      "geonamesId": 2043572,
+      "source": "https://www.geonames.org/2043572/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-356379",
+      "en": "Hyesan",
+      "local": "혜산",
+      "kind": "provincial",
+      "role": "Provincial capital",
+      "coordinates": [
+        128.17778,
+        41.40167
+      ],
+      "geonamesId": 2043837,
+      "source": "https://www.geonames.org/2043837/"
+    },
+    {
+      "atlas": "korea",
+      "region": "KP-5455268",
+      "en": "Kaesong",
+      "local": "개성",
+      "kind": "provincial",
+      "role": "Municipal government seat",
+      "coordinates": [
+        126.55444,
+        37.97083
+      ],
+      "geonamesId": 1876373,
+      "source": "https://www.geonames.org/1876373/"
+    }
+  ]
+}

@@ -23,7 +23,7 @@ const provinceLayers=new Map(),detailLayers=new Map(),regionIndex=[];
 let regionNames={},regionPopulation,xinjiangAdministration;
 let provinceFeatures,manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 const quiz={active:false,round:null,pool:[],saved:null,highlighted:[],reviewLayer:null};
-let normalProvinceColors,atlasMode='china',koreaAtlas;
+let normalProvinceColors,atlasMode='china',koreaAtlas,capitalDisplay;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
 const tooltip=document.createElement('div');tooltip.className='region-tooltip gpu-tooltip';tooltip.hidden=true;$('map-shell').append(tooltip);
@@ -220,6 +220,7 @@ function bindRegion(feature,parentCode){
 }
 function addLabel(p,text,small){const xy=p.centroid||p.center;if(!xy)return;const div=document.createElement('div');div.className='province-label';div.textContent=text;if(small){const el=document.createElement('small');el.textContent=small;div.append(el);}labels.push(new maplibregl.Marker({element:div,anchor:'center'}).setLngLat(xy).addTo(map));}
 function updateLabels(){
+  capitalDisplay?.sync();
   if(cameraBusy)return;
   if(atlasMode==='korea'){labels.forEach(label=>label.remove());labels.length=0;koreaAtlas?.updateLabels();return;}
   labels.forEach(label=>label.remove());labels.length=0;
@@ -306,6 +307,9 @@ async function init(){try{
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   allReady=true;initQuiz();controls();refreshStatus();updateLabels();
   koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
+  const capitalsResponse=await fetch('data/capitals.json');
+  if(!capitalsResponse.ok)throw new Error('Capital locations could not load');
+  capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitalsResponse.json());
   controls();if(location.hash==='#korea')changeAtlas('korea');
 }catch(e){console.error(e);$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const code=Number(e.target.value);code?selectRegion(provinceLayers.get(code),code):reset();});

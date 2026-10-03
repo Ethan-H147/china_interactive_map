@@ -1,4 +1,5 @@
 node_modules/
+artifacts/
 scripts/additional-sources/ok_geo.csv
 scripts/additional-sources/osm-search.json
 scripts/additional-sources/ok_geo.csv.7z
