@@ -307,7 +307,7 @@ async function init(){try{
   syncLayers();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   allReady=true;initQuiz();controls();refreshStatus();updateLabels();
-  koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),zoom:zoomBy,switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
+  koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
   controls();if(location.hash==='#korea')changeAtlas('korea');
 }catch(e){console.error(e);$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const code=Number(e.target.value);code?selectRegion(provinceLayers.get(code),code):reset();});
@@ -331,7 +331,7 @@ function randomPlace(){
   return selectRegion(layer,layer.feature.properties.provinceCode);
 }
 $('surprise').onclick=()=>atlasMode==='korea'?koreaAtlas.random():randomPlace();
-$('home').onclick=()=>atlasMode==='korea'?koreaAtlas.home():quiz.active?configureQuiz():reset();$('selection-reset').onclick=reset;$('fit-map').onclick=()=>atlasMode==='korea'?koreaAtlas.fit():quiz.active?fitQuizScope():reset();
+$('home').onclick=()=>atlasMode==='korea'?koreaAtlas.home():quiz.active?configureQuiz():reset();$('selection-reset').onclick=reset;$('fit-map').onclick=viewParent;
 function zoomBy(amount){
   if(cameraBusy||!allReady)return;
   map.stop();const zoom=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+amount));
@@ -343,17 +343,17 @@ function zoomBy(amount){
   timer=setTimeout(()=>{map.stop();finish();},1200);
   map.easeTo({zoom,duration:350,easing:t=>1-Math.pow(1-t,3)});
 }
-function zoomOut(){
+function viewParent(){
   if(cameraBusy||!allReady)return;
-  if(quiz.active)return zoomBy(-1);
-  if(atlasMode==='korea')return koreaAtlas.zoomOut();
-  if(!selected)return zoomBy(-1);
+  if(quiz.active)return fitQuizScope();
+  if(atlasMode==='korea')return koreaAtlas.viewParent();
+  if(!selected)return reset();
   const p=selected.layer.feature.properties;
   if(p.level==='province')return reset();
   const parent=provinceLayers.get(p.provinceCode||activeCode);
   return parent?selectRegion(parent,parent.feature.properties.adcode):reset();
 }
-$('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=zoomOut;$('retry').onclick=()=>location.reload();
+$('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);$('retry').onclick=()=>location.reload();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 function quizPool(settings={scope:$('quiz-scope').value,includeTaiwan:$('quiz-taiwan').checked}){return AtlasQuiz.candidates([...regionByCode.values()],settings);}
 function initQuiz(){
@@ -388,7 +388,7 @@ function syncQuizStyle(){
   syncLayers();
   $('map-shell').dataset.quiz=String(quiz.active);$('quiz-map-prompt').hidden=!quiz.active;$('quiz-crosshair').hidden=true;
   $('home').textContent=quiz.active?'End quiz':'All China';
-  $('fit-map').title=quiz.active?'Fit quiz scope':'Fit all regions';$('fit-map').setAttribute('aria-label',$('fit-map').title);
+  $('fit-map').title=quiz.active?'Fit quiz scope':'View parent division';$('fit-map').setAttribute('aria-label',$('fit-map').title);
   map.getCanvas().setAttribute('aria-label',quiz.active?'Quiz map. Pan with arrow keys and zoom with plus or minus. Press Enter to select the area under the crosshair.':'Map');
 }
 async function startQuiz(){
