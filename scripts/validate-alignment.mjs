@@ -29,7 +29,7 @@ for(const p of source.filter(p=>p[1]>22.2041&&!contains(mo.geometry,p))) {
 assert(checked>50,'Port shoreline coverage is insufficient');
 const app=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
 let zoom=15;
-const context=vm.createContext({cameraBusy:false,allReady:true,lockCamera(){},unlockCamera(){},map:{getZoom:()=>zoom,getMinZoom:()=>1,getMaxZoom:()=>16,jumpTo(options){zoom=options.zoom;}}});
+const context=vm.createContext({cameraBusy:false,allReady:true,reducedMotion:{matches:true},updateLabels(){},lockCamera(){},unlockCamera(){},map:{stop(){},getZoom:()=>zoom,getMinZoom:()=>1,getMaxZoom:()=>16,jumpTo(options){zoom=options.zoom;}}});
 vm.runInContext(app.slice(app.indexOf('function zoomBy('),app.indexOf("$('zoom-in').onclick")),context);
 context.zoomBy(-1);assert.equal(zoom,14,'SAR zoom out must decrease by one level');
 context.zoomBy(1);assert.equal(zoom,15);context.zoomBy(1);assert.equal(zoom,16);context.zoomBy(1);assert.equal(zoom,16,'Respect map maximum zoom');
