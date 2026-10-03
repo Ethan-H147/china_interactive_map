@@ -6,6 +6,7 @@ import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {transformFeature} from './coordinates.mjs';
 import {applyChongmingCoast} from './chongming-overlay.mjs';
+import {reconcileMacau} from './macau-topology.mjs';
 
 const root=new URL('../dist/data/',import.meta.url);
 const read=name=>{const file=new URL(name,root);return JSON.parse(fs.existsSync(file)?fs.readFileSync(file):gunzipSync(fs.readFileSync(new URL(name+'.gz',root))));};
@@ -13,7 +14,7 @@ const source={...read('provinces.json'),features:read('provinces.json').features
 const manifest=read('manifest.json');
 const taiwan=read('taiwan-regions.json');
 const additions={...read('xinjiang-additions.json'),features:read('xinjiang-additions.json').features.map(transformFeature)};
-const sar=[...read('sar-810000.json').features,...read('sar-820000.json').features];
+const sar=[...read('sar-810000.json').features,...(await reconcileMacau(read('sar-820000.json'))).features];
 const zhuhaiDetailed=read('zhuhai-detailed.json');
 let features=[];
 for(const entry of manifest.coverage){
@@ -99,6 +100,7 @@ const parts=[];for(let offset=0,index=0;offset<compressed.length;offset+=4*1024*
 fs.writeFileSync(new URL('display-boundaries.parts.json',root),JSON.stringify({compression:'gzip',parts,compressedBytes:compressed.length,uncompressedBytes:serialized.length,sha256:createHash('sha256').update(serialized).digest('hex')},null,2));
 const provenance=read('additional-sources.json');
 provenance.processing={simplification:false,zhuhai:'Detailed DataV district union replaces coastal coverage within [113.48,22.08,113.61,22.26]. The entire old port island is replaced by the connected OpenStreetMap shoreline; Macau government polygons retain jurisdiction.',displayCoordinateSystem:'WGS84',mainland:'DataV and AreaCity GCJ-02 coordinates numerically converted to WGS84, retaining every source vertex before government overlays.',coordinateReference:'https://help.aliyun.com/en/datav/datav-7-0/user-guide/map-data-format-1',xinjiang:'New cities clipped to the existing detailed Xinjiang extent, then erased from the older prefectures. Coincident overlay vertices joined within 1e-10 degrees.',taiwan:'Official county/city polygons replace the coarse Taiwan outline. Overlapping older Fujian island components are replaced as whole components to prevent residual coastlines.',sar:'Official Hong Kong land-clipped districts and Macau parish/area polygons replace previous SAR geometry after legacy gap repair. Their land polygons are erased from neighboring Guangdong to prevent overlapping fills.',replacedFujianIslandParts:[...replaced],retainedOtherProvinceBordersAfterCoordinateConversion:26};
+provenance.processing.macau="Macau shared parish edges are reconciled with 1e-8 degree vertex snapping and a 0.1 m sliver-gap threshold before coastline extraction. No simplification is applied; validation bounds boundary displacement to 0.2 m.";
 provenance.processing.chongming='OpenStreetMap island relation 3292765 replaces only the main Chongming island. The existing Shanghai/Jiangsu administrative split is retained on the island. Connected north-bank coastline ways remove North Branch river water from Nantong within [121.10,31.42,122.05,31.93]. Changxing, Hengsha and all other subdivisions retain their previous geometry.';
 provenance.sources=provenance.sources.filter(s=>!['chongming-island.json','chongming-north-bank.json'].includes(s.sourceFile));
 for(const [file,label,extra] of [
