@@ -307,7 +307,7 @@ async function init(){try{
   syncLayers();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   allReady=true;initQuiz();controls();refreshStatus();updateLabels();
-  koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
+  koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),zoom:zoomBy,switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
   controls();if(location.hash==='#korea')changeAtlas('korea');
 }catch(e){console.error(e);$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const code=Number(e.target.value);code?selectRegion(provinceLayers.get(code),code):reset();});
@@ -343,7 +343,17 @@ function zoomBy(amount){
   timer=setTimeout(()=>{map.stop();finish();},1200);
   map.easeTo({zoom,duration:350,easing:t=>1-Math.pow(1-t,3)});
 }
-$('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);$('retry').onclick=()=>location.reload();
+function zoomOut(){
+  if(cameraBusy||!allReady)return;
+  if(quiz.active)return zoomBy(-1);
+  if(atlasMode==='korea')return koreaAtlas.zoomOut();
+  if(!selected)return zoomBy(-1);
+  const p=selected.layer.feature.properties;
+  if(p.level==='province')return reset();
+  const parent=provinceLayers.get(p.provinceCode||activeCode);
+  return parent?selectRegion(parent,parent.feature.properties.adcode):reset();
+}
+$('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=zoomOut;$('retry').onclick=()=>location.reload();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 function quizPool(settings={scope:$('quiz-scope').value,includeTaiwan:$('quiz-taiwan').checked}){return AtlasQuiz.candidates([...regionByCode.values()],settings);}
 function initQuiz(){
