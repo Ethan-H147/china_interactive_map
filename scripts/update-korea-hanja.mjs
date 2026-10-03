@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+import {gunzipSync,gzipSync} from 'node:zlib';
+import {addHanja} from './korea-hanja.mjs';
+const out=new URL('../dist/data/',import.meta.url);
+const data=JSON.parse(gunzipSync(await fs.readFile(new URL('korea-boundaries.bin',out))));
+const manifest=await addHanja(data);
+await fs.writeFile(new URL('korea-boundaries.bin',out),gzipSync(JSON.stringify(data)));
+await fs.writeFile(new URL('korea-hanja.json',out),JSON.stringify(manifest,null,2)+'\n');
+const sources=JSON.parse(await fs.readFile(new URL('korea-sources.json',out),'utf8'));
+sources.hanja={manifest:'korea-hanja.json',retrieved:manifest.retrieved,count:Object.keys(manifest.names).length,method:manifest.method};
+await fs.writeFile(new URL('korea-sources.json',out),JSON.stringify(sources,null,2)+'\n');
+console.log({hanja:455,withoutHanja:Object.keys(manifest.omitted)});

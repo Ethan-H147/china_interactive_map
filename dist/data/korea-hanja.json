@@ -1,0 +1,2504 @@
+{
+  "retrieved": "2026-10-03T01:50:03.025Z",
+  "method": "Explicit OSM name:ko-Hani tags for North Korea. South Korean Hanja tables matched by Hangul; ambiguous Gwangju and Goseong names resolved by parent region. New Incheon and Jeonnam–Gwangju names checked against the linked local or national sources. No automatic conversion of Chinese translations.",
+  "omitted": {
+    "KR-11": {
+      "ko": "서울특별시",
+      "reason": "Native Korean place name; omitted as requested.",
+      "url": "https://en.wikipedia.org/wiki/Seoul"
+    },
+    "KP-5469504": {
+      "ko": "과일군",
+      "reason": "Native Korean word for fruit; no Hanja place name.",
+      "url": "https://en.wikipedia.org/wiki/Kwail_County"
+    }
+  },
+  "names": {
+    "KP-10627378": {
+      "ko": "대동군",
+      "hanja": "大同郡",
+      "url": "https://www.openstreetmap.org/relation/10627378",
+      "sourceVersion": 8
+    },
+    "KP-12310800": {
+      "ko": "판문구역",
+      "hanja": "板門區域",
+      "url": "https://www.openstreetmap.org/relation/12310800",
+      "sourceVersion": 25
+    },
+    "KP-13263307": {
+      "ko": "와우도구역",
+      "hanja": "臥牛島區域",
+      "url": "https://www.openstreetmap.org/relation/13263307",
+      "sourceVersion": 5
+    },
+    "KP-13263308": {
+      "ko": "항구구역",
+      "hanja": "港口區域",
+      "url": "https://www.openstreetmap.org/relation/13263308",
+      "sourceVersion": 5
+    },
+    "KP-13266178": {
+      "ko": "개풍구역",
+      "hanja": "開豊區域",
+      "url": "https://www.openstreetmap.org/relation/13266178",
+      "sourceVersion": 16
+    },
+    "KP-13284719": {
+      "ko": "라진구역",
+      "hanja": "羅津區域",
+      "url": "https://www.openstreetmap.org/relation/13284719",
+      "sourceVersion": 8
+    },
+    "KP-13284720": {
+      "ko": "선봉구역",
+      "hanja": "先鋒區域",
+      "url": "https://www.openstreetmap.org/relation/13284720",
+      "sourceVersion": 15
+    },
+    "KP-13341785": {
+      "ko": "개성시 직할",
+      "hanja": "開城市 直轄",
+      "url": "https://www.openstreetmap.org/relation/13341785",
+      "sourceVersion": 11
+    },
+    "KP-14043568": {
+      "ko": "화성구역",
+      "hanja": "和盛區域",
+      "url": "https://www.openstreetmap.org/relation/14043568",
+      "sourceVersion": 12
+    },
+    "KP-2636972": {
+      "ko": "중구역",
+      "hanja": "中區域",
+      "url": "https://www.openstreetmap.org/relation/2636972",
+      "sourceVersion": 46
+    },
+    "KP-2637057": {
+      "ko": "평천구역",
+      "hanja": "平川區域",
+      "url": "https://www.openstreetmap.org/relation/2637057",
+      "sourceVersion": 30
+    },
+    "KP-2637105": {
+      "ko": "보통강구역",
+      "hanja": "普通江區域",
+      "url": "https://www.openstreetmap.org/relation/2637105",
+      "sourceVersion": 27
+    },
+    "KP-356379": {
+      "ko": "량강도",
+      "hanja": "兩江道",
+      "url": "https://www.openstreetmap.org/relation/356379",
+      "sourceVersion": 65
+    },
+    "KP-356386": {
+      "ko": "함경남도",
+      "hanja": "咸鏡南道",
+      "url": "https://www.openstreetmap.org/relation/356386",
+      "sourceVersion": 46
+    },
+    "KP-356392": {
+      "ko": "자강도",
+      "hanja": "慈江道",
+      "url": "https://www.openstreetmap.org/relation/356392",
+      "sourceVersion": 56
+    },
+    "KP-356419": {
+      "ko": "평안남도",
+      "hanja": "平安南道",
+      "url": "https://www.openstreetmap.org/relation/356419",
+      "sourceVersion": 104
+    },
+    "KP-356442": {
+      "ko": "황해북도",
+      "hanja": "黃海北道",
+      "url": "https://www.openstreetmap.org/relation/356442",
+      "sourceVersion": 140
+    },
+    "KP-356443": {
+      "ko": "평양시",
+      "hanja": "平壤市",
+      "url": "https://www.openstreetmap.org/relation/356443",
+      "sourceVersion": 109
+    },
+    "KP-356533": {
+      "ko": "황해남도",
+      "hanja": "黃海南道",
+      "url": "https://www.openstreetmap.org/relation/356533",
+      "sourceVersion": 87
+    },
+    "KP-356535": {
+      "ko": "강원도",
+      "hanja": "江原道",
+      "url": "https://www.openstreetmap.org/relation/356535",
+      "sourceVersion": 98
+    },
+    "KP-356539": {
+      "ko": "신의주시",
+      "hanja": "新義州市",
+      "url": "https://www.openstreetmap.org/relation/356539",
+      "sourceVersion": 32
+    },
+    "KP-356540": {
+      "ko": "평안북도",
+      "hanja": "平安北道",
+      "url": "https://www.openstreetmap.org/relation/356540",
+      "sourceVersion": 102
+    },
+    "KP-3781418": {
+      "ko": "함경북도",
+      "hanja": "咸鏡北道",
+      "url": "https://www.openstreetmap.org/relation/3781418",
+      "sourceVersion": 61
+    },
+    "KP-3852359": {
+      "ko": "동대원구역",
+      "hanja": "東大院區域",
+      "url": "https://www.openstreetmap.org/relation/3852359",
+      "sourceVersion": 19
+    },
+    "KP-3852767": {
+      "ko": "대동강구역",
+      "hanja": "大同江區域",
+      "url": "https://www.openstreetmap.org/relation/3852767",
+      "sourceVersion": 17
+    },
+    "KP-3852780": {
+      "ko": "선교구역",
+      "hanja": "船橋區域",
+      "url": "https://www.openstreetmap.org/relation/3852780",
+      "sourceVersion": 18
+    },
+    "KP-3859451": {
+      "ko": "서성구역",
+      "hanja": "西城區域",
+      "url": "https://www.openstreetmap.org/relation/3859451",
+      "sourceVersion": 26
+    },
+    "KP-3859471": {
+      "ko": "모란봉구역",
+      "hanja": "牡丹峰區域",
+      "url": "https://www.openstreetmap.org/relation/3859471",
+      "sourceVersion": 24
+    },
+    "KP-3859480": {
+      "ko": "대성구역",
+      "hanja": "大城區域",
+      "url": "https://www.openstreetmap.org/relation/3859480",
+      "sourceVersion": 23
+    },
+    "KP-3859482": {
+      "ko": "락랑구역",
+      "hanja": "樂浪區域",
+      "url": "https://www.openstreetmap.org/relation/3859482",
+      "sourceVersion": 24
+    },
+    "KP-3859517": {
+      "ko": "강남군",
+      "hanja": "江南郡",
+      "url": "https://www.openstreetmap.org/relation/3859517",
+      "sourceVersion": 21
+    },
+    "KP-3859544": {
+      "ko": "중화군",
+      "hanja": "中和郡",
+      "url": "https://www.openstreetmap.org/relation/3859544",
+      "sourceVersion": 20
+    },
+    "KP-3859555": {
+      "ko": "력포구역",
+      "hanja": "力浦區域",
+      "url": "https://www.openstreetmap.org/relation/3859555",
+      "sourceVersion": 25
+    },
+    "KP-3859561": {
+      "ko": "사동구역",
+      "hanja": "寺洞區域",
+      "url": "https://www.openstreetmap.org/relation/3859561",
+      "sourceVersion": 21
+    },
+    "KP-3860474": {
+      "ko": "상원군",
+      "hanja": "祥原郡",
+      "url": "https://www.openstreetmap.org/relation/3860474",
+      "sourceVersion": 18
+    },
+    "KP-3860518": {
+      "ko": "승호군",
+      "hanja": "勝湖郡",
+      "url": "https://www.openstreetmap.org/relation/3860518",
+      "sourceVersion": 15
+    },
+    "KP-3860523": {
+      "ko": "강동군",
+      "hanja": "江東郡",
+      "url": "https://www.openstreetmap.org/relation/3860523",
+      "sourceVersion": 25
+    },
+    "KP-3860809": {
+      "ko": "만경대구역",
+      "hanja": "萬景臺區域",
+      "url": "https://www.openstreetmap.org/relation/3860809",
+      "sourceVersion": 21
+    },
+    "KP-3864554": {
+      "ko": "형제산구역",
+      "hanja": "兄弟山區域",
+      "url": "https://www.openstreetmap.org/relation/3864554",
+      "sourceVersion": 18
+    },
+    "KP-3864568": {
+      "ko": "순안구역",
+      "hanja": "順安區域",
+      "url": "https://www.openstreetmap.org/relation/3864568",
+      "sourceVersion": 24
+    },
+    "KP-5405593": {
+      "ko": "염주군",
+      "hanja": "塩州郡",
+      "url": "https://www.openstreetmap.org/relation/5405593",
+      "sourceVersion": 21
+    },
+    "KP-5406211": {
+      "ko": "룡천군",
+      "hanja": "龍川郡",
+      "url": "https://www.openstreetmap.org/relation/5406211",
+      "sourceVersion": 20
+    },
+    "KP-5448288": {
+      "ko": "피현군",
+      "hanja": "枇峴郡",
+      "url": "https://www.openstreetmap.org/relation/5448288",
+      "sourceVersion": 20
+    },
+    "KP-5448332": {
+      "ko": "철산군",
+      "hanja": "鐵山郡",
+      "url": "https://www.openstreetmap.org/relation/5448332",
+      "sourceVersion": 21
+    },
+    "KP-5452592": {
+      "ko": "동림군",
+      "hanja": "東林郡",
+      "url": "https://www.openstreetmap.org/relation/5452592",
+      "sourceVersion": 17
+    },
+    "KP-5452597": {
+      "ko": "의주군",
+      "hanja": "義州郡",
+      "url": "https://www.openstreetmap.org/relation/5452597",
+      "sourceVersion": 26
+    },
+    "KP-5452696": {
+      "ko": "선천군",
+      "hanja": "宣川郡",
+      "url": "https://www.openstreetmap.org/relation/5452696",
+      "sourceVersion": 18
+    },
+    "KP-5452717": {
+      "ko": "천마군",
+      "hanja": "天摩郡",
+      "url": "https://www.openstreetmap.org/relation/5452717",
+      "sourceVersion": 14
+    },
+    "KP-5452734": {
+      "ko": "곽산군",
+      "hanja": "郭山郡",
+      "url": "https://www.openstreetmap.org/relation/5452734",
+      "sourceVersion": 14
+    },
+    "KP-5452749": {
+      "ko": "삭주군",
+      "hanja": "朔州郡",
+      "url": "https://www.openstreetmap.org/relation/5452749",
+      "sourceVersion": 16
+    },
+    "KP-5452811": {
+      "ko": "정주시",
+      "hanja": "定州市",
+      "url": "https://www.openstreetmap.org/relation/5452811",
+      "sourceVersion": 14
+    },
+    "KP-5452823": {
+      "ko": "대관군",
+      "hanja": "大館郡",
+      "url": "https://www.openstreetmap.org/relation/5452823",
+      "sourceVersion": 12
+    },
+    "KP-5452836": {
+      "ko": "구성시",
+      "hanja": "龜城市",
+      "url": "https://www.openstreetmap.org/relation/5452836",
+      "sourceVersion": 15
+    },
+    "KP-5452898": {
+      "ko": "벽동군",
+      "hanja": "碧潼郡",
+      "url": "https://www.openstreetmap.org/relation/5452898",
+      "sourceVersion": 14
+    },
+    "KP-5452899": {
+      "ko": "창성군",
+      "hanja": "昌城郡",
+      "url": "https://www.openstreetmap.org/relation/5452899",
+      "sourceVersion": 14
+    },
+    "KP-5452929": {
+      "ko": "운전군",
+      "hanja": "雲田郡",
+      "url": "https://www.openstreetmap.org/relation/5452929",
+      "sourceVersion": 11
+    },
+    "KP-5453015": {
+      "ko": "태천군",
+      "hanja": "泰川郡",
+      "url": "https://www.openstreetmap.org/relation/5453015",
+      "sourceVersion": 9
+    },
+    "KP-5453023": {
+      "ko": "동창군",
+      "hanja": "東倉郡",
+      "url": "https://www.openstreetmap.org/relation/5453023",
+      "sourceVersion": 12
+    },
+    "KP-5453088": {
+      "ko": "녕변군",
+      "hanja": "寧邊郡",
+      "url": "https://www.openstreetmap.org/relation/5453088",
+      "sourceVersion": 13
+    },
+    "KP-5453089": {
+      "ko": "박천군",
+      "hanja": "博川郡",
+      "url": "https://www.openstreetmap.org/relation/5453089",
+      "sourceVersion": 13
+    },
+    "KP-5453133": {
+      "ko": "운산군",
+      "hanja": "雲山郡",
+      "url": "https://www.openstreetmap.org/relation/5453133",
+      "sourceVersion": 17
+    },
+    "KP-5453151": {
+      "ko": "구장군",
+      "hanja": "球場郡",
+      "url": "https://www.openstreetmap.org/relation/5453151",
+      "sourceVersion": 14
+    },
+    "KP-5453152": {
+      "ko": "향산군",
+      "hanja": "香山郡",
+      "url": "https://www.openstreetmap.org/relation/5453152",
+      "sourceVersion": 15
+    },
+    "KP-5453397": {
+      "ko": "평성시",
+      "hanja": "平城市",
+      "url": "https://www.openstreetmap.org/relation/5453397",
+      "sourceVersion": 22
+    },
+    "KP-5453650": {
+      "ko": "남포시",
+      "hanja": "南浦市",
+      "url": "https://www.openstreetmap.org/relation/5453650",
+      "sourceVersion": 43
+    },
+    "KP-5453654": {
+      "ko": "안주시",
+      "hanja": "安州市",
+      "url": "https://www.openstreetmap.org/relation/5453654",
+      "sourceVersion": 12
+    },
+    "KP-5453657": {
+      "ko": "개천시",
+      "hanja": "价川市",
+      "url": "https://www.openstreetmap.org/relation/5453657",
+      "sourceVersion": 18
+    },
+    "KP-5453660": {
+      "ko": "순천시",
+      "hanja": "順川市",
+      "url": "https://www.openstreetmap.org/relation/5453660",
+      "sourceVersion": 15
+    },
+    "KP-5453666": {
+      "ko": "덕천시",
+      "hanja": "德川市",
+      "url": "https://www.openstreetmap.org/relation/5453666",
+      "sourceVersion": 14
+    },
+    "KP-5454093": {
+      "ko": "운곡지구",
+      "hanja": "雲谷地區",
+      "url": "https://www.openstreetmap.org/relation/5454093",
+      "sourceVersion": 9
+    },
+    "KP-5454101": {
+      "ko": "문덕군",
+      "hanja": "文德郡",
+      "url": "https://www.openstreetmap.org/relation/5454101",
+      "sourceVersion": 14
+    },
+    "KP-5454106": {
+      "ko": "숙천군",
+      "hanja": "肅川郡",
+      "url": "https://www.openstreetmap.org/relation/5454106",
+      "sourceVersion": 12
+    },
+    "KP-5454113": {
+      "ko": "평원군",
+      "hanja": "平原郡",
+      "url": "https://www.openstreetmap.org/relation/5454113",
+      "sourceVersion": 16
+    },
+    "KP-5454141": {
+      "ko": "증산군",
+      "hanja": "甑山郡",
+      "url": "https://www.openstreetmap.org/relation/5454141",
+      "sourceVersion": 13
+    },
+    "KP-5454209": {
+      "ko": "강서구역",
+      "hanja": "江西區域",
+      "url": "https://www.openstreetmap.org/relation/5454209",
+      "sourceVersion": 18
+    },
+    "KP-5454210": {
+      "ko": "대안구역",
+      "hanja": "大安區域",
+      "url": "https://www.openstreetmap.org/relation/5454210",
+      "sourceVersion": 14
+    },
+    "KP-5454211": {
+      "ko": "천리마구역",
+      "hanja": "千里馬區域",
+      "url": "https://www.openstreetmap.org/relation/5454211",
+      "sourceVersion": 17
+    },
+    "KP-5454212": {
+      "ko": "룡강군",
+      "hanja": "龍岡郡",
+      "url": "https://www.openstreetmap.org/relation/5454212",
+      "sourceVersion": 7
+    },
+    "KP-5454213": {
+      "ko": "온천군",
+      "hanja": "溫泉郡",
+      "url": "https://www.openstreetmap.org/relation/5454213",
+      "sourceVersion": 10
+    },
+    "KP-5454281": {
+      "ko": "북창군",
+      "hanja": "北倉郡",
+      "url": "https://www.openstreetmap.org/relation/5454281",
+      "sourceVersion": 14
+    },
+    "KP-5454295": {
+      "ko": "은산군",
+      "hanja": "殷山郡",
+      "url": "https://www.openstreetmap.org/relation/5454295",
+      "sourceVersion": 15
+    },
+    "KP-5454307": {
+      "ko": "성천군",
+      "hanja": "成川郡",
+      "url": "https://www.openstreetmap.org/relation/5454307",
+      "sourceVersion": 11
+    },
+    "KP-5454326": {
+      "ko": "회창군",
+      "hanja": "檜倉郡",
+      "url": "https://www.openstreetmap.org/relation/5454326",
+      "sourceVersion": 15
+    },
+    "KP-5454334": {
+      "ko": "양덕군",
+      "hanja": "陽德郡",
+      "url": "https://www.openstreetmap.org/relation/5454334",
+      "sourceVersion": 13
+    },
+    "KP-5454342": {
+      "ko": "신양군",
+      "hanja": "新陽郡",
+      "url": "https://www.openstreetmap.org/relation/5454342",
+      "sourceVersion": 10
+    },
+    "KP-5454375": {
+      "ko": "맹산군",
+      "hanja": "孟山郡",
+      "url": "https://www.openstreetmap.org/relation/5454375",
+      "sourceVersion": 9
+    },
+    "KP-5454378": {
+      "ko": "녕원군",
+      "hanja": "寧遠郡",
+      "url": "https://www.openstreetmap.org/relation/5454378",
+      "sourceVersion": 11
+    },
+    "KP-5454385": {
+      "ko": "대흥군",
+      "hanja": "大興郡",
+      "url": "https://www.openstreetmap.org/relation/5454385",
+      "sourceVersion": 15
+    },
+    "KP-5455231": {
+      "ko": "황주군",
+      "hanja": "黃州郡",
+      "url": "https://www.openstreetmap.org/relation/5455231",
+      "sourceVersion": 16
+    },
+    "KP-5455246": {
+      "ko": "사리원시",
+      "hanja": "沙里院市",
+      "url": "https://www.openstreetmap.org/relation/5455246",
+      "sourceVersion": 19
+    },
+    "KP-5455268": {
+      "ko": "개성시",
+      "hanja": "開城市",
+      "url": "https://www.openstreetmap.org/relation/5455268",
+      "sourceVersion": 55
+    },
+    "KP-5455401": {
+      "ko": "송림시",
+      "hanja": "松林市",
+      "url": "https://www.openstreetmap.org/relation/5455401",
+      "sourceVersion": 11
+    },
+    "KP-5455422": {
+      "ko": "연탄군",
+      "hanja": "燕灘郡",
+      "url": "https://www.openstreetmap.org/relation/5455422",
+      "sourceVersion": 14
+    },
+    "KP-5455437": {
+      "ko": "연산군",
+      "hanja": "延山郡",
+      "url": "https://www.openstreetmap.org/relation/5455437",
+      "sourceVersion": 12
+    },
+    "KP-5455454": {
+      "ko": "신평군",
+      "hanja": "新坪郡",
+      "url": "https://www.openstreetmap.org/relation/5455454",
+      "sourceVersion": 16
+    },
+    "KP-5456099": {
+      "ko": "은파군",
+      "hanja": "銀波郡",
+      "url": "https://www.openstreetmap.org/relation/5456099",
+      "sourceVersion": 17
+    },
+    "KP-5456104": {
+      "ko": "린산군",
+      "hanja": "麟山郡",
+      "url": "https://www.openstreetmap.org/relation/5456104",
+      "sourceVersion": 16
+    },
+    "KP-5456194": {
+      "ko": "봉산군",
+      "hanja": "鳳山郡",
+      "url": "https://www.openstreetmap.org/relation/5456194",
+      "sourceVersion": 11
+    },
+    "KP-5456206": {
+      "ko": "수안군",
+      "hanja": "遂安郡",
+      "url": "https://www.openstreetmap.org/relation/5456206",
+      "sourceVersion": 10
+    },
+    "KP-5456248": {
+      "ko": "곡산군",
+      "hanja": "谷山郡",
+      "url": "https://www.openstreetmap.org/relation/5456248",
+      "sourceVersion": 11
+    },
+    "KP-5456274": {
+      "ko": "서흥군",
+      "hanja": "瑞興郡",
+      "url": "https://www.openstreetmap.org/relation/5456274",
+      "sourceVersion": 9
+    },
+    "KP-5456494": {
+      "ko": "신계군",
+      "hanja": "新溪郡",
+      "url": "https://www.openstreetmap.org/relation/5456494",
+      "sourceVersion": 11
+    },
+    "KP-5456500": {
+      "ko": "평산군",
+      "hanja": "平山郡",
+      "url": "https://www.openstreetmap.org/relation/5456500",
+      "sourceVersion": 10
+    },
+    "KP-5456504": {
+      "ko": "금천군",
+      "hanja": "金川郡",
+      "url": "https://www.openstreetmap.org/relation/5456504",
+      "sourceVersion": 14
+    },
+    "KP-5456509": {
+      "ko": "토산군",
+      "hanja": "兎山郡",
+      "url": "https://www.openstreetmap.org/relation/5456509",
+      "sourceVersion": 12
+    },
+    "KP-5469223": {
+      "ko": "배천군",
+      "hanja": "白川郡",
+      "url": "https://www.openstreetmap.org/relation/5469223",
+      "sourceVersion": 13
+    },
+    "KP-5469240": {
+      "ko": "봉천군",
+      "hanja": "峰泉郡",
+      "url": "https://www.openstreetmap.org/relation/5469240",
+      "sourceVersion": 10
+    },
+    "KP-5469278": {
+      "ko": "연안군",
+      "hanja": "延安郡",
+      "url": "https://www.openstreetmap.org/relation/5469278",
+      "sourceVersion": 16
+    },
+    "KP-5469279": {
+      "ko": "청단군",
+      "hanja": "靑丹郡",
+      "url": "https://www.openstreetmap.org/relation/5469279",
+      "sourceVersion": 16
+    },
+    "KP-5469296": {
+      "ko": "해주시",
+      "hanja": "海州市",
+      "url": "https://www.openstreetmap.org/relation/5469296",
+      "sourceVersion": 15
+    },
+    "KP-5469308": {
+      "ko": "강령군",
+      "hanja": "康翎郡",
+      "url": "https://www.openstreetmap.org/relation/5469308",
+      "sourceVersion": 18
+    },
+    "KP-5469325": {
+      "ko": "옹진군",
+      "hanja": "甕津郡",
+      "url": "https://www.openstreetmap.org/relation/5469325",
+      "sourceVersion": 21
+    },
+    "KP-5469362": {
+      "ko": "룡연군",
+      "hanja": "龍淵郡",
+      "url": "https://www.openstreetmap.org/relation/5469362",
+      "sourceVersion": 12
+    },
+    "KP-5469380": {
+      "ko": "신원군",
+      "hanja": "新院郡",
+      "url": "https://www.openstreetmap.org/relation/5469380",
+      "sourceVersion": 12
+    },
+    "KP-5469393": {
+      "ko": "신천군",
+      "hanja": "信川郡",
+      "url": "https://www.openstreetmap.org/relation/5469393",
+      "sourceVersion": 13
+    },
+    "KP-5469394": {
+      "ko": "재령군",
+      "hanja": "載寧郡",
+      "url": "https://www.openstreetmap.org/relation/5469394",
+      "sourceVersion": 14
+    },
+    "KP-5469410": {
+      "ko": "벽성군",
+      "hanja": "碧城郡",
+      "url": "https://www.openstreetmap.org/relation/5469410",
+      "sourceVersion": 12
+    },
+    "KP-5469411": {
+      "ko": "태탄군",
+      "hanja": "苔灘郡",
+      "url": "https://www.openstreetmap.org/relation/5469411",
+      "sourceVersion": 11
+    },
+    "KP-5469425": {
+      "ko": "안악군",
+      "hanja": "安岳郡",
+      "url": "https://www.openstreetmap.org/relation/5469425",
+      "sourceVersion": 11
+    },
+    "KP-5469428": {
+      "ko": "은천군",
+      "hanja": "銀泉郡",
+      "url": "https://www.openstreetmap.org/relation/5469428",
+      "sourceVersion": 11
+    },
+    "KP-5469468": {
+      "ko": "삼천군",
+      "hanja": "三泉郡",
+      "url": "https://www.openstreetmap.org/relation/5469468",
+      "sourceVersion": 10
+    },
+    "KP-5469475": {
+      "ko": "은률군",
+      "hanja": "殷栗郡",
+      "url": "https://www.openstreetmap.org/relation/5469475",
+      "sourceVersion": 13
+    },
+    "KP-5469483": {
+      "ko": "송화군",
+      "hanja": "松禾郡",
+      "url": "https://www.openstreetmap.org/relation/5469483",
+      "sourceVersion": 10
+    },
+    "KP-5469505": {
+      "ko": "장연군",
+      "hanja": "長淵郡",
+      "url": "https://www.openstreetmap.org/relation/5469505",
+      "sourceVersion": 12
+    },
+    "KP-5470473": {
+      "ko": "신도군",
+      "hanja": "薪島郡",
+      "url": "https://www.openstreetmap.org/relation/5470473",
+      "sourceVersion": 17
+    },
+    "KP-5475043": {
+      "ko": "우시군",
+      "hanja": "雩時郡",
+      "url": "https://www.openstreetmap.org/relation/5475043",
+      "sourceVersion": 9
+    },
+    "KP-5475058": {
+      "ko": "초산군",
+      "hanja": "楚山郡",
+      "url": "https://www.openstreetmap.org/relation/5475058",
+      "sourceVersion": 10
+    },
+    "KP-5475091": {
+      "ko": "고풍군",
+      "hanja": "古豐郡",
+      "url": "https://www.openstreetmap.org/relation/5475091",
+      "sourceVersion": 9
+    },
+    "KP-5475105": {
+      "ko": "송원군",
+      "hanja": "松源郡",
+      "url": "https://www.openstreetmap.org/relation/5475105",
+      "sourceVersion": 14
+    },
+    "KP-5475704": {
+      "ko": "강계시",
+      "hanja": "江界市",
+      "url": "https://www.openstreetmap.org/relation/5475704",
+      "sourceVersion": 12
+    },
+    "KP-5475705": {
+      "ko": "만포시",
+      "hanja": "滿浦市",
+      "url": "https://www.openstreetmap.org/relation/5475705",
+      "sourceVersion": 13
+    },
+    "KP-5475706": {
+      "ko": "희천시",
+      "hanja": "熙川市",
+      "url": "https://www.openstreetmap.org/relation/5475706",
+      "sourceVersion": 13
+    },
+    "KP-5475707": {
+      "ko": "위원군",
+      "hanja": "渭原郡",
+      "url": "https://www.openstreetmap.org/relation/5475707",
+      "sourceVersion": 12
+    },
+    "KP-5475708": {
+      "ko": "룡림군",
+      "hanja": "龍林郡",
+      "url": "https://www.openstreetmap.org/relation/5475708",
+      "sourceVersion": 11
+    },
+    "KP-5475709": {
+      "ko": "랑림군",
+      "hanja": "狼林郡",
+      "url": "https://www.openstreetmap.org/relation/5475709",
+      "sourceVersion": 11
+    },
+    "KP-5475710": {
+      "ko": "시중군",
+      "hanja": "時中郡",
+      "url": "https://www.openstreetmap.org/relation/5475710",
+      "sourceVersion": 11
+    },
+    "KP-5475711": {
+      "ko": "성간군",
+      "hanja": "城干郡",
+      "url": "https://www.openstreetmap.org/relation/5475711",
+      "sourceVersion": 10
+    },
+    "KP-5475712": {
+      "ko": "동신군",
+      "hanja": "東新郡",
+      "url": "https://www.openstreetmap.org/relation/5475712",
+      "sourceVersion": 9
+    },
+    "KP-5475713": {
+      "ko": "화평군",
+      "hanja": "和坪郡",
+      "url": "https://www.openstreetmap.org/relation/5475713",
+      "sourceVersion": 10
+    },
+    "KP-5475714": {
+      "ko": "장강군",
+      "hanja": "長江郡",
+      "url": "https://www.openstreetmap.org/relation/5475714",
+      "sourceVersion": 9
+    },
+    "KP-5475715": {
+      "ko": "자성군",
+      "hanja": "慈城郡",
+      "url": "https://www.openstreetmap.org/relation/5475715",
+      "sourceVersion": 11
+    },
+    "KP-5475716": {
+      "ko": "전천군",
+      "hanja": "前川郡",
+      "url": "https://www.openstreetmap.org/relation/5475716",
+      "sourceVersion": 9
+    },
+    "KP-5475717": {
+      "ko": "중강군",
+      "hanja": "中江郡",
+      "url": "https://www.openstreetmap.org/relation/5475717",
+      "sourceVersion": 17
+    },
+    "KP-5486618": {
+      "ko": "금강군",
+      "hanja": "金剛郡",
+      "url": "https://www.openstreetmap.org/relation/5486618",
+      "sourceVersion": 19
+    },
+    "KP-5488132": {
+      "ko": "고성군",
+      "hanja": "高城郡",
+      "url": "https://www.openstreetmap.org/relation/5488132",
+      "sourceVersion": 27
+    },
+    "KP-5974099": {
+      "ko": "고산군",
+      "hanja": "高山郡",
+      "url": "https://www.openstreetmap.org/relation/5974099",
+      "sourceVersion": 11
+    },
+    "KP-6125006": {
+      "ko": "삼지연시",
+      "hanja": "三池淵市",
+      "url": "https://www.openstreetmap.org/relation/6125006",
+      "sourceVersion": 33
+    },
+    "KP-6332276": {
+      "ko": "혜산시",
+      "hanja": "惠山市",
+      "url": "https://www.openstreetmap.org/relation/6332276",
+      "sourceVersion": 18
+    },
+    "KP-6648083": {
+      "ko": "라선시",
+      "hanja": "羅先市",
+      "url": "https://www.openstreetmap.org/relation/6648083",
+      "sourceVersion": 33
+    },
+    "KP-6889860": {
+      "ko": "룡성구역",
+      "hanja": "龍城區域",
+      "url": "https://www.openstreetmap.org/relation/6889860",
+      "sourceVersion": 18
+    },
+    "KP-6889890": {
+      "ko": "삼석구역",
+      "hanja": "三石區域",
+      "url": "https://www.openstreetmap.org/relation/6889890",
+      "sourceVersion": 13
+    },
+    "KP-6889943": {
+      "ko": "은정구역",
+      "hanja": "恩情區域",
+      "url": "https://www.openstreetmap.org/relation/6889943",
+      "sourceVersion": 11
+    },
+    "KP-6968705": {
+      "ko": "대홍단군",
+      "hanja": "大紅湍郡",
+      "url": "https://www.openstreetmap.org/relation/6968705",
+      "sourceVersion": 17
+    },
+    "KP-7117363": {
+      "ko": "안변군",
+      "hanja": "安邊郡",
+      "url": "https://www.openstreetmap.org/relation/7117363",
+      "sourceVersion": 16
+    },
+    "KP-8313358": {
+      "ko": "통천군",
+      "hanja": "通川郡",
+      "url": "https://www.openstreetmap.org/relation/8313358",
+      "sourceVersion": 14
+    },
+    "KP-8314828": {
+      "ko": "창도군",
+      "hanja": "昌道郡",
+      "url": "https://www.openstreetmap.org/relation/8314828",
+      "sourceVersion": 13
+    },
+    "KP-8315133": {
+      "ko": "회양군",
+      "hanja": "淮陽郡",
+      "url": "https://www.openstreetmap.org/relation/8315133",
+      "sourceVersion": 19
+    },
+    "KP-8318609": {
+      "ko": "원산시",
+      "hanja": "元山市",
+      "url": "https://www.openstreetmap.org/relation/8318609",
+      "sourceVersion": 20
+    },
+    "KP-8319793": {
+      "ko": "문천시",
+      "hanja": "文川市",
+      "url": "https://www.openstreetmap.org/relation/8319793",
+      "sourceVersion": 11
+    },
+    "KP-8320618": {
+      "ko": "천내군",
+      "hanja": "川內郡",
+      "url": "https://www.openstreetmap.org/relation/8320618",
+      "sourceVersion": 14
+    },
+    "KP-8321389": {
+      "ko": "법동군",
+      "hanja": "法洞郡",
+      "url": "https://www.openstreetmap.org/relation/8321389",
+      "sourceVersion": 12
+    },
+    "KP-8322192": {
+      "ko": "판교군",
+      "hanja": "板橋郡",
+      "url": "https://www.openstreetmap.org/relation/8322192",
+      "sourceVersion": 8
+    },
+    "KP-8323199": {
+      "ko": "이천군",
+      "hanja": "伊川郡",
+      "url": "https://www.openstreetmap.org/relation/8323199",
+      "sourceVersion": 9
+    },
+    "KP-8323448": {
+      "ko": "철원군",
+      "hanja": "鐵原郡",
+      "url": "https://www.openstreetmap.org/relation/8323448",
+      "sourceVersion": 14
+    },
+    "KP-8323804": {
+      "ko": "세포군",
+      "hanja": "洗浦郡",
+      "url": "https://www.openstreetmap.org/relation/8323804",
+      "sourceVersion": 18
+    },
+    "KP-8323972": {
+      "ko": "김화군",
+      "hanja": "金化郡",
+      "url": "https://www.openstreetmap.org/relation/8323972",
+      "sourceVersion": 16
+    },
+    "KP-8323973": {
+      "ko": "평강군",
+      "hanja": "平康郡",
+      "url": "https://www.openstreetmap.org/relation/8323973",
+      "sourceVersion": 14
+    },
+    "KP-8400244": {
+      "ko": "김책시",
+      "hanja": "金策市",
+      "url": "https://www.openstreetmap.org/relation/8400244",
+      "sourceVersion": 15
+    },
+    "KP-8400379": {
+      "ko": "함흥시",
+      "hanja": "咸興市",
+      "url": "https://www.openstreetmap.org/relation/8400379",
+      "sourceVersion": 21
+    },
+    "KP-8400380": {
+      "ko": "청진시",
+      "hanja": "淸津市",
+      "url": "https://www.openstreetmap.org/relation/8400380",
+      "sourceVersion": 26
+    },
+    "KP-8407288": {
+      "ko": "허천군",
+      "hanja": "虛川郡",
+      "url": "https://www.openstreetmap.org/relation/8407288",
+      "sourceVersion": 9
+    },
+    "KP-8407289": {
+      "ko": "단천시",
+      "hanja": "端川市",
+      "url": "https://www.openstreetmap.org/relation/8407289",
+      "sourceVersion": 12
+    },
+    "KP-8407676": {
+      "ko": "금야군",
+      "hanja": "金野郡",
+      "url": "https://www.openstreetmap.org/relation/8407676",
+      "sourceVersion": 9
+    },
+    "KP-8407677": {
+      "ko": "고원군",
+      "hanja": "高原郡",
+      "url": "https://www.openstreetmap.org/relation/8407677",
+      "sourceVersion": 12
+    },
+    "KP-8408283": {
+      "ko": "락원군",
+      "hanja": "樂園郡",
+      "url": "https://www.openstreetmap.org/relation/8408283",
+      "sourceVersion": 11
+    },
+    "KP-8408284": {
+      "ko": "함주군",
+      "hanja": "咸州郡",
+      "url": "https://www.openstreetmap.org/relation/8408284",
+      "sourceVersion": 11
+    },
+    "KP-8408285": {
+      "ko": "정평군",
+      "hanja": "定平郡",
+      "url": "https://www.openstreetmap.org/relation/8408285",
+      "sourceVersion": 7
+    },
+    "KP-8408286": {
+      "ko": "요덕군",
+      "hanja": "耀德郡",
+      "url": "https://www.openstreetmap.org/relation/8408286",
+      "sourceVersion": 7
+    },
+    "KP-8412736": {
+      "ko": "신포시",
+      "hanja": "新浦市",
+      "url": "https://www.openstreetmap.org/relation/8412736",
+      "sourceVersion": 6
+    },
+    "KP-8412737": {
+      "ko": "북청군",
+      "hanja": "北靑郡",
+      "url": "https://www.openstreetmap.org/relation/8412737",
+      "sourceVersion": 8
+    },
+    "KP-8412738": {
+      "ko": "금호군",
+      "hanja": "琴湖郡",
+      "url": "https://www.openstreetmap.org/relation/8412738",
+      "sourceVersion": 10
+    },
+    "KP-8412739": {
+      "ko": "홍원군",
+      "hanja": "洪原郡",
+      "url": "https://www.openstreetmap.org/relation/8412739",
+      "sourceVersion": 9
+    },
+    "KP-8413386": {
+      "ko": "덕성군",
+      "hanja": "德城郡",
+      "url": "https://www.openstreetmap.org/relation/8413386",
+      "sourceVersion": 7
+    },
+    "KP-8413387": {
+      "ko": "리원군",
+      "hanja": "利原郡",
+      "url": "https://www.openstreetmap.org/relation/8413387",
+      "sourceVersion": 8
+    },
+    "KP-8414550": {
+      "ko": "장진군",
+      "hanja": "長津郡",
+      "url": "https://www.openstreetmap.org/relation/8414550",
+      "sourceVersion": 8
+    },
+    "KP-8414552": {
+      "ko": "신흥군",
+      "hanja": "新興郡",
+      "url": "https://www.openstreetmap.org/relation/8414552",
+      "sourceVersion": 7
+    },
+    "KP-8414553": {
+      "ko": "영광군",
+      "hanja": "榮光郡",
+      "url": "https://www.openstreetmap.org/relation/8414553",
+      "sourceVersion": 11
+    },
+    "KP-8420621": {
+      "ko": "온성군",
+      "hanja": "穩城郡",
+      "url": "https://www.openstreetmap.org/relation/8420621",
+      "sourceVersion": 16
+    },
+    "KP-8420622": {
+      "ko": "회령시",
+      "hanja": "會寧市",
+      "url": "https://www.openstreetmap.org/relation/8420622",
+      "sourceVersion": 14
+    },
+    "KP-8426156": {
+      "ko": "화대군",
+      "hanja": "花臺郡",
+      "url": "https://www.openstreetmap.org/relation/8426156",
+      "sourceVersion": 10
+    },
+    "KP-8426157": {
+      "ko": "명천군",
+      "hanja": "明川郡",
+      "url": "https://www.openstreetmap.org/relation/8426157",
+      "sourceVersion": 9
+    },
+    "KP-8426158": {
+      "ko": "길주군",
+      "hanja": "吉州郡",
+      "url": "https://www.openstreetmap.org/relation/8426158",
+      "sourceVersion": 8
+    },
+    "KP-8426159": {
+      "ko": "명간군",
+      "hanja": "明澗郡",
+      "url": "https://www.openstreetmap.org/relation/8426159",
+      "sourceVersion": 7
+    },
+    "KP-8426160": {
+      "ko": "어랑군",
+      "hanja": "漁郞郡",
+      "url": "https://www.openstreetmap.org/relation/8426160",
+      "sourceVersion": 7
+    },
+    "KP-8426161": {
+      "ko": "경성군",
+      "hanja": "鏡城郡",
+      "url": "https://www.openstreetmap.org/relation/8426161",
+      "sourceVersion": 9
+    },
+    "KP-8426162": {
+      "ko": "연사군",
+      "hanja": "延社郡",
+      "url": "https://www.openstreetmap.org/relation/8426162",
+      "sourceVersion": 8
+    },
+    "KP-8426163": {
+      "ko": "무산군",
+      "hanja": "茂山郡",
+      "url": "https://www.openstreetmap.org/relation/8426163",
+      "sourceVersion": 11
+    },
+    "KP-8426164": {
+      "ko": "부령군",
+      "hanja": "富寧郡",
+      "url": "https://www.openstreetmap.org/relation/8426164",
+      "sourceVersion": 9
+    },
+    "KP-8426165": {
+      "ko": "경흥군",
+      "hanja": "慶興郡",
+      "url": "https://www.openstreetmap.org/relation/8426165",
+      "sourceVersion": 13
+    },
+    "KP-8426166": {
+      "ko": "경원군",
+      "hanja": "慶源郡",
+      "url": "https://www.openstreetmap.org/relation/8426166",
+      "sourceVersion": 17
+    },
+    "KP-8429865": {
+      "ko": "김형직군",
+      "hanja": "金亨稷郡",
+      "url": "https://www.openstreetmap.org/relation/8429865",
+      "sourceVersion": 11
+    },
+    "KP-8429866": {
+      "ko": "김정숙군",
+      "hanja": "金正淑郡",
+      "url": "https://www.openstreetmap.org/relation/8429866",
+      "sourceVersion": 12
+    },
+    "KP-8429867": {
+      "ko": "삼수군",
+      "hanja": "三水郡",
+      "url": "https://www.openstreetmap.org/relation/8429867",
+      "sourceVersion": 12
+    },
+    "KP-8429868": {
+      "ko": "김형권군",
+      "hanja": "金亨權郡",
+      "url": "https://www.openstreetmap.org/relation/8429868",
+      "sourceVersion": 10
+    },
+    "KP-8429869": {
+      "ko": "풍서군",
+      "hanja": "豐西郡",
+      "url": "https://www.openstreetmap.org/relation/8429869",
+      "sourceVersion": 9
+    },
+    "KP-8429870": {
+      "ko": "갑산군",
+      "hanja": "甲山郡",
+      "url": "https://www.openstreetmap.org/relation/8429870",
+      "sourceVersion": 9
+    },
+    "KP-8429871": {
+      "ko": "운흥군",
+      "hanja": "雲興郡",
+      "url": "https://www.openstreetmap.org/relation/8429871",
+      "sourceVersion": 10
+    },
+    "KP-8429872": {
+      "ko": "백암군",
+      "hanja": "白岩郡",
+      "url": "https://www.openstreetmap.org/relation/8429872",
+      "sourceVersion": 9
+    },
+    "KP-8429873": {
+      "ko": "보천군",
+      "hanja": "普天郡",
+      "url": "https://www.openstreetmap.org/relation/8429873",
+      "sourceVersion": 12
+    },
+    "KP-8429874": {
+      "ko": "부전군",
+      "hanja": "赴戰郡",
+      "url": "https://www.openstreetmap.org/relation/8429874",
+      "sourceVersion": 7
+    },
+    "KP-8484462": {
+      "ko": "장풍군",
+      "hanja": "長豐郡",
+      "url": "https://www.openstreetmap.org/relation/8484462",
+      "sourceVersion": 15
+    },
+    "KR-11110": {
+      "ko": "종로구",
+      "hanja": "鍾路區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11140": {
+      "ko": "중구",
+      "hanja": "中區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11170": {
+      "ko": "용산구",
+      "hanja": "龍山區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11200": {
+      "ko": "성동구",
+      "hanja": "城東區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11215": {
+      "ko": "광진구",
+      "hanja": "廣津區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11230": {
+      "ko": "동대문구",
+      "hanja": "東大門區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11260": {
+      "ko": "중랑구",
+      "hanja": "中浪區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11290": {
+      "ko": "성북구",
+      "hanja": "城北區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11305": {
+      "ko": "강북구",
+      "hanja": "江北區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11320": {
+      "ko": "도봉구",
+      "hanja": "道峰區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11350": {
+      "ko": "노원구",
+      "hanja": "蘆原區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11380": {
+      "ko": "은평구",
+      "hanja": "恩平區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11410": {
+      "ko": "서대문구",
+      "hanja": "西大門區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11440": {
+      "ko": "마포구",
+      "hanja": "麻浦區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11470": {
+      "ko": "양천구",
+      "hanja": "陽川區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11500": {
+      "ko": "강서구",
+      "hanja": "江西區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11530": {
+      "ko": "구로구",
+      "hanja": "九老區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11545": {
+      "ko": "금천구",
+      "hanja": "衿川區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11560": {
+      "ko": "영등포구",
+      "hanja": "永登浦區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11590": {
+      "ko": "동작구",
+      "hanja": "銅雀區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11620": {
+      "ko": "관악구",
+      "hanja": "冠岳區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11650": {
+      "ko": "서초구",
+      "hanja": "瑞草區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11680": {
+      "ko": "강남구",
+      "hanja": "江南區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11710": {
+      "ko": "송파구",
+      "hanja": "松坡區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-11740": {
+      "ko": "강동구",
+      "hanja": "江東區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-12": {
+      "ko": "전남광주통합특별시",
+      "hanja": "全南光州統合特別市",
+      "url": "https://big5chinese.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=87047"
+    },
+    "KR-12110": {
+      "ko": "목포시",
+      "hanja": "木浦市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-12130": {
+      "ko": "여수시",
+      "hanja": "麗水市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-12150": {
+      "ko": "순천시",
+      "hanja": "順天市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-12170": {
+      "ko": "나주시",
+      "hanja": "羅州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-12190": {
+      "ko": "광양시",
+      "hanja": "光陽市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-12210": {
+      "ko": "동구",
+      "hanja": "東區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-12240": {
+      "ko": "서구",
+      "hanja": "西區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-12270": {
+      "ko": "남구",
+      "hanja": "南區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-12300": {
+      "ko": "북구",
+      "hanja": "北區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-12330": {
+      "ko": "광산구",
+      "hanja": "光山區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-12710": {
+      "ko": "담양군",
+      "hanja": "潭陽郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12720": {
+      "ko": "곡성군",
+      "hanja": "谷城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12730": {
+      "ko": "구례군",
+      "hanja": "求禮郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12740": {
+      "ko": "고흥군",
+      "hanja": "高興郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12750": {
+      "ko": "보성군",
+      "hanja": "寶城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12760": {
+      "ko": "화순군",
+      "hanja": "和順郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12770": {
+      "ko": "장흥군",
+      "hanja": "長興郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12780": {
+      "ko": "강진군",
+      "hanja": "康津郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12790": {
+      "ko": "해남군",
+      "hanja": "海南郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12800": {
+      "ko": "영암군",
+      "hanja": "靈巖郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12810": {
+      "ko": "무안군",
+      "hanja": "務安郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12820": {
+      "ko": "함평군",
+      "hanja": "咸平郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12830": {
+      "ko": "영광군",
+      "hanja": "靈光郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12840": {
+      "ko": "장성군",
+      "hanja": "長城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12850": {
+      "ko": "완도군",
+      "hanja": "莞島郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12860": {
+      "ko": "진도군",
+      "hanja": "珍島郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-12870": {
+      "ko": "신안군",
+      "hanja": "新安郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-26": {
+      "ko": "부산광역시",
+      "hanja": "釜山廣域市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-26110": {
+      "ko": "중구",
+      "hanja": "中區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26140": {
+      "ko": "서구",
+      "hanja": "西區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26170": {
+      "ko": "동구",
+      "hanja": "東區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26200": {
+      "ko": "영도구",
+      "hanja": "影島區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26230": {
+      "ko": "부산진구",
+      "hanja": "釜山鎭區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26260": {
+      "ko": "동래구",
+      "hanja": "東萊區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26290": {
+      "ko": "남구",
+      "hanja": "南區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26320": {
+      "ko": "북구",
+      "hanja": "北區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26350": {
+      "ko": "해운대구",
+      "hanja": "海雲臺區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26380": {
+      "ko": "사하구",
+      "hanja": "沙下區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26410": {
+      "ko": "금정구",
+      "hanja": "金井區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26440": {
+      "ko": "강서구",
+      "hanja": "江西區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26470": {
+      "ko": "연제구",
+      "hanja": "蓮堤區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26500": {
+      "ko": "수영구",
+      "hanja": "水營區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26530": {
+      "ko": "사상구",
+      "hanja": "沙上區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-26710": {
+      "ko": "기장군",
+      "hanja": "機張郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-27": {
+      "ko": "대구광역시",
+      "hanja": "大邱廣域市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-27110": {
+      "ko": "중구",
+      "hanja": "中區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-27140": {
+      "ko": "동구",
+      "hanja": "東區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-27170": {
+      "ko": "서구",
+      "hanja": "西區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-27200": {
+      "ko": "남구",
+      "hanja": "南區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-27230": {
+      "ko": "북구",
+      "hanja": "北區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-27260": {
+      "ko": "수성구",
+      "hanja": "壽城區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-27290": {
+      "ko": "달서구",
+      "hanja": "達西區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-27710": {
+      "ko": "달성군",
+      "hanja": "達城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-27720": {
+      "ko": "군위군",
+      "hanja": "軍威郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-28": {
+      "ko": "인천광역시",
+      "hanja": "仁川廣域市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-28125": {
+      "ko": "제물포구",
+      "hanja": "濟物浦區",
+      "url": "https://www.incheon.go.kr/goodmorning/GOOD010101/view?nttNo=2042123"
+    },
+    "KR-28155": {
+      "ko": "영종구",
+      "hanja": "永宗區",
+      "url": "https://en.wikipedia.org/wiki/Yeongjong_District"
+    },
+    "KR-28177": {
+      "ko": "미추홀구",
+      "hanja": "彌鄒忽區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-28185": {
+      "ko": "연수구",
+      "hanja": "延壽區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-28200": {
+      "ko": "남동구",
+      "hanja": "南洞區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-28237": {
+      "ko": "부평구",
+      "hanja": "富平區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-28245": {
+      "ko": "계양구",
+      "hanja": "桂陽區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-28275": {
+      "ko": "서해구",
+      "hanja": "西海區",
+      "url": "https://www.mois.go.kr/frt/bbs/type010/commonSelectBoardArticle.do?bbsId=BBSMSTR_000000000008&nttId=125833"
+    },
+    "KR-28290": {
+      "ko": "검단구",
+      "hanja": "黔丹區",
+      "url": "https://www.incheon.go.kr/IC040312/1517863"
+    },
+    "KR-28710": {
+      "ko": "강화군",
+      "hanja": "江華郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-28720": {
+      "ko": "옹진군",
+      "hanja": "甕津郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-30": {
+      "ko": "대전광역시",
+      "hanja": "大田廣域市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-30110": {
+      "ko": "동구",
+      "hanja": "東區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-30140": {
+      "ko": "중구",
+      "hanja": "中區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-30170": {
+      "ko": "서구",
+      "hanja": "西區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-30200": {
+      "ko": "유성구",
+      "hanja": "儒城區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-30230": {
+      "ko": "대덕구",
+      "hanja": "大德區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-31": {
+      "ko": "울산광역시",
+      "hanja": "蔚山廣域市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-31110": {
+      "ko": "중구",
+      "hanja": "中區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-31140": {
+      "ko": "남구",
+      "hanja": "南區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-31170": {
+      "ko": "동구",
+      "hanja": "東區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-31200": {
+      "ko": "북구",
+      "hanja": "北區",
+      "url": "https://en.wikipedia.org/wiki/List_of_districts_in_South_Korea"
+    },
+    "KR-31710": {
+      "ko": "울주군",
+      "hanja": "蔚州郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-36": {
+      "ko": "세종특별자치시",
+      "hanja": "世宗特別自治市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41": {
+      "ko": "경기도",
+      "hanja": "京畿道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-41110": {
+      "ko": "수원시",
+      "hanja": "水原市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41130": {
+      "ko": "성남시",
+      "hanja": "城南市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41150": {
+      "ko": "의정부시",
+      "hanja": "議政府市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41170": {
+      "ko": "안양시",
+      "hanja": "安養市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41190": {
+      "ko": "부천시",
+      "hanja": "富川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41210": {
+      "ko": "광명시",
+      "hanja": "光明市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41220": {
+      "ko": "평택시",
+      "hanja": "平澤市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41250": {
+      "ko": "동두천시",
+      "hanja": "東豆川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41270": {
+      "ko": "안산시",
+      "hanja": "安山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41280": {
+      "ko": "고양시",
+      "hanja": "高陽市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41290": {
+      "ko": "과천시",
+      "hanja": "果川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41310": {
+      "ko": "구리시",
+      "hanja": "九里市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41360": {
+      "ko": "남양주시",
+      "hanja": "南楊州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41370": {
+      "ko": "오산시",
+      "hanja": "烏山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41390": {
+      "ko": "시흥시",
+      "hanja": "始興市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41410": {
+      "ko": "군포시",
+      "hanja": "軍浦市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41430": {
+      "ko": "의왕시",
+      "hanja": "義王市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41450": {
+      "ko": "하남시",
+      "hanja": "河南市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41460": {
+      "ko": "용인시",
+      "hanja": "龍仁市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41480": {
+      "ko": "파주시",
+      "hanja": "坡州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41500": {
+      "ko": "이천시",
+      "hanja": "利川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41550": {
+      "ko": "안성시",
+      "hanja": "安城市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41570": {
+      "ko": "김포시",
+      "hanja": "金浦市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41590": {
+      "ko": "화성시",
+      "hanja": "華城市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41610": {
+      "ko": "광주시",
+      "hanja": "廣州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41630": {
+      "ko": "양주시",
+      "hanja": "楊州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41650": {
+      "ko": "포천시",
+      "hanja": "抱川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41670": {
+      "ko": "여주시",
+      "hanja": "驪州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-41800": {
+      "ko": "연천군",
+      "hanja": "漣川郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-41820": {
+      "ko": "가평군",
+      "hanja": "加平郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-41830": {
+      "ko": "양평군",
+      "hanja": "楊平郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43": {
+      "ko": "충청북도",
+      "hanja": "忠淸北道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-43110": {
+      "ko": "청주시",
+      "hanja": "淸州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-43130": {
+      "ko": "충주시",
+      "hanja": "忠州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-43150": {
+      "ko": "제천시",
+      "hanja": "堤川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-43720": {
+      "ko": "보은군",
+      "hanja": "報恩郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43730": {
+      "ko": "옥천군",
+      "hanja": "沃川郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43740": {
+      "ko": "영동군",
+      "hanja": "永同郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43745": {
+      "ko": "증평군",
+      "hanja": "曾坪郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43750": {
+      "ko": "진천군",
+      "hanja": "鎭川郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43760": {
+      "ko": "괴산군",
+      "hanja": "槐山郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43770": {
+      "ko": "음성군",
+      "hanja": "陰城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-43800": {
+      "ko": "단양군",
+      "hanja": "丹陽郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-44": {
+      "ko": "충청남도",
+      "hanja": "忠淸南道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-44130": {
+      "ko": "천안시",
+      "hanja": "天安市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44150": {
+      "ko": "공주시",
+      "hanja": "公州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44180": {
+      "ko": "보령시",
+      "hanja": "保寧市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44200": {
+      "ko": "아산시",
+      "hanja": "牙山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44210": {
+      "ko": "서산시",
+      "hanja": "瑞山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44230": {
+      "ko": "논산시",
+      "hanja": "論山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44250": {
+      "ko": "계룡시",
+      "hanja": "鷄龍市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44270": {
+      "ko": "당진시",
+      "hanja": "唐津市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-44710": {
+      "ko": "금산군",
+      "hanja": "錦山郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-44760": {
+      "ko": "부여군",
+      "hanja": "扶餘郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-44770": {
+      "ko": "서천군",
+      "hanja": "舒川郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-44790": {
+      "ko": "청양군",
+      "hanja": "青陽郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-44800": {
+      "ko": "홍성군",
+      "hanja": "洪城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-44810": {
+      "ko": "예산군",
+      "hanja": "禮山郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-44825": {
+      "ko": "태안군",
+      "hanja": "泰安郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47": {
+      "ko": "경상북도",
+      "hanja": "慶尙北道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-47110": {
+      "ko": "포항시",
+      "hanja": "浦項市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47130": {
+      "ko": "경주시",
+      "hanja": "慶州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47150": {
+      "ko": "김천시",
+      "hanja": "金泉市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47170": {
+      "ko": "안동시",
+      "hanja": "安東市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47190": {
+      "ko": "구미시",
+      "hanja": "龜尾市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47210": {
+      "ko": "영주시",
+      "hanja": "榮州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47230": {
+      "ko": "영천시",
+      "hanja": "永川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47250": {
+      "ko": "상주시",
+      "hanja": "尙州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47280": {
+      "ko": "문경시",
+      "hanja": "聞慶市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47290": {
+      "ko": "경산시",
+      "hanja": "慶山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-47730": {
+      "ko": "의성군",
+      "hanja": "義城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47750": {
+      "ko": "청송군",
+      "hanja": "靑松郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47760": {
+      "ko": "영양군",
+      "hanja": "英陽郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47770": {
+      "ko": "영덕군",
+      "hanja": "盈德郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47820": {
+      "ko": "청도군",
+      "hanja": "淸道郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47830": {
+      "ko": "고령군",
+      "hanja": "高靈郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47840": {
+      "ko": "성주군",
+      "hanja": "星州郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47850": {
+      "ko": "칠곡군",
+      "hanja": "漆谷郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47900": {
+      "ko": "예천군",
+      "hanja": "醴泉郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47920": {
+      "ko": "봉화군",
+      "hanja": "奉化郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47930": {
+      "ko": "울진군",
+      "hanja": "蔚珍郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-47940": {
+      "ko": "울릉군",
+      "hanja": "鬱陵郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48": {
+      "ko": "경상남도",
+      "hanja": "慶尙南道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-48120": {
+      "ko": "창원시",
+      "hanja": "昌原市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48170": {
+      "ko": "진주시",
+      "hanja": "晋州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48220": {
+      "ko": "통영시",
+      "hanja": "統營市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48240": {
+      "ko": "사천시",
+      "hanja": "泗川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48250": {
+      "ko": "김해시",
+      "hanja": "金海市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48270": {
+      "ko": "밀양시",
+      "hanja": "密陽市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48310": {
+      "ko": "거제시",
+      "hanja": "巨濟市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48330": {
+      "ko": "양산시",
+      "hanja": "梁山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-48720": {
+      "ko": "의령군",
+      "hanja": "宜寧郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48730": {
+      "ko": "함안군",
+      "hanja": "咸安郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48740": {
+      "ko": "창녕군",
+      "hanja": "昌寧郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48820": {
+      "ko": "고성군",
+      "hanja": "固城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48840": {
+      "ko": "남해군",
+      "hanja": "南海郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48850": {
+      "ko": "하동군",
+      "hanja": "河東郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48860": {
+      "ko": "산청군",
+      "hanja": "山淸郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48870": {
+      "ko": "함양군",
+      "hanja": "咸陽郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48880": {
+      "ko": "거창군",
+      "hanja": "居昌郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-48890": {
+      "ko": "합천군",
+      "hanja": "陜川郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-50": {
+      "ko": "제주특별자치도",
+      "hanja": "濟州特別自治道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-50110": {
+      "ko": "제주시",
+      "hanja": "濟州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-50130": {
+      "ko": "서귀포시",
+      "hanja": "西歸浦市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51": {
+      "ko": "강원특별자치도",
+      "hanja": "江原特別自治道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-51110": {
+      "ko": "춘천시",
+      "hanja": "春川市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51130": {
+      "ko": "원주시",
+      "hanja": "原州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51150": {
+      "ko": "강릉시",
+      "hanja": "江陵市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51170": {
+      "ko": "동해시",
+      "hanja": "東海市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51190": {
+      "ko": "태백시",
+      "hanja": "太白市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51210": {
+      "ko": "속초시",
+      "hanja": "束草市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51230": {
+      "ko": "삼척시",
+      "hanja": "三陟市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-51720": {
+      "ko": "홍천군",
+      "hanja": "洪川郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51730": {
+      "ko": "횡성군",
+      "hanja": "橫城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51750": {
+      "ko": "영월군",
+      "hanja": "寧越郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51760": {
+      "ko": "평창군",
+      "hanja": "平昌郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51770": {
+      "ko": "정선군",
+      "hanja": "旌善郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51780": {
+      "ko": "철원군",
+      "hanja": "鐵原郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51790": {
+      "ko": "화천군",
+      "hanja": "華川郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51800": {
+      "ko": "양구군",
+      "hanja": "楊口郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51810": {
+      "ko": "인제군",
+      "hanja": "麟蹄郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51820": {
+      "ko": "고성군",
+      "hanja": "高城郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-51830": {
+      "ko": "양양군",
+      "hanja": "襄陽郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52": {
+      "ko": "전북특별자치도",
+      "hanja": "全北特別自治道",
+      "url": "https://en.wikipedia.org/wiki/Provinces_of_South_Korea"
+    },
+    "KR-52110": {
+      "ko": "전주시",
+      "hanja": "全州市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-52130": {
+      "ko": "군산시",
+      "hanja": "群山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-52140": {
+      "ko": "익산시",
+      "hanja": "益山市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-52180": {
+      "ko": "정읍시",
+      "hanja": "井邑市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-52190": {
+      "ko": "남원시",
+      "hanja": "南原市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-52210": {
+      "ko": "김제시",
+      "hanja": "金堤市",
+      "url": "https://en.wikipedia.org/wiki/List_of_cities_in_South_Korea"
+    },
+    "KR-52710": {
+      "ko": "완주군",
+      "hanja": "完州郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52720": {
+      "ko": "진안군",
+      "hanja": "鎭安郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52730": {
+      "ko": "무주군",
+      "hanja": "茂朱郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52740": {
+      "ko": "장수군",
+      "hanja": "長水郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52750": {
+      "ko": "임실군",
+      "hanja": "任實郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52770": {
+      "ko": "순창군",
+      "hanja": "淳昌郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52790": {
+      "ko": "고창군",
+      "hanja": "高敞郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    },
+    "KR-52800": {
+      "ko": "부안군",
+      "hanja": "扶安郡",
+      "url": "https://en.wikipedia.org/wiki/List_of_counties_of_South_Korea"
+    }
+  }
+}

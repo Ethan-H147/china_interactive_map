@@ -3,6 +3,15 @@ import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 const data=JSON.parse(gunzipSync(fs.readFileSync(new URL('../dist/data/korea-boundaries.bin',import.meta.url))));
 const all=[...data.first.features,...data.second.features],byId=new Map(all.map(f=>[f.properties.id,f]));
+const hanja=JSON.parse(fs.readFileSync(new URL('../dist/data/korea-hanja.json',import.meta.url)));
+for(const f of all){const p=f.properties,entry=hanja.names[p.id];if(entry){assert.equal(p.ko,entry.ko);assert.equal(p.hanja,entry.hanja);assert.equal(p.hanjaSource,entry.url);assert(/^[\p{Script=Han}\s]+$/u.test(p.hanja),'Hanja script '+p.en);}else{assert(hanja.omitted[p.id],'Explicit omission '+p.en);assert(!p.hanja,'No invented Hanja '+p.en);}}
+assert.equal(all.filter(f=>f.properties.hanja).length,455);
+assert(!byId.get('KR-11').properties.hanja,'Seoul must not be assigned a Chinese translation');
+assert(!byId.get('KP-5469504').properties.hanja,'Kwail is a native Korean name');
+assert.equal(byId.get('KR-41610').properties.hanja,'廣州市','Gyeonggi Gwangju');
+assert.equal(byId.get('KR-51820').properties.hanja,'高城郡','Gangwon Goseong');
+assert.equal(byId.get('KR-48820').properties.hanja,'固城郡','South Gyeongsang Goseong');
+assert.equal(byId.get('KP-356533').properties.hanja,'黃海南道');
 assert.equal(all.length,byId.size,'Region IDs must be unique');
 assert.equal(data.first.features.filter(f=>f.properties.country==='KP').length,13);
 assert.equal(data.first.features.filter(f=>f.properties.country==='KR').length,16);

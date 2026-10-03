@@ -26,5 +26,11 @@
     "south.geojson": "c01ef44a0eb00978662ba7a6240ccb1da287fb52abd85104a1758969d391132f",
     "north-detailed.geojson": "2e35feb1f00ee18ced9cdc70b85f3a9c69460d495ef618d7c0d55720a64c1cc7",
     "north-coast.json": "e382bb6b21c277ffcb84fcf92e3adeb2009686ee8c3db5006f9c46ee09844565"
+  },
+  "hanja": {
+    "manifest": "korea-hanja.json",
+    "retrieved": "2026-10-03T01:50:03.025Z",
+    "count": 455,
+    "method": "Explicit OSM name:ko-Hani tags for North Korea. South Korean Hanja tables matched by Hangul; ambiguous Gwangju and Goseong names resolved by parent region. New Incheon and Jeonnam–Gwangju names checked against the linked local or national sources. No automatic conversion of Chinese translations."
   }
 }
