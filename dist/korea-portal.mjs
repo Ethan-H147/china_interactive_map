@@ -10,5 +10,5 @@ export async function addKoreaPortal(map,host){
  const controller=createKoreaAtlas(map,host);
  const visit=()=>{if(!controller.active&&!host.isBusy())host.switchAtlas('korea');};
  map.on('click','korea-portal-fill',visit);
- return Object.assign(controller,{context(active){map.setLayoutProperty('korea-portal-line','visibility',active?'none':'visible');}});
+ return Object.assign(controller,{context(active){map.setPaintProperty('korea-portal-line','line-opacity',active?0:adaptiveOpacity());}});
 }

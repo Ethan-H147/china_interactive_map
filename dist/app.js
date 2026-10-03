@@ -9,8 +9,17 @@ const labels=[];
 const sourceFor=r=>r.feature.properties.level==='province'?'provinces':isPrefectureLevel(r.feature.properties)?'prefectures':'others';
 function setRegionState(region,state){if(region.feature.geometry){const source=sourceFor(region);for(const id of [source,source+'-selection-edges'])map.setFeatureState({source:id,id:region.feature.properties.adcode},state);}}
 function layerVisible(id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');}
+const atlasHiddenPaint=new Map();
+function atlasLayerVisible(id,visible){
+  const layer=map.getLayer(id);if(!layer)return;
+  const property=layer.type==='fill'?'fill-opacity':'line-opacity';
+  if(visible){if(atlasHiddenPaint.has(id)){map.setPaintProperty(id,property,atlasHiddenPaint.get(id));atlasHiddenPaint.delete(id);}}
+  else if(!atlasHiddenPaint.has(id)){atlasHiddenPaint.set(id,map.getPaintProperty(id,property));map.setPaintProperty(id,property,0);}
+}
 function syncLayers(){
-  if(atlasMode!=='china'){for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','other-fill','other-lines','other-selection','province-selection','province-lines'])layerVisible(id,false);return;}
+  const ids=['prefecture-fill','prefecture-lines','prefecture-selection','other-fill','other-lines','other-selection','province-selection','province-lines'];
+  for(const id of ids)atlasLayerVisible(id,atlasMode==='china');
+  if(atlasMode!=='china')return;
   if(quiz.active){for(const id of ['other-fill','other-lines','other-selection','province-selection'])layerVisible(id,false);for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','province-lines'])layerVisible(id,true);return;}
   const pref=$('prefecture-layer').checked,other=$('other-layer').checked,prov=$('province-layer').checked;
   for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection'])layerVisible(id,pref);
@@ -198,7 +207,7 @@ async function changeAtlas(next,animate=true){
   $('atlas-title-local').textContent=korea?'한반도':'中国';$('atlas-title-local').className=korea?'korean-title':'china-chinese';$('atlas-title-local').lang=korea?'ko':'zh';
   $('map').setAttribute('aria-label',korea?'Interactive map of North and South Korea':'Interactive China administrative boundary map');
   $('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
-  map.setPaintProperty('province-fill','fill-color',korea?'#d7d7d3':fillPaint(normalProvinceColors,1)['fill-color']);
+  for(const f of provinceFeatures)map.setFeatureState({source:'provinces',id:f.properties.adcode},{inactive:korea});
   syncLayers();updateLabels();koreaAtlas.context(korea);
   if(korea){await koreaAtlas.enter();}
   else{koreaAtlas.leave();$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province');refreshStatus();controls();if(animate)await fitHome(true);updateLabels();}
@@ -265,6 +274,7 @@ function addFill(id,source,baseColor,baseOpacity){
   map.addLayer({id,type:'fill',source,paint:fillPaint(baseColor,baseOpacity)});
 }
 function fillPaint(baseColor,baseOpacity){return {'fill-color':['case',['boolean',['feature-state','quizCorrect'],false],'#548165',['boolean',['feature-state','quizWrong'],false],'#b44737',['boolean',['feature-state','selected'],false],'#ca6a45',['boolean',['feature-state','hover'],false],'#d6a34f',baseColor],'fill-opacity':['case',['boolean',['feature-state','quizCorrect'],false],.65,['boolean',['feature-state','quizWrong'],false],.55,['boolean',['feature-state','selected'],false],.3,['boolean',['feature-state','hover'],false],.35,baseOpacity],'fill-antialias':false};}
+function provinceColor(){return ['case',['boolean',['feature-state','inactive'],false],'#d7d7d3',normalProvinceColors];}
 function addLine(id,source,color,width,opacity=1,dash){const paint={'line-color':color,'line-width':width,'line-opacity':opacity};if(dash)paint['line-dasharray']=dash;map.addLayer({id,type:'line',source,layout:{'line-cap':'round','line-join':'round'},paint});}
 function addSelection(id,source){addLine(id,source+'-selection-edges',['case',['boolean',['feature-state','quizCorrect'],false],'#38684a','#a43829'],1.7,window.AtlasLines.adaptiveOpacity(['case',['any',['boolean',['feature-state','selected'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],1,0]));}
 function pickedRegion(point){
@@ -295,7 +305,7 @@ async function init(){try{
   for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',window.AtlasLines.lineData(geometry),window.AtlasLines.lineSourceOptions);
   for(const [name,collection] of [['provinces',display.provinces],['prefectures',featureCollection(prefFeatures)],['others',featureCollection(otherFeatures)]])addSource(name+'-selection-edges',window.AtlasLines.lineData(collection),window.AtlasLines.lineSourceOptions);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
-  addFill('province-fill','provinces',colors,1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
+  addFill('province-fill','provinces',provinceColor(),1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
   addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,window.AtlasLines.adaptiveOpacity(.85));addLine('other-lines','other-boundaries','#9f874e',.7,window.AtlasLines.adaptiveOpacity(.85),[3,3]);
   addSelection('province-selection','provinces');addSelection('prefecture-selection','prefectures');addSelection('other-selection','others');
   addLine('province-lines','province-boundaries','#987343',['interpolate',['linear'],['zoom'],3,.65,8,1.2],window.AtlasLines.adaptiveOpacity(.95));
@@ -310,6 +320,7 @@ async function init(){try{
   const capitalsResponse=await fetch('data/capitals.json');
   if(!capitalsResponse.ok)throw new Error('Capital locations could not load');
   capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitalsResponse.json());
+  koreaAtlas.warm().catch(error=>console.warn('Korea preload:',error.message));
   controls();if(location.hash==='#korea')changeAtlas('korea');
 }catch(e){console.error(e);$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 $('province').addEventListener('change',e=>{const code=Number(e.target.value);code?selectRegion(provinceLayers.get(code),code):reset();});
@@ -382,7 +393,7 @@ function fitQuizScope(animate=true){
 }
 function clearQuizHighlights(){for(const layer of quiz.highlighted)setRegionState(layer,{quizCorrect:false,quizWrong:false});quiz.highlighted=[];quiz.reviewLayer=null;clearHover();updateLabels();}
 function syncQuizStyle(){
-  map.setPaintProperty('province-fill','fill-color',quiz.active?'#e9e5dc':fillPaint(normalProvinceColors,1)['fill-color']);
+  map.setPaintProperty('province-fill','fill-color',quiz.active?'#e9e5dc':fillPaint(provinceColor(),1)['fill-color']);
   const paint=fillPaint(quiz.active?'#e6cda1':'#d6b974',quiz.active ? .65 : .025);
   for(const [property,value] of Object.entries(paint))map.setPaintProperty('prefecture-fill',property,value);
   const filter=quiz.active?['in',['to-string',['get','adcode']],['literal',quiz.pool.map(l=>String(l.feature.properties.adcode))]]:null;

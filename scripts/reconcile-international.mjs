@@ -13,7 +13,19 @@ const north=korea.countries.features.find(f=>f.properties.country==='KP');
 const south=korea.second.features.filter(f=>f.properties.country==='KR');
 // Sejong is a first-level area without second-level divisions.
 const sejong=korea.first.features.find(f=>f.properties.id==='KR-36');
-const sk=alignCountry([...south,sejong],north,(a,b)=>a[0]>126.65&&b[0]>126.65&&a[1]<38.63&&b[1]<38.63);
+const borderCorridor=(a,b)=>a[0]>126.65&&b[0]>126.65&&a[1]<38.63&&b[1]<38.63;
+const sk=alignCountry([...south,sejong],north,borderCorridor);
+// The usual alignment is deliberately narrow. Widen it only on a detected
+// enclosed gap with vertices belonging to both countries, leaving coasts alone.
+const key=p=>p.map(n=>n.toFixed(8)).join(',');
+const rings=f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
+const vertexKeys=features=>new Set(features.flatMap(f=>rings(f).flat(2).map(key)));
+const northKeys=vertexKeys([north]),southKeys=vertexKeys(sk.features);
+const land=JSON.parse((await mapshaper.applyCommands('-i land.json -dissolve -o out.json format=geojson geojson-type=FeatureCollection',{'land.json':fc([north,...sk.features])}))['out.json']);
+const gaps=land.features.flatMap(f=>rings(f).flatMap(poly=>poly.slice(1))).filter(r=>r.every(p=>p[0]>126.65&&p[0]<128.5&&p[1]>37.7&&p[1]<38.65)&&r.some(p=>northKeys.has(key(p)))&&r.some(p=>southKeys.has(key(p))&&!northKeys.has(key(p))));
+const gapKeys=new Set(gaps.flatMap(r=>r.map(key)));
+const gapRepair=alignCountry(sk.features,north,borderCorridor,5000,(a,b)=>gapKeys.has(key(a))&&gapKeys.has(key(b)));
+sk.features=gapRepair.features;sk.report.gapsClosed=gaps.length;sk.report.gapRepair=gapRepair.report;
 const cn=alignCountry(china.subdivisions.features,north,(a,b)=>a[1]>39.75&&b[1]>39.75);
 console.log({south:sk.report,china:cn.report});
 const clean=async features=>JSON.parse((await mapshaper.applyCommands('-i input.json -clean gap-width=0 snap-interval=0.0000000001 overlap-rule=min-area -o output.json format=geojson geojson-type=FeatureCollection',{'input.json':fc(features)}))['output.json']).features;
@@ -53,4 +65,4 @@ for(let offset=0,index=0;offset<compressed.length;offset+=4*1024*1024,index++){c
 fs.writeFileSync(new URL('display-boundaries.parts.json',root),JSON.stringify({compression:'gzip',parts,compressedBytes:compressed.length,uncompressedBytes:serialized.length,sha256:createHash('sha256').update(serialized).digest('hex')},null,2));
 fs.writeFileSync(new URL('korea-boundaries.bin',root),gzipSync(JSON.stringify(korea)));
 fs.writeFileSync(new URL('korea-outline.bin',root),gzipSync(JSON.stringify(countries)));
-fs.writeFileSync(new URL('international-border-report.json',root),JSON.stringify({source:'https://www.openstreetmap.org/relation/192734',method:'Adjacent exterior polygon edges within 2.5 km are projected onto the existing North Korean boundary and inherit its intervening vertices. Interior junctions follow their shared exterior endpoint. Coastlines outside the corridor retain source geometry.',south:sk.report,china:cn.report},null,2));
+fs.writeFileSync(new URL('international-border-report.json',root),JSON.stringify({source:'https://www.openstreetmap.org/relation/192734',method:'Adjacent exterior polygon edges within 2.5 km are projected onto the existing North Korean boundary and inherit its intervening vertices. Detected enclosed land-border gaps touching both countries use a separate repair within 5 km, restricted to the gap edges. Interior junctions follow their shared exterior endpoint. Coastlines outside the corridor retain source geometry.',south:sk.report,china:cn.report},null,2));

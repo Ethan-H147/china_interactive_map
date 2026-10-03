@@ -7,6 +7,29 @@ const benchmarkResult=document.createElement('pre');
 benchmarkResult.id='benchmark-result';
 benchmarkResult.style.cssText='position:fixed;bottom:44px;left:10px;z-index:9999;background:white;color:black;padding:8px;max-width:90vw;white-space:pre-wrap;font-size:11px';
 document.body.append(benchmarkButton,benchmarkResult);
+const switchButton=document.createElement('button');
+switchButton.id='benchmark-switch';switchButton.textContent='Measure atlas switching';
+switchButton.style.cssText='position:fixed;bottom:10px;left:150px;z-index:9999;background:white;border:1px solid #555;padding:8px';
+document.body.append(switchButton);
+switchButton.onclick=async()=>{
+ if(!allReady||cameraBusy||!koreaAtlas)return;
+ switchButton.disabled=true;benchmarkResult.textContent='Measuring switches…';
+ const gaps=[],tasks=[],times=[];let previous=0,tracking=true;
+ const observer=new PerformanceObserver(list=>tasks.push(...list.getEntries().map(e=>Math.round(e.duration))));
+ observer.observe({type:'longtask'});
+ function frame(t){if(!tracking)return;if(previous)gaps.push(t-previous);previous=t;requestAnimationFrame(frame);}
+ requestAnimationFrame(frame);
+ for(const next of ['korea','china','korea','china']){
+  const start=performance.now();await changeAtlas(next);
+  if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
+  times.push({mode:next,ms:Math.round(performance.now()-start)});
+  await new Promise(resolve=>setTimeout(resolve,250));
+ }
+ tracking=false;observer.disconnect();
+ const sorted=gaps.slice().sort((a,b)=>a-b);
+ benchmarkResult.textContent=JSON.stringify({switches:times,frames:gaps.length,p95ms:Math.round(sorted[Math.floor(sorted.length*.95)]),worstFrameMs:Math.round(Math.max(...gaps)),framesOver50ms:gaps.filter(ms=>ms>50).length,longTasksMs:tasks},null,2);
+ switchButton.disabled=false;
+};
 benchmarkButton.onclick=async()=>{
   if(!allReady)return;
   benchmarkButton.disabled=true;

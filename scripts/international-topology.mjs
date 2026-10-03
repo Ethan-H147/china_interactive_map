@@ -8,17 +8,18 @@ const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1
 
 // Replace only exterior country edges. Interior administrative edges, islands,
 // and coastlines outside the border corridor remain in their source geometry.
-export function alignCountry(features,canonical,allowed){
+export function alignCountry(features,canonical,allowed,maxDistance=2500,candidate=()=>true){
  const t=topology({regions:{type:'FeatureCollection',features}});
  const exterior=mesh(t,t.objects.regions,(a,b)=>a===b);
  const exteriorEdges=new Set(exterior.coordinates.flatMap(path=>path.slice(1).map((p,i)=>edgeKey(path[i],p))));
  const ring=polygons(canonical.geometry).sort((a,b)=>b[0].length-a[0].length)[0][0];
  const n=ring.length-1,grid=new Map(),cell=.025;
+ const padding=Math.ceil(maxDistance/(111195*cell*.7));
  for(let i=0;i<n;i++){
   const a=ring[i],b=ring[i+1];
   if(!allowed(a,b))continue;
-  for(let x=Math.floor(Math.min(a[0],b[0])/cell)-2;x<=Math.floor(Math.max(a[0],b[0])/cell)+2;x++)
-   for(let y=Math.floor(Math.min(a[1],b[1])/cell)-2;y<=Math.floor(Math.max(a[1],b[1])/cell)+2;y++){
+  for(let x=Math.floor(Math.min(a[0],b[0])/cell)-padding;x<=Math.floor(Math.max(a[0],b[0])/cell)+padding;x++)
+   for(let y=Math.floor(Math.min(a[1],b[1])/cell)-padding;y<=Math.floor(Math.max(a[1],b[1])/cell)+padding;y++){
     const key=x+','+y;if(!grid.has(key))grid.set(key,[]);grid.get(key).push(i);
    }
  }
@@ -30,13 +31,13 @@ export function alignCountry(features,canonical,allowed){
    const a=ring[i],b=ring[i+1],c=Math.cos(p[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1];
    const u=Math.max(0,Math.min(1,((p[0]-a[0])*c*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));
    const q=[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])],distance=metres(p,q);
-   if(distance<=2500&&(!best||distance<best.distance))best={position:i+u,q,distance};
+   if(distance<=maxDistance&&(!best||distance<best.distance))best={position:i+u,q,distance};
   }
   cache.set(key,best);return best;
  }
  const edits=new Map(),report={changedEdges:0,maxDisplacementMetres:0,changedRegions:[]};
  for(const f of features)for(const poly of polygons(f.geometry))for(const path of poly)for(let i=1;i<path.length;i++){
-  const a=path[i-1],b=path[i];if(!exteriorEdges.has(edgeKey(a,b)))continue;
+  const a=path[i-1],b=path[i];if(!exteriorEdges.has(edgeKey(a,b))||!candidate(a,b))continue;
   const from=nearest(a),to=nearest(b);if(!from||!to)continue;
   let delta=to.position-from.position;if(delta>n/2)delta-=n;if(delta<-n/2)delta+=n;
   if(Math.abs(delta)>1500)continue;
