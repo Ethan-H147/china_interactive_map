@@ -32,6 +32,7 @@ nk=await process('-i north.json -clip land.json',{'north.json':north,'land.json'
 for(const f of nk.features){const p=f.properties,isFirst=!p.parent;
  f.properties={id:'KP-'+p.id.split('/')[1],parent:p.parent?'KP-'+p.parent:undefined,country:'KP',level:isFirst?1:2,ko:p['name:ko']||p.name,en:p['name:en']||'Kaesong urban area',type:isFirst?primaryType(p.name):types(p.name),sourceRelation:p.id,sourceVersion:p.version};
  if(p.id==='relation/356443')f.properties.en='Pyongyang';
+ if(p.parent&&!p.admin_level)f.properties.type='Directly administered urban area';
  (isFirst?first:second).push(f);
 }
 // Derive visible province outlines from the same polygons as the subdivisions.
