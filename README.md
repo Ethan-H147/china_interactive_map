@@ -93,3 +93,9 @@ The local `/benchmark` route runs four timed pans near Tianjin and reports anima
 `node scripts/validate.mjs` verifies source hashes, feature counts, coordinate ranges, unique regional codes and local asset references. `node --check dist/app.js` validates application syntax.
 
 `node scripts/fetch-data.mjs` refreshes the snapshot from DataV and vendors Leaflet. Review changed counts and coverage before publishing a refreshed map.
+# Border alignment and coastline detail
+
+`npm run build` and `npm run build:korea` finish with `reconcile-international.mjs`. It aligns adjacent exterior edges to the detailed North Korean boundary already sourced from OpenStreetMap. Only edges within 2.5 km qualify; their intermediate vertices come from that boundary. Shared administrative junctions move with their exterior endpoint. A joint topology operation nodes the matching edges, so the two sides use identical segments. Four China divisions and eight South Korean divisions are affected. `validate-international.mjs` checks shared border coverage and exact preservation of the other 498 China subdivisions.
+
+Country, province and internal boundary strokes are drawn separately, so coastlines are drawn once. `adaptive-lines.mjs` retains every original line segment in the source data, splits long GPU paths, and calculates each path's projected size. Tile simplification has a 0.65 pixel tolerance at the current tile zoom. Island outlines fade in between roughly 1.5 and 4 screen pixels; close views retain the detailed source geometry. Fill polygons and hit testing retain full precision. This applies to China, Korea, selected regions, Hong Kong and Macau.
+

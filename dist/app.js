@@ -7,7 +7,7 @@ map.addControl(new maplibregl.AttributionControl({compact:false,customAttributio
 const styleReady=new Promise(resolve=>map.once('load',resolve));
 const labels=[];
 const sourceFor=r=>r.feature.properties.level==='province'?'provinces':isPrefectureLevel(r.feature.properties)?'prefectures':'others';
-function setRegionState(region,state){if(region.feature.geometry)map.setFeatureState({source:sourceFor(region),id:region.feature.properties.adcode},state);}
+function setRegionState(region,state){if(region.feature.geometry){const source=sourceFor(region);for(const id of [source,source+'-selection-edges'])map.setFeatureState({source:id,id:region.feature.properties.adcode},state);}}
 function layerVisible(id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');}
 function syncLayers(){
   if(atlasMode!=='china'){for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','other-fill','other-lines','other-selection','province-selection','province-lines'])layerVisible(id,false);return;}
@@ -16,6 +16,7 @@ function syncLayers(){
   for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection'])layerVisible(id,pref);
   for(const id of ['other-fill','other-lines','other-selection'])layerVisible(id,other);
   layerVisible('province-lines',prov);
+  layerVisible('province-selection',true);
 }
 const fillColors=['#efe2c8','#eee6d5','#f2e9d6','#e9ddc3','#f4e6d0','#e9e0ca'];
 const provinceLayers=new Map(),detailLayers=new Map(),regionIndex=[];
@@ -257,7 +258,7 @@ async function boundaryData(){
   const bytes=new Uint8Array(parts.reduce((sum,p)=>sum+p.length,0));let offset=0;for(const part of parts){bytes.set(part,offset);offset+=part.length;}
   return decodeJson(bytes.buffer);
 }
-// Zero tolerance preserves every boundary vertex; tiling and triangulation run in workers.
+// Polygon data remains exact. Line tiles omit subpixel detail while zoomed out.
 const sourceOptions={type:'geojson',tolerance:0,maxzoom:18,buffer:128};
 function addSource(id,data,options={}){map.addSource(id,{...sourceOptions,...options,data,promoteId:'adcode'});}
 const featureCollection=features=>({type:'FeatureCollection',features});
@@ -267,7 +268,7 @@ function addFill(id,source,baseColor,baseOpacity){
 }
 function fillPaint(baseColor,baseOpacity){return {'fill-color':['case',['boolean',['feature-state','quizCorrect'],false],'#548165',['boolean',['feature-state','quizWrong'],false],'#b44737',['boolean',['feature-state','selected'],false],'#ca6a45',['boolean',['feature-state','hover'],false],'#d6a34f',baseColor],'fill-opacity':['case',['boolean',['feature-state','quizCorrect'],false],.65,['boolean',['feature-state','quizWrong'],false],.55,['boolean',['feature-state','selected'],false],.3,['boolean',['feature-state','hover'],false],.35,baseOpacity],'fill-antialias':false};}
 function addLine(id,source,color,width,opacity=1,dash){const paint={'line-color':color,'line-width':width,'line-opacity':opacity};if(dash)paint['line-dasharray']=dash;map.addLayer({id,type:'line',source,layout:{'line-cap':'round','line-join':'round'},paint});}
-function addSelection(id,source){addLine(id,source,['case',['boolean',['feature-state','quizCorrect'],false],'#38684a','#a43829'],1.7,['case',['any',['boolean',['feature-state','selected'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],1,0]);}
+function addSelection(id,source){addLine(id,source+'-selection-edges',['case',['boolean',['feature-state','quizCorrect'],false],'#38684a','#a43829'],1.7,window.AtlasLines.adaptiveOpacity(['case',['any',['boolean',['feature-state','selected'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],1,0]));}
 function pickedRegion(point){
   if(quiz.active){const hit=map.queryRenderedFeatures(point,{layers:['prefecture-fill']})[0];return hit&&quiz.round.eligible.has(hit.properties.adcode)?regionByCode.get(hit.properties.adcode):undefined;}
   const layers=['province-fill'];if($('map-shell').dataset.level==='prefecture'){if($('prefecture-layer').checked)layers.unshift('prefecture-fill');if($('other-layer').checked)layers.unshift('other-fill');}
@@ -291,15 +292,15 @@ async function init(){try{
   const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
   const otherFeatures=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
   addSource('provinces',display.provinces);addSource('prefectures',featureCollection(prefFeatures));addSource('others',featureCollection(otherFeatures));
-  // Dense subpixel vertices can make dashed strokes bunch up after tile
-  // quantization. Apply a 0.1-pixel tolerance only to their rendering tiles;
-  // the stored geometry, coastlines and selectable polygons retain every vertex.
-  for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',feature(geometry),name==='other'?{tolerance:.1}:{});
+  // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
+  // The stored geometry and selectable polygons retain full detail.
+  for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',window.AtlasLines.lineData(geometry),window.AtlasLines.lineSourceOptions);
+  for(const [name,collection] of [['provinces',display.provinces],['prefectures',featureCollection(prefFeatures)],['others',featureCollection(otherFeatures)]])addSource(name+'-selection-edges',window.AtlasLines.lineData(collection),window.AtlasLines.lineSourceOptions);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
   addFill('province-fill','provinces',colors,1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
-  addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,.85);addLine('other-lines','other-boundaries','#9f874e',.7,.85,[3,3]);
+  addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,window.AtlasLines.adaptiveOpacity(.85));addLine('other-lines','other-boundaries','#9f874e',.7,window.AtlasLines.adaptiveOpacity(.85),[3,3]);
   addSelection('province-selection','provinces');addSelection('prefecture-selection','prefectures');addSelection('other-selection','others');
-  addLine('province-lines','province-boundaries','#987343',1.2,.95);
+  addLine('province-lines','province-boundaries','#987343',['interpolate',['linear'],['zoom'],3,.65,8,1.2],window.AtlasLines.adaptiveOpacity(.95));
   for(const f of provinceFeatures){const code=f.properties.adcode;provinceLayers.set(code,bindRegion(f,code));}
   for(const f of display.subdivisions.features){const code=f.properties.provinceCode;if(!detailLayers.has(code))detailLayers.set(code,[]);detailLayers.get(code).push(bindRegion(f,code));}
   for(const city of administration.missingCities){regionNames[city.adcode]={en:city.en,zh:city.zh,source:city.source,regional:[]};detailLayers.get(650000).push(bindRegion({type:'Feature',properties:{adcode:city.adcode,name:city.zh,provinceCode:650000,level:'city',boundaryAvailable:false},geometry:null},650000));}

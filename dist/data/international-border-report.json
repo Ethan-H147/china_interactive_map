@@ -1,0 +1,28 @@
+{
+  "source": "https://www.openstreetmap.org/relation/192734",
+  "method": "Adjacent exterior polygon edges within 2.5 km are projected onto the existing North Korean boundary and inherit its intervening vertices. Interior junctions follow their shared exterior endpoint. Coastlines outside the corridor retain source geometry.",
+  "south": {
+    "changedEdges": 886,
+    "maxDisplacementMetres": 2412.054762303748,
+    "changedRegions": [
+      "KR-41480",
+      "KR-41570",
+      "KR-41800",
+      "KR-51780",
+      "KR-51790",
+      "KR-51800",
+      "KR-51810",
+      "KR-51820"
+    ]
+  },
+  "china": {
+    "changedEdges": 840,
+    "maxDisplacementMetres": 1939.9562765800808,
+    "changedRegions": [
+      210600,
+      220500,
+      220600,
+      222400
+    ]
+  }
+}

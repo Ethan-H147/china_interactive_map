@@ -20,7 +20,7 @@ const previous=JSON.parse(original.stdout);
 const polygons=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 function edges(g){const values=[];for(const poly of polygons(g))for(const ring of poly)for(let i=1;i<ring.length;i++){const a=JSON.stringify(ring[i-1]),b=JSON.stringify(ring[i]);if(a!==b)values.push(a<b?a+'|'+b:b+'|'+a);}return createHash('sha256').update(values.sort().join('\n')).digest('hex');}
 let unchanged=0;
-for(const old of previous.provinces.features.filter(f=>![650000,350000,710000,440000,810000,820000,310000,320000].includes(f.properties.adcode))){
+for(const old of previous.provinces.features.filter(f=>![650000,350000,710000,440000,810000,820000,310000,320000,210000,220000].includes(f.properties.adcode))){
   const current=display.provinces.features.find(f=>f.properties.adcode===old.properties.adcode);
   assert.equal(edges(current.geometry),edges(transformGeometry(old.geometry)),'Source border altered beyond coordinate conversion: '+old.properties.name);unchanged++;
 }

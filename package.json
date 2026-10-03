@@ -8,10 +8,10 @@
   },
   "private": true,
   "scripts": {
-    "build": "node scripts/build-boundaries.mjs",
+    "build": "node scripts/build-boundaries.mjs && node scripts/reconcile-international.mjs",
     "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:korea",
     "start": "node scripts/serve.mjs",
-    "build:korea": "node scripts/fetch-korea.mjs && node scripts/build-korea-coast.mjs && node scripts/build-korea.mjs",
-    "test:korea": "node --check dist/korea.js && node scripts/validate-korea.mjs && node scripts/validate-korea-rendering.mjs"
+    "build:korea": "node scripts/fetch-korea.mjs && node scripts/build-korea-coast.mjs && node scripts/build-korea.mjs && node scripts/reconcile-international.mjs",
+    "test:korea": "node --check dist/korea.js && node scripts/validate-korea.mjs && node scripts/validate-korea-rendering.mjs && node scripts/validate-international.mjs"
   }
 }
