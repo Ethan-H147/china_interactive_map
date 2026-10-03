@@ -236,7 +236,7 @@ async function boundaryData(){
 }
 // Zero tolerance preserves every boundary vertex; tiling and triangulation run in workers.
 const sourceOptions={type:'geojson',tolerance:0,maxzoom:18,buffer:128};
-function addSource(id,data){map.addSource(id,{...sourceOptions,data,promoteId:'adcode'});}
+function addSource(id,data,options={}){map.addSource(id,{...sourceOptions,...options,data,promoteId:'adcode'});}
 const featureCollection=features=>({type:'FeatureCollection',features});
 const feature=geometry=>({type:'Feature',properties:{},geometry});
 function addFill(id,source,baseColor,baseOpacity){
@@ -268,7 +268,10 @@ async function init(){try{
   const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
   const otherFeatures=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
   addSource('provinces',display.provinces);addSource('prefectures',featureCollection(prefFeatures));addSource('others',featureCollection(otherFeatures));
-  for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',feature(geometry));
+  // Dense subpixel vertices can make dashed strokes bunch up after tile
+  // quantization. Apply a 0.1-pixel tolerance only to their rendering tiles;
+  // the stored geometry, coastlines and selectable polygons retain every vertex.
+  for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',feature(geometry),name==='other'?{tolerance:.1}:{});
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
   addFill('province-fill','provinces',colors,1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
   addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,.85);addLine('other-lines','other-boundaries','#9f874e',.7,.85,[3,3]);
