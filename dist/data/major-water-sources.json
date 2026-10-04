@@ -98,5 +98,11 @@
     }
   ],
   "riverSections": 57,
-  "lakes": 20
+  "lakes": 20,
+  "reconciliation": {
+    "report": "data/river-boundary-report.json",
+    "originalOverlay": "data/major-water-original.bin",
+    "method": "The optional river overlay reuses existing shared administrative vertices only within reviewed river/region pairs. Matching requires a continuous parallel run of at least 8 km, displacement at most 2.5 km and average at most 1.2 km, monotonic traversal, bounded detours and bidirectional proximity. The first and last 1 km of each accepted run taper inside the reviewed reach. Source endpoints and all shared river junctions remain fixed. Selectable administrative geometry is unchanged.",
+    "alignedKilometres": 1527
+  }
 }

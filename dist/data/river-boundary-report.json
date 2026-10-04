@@ -1,0 +1,1825 @@
+{
+  "method": "The optional river overlay reuses existing shared administrative vertices only within reviewed river/region pairs. Matching requires a continuous parallel run of at least 8 km, displacement at most 2.5 km and average at most 1.2 km, monotonic traversal, bounded detours and bidirectional proximity. The first and last 1 km of each accepted run taper inside the reviewed reach. Source endpoints and all shared river junctions remain fixed. Selectable administrative geometry is unchanged.",
+  "settings": {
+    "sampleMetres": 250,
+    "minRunMetres": 8000,
+    "maxDisplacementMetres": 2500,
+    "maxMeanDisplacementMetres": 1200,
+    "taperMetres": 1000,
+    "minDirectionalAgreement": 0.8,
+    "maxStretch": 1.8
+  },
+  "scope": {
+    "purpose": "Reviewed eligibility for cartographic river alignment. A persistent close parallel match to an existing shared edge is also required. Original rivers and all selectable boundaries are retained.",
+    "rules": [
+      {
+        "id": "yellow-shaanxi-shanxi-gorge",
+        "river": "Huang",
+        "provincePair": [
+          140000,
+          610000
+        ],
+        "bounds": [
+          109.8,
+          35.65,
+          111.5,
+          39.7
+        ],
+        "note": "Fugu–Yumenkou boundary river. Excludes the wandering lower reach south of Yumenkou.",
+        "sources": [
+          "https://dfz.shaanxi.gov.cn/zslm/fzzlk/xbsxsz/szdylpdf/201404/P020240923611750476939.pdf",
+          "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk11/201812/t20181204_677219.html"
+        ]
+      },
+      {
+        "id": "yellow-shanxi-henan",
+        "river": "Huang",
+        "provincePair": [
+          140000,
+          410000
+        ],
+        "bounds": [
+          110.35,
+          34.45,
+          112.033333,
+          35.15
+        ],
+        "note": "Existing shared edges only. Stops at the province junction upstream of Xiaolangdi.",
+        "sources": [
+          "https://www.mee.gov.cn/gkml/hbb/bgth/201408/t20140807_287560.htm"
+        ]
+      },
+      {
+        "id": "jinsha-sichuan-yunnan",
+        "river": "Jinsha",
+        "provincePair": [
+          510000,
+          530000
+        ],
+        "note": "Only portions form the province boundary; match shared edges independently.",
+        "sources": [
+          "https://wcb.yn.gov.cn/html/2020/dianshuizixun_0813/47062.html"
+        ]
+      },
+      {
+        "id": "jinsha-ganzi-chamdo",
+        "river": "Jinsha",
+        "regionPair": [
+          513300,
+          540300
+        ],
+        "note": "River boundary opposite Chamdo; stop at the existing Yunnan junction.",
+        "sources": [
+          "https://www.batang.gov.cn/lyjd/article/278891",
+          "https://zuogong.changdu.gov.cn/zgx/c105860/201509/233754da80214b4c8d6c2ca43c0399c3.shtml"
+        ]
+      },
+      {
+        "id": "nen-heihe-hulunbuir",
+        "river": "Nen",
+        "regionPair": [
+          150700,
+          231100
+        ],
+        "note": "Heihe's western river boundary with Inner Mongolia; no downstream extrapolation.",
+        "sources": [
+          "https://www.heihe.gov.cn/hhs/c102666/tt.shtml"
+        ]
+      },
+      {
+        "id": "nanpan-guizhou-guangxi",
+        "river": "Nanpan",
+        "provincePair": [
+          450000,
+          520000
+        ],
+        "note": "Natural Earth's Nanpan mainstem feature includes the downstream Hongshui reach. Eligibility covers the official Nanpan Huangni–Beipan and Hongshui Beipan–Liudong province-border corridors. Existing shared-edge agreement required; excludes Yunnan.",
+        "sources": [
+          "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202212/W020221230814767962642.pdf"
+        ]
+      },
+      {
+        "id": "hongshui-guizhou-guangxi",
+        "river": "Hongshui",
+        "provincePair": [
+          450000,
+          520000
+        ],
+        "note": "Beipan to Liudong corridor; shared-edge agreement required.",
+        "sources": [
+          "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202212/W020221230814767962642.pdf"
+        ]
+      },
+      {
+        "id": "yangtze-jingzhou-yueyang",
+        "river": "Yangtze",
+        "regionPair": [
+          421000,
+          430600
+        ],
+        "bounds": [
+          112.65,
+          29.35,
+          113.65,
+          30.15
+        ],
+        "note": "Their shared edges near the Hunan reach. Upstream Shishou remains within Hubei.",
+        "sources": [
+          "https://slt.hunan.gov.cn/ztzl/qmtxhzz/201901/t20190108_5254753.html",
+          "https://www.ndrc.gov.cn/fggz/zcssfz/zdgc/201509/t20150907_1146024.html"
+        ]
+      },
+      {
+        "id": "yangtze-ezhou-huanggang",
+        "river": "Yangtze",
+        "regionPair": [
+          420700,
+          421100
+        ],
+        "note": "Only their shared river edge. Wuhan/Xinzhou's upstream edge is excluded.",
+        "sources": [
+          "https://www.ezhou.gov.cn/zjez/ezgk/dlwz/201802/t20180216_44536.html"
+        ]
+      },
+      {
+        "id": "yangtze-huangshi-huanggang",
+        "river": "Yangtze",
+        "regionPair": [
+          420200,
+          421100
+        ],
+        "note": "Huangshi's northeastern river edge opposite Xishui, Qichun and Wuxue.",
+        "sources": [
+          "https://zrzy.huangshi.gov.cn/zwgk/fdzdgknr/qtzdgknr/dzzl/201512/t20151227_20244.html"
+        ]
+      },
+      {
+        "id": "yangtze-jiujiang-huanggang",
+        "river": "Yangtze",
+        "regionPair": [
+          360400,
+          421100
+        ],
+        "note": "Jiujiang's northern river edge faces Wuxue/Huangmei. Existing island and opposite-bank assignments are retained; proximity alone cannot change them.",
+        "sources": [
+          "https://www.jiujiang.gov.cn/xxgk/zdlyxxgk/sdgjz/hjbh/jsxmhjyxpj/201911/P020191113610526063085.pdf"
+        ]
+      },
+      {
+        "id": "yangtze-jiujiang-anqing",
+        "river": "Yangtze",
+        "regionPair": [
+          340800,
+          360400
+        ],
+        "note": "Jiujiang's northern river edge faces Susong/Wangjiang. Existing shared-edge agreement required; island shapes remain fixed.",
+        "sources": [
+          "https://www.jiujiang.gov.cn/xxgk/zdlyxxgk/sdgjz/hjbh/jsxmhjyxpj/201911/P020191113610526063085.pdf"
+        ]
+      }
+    ],
+    "deferred": [
+      {
+        "river": "Yangtze",
+        "area": "Zhenjiang / Yangzhou / Taizhou",
+        "reason": "North-bank enclaves and islands need channel-specific references.",
+        "sources": [
+          "https://www.js.msa.gov.cn/art/2026/2/13/art_259_1586797.html"
+        ]
+      },
+      {
+        "river": "Yangtze",
+        "area": "Suzhou / Nantong / Chongming estuary",
+        "reason": "Multiple branches and island jurisdictions; do not force the main channel onto a nearby boundary."
+      },
+      {
+        "river": "Yangtze",
+        "area": "Anhui / Jiangsu",
+        "reason": "Province transition crosses the river; it does not establish a long river-following province boundary.",
+        "sources": [
+          "https://nyncj.nanjing.gov.cn/njsnywyh/202104/t20210408_2874030.html"
+        ]
+      }
+    ]
+  },
+  "rulesSha256": "30222a0e8a2b2c0eb840531bfc80fe41ea88a491cba4f7066cc3c682c3633543",
+  "administrativeSha256": "0ce2fec7032aec5d3c83fc8813d94f8595543fb7c346aa58dcd968340e1bb6f8",
+  "reaches": [
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        104.58563550471884,
+        24.71461549534923
+      ],
+      "end": [
+        104.61687342388635,
+        24.676027125105108
+      ],
+      "alignedMetres": 5556,
+      "maxDisplacementMetres": 1776,
+      "meanDisplacementMetres": 1149,
+      "canonicalVertices": 4,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        104.6465397862651,
+        24.66121203233823
+      ],
+      "end": [
+        104.70121646506631,
+        24.648845752941284
+      ],
+      "alignedMetres": 5763,
+      "maxDisplacementMetres": 1748,
+      "meanDisplacementMetres": 1081,
+      "canonicalVertices": 7,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        104.84805547299283,
+        24.69103712313699
+      ],
+      "end": [
+        105.01141680307741,
+        24.78697514741763
+      ],
+      "alignedMetres": 21422,
+      "maxDisplacementMetres": 1339,
+      "meanDisplacementMetres": 845,
+      "canonicalVertices": 11,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        105.0560662191375,
+        24.889869367700577
+      ],
+      "end": [
+        105.10975149695848,
+        24.943794503306155
+      ],
+      "alignedMetres": 8484,
+      "maxDisplacementMetres": 1625,
+      "meanDisplacementMetres": 904,
+      "canonicalVertices": 11,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        105.1655697187558,
+        24.975927770903354
+      ],
+      "end": [
+        105.20962259597108,
+        24.998275942372864
+      ],
+      "alignedMetres": 5421,
+      "maxDisplacementMetres": 1286,
+      "meanDisplacementMetres": 778,
+      "canonicalVertices": 6,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        105.25369455845085,
+        24.965660949130907
+      ],
+      "end": [
+        105.31392153258017,
+        24.927625756363835
+      ],
+      "alignedMetres": 9526,
+      "maxDisplacementMetres": 1053,
+      "meanDisplacementMetres": 514,
+      "canonicalVertices": 10,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        105.33659583983389,
+        24.936530721823384
+      ],
+      "end": [
+        105.48474932391875,
+        24.84399213276834
+      ],
+      "alignedMetres": 21603,
+      "maxDisplacementMetres": 1339,
+      "meanDisplacementMetres": 522,
+      "canonicalVertices": 15,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        105.50935315406632,
+        24.80778804228409
+      ],
+      "end": [
+        105.91672154419109,
+        24.728184966183907
+      ],
+      "alignedMetres": 47936,
+      "maxDisplacementMetres": 1270,
+      "meanDisplacementMetres": 592,
+      "canonicalVertices": 40,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        105.94187866506586,
+        24.71308766753538
+      ],
+      "end": [
+        106.00168536466414,
+        24.642870453676792
+      ],
+      "alignedMetres": 10303,
+      "maxDisplacementMetres": 991,
+      "meanDisplacementMetres": 518,
+      "canonicalVertices": 11,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        106.17407865243045,
+        24.77475090993176
+      ],
+      "end": [
+        106.16067006662009,
+        24.937274066383633
+      ],
+      "alignedMetres": 20301,
+      "maxDisplacementMetres": 1177,
+      "meanDisplacementMetres": 423,
+      "canonicalVertices": 26,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        106.19630339611217,
+        24.968984359521183
+      ],
+      "end": [
+        106.38652156240025,
+        25.008149973822217
+      ],
+      "alignedMetres": 21451,
+      "maxDisplacementMetres": 924,
+      "meanDisplacementMetres": 343,
+      "canonicalVertices": 20,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        106.40895686904092,
+        25.015150455146173
+      ],
+      "end": [
+        106.49420077289344,
+        25.05076428547308
+      ],
+      "alignedMetres": 9933,
+      "maxDisplacementMetres": 1670,
+      "meanDisplacementMetres": 642,
+      "canonicalVertices": 12,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        106.52170946272726,
+        25.066877195753985
+      ],
+      "end": [
+        106.56622935242623,
+        25.08645898288472
+      ],
+      "alignedMetres": 5320,
+      "maxDisplacementMetres": 1738,
+      "meanDisplacementMetres": 924,
+      "canonicalVertices": 7,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        106.74099361877003,
+        25.173259168965885
+      ],
+      "end": [
+        106.8677321581054,
+        25.18750694277337
+      ],
+      "alignedMetres": 13927,
+      "maxDisplacementMetres": 1427,
+      "meanDisplacementMetres": 564,
+      "canonicalVertices": 8,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Nanpan",
+      "featureIndex": 1,
+      "lineIndex": 0,
+      "sourceId": "128River",
+      "start": [
+        106.89481108919556,
+        25.195739579395735
+      ],
+      "end": [
+        106.95837234757539,
+        25.24486069256639
+      ],
+      "alignedMetres": 11283,
+      "maxDisplacementMetres": 1069,
+      "meanDisplacementMetres": 383,
+      "canonicalVertices": 8,
+      "rule": "nanpan-guizhou-guangxi"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        98.74910058873533,
+        31.264441656550677
+      ],
+      "end": [
+        98.70278705871087,
+        31.320755108862762
+      ],
+      "alignedMetres": 7801,
+      "maxDisplacementMetres": 2120,
+      "meanDisplacementMetres": 1183,
+      "canonicalVertices": 7,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        98.62611435840734,
+        31.320833139914253
+      ],
+      "end": [
+        98.60529163707749,
+        31.245048246501952
+      ],
+      "alignedMetres": 8847,
+      "maxDisplacementMetres": 2251,
+      "meanDisplacementMetres": 1123,
+      "canonicalVertices": 5,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        98.71035469071712,
+        31.107391014025733
+      ],
+      "end": [
+        98.83345447758434,
+        30.86226334729525
+      ],
+      "alignedMetres": 34518,
+      "maxDisplacementMetres": 1956,
+      "meanDisplacementMetres": 823,
+      "canonicalVertices": 16,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        98.90907661325137,
+        30.676962895952926
+      ],
+      "end": [
+        98.9295293222722,
+        30.604775552554656
+      ],
+      "alignedMetres": 8566,
+      "maxDisplacementMetres": 1028,
+      "meanDisplacementMetres": 503,
+      "canonicalVertices": 4,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        98.92771831089127,
+        30.56970114131892
+      ],
+      "end": [
+        98.97500879169453,
+        30.233043262475338
+      ],
+      "alignedMetres": 39821,
+      "maxDisplacementMetres": 1362,
+      "meanDisplacementMetres": 433,
+      "canonicalVertices": 28,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        98.98708417576796,
+        30.19747650019244
+      ],
+      "end": [
+        98.99575744200982,
+        30.14997582592035
+      ],
+      "alignedMetres": 5818,
+      "maxDisplacementMetres": 1662,
+      "meanDisplacementMetres": 502,
+      "canonicalVertices": 5,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.04100848408098,
+        30.06693952908878
+      ],
+      "end": [
+        99.0513805272795,
+        29.944460395405553
+      ],
+      "alignedMetres": 14137,
+      "maxDisplacementMetres": 1724,
+      "meanDisplacementMetres": 848,
+      "canonicalVertices": 8,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.00814523496598,
+        29.764669299200516
+      ],
+      "end": [
+        99.05049276761223,
+        29.486521746083863
+      ],
+      "alignedMetres": 32721,
+      "maxDisplacementMetres": 1454,
+      "meanDisplacementMetres": 634,
+      "canonicalVertices": 12,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.05799501987893,
+        29.417877758085766
+      ],
+      "end": [
+        99.07123154722073,
+        29.298753545647106
+      ],
+      "alignedMetres": 13752,
+      "maxDisplacementMetres": 1260,
+      "meanDisplacementMetres": 638,
+      "canonicalVertices": 6,
+      "rule": "jinsha-ganzi-chamdo"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.11459232873932,
+        29.21640153084174
+      ],
+      "end": [
+        99.11893399868389,
+        29.03444960736408
+      ],
+      "alignedMetres": 20972,
+      "maxDisplacementMetres": 1215,
+      "meanDisplacementMetres": 663,
+      "canonicalVertices": 12,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.12373650345674,
+        29.009758312241086
+      ],
+      "end": [
+        99.16825076556152,
+        28.605526607979897
+      ],
+      "alignedMetres": 47820,
+      "maxDisplacementMetres": 1272,
+      "meanDisplacementMetres": 714,
+      "canonicalVertices": 27,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.17456842179728,
+        28.578022635421604
+      ],
+      "end": [
+        99.18250271536066,
+        28.475520700476824
+      ],
+      "alignedMetres": 11980,
+      "maxDisplacementMetres": 1060,
+      "meanDisplacementMetres": 496,
+      "canonicalVertices": 10,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.16977967712992,
+        28.41547127847593
+      ],
+      "end": [
+        99.21858331354647,
+        28.358292767834413
+      ],
+      "alignedMetres": 8487,
+      "maxDisplacementMetres": 919,
+      "meanDisplacementMetres": 430,
+      "canonicalVertices": 10,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 0,
+      "sourceId": "15River",
+      "start": [
+        99.29621367035004,
+        28.262668284828177
+      ],
+      "end": [
+        99.34859924140629,
+        28.198600080348875
+      ],
+      "alignedMetres": 9521,
+      "maxDisplacementMetres": 1417,
+      "meanDisplacementMetres": 707,
+      "canonicalVertices": 8,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        100.29881913491268,
+        27.739224373377976
+      ],
+      "end": [
+        100.29763306295216,
+        27.799022951853487
+      ],
+      "alignedMetres": 7060,
+      "maxDisplacementMetres": 2280,
+      "meanDisplacementMetres": 756,
+      "canonicalVertices": 5,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        102.16054022612015,
+        26.128969418924445
+      ],
+      "end": [
+        102.5250761063357,
+        26.33731706479133
+      ],
+      "alignedMetres": 45767,
+      "maxDisplacementMetres": 1678,
+      "meanDisplacementMetres": 797,
+      "canonicalVertices": 18,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        102.54721203027303,
+        26.35819881773245
+      ],
+      "end": [
+        102.61876703320144,
+        26.344616214836435
+      ],
+      "alignedMetres": 8280,
+      "maxDisplacementMetres": 1586,
+      "meanDisplacementMetres": 1091,
+      "canonicalVertices": 7,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        102.72119652654895,
+        26.24293773220919
+      ],
+      "end": [
+        102.87211424471379,
+        26.35597467677517
+      ],
+      "alignedMetres": 20954,
+      "maxDisplacementMetres": 1134,
+      "meanDisplacementMetres": 529,
+      "canonicalVertices": 11,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        102.91036384476013,
+        26.342537011391308
+      ],
+      "end": [
+        102.99262293780923,
+        26.4689261955457
+      ],
+      "alignedMetres": 21026,
+      "maxDisplacementMetres": 1278,
+      "meanDisplacementMetres": 541,
+      "canonicalVertices": 12,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.04108286626128,
+        26.50835322358624
+      ],
+      "end": [
+        103.04605987973181,
+        26.550294614060352
+      ],
+      "alignedMetres": 5228,
+      "maxDisplacementMetres": 1717,
+      "meanDisplacementMetres": 558,
+      "canonicalVertices": 4,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.02787430726254,
+        26.60513825152745
+      ],
+      "end": [
+        103.01762532567528,
+        26.672552092118767
+      ],
+      "alignedMetres": 7898,
+      "maxDisplacementMetres": 1360,
+      "meanDisplacementMetres": 632,
+      "canonicalVertices": 6,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.00631947602635,
+        26.69821678549869
+      ],
+      "end": [
+        102.98742566922519,
+        26.756155373133943
+      ],
+      "alignedMetres": 6806,
+      "maxDisplacementMetres": 1389,
+      "meanDisplacementMetres": 886,
+      "canonicalVertices": 4,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        102.98955630529794,
+        26.77765303447276
+      ],
+      "end": [
+        102.959798911339,
+        26.843965318446205
+      ],
+      "alignedMetres": 8047,
+      "maxDisplacementMetres": 1280,
+      "meanDisplacementMetres": 462,
+      "canonicalVertices": 4,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        102.93748118575468,
+        26.85933535264271
+      ],
+      "end": [
+        102.93725334359043,
+        27.402657405177493
+      ],
+      "alignedMetres": 65380,
+      "maxDisplacementMetres": 1427,
+      "meanDisplacementMetres": 582,
+      "canonicalVertices": 25,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.00255113488807,
+        27.37889958360407
+      ],
+      "end": [
+        103.05083366074041,
+        27.410192711832764
+      ],
+      "alignedMetres": 5992,
+      "maxDisplacementMetres": 1352,
+      "meanDisplacementMetres": 465,
+      "canonicalVertices": 3,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.07460095440112,
+        27.402041295668447
+      ],
+      "end": [
+        103.26096902393508,
+        27.568454385258143
+      ],
+      "alignedMetres": 29925,
+      "maxDisplacementMetres": 1511,
+      "meanDisplacementMetres": 520,
+      "canonicalVertices": 15,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.39989535588722,
+        27.72353922812757
+      ],
+      "end": [
+        103.53829614131413,
+        27.955318072934737
+      ],
+      "alignedMetres": 31521,
+      "maxDisplacementMetres": 1473,
+      "meanDisplacementMetres": 644,
+      "canonicalVertices": 18,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.42958681155038,
+        28.06085246799602
+      ],
+      "end": [
+        103.45390940825506,
+        28.126922064578245
+      ],
+      "alignedMetres": 8411,
+      "maxDisplacementMetres": 1242,
+      "meanDisplacementMetres": 390,
+      "canonicalVertices": 8,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.48141534043846,
+        28.135378975952158
+      ],
+      "end": [
+        103.69363203804576,
+        28.22678171956596
+      ],
+      "alignedMetres": 28894,
+      "maxDisplacementMetres": 1309,
+      "meanDisplacementMetres": 703,
+      "canonicalVertices": 16,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.77653327095928,
+        28.24809616884324
+      ],
+      "end": [
+        103.85315944384521,
+        28.298802260638613
+      ],
+      "alignedMetres": 9726,
+      "maxDisplacementMetres": 1036,
+      "meanDisplacementMetres": 301,
+      "canonicalVertices": 9,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.8547264804052,
+        28.37433278584071
+      ],
+      "end": [
+        103.79602497201739,
+        28.51225691289078
+      ],
+      "alignedMetres": 16963,
+      "maxDisplacementMetres": 1366,
+      "meanDisplacementMetres": 669,
+      "canonicalVertices": 12,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Jinsha",
+      "featureIndex": 7,
+      "lineIndex": 1,
+      "sourceId": "15River",
+      "start": [
+        103.8126043670951,
+        28.5737164877042
+      ],
+      "end": [
+        103.84420100048183,
+        28.657134513959146
+      ],
+      "alignedMetres": 10589,
+      "maxDisplacementMetres": 1036,
+      "meanDisplacementMetres": 297,
+      "canonicalVertices": 7,
+      "rule": "jinsha-sichuan-yunnan"
+    },
+    {
+      "river": "Yangtze",
+      "featureIndex": 9,
+      "lineIndex": 0,
+      "sourceId": "1River",
+      "start": [
+        116.56557125978935,
+        29.9869924109816
+      ],
+      "end": [
+        116.54120007937229,
+        29.907854016185254
+      ],
+      "alignedMetres": 9276,
+      "maxDisplacementMetres": 1439,
+      "meanDisplacementMetres": 902,
+      "canonicalVertices": 10,
+      "rule": "yangtze-jiujiang-anqing"
+    },
+    {
+      "river": "Yangtze",
+      "featureIndex": 9,
+      "lineIndex": 0,
+      "sourceId": "1River",
+      "start": [
+        116.45115948472673,
+        29.891362288284917
+      ],
+      "end": [
+        116.26208735647349,
+        29.78656320960687
+      ],
+      "alignedMetres": 21845,
+      "maxDisplacementMetres": 2036,
+      "meanDisplacementMetres": 741,
+      "canonicalVertices": 14,
+      "rule": "yangtze-jiujiang-anqing"
+    },
+    {
+      "river": "Yangtze",
+      "featureIndex": 9,
+      "lineIndex": 0,
+      "sourceId": "1River",
+      "start": [
+        116.08203884828283,
+        29.796522785610712
+      ],
+      "end": [
+        115.52038274825456,
+        29.84201148902352
+      ],
+      "alignedMetres": 61076,
+      "maxDisplacementMetres": 2430,
+      "meanDisplacementMetres": 966,
+      "canonicalVertices": 28,
+      "rule": "yangtze-jiujiang-huanggang"
+    },
+    {
+      "river": "Yangtze",
+      "featureIndex": 9,
+      "lineIndex": 0,
+      "sourceId": "1River",
+      "start": [
+        115.49484493089476,
+        29.845104618627744
+      ],
+      "end": [
+        115.21418693258067,
+        30.203253897791168
+      ],
+      "alignedMetres": 50793,
+      "maxDisplacementMetres": 1914,
+      "meanDisplacementMetres": 1010,
+      "canonicalVertices": 20,
+      "rule": "yangtze-huangshi-huanggang"
+    },
+    {
+      "river": "Yangtze",
+      "featureIndex": 9,
+      "lineIndex": 0,
+      "sourceId": "1River",
+      "start": [
+        115.18787425068939,
+        30.218703656808938
+      ],
+      "end": [
+        115.0745121671732,
+        30.25179746866271
+      ],
+      "alignedMetres": 13598,
+      "maxDisplacementMetres": 1410,
+      "meanDisplacementMetres": 683,
+      "canonicalVertices": 9,
+      "rule": "yangtze-huangshi-huanggang"
+    },
+    {
+      "river": "Yangtze",
+      "featureIndex": 9,
+      "lineIndex": 0,
+      "sourceId": "1River",
+      "start": [
+        115.07639738529434,
+        30.268334560259156
+      ],
+      "end": [
+        115.04624613141563,
+        30.394015669399852
+      ],
+      "alignedMetres": 14831,
+      "maxDisplacementMetres": 2019,
+      "meanDisplacementMetres": 1107,
+      "canonicalVertices": 7,
+      "rule": "yangtze-ezhou-huanggang"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        111.20467618522105,
+        39.2316162480283
+      ],
+      "end": [
+        111.1591481112369,
+        39.147403688884104
+      ],
+      "alignedMetres": 10335,
+      "maxDisplacementMetres": 1670,
+      "meanDisplacementMetres": 912,
+      "canonicalVertices": 4,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        111.14182398761533,
+        39.10008035228339
+      ],
+      "end": [
+        110.97798330532899,
+        38.97823841075349
+      ],
+      "alignedMetres": 21253,
+      "maxDisplacementMetres": 1498,
+      "meanDisplacementMetres": 715,
+      "canonicalVertices": 12,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.98871736737762,
+        38.95887614043057
+      ],
+      "end": [
+        111.00884514557734,
+        38.89214334946141
+      ],
+      "alignedMetres": 7722,
+      "maxDisplacementMetres": 1148,
+      "meanDisplacementMetres": 591,
+      "canonicalVertices": 4,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.99249233890319,
+        38.82706384915616
+      ],
+      "end": [
+        110.95375800692115,
+        38.76795374913033
+      ],
+      "alignedMetres": 8035,
+      "maxDisplacementMetres": 1362,
+      "meanDisplacementMetres": 679,
+      "canonicalVertices": 8,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.95025010094214,
+        38.74348400285335
+      ],
+      "end": [
+        110.88956219001103,
+        38.59095993907715
+      ],
+      "alignedMetres": 19373,
+      "maxDisplacementMetres": 1011,
+      "meanDisplacementMetres": 279,
+      "canonicalVertices": 13,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.77595236688258,
+        38.443127079775266
+      ],
+      "end": [
+        110.58689327712136,
+        38.30372700466365
+      ],
+      "alignedMetres": 25604,
+      "maxDisplacementMetres": 1289,
+      "meanDisplacementMetres": 512,
+      "canonicalVertices": 12,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.56925190823206,
+        38.282225949118335
+      ],
+      "end": [
+        110.71709062750708,
+        37.72944787792218
+      ],
+      "alignedMetres": 78112,
+      "maxDisplacementMetres": 1083,
+      "meanDisplacementMetres": 356,
+      "canonicalVertices": 41,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.71525012994455,
+        37.69766327262599
+      ],
+      "end": [
+        110.77286710299634,
+        37.644621742184334
+      ],
+      "alignedMetres": 10708,
+      "maxDisplacementMetres": 962,
+      "meanDisplacementMetres": 445,
+      "canonicalVertices": 9,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.76045778444956,
+        37.62480190829947
+      ],
+      "end": [
+        110.74799663699761,
+        37.4635892291754
+      ],
+      "alignedMetres": 19592,
+      "maxDisplacementMetres": 1367,
+      "meanDisplacementMetres": 487,
+      "canonicalVertices": 14,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.65536650305883,
+        37.27911724308039
+      ],
+      "end": [
+        110.53215504691049,
+        37.127700737186714
+      ],
+      "alignedMetres": 20453,
+      "maxDisplacementMetres": 1109,
+      "meanDisplacementMetres": 627,
+      "canonicalVertices": 9,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.51730424004151,
+        37.10601234777942
+      ],
+      "end": [
+        110.41961554744681,
+        37.0347280228921
+      ],
+      "alignedMetres": 12613,
+      "maxDisplacementMetres": 1000,
+      "meanDisplacementMetres": 321,
+      "canonicalVertices": 8,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.41833679876164,
+        37.01351743583014
+      ],
+      "end": [
+        110.40626124569685,
+        36.90836350482533
+      ],
+      "alignedMetres": 18120,
+      "maxDisplacementMetres": 1453,
+      "meanDisplacementMetres": 280,
+      "canonicalVertices": 14,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.39568970802443,
+        36.67277735373266
+      ],
+      "end": [
+        110.47800502435554,
+        36.462152063415715
+      ],
+      "alignedMetres": 27521,
+      "maxDisplacementMetres": 1080,
+      "meanDisplacementMetres": 464,
+      "canonicalVertices": 16,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.4846035402512,
+        36.42573358009118
+      ],
+      "end": [
+        110.50864608176101,
+        35.89990224842791
+      ],
+      "alignedMetres": 62592,
+      "maxDisplacementMetres": 995,
+      "meanDisplacementMetres": 324,
+      "canonicalVertices": 41,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 45,
+      "lineIndex": 1,
+      "sourceId": "66River",
+      "start": [
+        110.55852898855869,
+        35.788015494670184
+      ],
+      "end": [
+        110.5870654645346,
+        35.67757499270477
+      ],
+      "alignedMetres": 12871,
+      "maxDisplacementMetres": 1534,
+      "meanDisplacementMetres": 383,
+      "canonicalVertices": 10,
+      "rule": "yellow-shaanxi-shanxi-gorge"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.79749922771221,
+        50.63234173998101
+      ],
+      "end": [
+        125.8155050487989,
+        50.57302924650845
+      ],
+      "alignedMetres": 7001,
+      "maxDisplacementMetres": 790,
+      "meanDisplacementMetres": 336,
+      "canonicalVertices": 6,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.7090857394598,
+        50.508547126605336
+      ],
+      "end": [
+        125.60232500912481,
+        50.44709714820642
+      ],
+      "alignedMetres": 11367,
+      "maxDisplacementMetres": 1284,
+      "meanDisplacementMetres": 640,
+      "canonicalVertices": 8,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.45853151732513,
+        50.2943327440292
+      ],
+      "end": [
+        125.44028508814935,
+        50.24091603254092
+      ],
+      "alignedMetres": 7269,
+      "maxDisplacementMetres": 1190,
+      "meanDisplacementMetres": 351,
+      "canonicalVertices": 8,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.18080377009362,
+        49.81332193362352
+      ],
+      "end": [
+        125.20746229543649,
+        49.74887547318728
+      ],
+      "alignedMetres": 8517,
+      "maxDisplacementMetres": 1239,
+      "meanDisplacementMetres": 397,
+      "canonicalVertices": 6,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.21723341676254,
+        49.72147873935264
+      ],
+      "end": [
+        125.15039882364694,
+        49.66782887549775
+      ],
+      "alignedMetres": 12458,
+      "maxDisplacementMetres": 961,
+      "meanDisplacementMetres": 517,
+      "canonicalVertices": 10,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.22100011689552,
+        49.484904844486984
+      ],
+      "end": [
+        125.2507765288288,
+        49.39113323317798
+      ],
+      "alignedMetres": 11508,
+      "maxDisplacementMetres": 2298,
+      "meanDisplacementMetres": 789,
+      "canonicalVertices": 11,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.24953562544887,
+        49.357485281519196
+      ],
+      "end": [
+        125.23173928413019,
+        49.29701050494961
+      ],
+      "alignedMetres": 7449,
+      "maxDisplacementMetres": 1583,
+      "meanDisplacementMetres": 355,
+      "canonicalVertices": 8,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.19118128679504,
+        49.185254284484145
+      ],
+      "end": [
+        125.13256104214594,
+        49.13920966071139
+      ],
+      "alignedMetres": 7433,
+      "maxDisplacementMetres": 857,
+      "meanDisplacementMetres": 257,
+      "canonicalVertices": 5,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        125.00352036539174,
+        49.17135760282512
+      ],
+      "end": [
+        124.83483528585126,
+        49.1256619318958
+      ],
+      "alignedMetres": 16967,
+      "maxDisplacementMetres": 939,
+      "meanDisplacementMetres": 279,
+      "canonicalVertices": 8,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Nen",
+      "featureIndex": 51,
+      "lineIndex": 0,
+      "sourceId": "940River",
+      "start": [
+        124.80886649382958,
+        49.092478558778744
+      ],
+      "end": [
+        124.74072228691051,
+        48.92175167848761
+      ],
+      "alignedMetres": 20814,
+      "maxDisplacementMetres": 2253,
+      "meanDisplacementMetres": 533,
+      "canonicalVertices": 14,
+      "rule": "nen-heihe-hulunbuir"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 53,
+      "lineIndex": 1,
+      "sourceId": "95River",
+      "start": [
+        110.43092234593314,
+        34.59793621225756
+      ],
+      "end": [
+        110.6817826911651,
+        34.60672750456753
+      ],
+      "alignedMetres": 24886,
+      "maxDisplacementMetres": 1287,
+      "meanDisplacementMetres": 492,
+      "canonicalVertices": 16,
+      "rule": "yellow-shanxi-henan"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 53,
+      "lineIndex": 1,
+      "sourceId": "95River",
+      "start": [
+        110.71111817169175,
+        34.61666172197863
+      ],
+      "end": [
+        110.78635258652152,
+        34.650929695282606
+      ],
+      "alignedMetres": 9002,
+      "maxDisplacementMetres": 2189,
+      "meanDisplacementMetres": 712,
+      "canonicalVertices": 5,
+      "rule": "yellow-shanxi-henan"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 53,
+      "lineIndex": 1,
+      "sourceId": "95River",
+      "start": [
+        110.98681900108379,
+        34.71750266141503
+      ],
+      "end": [
+        111.09328392449555,
+        34.75564505695584
+      ],
+      "alignedMetres": 10839,
+      "maxDisplacementMetres": 1146,
+      "meanDisplacementMetres": 615,
+      "canonicalVertices": 6,
+      "rule": "yellow-shanxi-henan"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 53,
+      "lineIndex": 1,
+      "sourceId": "95River",
+      "start": [
+        111.11957809719061,
+        34.76996434790932
+      ],
+      "end": [
+        111.16209540137929,
+        34.81407716969438
+      ],
+      "alignedMetres": 6839,
+      "maxDisplacementMetres": 1132,
+      "meanDisplacementMetres": 589,
+      "canonicalVertices": 10,
+      "rule": "yellow-shanxi-henan"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 53,
+      "lineIndex": 1,
+      "sourceId": "95River",
+      "start": [
+        111.23598670239281,
+        34.79922155895579
+      ],
+      "end": [
+        111.27186241849901,
+        34.81363389152642
+      ],
+      "alignedMetres": 4965,
+      "maxDisplacementMetres": 890,
+      "meanDisplacementMetres": 566,
+      "canonicalVertices": 8,
+      "rule": "yellow-shanxi-henan"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 53,
+      "lineIndex": 1,
+      "sourceId": "95River",
+      "start": [
+        111.36605786097265,
+        34.8204559572413
+      ],
+      "end": [
+        111.43190354944711,
+        34.838363006400954
+      ],
+      "alignedMetres": 6859,
+      "maxDisplacementMetres": 1384,
+      "meanDisplacementMetres": 461,
+      "canonicalVertices": 5,
+      "rule": "yellow-shanxi-henan"
+    },
+    {
+      "river": "Huang",
+      "featureIndex": 53,
+      "lineIndex": 1,
+      "sourceId": "95River",
+      "start": [
+        111.80769416546723,
+        35.06579834011686
+      ],
+      "end": [
+        111.85903749973548,
+        35.07742732395028
+      ],
+      "alignedMetres": 4968,
+      "maxDisplacementMetres": 1717,
+      "meanDisplacementMetres": 898,
+      "canonicalVertices": 6,
+      "rule": "yellow-shanxi-henan"
+    }
+  ],
+  "alignedKilometres": 1527
+}

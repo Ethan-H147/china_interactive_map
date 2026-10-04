@@ -4,6 +4,7 @@ import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
 import {readData} from './read-data.mjs';
+import {reconcileRiverBoundaries} from './reconcile-river-boundaries.mjs';
 
 const root=new URL('../',import.meta.url);
 const snapshot=new URL('scripts/additional-sources/water/',root);
@@ -57,7 +58,8 @@ const estuaryLines=[[join.point,...downstream],...mappedLines.filter(line=>line!
 sources.push({url:'https://www.openstreetmap.org/relation/9392345',download:yangtzeSource.properties.source,snapshot:'osm-yangtze.geojson',sha256:createHash('sha256').update(yangtzeBytes).digest('hex'),license:'ODbL 1.0',licenseUrl:'https://opendatacommons.org/licenses/odbl/1-0/',attribution:'© OpenStreetMap contributors',selection:'Lower Yangtze continuation and mapped estuary branches',joinAdjustmentMetres:Math.round(join.distance)});
 // A small corridor preserves border rivers despite differing generalization in
 // the two sources. It does not change administrative or selectable geometry.
-const provinces=readData('display-boundaries.json').provinces;
+const display=readData('display-boundaries.json');
+const provinces=display.provinces;
 const mask=structuredClone(provinces);
 for(const f of mask.features){
   const g=f.geometry;
@@ -71,9 +73,16 @@ const features=JSON.parse(clipped['rivers.json']).features.map(f=>({...f,propert
 features.push({type:'Feature',properties:{kind:'river',name:'Yangtze',sourceId:'osm-relation-9392345',rank:1},geometry:{type:'MultiLineString',coordinates:estuaryLines}});
 // Show the entire water body for the shared international lake, Khanka.
 features.push(...lakeData.features.map(f=>({...f,properties:{kind:'lake',name:f.properties.name_en||f.properties.name,zh:f.properties.name_zh,sourceId:String(f.properties.ne_id),rank:f.properties.scalerank}})));
-const collection={type:'FeatureCollection',features};
-const json=JSON.stringify(collection,(key,value)=>typeof value==='number'&&!Number.isInteger(value)?Math.round(value*1e6)/1e6:value);
+const aligned=reconcileRiverBoundaries(features,display);
+// Preserve the independent overlay for audits and regression checks.
+fs.writeFileSync(new URL('dist/data/major-water-original.bin',root),gzipSync(JSON.stringify({type:'FeatureCollection',features}),{level:9}));
+const collection={type:'FeatureCollection',features:aligned.features};
+fs.writeFileSync(new URL('dist/data/river-boundary-report.json',root),JSON.stringify(aligned.report,null,2)+'\n');
+// Keep copied shared-edge vertices exact; rounding only the river would create
+// another difference from the administrative geometry at close zoom levels.
+const json=JSON.stringify(collection);
 fs.writeFileSync(new URL('dist/data/major-water.bin',root),gzipSync(json,{level:9}));
 const metadata={source:'Natural Earth and OpenStreetMap contributors',release:'Natural Earth 5.1.2; OSM snapshot '+yangtzeSource.properties.retrieved,license:'ODbL 1.0; underlying Natural Earth features are public domain',licenseUrl:'https://opendatacommons.org/licenses/odbl/1-0/',coordinateSystem:'WGS84',scale:'Natural Earth 1:10,000,000 with mapped OSM lower Yangtze',coverage:'Selected major rivers, lakes and reservoirs in China. Natural Earth river courses are clipped to the existing China extent with a 5 km corridor for international border rivers. The lower Yangtze and its estuary branches continue to open water using OpenStreetMap; these are not clipped to land. Lake Khanka is shown in full. These features are for geographic context, not current water levels.',sources,riverSections:features.filter(f=>f.properties.kind==='river').length,lakes:lakeData.features.length};
+metadata.reconciliation={report:'data/river-boundary-report.json',originalOverlay:'data/major-water-original.bin',method:aligned.report.method,alignedKilometres:aligned.report.alignedKilometres};
 fs.writeFileSync(new URL('dist/data/major-water-sources.json',root),JSON.stringify(metadata,null,2)+'\n');
 console.log(JSON.stringify({riverSections:metadata.riverSections,lakes:metadata.lakes,compressedBytes:gzipSync(json,{level:9}).length}));

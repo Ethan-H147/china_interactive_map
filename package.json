@@ -19,7 +19,7 @@
     "build:districts": "node scripts/prepare-city-districts.mjs",
     "build:gallery": "node scripts/prepare-gallery.mjs",
     "build:water": "node scripts/prepare-water.mjs",
-    "test:water": "node --check dist/water.mjs && node scripts/validate-water.mjs",
+    "test:water": "node --check dist/water.mjs && node scripts/validate-water.mjs && node scripts/validate-river-conflation.mjs",
     "test:names-quiz": "node --check dist/name-quiz.mjs && node --check dist/place-tools.mjs && node scripts/validate-name-quiz.mjs"
   }
 }
