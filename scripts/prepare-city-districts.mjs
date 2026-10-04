@@ -6,6 +6,7 @@ import {mesh} from 'topojson-client';
 import mapshaper from 'mapshaper';
 import {readData} from './read-data.mjs';
 import {transformFeature} from './coordinates.mjs';
+import {separateSuzhouPark} from './suzhou-park.mjs';
 const sourceDir='scripts/additional-sources/city-districts/';
 const display=readData('display-boundaries.json');
 const codes=[330100,320100,320500,440100,440300];
@@ -31,7 +32,8 @@ for(const code of codes){
   // city extent. This preserves AreaCity's detailed internal boundaries.
   const fallback=fc(datav.features.map(transformFeature).map(f=>({...f,properties:{...source.find(s=>s.properties.adcode===f.properties.adcode).properties}})));
   const extra=await run('-i fallback.json -clip parent.json -erase primary.json',{'fallback.json':fallback,'parent.json':parent,'primary.json':primary});
-  const clean=await run('-i input.json -clean gap-width=250m overlap-rule=min-area -dissolve2 adcode copy-fields=name,level,parentCity,parent,provinceCode,adminType,center',{'input.json':fc([...primary.features,...extra.features])});
+  let clean=await run('-i input.json -clean gap-width=250m overlap-rule=min-area -dissolve2 adcode copy-fields=name,level,parentCity,parent,provinceCode,adminType,center',{'input.json':fc([...primary.features,...extra.features])});
+  if(code===320500)clean=await separateSuzhouPark(clean,parent);
   const remaining=await run('-i parent.json -erase children.json',{'parent.json':parent,'children.json':clean});
   const gapArea=remaining.features.reduce((s,f)=>s+area(f.geometry),0);
   const points=await run('-i input.json -points inner',{'input.json':clean});
@@ -39,7 +41,7 @@ for(const code of codes){
   const top=topology({regions:clean});
   lines.push({type:'Feature',properties:{parentCity:code},geometry:mesh(top,top.objects.regions,(a,b)=>a!==b)});
   features.push(...clean.features);
-  report.push({city:code,districts:source.length,datavDistricts:datav.features.length,matchingCodes:source.every(f=>datav.features.some(d=>d.properties.adcode===f.properties.adcode)),uncoveredFraction:gapArea/area(parent.geometry),reference:'DataV county boundaries and AreaCity 2025.251231.260403'});
+  report.push({city:code,districts:source.length,functionalAreas:code===320500?1:0,datavDistricts:datav.features.length,matchingCodes:source.every(f=>datav.features.some(d=>d.properties.adcode===f.properties.adcode)),uncoveredFraction:gapArea/area(parent.geometry),reference:'DataV county boundaries and AreaCity 2025.251231.260403',...(code===320500?{correction:'Suzhou Industrial Park is shown separately by current management. OSM relation 7363894 supplies its extent. The old eastern Huqiu component is included whole to retain its shared exterior edge and avoid slivers.',administration:'https://www.sipac.gov.cn/szgyyq/xzqh/parkProfile.shtml',geometry:'https://www.openstreetmap.org/relation/7363894'}:{})});
 }
 const dataset={regions:fc(features),boundaries:fc(lines)};
 fs.writeFileSync('dist/data/city-districts.bin',gzipSync(JSON.stringify(dataset),{level:9}));

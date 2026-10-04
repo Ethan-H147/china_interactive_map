@@ -119,3 +119,9 @@ The gallery covers 20 landmarks across Beijing, Shanghai, Hangzhou, Nanjing, Suz
 
 `npm run test:explore` verifies article coverage, all 53 district names, geometry containment and overlaps, photo dimensions and credits, gallery scope, quiz exclusion and district → city → province navigation. District source hashes and coverage measurements are published in `city-district-sources.json`.
 
+
+## Huqiu and Suzhou Industrial Park
+
+The district overlay follows current management in Suzhou. Suzhou Industrial Park is a separately selectable development zone under Suzhou, not a detached part of Huqiu. Its extent comes from OpenStreetMap relation 7363894, checked against the park government’s administrative history and current five-street structure. The previous eastern Huqiu component is assigned whole to the park to preserve its shared exterior edge; the new park polygon is cut out of neighboring district polygons before the shared line mesh is built. The retained source is in `scripts/additional-sources/city-districts/suzhou-industrial-park.geojson` (ODbL). The internal map identifier is a string, not an invented administrative code.
+
+Gallery thumbnails use each photo’s natural aspect ratio without fixed frames or colored padding. Full-resolution source images remain unchanged.

@@ -14,8 +14,8 @@ const prefectures=display.subdivisions.features.filter(f=>f.properties.level==='
 assert.equal(prefectures.length,333);
 for(const f of prefectures){const a=articles[f.properties.adcode];assert(a?.en||a?.zh,'Missing article '+f.properties.adcode);for(const lang of ['en','zh'])if(a[lang]){assert.equal(new URL(a[lang].url).hostname,lang+'.wikipedia.org');assert(!a[lang].url.includes('Special:Search'));}}
 const data=JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin'))),names=read('city-district-names.json').regions;
-assert.equal(data.regions.features.length,53);assert.equal(new Set(data.regions.features.map(f=>f.properties.adcode)).size,53);
-const expected={330100:13,320100:11,320500:9,440100:11,440300:9};
+assert.equal(data.regions.features.filter(f=>!f.properties.functionalArea).length,53);assert.equal(data.regions.features.length,54);assert.equal(new Set(data.regions.features.map(f=>f.properties.adcode)).size,54);
+const expected={330100:13,320100:11,320500:10,440100:11,440300:9};
 const fc=features=>({type:'FeatureCollection',features});
 const parts=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
 const area=g=>parts(g).reduce((sum,p)=>sum+p.reduce((a,r,i)=>a+(i?-1:1)*Math.abs(r.slice(1).reduce((n,b,j)=>n+(r[j][0]-r[0][0])*(b[1]-r[0][1])-(b[0]-r[0][0])*(r[j][1]-r[0][1]),0)/2),0),0);
@@ -42,4 +42,10 @@ const context=vm.createContext({cameraBusy:false,allReady:true,quiz:{active:fals
 context.selected={layer:regions.get(330106)};
 vm.runInContext(app.slice(app.indexOf('function viewParent('),app.indexOf("$('zoom-in').onclick")),context);
 context.viewParent();assert.equal(returned,330100);context.selected={layer:regions.get(330100)};context.viewParent();assert.equal(returned,330000);context.selected={layer:regions.get(330000)};context.viewParent();assert.equal(returned,null);
-console.log('Explore: 333 prefecture articles, 53 districts, 20 original-resolution photos; geometry, quiz exclusion, gallery scope and district → city → province navigation passed.');
+const huqiu=data.regions.features.find(f=>f.properties.adcode===320505),park=data.regions.features.find(f=>f.properties.adcode==='suzhou-industrial-park');
+assert.equal(parts(huqiu.geometry).length,1,'Huqiu must have no eastern detached part');
+assert(parts(huqiu.geometry).every(p=>p[0].every(([x])=>x<120.63)));
+assert.equal(park.properties.adminType,'Development Zone');assert.equal(park.properties.parentCity,320500);assert(park.properties.functionalArea);
+const inRing=([x,y],r)=>{let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const [a,b]=r[i],[c,d]=r[j];if((b>y)!==(d>y)&&x<(c-a)*(y-b)/(d-b)+a)inside=!inside;}return inside;};
+for(const p of [[120.72,31.30],[120.75,31.37],[120.80,31.30]])assert(parts(park.geometry).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h))),'Industrial Park sample '+p);
+console.log('Explore: 333 prefecture articles, 53 districts and Suzhou Industrial Park, 20 original-resolution photos; geometry, Huqiu separation, quiz exclusion, gallery scope and district → city → province navigation passed.');
