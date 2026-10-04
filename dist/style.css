@@ -29,3 +29,5 @@
 .capital-marker:hover,.capital-marker:focus-visible{z-index:5}
 .capital-marker:hover .capital-tip,.capital-marker:focus-visible .capital-tip{display:block}
 .capital-marker:focus-visible svg{filter:drop-shadow(0 0 2px #bf392b)}
+
+.layers .water-line{border-top:2px solid #608fa3}
