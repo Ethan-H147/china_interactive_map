@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "name": "横洲",
+      "adcode": 440400,
+      "point": [113.807, 22.004],
+      "osmWay": 9767652,
+      "geometryReference": "https://www.openstreetmap.org/way/9767652",
+      "ownershipReference": "https://gdee.gd.gov.cn/attachment/0/359/359113/2475760.pdf",
+      "evidence": "Guangdong environmental assessment 17GDTXHP015 lists 珠海横洲岛F-ZLH in 万山海洋开发试验区. The named OSM coastline way identifies the physical island; the point only selects that polygon."
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import {transformFeature} from './coordinates.mjs';
 import {separateSuzhouPark} from './suzhou-park.mjs';
 import {clipShenzhenLand} from './shenzhen-coast.mjs';
 import {reconcileShenzhenHongKong,finishShenzhenDistrictBorder} from './shenzhen-hongkong.mjs';
+import {refineGuangzhouDistricts} from './pearl-coast.mjs';
 const sourceDir='scripts/additional-sources/city-districts/';
 const display=readData('display-boundaries.json');
 const codes=[330100,320100,320500,440100,440300];
@@ -36,6 +37,7 @@ for(const code of codes){
   const extra=await run('-i fallback.json -clip parent.json -erase primary.json',{'fallback.json':fallback,'parent.json':parent,'primary.json':primary});
   let clean=await run('-i input.json -clean gap-width=250m overlap-rule=min-area -dissolve2 adcode copy-fields=name,level,parentCity,parent,provinceCode,adminType,center',{'input.json':fc([...primary.features,...extra.features])});
   if(code===320500)clean=await separateSuzhouPark(clean,parent);
+  if(code===440100)clean={...clean,features:(await refineGuangzhouDistricts(clean.features,parent)).features};
   if(code===440300)clean={...clean,features:await clipShenzhenLand(clean.features,readData('shenzhen-land.json'))};
   if(code===440300){
     const hk=display.provinces.features.find(f=>f.properties.adcode===810000);

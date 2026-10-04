@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {readData} from './read-data.mjs';
 import {transformFeature} from './coordinates.mjs';
+import {gunzipSync} from 'node:zlib';
+import {run as coastOverlay,collection} from './pearl-coast.mjs';
 const root=new URL('../dist/data/',import.meta.url);
 const read=readData;
 const {provinces,subdivisions,boundaries}=read('display-boundaries.json');
@@ -10,6 +12,7 @@ const sourceProvinces={...read('provinces.json'),features:read('provinces.json')
 const supplementalTaiwan=read('taiwan-regions.json');
 const supplementalXinjiang={...read('xinjiang-additions.json'),features:read('xinjiang-additions.json').features.map(transformFeature)};
 const sar=new Map([810000,820000].map(code=>[code,read('sar-'+code+'.json').features]));
+const pearlLand=JSON.parse(gunzipSync(fs.readFileSync(new URL('pearl-coast-land.bin',root))));
 const polygons=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 const key=p=>JSON.stringify(p);
 const segment=(a,b)=>key(a)<key(b)?key(a)+'|'+key(b):key(b)+'|'+key(a);
@@ -23,7 +26,7 @@ assert.equal(provinces.features.length,34);
 assert.equal(childrenByCode.size,502);
 const edgeOwners=new Map();
 const provinceEdges=new Set();
-let maxProvinceAreaChange=0,islandPartsChecked=0,overlappingPartsAssignedToNeighbor=0;
+let maxProvinceAreaChange=0,islandPartsChecked=0,overlappingPartsAssignedToNeighbor=0,coastPartsChecked=0;
 for(const entry of manifest.coverage){
   const f=provinces.features.find(f=>f.properties.adcode===entry.adcode);
   const original=sourceProvinces.features.find(f=>f.properties.adcode===entry.adcode);
@@ -56,7 +59,12 @@ for(const entry of manifest.coverage){
       for(const part of polygons(originalChild.geometry)){
         // Even small offshore islands must remain represented after border repair.
         if(!retainedPart(part,child.geometry)){
-          assert(subdivisions.features.some(other=>retainedPart(part,other.geometry)),'Lost land polygon: '+child.properties.adcode);
+          if([440100,440400,441300].includes(child.properties.adcode)){
+            const physical=await coastOverlay('-i old.json -clip land.json',{'old.json':{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:part}},'land.json':pearlLand});
+            const missing=await coastOverlay('-i physical.json -erase city.json',{'physical.json':physical,'city.json':collection([child])});
+            assert(missing.features.reduce((s,f)=>s+(f.geometry?area(f.geometry):0),0)<1e-10,'Detailed physical island lost: '+child.properties.adcode);
+            coastPartsChecked++;
+          }else assert(subdivisions.features.some(other=>retainedPart(part,other.geometry)),'Lost land polygon: '+child.properties.adcode);
           overlappingPartsAssignedToNeighbor++;
         }
         islandPartsChecked++;
@@ -76,4 +84,4 @@ for(const [name,geometry] of Object.entries(boundaries))for(const line of geomet
 for(const edge of provinceEdges)assert(drawnSegments.has(edge),'Province outline is incomplete');
 const sharedProvinceEdges=[...edgeOwners.values()].filter(owners=>new Set(owners.map(o=>o.province)).size>1).length;
 assert(sharedProvinceEdges>1000,'Shared province boundaries were not reconciled');
-console.log(JSON.stringify({mergedProvinces:34,fallbackProvinces:0,subdivisions:502,islandPartsChecked,overlappingPartsAssignedToNeighbor,sharedProvinceEdges,uniqueBoundarySegments:drawnSegments.size,maxProvinceAreaChangePercent:maxProvinceAreaChange*100}));
+console.log(JSON.stringify({mergedProvinces:34,fallbackProvinces:0,subdivisions:502,islandPartsChecked,coastPartsChecked,overlappingPartsAssignedToNeighbor,sharedProvinceEdges,uniqueBoundarySegments:drawnSegments.size,maxProvinceAreaChangePercent:maxProvinceAreaChange*100}));

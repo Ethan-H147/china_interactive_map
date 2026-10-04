@@ -16,6 +16,8 @@ const changed=new Set([210600,220500,220600,222400]);
 changed.add(230800);changed.add(230900);
 // Shenzhen's physical coast has its own source and exact preservation checks.
 changed.add(440300);
+// Pearl River coast refinements have dedicated source and preservation checks.
+for(const code of [440100,440400,441300])changed.add(code);
 for(const f of old.subdivisions.features){const now=china.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(now.properties,f.properties);if(!changed.has(f.properties.adcode))assert.deepEqual(now.geometry,f.geometry,'Unrelated China geometry must remain exact: '+f.properties.adcode);}
 function shared(features){
  const top=topology({regions:{type:'FeatureCollection',features}});
@@ -49,4 +51,4 @@ for(const geometry of Object.values(korea.boundaries)){
  assert(lines.features.every(f=>f.geometry.coordinates.length<=4096),'GPU line buffer stays safe');
 }
 assert.equal(adaptiveOpacity(.8)[0],'interpolate');
-console.log({interKorean,chinaNorth,unchangedChinaSubdivisions:495,adaptiveIslandDetail:true});
+console.log({interKorean,chinaNorth,unchangedChinaSubdivisions:492,adaptiveIslandDetail:true});

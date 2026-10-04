@@ -1,0 +1,5412 @@
+{
+  "alignment": {
+    "changedEdges": 70,
+    "maxDisplacementMetres": 2482.429112588432,
+    "changedRegions": [
+      441300,
+      440400
+    ]
+  },
+  "catalogueMatches": [
+    {
+      "number": 12,
+      "name": "凫洲",
+      "jurisdiction": "广州市南沙区",
+      "adcode": 440100,
+      "point": [
+        113.61833333333334,
+        22.745
+      ],
+      "page": 195,
+      "landId": 713,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 13,
+      "name": "沙堆岛",
+      "jurisdiction": "广州市南沙区",
+      "adcode": 440100,
+      "point": [
+        113.65333333333334,
+        22.72
+      ],
+      "page": 195,
+      "landId": 254,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 14,
+      "name": "舢舨洲",
+      "jurisdiction": "广州市南沙区",
+      "adcode": 440100,
+      "point": [
+        113.65833333333333,
+        22.716666666666665
+      ],
+      "page": 195,
+      "landId": 626,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 63,
+      "name": "淇澳岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.635,
+        22.415
+      ],
+      "page": 196,
+      "landId": 250,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 64,
+      "name": "马山洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.64833333333333,
+        22.405
+      ],
+      "page": 196,
+      "landId": 289,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 66,
+      "name": "南打礁",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.59833333333333,
+        22.335
+      ],
+      "page": 196,
+      "landId": 1135,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 67,
+      "name": "蛇洲北一岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.60166666666667,
+        22.335
+      ],
+      "page": 197,
+      "landId": 1133,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 69,
+      "name": "蛇洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.605,
+        22.331666666666667
+      ],
+      "page": 197,
+      "landId": 310,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 81,
+      "name": "榕树洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.59833333333333,
+        22.313333333333333
+      ],
+      "page": 197,
+      "landId": 1121,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 82,
+      "name": "乌纱排",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.6,
+        22.311666666666667
+      ],
+      "page": 197,
+      "landId": 1120,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 84,
+      "name": "野狸岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.585,
+        22.281666666666666
+      ],
+      "page": 197,
+      "landId": 2631,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 93,
+      "name": "鸡笼岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.61666666666666,
+        22.256666666666668
+      ],
+      "page": 197,
+      "landId": 233,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 94,
+      "name": "横山岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.59833333333333,
+        22.25
+      ],
+      "page": 197,
+      "landId": 2636,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 100,
+      "name": "大九洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.61333333333333,
+        22.241666666666667
+      ],
+      "page": 198,
+      "landId": 235,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 102,
+      "name": "龙眼洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.61666666666666,
+        22.24
+      ],
+      "page": 198,
+      "landId": 282,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 103,
+      "name": "榕树头岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.79666666666667,
+        22.18
+      ],
+      "page": 198,
+      "landId": 270,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 104,
+      "name": "牛头岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.80333333333333,
+        22.17
+      ],
+      "page": 198,
+      "landId": 294,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 105,
+      "name": "牛角岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.81166666666667,
+        22.163333333333334
+      ],
+      "page": 198,
+      "landId": 294,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 106,
+      "name": "三角岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.71,
+        22.141666666666666
+      ],
+      "page": 198,
+      "landId": 313,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 108,
+      "name": "桂山岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.82333333333334,
+        22.135
+      ],
+      "page": 198,
+      "landId": 294,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 109,
+      "name": "细碌岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.705,
+        22.131666666666668
+      ],
+      "page": 198,
+      "landId": 291,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 113,
+      "name": "大堆岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.835,
+        22.128333333333334
+      ],
+      "page": 198,
+      "landId": 241,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 114,
+      "name": "大碌礁",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.7,
+        22.125
+      ],
+      "page": 198,
+      "landId": 760,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 115,
+      "name": "枕箱岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.835,
+        22.123333333333335
+      ],
+      "page": 198,
+      "landId": 231,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 116,
+      "name": "大蜘洲东岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.9,
+        22.121666666666666
+      ],
+      "page": 198,
+      "landId": 296,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 117,
+      "name": "大蜘洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.88833333333334,
+        22.12
+      ],
+      "page": 198,
+      "landId": 296,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 118,
+      "name": "赤滩岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.75833333333334,
+        22.118333333333332
+      ],
+      "page": 198,
+      "landId": 298,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 119,
+      "name": "大碌岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.69833333333334,
+        22.116666666666667
+      ],
+      "page": 198,
+      "landId": 320,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 120,
+      "name": "小蜘洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.87166666666667,
+        22.116666666666667
+      ],
+      "page": 198,
+      "landId": 288,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 126,
+      "name": "外伶仃东一岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.04666666666667,
+        22.105
+      ],
+      "page": 198,
+      "landId": 2,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 128,
+      "name": "外伶仃东三岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.05,
+        22.101666666666667
+      ],
+      "page": 198,
+      "landId": 2,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 129,
+      "name": "外伶仃岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.03666666666666,
+        22.101666666666667
+      ],
+      "page": 199,
+      "landId": 2,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 130,
+      "name": "大头洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.7,
+        22.1
+      ],
+      "page": 199,
+      "landId": 271,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 134,
+      "name": "小三洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.55666666666667,
+        22.091666666666665
+      ],
+      "page": 199,
+      "landId": 255,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 135,
+      "name": "大三洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.55666666666667,
+        22.09
+      ],
+      "page": 199,
+      "landId": 2591,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 138,
+      "name": "头鲈洲仔",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.94166666666666,
+        22.07
+      ],
+      "page": 199,
+      "landId": 240,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 139,
+      "name": "头鲈洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.94,
+        22.07
+      ],
+      "page": 199,
+      "landId": 240,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 141,
+      "name": "圆岗岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.97166666666666,
+        22.06833333333333
+      ],
+      "page": 199,
+      "landId": 297,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 144,
+      "name": "圆岗南岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.97166666666666,
+        22.066666666666666
+      ],
+      "page": 199,
+      "landId": 297,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 148,
+      "name": "马岗岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.97166666666666,
+        22.065
+      ],
+      "page": 199,
+      "landId": 300,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 149,
+      "name": "黑洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.975,
+        22.061666666666667
+      ],
+      "page": 199,
+      "landId": 244,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 150,
+      "name": "三门洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.00833333333334,
+        22.055
+      ],
+      "page": 199,
+      "landId": 178,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 151,
+      "name": "海豚头岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.99333333333334,
+        22.051666666666666
+      ],
+      "page": 199,
+      "landId": 246,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 152,
+      "name": "高排礁",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.01666666666667,
+        22.048333333333332
+      ],
+      "page": 199,
+      "landId": 489,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 153,
+      "name": "三门岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.99666666666667,
+        22.046666666666667
+      ],
+      "page": 199,
+      "landId": 246,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 155,
+      "name": "大烈岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.69166666666666,
+        22.045
+      ],
+      "page": 199,
+      "landId": 2630,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 156,
+      "name": "隘洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.92333333333333,
+        22.043333333333333
+      ],
+      "page": 199,
+      "landId": 319,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 157,
+      "name": "竹湾头岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.015,
+        22.043333333333333
+      ],
+      "page": 199,
+      "landId": 211,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 158,
+      "name": "担杆岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.26833333333333,
+        22.043333333333333
+      ],
+      "page": 199,
+      "landId": 11,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 161,
+      "name": "隘洲南二岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.93333333333334,
+        22.04
+      ],
+      "page": 200,
+      "landId": 319,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 163,
+      "name": "隘洲仔",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.90833333333333,
+        22.038333333333334
+      ],
+      "page": 200,
+      "landId": 239,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 165,
+      "name": "黄白岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.65666666666667,
+        22.036666666666665
+      ],
+      "page": 200,
+      "landId": 263,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 166,
+      "name": "小烈岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.69,
+        22.036666666666665
+      ],
+      "page": 200,
+      "landId": 283,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 170,
+      "name": "横岗岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.01,
+        22.035
+      ],
+      "page": 200,
+      "landId": 124,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 174,
+      "name": "东澳排",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.70166666666667,
+        22.03
+      ],
+      "page": 200,
+      "landId": 308,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 175,
+      "name": "南洋湾岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.24,
+        22.026666666666667
+      ],
+      "page": 200,
+      "landId": 11,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 176,
+      "name": "东澳一岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.69166666666666,
+        22.025
+      ],
+      "page": 200,
+      "landId": 308,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 177,
+      "name": "东澳六岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.72333333333333,
+        22.025
+      ],
+      "page": 200,
+      "landId": 483,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 178,
+      "name": "东澳七岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.71333333333334,
+        22.025
+      ],
+      "page": 200,
+      "landId": 308,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 179,
+      "name": "三牙礁",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.72333333333333,
+        22.025
+      ],
+      "page": 200,
+      "landId": 483,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 180,
+      "name": "东澳岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.70666666666666,
+        22.02166666666667
+      ],
+      "page": 200,
+      "landId": 308,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 184,
+      "name": "细岗洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.21333333333334,
+        22.015
+      ],
+      "page": 200,
+      "landId": 147,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 185,
+      "name": "东澳二岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.70333333333333,
+        22.011666666666667
+      ],
+      "page": 200,
+      "landId": 308,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 186,
+      "name": "白沥洲仔",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.77,
+        22.005
+      ],
+      "page": 200,
+      "landId": 257,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 187,
+      "name": "二洲岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.19833333333334,
+        22.001666666666665
+      ],
+      "page": 200,
+      "landId": 190,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 189,
+      "name": "白沥大排",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.76333333333334,
+        22
+      ],
+      "page": 200,
+      "landId": 253,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 190,
+      "name": "竹洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.82833333333333,
+        22
+      ],
+      "page": 200,
+      "landId": 286,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 191,
+      "name": "竹洲南一岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.82166666666667,
+        21.993333333333332
+      ],
+      "page": 200,
+      "landId": 286,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 193,
+      "name": "直湾西岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.12833333333333,
+        21.99
+      ],
+      "page": 201,
+      "landId": 181,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 194,
+      "name": "直湾岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.15,
+        21.99
+      ],
+      "page": 201,
+      "landId": 181,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 195,
+      "name": "石排礁",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.74333333333334,
+        21.983333333333334
+      ],
+      "page": 201,
+      "landId": 253,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 196,
+      "name": "贵洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.78833333333333,
+        21.983333333333334
+      ],
+      "page": 201,
+      "landId": 299,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 197,
+      "name": "白沥岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.755,
+        21.983333333333334
+      ],
+      "page": 201,
+      "landId": 253,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 198,
+      "name": "细担岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.13333333333334,
+        21.97
+      ],
+      "page": 201,
+      "landId": 130,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 199,
+      "name": "细担南岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.13833333333334,
+        21.968333333333334
+      ],
+      "page": 201,
+      "landId": 728,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 200,
+      "name": "小万洲仔",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.705,
+        21.958333333333332
+      ],
+      "page": 201,
+      "landId": 265,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 202,
+      "name": "小万山岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.69,
+        21.953333333333333
+      ],
+      "page": 201,
+      "landId": 321,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 203,
+      "name": "小万山东岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.705,
+        21.946666666666665
+      ],
+      "page": 201,
+      "landId": 321,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 204,
+      "name": "大万山岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.72833333333334,
+        21.941666666666666
+      ],
+      "page": 201,
+      "landId": 518,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 205,
+      "name": "牙鹰洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.06,
+        21.931666666666665
+      ],
+      "page": 201,
+      "landId": 197,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 206,
+      "name": "马咀角岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.71666666666667,
+        21.926666666666666
+      ],
+      "page": 201,
+      "landId": 518,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 207,
+      "name": "岗塘岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.72,
+        21.925
+      ],
+      "page": 201,
+      "landId": 518,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 208,
+      "name": "黑排礁",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.05833333333334,
+        21.915
+      ],
+      "page": 201,
+      "landId": 729,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 210,
+      "name": "北尖东岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.06333333333333,
+        21.906666666666666
+      ],
+      "page": 201,
+      "landId": 732,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 211,
+      "name": "海参岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.06166666666667,
+        21.906666666666666
+      ],
+      "page": 201,
+      "landId": 23,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 212,
+      "name": "海鳅角岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.07,
+        21.905
+      ],
+      "page": 201,
+      "landId": 132,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 213,
+      "name": "大鸡头岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.085,
+        21.903333333333332
+      ],
+      "page": 201,
+      "landId": 168,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 214,
+      "name": "小鸡头岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.08333333333333,
+        21.903333333333332
+      ],
+      "page": 201,
+      "landId": 53,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 215,
+      "name": "北尖岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.05,
+        21.898333333333333
+      ],
+      "page": 201,
+      "landId": 132,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 216,
+      "name": "北尖西岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.03,
+        21.89
+      ],
+      "page": 201,
+      "landId": 132,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 217,
+      "name": "北尖南二岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.04333333333334,
+        21.885
+      ],
+      "page": 201,
+      "landId": 132,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 221,
+      "name": "滃崖礁",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.015,
+        21.876666666666665
+      ],
+      "page": 201,
+      "landId": 27,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 222,
+      "name": "庙湾东岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.02666666666667,
+        21.875
+      ],
+      "page": 201,
+      "landId": 135,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 223,
+      "name": "白排岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.98333333333333,
+        21.868333333333332
+      ],
+      "page": 201,
+      "landId": 2482,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 224,
+      "name": "庙湾岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.00666666666666,
+        21.865
+      ],
+      "page": 202,
+      "landId": 135,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 226,
+      "name": "葫芦颈岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.00166666666667,
+        21.851666666666667
+      ],
+      "page": 202,
+      "landId": 135,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 227,
+      "name": "钳虫尾岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.00833333333334,
+        21.85
+      ],
+      "page": 202,
+      "landId": 170,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 228,
+      "name": "墨洲尾岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        114.00666666666666,
+        21.845
+      ],
+      "page": 202,
+      "landId": 56,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 229,
+      "name": "杉洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.97166666666666,
+        21.836666666666666
+      ],
+      "page": 202,
+      "landId": 249,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 230,
+      "name": "小湾洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.96166666666667,
+        21.825
+      ],
+      "page": 202,
+      "landId": 496,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 231,
+      "name": "石洲北岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.995,
+        21.825
+      ],
+      "page": 202,
+      "landId": 790,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 234,
+      "name": "黄茅洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.95666666666666,
+        21.823333333333334
+      ],
+      "page": 202,
+      "landId": 307,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 235,
+      "name": "红泥洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.97333333333333,
+        21.821666666666665
+      ],
+      "page": 202,
+      "landId": 301,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 236,
+      "name": "蚊尾洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.93833333333333,
+        21.813333333333333
+      ],
+      "page": 202,
+      "landId": 269,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 237,
+      "name": "平洲",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.96833333333333,
+        21.813333333333333
+      ],
+      "page": 202,
+      "landId": 237,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 238,
+      "name": "平洲一岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.96666666666667,
+        21.811666666666667
+      ],
+      "page": 202,
+      "landId": 237,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 239,
+      "name": "平洲二岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.96666666666667,
+        21.811666666666667
+      ],
+      "page": 202,
+      "landId": 237,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 240,
+      "name": "平洲三岛",
+      "jurisdiction": "珠海市香洲区",
+      "adcode": 440400,
+      "point": [
+        113.96833333333333,
+        21.811666666666667
+      ],
+      "page": 202,
+      "landId": 237,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 241,
+      "name": "横沥岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.43166666666667,
+        22.078333333333333
+      ],
+      "page": 202,
+      "landId": 375,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 242,
+      "name": "洲仔岛北岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.42666666666666,
+        22.071666666666665
+      ],
+      "page": 202,
+      "landId": 375,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 243,
+      "name": "交杯岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.44166666666666,
+        22.06833333333333
+      ],
+      "page": 202,
+      "landId": 305,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 249,
+      "name": "马鬃岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.42666666666666,
+        22.03
+      ],
+      "page": 202,
+      "landId": 651,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 250,
+      "name": "东排",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.43333333333334,
+        22.03
+      ],
+      "page": 202,
+      "landId": 651,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 252,
+      "name": "二岗岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.42333333333333,
+        22.018333333333334
+      ],
+      "page": 202,
+      "landId": 252,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 253,
+      "name": "大岗岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.41666666666667,
+        22.016666666666666
+      ],
+      "page": 202,
+      "landId": 309,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 254,
+      "name": "小黄麻洲",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.41,
+        22.003333333333334
+      ],
+      "page": 202,
+      "landId": 287,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 256,
+      "name": "黄麻洲",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.41333333333333,
+        22.001666666666665
+      ],
+      "page": 203,
+      "landId": 245,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 259,
+      "name": "草鞋排岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.265,
+        21.995
+      ],
+      "page": 203,
+      "landId": 228,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 260,
+      "name": "小青洲",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.29,
+        21.975
+      ],
+      "page": 203,
+      "landId": 272,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 262,
+      "name": "小三牙石岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.27666666666667,
+        21.975
+      ],
+      "page": 203,
+      "landId": 376,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 264,
+      "name": "獭洲",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.13,
+        21.955
+      ],
+      "page": 203,
+      "landId": 295,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 265,
+      "name": "东三角山岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.16666666666667,
+        21.953333333333333
+      ],
+      "page": 203,
+      "landId": 396,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 267,
+      "name": "三角山岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.16333333333333,
+        21.95
+      ],
+      "page": 203,
+      "landId": 396,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 270,
+      "name": "圆洲岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.31166666666667,
+        21.933333333333334
+      ],
+      "page": 203,
+      "landId": 292,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 271,
+      "name": "赤肋洲北岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.30833333333334,
+        21.928333333333335
+      ],
+      "page": 203,
+      "landId": 1011,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 272,
+      "name": "赤肋洲内岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.30833333333334,
+        21.928333333333335
+      ],
+      "page": 203,
+      "landId": 1011,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 274,
+      "name": "赤肋洲",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.30833333333334,
+        21.928333333333335
+      ],
+      "page": 203,
+      "landId": 1011,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 277,
+      "name": "长连排岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.12166666666667,
+        21.925
+      ],
+      "page": 203,
+      "landId": 629,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 279,
+      "name": "蚊洲",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.30833333333334,
+        21.923333333333332
+      ],
+      "page": 203,
+      "landId": 256,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 280,
+      "name": "大杧岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.135,
+        21.92
+      ],
+      "page": 203,
+      "landId": 273,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 282,
+      "name": "蚊洲仔",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.31,
+        21.918333333333333
+      ],
+      "page": 203,
+      "landId": 256,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 285,
+      "name": "杧仔岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.11333333333333,
+        21.893333333333334
+      ],
+      "page": 203,
+      "landId": 273,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 286,
+      "name": "荷包北岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.15833333333333,
+        21.878333333333334
+      ],
+      "page": 203,
+      "landId": 273,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 287,
+      "name": "荷包东岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.18333333333334,
+        21.868333333333332
+      ],
+      "page": 203,
+      "landId": 273,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 288,
+      "name": "毛鸡头北岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.19666666666667,
+        21.865
+      ],
+      "page": 204,
+      "landId": 273,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 289,
+      "name": "毛鸡头礁",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.195,
+        21.863333333333333
+      ],
+      "page": 204,
+      "landId": 273,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 290,
+      "name": "荷包岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.14333333333333,
+        21.856666666666666
+      ],
+      "page": 204,
+      "landId": 273,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 292,
+      "name": "荷包仔岛",
+      "jurisdiction": "珠海市金湾区",
+      "adcode": 440400,
+      "point": [
+        113.18333333333334,
+        21.85333333333333
+      ],
+      "page": 204,
+      "landId": 273,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 890,
+      "name": "宝塔洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.65666666666667,
+        22.765
+      ],
+      "page": 222,
+      "landId": 119,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 891,
+      "name": "横排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.655,
+        22.763333333333332
+      ],
+      "page": 222,
+      "landId": 1184,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 892,
+      "name": "小鹅洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63,
+        22.718333333333334
+      ],
+      "page": 222,
+      "landId": 712,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 893,
+      "name": "瓮头排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63666666666667,
+        22.716666666666665
+      ],
+      "page": 222,
+      "landId": 112,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 894,
+      "name": "鹅洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63333333333334,
+        22.716666666666665
+      ],
+      "page": 222,
+      "landId": 3,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 895,
+      "name": "纯洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.58833333333334,
+        22.711666666666666
+      ],
+      "page": 222,
+      "landId": 76,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 896,
+      "name": "黄毛洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.57333333333334,
+        22.708333333333332
+      ],
+      "page": 223,
+      "landId": 326,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 897,
+      "name": "老虎排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.53333333333333,
+        22.706666666666667
+      ],
+      "page": 223,
+      "landId": 189,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 898,
+      "name": "小红洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.595,
+        22.703333333333333
+      ],
+      "page": 223,
+      "landId": 205,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 899,
+      "name": "潮洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.53666666666666,
+        22.703333333333333
+      ],
+      "page": 223,
+      "landId": 189,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 900,
+      "name": "沙鱼洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.59,
+        22.698333333333334
+      ],
+      "page": 223,
+      "landId": 44,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 901,
+      "name": "亚洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.61,
+        22.695
+      ],
+      "page": 223,
+      "landId": 431,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 905,
+      "name": "牛牯排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.61833333333334,
+        22.69
+      ],
+      "page": 223,
+      "landId": 1897,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 909,
+      "name": "锅盖洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64333333333333,
+        22.681666666666665
+      ],
+      "page": 223,
+      "landId": 80,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 910,
+      "name": "从林门排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.52666666666667,
+        22.68
+      ],
+      "page": 223,
+      "landId": 2613,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 914,
+      "name": "横沙排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.59833333333333,
+        22.676666666666666
+      ],
+      "page": 223,
+      "landId": 1198,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 916,
+      "name": "大洲头",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.52666666666667,
+        22.676666666666666
+      ],
+      "page": 223,
+      "landId": 2613,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 917,
+      "name": "内园洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.53333333333333,
+        22.676666666666666
+      ],
+      "page": 223,
+      "landId": 74,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 918,
+      "name": "猫洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.525,
+        22.671666666666667
+      ],
+      "page": 223,
+      "landId": 157,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 919,
+      "name": "虼仔洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.52166666666666,
+        22.67
+      ],
+      "page": 223,
+      "landId": 188,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 920,
+      "name": "马鞭洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64666666666666,
+        22.67
+      ],
+      "page": 223,
+      "landId": 108,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 922,
+      "name": "许洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.60333333333334,
+        22.666666666666668
+      ],
+      "page": 223,
+      "landId": 128,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 923,
+      "name": "南塘排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.60833333333333,
+        22.663333333333334
+      ],
+      "page": 223,
+      "landId": 128,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 924,
+      "name": "白沙洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.62333333333333,
+        22.663333333333334
+      ],
+      "page": 223,
+      "landId": 223,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 926,
+      "name": "芒洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64666666666666,
+        22.661666666666665
+      ],
+      "page": 223,
+      "landId": 15,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 929,
+      "name": "小赤洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64333333333333,
+        22.64
+      ],
+      "page": 224,
+      "landId": 129,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 930,
+      "name": "园洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.62833333333333,
+        22.631666666666668
+      ],
+      "page": 224,
+      "landId": 22,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 931,
+      "name": "蟾蜍洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64333333333333,
+        22.631666666666668
+      ],
+      "page": 224,
+      "landId": 191,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 932,
+      "name": "蟾蜍洲东岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.645,
+        22.631666666666668
+      ],
+      "page": 224,
+      "landId": 2339,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 935,
+      "name": "穿洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64166666666667,
+        22.625
+      ],
+      "page": 224,
+      "landId": 25,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 936,
+      "name": "白头洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63833333333334,
+        22.621666666666666
+      ],
+      "page": 224,
+      "landId": 70,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 937,
+      "name": "白头洲东岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64,
+        22.621666666666666
+      ],
+      "page": 224,
+      "landId": 1866,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 938,
+      "name": "小辣甲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63,
+        22.615
+      ],
+      "page": 224,
+      "landId": 164,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 940,
+      "name": "双篷洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64666666666666,
+        22.60333333333333
+      ],
+      "page": 224,
+      "landId": 84,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 941,
+      "name": "牛头洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.645,
+        22.593333333333334
+      ],
+      "page": 224,
+      "landId": 227,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 942,
+      "name": "辣甲仔岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.635,
+        22.578333333333333
+      ],
+      "page": 224,
+      "landId": 140,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 943,
+      "name": "大辣甲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.65,
+        22.576666666666668
+      ],
+      "page": 224,
+      "landId": 210,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 944,
+      "name": "大辣甲西岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63833333333334,
+        22.576666666666668
+      ],
+      "page": 224,
+      "landId": 210,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 948,
+      "name": "双洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63333333333334,
+        22.571666666666665
+      ],
+      "page": 224,
+      "landId": 224,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 949,
+      "name": "刷洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63833333333334,
+        22.571666666666665
+      ],
+      "page": 224,
+      "landId": 7,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 950,
+      "name": "双洲南岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63166666666666,
+        22.571666666666665
+      ],
+      "page": 224,
+      "landId": 224,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 952,
+      "name": "大双洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63166666666666,
+        22.568333333333335
+      ],
+      "page": 224,
+      "landId": 185,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 953,
+      "name": "大双洲南岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63333333333334,
+        22.568333333333335
+      ],
+      "page": 224,
+      "landId": 185,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 954,
+      "name": "二鹰鼻",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.65333333333334,
+        22.563333333333333
+      ],
+      "page": 224,
+      "landId": 210,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 955,
+      "name": "二鹰鼻东岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.65333333333334,
+        22.563333333333333
+      ],
+      "page": 224,
+      "landId": 210,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 956,
+      "name": "二鹰鼻南岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.65333333333334,
+        22.563333333333333
+      ],
+      "page": 224,
+      "landId": 210,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 957,
+      "name": "黄毛山",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.61166666666666,
+        22.47
+      ],
+      "page": 224,
+      "landId": 187,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 959,
+      "name": "烂排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.6,
+        22.468333333333334
+      ],
+      "page": 225,
+      "landId": 1316,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 962,
+      "name": "烂洲西岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.605,
+        22.465
+      ],
+      "page": 225,
+      "landId": 144,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 963,
+      "name": "大三门岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63333333333334,
+        22.463333333333335
+      ],
+      "page": 225,
+      "landId": 4,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 966,
+      "name": "洪圣公",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.63666666666667,
+        22.453333333333333
+      ],
+      "page": 225,
+      "landId": 199,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 967,
+      "name": "小横洲",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.64333333333333,
+        22.45
+      ],
+      "page": 225,
+      "landId": 142,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 968,
+      "name": "三只排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.655,
+        22.446666666666665
+      ],
+      "page": 225,
+      "landId": 194,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 969,
+      "name": "外牛牯排",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.65333333333334,
+        22.44
+      ],
+      "page": 225,
+      "landId": 498,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 970,
+      "name": "小三门岛",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.645,
+        22.44
+      ],
+      "page": 225,
+      "landId": 194,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 972,
+      "name": "钓鱼公",
+      "jurisdiction": "惠州市惠阳区",
+      "adcode": 441300,
+      "point": [
+        114.67333333333333,
+        22.415
+      ],
+      "page": 225,
+      "landId": 497,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 976,
+      "name": "排墩",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.735,
+        22.776666666666667
+      ],
+      "page": 225,
+      "landId": 1839,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 983,
+      "name": "龙船洲",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.92833333333333,
+        22.74
+      ],
+      "page": 225,
+      "landId": 206,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 985,
+      "name": "坪峙岛",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.72666666666667,
+        22.735
+      ],
+      "page": 225,
+      "landId": 226,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 986,
+      "name": "坪峙西岛",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.72333333333333,
+        22.733333333333334
+      ],
+      "page": 225,
+      "landId": 226,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 987,
+      "name": "坪峙仔",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.72833333333334,
+        22.731666666666666
+      ],
+      "page": 225,
+      "landId": 72,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 988,
+      "name": "老鼠洲",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.91833333333334,
+        22.72833333333333
+      ],
+      "page": 225,
+      "landId": 10,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 989,
+      "name": "盐洲",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.93833333333333,
+        22.723333333333333
+      ],
+      "page": 225,
+      "landId": 329,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 992,
+      "name": "鸬鹚石",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.74,
+        22.703333333333333
+      ],
+      "page": 226,
+      "landId": 1159,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 996,
+      "name": "三到排",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.98666666666666,
+        22.688333333333333
+      ],
+      "page": 226,
+      "landId": 1238,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 997,
+      "name": "东虎屿",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.99,
+        22.688333333333333
+      ],
+      "page": 226,
+      "landId": 116,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 998,
+      "name": "二到排",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.98666666666666,
+        22.686666666666667
+      ],
+      "page": 226,
+      "landId": 82,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 999,
+      "name": "西虎屿",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.97333333333333,
+        22.678333333333335
+      ],
+      "page": 226,
+      "landId": 212,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 1008,
+      "name": "三板洲",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.925,
+        22.628333333333334
+      ],
+      "page": 226,
+      "landId": 1240,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 1010,
+      "name": "大排角",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.73,
+        22.623333333333335
+      ],
+      "page": 226,
+      "landId": 113,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 1012,
+      "name": "牛仔洲",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.72166666666666,
+        22.601666666666667
+      ],
+      "page": 226,
+      "landId": 1089,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 1014,
+      "name": "三姐妹",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.835,
+        22.6
+      ],
+      "page": 226,
+      "landId": 2060,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 1016,
+      "name": "柯村岛",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.76666666666667,
+        22.595
+      ],
+      "page": 226,
+      "landId": 2106,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 1018,
+      "name": "大石船",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.8,
+        22.59
+      ],
+      "page": 226,
+      "landId": 1185,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 1020,
+      "name": "桑洲",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.71833333333333,
+        22.585
+      ],
+      "page": 226,
+      "landId": 214,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 1023,
+      "name": "双大洲西岛",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.74166666666666,
+        22.58
+      ],
+      "page": 227,
+      "landId": 715,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 1024,
+      "name": "园洲岛",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.87666666666667,
+        22.56
+      ],
+      "page": 227,
+      "landId": 46,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 1025,
+      "name": "白鹤洲仔",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.88,
+        22.555
+      ],
+      "page": 227,
+      "landId": 1195,
+      "match": "unique island in coordinate rounding cell",
+      "added": false
+    },
+    {
+      "number": 1027,
+      "name": "白鸭排",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        115.02666666666667,
+        22.553333333333335
+      ],
+      "page": 227,
+      "landId": 433,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 1028,
+      "name": "铁砧",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.87166666666667,
+        22.545
+      ],
+      "page": 227,
+      "landId": 721,
+      "match": "unique island in coordinate rounding cell",
+      "added": true
+    },
+    {
+      "number": 1029,
+      "name": "圣告岛",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.84166666666667,
+        22.531666666666666
+      ],
+      "page": 227,
+      "landId": 184,
+      "match": "coordinate inside island",
+      "added": true
+    },
+    {
+      "number": 1030,
+      "name": "小星山",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.84166666666667,
+        22.513333333333332
+      ],
+      "page": 227,
+      "landId": 14,
+      "match": "coordinate inside island",
+      "added": false
+    },
+    {
+      "number": 1031,
+      "name": "浪咆屿",
+      "jurisdiction": "惠州市惠东县",
+      "adcode": 441300,
+      "point": [
+        114.83333333333333,
+        22.511666666666667
+      ],
+      "page": 227,
+      "landId": 133,
+      "match": "coordinate inside island",
+      "added": true
+    }
+  ],
+  "catalogueUnmatched": [
+    {
+      "number": 8,
+      "name": "大吉沙",
+      "adcode": 440100,
+      "point": [
+        113.45,
+        23.083333333333332
+      ],
+      "page": 195
+    },
+    {
+      "number": 9,
+      "name": "金锁排",
+      "adcode": 440100,
+      "point": [
+        113.61166666666666,
+        22.795
+      ],
+      "page": 195
+    },
+    {
+      "number": 10,
+      "name": "上横挡岛",
+      "adcode": 440100,
+      "point": [
+        113.60833333333333,
+        22.795
+      ],
+      "page": 195
+    },
+    {
+      "number": 11,
+      "name": "下横挡岛",
+      "adcode": 440100,
+      "point": [
+        113.60833333333333,
+        22.788333333333334
+      ],
+      "page": 195
+    },
+    {
+      "number": 15,
+      "name": "龙穴岛",
+      "adcode": 440100,
+      "point": [
+        113.65666666666667,
+        22.666666666666668
+      ],
+      "page": 195
+    },
+    {
+      "number": 16,
+      "name": "屎船沙",
+      "adcode": 440100,
+      "point": [
+        113.535,
+        22.665
+      ],
+      "page": 195
+    },
+    {
+      "number": 65,
+      "name": "北打礁",
+      "adcode": 440400,
+      "point": [
+        113.59833333333333,
+        22.336666666666666
+      ],
+      "page": 196
+    },
+    {
+      "number": 68,
+      "name": "蛇洲北二岛",
+      "adcode": 440400,
+      "point": [
+        113.6,
+        22.335
+      ],
+      "page": 197
+    },
+    {
+      "number": 70,
+      "name": "蛇洲南一岛",
+      "adcode": 440400,
+      "point": [
+        113.605,
+        22.33
+      ],
+      "page": 197
+    },
+    {
+      "number": 71,
+      "name": "蛇洲东岛",
+      "adcode": 440400,
+      "point": [
+        113.60833333333333,
+        22.33
+      ],
+      "page": 197
+    },
+    {
+      "number": 72,
+      "name": "蚝田岛",
+      "adcode": 440400,
+      "point": [
+        113.61,
+        22.328333333333333
+      ],
+      "page": 197
+    },
+    {
+      "number": 73,
+      "name": "蛇洲南二岛",
+      "adcode": 440400,
+      "point": [
+        113.6,
+        22.328333333333333
+      ],
+      "page": 197
+    },
+    {
+      "number": 74,
+      "name": "石林洲",
+      "adcode": 440400,
+      "point": [
+        113.60833333333333,
+        22.318333333333335
+      ],
+      "page": 197
+    },
+    {
+      "number": 75,
+      "name": "三石东小岛",
+      "adcode": 440400,
+      "point": [
+        113.59333333333333,
+        22.315
+      ],
+      "page": 197
+    },
+    {
+      "number": 76,
+      "name": "三石礁北岛",
+      "adcode": 440400,
+      "point": [
+        113.59166666666667,
+        22.315
+      ],
+      "page": 197
+    },
+    {
+      "number": 77,
+      "name": "三石礁东岛",
+      "adcode": 440400,
+      "point": [
+        113.595,
+        22.315
+      ],
+      "page": 197
+    },
+    {
+      "number": 78,
+      "name": "三石礁",
+      "adcode": 440400,
+      "point": [
+        113.59166666666667,
+        22.315
+      ],
+      "page": 197
+    },
+    {
+      "number": 79,
+      "name": "三石礁西岛",
+      "adcode": 440400,
+      "point": [
+        113.59166666666667,
+        22.315
+      ],
+      "page": 197
+    },
+    {
+      "number": 80,
+      "name": "观音洲",
+      "adcode": 440400,
+      "point": [
+        113.60333333333334,
+        22.315
+      ],
+      "page": 197
+    },
+    {
+      "number": 83,
+      "name": "小白排岛",
+      "adcode": 440400,
+      "point": [
+        113.61833333333334,
+        22.286666666666665
+      ],
+      "page": 197
+    },
+    {
+      "number": 85,
+      "name": "野狸东岛",
+      "adcode": 440400,
+      "point": [
+        113.58833333333334,
+        22.278333333333332
+      ],
+      "page": 197
+    },
+    {
+      "number": 86,
+      "name": "二打礁",
+      "adcode": 440400,
+      "point": [
+        113.58833333333334,
+        22.278333333333332
+      ],
+      "page": 197
+    },
+    {
+      "number": 87,
+      "name": "大打礁",
+      "adcode": 440400,
+      "point": [
+        113.59166666666667,
+        22.275
+      ],
+      "page": 197
+    },
+    {
+      "number": 88,
+      "name": "渔女一岛",
+      "adcode": 440400,
+      "point": [
+        113.58333333333333,
+        22.266666666666666
+      ],
+      "page": 197
+    },
+    {
+      "number": 89,
+      "name": "渔女二岛",
+      "adcode": 440400,
+      "point": [
+        113.585,
+        22.266666666666666
+      ],
+      "page": 197
+    },
+    {
+      "number": 90,
+      "name": "珠海渔女岛",
+      "adcode": 440400,
+      "point": [
+        113.58333333333333,
+        22.265
+      ],
+      "page": 197
+    },
+    {
+      "number": 91,
+      "name": "渔女三岛",
+      "adcode": 440400,
+      "point": [
+        113.585,
+        22.265
+      ],
+      "page": 197
+    },
+    {
+      "number": 92,
+      "name": "渔女四岛",
+      "adcode": 440400,
+      "point": [
+        113.58666666666667,
+        22.265
+      ],
+      "page": 197
+    },
+    {
+      "number": 95,
+      "name": "海獭洲",
+      "adcode": 440400,
+      "point": [
+        113.6,
+        22.245
+      ],
+      "page": 197
+    },
+    {
+      "number": 96,
+      "name": "镬盖石",
+      "adcode": 440400,
+      "point": [
+        113.62,
+        22.243333333333332
+      ],
+      "page": 197
+    },
+    {
+      "number": 97,
+      "name": "西大排岛",
+      "adcode": 440400,
+      "point": [
+        113.62,
+        22.243333333333332
+      ],
+      "page": 197
+    },
+    {
+      "number": 98,
+      "name": "磨盘礁",
+      "adcode": 440400,
+      "point": [
+        113.61,
+        22.243333333333332
+      ],
+      "page": 197
+    },
+    {
+      "number": 99,
+      "name": "磨盘礁西岛",
+      "adcode": 440400,
+      "point": [
+        113.61,
+        22.241666666666667
+      ],
+      "page": 198
+    },
+    {
+      "number": 101,
+      "name": "大九洲西岛",
+      "adcode": 440400,
+      "point": [
+        113.61,
+        22.24
+      ],
+      "page": 198
+    },
+    {
+      "number": 107,
+      "name": "百足排",
+      "adcode": 440400,
+      "point": [
+        113.70666666666666,
+        22.136666666666667
+      ],
+      "page": 198
+    },
+    {
+      "number": 110,
+      "name": "鸡士藤岛",
+      "adcode": 440400,
+      "point": [
+        113.71,
+        22.13
+      ],
+      "page": 198
+    },
+    {
+      "number": 111,
+      "name": "小堆岛",
+      "adcode": 440400,
+      "point": [
+        113.835,
+        22.13
+      ],
+      "page": 198
+    },
+    {
+      "number": 112,
+      "name": "姐妹排",
+      "adcode": 440400,
+      "point": [
+        113.89,
+        22.128333333333334
+      ],
+      "page": 198
+    },
+    {
+      "number": 121,
+      "name": "东石礁",
+      "adcode": 440400,
+      "point": [
+        113.45333333333333,
+        22.115
+      ],
+      "page": 198
+    },
+    {
+      "number": 122,
+      "name": "横琴岛",
+      "adcode": 440400,
+      "point": [
+        113.51,
+        22.115
+      ],
+      "page": 198
+    },
+    {
+      "number": 123,
+      "name": "铜锣礁",
+      "adcode": 440400,
+      "point": [
+        114.055,
+        22.115
+      ],
+      "page": 198
+    },
+    {
+      "number": 124,
+      "name": "外伶仃西一岛",
+      "adcode": 440400,
+      "point": [
+        114.02166666666666,
+        22.106666666666666
+      ],
+      "page": 198
+    },
+    {
+      "number": 125,
+      "name": "外伶仃西二岛",
+      "adcode": 440400,
+      "point": [
+        114.02166666666666,
+        22.106666666666666
+      ],
+      "page": 198
+    },
+    {
+      "number": 127,
+      "name": "外伶仃东二岛",
+      "adcode": 440400,
+      "point": [
+        114.04833333333333,
+        22.105
+      ],
+      "page": 198
+    },
+    {
+      "number": 131,
+      "name": "外伶仃东四岛",
+      "adcode": 440400,
+      "point": [
+        114.05166666666666,
+        22.096666666666668
+      ],
+      "page": 199
+    },
+    {
+      "number": 132,
+      "name": "长方礁",
+      "adcode": 440400,
+      "point": [
+        113.55833333333334,
+        22.091666666666665
+      ],
+      "page": 199
+    },
+    {
+      "number": 133,
+      "name": "外伶仃南岛",
+      "adcode": 440400,
+      "point": [
+        114.03833333333333,
+        22.091666666666665
+      ],
+      "page": 199
+    },
+    {
+      "number": 136,
+      "name": "大牙排北岛",
+      "adcode": 440400,
+      "point": [
+        113.80166666666666,
+        22.08
+      ],
+      "page": 199
+    },
+    {
+      "number": 137,
+      "name": "山排岛",
+      "adcode": 440400,
+      "point": [
+        113.8,
+        22.076666666666668
+      ],
+      "page": 199
+    },
+    {
+      "number": 140,
+      "name": "头鲈洲西岛",
+      "adcode": 440400,
+      "point": [
+        113.93833333333333,
+        22.07
+      ],
+      "page": 199
+    },
+    {
+      "number": 142,
+      "name": "头鲈石北岛",
+      "adcode": 440400,
+      "point": [
+        113.94,
+        22.06833333333333
+      ],
+      "page": 199
+    },
+    {
+      "number": 143,
+      "name": "头鲈石岛",
+      "adcode": 440400,
+      "point": [
+        113.94,
+        22.06833333333333
+      ],
+      "page": 199
+    },
+    {
+      "number": 145,
+      "name": "头鲈内岛",
+      "adcode": 440400,
+      "point": [
+        113.94,
+        22.066666666666666
+      ],
+      "page": 199
+    },
+    {
+      "number": 146,
+      "name": "头鲈外岛",
+      "adcode": 440400,
+      "point": [
+        113.94,
+        22.066666666666666
+      ],
+      "page": 199
+    },
+    {
+      "number": 147,
+      "name": "马岗北岛",
+      "adcode": 440400,
+      "point": [
+        113.97,
+        22.066666666666666
+      ],
+      "page": 199
+    },
+    {
+      "number": 154,
+      "name": "大烈东岛",
+      "adcode": 440400,
+      "point": [
+        113.69666666666667,
+        22.045
+      ],
+      "page": 199
+    },
+    {
+      "number": 159,
+      "name": "隘洲西一岛",
+      "adcode": 440400,
+      "point": [
+        113.915,
+        22.043333333333333
+      ],
+      "page": 199
+    },
+    {
+      "number": 160,
+      "name": "隘洲西二岛",
+      "adcode": 440400,
+      "point": [
+        113.915,
+        22.043333333333333
+      ],
+      "page": 200
+    },
+    {
+      "number": 162,
+      "name": "隘洲南一岛",
+      "adcode": 440400,
+      "point": [
+        113.93333333333334,
+        22.038333333333334
+      ],
+      "page": 200
+    },
+    {
+      "number": 164,
+      "name": "担杆南岛",
+      "adcode": 440400,
+      "point": [
+        114.29166666666667,
+        22.038333333333334
+      ],
+      "page": 200
+    },
+    {
+      "number": 167,
+      "name": "黄白二岛",
+      "adcode": 440400,
+      "point": [
+        113.655,
+        22.036666666666665
+      ],
+      "page": 200
+    },
+    {
+      "number": 168,
+      "name": "黄白一岛",
+      "adcode": 440400,
+      "point": [
+        113.655,
+        22.036666666666665
+      ],
+      "page": 200
+    },
+    {
+      "number": 169,
+      "name": "横岗东岛",
+      "adcode": 440400,
+      "point": [
+        114.015,
+        22.035
+      ],
+      "page": 200
+    },
+    {
+      "number": 171,
+      "name": "隘洲仔西岛",
+      "adcode": 440400,
+      "point": [
+        113.905,
+        22.033333333333335
+      ],
+      "page": 200
+    },
+    {
+      "number": 172,
+      "name": "烈尾礁",
+      "adcode": 440400,
+      "point": [
+        113.69166666666666,
+        22.033333333333335
+      ],
+      "page": 200
+    },
+    {
+      "number": 173,
+      "name": "小蒲台仔岛",
+      "adcode": 440400,
+      "point": [
+        113.63166666666666,
+        22.03
+      ],
+      "page": 200
+    },
+    {
+      "number": 181,
+      "name": "东澳五岛",
+      "adcode": 440400,
+      "point": [
+        113.725,
+        22.02
+      ],
+      "page": 200
+    },
+    {
+      "number": 182,
+      "name": "东澳四岛",
+      "adcode": 440400,
+      "point": [
+        113.725,
+        22.018333333333334
+      ],
+      "page": 200
+    },
+    {
+      "number": 183,
+      "name": "东澳三岛",
+      "adcode": 440400,
+      "point": [
+        113.72,
+        22.016666666666666
+      ],
+      "page": 200
+    },
+    {
+      "number": 188,
+      "name": "白沥小排",
+      "adcode": 440400,
+      "point": [
+        113.76833333333333,
+        22.001666666666665
+      ],
+      "page": 200
+    },
+    {
+      "number": 192,
+      "name": "竹洲南二岛",
+      "adcode": 440400,
+      "point": [
+        113.82,
+        21.993333333333332
+      ],
+      "page": 201
+    },
+    {
+      "number": 201,
+      "name": "缸瓦洲",
+      "adcode": 440400,
+      "point": [
+        113.72333333333333,
+        21.958333333333332
+      ],
+      "page": 201
+    },
+    {
+      "number": 209,
+      "name": "北尖北岛",
+      "adcode": 440400,
+      "point": [
+        114.055,
+        21.911666666666665
+      ],
+      "page": 201
+    },
+    {
+      "number": 218,
+      "name": "北尖南一岛",
+      "adcode": 440400,
+      "point": [
+        114.045,
+        21.885
+      ],
+      "page": 201
+    },
+    {
+      "number": 219,
+      "name": "北尖西南岛",
+      "adcode": 440400,
+      "point": [
+        114.035,
+        21.883333333333333
+      ],
+      "page": 201
+    },
+    {
+      "number": 220,
+      "name": "细岗岛",
+      "adcode": 440400,
+      "point": [
+        114.03666666666666,
+        21.883333333333333
+      ],
+      "page": 201
+    },
+    {
+      "number": 225,
+      "name": "庙湾南岛",
+      "adcode": 440400,
+      "point": [
+        114.00833333333334,
+        21.85333333333333
+      ],
+      "page": 202
+    },
+    {
+      "number": 232,
+      "name": "石洲东岛",
+      "adcode": 440400,
+      "point": [
+        113.99666666666667,
+        21.825
+      ],
+      "page": 202
+    },
+    {
+      "number": 233,
+      "name": "石洲南岛",
+      "adcode": 440400,
+      "point": [
+        113.995,
+        21.823333333333334
+      ],
+      "page": 202
+    },
+    {
+      "number": 244,
+      "name": "云排礁",
+      "adcode": 440400,
+      "point": [
+        113.415,
+        22.06833333333333
+      ],
+      "page": 202
+    },
+    {
+      "number": 245,
+      "name": "白鹤排北岛",
+      "adcode": 440400,
+      "point": [
+        113.40166666666667,
+        22.041666666666668
+      ],
+      "page": 202
+    },
+    {
+      "number": 246,
+      "name": "白鹤排",
+      "adcode": 440400,
+      "point": [
+        113.40166666666667,
+        22.041666666666668
+      ],
+      "page": 202
+    },
+    {
+      "number": 247,
+      "name": "宽河口沙岛",
+      "adcode": 440400,
+      "point": [
+        113.46666666666667,
+        22.031666666666666
+      ],
+      "page": 202
+    },
+    {
+      "number": 248,
+      "name": "穿窿岛",
+      "adcode": 440400,
+      "point": [
+        113.43166666666667,
+        22.03
+      ],
+      "page": 202
+    },
+    {
+      "number": 251,
+      "name": "马鬃南岛",
+      "adcode": 440400,
+      "point": [
+        113.425,
+        22.028333333333332
+      ],
+      "page": 202
+    },
+    {
+      "number": 255,
+      "name": "大立石岛",
+      "adcode": 440400,
+      "point": [
+        113.31333333333333,
+        22.003333333333334
+      ],
+      "page": 202
+    },
+    {
+      "number": 257,
+      "name": "马鞍排岛",
+      "adcode": 440400,
+      "point": [
+        113.30666666666667,
+        22.001666666666665
+      ],
+      "page": 203
+    },
+    {
+      "number": 258,
+      "name": "沉排礁",
+      "adcode": 440400,
+      "point": [
+        113.30666666666667,
+        22.001666666666665
+      ],
+      "page": 203
+    },
+    {
+      "number": 261,
+      "name": "三牙石岛",
+      "adcode": 440400,
+      "point": [
+        113.275,
+        21.975
+      ],
+      "page": 203
+    },
+    {
+      "number": 263,
+      "name": "北三角山岛",
+      "adcode": 440400,
+      "point": [
+        113.16666666666667,
+        21.958333333333332
+      ],
+      "page": 203
+    },
+    {
+      "number": 266,
+      "name": "赤鱼排",
+      "adcode": 440400,
+      "point": [
+        113.27,
+        21.951666666666668
+      ],
+      "page": 203
+    },
+    {
+      "number": 268,
+      "name": "獭洲爪岛",
+      "adcode": 440400,
+      "point": [
+        113.13333333333334,
+        21.948333333333334
+      ],
+      "page": 203
+    },
+    {
+      "number": 269,
+      "name": "南三角山岛",
+      "adcode": 440400,
+      "point": [
+        113.16833333333334,
+        21.945
+      ],
+      "page": 203
+    },
+    {
+      "number": 273,
+      "name": "挜柞礁",
+      "adcode": 440400,
+      "point": [
+        113.31,
+        21.928333333333335
+      ],
+      "page": 203
+    },
+    {
+      "number": 275,
+      "name": "赤肋洲南岛",
+      "adcode": 440400,
+      "point": [
+        113.31,
+        21.926666666666666
+      ],
+      "page": 203
+    },
+    {
+      "number": 276,
+      "name": "蚊排礁",
+      "adcode": 440400,
+      "point": [
+        113.31166666666667,
+        21.925
+      ],
+      "page": 203
+    },
+    {
+      "number": 278,
+      "name": "蟹蚶礁",
+      "adcode": 440400,
+      "point": [
+        113.29166666666667,
+        21.923333333333332
+      ],
+      "page": 203
+    },
+    {
+      "number": 281,
+      "name": "高栏东岛",
+      "adcode": 440400,
+      "point": [
+        113.295,
+        21.92
+      ],
+      "page": 203
+    },
+    {
+      "number": 283,
+      "name": "高栏岛",
+      "adcode": 440400,
+      "point": [
+        113.255,
+        21.916666666666668
+      ],
+      "page": 203
+    },
+    {
+      "number": 284,
+      "name": "杧仔礁",
+      "adcode": 440400,
+      "point": [
+        113.12,
+        21.89666666666667
+      ],
+      "page": 203
+    },
+    {
+      "number": 291,
+      "name": "荷包南岛",
+      "adcode": 440400,
+      "point": [
+        113.16666666666667,
+        21.856666666666666
+      ],
+      "page": 204
+    },
+    {
+      "number": 293,
+      "name": "排背礁",
+      "adcode": 440400,
+      "point": [
+        113.18333333333334,
+        21.851666666666667
+      ],
+      "page": 204
+    },
+    {
+      "number": 294,
+      "name": "撞洋礁",
+      "adcode": 440400,
+      "point": [
+        113.13833333333334,
+        21.835
+      ],
+      "page": 204
+    },
+    {
+      "number": 295,
+      "name": "凤尾咀",
+      "adcode": 440400,
+      "point": [
+        113.13833333333334,
+        21.835
+      ],
+      "page": 204
+    },
+    {
+      "number": 296,
+      "name": "排角礁",
+      "adcode": 440400,
+      "point": [
+        113.13666666666667,
+        21.835
+      ],
+      "page": 204
+    },
+    {
+      "number": 297,
+      "name": "排角仔礁",
+      "adcode": 440400,
+      "point": [
+        113.13833333333334,
+        21.835
+      ],
+      "page": 204
+    },
+    {
+      "number": 864,
+      "name": "蟑螂石",
+      "adcode": 441300,
+      "point": [
+        114.67,
+        22.773333333333333
+      ],
+      "page": 222
+    },
+    {
+      "number": 888,
+      "name": "三角排",
+      "adcode": 441300,
+      "point": [
+        114.65833333333333,
+        22.77166666666667
+      ],
+      "page": 222
+    },
+    {
+      "number": 889,
+      "name": "独洲仔",
+      "adcode": 441300,
+      "point": [
+        114.65833333333333,
+        22.765
+      ],
+      "page": 222
+    },
+    {
+      "number": 902,
+      "name": "鸡心岛",
+      "adcode": 441300,
+      "point": [
+        114.63666666666667,
+        22.693333333333335
+      ],
+      "page": 223
+    },
+    {
+      "number": 903,
+      "name": "鸡心内岛",
+      "adcode": 441300,
+      "point": [
+        114.63666666666667,
+        22.691666666666666
+      ],
+      "page": 223
+    },
+    {
+      "number": 904,
+      "name": "鸡心外岛",
+      "adcode": 441300,
+      "point": [
+        114.63666666666667,
+        22.69
+      ],
+      "page": 223
+    },
+    {
+      "number": 906,
+      "name": "担杆排",
+      "adcode": 441300,
+      "point": [
+        114.63,
+        22.686666666666667
+      ],
+      "page": 223
+    },
+    {
+      "number": 907,
+      "name": "棺材排",
+      "adcode": 441300,
+      "point": [
+        114.64333333333333,
+        22.685
+      ],
+      "page": 223
+    },
+    {
+      "number": 908,
+      "name": "阿婆排",
+      "adcode": 441300,
+      "point": [
+        114.61,
+        22.683333333333334
+      ],
+      "page": 223
+    },
+    {
+      "number": 911,
+      "name": "扬屋排",
+      "adcode": 441300,
+      "point": [
+        114.52166666666666,
+        22.68
+      ],
+      "page": 223
+    },
+    {
+      "number": 912,
+      "name": "白虼洲",
+      "adcode": 441300,
+      "point": [
+        114.51666666666667,
+        22.68
+      ],
+      "page": 223
+    },
+    {
+      "number": 913,
+      "name": "鹅兜",
+      "adcode": 441300,
+      "point": [
+        114.52166666666666,
+        22.678333333333335
+      ],
+      "page": 223
+    },
+    {
+      "number": 915,
+      "name": "鹅公洲",
+      "adcode": 441300,
+      "point": [
+        114.52,
+        22.676666666666666
+      ],
+      "page": 223
+    },
+    {
+      "number": 921,
+      "name": "刀石洲",
+      "adcode": 441300,
+      "point": [
+        114.525,
+        22.67
+      ],
+      "page": 223
+    },
+    {
+      "number": 925,
+      "name": "铁树排",
+      "adcode": 441300,
+      "point": [
+        114.60666666666667,
+        22.661666666666665
+      ],
+      "page": 223
+    },
+    {
+      "number": 927,
+      "name": "西三洲",
+      "adcode": 441300,
+      "point": [
+        114.635,
+        22.658333333333335
+      ],
+      "page": 223
+    },
+    {
+      "number": 928,
+      "name": "三洲东岛",
+      "adcode": 441300,
+      "point": [
+        114.64333333333333,
+        22.656666666666666
+      ],
+      "page": 224
+    },
+    {
+      "number": 933,
+      "name": "惠阳南孖洲",
+      "adcode": 441300,
+      "point": [
+        114.64166666666667,
+        22.628333333333334
+      ],
+      "page": 224
+    },
+    {
+      "number": 934,
+      "name": "穿洲仔岛",
+      "adcode": 441300,
+      "point": [
+        114.64,
+        22.626666666666665
+      ],
+      "page": 224
+    },
+    {
+      "number": 939,
+      "name": "印洲仔",
+      "adcode": 441300,
+      "point": [
+        114.625,
+        22.611666666666668
+      ],
+      "page": 224
+    },
+    {
+      "number": 945,
+      "name": "牛结排",
+      "adcode": 441300,
+      "point": [
+        114.64666666666666,
+        22.573333333333334
+      ],
+      "page": 224
+    },
+    {
+      "number": 946,
+      "name": "刷洲北岛",
+      "adcode": 441300,
+      "point": [
+        114.63833333333334,
+        22.573333333333334
+      ],
+      "page": 224
+    },
+    {
+      "number": 947,
+      "name": "刷洲东岛",
+      "adcode": 441300,
+      "point": [
+        114.64166666666667,
+        22.573333333333334
+      ],
+      "page": 224
+    },
+    {
+      "number": 951,
+      "name": "刷洲南岛",
+      "adcode": 441300,
+      "point": [
+        114.64166666666667,
+        22.571666666666665
+      ],
+      "page": 224
+    },
+    {
+      "number": 958,
+      "name": "黄毛山东岛",
+      "adcode": 441300,
+      "point": [
+        114.61333333333333,
+        22.468333333333334
+      ],
+      "page": 224
+    },
+    {
+      "number": 960,
+      "name": "三姊排",
+      "adcode": 441300,
+      "point": [
+        114.61333333333333,
+        22.468333333333334
+      ],
+      "page": 225
+    },
+    {
+      "number": 961,
+      "name": "烂洲",
+      "adcode": 441300,
+      "point": [
+        114.60666666666667,
+        22.465
+      ],
+      "page": 225
+    },
+    {
+      "number": 964,
+      "name": "大三门西岛",
+      "adcode": 441300,
+      "point": [
+        114.61666666666666,
+        22.461666666666666
+      ],
+      "page": 225
+    },
+    {
+      "number": 965,
+      "name": "保斗石",
+      "adcode": 441300,
+      "point": [
+        114.61666666666666,
+        22.461666666666666
+      ],
+      "page": 225
+    },
+    {
+      "number": 971,
+      "name": "打浪排",
+      "adcode": 441300,
+      "point": [
+        114.64,
+        22.431666666666665
+      ],
+      "page": 225
+    },
+    {
+      "number": 973,
+      "name": "龟洲北岛",
+      "adcode": 441300,
+      "point": [
+        114.79,
+        22.826666666666668
+      ],
+      "page": 225
+    },
+    {
+      "number": 974,
+      "name": "龟洲",
+      "adcode": 441300,
+      "point": [
+        114.78666666666666,
+        22.818333333333335
+      ],
+      "page": 225
+    },
+    {
+      "number": 975,
+      "name": "背带石",
+      "adcode": 441300,
+      "point": [
+        114.71166666666667,
+        22.793333333333333
+      ],
+      "page": 225
+    },
+    {
+      "number": 977,
+      "name": "新丰岛",
+      "adcode": 441300,
+      "point": [
+        114.77166666666666,
+        22.761666666666667
+      ],
+      "page": 225
+    },
+    {
+      "number": 978,
+      "name": "罂公洲",
+      "adcode": 441300,
+      "point": [
+        114.905,
+        22.746666666666666
+      ],
+      "page": 225
+    },
+    {
+      "number": 979,
+      "name": "黑排三岛",
+      "adcode": 441300,
+      "point": [
+        114.74666666666667,
+        22.746666666666666
+      ],
+      "page": 225
+    },
+    {
+      "number": 980,
+      "name": "黑排",
+      "adcode": 441300,
+      "point": [
+        114.745,
+        22.746666666666666
+      ],
+      "page": 225
+    },
+    {
+      "number": 981,
+      "name": "黑排二岛",
+      "adcode": 441300,
+      "point": [
+        114.74666666666667,
+        22.746666666666666
+      ],
+      "page": 225
+    },
+    {
+      "number": 982,
+      "name": "黑排一岛",
+      "adcode": 441300,
+      "point": [
+        114.74666666666667,
+        22.746666666666666
+      ],
+      "page": 225
+    },
+    {
+      "number": 984,
+      "name": "龙船小洲",
+      "adcode": 441300,
+      "point": [
+        114.92833333333333,
+        22.738333333333333
+      ],
+      "page": 225
+    },
+    {
+      "number": 990,
+      "name": "伞子排",
+      "adcode": 441300,
+      "point": [
+        114.73833333333333,
+        22.705
+      ],
+      "page": 225
+    },
+    {
+      "number": 991,
+      "name": "狮子球",
+      "adcode": 441300,
+      "point": [
+        114.73833333333333,
+        22.705
+      ],
+      "page": 226
+    },
+    {
+      "number": 993,
+      "name": "凤咀岛",
+      "adcode": 441300,
+      "point": [
+        114.74166666666666,
+        22.703333333333333
+      ],
+      "page": 226
+    },
+    {
+      "number": 994,
+      "name": "凤咀南岛",
+      "adcode": 441300,
+      "point": [
+        114.74,
+        22.7
+      ],
+      "page": 226
+    },
+    {
+      "number": 995,
+      "name": "三到排东岛",
+      "adcode": 441300,
+      "point": [
+        114.98833333333333,
+        22.688333333333333
+      ],
+      "page": 226
+    },
+    {
+      "number": 1000,
+      "name": "下新村岛",
+      "adcode": 441300,
+      "point": [
+        114.73333333333333,
+        22.665
+      ],
+      "page": 226
+    },
+    {
+      "number": 1001,
+      "name": "磨子石",
+      "adcode": 441300,
+      "point": [
+        114.74166666666666,
+        22.643333333333334
+      ],
+      "page": 226
+    },
+    {
+      "number": 1002,
+      "name": "磨子石南岛",
+      "adcode": 441300,
+      "point": [
+        114.74166666666666,
+        22.641666666666666
+      ],
+      "page": 226
+    },
+    {
+      "number": 1003,
+      "name": "港圆石",
+      "adcode": 441300,
+      "point": [
+        114.74333333333334,
+        22.638333333333332
+      ],
+      "page": 226
+    },
+    {
+      "number": 1004,
+      "name": "港圆石外岛",
+      "adcode": 441300,
+      "point": [
+        114.74333333333334,
+        22.633333333333333
+      ],
+      "page": 226
+    },
+    {
+      "number": 1005,
+      "name": "花榕树洲",
+      "adcode": 441300,
+      "point": [
+        114.92166666666667,
+        22.63
+      ],
+      "page": 226
+    },
+    {
+      "number": 1006,
+      "name": "澳仔妈庙",
+      "adcode": 441300,
+      "point": [
+        114.91833333333334,
+        22.63
+      ],
+      "page": 226
+    },
+    {
+      "number": 1007,
+      "name": "米塔仔",
+      "adcode": 441300,
+      "point": [
+        114.92166666666667,
+        22.63
+      ],
+      "page": 226
+    },
+    {
+      "number": 1009,
+      "name": "三角洲东岛",
+      "adcode": 441300,
+      "point": [
+        114.73333333333333,
+        22.625
+      ],
+      "page": 226
+    },
+    {
+      "number": 1011,
+      "name": "孤洲",
+      "adcode": 441300,
+      "point": [
+        114.87833333333333,
+        22.613333333333333
+      ],
+      "page": 226
+    },
+    {
+      "number": 1013,
+      "name": "二姐妹",
+      "adcode": 441300,
+      "point": [
+        114.83666666666667,
+        22.6
+      ],
+      "page": 226
+    },
+    {
+      "number": 1015,
+      "name": "钓鱼石",
+      "adcode": 441300,
+      "point": [
+        114.79833333333333,
+        22.596666666666668
+      ],
+      "page": 226
+    },
+    {
+      "number": 1017,
+      "name": "石船仔",
+      "adcode": 441300,
+      "point": [
+        114.8,
+        22.593333333333334
+      ],
+      "page": 226
+    },
+    {
+      "number": 1019,
+      "name": "大肚佛",
+      "adcode": 441300,
+      "point": [
+        114.75166666666667,
+        22.586666666666666
+      ],
+      "page": 226
+    },
+    {
+      "number": 1021,
+      "name": "大打",
+      "adcode": 441300,
+      "point": [
+        114.745,
+        22.581666666666667
+      ],
+      "page": 226
+    },
+    {
+      "number": 1022,
+      "name": "双大洲",
+      "adcode": 441300,
+      "point": [
+        114.74333333333334,
+        22.581666666666667
+      ],
+      "page": 226
+    },
+    {
+      "number": 1026,
+      "name": "白鹤仔南岛",
+      "adcode": 441300,
+      "point": [
+        114.88,
+        22.553333333333335
+      ],
+      "page": 227
+    },
+    {
+      "number": 1032,
+      "name": "针头岩",
+      "adcode": 441300,
+      "point": [
+        115.125,
+        22.316666666666666
+      ],
+      "page": 227
+    }
+  ],
+  "supplementalMatches": [
+    {
+      "name": "横洲",
+      "adcode": 440400,
+      "point": [
+        113.807,
+        22.004
+      ],
+      "osmWay": 9767652,
+      "geometryReference": "https://www.openstreetmap.org/way/9767652",
+      "ownershipReference": "https://gdee.gd.gov.cn/attachment/0/359/359113/2475760.pdf",
+      "evidence": "Guangdong environmental assessment 17GDTXHP015 lists 珠海横洲岛F-ZLH in 万山海洋开发试验区. The named OSM coastline way identifies the physical island; the point only selects that polygon.",
+      "landId": 280,
+      "added": true
+    }
+  ],
+  "cities": [
+    {
+      "adcode": 440100,
+      "oldParts": 1,
+      "newParts": 18,
+      "oldVertices": 349,
+      "newVertices": 1754,
+      "wholeIslands": 17,
+      "wholeIslandIds": [
+        254,
+        278,
+        314,
+        626,
+        713,
+        1952,
+        1953,
+        1954,
+        1956,
+        1957,
+        1958,
+        1959,
+        2511,
+        2605,
+        2607,
+        2608,
+        2616
+      ]
+    },
+    {
+      "adcode": 441300,
+      "oldParts": 8,
+      "newParts": 196,
+      "oldVertices": 523,
+      "newVertices": 17111,
+      "wholeIslands": 195,
+      "wholeIslandIds": [
+        3,
+        4,
+        7,
+        10,
+        14,
+        15,
+        22,
+        25,
+        44,
+        46,
+        54,
+        59,
+        64,
+        70,
+        72,
+        74,
+        76,
+        80,
+        82,
+        84,
+        90,
+        98,
+        99,
+        108,
+        112,
+        113,
+        116,
+        119,
+        128,
+        129,
+        131,
+        133,
+        139,
+        140,
+        142,
+        144,
+        150,
+        157,
+        164,
+        179,
+        184,
+        185,
+        187,
+        188,
+        189,
+        191,
+        194,
+        199,
+        205,
+        206,
+        210,
+        212,
+        214,
+        223,
+        224,
+        226,
+        227,
+        326,
+        329,
+        431,
+        433,
+        497,
+        498,
+        558,
+        559,
+        560,
+        712,
+        715,
+        721,
+        722,
+        913,
+        944,
+        948,
+        1084,
+        1089,
+        1091,
+        1153,
+        1154,
+        1155,
+        1156,
+        1157,
+        1158,
+        1159,
+        1160,
+        1161,
+        1162,
+        1163,
+        1182,
+        1183,
+        1184,
+        1185,
+        1186,
+        1187,
+        1188,
+        1194,
+        1195,
+        1198,
+        1238,
+        1239,
+        1240,
+        1286,
+        1288,
+        1289,
+        1290,
+        1291,
+        1302,
+        1304,
+        1306,
+        1309,
+        1316,
+        1320,
+        1364,
+        1365,
+        1366,
+        1367,
+        1368,
+        1369,
+        1370,
+        1371,
+        1372,
+        1373,
+        1374,
+        1375,
+        1376,
+        1377,
+        1378,
+        1837,
+        1838,
+        1839,
+        1840,
+        1841,
+        1842,
+        1843,
+        1844,
+        1845,
+        1846,
+        1847,
+        1866,
+        1873,
+        1874,
+        1875,
+        1876,
+        1877,
+        1878,
+        1879,
+        1897,
+        1900,
+        1972,
+        1973,
+        1974,
+        1975,
+        1976,
+        1977,
+        2057,
+        2058,
+        2059,
+        2060,
+        2106,
+        2112,
+        2113,
+        2115,
+        2122,
+        2131,
+        2132,
+        2133,
+        2134,
+        2135,
+        2136,
+        2137,
+        2339,
+        2355,
+        2356,
+        2357,
+        2358,
+        2359,
+        2360,
+        2361,
+        2362,
+        2363,
+        2364,
+        2365,
+        2366,
+        2367,
+        2368,
+        2369,
+        2370,
+        2371,
+        2372,
+        2373,
+        2374,
+        2375,
+        2376,
+        2613,
+        2634,
+        2635
+      ]
+    },
+    {
+      "adcode": 440400,
+      "oldParts": 33,
+      "newParts": 319,
+      "oldVertices": 1062,
+      "newVertices": 33216,
+      "wholeIslands": 331,
+      "wholeIslandIds": [
+        2,
+        11,
+        23,
+        27,
+        53,
+        56,
+        124,
+        130,
+        132,
+        135,
+        147,
+        168,
+        170,
+        178,
+        181,
+        190,
+        197,
+        211,
+        228,
+        231,
+        233,
+        235,
+        236,
+        237,
+        239,
+        240,
+        241,
+        244,
+        245,
+        246,
+        249,
+        250,
+        252,
+        253,
+        255,
+        256,
+        257,
+        261,
+        263,
+        265,
+        269,
+        270,
+        271,
+        272,
+        273,
+        280,
+        282,
+        283,
+        286,
+        287,
+        288,
+        289,
+        291,
+        292,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        305,
+        307,
+        308,
+        309,
+        310,
+        313,
+        319,
+        320,
+        321,
+        374,
+        375,
+        376,
+        377,
+        378,
+        396,
+        421,
+        422,
+        483,
+        484,
+        485,
+        489,
+        493,
+        496,
+        512,
+        513,
+        514,
+        515,
+        516,
+        518,
+        519,
+        629,
+        638,
+        651,
+        728,
+        729,
+        732,
+        760,
+        790,
+        811,
+        813,
+        814,
+        815,
+        894,
+        895,
+        904,
+        905,
+        927,
+        928,
+        982,
+        983,
+        984,
+        985,
+        986,
+        987,
+        988,
+        1008,
+        1009,
+        1010,
+        1011,
+        1012,
+        1013,
+        1014,
+        1015,
+        1016,
+        1017,
+        1018,
+        1019,
+        1021,
+        1022,
+        1025,
+        1026,
+        1027,
+        1038,
+        1054,
+        1056,
+        1057,
+        1058,
+        1059,
+        1063,
+        1065,
+        1120,
+        1121,
+        1122,
+        1123,
+        1124,
+        1129,
+        1130,
+        1133,
+        1135,
+        1136,
+        1137,
+        1138,
+        1139,
+        1140,
+        1141,
+        1258,
+        1414,
+        1415,
+        1446,
+        1447,
+        1448,
+        1449,
+        1450,
+        1451,
+        1452,
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458,
+        1459,
+        1460,
+        1461,
+        1462,
+        1463,
+        1464,
+        1465,
+        1470,
+        1472,
+        1475,
+        1478,
+        1479,
+        1480,
+        1481,
+        1494,
+        1495,
+        1496,
+        1497,
+        1498,
+        1499,
+        1500,
+        1501,
+        1502,
+        1510,
+        1511,
+        1512,
+        1513,
+        1514,
+        1515,
+        1518,
+        1551,
+        1621,
+        1622,
+        1623,
+        1624,
+        1625,
+        1626,
+        1684,
+        1685,
+        1719,
+        1720,
+        1721,
+        1722,
+        1723,
+        1724,
+        1725,
+        1726,
+        1727,
+        1728,
+        1729,
+        1730,
+        1731,
+        1732,
+        1733,
+        1734,
+        1735,
+        1736,
+        1737,
+        1757,
+        1758,
+        1759,
+        1760,
+        1761,
+        1762,
+        1763,
+        1764,
+        1765,
+        1766,
+        1767,
+        1768,
+        1769,
+        1865,
+        1882,
+        1883,
+        1884,
+        1934,
+        1935,
+        1936,
+        1937,
+        1938,
+        1939,
+        1940,
+        1941,
+        1942,
+        1943,
+        1944,
+        1945,
+        1946,
+        1960,
+        1961,
+        1962,
+        1963,
+        1964,
+        1965,
+        1966,
+        1967,
+        1968,
+        1969,
+        1970,
+        1971,
+        2036,
+        2037,
+        2038,
+        2129,
+        2130,
+        2246,
+        2247,
+        2248,
+        2249,
+        2250,
+        2251,
+        2252,
+        2253,
+        2254,
+        2255,
+        2290,
+        2291,
+        2292,
+        2293,
+        2294,
+        2295,
+        2296,
+        2297,
+        2298,
+        2299,
+        2300,
+        2301,
+        2302,
+        2329,
+        2330,
+        2331,
+        2332,
+        2333,
+        2334,
+        2335,
+        2336,
+        2345,
+        2346,
+        2347,
+        2348,
+        2349,
+        2467,
+        2469,
+        2482,
+        2498,
+        2499,
+        2500,
+        2501,
+        2502,
+        2503,
+        2504,
+        2505,
+        2590,
+        2591,
+        2614,
+        2630,
+        2631,
+        2636
+      ]
+    }
+  ],
+  "guangzhouDistricts": {
+    "coastalAdditions": 0,
+    "otherDistricts": 43
+  },
+  "baseline": "78ec48760a94ba9e52f96d215549340a230454e9",
+  "method": "Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions and the previously reviewed Zhuhai–Macau port window. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled.",
+  "references": [
+    {
+      "url": "https://ghzyj.gz.gov.cn/zzfw/bmwj/content/post_10596660.html",
+      "description": "Guangzhou official island plan, district ownership and shared Zhongshan island"
+    },
+    {
+      "url": "https://www.gov.cn/xinwen/2018-06/08/5297114/files/c598d7ab3259486b846cb4f0777ce44c.pdf",
+      "description": "2018 Ministry of Civil Affairs / State Oceanic Administration standard island names and jurisdictions, including Zhuhai Wanshan islands and Huizhou Dajia / Xiaojia"
+    }
+  ],
+  "catalogueNote": "Unmatched entries include reclaimed mainland sites, ambiguous small rocks and features without a corresponding physical island in this shoreline snapshot. They do not generate guessed polygons.",
+  "catalogueSource": {
+    "url": "https://www.gov.cn/xinwen/2018-06/08/5297114/files/c598d7ab3259486b846cb4f0777ce44c.pdf",
+    "mirror": "https://ctten.swjtu.edu.cn/__local/E/99/0F/A71B1523915F13E83ED732BF5DA_E066A7A8_308192.pdf?e=.pdf",
+    "pdfSha256": "8bc959a0e0bea28a92f116bcbee23ea633aa9f2f1b154c3b717b14cefc4a4179",
+    "coordinatePrecision": "0.1 arcminute; use as island identity checkpoints, never as coastline vertices"
+  }
+}

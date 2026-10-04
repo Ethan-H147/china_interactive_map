@@ -1,0 +1,22 @@
+{
+  "provider": "OpenStreetMap contributors",
+  "query": "way[\"natural\"=\"coastline\"](21.65,112.95,24.10,115.60);out meta geom;",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "coordinateSystem": "WGS84",
+  "timestamp": "2026-10-04T23:02:51Z",
+  "license": "ODbL 1.0",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "definition": "https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline",
+  "sourceDownload": "data/pearl-coast-source.bin",
+  "sourceCompression": "gzip JSON",
+  "sha256": "b79369d828c5ff03e7825e55e5ac7058aa0b5fbeaec97cc414eca58cae834bd4",
+  "ways": 3723,
+  "vertices": 177741,
+  "landPolygons": 2640,
+  "processingBounds": [
+    112.95,
+    21.65,
+    115.6,
+    24.1
+  ]
+}

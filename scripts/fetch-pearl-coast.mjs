@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gzipSync} from 'node:zlib';
+const query='[out:json][timeout:120];way["natural"="coastline"](21.65,112.95,24.10,115.60);out meta geom;';
+const response=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','User-Agent':'ChinaBoundaryAtlas/1.0'},body:new URLSearchParams({data:query}),signal:AbortSignal.timeout(150000)});
+assert(response.ok,'Coastline download failed: '+response.status);
+const raw=Buffer.from(await response.text()),data=JSON.parse(raw);
+assert(data.elements.length>1000&&!data.remark,'Incomplete coastline response');
+fs.mkdirSync('scripts/additional-sources/pearl-coast',{recursive:true});
+fs.writeFileSync('scripts/additional-sources/pearl-coast/osm-coast.bin',gzipSync(raw,{level:9}));
+console.log({timestamp:data.osm3s.timestamp_osm_base,ways:data.elements.length,vertices:data.elements.reduce((n,w)=>n+w.geometry.length,0),compressedBytes:gzipSync(raw).length});

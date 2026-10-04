@@ -20,8 +20,8 @@ const city=(data,code)=>data.subdivisions.features.find(f=>f.properties.adcode==
 // Guangdong's later Shenzhen physical coast update is checked separately.
 for(const f of before.provinces.features)if(f.properties.adcode!==440000)assert.deepEqual(after.provinces.features.find(c=>c.properties.adcode===f.properties.adcode),f,'Unrelated provincial coverage stays exact');
 let unchanged=0;
-for(const f of before.subdivisions.features){const now=city(after,f.properties.adcode);assert.deepEqual(now.properties,f.properties);if(![230800,230900,440300].includes(f.properties.adcode)){assert.deepEqual(now.geometry,f.geometry);unchanged++;}}
-assert.equal(unchanged,499);
+for(const f of before.subdivisions.features){const now=city(after,f.properties.adcode);assert.deepEqual(now.properties,f.properties);if(![230800,230900,440300,440100,440400,441300].includes(f.properties.adcode)){assert.deepEqual(now.geometry,f.geometry);unchanged++;}}
+assert.equal(unchanged,496);
 assert.deepEqual(correctJiamusi(after.subdivisions.features),after.subdivisions.features,'Correction is idempotent');
 assert.equal(polygons(city(after,230800).geometry).length,1,'Jiamusi has no detached part here');
 assert.equal(polygons(city(after,230900).geometry).length,1,'The part joins Qitaihe');

@@ -101,5 +101,10 @@
   "shenzhenHongKong": {
     "report": "data/shenzhen-hongkong-border.json",
     "method": "Copy the official Hong Kong land-border path between existing common junctions into Shenzhen. Project adjoining exterior district vertices onto the same path and retain all intervening official coordinates. Connected internal district junctions move with their exterior endpoint; coastlines and inland segments outside the reviewed seam retain their coordinates."
+  },
+  "guangzhouCoast": {
+    "source": "data/pearl-coast-source.json",
+    "report": "data/pearl-coast-report.json",
+    "method": "Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions and the previously reviewed Zhuhai–Macau port window. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled."
   }
 }
