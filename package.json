@@ -3,16 +3,20 @@
     "maplibre-gl": "6.11.2",
     "mapshaper": "0.7.72",
     "osmtogeojson": "^3.0.0-beta.5",
+    "sharp": "0.35.5",
     "topojson-client": "3.1.0",
     "topojson-server": "3.0.1"
   },
   "private": true,
   "scripts": {
     "build": "node scripts/build-boundaries.mjs && node scripts/reconcile-international.mjs",
-    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea",
+    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore",
     "start": "node scripts/serve.mjs",
     "build:korea": "node scripts/fetch-korea.mjs && node scripts/build-korea-coast.mjs && node scripts/build-korea.mjs && node scripts/reconcile-international.mjs",
     "test:korea": "node --check dist/korea.js && node scripts/validate-korea.mjs && node scripts/validate-korea-rendering.mjs && node scripts/validate-international.mjs",
-    "test:capitals": "node --check dist/capitals.mjs && node scripts/validate-capitals.mjs"
+    "test:capitals": "node --check dist/capitals.mjs && node scripts/validate-capitals.mjs",
+    "test:explore": "node --check dist/explore.mjs && node scripts/validate-explore.mjs",
+    "build:districts": "node scripts/prepare-city-districts.mjs",
+    "build:gallery": "node scripts/prepare-gallery.mjs"
   }
 }

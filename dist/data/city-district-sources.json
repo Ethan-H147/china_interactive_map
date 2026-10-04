@@ -1,0 +1,81 @@
+{
+  "checked": "2026-10-04",
+  "provider": "AreaCity / Amap and Tencent with DataV coverage fallback",
+  "release": "https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov/releases/tag/2025.251231.260403",
+  "license": "AreaCity: MIT; DataV: original provider terms",
+  "datav": "https://geo.datav.aliyun.com/areas_v3/bound/",
+  "coordinateSystem": "WGS84",
+  "method": "Compare county codes with DataV. Reconcile AreaCity shared edges without simplification and clip to the retained city extent. Use DataV county geometry only for uncovered areas. Residual uncovered edge areas continue to select the parent city.",
+  "cities": [
+    {
+      "city": 330100,
+      "districts": 13,
+      "datavDistricts": 13,
+      "matchingCodes": true,
+      "uncoveredFraction": 0.00148614074757173,
+      "reference": "DataV county boundaries and AreaCity 2025.251231.260403"
+    },
+    {
+      "city": 320100,
+      "districts": 11,
+      "datavDistricts": 11,
+      "matchingCodes": true,
+      "uncoveredFraction": 0.0028227939241382755,
+      "reference": "DataV county boundaries and AreaCity 2025.251231.260403"
+    },
+    {
+      "city": 320500,
+      "districts": 9,
+      "datavDistricts": 9,
+      "matchingCodes": true,
+      "uncoveredFraction": 0.0009451349382584823,
+      "reference": "DataV county boundaries and AreaCity 2025.251231.260403"
+    },
+    {
+      "city": 440100,
+      "districts": 11,
+      "datavDistricts": 11,
+      "matchingCodes": true,
+      "uncoveredFraction": 0.002641047550527406,
+      "reference": "DataV county boundaries and AreaCity 2025.251231.260403"
+    },
+    {
+      "city": 440300,
+      "districts": 9,
+      "datavDistricts": 9,
+      "matchingCodes": true,
+      "uncoveredFraction": 0.004784480065364759,
+      "reference": "DataV county boundaries and AreaCity 2025.251231.260403"
+    }
+  ],
+  "sources": [
+    {
+      "file": "areacity-records.csv",
+      "sha256": "3796ad5e93177352a6a552962aae80b8b1a74e17ccd73f643c470232e36a5540"
+    },
+    {
+      "file": "datav-320100.json",
+      "sha256": "14871d1526fb14cc967a33aa06df20f157ad7b0759b7d9281be377f2e1adac6d"
+    },
+    {
+      "file": "datav-320500.json",
+      "sha256": "37dddced21487e8983b1f3e8ce2ad6fe116dbe4cd938952b4aec02d355939955"
+    },
+    {
+      "file": "datav-330100.json",
+      "sha256": "1bfa48db925fb3e91450e860331151e85b49e3113822b5cabc60a799bb04c903"
+    },
+    {
+      "file": "datav-440100.json",
+      "sha256": "c2793000c61b805e1435f5c7282317531ce8a06ac02d9e9a7bb5f1f891522b97"
+    },
+    {
+      "file": "datav-440300.json",
+      "sha256": "e346a6cb0d5c482bf52fd0b845d0cda8c03a6ab666ce310afd3292a4d1899fa8"
+    },
+    {
+      "file": "wikidata-names.json",
+      "sha256": "a3062b3dd9ab32a3b3a9e35a17cec50d8ff35acd2181c6198296984aa4cb6988"
+    }
+  ]
+}

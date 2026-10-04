@@ -109,3 +109,13 @@ The Capitals toggle is off by default and shared between China and Korea. Gold s
 
 `dist/data/capitals.json` stores curated seats with WGS84 city-centre coordinates and individual GeoNames references (CC BY 4.0). Jeonnam–Gwangju includes its government offices in Gwangju, Muan and Suncheon. Markers follow MapLibre’s camera and are rebuilt only when visibility or map mode changes. `npm run test:capitals` checks coverage, duplicate cities, coordinate containment and quiz visibility.
 
+## Wikipedia, landmark galleries and city districts
+
+`region-articles.json` records verified English and Chinese Wikipedia sitelinks for all 333 mainland prefecture-level areas. Links come from the Wikidata entities already matched to administrative codes. They are a checked snapshot, not live synchronization. Run `fetch-explore-content.mjs` and then `prepare-district-names.mjs` to refresh the article and district-name records.
+
+The gallery covers 20 landmarks across Beijing, Shanghai, Hangzhou, Nanjing, Suzhou, Guangzhou, Shenzhen, Xi’an, Chengdu and Chongqing. Every image retains its original pixel dimensions, with a minimum long edge of 2,560 pixels and short edge of 1,600 pixels. Locally hosted WebP images load lazily; the viewer shows the photographer, license, Commons source and original image. `scripts/additional-sources/landmark-photos.json` preserves the selected Commons metadata. After `npm ci`, `npm run build:gallery` downloads these exact originals and encodes them without resizing. City and district codes control gallery visibility; other places do not inherit nearby landmarks.
+
+`npm run build:districts` builds a separate overlay for Hangzhou (13 divisions), Nanjing (11), Suzhou (9), Guangzhou (11) and Shenzhen (9). AreaCity’s Amap/Tencent county geometry is converted from GCJ-02 to WGS84, reconciled at shared edges and clipped to the existing city polygons. DataV fills uncovered portions only where its district polygons provide coverage. The remaining perimeter differences cover less than 0.5% of each city’s extent and select the parent city. The pipeline does not invent assignments for these residual differences. County-level cities and counties keep their actual type; Shenzhen’s Dapeng functional area remains within the statutory district data. Parent city polygons and the prefecture quiz pool are unchanged.
+
+`npm run test:explore` verifies article coverage, all 53 district names, geometry containment and overlaps, photo dimensions and credits, gallery scope, quiz exclusion and district → city → province navigation. District source hashes and coverage measurements are published in `city-district-sources.json`.
+

@@ -9,6 +9,7 @@ try{
   window.AtlasKorea=await import('./korea-portal.mjs');
   window.AtlasLines=await import('./adaptive-lines.mjs');
   window.AtlasCapitals=await import('./capitals.mjs');
+  window.AtlasExplore=await import('./explore.mjs');
   const renderer=await import('./vendor/maplibre-gl.mjs');
   window.maplibregl=renderer;
   renderer.setWorkerCount(2);
