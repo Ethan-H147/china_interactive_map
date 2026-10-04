@@ -12,6 +12,7 @@ try{
   window.AtlasLines=await import('./adaptive-lines.mjs');
   window.AtlasCapitals=await import('./capitals.mjs');
   window.AtlasWater=await import('./water.mjs');
+  window.AtlasSatellite=await import('./satellite.mjs');
   window.AtlasExplore=await import('./explore.mjs');
   const renderer=await import('./vendor/maplibre-gl.mjs');
   window.maplibregl=renderer;

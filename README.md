@@ -1,6 +1,6 @@
 # China Atlas
 
-Interactive static map using DataV GeoAtlas, official Taiwan, Hong Kong and Macau boundaries, and AreaCity/Amap outlines for Xinxing and Baiyang. MapLibre GL JS 6.11.2 and the data snapshot are bundled, so the running map does not depend on a live map API or CDN.
+Interactive static map using DataV GeoAtlas, official Taiwan, Hong Kong and Macau boundaries, and AreaCity/Amap outlines for Xinxing and Baiyang. MapLibre GL JS 6.11.2 and the boundary snapshot are bundled. Optional satellite imagery loads from EOX.
 
 ## Exploring and rendering
 
@@ -86,7 +86,17 @@ Source: https://datav.aliyun.com/portal/school/atlas/area_selector
 
 ## Renderer assets
 
-Run `node scripts/vendor-renderer.mjs` after `npm ci` to copy the pinned MapLibre browser modules, worker, stylesheet, and license. These assets are served locally; the map does not load an external basemap or require an API key.
+Run `node scripts/vendor-renderer.mjs` after `npm ci` to copy the pinned MapLibre browser modules, worker, stylesheet, and license. These assets are served locally. The standard map requires no external basemap or API key.
+
+## Satellite imagery
+
+Enable Satellite imagery in Map settings. The opacity slider blends it with the standard map. The layer loads only after opt-in, keeps administrative polygons selectable, and preserves the gray Korean Peninsula. It hides during quizzes and in Korea mode, then restores the user's choice. Names use contrasting text, and boundary colors follow imagery opacity. A failed initial load restores the standard map and allows another attempt; one missing tile does not disable imagery that has loaded elsewhere.
+
+The source is [EOxCloudless 2025](https://cloudless.eox.at), a global Sentinel-2 annual mosaic with 10 m resolution. Web Mercator WMTS tiles use matrix `g`, `{z}/{y}/{x}`, and native zoom levels 0–14; closer map views enlarge those pixels. It is not live imagery. Raster tiles use the same geographic coordinate system as the map; no boundary coordinates are changed.
+
+Attribution: EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2025). The [CC BY-NC-SA 4.0 license](https://cloudless.eox.at/documentation/license) permits this personal, noncommercial use with attribution. Commercial use requires a separately licensed provider. Attribution appears on the map while the imagery layer is visible. The public tile service is provided without an availability guarantee.
+
+`npm run test:satellite` checks lazy loading, tile event handling, layer order, opacity, country and quiz transitions, source attribution, and recovery after a failed initial load.
 
 The local `/benchmark` route runs four timed pans near Tianjin and reports animation-frame intervals. It is available only from the preview server and is excluded from production. Automation timings depend on browser throttling and do not represent the user's display refresh rate.
 

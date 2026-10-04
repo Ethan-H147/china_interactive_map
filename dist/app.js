@@ -40,7 +40,7 @@ function syncDistrictLayers(){
 }
 let provinceFeatures,manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 const quiz={active:false,round:null,pool:[],saved:null,highlighted:[],reviewLayer:null};
-let normalProvinceColors,atlasMode='china',koreaAtlas,capitalDisplay,waterDisplay,namingQuiz,placeTools;
+let normalProvinceColors,atlasMode='china',koreaAtlas,capitalDisplay,waterDisplay,satelliteDisplay,namingQuiz,placeTools;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
 const tooltip=document.createElement('div');tooltip.className='region-tooltip gpu-tooltip';tooltip.hidden=true;$('map-shell').append(tooltip);
@@ -239,6 +239,7 @@ function addLabel(p,text,small){const xy=p.centroid||p.center;if(!xy)return;cons
 function updateLabels(){
   capitalDisplay?.sync();
   waterDisplay?.sync();
+  satelliteDisplay?.sync();
   if(cameraBusy)return;
   if(atlasMode==='korea'){labels.forEach(label=>label.remove());labels.length=0;koreaAtlas?.updateLabels();return;}
   labels.forEach(label=>label.remove());labels.length=0;
@@ -285,6 +286,16 @@ function addFill(id,source,baseColor,baseOpacity){
 }
 function fillPaint(baseColor,baseOpacity){return {'fill-color':['case',['boolean',['feature-state','quizCorrect'],false],'#548165',['boolean',['feature-state','quizWrong'],false],'#b44737',['boolean',['feature-state','selected'],false],'#ca6a45',['boolean',['feature-state','hover'],false],'#d6a34f',baseColor],'fill-opacity':['case',['boolean',['feature-state','quizCorrect'],false],.65,['boolean',['feature-state','quizWrong'],false],.55,['boolean',['feature-state','selected'],false],.3,['boolean',['feature-state','hover'],false],.35,baseOpacity],'fill-antialias':false};}
 function provinceColor(){return ['case',['boolean',['feature-state','quizActive'],false],'#e9e5dc',['boolean',['feature-state','inactive'],false],'#d7d7d3',normalProvinceColors];}
+const satellitePaint=new Map();
+function satelliteAppearance(visible,opacity){
+  $('map-shell').dataset.satellite=String(visible&&opacity>=.5);
+  map.setPaintProperty('province-fill','fill-opacity',window.AtlasSatellite.provinceOpacity(visible,opacity));
+  const colors={'province-lines':'#fff0bb','prefecture-lines':'#f5dfab','other-lines':'#f5dfab','city-district-lines':'#f5dfab'};
+  for(const [id,color] of Object.entries(colors)){
+    if(visible){if(!satellitePaint.has(id))satellitePaint.set(id,map.getPaintProperty(id,'line-color'));map.setPaintProperty(id,'line-color',window.AtlasSatellite.blendColor(satellitePaint.get(id),color,opacity));}
+    else if(satellitePaint.has(id)){map.setPaintProperty(id,'line-color',satellitePaint.get(id));satellitePaint.delete(id);}
+  }
+}
 function addLine(id,source,color,width,opacity=1,dash){const paint={'line-color':color,'line-width':width,'line-opacity':opacity};if(dash)paint['line-dasharray']=dash;map.addLayer({id,type:'line',source,layout:{'line-cap':'round','line-join':'round'},paint});}
 function addSelection(id,source){addLine(id,source+'-selection-edges',['case',['boolean',['feature-state','quizCorrect'],false],'#38684a','#a43829'],1.7,window.AtlasLines.adaptiveOpacity(['case',['any',['boolean',['feature-state','selected'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],1,0]));}
 function pickedRegion(point){
@@ -337,6 +348,7 @@ async function init(){try{
   namingQuiz=window.AtlasNameQuiz.createNameQuiz({mark:(code,correct)=>{const layer=regionByCode.get(code);if(layer){setRegionState(layer,{quizCorrect:correct,quizWrong:!correct});if(!quiz.highlighted.includes(layer))quiz.highlighted.push(layer);}},labels:updateLabels,controls,clear:clearQuizHighlights,limit:codes=>{quiz.pool=codes.map(code=>regionByCode.get(code));syncQuizStyle();},exit:configureQuiz,view:code=>viewQuizAnswer(regionByCode.get(code)),focusInput:()=>namingQuiz.focus()});
   placeTools=window.AtlasPlaceTools.createPlaceTools({get:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);return layer?{name:bilingualName(layer.feature.properties)}:null;},select:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);if(layer)selectRegion(layer,layer.feature.properties.provinceCode||layer.feature.properties.adcode);},controls});
   waterDisplay=window.AtlasWater.createWaterDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,load:()=>json('data/major-water.bin')});
+  satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance});
   allReady=true;initQuiz();controls();refreshStatus();updateLabels();
   koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
   const capitalsResponse=await fetch('data/capitals.json');
