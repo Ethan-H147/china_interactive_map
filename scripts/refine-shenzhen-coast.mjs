@@ -1,0 +1,42 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gzipSync,gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import {topology} from 'topojson-server';
+import {merge,mesh} from 'topojson-client';
+import {readData} from './read-data.mjs';
+import {clipShenzhenLand} from './shenzhen-coast.mjs';
+import {reviewedPaths} from './reconcile-river-boundaries.mjs';
+const data=readData('display-boundaries.json'),land=readData('shenzhen-land.json');
+const riverRules=JSON.parse(fs.readFileSync('scripts/additional-sources/water/boundary-reaches.json'));
+const oldRiverPaths=reviewedPaths(data.subdivisions,riverRules);
+const features=await clipShenzhenLand(data.subdivisions.features,land);
+data.subdivisions.features=features;
+assert.deepEqual(reviewedPaths(data.subdivisions,riverRules),oldRiverPaths,'Reviewed river boundaries must remain unchanged');
+const riverReport=readData('river-boundary-report.json');
+riverReport.administrativeSha256=createHash('sha256').update(JSON.stringify(data.subdivisions)).digest('hex');
+fs.writeFileSync('dist/data/river-boundary-report.json',JSON.stringify(riverReport,null,2));
+const top=topology({regions:data.subdivisions}),regions=top.objects.regions;
+data.provinces.features.find(f=>f.properties.adcode===440000).geometry=merge(top,regions.geometries.filter(g=>g.properties.provinceCode===440000));
+const pref=g=>g.properties.level==='taiwan-region'||g.properties.level==='city'&&String(g.properties.adcode).slice(2,4)!=='90';
+const same=(a,b)=>a.properties.provinceCode===b.properties.provinceCode;
+data.boundaries={province:mesh(top,regions,(a,b)=>a===b||!same(a,b)),prefecture:mesh(top,regions,(a,b)=>a!==b&&same(a,b)&&(pref(a)||pref(b))),other:mesh(top,regions,(a,b)=>a!==b&&same(a,b)&&!pref(a)&&!pref(b))};
+const serialized=Buffer.from(JSON.stringify(data)),compressed=gzipSync(serialized,{level:9}),parts=[];
+for(let offset=0,i=0;offset<compressed.length;offset+=4*1024*1024,i++){const name='display-boundaries.'+String(i).padStart(2,'0')+'.bin';parts.push(name);fs.writeFileSync('dist/data/'+name,compressed.subarray(offset,offset+4*1024*1024));}
+fs.writeFileSync('dist/data/display-boundaries.parts.json',JSON.stringify({compression:'gzip',parts,compressedBytes:compressed.length,uncompressedBytes:serialized.length,sha256:createHash('sha256').update(serialized).digest('hex')},null,2));
+// Reuse existing district jurisdictions. Applying the same mask keeps their
+// land edges coincident with the city and province outlines.
+const districts=JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin')));
+districts.regions.features=await clipShenzhenLand(districts.regions.features,land);
+const local=topology({regions:{type:'FeatureCollection',features:districts.regions.features.filter(f=>f.properties.parentCity===440300)}});
+districts.boundaries.features.find(f=>f.properties.parentCity===440300).geometry=mesh(local,local.objects.regions,(a,b)=>a!==b);
+fs.writeFileSync('dist/data/city-districts.bin',gzipSync(JSON.stringify(districts),{level:9}));
+const source=readData('shenzhen-coast-source.json'),provenance=readData('additional-sources.json');
+provenance.sources=provenance.sources.filter(s=>s.sourceFile!=='shenzhen-land.json');
+provenance.sources.push({...source,provider:'OpenStreetMap Shenzhen physical shoreline',url:'https://www.openstreetmap.org/copyright',sourceFile:'shenzhen-land.json',sha256:createHash('sha256').update(fs.readFileSync('dist/data/shenzhen-land.json')).digest('hex'),reusableDataset:'data/shenzhen-land.json',sourceVersions:'data/shenzhen-coast-source.bin',processing:'Physical land mask assembled from directed original coastline ways. Shenzhen city and its nine mapped districts are clipped to this mask; inland jurisdiction data is retained. No shoreline simplification or image tracing.'});
+provenance.processing.shenzhen='Only Shenzhen display coverage is clipped to detailed OpenStreetMap land; the Guangdong outline and shared line networks are derived from those polygons. Original administrative sources and Hong Kong polygons remain unchanged. This depicts physical land rather than offshore jurisdiction. Mean high-water coastline may differ from imagery tides and dates.';
+fs.writeFileSync('dist/data/additional-sources.json',JSON.stringify(provenance,null,2));
+const districtSources=readData('city-district-sources.json');
+districtSources.shenzhenCoast={source:'data/shenzhen-coast-source.json',method:provenance.processing.shenzhen};
+fs.writeFileSync('dist/data/city-district-sources.json',JSON.stringify(districtSources,null,2));
+console.log('Shenzhen coast, province outline, nine districts, and source records updated.');

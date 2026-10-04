@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const query='[out:json][timeout:60];way["natural"="coastline"](22.36,113.68,22.91,114.70);out meta geom;';
+const response=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',body:'data='+encodeURIComponent(query),headers:{'Content-Type':'application/x-www-form-urlencoded','User-Agent':'ChinaBoundaryAtlas/1.0'},signal:AbortSignal.timeout(90000)});
+assert(response.ok,'OSM coastline HTTP '+response.status);
+const data=await response.json();
+assert(data.elements.length>100&&!data.remark,data.remark||'Incomplete coastline response');
+await fs.mkdir('scripts/additional-sources/shenzhen',{recursive:true});
+await fs.writeFile('scripts/additional-sources/shenzhen/osm-coast.json',JSON.stringify(data));
+console.log({ways:data.elements.length,timestamp:data.osm3s.timestamp_osm_base});

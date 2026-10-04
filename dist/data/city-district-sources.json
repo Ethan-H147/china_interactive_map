@@ -93,5 +93,9 @@
       "file": "wikipedia-sitelinks.json",
       "sha256": "acf46a4e4278b80ed11d66a631bf3c7996d7312887e5a27c52911e5dfe782473"
     }
-  ]
+  ],
+  "shenzhenCoast": {
+    "source": "data/shenzhen-coast-source.json",
+    "method": "Only Shenzhen display coverage is clipped to detailed OpenStreetMap land; the Guangdong outline and shared line networks are derived from those polygons. Original administrative sources and Hong Kong polygons remain unchanged. This depicts physical land rather than offshore jurisdiction. Mean high-water coastline may differ from imagery tides and dates."
+  }
 }

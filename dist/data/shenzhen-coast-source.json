@@ -1,0 +1,16 @@
+{
+  "provider": "OpenStreetMap contributors",
+  "query": "way[\"natural\"=\"coastline\"](22.36,113.68,22.91,114.70);out meta geom;",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "coordinateSystem": "WGS84",
+  "timestamp": "2026-10-04T22:04:43Z",
+  "license": "ODbL 1.0",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "definition": "https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline",
+  "sourceDownload": "data/shenzhen-coast-source.bin",
+  "sourceCompression": "gzip JSON",
+  "sha256": "456818c83e0a124dea475c03ad409c30cc95250b8b54b81046f8b28f4df596b4",
+  "ways": 1312,
+  "vertices": 58219,
+  "landPolygons": 886
+}

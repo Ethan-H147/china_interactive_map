@@ -152,6 +152,27 @@
       "reusableDataset": "data/chongming-north-bank.json",
       "sourceVersions": "data/chongming-source-versions.json",
       "processing": "Connected original node references; every source shoreline vertex retained without simplification. Physical land is partitioned by the existing administrative boundary."
+    },
+    {
+      "provider": "OpenStreetMap Shenzhen physical shoreline",
+      "query": "way[\"natural\"=\"coastline\"](22.36,113.68,22.91,114.70);out meta geom;",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "coordinateSystem": "WGS84",
+      "timestamp": "2026-10-04T22:04:43Z",
+      "license": "ODbL 1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "definition": "https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline",
+      "sourceDownload": "data/shenzhen-coast-source.bin",
+      "sourceCompression": "gzip JSON",
+      "sha256": "91a7640d9df8a9c7c6f8e5a5260f4df2c6da9c4ac59e133931b85260931a1cbf",
+      "ways": 1312,
+      "vertices": 58219,
+      "landPolygons": 886,
+      "url": "https://www.openstreetmap.org/copyright",
+      "sourceFile": "shenzhen-land.json",
+      "reusableDataset": "data/shenzhen-land.json",
+      "sourceVersions": "data/shenzhen-coast-source.bin",
+      "processing": "Physical land mask assembled from directed original coastline ways. Shenzhen city and its nine mapped districts are clipped to this mask; inland jurisdiction data is retained. No shoreline simplification or image tracing."
     }
   ],
   "missing": [
@@ -186,6 +207,7 @@
     ],
     "retainedOtherProvinceBordersAfterCoordinateConversion": 26,
     "macau": "Macau shared parish edges are reconciled with 1e-8 degree vertex snapping and a 0.5 m sliver-gap threshold before coastline extraction. No simplification is applied; validation bounds boundary displacement to 0.5 m.",
-    "chongming": "OpenStreetMap island relation 3292765 replaces only the main Chongming island. The existing Shanghai/Jiangsu administrative split is retained on the island. Connected north-bank coastline ways remove North Branch river water from Nantong within [121.10,31.42,122.05,31.93]. Changxing, Hengsha and all other subdivisions retain their previous geometry."
+    "chongming": "OpenStreetMap island relation 3292765 replaces only the main Chongming island. The existing Shanghai/Jiangsu administrative split is retained on the island. Connected north-bank coastline ways remove North Branch river water from Nantong within [121.10,31.42,122.05,31.93]. Changxing, Hengsha and all other subdivisions retain their previous geometry.",
+    "shenzhen": "Only Shenzhen display coverage is clipped to detailed OpenStreetMap land; the Guangdong outline and shared line networks are derived from those polygons. Original administrative sources and Hong Kong polygons remain unchanged. This depicts physical land rather than offshore jurisdiction. Mean high-water coastline may differ from imagery tides and dates."
   }
 }
