@@ -1,0 +1,29 @@
+{
+  "source": "https://data.gov.hk/en-data/dataset/hk-had-json1-hong-kong-administrative-boundaries",
+  "sourceFile": "dist/data/sar-810000.json",
+  "sourceSha256": "f0df1bc1bffedcff81b251e04305af8e1501011b2b190fe30a5a8b8fd8c0b26c",
+  "method": "Copy the official Hong Kong land-border path between existing common junctions into Shenzhen. Project adjoining exterior district vertices onto the same path and retain all intervening official coordinates. Connected internal district junctions move with their exterior endpoint; coastlines and inland segments outside the reviewed seam retain their coordinates.",
+  "scope": "Existing common land-border junctions between the Shenzhen River estuary and Sha Tau Kok. Coastal and estuary shorelines outside these junctions are preserved.",
+  "start": [
+    114.0481220265528,
+    22.502993259807944
+  ],
+  "end": [
+    114.2262124414,
+    22.5465629769
+  ],
+  "city": {
+    "canonicalVertices": 2219,
+    "city": 440300
+  },
+  "districts": {
+    "changedEdges": 673,
+    "maxDisplacementMetres": 341.96225698231876,
+    "changedRegions": [
+      440303,
+      440304,
+      440308
+    ],
+    "filledBorderSlivers": 19
+  }
+}

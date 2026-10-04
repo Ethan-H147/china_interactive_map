@@ -97,5 +97,9 @@
   "shenzhenCoast": {
     "source": "data/shenzhen-coast-source.json",
     "method": "Only Shenzhen display coverage is clipped to detailed OpenStreetMap land; the Guangdong outline and shared line networks are derived from those polygons. Original administrative sources and Hong Kong polygons remain unchanged. This depicts physical land rather than offshore jurisdiction. Mean high-water coastline may differ from imagery tides and dates."
+  },
+  "shenzhenHongKong": {
+    "report": "data/shenzhen-hongkong-border.json",
+    "method": "Copy the official Hong Kong land-border path between existing common junctions into Shenzhen. Project adjoining exterior district vertices onto the same path and retain all intervening official coordinates. Connected internal district junctions move with their exterior endpoint; coastlines and inland segments outside the reviewed seam retain their coordinates."
   }
 }

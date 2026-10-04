@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import {topology} from 'topojson-server';
 import {mesh} from 'topojson-client';
 import {readData} from './read-data.mjs';
+import {canonicalHongKongBorder,segmentDistanceIndex} from './shenzhen-hongkong.mjs';
 const baseline='dad1949249582aea49ff9b9321a68c1e3726949b';
 const show=name=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',baseline+':dist/data/'+name],{maxBuffer:50e6});assert.equal(r.status,0,r.stderr.toString());return r.stdout;};
 const metadata=JSON.parse(show('display-boundaries.parts.json'));
@@ -44,8 +45,9 @@ const distanceIndex=lines=>{
 };
 const originalDistrictLines=oldDistricts.boundaries.features.find(f=>f.properties.parentCity===440300).geometry.coordinates;
 const distance=distanceIndex(originalDistrictLines),newDistrictLines=districts.boundaries.features.find(f=>f.properties.parentCity===440300).geometry.coordinates;
-for(const line of newDistrictLines)for(const p of line)assert(distance(p)<.01,'Inland district boundary moved');
-const top=topology({regions:before.subdivisions}),shared=mesh(top,top.objects.regions,(a,b)=>a!==b&&(a.properties.adcode===440300||b.properties.adcode===440300));
+const sharedBorderDistance=segmentDistanceIndex([canonicalHongKongBorder(after.provinces.features.find(f=>f.properties.adcode===810000))]);
+for(const line of newDistrictLines)for(const p of line)if(sharedBorderDistance(p)>.01)assert(distance(p)<.01,'Inland district boundary moved');
+const top=topology({regions:before.subdivisions}),shared=mesh(top,top.objects.regions,(a,b)=>a!==b&&(a.properties.adcode===440300||b.properties.adcode===440300)&&a.properties.provinceCode!==810000&&b.properties.provinceCode!==810000);
 const cityDistance=distanceIndex(rings(city.geometry).flat()),land=readData('shenzhen-land.json');
 let inlandSegments=0;
 for(const line of shared.coordinates)for(let i=1;i<line.length;i++){

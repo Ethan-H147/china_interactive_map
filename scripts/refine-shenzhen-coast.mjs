@@ -7,10 +7,12 @@ import {merge,mesh} from 'topojson-client';
 import {readData} from './read-data.mjs';
 import {clipShenzhenLand} from './shenzhen-coast.mjs';
 import {reviewedPaths} from './reconcile-river-boundaries.mjs';
+import {reconcileShenzhenHongKong,finishShenzhenDistrictBorder} from './shenzhen-hongkong.mjs';
 const data=readData('display-boundaries.json'),land=readData('shenzhen-land.json');
 const riverRules=JSON.parse(fs.readFileSync('scripts/additional-sources/water/boundary-reaches.json'));
 const oldRiverPaths=reviewedPaths(data.subdivisions,riverRules);
-const features=await clipShenzhenLand(data.subdivisions.features,land);
+const hk=data.provinces.features.find(f=>f.properties.adcode===810000);
+const features=reconcileShenzhenHongKong(await clipShenzhenLand(data.subdivisions.features,land),hk).features;
 data.subdivisions.features=features;
 assert.deepEqual(reviewedPaths(data.subdivisions,riverRules),oldRiverPaths,'Reviewed river boundaries must remain unchanged');
 const riverReport=readData('river-boundary-report.json');
@@ -28,6 +30,8 @@ fs.writeFileSync('dist/data/display-boundaries.parts.json',JSON.stringify({compr
 // land edges coincident with the city and province outlines.
 const districts=JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin')));
 districts.regions.features=await clipShenzhenLand(districts.regions.features,land);
+const repair=reconcileShenzhenHongKong(districts.regions.features,hk);
+districts.regions.features=(await finishShenzhenDistrictBorder(repair.features,features.find(f=>f.properties.adcode===440300),hk,repair.report.changedRegions)).features;
 const local=topology({regions:{type:'FeatureCollection',features:districts.regions.features.filter(f=>f.properties.parentCity===440300)}});
 districts.boundaries.features.find(f=>f.properties.parentCity===440300).geometry=mesh(local,local.objects.regions,(a,b)=>a!==b);
 fs.writeFileSync('dist/data/city-districts.bin',gzipSync(JSON.stringify(districts),{level:9}));

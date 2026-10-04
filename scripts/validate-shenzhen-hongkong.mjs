@@ -1,0 +1,50 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import {gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import {topology} from 'topojson-server';
+import {mesh} from 'topojson-client';
+import mapshaper from 'mapshaper';
+import {readData} from './read-data.mjs';
+import {polygons} from './international-topology.mjs';
+import {canonicalHongKongBorder,segmentDistanceIndex,borderRule} from './shenzhen-hongkong.mjs';
+const show=n=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',borderRule.baseline+':dist/data/'+n],{maxBuffer:50e6});assert.equal(r.status,0);return r.stdout;};
+const manifest=JSON.parse(show('display-boundaries.parts.json')),before=JSON.parse(gunzipSync(Buffer.concat(manifest.parts.map(show))));
+const preview=process.argv.includes('--preview')?JSON.parse(fs.readFileSync('artifacts/shenzhen-hongkong-preview.json')):null;
+const after=preview?.data||readData('display-boundaries.json'),districts=preview?.districts||JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin'))),oldDistricts=JSON.parse(gunzipSync(show('city-districts.bin')));
+const city=after.subdivisions.features.find(f=>f.properties.adcode===440300),oldCity=before.subdivisions.features.find(f=>f.properties.adcode===440300),hk=after.provinces.features.find(f=>f.properties.adcode===810000),canonical=canonicalHongKongBorder(hk);
+const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
+assert.equal(createHash('sha256').update(fs.readFileSync(borderRule.sourceFile)).digest('hex'),borderRule.sourceSha256);
+for(const f of before.subdivisions.features)if(f.properties.adcode!==440300)assert.equal(hash(after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated region changed '+f.properties.adcode);
+for(const f of before.provinces.features)if(f.properties.adcode!==440000)assert.equal(hash(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated province changed '+f.properties.adcode);
+const changed=new Set([440303,440304,440308]);
+for(const f of oldDistricts.regions.features)if(!changed.has(f.properties.adcode))assert.equal(hash(districts.regions.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated district changed '+f.properties.adcode);
+const key=p=>p.join(','),edge=(a,b)=>[key(a),key(b)].sort().join('|'),edges=g=>new Set(polygons(g).flatMap(p=>p.flatMap(r=>r.slice(1).map((b,i)=>edge(r[i],b)))));
+const oldSeamEdges=new Set(borderRule.previousCityPath.slice(1).map((b,i)=>edge(borderRule.previousCityPath[i],b))),cityEdges=edges(city.geometry);
+for(const k of edges(oldCity.geometry))if(!oldSeamEdges.has(k))assert(cityEdges.has(k),'City coastline or inland boundary changed outside the reviewed seam');
+for(let i=1;i<canonical.length;i++)assert(cityEdges.has(edge(canonical[i-1],canonical[i])),'Official Hong Kong segment missing from Shenzhen');
+const oldInternal=oldDistricts.boundaries.features.find(f=>f.properties.parentCity===440300).geometry.coordinates;
+const local=topology({r:{type:'FeatureCollection',features:districts.regions.features.filter(f=>f.properties.parentCity===440300)}}),newInternal=mesh(local,local.objects.r,(a,b)=>a!==b).coordinates;
+const oldDistance=segmentDistanceIndex([borderRule.previousCityPath]),internalEdges=new Set(newInternal.flatMap(r=>r.slice(1).map((b,i)=>edge(r[i],b))));
+let inlandEdges=0;
+for(const r of oldInternal)for(let i=1;i<r.length;i++)if(oldDistance(r[i-1])>.1&&oldDistance(r[i])>.1){assert(internalEdges.has(edge(r[i-1],r[i])),'Interior district edge changed away from its shared-border junction');inlandEdges++;}
+const inside=(p,r)=>{let v=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])v=!v;}return v;};
+const contains=(f,p)=>polygons(f.geometry).some(r=>inside(p,r[0])&&!r.slice(1).some(h=>inside(p,h)));
+const children=districts.regions.features.filter(f=>f.properties.parentCity===440300);
+let sampledSections=0;
+for(let i=1;i<canonical.length;i++){
+  const a=canonical[i-1],b=canonical[i],dx=(b[0]-a[0])*102800,dy=(b[1]-a[1])*111200,len=Math.hypot(dx,dy);if(len<2)continue;
+  const p=[(a[0]+b[0])/2-dy/len/102800,(a[1]+b[1])/2+dx/len/111200];
+  assert(contains(city,p),'Gap on the Shenzhen side of the canonical border');assert(!contains(hk,p),'City overlaps Hong Kong');
+  assert.equal(children.filter(f=>contains(f,p)).length,1,'Border point must select exactly one Shenzhen district');sampledSections++;
+}
+const fc=features=>({type:'FeatureCollection',features}),run=async(c,files)=>JSON.parse((await mapshaper.applyCommands(c+' -o out.json format=geojson geojson-type=FeatureCollection',files))['out.json']);
+const area=g=>polygons(g).reduce((s,p)=>s+p.reduce((a,r,i)=>a+(i?-1:1)*Math.abs(r.slice(1).reduce((n,b,j)=>n+(r[j][0]-r[0][0])*(b[1]-r[0][1])-(b[0]-r[0][0])*(r[j][1]-r[0][1]),0)/2),0),0),total=c=>c.features.reduce((s,f)=>s+(f.geometry?area(f.geometry):0),0);
+assert(total(await run('-i city.json -clip hk.json',{'city.json':city,'hk.json':hk}))<1e-12,'City overlaps Hong Kong');
+const union=await run('-i input.json -dissolve',{'input.json':fc(children)});
+assert(Math.abs(total(fc(children))-total(union))<1e-10,'Districts overlap');
+assert(total(await run('-i input.json -erase city.json',{'input.json':fc(children),'city.json':city}))<1e-10,'District outside city');
+assert(Math.abs(total(await run('-i city.json -clean gap-width=0',{'city.json':city}))-area(city.geometry))<1e-10,'City polygon has invalid coverage');
+if(!preview){const report=readData('shenzhen-hongkong-border.json');assert(report.districts.maxDisplacementMetres<350);assert.equal(report.city.canonicalVertices,canonical.length);}
+console.log(JSON.stringify({canonicalVertices:canonical.length,sampledSections,inlandDistrictEdgesUnchanged:inlandEdges,HongKongUnchanged:true,coastlinesUnchanged:true,unrelatedRegionsUnchanged:501,unrelatedDistrictsUnchanged:51}));

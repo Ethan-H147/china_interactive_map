@@ -22,7 +22,8 @@
     "test:water": "node --check dist/water.mjs && node scripts/validate-water.mjs && node scripts/validate-river-conflation.mjs",
     "test:names-quiz": "node --check dist/name-quiz.mjs && node --check dist/place-tools.mjs && node scripts/validate-name-quiz.mjs",
     "test:satellite": "node --check dist/satellite.mjs && node scripts/validate-satellite.mjs",
-    "test:shenzhen": "node scripts/validate-shenzhen-coast.mjs",
+    "test:shenzhen": "node scripts/validate-shenzhen-coast.mjs && node scripts/validate-shenzhen-hongkong.mjs",
+    "build:shenzhen-border": "node scripts/reconcile-shenzhen-hongkong.mjs",
     "build:shenzhen": "node scripts/prepare-shenzhen-coast.mjs && node scripts/refine-shenzhen-coast.mjs"
   }
 }
