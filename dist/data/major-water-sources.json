@@ -1,10 +1,11 @@
 {
-  "source": "Natural Earth",
-  "release": "5.1.2",
-  "license": "Public domain",
+  "source": "Natural Earth and OpenStreetMap contributors",
+  "release": "Natural Earth 5.1.2; OSM snapshot 2026-10-04",
+  "license": "ODbL 1.0; underlying Natural Earth features are public domain",
+  "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
   "coordinateSystem": "WGS84",
-  "scale": "1:10,000,000",
-  "coverage": "Selected major rivers, lakes and reservoirs in China. River courses are clipped to the existing China extent with a 5 km corridor for international border rivers. Lake Khanka is shown in full. These generalized features are for geographic context, not detailed shorelines or current water levels.",
+  "scale": "Natural Earth 1:10,000,000 with mapped OSM lower Yangtze",
+  "coverage": "Selected major rivers, lakes and reservoirs in China. Natural Earth river courses are clipped to the existing China extent with a 5 km corridor for international border rivers. The lower Yangtze and its estuary branches continue to open water using OpenStreetMap; these are not clipped to land. Lake Khanka is shown in full. These features are for geographic context, not current water levels.",
   "sources": [
     {
       "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_rivers_lake_centerlines.geojson",
@@ -83,8 +84,19 @@
         "Xinanjiang Shuiku",
         "Danjiangkou Shuiku"
       ]
+    },
+    {
+      "url": "https://www.openstreetmap.org/relation/9392345",
+      "download": "https://nominatim.openstreetmap.org/lookup?osm_ids=R9392345&format=jsonv2&polygon_geojson=1",
+      "snapshot": "osm-yangtze.geojson",
+      "sha256": "5a83a4c3037266b9af8ceaa563cd87fb97a99fce7b1152eff153f8cfef9a2a72",
+      "license": "ODbL 1.0",
+      "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "attribution": "© OpenStreetMap contributors",
+      "selection": "Lower Yangtze continuation and mapped estuary branches",
+      "joinAdjustmentMetres": 852
     }
   ],
-  "riverSections": 56,
+  "riverSections": 57,
   "lakes": 20
 }

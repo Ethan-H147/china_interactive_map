@@ -6,6 +6,8 @@ function loadError(error){
 }
 try{
   window.AtlasQuiz=await import('./quiz-engine.mjs');
+  window.AtlasNameQuiz=await import('./name-quiz.mjs');
+  window.AtlasPlaceTools=await import('./place-tools.mjs');
   window.AtlasKorea=await import('./korea-portal.mjs');
   window.AtlasLines=await import('./adaptive-lines.mjs');
   window.AtlasCapitals=await import('./capitals.mjs');

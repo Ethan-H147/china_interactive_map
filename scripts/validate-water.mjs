@@ -17,6 +17,19 @@ for(const f of data.features){
   assert(['LineString','MultiLineString','Polygon','MultiPolygon'].includes(f.geometry.type));
   for(const [x,y] of points(f.geometry.coordinates))assert(Number.isFinite(x)&&Number.isFinite(y)&&x>=73&&x<=136&&y>=18&&y<=54);
 }
+// The source's 1:10M centerline ends in Jiangsu. Keep the sourced continuation
+// through Shanghai and both estuary channels even beyond the land clip mask.
+const yangtze=rivers.filter(f=>f.properties.name==='Yangtze');
+const lower=yangtze.find(f=>f.properties.sourceId==='osm-relation-9392345');
+assert(lower,'Missing the mapped lower Yangtze');
+assert.equal(lower.geometry.coordinates.length,5,'Retain the main river and four mapped downstream branches');
+const lowerPoints=points(lower.geometry.coordinates);
+assert(Math.max(...lowerPoints.map(p=>p[0]))>122.3,'Yangtze must reach the sea beyond Shanghai');
+assert(lowerPoints.some(([x,y])=>x>121.8&&y>31.6),'Missing the northern Chongming estuary branch');
+assert(lowerPoints.some(([x,y])=>x>122.1&&y<31.5),'Missing the southern estuary channel');
+const joined=lower.geometry.coordinates[0][0];
+assert(yangtze.some(f=>f!==lower&&points(f.geometry.coordinates).some(p=>p[0]===joined[0]&&p[1]===joined[1])),'Yangtze continuation must meet its upstream geometry exactly');
+assert(yangtze.some(f=>points(f.geometry.coordinates).some(([x,y])=>x<114.5&&y>30)),'Do not remove the upstream Yangtze when repairing its mouth');
 
 function setup(load){
   const elements={'water-layer':{checked:false,addEventListener(_,fn){this.change=fn;}},'water-status':{hidden:true}};
