@@ -1,5 +1,6 @@
 function loadError(error){
   console.error(error);
+  document.getElementById('map-loading').hidden=true;
   document.getElementById('status').textContent='Map could not load';
   document.getElementById('load-error').hidden=false;
   document.getElementById('retry').onclick=()=>location.reload();

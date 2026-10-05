@@ -74,6 +74,10 @@
   </aside>
   <main class="map-shell" id="map-shell" data-level="province" aria-busy="false">
     <div id="map" aria-label="Interactive China administrative boundary map"></div>
+    <div id="map-loading" role="status" aria-live="polite">
+      <svg class="loading-wheel" viewBox="0 0 80 80" aria-hidden="true"><circle class="wheel-rim" cx="40" cy="40" r="32"/><circle cx="40" cy="40" r="27"/><path d="M40 13v54M13 40h54M21 21l38 38M21 59l38-38M29.7 15l20.6 50M15 29.7l50 20.6M15 50.3l50-20.6M29.7 65l20.6-50"/><circle class="wheel-hub" cx="40" cy="40" r="6"/></svg>
+      <span>Loading map…</span>
+    </div>
     <div class="map-top"><div class="map-breadcrumb"><button id="home" data-nav>All China</button><span id="breadcrumb-region" hidden></span></div><div class="map-mode" aria-label="Region selection level"><button id="mode-province" aria-pressed="true" data-nav>Provinces</button><button id="mode-prefecture" aria-pressed="false" data-nav>Subdivisions</button><button id="mode-lock" type="button" aria-label="Lock selection level" title="Lock selection level" aria-pressed="false" data-nav><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="2"/><path class="lock-closed" d="M6.5 9V6a3.5 3.5 0 0 1 7 0v3"/><path class="lock-open" d="M6.5 9V6a3.5 3.5 0 0 1 7 0"/></svg></button></div></div>
     <div class="map-actions"><button id="zoom-in" title="Zoom in" aria-label="Zoom in" data-nav>+</button><button id="zoom-out" title="Zoom out" aria-label="Zoom out" data-nav>−</button><button id="fit-map" title="View parent division" aria-label="View parent division" data-nav><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg></button></div>
     <div class="north" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 32"><path d="M10 0L19 29 10 23 1 29Z" fill="currentColor"/><path d="M10 0v23L1 29Z" fill="#c9a364"/></svg></div>

@@ -362,8 +362,9 @@ async function init(){try{
   capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitalsResponse.json());
   koreaAtlas.warm().catch(error=>console.warn('Korea preload:',error.message));
   mongoliaAtlas.warm().catch(error=>console.warn('Mongolia preload:',error.message));
-  controls();if(['#korea','#mongolia'].includes(location.hash))changeAtlas(location.hash.slice(1));else followPlaceLink();
-}catch(e){console.error(e);$('status').textContent='Map could not load';$('load-error').hidden=false;}}
+  controls();if(['#korea','#mongolia'].includes(location.hash))await changeAtlas(location.hash.slice(1));else await followPlaceLink();
+  $('map-loading').hidden=true;
+}catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 async function followPlaceLink(){
   if(['#korea','#mongolia'].includes(location.hash)){
     if(!allReady||!koreaAtlas||!mongoliaAtlas)return;
