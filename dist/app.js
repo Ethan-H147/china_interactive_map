@@ -112,7 +112,7 @@ function controls(){
   for(const id of ['tab-explore','tab-layers'])$(id).disabled=quiz.active;
   if(allReady&&!quiz.active)$('quiz-start').disabled=cameraBusy||!quizPool().length||($('quiz-type').value==='name'&&!$('quiz-scope').value);
 }
-function setMode(mode){$('map-shell').dataset.level=mode;$('mode-province').setAttribute('aria-pressed',String(mode==='province'));$('mode-prefecture').setAttribute('aria-pressed',String(mode==='prefecture'));$('map-hint').textContent=mode==='province'?'Select a province':'Select a subdivision';}
+function setMode(mode,automatic=false){if(automatic&&$('mode-lock')?.getAttribute?.('aria-pressed')==='true')mode=$('mode-province').getAttribute('aria-pressed')==='true'?'province':'prefecture';$('map-shell').dataset.level=mode;$('mode-province').setAttribute('aria-pressed',String(mode==='province'));$('mode-prefecture').setAttribute('aria-pressed',String(mode==='prefecture'));$('map-hint').textContent=mode==='province'?'Select a province':'Select a subdivision';}
 const interactionNames=['dragPan','scrollZoom','doubleClickZoom','touchZoomRotate','boxZoom','keyboard'];
 let enabledInteractions=[];
 function lockCamera(){
@@ -140,7 +140,7 @@ $('map').addEventListener('wheel',event=>{if(cameraBusy){event.preventDefault();
 function showPanel(panel){if(quiz.active&&panel!=='quiz')return;for(const name of ['explore','layers','quiz']){$(name+'-panel').hidden=name!==panel;$('tab-'+name).setAttribute('aria-pressed',String(name===panel));}}
 function clearSelection(){if(selected){setRegionState(selected.layer,{selected:false});selected=null;}}
 function clearSearch(){$('search').value='';$('search-results').hidden=true;$('search-results').replaceChildren();}
-function reset(){if(cameraBusy)return;clearSelection();activeCode=null;$('province').value='';$('welcome').hidden=true;$('selection').hidden=true;$('tab-explore').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';clearSearch();showPanel('layers');setMode('province');syncLayers();return fitHome(true);}
+function reset(){if(cameraBusy)return;clearSelection();activeCode=null;$('province').value='';$('welcome').hidden=true;$('selection').hidden=true;$('tab-explore').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';clearSearch();showPanel('layers');setMode('province',true);syncLayers();return fitHome(true);}
 function setStory(code){const s=stories[code]||Object.values(stories).find(s=>s.subdivisionCodes.includes(code));$('story').hidden=!s;$('story-title').textContent=s?.place||'';$('story-text').textContent=s?.text||'';if(s)$('story-source').href=s.source;else $('story-source').removeAttribute('href');}
 function renderChildren(code){
   const children=detailLayers.get(code)||[];$('subdivisions').hidden=!children.length;$('subdivisions').open=false;$('subdivisions-title').textContent=`${code===650000?'Administrative':'Mapped'} divisions (${children.length})`;$('region-list').replaceChildren();
@@ -202,7 +202,7 @@ function selectRegion(layer,parentCode,shouldFit=true){
   $('parent-kind').textContent=kind(parent);
   $('parent-english').textContent=englishName(parent);$('parent-chinese').textContent=parent.name;$('parent-region').setAttribute('aria-label','View '+bilingualName(parent));$('parent-region').onclick=()=>selectRegion(parentLayer,code);
   $('breadcrumb-region').hidden=false;$('breadcrumb-region').textContent=isProvince?bilingualName(p):english[code]+' / '+(p.parentCity?englishName(parent)+' / ':'')+bilingualName(p);$('map-shell').dataset.selected='true';
-  placeTools?.show(p.adcode);setStory(p.adcode);renderChildren(p.adcode);setMode('prefecture');syncLayers();refreshStatus();
+  placeTools?.show(p.adcode);setStory(p.adcode);renderChildren(p.adcode);setMode('prefecture',true);syncLayers();refreshStatus();
   document.querySelector('.sidebar-scroll').scrollTop=0;
   if(shouldFit&&layer.feature.geometry)return navigateBounds(layer.getBounds(),{paddingTopLeft:[35,70],paddingBottomRight:[55,65],maxZoom:regionZoom(p)});
   updateLabels();return Promise.resolve(true);
@@ -222,7 +222,7 @@ async function changeAtlas(next,animate=true){
   for(const f of provinceFeatures)map.setFeatureState({source:'provinces',id:f.properties.adcode},{inactive:foreign});
   syncLayers();updateLabels();koreaAtlas.context(next==='korea');mongoliaAtlas.context(next==='mongolia');
   if(foreign)await currentAtlas().enter();
-  else{$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province');refreshStatus();controls();if(animate)await fitHome(true);updateLabels();}
+  else{$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province',true);refreshStatus();controls();if(animate)await fitHome(true);updateLabels();}
   return true;
 }
 function regionZoom(p){return p.parentCity?14:[810000,820000].includes(p.provinceCode||p.adcode)?p.level==='province'?14:17:p.level==='province'?8:10;}
@@ -388,6 +388,7 @@ for(const id of ['province-layer','prefecture-layer','other-layer'])$(id).addEve
 $('label-layer').addEventListener('change',updateLabels);map.on('moveend',updateLabels);
 $('mode-province').onclick=()=>{if(atlasMode!=='china')return currentAtlas().setMode(1);if(!cameraBusy){clearHover();setMode('province');syncLayers();updateLabels();}};
 $('mode-prefecture').onclick=()=>{if(atlasMode!=='china')return currentAtlas().setMode(2);if(!cameraBusy){clearHover();setMode('prefecture');$('prefecture-layer').checked=true;syncLayers();refreshStatus();}};
+$('mode-lock').onclick=()=>{const locked=$('mode-lock').getAttribute('aria-pressed')!=='true';$('mode-lock').setAttribute('aria-pressed',String(locked));$('mode-lock').title=locked?'Unlock selection level':'Lock selection level';};
 $('tab-explore').onclick=()=>showPanel('explore');$('tab-layers').onclick=()=>showPanel('layers');$('tab-quiz').onclick=()=>{showPanel('quiz');updateQuizSetup();};
 $('search').addEventListener('input',renderSearch);$('search').addEventListener('keydown',e=>{if(e.key==='Escape')clearSearch();if(e.key==='Enter')$('search-results').querySelector('button')?.click();});
 function randomPlace(){
