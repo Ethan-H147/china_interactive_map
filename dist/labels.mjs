@@ -1,4 +1,4 @@
-export function labelLines(english,local,language='both'){return language==='en'?[english]:language==='local'?[local||english]:[english,local].filter((s,i,a)=>s&&a.indexOf(s)===i);}
+export function labelLines(english,local,language='both'){english=english.replace(/\bAutonomous Prefecture\b/gi,'A.P.');return language==='en'?[english]:language==='local'?[local||english]:[english,local].filter((s,i,a)=>s&&a.indexOf(s)===i);}
 export function placeLabels(candidates,width,height){
  const occupied=[],accepted=[];
  for(const item of [...candidates].sort((a,b)=>Number(!!b.selected)-Number(!!a.selected)||String(a.id).localeCompare(String(b.id)))){
