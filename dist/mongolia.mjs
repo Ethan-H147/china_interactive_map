@@ -11,7 +11,7 @@ export async function addMongoliaPortal(map,host){
  const sidebar=template.content.querySelector('aside'),dialog=template.content.querySelector('dialog');
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));document.body.append(dialog);
  const $=id=>document.getElementById('m-'+id),index=new Map(),layerIds=[],opacities=new Map(),urls=[];
- let data,ready=false,active=false,loading,selected=null,hovered=null,mode=1,labels=[];
+ let data,ready=false,active=false,loading,selected=null,hovered=null,mode=1,labels=[],portalClick=null;
  const tip=document.createElement('div');tip.className='korea-tooltip';tip.hidden=true;document.getElementById('map-shell').append(tip);
  const name=p=>p.en+(p.mn?' · '+p.mn:'');
  function show(id,visible){if(!map.getLayer(id))return;const property=map.getLayer(id).type==='fill'?'fill-opacity':'line-opacity';if(!opacities.has(id))opacities.set(id,map.getPaintProperty(id,property));map.setPaintProperty(id,property,visible?opacities.get(id):0);}
@@ -45,8 +45,8 @@ export async function addMongoliaPortal(map,host){
   for(const f of candidates){const p=f.properties,point=map.project(p.center);if(point.x<35||point.x>w-40||point.y<80||point.y>h-55)continue;const width=Math.max(p.en.length*6.7,(p.mn||'').length*7)+16,r=[point.x-width/2,point.y-19,point.x+width/2,point.y+23];if(occupied.some(o=>r[0]<o[2]&&r[2]>o[0]&&r[1]<o[3]&&r[3]>o[1]))continue;occupied.push(r);const el=document.createElement('div');el.className='korea-marker';el.textContent=p.en;const mn=document.createElement('small');mn.lang='mn-Cyrl';mn.textContent=p.mn||'';el.append(mn);labels.push(new maplibregl.Marker({element:el,anchor:'center'}).setLngLat(p.center).addTo(map));}
  }
  function picked(point){const layers=mode===2&&$('district-layer').checked?['mongolia-second-fill','mongolia-first-fill']:['mongolia-first-fill'];const hits=map.queryRenderedFeatures(point,{layers});for(const layer of layers){const hit=hits.find(h=>h.layer.id===layer);if(hit)return index.get(hit.properties.id);}}
- map.on('click','mongolia-portal-fill',()=>{if(!active&&!host.isBusy())host.switchAtlas('mongolia');});
- map.on('click',event=>{if(active&&ready&&!host.isBusy()){const f=picked(event.point);if(f)select(f);}});
+ map.on('click','mongolia-portal-fill',event=>{if(!active&&!host.isBusy()){portalClick=event.originalEvent;host.switchAtlas('mongolia');}});
+ map.on('click',event=>{if(event.originalEvent===portalClick)return;if(active&&ready&&!host.isBusy()){const f=picked(event.point);if(f)select(f);}});
  map.on('mousemove',event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';tip.replaceChildren(document.createTextNode(name(f.properties)));const small=document.createElement('small');small.textContent=f.properties.type;tip.append(small);tip.hidden=false;tip.style.left=Math.max(8,Math.min(event.point.x+12,map.getContainer().clientWidth-tip.offsetWidth-10))+'px';tip.style.top=Math.max(8,event.point.y-tip.offsetHeight-12)+'px';});
  map.on('movestart',clearHover);map.on('moveend',updateLabels);map.on('resize',updateLabels);map.getCanvas().addEventListener('mouseleave',clearHover);
  const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/[^\p{L}\p{N}]/gu,'').toLowerCase();
