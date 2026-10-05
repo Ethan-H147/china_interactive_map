@@ -28,3 +28,11 @@ export function adaptiveOpacity(base=1){
  expression.push(22,base);return expression;
 }
 export const lineSourceOptions={type:'geojson',tolerance:.65,maxzoom:18,buffer:128};
+
+// Keep feature-state bindings alive while a country is hidden. Replacing a
+// data-driven opacity with a constant can invalidate cached paint bindings.
+export function hiddenOpacity(value){
+ if(!Array.isArray(value))return 0;
+ if(value[0]==='interpolate'){const result=value.slice();for(let i=4;i<result.length;i+=2)result[i]=['*',result[i],0];return result;}
+ return ['*',value,0];
+}

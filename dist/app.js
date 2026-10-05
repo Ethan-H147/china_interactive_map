@@ -14,7 +14,7 @@ function atlasLayerVisible(id,visible){
   const layer=map.getLayer(id);if(!layer)return;
   const property=layer.type==='fill'?'fill-opacity':'line-opacity';
   if(visible){if(atlasHiddenPaint.has(id)){map.setPaintProperty(id,property,atlasHiddenPaint.get(id));atlasHiddenPaint.delete(id);}}
-  else if(!atlasHiddenPaint.has(id)){atlasHiddenPaint.set(id,map.getPaintProperty(id,property));map.setPaintProperty(id,property,0);}
+  else if(!atlasHiddenPaint.has(id)){const value=map.getPaintProperty(id,property);atlasHiddenPaint.set(id,value);map.setPaintProperty(id,property,window.AtlasLines.hiddenOpacity(value));}
 }
 function syncLayers(){
   syncDistrictLayers();
@@ -212,7 +212,7 @@ async function changeAtlas(next,animate=true){
   if(cameraBusy||!allReady||quiz.active||!koreaAtlas||!mongoliaAtlas||next===atlasMode||!['china','korea','mongolia'].includes(next))return false;
   currentAtlas()?.leave();clearHover();clearSelection();clearSearch();activeCode=null;atlasMode=next;
   const foreign=next!=='china',names={china:['China','中国','zh'],korea:['Korea','한반도','ko'],mongolia:['Mongolia','Монгол','mn-Cyrl']},name=names[next];
-  document.body.dataset.atlas=next;document.title=name[0]+' · '+name[1];
+  window.AtlasTheme.applyAtlasTheme(map,next);document.title=name[0]+' · '+name[1];
   history.replaceState(null,'',location.pathname+location.search+(foreign?'#'+next:''));
   document.getElementById('china-sidebar').hidden=foreign;
   $('atlas-title-english').textContent=name[0];$('atlas-title-english').className=foreign?'korea-english':'china-english';
@@ -321,12 +321,13 @@ map.on('mousemove',event=>{
 });
 map.getCanvas().addEventListener('mouseleave',clearHover);
 async function init(){try{
-  const [display,m,names,administration,population,districts,districtNames,articles,landmarks,provincePop]=await Promise.all([boundaryData(),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-districts.bin'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
+  const [display,m,names,administration,population,districts,districtNames,articles,landmarks,provincePop,fillFragments]=await Promise.all([boundaryData(),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-districts.bin'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),json('data/fill-fragments.bin'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=display.provinces.features;
   const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
   const otherFeatures=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
-  addSource('provinces',display.provinces);addSource('prefectures',featureCollection(prefFeatures));addSource('others',featureCollection(otherFeatures));
+  const fillFeatures=features=>featureCollection(features.flatMap(f=>fillFragments[f.properties.adcode]?fillFragments[f.properties.adcode].coordinates.map(coordinates=>({type:'Feature',properties:{adcode:f.properties.adcode},geometry:{type:'Polygon',coordinates}})):f));
+  addSource('provinces',fillFeatures(provinceFeatures));addSource('prefectures',fillFeatures(prefFeatures));addSource('others',featureCollection(otherFeatures));
   // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
   // The stored geometry and selectable polygons retain full detail.
   for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',window.AtlasLines.lineData(geometry),window.AtlasLines.lineSourceOptions);

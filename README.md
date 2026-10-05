@@ -168,6 +168,10 @@ To refresh coastlines, run `node scripts/fetch-east-coast.mjs`, `node scripts/pr
 
 ## Mongolia and province populations
 
+Country themes update with the active map: China uses red and gold, Korea uses white with red and blue, and Mongolia uses blue with red and gold. The palette rules are in `dist/atlas-theme.css`; map fills and strokes use the corresponding country controller colors.
+
+Jilin and Yanbian use precomputed fill triangles to avoid overlapping fills caused by vector-tile rounding around tiny border holes. The source boundaries and outline layers retain their original coordinates. Rebuild the fill data with `npm run build:fills` after editing either region; `npm run test:fills` reproduces the original faulty tile and checks the replacement across six zoom levels. Both standard boundary build commands include this preparation step.
+
 Click the gray Mongolia outline to enter Mongolia on the same map. China and Korea remain visible in gray. Mongolia has 21 aimags and Ulaanbaatar, with 330 soums and nine capital districts. Province and district outlines have separate toggles; search accepts English and Cyrillic names. The bottom map button moves from a district to its parent province, then to the country. Provincial pages include sourced traditional Mongolian script and census population.
 
 Mongolia uses National Statistics Office boundaries. First-level shapes and the country outline are derived from the same district polygons. The shared southern edge follows the existing China outline, with source geometry, processing and checks recorded in dist/data/mongolia-sources.json and mongolia-border-report.json. Run npm run build:mongolia to rebuild from the retained snapshots, and npm run test:mongolia for geometry and rendering checks.

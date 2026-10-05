@@ -1,5 +1,5 @@
 import {koreaPanel} from './korea-panel.mjs';
-import {adaptiveOpacity,lineSourceOptions} from './adaptive-lines.mjs';
+import {adaptiveOpacity,lineSourceOptions,hiddenOpacity} from './adaptive-lines.mjs';
 export function createKoreaAtlas(map,host){
  const maplibre=window.maplibregl,home=[[124,33],[131.9,43.1]],countryNames={KP:'North Korea',KR:'South Korea'};
  const template=document.createElement('template');template.innerHTML=koreaPanel;
@@ -10,7 +10,7 @@ let data,ready=false,active=false,loading=null,selected=null,hovered=null,mode=1
 const index=new Map();
 const layerOpacities=new Map();
 const sourceUrls=[];
-function showLayer(id,visible){const type=map.getLayer(id)?.type;if(!type)return;const property=type==='fill'?'fill-opacity':'line-opacity';if(!layerOpacities.has(id))layerOpacities.set(id,map.getPaintProperty(id,property));map.setPaintProperty(id,property,visible?layerOpacities.get(id):0);}
+function showLayer(id,visible){const type=map.getLayer(id)?.type;if(!type)return;const property=type==='fill'?'fill-opacity':'line-opacity';if(!layerOpacities.has(id))layerOpacities.set(id,map.getPaintProperty(id,property));const value=layerOpacities.get(id);map.setPaintProperty(id,property,visible?value:hiddenOpacity(value));}
 const nativeName=p=>p.ko+(p.hanja?' · '+p.hanja:'');
 const tip=document.createElement('div');tip.className='korea-tooltip';tip.hidden=true;$('map-shell').append(tip);
 const state=(f,value)=>{if(f){const source=f.properties.level===1?'korea-first':'korea-second';for(const id of [source,source+'-selection-edges'])map.setFeatureState({source:id,id:f.properties.id},value);}};
@@ -70,9 +70,9 @@ async function ensureData(){
  const options={type:'geojson',tolerance:0,maxzoom:18,buffer:128,promoteId:'id',attribution:'<a href="https://sgis.kostat.go.kr" target="_blank" rel="noopener">Statistics Korea SGIS</a> · <a href="https://github.com/vuski/admdongkor" target="_blank" rel="noopener">vuski/admdongkor</a>'};
  for(const level of ['first','second']){for(const f of data[level].features)index.set(f.properties.id,f);map.addSource('korea-'+level,{...options,data:sourceData('korea-'+level)});map.addSource('korea-'+level+'-selection-edges',{...options,...lineSourceOptions,data:sourceData('korea-'+level+'-selection-edges')});}
  for(const id of ['first','second','countries'])map.addSource('korea-'+id+'-edges',{...lineSourceOptions,data:sourceData('korea-'+id+'-edges')});
- for(const level of ['first','second']){map.addLayer({id:'korea-'+level+'-fill',type:'fill',layout:{visibility:'none'},source:'korea-'+level,paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],level==='first'?'#ead1ba':'#ca6a45',['boolean',['feature-state','hover'],false],'#d6a34f',['match',['get','country'],'KP','#e7d9be','#efe2c8']],'fill-opacity':level==='first'?1:['case',['boolean',['feature-state','selected'],false],.45,['boolean',['feature-state','hover'],false],.4,.01],'fill-antialias':false}});}
- for(const level of ['second','first','countries'])map.addLayer({id:'korea-'+level+'-lines',type:'line',source:'korea-'+level+'-edges',paint:{'line-color':level==='second'?'#ad9775':'#987343','line-width':['interpolate',['linear'],['zoom'],4,level==='second'?.4:.65,8,level==='second'?.65:level==='first'?1.15:1.25],'line-opacity':adaptiveOpacity(level==='second'?.8:1)},layout:{visibility:'none','line-join':'round','line-cap':'round'}});
- for(const level of ['first','second'])map.addLayer({id:'korea-'+level+'-selected',type:'line',layout:{visibility:'none','line-join':'round','line-cap':'round'},source:'korea-'+level+'-selection-edges',paint:{'line-color':'#a43829','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}});
+ for(const level of ['first','second']){map.addLayer({id:'korea-'+level+'-fill',type:'fill',layout:{visibility:'none'},source:'korea-'+level,paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],level==='first'?'#b9cfe5':'#235a91',['boolean',['feature-state','hover'],false],'#b4c9df',['match',['get','country'],'KP','#dce5ef','#e7edf5']],'fill-opacity':level==='first'?1:['case',['boolean',['feature-state','selected'],false],.45,['boolean',['feature-state','hover'],false],.4,.01],'fill-antialias':false}});}
+ for(const level of ['second','first','countries'])map.addLayer({id:'korea-'+level+'-lines',type:'line',source:'korea-'+level+'-edges',paint:{'line-color':level==='second'?'#9aafc3':'#587694','line-width':['interpolate',['linear'],['zoom'],4,level==='second'?.4:.65,8,level==='second'?.65:level==='first'?1.15:1.25],'line-opacity':adaptiveOpacity(level==='second'?.8:1)},layout:{visibility:'none','line-join':'round','line-cap':'round'}});
+ for(const level of ['first','second'])map.addLayer({id:'korea-'+level+'-selected',type:'line',layout:{visibility:'none','line-join':'round','line-cap':'round'},source:'korea-'+level+'-selection-edges',paint:{'line-color':'#b73945','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}});
 
  for(const id of layerIds){map.setLayoutProperty(id,'visibility','visible');showLayer(id,false);}
  listRegions();

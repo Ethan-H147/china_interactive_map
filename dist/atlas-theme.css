@@ -1,0 +1,20 @@
+body{--accent-soft:#a7382b12;--surface-soft:#f6f1e8;--title-accent:var(--red);--header-stripe:linear-gradient(90deg,var(--red),var(--red))}
+body[data-atlas=korea]{--ink:#243248;--muted:#687489;--red:#285387;--red-dark:#1b3d69;--gold:#bc3d46;--line:#dce3ed;--paper:#fdfefe;--map:#edf1f6;--accent-soft:#28538713;--surface-soft:#eff3f9;--title-accent:#b73945;--header-stripe:linear-gradient(90deg,#b73945 0 50%,#285387 50%)}
+body[data-atlas=mongolia]{--ink:#253747;--muted:#627585;--red:#24628d;--red-dark:#174b71;--gold:#b18b37;--line:#d9e3e9;--paper:#fcfdfd;--map:#eaf1f5;--accent-soft:#24628d14;--surface-soft:#edf3f6;--title-accent:#b33e35;--header-stripe:linear-gradient(90deg,#b33e35 0 16%,#b18b37 16% 17%,#24628d 17% 83%,#b18b37 83% 84%,#b33e35 84%)}
+.site-header{border-top-color:transparent;background-image:var(--header-stripe);background-size:100% 3px;background-repeat:no-repeat;background-origin:border-box}
+.korean-title,.mongolia-title{color:var(--title-accent)}
+body[data-atlas=korea] .map-mode,body[data-atlas=mongolia] .map-mode{background:var(--paper);border-color:var(--line)}
+body[data-atlas=korea] .map-breadcrumb button,body[data-atlas=mongolia] .map-breadcrumb button,body[data-atlas=korea] .map-actions,body[data-atlas=mongolia] .map-actions{background:var(--paper);border-color:var(--line)}
+body[data-atlas=korea] .map-mode button,body[data-atlas=mongolia] .map-mode button{color:var(--muted)}
+body[data-atlas=korea] .map-mode button[aria-pressed=true],body[data-atlas=mongolia] .map-mode button[aria-pressed=true]{background:var(--red);color:#fff}
+.map-mode #mode-lock[aria-pressed=true]{background:var(--accent-soft);color:var(--red)}
+body[data-atlas=korea] .quiet-button,body[data-atlas=mongolia] .quiet-button,body[data-atlas=korea] .search-result,body[data-atlas=mongolia] .search-result,.korea-sidebar #k-region-list button,.mongolia-sidebar #m-region-list button{background:var(--surface-soft);border-color:var(--line)}
+body[data-atlas=korea] .sidebar-footer button,body[data-atlas=mongolia] .sidebar-footer button,.korea-sidebar #k-subdivisions summary{color:var(--muted)}
+body[data-atlas=korea] .surprise,body[data-atlas=mongolia] .surprise{border-color:var(--line)}
+body[data-atlas=korea] .line,body[data-atlas=mongolia] .line{border-color:var(--red)}
+body[data-atlas=korea] .korea-marker,body[data-atlas=mongolia] .korea-marker{color:var(--ink)}
+body[data-atlas=korea] .korea-tooltip,body[data-atlas=mongolia] .korea-tooltip{background:var(--paper)}
+body[data-atlas=korea] .maplibregl-ctrl-attrib,body[data-atlas=mongolia] .maplibregl-ctrl-attrib{background:var(--map);color:var(--muted)}
+body[data-atlas=korea] .maplibregl-ctrl-attrib a,body[data-atlas=mongolia] .maplibregl-ctrl-attrib a{color:var(--muted)}
+body[data-atlas=korea] .north path:last-child,body[data-atlas=mongolia] .north path:last-child{fill:var(--gold)}
+body[data-atlas=korea] .map-actions button:hover,body[data-atlas=mongolia] .map-actions button:hover{background:var(--surface-soft)}
