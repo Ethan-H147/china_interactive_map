@@ -25,9 +25,10 @@
     "test:shenzhen": "node scripts/validate-shenzhen-coast.mjs && node scripts/validate-shenzhen-hongkong.mjs",
     "build:shenzhen-border": "node scripts/reconcile-shenzhen-hongkong.mjs",
     "build:shenzhen": "node scripts/prepare-shenzhen-coast.mjs && node scripts/refine-shenzhen-coast.mjs",
-    "test:pearl-coast": "node scripts/validate-pearl-coast.mjs && node scripts/validate-east-coast.mjs",
+    "test:pearl-coast": "node scripts/validate-pearl-coast.mjs && node scripts/validate-east-coast.mjs && node scripts/validate-nanhui-shore.mjs",
     "build:pearl-coast": "node scripts/prepare-pearl-coast.mjs && node scripts/refine-pearl-coast.mjs",
     "build:east-coast": "node scripts/prepare-east-coast.mjs && node scripts/refine-east-coast.mjs && npm run build:water",
-    "test:east-coast": "node scripts/validate-east-coast.mjs"
+    "test:east-coast": "node scripts/validate-east-coast.mjs && node scripts/validate-nanhui-shore.mjs",
+    "build:nanhui-shore": "node scripts/refine-nanhui-shore.mjs && npm run build:water"
   }
 }

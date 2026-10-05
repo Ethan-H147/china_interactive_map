@@ -4,9 +4,10 @@ import {topology} from 'topojson-server';
 import {mesh} from 'topojson-client';
 import {alignCountry,polygons} from './international-topology.mjs';
 import {collection,run,area} from './pearl-coast.mjs';
+import {refineNanhuiShore} from './nanhui-shore.mjs';
 export const eastTarget=f=>f.properties.provinceCode===310000||f.properties.adcode===330900;
 export const eastChangedCodes=new Set([310113,310115,310116,310120,310151,330900]);
-export const eastCoastMethod='Original directed OpenStreetMap coastlines define physical land without simplification. Only Shanghai and Zhoushan display coverage changes. Existing shared administrative edges and Chongming’s Shanghai/Jiangsu split remain fixed. Whole physical islands replace coarse components when one existing jurisdiction or an unambiguous official island checkpoint establishes ownership. Islands shared with other jurisdictions retain the existing administrative partition. Source bounding-box edges never become display shorelines.';
+export const eastCoastMethod='Original directed OpenStreetMap coastlines define physical land without simplification. Only Shanghai and Zhoushan display coverage changes. Existing shared administrative edges and Chongming’s Shanghai/Jiangsu split remain fixed. Whole physical islands replace coarse components when one existing jurisdiction or an unambiguous official island checkpoint establishes ownership. Islands shared with other jurisdictions retain the existing administrative partition. Source bounding-box edges never become display shorelines. Nanhui uses the reviewed permanent seawall land edge and the raised harbor footprint; exposed tidal flats and tidal dikes are excluded.';
 const inRing=([x,y],r)=>{let c=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])c=!c;}return c;};
 export const contains=(f,p)=>polygons(f.geometry).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h)));
 const key=p=>p.join(','),edge=(a,b)=>[key(a),key(b)].sort().join('|');
@@ -47,5 +48,7 @@ export async function refineEastCoast(features,land){
     const next={...old,geometry:refined.features[0].geometry};changed.set(code,next);
     report.regions.push({adcode:code,oldParts:polygons(old.geometry).length,newParts:polygons(next.geometry).length,oldVertices:polygons(old.geometry).flat(2).length,newVertices:polygons(next.geometry).flat(2).length,wholeIslandIds:whole.map(p=>p.properties.landId)});
   }
-  return {features:features.map(f=>changed.get(f.properties.adcode)||f),report};
+  const permanent=await refineNanhuiShore(features.map(f=>changed.get(f.properties.adcode)||f));
+  report.nanhuiShore=permanent.report;
+  return {features:permanent.features,report};
 }

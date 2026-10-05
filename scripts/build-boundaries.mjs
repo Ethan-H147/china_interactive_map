@@ -115,6 +115,7 @@ provenance.processing.macau="Macau shared parish edges are reconciled with 1e-8 
 provenance.processing.shenzhen='Shenzhen display coverage is clipped to detailed OpenStreetMap physical land. Original administrative sources and Hong Kong polygons remain unchanged. No coastline simplification is applied; offshore jurisdiction is not depicted as land.';
 provenance.processing.pearlCoast=pearlCoastMethod;
 provenance.processing.eastCoast=eastCoastMethod;
+provenance.processing.nanhuiShore=read("nanhui-shore.json").processing;
 provenance.processing.chongming='OpenStreetMap island relation 3292765 replaces only the main Chongming island. The existing Shanghai/Jiangsu administrative split is retained on the island. Connected north-bank coastline ways remove North Branch river water from Nantong within [121.10,31.42,122.05,31.93]. Changxing, Hengsha and all other subdivisions retain their previous geometry.';
 provenance.sources=provenance.sources.filter(s=>!['chongming-island.json','chongming-north-bank.json'].includes(s.sourceFile));
 for(const [file,label,extra] of [

@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gzipSync} from 'node:zlib';
+const query='[out:json][timeout:120];(nwr["man_made"~"dyke|embankment|seawall|breakwater|groyne|pier"](30.85,121.85,31.14,122.06);way["barrier"="retaining_wall"](30.85,121.85,31.14,122.06);nwr["natural"~"wetland|mud"](30.85,121.85,31.14,122.06);nwr["name"~"世纪塘|堤顶|海塘|海堤|港城|南汇东滩"](30.85,121.85,31.14,122.06););out meta geom;';
+const endpoint='https://overpass-api.de/api/interpreter';
+const r=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','User-Agent':'ChinaBoundaryAtlas/1.0'},body:new URLSearchParams({data:query}),signal:AbortSignal.timeout(180000)});
+assert(r.ok,'Nanhui shore query failed '+r.status);
+const raw=Buffer.from(await r.text()),data=JSON.parse(raw);assert(!data.remark&&data.elements.length,'Incomplete shore source');
+fs.writeFileSync('scripts/additional-sources/east-coast/osm-nanhui.bin',gzipSync(raw,{level:9}));
+console.log(JSON.stringify({timestamp:data.osm3s.timestamp_osm_base,query,endpoint,elements:data.elements.map(e=>({id:e.id,type:e.type,version:e.version,tags:e.tags,vertices:e.geometry?.length,bounds:e.bounds}))},null,2));

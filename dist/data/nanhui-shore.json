@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-10-05T00:29:25Z",
+  "provider": "OpenStreetMap coastal wetland and harbor-access geometry",
+  "coordinateSystem": "WGS84",
+  "sha256": "3011702e2330d3de823acea3e76d561f8df507fd69573174a72679e5477d30ba",
+  "landwardEdges": [
+    {
+      "id": 985635390,
+      "start": 5,
+      "end": 9,
+      "version": 3
+    },
+    {
+      "id": 985635389,
+      "start": 26,
+      "end": 28,
+      "reverse": true,
+      "version": 3
+    },
+    {
+      "id": 1107742533,
+      "start": 1,
+      "end": 2,
+      "version": 1
+    },
+    {
+      "id": 1107742537,
+      "start": 22,
+      "end": 23,
+      "reverse": true,
+      "version": 1
+    }
+  ],
+  "coastWay": {
+    "id": 842632375,
+    "version": 4
+  },
+  "structureWays": [
+    826453672
+  ],
+  "excludedTidalDikes": [
+    826365004,
+    826365005,
+    826365006,
+    1107742531
+  ],
+  "license": "ODbL 1.0",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "reference": "https://swj.sh.gov.cn/shshyglswzx-xwdt/20220718/91cf7191971d444d98f2771f5645caf2.html",
+  "imagery": "EOxCloudless Sentinel-2 2025, same alignment as the satellite layer",
+  "processing": "Nanhui mainland display follows the landward edge of the mapped coastal wetlands along the seawall. Exposed tidal flats and tidal training dikes are excluded from the land fill. The raised harbor access retains its mapped footprint. Only Pudong display geometry changes; administrative inland boundaries and Dishui Lake remain unchanged.",
+  "shoreline": [
+    [
+      121.9340891,
+      31.0031677
+    ],
+    [
+      121.9357967,
+      31.0013385
+    ],
+    [
+      121.9374168,
+      31.0009154
+    ],
+    [
+      121.9384575,
+      31.0003452
+    ],
+    [
+      121.9395411,
+      30.9991313
+    ],
+    [
+      121.9439506,
+      30.989171
+    ],
+    [
+      121.9498622,
+      30.975705
+    ],
+    [
+      121.9536173,
+      30.966607
+    ],
+    [
+      121.9538694,
+      30.9664452
+    ],
+    [
+      121.9645291,
+      30.9417337
+    ],
+    [
+      121.9646264,
+      30.9414697
+    ],
+    [
+      121.9733766,
+      30.9211255
+    ],
+    [
+      121.974155,
+      30.9205149
+    ]
+  ]
+}

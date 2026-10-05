@@ -227,6 +227,115 @@
       "compression": "gzip JSON",
       "sourceVersions": "data/pearl-coast-source.bin",
       "processing": "Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions. Hengqin uses the physical land mask minus unchanged Macau government jurisdictions; the reviewed port island uses its existing physical shoreline. No rectangular coastal preservation window is applied. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled."
+    },
+    {
+      "timestamp": "2026-10-05T00:29:25Z",
+      "provider": "OpenStreetMap coastal wetland and harbor-access geometry",
+      "coordinateSystem": "WGS84",
+      "sha256": "3011702e2330d3de823acea3e76d561f8df507fd69573174a72679e5477d30ba",
+      "landwardEdges": [
+        {
+          "id": 985635390,
+          "start": 5,
+          "end": 9,
+          "version": 3
+        },
+        {
+          "id": 985635389,
+          "start": 26,
+          "end": 28,
+          "reverse": true,
+          "version": 3
+        },
+        {
+          "id": 1107742533,
+          "start": 1,
+          "end": 2,
+          "version": 1
+        },
+        {
+          "id": 1107742537,
+          "start": 22,
+          "end": 23,
+          "reverse": true,
+          "version": 1
+        }
+      ],
+      "coastWay": {
+        "id": 842632375,
+        "version": 4
+      },
+      "structureWays": [
+        826453672
+      ],
+      "excludedTidalDikes": [
+        826365004,
+        826365005,
+        826365006,
+        1107742531
+      ],
+      "license": "ODbL 1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "reference": "https://swj.sh.gov.cn/shshyglswzx-xwdt/20220718/91cf7191971d444d98f2771f5645caf2.html",
+      "imagery": "EOxCloudless Sentinel-2 2025, same alignment as the satellite layer",
+      "processing": "Nanhui mainland display follows the landward edge of the mapped coastal wetlands along the seawall. Exposed tidal flats and tidal training dikes are excluded from the land fill. The raised harbor access retains its mapped footprint. Only Pudong display geometry changes; administrative inland boundaries and Dishui Lake remain unchanged.",
+      "shoreline": [
+        [
+          121.9340891,
+          31.0031677
+        ],
+        [
+          121.9357967,
+          31.0013385
+        ],
+        [
+          121.9374168,
+          31.0009154
+        ],
+        [
+          121.9384575,
+          31.0003452
+        ],
+        [
+          121.9395411,
+          30.9991313
+        ],
+        [
+          121.9439506,
+          30.989171
+        ],
+        [
+          121.9498622,
+          30.975705
+        ],
+        [
+          121.9536173,
+          30.966607
+        ],
+        [
+          121.9538694,
+          30.9664452
+        ],
+        [
+          121.9645291,
+          30.9417337
+        ],
+        [
+          121.9646264,
+          30.9414697
+        ],
+        [
+          121.9733766,
+          30.9211255
+        ],
+        [
+          121.974155,
+          30.9205149
+        ]
+      ],
+      "sourceFile": "nanhui-shore-source.bin",
+      "reusableDataset": "data/nanhui-shore-source.bin",
+      "compression": "gzip JSON"
     }
   ],
   "missing": [
@@ -265,6 +374,7 @@
     "shenzhen": "Only Shenzhen display coverage is clipped to detailed OpenStreetMap land; the Guangdong outline and shared line networks are derived from those polygons. Original administrative sources and Hong Kong polygons remain unchanged. This depicts physical land rather than offshore jurisdiction. Mean high-water coastline may differ from imagery tides and dates.",
     "shenzhenHongKong": "Copy the official Hong Kong land-border path between existing common junctions into Shenzhen. Project adjoining exterior district vertices onto the same path and retain all intervening official coordinates. Connected internal district junctions move with their exterior endpoint; coastlines and inland segments outside the reviewed seam retain their coordinates. Existing common land-border junctions between the Shenzhen River estuary and Sha Tau Kok. Coastal and estuary shorelines outside these junctions are preserved.",
     "pearlCoast": "Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions. Hengqin uses the physical land mask minus unchanged Macau government jurisdictions; the reviewed port island uses its existing physical shoreline. No rectangular coastal preservation window is applied. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled.",
-    "eastCoast": "Original directed OpenStreetMap coastlines define physical land without simplification. Only Shanghai and Zhoushan display coverage changes. Existing shared administrative edges and Chongming’s Shanghai/Jiangsu split remain fixed. Whole physical islands replace coarse components when one existing jurisdiction or an unambiguous official island checkpoint establishes ownership. Islands shared with other jurisdictions retain the existing administrative partition. Source bounding-box edges never become display shorelines."
+    "eastCoast": "Original directed OpenStreetMap coastlines define physical land without simplification. Only Shanghai and Zhoushan display coverage changes. Existing shared administrative edges and Chongming’s Shanghai/Jiangsu split remain fixed. Whole physical islands replace coarse components when one existing jurisdiction or an unambiguous official island checkpoint establishes ownership. Islands shared with other jurisdictions retain the existing administrative partition. Source bounding-box edges never become display shorelines.",
+    "nanhuiShore": "Nanhui mainland display follows the landward edge of the mapped coastal wetlands along the seawall. Exposed tidal flats and tidal training dikes are excluded from the land fill. The raised harbor access retains its mapped footprint. Only Pudong display geometry changes; administrative inland boundaries and Dishui Lake remain unchanged."
   }
 }

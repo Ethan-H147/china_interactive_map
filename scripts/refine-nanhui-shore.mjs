@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import {topology} from 'topojson-server';
+import {merge,mesh} from 'topojson-client';
+import {readData} from './read-data.mjs';
+import {refineNanhuiShore,nanhuiMethod} from './nanhui-shore.mjs';
+import {reviewedPaths} from './reconcile-river-boundaries.mjs';
+import {polygons} from './international-topology.mjs';
+const data=readData('display-boundaries.json'),rules=JSON.parse(fs.readFileSync('scripts/additional-sources/water/boundary-reaches.json'));
+const oldPaths=reviewedPaths(data.subdivisions,rules),result=await refineNanhuiShore(data.subdivisions.features);
+data.subdivisions.features=result.features;assert.deepEqual(reviewedPaths(data.subdivisions,rules),oldPaths,'Reviewed river paths changed');
+const top=topology({regions:data.subdivisions}),r=top.objects.regions;
+data.provinces.features.find(f=>f.properties.adcode===310000).geometry=merge(top,r.geometries.filter(g=>g.properties.provinceCode===310000));
+const pref=g=>g.properties.level==='taiwan-region'||g.properties.level==='city'&&String(g.properties.adcode).slice(2,4)!=='90',same=(a,b)=>a.properties.provinceCode===b.properties.provinceCode;
+data.boundaries={province:mesh(top,r,(a,b)=>a===b||!same(a,b)),prefecture:mesh(top,r,(a,b)=>a!==b&&same(a,b)&&(pref(a)||pref(b))),other:mesh(top,r,(a,b)=>a!==b&&same(a,b)&&!pref(a)&&!pref(b))};
+const serialized=Buffer.from(JSON.stringify(data)),compressed=gzipSync(serialized,{level:9}),parts=[];
+for(let offset=0,i=0;offset<compressed.length;offset+=4*1024*1024,i++){const name='display-boundaries.'+String(i).padStart(2,'0')+'.bin';parts.push(name);fs.writeFileSync('dist/data/'+name,compressed.subarray(offset,offset+4*1024*1024));}
+fs.writeFileSync('dist/data/display-boundaries.parts.json',JSON.stringify({compression:'gzip',parts,compressedBytes:compressed.length,uncompressedBytes:serialized.length,sha256:createHash('sha256').update(serialized).digest('hex')},null,2));
+fs.writeFileSync('dist/data/nanhui-shore.json',JSON.stringify(result.report,null,2));
+fs.copyFileSync('scripts/additional-sources/east-coast/osm-nanhui.bin','dist/data/nanhui-shore-source.bin');
+const coastReport=readData('east-coast-report.json'),pudong=data.subdivisions.features.find(f=>f.properties.adcode===310115),stats=coastReport.regions.find(r=>r.adcode===310115);
+stats.newParts=polygons(pudong.geometry).length;stats.newVertices=polygons(pudong.geometry).flat(2).length;coastReport.nanhuiShore=result.report;
+fs.writeFileSync('dist/data/east-coast-report.json',JSON.stringify(coastReport,null,2));
+const provenance=readData('additional-sources.json');provenance.sources=provenance.sources.filter(s=>s.sourceFile!=='nanhui-shore-source.bin');
+provenance.sources.push({...result.report,sourceFile:'nanhui-shore-source.bin',reusableDataset:'data/nanhui-shore-source.bin',compression:'gzip JSON'});provenance.processing.nanhuiShore=nanhuiMethod;
+fs.writeFileSync('dist/data/additional-sources.json',JSON.stringify(provenance,null,2));console.log(result.report);
