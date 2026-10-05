@@ -1,0 +1,10 @@
+.mongolia-title{font:400 30px/1.2 'Segoe UI',Arial,sans-serif;letter-spacing:0;color:var(--red)}
+.mongolia-sidebar #m-search{width:100%;padding:13px 12px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:#fff}
+.mongolia-sidebar #m-search-results{max-height:260px;overflow:auto;border:1px solid var(--line);margin-top:8px;border-radius:4px}
+.mongolia-sidebar #m-selection-name{font-size:35px;margin-bottom:7px}.mongolia-sidebar #m-selection-name.long-name{font-size:27px}
+.mongolian-name{font:400 28px/1.4 'Segoe UI',Arial,sans-serif;letter-spacing:0;color:var(--red);margin:0 0 18px}
+.mongolia-sidebar #m-parent-region{display:grid;gap:5px;text-align:left}.mongolia-sidebar #m-parent-region::after{display:none}
+.mongolia-sidebar #m-subdivisions{margin-top:24px;border-top:1px solid var(--line);padding-top:16px}.mongolia-sidebar summary{font-size:13px;cursor:pointer;color:var(--muted)}
+.mongolia-sidebar #m-region-list{display:grid;gap:5px;margin-top:13px;max-height:300px;overflow:auto;scrollbar-width:thin}.mongolia-sidebar #m-region-list button{display:grid;gap:4px;padding:10px 12px;text-align:left;background:#f6f1e8;font-size:13px;border-radius:3px}.mongolia-sidebar #m-region-list small{color:var(--muted)}
+.mongolia-sidebar #m-selection-reset{padding-bottom:20px}
+@media(max-width:760px){.mongolia-title{font-size:24px}.mongolia-sidebar #m-selection-name{font-size:32px}}

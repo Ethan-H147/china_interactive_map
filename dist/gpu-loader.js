@@ -9,6 +9,7 @@ try{
   window.AtlasNameQuiz=await import('./name-quiz.mjs');
   window.AtlasPlaceTools=await import('./place-tools.mjs');
   window.AtlasKorea=await import('./korea-portal.mjs');
+  window.AtlasMongolia=await import('./mongolia.mjs');
   window.AtlasLines=await import('./adaptive-lines.mjs');
   window.AtlasCapitals=await import('./capitals.mjs');
   window.AtlasWater=await import('./water.mjs');

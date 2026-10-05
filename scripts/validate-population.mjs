@@ -46,9 +46,10 @@ assert.deepEqual(parseTable(fixture),[
   {province:'香港',name:'香港',type:'特别行政区',total:100,towns:null,urbanCore:100,date:'2020年底'}
 ]);
 const elements=new Map(),$=id=>{if(!elements.has(id))elements.set(id,{});return elements.get(id);};
-const app=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8'),context=vm.createContext({$,regionPopulation:data});
+const app=fs.readFileSync(new URL('../dist/app.js',import.meta.url),'utf8'),context=vm.createContext({$,regionPopulation:data,provincePopulation:read('../dist/data/province-population.json')});
 vm.runInContext(app.slice(app.indexOf('function renderPopulation('),app.indexOf('function isPrefectureLevel(')),context);
-for(const f of features){context.renderPopulation(f.properties);assert.equal($('population').hidden,!data.regions[f.properties.adcode]);}
+for(const f of features){context.renderPopulation(f.properties);assert.equal($('population').hidden,!(f.properties.level==='province'||data.regions[f.properties.adcode]));}
+for(const f of display.provinces.features){const record=context.provincePopulation.china[f.properties.adcode];context.renderPopulation(f.properties);assert.equal($('population-total').textContent,record.total.toLocaleString('en-US'));assert.equal($('population-date').textContent,record.dateLabel);assert.equal($('population-source').href,record.sourceUrl);assert.equal($('population-breakdown').hidden,true);}
 context.renderPopulation({adcode:420100,provinceCode:420000});
 assert.equal($('population-total').textContent,'12,447,718');
 assert.equal($('population-date').textContent,'1 November 2020');

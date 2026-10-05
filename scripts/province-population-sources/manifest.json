@@ -1,0 +1,26 @@
+{
+  "china": {
+    "retrieved": "2026-10-05T01:41:18.232Z",
+    "sha256": "e4a5d0c22f597746d16784f25a245dfddd16c25282141d6d702e608b78c5ea1f"
+  },
+  "mongolia": {
+    "retrieved": "2026-10-05T01:41:18.237Z",
+    "sha256": "a48aea4e728ff20667bdecb772476adbeac4642c2870822504f9db58a5986f71"
+  },
+  "mongoliaIso": {
+    "retrieved": "2026-10-05T01:41:18.242Z",
+    "sha256": "073a70ed9156f0c1c2e7b455431d109662321159cf9513fb1e060e7bcf12368c"
+  },
+  "hongkong": {
+    "retrieved": "2026-10-05T01:41:18.245Z",
+    "sha256": "8080f28cbbfaa0351984e91fa5fb506594b8ea529554e458e6a6c1005ba8af09"
+  },
+  "macao": {
+    "retrieved": "2026-10-05T01:41:18.247Z",
+    "sha256": "3b85fd649030b655b03c3c95dd30e5bff2573969acc5c0e7a5fc8053500c7d08"
+  },
+  "taiwan": {
+    "retrieved": "2026-10-05T01:41:18.249Z",
+    "sha256": "8e9c87a3caa27cae00fae4c62b13ae72eec5e79d4e06c346d6b244254e547039"
+  }
+}
