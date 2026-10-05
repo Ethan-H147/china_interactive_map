@@ -51,7 +51,7 @@ function updateLabels(){
  labelFrame=requestAnimationFrame(()=>{labelFrame=undefined;renderLabels();});
 }
 function renderLabels(){
-  if(!active||!ready||host.isBusy())return;clearLabels();if(!$('label-layer').checked)return;
+  if(!active||!ready||host.isBusy()||host.isMoving?.())return;clearLabels();if(!$('label-layer').checked)return;
   const parent=selected&&(selected.properties.level===1?selected.properties.id:selected.properties.parent),candidates=parent&&mode===2&&$('district-layer').checked?data.second.features.filter(f=>f.properties.parent===parent):data.first.features;
   const visible=selected&&!candidates.includes(selected)?[selected,...candidates]:candidates;
   labels=window.AtlasLabels.render(map,visible.filter(f=>f.properties.center).map(f=>({id:f.properties.id,center:f.properties.center,en:f.properties.en,local:f.properties.mn,selected:f===selected})),'korea-marker');
