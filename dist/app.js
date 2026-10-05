@@ -123,7 +123,7 @@ async function navigateBounds(bounds,options={},animate=true){
   map.stop();const cameraOptions=navigationOptions(options);
   if(!animate||reducedMotion.matches){map.fitBounds(bounds,{...cameraOptions,duration:0});updateLabels();return Promise.resolve(true);}
   lockCamera();try{await motionRenderer.begin();}catch(error){motionRenderer.end();console.warn('Motion preview:',error.message);}return new Promise(resolve=>{
-    let timer;const finish=()=>{if(finishNavigation!==finish)return;map.off('moveend',finish);clearTimeout(timer);finishNavigation=null;motionRenderer.end();unlockCamera();resolve(true);};
+    let timer;const finish=async()=>{if(finishNavigation!==finish)return;map.off('moveend',finish);clearTimeout(timer);finishNavigation=null;try{await motionRenderer.end();}finally{unlockCamera();resolve(true);}};
     finishNavigation=finish;map.once('moveend',finish);
     timer=setTimeout(()=>{map.stop();map.fitBounds(bounds,{...cameraOptions,duration:0});finish();},1800);
     map.fitBounds(bounds,{...cameraOptions,linear:true,duration:650});

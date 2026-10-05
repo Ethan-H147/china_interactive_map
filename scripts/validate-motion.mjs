@@ -31,11 +31,13 @@ let prepared={
  'prefectures-selection-edges':{data:null,ids:[11,12],features:{11:new Blob([JSON.stringify(feature(11))]),12:new Blob([JSON.stringify(feature(12))])}}
 };
 globalThis.window={addEventListener(){}};
+const frames=[];
+globalThis.document={createElement(){const frame={style:{},setAttribute(){},getContext:()=>({drawImage(){}})};frames.push(frame);return frame;}};
 globalThis.Worker=class{constructor(){queueMicrotask(()=>this.onmessage({data:{sources:prepared}}));}terminate(){}};
 function fakeMap(){
  const layers=[{id:'province-fill',type:'fill',source:'provinces',paint:{'fill-opacity':1}},{id:'prefecture-fill',type:'fill',source:'prefectures',filter:['==',['get','parentCity'],330100],paint:{'fill-opacity':['case',['boolean',['feature-state','selected'],false],.3,.025]}},{id:'prefecture-selection',type:'line',source:'prefectures-selection-edges',layout:{visibility:'none'},paint:{'line-opacity':0}}];
  const sources=new Map(layers.map(l=>[l.source,{type:'geojson',promoteId:'adcode'}])),states=new Map(),listeners=new Map();
- const map={layers,sources,sourceLoaded:true,fullyLoaded:false,
+ const map={layers,sources,sourceLoaded:true,fullyLoaded:false,getCanvas:()=>({width:800,height:600,after(){}}),
   getStyle:()=>({layers:structuredClone(layers),sources:Object.fromEntries(sources)}),
   getLayer:id=>layers.find(l=>l.id===id),getSource:id=>sources.get(id),
   addSource(id,options){sources.set(id,{...options,setData:async data=>{sources.get(id).data=data;}});},
@@ -63,13 +65,22 @@ assert.equal(map.getLayoutProperty('prefecture-selection-motion','visibility'),'
 assert.deepEqual(map.getFilter('prefecture-fill-motion'),['==',['get','parentCity'],330100]);
 assert.deepEqual(map.getFeatureState({source:'prefectures-motion',id:11}),{selected:true});
 assert.deepEqual((await fetch(map.getSource('prefectures-motion').data).then(r=>r.json())).features.map(f=>f.properties.adcode),[11]);
-motion.end();assert.equal(map.getLayoutProperty('province-fill','visibility'),'visible');assert.equal(map.getLayoutProperty('province-fill-motion','visibility'),'visible');
+map.sourceLoaded=false;motion.end();await new Promise(resolve=>setImmediate(resolve));
+assert.equal(map.getLayoutProperty('province-fill','visibility'),'visible');
+assert.equal(map.getPaintProperty('province-fill','fill-opacity'),1,'Do not invalidate paint bindings during refinement');
+assert.equal(map.getLayoutProperty('province-fill-motion','visibility'),'none','Never stack two translucent fills');
+assert.equal(frames[0].style.display,'block','Hold the rendered frame while detailed tiles load');
+map.emit('render');assert.equal(frames[0].style.display,'block','Keep the held frame until precise tiles are loaded');
 // A new move may start before precise tiles have finished loading.
 setFeatureState(map,{source:'prefectures',id:11},{selected:false});setFeatureState(map,{source:'prefectures',id:12},{quizCorrect:true});
 map.setPaintProperty('province-fill','fill-opacity',.2);
+map.sourceLoaded=true;
 assert(await motion.begin());assert.equal(map.getPaintProperty('province-fill-motion','fill-opacity'),.2);
 assert.deepEqual((await fetch(map.getSource('prefectures-motion').data).then(r=>r.json())).features.map(f=>f.properties.adcode),[12]);
-motion.end();map.emit('idle');assert.equal(map.getLayoutProperty('province-fill-motion','visibility'),'none');
+motion.end();await new Promise(resolve=>setImmediate(resolve));map.emit('render');assert.equal(map.getLayoutProperty('province-fill-motion','visibility'),'none');
+assert.equal(frames[0].style.display,'none');
+assert.equal(map.getPaintProperty('province-fill','fill-opacity'),.2);
+assert.deepEqual(map.getPaintProperty('prefecture-fill','fill-opacity'),['case',['boolean',['feature-state','selected'],false],.3,.025],'Restore feature-state bindings after refinement');
 let pickedLayers;
 map.queryRenderedFeatures=(point,{layers})=>{pickedLayers=layers;return[{properties:{adcode:12},layer:{id:'prefecture-fill-motion'}}];};
 assert.equal(queryRegions(map,[0,0],{layers:['prefecture-fill']})[0].layer.id,'prefecture-fill');
@@ -78,5 +89,12 @@ assert.equal(map.getLayoutProperty('prefecture-selection','visibility'),'none');
 // Missing assets and a timed-out overlay fall back to the precise renderer.
 prepared=undefined;const failed=createMotionRenderer(fakeMap());await failed.ready;assert.equal(await failed.begin(),false);
 prepared={provinces:{data:blob([feature(1)]),ids:[1]}};const slow=fakeMap();slow.sourceLoaded=false;
-const timeout=createMotionRenderer(slow);await timeout.ready;assert.equal(await timeout.begin(),false);assert.equal(slow.getLayoutProperty('province-fill','visibility'),'visible');
-console.log('Motion renderer: bounded fallback, selection/quiz subsets, theme/filter/state preservation, interrupted refinement, source precision and Jilin fills passed.');
+const timeout=createMotionRenderer(slow);await timeout.ready;const loading=timeout.begin();
+assert.equal(slow.getLayoutProperty('province-fill','visibility')||'visible','visible','Keep the real map visible while the preview loads');
+assert.equal(slow.getPaintProperty('province-fill','fill-opacity'),1);
+assert.equal(slow.getLayoutProperty('province-fill-motion','visibility'),'none','Capture the existing map before changing any layers');
+await new Promise(resolve=>setImmediate(resolve));assert.equal(frames.at(-1).style.display,'block','Keep the captured map visible while the preview loads');
+assert.equal(await loading,false);assert.equal(slow.getLayoutProperty('province-fill','visibility')||'visible','visible');
+assert.equal(slow.getLayoutProperty('province-fill-motion','visibility'),'none');
+assert.equal(frames.at(-1).style.display,'none','Release the captured map after bounded fallback finishes');
+console.log('Motion renderer: seamless loading/refinement, bounded fallback, selection/quiz subsets, theme/filter/state preservation, interrupted refinement, source precision and Jilin fills passed.');

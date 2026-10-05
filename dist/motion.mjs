@@ -13,8 +13,35 @@ export function setFeatureState(map,target,state){
 }
 
 export function createMotionRenderer(map){
- let sources,active=false,restoring=false,restoreListener;
+ let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise;
+ let generation=0;
  const urls=new Map(),layers=new Map(),dynamicKeys=new Map();
+ const frame=document.createElement('canvas');
+ frame.className='map-handoff-frame';frame.setAttribute('aria-hidden','true');
+ frame.style.cssText='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;display:none';
+ map.getCanvas().after(frame);
+ const context=frame.getContext('2d');
+ function holdFrame(){
+  if(frame.style.display==='block')return Promise.resolve(true);
+  if(capturePromise)return capturePromise;
+  capturePromise=new Promise(resolve=>{
+   const timer=setTimeout(()=>finish(false),400);
+   const finish=value=>{clearTimeout(timer);map.off('render',captureListener);captureListener=undefined;capturePromise=undefined;resolve(value);};
+   captureListener=()=>{
+    try{
+     // Copy during render, before WebGL discards its drawing buffer.
+     const canvas=map.getCanvas();frame.width=canvas.width;frame.height=canvas.height;
+     context.drawImage(canvas,0,0);frame.style.display='block';finish(true);
+    }catch{finish(false);}
+   };
+   map.on('render',captureListener);map.triggerRepaint();
+  });
+  return capturePromise;
+ }
+ function releaseFrame(){frame.style.display='none';}
+ function restoreOriginals(){
+  for(const [original,{id,visibility}] of layers){setLayerVisible(map,original,visibility==='visible');setLayerVisible(map,id,false);}
+ }
  function sourceUrl(source,data){const url=URL.createObjectURL(data),previous=urls.get(source);urls.set(source,url);return{url,previous};}
  const ready=new Promise(resolve=>{
   const worker=new Worker(new URL('./motion-worker.mjs',import.meta.url),{type:'module'});
@@ -61,18 +88,28 @@ export function createMotionRenderer(map){
   if(added)for(const layer of style.layers)if(layers.has(layer.id))map.moveLayer(layer.id+suffix);
  }
  function clearOverlay(){
-  if(restoreListener)map.off('idle',restoreListener);restoreListener=undefined;
+  if(restoreListener)map.off('render',restoreListener);restoreListener=undefined;
+  clearTimeout(restoreTimer);restoreResolve?.();restoreResolve=undefined;
   for(const {id} of layers.values())setLayerVisible(map,id,false);
+  releaseFrame();
   restoring=false;
  }
  async function begin(){
   if(!sources)return false;
-  if(restoring)clearOverlay();
+  const token=++generation;
+  if(restoring){
+   await holdFrame();
+   if(restoreListener)map.off('render',restoreListener);restoreListener=undefined;
+   clearTimeout(restoreTimer);restoreResolve?.();restoreResolve=undefined;
+   restoreOriginals();restoring=false;
+  }
   install();active=true;
   for(const [original,entry] of layers){
    entry.visibility=map.getLayoutProperty(original,'visibility')||'visible';
-   setLayerVisible(map,entry.id,entry.visibility==='visible');setLayerVisible(map,original,false);
   }
+  if(!await holdFrame()){active=false;return false;}
+  if(token!==generation)return false;
+  for(const [original,entry] of layers){setLayerVisible(map,entry.id,entry.visibility==='visible');setLayerVisible(map,original,false);}
   // Wait for the small overlay, rather than unrelated satellite tile requests.
   // A failed source must never leave navigation locked or hide the real map.
   const visible=[...new Set([...layers.values()].filter(entry=>entry.visibility==='visible').map(entry=>map.getLayer(entry.id).source))];
@@ -82,16 +119,23 @@ export function createMotionRenderer(map){
    const check=()=>{if(visible.every(id=>map.isSourceLoaded(id)))finish(true);};
    map.on('render',check);timer=setTimeout(()=>finish(false),400);map.triggerRepaint();
   });
-  if(!loaded){end();clearOverlay();return false;}
+  if(!loaded){await end();return false;}
+  releaseFrame();
   return true;
  }
  function end(){
   if(!active)return;active=false;restoring=true;
-  for(const [original,{visibility}] of layers)setLayerVisible(map,original,visibility==='visible');
-  // Keep the overlay until detailed destination tiles are ready, avoiding a
-  // blank flash on slower devices. No camera animation runs during this work.
-  restoreListener=clearOverlay;map.once('idle',restoreListener);
-  if(map.loaded())clearOverlay();
+  const token=++generation;
+  const complete=new Promise(resolve=>{restoreResolve=resolve;});
+  holdFrame().then(()=>{
+   if(token!==generation)return;
+   restoreOriginals();
+   const visible=[...new Set([...layers].filter(([,entry])=>entry.visibility==='visible').map(([id])=>map.getLayer(id).source))];
+   restoreListener=()=>{if(visible.every(id=>map.isSourceLoaded(id)))clearOverlay();};
+   restoreTimer=setTimeout(clearOverlay,1000);
+   map.on('render',restoreListener);map.triggerRepaint();
+  });
+  return complete;
  }
  window.addEventListener('pagehide',event=>{if(!event.persisted)urls.forEach(url=>URL.revokeObjectURL(url));});
  async function prepare(){if(sources&&!active&&!restoring&&map.getStyle())install();}

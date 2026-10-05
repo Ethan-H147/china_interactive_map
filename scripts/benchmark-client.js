@@ -30,6 +30,42 @@ const regionButton=document.createElement('button');
 regionButton.textContent='Measure region selection';regionButton.id='benchmark-regions';
 regionButton.style.cssText='position:fixed;bottom:10px;left:330px;z-index:9999;background:white;border:1px solid #555;padding:8px';
 document.body.append(regionButton);
+const handoffButton=document.createElement('button');
+handoffButton.textContent='Check rendering handoffs';handoffButton.id='benchmark-handoffs';
+handoffButton.style.cssText='position:fixed;bottom:10px;left:520px;z-index:9999;background:white;border:1px solid #555;padding:8px';
+document.body.append(handoffButton);
+handoffButton.onclick=async()=>{
+ if(typeof allReady==='undefined'||!allReady||cameraBusy)return;
+ handoffButton.disabled=true;benchmarkResult.textContent='Checking handoffs…';
+ await benchmarkReady;await changeAtlas('china');await reset();
+ if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
+ const canvas=document.createElement('canvas');canvas.width=canvas.height=96;
+ const context=canvas.getContext('2d',{willReadFrequently:true}),frames=[];
+ let baseline;
+ const sample=()=>{
+  const held=document.querySelector('.map-handoff-frame');
+  context.drawImage(held?.style.display==='block'?held:map.getCanvas(),0,0,96,96);
+  const pixels=context.getImageData(0,0,96,96).data;
+  if(!baseline)baseline=pixels.slice();
+  let difference=0,painted=0;
+  for(let i=0;i<pixels.length;i+=4){
+   difference+=Math.abs(pixels[i]-baseline[i])+Math.abs(pixels[i+1]-baseline[i+1])+Math.abs(pixels[i+2]-baseline[i+2]);
+   if(Math.abs(pixels[i]-244)+Math.abs(pixels[i+1]-240)+Math.abs(pixels[i+2]-231)>12)painted++;
+  }
+  frames.push({difference:difference/(96*96*3),painted});
+ };
+ const nextFrame=()=>new Promise(resolve=>{map.once('render',resolve);map.triggerRepaint();});
+ map.on('render',sample);await nextFrame();
+ for(let i=0;i<3;i++){
+  await motionRenderer.begin();await nextFrame();await nextFrame();
+  await motionRenderer.end();
+  if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
+  await nextFrame();await nextFrame();
+ }
+ map.off('render',sample);
+ benchmarkResult.textContent=JSON.stringify({handoffFrames:frames.length,worstPixelDifference:Number(Math.max(...frames.map(f=>f.difference)).toFixed(3)),minimumPaintedRatio:Number((Math.min(...frames.map(f=>f.painted))/frames[0].painted).toFixed(3)),frames},null,2);
+ handoffButton.disabled=false;
+};
 regionButton.onclick=async()=>{
  if(!allReady||cameraBusy)return;
  regionButton.disabled=true;benchmarkResult.textContent='Measuring selections…';
