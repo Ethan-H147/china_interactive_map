@@ -12,6 +12,7 @@ import {clipShenzhenLand} from './shenzhen-coast.mjs';
 import {reconcileShenzhenHongKong} from './shenzhen-hongkong.mjs';
 import {refinePearlCoast,pearlCoastMethod} from './pearl-coast.mjs';
 import {refineEastCoast,eastCoastMethod} from './east-coast.mjs';
+import {reconcileTaiwan} from './taiwan-topology.mjs';
 
 const root=new URL('../dist/data/',import.meta.url);
 const read=name=>{const file=new URL(name,root);return JSON.parse(fs.existsSync(file)?fs.readFileSync(file):gunzipSync(fs.readFileSync(new URL(name+'.gz',root))));};
@@ -60,7 +61,7 @@ for(const code of [650000,350000]){
 // noise. Join coincident vertices within about 0.01 mm, without simplifying borders.
 const repaired=await mapshaper.applyCommands('-i input.json -clean gap-width=0 snap-interval=0.0000000001 overlap-rule=min-area -o output.json format=geojson',{'input.json':{type:'FeatureCollection',features:features.filter(f=>f.properties.provinceCode===650000)}});
 features=features.filter(f=>f.properties.provinceCode!==650000).concat(JSON.parse(repaired['output.json']).features);
-features.push(...taiwan.features);
+features.push(...await reconcileTaiwan(taiwan.features));
 // Insert government SAR data after the legacy gap repair, which must never
 // bridge their narrow coastal channels or remove small islands.
 features=features.filter(f=>![810000,820000].includes(f.properties.provinceCode));

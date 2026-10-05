@@ -15,7 +15,7 @@ assert.match(satelliteSource.attribution,/CC BY-NC-SA 4.0/);
 
 function element(value){return {value,hidden:true,checked:false,textContent:'',handlers:{},addEventListener(type,handler){this.handlers[type]=handler;},fire(type){this.handlers[type]();}};}
 const ui={input:element(),options:element(),opacity:element('100'),output:element(),status:element()};
-const layers=new Map([['province-fill',{}],['korea-portal-fill',{}]]),sources=new Map(),events={},insertions=[],appearances=[];
+const layers=new Map([['province-fill',{}],['korea-portal-fill',{paint:{'fill-opacity':1}}],['mongolia-portal-fill',{paint:{'fill-opacity':1}}]]),sources=new Map(),events={},insertions=[],appearances=[];
 let mode='china',quiz=false,timeout,cancelled=0;
 const map={getLayer:id=>layers.get(id),getSource:id=>sources.get(id),
   addSource(id,source){sources.set(id,source);},addLayer(layer,before){layers.set(layer.id,layer);insertions.push(before);},
@@ -25,15 +25,17 @@ const map={getLayer:id=>layers.get(id),getSource:id=>sources.get(id),
 const display=createSatelliteDisplay(map,{mode:()=>mode,quiz:()=>quiz,onVisible:value=>appearances.push(value),schedule:fn=>{timeout=fn;return 1;},cancel:()=>{cancelled++;timeout=null;}},ui);
 display.sync();assert.equal(sources.size,0,'No tile requests before opt-in');
 ui.input.checked=true;ui.input.fire('change');
-assert.equal(sources.size,1);assert.equal(insertions[0],'korea-portal-fill','Inactive Korea stays above imagery');
+assert.equal(sources.size,1);assert.equal(insertions[0],'province-fill','Imagery covers both context countries');
 assert.equal(layers.get(sourceId).layout.visibility,'visible');assert.equal(appearances.length,0,'Keep atlas fill while first tiles load');
 events.error({sourceId});assert.equal(ui.input.checked,true,'One tile error must not disable the entire layer');
 events.sourcedata({sourceId,sourceDataType:'metadata'});assert.equal(appearances.length,0);
 events.sourcedata({sourceId,sourceDataType:'content'});assert.equal(appearances.length,0,'Source metadata is not loaded imagery');
 events.sourcedata({sourceId,tile:{state:'errored'}});assert.equal(appearances.length,0);
 events.sourcedata({sourceId,tile:{state:'loaded'}});assert.deepEqual(appearances,[true]);assert.ok(cancelled);
+for(const id of ['korea-portal-fill','mongolia-portal-fill'])assert.equal(layers.get(id).paint['fill-opacity'],0,'No gray country patch over imagery');
 ui.opacity.value='40';ui.opacity.fire('input');assert.equal(layers.get(sourceId).paint['raster-opacity'],.4);assert.equal(ui.output.textContent,'40%');
 quiz=true;display.sync();assert.equal(layers.get(sourceId).layout.visibility,'none');assert.equal(appearances.at(-1),false);assert.equal(ui.input.checked,true);
+for(const id of ['korea-portal-fill','mongolia-portal-fill'])assert.equal(layers.get(id).paint['fill-opacity'],1,'Restore context when imagery is hidden');
 quiz=false;display.sync();assert.equal(appearances.at(-1),true);
 mode='korea';display.sync();assert.equal(appearances.at(-1),false);assert.match(ui.status.textContent,/China mode/);
 mode='china';display.sync();assert.equal(appearances.at(-1),true);

@@ -1,3 +1,4 @@
+// Taiwan precision reconciliation has source-preservation checks in validate-taiwan.mjs.
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {spawnSync} from 'node:child_process';
@@ -13,8 +14,8 @@ import {segmentDistanceIndex} from './shenzhen-hongkong.mjs';
 const baseline='3fca3014603c67d0921d63811345e87c1a823cb6',show=name=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',baseline+':dist/data/'+name],{maxBuffer:60e6});assert.equal(r.status,0);return r.stdout;};
 const m=JSON.parse(show('display-boundaries.parts.json')),before=JSON.parse(gunzipSync(Buffer.concat(m.parts.map(show)))),after=readData('display-boundaries.json');
 const changed=new Set([...eastChangedCodes,440400]);let untouched=0;
-for(const f of before.subdivisions.features){const next=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(next.properties,f.properties);if(!changed.has(f.properties.adcode)){assert.deepEqual(next,f,'Unrelated region changed '+f.properties.adcode);untouched++;}}
-for(const f of before.provinces.features)if(![310000,330000,440000].includes(f.properties.adcode))assert.deepEqual(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode),f,'Unrelated province changed');
+for(const f of before.subdivisions.features){const next=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(next.properties,f.properties);if(f.properties.provinceCode!==710000&&!changed.has(f.properties.adcode)){assert.deepEqual(next,f,'Unrelated region changed '+f.properties.adcode);untouched++;}}
+for(const f of before.provinces.features)if(![310000,330000,440000,710000].includes(f.properties.adcode))assert.deepEqual(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode),f,'Unrelated province changed');
 for(const name of ['city-districts.bin','korea-boundaries.bin','korea-outline.bin','sar-810000.json','sar-820000.json'])assert.deepEqual(fs.readFileSync('dist/data/'+name),show(name),'Protected geometry changed '+name);
 const source=readData('east-coast-source.json'),raw=gunzipSync(fs.readFileSync('dist/data/east-coast-source.bin')),osm=JSON.parse(raw),land=JSON.parse(gunzipSync(fs.readFileSync('dist/data/east-coast-land.bin'))),report=readData('east-coast-report.json');
 assert.equal(source.sha256,createHash('sha256').update(raw).digest('hex'));

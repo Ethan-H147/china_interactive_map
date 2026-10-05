@@ -1,3 +1,4 @@
+// Taiwan precision reconciliation has source-preservation checks in validate-taiwan.mjs.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
@@ -24,8 +25,8 @@ assert.equal(current.subdivisions.features.length,previous.subdivisions.features
 // Later Macau seams and four China–North Korea border divisions have separate
 // government-source and international topology checks.
 const subsequentlyRepaired=[820001,820002,820003,820004,820005,820006,820007,820008,210600,220500,220600,222400,230800,230900,440300,440100,440400,441300];
-for(const f of previous.subdivisions.features){const now=current.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert(now);assert.deepEqual(now.properties,f.properties);if(![310151,320600,...subsequentlyRepaired].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.equal(edges(now.geometry),edges(f.geometry),'Unrelated subdivision changed: '+f.properties.adcode);unchanged++;}}
-assert.equal(unchanged,477);
+for(const f of previous.subdivisions.features){const now=current.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert(now);assert.deepEqual(now.properties,f.properties);if(f.properties.provinceCode!==710000&&![310151,320600,...subsequentlyRepaired].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.equal(edges(now.geometry),edges(f.geometry),'Unrelated subdivision changed: '+f.properties.adcode);unchanged++;}}
+assert.equal(unchanged,455);
 const selected=current.subdivisions.features.filter(f=>[310151,320600].includes(f.properties.adcode));
 const vertexSet=new Set(selected.flatMap(f=>polygons(f.geometry).flatMap(p=>p.flatMap(r=>r.map(key)))));
 assert.equal(island.properties.osmRelation,'3292765');

@@ -1,3 +1,4 @@
+// Taiwan precision reconciliation has source-preservation checks in validate-taiwan.mjs.
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {spawnSync} from 'node:child_process';
@@ -13,8 +14,8 @@ import {polygons} from './international-topology.mjs';
 import {segmentDistanceIndex} from './shenzhen-hongkong.mjs';
 const baseline='84fc6a774627bbf164c79df37ece8dddd9958553',show=name=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',baseline+':dist/data/'+name],{maxBuffer:60e6});assert.equal(r.status,0);return r.stdout;};
 const manifest=JSON.parse(show('display-boundaries.parts.json')),before=JSON.parse(gunzipSync(Buffer.concat(manifest.parts.map(show)))),after=readData('display-boundaries.json'),source=nanhuiSource();
-let unchanged=0;for(const f of before.subdivisions.features){const n=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(f.properties.adcode!==310115){assert.deepEqual(n,f);unchanged++;}}
-for(const f of before.provinces.features)if(f.properties.adcode!==310000)assert.deepEqual(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode),f);
+let unchanged=0;for(const f of before.subdivisions.features){const n=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(f.properties.provinceCode!==710000&&f.properties.adcode!==310115){assert.deepEqual(n,f);unchanged++;}}
+for(const f of before.provinces.features)if(![310000,710000].includes(f.properties.adcode))assert.deepEqual(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode),f);
 const city=after.subdivisions.features.find(f=>f.properties.adcode===310115),old=before.subdivisions.features.find(f=>f.properties.adcode===310115),total=fc=>fc.features.reduce((s,f)=>s+(f.geometry?area(f.geometry):0),0);
 assert(area(city.geometry)<area(old.geometry),'Mudflat correction must remove area');
 const removedKm2=(area(old.geometry)-area(city.geometry))*111.32**2*Math.cos(30.96*Math.PI/180);
@@ -40,4 +41,4 @@ const priorWater=JSON.parse(gunzipSync(show('major-water.bin'))),water=JSON.pars
 assert.equal(readData('nanhui-shore.json').sha256,createHash('sha256').update(gunzipSync(fs.readFileSync('dist/data/nanhui-shore-source.bin'))).digest('hex'));
 const repeated=await refineNanhuiShore(after.subdivisions.features),edgeHash=g=>createHash('sha256').update(polygons(g).flat().flatMap(r=>r.slice(1).map((b,i)=>[JSON.stringify(r[i]),JSON.stringify(b)].sort().join('|'))).sort().join('\n')).digest('hex');
 assert.equal(edgeHash(repeated.features.find(f=>f.properties.adcode===310115).geometry),edgeHash(city.geometry),'Repeated build changes coastline');
-console.log(JSON.stringify({unchangedRegions:unchanged,unchangedProvinces:33,shorelineChecks,tidalFlatsExcluded:true,raisedHarborRetained:true,tidalDikesExcluded:true,dishuiUnchanged:true}));
+console.log(JSON.stringify({unchangedRegions:unchanged,unchangedProvinces:32,shorelineChecks,tidalFlatsExcluded:true,raisedHarborRetained:true,tidalDikesExcluded:true,dishuiUnchanged:true}));

@@ -1,3 +1,4 @@
+// Taiwan precision reconciliation has source-preservation checks in validate-taiwan.mjs.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
@@ -17,8 +18,8 @@ const preview=process.argv.includes('--preview')?JSON.parse(fs.readFileSync('art
 const after=preview?.data||readData('display-boundaries.json'),districts=preview?.districts||JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin'))),report=preview?.report||readData('pearl-coast-report.json'),oldDistricts=JSON.parse(gunzipSync(show('city-districts.bin')));
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 let unrelated=0;
-for(const f of before.subdivisions.features){const n=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(!coastCities.has(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.equal(hash(n),hash(f),'Unrelated city changed '+f.properties.adcode);unrelated++;}}
-for(const f of before.provinces.features)if(![440000,310000,330000].includes(f.properties.adcode))assert.equal(hash(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated province changed');
+for(const f of before.subdivisions.features){const n=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(f.properties.provinceCode!==710000&&!coastCities.has(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.equal(hash(n),hash(f),'Unrelated city changed '+f.properties.adcode);unrelated++;}}
+for(const f of before.provinces.features)if(![440000,310000,330000,710000].includes(f.properties.adcode))assert.equal(hash(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated province changed');
 for(const f of oldDistricts.regions.features){const n=districts.regions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(f.properties.parentCity!==440100)assert.equal(hash(n),hash(f),'Unrelated district changed');}
 for(const file of ['sar-810000.json','sar-820000.json','shenzhen-hongkong-border.json'])assert.deepEqual(fs.readFileSync('dist/data/'+file),show(file),'Protected dataset changed '+file);
 assert.deepEqual(JSON.parse(gunzipSync(fs.readFileSync('dist/data/major-water.bin'))).features.filter(f=>f.properties.sourceId!=='osm-relation-5606982'),JSON.parse(gunzipSync(show('major-water.bin'))).features,'Previously mapped waterways stay exact');

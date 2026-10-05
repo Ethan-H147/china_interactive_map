@@ -279,6 +279,8 @@ async function boundaryData(){
 }
 // Source geometry retains full detail; rendering tiles omit subpixel detail.
 const sourceOptions={type:'geojson',tolerance:.375,maxzoom:18,buffer:128};
+// Simplifying neighboring fill triangles independently opens long diagonal gaps.
+const fillSourceOptions={tolerance:0};
 function addSource(id,data,options={}){map.addSource(id,{...sourceOptions,...options,data,promoteId:'adcode'});}
 const featureCollection=features=>({type:'FeatureCollection',features});
 const feature=geometry=>({type:'Feature',properties:{},geometry});
@@ -324,7 +326,7 @@ async function init(){try{
   const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
   const otherFeatures=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
   const fillFeatures=features=>featureCollection(features.flatMap(f=>fillFragments[f.properties.adcode]?fillFragments[f.properties.adcode].coordinates.map(coordinates=>({type:'Feature',properties:{adcode:f.properties.adcode},geometry:{type:'Polygon',coordinates}})):f));
-  addSource('provinces',fillFeatures(provinceFeatures));addSource('prefectures',fillFeatures(prefFeatures));addSource('others',featureCollection(otherFeatures));
+  addSource('provinces',fillFeatures(provinceFeatures),fillSourceOptions);addSource('prefectures',fillFeatures(prefFeatures),fillSourceOptions);addSource('others',featureCollection(otherFeatures));
   // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
   // The stored geometry and selectable polygons retain full detail.
   for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',window.AtlasLines.lineData(geometry),window.AtlasLines.lineSourceOptions);

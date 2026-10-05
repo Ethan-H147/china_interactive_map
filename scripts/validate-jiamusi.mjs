@@ -1,3 +1,4 @@
+// Taiwan precision reconciliation has source-preservation checks in validate-taiwan.mjs.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
@@ -19,10 +20,10 @@ const contains=(g,p)=>polygons(g).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>in
 const area=g=>polygons(g).reduce((s,p)=>s+p.reduce((a,r,i)=>a+(i?-1:1)*Math.abs(r.slice(1).reduce((t,b,j)=>t+(r[j][0]-r[0][0])*(b[1]-r[0][1])-(b[0]-r[0][0])*(r[j][1]-r[0][1]),0)/2),0),0);
 const city=(data,code)=>data.subdivisions.features.find(f=>f.properties.adcode===code);
 // Guangdong's later Shenzhen physical coast update is checked separately.
-for(const f of before.provinces.features)if(![440000,310000,330000].includes(f.properties.adcode))assert.deepEqual(after.provinces.features.find(c=>c.properties.adcode===f.properties.adcode),f,'Unrelated provincial coverage stays exact');
+for(const f of before.provinces.features)if(![440000,310000,330000,710000].includes(f.properties.adcode))assert.deepEqual(after.provinces.features.find(c=>c.properties.adcode===f.properties.adcode),f,'Unrelated provincial coverage stays exact');
 let unchanged=0;
-for(const f of before.subdivisions.features){const now=city(after,f.properties.adcode);assert.deepEqual(now.properties,f.properties);if(![230800,230900,440300,440100,440400,441300].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.deepEqual(now.geometry,f.geometry);unchanged++;}}
-assert.equal(unchanged,490);
+for(const f of before.subdivisions.features){const now=city(after,f.properties.adcode);assert.deepEqual(now.properties,f.properties);if(f.properties.provinceCode!==710000&&![230800,230900,440300,440100,440400,441300].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.deepEqual(now.geometry,f.geometry);unchanged++;}}
+assert.equal(unchanged,468);
 assert.deepEqual(correctJiamusi(after.subdivisions.features),after.subdivisions.features,'Correction is idempotent');
 assert.equal(polygons(city(after,230800).geometry).length,1,'Jiamusi has no detached part here');
 assert.equal(polygons(city(after,230900).geometry).length,1,'The part joins Qitaihe');

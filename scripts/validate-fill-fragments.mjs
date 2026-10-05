@@ -9,7 +9,8 @@ const data=readData('display-boundaries.json');
 const fragments=JSON.parse(gunzipSync(fs.readFileSync('dist/data/fill-fragments.bin')));
 const originals=[...data.provinces.features,...data.subdivisions.features].filter(f=>fragments[f.properties.adcode]);
 const renderer=fs.readFileSync('dist/app.js','utf8');
-const tolerance=Number(renderer.match(/const sourceOptions=\{type:'geojson',tolerance:([.\d]+)/)[1]);
+const tolerance=Number(renderer.match(/const fillSourceOptions=\{tolerance:([.\d]+)/)[1]);
+assert.equal(tolerance,0,'Fill triangles must not be simplified independently');
 const options={extent:8192,buffer:2048,maxZoom:18,tolerance:tolerance*16};
 function tileDeviation(tile){
  let worst=0,absolute=0;

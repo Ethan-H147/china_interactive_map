@@ -1,3 +1,4 @@
+// Taiwan precision reconciliation has source-preservation checks in validate-taiwan.mjs.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {spawnSync} from 'node:child_process';
@@ -21,8 +22,8 @@ const rings=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
 const coordinates=g=>rings(g).flat(2);
 const inRing=([x,y],r)=>{let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;};
 const contains=(g,p)=>rings(g).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h)));
-for(const f of before.subdivisions.features){const current=after.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440300,440100,440400,441300].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode))assert.deepEqual(current.geometry,f.geometry,'Unrelated region changed '+f.properties.adcode);}
-for(const f of before.provinces.features){const current=after.provinces.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440000,310000,330000].includes(f.properties.adcode))assert.deepEqual(current.geometry,f.geometry,'Unrelated province changed '+f.properties.adcode);}
+for(const f of before.subdivisions.features){const current=after.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(f.properties.provinceCode!==710000&&![440300,440100,440400,441300].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode))assert.deepEqual(current.geometry,f.geometry,'Unrelated region changed '+f.properties.adcode);}
+for(const f of before.provinces.features){const current=after.provinces.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440000,310000,330000,710000].includes(f.properties.adcode))assert.deepEqual(current.geometry,f.geometry,'Unrelated province changed '+f.properties.adcode);}
 for(const f of oldDistricts.regions.features){const current=districts.regions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440300,440100].includes(f.properties.parentCity))assert.deepEqual(current.geometry,f.geometry,'Unrelated district changed '+f.properties.adcode);}
 const oldCity=before.subdivisions.features.find(f=>f.properties.adcode===440300),city=after.subdivisions.features.find(f=>f.properties.adcode===440300);
 assert(coordinates(city.geometry).length>10000,'Detailed shoreline points missing');

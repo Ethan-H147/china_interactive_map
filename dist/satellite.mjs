@@ -26,7 +26,11 @@ export function createSatelliteDisplay(map,host,ui={
   let enabled=false,ready=false,hasTile=false,lastVisible=false,lastOpacity=1,lastLayout,timer;
   const schedule=host.schedule||setTimeout,cancel=host.cancel||clearTimeout;
   function message(text){ui.status.textContent=text;ui.status.hidden=!text;}
-  function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);if(visible!==lastVisible||(visible&&opacity!==lastOpacity)){lastVisible=visible;lastOpacity=opacity;host.onVisible(visible,opacity);}}
+  function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);if(visible!==lastVisible||(visible&&opacity!==lastOpacity)){
+    lastVisible=visible;lastOpacity=opacity;
+    for(const id of ['korea-portal-fill','mongolia-portal-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?0:1);
+    host.onVisible(visible,opacity);
+  }}
   function stopTimer(){if(timer!==undefined){cancel(timer);timer=undefined;}}
   function fail(){
     stopTimer();enabled=false;ui.input.checked=false;ui.options.hidden=true;
@@ -40,8 +44,8 @@ export function createSatelliteDisplay(map,host,ui={
   function ensureLayer(){
     if(ready)return;
     map.addSource(sourceId,satelliteSource);
-    // Keep the inactive Korean Peninsula gray above the imagery.
-    map.addLayer({id:sourceId,type:'raster',source:sourceId,layout:{visibility:'none'},paint:{'raster-opacity':imageryOpacity(ui.opacity.value),'raster-fade-duration':200}},map.getLayer('korea-portal-fill')?'korea-portal-fill':'province-fill');
+    // Draw imagery above both country context fills and below China overlays.
+    map.addLayer({id:sourceId,type:'raster',source:sourceId,layout:{visibility:'none'},paint:{'raster-opacity':imageryOpacity(ui.opacity.value),'raster-fade-duration':200}},'province-fill');
     ready=true;
   }
   function sync(){

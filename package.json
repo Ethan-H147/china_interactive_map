@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build-boundaries.mjs && node scripts/reconcile-international.mjs && npm run build:fills",
-    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore && npm run test:water && npm run test:names-quiz && npm run test:satellite && npm run test:shenzhen && npm run test:pearl-coast && npm run test:province-population && npm run test:mongolia && npm run test:fills",
+    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && npm run test:taiwan && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore && npm run test:water && npm run test:names-quiz && npm run test:satellite && npm run test:shenzhen && npm run test:pearl-coast && npm run test:province-population && npm run test:mongolia && npm run test:fills",
     "start": "node scripts/serve.mjs",
     "build:korea": "node scripts/fetch-korea.mjs && node scripts/build-korea-coast.mjs && node scripts/build-korea.mjs && node scripts/reconcile-international.mjs && npm run build:fills",
     "test:korea": "node --check dist/korea.js && node scripts/validate-korea.mjs && node scripts/validate-korea-rendering.mjs && node scripts/validate-international.mjs",
@@ -34,6 +34,7 @@
     "test:province-population": "node scripts/validate-province-population.mjs",
     "test:mongolia": "node --check dist/mongolia.mjs && node scripts/validate-mongolia.mjs && node scripts/validate-mongolia-rendering.mjs",
     "build:fills": "node scripts/prepare-fill-fragments.mjs",
-    "test:fills": "node scripts/validate-fill-fragments.mjs"
+    "test:fills": "node scripts/validate-fill-fragments.mjs",
+    "test:taiwan": "node scripts/validate-taiwan.mjs"
   }
 }
