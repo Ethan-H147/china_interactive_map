@@ -4,3 +4,5 @@
 :root[data-starting] .workspace>aside:not(.startup-sidebar){display:none!important}
 :root[data-starting] .startup-sidebar{display:flex}
 :root[data-starting] .map-top,:root[data-starting] .map-actions,:root[data-starting] .map-bottom,:root[data-starting] .north{visibility:hidden}
+
+.view-preferences{border-top:1px solid var(--line);margin-top:20px;padding-top:18px}.view-preferences label{display:block;font-size:13px;color:var(--muted)}.view-preferences select{margin:8px 0 14px;width:100%}.view-preferences input{width:100%}.selected-label{font-weight:600;z-index:2}.province-label,.korea-marker{font-family:Arial,sans-serif!important;font-size:16px!important;line-height:21px!important}.province-label small,.korea-marker small{font-family:Arial,sans-serif!important;font-size:14px!important;line-height:21px!important}

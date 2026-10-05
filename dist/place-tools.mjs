@@ -24,7 +24,7 @@ export function createPlaceTools(host){
     $('place-action-status').textContent=saved?(had?'Removed from saved places.':'Saved in this browser.'):'Browser storage is unavailable. This list will last until you close the page.';
   };
   $('copy-place').onclick=async()=>{
-    if(!selected)return;const url=new URL(location.href);url.hash='china/place='+encodeURIComponent(selected);
+    if(!selected)return;const url=host.shareUrl?.()||new URL(location.href);if(!host.shareUrl)url.hash='china/place='+encodeURIComponent(selected);
     try{await navigator.clipboard.writeText(url.href);$('place-action-status').textContent='Link copied.';}
     catch{$('place-share-link').hidden=false;$('place-share-link').value=url.href;$('place-share-link').select();$('place-action-status').textContent='Copy this link to share the place.';}
     $('place-action-status').hidden=false;

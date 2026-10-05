@@ -2,7 +2,7 @@ import {setLayerVisible} from './adaptive-lines.mjs';
 
 const suffix='-motion';
 export function queryRegions(map,point,{layers,...options}){
- const ids=layers.flatMap(id=>map.getLayer(id+suffix)?[id,id+suffix]:[id]);
+ const ids=layers.filter(id=>map.getLayer(id)).flatMap(id=>map.getLayer(id+suffix)?[id,id+suffix]:[id]);
  return map.queryRenderedFeatures(point,{...options,layers:ids}).map(feature=>feature.layer.id.endsWith(suffix)?{...feature,layer:{...feature.layer,id:feature.layer.id.slice(0,-suffix.length)}}:feature);
 }
 export function setFeatureState(map,target,state){
@@ -12,7 +12,7 @@ export function setFeatureState(map,target,state){
  if(fragment&&map.getSource(fragment))setFeatureState(map,{...target,source:fragment},state);
 }
 
-export function createMotionRenderer(map){
+export function createMotionRenderer(map,initialCountry='china'){
  let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise;
  let generation=0;
  const urls=new Map(),layers=new Map(),dynamicKeys=new Map();
@@ -43,11 +43,17 @@ export function createMotionRenderer(map){
   for(const [original,{id,visibility}] of layers){setLayerVisible(map,original,visibility==='visible');setLayerVisible(map,id,false);}
  }
  function sourceUrl(source,data){const url=URL.createObjectURL(data),previous=urls.get(source);urls.set(source,url);return{url,previous};}
- const ready=new Promise(resolve=>{
-  const worker=new Worker(new URL('./motion-worker.mjs',import.meta.url),{type:'module'});
-  worker.onmessage=event=>{worker.terminate();sources=event.data.sources;resolve(!!sources);};
-  worker.onerror=()=>{worker.terminate();resolve(false);};
- });
+ const countryLoads=new Map();
+ function loadCountry(country){
+  if(countryLoads.has(country))return countryLoads.get(country);
+  const promise=new Promise(resolve=>{
+   const url=new URL('./motion-worker.mjs',import.meta.url);url.searchParams.set('country',country);
+   const worker=new Worker(url,{type:'module'});
+   worker.onmessage=event=>{worker.terminate();if(event.data.sources)sources={...sources,...event.data.sources};resolve(!!event.data.sources);};
+   worker.onerror=()=>{worker.terminate();resolve(false);};
+  });countryLoads.set(country,promise);return promise;
+ }
+ const ready=loadCountry(initialCountry);
  function install(){
   const style=map.getStyle();
   const updatedSources=new Set();let added=false;
@@ -95,6 +101,7 @@ export function createMotionRenderer(map){
   restoring=false;
  }
  async function begin(){
+  if(active&&!restoring)return true;
   if(!sources)return false;
   const token=++generation;
   if(restoring){
@@ -140,5 +147,5 @@ export function createMotionRenderer(map){
  window.addEventListener('pagehide',event=>{if(!event.persisted)urls.forEach(url=>URL.revokeObjectURL(url));});
  async function prepare(){if(sources&&!active&&!restoring&&map.getStyle())install();}
  ready.then(prepare).catch(()=>{});
- return{ready,prepare,begin,end};
+ return{ready,prepare,begin,end,loadCountry};
 }

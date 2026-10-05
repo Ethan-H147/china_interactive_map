@@ -3,13 +3,14 @@
 (()=>{
  const countries={china:{en:'China',local:'中国',lang:'zh',background:'#f4f0e7'},korea:{en:'Korea',local:'한반도',lang:'ko',background:'#edf1f6'},mongolia:{en:'Mongolia',local:'Монгол',lang:'mn-Cyrl',background:'#eaf1f5'}};
  const storageKey='boundary-atlas-country-v1';
- const fromHash=hash=>/^#(china|korea|mongolia)(?:\/place=.*)?$/i.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
+ const fromHash=hash=>/^#(china|korea|mongolia)(?:\/(?:place|view)=.*)?$/i.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
  let saved;try{saved=localStorage.getItem(storageKey);}catch{}
  const initial=fromHash(location.hash)||(countries[saved]?saved:'china');
  let current=initial;
  const root=document.documentElement;root.dataset.atlas=initial;root.dataset.starting='true';
  function persist(country){try{localStorage.setItem(storageKey,country);}catch{}}
  function setUrl(country,preservePlace=true){
+  if(preservePlace&&location.hash.startsWith('#'+country+'/view='))return;
   const place=country==='china'&&preservePlace?(/^#(?:china\/)?place=(.*)$/.exec(location.hash)?.[1]??null):null;
   history.replaceState(null,'',location.pathname+location.search+'#'+country+(place!==null?'/place='+place:''));
  }
