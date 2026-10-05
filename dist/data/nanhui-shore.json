@@ -5,6 +5,19 @@
   "sha256": "3011702e2330d3de823acea3e76d561f8df507fd69573174a72679e5477d30ba",
   "landwardEdges": [
     {
+      "id": 1107703029,
+      "start": 1,
+      "end": 3,
+      "reverse": true,
+      "version": 1
+    },
+    {
+      "id": 1107703027,
+      "start": 1,
+      "end": 5,
+      "version": 1
+    },
+    {
       "id": 985635390,
       "start": 5,
       "end": 9,
@@ -35,8 +48,14 @@
     "id": 842632375,
     "version": 4
   },
+  "northCoastWay": {
+    "id": 662581919,
+    "version": 5,
+    "endIndex": 257
+  },
   "structureWays": [
-    826453672
+    826453672,
+    829094532
   ],
   "excludedTidalDikes": [
     826365004,
@@ -50,6 +69,42 @@
   "imagery": "EOxCloudless Sentinel-2 2025, same alignment as the satellite layer",
   "processing": "Nanhui mainland display follows the landward edge of the mapped coastal wetlands along the seawall. Exposed tidal flats and tidal training dikes are excluded from the land fill. The raised harbor access retains its mapped footprint. Only Pudong display geometry changes; administrative inland boundaries and Dishui Lake remain unchanged.",
   "shoreline": [
+    [
+      121.9206044,
+      31.0938657
+    ],
+    [
+      121.891055,
+      31.075288
+    ],
+    [
+      121.8921819,
+      31.0745286
+    ],
+    [
+      121.9132981,
+      31.0414583
+    ],
+    [
+      121.9136414,
+      31.0410355
+    ],
+    [
+      121.9337258,
+      31.009684
+    ],
+    [
+      121.9337258,
+      31.0086725
+    ],
+    [
+      121.933082,
+      31.0074403
+    ],
+    [
+      121.9319019,
+      31.0067047
+    ],
     [
       121.9340891,
       31.0031677

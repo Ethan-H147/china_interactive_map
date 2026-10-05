@@ -18,14 +18,15 @@ for(const f of before.provinces.features)if(f.properties.adcode!==310000)assert.
 const city=after.subdivisions.features.find(f=>f.properties.adcode===310115),old=before.subdivisions.features.find(f=>f.properties.adcode===310115),total=fc=>fc.features.reduce((s,f)=>s+(f.geometry?area(f.geometry):0),0);
 assert(area(city.geometry)<area(old.geometry),'Mudflat correction must remove area');
 const removedKm2=(area(old.geometry)-area(city.geometry))*111.32**2*Math.cos(30.96*Math.PI/180);
-assert(removedKm2>35&&removedKm2<50,'Unexpected reviewed tidal-flat extent');
+console.log({removedKm2});
+assert(removedKm2>74&&removedKm2<77,'Unexpected reviewed tidal-flat extent');
 assert(total(await run('-i new.json -erase old.json',{'new.json':city,'old.json':old}))<1e-11,'No dry land invented outside the previous extent');
 const removed=await run('-i old.json -erase new.json',{'old.json':old,'new.json':city});
 assert(total(await run('-i removed.json -erase reviewed.json',{'removed.json':removed,'reviewed.json':source.cut}))<1e-11,'Change outside reviewed stretch');
-for(const p of [[121.980,30.943],[121.970,30.974],[121.963,30.993],[121.983,30.928]])assert(!contains(city,p),'Exposed tidal flat still filled '+p);
-for(const p of [[121.940,30.972],[121.955,30.942],[121.968,30.921],[121.955,30.906]])assert(contains(city,p),'Permanent reclaimed land removed '+p);
+for(const p of [[121.940,31.025],[121.932,31.045],[121.918,31.068],[121.980,30.943],[121.970,30.974],[121.963,30.993],[121.983,30.928]])assert(!contains(city,p),'Exposed tidal flat still filled '+p);
+for(const p of [[121.915,31.025],[121.900,31.060],[121.940,30.972],[121.955,30.942],[121.968,30.921],[121.955,30.906]])assert(contains(city,p),'Permanent reclaimed land removed '+p);
 const distance=segmentDistanceIndex(polygons(city.geometry).flat());let shorelineChecks=0;
-for(let i=1;i<source.shore.length;i++){const a=source.shore[i-1],b=source.shore[i];for(const t of [.25,.5,.75]){const p=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];if(!source.structures.features.some(f=>contains(f,p))){assert(distance(p)<.03,'Seawall edge missing '+p);shorelineChecks++;}}}
+for(let i=1;i<source.shore.length;i++){const a=source.shore[i-1],b=source.shore[i];for(const t of [.25,.5,.75]){const p=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];if(contains(old,p)&&!source.structures.features.some(f=>contains(f,p))){assert(distance(p)<.03,'Seawall edge missing '+p);shorelineChecks++;}}}
 const oldTop=topology({regions:before.subdivisions}),shared=mesh(oldTop,oldTop.objects.regions,(a,b)=>a!==b&&(a.properties.adcode===310115||b.properties.adcode===310115));
 for(const line of shared.coordinates)for(let i=1;i<line.length;i++){const a=line[i-1],b=line[i],p=[(a[0]+b[0])/2,(a[1]+b[1])/2];assert(distance(p)<.03,'Inland shared edge moved');}
 for(const structure of source.structures.features){const previous=await run('-i structure.json -clip old.json',{'structure.json':structure,'old.json':old}),missing=await run('-i structure.json -erase city.json',{'structure.json':previous,'city.json':city});assert(total(missing)<1e-11,'Mapped permanent breakwater removed');}

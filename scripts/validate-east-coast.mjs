@@ -23,8 +23,9 @@ const sum=fc=>fc.features.reduce((s,f)=>s+(f.geometry?area(f.geometry):0),0),old
 for(const code of eastChangedCodes){
  const city=after.subdivisions.features.find(f=>f.properties.adcode===code),old=before.subdivisions.features.find(f=>f.properties.adcode===code),vertices=polygons(city.geometry).flat(2),keys=new Set(vertices.map(key));
  for(const r of polygons(city.geometry).flat()){assert.deepEqual(r[0],r.at(-1));assert(r.every(p=>p.every(Number.isFinite)));}
+ // Nanhui tidal-flat vertices are replaced by separately validated seawall edges.
  const retained=vertices.filter(p=>sourceKeys.has(key(p))).length;
- assert(retained>({310113:700,310115:2000,310116:300,310120:400,310151:2000,330900:50000}[code]),'Insufficient original shoreline detail '+code);
+ assert(retained>({310113:700,310115:1700,310116:300,310120:400,310151:2000,330900:50000}[code]),'Insufficient original shoreline detail '+code);
  const stats=report.regions.find(r=>r.adcode===code);
  for(const id of stats.wholeIslandIds)for(const p of polygons(land.features[id].geometry).flat(2))assert(keys.has(key(p)),'Whole island source vertex missing '+code+' '+id+' '+p);
  const neighbors=collection(after.subdivisions.features.filter(f=>f.properties.adcode!==code&&[310000,320000,330000].includes(f.properties.provinceCode))),priorNeighbors=collection(before.subdivisions.features.filter(f=>f.properties.adcode!==code&&[310000,320000,330000].includes(f.properties.provinceCode)));
