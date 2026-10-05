@@ -19,6 +19,9 @@ const topo=topology({regions:data});const edges=fc([{type:'Feature',properties:{
 const write=(name,value)=>fs.writeFileSync(out+name,gzipSync(JSON.stringify(value),{level:9}));
 write('japan-boundaries.bin',{first:data,boundaries:edges});
 const light=await simplify(data,500);write('japan-context.bin',light);
+const contextTopology=topology({regions:light});
+const contextEdges=lineData(mesh(contextTopology,contextTopology.objects.regions,(a,b)=>a===b));
+write('japan-context-edges.bin',contextEdges);
 write('japan-motion.bin',{'japan-first':light,'japan-first-edges':lineData(light),'japan-portal':light});
 fs.writeFileSync(out+'japan-source.json',JSON.stringify({retrieved:'2026-10-05',boundarySource:'https://github.com/piuccio/open-data-jp-prefectures-geojson',upstream:'https://nlftp.mlit.go.jp/ksj/',license:'MIT (processing); underlying MLIT data terms apply',processing:'Prefectures dissolved by source author; shared topology cleaned and simplified to 15 m for display. Separate 500 m camera-motion geometry.',prefectures:data.features.length},null,2));
 console.log('Japan boundaries:',data.features.length,fs.statSync(out+'japan-boundaries.bin').size);
