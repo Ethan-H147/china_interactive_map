@@ -9,9 +9,9 @@ assert.equal(provinceOpacity(true).at(-1),0);assert.equal(provinceOpacity(false)
 assert.equal(provinceOpacity(true,0).at(-1),1);assert.equal(provinceOpacity(true,.4).at(-1),.6);
 assert.equal(blendColor('#987343','#fff0bb',0),'#987343');assert.equal(blendColor('#987343','#fff0bb',1),'#fff0bb');
 assert.deepEqual(provinceOpacity(true).slice(1,5),[['boolean',['feature-state','inactive'],false],1,['boolean',['feature-state','quizActive'],false],1]);
-assert.equal(satelliteSource.maxzoom,14);assert.equal(satelliteSource.tileSize,256);
-assert.match(satelliteSource.tiles[0],/2025_3857\/default\/g\/\{z\}\/\{y\}\/\{x\}/);
-assert.match(satelliteSource.attribution,/CC BY-NC-SA 4.0/);
+assert.equal(satelliteSource.maxzoom,19);assert.equal(satelliteSource.tileSize,256);
+assert.equal(new URL(satelliteSource.tiles[0]).hostname,'ibasemaps-api.arcgis.com');
+assert.match(satelliteSource.attribution,/Esri/);
 
 function element(value){return {value,hidden:true,checked:false,textContent:'',handlers:{},addEventListener(type,handler){this.handlers[type]=handler;},fire(type){this.handlers[type]();}};}
 const ui={input:element(),options:element(),opacity:element('100'),output:element(),status:element()};
@@ -52,5 +52,5 @@ assert.equal(ui2.input.checked,false);assert.equal(sources.size,0);assert.match(
 ui2.input.checked=true;ui2.input.fire('change');assert.equal(sources.size,1);
 const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
 for(const id of ['satellite-layer','satellite-options','satellite-opacity','satellite-opacity-value','satellite-status'])assert.equal(html.split(`id="${id}"`).length,2);
-assert.match(html,/10 m resolution/);
+assert.match(html,/Esri World Imagery/);
 console.log('Satellite layer: lazy loading, source order, opacity, quiz/Korea transitions, tile recovery, and attribution passed.');

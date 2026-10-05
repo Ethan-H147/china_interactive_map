@@ -1,8 +1,8 @@
 export const sourceId='satellite-imagery';
 export const satelliteSource={
-  type:'raster',tileSize:256,minzoom:0,maxzoom:14,
-  tiles:['https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless-2025_3857/default/g/{z}/{y}/{x}.jpg'],
-  attribution:'<a href="https://cloudless.eox.at" target="_blank" rel="noopener">EOxCloudless</a> by <a href="https://eox.at" target="_blank" rel="noopener">EOX IT Services GmbH</a> (Contains modified Copernicus Sentinel data 2025) · <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>'
+  type:'raster',tileSize:256,minzoom:0,maxzoom:19,
+  tiles:['https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}?token=AAPTaRY-wBoaKL26yIgOLY0a4ZA..aIn4btMRn549Qv-dDUe7AoA-w3A_Cb71sZnvN25r3zbMDZBmTp7yqeC0COIM4hcmdMnXgoz5CkwOEavPR9veN0iuQvIzUjGRZWQTZg8Id2rin2bMBNji8nO9IQhigj6K911OkkItLEnz6tVY9mQ2s1nzz3JMIUcicr49obsHZ_U_wRBmIuk1Klxi6zboPMekzlV5o4aZCaxSU-Y6Atmiz-K09SxghVeXALUfuQXTOzVrKmB5joMDAT1_855Xcq7d'],
+  attribution:'Powered by <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a> · Esri, Vantor, Earthstar Geographics, and the GIS User Community'
 };
 export function satelliteVisible({enabled,mode,quiz}){return enabled&&mode==='china'&&!quiz;}
 export function imageryOpacity(value){const number=Number(value);return Number.isFinite(number)?Math.max(0,Math.min(100,number))/100:1;}
