@@ -1,5 +1,5 @@
 import {koreaPanel} from './korea-panel.mjs';
-import {adaptiveOpacity,lineSourceOptions,hiddenOpacity} from './adaptive-lines.mjs';
+import {adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-lines.mjs';
 export function createKoreaAtlas(map,host){
  const maplibre=window.maplibregl,home=[[124,33],[131.9,43.1]],countryNames={KP:'North Korea',KR:'South Korea'};
  const template=document.createElement('template');template.innerHTML=koreaPanel;
@@ -8,9 +8,8 @@ export function createKoreaAtlas(map,host){
  const $=id=>document.getElementById('k-'+id)||document.getElementById(id);
 let data,ready=false,active=false,loading=null,selected=null,hovered=null,mode=1,scope='',labels=[];
 const index=new Map();
-const layerOpacities=new Map();
 const sourceUrls=[];
-function showLayer(id,visible){const type=map.getLayer(id)?.type;if(!type)return;const property=type==='fill'?'fill-opacity':'line-opacity';if(!layerOpacities.has(id))layerOpacities.set(id,map.getPaintProperty(id,property));const value=layerOpacities.get(id);map.setPaintProperty(id,property,visible?value:hiddenOpacity(value));}
+function showLayer(id,visible){setLayerVisible(map,id,visible);}
 const nativeName=p=>p.ko+(p.hanja?' · '+p.hanja:'');
 const tip=document.createElement('div');tip.className='korea-tooltip';tip.hidden=true;$('map-shell').append(tip);
 const state=(f,value)=>{if(f){const source=f.properties.level===1?'korea-first':'korea-second';for(const id of [source,source+'-selection-edges'])map.setFeatureState({source:id,id:f.properties.id},value);}};
@@ -43,8 +42,20 @@ function select(f){
  for(const child of children){const b=document.createElement('button');b.type='button';b.dataset.nav='';const en=document.createElement('span'),ko=document.createElement('small');en.textContent=child.properties.en;ko.textContent=child.properties.ko;ko.lang='ko';b.append(en,ko);if(child.properties.hanja){const h=document.createElement('small');h.lang='ko-Hani';h.textContent=child.properties.hanja;b.append(h);}b.onclick=()=>select(child);$('region-list').append(b);}
  $('tab-explore').hidden=false;panel('explore');$('breadcrumb-region').hidden=false;$('breadcrumb-region').textContent=p.en;$('prefecture-layer').checked=true;syncLayers();setMode(2,true);sidebar.querySelector('.sidebar-scroll').scrollTop=0;fit(p.bounds,p.level===1?11:13);
 }
-function syncLayers(){if(!ready)return;for(const id of layerIds)showLayer(id,active);showLayer('korea-first-lines',active&&$('province-layer').checked);for(const id of ['korea-second-fill','korea-second-lines','korea-second-selected'])showLayer(id,active&&$('prefecture-layer').checked);updateLabels();}
+function syncLayers(){
+ if(!ready)return;
+ for(const id of layerIds){
+  const enabled=id==='korea-first-lines'?$('province-layer').checked:id.includes('-second-')?$('prefecture-layer').checked:true;
+  showLayer(id,active&&enabled);
+ }
+ updateLabels();
+}
+let labelFrame;
 function updateLabels(){
+ if(labelFrame!==undefined)return;
+ labelFrame=requestAnimationFrame(()=>{labelFrame=undefined;renderLabels();});
+}
+function renderLabels(){
  if(!active||!ready||host.isBusy())return;labels.forEach(m=>m.remove());labels=[];if(!$('label-layer').checked)return;
  const parent=selected&&(selected.properties.level===1?selected.properties.id:selected.properties.parent);
  const candidates=parent&&mode===2&&$('prefecture-layer').checked?data.second.features.filter(f=>f.properties.parent===parent):data.first.features;
@@ -67,18 +78,18 @@ async function ensureData(){
  const prepared=await new Promise((resolve,reject)=>{const worker=new Worker(new URL('./korea-worker.mjs',import.meta.url),{type:'module'});worker.onmessage=event=>{worker.terminate();event.data.error?reject(new Error(event.data.error)):resolve(event.data.result);};worker.onerror=event=>{worker.terminate();reject(new Error(event.message||'Korea preparation failed'));};});
  data=prepared.metadata;
  const sourceData=id=>{const url=URL.createObjectURL(prepared.sources[id]);sourceUrls.push(url);return url;};
- const options={type:'geojson',tolerance:0,maxzoom:18,buffer:128,promoteId:'id',attribution:'<a href="https://sgis.kostat.go.kr" target="_blank" rel="noopener">Statistics Korea SGIS</a> · <a href="https://github.com/vuski/admdongkor" target="_blank" rel="noopener">vuski/admdongkor</a>'};
+ const options={type:'geojson',tolerance:.375,maxzoom:18,buffer:128,promoteId:'id',attribution:'<a href="https://sgis.kostat.go.kr" target="_blank" rel="noopener">Statistics Korea SGIS</a> · <a href="https://github.com/vuski/admdongkor" target="_blank" rel="noopener">vuski/admdongkor</a>'};
  for(const level of ['first','second']){for(const f of data[level].features)index.set(f.properties.id,f);map.addSource('korea-'+level,{...options,data:sourceData('korea-'+level)});map.addSource('korea-'+level+'-selection-edges',{...options,...lineSourceOptions,data:sourceData('korea-'+level+'-selection-edges')});}
  for(const id of ['first','second','countries'])map.addSource('korea-'+id+'-edges',{...lineSourceOptions,data:sourceData('korea-'+id+'-edges')});
  for(const level of ['first','second']){map.addLayer({id:'korea-'+level+'-fill',type:'fill',layout:{visibility:'none'},source:'korea-'+level,paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],level==='first'?'#b9cfe5':'#235a91',['boolean',['feature-state','hover'],false],'#b4c9df',['match',['get','country'],'KP','#dce5ef','#e7edf5']],'fill-opacity':level==='first'?1:['case',['boolean',['feature-state','selected'],false],.45,['boolean',['feature-state','hover'],false],.4,.01],'fill-antialias':false}});}
  for(const level of ['second','first','countries'])map.addLayer({id:'korea-'+level+'-lines',type:'line',source:'korea-'+level+'-edges',paint:{'line-color':level==='second'?'#9aafc3':'#587694','line-width':['interpolate',['linear'],['zoom'],4,level==='second'?.4:.65,8,level==='second'?.65:level==='first'?1.15:1.25],'line-opacity':adaptiveOpacity(level==='second'?.8:1)},layout:{visibility:'none','line-join':'round','line-cap':'round'}});
  for(const level of ['first','second'])map.addLayer({id:'korea-'+level+'-selected',type:'line',layout:{visibility:'none','line-join':'round','line-cap':'round'},source:'korea-'+level+'-selection-edges',paint:{'line-color':'#b73945','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}});
 
- for(const id of layerIds){map.setLayoutProperty(id,'visibility','visible');showLayer(id,false);}
+ for(const id of layerIds)showLayer(id,false);
  listRegions();
  await new Promise((resolve,reject)=>{const sourceIds=Object.keys(prepared.sources);const done=()=>{if(sourceIds.every(id=>map.isSourceLoaded(id))){map.off('sourcedata',done);map.off('error',fail);resolve();}};const fail=event=>{if(sourceIds.includes(event.sourceId)){map.off('sourcedata',done);map.off('error',fail);reject(event.error);}};map.on('sourcedata',done);map.on('error',fail);done();});
  ready=true;controls();
- })().catch(error=>{for(const id of layerIds)if(map.getLayer(id))map.removeLayer(id);for(const id of ['korea-first','korea-second','korea-first-selection-edges','korea-second-selection-edges','korea-first-edges','korea-second-edges','korea-countries-edges'])if(map.getSource(id))map.removeSource(id);sourceUrls.splice(0).forEach(url=>URL.revokeObjectURL(url));layerOpacities.clear();index.clear();loading=null;throw error;});return loading;
+ })().catch(error=>{for(const id of layerIds)if(map.getLayer(id))map.removeLayer(id);for(const id of ['korea-first','korea-second','korea-first-selection-edges','korea-second-selection-edges','korea-first-edges','korea-second-edges','korea-countries-edges'])if(map.getSource(id))map.removeSource(id);sourceUrls.splice(0).forEach(url=>URL.revokeObjectURL(url));index.clear();loading=null;throw error;});return loading;
 }
 const layerIds=['korea-first-fill','korea-second-fill','korea-second-lines','korea-first-lines','korea-countries-lines','korea-first-selected','korea-second-selected'];
 function leave(){active=false;sidebar.hidden=true;labels.forEach(m=>m.remove());labels=[];clearHover();for(const id of layerIds)showLayer(id,false);}

@@ -29,6 +29,13 @@ export function adaptiveOpacity(base=1){
 }
 export const lineSourceOptions={type:'geojson',tolerance:.65,maxzoom:18,buffer:128};
 
+// Hidden layers skip drawing and tile requests. Keep paint bindings unchanged.
+export function setLayerVisible(map,id,visible){
+ if(!map.getLayer(id))return;
+ const value=visible?'visible':'none';
+ if((map.getLayoutProperty(id,'visibility')||'visible')!==value)map.setLayoutProperty(id,'visibility',value);
+}
+
 // Keep feature-state bindings alive while a country is hidden. Replacing a
 // data-driven opacity with a constant can invalidate cached paint bindings.
 export function hiddenOpacity(value){

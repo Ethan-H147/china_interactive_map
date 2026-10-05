@@ -8,7 +8,9 @@ import {readData} from './read-data.mjs';
 const data=readData('display-boundaries.json');
 const fragments=JSON.parse(gunzipSync(fs.readFileSync('dist/data/fill-fragments.bin')));
 const originals=[...data.provinces.features,...data.subdivisions.features].filter(f=>fragments[f.properties.adcode]);
-const options={extent:8192,buffer:2048,maxZoom:18,tolerance:0};
+const renderer=fs.readFileSync('dist/app.js','utf8');
+const tolerance=Number(renderer.match(/const sourceOptions=\{type:'geojson',tolerance:([.\d]+)/)[1]);
+const options={extent:8192,buffer:2048,maxZoom:18,tolerance:tolerance*16};
 function tileDeviation(tile){
  let worst=0,absolute=0;
  for(const f of tile?.features||[]){
@@ -25,7 +27,7 @@ function tileDeviation(tile){
 }
 // Reproduce the visible overdraw at the original problematic tile.
 const yanbian=originals.find(f=>f.properties.adcode===222400);
-assert(tileDeviation(new GeoJSONVT(yanbian,options).getTile(5,27,11)).relative>.01,'The regression fixture must reproduce the original triangle');
+assert(tileDeviation(new GeoJSONVT(yanbian,{...options,tolerance:0}).getTile(5,27,11)).relative>.01,'The regression fixture must reproduce the original triangle');
 let tiles=0,maxError=0;
 for(const f of originals){
  const geometry=fragments[f.properties.adcode],points=new Set(f.geometry.coordinates.flat(f.geometry.type==='Polygon'?1:2).map(p=>JSON.stringify(p)));

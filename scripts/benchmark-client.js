@@ -19,7 +19,7 @@ switchButton.onclick=async()=>{
  observer.observe({type:'longtask'});
  function frame(t){if(!tracking)return;if(previous)gaps.push(t-previous);previous=t;requestAnimationFrame(frame);}
  requestAnimationFrame(frame);
- for(const next of ['korea','china','korea','china']){
+ for(const next of ['korea','china','korea','china','mongolia','korea','mongolia','china']){
   const start=performance.now();await changeAtlas(next);
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   times.push({mode:next,ms:Math.round(performance.now()-start)});

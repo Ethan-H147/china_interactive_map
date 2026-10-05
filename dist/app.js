@@ -6,21 +6,14 @@ map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
 map.addControl(new maplibregl.AttributionControl({compact:false,customAttribution:'Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">© HK SAR Government</a> · <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao Government</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'}));
 const styleReady=new Promise(resolve=>map.once('load',resolve));
 const labels=[];
+let labelFrame;
 const sourceFor=r=>r.feature.properties.parentCity?'city-districts':r.feature.properties.level==='province'?'provinces':isPrefectureLevel(r.feature.properties)?'prefectures':'others';
 function setRegionState(region,state){if(region.feature.geometry){const source=sourceFor(region);for(const id of [source,source+'-selection-edges'])map.setFeatureState({source:id,id:region.feature.properties.adcode},state);}}
-function layerVisible(id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');}
-const atlasHiddenPaint=new Map();
-function atlasLayerVisible(id,visible){
-  const layer=map.getLayer(id);if(!layer)return;
-  const property=layer.type==='fill'?'fill-opacity':'line-opacity';
-  if(visible){if(atlasHiddenPaint.has(id)){map.setPaintProperty(id,property,atlasHiddenPaint.get(id));atlasHiddenPaint.delete(id);}}
-  else if(!atlasHiddenPaint.has(id)){const value=map.getPaintProperty(id,property);atlasHiddenPaint.set(id,value);map.setPaintProperty(id,property,window.AtlasLines.hiddenOpacity(value));}
-}
+function layerVisible(id,visible){window.AtlasLines.setLayerVisible(map,id,visible);}
 function syncLayers(){
   syncDistrictLayers();
   const ids=['prefecture-fill','prefecture-lines','prefecture-selection','other-fill','other-lines','other-selection','province-selection','province-lines'];
-  for(const id of ids)atlasLayerVisible(id,atlasMode==='china');
-  if(atlasMode!=='china')return;
+  if(atlasMode!=='china'){for(const id of ids)layerVisible(id,false);return;}
   if(quiz.active){for(const id of ['other-fill','other-lines','other-selection','province-selection'])layerVisible(id,false);for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','province-lines'])layerVisible(id,true);return;}
   const pref=$('prefecture-layer').checked,other=$('other-layer').checked,prov=$('province-layer').checked;
   for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection'])layerVisible(id,pref);
@@ -131,7 +124,7 @@ function navigateBounds(bounds,options={},animate=true){
     let timer;const finish=()=>{if(finishNavigation!==finish)return;map.off('moveend',finish);clearTimeout(timer);finishNavigation=null;unlockCamera();resolve(true);};
     finishNavigation=finish;map.once('moveend',finish);
     timer=setTimeout(()=>{map.stop();map.fitBounds(bounds,{...cameraOptions,duration:0});finish();},1800);
-    map.fitBounds(bounds,{...cameraOptions,duration:650});
+    map.fitBounds(bounds,{...cameraOptions,linear:true,duration:650});
   });
 }
 function fitHome(animate=false){return navigateBounds(homeBounds,{paddingTopLeft:[28,65],paddingBottomRight:[55,65]},animate);}
@@ -241,6 +234,10 @@ function bindRegion(feature,parentCode){
 }
 function addLabel(p,text,small){const xy=p.centroid||p.center;if(!xy)return;const div=document.createElement('div');div.className='province-label';div.textContent=text;if(small){const el=document.createElement('small');el.textContent=small;div.append(el);}labels.push(new maplibregl.Marker({element:div,anchor:'center'}).setLngLat(xy).addTo(map));}
 function updateLabels(){
+ if(labelFrame!==undefined)return;
+ labelFrame=requestAnimationFrame(()=>{labelFrame=undefined;renderLabels();});
+}
+function renderLabels(){
   capitalDisplay?.sync();
   waterDisplay?.sync();
   satelliteDisplay?.sync();
@@ -280,8 +277,8 @@ async function boundaryData(){
   const bytes=new Uint8Array(parts.reduce((sum,p)=>sum+p.length,0));let offset=0;for(const part of parts){bytes.set(part,offset);offset+=part.length;}
   return decodeJson(bytes.buffer);
 }
-// Polygon data remains exact. Line tiles omit subpixel detail while zoomed out.
-const sourceOptions={type:'geojson',tolerance:0,maxzoom:18,buffer:128};
+// Source geometry retains full detail; rendering tiles omit subpixel detail.
+const sourceOptions={type:'geojson',tolerance:.375,maxzoom:18,buffer:128};
 function addSource(id,data,options={}){map.addSource(id,{...sourceOptions,...options,data,promoteId:'adcode'});}
 const featureCollection=features=>({type:'FeatureCollection',features});
 const feature=geometry=>({type:'Feature',properties:{},geometry});
