@@ -13,6 +13,7 @@ try{
   window.AtlasMongolia=await import('./mongolia.mjs');
   window.AtlasTheme=await import('./atlas-theme.mjs');
   window.AtlasLines=await import('./adaptive-lines.mjs');
+  window.AtlasMotion=await import('./motion.mjs');
   window.AtlasCapitals=await import('./capitals.mjs');
   window.AtlasWater=await import('./water.mjs');
   window.AtlasSatellite=await import('./satellite.mjs');

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
+import {queryRegions} from '../dist/motion.mjs';
 import {readDataText} from './read-data.mjs';
 
 const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
@@ -26,7 +27,8 @@ function inRing([x,y],ring){
 }
 const parts=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 const inPolygon=(p,rings)=>inRing(p,rings[0])&&!rings.slice(1).some(r=>inRing(p,r));
-const context=vm.createContext({$:id=>elements.get(id),regionByCode,provinceTypes:{},quiz:{active:false},districtsVisible:()=>false,map:{
+const context=vm.createContext({window:{AtlasMotion:{queryRegions}},$:id=>elements.get(id),regionByCode,provinceTypes:{},quiz:{active:false},districtsVisible:()=>false,map:{
+  getLayer:()=>undefined,
   queryRenderedFeatures(point,{layers}){
     return regions.filter(f=>parts(f.geometry).some(poly=>inPolygon(point,poly))).map(f=>({
       properties:f.properties,layer:{id:f.properties.level==='province'?'province-fill':context.isPrefectureLevel(f.properties)?'prefecture-fill':'other-fill'}

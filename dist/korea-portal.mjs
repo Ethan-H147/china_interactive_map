@@ -9,6 +9,6 @@ export async function addKoreaPortal(map,host){
  map.addLayer({id:'korea-portal-line',type:'line',source:'korea-portal-edges',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#aaa9a2','line-width':.75,'line-opacity':adaptiveOpacity()}},'province-fill');
  const controller=createKoreaAtlas(map,host);
  const visit=()=>{if(!controller.active&&!host.isBusy())host.switchAtlas('korea');};
- map.on('click','korea-portal-fill',visit);
+ map.on('click',['korea-portal-fill','korea-portal-fill-motion'],visit);
  return Object.assign(controller,{context(active){map.setPaintProperty('korea-portal-line','line-opacity',active?0:adaptiveOpacity());}});
 }

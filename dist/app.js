@@ -3,20 +3,21 @@ const english={110000:'Beijing',120000:'Tianjin',130000:'Hebei',140000:'Shanxi',
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':'#f4f0e7'}}],transition:{duration:0,delay:0}},center:[105,36],zoom:3,minZoom:1,maxZoom:16,maxBounds:[[45,0],[165,68]],renderWorldCopies:false,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:{antialias:true},fadeDuration:0});
 map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
+const motionRenderer=window.AtlasMotion.createMotionRenderer(map);
 map.addControl(new maplibregl.AttributionControl({compact:false,customAttribution:'Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">© HK SAR Government</a> · <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao Government</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'}));
 const styleReady=new Promise(resolve=>map.once('load',resolve));
 const labels=[];
 let labelFrame;
 const sourceFor=r=>r.feature.properties.parentCity?'city-districts':r.feature.properties.level==='province'?'provinces':isPrefectureLevel(r.feature.properties)?'prefectures':'others';
-function setRegionState(region,state){if(region.feature.geometry){const source=sourceFor(region);for(const id of [source,source+'-selection-edges'])map.setFeatureState({source:id,id:region.feature.properties.adcode},state);}}
+function setRegionState(region,state){if(region.feature.geometry){const source=sourceFor(region);for(const id of [source,source+'-selection-edges'])window.AtlasMotion.setFeatureState(map,{source:id,id:region.feature.properties.adcode},state);}}
 function layerVisible(id,visible){window.AtlasLines.setLayerVisible(map,id,visible);}
 function syncLayers(){
   syncDistrictLayers();
-  const ids=['prefecture-fill','prefecture-lines','prefecture-selection','other-fill','other-lines','other-selection','province-selection','province-lines'];
+  const ids=['prefecture-fill','prefecture-fragment-fill','prefecture-lines','prefecture-selection','other-fill','other-lines','other-selection','province-selection','province-lines'];
   if(atlasMode!=='china'){for(const id of ids)layerVisible(id,false);return;}
-  if(quiz.active){for(const id of ['other-fill','other-lines','other-selection','province-selection'])layerVisible(id,false);for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection','province-lines'])layerVisible(id,true);return;}
+  if(quiz.active){for(const id of ['other-fill','other-lines','other-selection','province-selection'])layerVisible(id,false);for(const id of ['prefecture-fill','prefecture-fragment-fill','prefecture-lines','prefecture-selection','province-lines'])layerVisible(id,true);return;}
   const pref=$('prefecture-layer').checked,other=$('other-layer').checked,prov=$('province-layer').checked;
-  for(const id of ['prefecture-fill','prefecture-lines','prefecture-selection'])layerVisible(id,pref);
+  for(const id of ['prefecture-fill','prefecture-fragment-fill','prefecture-lines','prefecture-selection'])layerVisible(id,pref);
   for(const id of ['other-fill','other-lines','other-selection'])layerVisible(id,other);
   layerVisible('province-lines',prov);
   layerVisible('province-selection',true);
@@ -112,16 +113,17 @@ function lockCamera(){
   cameraBusy=true;$('map-shell').setAttribute('aria-busy','true');$('moving-indicator').hidden=false;controls();
   enabledInteractions=interactionNames.filter(name=>map[name]?.isEnabled());
   enabledInteractions.forEach(name=>map[name].disable());
+  labels.forEach(label=>label.remove());labels.length=0;currentAtlas()?.pauseLabels();
   clearHover();
 }
 function unlockCamera(){cameraBusy=false;enabledInteractions.forEach(name=>map[name].enable());enabledInteractions=[];$('map-shell').setAttribute('aria-busy','false');$('moving-indicator').hidden=true;controls();updateLabels();}
 function navigationOptions(options={}){const top=options.paddingTopLeft||options.padding||[28,65],bottom=options.paddingBottomRight||options.padding||[55,65];return{padding:{left:top[0],top:top[1],right:bottom[0],bottom:bottom[1]},maxZoom:options.maxZoom?options.maxZoom-1:11,retainPadding:false};}
-function navigateBounds(bounds,options={},animate=true){
+async function navigateBounds(bounds,options={},animate=true){
   if(cameraBusy)return Promise.resolve(false);
   map.stop();const cameraOptions=navigationOptions(options);
   if(!animate||reducedMotion.matches){map.fitBounds(bounds,{...cameraOptions,duration:0});updateLabels();return Promise.resolve(true);}
-  lockCamera();return new Promise(resolve=>{
-    let timer;const finish=()=>{if(finishNavigation!==finish)return;map.off('moveend',finish);clearTimeout(timer);finishNavigation=null;unlockCamera();resolve(true);};
+  lockCamera();try{await motionRenderer.begin();}catch(error){motionRenderer.end();console.warn('Motion preview:',error.message);}return new Promise(resolve=>{
+    let timer;const finish=()=>{if(finishNavigation!==finish)return;map.off('moveend',finish);clearTimeout(timer);finishNavigation=null;motionRenderer.end();unlockCamera();resolve(true);};
     finishNavigation=finish;map.once('moveend',finish);
     timer=setTimeout(()=>{map.stop();map.fitBounds(bounds,{...cameraOptions,duration:0});finish();},1800);
     map.fitBounds(bounds,{...cameraOptions,linear:true,duration:650});
@@ -212,7 +214,7 @@ async function changeAtlas(next,animate=true){
   $('atlas-title-local').textContent=name[1];$('atlas-title-local').className=next==='china'?'china-chinese':next==='korea'?'korean-title':'mongolia-title';$('atlas-title-local').lang=name[2];
   $('map').setAttribute('aria-label',next==='korea'?'Interactive map of North and South Korea':next==='mongolia'?'Interactive Mongolia province and district map':'Interactive China administrative boundary map');
   $('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
-  for(const f of provinceFeatures)map.setFeatureState({source:'provinces',id:f.properties.adcode},{inactive:foreign});
+  for(const f of provinceFeatures)window.AtlasMotion.setFeatureState(map,{source:'provinces',id:f.properties.adcode},{inactive:foreign});
   syncLayers();updateLabels();koreaAtlas.context(next==='korea');mongoliaAtlas.context(next==='mongolia');
   if(foreign)await currentAtlas().enter();
   else{$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province',true);refreshStatus();controls();if(animate)await fitHome(true);updateLabels();}
@@ -292,7 +294,7 @@ function provinceColor(){return ['case',['boolean',['feature-state','quizActive'
 const satellitePaint=new Map();
 function satelliteAppearance(visible,opacity){
   $('map-shell').dataset.satellite=String(visible&&opacity>=.5);
-  map.setPaintProperty('province-fill','fill-opacity',window.AtlasSatellite.provinceOpacity(visible,opacity));
+  for(const id of ['province-fill','province-fragment-fill'])map.setPaintProperty(id,'fill-opacity',window.AtlasSatellite.provinceOpacity(visible,opacity));
   const colors={'province-lines':'#fff0bb','prefecture-lines':'#f5dfab','other-lines':'#f5dfab','city-district-lines':'#f5dfab'};
   for(const [id,color] of Object.entries(colors)){
     if(visible){if(!satellitePaint.has(id))satellitePaint.set(id,map.getPaintProperty(id,'line-color'));map.setPaintProperty(id,'line-color',window.AtlasSatellite.blendColor(satellitePaint.get(id),color,opacity));}
@@ -303,13 +305,14 @@ function addLine(id,source,color,width,opacity=1,dash){const paint={'line-color'
 function addSelection(id,source){addLine(id,source+'-selection-edges',['case',['boolean',['feature-state','quizCorrect'],false],'#38684a','#a43829'],1.7,window.AtlasLines.adaptiveOpacity(['case',['any',['boolean',['feature-state','selected'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],1,0]));}
 function pickedRegion(point){
   if(quiz.active&&quiz.type==='name')return;
-  if(quiz.active){const hit=map.queryRenderedFeatures(point,{layers:['prefecture-fill']})[0];return hit&&quiz.round.eligible.has(hit.properties.adcode)?regionByCode.get(hit.properties.adcode):undefined;}
+  if(quiz.active){const hit=window.AtlasMotion.queryRegions(map,point,{layers:['prefecture-fill','prefecture-fragment-fill']})[0];return hit&&quiz.round.eligible.has(hit.properties.adcode)?regionByCode.get(hit.properties.adcode):undefined;}
   const layers=['province-fill'];if($('map-shell').dataset.level==='prefecture'){if($('prefecture-layer').checked)layers.unshift('prefecture-fill');if($('other-layer').checked)layers.unshift('other-fill');}
   if(districtsVisible())layers.unshift('city-district-fill');
-  const hits=map.queryRenderedFeatures(point,{layers});
-  for(const id of layers){const hit=hits.find(f=>f.layer.id===id);if(hit)return regionByCode.get(hit.properties.adcode);}
+  const aliases={'province-fill':'province-fragment-fill','prefecture-fill':'prefecture-fragment-fill'};
+  const hits=window.AtlasMotion.queryRegions(map,point,{layers:layers.flatMap(id=>aliases[id]?[id,aliases[id]]:[id])});
+  for(const id of layers){const hit=hits.find(f=>f.layer.id===id||f.layer.id===aliases[id]);if(hit)return regionByCode.get(hit.properties.adcode);}
 }
-map.on('click',event=>{if(cameraBusy||!allReady)return;if(atlasMode!=='china'){if(map.queryRenderedFeatures(event.point,{layers:['province-fill']}).length)changeAtlas('china');return;}const region=pickedRegion(event.point);if(region){if(quiz.active)answerQuiz(region.feature.properties.adcode);else selectRegion(region,region.feature.properties.provinceCode||region.feature.properties.adcode);}});
+map.on('click',event=>{if(cameraBusy||!allReady)return;if(atlasMode!=='china'){if(window.AtlasMotion.queryRegions(map,event.point,{layers:['province-fill','province-fragment-fill']}).length)changeAtlas('china');return;}const region=pickedRegion(event.point);if(region){if(quiz.active)answerQuiz(region.feature.properties.adcode);else selectRegion(region,region.feature.properties.provinceCode||region.feature.properties.adcode);}});
 map.on('mousemove',event=>{
   if(atlasMode!=='china'||cameraBusy||!allReady||map.isMoving())return;
   const region=pickedRegion(event.point);if(hovered!==region){clearHover();hovered=region;if(region)setRegionState(region,{hover:true});}
@@ -325,14 +328,18 @@ async function init(){try{
   provinceFeatures=display.provinces.features;
   const prefFeatures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
   const otherFeatures=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
-  const fillFeatures=features=>featureCollection(features.flatMap(f=>fillFragments[f.properties.adcode]?fillFragments[f.properties.adcode].coordinates.map(coordinates=>({type:'Feature',properties:{adcode:f.properties.adcode},geometry:{type:'Polygon',coordinates}})):f));
-  addSource('provinces',fillFeatures(provinceFeatures),fillSourceOptions);addSource('prefectures',fillFeatures(prefFeatures),fillSourceOptions);addSource('others',featureCollection(otherFeatures));
+  const regularFills=features=>featureCollection(features.filter(f=>!fillFragments[f.properties.adcode]));
+  const triangleFills=features=>featureCollection(features.filter(f=>fillFragments[f.properties.adcode]).flatMap(f=>fillFragments[f.properties.adcode].coordinates.map(coordinates=>({type:'Feature',properties:{adcode:f.properties.adcode},geometry:{type:'Polygon',coordinates}}))));
+  // Only the two repaired fills need unsimplified triangles. Other regions use
+  // subpixel tile simplification, retaining every original source coordinate.
+  addSource('provinces',regularFills(provinceFeatures));addSource('prefectures',regularFills(prefFeatures));addSource('others',featureCollection(otherFeatures));
+  addSource('provinces-fragments',triangleFills(provinceFeatures),fillSourceOptions);addSource('prefectures-fragments',triangleFills(prefFeatures),fillSourceOptions);
   // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
   // The stored geometry and selectable polygons retain full detail.
   for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',window.AtlasLines.lineData(geometry),window.AtlasLines.lineSourceOptions);
   for(const [name,collection] of [['provinces',display.provinces],['prefectures',featureCollection(prefFeatures)],['others',featureCollection(otherFeatures)]])addSource(name+'-selection-edges',window.AtlasLines.lineData(collection),window.AtlasLines.lineSourceOptions);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
-  addFill('province-fill','provinces',provinceColor(),1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
+  addFill('province-fill','provinces',provinceColor(),1);addFill('province-fragment-fill','provinces-fragments',provinceColor(),1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('prefecture-fragment-fill','prefectures-fragments','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
   addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,window.AtlasLines.adaptiveOpacity(.85));addLine('other-lines','other-boundaries','#9f874e',.7,window.AtlasLines.adaptiveOpacity(.85),[3,3]);
   addSelection('province-selection','provinces');addSelection('prefecture-selection','prefectures');addSelection('other-selection','others');
   addLine('province-lines','province-boundaries','#987343',['interpolate',['linear'],['zoom'],3,.65,8,1.2],window.AtlasLines.adaptiveOpacity(.95));
@@ -348,6 +355,7 @@ async function init(){try{
   for(const city of administration.missingCities){regionNames[city.adcode]={en:city.en,zh:city.zh,source:city.source,regional:[]};detailLayers.get(650000).push(bindRegion({type:'Feature',properties:{adcode:city.adcode,name:city.zh,provinceCode:650000,level:'city',boundaryAvailable:false},geometry:null},650000));}
   for(const f of [...provinceFeatures].sort((a,b)=>english[a.properties.adcode].localeCompare(english[b.properties.adcode]))){const p=f.properties,o=document.createElement('option');o.value=p.adcode;o.textContent=english[p.adcode]+' · '+p.name;$('province').append(o);}
   syncLayers();
+  await motionRenderer.prepare();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   namingQuiz=window.AtlasNameQuiz.createNameQuiz({mark:(code,correct)=>{const layer=regionByCode.get(code);if(layer){setRegionState(layer,{quizCorrect:correct,quizWrong:!correct});if(!quiz.highlighted.includes(layer))quiz.highlighted.push(layer);}},labels:updateLabels,controls,clear:clearQuizHighlights,limit:codes=>{quiz.pool=codes.map(code=>regionByCode.get(code));syncQuizStyle();},exit:configureQuiz,view:code=>viewQuizAnswer(regionByCode.get(code)),focusInput:()=>namingQuiz.focus()});
   placeTools=window.AtlasPlaceTools.createPlaceTools({get:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);return layer?{name:bilingualName(layer.feature.properties)}:null;},select:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);if(layer)selectRegion(layer,layer.feature.properties.provinceCode||layer.feature.properties.adcode);},controls});
@@ -359,8 +367,8 @@ async function init(){try{
   const capitalsResponse=await fetch('data/capitals.json');
   if(!capitalsResponse.ok)throw new Error('Capital locations could not load');
   capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitalsResponse.json());
-  koreaAtlas.warm().catch(error=>console.warn('Korea preload:',error.message));
-  mongoliaAtlas.warm().catch(error=>console.warn('Mongolia preload:',error.message));
+  koreaAtlas.warm().then(()=>motionRenderer.prepare()).catch(error=>console.warn('Korea preload:',error.message));
+  mongoliaAtlas.warm().then(()=>motionRenderer.prepare()).catch(error=>console.warn('Mongolia preload:',error.message));
   controls();if(['#korea','#mongolia'].includes(location.hash))await changeAtlas(location.hash.slice(1));else await followPlaceLink();
   $('map-loading').hidden=true;
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;}}
@@ -459,11 +467,11 @@ function fitQuizScope(animate=true){
 function clearQuizHighlights(){for(const layer of quiz.highlighted)setRegionState(layer,{quizCorrect:false,quizWrong:false});quiz.highlighted=[];quiz.reviewLayer=null;clearHover();updateLabels();}
 function syncQuizStyle(){
   // Keep the same paint expression while feature states change during quiz navigation.
-  for(const layer of provinceLayers.values())map.setFeatureState({source:'provinces',id:layer.feature.properties.adcode},{quizActive:quiz.active});
+  for(const layer of provinceLayers.values())window.AtlasMotion.setFeatureState(map,{source:'provinces',id:layer.feature.properties.adcode},{quizActive:quiz.active});
   const paint=fillPaint(quiz.active?'#e6cda1':'#d6b974',quiz.active ? .65 : .025);
-  for(const [property,value] of Object.entries(paint))map.setPaintProperty('prefecture-fill',property,value);
+  for(const [property,value] of Object.entries(paint))for(const id of ['prefecture-fill','prefecture-fragment-fill'])map.setPaintProperty(id,property,value);
   const filter=quiz.active?['in',['to-string',['get','adcode']],['literal',quiz.pool.map(l=>String(l.feature.properties.adcode))]]:null;
-  for(const id of ['prefecture-fill','prefecture-selection'])map.setFilter(id,filter);
+  for(const id of ['prefecture-fill','prefecture-fragment-fill','prefecture-selection'])map.setFilter(id,filter);
   syncLayers();
   $('map-shell').dataset.quiz=String(quiz.active);$('quiz-map-prompt').hidden=!quiz.active||quiz.type==='name';$('name-map-prompt').hidden=!quiz.active||quiz.type!=='name';$('quiz-crosshair').hidden=true;
   $('home').textContent=quiz.active?'End quiz':'All China';
