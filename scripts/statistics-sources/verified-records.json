@@ -1,0 +1,336 @@
+{
+  "sources": {
+    "korea-official": {
+      "title": "Statistics Korea: 2024 regional income, preliminary",
+      "url": "https://mods.go.kr/boardDownload.es?bid=11755&list_no=443802&seq=1",
+      "published": "2025-12-23",
+      "pages": "6–7",
+      "retrieved": "2026-10-05"
+    },
+    "hk-official": {
+      "title": "Hong Kong C&SD: GDP, table 310-31001",
+      "url": "https://www.censtatd.gov.hk/en/web_table.html?id=31",
+      "retrieved": "2026-10-05"
+    },
+    "macao-official": {
+      "title": "Macao DSEC: 2025 annual GDP",
+      "url": "https://www.gcs.gov.mo/news/detail/zh-hant/N26BM8Epe1",
+      "published": "2026-02-13",
+      "retrieved": "2026-10-05"
+    },
+    "taiwan-official": {
+      "title": "DGBAS: GDP, GNI and NI, August 2026 release",
+      "url": "https://ws.dgbas.gov.tw/001/Upload/464/relfile/10854/236587/t1-2e.xlsx",
+      "published": "2026-08-14",
+      "retrieved": "2026-10-05"
+    },
+    "taiwan-per-capita": {
+      "title": "DGBAS: Statistical Abstract of National Income, February 2026",
+      "url": "https://ws.dgbas.gov.tw/001/Upload/464/relfile/10866/235856/nie.pdf",
+      "published": "2026-02",
+      "retrieved": "2026-10-05",
+      "page": 2
+    }
+  },
+  "records": {
+    "korea:KR-11": {
+      "gdp": {
+        "value": 575000000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 61220000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-26": {
+      "gdp": {
+        "value": 121100000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 37080000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-27": {
+      "gdp": {
+        "value": 74500000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 31370000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-28": {
+      "gdp": {
+        "value": 125600000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 41190000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-30": {
+      "gdp": {
+        "value": 56300000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 38220000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-31": {
+      "gdp": {
+        "value": 94000000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 85190000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-36": {
+      "gdp": {
+        "value": 17399999999999.998,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 44610000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-41": {
+      "gdp": {
+        "value": 651400000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 47000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-51": {
+      "gdp": {
+        "value": 64599999999999.99,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 42560000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-43": {
+      "gdp": {
+        "value": 91800000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 56330000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-44": {
+      "gdp": {
+        "value": 150700000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 67760000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-52": {
+      "gdp": {
+        "value": 66800000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 37980000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-47": {
+      "gdp": {
+        "value": 134699999999999.98,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 52300000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-48": {
+      "gdp": {
+        "value": 151200000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 46550000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-50": {
+      "gdp": {
+        "value": 26900000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 39910000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Preliminary, rounded as published."
+      }
+    },
+    "korea:KR-12": {
+      "gdp": {
+        "value": 158800000000000,
+        "currency": "KRW",
+        "year": 2024,
+        "source": "korea-official",
+        "note": "Calculated sum of Jeonnam and Gwangju’s 2024 GDP, before their merger."
+      },
+      "note": "GDP sums the two predecessor regions. A combined per-capita figure has not been verified; neither predecessor’s value is used for the merged region."
+    },
+    "china:810000": {
+      "gdp": {
+        "value": 3329843000000,
+        "currency": "HKD",
+        "year": 2025,
+        "source": "hk-official",
+        "note": "Revised."
+      },
+      "gdpPerCapita": {
+        "value": 444044,
+        "currency": "HKD",
+        "year": 2025,
+        "source": "hk-official",
+        "note": "Revised."
+      }
+    },
+    "china:820000": {
+      "gdp": {
+        "value": 418040000000,
+        "currency": "MOP",
+        "year": 2025,
+        "source": "macao-official",
+        "note": "Revised; rounded as published."
+      },
+      "gdpPerCapita": {
+        "value": 607000,
+        "currency": "MOP",
+        "year": 2025,
+        "source": "macao-official",
+        "note": "Rounded as published."
+      }
+    },
+    "china:710000": {
+      "gdp": {
+        "value": 28715120000000,
+        "currency": "TWD",
+        "year": 2025,
+        "source": "taiwan-official",
+        "usd": 922454000000
+      },
+      "gdpPerCapita": {
+        "value": 1229318,
+        "currency": "TWD",
+        "year": 2025,
+        "source": "taiwan-per-capita",
+        "note": "Preliminary February 2026 release; GDP total uses the later August revision.",
+        "usd": 39492
+      }
+    }
+  }
+}

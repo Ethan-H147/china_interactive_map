@@ -1,0 +1,58 @@
+{
+  "china-top-cities": {
+    "url": "https://en.wikipedia.org/wiki/List_of_top_Chinese_cities_by_GDP",
+    "title": "Wikipedia: List of top Chinese cities by GDP",
+    "retrieved": "2026-10-05T17:34:03.352434+00:00",
+    "sha256": "094b652b79471be59fd7fb7f82a319ec03007728b9c5726e80c6245446614880",
+    "license": "CC BY-SA 4.0"
+  },
+  "china-top-per-capita": {
+    "url": "https://en.wikipedia.org/wiki/List_of_top_Chinese_cities_by_GDP_per_capita",
+    "title": "Wikipedia: List of top Chinese cities by GDP per capita",
+    "retrieved": "2026-10-05T17:34:03.836820+00:00",
+    "sha256": "071cfdd391f3f2a3766ba89d3b1c5af21eb21e35efd4bd5c7bb64219149eb9c4",
+    "license": "CC BY-SA 4.0"
+  },
+  "china-provinces": {
+    "url": "https://en.wikipedia.org/wiki/List_of_Chinese_provincial-level_divisions_by_GDP",
+    "title": "Wikipedia: List of Chinese provincial-level divisions by GDP",
+    "retrieved": "2026-10-05T17:34:03.858562+00:00",
+    "sha256": "64034a23e91d3282f33fdd28f4f8a64a1512011f48b75ac5390ca4b80ae0dd56",
+    "license": "CC BY-SA 4.0"
+  },
+  "china-per-capita": {
+    "url": "https://en.wikipedia.org/wiki/List_of_Chinese_provincial-level_divisions_by_GDP_per_capita",
+    "title": "Wikipedia: List of Chinese provincial-level divisions by GDP per capita",
+    "retrieved": "2026-10-05T17:34:03.896808+00:00",
+    "sha256": "ec2c8bc1599fc6852fc99f12ca82287b051f7ca78777f9303ceff996f5c951a6",
+    "license": "CC BY-SA 4.0"
+  },
+  "china-prefectures": {
+    "url": "https://en.wikipedia.org/wiki/List_of_prefecture-level_divisions_of_China_by_GDP",
+    "title": "Wikipedia: List of prefecture-level divisions of China by GDP",
+    "retrieved": "2026-10-05T17:34:03.938651+00:00",
+    "sha256": "1564bceb89eaa9d68b9f6c240577d7d15603bb048a4cb3683394934f999422a5",
+    "license": "CC BY-SA 4.0"
+  },
+  "korea": {
+    "url": "https://en.wikipedia.org/wiki/List_of_South_Korean_regions_by_GDP",
+    "title": "Wikipedia: List of South Korean regions by GDP",
+    "retrieved": "2026-10-05T17:34:03.984219+00:00",
+    "sha256": "652b9d09cd616ccdb009fa9ba8d340e93125e8152c8fac6394ab89cb0abdac1c",
+    "license": "CC BY-SA 4.0"
+  },
+  "mongolia-area": {
+    "url": "https://en.wikipedia.org/wiki/Provinces_of_Mongolia",
+    "title": "Wikipedia: Provinces of Mongolia",
+    "retrieved": "2026-10-05T17:34:04.000761+00:00",
+    "sha256": "a48aea4e728ff20667bdecb772476adbeac4642c2870822504f9db58a5986f71",
+    "license": "CC BY-SA 4.0"
+  },
+  "china-area": {
+    "url": "https://en.wikipedia.org/wiki/List_of_Chinese_administrative_divisions_by_area",
+    "title": "Wikipedia: List of Chinese administrative divisions by area",
+    "retrieved": "2026-10-05T17:34:04.035802+00:00",
+    "sha256": "c6f2029573b01b59211f1119e1d54ea64b2f07927d2e3151c4c7c8f78f83f893",
+    "license": "CC BY-SA 4.0"
+  }
+}

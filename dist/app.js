@@ -208,7 +208,7 @@ function selectRegion(layer,parentCode,shouldFit=true){
   if(!isProvince){const id=isPrefectureLevel(p)?'prefecture-layer':'other-layer';$(id).checked=true;syncLayers();}
   setRegionState(layer,{selected:true});clearHover();
   $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;$('tab-explore').hidden=false;showPanel('explore');
-  $('selection-kind').textContent=kind(p).toUpperCase();renderRegionFlag(p);renderRegionNames(p);renderPopulation(p);renderDivisionNote(layer);explorer.render(p.adcode);
+  $('selection-kind').textContent=kind(p).toUpperCase();renderRegionFlag(p);renderRegionNames(p);renderPopulation(p);window.AtlasStatistics.renderStatistics($('selection-meta'),'china:'+p.adcode);renderDivisionNote(layer);explorer.render(p.adcode);
   const coverage=manifest.coverage.find(c=>c.adcode===code);
   $('selection-meta').textContent=isProvince?(p.adcode===710000?'22 administrative divisions · 6 special municipalities, 3 cities, 13 counties':p.adcode===820000?'7 parishes · 4 other areas':coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${(detailLayers.get(code)||[]).filter(l=>l.feature.geometry).length} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct divisions'}`):p.functionalArea?'Administered directly by Suzhou':p.boundaryAvailable===false?'Boundary unavailable':p.provinceCode===820000?'Macao government map area':`Administrative code ${p.officialCode||p.adcode}`;
   $('parent-context').hidden=isProvince;$('parent-region').hidden=isProvince;

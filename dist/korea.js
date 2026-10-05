@@ -31,7 +31,7 @@ function clearSearch(){$('search').value='';$('search-results').replaceChildren(
 function listRegions(){const select=$('province');select.replaceChildren(new Option('All regions',''));for(const c of ['KP','KR']){if(scope&&scope!==c)continue;const group=document.createElement('optgroup');group.label=countryNames[c];for(const f of data.first.features.filter(f=>f.properties.country===c).sort((a,b)=>a.properties.en.localeCompare(b.properties.en)))group.append(new Option(f.properties.en+' · '+nativeName(f.properties),f.properties.id));select.append(group);}}
 function select(f,shouldFit=true){
  if(!active||host.isBusy()||!ready)return;state(selected,{selected:false});selected=f;state(f,{selected:true});clearHover();clearSearch();
- const p=f.properties,parent=index.get(p.parent);scope=p.country;$('country').value=scope;listRegions();$('province').value=p.level===1?p.id:p.parent;
+ const p=f.properties,parent=index.get(p.parent);scope=p.country;$('country').value=scope;listRegions();$('province').value=p.level===1?p.id:p.parent;window.AtlasStatistics.renderStatistics($('selection-meta'),'korea:'+p.id);
  $('selection-name').textContent=p.en;$('selection-name').classList.toggle('long-name',p.en.length>28);$('selection-chinese').textContent=p.ko;$('selection-kind').textContent=p.type.toUpperCase();$('selection-country').textContent=countryNames[p.country];
  $('selection-hanja').hidden=!p.hanja;$('selection-hanja-name').textContent=p.hanja||'';$('selection-chinese').classList.toggle('has-hanja',!!p.hanja);
  $('selection-flag').src='vendor/flag-'+p.country.toLowerCase()+'.svg';$('selection-flag').alt='Flag of '+countryNames[p.country];

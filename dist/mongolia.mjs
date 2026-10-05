@@ -32,7 +32,7 @@ export async function addMongoliaPortal(map,host){
  function population(p){const record=p.level===1?host.population(p):null;$('population').hidden=!record;if(!record)return;$('population-total').textContent=record.total.toLocaleString('en-US');$('population-scope').textContent=p.iso==='MN-1'?'Entire capital municipality':'Entire province';$('population-date').textContent=record.dateLabel;$('population-source').href=record.sourceUrl;}
  async function select(f,shouldFit=true){
   if(!active||!ready||host.isBusy()||!f)return;state(selected,{selected:false});selected=f;state(f,{selected:true});clearHover();clearSearch();
-  const p=f.properties,parent=index.get(p.parent);$('province').value=p.level===1?p.id:p.parent;
+  const p=f.properties,parent=index.get(p.parent);$('province').value=p.level===1?p.id:p.parent;window.AtlasStatistics.renderStatistics($('selection-meta'),'mongolia:'+p.id);
   $('selection-name').textContent=p.en;$('selection-name').classList.toggle('long-name',p.en.length>28);$('selection-local').textContent=p.mn||'';$('selection-kind').textContent=p.type.toUpperCase();
   const record=p.level===1?host.population(p):null,traditional=p.traditional||record?.traditional;
   $('traditional').hidden=!traditional;$('traditional-name').textContent=traditional||'';population(p);
