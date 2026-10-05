@@ -4,10 +4,10 @@ export const satelliteSource={
   tiles:['https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}?token=AAPTaRY-wBoaKL26yIgOLY0a4ZA..aIn4btMRn549Qv-dDUe7AoA-w3A_Cb71sZnvN25r3zbMDZBmTp7yqeC0COIM4hcmdMnXgoz5CkwOEavPR9veN0iuQvIzUjGRZWQTZg8Id2rin2bMBNji8nO9IQhigj6K911OkkItLEnz6tVY9mQ2s1nzz3JMIUcicr49obsHZ_U_wRBmIuk1Klxi6zboPMekzlV5o4aZCaxSU-Y6Atmiz-K09SxghVeXALUfuQXTOzVrKmB5joMDAT1_855Xcq7d'],
   attribution:'Powered by <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a> · Esri, Vantor, Earthstar Geographics, and the GIS User Community'
 };
-export function satelliteVisible({enabled,mode,quiz}){return enabled&&mode==='china'&&!quiz;}
+export function satelliteVisible({enabled,quiz}){return enabled&&!quiz;}
 export function imageryOpacity(value){const number=Number(value);return Number.isFinite(number)?Math.max(0,Math.min(100,number))/100:1;}
 export function provinceOpacity(visible,opacity=1){const amount=visible?opacity:0;return ['case',
-  ['boolean',['feature-state','inactive'],false],1,
+  ['boolean',['feature-state','inactive'],false],1-amount,
   ['boolean',['feature-state','quizActive'],false],1,
   ['boolean',['feature-state','quizCorrect'],false],.65,
   ['boolean',['feature-state','quizWrong'],false],.55,
@@ -23,12 +23,15 @@ export function createSatelliteDisplay(map,host,ui={
   output:document.getElementById('satellite-opacity-value'),
   status:document.getElementById('satellite-status')
 }){
-  let enabled=false,ready=false,hasTile=false,lastVisible=false,lastOpacity=1,lastLayout,timer;
+  let enabled=false,ready=false,hasTile=false,lastVisible=false,lastOpacity=1,lastLayout,timer,lastLayers='';
   const schedule=host.schedule||setTimeout,cancel=host.cancel||clearTimeout;
   function message(text){ui.status.textContent=text;ui.status.hidden=!text;}
-  function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);if(visible!==lastVisible||(visible&&opacity!==lastOpacity)){
+  function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);
+    const layers=['china-context','province-fill','province-fragment-fill','korea-portal-fill','mongolia-portal-fill','korea-first-fill','mongolia-first-fill'].filter(id=>map.getLayer(id)).join(',');
+    if(visible!==lastVisible||(visible&&(opacity!==lastOpacity||layers!==lastLayers))){
+    lastLayers=layers;
     lastVisible=visible;lastOpacity=opacity;
-    for(const id of ['korea-portal-fill','mongolia-portal-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?0:1);
+    for(const id of ['china-context','korea-portal-fill','mongolia-portal-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
     host.onVisible(visible,opacity);
   }}
   function stopTimer(){if(timer!==undefined){cancel(timer);timer=undefined;}}
@@ -44,11 +47,12 @@ export function createSatelliteDisplay(map,host,ui={
   function ensureLayer(){
     if(ready)return;
     map.addSource(sourceId,satelliteSource);
-    // Draw imagery above both country context fills and below China overlays.
-    map.addLayer({id:sourceId,type:'raster',source:sourceId,layout:{visibility:'none'},paint:{'raster-opacity':imageryOpacity(ui.opacity.value),'raster-fade-duration':200}},'province-fill');
+    // Keep imagery below every country's selectable fills and boundary lines.
+    map.addLayer({id:sourceId,type:'raster',source:sourceId,layout:{visibility:'none'},paint:{'raster-opacity':imageryOpacity(ui.opacity.value),'raster-fade-duration':200}},'china-context');
     ready=true;
   }
   function sync(){
+    host.placeControls?.();
     const visible=satelliteVisible({enabled,mode:host.mode(),quiz:host.quiz()});
     ui.options.hidden=!enabled;
     if(!ready){appearance(false);return;}
@@ -58,7 +62,7 @@ export function createSatelliteDisplay(map,host,ui={
       message('Loading imagery…');
       timer=schedule(()=>{timer=undefined;if(enabled&&!hasTile)fail();},25000);
     }
-    if(!visible){stopTimer();if(enabled)message(host.quiz()?'Imagery is hidden during quizzes.':'Imagery is available in China mode.');}
+    if(!visible){stopTimer();if(enabled)message('Imagery is hidden during quizzes.');}
     else if(hasTile)message('');
   }
   map.on('sourcedata',event=>{

@@ -331,9 +331,11 @@ function provinceColor(){return ['case',['boolean',['feature-state','quizActive'
 const satellitePaint=new Map();
 function satelliteAppearance(visible,opacity){
   $('map-shell').dataset.satellite=String(visible&&opacity>=.5);
-  for(const id of ['province-fill','province-fragment-fill'])map.setPaintProperty(id,'fill-opacity',window.AtlasSatellite.provinceOpacity(visible,opacity));
-  const colors={'province-lines':'#fff0bb','prefecture-lines':'#f5dfab','other-lines':'#f5dfab','city-district-lines':'#f5dfab'};
+  for(const id of ['province-fill','province-fragment-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',window.AtlasSatellite.provinceOpacity(visible,opacity));
+  for(const country of ['korea','mongolia'])for(const level of ['first','second']){const id=country+'-'+level+'-fill';if(!map.getLayer(id))continue;if(!satellitePaint.has(id))satellitePaint.set(id,map.getPaintProperty(id,'fill-opacity'));map.setPaintProperty(id,'fill-opacity',visible?['+',['*',satellitePaint.get(id),1-opacity],['*',opacity,['case',['boolean',['feature-state','selected'],false],.18,['boolean',['feature-state','hover'],false],.15,0]]]:satellitePaint.get(id));}
+  const colors={'korea-first-lines':'#fff0bb','korea-second-lines':'#f5dfab','mongolia-first-lines':'#fff0bb','mongolia-second-lines':'#f5dfab','province-lines':'#fff0bb','prefecture-lines':'#f5dfab','other-lines':'#f5dfab','city-district-lines':'#f5dfab'};
   for(const [id,color] of Object.entries(colors)){
+    if(!map.getLayer(id))continue;
     if(visible){if(!satellitePaint.has(id))satellitePaint.set(id,map.getPaintProperty(id,'line-color'));map.setPaintProperty(id,'line-color',window.AtlasSatellite.blendColor(satellitePaint.get(id),color,opacity));}
     else if(satellitePaint.has(id)){map.setPaintProperty(id,'line-color',satellitePaint.get(id));satellitePaint.delete(id);}
   }
@@ -408,8 +410,7 @@ async function loadChina(){
   namingQuiz=window.AtlasNameQuiz.createNameQuiz({mark:(code,correct)=>{const layer=regionByCode.get(code);if(layer){setRegionState(layer,{quizCorrect:correct,quizWrong:!correct});if(!quiz.highlighted.includes(layer))quiz.highlighted.push(layer);}},labels:updateLabels,controls,clear:clearQuizHighlights,limit:codes=>{quiz.pool=codes.map(code=>regionByCode.get(code));syncQuizStyle();},exit:configureQuiz,view:code=>viewQuizAnswer(regionByCode.get(code)),focusInput:()=>namingQuiz.focus()});
   placeTools=window.AtlasPlaceTools.createPlaceTools({get:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);return layer?{name:bilingualName(layer.feature.properties)}:null;},select:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);if(layer)selectRegion(layer,layer.feature.properties.provinceCode||layer.feature.properties.adcode);},controls,shareUrl:()=>{const url=new URL(location.href);url.hash=window.AtlasView.hashFor(captureView());return url;}});
   waterDisplay=window.AtlasWater.createWaterDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,load:()=>json('data/major-water.bin')});
-  satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance});
-  for(const id of ['satellite-layer','water-layer'])if($(id).checked)$(id).dispatchEvent(new Event('change'));
+  for(const id of ['water-layer'])if($(id).checked)$(id).dispatchEvent(new Event('change'));
   chinaReady=true;initQuiz();syncLayers();
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:atlasMode!=='china'});
   syncCountryFills();syncLayers();
@@ -424,6 +425,8 @@ async function init(){try{
  allReady=true;
   koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
   mongoliaAtlas=await window.AtlasMongolia.addMongoliaPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china'),population:p=>provincePopulation.mongolia[p.iso]||provincePopulation.mongolia[provincePopulation.mongoliaAliases[(p.en||'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'')]]});
+  satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const panel=$(atlasMode==='korea'?'k-layers-panel':atlasMode==='mongolia'?'m-layers-panel':'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
+  satelliteDisplay.sync();if($('satellite-layer').checked)$('satellite-layer').dispatchEvent(new Event('change'));
   const capitalsResponse=await fetch('data/capitals.json');
   if(!capitalsResponse.ok)throw new Error('Capital locations could not load');
   capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitalsResponse.json());
