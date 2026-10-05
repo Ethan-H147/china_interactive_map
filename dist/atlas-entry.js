@@ -5,9 +5,9 @@
  const storageKey='boundary-atlas-country-v1';
  const fromHash=hash=>/^#(china|korea|mongolia)(?:\/place=.*)?$/i.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
  let saved;try{saved=localStorage.getItem(storageKey);}catch{}
- const initial=fromHash(location.hash)||(countries[saved]?saved:null);
+ const initial=fromHash(location.hash)||(countries[saved]?saved:'china');
  let current=initial;
- const root=document.documentElement;root.dataset.atlas=initial||'chooser';root.dataset.starting='true';
+ const root=document.documentElement;root.dataset.atlas=initial;root.dataset.starting='true';
  function persist(country){try{localStorage.setItem(storageKey,country);}catch{}}
  function setUrl(country,preservePlace=true){
   const place=country==='china'&&preservePlace?(/^#(?:china\/)?place=(.*)$/.exec(location.hash)?.[1]??null):null;
@@ -15,20 +15,17 @@
  }
  if(initial){persist(initial);setUrl(initial);document.title=countries[initial].en+' · '+countries[initial].local;}
  function paint(){
-  const info=countries[current];root.dataset.atlas=current||'chooser';document.body.dataset.atlas=current||'chooser';
+  const info=countries[current];root.dataset.atlas=current;document.body.dataset.atlas=current;
   const $=id=>document.getElementById(id);
   if($('atlas-title-english')){$('atlas-title-english').textContent=info?.en||'Atlas';$('atlas-title-english').className=current==='china'?'china-english':'korea-english';}
   if($('atlas-title-local')){$('atlas-title-local').textContent=info?.local||'';$('atlas-title-local').className=current==='china'?'china-chinese':current==='korea'?'korean-title':'mongolia-title';$('atlas-title-local').lang=info?.lang||'en';}
-  document.title=info?info.en+' · '+info.local:'Atlas · Choose a country';
-  document.querySelectorAll('.country-nav [data-country]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.country===current)));
+  document.title=info.en+' · '+info.local;
   document.querySelectorAll('[data-country-symbol]').forEach(el=>{el.innerHTML=info?AtlasSymbols.markup(current):'';});
-  document.querySelectorAll('[data-country-emblem]').forEach(el=>{if(!el.firstChild)el.innerHTML=AtlasSymbols.markup(el.dataset.countryEmblem);});
   if($('loading-label'))$('loading-label').textContent=info?'Loading '+info.en+' map…':'Loading atlas…';
   if($('startup-name'))$('startup-name').textContent=info?'Preparing '+info.en+'…':'Preparing maps…';
   if($('home'))$('home').textContent='All '+(info?.en||'countries');
   if($('map')&&info)$('map').setAttribute('aria-label',current==='china'?'Interactive China administrative boundary map':current==='korea'?'Interactive map of North and South Korea':'Interactive Mongolia province and district map');
-  if($('country-welcome'))$('country-welcome').hidden=!!current;
  }
- window.AtlasEntry={initial,countries,fromHash,mount:paint,get choosing(){return !current;},remember(country,{preservePlace=true}={}){if(!countries[country])return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
+ window.AtlasEntry={initial,countries,fromHash,mount:paint,remember(country,{preservePlace=true}={}){if(!countries[country])return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
  window.addEventListener('hashchange',()=>{const country=fromHash(location.hash);if(root.dataset.starting&&country)window.AtlasEntry.remember(country);});
 })();

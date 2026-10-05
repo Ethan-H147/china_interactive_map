@@ -1,27 +1,6 @@
 :root[data-atlas=korea]{--ink:#243248;--muted:#687489;--red:#285387;--red-dark:#1b3d69;--gold:#bc3d46;--line:#dce3ed;--paper:#fdfefe;--map:#edf1f6}
 :root[data-atlas=mongolia]{--ink:#253747;--muted:#627585;--red:#24628d;--red-dark:#174b71;--gold:#b18b37;--line:#d9e3e9;--paper:#fcfdfd;--map:#eaf1f5}
-.country-nav{display:flex;align-items:center;gap:4px;margin-left:auto;padding:4px;border:1px solid var(--line);border-radius:7px}
-.country-nav button{padding:8px 12px;border-radius:4px;font-size:13px;background:transparent;color:var(--muted)}
-.country-nav button[aria-pressed=true]{background:var(--accent-soft);color:var(--red);font-weight:600}
-.site-header .surprise{margin-left:0}
 .startup-sidebar{display:none;align-items:center;justify-content:center;gap:18px;color:var(--muted);font-size:14px;flex-direction:column}
 :root[data-starting] .workspace>aside:not(.startup-sidebar){display:none!important}
 :root[data-starting] .startup-sidebar{display:flex}
 :root[data-starting] .map-top,:root[data-starting] .map-actions,:root[data-starting] .map-bottom,:root[data-starting] .north{visibility:hidden}
-:root[data-atlas=chooser] .workspace{visibility:hidden}
-:root[data-atlas=chooser] body{height:100dvh;overflow:hidden;--header-stripe:linear-gradient(90deg,#9c978e,#9c978e)}
-:root[data-atlas=chooser] .site-header .surprise{display:none}
-#country-welcome{position:absolute;inset:91px 0 0;z-index:610;background:var(--paper);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:28px;overflow:auto}
-#country-welcome h2{font-size:42px;text-align:center;margin:0 0 12px}
-#country-welcome>p{text-align:center;margin:0 0 38px}
-.country-choices{display:grid;grid-template-columns:repeat(3,200px);gap:18px}
-.country-choice{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;min-height:220px;border:1px solid var(--line);border-radius:12px;background:transparent;padding:24px;color:var(--ink);text-decoration:none}
-.country-choice strong{font:400 23px Georgia,serif}
-.country-choice small{font-size:15px;color:var(--muted)}
-.country-choice .country-symbol{width:56px;height:56px}
-.country-choice .soyombo{width:32px;height:64px}
-.country-choice .symbol-rotor{animation:none;will-change:auto}
-@media(hover:hover) and (pointer:fine){.country-choice:hover{background:var(--surface-soft)}.country-choice:hover .symbol-rotor{animation:emblem-turn 1.6s linear infinite}}
-@media(max-width:760px){.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:'title title' 'countries random';height:112px;padding:10px 18px;gap:8px}.site-header h1{grid-area:title;gap:12px}.country-nav{grid-area:countries;width:auto;justify-content:flex-start;padding:2px;border:0;margin:0;min-width:0}.country-nav button{padding:6px 8px;font-size:12px}.site-header .surprise{grid-area:random;margin:0;font-size:11px;padding:7px 8px}.workspace{height:auto}#country-welcome{top:112px}.country-choices{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;max-width:640px;gap:10px}.country-choice{min-height:180px;padding:18px 8px}.country-choice strong{font-size:19px}.country-choice small{font-size:13px}#country-welcome h2{font-size:32px}}
-@media(max-width:420px){#country-welcome{padding:18px}.country-choice .country-symbol{width:43px;height:43px}.country-choice .soyombo{width:26px;height:51px}}
-@media(prefers-reduced-motion:reduce){.country-choice:hover .symbol-rotor{animation:none}}

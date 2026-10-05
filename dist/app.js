@@ -186,7 +186,6 @@ function renderDivisionNote(layer){
 }
 function selectRegion(layer,parentCode,shouldFit=true){
   if(cameraBusy||!allReady||quiz.active)return Promise.resolve(false);
-  if(window.AtlasEntry?.choosing)window.AtlasEntry.remember('china');
   clearSelection();clearSearch();
   const p=layer.feature.properties,isProvince=p.level==='province',code=isProvince?p.adcode:p.provinceCode||parentCode;
   activeCode=code;selected={layer};
@@ -224,12 +223,6 @@ async function changeAtlas(next,animate=true){
   else{$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province',true);refreshStatus();controls();if(animate)await fitHome(true);updateLabels();}
   return true;
 }
-document.querySelectorAll('[data-country]').forEach(button=>button.onclick=async()=>{
-  if(atlasStarting||cameraBusy||!allReady||quiz.active)return;
-  const next=button.dataset.country;
-  if(next===atlasMode){window.AtlasEntry.remember(next,{preservePlace:false});return;}
-  await changeAtlas(next);
-});
 function regionZoom(p){return p.parentCity?14:[810000,820000].includes(p.provinceCode||p.adcode)?p.level==='province'?14:17:p.level==='province'?8:10;}
 function bindRegion(feature,parentCode){
   const bounds=new maplibregl.LngLatBounds();
