@@ -408,7 +408,7 @@ async function init(){try{
   controls();if(requestedCountry&&requestedCountry!=='china')await changeAtlas(requestedCountry,false);else if(!window.AtlasView.fromHash(location.hash))await followPlaceLink();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   setupViewControls();await restoreView();
-  atlasStarting=false;window.AtlasEntry.ready();controls();
+  atlasStarting=false;window.AtlasEntry.ready();controls();refreshStatus();updateLabels();
   $('map-loading').hidden=true;
   // Background prefetch uses the HTTP cache without adding hidden GPU sources.
   const prefetch=async()=>{for(const country of ['china','korea','mongolia'].filter(c=>c!==atlasMode)){if(navigator.connection?.saveData)break;const files=country==='china'?(await json('data/display-boundaries.parts.json')).parts:[country+'-boundaries.bin'];for(const file of files){await fetch('data/'+file).then(r=>r.arrayBuffer()).catch(()=>{});await new Promise(r=>setTimeout(r,100));}}};
