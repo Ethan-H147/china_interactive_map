@@ -1,4 +1,8 @@
-export function labelLines(english,local,language='both'){english=english.replace(/\bAutonomous Prefecture\b/gi,'A.P.');return language==='en'?[english]:language==='local'?[local||english]:[english,local].filter((s,i,a)=>s&&a.indexOf(s)===i);}
+export function labelLines(english,local,language='both',district=false){
+ if(district&&!/\b(?:District|Dist\.)$/i.test(english))english+=' District';
+ english=english.replace(/\bAutonomous Prefecture\b/gi,'A.P.').replace(/\bDistrict\b/gi,'Dist.');
+ return language==='en'?[english]:language==='local'?[local||english]:[english,local].filter((s,i,a)=>s&&a.indexOf(s)===i);
+}
 export function placeLabels(candidates,width,height){
  const occupied=[],accepted=[];
  for(const item of [...candidates].sort((a,b)=>Number(!!b.selected)-Number(!!a.selected)||String(a.id).localeCompare(String(b.id)))){
@@ -14,7 +18,7 @@ export function setLanguage(value){language=['en','local','both'].includes(value
 export function render(map,candidates,className){
  measure??=document.createElement('canvas').getContext('2d');
  const items=candidates.map(item=>{
-  const lines=labelLines(item.en,item.local,language),point=map.project(item.center);
+  const lines=labelLines(item.en,item.local,language,item.district),point=map.project(item.center);
   const widths=lines.map((line,i)=>{measure.font=(item.selected?'600 ':'')+(i?'14px Arial':'16px Arial');return measure.measureText(line).width;});
   return {...item,lines,x:point.x,y:point.y,w:Math.max(...widths)+4,h:lines.length*21};
  });

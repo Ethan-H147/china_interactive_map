@@ -288,7 +288,7 @@ function renderLabels(){
   if(activeCode&&map.getZoom()>=4){for(const layer of detailLayers.get(districtsVisible()?districtScope():activeCode)||[]){const p=layer.feature.properties;if((isPrefectureLevel(p)&&$('prefecture-layer').checked)||(!isPrefectureLevel(p)&&$('other-layer').checked))candidates.push(p);}}
   if(!candidates.length)candidates.push(...provinceFeatures.map(f=>f.properties));
   const selectedP=selected?.layer.feature.properties;if(selectedP&&!candidates.includes(selectedP))candidates.unshift(selectedP);
-  labels.push(...window.AtlasLabels.render(map,candidates.filter(p=>p.centroid||p.center).map(p=>({id:p.adcode,center:p.centroid||p.center,en:englishName(p),local:p.level==='province'?shortName(p.name):p.name,selected:p===selectedP})),'province-label'));
+  labels.push(...window.AtlasLabels.render(map,candidates.filter(p=>p.centroid||p.center).map(p=>({id:p.adcode,center:p.centroid||p.center,en:englishName(p),district:Number(p.provinceCode)===310000&&p.name.endsWith('区'),local:p.level==='province'?shortName(p.name):p.name,selected:p===selectedP})),'province-label'));
 
 }
 function refreshStatus(){$('status').hidden=allReady;$('status').textContent=allReady?'':'Loading boundaries…';}
