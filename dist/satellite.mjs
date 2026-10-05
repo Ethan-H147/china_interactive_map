@@ -27,11 +27,11 @@ export function createSatelliteDisplay(map,host,ui={
   const schedule=host.schedule||setTimeout,cancel=host.cancel||clearTimeout;
   function message(text){ui.status.textContent=text;ui.status.hidden=!text;}
   function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);
-    const layers=['china-context','province-fill','province-fragment-fill','korea-portal-fill','mongolia-portal-fill','korea-first-fill','mongolia-first-fill'].filter(id=>map.getLayer(id)).join(',');
+    const layers=['china-context','province-fill','province-fragment-fill','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','korea-first-fill','mongolia-first-fill','japan-first-fill'].filter(id=>map.getLayer(id)).join(',');
     if(visible!==lastVisible||(visible&&(opacity!==lastOpacity||layers!==lastLayers))){
     lastLayers=layers;
     lastVisible=visible;lastOpacity=opacity;
-    for(const id of ['china-context','korea-portal-fill','mongolia-portal-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
+    for(const id of ['china-context','korea-portal-fill','mongolia-portal-fill','japan-portal-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
     host.onVisible(visible,opacity);
   }}
   function stopTimer(){if(timer!==undefined){cancel(timer);timer=undefined;}}

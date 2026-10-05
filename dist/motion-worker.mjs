@@ -1,10 +1,10 @@
 import {lineData} from './adaptive-lines.mjs';
 try{
  const country=new URL(import.meta.url).searchParams.get('country')||'china';
- if(!['china','korea','mongolia'].includes(country))throw Error('Unknown atlas');
+ if(!['china','korea','mongolia','japan'].includes(country))throw Error('Unknown atlas');
  const response=await fetch(new URL('data/'+country+'-motion.bin',import.meta.url));if(!response.ok)throw Error('Motion data unavailable');
  const data=await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json();
- for(const id of ['provinces','prefectures','others','city-districts','korea-first','korea-second','mongolia-first','mongolia-second']){
+ for(const id of ['provinces','prefectures','others','city-districts','korea-first','korea-second','mongolia-first','mongolia-second','japan-first']){
   if(!data[id])continue;
   const collection={type:'FeatureCollection',features:data[id].features.filter(f=>![220000,222400].includes(f.properties.adcode))};
   if(id==='provinces')collection.features.push(...data['fill-outlines'].features.filter(f=>f.properties.adcode===220000));

@@ -97,6 +97,7 @@ for(const [key,r] of Object.entries(records)){
  if(r.country==='KP')r.note='No verified regional GDP series was found for this North Korean division.';
  if(!r.gdp&&!r.note)r.note='No verified GDP figure is available in this dataset for this division. A parent-region figure is not a substitute.';
 }
+const japan=JSON.parse(fs.readFileSync(new URL('scripts/japan-sources/statistics.json',root)));Object.assign(records,japan.regions);Object.assign(sources,japan.sources);
 const coverage={};for(const [key,r] of Object.entries(records)){const k=key.split(':')[0],c=coverage[k]??={regions:0,reportedArea:0,mappedArea:0,gdp:0,gdpPerCapita:0};c.regions++;c[r.area.method==='mapped'?'mappedArea':'reportedArea']++;if(r.gdp)c.gdp++;if(r.gdpPerCapita)c.gdpPerCapita++;}
 const output={schemaVersion:1,checked:'2026-10-05',policy:'Latest verified annual value in the retained sources for each metric; availability and years vary. Nominal GDP/GRDP at current prices. USD uses same-year annual average exchange rates, not PPP. Missing values are never zero.',coverage,sources,regions:records};
 fs.writeFileSync(new URL('dist/data/region-statistics.json',root),JSON.stringify(output));

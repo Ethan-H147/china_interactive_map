@@ -1,0 +1,237 @@
+{
+  "JP-23": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Flag_of_Aichi_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Aichi_Prefecture.svg",
+    "file": "vendor/japan/JP-23.svg"
+  },
+  "JP-05": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Akita_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Akita_Prefecture.svg",
+    "file": "vendor/japan/JP-05.svg"
+  },
+  "JP-02": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Flag_of_Aomori_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Aomori_Prefecture.svg",
+    "file": "vendor/japan/JP-02.svg"
+  },
+  "JP-12": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Chiba_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Chiba_Prefecture.svg",
+    "file": "vendor/japan/JP-12.svg"
+  },
+  "JP-38": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_Ehime_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ehime_Prefecture.svg",
+    "file": "vendor/japan/JP-38.svg"
+  },
+  "JP-18": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Fukui_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Fukui_Prefecture.svg",
+    "file": "vendor/japan/JP-18.svg"
+  },
+  "JP-40": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Fukuoka_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Fukuoka_Prefecture.svg",
+    "file": "vendor/japan/JP-40.svg"
+  },
+  "JP-07": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Flag_of_Fukushima_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Fukushima_Prefecture.svg",
+    "file": "vendor/japan/JP-07.svg"
+  },
+  "JP-21": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_Gifu_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Gifu_Prefecture.svg",
+    "file": "vendor/japan/JP-21.svg"
+  },
+  "JP-10": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Gunma_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Gunma_Prefecture.svg",
+    "file": "vendor/japan/JP-10.svg"
+  },
+  "JP-34": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Hiroshima_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Alex_K_Hiroshima_kenki.svg",
+    "file": "vendor/japan/JP-34.svg"
+  },
+  "JP-01": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Flag_of_Hokkaido_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Hokkaido_Prefecture.svg",
+    "file": "vendor/japan/JP-01.svg"
+  },
+  "JP-28": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_Hyogo_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Hyogo_Prefecture.svg",
+    "file": "vendor/japan/JP-28.svg"
+  },
+  "JP-08": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Flag_of_Ibaraki_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ibaraki_Prefecture.svg",
+    "file": "vendor/japan/JP-08.svg"
+  },
+  "JP-17": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Ishikawa_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ishikawa_Prefecture.svg",
+    "file": "vendor/japan/JP-17.svg"
+  },
+  "JP-03": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Iwate_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iwate_Prefecture.svg",
+    "file": "vendor/japan/JP-03.svg"
+  },
+  "JP-37": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Kagawa_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kagawa_Prefecture.svg",
+    "file": "vendor/japan/JP-37.svg"
+  },
+  "JP-46": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Flag_of_Kagoshima_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kagoshima_Prefecture.svg",
+    "file": "vendor/japan/JP-46.svg"
+  },
+  "JP-14": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Flag_of_Kanagawa_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kanagawa_Prefecture.svg",
+    "file": "vendor/japan/JP-14.svg"
+  },
+  "JP-39": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Kochi_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kochi_Prefecture.svg",
+    "file": "vendor/japan/JP-39.svg"
+  },
+  "JP-43": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Kumamoto_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kumamoto_Prefecture.svg",
+    "file": "vendor/japan/JP-43.svg"
+  },
+  "JP-26": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Kyoto_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kyoto_prefecture.svg",
+    "file": "vendor/japan/JP-26.svg"
+  },
+  "JP-24": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Mie_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mie_prefecture.svg",
+    "file": "vendor/japan/JP-24.svg"
+  },
+  "JP-04": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Flag_of_Miyagi_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Miyagi_Prefecture.svg",
+    "file": "vendor/japan/JP-04.svg"
+  },
+  "JP-45": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Flag_of_Miyazaki_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Miyazaki_Prefecture.svg",
+    "file": "vendor/japan/JP-45.svg"
+  },
+  "JP-20": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Nagano_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nagano_Prefecture.svg",
+    "file": "vendor/japan/JP-20.svg"
+  },
+  "JP-42": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Nagasaki_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nagasaki_Prefecture.svg",
+    "file": "vendor/japan/JP-42.svg"
+  },
+  "JP-29": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Nara_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nara_Prefecture.svg",
+    "file": "vendor/japan/JP-29.svg"
+  },
+  "JP-15": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_Niigata_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Niigata_Prefecture.svg",
+    "file": "vendor/japan/JP-15.svg"
+  },
+  "JP-44": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Flag_of_Oita_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Oita_Prefecture.svg",
+    "file": "vendor/japan/JP-44.svg"
+  },
+  "JP-33": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flag_of_Okayama_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Okayama_Prefecture.svg",
+    "file": "vendor/japan/JP-33.svg"
+  },
+  "JP-47": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Okinawa_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Okinawa_Prefecture.svg",
+    "file": "vendor/japan/JP-47.svg"
+  },
+  "JP-27": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Osaka_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Osaka_Prefecture.svg",
+    "file": "vendor/japan/JP-27.svg"
+  },
+  "JP-41": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/Flag_of_Saga_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Saga_Prefecture.svg",
+    "file": "vendor/japan/JP-41.svg"
+  },
+  "JP-11": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Flag_of_Saitama_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Saitama_Prefecture.svg",
+    "file": "vendor/japan/JP-11.svg"
+  },
+  "JP-25": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Shiga_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Shiga_Prefecture.svg",
+    "file": "vendor/japan/JP-25.svg"
+  },
+  "JP-32": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Shimane_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Shimane_Prefecture.svg",
+    "file": "vendor/japan/JP-32.svg"
+  },
+  "JP-22": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_Shizuoka_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Shizuoka_Prefecture.svg",
+    "file": "vendor/japan/JP-22.svg"
+  },
+  "JP-09": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Flag_of_Tochigi_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tochigi_Prefecture.svg",
+    "file": "vendor/japan/JP-09.svg"
+  },
+  "JP-36": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Flag_of_Tokushima_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tokushima_Prefecture.svg",
+    "file": "vendor/japan/JP-36.svg"
+  },
+  "JP-13": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Flag_of_Tokyo_Metropolis.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tokyo_Prefecture.svg",
+    "file": "vendor/japan/JP-13.svg"
+  },
+  "JP-31": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Flag_of_Tottori_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tottori_Prefecture.svg",
+    "file": "vendor/japan/JP-31.svg"
+  },
+  "JP-16": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Flag_of_Toyama_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Toyama_Prefecture.svg",
+    "file": "vendor/japan/JP-16.svg"
+  },
+  "JP-30": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Flag_of_Wakayama_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Wakayama_Prefecture.svg",
+    "file": "vendor/japan/JP-30.svg"
+  },
+  "JP-06": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Flag_of_Yamagata_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Yamagata_Prefecture.svg",
+    "file": "vendor/japan/JP-06.svg"
+  },
+  "JP-35": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Yamaguchi_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Yamaguchi_Prefecture.svg",
+    "file": "vendor/japan/JP-35.svg"
+  },
+  "JP-19": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Yamanashi_Prefecture.svg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Yamanashi_Prefecture.svg",
+    "file": "vendor/japan/JP-19.svg"
+  }
+}

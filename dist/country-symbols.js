@@ -1,5 +1,6 @@
 // Small vector emblems; CSS rotates only the group marked as the rotor.
 window.AtlasSymbols={sequence:0,markup(country){
+ if(country==='japan')return '<img class="country-symbol symbol-rotor" src="vendor/japan-chrysanthemum.png" alt="" aria-hidden="true">';
  const key='emblem-'+(++this.sequence);
  const taiji='<circle cx="50" cy="50" r="49" fill="#fff" stroke="#171717" stroke-width="1"/><path d="M50 1a49 49 0 0 1 0 98 24.5 24.5 0 0 1 0-49 24.5 24.5 0 0 0 0-49" fill="#171717"/><circle cx="50" cy="25.5" r="7" fill="#171717"/><circle cx="50" cy="74.5" r="7" fill="#fff"/>';
  const taegeuk='<circle cx="50" cy="50" r="49" fill="#0047a0"/><path d="M1 50a49 49 0 0 1 98 0 24.5 24.5 0 0 1-49 0 24.5 24.5 0 0 0-49 0" fill="#cd2e3a"/>';

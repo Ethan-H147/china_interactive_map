@@ -1,0 +1,8 @@
+{
+  "retrieved": "2026-10-05",
+  "boundarySource": "https://github.com/piuccio/open-data-jp-prefectures-geojson",
+  "upstream": "https://nlftp.mlit.go.jp/ksj/",
+  "license": "MIT (processing); underlying MLIT data terms apply",
+  "processing": "Prefectures dissolved by source author; shared topology cleaned and simplified to 15 m for display. Separate 500 m camera-motion geometry.",
+  "prefectures": 47
+}

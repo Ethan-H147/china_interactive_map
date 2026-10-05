@@ -42,7 +42,7 @@ function syncDistrictLayers(){
 let provinceFeatures=[],manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 const quiz={active:false,round:null,pool:[],saved:null,highlighted:[],reviewLayer:null};
 let chinaReady=false,chinaLoading,countrySwitching=false,countryEpoch=0,requestedCountry;
-let normalProvinceColors,atlasMode='china',koreaAtlas,mongoliaAtlas,capitalDisplay,waterDisplay,satelliteDisplay,namingQuiz,placeTools;
+let normalProvinceColors,atlasMode='china',koreaAtlas,mongoliaAtlas,japanAtlas,capitalDisplay,waterDisplay,satelliteDisplay,namingQuiz,placeTools;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
 const tooltip=document.createElement('div');tooltip.className='region-tooltip gpu-tooltip';tooltip.hidden=true;$('map-shell').append(tooltip);
@@ -108,7 +108,7 @@ function kind(p){
   return 'Prefecture-level City';
 }
 function controls(){
-  const koreaLoading=atlasMode==='korea'&&!koreaAtlas?.ready||atlasMode==='mongolia'&&!mongoliaAtlas?.ready;
+  const koreaLoading=atlasMode==='korea'&&!koreaAtlas?.ready||atlasMode==='mongolia'&&!mongoliaAtlas?.ready||atlasMode==='japan'&&!japanAtlas?.ready;
   document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=atlasStarting||countrySwitching||(cameraBusy&&el.matches('input[type="checkbox"],input[type="range"]'))||!allReady||koreaLoading||(quiz.active&&!['home','zoom-in','zoom-out','fit-map'].includes(el.id)));
   document.querySelectorAll('[data-quiz-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);
   for(const id of ['tab-explore','tab-layers'])$(id).disabled=quiz.active;
@@ -221,10 +221,10 @@ function selectRegion(layer,parentCode,shouldFit=true){
   if(shouldFit&&layer.feature.geometry)return navigateBounds(layer.getBounds(),{paddingTopLeft:[35,70],paddingBottomRight:[55,65],maxZoom:regionZoom(p)});
   updateLabels();return Promise.resolve(true);
 }
-function currentAtlas(){return atlasMode==='korea'?koreaAtlas:atlasMode==='mongolia'?mongoliaAtlas:null;}
+function currentAtlas(){return atlasMode==='korea'?koreaAtlas:atlasMode==='mongolia'?mongoliaAtlas:atlasMode==='japan'?japanAtlas:null;}
 async function changeAtlas(next,animate=true){
- if(!allReady||quiz.active||!koreaAtlas||!mongoliaAtlas||!['china','korea','mongolia'].includes(next))return false;
- const targetAtlas=next==='korea'?koreaAtlas:next==='mongolia'?mongoliaAtlas:null;
+ if(!allReady||quiz.active||!koreaAtlas||!mongoliaAtlas||!japanAtlas||!['china','korea','mongolia','japan'].includes(next))return false;
+ const targetAtlas=next==='korea'?koreaAtlas:next==='mongolia'?mongoliaAtlas:next==='japan'?japanAtlas:null;
  if(!countrySwitching&&next===atlasMode&&(next==='china'?chinaReady:targetAtlas.ready))return true;
  if(countrySwitching&&next===requestedCountry)return false;
  const epoch=++countryEpoch;requestedCountry=next;saveView();countrySwitching=true;controls();cancelNavigation();
@@ -239,8 +239,8 @@ async function changeAtlas(next,animate=true){
   $('china-sidebar').hidden=next!=='china';$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:next!=='china'});
   syncCountryFills();syncLayers();updateLabels();koreaAtlas.context(next==='korea');mongoliaAtlas.context(next==='mongolia');
-  for(const [country,id,color] of [['china','china-context','#e9dfc9'],['korea','korea-portal-fill','#e7edf5'],['mongolia','mongolia-portal-fill','#d9e7ee']])if(map.getLayer(id))map.setPaintProperty(id,'fill-color',country===next?color:'#d7d7d3');
-  const bounds=next==='china'?homeBounds:next==='korea'?[[124,33],[131.9,43.1]]:[[87.7,41.5],[120,52.2]];
+  for(const [country,id,color] of [['china','china-context','#e9dfc9'],['korea','korea-portal-fill','#e7edf5'],['mongolia','mongolia-portal-fill','#d9e7ee'],['japan','japan-portal-fill','#fffdfd']])if(map.getLayer(id))map.setPaintProperty(id,'fill-color',country===next?color:'#d7d7d3');
+  const bounds=next==='china'?homeBounds:next==='korea'?[[124,33],[131.9,43.1]]:next==='japan'?[[122.8,24],[146.2,45.7]]:[[87.7,41.5],[120,52.2]];
   const movement=navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:next==='china'?12:next==='korea'?9:8},animate);
   await Promise.all([movement,next==='china'?loadChina():targetAtlas.warm()]);
   if(epoch!==countryEpoch)return false;
@@ -332,8 +332,8 @@ const satellitePaint=new Map();
 function satelliteAppearance(visible,opacity){
   $('map-shell').dataset.satellite=String(visible&&opacity>=.5);
   for(const id of ['province-fill','province-fragment-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',window.AtlasSatellite.provinceOpacity(visible,opacity));
-  for(const country of ['korea','mongolia'])for(const level of ['first','second']){const id=country+'-'+level+'-fill';if(!map.getLayer(id))continue;if(!satellitePaint.has(id))satellitePaint.set(id,map.getPaintProperty(id,'fill-opacity'));map.setPaintProperty(id,'fill-opacity',visible?['+',['*',satellitePaint.get(id),1-opacity],['*',opacity,['case',['boolean',['feature-state','selected'],false],.18,['boolean',['feature-state','hover'],false],.15,0]]]:satellitePaint.get(id));}
-  const colors={'korea-first-lines':'#fff0bb','korea-second-lines':'#f5dfab','mongolia-first-lines':'#fff0bb','mongolia-second-lines':'#f5dfab','province-lines':'#fff0bb','prefecture-lines':'#f5dfab','other-lines':'#f5dfab','city-district-lines':'#f5dfab'};
+  for(const country of ['korea','mongolia','japan'])for(const level of ['first','second']){const id=country+'-'+level+'-fill';if(!map.getLayer(id))continue;if(!satellitePaint.has(id))satellitePaint.set(id,map.getPaintProperty(id,'fill-opacity')??1);map.setPaintProperty(id,'fill-opacity',visible?['+',['*',satellitePaint.get(id),1-opacity],['*',opacity,['case',['boolean',['feature-state','selected'],false],.18,['boolean',['feature-state','hover'],false],.15,0]]]:satellitePaint.get(id));}
+  const colors={'japan-first-lines':'#fff0bb','korea-first-lines':'#fff0bb','korea-second-lines':'#f5dfab','mongolia-first-lines':'#fff0bb','mongolia-second-lines':'#f5dfab','province-lines':'#fff0bb','prefecture-lines':'#f5dfab','other-lines':'#f5dfab','city-district-lines':'#f5dfab'};
   for(const [id,color] of Object.entries(colors)){
     if(!map.getLayer(id))continue;
     if(visible){if(!satellitePaint.has(id))satellitePaint.set(id,map.getPaintProperty(id,'line-color'));map.setPaintProperty(id,'line-color',window.AtlasSatellite.blendColor(satellitePaint.get(id),color,opacity));}
@@ -352,7 +352,7 @@ function pickedRegion(point){
   for(const id of layers){const hit=hits.find(f=>f.layer.id===id||f.layer.id===aliases[id]);if(hit)return regionByCode.get(hit.properties.adcode);}
 }
 function countryAt(point){
- const countries={'korea-first-fill':'korea','korea-portal-fill':'korea','mongolia-first-fill':'mongolia','mongolia-portal-fill':'mongolia','province-fill':'china','province-fragment-fill':'china','china-context':'china'};
+ const countries={'japan-first-fill':'japan','japan-portal-fill':'japan','korea-first-fill':'korea','korea-portal-fill':'korea','mongolia-first-fill':'mongolia','mongolia-portal-fill':'mongolia','province-fill':'china','province-fragment-fill':'china','china-context':'china'};
  return window.AtlasMotion.queryRegions(map,point,{layers:Object.keys(countries)}).map(f=>countries[f.layer.id]).find(Boolean);
 }
 map.on('click',event=>{
@@ -425,7 +425,8 @@ async function init(){try{
  allReady=true;
   koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
   mongoliaAtlas=await window.AtlasMongolia.addMongoliaPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china'),population:p=>provincePopulation.mongolia[p.iso]||provincePopulation.mongolia[provincePopulation.mongoliaAliases[(p.en||'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'')]]});
-  satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const panel=$(atlasMode==='korea'?'k-layers-panel':atlasMode==='mongolia'?'m-layers-panel':'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
+  japanAtlas=await window.AtlasJapan.addJapanPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom}),switchAtlas:changeAtlas});
+  satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const panel=$(atlasMode==='korea'?'k-layers-panel':atlasMode==='mongolia'?'m-layers-panel':atlasMode==='japan'?'j-layers-panel':'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
   satelliteDisplay.sync();if($('satellite-layer').checked)$('satellite-layer').dispatchEvent(new Event('change'));
   const capitalsResponse=await fetch('data/capitals.json');
   if(!capitalsResponse.ok)throw new Error('Capital locations could not load');
@@ -439,7 +440,7 @@ async function init(){try{
   atlasStarting=false;window.AtlasEntry.ready();controls();refreshStatus();updateLabels();
   $('map-loading').hidden=true;
   // Prepare inactive countries in workers, without installing hidden GPU layers.
-  const preload=async()=>{for(const [country,atlas] of [['korea',koreaAtlas],['mongolia',mongoliaAtlas]]){
+  const preload=async()=>{for(const [country,atlas] of [['korea',koreaAtlas],['mongolia',mongoliaAtlas],['japan',japanAtlas]]){
    if(country===atlasMode||navigator.connection?.saveData)continue;
    await atlas.preload().catch(()=>{});motionRenderer.loadCountry(country).catch(()=>{});
   }};
@@ -488,7 +489,7 @@ async function followPlaceLink(){
   if(shared&&allReady&&koreaAtlas&&mongoliaAtlas){if(shared.country!==atlasMode)await changeAtlas(shared.country,false);await restoreView();return;}
   const country=window.AtlasEntry.fromHash(location.hash);
   if(country&&!location.hash.includes('place=')){
-    if(!allReady||!koreaAtlas||!mongoliaAtlas)return;
+    if(!allReady||!koreaAtlas||!mongoliaAtlas||!japanAtlas)return;
     if(cameraBusy){map.once('idle',followPlaceLink);return;}
     if(country===atlasMode)window.AtlasEntry.remember(country);else await changeAtlas(country);return;
   }

@@ -15,7 +15,7 @@ assert.match(satelliteSource.attribution,/Esri/);
 
 function element(value){return {value,hidden:true,checked:false,textContent:'',handlers:{},addEventListener(type,handler){this.handlers[type]=handler;},fire(type){this.handlers[type]();}};}
 const ui={input:element(),options:element(),opacity:element('100'),output:element(),status:element()};
-const layers=new Map([['province-fill',{}],['korea-portal-fill',{paint:{'fill-opacity':1}}],['mongolia-portal-fill',{paint:{'fill-opacity':1}}]]),sources=new Map(),events={},insertions=[],appearances=[];
+const layers=new Map([['province-fill',{}],['korea-portal-fill',{paint:{'fill-opacity':1}}],['mongolia-portal-fill',{paint:{'fill-opacity':1}}],['japan-portal-fill',{paint:{'fill-opacity':1}}]]),sources=new Map(),events={},insertions=[],appearances=[];
 let mode='china',quiz=false,timeout,cancelled=0;
 const map={getLayer:id=>layers.get(id),getSource:id=>sources.get(id),
   addSource(id,source){sources.set(id,source);},addLayer(layer,before){layers.set(layer.id,layer);insertions.push(before);},
@@ -32,16 +32,18 @@ events.sourcedata({sourceId,sourceDataType:'metadata'});assert.equal(appearances
 events.sourcedata({sourceId,sourceDataType:'content'});assert.equal(appearances.length,0,'Source metadata is not loaded imagery');
 events.sourcedata({sourceId,tile:{state:'errored'}});assert.equal(appearances.length,0);
 events.sourcedata({sourceId,tile:{state:'loaded'}});assert.deepEqual(appearances,[true]);assert.ok(cancelled);
-for(const id of ['korea-portal-fill','mongolia-portal-fill'])assert.equal(layers.get(id).paint['fill-opacity'],0,'No gray country patch over imagery');
+for(const id of ['korea-portal-fill','mongolia-portal-fill','japan-portal-fill'])assert.equal(layers.get(id).paint['fill-opacity'],0,'No gray country patch over imagery');
 ui.opacity.value='40';ui.opacity.fire('input');assert.equal(layers.get(sourceId).paint['raster-opacity'],.4);assert.equal(ui.output.textContent,'40%');
 quiz=true;display.sync();assert.equal(layers.get(sourceId).layout.visibility,'none');assert.equal(appearances.at(-1),false);assert.equal(ui.input.checked,true);
-for(const id of ['korea-portal-fill','mongolia-portal-fill'])assert.equal(layers.get(id).paint['fill-opacity'],1,'Restore context when imagery is hidden');
+for(const id of ['korea-portal-fill','mongolia-portal-fill','japan-portal-fill'])assert.equal(layers.get(id).paint['fill-opacity'],1,'Restore context when imagery is hidden');
 quiz=false;display.sync();assert.equal(appearances.at(-1),true);
 mode='korea';display.sync();assert.equal(appearances.at(-1),true);assert.equal(layers.get(sourceId).layout.visibility,'visible');
 mode='mongolia';display.sync();assert.equal(layers.get(sourceId).layout.visibility,'visible');
 const priorAppearances=appearances.length;
 layers.set('mongolia-first-fill',{});display.sync();
 assert.equal(appearances.length,priorAppearances+1,'Apply satellite styling to country layers loaded after imagery');
+mode='japan';display.sync();assert.equal(layers.get(sourceId).layout.visibility,'visible');
+layers.set('japan-first-fill',{});display.sync();assert.equal(appearances.at(-1),true);
 mode='china';display.sync();assert.equal(appearances.at(-1),true);
 ui.input.checked=false;ui.input.fire('change');assert.equal(ui.options.hidden,true);assert.equal(appearances.at(-1),false);
 ui.input.checked=true;ui.input.fire('change');assert.equal(insertions.length,1,'Reuse loaded raster tiles');
