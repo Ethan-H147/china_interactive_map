@@ -25,7 +25,7 @@ assert.notEqual(regions['china:341300'].gdp.value,regions['china:320500'].gdp.va
 assert(regions['china:540300'].gdp,'Chamdo/Qamdo matched');
 assert.match(formatMoney(62846257.1e6,'MNT'),/^MNT 62\.85 trillion$/);assert.equal(formatMoney(37461000,'MNT',true),'MNT 37,461,000');
 // Exercise delayed selection and network failure without the map renderer.
-class Node{constructor(tag,text=''){this.tag=tag;this.textContent=text;this.children=[];this.dataset={};}append(...children){this.children.push(...children);}replaceChildren(...children){this.children=children;}setAttribute(){}after(panel){this.parentElement.panel=panel;panel.parentElement=this.parentElement;}querySelector(){return this.panel;}get text(){return this.textContent+this.children.map(c=>c.text||'').join(' ');}}
+class Node{constructor(tag,text=''){this.tag=tag;this.textContent=text;this.children=[];this.dataset={};}append(...children){this.children.push(...children);}replaceChildren(...children){this.children=children;}setAttribute(){}after(panel){this.parentElement.panel=panel;panel.parentElement=this.parentElement;}querySelector(selector){return selector.includes('.population')?null:this.panel;}get text(){return this.textContent+this.children.map(c=>c.text||'').join(' ');}}
 globalThis.document={createElement:tag=>new Node(tag),createTextNode:text=>new Node('#text',text)};
 const parent=new Node('div'),anchor=new Node('div');anchor.parentElement=parent;
 let finish,requests=0;globalThis.fetch=()=>{requests++;return new Promise(resolve=>{finish=resolve;});};

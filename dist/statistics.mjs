@@ -9,18 +9,37 @@ export function formatMoney(value,currency,perCapita=false){
 }
 const element=(tag,text,className)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(className)n.className=className;return n;};
 function link(source,label){const a=element('a',label||source.title);a.href=source.url;a.target='_blank';a.rel='noopener';return a;}
+function prepareDetails(anchor){
+ const parent=anchor.parentElement,population=parent.querySelector(':scope > .population');
+ if(population)anchor.after(population);
+ const sidebar=anchor.closest?.('.sidebar');
+ if(sidebar&&!sidebar.querySelector('.details-expand')){
+  const button=element('button',null,'details-expand');button.type='button';
+  button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>';
+  button.setAttribute('aria-controls',sidebar.id);
+  const setExpanded=expanded=>{sidebar.classList.toggle('details-expanded',expanded);button.setAttribute('aria-expanded',String(expanded));button.setAttribute('aria-label',expanded?'Collapse region details':'Expand region details');button.title=expanded?'Collapse details (Esc)':'Expand region details';requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));};
+  button.onclick=()=>setExpanded(!sidebar.classList.contains('details-expanded'));
+  sidebar.addEventListener('keydown',event=>{if(event.key==='Escape'&&sidebar.classList.contains('details-expanded')){setExpanded(false);button.focus();event.stopPropagation();}});
+  sidebar.append(button);setExpanded(false);
+ }
+ return population||anchor;
+}
 export async function renderStatistics(anchor,key){
  if(!anchor)return;
+ const insertionPoint=prepareDetails(anchor);
  let panel=anchor.parentElement.querySelector(':scope > .region-statistics');
- if(!panel){panel=element('section',null,'region-statistics');panel.setAttribute('aria-label','Area and economy');anchor.after(panel);}
- panel.dataset.region=key;panel.replaceChildren(element('h3','Area & economy'),element('p','Loading statistics…','statistics-note'));
+ if(!panel){panel=element('section',null,'region-statistics');panel.setAttribute('aria-label','Area and economy');}
+ insertionPoint.after(panel);
+ panel.dataset.region=key;panel.replaceChildren(element('p','Loading statistics…','statistics-note'));
  try{
   const data=await loadStatistics();if(panel.dataset.region!==key)return;
-  const record=data.regions[key];panel.replaceChildren(element('h3','Area & economy'));
+  const record=data.regions[key];panel.replaceChildren();
   if(!record){panel.append(element('p','Statistics have not been verified for this division.','statistics-note'));return;}
-  const dl=element('dl',null,'statistics-values');panel.append(dl);
+  const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
+  area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area,economy);
+  const areaValues=element('dl',null,'statistics-values'),economyValues=element('dl',null,'statistics-values');area.append(areaValues);economy.append(economyValues);
   for(const [field,label] of [['area','Area'],['gdp','GDP'],['gdpPerCapita','GDP per capita']]){
-   const metric=record[field],dt=element('dt',field==='area'&&metric?.method==='mapped'?'Mapped area ≈':label),dd=element('dd');dl.append(dt,dd);
+   const dl=field==='area'?areaValues:economyValues,metric=record[field],dt=element('dt',field==='area'?(metric?.method==='mapped'?'Mapped area ≈':'Total area'):label),dd=element('dd');dl.append(dt,dd);
    if(!metric){dd.append(element('span','Not available','statistics-missing'));continue;}
    dd.append(element('strong',field==='area'?new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(metric.value)+' km²':formatMoney(metric.value,metric.currency,field==='gdpPerCapita')));
    if(field!=='area')dd.append(element('span',metric.usd?'≈ '+formatMoney(metric.usd,'USD',field==='gdpPerCapita'):'USD conversion unavailable','statistics-usd'));
@@ -33,7 +52,7 @@ export async function renderStatistics(anchor,key){
   notes.append(link({url:'data/statistics-methodology.html',title:'Coverage & methodology'}));panel.append(notes);
  }catch{
   if(panel.dataset.region!==key)return;
-  panel.replaceChildren(element('h3','Area & economy'),element('p','Statistics could not load.','statistics-note'));
+  panel.replaceChildren(element('p','Statistics could not load.','statistics-note'));
   const retry=element('button','Retry','quiet-button');retry.type='button';retry.onclick=()=>renderStatistics(anchor,key);panel.append(retry);
  }
 }
