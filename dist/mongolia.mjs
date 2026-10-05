@@ -1,12 +1,10 @@
 import {loadCompressed} from './korea-data.mjs';
 import {mongoliaPanel} from './mongolia-panel.mjs';
-import {lineData,adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-lines.mjs';
+import {adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-lines.mjs';
 export async function addMongoliaPortal(map,host){
  const outline=await loadCompressed('data/mongolia-context.bin'),home=[[87.7,41.5],[120,52.2]];
  map.addSource('mongolia-portal',{type:'geojson',data:outline,tolerance:0,maxzoom:18,buffer:128});
- map.addSource('mongolia-portal-edges',{...lineSourceOptions,data:lineData(outline)});
  map.addLayer({id:'mongolia-portal-fill',type:'fill',source:'mongolia-portal',paint:{'fill-color':'#d7d7d3','fill-opacity':1,'fill-antialias':false}},map.getLayer('province-fill')?'province-fill':undefined);
- map.addLayer({id:'mongolia-portal-line',type:'line',source:'mongolia-portal-edges',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#aaa9a2','line-width':.75,'line-opacity':adaptiveOpacity()}},map.getLayer('province-fill')?'province-fill':undefined);
  const template=document.createElement('template');template.innerHTML=mongoliaPanel;
  const sidebar=template.content.querySelector('aside'),dialog=template.content.querySelector('dialog');
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));document.body.append(dialog);
@@ -87,5 +85,5 @@ async function ensureData(){
  function leave(){active=false;sidebar.hidden=true;clearLabels();clearHover();for(const id of layerIds)show(id,false);}
  async function enter(shouldFit=true){active=true;sidebar.hidden=false;document.getElementById('home').textContent='All Mongolia';document.getElementById('mode-province').textContent='Provinces';document.getElementById('mode-prefecture').textContent='Districts';state(selected,{selected:false});selected=null;$('tab-explore').hidden=true;panel('layers');setMode(1,true);const status=document.getElementById('status');status.hidden=ready;status.textContent='Loading Mongolia boundaries…';host.controls();try{await ensureData();if(!active)return;sync();status.hidden=true;if(shouldFit)await host.fit(home,7);updateLabels();}catch(error){console.warn('Mongolia:',error);host.returnToChina();}}
  window.addEventListener('pagehide',e=>{if(!e.persisted)urls.forEach(url=>URL.revokeObjectURL(url));});
- return {getSelection:()=>selected?.properties.id||null,async restore(id){const f=index.get(id);if(f)await select(f,false);sync();},sync,enter,leave,viewParent,home:reset,setMode,updateLabels,pauseLabels:clearLabels,preload,warm:ensureData,get active(){return active;},get ready(){return ready;},random(){if(ready&&!host.isBusy()){const places=selected?data.second.features.filter(f=>f.properties.parent===(selected.properties.level===1?selected.properties.id:selected.properties.parent)):data.second.features;select(places[Math.floor(Math.random()*places.length)]);}},context(value){map.setPaintProperty('mongolia-portal-line','line-opacity',value?0:adaptiveOpacity());}};
+ return {getSelection:()=>selected?.properties.id||null,async restore(id){const f=index.get(id);if(f)await select(f,false);sync();},sync,enter,leave,viewParent,home:reset,setMode,updateLabels,pauseLabels:clearLabels,preload,warm:ensureData,get active(){return active;},get ready(){return ready;},random(){if(ready&&!host.isBusy()){const places=selected?data.second.features.filter(f=>f.properties.parent===(selected.properties.level===1?selected.properties.id:selected.properties.parent)):data.second.features;select(places[Math.floor(Math.random()*places.length)]);}},context(){}};
 }
