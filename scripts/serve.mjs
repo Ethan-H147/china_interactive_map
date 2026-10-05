@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 const root=fileURLToPath(new URL('../dist/',import.meta.url));
 http.createServer(async(req,res)=>{try{
   const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+  if(pathname==='/symbols-preview'){res.setHeader('Content-Type','text/html; charset=utf-8');res.end(await readFile(new URL('symbol-preview.html',import.meta.url)));return;}
   if(pathname==='/__benchmark.js'){res.setHeader('Content-Type','text/javascript');res.end(await readFile(new URL('benchmark-client.js',import.meta.url)));return;}
   if(pathname==='/benchmark'){res.setHeader('Content-Type','text/html; charset=utf-8');res.end((await readFile(path.join(root,'index.html'),'utf8')).replace('</body>','<script src="/__benchmark.js" defer></script></body>'));return;}
   const file=path.resolve(root,'.'+(pathname==='/'?'/index.html':pathname));

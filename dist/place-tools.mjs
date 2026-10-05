@@ -24,11 +24,11 @@ export function createPlaceTools(host){
     $('place-action-status').textContent=saved?(had?'Removed from saved places.':'Saved in this browser.'):'Browser storage is unavailable. This list will last until you close the page.';
   };
   $('copy-place').onclick=async()=>{
-    if(!selected)return;const url=new URL(location.href);url.hash='place='+encodeURIComponent(selected);
+    if(!selected)return;const url=new URL(location.href);url.hash='china/place='+encodeURIComponent(selected);
     try{await navigator.clipboard.writeText(url.href);$('place-action-status').textContent='Link copied.';}
     catch{$('place-share-link').hidden=false;$('place-share-link').value=url.href;$('place-share-link').select();$('place-action-status').textContent='Copy this link to share the place.';}
     $('place-action-status').hidden=false;
   };
   render();
-  return{show(code){selected=String(code);$('place-action-status').hidden=true;$('place-share-link').hidden=true;render();},linkCode(){try{return location.hash.startsWith('#place=')?decodeURIComponent(location.hash.slice(7)):null;}catch{return null;}}};
+  return{show(code){selected=String(code);$('place-action-status').hidden=true;$('place-share-link').hidden=true;render();},linkCode(){try{const match=/^#(?:china\/)?place=(.*)$/.exec(location.hash);return match?decodeURIComponent(match[1]):null;}catch{return null;}}};
 }
