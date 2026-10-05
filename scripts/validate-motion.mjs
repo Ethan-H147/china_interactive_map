@@ -86,6 +86,15 @@ map.queryRenderedFeatures=(point,{layers})=>{pickedLayers=layers;return[{propert
 assert.equal(queryRegions(map,[0,0],{layers:['prefecture-fill']})[0].layer.id,'prefecture-fill');
 assert.deepEqual(pickedLayers,['prefecture-fill','prefecture-fill-motion']);
 assert.equal(map.getLayoutProperty('prefecture-selection','visibility'),'none');
+// All callers must wait for the same restoration before changing atlas visibility.
+const raceMap=fakeMap(),raceMotion=createMotionRenderer(raceMap);await raceMotion.ready;await raceMotion.begin();raceMap.sourceLoaded=false;
+const restoration=raceMotion.end();assert.equal(raceMotion.end(),restoration,'Repeated end calls share the restoration barrier');
+await new Promise(resolve=>setImmediate(resolve));raceMap.sourceLoaded=true;raceMap.emit('render');await restoration;
+raceMap.setLayoutProperty('province-fill','visibility','none');await raceMotion.end();raceMap.emit('render');
+assert.equal(raceMap.getLayoutProperty('province-fill','visibility'),'none','An old restoration cannot resurrect a previous country');
+const cancelledMap=fakeMap();cancelledMap.triggerRepaint=()=>{};const cancelledMotion=createMotionRenderer(cancelledMap);await cancelledMotion.ready;
+const starting=cancelledMotion.begin(),stopping=cancelledMotion.end();cancelledMap.emit('render');await new Promise(resolve=>setImmediate(resolve));cancelledMap.emit('render');
+assert.equal(await starting,false);await stopping;assert.equal(cancelledMap.getLayoutProperty('province-fill','visibility')||'visible','visible');assert.equal(frames.at(-1).style.display,'none');
 // Missing assets and a timed-out overlay fall back to the precise renderer.
 prepared=undefined;const failed=createMotionRenderer(fakeMap());await failed.ready;assert.equal(await failed.begin(),false);
 prepared={provinces:{data:blob([feature(1)]),ids:[1]}};const slow=fakeMap();slow.sourceLoaded=false;

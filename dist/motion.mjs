@@ -14,7 +14,7 @@ export function setFeatureState(map,target,state){
 
 export function createMotionRenderer(map,initialCountry='china'){
  let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise;
- let generation=0;
+ let generation=0,restorePromise;
  const urls=new Map(),layers=new Map(),dynamicKeys=new Map();
  const frame=document.createElement('canvas');
  frame.className='map-handoff-frame';frame.setAttribute('aria-hidden','true');
@@ -93,7 +93,8 @@ export function createMotionRenderer(map,initialCountry='china'){
   // Motion layers form a complete overlay in the original drawing order.
   if(added)for(const layer of style.layers)if(layers.has(layer.id))map.moveLayer(layer.id+suffix);
  }
- function clearOverlay(){
+ function clearOverlay(token=generation){
+  if(token!==generation)return;
   if(restoreListener)map.off('render',restoreListener);restoreListener=undefined;
   clearTimeout(restoreTimer);restoreResolve?.();restoreResolve=undefined;
   for(const {id} of layers.values())setLayerVisible(map,id,false);
@@ -126,20 +127,23 @@ export function createMotionRenderer(map,initialCountry='china'){
    const check=()=>{if(visible.every(id=>map.isSourceLoaded(id)))finish(true);};
    map.on('render',check);timer=setTimeout(()=>finish(false),400);map.triggerRepaint();
   });
+  if(token!==generation)return false;
   if(!loaded){await end();return false;}
   releaseFrame();
   return true;
  }
  function end(){
-  if(!active)return;active=false;restoring=true;
+  if(restoring)return restorePromise;
+  if(!active)return Promise.resolve();active=false;restoring=true;
   const token=++generation;
   const complete=new Promise(resolve=>{restoreResolve=resolve;});
+  restorePromise=complete;
   holdFrame().then(()=>{
    if(token!==generation)return;
    restoreOriginals();
    const visible=[...new Set([...layers].filter(([,entry])=>entry.visibility==='visible').map(([id])=>map.getLayer(id).source))];
-   restoreListener=()=>{if(visible.every(id=>map.isSourceLoaded(id)))clearOverlay();};
-   restoreTimer=setTimeout(clearOverlay,1000);
+   restoreListener=()=>{if(visible.every(id=>map.isSourceLoaded(id)))clearOverlay(token);};
+   restoreTimer=setTimeout(()=>clearOverlay(token),1000);
    map.on('render',restoreListener);map.triggerRepaint();
   });
   return complete;

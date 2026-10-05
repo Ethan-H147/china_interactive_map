@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "test:entry": "node --check dist/atlas-entry.js && node --check dist/country-symbols.js && node scripts/validate-entry.mjs",
-    "posttest": "npm run test:entry && npm run test:experience",
+    "posttest": "npm run test:entry && npm run test:experience && npm run test:countries",
     "build": "node scripts/build-boundaries.mjs && node scripts/reconcile-international.mjs && npm run build:fills",
     "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && npm run test:taiwan && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore && npm run test:water && npm run test:names-quiz && npm run test:satellite && npm run test:shenzhen && npm run test:pearl-coast && npm run test:province-population && npm run test:mongolia && npm run test:fills && npm run test:motion",
     "start": "node scripts/serve.mjs",
@@ -40,6 +40,7 @@
     "build:motion": "node scripts/prepare-motion.mjs && node scripts/prepare-context.mjs",
     "test:motion": "node --check dist/motion-worker.mjs && node scripts/validate-motion.mjs",
     "test:taiwan": "node scripts/validate-taiwan.mjs",
-    "test:experience": "node scripts/validate-experience.mjs"
+    "test:experience": "node scripts/validate-experience.mjs",
+    "test:countries": "node scripts/validate-country-switching.mjs"
   }
 }
