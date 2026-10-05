@@ -1,10 +1,12 @@
 {
   "alignment": {
-    "changedEdges": 70,
-    "maxDisplacementMetres": 2482.429112588432,
+    "changedEdges": 8504,
+    "maxDisplacementMetres": 2495.5618595483097,
     "changedRegions": [
-      441300,
-      440400
+      440400,
+      820001,
+      820010,
+      820011
     ]
   },
   "catalogueMatches": [
@@ -104,7 +106,7 @@
       "page": 197,
       "landId": 1133,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 69,
@@ -118,7 +120,7 @@
       "page": 197,
       "landId": 310,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 81,
@@ -174,7 +176,7 @@
       "page": 197,
       "landId": 233,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 94,
@@ -202,7 +204,7 @@
       "page": 198,
       "landId": 235,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 102,
@@ -216,7 +218,7 @@
       "page": 198,
       "landId": 282,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 103,
@@ -230,7 +232,7 @@
       "page": 198,
       "landId": 270,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 104,
@@ -300,7 +302,7 @@
       "page": 198,
       "landId": 291,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 113,
@@ -314,7 +316,7 @@
       "page": 198,
       "landId": 241,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 114,
@@ -328,7 +330,7 @@
       "page": 198,
       "landId": 760,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 115,
@@ -342,7 +344,7 @@
       "page": 198,
       "landId": 231,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 116,
@@ -384,7 +386,7 @@
       "page": 198,
       "landId": 298,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 119,
@@ -398,7 +400,7 @@
       "page": 198,
       "landId": 320,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 120,
@@ -510,7 +512,7 @@
       "page": 199,
       "landId": 240,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 139,
@@ -538,7 +540,7 @@
       "page": 199,
       "landId": 297,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 144,
@@ -566,7 +568,7 @@
       "page": 199,
       "landId": 300,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 149,
@@ -580,7 +582,7 @@
       "page": 199,
       "landId": 244,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 150,
@@ -594,7 +596,7 @@
       "page": 199,
       "landId": 178,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 151,
@@ -622,7 +624,7 @@
       "page": 199,
       "landId": 489,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 153,
@@ -650,7 +652,7 @@
       "page": 199,
       "landId": 2630,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 156,
@@ -678,7 +680,7 @@
       "page": 199,
       "landId": 211,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 158,
@@ -720,7 +722,7 @@
       "page": 200,
       "landId": 239,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 165,
@@ -734,7 +736,7 @@
       "page": 200,
       "landId": 263,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 166,
@@ -748,7 +750,7 @@
       "page": 200,
       "landId": 283,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 170,
@@ -818,7 +820,7 @@
       "page": 200,
       "landId": 483,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 178,
@@ -874,7 +876,7 @@
       "page": 200,
       "landId": 147,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 185,
@@ -902,7 +904,7 @@
       "page": 200,
       "landId": 257,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 187,
@@ -1014,7 +1016,7 @@
       "page": 201,
       "landId": 299,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 197,
@@ -1056,7 +1058,7 @@
       "page": 201,
       "landId": 728,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 200,
@@ -1070,7 +1072,7 @@
       "page": 201,
       "landId": 265,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 202,
@@ -1126,7 +1128,7 @@
       "page": 201,
       "landId": 197,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 206,
@@ -1168,7 +1170,7 @@
       "page": 201,
       "landId": 729,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 210,
@@ -1182,7 +1184,7 @@
       "page": 201,
       "landId": 732,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 211,
@@ -1196,7 +1198,7 @@
       "page": 201,
       "landId": 23,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 212,
@@ -1224,7 +1226,7 @@
       "page": 201,
       "landId": 168,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 214,
@@ -1238,7 +1240,7 @@
       "page": 201,
       "landId": 53,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 215,
@@ -1294,7 +1296,7 @@
       "page": 201,
       "landId": 27,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 222,
@@ -1322,7 +1324,7 @@
       "page": 201,
       "landId": 2482,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 224,
@@ -1364,7 +1366,7 @@
       "page": 202,
       "landId": 170,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 228,
@@ -1378,7 +1380,7 @@
       "page": 202,
       "landId": 56,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 229,
@@ -1392,7 +1394,7 @@
       "page": 202,
       "landId": 249,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 230,
@@ -1406,7 +1408,7 @@
       "page": 202,
       "landId": 496,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 231,
@@ -1420,7 +1422,7 @@
       "page": 202,
       "landId": 790,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 234,
@@ -1434,7 +1436,7 @@
       "page": 202,
       "landId": 307,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 235,
@@ -1448,7 +1450,7 @@
       "page": 202,
       "landId": 301,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 236,
@@ -1462,7 +1464,7 @@
       "page": 202,
       "landId": 269,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 237,
@@ -1476,7 +1478,7 @@
       "page": 202,
       "landId": 237,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 238,
@@ -1700,7 +1702,7 @@
       "page": 203,
       "landId": 295,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 265,
@@ -1798,7 +1800,7 @@
       "page": 203,
       "landId": 629,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 279,
@@ -1980,7 +1982,7 @@
       "page": 222,
       "landId": 712,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 893,
@@ -1994,7 +1996,7 @@
       "page": 222,
       "landId": 112,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 894,
@@ -2008,7 +2010,7 @@
       "page": 222,
       "landId": 3,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 895,
@@ -2106,7 +2108,7 @@
       "page": 223,
       "landId": 431,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 905,
@@ -2120,7 +2122,7 @@
       "page": 223,
       "landId": 1897,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 909,
@@ -2134,7 +2136,7 @@
       "page": 223,
       "landId": 80,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 910,
@@ -2162,7 +2164,7 @@
       "page": 223,
       "landId": 1198,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 916,
@@ -2274,7 +2276,7 @@
       "page": 223,
       "landId": 223,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 926,
@@ -2288,7 +2290,7 @@
       "page": 223,
       "landId": 15,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 929,
@@ -2302,7 +2304,7 @@
       "page": 224,
       "landId": 129,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 930,
@@ -2316,7 +2318,7 @@
       "page": 224,
       "landId": 22,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 931,
@@ -2330,7 +2332,7 @@
       "page": 224,
       "landId": 191,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 932,
@@ -2344,7 +2346,7 @@
       "page": 224,
       "landId": 2339,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 935,
@@ -2358,7 +2360,7 @@
       "page": 224,
       "landId": 25,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 936,
@@ -2372,7 +2374,7 @@
       "page": 224,
       "landId": 70,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 937,
@@ -2386,7 +2388,7 @@
       "page": 224,
       "landId": 1866,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 938,
@@ -2400,7 +2402,7 @@
       "page": 224,
       "landId": 164,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 940,
@@ -2414,7 +2416,7 @@
       "page": 224,
       "landId": 84,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 941,
@@ -2428,7 +2430,7 @@
       "page": 224,
       "landId": 227,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 942,
@@ -2442,7 +2444,7 @@
       "page": 224,
       "landId": 140,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 943,
@@ -2484,7 +2486,7 @@
       "page": 224,
       "landId": 224,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 949,
@@ -2498,7 +2500,7 @@
       "page": 224,
       "landId": 7,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 950,
@@ -2526,7 +2528,7 @@
       "page": 224,
       "landId": 185,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 953,
@@ -2596,7 +2598,7 @@
       "page": 224,
       "landId": 187,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 959,
@@ -2610,7 +2612,7 @@
       "page": 225,
       "landId": 1316,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 962,
@@ -2624,7 +2626,7 @@
       "page": 225,
       "landId": 144,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 963,
@@ -2652,7 +2654,7 @@
       "page": 225,
       "landId": 199,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 967,
@@ -2666,7 +2668,7 @@
       "page": 225,
       "landId": 142,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 968,
@@ -2694,7 +2696,7 @@
       "page": 225,
       "landId": 498,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 970,
@@ -2722,7 +2724,7 @@
       "page": 225,
       "landId": 497,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 976,
@@ -2764,7 +2766,7 @@
       "page": 225,
       "landId": 226,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 986,
@@ -2792,7 +2794,7 @@
       "page": 225,
       "landId": 72,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 988,
@@ -2918,7 +2920,7 @@
       "page": 226,
       "landId": 113,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 1012,
@@ -2932,7 +2934,7 @@
       "page": 226,
       "landId": 1089,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 1014,
@@ -3002,7 +3004,7 @@
       "page": 227,
       "landId": 715,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 1024,
@@ -3016,7 +3018,7 @@
       "page": 227,
       "landId": 46,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 1025,
@@ -3044,7 +3046,7 @@
       "page": 227,
       "landId": 433,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 1028,
@@ -3058,7 +3060,7 @@
       "page": 227,
       "landId": 721,
       "match": "unique island in coordinate rounding cell",
-      "added": true
+      "added": false
     },
     {
       "number": 1029,
@@ -3072,7 +3074,7 @@
       "page": 227,
       "landId": 184,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     },
     {
       "number": 1030,
@@ -3100,7 +3102,7 @@
       "page": 227,
       "landId": 133,
       "match": "coordinate inside island",
-      "added": true
+      "added": false
     }
   ],
   "catalogueUnmatched": [
@@ -4808,7 +4810,7 @@
       "ownershipReference": "https://gdee.gd.gov.cn/attachment/0/359/359113/2475760.pdf",
       "evidence": "Guangdong environmental assessment 17GDTXHP015 lists 珠海横洲岛F-ZLH in 万山海洋开发试验区. The named OSM coastline way identifies the physical island; the point only selects that polygon.",
       "landId": 280,
-      "added": true
+      "added": false
     }
   ],
   "cities": [
@@ -5046,10 +5048,10 @@
     },
     {
       "adcode": 440400,
-      "oldParts": 33,
-      "newParts": 319,
-      "oldVertices": 1062,
-      "newVertices": 33216,
+      "oldParts": 319,
+      "newParts": 351,
+      "oldVertices": 33216,
+      "newVertices": 35890,
       "wholeIslands": 331,
       "wholeIslandIds": [
         2,
@@ -5386,12 +5388,29 @@
       ]
     }
   ],
+  "catalogueNote": "Unmatched entries include reclaimed mainland sites, ambiguous small rocks and features without a corresponding physical island in this shoreline snapshot. They do not generate guessed polygons.",
+  "catalogueSource": {
+    "url": "https://www.gov.cn/xinwen/2018-06/08/5297114/files/c598d7ab3259486b846cb4f0777ce44c.pdf",
+    "mirror": "https://ctten.swjtu.edu.cn/__local/E/99/0F/A71B1523915F13E83ED732BF5DA_E066A7A8_308192.pdf?e=.pdf",
+    "pdfSha256": "8bc959a0e0bea28a92f116bcbee23ea633aa9f2f1b154c3b717b14cefc4a4179",
+    "coordinatePrecision": "0.1 arcminute; use as island identity checkpoints, never as coastline vertices"
+  },
   "guangzhouDistricts": {
     "coastalAdditions": 0,
     "otherDistricts": 43
   },
   "baseline": "78ec48760a94ba9e52f96d215549340a230454e9",
-  "method": "Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions and the previously reviewed Zhuhai–Macau port window. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled.",
+  "method": "Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions. Hengqin uses the physical land mask minus unchanged Macau government jurisdictions; the reviewed port island uses its existing physical shoreline. No rectangular coastal preservation window is applied. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled.",
+  "hengqinCorrection": {
+    "baseline": "3fca3014603c67d0921d63811345e87c1a823cb6",
+    "removedPreservationBounds": [
+      113.48,
+      22.08,
+      113.61,
+      22.26
+    ],
+    "method": "Replace retained coarse Hengqin coastline with physical OSM land. Preserve the complete physical port island and erase unchanged Macau jurisdictions. No rectangular restoration."
+  },
   "references": [
     {
       "url": "https://ghzyj.gz.gov.cn/zzfw/bmwj/content/post_10596660.html",
@@ -5401,12 +5420,5 @@
       "url": "https://www.gov.cn/xinwen/2018-06/08/5297114/files/c598d7ab3259486b846cb4f0777ce44c.pdf",
       "description": "2018 Ministry of Civil Affairs / State Oceanic Administration standard island names and jurisdictions, including Zhuhai Wanshan islands and Huizhou Dajia / Xiaojia"
     }
-  ],
-  "catalogueNote": "Unmatched entries include reclaimed mainland sites, ambiguous small rocks and features without a corresponding physical island in this shoreline snapshot. They do not generate guessed polygons.",
-  "catalogueSource": {
-    "url": "https://www.gov.cn/xinwen/2018-06/08/5297114/files/c598d7ab3259486b846cb4f0777ce44c.pdf",
-    "mirror": "https://ctten.swjtu.edu.cn/__local/E/99/0F/A71B1523915F13E83ED732BF5DA_E066A7A8_308192.pdf?e=.pdf",
-    "pdfSha256": "8bc959a0e0bea28a92f116bcbee23ea633aa9f2f1b154c3b717b14cefc4a4179",
-    "coordinatePrecision": "0.1 arcminute; use as island identity checkpoints, never as coastline vertices"
-  }
+  ]
 }

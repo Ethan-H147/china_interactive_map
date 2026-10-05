@@ -7,6 +7,7 @@ import {mesh} from 'topojson-client';
 import {readData} from './read-data.mjs';
 import {lineData,adaptiveOpacity} from '../dist/adaptive-lines.mjs';
 import mapshaper from 'mapshaper';
+import {eastChangedCodes} from './east-coast.mjs';
 const china=readData('display-boundaries.json'),korea=JSON.parse(gunzipSync(fs.readFileSync('dist/data/korea-boundaries.bin')));
 const show=file=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show','ef94bc5d8439a119e3fc0278f20246844d2d5296:dist/data/'+file],{maxBuffer:50e6});assert.equal(r.status,0);return r.stdout;};
 const manifest=JSON.parse(show('display-boundaries.parts.json'));
@@ -18,6 +19,7 @@ changed.add(230800);changed.add(230900);
 changed.add(440300);
 // Pearl River coast refinements have dedicated source and preservation checks.
 for(const code of [440100,440400,441300])changed.add(code);
+for(const code of eastChangedCodes)changed.add(code);
 for(const f of old.subdivisions.features){const now=china.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(now.properties,f.properties);if(!changed.has(f.properties.adcode))assert.deepEqual(now.geometry,f.geometry,'Unrelated China geometry must remain exact: '+f.properties.adcode);}
 function shared(features){
  const top=topology({regions:{type:'FeatureCollection',features}});

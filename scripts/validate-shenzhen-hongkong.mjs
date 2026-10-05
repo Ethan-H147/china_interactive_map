@@ -9,6 +9,7 @@ import mapshaper from 'mapshaper';
 import {readData} from './read-data.mjs';
 import {polygons} from './international-topology.mjs';
 import {canonicalHongKongBorder,segmentDistanceIndex,borderRule} from './shenzhen-hongkong.mjs';
+import {eastChangedCodes} from './east-coast.mjs';
 const show=n=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',borderRule.baseline+':dist/data/'+n],{maxBuffer:50e6});assert.equal(r.status,0);return r.stdout;};
 const manifest=JSON.parse(show('display-boundaries.parts.json')),before=JSON.parse(gunzipSync(Buffer.concat(manifest.parts.map(show))));
 const preview=process.argv.includes('--preview')?JSON.parse(fs.readFileSync('artifacts/shenzhen-hongkong-preview.json')):null;
@@ -16,8 +17,8 @@ const after=preview?.data||readData('display-boundaries.json'),districts=preview
 const city=after.subdivisions.features.find(f=>f.properties.adcode===440300),oldCity=before.subdivisions.features.find(f=>f.properties.adcode===440300),hk=after.provinces.features.find(f=>f.properties.adcode===810000),canonical=canonicalHongKongBorder(hk);
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 assert.equal(createHash('sha256').update(fs.readFileSync(borderRule.sourceFile)).digest('hex'),borderRule.sourceSha256);
-for(const f of before.subdivisions.features)if(![440300,440100,440400,441300].includes(f.properties.adcode))assert.equal(hash(after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated region changed '+f.properties.adcode);
-for(const f of before.provinces.features)if(f.properties.adcode!==440000)assert.equal(hash(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated province changed '+f.properties.adcode);
+for(const f of before.subdivisions.features)if(![440300,440100,440400,441300].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode))assert.equal(hash(after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated region changed '+f.properties.adcode);
+for(const f of before.provinces.features)if(![440000,310000,330000].includes(f.properties.adcode))assert.equal(hash(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated province changed '+f.properties.adcode);
 const changed=new Set([440303,440304,440308]);
 for(const f of oldDistricts.regions.features)if(!changed.has(f.properties.adcode)&&f.properties.parentCity!==440100)assert.equal(hash(districts.regions.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated district changed '+f.properties.adcode);
 const key=p=>p.join(','),edge=(a,b)=>[key(a),key(b)].sort().join('|'),edges=g=>new Set(polygons(g).flatMap(p=>p.flatMap(r=>r.slice(1).map((b,i)=>edge(r[i],b)))));

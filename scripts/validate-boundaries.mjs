@@ -4,6 +4,7 @@ import {readData} from './read-data.mjs';
 import {transformFeature} from './coordinates.mjs';
 import {gunzipSync} from 'node:zlib';
 import {run as coastOverlay,collection} from './pearl-coast.mjs';
+import {eastChangedCodes} from './east-coast.mjs';
 const root=new URL('../dist/data/',import.meta.url);
 const read=readData;
 const {provinces,subdivisions,boundaries}=read('display-boundaries.json');
@@ -13,6 +14,7 @@ const supplementalTaiwan=read('taiwan-regions.json');
 const supplementalXinjiang={...read('xinjiang-additions.json'),features:read('xinjiang-additions.json').features.map(transformFeature)};
 const sar=new Map([810000,820000].map(code=>[code,read('sar-'+code+'.json').features]));
 const pearlLand=JSON.parse(gunzipSync(fs.readFileSync(new URL('pearl-coast-land.bin',root))));
+const eastLand=JSON.parse(gunzipSync(fs.readFileSync(new URL('east-coast-land.bin',root))));
 const polygons=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 const key=p=>JSON.stringify(p);
 const segment=(a,b)=>key(a)<key(b)?key(a)+'|'+key(b):key(b)+'|'+key(a);
@@ -59,8 +61,8 @@ for(const entry of manifest.coverage){
       for(const part of polygons(originalChild.geometry)){
         // Even small offshore islands must remain represented after border repair.
         if(!retainedPart(part,child.geometry)){
-          if([440100,440400,441300].includes(child.properties.adcode)){
-            const physical=await coastOverlay('-i old.json -clip land.json',{'old.json':{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:part}},'land.json':pearlLand});
+          if([440100,440400,441300].includes(child.properties.adcode)||eastChangedCodes.has(child.properties.adcode)){
+            const physical=await coastOverlay('-i old.json -clip land.json',{'old.json':{type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:part}},'land.json':eastChangedCodes.has(child.properties.adcode)?eastLand:pearlLand});
             const missing=await coastOverlay('-i physical.json -erase city.json',{'physical.json':physical,'city.json':collection([child])});
             assert(missing.features.reduce((s,f)=>s+(f.geometry?area(f.geometry):0),0)<1e-10,'Detailed physical island lost: '+child.properties.adcode);
             coastPartsChecked++;

@@ -1,0 +1,21 @@
+{
+  "provider": "OpenStreetMap contributors",
+  "url": "https://www.openstreetmap.org/relation/5606982",
+  "relation": 5606982,
+  "version": 9,
+  "timestamp": "2025-04-15T04:11:48Z",
+  "retrieved": "2026-10-04T23:40:34Z",
+  "coordinateSystem": "WGS84",
+  "license": "ODbL 1.0",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "geometrySha256": "a75e1ed94f4850ac7ad49bdf2381812f70f74ca1a0e2edb88dd175eb48ba4bbe",
+  "rawSha256": "de09b34b1f433bf80bbacafb8ae5a34f1af1f79814cf3588678e48219e9b4728",
+  "vertices": 472,
+  "holes": 2,
+  "areaKm2": 4.407031692278514,
+  "reference": {
+    "url": "https://www.lingang.gov.cn/html/website/lg/index/news/list/p1559133905388433410.html",
+    "mainWaterSurfaceKm2": 4.46
+  },
+  "processing": "Retain every mapped water-edge vertex and interior island hole. No circle approximation, simplification or coordinate conversion."
+}

@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import convert from 'osmtogeojson';
+import {area} from './pearl-coast.mjs';
+const bytes=gunzipSync(fs.readFileSync('scripts/additional-sources/east-coast/osm-dishui.bin')),raw=JSON.parse(bytes);
+const source=convert(raw).features.find(f=>f.id==='relation/5606982');
+assert(source?.geometry.type==='Polygon'&&source.properties.natural==='water','Dishui Lake source polygon missing');
+const areaKm2=area(source.geometry)*111.195**2*Math.cos(30.898*Math.PI/180);
+assert(areaKm2>4.2&&areaKm2<4.6,'Dishui Lake water area differs from official 4.46 km² reference');
+const feature={type:'Feature',properties:{kind:'lake',name:'Dishui Lake',zh:'滴水湖',sourceId:'osm-relation-5606982',rank:6},geometry:source.geometry};
+fs.writeFileSync('scripts/additional-sources/water/dishui-lake.geojson',JSON.stringify(feature));
+fs.writeFileSync('dist/data/dishui-lake.json',JSON.stringify(feature));
+fs.writeFileSync('dist/data/dishui-lake-source.json',JSON.stringify({provider:'OpenStreetMap contributors',url:'https://www.openstreetmap.org/relation/5606982',relation:5606982,version:source.properties.version,timestamp:source.properties.timestamp,retrieved:raw.osm3s.timestamp_osm_base,coordinateSystem:'WGS84',license:'ODbL 1.0',licenseUrl:'https://www.openstreetmap.org/copyright',geometrySha256:createHash('sha256').update(JSON.stringify(feature.geometry)).digest('hex'),rawSha256:createHash('sha256').update(bytes).digest('hex'),vertices:feature.geometry.coordinates.flat().length,holes:feature.geometry.coordinates.length-1,areaKm2,reference:{url:'https://www.lingang.gov.cn/html/website/lg/index/news/list/p1559133905388433410.html',mainWaterSurfaceKm2:4.46},processing:'Retain every mapped water-edge vertex and interior island hole. No circle approximation, simplification or coordinate conversion.'},null,2));
+console.log({areaKm2,vertices:feature.geometry.coordinates.flat().length,holes:feature.geometry.coordinates.length-1});

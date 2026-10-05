@@ -9,13 +9,15 @@ import {refinePearlCoast,refineGuangzhouDistricts,collection,pearlCoastMethod} f
 import {reviewedPaths} from './reconcile-river-boundaries.mjs';
 const data=readData('display-boundaries.json'),land=JSON.parse(gunzipSync(fs.readFileSync('dist/data/pearl-coast-land.bin')));
 const rules=JSON.parse(fs.readFileSync('scripts/additional-sources/water/boundary-reaches.json')),riverPaths=reviewedPaths(data.subdivisions,rules);
-const refined=await refinePearlCoast(data.subdivisions.features,land);data.subdivisions.features=refined.features;
+const hengqinOnly=process.argv.includes('--hengqin');
+const refined=await refinePearlCoast(data.subdivisions.features,land,hengqinOnly?new Set([440400]):undefined);data.subdivisions.features=refined.features;
 assert.deepEqual(reviewedPaths(data.subdivisions,rules),riverPaths,'Reviewed river boundaries changed');
 const districts=JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin'))),guangzhou=data.subdivisions.features.find(f=>f.properties.adcode===440100);
-const local=await refineGuangzhouDistricts(districts.regions.features,guangzhou);districts.regions.features=local.features;
+const local=hengqinOnly?{features:districts.regions.features,report:readData('pearl-coast-report.json').guangzhouDistricts}:await refineGuangzhouDistricts(districts.regions.features,guangzhou);districts.regions.features=local.features;
 refined.report.guangzhouDistricts=local.report;
 refined.report.baseline='78ec48760a94ba9e52f96d215549340a230454e9';
 refined.report.method=pearlCoastMethod;
+if(hengqinOnly){const prior=readData('pearl-coast-report.json');refined.report.cities=prior.cities.map(c=>c.adcode===440400?refined.report.cities[0]:c);refined.report.hengqinCorrection=prior.hengqinCorrection;}
 refined.report.references=[{url:'https://ghzyj.gz.gov.cn/zzfw/bmwj/content/post_10596660.html',description:'Guangzhou official island plan, district ownership and shared Zhongshan island'},{url:'https://www.gov.cn/xinwen/2018-06/08/5297114/files/c598d7ab3259486b846cb4f0777ce44c.pdf',description:'2018 Ministry of Civil Affairs / State Oceanic Administration standard island names and jurisdictions, including Zhuhai Wanshan islands and Huizhou Dajia / Xiaojia'}];
 fs.writeFileSync('artifacts/pearl-coast-preview.json',JSON.stringify({data,districts,report:refined.report}));
 console.log(JSON.stringify(refined.report,null,2));

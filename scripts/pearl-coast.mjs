@@ -5,12 +5,11 @@ import {topology} from 'topojson-server';
 import {mesh} from 'topojson-client';
 import {alignCountry,polygons} from './international-topology.mjs';
 export const coastCities=new Set([440100,440400,441300]);
-export const pearlCoastMethod='Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions and the previously reviewed Zhuhai–Macau port window. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled.';
+export const pearlCoastMethod='Retain original directed OpenStreetMap coastline vertices. Project only exterior mainland coast segments within 2.5 km; shared administrative edges and junctions remain fixed. Clip physical land and replace entire islands where existing jurisdiction or an unambiguous national catalogue match establishes ownership. Catalogue coordinates have 0.1 arcminute precision; a rounding cell is accepted only when it intersects one physical island. Retain partitions on islands shared by jurisdictions. Hengqin uses the physical land mask minus unchanged Macau government jurisdictions; the reviewed port island uses its existing physical shoreline. No rectangular coastal preservation window is applied. Apply the same parent extent to Guangzhou districts; only Nansha coastal additions are filled.';
 export const collection=features=>({type:'FeatureCollection',features});
 export const area=g=>polygons(g).reduce((s,p)=>s+p.reduce((a,r,i)=>a+(i?-1:1)*Math.abs(r.slice(1).reduce((n,b,j)=>n+(r[j][0]-r[0][0])*(b[1]-r[0][1])-(b[0]-r[0][0])*(r[j][1]-r[0][1]),0)/2),0),0);
 export const run=async(command,files)=>JSON.parse((await mapshaper.applyCommands(command+' -o out.json format=geojson geojson-type=FeatureCollection',structuredClone(files)))['out.json']);
 const key=p=>p.join(','),edge=(a,b)=>[key(a),key(b)].sort().join('|');
-const protectedPort=([x,y])=>x>=113.48&&x<=113.61&&y>=22.08&&y<=22.26;
 const inRing=([x,y],r)=>{let c=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])c=!c;}return c;};
 const contains=(f,p)=>polygons(f.geometry).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h)));
 function intersectsCoordinateCell(f,[x,y]){
@@ -26,16 +25,16 @@ function intersectsCoordinateCell(f,[x,y]){
   }
   return [[box[0],box[1]],[box[2],box[1]],[box[2],box[3]],[box[0],box[3]]].some(p=>contains(f,p));
 }
-export async function refinePearlCoast(features,land){
+export async function refinePearlCoast(features,land,codes=coastCities){
   const all=structuredClone(features),mask=structuredClone(land);
   mask.features.forEach((f,id)=>f.properties={landId:id,physicalArea:area(f.geometry)});
   const mainland=mask.features.reduce((a,b)=>area(a.geometry)>area(b.geometry)?a:b);
   const t=topology({regions:collection(structuredClone(features))});
   const shared=mesh(t,t.objects.regions,(a,b)=>a!==b),junctions=new Set(shared.coordinates.flat().map(key));
-  const targetEdges=new Set(all.filter(f=>coastCities.has(f.properties.adcode)).flatMap(f=>polygons(f.geometry).flatMap(p=>p.flatMap(r=>r.slice(1).map((b,i)=>edge(r[i],b))))));
+  const targetEdges=new Set(all.filter(f=>codes.has(f.properties.adcode)).flatMap(f=>polygons(f.geometry).flatMap(p=>p.flatMap(r=>r.slice(1).map((b,i)=>edge(r[i],b))))));
   // Only exterior coast edges move. Shared administrative edges and their
-  // junctions retain their coordinates; the previously reviewed port is kept.
-  const aligned=alignCountry(all,structuredClone(mainland),(a,b)=>a[0]>112.951&&b[0]>112.951&&a[0]<115.599&&b[0]<115.599&&a[1]>21.651&&b[1]>21.651&&a[1]<24.099&&b[1]<24.099,2500,(a,b)=>targetEdges.has(edge(a,b))&&!junctions.has(key(a))&&!junctions.has(key(b))&&!protectedPort(a)&&!protectedPort(b));
+  // junctions retain their coordinates.
+  const aligned=alignCountry(all,structuredClone(mainland),(a,b)=>a[0]>112.951&&b[0]>112.951&&a[0]<115.599&&b[0]<115.599&&a[1]>21.651&&b[1]>21.651&&a[1]<24.099&&b[1]<24.099,2500,(a,b)=>targetEdges.has(edge(a,b))&&!junctions.has(key(a))&&!junctions.has(key(b)));
   const oldByCode=new Map(features.map(f=>[f.properties.adcode,f]));
   const owners=new Map();
   // Intersection establishes existing jurisdiction, never proximity alone.
@@ -62,16 +61,22 @@ export async function refinePearlCoast(features,land){
   }
   const matchedNames=new Set(catalogueMatches.map(m=>m.name+'|'+m.point));
   const report={alignment:aligned.report,catalogueMatches,catalogueUnmatched:catalogue.entries.filter(e=>!matchedNames.has(e.name+'|'+e.point)).map(({number,name,adcode,point,page})=>({number,name,adcode,point,page})),supplementalMatches,cities:[],catalogueNote:'Unmatched entries include reclaimed mainland sites, ambiguous small rocks and features without a corresponding physical island in this shoreline snapshot. They do not generate guessed polygons.',catalogueSource:{url:catalogue.url,mirror:catalogue.mirror,pdfSha256:catalogue.pdfSha256,coordinatePrecision:catalogue.coordinatePrecision}},changed=new Map();
-  for(const f of aligned.features.filter(f=>coastCities.has(f.properties.adcode))){
+  for(const f of aligned.features.filter(f=>codes.has(f.properties.adcode))){
     const code=f.properties.adcode,old=oldByCode.get(code);
     const clipped=await run('-i city.json -clip land.json',{'city.json':f,'land.json':mask});
     const whole=mask.features.filter(p=>owners.get(p.properties.landId)?.length===1&&owners.get(p.properties.landId)[0]===code);
     let refined=await run('-i input.json -dissolve2',{'input.json':collection([...clipped.features,...whole.map(p=>({...p,properties:old.properties}))])});
     if(code===440400){
-      const window={type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[[[113.48,22.08],[113.61,22.08],[113.61,22.26],[113.48,22.26],[113.48,22.08]]]}};
-      const keep=await run('-i input.json -clip window.json',{'input.json':old,'window.json':window});
-      const rest=await run('-i input.json -erase window.json',{'input.json':refined,'window.json':window});
-      refined=await run('-i input.json -dissolve2',{'input.json':collection([...rest.features,...keep.features])});
+      const port=JSON.parse(fs.readFileSync(new URL('../dist/data/zhuhai-port-land.json',import.meta.url)));
+      // Replace the complete physical port island, not a geographic rectangle.
+      const portOsm=mask.features.find(p=>contains(p,[113.578,22.211]));assert(portOsm);
+      const rest=await run('-i input.json -erase port.json',{'input.json':refined,'port.json':portOsm});
+      const macauSeams=mesh(t,t.objects.regions,(a,b)=>a!==b&&((a.properties.adcode===440400&&b.properties.provinceCode===820000)||(b.properties.adcode===440400&&a.properties.provinceCode===820000)));
+      const seamBuffer=await run('-i seams.json -buffer 60',{'seams.json':{type:'Feature',properties:{},geometry:macauSeams}});
+      // Retain original land beside actual shared government edges. The final
+      // physical-land clip prevents this narrow seam repair from filling sea.
+      const seamLand=await run('-i old.json -clip seam.json -clip land.json',{'old.json':old,'seam.json':seamBuffer,'land.json':mask});
+      refined=await run('-i input.json -dissolve2',{'input.json':collection([...rest.features,...seamLand.features,...port.features.map(p=>({...p,properties:old.properties}))])});
     }
     // Whole island replacement must not overlap a neighbor's existing land.
     const neighbors=collection(features.filter(g=>g.properties.adcode!==code&&(g.properties.provinceCode===440000||[810000,820000].includes(g.properties.provinceCode))));

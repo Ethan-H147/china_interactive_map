@@ -1,0 +1,22 @@
+{
+  "provider": "OpenStreetMap contributors",
+  "timestamp": "2026-10-04T23:40:34Z",
+  "coordinateSystem": "WGS84",
+  "query": "way[\"natural\"=\"coastline\"](29.3,120.6,32.2,123.6);out meta geom;",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "license": "ODbL 1.0",
+  "licenseUrl": "https://www.openstreetmap.org/copyright",
+  "definition": "https://wiki.openstreetmap.org/wiki/Tag:natural%3Dcoastline",
+  "sourceDownload": "data/east-coast-source.bin",
+  "sourceCompression": "gzip JSON",
+  "sha256": "303dc23d8cd2fd8cc33b411568ca055ecddd87113f11d9b7b6fa95dcb8f288eb",
+  "ways": 1690,
+  "vertices": 122970,
+  "landPolygons": 1222,
+  "processingBounds": [
+    120.6,
+    29.3,
+    123.6,
+    32.2
+  ]
+}

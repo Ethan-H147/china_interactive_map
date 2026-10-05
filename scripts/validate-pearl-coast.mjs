@@ -9,6 +9,7 @@ import {readData} from './read-data.mjs';
 import {polygons} from './international-topology.mjs';
 import {coastCities,collection,area,run} from './pearl-coast.mjs';
 import {segmentDistanceIndex} from './shenzhen-hongkong.mjs';
+import {eastChangedCodes} from './east-coast.mjs';
 const baseline='78ec48760a94ba9e52f96d215549340a230454e9';
 const show=name=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',baseline+':dist/data/'+name],{maxBuffer:50e6});assert.equal(r.status,0);return r.stdout;};
 const m=JSON.parse(show('display-boundaries.parts.json')),before=JSON.parse(gunzipSync(Buffer.concat(m.parts.map(show))));
@@ -16,10 +17,11 @@ const preview=process.argv.includes('--preview')?JSON.parse(fs.readFileSync('art
 const after=preview?.data||readData('display-boundaries.json'),districts=preview?.districts||JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin'))),report=preview?.report||readData('pearl-coast-report.json'),oldDistricts=JSON.parse(gunzipSync(show('city-districts.bin')));
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 let unrelated=0;
-for(const f of before.subdivisions.features){const n=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(!coastCities.has(f.properties.adcode)){assert.equal(hash(n),hash(f),'Unrelated city changed '+f.properties.adcode);unrelated++;}}
-for(const f of before.provinces.features)if(f.properties.adcode!==440000)assert.equal(hash(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated province changed');
+for(const f of before.subdivisions.features){const n=after.subdivisions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(!coastCities.has(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.equal(hash(n),hash(f),'Unrelated city changed '+f.properties.adcode);unrelated++;}}
+for(const f of before.provinces.features)if(![440000,310000,330000].includes(f.properties.adcode))assert.equal(hash(after.provinces.features.find(g=>g.properties.adcode===f.properties.adcode)),hash(f),'Unrelated province changed');
 for(const f of oldDistricts.regions.features){const n=districts.regions.features.find(g=>g.properties.adcode===f.properties.adcode);assert.deepEqual(n.properties,f.properties);if(f.properties.parentCity!==440100)assert.equal(hash(n),hash(f),'Unrelated district changed');}
-for(const file of ['major-water.bin','sar-810000.json','sar-820000.json','shenzhen-hongkong-border.json'])assert.deepEqual(fs.readFileSync('dist/data/'+file),show(file),'Protected dataset changed '+file);
+for(const file of ['sar-810000.json','sar-820000.json','shenzhen-hongkong-border.json'])assert.deepEqual(fs.readFileSync('dist/data/'+file),show(file),'Protected dataset changed '+file);
+assert.deepEqual(JSON.parse(gunzipSync(fs.readFileSync('dist/data/major-water.bin'))).features.filter(f=>f.properties.sourceId!=='osm-relation-5606982'),JSON.parse(gunzipSync(show('major-water.bin'))).features,'Previously mapped waterways stay exact');
 const inRing=([x,y],r)=>{let c=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])c=!c;}return c;};
 const contains=(f,p)=>polygons(f.geometry).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h)));
 const owners=p=>after.subdivisions.features.filter(f=>contains(f,p)).map(f=>f.properties.adcode);
@@ -57,11 +59,11 @@ for(const code of coastCities){
   if(land.features.some(f=>contains(f,p))){assert(distance(p)<.02,'Shared inland border moved '+code+' '+p);sharedSamples++;}
  }
  // Every unambiguous offshore island retains its original detailed boundary.
- // The reviewed Macau window is checked separately by validate-alignment.
+ // Only the separately reviewed physical port component is retained.
  const actualVertices=new Set(vertices.map(key));
  let wholeVertices=0;
  for(const id of stats.wholeIslandIds)for(const p of polygons(land.features[id].geometry).flat(2)){
-  if(p[0]>=113.48&&p[0]<=113.61&&p[1]>=22.08&&p[1]<=22.26)continue;
+  if(p[0]>=113.56&&p[0]<=113.60&&p[1]>=22.19&&p[1]<=22.23)continue;
   assert(actualVertices.has(key(p)),'Full island shoreline vertex lost '+code+' island '+id+' '+p);wholeVertices++;
  }
  counts.push({code,vertices:vertices.length,sourceVertices:retained,wholeIslandVertices:wholeVertices,parts:polygons(city.geometry).length});

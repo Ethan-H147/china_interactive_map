@@ -7,11 +7,12 @@ import {topology} from 'topojson-server';
 import {mesh} from 'topojson-client';
 import {readData} from './read-data.mjs';
 import {canonicalHongKongBorder,segmentDistanceIndex} from './shenzhen-hongkong.mjs';
+import {eastChangedCodes} from './east-coast.mjs';
 const baseline='dad1949249582aea49ff9b9321a68c1e3726949b';
 const show=name=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show',baseline+':dist/data/'+name],{maxBuffer:50e6});assert.equal(r.status,0,r.stderr.toString());return r.stdout;};
 const metadata=JSON.parse(show('display-boundaries.parts.json'));
 const before=JSON.parse(gunzipSync(Buffer.concat(metadata.parts.map(show)))),after=readData('display-boundaries.json');
-assert.deepEqual(fs.readFileSync('dist/data/major-water.bin'),show('major-water.bin'),'River geometry must remain unchanged');
+assert.deepEqual(JSON.parse(gunzipSync(fs.readFileSync('dist/data/major-water.bin'))).features.filter(f=>f.properties.sourceId!=='osm-relation-5606982'),JSON.parse(gunzipSync(show('major-water.bin'))).features,'Existing water geometry must remain unchanged');
 const previousRiverReport=JSON.parse(show('river-boundary-report.json')),currentRiverReport=readData('river-boundary-report.json');
 delete previousRiverReport.administrativeSha256;delete currentRiverReport.administrativeSha256;
 assert.deepEqual(currentRiverReport,previousRiverReport,'Reviewed river reaches and provenance must remain unchanged');
@@ -20,8 +21,8 @@ const rings=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
 const coordinates=g=>rings(g).flat(2);
 const inRing=([x,y],r)=>{let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;};
 const contains=(g,p)=>rings(g).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h)));
-for(const f of before.subdivisions.features){const current=after.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440300,440100,440400,441300].includes(f.properties.adcode))assert.deepEqual(current.geometry,f.geometry,'Unrelated region changed '+f.properties.adcode);}
-for(const f of before.provinces.features){const current=after.provinces.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(f.properties.adcode!==440000)assert.deepEqual(current.geometry,f.geometry,'Unrelated province changed '+f.properties.adcode);}
+for(const f of before.subdivisions.features){const current=after.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440300,440100,440400,441300].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode))assert.deepEqual(current.geometry,f.geometry,'Unrelated region changed '+f.properties.adcode);}
+for(const f of before.provinces.features){const current=after.provinces.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440000,310000,330000].includes(f.properties.adcode))assert.deepEqual(current.geometry,f.geometry,'Unrelated province changed '+f.properties.adcode);}
 for(const f of oldDistricts.regions.features){const current=districts.regions.features.find(c=>c.properties.adcode===f.properties.adcode);assert.deepEqual(current.properties,f.properties);if(![440300,440100].includes(f.properties.parentCity))assert.deepEqual(current.geometry,f.geometry,'Unrelated district changed '+f.properties.adcode);}
 const oldCity=before.subdivisions.features.find(f=>f.properties.adcode===440300),city=after.subdivisions.features.find(f=>f.properties.adcode===440300);
 assert(coordinates(city.geometry).length>10000,'Detailed shoreline points missing');

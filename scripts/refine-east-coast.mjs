@@ -1,0 +1,28 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gunzipSync,gzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import {topology} from 'topojson-server';
+import {merge,mesh} from 'topojson-client';
+import {readData} from './read-data.mjs';
+import {refineEastCoast,eastCoastMethod} from './east-coast.mjs';
+import {reviewedPaths} from './reconcile-river-boundaries.mjs';
+const data=readData('display-boundaries.json'),rules=JSON.parse(fs.readFileSync('scripts/additional-sources/water/boundary-reaches.json')),paths=reviewedPaths(data.subdivisions,rules);
+const result=await refineEastCoast(data.subdivisions.features,JSON.parse(gunzipSync(fs.readFileSync('dist/data/east-coast-land.bin'))));
+data.subdivisions.features=result.features;
+assert.deepEqual(reviewedPaths(data.subdivisions,rules),paths,'Reviewed river boundaries changed');
+const top=topology({regions:data.subdivisions}),r=top.objects.regions;
+for(const code of [310000,330000])data.provinces.features.find(f=>f.properties.adcode===code).geometry=merge(top,r.geometries.filter(g=>g.properties.provinceCode===code));
+const pref=g=>g.properties.level==='taiwan-region'||g.properties.level==='city'&&String(g.properties.adcode).slice(2,4)!=='90',same=(a,b)=>a.properties.provinceCode===b.properties.provinceCode;
+data.boundaries={province:mesh(top,r,(a,b)=>a===b||!same(a,b)),prefecture:mesh(top,r,(a,b)=>a!==b&&same(a,b)&&(pref(a)||pref(b))),other:mesh(top,r,(a,b)=>a!==b&&same(a,b)&&!pref(a)&&!pref(b))};
+const serialized=Buffer.from(JSON.stringify(data)),compressed=gzipSync(serialized,{level:9}),parts=[];
+for(let offset=0,i=0;offset<compressed.length;offset+=4*1024*1024,i++){const name='display-boundaries.'+String(i).padStart(2,'0')+'.bin';parts.push(name);fs.writeFileSync('dist/data/'+name,compressed.subarray(offset,offset+4*1024*1024));}
+fs.writeFileSync('dist/data/display-boundaries.parts.json',JSON.stringify({compression:'gzip',parts,compressedBytes:compressed.length,uncompressedBytes:serialized.length,sha256:createHash('sha256').update(serialized).digest('hex')},null,2));
+result.report.baseline='3fca3014603c67d0921d63811345e87c1a823cb6';
+fs.writeFileSync('dist/data/east-coast-report.json',JSON.stringify(result.report,null,2));
+const provenance=readData('additional-sources.json'),source=readData('east-coast-source.json');
+provenance.sources=provenance.sources.filter(s=>s.sourceFile!=='east-coast-land.bin');
+provenance.sources.push({...source,provider:'OpenStreetMap Shanghai and Zhoushan physical shorelines',sourceFile:'east-coast-land.bin',reusableDataset:'data/east-coast-land.bin',compression:'gzip JSON',sourceVersions:'data/east-coast-source.bin',sha256:createHash('sha256').update(fs.readFileSync('dist/data/east-coast-land.bin')).digest('hex'),processing:eastCoastMethod});
+provenance.processing.eastCoast=eastCoastMethod;
+fs.writeFileSync('dist/data/additional-sources.json',JSON.stringify(provenance,null,2));
+console.log(result.report.regions.map(({wholeIslandIds,...r})=>r));

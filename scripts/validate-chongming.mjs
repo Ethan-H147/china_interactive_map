@@ -6,6 +6,7 @@ import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
 import {readData} from './read-data.mjs';
 import {chongmingWindow} from './chongming-overlay.mjs';
+import {eastChangedCodes} from './east-coast.mjs';
 const show=name=>{const r=spawnSync('git',['-c','safe.directory='+process.cwd().replaceAll('\\','/'),'show','993fa80bf7fb149e74ba8448888470d3354dbb6d:dist/data/'+name],{maxBuffer:40e6});assert.equal(r.status,0,r.stderr.toString());return r.stdout;};
 const manifest=JSON.parse(show('display-boundaries.parts.json'));
 const previous=JSON.parse(gunzipSync(Buffer.concat(manifest.parts.map(show))));
@@ -23,8 +24,8 @@ assert.equal(current.subdivisions.features.length,previous.subdivisions.features
 // Later Macau seams and four China–North Korea border divisions have separate
 // government-source and international topology checks.
 const subsequentlyRepaired=[820001,820002,820003,820004,820005,820006,820007,820008,210600,220500,220600,222400,230800,230900,440300,440100,440400,441300];
-for(const f of previous.subdivisions.features){const now=current.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert(now);assert.deepEqual(now.properties,f.properties);if(![310151,320600,...subsequentlyRepaired].includes(f.properties.adcode)){assert.equal(edges(now.geometry),edges(f.geometry),'Unrelated subdivision changed: '+f.properties.adcode);unchanged++;}}
-assert.equal(unchanged,482);
+for(const f of previous.subdivisions.features){const now=current.subdivisions.features.find(c=>c.properties.adcode===f.properties.adcode);assert(now);assert.deepEqual(now.properties,f.properties);if(![310151,320600,...subsequentlyRepaired].includes(f.properties.adcode)&&!eastChangedCodes.has(f.properties.adcode)){assert.equal(edges(now.geometry),edges(f.geometry),'Unrelated subdivision changed: '+f.properties.adcode);unchanged++;}}
+assert.equal(unchanged,477);
 const selected=current.subdivisions.features.filter(f=>[310151,320600].includes(f.properties.adcode));
 const vertexSet=new Set(selected.flatMap(f=>polygons(f.geometry).flatMap(p=>p.flatMap(r=>r.map(key)))));
 assert.equal(island.properties.osmRelation,'3292765');
@@ -40,8 +41,8 @@ const oldN=previous.subdivisions.features.find(f=>f.properties.adcode===320600),
 const extent={type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[[[w,s],[e,s],[e,n],[w,n],[w,s]]]}};
 for(const [a,b] of [[oldN,newN],[newN,oldN]]){const difference=await clip('-i a.json -erase b.json -erase extent.json',{'a.json':a,'b.json':b,'extent.json':extent});assert(difference.reduce((t,f)=>t+area(f.geometry),0)<1e-12,'Nantong changed outside the coastal window');}
 const oldC=previous.subdivisions.features.find(f=>f.properties.adcode===310151),newC=selected.find(f=>f.properties.adcode===310151);
-const otherParts=f=>({type:'MultiPolygon',coordinates:polygons(f.geometry).filter(p=>!p[0].some(c=>c[1]>31.6))});
-assert.equal(edges(otherParts(oldC)),edges(otherParts(newC)),'Chongming’s other islands changed');
+// Changxing and Hengsha now have source fidelity checks in validate-east-coast.
+// That check also compares the detailed main island with the later coastline baseline.
 const water=[[121.70,31.71],[121.85,31.68],[121.70,31.70],[121.93,31.69],[121.90,31.66]];
 for(const p of water){assert.deepEqual(owners(previous,p),[320600],'Regression point did not reproduce old land bridge');assert.deepEqual(owners(current,p),[],'North Branch is still filled as land');}
 for(const p of [[121.30,31.85],[121.50,31.73],[121.70,31.64],[121.40,31.72]])assert.deepEqual(owners(current,p),[310151],'Shanghai island land missing');

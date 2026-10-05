@@ -11,6 +11,7 @@ import {correctJiamusi} from './jiamusi-correction.mjs';
 import {clipShenzhenLand} from './shenzhen-coast.mjs';
 import {reconcileShenzhenHongKong} from './shenzhen-hongkong.mjs';
 import {refinePearlCoast,pearlCoastMethod} from './pearl-coast.mjs';
+import {refineEastCoast,eastCoastMethod} from './east-coast.mjs';
 
 const root=new URL('../dist/data/',import.meta.url);
 const read=name=>{const file=new URL(name,root);return JSON.parse(fs.existsSync(file)?fs.readFileSync(file):gunzipSync(fs.readFileSync(new URL(name+'.gz',root))));};
@@ -83,6 +84,7 @@ features=await clipShenzhenLand(features,read('shenzhen-land.json'));
 const hkTopology=topology({regions:{type:'FeatureCollection',features:sar.filter(f=>f.properties.provinceCode===810000)}});
 features=reconcileShenzhenHongKong(features,{geometry:merge(hkTopology,hkTopology.objects.regions.geometries)}).features;
 features=(await refinePearlCoast(features,JSON.parse(gunzipSync(fs.readFileSync(new URL('pearl-coast-land.bin',root)))))).features;
+features=(await refineEastCoast(features,JSON.parse(gunzipSync(fs.readFileSync(new URL('east-coast-land.bin',root)))))).features;
 const topo=topology({regions:{type:'FeatureCollection',features}});
 const regions=topo.objects.regions;
 const provinces={type:'FeatureCollection',features:manifest.coverage.map(entry=>({
@@ -112,6 +114,7 @@ provenance.processing={simplification:false,zhuhai:'Detailed DataV district unio
 provenance.processing.macau="Macau shared parish edges are reconciled with 1e-8 degree vertex snapping and a 0.5 m sliver-gap threshold before coastline extraction. No simplification is applied; validation bounds boundary displacement to 0.5 m.";
 provenance.processing.shenzhen='Shenzhen display coverage is clipped to detailed OpenStreetMap physical land. Original administrative sources and Hong Kong polygons remain unchanged. No coastline simplification is applied; offshore jurisdiction is not depicted as land.';
 provenance.processing.pearlCoast=pearlCoastMethod;
+provenance.processing.eastCoast=eastCoastMethod;
 provenance.processing.chongming='OpenStreetMap island relation 3292765 replaces only the main Chongming island. The existing Shanghai/Jiangsu administrative split is retained on the island. Connected north-bank coastline ways remove North Branch river water from Nantong within [121.10,31.42,122.05,31.93]. Changxing, Hengsha and all other subdivisions retain their previous geometry.';
 provenance.sources=provenance.sources.filter(s=>!['chongming-island.json','chongming-north-bank.json'].includes(s.sourceFile));
 for(const [file,label,extra] of [

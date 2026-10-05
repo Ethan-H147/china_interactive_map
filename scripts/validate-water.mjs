@@ -10,7 +10,11 @@ const rivers=data.features.filter(f=>f.properties.kind==='river');
 const lakes=data.features.filter(f=>f.properties.kind==='lake');
 for(const name of ['Yangtze','Huang','Xi','Songhua','Tarim','Yarlung','Lancang','Nu'])assert(rivers.some(f=>f.properties.name===name),`Missing ${name}`);
 for(const name of ['Qinghai','Poyang','Dongting','Tai','Namtso','Siling'])assert(lakes.some(f=>f.properties.name===name),`Missing ${name}`);
-assert.equal(lakes.length,20);
+assert.equal(lakes.length,21);
+const dishui=lakes.find(f=>f.properties.sourceId==='osm-relation-5606982');
+assert(dishui&&dishui.properties.name==='Dishui Lake'&&dishui.properties.zh==='滴水湖');
+assert.deepEqual(dishui.geometry,JSON.parse(fs.readFileSync('scripts/additional-sources/water/dishui-lake.geojson')).geometry,'Dishui Lake retains its original mapped geometry');
+assert.equal(dishui.geometry.coordinates.length,3,'Retain both islands inside Dishui Lake');
 const points=c=>typeof c[0]==='number'?[c]:c.flatMap(points);
 for(const f of data.features){
   assert(f.geometry&&f.properties.sourceId);
