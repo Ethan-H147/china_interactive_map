@@ -10,7 +10,7 @@ files.forEach((f,i)=>assert.equal(fs.readFileSync(f,'utf8'),before[i],'Official 
 const bundles=Object.fromEntries(names.map((n,i)=>[n,JSON.parse(before[i])]));
 for(const [country,count,level,currency] of [['indonesia',38,1,'IDR'],['philippines',82,2,'PHP']]){
  const data=bundles[country],records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/archipelago/'+country+'-catalogue.bin'))).records.filter(r=>r.level===level&&!r.special);
- assert.equal(Object.keys(data.regions).length,count);assert(before[names.indexOf(country)].length<160000,'Country facts remain small and load independently');
+ assert.equal(Object.values(data.regions).filter(r=>r.level===level).length,count);assert.equal(Object.keys(data.regions).length,count+(country==='philippines'?1:0));assert(before[names.indexOf(country)].length<160000,'Country facts remain small and load independently');
  for(const division of records){const r=data.regions[country+':'+division.id];assert.equal(r.name,division.en);assert(r.population.value>0&&r.area.value>0);assert.equal(r.area.unit,'km²');assert.equal(r.population.method,country==='indonesia'?'projection':'census');
   for(const field of ['population','area','gdp','gdpPerCapita']){const m=r[field];assert(m&&Number.isFinite(m.value)&&m.value>0);assert(data.sources[m.source]?.url);}
   for(const field of ['gdp','gdpPerCapita']){const m=r[field];assert.equal(m.year,2025);assert.equal(m.currency,currency);assert(Math.abs(m.value/m.exchangeRate-m.usd)<1e-5);assert(data.sources[m.exchangeSource]);}
@@ -19,6 +19,7 @@ for(const [country,count,level,currency] of [['indonesia',38,1,'IDR'],['philippi
 }
 const aceh=bundles.indonesia.regions['indonesia:ID11'];assert.equal(aceh.gdp.value,257502.43e9);assert.equal(aceh.gdpPerCapita.value,45770.40e3);assert.equal(aceh.population.year,2026);
 const basilan=bundles.philippines.regions['philippines:PH19007'];assert.match(basilan.note,/Isabela City.*excluded/);assert.equal(basilan.population.year,2024);assert.equal(basilan.area.year,undefined);assert.match(basilan.area.period,/2019/);
+const metro=bundles.philippines.regions['philippines:PH13'];assert.equal(metro.level,1);assert.equal(metro.population.value,14001751);assert.equal(metro.area.value,620.61);assert.equal(metro.gdp.value,8749999579.8792300*1000);assert.equal(metro.gdpPerCapita.value,631279.0775186380);assert.equal(metro.gdp.year,2025);assert.equal(metro.population.date,'2024-07-01');assert.match(metro.note,/entire NCR/);assert(!metro.population.note.includes('exclude'),'NCR includes its cities');assert.equal(metro.gdp.usd,metro.gdp.value/metro.gdp.exchangeRate);
 assert.equal(Object.values(bundles.philippines.regions).filter(r=>r.name.startsWith('Maguindanao')).length,2);
 const manifest=JSON.parse(fs.readFileSync('scripts/statistics-sources/archipelago/manifest.json','utf8'));
 for(const file of manifest.files)assert.equal(createHash('sha256').update(fs.readFileSync('scripts/statistics-sources/archipelago/'+file.name)).digest('hex'),file.sha256,file.name+' source snapshot');
@@ -42,6 +43,7 @@ for(const country of names)deferred.get('data/archipelago/'+country+'-statistics
 await Promise.all([a,b]);assert.match(parent.text,/PHP/);assert(!parent.text.includes('IDR'),'Older country request must not replace newer selection');
 assert.deepEqual(parent.children.slice(1).map(n=>n.className),['population archipelago-population','region-statistics']);assert.match(parent.children[1].text,/2024 census/);
 await renderStatistics(anchor,'indonesia:ID11');assert.equal(requests.length,2,'Each country is cached');assert.match(parent.children[1].text,/2026 midyear projection/);
+await renderStatistics(anchor,'philippines:PH13');assert.equal(requests.length,2,'Metro Manila reuses Philippine facts without another download');assert.match(parent.children[1].text,/14,001,751/);assert.match(parent.children[2].text,/PHP 8.75 trillion/);assert.match(parent.children[2].text,/entire NCR/);
 clearStatistics(anchor);assert(parent.children[1].hidden&&parent.children[2].hidden);
 const another=await import('../dist/statistics.mjs?cancel');const delayed=another.renderStatistics(anchor,'philippines:PH19007');another.clearStatistics(anchor);deferred.get('data/archipelago/philippines-statistics.json')({ok:true,json:async()=>bundles.philippines});await delayed;assert(parent.children[1].hidden&&parent.children[2].hidden,'Leaving or selecting an unsupported division cancels late statistics');
 console.log('38 Indonesian / 82 Philippine provinces: official coverage, exact units, same-year USD, source hashes, reproducibility, lazy loading, population order and stale-selection cancellation passed.');

@@ -25,6 +25,8 @@ Each table has its metadata, exact POST query, JSON response, and PX response wi
 
 GDP and population figures follow PSA statistical provinces, excluding separately reported cities; map geometry may include some of those cities. Basilan excludes Isabela City, which is separately reported in Region IX. The two Maguindanao provinces are matched separately after the 2022 split. Provinces are matched by exact normalized name, never by nearest geometry or partial name.
 
+Metro Manila (`PH13`) is included as a first-level region, not a province. Its atlas name is explicitly matched to PSA's `National Capital Region (NCR)` row: census geographical code `1300000000` and PPA geographical code `0`. Its population and land area cover the entire NCR, including its cities and Pateros. GDP and GDP per capita are the published regional totals in the same official tables, not sums or averages of city records. Other Philippine regions do not inherit these figures.
+
 ## USD conversion
 
 `exchange-rates.json` is the World Bank/IMF IFS official annual-average exchange-rate series `PA.NUS.FCRF` for IDN and PHL in 2024–2025. Each GDP metric uses the same-year rate. A missing rate is a build error, not an invitation to substitute a current rate.
