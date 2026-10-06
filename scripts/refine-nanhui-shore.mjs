@@ -26,3 +26,6 @@ fs.writeFileSync('dist/data/east-coast-report.json',JSON.stringify(coastReport,n
 const provenance=readData('additional-sources.json');provenance.sources=provenance.sources.filter(s=>s.sourceFile!=='nanhui-shore-source.bin');
 provenance.sources.push({...result.report,sourceFile:'nanhui-shore-source.bin',reusableDataset:'data/nanhui-shore-source.bin',compression:'gzip JSON'});provenance.processing.nanhuiShore=nanhuiMethod;
 fs.writeFileSync('dist/data/additional-sources.json',JSON.stringify(provenance,null,2));console.log(result.report);
+
+const riverReport=readData('river-boundary-report.json');riverReport.administrativeSha256=createHash('sha256').update(JSON.stringify(data.subdivisions)).digest('hex');
+fs.writeFileSync('dist/data/river-boundary-report.json',JSON.stringify(riverReport,null,2));

@@ -28,10 +28,10 @@ assert(total(await run('-i removed.json -erase reviewed.json',{'removed.json':re
 for(const p of [[121.940,31.025],[121.932,31.045],[121.918,31.068],[121.980,30.943],[121.970,30.974],[121.963,30.993],[121.983,30.928]])assert(!contains(city,p),'Exposed tidal flat still filled '+p);
 for(const p of [[121.915,31.025],[121.900,31.060],[121.940,30.972],[121.955,30.942],[121.968,30.921],[121.955,30.906]])assert(contains(city,p),'Permanent reclaimed land removed '+p);
 const distance=segmentDistanceIndex(polygons(city.geometry).flat());let shorelineChecks=0;
-for(let i=1;i<source.shore.length;i++){const a=source.shore[i-1],b=source.shore[i];for(const t of [.25,.5,.75]){const p=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];if(contains(old,p)&&!source.structures.features.some(f=>contains(f,p))){assert(distance(p)<.03,'Seawall edge missing '+p);shorelineChecks++;}}}
+for(let i=1;i<source.shore.length;i++){const a=source.shore[i-1],b=source.shore[i];for(const t of [.25,.5,.75]){const p=[a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];if(contains(old,p)){assert(distance(p)<.03,'Seawall edge missing '+p);shorelineChecks++;}}}
 const oldTop=topology({regions:before.subdivisions}),shared=mesh(oldTop,oldTop.objects.regions,(a,b)=>a!==b&&(a.properties.adcode===310115||b.properties.adcode===310115));
 for(const line of shared.coordinates)for(let i=1;i<line.length;i++){const a=line[i-1],b=line[i],p=[(a[0]+b[0])/2,(a[1]+b[1])/2];assert(distance(p)<.03,'Inland shared edge moved');}
-for(const structure of source.structures.features){const previous=await run('-i structure.json -clip old.json',{'structure.json':structure,'old.json':old}),missing=await run('-i structure.json -erase city.json',{'structure.json':previous,'city.json':city});assert(total(missing)<1e-11,'Mapped permanent breakwater removed');}
+for(const structure of source.structures.features){const offshore=await run('-i structure.json -clip reviewed.json',{'structure.json':structure,'reviewed.json':source.cut});assert(total(await run('-i offshore.json -clip city.json',{'offshore.json':offshore,'city.json':city}))<1e-11,'Offshore breakwater still contributes a needle to the land outline');}
 const rawShore=JSON.parse(gunzipSync(fs.readFileSync('dist/data/nanhui-shore-source.bin')));
 for(const id of source.metadata.excludedTidalDikes){const w=rawShore.elements.find(e=>e.id===id),dike={type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[w.geometry.map(p=>[p.lon,p.lat])]}};
  const inReview=await run('-i dike.json -clip reviewed.json',{'dike.json':dike,'reviewed.json':source.cut});
@@ -42,4 +42,4 @@ const priorWater=JSON.parse(gunzipSync(show('major-water.bin'))),water=JSON.pars
 assert.equal(readData('nanhui-shore.json').sha256,createHash('sha256').update(gunzipSync(fs.readFileSync('dist/data/nanhui-shore-source.bin'))).digest('hex'));
 const repeated=await refineNanhuiShore(after.subdivisions.features),edgeHash=g=>createHash('sha256').update(polygons(g).flat().flatMap(r=>r.slice(1).map((b,i)=>[JSON.stringify(r[i]),JSON.stringify(b)].sort().join('|'))).sort().join('\n')).digest('hex');
 assert.equal(edgeHash(repeated.features.find(f=>f.properties.adcode===310115).geometry),edgeHash(city.geometry),'Repeated build changes coastline');
-console.log(JSON.stringify({unchangedRegions:unchanged,unchangedProvinces:32,shorelineChecks,tidalFlatsExcluded:true,raisedHarborRetained:true,tidalDikesExcluded:true,dishuiUnchanged:true}));
+console.log(JSON.stringify({unchangedRegions:unchanged,unchangedProvinces:32,shorelineChecks,tidalFlatsExcluded:true,offshoreBreakwatersExcluded:true,tidalDikesExcluded:true,dishuiUnchanged:true}));

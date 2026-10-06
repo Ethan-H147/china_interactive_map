@@ -4820,9 +4820,9 @@
     {
       "adcode": 310115,
       "oldParts": 3,
-      "newParts": 5,
+      "newParts": 4,
       "oldVertices": 311,
-      "newVertices": 2293,
+      "newVertices": 2182,
       "wholeIslandIds": [
         787,
         808,
@@ -5261,6 +5261,11 @@
       826453672,
       829094532
     ],
+    "excludedNorthSpur": {
+      "way": 662581919,
+      "startIndex": 262,
+      "endIndex": 287
+    },
     "excludedTidalDikes": [
       826365004,
       826365005,
@@ -5271,7 +5276,7 @@
     "licenseUrl": "https://www.openstreetmap.org/copyright",
     "reference": "https://swj.sh.gov.cn/shshyglswzx-xwdt/20220718/91cf7191971d444d98f2771f5645caf2.html",
     "imagery": "EOxCloudless Sentinel-2 2025, same alignment as the satellite layer",
-    "processing": "Nanhui mainland display follows the landward edge of the mapped coastal wetlands along the seawall. Exposed tidal flats and tidal training dikes are excluded from the land fill. The raised harbor access retains its mapped footprint. Only Pudong display geometry changes; administrative inland boundaries and Dishui Lake remain unchanged.",
+    "processing": "Nanhui mainland display follows the landward edge of the mapped coastal wetlands along the seawall. Exposed tidal flats and tidal training dikes are excluded from the land fill. Narrow offshore breakwaters are omitted from the administrative land silhouette; their source geometry is retained for reference. Only Pudong display geometry changes; administrative inland boundaries and Dishui Lake remain unchanged.",
     "shoreline": [
       [
         121.9206044,
