@@ -1,6 +1,8 @@
 export function labelLines(english,local,language='both',district=false){
  if(district&&!/\b(?:District|Dist\.)$/i.test(english))english+=' District';
  english=english.replace(/\bAutonomous Prefecture\b/gi,'A.P.').replace(/\bDistrict\b/gi,'Dist.');
+ const compact=value=>String(value||'').replace(/^Bangsamoro(?: Autonomous Region in Muslim Mindanao)?(?:\s*·\s*BARMM)?$/i,'BARMM').replace(/\bKabupaten\b/gi,'Kab.');
+ english=compact(english);local=compact(local);
  return language==='en'?[english]:language==='local'?[local||english]:[english,local].filter((s,i,a)=>s&&a.indexOf(s)===i);
 }
 export function placeLabels(candidates,width,height){
