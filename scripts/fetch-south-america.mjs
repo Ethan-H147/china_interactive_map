@@ -1,0 +1,6 @@
+import fs from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+const folder='artifacts/south-america-source';await fs.mkdir(folder,{recursive:true});
+const sources={brazil:'https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/Brasil/BR_UF_2025.zip',argentina:'https://ide.ign.gob.ar/geoservicios/rest/services/servicio_fondos/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&f=geojson&maxAllowableOffset=0.0005'};
+await Promise.all(Object.entries(sources).map(async([country,url])=>{const r=await fetch(url,{signal:AbortSignal.timeout(300000)});if(!r.ok)throw Error(country+': '+r.status);const bytes=Buffer.from(await r.arrayBuffer());await fs.writeFile(folder+'/'+country+(country==='brazil'?'.zip':'.geojson'),bytes);console.log(country,bytes.length);if(country==='argentina'){const fc=JSON.parse(bytes);console.log(fc.features?.length);}}));
+execFileSync(process.execPath,['node_modules/mapshaper/bin/mapshaper',folder+'/brazil.zip','-target','BR_UF_2025','-proj','wgs84','-clean','-simplify','dp','interval=75','keep-shapes','-o',folder+'/brazil.geojson','target=BR_UF_2025','format=geojson','precision=0.000001'],{stdio:'inherit'});

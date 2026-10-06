@@ -1,0 +1,13 @@
+{
+  "publisher": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+  "source": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/Brasil/BR_UF_2025.zip",
+  "downloadURL": null,
+  "downloaded": "2026-10-06",
+  "boundaryYear": 2025,
+  "processedInputSHA256": "f685a698e280c59b28f6598b699a393959cff94b68b9a4e5bc67f08870a953d6",
+  "count": 27,
+  "bytes": 1678585,
+  "decodedBytes": 5061428,
+  "processing": "Shared topology; 75 m detail simplification; rounded to 0.000001 degrees; one shared boundary mesh. IGN service query uses 0.0005 degree geometry tolerance.",
+  "coverageNote": "26 states and the Federal District."
+}

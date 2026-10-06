@@ -1,0 +1,13 @@
+{
+  "publisher": "Instituto Geográfico Nacional (IGN), Argentina",
+  "source": "https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG",
+  "downloadURL": "https://ide.ign.gob.ar/geoservicios/rest/services/servicio_fondos/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&f=geojson&maxAllowableOffset=0.0005",
+  "downloaded": "2026-10-06",
+  "boundaryYear": null,
+  "processedInputSHA256": "9ef8198b5c933a3412e5a242df07cc731f676b93b1a707971e60f33ed29d52bc",
+  "count": 24,
+  "bytes": 538987,
+  "decodedBytes": 1963194,
+  "processing": "Shared topology; 75 m detail simplification; rounded to 0.000001 degrees; one shared boundary mesh. IGN service query uses 0.0005 degree geometry tolerance.",
+  "coverageNote": "23 provinces and Buenos Aires autonomous city. Continental territory and nearby islands; Antarctic and disputed South Atlantic claims from the source are excluded from this view."
+}
