@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="vendor/maplibre-gl.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="names.css"><link rel="stylesheet" href="quiz.css">
   <link rel="stylesheet" href="korea.css"><link rel="stylesheet" href="mongolia.css"><link rel="stylesheet" href="explore.css"><link rel="stylesheet" href="atlas-theme.css"><script src="stories.js" defer></script><script type="module" src="gpu-loader.js"></script>
   <link rel="stylesheet" href="country-symbols.css"><link rel="stylesheet" href="atlas-entry.css"><link rel="stylesheet" href="statistics.css">
-</head>
+<link rel="stylesheet" href="compare.css"></head>
 <body>
 <header class="site-header">
   <h1><span id="atlas-title-english" class="korea-english">Atlas</span><span id="atlas-title-local"></span></h1>
@@ -28,7 +28,7 @@
     <div class="sidebar-scroll">
       <section id="explore-panel" hidden>
         <div id="welcome" hidden><h2>Featured regions</h2><div id="discovery-cards" class="discovery-cards"></div></div>
-        <section id="selection" hidden aria-live="polite"><div class="selection-top"><button id="selection-reset" class="back-button" data-nav>All China</button><img id="selection-flag" width="40" height="30" src="vendor/flag-prc.svg" alt="Flag of the People’s Republic of China"></div><span id="selection-kind" class="eyebrow"></span><h2 id="selection-name" lang="en"></h2><p id="selection-chinese" lang="zh"></p><div id="selection-regional" class="regional-names" hidden></div><div id="selection-meta" class="selection-meta"></div><div class="place-actions"><button id="save-place" class="quiet-button" data-nav aria-pressed="false">Save place</button><button id="copy-place" class="quiet-button" data-nav>Copy link</button></div><p id="place-action-status" class="quiz-note" role="status" hidden></p><input id="place-share-link" aria-label="Place link" readonly hidden><nav id="region-articles" class="region-articles" aria-label="Wikipedia articles" hidden></nav><details id="subdivisions"><summary id="subdivisions-title">Subdivisions</summary><div id="region-list"></div></details><section id="landmark-gallery" class="landmark-gallery" aria-label="Landmark photos" hidden></section><section id="population" class="population" aria-labelledby="population-heading" hidden>
+        <section id="selection" hidden aria-live="polite"><div class="selection-top"><button id="selection-reset" class="back-button" data-nav>All China</button><img id="selection-flag" width="40" height="30" src="vendor/flag-prc.svg" alt="Flag of the People’s Republic of China"></div><span id="selection-kind" class="eyebrow"></span><h2 id="selection-name" lang="en"></h2><p id="selection-chinese" lang="zh"></p><div id="selection-regional" class="regional-names" hidden></div><div id="selection-meta" class="selection-meta"></div><div class="place-actions"><button id="save-place" class="quiet-button" data-nav aria-pressed="false">Save place</button><button id="compare-place" class="quiet-button" data-nav hidden>Compare</button><button id="copy-place" class="quiet-button" data-nav>Copy link</button></div><p id="place-action-status" class="quiz-note" role="status" hidden></p><input id="place-share-link" aria-label="Place link" readonly hidden><nav id="region-articles" class="region-articles" aria-label="Wikipedia articles" hidden></nav><details id="subdivisions"><summary id="subdivisions-title">Subdivisions</summary><div id="region-list"></div></details><section id="landmark-gallery" class="landmark-gallery" aria-label="Landmark photos" hidden></section><section id="population" class="population" aria-labelledby="population-heading" hidden>
   <h3 id="population-heading">Population</h3>
   <p class="population-total" id="population-total"></p>
   <p class="population-scope" id="population-scope">Entire administrative region</p>
@@ -74,7 +74,7 @@
         </section>
       </section>
     </div>
-    <footer class="sidebar-footer"><button id="about-open">Sources & coverage</button><span class="creator-credit">Created by Ethan Hu</span></footer>
+    <footer class="sidebar-footer"><button id="compare-open" data-nav disabled>Compare regions</button><button id="about-open">Sources & coverage</button><span class="creator-credit">Created by Ethan Hu</span></footer>
   </aside>
   <main class="map-shell" id="map-shell" data-level="province" aria-busy="false">
     <div id="map" aria-label="Interactive China administrative boundary map"></div>
