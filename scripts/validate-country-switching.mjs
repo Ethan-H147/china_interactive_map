@@ -30,5 +30,9 @@ for(const country of ['brazil','uruguay','argentina'])env.window.AtlasEntry.coun
 env.makePreviews=()=>Object.fromEntries(['brazil','uruguay','argentina'].map(country=>[country,{...atlas(Promise.resolve()),bounds:[[-74,-56],[-34,6]]}]));
 vm.runInContext('southAmerica={portals:makePreviews(),syncArrow(){},fly:async()=>true};',env);
 env.reducedMotion={matches:false};
+env.window.AtlasDev={allows:country=>!['brazil','uruguay','argentina'].includes(country)};
+assert.equal(await env.changeAtlas('brazil',true,true),false,'Preview switching is blocked without developer mode');
+assert.equal(remembered.at(-1),'indonesia');
+env.window.AtlasDev.allows=()=>true;
 assert.equal(await env.changeAtlas('brazil',true,true),true,'Flight enters the new country through the existing switching lifecycle');
 for(const country of ['uruguay','argentina']){assert.equal(await env.changeAtlas(country),true);assert.equal(remembered.at(-1),country);}

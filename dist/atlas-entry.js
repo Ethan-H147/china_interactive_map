@@ -5,7 +5,9 @@
  const storageKey='boundary-atlas-country-v1';
  const fromHash=hash=>/^#(china|korea|mongolia|japan|philippines|indonesia|brazil|uruguay|argentina)(?:\/(?:place|view)=.*)?$/i.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
  let saved;try{saved=localStorage.getItem(storageKey);}catch{}
- const initial=fromHash(location.hash)||(countries[saved]?saved:'china');
+ const allowed=country=>!['brazil','uruguay','argentina'].includes(country)||window.AtlasDev?.enabled===true;
+ const requested=fromHash(location.hash)||(countries[saved]?saved:'china');
+ const initial=allowed(requested)?requested:'china';
  let current=initial;
  const root=document.documentElement;root.dataset.atlas=initial;root.dataset.starting='true';
  function persist(country){try{localStorage.setItem(storageKey,country);}catch{}}
@@ -27,6 +29,6 @@
   if($('home'))$('home').textContent='All '+(info?.en||'countries');
   if($('map')&&info)$('map').setAttribute('aria-label',current==='china'?'Interactive China administrative boundary map':current==='korea'?'Interactive map of North and South Korea':current==='japan'?'Interactive Japan prefecture and municipality map':current==='mongolia'?'Interactive Mongolia province and district map':'Interactive '+info.en+' administrative boundary and island map');
  }
- window.AtlasEntry={initial,countries,fromHash,mount:paint,remember(country,{preservePlace=true}={}){if(!countries[country])return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
+ window.AtlasEntry={initial,countries,fromHash,mount:paint,remember(country,{preservePlace=true}={}){if(!countries[country]||!allowed(country))return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
  window.addEventListener('hashchange',()=>{const country=fromHash(location.hash);if(root.dataset.starting&&country)window.AtlasEntry.remember(country);});
 })();
