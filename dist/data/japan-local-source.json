@@ -1,0 +1,643 @@
+{
+  "boundaryDate": "2026-01-01",
+  "retrieved": "2026-10-06",
+  "boundarySource": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html",
+  "license": "CC BY 4.0",
+  "attribution": "国土交通省 国土数値情報（行政区域）2026年版を加工",
+  "nameSource": {
+    "url": "https://www.post.japanpost.jp/service/search/zipcode/download/roman/KEN_ALL_ROME.zip",
+    "page": "https://www.post.japanpost.jp/service/search/zipcode/download/roman-zip.html",
+    "retrieved": "2026-10-06"
+  },
+  "prefectures": 47,
+  "municipalities": 1747,
+  "cityWards": 171,
+  "claimedAreas": 6,
+  "catalogue": {
+    "file": "catalogue.bin",
+    "bytes": 136102,
+    "decodedBytes": 727424
+  },
+  "chunks": {
+    "JP-01": {
+      "file": "JP-01.bin",
+      "bytes": 1645472,
+      "decodedBytes": 5838458
+    },
+    "JP-02": {
+      "file": "JP-02.bin",
+      "bytes": 367938,
+      "decodedBytes": 1291077
+    },
+    "JP-03": {
+      "file": "JP-03.bin",
+      "bytes": 712733,
+      "decodedBytes": 2728178
+    },
+    "JP-04": {
+      "file": "JP-04.bin",
+      "bytes": 681466,
+      "decodedBytes": 2670243
+    },
+    "JP-05": {
+      "file": "JP-05.bin",
+      "bytes": 307737,
+      "decodedBytes": 1116086
+    },
+    "JP-06": {
+      "file": "JP-06.bin",
+      "bytes": 218473,
+      "decodedBytes": 750577
+    },
+    "JP-07": {
+      "file": "JP-07.bin",
+      "bytes": 285656,
+      "decodedBytes": 985589
+    },
+    "JP-08": {
+      "file": "JP-08.bin",
+      "bytes": 164302,
+      "decodedBytes": 555504
+    },
+    "JP-09": {
+      "file": "JP-09.bin",
+      "bytes": 120463,
+      "decodedBytes": 418681
+    },
+    "JP-10": {
+      "file": "JP-10.bin",
+      "bytes": 132874,
+      "decodedBytes": 449391
+    },
+    "JP-11": {
+      "file": "JP-11.bin",
+      "bytes": 151998,
+      "decodedBytes": 532314
+    },
+    "JP-12": {
+      "file": "JP-12.bin",
+      "bytes": 346289,
+      "decodedBytes": 1263111
+    },
+    "JP-13": {
+      "file": "JP-13.bin",
+      "bytes": 500350,
+      "decodedBytes": 2012093
+    },
+    "JP-14": {
+      "file": "JP-14.bin",
+      "bytes": 218410,
+      "decodedBytes": 818609
+    },
+    "JP-15": {
+      "file": "JP-15.bin",
+      "bytes": 409184,
+      "decodedBytes": 1453636
+    },
+    "JP-16": {
+      "file": "JP-16.bin",
+      "bytes": 94048,
+      "decodedBytes": 319650
+    },
+    "JP-17": {
+      "file": "JP-17.bin",
+      "bytes": 306810,
+      "decodedBytes": 1130773
+    },
+    "JP-18": {
+      "file": "JP-18.bin",
+      "bytes": 284016,
+      "decodedBytes": 1067262
+    },
+    "JP-19": {
+      "file": "JP-19.bin",
+      "bytes": 91163,
+      "decodedBytes": 314062
+    },
+    "JP-20": {
+      "file": "JP-20.bin",
+      "bytes": 279085,
+      "decodedBytes": 947220
+    },
+    "JP-21": {
+      "file": "JP-21.bin",
+      "bytes": 194912,
+      "decodedBytes": 649914
+    },
+    "JP-22": {
+      "file": "JP-22.bin",
+      "bytes": 325051,
+      "decodedBytes": 1150785
+    },
+    "JP-23": {
+      "file": "JP-23.bin",
+      "bytes": 241253,
+      "decodedBytes": 864088
+    },
+    "JP-24": {
+      "file": "JP-24.bin",
+      "bytes": 629190,
+      "decodedBytes": 2441598
+    },
+    "JP-25": {
+      "file": "JP-25.bin",
+      "bytes": 78000,
+      "decodedBytes": 269810
+    },
+    "JP-26": {
+      "file": "JP-26.bin",
+      "bytes": 224835,
+      "decodedBytes": 789279
+    },
+    "JP-27": {
+      "file": "JP-27.bin",
+      "bytes": 129254,
+      "decodedBytes": 460904
+    },
+    "JP-28": {
+      "file": "JP-28.bin",
+      "bytes": 386572,
+      "decodedBytes": 1381212
+    },
+    "JP-29": {
+      "file": "JP-29.bin",
+      "bytes": 108391,
+      "decodedBytes": 390231
+    },
+    "JP-30": {
+      "file": "JP-30.bin",
+      "bytes": 406512,
+      "decodedBytes": 1547440
+    },
+    "JP-31": {
+      "file": "JP-31.bin",
+      "bytes": 130584,
+      "decodedBytes": 472687
+    },
+    "JP-32": {
+      "file": "JP-32.bin",
+      "bytes": 430971,
+      "decodedBytes": 1577664
+    },
+    "JP-33": {
+      "file": "JP-33.bin",
+      "bytes": 249664,
+      "decodedBytes": 848539
+    },
+    "JP-34": {
+      "file": "JP-34.bin",
+      "bytes": 346175,
+      "decodedBytes": 1172060
+    },
+    "JP-35": {
+      "file": "JP-35.bin",
+      "bytes": 452284,
+      "decodedBytes": 1600699
+    },
+    "JP-36": {
+      "file": "JP-36.bin",
+      "bytes": 282105,
+      "decodedBytes": 1116639
+    },
+    "JP-37": {
+      "file": "JP-37.bin",
+      "bytes": 177399,
+      "decodedBytes": 618113
+    },
+    "JP-38": {
+      "file": "JP-38.bin",
+      "bytes": 533227,
+      "decodedBytes": 1981207
+    },
+    "JP-39": {
+      "file": "JP-39.bin",
+      "bytes": 448150,
+      "decodedBytes": 1671353
+    },
+    "JP-40": {
+      "file": "JP-40.bin",
+      "bytes": 391402,
+      "decodedBytes": 1460390
+    },
+    "JP-41": {
+      "file": "JP-41.bin",
+      "bytes": 120329,
+      "decodedBytes": 413813
+    },
+    "JP-42": {
+      "file": "JP-42.bin",
+      "bytes": 1138499,
+      "decodedBytes": 4196554
+    },
+    "JP-43": {
+      "file": "JP-43.bin",
+      "bytes": 411056,
+      "decodedBytes": 1467726
+    },
+    "JP-44": {
+      "file": "JP-44.bin",
+      "bytes": 316320,
+      "decodedBytes": 1147909
+    },
+    "JP-45": {
+      "file": "JP-45.bin",
+      "bytes": 313837,
+      "decodedBytes": 1168719
+    },
+    "JP-46": {
+      "file": "JP-46.bin",
+      "bytes": 972157,
+      "decodedBytes": 3566594
+    },
+    "JP-47": {
+      "file": "JP-47.bin",
+      "bytes": 558425,
+      "decodedBytes": 2096636
+    }
+  },
+  "sources": [
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_01_GML.zip",
+      "member": "N03-20260101_01.geojson",
+      "bytes": 52195927,
+      "sha256": "43bc612e9a1b767cffba136202b64429a8210e369c0f3eb3c7cefa4173ee7182",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_02_GML.zip",
+      "member": "N03-20260101_02.geojson",
+      "bytes": 9393107,
+      "sha256": "decd0a9eaddd2388178d5eb039e00d8e9d8beace4fc11595057c960cff251b14",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_03_GML.zip",
+      "member": "N03-20260101_03.geojson",
+      "bytes": 36060541,
+      "sha256": "fe743f2c66e141b4fe2e043a21d322cd897c7bac37c72fb33a65ff21abdea5e5",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_04_GML.zip",
+      "member": "N03-20260101_04.geojson",
+      "bytes": 30488793,
+      "sha256": "072aa763a4b115c04a68f0fa02b8ac9d7c0a23091f35d8f249c5a1709e12495a",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_05_GML.zip",
+      "member": "N03-20260101_05.geojson",
+      "bytes": 8721086,
+      "sha256": "a3025d83627d4104aab25c955863c1005b3996a629729c77468cface73fad733",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_06_GML.zip",
+      "member": "N03-20260101_06.geojson",
+      "bytes": 5195999,
+      "sha256": "9daf3d592179ad949d9eef468438a515fc2f12b3a77daad38d8b048d5fe6fbe5",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_07_GML.zip",
+      "member": "N03-20260101_07.geojson",
+      "bytes": 11726507,
+      "sha256": "d1d010c3888270945faac5f199024a07512b8951cf28750fa1f12af8b092280b",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_08_GML.zip",
+      "member": "N03-20260101_08.geojson",
+      "bytes": 4343420,
+      "sha256": "810a4d4d0184b71e1e1b0c8f97f2c83265898316e7e5cb334e0016b05d87b7c9",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_09_GML.zip",
+      "member": "N03-20260101_09.geojson",
+      "bytes": 3658365,
+      "sha256": "e2e71ce0d7d37755bead10fcec235a877c03319c26211aee8b904a38fe51cac6",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_10_GML.zip",
+      "member": "N03-20260101_10.geojson",
+      "bytes": 4349039,
+      "sha256": "1c1414fa13153fff9110a3a9a70be2011b9a69ddca8857438fc67413c2c50bc5",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_11_GML.zip",
+      "member": "N03-20260101_11.geojson",
+      "bytes": 4261201,
+      "sha256": "ff410d62a5a4b9b40ea036b652cac01856279a64311599d2ef23ba490ea1021f",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_12_GML.zip",
+      "member": "N03-20260101_12.geojson",
+      "bytes": 10519901,
+      "sha256": "62fb8c8e85fd187a2d758b844bc8fa23a70a7e82b47ea5fcc8b9d7d694c31b5b",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_13_GML.zip",
+      "member": "N03-20260101_13.geojson",
+      "bytes": 18307575,
+      "sha256": "4a26ebbc6e8fbdbe3042780e4ed4577c0bdb0fa6b50114353b595f06d55e48ca",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_14_GML.zip",
+      "member": "N03-20260101_14.geojson",
+      "bytes": 6969321,
+      "sha256": "f98abb45f7033c83da596ec2b06d80dd3057c73e423924db43c80c1ebc3fa7a0",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_15_GML.zip",
+      "member": "N03-20260101_15.geojson",
+      "bytes": 10305246,
+      "sha256": "15b40e05be946eebc021ca209787ffcb49114e3faa94f75f71edf29067249d35",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_16_GML.zip",
+      "member": "N03-20260101_16.geojson",
+      "bytes": 2563173,
+      "sha256": "609f824116768033d71aa6efe1e0cf2be740f4bad4b32299a140b2fd6603d143",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_17_GML.zip",
+      "member": "N03-20260101_17.geojson",
+      "bytes": 17779828,
+      "sha256": "348149cca7c04b9ac6d942229e894cc9922a74734e0ac6f06d994f1bca9376bc",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_18_GML.zip",
+      "member": "N03-20260101_18.geojson",
+      "bytes": 7861850,
+      "sha256": "4f7c798b84ee5122373a0e55df0b03ab3ab139ae9f0960607f9d39247dd978fb",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_19_GML.zip",
+      "member": "N03-20260101_19.geojson",
+      "bytes": 4369859,
+      "sha256": "6e2d6da2128822e44d501e0086cd8334f012eaa3586b7d066ee3162b88ae7fd7",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_20_GML.zip",
+      "member": "N03-20260101_20.geojson",
+      "bytes": 9289367,
+      "sha256": "b74a23fe68d71167569fee1401c7401087e345d7294e66dae0c989b633463298",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_21_GML.zip",
+      "member": "N03-20260101_21.geojson",
+      "bytes": 3899219,
+      "sha256": "56c3cffedb0db51ad36c39b2dd6911c9a18745360a4bc37ec75a8892ce811272",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_22_GML.zip",
+      "member": "N03-20260101_22.geojson",
+      "bytes": 17995911,
+      "sha256": "e9b715763c401ab1c6a005c0d635fe99bb8ff69c2c288412ae2783b1ba93fa6c",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_23_GML.zip",
+      "member": "N03-20260101_23.geojson",
+      "bytes": 8505017,
+      "sha256": "03e76b7d549dd7dca57ca637167bb1425992f522873bd16d8bcaa461de6a63e1",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_24_GML.zip",
+      "member": "N03-20260101_24.geojson",
+      "bytes": 23088948,
+      "sha256": "b1d19b23ed8f2f125145d935ee5e3169261a510bbde3bcdc14b204665d8d84d2",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_25_GML.zip",
+      "member": "N03-20260101_25.geojson",
+      "bytes": 1527840,
+      "sha256": "d6dc3e8afe63cfaa0e125314251f6379d22d208a55cc9794582899c8268f3e40",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_26_GML.zip",
+      "member": "N03-20260101_26.geojson",
+      "bytes": 6192962,
+      "sha256": "51e8d704532299a95541b9b8da6fdca11b10487f2878927fd2d25c3cd4bf88d2",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_27_GML.zip",
+      "member": "N03-20260101_27.geojson",
+      "bytes": 2953793,
+      "sha256": "d98e972669ca341e9cc269bcda78152526a7a97536ba517c4cc19b218b1e7ba3",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_28_GML.zip",
+      "member": "N03-20260101_28.geojson",
+      "bytes": 12802985,
+      "sha256": "2cbbf450713c76f2572c3b4f789bbcebded7c071255142b1b30b3e9e1edefd56",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_29_GML.zip",
+      "member": "N03-20260101_29.geojson",
+      "bytes": 2993019,
+      "sha256": "3461652359d6bfbfe72fc97b1f0626e765843b7e7d91a76bc95e5a68561ea954",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_30_GML.zip",
+      "member": "N03-20260101_30.geojson",
+      "bytes": 12882388,
+      "sha256": "c5b2397ad3e5118871dbeb8042e73accdfddb1b2752ade111ab68290274ccce1",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_31_GML.zip",
+      "member": "N03-20260101_31.geojson",
+      "bytes": 3406364,
+      "sha256": "351c5def63d3478146dca4e0d8583e5a6387ab8bf9a745a672a020f9dabe9fb6",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_32_GML.zip",
+      "member": "N03-20260101_32.geojson",
+      "bytes": 13019485,
+      "sha256": "b6dd0b29305b356ba2dd4c45751b3577e9c6e75d0d9d6156c2c9051fe7153fec",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_33_GML.zip",
+      "member": "N03-20260101_33.geojson",
+      "bytes": 6526516,
+      "sha256": "5b787c9028411fe43381b4d3fdd910fff45bf8dc909d8e45cfdcf325a6508dda",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_34_GML.zip",
+      "member": "N03-20260101_34.geojson",
+      "bytes": 10053781,
+      "sha256": "adf8cd499269f73864d610b89843ae6168fdf3b28f120e446009f2f3db13e058",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_35_GML.zip",
+      "member": "N03-20260101_35.geojson",
+      "bytes": 12039585,
+      "sha256": "cbf2c9599f442b94f27b116ac2c9a177eaac3fdd011e193485715ca7606596f4",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_36_GML.zip",
+      "member": "N03-20260101_36.geojson",
+      "bytes": 10089927,
+      "sha256": "eeef9e01e2eb1b76bc1c5cce4ac76a2bb1f2728aeccc19b628a569042258e660",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_37_GML.zip",
+      "member": "N03-20260101_37.geojson",
+      "bytes": 6418778,
+      "sha256": "755f32c5612d831d177277cbfc6449024450302684708635f29adf1bc72e1e0a",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_38_GML.zip",
+      "member": "N03-20260101_38.geojson",
+      "bytes": 16841979,
+      "sha256": "16e3af28d9af3a864922869826cec6bfe55adc11d51a81fbc2a12000555adc11",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_39_GML.zip",
+      "member": "N03-20260101_39.geojson",
+      "bytes": 13682799,
+      "sha256": "49bd27d38e9548dc7f1bff3a65d41b200b4fe35db58bf12dce9bd0446b86aa90",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_40_GML.zip",
+      "member": "N03-20260101_40.geojson",
+      "bytes": 10945073,
+      "sha256": "b88198875849f900040d49681811a44a7b4f9741f3d8534f61b19b5e0fb588de",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_41_GML.zip",
+      "member": "N03-20260101_41.geojson",
+      "bytes": 3060450,
+      "sha256": "61f25d3f1fcf3f7157b1eec6c11cbd7167fecd2317631ef0e8524ede35daf004",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_42_GML.zip",
+      "member": "N03-20260101_42.geojson",
+      "bytes": 37626160,
+      "sha256": "ad3c6625dff1a45a611870c8169e4df1b9f87bce1f0b212999dcb92d7f62b629",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_43_GML.zip",
+      "member": "N03-20260101_43.geojson",
+      "bytes": 12786129,
+      "sha256": "b53c747488635fc116897abda204694e6302219575c1129e0db8265890b89757",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_44_GML.zip",
+      "member": "N03-20260101_44.geojson",
+      "bytes": 7826469,
+      "sha256": "ca7faec4b5360f21c3d3d793b7206022183fe3d9196b958d6462b425e5ba84fb",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_45_GML.zip",
+      "member": "N03-20260101_45.geojson",
+      "bytes": 11922693,
+      "sha256": "d7d4ad9722e29550fe2cd06ba9279ebf9ae994930e800aea5c9df48c221557f1",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_46_GML.zip",
+      "member": "N03-20260101_46.geojson",
+      "bytes": 29572832,
+      "sha256": "99c873a5232b008f3b9062c16f975abe867c1d0c2abd19ddc836898f5ce8db46",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    },
+    {
+      "url": "https://nlftp.mlit.go.jp/ksj/gml/data/N03/N03-2026/N03-20260101_47_GML.zip",
+      "member": "N03-20260101_47.geojson",
+      "bytes": 22602059,
+      "sha256": "c5e4e6277e0ba53988fc3ef9be643b1a55efdbb246a39bc89491c92c15ab4064",
+      "date": "2026-01-01",
+      "retrieved": "2026-10-06"
+    }
+  ],
+  "processing": "Official MLIT/GSI municipal and ward topology simplified together to 15 m per prefecture. Municipal polygons dissolve designated-city wards. All local geometry is partitioned by prefecture. National prefecture display uses 80 m detail.",
+  "notes": [
+    "Tokyo’s 23 special wards are municipalities. Designated-city administrative wards are nested inside their city and are not counted as separate municipalities.",
+    "Six village areas in the Northern Territories follow the source’s Japanese territorial claim and are administered by Russia.",
+    "Unassigned areas remain in prefecture outlines but are not presented as municipalities.",
+    "Romanized municipality labels derive from Japan Post; Japanese names and official five-digit source codes are preserved."
+  ]
+}

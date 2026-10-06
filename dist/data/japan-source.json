@@ -1,8 +1,10 @@
 {
-  "retrieved": "2026-10-05",
-  "boundarySource": "https://github.com/piuccio/open-data-jp-prefectures-geojson",
-  "upstream": "https://nlftp.mlit.go.jp/ksj/",
-  "license": "MIT (processing); underlying MLIT data terms apply",
-  "processing": "Prefectures dissolved by source author; shared topology cleaned and simplified to 15 m for display. Separate 500 m camera-motion geometry.",
-  "prefectures": 47
+  "boundarySource": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html",
+  "boundaryDate": "2026-01-01",
+  "retrieved": "2026-10-06",
+  "license": "CC BY 4.0",
+  "attribution": "国土交通省 国土数値情報（行政区域）2026年版を加工",
+  "prefectures": 47,
+  "processing": "Official MLIT/GSI municipal and ward topology simplified together to 15 m per prefecture. Municipal polygons dissolve designated-city wards. All local geometry is partitioned by prefecture. National prefecture display uses 80 m detail.",
+  "details": "japan-local-source.json"
 }

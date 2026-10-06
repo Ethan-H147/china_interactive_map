@@ -45,8 +45,8 @@
     "test:taiwan": "node scripts/validate-taiwan.mjs",
     "test:experience": "node scripts/validate-experience.mjs",
     "test:countries": "node scripts/validate-country-switching.mjs",
-    "test:japan": "node --check dist/japan.mjs && node --check dist/japan-worker.mjs && node scripts/validate-japan.mjs",
-    "build:japan": "node scripts/build-japan.mjs",
+    "test:japan": "node --check dist/japan.mjs && node --check dist/japan-worker.mjs && node scripts/validate-japan.mjs && node scripts/validate-japan-local.mjs",
+    "build:japan": "node scripts/fetch-japan-municipalities.mjs && node --max-old-space-size=8000 scripts/build-japan-municipalities.mjs",
     "test:zhuhai-macau": "node scripts/validate-zhuhai-macau.mjs"
   }
 }

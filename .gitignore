@@ -1,4 +1,5 @@
 node_modules/
+scripts/japan-sources/municipalities/
 scripts/additional-sources/archipelago/*.geojson
 scripts/additional-sources/archipelago/*.zip
 scripts/additional-sources/archipelago/*-20m.bin
