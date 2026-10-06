@@ -40,7 +40,7 @@ export async function addJapanPortal(map,host){
  }
  function sync(){
   if(!ready)return;const detail=active&&scope&&mode===2&&localSources.length>0,replacement=detail&&localReady;
-  visible('japan-first-fill',active);visible('japan-first-lines',active&&!detail&&$('province-layer').checked);visible('japan-first-selected',active&&!detail);
+  visible('japan-first-fill',active);visible('japan-first-lines',active&&$('province-layer').checked);visible('japan-first-selected',active&&!detail);
   map.setFilter('japan-first-fill',replacement?['!=',['get','id'],scope]:null);
   for(const {id,level} of localSources){const shown=detail&&(level!==3||!!wardScope());visible(id+'-fill',shown&&level!==1);visible(id+'-lines',shown&&(level===1?$('province-layer').checked:$('second-layer').checked));visible(id+'-selected',shown);if(level===3)for(const suffix of ['-fill','-lines','-selected'])map.setFilter(id+suffix,['==',['get','parent'],wardScope()||'']);}
   satellitePaint();updateLabels();
@@ -97,6 +97,8 @@ export async function addJapanPortal(map,host){
    while(host.isMoving?.()||map.isMoving()){await new Promise(resolve=>setTimeout(resolve,50));if(token!==detailEpoch||!active)return;}
    for(const [key,blob] of Object.entries(sources))installLocal('japan-local-'+key,blob,key==='first'?1:key==='second'?2:3);
    for(const e of localSources)map.moveLayer(e.id+'-fill');for(const e of localSources)map.moveLayer(e.id+'-lines');for(const e of localSources)map.moveLayer(e.id+'-selected');
+   // Keep nationwide prefecture edges above local fills and below local strokes.
+   map.moveLayer('japan-first-lines',localSources[0].id+'-lines');
    sync();
    // Keep the prefecture overview until all replacement sources can paint.
    if(!await painted(token)){if(token===detailEpoch){removeLocal();throw Error('Local rendering timed out');}return;}localReady=true;sync();detailMessage('');

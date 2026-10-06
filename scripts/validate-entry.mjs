@@ -38,4 +38,5 @@ assert(fs.readFileSync('dist/country-symbols.css','utf8').includes('prefers-redu
 console.log('Country entry: equal routes, explicit-link priority, remembered visits, direct map first visit, legacy place links, unavailable storage, early themes and isolated symbol animations passed.');
 
 assert(symbols.markup('japan').includes('japan-chrysanthemum.png'));
-for(const country of ['philippines','indonesia']){const wheel=symbols.markup(country);assert(wheel.includes('symbol-rotor'));assert(wheel.includes('M50 10V90'),'Use the carriage-wheel placeholder');}
+const sun=symbols.markup('philippines');assert.equal((sun.match(/data-sun-ray=/g)||[]).length,8,'Philippine sun has eight ray groups');assert.equal((sun.match(/class="symbol-rotor"/g)||[]).length,1);assert(sun.includes('#fcd116'));assert(!sun.includes('M50 10V90'));
+const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));assert(wheel.includes('M50 10V90'),'Keep the carriage wheel available');
