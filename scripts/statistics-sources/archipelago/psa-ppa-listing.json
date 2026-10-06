@@ -1,0 +1,56 @@
+[
+  {
+    "id": "0012A5FPPA0.px",
+    "type": "t",
+    "text": "Gross Domestic Product by Province and HUC",
+    "updated": "2026-08-28T09:25:02"
+  },
+  {
+    "id": "0022A5FPPA1.px",
+    "type": "t",
+    "text": "Gross Domestic Product by Industry, Province and HUC",
+    "updated": "2026-08-28T09:25:45"
+  },
+  {
+    "id": "0032A5FPPA2.px",
+    "type": "t",
+    "text": "Gross Domestic Product by Province and HUC, Growth Rates",
+    "updated": "2026-09-04T23:33:54"
+  },
+  {
+    "id": "0042A5FPPA3.px",
+    "type": "t",
+    "text": "Gross Domestic Product Growth Rates by Industry, Province and HUC",
+    "updated": "2026-08-28T09:27:36"
+  },
+  {
+    "id": "0052A5FPPA4.px",
+    "type": "t",
+    "text": "Gross Domestic Product Percent Share by Province and HUC",
+    "updated": "2026-08-28T09:28:09"
+  },
+  {
+    "id": "0062A5FPPA5.px",
+    "type": "t",
+    "text": "Gross Domestic Product Percent Share by Industry, Province and HUC",
+    "updated": "2026-08-28T09:28:52"
+  },
+  {
+    "id": "0072A5FPPA6.px",
+    "type": "t",
+    "text": "Gross Domestic Product Implicit Price Index by Province and HUC",
+    "updated": "2026-08-28T09:29:33"
+  },
+  {
+    "id": "0082A5FPPA7.px",
+    "type": "t",
+    "text": "Gross Domestic Product Implicit Price Index by Industry, Province and HUC",
+    "updated": "2026-08-28T09:30:20"
+  },
+  {
+    "id": "0092A5FPPA8.px",
+    "type": "t",
+    "text": "Per Capita Gross Domestic Product by Province and HUC",
+    "updated": "2026-08-28T09:30:50"
+  }
+]

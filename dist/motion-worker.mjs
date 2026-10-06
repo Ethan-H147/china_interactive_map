@@ -2,8 +2,7 @@ import {lineData} from './adaptive-lines.mjs';
 try{
  const country=new URL(import.meta.url).searchParams.get('country')||'china';
  if(!['china','korea','mongolia','japan'].includes(country))throw Error('Unknown atlas');
- const detail=country==='china'&&new URL(import.meta.url).searchParams.get('china-boundaries')==='detail';
- const response=await fetch(new URL('data/'+(detail?'china-detail/':'')+country+'-motion.bin',import.meta.url));if(!response.ok)throw Error('Motion data unavailable');
+ const response=await fetch(new URL('data/'+country+'-motion.bin',import.meta.url));if(!response.ok)throw Error('Motion data unavailable');
  const data=await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).json();
  for(const id of ['provinces','prefectures','others','city-districts','korea-first','korea-second','mongolia-first','mongolia-second','japan-first']){
   if(!data[id])continue;

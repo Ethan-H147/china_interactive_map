@@ -1,0 +1,223 @@
+CHARSET="ANSI";
+AXIS-VERSION="2010";
+CODEPAGE="iso-8859-15";
+LANGUAGE="en";
+CREATION-DATE="20260807 09:00";
+DECIMALS=1;
+SHOWDECIMALS=0;
+MATRIX="1A6DTHP8";
+COPYRIGHT=NO;
+SUBJECT-CODE="1A";
+SUBJECT-AREA="Population and Migration";
+DESCRIPTION="Total Population, Household Population, Number of Households and Average Household Size by Region, Province, and Highly Urbanized City: Philippines, 2024";
+TITLE="Total Population, Household Population, Number of Households and Average Household Size by Region, Province, and Highly Urbanized City: Philippines, 2024 by Geographic Location and Parameter";
+CONTENTS="Total Population, Household Population, Number of Households and Average Household Size by Region, Province, and Highly Urbanized City: Philippines, 2024";
+STUB="Geographic Location";
+HEADING="Parameter";
+VALUES("Geographic Location")="Philippines a","..National Capital Region (NCR)","....City of Caloocan","....City of Las Piñas","....City of Makati 1/","....City of Malabon","....City of Mandaluyong","....City of Manila","....City of Marikina","....City of Muntinlupa",
+"....City of Navotas","....City of Parañaque","....Pasay City","....City of Pasig","....Quezon City","....City of San Juan","....City of Taguig 2/","....City of Valenzuela","....Pateros","..Cordillera Administrative Region (CAR)","....Abra","....Apayao",
+"....Benguet *","....City of Baguio","....Ifugao","....Kalinga","....Mountain Province","..Region I (Ilocos Region)","....Ilocos Norte","....Ilocos Sur","....La Union","....Pangasinan","..Region II (Cagayan Valley)","....Batanes","....Cagayan",
+"....Isabela","....Nueva Vizcaya","....Quirino","..Region III (Central Luzon)","....Aurora","....Bataan","....Bulacan","....Nueva Ecija","....Pampanga *","....City of Angeles","....Tarlac","....Zambales *","....City of Olongapo",
+"..Region IV-A (CALABARZON)","....Batangas","....Cavite","....Laguna","....Quezon *","....City of Lucena","....Rizal","..MIMAROPA Region","....Marinduque","....Occidental Mindoro","....Oriental Mindoro","....Palawan *","....City of Puerto Princesa",
+"....Romblon","..Region V (Bicol Region)","....Albay","....Camarines Norte","....Camarines Sur","....Catanduanes","....Masbate","....Sorsogon","..Region VI (Western Visayas)","....Aklan","....Antique","....Capiz","....Guimaras","....Iloilo *",
+"....City of Iloilo","..Negros Island Region (NIR) 3/","....Negros Occidental 4/*","....City of Bacolod 4/","....Negros Oriental 5/","....Siquijor 5/","..Region VII (Central Visayas)","....Bohol","....Cebu *","....City of Cebu","....City of Lapu-Lapu",
+"....City of Mandaue","..Region VIII (Eastern Visayas)","....Biliran","....Eastern Samar","....Leyte *","....City of Tacloban","....Northern Samar","....Samar","....Southern Leyte","..Region IX (Zamboanga Peninsula)","....Zamboanga del Norte",
+"....Zamboanga del Sur *","....City of Zamboanga","....Zamboanga Sibugay","....City of Isabela (Not a Province) **","....Sulu 6/","..Region X (Northern Mindanao)","....Bukidnon","....Camiguin","....Lanao del Norte *","....City of Iligan",
+"....Misamis Occidental","....Misamis Oriental *","....City of Cagayan De Oro","..Region XI (Davao Region)","....Davao de Oro","....Davao del Norte","....Davao del Sur *","....City of Davao","....Davao Occidental","....Davao Oriental",
+"..Region XII (SOCCSKSARGEN)","....Cotabato","....Sarangani","....South Cotabato *","....City of General Santos","....Sultan Kudarat","..Region XIII (Caraga)","....Agusan del Norte","....City of Butuan","....Agusan del Sur","....Dinagat Islands",
+"....Surigao del Norte","....Surigao del Sur","..Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)","....Basilan","....Lanao del Sur","....Maguindanao del Norte 7/","....Maguindanao del Sur 7/","....Tawi-Tawi","....Special Geographic Area 8**";
+VALUES("Parameter")="Total Population","Household Population","Number of Households","Average Household Size";
+CODES("Geographic Location")="0000000000","1300000000","1380100000","1380200000","1380300000","1380400000","1380500000","1380600000","1380700000","1380800000","1380900000","1381000000","1381100000","1381200000","1381300000","1381400000","1381500000","1381600000","1381701000",
+"1400000000","1400100000","1408100000","1401100000","1430300000","1402700000","1403200000","1404400000","0100000000","0102800000","0102900000","0103300000","0105500000","0200000000","0200900000","0201500000","0203100000","0205000000","0205700000",
+"0300000000","0307700000","0300800000","0301400000","0304900000","0305400000","0330100000","0306900000","0307100000","0331400000","0400000000","0401000000","0402100000","0403400000","0405600000","0431200000","0405800000","1700000000","1704000000",
+"1705100000","1705200000","1705300000","1731500000","1705900000","0500000000","0500500000","0501600000","0501700000","0502000000","0504100000","0506200000","0600000000","0600400000","0600600000","0601900000","0607900000","0603000000","0631000000",
+"1800000000","1804500000","1830200000","1804600000","1806100000","0700000000","0701200000","0702200000","0730600000","0731100000","0731300000","0800000000","0807800000","0802600000","0803700000","0831600000","0804800000","0806000000","0806400000",
+"0900000000","0907200000","0907300000","0931700000","0908300000","0990100000","0906600000","1000000000","1001300000","1001800000","1003500000","1030900000","1004200000","1004300000","1030500000","1100000000","1108200000","1102300000","1102400000",
+"1130700000","1108600000","1102500000","1200000000","1204700000","1208000000","1206300000","1230800000","1206500000","1600000000","1600200000","1630400000","1600300000","1608500000","1606700000","1606800000","1900000000","1900700000","1903600000",
+"1908700000","1908800000","1907000000","1999900000";
+PRECISION("Parameter","Average Household Size")=1;
+LAST-UPDATED="20260807 09:00";
+UNITS="Persons and Households";
+CONTACT="Population and Housing Census Division#National Censuses Service#Philippine Statistics Authority (PSA)#19th Floor, PSA Headquarters, PSA Complex, East Ave., Diliman, Quezon City, Philippines 1101#Email Address: phcd.staff@psa.gov.ph";
+SOURCE="Philippine Statistics Authority, 2024 Census of Population";
+NOTEX="<strong>Definition:</strong>#Total population defines as the sum of the household population and the institutional population, covering all persons living within a specific territory at a given reference time, including Filipinos in embassies or missions"
+" abroad.#Household Population: All persons who are members of a private household, meaning a person or group of persons sleeping in the same housing unit with common arrangements for food preparation and consumption. #Institutional Population: Persons li"
+"ving in institutional living quarters (ILQs) such as penal/corrective institutions, dormitories, hotels, military camps, or welfare facilities.#Household is defined as a social unit consisting of a person or a group of persons who sleep in the same housi"
+"ng unit and have a common arrangement in the preparation and consumption of food.#Average Household Size is defined as the average number of persons residing in a household, obtained by dividing the household population by the number of households.##<str"
+"ong>Method of Computation:</strong> Average Household Size is calculated by dividing the total household population by the total number of households.##<strong>Source of Basic Data:</strong> 2024 Census of Population##<strong>Level of Disaggregation:</st"
+"rong> Region, Province and Highly Urbanized City##<strong>Note/s:</strong>##*    Population counts for the provinces exclude the counts of Highly Urbanized Cities.#** Not a Province/HUC#a/  Population counts for the regions do not add up to the national "
+"total. Includes 1,708 Filipinos in Philippine embassies, consulates, and mission abroad.#1/ Excludes 10 barangays transferred to the City of Taguig, in accordance with the Supreme Court decision in General Register (GR) 235316 dated 01 December 2021.#2/ "
+"Includes 10 barangays transferred from the City of Makati, in accordance with the Supreme Court decision in GR 235316 dated 01 December 2021.#3/  Re-established into a region under Republic Act (RA) No. 12000 dated 11 June 2024.#4/ Transferred province u"
+"nder RA No. 12000; taken from Region VI - Western Visayas.#5/ Transferred province under RA No. 12000; taken from Region VII - Central Visayas.#6/ Reassigned from BARMM to Region IX under Executive Order No. 91, dated July 30, 2025, per a Supreme Court r"
+"uling on September 9, 2024.#7/ Created into a province through the division of the Province of Maguindanao under RA No. 11550; ratified on 17 September 2022.#8/ Renamed from Interim Province; comprised of eight newly created municipalities under the Bang"
+"samoro Autonomy Act Nos. 41 to 48 dated 15 September 2022; ratified on 13 April 2024.";
+VALUENOTE("Geographic Location","Philippines a")="a";
+VALUENOTE("Geographic Location","....City of Makati 1/")="1/";
+VALUENOTE("Geographic Location","....City of Taguig 2/")="2/";
+VALUENOTE("Geographic Location","....Benguet *")="*";
+VALUENOTE("Geographic Location","....Pampanga *")="*";
+VALUENOTE("Geographic Location","....Zambales *")="*";
+VALUENOTE("Geographic Location","....Quezon *")="*";
+VALUENOTE("Geographic Location","....Palawan *")="*";
+VALUENOTE("Geographic Location","....Iloilo *")="*";
+VALUENOTE("Geographic Location","..Negros Island Region (NIR) 3/")="3/";
+VALUENOTE("Geographic Location","....Negros Occidental 4/*")="4/*";
+VALUENOTE("Geographic Location","....City of Bacolod 4/")="4/";
+VALUENOTE("Geographic Location","....Negros Oriental 5/")="5/";
+VALUENOTE("Geographic Location","....Siquijor 5/")="5/";
+VALUENOTE("Geographic Location","....Cebu *")="*";
+VALUENOTE("Geographic Location","....Leyte *")="*";
+VALUENOTE("Geographic Location","....Zamboanga del Sur *")="*";
+VALUENOTE("Geographic Location","....City of Isabela (Not a Province) **")="**";
+VALUENOTE("Geographic Location","....Sulu 6/")="6/";
+VALUENOTE("Geographic Location","....Lanao del Norte *")="*";
+VALUENOTE("Geographic Location","....Misamis Oriental *")="*";
+VALUENOTE("Geographic Location","....Davao del Sur *")="*";
+VALUENOTE("Geographic Location","....South Cotabato *")="*";
+VALUENOTE("Geographic Location","....Maguindanao del Norte 7/")="7/";
+VALUENOTE("Geographic Location","....Maguindanao del Sur 7/")="7/";
+VALUENOTE("Geographic Location","....Special Geographic Area 8**")="8**";
+NEXT-UPDATE="20310807 09:00";
+PX-SERVER="OpenSTAT";
+SURVEY="2024 Census of Population";
+UPDATE-FREQUENCY="Every Five Years";
+DESCRIPTIONDEFAULT=YES;
+DATA=
+112729484.0 112325293.0 29665206.0 3.8 
+14001751.0 13898189.0 3738378.0 3.7 
+1712945.0 1710978.0 409606.0 4.2 
+615549.0 614802.0 162942.0 3.8 
+309770.0 308647.0 88533.0 3.5 
+389929.0 388936.0 106410.0 3.7 
+465902.0 457236.0 136548.0 3.3 
+1902590.0 1880769.0 478871.0 3.9 
+471323.0 467823.0 117323.0 4.0 
+552225.0 525722.0 138106.0 3.8 
+252878.0 252571.0 73562.0 3.4 
+703245.0 696999.0 214849.0 3.2 
+453186.0 449827.0 134259.0 3.4 
+853050.0 851357.0 252362.0 3.4 
+3084270.0 3072127.0 808335.0 3.8 
+134312.0 133057.0 36868.0 3.6 
+1308085.0 1296543.0 355385.0 3.6 
+725173.0 723638.0 206793.0 3.5 
+67319.0 67157.0 17626.0 3.8 
+1808985.0 1802908.0 473422.0 3.8 
+246948.0 246214.0 64201.0 3.8 
+126587.0 126382.0 30225.0 4.2 
+473190.0 471906.0 133209.0 3.5 
+368426.0 365342.0 96660.0 3.8 
+208668.0 208509.0 53784.0 3.9 
+235391.0 235202.0 55291.0 4.3 
+149775.0 149353.0 40052.0 3.7 
+5342453.0 5334614.0 1451660.0 3.7 
+618850.0 617096.0 167814.0 3.7 
+709991.0 709215.0 186223.0 3.8 
+825072.0 823442.0 223792.0 3.7 
+3188540.0 3184861.0 873831.0 3.6 
+3777608.0 3769915.0 985185.0 3.8 
+18937.0 18595.0 6246.0 3.0 
+1284676.0 1281823.0 324635.0 3.9 
+1733048.0 1730842.0 460261.0 3.8 
+530106.0 528039.0 140670.0 3.8 
+210841.0 210616.0 53373.0 3.9 
+12989074.0 12961539.0 3515396.0 3.7 
+240824.0 239990.0 62823.0 3.8 
+891440.0 887772.0 246157.0 3.6 
+3876806.0 3870674.0 1100041.0 3.5 
+2395816.0 2393234.0 674461.0 3.5 
+2586446.0 2579251.0 643873.0 4.0 
+483452.0 482041.0 134391.0 3.6 
+1568162.0 1564206.0 401898.0 3.9 
+681225.0 680047.0 180830.0 3.8 
+264903.0 264324.0 70922.0 3.7 
+16933234.0 16879655.0 4815565.0 3.5 
+2994795.0 2990129.0 824812.0 3.6 
+4573884.0 4549557.0 1320135.0 3.4 
+3687345.0 3677666.0 1129184.0 3.3 
+1980338.0 1976657.0 522695.0 3.8 
+280331.0 279537.0 70662.0 4.0 
+3416541.0 3406109.0 948077.0 3.6 
+3245446.0 3230190.0 837270.0 3.9 
+226522.0 226266.0 60264.0 3.8 
+511417.0 506821.0 131118.0 3.9 
+919504.0 917852.0 235504.0 3.9 
+968795.0 966836.0 246439.0 3.9 
+316384.0 310494.0 82828.0 3.7 
+302824.0 301921.0 81117.0 3.7 
+6064426.0 6054542.0 1470175.0 4.1 
+1379398.0 1377632.0 339427.0 4.1 
+604666.0 602472.0 150221.0 4.0 
+2063314.0 2059537.0 488608.0 4.2 
+261169.0 260700.0 62544.0 4.2 
+910813.0 910079.0 220949.0 4.1 
+845066.0 844122.0 208426.0 4.0 
+4861911.0 4846031.0 1249201.0 3.9 
+634422.0 629082.0 161855.0 3.9 
+643173.0 641322.0 166053.0 3.9 
+835098.0 833824.0 217592.0 3.8 
+192874.0 192475.0 50129.0 3.8 
+2082616.0 2078051.0 542613.0 3.8 
+473728.0 471277.0 110959.0 4.2 
+4904944.0 4889626.0 1321004.0 3.7 
+2680477.0 2674231.0 731952.0 3.7 
+624787.0 621831.0 172580.0 3.6 
+1492038.0 1486507.0 388761.0 3.8 
+107642.0 107057.0 27711.0 3.9 
+6640875.0 6599463.0 1783736.0 3.7 
+1412726.0 1404668.0 347256.0 4.0 
+3400522.0 3389549.0 893690.0 3.8 
+965332.0 946912.0 298505.0 3.2 
+497813.0 496275.0 141692.0 3.5 
+364482.0 362059.0 102593.0 3.5 
+4625929.0 4610243.0 1155969.0 4.0 
+184095.0 183674.0 44802.0 4.1 
+472683.0 471669.0 120403.0 3.9 
+1823458.0 1816736.0 475364.0 3.8 
+259353.0 256810.0 62848.0 4.1 
+645789.0 642854.0 150193.0 4.3 
+806179.0 804656.0 195382.0 4.1 
+434372.0 433844.0 106977.0 4.1 
+5089934.0 5068007.0 1217556.0 4.2 
+1067067.0 1065769.0 292347.0 3.6 
+1045126.0 1043340.0 267689.0 3.9 
+1018849.0 1006757.0 276501.0 3.6 
+661498.0 660340.0 156635.0 4.2 
+151297.0 150686.0 34129.0 4.4 
+1146097.0 1141115.0 190255.0 6.0 
+5178326.0 5166543.0 1337636.0 3.9 
+1601902.0 1598790.0 417328.0 3.8 
+94892.0 94770.0 24103.0 3.9 
+761725.0 761122.0 181725.0 4.2 
+368132.0 367556.0 96329.0 3.8 
+621993.0 620686.0 160406.0 3.9 
+988065.0 986743.0 251740.0 3.9 
+741617.0 736876.0 206005.0 3.6 
+5389422.0 5365637.0 1513680.0 3.5 
+783775.0 782265.0 209252.0 3.7 
+1143931.0 1131841.0 304382.0 3.7 
+705129.0 703230.0 206132.0 3.4 
+1848947.0 1841875.0 543854.0 3.4 
+317598.0 317300.0 88084.0 3.6 
+590042.0 589126.0 161976.0 3.6 
+4462776.0 4454231.0 1174715.0 3.8 
+1286142.0 1284902.0 338157.0 3.8 
+580915.0 580384.0 148375.0 3.9 
+1010009.0 1006296.0 277245.0 3.6 
+722059.0 720638.0 184938.0 3.9 
+863651.0 862011.0 226000.0 3.8 
+2865196.0 2855501.0 706133.0 4.0 
+404100.0 403614.0 98048.0 4.1 
+385530.0 383881.0 93109.0 4.1 
+740531.0 737524.0 187718.0 3.9 
+120533.0 120330.0 31496.0 3.8 
+565644.0 564031.0 138729.0 4.1 
+648858.0 646121.0 157033.0 4.1 
+4545486.0 4538459.0 918525.0 4.9 
+541947.0 541749.0 105684.0 5.1 
+1368137.0 1367024.0 241749.0 5.7 
+1124811.0 1124013.0 263714.0 4.3 
+813243.0 813004.0 173219.0 4.7 
+482645.0 478126.0 82218.0 5.8 
+214703.0 214543.0 51941.0 4.1 
+;

@@ -1,0 +1,183 @@
+CHARSET="ANSI";
+AXIS-VERSION="2010";
+CODEPAGE="iso-8859-15";
+LANGUAGE="en";
+CREATION-DATE="20260828 10:00";
+DECIMALS=10;
+MATRIX="2A5FPPA8";
+COPYRIGHT=NO;
+SUBJECT-CODE="2A";
+SUBJECT-AREA="Macroeconomic Statistics";
+DESCRIPTION="Per Capita Gross Domestic Product by Province and HUC";
+TITLE="Per Capita Gross Domestic Product by Province and HUC by Geolocation, Type of Valuation and Year";
+CONTENTS="Per Capita Gross Domestic Product by Province and HUC";
+STUB="Geolocation";
+HEADING="Type of Valuation","Year";
+VALUES("Geolocation")="National Capital Region (NCR)","..City of Caloocan","..City of Las Piñas","..City of Makati","..City of Malabon","..City of Mandaluyong","..City of Manila","..City of Marikina","..City of Muntinlupa","..City of Navotas","..City of Parañaque",
+"..Pasay City","..City of Pasig","..Quezon City","..City of San Juan","..City of Taguig","..City of Valenzuela","..Pateros","Cordillera Administrative Region (CAR)","..Abra","..Apayao","..Benguet","..Ifugao","..Kalinga","..Mountain Province",
+"..City of Baguio","Region I (Ilocos Region)","..Ilocos Norte","..Ilocos Sur","..La Union","..Pangasinan","Region II (Cagayan Valley)","..Batanes","..Cagayan","..Isabela","..Nueva Vizcaya","..Quirino","Region III (Central Luzon)","..Aurora","..Bataan",
+"..Bulacan","..Nueva Ecija","..Pampanga","..Tarlac","..Zambales","..City of Angeles","..City of Olongapo","Region IV-A (CALABARZON)","..Batangas","..Cavite","..Laguna","..Quezon","..Rizal","..City of Lucena","MIMAROPA Region","..Marinduque",
+"..Occidental Mindoro","..Oriental Mindoro","..Palawan","..Romblon","..City of Puerto Princesa","Region V (Bicol Region)","..Albay","..Camarines Norte","..Camarines Sur","..Catanduanes","..Masbate","..Sorsogon","Region VI (Western Visayas)","..Aklan",
+"..Antique","..Capiz","..Guimaras","..Iloilo","..City of Iloilo","Negros Island Region (NIR)","..Negros Occidental","..Negros Oriental","..Siquijor","..City of Bacolod","Region VII (Central Visayas)","..Bohol","..Cebu","..City of Cebu",
+"..City of Lapu-Lapu","..City of Mandaue","Region VIII (Eastern Visayas)","..Biliran","..Eastern Samar","..Leyte","..Northern Samar","..Samar","..Southern Leyte","..City of Tacloban","Region IX (Zamboanga Peninsula)","..Sulu","..Zamboanga del Norte",
+"..Zamboanga del Sur","..Zamboanga Sibugay","..City of Isabela","..City of Zamboanga","Region X (Northern Mindanao)","..Bukidnon","..Camiguin","..Lanao del Norte","..Misamis Occidental","..Misamis Oriental","..City of Cagayan de Oro","..City of Iligan",
+"Region XI (Davao Region)","..Davao de Oro","..Davao del Norte","..Davao del Sur","..Davao Occidental","..Davao Oriental","..City of Davao","Region XII (SOCCSKSARGEN)","..Cotabato","..Sarangani","..South Cotabato","..Sultan Kudarat",
+"..City of General Santos","Region XIII (Caraga)","..Agusan del Norte","..Agusan del Sur","..Dinagat Islands","..Surigao del Norte","..Surigao del Sur","..City of Butuan","Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)","..Basilan",
+"..Lanao del Sur","..Maguindanao del Norte","..Maguindanao del Sur","..Tawi-Tawi";
+VALUES("Type of Valuation")="At Current Prices";
+VALUES("Year")="2024","2025";
+TIMEVAL("Year")=TLIST(A1),"2024","2025";
+LAST-UPDATED="20260828 09:00";
+UNITS="In Philippine Peso";
+CONTACT="Subnational Economic Accounts Division#Philippine Statistics Authority#21st Floor, PSA Headquarters, PSA Complex#East Avenue, Quezon City,1011#Tel: 8376-2024#sead.staff@psa.gov.ph";
+FIRST-PUBLISHED="20211213 10:00";
+SOURCE="Philippine Statistics Authority";
+NOTEX="<strong>Indicator:</strong> Per capita GDP##<strong>Definition:</strong>##Per capita GDP is a measure that indicates the average economic output generated per person within the province/HUC.##See more: <a href='https://psa.gov.ph/system/files/eiad/Quarte"
+"rly-and-Annual-Gross-Domestic-Product-Sources-and-Methods.pdf'>https://psa.gov.ph/system/files/eiad/Quarterly-and-Annual-Gross-Domestic-Product-Sources-and-Methods.pdf</a>##<strong>Method of Computation:</strong>##Per capita GDP is derived by dividing th"
+"e GDP of a province/HUC by its total population.##<strong>Source of Basic Data:</strong>##Data for GDP are sourced from both survey and administrative sources. Major sources for the benchmark estimates include Census of Philippine Business Industry (CPBI"
+"), Updated list of establishments (ULE), Family Income and Expenditure Survey (FIES), while surveys and administrative data from various stakeholders were utilized in non-benchmark compilation.#Population data is based on the results of the population ce"
+"nsus.##<strong>Note/s:</strong>##i. Provincial Product Accounting (PPA) is an accounting framework, which is aligned with the Philippine System of National Accounts (PSNA), that aims to present a comprehensive picture of the provincial and Highly Urbaniz"
+"ed City (HUC) economies.#ii. The population data used for the computation of GDP per capita are based on the preliminary 2020-based CPH population projection.#iii. Figures for the City of Makati exclude the Embo Barangays starting in 2022, following thei"
+"r transfer to the City of Taguig.";
+NEXT-UPDATE="20270828 10:00";
+PX-SERVER="OpenSTAT";
+SURVEY="Provincial Product Accounts";
+UPDATE-FREQUENCY="Annually";
+DESCRIPTIONDEFAULT=YES;
+DATA=
+595591.0690145940 631279.0775186380 
+174612.0339431070 184156.9214979070 
+226869.8676312650 241262.4585148570 
+4863507.5328269100 5200593.4243499500 
+224523.3064844820 232966.5343950390 
+825889.4335614790 858602.4409187060 
+655581.2246263520 680086.3926136140 
+307311.3354749670 317823.1735921860 
+566988.4829161380 597424.6589037300 
+205545.4929480210 218972.5757696580 
+599340.1444081290 634003.6686960270 
+950112.8065255570 1019428.1957586100 
+720191.2210644050 769525.6238308460 
+533498.8853495450 576151.4638749210 
+885908.6154466680 942576.0512853940 
+583937.4065478310 611723.5771538860 
+273274.9785123230 284571.2702383910 
+180759.7326685490 188966.0302247740 
+236954.7534933330 249739.8524203820 
+120431.3808639370 119164.1010720490 
+112123.8274572750 113262.6353573040 
+222539.5777128490 236679.0776607160 
+157666.9778168730 165840.0219828010 
+148987.6142058430 152017.9513980880 
+127383.7353047340 134882.3442994450 
+517970.5182724710 551406.7266816680 
+164156.8699680240 172667.8739703630 
+211828.2948425750 226212.9030425190 
+178899.8848006590 188104.3649844170 
+189298.3908627620 199537.2723832800 
+145513.9909734300 152420.9057713950 
+149146.8157973450 152040.9693256960 
+356130.4819951510 373085.1905672510 
+155194.5285354690 157432.0388083660 
+139515.7576403440 140361.9440423220 
+166794.5988913980 176626.5942557020 
+129148.9650922890 134517.5583643950 
+224683.0016282320 234427.2667070860 
+181584.5001270200 180359.8162381320 
+392795.1198213050 409470.6921180180 
+198131.7517630210 204800.3960244430 
+170174.5121279070 176224.7130312670 
+276243.5669798770 292846.9315343690 
+175231.8036818590 184627.8602680880 
+176658.9572206140 180134.3350679180 
+344473.3598799510 358331.5461337390 
+263554.9406528770 277776.1254057410 
+219067.5489118250 232422.7555782870 
+267061.3779818540 279982.3236098440 
+197697.9575833520 210106.8429952240 
+336090.2396682460 355039.6582335690 
+151328.8815342220 168117.5503344910 
+127071.4225255980 134990.5898465420 
+228655.2801405650 244683.4118029330 
+153194.0678291060 160505.6069843530 
+129653.0700726590 139017.5312203180 
+121006.5046148530 130463.7203253120 
+151765.7930460320 157902.3227544800 
+154434.3579224590 158346.6512760740 
+132216.2601933610 138268.4070805010 
+240299.1145878110 255145.1404882900 
+122687.5504553210 124629.8250492060 
+139831.7365679560 140868.4640906830 
+121871.2289685240 125159.9419807940 
+116401.1607457510 115456.3072574860 
+135801.8326960740 138548.1028780560 
+115481.6147568230 125664.7675613330 
+114239.2534984900 114742.5511830690 
+164625.4296158220 173343.1511400300 
+143757.3085630670 148141.3716930760 
+157520.5006165020 160147.8401623120 
+123367.2050603880 132488.7595461290 
+118575.2324147650 128150.4864752920 
+129216.3088419910 134956.6653834020 
+458565.3110210650 495755.6351859270 
+166853.3218725570 176179.4809020150 
+133571.0310101110 137724.7033345200 
+160644.7698662180 172871.3341516180 
+165999.1570034040 178308.9916707570 
+322423.9475213650 345317.1526718000 
+219183.1718355290 229518.4035658160 
+173827.2851870040 183753.6253545070 
+147905.2814113120 153166.8921822420 
+393691.9716027220 423445.5272745930 
+366859.5280379890 375229.2541777870 
+395305.7892944140 412028.1251982790 
+133090.1118184620 137208.5868106210 
+122854.4810433790 128613.9509264730 
+102136.9390211370 108270.7536345630 
+153378.2785115000 154963.4812870810 
+86607.9176441588 92956.0513058026 
+97691.4530749074 101123.5425769240 
+136592.6258731020 142575.6722102740 
+274420.7928371120 283766.7028604280 
+126522.5812080140 129675.2376022970 
+58913.5671163954 64014.4721355251 
+149085.7744814270 155053.3871703500 
+128503.6262898830 133980.3519474450 
+117858.8849495120 118654.4019250930 
+105321.2142775030 102541.9824804630 
+180250.8403569390 179021.0494376950 
+244431.4063878330 255320.5047732890 
+210300.1180213680 211375.7848846610 
+174689.3058421970 182871.1536565090 
+104346.2173028070 109095.0802363050 
+267790.6842880490 281265.3879628370 
+216197.5749619410 229493.9632005510 
+461199.9021530510 491882.6373888530 
+284101.7414107820 298586.4463654970 
+252430.4998051920 265487.5557806500 
+178667.4417472840 187512.7720710390 
+213164.6274427320 224122.5237394640 
+208172.6105559030 216797.4664053410 
+163281.7582741800 173619.5970950870 
+131646.8328357070 142447.4325320880 
+377068.3181359650 395023.3844917370 
+148548.5162810750 152349.9648376670 
+123863.7713668220 125599.5071778590 
+118176.9331249330 116333.9008967140 
+180110.7159531980 187651.6827785760 
+106744.4279437830 105369.0033284170 
+221074.5264993240 232711.9464975510 
+150461.8879803490 161757.9382310960 
+125776.0645727510 135054.3617929280 
+127973.6721471480 136872.1323521990 
+126761.8919044260 131367.0501829910 
+193265.2069162800 213414.9408844380 
+133488.2192178780 141344.3957368630 
+193878.2569807420 206320.6017226560 
+77069.8888171134 78873.6197926729 
+66549.1820890511 67604.6079780792 
+78613.4801471384 78909.0737176066 
+86621.5184320840 89857.2204299675 
+66625.5638254006 68027.8881737230 
+75794.6010462580 79523.7263073405 
+;

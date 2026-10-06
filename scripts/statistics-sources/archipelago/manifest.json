@@ -1,0 +1,115 @@
+{
+  "retrieved": "2026-10-06",
+  "files": [
+    {
+      "name": "0012A5FPPA0.px.json",
+      "bytes": 35544,
+      "sha256": "1db29902637766db17cd16a4d632e03dd5879bf98cc6d770525f704b03bf7673"
+    },
+    {
+      "name": "0012A5FPPA0.px.metadata.json",
+      "bytes": 6454,
+      "sha256": "fb75c25c53170facf9e7d0da02bf9019e8c5b8c99d2a6c91b1b58710a1fd520d"
+    },
+    {
+      "name": "0012A5FPPA0.px.query.json",
+      "bytes": 2668,
+      "sha256": "3d2a6a3401cc4f01445d992fad9330443c03dff1bb9155c5b8388b9f8bc4c230"
+    },
+    {
+      "name": "0012A5FPPA0.px.source.px",
+      "bytes": 10436,
+      "sha256": "58197dde8521a90b0165b413978afd343665c667b0eb09d0fb77a14fcee9559c"
+    },
+    {
+      "name": "0092A5FPPA8.px.json",
+      "bytes": 35629,
+      "sha256": "92659dcdb79f7261050b065ec844711e0fe6c74886754a5a27982940b0a65c0f"
+    },
+    {
+      "name": "0092A5FPPA8.px.metadata.json",
+      "bytes": 6465,
+      "sha256": "532e6669e29df30c54fb9c21ce1a5b2510d408df32343534c1c39c6b05d50bf3"
+    },
+    {
+      "name": "0092A5FPPA8.px.query.json",
+      "bytes": 2668,
+      "sha256": "3d2a6a3401cc4f01445d992fad9330443c03dff1bb9155c5b8388b9f8bc4c230"
+    },
+    {
+      "name": "0092A5FPPA8.px.source.px",
+      "bytes": 10412,
+      "sha256": "5e412a37155bc12ad156822d2fa4f743a33b093f24f4f93d043ed6fbcf9397dd"
+    },
+    {
+      "name": "0191A6DTHP8.px.json",
+      "bytes": 65600,
+      "sha256": "eefeee245ad563190de72b3d6a73aa985310853b64a0d5aafb1eecb2328d434b"
+    },
+    {
+      "name": "0191A6DTHP8.px.metadata.json",
+      "bytes": 7803,
+      "sha256": "f076d2c3a27dd1c8431b204a03149f52437c2a515e1bfd736f9c84dabf83cfcd"
+    },
+    {
+      "name": "0191A6DTHP8.px.query.json",
+      "bytes": 3667,
+      "sha256": "a7795bb885febb8e49ead3b659447bb8573e5ff85ecb57b74b4a963ce1d93159"
+    },
+    {
+      "name": "0191A6DTHP8.px.source.px",
+      "bytes": 15245,
+      "sha256": "ca5b59acca0ac633a67dd28ef0fd515ee6e24c1924a04f43b0b3e26cb12be294"
+    },
+    {
+      "name": "0221A6DLPD0.px.json",
+      "bytes": 156451,
+      "sha256": "8b02827d91d0bc8dd57799b1c4e3e17d250e01e3d20cbfc6f6800d566913e3be"
+    },
+    {
+      "name": "0221A6DLPD0.px.metadata.json",
+      "bytes": 1052,
+      "sha256": "1bbe4dd8e6df6982df24f973b2d27078cc7a26165f7f5e4c5e14d1f9cbc02423"
+    },
+    {
+      "name": "0221A6DLPD0.px.query.json",
+      "bytes": 3757,
+      "sha256": "c15ebbec915850f228fa315cb7dab52b6702761790827c52138d0ca1e340770b"
+    },
+    {
+      "name": "0221A6DLPD0.px.source.px",
+      "bytes": 40956,
+      "sha256": "070e82c13d396f9d0a6cbb9f2c57e3c8d45457769a1ea111d7942bece3140f47"
+    },
+    {
+      "name": "bps-gdp-2026.tables.json",
+      "bytes": 6897,
+      "sha256": "77edc408d3775f6b7d0736d79cbca56174985c951f34204ac0d14c5f72eed4c5"
+    },
+    {
+      "name": "bps-gdp-official-2026.pdf",
+      "bytes": 13844325,
+      "sha256": "4504eae2fa7a96e1a795a9f978877374a12c5122e6352ac750139c57694fbe50"
+    },
+    {
+      "name": "bps-yearbook-2026.pdf",
+      "bytes": 12796172,
+      "sha256": "cd2a8654fc8d8c65d06d040ccac4ba77d423eb4e4216b65db672ff7d15508e8d"
+    },
+    {
+      "name": "bps-yearbook-2026.tables.json",
+      "bytes": 16627,
+      "sha256": "709ed248db0bc457db5c0d6c15bf3a28fba1aa327827b97e311ae7c27aa9ccd1"
+    },
+    {
+      "name": "exchange-rates.json",
+      "bytes": 1058,
+      "sha256": "61f68cf3f5947547ea6bdceb7c8556b235ad5728d1cfb3f0fd2643c3ce194e79"
+    },
+    {
+      "name": "psa-ppa-listing.json",
+      "bytes": 1491,
+      "sha256": "3f511fbe056faa6384a053dee8ee89a8e6f542182c94ce3e44b62f366945ffd1"
+    }
+  ]
+}

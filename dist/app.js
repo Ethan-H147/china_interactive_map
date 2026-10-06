@@ -1,5 +1,4 @@
 const $=id=>document.getElementById(id);
-window.AtlasChinaBoundaries.mount($('layers-panel'),profile=>{saveView(true);const url=new URL(location.href);url.searchParams.set('china-boundaries',profile);url.hash=window.AtlasView.hashFor(captureView());location.assign(url.href);});
 const english={110000:'Beijing',120000:'Tianjin',130000:'Hebei',140000:'Shanxi',150000:'Inner Mongolia',210000:'Liaoning',220000:'Jilin',230000:'Heilongjiang',310000:'Shanghai',320000:'Jiangsu',330000:'Zhejiang',340000:'Anhui',350000:'Fujian',360000:'Jiangxi',370000:'Shandong',410000:'Henan',420000:'Hubei',430000:'Hunan',440000:'Guangdong',450000:'Guangxi',460000:'Hainan',500000:'Chongqing',510000:'Sichuan',520000:'Guizhou',530000:'Yunnan',540000:'Tibet',610000:'Shaanxi',620000:'Gansu',630000:'Qinghai',640000:'Ningxia',650000:'Xinjiang',710000:'Taiwan',810000:'Hong Kong',820000:'Macao'};
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let atlasStarting=true,restoringView=false;
@@ -316,10 +315,10 @@ async function decodeJson(bytes){
   return JSON.parse(text);
 }
 async function boundaryData(){
-  const {root,displayManifest}=window.AtlasChinaBoundaries;const metadata=await json(root+displayManifest);
-  const parts=await Promise.all(metadata.parts.map(async name=>{const r=await fetch(root+name);if(!r.ok)throw new Error(`${name}: ${r.status}`);return new Uint8Array(await r.arrayBuffer());}));
+  const metadata=await json('data/display-boundaries.parts.json');
+  const parts=await Promise.all(metadata.parts.map(async name=>{const r=await fetch('data/'+name);if(!r.ok)throw new Error(`${name}: ${r.status}`);return new Uint8Array(await r.arrayBuffer());}));
   const bytes=new Uint8Array(parts.reduce((sum,p)=>sum+p.length,0));let offset=0;for(const part of parts){bytes.set(part,offset);offset+=part.length;}
-  return window.AtlasChinaBoundaries.decodeDisplay(await decodeJson(bytes.buffer),metadata.format);
+  return decodeJson(bytes.buffer);
 }
 // Source geometry retains full detail; rendering tiles omit subpixel detail.
 const sourceOptions={type:'geojson',tolerance:.375,maxzoom:18,buffer:128};

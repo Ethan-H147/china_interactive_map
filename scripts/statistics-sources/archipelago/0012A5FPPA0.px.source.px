@@ -1,0 +1,183 @@
+CHARSET="ANSI";
+AXIS-VERSION="2010";
+CODEPAGE="iso-8859-15";
+LANGUAGE="en";
+CREATION-DATE="20260828 10:00";
+DECIMALS=7;
+MATRIX="2A5FPPA0";
+COPYRIGHT=NO;
+SUBJECT-CODE="2A";
+SUBJECT-AREA="Macroeconomic Statistics";
+DESCRIPTION="Gross Domestic Product by Province and HUC";
+TITLE="Gross Domestic Product by Province and HUC by Geolocation, Type of Valuation and Year";
+CONTENTS="Gross Domestic Product by Province and HUC";
+STUB="Geolocation";
+HEADING="Type of Valuation","Year";
+VALUES("Geolocation")="National Capital Region (NCR)","..City of Caloocan","..City of Las Piñas","..City of Makati","..City of Malabon","..City of Mandaluyong","..City of Manila","..City of Marikina","..City of Muntinlupa","..City of Navotas","..City of Parañaque",
+"..Pasay City","..City of Pasig","..Quezon City","..City of San Juan","..City of Taguig","..City of Valenzuela","..Pateros","Cordillera Administrative Region (CAR)","..Abra","..Apayao","..Benguet","..Ifugao","..Kalinga","..Mountain Province",
+"..City of Baguio","Region I (Ilocos Region)","..Ilocos Norte","..Ilocos Sur","..La Union","..Pangasinan","Region II (Cagayan Valley)","..Batanes","..Cagayan","..Isabela","..Nueva Vizcaya","..Quirino","Region III (Central Luzon)","..Aurora","..Bataan",
+"..Bulacan","..Nueva Ecija","..Pampanga","..Tarlac","..Zambales","..City of Angeles","..City of Olongapo","Region IV-A (CALABARZON)","..Batangas","..Cavite","..Laguna","..Quezon","..Rizal","..City of Lucena","MIMAROPA Region","..Marinduque",
+"..Occidental Mindoro","..Oriental Mindoro","..Palawan","..Romblon","..City of Puerto Princesa","Region V (Bicol Region)","..Albay","..Camarines Norte","..Camarines Sur","..Catanduanes","..Masbate","..Sorsogon","Region VI (Western Visayas)","..Aklan",
+"..Antique","..Capiz","..Guimaras","..Iloilo","..City of Iloilo","Negros Island Region (NIR)","..Negros Occidental","..Negros Oriental","..Siquijor","..City of Bacolod","Region VII (Central Visayas)","..Bohol","..Cebu","..City of Cebu",
+"..City of Lapu-Lapu","..City of Mandaue","Region VIII (Eastern Visayas)","..Biliran","..Eastern Samar","..Leyte","..Northern Samar","..Samar","..Southern Leyte","..City of Tacloban","Region IX (Zamboanga Peninsula)","..Sulu","..Zamboanga del Norte",
+"..Zamboanga del Sur","..Zamboanga Sibugay","..City of Isabela","..City of Zamboanga","Region X (Northern Mindanao)","..Bukidnon","..Camiguin","..Lanao del Norte","..Misamis Occidental","..Misamis Oriental","..City of Cagayan de Oro","..City of Iligan",
+"Region XI (Davao Region)","..Davao de Oro","..Davao del Norte","..Davao del Sur","..Davao Occidental","..Davao Oriental","..City of Davao","Region XII (SOCCSKSARGEN)","..Cotabato","..Sarangani","..South Cotabato","..Sultan Kudarat",
+"..City of General Santos","Region XIII (Caraga)","..Agusan del Norte","..Agusan del Sur","..Dinagat Islands","..Surigao del Norte","..Surigao del Sur","..City of Butuan","Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)","..Basilan",
+"..Lanao del Sur","..Maguindanao del Norte","..Maguindanao del Sur","..Tawi-Tawi";
+VALUES("Type of Valuation")="At Current Prices";
+VALUES("Year")="2024","2025";
+TIMEVAL("Year")=TLIST(A1),"2024","2025";
+LAST-UPDATED="20260828 09:00";
+UNITS="In Thousand Philippine Pesos";
+CONTACT="Subnational Economic Accounts Division#Philippine Statistics Authority#21st Floor, PSA Headquarters, PSA Complex#East Avenue, Quezon City,1011#Tel: 8376-2024#sead.staff@psa.gov.ph";
+FIRST-PUBLISHED="20211213 10:00";
+SOURCE="Philippine Statistics Authority";
+NOTEX="<strong>Indicator:</strong> Gross Domestic Product (in thousand PhP)##<strong>Definition:</strong>##Gross Domestic Product (GDP) measures the production of all resident producers. It is the monetary value of all final goods and services produced within a"
+"n economy at a given time.##See more: <a href = 'https://psa.gov.ph/system/files/eiad/Quarterly-and-Annual-Gross-Domestic-Product-Sources-and-Methods.pdf'>https://psa.gov.ph/system/files/eiad/Quarterly-and-Annual-Gross-Domestic-Product-Sources-and-Method"
+"s.pdf</a>##<strong>Method of Computation:</strong>##The GDP at the provincial and highly urbanized city (HUC) level is computed using production approach. GDP is derived by adding the gross value added (GVA) of all resident producer units, plus the value"
+" of taxes less subsidies on products. GVA is the value of gross output less the value of intermediate consumption.##<strong>Source of Basic Data:</strong>##Data are sourced from both survey and administrative sources. Major sources for the benchmark esti"
+"mates include Census of Philippine Business Industry (CPBI), Updated list of establishments (ULE), Family Income and Expenditure Survey (FIES), while surveys and administrative data from various stakeholders were utilized in non-benchmark compilation.##<"
+"strong>Note/s:</strong>##i. Provincial Product Accounting (PPA) is an accounting framework, which is aligned with the Philippine System of National Accounts (PSNA), that aims to present a comprehensive picture of the provincial and Highly Urbanized City "
+"(HUC) economies.#ii. Figures for the City of Makati exclude the Embo Barangays starting in 2022, following their transfer to the City of Taguig.";
+NEXT-UPDATE="20270828 10:00";
+PX-SERVER="OpenSTAT";
+SURVEY="Provincial Product Accounts";
+UPDATE-FREQUENCY="Annually";
+DESCRIPTIONDEFAULT=YES;
+DATA=
+8211863739.7613100 8749999579.8792300 
+293862100.2403140 310819867.9472450 
+138371108.4464560 147331986.8037260 
+1440327755.8466900 1544175801.3382600 
+85260929.4510302 88406839.3718327 
+379004790.5085300 401097847.4800550 
+1227048755.8082400 1276823437.2076800 
+139798384.9982460 144464934.4404600 
+319555842.9485010 339603060.2305310 
+49094335.4451419 51844384.9843756 
+427762246.5472580 456105409.2782660 
+425031063.7735950 457605006.2249070 
+603764388.0759120 651672005.0155280 
+1572661885.2044100 1696348927.4518000 
+110271703.0904930 116888856.1199020 
+781627079.7849730 836443291.8392520 
+206931738.7039080 218433207.6084760 
+11489630.8876110 11934716.5369363 
+445732980.2940200 475154793.4751670 
+31107184.8143933 31006737.4271492 
+14543918.0309655 14847485.6063536 
+108370988.3171370 116854614.2971150 
+33885944.5393802 35960584.5267287 
+36133668.0981146 37374525.4589283 
+20382034.5674340 21650369.7305368 
+201309241.9265960 217460476.4283560 
+877303724.3269830 925021341.8023730 
+128040036.4741840 136520165.6248690 
+125181079.6919110 131399363.6380400 
+156457391.6287630 165196109.6570280 
+467625216.5321250 491905702.8824360 
+564944423.8966320 579622442.4590260 
+6875098.9549164 7244568.2304349 
+201318963.1943250 205289804.2857210 
+243119461.6852760 246121300.1915550 
+86465319.2977075 92461019.4407578 
+27165580.7644073 28505750.3105572 
+2889917254.1766500 3040694422.0864700 
+43484040.2454176 43353990.8282411 
+348805994.3525170 367106854.3114880 
+771443411.0834780 806762827.2448310 
+400707881.6134370 416862554.4955830 
+693393452.6048510 740256130.7571260 
+268481408.0111590 284165909.3187020 
+118378283.9387470 121611031.3507070 
+175392055.9164760 186662785.6750800 
+69830726.4105644 73912338.1047121 
+3725938113.3756300 3998754950.8330400 
+798253402.3835880 842048238.1682240 
+934761413.9843310 1013342992.5906900 
+1185492782.8330000 1264542975.5322100 
+292240736.8502720 323745311.6195330 
+451724675.0791790 487267297.7430830 
+63465102.2452550 67808135.1792995 
+509687693.6403200 538064872.3609290 
+30439040.2201683 32498267.2909051 
+65053096.8809451 70543690.5357010 
+140883275.0898730 147381448.8916720 
+151508290.1429020 157001179.7801810 
+40703040.1330465 42538413.7067232 
+81100951.1733861 88101872.1557470 
+770406903.4552500 789384124.7914110 
+197899521.9807950 200953653.5531380 
+80322402.1036587 83477425.8631624 
+249710986.9037520 250106994.6839150 
+37857612.7025172 38892946.3437220 
+107011846.6857140 117101593.3054010 
+97604533.0788146 98851511.0420722 
+797938304.9698830 845796704.2205730 
+91344256.4048243 94929879.8291530 
+98728336.5689018 100994833.1807600 
+101384032.6890630 109512161.3993600 
+23027784.4358770 25107499.6112121 
+272484503.6216220 286695596.9772260 
+210969391.2495950 228556733.2228620 
+804785963.3344100 853026867.7082600 
+354514079.1086800 366865555.7543610 
+231120915.5646860 249029108.9267760 
+17376127.7584883 18726010.3052629 
+201774840.9025550 218406192.7218600 
+1491859299.9399400 1577638355.4063100 
+243079727.9509360 257222367.3509970 
+521177685.6463570 547421995.4978520 
+381094615.8953780 410420766.3011540 
+202746018.7487790 212722717.4029460 
+143761251.6984890 149850508.8533620 
+621559968.9267070 645603172.8452350 
+22621441.3034794 23858659.5805663 
+50123804.9615620 53549848.5816256 
+282413583.6838820 288085324.7771910 
+56344426.3738427 60795209.6310723 
+78756211.7997573 81927968.3543442 
+59516412.1306796 62401094.4562706 
+71784088.6735031 74985067.4641651 
+647901262.1403380 672297249.4167450 
+63853999.9412092 70755260.0658680 
+159888678.7861260 167322761.6971390 
+138315263.6679950 145126713.3473600 
+82434157.7591221 83902663.3804683 
+15265678.0822383 15253530.0618988 
+188143483.9036480 189936320.8640100 
+1273812965.4825100 1342414958.4588200 
+338283302.0461030 343517568.1810920 
+16442805.6017026 17271266.1070890 
+78807689.3103796 83264528.9936751 
+166370586.2183210 175005574.5135810 
+215114208.9138070 230493409.4102900 
+353486665.0052060 381637965.6361640 
+105307708.3869930 111224645.6169330 
+1376188734.6044600 1461264480.5336000 
+139598410.9278470 147161336.1107560 
+250662843.3854370 266405703.1906750 
+147755298.3120950 155468281.5263340 
+51975686.0120787 55323537.3751553 
+77142147.8114022 83817636.2236385 
+709054348.1555940 753087986.1070430 
+675995276.5847970 700694356.9799210 
+164753927.2979800 168823070.3790330 
+67372196.8667921 66659557.8816187 
+183088666.5307680 192719779.4270600 
+93773272.0377660 93226490.1228572 
+167007213.8514910 179265459.1693520 
+439650388.9880200 477742365.0892470 
+50952638.4148088 55344197.0278477 
+97513378.7026835 105138328.4663420 
+15993928.1872572 16527814.0517229 
+109630268.4188800 122894566.8784220 
+88948406.5054217 95098770.9620930 
+76611768.7589681 82738687.7028196 
+323956033.0731870 336759753.5502340 
+31285036.6967913 32547089.2327106 
+98368890.4811540 99852883.3365126 
+107540615.1334320 113453097.5143340 
+52768445.9331747 55073133.3451364 
+33993044.8286352 35833550.1215403 
+;

@@ -1,0 +1,37 @@
+{
+  "title": "Population, Land Area, Population Density, and Percent Change in Population Density by Region, Province/Highly Urbanized City, and City/Municipality: 2015, 2020, and 2024",
+  "variables": [
+    {
+      "code": "Geographic Location",
+      "text": "Geographic Location"
+    },
+    {
+      "code": "Parameter",
+      "text": "Parameter",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "valueTexts": [
+        "2015 Population",
+        "2020 Population",
+        "2024 Population",
+        "***Land Area (square kilometers)  a1/ a2/",
+        "2015 Population Density (persons per square kilometer)",
+        "2020 Population Density (persons per square kilometer)",
+        "2024 Population Density (persons per square kilometer)",
+        "2015-2020 Percent Change in Population Density",
+        "2015-2024 Percent Change in Population Density",
+        "2020-2024 Percent Change in Population Density"
+      ]
+    }
+  ]
+}

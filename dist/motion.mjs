@@ -1,5 +1,4 @@
 import {setLayerVisible} from './adaptive-lines.mjs';
-import {profile} from './china-boundary-profile.mjs';
 
 const suffix='-motion';
 export function queryRegions(map,point,{layers,...options}){
@@ -51,7 +50,7 @@ export function createMotionRenderer(map,initialCountry='china'){
   if(nativeCountry)return Promise.resolve(false);
   if(countryLoads.has(country))return countryLoads.get(country);
   const promise=new Promise(resolve=>{
-   const url=new URL('./motion-worker.mjs',import.meta.url);url.searchParams.set('country',country);if(country==='china')url.searchParams.set('china-boundaries',profile);
+   const url=new URL('./motion-worker.mjs',import.meta.url);url.searchParams.set('country',country);
    const worker=new Worker(url,{type:'module'});
    worker.onmessage=event=>{worker.terminate();if(event.data.sources)sources={...sources,...event.data.sources};resolve(!!event.data.sources);};
    worker.onerror=()=>{worker.terminate();resolve(false);};
