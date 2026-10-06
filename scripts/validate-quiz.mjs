@@ -27,3 +27,24 @@ assert.equal(createRound(country,'all').questions.length,355);assert.equal(creat
 assert.throws(()=>createRound([]));
 assert.deepEqual(createRound(hubei,10).results,[],'New round retained old results');
 console.log(JSON.stringify({mainlandPlaces:333,withTaiwan:355,taiwanDivisions:22,hubeiPlaces:13,xinjiangPrefectures:14,uniqueQuestions:true,scoringAndScopeVerified:true}));
+
+// Exercise the map controller across correct, incorrect, revealed and completed questions.
+const {readFileSync}=await import('node:fs'),{runInNewContext}=await import('node:vm');
+const app=readFileSync(new URL('../dist/app.js',import.meta.url),'utf8');
+const extract=(start,end)=>app.slice(app.indexOf(start),app.indexOf(end,app.indexOf(start)));
+const mapRound=createRound(hubei,4,()=>.4),states=new Map(),highlighted=[];
+const quiz={active:true,round:mapRound,highlighted,reviewLayer:null};
+let completed=false;
+const context={quiz,cameraBusy:false,AtlasQuiz:{advance},Set,clearHover(){},updateLabels(){},setRegionState(layer,state){states.set(layer.feature.properties.adcode,state);},renderQuizQuestion(){},fitQuizScope(){},renderQuizResults(){completed=true;}};
+runInNewContext(extract('function clearQuizHighlights(', 'function syncQuizStyle(')+extract('async function nextQuizQuestion(', 'function viewQuizAnswer('),context);
+const mark=(layer,correct=true)=>{quiz.highlighted.push(layer);states.set(layer.feature.properties.adcode,{quizCorrect:correct,quizWrong:!correct});};
+const a=mapRound.questions[0],b=mapRound.questions[1],c=mapRound.questions[2],d=mapRound.questions[3],code=l=>l.feature.properties.adcode;
+answer(mapRound,code(a));mark(a);await context.nextQuizQuestion();assert(states.get(code(a)).quizCorrect,'Correct answer lost after Next');
+answer(mapRound,code(a));mark(b);mark(a,false);await context.nextQuizQuestion();
+assert(states.get(code(a)).quizCorrect&&!states.get(code(a)).quizWrong,'An earlier correct answer lost its green state after a wrong click');
+assert(!states.get(code(b)).quizCorrect,'Incorrect answer persisted as a successful answer');
+answer(mapRound);mark(c);await context.nextQuizQuestion();assert(!states.get(code(c)).quizCorrect,'Revealed answer persisted');
+answer(mapRound,code(d));mark(d);await context.nextQuizQuestion();assert(completed);assert(states.get(code(a)).quizCorrect&&states.get(code(d)).quizCorrect,'Results cleared solved regions');
+mark(b);context.clearQuizHighlights(true);assert(!states.get(code(b)).quizCorrect&&states.get(code(a)).quizCorrect,'Missed-place review erased progress');
+context.clearQuizHighlights();assert([...states.values()].every(s=>!s.quizCorrect&&!s.quizWrong),'Restart or exit retained quiz colors');assert.equal(quiz.highlighted.length,0);
+console.log('Map quiz: correct regions stay green across Next, mistakes, reveals and results; restart/exit clears all highlights.');

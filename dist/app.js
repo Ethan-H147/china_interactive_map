@@ -576,7 +576,15 @@ function fitQuizScope(animate=true){
   const layer=provinceLayers.get(Number(quiz.settings.scope));
   return layer?navigateBounds(layer.getBounds(),{paddingTopLeft:[30,75],paddingBottomRight:[45,100],maxZoom:regionZoom(layer.feature.properties)},animate):navigateBounds(homeBounds,{paddingTopLeft:[28,75],paddingBottomRight:[55,100]},animate);
 }
-function clearQuizHighlights(){for(const layer of quiz.highlighted)setRegionState(layer,{quizCorrect:false,quizWrong:false});quiz.highlighted=[];quiz.reviewLayer=null;clearHover();updateLabels();}
+function clearQuizHighlights(preserveCorrect=false){
+  const correct=new Set(preserveCorrect?(quiz.round?.results||[]).filter(r=>r.status==='correct').map(r=>r.expected):[]);
+  const retained=[];
+  for(const layer of new Set(quiz.highlighted)){
+    const keep=correct.has(layer.feature.properties.adcode);
+    setRegionState(layer,{quizCorrect:keep,quizWrong:false});if(keep)retained.push(layer);
+  }
+  quiz.highlighted=retained;quiz.reviewLayer=null;clearHover();updateLabels();
+}
 function syncQuizStyle(){
   // Keep the same paint expression while feature states change during quiz navigation.
   for(const layer of provinceLayers.values())window.AtlasMotion.setFeatureState(map,{source:'provinces',id:layer.feature.properties.adcode},{quizActive:quiz.active});
@@ -637,7 +645,7 @@ function answerQuiz(code=null){
 }
 async function nextQuizQuestion(){
   if(!quiz.active||cameraBusy||!AtlasQuiz.advance(quiz.round))return;
-  clearQuizHighlights();
+  clearQuizHighlights(true);
   if(quiz.round.complete){renderQuizResults();return;}
   renderQuizQuestion();await fitQuizScope();
 }
@@ -654,7 +662,7 @@ function renderQuizResults(){
   if(missed.length){const heading=document.createElement('h3');heading.textContent='Review missed places';review.append(heading);}
   for(const result of missed){const layer=regionByCode.get(result.expected),button=document.createElement('button');button.type='button';button.dataset.quizNav='';
     const name=document.createElement('span');name.textContent=englishName(layer.feature.properties);const chinese=document.createElement('small');chinese.textContent=layer.feature.properties.name;button.append(name,chinese);
-    button.onclick=()=>{if(cameraBusy)return;clearQuizHighlights();setRegionState(layer,{quizCorrect:true});quiz.highlighted.push(layer);quiz.reviewLayer=layer;updateLabels();viewQuizAnswer(layer);};review.append(button);
+    button.onclick=()=>{if(cameraBusy)return;clearQuizHighlights(true);setRegionState(layer,{quizCorrect:true});quiz.highlighted.push(layer);quiz.reviewLayer=layer;updateLabels();viewQuizAnswer(layer);};review.append(button);
   }
   $('map-hint').textContent='Review a place or start another quiz';controls();$('quiz-results-title').focus({preventScroll:true});if(matchMedia('(max-width:760px)').matches)$('quiz-results').scrollIntoView({block:'start',behavior:'instant'});fitQuizScope();
 }
