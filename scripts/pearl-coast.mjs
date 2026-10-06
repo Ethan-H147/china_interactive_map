@@ -1,3 +1,4 @@
+import {reconcileZhuhaiMacau} from './zhuhai-macau.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import mapshaper from 'mapshaper';
@@ -85,7 +86,10 @@ export async function refinePearlCoast(features,land,codes=coastCities){
     const next={...old,geometry:refined.features[0].geometry};changed.set(code,next);
     report.cities.push({adcode:code,oldParts:polygons(old.geometry).length,newParts:polygons(next.geometry).length,oldVertices:polygons(old.geometry).flat(2).length,newVertices:polygons(next.geometry).flat(2).length,wholeIslands:whole.length,wholeIslandIds:whole.map(p=>p.properties.landId)});
   }
-  return {features:features.map(f=>changed.get(f.properties.adcode)||f),report};
+  const repaired=features.map(f=>changed.get(f.properties.adcode)||f);
+  const seam=codes.has(440400)?await reconcileZhuhaiMacau(repaired,land):{features:repaired,additions:[]};
+  report.gongbeiClosedLandGaps=seam.additions.length;
+  return {features:seam.features,report};
 }
 export async function refineGuangzhouDistricts(features,city){
   const selected=features.filter(f=>f.properties.parentCity===440100),others=features.filter(f=>f.properties.parentCity!==440100);
