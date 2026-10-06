@@ -1,0 +1,20 @@
+{
+  "commit": "41978546b3ac68d2d1facccbdf5ee08812344883",
+  "files": {
+    "display-boundaries.00.bin": "5f3b2ec6cdf04602dde2bee746e40c673795a5e9cbe1113f35643e6a8c1d2d47",
+    "display-boundaries.01.bin": "552ac7187900a157d9e8daed6ae12e922137974a62d5952ec0559d266374d95e",
+    "display-boundaries.02.bin": "6843e58996bd7b6b25473d3b9645cc287ab65c682fb6b9b6e461924fd7275816",
+    "display-boundaries.03.bin": "83973fb8627dbd8cb9e5dc5b06829b978f4278330d9e13f5c13d30c024aa788c",
+    "display-boundaries.04.bin": "d3c0e1cf2e0471c842160ef585e67f6b25bd3eb0aedd2d16d90ae00626db3152",
+    "display-boundaries.parts.json": "3571cfc59c287530e7bc9a6af55a7ab41ee194275ee362733026d4549d7d0d80",
+    "china-motion.bin": "bbf4827ea47ae3c844610ced3b8c6e458d5a2eba6feae6928e29307c6deebe60",
+    "china-context.bin": "7f03e1c2f9dfd5ccfd288dcd8e4a416fb5db298b09f26e9481c4265055c762b6",
+    "fill-fragments.bin": "3bebf10baaeed4f75ad840316a84bbe7a4fae540be460c38fc03c8f6499ca015",
+    "city-districts.bin": "d8be13d3c8f244443fd28d34aafd305fdc252e023bdb7441f9b93812f4798ad7",
+    "major-water.bin": "ddebd668780a4ff15467a97316985f5ce3fed183b0389cc789a0ac5799820ce0",
+    "additional-sources.json": "ed7d132ef40e67bf81cc237efac8f5168ca5d784fb35d37ac0c71289b8f84dcf",
+    "boundary-corrections.json": "d46fe95cdcf1a3e2820694c5fde3543722484f629d0a4de951098d61b7108150",
+    "international-border-report.json": "e493d9de6344736226ce682c65f36638dfdf4c5ffbeb79f7147bb92cd31a2a41"
+  },
+  "restore": "Original files remain at their existing dist/data paths. Choose Original boundaries in China Map settings or use ?china-boundaries=original#china. The original deployment is Sites version 89."
+}

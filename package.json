@@ -9,10 +9,12 @@
   },
   "private": true,
   "scripts": {
+    "build:china-detail": "node --max-old-space-size=8000 scripts/build-china-detail.mjs",
+    "test:china-detail": "node --check dist/china-boundary-profile.mjs && node --max-old-space-size=8000 scripts/validate-china-detail.mjs",
     "test:archipelago": "node --check dist/archipelago.mjs && node --check dist/archipelago-worker.mjs && node --check dist/coastal-detail.mjs && node scripts/validate-coastal-detail.mjs && node scripts/validate-archipelago.mjs",
     "build:archipelago": "node --max-old-space-size=12000 scripts/fetch-archipelago.mjs && node --max-old-space-size=12000 scripts/build-archipelago.mjs",
     "test:entry": "node --check dist/atlas-entry.js && node --check dist/country-symbols.js && node scripts/validate-entry.mjs",
-    "posttest": "npm run test:entry && npm run test:experience && npm run test:countries && npm run test:statistics && npm run test:japan && npm run test:zhuhai-macau && npm run test:archipelago",
+    "posttest": "npm run test:entry && npm run test:experience && npm run test:countries && npm run test:statistics && npm run test:japan && npm run test:zhuhai-macau && npm run test:archipelago && npm run test:china-detail",
     "test:statistics": "node --check dist/statistics.mjs && node scripts/validate-region-statistics.mjs",
     "build": "node scripts/build-boundaries.mjs && node scripts/reconcile-international.mjs && npm run build:fills",
     "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && npm run test:taiwan && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore && npm run test:water && npm run test:names-quiz && npm run test:satellite && npm run test:shenzhen && npm run test:pearl-coast && npm run test:province-population && npm run test:mongolia && npm run test:fills && npm run test:motion",
