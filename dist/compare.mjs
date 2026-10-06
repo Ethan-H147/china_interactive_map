@@ -1,3 +1,4 @@
+import {searchRank} from './search-ranking.mjs';
 import {loadStatistics,formatMoney} from './statistics.mjs';
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;return n;};
 export const comparisonLevel=p=>p.level==='province'?'province':p.level==='taiwan-region'||p.level==='city'&&String(p.adcode).slice(2,4)!=='90'?'prefecture':null;
@@ -12,7 +13,7 @@ export function createComparison({regions,name,kind,provincePopulation,regionPop
  const output=el('div');output.className='comparison-output';output.setAttribute('aria-live','polite');dialog.append(head,note,levelLabel,picks,output);document.body.append(dialog);
  let data,revision=0;
  const chosen=()=>slots.map(s=>catalogue.find(p=>String(p.adcode)===s.select.value));
- function options(i,preferred){const {search,select}=slots[i],q=search.value.trim().toLowerCase(),other=slots[1-i].select.value,old=preferred||select.value;select.replaceChildren();for(const p of catalogue.filter(p=>matchesComparisonLevel(p,level.value)&&String(p.adcode)!==other&&(!q||(name(p)+' '+p.name+' '+p.adcode).toLowerCase().includes(q)))){const o=el('option',name(p)+' · '+p.name);o.value=p.adcode;select.append(o);}if([...select.options].some(o=>o.value===String(old)))select.value=old;}
+ function options(i,preferred,preserve=true){const {search,select}=slots[i],q=search.value.trim().toLowerCase(),other=slots[1-i].select.value,old=preferred||(preserve?select.value:'');select.replaceChildren();for(const p of catalogue.filter(p=>matchesComparisonLevel(p,level.value)&&String(p.adcode)!==other&&(!q||(name(p)+' '+p.name+' '+p.adcode).toLowerCase().includes(q))).sort((a,b)=>searchRank(q,[name(a),a.name,a.adcode])-searchRank(q,[name(b),b.name,b.adcode]))){const o=el('option',name(p)+' · '+p.name);o.value=p.adcode;select.append(o);}if([...select.options].some(o=>o.value===String(old)))select.value=old;}
  const source=(cell,url,label='Source')=>{if(!url)return;const a=el('a',label);a.href=url;a.target='_blank';a.rel='noopener';cell.append(a);};
  function population(p,cell){const provincial=p.level==='province',r=provincial?provincePopulation.china[p.adcode]:regionPopulation.regions[p.adcode];if(r?.total==null){cell.append(el('span','Not available'));return;}cell.append(el('strong',r.total.toLocaleString('en-US')),el('small',r.dateLabel||r.date),el('small',r.measure||'Entire administrative region · 2020 boundaries'));source(cell,r.sourceUrl||regionPopulation.source.revisionUrl);if(r.inconsistent)cell.append(el('small','Source figures contain inconsistencies.'));}
  async function render(){const ticket=++revision;output.replaceChildren(el('p','Loading comparison…'));try{data=await loadStatistics();if(ticket!==revision)return;const pair=chosen();if(pair.some(p=>!p)){output.replaceChildren(el('p','No matching regions. Clear the search to choose another.'));return;}
@@ -22,6 +23,6 @@ export function createComparison({regions,name,kind,provincePopulation,regionPop
  output.append(el('p','GDP is nominal, not adjusted for purchasing power. Values from different years are not a same-year ranking.'));
  }catch{if(ticket!==revision)return;const retry=el('button','Retry');retry.onclick=render;output.replaceChildren(el('p','Comparison data could not load.'),retry);}}
  function reset(code,second){slots.forEach(s=>{s.search.value='';s.select.replaceChildren();});options(0,code);options(1,second);render();}
- level.onchange=()=>{const keep=chosen().map(p=>p&&matchesComparisonLevel(p,level.value)?p.adcode:undefined);reset(...keep);};slots.forEach((s,i)=>{s.search.oninput=()=>{options(i);options(1-i);render();};s.select.onchange=()=>{options(1-i);render();};});
+ level.onchange=()=>{const keep=chosen().map(p=>p&&matchesComparisonLevel(p,level.value)?p.adcode:undefined);reset(...keep);};slots.forEach((s,i)=>{s.search.oninput=()=>{options(i,undefined,false);options(1-i);render();};s.select.onchange=()=>{options(1-i);render();};});
  return {open(code){const p=catalogue.find(p=>p.adcode===code);if(p){if(!matchesComparisonLevel(p,level.value))level.value=comparisonLevel(p);reset(code);}else if(!slots[0].select.options.length)reset();else render();dialog.showModal();},eligible:p=>!!comparisonLevel(p)};
 }

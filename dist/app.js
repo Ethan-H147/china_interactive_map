@@ -297,7 +297,8 @@ function refreshStatus(){$('status').hidden=allReady;$('status').textContent=all
 function renderSearch(){
   const query=$('search').value.trim().toLowerCase();const results=$('search-results');results.replaceChildren();results.hidden=!query;if(!query)return;
   const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
-  const matches=regionIndex.filter(r=>(r.name+' '+(r.layer.feature.properties.searchAliases||'')+' '+r.english+' '+r.regional+' '+r.layer.feature.properties.adcode).toLowerCase().includes(query)||normalize(r.english).includes(normalize(query))).slice(0,12);
+  const rank=r=>window.AtlasSearchRanking.searchRank(query,[r.english,r.name,String(r.layer.feature.properties.adcode),...(r.layer.feature.properties.searchAliases||'').split(/[;,|]/)]);
+  const matches=regionIndex.filter(r=>(r.name+' '+(r.layer.feature.properties.searchAliases||'')+' '+r.english+' '+r.regional+' '+r.layer.feature.properties.adcode).toLowerCase().includes(query)||normalize(r.english).includes(normalize(query))).sort((a,b)=>rank(a)-rank(b)).slice(0,12);
   if(!matches.length){const p=document.createElement('p');p.textContent='No matches. Try an English province name or a Chinese place name.';results.append(p);return;}
   for(const r of matches){const b=document.createElement('button');b.type='button';b.className='search-result';b.dataset.nav='';const strong=document.createElement('strong');strong.textContent=r.english+' · '+r.name;const small=document.createElement('small');small.textContent=r.type+(r.layer.feature.properties.level==='province'?'':' · '+english[r.parentCode])+(r.layer.feature.geometry?'':' · Boundary unavailable');b.append(strong,small);b.onclick=()=>selectRegion(r.layer,r.parentCode);results.append(b);}
 }
