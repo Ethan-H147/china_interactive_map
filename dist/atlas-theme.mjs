@@ -1,4 +1,4 @@
-const palettes={philippines:{background:'#edf2f8'},indonesia:{background:'#faf1ef'},japan:{background:'#f5f5f5'},
+const palettes={brazil:{background:'#eef3e9'},uruguay:{background:'#edf3f7'},argentina:{background:'#edf3f7'},philippines:{background:'#edf2f8'},indonesia:{background:'#faf1ef'},japan:{background:'#f5f5f5'},
  china:{background:'#f4f0e7'},
  korea:{background:'#edf1f6'},
  mongolia:{background:'#eaf1f5'}

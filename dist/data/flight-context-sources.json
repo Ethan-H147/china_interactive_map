@@ -1,0 +1,6 @@
+{
+  "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+  "description": "Natural Earth 1:110m country silhouettes for the flight preview. No administrative subdivisions.",
+  "license": "Public domain",
+  "retrieved": "2026-10-06"
+}

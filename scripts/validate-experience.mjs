@@ -3,6 +3,10 @@ import fs from 'node:fs';
 import {validate,hashFor,fromHash,read,write} from '../dist/view-state.mjs';
 import {labelLines,placeLabels} from '../dist/labels.mjs';
 const view={v:1,country:'korea',center:[129.1,35.2],zoom:9.5,selection:'KR-26',scope:'KR',mode:2,locked:true,language:'local',layers:{'k-label-layer':true,'satellite-opacity':'65','evil':true}};
+for(const country of ['brazil','uruguay','argentina']){
+ const preview={...view,country,center:[-57,-33],selection:null};
+ assert.deepEqual(fromHash(hashFor(preview)),validate(preview),'South American views round-trip without Asian extent restrictions');
+}
 assert.deepEqual(fromHash(hashFor(view)),validate(view));
 for(const bad of [{...view,center:[Infinity,35]},{...view,zoom:99},{...view,country:'unknown'},{...view,v:2}])assert.equal(validate(bad),null);
 assert.equal(fromHash('#china/view='+encodeURIComponent(JSON.stringify(view))),null);
