@@ -109,7 +109,6 @@ function kind(p){
   return 'Prefecture-level City';
 }
 function controls(){
-  $('country-open').disabled=atlasStarting||!allReady||quiz.active;
   const koreaLoading=atlasMode!=='china'&&!currentAtlas()?.ready;
   document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=atlasStarting||countrySwitching||(cameraBusy&&el.matches('input[type="checkbox"],input[type="range"]'))||!allReady||koreaLoading||(quiz.active&&!['home','zoom-in','zoom-out','fit-map'].includes(el.id)));
   document.querySelectorAll('[data-quiz-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);
@@ -531,10 +530,6 @@ function randomPlace(){
   return selectRegion(layer,layer.feature.properties.provinceCode);
 }
 $('surprise').onclick=()=>atlasMode!=='china'?currentAtlas().random():randomPlace();
-for(const button of document.querySelectorAll('[data-country]'))button.onclick=()=>{if(quiz.active)return;$('country-menu').hidden=true;$('country-open').setAttribute('aria-expanded','false');changeAtlas(button.dataset.country);};
-$('country-open').onclick=()=>{const menu=$('country-menu');menu.hidden=!menu.hidden;$('country-open').setAttribute('aria-expanded',String(!menu.hidden));if(!menu.hidden)menu.querySelector('[aria-current="true"]')?.focus();};
-document.addEventListener('click',e=>{if(!e.target.closest('.country-picker')){$('country-menu').hidden=true;$('country-open').setAttribute('aria-expanded','false');}});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('country-menu').hidden){$('country-menu').hidden=true;$('country-open').setAttribute('aria-expanded','false');$('country-open').focus();}});
 $('home').onclick=()=>atlasMode!=='china'?currentAtlas().home():quiz.active?configureQuiz():reset();$('selection-reset').onclick=reset;$('fit-map').onclick=viewParent;
 function zoomBy(amount){
  if(!allReady||countrySwitching)return;

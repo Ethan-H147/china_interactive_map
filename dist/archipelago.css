@@ -6,14 +6,7 @@ body[data-atlas=indonesia]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--head
 .archipelago-sidebar [id$=search-results]{max-height:260px;overflow-y:auto;border:1px solid var(--line);margin-top:8px;border-radius:4px}
 .archipelago-sidebar .search-result{background:var(--surface-soft)}
 .archipelago-children{max-height:290px;overflow-y:auto;margin:18px 0}
-.country-picker{position:relative;margin-left:auto;flex:none}
-.country-picker>button{font-size:13px;border:1px solid var(--line);background:transparent;border-radius:4px;padding:10px 12px}
-.country-picker+ .surprise{margin-left:0}
-#country-menu{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;border:1px solid var(--line);border-radius:6px;box-shadow:0 8px 24px #00000015;background:var(--paper);padding:6px;z-index:700}
-#country-menu button{display:block;width:100%;padding:10px;text-align:left;border-radius:3px;background:none;font-size:14px}
-#country-menu button[aria-current=true]{background:var(--accent-soft);color:var(--red);font-weight:600}
-#country-menu button:hover{background:var(--surface-soft)}
 .site-header #atlas-title-local:empty{display:none}
 body:is([data-atlas=philippines],[data-atlas=indonesia]) .map-mode{background:var(--paper);border-color:var(--line)}
 body:is([data-atlas=philippines],[data-atlas=indonesia]) #atlas-title-local{font:24px Georgia,serif;letter-spacing:0}
-@media(max-width:760px){.site-header{gap:10px}.site-header h1{min-width:0;flex-shrink:1}.country-picker{margin-left:auto}.site-header .surprise{width:36px;height:36px;padding:0;font-size:0;flex:none}.site-header .surprise svg{display:block;width:18px;height:18px}.country-picker>button{padding:9px 10px}.site-header #atlas-title-local{display:none}body[data-atlas=philippines] .site-header #atlas-title-english{font-size:27px}.site-header #atlas-title-english{overflow:hidden;text-overflow:ellipsis}.map-top .map-mode button{max-width:115px}.archipelago-sidebar h2{font-size:32px}}
+@media(max-width:760px){.site-header{gap:10px}.site-header h1{min-width:0;flex-shrink:1}.site-header .surprise{width:36px;height:36px;padding:0;font-size:0;flex:none}.site-header .surprise svg{display:block;width:18px;height:18px}.site-header #atlas-title-local{display:none}body[data-atlas=philippines] .site-header #atlas-title-english{font-size:27px}.site-header #atlas-title-english{overflow:hidden;text-overflow:ellipsis}.map-top .map-mode button{max-width:115px}.archipelago-sidebar h2{font-size:32px}}

@@ -26,7 +26,6 @@
   if($('startup-name'))$('startup-name').textContent=info?'Preparing '+info.en+'…':'Preparing maps…';
   if($('home'))$('home').textContent='All '+(info?.en||'countries');
   if($('map')&&info)$('map').setAttribute('aria-label',current==='china'?'Interactive China administrative boundary map':current==='korea'?'Interactive map of North and South Korea':current==='japan'?'Interactive Japan prefecture map':current==='mongolia'?'Interactive Mongolia province and district map':'Interactive '+info.en+' administrative boundary and island map');
-  if($('country-menu'))for(const button of $('country-menu').querySelectorAll('[data-country]'))button.setAttribute('aria-current',String(button.dataset.country===current));
  }
  window.AtlasEntry={initial,countries,fromHash,mount:paint,remember(country,{preservePlace=true}={}){if(!countries[country])return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
  window.addEventListener('hashchange',()=>{const country=fromHash(location.hash);if(root.dataset.starting&&country)window.AtlasEntry.remember(country);});
