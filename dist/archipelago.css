@@ -3,7 +3,7 @@
 body[data-atlas=philippines]{--accent-soft:#28588812;--surface-soft:#eef3f9;--title-accent:#bf3340;--header-stripe:linear-gradient(90deg,#285888 50%,#bf3340 50%)}
 body[data-atlas=indonesia]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--header-stripe:linear-gradient(90deg,#c83630 50%,#e5dedb 50%)}
 .archipelago-sidebar input[type=search]{width:100%;padding:13px 12px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:var(--paper)}
-.archipelago-sidebar .selection-top img{height:auto;border-radius:0}
+.archipelago-sidebar .selection-top img{height:auto}
 .archipelago-sidebar [id$=search-results]{max-height:260px;overflow-y:auto;border:1px solid var(--line);margin-top:8px;border-radius:4px}
 .archipelago-sidebar .search-result{background:var(--surface-soft)}
 .archipelago-children{max-height:290px;overflow-y:auto;margin:18px 0}
