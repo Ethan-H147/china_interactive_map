@@ -1,4 +1,7 @@
 node_modules/
+scripts/additional-sources/archipelago/*.geojson
+scripts/additional-sources/archipelago/*.zip
+scripts/additional-sources/archipelago/*-20m.bin
 artifacts/
 scripts/additional-sources/ok_geo.csv
 scripts/additional-sources/osm-search.json

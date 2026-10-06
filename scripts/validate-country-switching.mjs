@@ -14,7 +14,7 @@ let releaseKorea,releaseMongolia;
 const koreaWait=new Promise(r=>releaseKorea=r),mongoliaWait=new Promise(r=>releaseMongolia=r);
 const atlas=wait=>({warm:()=>wait,leave(){},context(){},enter:async()=>{},ready:true});
 const env=vm.createContext({allReady:true,quiz:{active:false},koreaAtlas:atlas(koreaWait),mongoliaAtlas:atlas(mongoliaWait),japanAtlas:atlas(Promise.resolve()),provinceFeatures:[],window:{AtlasTheme:{applyAtlasTheme(){}},AtlasEntry:{countries:{china:{en:'China'},korea:{en:'Korea'},mongolia:{en:'Mongolia'},japan:{en:'Japan'}},remember:country=>remembered.push(country)}},AtlasSymbols:{markup:c=>c},document:{getElementById:element,documentElement:{dataset:{}}},$:element,map:{getLayer:()=>true,setPaintProperty(){}},homeBounds:[[73,17],[135,54]],navigateBounds:async()=>true,motionRenderer:{end:async()=>{},loadCountry:()=>new Promise(()=>{})},loadChina:async()=>{},saveView(){},controls(){},cancelNavigation(){},clearHover(){},clearSelection(){},clearSearch(){},syncCountryFills(){},syncLayers(){},updateLabels(){},setMode(){},showPanel(){},refreshStatus(){},saveViewSoon(){},unlockCamera(){},fitHome:async()=>{},console});
-vm.runInContext("let atlasMode='china',countrySwitching=false,countryEpoch=0,requestedCountry,activeCode;"+source.slice(source.indexOf('function currentAtlas()'),source.indexOf('function regionZoom(')),env);
+vm.runInContext("let atlasMode='china',countrySwitching=false,countryEpoch=0,requestedCountry,activeCode,philippinesAtlas,indonesiaAtlas;"+source.slice(source.indexOf('function atlasFor('),source.indexOf('function regionZoom(')),env);
 const korea=env.changeAtlas('korea'),mongolia=env.changeAtlas('mongolia');
 releaseMongolia();assert.equal(await mongolia,true);assert.equal(remembered.at(-1),'mongolia');releaseKorea();assert.equal(await korea,false);assert.equal(remembered.at(-1),'mongolia','Slower earlier requests cannot replace the latest country');
 assert.equal(await env.changeAtlas('china'),true,'Optional motion downloads cannot block switching');
@@ -22,3 +22,7 @@ assert.equal(remembered.at(-1),'china');
 console.log('All 34 context provinces, watertight Jilin context, latest country intent and non-blocking optional motion downloads passed.');
 
 assert.equal(await env.changeAtlas('japan'),true);assert.equal(remembered.at(-1),'japan');
+env.window.AtlasEntry.countries.philippines={en:'Philippines'};env.window.AtlasEntry.countries.indonesia={en:'Indonesia'};
+let releasePH,releaseID;env.phWait=new Promise(r=>releasePH=r);env.idWait=new Promise(r=>releaseID=r);env.makeAtlas=atlas;
+vm.runInContext('philippinesAtlas=makeAtlas(phWait);indonesiaAtlas=makeAtlas(idWait);',env);
+const phRequest=env.changeAtlas('philippines'),idRequest=env.changeAtlas('indonesia');releaseID();assert.equal(await idRequest,true);releasePH();assert.equal(await phRequest,false);assert.equal(remembered.at(-1),'indonesia');

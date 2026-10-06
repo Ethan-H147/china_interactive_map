@@ -1,0 +1,223 @@
+{
+  "country": "indonesia",
+  "retrieved": "2026-10-05",
+  "first": 38,
+  "second": 514,
+  "namedIslands": 6382,
+  "source": "https://data.humdata.org/dataset/cod-ab-idn",
+  "boundaryOrigin": "Badan Pusat Statistik (Statistics Indonesia), distributed by OCHA",
+  "license": "CC BY-IGO",
+  "sha256": "15c1c0b449c5be5bd639c3fd39febf188842d026ddf448f7194799835d6f59ca",
+  "originalBytes": 149707552,
+  "catalogue": {
+    "file": "indonesia-catalogue.bin",
+    "bytes": 308380,
+    "decodedBytes": 1638804
+  },
+  "chunks": {
+    "ID11": {
+      "file": "indonesia-ID11.bin",
+      "bytes": 247976,
+      "decodedBytes": 726964
+    },
+    "ID13": {
+      "file": "indonesia-ID13.bin",
+      "bytes": 234267,
+      "decodedBytes": 732066
+    },
+    "ID53": {
+      "file": "indonesia-ID53.bin",
+      "bytes": 457535,
+      "decodedBytes": 1468339
+    },
+    "ID12": {
+      "file": "indonesia-ID12.bin",
+      "bytes": 290443,
+      "decodedBytes": 864444
+    },
+    "ID-papua-selatan": {
+      "file": "indonesia-ID-papua-selatan.bin",
+      "bytes": 110804,
+      "decodedBytes": 363859
+    },
+    "ID51": {
+      "file": "indonesia-ID51.bin",
+      "bytes": 89505,
+      "decodedBytes": 291875
+    },
+    "ID63": {
+      "file": "indonesia-ID63.bin",
+      "bytes": 193577,
+      "decodedBytes": 619507
+    },
+    "ID32": {
+      "file": "indonesia-ID32.bin",
+      "bytes": 278662,
+      "decodedBytes": 885731
+    },
+    "ID72": {
+      "file": "indonesia-ID72.bin",
+      "bytes": 509173,
+      "decodedBytes": 1619208
+    },
+    "ID19": {
+      "file": "indonesia-ID19.bin",
+      "bytes": 175082,
+      "decodedBytes": 560106
+    },
+    "ID35": {
+      "file": "indonesia-ID35.bin",
+      "bytes": 468925,
+      "decodedBytes": 1522185
+    },
+    "ID33": {
+      "file": "indonesia-ID33.bin",
+      "bytes": 323745,
+      "decodedBytes": 1052611
+    },
+    "ID73": {
+      "file": "indonesia-ID73.bin",
+      "bytes": 333084,
+      "decodedBytes": 1058566
+    },
+    "ID34": {
+      "file": "indonesia-ID34.bin",
+      "bytes": 42017,
+      "decodedBytes": 137451
+    },
+    "ID16": {
+      "file": "indonesia-ID16.bin",
+      "bytes": 139062,
+      "decodedBytes": 441783
+    },
+    "ID62": {
+      "file": "indonesia-ID62.bin",
+      "bytes": 100944,
+      "decodedBytes": 303996
+    },
+    "ID15": {
+      "file": "indonesia-ID15.bin",
+      "bytes": 67219,
+      "decodedBytes": 216854
+    },
+    "ID14": {
+      "file": "indonesia-ID14.bin",
+      "bytes": 153935,
+      "decodedBytes": 454050
+    },
+    "ID61": {
+      "file": "indonesia-ID61.bin",
+      "bytes": 301268,
+      "decodedBytes": 913703
+    },
+    "ID17": {
+      "file": "indonesia-ID17.bin",
+      "bytes": 54072,
+      "decodedBytes": 165237
+    },
+    "ID64": {
+      "file": "indonesia-ID64.bin",
+      "bytes": 378291,
+      "decodedBytes": 1189987
+    },
+    "ID94": {
+      "file": "indonesia-ID94.bin",
+      "bytes": 254517,
+      "decodedBytes": 850175
+    },
+    "ID52": {
+      "file": "indonesia-ID52.bin",
+      "bytes": 262245,
+      "decodedBytes": 843601
+    },
+    "ID21": {
+      "file": "indonesia-ID21.bin",
+      "bytes": 610815,
+      "decodedBytes": 1912150
+    },
+    "ID75": {
+      "file": "indonesia-ID75.bin",
+      "bytes": 112819,
+      "decodedBytes": 351777
+    },
+    "ID71": {
+      "file": "indonesia-ID71.bin",
+      "bytes": 240390,
+      "decodedBytes": 741064
+    },
+    "ID74": {
+      "file": "indonesia-ID74.bin",
+      "bytes": 312263,
+      "decodedBytes": 996027
+    },
+    "ID65": {
+      "file": "indonesia-ID65.bin",
+      "bytes": 230795,
+      "decodedBytes": 694192
+    },
+    "ID81": {
+      "file": "indonesia-ID81.bin",
+      "bytes": 575999,
+      "decodedBytes": 1827098
+    },
+    "ID18": {
+      "file": "indonesia-ID18.bin",
+      "bytes": 162247,
+      "decodedBytes": 514074
+    },
+    "ID-papua-tengah": {
+      "file": "indonesia-ID-papua-tengah.bin",
+      "bytes": 89388,
+      "decodedBytes": 292067
+    },
+    "ID91": {
+      "file": "indonesia-ID91.bin",
+      "bytes": 141144,
+      "decodedBytes": 431868
+    },
+    "ID82": {
+      "file": "indonesia-ID82.bin",
+      "bytes": 527969,
+      "decodedBytes": 1655569
+    },
+    "ID-papua-pegunungan": {
+      "file": "indonesia-ID-papua-pegunungan.bin",
+      "bytes": 16923,
+      "decodedBytes": 72180
+    },
+    "ID31": {
+      "file": "indonesia-ID31.bin",
+      "bytes": 34917,
+      "decodedBytes": 122658
+    },
+    "ID36": {
+      "file": "indonesia-ID36.bin",
+      "bytes": 108929,
+      "decodedBytes": 351115
+    },
+    "ID-papua-barat-daya": {
+      "file": "indonesia-ID-papua-barat-daya.bin",
+      "bytes": 162807,
+      "decodedBytes": 501654
+    },
+    "ID76": {
+      "file": "indonesia-ID76.bin",
+      "bytes": 77660,
+      "decodedBytes": 254033
+    }
+  },
+  "processing": "Shared topology cleaned and simplified together to 20 m, then partitioned by parent division. Overview 250 m; context 800 m. GeoNames island extents match dissolved physical land components where the catalogue point lies on land.",
+  "islandSource": "https://download.geonames.org/export/dump/",
+  "islandLicense": "CC BY 4.0",
+  "notes": [
+    "Source regency geometry is the 2020 COD snapshot. The four new Papua provinces are reconstructed from constituent regencies under the 2022 laws; regency IDs remain source identifiers, not current official codes.",
+    "Eight lake/reservoir/forest context polygons are excluded from the 514 administrative divisions.",
+    "Toba, Kepulauan Tanimbar and Pasangkayu names updated; Jakarta second-level areas labeled administrative cities/regency."
+  ],
+  "references": [
+    "https://peraturan.bpk.go.id/Details/232726/uu-",
+    "https://peraturan.bpk.go.id/Details/217799/uu-no-16-",
+    "https://nabirekab.go.id/harapan-dan-tantangan-pembangunan-provinsi-papua-tengah/",
+    "https://papua.go.id/infografis"
+  ]
+}

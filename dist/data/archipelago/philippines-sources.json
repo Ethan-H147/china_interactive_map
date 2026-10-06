@@ -1,0 +1,122 @@
+{
+  "country": "philippines",
+  "retrieved": "2026-10-05",
+  "first": 18,
+  "second": 82,
+  "namedIslands": 2754,
+  "source": "https://data.humdata.org/dataset/cod-ab-phl",
+  "boundaryOrigin": "NAMRIA / Philippine Statistics Authority, distributed by OCHA",
+  "license": "CC BY-IGO",
+  "sha256": "f8e758025bab53a32d873d146ab2c6d459badd95ef24339f7c6aaddf6395b04e",
+  "originalBytes": 526867027,
+  "catalogue": {
+    "file": "philippines-catalogue.bin",
+    "bytes": 118874,
+    "decodedBytes": 650723
+  },
+  "chunks": {
+    "PH01": {
+      "file": "philippines-PH01.bin",
+      "bytes": 103240,
+      "decodedBytes": 336450
+    },
+    "PH02": {
+      "file": "philippines-PH02.bin",
+      "bytes": 143134,
+      "decodedBytes": 462557
+    },
+    "PH03": {
+      "file": "philippines-PH03.bin",
+      "bytes": 153086,
+      "decodedBytes": 494037
+    },
+    "PH04": {
+      "file": "philippines-PH04.bin",
+      "bytes": 289519,
+      "decodedBytes": 939276
+    },
+    "PH05": {
+      "file": "philippines-PH05.bin",
+      "bytes": 496946,
+      "decodedBytes": 1643887
+    },
+    "PH06": {
+      "file": "philippines-PH06.bin",
+      "bytes": 204332,
+      "decodedBytes": 670139
+    },
+    "PH18": {
+      "file": "philippines-PH18.bin",
+      "bytes": 139767,
+      "decodedBytes": 449921
+    },
+    "PH07": {
+      "file": "philippines-PH07.bin",
+      "bytes": 272754,
+      "decodedBytes": 896580
+    },
+    "PH08": {
+      "file": "philippines-PH08.bin",
+      "bytes": 452530,
+      "decodedBytes": 1498730
+    },
+    "PH09": {
+      "file": "philippines-PH09.bin",
+      "bytes": 551620,
+      "decodedBytes": 1799903
+    },
+    "PH10": {
+      "file": "philippines-PH10.bin",
+      "bytes": 137562,
+      "decodedBytes": 425744
+    },
+    "PH11": {
+      "file": "philippines-PH11.bin",
+      "bytes": 152219,
+      "decodedBytes": 471926
+    },
+    "PH12": {
+      "file": "philippines-PH12.bin",
+      "bytes": 80931,
+      "decodedBytes": 244891
+    },
+    "PH13": {
+      "file": "philippines-PH13.bin",
+      "bytes": 10143,
+      "decodedBytes": 32887
+    },
+    "PH14": {
+      "file": "philippines-PH14.bin",
+      "bytes": 25045,
+      "decodedBytes": 88378
+    },
+    "PH16": {
+      "file": "philippines-PH16.bin",
+      "bytes": 325733,
+      "decodedBytes": 1052930
+    },
+    "PH17": {
+      "file": "philippines-PH17.bin",
+      "bytes": 876667,
+      "decodedBytes": 2882690
+    },
+    "PH19": {
+      "file": "philippines-PH19.bin",
+      "bytes": 349353,
+      "decodedBytes": 1126173
+    }
+  },
+  "processing": "Shared topology cleaned and simplified together to 20 m, then partitioned by parent division. Overview 250 m; context 800 m. GeoNames island extents match dissolved physical land components where the catalogue point lies on land.",
+  "islandSource": "https://download.geonames.org/export/dump/",
+  "islandLicense": "CC BY 4.0",
+  "notes": [
+    "Negros Island Region reconstructed from Negros Occidental, Negros Oriental and Siquijor (RA 12000).",
+    "Sulu reassigned to Zamboanga Peninsula (EO 91/2025).",
+    "NCR statistical districts, Isabela City and Bangsamoro Special Geographic Area contribute to regional geometry but are not labeled as provinces.",
+    "Provincial coverage follows the COD snapshot; independent cities embedded in source provincial shapes are not separately mapped."
+  ],
+  "references": [
+    "https://psa.gov.ph/content/second-quarter-2024-psgc-updates-creation-negros-island-region-and-correction-names-two",
+    "https://psa.gov.ph/content/province-sulu-officially-transferred-region-ix-zamboanga-peninsula"
+  ]
+}

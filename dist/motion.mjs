@@ -13,6 +13,7 @@ export function setFeatureState(map,target,state){
 }
 
 export function createMotionRenderer(map,initialCountry='china'){
+ let nativeCountry=['philippines','indonesia'].includes(initialCountry);
  let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise;
  let generation=0,restorePromise;
  const urls=new Map(),layers=new Map(),dynamicKeys=new Map();
@@ -45,6 +46,8 @@ export function createMotionRenderer(map,initialCountry='china'){
  function sourceUrl(source,data){const url=URL.createObjectURL(data),previous=urls.get(source);urls.set(source,url);return{url,previous};}
  const countryLoads=new Map();
  function loadCountry(country){
+  nativeCountry=['philippines','indonesia'].includes(country);
+  if(nativeCountry)return Promise.resolve(false);
   if(countryLoads.has(country))return countryLoads.get(country);
   const promise=new Promise(resolve=>{
    const url=new URL('./motion-worker.mjs',import.meta.url);url.searchParams.set('country',country);
@@ -102,6 +105,7 @@ export function createMotionRenderer(map,initialCountry='china'){
   restoring=false;
  }
  async function begin(){
+  if(nativeCountry)return false;
   if(active&&!restoring)return true;
   if(!sources)return false;
   const token=++generation;
