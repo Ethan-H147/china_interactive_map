@@ -11,8 +11,8 @@
   "originalBytes": 526867027,
   "catalogue": {
     "file": "philippines-catalogue.bin",
-    "bytes": 118874,
-    "decodedBytes": 650723
+    "bytes": 119333,
+    "decodedBytes": 652394
   },
   "chunks": {
     "PH01": {
@@ -62,8 +62,8 @@
     },
     "PH09": {
       "file": "philippines-PH09.bin",
-      "bytes": 551620,
-      "decodedBytes": 1799903
+      "bytes": 558453,
+      "decodedBytes": 1820680
     },
     "PH10": {
       "file": "philippines-PH10.bin",
@@ -102,8 +102,8 @@
     },
     "PH19": {
       "file": "philippines-PH19.bin",
-      "bytes": 349353,
-      "decodedBytes": 1126173
+      "bytes": 352289,
+      "decodedBytes": 1135411
     }
   },
   "processing": "Shared topology cleaned and simplified together to 20 m, then partitioned by parent division. Overview 250 m; context 800 m. GeoNames island extents match dissolved physical land components where the catalogue point lies on land.",
@@ -112,10 +112,11 @@
   "notes": [
     "Negros Island Region reconstructed from Negros Occidental, Negros Oriental and Siquijor (RA 12000).",
     "Sulu reassigned to Zamboanga Peninsula (EO 91/2025).",
-    "NCR statistical districts, Isabela City and Bangsamoro Special Geographic Area contribute to regional geometry but are not labeled as provinces.",
-    "Provincial coverage follows the COD snapshot; independent cities embedded in source provincial shapes are not separately mapped."
+    "NCR statistical districts and Bangsamoro Special Geographic Area contribute to regional geometry but are not labeled as provinces. Isabela City is a separately selectable component city, excluded from the 82-province count.",
+    "Basilan provincial geometry includes Isabela City; its region remains Region IX while the rest of Basilan belongs to BARMM. Other provincial coverage follows the COD snapshot; independent cities embedded in source provincial shapes are not separately mapped."
   ],
   "references": [
+    "https://psa.gov.ph/classification/psgc/summary",
     "https://psa.gov.ph/content/second-quarter-2024-psgc-updates-creation-negros-island-region-and-correction-names-two",
     "https://psa.gov.ph/content/province-sulu-officially-transferred-region-ix-zamboanga-peninsula"
   ]

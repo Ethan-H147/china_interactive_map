@@ -10,3 +10,5 @@ body[data-atlas=indonesia]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--head
 body:is([data-atlas=philippines],[data-atlas=indonesia]) .map-mode{background:var(--paper);border-color:var(--line)}
 body:is([data-atlas=philippines],[data-atlas=indonesia]) #atlas-title-local{font:24px Georgia,serif;letter-spacing:0}
 @media(max-width:760px){.site-header{gap:10px}.site-header h1{min-width:0;flex-shrink:1}.site-header .surprise{width:36px;height:36px;padding:0;font-size:0;flex:none}.site-header .surprise svg{display:block;width:18px;height:18px}.site-header #atlas-title-local{display:none}body[data-atlas=philippines] .site-header #atlas-title-english{font-size:27px}.site-header #atlas-title-english{overflow:hidden;text-overflow:ellipsis}.map-top .map-mode button{max-width:115px}.archipelago-sidebar h2{font-size:32px}}
+
+.boundary-note{margin:18px 0;padding-top:14px;border-top:1px solid var(--line);font-size:14px;line-height:1.6;color:var(--muted)}.boundary-note p{margin:0 0 6px}
