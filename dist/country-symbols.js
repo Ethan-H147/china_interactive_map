@@ -1,8 +1,9 @@
 // Small vector emblems; CSS rotates only the group marked as the rotor.
 window.AtlasSymbols={sequence:0,markup(country){
  if(country==='philippines'){
-  const ray='M47 30V3h6v27ZM42 30l-3-19 4-1 5 20ZM52 30l5-20 4 1-3 19Z';
-  return `<svg class="country-symbol philippines-sun" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="#fcd116"><circle cx="50" cy="50" r="22"/>${Array.from({length:8},(_,i)=>`<path data-sun-ray="${i}" d="${ray}" transform="rotate(${i*45} 50 50)"/>`).join('')}</g></svg>`;
+  // Exact sun geometry from the national flag SVG; source in symbol-sources.
+  const ray='m0 0-3.164-15.909.945-.946zl-1.169-17.831L0-19l1.169 1.169zl2.219-16.855.945.946z';
+  return `<svg class="country-symbol philippines-sun" viewBox="-20 -20 40 40" aria-hidden="true"><g class="symbol-rotor" fill="#fcd116"><circle r="9"/>${Array.from({length:8},(_,i)=>`<path data-sun-ray="${i}" d="${ray}" transform="rotate(${i*45})"/>`).join('')}</g></svg>`;
  }
  if(country==='indonesia')return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="40" stroke-width="1.5"/><path d="M50 10V90M10 50H90M22 22L78 78M22 78L78 22M34.7 13L65.3 87M13 34.7L87 65.3M13 65.3L87 34.7M34.7 87L65.3 13"/><circle cx="50" cy="50" r="8" fill="var(--map)"/></g></svg>`;
  if(country==='japan')return '<img class="country-symbol symbol-rotor" src="vendor/japan-chrysanthemum.png" alt="" aria-hidden="true">';

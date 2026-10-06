@@ -39,4 +39,9 @@ console.log('Country entry: equal routes, explicit-link priority, remembered vis
 
 assert(symbols.markup('japan').includes('japan-chrysanthemum.png'));
 const sun=symbols.markup('philippines');assert.equal((sun.match(/data-sun-ray=/g)||[]).length,8,'Philippine sun has eight ray groups');assert.equal((sun.match(/class="symbol-rotor"/g)||[]).length,1);assert(sun.includes('#fcd116'));assert(!sun.includes('M50 10V90'));
+const referenceFlag=fs.readFileSync('scripts/symbol-sources/philippine-flag.svg','utf8');
+const referenceRay=referenceFlag.match(/<path id="a" d="([^"]+)"/)[1];
+for(const path of sun.matchAll(/data-sun-ray="\d" d="([^"]+)"/g))assert.equal(path[1],referenceRay,'Use the actual flag ray geometry without redrawing');
+assert(sun.includes('<circle r="9"/>'),'Preserve the flag disk-to-ray proportions');assert(sun.includes('viewBox="-20 -20 40 40"'));
+assert.equal(fs.readFileSync('dist/vendor/flag-ph.svg','utf8').replace(/\r/g,''),referenceFlag.replace(/\r/g,''),'Displayed flag and loading sun share the same reference artwork');
 const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));assert(wheel.includes('M50 10V90'),'Keep the carriage wheel available');
