@@ -36,7 +36,9 @@ GeoNames (CC BY 4.0) supplies 2,754 Philippine and 6,382 Indonesian named island
 
 Shared topology is cleaned and simplified together to 20 metres before partitioning into 18 regional and 38 provincial detail files. Country overview geometry uses 250-metre first-level and 500-metre second-level detail; inactive country silhouettes use 800-metre detail. Searches load a small name catalogue, not detailed geometry. Normalized aliases are indexed once per country. Local detail is prepared in a temporary worker after movement ends, with at most two chunks on narrow screens or three on larger screens and a 12 MiB decoded-data budget. Obsolete chunks lose their MapLibre sources and blob URLs; leaving a country releases all of its installed geometry except the small context silhouette. Cancelled country requests cannot install stale detail. Inactive countries are no longer eagerly preloaded at startup. New country geometry stays within this bounded native renderer during movement.
 
-`npm run test:archipelago` checks administrative counts and hierarchy, island search, geometry retention, view links at southern latitudes, loading isolation, eviction, cold selections and stale worker disposal. `/archipelago-benchmark` is a local-only panning and switching measurement page; its script is excluded from production.
+The dense Mahakam Delta islands appear at zoom 12 and closer. Their original geometry stays in the existing province/regency sources, with visibility handled by the renderer; crossing the zoom threshold needs no new download or source replacement. Mainland and administrative edges remain unchanged. The inactive gray silhouette also omits these islands.
+
+`npm run test:archipelago` checks administrative counts and hierarchy, island search, geometry retention, coastal detail visibility, view links at southern latitudes, loading isolation, eviction, cold selections and stale worker disposal. `/archipelago-benchmark` is a local-only panning and switching measurement page; its script is excluded from production.
 
 ## Map quiz
 
