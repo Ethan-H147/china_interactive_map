@@ -6,7 +6,7 @@ const read=name=>JSON.parse(gunzipSync(fs.readFileSync('dist/data/archipelago/'+
 const polygons=f=>f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;
 const sorted=parts=>parts.map(p=>JSON.stringify(p)).sort();
 const inside=([x,y])=>x>=coastalDetailBounds[0][0]&&x<=coastalDetailBounds[1][0]&&y>=coastalDetailBounds[0][1]&&y<=coastalDetailBounds[1][1];
-assert.equal(coastalDetailZoom,12);
+assert.equal(coastalDetailZoom,9,'Delta channels must be visible at Samarinda city scale');
 for(const name of ['indonesia-overview','indonesia-ID64'])for(const level of ['first','second']){
  const input=read(name)[level],before=JSON.stringify(input),display=splitCoastalDetail(input);
  assert.equal(JSON.stringify(input),before,'The original source geometry is never changed');
@@ -20,4 +20,4 @@ const context=read('indonesia-context'),coarse=splitCoastalDetail(context,{conte
 assert.equal(coarse.features.length,context.features.length);assert(!coarse.features.some(f=>f.properties.coastalDetail));
 for(const f of coarse.features)if(coastalDetailIds.has(f.properties.id))assert(!polygons(f).some(p=>p[0].every(inside)),'Gray context cannot reveal hidden delta islands underneath the active map');
 for(const country of ['philippines'])for(const level of ['first','second']){const input=read(country+'-overview')[level];assert.deepEqual(splitCoastalDetail(input),input);}
-console.log('Mahakam detail: 85 islands hidden below zoom 12, original mainland/regency edges unchanged, every island vertex retained, gray-context masking and unrelated countries unchanged.');
+console.log(`Mahakam detail: 85 islands visible from zoom ${coastalDetailZoom}, original mainland/regency edges unchanged, every island vertex retained, gray-context masking and unrelated countries unchanged.`);

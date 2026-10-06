@@ -1,6 +1,6 @@
-// Mahakam Delta islands are too dense to read at province/regency scale.
+// Keep province overviews clear; reveal the delta at Samarinda city scale.
 // Split whole land components; never alter mainland or administrative edges.
-export const coastalDetailZoom=12;
+export const coastalDetailZoom=9;
 export const coastalDetailBounds=[[117.2,-1],[117.75,-.2]];
 export const coastalDetailIds=new Set(['ID64','ID6403']);
 export const coastalPartId=id=>id+'~mahakam';
