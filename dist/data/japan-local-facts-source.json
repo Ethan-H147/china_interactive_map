@@ -1,0 +1,28 @@
+{
+  "source": {
+    "title": "Statistics Bureau of Japan · 2025 Census, final population results, table 1-1",
+    "url": "https://www.e-stat.go.jp/stat-search/files?page=1&layout=datalist&lid=000001491012",
+    "download": "https://www.e-stat.go.jp/stat-search/file-download?statInfId=000040506423&fileKind=0",
+    "date": "2025-10-01",
+    "dateLabel": "1 October 2025 · Final census",
+    "released": "2026-09-29",
+    "retrieved": "2026-10-06",
+    "sha256": "c1ff781e05af6fce6510ee9cfbeba856106c97ae780ca030a549466b0074d856",
+    "note": "Population counts refer to usual residents on census day. Current municipal rows only; city wards are parts of their designated city, not additional population. Reference area is reported in km². Census does not cover the six claimed villages administered by Russia."
+  },
+  "coverage": {
+    "prefectures": 47,
+    "municipalities": 1741,
+    "cityWards": 171,
+    "notCovered": 6,
+    "localFlags": 1808,
+    "municipalFlags": 1741,
+    "cityWardFlags": 67
+  },
+  "checks": [
+    "All 47 prefecture populations equal the sum of their municipalities.",
+    "All 20 designated-city populations equal the sum of their city wards.",
+    "No old 2000 municipal row is used."
+  ],
+  "flags": "japan-local-flags.json"
+}

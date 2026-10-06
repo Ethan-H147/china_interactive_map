@@ -415,7 +415,7 @@ async function loadChina(){
   placeTools=window.AtlasPlaceTools.createPlaceTools({get:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);return layer?{name:bilingualName(layer.feature.properties)}:null;},select:code=>{const layer=regionByCode.get(Number(code))||regionByCode.get(code);if(layer)selectRegion(layer,layer.feature.properties.provinceCode||layer.feature.properties.adcode);},controls,shareUrl:()=>{const url=new URL(location.href);url.hash=window.AtlasView.hashFor(captureView());return url;}});
   waterDisplay=window.AtlasWater.createWaterDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,load:()=>json('data/major-water.bin')});
   for(const id of ['water-layer'])if($(id).checked)$(id).dispatchEvent(new Event('change'));
-  comparison=(await import('./compare.mjs')).createComparison({regions:[...provinceLayers.values(),...regionByCode.values()].filter((l,i,a)=>a.findIndex(x=>x.feature.properties.adcode===l.feature.properties.adcode)===i),name:englishName,kind,provincePopulation,regionPopulation});
+  comparison.register('china',{regions:[...provinceLayers.values(),...regionByCode.values()].filter((l,i,a)=>a.findIndex(x=>x.feature.properties.adcode===l.feature.properties.adcode)===i),name:englishName,kind,provincePopulation,regionPopulation});
   $('compare-open').onclick=()=>comparison.open();$('compare-place').onclick=()=>comparison.open(selected?.layer.feature.properties.adcode);
   chinaReady=true;initQuiz();syncLayers();
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:atlasMode!=='china'});
@@ -424,14 +424,15 @@ async function loadChina(){
 }
 async function init(){try{
  await styleReady;
+ comparison=(await import('./compare.mjs')).createComparison();
  provincePopulation=await json('data/province-population.json');
  addSource('china-context',await json('data/china-context.bin'),{tolerance:0});
  map.addLayer({id:'china-context',type:'fill',source:'china-context',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  if(initialCountry==='china')await loadChina();
  allReady=true;
-  koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
+  koreaAtlas=await window.AtlasKorea.addKoreaPortal(map,{comparison,isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')});
   mongoliaAtlas=await window.AtlasMongolia.addMongoliaPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china'),population:p=>provincePopulation.mongolia[p.iso]||provincePopulation.mongolia[provincePopulation.mongoliaAliases[(p.en||'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'')]]});
-  japanAtlas=await window.AtlasJapan.addJapanPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom}),switchAtlas:changeAtlas});
+  japanAtlas=await window.AtlasJapan.addJapanPortal(map,{comparison,isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom}),switchAtlas:changeAtlas});
   const archipelagoHost={isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom)=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1}),syncAppearance:()=>satelliteDisplay?.sync()};
   philippinesAtlas=await window.AtlasArchipelago.addArchipelagoPortal(map,archipelagoHost,'philippines');
   indonesiaAtlas=await window.AtlasArchipelago.addArchipelagoPortal(map,archipelagoHost,'indonesia');

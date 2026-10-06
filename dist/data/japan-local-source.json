@@ -639,5 +639,7 @@
     "Six village areas in the Northern Territories follow the source’s Japanese territorial claim and are administered by Russia.",
     "Unassigned areas remain in prefecture outlines but are not presented as municipalities.",
     "Romanized municipality labels derive from Japan Post; Japanese names and official five-digit source codes are preserved."
-  ]
+  ],
+  "population": "japan-local-facts-source.json",
+  "flags": "japan-local-flags.json"
 }

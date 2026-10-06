@@ -1,0 +1,2 @@
+# Preserve downloaded flag originals and their recorded byte checksums.
+dist/vendor/japan-local/*.svg -text

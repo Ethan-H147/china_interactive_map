@@ -15,3 +15,6 @@
 #j-subdivisions{border-block:1px solid var(--line);padding:14px 0;margin:20px 0}#j-subdivisions summary{cursor:pointer;font-size:14px;color:var(--muted)}#j-child-filter{width:100%;margin:14px 0 8px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}#j-children{max-height:280px;overflow:auto;overscroll-behavior:contain}#j-children .search-result{text-align:left;width:100%;font-size:13px;padding:10px 12px}#j-detail-status{font-size:13px;color:var(--muted);padding-block:10px}
 
 #j-children .search-result,#j-search-results .search-result{background:var(--paper);border-color:var(--line)}#j-children .search-result:hover,#j-search-results .search-result:hover{background:#f6e6e9}
+
+#j-explore-panel .selection-top{display:grid;grid-template-columns:minmax(0,1fr) 40px;grid-template-rows:36px;align-items:start}#j-explore-panel .japan-flags{grid-column:2;grid-row:1;align-self:start}#j-selection-kind,#j-selection-name,#j-selection-local{padding-right:60px}
+#j-explore-panel .selection-top .back-button{justify-self:start;width:max-content}

@@ -1,3 +1,4 @@
+import {koreaComparisonProfile} from './compare.mjs';
 import {koreaPanel} from './korea-panel.mjs';
 import {adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-lines.mjs';
 export function createKoreaAtlas(map,host){
@@ -70,6 +71,7 @@ map.on('movestart',clearHover);map.on('moveend',updateLabels);map.on('resize',up
 $('search').addEventListener('input',()=>{const q=$('search').value.trim().toLowerCase(),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/[^\p{L}\p{N}]/gu,'').toLowerCase();const matches=[...index.values()].filter(f=>(f.properties.en+' '+nativeName(f.properties)).toLowerCase().includes(q)||normalize(f.properties.en).includes(normalize(q))).slice(0,15);for(const f of matches){const b=document.createElement('button');b.className='search-result';b.dataset.nav='';const strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=f.properties.en+' · '+nativeName(f.properties);small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||countryNames[f.properties.country]);b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length){const p=document.createElement('p');p.textContent='No matching places.';box.append(p);}});
 $('country').onchange=()=>{scope=$('country').value;listRegions();reset();};$('province').onchange=()=>{$('province').value?select(index.get($('province').value)):reset();};
 for(const id of ['province-layer','prefecture-layer','label-layer'])$(id).onchange=syncLayers;
+$('compare-open').onclick=()=>host.comparison?.open(undefined,'korea');$('compare-place').onclick=()=>host.comparison?.open(selected?.properties.id,'korea');
 $('selection-reset').onclick=()=>{scope='';$('country').value='';listRegions();reset();};
 $('tab-explore').onclick=()=>panel('explore');$('tab-layers').onclick=()=>panel('layers');$('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();
 
@@ -94,7 +96,7 @@ async function ensureData(){
  for(const id of layerIds)showLayer(id,false);
  listRegions();
 
- ready=true;controls();
+ host.comparison?.register('korea',koreaComparisonProfile([...index.values()].map(f=>f.properties)));ready=true;controls();
  })().catch(error=>{for(const id of layerIds)if(map.getLayer(id))map.removeLayer(id);for(const id of ['korea-first','korea-second','korea-first-selection-edges','korea-second-selection-edges','korea-first-edges','korea-second-edges','korea-countries-edges'])if(map.getSource(id))map.removeSource(id);sourceUrls.splice(0).forEach(url=>URL.revokeObjectURL(url));index.clear();loading=null;throw error;});return loading;
 }
 const layerIds=['korea-first-fill','korea-second-fill','korea-second-lines','korea-first-lines','korea-countries-lines','korea-first-selected','korea-second-selected'];

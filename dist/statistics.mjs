@@ -24,7 +24,7 @@ function prepareDetails(anchor){
  }
  return population||anchor;
 }
-export async function renderStatistics(anchor,key){
+export async function renderStatistics(anchor,key,provided){
  if(!anchor)return;
  const insertionPoint=prepareDetails(anchor);
  let panel=anchor.parentElement.querySelector(':scope > .region-statistics');
@@ -32,7 +32,7 @@ export async function renderStatistics(anchor,key){
  insertionPoint.after(panel);
  panel.dataset.region=key;panel.replaceChildren(element('p','Loading statistics…','statistics-note'));
  try{
-  const data=await loadStatistics();if(panel.dataset.region!==key)return;
+  const data=provided||await loadStatistics();if(panel.dataset.region!==key)return;
   const record=data.regions[key];panel.replaceChildren();
   if(!record){panel.append(element('p','Statistics have not been verified for this division.','statistics-note'));return;}
   const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
@@ -53,6 +53,6 @@ export async function renderStatistics(anchor,key){
  }catch{
   if(panel.dataset.region!==key)return;
   panel.replaceChildren(element('p','Statistics could not load.','statistics-note'));
-  const retry=element('button','Retry','quiet-button');retry.type='button';retry.onclick=()=>renderStatistics(anchor,key);panel.append(retry);
+  const retry=element('button','Retry','quiet-button');retry.type='button';retry.onclick=()=>renderStatistics(anchor,key,provided);panel.append(retry);
  }
 }
