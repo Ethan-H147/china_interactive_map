@@ -38,7 +38,7 @@
     "test:mongolia": "node --check dist/mongolia.mjs && node scripts/validate-mongolia.mjs && node scripts/validate-mongolia-rendering.mjs",
     "build:fills": "node scripts/prepare-fill-fragments.mjs && npm run build:motion",
     "test:fills": "node scripts/validate-fill-fragments.mjs",
-    "build:motion": "node scripts/prepare-motion.mjs && node scripts/prepare-context.mjs",
+    "build:motion": "node scripts/prepare-motion.mjs && node scripts/prepare-context.mjs && node scripts/prepare-shared-context.mjs",
     "test:motion": "node --check dist/motion-worker.mjs && node scripts/validate-motion.mjs",
     "test:taiwan": "node scripts/validate-taiwan.mjs",
     "test:experience": "node scripts/validate-experience.mjs",
