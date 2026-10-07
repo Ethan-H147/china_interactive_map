@@ -6,8 +6,8 @@
   "boundaryYear": 2025,
   "processedInputSHA256": "f685a698e280c59b28f6598b699a393959cff94b68b9a4e5bc67f08870a953d6",
   "count": 27,
-  "bytes": 1678585,
-  "decodedBytes": 5061428,
-  "processing": "Shared topology; 75 m detail simplification; rounded to 0.000001 degrees; one shared boundary mesh. IGN service query uses 0.0005 degree geometry tolerance.",
+  "bytes": 1717793,
+  "decodedBytes": 5200158,
+  "processing": "Shared topology across all three countries; 75 m detail simplification; shared exterior edges aligned within 2.5 km of the reference; rounded to 0.000001 degrees; matching context silhouettes. IGN service query uses 0.0005 degree geometry tolerance.",
   "coverageNote": "26 states and the Federal District."
 }

@@ -1,0 +1,28 @@
+{
+  "brazilUruguay": {
+    "changedEdges": 1773,
+    "maxDisplacementMetres": 2444.0423603348863,
+    "changedRegions": [
+      "UY-AR",
+      "UY-TT",
+      "UY-RV",
+      "UY-CL",
+      "UY-RO"
+    ]
+  },
+  "brazilArgentina": {
+    "changedEdges": 1426,
+    "maxDisplacementMetres": 2094.1132076140548,
+    "changedRegions": [
+      "AR-54",
+      "AR-18"
+    ]
+  },
+  "uruguayArgentina": {
+    "method": "Preserve the land polygons on both river shores; draw the official IGN international line separately.",
+    "source": "https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG",
+    "downloadURL": "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Alinea_de_limite_FA004&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+    "inputSHA256": "e85d3f6e37597d1a7dac9d168380a06cc641de427b6527ddd42daf413daf44fd",
+    "featureCount": 5
+  }
+}

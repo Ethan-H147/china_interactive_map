@@ -1,0 +1,13 @@
+{
+  "publisher": "Instituto Geográfico Militar (IGM), via IDE Uruguay",
+  "source": "https://visualizador.ide.uy/geonetwork/srv/api/records/bb9e4263-6206-4cd7-aa9e-0ff5144b4fe4",
+  "downloadURL": "https://mapas.ide.uy/geoserver-vectorial/INE_NO_SEGURO_CLON_NS/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=INE_NO_SEGURO_CLON_NS%3Alimites_departamentales_igm_20220211&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+  "downloaded": "2026-10-06",
+  "boundaryYear": 2022,
+  "processedInputSHA256": "188d8f4af2a40b6380c8bc8cc8f2421e957de588288eb563b13d70d897389d4b",
+  "count": 19,
+  "bytes": 412799,
+  "decodedBytes": 1324290,
+  "processing": "Shared topology across all three countries; 75 m detail simplification; shared exterior edges aligned within 2.5 km of the reference; rounded to 0.000001 degrees; matching context silhouettes. IGN service query uses 0.0005 degree geometry tolerance.",
+  "coverageNote": "19 departments. IGM separately marks Rincón de Maneco and Isla Brasileña as contested areas; those two features are excluded from regular department fills."
+}

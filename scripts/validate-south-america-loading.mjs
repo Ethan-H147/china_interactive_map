@@ -32,8 +32,12 @@ assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));asser
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);
 country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
 assert.ok(sources.has('south-argentina-regions'));assert.ok(!sources.has('south-brazil-regions'));assert.equal(workerLoads,2);
-atlas.portals.argentina.leave();country='brazil';const loading=atlas.portals.brazil.warm();await Promise.resolve();await Promise.resolve();
+atlas.portals.argentina.leave();country='uruguay';await atlas.portals.uruguay.warm();await atlas.portals.uruguay.enter();
+assert.equal(workerLoads,3);assert.ok(sources.has('south-uruguay-regions'));assert.ok(!sources.has('south-argentina-regions'));assert.equal(atlas.portals.uruguay.ready,true);
+await atlas.portals.uruguay.restore('UY-MO');assert.equal(atlas.portals.uruguay.getSelection(),'UY-MO');
+atlas.portals.uruguay.leave();assert.ok(!sources.has('south-uruguay-regions'));assert.equal(atlas.portals.uruguay.ready,false);
+country='brazil';const loading=atlas.portals.brazil.warm();await Promise.resolve();await Promise.resolve();
 atlas.portals.brazil.leave();country='china';await assert.rejects(loading,{name:'AbortError'});
-assert.ok(![...sources.keys()].some(id=>/^south-/.test(id)));assert.ok(terminated>=3);
+assert.ok(![...sources.keys()].some(id=>/^south-(brazil|argentina|uruguay)-/.test(id)));assert.ok(terminated>=3);
 assert.equal(requests.filter(url=>url==='data/flight-context.bin').length,1);
 console.log('Developer gating, zero geometry on Asian entry, per-country loading, worker cancellation and release of inactive boundaries passed.');

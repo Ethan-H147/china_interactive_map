@@ -1,7 +1,7 @@
 {
   "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
-  "description": "Natural Earth 1:110m country silhouettes for the flight preview. Brazil and Argentina silhouettes use dissolved, simplified IBGE and IGN first-level boundaries, matching the selectable subdivisions.",
-  "additionalSources": ["south-america/brazil-sources.json", "south-america/argentina-sources.json"],
-  "license": "Public domain",
+  "description": "Natural Earth 1:110m world silhouettes for the flight preview. Brazil, Argentina and Uruguay silhouettes reuse the detailed exterior of the selectable IBGE, IGN and IGM boundaries. Land borders use shared topology; the Uruguay River international line is separate from its shorelines.",
+  "additionalSources": ["south-america/brazil-sources.json", "south-america/argentina-sources.json", "south-america/uruguay-sources.json", "south-america/shared-border-sources.json"],
+  "license": "Natural Earth: public domain. National mapping layers: see the linked source metadata and publishers' terms.",
   "retrieved": "2026-10-06"
 }
