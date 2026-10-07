@@ -6,13 +6,23 @@ export const countries={
  argentina:{name:'Argentina',local:'',flag:'ar',center:[-65,-39],bounds:[[-74,-56],[-53,-21]],color:'#dfebf3',line:'#5883a0',selected:'#bcd9ec'}
 };
 export function createSouthAmerica(map,host){
- let data,loading,active=null,selected=null,labels=[],pending;
+ let data,loading,active=null,selected=null,labels=[],pending,sourceWait,layerEpoch=0;
+ let brazilLayer='states',layerBusy=false;
+ try{const saved=window.AtlasView?.fromHash(location.hash)||window.AtlasView?.read('brazil',localStorage);if(saved?.country==='brazil'&&['states','ddd','cep'].includes(saved.scope))brazilLayer=saved.scope;}catch{}
+ const postalSource='https://docs.precisely.com/docs-gated/data/gfk-boundaries/2022/en-us/pdf/EN_GfK_Worldwide_digital_maps_without_prices.pdf';
  const installed=new Map(),catalogues=new Map(),jobs=new Map();
  const sidebar=document.createElement('aside');sidebar.className='sidebar south-america-sidebar';sidebar.hidden=true;
  sidebar.setAttribute('aria-label','Explore South America');
- sidebar.innerHTML='<div class="sidebar-tools"><label class="sr-only" for="south-search">Find a division</label><input id="south-search" type="search" placeholder="Find a division" autocomplete="off"><div id="south-results" hidden aria-live="polite"></div></div><div class="sidebar-scroll"><div class="selection-top"><button class="back-button" id="south-reset"></button><img alt=""></div><span class="eyebrow" id="south-kind"></span><h2></h2><p class="country-local"></p><p class="preview-note"></p><label class="field-label" for="south-division">Division</label><select id="south-division"></select><section class="layers"><h3>Visible layers</h3><label><span>Division outlines</span><input id="south-outlines" type="checkbox" checked></label><label><span>Region names</span><input id="south-names" type="checkbox" checked></label></section><nav aria-label="South American countries" class="south-america-countries"></nav><a class="quiet-button" href="#china">Back to East Asia ↗</a></div><footer class="sidebar-footer"><a id="south-source" target="_blank" rel="noopener">Boundary source</a><span>Created by Ethan Hu</span></footer>';
+ sidebar.innerHTML='<div class="sidebar-tools"><label class="sr-only" for="south-search">Find a division</label><input id="south-search" type="search" placeholder="Find a division" autocomplete="off"><div id="south-results" hidden aria-live="polite"></div><div id="south-map-types" class="south-map-types" role="group" aria-label="Brazil map view" hidden><button type="button" data-layer="states">States</button><button type="button" data-layer="ddd">DDD</button><button type="button" data-layer="cep">CEP</button></div><p id="south-layer-status" role="status" class="south-layer-status" hidden></p></div><div class="sidebar-scroll"><div class="selection-top"><button class="back-button" id="south-reset"></button><img alt=""></div><span class="eyebrow" id="south-kind"></span><h2></h2><p class="country-local"></p><p class="preview-note"></p><label class="field-label" for="south-division">Division</label><select id="south-division"></select><section class="layers"><h3>Visible layers</h3><label><span>Division outlines</span><input id="south-outlines" type="checkbox" checked></label><label><span>Region names</span><input id="south-names" type="checkbox" checked></label></section><section id="south-code-details" class="south-code-details" hidden></section><nav aria-label="South American countries" class="south-america-countries"></nav><a class="quiet-button" href="#china">Back to East Asia ↗</a></div><footer class="sidebar-footer"><a id="south-source" target="_blank" rel="noopener">Boundary source</a><span>Created by Ethan Hu</span></footer>';
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>sidebar.querySelector('#south-'+id),nav=sidebar.querySelector('nav');
+ const typeButtons=[];
+ // Resolve only these three controls; ordinary state results keep their own index.
+ for(const mode of ['states','ddd','cep']){const button=sidebar.querySelector('[data-layer="'+mode+'"]');typeButtons.push(button);button.onclick=()=>setBrazilLayer(mode).catch(error=>{if(error.name!=='AbortError')showLayerError();});}
+ const catalogue=()=>active==='brazil'&&brazilLayer==='cep'?null:catalogues.get(active);
+ function showLayerError(){$('layer-status').hidden=false;$('layer-status').textContent='Could not load this view. Choose it again to retry.';}
+ function syncTypeButtons(){for(let i=0;i<typeButtons.length;i++)typeButtons[i].setAttribute('aria-pressed',String(['states','ddd','cep'][i]===brazilLayer));$('map-types').hidden=active!=='brazil';$('map-types').setAttribute('aria-busy',String(layerBusy));}
+ function saveLayer(){document.dispatchEvent(new Event('change'));}
  for(const [id,c] of Object.entries(countries)){const b=document.createElement('button');b.className='search-result';b.textContent=c.name;b.onclick=()=>host.switchAtlas(id);b.dataset.country=id;nav.append(b);}
  const arrow=document.createElement('button');arrow.className='continent-flight';arrow.type='button';arrow.innerHTML='<span aria-hidden="true">↙</span>';document.getElementById('map-shell').append(arrow);
  let lastAsia='china';arrow.onclick=()=>{if(host.isBusy())return;const current=host.country();if(!countries[current]){lastAsia=current;host.switchAtlas('brazil',true,true);}else host.switchAtlas(lastAsia,true,true);};
@@ -22,7 +32,7 @@ export function createSouthAmerica(map,host){
  function clearLabels(){labels.forEach(l=>l.remove());labels=[];}
  function updateLabels(){
   clearLabels();if(!active||map.isMoving()||!$('names').checked)return;
-  const records=catalogues.get(active)?.records||[],b=map.getBounds();
+  const records=catalogue()?.records||[],b=map.getBounds();
   const visible=records.filter(p=>p.center[0]>=b.getWest()&&p.center[0]<=b.getEast()&&p.center[1]>=b.getSouth()&&p.center[1]<=b.getNorth());
   if(selected&&!visible.includes(selected))visible.unshift(selected);
   const candidates=visible.map(p=>({...p,local:p.id==='AR-94'?'':p.id==='AR-02'?'CABA':p.local,selected:p===selected}));
@@ -43,39 +53,95 @@ export function createSouthAmerica(map,host){
    contextFilters();syncDeveloper();
   })();try{await loading;}catch(e){loading=null;data=null;throw e;}
  }
- function cancelPending(){if(pending){const request=pending;pending=null;request.worker.terminate();request.reject(new DOMException('Country changed','AbortError'));}}
- function prepare(id){return new Promise((resolve,reject)=>{cancelPending();const worker=new Worker(new URL('./south-america-worker.mjs',import.meta.url),{type:'module'}),request={id,worker,reject};pending=request;const finish=()=>{worker.terminate();if(pending===request)pending=null;};worker.onmessage=({data})=>{finish();data.error?reject(Error(data.error)):resolve(data);};worker.onerror=e=>{finish();reject(Error(e.message));};worker.postMessage({url:'data/south-america/'+id+'-first.bin'});});}
+ function cancelPending(){sourceWait?.abort();sourceWait=null;if(pending){const request=pending;pending=null;request.worker.terminate();request.reject(new DOMException('Country changed','AbortError'));}}
+ function prepare(id,mode){return new Promise((resolve,reject)=>{cancelPending();const worker=new Worker(new URL('./south-america-worker.mjs',import.meta.url),{type:'module'}),request={id,worker,reject};pending=request;const finish=()=>{worker.terminate();if(pending===request)pending=null;};worker.onmessage=({data})=>{finish();data.error?reject(Error(data.error)):resolve(data);};worker.onerror=e=>{finish();reject(Error(e.message));};worker.postMessage({url:'data/south-america/'+id+(mode==='ddd'?'-ddd':'-first')+'.bin'});});}
  function remove(id){const entry=installed.get(id);if(!entry)return;for(const layer of [...entry.layers].reverse())if(map.getLayer(layer))map.removeLayer(layer);for(const source of entry.sources)if(map.getSource(source))map.removeSource(source);entry.urls.forEach(URL.revokeObjectURL);installed.delete(id);}
- async function warmCountry(id){
-  await warm();if(installed.has(id))return;if(jobs.has(id))return jobs.get(id);
+ // Hold the previous view until both replacement sources are ready to draw.
+ function waitForSources(sources,signal){
+  if(!map.isSourceLoaded)return Promise.resolve();
+  return new Promise((resolve,reject)=>{
+   let timer;const cleanup=()=>{clearTimeout(timer);map.off('sourcedata',check);map.off('error',failed);signal.removeEventListener('abort',aborted);};
+   const finish=error=>{cleanup();error?reject(error):resolve();};
+   const check=()=>{if(sources.every(id=>map.getSource(id)&&map.isSourceLoaded(id)))finish();};
+   const failed=e=>{if(sources.includes(e.sourceId))finish(Error('Boundary source failed'));};
+   const aborted=()=>finish(new DOMException('Map view changed','AbortError'));
+   map.on('sourcedata',check);map.on('error',failed);signal.addEventListener('abort',aborted,{once:true});
+   timer=setTimeout(()=>finish(Error('Boundary source timed out')),15000);if(signal.aborted)aborted();else check();
+  });
+ }
+ async function warmCountry(id,mode=id==='brazil'?brazilLayer:'states'){
+  await warm();if(id==='brazil'&&mode==='cep')return;
+  if(installed.get(id)?.mode===mode)return;
+  const jobKey=id+':'+mode,epoch=layerEpoch;if(jobs.get(jobKey)?.epoch===epoch)return jobs.get(jobKey).promise;
   const job=(async()=>{
-   const payload=await prepare(id);if(host.country()!==id||!window.AtlasDev.enabled)return;
-   for(const other of installed.keys())if(other!==id)remove(other);
-   const c=countries[id],sources=[],layers=[],urls=[];
-   for(const [name,blob] of Object.entries(payload.sources)){const key='south-'+id+'-'+name,url=URL.createObjectURL(blob);urls.push(url);sources.push(key);map.addSource(key,{type:'geojson',data:url,promoteId:name==='regions'?'id':undefined,tolerance:.25,buffer:64,maxzoom:16,attribution:id==='brazil'?'<a href="https://www.ibge.gov.br/geociencias/">IBGE · 2025</a>':id==='uruguay'?'<a href="https://www.ide.uy/">IGM / IDE Uruguay</a>':'<a href="https://www.ign.gob.ar/">IGN, Argentina</a>'});}
-   const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer);layers.push(layer.id);};
-   add({id:'south-'+id+'-fill',type:'fill',source:sources[0],paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],c.selected,c.color],'fill-antialias':false}});
-   add({id:'south-'+id+'-borders',type:'line',source:sources[1],layout:{'line-join':'round'},paint:{'line-color':c.line,'line-width':['interpolate',['linear'],['zoom'],2,.6,7,1.15],'line-opacity':.8}});
-   add({id:'south-'+id+'-selection',type:'line',source:sources[0],filter:['==',['get','id'],''],layout:{'line-join':'round'},paint:{'line-color':c.line,'line-width':2}});
-   installed.set(id,{sources,layers,urls});catalogues.set(id,{records:payload.records,search:createPlaceSearch(payload.records)});
-  })().finally(()=>{if(jobs.get(id)===job)jobs.delete(id);});jobs.set(id,job);return job;
+   const payload=await prepare(id,mode);if(host.country()!==id||!window.AtlasDev.enabled||epoch!==layerEpoch)return;
+   const c=countries[id],sources=[],layers=[],urls=[],suffix=mode==='ddd'?'-ddd':'';
+   const cleanup=()=>{for(const layer of [...layers].reverse())if(map.getLayer(layer))map.removeLayer(layer);for(const source of sources)if(map.getSource(source))map.removeSource(source);urls.forEach(URL.revokeObjectURL);};
+   try{
+    for(const [name,blob] of Object.entries(payload.sources)){const key='south-'+id+suffix+'-'+name,url=URL.createObjectURL(blob);urls.push(url);sources.push(key);map.addSource(key,{type:'geojson',data:url,promoteId:name==='regions'?'id':undefined,tolerance:.25,buffer:64,maxzoom:16,attribution:mode==='ddd'?'<a href="https://informacoes.anatel.gov.br/paineis/areas-tarifarias">Anatel DDD</a> · <a href="https://www.ibge.gov.br/geociencias/">IBGE · 2025</a>':id==='brazil'?'<a href="https://www.ibge.gov.br/geociencias/">IBGE · 2025</a>':id==='uruguay'?'<a href="https://www.ide.uy/">IGM / IDE Uruguay</a>':'<a href="https://www.ign.gob.ar/">IGN, Argentina</a>'});}
+    const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer);layers.push(layer.id);};
+    add({id:'south-'+id+suffix+'-fill',type:'fill',source:sources[0],paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],c.selected,c.color],'fill-antialias':false}});
+    add({id:'south-'+id+suffix+'-borders',type:'line',source:sources[1],layout:{'line-join':'round'},paint:{'line-color':c.line,'line-width':['interpolate',['linear'],['zoom'],2,.6,7,1.15],'line-opacity':.8}});
+    add({id:'south-'+id+suffix+'-selection',type:'line',source:sources[0],filter:['==',['get','id'],''],layout:{'line-join':'round'},paint:{'line-color':c.line,'line-width':2}});
+    const controller=new AbortController();sourceWait=controller;
+    if(installed.has(id))await waitForSources(sources,controller.signal);
+    if(sourceWait===controller)sourceWait=null;
+    if(host.country()!==id||epoch!==layerEpoch||!window.AtlasDev.enabled){cleanup();return;}
+    for(const other of [...installed.keys()])remove(other);
+    installed.set(id,{sources,layers,urls,mode});catalogues.set(id,{records:payload.records,search:createPlaceSearch(payload.records)});
+   }catch(error){cleanup();throw error;}
+  })().finally(()=>{if(jobs.get(jobKey)?.promise===job)jobs.delete(jobKey);});jobs.set(jobKey,{epoch,promise:job});return job;
+ }
+ function renderControls(){
+  const records=catalogue()?.records||[],ddd=active==='brazil'&&brazilLayer==='ddd',cep=active==='brazil'&&brazilLayer==='cep';
+  const noun=ddd?'area code':active==='brazil'?'state':active==='uruguay'?'department':'province';
+  $('division').replaceChildren(new Option(ddd?'All DDD areas':'All '+countries[active].name,''));for(const p of records)$('division').append(new Option(p.en,p.id));
+  $('division').hidden=!records.length;$('division').previousElementSibling.hidden=!records.length;$('division').previousElementSibling.textContent=ddd?'Area code':'Division';
+  $('search').disabled=!records.length;$('search').placeholder=cep?'CEP boundaries pending':ddd?'Find DDD or municipality':'Find a '+noun;
+  sidebar.querySelector('label[for="south-search"]').textContent=$('search').placeholder;sidebar.querySelector('.layers').hidden=!records.length;
+  $('source').href=cep?postalSource:'data/south-america/'+active+(ddd?'-ddd':'')+'-sources.json';$('source').textContent=cep?'Postal boundary dataset':'Boundary source';
+  document.getElementById('map-hint').textContent=cep?'CEP boundaries pending':ddd?'Select a DDD area':'Select a '+noun;
+  syncTypeButtons();
+ }
+ async function setBrazilLayer(mode){
+  if(active!=='brazil'||!['states','ddd','cep'].includes(mode))return;
+  if(mode===brazilLayer&&!layerBusy)return;
+  const epoch=++layerEpoch;cancelPending();layerBusy=true;syncTypeButtons();$('results').hidden=true;
+  $('layer-status').hidden=false;$('layer-status').textContent=mode==='cep'?'Opening postal view…':'Loading '+(mode==='ddd'?'DDD areas':'states')+'…';
+  try{
+   if(mode!=='cep')await warmCountry('brazil',mode);
+   if(epoch!==layerEpoch||active!=='brazil')return;
+   if(mode==='cep')remove('brazil');
+   brazilLayer=mode;selected=null;$('search').value='';sidebar.querySelector('.sidebar-scroll').scrollTop=0;renderControls();renderSelection();syncLayers();saveLayer();
+  }finally{if(epoch===layerEpoch){layerBusy=false;syncTypeButtons();$('layer-status').hidden=true;}}
  }
  function syncLayers(){const entry=installed.get(active);if(entry){map.setLayoutProperty(entry.layers[0],'visibility','visible');map.setLayoutProperty(entry.layers[1],'visibility',$('outlines').checked?'visible':'none');map.setLayoutProperty(entry.layers[2],'visibility','visible');map.setFilter(entry.layers[2],['==',['get','id'],selected?.id||'']);}contextFilters();updateLabels();}
- function renderSelection(){const c=countries[active],record=selected;sidebar.querySelector('h2').textContent=record?.en||c.name;sidebar.querySelector('.country-local').textContent=record?(record.local===record.en?'':record.local):c.local;$('kind').textContent=record?.kind||'SOUTH AMERICA';$('reset').textContent='All '+c.name;$('division').value=record?.id||'';sidebar.querySelector('.preview-note').textContent=record?.id==='AR-94'?'Continental territory and nearby islands are shown here. The source also includes Antarctic and disputed South Atlantic claims, which are outside this view.':active==='brazil'?'26 states and the Federal District.':active==='argentina'?'23 provinces and Buenos Aires autonomous city.':record?.id==='UY-AR'?'19 departments. IGM separately marks Rincón de Maneco and Isla Brasileña as contested areas; those areas are outside the regular department fill.':'19 departments.';const breadcrumb=document.getElementById('breadcrumb-region');breadcrumb.hidden=!record;breadcrumb.textContent=record?.en||'';document.getElementById('map-shell').dataset.selected=String(!!record);}
- function select(record,fit=true){if(!active)return;const entry=installed.get(active);if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:selected.id},{selected:false});selected=record||null;sidebar.querySelector('.sidebar-scroll').scrollTop=0;if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:selected.id},{selected:true});$('results').hidden=true;$('search').value='';renderSelection();syncLayers();if(fit)host.fit(selected?.bounds||countries[active].bounds);}
- function renderSearch(){const q=$('search').value.trim(),box=$('results');box.replaceChildren();box.hidden=!q;const catalogue=catalogues.get(active);if(!q||!catalogue)return;const results=catalogue.search(q);if(!results.length){const p=document.createElement('p');p.textContent='No matching divisions.';box.append(p);}for(const record of results){const button=document.createElement('button');button.className='search-result';const name=document.createElement('strong'),kind=document.createElement('small');name.textContent=record.en;kind.textContent=record.kind;button.append(name,kind);button.onclick=()=>select(record);box.append(button);}}
- $('search').oninput=renderSearch;$('search').onkeydown=e=>{if(e.key==='Enter')$('results').querySelector('button')?.click();if(e.key==='Escape')$('results').hidden=true;};$('division').onchange=()=>select(catalogues.get(active)?.records.find(p=>p.id===$('division').value));$('reset').onclick=()=>select(null);$('outlines').onchange=syncLayers;$('names').onchange=updateLabels;
+ function renderSelection(){
+  const c=countries[active],record=selected,ddd=active==='brazil'&&brazilLayer==='ddd',cep=active==='brazil'&&brazilLayer==='cep';
+  sidebar.querySelector('h2').textContent=record?.en||(ddd?'DDD areas':cep?'CEP regions':c.name);
+  sidebar.querySelector('.country-local').textContent=record?(record.local===record.en?'':record.local):c.local;
+  $('kind').textContent=record?.kind||(ddd?'TELEPHONE AREA CODES':cep?'TWO-DIGIT POSTCODES':'SOUTH AMERICA');
+  $('reset').textContent=ddd?'All DDD areas':'All '+c.name;$('division').value=record?.id||'';
+  sidebar.querySelector('.preview-note').textContent=ddd?(record?'+55 '+record.code+' · '+record.states.join(' / ')+' · '+record.municipalityCount+' municipalities':'67 DDD areas. Each follows the municipalities assigned by Anatel; some cross state borders.'):(cep?'Exact CEP boundaries are pending a licensed dataset. Two-digit postal regions can divide a city, so state and municipal outlines cannot substitute for them. No postal boundaries are drawn here.':record?.id==='AR-94'?'Continental territory and nearby islands are shown here. The source also includes Antarctic and disputed South Atlantic claims, which are outside this view.':active==='brazil'?'26 states and the Federal District.':active==='argentina'?'23 provinces and Buenos Aires autonomous city.':record?.id==='UY-AR'?'19 departments. IGM separately marks Rincón de Maneco and Isla Brasileña as contested areas; those areas are outside the regular department fill.':'19 departments.');
+  const details=$('code-details');details.replaceChildren();details.hidden=!cep&&!(ddd&&record);
+  if(cep){const p=document.createElement('p');p.textContent='The reference map uses GfK postal polygons. Precisely lists 98 two-digit areas for Brazil. These can be added when a dataset licensed for this website is available.';const a=document.createElement('a');a.href=postalSource;a.target='_blank';a.rel='noopener';a.textContent='View the postal boundary catalogue ↗';details.append(p,a);}
+  if(ddd&&record){const note=document.createElement('p');note.textContent='Official municipal assignments · IBGE 2025 boundaries, generalized to 75 m.';const disclosure=document.createElement('details'),summary=document.createElement('summary');summary.textContent=record.municipalityCount+' municipalities';disclosure.append(summary);disclosure.ontoggle=()=>{if(!disclosure.open||disclosure.children.length>1)return;const list=document.createElement('ul');for(const m of record.municipalities){const li=document.createElement('li');li.textContent=m.name+' · '+m.state;list.append(li);}disclosure.append(list);};details.append(note,disclosure);}
+  const breadcrumb=document.getElementById('breadcrumb-region');breadcrumb.hidden=!record;breadcrumb.textContent=record?.en||'';document.getElementById('map-shell').dataset.selected=String(!!record);
+ }
+ function select(record,fit=true){if(!active||layerBusy)return;const entry=installed.get(active);if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:selected.id},{selected:false});selected=record||null;sidebar.querySelector('.sidebar-scroll').scrollTop=0;if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:selected.id},{selected:true});$('results').hidden=true;$('search').value='';renderSelection();syncLayers();if(fit)host.fit(selected?.bounds||countries[active].bounds);}
+ function renderSearch(){const q=$('search').value.trim(),box=$('results');box.replaceChildren();box.hidden=!q;const index=catalogue();if(!q||!index)return;const results=index.search(q);if(!results.length){const p=document.createElement('p');p.textContent=active==='brazil'&&brazilLayer==='ddd'?'No matching DDD or municipality.':'No matching divisions.';box.append(p);}for(const record of results){const button=document.createElement('button');button.className='search-result';const name=document.createElement('strong'),kind=document.createElement('small');name.textContent=record.en;kind.textContent=record.kind+(record.code?' · '+record.states.join(' / '):'');button.append(name,kind);button.onclick=()=>select(record);box.append(button);}}
+ $('search').oninput=renderSearch;$('search').onkeydown=e=>{if(e.key==='Enter')$('results').querySelector('button')?.click();if(e.key==='Escape')$('results').hidden=true;};$('division').onchange=()=>select(catalogue()?.records.find(p=>p.id===$('division').value));$('reset').onclick=()=>select(null);$('outlines').onchange=syncLayers;$('names').onchange=updateLabels;
  map.on('movestart',clearLabels);map.on('moveend',updateLabels);map.on('resize',updateLabels);
  map.on('click',e=>{
-  if(!window.AtlasDev.enabled||host.isBusy())return;
+  if(!window.AtlasDev.enabled||host.isBusy()||layerBusy)return;
   const entry=installed.get(active);if(entry){const hit=map.queryRenderedFeatures(e.point,{layers:[entry.layers[0]]})[0];if(hit){select(catalogues.get(active).records.find(p=>p.id===hit.properties.id));return;}}
   if(map.getLayer('south-america-fill')){const hit=map.queryRenderedFeatures(e.point,{layers:['south-america-fill']})[0];if(hit)host.switchAtlas(hit.properties.country);}
  });
  function portal(id){const c=countries[id];return{
-  bounds:c.bounds,get ready(){return !!data&&installed.has(id);},warm:()=>warmCountry(id),
-  async enter(){active=id;selected=null;sidebar.hidden=false;sidebar.querySelector('.sidebar-scroll').scrollTop=0;const flag=sidebar.querySelector('img');flag.src='vendor/flag-'+c.flag+'.svg';flag.alt='Flag of '+c.name;for(const b of nav.children)b.setAttribute('aria-current',String(b.dataset.country===id));for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=true;const records=catalogues.get(id)?.records||[];$('division').replaceChildren(new Option('All '+c.name,''));for(const p of records)$('division').append(new Option(p.en,p.id));$('division').hidden=!records.length;$('division').previousElementSibling.hidden=!records.length;$('search').disabled=!records.length;const searchLabel='Find a '+(id==='brazil'?'state':id==='uruguay'?'department':'province');$('search').placeholder=searchLabel;sidebar.querySelector('label[for="south-search"]').textContent=searchLabel;sidebar.querySelector('.layers').hidden=!records.length;$('source').href=records.length?'data/south-america/'+id+'-sources.json':'data/flight-context-sources.json';document.getElementById('map-hint').textContent=records.length?'Select a '+(id==='brazil'?'state':id==='uruguay'?'department':'province'):'Select Brazil, Uruguay or Argentina';renderSelection();syncLayers();syncArrow();},
-  leave(){active=null;selected=null;cancelPending();remove(id);sidebar.hidden=true;$('results').hidden=true;$('search').value='';clearLabels();contextFilters();for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=false;},
-  updateLabels,pauseLabels:clearLabels,getSelection:()=>selected?.id||null,restore:async key=>select(catalogues.get(id)?.records.find(p=>p.id===key),false),setMode(){},home:()=>select(null),viewParent:()=>select(null),random(){const records=catalogues.get(id)?.records||[];if(records.length)select(records[Math.floor(Math.random()*records.length)]);}
+  bounds:c.bounds,get ready(){return !!data&&(id==='brazil'&&brazilLayer==='cep'||installed.has(id));},warm:()=>warmCountry(id),
+  async enter(){active=id;selected=null;sidebar.hidden=false;sidebar.querySelector('.sidebar-scroll').scrollTop=0;const flag=sidebar.querySelector('img');flag.src='vendor/flag-'+c.flag+'.svg';flag.alt='Flag of '+c.name;for(const b of nav.children)b.setAttribute('aria-current',String(b.dataset.country===id));for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=true;renderControls();renderSelection();syncLayers();syncArrow();},
+  leave(){layerEpoch++;layerBusy=false;active=null;selected=null;cancelPending();remove(id);sidebar.hidden=true;$('results').hidden=true;$('search').value='';clearLabels();contextFilters();for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=false;},
+  updateLabels,pauseLabels:clearLabels,getSelection:()=>selected?.id||null,getScope:()=>id==='brazil'?brazilLayer:'',restore:async(key,scope)=>{if(id==='brazil'){const mode=['states','ddd','cep'].includes(scope)?scope:String(key||'').startsWith('BR-DDD-')?'ddd':'states';await setBrazilLayer(mode);}select(catalogue()?.records.find(p=>p.id===key),false);},setMode(){},home:()=>select(null),viewParent:()=>select(null),random(){const records=catalogue()?.records||[];if(records.length)select(records[Math.floor(Math.random()*records.length)]);}
  };}
  async function fly(bounds){await warm();const target=map.cameraForBounds(bounds,{padding:45,maxZoom:6});if(!target)return;return new Promise(resolve=>{map.once('moveend',resolve);map.flyTo({...target,duration:2800,curve:1.65,minZoom:.65,retainPadding:false,essential:false,easing:t=>t*t*(3-2*t)});});}
  return{portals:Object.fromEntries(Object.keys(countries).map(id=>[id,portal(id)])),fly,syncArrow,syncDeveloper};

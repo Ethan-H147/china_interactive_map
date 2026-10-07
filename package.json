@@ -9,6 +9,8 @@
   },
   "private": true,
   "scripts": {
+    "build:brazil-ddd": "node scripts/fetch-brazil-ddd.mjs && node --max-old-space-size=12000 scripts/build-brazil-ddd.mjs",
+    "test:brazil-ddd": "node scripts/validate-brazil-ddd.mjs && node scripts/validate-south-america-loading.mjs",
     "test:south-america": "node --check dist/south-america.mjs && node --check dist/south-america-worker.mjs && node scripts/validate-south-america.mjs && node scripts/validate-south-america-loading.mjs",
     "build:south-america": "node scripts/fetch-south-america.mjs && node scripts/build-south-america.mjs",
     "test:archipelago": "node --check dist/archipelago.mjs && node --check dist/archipelago-worker.mjs && node --check dist/coastal-detail.mjs && node scripts/validate-coastal-detail.mjs && node scripts/validate-archipelago.mjs",

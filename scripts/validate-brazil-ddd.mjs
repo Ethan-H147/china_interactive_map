@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {gunzipSync} from 'node:zlib';
+import {topology} from 'topojson-server';
+import {createPlaceSearch} from '../dist/place-search.mjs';
+import {validate,hashFor,fromHash} from '../dist/view-state.mjs';
+const bytes=fs.readFileSync('dist/data/south-america/brazil-ddd.bin'),decoded=gunzipSync(bytes),payload=JSON.parse(decoded);
+const info=JSON.parse(fs.readFileSync('dist/data/south-america/brazil-ddd-sources.json'));
+assert.equal(payload.records.length,67);assert.equal(payload.regions.features.length,67);
+assert.ok(bytes.length<=3_200_000&&decoded.length<=10_000_000,'Only the aggregated layer, within the phone loading budget');
+assert.equal(info.bytes,bytes.length);assert.equal(info.decodedBytes,decoded.length);
+const municipalities=payload.records.flatMap(r=>r.municipalities.map(m=>({...m,code:r.code})));
+assert.equal(municipalities.length,5571);assert.equal(new Set(municipalities.map(m=>m.id)).size,5571);
+const municipalIndex=JSON.parse(fs.readFileSync('dist/data/south-america/brazil-ddd-municipalities.json'));
+assert.equal(municipalIndex.length,5571);
+for(const m of municipalities)assert.deepEqual(m,municipalIndex.find(x=>x.id===m.id));
+assert.equal(municipalities.find(m=>m.id==='5101837').code,'66','New Boa Esperança do Norte assignment');
+assert.equal(municipalities.find(m=>m.id==='5222203').code,'61','Vila Boa must use the current assignment, not historical DDD 62');
+assert.deepEqual(payload.records.find(r=>r.code==='61').states,['DF','GO'],'DDD 61 crosses state boundaries');
+assert.equal(municipalities.find(m=>m.name==='Campinas').code,'19');
+const insideRing=(p,r)=>{let hit=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;};
+const inside=(p,g)=>(g.type==='Polygon'?[g.coordinates]:g.coordinates).some(r=>insideRing(p,r[0])&&!r.slice(1).some(h=>insideRing(p,h)));
+for(const record of payload.records){
+ const feature=payload.regions.features.find(f=>f.id===record.id);assert.ok(feature);
+ assert.equal(feature.properties.code,record.code);assert.deepEqual(Object.keys(feature.properties),['id','code'],'Names are not duplicated into tile geometry');
+ assert.ok(inside(record.center,feature.geometry),'Label must lie inside '+record.en);
+ assert.ok(record.bounds.flat().every(Number.isFinite));assert.equal(record.municipalityCount,record.municipalities.length);
+}
+assert.ok(!payload.regions.features.some(f=>inside([-53.2,-32.75],f.geometry)),'Operational lake areas are not telephone municipalities');
+const topo=topology({regions:payload.regions}),arcs=new Map();
+for(const f of topo.objects.regions.geometries)for(const n of new Set(f.arcs.flat(Infinity).map(i=>i<0?~i:i)))arcs.set(n,(arcs.get(n)||0)+1);
+assert.ok([...arcs.values()].filter(n=>n>1).length>60,'Telephone regions must retain common boundary arcs');
+const search=createPlaceSearch(payload.records);
+assert.equal(search('11')[0].id,'BR-DDD-11');assert.equal(search('DDD 11')[0].id,'BR-DDD-11');assert.equal(search('+55 11')[0].id,'BR-DDD-11');
+assert.equal(search('sao paulo')[0].id,'BR-DDD-11');assert.equal(search('campinas')[0].id,'BR-DDD-19');
+assert.ok(search('11').every(r=>r.kind==='Telephone area code'),'DDD index cannot return states');
+for(const scope of ['states','ddd','cep']){const view={v:1,country:'brazil',center:[-52,-13],zoom:4,scope,selection:scope==='ddd'?'BR-DDD-61':null};assert.deepEqual(fromHash(hashFor(view)),validate(view));assert.equal(validate(view).scope,scope);}
+assert.equal(validate({v:1,country:'brazil',center:[-52,-13],zoom:4,scope:'invented'}).scope,'');
+assert.equal(validate({v:1,country:'japan',center:[137,35],zoom:4,scope:'ddd'}).scope,'');
+console.log('67 DDD regions, all 5,571 current municipal assignments, new municipality, historical-code filtering, cross-state coverage, shared boundaries, search isolation, saved modes and loading budgets passed.');
