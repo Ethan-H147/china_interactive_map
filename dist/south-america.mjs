@@ -29,7 +29,7 @@ export function createSouthAmerica(map,host){
  const arrow=document.createElement('button');arrow.className='continent-flight';arrow.type='button';arrow.innerHTML='<span aria-hidden="true">↙</span>';document.getElementById('map-shell').append(arrow);
  let lastAsia='china';arrow.onclick=()=>{if(host.isBusy())return;const current=host.country();if(!countries[current]){lastAsia=current;host.switchAtlas('brazil',true,true);}else host.switchAtlas(lastAsia,true,true);};
  function syncArrow(){arrow.hidden=!window.AtlasDev.enabled;const south=!!countries[host.country()];arrow.firstElementChild.textContent=south?'↗':'↙';arrow.setAttribute('aria-label',south?'Fly to East Asia':'Fly to South America');arrow.title=arrow.getAttribute('aria-label');}
- function syncDeveloper(){syncArrow();for(const id of ['flight-world','south-america-fill','south-america-lines'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility',window.AtlasDev.enabled?'visible':'none');for(const [id,entry] of installed)for(const layer of entry.layers)map.setLayoutProperty(layer,'visibility',window.AtlasDev.enabled&&active===id?'visible':'none');if(!window.AtlasDev.enabled){argentina.clear();cancelPending();clearLabels();}contextFilters();}
+ function syncDeveloper(){syncArrow();for(const id of ['south-america-fill','south-america-lines'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility',window.AtlasDev.enabled?'visible':'none');for(const [id,entry] of installed)for(const layer of entry.layers)map.setLayoutProperty(layer,'visibility',window.AtlasDev.enabled&&active===id?'visible':'none');if(!window.AtlasDev.enabled){argentina.clear();cancelPending();clearLabels();}contextFilters();}
  syncArrow();
  function clearLabels(){labels.forEach(l=>l.remove());labels=[];}
  function updateLabels(){
@@ -41,14 +41,13 @@ export function createSouthAmerica(map,host){
   for(const [id,c] of Object.entries(countries))if(id!==active||!records.length)candidates.push({id,en:c.name,local:c.local,center:c.center});
   labels=window.AtlasLabels.render(map,candidates,'province-label');
  }
- function contextFilters(){const exclusion=installed.has(active)?active:'';for(const id of ['south-america-fill','south-america-lines'])if(map.getLayer(id))map.setFilter(id,['all',['!=',['get','country'],''],['!=',['get','country'],exclusion]]);if(map.getLayer('flight-world'))map.setFilter('flight-world',['!=',['get','country'],exclusion]);if(map.getLayer('south-river-boundaries'))map.setLayoutProperty('south-river-boundaries','visibility',window.AtlasDev.enabled&&['argentina','uruguay'].includes(active)?'visible':'none');}
+ function contextFilters(){const exclusion=installed.has(active)?active:'';for(const id of ['south-america-fill','south-america-lines'])if(map.getLayer(id))map.setFilter(id,['all',['!=',['get','country'],''],['!=',['get','country'],exclusion]]);if(map.getLayer('world-land'))map.setFilter('world-land',window.AtlasDev.enabled&&data?['==',['get','country'],'']:null);if(map.getLayer('south-river-boundaries'))map.setLayoutProperty('south-river-boundaries','visibility',window.AtlasDev.enabled&&['argentina','uruguay'].includes(active)?'visible':'none');}
  async function warm(){
   if(!window.AtlasDev.enabled)throw Error('Developer mode is required');if(data)return;if(loading)return loading;
   loading=(async()=>{
    const context=await loadCompressed('data/flight-context.bin');data=context;
    map.addSource('flight-context',{type:'geojson',data:context,tolerance:.25,buffer:64,maxzoom:16,attribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay'});
-   map.addLayer({id:'flight-world',type:'fill',source:'flight-context',maxzoom:4,paint:{'fill-color':'#d7d7d3','fill-opacity':['interpolate',['linear'],['zoom'],2,1,4,0],'fill-antialias':false}},'china-context');
-   map.addLayer({id:'south-america-fill',type:'fill',source:'flight-context',paint:{'fill-color':['match',['get','country'],...Object.entries(countries).flatMap(([id,c])=>[id,c.color]),'#d7d7d3']}});
+   map.addLayer({id:'south-america-fill',type:'fill',source:'flight-context',paint:{'fill-color':'#d7d7d3'}});
    map.addLayer({id:'south-america-lines',type:'line',source:'flight-context',paint:{'line-color':'#9aaba5','line-width':1}});
    map.addSource('south-river-borders',{type:'geojson',data:context.riverBorders,tolerance:.25,attribution:'International river boundary: <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">IGN</a>'});
    map.addLayer({id:'south-river-boundaries',type:'line',source:'south-river-borders',minzoom:4,layout:{visibility:'none','line-join':'round'},paint:{'line-color':'#9aaba5','line-width':1,'line-dasharray':[3,3]}});

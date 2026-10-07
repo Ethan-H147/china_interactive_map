@@ -450,6 +450,7 @@ async function loadChina(){
 }
 async function init(){try{
  await styleReady;
+ await (await import('./world-land.mjs')).addWorldLand(map);
  comparison=(await import('./compare.mjs')).createComparison();
  provincePopulation=await json('data/province-population.json');
  addSource('china-context',await json('data/china-context.bin'),{tolerance:0});

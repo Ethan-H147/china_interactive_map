@@ -21,15 +21,24 @@ globalThis.Worker=class{
 const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;const map={
  addSource:(id,s)=>sources.set(id,s),getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),
  addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),removeLayer:id=>layers.delete(id),
- setLayoutProperty(id,key,value){(layers.get(id).layout||={})[key]=value;},setFilter(){},setFeatureState(){},
+ setLayoutProperty(id,key,value){(layers.get(id).layout||={})[key]=value;},setFilter(id,filter){layers.get(id).filter=filter;},setFeatureState(){},
  on(name,fn){if(!handlers.has(name))handlers.set(name,new Set());handlers.get(name).add(fn);},off(name,fn){handlers.get(name)?.delete(fn);},isMoving:()=>false,isSourceLoaded:()=>tilesReady,
  getBounds:()=>({getWest:()=>-180,getEast:()=>180,getSouth:()=>-90,getNorth:()=>90})
 };
+layers.set('world-land',{id:'world-land',layout:{visibility:'visible'}});
 let country='china';const atlas=createSouthAmerica(map,{country:()=>country,isBusy:()=>false,switchAtlas(){},fit(){}});
 assert.equal(requests.length,0);assert.equal(workerLoads,0,'Creating Asian home must not load South American geometry');
 await assert.rejects(atlas.portals.brazil.warm(),/Developer mode/);assert.equal(requests.length,0);
 window.AtlasDev.enabled=true;country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
+assert.deepEqual(layers.get('world-land').filter,['==',['get','country'],''],'Developer geometry replaces its coarse background silhouettes');
+window.AtlasDev.enabled=false;atlas.syncDeveloper();
+assert.equal(layers.get('south-america-fill').layout.visibility,'none');
+assert.equal(layers.get('south-america-lines').layout.visibility,'none');
+assert.equal(layers.get('south-brazil-fill').layout.visibility,'none');
+assert.equal(layers.get('world-land').filter,null,'Exiting developer mode restores all three light-gray land silhouettes');
+assert.equal(layers.get('world-land').layout.visibility,'visible','Developer mode must never hide public world land');
+window.AtlasDev.enabled=true;atlas.syncDeveloper();
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);
 country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
 assert.ok(sources.has('south-argentina-regions'));assert.ok(!sources.has('south-brazil-regions'));assert.equal(workerLoads,2);

@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {gunzipSync} from 'node:zlib';
+import {addWorldLand} from '../dist/world-land.mjs';
+
+const bytes=fs.readFileSync('dist/data/world-land.bin');
+const data=JSON.parse(gunzipSync(bytes));
+assert.ok(bytes.length<100_000,'World context must remain under 100 KB compressed');
+assert.ok(gunzipSync(bytes).length<450_000,'Keep parsing and indexing inexpensive');
+const inRing=(p,r)=>{let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;};
+const contains=p=>data.features.some(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h))));
+for(const p of [[-100,40],[-60,-10],[20,0],[20,50],[80,60],[135,-25],[0,-80]])assert.ok(contains(p),'Missing continental land '+p);
+for(const p of [[110,35],[127,38],[105,47],[138,36],[121,16],[114,-1]])assert.ok(!contains(p),'Coarse background must not overlap supported-country coastlines '+p);
+for(const country of ['brazil','argentina','uruguay'])assert.equal(data.features.filter(f=>f.properties.country===country).length,1,'Unreleased countries retain background land only');
+assert.ok(data.features.every(f=>Object.keys(f.properties).join(',')==='country'),'No subdivision data in the world background');
+const sources=new Map(),layers=[];
+globalThis.fetch=async url=>{assert.equal(url,'data/world-land.bin');return new Response(bytes);};
+await addWorldLand({addSource:(id,s)=>sources.set(id,s),addLayer:l=>layers.push(l)});
+assert.equal(layers.length,1);assert.equal(layers[0].type,'fill');assert.equal(layers[0].maxzoom,undefined,'Land must remain visible beyond national overview zoom');
+assert.equal(layers[0].paint['fill-opacity'],undefined,'No world-layer fade during zoom');
+assert.ok(sources.get('world-land').maxzoom<=6,'Do not index coarse land at subdivision zoom levels');
+const brightness=hex=>[1,3,5].reduce((s,i)=>s+parseInt(hex.slice(i,i+2),16),0);
+assert.ok(brightness(layers[0].paint['fill-color'])>brightness('#d7d7d3'),'Background must be lighter than clickable countries');
+const app=fs.readFileSync('dist/app.js','utf8');
+assert.ok(app.indexOf("import('./world-land.mjs')")<app.indexOf("addSource('china-context'"),'World background must sit below country fills and satellite imagery');
+const routing=app.slice(app.indexOf('function countryAt('),app.indexOf("map.on('click'",app.indexOf('function countryAt(')));
+assert.ok(!routing.includes('world-land'),'Generic world land cannot become a country-switch click target');
+console.log('All continents, unreleased country silhouettes, supported-coast exclusion, continuous land visibility, lighter gray, nonclickable background and download/indexing budgets passed.');
