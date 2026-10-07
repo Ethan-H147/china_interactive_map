@@ -19,7 +19,7 @@ export function createSouthAmerica(map,host){
  sidebar.setAttribute('aria-label','Explore South America');
  sidebar.innerHTML=`<div class="sidebar-tools">
   <label class="sr-only" for="south-search">Find a division</label><input id="south-search" type="search" placeholder="Find a division" autocomplete="off"><div id="south-results" hidden aria-live="polite"></div>
-  <div class="panel-tabs"><button id="south-tab-explore" type="button" aria-pressed="false" aria-controls="south-explore-panel">Discover</button><button id="south-tab-layers" type="button" aria-pressed="true" aria-controls="south-layers-panel">Map settings</button></div>
+  <div class="panel-tabs"><button id="south-tab-layers" type="button" aria-pressed="true" aria-controls="south-layers-panel">Map settings</button><button id="south-tab-explore" type="button" hidden aria-pressed="false" aria-controls="south-explore-panel">Discover</button></div>
   <p id="south-layer-status" role="status" class="south-layer-status" hidden></p>
  </div><div class="sidebar-scroll">
   <section id="south-explore-panel" hidden><div class="selection-top"><button class="back-button" id="south-reset"></button><div class="south-flags"><img id="south-national-flag" alt=""><a id="south-flag-source" hidden target="_blank" rel="noopener"><img id="south-province-flag" alt="" decoding="async"></a></div></div><span class="eyebrow" id="south-kind"></span><h2></h2><p class="country-local"></p><p class="preview-note"></p><div class="south-statistics-anchor"></div><section id="south-code-details" class="south-code-details" hidden></section></section>
@@ -158,6 +158,7 @@ export function createSouthAmerica(map,host){
  function syncLayers(){const entry=installed.get(active);if(entry){map.setLayoutProperty(entry.layers[0],'visibility','visible');map.setLayoutProperty(entry.layers[1],'visibility',$('outlines').checked?'visible':'none');map.setLayoutProperty(entry.layers[2],'visibility','visible');map.setFilter(entry.layers[2],['==',['get','id'],selected?.level===2?selected.parent:selected?.id||'']);}if(active==='argentina')argentina.sync();contextFilters();updateLabels();}
  function renderSelection(){
   renderProvinceFlag();
+  $('tab-explore').hidden=!selected;if(!selected)panel('layers');
   const c=countries[active],record=selected,ddd=active==='brazil'&&brazilLayer==='ddd',cep=active==='brazil'&&brazilLayer==='cep';
   sidebar.querySelector('h2').textContent=record?.en||(ddd?'DDD areas':cep?'CEP regions':c.name);
   sidebar.querySelector('.country-local').textContent=record?(record.local===record.en?'':record.local):c.local;
