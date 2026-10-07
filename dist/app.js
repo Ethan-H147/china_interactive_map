@@ -268,7 +268,7 @@ async function changeAtlas(next,animate=true,flight=false){
   await (next==='china'?loadChina():targetAtlas.warm());
   if(epoch!==countryEpoch)return false;
   // Source registration precedes worker indexing. Finish both before the first flight.
-  const pendingSources=Object.keys(map.getStyle().sources).filter(id=>!id.endsWith('-motion')&&(next==='china'?/^(provinces|prefectures|others|city-district)(-|$)/.test(id):id.startsWith(next+'-')||id.startsWith('south-'+next+'-')));
+  const pendingSources=Object.keys(map.getStyle().sources).filter(id=>!id.endsWith('-motion')&&(next==='china'?/^(provinces|prefectures|others|city-districts?)(-|$)/.test(id):id.startsWith(next+'-')||id.startsWith('south-'+next+'-')));
   if(!await waitForCountrySources(pendingSources,preparation.signal)||epoch!==countryEpoch)return false;
   await (flight&&!zoomLock?.locked&&!reducedMotion.matches?southAmerica.fly(bounds):navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:next==='china'?12:next==='korea'?9:8},animate));
   if(epoch!==countryEpoch)return false;

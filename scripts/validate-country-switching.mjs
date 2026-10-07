@@ -77,3 +77,12 @@ env.koreaAtlas={...atlas(Promise.resolve()),warm:async()=>{sources.set('korea-pr
 assert.equal(await env.changeAtlas('korea'),true);assert.equal(moved.at(-1),'korea');
 const cachedCount=moved.length;assert.equal(await env.changeAtlas('korea'),true);assert.equal(moved.length,cachedCount);
 console.log('First-visit source preparation precedes movement; stale warm-ups cancel immediately; failed sources preserve the camera; cached countries and optional previews remain fast.');
+
+// China also waits for its detailed district source, whose name is plural.
+const chinaSources=['provinces','prefectures','others','city-districts','city-district-boundaries'];
+env.loadChina=async()=>{for(const id of chinaSources)sources.set(id,false);};
+const beforeChina=moved.length,chinaSwitch=env.changeAtlas('china');await flush();
+assert.equal(moved.length,beforeChina);
+for(const id of chinaSources.filter(id=>id!=='city-districts'))sources.set(id,true);
+emit('sourcedata');await flush();assert.equal(moved.length,beforeChina,'China district indexing must finish too');
+sources.set('city-districts',true);emit('sourcedata');assert.equal(await chinaSwitch,true);assert.equal(moved.at(-1),'china');
