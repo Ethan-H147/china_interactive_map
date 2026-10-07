@@ -9,7 +9,14 @@ fs.mkdirSync(out,{recursive:true});
 const fc=features=>({type:'FeatureCollection',features});
 function bounds(coordinates){const box=[Infinity,Infinity,-Infinity,-Infinity];const walk=c=>{if(typeof c[0]==='number'){box[0]=Math.min(box[0],c[0]);box[1]=Math.min(box[1],c[1]);box[2]=Math.max(box[2],c[0]);box[3]=Math.max(box[3],c[1]);}else c.forEach(walk);};walk(coordinates);return [[box[0],box[1]],[box[2],box[3]]];}
 const area=ring=>Math.abs(ring.reduce((s,p,i)=>{const q=ring[(i+1)%ring.length];return s+p[0]*q[1]-q[0]*p[1];},0));
-async function command(input,commands){const files=await mapshaper.applyCommands('-i input.json '+commands+' -o output.json format=geojson precision=0.000001',{'input.json':JSON.stringify(input)});const result=JSON.parse(files['output.json']);return result.type==='FeatureCollection'?result:fc([result]);}
+async function command(input,commands){
+ const files=await mapshaper.applyCommands('-i input.json '+commands+' -o output.json format=geojson precision=0.000001',{'input.json':JSON.stringify(input)}),result=JSON.parse(files['output.json']);
+ if(result.type==='FeatureCollection')return result;
+ if(result.type==='Feature')return fc([result]);
+ // Attribute-free exports contain geometries directly. Wrap them in Features
+ // before reading .geometry; otherwise country silhouettes lose their shape.
+ return fc((result.type==='GeometryCollection'?result.geometries:[result]).map(geometry=>({type:'Feature',properties:{},geometry})));
+}
 const context=JSON.parse(gunzipSync(fs.readFileSync('dist/data/flight-context.bin')));
 for(const country of ['brazil','argentina']){
  const original=fs.readFileSync(root+country+'.geojson');let regions=JSON.parse(original);
@@ -41,7 +48,9 @@ for(const country of ['brazil','argentina']){
  const payload={records,regions,lines},json=JSON.stringify(payload),bytes=gzipSync(json,{level:9});
  fs.writeFileSync(out+country+'-first.bin',bytes);
  const footprint=await command(regions,'-dissolve -simplify dp interval=1500 keep-shapes');
- const existing=context.features.find(f=>f.properties.country===country);existing.geometry=footprint.features[0].geometry;
+ const coordinates=footprint.features.flatMap(f=>{const g=f.geometry;if(g?.type==='Polygon')return [g.coordinates];if(g?.type==='MultiPolygon')return g.coordinates;throw Error('Invalid country silhouette: '+country);});
+ if(!coordinates.length)throw Error('Empty country silhouette: '+country);
+ const existing=context.features.find(f=>f.properties.country===country);existing.geometry={type:'MultiPolygon',coordinates};
  const info={publisher:country==='brazil'?'Instituto Brasileiro de Geografia e Estatística (IBGE)':'Instituto Geográfico Nacional (IGN), Argentina',source:country==='brazil'?'https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/Brasil/BR_UF_2025.zip':'https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG',downloadURL:country==='argentina'?'https://ide.ign.gob.ar/geoservicios/rest/services/servicio_fondos/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&f=geojson&maxAllowableOffset=0.0005':null,downloaded:'2026-10-06',boundaryYear:country==='brazil'?2025:null,processedInputSHA256:createHash('sha256').update(original).digest('hex'),count:records.length,bytes:bytes.length,decodedBytes:Buffer.byteLength(json),processing:'Shared topology; 75 m detail simplification; rounded to 0.000001 degrees; one shared boundary mesh. IGN service query uses 0.0005 degree geometry tolerance.',coverageNote:country==='argentina'?'23 provinces and Buenos Aires autonomous city. Continental territory and nearby islands; Antarctic and disputed South Atlantic claims from the source are excluded from this view.':'26 states and the Federal District.'};
  fs.writeFileSync(out+country+'-sources.json',JSON.stringify(info,null,2)+'\n');
  console.log(country,info.count,info.bytes,info.decodedBytes);
