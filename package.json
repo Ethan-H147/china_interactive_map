@@ -9,6 +9,8 @@
   },
   "private": true,
   "scripts": {
+    "build:argentina-local": "node scripts/fetch-argentina-local.mjs && node --max-old-space-size=8000 scripts/build-argentina-local.mjs",
+    "test:argentina-local": "node --check dist/argentina-local.mjs && node scripts/validate-argentina-local.mjs && node scripts/validate-south-america-loading.mjs",
     "build:brazil-ddd": "node scripts/fetch-brazil-ddd.mjs && node --max-old-space-size=12000 scripts/build-brazil-ddd.mjs",
     "test:brazil-ddd": "node scripts/validate-brazil-ddd.mjs && node scripts/validate-south-america-loading.mjs",
     "test:south-america": "node --check dist/south-america.mjs && node --check dist/south-america-worker.mjs && node scripts/validate-south-america.mjs && node scripts/validate-south-america-loading.mjs",

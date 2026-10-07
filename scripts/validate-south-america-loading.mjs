@@ -33,8 +33,21 @@ assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));asser
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);
 country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
 assert.ok(sources.has('south-argentina-regions'));assert.ok(!sources.has('south-brazil-regions'));assert.equal(workerLoads,2);
+assert.equal(workerURLs.filter(url=>url.includes('argentina-local/')).length,0,'No departmental geometry before selecting a province');
+await atlas.portals.argentina.restore('AR-06427');
+assert.equal(atlas.portals.argentina.getSelection(),'AR-06427');assert.equal(atlas.portals.argentina.getScope(),'AR-06');assert.ok(sources.has('arg-local-AR-06-regions'));
+assert.equal(layers.get('south-argentina-borders').layout.visibility,'visible','Other provinces retain their borders in subdivision view');
+const localLoads=workerLoads;await atlas.portals.argentina.restore('AR-06455');assert.equal(workerLoads,localLoads,'Selecting another partido reuses the same provincial geometry');
+const oldSelection=atlas.portals.argentina.restore('AR-82084'),latestSelection=atlas.portals.argentina.restore('AR-02007');await Promise.all([oldSelection,latestSelection]);
+assert.equal(atlas.portals.argentina.getSelection(),'AR-02007');assert.ok(sources.has('arg-local-AR-02-regions'));assert.ok(!sources.has('arg-local-AR-82-regions'));assert.ok(!sources.has('arg-local-AR-06-regions'),'Only one province retains detailed geometry');
+atlas.portals.argentina.setMode(1);assert.ok(!sources.has('arg-local-AR-02-regions'),'Province mode releases subdivisions');
+get('mode-lock').setAttribute('aria-pressed','true');await atlas.portals.argentina.restore('AR-82084');assert.ok(!sources.has('arg-local-AR-82-regions'),'Automatic subdivision selection respects the level lock');get('mode-lock').setAttribute('aria-pressed','false');
+tilesReady=false;atlas.portals.argentina.setMode(2);
+for(let i=0;i<100&&!sources.has('arg-local-AR-82-regions');i++)await new Promise(r=>setTimeout(r,1));assert.ok(sources.has('arg-local-AR-82-regions'));
+atlas.portals.argentina.leave();await new Promise(r=>setTimeout(r,0));assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-local-')),'Leaving during staged source loading releases detail geometry');tilesReady=true;
+country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
 atlas.portals.argentina.leave();country='uruguay';await atlas.portals.uruguay.warm();await atlas.portals.uruguay.enter();
-assert.equal(workerLoads,3);assert.ok(sources.has('south-uruguay-regions'));assert.ok(!sources.has('south-argentina-regions'));assert.equal(atlas.portals.uruguay.ready,true);
+assert.equal(workerURLs.filter(url=>url.endsWith('uruguay-first.bin')).length,1);assert.ok(sources.has('south-uruguay-regions'));assert.ok(!sources.has('south-argentina-regions'));assert.equal(atlas.portals.uruguay.ready,true);
 await atlas.portals.uruguay.restore('UY-MO');assert.equal(atlas.portals.uruguay.getSelection(),'UY-MO');
 atlas.portals.uruguay.leave();assert.ok(!sources.has('south-uruguay-regions'));assert.equal(atlas.portals.uruguay.ready,false);
 country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
@@ -66,3 +79,4 @@ assert.ok(![...sources.keys()].some(id=>/^south-(brazil|argentina|uruguay)-/.tes
 assert.equal(requests.filter(url=>url==='data/flight-context.bin').length,1);
 console.log('Developer gating, zero geometry on Asian entry, per-country loading, worker cancellation and release of inactive boundaries passed.');
 console.log('DDD demand loading, readiness without flashing, failure recovery, latest layer priority, cross-state restoration and truthful pending postal mode passed.');
+console.log('Argentina deferred geometry, provincial border retention, shared-province reuse, rapid selection priority, saved-child restoration, level lock and staged source cancellation passed.');

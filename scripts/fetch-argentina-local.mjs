@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+const directory='artifacts/argentina-second/';
+await fs.mkdir(directory,{recursive:true});
+const url='https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Adepartamento&outputFormat=application%2Fjson&srsName=EPSG%3A4326';
+const response=await fetch(url,{signal:AbortSignal.timeout(180000)});
+if(!response.ok)throw Error('IGN boundary download: HTTP '+response.status);
+const bytes=Buffer.from(await response.arrayBuffer()),data=JSON.parse(bytes);
+if(data.type!=='FeatureCollection'||data.features.length<500)throw Error('Unexpected IGN department response');
+await fs.writeFile(directory+'departments.geojson',bytes);
+console.log('Downloaded',data.features.length,'official IGN department, partido and comuna polygons.');

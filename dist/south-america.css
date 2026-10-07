@@ -1,6 +1,6 @@
 :root[data-atlas=brazil]{--red:#34713e;--red-dark:#23522c;--paper:#fdfefb;--map:#eef3e9;--line:#dce5d7}
 :root:is([data-atlas=uruguay],[data-atlas=argentina]){--red:#3979a3;--red-dark:#285775;--paper:#fcfeff;--map:#edf3f7;--line:#dae5ed}
-:root:is([data-atlas=brazil],[data-atlas=uruguay],[data-atlas=argentina]) .map-mode{display:none}
+:root:is([data-atlas=brazil],[data-atlas=uruguay]) .map-mode{display:none}
 .continent-flight{position:absolute;left:16px;bottom:45px;z-index:5;display:grid;place-items:center;width:44px;height:44px;padding:0;background:transparent;color:var(--ink);border:0;border-radius:50%;box-shadow:none;cursor:pointer;opacity:.45}
 .continent-flight>span:first-child{font-size:22px;line-height:1}.continent-flight:hover,.continent-flight:focus-visible{opacity:.9;background:color-mix(in srgb,var(--paper) 65%,transparent)}.continent-flight:active{transform:none!important}.continent-flight:focus-visible{outline:2px solid var(--red);outline-offset:1px}
 .south-america-sidebar .sidebar-scroll{padding-top:28px}.south-america-sidebar h2{font:42px Georgia,serif;margin:24px 0 8px}.country-local{color:var(--red);font-size:23px}.preview-note{color:var(--muted);font-size:14px;line-height:1.6;border-block:1px solid var(--line);padding:20px 0;margin:28px 0}.south-america-countries{margin-bottom:28px}.south-america-countries button{width:100%;text-align:left}.south-america-countries [aria-current=true]{color:var(--red);font-weight:600}
@@ -16,3 +16,4 @@
 .south-code-details{font-size:14px;line-height:1.6;margin:0 0 24px;color:var(--muted)}
 .south-code-details details{margin-top:12px}.south-code-details summary{cursor:pointer;color:var(--ink)}
 .south-code-details ul{padding-left:18px;max-height:240px;overflow:auto;overscroll-behavior:contain}
+.arg-local-filter{width:100%;padding:10px;border:1px solid var(--line);border-radius:5px;background:var(--paper);font-size:14px}.arg-local-list{max-height:300px;overflow:auto;margin-top:8px;overscroll-behavior:contain}.arg-local-list .search-result{display:block;width:100%;text-align:left}.arg-local-list [aria-current=true]{color:var(--red);font-weight:600}

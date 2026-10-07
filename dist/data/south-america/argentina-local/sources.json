@@ -1,0 +1,143 @@
+{
+  "source": "Instituto Geográfico Nacional, Argentina",
+  "sourceURL": "https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG",
+  "downloadURL": "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Adepartamento&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+  "retrieved": "2026-10-07",
+  "sha256": "857b801c1e56795ba31bdcd8ab58ac98d221b3ae6c8f218b4b03a0395e9f7406",
+  "originalCount": 529,
+  "displayedCount": 527,
+  "omitted": [
+    {
+      "code": "94021",
+      "name": "Islas del Atlántico Sur"
+    },
+    {
+      "code": "94028",
+      "name": "Antártida Argentina"
+    }
+  ],
+  "generalizationMeters": 50,
+  "method": "Shared internal topology simplified to 50 m with shapes retained; clipped to the existing reconciled provincial exterior. Only one selected province is loaded. Buenos Aires City is separate from Buenos Aires Province; its subdivisions are comunas.",
+  "groups": {
+    "AR-06": {
+      "count": 135,
+      "bytes": 296961,
+      "file": "AR-06.bin"
+    },
+    "AR-02": {
+      "count": 15,
+      "bytes": 4123,
+      "file": "AR-02.bin"
+    },
+    "AR-10": {
+      "count": 16,
+      "bytes": 101767,
+      "file": "AR-10.bin"
+    },
+    "AR-22": {
+      "count": 25,
+      "bytes": 28329,
+      "file": "AR-22.bin"
+    },
+    "AR-26": {
+      "count": 15,
+      "bytes": 69042,
+      "file": "AR-26.bin"
+    },
+    "AR-14": {
+      "count": 26,
+      "bytes": 97628,
+      "file": "AR-14.bin"
+    },
+    "AR-18": {
+      "count": 25,
+      "bytes": 200247,
+      "file": "AR-18.bin"
+    },
+    "AR-30": {
+      "count": 17,
+      "bytes": 177705,
+      "file": "AR-30.bin"
+    },
+    "AR-34": {
+      "count": 9,
+      "bytes": 44299,
+      "file": "AR-34.bin"
+    },
+    "AR-38": {
+      "count": 16,
+      "bytes": 80342,
+      "file": "AR-38.bin"
+    },
+    "AR-42": {
+      "count": 22,
+      "bytes": 18881,
+      "file": "AR-42.bin"
+    },
+    "AR-46": {
+      "count": 18,
+      "bytes": 26710,
+      "file": "AR-46.bin"
+    },
+    "AR-50": {
+      "count": 18,
+      "bytes": 104711,
+      "file": "AR-50.bin"
+    },
+    "AR-54": {
+      "count": 17,
+      "bytes": 76367,
+      "file": "AR-54.bin"
+    },
+    "AR-58": {
+      "count": 16,
+      "bytes": 110985,
+      "file": "AR-58.bin"
+    },
+    "AR-62": {
+      "count": 13,
+      "bytes": 48130,
+      "file": "AR-62.bin"
+    },
+    "AR-66": {
+      "count": 23,
+      "bytes": 140695,
+      "file": "AR-66.bin"
+    },
+    "AR-70": {
+      "count": 19,
+      "bytes": 78758,
+      "file": "AR-70.bin"
+    },
+    "AR-74": {
+      "count": 9,
+      "bytes": 42549,
+      "file": "AR-74.bin"
+    },
+    "AR-78": {
+      "count": 7,
+      "bytes": 53570,
+      "file": "AR-78.bin"
+    },
+    "AR-82": {
+      "count": 19,
+      "bytes": 120642,
+      "file": "AR-82.bin"
+    },
+    "AR-86": {
+      "count": 27,
+      "bytes": 79045,
+      "file": "AR-86.bin"
+    },
+    "AR-94": {
+      "count": 3,
+      "bytes": 42748,
+      "file": "AR-94.bin"
+    },
+    "AR-90": {
+      "count": 17,
+      "bytes": 79280,
+      "file": "AR-90.bin"
+    }
+  }
+}
