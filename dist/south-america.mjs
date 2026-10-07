@@ -17,9 +17,22 @@ export function createSouthAmerica(map,host){
  const argentina=createArgentinaLocal(map,{active:()=>active==='argentina'&&window.AtlasDev.enabled,selected:()=>selected,outlines:()=>$('outlines').checked,waitForSources,changed:()=>{if(active==='argentina')syncLayers();},status:message=>{if(active==='argentina'){$('layer-status').hidden=!message;$('layer-status').textContent=message;}}});
  const sidebar=document.createElement('aside');sidebar.id='south-america-sidebar';sidebar.className='sidebar south-america-sidebar';sidebar.hidden=true;
  sidebar.setAttribute('aria-label','Explore South America');
- sidebar.innerHTML='<div class="sidebar-tools"><label class="sr-only" for="south-search">Find a division</label><input id="south-search" type="search" placeholder="Find a division" autocomplete="off"><div id="south-results" hidden aria-live="polite"></div><div id="south-map-types" class="south-map-types" role="group" aria-label="Brazil map view" hidden><button type="button" data-layer="states">States</button><button type="button" data-layer="ddd">DDD</button><button type="button" data-layer="cep">CEP</button></div><p id="south-layer-status" role="status" class="south-layer-status" hidden></p></div><div class="sidebar-scroll"><div class="selection-top"><button class="back-button" id="south-reset"></button><div class="south-flags"><img id="south-national-flag" alt=""><a id="south-flag-source" hidden target="_blank" rel="noopener"><img id="south-province-flag" alt="" decoding="async"></a></div></div><span class="eyebrow" id="south-kind"></span><h2></h2><p class="country-local"></p><p class="preview-note"></p><div class="south-statistics-anchor"></div><label class="field-label" for="south-division">Division</label><select id="south-division"></select><section class="layers"><h3>Visible layers</h3><label><span>Division outlines</span><input id="south-outlines" type="checkbox" checked></label><label><span>Region names</span><input id="south-names" type="checkbox" checked></label></section><section id="south-code-details" class="south-code-details" hidden></section><nav aria-label="South American countries" class="south-america-countries"></nav><a class="quiet-button" href="#china">Back to East Asia ↗</a></div><footer class="sidebar-footer"><a id="south-source" target="_blank" rel="noopener">Boundary source</a><span>Created by Ethan Hu</span></footer>';
+ sidebar.innerHTML='<div class="sidebar-tools"><label class="sr-only" for="south-search">Find a division</label><input id="south-search" type="search" placeholder="Find a division" autocomplete="off"><div id="south-results" hidden aria-live="polite"></div><div id="south-map-types" class="south-map-types" role="group" aria-label="Brazil map view" hidden><button type="button" data-layer="states">States</button><button type="button" data-layer="ddd">DDD</button><button type="button" data-layer="cep">CEP</button></div><p id="south-layer-status" role="status" class="south-layer-status" hidden></p></div><div class="sidebar-scroll"><div class="selection-top"><button class="back-button" id="south-reset"></button><div class="south-flags"><img id="south-national-flag" alt=""><a id="south-flag-source" hidden target="_blank" rel="noopener"><img id="south-province-flag" alt="" decoding="async"></a></div></div><span class="eyebrow" id="south-kind"></span><h2></h2><p class="country-local"></p><p class="preview-note"></p><div class="south-statistics-anchor"></div><label class="field-label" for="south-division">Division</label><select id="south-division"></select><section class="layers"><h3>Visible layers</h3><label><span>Division outlines</span><input id="south-outlines" type="checkbox" checked></label><label><span>Region names</span><input id="south-names" type="checkbox" checked></label></section><section id="south-code-details" class="south-code-details" hidden></section></div><footer class="sidebar-footer"><a id="south-source" target="_blank" rel="noopener">Boundary source</a><span>Created by Ethan Hu</span></footer>';
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
- const $=id=>sidebar.querySelector('#south-'+id),nav=sidebar.querySelector('nav');
+ const $=id=>sidebar.querySelector('#south-'+id);
+ const provinceFlagImages=new Map();let flagsWarming=null;
+ function preloadProvinceFlags(){
+  if(flagsWarming)return;
+  const queue=Object.entries(argentinaFlags).filter(([id])=>!provinceFlagImages.has(id));
+  async function next(){
+   while(active==='argentina'&&window.AtlasDev.enabled&&queue.length){
+    const [id,reference]=queue.shift(),image=new Image(),entry={image,ready:false};
+    provinceFlagImages.set(id,entry);image.decoding='async';image.fetchPriority='low';image.src=reference.file;
+    try{await image.decode();entry.ready=true;}catch{provinceFlagImages.delete(id);}
+   }
+  }
+  flagsWarming=Promise.all(Array.from({length:3},next)).finally(()=>{flagsWarming=null;});
+ }
  let provinceFlagId=null;
  function renderProvinceFlag(){
   const id=active==='argentina'?(selected?.level===2?selected.parent:selected?.id):null;
@@ -33,6 +46,7 @@ export function createSouthAmerica(map,host){
   flag.onload=()=>{if(active==='argentina'&&provinceFlagId===id)link.hidden=false;};
   flag.onerror=()=>{if(provinceFlagId===id)link.hidden=true;};
   flag.src=reference.file;
+  if(provinceFlagImages.get(id)?.ready)link.hidden=false;
  }
  const typeButtons=[];
  // Resolve only these three controls; ordinary state results keep their own index.
@@ -41,7 +55,6 @@ export function createSouthAmerica(map,host){
  function showLayerError(){$('layer-status').hidden=false;$('layer-status').textContent='Could not load this view. Choose it again to retry.';}
  function syncTypeButtons(){for(let i=0;i<typeButtons.length;i++)typeButtons[i].setAttribute('aria-pressed',String(['states','ddd','cep'][i]===brazilLayer));$('map-types').hidden=active!=='brazil';$('map-types').setAttribute('aria-busy',String(layerBusy));}
  function saveLayer(){document.dispatchEvent(new Event('change'));}
- for(const [id,c] of Object.entries(countries)){const b=document.createElement('button');b.className='search-result';b.textContent=c.name;b.onclick=()=>host.switchAtlas(id);b.dataset.country=id;nav.append(b);}
  const arrow=document.createElement('button');arrow.className='continent-flight';arrow.type='button';arrow.innerHTML='<span aria-hidden="true">↙</span>';document.getElementById('map-shell').append(arrow);
  let lastAsia='china';arrow.onclick=()=>{if(host.isBusy())return;const current=host.country();if(!countries[current]){lastAsia=current;host.switchAtlas('brazil',true,true);}else host.switchAtlas(lastAsia,true,true);};
  function syncArrow(){arrow.hidden=!window.AtlasDev.enabled;const south=!!countries[host.country()];arrow.firstElementChild.textContent=south?'↗':'↙';arrow.setAttribute('aria-label',south?'Fly to East Asia':'Fly to South America');arrow.title=arrow.getAttribute('aria-label');}
@@ -169,7 +182,7 @@ export function createSouthAmerica(map,host){
  });
  function portal(id){const c=countries[id];return{
   bounds:c.bounds,get ready(){return !!data&&(id==='brazil'&&brazilLayer==='cep'||installed.has(id));},warm:()=>warmCountry(id),
-  async enter(){active=id;selected=null;sidebar.hidden=false;sidebar.querySelector('.sidebar-scroll').scrollTop=0;const flag=$('national-flag');flag.src='vendor/flag-'+c.flag+'.svg';flag.alt='Flag of '+c.name;for(const b of nav.children)b.setAttribute('aria-current',String(b.dataset.country===id));for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=id!=='argentina';if(id==='argentina'){document.getElementById('mode-province').textContent='Provinces';document.getElementById('mode-prefecture').textContent='Subdivisions';await argentina.setMode(1);}renderControls();renderSelection();syncLayers();syncArrow();},
+  async enter(){active=id;selected=null;sidebar.hidden=false;sidebar.querySelector('.sidebar-scroll').scrollTop=0;const flag=$('national-flag');flag.src='vendor/flag-'+c.flag+'.svg';flag.alt='Flag of '+c.name;for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=id!=='argentina';if(id==='argentina'){document.getElementById('mode-province').textContent='Provinces';document.getElementById('mode-prefecture').textContent='Subdivisions';await argentina.setMode(1);}renderControls();renderSelection();syncLayers();syncArrow();if(id==='argentina')preloadProvinceFlags();},
   leave(){clearStatistics(sidebar.querySelector('.south-statistics-anchor'));layerEpoch++;layerBusy=false;if(id==='argentina')argentina.clear();active=null;selected=null;renderProvinceFlag();cancelPending();remove(id);sidebar.hidden=true;$('results').hidden=true;$('search').value='';clearLabels();contextFilters();for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=false;},
   updateLabels,pauseLabels:clearLabels,getSelection:()=>selected?.id||null,getScope:()=>id==='brazil'?brazilLayer:id==='argentina'?argentina.scope||'':'',restore:async(key,scope)=>{if(id==='brazil'){const mode=['states','ddd','cep'].includes(scope)?scope:String(key||'').startsWith('BR-DDD-')?'ddd':'states';await setBrazilLayer(mode);}await select(catalogue()?.records.find(p=>p.id===key)||(id==='argentina'?argentina.find(key):null),false);},setMode(value){if(id==='argentina'){argentina.setMode(value);syncLayers();}},home:()=>select(null),viewParent:(camera={})=>select(id==='argentina'&&selected?.level===2?catalogue().records.find(p=>p.id===selected.parent):null,true,camera),random(){const records=id==='argentina'&&argentina.visibleRecords.length?argentina.visibleRecords:catalogue()?.records||[];if(records.length)select(records[Math.floor(Math.random()*records.length)]);}
  };}

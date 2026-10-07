@@ -13,6 +13,11 @@ class Element{
 const elements=new Map();globalThis.document={createElement:()=>new Element(),querySelector:key=>get(key),getElementById:key=>get(key),dispatchEvent(){}};
 function get(key){if(!elements.has(key))elements.set(key,new Element());return elements.get(key);}
 globalThis.window={AtlasDev:{enabled:false},AtlasLabels:{render:()=>[]}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
+const flagRequests=[];let flagPending=0,maxFlagPending=0;
+globalThis.Image=class{
+ set src(value){flagRequests.push(value);flagPending++;maxFlagPending=Math.max(maxFlagPending,flagPending);}
+ decode(){return new Promise(resolve=>setTimeout(()=>{flagPending--;resolve();},1));}
+};
 const requests=[];globalThis.fetch=async url=>{requests.push(url);return new Response(fs.readFileSync('dist/'+url));};
 let workerLoads=0,terminated=0,failNextDDD=false;const workerURLs=[];
 globalThis.Worker=class{
@@ -29,6 +34,7 @@ const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;
 layers.set('world-land',{id:'world-land',layout:{visibility:'visible'}});
 let country='china';const atlas=createSouthAmerica(map,{country:()=>country,isBusy:()=>false,switchAtlas(){},fit(){}});
 assert.equal(requests.length,0);assert.equal(workerLoads,0,'Creating Asian home must not load South American geometry');
+assert.equal(flagRequests.length,0,'Asian entry does not preload Argentine flags');
 await assert.rejects(atlas.portals.brazil.warm(),/Developer mode/);assert.equal(requests.length,0);
 window.AtlasDev.enabled=true;country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
@@ -41,10 +47,18 @@ assert.equal(layers.get('world-land').filter,null,'Exiting developer mode restor
 assert.equal(layers.get('world-land').layout.visibility,'visible','Developer mode must never hide public world land');
 window.AtlasDev.enabled=true;atlas.syncDeveloper();
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);
-country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
+assert.equal(flagRequests.length,0,'Brazil does not preload Argentine flags');
+country='argentina';await atlas.portals.argentina.warm();
+assert.equal(flagRequests.length,0,'Preparing Argentina does not start flag downloads');
+await atlas.portals.argentina.enter();
+for(let i=0;i<100&&(flagRequests.length<24||flagPending);i++)await new Promise(r=>setTimeout(r,1));
+assert.equal(new Set(flagRequests).size,24,'Entering Argentina warms every province and capital flag');
+assert.equal(maxFlagPending,3,'Flag loading has bounded concurrency');
 assert.ok(sources.has('south-argentina-regions'));assert.ok(!sources.has('south-brazil-regions'));assert.equal(workerLoads,2);
 assert.equal(workerURLs.filter(url=>url.includes('argentina-local/')).length,0,'No departmental geometry before selecting a province');
 await atlas.portals.argentina.restore('AR-06427');
+const argSidebar=get('.workspace').children.find(e=>e.className==='sidebar south-america-sidebar');
+assert.equal(argSidebar.querySelector('#south-flag-source').hidden,false,'Decoded flags display without waiting for another image load event');
 assert.equal(atlas.portals.argentina.getSelection(),'AR-06427');assert.equal(atlas.portals.argentina.getScope(),'AR-06');assert.ok(sources.has('arg-local-AR-06-regions'));
 assert.equal(layers.get('south-argentina-borders').layout.visibility,'visible','Other provinces retain their borders in subdivision view');
 const localLoads=workerLoads;await atlas.portals.argentina.restore('AR-06455');assert.equal(workerLoads,localLoads,'Selecting another partido reuses the same provincial geometry');
@@ -56,6 +70,7 @@ tilesReady=false;atlas.portals.argentina.setMode(2);
 for(let i=0;i<100&&!sources.has('arg-local-AR-82-regions');i++)await new Promise(r=>setTimeout(r,1));assert.ok(sources.has('arg-local-AR-82-regions'));
 atlas.portals.argentina.leave();await new Promise(r=>setTimeout(r,0));assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-local-')),'Leaving during staged source loading releases detail geometry');tilesReady=true;
 country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
+assert.equal(flagRequests.length,24,'Revisiting Argentina reuses warmed flags');
 atlas.portals.argentina.leave();country='uruguay';await atlas.portals.uruguay.warm();await atlas.portals.uruguay.enter();
 assert.equal(workerURLs.filter(url=>url.endsWith('uruguay-first.bin')).length,1);assert.ok(sources.has('south-uruguay-regions'));assert.ok(!sources.has('south-argentina-regions'));assert.equal(atlas.portals.uruguay.ready,true);
 await atlas.portals.uruguay.restore('UY-MO');assert.equal(atlas.portals.uruguay.getSelection(),'UY-MO');
