@@ -614,7 +614,7 @@ function syncQuizStyle(){
   syncLayers();
   $('map-shell').dataset.quiz=String(quiz.active);$('quiz-map-prompt').hidden=!quiz.active||quiz.type==='name';$('name-map-prompt').hidden=!quiz.active||quiz.type!=='name';$('quiz-crosshair').hidden=true;
   $('home').textContent=quiz.active?'End quiz':'All China';
-  $('fit-map').title=quiz.active?'Fit quiz scope':'Outer zoom · view parent region';$('fit-map').setAttribute('aria-label',quiz.active?'Fit quiz scope':'Zoom out to parent region');$('fit-map-label').textContent=quiz.active?'Fit quiz':'Outer zoom';
+  $('fit-map').title=quiz.active?'Fit quiz scope':'View parent division';$('fit-map').setAttribute('aria-label',$('fit-map').title);
   map.getCanvas().setAttribute('aria-label',quiz.active?(quiz.type==='name'?'Quiz map. Type prefecture names in the answer field. Correct places turn green.':'Quiz map. Pan with arrow keys and zoom with plus or minus. Press Enter to select the area under the crosshair.'):'Map');
 }
 async function startQuiz(resume=false){
