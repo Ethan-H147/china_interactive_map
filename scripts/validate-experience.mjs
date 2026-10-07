@@ -35,4 +35,13 @@ assert.equal(await nav.navigateBounds([100,100]),true);assert.equal(await nav.na
 const manual=nav.navigateBounds([410,300],{manual:true});releasePreview();await new Promise(setImmediate);assert.equal(moves.length,movesBeforeLock+1,'Manual zoom remains available while locked');events.get('moveend')();await manual;
 zoomButton.onclick();const unlockedSelection=nav.navigateBounds([410,300]);releasePreview();await new Promise(setImmediate);assert.equal(moves.length,movesBeforeLock+2,'Unlocking restores automatic navigation');events.get('moveend')();await unlockedSelection;
 console.log('Locked selection leaves the camera unchanged, skips preview work, cancels an active flight, permits manual zoom and resumes automatic navigation on unlock.');
+const parentCalls=[];
+const parentView=vm.createContext({allReady:true,quiz:{active:false},atlasMode:'indonesia',selected:null,currentAtlas:()=>({viewParent:camera=>parentCalls.push(camera)}),reset:camera=>parentCalls.push(camera),fitQuizScope:(animate,camera)=>parentCalls.push(camera),regionByCode:new Map(),provinceLayers:new Map(),selectRegion:(region,code,fit,camera)=>parentCalls.push(camera)});
+vm.runInContext(source.slice(source.indexOf('function viewParent(){'),source.indexOf("$('zoom-in').onclick=")),parentView);
+for(const country of ['korea','mongolia','japan','philippines','indonesia','brazil','uruguay','argentina']){parentView.atlasMode=country;parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true,country+' parent button requests manual navigation');}
+parentView.atlasMode='china';parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true,'China overview button remains manual');
+parentView.selected={layer:{feature:{properties:{level:'province'}}}};parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true);
+const parentRegion={feature:{properties:{adcode:310000}}};parentView.selected={layer:{feature:{properties:{level:'district',provinceCode:310000}}}};parentView.provinceLayers.set(310000,parentRegion);parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true,'China parent selection carries manual navigation');
+parentView.quiz.active=true;parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true,'Quiz scope button is manual as well');
+console.log('The bottom parent/overview control requests explicit navigation in all nine countries and quizzes, without changing the zoom-lock setting.');
 
