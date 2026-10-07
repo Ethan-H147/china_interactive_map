@@ -1,7 +1,8 @@
 const pending=new Map();
 export function loadStatistics(key=''){
- const country=key.split(':')[0],bundle=['indonesia','philippines'].includes(country)?country:'base';
- if(!pending.has(bundle))pending.set(bundle,fetch(bundle==='base'?'data/region-statistics.json':'data/archipelago/'+bundle+'-statistics.json').then(r=>{if(!r.ok)throw Error('Statistics unavailable');return r.json();}).catch(e=>{pending.delete(bundle);throw e;}));
+ const country=key.split(':')[0],bundle=['indonesia','philippines','argentina'].includes(country)?country:'base';
+ const url=bundle==='base'?'data/region-statistics.json':bundle==='argentina'?'data/south-america/argentina-statistics.json':'data/archipelago/'+bundle+'-statistics.json';
+ if(!pending.has(bundle))pending.set(bundle,fetch(url).then(r=>{if(!r.ok)throw Error('Statistics unavailable');return r.json();}).catch(e=>{pending.delete(bundle);throw e;}));
  return pending.get(bundle);
 }
 export function formatMoney(value,currency,perCapita=false){
@@ -26,7 +27,7 @@ function prepareDetails(anchor){
  return population||anchor;
 }
 export function clearStatistics(anchor){
- if(!anchor)return;const parent=anchor.parentElement,panel=parent.querySelector(':scope > .region-statistics');
+ if(!anchor?.parentElement)return;const parent=anchor.parentElement,panel=parent.querySelector(':scope > .region-statistics');
  if(panel){panel.dataset.region='';panel.hidden=true;}
  const population=parent.querySelector(':scope > .archipelago-population');if(population)population.hidden=true;
 }
@@ -39,9 +40,9 @@ function renderPopulation(panel,record,data){
  meta.append(link(data.sources[metric.source],'Source'));panel.append(meta);
 }
 export async function renderStatistics(anchor,key,provided){
- if(!anchor)return;
+ if(!anchor?.parentElement)return;
  let population;
- if(/^(indonesia|philippines):/.test(key)){
+ if(/^(indonesia|philippines|argentina):/.test(key)){
   population=anchor.parentElement.querySelector(':scope > .archipelago-population');
   if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');anchor.after(population);}
   population.hidden=true;
@@ -59,17 +60,18 @@ export async function renderStatistics(anchor,key,provided){
   const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
   area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area,economy);
   const areaValues=element('dl',null,'statistics-values'),economyValues=element('dl',null,'statistics-values');area.append(areaValues);economy.append(economyValues);
-  for(const [field,label] of [['area','Area'],['gdp','GDP'],['gdpPerCapita','GDP per capita']]){
-   const dl=field==='area'?areaValues:economyValues,metric=record[field],dt=element('dt',field==='area'?(metric?.method==='mapped'?'Mapped area ≈':'Total area'):label),dd=element('dd');dl.append(dt,dd);
+  const metrics=[['area','Area'],['gdp','GDP'],['gdpPerCapita','GDP per capita'],...(record.realGva?[['realGva','Real gross value added'],...(!record.gdpPerCapita?[['realGvaPerCapita','Real GVA per capita']]:[])]:[])];
+  for(const [field,label] of metrics){
+   const dl=field==='area'?areaValues:economyValues,metric=record[field],perCapita=/PerCapita$/.test(field),dt=element('dt',field==='area'?(metric?.method==='mapped'?'Mapped area ≈':'Total area'):(metric?.label||label)),dd=element('dd');dl.append(dt,dd);
    if(!metric){dd.append(element('span','Not available','statistics-missing'));continue;}
-   dd.append(element('strong',field==='area'?new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(metric.value)+' km²':formatMoney(metric.value,metric.currency,field==='gdpPerCapita')));
-   if(field!=='area')dd.append(element('span',metric.usd?'≈ '+formatMoney(metric.usd,'USD',field==='gdpPerCapita'):'USD conversion unavailable','statistics-usd'));
-   const meta=element('small');meta.append(document.createTextNode(metric.period?metric.period+' · ':metric.year?metric.year+' · ':field==='area'?'Date not specified · ':''),link(data.sources[metric.source],'Source'));dd.append(meta);
+   dd.append(element('strong',field==='area'?new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(metric.value)+' km²':formatMoney(metric.value,metric.currency,perCapita)));
+   if(field!=='area')dd.append(element('span',metric.priceBasis==='constant'?'Inflation-adjusted · constant '+metric.baseYear+' ARS':metric.usd?'≈ '+formatMoney(metric.usd,'USD',perCapita):'USD conversion unavailable','statistics-usd'));
+   const meta=element('small');meta.append(document.createTextNode((metric.period||metric.year||'Date not specified')+(metric.status?' · '+metric.status:'')+(metric.method==='calculated'?' · calculated':'')+' · '),link(data.sources[metric.source],'Source'));dd.append(meta);
   }
   const notes=element('details',null,'statistics-details');notes.append(element('summary','Dates, sources & definitions'));
   if(record.note)notes.append(element('p',record.note));
-  for(const [field,label] of [['population','Population'],['area','Area'],['gdp','GDP'],['gdpPerCapita','GDP per capita']]){const m=record[field];if(!m)continue;const p=element('p',label+': ');p.append(link(data.sources[m.source]));if(m.note)p.append(document.createTextNode('. '+m.note));if(m.exchangeSource){p.append(document.createTextNode(' USD uses '+m.year+' average conversion: 1 USD = '+new Intl.NumberFormat('en-US',{maximumFractionDigits:5}).format(m.exchangeRate)+' '+m.currency+'. '),link(data.sources[m.exchangeSource],'Conversion source'));}notes.append(p);}
-  notes.append(element('p','Latest verified annual figures found in the listed sources. Years and boundary definitions may differ; GDP is nominal, not purchasing-power-adjusted. Missing figures are not zero.'));
+  for(const [field,label] of [['population','Population'],...metrics]){const m=record[field];if(!m)continue;const p=element('p',(m.label||label)+': ');p.append(link(data.sources[m.source]));if(m.note)p.append(document.createTextNode('. '+m.note));if(m.populationSource)p.append(document.createTextNode(' Population denominator: '+new Intl.NumberFormat('en-US').format(m.populationValue)+' ('+m.populationYear+'). '),link(data.sources[m.populationSource],'Population source'));if(m.exchangeSource){p.append(document.createTextNode(' USD uses '+m.year+' average conversion: 1 USD = '+new Intl.NumberFormat('en-US',{maximumFractionDigits:5}).format(m.exchangeRate)+' '+m.currency+'. '),link(data.sources[m.exchangeSource],'Conversion source'));}notes.append(p);}
+  notes.append(element('p','Latest verified annual figures found in the listed sources. Years and boundary definitions may differ. GDP is nominal; separately labeled constant-price output is inflation-adjusted and has no current USD conversion. Missing figures are not zero.'));
   notes.append(link({url:'data/statistics-methodology.html',title:'Coverage & methodology'}));panel.append(notes);
  }catch{
   if(panel.dataset.region!==key)return;

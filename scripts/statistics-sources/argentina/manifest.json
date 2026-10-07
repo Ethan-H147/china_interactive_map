@@ -1,0 +1,65 @@
+{
+  "retrieved": "2026-10-07",
+  "files": {
+    "caba.xlsx": {
+      "url": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx",
+      "bytes": 25715,
+      "sha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b"
+    },
+    "buenos-aires.csv": {
+      "url": "https://catalogo.datos.gba.gob.ar/dataset/be0b7549-98f8-4d26-95da-b9ad8951b134/resource/36e0965c-c72e-414e-acae-061d8c40d815/download/pbg-pba-base-2004-serie-2004_2024.csv",
+      "bytes": 34617,
+      "sha256": "e99a15a6f578b7ee6b30d26ffba2638f93f15575facf196aec3317e9880c3e61"
+    },
+    "jujuy.xlsx": {
+      "url": "https://dipec.jujuy.gob.ar/download/308/pbg/17810/pbg-2004-2024-actualizacion-agosto-2025-2.xlsx",
+      "bytes": 47824,
+      "sha256": "cb05bbf5ff96c4c4cb839fc0d88e25610eb98bdd835100c5f1f53fd55ea3b8f8"
+    },
+    "tucuman.xlsx": {
+      "url": "https://estadistica.tucuman.gov.ar/archivos/6PBP/1SERIE%20HISTORICA/PGBT_2024_Valores_corrientes.xlsx",
+      "bytes": 25300,
+      "sha256": "738a612e97619830cfcc8a102bc9ce4c89620ea5e0376551670edb1e512456d1"
+    },
+    "real-gva.xlsx": {
+      "url": "https://repositorio.cepal.org/server/api/core/bitstreams/539fcce5-8977-4061-a222-fbfd7358a35f/content",
+      "bytes": 458759,
+      "sha256": "3b00aca6d8d1dcb9437f76d7bab1651ba5699c3cd02b7eeffc1103f752c92af0"
+    },
+    "entre-rios.xlsx": {
+      "url": "https://www.entrerios.gov.ar/dgec/wp-content/uploads/2025/12/PBG-a-precios-corrientes-Ano-2004-2024.xlsx",
+      "bytes": 42159,
+      "sha256": "df63dcc30ad802c6165677adb648815c69337e6e519a09a600791784c86a5a1b"
+    },
+    "corrientes.xlsx": {
+      "url": "https://estadistica.corrientes.gob.ar/get_file/%28Actualizacion%29%20PBG%20Corrientes.xlsx",
+      "bytes": 439821,
+      "sha256": "b390715ddaf056993fd373bd9e38eaf69637bd5e7f4d348e63ae953978085d34"
+    },
+    "exchange-rates.json": {
+      "url": "https://api.worldbank.org/v2/country/ARG/indicator/PA.NUS.FCRF?format=json&per_page=100",
+      "bytes": 16054,
+      "sha256": "b90af3aa31742fbd6e44591ad0806b8e4c81d441d0fc76261f531feafcdc43b2"
+    },
+    "santa-fe.pdf": {
+      "url": "https://www.estadisticasantafe.gob.ar/wp-content/uploads/sites/24/2026/07/PBGSF-2025.pdf",
+      "bytes": 400366,
+      "sha256": "cb1651fd74da7c62e3ea40ed0c9c061d6567d73d1985afaaedbfbac8eedf61c2"
+    },
+    "tierra-del-fuego.pdf": {
+      "url": "https://ipiec.tierradelfuego.gob.ar/wp-content/uploads/2025/12/Presentacion-PBG-TDF-F1a.pptx-2.pdf",
+      "bytes": 1981731,
+      "sha256": "5ee5e84295d023a0c32389ad5c8954c5c0e6bacd53ff74d3648159865e901633"
+    },
+    "area.pdf": {
+      "url": "https://www.ign.gob.ar/descargas/geoespacial/Informe_supercies_de_Argentina.pdf",
+      "bytes": 11633439,
+      "sha256": "234143797f388018a54b1d4ae2307fcb8f453dea42b7b3aed8d1a3c038acd164"
+    },
+    "population.pdf": {
+      "url": "https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf",
+      "bytes": 13345682,
+      "sha256": "3ab46e35785ecb54ffd25ad5b75758ba6988ed0c349c4440c89834902959469f"
+    }
+  }
+}

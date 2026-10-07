@@ -1,0 +1,770 @@
+{
+  "retrieved": "2026-10-07",
+  "populationYear": 2026,
+  "regions": {
+    "AR-02": {
+      "name": "Buenos Aires City",
+      "population": {
+        "2022": 3121189,
+        "2023": 3107894,
+        "2024": 3093735,
+        "2025": 3079674,
+        "2026": 3065991
+      },
+      "area": 205.9,
+      "populationPages": [
+        33,
+        34
+      ],
+      "areaPage": 26,
+      "realGva": 116846200986.76288,
+      "realGvaSourceName": "Ciudad de Buenos Aires",
+      "nominal": {
+        "value": 96597590462598.36,
+        "year": 2024,
+        "basis": "basic",
+        "status": "provisional",
+        "file": "caba.xlsx"
+      }
+    },
+    "AR-06": {
+      "name": "Buenos Aires",
+      "population": {
+        "2022": 17409376,
+        "2023": 17418577,
+        "2024": 17431446,
+        "2025": 17443372,
+        "2026": 17453039
+      },
+      "area": 305907.4,
+      "populationPages": [
+        38,
+        39
+      ],
+      "areaPage": 26,
+      "realGva": 187017273815.35504,
+      "realGvaSourceName": "Buenos Aires",
+      "nominal": {
+        "value": 197133921439300.0,
+        "year": 2024,
+        "basis": "market",
+        "status": "preliminary",
+        "file": "buenos-aires.csv"
+      }
+    },
+    "AR-10": {
+      "name": "Catamarca",
+      "population": {
+        "2022": 434741,
+        "2023": 436077,
+        "2024": 437508,
+        "2025": 439024,
+        "2026": 440503
+      },
+      "area": 101486.1,
+      "populationPages": [
+        43,
+        44
+      ],
+      "areaPage": 26,
+      "realGva": 3832286397.516088,
+      "realGvaSourceName": "Catamarca"
+    },
+    "AR-14": {
+      "name": "Córdoba",
+      "population": {
+        "2022": 3923244,
+        "2023": 3934514,
+        "2024": 3946289,
+        "2025": 3957565,
+        "2026": 3968336
+      },
+      "area": 164707.8,
+      "populationPages": [
+        48,
+        49
+      ],
+      "areaPage": 26,
+      "realGva": 50276795018.40831,
+      "realGvaSourceName": "Córdoba"
+    },
+    "AR-18": {
+      "name": "Corrientes",
+      "population": {
+        "2022": 1189015,
+        "2023": 1193970,
+        "2024": 1199120,
+        "2025": 1203905,
+        "2026": 1208334
+      },
+      "area": 89123.3,
+      "populationPages": [
+        53,
+        54
+      ],
+      "areaPage": 26,
+      "realGva": 7438085809.116307,
+      "realGvaSourceName": "Corrientes",
+      "nominal": {
+        "value": 8537718383148.7295,
+        "year": 2024,
+        "basis": "basic",
+        "status": "provisional",
+        "file": "corrientes.xlsx"
+      }
+    },
+    "AR-22": {
+      "name": "Chaco",
+      "population": {
+        "2022": 1190747,
+        "2023": 1194631,
+        "2024": 1200849,
+        "2025": 1207608,
+        "2026": 1214280
+      },
+      "area": 99763.3,
+      "populationPages": [
+        58,
+        59
+      ],
+      "areaPage": 26,
+      "realGva": 8880840541.586334,
+      "realGvaSourceName": "Chaco"
+    },
+    "AR-26": {
+      "name": "Chubut",
+      "population": {
+        "2022": 597366,
+        "2023": 598946,
+        "2024": 600674,
+        "2025": 602348,
+        "2026": 603930
+      },
+      "area": 224302.3,
+      "populationPages": [
+        63,
+        64
+      ],
+      "areaPage": 26,
+      "realGva": 11000363878.768272,
+      "realGvaSourceName": "Chubut"
+    },
+    "AR-30": {
+      "name": "Entre Ríos",
+      "population": {
+        "2022": 1449787,
+        "2023": 1452721,
+        "2024": 1456015,
+        "2025": 1459182,
+        "2026": 1462153
+      },
+      "area": 78383.7,
+      "populationPages": [
+        68,
+        69
+      ],
+      "areaPage": 26,
+      "realGva": 16212166683.978495,
+      "realGvaSourceName": "Entre Ríos",
+      "nominal": {
+        "value": 11042486265807.812,
+        "year": 2024,
+        "basis": "basic",
+        "status": "provisional",
+        "file": "entre-rios.xlsx"
+      }
+    },
+    "AR-34": {
+      "name": "Formosa",
+      "population": {
+        "2022": 620502,
+        "2023": 622428,
+        "2024": 624461,
+        "2025": 626649,
+        "2026": 628876
+      },
+      "area": 75488.3,
+      "populationPages": [
+        73,
+        74
+      ],
+      "areaPage": 26,
+      "realGva": 3063543429.3604717,
+      "realGvaSourceName": "Formosa"
+    },
+    "AR-38": {
+      "name": "Jujuy",
+      "population": {
+        "2022": 795372,
+        "2023": 796866,
+        "2024": 798673,
+        "2025": 800744,
+        "2026": 802922
+      },
+      "area": 53244.2,
+      "populationPages": [
+        78,
+        79
+      ],
+      "areaPage": 26,
+      "realGva": 6073519669.3912525,
+      "realGvaSourceName": "Jujuy",
+      "nominal": {
+        "value": 5478133735240.389,
+        "year": 2024,
+        "basis": "basic",
+        "status": "provisional",
+        "file": "jujuy.xlsx"
+      }
+    },
+    "AR-42": {
+      "name": "La Pampa",
+      "population": {
+        "2022": 373976,
+        "2023": 374945,
+        "2024": 375873,
+        "2025": 376794,
+        "2026": 377663
+      },
+      "area": 143492.5,
+      "populationPages": [
+        83,
+        84
+      ],
+      "areaPage": 26,
+      "realGva": 6148657521.08598,
+      "realGvaSourceName": "La Pampa"
+    },
+    "AR-46": {
+      "name": "La Rioja",
+      "population": {
+        "2022": 398518,
+        "2023": 400097,
+        "2024": 401843,
+        "2025": 403577,
+        "2026": 405241
+      },
+      "area": 91493.7,
+      "populationPages": [
+        88,
+        89
+      ],
+      "areaPage": 26,
+      "realGva": 3218344598.8488264,
+      "realGvaSourceName": "La Rioja"
+    },
+    "AR-50": {
+      "name": "Mendoza",
+      "population": {
+        "2022": 2032783,
+        "2023": 2037228,
+        "2024": 2042241,
+        "2025": 2047181,
+        "2026": 2051912
+      },
+      "area": 149069.2,
+      "populationPages": [
+        93,
+        94
+      ],
+      "areaPage": 26,
+      "realGva": 19570143051.74524,
+      "realGvaSourceName": "Mendoza"
+    },
+    "AR-54": {
+      "name": "Misiones",
+      "population": {
+        "2022": 1313583,
+        "2023": 1322993,
+        "2024": 1333633,
+        "2025": 1344368,
+        "2026": 1355029
+      },
+      "area": 29911.4,
+      "populationPages": [
+        98,
+        99
+      ],
+      "areaPage": 26,
+      "realGva": 7511030204.994835,
+      "realGvaSourceName": "Misiones"
+    },
+    "AR-58": {
+      "name": "Neuquén",
+      "population": {
+        "2022": 689222,
+        "2023": 693935,
+        "2024": 698410,
+        "2025": 702816,
+        "2026": 707092
+      },
+      "area": 94422.0,
+      "populationPages": [
+        103,
+        104
+      ],
+      "areaPage": 26,
+      "realGva": 25661119564.164112,
+      "realGvaSourceName": "Neuquén"
+    },
+    "AR-62": {
+      "name": "Río Negro",
+      "population": {
+        "2022": 776389,
+        "2023": 780516,
+        "2024": 784591,
+        "2025": 788658,
+        "2026": 792587
+      },
+      "area": 202168.6,
+      "populationPages": [
+        108,
+        109
+      ],
+      "areaPage": 26,
+      "realGva": 8460563327.073045,
+      "realGvaSourceName": "Río Negro"
+    },
+    "AR-66": {
+      "name": "Salta",
+      "population": {
+        "2022": 1467237,
+        "2023": 1473871,
+        "2024": 1480327,
+        "2025": 1486517,
+        "2026": 1492267
+      },
+      "area": 155340.5,
+      "populationPages": [
+        113,
+        114
+      ],
+      "areaPage": 26,
+      "realGva": 11065990562.826967,
+      "realGvaSourceName": "Salta"
+    },
+    "AR-70": {
+      "name": "San Juan",
+      "population": {
+        "2022": 837233,
+        "2023": 841155,
+        "2024": 845201,
+        "2025": 849117,
+        "2026": 852747
+      },
+      "area": 88296.2,
+      "populationPages": [
+        118,
+        119
+      ],
+      "areaPage": 26,
+      "realGva": 7707687856.063136,
+      "realGvaSourceName": "San Juan"
+    },
+    "AR-74": {
+      "name": "San Luis",
+      "population": {
+        "2022": 527530,
+        "2023": 530792,
+        "2024": 533465,
+        "2025": 536173,
+        "2026": 538852
+      },
+      "area": 75347.1,
+      "populationPages": [
+        123,
+        124
+      ],
+      "areaPage": 26,
+      "realGva": 5574489043.516816,
+      "realGvaSourceName": "San Luis"
+    },
+    "AR-78": {
+      "name": "Santa Cruz",
+      "population": {
+        "2022": 334397,
+        "2023": 334541,
+        "2024": 334752,
+        "2025": 334953,
+        "2026": 335096
+      },
+      "area": 244457.5,
+      "populationPages": [
+        128,
+        129
+      ],
+      "areaPage": 26,
+      "realGva": 7963499537.961982,
+      "realGvaSourceName": "Santa Cruz"
+    },
+    "AR-82": {
+      "name": "Santa Fe",
+      "population": {
+        "2022": 3670163,
+        "2023": 3674361,
+        "2024": 3679597,
+        "2025": 3684529,
+        "2026": 3688683
+      },
+      "area": 133249.1,
+      "populationPages": [
+        133,
+        134
+      ],
+      "areaPage": 26,
+      "realGva": 48016836894.23082,
+      "realGvaSourceName": "Santa Fe",
+      "nominal": {
+        "value": 72874448689000,
+        "year": 2025,
+        "basis": "basic",
+        "status": "preliminary",
+        "file": "santa-fe.pdf",
+        "publishedPerCapita": 19870307
+      }
+    },
+    "AR-86": {
+      "name": "Santiago del Estero",
+      "population": {
+        "2022": 1045276,
+        "2023": 1049610,
+        "2024": 1053409,
+        "2025": 1056774,
+        "2026": 1059927
+      },
+      "area": 136934.3,
+      "populationPages": [
+        138,
+        139
+      ],
+      "areaPage": 26,
+      "realGva": 9312992946.306488,
+      "realGvaSourceName": "Santiago del Estero"
+    },
+    "AR-90": {
+      "name": "Tucumán",
+      "population": {
+        "2022": 1758288,
+        "2023": 1763239,
+        "2024": 1768368,
+        "2025": 1773567,
+        "2026": 1778484
+      },
+      "area": 22592.1,
+      "populationPages": [
+        143,
+        144
+      ],
+      "areaPage": 26,
+      "realGva": 11136151550.281395,
+      "realGvaSourceName": "Tucumán",
+      "nominal": {
+        "value": 12149817213003.0,
+        "year": 2024,
+        "basis": "market",
+        "status": "preliminary",
+        "file": "tucuman.xlsx"
+      }
+    },
+    "AR-94": {
+      "name": "Tierra del Fuego",
+      "population": {
+        "2022": 179645,
+        "2023": 180555,
+        "2024": 181263,
+        "2025": 182003,
+        "2026": 182744
+      },
+      "area": 20698.3,
+      "populationPages": [
+        148,
+        149
+      ],
+      "areaPage": 26,
+      "realGva": 4872032955.147113,
+      "realGvaSourceName": "Tierra del Fuego",
+      "nominal": {
+        "value": 3771963328000,
+        "year": 2024,
+        "basis": "basic",
+        "status": "preliminary",
+        "file": "tierra-del-fuego.pdf"
+      }
+    }
+  },
+  "evidence": {
+    "realGva": {
+      "file": "real-gva.xlsx",
+      "sheet": "VABpb",
+      "unit": "En millones de pesos a precios de 2004",
+      "year": "2024 (2)",
+      "notes": [
+        "No distribuido",
+        "Total",
+        null,
+        "(1) Datos provisorios.",
+        "(2) Datos preliminares."
+      ]
+    },
+    "caba.xlsx": {
+      "sheet": "PGB_C_04_09 ",
+      "headerCell": "V3",
+      "header": "2024*",
+      "valueCell": "V4",
+      "sourceValue": 96597590.46259835,
+      "unitMultiplier": 1000000.0,
+      "title": "Producto Geográfico Bruto a precios básicos (millones de pesos a precios corrientes) por categoría de la ClaNAE. Ciudad de Buenos Aires. Años 2004/2024"
+    },
+    "corrientes.xlsx": {
+      "sheet": "Cuadro 4",
+      "headerCell": "X3",
+      "header": "2024*",
+      "valueCell": "X4",
+      "sourceValue": 8537718383.148729,
+      "unitMultiplier": 1000.0,
+      "title": "Cuadro 4. Producto Bruto Geográfico (PBG) de la Provincia de Corrientes 2004-2023. Serie anual a precios corrientes, en miles de pesos. Valor Agregado Bruto."
+    },
+    "entre-rios.xlsx": {
+      "sheet": "VA C",
+      "headerCell": "X12",
+      "header": "2024 (*)",
+      "valueCell": "X13",
+      "sourceValue": 11042486265.807812,
+      "unitMultiplier": 1000.0,
+      "title": null
+    },
+    "jujuy.xlsx": {
+      "sheet": "a Precios Corrientes",
+      "headerCell": "V3",
+      "header": "2024 *",
+      "valueCell": "V5",
+      "sourceValue": 5478133735.240389,
+      "unitMultiplier": 1000.0,
+      "title": "Producto Bruto Geográfico de la Provincia de Jujuy a precios básicos, por categoría, en precios corrientes. Años 2004-2024"
+    },
+    "tucuman.xlsx": {
+      "sheet": "Hoja1",
+      "valueCell": "AN28",
+      "sourceValue": 12149817.213003,
+      "unitMultiplier": 1000000.0,
+      "title": "Producto Geográfico Bruto de Tucumán (PGBT), por sector de actividad. Valores anuales en millones de pesos a precios corrientes."
+    },
+    "buenos-aires.csv": {
+      "sourceRows": [
+        {
+          "actividad_detalle": "Productores de Bienes",
+          "actividad_sector_detalle": "Agricultura, ganadería, caza y silvicultura",
+          "actividad_sector_letra": "A",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "14361265.96",
+          "valor_precios_constantes": "20124.5725"
+        },
+        {
+          "actividad_detalle": "Productores de Bienes",
+          "actividad_sector_detalle": "Pesca y servicios conexos",
+          "actividad_sector_letra": "B",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "297212.873",
+          "valor_precios_constantes": "489.6041607"
+        },
+        {
+          "actividad_detalle": "Productores de Bienes",
+          "actividad_sector_detalle": "Explotación de minas y canteras",
+          "actividad_sector_letra": "C",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "339414.9953",
+          "valor_precios_constantes": "643.8288796"
+        },
+        {
+          "actividad_detalle": "Productores de Bienes",
+          "actividad_sector_detalle": "Industria Manufacturera",
+          "actividad_sector_letra": "D",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "37058042.61",
+          "valor_precios_constantes": "53402.9042"
+        },
+        {
+          "actividad_detalle": "Productores de Bienes",
+          "actividad_sector_detalle": "Electricidad, gas y agua",
+          "actividad_sector_letra": "E",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "4779456.6",
+          "valor_precios_constantes": "3843.00279"
+        },
+        {
+          "actividad_detalle": "Productores de Bienes",
+          "actividad_sector_detalle": "Construcción",
+          "actividad_sector_letra": "F",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "6910454.69",
+          "valor_precios_constantes": "9558.833907"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Comercio al por mayor, al por menor, reparaciones",
+          "actividad_sector_letra": "G",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "30193193.74",
+          "valor_precios_constantes": "32259.39281"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Servicios de hotelería y restaurantes",
+          "actividad_sector_letra": "H",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "3403596.865",
+          "valor_precios_constantes": "2863.897449"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Servicio de transporte, de almacenamiento y de comunicaciones",
+          "actividad_sector_letra": "I",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "11518609.15",
+          "valor_precios_constantes": "22589.38182"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Intermediación financiera y otros servicios financieros",
+          "actividad_sector_letra": "J",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "4804247.218",
+          "valor_precios_constantes": "4003.831362"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Servicios inmobiliarios, empresariales y de alquiler",
+          "actividad_sector_letra": "K",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "17876790.99",
+          "valor_precios_constantes": "27466.20499"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Administración pública, defensa y seguridad social obligatoria",
+          "actividad_sector_letra": "L",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "9119363.57",
+          "valor_precios_constantes": "8750.60814"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Enseñanza",
+          "actividad_sector_letra": "M",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "7995964.935",
+          "valor_precios_constantes": "8892.997137"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Servicios sociales y de salud",
+          "actividad_sector_letra": "N",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "8615152.365",
+          "valor_precios_constantes": "7390.649447"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Otros servicios comunitarios, sociales y personales",
+          "actividad_sector_letra": "O",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "4310568.449",
+          "valor_precios_constantes": "4396.805008"
+        },
+        {
+          "actividad_detalle": "Productores de Servicios",
+          "actividad_sector_detalle": "Servicios de los hogares privados que contratan servicio doméstico",
+          "actividad_sector_letra": "P",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "1301758.849",
+          "valor_precios_constantes": "1824.008287"
+        },
+        {
+          "actividad_detalle": "Impuestos",
+          "actividad_sector_detalle": "IVA y otros impuestos a los productos",
+          "actividad_sector_letra": "",
+          "anio": "2024 **",
+          "valor_precios_corrientes": "34248827.58",
+          "valor_precios_constantes": "45066.86151"
+        }
+      ],
+      "unitMultiplier": 1000000.0,
+      "calculation": "Sum 16 industry categories plus IVA and other product taxes; units confirmed by official dataset catalogue."
+    },
+    "santa-fe.pdf": {
+      "page": 7,
+      "sourceValue": 72874448689,
+      "unitMultiplier": 1000,
+      "excerpt": "PBG a precios básicos (1) + (2) 138.181.068.075 65.306.619.387 72.874.448.689"
+    },
+    "tierra-del-fuego.pdf": {
+      "page": 6,
+      "sourceValue": 3771963328,
+      "unitMultiplier": 1000,
+      "excerpt": "2024 fue de 3.771.963.328 miles de pesos"
+    }
+  },
+  "nationalPopulation2026": 46466688,
+  "files": {
+    "population.pdf": {
+      "url": "https://www.indec.gob.ar/ftp/cuadros/publicaciones/proyecciones_jurisdicciones_2022_2040.pdf",
+      "bytes": 13345682,
+      "sha256": "3ab46e35785ecb54ffd25ad5b75758ba6988ed0c349c4440c89834902959469f"
+    },
+    "area.pdf": {
+      "url": "https://www.ign.gob.ar/descargas/geoespacial/Informe_supercies_de_Argentina.pdf",
+      "bytes": 11633439,
+      "sha256": "234143797f388018a54b1d4ae2307fcb8f453dea42b7b3aed8d1a3c038acd164"
+    },
+    "real-gva.xlsx": {
+      "url": "https://repositorio.cepal.org/server/api/core/bitstreams/539fcce5-8977-4061-a222-fbfd7358a35f/content",
+      "bytes": 458759,
+      "sha256": "3b00aca6d8d1dcb9437f76d7bab1651ba5699c3cd02b7eeffc1103f752c92af0"
+    },
+    "caba.xlsx": {
+      "url": "https://www.estadisticaciudad.gob.ar/eyc/wp-content/uploads/2024/12/PGB_C_04_09.xlsx",
+      "bytes": 25715,
+      "sha256": "9b5ffd1db1cf84aa2cf323f1f95252f797131c963ecb103a53d10c555f2df54b"
+    },
+    "buenos-aires.csv": {
+      "url": "https://catalogo.datos.gba.gob.ar/dataset/be0b7549-98f8-4d26-95da-b9ad8951b134/resource/36e0965c-c72e-414e-acae-061d8c40d815/download/pbg-pba-base-2004-serie-2004_2024.csv",
+      "bytes": 34617,
+      "sha256": "e99a15a6f578b7ee6b30d26ffba2638f93f15575facf196aec3317e9880c3e61"
+    },
+    "corrientes.xlsx": {
+      "url": "https://estadistica.corrientes.gob.ar/get_file/%28Actualizacion%29%20PBG%20Corrientes.xlsx",
+      "bytes": 439821,
+      "sha256": "b390715ddaf056993fd373bd9e38eaf69637bd5e7f4d348e63ae953978085d34"
+    },
+    "entre-rios.xlsx": {
+      "url": "https://www.entrerios.gov.ar/dgec/wp-content/uploads/2025/12/PBG-a-precios-corrientes-Ano-2004-2024.xlsx",
+      "bytes": 42159,
+      "sha256": "df63dcc30ad802c6165677adb648815c69337e6e519a09a600791784c86a5a1b"
+    },
+    "jujuy.xlsx": {
+      "url": "https://dipec.jujuy.gob.ar/download/308/pbg/17810/pbg-2004-2024-actualizacion-agosto-2025-2.xlsx",
+      "bytes": 47824,
+      "sha256": "cb05bbf5ff96c4c4cb839fc0d88e25610eb98bdd835100c5f1f53fd55ea3b8f8"
+    },
+    "tucuman.xlsx": {
+      "url": "https://estadistica.tucuman.gov.ar/archivos/6PBP/1SERIE%20HISTORICA/PGBT_2024_Valores_corrientes.xlsx",
+      "bytes": 25300,
+      "sha256": "738a612e97619830cfcc8a102bc9ce4c89620ea5e0376551670edb1e512456d1"
+    },
+    "santa-fe.pdf": {
+      "url": "https://www.estadisticasantafe.gob.ar/wp-content/uploads/sites/24/2026/07/PBGSF-2025.pdf",
+      "bytes": 400366,
+      "sha256": "cb1651fd74da7c62e3ea40ed0c9c061d6567d73d1985afaaedbfbac8eedf61c2"
+    },
+    "tierra-del-fuego.pdf": {
+      "url": "https://ipiec.tierradelfuego.gob.ar/wp-content/uploads/2025/12/Presentacion-PBG-TDF-F1a.pptx-2.pdf",
+      "bytes": 1981731,
+      "sha256": "5ee5e84295d023a0c32389ad5c8954c5c0e6bacd53ff74d3648159865e901633"
+    },
+    "exchange-rates.json": {
+      "url": "https://api.worldbank.org/v2/country/ARG/indicator/PA.NUS.FCRF?format=json&per_page=100",
+      "bytes": 16054,
+      "sha256": "b90af3aa31742fbd6e44591ad0806b8e4c81d441d0fc76261f531feafcdc43b2"
+    }
+  }
+}

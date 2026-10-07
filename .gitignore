@@ -4,6 +4,9 @@ scripts/additional-sources/archipelago/*.geojson
 scripts/additional-sources/archipelago/*.zip
 scripts/additional-sources/archipelago/*-20m.bin
 artifacts/
+scripts/statistics-sources/argentina/*.pdf
+scripts/statistics-sources/argentina/*.html
+scripts/statistics-sources/argentina/cepal-*.json
 scripts/additional-sources/ok_geo.csv
 scripts/additional-sources/osm-search.json
 scripts/additional-sources/ok_geo.csv.7z

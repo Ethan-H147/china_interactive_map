@@ -1,2 +1,4 @@
 # Preserve downloaded flag originals and their recorded byte checksums.
 dist/vendor/japan-local/*.svg -text
+# Keep the official CSV's bytes identical to its recorded source checksum.
+scripts/statistics-sources/argentina/*.csv -text
