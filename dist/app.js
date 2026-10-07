@@ -2,6 +2,7 @@ const $=id=>document.getElementById(id);
 const english={110000:'Beijing',120000:'Tianjin',130000:'Hebei',140000:'Shanxi',150000:'Inner Mongolia',210000:'Liaoning',220000:'Jilin',230000:'Heilongjiang',310000:'Shanghai',320000:'Jiangsu',330000:'Zhejiang',340000:'Anhui',350000:'Fujian',360000:'Jiangxi',370000:'Shandong',410000:'Henan',420000:'Hubei',430000:'Hunan',440000:'Guangdong',450000:'Guangxi',460000:'Hainan',500000:'Chongqing',510000:'Sichuan',520000:'Guizhou',530000:'Yunnan',540000:'Tibet',610000:'Shaanxi',620000:'Gansu',630000:'Qinghai',640000:'Ningxia',650000:'Xinjiang',710000:'Taiwan',810000:'Hong Kong',820000:'Macao'};
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let atlasStarting=true,restoringView=false;
+let zoomLock;
 const initialCountry=window.AtlasEntry?.initial;
 const initialBackground=window.AtlasEntry?.countries[initialCountry]?.background||'#f4f0e7';
 const initialPreview=window.AtlasSouthAmerica.countries[initialCountry];
@@ -131,6 +132,7 @@ function navigationOptions(options={}){const top=options.paddingTopLeft||options
 let navigationEpoch=0,navigationCleanup,previewStart;
 function cancelNavigation(){navigationEpoch++;navigationCleanup?.(false);navigationCleanup=null;finishNavigation=null;map.stop();}
 async function navigateBounds(bounds,options={},animate=true){
+ if(zoomLock&&!zoomLock.allows({manual:options.manual,initial:atlasStarting,restoring:restoringView})){updateLabels();saveViewSoon();return true;}
  cancelNavigation();const epoch=navigationEpoch,cameraOptions=navigationOptions(options);
  if(!animate||reducedMotion.matches||atlasStarting||restoringView){await motionRenderer.end();if(options.camera)map.jumpTo(options.camera);else map.fitBounds(bounds,{...cameraOptions,duration:0});unlockCamera();return true;}
  lockCamera();
@@ -151,6 +153,7 @@ async function navigateBounds(bounds,options={},animate=true){
 }
 for(const type of ['mousedown','touchstart','wheel','keydown'])map.getCanvas().addEventListener(type,()=>{if(!cameraBusy)return;cancelNavigation();const epoch=navigationEpoch;Promise.resolve(motionRenderer.end()).then(()=>{if(epoch===navigationEpoch)unlockCamera();});},{passive:true});
 function fitHome(animate=false){return navigateBounds(homeBounds,{paddingTopLeft:[28,65],paddingBottomRight:[55,65]},animate);}
+zoomLock=window.AtlasZoomLock.createZoomLock($('zoom-lock'),{onLock(){cancelNavigation();const epoch=navigationEpoch;Promise.resolve(motionRenderer.end()).then(()=>{if(epoch===navigationEpoch)unlockCamera();});}});
 fitHome();
 
 function showPanel(panel){if(quiz.active&&panel!=='quiz')return;for(const name of ['explore','layers','quiz']){$(name+'-panel').hidden=name!==panel;$('tab-'+name).setAttribute('aria-pressed',String(name===panel));}}
@@ -248,7 +251,7 @@ async function changeAtlas(next,animate=true,flight=false){
   for(const [country,id,color] of [['china','china-context','#e9dfc9'],['korea','korea-portal-fill','#e7edf5'],['mongolia','mongolia-portal-fill','#d9e7ee'],['japan','japan-portal-fill','#fffdfd'],['philippines','philippines-portal-fill','#e7edf6'],['indonesia','indonesia-portal-fill','#fff5f3']])if(map.getLayer(id))map.setPaintProperty(id,'fill-color',country===next?color:'#d7d7d3');
   const bounds=targetAtlas?.bounds||(next==='china'?homeBounds:next==='korea'?[[124,33],[131.9,43.1]]:next==='japan'?[[122.8,24],[146.2,45.7]]:[[87.7,41.5],[120,52.2]]);
   southAmerica?.syncArrow();
-  const movement=flight&&!reducedMotion.matches?southAmerica.fly(bounds):navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:next==='china'?12:next==='korea'?9:8},animate);
+  const movement=flight&&!zoomLock?.locked&&!reducedMotion.matches?southAmerica.fly(bounds):navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:next==='china'?12:next==='korea'?9:8},animate);
   await Promise.all([movement,next==='china'?loadChina():targetAtlas.warm()]);
   if(epoch!==countryEpoch)return false;
   await motionRenderer.end();if(epoch!==countryEpoch)return false;
@@ -545,7 +548,7 @@ function zoomBy(amount){
  if(!allReady||countrySwitching)return;
  const zoom=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+amount));
  if(zoom===map.getZoom())return;
- return navigateBounds(homeBounds,{camera:{center:map.getCenter(),zoom},padding:[0,0]});
+ return navigateBounds(homeBounds,{camera:{center:map.getCenter(),zoom},padding:[0,0],manual:true});
 }
 function viewParent(){
   if(!allReady)return;

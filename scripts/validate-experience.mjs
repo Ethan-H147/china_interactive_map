@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {validate,hashFor,fromHash,read,write} from '../dist/view-state.mjs';
 import {labelLines,placeLabels} from '../dist/labels.mjs';
+import {createZoomLock} from '../dist/zoom-lock.mjs';
 const view={v:1,country:'korea',center:[129.1,35.2],zoom:9.5,selection:'KR-26',scope:'KR',mode:2,locked:true,language:'local',layers:{'k-label-layer':true,'satellite-opacity':'65','evil':true}};
 for(const country of ['brazil','uruguay','argentina']){
  const preview={...view,country,center:[-57,-33],selection:null};
@@ -21,10 +22,17 @@ console.log('View links, bounded state, country isolation, blocked storage, labe
 import vm from 'node:vm';
 let releasePreview,beginCalls=0,unlocks=0;const moves=[],events=new Map();
 const fakeMap={stop(){events.get('moveend')?.();},getCanvas:()=>({addEventListener(){}}),cameraForBounds:b=>({center:b,zoom:6}),project:c=>({x:c[0],y:c[1]}),getContainer:()=>({clientWidth:800,clientHeight:600}),getZoom:()=>6,once:(name,fn)=>events.set(name,fn),off:(name,fn)=>{if(events.get(name)===fn)events.delete(name);},flyTo:options=>moves.push({kind:'fly',...options}),easeTo:options=>moves.push({kind:'ease',...options})};
-const nav=vm.createContext({map:fakeMap,motionRenderer:{begin(){beginCalls++;return new Promise(resolve=>releasePreview=resolve);},end:async()=>{}},navigationOptions:()=>({}),reducedMotion:{matches:false},atlasStarting:false,restoringView:false,lockCamera(){},unlockCamera(){unlocks++;},saveViewSoon(){},setTimeout:()=>1,clearTimeout(){},console});
+const nav=vm.createContext({map:fakeMap,zoomLock:null,updateLabels(){},motionRenderer:{begin(){beginCalls++;return new Promise(resolve=>releasePreview=resolve);},end:async()=>{}},navigationOptions:()=>({}),reducedMotion:{matches:false},atlasStarting:false,restoringView:false,lockCamera(){},unlockCamera(){unlocks++;},saveViewSoon(){},setTimeout:()=>1,clearTimeout(){},console});
 vm.runInContext('let finishNavigation;'+source.slice(source.indexOf('let navigationEpoch='),source.indexOf('function fitHome(')),nav);
 const first=nav.navigateBounds([410,310]);const second=nav.navigateBounds([1600,300]);releasePreview();
 assert.equal(await first,false,'A superseded selection is cancelled');await Promise.resolve();await Promise.resolve();assert.equal(beginCalls,1,'Rapid selections share preview preparation');assert.equal(moves.length,1);assert.equal(moves[0].kind,'fly');events.get('moveend')();assert.equal(await second,true);await Promise.resolve();
 const third=nav.navigateBounds([420,300]);releasePreview();await new Promise(setImmediate);assert.equal(moves.at(-1).kind,'ease');assert(moves.at(-1).duration<460);events.get('moveend')();await third;assert(unlocks>=1);
 console.log('Camera cancellation, shared preparation, latest-selection priority, nearby easing and distant flights passed.');
+const zoomButton={setAttribute(){}};nav.zoomLock=createZoomLock(zoomButton,{getStorage:()=>null,onLock:()=>nav.cancelNavigation()});
+const movingSelection=nav.navigateBounds([1500,300]);releasePreview();await new Promise(setImmediate);const movesBeforeLock=moves.length,previewsBeforeLock=beginCalls;
+zoomButton.onclick();assert.equal(await movingSelection,false,'Locking interrupts an in-progress automatic flight');
+assert.equal(await nav.navigateBounds([100,100]),true);assert.equal(await nav.navigateBounds([1800,100]),true);assert.equal(moves.length,movesBeforeLock,'Selection cannot pan or zoom when locked');assert.equal(beginCalls,previewsBeforeLock,'Locked clicks do not spend time preparing motion previews');
+const manual=nav.navigateBounds([410,300],{manual:true});releasePreview();await new Promise(setImmediate);assert.equal(moves.length,movesBeforeLock+1,'Manual zoom remains available while locked');events.get('moveend')();await manual;
+zoomButton.onclick();const unlockedSelection=nav.navigateBounds([410,300]);releasePreview();await new Promise(setImmediate);assert.equal(moves.length,movesBeforeLock+2,'Unlocking restores automatic navigation');events.get('moveend')();await unlockedSelection;
+console.log('Locked selection leaves the camera unchanged, skips preview work, cancels an active flight, permits manual zoom and resumes automatic navigation on unlock.');
 

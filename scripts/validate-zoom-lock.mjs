@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createZoomLock} from '../dist/zoom-lock.mjs';
+const memory=new Map(),storage={getItem:key=>memory.get(key),setItem:(key,value)=>memory.set(key,value)};
+const button=()=>({attributes:{},setAttribute(key,value){this.attributes[key]=value;}});
+const firstButton=button();let stopped=0;
+const lock=createZoomLock(firstButton,{getStorage:()=>storage,onLock:()=>stopped++});
+assert.equal(lock.locked,false);assert.equal(lock.allows(),true);
+firstButton.onclick();assert.equal(lock.locked,true);assert.equal(lock.allows(),false);assert.equal(stopped,1);
+assert.equal(firstButton.attributes['aria-pressed'],'true');assert.match(firstButton.title,/selections keep/);
+assert.equal(lock.allows({manual:true}),true,'Explicit zoom buttons remain usable');assert.equal(lock.allows({initial:true}),true);assert.equal(lock.allows({restoring:true}),true,'Saved views can still restore at startup');
+const reopened=createZoomLock(button(),{getStorage:()=>storage});assert.equal(reopened.locked,true,'Lock persists independently of country');
+reopened.set(false);assert.equal(reopened.allows(),true);assert.equal(createZoomLock(button(),{getStorage:()=>storage}).locked,false);
+const blockedButton=button(),blocked=createZoomLock(blockedButton,{getStorage(){throw Error('Storage unavailable');}});assert.doesNotThrow(()=>blockedButton.onclick());assert.equal(blocked.locked,true);
+const html=fs.readFileSync('dist/index.html','utf8');assert.equal((html.match(/id="zoom-lock"/g)||[]).length,1);assert.ok(html.indexOf('id="zoom-lock"')>html.indexOf('<div class="map-actions">'),'Universal control lives outside country-specific panels');
+console.log('Zoom lock toggle, accessible state, global persistence, manual zoom exceptions, saved view restoration and unavailable storage passed.');

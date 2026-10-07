@@ -29,7 +29,7 @@ const phRequest=env.changeAtlas('philippines'),idRequest=env.changeAtlas('indone
 for(const country of ['brazil','uruguay','argentina'])env.window.AtlasEntry.countries[country]={en:country};
 env.makePreviews=()=>Object.fromEntries(['brazil','uruguay','argentina'].map(country=>[country,{...atlas(Promise.resolve()),bounds:[[-74,-56],[-34,6]]}]));
 vm.runInContext('southAmerica={portals:makePreviews(),syncArrow(){},fly:async()=>true};',env);
-env.reducedMotion={matches:false};
+env.reducedMotion={matches:false};env.zoomLock={locked:false};
 env.window.AtlasDev={allows:country=>!['brazil','uruguay','argentina'].includes(country)};
 assert.equal(await env.changeAtlas('brazil',true,true),false,'Preview switching is blocked without developer mode');
 assert.equal(remembered.at(-1),'indonesia');

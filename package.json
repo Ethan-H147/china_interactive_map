@@ -9,6 +9,7 @@
   },
   "private": true,
   "scripts": {
+    "test:zoom-lock": "node --check dist/zoom-lock.mjs && node scripts/validate-zoom-lock.mjs && npm run test:experience && npm run test:countries",
     "build:argentina-local": "node scripts/fetch-argentina-local.mjs && node --max-old-space-size=8000 scripts/build-argentina-local.mjs",
     "test:argentina-local": "node --check dist/argentina-local.mjs && node scripts/validate-argentina-local.mjs && node scripts/validate-south-america-loading.mjs",
     "build:brazil-ddd": "node scripts/fetch-brazil-ddd.mjs && node --max-old-space-size=12000 scripts/build-brazil-ddd.mjs",
