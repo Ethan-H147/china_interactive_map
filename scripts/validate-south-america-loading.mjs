@@ -5,6 +5,7 @@ import {createSouthAmerica} from '../dist/south-america.mjs';
 class Element{
  constructor(){this.children=[];this.dataset={};this.checked=true;this.hidden=false;this.nodes=new Map();}
  setAttribute(key,value){this[key]=value;}getAttribute(key){return this[key];}
+ removeAttribute(key){delete this[key];}
  append(...items){this.children.push(...items);}insertBefore(item){this.append(item);}
  replaceChildren(...items){this.children=items;}querySelector(key){if(!this.nodes.has(key)){const el=new Element();el.previousElementSibling=new Element();this.nodes.set(key,el);}return this.nodes.get(key);}
  set innerHTML(value){this.html=value;this.firstElementChild=new Element();}
