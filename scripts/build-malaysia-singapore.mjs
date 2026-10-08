@@ -37,7 +37,7 @@ const singapore=await read('singapore.geojson');
 const coast=fc(singapore.features.filter(f=>f.properties.FOLDERPATH==='Layers/Coastal_Outlines'&&!/JOHOR|MALAYSIA/.test(f.properties.NAME||'')).map(f=>({...f,properties:{id:'SG'}})));
 const sg=await process(coast,'-clean -dissolve -simplify dp interval=2 keep-shapes');
 sg.features[0].properties={id:'SG'};
-const sgRecord=await record(sg.features[0],{id:'SG',en:'Singapore',local:'新加坡',level:1,kind:'City-state'});
+const sgRecord=await record(sg.features[0],{id:'SG',en:'Singapore',local:'新加坡',aliases:['Singapura','சிங்கப்பூர்'],level:1,kind:'City-state'});
 await write('singapore-first.bin',sg);await write('singapore-context.bin',await process(sg,'-simplify dp interval=25 keep-shapes'));
 await write('singapore-catalogue.bin',{records:[sgRecord],chunks:{}});
 const provenance=await read('sources.json');

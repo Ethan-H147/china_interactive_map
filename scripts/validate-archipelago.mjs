@@ -10,7 +10,8 @@ for(const [country,firstCount,secondCount] of [['philippines',18,82],['indonesia
  assert.equal(data.records.filter(p=>p.level===1).length,firstCount);assert.equal(data.records.filter(p=>p.level===2&&!p.special).length,secondCount);
  assert(data.records.filter(p=>p.level===0).length>2500);assert.equal(new Set(data.records.map(p=>p.id)).size,data.records.length);
  assert.equal(overview.first.features.length,firstCount);assert.equal(overview.second.features.length,secondCount+(country==='philippines'?1:0));
- assert(fs.statSync('dist/data/archipelago/'+country+'-context.bin').size<250000);
+ // Indonesia retains the shared Borneo border at detail precision in its context.
+ assert(fs.statSync('dist/data/archipelago/'+country+'-context.bin').size<(country==='indonesia'?320000:250000));
  const first=new Set(data.records.filter(p=>p.level===1).map(p=>p.id));
  for(const p of data.records.filter(p=>p.level===2))assert(first.has(p.parent));
  let vertices=0;function walk(c){if(typeof c[0]==='number'){assert(c.every(Number.isFinite));vertices++;}else c.forEach(walk);}

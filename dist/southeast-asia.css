@@ -10,3 +10,9 @@ body[data-atlas=singapore]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--head
 #my-subdivisions{border-block:1px solid var(--line);padding:14px 0;margin:20px 0}#my-subdivisions summary{cursor:pointer;font-size:14px;color:var(--muted)}.southeast-sidebar [id$=detail-status]{font-size:14px;color:var(--muted)}
 body:is([data-atlas=malaysia],[data-atlas=singapore]) .map-mode{background:var(--paper);border-color:var(--line)}
 @media(max-width:760px){.southeast-sidebar h2{font-size:32px}}
+body[data-atlas=singapore] .site-header h1{display:grid;grid-template-columns:max-content max-content;gap:3px 16px;align-items:center}
+body[data-atlas=singapore] .site-header #atlas-title-english{font-size:30px;grid-column:1;grid-row:1}
+body[data-atlas=singapore] .site-header #atlas-title-local{display:block;font:19px 'Segoe UI','Microsoft YaHei',sans-serif;letter-spacing:1px;color:var(--red);grid-column:2;grid-row:1}
+body[data-atlas=singapore] .site-header #atlas-title-malay{font-size:15px;color:var(--muted);grid-column:1;grid-row:2}
+body[data-atlas=singapore] .site-header #atlas-title-tamil{font-size:15px;color:var(--muted);grid-column:2;grid-row:2}
+@media(max-width:760px){body[data-atlas=singapore] .site-header h1{gap:3px 9px}body[data-atlas=singapore] .site-header #atlas-title-english{font-size:23px}body[data-atlas=singapore] .site-header #atlas-title-local{font-size:16px}body[data-atlas=singapore] .site-header #atlas-title-malay,body[data-atlas=singapore] .site-header #atlas-title-tamil{font-size:13px}body[data-atlas=singapore] .site-header{gap:8px}}

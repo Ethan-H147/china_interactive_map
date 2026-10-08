@@ -20,12 +20,13 @@ export function setLanguage(value){language=['en','local','both'].includes(value
 export function render(map,candidates,className){
  measure??=document.createElement('canvas').getContext('2d');
  const items=candidates.map(item=>{
-  const lines=labelLines(item.en,item.local,language,item.district),point=map.project(item.center);
+  const lines=item.lines||labelLines(item.en,item.local,language,item.district),point=map.project(item.center);
   const widths=lines.map((line,i)=>{measure.font=(item.selected?'600 ':'')+(i?'14px Arial':'16px Arial');return measure.measureText(line).width;});
   return {...item,lines,x:point.x,y:point.y,w:Math.max(...widths)+4,h:lines.length*21};
  });
  return placeLabels(items,map.getContainer().clientWidth,map.getContainer().clientHeight).map(item=>{
   const el=document.createElement('div');el.className=className;el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
+  if(item.lang)el.lang=item.lang;
   for(const line of item.lines.slice(1)){const small=document.createElement('small');small.textContent=line;el.append(small);}
   return new window.maplibregl.Marker({element:el,anchor:'center'}).setLngLat(item.center).addTo(map);
  });

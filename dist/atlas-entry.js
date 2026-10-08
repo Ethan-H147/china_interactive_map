@@ -22,6 +22,7 @@
   const $=id=>document.getElementById(id);
   if($('atlas-title-english')){$('atlas-title-english').textContent=info?.en||'Atlas';$('atlas-title-english').className=current==='china'?'china-english':'korea-english';}
   if($('atlas-title-local')){$('atlas-title-local').textContent=info?.local||'';$('atlas-title-local').className=current==='china'?'china-chinese':current==='korea'?'korean-title':current==='japan'?'japanese-title':'mongolia-title';$('atlas-title-local').lang=info?.lang||'en';}
+  for(const id of ['atlas-title-malay','atlas-title-tamil'])if($(id))$(id).hidden=current!=='singapore';
   document.title=info.en+(info.local?' · '+info.local:'');
   document.querySelectorAll('[data-country-symbol]').forEach(el=>{el.innerHTML=info?AtlasSymbols.markup(current):'';});
   if($('loading-label'))$('loading-label').textContent=info?'Loading '+info.en+' map…':'Loading atlas…';

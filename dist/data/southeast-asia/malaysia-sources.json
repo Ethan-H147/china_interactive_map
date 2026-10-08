@@ -12,5 +12,10 @@
     }
   },
   "coverage": "13 states, 3 federal territories and 156 district jurisdictions from DOSM’s published geometry. Perlis and the three federal territories have no separate district layer. These are the source’s statistical boundaries; subsequent administrative changes may not be included.",
-  "processing": "Shared topology; state silhouettes dissolved from the same district geometry. Detail loaded only for the selected state."
+  "processing": "Shared topology; state silhouettes dissolved from the same district geometry. Detail loaded only for the selected state.",
+  "borderReconciliation": {
+    "report": "../southeast-asia/borneo-border-report.json",
+    "method": "For display consistency, DOSM exterior district edges within 20 km of the mainland land-border corridor inherit BPS’s 20 m path. Sebatik is aligned separately within 2.5 km. Both sides are noded together, then states, contexts and overview layers inherit the same border. Other coastlines and interior district boundaries retain their source geometry. This reconciles published datasets; it is not a surveyed boundary determination.",
+    "canonicalSource": "https://data.humdata.org/dataset/cod-ab-idn"
+  }
 }

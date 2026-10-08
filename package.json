@@ -21,7 +21,7 @@
     "test:south-america": "node --check dist/south-america.mjs && node --check dist/south-america-worker.mjs && node scripts/validate-south-america.mjs && node scripts/validate-south-america-loading.mjs",
     "build:south-america": "node scripts/fetch-south-america.mjs && node scripts/build-south-america.mjs",
     "test:archipelago": "node --check dist/archipelago.mjs && node --check dist/archipelago-worker.mjs && node --check dist/coastal-detail.mjs && node scripts/validate-coastal-detail.mjs && node scripts/validate-archipelago.mjs",
-    "build:archipelago": "node --max-old-space-size=12000 scripts/fetch-archipelago.mjs && node --max-old-space-size=12000 scripts/build-archipelago.mjs",
+    "build:archipelago": "node --max-old-space-size=12000 scripts/fetch-archipelago.mjs && node --max-old-space-size=12000 scripts/build-archipelago.mjs && node scripts/reconcile-borneo.mjs",
     "test:entry": "node --check dist/atlas-entry.js && node --check dist/country-symbols.js && node --check dist/developer-mode.js && node scripts/validate-entry.mjs && node scripts/validate-developer-mode.mjs",
     "posttest": "npm run test:entry && npm run test:experience && npm run test:countries && npm run test:statistics && npm run test:japan && npm run test:zhuhai-macau && npm run test:archipelago && npm run test:archipelago-statistics && npm run test:argentina-statistics",
     "test:statistics": "node --check dist/statistics.mjs && node scripts/validate-region-statistics.mjs",
@@ -62,7 +62,9 @@
     "test:archipelago-statistics": "node scripts/validate-archipelago-statistics.mjs",
     "build:argentina-statistics": "node scripts/prepare-argentina-statistics.mjs",
     "test:argentina-statistics": "node scripts/validate-argentina-statistics.mjs",
-    "build:southeast-asia": "node scripts/fetch-malaysia-singapore.mjs && node scripts/build-malaysia-singapore.mjs",
-    "test:southeast-asia": "node --check dist/southeast-asia.mjs && node --check dist/southeast-asia-worker.mjs && node scripts/validate-southeast-asia.mjs"
+    "build:southeast-asia": "node scripts/fetch-malaysia-singapore.mjs && node scripts/build-malaysia-singapore.mjs && node scripts/reconcile-borneo.mjs",
+    "test:southeast-asia": "node --check dist/southeast-asia.mjs && node --check dist/southeast-asia-worker.mjs && node scripts/validate-southeast-asia.mjs",
+    "test:borneo": "node scripts/validate-borneo.mjs",
+    "test:singapore-languages": "node scripts/validate-singapore-languages.mjs"
   }
 }

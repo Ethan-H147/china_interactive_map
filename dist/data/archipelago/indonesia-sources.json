@@ -47,8 +47,8 @@
     },
     "ID63": {
       "file": "indonesia-ID63.bin",
-      "bytes": 193577,
-      "decodedBytes": 619507
+      "bytes": 193581,
+      "decodedBytes": 619491
     },
     "ID32": {
       "file": "indonesia-ID32.bin",
@@ -92,8 +92,8 @@
     },
     "ID62": {
       "file": "indonesia-ID62.bin",
-      "bytes": 100944,
-      "decodedBytes": 303996
+      "bytes": 100904,
+      "decodedBytes": 303937
     },
     "ID15": {
       "file": "indonesia-ID15.bin",
@@ -107,8 +107,8 @@
     },
     "ID61": {
       "file": "indonesia-ID61.bin",
-      "bytes": 301268,
-      "decodedBytes": 913703
+      "bytes": 306723,
+      "decodedBytes": 939250
     },
     "ID17": {
       "file": "indonesia-ID17.bin",
@@ -117,8 +117,8 @@
     },
     "ID64": {
       "file": "indonesia-ID64.bin",
-      "bytes": 378291,
-      "decodedBytes": 1189987
+      "bytes": 378959,
+      "decodedBytes": 1192316
     },
     "ID94": {
       "file": "indonesia-ID94.bin",
@@ -152,8 +152,8 @@
     },
     "ID65": {
       "file": "indonesia-ID65.bin",
-      "bytes": 230795,
-      "decodedBytes": 694192
+      "bytes": 235691,
+      "decodedBytes": 710360
     },
     "ID81": {
       "file": "indonesia-ID81.bin",
@@ -219,5 +219,10 @@
     "https://peraturan.bpk.go.id/Details/217799/uu-no-16-",
     "https://nabirekab.go.id/harapan-dan-tantangan-pembangunan-provinsi-papua-tengah/",
     "https://papua.go.id/infografis"
-  ]
+  ],
+  "borderReconciliation": {
+    "report": "../southeast-asia/borneo-border-report.json",
+    "method": "For display consistency, DOSM exterior district edges within 20 km of the mainland land-border corridor inherit BPS’s 20 m path. Sebatik is aligned separately within 2.5 km. Both sides are noded together, then states, contexts and overview layers inherit the same border. Other coastlines and interior district boundaries retain their source geometry. This reconciles published datasets; it is not a surveyed boundary determination.",
+    "canonicalSource": "https://data.humdata.org/dataset/cod-ab-idn"
+  }
 }

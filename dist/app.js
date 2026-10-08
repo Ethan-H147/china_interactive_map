@@ -499,7 +499,7 @@ async function init(){try{
 
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 let viewSaveTimer,viewControlsReady=false;
-function captureView(){const center=map.getCenter();return {v:1,country:atlasMode,center:[+center.lng.toFixed(6),+center.lat.toFixed(6)],zoom:+map.getZoom().toFixed(4),selection:atlasMode==='china'?selected?.layer.feature.properties.adcode:currentAtlas()?.getSelection(),scope:currentAtlas()?.getScope?.(),mode:$('mode-province').getAttribute('aria-pressed')==='true'?1:2,locked:$('mode-lock').getAttribute('aria-pressed')==='true',language:window.AtlasLabels.getLanguage(),layers:Object.fromEntries(window.AtlasView.controls.filter(id=>$(id)).map(id=>[id,id==='satellite-opacity'?$(id).value:$(id).checked]))};}
+function captureView(){const center=map.getCenter();return {v:1,country:atlasMode,center:[+center.lng.toFixed(6),+center.lat.toFixed(6)],zoom:+map.getZoom().toFixed(4),selection:atlasMode==='china'?selected?.layer.feature.properties.adcode:currentAtlas()?.getSelection(),scope:currentAtlas()?.getScope?.(),mode:$('mode-province').getAttribute('aria-pressed')==='true'?1:2,locked:$('mode-lock').getAttribute('aria-pressed')==='true',language:atlasMode==='singapore'?singaporeAtlas.getLanguage():window.AtlasLabels.getLanguage(),layers:Object.fromEntries(window.AtlasView.controls.filter(id=>$(id)).map(id=>[id,id==='satellite-opacity'?$(id).value:$(id).checked]))};}
 function saveView(force=false){if(!viewControlsReady||atlasStarting||restoringView||quiz.active||(!force&&cameraBusy)||countrySwitching)return;const view=captureView();try{window.AtlasView.write(view,localStorage);}catch{}if(location.hash.includes('/view='))history.replaceState(null,'',location.pathname+location.search+window.AtlasView.hashFor(view));}
 function saveViewSoon(){clearTimeout(viewSaveTimer);viewSaveTimer=setTimeout(saveView,180);}
 function readSavedView(){try{return window.AtlasView.read(atlasMode,localStorage);}catch{return null;}}
@@ -509,7 +509,7 @@ async function restoreView(){
  if(!saved||saved.country!==atlasMode)return;
  restoringView=true;
  try{
-  window.AtlasLabels.setLanguage(saved.language);
+  if(atlasMode==='singapore')singaporeAtlas.setLanguage(saved.language);else window.AtlasLabels.setLanguage(saved.language);
   if(atlasMode==='china'){const layer=regionByCode.get(Number(saved.selection))||regionByCode.get(saved.selection);if(layer)await selectRegion(layer,layer.feature.properties.provinceCode||layer.feature.properties.adcode,false);}
   else await currentAtlas().restore(saved.selection,saved.scope);
   for(const [id,value] of Object.entries(saved.layers)){const el=$(id);if(!el)continue;if(id==='satellite-opacity'){el.value=value;el.dispatchEvent(new Event('input'));}else{el.checked=value;el.dispatchEvent(new Event('change'));}}
@@ -523,9 +523,10 @@ function setupViewControls(){
   const target=sidebar.querySelector('[id$="layers-panel"]');if(!target)continue;
   const section=document.createElement('section');section.className='view-preferences';
   const label=document.createElement('label');label.textContent='Map label language';
-  const select=document.createElement('select');select.dataset.labelLanguage='';select.setAttribute('aria-label','Map label language');
-  for(const [value,text] of [['both','Bilingual'],['en','English'],['local','Local language']])select.append(new Option(text,value));
-  select.onchange=()=>{window.AtlasLabels.setLanguage(select.value);updateLabels();saveViewSoon();};label.append(select);
+  const singapore=sidebar.id==='singapore-sidebar',select=document.createElement('select');if(singapore)select.dataset.singaporeLanguage='';else select.dataset.labelLanguage='';select.setAttribute('aria-label','Map label language');
+  for(const [value,text] of singapore?[['zh','Chinese'],['ms','Malay'],['en','English'],['ta','Tamil']]:[['both','Bilingual'],['en','English'],['local','Local language']])select.append(new Option(text,value));
+  if(singapore)select.value=singaporeAtlas.getLanguage();
+  select.onchange=()=>{if(singapore)singaporeAtlas.setLanguage(select.value);else window.AtlasLabels.setLanguage(select.value);updateLabels();saveViewSoon();};label.append(select);
   const share=document.createElement('button');share.className='quiet-button';share.textContent='Copy map view link';
   const status=document.createElement('p');status.setAttribute('role','status');status.className='quiz-note';
   const sharedLink=document.createElement('a');sharedLink.textContent='Open shared view';sharedLink.hidden=true;
