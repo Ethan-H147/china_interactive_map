@@ -31,15 +31,18 @@ export function clearStatistics(anchor){
  if(panel){panel.dataset.region='';panel.hidden=true;}
  const population=parent.querySelector(':scope > .archipelago-population');if(population)population.hidden=true;
 }
-function renderPopulation(panel,record,data){
+function renderPopulation(panel,record,data,onRelatedPlace){
  const metric=record.population;panel.replaceChildren();panel.hidden=!metric;if(!metric)return;
  panel.append(element('h3',metric.label||'Population'),element('p',metric.displayValue||new Intl.NumberFormat('en-US').format(metric.value),'population-total'));
  panel.append(element('p',metric.year+(metric.method==='projection'?' midyear projection':metric.method==='estimate'?' midyear estimate':' census'),'population-scope'));
+ if(metric.scopeNote)panel.append(element('p',metric.scopeNote,'population-note'));
+ if(metric.relatedPlace&&onRelatedPlace){const button=element('button',metric.relatedPlace.label,'quiet-button');button.type='button';button.onclick=()=>onRelatedPlace(metric.relatedPlace.id);panel.append(button);}
+ if(metric.coverageNote)panel.append(element('p',metric.coverageNote,'population-note'));
  const meta=element('p',null,'population-period');
  if(metric.date){const full=metric.date.length===7?metric.date+'-01':metric.date;meta.append(document.createTextNode(new Intl.DateTimeFormat('en-GB',{...(metric.date.length===10?{day:'numeric'}:{}),month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(full+'T00:00:00Z'))+' · '));}
  meta.append(link(data.sources[metric.source],'Source'));panel.append(meta);
 }
-export async function renderStatistics(anchor,key,provided){
+export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  if(!anchor?.parentElement)return;
  let population;
  if(/^(indonesia|philippines|argentina|malaysia|singapore):/.test(key)){
@@ -57,7 +60,7 @@ export async function renderStatistics(anchor,key,provided){
   const data=provided||await loadStatistics(key);if(panel.dataset.region!==key)return;
   const record=data.regions[key];panel.replaceChildren();
   if(!record){panel.append(element('p','Statistics have not been verified for this division.','statistics-note'));return;}
-  if(population)renderPopulation(population,record,data);
+  if(population)renderPopulation(population,record,data,onRelatedPlace);
   const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
   area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area);if(!key.startsWith('singapore:'))panel.append(economy);
   const areaValues=element('dl',null,'statistics-values'),economyValues=element('dl',null,'statistics-values');area.append(areaValues);

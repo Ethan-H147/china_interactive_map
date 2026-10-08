@@ -1,0 +1,20 @@
+{
+  "reviewed": "2026-10-08",
+  "source": "https://www.singstat.gov.sg/files/1f0956c0-7c89-4684-bde3-b45b792636af.zip",
+  "sha256": "1259d15afc8346e6605698f57be5045de910f73ce80687b6850cb165979406c2",
+  "independentTables": [
+    "Singapore Residents by Planning Area, Subzone, Single Year of Age and Sex, Jun 2026.xlsx",
+    "Singapore Residents by Planning Area, Subzone, Age Group, Sex and Type of Dwelling, Jun 2026.xlsx"
+  ],
+  "planningAreasChecked": 55,
+  "populationDefinition": "Citizens and permanent residents at end-June 2026; non-residents excluded; rounded to nearest 10.",
+  "nationalResidentTotal": 4231520,
+  "planningAreaSum": 4231550,
+  "roundingNote": "Independently rounded planning-area totals need not sum exactly to the national total.",
+  "focus": {
+    "Pioneer planning area": 50,
+    "Boon Lay planning area": 30,
+    "Jurong West planning area": 250890,
+    "Boon Lay Place subzone within Jurong West": 29360
+  }
+}

@@ -25,7 +25,11 @@ const records=[],chunks={},statistics={version:1,country:'singapore',retrieved:'
 },regions:{}};
 const makeRecord=(f,name,level,kind)=>({...name,en:name.en,local:name.zh,names:name,aliases:Object.values(name),id:f.properties.id,parent:f.properties.parent,level,kind,bounds:bounds(f.geometry),center:centersById.get(f.properties.id)});
 const areaMetric=value=>({value,unit:'km²',year:2025,method:'reported',label:'Planning area',source:'ura-area',note:'URA’s SHAPE.AREA in square metres, converted to square kilometres. Planning extents exclude sea but can include reservoirs and inland water, and differ from physical land area.'});
-const popMetric=(value,source)=>({value:value==='-'?0:value,...(value==='-'?{displayValue:'Nil or negligible'}:{}),year:2026,date:'2026-06',method:'estimate',label:'Resident population',source,note:'Citizens and permanent residents at end-June 2026; non-residents are excluded. Uses published overall totals, not sums of rounded age or subzone cells. Figures are rounded to the nearest 10; a dash denotes nil or negligible.'});
+const popMetric=(value,source)=>({value:value==='-'?0:value,...(value==='-'?{displayValue:'Nil or negligible'}:{}),year:2026,date:'2026-06',method:'estimate',label:'Resident population',source,coverageNote:'Citizens and permanent residents only. Non-residents are excluded; figures are rounded to the nearest 10.',note:'Citizens and permanent residents at end-June 2026; non-residents are excluded. Uses published overall totals, not sums of rounded age or subzone cells. Figures are rounded to the nearest 10; a dash denotes nil or negligible.'});
+const populationScopes={
+ PN:'This is the industrial Pioneer planning area. The residential neighbourhood around Pioneer MRT is counted under Jurong West.',
+ BL:'This is the industrial Boon Lay planning area. The residential Boon Lay neighbourhood (Boon Lay Place) is counted under Jurong West.'
+};
 const regionTop=topology({regions:structuredClone(first)}),areaTop=topology({regions:structuredClone(areas)});
 const borders=(top,ids)=>{
  const owners=new Map(),pairs=new Map();
@@ -46,14 +50,18 @@ for(const f of first.features){
 for(const f of areas.features){
  const source=raw.features.find(a=>'SG-'+a.properties.PLN_AREA_C===f.properties.id),name=names.names[source.properties.PLN_AREA_N];assert(name,'Missing multilingual name '+source.properties.PLN_AREA_N);
  const value=population.values[source.properties.PLN_AREA_N];assert(value!==undefined,'Missing population '+source.properties.PLN_AREA_N);
- records.push(makeRecord(f,name,2,'Planning area'));
- statistics.regions['singapore:'+f.properties.id]={name:name.en,country:'SG',level:2,population:popMetric(value,'singstat-area-population'),area:areaMetric(source.properties['SHAPE.AREA']/1e6),note:'Population and area use Master Plan 2025 planning areas. Planning areas are urban-planning and statistical units.'};
+ const scopeNote=populationScopes[source.properties.PLN_AREA_C];
+ records.push(makeRecord(f,name,2,scopeNote?'Industrial planning area':'Planning area'));
+ statistics.regions['singapore:'+f.properties.id]={name:name.en,country:'SG',level:2,population:{...popMetric(value,'singstat-area-population'),...(scopeNote?{scopeNote,relatedPlace:{id:'SG-JW',label:'View residential Jurong West'}}:{})},area:areaMetric(source.properties['SHAPE.AREA']/1e6),note:'Population and area use Master Plan 2025 planning areas. Planning areas are urban-planning and statistical units.'};
 }
 records.unshift({id:'SG',en:'Singapore',local:'新加坡',names:{en:'Singapore',zh:'新加坡',ms:'Singapura',ta:'சிங்கப்பூர்'},aliases:['Singapura','சிங்கப்பூர்'],level:0,kind:'City-state',center:[103.83,1.33],bounds:[[103.58,1.14],[104.12,1.49]]});
 fs.mkdirSync(out+'singapore',{recursive:true});
 write('singapore-first.bin',{regions:first,boundaries:borders(regionTop,first.features.map(f=>f.properties.id))});
 write('singapore-catalogue.bin',{records,chunks});
 fs.writeFileSync(out+'singapore-statistics.json',JSON.stringify(statistics));
+const review=read('population-review-2026.json');
+fs.writeFileSync(out+'singapore-population-review.json',JSON.stringify(review,null,2)+'\n');
 const sources=JSON.parse(fs.readFileSync(out+'singapore-sources.json'));sources.subdivisions={url:statistics.sources['ura-area'].url,masterPlan:2025,regions:5,planningAreas:55,method:'Planning regions dissolved from the same 55 URA planning areas. Every original boundary vertex is retained. Shared internal edges only; coastlines are not stroked. Detail is loaded only for the selected region.'};sources.names={url:names.source,license:names.license,languages:['English','Chinese','Malay','Tamil']};sources.population=statistics.sources['singstat-area-population'];sources.coverage='SLA coastal context; five URA planning regions and 55 planning areas under Master Plan 2025, with June 2026 resident population and URA planning-area extent measurements.';
+sources.population.review={url:'singapore-population-review.json',reviewed:review.reviewed,planningAreasChecked:review.planningAreasChecked,method:'Every published overall planning-area total agrees across the dwelling-type and single-year-of-age workbooks. The downloaded ZIP was checked against the current official release.'};
 fs.writeFileSync(out+'singapore-sources.json',JSON.stringify(sources,null,2)+'\n');
 console.log('Singapore: 5 regions, 55 planning areas, four languages, 2026 resident population and official planning extents.');

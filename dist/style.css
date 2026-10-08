@@ -39,3 +39,5 @@
 
 .map-shell[data-satellite=true] .korea-marker,.map-shell[data-satellite=true] .korea-marker small{color:#fffdf3;text-shadow:0 1px 2px #172019,1px 0 2px #172019,-1px 0 2px #172019,0 -1px 2px #172019}
 #zoom-lock svg{width:20px;height:20px;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}#zoom-lock .zoom-lock-closed{display:none}#zoom-lock[aria-pressed=true] .zoom-lock-closed{display:block}#zoom-lock[aria-pressed=true] .zoom-lock-open{display:none}#zoom-lock[aria-pressed=true]{background:color-mix(in srgb,var(--red) 12%,var(--paper));color:var(--red)}#zoom-lock:active{transform:none}.north{bottom:324px}@media(max-width:760px){.north{bottom:266px}}
+
+.population-note{font-size:14px;line-height:1.5;margin:10px 0;color:var(--ink)}

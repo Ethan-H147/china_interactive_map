@@ -90,5 +90,6 @@ sources.set('city-districts',true);emit('sourcedata');assert.equal(await chinaSw
 
 for(const country of ['malaysia','singapore'])env.window.AtlasEntry.countries[country]={en:country};
 vm.runInContext('malaysiaAtlas=makeAtlas(Promise.resolve());singaporeAtlas=makeAtlas(Promise.resolve());',env);
-for(const country of ['malaysia','singapore']){env.window.AtlasDev.allows=c=>!['malaysia','singapore'].includes(c);assert.equal(await env.changeAtlas(country),false);env.window.AtlasDev.allows=()=>true;assert.equal(await env.changeAtlas(country),true);assert.equal(remembered.at(-1),country);}
-console.log('Separate Malaysia and Singapore switching obeys developer eligibility.');
+env.window.AtlasDev.allows=c=>!['brazil','uruguay'].includes(c);
+for(const country of ['malaysia','singapore']){assert.equal(await env.changeAtlas(country),true);assert.equal(remembered.at(-1),country);}
+console.log('Malaysia and Singapore are public; switching succeeds without developer mode.');

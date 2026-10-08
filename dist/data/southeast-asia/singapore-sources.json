@@ -30,6 +30,12 @@
   },
   "population": {
     "title": "SingStat Population Trends 2026, geographic tables",
-    "url": "https://www.singstat.gov.sg/publication-resources/population-trends-2026"
+    "url": "https://www.singstat.gov.sg/publication-resources/population-trends-2026",
+    "review": {
+      "url": "singapore-population-review.json",
+      "reviewed": "2026-10-08",
+      "planningAreasChecked": 55,
+      "method": "Every published overall planning-area total agrees across the dwelling-type and single-year-of-age workbooks. The downloaded ZIP was checked against the current official release."
+    }
   }
 }

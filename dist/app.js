@@ -477,7 +477,7 @@ async function init(){try{
 
   southAmerica=window.AtlasSouthAmerica.createSouthAmerica(map,{syncAppearance:()=>satelliteDisplay?.sync(),country:()=>atlasMode,isBusy:()=>quiz.active||countrySwitching,switchAtlas:changeAtlas,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{manual:camera.manual===true})});
   window.AtlasDev.mount({eligible:()=>atlasMode==='china'&&!quiz.active&&!countrySwitching&&selected?.layer.feature.properties.adcode===310105});
-  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();malaysiaAtlas.syncDeveloper();singaporeAtlas.syncDeveloper();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(['malaysia','singapore'].includes(atlasMode)?'indonesia':'argentina',false);});
+  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();malaysiaAtlas.syncDeveloper();singaporeAtlas.syncDeveloper();if(!window.AtlasDev.allows(atlasMode))await changeAtlas('argentina',false);});
   const requestedCountry=window.AtlasEntry.current;
   controls();if(requestedCountry&&requestedCountry!=='china')await changeAtlas(requestedCountry,false);else if(!window.AtlasView.fromHash(location.hash))await followPlaceLink();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
