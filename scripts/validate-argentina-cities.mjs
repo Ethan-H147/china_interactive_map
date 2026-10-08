@@ -21,6 +21,8 @@ for(const [parent,group] of Object.entries(index.groups)){
 assert.equal(shapes.size,new Set(index.records.filter(r=>r.boundaryAvailable).map(r=>r.boundaryId)).size);
 for(const r of index.records){assert.ok(r.bounds.flat().every(Number.isFinite));assert.ok(r.center.every(Number.isFinite));if(r.boundaryAvailable){assert.ok(shapes.has(r.boundaryId));assert.ok(inside(r.center,shapes.get(r.boundaryId).geometry));}else assert.equal(r.boundaryId,undefined);}
 const named=name=>index.records.find(r=>r.en===name);
+for(const r of index.records)assert.ok(r.point?.length===2&&r.point.every(Number.isFinite),'City point missing: '+r.en);
+assert.notDeepEqual(named('Banfield').point,named('Temperley').point,'Shared municipality must not stack city dots at the municipal centroid');
 assert.equal(named('Banfield').boundaryId,named('Temperley').boundaryId);
 assert.equal(named('Banfield').boundaryId,named('Lomas de Zamora').boundaryId);
 assert.equal(named('Banfield').boundaryName,'Lomas de Zamora');

@@ -26,11 +26,16 @@ for(const city of cities){
   if(matches.length!==1)throw Error('Ambiguous or missing municipality: '+city.name);
   const feature=matches[0];geometry=feature.geometry;code=feature.properties.in1;source='IGN';sourceURL='https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG';boundaryName=feature.properties.nam;kind='Municipality';
  }
- const places=georef.filter(f=>f.properties.provincia.id===city.province&&normalize(f.properties.nombre)===normalize(city.name));
- const place=places.find(p=>p.properties.gobierno_local?.nombre===city.municipality)||places[0];
+ const pointNames=[city.name,...(city.rank===1?['Ciudad de Buenos Aires']:city.rank===8?['Santa Fe']:city.rank===40?['San Fernando']:city.rank===56?['Rawson']:[])].map(normalize);
+ const places=georef.filter(f=>f.properties.provincia.id===city.province&&pointNames.includes(normalize(f.properties.nombre)));
+ const place=places.find(p=>p.properties.categoria==='Entidad')||places[0];
+ // Georef omits this named locality. Only its point comes from OSM; its
+ // municipal polygon continues to come from IGN's Merlo jurisdiction.
+ const point=place?.geometry.coordinates||(city.rank===75?[-58.7347434,-34.6924129]:null);
+ if(!point)throw Error('Missing city location: '+city.name);
  const record={id:'AR-CITY-'+String(city.rank).padStart(2,'0'),en:city.name,local:city.rank===1?'Ciudad Autónoma de Buenos Aires':'',kind,level:3,parent:parent.id,parentName:parent.en,code,cityRank:city.rank,source,sourceURL,boundaryName,
   aliases:[city.name,city.municipality||'',...(city.rank===1?['CABA','Buenos Aires']:city.rank===8?['Santa Fe']:city.rank===40?['San Fernando']:[])],
-  municipality:city.localityParent||city.municipality||boundaryName,departmentId:place?.properties.departamento?.id?'AR-'+place.properties.departamento.id:null,boundaryAvailable:!!geometry};
+  municipality:city.localityParent||city.municipality||boundaryName,departmentId:place?.properties.departamento?.id?'AR-'+place.properties.departamento.id:null,boundaryAvailable:!!geometry,point,pointSource:city.rank===75?'https://www.openstreetmap.org/relation/2539565':'https://www.argentina.gob.ar/georef'};
  records.push(record);
  if(geometry){const key=parent.id+':'+code;record.boundaryId=boundaries.get(key)?.properties.id||record.id;if(!boundaries.has(key)){const feature={type:'Feature',id:record.id,properties:record,geometry};boundaries.set(key,feature);features.push(feature);}}
  else{record.bounds=parent.bounds;record.center=place?.geometry.coordinates||parent.center;}

@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createCityDots} from '../dist/argentina-city-dots.mjs';
+let active=false,selected=null,query=[];
+const sources=new Map(),layers=new Map(),handlers=new Map(),states=[];
+const canvas={style:{},title:''};
+const map={addSource:(id,data)=>sources.set(id,data),getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),removeLayer:id=>layers.delete(id),setLayoutProperty(id,k,v){(layers.get(id).layout||={})[k]=v;},setFeatureState:(id,state)=>states.push({id,state}),on:(name,fn)=>handlers.set(name,fn),queryRenderedFeatures:()=>query,project:p=>({x:p[0],y:p[1]}),getCanvas:()=>canvas};
+const records=[{id:'a',en:'Banfield',level:3,point:[100,100]},{id:'b',en:'Temperley',level:3,point:[106,106]}];
+const dots=createCityDots(map,{active:()=>active,selected:()=>selected});assert.equal(sources.size,0);
+active=true;dots.install(records);assert.equal(sources.size,1);assert.equal(layers.get('argentina-city-dots').type,'circle');
+query=records.map(r=>({properties:{id:r.id}}));assert.equal(dots.hit({x:105,y:105}).id,'b','Nearest city wins in a cluster');
+handlers.get('mousemove')({point:{x:105,y:105}});assert.equal(canvas.title,'Temperley');assert.equal(canvas.style.cursor,'pointer');
+selected=records[0];dots.sync();assert.equal(states.at(-1).id.id,'a');selected=records[1];dots.sync();assert.deepEqual(states.slice(-2).map(s=>s.state.selected),[false,true]);
+active=false;dots.sync();assert.equal(layers.get('argentina-city-dots').layout.visibility,'none');assert.equal(dots.hit({x:105,y:105}),undefined);
+dots.clear();assert.equal(sources.size,0);assert.equal(layers.size,0);assert.equal(canvas.title,'');
+const source=fs.readFileSync('dist/south-america.mjs','utf8');assert.ok(!source.includes('south-detail-view'));assert.ok(!source.includes('south-city-picker'));assert.ok(source.indexOf('const dot=cityDots.hit')<source.indexOf('const hit=argentina.hit'),'Dots are picked before underlying departments');
+console.log('Subtle GPU city points, nearest-dot picking, hover identification, selected-dot feedback, developer gating, cleanup and removed dropdowns passed.');

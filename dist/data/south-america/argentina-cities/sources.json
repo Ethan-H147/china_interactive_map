@@ -11,112 +11,112 @@
     "AR-06": {
       "count": 31,
       "file": "AR-06.bin",
-      "bytes": 92066
+      "bytes": 92805
     },
     "AR-02": {
       "count": 1,
       "file": "AR-02.bin",
-      "bytes": 1118
+      "bytes": 1153
     },
     "AR-10": {
       "count": 1,
       "file": "AR-10.bin",
-      "bytes": 3393
+      "bytes": 3433
     },
     "AR-22": {
       "count": 2,
       "file": "AR-22.bin",
-      "bytes": 2895
+      "bytes": 2952
     },
     "AR-26": {
       "count": 2,
       "file": "AR-26.bin",
-      "bytes": 2431
+      "bytes": 2484
     },
     "AR-14": {
       "count": 2,
       "file": "AR-14.bin",
-      "bytes": 1742
+      "bytes": 1793
     },
     "AR-18": {
       "count": 1,
       "file": "AR-18.bin",
-      "bytes": 2941
+      "bytes": 2981
     },
     "AR-30": {
       "count": 2,
       "file": "AR-30.bin",
-      "bytes": 6107
+      "bytes": 6165
     },
     "AR-34": {
       "count": 1,
       "file": "AR-34.bin",
-      "bytes": 867
+      "bytes": 907
     },
     "AR-38": {
       "count": 1,
       "file": "AR-38.bin",
-      "bytes": 4248
+      "bytes": 4290
     },
     "AR-42": {
       "count": 1,
       "file": "AR-42.bin",
-      "bytes": 637
+      "bytes": 673
     },
     "AR-46": {
       "count": 1,
       "file": "AR-46.bin",
-      "bytes": 2389
+      "bytes": 2429
     },
     "AR-50": {
       "count": 5,
       "file": "AR-50.bin",
-      "bytes": 62177
+      "bytes": 62374
     },
     "AR-54": {
       "count": 1,
       "file": "AR-54.bin",
-      "bytes": 3068
+      "bytes": 3112
     },
     "AR-58": {
       "count": 1,
       "file": "AR-58.bin",
-      "bytes": 1216
+      "bytes": 1256
     },
     "AR-62": {
       "count": 1,
       "file": "AR-62.bin",
-      "bytes": 3184
+      "bytes": 3224
     },
     "AR-66": {
       "count": 1,
       "file": "AR-66.bin",
-      "bytes": 4247
+      "bytes": 4292
     },
     "AR-70": {
       "count": 3,
       "file": "AR-70.bin",
-      "bytes": 2967
+      "bytes": 3032
     },
     "AR-74": {
       "count": 2,
       "file": "AR-74.bin",
-      "bytes": 1004
+      "bytes": 1056
     },
     "AR-78": {
       "count": 1,
       "file": "AR-78.bin",
-      "bytes": 1089
+      "bytes": 1126
     },
     "AR-82": {
       "count": 3,
       "file": "AR-82.bin",
-      "bytes": 3403
+      "bytes": 3472
     },
     "AR-90": {
       "count": 1,
       "file": "AR-90.bin",
-      "bytes": 1640
+      "bytes": 1674
     }
   },
   "records": [

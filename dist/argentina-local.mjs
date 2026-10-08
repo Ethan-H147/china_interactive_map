@@ -16,9 +16,9 @@ export function createArgentinaLocal(map,host,config={}){
  }
  function sync(){
   if(!entry)return;
-  const visible=host.active()&&mode===2&&scope===entry.scope;
+  const visible=host.active()&&(config.selectedOnly||mode===2)&&scope===entry.scope;
   for(const id of entry.layers)map.setLayoutProperty(id,'visibility',visible?'visible':'none');
-  map.setLayoutProperty(entry.layers[1],'visibility',visible&&host.outlines()?'visible':'none');
+  map.setLayoutProperty(entry.layers[1],'visibility',visible&&host.outlines()&&!config.selectedOnly?'visible':'none');
   map.setFilter(entry.layers[2],['==',['get','id'],selectedId()||'']);
   const next=selectedId();
   if(entry.selected!==next){if(entry.selected)map.setFeatureState({source:entry.sources[0],id:entry.selected},{selected:false});if(next)map.setFeatureState({source:entry.sources[0],id:next},{selected:true});entry.selected=next;}
@@ -28,7 +28,7 @@ export function createArgentinaLocal(map,host,config={}){
   scope=next;const job=install();loadJob=job;job.finally(()=>{if(loadJob===job)loadJob=null;});return job;
  }
  async function install(){
-  if(!host.active()||mode!==2||!scope||(config.base&&!index?.groups[scope])){release();host.status('');host.changed();return;}
+  if(!host.active()||(!config.selectedOnly&&mode!==2)||!scope||(config.base&&!index?.groups[scope])){release();host.status('');host.changed();return;}
   if(entry?.scope===scope){sync();return;}
   release();const token=epoch,requested=scope;
   host.status('Loading '+noun+'…');
@@ -44,7 +44,7 @@ export function createArgentinaLocal(map,host,config={}){
    staged={scope:requested,records:payload.records,sources:[],layers:[],urls:[]};
    for(const [name,blob] of Object.entries(payload.sources)){const id=prefix+requested+'-'+name,url=URL.createObjectURL(blob);staged.sources.push(id);staged.urls.push(url);map.addSource(id,{type:'geojson',data:url,promoteId:name==='regions'?'id':undefined,tolerance:.25,buffer:64,maxzoom:16,attribution:config.attribution||'Departments / partidos / comunas: <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">IGN, Argentina</a>'});}
    const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer,'south-argentina-borders');staged.layers.push(layer.id);};
-   add({id:prefix+requested+'-fill',type:'fill',source:staged.sources[0],paint:{'fill-color':'#a9cee6','fill-opacity':['case',['boolean',['feature-state','selected'],false],.65,0],'fill-antialias':false}});
+   add({id:prefix+requested+'-fill',type:'fill',source:staged.sources[0],paint:{'fill-color':'#a9cee6','fill-opacity':['case',['boolean',['feature-state','selected'],false],config.selectedOnly?.18:.65,0],'fill-antialias':false}});
    add({id:prefix+requested+'-borders',type:'line',source:staged.sources[1],layout:{'line-join':'round'},paint:{'line-color':'#5883a0','line-width':['interpolate',['linear'],['zoom'],3,.4,8,.8],'line-opacity':.65}});
    add({id:prefix+requested+'-selection',type:'line',source:staged.sources[0],filter:['==',['get','id'],''],layout:{'line-join':'round'},paint:{'line-color':'#3979a3','line-width':2}});
    wait=new AbortController();await host.waitForSources(staged.sources,wait.signal);
