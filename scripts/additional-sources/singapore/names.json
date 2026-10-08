@@ -1,0 +1,337 @@
+{
+  "source": "https://en.wikipedia.org/wiki/Planning_areas_of_Singapore",
+  "retrieved": "2026-10-08",
+  "license": "CC BY-SA 4.0",
+  "names": {
+    "ANG MO KIO": {
+      "en": "Ang Mo Kio",
+      "ms": "Ang Mo Kio",
+      "zh": "宏茂桥",
+      "ta": "ஆங் மோ கியோ"
+    },
+    "BEDOK": {
+      "en": "Bedok",
+      "ms": "Bedok",
+      "zh": "勿洛",
+      "ta": "பிடோக்"
+    },
+    "BISHAN": {
+      "en": "Bishan",
+      "ms": "Bishan",
+      "zh": "碧山",
+      "ta": "பீஷான்"
+    },
+    "BOON LAY": {
+      "en": "Boon Lay",
+      "ms": "Boon Lay",
+      "zh": "文礼",
+      "ta": "பூன் லே"
+    },
+    "BUKIT BATOK": {
+      "en": "Bukit Batok",
+      "ms": "Bukit Batok",
+      "zh": "武吉巴督",
+      "ta": "புக்கிட் பாத்தோக்"
+    },
+    "BUKIT MERAH": {
+      "en": "Bukit Merah",
+      "ms": "Bukit Merah",
+      "zh": "红山",
+      "ta": "புக்கிட் மேரா"
+    },
+    "BUKIT PANJANG": {
+      "en": "Bukit Panjang",
+      "ms": "Bukit Panjang",
+      "zh": "武吉班让",
+      "ta": "புக்கிட் பாஞ்சாங்"
+    },
+    "BUKIT TIMAH": {
+      "en": "Bukit Timah",
+      "ms": "Bukit Timah",
+      "zh": "武吉知马",
+      "ta": "புக்கிட் திமா"
+    },
+    "CENTRAL WATER CATCHMENT": {
+      "en": "Central Water Catchment",
+      "ms": "Kawasan Tadahan Air Tengah",
+      "zh": "中央集水区",
+      "ta": "மத்திய நீர் நீர்ப்பிடிப்பு"
+    },
+    "CHANGI": {
+      "en": "Changi",
+      "ms": "Changi",
+      "zh": "樟宜",
+      "ta": "சாங்கி"
+    },
+    "CHANGI BAY": {
+      "en": "Changi Bay",
+      "ms": "Teluk Changi",
+      "zh": "樟宜湾",
+      "ta": "சாங்கி பே"
+    },
+    "CHOA CHU KANG": {
+      "en": "Choa Chu Kang",
+      "ms": "Choa Chu Kang",
+      "zh": "蔡厝港",
+      "ta": "சுவா சூ காங்"
+    },
+    "CLEMENTI": {
+      "en": "Clementi",
+      "ms": "Clementi",
+      "zh": "金文泰",
+      "ta": "கிளிமெண்டி"
+    },
+    "DOWNTOWN CORE": {
+      "en": "Downtown Core",
+      "ms": "Pusat Bandar",
+      "zh": "市中心",
+      "ta": "சிங்கப்பூர் நகர மையத்தில்"
+    },
+    "GEYLANG": {
+      "en": "Geylang",
+      "ms": "Geylang",
+      "zh": "芽笼",
+      "ta": "கேலாங்"
+    },
+    "HOUGANG": {
+      "en": "Hougang",
+      "ms": "Hougang",
+      "zh": "后港",
+      "ta": "ஹவ்காங்"
+    },
+    "JURONG EAST": {
+      "en": "Jurong East",
+      "ms": "Jurong Timur",
+      "zh": "裕廊东",
+      "ta": "ஜூரோங் கிழக்கு"
+    },
+    "JURONG WEST": {
+      "en": "Jurong West",
+      "ms": "Jurong Barat",
+      "zh": "裕廊西",
+      "ta": "ஜூரோங் மேற்கு"
+    },
+    "KALLANG": {
+      "en": "Kallang",
+      "ms": "Kallang",
+      "zh": "加冷",
+      "ta": "காலாங்"
+    },
+    "LIM CHU KANG": {
+      "en": "Lim Chu Kang",
+      "ms": "Lim Chu Kang",
+      "zh": "林厝港",
+      "ta": "லிம் சூ காங்"
+    },
+    "MANDAI": {
+      "en": "Mandai",
+      "ms": "Mandai",
+      "zh": "万礼",
+      "ta": "மண்டாய்"
+    },
+    "MARINA EAST": {
+      "en": "Marina East",
+      "ms": "Marina Timur",
+      "zh": "滨海东",
+      "ta": "மெரினா கிழக்கு"
+    },
+    "MARINA SOUTH": {
+      "en": "Marina South",
+      "ms": "Marina Selatan",
+      "zh": "滨海南",
+      "ta": "மெரினா தென்"
+    },
+    "MARINE PARADE": {
+      "en": "Marine Parade",
+      "ms": "Marine Parade",
+      "zh": "马林百列",
+      "ta": "மரின் பரேட்"
+    },
+    "MUSEUM": {
+      "en": "Museum",
+      "ms": "Muzium",
+      "zh": "博物馆",
+      "ta": "அருங்காட்சியகம்"
+    },
+    "NEWTON": {
+      "en": "Newton",
+      "ms": "Newton",
+      "zh": "纽顿",
+      "ta": "நியூட்டன்"
+    },
+    "NORTH-EASTERN ISLANDS": {
+      "en": "North-Eastern Islands",
+      "ms": "Kepulauan Timur Laut",
+      "zh": "东北群岛",
+      "ta": "வடகிழக்கு தீவுகள்"
+    },
+    "NOVENA": {
+      "en": "Novena",
+      "ms": "Novena",
+      "zh": "诺维娜",
+      "ta": "நொவீனா"
+    },
+    "ORCHARD": {
+      "en": "Orchard",
+      "ms": "Orchard",
+      "zh": "乌节",
+      "ta": "ஆர்ச்சர்ட்"
+    },
+    "OUTRAM": {
+      "en": "Outram",
+      "ms": "Outram",
+      "zh": "欧南",
+      "ta": "ஊட்ரம்"
+    },
+    "PASIR RIS": {
+      "en": "Pasir Ris",
+      "ms": "Pasir Ris",
+      "zh": "巴西立",
+      "ta": "பாசிர் ரிஸ்"
+    },
+    "PAYA LEBAR": {
+      "en": "Paya Lebar",
+      "ms": "Paya Lebar",
+      "zh": "巴耶利峇",
+      "ta": "பாய லேபார்"
+    },
+    "PIONEER": {
+      "en": "Pioneer",
+      "ms": "Pioneer",
+      "zh": "先驱",
+      "ta": "பயனியர்"
+    },
+    "PUNGGOL": {
+      "en": "Punggol",
+      "ms": "Punggol",
+      "zh": "榜鹅",
+      "ta": "பொங்கோல்"
+    },
+    "QUEENSTOWN": {
+      "en": "Queenstown",
+      "ms": "Queenstown",
+      "zh": "女皇镇",
+      "ta": "குவீன்ஸ்டவுன்"
+    },
+    "RIVER VALLEY": {
+      "en": "River Valley",
+      "ms": "River Valley",
+      "zh": "里峇峇利",
+      "ta": "நதி பள்ளத்தாக்கு"
+    },
+    "ROCHOR": {
+      "en": "Rochor",
+      "ms": "Rochor",
+      "zh": "梧槽",
+      "ta": "ரோச்சோர்"
+    },
+    "SELETAR": {
+      "en": "Seletar",
+      "ms": "Seletar",
+      "zh": "实里达",
+      "ta": "சிலேத்தார்"
+    },
+    "SEMBAWANG": {
+      "en": "Sembawang",
+      "ms": "Sembawang",
+      "zh": "三巴旺",
+      "ta": "செம்பவாங்"
+    },
+    "SENGKANG": {
+      "en": "Sengkang",
+      "ms": "Sengkang",
+      "zh": "盛港",
+      "ta": "செங்காங்"
+    },
+    "SERANGOON": {
+      "en": "Serangoon",
+      "ms": "Serangoon",
+      "zh": "实龙岗",
+      "ta": "சிராங்கூன்"
+    },
+    "SIMPANG": {
+      "en": "Simpang",
+      "ms": "Simpang",
+      "zh": "新邦",
+      "ta": "சிம்பாங்"
+    },
+    "SINGAPORE RIVER": {
+      "en": "Singapore River",
+      "ms": "Sungai Singapura",
+      "zh": "新加坡河",
+      "ta": "சிங்கப்பூர் நதி"
+    },
+    "SOUTHERN ISLANDS": {
+      "en": "Southern Islands",
+      "ms": "Kepulauan Selatan",
+      "zh": "南部群岛",
+      "ta": "தெற்கு தீவுகள்"
+    },
+    "STRAITS VIEW": {
+      "en": "Straits View",
+      "ms": "Pemandangan Selat",
+      "zh": "海峡景",
+      "ta": "ஸ்ட்ரெய்ட்ஸ் காண்க"
+    },
+    "SUNGEI KADUT": {
+      "en": "Sungei Kadut",
+      "ms": "Sungai Kadut",
+      "zh": "双溪加株",
+      "ta": "சுங்கை காடுட்"
+    },
+    "TAMPINES": {
+      "en": "Tampines",
+      "ms": "Tampines",
+      "zh": "淡滨尼",
+      "ta": "தெம்பினிஸ்"
+    },
+    "TANGLIN": {
+      "en": "Tanglin",
+      "ms": "Tanglin",
+      "zh": "东陵",
+      "ta": "டங்லின்"
+    },
+    "TENGAH": {
+      "en": "Tengah",
+      "ms": "Tengah",
+      "zh": "登加",
+      "ta": "தெங்கா"
+    },
+    "TOA PAYOH": {
+      "en": "Toa Payoh",
+      "ms": "Toa Payoh",
+      "zh": "大巴窑",
+      "ta": "தோ பாயோ"
+    },
+    "TUAS": {
+      "en": "Tuas",
+      "ms": "Tuas",
+      "zh": "大士",
+      "ta": "துவாஸ்"
+    },
+    "WESTERN ISLANDS": {
+      "en": "Western Islands",
+      "ms": "Kepulauan Barat",
+      "zh": "西部群岛",
+      "ta": "மேற்கத்திய தீவுகள்"
+    },
+    "WESTERN WATER CATCHMENT": {
+      "en": "Western Water Catchment",
+      "ms": "Kawasan Tadahan Air Barat",
+      "zh": "西部集水区",
+      "ta": "மேற்கத்திய நீர் நீர்ப்பிடிப்பு"
+    },
+    "WOODLANDS": {
+      "en": "Woodlands",
+      "ms": "Woodlands",
+      "zh": "兀兰",
+      "ta": "ஊட்லண்ட்ஸ்"
+    },
+    "YISHUN": {
+      "en": "Yishun",
+      "ms": "Yishun",
+      "zh": "义顺",
+      "ta": "யீஷூன்"
+    }
+  }
+}

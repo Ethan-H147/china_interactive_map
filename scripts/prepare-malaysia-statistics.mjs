@@ -4,6 +4,7 @@ import {gunzipSync} from 'node:zlib';
 const dir='scripts/statistics-sources/malaysia/';
 const csv=file=>{const [head,...lines]=fs.readFileSync(dir+file,'utf8').trim().split(/\r?\n/),keys=head.split(',');return lines.map(line=>Object.fromEntries(line.split(',').map((v,i)=>[keys[i],v])));};
 const population=csv('population_state.csv'),gdp=csv('gdp_state_real_supply.csv'),area=JSON.parse(fs.readFileSync(dir+'land-area.json'));
+const gdpPopulation=csv('population-state-2025.csv');
 const populationDate=population.map(r=>r.date).sort().at(-1),gdpDate=gdp.map(r=>r.date).sort().at(-1);
 const catalogue=JSON.parse(gunzipSync(fs.readFileSync('dist/data/southeast-asia/malaysia-catalogue.bin')));
 const sources={
@@ -16,11 +17,14 @@ for(const record of catalogue.records.filter(r=>r.level===1)){
  const name=({'MY-04':'Melaka','MY-07':'Pulau Pinang','MY-14':'W.P. Kuala Lumpur','MY-15':'W.P. Labuan','MY-16':'W.P. Putrajaya'})[record.id]||record.en;
  const p=population.filter(r=>r.state===name&&r.date===populationDate&&r.sex==='both'&&r.age==='overall'&&r.ethnicity==='overall');
  const output=gdp.filter(r=>r.state===name&&r.date===gdpDate&&r.series==='abs'&&r.sector==='p0');
+ const denominator=gdpPopulation.filter(r=>r.state===name&&r.date===gdpDate&&r.sex==='both'&&r.age==='overall'&&r.ethnicity==='overall');
+ assert.equal(denominator.length,1,name+' matching-year GDP population');
  assert.equal(p.length,1,name+' population');assert.equal(output.length,1,name+' GDP');assert(area.values[name]>0,name+' area');
  regions['malaysia:'+record.id]={name:record.en,country:'MY',level:1,
   population:{value:Math.round(Number(p[0].population)*1000),year:Number(populationDate.slice(0,4)),method:'estimate',source:'dosm-population',note:'Midyear estimate for both sexes, all ages and ethnicities, including non-citizen residents. DOSM reports thousands of people, rounded to 100 people; the annual CSV date is a year label, not 1 January.'},
   area:{value:area.values[name],year:2024,unit:'km²',method:'reported',label:'Land area',source:'dosm-area',note:'Official reported land area from JUPEM and the Sabah and Sarawak land-survey departments, published in DOSM Statistics Yearbook 2024, table 1.1.'},
   realGdp:{value:Number(output[0].value)*1e6,year:Number(gdpDate.slice(0,4)),currency:'MYR',priceBasis:'constant',baseYear:2015,source:'dosm-gdp',note:'Overall GDP (sector p0) at constant 2015 prices, converted from RM millions. Inflation-adjusted output; no current-price USD conversion is applied.'},
+  realGdpPerCapita:{value:Number(output[0].value)*1e6/(Number(denominator[0].population)*1000),year:Number(gdpDate.slice(0,4)),currency:'MYR',priceBasis:'constant',baseYear:2015,method:'calculated',source:'dosm-gdp',populationSource:'dosm-population',populationValue:Number(denominator[0].population)*1000,populationYear:Number(gdpDate.slice(0,4)),note:'Real GDP divided by DOSM’s total midyear state population for the same year. Includes citizens and non-citizens. Calculated from published rounded population, so it may differ slightly from a separately published per-capita series.'},
   note:'Population, area and economic output have separate reference years. These statistics cover the entire state or federal territory; districts do not inherit these totals.'
  };
 }

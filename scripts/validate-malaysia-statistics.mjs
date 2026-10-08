@@ -11,6 +11,7 @@ for(const r of catalogue.records.filter(r=>r.level===1)){
  const stat=bundle.regions['malaysia:'+r.id];assert.equal(stat.name,r.en);
  assert(stat.population.value>100000&&stat.population.value<8e6);assert.equal(stat.population.year,2026);assert.equal(stat.population.method,'estimate');
  assert.equal(stat.area.year,2024);assert.equal(stat.area.unit,'km²');assert.equal(stat.realGdp.year,2025);assert.equal(stat.realGdp.currency,'MYR');assert.equal(stat.realGdp.priceBasis,'constant');assert.equal(stat.realGdp.baseYear,2015);assert(!stat.realGdp.usd);assert(!stat.gdp);
+ assert.equal(stat.realGdpPerCapita.year,2025);assert.equal(stat.realGdpPerCapita.populationYear,2025);assert.equal(stat.realGdpPerCapita.method,'calculated');assert(stat.realGdpPerCapita.value>0);assert.equal(stat.realGdpPerCapita.value,stat.realGdp.value/stat.realGdpPerCapita.populationValue);
  for(const metric of [stat.population,stat.area,stat.realGdp])assert(bundle.sources[metric.source].url.startsWith('https://'));
 }
 assert.equal(bundle.regions['malaysia:MY-01'].realGdp.value,170947488000);
@@ -32,6 +33,7 @@ let resolve,requests=0;globalThis.fetch=url=>{assert.equal(url,'data/southeast-a
 const {renderStatistics,clearStatistics}=await import('../dist/statistics.mjs');
 const first=renderStatistics(anchor,'malaysia:MY-01'),second=renderStatistics(anchor,'malaysia:MY-16');resolve({ok:true,json:async()=>bundle});await Promise.all([first,second]);
 assert.equal(requests,1);assert.match(parent.text,/121,400/);assert.match(parent.text,/2026 midyear estimate/);assert.match(parent.text,/Real GDP/);assert.match(parent.text,/MYR 14.37 billion/);assert.match(parent.text,/constant 2015 MYR/);assert(!parent.text.includes('ARS'));
+assert.match(parent.text,/Real GDP per person/);assert.match(parent.text,/Population denominator:/);
 clearStatistics(anchor);assert(parent.children[1].hidden&&parent.children[2].hidden);
 const fresh=await import('../dist/statistics.mjs?malaysia-cancel'),late=fresh.renderStatistics(anchor,'malaysia:MY-01');fresh.clearStatistics(anchor);resolve({ok:true,json:async()=>bundle});await late;assert(parent.children[1].hidden&&parent.children[2].hidden,'Clearing a state cancels late data');
 console.log('Malaysia: all 16 divisions, exact official units, dates and sources, separate Putrajaya, reproducibility, lazy cache and stale-selection checks passed.');

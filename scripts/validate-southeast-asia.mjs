@@ -18,9 +18,9 @@ assert.equal(detailed.length,156);for(const id of ['MY-09','MY-14','MY-15','MY-1
 const query=createPlaceSearch(my.records);assert.equal(query('Kuala Lumpur')[0].id,'MY-14');assert.equal(query('Melaka')[0].id,'MY-04');assert.equal(query('Johor Bahru')[0].parent,'MY-01');
 assert.equal(Object.keys(malaysiaFlags).length,16);const flags=JSON.parse(fs.readFileSync('dist/data/malaysia-flag-sources.json')).flags;
 for(const f of Object.values(flags)){const bytes=fs.readFileSync('dist/'+f.file);assert.equal(createHash('sha256').update(bytes).digest('hex'),f.sha256);assert(f.license);assert(f.page.startsWith('https://commons.wikimedia.org/'));}
-assert.equal(sg.records.length,1);assert.equal(sg.records[0].id,'SG');assert.equal(Object.keys(sg.chunks).length,0);read('singapore-first').features.forEach(geometry);
+assert.equal(sg.records.length,61);assert.equal(sg.records.filter(r=>r.level===1).length,5);assert.equal(sg.records.filter(r=>r.level===2).length,55);assert.equal(sg.records[0].id,'SG');assert.equal(Object.keys(sg.chunks).length,5);read('singapore-first').regions.features.forEach(geometry);
 // Official Singapore coastal outlines must not accidentally include Malaysian
 // backdrop polygons, recreational areas or the inset annotation frame.
-const mainland=read('singapore-first').features[0];assert(mainland.geometry.coordinates.length>10,'Offshore islands are preserved');
+const mainland=read('singapore-context').features[0];assert(mainland.geometry.coordinates.length>10,'Offshore islands are preserved');
 for(const country of ['malaysia','singapore']){const value={v:1,country,center:country==='malaysia'?[109,4]:[103.83,1.33],zoom:8,selection:country==='malaysia'?'MY-01-02':'SG',mode:2,layers:{'my-second-layer':false,'sg-label-layer':true}};assert.deepEqual(fromHash(hashFor(value)),validate(value));}
 console.log('Malaysia: 13 states, 3 territories, 156 districts, flags, district ownership, geometry and bounded chunks. Singapore: separate coastal outline and saved views.');

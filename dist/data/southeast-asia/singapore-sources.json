@@ -9,6 +9,27 @@
       "license": "Singapore Open Data Licence"
     }
   },
-  "coverage": "Singapore coastal outline from SLA National Map Polygon, June 2025; parks, water polygons, inset annotations and Malaysian shores excluded. No subdivisions.",
-  "processing": "Shared topology; state silhouettes dissolved from the same district geometry. Detail loaded only for the selected state."
+  "coverage": "SLA coastal context; five URA planning regions and 55 planning areas under Master Plan 2025, with June 2026 resident population and URA planning-area extent measurements.",
+  "processing": "Shared topology; state silhouettes dissolved from the same district geometry. Detail loaded only for the selected state.",
+  "subdivisions": {
+    "url": "https://data.gov.sg/datasets/d_2cc750190544007400b2cfd5d7f53209/view",
+    "masterPlan": 2025,
+    "regions": 5,
+    "planningAreas": 55,
+    "method": "Planning regions dissolved from the same 55 URA planning areas. Every original boundary vertex is retained. Shared internal edges only; coastlines are not stroked. Detail is loaded only for the selected region."
+  },
+  "names": {
+    "url": "https://en.wikipedia.org/wiki/Planning_areas_of_Singapore",
+    "license": "CC BY-SA 4.0",
+    "languages": [
+      "English",
+      "Chinese",
+      "Malay",
+      "Tamil"
+    ]
+  },
+  "population": {
+    "title": "SingStat Population Trends 2026, geographic tables",
+    "url": "https://www.singstat.gov.sg/publication-resources/population-trends-2026"
+  }
 }

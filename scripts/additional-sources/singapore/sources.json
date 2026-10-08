@@ -1,0 +1,20 @@
+{
+  "retrieved": "2026-10-08",
+  "files": [
+    {
+      "name": "planning-areas-2025.geojson",
+      "url": "https://data.gov.sg/datasets/d_2cc750190544007400b2cfd5d7f53209/view",
+      "sha256": "e6ecc1743de5c39ec154a30b3b8037896fbc6c5f863e10c7dbfd77de12706c9c"
+    },
+    {
+      "name": "population-tables-2026.zip",
+      "url": "https://www.singstat.gov.sg/files/1f0956c0-7c89-4684-bde3-b45b792636af.zip",
+      "sha256": "1259d15afc8346e6605698f57be5045de910f73ce80687b6850cb165979406c2"
+    },
+    {
+      "name": "population-regions-2026.json",
+      "url": "https://tablebuilder.singstat.gov.sg/api/table/tabledata/M810771",
+      "sha256": "cd596c230b710077105c7c03d2af1dfc683bc707db62e6c7725577ae0c8e0769"
+    }
+  ]
+}
