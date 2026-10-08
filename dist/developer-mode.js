@@ -21,7 +21,7 @@
  function paint(){if(enabled)document.documentElement.dataset.developer='true';else delete document.documentElement.dataset.developer;if(exit)exit.hidden=!enabled;}
  function setEnabled(value){enabled=!!value;sequence.reset();try{sessionStorage.setItem(key,String(enabled));}catch{}paint();window.dispatchEvent(new CustomEvent('atlas-developer-change',{detail:{enabled}}));}
  paint();
- window.AtlasDev={get enabled(){return enabled;},allows:country=>!['brazil','uruguay','argentina'].includes(country)||enabled,createSequence,resetSequence:()=>sequence.reset(),mount(host){
+ window.AtlasDev={get enabled(){return enabled;},allows:country=>!['brazil','uruguay'].includes(country)||enabled,createSequence,resetSequence:()=>sequence.reset(),mount(host){
   eligible=host.eligible;
   dialog=document.createElement('dialog');dialog.id='developer-dialog';dialog.setAttribute('aria-labelledby','developer-title');
   dialog.innerHTML='<span class="section-kicker">长宁 · CHANGNING</span><h2 id="developer-title">Developer mode</h2><p>A little door from Changning to the workshop.</p><p>Continue to explore unfinished maps, including South America. This mode stays on until you exit or close this tab.</p><div class="developer-actions"><button type="button" class="quiet-button" data-cancel>Cancel</button><button type="button" class="developer-continue">Continue</button></div>';

@@ -5,7 +5,7 @@
  const storageKey='boundary-atlas-country-v1';
  const fromHash=hash=>/^#(china|korea|mongolia|japan|philippines|indonesia|brazil|uruguay|argentina)(?:\/(?:place|view)=.*)?$/i.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
  let saved;try{saved=localStorage.getItem(storageKey);}catch{}
- const allowed=country=>!['brazil','uruguay','argentina'].includes(country)||window.AtlasDev?.enabled===true;
+ const allowed=country=>window.AtlasDev.allows(country);
  const requested=fromHash(location.hash)||(countries[saved]?saved:'china');
  const initial=allowed(requested)?requested:'china';
  let current=initial;

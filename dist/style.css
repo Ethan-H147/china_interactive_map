@@ -13,6 +13,7 @@
 .maplibregl-canvas{outline:none}.maplibregl-control-container .maplibregl-ctrl-attrib{background:#f4f0e7df;color:#8a8275;font-size:10px;line-height:16px;padding:0 5px}.maplibregl-ctrl-attrib a{color:#736954}.maplibregl-marker.province-label{z-index:3}.gpu-tooltip{position:absolute;z-index:445;pointer-events:none;max-width:250px}.maplibregl-canvas-container{cursor:grab}.maplibregl-canvas-container.maplibregl-interactive:active{cursor:grabbing}
 
 .creator-credit{font-size:12px;line-height:1.5;white-space:nowrap}
+.maplibregl-control-container .maplibregl-ctrl-attrib.maplibregl-compact{min-height:28px;min-width:28px;padding:2px 24px 2px 0}
 /* Capital markers follow MapLibre's camera without rebuilding during movement. */
 .capital-toggle-icon{width:21px;text-align:center;font-size:18px;color:#a67935;font-style:normal}
 .capital-legend{padding:2px 0 12px;display:grid;gap:7px;color:var(--muted);font-size:12px;line-height:1.4}

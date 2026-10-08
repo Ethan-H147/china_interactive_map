@@ -9,17 +9,27 @@ export const countries={
  uruguay:{name:'Uruguay',local:'',flag:'uy',center:[-56,-33],bounds:[[-59,-35.5],[-53,-30]],color:'#e0edf4',line:'#5883a0',selected:'#bcd9ec'},
  argentina:{name:'Argentina',local:'',flag:'ar',center:[-65,-39],bounds:[[-74,-56],[-53,-21]],color:'#dfebf3',line:'#5883a0',selected:'#bcd9ec'}
 };
+export function cityDescription(record){
+ if(record.cityRank===1)return 'Autonomous city';
+ if(!record.boundaryAvailable)return 'City · Municipal boundary pending';
+ return record.en!==record.boundaryName?'City · Municipality: '+record.boundaryName:'City · Municipal boundary';
+}
+export function argentinaMapLabel(record){
+ return record.id==='AR-02'||record.cityRank===1?{...record,en:'Buenos Aires (CABA)',local:'Buenos Aires (CABA)'}:record;
+}
 export function createSouthAmerica(map,host){
  let data,loading,active=null,selected=null,labels=[],pending,sourceWait,layerEpoch=0;
  let brazilLayer='states',layerBusy=false,argentinaSearch;
  try{const saved=window.AtlasView?.fromHash(location.hash)||window.AtlasView?.read('brazil',localStorage);if(saved?.country==='brazil'&&['states','ddd','cep'].includes(saved.scope))brazilLayer=saved.scope;}catch{}
  const postalSource='https://docs.precisely.com/docs-gated/data/gfk-boundaries/2022/en-us/pdf/EN_GfK_Worldwide_digital_maps_without_prices.pdf';
  const installed=new Map(),catalogues=new Map(),jobs=new Map();
- const detailHost=city=>({active:()=>active==='argentina'&&(!city||selected?.level===3)&&window.AtlasDev.enabled,selected:()=>selected,outlines:()=>$('outlines').checked,waitForSources,changed:()=>{if(active==='argentina')syncLayers();},status:message=>{if(active==='argentina'&&(!city||selected?.level===3)){$('layer-status').hidden=!message;$('layer-status').textContent=message;}}});
+ const allowed=id=>window.AtlasDev.allows(id),availableCountries=()=>Object.keys(countries).filter(allowed);
+ if(map.getSource('world-land'))map.addLayer({id:'argentina-portal-fill',type:'fill',source:'world-land',filter:['==',['get','country'],'argentina'],paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
+ const detailHost=city=>({active:()=>active==='argentina'&&(!city||selected?.level===3),selected:()=>selected,outlines:()=>$('outlines').checked,waitForSources,changed:()=>{if(active==='argentina')syncLayers();},status:message=>{if(active==='argentina'&&(!city||selected?.level===3)){$('layer-status').hidden=!message;$('layer-status').textContent=message;}}});
  const argentina=createArgentinaLocal(map,detailHost(false));
  const argentinaCities=createArgentinaLocal(map,detailHost(true),{base:'data/south-america/argentina-cities/',prefix:'arg-city-',level:3,selectedOnly:true,noun:'city boundaries',attribution:'Municipal boundaries: <a href="https://www.ign.gob.ar/">IGN, Argentina</a>'});
- const cityDots=createCityDots(map,{active:()=>active==='argentina'&&window.AtlasDev.enabled,enabled:()=>$('city-dots').checked,selected:()=>selected});
- async function warmArgentina(first){await Promise.all([argentina.warm(first),argentinaCities.warm(first)]);argentinaSearch||=createPlaceSearch([...first,...argentina.records,...argentinaCities.records]);}
+ const cityDots=createCityDots(map,{active:()=>active==='argentina',enabled:()=>$('city-dots').checked,selected:()=>selected});
+ async function warmArgentina(first){await Promise.all([argentina.warm(first),argentinaCities.warm(first)]);argentinaSearch||=createPlaceSearch([...first,...argentina.records,...argentinaCities.records.filter(r=>r.cityRank!==1)]);}
  const provinceId=record=>record?.level>1?record.parent:record?.id;
  const sidebar=document.createElement('aside');sidebar.id='south-america-sidebar';sidebar.className='sidebar south-america-sidebar';sidebar.hidden=true;
  sidebar.setAttribute('aria-label','Explore South America');
@@ -29,7 +39,7 @@ export function createSouthAmerica(map,host){
   <p id="south-layer-status" role="status" class="south-layer-status" hidden></p>
  </div><div class="sidebar-scroll">
   <section id="south-explore-panel" hidden><div class="selection-top"><button class="back-button" id="south-reset"></button><div class="south-flags"><img id="south-national-flag" alt=""><a id="south-flag-source" hidden target="_blank" rel="noopener"><img id="south-province-flag" alt="" decoding="async"></a></div></div><span class="eyebrow" id="south-kind"></span><h2></h2><p class="country-local"></p><p class="preview-note"></p><div class="south-statistics-anchor"></div><section id="south-code-details" class="south-code-details" hidden></section></section>
-  <section id="south-layers-panel"><div id="south-map-types" class="south-map-types" role="group" aria-label="Brazil map view" hidden><button type="button" data-layer="states">States</button><button type="button" data-layer="ddd">DDD</button><button type="button" data-layer="cep">CEP</button></div><p id="south-cep-status" hidden>Exact CEP boundaries are pending a licensed dataset.</p><label class="field-label" for="south-division">Division</label><select id="south-division"></select><section class="layers"><h3>Visible layers</h3><label><span>Division outlines</span><input id="south-outlines" type="checkbox" checked></label><label><span>Region names</span><input id="south-names" type="checkbox" checked></label><label id="south-city-dots-control" hidden><span>City dots</span><input id="south-city-dots" type="checkbox" checked></label></section></section>
+  <section id="south-layers-panel"><div id="south-map-types" class="south-map-types" role="group" aria-label="Brazil map view" hidden><button type="button" data-layer="states">States</button><button type="button" data-layer="ddd">DDD</button><button type="button" data-layer="cep">CEP</button></div><p id="south-cep-status" hidden>Exact CEP boundaries are pending a licensed dataset.</p><label class="field-label" for="south-division">Division</label><select id="south-division"></select><section class="layers"><h3>Visible layers</h3><label><span>Division outlines</span><input id="south-outlines" type="checkbox" checked></label><label><span>Region names</span><input id="south-names" type="checkbox" checked></label><label id="south-city-dots-control" hidden><span>City dots</span><input id="south-city-dots" type="checkbox" checked></label></section><details id="south-coverage" class="south-code-details" hidden><summary>Coverage &amp; sources</summary><p>23 provinces and Buenos Aires autonomous city. Detailed borders load within the selected province.</p><p>The 80 city markers follow a historical population list using 2010 and 2001 figures. Outlines show municipal jurisdictions; some cities share one municipality. Santiago del Estero and La Banda have no municipal polygon in this dataset.</p><p>Population and area cover all 24 jurisdictions. Nominal provincial GDP covers eight; other jurisdictions show separately labeled real economic output. Subdivision and city statistics are not yet included.</p><a href="data/south-america/argentina-cities/sources.json" target="_blank" rel="noopener">City boundary sources</a> · <a href="data/statistics-methodology.html" target="_blank" rel="noopener">Statistics coverage</a></details></section>
  </div><footer class="sidebar-footer"><a id="south-source" target="_blank" rel="noopener">Boundary source</a><span>Created by Ethan Hu</span></footer>`;
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>sidebar.querySelector('#south-'+id);
@@ -40,7 +50,7 @@ export function createSouthAmerica(map,host){
   if(flagsWarming)return;
   const queue=Object.entries(argentinaFlags).filter(([id])=>!provinceFlagImages.has(id));
   async function next(){
-   while(active==='argentina'&&window.AtlasDev.enabled&&queue.length){
+   while(active==='argentina'&&queue.length){
     const [id,reference]=queue.shift(),image=new Image(),entry={image,ready:false};
     provinceFlagImages.set(id,entry);image.decoding='async';image.fetchPriority='low';image.src=reference.file;
     try{await image.decode();entry.ready=true;}catch{provinceFlagImages.delete(id);}
@@ -71,9 +81,9 @@ export function createSouthAmerica(map,host){
  function syncTypeButtons(){for(let i=0;i<typeButtons.length;i++)typeButtons[i].setAttribute('aria-pressed',String(['states','ddd','cep'][i]===brazilLayer));$('map-types').hidden=active!=='brazil';$('cep-status').hidden=active!=='brazil'||brazilLayer!=='cep';$('map-types').setAttribute('aria-busy',String(layerBusy));}
  function saveLayer(){document.dispatchEvent(new Event('change'));}
  const arrow=document.createElement('button');arrow.className='continent-flight';arrow.type='button';arrow.innerHTML='<span aria-hidden="true">↙</span>';document.getElementById('map-shell').append(arrow);
- let lastAsia='china';arrow.onclick=()=>{if(host.isBusy())return;const current=host.country();if(!countries[current]){lastAsia=current;host.switchAtlas('brazil',true,true);}else host.switchAtlas(lastAsia,true,true);};
- function syncArrow(){arrow.hidden=!window.AtlasDev.enabled;const south=!!countries[host.country()];arrow.firstElementChild.textContent=south?'↗':'↙';arrow.setAttribute('aria-label',south?'Fly to East Asia':'Fly to South America');arrow.title=arrow.getAttribute('aria-label');}
- function syncDeveloper(){syncArrow();for(const id of ['south-america-fill','south-america-lines'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility',window.AtlasDev.enabled?'visible':'none');for(const [id,entry] of installed)for(const layer of entry.layers)map.setLayoutProperty(layer,'visibility',window.AtlasDev.enabled&&active===id?'visible':'none');if(!window.AtlasDev.enabled){argentina.clear();argentinaCities.clear();cityDots.clear();cancelPending();clearLabels();}contextFilters();}
+ let lastAsia='china';arrow.onclick=()=>{if(host.isBusy())return;const current=host.country();if(!countries[current]){lastAsia=current;host.switchAtlas(window.AtlasDev.enabled?'brazil':'argentina',true,true);}else host.switchAtlas(lastAsia,true,true);};
+ function syncArrow(){arrow.hidden=false;const south=!!countries[host.country()];arrow.firstElementChild.textContent=south?'↗':'↙';arrow.setAttribute('aria-label',south?'Fly to Asia':window.AtlasDev.enabled?'Fly to South America':'Fly to Argentina');arrow.title=arrow.getAttribute('aria-label');}
+ function syncDeveloper(){syncArrow();for(const id of ['south-america-fill','south-america-lines'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility','visible');for(const [id,entry] of installed)for(const layer of entry.layers)map.setLayoutProperty(layer,'visibility',allowed(id)&&active===id?'visible':'none');if(active&&!allowed(active)){cancelPending();clearLabels();}if(active&&allowed(active))syncLayers();else contextFilters();}
  syncArrow();
  function clearLabels(){labels.forEach(l=>l.remove());labels=[];}
  function updateLabels(){
@@ -81,13 +91,13 @@ export function createSouthAmerica(map,host){
   const first=catalogue()?.records||[],detail=argentina,records=active==='argentina'?[...first.filter(p=>p.id!==detail.scope),...detail.visibleRecords,...(detail.visibleRecords.length?[]:first.filter(p=>p.id===detail.scope))]:first,b=map.getBounds();
   const visible=records.filter(p=>p.center[0]>=b.getWest()&&p.center[0]<=b.getEast()&&p.center[1]>=b.getSouth()&&p.center[1]<=b.getNorth());
   if(selected&&!visible.includes(selected)){const same=visible.findIndex(r=>r.id===selected.boundaryId);if(same>=0)visible.splice(same,1);visible.unshift(selected);}
-  const candidates=visible.map(p=>({...p,en:p.level===3&&p.boundaryAvailable&&p!==selected?p.boundaryName:p.en,local:p.id==='AR-94'?'':p.id==='AR-02'||p.cityRank===1?'Buenos Aires (CABA)':p.local,selected:p===selected}));
-  for(const [id,c] of Object.entries(countries))if(id!==active||!records.length)candidates.push({id,en:c.name,local:c.local,center:c.center});
+  const candidates=visible.map(p=>argentinaMapLabel({...p,en:p.level===3&&p.boundaryAvailable&&p!==selected?p.boundaryName:p.en,local:p.id==='AR-94'?'':p.local,selected:p===selected}));
+  for(const [id,c] of Object.entries(countries))if(allowed(id)&&(id!==active||!records.length))candidates.push({id,en:c.name,local:c.local,center:c.center});
   labels=window.AtlasLabels.render(map,candidates,'province-label');
  }
- function contextFilters(){const exclusion=installed.has(active)?active:'';for(const id of ['south-america-fill','south-america-lines'])if(map.getLayer(id))map.setFilter(id,['all',['!=',['get','country'],''],['!=',['get','country'],exclusion]]);if(map.getLayer('world-land'))map.setFilter('world-land',window.AtlasDev.enabled&&data?['==',['get','country'],'']:null);if(map.getLayer('south-river-boundaries'))map.setLayoutProperty('south-river-boundaries','visibility',window.AtlasDev.enabled&&['argentina','uruguay'].includes(active)?'visible':'none');}
+ function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();for(const id of ['south-america-fill','south-america-lines'])if(map.getLayer(id))map.setFilter(id,['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('argentina-portal-fill'))map.setLayoutProperty('argentina-portal-fill','visibility',data?'none':'visible');if(map.getLayer('world-land'))map.setFilter('world-land',data?['!',['in',['get','country'],['literal',available]]]:null);if(map.getLayer('south-river-boundaries'))map.setLayoutProperty('south-river-boundaries','visibility',['argentina','uruguay'].includes(active)&&allowed(active)?'visible':'none');}
  async function warm(){
-  if(!window.AtlasDev.enabled)throw Error('Developer mode is required');if(data)return;if(loading)return loading;
+  if(data)return;if(loading)return loading;
   loading=(async()=>{
    const context=await loadCompressed('data/flight-context.bin');data=context;
    map.addSource('flight-context',{type:'geojson',data:context,tolerance:.25,buffer:64,maxzoom:16,attribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay'});
@@ -115,11 +125,12 @@ export function createSouthAmerica(map,host){
   });
  }
  async function warmCountry(id,mode=id==='brazil'?brazilLayer:'states'){
+  if(!allowed(id))throw Error('Developer mode is required');
   await warm();if(id==='brazil'&&mode==='cep')return;
   if(installed.get(id)?.mode===mode){if(id==='argentina')await warmArgentina(catalogues.get(id).records);return;}
   const jobKey=id+':'+mode,epoch=layerEpoch;if(jobs.get(jobKey)?.epoch===epoch)return jobs.get(jobKey).promise;
   const job=(async()=>{
-   const payload=await prepare(id,mode);if(host.country()!==id||!window.AtlasDev.enabled||epoch!==layerEpoch)return;
+   const payload=await prepare(id,mode);if(host.country()!==id||!allowed(id)||epoch!==layerEpoch)return;
    const c=countries[id],sources=[],layers=[],urls=[],suffix=mode==='ddd'?'-ddd':'';
    const cleanup=()=>{for(const layer of [...layers].reverse())if(map.getLayer(layer))map.removeLayer(layer);for(const source of sources)if(map.getSource(source))map.removeSource(source);urls.forEach(URL.revokeObjectURL);};
    try{
@@ -131,7 +142,7 @@ export function createSouthAmerica(map,host){
     const controller=new AbortController();sourceWait=controller;
     if(installed.has(id))await waitForSources(sources,controller.signal);
     if(sourceWait===controller)sourceWait=null;
-    if(host.country()!==id||epoch!==layerEpoch||!window.AtlasDev.enabled){cleanup();return;}
+    if(host.country()!==id||epoch!==layerEpoch||!allowed(id)){cleanup();return;}
     for(const other of [...installed.keys()])remove(other);
     installed.set(id,{sources,layers,urls,mode});catalogues.set(id,{records:payload.records,search:createPlaceSearch(payload.records)});
    }catch(error){cleanup();throw error;}
@@ -147,7 +158,7 @@ export function createSouthAmerica(map,host){
   sidebar.querySelector('label[for="south-search"]').textContent=$('search').placeholder;sidebar.querySelector('.layers').hidden=!records.length;
   $('source').href=cep?postalSource:active==='argentina'?'data/south-america/argentina-local/sources.json':'data/south-america/'+active+(ddd?'-ddd':'')+'-sources.json';$('source').textContent=cep?'Postal boundary dataset':'Boundary source';
   document.getElementById('map-hint').textContent=cep?'CEP boundaries pending':ddd?'Select a DDD area':'Select a '+noun;
-  $('city-dots-control').hidden=active!=='argentina';
+  $('city-dots-control').hidden=active!=='argentina';$('coverage').hidden=active!=='argentina';
   syncTypeButtons();
  }
  async function setBrazilLayer(mode){
@@ -169,7 +180,7 @@ export function createSouthAmerica(map,host){
   const c=countries[active],record=selected,ddd=active==='brazil'&&brazilLayer==='ddd',cep=active==='brazil'&&brazilLayer==='cep';
   sidebar.querySelector('h2').textContent=record?.en||(ddd?'DDD areas':cep?'CEP regions':c.name);
   sidebar.querySelector('.country-local').textContent=record?(record.local===record.en?'':record.local):c.local;
-  $('kind').textContent=(record?.level===3?'City · Municipal boundary':record?.kind)||(ddd?'TELEPHONE AREA CODES':cep?'TWO-DIGIT POSTCODES':'SOUTH AMERICA');
+  $('kind').textContent=(record?.level===3?cityDescription(record):record?.kind)||(ddd?'TELEPHONE AREA CODES':cep?'TWO-DIGIT POSTCODES':'SOUTH AMERICA');
   $('reset').textContent=active==='argentina'&&record?.level>1?record.parentName:ddd?'All DDD areas':'All '+c.name;$('division').value=provinceId(record)||'';
   sidebar.querySelector('.preview-note').textContent=ddd?(record?'+55 '+record.code+' · '+record.states.join(' / ')+' · '+record.municipalityCount+' municipalities':'67 DDD areas. Each follows the municipalities assigned by Anatel; some cross state borders.'):(cep?'Exact CEP boundaries are pending a licensed dataset. Two-digit postal regions can divide a city, so state and municipal outlines cannot substitute for them. No postal boundaries are drawn here.':record?.id==='AR-94'?'Continental territory and nearby islands are shown here. The source also includes Antarctic and disputed South Atlantic claims, which are outside this view.':active==='brazil'?'26 states and the Federal District.':active==='argentina'?'23 provinces and Buenos Aires autonomous city.':record?.id==='UY-AR'?'19 departments. IGM separately marks Rincón de Maneco and Isla Brasileña as contested areas; those areas are outside the regular department fill.':'19 departments.');
   const details=$('code-details');details.replaceChildren();details.hidden=!cep&&!(ddd&&record);
@@ -189,19 +200,20 @@ export function createSouthAmerica(map,host){
   const breadcrumb=document.getElementById('breadcrumb-region');breadcrumb.hidden=!record;breadcrumb.textContent=record?.level>1?record.parentName+' / '+record.en:record?.en||'';document.getElementById('map-shell').dataset.selected=String(!!record);
   const anchor=sidebar.querySelector('.south-statistics-anchor');if(active==='argentina'&&record?.level===1)renderStatistics(anchor,'argentina:'+record.id);else clearStatistics(anchor);
  }
- async function select(record,fit=true,camera={}){if(!active||layerBusy)return;const entry=installed.get(active),parentId=provinceId;if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:parentId(selected)},{selected:false});selected=record||null;panel(record?'explore':'layers');if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:parentId(selected)},{selected:true});$('results').hidden=true;$('search').value='';renderSelection();syncLayers();if(fit&&selected?.boundaryAvailable!==false)host.fit(selected?.bounds||countries[active].bounds,undefined,camera);if(active==='argentina'){if(selected)await argentina.setMode(2,true,parentId(selected));else argentina.clear();if(selected?.level===3&&selected.boundaryAvailable)await argentinaCities.show(parentId(selected));else argentinaCities.clear();updateLabels();}}
- function renderSearch(){const q=$('search').value.trim(),box=$('results');box.replaceChildren();box.hidden=!q;const index=catalogue();if(!q||!index)return;const results=active==='argentina'?argentinaSearch(q):index.search(q);if(!results.length){const p=document.createElement('p');p.textContent=active==='brazil'&&brazilLayer==='ddd'?'No matching DDD or municipality.':'No matching divisions.';box.append(p);}for(const record of results){const button=document.createElement('button');button.className='search-result';const name=document.createElement('strong'),kind=document.createElement('small');name.textContent=record.en;kind.textContent=record.kind+(record.parentName?' · '+record.parentName:record.code?' · '+record.states.join(' / '):'');button.append(name,kind);button.onclick=()=>select(record);box.append(button);}}
+ async function select(record,fit=true,camera={}){if(!active||layerBusy)return;if(record?.cityRank===1)record=catalogues.get('argentina')?.records.find(r=>r.id==='AR-02')||record;const entry=installed.get(active),parentId=provinceId;if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:parentId(selected)},{selected:false});selected=record||null;panel(record?'explore':'layers');if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:parentId(selected)},{selected:true});$('results').hidden=true;$('search').value='';renderSelection();syncLayers();if(fit&&selected?.boundaryAvailable!==false)host.fit(selected?.bounds||countries[active].bounds,undefined,camera);if(active==='argentina'){if(selected)await argentina.setMode(2,true,parentId(selected));else argentina.clear();if(selected?.level===3&&selected.boundaryAvailable)await argentinaCities.show(parentId(selected));else argentinaCities.clear();updateLabels();}}
+ function renderSearch(){const q=$('search').value.trim(),box=$('results');box.replaceChildren();box.hidden=!q;const index=catalogue();if(!q||!index)return;const results=active==='argentina'?argentinaSearch(q):index.search(q);if(!results.length){const p=document.createElement('p');p.textContent=active==='brazil'&&brazilLayer==='ddd'?'No matching DDD or municipality.':'No matching divisions.';box.append(p);}for(const record of results){const button=document.createElement('button');button.className='search-result';const name=document.createElement('strong'),kind=document.createElement('small');name.textContent=record.en;kind.textContent=(record.level===3?cityDescription(record):record.kind)+(record.parentName?' · '+record.parentName:record.code?' · '+record.states.join(' / '):'');button.append(name,kind);button.onclick=()=>select(record);box.append(button);}}
  $('search').oninput=renderSearch;$('search').onkeydown=e=>{if(e.key==='Enter')$('results').querySelector('button')?.click();if(e.key==='Escape')$('results').hidden=true;};$('division').onchange=()=>select(catalogue()?.records.find(p=>p.id===$('division').value));$('reset').onclick=()=>select(active==='argentina'&&selected?.level>1?catalogue().records.find(p=>p.id===selected.parent):null);$('outlines').onchange=syncLayers;$('names').onchange=updateLabels;$('city-dots').onchange=()=>cityDots.sync();
  map.on('movestart',clearLabels);map.on('moveend',updateLabels);map.on('resize',updateLabels);
  map.on('click',e=>{
-  if(!window.AtlasDev.enabled||host.isBusy()||layerBusy)return;
+  if(host.isBusy()||layerBusy)return;
+  if(!data&&map.getLayer('argentina-portal-fill')){const hit=map.queryRenderedFeatures(e.point,{layers:['argentina-portal-fill']})[0];if(hit){host.switchAtlas('argentina');return;}}
   if(active==='argentina'){const dot=cityDots.hit(e.point);if(dot){select(dot);return;}const hit=argentina.hit(e.point);if(hit){select(hit);return;}}
   const entry=installed.get(active);if(entry){const hit=map.queryRenderedFeatures(e.point,{layers:[entry.layers[0]]})[0];if(hit){select(catalogues.get(active).records.find(p=>p.id===hit.properties.id));return;}}
-  if(map.getLayer('south-america-fill')){const hit=map.queryRenderedFeatures(e.point,{layers:['south-america-fill']})[0];if(hit)host.switchAtlas(hit.properties.country);}
+  if(map.getLayer('south-america-fill')){const hit=map.queryRenderedFeatures(e.point,{layers:['south-america-fill']})[0];if(hit&&allowed(hit.properties.country))host.switchAtlas(hit.properties.country);}
  });
  function portal(id){const c=countries[id];return{
   bounds:c.bounds,get ready(){return !!data&&(id==='brazil'&&brazilLayer==='cep'||installed.has(id));},warm:()=>warmCountry(id),
-  async enter(){active=id;selected=null;sidebar.hidden=false;sidebar.querySelector('.sidebar-scroll').scrollTop=0;const flag=$('national-flag');flag.src='vendor/flag-'+c.flag+'.svg';flag.alt='Flag of '+c.name;for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=id!=='argentina';if(id==='argentina'){document.getElementById('mode-province').textContent='Provinces';document.getElementById('mode-prefecture').textContent='Subdivisions';await argentina.setMode(1);cityDots.install(argentinaCities.records);}renderControls();renderSelection();panel('layers');syncLayers();syncArrow();if(id==='argentina')preloadProvinceFlags();},
+  async enter(){if(!allowed(id))return;active=id;selected=null;sidebar.hidden=false;sidebar.querySelector('.sidebar-scroll').scrollTop=0;const flag=$('national-flag');flag.src='vendor/flag-'+c.flag+'.svg';flag.alt='Flag of '+c.name;for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=id!=='argentina';if(id==='argentina'){document.getElementById('mode-province').textContent='Provinces';document.getElementById('mode-prefecture').textContent='Subdivisions';await argentina.setMode(1);cityDots.install(argentinaCities.records);}renderControls();renderSelection();panel('layers');syncLayers();syncArrow();if(id==='argentina')preloadProvinceFlags();},
   leave(){clearStatistics(sidebar.querySelector('.south-statistics-anchor'));layerEpoch++;layerBusy=false;if(id==='argentina'){argentina.clear();argentinaCities.clear();cityDots.clear();}active=null;selected=null;renderProvinceFlag();cancelPending();remove(id);sidebar.hidden=true;$('results').hidden=true;$('search').value='';clearLabels();contextFilters();for(const key of ['mode-province','mode-prefecture','mode-lock'])document.getElementById(key).hidden=false;},
   updateLabels,pauseLabels:clearLabels,getSelection:()=>selected?.id||null,getScope:()=>id==='brazil'?brazilLayer:id==='argentina'?argentina.scope||'':'',restore:async(key,scope)=>{if(id==='brazil'){const mode=['states','ddd','cep'].includes(scope)?scope:String(key||'').startsWith('BR-DDD-')?'ddd':'states';await setBrazilLayer(mode);}await select(catalogue()?.records.find(p=>p.id===key)||(id==='argentina'?argentina.find(key)||argentinaCities.find(key):null),false);},setMode(value){if(id==='argentina'){argentina.setMode(value);syncLayers();}},home:()=>select(null),viewParent:(camera={})=>select(id==='argentina'&&selected?.level>1?catalogue().records.find(p=>p.id===selected.parent):null,true,camera),random(){const records=id==='argentina'&&argentina.visibleRecords.length?argentina.visibleRecords:catalogue()?.records||[];if(records.length)select(records[Math.floor(Math.random()*records.length)]);}
  };}

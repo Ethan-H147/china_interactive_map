@@ -12,7 +12,7 @@ class Element{
 }
 const elements=new Map();globalThis.document={createElement:()=>new Element(),querySelector:key=>get(key),getElementById:key=>get(key),dispatchEvent(){}};
 function get(key){if(!elements.has(key))elements.set(key,new Element());return elements.get(key);}
-globalThis.window={AtlasDev:{enabled:false},AtlasLabels:{render:()=>[]}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
+globalThis.window={AtlasDev:{enabled:false,allows(country){return !['brazil','uruguay'].includes(country)||this.enabled;}},AtlasLabels:{render:()=>[]}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
 const flagRequests=[];let flagPending=0,maxFlagPending=0;
 globalThis.Image=class{
  set src(value){flagRequests.push(value);flagPending++;maxFlagPending=Math.max(maxFlagPending,flagPending);}
@@ -32,23 +32,27 @@ const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;
  getBounds:()=>({getWest:()=>-180,getEast:()=>180,getSouth:()=>-90,getNorth:()=>90})
 };
 layers.set('world-land',{id:'world-land',layout:{visibility:'visible'}});
-let country='china';const atlas=createSouthAmerica(map,{country:()=>country,isBusy:()=>false,switchAtlas(){},fit(){}});
+sources.set('world-land',{});const switches=[];map.queryRenderedFeatures=()=>[{properties:{country:'argentina'}}];
+let country='china';const atlas=createSouthAmerica(map,{country:()=>country,isBusy:()=>false,switchAtlas:(...args)=>switches.push(args),fit(){}});
 assert.equal(requests.length,0);assert.equal(workerLoads,0,'Creating Asian home must not load South American geometry');
 assert.equal(flagRequests.length,0,'Asian entry does not preload Argentine flags');
+assert.equal(layers.get('argentina-portal-fill').paint['fill-color'],'#d7d7d3','Argentina reuses existing background geometry for its clickable public portal');
+get('map-shell').children.at(-1).onclick();assert.deepEqual(switches.at(-1),['argentina',true,true],'Public flight goes directly to Argentina');
+for(const handler of handlers.get('click'))handler({point:{x:0,y:0}});assert.equal(switches.at(-1)[0],'argentina');assert.equal(requests.length,0,'Clickable overview adds no new geometry requests');
 await assert.rejects(atlas.portals.brazil.warm(),/Developer mode/);assert.equal(requests.length,0);
 window.AtlasDev.enabled=true;country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
-assert.deepEqual(layers.get('world-land').filter,['==',['get','country'],''],'Developer geometry replaces its coarse background silhouettes');
+assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina']]]],'Developer geometry replaces its coarse background silhouettes');
 window.AtlasDev.enabled=false;atlas.syncDeveloper();
-assert.equal(layers.get('south-america-fill').layout.visibility,'none');
-assert.equal(layers.get('south-america-lines').layout.visibility,'none');
+assert.equal(layers.get('south-america-fill').layout.visibility,'visible');
+assert.equal(layers.get('south-america-lines').layout.visibility,'visible');
 assert.equal(layers.get('south-brazil-fill').layout.visibility,'none');
-assert.equal(layers.get('world-land').filter,null,'Exiting developer mode restores all three light-gray land silhouettes');
+assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['argentina']]]],'Exiting developer mode keeps Brazil and Uruguay as background land');
 assert.equal(layers.get('world-land').layout.visibility,'visible','Developer mode must never hide public world land');
 window.AtlasDev.enabled=true;atlas.syncDeveloper();
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);
 assert.equal(flagRequests.length,0,'Brazil does not preload Argentine flags');
-country='argentina';await atlas.portals.argentina.warm();
+window.AtlasDev.enabled=false;country='argentina';await atlas.portals.argentina.warm();
 assert.equal(flagRequests.length,0,'Preparing Argentina does not start flag downloads');
 await atlas.portals.argentina.enter();
 for(let i=0;i<100&&(flagRequests.length<24||flagPending);i++)await new Promise(r=>setTimeout(r,1));
@@ -85,7 +89,11 @@ assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['==',['get','id'
 await atlas.portals.argentina.restore('AR-CITY-49','cities');assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['==',['get','id'],'AR-CITY-21'],'Temperley selects the same municipal territory');
 await atlas.portals.argentina.restore('AR-CITY-16','cities');assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'Pending municipal coverage does not substitute locality or department polygons');
 await atlas.portals.argentina.restore('AR-CITY-03','cities');
-atlas.portals.argentina.leave();country='uruguay';await atlas.portals.uruguay.warm();await atlas.portals.uruguay.enter();
+await atlas.portals.argentina.restore('AR-CITY-01','cities');assert.equal(atlas.portals.argentina.getSelection(),'AR-02','The CABA city dot and saved city link use the same jurisdiction and statistics as provincial selection');assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'CABA reuses its existing autonomous-city boundary');
+await atlas.portals.argentina.restore('AR-CITY-03','cities');
+atlas.syncDeveloper();assert.equal(layers.get('argentina-city-dots').layout.visibility,'visible','Developer mode exit retains public Argentine cities');
+assert.deepEqual(layers.get('south-america-fill').filter[1],['in',['get','country'],['literal',['argentina']]],'Only Argentina is clickable publicly');
+atlas.portals.argentina.leave();window.AtlasDev.enabled=true;country='uruguay';await atlas.portals.uruguay.warm();await atlas.portals.uruguay.enter();
 assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'Leaving Argentina releases city geometry');
 assert.ok(!sources.has('argentina-city-points'),'City dots are released on country exit');
 assert.equal(workerURLs.filter(url=>url.endsWith('uruguay-first.bin')).length,1);assert.ok(sources.has('south-uruguay-regions'));assert.ok(!sources.has('south-argentina-regions'));assert.equal(atlas.portals.uruguay.ready,true);

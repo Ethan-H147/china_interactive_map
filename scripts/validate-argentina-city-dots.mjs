@@ -1,6 +1,12 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {createCityDots} from '../dist/argentina-city-dots.mjs';
+import {cityDescription,argentinaMapLabel} from '../dist/south-america.mjs';
+import {labelLines} from '../dist/labels.mjs';
+for(const record of [{id:'AR-02'},{cityRank:1}])for(const language of ['en','local','both']){const label=argentinaMapLabel(record);assert.deepEqual(labelLines(label.en,label.local,language),['Buenos Aires (CABA)'],'CABA has one consistent map label');}
+assert.equal(cityDescription({en:'Banfield',boundaryName:'Lomas de Zamora',boundaryAvailable:true}),'City · Municipality: Lomas de Zamora');
+assert.equal(cityDescription({en:'Rosario',boundaryName:'Rosario',boundaryAvailable:true}),'City · Municipal boundary');
+assert.match(cityDescription({en:'La Banda',boundaryAvailable:false}),/pending/);
 let active=false,enabled=true,selected=null,query=[];
 const sources=new Map(),layers=new Map(),handlers=new Map(),states=[];
 const canvas={style:{},title:''};
