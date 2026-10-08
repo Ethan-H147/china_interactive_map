@@ -46,6 +46,9 @@ const huqiu=data.regions.features.find(f=>f.properties.adcode===320505),park=dat
 assert.equal(parts(huqiu.geometry).length,1,'Huqiu must have no eastern detached part');
 assert(parts(huqiu.geometry).every(p=>p[0].every(([x])=>x<120.63)));
 assert.equal(park.properties.adminType,'Development Zone');assert.equal(park.properties.parentCity,320500);assert(park.properties.functionalArea);
+for(const code of [320506,320508])assert.equal(parts(data.regions.features.find(f=>f.properties.adcode===code).geometry).length,1,'Park clipping left detached district ribbons '+code);
 const inRing=([x,y],r)=>{let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const [a,b]=r[i],[c,d]=r[j];if((b>y)!==(d>y)&&x<(c-a)*(y-b)/(d-b)+a)inside=!inside;}return inside;};
 for(const p of [[120.72,31.30],[120.75,31.37],[120.80,31.30]])assert(parts(park.geometry).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h))),'Industrial Park sample '+p);
+const wuzhong=data.regions.features.find(f=>f.properties.adcode===320506);
+for(const p of [[120.30,31.12],[120.62,31.22],[120.87,31.27]])assert(parts(wuzhong.geometry).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h))),'Wuzhong retained Taihu, central and Luzhi coverage '+p);
 console.log('Explore: 333 prefecture articles, 53 districts and Suzhou Industrial Park, 20 original-resolution photos; geometry, Huqiu separation, quiz exclusion, gallery scope and district → city → province navigation passed.');

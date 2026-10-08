@@ -6,7 +6,7 @@ import {mesh} from 'topojson-client';
 import mapshaper from 'mapshaper';
 import {readData} from './read-data.mjs';
 import {transformFeature} from './coordinates.mjs';
-import {separateSuzhouPark} from './suzhou-park.mjs';
+import {separateSuzhouPark,suzhouParkCorrection} from './suzhou-park.mjs';
 import {clipShenzhenLand} from './shenzhen-coast.mjs';
 import {reconcileShenzhenHongKong,finishShenzhenDistrictBorder} from './shenzhen-hongkong.mjs';
 import {refineGuangzhouDistricts} from './pearl-coast.mjs';
@@ -51,7 +51,7 @@ for(const code of codes){
   const top=topology({regions:clean});
   lines.push({type:'Feature',properties:{parentCity:code},geometry:mesh(top,top.objects.regions,(a,b)=>a!==b)});
   features.push(...clean.features);
-  report.push({city:code,districts:source.length,functionalAreas:code===320500?1:0,datavDistricts:datav.features.length,matchingCodes:source.every(f=>datav.features.some(d=>d.properties.adcode===f.properties.adcode)),uncoveredFraction:gapArea/area(parent.geometry),reference:'DataV county boundaries and AreaCity 2025.251231.260403',...(code===320500?{correction:'Suzhou Industrial Park is shown separately by current management. OSM relation 7363894 supplies its extent. The old eastern Huqiu component is included whole to retain its shared exterior edge and avoid slivers.',administration:'https://www.sipac.gov.cn/szgyyq/xzqh/parkProfile.shtml',geometry:'https://www.openstreetmap.org/relation/7363894'}:{})});
+  report.push({city:code,districts:source.length,functionalAreas:code===320500?1:0,datavDistricts:datav.features.length,matchingCodes:source.every(f=>datav.features.some(d=>d.properties.adcode===f.properties.adcode)),uncoveredFraction:gapArea/area(parent.geometry),reference:'DataV county boundaries and AreaCity 2025.251231.260403',...(code===320500?{correction:suzhouParkCorrection,administration:'https://www.sipac.gov.cn/szgyyq/xzqh/parkProfile.shtml',geometry:'https://www.openstreetmap.org/relation/7363894'}:{})});
 }
 const dataset={regions:fc(features),boundaries:fc(lines)};
 fs.writeFileSync('dist/data/city-districts.bin',gzipSync(JSON.stringify(dataset),{level:9}));

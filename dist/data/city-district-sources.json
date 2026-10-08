@@ -33,7 +33,7 @@
       "matchingCodes": true,
       "uncoveredFraction": 0.0009451349382584823,
       "reference": "DataV county boundaries and AreaCity 2025.251231.260403",
-      "correction": "Suzhou Industrial Park is shown separately by current management. OSM relation 7363894 supplies its extent. The old eastern Huqiu component is included whole to retain its shared exterior edge and avoid slivers.",
+      "correction": "Suzhou Industrial Park is shown separately by current management. OSM relation 7363894 supplies its extent. Retain the old eastern Huqiu component and absorb detached Wuzhong and Gusu clipping remnants into the park, preserving the existing shared exterior edges.",
       "administration": "https://www.sipac.gov.cn/szgyyq/xzqh/parkProfile.shtml",
       "geometry": "https://www.openstreetmap.org/relation/7363894"
     },
