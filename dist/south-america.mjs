@@ -75,7 +75,7 @@ export function createSouthAmerica(map,host){
   const first=catalogue()?.records||[],records=active==='argentina'?[...first.filter(p=>p.id!==argentina.scope),...argentina.visibleRecords,...(argentina.visibleRecords.length?[]:first.filter(p=>p.id===argentina.scope))]:first,b=map.getBounds();
   const visible=records.filter(p=>p.center[0]>=b.getWest()&&p.center[0]<=b.getEast()&&p.center[1]>=b.getSouth()&&p.center[1]<=b.getNorth());
   if(selected&&!visible.includes(selected))visible.unshift(selected);
-  const candidates=visible.map(p=>({...p,local:p.id==='AR-94'?'':p.id==='AR-02'?'National capital':p.local,selected:p===selected||p.id==='AR-02'}));
+  const candidates=visible.map(p=>({...p,local:p.id==='AR-94'?'':p.id==='AR-02'?'Buenos Aires (CABA)':p.local,selected:p===selected||p.id==='AR-02'}));
   for(const [id,c] of Object.entries(countries))if(id!==active||!records.length)candidates.push({id,en:c.name,local:c.local,center:c.center});
   labels=window.AtlasLabels.render(map,candidates,'province-label');
  }
