@@ -9,6 +9,8 @@
   },
   "private": true,
   "scripts": {
+    "build:brazil-municipalities": "node scripts/fetch-brazil-municipalities.mjs && node --max-old-space-size=12000 scripts/build-brazil-municipalities.mjs",
+    "test:brazil-municipalities": "node --check dist/argentina-local.mjs && node scripts/validate-brazil-municipalities.mjs && node scripts/validate-south-america-loading.mjs",
     "build:argentina-cities": "node scripts/fetch-argentina-cities.mjs && node --max-old-space-size=8000 scripts/build-argentina-cities.mjs",
     "test:argentina-cities": "node --check dist/argentina-city-dots.mjs && node scripts/validate-argentina-cities.mjs && node scripts/validate-argentina-city-dots.mjs && node scripts/validate-south-america-loading.mjs",
     "build:world-land": "node scripts/build-world-land.mjs",

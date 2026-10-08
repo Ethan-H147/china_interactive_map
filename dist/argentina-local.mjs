@@ -1,5 +1,6 @@
 import {loadCompressed} from './korea-data.mjs';
 import {createPlaceSearch} from './place-search.mjs';
+import {lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
 
 export function createArgentinaLocal(map,host,config={}){
  let index,indexJob,search,worker,rejectPending,epoch=0,entry,scope=null,mode=1,wait,loadJob;
@@ -25,7 +26,7 @@ export function createArgentinaLocal(map,host,config={}){
  }
  function show(parent){
   const next=parent||null;if(loadJob&&scope===next&&host.active()&&mode===2)return loadJob;
-  scope=next;const job=install();loadJob=job;job.finally(()=>{if(loadJob===job)loadJob=null;});return job;
+  scope=next;const job=install();loadJob=job;const done=()=>{if(loadJob===job)loadJob=null;};job.then(done,done);return job;
  }
  async function install(){
   if(!host.active()||(!config.selectedOnly&&mode!==2)||!scope||(config.base&&!index?.groups[scope])){release();host.status('');host.changed();return;}
@@ -42,22 +43,22 @@ export function createArgentinaLocal(map,host,config={}){
    });
    if(token!==epoch||!host.active())return;
    staged={scope:requested,records:payload.records,sources:[],layers:[],urls:[]};
-   for(const [name,blob] of Object.entries(payload.sources)){const id=prefix+requested+'-'+name,url=URL.createObjectURL(blob);staged.sources.push(id);staged.urls.push(url);map.addSource(id,{type:'geojson',data:url,promoteId:name==='regions'?'id':undefined,tolerance:.25,buffer:64,maxzoom:16,attribution:config.attribution||'Departments / partidos / comunas: <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">IGN, Argentina</a>'});}
-   const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer,'south-argentina-borders');staged.layers.push(layer.id);};
-   add({id:prefix+requested+'-fill',type:'fill',source:staged.sources[0],paint:{'fill-color':'#a9cee6','fill-opacity':['case',['boolean',['feature-state','selected'],false],config.selectedOnly?.18:.65,0],'fill-antialias':false}});
-   add({id:prefix+requested+'-borders',type:'line',source:staged.sources[1],layout:{'line-join':'round'},paint:{'line-color':'#5883a0','line-width':['interpolate',['linear'],['zoom'],3,.4,8,.8],'line-opacity':.65}});
-   add({id:prefix+requested+'-selection',type:'line',source:staged.sources[1],filter:['in','',['get','regionIds']],layout:{'line-join':'round'},paint:{'line-color':'#3979a3','line-width':2}});
+   for(const [name,blob] of Object.entries(payload.sources)){const id=prefix+requested+'-'+name,url=URL.createObjectURL(blob);staged.sources.push(id);staged.urls.push(url);map.addSource(id,{type:'geojson',data:url,promoteId:name==='regions'?'id':undefined,tolerance:.25,buffer:64,maxzoom:16,...(config.adaptive&&name==='lines'?lineSourceOptions:{}),attribution:config.attribution||'Departments / partidos / comunas: <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">IGN, Argentina</a>'});}
+   const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer,config.before||'south-argentina-borders');staged.layers.push(layer.id);};
+   add({id:prefix+requested+'-fill',type:'fill',source:staged.sources[0],paint:{'fill-color':config.fill||'#a9cee6','fill-opacity':['case',['boolean',['feature-state','selected'],false],config.selectedOnly?.18:.65,0],'fill-antialias':false}});
+   add({id:prefix+requested+'-borders',type:'line',source:staged.sources[1],layout:{'line-join':'round'},paint:{'line-color':config.line||'#5883a0','line-width':['interpolate',['linear'],['zoom'],3,.4,8,.8],'line-opacity':config.adaptive?adaptiveOpacity(.65):.65}});
+   add({id:prefix+requested+'-selection',type:'line',source:staged.sources[1],filter:['in','',['get','regionIds']],layout:{'line-join':'round'},paint:{'line-color':config.line||'#3979a3','line-width':2,...(config.adaptive?{'line-opacity':adaptiveOpacity()}: {})}});
    wait=new AbortController();await host.waitForSources(staged.sources,wait.signal);
    if(token!==epoch||!host.active())return;
    entry=staged;staged=null;sync();host.status('');host.changed();
-  }catch(error){if(token===epoch&&error.name!=='AbortError')host.status('Could not load '+noun+'. Select the province again to retry.');}
+  }catch(error){if(token===epoch&&error.name!=='AbortError')host.status('Could not load '+noun+'. Select the '+(config.parentNoun||'province')+' again to retry.');}
   finally{if(staged){for(const id of [...staged.layers].reverse())if(map.getLayer(id))map.removeLayer(id);for(const id of staged.sources)if(map.getSource(id))map.removeSource(id);staged.urls.forEach(URL.revokeObjectURL);}}
  }
  function setMode(value,automatic=false,parent=scope){
   if(automatic&&document.getElementById('mode-lock').getAttribute('aria-pressed')==='true')return show(parent);
   mode=value===2?2:1;
   document.getElementById('mode-province').setAttribute('aria-pressed',String(mode===1));document.getElementById('mode-prefecture').setAttribute('aria-pressed',String(mode===2));document.getElementById('map-shell').dataset.level=mode===1?'province':'prefecture';
-  document.getElementById('map-hint').textContent=mode===1?'Select a province':config.level===3?(parent?'Select a city':'Select a province to view cities'):parent==='AR-06'?'Select a partido':parent==='AR-02'?'Select a comuna':parent?'Select a department':'Select a province to view subdivisions';
+  document.getElementById('map-hint').textContent=config.parentNoun?(mode===1?'Select a state':parent?'Select a municipality':'Select a state to view municipalities'):mode===1?'Select a province':config.level===3?(parent?'Select a city':'Select a province to view cities'):parent==='AR-06'?'Select a partido':parent==='AR-02'?'Select a comuna':parent?'Select a department':'Select a province to view subdivisions';
   return show(parent);
  }
  return{warm,search:q=>search?.(q)||[],find:id=>index?.records.find(r=>r.id===id),children:parent=>index?.records.filter(r=>r.parent===parent)||[],

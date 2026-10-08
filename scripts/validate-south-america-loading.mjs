@@ -21,9 +21,9 @@ globalThis.Image=class{
  decode(){return new Promise(resolve=>setTimeout(()=>{flagPending--;resolve();},1));}
 };
 const requests=[];globalThis.fetch=async url=>{requests.push(url);return new Response(fs.readFileSync('dist/'+url));};
-let workerLoads=0,terminated=0,failNextDDD=false;const workerURLs=[];
+let workerLoads=0,terminated=0,failNextDDD=false,failNextMunicipality=false;const workerURLs=[];
 globalThis.Worker=class{
- postMessage({url}){workerLoads++;workerURLs.push(url);this.timer=setTimeout(()=>{if(failNextDDD&&url.endsWith('-ddd.bin')){failNextDDD=false;this.onmessage({data:{error:'Test network failure'}});return;}const payload=JSON.parse(gunzipSync(fs.readFileSync('dist/'+url)));this.onmessage({data:{records:payload.records,sources:Object.fromEntries(['regions','lines'].map(key=>[key,new Blob([JSON.stringify(payload[key])])]))}});},5);}
+ postMessage({url}){workerLoads++;workerURLs.push(url);this.timer=setTimeout(()=>{if(failNextDDD&&url.endsWith('-ddd.bin')){failNextDDD=false;this.onmessage({data:{error:'Test network failure'}});return;}if(failNextMunicipality&&url.includes('/brazil-local/')){failNextMunicipality=false;this.onmessage({data:{error:'Test municipal network failure'}});return;}const payload=JSON.parse(gunzipSync(fs.readFileSync('dist/'+url)));this.onmessage({data:{records:payload.records,sources:Object.fromEntries(['regions','lines'].map(key=>[key,new Blob([JSON.stringify(key==='lines'&&url.includes('/brazil-local/')?lineData(payload[key]):payload[key])])]))}});},5);}
  terminate(){clearTimeout(this.timer);terminated++;}
 };
 const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;const map={
@@ -57,6 +57,7 @@ for(const [source,layer,key] of [['south-land-borders','south-land-boundaries','
  assert(count(retained.tolerance)<count(0)*.15,'Zoomed-out tiles must discard detail smaller than a pixel');
 }
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
+assert.equal(workerURLs.filter(url=>url.includes('/brazil-local/')).length,0,'Opening Brazil loads no municipal geometry');
 assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina','malaysia','singapore']]]],'Developer geometry replaces its coarse background silhouettes');
 window.AtlasDev.enabled=false;atlas.syncDeveloper();
 assert.equal(layers.get('south-america-fill').layout.visibility,'visible');
@@ -141,7 +142,20 @@ const pendingDDD=mode('ddd').onclick();await Promise.resolve();await Promise.res
 assert.equal(atlas.portals.brazil.getScope(),'states','Latest layer intent wins');assert.ok(!sources.has('south-brazil-ddd-regions'));
 tilesReady=false;const stagedDDD=mode('ddd').onclick();await until(()=>sources.has('south-brazil-ddd-regions'));await mode('states').onclick();await stagedDDD;tilesReady=true;
 assert.ok(sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-ddd-regions'),'Cancelled staged sources and blob URLs are removed');
-const beforeCEP=workerLoads;await mode('cep').onclick();assert.equal(workerLoads,beforeCEP,'Pending CEP view cannot fetch fabricated polygons');
+await atlas.portals.brazil.restore('BR-3550308');
+assert.equal(atlas.portals.brazil.getSelection(),'BR-3550308');assert.equal(atlas.portals.brazil.getScope(),'states','Shared views retain the Brazil administrative view');assert(sources.has('br-local-BR-35-regions'));
+assert.equal(layers.get('south-brazil-borders').layout.visibility,'visible','Other states retain their borders');
+assert.equal(sources.get('br-local-BR-35-lines').tolerance,lineSourceOptions.tolerance);assert.deepEqual(layers.get('br-local-BR-35-borders').paint['line-opacity'],adaptiveOpacity(.65));assert.equal(layers.get('br-local-BR-35-fill').paint['fill-antialias'],false,'Municipal fills do not add coastal outlines');
+const municipalLoads=workerLoads;await atlas.portals.brazil.restore('BR-3509502');assert.equal(workerLoads,municipalLoads,'Selecting another municipality in the same state reuses geometry');
+const oldMunicipality=atlas.portals.brazil.restore('BR-3304557'),latestMunicipality=atlas.portals.brazil.restore('BR-3106200');await Promise.all([oldMunicipality,latestMunicipality]);
+assert.equal(atlas.portals.brazil.getSelection(),'BR-3106200');assert(sources.has('br-local-BR-31-regions'));assert(!sources.has('br-local-BR-35-regions'));assert(!sources.has('br-local-BR-33-regions'));assert.equal([...sources.keys()].filter(id=>/^br-local-.*-regions$/.test(id)).length,1,'Only one state holds municipal geometry');
+atlas.portals.brazil.setMode(1);assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'States mode releases municipal sources');
+get('mode-lock').setAttribute('aria-pressed','true');await atlas.portals.brazil.restore('BR-3550308');assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'Automatic municipal selection respects the level lock');get('mode-lock').setAttribute('aria-pressed','false');
+failNextMunicipality=true;await atlas.portals.brazil.restore('BR-3304557');assert.match(sidebar.querySelector('#south-layer-status').textContent,/Could not load municipalities/);await atlas.portals.brazil.restore('BR-3304557');assert(sources.has('br-local-BR-33-regions'),'A failed state can be retried');
+window.AtlasDev.enabled=false;atlas.syncDeveloper();assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'Exiting developer mode releases municipal geometry');window.AtlasDev.enabled=true;atlas.syncDeveloper();
+await atlas.portals.brazil.restore('BR-3304557');await mode('ddd').onclick();assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'DDD view releases municipal geometry');await mode('states').onclick();
+tilesReady=false;const stagedMunicipal=atlas.portals.brazil.restore('BR-3550308');await until(()=>sources.has('br-local-BR-35-regions'));
+const beforeCEP=workerLoads;await mode('cep').onclick();await stagedMunicipal;tilesReady=true;assert.equal(workerLoads,beforeCEP,'Pending CEP view cannot fetch fabricated polygons');assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'View changes cancel staged municipal sources');
 assert.ok(!sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.getScope(),'cep');assert.match(sidebar.querySelector('.preview-note').textContent,/No postal boundaries/);
 atlas.portals.brazil.random();assert.equal(atlas.portals.brazil.getSelection(),null,'Pending postal view cannot select an invisible DDD or state');
 await mode('states').onclick();atlas.portals.brazil.leave();
@@ -152,3 +166,4 @@ assert.equal(requests.filter(url=>url==='data/flight-context.bin').length,1);
 console.log('Developer gating, zero geometry on Asian entry, per-country loading, worker cancellation and release of inactive boundaries passed.');
 console.log('DDD demand loading, readiness without flashing, failure recovery, latest layer priority, cross-state restoration and truthful pending postal mode passed.');
 console.log('Argentina deferred geometry, provincial border retention, shared-province reuse, rapid selection priority, saved-child restoration, level lock and staged source cancellation passed.');
+console.log('Brazil deferred municipal geometry, one-state reuse/release, parent restoration, adaptive lines, rapid selection cancellation, lock, retry and DDD/CEP cancellation passed.');

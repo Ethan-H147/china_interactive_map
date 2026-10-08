@@ -1,0 +1,202 @@
+{
+  "publisher": "IBGE",
+  "sourceURL": "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/estrutura-territorial/15774-malhas.html",
+  "downloadURL": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/Brasil/BR_Municipios_2025.zip",
+  "referenceYear": 2025,
+  "retrieved": "2026-10-06",
+  "sha256": "840bbe6f73726ef9d1460ce49fdfe01a278935c41180d3c893e25ca21db083bd",
+  "originalCount": 5573,
+  "municipalities": 5569,
+  "displayedCount": 5571,
+  "specialJurisdictions": [
+    {
+      "id": "BR-5300108",
+      "name": "Brasília",
+      "kind": "Federal district"
+    },
+    {
+      "id": "BR-2605459",
+      "name": "Fernando de Noronha",
+      "kind": "State district"
+    }
+  ],
+  "excluded": [
+    {
+      "code": "4300001",
+      "name": "Área Operacional \"Lagoa Mirim\"",
+      "reason": "State operational lake area, not a municipality"
+    },
+    {
+      "code": "4300002",
+      "name": "Área Operacional \"Lagoa dos Patos\"",
+      "reason": "State operational lake area, not a municipality"
+    }
+  ],
+  "indexBytes": 289773,
+  "generalizationMeters": 75,
+  "method": "Official IBGE 2025 polygons with shared topology simplified to 75 metres and interior labels. Only shared internal edges are drawn, without coastal outlines. A small national name index supports search; a temporary worker loads one selected state, and switching states or views releases previous detail. MapLibre applies pixel-based simplification with zoom; tiny line paths fade continuously. No municipal statistics are included.",
+  "groups": {
+    "BR-12": {
+      "count": 22,
+      "file": "BR-12.bin",
+      "bytes": 174886,
+      "decodedBytes": 548738
+    },
+    "BR-27": {
+      "count": 102,
+      "file": "BR-27.bin",
+      "bytes": 94569,
+      "decodedBytes": 346411
+    },
+    "BR-16": {
+      "count": 16,
+      "file": "BR-16.bin",
+      "bytes": 166038,
+      "decodedBytes": 491586
+    },
+    "BR-13": {
+      "count": 62,
+      "file": "BR-13.bin",
+      "bytes": 1087295,
+      "decodedBytes": 3239955
+    },
+    "BR-29": {
+      "count": 417,
+      "file": "BR-29.bin",
+      "bytes": 1115613,
+      "decodedBytes": 3639621
+    },
+    "BR-23": {
+      "count": 184,
+      "file": "BR-23.bin",
+      "bytes": 410701,
+      "decodedBytes": 1311958
+    },
+    "BR-53": {
+      "count": 1,
+      "file": "BR-53.bin",
+      "bytes": 4895,
+      "decodedBytes": 15829
+    },
+    "BR-32": {
+      "count": 78,
+      "file": "BR-32.bin",
+      "bytes": 233402,
+      "decodedBytes": 788811
+    },
+    "BR-52": {
+      "count": 246,
+      "file": "BR-52.bin",
+      "bytes": 1342475,
+      "decodedBytes": 4358818
+    },
+    "BR-21": {
+      "count": 217,
+      "file": "BR-21.bin",
+      "bytes": 621994,
+      "decodedBytes": 1956213
+    },
+    "BR-51": {
+      "count": 142,
+      "file": "BR-51.bin",
+      "bytes": 1307737,
+      "decodedBytes": 4123611
+    },
+    "BR-50": {
+      "count": 79,
+      "file": "BR-50.bin",
+      "bytes": 606172,
+      "decodedBytes": 1940501
+    },
+    "BR-31": {
+      "count": 853,
+      "file": "BR-31.bin",
+      "bytes": 2501136,
+      "decodedBytes": 8175228
+    },
+    "BR-15": {
+      "count": 144,
+      "file": "BR-15.bin",
+      "bytes": 811422,
+      "decodedBytes": 2424809
+    },
+    "BR-25": {
+      "count": 223,
+      "file": "BR-25.bin",
+      "bytes": 269244,
+      "decodedBytes": 924467
+    },
+    "BR-41": {
+      "count": 399,
+      "file": "BR-41.bin",
+      "bytes": 1228594,
+      "decodedBytes": 4083489
+    },
+    "BR-26": {
+      "count": 185,
+      "file": "BR-26.bin",
+      "bytes": 267029,
+      "decodedBytes": 887334
+    },
+    "BR-22": {
+      "count": 224,
+      "file": "BR-22.bin",
+      "bytes": 305358,
+      "decodedBytes": 1015378
+    },
+    "BR-33": {
+      "count": 92,
+      "file": "BR-33.bin",
+      "bytes": 230476,
+      "decodedBytes": 789852
+    },
+    "BR-24": {
+      "count": 167,
+      "file": "BR-24.bin",
+      "bytes": 120195,
+      "decodedBytes": 448799
+    },
+    "BR-43": {
+      "count": 497,
+      "file": "BR-43.bin",
+      "bytes": 1319409,
+      "decodedBytes": 4387314
+    },
+    "BR-11": {
+      "count": 52,
+      "file": "BR-11.bin",
+      "bytes": 279249,
+      "decodedBytes": 903685
+    },
+    "BR-14": {
+      "count": 15,
+      "file": "BR-14.bin",
+      "bytes": 154085,
+      "decodedBytes": 476705
+    },
+    "BR-42": {
+      "count": 295,
+      "file": "BR-42.bin",
+      "bytes": 721909,
+      "decodedBytes": 2435837
+    },
+    "BR-35": {
+      "count": 645,
+      "file": "BR-35.bin",
+      "bytes": 1456937,
+      "decodedBytes": 4862266
+    },
+    "BR-28": {
+      "count": 75,
+      "file": "BR-28.bin",
+      "bytes": 113984,
+      "decodedBytes": 410258
+    },
+    "BR-17": {
+      "count": 139,
+      "file": "BR-17.bin",
+      "bytes": 837012,
+      "decodedBytes": 2645519
+    }
+  }
+}
