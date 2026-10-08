@@ -1,0 +1,12 @@
+:root[data-atlas=malaysia]{--ink:#30364b;--muted:#778091;--red:#303e83;--red-dark:#202b65;--gold:#b29a45;--line:#e4e3d9;--paper:#fffefb;--map:#f1f1e9}
+:root[data-atlas=singapore]{--ink:#3b3030;--muted:#857473;--red:#b83932;--red-dark:#902b25;--gold:#b88a42;--line:#eddfdc;--paper:#fffdfc;--map:#f7f2f1}
+body[data-atlas=malaysia]{--accent-soft:#303e8312;--surface-soft:#f4f3ea;--header-stripe:linear-gradient(90deg,#303e83 30%,#d1ad38 30% 32%,#c63c42 32% 66%,#e5e3dd 66%)}
+body[data-atlas=singapore]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--header-stripe:linear-gradient(90deg,#c83630 50%,#e5dedb 50%)}
+.southeast-sidebar input[type=search]{width:100%;padding:13px 12px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:var(--paper)}
+.southeast-sidebar [id$=search-results]{max-height:260px;overflow:auto;margin-top:8px}.southeast-sidebar .search-result{background:var(--surface-soft)}
+.southeast-sidebar .selection-top{display:grid;grid-template-columns:minmax(0,1fr) 40px;grid-template-rows:36px;align-items:start}
+.division-flags{grid-column:2;grid-row:1;display:flex;flex-direction:column;gap:8px;align-items:center}.division-flags img{display:block;width:40px;height:auto;max-height:30px;object-fit:contain;border-radius:3px;box-shadow:0 0 0 1px #00000012}.division-flags a{display:block}
+.southeast-sidebar [id$=selection-kind],.southeast-sidebar h2,.southeast-sidebar [id$=selection-local]{padding-right:60px}.southeast-sidebar h2{font-size:35px}
+#my-subdivisions{border-block:1px solid var(--line);padding:14px 0;margin:20px 0}#my-subdivisions summary{cursor:pointer;font-size:14px;color:var(--muted)}.southeast-sidebar [id$=detail-status]{font-size:14px;color:var(--muted)}
+body:is([data-atlas=malaysia],[data-atlas=singapore]) .map-mode{background:var(--paper);border-color:var(--line)}
+@media(max-width:760px){.southeast-sidebar h2{font-size:32px}}

@@ -12,7 +12,7 @@ class Element{
 }
 const elements=new Map();globalThis.document={createElement:()=>new Element(),querySelector:key=>get(key),getElementById:key=>get(key),dispatchEvent(){}};
 function get(key){if(!elements.has(key))elements.set(key,new Element());return elements.get(key);}
-globalThis.window={AtlasDev:{enabled:false,allows(country){return !['brazil','uruguay'].includes(country)||this.enabled;}},AtlasLabels:{render:()=>[]}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
+globalThis.window={AtlasDev:{enabled:false,allows(country){return !['brazil','uruguay','malaysia','singapore'].includes(country)||this.enabled;}},AtlasLabels:{render:()=>[]}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
 const flagRequests=[];let flagPending=0,maxFlagPending=0;
 globalThis.Image=class{
  set src(value){flagRequests.push(value);flagPending++;maxFlagPending=Math.max(maxFlagPending,flagPending);}
@@ -42,7 +42,7 @@ for(const handler of handlers.get('click'))handler({point:{x:0,y:0}});assert.equ
 await assert.rejects(atlas.portals.brazil.warm(),/Developer mode/);assert.equal(requests.length,0);
 window.AtlasDev.enabled=true;country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
-assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina']]]],'Developer geometry replaces its coarse background silhouettes');
+assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina','malaysia','singapore']]]],'Developer geometry replaces its coarse background silhouettes');
 window.AtlasDev.enabled=false;atlas.syncDeveloper();
 assert.equal(layers.get('south-america-fill').layout.visibility,'visible');
 assert.equal(layers.get('south-america-lines').layout.visibility,'visible');

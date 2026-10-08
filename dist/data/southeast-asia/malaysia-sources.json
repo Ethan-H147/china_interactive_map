@@ -1,0 +1,16 @@
+{
+  "country": "malaysia",
+  "retrieved": "2026-10-08",
+  "sources": {
+    "administrative_1_state.geojson": {
+      "url": "https://raw.githubusercontent.com/dosm-malaysia/data-open/main/datasets/geodata/administrative_1_state.geojson",
+      "features": 16
+    },
+    "administrative_2_district.geojson": {
+      "url": "https://raw.githubusercontent.com/dosm-malaysia/data-open/main/datasets/geodata/administrative_2_district.geojson",
+      "features": 160
+    }
+  },
+  "coverage": "13 states, 3 federal territories and 156 district jurisdictions from DOSM’s published geometry. Perlis and the three federal territories have no separate district layer. These are the source’s statistical boundaries; subsequent administrative changes may not be included.",
+  "processing": "Shared topology; state silhouettes dissolved from the same district geometry. Detail loaded only for the selected state."
+}

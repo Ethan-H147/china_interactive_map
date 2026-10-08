@@ -1,0 +1,185 @@
+{
+  "retrieved": "2026-10-08",
+  "flags": {
+    "MY-01": {
+      "file": "vendor/malaysia-flags/MY-01.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Johor.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Johor.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "Mrmw, Mike Rohsopht",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Johor.svg",
+      "sha256": "46c75513f4baf6c5f47744ec85194b585943b35a41ed5de415002867ef923718",
+      "bytes": 1498
+    },
+    "MY-02": {
+      "file": "vendor/malaysia-flags/MY-02.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kedah.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Flag_of_Kedah.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "Bukhrin at English Wikipedia",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kedah.svg",
+      "sha256": "1d367ce52b5f8a58d685d92a74b5101237243f6a5f358130aa9639771ad7fb70",
+      "bytes": 3964
+    },
+    "MY-03": {
+      "file": "vendor/malaysia-flags/MY-03.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kelantan.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_Kelantan.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "author": "Mysid",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "e3ef814ef752e3115461f3c2f0dc1f2cf7d395985d460ad73a7bed542061ce4b",
+      "bytes": 2130
+    },
+    "MY-04": {
+      "file": "vendor/malaysia-flags/MY-04.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Malacca.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_Malacca.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "User Mysid on en.wikipedia",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Malacca.svg",
+      "sha256": "ab125f52186c1784534d13fce93488ceabbd2824575c86a546b3b1d06328ba07",
+      "bytes": 948
+    },
+    "MY-05": {
+      "file": "vendor/malaysia-flags/MY-05.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Negeri_Sembilan.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/db/Flag_of_Negeri_Sembilan.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "Himasaram",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Negeri_Sembilan.svg",
+      "sha256": "33babccbe2397a8eba1454be3e85ef69be600b2b952de70c2adca2232b22d0c2",
+      "bytes": 222
+    },
+    "MY-06": {
+      "file": "vendor/malaysia-flags/MY-06.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Pahang.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Pahang.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "No machine-readable author provided. Urmas assumed (based on copyright claims).",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Pahang.svg",
+      "sha256": "8d84ce2277e4ce5ef03754dc26ee22f99d23f1f3ec9d8cad497f394f9fa4ee20",
+      "bytes": 48
+    },
+    "MY-07": {
+      "file": "vendor/malaysia-flags/MY-07.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Penang_(Malaysia).svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Penang_%28Malaysia%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "Original designer of the flag is unknown.",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Penang_(Malaysia).svg",
+      "sha256": "294e71dd7008b29bb73790cbb0ecd6cc294aae707ea6f7a6d429e4772c1cada5",
+      "bytes": 4228
+    },
+    "MY-08": {
+      "file": "vendor/malaysia-flags/MY-08.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Perak.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/8/87/Flag_of_Perak.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "No machine-readable author provided. Urmas assumed (based on copyright claims).",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Perak.svg",
+      "sha256": "018a68dcd99579f0c2c7debe6dad6df797ded3b98979b8c6dff7a37082e99a68",
+      "bytes": 98
+    },
+    "MY-09": {
+      "file": "vendor/malaysia-flags/MY-09.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Perlis.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Perlis.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "No machine-readable author provided. Urmas assumed (based on copyright claims).",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Perlis.svg",
+      "sha256": "d53bcb7930e25230db83fd73efb447d0863a7fa2a7875f4f0b0326bd7ffa8db0",
+      "bytes": 50
+    },
+    "MY-10": {
+      "file": "vendor/malaysia-flags/MY-10.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Selangor.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Flag_of_Selangor.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "author": "Mysid",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "14481175a18af8812c30961aebe6b43ecd9b44ce6e938b8dbe1f1edd6d630f33",
+      "bytes": 888
+    },
+    "MY-11": {
+      "file": "vendor/malaysia-flags/MY-11.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Terengganu.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Flag_of_Terengganu.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "author": "Drawn by Mysid.",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "97f288da96d8f1e95240e172c9d360eef0057d4f8ad1f93f49c705e9dfb8b066",
+      "bytes": 1068
+    },
+    "MY-12": {
+      "file": "vendor/malaysia-flags/MY-12.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sabah.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Flag_of_Sabah.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "Mysid",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Sabah.svg",
+      "sha256": "17f89debb8c69f02e5b4a0dbea2712bbe46d53db1929e21bd115f1b124a3adef",
+      "bytes": 678
+    },
+    "MY-13": {
+      "file": "vendor/malaysia-flags/MY-13.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sarawak.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Flag_of_Sarawak.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "CC BY-SA 3.0",
+      "author": "Matthew A. Lockhart",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "sha256": "e50bd05a7b28e955a29814fa0bc9068ceac8fa52f3db12847226324a03226525",
+      "bytes": 2198
+    },
+    "MY-14": {
+      "file": "vendor/malaysia-flags/MY-14.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kuala_Lumpur,_Malaysia.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Kuala_Lumpur%2C_Malaysia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "No machine-readable author provided. Zscout370 assumed (based on copyright claims).",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kuala_Lumpur,_Malaysia.svg",
+      "sha256": "b715fb82af446adc93a132a9a91060f3c6b443e97a7c9e66cceb260e46d66cc8",
+      "bytes": 930
+    },
+    "MY-15": {
+      "file": "vendor/malaysia-flags/MY-15.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Labuan.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/69/Flag_of_Labuan.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "Stefan Fussan",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Labuan.svg",
+      "sha256": "1602bd57e57e523dc01673d3101387c48870f93d2d828b5b3051da2f33fa09c4",
+      "bytes": 2434
+    },
+    "MY-16": {
+      "file": "vendor/malaysia-flags/MY-16.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Putrajaya.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Putrajaya.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "This vector image includes elements that have been taken or adapted from this file:",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Putrajaya.svg",
+      "sha256": "59355df29078608f30bf4b48443b0c5cb5e6562b7ca4bc2d87fd17c1eec8a27e",
+      "bytes": 11110
+    },
+    "my": {
+      "file": "vendor/flag-my.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Malaysia.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "MapGrid (old version SKopp, Zscout370   and  Ranking Update)",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Malaysia.svg",
+      "sha256": "59287a9074fdcfa77edc7d2ae73a69779ee0bb9f2d8da16acfa79c64ad774489",
+      "bytes": 1768
+    },
+    "sg": {
+      "file": "vendor/flag-sg.webp",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Singapore.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "license": "Public domain",
+      "author": "Original: Government of Singapore Vector:  Zscout370",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Singapore.svg",
+      "sha256": "276b9786fd50e45746e87f433b0ae0e94bdac2bad6a21338d499d7aa177d8e36",
+      "bytes": 1468
+    }
+  }
+}

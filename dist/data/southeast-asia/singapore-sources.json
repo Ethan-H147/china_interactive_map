@@ -1,0 +1,14 @@
+{
+  "country": "singapore",
+  "retrieved": "2026-10-08",
+  "sources": {
+    "nationalMap": {
+      "url": "https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view",
+      "features": 1434,
+      "dataDate": "2025-06",
+      "license": "Singapore Open Data Licence"
+    }
+  },
+  "coverage": "Singapore coastal outline from SLA National Map Polygon, June 2025; parks, water polygons, inset annotations and Malaysian shores excluded. No subdivisions.",
+  "processing": "Shared topology; state silhouettes dissolved from the same district geometry. Detail loaded only for the selected state."
+}

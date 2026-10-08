@@ -61,6 +61,8 @@
     "test:zhuhai-macau": "node scripts/validate-zhuhai-macau.mjs",
     "test:archipelago-statistics": "node scripts/validate-archipelago-statistics.mjs",
     "build:argentina-statistics": "node scripts/prepare-argentina-statistics.mjs",
-    "test:argentina-statistics": "node scripts/validate-argentina-statistics.mjs"
+    "test:argentina-statistics": "node scripts/validate-argentina-statistics.mjs",
+    "build:southeast-asia": "node scripts/fetch-malaysia-singapore.mjs && node scripts/build-malaysia-singapore.mjs",
+    "test:southeast-asia": "node --check dist/southeast-asia.mjs && node --check dist/southeast-asia-worker.mjs && node scripts/validate-southeast-asia.mjs"
   }
 }

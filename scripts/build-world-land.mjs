@@ -8,7 +8,7 @@ const world=await response.json();
 // Selectable countries already have their own reconciled coastal silhouettes.
 // Exclude the coarse versions so they cannot protrude behind detailed coasts.
 const portals=new Set(['CHN','TWN','KOR','PRK','MNG','JPN','PHL','IDN']);
-const previews={BRA:'brazil',ARG:'argentina',URY:'uruguay'};
+const previews={BRA:'brazil',ARG:'argentina',URY:'uruguay',MYS:'malaysia',SGP:'singapore'};
 const features=world.features.filter(f=>!portals.has(f.properties.ADM0_A3)).map(f=>({
  type:'Feature',properties:{country:previews[f.properties.ADM0_A3]||''},geometry:f.geometry
 }));

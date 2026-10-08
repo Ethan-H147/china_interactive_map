@@ -46,11 +46,11 @@ export function createSatelliteDisplay(map,host,ui={
   function message(text){ui.status.textContent=text;ui.status.hidden=!text;}
   function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);
     const southLayers=southImageryLayers(map);
-    const layers=['china-context','province-fill','province-fragment-fill','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill','argentina-portal-fill','korea-first-fill','mongolia-first-fill','japan-first-fill','south-america-fill',...southLayers.map(layer=>layer.id)].filter(id=>map.getLayer(id)).join(',');
+    const layers=['china-context','province-fill','province-fragment-fill','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill','malaysia-portal-fill','singapore-portal-fill','argentina-portal-fill','korea-first-fill','mongolia-first-fill','japan-first-fill','south-america-fill',...southLayers.map(layer=>layer.id)].filter(id=>map.getLayer(id)).join(',');
     if(visible!==lastVisible||(visible&&(opacity!==lastOpacity||layers!==lastLayers))){
     lastLayers=layers;
     lastVisible=visible;lastOpacity=opacity;
-    for(const id of ['china-context','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill','argentina-portal-fill','south-america-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
+    for(const id of ['china-context','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill','malaysia-portal-fill','singapore-portal-fill','argentina-portal-fill','south-america-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
     southAppearance(visible,opacity,southLayers);
     host.onVisible(visible,opacity);
   }}

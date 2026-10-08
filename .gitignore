@@ -1,4 +1,5 @@
 node_modules/
+scripts/additional-sources/malaysia-singapore/*.geojson
 scripts/japan-sources/municipalities/
 scripts/additional-sources/archipelago/*.geojson
 scripts/additional-sources/archipelago/*.zip

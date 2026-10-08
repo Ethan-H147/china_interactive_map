@@ -6,7 +6,7 @@ function loadError(error){
   document.getElementById('retry').onclick=()=>location.reload();
 }
 try{
-  const modules={AtlasSouthAmerica:'south-america.mjs',AtlasArchipelago:'archipelago.mjs',AtlasSearchRanking:'search-ranking.mjs',AtlasJapan:'japan.mjs',AtlasStatistics:'statistics.mjs',AtlasQuiz:'quiz-engine.mjs',AtlasNameQuiz:'name-quiz.mjs',AtlasPlaceTools:'place-tools.mjs',AtlasKorea:'korea-portal.mjs',AtlasMongolia:'mongolia.mjs',AtlasTheme:'atlas-theme.mjs',AtlasLines:'adaptive-lines.mjs',AtlasMotion:'motion.mjs',AtlasCapitals:'capitals.mjs',AtlasWater:'water.mjs',AtlasSatellite:'satellite.mjs',AtlasExplore:'explore.mjs',AtlasLabels:'labels.mjs',AtlasView:'view-state.mjs'};
+  const modules={AtlasSoutheastAsia:'southeast-asia.mjs',AtlasSouthAmerica:'south-america.mjs',AtlasArchipelago:'archipelago.mjs',AtlasSearchRanking:'search-ranking.mjs',AtlasJapan:'japan.mjs',AtlasStatistics:'statistics.mjs',AtlasQuiz:'quiz-engine.mjs',AtlasNameQuiz:'name-quiz.mjs',AtlasPlaceTools:'place-tools.mjs',AtlasKorea:'korea-portal.mjs',AtlasMongolia:'mongolia.mjs',AtlasTheme:'atlas-theme.mjs',AtlasLines:'adaptive-lines.mjs',AtlasMotion:'motion.mjs',AtlasCapitals:'capitals.mjs',AtlasWater:'water.mjs',AtlasSatellite:'satellite.mjs',AtlasExplore:'explore.mjs',AtlasLabels:'labels.mjs',AtlasView:'view-state.mjs'};
   modules.AtlasZoomLock='zoom-lock.mjs';
   const rendererPromise=import('./vendor/maplibre-gl.mjs');
   await Promise.all(Object.entries(modules).map(async([name,file])=>{window[name]=await import('./'+file);}));
