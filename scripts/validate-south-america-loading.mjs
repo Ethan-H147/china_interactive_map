@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import {createSouthAmerica} from '../dist/south-america.mjs';
+import {lineData,lineSourceOptions,adaptiveOpacity} from '../dist/adaptive-lines.mjs';
+import {GeoJSONVT} from '@maplibre/geojson-vt';
 class Element{
  constructor(){this.children=[];this.dataset={};this.checked=true;this.hidden=false;this.nodes=new Map();}
  setAttribute(key,value){this[key]=value;}getAttribute(key){return this[key];}
@@ -44,6 +46,16 @@ window.AtlasDev.enabled=true;country='brazil';await atlas.portals.brazil.warm();
 assert.equal(layers.get('south-land-boundaries').layout.visibility,'visible','International land borders remain visible in country views');
 assert.equal(layers.get('south-land-boundaries').source,'south-land-borders','Draw only shared international lines, never country perimeters');
 assert.equal(layers.get('south-river-boundaries').layout.visibility,'visible','Uruguay River international boundary remains visible');
+const borderContext=JSON.parse(gunzipSync(fs.readFileSync('dist/data/flight-context.bin')));
+for(const [source,layer,key] of [['south-land-borders','south-land-boundaries','landBorders'],['south-river-borders','south-river-boundaries','riverBorders']]){
+ const retained=sources.get(source),style=layers.get(layer);
+ for(const field of ['tolerance','buffer','maxzoom'])assert.equal(retained[field],lineSourceOptions[field],'Reuse the shared zoom-aware line settings: '+field);
+ assert.deepEqual(retained.data,lineData(borderContext[key]),'Preserve the exact shared/official paths while adding visibility metadata');
+ assert.deepEqual(style.paint['line-opacity'],adaptiveOpacity(),'Small paths fade continuously with zoom');
+ assert.deepEqual(style.paint['line-width'],['interpolate',['linear'],['zoom'],2,.55,6,.85,10,1],'Overview lines use a lighter stroke');
+ const count=tolerance=>{const tiles=new GeoJSONVT(retained.data,{maxZoom:18,extent:8192,buffer:128,tolerance:tolerance*8192/512});let points=0;for(let x=0;x<8;x++)for(let y=0;y<8;y++)points+=tiles.getTile(3,x,y)?.features.reduce((n,f)=>n+f.geometry.reduce((s,p)=>s+p.length,0),0)||0;return points;};
+ assert(count(retained.tolerance)<count(0)*.15,'Zoomed-out tiles must discard detail smaller than a pixel');
+}
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
 assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina','malaysia','singapore']]]],'Developer geometry replaces its coarse background silhouettes');
 window.AtlasDev.enabled=false;atlas.syncDeveloper();

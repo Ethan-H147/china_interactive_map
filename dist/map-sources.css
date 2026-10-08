@@ -1,9 +1,9 @@
-.maplibregl-control-container .maplibregl-ctrl-attrib.atlas-sources{position:relative;width:28px;height:28px;margin:0 12px 12px 0;padding:0!important;border-radius:50%;background:var(--paper);color:var(--ink);box-shadow:0 1px 8px #00000012}
-.maplibregl-ctrl-attrib.atlas-sources .maplibregl-ctrl-attrib-button{display:grid;place-items:center;width:28px;height:28px;padding:0;border:1px solid var(--line);border-radius:50%;background:none;font:italic 600 17px/1 Georgia,serif;color:var(--ink);cursor:pointer;list-style:none}
+.maplibregl-control-container .maplibregl-ctrl-attrib.atlas-sources{position:relative;width:20px;height:20px;margin:0 12px 12px 0;padding:0!important;border-radius:50%;background:color-mix(in srgb,var(--paper) 42%,transparent);color:var(--muted);box-shadow:none}
+.maplibregl-ctrl-attrib.atlas-sources .maplibregl-ctrl-attrib-button{display:grid;place-items:center;width:20px;height:20px;padding:0;border:1px solid color-mix(in srgb,var(--muted) 22%,transparent);border-radius:50%;background:none;font:italic 400 12px/1 Georgia,serif;color:var(--muted);cursor:pointer;list-style:none}
 .maplibregl-ctrl-attrib.atlas-sources summary::-webkit-details-marker{display:none}
-.maplibregl-ctrl-attrib.atlas-sources .maplibregl-ctrl-attrib-inner{position:absolute;right:0;bottom:36px;width:min(440px,calc(100vw - 32px));max-height:min(320px,60dvh);overflow-y:auto;white-space:normal;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--muted);font:12px/1.7 'Segoe UI',Arial,sans-serif;box-shadow:0 4px 18px #00000012;text-wrap:pretty}
+.maplibregl-ctrl-attrib.atlas-sources .maplibregl-ctrl-attrib-inner{position:absolute;right:0;bottom:28px;width:min(440px,calc(100vw - 32px));max-height:min(320px,60dvh);overflow-y:auto;white-space:normal;padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--muted);font:12px/1.7 'Segoe UI',Arial,sans-serif;box-shadow:0 4px 18px #00000012;text-wrap:pretty}
 .maplibregl-ctrl-attrib.atlas-sources:not([open]) .maplibregl-ctrl-attrib-inner{display:none!important}
-.maplibregl-ctrl-attrib.atlas-sources[open]::before{content:'';position:absolute;right:0;bottom:28px;width:100%;height:8px}
+.maplibregl-ctrl-attrib.atlas-sources[open]::before{content:'';position:absolute;right:0;bottom:20px;width:100%;height:8px}
 .maplibregl-ctrl-attrib.atlas-sources[open] .maplibregl-ctrl-attrib-inner{display:block}
 .maplibregl-ctrl-attrib.atlas-sources .maplibregl-ctrl-attrib-inner a{color:var(--ink);text-decoration:underline;text-underline-offset:2px}
 .maplibregl-ctrl-bottom-right:has(.atlas-sources){z-index:460}
