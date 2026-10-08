@@ -1,3 +1,4 @@
+import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {setLayerVisible,lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
@@ -14,10 +15,31 @@ export async function addCountryPortal(map,host,country){
  const context=await loadCompressed(base+country+'-context.bin');
  map.addSource(country+'-portal',{type:'geojson',data:context,tolerance:0,attribution:isMalaysia?'Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a>':'Singapore: <a href="https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view">SLA</a> (Singapore Open Data Licence)'});
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',layout:{visibility:'none'},paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
- const sidebar=document.createElement('aside');sidebar.id=country+'-sidebar';sidebar.className='sidebar southeast-sidebar';sidebar.hidden=true;sidebar.setAttribute('aria-label','Explore '+c.name);
- sidebar.innerHTML=`<div class="sidebar-tools"><label class="sr-only" for="${prefix}-search">Find a ${isMalaysia?'state or district':'region or planning area'}</label><input id="${prefix}-search" type="search" placeholder="Find a ${isMalaysia?'state or district':'region or planning area'}" autocomplete="off" data-nav><div id="${prefix}-search-results" hidden aria-live="polite"></div><div class="panel-tabs"><button id="${prefix}-tab-layers" aria-pressed="true">Map settings</button><button id="${prefix}-tab-explore" hidden aria-pressed="false">Discover</button></div></div>
- <div class="sidebar-scroll"><section id="${prefix}-layers-panel"><label class="field-label" for="${prefix}-province">${isMalaysia?'State / federal territory':'Region'}</label><select id="${prefix}-province" data-nav><option value="">All ${c.name}</option></select><section class="layers"><h3>Visible layers</h3><label><span>${isMalaysia?'State & territory':'Region'} outlines</span><input id="${prefix}-province-layer" type="checkbox" checked data-nav></label><label><span>${isMalaysia?'District':'Planning area'} outlines</span><input id="${prefix}-second-layer" type="checkbox" checked data-nav></label><label><span>Place names</span><input id="${prefix}-label-layer" type="checkbox" checked data-nav></label></section></section>
- <section id="${prefix}-explore-panel" hidden><div class="selection-top"><button id="${prefix}-selection-reset" class="back-button">All ${c.name}</button><div class="division-flags"><img src="vendor/flag-${prefix}.webp" width="40" alt="Flag of ${c.name}">${isMalaysia?'<a id="my-flag-source" hidden target="_blank" rel="noopener"><img id="my-division-flag" width="40" alt=""></a>':''}</div></div><span id="${prefix}-selection-kind" class="eyebrow"></span><h2 id="${prefix}-selection-name"></h2><p id="${prefix}-selection-local" class="country-local"></p><p id="${prefix}-selection-meta" class="selection-meta"></p><details id="${prefix}-subdivisions" hidden><summary id="${prefix}-child-summary">${isMalaysia?'Districts':'Planning areas'}</summary><div id="${prefix}-children" class="archipelago-children"></div></details><button id="${prefix}-parent" class="quiet-button" hidden></button></section><p id="${prefix}-detail-status" role="status" hidden></p><button id="${prefix}-retry" class="quiet-button" hidden>Retry boundaries</button></div><footer class="sidebar-footer"><a href="${base+country}-sources.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span></footer>`;
+ const sidebar=createCountryPage({id:country+'-sidebar',label:'Explore '+c.name,classes:'sidebar southeast-sidebar',
+ prefix:`${prefix}-`,
+ search:{
+ id:`${prefix}-search`,
+ label:`Find a ${isMalaysia?'state or district':'region or planning area'}`,
+ placeholder:`Find a ${isMalaysia?'state or district':'region or planning area'}`,
+ resultsId:`${prefix}-search-results`,
+ disabled:false,
+ dataNav:true
+},
+ settings:`<label class="field-label" for="${prefix}-province">${isMalaysia?'State / federal territory':'Region'}</label><select id="${prefix}-province" data-nav><option value="">All ${c.name}</option></select><section class="layers"><h3>Visible layers</h3><label><span>${isMalaysia?'State & territory':'Region'} outlines</span><input id="${prefix}-province-layer" type="checkbox" checked data-nav></label><label><span>${isMalaysia?'District':'Planning area'} outlines</span><input id="${prefix}-second-layer" type="checkbox" checked data-nav></label><label><span>Place names</span><input id="${prefix}-label-layer" type="checkbox" checked data-nav></label></section>`,
+ heading:{
+ navigation:`<button id="${prefix}-selection-reset" class="back-button">All ${c.name}</button><div class="division-flags"><img src="vendor/flag-${prefix}.webp" width="40" alt="Flag of ${c.name}">${isMalaysia?'<a id="my-flag-source" hidden target="_blank" rel="noopener"><img id="my-division-flag" width="40" alt=""></a>':''}</div>`,
+ kindId:`${prefix}-selection-kind`,
+ nameId:`${prefix}-selection-name`,
+ nameLang:``,
+ names:`<p id="${prefix}-selection-local" class="country-local"></p>`
+},
+ cards:`<div id="${prefix}-selection-meta" class="country-card-anchor" hidden></div>`,
+ subdivisions:`<details id="${prefix}-subdivisions" hidden><summary id="${prefix}-child-summary">${isMalaysia?'Districts':'Planning areas'}</summary><div id="${prefix}-children" class="archipelago-children"></div></details>`,
+ actions:`<button id="${prefix}-parent" class="quiet-button" hidden></button>`,
+ footer:`<a href="${base+country}-sources.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span>`,
+ extraPanels:``,
+ afterPanels:`<p id="${prefix}-detail-status" role="status" hidden></p><button id="${prefix}-retry" class="quiet-button" hidden>Retry boundaries</button>`
+});
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>document.getElementById(prefix+'-'+id),index=new Map(),installed=new Map();
  let active=false,ready=false,selected=null,scope=null,mode=1,labels=[],catalogue,search,warming,pending,cancelIndex,generation=0,selectionEpoch=0,detailEpoch=0,detailScope=null;
@@ -75,10 +97,9 @@ export async function addCountryPortal(map,host,country){
   if(!active||!ready||host.isBusy()||!record)return;if(record.level===0)return reset(fit,camera);const epoch=++selectionEpoch;selected=record;scope=record.level===1?record.id:record.parent;
   $('search-results').hidden=true;$('search').value='';$('selection-kind').textContent=record.kind.toUpperCase();$('selection-name').textContent=record.en;$('selection-local').textContent=record.local||'';$('selection-local').hidden=!record.local||record.local===record.en;
   const parent=index.get(record.parent),children=catalogue.records.filter(r=>r.parent===record.id);
-  $('selection-meta').textContent=parent?'Part of '+name(parent):children.length?children.length+' '+(isMalaysia?'districts':'planning areas'):'No separate district subdivisions in this dataset.';
   clearStatistics($('selection-meta'));if(!isMalaysia||record.level===1)renderStatistics($('selection-meta'),country+':'+record.id,undefined,{onRelatedPlace:id=>select(index.get(id))});
-  if(isMalaysia){$('province').value=scope;const flag=malaysiaFlags[scope];$('flag-source').hidden=!flag;if(flag){$('flag-source').href=flag.page;$('flag-source').title=flag.credit+' · '+flag.license;$('division-flag').src=flag.file;$('division-flag').alt='Flag of '+index.get(scope).en;}$('subdivisions').hidden=!children.length;$('child-summary').textContent=children.length+' districts';$('children').replaceChildren();for(const child of children){const button=document.createElement('button');button.type='button';button.className='search-result';button.textContent=child.en;button.onclick=()=>select(child);$('children').append(button);}}
-  if(!isMalaysia){$('province').value=scope;$('subdivisions').hidden=!children.length;$('child-summary').textContent=children.length+' planning areas';$('children').replaceChildren();for(const child of children){const button=document.createElement('button');button.type='button';button.className='search-result';button.dataset.region=child.id;button.textContent=name(child);button.onclick=()=>select(child);$('children').append(button);}}
+  if(isMalaysia){$('province').value=scope;const flag=malaysiaFlags[scope];$('flag-source').hidden=!flag;if(flag){$('flag-source').href=flag.page;$('flag-source').title=flag.credit+' · '+flag.license;$('division-flag').src=flag.file;$('division-flag').alt='Flag of '+index.get(scope).en;}$('subdivisions').hidden=!children.length;setSubdivisionHeading($('child-summary'),'Districts',children.length);$('children').replaceChildren();for(const child of children){const button=document.createElement('button');button.type='button';button.className='search-result';button.textContent=child.en;button.onclick=()=>select(child);$('children').append(button);}}
+  if(!isMalaysia){$('province').value=scope;$('subdivisions').hidden=!children.length;setSubdivisionHeading($('child-summary'),'Planning areas',children.length);$('children').replaceChildren();for(const child of children){const button=document.createElement('button');button.type='button';button.className='search-result';button.dataset.region=child.id;button.textContent=name(child);button.onclick=()=>select(child);$('children').append(button);}}
   $('parent').hidden=!parent||(!isMalaysia&&parent.level===0);$('parent').textContent=$('parent').hidden?'':'View '+name(parent);$('parent').onclick=$('parent').hidden?null:()=>select(parent);$('tab-explore').hidden=false;panel('explore');sidebar.querySelector('.sidebar-scroll').scrollTop=0;document.getElementById('breadcrumb-region').hidden=false;document.getElementById('breadcrumb-region').textContent=(parent?name(parent)+' / ':'')+name(record);document.getElementById('map-shell').dataset.selected='true';if(!isMalaysia)selectionNames();
   await setMode(catalogue.chunks[scope]?2:1,true);if(epoch!==selectionEpoch||!active)return;if(fit)await host.fit(record.bounds,record.level===2?13:12,camera);
  }

@@ -1,3 +1,4 @@
+import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {splitCoastalDetail,coastalDetailZoom,coastalDetailIds,coastalPartId} from './coastal-detail.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {setLayerVisible} from './adaptive-lines.mjs';
@@ -8,8 +9,31 @@ export async function addArchipelagoPortal(map,host,country){
  const config=configuration[country],{name,prefix,home}=config;
  const context=await loadCompressed('data/archipelago/'+country+'-context.bin');map.addSource(country+'-portal',{type:'geojson',data:country==='indonesia'?splitCoastalDetail(context,{context:true}):context,tolerance:0});
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
- const sidebar=document.createElement('aside');sidebar.id=country+'-sidebar';sidebar.className='sidebar archipelago-sidebar';sidebar.hidden=true;sidebar.setAttribute('aria-label','Explore '+name);
- sidebar.innerHTML=`<div class="sidebar-tools"><label class="sr-only" for="${prefix}-search">Find a division or island</label><input id="${prefix}-search" type="search" placeholder="Find a division or island" autocomplete="off"><div id="${prefix}-search-results" hidden aria-live="polite"></div><div class="panel-tabs"><button id="${prefix}-tab-layers" aria-pressed="true">Map settings</button><button id="${prefix}-tab-explore" hidden aria-pressed="false">Discover</button></div></div><div class="sidebar-scroll"><section id="${prefix}-layers-panel"><label class="field-label" for="${prefix}-province">${config.first.slice(0,-1)}</label><select id="${prefix}-province" data-nav><option value="">All ${name}</option></select><section class="layers"><h3>Visible layers</h3><label><span>${config.first} outlines</span><input id="${prefix}-province-layer" type="checkbox" checked data-nav></label><label><span>${config.second} outlines</span><input id="${prefix}-second-layer" type="checkbox" checked data-nav></label><label><span>Region names</span><input id="${prefix}-label-layer" type="checkbox" checked data-nav></label></section><p id="${prefix}-coverage"></p><p>Search administrative divisions and named islands.</p></section><section id="${prefix}-explore-panel" hidden><div class="selection-top"><button id="${prefix}-selection-reset" class="back-button">All ${name}</button><img src="vendor/flag-${prefix}.svg" width="40" height="${country==='philippines'?20:27}" alt="Flag of ${name}"></div><span id="${prefix}-selection-kind" class="eyebrow"></span><h2 id="${prefix}-selection-name"></h2><p id="${prefix}-selection-local"></p><p id="${prefix}-selection-meta" class="selection-meta"></p><div id="${prefix}-children" class="archipelago-children"></div><aside id="${prefix}-selection-note" class="boundary-note" hidden><p id="${prefix}-note-text"></p><a id="${prefix}-note-source" target="_blank" rel="noopener">PSA classification</a></aside><nav class="region-articles"><a id="${prefix}-article" target="_blank" rel="noopener">Name & location source</a></nav><button id="${prefix}-parent" class="quiet-button" hidden></button></section><p id="${prefix}-detail-status" role="status" hidden></p><button id="${prefix}-retry" class="quiet-button" hidden>Retry detail</button></div><footer class="sidebar-footer"><a href="data/archipelago/${country}-sources.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span></footer>`;
+ const sidebar=createCountryPage({id:country+'-sidebar',label:'Explore '+name,classes:'sidebar archipelago-sidebar',
+ prefix:`${prefix}-`,
+ search:{
+ id:`${prefix}-search`,
+ label:`Find a division or island`,
+ placeholder:`Find a division or island`,
+ resultsId:`${prefix}-search-results`,
+ disabled:false,
+ dataNav:false
+},
+ settings:`<label class="field-label" for="${prefix}-province">${config.first.slice(0,-1)}</label><select id="${prefix}-province" data-nav><option value="">All ${name}</option></select><section class="layers"><h3>Visible layers</h3><label><span>${config.first} outlines</span><input id="${prefix}-province-layer" type="checkbox" checked data-nav></label><label><span>${config.second} outlines</span><input id="${prefix}-second-layer" type="checkbox" checked data-nav></label><label><span>Region names</span><input id="${prefix}-label-layer" type="checkbox" checked data-nav></label></section><p id="${prefix}-coverage" hidden></p>`,
+ heading:{
+ navigation:`<button id="${prefix}-selection-reset" class="back-button">All ${name}</button><img src="vendor/flag-${prefix}.svg" width="40" height="${country==='philippines'?20:27}" alt="Flag of ${name}">`,
+ kindId:`${prefix}-selection-kind`,
+ nameId:`${prefix}-selection-name`,
+ nameLang:``,
+ names:`<p id="${prefix}-selection-local"></p>`
+},
+ cards:`<div id="${prefix}-selection-meta" class="country-card-anchor" hidden></div><aside id="${prefix}-selection-note" class="boundary-note" hidden><p id="${prefix}-note-text"></p><a id="${prefix}-note-source" target="_blank" rel="noopener">PSA classification</a></aside>`,
+ subdivisions:`<h3 id="${prefix}-child-summary" hidden></h3><div id="${prefix}-children" class="archipelago-children"></div>`,
+ actions:`<nav class="region-articles"><a id="${prefix}-article" target="_blank" rel="noopener">Name & location source</a></nav><button id="${prefix}-parent" class="quiet-button" hidden></button>`,
+ footer:`<a href="data/archipelago/${country}-sources.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span>`,
+ extraPanels:``,
+ afterPanels:`<p id="${prefix}-detail-status" role="status" hidden></p><button id="${prefix}-retry" class="quiet-button" hidden>Retry detail</button>`
+});
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>document.getElementById(prefix+'-'+id),installed=new Map(),index=new Map();
  let active=false,ready=false,warming,catalogue,searchPlaces,mode=1,selected,hovered,labels=[],generation=0,detailGeneration=0,detailTimer,pendingWorker,detailRun=false,desired=[],selectionEpoch=0;
@@ -44,11 +68,12 @@ export async function addArchipelagoPortal(map,host,country){
  function setMode(value=mode,automatic=false){if(automatic&&document.getElementById('mode-lock').getAttribute('aria-pressed')==='true')value=mode;mode=value===2?2:1;document.getElementById('mode-province').textContent=config.first;document.getElementById('mode-prefecture').textContent=config.second;document.getElementById('mode-prefecture').hidden=false;document.getElementById('mode-lock').hidden=false;document.getElementById('mode-province').setAttribute('aria-pressed',String(mode===1));document.getElementById('mode-prefecture').setAttribute('aria-pressed',String(mode===2));document.getElementById('map-hint').textContent=mode===1?'Select a '+(country==='philippines'?'region':'province'):'Select a '+(country==='philippines'?'province':'regency or city');sync();scheduleDetails();}
  const panel=name=>{for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}};
  async function select(record,fit=true,camera={}){if(!active||!ready||host.isBusy()||!record)return;const epoch=++selectionEpoch;state(selected,{selected:false});selected=record;state(record,{selected:true});clearHover();$('search-results').hidden=true;$('search').value='';$('province').value=record.level===1?record.id:record.parent||'';$('selection-kind').textContent=record.kind.toUpperCase();$('selection-name').textContent=record.en;$('selection-local').textContent=record.local;$('selection-local').hidden=!record.local||record.local===record.en;
-  const parent=record.level===0?null:index.get(record.parent);$('selection-meta').textContent=record.level===0?(record.noteSource?'A geographic feature, separate from administrative divisions.':record.note||'A geographic feature, separate from administrative divisions.')+(!record.bounds?' Catalogue location shown; extent unavailable.':''):record.level===1?(country==='philippines'&&record.id==='PH13'?'Metro Manila has no provinces.':catalogue.records.filter(p=>p.level===2&&!p.special&&p.parent===record.id).length+' '+config.second.toLowerCase()):record.special?'Component city of '+(index.get(record.province)?.en||'Basilan')+' · Region IX (Zamboanga Peninsula)':'Part of '+(parent?.en||name);
+  const parent=record.level===0?null:index.get(record.parent);
   if(country==='indonesia'?record.level===1:(record.level===2&&!record.special)||record.id==='PH13')window.AtlasStatistics.renderStatistics($('selection-meta'),country+':'+record.id);else window.AtlasStatistics.clearStatistics($('selection-meta'));
   $('selection-note').hidden=!record.note;$('note-text').textContent=record.note||'';$('note-source').hidden=!record.noteSource;if(record.noteSource)$('note-source').href=record.noteSource;
   $('parent').hidden=!parent;$('parent').textContent=parent?'View '+parent.en:'';$('parent').onclick=()=>select(parent);$('article').href=record.geonames?'https://www.geonames.org/'+record.geonames:'data/archipelago/'+country+'-sources.json';$('article').textContent=record.geonames?'GeoNames · Island source':'Boundary source & coverage';
   $('children').replaceChildren();if(record.level===1||record.level===2)for(const child of catalogue.records.filter(p=>record.level===1?p.level===2&&p.parent===record.id:p.province===record.id).sort((a,b)=>a.en.localeCompare(b.en))){const b=document.createElement('button');b.type='button';b.className='search-result';b.textContent=child.en+' · '+child.kind;b.onclick=()=>select(child);$('children').append(b);}
+  const childCount=$('children').children.length;$('child-summary').hidden=!childCount;setSubdivisionHeading($('child-summary'),record.level===1?config.second:'Subdivisions',childCount);
   $('tab-explore').hidden=false;panel('explore');sidebar.querySelector('.sidebar-scroll').scrollTop=0;document.getElementById('breadcrumb-region').hidden=false;document.getElementById('breadcrumb-region').textContent=(parent?parent.en+' / ':'')+record.en;
   if(record.level===1||record.level===2)setMode(2,true);sync();
   const bounds=record.bounds||[[record.center[0]-(record.kind==='Island group'?1.5:.12),record.center[1]-(record.kind==='Island group'?1.5:.12)],[record.center[0]+(record.kind==='Island group'?1.5:.12),record.center[1]+(record.kind==='Island group'?1.5:.12)]];if(fit)await host.fit(bounds,record.level===0?13:12,camera);if(epoch===selectionEpoch&&active)scheduleDetails();

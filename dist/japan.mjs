@@ -1,3 +1,4 @@
+import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {loadJapanLocalFacts,japanPopulation,japanLocalStatistics} from './japan-local-facts.mjs';
 import {japanComparisonProfile} from './compare.mjs';
 import {loadCompressed} from './korea-data.mjs';
@@ -9,10 +10,31 @@ export async function addJapanPortal(map,host){
  const home=[[122.8,24],[146.2,45.7]],outline=await loadCompressed('data/japan-context.bin');
  map.addSource('japan-portal',{type:'geojson',data:outline,tolerance:.5});
  map.addLayer({id:'japan-portal-fill',type:'fill',source:'japan-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
- const sidebar=document.createElement('aside');sidebar.id='japan-sidebar';sidebar.className='sidebar';sidebar.hidden=true;sidebar.setAttribute('aria-label','Explore Japan');
- sidebar.innerHTML=`<div class="sidebar-tools"><label class="sr-only" for="j-search">Find a prefecture or municipality</label><input id="j-search" type="search" placeholder="Find a place · 都道府県・市区町村" autocomplete="off"><div id="j-search-results" hidden aria-live="polite"></div><div class="panel-tabs"><button id="j-tab-layers" aria-pressed="true">Map settings</button><button id="j-tab-explore" hidden aria-pressed="false">Discover</button></div></div>
- <div class="sidebar-scroll"><section id="j-layers-panel"><label class="field-label" for="j-province">Prefecture</label><select id="j-province" data-nav><option value="">All Japan</option></select><section class="layers"><h3>Visible layers</h3><label><span>Prefecture outlines</span><input id="j-province-layer" type="checkbox" checked data-nav></label><label><span>Municipality outlines</span><input id="j-second-layer" type="checkbox" checked data-nav></label><label><span>Region names</span><input id="j-label-layer" type="checkbox" checked data-nav></label></section><p id="j-coverage">47 prefectures · 都道府県</p><p class="coverage-note">Municipal boundaries appear only within the selected prefecture.</p></section>
- <section id="j-explore-panel" hidden><div class="selection-top"><button id="j-selection-reset" class="back-button">All Japan</button><div class="japan-flags"><img src="vendor/flag-jp.svg" width="40" height="27" alt="Flag of Japan"><a id="j-flag-source" target="_blank" rel="noopener"><img id="j-prefecture-flag" width="40" height="27" alt=""></a><a id="j-local-flag-source" hidden target="_blank" rel="noopener"><img id="j-local-flag" width="40" height="27" alt="" decoding="async"></a></div></div><span id="j-selection-kind" class="eyebrow"></span><h2 id="j-selection-name"></h2><p id="j-selection-local" class="japanese-name" lang="ja"></p><p id="j-selection-meta" class="selection-meta"></p><p id="j-boundary-note" class="coverage-note" hidden></p><details id="j-subdivisions" hidden><summary id="j-subdivision-summary">Municipalities</summary><label class="sr-only" for="j-child-filter">Filter local places</label><input id="j-child-filter" type="search" placeholder="Filter local places"><div id="j-children"></div><button id="j-children-more" class="quiet-button" hidden>Show more</button></details><section id="j-population" class="population"><h3>Population</h3><p id="j-population-total" class="population-total"></p><p id="j-population-scope" class="population-scope"></p><p id="j-population-period" class="population-period"></p><a id="j-population-source" target="_blank" rel="noopener">Population source</a></section><button id="j-compare-place" type="button" class="quiet-button">Compare this region</button><nav class="region-articles"><a id="j-article" target="_blank" rel="noopener">Wikipedia · English</a><a id="j-article-local" target="_blank" rel="noopener">日本語</a></nav><button id="j-parent" class="quiet-button" hidden></button></section><p id="j-detail-status" role="status" hidden></p><button id="j-retry" class="quiet-button" hidden>Retry boundaries</button></div><footer class="sidebar-footer"><button id="j-compare-open" type="button">Compare regions</button><a href="data/japan-local-source.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span></footer>`;
+ const sidebar=createCountryPage({id:'japan-sidebar',label:'Explore Japan',
+ prefix:`j-`,
+ search:{
+ id:`j-search`,
+ label:`Find a prefecture or municipality`,
+ placeholder:`Find a place · 都道府県・市区町村`,
+ resultsId:`j-search-results`,
+ disabled:false,
+ dataNav:false
+},
+ settings:`<label class="field-label" for="j-province">Prefecture</label><select id="j-province" data-nav><option value="">All Japan</option></select><section class="layers"><h3>Visible layers</h3><label><span>Prefecture outlines</span><input id="j-province-layer" type="checkbox" checked data-nav></label><label><span>Municipality outlines</span><input id="j-second-layer" type="checkbox" checked data-nav></label><label><span>Region names</span><input id="j-label-layer" type="checkbox" checked data-nav></label></section><p id="j-coverage" hidden>47 prefectures · 都道府県</p>`,
+ heading:{
+ navigation:`<button id="j-selection-reset" class="back-button">All Japan</button><div class="japan-flags"><img src="vendor/flag-jp.svg" width="40" height="27" alt="Flag of Japan"><a id="j-flag-source" target="_blank" rel="noopener"><img id="j-prefecture-flag" width="40" height="27" alt=""></a><a id="j-local-flag-source" hidden target="_blank" rel="noopener"><img id="j-local-flag" width="40" height="27" alt="" decoding="async"></a></div>`,
+ kindId:`j-selection-kind`,
+ nameId:`j-selection-name`,
+ nameLang:``,
+ names:`<p id="j-selection-local" class="japanese-name" lang="ja"></p>`
+},
+ cards:`<div id="j-selection-meta" class="country-card-anchor" hidden></div><section id="j-population" class="population"><h3>Population</h3><p id="j-population-total" class="population-total"></p><p id="j-population-scope" class="population-scope"></p><p id="j-population-period" class="population-period"></p><a id="j-population-source" target="_blank" rel="noopener">Population source</a></section><p id="j-boundary-note" class="coverage-note" hidden></p><section id="j-capital-card" hidden><h3>Capital</h3><p id="j-capital"></p></section>`,
+ subdivisions:`<details id="j-subdivisions" hidden><summary id="j-subdivision-summary">Municipalities</summary><label class="sr-only" for="j-child-filter">Filter local places</label><input id="j-child-filter" type="search" placeholder="Filter local places"><div id="j-children"></div><button id="j-children-more" class="quiet-button" hidden>Show more</button></details>`,
+ actions:`<button id="j-compare-place" type="button" class="quiet-button">Compare this region</button><nav class="region-articles"><a id="j-article" target="_blank" rel="noopener">Wikipedia · English</a><a id="j-article-local" target="_blank" rel="noopener">日本語</a></nav><button id="j-parent" class="quiet-button" hidden></button>`,
+ footer:`<button id="j-compare-open" type="button">Compare regions</button><a href="data/japan-local-source.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span>`,
+ extraPanels:``,
+ afterPanels:`<p id="j-detail-status" role="status" hidden></p><button id="j-retry" class="quiet-button" hidden>Retry boundaries</button>`
+});
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>document.getElementById('j-'+id),index=new Map(),layers=[],urls=[],localSources=[];
  let active=false,ready=false,selected=null,hovered=null,scope=null,mode=1,labels=[],loading,preparedPromise,facts,localFacts,catalogue,searchPlaces,baseWorker,pendingWorker,detailPromise,detailTimer,cancelPaint,generation=0,detailEpoch=0,selectionEpoch=0,localReady=false,childRecords=[],childLimit=25;
@@ -57,14 +79,14 @@ export async function addJapanPortal(map,host){
   $('children-more').hidden=matches.length<=childLimit;
  }
  function localChildren(record){
-  childRecords=[...index.values()].filter(p=>p.parent===record.id&&p.level===record.level+1).sort((a,b)=>a.en.localeCompare(b.en));childLimit=25;$('child-filter').value='';$('subdivisions').hidden=!childRecords.length;$('subdivisions').open=false;$('subdivision-summary').textContent=(record.level===1?'Municipalities':'City wards')+' ('+childRecords.length+')';renderChildren();
+  childRecords=[...index.values()].filter(p=>p.parent===record.id&&p.level===record.level+1).sort((a,b)=>a.en.localeCompare(b.en));childLimit=25;$('child-filter').value='';$('subdivisions').hidden=!childRecords.length;$('subdivisions').open=false;setSubdivisionHeading($('subdivision-summary'),record.level===1?'Municipalities':'City wards',childRecords.length);renderChildren();
  }
  async function select(record,fit=true,camera={}){
   if(!active||!ready||host.isBusy()||!record)return;const token=++selectionEpoch;clearHover();state(selected,{selected:false});selected=record;
   const prefecture=record.level===1?record:index.get(record.level===2?record.parent:record.prefecture),newScope=prefecture.id;
   if(scope!==newScope){state(index.get(scope),{selected:false});scope=newScope;removeLocal();}state(prefecture,{selected:true});state(record,{selected:true});$('search-results').hidden=true;$('search').value='';$('province').value=scope;
   const p=record,r=facts[scope];$('selection-name').textContent=p.en;$('selection-local').textContent=p.ja;$('selection-kind').textContent=(p.kind||p.type).toUpperCase();
-  $('selection-meta').textContent=p.level===1?'Capital: '+p.capital+' · '+p.capitalLocal:p.level===3?'City ward of '+index.get(p.parent).en+' · '+prefecture.en:'Part of '+prefecture.en+(p.district?' · '+p.district:'');
+  $('capital-card').hidden=p.level!==1;$('capital').textContent=p.level===1?p.capital+' · '+p.capitalLocal:'';
   $('boundary-note').textContent=p.note||'';$('boundary-note').hidden=!p.note;$('prefecture-flag').src=r.flag.file;$('prefecture-flag').alt='Flag of '+prefecture.en;$('flag-source').href=r.flag.page;$('flag-source').title=prefecture.en+' prefectural flag — source and license';
   const population=japanPopulation(localFacts,p.id,p.kind);$('population').hidden=false;$('population-total').textContent=population?population.total.toLocaleString('en-US'):'Not available';$('population-scope').textContent=p.level===1?'Entire prefecture':p.level===3?'This city ward':'Entire '+p.kind.toLowerCase();$('population-period').textContent=population?localFacts.source.dateLabel:'Outside the Japanese census coverage';$('population-source').hidden=!population;$('population-source').href=localFacts.source.url;
   window.AtlasStatistics.renderStatistics($('selection-meta'),'japan:'+p.id,p.level>1?japanLocalStatistics(localFacts,p.id):undefined);

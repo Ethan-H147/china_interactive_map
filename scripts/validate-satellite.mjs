@@ -66,7 +66,7 @@ createSatelliteDisplay(map,{mode:()=>mode,quiz:()=>false,onVisible:value=>appear
 ui2.input.checked=true;ui2.input.fire('change');timeout();
 assert.equal(ui2.input.checked,false);assert.equal(sources.size,0);assert.match(ui2.status.textContent,/retry/);
 ui2.input.checked=true;ui2.input.fire('change');assert.equal(sources.size,1);
-const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
+const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8')+readFileSync(new URL('../dist/china-page.mjs',import.meta.url),'utf8');
 for(const id of ['satellite-layer','satellite-options','satellite-opacity','satellite-opacity-value','satellite-status'])assert.equal(html.split(`id="${id}"`).length,2);
 assert.match(html,/Esri World Imagery/);
 console.log('Satellite layer: lazy loading, source order, opacity, quiz/Korea transitions, tile recovery, and attribution passed.');

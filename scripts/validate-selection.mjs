@@ -2,10 +2,11 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {queryRegions} from '../dist/motion.mjs';
+import {setSubdivisionHeading} from '../dist/country-page.mjs';
 import {readDataText} from './read-data.mjs';
 
 const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
-const app=read('../dist/app.js'),html=read('../dist/index.html');
+const app=read('../dist/app.js'),html=read('../dist/index.html')+read('../dist/china-page.mjs');
 const geometry=readDataText('display-boundaries.json');
 const display=JSON.parse(geometry);
 const administration=JSON.parse(read('../dist/data/xinjiang-administration.json'));
@@ -84,6 +85,7 @@ function element(){return {hidden:false,textContent:'',children:[],dataset:{},ge
 elements.set('division-note',element());
 elements.set('subdivisions',element());elements.set('subdivisions-title',element());elements.set('region-list',element());
 context.document={createElement:element};context.xinjiangAdministration=administration;
+globalThis.document=context.document;context.window.AtlasCountryPage={setSubdivisionHeading};
 context.englishName=p=>p.name;context.selectRegion=()=>{};
 const caohu={type:'Feature',properties:{adcode:659013,name:'草湖市',level:'city',provinceCode:650000,boundaryAvailable:false},geometry:null};
 context.detailLayers=new Map([[650000,[...display.subdivisions.features.filter(f=>f.properties.provinceCode===650000),caohu].map(feature=>({feature}))]]);

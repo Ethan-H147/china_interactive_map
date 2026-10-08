@@ -164,7 +164,7 @@ function clearSearch(){$('search').value='';$('search-results').hidden=true;$('s
 function reset(camera={}){clearSelection();activeCode=null;$('province').value='';$('welcome').hidden=true;$('selection').hidden=true;$('tab-explore').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';clearSearch();showPanel('layers');setMode('province',true);syncLayers();return fitHome(true,camera);}
 function setStory(code){const s=stories[code]||Object.values(stories).find(s=>s.subdivisionCodes.includes(code));$('story').hidden=!s;$('story-title').textContent=s?.place||'';$('story-text').textContent=s?.text||'';if(s)$('story-source').href=s.source;else $('story-source').removeAttribute('href');}
 function renderChildren(code){
-  const children=detailLayers.get(code)||[];$('subdivisions').hidden=!children.length;$('subdivisions').open=false;$('subdivisions-title').textContent=`${code===650000?'Administrative':'Mapped'} divisions (${children.length})`;$('region-list').replaceChildren();
+  const children=detailLayers.get(code)||[];$('subdivisions').hidden=!children.length;$('subdivisions').open=false;window.AtlasCountryPage.setSubdivisionHeading($('subdivisions-title'),code===650000?'Administrative divisions':'Subdivisions',children.length);$('region-list').replaceChildren();
   const groups=code===710000?[['Special municipalities',children.filter(l=>l.feature.properties.adminType==='Special Municipality')],['Cities',children.filter(l=>l.feature.properties.adminType==='City')],['Counties',children.filter(l=>l.feature.properties.adminType==='County')]]:code===650000?[['Prefecture-level areas',children.filter(layer=>isPrefectureLevel(layer.feature.properties))],['Directly administered county-level cities',children.filter(layer=>!isPrefectureLevel(layer.feature.properties))]]:[['',children]];
   for(const [title,layers] of groups){
     if(title){const heading=document.createElement('h4');heading.textContent=`${title} (${layers.length})`;$('region-list').append(heading);}
@@ -216,8 +216,6 @@ function selectRegion(layer,parentCode,shouldFit=true,camera={}){
   setRegionState(layer,{selected:true});clearHover();
   $('province').value=String(code);$('welcome').hidden=true;$('selection').hidden=false;$('tab-explore').hidden=false;showPanel('explore');
   $('selection-kind').textContent=kind(p).toUpperCase();renderRegionFlag(p);renderRegionNames(p);renderPopulation(p);window.AtlasStatistics.renderStatistics($('selection-meta'),'china:'+p.adcode);renderDivisionNote(layer);explorer.render(p.adcode);
-  const coverage=manifest.coverage.find(c=>c.adcode===code);
-  $('selection-meta').textContent=isProvince?(p.adcode===710000?'22 administrative divisions · 6 special municipalities, 3 cities, 13 counties':p.adcode===820000?'7 parishes · 4 other areas':coverage.unavailable?'Outer boundary only; internal divisions unavailable.':`${(detailLayers.get(code)||[]).filter(l=>l.feature.geometry).length} mapped subdivisions · ${coverage.levels.district?'district boundaries':'prefectures and direct divisions'}`):p.functionalArea?'Administered directly by Suzhou':p.boundaryAvailable===false?'Boundary unavailable':p.provinceCode===820000?'Macao government map area':`Administrative code ${p.officialCode||p.adcode}`;
   $('parent-context').hidden=isProvince;$('parent-region').hidden=isProvince;
   const parentLayer=p.parentCity?regionByCode.get(p.parentCity):provinceLayers.get(code),parent=parentLayer.feature.properties;
   $('parent-kind').textContent=kind(parent);

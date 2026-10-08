@@ -1,0 +1,8 @@
+/* The same reading order applies to every country's details. */
+.country-selection-heading{display:block}
+.country-info-cards,.country-subdivisions,.country-place-actions{min-width:0}
+.country-subdivisions:empty,.country-place-actions:empty{display:none}
+.country-info-cards>.country-card-anchor{display:none}
+.country-info-cards>.population,.country-info-cards>.region-statistics{margin-top:18px}
+.country-info-cards>.population{border-top:1px solid var(--border,#ddd);padding-top:16px}
+.division-count{font-size:.85em;font-weight:400;opacity:.7;margin-left:.3em}

@@ -1,3 +1,4 @@
+import {prepareCountryDetails,insertInfoCard} from './country-page.mjs';
 const pending=new Map();
 export function loadStatistics(key=''){
  const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','uruguay','malaysia','singapore'].includes(country)?country:'base';
@@ -11,21 +12,6 @@ export function formatMoney(value,currency,perCapita=false){
 }
 const element=(tag,text,className)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(className)n.className=className;return n;};
 function link(source,label){const a=element('a',label||source.title);a.href=source.url;a.target='_blank';a.rel='noopener';return a;}
-function prepareDetails(anchor){
- const parent=anchor.parentElement,population=parent.querySelector(':scope > .population');
- if(population)anchor.after(population);
- const sidebar=anchor.closest?.('.sidebar');
- if(sidebar&&!sidebar.querySelector('.details-expand')){
-  const button=element('button',null,'details-expand');button.type='button';
-  button.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>';
-  button.setAttribute('aria-controls',sidebar.id);
-  const setExpanded=expanded=>{sidebar.classList.toggle('details-expanded',expanded);button.setAttribute('aria-expanded',String(expanded));button.setAttribute('aria-label',expanded?'Collapse region details':'Expand region details');button.title=expanded?'Collapse details (Esc)':'Expand region details';requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));};
-  button.onclick=()=>setExpanded(!sidebar.classList.contains('details-expanded'));
-  sidebar.addEventListener('keydown',event=>{if(event.key==='Escape'&&sidebar.classList.contains('details-expanded')){setExpanded(false);button.focus();event.stopPropagation();}});
-  sidebar.append(button);setExpanded(false);
- }
- return population||anchor;
-}
 export function clearStatistics(anchor){
  if(!anchor?.parentElement)return;const parent=anchor.parentElement,panel=parent.querySelector(':scope > .region-statistics');
  if(panel){panel.dataset.region='';panel.hidden=true;}
@@ -47,14 +33,14 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  let population;
  if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore):/.test(key)){
   population=anchor.parentElement.querySelector(':scope > .archipelago-population');
-  if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');anchor.after(population);}
+  if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');insertInfoCard(anchor,population);}
   population.hidden=true;
  }
- const insertionPoint=prepareDetails(anchor);
+ const insertionPoint=prepareCountryDetails(anchor);
  let panel=anchor.parentElement.querySelector(':scope > .region-statistics');
  if(!panel)panel=element('section',null,'region-statistics');
  panel.setAttribute('aria-label',key.startsWith('singapore:')?'Area':'Area and economy');
- insertionPoint.after(panel);
+ insertInfoCard(anchor,panel,insertionPoint);
  panel.hidden=false;panel.dataset.region=key;panel.replaceChildren(element('p','Loading statistics…','statistics-note'));
  try{
   const data=provided||await loadStatistics(key);if(panel.dataset.region!==key)return;

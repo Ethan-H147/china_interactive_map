@@ -39,6 +39,6 @@ for(const scope of provinceCodes){
     assert(shortEnglish(p.en));assert(shortChinese(p.zh));total++;
   }
 }
-const html=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
+const html=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8')+fs.readFileSync(new URL('../dist/china-page.mjs',import.meta.url),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,'Duplicate UI IDs');
 console.log(`Name quiz: ${total} places accept their full English and Chinese names; accents, short names, duplicate answers, hints, scope, completion and resume validated.`);

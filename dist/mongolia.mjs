@@ -1,3 +1,4 @@
+import {setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {mongoliaPanel} from './mongolia-panel.mjs';
 import {adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-lines.mjs';
@@ -34,10 +35,9 @@ export async function addMongoliaPortal(map,host){
   $('selection-name').textContent=p.en;$('selection-name').classList.toggle('long-name',p.en.length>28);$('selection-local').textContent=p.mn||'';$('selection-kind').textContent=p.type.toUpperCase();
   const record=p.level===1?host.population(p):null,traditional=p.traditional||record?.traditional;
   $('traditional').hidden=!traditional;$('traditional-name').textContent=traditional||'';population(p);
-  $('selection-meta').hidden=true;
   $('parent-context').hidden=!parent;if(parent){$('parent-kind').textContent=parent.properties.iso==='MN-1'?'Capital municipality':'Province';$('parent-english').textContent=parent.properties.en;$('parent-local').textContent=parent.properties.mn||'';$('parent-region').onclick=()=>select(parent);}
   const children=data.second.features.filter(child=>child.properties.parent===p.id).sort((a,b)=>a.properties.en.localeCompare(b.properties.en));
-  $('subdivisions').hidden=!children.length;$('region-list').replaceChildren();for(const child of children){const button=document.createElement('button');button.dataset.nav='';const en=document.createElement('span'),local=document.createElement('small');en.textContent=child.properties.en;local.textContent=child.properties.mn||'';local.lang='mn-Cyrl';button.append(en,local);button.onclick=()=>select(child);$('region-list').append(button);}
+  $('subdivisions').hidden=!children.length;setSubdivisionHeading($('subdivisions').querySelector('summary'),'Districts',children.length);$('region-list').replaceChildren();for(const child of children){const button=document.createElement('button');button.dataset.nav='';const en=document.createElement('span'),local=document.createElement('small');en.textContent=child.properties.en;local.textContent=child.properties.mn||'';local.lang='mn-Cyrl';button.append(en,local);button.onclick=()=>select(child);$('region-list').append(button);}
   $('tab-explore').hidden=false;panel('explore');document.getElementById('breadcrumb-region').hidden=false;document.getElementById('breadcrumb-region').textContent=(parent?parent.properties.en+' / ':'')+name(p);
   $('district-layer').checked=true;sync();setMode(2,true);sidebar.querySelector('.sidebar-scroll').scrollTop=0;host.controls();if(shouldFit)await host.fit(p.bounds,p.level===1?9:12,camera);
  }

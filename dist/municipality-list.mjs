@@ -1,3 +1,4 @@
+import {setSubdivisionHeading} from './country-page.mjs';
 const normalize=value=>String(value||'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().trim().replace(/\s+/g,' ');
 export function filterMunicipalities(records,query){
  const q=normalize(query);
@@ -7,7 +8,7 @@ export function filterMunicipalities(records,query){
   .filter(item=>Number.isFinite(item.rank)).sort((a,b)=>a.rank-b.rank||a.record.en.localeCompare(b.record.en,'es')).map(item=>item.record);
 }
 export function renderMunicipalityList(details,children,selected,onSelect){
- const heading=document.createElement('h3'),count=document.createElement('span');heading.textContent='Municipalities ';count.className='division-count';count.textContent=String(children.length);heading.append(count);
+ const heading=document.createElement('h3');setSubdivisionHeading(heading,'Municipalities',children.length);
  const input=document.createElement('input');input.type='search';input.placeholder='Filter municipalities';input.setAttribute('aria-label',input.placeholder);input.className='arg-local-filter';
  const list=document.createElement('div');list.className='arg-local-list';list.setAttribute('aria-live','polite');let limit=20;
  const draw=()=>{
