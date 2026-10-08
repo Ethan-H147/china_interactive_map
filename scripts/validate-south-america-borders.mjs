@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import {divisionBorders,municipalBorders} from './south-america-borders.mjs';
+import {uruguayBorderTopology} from './uruguay-border-topology.mjs';
 
 const fc=features=>({type:'FeatureCollection',features});
 const polygon=(id,ring)=>({type:'Feature',properties:{id},geometry:{type:'Polygon',coordinates:[ring]}});
@@ -25,7 +26,18 @@ function verify(payload){
 const left=polygon('left',[[0,0],[1,0],[1,1],[0,1],[0,0]]),right=polygon('right',[[1,0],[2,0],[2,1],[1,1],[1,0]]),island=polygon('island',[[3,0],[4,0],[4,1],[3,1],[3,0]]);
 const sample=fc([left,right,island]),lines=divisionBorders(sample);
 verify({regions:sample,lines});assert.equal(lines.features.length,1);assert.deepEqual(new Set(segments(lines.features[0].geometry)),new Set([key([1,0],[1,1])]));
-for(const file of ['brazil-first.bin','argentina-first.bin','uruguay-first.bin','brazil-ddd.bin'])verify(read(base+file));
+for(const file of ['brazil-first.bin','argentina-first.bin','brazil-ddd.bin'])verify(read(base+file));
+const uruguay=read(base+'uruguay-first.bin'),unchanged=JSON.stringify(uruguay.regions),departmentTopology=await uruguayBorderTopology(uruguay.regions);
+assert.equal(JSON.stringify(uruguay.regions),unchanged,'Deriving river borders must not fill water or move land polygons');
+assert.deepEqual(uruguay.lines,divisionBorders(departmentTopology),'Retained department lines reproduce the separate water-gap topology');
+verify({regions:departmentTopology,lines:uruguay.lines});
+for(const pair of [['UY-RN','UY-SO'],['UY-DU','UY-RN'],['UY-FS','UY-RN'],['UY-CL','UY-TT'],['UY-MO','UY-SJ'],['UY-MA','UY-RO']])assert(uruguay.lines.features.some(f=>pair.every(id=>f.properties.regionIds.includes(id))),'River-separated neighbors need a border: '+pair.join('/'));
+assert.equal(uruguay.lines.features.length,40,'All neighboring department pairs have a border');
+const riverLeft=polygon('left',[[-56,-34],[-55.5,-34],[-55.5,-33.5],[-56,-33.5],[-56,-34]]),riverRight=polygon('right',[[-55.5,-34],[-55,-34],[-55,-33.5],[-55.5,-33.5],[-55.498,-33.51],[-55.498,-33.99],[-55.5,-34]]),riverRegions=fc([riverLeft,riverRight]);
+assert.equal(divisionBorders(riverRegions).features.length,0,'Opposite river banks reproduce the original missing-border trigger');
+const riverTopology=await uruguayBorderTopology(riverRegions),riverLines=divisionBorders(riverTopology);verify({regions:riverTopology,lines:riverLines});
+assert.equal(riverLines.features.length,1,'Draw one shared line through the river, without bank or exterior outlines');
+assert(riverLines.features[0].geometry.coordinates.flat().every(p=>p[0]>=-55.5&&p[0]<-55.498),'The derived boundary follows the water gap rather than either bank');
 const local=read(base+'argentina-local/index.bin');for(const group of Object.values(local.groups))verify(read(base+'argentina-local/'+group.file));
 
 // A coastal municipality starts and ends partway along the parent shoreline.

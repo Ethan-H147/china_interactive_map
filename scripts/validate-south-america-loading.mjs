@@ -116,6 +116,10 @@ atlas.portals.argentina.leave();window.AtlasDev.enabled=true;country='uruguay';a
 assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'Leaving Argentina releases city geometry');
 assert.ok(!sources.has('argentina-city-points'),'City dots are released on country exit');
 assert.equal(workerURLs.filter(url=>url.endsWith('uruguay-first.bin')).length,1);assert.ok(sources.has('south-uruguay-regions'));assert.ok(!sources.has('south-argentina-regions'));assert.equal(atlas.portals.uruguay.ready,true);
+for(const field of ['tolerance','buffer','maxzoom'])assert.equal(sources.get('south-uruguay-lines')[field],lineSourceOptions[field],'Uruguay river lines simplify with zoom');
+assert.deepEqual(layers.get('south-uruguay-borders').paint['line-opacity'],adaptiveOpacity(.8));
+assert.deepEqual(layers.get('south-uruguay-selection').paint['line-opacity'],adaptiveOpacity());
+const countryWorker=fs.readFileSync('dist/south-america-worker.mjs','utf8');assert.match(countryWorker,/uruguay-first\.bin.*lineData\(payload\[key\]\)/,'Uruguay lines receive the small-path visibility metadata');
 await atlas.portals.uruguay.restore('UY-MO');assert.equal(atlas.portals.uruguay.getSelection(),'UY-MO');
 atlas.portals.uruguay.leave();assert.ok(!sources.has('south-uruguay-regions'));assert.equal(atlas.portals.uruguay.ready,false);
 country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();

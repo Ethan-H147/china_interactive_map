@@ -3,6 +3,7 @@ import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
 import {divisionBorders,internationalBorders} from './south-america-borders.mjs';
+import {uruguayBorderTopology,uruguayOutlineMethod} from './uruguay-border-topology.mjs';
 import {alignCountry} from './international-topology.mjs';
 const root='artifacts/south-america-source/',out='dist/data/south-america/';
 fs.mkdirSync(out,{recursive:true});
@@ -80,7 +81,7 @@ for(const country of Object.keys(prepared)){
  const centers=new Map(points.features.map(f=>[f.properties.id,f.geometry.coordinates]));
  for(const f of regions.features){f.id=f.properties.id;f.properties.center=centers.get(f.properties.id);f.properties.bounds=bounds(f.geometry.coordinates);}
  const records=regions.features.map(f=>f.properties).sort((a,b)=>a.en.localeCompare(b.en));
- const lines=divisionBorders(regions);
+ const lines=divisionBorders(country==='uruguay'?await uruguayBorderTopology(regions):regions);
  const payload={records,regions,lines},json=JSON.stringify(payload),bytes=gzipSync(json,{level:9});
  fs.writeFileSync(out+country+'-first.bin',bytes);
  // Context silhouettes use the same exterior geometry as detailed divisions.
@@ -89,6 +90,7 @@ for(const country of Object.keys(prepared)){
  if(!coordinates.length)throw Error('Empty country silhouette: '+country);
  const existing=context.features.find(f=>f.properties.country===country);existing.geometry={type:'MultiPolygon',coordinates};
  const info={publisher:country==='brazil'?'Instituto Brasileiro de Geografia e Estatística (IBGE)':country==='uruguay'?'Instituto Geográfico Militar (IGM), via IDE Uruguay':'Instituto Geográfico Nacional (IGN), Argentina',source:country==='brazil'?'https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/Brasil/BR_UF_2025.zip':country==='uruguay'?uruguaySource:'https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG',downloadURL:country==='argentina'?'https://ide.ign.gob.ar/geoservicios/rest/services/servicio_fondos/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&returnGeometry=true&f=geojson&maxAllowableOffset=0.0005':country==='uruguay'?'https://mapas.ide.uy/geoserver-vectorial/INE_NO_SEGURO_CLON_NS/wfs?service=WFS&version=1.0.0&request=GetFeature&typeName=INE_NO_SEGURO_CLON_NS%3Alimites_departamentales_igm_20220211&outputFormat=application%2Fjson&srsName=EPSG%3A4326':null,downloaded:'2026-10-06',boundaryYear:country==='brazil'?2025:country==='uruguay'?2022:null,processedInputSHA256:createHash('sha256').update(inputs[country]).digest('hex'),count:records.length,bytes:bytes.length,decodedBytes:Buffer.byteLength(json),processing:'Shared topology across all three countries; 75 m detail simplification; shared exterior edges aligned within 2.5 km of the reference; rounded to 0.000001 degrees; matching context silhouettes. IGN service query uses 0.0005 degree geometry tolerance.',coverageNote:country==='argentina'?'23 provinces and Buenos Aires autonomous city. Continental territory and nearby islands; Antarctic and disputed South Atlantic claims from the source are excluded from this view.':country==='uruguay'?'19 departments. IGM separately marks Rincón de Maneco and Isla Brasileña as contested areas; those two features are excluded from regular department fills.':'26 states and the Federal District.'};
+ if(country==='uruguay')info.outlineMethod=uruguayOutlineMethod;
  fs.writeFileSync(out+country+'-sources.json',JSON.stringify(info,null,2)+'\n');
  console.log(country,info.count,info.bytes,info.decodedBytes);
 }
