@@ -1,0 +1,129 @@
+{
+  "publisher": "DINOT · IDE · AGESIC · GTLA",
+  "referenceYear": 2025,
+  "retrieved": "2026-10-08",
+  "sourceURL": "https://visualizador.ide.uy/geonetwork/static/api/records/82c71a84-97ac-4cf1-8ac9-c0296b2383ad",
+  "downloadURL": "https://mapas.ide.uy/geoserver-vectorial/ideuy/municipios_20250507/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=ideuy:municipios_20250507&outputFormat=application/json&srsName=EPSG:4326",
+  "license": "Licencia de Datos Abiertos Uruguay",
+  "sha256": "ac4ac8fd39471998b1d1be58c10173612f9e9429bc272497f9ca0f0926aa0321",
+  "count": 136,
+  "indexBytes": 9199,
+  "generalizationMeters": 25,
+  "method": "Official 2025 municipality polygons based on electoral series and Circular 12208 (12 March 2025). Shared topology generalized to 25 metres, clipped to existing IGM department land. Nonmunicipal land remains visible and selectable as department land; it is not assigned to a municipality. A topology-only remainder preserves inland municipal perimeters without drawing coastlines or department exteriors. A national name index enables search; only one selected department geometry loads in a temporary worker. Detail is released on department, country or mode changes; lines simplify and fade with zoom. Municipality statistics are not inferred from department totals.",
+  "groups": {
+    "UY-AR": {
+      "count": 3,
+      "file": "UY-AR.bin",
+      "bytes": 10772,
+      "decodedBytes": 50425
+    },
+    "UY-CA": {
+      "count": 32,
+      "file": "UY-CA.bin",
+      "bytes": 74398,
+      "decodedBytes": 278621
+    },
+    "UY-CL": {
+      "count": 16,
+      "file": "UY-CL.bin",
+      "bytes": 134298,
+      "decodedBytes": 459649
+    },
+    "UY-CO": {
+      "count": 13,
+      "file": "UY-CO.bin",
+      "bytes": 36522,
+      "decodedBytes": 143808
+    },
+    "UY-DU": {
+      "count": 2,
+      "file": "UY-DU.bin",
+      "bytes": 7808,
+      "decodedBytes": 45021
+    },
+    "UY-FS": {
+      "count": 1,
+      "file": "UY-FS.bin",
+      "bytes": 537,
+      "decodedBytes": 1639
+    },
+    "UY-FD": {
+      "count": 3,
+      "file": "UY-FD.bin",
+      "bytes": 8003,
+      "decodedBytes": 45540
+    },
+    "UY-LA": {
+      "count": 6,
+      "file": "UY-LA.bin",
+      "bytes": 69656,
+      "decodedBytes": 236683
+    },
+    "UY-MA": {
+      "count": 8,
+      "file": "UY-MA.bin",
+      "bytes": 53776,
+      "decodedBytes": 192177
+    },
+    "UY-MO": {
+      "count": 8,
+      "file": "UY-MO.bin",
+      "bytes": 13461,
+      "decodedBytes": 63857
+    },
+    "UY-PA": {
+      "count": 9,
+      "file": "UY-PA.bin",
+      "bytes": 100996,
+      "decodedBytes": 335504
+    },
+    "UY-RN": {
+      "count": 3,
+      "file": "UY-RN.bin",
+      "bytes": 29122,
+      "decodedBytes": 103382
+    },
+    "UY-RV": {
+      "count": 3,
+      "file": "UY-RV.bin",
+      "bytes": 37634,
+      "decodedBytes": 144721
+    },
+    "UY-RO": {
+      "count": 4,
+      "file": "UY-RO.bin",
+      "bytes": 41537,
+      "decodedBytes": 138280
+    },
+    "UY-SA": {
+      "count": 6,
+      "file": "UY-SA.bin",
+      "bytes": 40961,
+      "decodedBytes": 151443
+    },
+    "UY-SJ": {
+      "count": 4,
+      "file": "UY-SJ.bin",
+      "bytes": 33813,
+      "decodedBytes": 112846
+    },
+    "UY-SO": {
+      "count": 5,
+      "file": "UY-SO.bin",
+      "bytes": 24442,
+      "decodedBytes": 89032
+    },
+    "UY-TA": {
+      "count": 4,
+      "file": "UY-TA.bin",
+      "bytes": 83189,
+      "decodedBytes": 280459
+    },
+    "UY-TT": {
+      "count": 6,
+      "file": "UY-TT.bin",
+      "bytes": 46619,
+      "decodedBytes": 179693
+    }
+  }
+}

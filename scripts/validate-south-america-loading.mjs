@@ -23,7 +23,7 @@ globalThis.Image=class{
 const requests=[];globalThis.fetch=async url=>{requests.push(url);return new Response(fs.readFileSync('dist/'+url));};
 let workerLoads=0,terminated=0,failNextDDD=false,failNextMunicipality=false;const workerURLs=[];
 globalThis.Worker=class{
- postMessage({url}){workerLoads++;workerURLs.push(url);this.timer=setTimeout(()=>{if(failNextDDD&&url.endsWith('-ddd.bin')){failNextDDD=false;this.onmessage({data:{error:'Test network failure'}});return;}if(failNextMunicipality&&url.includes('/brazil-local/')){failNextMunicipality=false;this.onmessage({data:{error:'Test municipal network failure'}});return;}const payload=JSON.parse(gunzipSync(fs.readFileSync('dist/'+url)));this.onmessage({data:{records:payload.records,sources:Object.fromEntries(['regions','lines'].map(key=>[key,new Blob([JSON.stringify(key==='lines'&&url.includes('/brazil-local/')?lineData(payload[key]):payload[key])])]))}});},5);}
+ postMessage({url}){workerLoads++;workerURLs.push(url);this.timer=setTimeout(()=>{if(failNextDDD&&url.endsWith('-ddd.bin')){failNextDDD=false;this.onmessage({data:{error:'Test network failure'}});return;}if(failNextMunicipality&&url.includes('/brazil-local/')){failNextMunicipality=false;this.onmessage({data:{error:'Test municipal network failure'}});return;}const payload=JSON.parse(gunzipSync(fs.readFileSync('dist/'+url)));this.onmessage({data:{records:payload.records,sources:Object.fromEntries(['regions','lines'].map(key=>[key,new Blob([JSON.stringify(key==='lines'&&(url.includes('/brazil-local/')||url.includes('/uruguay-local/'))?lineData(payload[key]):payload[key])])]))}});},5);}
  terminate(){clearTimeout(this.timer);terminated++;}
 };
 const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;const map={
@@ -43,6 +43,9 @@ assert.equal(get('map-shell').children.length,0,'Do not create bottom-left conti
 for(const handler of handlers.get('click'))handler({point:{x:0,y:0}});assert.equal(switches.at(-1)[0],'argentina');assert.equal(requests.length,0,'Clickable overview adds no new geometry requests');
 await assert.rejects(atlas.portals.brazil.warm(),/Developer mode/);assert.equal(requests.length,0);
 window.AtlasDev.enabled=true;country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
+for(let i=0;i<100&&(flagRequests.length<28||flagPending);i++)await new Promise(r=>setTimeout(r,1));
+assert.equal(flagRequests.length,28,'Brazil preloads all state and DF flags');
+assert.equal(maxFlagPending,3,'Brazil flag decoding has bounded concurrency');
 assert.equal(layers.get('south-land-boundaries').layout.visibility,'visible','International land borders remain visible in country views');
 assert.equal(layers.get('south-land-boundaries').source,'south-land-borders','Draw only shared international lines, never country perimeters');
 assert.equal(layers.get('south-river-boundaries').layout.visibility,'visible','Uruguay River international boundary remains visible');
@@ -70,12 +73,12 @@ assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['
 assert.equal(layers.get('world-land').layout.visibility,'visible','Developer mode must never hide public world land');
 window.AtlasDev.enabled=true;atlas.syncDeveloper();
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);
-assert.equal(flagRequests.length,0,'Brazil does not preload Argentine flags');
+assert.equal(flagRequests.length,28,'Brazil preloads only its own 27 flags');
 window.AtlasDev.enabled=false;country='argentina';await atlas.portals.argentina.warm();
-assert.equal(flagRequests.length,0,'Preparing Argentina does not start flag downloads');
+assert.equal(flagRequests.length,28,'Preparing Argentina does not start flag downloads');
 await atlas.portals.argentina.enter();
-for(let i=0;i<100&&(flagRequests.length<24||flagPending);i++)await new Promise(r=>setTimeout(r,1));
-assert.equal(new Set(flagRequests).size,24,'Entering Argentina warms every province and capital flag');
+for(let i=0;i<100&&(flagRequests.length<52||flagPending);i++)await new Promise(r=>setTimeout(r,1));
+assert.equal(new Set(flagRequests).size,52,'Entering Argentina warms every province and capital flag');
 assert.equal(maxFlagPending,3,'Flag loading has bounded concurrency');
 assert.ok(sources.has('south-argentina-regions'));assert.ok(!sources.has('south-brazil-regions'));assert.equal(workerLoads,2);
 assert.equal(workerURLs.filter(url=>url.includes('argentina-local/')).length,0,'No departmental geometry before selecting a province');
@@ -93,7 +96,7 @@ tilesReady=false;atlas.portals.argentina.setMode(2);
 for(let i=0;i<100&&!sources.has('arg-local-AR-82-regions');i++)await new Promise(r=>setTimeout(r,1));assert.ok(sources.has('arg-local-AR-82-regions'));
 atlas.portals.argentina.leave();await new Promise(r=>setTimeout(r,0));assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-local-')),'Leaving during staged source loading releases detail geometry');tilesReady=true;
 country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
-assert.equal(flagRequests.length,24,'Revisiting Argentina reuses warmed flags');
+assert.equal(flagRequests.length,52,'Revisiting Argentina reuses warmed flags');
 await atlas.portals.argentina.restore('AR-CITY-03','cities');
 assert.equal(atlas.portals.argentina.getScope(),'AR-82');assert.ok(sources.has('arg-city-AR-82-regions'));
 assert.ok(sources.has('arg-local-AR-82-regions'),'City selection retains departmental geometry');
@@ -121,8 +124,23 @@ for(const field of ['tolerance','buffer','maxzoom'])assert.equal(sources.get('so
 assert.deepEqual(layers.get('south-uruguay-borders').paint['line-opacity'],adaptiveOpacity(.8));
 assert.deepEqual(layers.get('south-uruguay-selection').paint['line-opacity'],adaptiveOpacity());
 const countryWorker=fs.readFileSync('dist/south-america-worker.mjs','utf8');assert.match(countryWorker,/uruguay-first\.bin.*lineData\(payload\[key\]\)/,'Uruguay lines receive the small-path visibility metadata');
+assert.equal(workerURLs.filter(url=>url.includes('/uruguay-local/')).length,0,'Opening Uruguay loads only the municipal name index');
+assert.equal(get('mode-province').textContent,'Departments');
 await atlas.portals.uruguay.restore('UY-MO');assert.equal(atlas.portals.uruguay.getSelection(),'UY-MO');
-atlas.portals.uruguay.leave();assert.ok(!sources.has('south-uruguay-regions'));assert.equal(atlas.portals.uruguay.ready,false);
+assert(sources.has('uy-local-UY-MO-regions'));
+const uyLoads=workerLoads;await atlas.portals.uruguay.restore('UY-MUN-UYMOA');assert.equal(workerLoads,uyLoads,'A municipality in the same department reuses detail');
+assert.equal(atlas.portals.uruguay.getSelection(),'UY-MUN-UYMOA');
+assert.equal(atlas.portals.uruguay.getScope(),'UY-MO');
+await atlas.portals.uruguay.restore('UY-MUN-UYMAPDE');assert(sources.has('uy-local-UY-MA-regions'));assert(!sources.has('uy-local-UY-MO-regions'),'Only one department loads municipal geometry');
+assert.equal(sources.get('uy-local-UY-MA-lines').tolerance,lineSourceOptions.tolerance);
+assert.deepEqual(layers.get('uy-local-UY-MA-borders').paint['line-opacity'],adaptiveOpacity(.65));
+assert.equal(layers.get('uy-local-UY-MA-fill').paint['fill-antialias'],false);
+atlas.portals.uruguay.setMode(1);assert(![...sources.keys()].some(id=>id.startsWith('uy-local-')),'Department mode releases municipality geometry');
+await atlas.portals.uruguay.restore('UY-MUN-UYMOA');
+window.AtlasDev.enabled=false;atlas.syncDeveloper();assert(![...sources.keys()].some(id=>id.startsWith('uy-local-')),'Exiting developer mode releases Uruguay detail');window.AtlasDev.enabled=true;
+await atlas.portals.uruguay.restore('UY-MUN-UYMOA');
+
+atlas.portals.uruguay.leave();assert(![...sources.keys()].some(id=>id.startsWith('uy-local-')));assert.ok(!sources.has('south-uruguay-regions'));assert.equal(atlas.portals.uruguay.ready,false);
 country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
 assert.equal(workerURLs.filter(url=>url.endsWith('-ddd.bin')).length,0,'DDD is not fetched with the ordinary Brazil view');
 const sidebar=get('.workspace').children.find(e=>e.className==='sidebar south-america-sidebar');
@@ -151,7 +169,7 @@ assert.equal(sources.get('br-local-BR-35-lines').tolerance,lineSourceOptions.tol
 const municipalLoads=workerLoads;await atlas.portals.brazil.restore('BR-3509502');assert.equal(workerLoads,municipalLoads,'Selecting another municipality in the same state reuses geometry');
 const oldMunicipality=atlas.portals.brazil.restore('BR-3304557'),latestMunicipality=atlas.portals.brazil.restore('BR-3106200');await Promise.all([oldMunicipality,latestMunicipality]);
 assert.equal(sidebar.querySelector('#south-province-flag').src,'vendor/brazil-flags/BR-31.webp');
-oldBrazilFlagLoaded();assert.equal(sidebar.querySelector('#south-flag-source').hidden,true,'A stale flag load cannot reveal the current flag before it loads');
+oldBrazilFlagLoaded();assert.equal(sidebar.querySelector('#south-flag-source').hidden,false,'Decoded Brazil flags display immediately; stale callbacks do not change the current flag');
 sidebar.querySelector('#south-province-flag').onload();assert.equal(sidebar.querySelector('#south-flag-source').hidden,false);
 assert.equal(atlas.portals.brazil.getSelection(),'BR-3106200');assert(sources.has('br-local-BR-31-regions'));assert(!sources.has('br-local-BR-35-regions'));assert(!sources.has('br-local-BR-33-regions'));assert.equal([...sources.keys()].filter(id=>/^br-local-.*-regions$/.test(id)).length,1,'Only one state holds municipal geometry');
 atlas.portals.brazil.setMode(1);assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'States mode releases municipal sources');

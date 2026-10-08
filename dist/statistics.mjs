@@ -1,7 +1,7 @@
 const pending=new Map();
 export function loadStatistics(key=''){
- const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','malaysia','singapore'].includes(country)?country:'base';
- const url=bundle==='base'?'data/region-statistics.json':['malaysia','singapore'].includes(bundle)?'data/southeast-asia/'+bundle+'-statistics.json':['argentina','brazil'].includes(bundle)?'data/south-america/'+bundle+'-statistics.json':'data/archipelago/'+bundle+'-statistics.json';
+ const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','uruguay','malaysia','singapore'].includes(country)?country:'base';
+ const url=bundle==='base'?'data/region-statistics.json':['malaysia','singapore'].includes(bundle)?'data/southeast-asia/'+bundle+'-statistics.json':['argentina','brazil','uruguay'].includes(bundle)?'data/south-america/'+bundle+'-statistics.json':'data/archipelago/'+bundle+'-statistics.json';
  if(!pending.has(bundle))pending.set(bundle,fetch(url).then(r=>{if(!r.ok)throw Error('Statistics unavailable');return r.json();}).catch(e=>{pending.delete(bundle);throw e;}));
  return pending.get(bundle);
 }
@@ -34,7 +34,7 @@ export function clearStatistics(anchor){
 function renderPopulation(panel,record,data,onRelatedPlace){
  const metric=record.population;panel.replaceChildren();panel.hidden=!metric;if(!metric)return;
  panel.append(element('h3',metric.label||'Population'),element('p',metric.displayValue||new Intl.NumberFormat('en-US').format(metric.value),'population-total'));
- panel.append(element('p',metric.year+(metric.method==='projection'?' midyear projection':metric.method==='estimate'?' midyear estimate':' census'),'population-scope'));
+ panel.append(element('p',metric.periodLabel||metric.year+(metric.method==='projection'?' midyear projection':metric.method==='estimate'?' midyear estimate':' census'),'population-scope'));
  if(metric.scopeNote)panel.append(element('p',metric.scopeNote,'population-note'));
  if(metric.relatedPlace&&onRelatedPlace){const button=element('button',metric.relatedPlace.label,'quiet-button');button.type='button';button.onclick=()=>onRelatedPlace(metric.relatedPlace.id);panel.append(button);}
  if(metric.coverageNote)panel.append(element('p',metric.coverageNote,'population-note'));
@@ -45,7 +45,7 @@ function renderPopulation(panel,record,data,onRelatedPlace){
 export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  if(!anchor?.parentElement)return;
  let population;
- if(/^(indonesia|philippines|argentina|brazil|malaysia|singapore):/.test(key)){
+ if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore):/.test(key)){
   population=anchor.parentElement.querySelector(':scope > .archipelago-population');
   if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');anchor.after(population);}
   population.hidden=true;
@@ -65,7 +65,7 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
   area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area);if(!key.startsWith('singapore:'))panel.append(economy);
   const areaValues=element('dl',null,'statistics-values'),economyValues=element('dl',null,'statistics-values');area.append(areaValues);
   const argentina=key.startsWith('argentina:');
-  const detailedMetrics=[['area','Area'],...(key.startsWith('singapore:')?[]:record.realGdp?[['realGdp','Real GDP'],...(record.realGdpPerCapita?[['realGdpPerCapita','Real GDP per capita']]:[])]:[['gdp','GDP'],['gdpPerCapita','GDP per capita']]),...(record.realGva?[['realGva','Real gross value added'],...(!record.gdpPerCapita?[['realGvaPerCapita','Real GVA per capita']]:[])]:[])];
+  const detailedMetrics=[['area','Area'],...(key.startsWith('singapore:')?[]:record.exports?[['exports','Goods exports']]:record.realGdp?[['realGdp','Real GDP'],...(record.realGdpPerCapita?[['realGdpPerCapita','Real GDP per capita']]:[])]:[['gdp','GDP'],['gdpPerCapita','GDP per capita']]),...(record.realGva?[['realGva','Real gross value added'],...(!record.gdpPerCapita?[['realGvaPerCapita','Real GVA per capita']]:[])]:[])];
   const metrics=argentina?[['area','Area'],...(record.gdp?[['gdp','GDP'],['gdpPerCapita','GDP per capita']]:[['realGva','Economic output'],['realGvaPerCapita','Output per capita']])]:detailedMetrics;
   if(argentina&&!record.gdp)economy.append(element('p','GDP has not yet been verified for this province. These figures show inflation-adjusted economic output.','statistics-note'));
   economy.append(economyValues);
@@ -73,7 +73,7 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
    const dl=field==='area'?areaValues:economyValues,metric=record[field],perCapita=/PerCapita$/.test(field),dt=element('dt',field==='area'?(metric?.label||(metric?.method==='mapped'?'Mapped area ≈':'Total area')):argentina?label:(metric?.label||label)),dd=element('dd');dl.append(dt,dd);
    if(!metric){dd.append(element('span','Not available','statistics-missing'));continue;}
    dd.append(element('strong',field==='area'?new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(metric.value)+' km²':formatMoney(metric.value,metric.currency,perCapita)));
-   if(field!=='area')dd.append(element('span',metric.priceBasis==='constant'?(argentina?'Adjusted for inflation · '+metric.baseYear+' peso values':'Inflation-adjusted · constant '+metric.baseYear+' '+metric.currency):metric.usd?'≈ '+formatMoney(metric.usd,'USD',perCapita):'USD conversion unavailable','statistics-usd'));
+   if(field!=='area'&&metric.currency!=='USD')dd.append(element('span',metric.priceBasis==='constant'?(argentina?'Adjusted for inflation · '+metric.baseYear+' peso values':'Inflation-adjusted · constant '+metric.baseYear+' '+metric.currency):metric.usd?'≈ '+formatMoney(metric.usd,'USD',perCapita):'USD conversion unavailable','statistics-usd'));
    if(field!=='area'&&metric.priceBasis==='constant'&&metric.usd>0&&metric.usdBaseYear===metric.baseYear)dd.append(element('span','≈ '+formatMoney(metric.usd,'USD',perCapita)+' · '+metric.usdBaseYear+' dollars','statistics-usd'));
    const meta=element('small');meta.append(document.createTextNode((metric.period||metric.year||'Date not specified')+(metric.status?' · '+metric.status:'')+(metric.method==='calculated'?' · calculated':'')+' · '),link(data.sources[metric.source],'Source'));dd.append(meta);
   }

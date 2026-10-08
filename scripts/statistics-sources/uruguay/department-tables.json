@@ -1,0 +1,124 @@
+{
+  "retrieved": "2026-10-08",
+  "populationAreaURL": "https://www.gub.uy/instituto-nacional-estadistica/comunicacion/publicaciones/anuario-estadistico-nacional-2025-vol-102/11-datos-geograficos/114",
+  "exportsURL": "https://www.uruguayxxi.gub.uy/es/centro-informacion/articulo/exportaciones-de-bienes-por-departamento-2025/",
+  "exportsDownloadURL": "https://www.uruguayxxi.gub.uy/es/centro-informacion/articulo/exportaciones-de-bienes-por-departamento-2025/?download=es#page=7",
+  "sourceSHA256": "1f5f6f80203a9bf76eb373614053ecce7a938e0f1a278a6316d139c116d440ca",
+  "tableSHA256": "4b74808840511a390dcfee994641bc2493d7d3a946ba6e2cebef7ae3d56ebc65",
+  "values": {
+    "UY-AR": {
+      "name": "Artigas",
+      "area": 11928,
+      "population": 77460,
+      "exports": 153
+    },
+    "UY-CA": {
+      "name": "Canelones",
+      "area": 4536,
+      "population": 614183,
+      "exports": 2121
+    },
+    "UY-CL": {
+      "name": "Cerro Largo",
+      "area": 13648,
+      "population": 90708,
+      "exports": 396
+    },
+    "UY-CO": {
+      "name": "Colonia",
+      "area": 6106,
+      "population": 136092,
+      "exports": 2021
+    },
+    "UY-DU": {
+      "name": "Durazno",
+      "area": 11643,
+      "population": 62097,
+      "exports": 1526
+    },
+    "UY-FS": {
+      "name": "Flores",
+      "area": 5144,
+      "population": 26070,
+      "exports": 179
+    },
+    "UY-FD": {
+      "name": "Florida",
+      "area": 10417,
+      "population": 70143,
+      "exports": 513
+    },
+    "UY-LA": {
+      "name": "Lavalleja",
+      "area": 10016,
+      "population": 58713,
+      "exports": 74
+    },
+    "UY-MA": {
+      "name": "Maldonado",
+      "area": 4793,
+      "population": 215170,
+      "exports": 26
+    },
+    "UY-MO": {
+      "name": "Montevideo",
+      "area": 530,
+      "population": 1288788,
+      "exports": 1937
+    },
+    "UY-PA": {
+      "name": "Paysandú",
+      "area": 13922,
+      "population": 121834,
+      "exports": 418
+    },
+    "UY-RN": {
+      "name": "Río Negro",
+      "area": 9282,
+      "population": 57165,
+      "exports": 991
+    },
+    "UY-RV": {
+      "name": "Rivera",
+      "area": 9370,
+      "population": 109255,
+      "exports": 157
+    },
+    "UY-RO": {
+      "name": "Rocha",
+      "area": 10551,
+      "population": 80935,
+      "exports": 256
+    },
+    "UY-SA": {
+      "name": "Salto",
+      "area": 14163,
+      "population": 136358,
+      "exports": 260
+    },
+    "UY-SJ": {
+      "name": "San José",
+      "area": 4992,
+      "population": 120181,
+      "exports": 1077
+    },
+    "UY-SO": {
+      "name": "Soriano",
+      "area": 9008,
+      "population": 83390,
+      "exports": 488
+    },
+    "UY-TA": {
+      "name": "Tacuarembó",
+      "area": 15438,
+      "population": 96011,
+      "exports": 682
+    },
+    "UY-TT": {
+      "name": "Treinta y Tres",
+      "area": 9529,
+      "population": 47212,
+      "exports": 209
+    }
+  }
+}

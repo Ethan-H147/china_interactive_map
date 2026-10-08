@@ -35,7 +35,7 @@ assert.equal(stateStatisticsKey('brazil',{id:'BR-53',level:1}),'brazil:BR-53');
 assert.equal(stateStatisticsKey('brazil',{id:'BR-5300108',level:2}),'');
 assert.equal(stateStatisticsKey('brazil',{id:'BR-DDD-61',level:1},'ddd'),'');
 assert.equal(stateStatisticsKey('brazil',{id:'BR-53',level:1},'cep'),'');
-assert.equal(stateStatisticsKey('uruguay',{id:'UY-MO',level:1}),'');
+assert.equal(stateStatisticsKey('uruguay',{id:'UY-MO',level:1}),'uruguay:UY-MO');
 assert.equal(stateStatisticsKey('brazil',null),'');
 class Node{
  constructor(tag,text=''){this.tag=tag;this.textContent=text;this.children=[];this.dataset={};}
