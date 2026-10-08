@@ -5,6 +5,7 @@ body[data-atlas=singapore]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--head
 .southeast-sidebar input[type=search]{width:100%;padding:13px 12px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:var(--paper)}
 .southeast-sidebar [id$=search-results]{max-height:260px;overflow:auto;margin-top:8px}.southeast-sidebar .search-result{background:var(--surface-soft)}
 .southeast-sidebar .selection-top{display:grid;grid-template-columns:minmax(0,1fr) 40px;grid-template-rows:36px;align-items:start}
+.southeast-sidebar .selection-top .back-button{justify-self:start;width:max-content;text-align:left}
 .division-flags{grid-column:2;grid-row:1;display:flex;flex-direction:column;gap:8px;align-items:center}.division-flags img{display:block;width:40px;height:auto;max-height:30px;object-fit:contain;border-radius:3px;box-shadow:0 0 0 1px #00000012}.division-flags a{display:block}
 .southeast-sidebar [id$=selection-kind],.southeast-sidebar h2,.southeast-sidebar [id$=selection-local]{padding-right:60px}.southeast-sidebar h2{font-size:35px}
 #my-subdivisions{border-block:1px solid var(--line);padding:14px 0;margin:20px 0}#my-subdivisions summary{cursor:pointer;font-size:14px;color:var(--muted)}.southeast-sidebar [id$=detail-status]{font-size:14px;color:var(--muted)}
