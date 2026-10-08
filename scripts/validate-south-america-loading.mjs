@@ -71,7 +71,18 @@ for(let i=0;i<100&&!sources.has('arg-local-AR-82-regions');i++)await new Promise
 atlas.portals.argentina.leave();await new Promise(r=>setTimeout(r,0));assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-local-')),'Leaving during staged source loading releases detail geometry');tilesReady=true;
 country='argentina';await atlas.portals.argentina.warm();await atlas.portals.argentina.enter();
 assert.equal(flagRequests.length,24,'Revisiting Argentina reuses warmed flags');
+await atlas.portals.argentina.restore('AR-CITY-03','cities');
+assert.equal(atlas.portals.argentina.getScope(),'cities');assert.ok(sources.has('arg-city-AR-82-regions'));
+assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-local-')),'City view releases departmental geometry');
+const cityLoads=workerLoads;await atlas.portals.argentina.restore('AR-CITY-08','cities');assert.equal(workerLoads,cityLoads,'Cities in one province reuse geometry');
+const oldCity=atlas.portals.argentina.restore('AR-CITY-02','cities'),latestCity=atlas.portals.argentina.restore('AR-CITY-21','cities');await Promise.all([oldCity,latestCity]);
+assert.equal(atlas.portals.argentina.getSelection(),'AR-CITY-21');assert.ok(sources.has('arg-city-AR-06-regions'));assert.ok(!sources.has('arg-city-AR-14-regions'));assert.ok(!sources.has('arg-city-AR-82-regions'));
+assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['==',['get','id'],'AR-CITY-21'],'Banfield selects its municipality’s shared polygon');
+await atlas.portals.argentina.restore('AR-CITY-49','cities');assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['==',['get','id'],'AR-CITY-21'],'Temperley selects the same municipal territory');
+await atlas.portals.argentina.restore('AR-CITY-16','cities');assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'Pending municipal coverage does not substitute locality or department polygons');
+await atlas.portals.argentina.restore('AR-CITY-03','cities');
 atlas.portals.argentina.leave();country='uruguay';await atlas.portals.uruguay.warm();await atlas.portals.uruguay.enter();
+assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'Leaving Argentina releases city geometry');
 assert.equal(workerURLs.filter(url=>url.endsWith('uruguay-first.bin')).length,1);assert.ok(sources.has('south-uruguay-regions'));assert.ok(!sources.has('south-argentina-regions'));assert.equal(atlas.portals.uruguay.ready,true);
 await atlas.portals.uruguay.restore('UY-MO');assert.equal(atlas.portals.uruguay.getSelection(),'UY-MO');
 atlas.portals.uruguay.leave();assert.ok(!sources.has('south-uruguay-regions'));assert.equal(atlas.portals.uruguay.ready,false);

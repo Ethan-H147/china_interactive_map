@@ -9,6 +9,8 @@
   },
   "private": true,
   "scripts": {
+    "build:argentina-cities": "node scripts/fetch-argentina-cities.mjs && node --max-old-space-size=8000 scripts/build-argentina-cities.mjs",
+    "test:argentina-cities": "node scripts/validate-argentina-cities.mjs && node scripts/validate-south-america-loading.mjs",
     "build:world-land": "node scripts/build-world-land.mjs",
     "test:world-land": "node --check dist/world-land.mjs && node scripts/validate-world-land.mjs",
     "test:zoom-lock": "node --check dist/zoom-lock.mjs && node scripts/validate-zoom-lock.mjs && npm run test:experience && npm run test:countries",

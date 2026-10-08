@@ -9,6 +9,8 @@ for(const country of ['brazil','uruguay','argentina']){
  assert.deepEqual(fromHash(hashFor(preview)),validate(preview),'South American views round-trip without Asian extent restrictions');
 }
 assert.deepEqual(fromHash(hashFor(view)),validate(view));
+const cityView={...view,country:'argentina',center:[-60.65,-32.95],selection:'AR-CITY-03',scope:'cities'};
+assert.deepEqual(fromHash(hashFor(cityView)),validate(cityView));assert.equal(validate(cityView).scope,'cities','Saved city views retain their boundary layer');
 for(const bad of [{...view,center:[Infinity,35]},{...view,zoom:99},{...view,country:'unknown'},{...view,v:2}])assert.equal(validate(bad),null);
 assert.equal(fromHash('#china/view='+encodeURIComponent(JSON.stringify(view))),null);
 assert.equal(fromHash('#korea/view=%broken'),null);
