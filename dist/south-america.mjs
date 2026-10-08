@@ -4,6 +4,7 @@ import {createCityDots} from './argentina-city-dots.mjs';
 import {createArgentinaLocal} from './argentina-local.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
 import {argentinaFlags} from './argentina-flags.mjs';
+import {brazilFlags} from './brazil-flags.mjs';
 import {lineData,lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
 export const countries={
  brazil:{name:'Brazil',local:'Brasil',flag:'br',center:[-52,-13],bounds:[[-74,-34],[-34,6]],color:'#dcebd9',line:'#527b59',selected:'#b9d6b2'},
@@ -17,6 +18,9 @@ export function cityDescription(record){
 }
 export function argentinaMapLabel(record){
  return record.id==='AR-02'||record.cityRank===1?{...record,en:'Buenos Aires (CABA)',local:'Buenos Aires (CABA)'}:record;
+}
+export function stateStatisticsKey(country,record,scope='states'){
+ return record?.level===1&&(country==='argentina'||country==='brazil'&&scope==='states')?country+':'+record.id:'';
 }
 export function createSouthAmerica(map,host){
  let data,loading,active=null,selected=null,labels=[],pending,sourceWait,layerEpoch=0;
@@ -62,15 +66,15 @@ export function createSouthAmerica(map,host){
  }
  let provinceFlagId=null;
  function renderProvinceFlag(){
-  const id=active==='argentina'?provinceId(selected):null;
+  const country=active,id=active==='argentina'||active==='brazil'&&brazilLayer==='states'?provinceId(selected):null;
   if(id===provinceFlagId)return;
   provinceFlagId=id;
-  const flag=$('province-flag'),link=$('flag-source'),reference=argentinaFlags[id];
+  const flag=$('province-flag'),link=$('flag-source'),reference=(active==='brazil'?brazilFlags:argentinaFlags)[id];
   link.hidden=true;flag.onload=null;flag.onerror=null;flag.removeAttribute('src');
   if(!reference){link.removeAttribute('href');return;}
   flag.alt='Flag of '+reference.name;
   link.href=reference.page;link.title=reference.name+' flag · '+reference.credit+' · '+reference.license+' — source and license';
-  flag.onload=()=>{if(active==='argentina'&&provinceFlagId===id)link.hidden=false;};
+  flag.onload=()=>{if(active===country&&provinceFlagId===id)link.hidden=false;};
   flag.onerror=()=>{if(provinceFlagId===id)link.hidden=true;};
   flag.src=reference.file;
   if(provinceFlagImages.get(id)?.ready)link.hidden=false;
@@ -205,7 +209,7 @@ export function createSouthAmerica(map,host){
   if(cep){const p=document.createElement('p');p.textContent='The reference map uses GfK postal polygons. Precisely lists 98 two-digit areas for Brazil. These can be added when a dataset licensed for this website is available.';const a=document.createElement('a');a.href=postalSource;a.target='_blank';a.rel='noopener';a.textContent='View the postal boundary catalogue ↗';details.append(p,a);}
   if(ddd&&record){const note=document.createElement('p');note.textContent='Official municipal assignments · IBGE 2025 boundaries, generalized to 75 m.';const disclosure=document.createElement('details'),summary=document.createElement('summary');summary.textContent=record.municipalityCount+' municipalities';disclosure.append(summary);disclosure.ontoggle=()=>{if(!disclosure.open||disclosure.children.length>1)return;const list=document.createElement('ul');for(const m of record.municipalities){const li=document.createElement('li');li.textContent=m.name+' · '+m.state;list.append(li);}disclosure.append(list);};details.append(note,disclosure);}
   const breadcrumb=document.getElementById('breadcrumb-region');breadcrumb.hidden=!record;breadcrumb.textContent=record?.level>1?record.parentName+' / '+record.en:record?.en||'';document.getElementById('map-shell').dataset.selected=String(!!record);
-  const anchor=sidebar.querySelector('.south-statistics-anchor');if(active==='argentina'&&record?.level===1)renderStatistics(anchor,'argentina:'+record.id);else clearStatistics(anchor);
+  const anchor=sidebar.querySelector('.south-statistics-anchor'),key=stateStatisticsKey(active,record,brazilLayer);if(key)renderStatistics(anchor,key);else clearStatistics(anchor);
  }
  async function select(record,fit=true,camera={}){if(!active||layerBusy)return;if(record?.cityRank===1)record=catalogues.get('argentina')?.records.find(r=>r.id==='AR-02')||record;const entry=installed.get(active),parentId=provinceId;if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:parentId(selected)},{selected:false});selected=record||null;panel(record?'explore':'layers');if(entry&&selected)map.setFeatureState({source:entry.sources[0],id:parentId(selected)},{selected:true});$('results').hidden=true;$('search').value='';renderSelection();syncLayers();if(fit&&selected?.boundaryAvailable!==false)host.fit(selected?.bounds||countries[active].bounds,undefined,camera);if(active==='argentina'){if(selected)await argentina.setMode(2,true,parentId(selected));else argentina.clear();if(selected?.level===3&&selected.boundaryAvailable)await argentinaCities.show(parentId(selected));else argentinaCities.clear();updateLabels();}if(active==='brazil'&&brazilLayer==='states'){if(selected)await brazil.setMode(2,true,parentId(selected));else brazil.clear();updateLabels();}}
  function renderSearch(){const q=$('search').value.trim(),box=$('results');box.replaceChildren();box.hidden=!q;const index=catalogue();if(!q||!index)return;const results=active==='argentina'?argentinaSearch(q):active==='brazil'&&brazilLayer==='states'?brazil.search(q):index.search(q);if(!results.length){const p=document.createElement('p');p.textContent=active==='brazil'&&brazilLayer==='ddd'?'No matching DDD or municipality.':'No matching divisions.';box.append(p);}for(const record of results){const button=document.createElement('button');button.className='search-result';const name=document.createElement('strong'),kind=document.createElement('small');name.textContent=record.en;kind.textContent=(record.level===3?cityDescription(record):record.kind)+(record.parentName?' · '+record.parentName:record.code?' · '+record.states.join(' / '):'');button.append(name,kind);button.onclick=()=>select(record);box.append(button);}}

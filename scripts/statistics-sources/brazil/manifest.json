@@ -1,0 +1,22 @@
+{
+  "retrieved": "2026-10-08",
+  "processing": "Official state tables extracted by extract-brazil-statistics.py; population and GDP cross-checked against independent IBGE workbooks. All original download URLs and SHA-256 hashes are retained in state-tables.json. GDP per capita is published to whole reais in the official SEDECTI report, PDF page 82.",
+  "files": [
+    {
+      "name": "state-tables.json",
+      "sha256": "e1d239cb471f4b0ec8f6b94baf3f6dd8f360300e13ecf4642c2f7fea8a9b7202"
+    },
+    {
+      "name": "exchange-rate-2023.json",
+      "sha256": "160a11728c8ea042eadacc3ab9712c816bed573f760663ba960e701d938984c0"
+    },
+    {
+      "name": "population-2026.json",
+      "sha256": "6095ae268b9fd302d81eff35d2e4b617a5e06fee975fa4eb98be452b9532898c"
+    },
+    {
+      "name": "gdp-2023.json",
+      "sha256": "0c180bb14b99fe0a20d07f5342d1e754d4f09eeebf032fe819b2ac46108e60ce"
+    }
+  ]
+}

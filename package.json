@@ -72,6 +72,8 @@
     "test:borneo": "node scripts/validate-borneo.mjs",
     "test:singapore-languages": "node scripts/validate-singapore-languages.mjs",
     "build:singapore-regions": "node scripts/build-singapore-regions.mjs",
-    "test:singapore-regions": "node scripts/validate-singapore-regions.mjs"
+    "test:singapore-regions": "node scripts/validate-singapore-regions.mjs",
+    "build:brazil-statistics": "node scripts/prepare-brazil-statistics.mjs",
+    "test:brazil-statistics": "node scripts/validate-brazil-statistics.mjs"
   }
 }

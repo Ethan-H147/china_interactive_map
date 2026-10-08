@@ -143,11 +143,16 @@ assert.equal(atlas.portals.brazil.getScope(),'states','Latest layer intent wins'
 tilesReady=false;const stagedDDD=mode('ddd').onclick();await until(()=>sources.has('south-brazil-ddd-regions'));await mode('states').onclick();await stagedDDD;tilesReady=true;
 assert.ok(sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-ddd-regions'),'Cancelled staged sources and blob URLs are removed');
 await atlas.portals.brazil.restore('BR-3550308');
+assert.equal(sidebar.querySelector('#south-province-flag').src,'vendor/brazil-flags/BR-35.webp','Municipal selection uses its parent state flag');
+const oldBrazilFlagLoaded=sidebar.querySelector('#south-province-flag').onload;
 assert.equal(atlas.portals.brazil.getSelection(),'BR-3550308');assert.equal(atlas.portals.brazil.getScope(),'states','Shared views retain the Brazil administrative view');assert(sources.has('br-local-BR-35-regions'));
 assert.equal(layers.get('south-brazil-borders').layout.visibility,'visible','Other states retain their borders');
 assert.equal(sources.get('br-local-BR-35-lines').tolerance,lineSourceOptions.tolerance);assert.deepEqual(layers.get('br-local-BR-35-borders').paint['line-opacity'],adaptiveOpacity(.65));assert.equal(layers.get('br-local-BR-35-fill').paint['fill-antialias'],false,'Municipal fills do not add coastal outlines');
 const municipalLoads=workerLoads;await atlas.portals.brazil.restore('BR-3509502');assert.equal(workerLoads,municipalLoads,'Selecting another municipality in the same state reuses geometry');
 const oldMunicipality=atlas.portals.brazil.restore('BR-3304557'),latestMunicipality=atlas.portals.brazil.restore('BR-3106200');await Promise.all([oldMunicipality,latestMunicipality]);
+assert.equal(sidebar.querySelector('#south-province-flag').src,'vendor/brazil-flags/BR-31.webp');
+oldBrazilFlagLoaded();assert.equal(sidebar.querySelector('#south-flag-source').hidden,true,'A stale flag load cannot reveal the current flag before it loads');
+sidebar.querySelector('#south-province-flag').onload();assert.equal(sidebar.querySelector('#south-flag-source').hidden,false);
 assert.equal(atlas.portals.brazil.getSelection(),'BR-3106200');assert(sources.has('br-local-BR-31-regions'));assert(!sources.has('br-local-BR-35-regions'));assert(!sources.has('br-local-BR-33-regions'));assert.equal([...sources.keys()].filter(id=>/^br-local-.*-regions$/.test(id)).length,1,'Only one state holds municipal geometry');
 atlas.portals.brazil.setMode(1);assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'States mode releases municipal sources');
 get('mode-lock').setAttribute('aria-pressed','true');await atlas.portals.brazil.restore('BR-3550308');assert(![...sources.keys()].some(id=>id.startsWith('br-local-')),'Automatic municipal selection respects the level lock');get('mode-lock').setAttribute('aria-pressed','false');
