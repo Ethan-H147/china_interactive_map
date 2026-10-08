@@ -32,7 +32,7 @@ export function createArgentinaLocal(map,host,config={}){
   if(!host.active()||(!config.selectedOnly&&mode!==2)||!scope||(config.base&&!index?.groups[scope])){release();host.status('');host.changed();return;}
   if(entry?.scope===scope){sync();return;}
   release();const token=epoch,requested=scope;
-  host.status('Loading '+noun+'…');
+  host.status('');
   let staged;
   try{
    const payload=await new Promise((resolve,reject)=>{
