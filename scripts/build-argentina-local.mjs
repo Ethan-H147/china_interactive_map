@@ -2,8 +2,7 @@ import fs from 'node:fs';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
-import {topology} from 'topojson-server';
-import {mesh} from 'topojson-client';
+import {divisionBorders} from './south-america-borders.mjs';
 const input='artifacts/argentina-second/departments.geojson',out='dist/data/south-america/argentina-local/';
 const original=fs.readFileSync(input),official=JSON.parse(original);
 const first=JSON.parse(gunzipSync(fs.readFileSync('dist/data/south-america/argentina-first.bin')));
@@ -25,8 +24,7 @@ for(const parent of first.records){
  const points=await process(regions,region,'-points inner');const centers=new Map(points.features.map(f=>[f.properties.id,f.geometry.coordinates]));
  for(const f of regions.features){f.id=f.properties.id;f.properties.bounds=bounds(f.geometry.coordinates);f.properties.center=centers.get(f.id);}
  regions.features.sort((a,b)=>a.properties.en.localeCompare(b.properties.en,'es',{numeric:true}));
- const localRecords=regions.features.map(f=>f.properties),topo=topology({regions});
- const lines=fc([{type:'Feature',properties:{},geometry:mesh(topo,topo.objects.regions,(a,b)=>a!==b)}]);
+ const localRecords=regions.features.map(f=>f.properties),lines=divisionBorders(regions);
  const file=parent.id+'.bin',bytes=gzipSync(JSON.stringify({records:localRecords,regions,lines}),{level:9});fs.writeFileSync(out+file,bytes);
  records.push(...localRecords);groups[parent.id]={count:localRecords.length,bytes:bytes.length,file};console.log(parent.en,localRecords.length,bytes.length);
 }

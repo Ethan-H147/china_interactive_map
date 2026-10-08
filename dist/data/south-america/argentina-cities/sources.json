@@ -11,112 +11,112 @@
     "AR-06": {
       "count": 31,
       "file": "AR-06.bin",
-      "bytes": 92805
+      "bytes": 89865
     },
     "AR-02": {
       "count": 1,
       "file": "AR-02.bin",
-      "bytes": 1153
+      "bytes": 1102
     },
     "AR-10": {
       "count": 1,
       "file": "AR-10.bin",
-      "bytes": 3433
+      "bytes": 3439
     },
     "AR-22": {
       "count": 2,
       "file": "AR-22.bin",
-      "bytes": 2952
+      "bytes": 2963
     },
     "AR-26": {
       "count": 2,
       "file": "AR-26.bin",
-      "bytes": 2484
+      "bytes": 2705
     },
     "AR-14": {
       "count": 2,
       "file": "AR-14.bin",
-      "bytes": 1793
+      "bytes": 1804
     },
     "AR-18": {
       "count": 1,
       "file": "AR-18.bin",
-      "bytes": 2981
+      "bytes": 3049
     },
     "AR-30": {
       "count": 2,
       "file": "AR-30.bin",
-      "bytes": 6165
+      "bytes": 6182
     },
     "AR-34": {
       "count": 1,
       "file": "AR-34.bin",
-      "bytes": 907
+      "bytes": 955
     },
     "AR-38": {
       "count": 1,
       "file": "AR-38.bin",
-      "bytes": 4290
+      "bytes": 4326
     },
     "AR-42": {
       "count": 1,
       "file": "AR-42.bin",
-      "bytes": 673
+      "bytes": 677
     },
     "AR-46": {
       "count": 1,
       "file": "AR-46.bin",
-      "bytes": 2429
+      "bytes": 2575
     },
     "AR-50": {
       "count": 5,
       "file": "AR-50.bin",
-      "bytes": 62374
+      "bytes": 61456
     },
     "AR-54": {
       "count": 1,
       "file": "AR-54.bin",
-      "bytes": 3112
+      "bytes": 3390
     },
     "AR-58": {
       "count": 1,
       "file": "AR-58.bin",
-      "bytes": 1256
+      "bytes": 1332
     },
     "AR-62": {
       "count": 1,
       "file": "AR-62.bin",
-      "bytes": 3224
+      "bytes": 3354
     },
     "AR-66": {
       "count": 1,
       "file": "AR-66.bin",
-      "bytes": 4292
+      "bytes": 4299
     },
     "AR-70": {
       "count": 3,
       "file": "AR-70.bin",
-      "bytes": 3032
+      "bytes": 3050
     },
     "AR-74": {
       "count": 2,
       "file": "AR-74.bin",
-      "bytes": 1056
+      "bytes": 1066
     },
     "AR-78": {
       "count": 1,
       "file": "AR-78.bin",
-      "bytes": 1126
+      "bytes": 1132
     },
     "AR-82": {
       "count": 3,
       "file": "AR-82.bin",
-      "bytes": 3472
+      "bytes": 3527
     },
     "AR-90": {
       "count": 1,
       "file": "AR-90.bin",
-      "bytes": 1674
+      "bytes": 1680
     }
   },
   "records": [
@@ -1078,5 +1078,6 @@
       "boundaryAvailable": true,
       "boundaryId": "AR-CITY-80"
     }
-  ]
+  ],
+  "outlineMethod": "Draw shared internal division boundaries; selection uses the same lines. Municipal jurisdiction lines exclude the parent exterior. Land polygons and record metadata remain unchanged."
 }

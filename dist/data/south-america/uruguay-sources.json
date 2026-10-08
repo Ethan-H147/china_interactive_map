@@ -6,8 +6,9 @@
   "boundaryYear": 2022,
   "processedInputSHA256": "188d8f4af2a40b6380c8bc8cc8f2421e957de588288eb563b13d70d897389d4b",
   "count": 19,
-  "bytes": 412799,
-  "decodedBytes": 1324290,
+  "bytes": 258488,
+  "decodedBytes": 824034,
   "processing": "Shared topology across all three countries; 75 m detail simplification; shared exterior edges aligned within 2.5 km of the reference; rounded to 0.000001 degrees; matching context silhouettes. IGN service query uses 0.0005 degree geometry tolerance.",
-  "coverageNote": "19 departments. IGM separately marks Rincón de Maneco and Isla Brasileña as contested areas; those two features are excluded from regular department fills."
+  "coverageNote": "19 departments. IGM separately marks Rincón de Maneco and Isla Brasileña as contested areas; those two features are excluded from regular department fills.",
+  "outlineMethod": "Draw shared internal division boundaries; selection uses the same lines. Municipal jurisdiction lines exclude the parent exterior. Land polygons and record metadata remain unchanged."
 }

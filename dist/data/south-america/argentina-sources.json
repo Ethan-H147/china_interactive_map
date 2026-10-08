@@ -6,8 +6,9 @@
   "boundaryYear": null,
   "processedInputSHA256": "9ef8198b5c933a3412e5a242df07cc731f676b93b1a707971e60f33ed29d52bc",
   "count": 24,
-  "bytes": 564919,
-  "decodedBytes": 2038181,
+  "bytes": 375134,
+  "decodedBytes": 1349172,
   "processing": "Shared topology across all three countries; 75 m detail simplification; shared exterior edges aligned within 2.5 km of the reference; rounded to 0.000001 degrees; matching context silhouettes. IGN service query uses 0.0005 degree geometry tolerance.",
-  "coverageNote": "23 provinces and Buenos Aires autonomous city. Continental territory and nearby islands; Antarctic and disputed South Atlantic claims from the source are excluded from this view."
+  "coverageNote": "23 provinces and Buenos Aires autonomous city. Continental territory and nearby islands; Antarctic and disputed South Atlantic claims from the source are excluded from this view.",
+  "outlineMethod": "Draw shared internal division boundaries; selection uses the same lines. Municipal jurisdiction lines exclude the parent exterior. Land polygons and record metadata remain unchanged."
 }

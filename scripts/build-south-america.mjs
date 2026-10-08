@@ -2,8 +2,7 @@ import fs from 'node:fs';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
-import {topology} from 'topojson-server';
-import {mesh} from 'topojson-client';
+import {divisionBorders} from './south-america-borders.mjs';
 import {alignCountry} from './international-topology.mjs';
 const root='artifacts/south-america-source/',out='dist/data/south-america/';
 fs.mkdirSync(out,{recursive:true});
@@ -81,7 +80,7 @@ for(const country of Object.keys(prepared)){
  const centers=new Map(points.features.map(f=>[f.properties.id,f.geometry.coordinates]));
  for(const f of regions.features){f.id=f.properties.id;f.properties.center=centers.get(f.properties.id);f.properties.bounds=bounds(f.geometry.coordinates);}
  const records=regions.features.map(f=>f.properties).sort((a,b)=>a.en.localeCompare(b.en));
- const topo=topology({regions});const lines=fc([{type:'Feature',properties:{},geometry:mesh(topo,topo.objects.regions)}]);
+ const lines=divisionBorders(regions);
  const payload={records,regions,lines},json=JSON.stringify(payload),bytes=gzipSync(json,{level:9});
  fs.writeFileSync(out+country+'-first.bin',bytes);
  // Context silhouettes use the same exterior geometry as detailed divisions.

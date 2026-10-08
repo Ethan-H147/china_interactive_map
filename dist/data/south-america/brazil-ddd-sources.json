@@ -12,7 +12,8 @@
   "boundarySHA256": "840bbe6f73726ef9d1460ce49fdfe01a278935c41180d3c893e25ca21db083bd",
   "regions": 67,
   "municipalities": 5571,
-  "bytes": 2949671,
-  "decodedBytes": 9142181,
-  "method": "Only current (VIGENTE=Sim) Anatel assignments, joined by IBGE municipality ID; shared municipal topology simplified to 75 metres and dissolved by DDD. Boundaries follow the official municipal assignments; the displayed geometry is generalized, not a cadastral survey."
+  "bytes": 2612944,
+  "decodedBytes": 8133520,
+  "method": "Only current (VIGENTE=Sim) Anatel assignments, joined by IBGE municipality ID; shared municipal topology simplified to 75 metres and dissolved by DDD. Boundaries follow the official municipal assignments; the displayed geometry is generalized, not a cadastral survey.",
+  "outlineMethod": "Draw shared internal division boundaries; selection uses the same lines. Municipal jurisdiction lines exclude the parent exterior. Land polygons and record metadata remain unchanged."
 }

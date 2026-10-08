@@ -3,8 +3,7 @@ import {execFileSync} from 'node:child_process';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
-import {topology} from 'topojson-server';
-import {mesh} from 'topojson-client';
+import {divisionBorders} from './south-america-borders.mjs';
 
 // Build the 67 telephone regions offline. The browser never loads municipalities.
 const folder='artifacts/brazil-codes/',out='dist/data/south-america/';
@@ -43,7 +42,7 @@ for(const f of regions.features){
 const records=regions.features.map(f=>f.properties).sort((a,b)=>a.code.localeCompare(b.code));
 // Search metadata stays out of the geometry source to avoid copying it per tile.
 for(const f of regions.features)f.properties={id:f.id,code:f.properties.code};
-const topo=topology({regions}),lines=fc([{type:'Feature',properties:{},geometry:mesh(topo,topo.objects.regions)}]);
+const lines=divisionBorders(regions);
 const json=JSON.stringify({records,regions,lines}),bytes=gzipSync(json,{level:9});
 if(bytes.length>3200000||Buffer.byteLength(json)>10000000)throw Error('DDD geometry exceeds the loading budget: '+bytes.length+' compressed / '+Buffer.byteLength(json)+' decoded');
 fs.writeFileSync(out+'brazil-ddd.bin',bytes);

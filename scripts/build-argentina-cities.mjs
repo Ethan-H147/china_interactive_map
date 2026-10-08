@@ -3,6 +3,7 @@ import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
 import {cities,rankingURL} from './argentina-city-list.mjs';
+import {municipalBorders} from './south-america-borders.mjs';
 const input='artifacts/argentina-cities/',out='dist/data/south-america/argentina-cities/';
 const original=fs.readFileSync(input+'municipalities.geojson'),municipalities=JSON.parse(original).features;
 const georef=JSON.parse(fs.readFileSync(input+'georef-localities.json')).features;
@@ -49,7 +50,7 @@ for(const parent of first.records){
  const inner=await mapshaper.applyCommands('-i input.json -points inner -o output.json format=geojson',{'input.json':JSON.stringify(regions)});
  let points=JSON.parse(inner['output.json']);if(points.type==='Feature')points=fc([points]);const centers=new Map(points.features.map(f=>[f.properties.id,f.geometry.coordinates]));
  for(const feature of regions.features){const record=records.find(r=>r.id===feature.properties.id);for(const member of records.filter(r=>r.boundaryId===record.id)){member.bounds=bounds(feature.geometry.coordinates);member.center=centers.get(record.id);}feature.properties=record;feature.id=record.id;}
- const lines=fc(regions.features.map(f=>({type:'Feature',properties:{kind:f.properties.kind},geometry:{type:'MultiLineString',coordinates:(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).flat()}})));
+ const lines=municipalBorders(regions,first.regions.features.find(f=>f.properties.id===parent.id));
  const localRecords=regions.features.map(f=>f.properties),bytes=gzipSync(JSON.stringify({records:localRecords,regions,lines}),{level:9});
  fs.writeFileSync(out+parent.id+'.bin',bytes);groups[parent.id]={count:localRecords.length,file:parent.id+'.bin',bytes:bytes.length};console.log(parent.en,localRecords.length,bytes.length);
 }

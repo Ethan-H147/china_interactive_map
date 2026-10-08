@@ -275,7 +275,6 @@ async function changeAtlas(next,animate=true,flight=false){
   syncCountryFills();syncLayers();updateLabels();koreaAtlas.context(next==='korea');mongoliaAtlas.context(next==='mongolia');japanAtlas.context(next==='japan');
   for(const [country,id,color] of [['china','china-context','#e9dfc9'],['korea','korea-portal-fill','#e7edf5'],['mongolia','mongolia-portal-fill','#d9e7ee'],['japan','japan-portal-fill','#fffdfd'],['philippines','philippines-portal-fill','#e7edf6'],['indonesia','indonesia-portal-fill','#fff5f3'],['malaysia','malaysia-portal-fill','#f5f0dd'],['singapore','singapore-portal-fill','#fff6f5']])if(map.getLayer(id))map.setPaintProperty(id,'fill-color',country===next?color:'#d7d7d3');
   const bounds=targetAtlas?.bounds||(next==='china'?homeBounds:next==='korea'?[[124,33],[131.9,43.1]]:next==='japan'?[[122.8,24],[146.2,45.7]]:[[87.7,41.5],[120,52.2]]);
-  southAmerica?.syncArrow();
   await (next==='china'?loadChina():targetAtlas.warm());
   if(epoch!==countryEpoch)return false;
   // Source registration precedes worker indexing. Finish both before the first flight.
@@ -288,7 +287,7 @@ async function changeAtlas(next,animate=true,flight=false){
   if(targetAtlas)await targetAtlas.enter(false);
   else{$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province',true);}
   if(epoch!==countryEpoch)return false;
-  if(countryPreparation===preparation)countryPreparation=null;unlockCamera();controls();refreshStatus();updateLabels();southAmerica?.syncArrow();saveViewSoon();return true;
+  if(countryPreparation===preparation)countryPreparation=null;unlockCamera();controls();refreshStatus();updateLabels();saveViewSoon();return true;
  }catch(error){
   if(epoch!==countryEpoch)return false;
   if(countryPreparation===preparation)countryPreparation=null;countryLoadFailed=true;countrySwitching=false;delete document.documentElement.dataset.switching;unlockCamera();$('status').hidden=false;$('status').textContent='Could not load boundaries. Click the country to retry.';console.warn('Country switch:',error);return false;
