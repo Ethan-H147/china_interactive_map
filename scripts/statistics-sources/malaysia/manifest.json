@@ -28,6 +28,12 @@
       "url": "https://storage.dosm.gov.my/population/population_state.csv",
       "sha256": "7f310e7f14583adba3228ac16c24775c85f3e49c8efd8a43460f3f718ef8d1de",
       "selection": "2025 population; both sexes, all ages and ethnicities. GDP denominator matches the 2025 GDP year."
+    },
+    {
+      "name": "exchange-rate-2015.json",
+      "url": "https://api.worldbank.org/v2/country/MYS/indicator/PA.NUS.FCRF?date=2015&format=json",
+      "sha256": "03143516923f1f4b5be288054d6decdbd455abcb9893bcb95cfcb00d962dd7ea",
+      "selection": "Malaysia 2015 annual-average MYR per USD, World Bank / IMF PA.NUS.FCRF. Matches real GDP reference-year prices."
     }
   ]
 }

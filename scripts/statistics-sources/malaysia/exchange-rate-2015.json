@@ -1,0 +1,28 @@
+[
+  {
+    "page": 1,
+    "pages": 1,
+    "per_page": 50,
+    "total": 1,
+    "sourceid": "2",
+    "lastupdated": "2026-07-13"
+  },
+  [
+    {
+      "indicator": {
+        "id": "PA.NUS.FCRF",
+        "value": "Official exchange rate (LCU per US$, period average)"
+      },
+      "country": {
+        "id": "MY",
+        "value": "Malaysia"
+      },
+      "countryiso3code": "MYS",
+      "date": "2015",
+      "value": 3.90550026302768,
+      "unit": "",
+      "obs_status": "",
+      "decimal": 2
+    }
+  ]
+]

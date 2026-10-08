@@ -5,12 +5,17 @@ const dir='scripts/statistics-sources/malaysia/';
 const csv=file=>{const [head,...lines]=fs.readFileSync(dir+file,'utf8').trim().split(/\r?\n/),keys=head.split(',');return lines.map(line=>Object.fromEntries(line.split(',').map((v,i)=>[keys[i],v])));};
 const population=csv('population_state.csv'),gdp=csv('gdp_state_real_supply.csv'),area=JSON.parse(fs.readFileSync(dir+'land-area.json'));
 const gdpPopulation=csv('population-state-2025.csv');
+const exchangeData=JSON.parse(fs.readFileSync(dir+'exchange-rate-2015.json'));
+const exchange=exchangeData[1].find(r=>r.country.id==='MY'&&r.date==='2015'&&r.indicator.id==='PA.NUS.FCRF');
+assert(exchange?.value>0,'Verified base-year exchange rate');
+const usdMetric=value=>({usd:value/exchange.value,usdBaseYear:2015,exchangeYear:2015,exchangeRate:exchange.value,exchangeSource:'worldbank-exchange'});
 const populationDate=population.map(r=>r.date).sort().at(-1),gdpDate=gdp.map(r=>r.date).sort().at(-1);
 const catalogue=JSON.parse(gunzipSync(fs.readFileSync('dist/data/southeast-asia/malaysia-catalogue.bin')));
 const sources={
  'dosm-population':{title:'DOSM population by state',url:'https://open.dosm.gov.my/data-catalogue/population_state',downloadURL:'https://storage.dosm.gov.my/population/population_state.csv',license:'CC BY 4.0'},
  'dosm-gdp':{title:'DOSM GDP by state, 2025',url:'https://www.dosm.gov.my/portal-main/release-content/gross-domestic-product-gdp-by-state-2025',downloadURL:'https://storage.dosm.gov.my/gdp/gdp_state_real_supply.csv',license:'CC BY 4.0'},
- 'dosm-area':{title:'DOSM Statistics Yearbook 2024, table 1.1 (printed page 5)',url:area.source}
+ 'dosm-area':{title:'DOSM Statistics Yearbook 2024, table 1.1 (printed page 5)',url:area.source},
+ 'worldbank-exchange':{title:'World Bank / IMF: Malaysia official annual-average exchange rate, 2015',url:'https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=MY',downloadURL:'https://api.worldbank.org/v2/country/MYS/indicator/PA.NUS.FCRF?date=2015&format=json',license:'CC BY 4.0'}
 };
 const regions={};
 for(const record of catalogue.records.filter(r=>r.level===1)){
@@ -23,8 +28,8 @@ for(const record of catalogue.records.filter(r=>r.level===1)){
  regions['malaysia:'+record.id]={name:record.en,country:'MY',level:1,
   population:{value:Math.round(Number(p[0].population)*1000),year:Number(populationDate.slice(0,4)),method:'estimate',source:'dosm-population',note:'Midyear estimate for both sexes, all ages and ethnicities, including non-citizen residents. DOSM reports thousands of people, rounded to 100 people; the annual CSV date is a year label, not 1 January.'},
   area:{value:area.values[name],year:2024,unit:'km²',method:'reported',label:'Land area',source:'dosm-area',note:'Official reported land area from JUPEM and the Sabah and Sarawak land-survey departments, published in DOSM Statistics Yearbook 2024, table 1.1.'},
-  realGdp:{value:Number(output[0].value)*1e6,year:Number(gdpDate.slice(0,4)),currency:'MYR',priceBasis:'constant',baseYear:2015,source:'dosm-gdp',note:'Overall GDP (sector p0) at constant 2015 prices, converted from RM millions. Inflation-adjusted output; no current-price USD conversion is applied.'},
-  realGdpPerCapita:{value:Number(output[0].value)*1e6/(Number(denominator[0].population)*1000),year:Number(gdpDate.slice(0,4)),currency:'MYR',priceBasis:'constant',baseYear:2015,method:'calculated',source:'dosm-gdp',populationSource:'dosm-population',populationValue:Number(denominator[0].population)*1000,populationYear:Number(gdpDate.slice(0,4)),note:'Real GDP divided by DOSM’s total midyear state population for the same year. Includes citizens and non-citizens. Calculated from published rounded population, so it may differ slightly from a separately published per-capita series.'},
+  realGdp:{value:Number(output[0].value)*1e6,...usdMetric(Number(output[0].value)*1e6),year:Number(gdpDate.slice(0,4)),currency:'MYR',priceBasis:'constant',baseYear:2015,source:'dosm-gdp',note:'Overall GDP (sector p0) at constant 2015 prices, converted from RM millions. USD is an estimate in constant 2015 dollars using the 2015 average MYR/USD rate; it is not nominal GDP in current dollars.'},
+  realGdpPerCapita:{value:Number(output[0].value)*1e6/(Number(denominator[0].population)*1000),...usdMetric(Number(output[0].value)*1e6/(Number(denominator[0].population)*1000)),year:Number(gdpDate.slice(0,4)),currency:'MYR',priceBasis:'constant',baseYear:2015,method:'calculated',source:'dosm-gdp',populationSource:'dosm-population',populationValue:Number(denominator[0].population)*1000,populationYear:Number(gdpDate.slice(0,4)),note:'Real GDP divided by DOSM’s total midyear state population for the same year. Includes citizens and non-citizens. Calculated from published rounded population, so it may differ slightly from a separately published per-capita series. USD retains the same constant 2015 price basis.'},
   note:'Population, area and economic output have separate reference years. These statistics cover the entire state or federal territory; districts do not inherit these totals.'
  };
 }
