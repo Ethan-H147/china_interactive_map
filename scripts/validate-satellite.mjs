@@ -18,6 +18,7 @@ const ui={input:element(),options:element(),opacity:element('100'),output:elemen
 const layers=new Map([['province-fill',{}],['korea-portal-fill',{paint:{'fill-opacity':1}}],['mongolia-portal-fill',{paint:{'fill-opacity':1}}],['japan-portal-fill',{paint:{'fill-opacity':1}}]]),sources=new Map(),events={},insertions=[],appearances=[];
 let mode='china',quiz=false,timeout,cancelled=0;
 const map={getLayer:id=>layers.get(id),getSource:id=>sources.get(id),
+  getLayersOrder:()=>[...layers.keys()],getPaintProperty:(id,key)=>layers.get(id).paint?.[key],
   addSource(id,source){sources.set(id,source);},addLayer(layer,before){layers.set(layer.id,layer);insertions.push(before);},
   removeLayer:id=>layers.delete(id),removeSource:id=>sources.delete(id),
   setLayoutProperty(id,key,value){layers.get(id).layout[key]=value;},setPaintProperty(id,key,value){layers.get(id).paint[key]=value;},
@@ -45,7 +46,16 @@ assert.equal(appearances.length,priorAppearances+1,'Apply satellite styling to c
 mode='japan';display.sync();assert.equal(layers.get(sourceId).layout.visibility,'visible');
 layers.set('japan-first-fill',{});display.sync();assert.equal(appearances.at(-1),true);
 mode='china';display.sync();assert.equal(appearances.at(-1),true);
+for(const country of ['philippines','indonesia','brazil','uruguay','argentina']){mode=country;display.sync();assert.equal(layers.get(sourceId).layout.visibility,'visible',country+' supports imagery');}
+const departmentOpacity=['case',['boolean',['feature-state','selected'],false],.65,0];
+for(const [id,type,paint] of [['south-america-fill','fill',{'fill-opacity':1}],['south-argentina-fill','fill',{}],['south-brazil-ddd-fill','fill',{}],['arg-local-AR-82-fill','fill',{'fill-opacity':departmentOpacity}],['arg-city-AR-82-selection','line',{'line-color':'#3979a3'}]])layers.set(id,{type,paint});
+ui.opacity.value='100';ui.opacity.fire('input');
+assert.equal(layers.get('south-america-fill').paint['fill-opacity'],0,'No gray South America patch over imagery');
+for(const id of ['south-argentina-fill','south-brazil-ddd-fill','arg-local-AR-82-fill'])assert.deepEqual(layers.get(id).paint['fill-opacity'],['+',['*',id.startsWith('arg-local')?departmentOpacity:1,0],['*',1,['case',['boolean',['feature-state','selected'],false],.18,0]]],'Late-loaded South American fills reveal imagery while retaining selection');
+assert.equal(layers.get('arg-city-AR-82-selection').paint['line-color'],'#fff0bb');
+layers.set('south-uruguay-fill',{type:'fill',paint:{}});display.sync();assert.equal(layers.get('south-uruguay-fill').paint['fill-opacity'][1][2],0,'Apply imagery to a newly visited country');
 ui.input.checked=false;ui.input.fire('change');assert.equal(ui.options.hidden,true);assert.equal(appearances.at(-1),false);
+assert.equal(layers.get('south-argentina-fill').paint['fill-opacity'],1);assert.deepEqual(layers.get('arg-local-AR-82-fill').paint['fill-opacity'],departmentOpacity);assert.equal(layers.get('arg-city-AR-82-selection').paint['line-color'],'#3979a3');assert.equal(layers.get('south-america-fill').paint['fill-opacity'],1);
 ui.input.checked=true;ui.input.fire('change');assert.equal(insertions.length,1,'Reuse loaded raster tiles');
 
 // A service-wide failure restores the atlas and supports a fresh attempt.

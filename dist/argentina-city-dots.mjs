@@ -1,6 +1,7 @@
 export function createCityDots(map,host){
  const source='argentina-city-points',layer='argentina-city-dots';
  let records=[],selected,hovered=false;
+ const visible=()=>host.active()&&host.enabled?.()!==false;
  function install(value){
   records=value;
   if(!map.getSource(source))map.addSource(source,{type:'geojson',promoteId:'id',data:{type:'FeatureCollection',features:records.map(r=>({type:'Feature',properties:{id:r.id,name:r.en},geometry:{type:'Point',coordinates:r.point}}))},attribution:'City locations: <a href="https://www.argentina.gob.ar/georef">Georef / INDEC</a> · <a href="https://www.openstreetmap.org/copyright">© OpenStreetMap contributors</a>'});
@@ -9,12 +10,13 @@ export function createCityDots(map,host){
  }
  function sync(){
   if(!map.getLayer(layer))return;
-  map.setLayoutProperty(layer,'visibility',host.active()?'visible':'none');
+  map.setLayoutProperty(layer,'visibility',visible()?'visible':'none');
+  if(!visible())clearHover();
   const next=host.selected()?.level===3?host.selected().id:null;
   if(next!==selected){if(selected)map.setFeatureState({source,id:selected},{selected:false});if(next)map.setFeatureState({source,id:next},{selected:true});selected=next;}
  }
  function hit(point){
-  if(!host.active()||!map.getLayer(layer))return;
+  if(!visible()||!map.getLayer(layer))return;
   // A larger hit area leaves the visible dot small, including on touchscreens.
   const hits=map.queryRenderedFeatures([[point.x-8,point.y-8],[point.x+8,point.y+8]],{layers:[layer]});
   let closest,distance=Infinity;

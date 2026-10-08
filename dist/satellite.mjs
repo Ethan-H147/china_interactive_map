@@ -16,6 +16,23 @@ export function provinceOpacity(visible,opacity=1){const amount=visible?opacity:
   1-amount];}
 export function blendColor(from,to,amount){const channels=color=>[1,3,5].map(i=>parseInt(color.slice(i,i+2),16));return '#'+channels(from).map((channel,i)=>Math.round(channel+(channels(to)[i]-channel)*amount).toString(16).padStart(2,'0')).join('');}
 
+function southImageryLayers(map){
+  return map.getLayersOrder().filter(id=>/^(south-(brazil|uruguay|argentina)(-ddd)?-|arg-(local|city)-)/.test(id)).map(id=>({id,type:map.getLayer(id).type})).filter(layer=>['fill','line'].includes(layer.type));
+}
+function createSouthImageryAppearance(map){
+  const original=new Map();
+  return (visible,opacity,layers)=>{
+    const present=new Set(layers.map(layer=>layer.id));
+    for(const id of original.keys())if(!present.has(id))original.delete(id);
+    for(const layer of layers){
+      const property=layer.type==='fill'?'fill-opacity':'line-color';
+      if(!original.has(layer.id))original.set(layer.id,map.getPaintProperty(layer.id,property)??1);
+      const base=original.get(layer.id);
+      const value=!visible?base:layer.type==='fill'?['+',['*',base,1-opacity],['*',opacity,['case',['boolean',['feature-state','selected'],false],.18,0]]]:blendColor(base,layer.id.endsWith('-selection')?'#fff0bb':'#f5dfab',opacity);
+      map.setPaintProperty(layer.id,property,value);
+    }
+  };
+}
 export function createSatelliteDisplay(map,host,ui={
   input:document.getElementById('satellite-layer'),
   options:document.getElementById('satellite-options'),
@@ -24,14 +41,17 @@ export function createSatelliteDisplay(map,host,ui={
   status:document.getElementById('satellite-status')
 }){
   let enabled=false,ready=false,hasTile=false,lastVisible=false,lastOpacity=1,lastLayout,timer,lastLayers='';
+  const southAppearance=createSouthImageryAppearance(map);
   const schedule=host.schedule||setTimeout,cancel=host.cancel||clearTimeout;
   function message(text){ui.status.textContent=text;ui.status.hidden=!text;}
   function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);
-    const layers=['china-context','province-fill','province-fragment-fill','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill','korea-first-fill','mongolia-first-fill','japan-first-fill'].filter(id=>map.getLayer(id)).join(',');
+    const southLayers=southImageryLayers(map);
+    const layers=['china-context','province-fill','province-fragment-fill','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill','korea-first-fill','mongolia-first-fill','japan-first-fill','south-america-fill',...southLayers.map(layer=>layer.id)].filter(id=>map.getLayer(id)).join(',');
     if(visible!==lastVisible||(visible&&(opacity!==lastOpacity||layers!==lastLayers))){
     lastLayers=layers;
     lastVisible=visible;lastOpacity=opacity;
-    for(const id of ['china-context','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
+    for(const id of ['china-context','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','philippines-portal-fill','indonesia-portal-fill','south-america-fill'])if(map.getLayer(id))map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
+    southAppearance(visible,opacity,southLayers);
     host.onVisible(visible,opacity);
   }}
   function stopTimer(){if(timer!==undefined){cancel(timer);timer=undefined;}}
