@@ -1,5 +1,5 @@
 .mongolia-title{font:400 30px/1.2 'Segoe UI',Arial,sans-serif;letter-spacing:0;color:var(--red)}
-.mongolia-sidebar #m-search{width:100%;padding:13px 12px;border:1px solid var(--line);border-radius:5px;font-size:14px;background:#fff}
+
 .mongolia-sidebar #m-search-results{max-height:260px;overflow:auto;border:1px solid var(--line);margin-top:8px;border-radius:4px}
 .mongolia-sidebar #m-selection-name{font-size:35px;margin-bottom:7px}.mongolia-sidebar #m-selection-name.long-name{font-size:27px}
 .mongolian-name{font:400 28px/1.4 'Segoe UI',Arial,sans-serif;letter-spacing:0;color:var(--red);margin:0 0 18px}

@@ -1,4 +1,5 @@
 /* The same reading order applies to every country's details. */
+[data-country-page] .sidebar-tools .search-wrap input[type=search]{width:100%;padding:13px 12px 13px 40px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);font-size:14px}
 .country-selection-heading{display:block}
 .country-info-cards,.country-subdivisions,.country-place-actions{min-width:0}
 .country-subdivisions:empty,.country-place-actions:empty{display:none}
