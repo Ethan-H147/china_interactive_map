@@ -26,7 +26,7 @@ globalThis.Worker=class{
 };
 const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;const map={
  addSource:(id,s)=>sources.set(id,s),getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),
- addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),removeLayer:id=>layers.delete(id),
+ addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),removeLayer:id=>layers.delete(id),moveLayer(){},
  setLayoutProperty(id,key,value){(layers.get(id).layout||={})[key]=value;},setFilter(id,filter){layers.get(id).filter=filter;},setFeatureState(){},
  on(name,fn){if(!handlers.has(name))handlers.set(name,new Set());handlers.get(name).add(fn);},off(name,fn){handlers.get(name)?.delete(fn);},isMoving:()=>false,isSourceLoaded:()=>tilesReady,
  getBounds:()=>({getWest:()=>-180,getEast:()=>180,getSouth:()=>-90,getNorth:()=>90})
@@ -41,11 +41,15 @@ assert.equal(get('map-shell').children.length,0,'Do not create bottom-left conti
 for(const handler of handlers.get('click'))handler({point:{x:0,y:0}});assert.equal(switches.at(-1)[0],'argentina');assert.equal(requests.length,0,'Clickable overview adds no new geometry requests');
 await assert.rejects(atlas.portals.brazil.warm(),/Developer mode/);assert.equal(requests.length,0);
 window.AtlasDev.enabled=true;country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
+assert.equal(layers.get('south-land-boundaries').layout.visibility,'visible','International land borders remain visible in country views');
+assert.equal(layers.get('south-land-boundaries').source,'south-land-borders','Draw only shared international lines, never country perimeters');
+assert.equal(layers.get('south-river-boundaries').layout.visibility,'visible','Uruguay River international boundary remains visible');
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
 assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina','malaysia','singapore']]]],'Developer geometry replaces its coarse background silhouettes');
 window.AtlasDev.enabled=false;atlas.syncDeveloper();
 assert.equal(layers.get('south-america-fill').layout.visibility,'visible');
 assert.equal(layers.has('south-america-lines'),false,'Country silhouettes have no coastline outline layer');
+assert.equal(layers.get('south-land-boundaries').layout.visibility,'none','Unavailable country views hide their border layer');
 assert.equal(layers.get('south-america-fill').paint['fill-antialias'],false,'Country silhouettes cannot receive an implicit fill outline');
 assert.equal(layers.get('south-brazil-selection').source,'south-brazil-lines','Selection emphasizes inland boundaries without outlining the coast');
 assert.equal(layers.get('south-brazil-fill').layout.visibility,'none');

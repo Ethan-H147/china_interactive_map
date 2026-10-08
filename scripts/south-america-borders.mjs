@@ -4,6 +4,15 @@ import {mesh} from 'topojson-client';
 const fc=features=>({type:'FeatureCollection',features});
 const rings=geometry=>(geometry.type==='Polygon'?[geometry.coordinates]:geometry.coordinates).flat();
 
+// Only arcs shared by different countries belong to the international mesh.
+export function internationalBorders(regions){
+ const topo=topology({regions}),countries=[...new Set(regions.features.map(f=>f.properties.parent))].sort();
+ return fc(countries.flatMap((country,i)=>countries.slice(i+1).flatMap(neighbor=>{
+  const pair=[country,neighbor],geometry=mesh(topo,topo.objects.regions,(a,b)=>a!==b&&a.properties.parent!==b.properties.parent&&pair.includes(a.properties.parent)&&pair.includes(b.properties.parent));
+  return geometry.coordinates.length?[{type:'Feature',properties:{countries:pair},geometry}]:[];
+ })));
+}
+
 // Each shared arc is drawn once and carries both adjacent division IDs, so a
 // selected division can emphasize its inland boundaries without tracing water.
 export function divisionBorders(regions){

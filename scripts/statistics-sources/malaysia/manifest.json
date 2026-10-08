@@ -1,0 +1,27 @@
+{
+  "retrieved": "2026-10-08",
+  "files": [
+    {
+      "name": "population_state.csv",
+      "url": "https://storage.dosm.gov.my/population/population_state.csv",
+      "downloaded": "2026-10-08",
+      "originalSHA256": "a3ac1a8831a4e66dbc0bc0d018b699b3810eaead3775fbee4c95e9eb2cc44945",
+      "sha256": "62f22d19dbbb5fef6b1324df79b9f61f58d1c0d0e56280b53ae08b50596ae71c",
+      "selection": "Latest year; both sexes, all ages and ethnicities"
+    },
+    {
+      "name": "gdp_state_real_supply.csv",
+      "url": "https://storage.dosm.gov.my/gdp/gdp_state_real_supply.csv",
+      "downloaded": "2026-10-08",
+      "originalSHA256": "0478e221408f506167d2cbbd1b0e9a73881ccc7509fe59ff6b7b81cbffaf63cb",
+      "sha256": "4e9016f02aa2792249e471fbbd4cb7c0fb3a6ccd2dc3c4764f38678b02701dd8",
+      "selection": "Latest year; absolute overall GDP (p0), retaining Supra as a separate non-state record"
+    },
+    {
+      "name": "land-area.json",
+      "url": "https://www.dosm.gov.my/uploads/release-content/file_20260410164034.pdf#page=44",
+      "sha256": "575639613c8b7864b67157397a619d99a9b8605af6402c0db14af6222f1017b1",
+      "selection": "Transcribed state land-area table 1.1, printed page 5. National total retained for validation."
+    }
+  ]
+}

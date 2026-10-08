@@ -35,9 +35,13 @@ for(const [country,payload]of Object.entries(data)){
 }
 const joint=topology({regions:{type:'FeatureCollection',features:Object.values(data).flatMap(p=>p.regions.features)}});
 const km=paths=>paths.reduce((s,path)=>s+path.slice(1).reduce((n,p,i)=>n+Math.hypot((p[0]-path[i][0])*Math.cos(p[1]*Math.PI/180),p[1]-path[i][1])*111.195,0),0);
+assert.equal(context.landBorders.features.length,2,'Only the two shared land borders are included; the river uses its official separate line');
 for(const [pair,minimum]of [[['brazil','uruguay'],850],[['brazil','argentina'],1100]]){
  const border=mesh(joint,joint.objects.regions,(a,b)=>a!==b&&a.properties.parent!==b.properties.parent&&pair.includes(a.properties.parent)&&pair.includes(b.properties.parent));
  assert.ok(km(border.coordinates)>minimum,'Countries need a shared edge: '+pair.join('–'));
+ const retained=context.landBorders.features.find(f=>pair.every(country=>f.properties.countries.includes(country)));
+ assert.ok(retained,'Missing international line: '+pair.join('–'));
+ assert.deepEqual(retained.geometry,border,'International line must follow the exact shared mesh and contain no coastline');
 }
 // Keep actual water gaps instead of assigning a lake or river to adjacent land.
 assert.ok(!Object.values(data).some(p=>p.regions.features.some(f=>inside([-53.2,-32.75],f.geometry))),'Lagoa Mirim water must remain open');

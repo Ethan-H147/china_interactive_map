@@ -63,7 +63,10 @@
     "build:argentina-statistics": "node scripts/prepare-argentina-statistics.mjs",
     "test:argentina-statistics": "node scripts/validate-argentina-statistics.mjs",
     "build:southeast-asia": "node scripts/fetch-malaysia-singapore.mjs && node scripts/build-malaysia-singapore.mjs && node scripts/reconcile-borneo.mjs",
-    "test:southeast-asia": "node --check dist/southeast-asia.mjs && node --check dist/southeast-asia-worker.mjs && node scripts/validate-southeast-asia.mjs",
+    "test:southeast-asia": "node --check dist/southeast-asia.mjs && node --check dist/southeast-asia-worker.mjs && node scripts/validate-southeast-asia.mjs && npm run test:malaysia-statistics",
+    "build:malaysia-statistics": "node scripts/prepare-malaysia-statistics.mjs",
+    "test:malaysia-statistics": "node scripts/validate-malaysia-statistics.mjs",
+    "test:map-sources": "node --check dist/map-sources.mjs && node scripts/validate-map-sources.mjs",
     "test:borneo": "node scripts/validate-borneo.mjs",
     "test:singapore-languages": "node scripts/validate-singapore-languages.mjs"
   }

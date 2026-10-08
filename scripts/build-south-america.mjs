@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import mapshaper from 'mapshaper';
-import {divisionBorders} from './south-america-borders.mjs';
+import {divisionBorders,internationalBorders} from './south-america-borders.mjs';
 import {alignCountry} from './international-topology.mjs';
 const root='artifacts/south-america-source/',out='dist/data/south-america/';
 fs.mkdirSync(out,{recursive:true});
@@ -92,5 +92,6 @@ for(const country of Object.keys(prepared)){
  fs.writeFileSync(out+country+'-sources.json',JSON.stringify(info,null,2)+'\n');
  console.log(country,info.count,info.bytes,info.decodedBytes);
 }
+context.landBorders=internationalBorders(joint);
 fs.writeFileSync('dist/data/flight-context.bin',gzipSync(JSON.stringify(context),{level:9}));
 fs.writeFileSync(out+'shared-border-sources.json',JSON.stringify(reports,null,2)+'\n');

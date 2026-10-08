@@ -9,17 +9,8 @@ const initialPreview=window.AtlasSouthAmerica.countries[initialCountry]||window.
 const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:false,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:{antialias:true},fadeDuration:0});
 map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
 const motionRenderer=window.AtlasMotion.createMotionRenderer(map,initialCountry);
-map.addControl(new maplibregl.AttributionControl({customAttribution:'Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">© HK SAR Government</a> · <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao Government</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'}));
-let attributionWidth;
-function collapseAttribution(){
- const width=map.getContainer().clientWidth;
- if(width<=640&&(attributionWidth==null||attributionWidth>640)){
-  const control=map.getContainer().querySelector('.maplibregl-ctrl-attrib');
-  control?.classList.remove('maplibregl-compact-show');control?.removeAttribute('open');
- }
- attributionWidth=width;
-}
-collapseAttribution();map.on('resize',collapseAttribution);
+map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay | World land: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain) | Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a> | Singapore: <a href="https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view">SLA</a> (Singapore Open Data Licence) | Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">© HK SAR Government</a> · <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao Government</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'}));
+window.AtlasMapSources.setupMapSources(map);
 
 const styleReady=new Promise(resolve=>map.once('load',resolve));
 const labels=[];
