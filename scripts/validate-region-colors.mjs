@@ -39,6 +39,8 @@ const fakeMap={getStyle:()=>({layers:[...layers.values()]}),getLayer:id=>layers.
 const add=(id,color='#fff',opacity=1)=>layers.set(id,{id,type:'fill',paint:{'fill-color':color,'fill-opacity':opacity}});
 const pending=new Map();globalThis.fetch=url=>new Promise(resolve=>pending.set(url.split('/').at(-1).replace('.json',''),data=>resolve({ok:true,json:async()=>data})));
 const colors=createRegionColors(fakeMap);
+assert.doesNotThrow(()=>listeners.get('change')({target:document}),'Page-level view-change events are safe');
+assert.doesNotThrow(()=>listeners.get('change')({target:null}),'Non-element change targets are safe');
 add('south-brazil-fill');add('russia-portal-fill');const start=colors.setCountry('brazil');pending.get('brazil')(datasets.brazil);await start;colors.setMetric('gdp');const expression=layers.get('south-brazil-fill').paint['fill-color'];assert(Array.isArray(expression));assert.equal(layers.get('russia-portal-fill').paint['fill-color'],'#fff');
 const before=paints.length;colors.sync();assert.equal(paints.length,before,'Style-data feedback settles without repaint loops');
 fakeMap.setPaintProperty('south-brazil-fill','fill-opacity',.25);colors.sync();assert.equal(layers.get('south-brazil-fill').paint['fill-opacity'],.25,'Satellite opacity is preserved');

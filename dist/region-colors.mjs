@@ -99,7 +99,7 @@ export function createRegionColors(map,host={}){
  function setMetric(value){
   if(!['none',...colorMetrics].includes(value))value='none';key=value;options();preferences.set(country,key);scale=data&&metricScale(data,key);drawLegend();sync();host.changed?.();
  }
- document.addEventListener('change',event=>{if(event.target.matches('[data-region-color]'))setMetric(event.target.value);});
+ document.addEventListener('change',event=>{if(event.target?.matches?.('[data-region-color]'))setMetric(event.target.value);});
  map.on('styledata',schedule);
  map.on('mousemove',event=>{
   if(!scale||suspended||map.isMoving())return;
