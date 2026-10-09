@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {countryColorData,colorLayerProfile} from '../dist/region-color-data.mjs';
-import {metricScale,shadeExpression,missingColor,createRegionColors} from '../dist/region-colors.mjs';
+import {metricScale,shadeExpression,shadePalette,missingColor,createRegionColors} from '../dist/region-colors.mjs';
 import {validate,hashFor,fromHash} from '../dist/view-state.mjs';
 const datasets=Object.fromEntries(Object.keys(countryColorData).map(country=>[country,JSON.parse(fs.readFileSync('dist/data/region-colors/'+country+'.json'))]));
 const counts={china:34,korea:29,mongolia:22,japan:47,indonesia:38,philippines:18,malaysia:16,singapore:5,russia:83,brazil:27,uruguay:19,argentina:24};
@@ -9,10 +9,14 @@ for(const [country,data]of Object.entries(datasets)){
  assert.equal(data.records.length,counts[country],country+' comparison units');assert.equal(new Set(data.records.map(r=>r.id)).size,data.records.length);
  for(const r of data.records)for(const [key,m]of Object.entries(r.metrics)){assert(Number.isFinite(m.value)&&m.value>=0,country+' '+r.id+' '+key);assert(m.sourceUrl,'Traceable metric source');if(key.startsWith('gdp'))assert.equal(m.unit,'USD','Economic values must share a currency');}
  const population=metricScale(data,'population');assert(population&&population.count>=2,country+' population shading');assert.equal(population.color(undefined),missingColor);
- for(const key of ['population','populationDensity','gdp','gdpPerCapita']){const scale=metricScale(data,key);if(!scale)continue;assert(scale.bins.length<=5);assert.equal(scale.bins.reduce((s,b)=>s+b.count,0),scale.count,'Every valid value belongs to one group');}
+ for(const key of ['population','populationDensity','gdp','gdpPerCapita']){const scale=metricScale(data,key);if(!scale)continue;assert(scale.bins.length<=7);assert.equal(scale.bins.reduce((s,b)=>s+b.count,0),scale.count,'Every valid value belongs to one group');}
  if(countryColorData[country].economy===false){assert.equal(metricScale(data,'gdp'),null);assert.equal(metricScale(data,'gdpPerCapita'),null);}
 }
-assert(datasets.argentina.records.every(r=>Object.keys(r.metrics).length===1&&r.metrics.population),'Argentina uses population only');
+assert.equal(shadePalette.length,7);assert.equal(new Set(shadePalette).size,7,'Seven distinct shades');
+assert(datasets.argentina.records.every(r=>Object.keys(r.metrics).length===2&&r.metrics.population&&r.metrics.populationDensity),'All Argentine provinces and the autonomous city offer population and density');
+const argentinaSource=JSON.parse(fs.readFileSync('dist/data/south-america/argentina-statistics.json'));
+for(const r of datasets.argentina.records){const source=argentinaSource.regions['argentina:'+r.id];assert.equal(r.metrics.populationDensity.value,source.population.value/source.area.value,'Density uses the reported population and area');assert(r.metrics.populationDensity.areaSourceUrl,'Density retains its area source');}
+assert.equal(metricScale(datasets.argentina,'populationDensity').bins.length,7);assert.equal(metricScale(datasets.brazil,'gdpPerCapita').bins.length,7,'Seven groups are used when the data supports them');
 assert.equal(datasets.brazil.records.find(r=>r.id==='BR-53').name,'Distrito Federal');
 const johor=datasets.malaysia.records.find(r=>r.id==='MY-01');assert.equal(johor.metrics.gdp.priceBasis,'constant');assert.equal(johor.metrics.gdp.baseYear,2015);
 const central=datasets.singapore.records.find(r=>r.id==='SG-CR');assert(Math.abs(central.metrics.populationDensity.value-991270/136.41327372018955)<1e-8);

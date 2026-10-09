@@ -11,7 +11,7 @@ export const countryColorData = {
  russia: {statistics:'data/russia/statistics.json', catalogue:'data/russia/catalogue.bin', levels:'Federal subjects'},
  brazil: {statistics:'data/south-america/brazil-statistics.json', levels:'States & Federal District', layers:/^south-brazil-fill$/, primary:/^south-brazil-fill$/},
  uruguay: {statistics:'data/south-america/uruguay-statistics.json', levels:'Departments', layers:/^south-uruguay-fill$/, primary:/^south-uruguay-fill$/, economy:false},
- argentina: {statistics:'data/south-america/argentina-statistics.json', levels:'Provinces & autonomous city', layers:/^south-argentina-fill$/, primary:/^south-argentina-fill$/, economy:false, density:false}
+ argentina: {statistics:'data/south-america/argentina-statistics.json', levels:'Provinces & autonomous city', layers:/^south-argentina-fill$/, primary:/^south-argentina-fill$/, economy:false}
 };
 export const colorMetrics = ['population','populationDensity','gdp','gdpPerCapita'];
 export const colorLabels = {none:'None',population:'Population',populationDensity:'Population density',gdp:'GDP',gdpPerCapita:'GDP per capita'};

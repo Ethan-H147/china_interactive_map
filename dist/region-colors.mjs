@@ -1,5 +1,5 @@
 import {countryColorData,colorMetrics,colorLabels,colorLayerProfile} from './region-color-data.mjs';
-export const shadePalette=['#e3eee9','#b4d8cd','#7bb9b1','#448d99','#285675'];
+export const shadePalette=['#e3eee9','#c7e2d8','#a5d2c8','#7bb9b1','#529ca4','#367b8d','#285675'];
 export const missingColor='#d6d5cf';
 export function metricScale(data,key){
  const candidates=data.records.map(r=>r.metrics[key]).filter(m=>m&&Number.isFinite(m.value)&&m.value>=0);
@@ -9,8 +9,8 @@ export function metricScale(data,key){
  const metric=r=>{const m=r.metrics[key];return m&&Number.isFinite(m.value)&&m.value>=0&&(!chosen||basis(m)===chosen)?m:undefined;};
  const metrics=data.records.map(metric).filter(Boolean),values=metrics.map(m=>m.value).sort((a,b)=>a-b);
  if(!values.length)return null;
- const thresholds=[...new Set([1,2,3,4,5].map(i=>values[Math.ceil(values.length*i/5)-1]))];
- const bins=thresholds.map((max,i)=>({max,min:i?thresholds[i-1]:values[0],color:shadePalette[thresholds.length===1?2:Math.round(i*4/(thresholds.length-1))],count:values.filter(v=>v<=max&&(!i||v>thresholds[i-1])).length}));
+ const thresholds=[...new Set(shadePalette.map((_,i)=>values[Math.ceil(values.length*(i+1)/shadePalette.length)-1]))];
+ const bins=thresholds.map((max,i)=>({max,min:i?thresholds[i-1]:values[0],color:shadePalette[thresholds.length===1?Math.floor(shadePalette.length/2):Math.round(i*(shadePalette.length-1)/(thresholds.length-1))],count:values.filter(v=>v<=max&&(!i||v>thresholds[i-1])).length}));
  const years=[...new Set(metrics.map(m=>m.year).filter(Boolean))].sort();
  return {key,bins,min:values[0],max:values.at(-1),count:values.length,total:data.records.length,years,unit:metrics[0].unit,baseYear:metrics[0].baseYear,estimated:metrics.some(m=>m.usdEstimate),constant:metrics.some(m=>m.priceBasis==='constant'),metric,color:value=>Number.isFinite(value)?bins.find(b=>value<=b.max)?.color||bins.at(-1).color:missingColor};
 }
@@ -55,7 +55,7 @@ export function createRegionColors(map,host={}){
   period.textContent=[scale.estimated?'≈ USD':scale.unit,scale.years.length===1?scale.years[0]:scale.years.length?scale.years[0]+'–'+scale.years.at(-1):null,scale.constant?'constant '+scale.baseYear+' prices':null].filter(Boolean).join(' · ');
   ramp.replaceChildren();for(let i=0;i<scale.bins.length;i++){const bin=scale.bins[i],swatch=el('span');swatch.style.background=bin.color;swatch.title=(i?'>'+metricNumber(bin.min,key):metricNumber(bin.min,key))+' – '+metricNumber(bin.max,key)+' · '+bin.count+' regions';ramp.append(swatch);}
   limits.replaceChildren(el('span',metricNumber(scale.min,key,true)),el('span',metricNumber(scale.max,key,true)));
-  hover.replaceChildren();notes.replaceChildren(el('p',data.level+'. Up to five groups based on the current country’s value distribution; tied values stay together. Each country has its own scale.'));
+  hover.replaceChildren();notes.replaceChildren(el('p',data.level+'. Up to seven groups based on the current country’s value distribution; tied values stay together. Each country has its own scale.'));
   const coverage=el('p'),chip=el('span',undefined,'region-color-missing');coverage.append(chip,document.createTextNode('No data · '+scale.count+'/'+scale.total+' regions covered'));notes.append(coverage);
   if(scale.years.length>1)notes.append(el('p','Latest available figures use different years. Check the date beside each value.'));
   if(scale.constant)notes.append(el('p','Inflation-adjusted GDP in '+scale.baseYear+' prices; dollar estimates retain that reference year.'));
