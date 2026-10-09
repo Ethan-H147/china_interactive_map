@@ -14,4 +14,10 @@ if(!brazil.includes(backgrounds))throw new Error('Brazil flag backgrounds change
 const globe=brazil.replace(/<svg\b[^>]*>/,'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-735 -735 1470 1470" width="1470" height="1470">').replace(backgrounds,'');
 fs.writeFileSync(new URL('brazil-globe.svg',vendor),globe);
 
-console.log('Extracted Argentina’s sun and Brazil’s globe from the existing national flag SVGs.');
+const uruguay=fs.readFileSync(new URL('flag-uy.svg',vendor),'utf8');
+const uruguayBackgrounds='<path d="M-5-5h945v630H-5z" fill="#fff"/><path d="M345 65h595v70H345zm0 140h595v70H345zM-5 345h945v70H-5zm0 140h945v70H-5z" fill="#0038a8"/>';
+if(!uruguay.includes(uruguayBackgrounds))throw new Error('Uruguay flag backgrounds changed; inspect the source before extracting its sun.');
+const uruguaySun=uruguay.replace(/<svg\b[^>]*>/,'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="35 35 270 270" width="270" height="270">').replace(uruguayBackgrounds,'');
+fs.writeFileSync(new URL('uruguay-sun.svg',vendor),uruguaySun);
+
+console.log('Extracted Argentina’s and Uruguay’s suns and Brazil’s globe from the existing national flag SVGs.');
