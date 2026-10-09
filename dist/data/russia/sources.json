@@ -17,7 +17,7 @@
     }
   },
   "coverage": "83 federal subjects in the sourceâ€™s internationally recognized Russia coverage. The 2017 district snapshot includes districts and urban jurisdictions and does not guarantee later municipal reforms. Crimea and other Russian territorial claims in Ukraine are outside this Russia layer. The source topology contains 2,327 second-level geometries; API metadata lists 2,328. Only actual geometries are displayed. Moscowâ€™s 12 administrative okrugs and Saint Petersburgâ€™s 18 districts supplement the national source using OpenStreetMap boundaries retrieved in October 2026.",
-  "processing": "Shared topology, 0.0006Â° first-level / 0.00045Â° second-level shared simplification (less than 70 m north-south). Districts assigned by greatest polygon overlap, clipped to their aligned parent. Russiaâ€™s mainland border follows the existing China, Mongolia and North Korea reference edges within 2.5 km; only narrow inland border corridors are adjusted. Enclosed seams touching both countries use a separate, seam-only repair within 15 km (2.5 km at North Korea); unrelated coasts remain unchanged. Coastlines are unoutlined. District geometry loads for one region at a time. Longitudes across the date line are unwrapped eastward to preserve Chukotka. Where the second-level source supplies only Cyrillic names, English labels use a Latin transliteration with translated administrative terms; the original title remains in the native-name field.",
+  "processing": "Shared topology, 0.0006Â° first-level / 0.00045Â° second-level shared simplification (less than 70 m north-south). Districts assigned by greatest polygon overlap, clipped to their aligned parent. Russiaâ€™s mainland border follows the existing China, Mongolia and North Korea reference edges within 2.5 km; only narrow inland border corridors are adjusted. Enclosed seams touching both countries use a separate, seam-only repair within 15 km (2.5 km at North Korea); unrelated coasts remain unchanged. Coastlines are unoutlined. District geometry loads for one region at a time. Longitudes across the date line are unwrapped eastward to preserve Chukotka. Where the second-level source supplies only Cyrillic names, English labels use a Latin transliteration with translated administrative terms; the original title remains in the native-name field. Russian district labels are restored from the original OpenStreetMap relation IDs, with historical names used for the boundary snapshot. Complete Cyrillic names replace empty or truncated source labels.",
   "federalCities": {
     "source": "https://www.openstreetmap.org/",
     "retrieved": "2026-10-08",
@@ -763,5 +763,15 @@
     "source": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
     "license": "Public domain (official Russian symbols, PD-RU-exempt)",
     "aspectRatio": "3:2"
+  },
+  "nativeNames": {
+    "provider": "OpenStreetMap",
+    "license": "ODbL 1.0",
+    "licenseURL": "https://www.openstreetmap.org/copyright",
+    "retrieved": "2026-10-09",
+    "sourceArchive": "https://github.com/wmgeolab/geoBoundaries/blob/9469f09/sourceData/gbOpen/RUS_ADM2.zip",
+    "sourceArchiveSha256": "faa6461e6a85d021ac4b99ee983b3cf92fa05d4468a8ea79e2dea2615fc30aab",
+    "records": 2327,
+    "method": "Original DBF relation IDs joined in source order to released shape IDs, with the single empty geometry omitted. Native names retrieved from those exact relations as of 31 December 2017; records created after 2017 use their earliest visible version containing a Russian name. The original archive declares 2017 but contains some later-created relations. A current snapshot is used only if no native historical name is available."
   }
 }
