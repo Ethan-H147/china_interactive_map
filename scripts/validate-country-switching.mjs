@@ -42,9 +42,9 @@ for(const country of ['brazil','uruguay','argentina'])env.window.AtlasEntry.coun
 env.makePreviews=()=>Object.fromEntries(['brazil','uruguay','argentina'].map(country=>[country,{...atlas(Promise.resolve()),bounds:[[-74,-56],[-34,6]]}]));
 vm.runInContext('southAmerica={portals:makePreviews(),syncArrow(){},fly:async()=>true};',env);
 env.reducedMotion={matches:false};env.zoomLock={locked:false};
-env.window.AtlasDev={allows:country=>!['brazil','uruguay'].includes(country)};
-assert.equal(await env.changeAtlas('brazil',true,true),false,'Preview switching is blocked without developer mode');
-assert.equal(remembered.at(-1),'indonesia');
+env.window.AtlasDev={enabled:false,allows:()=>true};
+assert.equal(await env.changeAtlas('brazil',true,true),true,'Brazil switches publicly without developer mode');
+assert.equal(remembered.at(-1),'brazil');
 assert.equal(await env.changeAtlas('argentina'),true,'Argentina switching works without developer mode');
 env.window.AtlasDev.allows=()=>true;
 assert.equal(await env.changeAtlas('brazil',true,true),true,'Flight enters the new country through the existing switching lifecycle');
@@ -99,7 +99,7 @@ sources.set('city-districts',true);emit('sourcedata');assert.equal(await chinaSw
 
 for(const country of ['malaysia','singapore'])env.window.AtlasEntry.countries[country]={en:country};
 vm.runInContext('malaysiaAtlas=makeAtlas(Promise.resolve());singaporeAtlas=makeAtlas(Promise.resolve());',env);
-env.window.AtlasDev.allows=c=>!['brazil','uruguay'].includes(c);
+env.window.AtlasDev.allows=()=>true;
 for(const country of ['malaysia','singapore']){assert.equal(await env.changeAtlas(country),true);assert.equal(remembered.at(-1),country);}
 console.log('Malaysia and Singapore are public; switching succeeds without developer mode.');
 

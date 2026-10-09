@@ -9,3 +9,5 @@ body[data-atlas=russia] #atlas-title-local{font:26px Georgia,serif;letter-spacin
 .regional-sidebar .archipelago-children .search-result{width:100%;text-align:left;padding:10px 12px}
 .regional-sidebar .region-capital{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
 .country-detail-spinner{display:block;text-align:center;margin:12px auto}.country-detail-spinner .country-symbol{width:26px;height:26px}
+
+.regional-sidebar .administrative-name{font-size:13px;line-height:1.5;color:var(--muted);margin:4px 0 18px}

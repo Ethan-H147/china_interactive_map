@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {createPlaceSearch} from '../dist/place-search.mjs';
+import {russiaPlaceNames} from '../dist/russia-names.mjs';
 import {russiaFlags} from '../dist/russia-flags.mjs';
 import {validate,hashFor,fromHash} from '../dist/view-state.mjs';
 const base='dist/data/russia/',read=name=>JSON.parse(gunzipSync(fs.readFileSync(base+name)));
@@ -57,3 +58,11 @@ const view={v:1,country:'russia',center:[183,65],zoom:6,selection:'RU-CHU',mode:
 assert.deepEqual(fromHash(hashFor(view)),validate(view),'Views preserve Chukotka across the date line');
 assert.equal(validate({...view,country:'china'}),null,'Other countries retain their longitude validation');
 console.log('Russia: 83 regions, 2,357 second-level areas, all regional cards and flags, bounded region chunks, inland-only outlines, both-language search and date-line view links passed.');
+
+const tyumen=districts.find(r=>r.id==='RU-D-55944525718876'),tyumenNames=russiaPlaceNames(tyumen);
+assert.equal(tyumenNames.en,'Tyumen');assert.equal(tyumenNames.local,'Тюмень');assert.equal(tyumenNames.administrativeEn,'Tyumen Urban Okrug');assert.equal(tyumenNames.administrativeLocal,tyumen.local);
+assert.equal(russiaPlaceNames(districts.find(r=>r.en==='Tyumensky District')).en,'Tyumensky District','Ordinary districts stay distinct from the city');
+assert.equal(tyumen.en,'Urban District Tyumen','Sourced names remain unchanged and searchable');
+assert.equal(russiaPlaceNames({level:2,en:'Saransk Urban District',local:'городской округ Саранск',kind:'City / urban district'}).en,'Saransk');
+assert.equal(russiaPlaceNames({level:2,en:'Khanty-Mansiysk Urban Okrug',local:'городской округ Ханты-Мансийск',kind:'City / urban district'}).en,'Khanty-Mansiysk');
+console.log('City map names and sidebar administrative names stay separate without changing district identity.');

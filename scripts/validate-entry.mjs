@@ -7,13 +7,13 @@ function boot(hash='',saved,{blocked=false,developer=false}={}){
  const elements=new Map(['atlas-title-english','atlas-title-local','atlas-title-malay','atlas-title-tamil','loading-label','startup-name','home'].map(id=>[id,{}]));
  const symbols=[{}],location={hash,pathname:'/',search:''};
  const listeners={};
- const context={window:{AtlasDev:{enabled:developer,allows(country){return !['brazil','uruguay'].includes(country)||this.enabled;}},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
+ const context={window:{AtlasDev:{enabled:developer,allows(){return true;}},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
   history:{replaceState(a,b,url){location.hash=new URL(url,'https://example.test').hash;}},
   localStorage:{getItem(key){if(blocked)throw Error('Storage blocked');return stored.get(key);},setItem(key,value){if(blocked)throw Error('Storage blocked');stored.set(key,value);}},AtlasSymbols:{markup:country=>'<svg>'+country+'</svg>'}};
  vm.runInNewContext(source,context);const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners};
 }
 for(const country of ['china','korea','mongolia','japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia']){
- const developer=['brazil','uruguay'].includes(country);
+ const developer=false;
  const explicit=boot('#'+country,'mongolia',{developer});
  assert.equal(explicit.entry.initial,country,'Explicit links override the previous visit');
  assert.equal(explicit.context.document.documentElement.dataset.atlas,country);
@@ -35,9 +35,9 @@ for(const country of ['korea','china','mongolia','japan','philippines','indonesi
 for(const hash of ['#place=220000','#china/place=220000']){const linked=boot(hash,'korea');assert.equal(linked.entry.initial,'china');assert.equal(linked.location.hash,'#china/place=220000','Retain and normalize old shared links');linked.entry.remember('korea');assert.equal(linked.location.hash,'#korea');}
 const unavailable=boot('#mongolia',undefined,{blocked:true});unavailable.entry.remember('china');assert.equal(unavailable.location.hash,'#china','URL navigation works when browser storage is blocked');
 for(const country of ['brazil','uruguay']){
- const normal=boot('#'+country,country);assert.equal(normal.entry.initial,'china');assert.equal(normal.location.hash,'#china','Preview links do not reveal unfinished countries outside developer mode');
- const remembered=boot('',country);assert.equal(remembered.entry.initial,'china','A remembered preview cannot reopen after developer mode expires');
- normal.entry.remember(country);assert.equal(normal.entry.current,'china');
+ const normal=boot('#'+country,country);assert.equal(normal.entry.initial,country);assert.equal(normal.location.hash,'#'+country,'Brazil and Uruguay open publicly');
+ const remembered=boot('',country);assert.equal(remembered.entry.initial,country,'Public countries reopen without developer mode');
+ normal.entry.remember(country);assert.equal(normal.entry.current,country);
 }
 const html=fs.readFileSync('dist/index.html','utf8');assert(html.indexOf('src="atlas-entry.js"')<html.indexOf('rel="stylesheet"'),'Select the theme before the first styled paint');assert(!html.includes('moving-dot'));assert(!html.includes('country-nav'));assert(!html.includes('country-welcome'));assert(!html.includes('country-open'));assert(!html.includes('country-menu'));
 assert(!fs.readFileSync('dist/south-america.mjs','utf8').includes('continent-flight'),'No continent flight buttons are created');
