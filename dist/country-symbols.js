@@ -1,5 +1,12 @@
-// Small vector emblems; CSS rotates only the group marked as the rotor.
+// Small vector emblems; each country animates only its moving parts.
 window.AtlasSymbols={sequence:0,markup(country){
+ if(country==='russia'){
+  const face='<circle cx="60" cy="34" r="10" fill="#fff2da"/><path d="M51 30q9-12 18 0q-9-4-18 0" fill="#d4a258"/><g fill="#49352e"><circle cx="56.5" cy="34" r="1.1"/><circle cx="63.5" cy="34" r="1.1"/></g><path d="M57 39q3 2.5 6 0" fill="none" stroke="#9b4944" stroke-width="1.3" stroke-linecap="round"/>';
+  const cap='<path d="M40 60c2-8 9-11 8-20-3-27 27-27 24 0-1 9 6 12 8 20Z"/>';
+  const base='<path d="M40 60h40c3 8 8 13 9 22 2 16-60 16-58 0 1-9 6-14 9-22Z"/>';
+  const apron='<path d="M51 66q9 5 18 0l7 18q-16 9-32 0Z" fill="#fff2da" stroke="none"/><g fill="#d4a258" stroke="none"><path d="M60 71l3 6 6 3-6 3-3 6-3-6-6-3 6-3Z"/><circle cx="60" cy="80" r="3" fill="#b7444c"/></g>';
+  return `<svg class="country-symbol matryoshka" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="60" cy="95" rx="27" ry="3" fill="#29334a" opacity=".1"/><g class="matryoshka-child"><g transform="translate(25.2 37.24)scale(.58)" fill="#365d9b" stroke="#254675" stroke-width="1.8" stroke-linejoin="round">${base}${apron}${cap}${face}</g></g><g fill="#b7444c" stroke="#803239" stroke-width="1.8" stroke-linejoin="round">${base}${apron}<g class="matryoshka-lid">${cap}${face}<path d="M56 47l4 4 4-4-4 10Z" fill="#fff2da" stroke="none"/></g></g></svg>`;
+ }
  if(country==='philippines'){
   // Exact sun geometry from the national flag SVG; source in symbol-sources.
   const ray='m0 0-3.164-15.909.945-.946zl-1.169-17.831L0-19l1.169 1.169zl2.219-16.855.945.946z';
@@ -7,7 +14,7 @@ window.AtlasSymbols={sequence:0,markup(country){
  }
  // Exact emblems extracted by scripts/prepare-country-symbols.mjs.
  if(country==='argentina'||country==='brazil')return `<img class="country-symbol symbol-rotor" src="vendor/${country==='argentina'?'argentina-sun':'brazil-globe'}.svg" alt="" aria-hidden="true">`;
- if(['indonesia','malaysia','singapore','uruguay','russia'].includes(country))return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="40" stroke-width="1.5"/><path d="M50 10V90M10 50H90M22 22L78 78M22 78L78 22M34.7 13L65.3 87M13 34.7L87 65.3M13 65.3L87 34.7M34.7 87L65.3 13"/><circle cx="50" cy="50" r="8" fill="var(--map)"/></g></svg>`;
+ if(['indonesia','malaysia','singapore','uruguay'].includes(country))return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="40" stroke-width="1.5"/><path d="M50 10V90M10 50H90M22 22L78 78M22 78L78 22M34.7 13L65.3 87M13 34.7L87 65.3M13 65.3L87 34.7M34.7 87L65.3 13"/><circle cx="50" cy="50" r="8" fill="var(--map)"/></g></svg>`;
  if(country==='japan')return '<img class="country-symbol symbol-rotor" src="vendor/japan-chrysanthemum.png" alt="" aria-hidden="true">';
  const key='emblem-'+(++this.sequence);
  const taiji='<circle cx="50" cy="50" r="49" fill="#fff" stroke="#171717" stroke-width="1"/><path d="M50 1a49 49 0 0 1 0 98 24.5 24.5 0 0 1 0-49 24.5 24.5 0 0 0 0-49" fill="#171717"/><circle cx="50" cy="25.5" r="7" fill="#171717"/><circle cx="50" cy="74.5" r="7" fill="#fff"/>';

@@ -6,4 +6,10 @@
 #moving-indicator .soyombo{width:32px;height:62px}
 #map-loading .country-symbol{width:64px;height:64px}
 #map-loading .soyombo{width:44px;height:86px}
+.matryoshka-lid,.matryoshka-child{transform-box:view-box;animation:matryoshka-open 2.6s cubic-bezier(.65,0,.35,1) infinite}
+.matryoshka-lid{transform-origin:60px 60px}
+.matryoshka-child{transform-origin:60px 90px;animation-name:matryoshka-peek;opacity:0}
+@keyframes matryoshka-open{0%,10%,88%,100%{transform:translate(0,0) rotate(0)}24%,70%{transform:translate(-26px,-8px) rotate(-18deg)}}
+@keyframes matryoshka-peek{0%,14%,84%,100%{transform:translateY(18px) rotate(0);opacity:0}24%{transform:translateY(4px) rotate(0);opacity:1}34%{transform:translateY(-26px) rotate(-6deg);opacity:1}44%{transform:translateY(-26px) rotate(5deg);opacity:1}54%{transform:translateY(-26px) rotate(-2deg);opacity:1}62%,68%{transform:translateY(-26px) rotate(0);opacity:1}78%{transform:translateY(8px) rotate(0);opacity:0}}
 @media(prefers-reduced-motion:reduce){.symbol-rotor{animation:none;will-change:auto}}
+@media(prefers-reduced-motion:reduce){.matryoshka-lid,.matryoshka-child{animation:none;transform:none}.matryoshka-child{opacity:0}}
