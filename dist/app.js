@@ -112,7 +112,14 @@ function kind(p){
   if(p.name.endsWith('盟'))return 'League';
   return 'Prefecture-level City';
 }
+function syncMapActivity(){
+  const busy=countrySwitching||cameraBusy;
+  $('map-shell').setAttribute('aria-busy',String(atlasStarting||busy));
+  $('moving-indicator').hidden=atlasStarting||!busy;
+  $('map-activity-label').textContent=countrySwitching?'Loading '+window.AtlasEntry.countries[requestedCountry].en+' map':'Map moving';
+}
 function controls(){
+  syncMapActivity();
   const koreaLoading=atlasMode!=='china'&&!currentAtlas()?.ready;
   document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=atlasStarting||countrySwitching||(cameraBusy&&el.matches('input[type="checkbox"],input[type="range"]'))||!allReady||koreaLoading||(quiz.active&&!['home','zoom-in','zoom-out','fit-map'].includes(el.id)));
   document.querySelectorAll('[data-quiz-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);
@@ -123,13 +130,13 @@ function setMode(mode,automatic=false){if(automatic&&$('mode-lock')?.getAttribut
 const interactionNames=['dragPan','scrollZoom','doubleClickZoom','touchZoomRotate','boxZoom','keyboard'];
 let enabledInteractions=[];
 function lockCamera(){
-  cameraBusy=true;$('map-shell').setAttribute('aria-busy','true');$('moving-indicator').hidden=false;controls();
+  cameraBusy=true;controls();
   enabledInteractions=interactionNames.filter(name=>map[name]?.isEnabled());
 
   labels.forEach(label=>label.remove());labels.length=0;currentAtlas()?.pauseLabels();
   clearHover();
 }
-function unlockCamera(){cameraBusy=false;enabledInteractions.forEach(name=>map[name].enable());enabledInteractions=[];$('map-shell').setAttribute('aria-busy','false');$('moving-indicator').hidden=true;controls();updateLabels();}
+function unlockCamera(){cameraBusy=false;enabledInteractions.forEach(name=>map[name].enable());enabledInteractions=[];controls();updateLabels();}
 function navigationOptions(options={}){const top=options.paddingTopLeft||options.padding||[28,65],bottom=options.paddingBottomRight||options.padding||[55,65];return{padding:{left:top[0],top:top[1],right:bottom[0],bottom:bottom[1]},maxZoom:options.maxZoom?options.maxZoom-1:11,retainPadding:false};}
 let navigationEpoch=0,navigationCleanup,previewStart;
 function cancelNavigation(){navigationEpoch++;navigationCleanup?.(false);navigationCleanup=null;finishNavigation=null;map.stop();}
@@ -253,7 +260,7 @@ async function changeAtlas(next,animate=true,flight=false){
  // Acknowledge the destination immediately while keeping the camera still during preparation.
  window.AtlasEntry.remember(next);window.AtlasTheme.applyAtlasTheme(map,next);map.setRenderWorldCopies?.(next==='russia');
  document.documentElement.dataset.switching='true';
- $('status').hidden=false;$('status').textContent='Loading '+window.AtlasEntry.countries[next].en+' boundaries…';
+ $('status').hidden=true;
  motionRenderer.loadCountry(next).catch(()=>{});
  try{
   await motionRenderer.end();if(epoch!==countryEpoch)return false;
