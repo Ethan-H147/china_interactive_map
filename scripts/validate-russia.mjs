@@ -42,7 +42,7 @@ for(const r of regions){
  districtCount+=chunk.count;
 }
 assert.equal(districtCount,districts.length);
-for(const d of districts)assert(!stats.regions['russia:'+d.id],'Districts never inherit parent statistics');
+for(const d of districts){const s=stats.regions['russia:'+d.id];if(s){assert.equal(s.level,2);assert(!s.gdp&&!s.area,'City population cards never inherit regional totals');}}
 assert.equal(stats.regions['russia:RU-TYU'].gdp.value,2_213_672_500_000);
 assert.equal(stats.regions['russia:RU-ARK'].gdp.value,840_732_800_000);
 for(const f of first.boundaries.features)assert.equal(f.properties.owners.length,2,'Regional lines exclude coasts');

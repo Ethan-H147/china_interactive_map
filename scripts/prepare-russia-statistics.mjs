@@ -28,3 +28,4 @@ assert.equal(Object.keys(regions).length,83);
 fs.mkdirSync('dist/data/russia',{recursive:true});
 fs.writeFileSync('dist/data/russia/statistics.json',JSON.stringify({version:1,country:'russia',retrieved:raw.retrieved,sources,regions}));
 console.log('Russia: 83 regional cards, with population, area, 2024 GDP and published GDP per capita, and matching-year USD estimates.');
+await import('./prepare-russia-cities.mjs');

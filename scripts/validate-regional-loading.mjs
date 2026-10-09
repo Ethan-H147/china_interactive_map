@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {createPlaceSearch} from '../dist/place-search.mjs';
-const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[];
+const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
  if(!elements.has(id))elements.set(id,{id,dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],attributes:{},classList:{toggle(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){}});
  return elements.get(id);
@@ -18,11 +18,11 @@ const context=vm.createContext({console,setTimeout,clearTimeout,DOMException,Opt
  window:{AtlasSymbols:{markup:()=>'<svg/>'},AtlasLabels:{render:()=>[]}},
  createCountryPage:options=>element(options.id),setSubdivisionHeading:(node,label,count)=>node.textContent=label+' '+count,
  loadCompressed:async file=>file.endsWith('catalogue.bin')?catalogue:{type:'FeatureCollection',features:[]},createPlaceSearch,
- setLayerVisible(){},lineSourceOptions:{type:'geojson'},adaptiveOpacity:()=>1,renderStatistics(){},clearStatistics(){}});
+ setLayerVisible(){},lineSourceOptions:{type:'geojson'},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){}});
 const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replace("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
 vm.runInContext(source,context);
 const host={isBusy:()=>false,fit:async b=>fits.push(b),controls(){}};
-const atlas=await context.addRegionalCountry(map,host,{country:'test',prefix:'test',base:'data/test/',name:'Test',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Regions',secondLabel:'Districts'});
+const atlas=await context.addRegionalCountry(map,host,{country:'test',prefix:'test',base:'data/test/',name:'Test',nationalFlag:'flag.svg',flags:{},detailFlags:{B1:{file:'city.svg',page:'https://example.org/city-flag',credit:'Official flag',license:'Public domain'}},hasStatistics:r=>r.level===1||r.id==='B1',bounds,firstLabel:'Regions',secondLabel:'Districts'});
 const flush=()=>new Promise(resolve=>setImmediate(resolve)),complete=job=>job.onmessage({data:{blob:{},borders:{}}});
 const entering=atlas.enter(false);await flush();assert.equal(jobs[0].request.url,'data/test/first.bin');complete(jobs[0]);await entering;
 assert(atlas.ready);assert(!sources.has('test-second'),'Entry does not load district geometry');
@@ -31,7 +31,9 @@ const first=select('A');await flush();const obsolete=jobs.at(-1);
 const second=select('B');await flush();assert(obsolete.terminated,'Selecting a new region terminates the previous worker');
 complete(jobs.at(-1));await second;await first;assert.equal(atlas.getSelection(),'B');assert.equal(fits.length,1,'Cancelled selections never move the camera');
 assert(sources.has('test-second'));assert.equal([...sources.keys()].filter(id=>id==='test-second').length,1);
+await atlas.restore('B1');assert(!element('test-detail-flag-source').hidden);assert.equal(element('test-detail-flag').src,'city.svg');assert.equal(statistics.at(-1),'test:B1','City selection renders its own card');
 const third=select('A');await flush();assert(!sources.has('test-second'),'Previous district geometry is released before fetching another region');
+assert(element('test-detail-flag-source').hidden,'Selecting a region removes the third city flag');
 const late=jobs.at(-1);atlas.leave();assert(late.terminated);complete(late);await third;
 assert(!atlas.ready);assert(!sources.has('test-first'));assert(!sources.has('test-second'),'Late worker messages cannot restore a departed country');
 assert(revoked.length>=4,'First and second-level object URLs are released');

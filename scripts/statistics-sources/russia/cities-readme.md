@@ -1,0 +1,9 @@
+# Russian city population and flags
+
+Snapshot checked 9 October 2026. `cities.json` retains 231 city-proper population values from the 2021 census column in Wikipedia's [city population reference table](https://en.wikipedia.org/wiki/List_of_cities_and_towns_in_Russia_by_population). The compressed HTML snapshot is pinned by SHA-256 in the JSON. Wikipedia-derived content is adapted under CC BY-SA 4.0. The table covers cities above 50,000 residents; it is not a complete census of every municipality.
+
+Matches use an exact normalized English or Russian city name plus the federal subject. Explicit subject aliases handle Udmurtia, Chuvashia, Chechnya, Kabardino-Balkaria and Karachay-Cherkessia. Vladivostok and Angarsk have explicitly matched adjectival urban-okrug names. Ordinary raions are excluded, even when their capital has the same name. Moscow and Saint Petersburg retain their existing federal-subject cards. Cities without a separate matching second-level boundary receive no substituted district card.
+
+The population scope is the city itself, not the entire mapped urban okrug or metropolitan area. City cards never inherit regional area, GDP or population. `prepare-russia-cities.mjs` reproduces the cards and flag manifest from this snapshot and verifies the evidence and local asset hashes. It runs after the independent regional statistics preparation.
+
+226 official city flags were identified through their city article's flag image. Each retained flag records its original Commons file URL, description page, local display asset and SHA-256. Display assets preserve the sourced SVG or use a lossless WebP of Commons' standard 330-pixel thumbnail. Flags link to their original source in the interface. No substitute coat of arms or invented flag is used where a current city flag was not verified.

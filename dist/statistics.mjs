@@ -47,6 +47,7 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
   const record=data.regions[key];panel.replaceChildren();
   if(!record){panel.append(element('p','Statistics have not been verified for this division.','statistics-note'));return;}
   if(population)renderPopulation(population,record,data,onRelatedPlace);
+  if(record.population&&!['area','gdp','gdpPerCapita','realGdp','realGva','exports'].some(field=>record[field])){panel.hidden=true;return;}
   const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
   area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area);if(!key.startsWith('singapore:'))panel.append(economy);
   const areaValues=element('dl',null,'statistics-values'),economyValues=element('dl',null,'statistics-values');area.append(areaValues);
