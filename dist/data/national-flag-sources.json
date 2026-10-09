@@ -1,0 +1,182 @@
+{
+  "retrieved": "2026-10-09",
+  "processing": "Unmodified original SVG files; thumbnail assets remain separate.",
+  "flags": {
+    "prc": {
+      "file": "vendor/flag-prc.svg",
+      "full": "vendor/flag-originals/national-prc.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Republic_of_China.svg",
+      "credit": "Zeng Liansong",
+      "license": "Public domain",
+      "sha256": "5fce7409cd290e6b3c5ecd09c0d2c400ae459e3d59c6c0539793ac0e803d0179"
+    },
+    "roc": {
+      "file": "vendor/flag-roc.svg",
+      "full": "vendor/flag-originals/national-roc.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Republic_of_China.svg",
+      "credit": "Sun Yat-sen",
+      "license": "Public domain",
+      "sha256": "11a8acaecfcc6258cfeedc15555fbc4dbe2b1df640497be2d5dcb4f60a5c4167"
+    },
+    "hk": {
+      "file": "vendor/flag-hk.svg",
+      "full": "vendor/flag-originals/national-hk.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Hong_Kong.svg",
+      "credit": "Designed by Tao Ho\nSVG code of 24 November 2005 version copied from Open Clip Art\nSVG code of 20 August 2011 version by Alkari\nSVG code of 6 September 2021 version by Mike Rohsopht",
+      "license": "Public domain",
+      "sha256": "bdc810878f887e885920d1d47133aec5fcd143043935bfd022fb00ef811621e5"
+    },
+    "mo": {
+      "file": "vendor/flag-mo.svg",
+      "full": "vendor/flag-originals/national-mo.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/63/Flag_of_Macau.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Macau.svg",
+      "credit": "see File history",
+      "license": "Public domain",
+      "sha256": "35252f8cf7604421b40c67a5194b877920e3bcdeef9179b15f2d3958d584ecd2"
+    },
+    "jp": {
+      "file": "vendor/flag-jp.svg",
+      "full": "vendor/flag-originals/national-jp.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg",
+      "credit": "Various",
+      "license": "Public domain",
+      "sha256": "35e785339e19d1ec1987cb9c3d8e66fc97f29a287db0b0b590b8dfdd96d4766b"
+    },
+    "kr": {
+      "file": "vendor/flag-kr.svg",
+      "full": "vendor/flag-originals/national-kr.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg",
+      "credit": "Original: Government of the Republic of Korea Vector:  Great Brightstar and others",
+      "license": "Public domain",
+      "sha256": "d8ec2a77a317c28617cbd5e7114c3ec9697120670e343ede5ee5bd0b1b4cd110"
+    },
+    "kp": {
+      "file": "vendor/flag-kp.svg",
+      "full": "vendor/flag-originals/national-kp.svg",
+      "width": 1200,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Korea.svg",
+      "credit": "Original: Unknown author Vector:  Zscout370",
+      "license": "Public domain",
+      "sha256": "0facdb3b7f4028e3ab0ce5457983ff62b22e77177e896cf472654ae6b2f9ebeb"
+    },
+    "mn": {
+      "file": "vendor/flag-mn.svg",
+      "full": "vendor/flag-originals/national-mn.svg",
+      "width": 1200,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mongolia.svg",
+      "credit": "See File history below for details.",
+      "license": "Public domain",
+      "sha256": "b7ccaa99a79fe613cb0a8953ef2f49b25f5e56c5c2b05b5725627ff01d60af6f"
+    },
+    "id": {
+      "file": "vendor/flag-id.svg",
+      "full": "vendor/flag-originals/national-id.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg",
+      "credit": "Jayakatwang",
+      "license": "Public domain",
+      "sha256": "2ab57d2d418baba7b0ff55729435d0c780ca52a98b754f92d44e96cd1399dae5"
+    },
+    "ph": {
+      "file": "vendor/flag-ph.svg",
+      "full": "vendor/flag-originals/national-ph.svg",
+      "width": 1200,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Philippines.svg",
+      "credit": "See File history below for details.",
+      "license": "Public domain",
+      "sha256": "b0010e0b5f5945506e98b76f3469faf964c1ce30de75673186d303f9112b5454"
+    },
+    "my": {
+      "file": "vendor/flag-my.webp",
+      "full": "vendor/flag-originals/national-my.svg",
+      "width": 1200,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Malaysia.svg",
+      "credit": "MapGrid (old version SKopp, Zscout370   and  Ranking Update)",
+      "license": "Public domain",
+      "sha256": "53b0aa224ba67a2d32be58aab6eb2e4395ac3df66e62692ac83a30bc296ee3a2"
+    },
+    "sg": {
+      "file": "vendor/flag-sg.webp",
+      "full": "vendor/flag-originals/national-sg.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Singapore.svg",
+      "credit": "Original: Government of Singapore Vector:  Zscout370",
+      "license": "Public domain",
+      "sha256": "261a4507c08c834e8e335ae147bde951010d92ef05330ff39f0d0eb713d2f617"
+    },
+    "ru": {
+      "file": "vendor/flag-ru.svg",
+      "full": "vendor/flag-originals/national-ru.svg",
+      "width": 900,
+      "height": 600,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia.svg",
+      "credit": "Peter the Great",
+      "license": "Public domain",
+      "sha256": "eb1dbd977fdb824dcae7767ce9ec3a023e41158e81b5f524772609ddcb622025"
+    },
+    "br": {
+      "file": "vendor/flag-br.svg",
+      "full": "vendor/flag-originals/national-br.svg",
+      "width": 1000,
+      "height": 700,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg",
+      "credit": "Raimundo Teixeira Mendes",
+      "license": "Public domain",
+      "sha256": "041479c6a955990d32c8e45b7283afcd62eacc3592eba9bbf0162299ad77ff01"
+    },
+    "ar": {
+      "file": "vendor/flag-ar.svg",
+      "full": "vendor/flag-originals/national-ar.svg",
+      "width": 800,
+      "height": 500,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Argentina.svg",
+      "credit": "Manuel Belgrano",
+      "license": "Public domain",
+      "sha256": "dafb5bc6543c59249be9c7dec2298eaeaa1fe7805a62754990315cc6db93b2f3"
+    },
+    "uy": {
+      "file": "vendor/flag-uy.svg",
+      "full": "vendor/flag-originals/national-uy.svg",
+      "width": 945,
+      "height": 630,
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Uruguay.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Uruguay.svg",
+      "credit": "See File history below for details.",
+      "license": "Public domain",
+      "sha256": "34b6a6675698eaadafdafffbf9d3cfa72761b893e49659e3a0e8523f5b7fc1f7"
+    }
+  }
+}

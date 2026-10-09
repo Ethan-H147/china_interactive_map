@@ -10,6 +10,7 @@
   "private": true,
   "scripts": {
     "build:flag-images": "node scripts/prepare-flag-images.mjs",
+    "fetch:national-flags": "node scripts/fetch-national-flags.mjs && npm run build:flag-images",
     "test:flag-viewer": "node --check dist/flag-viewer.mjs && node scripts/validate-flag-viewer.mjs",
     "build:brazil-municipalities": "node scripts/fetch-brazil-municipalities.mjs && node --max-old-space-size=12000 scripts/build-brazil-municipalities.mjs",
     "test:brazil-municipalities": "node --check dist/argentina-local.mjs && node scripts/validate-brazil-municipalities.mjs && node scripts/validate-south-america-loading.mjs",

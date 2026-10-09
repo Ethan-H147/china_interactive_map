@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {nationalFlagImages} from '../dist/national-flags.mjs';
 import {flagImageSize,createFlagViewer} from '../dist/flag-viewer.mjs';
 
 for(const [w,h] of [[3,2],[2,1],[1,1],[1,2]])for(const [vw,vh] of [[1280,720],[390,844],[844,390]]){
@@ -17,7 +19,7 @@ class Element{
 }
 let focused,mutations,requests=0;
 const body=new Element('body'),listeners={},probes=[];
-const national=new Element('img');national.alt='Flag of China';national.src='vendor/flag-prc.svg';national.naturalWidth=3;national.naturalHeight=2;body.append(national);
+const national=new Element('img');national.alt='Flag of China';national.src='vendor/flag-prc.svg';national.naturalWidth=640;national.naturalHeight=480;body.append(national);
 const link=new Element('a'),city=new Element('img');city.alt='Flag of Tyumen';city.src='vendor/city.webp';city.naturalWidth=330;city.naturalHeight=220;link.attrs.href='https://commons.wikimedia.org/city';link.title='Official flag · Public domain';link.append(city);body.append(link);
 globalThis.location={origin:'https://example.test'};globalThis.innerWidth=1280;globalThis.innerHeight=720;
 globalThis.document={body,baseURI:'https://example.test/#russia',createElement:t=>new Element(t),addEventListener:(type,fn)=>listeners[type]=fn};
@@ -32,7 +34,9 @@ const event=target=>({target,detail:1,preventDefault(){this.prevented=true;},sto
 const click=event(city);listeners.click(click);assert(click.prevented&&click.stopped);assert(viewer.dialog.open);assert.equal(image.src,city.src);assert.equal(focused.tag,'button');
 const flush=()=>new Promise(r=>setImmediate(r));await flush();assert.equal(probes.length,1);probes[0].resolve();await flush();assert.equal(image.src,'vendor/city-original.svg');
 viewer.close();assert.equal(focused,link);assert(!viewer.dialog.open);
-listeners.click(event(city));await flush();const delayed=probes.at(-1);viewer.close();listeners.click(event(national));delayed.resolve();await flush();assert.equal(image.src,national.src,'A late original cannot replace another flag');
+listeners.click(event(city));await flush();const delayed=probes.at(-1);viewer.close();listeners.click(event(national));delayed.resolve();await flush();assert.equal(image.src,nationalFlagImages[national.src].full,'A late original cannot replace another flag');
+assert.equal(national.src,'vendor/flag-prc.svg','The original viewer does not replace the thumbnail');
+assert(Math.abs(parseFloat(image.style.width)/parseFloat(image.style.height)-1.5)<1e-8,'A 4:3 thumbnail expands to the original 3:2 flag');
 const escape={...event(viewer.dialog),key:'Escape'};listeners.keydown(escape);assert(!viewer.dialog.open&&escape.stopped);assert.equal(focused,national);
 link.attrs.href='https://commons.wikimedia.org/another';mutations([{type:'attributes',target:link}]);assert(!link.hasAttribute('href'),'Adapter updates cannot restore external flag navigation');
 const newFlag=new Element('img');newFlag.alt='Flag of a new country';newFlag.src='new.svg';body.append(newFlag);mutations([{type:'childList',addedNodes:[newFlag]}]);assert.equal(newFlag.attrs.role,'button','Future country flags share the viewer');
@@ -42,6 +46,16 @@ viewer.dialog.handlers.click({target:viewer.dialog,clientX:40,clientY:40});asser
 listeners.click(event(city));await flush();probes.at(-1).reject(Error('offline'));await flush();assert.equal(image.src,city.src,'The cached official flag survives an unavailable original');viewer.close();
 assert.equal(requests,1,'Repeated flag views reuse the source catalogue');
 const catalogue=JSON.parse(fs.readFileSync('dist/data/flag-images.json'));
+const nationalAssets=fs.readdirSync('dist/vendor').filter(name=>/^flag-.*\.(svg|webp)$/.test(name));
+for(const name of nationalAssets){
+ const src='vendor/'+name,record=nationalFlagImages[src];assert(record,'Every national thumbnail has an original: '+name);
+ const bytes=fs.readFileSync('dist/'+record.full);assert.equal(createHash('sha256').update(bytes).digest('hex'),record.sha256,'National artwork is unmodified');
+ assert.deepEqual(catalogue[src],record,'Catalogue generation preserves the original mapping');
+ const flag=new Element('img');flag.alt='Flag of '+name;flag.src=src;flag.naturalWidth=40;flag.naturalHeight=30;body.append(flag);
+ listeners.click(event(flag));assert.equal(image.src,record.full,'First frame uses the original, never the thumbnail');
+ assert(Math.abs(parseFloat(image.style.width)/parseFloat(image.style.height)-record.width/record.height)<1e-8,'Original dimensions control the viewer');viewer.close();
+}
+assert.equal(requests,1,'National originals open without a catalogue request');
 for(const country of ['brazil','argentina']){
  const flags=JSON.parse(fs.readFileSync('dist/data/'+country+'-flag-sources.json')).flags;
  for(const flag of Object.values(flags))assert(fs.readFileSync('dist/'+catalogue[flag.file].full).equals(fs.readFileSync(flag.originalFile)),'Local full-size flags preserve the exact source artwork');

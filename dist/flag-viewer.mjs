@@ -1,3 +1,4 @@
+import {nationalFlagImages} from './national-flags.mjs';
 const selector='img[alt^="Flag of"],.division-flags img,.japan-flags img,.south-flags img,#selection-flag,#k-selection-flag';
 
 export function flagImageSize(width,height,viewportWidth,viewportHeight){
@@ -26,10 +27,12 @@ export function createFlagViewer(){
  observer.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['src','alt','href']});
  async function open(flag,target,keyboard){
   const src=flag.currentSrc||flag.getAttribute('src');if(!src)return;
-  const token=++epoch;trigger=target;dimensions=[flag.naturalWidth||3,flag.naturalHeight||2];
+  const national=nationalFlagImages[key(src)],initialSrc=national?.full||src;
+  const token=++epoch;trigger=target;dimensions=national?[national.width,national.height]:[flag.naturalWidth||3,flag.naturalHeight||2];
   dialog.dataset.keyboard=String(keyboard);dialog.setAttribute('aria-label',flag.alt||'Flag');
-  credit.textContent=target.title||'';image.alt=flag.alt||'Flag';image.title=credit.textContent;image.src=src;
+  credit.textContent=national?[national.credit,national.license].filter(Boolean).join(' · '):target.title||'';image.alt=flag.alt||'Flag';image.title=credit.textContent;image.src=initialSrc;
   (document.fullscreenElement||document.body).append(dialog);dialog.showModal();resize();closeButton.focus({preventScroll:true});
+  if(national)return;
   const sources=await(catalogue??=fetch('data/flag-images.json').then(r=>r.ok?r.json():{}).catch(()=>({})));if(token!==epoch||!dialog.open)return;
   const source=sources[key(src)];if(!source)return;
   credit.textContent=[source.credit,source.license].filter(Boolean).join(' · ');image.title=credit.textContent;
