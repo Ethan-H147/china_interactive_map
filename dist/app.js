@@ -389,7 +389,7 @@ function pickedRegion(point){
   for(const id of layers){const hit=hits.find(f=>f.layer.id===id||f.layer.id===aliases[id]);if(hit)return regionByCode.get(hit.properties.adcode);}
 }
 function countryAt(point){
- if(map.getLayer('south-america-fill')){const hit=map.queryRenderedFeatures(point,{layers:['south-america-fill']})[0];if(hit)return hit.properties.country;}
+ for(const id of ['south-america-fill','south-america-portal-fill'])if(map.getLayer(id)){const hit=map.queryRenderedFeatures(point,{layers:[id]})[0];if(hit)return hit.properties.country;}
  const countries={'russia-first-fill':'russia','russia-portal-fill':'russia','malaysia-first-fill':'malaysia','malaysia-portal-fill':'malaysia','singapore-first-fill':'singapore','singapore-portal-fill':'singapore','philippines-first-fill':'philippines','philippines-portal-fill':'philippines','indonesia-first-fill':'indonesia','indonesia-portal-fill':'indonesia','japan-first-fill':'japan','japan-portal-fill':'japan','korea-first-fill':'korea','korea-portal-fill':'korea','mongolia-first-fill':'mongolia','mongolia-portal-fill':'mongolia','province-fill':'china','province-fragment-fill':'china','china-context':'china'};
  return window.AtlasMotion.queryRegions(map,point,{layers:Object.keys(countries)}).map(f=>countries[f.layer.id]).find(Boolean);
 }

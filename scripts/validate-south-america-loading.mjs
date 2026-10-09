@@ -14,7 +14,8 @@ class Element{
 }
 const elements=new Map();globalThis.document={createElement:()=>new Element(),querySelector:key=>get(key),getElementById:key=>get(key),dispatchEvent(){}};
 function get(key){if(!elements.has(key))elements.set(key,new Element());return elements.get(key);}
-globalThis.window={AtlasDev:{enabled:false,allows(){return true;}},AtlasLabels:{render:()=>[]}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
+let labelCandidates=[];
+globalThis.window={AtlasDev:{enabled:false,allows(){return true;}},AtlasLabels:{render:(map,candidates)=>{labelCandidates=candidates;return [];}}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
 const flagRequests=[];let flagPending=0,maxFlagPending=0;
 globalThis.Image=class{
  set src(value){flagRequests.push(value);flagPending++;maxFlagPending=Math.max(maxFlagPending,flagPending);}
@@ -34,14 +35,20 @@ const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;
  getBounds:()=>({getWest:()=>-180,getEast:()=>180,getSouth:()=>-90,getNorth:()=>90})
 };
 layers.set('world-land',{id:'world-land',layout:{visibility:'visible'}});
-sources.set('world-land',{});const switches=[];map.queryRenderedFeatures=()=>[{properties:{country:'argentina'}}];
+sources.set('world-land',{});const switches=[];let overviewCountry='argentina';map.queryRenderedFeatures=()=>[{properties:{country:overviewCountry}}];
 let country='china';const atlas=createSouthAmerica(map,{country:()=>country,isBusy:()=>false,switchAtlas:(...args)=>switches.push(args),fit(){}});
 assert.equal(requests.length,0);assert.equal(workerLoads,0,'Creating Asian home must not load South American geometry');
 assert.equal(flagRequests.length,0,'Asian entry does not preload Argentine flags');
-assert.equal(layers.get('argentina-portal-fill').paint['fill-color'],'#d7d7d3','Argentina reuses existing background geometry for its clickable public portal');
+const overview=layers.get('south-america-portal-fill');
+assert.equal(overview.source,'world-land','All three countries reuse loaded world geometry before any visit');
+assert.equal(overview.paint['fill-color'],'#d7d7d3');assert.equal(overview.paint['fill-antialias'],false,'Available silhouettes have no coastline outlines');
+assert.deepEqual(overview.filter,['in',['get','country'],['literal',['brazil','uruguay','argentina']]]);
+assert.deepEqual(labelCandidates.map(r=>r.id),['brazil','uruguay','argentina'],'An Asian entry labels all available South American countries');
 assert.equal(get('map-shell').children.length,0,'Do not create bottom-left continent flight buttons');
-for(const handler of handlers.get('click'))handler({point:{x:0,y:0}});assert.equal(switches.at(-1)[0],'argentina');assert.equal(requests.length,0,'Clickable overview adds no new geometry requests');
+for(const id of ['brazil','uruguay','argentina']){overviewCountry=id;for(const handler of handlers.get('click'))handler({point:{x:0,y:0}});assert.equal(switches.at(-1)[0],id,'Every country is directly clickable before any South American visit');}
+assert.equal(requests.length,0,'Clickable overview adds no new geometry requests');
 country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
+assert.equal(overview.layout.visibility,'none','Detailed context replaces the bootstrap silhouette without duplicate fills');
 for(let i=0;i<100&&(flagRequests.length<28||flagPending);i++)await new Promise(r=>setTimeout(r,1));
 assert.equal(flagRequests.length,28,'Brazil preloads all state and DF flags');
 assert.equal(maxFlagPending,3,'Brazil flag decoding has bounded concurrency');

@@ -12,6 +12,10 @@ const sources=new Map(),handlers=new Map(),moved=[];
 const emit=(type,event={})=>{for(const fn of [...(handlers.get(type)||[])])fn(event);};
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 const source=fs.readFileSync('dist/app.js','utf8'),elements=new Map(),remembered=[];
+let overviewCountry;
+const overviewEnv=vm.createContext({map:{getLayer:id=>id==='south-america-portal-fill',queryRenderedFeatures:()=>[{properties:{country:overviewCountry}}]},window:{AtlasMotion:{queryRegions:()=>[]}}});
+vm.runInContext(source.slice(source.indexOf('function countryAt('),source.indexOf("map.on('click'",source.indexOf('function countryAt('))),overviewEnv);
+for(const id of ['brazil','uruguay','argentina']){overviewCountry=id;assert.equal(overviewEnv.countryAt({x:0,y:0}),id,'Global country routing recognizes the initial South American silhouettes');}
 const element=id=>{if(!elements.has(id))elements.set(id,{style:{},dataset:{},setAttribute(name,value){this[name]=value;},querySelector(){return element(id+'-symbol');}});return elements.get(id);};
 let releaseKorea,releaseMongolia;
 const koreaWait=new Promise(r=>releaseKorea=r),mongoliaWait=new Promise(r=>releaseMongolia=r);
