@@ -9,3 +9,5 @@ Population and economic figures are optional cards inside `.country-info-cards`.
 Subdivision counts belong in the subdivision heading, through `setSubdivisionHeading`. Do not add counts, parent descriptions, administrative codes, or instructions about loading below a place name. Essential boundary caveats can be a separate optional card; source dates and definitions belong in disclosures.
 
 To add a country, supply its content slots and controller, reuse the card and subdivision-heading helpers, then test selection, search, view restoration, language switching, and releasing geometry when leaving the country. Keep country data fetching separate from layout creation so opening one country does not load another country's geometry or statistics.
+
+`regional-country.mjs` is a data-configured two-level controller. Russia supplies its palette, levels, flags and data path in `russia.mjs`, while the common controller handles search, selection, cards, view restoration, worker cancellation and one-region-at-a-time district geometry. Country context outlines load at startup; catalogue and regional geometry wait until entry. District selection clears regional statistics.

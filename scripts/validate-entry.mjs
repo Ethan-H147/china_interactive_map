@@ -12,7 +12,7 @@ function boot(hash='',saved,{blocked=false,developer=false}={}){
   localStorage:{getItem(key){if(blocked)throw Error('Storage blocked');return stored.get(key);},setItem(key,value){if(blocked)throw Error('Storage blocked');stored.set(key,value);}},AtlasSymbols:{markup:country=>'<svg>'+country+'</svg>'}};
  vm.runInNewContext(source,context);const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners};
 }
-for(const country of ['china','korea','mongolia','japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina']){
+for(const country of ['china','korea','mongolia','japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia']){
  const developer=['brazil','uruguay'].includes(country);
  const explicit=boot('#'+country,'mongolia',{developer});
  assert.equal(explicit.entry.initial,country,'Explicit links override the previous visit');
@@ -31,7 +31,7 @@ assert.equal(fresh.elements.get('atlas-title-english').textContent,'China','Firs
 fresh.location.hash='#korea';fresh.listeners.hashchange();assert.equal(fresh.entry.current,'korea','A country can be chosen while map imports are still loading');
 fresh.entry.ready();
 fresh.context.window.AtlasDev.enabled=true;
-for(const country of ['korea','china','mongolia','japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina']){fresh.entry.remember(country);assert.equal(fresh.location.hash,'#'+country);assert.equal(fresh.stored.get('boundary-atlas-country-v1'),country);assert.equal(fresh.elements.get('home').textContent,'All '+fresh.entry.countries[country].en);}
+for(const country of ['korea','china','mongolia','japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia']){fresh.entry.remember(country);assert.equal(fresh.location.hash,'#'+country);assert.equal(fresh.stored.get('boundary-atlas-country-v1'),country);assert.equal(fresh.elements.get('home').textContent,'All '+fresh.entry.countries[country].en);}
 for(const hash of ['#place=220000','#china/place=220000']){const linked=boot(hash,'korea');assert.equal(linked.entry.initial,'china');assert.equal(linked.location.hash,'#china/place=220000','Retain and normalize old shared links');linked.entry.remember('korea');assert.equal(linked.location.hash,'#korea');}
 const unavailable=boot('#mongolia',undefined,{blocked:true});unavailable.entry.remember('china');assert.equal(unavailable.location.hash,'#china','URL navigation works when browser storage is blocked');
 for(const country of ['brazil','uruguay']){

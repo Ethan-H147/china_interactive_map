@@ -77,6 +77,8 @@
     "test:brazil-statistics": "node scripts/validate-brazil-statistics.mjs",
     "build:uruguay": "node scripts/fetch-uruguay.mjs && node scripts/build-uruguay-municipalities.mjs && node scripts/prepare-uruguay-statistics.mjs",
     "test:uruguay": "node scripts/validate-uruguay.mjs && node scripts/validate-municipality-search.mjs && node scripts/validate-south-america-loading.mjs",
-    "test:country-pages": "node --check dist/country-page.mjs && node scripts/validate-country-page.mjs && node scripts/validate-region-statistics.mjs && node scripts/validate-selection.mjs"
+    "test:country-pages": "node --check dist/country-page.mjs && node scripts/validate-country-page.mjs && node scripts/validate-region-statistics.mjs && node scripts/validate-selection.mjs",
+    "build:russia": "node scripts/fetch-russia.mjs && node --max-old-space-size=12000 scripts/build-russia.mjs && node scripts/normalize-russia-names.mjs && node scripts/prepare-russia-statistics.mjs",
+    "test:russia": "node --check dist/regional-country.mjs && node --check dist/country-boundary-worker.mjs && node --check dist/russia.mjs && node scripts/validate-russia.mjs && node scripts/validate-regional-loading.mjs"
   }
 }

@@ -1,0 +1,11 @@
+:root[data-atlas=russia]{--ink:#29334a;--muted:#6d7890;--red:#365d9b;--red-dark:#254675;--gold:#b7444c;--line:#dce3ee;--paper:#fdfdff;--map:#edf0f6}
+body[data-atlas=russia]{--accent-soft:#365d9b14;--surface-soft:#eff2f8;--title-accent:#b7444c;--header-stripe:linear-gradient(90deg,#dce3ee 0 33%,#365d9b 33% 66%,#b7444c 66%)}
+body[data-atlas=russia] #atlas-title-local{font:26px Georgia,serif;letter-spacing:0}
+.regional-sidebar .search-result{background:var(--surface-soft);border-color:var(--line)}
+.regional-sidebar [id$=search-results]{max-height:260px;overflow-y:auto}
+.regional-sidebar .division-filter{width:100%;padding:10px 12px;margin:14px 0 0;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}
+.regional-sidebar .country-subdivisions details{margin-top:20px;padding:14px 0;border-block:1px solid var(--line)}
+.regional-sidebar .country-subdivisions summary{cursor:pointer;font-size:14px;color:var(--muted)}
+.regional-sidebar .archipelago-children .search-result{width:100%;text-align:left;padding:10px 12px}
+.regional-sidebar .region-capital{margin-top:18px;border-top:1px solid var(--line);padding-top:16px}
+.country-detail-spinner{display:block;text-align:center;margin:12px auto}.country-detail-spinner .country-symbol{width:26px;height:26px}

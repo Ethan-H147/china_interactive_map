@@ -1,8 +1,8 @@
 import {prepareCountryDetails,insertInfoCard} from './country-page.mjs';
 const pending=new Map();
 export function loadStatistics(key=''){
- const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','uruguay','malaysia','singapore'].includes(country)?country:'base';
- const url=bundle==='base'?'data/region-statistics.json':['malaysia','singapore'].includes(bundle)?'data/southeast-asia/'+bundle+'-statistics.json':['argentina','brazil','uruguay'].includes(bundle)?'data/south-america/'+bundle+'-statistics.json':'data/archipelago/'+bundle+'-statistics.json';
+ const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','uruguay','malaysia','singapore','russia'].includes(country)?country:'base';
+ const url=bundle==='russia'?'data/russia/statistics.json':bundle==='base'?'data/region-statistics.json':['malaysia','singapore'].includes(bundle)?'data/southeast-asia/'+bundle+'-statistics.json':['argentina','brazil','uruguay'].includes(bundle)?'data/south-america/'+bundle+'-statistics.json':'data/archipelago/'+bundle+'-statistics.json';
  if(!pending.has(bundle))pending.set(bundle,fetch(url).then(r=>{if(!r.ok)throw Error('Statistics unavailable');return r.json();}).catch(e=>{pending.delete(bundle);throw e;}));
  return pending.get(bundle);
 }
@@ -31,7 +31,7 @@ function renderPopulation(panel,record,data,onRelatedPlace){
 export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  if(!anchor?.parentElement)return;
  let population;
- if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore):/.test(key)){
+ if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore|russia):/.test(key)){
   population=anchor.parentElement.querySelector(':scope > .archipelago-population');
   if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');insertInfoCard(anchor,population);}
   population.hidden=true;

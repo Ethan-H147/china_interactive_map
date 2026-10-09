@@ -7,7 +7,7 @@ window.AtlasSymbols={sequence:0,markup(country){
  }
  // Exact emblems extracted by scripts/prepare-country-symbols.mjs.
  if(country==='argentina'||country==='brazil')return `<img class="country-symbol symbol-rotor" src="vendor/${country==='argentina'?'argentina-sun':'brazil-globe'}.svg" alt="" aria-hidden="true">`;
- if(['indonesia','malaysia','singapore','uruguay'].includes(country))return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="40" stroke-width="1.5"/><path d="M50 10V90M10 50H90M22 22L78 78M22 78L78 22M34.7 13L65.3 87M13 34.7L87 65.3M13 65.3L87 34.7M34.7 87L65.3 13"/><circle cx="50" cy="50" r="8" fill="var(--map)"/></g></svg>`;
+ if(['indonesia','malaysia','singapore','uruguay','russia'].includes(country))return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="40" stroke-width="1.5"/><path d="M50 10V90M10 50H90M22 22L78 78M22 78L78 22M34.7 13L65.3 87M13 34.7L87 65.3M13 65.3L87 34.7M34.7 87L65.3 13"/><circle cx="50" cy="50" r="8" fill="var(--map)"/></g></svg>`;
  if(country==='japan')return '<img class="country-symbol symbol-rotor" src="vendor/japan-chrysanthemum.png" alt="" aria-hidden="true">';
  const key='emblem-'+(++this.sequence);
  const taiji='<circle cx="50" cy="50" r="49" fill="#fff" stroke="#171717" stroke-width="1"/><path d="M50 1a49 49 0 0 1 0 98 24.5 24.5 0 0 1 0-49 24.5 24.5 0 0 0 0-49" fill="#171717"/><circle cx="50" cy="25.5" r="7" fill="#171717"/><circle cx="50" cy="74.5" r="7" fill="#fff"/>';
