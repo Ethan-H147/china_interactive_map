@@ -1,11 +1,13 @@
 // Small vector emblems; each country animates only its moving parts.
 window.AtlasSymbols={sequence:0,markup(country){
  if(country==='russia'){
-  const face='<circle cx="60" cy="34" r="10" fill="#fff2da"/><path d="M51 30q9-12 18 0q-9-4-18 0" fill="#d4a258"/><g fill="#49352e"><circle cx="56.5" cy="34" r="1.1"/><circle cx="63.5" cy="34" r="1.1"/></g><path d="M57 39q3 2.5 6 0" fill="none" stroke="#9b4944" stroke-width="1.3" stroke-linecap="round"/>';
-  const cap='<path d="M40 60c2-8 9-11 8-20-3-27 27-27 24 0-1 9 6 12 8 20Z"/>';
-  const base='<path d="M40 60h40c3 8 8 13 9 22 2 16-60 16-58 0 1-9 6-14 9-22Z"/>';
-  const apron='<path d="M51 66q9 5 18 0l7 18q-16 9-32 0Z" fill="#fff2da" stroke="none"/><g fill="#d4a258" stroke="none"><path d="M60 71l3 6 6 3-6 3-3 6-3-6-6-3 6-3Z"/><circle cx="60" cy="80" r="3" fill="#b7444c"/></g>';
-  return `<svg class="country-symbol matryoshka" viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="60" cy="95" rx="27" ry="3" fill="#29334a" opacity=".1"/><g class="matryoshka-child"><g transform="translate(25.2 37.24)scale(.58)" fill="#365d9b" stroke="#254675" stroke-width="1.8" stroke-linejoin="round">${base}${apron}${cap}${face}</g></g><g fill="#b7444c" stroke="#803239" stroke-width="1.8" stroke-linejoin="round">${base}${apron}<g class="matryoshka-lid">${cap}${face}<path d="M56 47l4 4 4-4-4 10Z" fill="#fff2da" stroke="none"/></g></g></svg>`;
+  const key='matryoshka-'+(++this.sequence);
+  const face='<circle cx="60" cy="30" r="9" fill="#fff2da"/><path d="M52 26q8-10 16 0q-8-4-16 0" fill="#d4a258" stroke="none"/><g fill="#49352e" stroke="none"><circle cx="56.5" cy="30" r="1.1"/><circle cx="63.5" cy="30" r="1.1"/></g><path d="M57 35q3 2.5 6 0" fill="none" stroke="#9b4944" stroke-width="1.3" stroke-linecap="round"/>';
+  const cap='<path d="M40 60c2-9 11-10 11-16 0-4-5-6-5-14 0-19 28-19 28 0 0 8-5 10-5 14 0 6 9 7 11 16Z"/>';
+  const base='<path d="M40 60h40c7 11 12 22 5 30-6 8-44 8-50 0-7-8-2-19 5-30Z"/>';
+  const apron='<ellipse cx="60" cy="78" rx="14" ry="12" fill="#fff2da" stroke="none"/><g fill="#d4a258" stroke="none"><path d="M60 69l3 6 6 3-6 3-3 6-3-6-6-3 6-3Z"/><circle cx="60" cy="78" r="3" fill="#b7444c"/></g>';
+  // The fixed opening clips the moving child before the front shell is drawn.
+  return `<svg class="country-symbol matryoshka" viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="${key}-opening" clipPathUnits="userSpaceOnUse"><rect width="100" height="60"/></clipPath></defs><ellipse cx="60" cy="97" rx="25" ry="2" fill="#29334a" opacity=".1"/><ellipse cx="60" cy="60" rx="20" ry="3" fill="#803239"/><g clip-path="url(#${key}-opening)"><g class="matryoshka-child"><g transform="translate(25.2 37.24)scale(.58)" fill="#365d9b" stroke="#254675" stroke-width="1.8" stroke-linejoin="round">${base}${apron}${cap}${face}</g></g></g><g fill="#b7444c" stroke="#803239" stroke-width="1.8" stroke-linejoin="round">${base}${apron}<g class="matryoshka-lid">${cap}${face}<path d="M56 42l4 4 4-4-4 10Z" fill="#fff2da" stroke="none"/></g></g></svg>`;
  }
  if(country==='philippines'){
   // Exact sun geometry from the national flag SVG; source in symbol-sources.
