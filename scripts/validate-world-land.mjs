@@ -9,8 +9,9 @@ assert.ok(bytes.length<100_000,'World context must remain under 100 KB compresse
 assert.ok(gunzipSync(bytes).length<450_000,'Keep parsing and indexing inexpensive');
 const inRing=(p,r)=>{let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;};
 const contains=p=>data.features.some(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h))));
-for(const p of [[-100,40],[-60,-10],[20,0],[20,50],[80,60],[135,-25],[0,-80]])assert.ok(contains(p),'Missing continental land '+p);
+for(const p of [[-100,40],[-60,-10],[20,0],[20,50],[68,48],[135,-25],[0,-80],[25,64],[-150,65]])assert.ok(contains(p),'Missing continental or neighboring land '+p);
 for(const p of [[110,35],[127,38],[105,47],[138,36],[121,16],[114,-1]])assert.ok(!contains(p),'Coarse background must not overlap supported-country coastlines '+p);
+for(const p of [[80,60],[37.6,55.75],[134,45],[170,65],[-175,66],[20.5,54.7],[143,50]])assert.ok(!contains(p),'Russia must use only its detailed silhouette, including islands and both sides of the date line '+p);
 for(const country of ['brazil','argentina','uruguay'])assert.equal(data.features.filter(f=>f.properties.country===country).length,1,'Unreleased countries retain background land only');
 assert.ok(data.features.every(f=>Object.keys(f.properties).join(',')==='country'),'No subdivision data in the world background');
 const sources=new Map(),layers=[];

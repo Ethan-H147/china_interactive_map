@@ -1,8 +1,8 @@
 {
   "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
-  "description": "Natural Earth 1:110m background land silhouettes. Supported Asian countries use the atlas’s existing detailed context instead. No administrative boundaries or click targets.",
+  "description": "Natural Earth 1:110m background land silhouettes. Supported Asian countries and Russia use the atlas’s existing detailed context instead. No administrative boundaries or click targets.",
   "license": "Public domain",
-  "retrieved": "2026-10-08",
-  "features": 169,
-  "bytes": 81377
+  "retrieved": "2026-10-09",
+  "features": 168,
+  "bytes": 75865
 }
