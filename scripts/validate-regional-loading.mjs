@@ -10,8 +10,8 @@ const element=id=>{
 element('mode-lock').attributes['aria-pressed']='false';element('satellite-layer').checked=false;element('satellite-opacity').value='60';
 const bounds=[[30,50],[31,51]],records=[...['A','B'].map(id=>({id,en:id,local:id,kind:'Region',level:1,center:[30.5,50.5],bounds})),...['A','B'].map(parent=>({id:parent+'1',en:parent+' District',parent,level:2,kind:'District',center:[30.5,50.5],bounds}))];
 const catalogue={records,chunks:{A:{file:'second/A.bin',count:1},B:{file:'second/B.bin',count:1}}};
-let hit;
-const map={addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l){layers.set(l.id,l);},getLayer:id=>layers.get(id),removeLayer:id=>layers.delete(id),moveLayer(){},setPaintProperty(){},setFilter(){},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
+let hit;const layerOrder=[];
+const map={addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l){layers.set(l.id,l);layerOrder.push(l.id);},getLayer:id=>layers.get(id),removeLayer(id){layers.delete(id);layerOrder.splice(layerOrder.indexOf(id),1);},moveLayer(id){layerOrder.splice(layerOrder.indexOf(id),1);layerOrder.push(id);},setPaintProperty(){},setFilter(){},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
 let nextURL=0;
 const context=vm.createContext({console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
  Worker:class{constructor(){jobs.push(this);}postMessage(data){this.request=data;}terminate(){this.terminated=true;}},
@@ -53,12 +53,18 @@ task=tree.restore('A11');await flush();const superseded=jobs.at(-1);tree.leave()
 assert(!sources.has('tree-first')&&!sources.has('tree-second')&&!sources.has('tree-third'),'Leaving releases all three levels and ignores late results');
 console.log('Three-level adapter: deep selection resolves ancestry, ordered parent-only chunks load, mode changes release unused municipalities, and country changes cancel every level.');
 
-const whole=await context.addRegionalCountry(map,host,{country:'whole',prefix:'whole',base:'data/whole/',name:'Whole',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities',loadAllSubdivisions:true});
+const whole=await context.addRegionalCountry(map,host,{country:'whole',prefix:'whole',base:'data/whole/',name:'Whole',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities',loadAllSubdivisions:true,lineTolerance:1.5});
 const allPayload={levels:[1,2,3].map(level=>({level,blob:{},borders:{}}))};
 task=whole.enter(false);await flush();assert.equal(jobs.at(-1).request.url,'data/whole/all.bin');assert(!whole.ready,'Country stays pending until every level is prepared');jobs.at(-1).onmessage({data:allPayload});await task;
 assert([1,2,3].every((_,i)=>sources.has('whole-'+['first','second','third'][i])),'Country entry installs all three levels');
 const requests=jobs.length;
 await whole.setMode(3);assert.equal(layers.get('whole-third-fill').layout.visibility,'visible','Municipalities are accessible before a parent is selected');
+const lastFill=Math.max(...['first','second','third'].map(l=>layerOrder.indexOf('whole-'+l+'-fill')));
+for(const level of ['first','second','third']){
+ for(const suffix of ['lines','selected']){const id='whole-'+level+'-'+suffix;assert(layerOrder.indexOf(id)>lastFill,'No municipality fill can obscure any parent border');const width=layers.get(id).paint['line-width'];assert.equal(width[0],'interpolate');assert(width[4]<width[8],'Zoomed-out boundaries use thinner strokes');}
+ assert.equal(sources.get('whole-'+level+'-edges').tolerance,1.5);assert.equal(sources.get('whole-'+level).tolerance,0,'Simplification only affects strokes, not region fills');
+}
+assert(layerOrder.indexOf('whole-first-lines')>layerOrder.indexOf('whole-second-lines'),'Province outlines remain above district strokes');
 hit={layer:{id:'whole-third-fill'},properties:{id:'B11'}};for(const fn of handlers.get('click'))fn({point:[0,0]});await flush();assert.equal(whole.getSelection(),'B11','Map selection works in a municipality outside the current province');
 await whole.restore('A11');await whole.setMode(1);await whole.home();await whole.setMode(2);
 assert.equal(jobs.length,requests,'Selection, mode switches, and home never fetch parent chunks');

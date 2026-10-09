@@ -11,6 +11,8 @@ export async function addRegionalCountry(map,host,c){
  const levelLabels=[c.firstLabel,c.secondLabel,c.thirdLabel].filter(Boolean),maxLevel=levelLabels.length;
  const allowed=()=>!window.AtlasDev||window.AtlasDev.allows(country);
  const names=record=>c.names?.(record)||record;
+ const edgeOptions={...lineSourceOptions,...(c.lineTolerance?{tolerance:c.lineTolerance}:{})};
+ const lineWidth=(level,selected=false)=>['interpolate',['linear'],['zoom'],2,selected?.7:level===1?.45:.25,6,selected?1.1:level===1?.75:.45,10,selected?1.7:level===1?.9:.55];
  const sidebar=createCountryPage({id:country+'-sidebar',label:'Explore '+c.name,classes:'sidebar regional-sidebar',prefix:prefix+'-',
   search:{id:prefix+'-search',label:c.searchLabel||'Find a region or subdivision',resultsId:prefix+'-search-results',dataNav:true},
   settings:`<label class="field-label" for="${prefix}-province">${c.firstLabel}</label><select id="${prefix}-province" data-nav><option value="">All ${c.name}</option></select><section class="layers"><h3>Visible layers</h3><label><span>${c.firstLabel} outlines</span><input id="${prefix}-province-layer" type="checkbox" checked data-nav></label><label><span>${c.secondLabel} outlines</span><input id="${prefix}-second-layer" type="checkbox" checked data-nav></label>${c.thirdLabel?`<label><span>${c.thirdLabel} outlines</span><input id="${prefix}-third-layer" type="checkbox" checked data-nav></label>`:''}<label><span>Place names</span><input id="${prefix}-label-layer" type="checkbox" checked data-nav></label></section>`,
@@ -27,8 +29,8 @@ export async function addRegionalCountry(map,host,c){
  map.addSource(country+'-portal',{type:'geojson',data:context,tolerance:0,attribution:c.attribution});
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  const international=await loadCompressed(base+'international.bin');
- map.addSource(country+'-international',{...lineSourceOptions,data:international,attribution:c.attribution});
- map.addLayer({id:country+'-international',type:'line',source:country+'-international',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#aaa9a2','line-width':.9,'line-opacity':adaptiveOpacity()}});
+ map.addSource(country+'-international',{...edgeOptions,data:international,attribution:c.attribution});
+ map.addLayer({id:country+'-international',type:'line',source:country+'-international',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#aaa9a2','line-width':lineWidth(1),'line-opacity':adaptiveOpacity()}});
  if(c.thirdLabel&&!document.getElementById('mode-third')){const button=document.createElement('button');button.id='mode-third';button.type='button';button.hidden=true;button.setAttribute('data-nav','');button.setAttribute('aria-pressed','false');document.getElementById('mode-lock').before(button);}
  function panel(name){for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}}
  function clearLabels(){labels.forEach(label=>label.remove());labels=[];}
@@ -39,12 +41,14 @@ export async function addRegionalCountry(map,host,c){
  function install(key,payload,level){
   const url=URL.createObjectURL(payload.blob),edgeUrl=URL.createObjectURL(payload.borders),edge=key+'-edges';
   map.addSource(key,{type:'geojson',data:url,promoteId:'id',tolerance:0,buffer:128,maxzoom:16,attribution:c.attribution});
-  map.addSource(edge,{...lineSourceOptions,data:edgeUrl});
+  map.addSource(edge,{...edgeOptions,data:edgeUrl});
   const layers=[key+'-fill',key+'-lines',key+'-selected'];
   map.addLayer({id:layers[0],type:'fill',source:key,layout:{visibility:'none'},paint:{'fill-color':c.fill,'fill-antialias':false}});
-  for(const [id,selectedLine] of [[layers[1],false],[layers[2],true]])map.addLayer({id,type:'line',source:edge,...(selectedLine?{filter:['in','',['get','owners']]}:{}),layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':selectedLine?1.7:level===1?.9:.55,'line-opacity':adaptiveOpacity(selectedLine?1:level===1?.8:.65)}});
+  for(const [id,selectedLine] of [[layers[1],false],[layers[2],true]])map.addLayer({id,type:'line',source:edge,...(selectedLine?{filter:['in','',['get','owners']]}:{}),layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':lineWidth(level,selectedLine),'line-opacity':adaptiveOpacity(selectedLine?1:level===1?.8:.65)}});
   installed.set(key,{layers,sources:[key,edge],urls:[url,edgeUrl],level});
-  for(const entry of installed.values())if(entry.level===1)for(const id of entry.layers.slice(1))map.moveLayer(id);
+  // Every outline must remain above every fill, including parent boundaries
+  // shared by municipalities in different districts. Draw province lines last.
+  for(const entry of [...installed.values()].sort((a,b)=>b.level-a.level))for(const id of entry.layers.slice(1))map.moveLayer(id);
   map.moveLayer(country+'-international');
  }
  function satellitePaint(){const satellite=document.getElementById('satellite-layer').checked,opacity=Number(document.getElementById('satellite-opacity').value)/100;for(const entry of installed.values()){map.setPaintProperty(entry.layers[0],'fill-opacity',satellite?1-opacity:1);for(const id of entry.layers.slice(1))map.setPaintProperty(id,'line-color',satellite&&opacity>.5?'#fff0bb':c.line);}}

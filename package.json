@@ -86,7 +86,7 @@
     "build:region-colors": "node scripts/prepare-region-colors.mjs",
     "test:region-colors": "node --check dist/region-colors.mjs && node scripts/validate-region-colors.mjs",
     "build:southern-africa": "node scripts/fetch-southern-africa.mjs && node scripts/build-southern-africa.mjs && npm run build:regional-bundles && node scripts/prepare-southern-africa-statistics.mjs && node scripts/fetch-southern-africa-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs",
-    "test:southern-africa": "node --check dist/southern-africa.mjs && node scripts/validate-southern-africa-data.mjs && node scripts/validate-southern-africa-statistics.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && npm run test:countries && npm run test:country-pages && npm run test:flag-viewer && npm run test:satellite && npm run test:world-land",
+    "test:southern-africa": "node --check dist/southern-africa.mjs && node scripts/validate-southern-africa-data.mjs && node scripts/validate-regional-borders.mjs && node scripts/validate-southern-africa-statistics.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && npm run test:countries && npm run test:country-pages && npm run test:flag-viewer && npm run test:satellite && npm run test:world-land",
     "build:regional-bundles": "node scripts/prepare-regional-bundles.mjs"
   }
 }
