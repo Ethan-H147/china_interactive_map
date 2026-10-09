@@ -21,6 +21,7 @@ for(const [country,prefix,name] of [['malaysia','my','Malaysia'],['singapore','s
 for(const country of ['brazil','argentina','uruguay'])pages.push([country,adapter('south-america.mjs',{})]);
 
 pages.push(['russia',adapter('regional-country.mjs',{country:'russia',prefix:'ru',base:'data/russia/',c:{name:'Russia',lang:'ru',nationalFlag:'vendor/flag-ru.svg',secondLabel:'Districts'}})]);
+for(const [country,prefix,name,firstLabel,secondLabel,thirdLabel] of [['south-africa','za','South Africa','Provinces','Districts & metros','Municipalities'],['eswatini','sz','Eswatini','Regions','Tinkhundla'],['lesotho','ls','Lesotho','Districts','Councils']])pages.push([country,adapter('regional-country.mjs',{country,prefix,base:`data/southern-africa/${country}/`,c:{name,lang:'en',nationalFlag:`vendor/flag-${prefix}.svg`,firstLabel,secondLabel,thirdLabel}})]);
 
 // Read actual generated markup, rather than asserting the configuration shape.
 function tree(html){
@@ -48,4 +49,4 @@ for(const [country,html] of pages){
  for(const list of nodes.filter(n=>n.attributes.id?.endsWith('subdivisions')||n.attributes.id?.endsWith('code-details')||n.attributes.id?.endsWith('children')))assert(descends(list,subdivisions),country+' subdivisions use their shared slot');
  assert(!html.includes('Detailed borders load only for this state'));assert(!html.includes('Municipal boundaries appear only within the selected prefecture'));
 }
-console.log('All 12 countries share one page structure, with unique IDs, optional info cards, subdivision slots, preserved controls, and no redundant heading prose.');
+console.log(`All ${pages.length} countries share one page structure, with unique IDs, optional info cards, subdivision slots, preserved controls, and no redundant heading prose.`);

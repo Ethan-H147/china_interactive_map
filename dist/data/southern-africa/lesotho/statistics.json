@@ -1,0 +1,1189 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-09",
+  "country": "lesotho",
+  "sources": {
+    "zaPopulation2026": {
+      "title": "Statistics South Africa · Mid-year population estimates 2026 · Appendix 1",
+      "url": "https://www.statssa.gov.za/publications/P0302/P03022026.pdf",
+      "published": "2026-07-30",
+      "table": "Appendix 1"
+    },
+    "zaPopulation2024": {
+      "title": "Statistics South Africa · Mid-year population estimates 2024 · Appendix 1",
+      "url": "https://www.statssa.gov.za/publications/P0302/P03022024.pdf",
+      "table": "Appendix 1",
+      "mirror": "https://www.ectreasury.gov.za/upload/2025/stats/P03022024.pdf"
+    },
+    "zaGdp2024": {
+      "title": "Statistics South Africa · GDP by province, 2024 · Table 1",
+      "url": "https://www.statssa.gov.za/publications/P04412/P044122024.pdf",
+      "published": "2025-09-18",
+      "table": "Table 1: GDP by province at current prices, rand million"
+    },
+    "zaArea": {
+      "title": "Statistics South Africa · Census 2022 in Brief · Table 2.1",
+      "url": "https://www.statssa.gov.za/publications/Census2022inBrief/Census2022inBriefJune2024.pdf",
+      "table": "Table 2.1: Provincial land area"
+    },
+    "zaMunicipalPopulation": {
+      "title": "Statistics South Africa · Census 2022 municipal fact sheet · Demographics",
+      "url": "https://census.statssa.gov.za/assets/documents/2022/Census_2022_Municipal_factsheet-Web.pdf",
+      "report": "03-01-82",
+      "table": "Demographics, printed pages 2–8",
+      "note": "The downloaded official edition includes the Thaba Chweu / City of Mbombela population erratum."
+    },
+    "zaExchange": {
+      "title": "World Bank / IMF IFS · Official exchange rate, annual average, 2024",
+      "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZA",
+      "download": "https://api.worldbank.org/v2/country/ZAF/indicator/PA.NUS.FCRF?date=2024&format=json",
+      "indicator": "PA.NUS.FCRF",
+      "value": 18.3286575505,
+      "unit": "ZAR per USD",
+      "license": "CC BY 4.0"
+    },
+    "szPopulation": {
+      "title": "Eswatini Central Statistical Office · Population projections 2017–2038 · Table 5.5",
+      "url": "https://www.gov.sz/images/Final-2017_2038-POPULATION-PROJECTIONS-1-1.pdf",
+      "table": "Table 5.5: Medium-variant midyear population by region",
+      "published": "2020-08",
+      "note": "Based on the 2017 census. These are modelled projections, not a new census."
+    },
+    "lsPopulation": {
+      "title": "Lesotho Bureau of Statistics · 2021 Demographic Survey · Table 2.5",
+      "url": "https://www.bos.gov.ls/Publications.htm",
+      "download": "https://www.bos.gov.ls/Bos_Reports/Copy%20of%20Demography/2021_LDS_Vol_IIIA_Population_Dynamics_Analytical_Report.zip",
+      "table": "Table 2.5: Population by district, 2021 LDS",
+      "note": "District counts are estimates from the 2021 demographic survey, not a census or a current-year projection."
+    },
+    "mappedArea": {
+      "title": "Boundary-derived area · lesotho",
+      "url": "data/southern-africa/lesotho/sources.json",
+      "note": "Spherical area calculated from displayed boundary polygons, rounded to 0.1 km². A map estimate; source boundary dates and definitions may differ from statistical reporting."
+    }
+  },
+  "regions": {
+    "lesotho:LS-B": {
+      "name": "Butha-Buthe",
+      "level": 1,
+      "area": {
+        "value": 1820,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 122500,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-C": {
+      "name": "Leribe",
+      "level": 1,
+      "area": {
+        "value": 2814.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 361595,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-J": {
+      "name": "Mokhotlong",
+      "level": 1,
+      "area": {
+        "value": 4198.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 101845,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-K": {
+      "name": "Thaba-Tseka",
+      "level": 1,
+      "area": {
+        "value": 4781.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 138066,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-H": {
+      "name": "Qacha's Nek",
+      "level": 1,
+      "area": {
+        "value": 2223.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 77152,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-G": {
+      "name": "Quthing",
+      "level": 1,
+      "area": {
+        "value": 2990.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 110645,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-F": {
+      "name": "Mohale's Hoek",
+      "level": 1,
+      "area": {
+        "value": 3697.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 159137,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-E": {
+      "name": "Mafeteng",
+      "level": 1,
+      "area": {
+        "value": 2159.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 170061,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-A": {
+      "name": "Maseru",
+      "level": 1,
+      "area": {
+        "value": 4032,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 566377,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-D": {
+      "name": "Berea",
+      "level": 1,
+      "area": {
+        "value": 1965.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 269290,
+        "year": 2021,
+        "method": "estimate",
+        "source": "lsPopulation",
+        "periodLabel": "2021 demographic survey",
+        "note": "Estimated district population from the Lesotho Demographic Survey; not a census."
+      },
+      "note": "Population is an estimate from the 2021 national demographic survey. Mapped area covers the district, including mountain terrain; it is not the report’s much smaller arable-land area. District GDP has not been verified."
+    },
+    "lesotho:LS-B04": {
+      "name": "T'sa-le-Moleka",
+      "level": 2,
+      "area": {
+        "value": 136.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-B02": {
+      "name": "Likila",
+      "level": 2,
+      "area": {
+        "value": 147.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-B03": {
+      "name": "Nqoe",
+      "level": 2,
+      "area": {
+        "value": 1126.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-B01": {
+      "name": "Ngoajane",
+      "level": 2,
+      "area": {
+        "value": 322.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C11": {
+      "name": "Tsoilitsoili",
+      "level": 2,
+      "area": {
+        "value": 189.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C10": {
+      "name": "Manka",
+      "level": 2,
+      "area": {
+        "value": 165.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C09": {
+      "name": "Hleoheng",
+      "level": 2,
+      "area": {
+        "value": 70.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C08": {
+      "name": "Litjotjela",
+      "level": 2,
+      "area": {
+        "value": 73.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C03": {
+      "name": "Ramapepe",
+      "level": 2,
+      "area": {
+        "value": 205.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C04": {
+      "name": "Mamafubelu",
+      "level": 2,
+      "area": {
+        "value": 152.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C07": {
+      "name": "Sephokong",
+      "level": 2,
+      "area": {
+        "value": 149.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C06": {
+      "name": "Maisa-Phoka",
+      "level": 2,
+      "area": {
+        "value": 69.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C01": {
+      "name": "Matsoku",
+      "level": 2,
+      "area": {
+        "value": 1016.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C02": {
+      "name": "Bolahla",
+      "level": 2,
+      "area": {
+        "value": 278,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-C05": {
+      "name": "Menkhoaneng",
+      "level": 2,
+      "area": {
+        "value": 309,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-J01": {
+      "name": "Seate",
+      "level": 2,
+      "area": {
+        "value": 1130.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-J04": {
+      "name": "Menoaneng",
+      "level": 2,
+      "area": {
+        "value": 935.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-J02": {
+      "name": "Mphokojoane",
+      "level": 2,
+      "area": {
+        "value": 1101.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-K02": {
+      "name": "Khutlo-se-Metsi",
+      "level": 2,
+      "area": {
+        "value": 1235.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-K05": {
+      "name": "Linakeng",
+      "level": 2,
+      "area": {
+        "value": 1241.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-K01": {
+      "name": "Tenesolo",
+      "level": 2,
+      "area": {
+        "value": 1017.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-K04": {
+      "name": "Bokong",
+      "level": 2,
+      "area": {
+        "value": 678,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-H02": {
+      "name": "Nts'upe",
+      "level": 2,
+      "area": {
+        "value": 1000,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-H03": {
+      "name": "Tsoelikana",
+      "level": 2,
+      "area": {
+        "value": 758.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-H01": {
+      "name": "Qanya",
+      "level": 2,
+      "area": {
+        "value": 364.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-G01": {
+      "name": "Mtjanyane",
+      "level": 2,
+      "area": {
+        "value": 347.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-G03": {
+      "name": "Tosing",
+      "level": 2,
+      "area": {
+        "value": 1173.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-F03": {
+      "name": "Khoelenya",
+      "level": 2,
+      "area": {
+        "value": 313.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-F02": {
+      "name": "Mashaleng",
+      "level": 2,
+      "area": {
+        "value": 134.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-F05": {
+      "name": "Thaba-Mokhele",
+      "level": 2,
+      "area": {
+        "value": 466.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-F04": {
+      "name": "Lithipeng",
+      "level": 2,
+      "area": {
+        "value": 446.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-F06": {
+      "name": "Qhoasing",
+      "level": 2,
+      "area": {
+        "value": 1043.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-F07": {
+      "name": "Senqunyane",
+      "level": 2,
+      "area": {
+        "value": 907.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-E07": {
+      "name": "Qibing",
+      "level": 2,
+      "area": {
+        "value": 272.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-E06": {
+      "name": "T'sana-Talana",
+      "level": 2,
+      "area": {
+        "value": 211.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-E05": {
+      "name": "Makoabating",
+      "level": 2,
+      "area": {
+        "value": 308.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-E02": {
+      "name": "Mamant'so",
+      "level": 2,
+      "area": {
+        "value": 268.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-E03": {
+      "name": "Ramoetsana",
+      "level": 2,
+      "area": {
+        "value": 320.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-E04": {
+      "name": "Lehlakaneng",
+      "level": 2,
+      "area": {
+        "value": 421.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-E01": {
+      "name": "Metsi-Maholo",
+      "level": 2,
+      "area": {
+        "value": 276.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A09": {
+      "name": "Kubake",
+      "level": 2,
+      "area": {
+        "value": 545,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A10": {
+      "name": "Makhoalipana",
+      "level": 2,
+      "area": {
+        "value": 919.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A07": {
+      "name": "Lilala",
+      "level": 2,
+      "area": {
+        "value": 289,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A08": {
+      "name": "Makhoarane",
+      "level": 2,
+      "area": {
+        "value": 218.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A06": {
+      "name": "Mazenod",
+      "level": 2,
+      "area": {
+        "value": 106.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A05": {
+      "name": "Mohlakeng",
+      "level": 2,
+      "area": {
+        "value": 133.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A04": {
+      "name": "Manonyane",
+      "level": 2,
+      "area": {
+        "value": 128,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A02": {
+      "name": "Ratau",
+      "level": 2,
+      "area": {
+        "value": 218.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A01": {
+      "name": "Qiloane",
+      "level": 2,
+      "area": {
+        "value": 121,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A03": {
+      "name": "Likolobeng",
+      "level": 2,
+      "area": {
+        "value": 1129.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D08": {
+      "name": "Kanana",
+      "level": 2,
+      "area": {
+        "value": 119.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D06": {
+      "name": "Motanasela",
+      "level": 2,
+      "area": {
+        "value": 272.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D04": {
+      "name": "Teba-Tebe",
+      "level": 2,
+      "area": {
+        "value": 228.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D02": {
+      "name": "Mapoteng",
+      "level": 2,
+      "area": {
+        "value": 125.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D01": {
+      "name": "Makeoane",
+      "level": 2,
+      "area": {
+        "value": 593.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D03": {
+      "name": "Kueneng",
+      "level": 2,
+      "area": {
+        "value": 143,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-J03": {
+      "name": "Senqebethu",
+      "level": 2,
+      "area": {
+        "value": 959.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-K03": {
+      "name": "Litsoetse",
+      "level": 2,
+      "area": {
+        "value": 490,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-G04": {
+      "name": "Telle",
+      "level": 2,
+      "area": {
+        "value": 662,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-G05": {
+      "name": "T'sitsong",
+      "level": 2,
+      "area": {
+        "value": 504.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-F01": {
+      "name": "Siloe",
+      "level": 2,
+      "area": {
+        "value": 315.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-01": {
+      "name": "Maseru",
+      "level": 2,
+      "area": {
+        "value": 145.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D05": {
+      "name": "Phuthiatsana",
+      "level": 2,
+      "area": {
+        "value": 181.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-D07": {
+      "name": "Senekane",
+      "level": 2,
+      "area": {
+        "value": 229.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-J11": {
+      "name": "Mokhotlong",
+      "level": 2,
+      "area": {
+        "value": 71.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-KUC01": {
+      "name": "Thaba-Tseka",
+      "level": 2,
+      "area": {
+        "value": 118.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-GUCO1": {
+      "name": "Quthing",
+      "level": 2,
+      "area": {
+        "value": 158.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-EUC01": {
+      "name": "Mafeteng",
+      "level": 2,
+      "area": {
+        "value": 79.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-BUC01": {
+      "name": "Butha-Buthe",
+      "level": 2,
+      "area": {
+        "value": 86.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-CUC02": {
+      "name": "Maputsoe",
+      "level": 2,
+      "area": {
+        "value": 50,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-CUC01": {
+      "name": "Hlotse",
+      "level": 2,
+      "area": {
+        "value": 84.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-HUC01": {
+      "name": "Qacha's Nek",
+      "level": 2,
+      "area": {
+        "value": 100.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-G02": {
+      "name": "Qomoqomong",
+      "level": 2,
+      "area": {
+        "value": 144.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-FUC01": {
+      "name": "Mohale's Hoek",
+      "level": 2,
+      "area": {
+        "value": 69.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-A13": {
+      "name": "Mphatsoenyane/Semonkong",
+      "level": 2,
+      "area": {
+        "value": 77.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "lesotho:LS-DUC01": {
+      "name": "Berea",
+      "level": 2,
+      "area": {
+        "value": 71.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    }
+  }
+}

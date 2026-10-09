@@ -1,0 +1,69 @@
+{
+  "retrieved": "2026-10-09",
+  "sources": {
+    "zaPopulation2026": {
+      "title": "Statistics South Africa · Mid-year population estimates 2026 · Appendix 1",
+      "url": "https://www.statssa.gov.za/publications/P0302/P03022026.pdf",
+      "published": "2026-07-30",
+      "table": "Appendix 1"
+    },
+    "zaPopulation2024": {
+      "title": "Statistics South Africa · Mid-year population estimates 2024 · Appendix 1",
+      "url": "https://www.statssa.gov.za/publications/P0302/P03022024.pdf",
+      "table": "Appendix 1",
+      "mirror": "https://www.ectreasury.gov.za/upload/2025/stats/P03022024.pdf"
+    },
+    "zaGdp2024": {
+      "title": "Statistics South Africa · GDP by province, 2024 · Table 1",
+      "url": "https://www.statssa.gov.za/publications/P04412/P044122024.pdf",
+      "published": "2025-09-18",
+      "table": "Table 1: GDP by province at current prices, rand million"
+    },
+    "zaArea": {
+      "title": "Statistics South Africa · Census 2022 in Brief · Table 2.1",
+      "url": "https://www.statssa.gov.za/publications/Census2022inBrief/Census2022inBriefJune2024.pdf",
+      "table": "Table 2.1: Provincial land area"
+    },
+    "zaMunicipalPopulation": {
+      "title": "Statistics South Africa · Census 2022 municipal fact sheet · Demographics",
+      "url": "https://census.statssa.gov.za/assets/documents/2022/Census_2022_Municipal_factsheet-Web.pdf",
+      "report": "03-01-82",
+      "table": "Demographics, printed pages 2–8",
+      "note": "The downloaded official edition includes the Thaba Chweu / City of Mbombela population erratum."
+    },
+    "zaExchange": {
+      "title": "World Bank / IMF IFS · Official exchange rate, annual average, 2024",
+      "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZA",
+      "download": "https://api.worldbank.org/v2/country/ZAF/indicator/PA.NUS.FCRF?date=2024&format=json",
+      "indicator": "PA.NUS.FCRF",
+      "value": 18.3286575505,
+      "unit": "ZAR per USD",
+      "license": "CC BY 4.0"
+    },
+    "szPopulation": {
+      "title": "Eswatini Central Statistical Office · Population projections 2017–2038 · Table 5.5",
+      "url": "https://www.gov.sz/images/Final-2017_2038-POPULATION-PROJECTIONS-1-1.pdf",
+      "table": "Table 5.5: Medium-variant midyear population by region",
+      "published": "2020-08",
+      "note": "Based on the 2017 census. These are modelled projections, not a new census."
+    },
+    "lsPopulation": {
+      "title": "Lesotho Bureau of Statistics · 2021 Demographic Survey · Table 2.5",
+      "url": "https://www.bos.gov.ls/Publications.htm",
+      "download": "https://www.bos.gov.ls/Bos_Reports/Copy%20of%20Demography/2021_LDS_Vol_IIIA_Population_Dynamics_Analytical_Report.zip",
+      "table": "Table 2.5: Population by district, 2021 LDS",
+      "note": "District counts are estimates from the 2021 demographic survey, not a census or a current-year projection."
+    },
+    "mappedArea": {
+      "title": "Boundary-derived area · south africa",
+      "url": "data/southern-africa/south-africa/sources.json",
+      "note": "Spherical area calculated from displayed boundary polygons, rounded to 0.1 km². A map estimate; source boundary dates and definitions may differ from statistical reporting."
+    }
+  },
+  "coverage": {
+    "regions": 266,
+    "population": 266,
+    "gdp": 9
+  },
+  "boundaryCoverage": "9 provinces; 44 districts and 8 metropolitan municipalities; 205 local municipalities. Metros are terminal jurisdictions rather than duplicated third-level entries. Municipal Demarcation Board snapshot represented as 2020 by geoBoundaries; OCHA source created in 2018 and reviewed in January 2025. The Prince Edward Islands are outside this mainland municipal extract."
+}

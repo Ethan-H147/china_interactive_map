@@ -4,7 +4,7 @@ import {countryColorData,colorLayerProfile} from '../dist/region-color-data.mjs'
 import {metricScale,shadeExpression,shadePalette,missingColor,createRegionColors} from '../dist/region-colors.mjs';
 import {validate,hashFor,fromHash} from '../dist/view-state.mjs';
 const datasets=Object.fromEntries(Object.keys(countryColorData).map(country=>[country,JSON.parse(fs.readFileSync('dist/data/region-colors/'+country+'.json'))]));
-const counts={china:34,korea:29,mongolia:22,japan:47,indonesia:38,philippines:18,malaysia:16,singapore:5,russia:83,brazil:27,uruguay:19,argentina:24};
+const counts={'south-africa':9,eswatini:4,lesotho:10,china:34,korea:29,mongolia:22,japan:47,indonesia:38,philippines:18,malaysia:16,singapore:5,russia:83,brazil:27,uruguay:19,argentina:24};
 for(const [country,data]of Object.entries(datasets)){
  assert.equal(data.records.length,counts[country],country+' comparison units');assert.equal(new Set(data.records.map(r=>r.id)).size,data.records.length);
  for(const r of data.records)for(const [key,m]of Object.entries(r.metrics)){assert(Number.isFinite(m.value)&&m.value>=0,country+' '+r.id+' '+key);assert(m.sourceUrl,'Traceable metric source');if(key.startsWith('gdp'))assert.equal(m.unit,'USD','Economic values must share a currency');}

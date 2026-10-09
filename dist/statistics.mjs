@@ -1,8 +1,9 @@
 import {prepareCountryDetails,insertInfoCard} from './country-page.mjs';
 const pending=new Map();
+const regionalBundles=Object.fromEntries(['south-africa','eswatini','lesotho'].map(c=>[c,'data/southern-africa/'+c+'/statistics.json']));
 export function loadStatistics(key=''){
- const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','uruguay','malaysia','singapore','russia'].includes(country)?country:'base';
- const url=bundle==='russia'?'data/russia/statistics.json':bundle==='base'?'data/region-statistics.json':['malaysia','singapore'].includes(bundle)?'data/southeast-asia/'+bundle+'-statistics.json':['argentina','brazil','uruguay'].includes(bundle)?'data/south-america/'+bundle+'-statistics.json':'data/archipelago/'+bundle+'-statistics.json';
+ const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','uruguay','malaysia','singapore','russia'].includes(country)||regionalBundles[country]?country:'base';
+ const url=regionalBundles[bundle]||(bundle==='russia'?'data/russia/statistics.json':bundle==='base'?'data/region-statistics.json':['malaysia','singapore'].includes(bundle)?'data/southeast-asia/'+bundle+'-statistics.json':['argentina','brazil','uruguay'].includes(bundle)?'data/south-america/'+bundle+'-statistics.json':'data/archipelago/'+bundle+'-statistics.json');
  if(!pending.has(bundle))pending.set(bundle,fetch(url).then(r=>{if(!r.ok)throw Error('Statistics unavailable');return r.json();}).catch(e=>{pending.delete(bundle);throw e;}));
  return pending.get(bundle);
 }
@@ -31,7 +32,7 @@ function renderPopulation(panel,record,data,onRelatedPlace){
 export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  if(!anchor?.parentElement)return;
  let population;
- if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore|russia):/.test(key)){
+ if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore|russia|south-africa|eswatini|lesotho):/.test(key)){
   population=anchor.parentElement.querySelector(':scope > .archipelago-population');
   if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');insertInfoCard(anchor,population);}
   population.hidden=true;
@@ -41,7 +42,7 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  if(!panel)panel=element('section',null,'region-statistics');
  panel.setAttribute('aria-label',key.startsWith('singapore:')?'Area':'Area and economy');
  insertInfoCard(anchor,panel,insertionPoint);
- panel.hidden=false;panel.dataset.region=key;panel.replaceChildren(element('p','Loading statistics…','statistics-note'));
+  panel.hidden=false;panel.dataset.region=key;panel.replaceChildren();
  try{
   const data=provided||await loadStatistics(key);if(panel.dataset.region!==key)return;
   const record=data.regions[key];panel.replaceChildren();
@@ -49,10 +50,11 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
   if(population)renderPopulation(population,record,data,onRelatedPlace);
   if(record.population&&!['area','gdp','gdpPerCapita','realGdp','realGva','exports'].some(field=>record[field])){panel.hidden=true;return;}
   const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
-  area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area);if(!key.startsWith('singapore:'))panel.append(economy);
+  const hasEconomy=!regionalBundles[key.split(':')[0]]||['gdp','realGdp','realGva','exports'].some(field=>record[field]);
+  area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area);if(!key.startsWith('singapore:')&&hasEconomy)panel.append(economy);
   const areaValues=element('dl',null,'statistics-values'),economyValues=element('dl',null,'statistics-values');area.append(areaValues);
   const argentina=key.startsWith('argentina:');
-  const detailedMetrics=[['area','Area'],...(key.startsWith('singapore:')?[]:record.exports?[['exports','Goods exports']]:record.realGdp?[['realGdp','Real GDP'],...(record.realGdpPerCapita?[['realGdpPerCapita','Real GDP per capita']]:[])]:[['gdp','GDP'],['gdpPerCapita','GDP per capita']]),...(record.realGva?[['realGva','Real gross value added'],...(!record.gdpPerCapita?[['realGvaPerCapita','Real GVA per capita']]:[])]:[])];
+  const detailedMetrics=[['area','Area'],...(key.startsWith('singapore:')||!hasEconomy?[]:record.exports?[['exports','Goods exports']]:record.realGdp?[['realGdp','Real GDP'],...(record.realGdpPerCapita?[['realGdpPerCapita','Real GDP per capita']]:[])]:[['gdp','GDP'],['gdpPerCapita','GDP per capita']]),...(record.realGva?[['realGva','Real gross value added'],...(!record.gdpPerCapita?[['realGvaPerCapita','Real GVA per capita']]:[])]:[])];
   const metrics=argentina?[['area','Area'],...(record.gdp?[['gdp','GDP'],['gdpPerCapita','GDP per capita']]:[['realGva','Economic output'],['realGvaPerCapita','Output per capita']])]:detailedMetrics;
   if(argentina&&!record.gdp)economy.append(element('p','GDP has not yet been verified for this province. These figures show inflation-adjusted economic output.','statistics-note'));
   economy.append(economyValues);
@@ -64,6 +66,7 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
    if(field!=='area'&&metric.priceBasis==='constant'&&metric.usd>0&&metric.usdBaseYear===metric.baseYear)dd.append(element('span','≈ '+formatMoney(metric.usd,'USD',perCapita)+' · '+metric.usdBaseYear+' dollars','statistics-usd'));
    const meta=element('small');meta.append(document.createTextNode((metric.period||metric.year||'Date not specified')+(metric.status?' · '+metric.status:'')+(metric.method==='calculated'?' · calculated':'')+' · '),link(data.sources[metric.source],'Source'));dd.append(meta);
   }
+  if(regionalBundles[key.split(':')[0]]&&record.population?.value>=0&&record.area?.value>0){const dd=element('dd');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(record.population.value/record.area.value)+' people/km²'),element('small',record.population.year+' · calculated from population and area'));areaValues.append(element('dt','Population density'),dd);}
   const notes=element('details',null,'statistics-details');notes.append(element('summary',argentina?'About these figures & sources':'Dates, sources & definitions'));
   if(argentina)notes.append(element('p','PBG is Argentina’s term for regional GDP. GDP per capita divides the economy’s output by its population; it is not a person’s salary. ARS means Argentine pesos. Inflation-adjusted economic output uses gross value added (GVA), a related measure with different tax treatment. Its 2004 reference prices remove inflation; the data year is shown beside the figure.'));
   if(record.note)notes.append(element('p',record.note));

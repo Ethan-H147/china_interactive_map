@@ -1,0 +1,1332 @@
+{
+  "ZA-EC:easterncape": {
+    "name": "Eastern Cape",
+    "value": 7230204,
+    "code": null
+  },
+  "ZA-EC:buffalocity": {
+    "name": "Buffalo City",
+    "value": 975255,
+    "code": null
+  },
+  "ZA-EC:sarahbaartman": {
+    "name": "Sarah Baartman",
+    "value": 533253,
+    "code": null
+  },
+  "ZA-EC:drbeyersnaude": {
+    "name": "Dr Beyers Naude",
+    "value": 101001,
+    "code": "EC101"
+  },
+  "ZA-EC:bluecraneroute": {
+    "name": "Blue Crane Route",
+    "value": 49883,
+    "code": "EC102"
+  },
+  "ZA-EC:makana": {
+    "name": "Makana",
+    "value": 97815,
+    "code": "EC104"
+  },
+  "ZA-EC:ndlambe": {
+    "name": "Ndlambe",
+    "value": 87797,
+    "code": "EC105"
+  },
+  "ZA-EC:sundaysrivervalley": {
+    "name": "Sundays River Valley",
+    "value": 53256,
+    "code": "EC106"
+  },
+  "ZA-EC:kouga": {
+    "name": "Kouga",
+    "value": 107014,
+    "code": "EC108"
+  },
+  "ZA-EC:koukamma": {
+    "name": "Kou-Kamma",
+    "value": 36487,
+    "code": "EC109"
+  },
+  "ZA-EC:amathole": {
+    "name": "Amathole",
+    "value": 871601,
+    "code": null
+  },
+  "ZA-EC:mbhashe": {
+    "name": "Mbhashe",
+    "value": 240020,
+    "code": "EC121"
+  },
+  "ZA-EC:mnquma": {
+    "name": "Mnquma",
+    "value": 232993,
+    "code": "EC122"
+  },
+  "ZA-EC:greatkei": {
+    "name": "Great Kei",
+    "value": 35990,
+    "code": "EC123"
+  },
+  "ZA-EC:amahlathi": {
+    "name": "Amahlathi",
+    "value": 115703,
+    "code": "EC124"
+  },
+  "ZA-EC:ngqushwa": {
+    "name": "Ngqushwa",
+    "value": 68300,
+    "code": "EC126"
+  },
+  "ZA-EC:raymondmhlaba": {
+    "name": "Raymond Mhlaba",
+    "value": 178594,
+    "code": "EC129"
+  },
+  "ZA-EC:chrishani": {
+    "name": "Chris Hani",
+    "value": 828387,
+    "code": null
+  },
+  "ZA-EC:inxubayethemba": {
+    "name": "Inxuba Yethemba",
+    "value": 77578,
+    "code": "EC131"
+  },
+  "ZA-EC:intsikayethu": {
+    "name": "Intsika Yethu",
+    "value": 128101,
+    "code": "EC135"
+  },
+  "ZA-EC:emalahleni": {
+    "name": "Emalahleni",
+    "value": 128873,
+    "code": "EC136"
+  },
+  "ZA-EC:engcobo": {
+    "name": "Engcobo",
+    "value": 132799,
+    "code": "EC137"
+  },
+  "ZA-EC:sakhisizwe": {
+    "name": "Sakhisizwe",
+    "value": 63981,
+    "code": "EC138"
+  },
+  "ZA-EC:enochmgijima": {
+    "name": "Enoch Mgijima",
+    "value": 297055,
+    "code": "EC139"
+  },
+  "ZA-EC:joegqabi": {
+    "name": "Joe Gqabi",
+    "value": 393048,
+    "code": null
+  },
+  "ZA-EC:elundini": {
+    "name": "Elundini",
+    "value": 141762,
+    "code": "EC141"
+  },
+  "ZA-EC:senqu": {
+    "name": "Senqu",
+    "value": 147073,
+    "code": "EC142"
+  },
+  "ZA-EC:waltersisulu": {
+    "name": "Walter Sisulu",
+    "value": 104213,
+    "code": "EC145"
+  },
+  "ZA-EC:ortambo": {
+    "name": "O.R. Tambo",
+    "value": 1501702,
+    "code": null
+  },
+  "ZA-EC:ngquzahill": {
+    "name": "Ngquza Hill",
+    "value": 354573,
+    "code": "EC153"
+  },
+  "ZA-EC:portstjohns": {
+    "name": "Port St Johns",
+    "value": 179325,
+    "code": "EC154"
+  },
+  "ZA-EC:nyandeni": {
+    "name": "Nyandeni",
+    "value": 304856,
+    "code": "EC155"
+  },
+  "ZA-EC:mhlontlo": {
+    "name": "Mhlontlo",
+    "value": 186391,
+    "code": "EC156"
+  },
+  "ZA-EC:kingsabatadalindyebo": {
+    "name": "King Sabata Dalindyebo",
+    "value": 476558,
+    "code": "EC157"
+  },
+  "ZA-EC:alfrednzo": {
+    "name": "Alfred Nzo",
+    "value": 936462,
+    "code": null
+  },
+  "ZA-EC:matatiele": {
+    "name": "Matatiele",
+    "value": 225562,
+    "code": "EC441"
+  },
+  "ZA-EC:umzimvubu": {
+    "name": "Umzimvubu",
+    "value": 214477,
+    "code": "EC442"
+  },
+  "ZA-EC:winniemadikizelamandela": {
+    "name": "Winnie Madikizela-Mandela",
+    "value": 350000,
+    "code": "EC443"
+  },
+  "ZA-EC:ntabankulu": {
+    "name": "Ntabankulu",
+    "value": 146423,
+    "code": "EC444"
+  },
+  "ZA-EC:nelsonmandelabay": {
+    "name": "Nelson Mandela Bay",
+    "value": 1190496,
+    "code": null
+  },
+  "ZA-FS:freestate": {
+    "name": "Free State",
+    "value": 2964412,
+    "code": null
+  },
+  "ZA-FS:xhariep": {
+    "name": "Xhariep",
+    "value": 131901,
+    "code": null
+  },
+  "ZA-FS:letsemeng": {
+    "name": "Letsemeng",
+    "value": 43101,
+    "code": "FS161"
+  },
+  "ZA-FS:kopanong": {
+    "name": "Kopanong",
+    "value": 51832,
+    "code": "FS162"
+  },
+  "ZA-FS:mohokare": {
+    "name": "Mohokare",
+    "value": 36968,
+    "code": "FS163"
+  },
+  "ZA-FS:lejweleputswa": {
+    "name": "Lejweleputswa",
+    "value": 679746,
+    "code": null
+  },
+  "ZA-FS:masilonyana": {
+    "name": "Masilonyana",
+    "value": 63800,
+    "code": "FS181"
+  },
+  "ZA-FS:tokologo": {
+    "name": "Tokologo",
+    "value": 29455,
+    "code": "FS182"
+  },
+  "ZA-FS:tswelopele": {
+    "name": "Tswelopele",
+    "value": 56896,
+    "code": "FS183"
+  },
+  "ZA-FS:matjhabeng": {
+    "name": "Matjhabeng",
+    "value": 439034,
+    "code": "FS184"
+  },
+  "ZA-FS:nala": {
+    "name": "Nala",
+    "value": 90561,
+    "code": "FS185"
+  },
+  "ZA-FS:thabomofutsanyane": {
+    "name": "Thabo Mofutsanyane",
+    "value": 831421,
+    "code": null
+  },
+  "ZA-FS:setsoto": {
+    "name": "Setsoto",
+    "value": 127918,
+    "code": "FS191"
+  },
+  "ZA-FS:dihlabeng": {
+    "name": "Dihlabeng",
+    "value": 130434,
+    "code": "FS192"
+  },
+  "ZA-FS:nketoana": {
+    "name": "Nketoana",
+    "value": 66488,
+    "code": "FS193"
+  },
+  "ZA-FS:malutiaphofung": {
+    "name": "Maluti a Phofung",
+    "value": 398459,
+    "code": "FS194"
+  },
+  "ZA-FS:phumelela": {
+    "name": "Phumelela",
+    "value": 52224,
+    "code": "FS195"
+  },
+  "ZA-FS:mantsopa": {
+    "name": "Mantsopa",
+    "value": 55897,
+    "code": "FS196"
+  },
+  "ZA-FS:feziledabi": {
+    "name": "Fezile Dabi",
+    "value": 509912,
+    "code": null
+  },
+  "ZA-FS:moqhaka": {
+    "name": "Moqhaka",
+    "value": 155410,
+    "code": "FS201"
+  },
+  "ZA-FS:ngwathe": {
+    "name": "Ngwathe",
+    "value": 134962,
+    "code": "FS203"
+  },
+  "ZA-FS:metsimaholo": {
+    "name": "Metsimaholo",
+    "value": 158391,
+    "code": "FS204"
+  },
+  "ZA-FS:mafube": {
+    "name": "Mafube",
+    "value": 61150,
+    "code": "FS205"
+  },
+  "ZA-FS:mangaung": {
+    "name": "Mangaung",
+    "value": 811431,
+    "code": null
+  },
+  "ZA-GP:gauteng": {
+    "name": "Gauteng",
+    "value": 15099422,
+    "code": null
+  },
+  "ZA-GP:sedibeng": {
+    "name": "Sedibeng",
+    "value": 1190688,
+    "code": null
+  },
+  "ZA-GP:emfuleni": {
+    "name": "Emfuleni",
+    "value": 945650,
+    "code": "GT421"
+  },
+  "ZA-GP:midvaal": {
+    "name": "Midvaal",
+    "value": 112254,
+    "code": "GT422"
+  },
+  "ZA-GP:lesedi": {
+    "name": "Lesedi",
+    "value": 132783,
+    "code": "GT423"
+  },
+  "ZA-GP:westrand": {
+    "name": "West Rand",
+    "value": 998465,
+    "code": null
+  },
+  "ZA-GP:mogalecity": {
+    "name": "Mogale City",
+    "value": 438216,
+    "code": "GT481"
+  },
+  "ZA-GP:merafongcity": {
+    "name": "Merafong City",
+    "value": 225476,
+    "code": "GT484"
+  },
+  "ZA-GP:randwestcity": {
+    "name": "Rand West City",
+    "value": 334773,
+    "code": "GT485"
+  },
+  "ZA-GP:ekurhuleni": {
+    "name": "Ekurhuleni",
+    "value": 4066691,
+    "code": null
+  },
+  "ZA-GP:cityofjohannesburg": {
+    "name": "City of Johannesburg",
+    "value": 4803262,
+    "code": null
+  },
+  "ZA-GP:cityoftshwane": {
+    "name": "City of Tshwane",
+    "value": 4040315,
+    "code": null
+  },
+  "ZA-KZN:kwazulunatal": {
+    "name": "KwaZulu-Natal",
+    "value": 12423907,
+    "code": null
+  },
+  "ZA-KZN:ugu": {
+    "name": "Ugu",
+    "value": 773402,
+    "code": null
+  },
+  "ZA-KZN:umdoni": {
+    "name": "Umdoni",
+    "value": 156443,
+    "code": "KZN212"
+  },
+  "ZA-KZN:umzumbe": {
+    "name": "Umzumbe",
+    "value": 139045,
+    "code": "KZN213"
+  },
+  "ZA-KZN:umuziwabantu": {
+    "name": "uMuziwabantu",
+    "value": 115780,
+    "code": "KZN214"
+  },
+  "ZA-KZN:raynkonyeni": {
+    "name": "Ray Nkonyeni",
+    "value": 362134,
+    "code": "KZN216"
+  },
+  "ZA-KZN:umgungundlovu": {
+    "name": "Umgungundlovu",
+    "value": 1235715,
+    "code": null
+  },
+  "ZA-KZN:umshwathi": {
+    "name": "uMshwathi",
+    "value": 118478,
+    "code": "KZN221"
+  },
+  "ZA-KZN:umngeni": {
+    "name": "uMngeni",
+    "value": 105069,
+    "code": "KZN222"
+  },
+  "ZA-KZN:mpofana": {
+    "name": "Mpofana",
+    "value": 33382,
+    "code": "KZN223"
+  },
+  "ZA-KZN:impendle": {
+    "name": "Impendle",
+    "value": 36648,
+    "code": "KZN224"
+  },
+  "ZA-KZN:msunduzi": {
+    "name": "Msunduzi",
+    "value": 817725,
+    "code": "KZN225"
+  },
+  "ZA-KZN:mkhambathini": {
+    "name": "Mkhambathini",
+    "value": 61660,
+    "code": "KZN226"
+  },
+  "ZA-KZN:richmond": {
+    "name": "Richmond",
+    "value": 62754,
+    "code": "KZN227"
+  },
+  "ZA-KZN:uthukela": {
+    "name": "Uthukela",
+    "value": 789092,
+    "code": null
+  },
+  "ZA-KZN:okhahlamba": {
+    "name": "Okhahlamba",
+    "value": 143132,
+    "code": "KZN235"
+  },
+  "ZA-KZN:inkosilangalibalele": {
+    "name": "Inkosi Langalibalele",
+    "value": 230924,
+    "code": "KZN237"
+  },
+  "ZA-KZN:alfredduma": {
+    "name": "Alfred Duma",
+    "value": 415036,
+    "code": "KZN238"
+  },
+  "ZA-KZN:umzinyathi": {
+    "name": "Umzinyathi",
+    "value": 649261,
+    "code": null
+  },
+  "ZA-KZN:endumeni": {
+    "name": "Endumeni",
+    "value": 100085,
+    "code": "KZN241"
+  },
+  "ZA-KZN:nqutu": {
+    "name": "Nqutu",
+    "value": 201133,
+    "code": "KZN242"
+  },
+  "ZA-KZN:msinga": {
+    "name": "Msinga",
+    "value": 206001,
+    "code": "KZN244"
+  },
+  "ZA-KZN:umvoti": {
+    "name": "Umvoti",
+    "value": 142042,
+    "code": "KZN245"
+  },
+  "ZA-KZN:amajuba": {
+    "name": "Amajuba",
+    "value": 687408,
+    "code": null
+  },
+  "ZA-KZN:newcastle": {
+    "name": "Newcastle",
+    "value": 507710,
+    "code": "KZN252"
+  },
+  "ZA-KZN:emadlangeni": {
+    "name": "Emadlangeni",
+    "value": 36948,
+    "code": "KZN253"
+  },
+  "ZA-KZN:dannhauser": {
+    "name": "Dannhauser",
+    "value": 142750,
+    "code": "KZN254"
+  },
+  "ZA-KZN:zululand": {
+    "name": "Zululand",
+    "value": 942794,
+    "code": null
+  },
+  "ZA-KZN:edumbe": {
+    "name": "eDumbe",
+    "value": 96735,
+    "code": "KZN261"
+  },
+  "ZA-KZN:uphongolo": {
+    "name": "uPhongolo",
+    "value": 151541,
+    "code": "KZN262"
+  },
+  "ZA-KZN:abaqulusi": {
+    "name": "Abaqulusi",
+    "value": 247263,
+    "code": "KZN263"
+  },
+  "ZA-KZN:nongoma": {
+    "name": "Nongoma",
+    "value": 225278,
+    "code": "KZN265"
+  },
+  "ZA-KZN:ulundi": {
+    "name": "Ulundi",
+    "value": 221977,
+    "code": "KZN266"
+  },
+  "ZA-KZN:umkhanyakude": {
+    "name": "Umkhanyakude",
+    "value": 738437,
+    "code": null
+  },
+  "ZA-KZN:umhlabuyalingana": {
+    "name": "Umhlabuyalingana",
+    "value": 191660,
+    "code": "KZN271"
+  },
+  "ZA-KZN:jozini": {
+    "name": "Jozini",
+    "value": 199153,
+    "code": "KZN272"
+  },
+  "ZA-KZN:mtubatuba": {
+    "name": "Mtubatuba",
+    "value": 215869,
+    "code": "KZN275"
+  },
+  "ZA-KZN:bigfivehlabisa": {
+    "name": "Big Five Hlabisa",
+    "value": 131755,
+    "code": "KZN276"
+  },
+  "ZA-KZN:kingcetshwayo": {
+    "name": "King Cetshwayo",
+    "value": 1021344,
+    "code": null
+  },
+  "ZA-KZN:mfolozi": {
+    "name": "Mfolozi",
+    "value": 159668,
+    "code": "KZN281"
+  },
+  "ZA-KZN:umhlathuze": {
+    "name": "uMhlathuze",
+    "value": 412075,
+    "code": "KZN282"
+  },
+  "ZA-KZN:umlalazi": {
+    "name": "uMlalazi",
+    "value": 241416,
+    "code": "KZN284"
+  },
+  "ZA-KZN:mthonjaneni": {
+    "name": "Mthonjaneni",
+    "value": 99289,
+    "code": "KZN285"
+  },
+  "ZA-KZN:nkandla": {
+    "name": "Nkandla",
+    "value": 108896,
+    "code": "KZN286"
+  },
+  "ZA-KZN:ilembe": {
+    "name": "iLembe",
+    "value": 782661,
+    "code": null
+  },
+  "ZA-KZN:mandeni": {
+    "name": "Mandeni",
+    "value": 180939,
+    "code": "KZN291"
+  },
+  "ZA-KZN:kwadukuza": {
+    "name": "KwaDukuza",
+    "value": 324912,
+    "code": "KZN292"
+  },
+  "ZA-KZN:ndwedwe": {
+    "name": "Ndwedwe",
+    "value": 165826,
+    "code": "KZN293"
+  },
+  "ZA-KZN:maphumulo": {
+    "name": "Maphumulo",
+    "value": 110983,
+    "code": "KZN294"
+  },
+  "ZA-KZN:harrygwala": {
+    "name": "Harry Gwala",
+    "value": 563893,
+    "code": null
+  },
+  "ZA-KZN:greaterkokstad": {
+    "name": "Greater Kokstad",
+    "value": 81676,
+    "code": "KZN433"
+  },
+  "ZA-KZN:ubuhlebezwe": {
+    "name": "Ubuhlebezwe",
+    "value": 133032,
+    "code": "KZN434"
+  },
+  "ZA-KZN:umzimkhulu": {
+    "name": "Umzimkhulu",
+    "value": 220620,
+    "code": "KZN435"
+  },
+  "ZA-KZN:drnkosazanadlaminizuma": {
+    "name": "Dr Nkosazana Dlamini Zuma",
+    "value": 128565,
+    "code": "KZN436"
+  },
+  "ZA-KZN:ethekwini": {
+    "name": "eThekwini",
+    "value": 4239901,
+    "code": null
+  },
+  "ZA-LP:limpopo": {
+    "name": "Limpopo",
+    "value": 6572721,
+    "code": null
+  },
+  "ZA-LP:mopani": {
+    "name": "Mopani",
+    "value": 1372873,
+    "code": null
+  },
+  "ZA-LP:greatergiyani": {
+    "name": "Greater Giyani",
+    "value": 316841,
+    "code": "LIM331"
+  },
+  "ZA-LP:greaterletaba": {
+    "name": "Greater Letaba",
+    "value": 261038,
+    "code": "LIM332"
+  },
+  "ZA-LP:greatertzaneen": {
+    "name": "Greater Tzaneen",
+    "value": 478254,
+    "code": "LIM333"
+  },
+  "ZA-LP:baphalaborwa": {
+    "name": "Ba-Phalaborwa",
+    "value": 188603,
+    "code": "LIM334"
+  },
+  "ZA-LP:maruleng": {
+    "name": "Maruleng",
+    "value": 128137,
+    "code": "LIM335"
+  },
+  "ZA-LP:vhembe": {
+    "name": "Vhembe",
+    "value": 1653077,
+    "code": null
+  },
+  "ZA-LP:musina": {
+    "name": "Musina",
+    "value": 130899,
+    "code": "LIM341"
+  },
+  "ZA-LP:thulamela": {
+    "name": "Thulamela",
+    "value": 575929,
+    "code": "LIM343"
+  },
+  "ZA-LP:makhado": {
+    "name": "Makhado",
+    "value": 502452,
+    "code": "LIM344"
+  },
+  "ZA-LP:collinschabane": {
+    "name": "Collins Chabane",
+    "value": 443798,
+    "code": "LIM345"
+  },
+  "ZA-LP:capricorn": {
+    "name": "Capricorn",
+    "value": 1447103,
+    "code": null
+  },
+  "ZA-LP:blouberg": {
+    "name": "Blouberg",
+    "value": 192109,
+    "code": "LIM351"
+  },
+  "ZA-LP:molemole": {
+    "name": "Molemole",
+    "value": 127130,
+    "code": "LIM353"
+  },
+  "ZA-LP:polokwane": {
+    "name": "Polokwane",
+    "value": 843459,
+    "code": "LIM354"
+  },
+  "ZA-LP:lepelenkumpi": {
+    "name": "Lepele-Nkumpi",
+    "value": 284404,
+    "code": "LIM355"
+  },
+  "ZA-LP:waterberg": {
+    "name": "Waterberg",
+    "value": 762862,
+    "code": null
+  },
+  "ZA-LP:thabazimbi": {
+    "name": "Thabazimbi",
+    "value": 65047,
+    "code": "LIM361"
+  },
+  "ZA-LP:lephalale": {
+    "name": "Lephalale",
+    "value": 125198,
+    "code": "LIM362"
+  },
+  "ZA-LP:belabela": {
+    "name": "Bela-Bela",
+    "value": 64306,
+    "code": "LIM366"
+  },
+  "ZA-LP:mogalakwena": {
+    "name": "Mogalakwena",
+    "value": 378198,
+    "code": "LIM367"
+  },
+  "ZA-LP:modimollemookgophong": {
+    "name": "Modimolle-Mookgophong",
+    "value": 130113,
+    "code": "LIM368"
+  },
+  "ZA-LP:sekhukhune": {
+    "name": "Sekhukhune",
+    "value": 1336805,
+    "code": null
+  },
+  "ZA-LP:ephraimmogale": {
+    "name": "Ephraim Mogale",
+    "value": 132468,
+    "code": "LIM471"
+  },
+  "ZA-LP:eliasmotsoaledi": {
+    "name": "Elias Motsoaledi",
+    "value": 288049,
+    "code": "LIM472"
+  },
+  "ZA-LP:makhuduthamaga": {
+    "name": "Makhuduthamaga",
+    "value": 340328,
+    "code": "LIM473"
+  },
+  "ZA-LP:fetakgomotubatse": {
+    "name": "Fetakgomo Tubatse",
+    "value": 575960,
+    "code": "LIM476"
+  },
+  "ZA-MP:mpumalanga": {
+    "name": "Mpumalanga",
+    "value": 5143324,
+    "code": null
+  },
+  "ZA-MP:gertsibande": {
+    "name": "Gert Sibande",
+    "value": 1283459,
+    "code": null
+  },
+  "ZA-MP:chiefalbertluthuli": {
+    "name": "Chief Albert Luthuli",
+    "value": 247664,
+    "code": "MP301"
+  },
+  "ZA-MP:msukaligwa": {
+    "name": "Msukaligwa",
+    "value": 199314,
+    "code": "MP302"
+  },
+  "ZA-MP:mkhondo": {
+    "name": "Mkhondo",
+    "value": 255411,
+    "code": "MP303"
+  },
+  "ZA-MP:drpixleykaisakaseme": {
+    "name": "Dr Pixley Ka Isaka Seme",
+    "value": 115304,
+    "code": "MP304"
+  },
+  "ZA-MP:lekwa": {
+    "name": "Lekwa",
+    "value": 119669,
+    "code": "MP305"
+  },
+  "ZA-MP:dipaleseng": {
+    "name": "Dipaleseng",
+    "value": 35980,
+    "code": "MP306"
+  },
+  "ZA-MP:govanmbeki": {
+    "name": "Govan Mbeki",
+    "value": 310117,
+    "code": "MP307"
+  },
+  "ZA-MP:nkangala": {
+    "name": "Nkangala",
+    "value": 1588968,
+    "code": null
+  },
+  "ZA-MP:victorkhanye": {
+    "name": "Victor Khanye",
+    "value": 106149,
+    "code": "MP311"
+  },
+  "ZA-MP:emalahleni": {
+    "name": "Emalahleni",
+    "value": 434522,
+    "code": "MP312"
+  },
+  "ZA-MP:stevetshwete": {
+    "name": "Steve Tshwete",
+    "value": 242031,
+    "code": "MP313"
+  },
+  "ZA-MP:emakhazeni": {
+    "name": "Emakhazeni",
+    "value": 50165,
+    "code": "MP314"
+  },
+  "ZA-MP:thembisile": {
+    "name": "Thembisile",
+    "value": 431248,
+    "code": "MP315"
+  },
+  "ZA-MP:drjsmoroka": {
+    "name": "Dr JS Moroka",
+    "value": 324855,
+    "code": "MP316"
+  },
+  "ZA-MP:ehlanzeni": {
+    "name": "Ehlanzeni",
+    "value": 2270897,
+    "code": null
+  },
+  "ZA-MP:thabachweu": {
+    "name": "Thaba Chweu",
+    "value": 118474,
+    "code": "MP321"
+  },
+  "ZA-MP:nkomazi": {
+    "name": "Nkomazi",
+    "value": 591928,
+    "code": "MP324"
+  },
+  "ZA-MP:bushbuckridge": {
+    "name": "Bushbuckridge",
+    "value": 750821,
+    "code": "MP325"
+  },
+  "ZA-MP:cityofmbombela": {
+    "name": "City of Mbombela",
+    "value": 809674,
+    "code": "MP326"
+  },
+  "ZA-NW:northwest": {
+    "name": "North West",
+    "value": 3804547,
+    "code": null
+  },
+  "ZA-NW:bojanala": {
+    "name": "Bojanala",
+    "value": 1624428,
+    "code": null
+  },
+  "ZA-NW:moretele": {
+    "name": "Moretele",
+    "value": 219120,
+    "code": "NW371"
+  },
+  "ZA-NW:localmunicipalityofmadibeng": {
+    "name": "Local Municipality of Madibeng",
+    "value": 522566,
+    "code": "NW372"
+  },
+  "ZA-NW:rustenburg": {
+    "name": "Rustenburg",
+    "value": 562315,
+    "code": "NW373"
+  },
+  "ZA-NW:kgetlengrivier": {
+    "name": "Kgetlengrivier",
+    "value": 54759,
+    "code": "NW374"
+  },
+  "ZA-NW:moseskotane": {
+    "name": "Moses Kotane",
+    "value": 265668,
+    "code": "NW375"
+  },
+  "ZA-NW:ngakamodirimolema": {
+    "name": "Ngaka Modiri Molema",
+    "value": 937723,
+    "code": null
+  },
+  "ZA-NW:ratlou": {
+    "name": "Ratlou",
+    "value": 128766,
+    "code": "NW381"
+  },
+  "ZA-NW:tswaing": {
+    "name": "Tswaing",
+    "value": 128672,
+    "code": "NW382"
+  },
+  "ZA-NW:mahikeng": {
+    "name": "Mahikeng",
+    "value": 354504,
+    "code": "NW383"
+  },
+  "ZA-NW:ditsobotla": {
+    "name": "Ditsobotla",
+    "value": 164176,
+    "code": "NW384"
+  },
+  "ZA-NW:ramotsheremoiloa": {
+    "name": "Ramotshere Moiloa",
+    "value": 161605,
+    "code": "NW385"
+  },
+  "ZA-NW:drruthsegomotsimompati": {
+    "name": "Dr Ruth Segomotsi Mompati",
+    "value": 508192,
+    "code": null
+  },
+  "ZA-NW:naledi": {
+    "name": "Naledi",
+    "value": 63755,
+    "code": "NW392"
+  },
+  "ZA-NW:mamusa": {
+    "name": "Mamusa",
+    "value": 70483,
+    "code": "NW393"
+  },
+  "ZA-NW:greatertaung": {
+    "name": "Greater Taung",
+    "value": 202009,
+    "code": "NW394"
+  },
+  "ZA-NW:lekwateemane": {
+    "name": "Lekwa-Teemane",
+    "value": 59815,
+    "code": "NW396"
+  },
+  "ZA-NW:kagisanomolopo": {
+    "name": "Kagisano/Molopo",
+    "value": 112130,
+    "code": "NW397"
+  },
+  "ZA-NW:drkennethkaunda": {
+    "name": "Dr Kenneth Kaunda",
+    "value": 734203,
+    "code": null
+  },
+  "ZA-NW:cityofmatlosana": {
+    "name": "City of Matlosana",
+    "value": 431231,
+    "code": "NW403"
+  },
+  "ZA-NW:maquassihills": {
+    "name": "Maquassi Hills",
+    "value": 90302,
+    "code": "NW404"
+  },
+  "ZA-NW:jbmarks": {
+    "name": "JB Marks",
+    "value": 212670,
+    "code": "NW405"
+  },
+  "ZA-NC:northerncape": {
+    "name": "Northern Cape",
+    "value": 1355945,
+    "code": null
+  },
+  "ZA-NC:johntaologaetsewe": {
+    "name": "John Taolo Gaetsewe",
+    "value": 272454,
+    "code": null
+  },
+  "ZA-NC:joemorolong": {
+    "name": "Joe Morolong",
+    "value": 125420,
+    "code": "NC451"
+  },
+  "ZA-NC:gasegonyana": {
+    "name": "Ga-Segonyana",
+    "value": 117454,
+    "code": "NC452"
+  },
+  "ZA-NC:gamagara": {
+    "name": "Gamagara",
+    "value": 29580,
+    "code": "NC453"
+  },
+  "ZA-NC:namakwa": {
+    "name": "Namakwa",
+    "value": 148935,
+    "code": null
+  },
+  "ZA-NC:richtersveld": {
+    "name": "Richtersveld",
+    "value": 24235,
+    "code": "NC061"
+  },
+  "ZA-NC:namakhoi": {
+    "name": "Nama Khoi",
+    "value": 67089,
+    "code": "NC062"
+  },
+  "ZA-NC:kamiesberg": {
+    "name": "Kamiesberg",
+    "value": 15130,
+    "code": "NC064"
+  },
+  "ZA-NC:hantam": {
+    "name": "Hantam",
+    "value": 22281,
+    "code": "NC065"
+  },
+  "ZA-NC:karoohoogland": {
+    "name": "Karoo Hoogland",
+    "value": 11691,
+    "code": "NC066"
+  },
+  "ZA-NC:khoima": {
+    "name": "Kh+\u00f3i-Ma",
+    "value": 8510,
+    "code": "NC067"
+  },
+  "ZA-NC:pixleykaseme": {
+    "name": "Pixley ka Seme",
+    "value": 216589,
+    "code": null
+  },
+  "ZA-NC:ubuntu": {
+    "name": "Ubuntu",
+    "value": 15836,
+    "code": "NC071"
+  },
+  "ZA-NC:umsobomvu": {
+    "name": "Umsobomvu",
+    "value": 29555,
+    "code": "NC072"
+  },
+  "ZA-NC:emthanjeni": {
+    "name": "Emthanjeni",
+    "value": 46587,
+    "code": "NC073"
+  },
+  "ZA-NC:kareeberg": {
+    "name": "Kareeberg",
+    "value": 10961,
+    "code": "NC074"
+  },
+  "ZA-NC:renosterberg": {
+    "name": "Renosterberg",
+    "value": 10843,
+    "code": "NC075"
+  },
+  "ZA-NC:thembelihle": {
+    "name": "Thembelihle",
+    "value": 22542,
+    "code": "NC076"
+  },
+  "ZA-NC:siyathemba": {
+    "name": "Siyathemba",
+    "value": 27102,
+    "code": "NC077"
+  },
+  "ZA-NC:siyancuma": {
+    "name": "Siyancuma",
+    "value": 53165,
+    "code": "NC078"
+  },
+  "ZA-NC:zfmgcawu": {
+    "name": "ZF Mgcawu",
+    "value": 283624,
+    "code": null
+  },
+  "ZA-NC:kaigarib": {
+    "name": "Kai !Garib",
+    "value": 85104,
+    "code": "NC082"
+  },
+  "ZA-NC:kheis": {
+    "name": "!Kheis",
+    "value": 21954,
+    "code": "NC084"
+  },
+  "ZA-NC:tsantsabane": {
+    "name": "Tsantsabane",
+    "value": 30969,
+    "code": "NC085"
+  },
+  "ZA-NC:kgatelopele": {
+    "name": "Kgatelopele",
+    "value": 19854,
+    "code": "NC086"
+  },
+  "ZA-NC:dawidkruiper": {
+    "name": "Dawid Kruiper",
+    "value": 125744,
+    "code": "NC087"
+  },
+  "ZA-NC:francesbaard": {
+    "name": "Frances Baard",
+    "value": 434343,
+    "code": null
+  },
+  "ZA-NC:solplaatje": {
+    "name": "Sol Plaatje",
+    "value": 270078,
+    "code": "NC091"
+  },
+  "ZA-NC:dikgatlong": {
+    "name": "Dikgatlong",
+    "value": 56967,
+    "code": "NC092"
+  },
+  "ZA-NC:magareng": {
+    "name": "Magareng",
+    "value": 26816,
+    "code": "NC093"
+  },
+  "ZA-NC:phokwane": {
+    "name": "Phokwane",
+    "value": 80482,
+    "code": "NC094"
+  },
+  "ZA-WC:westerncape": {
+    "name": "Western Cape",
+    "value": 7433020,
+    "code": null
+  },
+  "ZA-WC:cityofcapetown": {
+    "name": "City of Cape Town",
+    "value": 4772846,
+    "code": null
+  },
+  "ZA-WC:westcoast": {
+    "name": "West Coast",
+    "value": 497394,
+    "code": null
+  },
+  "ZA-WC:matzikama": {
+    "name": "Matzikama",
+    "value": 69043,
+    "code": "WC011"
+  },
+  "ZA-WC:cederberg": {
+    "name": "Cederberg",
+    "value": 55108,
+    "code": "WC012"
+  },
+  "ZA-WC:bergrivier": {
+    "name": "Bergrivier",
+    "value": 70276,
+    "code": "WC013"
+  },
+  "ZA-WC:saldanhabay": {
+    "name": "Saldanha Bay",
+    "value": 154635,
+    "code": "WC014"
+  },
+  "ZA-WC:swartland": {
+    "name": "Swartland",
+    "value": 148331,
+    "code": "WC015"
+  },
+  "ZA-WC:capewinelands": {
+    "name": "Cape Winelands",
+    "value": 862703,
+    "code": null
+  },
+  "ZA-WC:witzenberg": {
+    "name": "Witzenberg",
+    "value": 103765,
+    "code": "WC022"
+  },
+  "ZA-WC:drakenstein": {
+    "name": "Drakenstein",
+    "value": 276800,
+    "code": "WC023"
+  },
+  "ZA-WC:stellenbosch": {
+    "name": "Stellenbosch",
+    "value": 175411,
+    "code": "WC024"
+  },
+  "ZA-WC:breedevalley": {
+    "name": "Breede Valley",
+    "value": 212682,
+    "code": "WC025"
+  },
+  "ZA-WC:langeberg": {
+    "name": "Langeberg",
+    "value": 94045,
+    "code": "WC026"
+  },
+  "ZA-WC:overberg": {
+    "name": "Overberg",
+    "value": 359446,
+    "code": null
+  },
+  "ZA-WC:theewaterskloof": {
+    "name": "Theewaterskloof",
+    "value": 139563,
+    "code": "WC031"
+  },
+  "ZA-WC:overstrand": {
+    "name": "Overstrand",
+    "value": 132495,
+    "code": "WC032"
+  },
+  "ZA-WC:capeagulhas": {
+    "name": "Cape Agulhas",
+    "value": 40274,
+    "code": "WC033"
+  },
+  "ZA-WC:swellendam": {
+    "name": "Swellendam",
+    "value": 47114,
+    "code": "WC034"
+  },
+  "ZA-WC:gardenroute": {
+    "name": "Garden Route",
+    "value": 838457,
+    "code": null
+  },
+  "ZA-WC:kannaland": {
+    "name": "Kannaland",
+    "value": 31986,
+    "code": "WC041"
+  },
+  "ZA-WC:hessequa": {
+    "name": "Hessequa",
+    "value": 71918,
+    "code": "WC042"
+  },
+  "ZA-WC:mosselbay": {
+    "name": "Mossel Bay",
+    "value": 140075,
+    "code": "WC043"
+  },
+  "ZA-WC:george": {
+    "name": "George",
+    "value": 294929,
+    "code": "WC044"
+  },
+  "ZA-WC:oudtshoorn": {
+    "name": "Oudtshoorn",
+    "value": 138257,
+    "code": "WC045"
+  },
+  "ZA-WC:bitou": {
+    "name": "Bitou",
+    "value": 65240,
+    "code": "WC047"
+  },
+  "ZA-WC:knysna": {
+    "name": "Knysna",
+    "value": 96055,
+    "code": "WC048"
+  },
+  "ZA-WC:centralkaroo": {
+    "name": "Central Karoo",
+    "value": 102173,
+    "code": null
+  },
+  "ZA-WC:laingsburg": {
+    "name": "Laingsburg",
+    "value": 11366,
+    "code": "WC051"
+  },
+  "ZA-WC:princealbert": {
+    "name": "Prince Albert",
+    "value": 17836,
+    "code": "WC052"
+  },
+  "ZA-WC:beaufortwest": {
+    "name": "Beaufort West",
+    "value": 72972,
+    "code": "WC053"
+  }
+}

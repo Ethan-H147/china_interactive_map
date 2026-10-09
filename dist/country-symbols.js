@@ -1,5 +1,6 @@
 // Small vector emblems; each country animates only its moving parts.
 window.AtlasSymbols={sequence:0,markup(country){
+ if(['south-africa','eswatini','lesotho'].includes(country))return '<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle class="symbol-rotor" cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="160 70"/></svg>';
  if(country==='russia'){
   const key='matryoshka-'+(++this.sequence);
   const face='<circle cx="60" cy="30" r="9" fill="#fff2da"/><path d="M52 26q8-10 16 0q-8-4-16 0" fill="#d4a258" stroke="none"/><g fill="#49352e" stroke="none"><circle cx="56.5" cy="30" r="1.1"/><circle cx="63.5" cy="30" r="1.1"/></g><path d="M57 35q3 2.5 6 0" fill="none" stroke="#9b4944" stroke-width="1.3" stroke-linecap="round"/>';

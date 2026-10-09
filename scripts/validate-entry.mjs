@@ -7,7 +7,7 @@ function boot(hash='',saved,{blocked=false,developer=false}={}){
  const elements=new Map(['atlas-title-english','atlas-title-local','atlas-title-malay','atlas-title-tamil','loading-label','startup-name','home'].map(id=>[id,{}]));
  const symbols=[{}],location={hash,pathname:'/',search:''};
  const listeners={};
- const context={window:{AtlasDev:{enabled:developer,allows(){return true;}},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
+ const context={window:{AtlasDev:{enabled:developer,allows:country=>!['south-africa','eswatini','lesotho'].includes(country)||developer},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
   history:{replaceState(a,b,url){location.hash=new URL(url,'https://example.test').hash;}},
   localStorage:{getItem(key){if(blocked)throw Error('Storage blocked');return stored.get(key);},setItem(key,value){if(blocked)throw Error('Storage blocked');stored.set(key,value);}},AtlasSymbols:{markup:country=>'<svg>'+country+'</svg>'}};
  vm.runInNewContext(source,context);const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners};
@@ -24,6 +24,7 @@ for(const country of ['china','korea','mongolia','japan','philippines','indonesi
  restored.entry.ready();assert(!restored.context.document.documentElement.dataset.starting);
 }
 const fresh=boot();assert.equal(fresh.entry.initial,'china');assert.equal(fresh.location.hash,'#china');assert.equal(fresh.context.document.documentElement.dataset.atlas,'china');
+for(const country of ['south-africa','eswatini','lesotho']){assert.equal(boot('#'+country,country).entry.initial,'china','Development routes cannot open publicly');const dev=boot('#'+country,'china',{developer:true});assert.equal(dev.entry.initial,country);assert.equal(dev.entry.fromHash('#'+country),country);assert.equal(dev.elements.get('home').textContent,'All '+dev.entry.countries[country].en);}
 const argentinaLink='#argentina/view='+encodeURIComponent(JSON.stringify({country:'argentina',selection:'AR-CITY-21'}));
 assert.equal(boot(argentinaLink,'japan').location.hash,argentinaLink,'Shared Argentine views open publicly without losing their selection');
 for(const [country,selection] of [['malaysia','MY-01'],['singapore','SG-PN']]){const hash='#'+country+'/view='+encodeURIComponent(JSON.stringify({country,selection}));assert.equal(boot(hash,'china').location.hash,hash,'Shared public views preserve their country and selection');}

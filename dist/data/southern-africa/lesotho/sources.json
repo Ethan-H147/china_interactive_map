@@ -1,0 +1,66 @@
+{
+  "retrieved": "2026-10-09",
+  "counts": {
+    "1": 10,
+    "2": 76,
+    "3": 0
+  },
+  "coverage": "10 districts and 76 community/urban council polygons from the Lesotho Department of Rural Water Supply public government GIS. The source does not state survey date or a separate reuse licence. This council layer is distinct from electoral constituencies. Geometry-derived area is a map estimate.",
+  "processing": "Lowest-level polygons form shared topology. Parent outlines are dissolved from their children; South Africa retains its Lesotho enclave hole. Narrow digitization gaps up to 100 m are repaired, and residual numerical holes are removed from the two landlocked country silhouettes. South African exterior border edges within 4 km of the Lesotho/Eswatini reference are reconciled to that reference and overlap is erased. Internal lines contain shared edges only; coastlines remain unoutlined. International paths are merged into a single topology to draw each edge once. Local geometry loads per parent. Geometry is simplified to about 45 m north-south; the map further simplifies line details at low zoom. Area estimates are spherical polygon areas rounded to 0.1 square kilometres.",
+  "seamReports": {
+    "lesotho": {
+      "changedEdges": 2562,
+      "maxDisplacementMetres": 2835.3241743817034,
+      "changedRegions": [
+        "ZA-M-dihlabeng",
+        "ZA-M-dr-nkosazana-dlamini-zuma",
+        "ZA-M-elundini",
+        "ZA-M-greater-kokstad",
+        "ZA-M-impendle",
+        "ZA-M-inkosi-langalibalele",
+        "ZA-M-maluti-a-phofung",
+        "ZA-M-mangaung",
+        "ZA-M-mantsopa",
+        "ZA-M-matatiele",
+        "ZA-M-mohokare",
+        "ZA-M-okhahlamba",
+        "ZA-M-senqu",
+        "ZA-M-setsoto"
+      ]
+    },
+    "eswatini": {
+      "changedEdges": 121,
+      "maxDisplacementMetres": 3669.3708310447246,
+      "changedRegions": [
+        "ZA-M-chief-albert-luthuli",
+        "ZA-M-jozini",
+        "ZA-M-city-of-mbombela",
+        "ZA-M-mkhondo",
+        "ZA-M-nkomazi",
+        "ZA-M-uphongolo"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "file": "lso-first.geojson",
+      "url": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "provider": "Lesotho Department of Rural Water Supply, government GIS",
+      "year": "Not stated by source",
+      "license": "Publicly accessible government boundary layer; no explicit licence statement in service metadata",
+      "source": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer",
+      "sha256": "f7be626767aa0771972cae72947f01b3b3b077a9002d673f300ecc45a9021c93",
+      "bytes": 2413898
+    },
+    {
+      "file": "lso-second.geojson",
+      "url": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "provider": "Lesotho Department of Rural Water Supply, government GIS",
+      "year": "Not stated by source",
+      "license": "Publicly accessible government boundary layer; no explicit licence statement in service metadata",
+      "source": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer",
+      "sha256": "35f0601fac0103f8e05e24133e767d1caaccd43c8a877c2af60f374c6303fa24",
+      "bytes": 10123785
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "retrieved": "2026-10-09",
+  "counts": {
+    "1": 9,
+    "2": 52,
+    "3": 205
+  },
+  "coverage": "9 provinces; 44 districts and 8 metropolitan municipalities; 205 local municipalities. Metros are terminal jurisdictions rather than duplicated third-level entries. Municipal Demarcation Board snapshot represented as 2020 by geoBoundaries; OCHA source created in 2018 and reviewed in January 2025. The Prince Edward Islands are outside this mainland municipal extract.",
+  "processing": "Lowest-level polygons form shared topology. Parent outlines are dissolved from their children; South Africa retains its Lesotho enclave hole. Narrow digitization gaps up to 100 m are repaired, and residual numerical holes are removed from the two landlocked country silhouettes. South African exterior border edges within 4 km of the Lesotho/Eswatini reference are reconciled to that reference and overlap is erased. Internal lines contain shared edges only; coastlines remain unoutlined. International paths are merged into a single topology to draw each edge once. Local geometry loads per parent. Geometry is simplified to about 45 m north-south; the map further simplifies line details at low zoom. Area estimates are spherical polygon areas rounded to 0.1 square kilometres.",
+  "seamReports": {
+    "lesotho": {
+      "changedEdges": 2562,
+      "maxDisplacementMetres": 2835.3241743817034,
+      "changedRegions": [
+        "ZA-M-dihlabeng",
+        "ZA-M-dr-nkosazana-dlamini-zuma",
+        "ZA-M-elundini",
+        "ZA-M-greater-kokstad",
+        "ZA-M-impendle",
+        "ZA-M-inkosi-langalibalele",
+        "ZA-M-maluti-a-phofung",
+        "ZA-M-mangaung",
+        "ZA-M-mantsopa",
+        "ZA-M-matatiele",
+        "ZA-M-mohokare",
+        "ZA-M-okhahlamba",
+        "ZA-M-senqu",
+        "ZA-M-setsoto"
+      ]
+    },
+    "eswatini": {
+      "changedEdges": 121,
+      "maxDisplacementMetres": 3669.3708310447246,
+      "changedRegions": [
+        "ZA-M-chief-albert-luthuli",
+        "ZA-M-jozini",
+        "ZA-M-city-of-mbombela",
+        "ZA-M-mkhondo",
+        "ZA-M-nkomazi",
+        "ZA-M-uphongolo"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "file": "zaf-adm1.topojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZAF/ADM1/geoBoundaries-ZAF-ADM1.topojson",
+      "provider": "OCHA ROSEA, South African Municipal Demarcation Board",
+      "year": "2020",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/igo/",
+      "count": 9,
+      "sha256": "626e563c88bc860c9be282a560581cf259076649ed9d6bd808e1f8cbda5f171c",
+      "bytes": 3275358
+    },
+    {
+      "file": "zaf-adm2.topojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZAF/ADM2/geoBoundaries-ZAF-ADM2.topojson",
+      "provider": "OCHA ROSEA, South African Municipal Demarcation Board",
+      "year": "2020",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/igo/",
+      "count": 52,
+      "sha256": "2f2521c2cc6275d6c8f77be19461a1ee876b19ca92981e94636bd4c75e5a55bc",
+      "bytes": 4431312
+    },
+    {
+      "file": "zaf-adm3.topojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ZAF/ADM3/geoBoundaries-ZAF-ADM3.topojson",
+      "provider": "OCHA ROSEA, South African Municipal Demarcation Board",
+      "year": "2020",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/igo/",
+      "count": 213,
+      "sha256": "0ef45be83969df53abd8f77369c37bce69b10411aef256317416120b9ddd2645",
+      "bytes": 6144718
+    }
+  ]
+}

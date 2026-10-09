@@ -38,3 +38,16 @@ const late=jobs.at(-1);atlas.leave();assert(late.terminated);complete(late);awai
 assert(!atlas.ready);assert(!sources.has('test-first'));assert(!sources.has('test-second'),'Late worker messages cannot restore a departed country');
 assert(revoked.length>=4,'First and second-level object URLs are released');
 console.log('Shared regional loader: districts load on selection, superseded workers cancel, stale flights are suppressed, only one region remains installed, and leaving releases detailed sources and URLs.');
+
+records.push(...['A','B'].map(parent=>({id:parent+'11',en:parent+' Municipality',parent:parent+'1',level:3,kind:'Municipality',center:[30.5,50.5],bounds})));
+catalogue.chunks.A1={file:'third/A1.bin',count:1};catalogue.chunks.B1={file:'third/B1.bin',count:1};
+const tree=await context.addRegionalCountry(map,host,{country:'tree',prefix:'tree',base:'data/tree/',name:'Tree',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities'});
+let task=tree.enter(false);await flush();complete(jobs.at(-1));await task;
+assert(!sources.has('tree-second')&&!sources.has('tree-third'),'Third-level country entry remains lazy');
+task=tree.restore('A11');await flush();assert.equal(jobs.at(-1).request.url,'data/tree/second/A.bin');complete(jobs.at(-1));await flush();assert.equal(jobs.at(-1).request.url,'data/tree/third/A1.bin');complete(jobs.at(-1));await task;
+assert.equal(tree.getSelection(),'A11');assert.equal(tree.getMode(),3);assert(sources.has('tree-second')&&sources.has('tree-third'),'Deep links resolve and load their full ancestry');
+task=tree.restore('B11');await flush();assert(!sources.has('tree-second')&&!sources.has('tree-third'),'Changing province releases both detailed levels');complete(jobs.at(-1));await flush();complete(jobs.at(-1));await task;
+await tree.setMode(2);assert(sources.has('tree-second')&&!sources.has('tree-third'),'Returning to districts releases municipality geometry');
+task=tree.restore('A11');await flush();const superseded=jobs.at(-1);tree.leave();assert(superseded.terminated);complete(superseded);await task;
+assert(!sources.has('tree-first')&&!sources.has('tree-second')&&!sources.has('tree-third'),'Leaving releases all three levels and ignores late results');
+console.log('Three-level adapter: deep selection resolves ancestry, ordered parent-only chunks load, mode changes release unused municipalities, and country changes cancel every level.');

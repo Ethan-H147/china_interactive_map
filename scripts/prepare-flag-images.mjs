@@ -4,7 +4,7 @@ const read=file=>JSON.parse(fs.readFileSync(file)),images={},out='dist/vendor/fl
 fs.mkdirSync(out,{recursive:true});
 function add(flag){
  if(!flag?.file)return;
- let full=flag.original||flag.source||flag.url||flag.file;
+ let full=flag.full||flag.original||flag.source||flag.url||flag.file;
  if(flag.originalFile&&fs.existsSync(flag.originalFile)){
   const file=path.basename(flag.originalFile);fs.copyFileSync(flag.originalFile,out+'/'+file);full='vendor/flag-originals/'+file;
  }
@@ -15,6 +15,8 @@ Object.values(read('dist/data/japan-facts.json')).forEach(record=>add(record.fla
 Object.values(read('dist/data/japan-local-flags.json').flags).forEach(add);
 const russia=read('dist/data/russia/sources.json');Object.values(russia.flags).forEach(add);Object.values(russia.cityFlags).forEach(add);
 const national=Object.fromEntries(Object.values(read('dist/data/national-flag-sources.json').flags).map(flag=>[flag.file,flag]));
+const southern=read('dist/data/southern-africa/flag-sources.json').flags;
+for(const [id,flag] of Object.entries(southern))if(['south-africa','eswatini','lesotho'].includes(id))national[flag.file]=flag;else add(flag);
 Object.assign(images,national);
 fs.writeFileSync('dist/national-flags.mjs','// Original national artwork and dimensions, independent of thumbnail proportions.\nexport const nationalFlagImages='+JSON.stringify(national)+';\n');
 fs.writeFileSync('dist/data/flag-images.json',JSON.stringify(images));

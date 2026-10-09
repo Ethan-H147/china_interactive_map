@@ -1,0 +1,66 @@
+{
+  "retrieved": "2026-10-09",
+  "counts": {
+    "1": 4,
+    "2": 59,
+    "3": 0
+  },
+  "coverage": "4 regions and all 59 post-2018 tinkhundla from the COSPE/Khetsimphilo cadastre-derived public GIS layer. The source layer does not state a later survey date or a separate reuse licence. Geometry-derived area is a map estimate. Source population fields have no stated census year and are not used as current statistics.",
+  "processing": "Lowest-level polygons form shared topology. Parent outlines are dissolved from their children; South Africa retains its Lesotho enclave hole. Narrow digitization gaps up to 100 m are repaired, and residual numerical holes are removed from the two landlocked country silhouettes. South African exterior border edges within 4 km of the Lesotho/Eswatini reference are reconciled to that reference and overlap is erased. Internal lines contain shared edges only; coastlines remain unoutlined. International paths are merged into a single topology to draw each edge once. Local geometry loads per parent. Geometry is simplified to about 45 m north-south; the map further simplifies line details at low zoom. Area estimates are spherical polygon areas rounded to 0.1 square kilometres.",
+  "seamReports": {
+    "lesotho": {
+      "changedEdges": 2562,
+      "maxDisplacementMetres": 2835.3241743817034,
+      "changedRegions": [
+        "ZA-M-dihlabeng",
+        "ZA-M-dr-nkosazana-dlamini-zuma",
+        "ZA-M-elundini",
+        "ZA-M-greater-kokstad",
+        "ZA-M-impendle",
+        "ZA-M-inkosi-langalibalele",
+        "ZA-M-maluti-a-phofung",
+        "ZA-M-mangaung",
+        "ZA-M-mantsopa",
+        "ZA-M-matatiele",
+        "ZA-M-mohokare",
+        "ZA-M-okhahlamba",
+        "ZA-M-senqu",
+        "ZA-M-setsoto"
+      ]
+    },
+    "eswatini": {
+      "changedEdges": 121,
+      "maxDisplacementMetres": 3669.3708310447246,
+      "changedRegions": [
+        "ZA-M-chief-albert-luthuli",
+        "ZA-M-jozini",
+        "ZA-M-city-of-mbombela",
+        "ZA-M-mkhondo",
+        "ZA-M-nkomazi",
+        "ZA-M-uphongolo"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "file": "swz-second.geojson",
+      "url": "https://services1.arcgis.com/2e5QzzsIgOpVnKkG/arcgis/rest/services/All_New_Tinkhundla_(post_2018)/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "provider": "COSPE / Khetsimphilo project, Eswatini cadastre post-2018 tinkhundla",
+      "year": 2018,
+      "license": "Publicly accessible ArcGIS boundary layer; no explicit licence statement in item metadata",
+      "item": "https://www.arcgis.com/home/item.html?id=36919f6e5ad34f9f8d843025286a17bf",
+      "sha256": "4a9b2d42d9641975aaf3509fb5fb40c26c73b8b0526a4cf251ccf36b9001b9a5",
+      "bytes": 3341431
+    },
+    {
+      "file": "swz-first.topojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SWZ/ADM1/geoBoundaries-SWZ-ADM1.topojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": 2017,
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "sha256": "0b4e82c98175b60301a7700dec8d3893da17511da4054f8ee12b915496a5dbcc",
+      "bytes": 22551
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 // Country differences belong in data declarations, not in the renderer or UI.
 export const countryColorData = {
+ ...Object.fromEntries(['south-africa','eswatini','lesotho'].map(country=>[country,{statistics:'data/southern-africa/'+country+'/statistics.json',catalogue:'data/southern-africa/'+country+'/catalogue.bin',levels:country==='south-africa'?'Provinces':country==='eswatini'?'Regions':'Districts',economy:country==='south-africa'}])),
  china: {statistics:'data/region-statistics.json', population:'china', levels:'Provinces & territories', geography:{id:'adcode',parent:'provinceCode'}, layers:/^(province|prefecture|other|city-district)(-fragment)?-fill$/, primary:/^province(-fragment)?-fill$/},
  korea: {statistics:'data/region-statistics.json', catalogue:'data/korea-boundaries.bin', population:'korea', levels:'Provinces & special cities'},
  mongolia: {statistics:'data/region-statistics.json', catalogue:'data/mongolia-boundaries.bin', population:'mongolia', levels:'Provinces & capital'},

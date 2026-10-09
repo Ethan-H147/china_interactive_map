@@ -15,7 +15,7 @@ class Element{
 const elements=new Map();globalThis.document={createElement:()=>new Element(),querySelector:key=>get(key),getElementById:key=>get(key),dispatchEvent(){}};
 function get(key){if(!elements.has(key))elements.set(key,new Element());return elements.get(key);}
 let labelCandidates=[];
-globalThis.window={AtlasDev:{enabled:false,allows(){return true;}},AtlasLabels:{render:(map,candidates)=>{labelCandidates=candidates;return [];}}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
+globalThis.window={AtlasDev:{enabled:false,allows(country){return !['south-africa','eswatini','lesotho'].includes(country)||this.enabled;}},AtlasLabels:{render:(map,candidates)=>{labelCandidates=candidates;return [];}}};globalThis.Option=class{constructor(text,value){this.text=text;this.value=value;}};
 const flagRequests=[];let flagPending=0,maxFlagPending=0;
 globalThis.Image=class{
  set src(value){flagRequests.push(value);flagPending++;maxFlagPending=Math.max(maxFlagPending,flagPending);}

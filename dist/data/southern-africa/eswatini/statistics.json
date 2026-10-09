@@ -1,0 +1,863 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-09",
+  "country": "eswatini",
+  "sources": {
+    "zaPopulation2026": {
+      "title": "Statistics South Africa · Mid-year population estimates 2026 · Appendix 1",
+      "url": "https://www.statssa.gov.za/publications/P0302/P03022026.pdf",
+      "published": "2026-07-30",
+      "table": "Appendix 1"
+    },
+    "zaPopulation2024": {
+      "title": "Statistics South Africa · Mid-year population estimates 2024 · Appendix 1",
+      "url": "https://www.statssa.gov.za/publications/P0302/P03022024.pdf",
+      "table": "Appendix 1",
+      "mirror": "https://www.ectreasury.gov.za/upload/2025/stats/P03022024.pdf"
+    },
+    "zaGdp2024": {
+      "title": "Statistics South Africa · GDP by province, 2024 · Table 1",
+      "url": "https://www.statssa.gov.za/publications/P04412/P044122024.pdf",
+      "published": "2025-09-18",
+      "table": "Table 1: GDP by province at current prices, rand million"
+    },
+    "zaArea": {
+      "title": "Statistics South Africa · Census 2022 in Brief · Table 2.1",
+      "url": "https://www.statssa.gov.za/publications/Census2022inBrief/Census2022inBriefJune2024.pdf",
+      "table": "Table 2.1: Provincial land area"
+    },
+    "zaMunicipalPopulation": {
+      "title": "Statistics South Africa · Census 2022 municipal fact sheet · Demographics",
+      "url": "https://census.statssa.gov.za/assets/documents/2022/Census_2022_Municipal_factsheet-Web.pdf",
+      "report": "03-01-82",
+      "table": "Demographics, printed pages 2–8",
+      "note": "The downloaded official edition includes the Thaba Chweu / City of Mbombela population erratum."
+    },
+    "zaExchange": {
+      "title": "World Bank / IMF IFS · Official exchange rate, annual average, 2024",
+      "url": "https://data.worldbank.org/indicator/PA.NUS.FCRF?locations=ZA",
+      "download": "https://api.worldbank.org/v2/country/ZAF/indicator/PA.NUS.FCRF?date=2024&format=json",
+      "indicator": "PA.NUS.FCRF",
+      "value": 18.3286575505,
+      "unit": "ZAR per USD",
+      "license": "CC BY 4.0"
+    },
+    "szPopulation": {
+      "title": "Eswatini Central Statistical Office · Population projections 2017–2038 · Table 5.5",
+      "url": "https://www.gov.sz/images/Final-2017_2038-POPULATION-PROJECTIONS-1-1.pdf",
+      "table": "Table 5.5: Medium-variant midyear population by region",
+      "published": "2020-08",
+      "note": "Based on the 2017 census. These are modelled projections, not a new census."
+    },
+    "lsPopulation": {
+      "title": "Lesotho Bureau of Statistics · 2021 Demographic Survey · Table 2.5",
+      "url": "https://www.bos.gov.ls/Publications.htm",
+      "download": "https://www.bos.gov.ls/Bos_Reports/Copy%20of%20Demography/2021_LDS_Vol_IIIA_Population_Dynamics_Analytical_Report.zip",
+      "table": "Table 2.5: Population by district, 2021 LDS",
+      "note": "District counts are estimates from the 2021 demographic survey, not a census or a current-year projection."
+    },
+    "mappedArea": {
+      "title": "Boundary-derived area · eswatini",
+      "url": "data/southern-africa/eswatini/sources.json",
+      "note": "Spherical area calculated from displayed boundary polygons, rounded to 0.1 km². A map estimate; source boundary dates and definitions may differ from statistical reporting."
+    }
+  },
+  "regions": {
+    "eswatini:SZ-HH": {
+      "name": "Hhohho",
+      "level": 1,
+      "area": {
+        "value": 3625.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 365457,
+        "year": 2026,
+        "date": "2026-07-01",
+        "method": "projection",
+        "source": "szPopulation",
+        "periodLabel": "2026 midyear projection",
+        "note": "Medium-variant projection from the 2020 report, based on the 2017 census."
+      },
+      "note": "Regional population is a medium-variant projection, not a 2026 census. Regional GDP has not been verified. Mapped area is calculated from the region’s displayed tinkhundla polygons."
+    },
+    "eswatini:SZ-MA": {
+      "name": "Manzini",
+      "level": 1,
+      "area": {
+        "value": 3953.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 408336,
+        "year": 2026,
+        "date": "2026-07-01",
+        "method": "projection",
+        "source": "szPopulation",
+        "periodLabel": "2026 midyear projection",
+        "note": "Medium-variant projection from the 2020 report, based on the 2017 census."
+      },
+      "note": "Regional population is a medium-variant projection, not a 2026 census. Regional GDP has not been verified. Mapped area is calculated from the region’s displayed tinkhundla polygons."
+    },
+    "eswatini:SZ-SH": {
+      "name": "Shiselweni",
+      "level": 1,
+      "area": {
+        "value": 4127.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 213779,
+        "year": 2026,
+        "date": "2026-07-01",
+        "method": "projection",
+        "source": "szPopulation",
+        "periodLabel": "2026 midyear projection",
+        "note": "Medium-variant projection from the 2020 report, based on the 2017 census."
+      },
+      "note": "Regional population is a medium-variant projection, not a 2026 census. Regional GDP has not been verified. Mapped area is calculated from the region’s displayed tinkhundla polygons."
+    },
+    "eswatini:SZ-LU": {
+      "name": "Lubombo",
+      "level": 1,
+      "area": {
+        "value": 5732.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      },
+      "population": {
+        "value": 244583,
+        "year": 2026,
+        "date": "2026-07-01",
+        "method": "projection",
+        "source": "szPopulation",
+        "periodLabel": "2026 midyear projection",
+        "note": "Medium-variant projection from the 2020 report, based on the 2017 census."
+      },
+      "note": "Regional population is a medium-variant projection, not a 2026 census. Regional GDP has not been verified. Mapped area is calculated from the region’s displayed tinkhundla polygons."
+    },
+    "eswatini:SZ-H01": {
+      "name": "Hhukwini",
+      "level": 2,
+      "area": {
+        "value": 186.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H02": {
+      "name": "Lobamba",
+      "level": 2,
+      "area": {
+        "value": 127.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H03": {
+      "name": "Madlangempisi",
+      "level": 2,
+      "area": {
+        "value": 373.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H04": {
+      "name": "Maphalaleni",
+      "level": 2,
+      "area": {
+        "value": 359.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H05": {
+      "name": "Mayiwane",
+      "level": 2,
+      "area": {
+        "value": 213.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H06": {
+      "name": "Mbabane East",
+      "level": 2,
+      "area": {
+        "value": 112,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H07": {
+      "name": "Mbabane West",
+      "level": 2,
+      "area": {
+        "value": 25.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H08": {
+      "name": "Mhlangatane",
+      "level": 2,
+      "area": {
+        "value": 218.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H09": {
+      "name": "Motshane",
+      "level": 2,
+      "area": {
+        "value": 187.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H10": {
+      "name": "Ndzingeni",
+      "level": 2,
+      "area": {
+        "value": 428.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H11": {
+      "name": "Nkhaba",
+      "level": 2,
+      "area": {
+        "value": 375.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H12": {
+      "name": "Ntfonjeni",
+      "level": 2,
+      "area": {
+        "value": 386.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H13": {
+      "name": "Piggs Peak",
+      "level": 2,
+      "area": {
+        "value": 344.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H15": {
+      "name": "Siphocosini",
+      "level": 2,
+      "area": {
+        "value": 159,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-H14": {
+      "name": "Timphisini",
+      "level": 2,
+      "area": {
+        "value": 127.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M01": {
+      "name": "Kukhanyeni",
+      "level": 2,
+      "area": {
+        "value": 194.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M13": {
+      "name": "Mtfongwaneni",
+      "level": 2,
+      "area": {
+        "value": 217.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M18": {
+      "name": "Phondo",
+      "level": 2,
+      "area": {
+        "value": 281.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M03": {
+      "name": "Lamgabhi",
+      "level": 2,
+      "area": {
+        "value": 116.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M17": {
+      "name": "Nkomiyahlaba",
+      "level": 2,
+      "area": {
+        "value": 152.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M16": {
+      "name": "Ntondozi",
+      "level": 2,
+      "area": {
+        "value": 286.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M15": {
+      "name": "Nhlambeni",
+      "level": 2,
+      "area": {
+        "value": 171.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M14": {
+      "name": "Ngwempisi",
+      "level": 2,
+      "area": {
+        "value": 302.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M12": {
+      "name": "Mkhiweni",
+      "level": 2,
+      "area": {
+        "value": 433.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M11": {
+      "name": "Mhlambanyatsi",
+      "level": 2,
+      "area": {
+        "value": 613.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M10": {
+      "name": "Manzini South",
+      "level": 2,
+      "area": {
+        "value": 34,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M09": {
+      "name": "Manzini North",
+      "level": 2,
+      "area": {
+        "value": 35.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M08": {
+      "name": "Mangcongco",
+      "level": 2,
+      "area": {
+        "value": 237.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M07": {
+      "name": "Mahlangatsha",
+      "level": 2,
+      "area": {
+        "value": 326.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M06": {
+      "name": "Mafutseni",
+      "level": 2,
+      "area": {
+        "value": 270.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M05": {
+      "name": "Ludzeludze",
+      "level": 2,
+      "area": {
+        "value": 76.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M02": {
+      "name": "Kwaluseni",
+      "level": 2,
+      "area": {
+        "value": 36,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-M04": {
+      "name": "Lobamba Lomdzala",
+      "level": 2,
+      "area": {
+        "value": 167.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S01": {
+      "name": "Gege",
+      "level": 2,
+      "area": {
+        "value": 574.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S02": {
+      "name": "Hosea",
+      "level": 2,
+      "area": {
+        "value": 220.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S03": {
+      "name": "Kubuta",
+      "level": 2,
+      "area": {
+        "value": 452.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S04": {
+      "name": "Maseyisini",
+      "level": 2,
+      "area": {
+        "value": 248.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S05": {
+      "name": "Matsanjeni South",
+      "level": 2,
+      "area": {
+        "value": 309.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S06": {
+      "name": "Mtsambama",
+      "level": 2,
+      "area": {
+        "value": 193.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S07": {
+      "name": "Ngudzeni",
+      "level": 2,
+      "area": {
+        "value": 112.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S08": {
+      "name": "Nkwene",
+      "level": 2,
+      "area": {
+        "value": 256.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S09": {
+      "name": "Sandleni",
+      "level": 2,
+      "area": {
+        "value": 137.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S10": {
+      "name": "Shiselweni",
+      "level": 2,
+      "area": {
+        "value": 268.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S11": {
+      "name": "Mbangweni",
+      "level": 2,
+      "area": {
+        "value": 364.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S12": {
+      "name": "Sigwe",
+      "level": 2,
+      "area": {
+        "value": 219.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S13": {
+      "name": "Somntongo",
+      "level": 2,
+      "area": {
+        "value": 499,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S14": {
+      "name": "Zombodze Emuva",
+      "level": 2,
+      "area": {
+        "value": 152.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L01": {
+      "name": "Dvokodvweni",
+      "level": 2,
+      "area": {
+        "value": 783.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L000": {
+      "name": "Gilgal",
+      "level": 2,
+      "area": {
+        "value": 337.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L05": {
+      "name": "Matsanjeni North",
+      "level": 2,
+      "area": {
+        "value": 569.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L06": {
+      "name": "Mhlume",
+      "level": 2,
+      "area": {
+        "value": 843.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L07": {
+      "name": "Mpolonjeni",
+      "level": 2,
+      "area": {
+        "value": 237.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L08": {
+      "name": "Nkilongo",
+      "level": 2,
+      "area": {
+        "value": 601.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L03": {
+      "name": "Lomahasha",
+      "level": 2,
+      "area": {
+        "value": 243.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L04": {
+      "name": "Lubuli",
+      "level": 2,
+      "area": {
+        "value": 395.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L10": {
+      "name": "Lugongolweni",
+      "level": 2,
+      "area": {
+        "value": 660,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L11": {
+      "name": "Sithobela",
+      "level": 2,
+      "area": {
+        "value": 594.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-L09": {
+      "name": "Siphofaneni",
+      "level": 2,
+      "area": {
+        "value": 466.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    },
+    "eswatini:SZ-S15": {
+      "name": "Kumethula",
+      "level": 2,
+      "area": {
+        "value": 119.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea",
+        "note": "Includes any inland water represented in the source polygons; not an independently surveyed land-area statistic."
+      }
+    }
+  }
+}
