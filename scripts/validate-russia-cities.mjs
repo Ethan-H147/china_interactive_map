@@ -20,6 +20,12 @@ for(const c of raw.cities){
  if(c.flag){assert.deepEqual(russiaCityFlags[c.id],c.flag);const bytes=fs.readFileSync('dist/'+c.flag.file);assert.equal(createHash('sha256').update(bytes).digest('hex'),c.flag.sha256);}
 }
 const tyumen='russia:RU-D-55944525718876';
+const birobidzhan=russiaCityFlags['RU-D-88547261644185'],flagImages=JSON.parse(fs.readFileSync('dist/data/flag-images.json'));
+const birobidzhanFull=fs.readFileSync('dist/'+flagImages[birobidzhan.file].full);
+assert.equal(birobidzhanFull.readUInt32BE(16),1000,'Birobidzhan opens a genuine full-size PNG');
+assert.equal(birobidzhanFull.readUInt32BE(20),667);
+assert.equal(createHash('sha256').update(birobidzhanFull).digest('hex'),birobidzhan.originalSha256,'Full-size sourced artwork is unmodified');
+assert(birobidzhanFull.equals(fs.readFileSync(birobidzhan.originalFile)),'The viewer uses the preserved original');
 assert.equal(stats.regions[tyumen].population.value,847488);assert(russiaCityFlags[tyumen.slice(7)]);
 assert.equal(stats.regions['russia:RU-D-18253095483754'].population.value,1633595);
 assert(!stats.regions['russia:RU-D-91773725927909'],'Tyumensky District does not receive Tyumen city population');

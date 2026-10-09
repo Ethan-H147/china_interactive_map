@@ -2257,11 +2257,18 @@
     },
     "RU-D-88547261644185": {
       "file": "vendor/russia-city-flags/RU-D-88547261644185.webp",
-      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Birobidzhan.png",
-      "source": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Birobidzhan.png",
-      "credit": "Official city flag · Wikimedia Commons",
+      "page": "https://www.flagcolorcodes.com/download/birobidzhan",
+      "source": "https://www.flagcolorcodes.com/data/flag-of-birobidzhan.png",
+      "credit": "Official city flag · FlagColorCodes",
       "license": "Public domain (official Russian symbols, PD-RU-exempt)",
-      "sha256": "068806b3573753ceda4f0ffed8ffaf0a7cf4b64ec03044bb5d69fa17c5d72e18"
+      "sha256": "18c0fb3d32b01a976fa91e45f0a8e60271a3f4c45c1de3148f3824d6b57758dc",
+      "originalFile": "scripts/statistics-sources/russia/flags/birobidzhan.png",
+      "originalSha256": "c64109f575d44dcdfd591b3106a6b0d67b091ab160b9a316e3b92de8f71fcf1e",
+      "originalWidth": 1000,
+      "originalHeight": 667,
+      "reference": "https://geraldika.ru/s/14693",
+      "previousSource": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Birobidzhan.png",
+      "processing": "Original 1000 × 667 PNG retained without modification; 320-pixel lossless WebP thumbnail."
     },
     "RU-D-79291363098032": {
       "file": "vendor/russia-city-flags/RU-D-79291363098032.webp",
