@@ -60,7 +60,7 @@
     "test:motion": "node --check dist/motion-worker.mjs && node scripts/validate-motion.mjs",
     "test:taiwan": "node scripts/validate-taiwan.mjs",
     "test:experience": "node scripts/validate-experience.mjs",
-    "test:countries": "node scripts/validate-country-switching.mjs",
+    "test:countries": "node scripts/validate-country-switching.mjs && npm run test:region-colors",
     "test:japan": "node --check dist/japan.mjs && node --check dist/japan-worker.mjs && node scripts/validate-japan.mjs && node scripts/validate-japan-local.mjs && node scripts/validate-japan-facts-compare.mjs",
     "build:japan": "node scripts/fetch-japan-municipalities.mjs && node --max-old-space-size=8000 scripts/build-japan-municipalities.mjs",
     "test:zhuhai-macau": "node scripts/validate-zhuhai-macau.mjs",
@@ -82,6 +82,8 @@
     "test:uruguay": "node scripts/validate-uruguay.mjs && node scripts/validate-municipality-search.mjs && node scripts/validate-south-america-loading.mjs",
     "test:country-pages": "node --check dist/country-page.mjs && node scripts/validate-country-page.mjs && node scripts/validate-region-statistics.mjs && node scripts/validate-selection.mjs",
     "build:russia": "node scripts/fetch-russia.mjs && node --max-old-space-size=12000 scripts/build-russia.mjs && node scripts/normalize-russia-names.mjs && node scripts/prepare-russia-statistics.mjs",
-    "test:russia": "node --check dist/regional-country.mjs && node --check dist/country-boundary-worker.mjs && node --check dist/russia.mjs && node scripts/validate-russia.mjs && node scripts/validate-russia-cities.mjs && node scripts/validate-regional-loading.mjs"
+    "test:russia": "node --check dist/regional-country.mjs && node --check dist/country-boundary-worker.mjs && node --check dist/russia.mjs && node scripts/validate-russia.mjs && node scripts/validate-russia-cities.mjs && node scripts/validate-regional-loading.mjs",
+    "build:region-colors": "node scripts/prepare-region-colors.mjs",
+    "test:region-colors": "node --check dist/region-colors.mjs && node scripts/validate-region-colors.mjs"
   }
 }

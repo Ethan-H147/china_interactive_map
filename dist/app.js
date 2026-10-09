@@ -8,6 +8,7 @@ const initialBackground=window.AtlasEntry?.countries[initialCountry]?.background
 const initialPreview=window.AtlasSouthAmerica.countries[initialCountry]||window.AtlasSoutheastAsia.countries[initialCountry]||(initialCountry==='russia'?window.AtlasRussia.configuration:null);
 const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:initialCountry==='russia',dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:{antialias:true},fadeDuration:0});
 map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
+window.AtlasRegionColorController=window.AtlasRegionColors.createRegionColors(map,{changed:()=>saveViewSoon()});
 const motionRenderer=window.AtlasMotion.createMotionRenderer(map,initialCountry);
 map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay | World land: <a href="https://www.naturalearthdata.com/">Natural Earth</a> (public domain) | Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a> | Singapore: <a href="https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view">SLA</a> (Singapore Open Data Licence) | Boundaries: <a href="https://datav.aliyun.com/portal/school/atlas/area_selector" target="_blank" rel="noopener">DataV</a> · <a href="https://data.gov.tw/dataset/7442" target="_blank" rel="noopener">NLSC</a> · <a href="https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov" target="_blank" rel="noopener">AreaCity</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/metadata/landsd_rcd_1637221775627_85634/html" target="_blank" rel="noopener">© HK SAR Government</a> · <a href="https://webmap.gis.gov.mo/MapGIS/index.html" target="_blank" rel="noopener">Macao Government</a> · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a>'}));
 window.AtlasMapSources.setupMapSources(map);
@@ -265,6 +266,7 @@ async function changeAtlas(next,animate=true,flight=false){
  try{
   await motionRenderer.end();if(epoch!==countryEpoch)return false;
   currentAtlas()?.leave();clearHover();clearSelection();clearSearch();activeCode=null;atlasMode=next;
+  window.AtlasRegionColorController?.setCountry(next);
   labels.forEach(label=>label.remove());labels.length=0;
   $('china-sidebar').hidden=next!=='china';$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:next!=='china'});
@@ -487,6 +489,7 @@ async function init(){try{
   const requestedCountry=window.AtlasEntry.current;
   controls();if(requestedCountry&&requestedCountry!=='china')await changeAtlas(requestedCountry,false);else if(!window.AtlasView.fromHash(location.hash))await followPlaceLink();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
+  await window.AtlasRegionColorController?.setCountry(atlasMode);
   setupViewControls();await restoreView();
   atlasStarting=false;window.AtlasEntry.ready();controls();refreshStatus();updateLabels();
   $('map-loading').hidden=true;
@@ -495,7 +498,7 @@ async function init(){try{
 
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 let viewSaveTimer,viewControlsReady=false;
-function captureView(){const center=map.getCenter();return {v:1,country:atlasMode,center:[+center.lng.toFixed(6),+center.lat.toFixed(6)],zoom:+map.getZoom().toFixed(4),selection:atlasMode==='china'?selected?.layer.feature.properties.adcode:currentAtlas()?.getSelection(),scope:currentAtlas()?.getScope?.(),mode:$('mode-province').getAttribute('aria-pressed')==='true'?1:2,locked:$('mode-lock').getAttribute('aria-pressed')==='true',language:atlasMode==='singapore'?singaporeAtlas.getLanguage():window.AtlasLabels.getLanguage(),layers:Object.fromEntries(window.AtlasView.controls.filter(id=>$(id)).map(id=>[id,id==='satellite-opacity'?$(id).value:$(id).checked]))};}
+function captureView(){const center=map.getCenter();return {v:1,country:atlasMode,center:[+center.lng.toFixed(6),+center.lat.toFixed(6)],zoom:+map.getZoom().toFixed(4),selection:atlasMode==='china'?selected?.layer.feature.properties.adcode:currentAtlas()?.getSelection(),scope:currentAtlas()?.getScope?.(),mode:$('mode-province').getAttribute('aria-pressed')==='true'?1:2,locked:$('mode-lock').getAttribute('aria-pressed')==='true',language:atlasMode==='singapore'?singaporeAtlas.getLanguage():window.AtlasLabels.getLanguage(),colorBy:window.AtlasRegionColorController?.getMetric()||'none',layers:Object.fromEntries(window.AtlasView.controls.filter(id=>$(id)).map(id=>[id,id==='satellite-opacity'?$(id).value:$(id).checked]))};}
 function saveView(force=false){if(!viewControlsReady||atlasStarting||restoringView||quiz.active||(!force&&cameraBusy)||countrySwitching)return;const view=captureView();try{window.AtlasView.write(view,localStorage);}catch{}if(location.hash.includes('/view='))history.replaceState(null,'',location.pathname+location.search+window.AtlasView.hashFor(view));}
 function saveViewSoon(){clearTimeout(viewSaveTimer);viewSaveTimer=setTimeout(saveView,180);}
 function readSavedView(){try{return window.AtlasView.read(atlasMode,localStorage);}catch{return null;}}
@@ -505,6 +508,7 @@ async function restoreView(){
  if(!saved||saved.country!==atlasMode)return;
  restoringView=true;
  try{
+  await window.AtlasRegionColorController?.setCountry(atlasMode,saved.colorBy);
   if(atlasMode==='singapore')singaporeAtlas.setLanguage(saved.language);else window.AtlasLabels.setLanguage(saved.language);
   if(atlasMode==='china'){const layer=regionByCode.get(Number(saved.selection))||regionByCode.get(saved.selection);if(layer)await selectRegion(layer,layer.feature.properties.provinceCode||layer.feature.properties.adcode,false);}
   else await currentAtlas().restore(saved.selection,saved.scope);
@@ -634,6 +638,7 @@ function clearQuizHighlights(preserveCorrect=false){
   quiz.highlighted=retained;quiz.reviewLayer=null;clearHover();updateLabels();
 }
 function syncQuizStyle(){
+  window.AtlasRegionColorController?.suspend(quiz.active);
   // Keep the same paint expression while feature states change during quiz navigation.
   for(const layer of provinceLayers.values())window.AtlasMotion.setFeatureState(map,{source:'provinces',id:layer.feature.properties.adcode},{quizActive:quiz.active});
   const paint=fillPaint(quiz.active?'#e6cda1':'#d6b974',quiz.active ? .65 : .025);

@@ -12,7 +12,7 @@ export function countryPageMarkup({prefix='',search='',settings='',heading='',ca
   ${searchMarkup(search)}
   <div class="panel-tabs"><button id="${id('tab-layers')}" type="button" aria-pressed="true" aria-controls="${id('layers-panel')}">Map settings</button><button id="${id('tab-explore')}" type="button" hidden aria-pressed="false" aria-controls="${id('explore-panel')}">Discover</button>${extraTabs}</div>${tools}
  </div><div class="sidebar-scroll">
-  <section id="${id('layers-panel')}">${settings}</section>
+  <section id="${id('layers-panel')}"><div class="region-color-control"><label for="${id('region-color')}">Color by</label><select id="${id('region-color')}" data-region-color disabled><option value="none">None</option></select></div>${settings}</section>
   <section id="${id('explore-panel')}" hidden>${beforeSelection}
    <section ${selectionId?`id="${selectionId}"`:''} class="country-selection" ${selectionHidden?'hidden':''} aria-live="polite">
     <header class="country-selection-heading">${headingMarkup(heading)}</header>
