@@ -11,10 +11,12 @@ try{
   modules.AtlasMapSources='map-sources.mjs';
   modules.AtlasChinaPage='china-page.mjs';
   modules.AtlasCountryPage='country-page.mjs';
+  modules.AtlasFlagViewer='flag-viewer.mjs';
   const rendererPromise=import('./vendor/maplibre-gl.mjs');
   await Promise.all(Object.entries(modules).map(async([name,file])=>{window[name]=await import('./'+file);}));
   const renderer=await rendererPromise;window.maplibregl=renderer;renderer.setWorkerCount(2);
   window.AtlasChinaPage.mountChinaPage();
+  window.AtlasFlagViewer.createFlagViewer();
   const script=document.createElement('script');
   script.src='app.js';script.onerror=loadError;
   document.head.append(script);

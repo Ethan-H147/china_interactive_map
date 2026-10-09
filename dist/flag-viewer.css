@@ -1,0 +1,13 @@
+[data-flag-trigger]{cursor:zoom-in;touch-action:manipulation}
+[data-flag-trigger]:focus-visible{outline:2px solid currentColor;outline-offset:5px;border-radius:3px}
+#flag-viewer{--flag-frame:40px;width:fit-content;max-width:none;max-height:none;height:fit-content;margin:auto;padding:var(--flag-frame);border:1px solid #ffffff16;border-radius:12px;overflow:visible;background:rgb(43 46 50 / 74%);box-shadow:0 28px 100px #0007;color:#fff;opacity:1;transform:scale(1);transition:opacity 160ms ease,transform 180ms cubic-bezier(.23,1,.32,1)}
+#flag-viewer::backdrop{background:rgb(15 18 22 / 36%);backdrop-filter:blur(5px)}
+#flag-viewer-image{display:block;max-width:none;max-height:none;object-fit:contain;border-radius:2px;background:transparent}
+.flag-viewer-close{position:absolute;top:0;right:0;display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:transparent;color:#ffffffa6;cursor:pointer;transition:color 140ms ease,transform 140ms cubic-bezier(.23,1,.32,1)}
+.flag-viewer-close svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
+.flag-viewer-close:active{transform:scale(.94)}
+.flag-viewer-close:focus-visible{outline:1px solid #fff9;outline-offset:-8px}
+@media(hover:hover) and (pointer:fine){.flag-viewer-close:hover{color:#fff}}
+@starting-style{#flag-viewer[open]{opacity:0;transform:scale(.985)}}
+#flag-viewer[data-keyboard=true]{transition:none}
+@media(prefers-reduced-motion:reduce){#flag-viewer{transition:opacity 120ms ease;transform:none}@starting-style{#flag-viewer[open]{transform:none}}.flag-viewer-close{transition:color 120ms ease}.flag-viewer-close:active{transform:none}}
