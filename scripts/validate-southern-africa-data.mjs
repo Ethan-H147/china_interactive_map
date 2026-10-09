@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
+import vm from 'node:vm';
+import {lineData} from '../dist/adaptive-lines.mjs';
 const root='dist/data/southern-africa',read=(c,n)=>JSON.parse(gunzipSync(fs.readFileSync(root+'/'+c+'/'+n))),countries=['south-africa','eswatini','lesotho'];
 const expected={'south-africa':[9,52,205],eswatini:[4,59,0],lesotho:[10,76,0]};
 function coordinateCheck(g){const walk=c=>{if(typeof c[0]==='number'){assert(c.every(Number.isFinite));assert(c[0]>16&&c[0]<34&&c[1]>-35&&c[1]<-21);}else c.forEach(walk);};walk(g.coordinates);}
@@ -22,4 +24,18 @@ for(const country of countries){
 assert.equal(read('eswatini','international.bin').features.length,0);assert.equal(read('lesotho','international.bin').features.length,0);
 const lines=read('south-africa','international.bin');assert(lines.features.length>0);for(const f of lines.features)coordinateCheck(f.geometry);
 const edges=new Set();for(const f of lines.features){const paths=f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates;for(const p of paths)for(let i=1;i<p.length;i++){const a=p[i-1].join(','),b=p[i].join(',');if(a===b)continue;const key=[a,b].sort().join('|');assert(!edges.has(key),'International borders are drawn once');edges.add(key);assert(p[i][1]>-31,'Southern coast remains unoutlined');}}
-console.log('Southern Africa geography, hierarchy, enclave, coastline and lazy chunk checks passed.');
+const bundle=read('south-africa','all.bin'),catalogue=read('south-africa','catalogue.bin');
+assert.deepEqual(bundle.levels.map(p=>p.level),[1,2,3]);
+for(const part of bundle.levels){
+ const parts=part.level===1?[read('south-africa','first.bin')]:Object.values(catalogue.chunks).filter(c=>c.level===part.level).map(c=>read('south-africa',c.file));
+ assert.deepEqual(part.regions.features,parts.flatMap(p=>p.regions.features),'Country bundle preserves every original polygon');
+ assert.deepEqual(part.boundaries.features,parts.flatMap(p=>p.boundaries.features),'Country bundle preserves shared edges without adding coastlines');
+ assert.deepEqual(part.regions.features.map(f=>f.properties.id).sort(),catalogue.records.filter(r=>r.level===part.level).map(r=>r.id).sort());
+}
+let response;
+const worker=vm.createContext({Blob,lineData,loadCompressed:async()=>bundle,self:{postMessage:r=>{response=r;}}});
+vm.runInContext(fs.readFileSync('dist/country-boundary-worker.mjs','utf8').replace(/^import .*;\r?\n/gm,''),worker);
+await worker.self.onmessage({data:{url:'all.bin'}});
+assert(!response.error);assert.equal(response.levels.length,3);
+for(const part of response.levels){assert.equal(JSON.parse(await part.blob.text()).features.length,expected['south-africa'][part.level-1]);assert(JSON.parse(await part.borders.text()).features.every(f=>Number.isFinite(f.properties.visibleZoom)),'Country-wide borders retain zoom-dependent detail handling');}
+console.log('Southern Africa geography, hierarchy, enclave, coastline, parent chunks and complete South Africa worker bundle passed.');
