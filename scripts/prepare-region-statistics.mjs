@@ -89,6 +89,9 @@ for(const [code,d] of Object.entries(details)){
  const m=clean(row[1]).match(/(?:CN¥|CNY|RMB|¥)\s*([\d,.]+)\s*(trillion|billion|million)?/i);if(!m)continue;
  const value=Number(m[1].replace(/,/g,''))*({trillion:1e12,billion:1e9,million:1e6}[m[2]?.toLowerCase()]||1);
  if(metric==='gdp'&&value<1e8||metric==='gdpPerCapita'&&value>1e7)continue;
+ // Reject obvious unit errors in an infobox, retaining the earlier table figure.
+ const parent=records['china:'+records[key].parent]?.gdp;
+ if(metric==='gdp'&&parent?.currency==='CNY'&&year<=parent.year&&value>parent.value*2)continue;
  const source='article-'+code;sources[source]={title:'Wikipedia: '+records[key].name,url:d.url,retrieved:'2026-10-05',license:'CC BY-SA 4.0'};
  money(key,metric,value,'CNY',year,source,'Reported for the administrative region; see source for revisions.');
  }

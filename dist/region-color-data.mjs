@@ -4,7 +4,7 @@ export const countryColorData = {
  china: {statistics:'data/region-statistics.json', population:'china', levels:'Provinces & territories', geography:{id:'adcode',parent:'provinceCode'}, layers:/^(province|prefecture|other|city-district)(-fragment)?-fill$/, primary:/^province(-fragment)?-fill$/},
  korea: {statistics:'data/region-statistics.json', catalogue:'data/korea-boundaries.bin', population:'korea', levels:'Provinces & special cities'},
  mongolia: {statistics:'data/region-statistics.json', catalogue:'data/mongolia-boundaries.bin', population:'mongolia', levels:'Provinces & capital'},
- japan: {statistics:'data/region-statistics.json', catalogue:'data/japan-boundaries.bin', population:'japan', levels:'Prefectures'},
+ japan: {statistics:'data/region-statistics.json', catalogue:'data/japan-boundaries.bin', extraCatalogue:'data/japan-local/catalogue.bin', population:'japan', levels:'Prefectures'},
  indonesia: {statistics:'data/archipelago/indonesia-statistics.json', catalogue:'data/archipelago/indonesia-catalogue.bin', levels:'Provinces'},
  philippines: {statistics:'data/archipelago/philippines-statistics.json', catalogue:'data/archipelago/philippines-catalogue.bin', population:'philippines', levels:'Regions'},
  malaysia: {statistics:'data/southeast-asia/malaysia-statistics.json', catalogue:'data/southeast-asia/malaysia-catalogue.bin', levels:'States & federal territories'},
@@ -16,10 +16,17 @@ export const countryColorData = {
 };
 export const colorMetrics = ['population','populationDensity','gdp','gdpPerCapita'];
 export const colorLabels = {none:'None',population:'Population',populationDensity:'Population density',gdp:'GDP',gdpPerCapita:'GDP per capita'};
+export const subdivisionColorLabels={
+ 'south-africa':['Provinces','Districts & metros','Municipalities & metros'],eswatini:['Regions','Tinkhundla'],lesotho:['Districts','Community councils'],
+ china:['Provinces & territories','Subdivisions','City districts'],korea:['Provinces & special cities','Districts'],mongolia:['Provinces & capital','Districts'],japan:['Prefectures','Municipalities','Municipalities & city wards'],
+ indonesia:['Provinces','Regencies & cities'],philippines:['Regions','Provinces'],malaysia:['States & federal territories','Districts'],singapore:['Regions','Planning areas'],russia:['Federal subjects','Districts & cities']
+};
 export function colorLayerProfile(layer,country){
  const c=countryColorData[country];if(!c||layer.type!=='fill')return null;
  const id=layer.id.replace(/-motion$/,'');
  const layers=c.layers||new RegExp('^'+country+'-(?!portal|international).*-fill$');
- if(!layers.test(id))return null;
- return {...(c.geography||{id:'id',parent:'parent'}),primary:(c.primary||new RegExp('^'+country+'-(?:.*-)?first(?:-coastal)?-fill$')).test(id)};
+ if(!layers.test(id)||/(?:city|settlement)-(?:hit|fill)$/.test(id))return null;
+ const primary=(c.primary||new RegExp('^'+country+'-(?:.*-)?first(?:-coastal)?-fill$')).test(id);
+ const level=primary?1:/city-district|third|wards/.test(id)?3:2;
+ return {...(c.geography||{id:'id',parent:'parent'}),...(id.startsWith('city-district')?{parent:'parentCity'}:{}),primary,level,inheritOpacity:country==='china'||id==='japan-local-wards-fill'};
 }
