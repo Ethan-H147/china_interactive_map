@@ -2,9 +2,10 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {createPlaceSearch} from '../dist/place-search.mjs';
+import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures} from '../dist/settlement-layer.mjs';
 const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
- if(!elements.has(id))elements.set(id,{id,dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],attributes:{},classList:{toggle(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){}});
+ if(!elements.has(id))elements.set(id,{id,dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},classList:{toggle(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){}});
  return elements.get(id);
 };
 element('mode-lock').attributes['aria-pressed']='false';element('satellite-layer').checked=false;element('satellite-opacity').value='60';
@@ -75,3 +76,16 @@ assert(!whole.ready&&!sources.has('whole-third'),'Cancelled country-wide prepara
 task=whole.enter(false);await flush();const failed=assert.rejects(task,/Unavailable/);jobs.at(-1).onmessage({data:{error:'Unavailable'}});await failed;assert(!whole.ready&&!sources.has('whole-first'));
 task=whole.enter(false);await flush();jobs.at(-1).onmessage({data:allPayload});await task;assert(whole.ready,'Whole-country loading can retry after failure');whole.leave();
 console.log('Whole-country adapter: one entry bundle, all levels available globally, no selection requests, retained hidden geometry, cancellation, retry and complete release passed.');
+Object.assign(context,{enrichPlaces,placeLines,visibleSettlements,settlementFeatures});
+const city={id:'C1',en:'City',parentId:'A11',provinceId:'A',center:[30.5,50.5],kind:'Settlement',population:{value:100000,year:2011,source:'https://census.test/city',scopeNote:'Census main place'},area:{value:20,year:2011,source:'https://census.test/city'}};
+context.fetch=async url=>({ok:true,json:async()=>url.endsWith('settlements.json')?{records:[city]}:{places:{city:{names:{zu:{name:'Local City',source:'https://names.test',type:'attested language name'}},flag:{file:'city.svg',page:'https://flag.test',scope:'Historical city',status:'historical',year:'to 2000'}}}}});
+map.getZoom=()=>8;
+const cards=[];context.renderStatistics=(anchor,key,data)=>cards.push({key,data});
+const settlements=await context.addRegionalCountry(map,host,{country:'places',prefix:'places',base:'data/places/',name:'Places',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities',loadAllSubdivisions:true,settlements:true,labelLanguages:[['both','Bilingual'],['en','English'],['zu','Zulu']]});
+task=settlements.enter(false);await flush();jobs.at(-1).onmessage({data:allPayload});await task;
+assert(sources.has('places-settlements'));await settlements.restore('C1');assert.equal(settlements.getMode(),3);assert.equal(cards.at(-1).key,'places:C1');assert.equal(cards.at(-1).data.regions['places:C1'].population.value,100000);assert(!cards.at(-1).data.regions['places:C1'].gdp,'Cities cannot inherit municipal GDP');assert(cards.at(-1).data.sources[city.population.source].url);
+assert(/historical/i.test(element('places-flag-caption').textContent));settlements.setLanguage('zu');assert.equal(settlements.getLanguage(),'zu');
+element('places-search').value='Local City';element('places-search').oninput();assert(element('places-search-results').children.some(r=>r.children?.[0]?.textContent==='City'));
+hit={layer:{id:'places-settlements'},properties:{id:'C1'}};for(const fn of handlers.get('click'))fn({point:[0,0]});await flush();assert.equal(settlements.getSelection(),'C1');
+settlements.leave();assert(!sources.has('places-settlements')&&!layers.has('places-settlements'));
+console.log('Settlement adapter: independent city cards and source links, multilingual search, scoped flags, point selection, shared language and complete release passed.');

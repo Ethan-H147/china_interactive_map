@@ -2,7 +2,7 @@ import {addRegionalCountry} from './regional-country.mjs';
 import {southernAfricaFlags} from './southern-africa-flags.mjs';
 
 const definitions={
- 'south-africa':{name:'South Africa',prefix:'za',lang:'en',firstLabel:'Provinces',secondLabel:'Districts & metros',thirdLabel:'Municipalities',loadAllSubdivisions:true,lineTolerance:1.5,center:[25,-29],zoom:4,bounds:[[16.4,-35],[33.1,-22]],fill:'#e6eedc',selected:'#c7dbb2',line:'#577148'},
+ 'south-africa':{name:'South Africa',prefix:'za',lang:'en',settlements:true,searchLabel:'Find a region, city or town',labelLanguages:[['both','Bilingual'],['en','English'],['af','Afrikaans'],['zu','isiZulu'],['xh','isiXhosa'],['ss','siSwati'],['st','Sesotho'],['tn','Setswana'],['nso','Sepedi'],['ts','Tsonga'],['ve','Tshivenda'],['nr','isiNdebele']],firstLabel:'Provinces',secondLabel:'Districts & metros',thirdLabel:'Municipalities',loadAllSubdivisions:true,lineTolerance:1.5,center:[25,-29],zoom:4,bounds:[[16.4,-35],[33.1,-22]],fill:'#e6eedc',selected:'#c7dbb2',line:'#577148'},
  eswatini:{name:'Eswatini',prefix:'sz',lang:'ss',firstLabel:'Regions',secondLabel:'Tinkhundla',center:[31.5,-26.55],zoom:7,bounds:[[30.75,-27.35],[32.15,-25.7]],fill:'#f4e8d9',selected:'#e8cfac',line:'#986e36'},
  lesotho:{name:'Lesotho',prefix:'ls',lang:'st',firstLabel:'Districts',secondLabel:'Councils',center:[28.25,-29.6],zoom:6,bounds:[[27,-30.7],[29.5,-28.5]],fill:'#e3eef1',selected:'#bfdce4',line:'#477585'}
 };

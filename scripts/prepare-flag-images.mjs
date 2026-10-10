@@ -18,6 +18,8 @@ const national=Object.fromEntries(Object.values(read('dist/data/national-flag-so
 const southern=read('dist/data/southern-africa/flag-sources.json').flags;
 for(const [id,flag] of Object.entries(southern))if(['south-africa','eswatini','lesotho'].includes(id))national[flag.file]=flag;else add(flag);
 Object.assign(images,national);
+const cityNamesFile='dist/data/southern-africa/south-africa/place-names-flags.json';
+if(fs.existsSync(cityNamesFile))Object.values(read(cityNamesFile).places).forEach(place=>add(place.flag));
 fs.writeFileSync('dist/national-flags.mjs','// Original national artwork and dimensions, independent of thumbnail proportions.\nexport const nationalFlagImages='+JSON.stringify(national)+';\n');
 fs.writeFileSync('dist/data/flag-images.json',JSON.stringify(images));
 console.log('Shared flag image catalogue:',Object.keys(images).length,'sourced flags.');

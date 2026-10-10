@@ -16,3 +16,6 @@ body[data-atlas=russia] #atlas-title-local{font:26px Georgia,serif;letter-spacin
 :root[data-atlas=eswatini],body[data-atlas=eswatini]{--ink:#443527;--muted:#887663;--red:#966a32;--red-dark:#735025;--gold:#bd9e44;--line:#e9dfd2;--paper:#fffdfa;--map:#f5eee4;--surface-soft:#f7f0e6;--title-accent:#966a32;--header-stripe:linear-gradient(90deg,#477594 0 25%,#bd9e44 25% 30%,#a24c42 30% 70%,#bd9e44 70% 75%,#477594 75%)}
 :root[data-atlas=lesotho],body[data-atlas=lesotho]{--ink:#2a3c43;--muted:#71868d;--red:#417b90;--red-dark:#305b6b;--gold:#719958;--line:#d9e7eb;--paper:#fcffff;--map:#ecf3f5;--surface-soft:#eff6f7;--title-accent:#417b90;--header-stripe:linear-gradient(90deg,#417b90 0 33%,#e0e7e9 33% 66%,#719958 66%)}
 @media(max-width:760px){body[data-atlas=south-africa] .map-mode button{padding:7px 8px;font-size:11px}body[data-atlas=south-africa] .map-top{gap:8px;flex-wrap:wrap}body[data-atlas=south-africa] .map-breadcrumb{max-width:100%}}
+
+.settlement-label{font-size:14px;line-height:1.25;color:#263d20;text-align:center;cursor:pointer;pointer-events:auto;text-shadow:0 1px 2px #fff,0 0 5px #fff}.settlement-label small{display:block;font-size:12px}.settlement-label.selected-label{font-weight:600}.place-name-variants p{margin:3px 0;font-size:13px;color:#696c64}.flag-caption{font-size:11px;color:#777;line-height:1.4;margin:4px 0 10px}
+

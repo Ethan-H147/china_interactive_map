@@ -1,0 +1,3196 @@
+{
+  "retrieved": "2026-10-09",
+  "license": "CC0",
+  "pages": [
+    {
+      "title": "Cape Town",
+      "id": "Q5465"
+    },
+    {
+      "title": "Pretoria",
+      "id": "Q3926"
+    },
+    {
+      "title": "Soweto",
+      "id": "Q217426"
+    },
+    {
+      "title": "Mafikeng",
+      "id": "Q211055"
+    },
+    {
+      "title": "Bloemfontein",
+      "id": "Q37701"
+    },
+    {
+      "title": "Polokwane",
+      "id": "Q131662"
+    },
+    {
+      "title": "Johannesburg",
+      "id": "Q34647"
+    },
+    {
+      "title": "Ulundi",
+      "id": "Q1013421"
+    },
+    {
+      "title": "Kimberley, South Africa",
+      "id": "Q125905"
+    },
+    {
+      "title": "East London, South Africa",
+      "id": "Q209537"
+    },
+    {
+      "title": "Bhisho",
+      "id": "Q209533"
+    },
+    {
+      "title": "Durban",
+      "id": "Q5468"
+    },
+    {
+      "title": "Pietermaritzburg",
+      "id": "Q185591"
+    },
+    {
+      "title": "Mossel Bay",
+      "id": "Q995615"
+    },
+    {
+      "title": "Paarl",
+      "id": "Q1018144"
+    },
+    {
+      "title": "Stellenbosch",
+      "id": "Q5460"
+    },
+    {
+      "title": "Mbombela",
+      "id": "Q170313"
+    },
+    {
+      "title": "Ladysmith, KwaZulu-Natal",
+      "id": "Q874262"
+    },
+    {
+      "title": "Plettenberg Bay",
+      "id": "Q922360"
+    },
+    {
+      "title": "Estcourt",
+      "id": "Q985827"
+    },
+    {
+      "title": "Klerksdorp",
+      "id": "Q1015647"
+    },
+    {
+      "title": "Knysna",
+      "id": "Q251137"
+    },
+    {
+      "title": "Uitenhage",
+      "id": "Q1020192"
+    },
+    {
+      "title": "Welkom",
+      "id": "Q1015631"
+    },
+    {
+      "title": "Port Shepstone",
+      "id": "Q121395"
+    },
+    {
+      "title": "Witbank",
+      "id": "Q311700"
+    },
+    {
+      "title": "Newcastle, KwaZulu-Natal",
+      "id": "Q1027294"
+    },
+    {
+      "title": "Vryheid",
+      "id": "Q1023254"
+    },
+    {
+      "title": "Richards Bay",
+      "id": "Q1471757"
+    },
+    {
+      "title": "Middelburg, Mpumalanga",
+      "id": "Q1931836"
+    },
+    {
+      "title": "Rustenburg",
+      "id": "Q182049"
+    },
+    {
+      "title": "Oudtshoorn",
+      "id": "Q951049"
+    },
+    {
+      "title": "Makhanda, South Africa",
+      "id": "Q951161"
+    },
+    {
+      "title": "Worcester, South Africa",
+      "id": "Q1025649"
+    },
+    {
+      "title": "Gqeberha",
+      "id": "Q125434"
+    },
+    {
+      "title": "George, South Africa",
+      "id": "Q370456"
+    },
+    {
+      "title": "Qonce",
+      "id": "Q1016100"
+    },
+    {
+      "title": "Mthatha",
+      "id": "Q1020914"
+    },
+    {
+      "title": "Ermelo",
+      "id": "Q411336"
+    },
+    {
+      "title": "Komani",
+      "id": "Q12634682"
+    },
+    {
+      "title": "Phuthaditjhaba",
+      "id": "Q1437581"
+    },
+    {
+      "title": "Brit",
+      "id": "Q344577"
+    },
+    {
+      "title": "Benoni, South Africa",
+      "id": "Q818106"
+    },
+    {
+      "title": "Centurion, South Africa",
+      "id": "Q1054450"
+    },
+    {
+      "title": "Potchefstroom",
+      "id": "Q605167"
+    },
+    {
+      "title": "Upington",
+      "id": "Q575780"
+    },
+    {
+      "title": "Kuruman",
+      "id": "Q1025965"
+    },
+    {
+      "title": "Vereeniging",
+      "id": "Q503056"
+    },
+    {
+      "title": "Graaff-Reinet",
+      "id": "Q1004667"
+    },
+    {
+      "title": "Barberton, South Africa",
+      "id": "Q807828"
+    },
+    {
+      "title": "Boksburg",
+      "id": "Q891229"
+    },
+    {
+      "title": "Germiston",
+      "id": "Q993721"
+    },
+    {
+      "title": "Kempton Park, Gauteng",
+      "id": "Q1576076"
+    },
+    {
+      "title": "Vanderbijlpark",
+      "id": "Q989955"
+    },
+    {
+      "title": "Krugersdorp",
+      "id": "Q644506"
+    },
+    {
+      "title": "Bethlehem, South Africa",
+      "id": "Q831326"
+    },
+    {
+      "title": "Harrismith",
+      "id": "Q1586262"
+    },
+    {
+      "title": "Botshabelo, Free State",
+      "id": "Q894856"
+    },
+    {
+      "title": "Sasolburg",
+      "id": "Q963786"
+    },
+    {
+      "title": "Standerton",
+      "id": "Q742514"
+    },
+    {
+      "title": "Hazyview",
+      "id": "Q3643087"
+    },
+    {
+      "title": "Malalane",
+      "id": "Q2081633"
+    },
+    {
+      "title": "White River, Mpumalanga",
+      "id": "Q2046203"
+    },
+    {
+      "title": "Lephalale",
+      "id": "Q1820072"
+    },
+    {
+      "title": "Mokopane",
+      "id": "Q326927"
+    },
+    {
+      "title": "Musina",
+      "id": "Q1025661"
+    },
+    {
+      "title": "Thohoyandou",
+      "id": "Q1025654"
+    },
+    {
+      "title": "Tzaneen",
+      "id": "Q964666"
+    },
+    {
+      "title": "Vryburg",
+      "id": "Q1027291"
+    },
+    {
+      "title": "Jeffreys Bay",
+      "id": "Q585092"
+    },
+    {
+      "title": "Aliwal North",
+      "id": "Q2143142"
+    },
+    {
+      "title": "Giyani",
+      "id": "Q1528852"
+    },
+    {
+      "title": "Nxuba",
+      "id": "Q1138465"
+    },
+    {
+      "title": "De Aar",
+      "id": "Q743069"
+    },
+    {
+      "title": "Thaba 'Nchu",
+      "id": "Q1256430"
+    },
+    {
+      "title": "Lichtenburg",
+      "id": "Q350017"
+    },
+    {
+      "title": "Springbok, South Africa",
+      "id": "Q2301363"
+    },
+    {
+      "title": "Secunda",
+      "id": "Q1723265"
+    },
+    {
+      "title": "Makhado",
+      "id": "Q27854133"
+    },
+    {
+      "title": "Embalenhle",
+      "id": "Q2522086"
+    },
+    {
+      "title": "KwaZulu-Natal",
+      "id": "Q81725"
+    },
+    {
+      "title": "Gauteng",
+      "id": "Q133083"
+    },
+    {
+      "title": "Eastern Cape",
+      "id": "Q130840"
+    },
+    {
+      "title": "Western Cape",
+      "id": "Q127167"
+    },
+    {
+      "title": "Mpumalanga",
+      "id": "Q132410"
+    },
+    {
+      "title": "Limpopo",
+      "id": "Q134907"
+    },
+    {
+      "title": "Free State (province)",
+      "id": "Q160284"
+    },
+    {
+      "title": "Northern Cape",
+      "id": "Q132418"
+    },
+    {
+      "title": "North West (South African province)",
+      "id": "Q165956"
+    },
+    {
+      "title": "Midrand",
+      "id": "Q639518"
+    },
+    {
+      "title": "KwaDukuza",
+      "id": "Q10676708"
+    },
+    {
+      "title": "Roodepoort",
+      "id": "Q2166182"
+    },
+    {
+      "title": "Umlazi",
+      "id": "Q183292"
+    },
+    {
+      "title": "KwaMashu",
+      "id": "Q3347043"
+    }
+  ],
+  "entities": {
+    "Q5465": {
+      "type": "item",
+      "id": "Q5465",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Cape Town"
+        },
+        "af": {
+          "language": "af",
+          "value": "Kaapstad"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IKapa"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IKapa"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Cape Town"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Cape Town"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Cape Town"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Cape Town"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Doroba ra Kapa"
+        },
+        "st": {
+          "language": "st",
+          "value": "Motse Kapa"
+        }
+      }
+    },
+    "Q3926": {
+      "type": "item",
+      "id": "Q3926",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Pretoria"
+        },
+        "af": {
+          "language": "af",
+          "value": "Pretoria"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "IPitoli"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Pretoria"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IPitoli"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "E-Pitoli"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Pitori"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Pitori"
+        }
+      }
+    },
+    "Q217426": {
+      "type": "item",
+      "id": "Q217426",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Soweto"
+        },
+        "en": {
+          "language": "en",
+          "value": "Soweto"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Soweto"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Soweto"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Soweto"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Soweto"
+        },
+        "st": {
+          "language": "st",
+          "value": "Soweto"
+        }
+      }
+    },
+    "Q211055": {
+      "type": "item",
+      "id": "Q211055",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Mahikeng"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Mafikeng"
+        },
+        "en": {
+          "language": "en",
+          "value": "Mahikeng"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Mahikeng"
+        },
+        "st": {
+          "language": "st",
+          "value": "Mahikeng"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Mahikeng"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IMahikeng"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IMahikeng"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Mafikeng"
+        }
+      }
+    },
+    "Q37701": {
+      "type": "item",
+      "id": "Q37701",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Bloemfontein"
+        },
+        "en": {
+          "language": "en",
+          "value": "Bloemfontein"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IBloemfontein"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "EBloemfontein"
+        },
+        "st": {
+          "language": "st",
+          "value": "Mangaung"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Bloemfontein"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Bloemfontein"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Bloemfontein"
+        }
+      }
+    },
+    "Q131662": {
+      "type": "item",
+      "id": "Q131662",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Polokwane"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Polokwane"
+        },
+        "en": {
+          "language": "en",
+          "value": "Polokwane"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Polokwane"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Polokwane"
+        },
+        "st": {
+          "language": "st",
+          "value": "Polokwane"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Polokwane"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Polokwane"
+        },
+        "nr": {
+          "language": "nr",
+          "value": "Polokwane"
+        }
+      }
+    },
+    "Q34647": {
+      "type": "item",
+      "id": "Q34647",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Johannesburg"
+        },
+        "en": {
+          "language": "en",
+          "value": "Johannesburg"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Johannesburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "iGoli"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "IJohannesburg"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "EGoli"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Joni"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Johannesburg"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Johannesburg"
+        },
+        "nr": {
+          "language": "nr",
+          "value": "Johannesburg"
+        }
+      }
+    },
+    "Q1013421": {
+      "type": "item",
+      "id": "Q1013421",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Ulundi"
+        },
+        "af": {
+          "language": "af",
+          "value": "Ulundi"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Ulundi"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Ulundi"
+        }
+      }
+    },
+    "Q125905": {
+      "type": "item",
+      "id": "Q125905",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Kimberley"
+        },
+        "en": {
+          "language": "en",
+          "value": "Kimberley"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Kimberley"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Kimberley"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Kimberley"
+        },
+        "st": {
+          "language": "st",
+          "value": "Kimberley"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Kimberley"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IKhimbali"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Kimberley, eNyakatfo yeKapa"
+        }
+      }
+    },
+    "Q209537": {
+      "type": "item",
+      "id": "Q209537",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Oos-Londen"
+        },
+        "en": {
+          "language": "en",
+          "value": "East London"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "EMonti"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "East London"
+        },
+        "st": {
+          "language": "st",
+          "value": "East London"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "East London"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "East London, Eastern Cape"
+        }
+      }
+    },
+    "Q209533": {
+      "type": "item",
+      "id": "Q209533",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Bhisho"
+        },
+        "en": {
+          "language": "en",
+          "value": "Bhisho"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Bhisho"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Bhisho"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Bhisho"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Bhisho"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IBhisho"
+        },
+        "st": {
+          "language": "st",
+          "value": "Bhisho"
+        }
+      }
+    },
+    "Q5468": {
+      "type": "item",
+      "id": "Q5468",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Durban"
+        },
+        "af": {
+          "language": "af",
+          "value": "Durban"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "ITheku"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "EThekwini"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Durban"
+        },
+        "st": {
+          "language": "st",
+          "value": "Thekong"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Durban"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Durban"
+        }
+      }
+    },
+    "Q185591": {
+      "type": "item",
+      "id": "Q185591",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Pietermaritzburg"
+        },
+        "en": {
+          "language": "en",
+          "value": "Pietermaritzburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Pietermaritzburg"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Pietermaritzburg"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Pietermaritzburg"
+        },
+        "st": {
+          "language": "st",
+          "value": "Mokokotlofo"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Pietermaritzburg"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "NguMgungundlovu"
+        }
+      }
+    },
+    "Q995615": {
+      "type": "item",
+      "id": "Q995615",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Mossel Bay"
+        },
+        "af": {
+          "language": "af",
+          "value": "Mosselbaai"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Mossel Bay"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IMossel Bay"
+        }
+      }
+    },
+    "Q1018144": {
+      "type": "item",
+      "id": "Q1018144",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Paarl"
+        },
+        "af": {
+          "language": "af",
+          "value": "Paarl"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Paarl"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IPaarl, INtshonalanga Kapa"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Paarl"
+        }
+      }
+    },
+    "Q5460": {
+      "type": "item",
+      "id": "Q5460",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Stellenbosch"
+        },
+        "af": {
+          "language": "af",
+          "value": "Stellenbosch"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Stellenbosch"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Stellenbosch"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IStellenbosch"
+        }
+      }
+    },
+    "Q170313": {
+      "type": "item",
+      "id": "Q170313",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Nelspruit"
+        },
+        "en": {
+          "language": "en",
+          "value": "Mbombela"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Naspoti"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Nelspruit"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Nelspruit"
+        },
+        "st": {
+          "language": "st",
+          "value": "Nelspruit"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Mbombela"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Mbombela"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Mbombela"
+        },
+        "nr": {
+          "language": "nr",
+          "value": "Mbombela"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Mbombela"
+        }
+      }
+    },
+    "Q874262": {
+      "type": "item",
+      "id": "Q874262",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Ladysmith"
+        },
+        "af": {
+          "language": "af",
+          "value": "Ladysmith"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Ladysmith"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "ILadysmith"
+        }
+      }
+    },
+    "Q922360": {
+      "type": "item",
+      "id": "Q922360",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Plettenbergbaai"
+        },
+        "en": {
+          "language": "en",
+          "value": "Plettenberg Bay"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Plettenberg Bay"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IPlettenberg Bay"
+        }
+      }
+    },
+    "Q985827": {
+      "type": "item",
+      "id": "Q985827",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Estcourt"
+        },
+        "af": {
+          "language": "af",
+          "value": "Estcourt"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Estcourt"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Estcourt"
+        }
+      }
+    },
+    "Q1015647": {
+      "type": "item",
+      "id": "Q1015647",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Klerksdorp"
+        },
+        "af": {
+          "language": "af",
+          "value": "Klerksdorp"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Klerksdorp"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Klerksdorp"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Klerksdorp"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IKlerksdorp"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Klerksdorp"
+        }
+      }
+    },
+    "Q251137": {
+      "type": "item",
+      "id": "Q251137",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Knysna"
+        },
+        "en": {
+          "language": "en",
+          "value": "Knysna"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Knysna"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Knysna"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IKnysna"
+        }
+      }
+    },
+    "Q1020192": {
+      "type": "item",
+      "id": "Q1020192",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Uitenhage"
+        },
+        "af": {
+          "language": "af",
+          "value": "Uitenhage"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Uitenhage"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Uitenhage"
+        },
+        "st": {
+          "language": "st",
+          "value": "Uitenhage"
+        }
+      }
+    },
+    "Q1015631": {
+      "type": "item",
+      "id": "Q1015631",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Welkom"
+        },
+        "af": {
+          "language": "af",
+          "value": "Welkom"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Welkom"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Welkom"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IWelkom"
+        }
+      }
+    },
+    "Q121395": {
+      "type": "item",
+      "id": "Q121395",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Port Shepstone"
+        },
+        "en": {
+          "language": "en",
+          "value": "Port Shepstone"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Port Shepstone"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IPort Shepstone"
+        }
+      }
+    },
+    "Q311700": {
+      "type": "item",
+      "id": "Q311700",
+      "labels": {
+        "ve": {
+          "language": "ve",
+          "value": "Witbank"
+        },
+        "en": {
+          "language": "en",
+          "value": "Witbank"
+        },
+        "af": {
+          "language": "af",
+          "value": "Witbank"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Witbank"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IWitbank"
+        }
+      }
+    },
+    "Q1027294": {
+      "type": "item",
+      "id": "Q1027294",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Newcastle"
+        },
+        "af": {
+          "language": "af",
+          "value": "Newcastle"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Newcastle"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Newcastle"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "INewcastle"
+        }
+      }
+    },
+    "Q1023254": {
+      "type": "item",
+      "id": "Q1023254",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Vryheid"
+        },
+        "af": {
+          "language": "af",
+          "value": "Vryheid, KwaZulu Natal"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Vryheid"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IVryheid"
+        }
+      }
+    },
+    "Q1471757": {
+      "type": "item",
+      "id": "Q1471757",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Richardsbaai"
+        },
+        "en": {
+          "language": "en",
+          "value": "Richards Bay"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Richards Bay"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IRichards Bay"
+        }
+      }
+    },
+    "Q1931836": {
+      "type": "item",
+      "id": "Q1931836",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Middelburg"
+        },
+        "af": {
+          "language": "af",
+          "value": "Middelburg"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Middelburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IMiddleburg"
+        }
+      }
+    },
+    "Q182049": {
+      "type": "item",
+      "id": "Q182049",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Rustenburg"
+        },
+        "en": {
+          "language": "en",
+          "value": "Rustenburg"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Rustenburg"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Rustenburg"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Rustenburg"
+        },
+        "st": {
+          "language": "st",
+          "value": "Rustenburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IRustenburg"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Rustenburg"
+        }
+      }
+    },
+    "Q951049": {
+      "type": "item",
+      "id": "Q951049",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Oudtshoorn"
+        },
+        "en": {
+          "language": "en",
+          "value": "Oudtshoorn"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Oudtshoorn"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Oudtshoorn"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "I-Oudtshoorn"
+        }
+      }
+    },
+    "Q951161": {
+      "type": "item",
+      "id": "Q951161",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Grahamstad"
+        },
+        "en": {
+          "language": "en",
+          "value": "Makhanda"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IRhini"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Grahamstown"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Grahamstown"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Grahamstown"
+        },
+        "st": {
+          "language": "st",
+          "value": "Grahamstown"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Makhanda, Eastern Cape"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "EMakhanda,"
+        }
+      }
+    },
+    "Q1025649": {
+      "type": "item",
+      "id": "Q1025649",
+      "labels": {
+        "ve": {
+          "language": "ve",
+          "value": "Worcester"
+        },
+        "en": {
+          "language": "en",
+          "value": "Worcester"
+        },
+        "af": {
+          "language": "af",
+          "value": "Worcester"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Worcester"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IWorcester, INtshonalanga Kapa"
+        }
+      }
+    },
+    "Q125434": {
+      "type": "item",
+      "id": "Q125434",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Port Elizabeth"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IBhayi"
+        },
+        "en": {
+          "language": "en",
+          "value": "Gqeberha"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Ibhayi"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Port Elizabeth"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Port Elizabeth"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Port Elizabeth"
+        },
+        "st": {
+          "language": "st",
+          "value": "Baye"
+        }
+      }
+    },
+    "Q370456": {
+      "type": "item",
+      "id": "Q370456",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "George"
+        },
+        "en": {
+          "language": "en",
+          "value": "George"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "George"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IGeorge, INtshonalanga Kapa"
+        }
+      }
+    },
+    "Q1016100": {
+      "type": "item",
+      "id": "Q1016100",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Qonce"
+        },
+        "af": {
+          "language": "af",
+          "value": "King William’s Town"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "King William's Town"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "King William's Town"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "I-Qonce"
+        }
+      }
+    },
+    "Q1020914": {
+      "type": "item",
+      "id": "Q1020914",
+      "labels": {
+        "xh": {
+          "language": "xh",
+          "value": "Mthatha"
+        },
+        "en": {
+          "language": "en",
+          "value": "Mthatha"
+        },
+        "af": {
+          "language": "af",
+          "value": "Mthatha"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Mthatha"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Mthatha"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Mthatha"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Mthatha"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Mthatha"
+        }
+      }
+    },
+    "Q411336": {
+      "type": "item",
+      "id": "Q411336",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Ermelo"
+        },
+        "af": {
+          "language": "af",
+          "value": "Ermelo"
+        }
+      }
+    },
+    "Q12634682": {
+      "type": "item",
+      "id": "Q12634682",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Komani"
+        },
+        "af": {
+          "language": "af",
+          "value": "Komani"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Komani"
+        }
+      }
+    },
+    "Q1437581": {
+      "type": "item",
+      "id": "Q1437581",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Phuthaditjhaba"
+        },
+        "en": {
+          "language": "en",
+          "value": "Phuthaditjhaba"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Phuthaditjhaba"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IPhuthaditjhaba"
+        },
+        "st": {
+          "language": "st",
+          "value": "Phuthaditjhaba"
+        }
+      }
+    },
+    "Q344577": {
+      "type": "item",
+      "id": "Q344577",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Brit"
+        },
+        "af": {
+          "language": "af",
+          "value": "Brit"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Brit"
+        }
+      }
+    },
+    "Q818106": {
+      "type": "item",
+      "id": "Q818106",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Benoni"
+        },
+        "af": {
+          "language": "af",
+          "value": "Benoni"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Benoni"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Benoni"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Benoni"
+        }
+      }
+    },
+    "Q1054450": {
+      "type": "item",
+      "id": "Q1054450",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Centurion"
+        },
+        "af": {
+          "language": "af",
+          "value": "Centurion"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Centurion"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Centurion"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Centurion"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Centurion"
+        }
+      }
+    },
+    "Q605167": {
+      "type": "item",
+      "id": "Q605167",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Potchefstroom"
+        },
+        "en": {
+          "language": "en",
+          "value": "Potchefstroom"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Potchefstroom"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Potchefstroom"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Potchefstroom"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IPotchefstroom"
+        }
+      }
+    },
+    "Q575780": {
+      "type": "item",
+      "id": "Q575780",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Upington"
+        },
+        "en": {
+          "language": "en",
+          "value": "Upington"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Upington"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "I-Upington"
+        }
+      }
+    },
+    "Q1025965": {
+      "type": "item",
+      "id": "Q1025965",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Kuruman"
+        },
+        "af": {
+          "language": "af",
+          "value": "Kuruman"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Kuruman"
+        }
+      }
+    },
+    "Q503056": {
+      "type": "item",
+      "id": "Q503056",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Vereeniging"
+        },
+        "en": {
+          "language": "en",
+          "value": "Vereeniging"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Vereeniging"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Vereeniging"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Vereeniging"
+        },
+        "st": {
+          "language": "st",
+          "value": "Vereeniging"
+        }
+      }
+    },
+    "Q1004667": {
+      "type": "item",
+      "id": "Q1004667",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Graaff-Reinet"
+        },
+        "af": {
+          "language": "af",
+          "value": "Graaff-Reinet"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Graaff-Reinet"
+        },
+        "st": {
+          "language": "st",
+          "value": "Graaff-Reinet"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Graaff-Reinet"
+        }
+      }
+    },
+    "Q807828": {
+      "type": "item",
+      "id": "Q807828",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Barberton"
+        },
+        "af": {
+          "language": "af",
+          "value": "Barberton"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Barberton"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Emjindini"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IBarberton"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "EBaptini"
+        }
+      }
+    },
+    "Q891229": {
+      "type": "item",
+      "id": "Q891229",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Boksburg"
+        },
+        "af": {
+          "language": "af",
+          "value": "Boksburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Boksburg"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Boksburg"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Boksburg"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Boksburg"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Boksburg"
+        },
+        "nr": {
+          "language": "nr",
+          "value": "IBoksburg"
+        }
+      }
+    },
+    "Q993721": {
+      "type": "item",
+      "id": "Q993721",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Germiston"
+        },
+        "af": {
+          "language": "af",
+          "value": "Germiston"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Germiston"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Germiston"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Germiston"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Germiston"
+        }
+      }
+    },
+    "Q1576076": {
+      "type": "item",
+      "id": "Q1576076",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Kemptonpark"
+        },
+        "en": {
+          "language": "en",
+          "value": "Kempton Park"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Kempton Park"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Kempton Park"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Kempton Park"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Kempton Park"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Kempton Park"
+        }
+      }
+    },
+    "Q989955": {
+      "type": "item",
+      "id": "Q989955",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Vanderbijlpark"
+        },
+        "af": {
+          "language": "af",
+          "value": "Vanderbijlpark"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Vanderbijlpark"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Vanderbijlpark"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Vanderbijlpark"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Vanderbijlpark"
+        },
+        "st": {
+          "language": "st",
+          "value": "Vanderbijlpark"
+        }
+      }
+    },
+    "Q644506": {
+      "type": "item",
+      "id": "Q644506",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Krugersdorp"
+        },
+        "en": {
+          "language": "en",
+          "value": "Krugersdorp"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Krugersdorp"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Krugersdorp"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Krugersdorp"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Krugersdorp"
+        },
+        "nr": {
+          "language": "nr",
+          "value": "IKrugersdorp"
+        }
+      }
+    },
+    "Q831326": {
+      "type": "item",
+      "id": "Q831326",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Bethlehem"
+        },
+        "af": {
+          "language": "af",
+          "value": "Bethlehem"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Bethlehem"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IBethlehem, IFuleyisitata"
+        },
+        "st": {
+          "language": "st",
+          "value": "Bethlehema, Afrika Borwa"
+        }
+      }
+    },
+    "Q1586262": {
+      "type": "item",
+      "id": "Q1586262",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Harrismith"
+        },
+        "af": {
+          "language": "af",
+          "value": "Harrismith"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Harrismith"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IHarrismith"
+        },
+        "st": {
+          "language": "st",
+          "value": "Harrismith"
+        }
+      }
+    },
+    "Q894856": {
+      "type": "item",
+      "id": "Q894856",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Botshabelo"
+        },
+        "af": {
+          "language": "af",
+          "value": "Botshabelo"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Botshabelo"
+        },
+        "st": {
+          "language": "st",
+          "value": "Botshabelo"
+        }
+      }
+    },
+    "Q963786": {
+      "type": "item",
+      "id": "Q963786",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Sasolburg"
+        },
+        "en": {
+          "language": "en",
+          "value": "Sasolburg"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Sasolburg"
+        },
+        "st": {
+          "language": "st",
+          "value": "Sasolburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "ISasolburg"
+        }
+      }
+    },
+    "Q742514": {
+      "type": "item",
+      "id": "Q742514",
+      "labels": {
+        "ve": {
+          "language": "ve",
+          "value": "Standerton"
+        },
+        "af": {
+          "language": "af",
+          "value": "Standerton"
+        },
+        "en": {
+          "language": "en",
+          "value": "Standerton"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Standerton"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Standerton"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Standerton"
+        }
+      }
+    },
+    "Q3643087": {
+      "type": "item",
+      "id": "Q3643087",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Hazyview"
+        },
+        "af": {
+          "language": "af",
+          "value": "Hazyview"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Hazyview"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IHazyview"
+        }
+      }
+    },
+    "Q2081633": {
+      "type": "item",
+      "id": "Q2081633",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Malalane"
+        },
+        "af": {
+          "language": "af",
+          "value": "Malalane"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Malalane"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IMalalane"
+        }
+      }
+    },
+    "Q2046203": {
+      "type": "item",
+      "id": "Q2046203",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Witrivier"
+        },
+        "en": {
+          "language": "en",
+          "value": "White River"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "White River"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IWhite River"
+        }
+      }
+    },
+    "Q1820072": {
+      "type": "item",
+      "id": "Q1820072",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Lephalale"
+        },
+        "af": {
+          "language": "af",
+          "value": "Lephalale"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Lephalale"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Lephalale"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "ILephalale"
+        }
+      }
+    },
+    "Q326927": {
+      "type": "item",
+      "id": "Q326927",
+      "labels": {
+        "ve": {
+          "language": "ve",
+          "value": "Mokopane"
+        },
+        "en": {
+          "language": "en",
+          "value": "Mokopane"
+        },
+        "af": {
+          "language": "af",
+          "value": "Mokopane"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Mokopane"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IMokopane"
+        }
+      }
+    },
+    "Q1025661": {
+      "type": "item",
+      "id": "Q1025661",
+      "labels": {
+        "ve": {
+          "language": "ve",
+          "value": "Musina"
+        },
+        "en": {
+          "language": "en",
+          "value": "Musina"
+        },
+        "af": {
+          "language": "af",
+          "value": "Musina"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Musina"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IMusina"
+        }
+      }
+    },
+    "Q1025654": {
+      "type": "item",
+      "id": "Q1025654",
+      "labels": {
+        "ve": {
+          "language": "ve",
+          "value": "Thohoyanḓou"
+        },
+        "en": {
+          "language": "en",
+          "value": "Thohoyandou"
+        },
+        "af": {
+          "language": "af",
+          "value": "Thohoyandou"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Thohoyandou"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IThohoyandou"
+        }
+      }
+    },
+    "Q964666": {
+      "type": "item",
+      "id": "Q964666",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Tzaneen"
+        },
+        "en": {
+          "language": "en",
+          "value": "Tzaneen"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Tzaneen"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Tzaneen"
+        },
+        "st": {
+          "language": "st",
+          "value": "Tzaneen"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Tzaneen"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "ITzaneen"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Tzaneen"
+        }
+      }
+    },
+    "Q1027291": {
+      "type": "item",
+      "id": "Q1027291",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Vryburg"
+        },
+        "af": {
+          "language": "af",
+          "value": "Vryburg"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Vryburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IVryburg"
+        }
+      }
+    },
+    "Q585092": {
+      "type": "item",
+      "id": "Q585092",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Jeffreysbaai"
+        },
+        "en": {
+          "language": "en",
+          "value": "Jeffreys Bay"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Jeffreys Bay"
+        },
+        "st": {
+          "language": "st",
+          "value": "Jeffreys Bay"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Jeffreys Bay"
+        }
+      }
+    },
+    "Q2143142": {
+      "type": "item",
+      "id": "Q2143142",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Aliwal North"
+        },
+        "af": {
+          "language": "af",
+          "value": "Aliwal-Noord"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Aliwal North"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Aliwal North"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Aliwal North"
+        },
+        "st": {
+          "language": "st",
+          "value": "Aliwal North"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Aliwal North"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Aliwal North"
+        }
+      }
+    },
+    "Q1528852": {
+      "type": "item",
+      "id": "Q1528852",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Giyani"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Giyani"
+        },
+        "af": {
+          "language": "af",
+          "value": "Giyani"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Giyani"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Giyani"
+        },
+        "st": {
+          "language": "st",
+          "value": "Giyani"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Giyani"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IGyani"
+        }
+      }
+    },
+    "Q1138465": {
+      "type": "item",
+      "id": "Q1138465",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Cradock"
+        },
+        "af": {
+          "language": "af",
+          "value": "Cradock"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Cradock"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Cradock, Eastern Cape"
+        }
+      }
+    },
+    "Q743069": {
+      "type": "item",
+      "id": "Q743069",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "De Aar"
+        },
+        "en": {
+          "language": "en",
+          "value": "De Aar"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "De Aar"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IDe Aar"
+        }
+      }
+    },
+    "Q1256430": {
+      "type": "item",
+      "id": "Q1256430",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Thaba Nchu"
+        },
+        "en": {
+          "language": "en",
+          "value": "Thaba 'Nchu"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Thaba 'Nchu"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IThaba Nchu"
+        },
+        "st": {
+          "language": "st",
+          "value": "Thaba 'Nchu"
+        }
+      }
+    },
+    "Q350017": {
+      "type": "item",
+      "id": "Q350017",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Lichtenburg"
+        },
+        "af": {
+          "language": "af",
+          "value": "Lichtenburg"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Lichtenburg"
+        }
+      }
+    },
+    "Q2301363": {
+      "type": "item",
+      "id": "Q2301363",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Springbok"
+        },
+        "af": {
+          "language": "af",
+          "value": "Springbok"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Springbok"
+        },
+        "st": {
+          "language": "st",
+          "value": "Springbok"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "ISpringbok"
+        }
+      }
+    },
+    "Q1723265": {
+      "type": "item",
+      "id": "Q1723265",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Secunda"
+        },
+        "af": {
+          "language": "af",
+          "value": "Secunda"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Secunda"
+        }
+      }
+    },
+    "Q27854133": {
+      "type": "item",
+      "id": "Q27854133",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Makhado"
+        }
+      }
+    },
+    "Q2522086": {
+      "type": "item",
+      "id": "Q2522086",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Embalenhle"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Embalenhle"
+        },
+        "af": {
+          "language": "af",
+          "value": "Embalenhle"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Embalenhle"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Embalenhle"
+        }
+      }
+    },
+    "Q81725": {
+      "type": "item",
+      "id": "Q81725",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "KwaZulu-Natal"
+        },
+        "st": {
+          "language": "st",
+          "value": "Kwazulu-Natala"
+        },
+        "af": {
+          "language": "af",
+          "value": "KwaZulu-Natal"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "KwaZulu Natala"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "KaZulu"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaKwaZulu-Natala"
+        },
+        "en": {
+          "language": "en",
+          "value": "KwaZulu-Natal"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "KwaZulu-Natal"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "KwaZulu-Natal"
+        }
+      }
+    },
+    "Q133083": {
+      "type": "item",
+      "id": "Q133083",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Gauteng"
+        },
+        "st": {
+          "language": "st",
+          "value": "Gauteng"
+        },
+        "af": {
+          "language": "af",
+          "value": "Gauteng"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Gauteng"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Gauteng"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaRhawuti"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Gauteng"
+        },
+        "en": {
+          "language": "en",
+          "value": "Gauteng"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IGauteng"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Gauteng"
+        }
+      }
+    },
+    "Q130840": {
+      "type": "item",
+      "id": "Q130840",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Eastern Cape"
+        },
+        "st": {
+          "language": "st",
+          "value": "Kapa Botjhabela"
+        },
+        "af": {
+          "language": "af",
+          "value": "Oos-Kaap"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Kapa Bohlabela"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Eastern Cape"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaMpuma-Koloni"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Kapa Vhubvaḓuvha"
+        },
+        "en": {
+          "language": "en",
+          "value": "Eastern Cape"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IMpumalanga Kapa"
+        }
+      }
+    },
+    "Q127167": {
+      "type": "item",
+      "id": "Q127167",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Western Cape"
+        },
+        "st": {
+          "language": "st",
+          "value": "Kapa Bophirimela"
+        },
+        "af": {
+          "language": "af",
+          "value": "Wes-Kaap"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Kapa Bodikela"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Western Cape"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaNtshona-Koloni"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Kapa Vhukovhela"
+        },
+        "en": {
+          "language": "en",
+          "value": "Western Cape"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "INtshonalanga Kapa"
+        }
+      }
+    },
+    "Q132410": {
+      "type": "item",
+      "id": "Q132410",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Mpumalanga"
+        },
+        "st": {
+          "language": "st",
+          "value": "Mpumalanga"
+        },
+        "af": {
+          "language": "af",
+          "value": "Mpumalanga"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Mpumalanga"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Mpumalanga"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaMpumalanga"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Mpumalanga"
+        },
+        "en": {
+          "language": "en",
+          "value": "Mpumalanga"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Mpumalanga"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Mpumalanga"
+        },
+        "nr": {
+          "language": "nr",
+          "value": "Isifunda seMpumalanga"
+        }
+      }
+    },
+    "Q134907": {
+      "type": "item",
+      "id": "Q134907",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Limpopo"
+        },
+        "st": {
+          "language": "st",
+          "value": "Limpopo"
+        },
+        "af": {
+          "language": "af",
+          "value": "Limpopo"
+        },
+        "ts": {
+          "language": "ts",
+          "value": "Limpopo"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Limpopo"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Limpopo"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaLimpopo"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Limpopo"
+        },
+        "en": {
+          "language": "en",
+          "value": "Limpopo"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "ILimpopo"
+        },
+        "nr": {
+          "language": "nr",
+          "value": "Limpopo"
+        }
+      }
+    },
+    "Q160284": {
+      "type": "item",
+      "id": "Q160284",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Foreistata"
+        },
+        "st": {
+          "language": "st",
+          "value": "Freistata"
+        },
+        "af": {
+          "language": "af",
+          "value": "Vrystaat"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Free State"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Fuleyistata"
+        },
+        "en": {
+          "language": "en",
+          "value": "Free State"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Free State"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "IFleyistata"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaFreyistata"
+        }
+      }
+    },
+    "Q132418": {
+      "type": "item",
+      "id": "Q132418",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Kapa Bokone"
+        },
+        "st": {
+          "language": "st",
+          "value": "Kapa Leboya"
+        },
+        "af": {
+          "language": "af",
+          "value": "Noord-Kaap"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Kapa Leboa"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Northern Cape"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaseMntla-Koloni"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Kapa Devhula"
+        },
+        "en": {
+          "language": "en",
+          "value": "Northern Cape"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "INyakatho Kapa"
+        }
+      }
+    },
+    "Q165956": {
+      "type": "item",
+      "id": "Q165956",
+      "labels": {
+        "tn": {
+          "language": "tn",
+          "value": "Bokone Bophirim"
+        },
+        "st": {
+          "language": "st",
+          "value": "Leboya Bophirimela"
+        },
+        "af": {
+          "language": "af",
+          "value": "Noordwes"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Leboa Bohlabela Transvaal"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "North West"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "IPhondo yaseMntla-Ntshona"
+        },
+        "ve": {
+          "language": "ve",
+          "value": "Devhula-Vhukovhela"
+        },
+        "en": {
+          "language": "en",
+          "value": "North West"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Nyakatho-Ntshonalanga"
+        }
+      }
+    },
+    "Q639518": {
+      "type": "item",
+      "id": "Q639518",
+      "labels": {
+        "af": {
+          "language": "af",
+          "value": "Midrand"
+        },
+        "en": {
+          "language": "en",
+          "value": "Midrand"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Midrand"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Midrand"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Midrand"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Midrand"
+        }
+      }
+    },
+    "Q10676708": {
+      "type": "item",
+      "id": "Q10676708",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "KwaDukuza"
+        },
+        "af": {
+          "language": "af",
+          "value": "Stanger"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "KwaDukuza"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "KwaDukuza"
+        }
+      }
+    },
+    "Q2166182": {
+      "type": "item",
+      "id": "Q2166182",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Roodepoort"
+        },
+        "af": {
+          "language": "af",
+          "value": "Roodepoort"
+        },
+        "tn": {
+          "language": "tn",
+          "value": "Rodipoto"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Roodepoort"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Roodepoort"
+        },
+        "xh": {
+          "language": "xh",
+          "value": "Roodepoort"
+        }
+      }
+    },
+    "Q183292": {
+      "type": "item",
+      "id": "Q183292",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "Umlazi"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Umlazi"
+        },
+        "af": {
+          "language": "af",
+          "value": "Umlazi"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "Umlazi"
+        },
+        "ss": {
+          "language": "ss",
+          "value": "Umlazi"
+        }
+      }
+    },
+    "Q3347043": {
+      "type": "item",
+      "id": "Q3347043",
+      "labels": {
+        "en": {
+          "language": "en",
+          "value": "KwaMashu"
+        },
+        "zu": {
+          "language": "zu",
+          "value": "Kwamashu"
+        },
+        "af": {
+          "language": "af",
+          "value": "KwaMashu"
+        },
+        "nso": {
+          "language": "nso",
+          "value": "KwaMashu"
+        }
+      }
+    }
+  }
+}

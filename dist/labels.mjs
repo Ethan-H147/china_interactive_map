@@ -7,7 +7,7 @@ export function labelLines(english,local,language='both',district=false){
 }
 export function placeLabels(candidates,width,height){
  const occupied=[],accepted=[];
- for(const item of [...candidates].sort((a,b)=>Number(!!b.selected)-Number(!!a.selected)||String(a.id).localeCompare(String(b.id)))){
+ for(const item of [...candidates].sort((a,b)=>Number(!!b.selected)-Number(!!a.selected)||(b.priority||0)-(a.priority||0)||String(a.id).localeCompare(String(b.id)))){
   const {x,y,w,h}=item;if(x-w/2<12||x+w/2>width-12||y-h/2<72||y+h/2>height-44)continue;
   const r={left:x-w/2-7,right:x+w/2+7,top:y-h/2-5,bottom:y+h/2+5};
   if(occupied.some(o=>r.left<o.right&&r.right>o.left&&r.top<o.bottom&&r.bottom>o.top))continue;
@@ -25,7 +25,7 @@ export function render(map,candidates,className){
   return {...item,lines,x:point.x,y:point.y,w:Math.max(...widths)+4,h:lines.length*21};
  });
  return placeLabels(items,map.getContainer().clientWidth,map.getContainer().clientHeight).map(item=>{
-  const el=document.createElement('div');el.className=className;el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
+  const el=document.createElement('div');el.className=item.className||className;if(item.onClick){el.setAttribute('role','button');el.tabIndex=0;el.onclick=e=>{e.stopPropagation();item.onClick();};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();item.onClick();}};}el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
   if(item.lang)el.lang=item.lang;
   for(const line of item.lines.slice(1)){const small=document.createElement('small');small.textContent=line;el.append(small);}
   return new window.maplibregl.Marker({element:el,anchor:'center'}).setLngLat(item.center).addTo(map);
