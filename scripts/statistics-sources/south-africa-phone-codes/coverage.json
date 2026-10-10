@@ -1,0 +1,780 @@
+{
+  "unmatched": [
+    {
+      "id": "ZA-C-868003",
+      "name": "KwaGuqa",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-199013",
+      "name": "Blouberg",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-599123",
+      "name": "Mpumalanga",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-599112",
+      "name": "Newlands West",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-763011",
+      "name": "Rietvallei",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-798005",
+      "name": "Kaalfontein",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-874059",
+      "name": "Daantjie",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-799024",
+      "name": "Stinkwater",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-984026",
+      "name": "Tafelkop",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-868001",
+      "name": "Hlalanikahle",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-798038",
+      "name": "Lawley",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-591017",
+      "name": "Macambini",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-199051",
+      "name": "Noordhoek",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-866002",
+      "name": "Lebohang",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-661023",
+      "name": "Maboloka",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-566037",
+      "name": "Imbali",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-871019",
+      "name": "Moloto",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-860010",
+      "name": "Nhlazatje",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-766026",
+      "name": "Kokosi",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-662015",
+      "name": "Hartbeestfontein A",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-660045",
+      "name": "Mathibestad",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-797021",
+      "name": "Wattville",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-591006",
+      "name": "Nkunzempunga",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-599053",
+      "name": "Umhlanga",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-876016",
+      "name": "Sibayeni",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-876020",
+      "name": "KaMatsamo",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-673004",
+      "name": "Boitumelong",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-876039",
+      "name": "Mangweni",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-798007",
+      "name": "Ebony Park",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-876012",
+      "name": "Kamhlushwa",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-668007",
+      "name": "Bodibe",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-877120",
+      "name": "Hlanganani",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-876017",
+      "name": "Kamaqhekeza",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-664095",
+      "name": "Ledig",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-599137",
+      "name": "Tshelimnyama",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-467014",
+      "name": "Phomolong",
+      "province": "Free State"
+    },
+    {
+      "id": "ZA-C-877082",
+      "name": "Mafemani",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-962051",
+      "name": "Dan",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-876032",
+      "name": "Driekoppies",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-172018",
+      "name": "Zwelihle",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-168006",
+      "name": "Zweletemba",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-379003",
+      "name": "Paballelo",
+      "province": "Northern Cape"
+    },
+    {
+      "id": "ZA-C-874054",
+      "name": "Msogwaba",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-799009",
+      "name": "Marokolong",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-863005",
+      "name": "Daggakraal",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-968078",
+      "name": "Tshakhuma",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-677003",
+      "name": "Tigane",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-974041",
+      "name": "Perskebult",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-199054",
+      "name": "Kommetjie",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-661044",
+      "name": "Modderspruit",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-874033",
+      "name": "White River",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-968094",
+      "name": "Elim",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-976047",
+      "name": "Mogoto",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-599172",
+      "name": "Kingsburgh",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-799002",
+      "name": "Ramotse",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-860050",
+      "name": "Fernie",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-661043",
+      "name": "Bapong",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-662021",
+      "name": "GaLuka",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-260062",
+      "name": "Eluxolweni",
+      "province": "Eastern Cape"
+    },
+    {
+      "id": "ZA-C-668014",
+      "name": "Tlhabologang",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-472032",
+      "name": "Bolata",
+      "province": "Free State"
+    },
+    {
+      "id": "ZA-C-472003",
+      "name": "Tshiame",
+      "province": "Free State"
+    },
+    {
+      "id": "ZA-C-178005",
+      "name": "Bongolethu",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-968091",
+      "name": "Tshimbupfe",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-874028",
+      "name": "Gutshwa",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-797004",
+      "name": "Clayville",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-965100",
+      "name": "Thengwe",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-514009",
+      "name": "Watersmeet",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-876015",
+      "name": "Ka-Sibhejane",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-982113",
+      "name": "Tshamahansi",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-165006",
+      "name": "Bella Vista",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-569004",
+      "name": "Mchunu",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-877022",
+      "name": "Xikhusese",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-868024",
+      "name": "Thubelihle",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-860019",
+      "name": "Lukwatini",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-578013",
+      "name": "Frischgewaagd",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-877059",
+      "name": "Maboke",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-860009",
+      "name": "Tjakastad",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-877024",
+      "name": "Bolla-Tau",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-514024",
+      "name": "Roosboom",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-876021",
+      "name": "Embhojeni",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-471002",
+      "name": "Mamafubedu",
+      "province": "Free State"
+    },
+    {
+      "id": "ZA-C-587028",
+      "name": "Nzalabantu",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-877117",
+      "name": "Legokgwe",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-974079",
+      "name": "Ga-Mothiba",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-562031",
+      "name": "Swayimana",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-660060",
+      "name": "Mogogelo",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-876030",
+      "name": "Mzinti",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-561004",
+      "name": "Amandawe",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-876031",
+      "name": "Emtfuntini",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-467006",
+      "name": "Riebeeckstad",
+      "province": "Free State"
+    },
+    {
+      "id": "ZA-C-982107",
+      "name": "GaMapela",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-568003",
+      "name": "Hopewell",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-799007",
+      "name": "Suurman",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-362004",
+      "name": "Sishen",
+      "province": "Northern Cape"
+    },
+    {
+      "id": "ZA-C-799055",
+      "name": "Rethabiseng",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-662034",
+      "name": "Kana",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-506030",
+      "name": "Nositha",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-260073",
+      "name": "Ginsberg",
+      "province": "Eastern Cape"
+    },
+    {
+      "id": "ZA-C-599003",
+      "name": "Hambanathi",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-876052",
+      "name": "Masibekela",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-974042",
+      "name": "Bloodriver",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-266008",
+      "name": "Nomathamasanqa",
+      "province": "Eastern Cape"
+    },
+    {
+      "id": "ZA-C-966013",
+      "name": "Ka-Mhinga",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-984035",
+      "name": "Sehlakwane",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-591021",
+      "name": "Tugela",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-877083",
+      "name": "Buyisonto",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-968104",
+      "name": "KaBungeni",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-966051",
+      "name": "Khubvi",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-566024",
+      "name": "KwaMncane",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-876050",
+      "name": "Mgobode",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-660059",
+      "name": "Mmakaunyana",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-669020",
+      "name": "Gopane",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-799004",
+      "name": "Majaneng",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-179007",
+      "name": "New Horizons",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-974093",
+      "name": "Megoring",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-669017",
+      "name": "Borakalalo",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-961012",
+      "name": "Mamaila",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-470002",
+      "name": "Thorisong",
+      "province": "Free State"
+    },
+    {
+      "id": "ZA-C-877134",
+      "name": "Khokhamoya",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-974015",
+      "name": "GaRamongwana",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-165008",
+      "name": "eNduli",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-164009",
+      "name": "Nuwedorp",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-563013",
+      "name": "Hilton",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-672010",
+      "name": "Mokgareng",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-876019",
+      "name": "Mhlambanyatsi",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-761004",
+      "name": "Walkerville",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-872023",
+      "name": "Mapoch",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-361019",
+      "name": "Magobe",
+      "province": "Northern Cape"
+    },
+    {
+      "id": "ZA-C-199001",
+      "name": "Mamre",
+      "province": "Western Cape"
+    },
+    {
+      "id": "ZA-C-661030",
+      "name": "Kgabalatsane",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-984038",
+      "name": "Kgobokwane",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-984072",
+      "name": "Ntwane",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-877021",
+      "name": "Tsakani",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-968039",
+      "name": "Ha-Rabali",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-877114",
+      "name": "Kamalamule",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-876046",
+      "name": "KwaMandulu",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-599117",
+      "name": "Gillitts",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-877132",
+      "name": "Marite",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-974080",
+      "name": "Thakgalang",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-874063",
+      "name": "Tekwane",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-576065",
+      "name": "Othulini",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-266004",
+      "name": "Bontrug",
+      "province": "Eastern Cape"
+    },
+    {
+      "id": "ZA-C-872036",
+      "name": "Phake",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-569006",
+      "name": "Vaalkop",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-538007",
+      "name": "Nseleni",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-672049",
+      "name": "Magogong",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-583068",
+      "name": "Ohlalwini",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-872037",
+      "name": "Masobye",
+      "province": "Mpumalanga"
+    },
+    {
+      "id": "ZA-C-966071",
+      "name": "Mukula",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-799050",
+      "name": "Rayton",
+      "province": "Gauteng"
+    },
+    {
+      "id": "ZA-C-668009",
+      "name": "Verdwaal",
+      "province": "North West"
+    },
+    {
+      "id": "ZA-C-564008",
+      "name": "Bruntville",
+      "province": "KwaZulu-Natal"
+    },
+    {
+      "id": "ZA-C-960034",
+      "name": "KaHomu",
+      "province": "Limpopo"
+    },
+    {
+      "id": "ZA-C-974137",
+      "name": "Ga-Maja",
+      "province": "Limpopo"
+    }
+  ],
+  "conflicts": []
+}
