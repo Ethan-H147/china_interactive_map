@@ -52,7 +52,7 @@ let normalProvinceColors,atlasMode='china',koreaAtlas,mongoliaAtlas,japanAtlas,p
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
 const overview=window.AtlasLabels.createHoverOverview(map,{blocked:()=>cameraBusy||countrySwitching||!allReady||quiz.active,resolve:(point,id)=>{if(atlasMode!=='china')return currentAtlas()?.hoverAt?.(point,id);const region=id?regionByCode.get(Number(id)):pickedRegion(point);if(!region)return;const p=region.feature.properties;return {en:englishName(p),local:p.name,kind:kind(p)};}});
-function clearHover(){if(hovered){setRegionState(hovered,{hover:false});hovered=null;}overview.clear();map.getCanvas().style.cursor='';}
+function clearHover(hideOverview=true){if(hovered){setRegionState(hovered,{hover:false});hovered=null;}if(hideOverview)overview.clear();map.getCanvas().style.cursor='';}
 map.on('movestart',clearHover);
 const shortName=n=>n.replace(/壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区|特別行政區|省|市/g,'');
 const provinceTypes={110000:'Municipality',120000:'Municipality',310000:'Municipality',500000:'Municipality',150000:'Autonomous Region',450000:'Zhuang Autonomous Region',540000:'Autonomous Region',640000:'Hui Autonomous Region',650000:'Uyghur Autonomous Region',810000:'Special Administrative Region',820000:'Special Administrative Region'};
@@ -403,7 +403,7 @@ map.on('click',event=>{
 });
 map.on('mousemove',event=>{
   if(atlasMode!=='china'||cameraBusy||!allReady||map.isMoving())return;
-  const region=pickedRegion(event.point);if(hovered!==region){clearHover();hovered=region;if(region)setRegionState(region,{hover:true});}
+  const region=pickedRegion(event.point);if(hovered!==region){clearHover(false);hovered=region;if(region)setRegionState(region,{hover:true});}
   if(!region)return;map.getCanvas().style.cursor='pointer';
   if(quiz.active)return;
 });

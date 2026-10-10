@@ -12,7 +12,9 @@ export function createHoverOverview(map,{resolve,blocked=()=>false,document:doc=
  function clear(){current=null;tip.hidden=true;map.getCanvas().style.cursor='';}
  function show(point,id){
   if(blocked()||map.isMoving()){clear();return;}
-  const place=resolve(point,id),lines=overviewLines(place);if(!lines.length){clear();return;}
+  // MapLibre accepts a coordinate array or its own Point instance. A plain
+  // {x,y} object is treated as options and queries the entire viewport.
+  const place=resolve([point.x,point.y],id),lines=overviewLines(place);if(!lines.length){clear();return;}
   const key=lines.join('\n');if(current!==key){tip.replaceChildren();lines.forEach((line,i)=>{const el=doc.createElement(i?'small':'div');el.textContent=line;tip.append(el);});current=key;}
   tip.hidden=false;map.getCanvas().style.cursor='pointer';
   tip.style.left=Math.max(8,Math.min(point.x+12,container.clientWidth-tip.offsetWidth-10))+'px';

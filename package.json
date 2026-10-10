@@ -89,6 +89,6 @@
     "test:southern-africa": "node --check dist/southern-africa.mjs && node scripts/validate-south-africa-settlements.mjs && node scripts/validate-southern-africa-data.mjs && node scripts/validate-regional-borders.mjs && node scripts/validate-southern-africa-statistics.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && npm run test:countries && npm run test:country-pages && npm run test:flag-viewer && npm run test:satellite && npm run test:world-land && node scripts/validate-settlement-boundaries.mjs && node scripts/prepare-south-africa-phone-codes.mjs --check",
     "build:regional-bundles": "node scripts/prepare-regional-bundles.mjs",
     "test:south-africa-settlements": "node --check dist/settlement-layer.mjs && node scripts/validate-south-africa-settlements.mjs && node scripts/validate-regional-loading.mjs && node scripts/validate-settlement-boundaries.mjs && node scripts/prepare-south-africa-phone-codes.mjs --check",
-    "test:hover": "node --check dist/hover-overview.mjs && node scripts/validate-hover-overview.mjs"
+    "test:hover": "node --check dist/hover-overview.mjs && node scripts/validate-hover-overview.mjs && node scripts/validate-hover-point-query.mjs"
   }
 }
