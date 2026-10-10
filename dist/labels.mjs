@@ -1,3 +1,4 @@
+export {createHoverOverview} from './hover-overview.mjs';
 export function labelLines(english,local,language='both',district=false){
  if(district&&!/\b(?:District|Dist\.)$/i.test(english))english+=' District';
  english=english.replace(/\bAutonomous Prefecture\b/gi,'A.P.').replace(/\bDistrict\b/gi,'Dist.');
@@ -25,7 +26,7 @@ export function render(map,candidates,className){
   return {...item,lines,x:point.x,y:point.y,w:Math.max(...widths)+4,h:lines.length*21};
  });
  return placeLabels(items,map.getContainer().clientWidth,map.getContainer().clientHeight).map(item=>{
-  const el=document.createElement('div');el.className=item.className||className;if(item.onClick){el.setAttribute('role','button');el.tabIndex=0;el.onclick=e=>{e.stopPropagation();item.onClick();};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();item.onClick();}};}el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
+  const el=document.createElement('div');el.dataset.atlasPlace=String(item.id);el.className=item.className||className;if(item.onClick){el.setAttribute('role','button');el.tabIndex=0;el.onclick=e=>{e.stopPropagation();item.onClick();};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();item.onClick();}};}el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
   if(item.lang)el.lang=item.lang;
   for(const line of item.lines.slice(1)){const small=document.createElement('small');small.textContent=line;el.append(small);}
   return new window.maplibregl.Marker({element:el,anchor:'center'}).setLngLat(item.center).addTo(map);

@@ -51,8 +51,8 @@ let comparison,southAmerica;
 let normalProvinceColors,atlasMode='china',koreaAtlas,mongoliaAtlas,japanAtlas,philippinesAtlas,indonesiaAtlas,malaysiaAtlas,singaporeAtlas,russiaAtlas,southernAfrica,capitalDisplay,waterDisplay,satelliteDisplay,namingQuiz,placeTools;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
-const tooltip=document.createElement('div');tooltip.className='region-tooltip gpu-tooltip';tooltip.hidden=true;$('map-shell').append(tooltip);
-function clearHover(){if(hovered){setRegionState(hovered,{hover:false});hovered=null;}tooltip.hidden=true;map.getCanvas().style.cursor='';}
+const overview=window.AtlasLabels.createHoverOverview(map,{blocked:()=>cameraBusy||countrySwitching||!allReady||quiz.active,resolve:(point,id)=>{if(atlasMode!=='china')return currentAtlas()?.hoverAt?.(point,id);const region=id?regionByCode.get(Number(id)):pickedRegion(point);if(!region)return;const p=region.feature.properties;return {en:englishName(p),local:p.name,kind:kind(p)};}});
+function clearHover(){if(hovered){setRegionState(hovered,{hover:false});hovered=null;}overview.clear();map.getCanvas().style.cursor='';}
 map.on('movestart',clearHover);
 const shortName=n=>n.replace(/壮族自治区|回族自治区|维吾尔自治区|自治区|特别行政区|特別行政區|省|市/g,'');
 const provinceTypes={110000:'Municipality',120000:'Municipality',310000:'Municipality',500000:'Municipality',150000:'Autonomous Region',450000:'Zhuang Autonomous Region',540000:'Autonomous Region',640000:'Hui Autonomous Region',650000:'Uyghur Autonomous Region',810000:'Special Administrative Region',820000:'Special Administrative Region'};
@@ -406,8 +406,6 @@ map.on('mousemove',event=>{
   const region=pickedRegion(event.point);if(hovered!==region){clearHover();hovered=region;if(region)setRegionState(region,{hover:true});}
   if(!region)return;map.getCanvas().style.cursor='pointer';
   if(quiz.active)return;
-  const p=region.feature.properties;tooltip.replaceChildren();const name=document.createElement('div');name.textContent=bilingualName(p);const small=document.createElement('small');small.textContent=kind(p);tooltip.append(name,small);tooltip.hidden=false;
-  tooltip.style.left=Math.min(event.point.x+12,map.getContainer().clientWidth-tooltip.offsetWidth-10)+'px';tooltip.style.top=Math.max(8,event.point.y-tooltip.offsetHeight-12)+'px';
 });
 map.getCanvas().addEventListener('mouseleave',clearHover);
 async function loadChina(){

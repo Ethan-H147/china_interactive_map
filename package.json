@@ -59,7 +59,7 @@
     "build:motion": "node scripts/prepare-motion.mjs && node scripts/prepare-context.mjs && node scripts/prepare-shared-context.mjs",
     "test:motion": "node --check dist/motion-worker.mjs && node scripts/validate-motion.mjs",
     "test:taiwan": "node scripts/validate-taiwan.mjs",
-    "test:experience": "node scripts/validate-experience.mjs",
+    "test:experience": "node scripts/validate-experience.mjs && npm run test:hover",
     "test:countries": "node scripts/validate-country-switching.mjs && npm run test:region-colors",
     "test:japan": "node --check dist/japan.mjs && node --check dist/japan-worker.mjs && node scripts/validate-japan.mjs && node scripts/validate-japan-local.mjs && node scripts/validate-japan-facts-compare.mjs",
     "build:japan": "node scripts/fetch-japan-municipalities.mjs && node --max-old-space-size=8000 scripts/build-japan-municipalities.mjs",
@@ -88,6 +88,7 @@
     "build:southern-africa": "node scripts/fetch-southern-africa.mjs && node scripts/build-southern-africa.mjs && npm run build:regional-bundles && node scripts/prepare-southern-africa-statistics.mjs && node scripts/fetch-southern-africa-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs",
     "test:southern-africa": "node --check dist/southern-africa.mjs && node scripts/validate-south-africa-settlements.mjs && node scripts/validate-southern-africa-data.mjs && node scripts/validate-regional-borders.mjs && node scripts/validate-southern-africa-statistics.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && npm run test:countries && npm run test:country-pages && npm run test:flag-viewer && npm run test:satellite && npm run test:world-land && node scripts/validate-settlement-boundaries.mjs && node scripts/prepare-south-africa-phone-codes.mjs --check",
     "build:regional-bundles": "node scripts/prepare-regional-bundles.mjs",
-    "test:south-africa-settlements": "node --check dist/settlement-layer.mjs && node scripts/validate-south-africa-settlements.mjs && node scripts/validate-regional-loading.mjs && node scripts/validate-settlement-boundaries.mjs && node scripts/prepare-south-africa-phone-codes.mjs --check"
+    "test:south-africa-settlements": "node --check dist/settlement-layer.mjs && node scripts/validate-south-africa-settlements.mjs && node scripts/validate-regional-loading.mjs && node scripts/validate-settlement-boundaries.mjs && node scripts/prepare-south-africa-phone-codes.mjs --check",
+    "test:hover": "node --check dist/hover-overview.mjs && node scripts/validate-hover-overview.mjs"
   }
 }

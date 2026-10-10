@@ -28,6 +28,7 @@ const atlas=await context.addRegionalCountry(map,host,{country:'test',prefix:'te
 const flush=()=>new Promise(resolve=>setImmediate(resolve)),complete=job=>job.onmessage({data:{blob:{},borders:{}}});
 const entering=atlas.enter(false);await flush();assert.equal(jobs[0].request.url,'data/test/first.bin');complete(jobs[0]);await entering;
 assert(atlas.ready);assert(!sources.has('test-second'),'Entry does not load district geometry');
+assert.equal(atlas.hoverAt(null,'A').en,'A','The shared overview resolves full catalogue names without selecting');assert.equal(atlas.getSelection(),null);
 const select=id=>{element('test-province').value=id;return element('test-province').onchange();};
 const first=select('A');await flush();const obsolete=jobs.at(-1);
 const second=select('B');await flush();assert(obsolete.terminated,'Selecting a new region terminates the previous worker');
@@ -83,6 +84,7 @@ map.getZoom=()=>8;
 const cards=[];context.renderStatistics=(anchor,key,data)=>cards.push({key,data});
 const settlements=await context.addRegionalCountry(map,host,{country:'places',prefix:'places',base:'data/places/',name:'Places',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities',loadAllSubdivisions:true,settlements:true,labelLanguages:[['both','Bilingual'],['en','English'],['zu','Zulu']]});
 task=settlements.enter(false);await flush();jobs.at(-1).onmessage({data:allPayload});await task;
+const beforeHover=jobs.length;assert.equal(settlements.hoverAt(null,'C1').kind,'Settlement');assert.equal(settlements.hoverAt(null,'C1').overviewNames.join(' · '),'City · Local City');assert.equal(settlements.getSelection(),null);assert.equal(jobs.length,beforeHover,'Hover never loads geometry or selects a city');
 assert(sources.has('places-settlements'));await settlements.restore('C1');assert.equal(settlements.getMode(),3);assert.equal(cards.at(-1).key,'places:C1');assert.equal(cards.at(-1).data.regions['places:C1'].population.value,100000);assert(!cards.at(-1).data.regions['places:C1'].gdp,'Cities cannot inherit municipal GDP');assert(cards.at(-1).data.sources[city.population.source].url);
 assert(/historical/i.test(element('places-flag-caption').textContent));settlements.setLanguage('zu');assert.equal(settlements.getLanguage(),'zu');
 element('places-search').value='Local City';element('places-search').oninput();assert(element('places-search-results').children.some(r=>r.children?.[0]?.textContent==='City'));

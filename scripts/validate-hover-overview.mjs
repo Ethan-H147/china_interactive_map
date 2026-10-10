@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {createHoverOverview,overviewLines} from '../dist/hover-overview.mjs';
+const element=()=>({hidden:false,children:[],style:{},setAttribute(){},append(...nodes){this.children.push(...nodes);},replaceChildren(){this.children=[];},remove(){this.removed=true;},offsetWidth:180,offsetHeight:70});
+const listeners=new Map(),mapEvents=new Map(),canvas={style:{}},container={...element(),clientWidth:500,clientHeight:300,getBoundingClientRect:()=>({left:20,top:30}),addEventListener:(type,fn)=>listeners.set(type,fn),removeEventListener:type=>listeners.delete(type)};
+let place={en:'Pretoria',names:{zu:{name:'IPitoli'},ss:{name:'ePitoli'}},kind:'Settlement'},blocked=false,moving=false,hits=[];
+const map={getContainer:()=>container,getCanvas:()=>canvas,isMoving:()=>moving,on:(type,fn)=>mapEvents.set(type,fn),off:type=>mapEvents.delete(type)};
+const hover=createHoverOverview(map,{document:{createElement:element},resolve:(point,id)=>{hits.push({point,id});return place;},blocked:()=>blocked});const tip=container.children[0];
+listeners.get('pointermove')({target:canvas,clientX:515,clientY:35});assert(!tip.hidden);assert.equal(tip.style.left,'310px');assert.equal(tip.style.top,'8px');assert.deepEqual(tip.children.map(el=>el.textContent),['Pretoria','IPitoli · ePitoli','Settlement']);
+const label={dataset:{atlasPlace:'ZA-C-799035'},getBoundingClientRect:()=>({left:100,right:200,top:80}),closest:()=>label};listeners.get('pointermove')({target:label,clientX:150,clientY:80});assert.equal(hits.at(-1).id,'ZA-C-799035');listeners.get('focusin')({target:label});assert.equal(hits.at(-1).id,'ZA-C-799035');
+mapEvents.get('movestart')();assert(tip.hidden);moving=true;hover.show({x:20,y:20});assert(tip.hidden);moving=false;blocked=true;hover.show({x:20,y:20});assert(tip.hidden);blocked=false;place=null;hover.show({x:20,y:20});assert(tip.hidden);
+assert.deepEqual(overviewLines({en:'<img onerror=bad>',local:'同名',kind:'City'}),['<img onerror=bad>','同名','City']);place={en:'Japan region',ja:'日本',kind:'Prefecture'};hover.show({x:20,y:20});assert(!tip.hidden);listeners.get('pointerleave')();assert(tip.hidden);hover.destroy();assert.equal(listeners.size,0);assert.equal(mapEvents.size,0);
+for(const file of ['regional-country.mjs','archipelago.mjs','southeast-asia.mjs','japan.mjs','korea.js','mongolia.mjs','south-america.mjs'])assert(fs.readFileSync('dist/'+file,'utf8').includes('hoverAt(point,'),file+' exposes the shared overview contract');
+const app=fs.readFileSync('dist/app.js','utf8');assert(app.includes('createHoverOverview'));assert(!app.includes('tooltip.replaceChildren'));assert(fs.readFileSync('dist/labels.mjs','utf8').includes('el.dataset.atlasPlace'));
+console.log('All country adapters: canvas and label overview, multilingual names, keyboard focus, bounds, motion/quiz suppression, empty hits and cleanup passed.');
