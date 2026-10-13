@@ -138,5 +138,24 @@
     "license": "CC0",
     "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "sha256": "fd00d7572ab3c4849342f7719b2d580681fbccfa7efc38b0ed0f2098f1899839"
+  },
+  "george": {
+    "name": "George",
+    "scope": "City flag",
+    "status": "documented",
+    "year": "Adoption date unverified",
+    "verification": "https://en.wikipedia.org/wiki/George,_South_Africa",
+    "file": "vendor/south-africa-city-flags/george.png",
+    "full": "vendor/south-africa-city-flags/george.png",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_George_%28Western_Cape%29.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_George_%28Western_Cape%29.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Flag_of_George_(Western_Cape).png",
+    "width": 1599,
+    "height": 1066,
+    "credit": "M J Hurter",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "note": "Documented city flag; adoption date and continued official use have not been independently verified.",
+    "sha256": "ce7f134057c513f40e66f0cc8ea669bf43e2dff60d8ec0437dcb057639f3f71a"
   }
 }
