@@ -1,0 +1,197 @@
+{
+  "retrieved": "2026-10-13",
+  "year": 2022,
+  "url": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf",
+  "districts": {
+    "Southern": [
+      "10",
+      "11",
+      "12",
+      "03",
+      "06"
+    ],
+    "South-East": [
+      "20",
+      "01"
+    ],
+    "Kweneng": [
+      "30",
+      "31"
+    ],
+    "Kgatleng": [
+      "40"
+    ],
+    "Central": [
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "04",
+      "05",
+      "07"
+    ],
+    "North-East": [
+      "60",
+      "02"
+    ],
+    "North-West": [
+      "70",
+      "71",
+      "73"
+    ],
+    "Chobe": [
+      "72"
+    ],
+    "Ghanzi": [
+      "80",
+      "81"
+    ],
+    "Kgalagadi": [
+      "90",
+      "91"
+    ]
+  },
+  "censusDistricts": [
+    {
+      "code": "01",
+      "name": "Gaborone City",
+      "population": 246325
+    },
+    {
+      "code": "02",
+      "name": "Francistown City",
+      "population": 103417
+    },
+    {
+      "code": "03",
+      "name": "Lobatse",
+      "population": 29772
+    },
+    {
+      "code": "04",
+      "name": "Selibe Phikwe",
+      "population": 42488
+    },
+    {
+      "code": "05",
+      "name": "Orapa",
+      "population": 8648
+    },
+    {
+      "code": "06",
+      "name": "Jwaneng",
+      "population": 18784
+    },
+    {
+      "code": "07",
+      "name": "Sowa",
+      "population": 2914
+    },
+    {
+      "code": "10",
+      "name": "Ngwaketse",
+      "population": 139383
+    },
+    {
+      "code": "11",
+      "name": "Barolong",
+      "population": 58885
+    },
+    {
+      "code": "12",
+      "name": "Ngwaketse West",
+      "population": 23660
+    },
+    {
+      "code": "20",
+      "name": "South East",
+      "population": 111440
+    },
+    {
+      "code": "30",
+      "name": "Kweneng East",
+      "population": 330220
+    },
+    {
+      "code": "31",
+      "name": "Kweneng West",
+      "population": 57763
+    },
+    {
+      "code": "40",
+      "name": "Kgatleng",
+      "population": 121882
+    },
+    {
+      "code": "50",
+      "name": "Central Serowe/ Palapye",
+      "population": 202740
+    },
+    {
+      "code": "51",
+      "name": "Central Mahalapye",
+      "population": 131977
+    },
+    {
+      "code": "52",
+      "name": "Central Bobonong",
+      "population": 77504
+    },
+    {
+      "code": "53",
+      "name": "Central Boteti",
+      "population": 74553
+    },
+    {
+      "code": "54",
+      "name": "Central Tutume",
+      "population": 165311
+    },
+    {
+      "code": "60",
+      "name": "North East",
+      "population": 69352
+    },
+    {
+      "code": "70",
+      "name": "Ngamiland East",
+      "population": 121398
+    },
+    {
+      "code": "71",
+      "name": "Ngamiland West",
+      "population": 74149
+    },
+    {
+      "code": "72",
+      "name": "Chobe",
+      "population": 28743
+    },
+    {
+      "code": "73",
+      "name": "Ngamiland Delta",
+      "population": 2889
+    },
+    {
+      "code": "80",
+      "name": "Ghanzi",
+      "population": 56077
+    },
+    {
+      "code": "81",
+      "name": "Central Kgalagadi Game Reserve",
+      "population": 478
+    },
+    {
+      "code": "90",
+      "name": "Kgalagadi South",
+      "population": 35347
+    },
+    {
+      "code": "91",
+      "name": "Kgalagadi North",
+      "population": 23510
+    }
+  ]
+}

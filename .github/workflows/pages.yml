@@ -35,8 +35,8 @@ jobs:
           cache: npm
       - name: Install validation dependencies
         run: npm ci --ignore-scripts
-      - name: Check international border rendering
-        run: npm run test:international-borders
+      - name: Check country data and international borders
+        run: npm run test:botswana-namibia
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website

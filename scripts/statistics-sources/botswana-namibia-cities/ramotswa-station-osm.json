@@ -1,0 +1,31 @@
+{
+  "version": "0.6",
+  "generator": "openstreetmap-cgimap 2.1.0 (3964723 spike-06.openstreetmap.org)",
+  "copyright": "OpenStreetMap and contributors",
+  "attribution": "http://www.openstreetmap.org/copyright",
+  "license": "http://opendatacommons.org/licenses/odbl/1-0/",
+  "elements": [
+    {
+      "type": "node",
+      "id": 11299498807,
+      "lat": -24.8476205,
+      "lon": 25.832371,
+      "timestamp": "2024-09-12T12:16:06Z",
+      "version": 2,
+      "changeset": 156525669,
+      "user": "Trubalu",
+      "uid": 3336523,
+      "tags": {
+        "contact:website": "https://www.botswanarailways.co.bw/ramotswa-br-station",
+        "name": "Ramotswa",
+        "operator": "Botswana Railways",
+        "operator:abbr": "BR",
+        "operator:website": "https://www.botswanarailways.co.bw",
+        "operator:wikidata": "Q848511",
+        "public_transport": "station",
+        "railway": "station",
+        "train": "yes"
+      }
+    }
+  ]
+}

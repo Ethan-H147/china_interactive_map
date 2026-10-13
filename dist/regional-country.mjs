@@ -1,6 +1,6 @@
 import {createSettlementBoundaries} from './settlement-boundaries.mjs';
 import {renderPhoneCard} from './place-contact-card.mjs';
-import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures} from './settlement-layer.mjs';
+import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementStatistics} from './settlement-layer.mjs';
 import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {createPlaceSearch} from './place-search.mjs';
@@ -90,7 +90,7 @@ export async function addRegionalCountry(map,host,c){
   $('names').replaceChildren();if(c.labelLanguages)for(const [code,value] of Object.entries(record.names||{})){const name=typeof value==='string'?value:value.name;if(!name||name===display.en||value.type==='historical language label')continue;const row=document.createElement('p');row.lang=code;row.textContent=name+' · '+(c.labelLanguages.find(([id])=>id===code)?.[1]||code);$('names').append(row);}
   $('administrative').hidden=!display.administrativeEn;$('administrative').textContent=[display.administrativeEn,display.administrativeLocal].filter(Boolean).join(' · ');
   if(c.phoneCodes)renderPhoneCard($('phone-card'),record.phone);
-  clearStatistics($('statistics'));if(record.settlement)renderStatistics($('statistics'),country+':'+record.id,{regions:{[country+':'+record.id]:{population:record.population,area:record.area}},sources:{[record.population.source]:{title:'Statistics South Africa Census 2011',url:record.population.source},[record.area.source]:{title:'Census 2011 main-place area',url:record.area.source}}});else if(c.hasStatistics?c.hasStatistics(record):record.level===1)renderStatistics($('statistics'),country+':'+record.id);
+  clearStatistics($('statistics'));if(record.settlement)renderStatistics($('statistics'),country+':'+record.id,settlementStatistics(record,country+':'+record.id));else if(c.hasStatistics?c.hasStatistics(record):record.level===1)renderStatistics($('statistics'),country+':'+record.id);
   $('capital-card').hidden=!record.capital||record.capital===record.en;$('capital').textContent=record.capital||'';
   const flag=c.flags[scope];$('flag-source').hidden=!flag;if(flag){$('flag-source').href=flag.page;$('flag-source').title=flag.credit+' · '+flag.license;$('flag').src=flag.file;$('flag').alt='Flag of '+index.get(scope).en;}
   const detailFlag=record.flag||(record.level>1?c.detailFlags?.[record.id]:null);$('flag-caption').hidden=!detailFlag?.status&&!detailFlag?.scope;$('flag-caption').textContent=detailFlag?[detailFlag.name||display.en,detailFlag.scope,detailFlag.year].filter(Boolean).join(' · '):'';$('detail-flag-source').hidden=!detailFlag;if(detailFlag){$('detail-flag-source').href=detailFlag.page;$('detail-flag-source').title=detailFlag.credit+' · '+detailFlag.license;$('detail-flag').src=detailFlag.file;$('detail-flag').alt='Flag of '+(detailFlag.name||display.en);}else $('detail-flag').removeAttribute?.('src');

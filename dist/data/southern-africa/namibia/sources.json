@@ -1,0 +1,67 @@
+{
+  "retrieved": "2026-10-13",
+  "counts": {
+    "1": 14,
+    "2": 121,
+    "3": 0
+  },
+  "coverage": "Original geometry supplied by Namibia Statistics Agency per Source and information.docx. 2013 delimitation structure with 121 constituencies and 14 regions. Source population fields predate 2023 census and are intentionally not imported. Names normalized for Unicode click consonants; Omuthiyagwiipundi renamed Omuthiya.",
+  "processing": "Shared topology, district and region polygons dissolved from census subdistricts and constituencies. Locality polygons form a complete census geography partition, clipped to their aligned parent; these census areas are distinct from built-up settlement outlines. The new country exterior follows the existing South African frontier within an 8 km inland digitization corridor; existing South African polygons are unchanged. Botswana is aligned to Namibia, and residual overlaps are erased. Shared subdivision edges only: coastlines are unoutlined. Detailed geometry loads as one country bundle. Spherical geometry area is an estimate, superseded by published census areas where available.",
+  "seamReports": {
+    "namibia-south-africa": {
+      "changedEdges": 589,
+      "maxDisplacementMetres": 7235.803564170887,
+      "changedRegions": [
+        "NA-C-oranjemund",
+        "NA-C-karasburg-west",
+        "NA-C-karasburg-east",
+        "NA-C-keetmanshoop-rural",
+        "NA-C-aranos"
+      ]
+    },
+    "botswana-south-africa": {
+      "changedEdges": 3827,
+      "maxDisplacementMetres": 7519.53165793894,
+      "changedRegions": [
+        "BW-C-gaborone",
+        "BW-C-barolong",
+        "BW-C-south-east",
+        "BW-C-kgatleng",
+        "BW-C-serowe-palapye",
+        "BW-C-mahalapye",
+        "BW-C-bobonong",
+        "BW-C-kgalagadi-south",
+        "BW-C-kgalagadi-north"
+      ]
+    },
+    "botswana-namibia": {
+      "changedEdges": 2198,
+      "maxDisplacementMetres": 7840.043575996889,
+      "changedRegions": [
+        "BW-C-ngamiland-east",
+        "BW-C-ngamiland-west",
+        "BW-C-chobe",
+        "BW-C-ghanzi",
+        "BW-C-kgalagadi-south",
+        "BW-C-kgalagadi-north"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "source": "Namibia Statistics Agency, reproduced in Atlas of Namibia Team (2022), Namibia Nature Foundation, Figure 8.24 Constituencies",
+      "url": "https://atlasofnamibia.online/chapter-8/download-files",
+      "record": "https://the-eis.com/elibrary/search/26665",
+      "download": "https://the-eis.com/elibrary/sites/default/files/downloads/literature/Atlas_ch_08_24.zip",
+      "license": "Creative Commons Attribution 4.0 International",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "boundaryYear": 2022,
+      "counts": {
+        "first": 14,
+        "second": 121
+      },
+      "secondFile": "namibia-second.geojson",
+      "note": "Original geometry supplied by Namibia Statistics Agency per Source and information.docx. 2013 delimitation structure with 121 constituencies and 14 regions. Source population fields predate 2023 census and are intentionally not imported. Names normalized for Unicode click consonants; Omuthiyagwiipundi renamed Omuthiya."
+    }
+  ]
+}

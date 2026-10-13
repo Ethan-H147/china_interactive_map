@@ -1,0 +1,1675 @@
+{
+  "botswana": [
+    {
+      "code": "30-24",
+      "name": "Mogoditshane",
+      "population": 88004,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.86556,
+        -24.62694
+      ],
+      "geonamesId": "933331",
+      "geonamesName": "Mogoditshane",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "70-01",
+      "name": "Maun",
+      "population": 85350,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        23.41667,
+        -19.98333
+      ],
+      "geonamesId": "933366",
+      "geonamesName": "Maun",
+      "geonamesAdmin1": "11"
+    },
+    {
+      "code": "30-01",
+      "name": "Molepolole",
+      "population": 74861,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.49508,
+        -24.40659
+      ],
+      "geonamesId": "933305",
+      "geonamesName": "Molepolole",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "50-01",
+      "name": "Serowe",
+      "population": 55676,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        26.71077,
+        -22.38754
+      ],
+      "geonamesId": "933088",
+      "geonamesName": "Serowe",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "20-06",
+      "name": "Tlokweng",
+      "population": 55508,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.97111,
+        -24.66861
+      ],
+      "geonamesId": "933004",
+      "geonamesName": "Tlokweng",
+      "geonamesAdmin1": "09"
+    },
+    {
+      "code": "50-02",
+      "name": "Palapye",
+      "population": 52636,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        27.12507,
+        -22.54605
+      ],
+      "geonamesId": "933182",
+      "geonamesName": "Palapye",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "40-01",
+      "name": "Mochudi",
+      "population": 50321,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        26.15,
+        -24.41667
+      ],
+      "geonamesId": "933340",
+      "geonamesName": "Mochudi",
+      "geonamesAdmin1": "05"
+    },
+    {
+      "code": "51-01",
+      "name": "Mahalapye",
+      "population": 48431,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        26.81421,
+        -23.10407
+      ],
+      "geonamesId": "933471",
+      "geonamesName": "Mahalapye",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "10-01",
+      "name": "Kanye",
+      "population": 48028,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.33273,
+        -24.96675
+      ],
+      "geonamesId": "933685",
+      "geonamesName": "Kanye",
+      "geonamesAdmin1": "10"
+    },
+    {
+      "code": "53-01",
+      "name": "Letlhakane",
+      "population": 36404,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.59263,
+        -21.41494
+      ],
+      "geonamesId": "933535",
+      "geonamesName": "Letlhakane",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "20-04",
+      "name": "Ramotswa",
+      "population": 33271,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.86989,
+        -24.87158
+      ],
+      "geonamesId": "933141",
+      "geonamesName": "Ramotswa",
+      "geonamesAdmin1": "09"
+    },
+    {
+      "code": "30-32",
+      "name": "Thamaga",
+      "population": 25300,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.53975,
+        -24.67014
+      ],
+      "geonamesId": "933018",
+      "geonamesName": "Thamaga",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "30-23",
+      "name": "Mmopane",
+      "population": 25460,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.87417,
+        -24.56694
+      ],
+      "geonamesId": "1106213",
+      "geonamesName": "Mmopone",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "10-29",
+      "name": "Moshupa",
+      "population": 23858,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.42156,
+        -24.7718
+      ],
+      "geonamesId": "933271",
+      "geonamesName": "Mosopa",
+      "geonamesAdmin1": "10"
+    },
+    {
+      "code": "54-23",
+      "name": "Tonota",
+      "population": 23296,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        27.46153,
+        -21.44236
+      ],
+      "geonamesId": "933000",
+      "geonamesName": "Tonota",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "52-01",
+      "name": "Bobonong",
+      "population": 21216,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        28.43625,
+        -21.96554
+      ],
+      "geonamesId": "933885",
+      "geonamesName": "Bobonong",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "30-07",
+      "name": "Gabane",
+      "population": 20027,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.78222,
+        -24.66667
+      ],
+      "geonamesId": "933777",
+      "geonamesName": "Gabane",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "80-01",
+      "name": "Ghanzi",
+      "population": 19012,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        21.64581,
+        -21.69785
+      ],
+      "geonamesId": "933759",
+      "geonamesName": "Ghanzi",
+      "geonamesAdmin1": "03"
+    },
+    {
+      "code": "54-07",
+      "name": "Tutume",
+      "population": 18582,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        27.03479,
+        -20.4943
+      ],
+      "geonamesId": "7573818",
+      "geonamesName": "Tutume",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "30-12",
+      "name": "Kopong",
+      "population": 13823,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.88333,
+        -24.48333
+      ],
+      "geonamesId": "933596",
+      "geonamesName": "Kopong",
+      "geonamesAdmin1": "09"
+    },
+    {
+      "code": "52-13",
+      "name": "Mmadinare",
+      "population": 13198,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        27.7518,
+        -21.8765
+      ],
+      "geonamesId": "12640340",
+      "geonamesName": "Mmadinare",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "60-25",
+      "name": "Tati Siding",
+      "population": 12404,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        27.49002,
+        -21.27345
+      ],
+      "geonamesId": "11205055",
+      "geonamesName": "Tati Siding",
+      "geonamesAdmin1": "08"
+    },
+    {
+      "code": "90-05",
+      "name": "Tsabong",
+      "population": 11651,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        22.45,
+        -26.05
+      ],
+      "geonamesId": "932987",
+      "geonamesName": "Tshabong",
+      "geonamesAdmin1": "04"
+    },
+    {
+      "code": "30-21",
+      "name": "Metsimotlhabe",
+      "population": 11617,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.8095,
+        -24.554
+      ],
+      "geonamesId": "11288838",
+      "geonamesName": "Metsimotlhabe",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "71-26",
+      "name": "Gumare",
+      "population": 11572,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        22.16167,
+        -19.36917
+      ],
+      "geonamesId": "11205277",
+      "geonamesName": "Gumare",
+      "geonamesAdmin1": "11"
+    },
+    {
+      "code": "71-16",
+      "name": "Shakawe",
+      "population": 10589,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        21.84219,
+        -18.36536
+      ],
+      "geonamesId": "933077",
+      "geonamesName": "Shakawe",
+      "geonamesAdmin1": "11"
+    },
+    {
+      "code": "40-07",
+      "name": "Oodi",
+      "population": 10257,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        26.03389,
+        -24.57306
+      ],
+      "geonamesId": "11205201",
+      "geonamesName": "Oodi",
+      "geonamesAdmin1": "09"
+    },
+    {
+      "code": "40-04",
+      "name": "Bokaa",
+      "population": 9146,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        26.01667,
+        -24.45
+      ],
+      "geonamesId": "933881",
+      "geonamesName": "Bokaa",
+      "geonamesAdmin1": "05"
+    },
+    {
+      "code": "72-02",
+      "name": "Kasane",
+      "population": 9143,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.16024,
+        -17.80165
+      ],
+      "geonamesId": "933677",
+      "geonamesName": "Kasane",
+      "geonamesAdmin1": "12"
+    },
+    {
+      "code": "54-19",
+      "name": "Borolong",
+      "population": 8917,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        27.33611,
+        -21.10361
+      ],
+      "geonamesId": "11258456",
+      "geonamesName": "Borolong",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "51-28",
+      "name": "Shoshong",
+      "population": 8887,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        26.51,
+        -23.0389
+      ],
+      "geonamesId": "933064",
+      "geonamesName": "Shoshong",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "10-26",
+      "name": "Molapowabojang",
+      "population": 8722,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.53017,
+        -25.20703
+      ],
+      "geonamesId": "11204609",
+      "geonamesName": "Molapowabojang",
+      "geonamesAdmin1": "10"
+    },
+    {
+      "code": "72-03",
+      "name": "Kazungula",
+      "population": 8704,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.2413,
+        -17.80399
+      ],
+      "geonamesId": "7575074",
+      "geonamesName": "Kazungula",
+      "coordinateScope": "Named populated residential area verified inside the official census locality polygon",
+      "coordinateValidation": "https://data.humdata.org/dataset/cod-ab-bwa"
+    },
+    {
+      "code": "31-01",
+      "name": "Letlhakeng",
+      "population": 8343,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.02977,
+        -24.09442
+      ],
+      "geonamesId": "933534",
+      "geonamesName": "Letlhakeng",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "54-02",
+      "name": "Nata",
+      "population": 7779,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        26.18333,
+        -20.21667
+      ],
+      "geonamesId": "933238",
+      "geonamesName": "Nata",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "53-07",
+      "name": "Tsienyane/Rakops",
+      "population": 7439,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        24.41667,
+        -21.05
+      ],
+      "geonamesId": "933150",
+      "geonamesName": "Rakops",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "30-22",
+      "name": "Mmankgodi",
+      "population": 7396,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.64963,
+        -24.72601
+      ],
+      "geonamesId": "7752616",
+      "geonamesName": "Mmankgodi",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "50-16",
+      "name": "Lerala",
+      "population": 7204,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        27.76503,
+        -22.78797
+      ],
+      "geonamesId": "11550118",
+      "geonamesName": "Lerala",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "20-01",
+      "name": "Otse",
+      "population": 6986,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.73333,
+        -25.01667
+      ],
+      "geonamesId": "933184",
+      "geonamesName": "Otse",
+      "geonamesAdmin1": "09"
+    },
+    {
+      "code": "30-14",
+      "name": "Kumakwane",
+      "population": 6826,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.69918,
+        -24.65522
+      ],
+      "geonamesId": "7752587",
+      "geonamesName": "Kumakwane",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "10-16",
+      "name": "Sese",
+      "population": 6798,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        24.8063,
+        -24.6561
+      ],
+      "geonamesId": "11258235",
+      "geonamesName": "Sese",
+      "geonamesAdmin1": "10"
+    },
+    {
+      "code": "91-01",
+      "name": "Kang",
+      "population": 6764,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        22.78762,
+        -23.67518
+      ],
+      "geonamesId": "933692",
+      "geonamesName": "Kang",
+      "geonamesAdmin1": "04"
+    },
+    {
+      "code": "30-02",
+      "name": "Lentsweletau",
+      "population": 6653,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.85215,
+        -24.24863
+      ],
+      "geonamesId": "7908686",
+      "geonamesName": "Lentsweletau",
+      "geonamesAdmin1": "06"
+    },
+    {
+      "code": "20-03",
+      "name": "Ramotswa Station/Taung",
+      "population": 6286,
+      "page": 17,
+      "kind": "Village",
+      "center": [
+        25.832371,
+        -24.8476205
+      ],
+      "geonamesId": "12640342",
+      "geonamesName": "Ramotswa Station/Taung",
+      "geonamesAdmin1": "09",
+      "coordinateSource": "https://www.openstreetmap.org/node/11299498807",
+      "coordinateScope": "Ramotswa railway station within the named census village, replacing a displaced gazetteer point",
+      "coordinateValidation": "https://www.botswanarailways.co.bw/ramotswa-br-station"
+    },
+    {
+      "code": "60-15",
+      "name": "Masunga",
+      "population": 6216,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        27.44875,
+        -20.62455
+      ],
+      "geonamesId": "933390",
+      "geonamesName": "Masunga",
+      "geonamesAdmin1": "08"
+    },
+    {
+      "code": "10-14",
+      "name": "Lotlhakane",
+      "population": 6045,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        25.4586,
+        -25.08612
+      ],
+      "geonamesId": "933506",
+      "geonamesName": "Lotlhakane",
+      "geonamesAdmin1": "10"
+    },
+    {
+      "code": "52-11",
+      "name": "Sefophe",
+      "population": 6001,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        27.96667,
+        -22.18333
+      ],
+      "geonamesId": "933112",
+      "geonamesName": "Sefophe",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "40-03",
+      "name": "Rasesa",
+      "population": 5966,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        26.07287,
+        -24.37306
+      ],
+      "geonamesId": "11353058",
+      "geonamesName": "Rasesa",
+      "geonamesAdmin1": "05"
+    },
+    {
+      "code": "54-01",
+      "name": "Maitengwe",
+      "population": 5929,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        27.20997,
+        -20.12889
+      ],
+      "geonamesId": "7573795",
+      "geonamesName": "Maitengwe",
+      "geonamesAdmin1": "08"
+    },
+    {
+      "code": "54-15",
+      "name": "Mathangwane",
+      "population": 5918,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        27.33333,
+        -21.0
+      ],
+      "geonamesId": "11467814",
+      "geonamesName": "Mathangwane",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "54-29",
+      "name": "Shashe-Mooke",
+      "population": 5897,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        27.37868,
+        -21.18794
+      ],
+      "geonamesId": "7754332",
+      "geonamesName": "Shashe Mooke",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "11-10",
+      "name": "Good Hope",
+      "population": 5672,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        25.43921,
+        -25.46712
+      ],
+      "geonamesId": "7739165",
+      "geonamesName": "Good Hope",
+      "geonamesAdmin1": "10"
+    },
+    {
+      "code": "54-30",
+      "name": "Gweta",
+      "population": 5548,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        25.23333,
+        -20.18333
+      ],
+      "geonamesId": "933734",
+      "geonamesName": "Gweta",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "11-34",
+      "name": "Mmathethe",
+      "population": 5421,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        25.26911,
+        -25.32189
+      ],
+      "geonamesId": "7739123",
+      "geonamesName": "Mmathete",
+      "geonamesAdmin1": "10"
+    },
+    {
+      "code": "51-13",
+      "name": "Sefhare",
+      "population": 5381,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        27.46906,
+        -23.02904
+      ],
+      "geonamesId": "7867072",
+      "geonamesName": "Sefhare",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "54-17",
+      "name": "Chadibe",
+      "population": 5371,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        27.34786,
+        -21.06532
+      ],
+      "geonamesId": "7754329",
+      "geonamesName": "Chadibe",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "52-02",
+      "name": "Tsetsebjwe",
+      "population": 5248,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        28.39797,
+        -22.41595
+      ],
+      "geonamesId": "7847878",
+      "geonamesName": "Tsetsebjwe",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "91-03",
+      "name": "Hukuntsi",
+      "population": 5224,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        21.77962,
+        -23.9988
+      ],
+      "geonamesId": "933726",
+      "geonamesName": "Hukuntsi",
+      "geonamesAdmin1": "04"
+    },
+    {
+      "code": "80-07",
+      "name": "Charles Hill",
+      "population": 5164,
+      "page": 18,
+      "kind": "Village",
+      "center": [
+        20.09278,
+        -22.27639
+      ],
+      "geonamesId": "11204768",
+      "geonamesName": "Charles Hill",
+      "geonamesAdmin1": "03"
+    },
+    {
+      "code": "01",
+      "name": "Gaborone",
+      "population": 246325,
+      "page": 10,
+      "kind": "City",
+      "center": [
+        25.90859,
+        -24.65451
+      ],
+      "geonamesId": "933773",
+      "geonamesName": "Gaborone",
+      "geonamesAdmin1": "14"
+    },
+    {
+      "code": "02",
+      "name": "Francistown",
+      "population": 103417,
+      "page": 13,
+      "kind": "City",
+      "center": [
+        27.50778,
+        -21.17
+      ],
+      "geonamesId": "933778",
+      "geonamesName": "Francistown",
+      "geonamesAdmin1": "13"
+    },
+    {
+      "code": "03",
+      "name": "Lobatse",
+      "population": 29772,
+      "page": 14,
+      "kind": "Town",
+      "center": [
+        25.67728,
+        -25.22435
+      ],
+      "geonamesId": "933521",
+      "geonamesName": "Lobatse",
+      "geonamesAdmin1": "16"
+    },
+    {
+      "code": "04",
+      "name": "Selibe Phikwe",
+      "population": 42488,
+      "page": 14,
+      "kind": "Town",
+      "center": [
+        27.84296,
+        -21.97895
+      ],
+      "geonamesId": "933099",
+      "geonamesName": "Selebi-Phikwe",
+      "geonamesAdmin1": "17"
+    },
+    {
+      "code": "05",
+      "name": "Orapa",
+      "population": 8648,
+      "page": 15,
+      "kind": "Town",
+      "center": [
+        25.37642,
+        -21.3115
+      ],
+      "geonamesId": "933186",
+      "geonamesName": "Orapa",
+      "geonamesAdmin1": "01"
+    },
+    {
+      "code": "06",
+      "name": "Jwaneng",
+      "population": 18784,
+      "page": 15,
+      "kind": "Town",
+      "center": [
+        24.72806,
+        -24.60167
+      ],
+      "geonamesId": "8308627",
+      "geonamesName": "Jwaneng",
+      "geonamesAdmin1": "15"
+    },
+    {
+      "code": "07",
+      "name": "Sowa",
+      "population": 2914,
+      "page": 15,
+      "kind": "Town",
+      "center": [
+        26.224,
+        -20.564
+      ],
+      "geonamesId": "11593974",
+      "geonamesName": "Sowa",
+      "geonamesAdmin1": "18"
+    }
+  ],
+  "namibia": [
+    {
+      "name": "Aroab",
+      "population": 2651,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        19.6527,
+        -26.79744
+      ],
+      "geonamesId": "3358610",
+      "geonamesName": "Aroab",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Berseba",
+      "population": 992,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        17.76817,
+        -25.9969
+      ],
+      "geonamesId": "3358422",
+      "geonamesName": "Berseba",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Bethanie",
+      "population": 2372,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        17.1599,
+        -26.49958
+      ],
+      "geonamesId": "3358416",
+      "geonamesName": "Bethanie",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Karasburg",
+      "population": 6621,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        18.74797,
+        -28.01658
+      ],
+      "geonamesId": "3356343",
+      "geonamesName": "Karasburg",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Keetmanshoop",
+      "population": 27862,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        18.13359,
+        -26.57654
+      ],
+      "geonamesId": "3356264",
+      "geonamesName": "Keetmanshoop",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Koes",
+      "population": 2264,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        19.12814,
+        -25.93091
+      ],
+      "geonamesId": "3356049",
+      "geonamesName": "Ko\u00ebs",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Luderitz",
+      "population": 16156,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        15.15383,
+        -26.64807
+      ],
+      "geonamesId": "3355672",
+      "geonamesName": "L\u00fcderitz",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Oranjemund",
+      "population": 7736,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        16.42728,
+        -28.55153
+      ],
+      "geonamesId": "3354071",
+      "geonamesName": "Oranjemund",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Tses",
+      "population": 2053,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        18.12469,
+        -25.88489
+      ],
+      "geonamesId": "3352609",
+      "geonamesName": "Tses",
+      "geonamesAdmin1": "31"
+    },
+    {
+      "name": "Arandis",
+      "population": 5726,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        14.97385,
+        -22.41749
+      ],
+      "geonamesId": "3358670",
+      "geonamesName": "Arandis",
+      "geonamesAdmin1": "29"
+    },
+    {
+      "name": "Henties Bay",
+      "population": 7569,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        14.28394,
+        -22.11609
+      ],
+      "geonamesId": "3356832",
+      "geonamesName": "Henties Bay",
+      "geonamesAdmin1": "29"
+    },
+    {
+      "name": "Karibib",
+      "population": 8434,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        15.85654,
+        -21.93554
+      ],
+      "geonamesId": "3356332",
+      "geonamesName": "Karibib",
+      "geonamesAdmin1": "29"
+    },
+    {
+      "name": "Omaruru",
+      "population": 10767,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        15.94611,
+        -21.42403
+      ],
+      "geonamesId": "3354540",
+      "geonamesName": "Omaruru",
+      "geonamesAdmin1": "29"
+    },
+    {
+      "name": "Swakopmund",
+      "population": 75921,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        14.52663,
+        -22.67842
+      ],
+      "geonamesId": "3352844",
+      "geonamesName": "Swakopmund",
+      "geonamesAdmin1": "29"
+    },
+    {
+      "name": "Usakos",
+      "population": 5094,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        15.58601,
+        -22.00219
+      ],
+      "geonamesId": "3352461",
+      "geonamesName": "Usakos",
+      "geonamesAdmin1": "29"
+    },
+    {
+      "name": "Walvis Bay",
+      "population": 102704,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        14.50528,
+        -22.9575
+      ],
+      "geonamesId": "3359638",
+      "geonamesName": "Walvis Bay",
+      "geonamesAdmin1": "29"
+    },
+    {
+      "name": "Aranos",
+      "population": 5493,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        19.11754,
+        -24.14126
+      ],
+      "geonamesId": "3358666",
+      "geonamesName": "Aranos",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Gibeon",
+      "population": 4120,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        17.76935,
+        -25.12213
+      ],
+      "geonamesId": "3357293",
+      "geonamesName": "Gibeon",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Gochas",
+      "population": 1868,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        18.80137,
+        -24.85762
+      ],
+      "geonamesId": "3357234",
+      "geonamesName": "Gochas",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Kalkrand",
+      "population": 1602,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        17.58635,
+        -24.07367
+      ],
+      "geonamesId": "3356477",
+      "geonamesName": "Kalkrand",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Maltahohe",
+      "population": 3464,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        16.9859,
+        -24.83923
+      ],
+      "geonamesId": "3355624",
+      "geonamesName": "Maltah\u00f6he",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Mariental",
+      "population": 18494,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        17.96471,
+        -24.62705
+      ],
+      "geonamesId": "3355595",
+      "geonamesName": "Mariental",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Rehoboth",
+      "population": 40788,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        17.09,
+        -23.317
+      ],
+      "geonamesId": "3353540",
+      "geonamesName": "Rehoboth",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Stampriet",
+      "population": 3388,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        18.40464,
+        -24.34494
+      ],
+      "geonamesId": "3352934",
+      "geonamesName": "Stampriet",
+      "geonamesAdmin1": "30"
+    },
+    {
+      "name": "Divundu",
+      "population": 5787,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        21.51736,
+        -18.08894
+      ],
+      "geonamesId": "13455698",
+      "geonamesName": "Divundu",
+      "geonamesAdmin1": "40"
+    },
+    {
+      "name": "Rundu",
+      "population": 118632,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        19.77314,
+        -17.91796
+      ],
+      "geonamesId": "3353383",
+      "geonamesName": "Rundu",
+      "geonamesAdmin1": "40"
+    },
+    {
+      "name": "Nkurenkuru",
+      "population": 10463,
+      "page": 115,
+      "kind": "Town",
+      "center": [
+        18.61966,
+        -17.64182
+      ],
+      "geonamesId": "3355137",
+      "geonamesName": "Nkurenkuru",
+      "geonamesAdmin1": "41"
+    },
+    {
+      "name": "Windhoek",
+      "population": 486186,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        17.08323,
+        -22.55941
+      ],
+      "geonamesId": "3352136",
+      "geonamesName": "Windhoek",
+      "geonamesAdmin1": "21"
+    },
+    {
+      "name": "Kamanjab",
+      "population": 3915,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        14.8452,
+        -19.62882
+      ],
+      "geonamesId": "3356469",
+      "geonamesName": "Kamanjab",
+      "geonamesAdmin1": "32"
+    },
+    {
+      "name": "Khorixas",
+      "population": 9371,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        14.96203,
+        -20.37711
+      ],
+      "geonamesId": "3356213",
+      "geonamesName": "Khorixas",
+      "geonamesAdmin1": "32"
+    },
+    {
+      "name": "Opuwo",
+      "population": 12331,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        13.83998,
+        -18.06068
+      ],
+      "geonamesId": "3354077",
+      "geonamesName": "Opuwo",
+      "geonamesAdmin1": "32"
+    },
+    {
+      "name": "Outjo",
+      "population": 15063,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        16.15415,
+        -20.10691
+      ],
+      "geonamesId": "3353715",
+      "geonamesName": "Outjo",
+      "geonamesAdmin1": "32"
+    },
+    {
+      "name": "Eenhana",
+      "population": 16588,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        16.3294,
+        -17.48535
+      ],
+      "geonamesId": "3357804",
+      "geonamesName": "Eenhana",
+      "geonamesAdmin1": "33"
+    },
+    {
+      "name": "Okongo",
+      "population": 3564,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        17.21667,
+        -17.56667
+      ],
+      "geonamesId": "3354650",
+      "geonamesName": "Ekongo",
+      "geonamesAdmin1": "33"
+    },
+    {
+      "name": "Helao Nafidi",
+      "population": 29119,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        15.89107,
+        -17.39321
+      ],
+      "geonamesId": "12718704",
+      "geonamesName": "Helao Nafidi",
+      "geonamesAdmin1": "33"
+    },
+    {
+      "name": "Gobabis",
+      "population": 33418,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        18.97159,
+        -22.45338
+      ],
+      "geonamesId": "3357247",
+      "geonamesName": "Gobabis",
+      "geonamesAdmin1": "35"
+    },
+    {
+      "name": "Leonardville",
+      "population": 2099,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        18.7912,
+        -23.50462
+      ],
+      "geonamesId": "3355748",
+      "geonamesName": "Leonardville",
+      "geonamesAdmin1": "35"
+    },
+    {
+      "name": "Otjinene",
+      "population": 6876,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        18.7836,
+        -21.13889
+      ],
+      "geonamesId": "3353863",
+      "geonamesName": "Otjinene",
+      "geonamesAdmin1": "35"
+    },
+    {
+      "name": "Witvlei",
+      "population": 2633,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        18.49359,
+        -22.41039
+      ],
+      "geonamesId": "3352083",
+      "geonamesName": "Witvlei",
+      "geonamesAdmin1": "35"
+    },
+    {
+      "name": "Okahao",
+      "population": 7486,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        15.06677,
+        -17.88758
+      ],
+      "geonamesId": "3354897",
+      "geonamesName": "Okahao",
+      "geonamesAdmin1": "36"
+    },
+    {
+      "name": "Oshikuk u",
+      "population": 5499,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        15.48173,
+        -17.63584
+      ],
+      "geonamesId": "3353989",
+      "geonamesName": "Oshikuku",
+      "geonamesAdmin1": "36"
+    },
+    {
+      "name": "Outapi",
+      "population": 13664,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        14.98383,
+        -17.50375
+      ],
+      "geonamesId": "3371197",
+      "geonamesName": "Outapi",
+      "geonamesAdmin1": "36"
+    },
+    {
+      "name": "Ruacana",
+      "population": 5939,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        14.41504,
+        -17.42817
+      ],
+      "geonamesId": "3353400",
+      "geonamesName": "Ruacana",
+      "geonamesAdmin1": "32"
+    },
+    {
+      "name": "Tsandi",
+      "population": 2595,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        14.88575,
+        -17.74292
+      ],
+      "geonamesId": "3352636",
+      "geonamesName": "Tsandi",
+      "geonamesAdmin1": "36"
+    },
+    {
+      "name": "Ondangwa",
+      "population": 30364,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        15.98037,
+        -17.90824
+      ],
+      "geonamesId": "3354247",
+      "geonamesName": "Ondangwa",
+      "geonamesAdmin1": "37"
+    },
+    {
+      "name": "Ongwediva",
+      "population": 33777,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        15.76564,
+        -17.77198
+      ],
+      "geonamesId": "3354147",
+      "geonamesName": "Ongwediva",
+      "geonamesAdmin1": "37"
+    },
+    {
+      "name": "Oshakati",
+      "population": 58656,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        15.70436,
+        -17.78833
+      ],
+      "geonamesId": "3354021",
+      "geonamesName": "Oshakati",
+      "geonamesAdmin1": "37"
+    },
+    {
+      "name": "Omuthiya",
+      "population": 7560,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        16.58146,
+        -18.36463
+      ],
+      "geonamesId": "3354367",
+      "geonamesName": "Omuthiya",
+      "geonamesAdmin1": "38"
+    },
+    {
+      "name": "Oniipa",
+      "population": 4740,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        16.03333,
+        -17.91667
+      ],
+      "geonamesId": "3354130",
+      "geonamesName": "Oniipa",
+      "geonamesAdmin1": "38"
+    },
+    {
+      "name": "Tsumeb",
+      "population": 34960,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        17.71345,
+        -19.24842
+      ],
+      "geonamesId": "3352593",
+      "geonamesName": "Tsumeb",
+      "geonamesAdmin1": "38"
+    },
+    {
+      "name": "Grootfontein",
+      "population": 26839,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        18.1003,
+        -19.57328
+      ],
+      "geonamesId": "3357114",
+      "geonamesName": "Grootfontein",
+      "geonamesAdmin1": "39"
+    },
+    {
+      "name": "Okahandja",
+      "population": 45182,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        16.9029,
+        -21.98141
+      ],
+      "geonamesId": "3354898",
+      "geonamesName": "Okahandja",
+      "geonamesAdmin1": "39"
+    },
+    {
+      "name": "Okakarara",
+      "population": 7123,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        17.45942,
+        -20.58755
+      ],
+      "geonamesId": "3354876",
+      "geonamesName": "Okakarara",
+      "geonamesAdmin1": "39"
+    },
+    {
+      "name": "Otavi",
+      "population": 10756,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        17.33986,
+        -19.63805
+      ],
+      "geonamesId": "3353934",
+      "geonamesName": "Otavi",
+      "geonamesAdmin1": "39"
+    },
+    {
+      "name": "Otjiwarongo",
+      "population": 49022,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        16.64772,
+        -20.46369
+      ],
+      "geonamesId": "3353811",
+      "geonamesName": "Otjiwarongo",
+      "geonamesAdmin1": "39"
+    },
+    {
+      "name": "Bukalo",
+      "population": 1935,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        24.53049,
+        -17.71799
+      ],
+      "geonamesId": "877338",
+      "geonamesName": "Bukalo",
+      "geonamesAdmin1": "28"
+    },
+    {
+      "name": "Katima Mulilo",
+      "population": 46401,
+      "page": 116,
+      "kind": "Town",
+      "center": [
+        24.27574,
+        -17.50467
+      ],
+      "geonamesId": "877178",
+      "geonamesName": "Katima Mulilo",
+      "geonamesAdmin1": "28"
+    }
+  ]
+}

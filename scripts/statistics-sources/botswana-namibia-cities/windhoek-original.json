@@ -1,0 +1,98 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "147559804": {
+        "pageid": 147559804,
+        "ns": 6,
+        "title": "File:Flag of Windhoek.gif",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 6676,
+            "width": 324,
+            "height": 216,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Windhoek.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flag_of_Windhoek.gif",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=147559804",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-04-20 14:07:31",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Flag of Windhoek",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Windhoek|Flags of municipalities of Namibia",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "This is the flag of Windhoek, Namibia",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2014-01-14",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://www.crwflags.com/fotw/flags/na-wind.html\">https://www.crwflags.com/fotw/flags/na-wind.html</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "City of Windhoek",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

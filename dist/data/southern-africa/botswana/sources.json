@@ -1,0 +1,67 @@
+{
+  "retrieved": "2026-10-13",
+  "counts": {
+    "1": 10,
+    "2": 28,
+    "3": 519
+  },
+  "coverage": "2011 census boundary snapshot, 28 census district definitions are also used in the 2022 census. Urban census districts assigned to their geographic surrounding district for display, preserving polygons. Raw first-level city/town authorities remain separately documented. These are not the later 2023 district council boundaries.",
+  "processing": "Shared topology, district and region polygons dissolved from census subdistricts and constituencies. Locality polygons form a complete census geography partition, clipped to their aligned parent; these census areas are distinct from built-up settlement outlines. The new country exterior follows the existing South African frontier within an 8 km inland digitization corridor; existing South African polygons are unchanged. Botswana is aligned to Namibia, and residual overlaps are erased. Shared subdivision edges only: coastlines are unoutlined. Detailed geometry loads as one country bundle. Spherical geometry area is an estimate, superseded by published census areas where available.",
+  "seamReports": {
+    "namibia-south-africa": {
+      "changedEdges": 589,
+      "maxDisplacementMetres": 7235.803564170887,
+      "changedRegions": [
+        "NA-C-oranjemund",
+        "NA-C-karasburg-west",
+        "NA-C-karasburg-east",
+        "NA-C-keetmanshoop-rural",
+        "NA-C-aranos"
+      ]
+    },
+    "botswana-south-africa": {
+      "changedEdges": 3827,
+      "maxDisplacementMetres": 7519.53165793894,
+      "changedRegions": [
+        "BW-C-gaborone",
+        "BW-C-barolong",
+        "BW-C-south-east",
+        "BW-C-kgatleng",
+        "BW-C-serowe-palapye",
+        "BW-C-mahalapye",
+        "BW-C-bobonong",
+        "BW-C-kgalagadi-south",
+        "BW-C-kgalagadi-north"
+      ]
+    },
+    "botswana-namibia": {
+      "changedEdges": 2198,
+      "maxDisplacementMetres": 7840.043575996889,
+      "changedRegions": [
+        "BW-C-ngamiland-east",
+        "BW-C-ngamiland-west",
+        "BW-C-chobe",
+        "BW-C-ghanzi",
+        "BW-C-kgalagadi-south",
+        "BW-C-kgalagadi-north"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "source": "UNFPA, OCHA Common Operational Dataset administrative boundaries",
+      "url": "https://data.humdata.org/dataset/cod-ab-bwa",
+      "download": "https://data.humdata.org/dataset/74d579a7-e30b-445a-9ff3-1d673da53d3b/resource/61ec818b-57eb-4043-8a13-f5d59c7a192b/download/bwa_adm_2011_shp.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "boundaryYear": 2011,
+      "counts": {
+        "sourceFirst": 17,
+        "second": 28,
+        "third": 519
+      },
+      "secondFile": "botswana-second.geojson",
+      "thirdFile": "botswana-third.geojson",
+      "note": "2011 census boundary snapshot, 28 census district definitions are also used in the 2022 census. Urban census districts assigned to their geographic surrounding district for display, preserving polygons. Raw first-level city/town authorities remain separately documented. These are not the later 2023 district council boundaries."
+    }
+  ]
+}

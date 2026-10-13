@@ -1,0 +1,97 @@
+{
+  "continue": {
+    "iistart": "2026-09-18T15:31:24Z",
+    "continue": "||"
+  },
+  "query": {
+    "pages": {
+      "327754": {
+        "pageid": 327754,
+        "ns": 6,
+        "title": "File:Flag of Namibia.svg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 788,
+            "width": 900,
+            "height": 600,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Namibia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flag_of_Namibia.svg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=327754",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2026-09-18 23:45:05",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Flag of Namibia",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "With insignia|PD-Namibia|Files with derivative versions|SVG national flag of Namibia|SVG flags of Namibia - aspect ratio of 3:2|SVG roundels of Namibia|Valid SVG created with Text Editor:Flags",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Flag of Namibia",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "1990-03-21",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<p>SVG implementation of the description in Schedule 6, Page 66 of the Constitution of Namibia. \n\"The National Flag of Namibia shall be rectangular in the proportion of three in the length to two in the width, tierced per bend reversed, blue, white and green; the white bend reversed, which shall be one third of the width of the flag, is charged with another of red, one quarter of the width of the flag. In the upper hoist there shall be a gold sun with twelve straight rays, the diameter of which shall be one third of the width of the flag, with its vertical axis one fifth of the distance from the hoist, positioned equidistant from the top edge and from the reversed bend. The rays, which shall each be two fifths of the radius of the sun, issue from the outer edge of a blue ring, which shall be one tenth of the radius of the sun.\" Pantone from National Symbols of the Republic of Namibia Act, 2018, Schedule 4. \"The colours of the Presidential Standard must be the same as that of the National Flag of Namibia, namely:\nPantone: \nBlue: 294c\nYellow (gold): 116c\nGreen: 347c\n</p>\nRed: 186c\"",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "SVG by <a href=\"//commons.wikimedia.org/wiki/User:Vzb83~commonswiki\" title=\"User:Vzb83~commonswiki\">Vzb83~commonswiki</a> et al.",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "insignia",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

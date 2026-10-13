@@ -1,0 +1,800 @@
+{
+  "pages": {
+    "batchcomplete": "",
+    "query": {
+      "redirects": [
+        {
+          "from": "Kanye",
+          "to": "Kanye West"
+        }
+      ],
+      "pages": {
+        "1741223": {
+          "pageid": 1741223,
+          "ns": 0,
+          "title": "Francistown",
+          "pageprops": {
+            "page_image_free": "The_main_square_in_Francistown_(3297095166).jpg",
+            "wikibase-shortdesc": "City in Botswana",
+            "wikibase_item": "Q165422"
+          }
+        },
+        "56664": {
+          "pageid": 56664,
+          "ns": 0,
+          "title": "Gaborone",
+          "pageprops": {
+            "page_image_free": "View_from_I-Tower_SE_20200712.jpg",
+            "wikibase-shortdesc": "Capital and largest city of Botswana",
+            "wikibase_item": "Q3919"
+          }
+        },
+        "3602167": {
+          "pageid": 3602167,
+          "ns": 0,
+          "title": "Henties Bay",
+          "pageprops": {
+            "page_image_free": "Henties_bay.jpg",
+            "wikibase-shortdesc": "Town in Erongo Region, Namibia",
+            "wikibase_item": "Q1013389"
+          }
+        },
+        "3446793": {
+          "pageid": 3446793,
+          "ns": 0,
+          "title": "Jwaneng",
+          "pageprops": {
+            "page_image_free": "Welcome_to_Jwaneng.JPG",
+            "wikibase-shortdesc": "Town in Botswana",
+            "wikibase_item": "Q165954"
+          }
+        },
+        "1825327": {
+          "pageid": 1825327,
+          "ns": 0,
+          "title": "Katima Mulilo",
+          "pageprops": {
+            "page_image_free": "Katima_Mulilo_Bridge.jpg",
+            "wikibase-shortdesc": "Town in Namibia",
+            "wikibase_item": "Q864100"
+          }
+        },
+        "1754291": {
+          "pageid": 1754291,
+          "ns": 0,
+          "title": "Lobatse",
+          "pageprops": {
+            "page_image_free": "My_Home_Town_from_a_Hilltop_,_Lobatse.jpg",
+            "wikibase-shortdesc": "Town in Botswana",
+            "wikibase_item": "Q165768"
+          }
+        },
+        "363638": {
+          "pageid": 363638,
+          "ns": 0,
+          "title": "L\u00fcderitz",
+          "pageprops": {
+            "defaultsort": "Luderitz",
+            "page_image_free": "Lutheran_Church_Luderotz.jpg",
+            "wikibase-shortdesc": "Town in \u01c1Karas Region, Namibia",
+            "wikibase_item": "Q159325"
+          }
+        },
+        "3446839": {
+          "pageid": 3446839,
+          "ns": 0,
+          "title": "Mahalapye",
+          "pageprops": {
+            "wikibase-shortdesc": "Place in Central District, Botswana",
+            "wikibase_item": "Q170724"
+          }
+        },
+        "5726057": {
+          "pageid": 5726057,
+          "ns": 0,
+          "title": "Maltah\u00f6he",
+          "pageprops": {
+            "defaultsort": "Maltahohe",
+            "page_image_free": "Maltahoehe_Hotel.jpg",
+            "wikibase-shortdesc": "Village in Hardap Region, Namibia",
+            "wikibase_item": "Q666079"
+          }
+        },
+        "40611732": {
+          "pageid": 40611732,
+          "ns": 0,
+          "title": "Maun",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q4285540"
+          }
+        },
+        "1363168": {
+          "pageid": 1363168,
+          "ns": 0,
+          "title": "Mochudi",
+          "pageprops": {
+            "page_image_free": "Mochudi.jpg",
+            "wikibase-shortdesc": "Village in Botswana",
+            "wikibase_item": "Q615877"
+          }
+        },
+        "3446863": {
+          "pageid": 3446863,
+          "ns": 0,
+          "title": "Mogoditshane",
+          "pageprops": {
+            "page_image_free": "Pula_spar_mogoditshane_road.jpg",
+            "wikibase-shortdesc": "City in Kweneng District, Botswana",
+            "wikibase_item": "Q170717"
+          }
+        },
+        "1638507": {
+          "pageid": 1638507,
+          "ns": 0,
+          "title": "Molepolole",
+          "pageprops": {
+            "page_image_free": "New_Molepolole_Shopping_Mall.jpg",
+            "wikibase-shortdesc": "Village in Kweneng District, Botswana",
+            "wikibase_item": "Q170725"
+          }
+        },
+        "1963085": {
+          "pageid": 1963085,
+          "ns": 0,
+          "title": "Okahandja",
+          "pageprops": {
+            "wikibase-shortdesc": "City in Otjozondjupa Region, Namibia",
+            "wikibase_item": "Q597491"
+          }
+        },
+        "4524225": {
+          "pageid": 4524225,
+          "ns": 0,
+          "title": "Oshakati",
+          "pageprops": {
+            "page_image_free": "Oshakati_Town_Council.jpg",
+            "wikibase-shortdesc": "Town in Oshana Region, Namibia",
+            "wikibase_item": "Q985622"
+          }
+        },
+        "2477506": {
+          "pageid": 2477506,
+          "ns": 0,
+          "title": "Otjiwarongo",
+          "pageprops": {
+            "page_image_free": "Otjiwarongo-Eglises_(2).jpg",
+            "wikibase-shortdesc": "City in Otjozondjupa Region, Namibia",
+            "wikibase_item": "Q993149"
+          }
+        },
+        "979290": {
+          "pageid": 979290,
+          "ns": 0,
+          "title": "Palapye",
+          "pageprops": {
+            "page_image_free": "Palapye1987.jpg",
+            "wikibase-shortdesc": "Town in Central District, Botswana",
+            "wikibase_item": "Q170711"
+          }
+        },
+        "152996": {
+          "pageid": 152996,
+          "ns": 0,
+          "title": "Rehoboth",
+          "pageprops": {
+            "disambiguation": "",
+            "expectshortpage": "",
+            "toc": "",
+            "wikibase-shortdesc": "Topics referred to by the same term",
+            "wikibase_item": "Q403659"
+          }
+        },
+        "3947876": {
+          "pageid": 3947876,
+          "ns": 0,
+          "title": "Rundu",
+          "pageprops": {
+            "page_image_free": "Rundu_(2019).jpg",
+            "wikibase-shortdesc": "Town in Namibia",
+            "wikibase_item": "Q662291"
+          }
+        },
+        "906337": {
+          "pageid": 906337,
+          "ns": 0,
+          "title": "Selebi-Phikwe",
+          "pageprops": {
+            "page_image_free": "BCL_old_train_Monument_in_Selibe-Phikwe.jpg",
+            "wikibase-shortdesc": "City in Botswana",
+            "wikibase_item": "Q141263"
+          }
+        },
+        "911602": {
+          "pageid": 911602,
+          "ns": 0,
+          "title": "Serowe",
+          "pageprops": {
+            "page_image_free": "Straight_lines.jpg",
+            "wikibase-shortdesc": "Place in Serowe District, Botswana",
+            "wikibase_item": "Q855634"
+          }
+        },
+        "949841": {
+          "pageid": 949841,
+          "ns": 0,
+          "title": "Swakopmund",
+          "pageprops": {
+            "page_image_free": "Mole,_Jetty_and_Lighthouse_Swakopmund,_Namibia.jpg",
+            "wikibase-shortdesc": "City in Erongo, Namibia",
+            "wikibase_item": "Q59698"
+          }
+        },
+        "1314898": {
+          "pageid": 1314898,
+          "ns": 0,
+          "title": "Tsumeb",
+          "pageprops": {
+            "page_image_free": "Welcome_to_tsumeb.jpg",
+            "wikibase-shortdesc": "Town in Oshikoto Region, Namibia",
+            "wikibase_item": "Q639467"
+          }
+        },
+        "42895": {
+          "pageid": 42895,
+          "ns": 0,
+          "title": "Walvis Bay",
+          "pageprops": {
+            "page_image_free": "Walvis_Bay_aerial.jpg",
+            "wikibase-shortdesc": "Coastal town in Namibia",
+            "wikibase_item": "Q220843"
+          }
+        },
+        "57669": {
+          "pageid": 57669,
+          "ns": 0,
+          "title": "Windhoek",
+          "pageprops": {
+            "page_image_free": "Christ_Church_in_Windhoek,_Namibia.jpg",
+            "wikibase-shortdesc": "Capital and largest city of Namibia",
+            "wikibase_item": "Q3935"
+          }
+        },
+        "523032": {
+          "pageid": 523032,
+          "ns": 0,
+          "title": "Kanye West",
+          "pageprops": {
+            "defaultsort": "West, Kanye",
+            "page_image_free": "Kanye_West_at_the_2009_Tribeca_Film_Festival_(crop_2).jpg",
+            "wikibase-shortdesc": "American rapper and producer (born 1977)",
+            "wikibase_item": "Q15935"
+          }
+        }
+      }
+    }
+  },
+  "data": {
+    "warnings": {
+      "wbgetentities": {
+        "*": "Unrecognized value for parameter \"languages\": naq"
+      }
+    },
+    "entities": {
+      "Q165422": {
+        "type": "item",
+        "id": "Q165422",
+        "labels": {
+          "af": {
+            "language": "af",
+            "value": "Francistown"
+          },
+          "de": {
+            "language": "de",
+            "value": "Francistown"
+          },
+          "en": {
+            "language": "en",
+            "value": "Francistown"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "Francistown"
+          }
+        }
+      },
+      "Q3919": {
+        "type": "item",
+        "id": "Q3919",
+        "labels": {
+          "de": {
+            "language": "de",
+            "value": "Gaborone"
+          },
+          "en": {
+            "language": "en",
+            "value": "Gaborone"
+          },
+          "af": {
+            "language": "af",
+            "value": "Gaborone"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "Gaborone"
+          }
+        }
+      },
+      "Q1013389": {
+        "type": "item",
+        "id": "Q1013389",
+        "labels": {
+          "de": {
+            "language": "de",
+            "value": "Henties Bay"
+          },
+          "en": {
+            "language": "en",
+            "value": "Henties Bay"
+          },
+          "af": {
+            "language": "af",
+            "value": "Hentiesbaai"
+          }
+        }
+      },
+      "Q165954": {
+        "type": "item",
+        "id": "Q165954",
+        "labels": {
+          "af": {
+            "language": "af",
+            "value": "Jwaneng"
+          },
+          "en": {
+            "language": "en",
+            "value": "Jwaneng"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "Jwaneng"
+          },
+          "de": {
+            "language": "de",
+            "value": "Jwaneng"
+          }
+        }
+      },
+      "Q864100": {
+        "type": "item",
+        "id": "Q864100",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Katima Mulilo"
+          },
+          "de": {
+            "language": "de",
+            "value": "Katima Mulilo"
+          },
+          "af": {
+            "language": "af",
+            "value": "Katima Mulilo"
+          }
+        }
+      },
+      "Q165768": {
+        "type": "item",
+        "id": "Q165768",
+        "labels": {
+          "af": {
+            "language": "af",
+            "value": "Lobatse"
+          },
+          "de": {
+            "language": "de",
+            "value": "Lobatse"
+          },
+          "en": {
+            "language": "en",
+            "value": "Lobatse"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "Lobatse"
+          }
+        }
+      },
+      "Q159325": {
+        "type": "item",
+        "id": "Q159325",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "L\u00fcderitz"
+          },
+          "af": {
+            "language": "af",
+            "value": "L\u00fcderitz"
+          },
+          "de": {
+            "language": "de",
+            "value": "L\u00fcderitz"
+          },
+          "hz": {
+            "language": "hz",
+            "value": "L\u00fcderitz"
+          },
+          "kj": {
+            "language": "kj",
+            "value": "L\u00fcderitz"
+          },
+          "ng": {
+            "language": "ng",
+            "value": "L\u00fcderitz"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "L\u00fcderitz"
+          }
+        }
+      },
+      "Q170724": {
+        "type": "item",
+        "id": "Q170724",
+        "labels": {
+          "tn": {
+            "language": "tn",
+            "value": "Mahalapye"
+          },
+          "en": {
+            "language": "en",
+            "value": "Mahalapye"
+          },
+          "af": {
+            "language": "af",
+            "value": "Mahalapye"
+          },
+          "de": {
+            "language": "de",
+            "value": "Mahalapye"
+          }
+        }
+      },
+      "Q666079": {
+        "type": "item",
+        "id": "Q666079",
+        "labels": {
+          "de": {
+            "language": "de",
+            "value": "Maltah\u00f6he"
+          },
+          "en": {
+            "language": "en",
+            "value": "Maltah\u00f6he"
+          },
+          "af": {
+            "language": "af",
+            "value": "Maltah\u00f6he"
+          }
+        }
+      },
+      "Q4285540": {
+        "type": "item",
+        "id": "Q4285540",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Maun"
+          },
+          "de": {
+            "language": "de",
+            "value": "Maun"
+          }
+        }
+      },
+      "Q615877": {
+        "type": "item",
+        "id": "Q615877",
+        "labels": {
+          "af": {
+            "language": "af",
+            "value": "Mochudi"
+          },
+          "de": {
+            "language": "de",
+            "value": "Mochudi"
+          },
+          "en": {
+            "language": "en",
+            "value": "Mochudi"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "Mochudi"
+          }
+        }
+      },
+      "Q170717": {
+        "type": "item",
+        "id": "Q170717",
+        "labels": {
+          "tn": {
+            "language": "tn",
+            "value": "Mogoditshane"
+          },
+          "en": {
+            "language": "en",
+            "value": "Mogoditshane"
+          },
+          "de": {
+            "language": "de",
+            "value": "Mogoditshane"
+          }
+        }
+      },
+      "Q170725": {
+        "type": "item",
+        "id": "Q170725",
+        "labels": {
+          "tn": {
+            "language": "tn",
+            "value": "Molepolole"
+          },
+          "af": {
+            "language": "af",
+            "value": "Molepolole"
+          },
+          "de": {
+            "language": "de",
+            "value": "Molepolole"
+          },
+          "en": {
+            "language": "en",
+            "value": "Molepolole"
+          }
+        }
+      },
+      "Q597491": {
+        "type": "item",
+        "id": "Q597491",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Okahandja"
+          },
+          "de": {
+            "language": "de",
+            "value": "Okahandja"
+          },
+          "af": {
+            "language": "af",
+            "value": "Okahandja"
+          },
+          "hz": {
+            "language": "hz",
+            "value": "Okahandja"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "Okahandja"
+          }
+        }
+      },
+      "Q985622": {
+        "type": "item",
+        "id": "Q985622",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Oshakati"
+          },
+          "de": {
+            "language": "de",
+            "value": "Oshakati"
+          },
+          "af": {
+            "language": "af",
+            "value": "Oshakati"
+          }
+        }
+      },
+      "Q993149": {
+        "type": "item",
+        "id": "Q993149",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Otjiwarongo"
+          },
+          "af": {
+            "language": "af",
+            "value": "Otjiwarongo"
+          },
+          "de": {
+            "language": "de",
+            "value": "Otjiwarongo"
+          }
+        }
+      },
+      "Q170711": {
+        "type": "item",
+        "id": "Q170711",
+        "labels": {
+          "tn": {
+            "language": "tn",
+            "value": "Palapye"
+          },
+          "en": {
+            "language": "en",
+            "value": "Palapye"
+          },
+          "af": {
+            "language": "af",
+            "value": "Palapye"
+          },
+          "de": {
+            "language": "de",
+            "value": "Palapye"
+          }
+        }
+      },
+      "Q403659": {
+        "type": "item",
+        "id": "Q403659",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Rehoboth"
+          },
+          "de": {
+            "language": "de",
+            "value": "Rehoboth"
+          }
+        }
+      },
+      "Q662291": {
+        "type": "item",
+        "id": "Q662291",
+        "labels": {
+          "de": {
+            "language": "de",
+            "value": "Rundu"
+          },
+          "af": {
+            "language": "af",
+            "value": "Rundu"
+          },
+          "en": {
+            "language": "en",
+            "value": "Rundu"
+          }
+        }
+      },
+      "Q141263": {
+        "type": "item",
+        "id": "Q141263",
+        "labels": {
+          "af": {
+            "language": "af",
+            "value": "Selebi-Phikwe"
+          },
+          "de": {
+            "language": "de",
+            "value": "Selebi-Phikwe"
+          },
+          "en": {
+            "language": "en",
+            "value": "Selebi-Phikwe"
+          },
+          "tn": {
+            "language": "tn",
+            "value": "Selebi-Phikwe"
+          }
+        }
+      },
+      "Q855634": {
+        "type": "item",
+        "id": "Q855634",
+        "labels": {
+          "tn": {
+            "language": "tn",
+            "value": "Serowe"
+          },
+          "en": {
+            "language": "en",
+            "value": "Serowe"
+          },
+          "af": {
+            "language": "af",
+            "value": "Serowe"
+          },
+          "de": {
+            "language": "de",
+            "value": "Serowe"
+          }
+        }
+      },
+      "Q59698": {
+        "type": "item",
+        "id": "Q59698",
+        "labels": {
+          "af": {
+            "language": "af",
+            "value": "Swakopmund"
+          },
+          "de": {
+            "language": "de",
+            "value": "Swakopmund"
+          },
+          "en": {
+            "language": "en",
+            "value": "Swakopmund"
+          }
+        }
+      },
+      "Q639467": {
+        "type": "item",
+        "id": "Q639467",
+        "labels": {
+          "en": {
+            "language": "en",
+            "value": "Tsumeb"
+          },
+          "af": {
+            "language": "af",
+            "value": "Tsumeb"
+          },
+          "de": {
+            "language": "de",
+            "value": "Tsumeb"
+          }
+        }
+      },
+      "Q220843": {
+        "type": "item",
+        "id": "Q220843",
+        "labels": {
+          "af": {
+            "language": "af",
+            "value": "Walvisbaai"
+          },
+          "de": {
+            "language": "de",
+            "value": "Walvis Bay"
+          },
+          "en": {
+            "language": "en",
+            "value": "Walvis Bay"
+          }
+        }
+      },
+      "Q3935": {
+        "type": "item",
+        "id": "Q3935",
+        "labels": {
+          "de": {
+            "language": "de",
+            "value": "Windhoek"
+          },
+          "en": {
+            "language": "en",
+            "value": "Windhoek"
+          },
+          "af": {
+            "language": "af",
+            "value": "Windhoek"
+          }
+        }
+      },
+      "Q15935": {
+        "type": "item",
+        "id": "Q15935",
+        "labels": {}
+      }
+    },
+    "success": 1
+  }
+}

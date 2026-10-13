@@ -1,0 +1,6461 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-13",
+  "country": "botswana",
+  "sources": {
+    "mappedArea": {
+      "title": "Boundary-derived area",
+      "url": "data/southern-africa/botswana/sources.json",
+      "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+    },
+    "census": {
+      "title": "Statistics Botswana · Population & Housing Census 2022 · Population of Cities, Towns, Villages & Associated Localities",
+      "url": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf",
+      "published": "2022-12",
+      "note": "Final revised population counts; supersedes the preliminary June and August 2022 tables. De facto population enumerated during the census."
+    }
+  },
+  "regions": {
+    "botswana:BW-south-east": {
+      "name": "South East",
+      "level": 1,
+      "area": {
+        "value": 1713.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 357765,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "20",
+          "01"
+        ]
+      }
+    },
+    "botswana:BW-north-east": {
+      "name": "North East",
+      "level": 1,
+      "area": {
+        "value": 5353.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 172769,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "60",
+          "02"
+        ]
+      }
+    },
+    "botswana:BW-southern": {
+      "name": "Southern",
+      "level": 1,
+      "area": {
+        "value": 27405.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 270484,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "10",
+          "11",
+          "12",
+          "03",
+          "06"
+        ]
+      }
+    },
+    "botswana:BW-central": {
+      "name": "Central",
+      "level": 1,
+      "area": {
+        "value": 146611.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 706135,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "50",
+          "51",
+          "52",
+          "53",
+          "54",
+          "04",
+          "05",
+          "07"
+        ]
+      }
+    },
+    "botswana:BW-kweneng": {
+      "name": "Kweneng",
+      "level": 1,
+      "area": {
+        "value": 37451,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 387983,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "30",
+          "31"
+        ]
+      }
+    },
+    "botswana:BW-kgatleng": {
+      "name": "Kgatleng",
+      "level": 1,
+      "area": {
+        "value": 7536.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 121882,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "40"
+        ]
+      }
+    },
+    "botswana:BW-north-west": {
+      "name": "North West",
+      "level": 1,
+      "area": {
+        "value": 112825.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 198436,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "70",
+          "71",
+          "73"
+        ]
+      }
+    },
+    "botswana:BW-chobe": {
+      "name": "Chobe",
+      "level": 1,
+      "area": {
+        "value": 20867.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 28743,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "72"
+        ]
+      }
+    },
+    "botswana:BW-ghanzi": {
+      "name": "Ghanzi",
+      "level": 1,
+      "area": {
+        "value": 115500.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 56555,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "80",
+          "81"
+        ]
+      }
+    },
+    "botswana:BW-kgalagadi": {
+      "name": "Kgalagadi",
+      "level": 1,
+      "area": {
+        "value": 105563.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 58857,
+        "year": 2022,
+        "method": "calculated",
+        "source": "census",
+        "note": "Sum of final 2022 census districts belonging to this geographical district, including enclosed separately administered towns and cities.",
+        "sourceCodes": [
+          "90",
+          "91"
+        ]
+      }
+    },
+    "botswana:BW-C-gaborone": {
+      "name": "Gaborone",
+      "level": 2,
+      "area": {
+        "value": 252.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 246325,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "01"
+      }
+    },
+    "botswana:BW-C-francistown": {
+      "name": "Francistown",
+      "level": 2,
+      "area": {
+        "value": 75,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 103417,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "02"
+      }
+    },
+    "botswana:BW-C-lobatse": {
+      "name": "Lobatse",
+      "level": 2,
+      "area": {
+        "value": 44.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 29772,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "03"
+      }
+    },
+    "botswana:BW-C-selebi-phikwe": {
+      "name": "Selebi-Phikwe",
+      "level": 2,
+      "area": {
+        "value": 89.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 42488,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "04"
+      }
+    },
+    "botswana:BW-C-orapa": {
+      "name": "Orapa",
+      "level": 2,
+      "area": {
+        "value": 229.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 8648,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "05"
+      }
+    },
+    "botswana:BW-C-jwaneng": {
+      "name": "Jwaneng",
+      "level": 2,
+      "area": {
+        "value": 16.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 18784,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "06"
+      }
+    },
+    "botswana:BW-C-sowa": {
+      "name": "Sowa",
+      "level": 2,
+      "area": {
+        "value": 176.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 2914,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "07"
+      }
+    },
+    "botswana:BW-C-southern": {
+      "name": "Southern",
+      "level": 2,
+      "area": {
+        "value": 12359.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 139383,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "10"
+      }
+    },
+    "botswana:BW-C-barolong": {
+      "name": "Barolong",
+      "level": 2,
+      "area": {
+        "value": 6380.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 58885,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "11"
+      }
+    },
+    "botswana:BW-C-ngwaketse-west": {
+      "name": "Ngwaketse West",
+      "level": 2,
+      "area": {
+        "value": 8604.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 23660,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "12"
+      }
+    },
+    "botswana:BW-C-south-east": {
+      "name": "South East",
+      "level": 2,
+      "area": {
+        "value": 1460.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 111440,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "20"
+      }
+    },
+    "botswana:BW-C-kweneng-east": {
+      "name": "Kweneng East",
+      "level": 2,
+      "area": {
+        "value": 7364.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 330220,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "30"
+      }
+    },
+    "botswana:BW-C-kweneng-west": {
+      "name": "Kweneng West",
+      "level": 2,
+      "area": {
+        "value": 30086.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 57763,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "31"
+      }
+    },
+    "botswana:BW-C-kgatleng": {
+      "name": "Kgatleng",
+      "level": 2,
+      "area": {
+        "value": 7536.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 121882,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "40"
+      }
+    },
+    "botswana:BW-C-serowe-palapye": {
+      "name": "Serowe-Palapye",
+      "level": 2,
+      "area": {
+        "value": 34989.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 202740,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "50"
+      }
+    },
+    "botswana:BW-C-mahalapye": {
+      "name": "Mahalapye",
+      "level": 2,
+      "area": {
+        "value": 18910,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 131977,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "51"
+      }
+    },
+    "botswana:BW-C-bobonong": {
+      "name": "Bobonong",
+      "level": 2,
+      "area": {
+        "value": 14974,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 77504,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "52"
+      }
+    },
+    "botswana:BW-C-boteti": {
+      "name": "Boteti",
+      "level": 2,
+      "area": {
+        "value": 33964.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 74553,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "53"
+      }
+    },
+    "botswana:BW-C-tutume": {
+      "name": "Tutume",
+      "level": 2,
+      "area": {
+        "value": 43278.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 165311,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "54"
+      }
+    },
+    "botswana:BW-C-north-east": {
+      "name": "North East",
+      "level": 2,
+      "area": {
+        "value": 5278.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 69352,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "60"
+      }
+    },
+    "botswana:BW-C-ngamiland-east": {
+      "name": "Ngamiland East",
+      "level": 2,
+      "area": {
+        "value": 50266.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 121398,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "70"
+      }
+    },
+    "botswana:BW-C-ngamiland-west": {
+      "name": "Ngamiland West",
+      "level": 2,
+      "area": {
+        "value": 50068.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 74149,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "71"
+      }
+    },
+    "botswana:BW-C-ngamiland-delta": {
+      "name": "Ngamiland Delta",
+      "level": 2,
+      "area": {
+        "value": 12490.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 2889,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "73"
+      }
+    },
+    "botswana:BW-C-chobe": {
+      "name": "Chobe",
+      "level": 2,
+      "area": {
+        "value": 20867.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 28743,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "72"
+      }
+    },
+    "botswana:BW-C-ghanzi": {
+      "name": "Ghanzi",
+      "level": 2,
+      "area": {
+        "value": 62997.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 56077,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "80"
+      }
+    },
+    "botswana:BW-C-central-kalahari-game-reserve": {
+      "name": "Central Kalahari Game Reserve",
+      "level": 2,
+      "area": {
+        "value": 52502.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 478,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "81"
+      }
+    },
+    "botswana:BW-C-kgalagadi-south": {
+      "name": "Kgalagadi South",
+      "level": 2,
+      "area": {
+        "value": 54029.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 35347,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "90"
+      }
+    },
+    "botswana:BW-C-kgalagadi-north": {
+      "name": "Kgalagadi North",
+      "level": 2,
+      "area": {
+        "value": 51533.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      },
+      "population": {
+        "value": 23510,
+        "year": 2022,
+        "method": "census",
+        "source": "census",
+        "sourceCode": "91"
+      }
+    },
+    "botswana:BW-L-BW010101": {
+      "name": "Gaborone",
+      "level": 3,
+      "area": {
+        "value": 251.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW020101": {
+      "name": "Francistown",
+      "level": 3,
+      "area": {
+        "value": 75,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW030101": {
+      "name": "Lobatse",
+      "level": 3,
+      "area": {
+        "value": 44.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW040101": {
+      "name": "Selibe Phikwe",
+      "level": 3,
+      "area": {
+        "value": 89.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW050101": {
+      "name": "Orapa",
+      "level": 3,
+      "area": {
+        "value": 229.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW060101": {
+      "name": "Jwaneng",
+      "level": 3,
+      "area": {
+        "value": 16.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW070101": {
+      "name": "Sowa Town",
+      "level": 3,
+      "area": {
+        "value": 176.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080132": {
+      "name": "Betesankwe",
+      "level": 3,
+      "area": {
+        "value": 22.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080121": {
+      "name": "Diabo",
+      "level": 3,
+      "area": {
+        "value": 107.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080120": {
+      "name": "Dipotsana",
+      "level": 3,
+      "area": {
+        "value": 107.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080104": {
+      "name": "Gasita",
+      "level": 3,
+      "area": {
+        "value": 1202.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080101": {
+      "name": "Kanye",
+      "level": 3,
+      "area": {
+        "value": 793,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080108": {
+      "name": "Kgomokasitwa",
+      "level": 3,
+      "area": {
+        "value": 65.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080106": {
+      "name": "Lefoko",
+      "level": 3,
+      "area": {
+        "value": 131.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080111": {
+      "name": "Lekgolobotlo",
+      "level": 3,
+      "area": {
+        "value": 66.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080105": {
+      "name": "Lorolwana",
+      "level": 3,
+      "area": {
+        "value": 1106,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080113": {
+      "name": "Lotlhakane",
+      "level": 3,
+      "area": {
+        "value": 92.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080103": {
+      "name": "Lotlhakane West",
+      "level": 3,
+      "area": {
+        "value": 66.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080116": {
+      "name": "Magotlhwane",
+      "level": 3,
+      "area": {
+        "value": 19.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080118": {
+      "name": "Manyana",
+      "level": 3,
+      "area": {
+        "value": 233.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080119": {
+      "name": "Maokane",
+      "level": 3,
+      "area": {
+        "value": 433.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080131": {
+      "name": "Mogonye",
+      "level": 3,
+      "area": {
+        "value": 41.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080110": {
+      "name": "Mokhomba",
+      "level": 3,
+      "area": {
+        "value": 668.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080122": {
+      "name": "Molapowabojang",
+      "level": 3,
+      "area": {
+        "value": 280.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080124": {
+      "name": "Moshaneng",
+      "level": 3,
+      "area": {
+        "value": 311.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080125": {
+      "name": "Moshupa",
+      "level": 3,
+      "area": {
+        "value": 384.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080126": {
+      "name": "Ntlhantlhe",
+      "level": 3,
+      "area": {
+        "value": 212.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080109": {
+      "name": "Pitseng",
+      "level": 3,
+      "area": {
+        "value": 290.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080123": {
+      "name": "Ralekgetho",
+      "level": 3,
+      "area": {
+        "value": 172.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080102": {
+      "name": "Ranaka",
+      "level": 3,
+      "area": {
+        "value": 159.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080117": {
+      "name": "Segwagwa",
+      "level": 3,
+      "area": {
+        "value": 420.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080112": {
+      "name": "Seherelela",
+      "level": 3,
+      "area": {
+        "value": 306.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080130": {
+      "name": "Selokolela",
+      "level": 3,
+      "area": {
+        "value": 295.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080128": {
+      "name": "Semane",
+      "level": 3,
+      "area": {
+        "value": 1913.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080114": {
+      "name": "Sese",
+      "level": 3,
+      "area": {
+        "value": 569.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080115": {
+      "name": "Sesung",
+      "level": 3,
+      "area": {
+        "value": 137.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080129": {
+      "name": "Tlhankane",
+      "level": 3,
+      "area": {
+        "value": 1171.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080127": {
+      "name": "Tshwaane",
+      "level": 3,
+      "area": {
+        "value": 211.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080107": {
+      "name": "Tsonyane",
+      "level": 3,
+      "area": {
+        "value": 363.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080206": {
+      "name": "Bethel",
+      "level": 3,
+      "area": {
+        "value": 13.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080214": {
+      "name": "Borobadilepe",
+      "level": 3,
+      "area": {
+        "value": 27.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080230": {
+      "name": "Digawana",
+      "level": 3,
+      "area": {
+        "value": 16.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080241": {
+      "name": "Dikhukhung",
+      "level": 3,
+      "area": {
+        "value": 8.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080207": {
+      "name": "Dinatshana",
+      "level": 3,
+      "area": {
+        "value": 23.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080223": {
+      "name": "Ditlharapa",
+      "level": 3,
+      "area": {
+        "value": 30.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080240": {
+      "name": "Gamajalela",
+      "level": 3,
+      "area": {
+        "value": 35.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080229": {
+      "name": "Gathwane",
+      "level": 3,
+      "area": {
+        "value": 8.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080210": {
+      "name": "Good Hope",
+      "level": 3,
+      "area": {
+        "value": 42.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080215": {
+      "name": "Hebron",
+      "level": 3,
+      "area": {
+        "value": 61.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080248": {
+      "name": "Kangwe",
+      "level": 3,
+      "area": {
+        "value": 42.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080225": {
+      "name": "Kgoro",
+      "level": 3,
+      "area": {
+        "value": 24.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080232": {
+      "name": "Lejwana",
+      "level": 3,
+      "area": {
+        "value": 8.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080242": {
+      "name": "Leporung",
+      "level": 3,
+      "area": {
+        "value": 402.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080216": {
+      "name": "Logagane",
+      "level": 3,
+      "area": {
+        "value": 46.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080247": {
+      "name": "Lorwana",
+      "level": 3,
+      "area": {
+        "value": 24.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080244": {
+      "name": "Mabule",
+      "level": 3,
+      "area": {
+        "value": 45.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080224": {
+      "name": "Madingwana",
+      "level": 3,
+      "area": {
+        "value": 60.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080231": {
+      "name": "Magoriapitse",
+      "level": 3,
+      "area": {
+        "value": 54.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080218": {
+      "name": "Makokwe",
+      "level": 3,
+      "area": {
+        "value": 19.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080205": {
+      "name": "Malokaganyane",
+      "level": 3,
+      "area": {
+        "value": 53.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080219": {
+      "name": "Marojane",
+      "level": 3,
+      "area": {
+        "value": 56.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080246": {
+      "name": "Metlobo",
+      "level": 3,
+      "area": {
+        "value": 42.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080213": {
+      "name": "Metlojane",
+      "level": 3,
+      "area": {
+        "value": 93,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080243": {
+      "name": "Mmakgori",
+      "level": 3,
+      "area": {
+        "value": 58.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080234": {
+      "name": "Mmathethe",
+      "level": 3,
+      "area": {
+        "value": 741.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080233": {
+      "name": "Mogojogojo",
+      "level": 3,
+      "area": {
+        "value": 176.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080228": {
+      "name": "Mogwalale",
+      "level": 3,
+      "area": {
+        "value": 70,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080211": {
+      "name": "Mokatako",
+      "level": 3,
+      "area": {
+        "value": 50.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080235": {
+      "name": "Mokgomane",
+      "level": 3,
+      "area": {
+        "value": 192.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080222": {
+      "name": "Molete",
+      "level": 3,
+      "area": {
+        "value": 97.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080227": {
+      "name": "Motsentshe",
+      "level": 3,
+      "area": {
+        "value": 33.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080238": {
+      "name": "Musi",
+      "level": 3,
+      "area": {
+        "value": 86.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080208": {
+      "name": "Ngwatsau",
+      "level": 3,
+      "area": {
+        "value": 26.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080220": {
+      "name": "Papatlo",
+      "level": 3,
+      "area": {
+        "value": 16,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080221": {
+      "name": "Phihitshwane",
+      "level": 3,
+      "area": {
+        "value": 21.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080203": {
+      "name": "Pitsana-Potokwe",
+      "level": 3,
+      "area": {
+        "value": 29.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080201": {
+      "name": "Pitsane Siding",
+      "level": 3,
+      "area": {
+        "value": 19.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080236": {
+      "name": "Pitshane Molopo",
+      "level": 3,
+      "area": {
+        "value": 13.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080204": {
+      "name": "Rakhuna",
+      "level": 3,
+      "area": {
+        "value": 44,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080209": {
+      "name": "Ramatlabama",
+      "level": 3,
+      "area": {
+        "value": 35.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080237": {
+      "name": "Sedibeng",
+      "level": 3,
+      "area": {
+        "value": 100.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080249": {
+      "name": "Sekhutlane",
+      "level": 3,
+      "area": {
+        "value": 1150,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080226": {
+      "name": "Sheep Farm",
+      "level": 3,
+      "area": {
+        "value": 17.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080202": {
+      "name": "Tlhareseleele",
+      "level": 3,
+      "area": {
+        "value": 46.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080245": {
+      "name": "Tshidilamolomo",
+      "level": 3,
+      "area": {
+        "value": 463.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080239": {
+      "name": "Tswaaneng",
+      "level": 3,
+      "area": {
+        "value": 1542.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080217": {
+      "name": "Tswagare/lothoje/lokalana",
+      "level": 3,
+      "area": {
+        "value": 46.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080212": {
+      "name": "Tswanyaneng",
+      "level": 3,
+      "area": {
+        "value": 60.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080310": {
+      "name": "Itholoke",
+      "level": 3,
+      "area": {
+        "value": 131.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080308": {
+      "name": "Kanaku",
+      "level": 3,
+      "area": {
+        "value": 2464.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080305": {
+      "name": "Keng",
+      "level": 3,
+      "area": {
+        "value": 295.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080306": {
+      "name": "Khakhea",
+      "level": 3,
+      "area": {
+        "value": 3260.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080304": {
+      "name": "Khonkhwa",
+      "level": 3,
+      "area": {
+        "value": 380.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080307": {
+      "name": "Kokong",
+      "level": 3,
+      "area": {
+        "value": 469.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080311": {
+      "name": "Kutuku",
+      "level": 3,
+      "area": {
+        "value": 70.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080301": {
+      "name": "Mabutsane",
+      "level": 3,
+      "area": {
+        "value": 512.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080309": {
+      "name": "Mahotshwane",
+      "level": 3,
+      "area": {
+        "value": 230.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080302": {
+      "name": "Morwamosu",
+      "level": 3,
+      "area": {
+        "value": 393,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW080303": {
+      "name": "Sekoma",
+      "level": 3,
+      "area": {
+        "value": 394.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090107": {
+      "name": "Doorn Laagte",
+      "level": 3,
+      "area": {
+        "value": 188.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090108": {
+      "name": "Hildavale",
+      "level": 3,
+      "area": {
+        "value": 137.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090106": {
+      "name": "Lobatse Estates",
+      "level": 3,
+      "area": {
+        "value": 133,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090104": {
+      "name": "Mogobane",
+      "level": 3,
+      "area": {
+        "value": 209.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090101": {
+      "name": "Otse",
+      "level": 3,
+      "area": {
+        "value": 190.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090103": {
+      "name": "Ramotswa",
+      "level": 3,
+      "area": {
+        "value": 132.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090102": {
+      "name": "Ramotswa Station/taung",
+      "level": 3,
+      "area": {
+        "value": 138.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW090105": {
+      "name": "Tlokweng",
+      "level": 3,
+      "area": {
+        "value": 329.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100118": {
+      "name": "Bdf Mogoditshane",
+      "level": 3,
+      "area": {
+        "value": 4.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100113": {
+      "name": "Boatlaname",
+      "level": 3,
+      "area": {
+        "value": 660.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100133": {
+      "name": "Dikgatlhong",
+      "level": 3,
+      "area": {
+        "value": 10.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100128": {
+      "name": "Ditshukudu",
+      "level": 3,
+      "area": {
+        "value": 134.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100106": {
+      "name": "Gabane",
+      "level": 3,
+      "area": {
+        "value": 234.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100104": {
+      "name": "Gakgatla",
+      "level": 3,
+      "area": {
+        "value": 37.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100132": {
+      "name": "Gakutlo",
+      "level": 3,
+      "area": {
+        "value": 61.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100105": {
+      "name": "Gamodubu",
+      "level": 3,
+      "area": {
+        "value": 13,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100107": {
+      "name": "Hatsalatladi",
+      "level": 3,
+      "area": {
+        "value": 399.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100125": {
+      "name": "Kgope",
+      "level": 3,
+      "area": {
+        "value": 121.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100109": {
+      "name": "Kopong",
+      "level": 3,
+      "area": {
+        "value": 144.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100123": {
+      "name": "Kubung",
+      "level": 3,
+      "area": {
+        "value": 104.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100111": {
+      "name": "Kumakwane",
+      "level": 3,
+      "area": {
+        "value": 90.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100127": {
+      "name": "Kweneng",
+      "level": 3,
+      "area": {
+        "value": 1162.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100102": {
+      "name": "Lentsweletau",
+      "level": 3,
+      "area": {
+        "value": 504.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100131": {
+      "name": "Leologane",
+      "level": 3,
+      "area": {
+        "value": 150.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100112": {
+      "name": "Lephephe",
+      "level": 3,
+      "area": {
+        "value": 109.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100124": {
+      "name": "Losilakgokong",
+      "level": 3,
+      "area": {
+        "value": 23,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100103": {
+      "name": "Mahetlwe",
+      "level": 3,
+      "area": {
+        "value": 331.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100134": {
+      "name": "Medie",
+      "level": 3,
+      "area": {
+        "value": 229.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100114": {
+      "name": "Metsimotlhabe",
+      "level": 3,
+      "area": {
+        "value": 36.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100115": {
+      "name": "Mmankgodi",
+      "level": 3,
+      "area": {
+        "value": 96.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100122": {
+      "name": "Mmanoko",
+      "level": 3,
+      "area": {
+        "value": 59.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100130": {
+      "name": "Mmatseta",
+      "level": 3,
+      "area": {
+        "value": 4.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100116": {
+      "name": "Mmopane",
+      "level": 3,
+      "area": {
+        "value": 141.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100117": {
+      "name": "Mogoditshane",
+      "level": 3,
+      "area": {
+        "value": 44.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100126": {
+      "name": "Mogonono",
+      "level": 3,
+      "area": {
+        "value": 64.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100129": {
+      "name": "Mokolodi",
+      "level": 3,
+      "area": {
+        "value": 5.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100101": {
+      "name": "Molepolole",
+      "level": 3,
+      "area": {
+        "value": 1148.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100108": {
+      "name": "Ramaphatle",
+      "level": 3,
+      "area": {
+        "value": 32.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100119": {
+      "name": "Shadishadi",
+      "level": 3,
+      "area": {
+        "value": 786.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100120": {
+      "name": "Sojwe",
+      "level": 3,
+      "area": {
+        "value": 148.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100121": {
+      "name": "Thamaga",
+      "level": 3,
+      "area": {
+        "value": 231.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100110": {
+      "name": "Tloaneng",
+      "level": 3,
+      "area": {
+        "value": 35.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100203": {
+      "name": "Botlhapatlou",
+      "level": 3,
+      "area": {
+        "value": 438.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100224": {
+      "name": "Diphuduhudu",
+      "level": 3,
+      "area": {
+        "value": 207.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100204": {
+      "name": "Ditshegwane",
+      "level": 3,
+      "area": {
+        "value": 1094.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100205": {
+      "name": "Dutlwe",
+      "level": 3,
+      "area": {
+        "value": 1581.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100223": {
+      "name": "Kaudwane",
+      "level": 3,
+      "area": {
+        "value": 139.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100207": {
+      "name": "Khudumelapye",
+      "level": 3,
+      "area": {
+        "value": 1378.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100221": {
+      "name": "Kotolaname",
+      "level": 3,
+      "area": {
+        "value": 301.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100201": {
+      "name": "Letlhakeng",
+      "level": 3,
+      "area": {
+        "value": 1546.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100218": {
+      "name": "Maboane",
+      "level": 3,
+      "area": {
+        "value": 1761.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100217": {
+      "name": "Malwelwe",
+      "level": 3,
+      "area": {
+        "value": 307,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100209": {
+      "name": "Mantshwabisi",
+      "level": 3,
+      "area": {
+        "value": 347,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100225": {
+      "name": "Maratshwane",
+      "level": 3,
+      "area": {
+        "value": 155.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100222": {
+      "name": "Metsibotlhoko",
+      "level": 3,
+      "area": {
+        "value": 166.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100216": {
+      "name": "Monwane",
+      "level": 3,
+      "area": {
+        "value": 25.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100206": {
+      "name": "Moshaweng",
+      "level": 3,
+      "area": {
+        "value": 734.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100210": {
+      "name": "Motokwe",
+      "level": 3,
+      "area": {
+        "value": 2054.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100211": {
+      "name": "Ngware",
+      "level": 3,
+      "area": {
+        "value": 2837.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100212": {
+      "name": "Salajwe",
+      "level": 3,
+      "area": {
+        "value": 2285.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100208": {
+      "name": "Serinane",
+      "level": 3,
+      "area": {
+        "value": 17.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100219": {
+      "name": "Sesung",
+      "level": 3,
+      "area": {
+        "value": 19.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100220": {
+      "name": "Sorilatholo",
+      "level": 3,
+      "area": {
+        "value": 1267,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100213": {
+      "name": "Takatokwane",
+      "level": 3,
+      "area": {
+        "value": 4822.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100202": {
+      "name": "Thebephatshwa",
+      "level": 3,
+      "area": {
+        "value": 40.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100214": {
+      "name": "Tsetseng",
+      "level": 3,
+      "area": {
+        "value": 3458.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW100215": {
+      "name": "Tswaane",
+      "level": 3,
+      "area": {
+        "value": 3096.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110115": {
+      "name": "Artisia",
+      "level": 3,
+      "area": {
+        "value": 30.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110104": {
+      "name": "Bokaa",
+      "level": 3,
+      "area": {
+        "value": 186.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110120": {
+      "name": "Dikgonnye",
+      "level": 3,
+      "area": {
+        "value": 80.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110122": {
+      "name": "Dikwididi",
+      "level": 3,
+      "area": {
+        "value": 69.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110119": {
+      "name": "Kgomodiatshaba",
+      "level": 3,
+      "area": {
+        "value": 2142.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110121": {
+      "name": "Khurutshe",
+      "level": 3,
+      "area": {
+        "value": 248.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110117": {
+      "name": "Leshibitse",
+      "level": 3,
+      "area": {
+        "value": 176.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110109": {
+      "name": "Mabalane",
+      "level": 3,
+      "area": {
+        "value": 167.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110113": {
+      "name": "Malolwane",
+      "level": 3,
+      "area": {
+        "value": 342,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110116": {
+      "name": "Malotwana Siding",
+      "level": 3,
+      "area": {
+        "value": 72,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110106": {
+      "name": "Matebeleng",
+      "level": 3,
+      "area": {
+        "value": 40.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110111": {
+      "name": "Mmathubudukwane",
+      "level": 3,
+      "area": {
+        "value": 48.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110101": {
+      "name": "Mochudi",
+      "level": 3,
+      "area": {
+        "value": 2961.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110108": {
+      "name": "Modipane",
+      "level": 3,
+      "area": {
+        "value": 72.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110105": {
+      "name": "Morwa",
+      "level": 3,
+      "area": {
+        "value": 89.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110114": {
+      "name": "Oliphants Drift",
+      "level": 3,
+      "area": {
+        "value": 77.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110107": {
+      "name": "Oodi",
+      "level": 3,
+      "area": {
+        "value": 57.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110102": {
+      "name": "Pilane Station",
+      "level": 3,
+      "area": {
+        "value": 25.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110112": {
+      "name": "Ramonaka",
+      "level": 3,
+      "area": {
+        "value": 51.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110118": {
+      "name": "Ramotlabaki",
+      "level": 3,
+      "area": {
+        "value": 306.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110103": {
+      "name": "Rasesa",
+      "level": 3,
+      "area": {
+        "value": 280.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW110110": {
+      "name": "Sikwane",
+      "level": 3,
+      "area": {
+        "value": 5.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120111": {
+      "name": "Diloro",
+      "level": 3,
+      "area": {
+        "value": 302.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120142": {
+      "name": "Dimajwe",
+      "level": 3,
+      "area": {
+        "value": 50,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120131": {
+      "name": "Gamabuo",
+      "level": 3,
+      "area": {
+        "value": 34.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120140": {
+      "name": "Gojwane",
+      "level": 3,
+      "area": {
+        "value": 224.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120121": {
+      "name": "Goo-Sekgweng",
+      "level": 3,
+      "area": {
+        "value": 92.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120120": {
+      "name": "Gootau",
+      "level": 3,
+      "area": {
+        "value": 20.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120108": {
+      "name": "Kgagodi",
+      "level": 3,
+      "area": {
+        "value": 338.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120103": {
+      "name": "Lecheng",
+      "level": 3,
+      "area": {
+        "value": 190.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120116": {
+      "name": "Lerala",
+      "level": 3,
+      "area": {
+        "value": 475.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120112": {
+      "name": "Lesenepole/matolwane",
+      "level": 3,
+      "area": {
+        "value": 89.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120125": {
+      "name": "Mabeleapudi",
+      "level": 3,
+      "area": {
+        "value": 284.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120143": {
+      "name": "Majwanaadipitse",
+      "level": 3,
+      "area": {
+        "value": 702.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120117": {
+      "name": "Majwaneng",
+      "level": 3,
+      "area": {
+        "value": 76.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120105": {
+      "name": "Malaka",
+      "level": 3,
+      "area": {
+        "value": 60.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120136": {
+      "name": "Malatswai",
+      "level": 3,
+      "area": {
+        "value": 1446.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120141": {
+      "name": "Manaledi",
+      "level": 3,
+      "area": {
+        "value": 55.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120122": {
+      "name": "Matlhakola",
+      "level": 3,
+      "area": {
+        "value": 7.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120109": {
+      "name": "Maunatlala",
+      "level": 3,
+      "area": {
+        "value": 629.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120127": {
+      "name": "Mmashoro",
+      "level": 3,
+      "area": {
+        "value": 612.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120119": {
+      "name": "Moeng",
+      "level": 3,
+      "area": {
+        "value": 6.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120106": {
+      "name": "Mogapi",
+      "level": 3,
+      "area": {
+        "value": 879.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120107": {
+      "name": "Mogapinyana",
+      "level": 3,
+      "area": {
+        "value": 219,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120133": {
+      "name": "Mogome",
+      "level": 3,
+      "area": {
+        "value": 43.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120128": {
+      "name": "Mogorosi",
+      "level": 3,
+      "area": {
+        "value": 331.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120130": {
+      "name": "Moiyabana",
+      "level": 3,
+      "area": {
+        "value": 8855.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120134": {
+      "name": "Mokgware",
+      "level": 3,
+      "area": {
+        "value": 54.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120137": {
+      "name": "Mokhungwana",
+      "level": 3,
+      "area": {
+        "value": 75.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120114": {
+      "name": "Mokokwana",
+      "level": 3,
+      "area": {
+        "value": 58.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120104": {
+      "name": "Moremi",
+      "level": 3,
+      "area": {
+        "value": 251.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120139": {
+      "name": "Moreomabele",
+      "level": 3,
+      "area": {
+        "value": 308.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120113": {
+      "name": "Mosweu",
+      "level": 3,
+      "area": {
+        "value": 9.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120135": {
+      "name": "Motshegaletau",
+      "level": 3,
+      "area": {
+        "value": 30,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120124": {
+      "name": "Paje",
+      "level": 3,
+      "area": {
+        "value": 29.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120102": {
+      "name": "Palapye",
+      "level": 3,
+      "area": {
+        "value": 1099.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120132": {
+      "name": "Radisele",
+      "level": 3,
+      "area": {
+        "value": 99.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120118": {
+      "name": "Ratholo",
+      "level": 3,
+      "area": {
+        "value": 307.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120144": {
+      "name": "Sehunou",
+      "level": 3,
+      "area": {
+        "value": 15.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120115": {
+      "name": "Seolwane",
+      "level": 3,
+      "area": {
+        "value": 224.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120101": {
+      "name": "Serowe",
+      "level": 3,
+      "area": {
+        "value": 13684.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120138": {
+      "name": "Serule",
+      "level": 3,
+      "area": {
+        "value": 207.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120110": {
+      "name": "Tamasane",
+      "level": 3,
+      "area": {
+        "value": 125,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120129": {
+      "name": "Thabala",
+      "level": 3,
+      "area": {
+        "value": 266.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120123": {
+      "name": "Topisi",
+      "level": 3,
+      "area": {
+        "value": 1157.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120126": {
+      "name": "Tshimoyapula",
+      "level": 3,
+      "area": {
+        "value": 153.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120145": {
+      "name": "Tuli",
+      "level": 3,
+      "area": {
+        "value": 804.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120215": {
+      "name": "Bonwapitse",
+      "level": 3,
+      "area": {
+        "value": 102.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120224": {
+      "name": "Borotsi",
+      "level": 3,
+      "area": {
+        "value": 21,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120214": {
+      "name": "Chadibe",
+      "level": 3,
+      "area": {
+        "value": 149.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120206": {
+      "name": "Dibete Station",
+      "level": 3,
+      "area": {
+        "value": 1273.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120207": {
+      "name": "Dovedale",
+      "level": 3,
+      "area": {
+        "value": 208.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120232": {
+      "name": "Ikongwe",
+      "level": 3,
+      "area": {
+        "value": 14.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120226": {
+      "name": "Kalamare",
+      "level": 3,
+      "area": {
+        "value": 584.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120231": {
+      "name": "Kodibeleng",
+      "level": 3,
+      "area": {
+        "value": 2237.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120208": {
+      "name": "Kudumatse",
+      "level": 3,
+      "area": {
+        "value": 263.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120221": {
+      "name": "Maape",
+      "level": 3,
+      "area": {
+        "value": 219.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120212": {
+      "name": "Machaneng",
+      "level": 3,
+      "area": {
+        "value": 263.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120201": {
+      "name": "Mahalapye",
+      "level": 3,
+      "area": {
+        "value": 1781.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120209": {
+      "name": "Makwate",
+      "level": 3,
+      "area": {
+        "value": 189.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120235": {
+      "name": "Matlhako",
+      "level": 3,
+      "area": {
+        "value": 31.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120223": {
+      "name": "Mhalapitsa",
+      "level": 3,
+      "area": {
+        "value": 68.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120204": {
+      "name": "Mmaphashalala",
+      "level": 3,
+      "area": {
+        "value": 556.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120216": {
+      "name": "Mmutlana",
+      "level": 3,
+      "area": {
+        "value": 80,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120227": {
+      "name": "Mokgenene",
+      "level": 3,
+      "area": {
+        "value": 13.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120217": {
+      "name": "Mokobeng",
+      "level": 3,
+      "area": {
+        "value": 23.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120236": {
+      "name": "Mokoswane",
+      "level": 3,
+      "area": {
+        "value": 431.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120203": {
+      "name": "Mookane",
+      "level": 3,
+      "area": {
+        "value": 87.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120229": {
+      "name": "Moralane",
+      "level": 3,
+      "area": {
+        "value": 53.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120211": {
+      "name": "Moshopha",
+      "level": 3,
+      "area": {
+        "value": 287,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120230": {
+      "name": "Mosolotshane",
+      "level": 3,
+      "area": {
+        "value": 624.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120218": {
+      "name": "Ngwapa",
+      "level": 3,
+      "area": {
+        "value": 115.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120234": {
+      "name": "Otse",
+      "level": 3,
+      "area": {
+        "value": 570.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120202": {
+      "name": "Palla Road/dinokwe",
+      "level": 3,
+      "area": {
+        "value": 272.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120222": {
+      "name": "Pilikwe",
+      "level": 3,
+      "area": {
+        "value": 204.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120233": {
+      "name": "Poloka",
+      "level": 3,
+      "area": {
+        "value": 772.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120220": {
+      "name": "Ramokgonami",
+      "level": 3,
+      "area": {
+        "value": 275.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120213": {
+      "name": "Sefhare",
+      "level": 3,
+      "area": {
+        "value": 328.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120237": {
+      "name": "Seleka",
+      "level": 3,
+      "area": {
+        "value": 28,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120210": {
+      "name": "Shakwe",
+      "level": 3,
+      "area": {
+        "value": 393,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120228": {
+      "name": "Shoshong",
+      "level": 3,
+      "area": {
+        "value": 3301,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120205": {
+      "name": "Taupye",
+      "level": 3,
+      "area": {
+        "value": 404.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120225": {
+      "name": "Tewane",
+      "level": 3,
+      "area": {
+        "value": 179.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120238": {
+      "name": "Tuli",
+      "level": 3,
+      "area": {
+        "value": 2081.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120219": {
+      "name": "Tumasera",
+      "level": 3,
+      "area": {
+        "value": 413.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120301": {
+      "name": "Bobonong",
+      "level": 3,
+      "area": {
+        "value": 3115.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120315": {
+      "name": "Damochojena",
+      "level": 3,
+      "area": {
+        "value": 10.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120307": {
+      "name": "Kobojango",
+      "level": 3,
+      "area": {
+        "value": 163.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120305": {
+      "name": "Lentswelemoriti",
+      "level": 3,
+      "area": {
+        "value": 666.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120308": {
+      "name": "Lepokole",
+      "level": 3,
+      "area": {
+        "value": 19.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120312": {
+      "name": "Mabolwe",
+      "level": 3,
+      "area": {
+        "value": 278.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120304": {
+      "name": "Mathathane",
+      "level": 3,
+      "area": {
+        "value": 306.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120313": {
+      "name": "Mmadinare",
+      "level": 3,
+      "area": {
+        "value": 3226.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120309": {
+      "name": "Molalatau",
+      "level": 3,
+      "area": {
+        "value": 1063.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120317": {
+      "name": "Moletemane",
+      "level": 3,
+      "area": {
+        "value": 31.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120316": {
+      "name": "Motlhabaneng",
+      "level": 3,
+      "area": {
+        "value": 246.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120314": {
+      "name": "Robelela",
+      "level": 3,
+      "area": {
+        "value": 102.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120311": {
+      "name": "Sefophe",
+      "level": 3,
+      "area": {
+        "value": 1328.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120306": {
+      "name": "Semolale",
+      "level": 3,
+      "area": {
+        "value": 379.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120310": {
+      "name": "Tobane",
+      "level": 3,
+      "area": {
+        "value": 1524.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120302": {
+      "name": "Tsetsebjwe",
+      "level": 3,
+      "area": {
+        "value": 952.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120303": {
+      "name": "Tshokwe",
+      "level": 3,
+      "area": {
+        "value": 19.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120318": {
+      "name": "Tuli",
+      "level": 3,
+      "area": {
+        "value": 1535.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120406": {
+      "name": "Kedia",
+      "level": 3,
+      "area": {
+        "value": 724.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120411": {
+      "name": "Khwee",
+      "level": 3,
+      "area": {
+        "value": 822.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120412": {
+      "name": "Kumaga",
+      "level": 3,
+      "area": {
+        "value": 920.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120401": {
+      "name": "Letlhakane",
+      "level": 3,
+      "area": {
+        "value": 10172.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120410": {
+      "name": "Makalamabedi",
+      "level": 3,
+      "area": {
+        "value": 289.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120414": {
+      "name": "Mmadikola",
+      "level": 3,
+      "area": {
+        "value": 95.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120403": {
+      "name": "Mmatshumo",
+      "level": 3,
+      "area": {
+        "value": 2956.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120415": {
+      "name": "Mokoboxane",
+      "level": 3,
+      "area": {
+        "value": 485.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120404": {
+      "name": "Mopipi",
+      "level": 3,
+      "area": {
+        "value": 4051.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120409": {
+      "name": "Moreomaoto",
+      "level": 3,
+      "area": {
+        "value": 278.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120402": {
+      "name": "Mosu",
+      "level": 3,
+      "area": {
+        "value": 1928.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120413": {
+      "name": "Motopi",
+      "level": 3,
+      "area": {
+        "value": 70.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120408": {
+      "name": "Toromoja",
+      "level": 3,
+      "area": {
+        "value": 701.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120407": {
+      "name": "Tsienyane/rakops",
+      "level": 3,
+      "area": {
+        "value": 6761.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120416": {
+      "name": "Xere",
+      "level": 3,
+      "area": {
+        "value": 308.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120405": {
+      "name": "Xhumo",
+      "level": 3,
+      "area": {
+        "value": 3400.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120519": {
+      "name": "Borolong",
+      "level": 3,
+      "area": {
+        "value": 16.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120524": {
+      "name": "Borotsi",
+      "level": 3,
+      "area": {
+        "value": 99.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120517": {
+      "name": "Chadibe",
+      "level": 3,
+      "area": {
+        "value": 18.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120506": {
+      "name": "Changate",
+      "level": 3,
+      "area": {
+        "value": 186.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120503": {
+      "name": "Dagwi",
+      "level": 3,
+      "area": {
+        "value": 38.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120520": {
+      "name": "Dukwi",
+      "level": 3,
+      "area": {
+        "value": 993.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120509": {
+      "name": "Goshwe",
+      "level": 3,
+      "area": {
+        "value": 33.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120529": {
+      "name": "Gweta",
+      "level": 3,
+      "area": {
+        "value": 21093.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120537": {
+      "name": "Jamataka",
+      "level": 3,
+      "area": {
+        "value": 31,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120541": {
+      "name": "Kutamogree",
+      "level": 3,
+      "area": {
+        "value": 339.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120531": {
+      "name": "Lepashe",
+      "level": 3,
+      "area": {
+        "value": 65,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120536": {
+      "name": "Mabesekwa",
+      "level": 3,
+      "area": {
+        "value": 1188.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120521": {
+      "name": "Mafongo/hobona",
+      "level": 3,
+      "area": {
+        "value": 82.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120501": {
+      "name": "Maitengwe",
+      "level": 3,
+      "area": {
+        "value": 984.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120535": {
+      "name": "Makobo",
+      "level": 3,
+      "area": {
+        "value": 63.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120539": {
+      "name": "Makuta",
+      "level": 3,
+      "area": {
+        "value": 331.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120525": {
+      "name": "Mandunyane",
+      "level": 3,
+      "area": {
+        "value": 649.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120540": {
+      "name": "Maposa",
+      "level": 3,
+      "area": {
+        "value": 294.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120516": {
+      "name": "Marapong",
+      "level": 3,
+      "area": {
+        "value": 82.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120514": {
+      "name": "Marobela",
+      "level": 3,
+      "area": {
+        "value": 12.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120515": {
+      "name": "Mathangwane",
+      "level": 3,
+      "area": {
+        "value": 89.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120508": {
+      "name": "Matobo",
+      "level": 3,
+      "area": {
+        "value": 92.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120518": {
+      "name": "Matsitama",
+      "level": 3,
+      "area": {
+        "value": 847.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120532": {
+      "name": "Mmanxotae",
+      "level": 3,
+      "area": {
+        "value": 210.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120542": {
+      "name": "Mmeya",
+      "level": 3,
+      "area": {
+        "value": 1319.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120522": {
+      "name": "Mokubilo",
+      "level": 3,
+      "area": {
+        "value": 1646.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120510": {
+      "name": "Mosetse",
+      "level": 3,
+      "area": {
+        "value": 649,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120502": {
+      "name": "Nata",
+      "level": 3,
+      "area": {
+        "value": 2018.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120526": {
+      "name": "Natale",
+      "level": 3,
+      "area": {
+        "value": 391.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120504": {
+      "name": "Nkange",
+      "level": 3,
+      "area": {
+        "value": 73.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120512": {
+      "name": "Nshakashokwe",
+      "level": 3,
+      "area": {
+        "value": 22.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120511": {
+      "name": "Nswazwi",
+      "level": 3,
+      "area": {
+        "value": 711.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120513": {
+      "name": "Sebina",
+      "level": 3,
+      "area": {
+        "value": 12,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120534": {
+      "name": "Semitwe",
+      "level": 3,
+      "area": {
+        "value": 391.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120505": {
+      "name": "Senete",
+      "level": 3,
+      "area": {
+        "value": 201.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120533": {
+      "name": "Sepako",
+      "level": 3,
+      "area": {
+        "value": 2868.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120528": {
+      "name": "Shashe-Mooke",
+      "level": 3,
+      "area": {
+        "value": 277.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120527": {
+      "name": "Shashe/semotswane",
+      "level": 3,
+      "area": {
+        "value": 179,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120523": {
+      "name": "Tonota",
+      "level": 3,
+      "area": {
+        "value": 1562.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120538": {
+      "name": "Tshokatshaa",
+      "level": 3,
+      "area": {
+        "value": 348.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120507": {
+      "name": "Tutume",
+      "level": 3,
+      "area": {
+        "value": 1926.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW120530": {
+      "name": "Zoroga",
+      "level": 3,
+      "area": {
+        "value": 833.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130134": {
+      "name": "Botalaote",
+      "level": 3,
+      "area": {
+        "value": 9.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130129": {
+      "name": "Butale",
+      "level": 3,
+      "area": {
+        "value": 61.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130133": {
+      "name": "Ditladi",
+      "level": 3,
+      "area": {
+        "value": 574.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130102": {
+      "name": "Gambule",
+      "level": 3,
+      "area": {
+        "value": 64.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130103": {
+      "name": "Gulubane",
+      "level": 3,
+      "area": {
+        "value": 50.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130104": {
+      "name": "Gungwe",
+      "level": 3,
+      "area": {
+        "value": 4.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130144": {
+      "name": "Haskins Farm",
+      "level": 3,
+      "area": {
+        "value": 362.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130105": {
+      "name": "Jackalas 1",
+      "level": 3,
+      "area": {
+        "value": 48.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130106": {
+      "name": "Jackalas 2",
+      "level": 3,
+      "area": {
+        "value": 26.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130145": {
+      "name": "Johannes Kachejohn",
+      "level": 3,
+      "area": {
+        "value": 448.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130107": {
+      "name": "Kalakamati",
+      "level": 3,
+      "area": {
+        "value": 42.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130139": {
+      "name": "Kgari",
+      "level": 3,
+      "area": {
+        "value": 18.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130108": {
+      "name": "Letsholathebe",
+      "level": 3,
+      "area": {
+        "value": 244.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130141": {
+      "name": "Mabudzane",
+      "level": 3,
+      "area": {
+        "value": 75,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130109": {
+      "name": "Makaleng",
+      "level": 3,
+      "area": {
+        "value": 37.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130111": {
+      "name": "Mambo",
+      "level": 3,
+      "area": {
+        "value": 22.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130112": {
+      "name": "Mapoka",
+      "level": 3,
+      "area": {
+        "value": 68,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130113": {
+      "name": "Masingwaneng",
+      "level": 3,
+      "area": {
+        "value": 54.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130130": {
+      "name": "Masukwane",
+      "level": 3,
+      "area": {
+        "value": 6.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130114": {
+      "name": "Masunga",
+      "level": 3,
+      "area": {
+        "value": 36.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130136": {
+      "name": "Matenge",
+      "level": 3,
+      "area": {
+        "value": 35.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130132": {
+      "name": "Matshelagabedi",
+      "level": 3,
+      "area": {
+        "value": 485.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130115": {
+      "name": "Matsiloje",
+      "level": 3,
+      "area": {
+        "value": 418.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130101": {
+      "name": "Mbalambi",
+      "level": 3,
+      "area": {
+        "value": 75.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130116": {
+      "name": "Moroka",
+      "level": 3,
+      "area": {
+        "value": 55.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130117": {
+      "name": "Mosojane",
+      "level": 3,
+      "area": {
+        "value": 61.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130140": {
+      "name": "Mowana",
+      "level": 3,
+      "area": {
+        "value": 48.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130110": {
+      "name": "Mulambakwena",
+      "level": 3,
+      "area": {
+        "value": 38.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130118": {
+      "name": "Nlakhwane",
+      "level": 3,
+      "area": {
+        "value": 63.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130143": {
+      "name": "Patayamatebele",
+      "level": 3,
+      "area": {
+        "value": 407.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130138": {
+      "name": "Pole",
+      "level": 3,
+      "area": {
+        "value": 29.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130119": {
+      "name": "Ramokgwebana",
+      "level": 3,
+      "area": {
+        "value": 36.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130120": {
+      "name": "Sechele",
+      "level": 3,
+      "area": {
+        "value": 194.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130121": {
+      "name": "Sekakangwe",
+      "level": 3,
+      "area": {
+        "value": 26.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130122": {
+      "name": "Senyawe",
+      "level": 3,
+      "area": {
+        "value": 117.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130131": {
+      "name": "Shashe Bridge",
+      "level": 3,
+      "area": {
+        "value": 173.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130123": {
+      "name": "Siviya",
+      "level": 3,
+      "area": {
+        "value": 19.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130124": {
+      "name": "Tati Siding",
+      "level": 3,
+      "area": {
+        "value": 29.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130125": {
+      "name": "Themashanga",
+      "level": 3,
+      "area": {
+        "value": 262.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130135": {
+      "name": "Toteng",
+      "level": 3,
+      "area": {
+        "value": 81.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130126": {
+      "name": "Tsamaya",
+      "level": 3,
+      "area": {
+        "value": 34.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130127": {
+      "name": "Tshesebe",
+      "level": 3,
+      "area": {
+        "value": 25.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130137": {
+      "name": "Vukwi",
+      "level": 3,
+      "area": {
+        "value": 17.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130128": {
+      "name": "Zwenshambe",
+      "level": 3,
+      "area": {
+        "value": 60,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW130142": {
+      "name": "Matopi",
+      "level": 3,
+      "area": {
+        "value": 225.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140115": {
+      "name": "Bodibeng",
+      "level": 3,
+      "area": {
+        "value": 232.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140116": {
+      "name": "Botlhatlogo",
+      "level": 3,
+      "area": {
+        "value": 1257.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140114": {
+      "name": "Chanoga",
+      "level": 3,
+      "area": {
+        "value": 102,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140119": {
+      "name": "Habu",
+      "level": 3,
+      "area": {
+        "value": 111.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140107": {
+      "name": "Kareng",
+      "level": 3,
+      "area": {
+        "value": 3409.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140118": {
+      "name": "Kgakge/makakung",
+      "level": 3,
+      "area": {
+        "value": 175.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140111": {
+      "name": "Komana",
+      "level": 3,
+      "area": {
+        "value": 47.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140113": {
+      "name": "Mababe",
+      "level": 3,
+      "area": {
+        "value": 89.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140102": {
+      "name": "Makalamabedi",
+      "level": 3,
+      "area": {
+        "value": 7639.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140109": {
+      "name": "Matlapana",
+      "level": 3,
+      "area": {
+        "value": 56.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140108": {
+      "name": "Matsaudi/sakapnae",
+      "level": 3,
+      "area": {
+        "value": 46.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140101": {
+      "name": "Maun",
+      "level": 3,
+      "area": {
+        "value": 13596.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140110": {
+      "name": "Phuduhudu",
+      "level": 3,
+      "area": {
+        "value": 7116.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140112": {
+      "name": "Sankuyo",
+      "level": 3,
+      "area": {
+        "value": 79.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140106": {
+      "name": "Sehithwa",
+      "level": 3,
+      "area": {
+        "value": 1450.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140117": {
+      "name": "Semboyo",
+      "level": 3,
+      "area": {
+        "value": 1335.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140103": {
+      "name": "Shorobe",
+      "level": 3,
+      "area": {
+        "value": 8703.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140104": {
+      "name": "Toteng",
+      "level": 3,
+      "area": {
+        "value": 2073.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140105": {
+      "name": "Tsao",
+      "level": 3,
+      "area": {
+        "value": 2739.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140203": {
+      "name": "Beetsha",
+      "level": 3,
+      "area": {
+        "value": 8472.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140229": {
+      "name": "Chukumuchu",
+      "level": 3,
+      "area": {
+        "value": 2828,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140228": {
+      "name": "Eretsha",
+      "level": 3,
+      "area": {
+        "value": 811.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140231": {
+      "name": "Etsha 1",
+      "level": 3,
+      "area": {
+        "value": 921.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140216": {
+      "name": "Etsha 13",
+      "level": 3,
+      "area": {
+        "value": 491.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140209": {
+      "name": "Etsha 6",
+      "level": 3,
+      "area": {
+        "value": 487.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140218": {
+      "name": "Gani",
+      "level": 3,
+      "area": {
+        "value": 727.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140204": {
+      "name": "Gonutsuga",
+      "level": 3,
+      "area": {
+        "value": 618.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140230": {
+      "name": "Gudingwa",
+      "level": 3,
+      "area": {
+        "value": 62.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140220": {
+      "name": "Gumare",
+      "level": 3,
+      "area": {
+        "value": 376.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140210": {
+      "name": "Ikoga",
+      "level": 3,
+      "area": {
+        "value": 733.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140232": {
+      "name": "Kajaja",
+      "level": 3,
+      "area": {
+        "value": 259.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140208": {
+      "name": "Kauxwhi",
+      "level": 3,
+      "area": {
+        "value": 162,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140227": {
+      "name": "Mogomotho",
+      "level": 3,
+      "area": {
+        "value": 988.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140222": {
+      "name": "Mohembo East",
+      "level": 3,
+      "area": {
+        "value": 11.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140215": {
+      "name": "Mohembo West",
+      "level": 3,
+      "area": {
+        "value": 184.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140205": {
+      "name": "Mokgacha",
+      "level": 3,
+      "area": {
+        "value": 148.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140202": {
+      "name": "Ngarange",
+      "level": 3,
+      "area": {
+        "value": 268.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140217": {
+      "name": "Nokaneng",
+      "level": 3,
+      "area": {
+        "value": 1571.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140212": {
+      "name": "Nxamasere",
+      "level": 3,
+      "area": {
+        "value": 245.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140214": {
+      "name": "Nxaunxau",
+      "level": 3,
+      "area": {
+        "value": 5403.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140206": {
+      "name": "Qangwa",
+      "level": 3,
+      "area": {
+        "value": 6182.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140225": {
+      "name": "Samochema",
+      "level": 3,
+      "area": {
+        "value": 117.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140224": {
+      "name": "Sekondomboro",
+      "level": 3,
+      "area": {
+        "value": 468.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140211": {
+      "name": "Sepopa",
+      "level": 3,
+      "area": {
+        "value": 414.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140201": {
+      "name": "Seronga",
+      "level": 3,
+      "area": {
+        "value": 878.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140213": {
+      "name": "Shakawe",
+      "level": 3,
+      "area": {
+        "value": 459,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140219": {
+      "name": "Tubu",
+      "level": 3,
+      "area": {
+        "value": 365.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140207": {
+      "name": "Xakao",
+      "level": 3,
+      "area": {
+        "value": 196.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140221": {
+      "name": "Xaxa",
+      "level": 3,
+      "area": {
+        "value": 14762,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140226": {
+      "name": "Xhauga",
+      "level": 3,
+      "area": {
+        "value": 348.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140223": {
+      "name": "Tobere",
+      "level": 3,
+      "area": {
+        "value": 86.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW140301": {
+      "name": "Ngamiland Delta",
+      "level": 3,
+      "area": {
+        "value": 12490.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150101": {
+      "name": "Kachikau",
+      "level": 3,
+      "area": {
+        "value": 134.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150102": {
+      "name": "Kasane",
+      "level": 3,
+      "area": {
+        "value": 1095.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150110": {
+      "name": "Kataba",
+      "level": 3,
+      "area": {
+        "value": 5655.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150104": {
+      "name": "Kavimba",
+      "level": 3,
+      "area": {
+        "value": 553.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150103": {
+      "name": "Kazungula",
+      "level": 3,
+      "area": {
+        "value": 18.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150105": {
+      "name": "Lesoma",
+      "level": 3,
+      "area": {
+        "value": 90.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150106": {
+      "name": "Muchinje/mabele",
+      "level": 3,
+      "area": {
+        "value": 573.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150111": {
+      "name": "Number Seven",
+      "level": 3,
+      "area": {
+        "value": 12071.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150108": {
+      "name": "Pandamatenga",
+      "level": 3,
+      "area": {
+        "value": 185.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150107": {
+      "name": "Parakarungu",
+      "level": 3,
+      "area": {
+        "value": 316.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW150109": {
+      "name": "Satau",
+      "level": 3,
+      "area": {
+        "value": 164.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160121": {
+      "name": "B. Visser",
+      "level": 3,
+      "area": {
+        "value": 2273,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160115": {
+      "name": "Bere",
+      "level": 3,
+      "area": {
+        "value": 2528.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160107": {
+      "name": "Charles Hill",
+      "level": 3,
+      "area": {
+        "value": 152.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160119": {
+      "name": "Charles Sheldon",
+      "level": 3,
+      "area": {
+        "value": 832,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160105": {
+      "name": "Chobokwane",
+      "level": 3,
+      "area": {
+        "value": 4546.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160118": {
+      "name": "Dect Etin",
+      "level": 3,
+      "area": {
+        "value": 2794,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160102": {
+      "name": "Dekar",
+      "level": 3,
+      "area": {
+        "value": 972.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160113": {
+      "name": "East Hanahai",
+      "level": 3,
+      "area": {
+        "value": 2930.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160101": {
+      "name": "Ghanzi",
+      "level": 3,
+      "area": {
+        "value": 160.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160111": {
+      "name": "Groote Laagte",
+      "level": 3,
+      "area": {
+        "value": 6570.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160125": {
+      "name": "Hans Metzler",
+      "level": 3,
+      "area": {
+        "value": 958.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160124": {
+      "name": "J. Ransall",
+      "level": 3,
+      "area": {
+        "value": 596.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160127": {
+      "name": "Janki Janki",
+      "level": 3,
+      "area": {
+        "value": 3388.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160120": {
+      "name": "Jerung",
+      "level": 3,
+      "area": {
+        "value": 3458.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160122": {
+      "name": "John Farm",
+      "level": 3,
+      "area": {
+        "value": 1718.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160114": {
+      "name": "Kacgae",
+      "level": 3,
+      "area": {
+        "value": 12147.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160104": {
+      "name": "Karakobis",
+      "level": 3,
+      "area": {
+        "value": 581.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160109": {
+      "name": "Kule",
+      "level": 3,
+      "area": {
+        "value": 2670.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160126": {
+      "name": "Magono Magono",
+      "level": 3,
+      "area": {
+        "value": 2023.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160108": {
+      "name": "Makunda",
+      "level": 3,
+      "area": {
+        "value": 2521.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160123": {
+      "name": "Masire's Farm",
+      "level": 3,
+      "area": {
+        "value": 1903.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160110": {
+      "name": "Ncojane",
+      "level": 3,
+      "area": {
+        "value": 1545.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160117": {
+      "name": "New Xade",
+      "level": 3,
+      "area": {
+        "value": 249.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160112": {
+      "name": "New Xanagas",
+      "level": 3,
+      "area": {
+        "value": 3965.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160116": {
+      "name": "Qabo",
+      "level": 3,
+      "area": {
+        "value": 155.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160103": {
+      "name": "Tsootsha",
+      "level": 3,
+      "area": {
+        "value": 160.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160106": {
+      "name": "West Hanahai",
+      "level": 3,
+      "area": {
+        "value": 1190.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW160201": {
+      "name": "Central Kgalagadi Game Reserve",
+      "level": 3,
+      "area": {
+        "value": 52503.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170107": {
+      "name": "Bogogobo",
+      "level": 3,
+      "area": {
+        "value": 26.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170113": {
+      "name": "Bokspits",
+      "level": 3,
+      "area": {
+        "value": 25475.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170115": {
+      "name": "Bray",
+      "level": 3,
+      "area": {
+        "value": 491.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170110": {
+      "name": "Gachibana",
+      "level": 3,
+      "area": {
+        "value": 1303.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170103": {
+      "name": "Khisa",
+      "level": 3,
+      "area": {
+        "value": 684.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170109": {
+      "name": "Khuis",
+      "level": 3,
+      "area": {
+        "value": 261.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170118": {
+      "name": "Khwawa",
+      "level": 3,
+      "area": {
+        "value": 5693.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170119": {
+      "name": "Kokotsha",
+      "level": 3,
+      "area": {
+        "value": 667.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170106": {
+      "name": "Kolonkwane",
+      "level": 3,
+      "area": {
+        "value": 951.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170102": {
+      "name": "Makopong",
+      "level": 3,
+      "area": {
+        "value": 98.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170121": {
+      "name": "Maleshe",
+      "level": 3,
+      "area": {
+        "value": 524.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170120": {
+      "name": "Maralaleng",
+      "level": 3,
+      "area": {
+        "value": 102.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170117": {
+      "name": "Maubelo",
+      "level": 3,
+      "area": {
+        "value": 6482.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170108": {
+      "name": "Middlepits",
+      "level": 3,
+      "area": {
+        "value": 29.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170122": {
+      "name": "Molopo Farms",
+      "level": 3,
+      "area": {
+        "value": 6245.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170104": {
+      "name": "Omaweneno",
+      "level": 3,
+      "area": {
+        "value": 62.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170116": {
+      "name": "Phepheng/draaihoek",
+      "level": 3,
+      "area": {
+        "value": 1584.8,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170111": {
+      "name": "Rapples Pan",
+      "level": 3,
+      "area": {
+        "value": 462.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170114": {
+      "name": "Struizendam",
+      "level": 3,
+      "area": {
+        "value": 5.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170105": {
+      "name": "Tsabong",
+      "level": 3,
+      "area": {
+        "value": 628.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170112": {
+      "name": "Vaalhoek",
+      "level": 3,
+      "area": {
+        "value": 499.1,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170101": {
+      "name": "Werda",
+      "level": 3,
+      "area": {
+        "value": 1715.6,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170203": {
+      "name": "Hukuntsi",
+      "level": 3,
+      "area": {
+        "value": 504.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170208": {
+      "name": "Hunhukwe",
+      "level": 3,
+      "area": {
+        "value": 2757.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170213": {
+      "name": "Inalegolo",
+      "level": 3,
+      "area": {
+        "value": 7280.7,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170201": {
+      "name": "Kang",
+      "level": 3,
+      "area": {
+        "value": 3733.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170204": {
+      "name": "Lehututu",
+      "level": 3,
+      "area": {
+        "value": 733.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170205": {
+      "name": "Lokgwabe",
+      "level": 3,
+      "area": {
+        "value": 205,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170212": {
+      "name": "Make",
+      "level": 3,
+      "area": {
+        "value": 1099.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170206": {
+      "name": "Monong",
+      "level": 3,
+      "area": {
+        "value": 1410.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170207": {
+      "name": "Ncaang",
+      "level": 3,
+      "area": {
+        "value": 1157.3,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170210": {
+      "name": "Ngwatle",
+      "level": 3,
+      "area": {
+        "value": 748.2,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170214": {
+      "name": "Phuduhudu",
+      "level": 3,
+      "area": {
+        "value": 3329,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170202": {
+      "name": "Tshane",
+      "level": 3,
+      "area": {
+        "value": 571.4,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170211": {
+      "name": "Ukwi",
+      "level": 3,
+      "area": {
+        "value": 6990.5,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    },
+    "botswana:BW-L-BW170209": {
+      "name": "Zutswa",
+      "level": 3,
+      "area": {
+        "value": 21011.9,
+        "unit": "km²",
+        "method": "mapped",
+        "period": "Boundary-derived estimate",
+        "source": "mappedArea"
+      }
+    }
+  }
+}

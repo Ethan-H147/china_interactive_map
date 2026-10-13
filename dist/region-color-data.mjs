@@ -1,6 +1,6 @@
 // Country differences belong in data declarations, not in the renderer or UI.
 export const countryColorData = {
- ...Object.fromEntries(['south-africa','eswatini','lesotho'].map(country=>[country,{statistics:'data/southern-africa/'+country+'/statistics.json',catalogue:'data/southern-africa/'+country+'/catalogue.bin',levels:country==='south-africa'?'Provinces':country==='eswatini'?'Regions':'Districts',economy:country==='south-africa'}])),
+ ...Object.fromEntries(['south-africa','eswatini','lesotho','botswana','namibia'].map(country=>[country,{statistics:'data/southern-africa/'+country+'/statistics.json',catalogue:'data/southern-africa/'+country+'/catalogue.bin',levels:country==='south-africa'?'Provinces':['eswatini','namibia'].includes(country)?'Regions':'Districts',economy:country==='south-africa'}])),
  china: {statistics:'data/region-statistics.json', population:'china', levels:'Provinces & territories', geography:{id:'adcode',parent:'provinceCode'}, layers:/^(province|prefecture|other|city-district)(-fragment)?-fill$/, primary:/^province(-fragment)?-fill$/},
  korea: {statistics:'data/region-statistics.json', catalogue:'data/korea-boundaries.bin', population:'korea', levels:'Provinces & special cities'},
  mongolia: {statistics:'data/region-statistics.json', catalogue:'data/mongolia-boundaries.bin', population:'mongolia', levels:'Provinces & capital'},
@@ -17,6 +17,7 @@ export const countryColorData = {
 export const colorMetrics = ['population','populationDensity','gdp','gdpPerCapita'];
 export const colorLabels = {none:'None',population:'Population',populationDensity:'Population density',gdp:'GDP',gdpPerCapita:'GDP per capita'};
 export const subdivisionColorLabels={
+ botswana:['Districts','Census subdistricts','Localities'],namibia:['Regions','Constituencies'],
  'south-africa':['Provinces','Districts & metros','Municipalities & metros'],eswatini:['Regions','Tinkhundla'],lesotho:['Districts','Community councils'],
  china:['Provinces & territories','Subdivisions','City districts'],korea:['Provinces & special cities','Districts'],mongolia:['Provinces & capital','Districts'],japan:['Prefectures','Municipalities','Municipalities & city wards'],
  indonesia:['Provinces','Regencies & cities'],philippines:['Regions','Provinces'],malaysia:['States & federal territories','Districts'],singapore:['Regions','Planning areas'],russia:['Federal subjects','Districts & cities']

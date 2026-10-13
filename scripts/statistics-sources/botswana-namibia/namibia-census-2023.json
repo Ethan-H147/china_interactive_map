@@ -1,0 +1,710 @@
+{
+  "retrieved": "2026-10-13",
+  "year": 2023,
+  "regions": {
+    "erongo": {
+      "url": "https://census.nsa.org.na/erongo/",
+      "population": 240206,
+      "area": 63639.27999999999,
+      "constituencies": [
+        {
+          "name": "Arandis",
+          "population": 13542,
+          "area": 13519.74
+        },
+        {
+          "name": "Daures",
+          "population": 14601,
+          "area": 17786.64
+        },
+        {
+          "name": "Karibib",
+          "population": 19705,
+          "area": 14535.81
+        },
+        {
+          "name": "Omaruru",
+          "population": 13322,
+          "area": 8431.88
+        },
+        {
+          "name": "Swakopmund",
+          "population": 75921,
+          "area": 196.32
+        },
+        {
+          "name": "Walvis Bay Rural",
+          "population": 51497,
+          "area": 9149.99
+        },
+        {
+          "name": "Walvis Bay Urban",
+          "population": 51618,
+          "area": 18.9
+        }
+      ]
+    },
+    "hardap": {
+      "url": "https://census.nsa.org.na/hardap-region/",
+      "population": 106680,
+      "area": 109713.28,
+      "constituencies": [
+        {
+          "name": "Daweb",
+          "population": 6092,
+          "area": 40209.89
+        },
+        {
+          "name": "Aranos",
+          "population": 10722,
+          "area": 26724.24
+        },
+        {
+          "name": "Gibeon",
+          "population": 8034,
+          "area": 10156.39
+        },
+        {
+          "name": "Mariental Rural",
+          "population": 12812,
+          "area": 15036.72
+        },
+        {
+          "name": "Mariental Urban",
+          "population": 18368,
+          "area": 4916.11
+        },
+        {
+          "name": "Rehoboth East Urban",
+          "population": 29299,
+          "area": 287.73
+        },
+        {
+          "name": "Rehoboth Rural",
+          "population": 9439,
+          "area": 12056.75
+        },
+        {
+          "name": "Rehoboth West Urban",
+          "population": 11914,
+          "area": 325.45
+        }
+      ]
+    },
+    "karas": {
+      "url": "https://census.nsa.org.na/kharas-reggion/",
+      "population": 109893,
+      "area": 161395.01,
+      "constituencies": [
+        {
+          "name": "Nami-Nus",
+          "population": 17243,
+          "area": 48270.82
+        },
+        {
+          "name": "Berseba",
+          "population": 11258,
+          "area": 31724.85
+        },
+        {
+          "name": "Karasburg East",
+          "population": 13821,
+          "area": 24276.26
+        },
+        {
+          "name": "Karasburg West",
+          "population": 17741,
+          "area": 14053.11
+        },
+        {
+          "name": "Keetmanshoop Urban",
+          "population": 27862,
+          "area": 524.35
+        },
+        {
+          "name": "Keetmanshoop Rural",
+          "population": 8744,
+          "area": 37922.48
+        },
+        {
+          "name": "Oranjemund",
+          "population": 13224,
+          "area": 4623.14
+        }
+      ]
+    },
+    "kavango-east": {
+      "url": "https://census.nsa.org.na/kavango-east-region/",
+      "population": 218421,
+      "area": 23987.769999999997,
+      "constituencies": [
+        {
+          "name": "Mashare",
+          "population": 19478,
+          "area": 9139.89
+        },
+        {
+          "name": "Mukwe",
+          "population": 39170,
+          "area": 5540.34
+        },
+        {
+          "name": "Ndiyona",
+          "population": 13800,
+          "area": 5232.08
+        },
+        {
+          "name": "Ndonga Linena",
+          "population": 14936,
+          "area": 2851.09
+        },
+        {
+          "name": "Rundu Rural",
+          "population": 12405,
+          "area": 1068.57
+        },
+        {
+          "name": "Rundu Urban",
+          "population": 118632,
+          "area": 155.8
+        }
+      ]
+    },
+    "kavango-west": {
+      "url": "https://census.nsa.org.na/kavango-west-region/",
+      "population": 123266,
+      "area": 23871.350000000002,
+      "constituencies": [
+        {
+          "name": "Kapako",
+          "population": 27823,
+          "area": 1224.11
+        },
+        {
+          "name": "Mankumpi",
+          "population": 6910,
+          "area": 2338.62
+        },
+        {
+          "name": "Mpungu",
+          "population": 21098,
+          "area": 7976.76
+        },
+        {
+          "name": "Musese",
+          "population": 13659,
+          "area": 1422.9
+        },
+        {
+          "name": "Ncamagoro",
+          "population": 8449,
+          "area": 5043.9
+        },
+        {
+          "name": "Ncuncuni",
+          "population": 10943,
+          "area": 1397.45
+        },
+        {
+          "name": "Nkurenkuru",
+          "population": 15887,
+          "area": 271.86
+        },
+        {
+          "name": "Tondoro",
+          "population": 18497,
+          "area": 4195.75
+        }
+      ]
+    },
+    "khomas": {
+      "url": "https://census.nsa.org.na/khomas-region/",
+      "population": 494605,
+      "area": 36949.92,
+      "constituencies": [
+        {
+          "name": "John Pandeni",
+          "population": 25457,
+          "area": 3.18
+        },
+        {
+          "name": "Katutura Central",
+          "population": 30557,
+          "area": 2.53
+        },
+        {
+          "name": "Katutura East",
+          "population": 22940,
+          "area": 4.36
+        },
+        {
+          "name": "Khomasdal",
+          "population": 67211,
+          "area": 23.52
+        },
+        {
+          "name": "Moses//Garoeb",
+          "population": 68932,
+          "area": 32.37
+        },
+        {
+          "name": "Samora Machel",
+          "population": 92401,
+          "area": 20.3
+        },
+        {
+          "name": "Tobias Hainyeko",
+          "population": 67067,
+          "area": 18.51
+        },
+        {
+          "name": "Windhoek East",
+          "population": 30054,
+          "area": 218.93
+        },
+        {
+          "name": "Windhoek Rural",
+          "population": 30079,
+          "area": 36418.14
+        },
+        {
+          "name": "Windhoek West",
+          "population": 59907,
+          "area": 208.08
+        }
+      ]
+    },
+    "kunene": {
+      "url": "https://census.nsa.org.na/kunene-region/",
+      "population": 120762,
+      "area": 115615.70000000001,
+      "constituencies": [
+        {
+          "name": "Epupa",
+          "population": 26491,
+          "area": 23617.36
+        },
+        {
+          "name": "Kamanjab",
+          "population": 11349,
+          "area": 17130.63
+        },
+        {
+          "name": "Khorixas",
+          "population": 15506,
+          "area": 21328.01
+        },
+        {
+          "name": "Opuwo Rural",
+          "population": 14894,
+          "area": 21544.91
+        },
+        {
+          "name": "Opuwo Urban",
+          "population": 23934,
+          "area": 1738.15
+        },
+        {
+          "name": "Outjo",
+          "population": 19743,
+          "area": 7467.57
+        },
+        {
+          "name": "Sesfontein",
+          "population": 8845,
+          "area": 22789.07
+        }
+      ]
+    },
+    "ohangwena": {
+      "url": "https://census.nsa.org.na/ohangwena-region/",
+      "population": 337729,
+      "area": 10709.28,
+      "constituencies": [
+        {
+          "name": "Eenhana",
+          "population": 35304,
+          "area": 904.21
+        },
+        {
+          "name": "Endola",
+          "population": 32698,
+          "area": 326.99
+        },
+        {
+          "name": "Engela",
+          "population": 30004,
+          "area": 307.8
+        },
+        {
+          "name": "Epembe",
+          "population": 16336,
+          "area": 1198.73
+        },
+        {
+          "name": "Ohangwena",
+          "population": 31491,
+          "area": 229.53
+        },
+        {
+          "name": "Okongo",
+          "population": 31746,
+          "area": 3821.98
+        },
+        {
+          "name": "Omulonga",
+          "population": 32802,
+          "area": 501.07
+        },
+        {
+          "name": "Omundaungilo",
+          "population": 15009,
+          "area": 793.54
+        },
+        {
+          "name": "Ondobe",
+          "population": 32622,
+          "area": 456.66
+        },
+        {
+          "name": "Ongenga",
+          "population": 27296,
+          "area": 314.7
+        },
+        {
+          "name": "Oshikango",
+          "population": 30531,
+          "area": 223.75
+        },
+        {
+          "name": "Oshikunde",
+          "population": 21890,
+          "area": 1630.32
+        }
+      ]
+    },
+    "omaheke": {
+      "url": "https://census.nsa.org.na/omaheke-region/",
+      "population": 102881,
+      "area": 84745.44999999998,
+      "constituencies": [
+        {
+          "name": "Aminius",
+          "population": 13801,
+          "area": 12994.26
+        },
+        {
+          "name": "Epukiro",
+          "population": 7880,
+          "area": 10926.12
+        },
+        {
+          "name": "Gobabis",
+          "population": 35452,
+          "area": 5770.32
+        },
+        {
+          "name": "Kalahari",
+          "population": 12021,
+          "area": 12248.3
+        },
+        {
+          "name": "Okorukambe",
+          "population": 12271,
+          "area": 17456.98
+        },
+        {
+          "name": "Otjinene",
+          "population": 12415,
+          "area": 6420.01
+        },
+        {
+          "name": "Otjombinde",
+          "population": 9041,
+          "area": 18929.46
+        }
+      ]
+    },
+    "omusati": {
+      "url": "https://census.nsa.org.na/omusati-region/",
+      "population": 316671,
+      "area": 26600.31,
+      "constituencies": [
+        {
+          "name": "Anamulenge",
+          "population": 20344,
+          "area": 394.06
+        },
+        {
+          "name": "Elim",
+          "population": 13400,
+          "area": 470.51
+        },
+        {
+          "name": "Etayi",
+          "population": 33088,
+          "area": 544.35
+        },
+        {
+          "name": "Ogongo",
+          "population": 17649,
+          "area": 677.76
+        },
+        {
+          "name": "Okahao",
+          "population": 24909,
+          "area": 9976.52
+        },
+        {
+          "name": "Okalongo",
+          "population": 32663,
+          "area": 529.38
+        },
+        {
+          "name": "Onesi",
+          "population": 23364,
+          "area": 775.55
+        },
+        {
+          "name": "Oshikuku",
+          "population": 19693,
+          "area": 424
+        },
+        {
+          "name": "Otamanzi",
+          "population": 16399,
+          "area": 4184.64
+        },
+        {
+          "name": "Outapi",
+          "population": 53594,
+          "area": 950.33
+        },
+        {
+          "name": "Ruacana",
+          "population": 27261,
+          "area": 5377.07
+        },
+        {
+          "name": "Tsandi",
+          "population": 34307,
+          "area": 2296.14
+        }
+      ]
+    },
+    "oshana": {
+      "url": "https://census.nsa.org.na/oshana-region/",
+      "population": 230801,
+      "area": 8656.36,
+      "constituencies": [
+        {
+          "name": "Okaku",
+          "population": 21892,
+          "area": 224.31
+        },
+        {
+          "name": "Okatana",
+          "population": 19974,
+          "area": 426.78
+        },
+        {
+          "name": "Okatyali",
+          "population": 4502,
+          "area": 557.74
+        },
+        {
+          "name": "Ompundja",
+          "population": 4582,
+          "area": 465.73
+        },
+        {
+          "name": "Ondangwa Rural",
+          "population": 14959,
+          "area": 149.73
+        },
+        {
+          "name": "Ondangwa Urban",
+          "population": 31466,
+          "area": 59.45
+        },
+        {
+          "name": "Ongwediva",
+          "population": 44166,
+          "area": 221.69
+        },
+        {
+          "name": "Oshakati East",
+          "population": 39915,
+          "area": 187.02
+        },
+        {
+          "name": "Oshakati West",
+          "population": 30665,
+          "area": 239.06
+        },
+        {
+          "name": "Uukwiyu",
+          "population": 13033,
+          "area": 299.61
+        },
+        {
+          "name": "Uuvudhiya",
+          "population": 5647,
+          "area": 5825.24
+        }
+      ]
+    },
+    "oshikoto": {
+      "url": "https://census.nsa.org.na/oshikoto-region/",
+      "correctionSource": "https://nsa.org.na/wp-content/uploads/2025/09/Oshikoto-2023-Census-Regional-Profile.pdf",
+      "population": 257302,
+      "area": 38672.89,
+      "constituencies": [
+        {
+          "name": "Eengondi",
+          "population": 24208,
+          "area": 2107.76
+        },
+        {
+          "name": "Guinas",
+          "population": 8578,
+          "area": 4569.91
+        },
+        {
+          "name": "Nehale lyaMpingana",
+          "population": 17317,
+          "area": 9934.98
+        },
+        {
+          "name": "Okankolo",
+          "population": 17988,
+          "area": 1643
+        },
+        {
+          "name": "Olukonda",
+          "population": 14318,
+          "area": 241.04
+        },
+        {
+          "name": "Omuntele",
+          "population": 21043,
+          "area": 1629.6
+        },
+        {
+          "name": "Omuthiyagwiipundi",
+          "population": 39855,
+          "area": 13392.46
+        },
+        {
+          "name": "Onayena",
+          "population": 16669,
+          "area": 442.34
+        },
+        {
+          "name": "Onyaanya",
+          "population": 25465,
+          "area": 731.75
+        },
+        {
+          "name": "Tsumeb",
+          "population": 38134,
+          "area": 3608.58
+        },
+        {
+          "name": "Oniipa",
+          "population": 33727,
+          "area": 371.47
+        }
+      ]
+    },
+    "otjozondjupa": {
+      "url": "https://census.nsa.org.na/otjozondjupa-region/",
+      "population": 220811,
+      "area": 105294.65,
+      "constituencies": [
+        {
+          "name": "Grootfontein",
+          "population": 36951,
+          "area": 11278.5
+        },
+        {
+          "name": "Okahandja",
+          "population": 46061,
+          "area": 5856.89
+        },
+        {
+          "name": "Okakarara",
+          "population": 30987,
+          "area": 14643.63
+        },
+        {
+          "name": "Omatako",
+          "population": 18283,
+          "area": 24370.94
+        },
+        {
+          "name": "Otavi",
+          "population": 18279,
+          "area": 14243.14
+        },
+        {
+          "name": "Otjiwarongo",
+          "population": 54893,
+          "area": 6410.7
+        },
+        {
+          "name": "Tsumkwe",
+          "population": 15357,
+          "area": 28490.85
+        }
+      ]
+    },
+    "zambezi": {
+      "url": "https://census.nsa.org.na/zambezi-region/",
+      "population": 142373,
+      "area": 14663.43,
+      "constituencies": [
+        {
+          "name": "Judea Lyaboloma",
+          "population": 8738,
+          "area": 1723.04
+        },
+        {
+          "name": "Kabbe North",
+          "population": 12253,
+          "area": 1182.62
+        },
+        {
+          "name": "Kabbe South",
+          "population": 11345,
+          "area": 1257.6
+        },
+        {
+          "name": "Katima Mulilo Rural",
+          "population": 24016,
+          "area": 1620.03
+        },
+        {
+          "name": "Katima Mulilo Urban",
+          "population": 46401,
+          "area": 44.94
+        },
+        {
+          "name": "Kongola",
+          "population": 12069,
+          "area": 5173.82
+        },
+        {
+          "name": "Linyanti",
+          "population": 10425,
+          "area": 1804.35
+        },
+        {
+          "name": "Sibbinda",
+          "population": 17126,
+          "area": 1857.03
+        }
+      ]
+    }
+  }
+}

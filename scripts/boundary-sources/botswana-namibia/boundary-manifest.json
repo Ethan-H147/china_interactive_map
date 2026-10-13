@@ -1,0 +1,35 @@
+{
+  "retrievedAt": "2026-10-13",
+  "countries": {
+    "botswana": {
+      "source": "UNFPA, OCHA Common Operational Dataset administrative boundaries",
+      "url": "https://data.humdata.org/dataset/cod-ab-bwa",
+      "download": "https://data.humdata.org/dataset/74d579a7-e30b-445a-9ff3-1d673da53d3b/resource/61ec818b-57eb-4043-8a13-f5d59c7a192b/download/bwa_adm_2011_shp.zip",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "boundaryYear": 2011,
+      "counts": {
+        "sourceFirst": 17,
+        "second": 28,
+        "third": 519
+      },
+      "secondFile": "botswana-second.geojson",
+      "thirdFile": "botswana-third.geojson",
+      "note": "2011 census boundary snapshot, 28 census district definitions are also used in the 2022 census. Urban census districts assigned to their geographic surrounding district for display, preserving polygons. Raw first-level city/town authorities remain separately documented. These are not the later 2023 district council boundaries."
+    },
+    "namibia": {
+      "source": "Namibia Statistics Agency, reproduced in Atlas of Namibia Team (2022), Namibia Nature Foundation, Figure 8.24 Constituencies",
+      "url": "https://atlasofnamibia.online/chapter-8/download-files",
+      "record": "https://the-eis.com/elibrary/search/26665",
+      "download": "https://the-eis.com/elibrary/sites/default/files/downloads/literature/Atlas_ch_08_24.zip",
+      "license": "Creative Commons Attribution 4.0 International",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "boundaryYear": 2022,
+      "counts": {
+        "first": 14,
+        "second": 121
+      },
+      "secondFile": "namibia-second.geojson",
+      "note": "Original geometry supplied by Namibia Statistics Agency per Source and information.docx. 2013 delimitation structure with 121 constituencies and 14 regions. Source population fields predate 2023 census and are intentionally not imported. Names normalized for Unicode click consonants; Omuthiyagwiipundi renamed Omuthiya."
+    }
+  }
+}

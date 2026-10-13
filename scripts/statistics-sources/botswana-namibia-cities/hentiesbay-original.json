@@ -1,0 +1,98 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "181189515": {
+        "pageid": 181189515,
+        "ns": 6,
+        "title": "File:Flag of Henties Bay, Namibia.png",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 267436,
+            "width": 2000,
+            "height": 1000,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_Henties_Bay%2C_Namibia.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flag_of_Henties_Bay,_Namibia.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=181189515",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2026-01-04 01:43:51",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Flag of Henties Bay, Namibia",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Self-published work|Flags of municipalities of Namibia",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Flag of Henties Bay, Namibia",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2026-01-03",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"https://hbaymun.com.na/wp-content/uploads/2024/07/IMG-20240722-WA0124.jpg\">https://hbaymun.com.na/wp-content/uploads/2024/07/IMG-20240722-WA0124.jpg</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Belohz\" title=\"User:Belohz\">Belohz</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

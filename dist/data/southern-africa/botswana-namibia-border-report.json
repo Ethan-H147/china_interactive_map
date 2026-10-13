@@ -1,0 +1,40 @@
+{
+  "namibia-south-africa": {
+    "changedEdges": 589,
+    "maxDisplacementMetres": 7235.803564170887,
+    "changedRegions": [
+      "NA-C-oranjemund",
+      "NA-C-karasburg-west",
+      "NA-C-karasburg-east",
+      "NA-C-keetmanshoop-rural",
+      "NA-C-aranos"
+    ]
+  },
+  "botswana-south-africa": {
+    "changedEdges": 3827,
+    "maxDisplacementMetres": 7519.53165793894,
+    "changedRegions": [
+      "BW-C-gaborone",
+      "BW-C-barolong",
+      "BW-C-south-east",
+      "BW-C-kgatleng",
+      "BW-C-serowe-palapye",
+      "BW-C-mahalapye",
+      "BW-C-bobonong",
+      "BW-C-kgalagadi-south",
+      "BW-C-kgalagadi-north"
+    ]
+  },
+  "botswana-namibia": {
+    "changedEdges": 2198,
+    "maxDisplacementMetres": 7840.043575996889,
+    "changedRegions": [
+      "BW-C-ngamiland-east",
+      "BW-C-ngamiland-west",
+      "BW-C-chobe",
+      "BW-C-ghanzi",
+      "BW-C-kgalagadi-south",
+      "BW-C-kgalagadi-north"
+    ]
+  }
+}

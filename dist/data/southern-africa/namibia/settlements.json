@@ -1,0 +1,1684 @@
+{
+  "country": "namibia",
+  "records": [
+    {
+      "id": "NA-S-windhoek",
+      "en": "Windhoek",
+      "name": "Windhoek",
+      "kind": "Urban locality",
+      "center": [
+        17.08323,
+        -22.55941
+      ],
+      "parentId": "NA-khomas",
+      "provinceId": "NA-khomas",
+      "aliases": [],
+      "population": {
+        "value": 486186,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Windhoek",
+        "censusTablePage": 116,
+        "geonamesId": "3352136",
+        "coordinates": "https://www.geonames.org/3352136",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-rundu",
+      "en": "Rundu",
+      "name": "Rundu",
+      "kind": "Urban locality",
+      "center": [
+        19.77314,
+        -17.91796
+      ],
+      "parentId": "NA-kavango-east",
+      "provinceId": "NA-kavango-east",
+      "aliases": [],
+      "population": {
+        "value": 118632,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Rundu",
+        "censusTablePage": 115,
+        "geonamesId": "3353383",
+        "coordinates": "https://www.geonames.org/3353383",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-walvisbay",
+      "en": "Walvis Bay",
+      "name": "Walvis Bay",
+      "kind": "Urban locality",
+      "center": [
+        14.50528,
+        -22.9575
+      ],
+      "parentId": "NA-erongo",
+      "provinceId": "NA-erongo",
+      "aliases": [],
+      "population": {
+        "value": 102704,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Walvis Bay",
+        "censusTablePage": 115,
+        "geonamesId": "3359638",
+        "coordinates": "https://www.geonames.org/3359638",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-swakopmund",
+      "en": "Swakopmund",
+      "name": "Swakopmund",
+      "kind": "Urban locality",
+      "center": [
+        14.52663,
+        -22.67842
+      ],
+      "parentId": "NA-erongo",
+      "provinceId": "NA-erongo",
+      "aliases": [],
+      "population": {
+        "value": 75921,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Swakopmund",
+        "censusTablePage": 115,
+        "geonamesId": "3352844",
+        "coordinates": "https://www.geonames.org/3352844",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-oshakati",
+      "en": "Oshakati",
+      "name": "Oshakati",
+      "kind": "Urban locality",
+      "center": [
+        15.70436,
+        -17.78833
+      ],
+      "parentId": "NA-oshana",
+      "provinceId": "NA-oshana",
+      "aliases": [],
+      "population": {
+        "value": 58656,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Oshakati",
+        "censusTablePage": 116,
+        "geonamesId": "3354021",
+        "coordinates": "https://www.geonames.org/3354021",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-otjiwarongo",
+      "en": "Otjiwarongo",
+      "name": "Otjiwarongo",
+      "kind": "Urban locality",
+      "center": [
+        16.64772,
+        -20.46369
+      ],
+      "parentId": "NA-otjozondjupa",
+      "provinceId": "NA-otjozondjupa",
+      "aliases": [],
+      "population": {
+        "value": 49022,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Otjiwarongo",
+        "censusTablePage": 116,
+        "geonamesId": "3353811",
+        "coordinates": "https://www.geonames.org/3353811",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-katimamulilo",
+      "en": "Katima Mulilo",
+      "name": "Katima Mulilo",
+      "kind": "Urban locality",
+      "center": [
+        24.27574,
+        -17.50467
+      ],
+      "parentId": "NA-zambezi",
+      "provinceId": "NA-zambezi",
+      "aliases": [],
+      "population": {
+        "value": 46401,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Katima Mulilo",
+        "censusTablePage": 116,
+        "geonamesId": "877178",
+        "coordinates": "https://www.geonames.org/877178",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-okahandja",
+      "en": "Okahandja",
+      "name": "Okahandja",
+      "kind": "Urban locality",
+      "center": [
+        16.9029,
+        -21.98141
+      ],
+      "parentId": "NA-otjozondjupa",
+      "provinceId": "NA-otjozondjupa",
+      "aliases": [],
+      "population": {
+        "value": 45182,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Okahandja",
+        "censusTablePage": 116,
+        "geonamesId": "3354898",
+        "coordinates": "https://www.geonames.org/3354898",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-rehoboth",
+      "en": "Rehoboth",
+      "name": "Rehoboth",
+      "kind": "Urban locality",
+      "center": [
+        17.09,
+        -23.317
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [],
+      "population": {
+        "value": 40788,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Rehoboth",
+        "censusTablePage": 115,
+        "geonamesId": "3353540",
+        "coordinates": "https://www.geonames.org/3353540",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-tsumeb",
+      "en": "Tsumeb",
+      "name": "Tsumeb",
+      "kind": "Urban locality",
+      "center": [
+        17.71345,
+        -19.24842
+      ],
+      "parentId": "NA-oshikoto",
+      "provinceId": "NA-oshikoto",
+      "aliases": [],
+      "population": {
+        "value": 34960,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Tsumeb",
+        "censusTablePage": 116,
+        "geonamesId": "3352593",
+        "coordinates": "https://www.geonames.org/3352593",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-ongwediva",
+      "en": "Ongwediva",
+      "name": "Ongwediva",
+      "kind": "Urban locality",
+      "center": [
+        15.76564,
+        -17.77198
+      ],
+      "parentId": "NA-oshana",
+      "provinceId": "NA-oshana",
+      "aliases": [],
+      "population": {
+        "value": 33777,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Ongwediva",
+        "censusTablePage": 116,
+        "geonamesId": "3354147",
+        "coordinates": "https://www.geonames.org/3354147",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-gobabis",
+      "en": "Gobabis",
+      "name": "Gobabis",
+      "kind": "Urban locality",
+      "center": [
+        18.97159,
+        -22.45338
+      ],
+      "parentId": "NA-omaheke",
+      "provinceId": "NA-omaheke",
+      "aliases": [],
+      "population": {
+        "value": 33418,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Gobabis",
+        "censusTablePage": 116,
+        "geonamesId": "3357247",
+        "coordinates": "https://www.geonames.org/3357247",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-ondangwa",
+      "en": "Ondangwa",
+      "name": "Ondangwa",
+      "kind": "Urban locality",
+      "center": [
+        15.98037,
+        -17.90824
+      ],
+      "parentId": "NA-oshana",
+      "provinceId": "NA-oshana",
+      "aliases": [],
+      "population": {
+        "value": 30364,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Ondangwa",
+        "censusTablePage": 116,
+        "geonamesId": "3354247",
+        "coordinates": "https://www.geonames.org/3354247",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-helaonafidi",
+      "en": "Helao Nafidi",
+      "name": "Helao Nafidi",
+      "kind": "Urban locality",
+      "center": [
+        15.89107,
+        -17.39321
+      ],
+      "parentId": "NA-ohangwena",
+      "provinceId": "NA-ohangwena",
+      "aliases": [],
+      "population": {
+        "value": 29119,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Helao Nafidi",
+        "censusTablePage": 116,
+        "geonamesId": "12718704",
+        "coordinates": "https://www.geonames.org/12718704",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-keetmanshoop",
+      "en": "Keetmanshoop",
+      "name": "Keetmanshoop",
+      "kind": "Urban locality",
+      "center": [
+        18.13359,
+        -26.57654
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 27862,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Keetmanshoop",
+        "censusTablePage": 115,
+        "geonamesId": "3356264",
+        "coordinates": "https://www.geonames.org/3356264",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-grootfontein",
+      "en": "Grootfontein",
+      "name": "Grootfontein",
+      "kind": "Urban locality",
+      "center": [
+        18.1003,
+        -19.57328
+      ],
+      "parentId": "NA-otjozondjupa",
+      "provinceId": "NA-otjozondjupa",
+      "aliases": [],
+      "population": {
+        "value": 26839,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Grootfontein",
+        "censusTablePage": 116,
+        "geonamesId": "3357114",
+        "coordinates": "https://www.geonames.org/3357114",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-mariental",
+      "en": "Mariental",
+      "name": "Mariental",
+      "kind": "Urban locality",
+      "center": [
+        17.96471,
+        -24.62705
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [],
+      "population": {
+        "value": 18494,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Mariental",
+        "censusTablePage": 115,
+        "geonamesId": "3355595",
+        "coordinates": "https://www.geonames.org/3355595",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-eenhana",
+      "en": "Eenhana",
+      "name": "Eenhana",
+      "kind": "Urban locality",
+      "center": [
+        16.3294,
+        -17.48535
+      ],
+      "parentId": "NA-ohangwena",
+      "provinceId": "NA-ohangwena",
+      "aliases": [],
+      "population": {
+        "value": 16588,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Eenhana",
+        "censusTablePage": 116,
+        "geonamesId": "3357804",
+        "coordinates": "https://www.geonames.org/3357804",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-luderitz",
+      "en": "Lüderitz",
+      "name": "Lüderitz",
+      "kind": "Urban locality",
+      "center": [
+        15.15383,
+        -26.64807
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [
+        "Luderitz"
+      ],
+      "population": {
+        "value": 16156,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Luderitz",
+        "censusTablePage": 115,
+        "geonamesId": "3355672",
+        "coordinates": "https://www.geonames.org/3355672",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-outjo",
+      "en": "Outjo",
+      "name": "Outjo",
+      "kind": "Urban locality",
+      "center": [
+        16.15415,
+        -20.10691
+      ],
+      "parentId": "NA-kunene",
+      "provinceId": "NA-kunene",
+      "aliases": [],
+      "population": {
+        "value": 15063,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Outjo",
+        "censusTablePage": 116,
+        "geonamesId": "3353715",
+        "coordinates": "https://www.geonames.org/3353715",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-outapi",
+      "en": "Outapi",
+      "name": "Outapi",
+      "kind": "Urban locality",
+      "center": [
+        14.98383,
+        -17.50375
+      ],
+      "parentId": "NA-omusati",
+      "provinceId": "NA-omusati",
+      "aliases": [],
+      "population": {
+        "value": 13664,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Outapi",
+        "censusTablePage": 116,
+        "geonamesId": "3371197",
+        "coordinates": "https://www.geonames.org/3371197",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-opuwo",
+      "en": "Opuwo",
+      "name": "Opuwo",
+      "kind": "Urban locality",
+      "center": [
+        13.83998,
+        -18.06068
+      ],
+      "parentId": "NA-kunene",
+      "provinceId": "NA-kunene",
+      "aliases": [],
+      "population": {
+        "value": 12331,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Opuwo",
+        "censusTablePage": 116,
+        "geonamesId": "3354077",
+        "coordinates": "https://www.geonames.org/3354077",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-omaruru",
+      "en": "Omaruru",
+      "name": "Omaruru",
+      "kind": "Urban locality",
+      "center": [
+        15.94611,
+        -21.42403
+      ],
+      "parentId": "NA-erongo",
+      "provinceId": "NA-erongo",
+      "aliases": [],
+      "population": {
+        "value": 10767,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Omaruru",
+        "censusTablePage": 115,
+        "geonamesId": "3354540",
+        "coordinates": "https://www.geonames.org/3354540",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-otavi",
+      "en": "Otavi",
+      "name": "Otavi",
+      "kind": "Urban locality",
+      "center": [
+        17.33986,
+        -19.63805
+      ],
+      "parentId": "NA-otjozondjupa",
+      "provinceId": "NA-otjozondjupa",
+      "aliases": [],
+      "population": {
+        "value": 10756,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Otavi",
+        "censusTablePage": 116,
+        "geonamesId": "3353934",
+        "coordinates": "https://www.geonames.org/3353934",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-nkurenkuru",
+      "en": "Nkurenkuru",
+      "name": "Nkurenkuru",
+      "kind": "Urban locality",
+      "center": [
+        18.61966,
+        -17.64182
+      ],
+      "parentId": "NA-kavango-west",
+      "provinceId": "NA-kavango-west",
+      "aliases": [],
+      "population": {
+        "value": 10463,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Nkurenkuru",
+        "censusTablePage": 115,
+        "geonamesId": "3355137",
+        "coordinates": "https://www.geonames.org/3355137",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-khorixas",
+      "en": "Khorixas",
+      "name": "Khorixas",
+      "kind": "Urban locality",
+      "center": [
+        14.96203,
+        -20.37711
+      ],
+      "parentId": "NA-kunene",
+      "provinceId": "NA-kunene",
+      "aliases": [],
+      "population": {
+        "value": 9371,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Khorixas",
+        "censusTablePage": 116,
+        "geonamesId": "3356213",
+        "coordinates": "https://www.geonames.org/3356213",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-karibib",
+      "en": "Karibib",
+      "name": "Karibib",
+      "kind": "Urban locality",
+      "center": [
+        15.85654,
+        -21.93554
+      ],
+      "parentId": "NA-erongo",
+      "provinceId": "NA-erongo",
+      "aliases": [],
+      "population": {
+        "value": 8434,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Karibib",
+        "censusTablePage": 115,
+        "geonamesId": "3356332",
+        "coordinates": "https://www.geonames.org/3356332",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-oranjemund",
+      "en": "Oranjemund",
+      "name": "Oranjemund",
+      "kind": "Urban locality",
+      "center": [
+        16.42728,
+        -28.55153
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 7736,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Oranjemund",
+        "censusTablePage": 115,
+        "geonamesId": "3354071",
+        "coordinates": "https://www.geonames.org/3354071",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-hentiesbay",
+      "en": "Henties Bay",
+      "name": "Henties Bay",
+      "kind": "Urban locality",
+      "center": [
+        14.28394,
+        -22.11609
+      ],
+      "parentId": "NA-erongo",
+      "provinceId": "NA-erongo",
+      "aliases": [],
+      "population": {
+        "value": 7569,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Henties Bay",
+        "censusTablePage": 115,
+        "geonamesId": "3356832",
+        "coordinates": "https://www.geonames.org/3356832",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-omuthiya",
+      "en": "Omuthiya",
+      "name": "Omuthiya",
+      "kind": "Urban locality",
+      "center": [
+        16.58146,
+        -18.36463
+      ],
+      "parentId": "NA-oshikoto",
+      "provinceId": "NA-oshikoto",
+      "aliases": [],
+      "population": {
+        "value": 7560,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Omuthiya",
+        "censusTablePage": 116,
+        "geonamesId": "3354367",
+        "coordinates": "https://www.geonames.org/3354367",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-okahao",
+      "en": "Okahao",
+      "name": "Okahao",
+      "kind": "Urban locality",
+      "center": [
+        15.06677,
+        -17.88758
+      ],
+      "parentId": "NA-omusati",
+      "provinceId": "NA-omusati",
+      "aliases": [],
+      "population": {
+        "value": 7486,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Okahao",
+        "censusTablePage": 116,
+        "geonamesId": "3354897",
+        "coordinates": "https://www.geonames.org/3354897",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-okakarara",
+      "en": "Okakarara",
+      "name": "Okakarara",
+      "kind": "Urban locality",
+      "center": [
+        17.45942,
+        -20.58755
+      ],
+      "parentId": "NA-otjozondjupa",
+      "provinceId": "NA-otjozondjupa",
+      "aliases": [],
+      "population": {
+        "value": 7123,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Okakarara",
+        "censusTablePage": 116,
+        "geonamesId": "3354876",
+        "coordinates": "https://www.geonames.org/3354876",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-otjinene",
+      "en": "Otjinene",
+      "name": "Otjinene",
+      "kind": "Urban locality",
+      "center": [
+        18.7836,
+        -21.13889
+      ],
+      "parentId": "NA-omaheke",
+      "provinceId": "NA-omaheke",
+      "aliases": [],
+      "population": {
+        "value": 6876,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Otjinene",
+        "censusTablePage": 116,
+        "geonamesId": "3353863",
+        "coordinates": "https://www.geonames.org/3353863",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-karasburg",
+      "en": "Karasburg",
+      "name": "Karasburg",
+      "kind": "Urban locality",
+      "center": [
+        18.74797,
+        -28.01658
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 6621,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Karasburg",
+        "censusTablePage": 115,
+        "geonamesId": "3356343",
+        "coordinates": "https://www.geonames.org/3356343",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-ruacana",
+      "en": "Ruacana",
+      "name": "Ruacana",
+      "kind": "Urban locality",
+      "center": [
+        14.41504,
+        -17.42817
+      ],
+      "parentId": "NA-omusati",
+      "provinceId": "NA-omusati",
+      "aliases": [],
+      "population": {
+        "value": 5939,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Ruacana",
+        "censusTablePage": 116,
+        "geonamesId": "3353400",
+        "coordinates": "https://www.geonames.org/3353400",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-divundu",
+      "en": "Divundu",
+      "name": "Divundu",
+      "kind": "Urban locality",
+      "center": [
+        21.51736,
+        -18.08894
+      ],
+      "parentId": "NA-kavango-east",
+      "provinceId": "NA-kavango-east",
+      "aliases": [],
+      "population": {
+        "value": 5787,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Divundu",
+        "censusTablePage": 115,
+        "geonamesId": "13455698",
+        "coordinates": "https://www.geonames.org/13455698",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-arandis",
+      "en": "Arandis",
+      "name": "Arandis",
+      "kind": "Urban locality",
+      "center": [
+        14.97385,
+        -22.41749
+      ],
+      "parentId": "NA-erongo",
+      "provinceId": "NA-erongo",
+      "aliases": [],
+      "population": {
+        "value": 5726,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Arandis",
+        "censusTablePage": 115,
+        "geonamesId": "3358670",
+        "coordinates": "https://www.geonames.org/3358670",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-oshikuku",
+      "en": "Oshikuku",
+      "name": "Oshikuku",
+      "kind": "Urban locality",
+      "center": [
+        15.48173,
+        -17.63584
+      ],
+      "parentId": "NA-omusati",
+      "provinceId": "NA-omusati",
+      "aliases": [
+        "Oshikuk u"
+      ],
+      "population": {
+        "value": 5499,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Oshikuk u",
+        "censusTablePage": 116,
+        "geonamesId": "3353989",
+        "coordinates": "https://www.geonames.org/3353989",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-aranos",
+      "en": "Aranos",
+      "name": "Aranos",
+      "kind": "Urban locality",
+      "center": [
+        19.11754,
+        -24.14126
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [],
+      "population": {
+        "value": 5493,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Aranos",
+        "censusTablePage": 115,
+        "geonamesId": "3358666",
+        "coordinates": "https://www.geonames.org/3358666",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-usakos",
+      "en": "Usakos",
+      "name": "Usakos",
+      "kind": "Urban locality",
+      "center": [
+        15.58601,
+        -22.00219
+      ],
+      "parentId": "NA-erongo",
+      "provinceId": "NA-erongo",
+      "aliases": [],
+      "population": {
+        "value": 5094,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Usakos",
+        "censusTablePage": 115,
+        "geonamesId": "3352461",
+        "coordinates": "https://www.geonames.org/3352461",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-oniipa",
+      "en": "Oniipa",
+      "name": "Oniipa",
+      "kind": "Urban locality",
+      "center": [
+        16.03333,
+        -17.91667
+      ],
+      "parentId": "NA-oshikoto",
+      "provinceId": "NA-oshikoto",
+      "aliases": [],
+      "population": {
+        "value": 4740,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Oniipa",
+        "censusTablePage": 116,
+        "geonamesId": "3354130",
+        "coordinates": "https://www.geonames.org/3354130",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-gibeon",
+      "en": "Gibeon",
+      "name": "Gibeon",
+      "kind": "Urban locality",
+      "center": [
+        17.76935,
+        -25.12213
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [],
+      "population": {
+        "value": 4120,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Gibeon",
+        "censusTablePage": 115,
+        "geonamesId": "3357293",
+        "coordinates": "https://www.geonames.org/3357293",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-kamanjab",
+      "en": "Kamanjab",
+      "name": "Kamanjab",
+      "kind": "Urban locality",
+      "center": [
+        14.8452,
+        -19.62882
+      ],
+      "parentId": "NA-kunene",
+      "provinceId": "NA-kunene",
+      "aliases": [],
+      "population": {
+        "value": 3915,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Kamanjab",
+        "censusTablePage": 116,
+        "geonamesId": "3356469",
+        "coordinates": "https://www.geonames.org/3356469",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-okongo",
+      "en": "Okongo",
+      "name": "Okongo",
+      "kind": "Urban locality",
+      "center": [
+        17.21667,
+        -17.56667
+      ],
+      "parentId": "NA-ohangwena",
+      "provinceId": "NA-ohangwena",
+      "aliases": [],
+      "population": {
+        "value": 3564,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Okongo",
+        "censusTablePage": 116,
+        "geonamesId": "3354650",
+        "coordinates": "https://www.geonames.org/3354650",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-maltahohe",
+      "en": "Maltahöhe",
+      "name": "Maltahöhe",
+      "kind": "Urban locality",
+      "center": [
+        16.9859,
+        -24.83923
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [
+        "Maltahohe"
+      ],
+      "population": {
+        "value": 3464,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Maltahohe",
+        "censusTablePage": 115,
+        "geonamesId": "3355624",
+        "coordinates": "https://www.geonames.org/3355624",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-stampriet",
+      "en": "Stampriet",
+      "name": "Stampriet",
+      "kind": "Urban locality",
+      "center": [
+        18.40464,
+        -24.34494
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [],
+      "population": {
+        "value": 3388,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Stampriet",
+        "censusTablePage": 115,
+        "geonamesId": "3352934",
+        "coordinates": "https://www.geonames.org/3352934",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-aroab",
+      "en": "Aroab",
+      "name": "Aroab",
+      "kind": "Urban locality",
+      "center": [
+        19.6527,
+        -26.79744
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 2651,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Aroab",
+        "censusTablePage": 115,
+        "geonamesId": "3358610",
+        "coordinates": "https://www.geonames.org/3358610",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-witvlei",
+      "en": "Witvlei",
+      "name": "Witvlei",
+      "kind": "Urban locality",
+      "center": [
+        18.49359,
+        -22.41039
+      ],
+      "parentId": "NA-omaheke",
+      "provinceId": "NA-omaheke",
+      "aliases": [],
+      "population": {
+        "value": 2633,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Witvlei",
+        "censusTablePage": 116,
+        "geonamesId": "3352083",
+        "coordinates": "https://www.geonames.org/3352083",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-tsandi",
+      "en": "Tsandi",
+      "name": "Tsandi",
+      "kind": "Urban locality",
+      "center": [
+        14.88575,
+        -17.74292
+      ],
+      "parentId": "NA-omusati",
+      "provinceId": "NA-omusati",
+      "aliases": [],
+      "population": {
+        "value": 2595,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Tsandi",
+        "censusTablePage": 116,
+        "geonamesId": "3352636",
+        "coordinates": "https://www.geonames.org/3352636",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-bethanie",
+      "en": "Bethanie",
+      "name": "Bethanie",
+      "kind": "Urban locality",
+      "center": [
+        17.1599,
+        -26.49958
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 2372,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Bethanie",
+        "censusTablePage": 115,
+        "geonamesId": "3358416",
+        "coordinates": "https://www.geonames.org/3358416",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-koes",
+      "en": "Koes",
+      "name": "Koes",
+      "kind": "Urban locality",
+      "center": [
+        19.12814,
+        -25.93091
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 2264,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Koes",
+        "censusTablePage": 115,
+        "geonamesId": "3356049",
+        "coordinates": "https://www.geonames.org/3356049",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-leonardville",
+      "en": "Leonardville",
+      "name": "Leonardville",
+      "kind": "Urban locality",
+      "center": [
+        18.7912,
+        -23.50462
+      ],
+      "parentId": "NA-omaheke",
+      "provinceId": "NA-omaheke",
+      "aliases": [],
+      "population": {
+        "value": 2099,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Leonardville",
+        "censusTablePage": 116,
+        "geonamesId": "3355748",
+        "coordinates": "https://www.geonames.org/3355748",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-tses",
+      "en": "Tses",
+      "name": "Tses",
+      "kind": "Urban locality",
+      "center": [
+        18.12469,
+        -25.88489
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 2053,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Tses",
+        "censusTablePage": 115,
+        "geonamesId": "3352609",
+        "coordinates": "https://www.geonames.org/3352609",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-bukalo",
+      "en": "Bukalo",
+      "name": "Bukalo",
+      "kind": "Urban locality",
+      "center": [
+        24.53049,
+        -17.71799
+      ],
+      "parentId": "NA-zambezi",
+      "provinceId": "NA-zambezi",
+      "aliases": [],
+      "population": {
+        "value": 1935,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=116",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Bukalo",
+        "censusTablePage": 116,
+        "geonamesId": "877338",
+        "coordinates": "https://www.geonames.org/877338",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-gochas",
+      "en": "Gochas",
+      "name": "Gochas",
+      "kind": "Urban locality",
+      "center": [
+        18.80137,
+        -24.85762
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [],
+      "population": {
+        "value": 1868,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Gochas",
+        "censusTablePage": 115,
+        "geonamesId": "3357234",
+        "coordinates": "https://www.geonames.org/3357234",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-kalkrand",
+      "en": "Kalkrand",
+      "name": "Kalkrand",
+      "kind": "Urban locality",
+      "center": [
+        17.58635,
+        -24.07367
+      ],
+      "parentId": "NA-hardap",
+      "provinceId": "NA-hardap",
+      "aliases": [],
+      "population": {
+        "value": 1602,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Kalkrand",
+        "censusTablePage": 115,
+        "geonamesId": "3356477",
+        "coordinates": "https://www.geonames.org/3356477",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "NA-S-berseba",
+      "en": "Berseba",
+      "name": "Berseba",
+      "kind": "Urban locality",
+      "center": [
+        17.76817,
+        -25.9969
+      ],
+      "parentId": "NA-karas",
+      "provinceId": "NA-karas",
+      "aliases": [],
+      "population": {
+        "value": 992,
+        "year": 2023,
+        "source": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf#page=115",
+        "periodLabel": "2023 census",
+        "scope": "Census urban locality",
+        "scopeNote": "Census urban locality; regional and constituency totals are separate."
+      },
+      "provenance": {
+        "population": "Namibia Statistics Agency, final 2023 census main report, Appendix III",
+        "censusName": "Berseba",
+        "censusTablePage": 115,
+        "geonamesId": "3358422",
+        "coordinates": "https://www.geonames.org/3358422",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "NA-census-localities",
+      "title": "Namibia Statistics Agency 2023 census main report: Appendix III urban locality populations",
+      "url": "https://nsa.org.na/wp-content/uploads/2024/10/2023-Population-and-Housing-Census-Main-Report-28-Oct-2024.pdf",
+      "scope": "2023 census settlement population"
+    },
+    {
+      "id": "geonames-NA",
+      "title": "GeoNames namibia gazetteer coordinates",
+      "url": "https://download.geonames.org/export/dump/NA.zip",
+      "license": "CC BY 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "description": "Coordinates only; gazetteer population values are not used."
+    }
+  ],
+  "selection": {
+    "count": 57,
+    "method": "All 57 urban localities in the final 2023 census main report Appendix III"
+  }
+}

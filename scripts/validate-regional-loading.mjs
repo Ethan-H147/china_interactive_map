@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {createPlaceSearch} from '../dist/place-search.mjs';
-import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures} from '../dist/settlement-layer.mjs';
+import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementStatistics} from '../dist/settlement-layer.mjs';
 import {regionalLineWidth} from '../dist/adaptive-lines.mjs';
 const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
@@ -79,7 +79,7 @@ assert(!whole.ready&&!sources.has('whole-third'),'Cancelled country-wide prepara
 task=whole.enter(false);await flush();const failed=assert.rejects(task,/Unavailable/);jobs.at(-1).onmessage({data:{error:'Unavailable'}});await failed;assert(!whole.ready&&!sources.has('whole-first'));
 task=whole.enter(false);await flush();jobs.at(-1).onmessage({data:allPayload});await task;assert(whole.ready,'Whole-country loading can retry after failure');whole.leave();
 console.log('Whole-country adapter: one entry bundle, all levels available globally, no selection requests, retained hidden geometry, cancellation, retry and complete release passed.');
-Object.assign(context,{enrichPlaces,placeLines,visibleSettlements,settlementFeatures});
+Object.assign(context,{enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementStatistics});
 const cityLoads=[],citySelections=[];let cleared=0;
 context.createSettlementBoundaries=()=>({async setProvince(province,id){cityLoads.push({province,id});},select:id=>citySelections.push(id),clear:()=>cleared++,enter(){},leave(){},appearance(){},pick:()=>null});
 context.createCountryPage=options=>{assert(!options.settings.includes('City outlines'),'No redundant city-outline checkbox');return element(options.id);};

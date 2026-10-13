@@ -1,0 +1,11 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {resolve} from 'node:path';
+const t=await readFile(resolve(import.meta.dirname,'botswana-census-localities-2022.txt'),'utf8');
+const rows=[...t.matchAll(/^\s*(\d{2}):?\s+([A-Za-z][^\n]*?)\s{2,}([\d,]+)\s+[\d,]+\s+[\d,]+\s*$/gm)].map(m=>({code:m[1],name:m[2].trim(),population:Number(m[3].replaceAll(',',''))}));
+assert.equal(rows.length,28);
+assert.equal(rows.reduce((n,r)=>n+r.population,0),2359609);
+const districts={Southern:['10','11','12','03','06'],'South-East':['20','01'],Kweneng:['30','31'],Kgatleng:['40'],Central:['50','51','52','53','54','04','05','07'],'North-East':['60','02'],'North-West':['70','71','73'],Chobe:['72'],Ghanzi:['80','81'],Kgalagadi:['90','91']};
+const output={retrieved:'2026-10-13',year:2022,url:'https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf',districts,censusDistricts:rows};
+await writeFile(resolve(import.meta.dirname,'botswana-census-2022.json'),JSON.stringify(output,null,2)+'\n');
+console.log(rows);

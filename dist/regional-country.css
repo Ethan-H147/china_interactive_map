@@ -19,3 +19,5 @@ body[data-atlas=russia] #atlas-title-local{font:26px Georgia,serif;letter-spacin
 
 .settlement-label{font-size:14px;line-height:1.25;color:#263d20;text-align:center;cursor:pointer;pointer-events:auto;text-shadow:0 1px 2px #fff,0 0 5px #fff}.settlement-label small{display:block;font-size:12px}.settlement-label.selected-label{font-weight:600}.place-name-variants p{margin:3px 0;font-size:13px;color:#696c64}.flag-caption{font-size:11px;color:#777;line-height:1.4;margin:4px 0 10px}
 
+:root[data-atlas=botswana],body[data-atlas=botswana]{--ink:#293e49;--muted:#748892;--red:#477b94;--red-dark:#31596d;--gold:#a99960;--line:#dbe7ec;--paper:#fcfeff;--map:#edf3f6;--surface-soft:#eff5f7;--title-accent:#477b94;--header-stripe:linear-gradient(90deg,#75aadb 0 40%,#fff 40% 44%,#222 44% 56%,#fff 56% 60%,#75aadb 60%)}
+:root[data-atlas=namibia],body[data-atlas=namibia]{--ink:#42372b;--muted:#887c6a;--red:#987744;--red-dark:#71562f;--gold:#bd9b4f;--line:#e8dfd0;--paper:#fffdfa;--map:#f5efe6;--surface-soft:#f7f1e8;--title-accent:#987744;--header-stripe:linear-gradient(90deg,#477aa2 0 30%,#d7b753 30% 35%,#b94c41 35% 65%,#e8e5df 65% 70%,#548354 70%)}

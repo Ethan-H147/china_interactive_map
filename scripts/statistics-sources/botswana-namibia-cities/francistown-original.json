@@ -1,0 +1,98 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "146894905": {
+        "pageid": 146894905,
+        "ns": 6,
+        "title": "File:Flag of Francistown.png",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "size": 62586,
+            "width": 540,
+            "height": 360,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Flag_of_Francistown.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Flag_of_Francistown.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146894905",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-29 21:59:18",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Flag of Francistown",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Flags of Botswana|CC-Zero|Francistown",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Flag of the City of Francistown, Francistown, Botswana",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2012-05-04",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "CRW Flags, Vexilla Mundi",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Oliver Touzeau",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

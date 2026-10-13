@@ -1,0 +1,2017 @@
+{
+  "country": "botswana",
+  "records": [
+    {
+      "id": "BW-S-gaborone",
+      "en": "Gaborone",
+      "name": "Gaborone",
+      "kind": "City",
+      "center": [
+        25.90859,
+        -24.65451
+      ],
+      "parentId": "BW-south-east",
+      "provinceId": "BW-south-east",
+      "aliases": [],
+      "population": {
+        "value": 246325,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=10",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Gaborone",
+        "censusCode": "01",
+        "censusTablePage": 10,
+        "geonamesId": "933773",
+        "coordinates": "https://www.geonames.org/933773",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-francistown",
+      "en": "Francistown",
+      "name": "Francistown",
+      "kind": "City",
+      "center": [
+        27.50778,
+        -21.17
+      ],
+      "parentId": "BW-north-east",
+      "provinceId": "BW-north-east",
+      "aliases": [],
+      "population": {
+        "value": 103417,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=13",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Francistown",
+        "censusCode": "02",
+        "censusTablePage": 13,
+        "geonamesId": "933778",
+        "coordinates": "https://www.geonames.org/933778",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mogoditshane",
+      "en": "Mogoditshane",
+      "name": "Mogoditshane",
+      "kind": "Village",
+      "center": [
+        25.86556,
+        -24.62694
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 88004,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mogoditshane",
+        "censusCode": "30-24",
+        "censusTablePage": 17,
+        "geonamesId": "933331",
+        "coordinates": "https://www.geonames.org/933331",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-maun",
+      "en": "Maun",
+      "name": "Maun",
+      "kind": "Village",
+      "center": [
+        23.41667,
+        -19.98333
+      ],
+      "parentId": "BW-north-west",
+      "provinceId": "BW-north-west",
+      "aliases": [],
+      "population": {
+        "value": 85350,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Maun",
+        "censusCode": "70-01",
+        "censusTablePage": 17,
+        "geonamesId": "933366",
+        "coordinates": "https://www.geonames.org/933366",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-molepolole",
+      "en": "Molepolole",
+      "name": "Molepolole",
+      "kind": "Village",
+      "center": [
+        25.49508,
+        -24.40659
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 74861,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Molepolole",
+        "censusCode": "30-01",
+        "censusTablePage": 17,
+        "geonamesId": "933305",
+        "coordinates": "https://www.geonames.org/933305",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-serowe",
+      "en": "Serowe",
+      "name": "Serowe",
+      "kind": "Village",
+      "center": [
+        26.71077,
+        -22.38754
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 55676,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Serowe",
+        "censusCode": "50-01",
+        "censusTablePage": 17,
+        "geonamesId": "933088",
+        "coordinates": "https://www.geonames.org/933088",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-tlokweng",
+      "en": "Tlokweng",
+      "name": "Tlokweng",
+      "kind": "Village",
+      "center": [
+        25.97111,
+        -24.66861
+      ],
+      "parentId": "BW-south-east",
+      "provinceId": "BW-south-east",
+      "aliases": [],
+      "population": {
+        "value": 55508,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Tlokweng",
+        "censusCode": "20-06",
+        "censusTablePage": 17,
+        "geonamesId": "933004",
+        "coordinates": "https://www.geonames.org/933004",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-palapye",
+      "en": "Palapye",
+      "name": "Palapye",
+      "kind": "Village",
+      "center": [
+        27.12507,
+        -22.54605
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 52636,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Palapye",
+        "censusCode": "50-02",
+        "censusTablePage": 17,
+        "geonamesId": "933182",
+        "coordinates": "https://www.geonames.org/933182",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mochudi",
+      "en": "Mochudi",
+      "name": "Mochudi",
+      "kind": "Village",
+      "center": [
+        26.15,
+        -24.41667
+      ],
+      "parentId": "BW-kgatleng",
+      "provinceId": "BW-kgatleng",
+      "aliases": [],
+      "population": {
+        "value": 50321,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mochudi",
+        "censusCode": "40-01",
+        "censusTablePage": 17,
+        "geonamesId": "933340",
+        "coordinates": "https://www.geonames.org/933340",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mahalapye",
+      "en": "Mahalapye",
+      "name": "Mahalapye",
+      "kind": "Village",
+      "center": [
+        26.81421,
+        -23.10407
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 48431,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mahalapye",
+        "censusCode": "51-01",
+        "censusTablePage": 17,
+        "geonamesId": "933471",
+        "coordinates": "https://www.geonames.org/933471",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-kanye",
+      "en": "Kanye",
+      "name": "Kanye",
+      "kind": "Village",
+      "center": [
+        25.33273,
+        -24.96675
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 48028,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Kanye",
+        "censusCode": "10-01",
+        "censusTablePage": 17,
+        "geonamesId": "933685",
+        "coordinates": "https://www.geonames.org/933685",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-selebiphikwe",
+      "en": "Selebi-Phikwe",
+      "name": "Selebi-Phikwe",
+      "kind": "Town",
+      "center": [
+        27.84296,
+        -21.97895
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [
+        "Selibe Phikwe"
+      ],
+      "population": {
+        "value": 42488,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=14",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Selibe Phikwe",
+        "censusCode": "04",
+        "censusTablePage": 14,
+        "geonamesId": "933099",
+        "coordinates": "https://www.geonames.org/933099",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-letlhakane",
+      "en": "Letlhakane",
+      "name": "Letlhakane",
+      "kind": "Village",
+      "center": [
+        25.59263,
+        -21.41494
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 36404,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Letlhakane",
+        "censusCode": "53-01",
+        "censusTablePage": 17,
+        "geonamesId": "933535",
+        "coordinates": "https://www.geonames.org/933535",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-ramotswa",
+      "en": "Ramotswa",
+      "name": "Ramotswa",
+      "kind": "Village",
+      "center": [
+        25.86989,
+        -24.87158
+      ],
+      "parentId": "BW-south-east",
+      "provinceId": "BW-south-east",
+      "aliases": [],
+      "population": {
+        "value": 33271,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Ramotswa",
+        "censusCode": "20-04",
+        "censusTablePage": 17,
+        "geonamesId": "933141",
+        "coordinates": "https://www.geonames.org/933141",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-lobatse",
+      "en": "Lobatse",
+      "name": "Lobatse",
+      "kind": "Town",
+      "center": [
+        25.67728,
+        -25.22435
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 29772,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=14",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Lobatse",
+        "censusCode": "03",
+        "censusTablePage": 14,
+        "geonamesId": "933521",
+        "coordinates": "https://www.geonames.org/933521",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mmopane",
+      "en": "Mmopane",
+      "name": "Mmopane",
+      "kind": "Village",
+      "center": [
+        25.87417,
+        -24.56694
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 25460,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mmopane",
+        "censusCode": "30-23",
+        "censusTablePage": 17,
+        "geonamesId": "1106213",
+        "coordinates": "https://www.geonames.org/1106213",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-thamaga",
+      "en": "Thamaga",
+      "name": "Thamaga",
+      "kind": "Village",
+      "center": [
+        25.53975,
+        -24.67014
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 25300,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Thamaga",
+        "censusCode": "30-32",
+        "censusTablePage": 17,
+        "geonamesId": "933018",
+        "coordinates": "https://www.geonames.org/933018",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-moshupa",
+      "en": "Moshupa",
+      "name": "Moshupa",
+      "kind": "Village",
+      "center": [
+        25.42156,
+        -24.7718
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 23858,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Moshupa",
+        "censusCode": "10-29",
+        "censusTablePage": 17,
+        "geonamesId": "933271",
+        "coordinates": "https://www.geonames.org/933271",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-tonota",
+      "en": "Tonota",
+      "name": "Tonota",
+      "kind": "Village",
+      "center": [
+        27.46153,
+        -21.44236
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 23296,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Tonota",
+        "censusCode": "54-23",
+        "censusTablePage": 17,
+        "geonamesId": "933000",
+        "coordinates": "https://www.geonames.org/933000",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-bobonong",
+      "en": "Bobonong",
+      "name": "Bobonong",
+      "kind": "Village",
+      "center": [
+        28.43625,
+        -21.96554
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 21216,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Bobonong",
+        "censusCode": "52-01",
+        "censusTablePage": 17,
+        "geonamesId": "933885",
+        "coordinates": "https://www.geonames.org/933885",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-gabane",
+      "en": "Gabane",
+      "name": "Gabane",
+      "kind": "Village",
+      "center": [
+        25.78222,
+        -24.66667
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 20027,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Gabane",
+        "censusCode": "30-07",
+        "censusTablePage": 17,
+        "geonamesId": "933777",
+        "coordinates": "https://www.geonames.org/933777",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-ghanzi",
+      "en": "Ghanzi",
+      "name": "Ghanzi",
+      "kind": "Village",
+      "center": [
+        21.64581,
+        -21.69785
+      ],
+      "parentId": "BW-ghanzi",
+      "provinceId": "BW-ghanzi",
+      "aliases": [],
+      "population": {
+        "value": 19012,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Ghanzi",
+        "censusCode": "80-01",
+        "censusTablePage": 17,
+        "geonamesId": "933759",
+        "coordinates": "https://www.geonames.org/933759",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-jwaneng",
+      "en": "Jwaneng",
+      "name": "Jwaneng",
+      "kind": "Town",
+      "center": [
+        24.72806,
+        -24.60167
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 18784,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=15",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Jwaneng",
+        "censusCode": "06",
+        "censusTablePage": 15,
+        "geonamesId": "8308627",
+        "coordinates": "https://www.geonames.org/8308627",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-tutume",
+      "en": "Tutume",
+      "name": "Tutume",
+      "kind": "Village",
+      "center": [
+        27.03479,
+        -20.4943
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 18582,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Tutume",
+        "censusCode": "54-07",
+        "censusTablePage": 17,
+        "geonamesId": "7573818",
+        "coordinates": "https://www.geonames.org/7573818",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-kopong",
+      "en": "Kopong",
+      "name": "Kopong",
+      "kind": "Village",
+      "center": [
+        25.88333,
+        -24.48333
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 13823,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Kopong",
+        "censusCode": "30-12",
+        "censusTablePage": 17,
+        "geonamesId": "933596",
+        "coordinates": "https://www.geonames.org/933596",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mmadinare",
+      "en": "Mmadinare",
+      "name": "Mmadinare",
+      "kind": "Village",
+      "center": [
+        27.7518,
+        -21.8765
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 13198,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mmadinare",
+        "censusCode": "52-13",
+        "censusTablePage": 17,
+        "geonamesId": "12640340",
+        "coordinates": "https://www.geonames.org/12640340",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-tatisiding",
+      "en": "Tati Siding",
+      "name": "Tati Siding",
+      "kind": "Village",
+      "center": [
+        27.49002,
+        -21.27345
+      ],
+      "parentId": "BW-north-east",
+      "provinceId": "BW-north-east",
+      "aliases": [],
+      "population": {
+        "value": 12404,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Tati Siding",
+        "censusCode": "60-25",
+        "censusTablePage": 17,
+        "geonamesId": "11205055",
+        "coordinates": "https://www.geonames.org/11205055",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-tsabong",
+      "en": "Tsabong",
+      "name": "Tsabong",
+      "kind": "Village",
+      "center": [
+        22.45,
+        -26.05
+      ],
+      "parentId": "BW-kgalagadi",
+      "provinceId": "BW-kgalagadi",
+      "aliases": [],
+      "population": {
+        "value": 11651,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Tsabong",
+        "censusCode": "90-05",
+        "censusTablePage": 17,
+        "geonamesId": "932987",
+        "coordinates": "https://www.geonames.org/932987",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-metsimotlhabe",
+      "en": "Metsimotlhabe",
+      "name": "Metsimotlhabe",
+      "kind": "Village",
+      "center": [
+        25.8095,
+        -24.554
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 11617,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Metsimotlhabe",
+        "censusCode": "30-21",
+        "censusTablePage": 17,
+        "geonamesId": "11288838",
+        "coordinates": "https://www.geonames.org/11288838",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-gumare",
+      "en": "Gumare",
+      "name": "Gumare",
+      "kind": "Village",
+      "center": [
+        22.16167,
+        -19.36917
+      ],
+      "parentId": "BW-north-west",
+      "provinceId": "BW-north-west",
+      "aliases": [],
+      "population": {
+        "value": 11572,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Gumare",
+        "censusCode": "71-26",
+        "censusTablePage": 17,
+        "geonamesId": "11205277",
+        "coordinates": "https://www.geonames.org/11205277",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-shakawe",
+      "en": "Shakawe",
+      "name": "Shakawe",
+      "kind": "Village",
+      "center": [
+        21.84219,
+        -18.36536
+      ],
+      "parentId": "BW-north-west",
+      "provinceId": "BW-north-west",
+      "aliases": [],
+      "population": {
+        "value": 10589,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Shakawe",
+        "censusCode": "71-16",
+        "censusTablePage": 17,
+        "geonamesId": "933077",
+        "coordinates": "https://www.geonames.org/933077",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-oodi",
+      "en": "Oodi",
+      "name": "Oodi",
+      "kind": "Village",
+      "center": [
+        26.03389,
+        -24.57306
+      ],
+      "parentId": "BW-south-east",
+      "provinceId": "BW-south-east",
+      "aliases": [],
+      "population": {
+        "value": 10257,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Oodi",
+        "censusCode": "40-07",
+        "censusTablePage": 17,
+        "geonamesId": "11205201",
+        "coordinates": "https://www.geonames.org/11205201",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-bokaa",
+      "en": "Bokaa",
+      "name": "Bokaa",
+      "kind": "Village",
+      "center": [
+        26.01667,
+        -24.45
+      ],
+      "parentId": "BW-kgatleng",
+      "provinceId": "BW-kgatleng",
+      "aliases": [],
+      "population": {
+        "value": 9146,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Bokaa",
+        "censusCode": "40-04",
+        "censusTablePage": 17,
+        "geonamesId": "933881",
+        "coordinates": "https://www.geonames.org/933881",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-kasane",
+      "en": "Kasane",
+      "name": "Kasane",
+      "kind": "Village",
+      "center": [
+        25.16024,
+        -17.80165
+      ],
+      "parentId": "BW-chobe",
+      "provinceId": "BW-chobe",
+      "aliases": [],
+      "population": {
+        "value": 9143,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Kasane",
+        "censusCode": "72-02",
+        "censusTablePage": 17,
+        "geonamesId": "933677",
+        "coordinates": "https://www.geonames.org/933677",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-borolong",
+      "en": "Borolong",
+      "name": "Borolong",
+      "kind": "Village",
+      "center": [
+        27.33611,
+        -21.10361
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 8917,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Borolong",
+        "censusCode": "54-19",
+        "censusTablePage": 17,
+        "geonamesId": "11258456",
+        "coordinates": "https://www.geonames.org/11258456",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-shoshong",
+      "en": "Shoshong",
+      "name": "Shoshong",
+      "kind": "Village",
+      "center": [
+        26.51,
+        -23.0389
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 8887,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Shoshong",
+        "censusCode": "51-28",
+        "censusTablePage": 17,
+        "geonamesId": "933064",
+        "coordinates": "https://www.geonames.org/933064",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-molapowabojang",
+      "en": "Molapowabojang",
+      "name": "Molapowabojang",
+      "kind": "Village",
+      "center": [
+        25.53017,
+        -25.20703
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 8722,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Molapowabojang",
+        "censusCode": "10-26",
+        "censusTablePage": 17,
+        "geonamesId": "11204609",
+        "coordinates": "https://www.geonames.org/11204609",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-kazungula",
+      "en": "Kazungula",
+      "name": "Kazungula",
+      "kind": "Village",
+      "center": [
+        25.2413,
+        -17.80399
+      ],
+      "parentId": "BW-chobe",
+      "provinceId": "BW-chobe",
+      "aliases": [],
+      "population": {
+        "value": 8704,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Kazungula",
+        "censusCode": "72-03",
+        "censusTablePage": 17,
+        "geonamesId": "7575074",
+        "coordinates": "https://www.geonames.org/7575074",
+        "coordinateMatch": "Named populated residential area verified inside the official census locality polygon",
+        "coordinateValidation": "https://data.humdata.org/dataset/cod-ab-bwa"
+      }
+    },
+    {
+      "id": "BW-S-orapa",
+      "en": "Orapa",
+      "name": "Orapa",
+      "kind": "Town",
+      "center": [
+        25.37642,
+        -21.3115
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 8648,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=15",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Orapa",
+        "censusCode": "05",
+        "censusTablePage": 15,
+        "geonamesId": "933186",
+        "coordinates": "https://www.geonames.org/933186",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-letlhakeng",
+      "en": "Letlhakeng",
+      "name": "Letlhakeng",
+      "kind": "Village",
+      "center": [
+        25.02977,
+        -24.09442
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 8343,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Letlhakeng",
+        "censusCode": "31-01",
+        "censusTablePage": 17,
+        "geonamesId": "933534",
+        "coordinates": "https://www.geonames.org/933534",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-nata",
+      "en": "Nata",
+      "name": "Nata",
+      "kind": "Village",
+      "center": [
+        26.18333,
+        -20.21667
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 7779,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Nata",
+        "censusCode": "54-02",
+        "censusTablePage": 17,
+        "geonamesId": "933238",
+        "coordinates": "https://www.geonames.org/933238",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-tsienyanerakops",
+      "en": "Tsienyane/Rakops",
+      "name": "Tsienyane/Rakops",
+      "kind": "Village",
+      "center": [
+        24.41667,
+        -21.05
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 7439,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Tsienyane/Rakops",
+        "censusCode": "53-07",
+        "censusTablePage": 17,
+        "geonamesId": "933150",
+        "coordinates": "https://www.geonames.org/933150",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mmankgodi",
+      "en": "Mmankgodi",
+      "name": "Mmankgodi",
+      "kind": "Village",
+      "center": [
+        25.64963,
+        -24.72601
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 7396,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mmankgodi",
+        "censusCode": "30-22",
+        "censusTablePage": 17,
+        "geonamesId": "7752616",
+        "coordinates": "https://www.geonames.org/7752616",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-lerala",
+      "en": "Lerala",
+      "name": "Lerala",
+      "kind": "Village",
+      "center": [
+        27.76503,
+        -22.78797
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 7204,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Lerala",
+        "censusCode": "50-16",
+        "censusTablePage": 17,
+        "geonamesId": "11550118",
+        "coordinates": "https://www.geonames.org/11550118",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-otse",
+      "en": "Otse",
+      "name": "Otse",
+      "kind": "Village",
+      "center": [
+        25.73333,
+        -25.01667
+      ],
+      "parentId": "BW-south-east",
+      "provinceId": "BW-south-east",
+      "aliases": [],
+      "population": {
+        "value": 6986,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Otse",
+        "censusCode": "20-01",
+        "censusTablePage": 17,
+        "geonamesId": "933184",
+        "coordinates": "https://www.geonames.org/933184",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-kumakwane",
+      "en": "Kumakwane",
+      "name": "Kumakwane",
+      "kind": "Village",
+      "center": [
+        25.69918,
+        -24.65522
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 6826,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Kumakwane",
+        "censusCode": "30-14",
+        "censusTablePage": 17,
+        "geonamesId": "7752587",
+        "coordinates": "https://www.geonames.org/7752587",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-sese",
+      "en": "Sese",
+      "name": "Sese",
+      "kind": "Village",
+      "center": [
+        24.8063,
+        -24.6561
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 6798,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Sese",
+        "censusCode": "10-16",
+        "censusTablePage": 17,
+        "geonamesId": "11258235",
+        "coordinates": "https://www.geonames.org/11258235",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-kang",
+      "en": "Kang",
+      "name": "Kang",
+      "kind": "Village",
+      "center": [
+        22.78762,
+        -23.67518
+      ],
+      "parentId": "BW-kgalagadi",
+      "provinceId": "BW-kgalagadi",
+      "aliases": [],
+      "population": {
+        "value": 6764,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Kang",
+        "censusCode": "91-01",
+        "censusTablePage": 17,
+        "geonamesId": "933692",
+        "coordinates": "https://www.geonames.org/933692",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-lentsweletau",
+      "en": "Lentsweletau",
+      "name": "Lentsweletau",
+      "kind": "Village",
+      "center": [
+        25.85215,
+        -24.24863
+      ],
+      "parentId": "BW-kweneng",
+      "provinceId": "BW-kweneng",
+      "aliases": [],
+      "population": {
+        "value": 6653,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Lentsweletau",
+        "censusCode": "30-02",
+        "censusTablePage": 17,
+        "geonamesId": "7908686",
+        "coordinates": "https://www.geonames.org/7908686",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-ramotswastationtaung",
+      "en": "Ramotswa Station/Taung",
+      "name": "Ramotswa Station/Taung",
+      "kind": "Village",
+      "center": [
+        25.832371,
+        -24.8476205
+      ],
+      "parentId": "BW-south-east",
+      "provinceId": "BW-south-east",
+      "aliases": [],
+      "population": {
+        "value": 6286,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=17",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Ramotswa Station/Taung",
+        "censusCode": "20-03",
+        "censusTablePage": 17,
+        "geonamesId": "12640342",
+        "coordinates": "https://www.openstreetmap.org/node/11299498807",
+        "coordinateMatch": "Ramotswa railway station within the named census village, replacing a displaced gazetteer point",
+        "coordinateValidation": "https://www.botswanarailways.co.bw/ramotswa-br-station"
+      }
+    },
+    {
+      "id": "BW-S-masunga",
+      "en": "Masunga",
+      "name": "Masunga",
+      "kind": "Village",
+      "center": [
+        27.44875,
+        -20.62455
+      ],
+      "parentId": "BW-north-east",
+      "provinceId": "BW-north-east",
+      "aliases": [],
+      "population": {
+        "value": 6216,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Masunga",
+        "censusCode": "60-15",
+        "censusTablePage": 18,
+        "geonamesId": "933390",
+        "coordinates": "https://www.geonames.org/933390",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-lotlhakane",
+      "en": "Lotlhakane",
+      "name": "Lotlhakane",
+      "kind": "Village",
+      "center": [
+        25.4586,
+        -25.08612
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 6045,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Lotlhakane",
+        "censusCode": "10-14",
+        "censusTablePage": 18,
+        "geonamesId": "933506",
+        "coordinates": "https://www.geonames.org/933506",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-sefophe",
+      "en": "Sefophe",
+      "name": "Sefophe",
+      "kind": "Village",
+      "center": [
+        27.96667,
+        -22.18333
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 6001,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Sefophe",
+        "censusCode": "52-11",
+        "censusTablePage": 18,
+        "geonamesId": "933112",
+        "coordinates": "https://www.geonames.org/933112",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-rasesa",
+      "en": "Rasesa",
+      "name": "Rasesa",
+      "kind": "Village",
+      "center": [
+        26.07287,
+        -24.37306
+      ],
+      "parentId": "BW-kgatleng",
+      "provinceId": "BW-kgatleng",
+      "aliases": [],
+      "population": {
+        "value": 5966,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Rasesa",
+        "censusCode": "40-03",
+        "censusTablePage": 18,
+        "geonamesId": "11353058",
+        "coordinates": "https://www.geonames.org/11353058",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-maitengwe",
+      "en": "Maitengwe",
+      "name": "Maitengwe",
+      "kind": "Village",
+      "center": [
+        27.20997,
+        -20.12889
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 5929,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Maitengwe",
+        "censusCode": "54-01",
+        "censusTablePage": 18,
+        "geonamesId": "7573795",
+        "coordinates": "https://www.geonames.org/7573795",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mathangwane",
+      "en": "Mathangwane",
+      "name": "Mathangwane",
+      "kind": "Village",
+      "center": [
+        27.33333,
+        -21
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 5918,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mathangwane",
+        "censusCode": "54-15",
+        "censusTablePage": 18,
+        "geonamesId": "11467814",
+        "coordinates": "https://www.geonames.org/11467814",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-shashemooke",
+      "en": "Shashe-Mooke",
+      "name": "Shashe-Mooke",
+      "kind": "Village",
+      "center": [
+        27.37868,
+        -21.18794
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 5897,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Shashe-Mooke",
+        "censusCode": "54-29",
+        "censusTablePage": 18,
+        "geonamesId": "7754332",
+        "coordinates": "https://www.geonames.org/7754332",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-goodhope",
+      "en": "Good Hope",
+      "name": "Good Hope",
+      "kind": "Village",
+      "center": [
+        25.43921,
+        -25.46712
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 5672,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Good Hope",
+        "censusCode": "11-10",
+        "censusTablePage": 18,
+        "geonamesId": "7739165",
+        "coordinates": "https://www.geonames.org/7739165",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-gweta",
+      "en": "Gweta",
+      "name": "Gweta",
+      "kind": "Village",
+      "center": [
+        25.23333,
+        -20.18333
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 5548,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Gweta",
+        "censusCode": "54-30",
+        "censusTablePage": 18,
+        "geonamesId": "933734",
+        "coordinates": "https://www.geonames.org/933734",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-mmathethe",
+      "en": "Mmathethe",
+      "name": "Mmathethe",
+      "kind": "Village",
+      "center": [
+        25.26911,
+        -25.32189
+      ],
+      "parentId": "BW-southern",
+      "provinceId": "BW-southern",
+      "aliases": [],
+      "population": {
+        "value": 5421,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Mmathethe",
+        "censusCode": "11-34",
+        "censusTablePage": 18,
+        "geonamesId": "7739123",
+        "coordinates": "https://www.geonames.org/7739123",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-sefhare",
+      "en": "Sefhare",
+      "name": "Sefhare",
+      "kind": "Village",
+      "center": [
+        27.46906,
+        -23.02904
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 5381,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Sefhare",
+        "censusCode": "51-13",
+        "censusTablePage": 18,
+        "geonamesId": "7867072",
+        "coordinates": "https://www.geonames.org/7867072",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-chadibe",
+      "en": "Chadibe",
+      "name": "Chadibe",
+      "kind": "Village",
+      "center": [
+        27.34786,
+        -21.06532
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 5371,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Chadibe",
+        "censusCode": "54-17",
+        "censusTablePage": 18,
+        "geonamesId": "7754329",
+        "coordinates": "https://www.geonames.org/7754329",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-tsetsebjwe",
+      "en": "Tsetsebjwe",
+      "name": "Tsetsebjwe",
+      "kind": "Village",
+      "center": [
+        28.39797,
+        -22.41595
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 5248,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Tsetsebjwe",
+        "censusCode": "52-02",
+        "censusTablePage": 18,
+        "geonamesId": "7847878",
+        "coordinates": "https://www.geonames.org/7847878",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-hukuntsi",
+      "en": "Hukuntsi",
+      "name": "Hukuntsi",
+      "kind": "Village",
+      "center": [
+        21.77962,
+        -23.9988
+      ],
+      "parentId": "BW-kgalagadi",
+      "provinceId": "BW-kgalagadi",
+      "aliases": [],
+      "population": {
+        "value": 5224,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Hukuntsi",
+        "censusCode": "91-03",
+        "censusTablePage": 18,
+        "geonamesId": "933726",
+        "coordinates": "https://www.geonames.org/933726",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-charleshill",
+      "en": "Charles Hill",
+      "name": "Charles Hill",
+      "kind": "Village",
+      "center": [
+        20.09278,
+        -22.27639
+      ],
+      "parentId": "BW-ghanzi",
+      "provinceId": "BW-ghanzi",
+      "aliases": [],
+      "population": {
+        "value": 5164,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=18",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Charles Hill",
+        "censusCode": "80-07",
+        "censusTablePage": 18,
+        "geonamesId": "11204768",
+        "coordinates": "https://www.geonames.org/11204768",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    },
+    {
+      "id": "BW-S-sowa",
+      "en": "Sowa",
+      "name": "Sowa",
+      "kind": "Town",
+      "center": [
+        26.224,
+        -20.564
+      ],
+      "parentId": "BW-central",
+      "provinceId": "BW-central",
+      "aliases": [],
+      "population": {
+        "value": 2914,
+        "year": 2022,
+        "source": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf#page=15",
+        "periodLabel": "2022 census",
+        "scope": "Census city, town or village",
+        "scopeNote": "Settlement population; associated outlying localities are counted separately."
+      },
+      "provenance": {
+        "population": "Statistics Botswana, final revised December 2022 locality report",
+        "censusName": "Sowa",
+        "censusCode": "07",
+        "censusTablePage": 15,
+        "geonamesId": "11593974",
+        "coordinates": "https://www.geonames.org/11593974",
+        "coordinateMatch": "Named populated-place gazetteer point; homonyms manually checked; region assigned by polygon containment"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "BW-census-localities",
+      "title": "Statistics Botswana 2022 census: revised city, town and village populations",
+      "url": "https://www.statsbots.org.bw/sites/default/files/publications/Population%20%26%20Housing%20Census%202022-%20Population%20of%20Cities%2C%20Towns%2C%20Villages%20%26%20Associated%20Localities.pdf",
+      "scope": "2022 census settlement population"
+    },
+    {
+      "id": "geonames-BW",
+      "title": "GeoNames botswana gazetteer coordinates",
+      "url": "https://download.geonames.org/export/dump/BW.zip",
+      "license": "CC BY 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+      "description": "Coordinates only; gazetteer population values are not used."
+    },
+    {
+      "id": "osm-ramotswa",
+      "title": "OpenStreetMap Ramotswa railway station",
+      "url": "https://www.openstreetmap.org/node/11299498807",
+      "license": "ODbL",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "description": "Location anchor for Ramotswa Station/Taung; corrected a displaced gazetteer point."
+    }
+  ],
+  "selection": {
+    "count": 66,
+    "method": "All 7 census cities/towns and all 59 villages with at least 5,000 residents in the revised 2022 census"
+  }
+}

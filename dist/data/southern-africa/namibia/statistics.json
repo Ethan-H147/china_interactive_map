@@ -1,0 +1,2409 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-13",
+  "country": "namibia",
+  "sources": {
+    "mappedArea": {
+      "title": "Boundary-derived area",
+      "url": "data/southern-africa/namibia/sources.json",
+      "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+    },
+    "erongo": {
+      "title": "Namibia Statistics Agency · 2023 Census · erongo region",
+      "url": "https://census.nsa.org.na/erongo/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "hardap": {
+      "title": "Namibia Statistics Agency · 2023 Census · hardap region",
+      "url": "https://census.nsa.org.na/hardap-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "karas": {
+      "title": "Namibia Statistics Agency · 2023 Census · karas region",
+      "url": "https://census.nsa.org.na/kharas-reggion/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "kavangoeast": {
+      "title": "Namibia Statistics Agency · 2023 Census · kavango east region",
+      "url": "https://census.nsa.org.na/kavango-east-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "kavangowest": {
+      "title": "Namibia Statistics Agency · 2023 Census · kavango west region",
+      "url": "https://census.nsa.org.na/kavango-west-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "khomas": {
+      "title": "Namibia Statistics Agency · 2023 Census · khomas region",
+      "url": "https://census.nsa.org.na/khomas-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "kunene": {
+      "title": "Namibia Statistics Agency · 2023 Census · kunene region",
+      "url": "https://census.nsa.org.na/kunene-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "ohangwena": {
+      "title": "Namibia Statistics Agency · 2023 Census · ohangwena region",
+      "url": "https://census.nsa.org.na/ohangwena-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "omaheke": {
+      "title": "Namibia Statistics Agency · 2023 Census · omaheke region",
+      "url": "https://census.nsa.org.na/omaheke-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "omusati": {
+      "title": "Namibia Statistics Agency · 2023 Census · omusati region",
+      "url": "https://census.nsa.org.na/omusati-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "oshana": {
+      "title": "Namibia Statistics Agency · 2023 Census · oshana region",
+      "url": "https://census.nsa.org.na/oshana-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "oshikoto": {
+      "title": "Namibia Statistics Agency · 2023 Census · oshikoto region",
+      "url": "https://census.nsa.org.na/oshikoto-region/",
+      "year": 2023,
+      "table": "Population density by constituency",
+      "correctionSource": "https://nsa.org.na/wp-content/uploads/2025/09/Oshikoto-2023-Census-Regional-Profile.pdf",
+      "note": "Oniipa population and Onayena area use final regional report Table 2.2, correcting typographical errors in the interactive table."
+    },
+    "otjozondjupa": {
+      "title": "Namibia Statistics Agency · 2023 Census · otjozondjupa region",
+      "url": "https://census.nsa.org.na/otjozondjupa-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "zambezi": {
+      "title": "Namibia Statistics Agency · 2023 Census · zambezi region",
+      "url": "https://census.nsa.org.na/zambezi-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    }
+  },
+  "regions": {
+    "namibia:NA-ohangwena": {
+      "name": "Ohangwena",
+      "level": 1,
+      "area": {
+        "value": 10709.28,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "ohangwena",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 337729,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-oshana": {
+      "name": "Oshana",
+      "level": 1,
+      "area": {
+        "value": 8656.36,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "oshana",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 230801,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-karas": {
+      "name": "ǁKaras",
+      "level": 1,
+      "area": {
+        "value": 161395.01,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "karas",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 109893,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-omusati": {
+      "name": "Omusati",
+      "level": 1,
+      "area": {
+        "value": 26600.31,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "omusati",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 316671,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-otjozondjupa": {
+      "name": "Otjozondjupa",
+      "level": 1,
+      "area": {
+        "value": 105294.65,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "otjozondjupa",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 220811,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-oshikoto": {
+      "name": "Oshikoto",
+      "level": 1,
+      "area": {
+        "value": 38672.89,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "oshikoto",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 257302,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-omaheke": {
+      "name": "Omaheke",
+      "level": 1,
+      "area": {
+        "value": 84745.45,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "omaheke",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 102881,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-kunene": {
+      "name": "Kunene",
+      "level": 1,
+      "area": {
+        "value": 115615.7,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "kunene",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 120762,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-erongo": {
+      "name": "Erongo",
+      "level": 1,
+      "area": {
+        "value": 63639.28,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "erongo",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 240206,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-khomas": {
+      "name": "Khomas",
+      "level": 1,
+      "area": {
+        "value": 36949.92,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "khomas",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 494605,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-kavango-west": {
+      "name": "Kavango West",
+      "level": 1,
+      "area": {
+        "value": 23871.35,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "kavangowest",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 123266,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-hardap": {
+      "name": "Hardap",
+      "level": 1,
+      "area": {
+        "value": 109713.28,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "hardap",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 106680,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-kavango-east": {
+      "name": "Kavango East",
+      "level": 1,
+      "area": {
+        "value": 23987.77,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "kavangoeast",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 218421,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangoeast"
+      }
+    },
+    "namibia:NA-zambezi": {
+      "name": "Zambezi",
+      "level": 1,
+      "area": {
+        "value": 14663.43,
+        "unit": "km²",
+        "year": 2023,
+        "method": "calculated",
+        "source": "zambezi",
+        "note": "Sum of the official census constituency areas for the region."
+      },
+      "population": {
+        "value": 142373,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-eenhana": {
+      "name": "Eenhana",
+      "level": 2,
+      "area": {
+        "value": 904.21,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 35304,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-epembe": {
+      "name": "Epembe",
+      "level": 2,
+      "area": {
+        "value": 1198.73,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 16336,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-omulonga": {
+      "name": "Omulonga",
+      "level": 2,
+      "area": {
+        "value": 501.07,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 32802,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-okatana": {
+      "name": "Okatana",
+      "level": 2,
+      "area": {
+        "value": 426.78,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 19974,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-berseba": {
+      "name": "Berseba",
+      "level": 2,
+      "area": {
+        "value": 31724.85,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "karas"
+      },
+      "population": {
+        "value": 11258,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-C-elim": {
+      "name": "Elim",
+      "level": 2,
+      "area": {
+        "value": 470.51,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 13400,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-grootfontein": {
+      "name": "Grootfontein",
+      "level": 2,
+      "area": {
+        "value": 11278.5,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "otjozondjupa"
+      },
+      "population": {
+        "value": 36951,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-C-guinas": {
+      "name": "Guinas",
+      "level": 2,
+      "area": {
+        "value": 4569.91,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 8578,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-epukiro": {
+      "name": "Epukiro",
+      "level": 2,
+      "area": {
+        "value": 10926.12,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omaheke"
+      },
+      "population": {
+        "value": 7880,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-C-kalahari": {
+      "name": "Kalahari",
+      "level": 2,
+      "area": {
+        "value": 12248.3,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omaheke"
+      },
+      "population": {
+        "value": 12021,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-C-kamanjab": {
+      "name": "Kamanjab",
+      "level": 2,
+      "area": {
+        "value": 17130.63,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kunene"
+      },
+      "population": {
+        "value": 11349,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-C-karibib": {
+      "name": "Karibib",
+      "level": 2,
+      "area": {
+        "value": 14535.81,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "erongo"
+      },
+      "population": {
+        "value": 19705,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-C-katutura-central": {
+      "name": "Katutura Central",
+      "level": 2,
+      "area": {
+        "value": 2.53,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 30557,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-katutura-east": {
+      "name": "Katutura East",
+      "level": 2,
+      "area": {
+        "value": 4.36,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 22940,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-keetmanshoop-urban": {
+      "name": "Keetmanshoop Urban",
+      "level": 2,
+      "area": {
+        "value": 524.35,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "karas"
+      },
+      "population": {
+        "value": 27862,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-C-khomasdal": {
+      "name": "Khomasdal",
+      "level": 2,
+      "area": {
+        "value": 23.52,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 67211,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-moses-garoeb": {
+      "name": "Moses ǁGaroëb",
+      "level": 2,
+      "area": {
+        "value": 32.37,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 68932,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-ogongo": {
+      "name": "Ogongo",
+      "level": 2,
+      "area": {
+        "value": 677.76,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 17649,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-okahandja": {
+      "name": "Okahandja",
+      "level": 2,
+      "area": {
+        "value": 5856.89,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "otjozondjupa"
+      },
+      "population": {
+        "value": 46061,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-C-okahao": {
+      "name": "Okahao",
+      "level": 2,
+      "area": {
+        "value": 9976.52,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 24909,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-okakarara": {
+      "name": "Okakarara",
+      "level": 2,
+      "area": {
+        "value": 14643.63,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "otjozondjupa"
+      },
+      "population": {
+        "value": 30987,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-C-otavi": {
+      "name": "Otavi",
+      "level": 2,
+      "area": {
+        "value": 14243.14,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "otjozondjupa"
+      },
+      "population": {
+        "value": 18279,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-C-okaku": {
+      "name": "Okaku",
+      "level": 2,
+      "area": {
+        "value": 224.31,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 21892,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-okatyali": {
+      "name": "Okatyali",
+      "level": 2,
+      "area": {
+        "value": 557.74,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 4502,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-olukonda": {
+      "name": "Olukonda",
+      "level": 2,
+      "area": {
+        "value": 241.04,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 14318,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-omaruru": {
+      "name": "Omaruru",
+      "level": 2,
+      "area": {
+        "value": 8431.88,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "erongo"
+      },
+      "population": {
+        "value": 13322,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-C-omatako": {
+      "name": "Omatako",
+      "level": 2,
+      "area": {
+        "value": 24370.94,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "otjozondjupa"
+      },
+      "population": {
+        "value": 18283,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-C-ompundja": {
+      "name": "Ompundja",
+      "level": 2,
+      "area": {
+        "value": 465.73,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 4582,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-omuntele": {
+      "name": "Omuntele",
+      "level": 2,
+      "area": {
+        "value": 1629.6,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 21043,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-omuthiya": {
+      "name": "Omuthiya",
+      "level": 2,
+      "area": {
+        "value": 13392.46,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 39855,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-onayena": {
+      "name": "Onayena",
+      "level": 2,
+      "area": {
+        "value": 442.34,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 16669,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-ondangwa-rural": {
+      "name": "Ondangwa Rural",
+      "level": 2,
+      "area": {
+        "value": 149.73,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 14959,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-ongwediva": {
+      "name": "Ongwediva",
+      "level": 2,
+      "area": {
+        "value": 221.69,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 44166,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-oniipa": {
+      "name": "Oniipa",
+      "level": 2,
+      "area": {
+        "value": 371.47,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 33727,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-onyaanya": {
+      "name": "Onyaanya",
+      "level": 2,
+      "area": {
+        "value": 731.75,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 25465,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-tsumeb": {
+      "name": "Tsumeb",
+      "level": 2,
+      "area": {
+        "value": 3608.58,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 38134,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-tsumkwe": {
+      "name": "Tsumkwe",
+      "level": 2,
+      "area": {
+        "value": 28490.85,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "otjozondjupa"
+      },
+      "population": {
+        "value": 15357,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-C-oshakati-east": {
+      "name": "Oshakati East",
+      "level": 2,
+      "area": {
+        "value": 187.02,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 39915,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-oshakati-west": {
+      "name": "Oshakati West",
+      "level": 2,
+      "area": {
+        "value": 239.06,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 30665,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-otamanzi": {
+      "name": "Otamanzi",
+      "level": 2,
+      "area": {
+        "value": 4184.64,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 16399,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-otjinene": {
+      "name": "Otjinene",
+      "level": 2,
+      "area": {
+        "value": 6420.01,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omaheke"
+      },
+      "population": {
+        "value": 12415,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-C-otjiwarongo": {
+      "name": "Otjiwarongo",
+      "level": 2,
+      "area": {
+        "value": 6410.7,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "otjozondjupa"
+      },
+      "population": {
+        "value": 54893,
+        "year": 2023,
+        "method": "census",
+        "source": "otjozondjupa"
+      }
+    },
+    "namibia:NA-C-otjombinde": {
+      "name": "Otjombinde",
+      "level": 2,
+      "area": {
+        "value": 18929.46,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omaheke"
+      },
+      "population": {
+        "value": 9041,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-C-outjo": {
+      "name": "Outjo",
+      "level": 2,
+      "area": {
+        "value": 7467.57,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kunene"
+      },
+      "population": {
+        "value": 19743,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-C-john-pandeni": {
+      "name": "John Pandeni",
+      "level": 2,
+      "area": {
+        "value": 3.18,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 25457,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-tsandi": {
+      "name": "Tsandi",
+      "level": 2,
+      "area": {
+        "value": 2296.14,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 34307,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-uukwiyu": {
+      "name": "Uukwiyu",
+      "level": 2,
+      "area": {
+        "value": 299.61,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 13033,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-uuvudhiya": {
+      "name": "Uuvudhiya",
+      "level": 2,
+      "area": {
+        "value": 5825.24,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 5647,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-windhoek-east": {
+      "name": "Windhoek East",
+      "level": 2,
+      "area": {
+        "value": 218.93,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 30054,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-samora-machel": {
+      "name": "Samora Machel",
+      "level": 2,
+      "area": {
+        "value": 20.3,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 92401,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-opuwo-urban": {
+      "name": "Opuwo Urban",
+      "level": 2,
+      "area": {
+        "value": 1738.15,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kunene"
+      },
+      "population": {
+        "value": 23934,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-C-ohangwena": {
+      "name": "Ohangwena",
+      "level": 2,
+      "area": {
+        "value": 229.53,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 31491,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-mankumpi": {
+      "name": "Mankumpi",
+      "level": 2,
+      "area": {
+        "value": 2338.62,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 6910,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-ncamagoro": {
+      "name": "Ncamagoro",
+      "level": 2,
+      "area": {
+        "value": 5043.9,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 8449,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-ncuncuni": {
+      "name": "Ncuncuni",
+      "level": 2,
+      "area": {
+        "value": 1397.45,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 10943,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-rehoboth-east-urban": {
+      "name": "Rehoboth East Urban",
+      "level": 2,
+      "area": {
+        "value": 287.73,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 29299,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-endola": {
+      "name": "Endola",
+      "level": 2,
+      "area": {
+        "value": 326.99,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 32698,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-mariental-urban": {
+      "name": "Mariental Urban",
+      "level": 2,
+      "area": {
+        "value": 4916.11,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 18368,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-rehoboth-west-urban": {
+      "name": "Rehoboth West Urban",
+      "level": 2,
+      "area": {
+        "value": 325.45,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 11914,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-okarukambe": {
+      "name": "Okarukambe",
+      "level": 2,
+      "area": {
+        "value": 17456.98,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omaheke"
+      },
+      "population": {
+        "value": 12271,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-C-daures": {
+      "name": "Daures",
+      "level": 2,
+      "area": {
+        "value": 17786.64,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "erongo"
+      },
+      "population": {
+        "value": 14601,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-C-nehale-lyampingana": {
+      "name": "Nehale LyaMpingana",
+      "level": 2,
+      "area": {
+        "value": 9934.98,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 17317,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-gobabis": {
+      "name": "Gobabis",
+      "level": 2,
+      "area": {
+        "value": 5770.32,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omaheke"
+      },
+      "population": {
+        "value": 35452,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-C-windhoek-rural": {
+      "name": "Windhoek Rural",
+      "level": 2,
+      "area": {
+        "value": 36418.14,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 30079,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-windhoek-west": {
+      "name": "Windhoek West",
+      "level": 2,
+      "area": {
+        "value": 208.08,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 59907,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-rehoboth-rural": {
+      "name": "Rehoboth Rural",
+      "level": 2,
+      "area": {
+        "value": 12056.75,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 9439,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-ondangwa-urban": {
+      "name": "Ondangwa Urban",
+      "level": 2,
+      "area": {
+        "value": 59.45,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshana"
+      },
+      "population": {
+        "value": 31466,
+        "year": 2023,
+        "method": "census",
+        "source": "oshana"
+      }
+    },
+    "namibia:NA-C-okankolo": {
+      "name": "Okankolo",
+      "level": 2,
+      "area": {
+        "value": 1643,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 17988,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-tobias-hainyeko": {
+      "name": "Tobias Hainyeko",
+      "level": 2,
+      "area": {
+        "value": 18.51,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "khomas"
+      },
+      "population": {
+        "value": 67067,
+        "year": 2023,
+        "method": "census",
+        "source": "khomas"
+      }
+    },
+    "namibia:NA-C-mariental-rural": {
+      "name": "Mariental Rural",
+      "level": 2,
+      "area": {
+        "value": 15036.72,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 12812,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-oshikuku": {
+      "name": "Oshikuku",
+      "level": 2,
+      "area": {
+        "value": 424,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 19693,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-gibeon": {
+      "name": "Gibeon",
+      "level": 2,
+      "area": {
+        "value": 10156.39,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 8034,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-eengondi": {
+      "name": "Eengondi",
+      "level": 2,
+      "area": {
+        "value": 2107.76,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "oshikoto"
+      },
+      "population": {
+        "value": 24208,
+        "year": 2023,
+        "method": "census",
+        "source": "oshikoto"
+      }
+    },
+    "namibia:NA-C-epupa": {
+      "name": "Epupa",
+      "level": 2,
+      "area": {
+        "value": 23617.36,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kunene"
+      },
+      "population": {
+        "value": 26491,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-C-opuwo-rural": {
+      "name": "Opuwo Rural",
+      "level": 2,
+      "area": {
+        "value": 21544.91,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kunene"
+      },
+      "population": {
+        "value": 14894,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-C-sesfontein": {
+      "name": "Sesfontein",
+      "level": 2,
+      "area": {
+        "value": 22789.07,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kunene"
+      },
+      "population": {
+        "value": 8845,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-C-khorixas": {
+      "name": "Khorixas",
+      "level": 2,
+      "area": {
+        "value": 21328.01,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kunene"
+      },
+      "population": {
+        "value": 15506,
+        "year": 2023,
+        "method": "census",
+        "source": "kunene"
+      }
+    },
+    "namibia:NA-C-arandis": {
+      "name": "Arandis",
+      "level": 2,
+      "area": {
+        "value": 13519.74,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "erongo"
+      },
+      "population": {
+        "value": 13542,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-C-swakopmund": {
+      "name": "Swakopmund",
+      "level": 2,
+      "area": {
+        "value": 196.32,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "erongo"
+      },
+      "population": {
+        "value": 75921,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-C-walvis-bay-urban": {
+      "name": "Walvis Bay Urban",
+      "level": 2,
+      "area": {
+        "value": 18.9,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "erongo"
+      },
+      "population": {
+        "value": 51618,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-C-walvis-bay-rural": {
+      "name": "Walvis Bay Rural",
+      "level": 2,
+      "area": {
+        "value": 9149.99,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "erongo"
+      },
+      "population": {
+        "value": 51497,
+        "year": 2023,
+        "method": "census",
+        "source": "erongo"
+      }
+    },
+    "namibia:NA-C-daweb": {
+      "name": "Daweb",
+      "level": 2,
+      "area": {
+        "value": 40209.89,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 6092,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-nami-nus": {
+      "name": "ǃNamiǂNûs",
+      "level": 2,
+      "area": {
+        "value": 48270.82,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "karas"
+      },
+      "population": {
+        "value": 17243,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-C-oranjemund": {
+      "name": "Oranjemund",
+      "level": 2,
+      "area": {
+        "value": 4623.14,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "karas"
+      },
+      "population": {
+        "value": 13224,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-C-karasburg-west": {
+      "name": "Karasburg West",
+      "level": 2,
+      "area": {
+        "value": 14053.11,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "karas"
+      },
+      "population": {
+        "value": 17741,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-C-karasburg-east": {
+      "name": "Karasburg East",
+      "level": 2,
+      "area": {
+        "value": 24276.26,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "karas"
+      },
+      "population": {
+        "value": 13821,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-C-keetmanshoop-rural": {
+      "name": "Keetmanshoop Rural",
+      "level": 2,
+      "area": {
+        "value": 37922.48,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "karas"
+      },
+      "population": {
+        "value": 8744,
+        "year": 2023,
+        "method": "census",
+        "source": "karas"
+      }
+    },
+    "namibia:NA-C-aranos": {
+      "name": "Aranos",
+      "level": 2,
+      "area": {
+        "value": 26724.24,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "hardap"
+      },
+      "population": {
+        "value": 10722,
+        "year": 2023,
+        "method": "census",
+        "source": "hardap"
+      }
+    },
+    "namibia:NA-C-aminuis": {
+      "name": "Aminuis",
+      "level": 2,
+      "area": {
+        "value": 12994.26,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omaheke"
+      },
+      "population": {
+        "value": 13801,
+        "year": 2023,
+        "method": "census",
+        "source": "omaheke"
+      }
+    },
+    "namibia:NA-C-mukwe": {
+      "name": "Mukwe",
+      "level": 2,
+      "area": {
+        "value": 5540.34,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangoeast"
+      },
+      "population": {
+        "value": 39170,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangoeast"
+      }
+    },
+    "namibia:NA-C-judea-lyaboloma": {
+      "name": "Judea Lyaboloma",
+      "level": 2,
+      "area": {
+        "value": 1723.04,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 8738,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-kongola": {
+      "name": "Kongola",
+      "level": 2,
+      "area": {
+        "value": 5173.82,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 12069,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-linyanti": {
+      "name": "Linyanti",
+      "level": 2,
+      "area": {
+        "value": 1804.35,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 10425,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-sibbinda": {
+      "name": "Sibbinda",
+      "level": 2,
+      "area": {
+        "value": 1857.03,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 17126,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-kabbe-south": {
+      "name": "Kabbe South",
+      "level": 2,
+      "area": {
+        "value": 1257.6,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 11345,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-kabbe-north": {
+      "name": "Kabbe North",
+      "level": 2,
+      "area": {
+        "value": 1182.62,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 12253,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-katima-mulilo-urban": {
+      "name": "Katima Mulilo Urban",
+      "level": 2,
+      "area": {
+        "value": 44.94,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 46401,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-katima-mulilo-rural": {
+      "name": "Katima Mulilo Rural",
+      "level": 2,
+      "area": {
+        "value": 1620.03,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "zambezi"
+      },
+      "population": {
+        "value": 24016,
+        "year": 2023,
+        "method": "census",
+        "source": "zambezi"
+      }
+    },
+    "namibia:NA-C-ndiyona": {
+      "name": "Ndiyona",
+      "level": 2,
+      "area": {
+        "value": 5232.08,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangoeast"
+      },
+      "population": {
+        "value": 13800,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangoeast"
+      }
+    },
+    "namibia:NA-C-ndonga-linena": {
+      "name": "Ndonga Linena",
+      "level": 2,
+      "area": {
+        "value": 2851.09,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangoeast"
+      },
+      "population": {
+        "value": 14936,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangoeast"
+      }
+    },
+    "namibia:NA-C-mashare": {
+      "name": "Mashare",
+      "level": 2,
+      "area": {
+        "value": 9139.89,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangoeast"
+      },
+      "population": {
+        "value": 19478,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangoeast"
+      }
+    },
+    "namibia:NA-C-rundu-rural": {
+      "name": "Rundu Rural",
+      "level": 2,
+      "area": {
+        "value": 1068.57,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangoeast"
+      },
+      "population": {
+        "value": 12405,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangoeast"
+      }
+    },
+    "namibia:NA-C-rundu-urban": {
+      "name": "Rundu Urban",
+      "level": 2,
+      "area": {
+        "value": 155.8,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangoeast"
+      },
+      "population": {
+        "value": 118632,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangoeast"
+      }
+    },
+    "namibia:NA-C-kapako": {
+      "name": "Kapako",
+      "level": 2,
+      "area": {
+        "value": 1224.11,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 27823,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-musese": {
+      "name": "Musese",
+      "level": 2,
+      "area": {
+        "value": 1422.9,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 13659,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-tondoro": {
+      "name": "Tondoro",
+      "level": 2,
+      "area": {
+        "value": 4195.75,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 18497,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-nkurenkuru": {
+      "name": "Nkurenkuru",
+      "level": 2,
+      "area": {
+        "value": 271.86,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 15887,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-mpungu": {
+      "name": "Mpungu",
+      "level": 2,
+      "area": {
+        "value": 7976.76,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "kavangowest"
+      },
+      "population": {
+        "value": 21098,
+        "year": 2023,
+        "method": "census",
+        "source": "kavangowest"
+      }
+    },
+    "namibia:NA-C-okongo": {
+      "name": "Okongo",
+      "level": 2,
+      "area": {
+        "value": 3821.98,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 31746,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-oshikunde": {
+      "name": "Oshikunde",
+      "level": 2,
+      "area": {
+        "value": 1630.32,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 21890,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-omundaungilo": {
+      "name": "Omundaungilo",
+      "level": 2,
+      "area": {
+        "value": 793.54,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 15009,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-ondobe": {
+      "name": "Ondobe",
+      "level": 2,
+      "area": {
+        "value": 456.66,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 32622,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-oshikango": {
+      "name": "Oshikango",
+      "level": 2,
+      "area": {
+        "value": 223.75,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 30531,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-engela": {
+      "name": "Engela",
+      "level": 2,
+      "area": {
+        "value": 307.8,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 30004,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-ongenga": {
+      "name": "Ongenga",
+      "level": 2,
+      "area": {
+        "value": 314.7,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "ohangwena"
+      },
+      "population": {
+        "value": 27296,
+        "year": 2023,
+        "method": "census",
+        "source": "ohangwena"
+      }
+    },
+    "namibia:NA-C-etayi": {
+      "name": "Etayi",
+      "level": 2,
+      "area": {
+        "value": 544.35,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 33088,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-okalongo": {
+      "name": "Okalongo",
+      "level": 2,
+      "area": {
+        "value": 529.38,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 32663,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-anamulenge": {
+      "name": "Anamulenge",
+      "level": 2,
+      "area": {
+        "value": 394.06,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 20344,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-outapi": {
+      "name": "Outapi",
+      "level": 2,
+      "area": {
+        "value": 950.33,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 53594,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-ruacana": {
+      "name": "Ruacana",
+      "level": 2,
+      "area": {
+        "value": 5377.07,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 27261,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    },
+    "namibia:NA-C-onesi": {
+      "name": "Onesi",
+      "level": 2,
+      "area": {
+        "value": 775.55,
+        "unit": "km²",
+        "year": 2023,
+        "method": "reported",
+        "source": "omusati"
+      },
+      "population": {
+        "value": 23364,
+        "year": 2023,
+        "method": "census",
+        "source": "omusati"
+      }
+    }
+  }
+}

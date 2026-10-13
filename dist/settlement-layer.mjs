@@ -1,5 +1,14 @@
 // Settlements are points, independent of a country's administrative hierarchy.
 export const nameKey=value=>String(value||'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
+export function settlementStatistics(record,key){
+ const metrics={},sources={};
+ for(const type of ['population','area']){
+  const metric=record[type];if(!metric)continue;
+  metrics[type]=metric;
+  if(metric.source)sources[metric.source]={title:record.provenance?.[type]||`${metric.year||''} census settlement ${type}`.trim(),url:metric.source};
+ }
+ return {regions:{[key]:metrics},sources};
+}
 export function enrichPlaces(records,supplement={}){
  const entries=new Map(Object.entries(supplement.places||{}));
  for(const entry of Object.values(supplement.places||{}))for(const alias of entry.aliases||[])if(!entries.has(nameKey(alias)))entries.set(nameKey(alias),entry);

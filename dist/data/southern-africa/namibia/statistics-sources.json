@@ -1,0 +1,103 @@
+{
+  "retrieved": "2026-10-13",
+  "sources": {
+    "mappedArea": {
+      "title": "Boundary-derived area",
+      "url": "data/southern-africa/namibia/sources.json",
+      "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+    },
+    "erongo": {
+      "title": "Namibia Statistics Agency · 2023 Census · erongo region",
+      "url": "https://census.nsa.org.na/erongo/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "hardap": {
+      "title": "Namibia Statistics Agency · 2023 Census · hardap region",
+      "url": "https://census.nsa.org.na/hardap-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "karas": {
+      "title": "Namibia Statistics Agency · 2023 Census · karas region",
+      "url": "https://census.nsa.org.na/kharas-reggion/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "kavangoeast": {
+      "title": "Namibia Statistics Agency · 2023 Census · kavango east region",
+      "url": "https://census.nsa.org.na/kavango-east-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "kavangowest": {
+      "title": "Namibia Statistics Agency · 2023 Census · kavango west region",
+      "url": "https://census.nsa.org.na/kavango-west-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "khomas": {
+      "title": "Namibia Statistics Agency · 2023 Census · khomas region",
+      "url": "https://census.nsa.org.na/khomas-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "kunene": {
+      "title": "Namibia Statistics Agency · 2023 Census · kunene region",
+      "url": "https://census.nsa.org.na/kunene-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "ohangwena": {
+      "title": "Namibia Statistics Agency · 2023 Census · ohangwena region",
+      "url": "https://census.nsa.org.na/ohangwena-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "omaheke": {
+      "title": "Namibia Statistics Agency · 2023 Census · omaheke region",
+      "url": "https://census.nsa.org.na/omaheke-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "omusati": {
+      "title": "Namibia Statistics Agency · 2023 Census · omusati region",
+      "url": "https://census.nsa.org.na/omusati-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "oshana": {
+      "title": "Namibia Statistics Agency · 2023 Census · oshana region",
+      "url": "https://census.nsa.org.na/oshana-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "oshikoto": {
+      "title": "Namibia Statistics Agency · 2023 Census · oshikoto region",
+      "url": "https://census.nsa.org.na/oshikoto-region/",
+      "year": 2023,
+      "table": "Population density by constituency",
+      "correctionSource": "https://nsa.org.na/wp-content/uploads/2025/09/Oshikoto-2023-Census-Regional-Profile.pdf",
+      "note": "Oniipa population and Onayena area use final regional report Table 2.2, correcting typographical errors in the interactive table."
+    },
+    "otjozondjupa": {
+      "title": "Namibia Statistics Agency · 2023 Census · otjozondjupa region",
+      "url": "https://census.nsa.org.na/otjozondjupa-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    },
+    "zambezi": {
+      "title": "Namibia Statistics Agency · 2023 Census · zambezi region",
+      "url": "https://census.nsa.org.na/zambezi-region/",
+      "year": 2023,
+      "table": "Population density by constituency"
+    }
+  },
+  "coverage": {
+    "regions": 135,
+    "population": 135,
+    "reportedArea": 135,
+    "gdp": 0
+  },
+  "note": "Subnational GDP has not been verified; national GDP is not allocated to subdivisions."
+}
