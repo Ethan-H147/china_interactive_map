@@ -12,6 +12,7 @@ export function placeLines(record,language='both'){
  if(language!=='both')return [variants.find(([code])=>code===language)?.[1]||record.en];
  return [...new Set([record.en,...variants.filter(([,name])=>name!==record.en).slice(0,1).map(([,name])=>name)])];
 }
-export function settlementZoom(record){const population=record.population?.value||0;return population>=300000?4.5:population>=100000?5.8:population>=30000?7:population>=10000?8:9;}
+// A tenfold population decrease needs 2.4 more zoom levels, without abrupt batches.
+export function settlementZoom(record){const population=Math.max(1,record.population?.value||0);return Math.max(4,Math.min(9.5,5.8+2.4*Math.log10(100000/population)));}
 export function visibleSettlements(records,zoom,bounds,selected){return records.filter(r=>(r.id===selected||zoom>=settlementZoom(r))&&r.center[0]>=bounds.getWest()&&r.center[0]<=bounds.getEast()&&r.center[1]>=bounds.getSouth()&&r.center[1]<=bounds.getNorth()).sort((a,b)=>(b.population?.value||0)-(a.population?.value||0));}
 export function settlementFeatures(records){return {type:'FeatureCollection',features:records.map(r=>({type:'Feature',properties:{id:r.id,minzoom:settlementZoom(r)},geometry:{type:'Point',coordinates:r.center}}))};}
