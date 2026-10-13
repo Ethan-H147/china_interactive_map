@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
 import {createRequire} from 'node:module';
 import {pathToFileURL} from 'node:url';
-import {lineData,lineSourceOptions} from '../dist/adaptive-lines.mjs';
+import {lineData,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth} from '../dist/adaptive-lines.mjs';
 import {configurations} from '../dist/southern-africa.mjs';
 
 const require=createRequire(fs.existsSync('node_modules/@maplibre/geojson-vt')?path.resolve('package.json'):path.resolve('../../china-atlas/package.json'));
@@ -34,3 +34,32 @@ const high=tileAt(18),highDetail=detail.getTile(18,...high),highExact=exact.getT
 assert(highDetail&&highExact,'Representative shared border remains present up close');
 assert.deepEqual(highDetail.features.map(f=>f.geometry),highExact.features.map(f=>f.geometry),'Maximum zoom restores original border detail');
 console.log('Ubuntu–Karoo Hoogland:',shared.length,'shared segments present. Zoom 4 line vertices:',before,'→',after,'with full detail retained at zoom 18.');
+
+// Compare the rendered stroke against the actual filled frontier in CSS pixels.
+// Vertex-count tests alone do not catch a smooth line drifting off a detailed fill.
+const readCountry=(country,file)=>JSON.parse(gunzipSync(fs.readFileSync('dist/data/southern-africa/'+country+'/'+file)));
+const international=readCountry('south-africa','international.bin');
+const corrected=new GeoJSONVT(international,options(internationalLineSourceOptions.tolerance));
+const legacy=new GeoJSONVT(international,options(tolerance));
+const widthAt=zoom=>{const expression=regionalLineWidth(1),stops=[];for(let i=3;i<expression.length;i+=2)stops.push([expression[i],expression[i+1]]);if(zoom<=stops[0][0])return stops[0][1];for(let i=1;i<stops.length;i++)if(zoom<=stops[i][0]){const [z,a]=stops[i-1],[next,b]=stops[i];return a+(b-a)*(zoom-z)/(next-z);}return stops.at(-1)[1];};
+const mercator=lat=>(1-Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))/Math.PI)/2;
+function segmentDistance(p,a,b){const dx=b[0]-a[0],dy=b[1]-a[1],length=dx*dx+dy*dy,t=length?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/length)):0;return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy);}
+function frontierError(tiles,coordinates,zoom){
+ const cache=new Map();let maximum=0;
+ for(const p of coordinates){const projected=[(p[0]+180)/360*2**zoom*8192,mercator(p[1])*2**zoom*8192],tile=projected.map(v=>Math.floor(v/8192)),id=tile.join(','),local=projected.map((v,i)=>v-tile[i]*8192);
+  if(!cache.has(id))cache.set(id,tiles.getTile(zoom,...tile)?.features.flatMap(f=>f.geometry)||[]);
+  let nearest=Infinity;for(const path of cache.get(id))for(let i=1;i<path.length;i++)nearest=Math.min(nearest,segmentDistance(local,path[i-1],path[i]));maximum=Math.max(maximum,nearest/16);
+ }return maximum;
+}
+for(const country of ['lesotho','eswatini']){
+ const outline=readCountry(country,'context.bin'),coordinates=outline.features.flatMap(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).flat().flat());
+ let oldWorst=0,newWorst=0;
+ for(const zoom of [3,4,5,6]){
+  const prior=frontierError(legacy,coordinates,zoom),error=frontierError(corrected,coordinates,zoom),halfStroke=widthAt(zoom)/2;oldWorst=Math.max(oldWorst,prior);newWorst=Math.max(newWorst,error);
+  assert(prior>halfStroke,'Reproduce the original line/fill drift at low zoom');assert(error<halfStroke,country+' frontier stays covered by the thin stroke at zoom '+zoom);
+ }
+ const detail=lineData(outline),simplified=new GeoJSONVT(detail,options(internationalLineSourceOptions.tolerance)),raw=new GeoJSONVT(detail,options(0)),p=coordinates[0],tile=[Math.floor((p[0]+180)/360*16),Math.floor(mercator(p[1])*16)];
+ assert(points(simplified.getTile(4,...tile))<points(raw.getTile(4,...tile))*.5,'International strokes still discard subpixel detail');
+ const highTile=[Math.floor((p[0]+180)/360*2**18),Math.floor(mercator(p[1])*2**18)];assert.deepEqual(simplified.getTile(18,...highTile)?.features.map(f=>f.geometry),raw.getTile(18,...highTile)?.features.map(f=>f.geometry),'Full international detail returns at maximum zoom');
+ console.log(country+' frontier: worst low-zoom drift '+oldWorst.toFixed(2)+' → '+newWorst.toFixed(2)+' px; stays inside the stroke.');
+}

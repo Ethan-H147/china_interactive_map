@@ -28,6 +28,10 @@ export function adaptiveOpacity(base=1){
  expression.push(22,base);return expression;
 }
 export const lineSourceOptions={type:'geojson',tolerance:.65,maxzoom:18,buffer:128};
+// Thin country strokes must stay within their own width of the unsimplified fill.
+// Subdivision tolerances are intentionally larger and must never override this.
+export const internationalLineSourceOptions={...lineSourceOptions,tolerance:.125};
+export const regionalLineWidth=(level,selected=false)=>['interpolate',['linear'],['zoom'],2,selected?.7:level===1?.45:.25,6,selected?1.1:level===1?.75:.45,10,selected?1.7:level===1?.9:.55];
 
 // Hidden layers skip drawing and tile requests. Keep paint bindings unchanged.
 export function setLayerVisible(map,id,visible){

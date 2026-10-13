@@ -4,7 +4,7 @@ import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures} from './s
 import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {createPlaceSearch} from './place-search.mjs';
-import {setLayerVisible,lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
+import {setLayerVisible,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth as lineWidth,adaptiveOpacity} from './adaptive-lines.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
 
 // Country layout, cards and rendering are shared; names,
@@ -15,7 +15,6 @@ export async function addRegionalCountry(map,host,c){
  const allowed=()=>!window.AtlasDev||window.AtlasDev.allows(country);
  const names=record=>c.names?.(record)||record;
  const edgeOptions={...lineSourceOptions,...(c.lineTolerance?{tolerance:c.lineTolerance}:{})};
- const lineWidth=(level,selected=false)=>['interpolate',['linear'],['zoom'],2,selected?.7:level===1?.45:.25,6,selected?1.1:level===1?.75:.45,10,selected?1.7:level===1?.9:.55];
  const sidebar=createCountryPage({id:country+'-sidebar',label:'Explore '+c.name,classes:'sidebar regional-sidebar',prefix:prefix+'-',
   search:{id:prefix+'-search',label:c.searchLabel||'Find a region or subdivision',resultsId:prefix+'-search-results',dataNav:true},
   settings:`<label class="field-label" for="${prefix}-province">${c.firstLabel}</label><select id="${prefix}-province" data-nav><option value="">All ${c.name}</option></select><section class="layers"><h3>Visible layers</h3><label><span>${c.firstLabel} outlines</span><input id="${prefix}-province-layer" type="checkbox" checked data-nav></label><label><span>${c.secondLabel} outlines</span><input id="${prefix}-second-layer" type="checkbox" checked data-nav></label>${c.thirdLabel?`<label><span>${c.thirdLabel} outlines</span><input id="${prefix}-third-layer" type="checkbox" checked data-nav></label>`:''}${c.settlements?`<label><span>Cities & towns</span><input id="${prefix}-settlement-layer" type="checkbox" checked data-nav></label>`:''}<label><span>Place names</span><input id="${prefix}-label-layer" type="checkbox" checked data-nav></label></section>`,
@@ -33,7 +32,7 @@ export async function addRegionalCountry(map,host,c){
  map.addSource(country+'-portal',{type:'geojson',data:context,tolerance:0,attribution:c.attribution});
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  const international=await loadCompressed(base+'international.bin');
- map.addSource(country+'-international',{...edgeOptions,data:international,attribution:c.attribution});
+ map.addSource(country+'-international',{...internationalLineSourceOptions,data:international,attribution:c.attribution});
  map.addLayer({id:country+'-international',type:'line',source:country+'-international',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#aaa9a2','line-width':lineWidth(1),'line-opacity':adaptiveOpacity()}});
  if(c.thirdLabel&&!document.getElementById('mode-third')){const button=document.createElement('button');button.id='mode-third';button.type='button';button.hidden=true;button.setAttribute('data-nav','');button.setAttribute('aria-pressed','false');document.getElementById('mode-lock').before(button);}
  function panel(name){for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}}

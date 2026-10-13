@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {createPlaceSearch} from '../dist/place-search.mjs';
 import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures} from '../dist/settlement-layer.mjs';
+import {regionalLineWidth} from '../dist/adaptive-lines.mjs';
 const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
  if(!elements.has(id))elements.set(id,{id,dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},classList:{toggle(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){}});
@@ -20,7 +21,7 @@ const context=vm.createContext({console,setTimeout,clearTimeout,DOMException,Opt
  window:{AtlasSymbols:{markup:()=>'<svg/>'},AtlasLabels:{render:()=>[]}},
  createCountryPage:options=>element(options.id),setSubdivisionHeading:(node,label,count)=>node.textContent=label+' '+count,
  loadCompressed:async file=>file.endsWith('catalogue.bin')?catalogue:{type:'FeatureCollection',features:[]},createPlaceSearch,
- setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineSourceOptions:{type:'geojson'},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){}});
+ setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineWidth:regionalLineWidth,lineSourceOptions:{type:'geojson'},internationalLineSourceOptions:{type:'geojson',tolerance:.125},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){}});
 const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replace("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
 vm.runInContext(source,context);
 const host={isBusy:()=>false,fit:async b=>fits.push(b),controls(){}};
@@ -67,6 +68,7 @@ for(const level of ['first','second','third']){
  assert.equal(sources.get('whole-'+level+'-edges').tolerance,1.5);assert.equal(sources.get('whole-'+level).tolerance,0,'Simplification only affects strokes, not region fills');
 }
 assert(layerOrder.indexOf('whole-first-lines')>layerOrder.indexOf('whole-second-lines'),'Province outlines remain above district strokes');
+assert.equal(sources.get('whole-international').tolerance,.125,'A country’s coarse subdivision tolerance never overrides thin international frontiers');
 hit={layer:{id:'whole-third-fill'},properties:{id:'B11'}};for(const fn of handlers.get('click'))fn({point:[0,0]});await flush();assert.equal(whole.getSelection(),'B11','Map selection works in a municipality outside the current province');
 await whole.restore('A11');await whole.setMode(1);await whole.home();await whole.setMode(2);
 assert.equal(jobs.length,requests,'Selection, mode switches, and home never fetch parent chunks');
