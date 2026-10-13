@@ -51,7 +51,7 @@ const points=await process('-i all.json -points inner',{'all.json':all});
 for(let i=0;i<all.features.length;i++)all.features[i].properties.center=points.features[i].geometry.coordinates;
 for(const f of all.features){const b=[Infinity,Infinity,-Infinity,-Infinity];function walk(c){if(typeof c[0]==='number'){b[0]=Math.min(b[0],c[0]);b[1]=Math.min(b[1],c[1]);b[2]=Math.max(b[2],c[0]);b[3]=Math.max(b[3],c[1]);}else c.forEach(walk);}walk(f.geometry.coordinates);f.properties.bounds=[[b[0],b[1]],[b[2],b[3]]];}
 const top=topology({first:fc(first),second:fc(second),countries});
-const boundaries={first:mesh(top,top.objects.first),second:mesh(top,top.objects.second,(a,b)=>a!==b&&a.properties.parent===b.properties.parent),countries:mesh(top,top.objects.countries)};
+const boundaries={first:mesh(top,top.objects.first),second:mesh(top,top.objects.second,(a,b)=>a!==b&&a.properties.parent===b.properties.parent),countries:mesh(top,top.objects.countries,(a,b)=>a!==b)};
 const data={first:fc(first),second:fc(second),countries,boundaries};
 const hanja=await addHanja(data);
 await fs.writeFile(new URL('korea-hanja.json',out),JSON.stringify(hanja,null,2)+'\n');

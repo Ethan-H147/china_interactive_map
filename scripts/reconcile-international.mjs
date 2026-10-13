@@ -47,7 +47,7 @@ const top=topology({first:korea.first,second:korea.second});
 const countries=fc(['KP','KR'].map(country=>({type:'Feature',properties:{country},geometry:merge(top,top.objects.first.geometries.filter(g=>g.properties.country===country))})));
 korea.countries=countries;
 const kt=topology({first:korea.first,second:korea.second,countries});
-korea.boundaries={first:mesh(kt,kt.objects.first,(a,b)=>a!==b&&a.properties.country===b.properties.country),second:mesh(kt,kt.objects.second,(a,b)=>a!==b&&a.properties.parent===b.properties.parent),countries:mesh(kt,kt.objects.countries)};
+korea.boundaries={first:mesh(kt,kt.objects.first,(a,b)=>a!==b&&a.properties.country===b.properties.country),second:mesh(kt,kt.objects.second,(a,b)=>a!==b&&a.properties.parent===b.properties.parent),countries:mesh(kt,kt.objects.countries,(a,b)=>a!==b)};
 const ct=topology({regions:china.subdivisions});
 for(const f of china.provinces.features)f.geometry=merge(ct,ct.objects.regions.geometries.filter(g=>g.properties.provinceCode===f.properties.adcode));
 const pref=g=>g.properties.level==='taiwan-region'||g.properties.level==='city'&&String(g.properties.adcode).slice(2,4)!=='90';

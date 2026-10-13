@@ -61,6 +61,8 @@ export function createMotionRenderer(map,initialCountry='china'){
   const style=map.getStyle();
   const updatedSources=new Set();let added=false;
   for(const layer of style.layers){
+   // Resolved frontiers keep their precise shared geometry throughout movement.
+   if(layer.metadata?.atlasInternationalBorder)continue;
    if(!sources[layer.source]||layer.id.endsWith(suffix))continue;
    const id=layer.id+suffix,source=layer.source+suffix;
    const prepared=sources[layer.source];

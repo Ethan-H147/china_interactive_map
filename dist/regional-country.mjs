@@ -4,7 +4,7 @@ import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures} from './s
 import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {createPlaceSearch} from './place-search.mjs';
-import {setLayerVisible,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth as lineWidth,adaptiveOpacity} from './adaptive-lines.mjs';
+import {addInternationalBorder,setLayerVisible,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth as lineWidth,adaptiveOpacity} from './adaptive-lines.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
 
 // Country layout, cards and rendering are shared; names,
@@ -33,7 +33,7 @@ export async function addRegionalCountry(map,host,c){
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  const international=await loadCompressed(base+'international.bin');
  map.addSource(country+'-international',{...internationalLineSourceOptions,data:international,attribution:c.attribution});
- map.addLayer({id:country+'-international',type:'line',source:country+'-international',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#aaa9a2','line-width':lineWidth(1),'line-opacity':adaptiveOpacity()}});
+ addInternationalBorder(map,country+'-international',country+'-international');
  if(c.thirdLabel&&!document.getElementById('mode-third')){const button=document.createElement('button');button.id='mode-third';button.type='button';button.hidden=true;button.setAttribute('data-nav','');button.setAttribute('aria-pressed','false');document.getElementById('mode-lock').before(button);}
  function panel(name){for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}}
  function allRecords(){return [...catalogue.records,...settlements];}

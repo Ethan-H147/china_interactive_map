@@ -424,7 +424,9 @@ async function loadChina(){
   addSource('provinces-fragments',triangleFills(provinceFeatures),fillSourceOptions);addSource('prefectures-fragments',triangleFills(prefFeatures),fillSourceOptions);
   // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
   // The stored geometry and selectable polygons retain full detail.
-  for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',window.AtlasLines.lineData(geometry),window.AtlasLines.lineSourceOptions);
+  const borders=await Promise.all([json('data/shared-context-borders.bin'),json('data/russia/international.bin')]);
+  const excluded=window.AtlasLines.borderSegments({type:'FeatureCollection',features:borders.flatMap(b=>b.features)});
+  for(const [name,geometry] of Object.entries(display.boundaries))addSource(name+'-boundaries',window.AtlasLines.lineData(name==='province'?window.AtlasLines.omitBorderSegments(geometry,excluded):geometry),window.AtlasLines.lineSourceOptions);
   for(const [name,collection] of [['provinces',display.provinces],['prefectures',featureCollection(prefFeatures)],['others',featureCollection(otherFeatures)]])addSource(name+'-selection-edges',window.AtlasLines.lineData(collection),window.AtlasLines.lineSourceOptions);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
   addFill('province-fill','provinces',provinceColor(),1);addFill('province-fragment-fill','provinces-fragments',provinceColor(),1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('prefecture-fragment-fill','prefectures-fragments','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
@@ -474,8 +476,8 @@ async function init(){try{
   singaporeAtlas=await window.AtlasSoutheastAsia.addCountryPortal(map,archipelagoHost,'singapore');
   russiaAtlas=await window.AtlasRussia.addRussiaPortal(map,archipelagoHost);
   southernAfrica=await window.AtlasSouthernAfrica.addSouthernAfrica(map,archipelagoHost);
-  addSource('shared-context-borders',await json('data/shared-context-borders.bin'),window.AtlasLines.lineSourceOptions);
-  map.addLayer({id:'shared-context-borders',type:'line',source:'shared-context-borders',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#aaa9a2','line-width':.9,'line-opacity':window.AtlasLines.adaptiveOpacity()}},map.getLayer('province-fill')?'province-fill':undefined);
+  addSource('shared-context-borders',await json('data/shared-context-borders.bin'),window.AtlasLines.internationalLineSourceOptions);
+  window.AtlasLines.addInternationalBorder(map,'shared-context-borders','shared-context-borders');
   satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const panel=$(window.AtlasSouthernAfrica.configurations[atlasMode]?window.AtlasSouthernAfrica.configurations[atlasMode].prefix+'-layers-panel':atlasMode==='russia'?'ru-layers-panel':atlasMode==='korea'?'k-layers-panel':atlasMode==='mongolia'?'m-layers-panel':atlasMode==='japan'?'j-layers-panel':atlasMode==='philippines'?'ph-layers-panel':atlasMode==='indonesia'?'id-layers-panel':atlasMode==='malaysia'?'my-layers-panel':atlasMode==='singapore'?'sg-layers-panel':['brazil','uruguay','argentina'].includes(atlasMode)?'south-layers-panel':'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
   satelliteDisplay.sync();if($('satellite-layer').checked)$('satellite-layer').dispatchEvent(new Event('change'));
   const capitalsResponse=await fetch('data/capitals.json');

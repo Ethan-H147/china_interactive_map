@@ -7,7 +7,7 @@ import {renderStatistics,clearStatistics} from './statistics.mjs';
 import {argentinaFlags} from './argentina-flags.mjs';
 import {brazilFlags} from './brazil-flags.mjs';
 import {renderMunicipalityList} from './municipality-list.mjs';
-import {lineData,lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
+import {lineData,lineSourceOptions,internationalLineSourceOptions,addInternationalBorder,adaptiveOpacity} from './adaptive-lines.mjs';
 export const countries={
  brazil:{name:'Brazil',local:'Brasil',flag:'br',center:[-52,-13],bounds:[[-74,-34],[-34,6]],color:'#dcebd9',line:'#527b59',selected:'#b9d6b2'},
  uruguay:{name:'Uruguay',local:'',flag:'uy',center:[-56,-33],bounds:[[-59,-35.5],[-53,-30]],color:'#e0edf4',line:'#5883a0',selected:'#bcd9ec'},
@@ -124,9 +124,9 @@ export function createSouthAmerica(map,host){
    const context=await loadCompressed('data/flight-context.bin');data=context;
    map.addSource('flight-context',{type:'geojson',data:context,tolerance:.25,buffer:64,maxzoom:16,attribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay'});
    map.addLayer({id:'south-america-fill',type:'fill',source:'flight-context',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
-   map.addSource('south-land-borders',{...lineSourceOptions,data:lineData(context.landBorders)});
-   map.addSource('south-river-borders',{...lineSourceOptions,data:lineData(context.riverBorders),attribution:'International river boundary: <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">IGN</a>'});
-   for(const [id,source] of [['south-land-boundaries','south-land-borders'],['south-river-boundaries','south-river-borders']])map.addLayer({id,type:'line',source,layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':'#8b867a','line-width':['interpolate',['linear'],['zoom'],2,.55,6,.85,10,1],'line-opacity':adaptiveOpacity()}});
+   map.addSource('south-land-borders',{...internationalLineSourceOptions,data:lineData(context.landBorders)});
+   map.addSource('south-river-borders',{...internationalLineSourceOptions,data:lineData(context.riverBorders),attribution:'International river boundary: <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">IGN</a>'});
+   for(const [id,source] of [['south-land-boundaries','south-land-borders'],['south-river-boundaries','south-river-borders']])addInternationalBorder(map,id,source,{visibility:'none'});
    contextFilters();syncDeveloper();
   })();try{await loading;}catch(e){loading=null;data=null;throw e;}
  }

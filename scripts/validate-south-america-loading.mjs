@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import {createSouthAmerica} from '../dist/south-america.mjs';
-import {lineData,lineSourceOptions,adaptiveOpacity} from '../dist/adaptive-lines.mjs';
+import {lineData,lineSourceOptions,internationalLineSourceOptions,internationalBorderPaint,adaptiveOpacity} from '../dist/adaptive-lines.mjs';
 import {GeoJSONVT} from '@maplibre/geojson-vt';
 class Element{
  constructor(){this.children=[];this.dataset={};this.checked=true;this.hidden=false;this.nodes=new Map();}
@@ -58,12 +58,13 @@ assert.equal(layers.get('south-river-boundaries').layout.visibility,'visible','U
 const borderContext=JSON.parse(gunzipSync(fs.readFileSync('dist/data/flight-context.bin')));
 for(const [source,layer,key] of [['south-land-borders','south-land-boundaries','landBorders'],['south-river-borders','south-river-boundaries','riverBorders']]){
  const retained=sources.get(source),style=layers.get(layer);
- for(const field of ['tolerance','buffer','maxzoom'])assert.equal(retained[field],lineSourceOptions[field],'Reuse the shared zoom-aware line settings: '+field);
+ for(const field of ['tolerance','buffer','maxzoom'])assert.equal(retained[field],internationalLineSourceOptions[field],'Reuse the shared zoom-aware line settings: '+field);
  assert.deepEqual(retained.data,lineData(borderContext[key]),'Preserve the exact shared/official paths while adding visibility metadata');
  assert.deepEqual(style.paint['line-opacity'],adaptiveOpacity(),'Small paths fade continuously with zoom');
- assert.deepEqual(style.paint['line-width'],['interpolate',['linear'],['zoom'],2,.55,6,.85,10,1],'Overview lines use a lighter stroke');
+ assert.deepEqual(style.paint,internationalBorderPaint(),'International borders use the universal paint');
  const count=tolerance=>{const tiles=new GeoJSONVT(retained.data,{maxZoom:18,extent:8192,buffer:128,tolerance:tolerance*8192/512});let points=0;for(let x=0;x<8;x++)for(let y=0;y<8;y++)points+=tiles.getTile(3,x,y)?.features.reduce((n,f)=>n+f.geometry.reduce((s,p)=>s+p.length,0),0)||0;return points;};
- assert(count(retained.tolerance)<count(0)*.15,'Zoomed-out tiles must discard detail smaller than a pixel');
+ console.log(source+' zoom 3 vertices:',count(0),'→',count(retained.tolerance));
+ assert(count(retained.tolerance)<count(0)*.5,'Zoomed-out tiles discard subpixel detail without moving the thin stroke off the fill');
 }
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
 assert.equal(workerURLs.filter(url=>url.includes('/brazil-local/')).length,0,'Opening Brazil loads no municipal geometry');

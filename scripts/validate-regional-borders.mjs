@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
 import {createRequire} from 'node:module';
 import {pathToFileURL} from 'node:url';
-import {lineData,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth} from '../dist/adaptive-lines.mjs';
+import {lineData,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth,internationalBorderPaint,addInternationalBorder,borderSegments,omitBorderSegments} from '../dist/adaptive-lines.mjs';
 import {configurations} from '../dist/southern-africa.mjs';
 
 const require=createRequire(fs.existsSync('node_modules/@maplibre/geojson-vt')?path.resolve('package.json'):path.resolve('../../china-atlas/package.json'));
@@ -51,6 +51,30 @@ function frontierError(tiles,coordinates,zoom){
   let nearest=Infinity;for(const path of cache.get(id))for(let i=1;i<path.length;i++)nearest=Math.min(nearest,segmentDistance(local,path[i-1],path[i]));maximum=Math.max(maximum,nearest/16);
  }return maximum;
 }
+
+const compressed=file=>JSON.parse(gunzipSync(fs.readFileSync('dist/data/'+file)));
+const chinaShared=compressed('shared-context-borders.bin'),russiaShared=compressed('russia/international.bin');
+for(const [name,collection] of [['China–Mongolia',chinaShared],['Russia–Mongolia',russiaShared]]){
+ const lines={type:'FeatureCollection',features:collection.features.filter(f=>f.properties.neighbor==='mongolia')};
+ assert(lines.features.length,'The representative frontier exists');
+ const coordinates=lines.features.flatMap(f=>f.geometry.coordinates),tiles=new GeoJSONVT(lines,options(internationalLineSourceOptions.tolerance));
+ for(const zoom of [3,4,5,6])assert(frontierError(tiles,coordinates,zoom)<widthAt(zoom)/2,name+' stays inside the common stroke');
+ console.log(name+': identical gray, width and simplification; low-zoom stroke covers the original frontier.');
+}
+const excluded=borderSegments({features:[...chinaShared.features,...russiaShared.features]});
+const display=(await import('./read-data.mjs')).readData('display-boundaries.json');
+const filtered=omitBorderSegments(display.boundaries.province,excluded);
+assert([...borderSegments(lineData(filtered))].every(key=>!excluded.has(key)),'China subdivision strokes never duplicate resolved international segments');
+assert(filtered.coordinates.length>0,'Ordinary provincial boundaries remain');
+const callbacks=new Map(),layers=[];
+const map={addLayer:l=>layers.push(l),on:(event,fn)=>callbacks.set(event,fn),getStyle:()=>({layers:layers.slice()}),moveLayer(id){const i=layers.findIndex(l=>l.id===id);layers.push(...layers.splice(i,1));}};
+for(const id of ['shared-context-borders','russia-international','south-land-boundaries','korea-countries-lines'])addInternationalBorder(map,id,id);
+for(const layer of layers)assert.deepEqual(layer.paint,internationalBorderPaint(),'Every renderer uses exactly the same paint');
+layers.push({id:'later-country-fill',type:'fill'});callbacks.get('styledata')();await new Promise(resolve=>queueMicrotask(resolve));
+assert.equal(layers[0].id,'later-country-fill','New country fills stay below every international stroke');
+for(const file of ['dist/regional-country.mjs','dist/south-america.mjs','dist/korea.js','dist/app.js'])assert(fs.readFileSync(file,'utf8').includes('addInternationalBorder('),file+' uses the universal border renderer');
+assert(!fs.readFileSync('dist/mongolia.mjs','utf8').includes("['second','first','countries']"),'Mongolia has no duplicate exterior stroke');
+assert(fs.readFileSync('dist/motion.mjs','utf8').includes('if(layer.metadata?.atlasInternationalBorder)continue'),'Camera movement retains exact international geometry');
 for(const country of ['lesotho','eswatini']){
  const outline=readCountry(country,'context.bin'),coordinates=outline.features.flatMap(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).flat().flat());
  let oldWorst=0,newWorst=0;
