@@ -29,7 +29,7 @@ const latest=(rows,code)=>{const years=Object.keys(rows[code]||{}).filter(y=>row
 // EUR per USD, annual average (Eurostat ert_bil_eur_a gives USD per EUR).
 const exchange=await retain('eurostat-usd-per-eur.json',async()=>{const e=await eurostat('ert_bil_eur_a','currency=USD&statinfo=AVG&sinceTimePeriod=2019');return {url:e.url,updated:e.updated,usdPerEur:e.rows.all};});
 const sources={
- eurostatGdpNuts2:{title:'Eurostat · Gross domestic product at current market prices by NUTS 2 region (nama_10r_2gdp)',url:'https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table',license:'CC BY 4.0'},
+ eurostatGdpNuts2:{title:'Eurostat · Gross domestic product at current market prices by NUTS 2 region (nama_10r_2gdp; NUTS 1 for French regions)',url:'https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table',license:'CC BY 4.0'},
  eurostatGdpNuts3:{title:'Eurostat · Gross domestic product at current market prices by NUTS 3 region (nama_10r_3gdp)',url:'https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table',license:'CC BY 4.0'},
  eurostatExchange:{title:'Eurostat · Euro/ECU exchange rates, annual data (ert_bil_eur_a), US dollar, average',url:'https://ec.europa.eu/eurostat/databrowser/view/ert_bil_eur_a/default/table',license:'CC BY 4.0'}
 };
@@ -166,7 +166,44 @@ async function spain(){
  return regions;
 }
 
-for(const [country,build] of [['italy',italy],['spain',spain]]){
+async function france(){
+ const catalogue=readCatalogue('france'),{readXlsx}=await import('./read-xlsx.mjs');
+ // Population: INSEE legal populations in force on 1 January 2026 (statistical reference
+ // date 1 January 2023), municipal population. Paris, Lyon and Marseille are listed by
+ // municipal arrondissement, so each city is the sum of its arrondissements.
+ const population=await retain('france-population-2023.json',async()=>{
+  const rows=readXlsx(artifacts+'/insee-populations-2023.xlsx').Communes,header=rows.findIndex(r=>r[5]==='Code commune'),values={};
+  for(const r of rows.slice(header+1)){if(!r[5])continue;const dep=String(r[2]),code=dep.length===3?dep+String(r[5]).padStart(2,'0').slice(-2):dep+String(r[5]).padStart(3,'0');values[code]=r[7];}
+  const cities={'75056':/^751(0[1-9]|1\d|20)$/,'69123':/^6938[1-9]$/,'13055':/^132(0[1-9]|1[0-6])$/};
+  for(const [city,arrondissements] of Object.entries(cities)){const parts=Object.keys(values).filter(k=>arrondissements.test(k));assert(parts.length>=9,'Arrondissements of '+city);values[city]=parts.reduce((s,k)=>s+values[k],0);for(const k of parts)delete values[k];}
+  return {url:'https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.xlsx',page:'https://www.insee.fr/fr/statistiques/8680726',reference:'2023-01-01',inForce:'2026-01-01',retrieved:today,values};
+ });
+ // Area: IGN's official commune surface (hectares) as published with the outlines.
+ const area=await retain('france-area.json',async()=>{const values={};for(const name of fs.readdirSync(artifacts).filter(n=>/^france-communes-\w+\.geojson$/.test(n)))for(const f of JSON.parse(fs.readFileSync(path.join(artifacts,name))).features)values[f.properties.code]=f.properties.surface;return {source:'geo.api.gouv.fr surface (hectares), IGN ADMIN EXPRESS',values};});
+ const gdp=await eurostatGdp('france-gdp-eurostat.json','FR',['FR1','FRB','FRC','FRD','FRE','FRF','FRG','FRH','FRI','FRJ','FRK','FRL','FRM']);
+ sources.frPopulation={title:'INSEE · Populations de référence en vigueur au 1er janvier 2026 (date de référence statistique 1er janvier 2023), municipal population',url:population.page,data:population.url,license:'Etalab Open Licence 2.0'};
+ sources.frArea={title:'IGN ADMIN EXPRESS official commune surface, published by geo.api.gouv.fr',url:'https://geo.api.gouv.fr/decoupage-administratif/communes',license:'Etalab Open Licence 2.0'};
+ const regionNuts={'11':'FR1','24':'FRB','27':'FRC','28':'FRD','32':'FRE','44':'FRF','52':'FRG','53':'FRH','75':'FRI','76':'FRJ','84':'FRK','93':'FRL','94':'FRM'};
+ const nuts3ByName=new Map(Object.entries(gdp.nuts3).filter(([g])=>g.length===5).map(([g,v])=>[normal(v.label),g]));
+ const children=new Map();for(const r of catalogue.records)if(r.parent){if(!children.has(r.parent))children.set(r.parent,[]);children.get(r.parent).push(r);}
+ const sum=(r,values,convert=v=>v)=>r.level===3?convert(values[r.id.slice(5)]):(children.get(r.id)||[]).reduce((s,c)=>s+sum(c,values,convert),0);
+ const missing=catalogue.records.filter(r=>r.level===3&&(population.values[r.id.slice(5)]===undefined||area.values[r.id.slice(5)]===undefined));
+ assert.deepEqual(missing.map(r=>r.id),[],'Every commune has INSEE population and IGN surface');
+ const regions={},unmatched=[];
+ for(const r of catalogue.records){
+  const key='france:'+r.id,record={name:r.en,level:r.level};
+  record.population={value:sum(r,population.values),year:2023,date:'2023-01-01',method:'census',source:'frPopulation',periodLabel:'2023 legal population (in force 2026)'};
+  record.area={value:Math.round(sum(r,area.values,v=>v/100)*100)/100,unit:'km²',method:'reported',source:'frArea'};
+  const code=r.id.slice(5);
+  if(r.level===1){const g=regionNuts[code],year=latestYear(gdp.nuts2,[g]);Object.assign(record,combinedGdp(gdp.nuts2,[g],year,'eurostatGdpNuts2'));record.note=`GDP and GDP per capita are Eurostat ${year} regional accounts at current prices (NUTS 1 ${g}); per capita uses Eurostat's average population. USD uses the ${year} average euro exchange rate.`;}
+  else if(r.level===2){const g=nuts3ByName.get(normal(r.local));if(!g){unmatched.push(r.local);}else{const year=latestYear(gdp.nuts3,[g]);Object.assign(record,combinedGdp(gdp.nuts3,[g],year,'eurostatGdpNuts3'));record.note=`GDP and GDP per capita are Eurostat ${year} accounts at current prices (NUTS 3 ${g}); per capita uses Eurostat's average population. USD uses the ${year} average euro exchange rate.`;}}
+  regions[key]=record;
+ }
+ assert.deepEqual(unmatched,[],'Every département has NUTS 3 GDP');
+ return regions;
+}
+
+for(const [country,build] of [['italy',italy],['spain',spain],['france',france]]){
  const regions=await build(),dir=`dist/data/europe/${country}`,used=new Set(Object.values(regions).flatMap(r=>Object.values(r).map(m=>m?.source).filter(Boolean)).concat(Object.values(regions).flatMap(r=>[r.gdp?.exchangeSource].filter(Boolean))));
  const countrySources=Object.fromEntries(Object.entries(sources).filter(([id])=>used.has(id)));
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,retrieved:today,country,sources:countrySources,regions})+'\n');

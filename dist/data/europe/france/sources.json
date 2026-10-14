@@ -1,11 +1,13 @@
 {
   "retrieved": "2026-10-14",
   "counts": {
-    "1": 1
+    "1": 13,
+    "2": 96,
+    "3": 34746
   },
-  "coverage": "Metropolitan France and Corsica, dissolved from the IGN regions published by geoBoundaries. Overseas regions are not yet included.",
+  "coverage": "The 13 regions of metropolitan France (including the territorial collectivity of Corsica), its 96 départements and every commune, from IGN ADMIN EXPRESS outlines published by geo.api.gouv.fr. Regions and départements are dissolved from the communes. Overseas regions are not yet included.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
-  "frontierKm": 2938,
+  "frontierKm": 2936,
   "seamReports": {
     "spain-france": {
       "changedEdges": 2582,
@@ -121,16 +123,984 @@
   },
   "sources": [
     {
-      "file": "fra-adm1.geojson",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/FRA/ADM1/geoBoundaries-FRA-ADM1.geojson",
-      "provider": "Institut national de l'information géographique et forestière (IGN-F)",
-      "year": "2022",
-      "license": "Etalab Open License 2.0",
+      "file": "france-regions.json",
+      "url": "https://geo.api.gouv.fr/regions?fields=nom,code",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
       "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
-      "count": 13,
-      "via": "geoBoundaries gbOpen FRA ADM1",
-      "sha256": "84b46673a2287f03bba5e2080f09025fd592e4cc70a5027d07bb16d91febd491",
-      "bytes": 72722915
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "9d35c4a69354199ab65e26ed7772802a60af8d78ea65bc978a4cf49eb178301b",
+      "bytes": 653
+    },
+    {
+      "file": "france-departements.json",
+      "url": "https://geo.api.gouv.fr/departements?fields=nom,code,codeRegion",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "f2b5f93b288effd230d0ae5e1f721a741d4ba2984389090d03d241519459c4f9",
+      "bytes": 5083
+    },
+    {
+      "file": "france-communes-01.geojson",
+      "url": "https://geo.api.gouv.fr/departements/01/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "9408e0bd04cb5c4d1ca275e5dbdb69fe9ceb405679bec1903cf85459126bafb9",
+      "bytes": 2619433
+    },
+    {
+      "file": "france-communes-02.geojson",
+      "url": "https://geo.api.gouv.fr/departements/02/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "014eefd63d3002987da358a919f09506d1aca55ba34d9c63033b79f1f1caa511",
+      "bytes": 3518504
+    },
+    {
+      "file": "france-communes-03.geojson",
+      "url": "https://geo.api.gouv.fr/departements/03/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "288e49f1b11824a89ee016783c11fd709984272b98388b55dd3e4fd36aea597a",
+      "bytes": 3080463
+    },
+    {
+      "file": "france-communes-04.geojson",
+      "url": "https://geo.api.gouv.fr/departements/04/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "8c1051535165c0f1e397f66dd13b5fab0be74806ea6c1bda0a5847593b0cd253",
+      "bytes": 2154248
+    },
+    {
+      "file": "france-communes-05.geojson",
+      "url": "https://geo.api.gouv.fr/departements/05/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "8f6b76b83323308a8bfe36ce25cc9028354bff2ebfa4068b367a85f0df66dd0a",
+      "bytes": 1775002
+    },
+    {
+      "file": "france-communes-06.geojson",
+      "url": "https://geo.api.gouv.fr/departements/06/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "e54650fb19b2f2245ad5e1c56d99328a216bec5a5e2d69cdab0c384f7a2367ba",
+      "bytes": 2029409
+    },
+    {
+      "file": "france-communes-07.geojson",
+      "url": "https://geo.api.gouv.fr/departements/07/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "ce4e9cda6887cd17a6ebeb36765ac8f52a46c81af386e6b575a35234885a9026",
+      "bytes": 3547578
+    },
+    {
+      "file": "france-communes-08.geojson",
+      "url": "https://geo.api.gouv.fr/departements/08/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "4aa5207e6b36b0aee08d30f4f3a1f1544199e16f433a581b28a98a01cff1204e",
+      "bytes": 2568798
+    },
+    {
+      "file": "france-communes-09.geojson",
+      "url": "https://geo.api.gouv.fr/departements/09/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "317537c07b1e52f11ce751ec4aeb9a15c453029336ba77d488e1d33151cdaad7",
+      "bytes": 2387814
+    },
+    {
+      "file": "france-communes-10.geojson",
+      "url": "https://geo.api.gouv.fr/departements/10/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "4c4795f5100b91c9e933389b7f3d89306a9b8dbcbdd120dcccea829ca6831677",
+      "bytes": 2594045
+    },
+    {
+      "file": "france-communes-11.geojson",
+      "url": "https://geo.api.gouv.fr/departements/11/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "29da9be88febe86febbdac94da30742422424e1059c6b2ae5c15c12060ab426c",
+      "bytes": 2970803
+    },
+    {
+      "file": "france-communes-12.geojson",
+      "url": "https://geo.api.gouv.fr/departements/12/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "162da19e2a9a46a5a6ef3e5c3259e7216dc16f9f2811e888ef7cc6d4705a3ca5",
+      "bytes": 4285326
+    },
+    {
+      "file": "france-communes-13.geojson",
+      "url": "https://geo.api.gouv.fr/departements/13/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "928a2f2d5d27766b7ed4f4c298194fb697b957f50b2e0408d9b5705da3ed1a22",
+      "bytes": 1454630
+    },
+    {
+      "file": "france-communes-14.geojson",
+      "url": "https://geo.api.gouv.fr/departements/14/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "fd8b17a60645fdab5604365cd214560cdb043a38360e6d4356b20bcbf79256b4",
+      "bytes": 3707501
+    },
+    {
+      "file": "france-communes-15.geojson",
+      "url": "https://geo.api.gouv.fr/departements/15/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a6fc9eb5be2cf64c9caac7791ca0ed93e9e37a13e47962b272b713a7799be655",
+      "bytes": 3295540
+    },
+    {
+      "file": "france-communes-16.geojson",
+      "url": "https://geo.api.gouv.fr/departements/16/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "f07917e6089f9a682615b8a5f4602553017a52b068e998169d5e99894f068892",
+      "bytes": 3070449
+    },
+    {
+      "file": "france-communes-17.geojson",
+      "url": "https://geo.api.gouv.fr/departements/17/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "15703a307d372af2795f55cb54ee4e6f51d2e57c65199069caf334d2bd518f69",
+      "bytes": 4014318
+    },
+    {
+      "file": "france-communes-18.geojson",
+      "url": "https://geo.api.gouv.fr/departements/18/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "47a5dfe87a66bbabebd63352d71dc4f82377809d493c15048b2acdbc2d33cadc",
+      "bytes": 2163791
+    },
+    {
+      "file": "france-communes-19.geojson",
+      "url": "https://geo.api.gouv.fr/departements/19/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "f1b26d2b8f28b45cdc6fd30e32d7a3f8e84107d1ca507dfc0b77a2d773bd869c",
+      "bytes": 3336043
+    },
+    {
+      "file": "france-communes-21.geojson",
+      "url": "https://geo.api.gouv.fr/departements/21/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "18894cf3d139983148c5c618ddad89590aaa2719d7512f0f72453fa1b6d2c1b8",
+      "bytes": 4716683
+    },
+    {
+      "file": "france-communes-22.geojson",
+      "url": "https://geo.api.gouv.fr/departements/22/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "10c3743e6c0419c92f426a3ba392b4b89fb924785dcf7d8334220ba24edd74f9",
+      "bytes": 5017575
+    },
+    {
+      "file": "france-communes-23.geojson",
+      "url": "https://geo.api.gouv.fr/departements/23/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "20752e2a640edbeb58f0b2c5c8ddc5cdb8724cdceeebdfeae3a1e7bea32a82a7",
+      "bytes": 3008353
+    },
+    {
+      "file": "france-communes-24.geojson",
+      "url": "https://geo.api.gouv.fr/departements/24/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "eea4ff82a64654580d35805a1610926ccfb9d4d5e6b1b8daae5da6c853c253a6",
+      "bytes": 4254397
+    },
+    {
+      "file": "france-communes-25.geojson",
+      "url": "https://geo.api.gouv.fr/departements/25/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "7b0924e80a851537638da3f53e5a54957abd878006a463a5060708df58b0be8f",
+      "bytes": 2486595
+    },
+    {
+      "file": "france-communes-26.geojson",
+      "url": "https://geo.api.gouv.fr/departements/26/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "ca8a2c8382d224e1c0159d6dfec1a59a8019e98b3c07e632102eb1044154f2ff",
+      "bytes": 2711688
+    },
+    {
+      "file": "france-communes-27.geojson",
+      "url": "https://geo.api.gouv.fr/departements/27/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a4a56c483fe32803ec262c8241ff266cf03d4afe363954a4ed4d674e8a3e7871",
+      "bytes": 2803141
+    },
+    {
+      "file": "france-communes-28.geojson",
+      "url": "https://geo.api.gouv.fr/departements/28/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "38a760da30429560a2cf186263efc01c4b849c058962b76858271967098e0d9f",
+      "bytes": 2186337
+    },
+    {
+      "file": "france-communes-29.geojson",
+      "url": "https://geo.api.gouv.fr/departements/29/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a5477465e42881a3411a6f164923cb0d5c15834c179a040930a87b42a8c7c3d3",
+      "bytes": 5195116
+    },
+    {
+      "file": "france-communes-2A.geojson",
+      "url": "https://geo.api.gouv.fr/departements/2A/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "4aae189c484ce73fe85954b02fbbe4c2cd55fe8fc623c26eae1e7f5ab114a92e",
+      "bytes": 2217725
+    },
+    {
+      "file": "france-communes-2B.geojson",
+      "url": "https://geo.api.gouv.fr/departements/2B/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "62c3ae971f4f8e07c235c2cbbfd9c951178e1defe85864ea3ec926b5b9c6b053",
+      "bytes": 2418900
+    },
+    {
+      "file": "france-communes-30.geojson",
+      "url": "https://geo.api.gouv.fr/departements/30/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "93399dd403cbb36a892edbc9802429e0eb515ce94eeb9ed5c561d3d31cc6e1a6",
+      "bytes": 2604591
+    },
+    {
+      "file": "france-communes-31.geojson",
+      "url": "https://geo.api.gouv.fr/departements/31/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "33a6cfef0f335e27580e78d0ea1df0875d8ae3884d0b37645ff3aa6c1018eebf",
+      "bytes": 3836047
+    },
+    {
+      "file": "france-communes-32.geojson",
+      "url": "https://geo.api.gouv.fr/departements/32/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "3587c579863a693f4f7423c7b0cab1b4d8dcda05ae474ec28aee806c7b1f3ca6",
+      "bytes": 3795444
+    },
+    {
+      "file": "france-communes-33.geojson",
+      "url": "https://geo.api.gouv.fr/departements/33/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "624bafbd37372844d508294c4005dc7acaec33ebbf4e9b8a199b3611d87b4356",
+      "bytes": 3884210
+    },
+    {
+      "file": "france-communes-34.geojson",
+      "url": "https://geo.api.gouv.fr/departements/34/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "c01ea5795f1d39f2fbb34c0e563863398216035826bb8eaaf57adaedd63cc9c4",
+      "bytes": 3151715
+    },
+    {
+      "file": "france-communes-35.geojson",
+      "url": "https://geo.api.gouv.fr/departements/35/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "141df26815f29fc8674d1393c9d95a36d3a19f8e85a82a090154110696d2abe4",
+      "bytes": 3701043
+    },
+    {
+      "file": "france-communes-36.geojson",
+      "url": "https://geo.api.gouv.fr/departements/36/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "c6eff197985f20666e748c387fd26ee81b11a9be19c8ccadbd4bc5c5c0cb3466",
+      "bytes": 2049866
+    },
+    {
+      "file": "france-communes-37.geojson",
+      "url": "https://geo.api.gouv.fr/departements/37/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "12b2038aaadee07dd31ecbdc2e0a5fa58f0b364472ffc72baa498033c1f36bdc",
+      "bytes": 2182259
+    },
+    {
+      "file": "france-communes-38.geojson",
+      "url": "https://geo.api.gouv.fr/departements/38/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "c2485339ad1790a83dc9c180e2d983ee6c1a1b752044f77f0eabb536ac5c8367",
+      "bytes": 3700447
+    },
+    {
+      "file": "france-communes-39.geojson",
+      "url": "https://geo.api.gouv.fr/departements/39/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "0ce4e4149dd2fdc21adef7d1116e750a1d3af816c57aabd83dcca7a479304aea",
+      "bytes": 2798796
+    },
+    {
+      "file": "france-communes-40.geojson",
+      "url": "https://geo.api.gouv.fr/departements/40/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "b1546df2eb147057a0ee4947d0455dc0be29e663f0dba57cc0f1381a0d784f41",
+      "bytes": 2965526
+    },
+    {
+      "file": "france-communes-41.geojson",
+      "url": "https://geo.api.gouv.fr/departements/41/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "e7ad346df23b6808cf8a455e8e8f085aa9caf3b2967f3f589dc2810423508f76",
+      "bytes": 2026303
+    },
+    {
+      "file": "france-communes-42.geojson",
+      "url": "https://geo.api.gouv.fr/departements/42/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a846b1a40a2cb3949453486e2fe7884d1c996f4291acbe34b080c0c5012835f4",
+      "bytes": 2803388
+    },
+    {
+      "file": "france-communes-43.geojson",
+      "url": "https://geo.api.gouv.fr/departements/43/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "ba358d7bf7d5197c2be3baec15efc60f13a34b60b21f7ea7b1c685aa441c5569",
+      "bytes": 2924892
+    },
+    {
+      "file": "france-communes-44.geojson",
+      "url": "https://geo.api.gouv.fr/departements/44/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a18053a062e7adf9fa613a9af7e26a91a7a3903668f89aa6464983d6d78213a2",
+      "bytes": 2658773
+    },
+    {
+      "file": "france-communes-45.geojson",
+      "url": "https://geo.api.gouv.fr/departements/45/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "09fcab3f2f052b08f9b9b0f9fae47545d6ba6db321ee9eeb0d827ee2f06c82c9",
+      "bytes": 1941819
+    },
+    {
+      "file": "france-communes-46.geojson",
+      "url": "https://geo.api.gouv.fr/departements/46/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "6a75060618b5fa6ddf2962164b837c670f7446bd9112a80650f672da27aebd8c",
+      "bytes": 2897079
+    },
+    {
+      "file": "france-communes-47.geojson",
+      "url": "https://geo.api.gouv.fr/departements/47/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a8da031b4ea1aaa3de16c96dd8bfb7d8e14966494542a6f4aa606f3ce5f5ec27",
+      "bytes": 2887514
+    },
+    {
+      "file": "france-communes-48.geojson",
+      "url": "https://geo.api.gouv.fr/departements/48/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "5cadc041fee4ea2e4970643cf6d70f19f1ab6170dd8d9c26d1e8aec4810a6f88",
+      "bytes": 2244178
+    },
+    {
+      "file": "france-communes-49.geojson",
+      "url": "https://geo.api.gouv.fr/departements/49/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "7ccd16ce9dc705058f5d76b43e5b6692475e6395795b40f10091196d30784026",
+      "bytes": 2547078
+    },
+    {
+      "file": "france-communes-50.geojson",
+      "url": "https://geo.api.gouv.fr/departements/50/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "d82742889a9c58e51376c41b88b96fcee6516e4bece3db2cace338ad64d084f3",
+      "bytes": 5130660
+    },
+    {
+      "file": "france-communes-51.geojson",
+      "url": "https://geo.api.gouv.fr/departements/51/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "32c3dad351b1c0f5bea071ec8ff82f799b0f42a9b45a3abc649aaf68a404f272",
+      "bytes": 3367568
+    },
+    {
+      "file": "france-communes-52.geojson",
+      "url": "https://geo.api.gouv.fr/departements/52/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "81468ccab8b51eec1d1a83f8a53cc14d4f61c5e93ceb63fe9d9c666ba8fa283b",
+      "bytes": 2486898
+    },
+    {
+      "file": "france-communes-53.geojson",
+      "url": "https://geo.api.gouv.fr/departements/53/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "9ecd1d4ebebb1aac4e783bb8c17092ba59b9151439db28157f7385c0ec10641e",
+      "bytes": 3037949
+    },
+    {
+      "file": "france-communes-54.geojson",
+      "url": "https://geo.api.gouv.fr/departements/54/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "de5ce765d93e7df1a8daad104e537e89bf47144420f87ff405a052bcf7d67426",
+      "bytes": 3239156
+    },
+    {
+      "file": "france-communes-55.geojson",
+      "url": "https://geo.api.gouv.fr/departements/55/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "21217ea3b1ad231caadab82e63b8135c48d1f2a26332a439ce99a1bf734a2538",
+      "bytes": 2858603
+    },
+    {
+      "file": "france-communes-56.geojson",
+      "url": "https://geo.api.gouv.fr/departements/56/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "f8d5785966108072f3aab4aa0ac35be1f329eb73aa87369e079a64955f5203ab",
+      "bytes": 4003197
+    },
+    {
+      "file": "france-communes-57.geojson",
+      "url": "https://geo.api.gouv.fr/departements/57/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "80aae6b8fecb5c3ac29ca57a42effd518b48ca8acab04383cb73ac8e820c9285",
+      "bytes": 4034400
+    },
+    {
+      "file": "france-communes-58.geojson",
+      "url": "https://geo.api.gouv.fr/departements/58/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "84ccf3fe85223ade4dd06cc2e35c93075647d52880b8a186a071cd036afa07c1",
+      "bytes": 2900004
+    },
+    {
+      "file": "france-communes-59.geojson",
+      "url": "https://geo.api.gouv.fr/departements/59/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "799e2b9a12e17a726b0735a67ef9b0c303eef99ba179e77ffb1464c4581e107b",
+      "bytes": 3374686
+    },
+    {
+      "file": "france-communes-60.geojson",
+      "url": "https://geo.api.gouv.fr/departements/60/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a6b5da5ffb7d11cfe7fe88b9a46abd845bc5e205248931c0615cba270dc2ecfe",
+      "bytes": 3044039
+    },
+    {
+      "file": "france-communes-61.geojson",
+      "url": "https://geo.api.gouv.fr/departements/61/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "86bd2c330394dc18d085915c30c81c509d6b3dea386b3972c67c2e7fcd11ead2",
+      "bytes": 3310751
+    },
+    {
+      "file": "france-communes-62.geojson",
+      "url": "https://geo.api.gouv.fr/departements/62/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "86ecd60dfbf4f787ada8c549b2c8d42afeabb395a02b1c1061c2ebbc40ce0a11",
+      "bytes": 4171641
+    },
+    {
+      "file": "france-communes-63.geojson",
+      "url": "https://geo.api.gouv.fr/departements/63/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "c20eb8c67d5f6593abfb32c7927c0d9fe5e5c620c558df2e7089ba61aaa71df4",
+      "bytes": 4392015
+    },
+    {
+      "file": "france-communes-64.geojson",
+      "url": "https://geo.api.gouv.fr/departements/64/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "d98b8244fd239667b245c6df3b14bedc06881b0a19b504bef575583a926ce352",
+      "bytes": 4580114
+    },
+    {
+      "file": "france-communes-65.geojson",
+      "url": "https://geo.api.gouv.fr/departements/65/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "8112e8bd57fc1803df276999145ef77d46c85ffdf5036b0a828c738c63bec2d8",
+      "bytes": 2923841
+    },
+    {
+      "file": "france-communes-66.geojson",
+      "url": "https://geo.api.gouv.fr/departements/66/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "bb2fb4808b57007ad403e2d3da0161de91ea8a37ae201ed023f15e813fe4b9d5",
+      "bytes": 1814064
+    },
+    {
+      "file": "france-communes-67.geojson",
+      "url": "https://geo.api.gouv.fr/departements/67/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "6190bcfa575d6d7a156c8b50dcc3a2973593f92a095e3674809099bf80f9b66c",
+      "bytes": 3108153
+    },
+    {
+      "file": "france-communes-68.geojson",
+      "url": "https://geo.api.gouv.fr/departements/68/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "eb578089288d1cd7b07e68dcf73997354efbb9a68a3d045e80cbf2558ae075b8",
+      "bytes": 1842032
+    },
+    {
+      "file": "france-communes-69.geojson",
+      "url": "https://geo.api.gouv.fr/departements/69/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "077a0d669b9d4f359aec2165bb5464ae2760fce536d3dbdee5f28e1e8025aed6",
+      "bytes": 1916121
+    },
+    {
+      "file": "france-communes-70.geojson",
+      "url": "https://geo.api.gouv.fr/departements/70/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "db5ac4be79ca446ff5dd849840a239736b0fe409486a0cd14a7164dc94c727b7",
+      "bytes": 2837215
+    },
+    {
+      "file": "france-communes-71.geojson",
+      "url": "https://geo.api.gouv.fr/departements/71/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "7509893927a8cf6bd18b994bf859d0395a3fbc0feb593aae0cdfbc16ceb0ec4d",
+      "bytes": 5055547
+    },
+    {
+      "file": "france-communes-72.geojson",
+      "url": "https://geo.api.gouv.fr/departements/72/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "7e421214e25e191fb10473b2e1bda4227bcd61c3cfa2b4a72a8d9e425e573d96",
+      "bytes": 3198620
+    },
+    {
+      "file": "france-communes-73.geojson",
+      "url": "https://geo.api.gouv.fr/departements/73/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "0b7643848d6978b268f406e6c430fabb6e57a0894e6c8a27a5a8b67bb6a8b43e",
+      "bytes": 2489106
+    },
+    {
+      "file": "france-communes-74.geojson",
+      "url": "https://geo.api.gouv.fr/departements/74/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a7e9c4a6a7b9af6ffc4549e4718699631ba2d8071eeec516fdf772fddfebfd2d",
+      "bytes": 2542304
+    },
+    {
+      "file": "france-communes-75.geojson",
+      "url": "https://geo.api.gouv.fr/departements/75/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "89cced89dfddc3da41caaea8955b9bd022964f4d04e306150f2e84714f30fd37",
+      "bytes": 11275
+    },
+    {
+      "file": "france-communes-76.geojson",
+      "url": "https://geo.api.gouv.fr/departements/76/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "651826919ecfca43376e825811b10c06691cc3796fc84c7764074eadd7188bfc",
+      "bytes": 3383280
+    },
+    {
+      "file": "france-communes-77.geojson",
+      "url": "https://geo.api.gouv.fr/departements/77/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "fd18cc409a8db143b401b05745fc8778fc82c94ec83ae22084bb4796461f1589",
+      "bytes": 2907342
+    },
+    {
+      "file": "france-communes-78.geojson",
+      "url": "https://geo.api.gouv.fr/departements/78/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "dfb91d468380e2196d76bd5eea0e8c4d787845c58c4867cb168681814fb9173b",
+      "bytes": 1212538
+    },
+    {
+      "file": "france-communes-79.geojson",
+      "url": "https://geo.api.gouv.fr/departements/79/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "2a6e00e69d0d67045d54a28b86aa1e580f51a01a6027953c4ab9064cee43d12d",
+      "bytes": 2842746
+    },
+    {
+      "file": "france-communes-80.geojson",
+      "url": "https://geo.api.gouv.fr/departements/80/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "28cc4993d1a2d78c2656f286d0a63fda40824f90f6f54214cc5bd674f28cb3f9",
+      "bytes": 3217210
+    },
+    {
+      "file": "france-communes-81.geojson",
+      "url": "https://geo.api.gouv.fr/departements/81/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "96b2f70c98776502feb8f3d86511ca801ecbe025be0b015375f439ae3bffae49",
+      "bytes": 3107877
+    },
+    {
+      "file": "france-communes-82.geojson",
+      "url": "https://geo.api.gouv.fr/departements/82/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "1ffa825a1febf85afbae5cf4b84b5775e673b333dca4246c0ae4a358381dddaf",
+      "bytes": 1954093
+    },
+    {
+      "file": "france-communes-83.geojson",
+      "url": "https://geo.api.gouv.fr/departements/83/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "53a2670d9dca46100e8272f3385b0b9c9d7712b04d3432cea2baf9c4700ad1c4",
+      "bytes": 2200726
+    },
+    {
+      "file": "france-communes-84.geojson",
+      "url": "https://geo.api.gouv.fr/departements/84/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "93d7e7e030feda23c205e83d4869345b9f0666664bda1efbb9210f6057357c08",
+      "bytes": 1218954
+    },
+    {
+      "file": "france-communes-85.geojson",
+      "url": "https://geo.api.gouv.fr/departements/85/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "4547240409a0a56f5b5b12b3678669926256a9f670d9ab44e7d565d521edff6f",
+      "bytes": 3635239
+    },
+    {
+      "file": "france-communes-86.geojson",
+      "url": "https://geo.api.gouv.fr/departements/86/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "89c659bfca0339c2a5684d392c0553b2dd72fea3709d25ccdd65397551eff762",
+      "bytes": 2413117
+    },
+    {
+      "file": "france-communes-87.geojson",
+      "url": "https://geo.api.gouv.fr/departements/87/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "9354f02f1fbe4c9c189e37d81c5bf684579c0267a0c45ff242d31a25da3c5ebd",
+      "bytes": 2798974
+    },
+    {
+      "file": "france-communes-88.geojson",
+      "url": "https://geo.api.gouv.fr/departements/88/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "25b59eab9d31f46f2d5118eb2a3b85c54e61fb89cb992c3e123632a288d701d7",
+      "bytes": 2941159
+    },
+    {
+      "file": "france-communes-89.geojson",
+      "url": "https://geo.api.gouv.fr/departements/89/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "6a977839fabeb0401ce2a97c5c45cf0c0fc0de8e6522c588c506f3e742724fa4",
+      "bytes": 2913040
+    },
+    {
+      "file": "france-communes-90.geojson",
+      "url": "https://geo.api.gouv.fr/departements/90/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a5c796a0809b843d6f873e77e170d8dd581d0fa0cf8174cf4d5f8e1fa8732317",
+      "bytes": 399694
+    },
+    {
+      "file": "france-communes-91.geojson",
+      "url": "https://geo.api.gouv.fr/departements/91/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "cb86c083d5137d9526967c2196b05823401fdffc842330627c375a5c6d3be8d4",
+      "bytes": 1017809
+    },
+    {
+      "file": "france-communes-92.geojson",
+      "url": "https://geo.api.gouv.fr/departements/92/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "f1e38d9a7705060787739970dfa418d915ea8aaade88d8d681672b5c81eaca82",
+      "bytes": 109905
+    },
+    {
+      "file": "france-communes-93.geojson",
+      "url": "https://geo.api.gouv.fr/departements/93/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "467a77ccd0c9e8a9ccc6a9f0f7deaa021717ff6e8deafe1d2c854501bdcb6c80",
+      "bytes": 154173
+    },
+    {
+      "file": "france-communes-94.geojson",
+      "url": "https://geo.api.gouv.fr/departements/94/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "73017f91aeb1a66b2a2a65d699dda03742a74ebc1945876a697d60a89ed4a845",
+      "bytes": 161883
+    },
+    {
+      "file": "france-communes-95.geojson",
+      "url": "https://geo.api.gouv.fr/departements/95/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "da7eeb1e0a0a53a5ce4446dd5cdacf637d3485452ca05d4d27ebea5994a4dfaa",
+      "bytes": 724243
     },
     {
       "file": "ne-10m-land-boundaries.geojson",

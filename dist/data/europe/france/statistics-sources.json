@@ -1,0 +1,31 @@
+{
+ "retrieved": "2026-10-14",
+ "sources": {
+  "eurostatGdpNuts2": {
+   "title": "Eurostat · Gross domestic product at current market prices by NUTS 2 region (nama_10r_2gdp; NUTS 1 for French regions)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table",
+   "license": "CC BY 4.0"
+  },
+  "eurostatGdpNuts3": {
+   "title": "Eurostat · Gross domestic product at current market prices by NUTS 3 region (nama_10r_3gdp)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table",
+   "license": "CC BY 4.0"
+  },
+  "eurostatExchange": {
+   "title": "Eurostat · Euro/ECU exchange rates, annual data (ert_bil_eur_a), US dollar, average",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/ert_bil_eur_a/default/table",
+   "license": "CC BY 4.0"
+  },
+  "frPopulation": {
+   "title": "INSEE · Populations de référence en vigueur au 1er janvier 2026 (date de référence statistique 1er janvier 2023), municipal population",
+   "url": "https://www.insee.fr/fr/statistiques/8680726",
+   "data": "https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.xlsx",
+   "license": "Etalab Open Licence 2.0"
+  },
+  "frArea": {
+   "title": "IGN ADMIN EXPRESS official commune surface, published by geo.api.gouv.fr",
+   "url": "https://geo.api.gouv.fr/decoupage-administratif/communes",
+   "license": "Etalab Open Licence 2.0"
+  }
+ }
+}

@@ -16,9 +16,11 @@ const outline={},lines={};
 const frontierKm={'united-kingdom':[480,530],spain:[1300,1400],france:[2850,3000],italy:[1380,1450]};
 // Pieces: Ireland; Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea, Llívia; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
 const pieces={'united-kingdom':1,spain:5,france:5,italy:4};
+// The six Meuse villages destroyed at Verdun in 1916 remain communes with no inhabitants.
+const zeroPopulation=new Set(['FR-C-55039','FR-C-55050','FR-C-55139','FR-C-55189','FR-C-55239','FR-C-55307']);
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
 // Spain's condominiums and the islets under central administration have no registered population.
-const subdivided={italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
+const subdivided={france:{levels:['Region','Department','Commune'],counts:{1:13,2:96,3:34746},bundled:2},italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
 for(const country of countries){
  const catalogue=read(country,'catalogue.bin'),first=read(country,'first.bin'),context=read(country,'context.bin');
  assert.equal(context.features.length,1);assert.equal(context.features[0].properties.country,country);
@@ -46,8 +48,14 @@ for(const country of countries){
   }
   // Statistics: population and area for every unit; parents sum their children.
   const statistics=JSON.parse(fs.readFileSync(root+'/'+country+'/statistics.json')),stats=statistics.regions;
-  for(const r of catalogue.records){const m=stats[country+':'+r.id];assert(m?.area?.value>0,r.id+' area');assert.equal(m.population?.value>0,!s.noPopulation?.(r),r.id+' population where one is registered');for(const metric of [m.population,m.area,m.gdp,m.gdpPerCapita].filter(Boolean))assert(statistics.sources[metric.source],r.id+' cites a listed source');}
+  for(const r of catalogue.records){const m=stats[country+':'+r.id];assert(m?.area?.value>0,r.id+' area');assert.equal(Number.isInteger(m.population?.value),!s.noPopulation?.(r),r.id+' population where one is registered');if(m.population)assert(m.population.value>0||zeroPopulation.has(r.id),r.id+' populated');for(const metric of [m.population,m.area,m.gdp,m.gdpPerCapita].filter(Boolean))assert(statistics.sources[metric.source],r.id+' cites a listed source');}
   for(const r of catalogue.records.filter(r=>r.level<s.levels.length&&!s.noPopulation?.(r))){const sum=catalogue.records.filter(c=>c.parent===r.id).reduce((t,c)=>t+(stats[country+':'+c.id].population?.value||0),0);assert.equal(stats[country+':'+r.id].population.value,sum,r.id+' population sums its children');}
+  if(country==='france'){
+   assert.equal(stats['france:FR-C-75056'].population.value,stats['france:FR-D-75'].population.value,'Paris is one commune and one department');
+   for(const city of ['FR-C-75056','FR-C-69123','FR-C-13055'])assert(stats['france:'+city].population.value>500000,city+' sums its arrondissements');
+   for(const r of catalogue.records.filter(r=>r.level<=2))assert(stats['france:'+r.id].gdp,r.id+' GDP');
+   const llivia=polygons(outline.france).flatMap(p=>p.slice(1)).length;assert(llivia>=1,'France keeps the Llívia hole');
+  }
   if(country==='spain'){
    assert(!ids.has('ES-M-54006'),'Gibraltar is not mapped as Spanish');
    const madrid=stats['spain:ES-M-28079'].population.value;assert(madrid>3.4e6&&madrid<3.7e6,'Madrid municipality');

@@ -329,13 +329,21 @@ Statistics (`npm run build:europe` runs `scripts/prepare-europe-statistics.mjs`;
 - Area: boundary-derived (spherical area of the displayed polygons), labelled as such.
 - GDP and GDP per capita: Eurostat — communities from NUTS 2 (2024), provinces from NUTS 3 (2023). The Balearic province sums its three island units and each Canary province sums its islands; per capita divides by their combined average population.
 
+### France
+
+The 13 regions of metropolitan France (Corsica is a territorial collectivity), 96 départements and 34,746 communes, from IGN ADMIN EXPRESS commune outlines published by geo.api.gouv.fr (Etalab Open Licence 2.0); regions and départements are dissolved from the communes. Overseas regions are not yet included. Like Italy and Spain, France needs no settlement layer.
+
+- Population: INSEE legal populations in force on 1 January 2026 (statistical reference date 1 January 2023), municipal population. INSEE lists Paris, Lyon and Marseille by municipal arrondissement, so each city is the sum of its arrondissements; every other commune matches INSEE's codes exactly. The six villages destroyed at Verdun in 1916 remain communes with no inhabitants.
+- Area: IGN's official commune surface as published with the outlines (undated in the source); parents are sums.
+- GDP and GDP per capita: Eurostat — regions from NUTS 1 (2024), départements from NUTS 3.
+
 ### Outlines and frontiers
 
 | Country | Coverage | Outline source | Licence |
 |---|---|---|---|
 | United Kingdom | Great Britain, Northern Ireland and their islands | Office for National Statistics, Countries (December 2024) BGC | Open Government Licence v3.0 |
 | Spain | Peninsula, Balearic and Canary Islands, Ceuta, Melilla and the minor sovereign territories | Instituto Geográfico Nacional jurisdictional boundaries (BDLJE), dissolved from the municipalities | CC BY 4.0 |
-| France | Metropolitan France and Corsica (overseas regions not yet included) | IGN regions via geoBoundaries, dissolved | Etalab Open Licence 2.0 |
+| France | Metropolitan France and Corsica (overseas regions not yet included) | IGN ADMIN EXPRESS commune outlines via geo.api.gouv.fr, dissolved | Etalab Open Licence 2.0 |
 | Italy | Mainland and islands; San Marino and Vatican City remain enclaves | ISTAT boundaries for statistical purposes, 1 January 2026 (dissolved from the comuni) | CC BY 4.0 |
 
 Spain's and Italy's frontier edges are moved onto the French outline, so each pair shares one edge, and Spain's Llívia takes the exact shape of its enclave in France. Land frontiers are drawn and coastlines are not. An outline edge is a frontier when a point 100–600 m beyond it lies inside a neighbouring country and a Natural Earth land boundary line is within 4 km. Neighbouring outlines (geoBoundaries) and OpenStreetMap land border ways are used only for this classification; the OpenStreetMap ways decide where the frontiers with Monaco, Ceuta, Melilla and Slovenia meet the sea, because those neighbours' outlines include territorial waters. France holds its frontiers with Spain and Italy, so every edge is drawn once.

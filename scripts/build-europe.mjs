@@ -70,11 +70,30 @@ async function loadSpain(){
  const simplified=JSON.parse((await mapshaper.applyCommands(`-i "${file}" ${simplify} -o out.json format=geojson precision=.000001`))['out.json']);
  return {features:simplified.features,units};
 }
+const frenchRegions={'11':'Île-de-France','24':'Centre-Val de Loire','27':'Bourgogne-Franche-Comté','28':'Normandy','32':'Hauts-de-France','44':'Grand Est','52':'Pays de la Loire','53':'Brittany','75':'Nouvelle-Aquitaine','76':'Occitania','84':'Auvergne-Rhône-Alpes','93':"Provence-Alpes-Côte d'Azur",'94':'Corsica'};
+// France: IGN commune outlines from geo.api.gouv.fr, one file per metropolitan département.
+async function loadFrance(){
+ const units=new Map();
+ for(const r of read('france-regions.json'))if(frenchRegions[r.code])units.set('FR-R-'+r.code,{level:1,parent:null,en:frenchRegions[r.code],local:r.nom,kind:r.code==='94'?'Territorial collectivity':'Region'});
+ const departements=read('france-departements.json').filter(d=>units.has('FR-R-'+d.codeRegion));
+ for(const d of departements)units.set('FR-D-'+d.code,{level:2,parent:'FR-R-'+d.codeRegion,en:d.nom,local:d.nom,kind:'Department',code:d.code});
+ assert.equal(units.size,13+96,'13 regions and 96 départements');
+ const file=path.join(source,'france-communes.geojson'),out=fs.openSync(file,'w');fs.writeSync(out,'{"type":"FeatureCollection","features":[');
+ let first=true;
+ for(const d of departements)for(const f of read('france-communes-'+d.code+'.geojson').features){
+  const p=f.properties,id='FR-C-'+p.code;assert.equal(p.codeDepartement,d.code,'Commune département '+id);assert(!units.has(id),'Unique commune '+id);
+  units.set(id,{level:3,parent:'FR-D-'+d.code,en:p.nom,local:p.nom,kind:'Commune'});
+  fs.writeSync(out,(first?'':',')+JSON.stringify({type:'Feature',properties:{id},geometry:f.geometry}));first=false;
+ }
+ fs.writeSync(out,']}');fs.closeSync(out);
+ const simplified=JSON.parse((await mapshaper.applyCommands(`-i "${file}" ${simplify} -o out.json format=geojson precision=.000001`))['out.json']);
+ return {features:simplified.features,units};
+}
 // Camera bounds frame the main territory; Spain's Canary Islands remain in the data.
 const countries={
  'united-kingdom':{id:'GB',en:'United Kingdom',local:'',file:'gbr-countries-2024-bgc.geojson',camera:[[-8.7,49.85],[1.8,60.9]],coverage:'Great Britain and Northern Ireland with their islands: the four countries of the Office for National Statistics December 2024 boundaries, generalised to 20 m and clipped to the coastline. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.'},
  spain:{id:'ES',en:'Spain',local:'España',file:'ign-lineas-limite-gml.zip',load:loadSpain,levels:['Autonomous community','Province','Municipality'],bundled:2,camera:[[-9.4,35.9],[4.4,43.8]],coverage:'17 autonomous communities, the autonomous cities of Ceuta and Melilla, and the minor sovereign territories under central administration (Gibraltar, which the BDLJE lists among them as Spain claims it, is a British overseas territory and is excluded); 52 provinces; and every municipality plus the shared territories (condominiums) that several municipalities own jointly, from the Instituto Geográfico Nacional jurisdictional boundaries (BDLJE). Communities and provinces are dissolved from the municipalities. Llívia takes its shape from the matching enclave in the French outline.'},
- france:{id:'FR',en:'France',local:'',file:'fra-adm1.geojson',camera:[[-5.2,41.3],[9.6,51.1]],coverage:'Metropolitan France and Corsica, dissolved from the IGN regions published by geoBoundaries. Overseas regions are not yet included.'},
+ france:{id:'FR',en:'France',local:'',file:'france-communes-*.geojson',load:loadFrance,levels:['Region','Department','Commune'],bundled:2,camera:[[-5.2,41.3],[9.6,51.1]],coverage:'The 13 regions of metropolitan France (including the territorial collectivity of Corsica), its 96 départements and every commune, from IGN ADMIN EXPRESS outlines published by geo.api.gouv.fr. Regions and départements are dissolved from the communes. Overseas regions are not yet included.'},
  italy:{id:'IT',en:'Italy',local:'Italia',file:'istat-limiti-2026.zip',load:loadItaly,levels:['Region','Province','Comune'],bundled:2,camera:[[6.6,35.5],[18.6,47.1]],coverage:"20 regions, 110 provinces and equivalent units (metropolitan cities, autonomous provinces, Sicily's free municipal consortia and Friuli-Venezia Giulia's former provinces) and 7,896 comuni, from ISTAT's full-detail boundaries for statistical purposes at 1 January 2026. Regions and provinces are dissolved from the comuni. San Marino and Vatican City remain enclaves."}
 };
 const outlines={},lowest={};
@@ -226,7 +245,9 @@ for(const [country,c] of Object.entries(countries)){
  const paths=frontierPaths(country,country==='spain'||country==='italy'?sharedWithFrance:()=>false);
  const length=paths.reduce((s,p)=>s+p.slice(1).reduce((t,q,i)=>t+metres(p[i],q),0),0);
  write(country,'international.bin',lineData(fc(paths.map(coordinates=>({type:'Feature',properties:{countries:[country]},geometry:{type:'LineString',coordinates}})))));
- const files=[c.file,'ne-10m-land-boundaries.geojson',...Object.keys(manifest.files).filter(n=>n.startsWith('neighbour-')||n.startsWith('osm-relation-'))];
+ // A wildcard source name lists every matching file (France has one per département).
+ const own=c.file.includes('*')?Object.keys(manifest.files).filter(n=>n.startsWith(c.file.split('*')[0])||n==='france-regions.json'||n==='france-departements.json'):[c.file];
+ const files=[...own,'ne-10m-land-boundaries.geojson',...Object.keys(manifest.files).filter(n=>n.startsWith('neighbour-')||n.startsWith('osm-relation-'))];
  fs.writeFileSync(out+'/'+country+'/sources.json',JSON.stringify({retrieved:manifest.retrieved,counts,coverage:c.coverage,processing,frontierKm:Math.round(length/1000),seamReports:Object.fromEntries(Object.entries(seamReports).filter(([k])=>k.includes(country))),sources:files.map(n=>({file:n,...manifest.files[n]}))},null,2)+'\n');
  console.log(country,counts,'chunks',Object.keys(chunks).length,'; land frontier',Math.round(length/1000),'km in',paths.length,'paths');
 }

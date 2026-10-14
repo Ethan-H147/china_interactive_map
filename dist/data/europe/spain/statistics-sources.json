@@ -2,7 +2,7 @@
  "retrieved": "2026-10-14",
  "sources": {
   "eurostatGdpNuts2": {
-   "title": "Eurostat · Gross domestic product at current market prices by NUTS 2 region (nama_10r_2gdp)",
+   "title": "Eurostat · Gross domestic product at current market prices by NUTS 2 region (nama_10r_2gdp; NUTS 1 for French regions)",
    "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table",
    "license": "CC BY 4.0"
   },
