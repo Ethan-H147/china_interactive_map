@@ -21,9 +21,9 @@ for(const level of [1,2,3]){
  const meta=await(await fetch('https://www.geoboundaries.org/api/current/gbOpen/ZAF/ADM'+level+'/')).json();
  await download('zaf-adm'+level+'.topojson',meta.tjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,licenseURL:'https://creativecommons.org/licenses/by/3.0/igo/',count:Number(meta.admUnitCount)});
 }
-const szService='https://services1.arcgis.com/2e5QzzsIgOpVnKkG/arcgis/rest/services/All_New_Tinkhundla_(post_2018)/FeatureServer/0';
-await download('swz-second.geojson',szService+'/query?where=1%3D1&outFields=*&outSR=4326&f=geojson',{provider:'COSPE / Khetsimphilo project, Eswatini cadastre post-2018 tinkhundla',year:2018,license:'Publicly accessible ArcGIS boundary layer; no explicit licence statement in item metadata',item:'https://www.arcgis.com/home/item.html?id=36919f6e5ad34f9f8d843025286a17bf'});
-const szMeta=await(await fetch('https://www.geoboundaries.org/api/current/gbOpen/SWZ/ADM1/')).json();
-await download('swz-first.topojson',szMeta.tjDownloadURL,{provider:szMeta.boundarySource,year:2017,license:szMeta.boundaryLicense,licenseURL:'https://www.openstreetmap.org/copyright'});
-for(const [name,level] of [['lso-first.geojson',0],['lso-second.geojson',1]])await download(name,'https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer/'+level+'/query?where=1%3D1&outFields=*&outSR=4326&f=geojson',{provider:'Lesotho Department of Rural Water Supply, government GIS',year:'Not stated by source',license:'Publicly accessible government boundary layer; no explicit licence statement in service metadata',source:'https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer'});
+// Eswatini and Lesotho: OCHA Common Operational Datasets on HDX (CC BY-IGO), retained as published archives.
+const hdx=(dataset,resource,file)=>'https://data.humdata.org/dataset/'+dataset+'/resource/'+resource+'/download/'+file;
+const cod={license:'Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)',licenseURL:'https://creativecommons.org/licenses/by/3.0/igo/legalcode'};
+await download('swz-cod-ab.geojson.zip',hdx('e145e4c6-0a78-42c7-833c-5850ac3a1731','8d79a417-4f3f-45c5-89d6-4fa77fd896b4','swz_admin_boundaries.geojson.zip'),{provider:'Central Statistics Office of Eswatini via OCHA ROSEA, Common Operational Dataset COD-AB v01',year:2020,validOn:'2021-01-27',reviewed:'2025-10-30',...cod,dataset:'https://data.humdata.org/dataset/cod-ab-swz'});
+await download('lso-cod-ab.shp.zip',hdx('55b1367e-667a-447b-952d-5bb139835628','f922a67a-9840-4174-bd1e-e4b10cc88591','lso_adm_fao_mlgca_2019.zip'),{provider:'FAO and the Lesotho Ministry of Local Government (2016), cleaned by OCHA, Common Operational Dataset COD-AB',year:2019,...cod,dataset:'https://data.humdata.org/dataset/cod-ab-lso'});
 fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');

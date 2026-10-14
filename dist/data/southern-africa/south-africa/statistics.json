@@ -481,7 +481,7 @@
       "name": "Zululand",
       "level": 2,
       "area": {
-        "value": 14855.3,
+        "value": 14855.9,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -501,7 +501,7 @@
       "name": "Uthukela",
       "level": 2,
       "area": {
-        "value": 11171.7,
+        "value": 11170.1,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -621,7 +621,7 @@
       "name": "Umkhanyakude",
       "level": 2,
       "area": {
-        "value": 13905.6,
+        "value": 13911.3,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -741,7 +741,7 @@
       "name": "Ehlanzeni",
       "level": 2,
       "area": {
-        "value": 28014.8,
+        "value": 28019.4,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -781,7 +781,7 @@
       "name": "Gert Sibande",
       "level": 2,
       "area": {
-        "value": 31969.7,
+        "value": 31969,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -941,7 +941,7 @@
       "name": "Thabo Mofutsanyane",
       "level": 2,
       "area": {
-        "value": 32852.9,
+        "value": 32853.1,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -1021,7 +1021,7 @@
       "name": "Harry Gwala",
       "level": 2,
       "area": {
-        "value": 10416.4,
+        "value": 10418.9,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -1081,7 +1081,7 @@
       "name": "Joe Gqabi",
       "level": 2,
       "area": {
-        "value": 25685,
+        "value": 25686.9,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -1261,7 +1261,7 @@
       "name": "Umgungundlovu",
       "level": 2,
       "area": {
-        "value": 9633.3,
+        "value": 9634.5,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -1321,7 +1321,7 @@
       "name": "Xhariep",
       "level": 2,
       "area": {
-        "value": 34366.9,
+        "value": 34368.6,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -1381,7 +1381,7 @@
       "name": "Mangaung",
       "level": 2,
       "area": {
-        "value": 9921.2,
+        "value": 9923.2,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -1421,7 +1421,7 @@
       "name": "Alfred Nzo",
       "level": 2,
       "area": {
-        "value": 10759.8,
+        "value": 10764.5,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -1836,7 +1836,7 @@
       "name": "Chief Albert Luthuli",
       "level": 3,
       "area": {
-        "value": 5582.8,
+        "value": 5583,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -2067,7 +2067,7 @@
       "name": "Dr Nkosazana Dlamini Zuma",
       "level": 3,
       "area": {
-        "value": 3611.3,
+        "value": 3613.7,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -2172,7 +2172,7 @@
       "name": "Elundini",
       "level": 3,
       "area": {
-        "value": 5033.3,
+        "value": 5034.7,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -2529,7 +2529,7 @@
       "name": "Greater Kokstad",
       "level": 3,
       "area": {
-        "value": 2687,
+        "value": 2687.2,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -2676,7 +2676,7 @@
       "name": "Impendle",
       "level": 3,
       "area": {
-        "value": 1612.9,
+        "value": 1614.1,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -2697,7 +2697,7 @@
       "name": "Inkosi Langalibalele",
       "level": 3,
       "area": {
-        "value": 3409.5,
+        "value": 3409.2,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -2781,7 +2781,7 @@
       "name": "Jozini",
       "level": 3,
       "area": {
-        "value": 3452.2,
+        "value": 3458,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -3453,7 +3453,7 @@
       "name": "Maluti a Phofung",
       "level": 3,
       "area": {
-        "value": 4351.6,
+        "value": 4352.2,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -3516,7 +3516,7 @@
       "name": "Mantsopa",
       "level": 3,
       "area": {
-        "value": 4305.1,
+        "value": 4305.7,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -3621,7 +3621,7 @@
       "name": "Matatiele",
       "level": 3,
       "area": {
-        "value": 4360.8,
+        "value": 4365.5,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -3726,7 +3726,7 @@
       "name": "City of Mbombela",
       "level": 3,
       "area": {
-        "value": 7171.6,
+        "value": 7171.5,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -3873,7 +3873,7 @@
       "name": "Mkhondo",
       "level": 3,
       "area": {
-        "value": 4902.4,
+        "value": 4901.5,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -3978,7 +3978,7 @@
       "name": "Mohokare",
       "level": 3,
       "area": {
-        "value": 8804.8,
+        "value": 8806.5,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -4461,7 +4461,7 @@
       "name": "Nkomazi",
       "level": 3,
       "area": {
-        "value": 4806.5,
+        "value": 4811.1,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -4566,7 +4566,7 @@
       "name": "Okhahlamba",
       "level": 3,
       "area": {
-        "value": 3984,
+        "value": 3982.6,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -4965,7 +4965,7 @@
       "name": "Senqu",
       "level": 3,
       "area": {
-        "value": 7341.1,
+        "value": 7341.8,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -4986,7 +4986,7 @@
       "name": "Setsoto",
       "level": 3,
       "area": {
-        "value": 5451,
+        "value": 5450.1,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",
@@ -5721,7 +5721,7 @@
       "name": "uPhongolo",
       "level": 3,
       "area": {
-        "value": 3121.6,
+        "value": 3122.2,
         "unit": "km²",
         "method": "mapped",
         "period": "Boundary-derived estimate",

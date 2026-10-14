@@ -61,9 +61,9 @@
     }
   },
   "coverage": {
-    "regions": 63,
+    "regions": 59,
     "population": 4,
     "gdp": 0
   },
-  "boundaryCoverage": "4 regions and all 59 post-2018 tinkhundla from the COSPE/Khetsimphilo cadastre-derived public GIS layer. The source layer does not state a later survey date or a separate reuse licence. Geometry-derived area is a map estimate. Source population fields have no stated census year and are not used as current statistics."
+  "boundaryCoverage": "4 regions and 55 tinkhundla from the Central Statistics Office boundaries published by OCHA (COD-AB v01, boundaries dated 2020, reviewed October 2025). This is the delimitation before 2018, when four tinkhundla were added for a total of 59; openly licensed boundaries for the 59 are not available. Geometry-derived area is a map estimate."
 }

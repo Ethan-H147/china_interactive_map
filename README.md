@@ -281,17 +281,19 @@ All map credits remain linked behind the bottom-right circled i. Hover or keyboa
 
 ## Southern Africa
 
-South Africa, Botswana and Namibia are public. Eswatini and Lesotho load only in the Changning developer mode (`developerCountries` in `dist/developer-mode.js`) until openly licensed boundary sources replace their current layers, which are publicly accessible government GIS services without a stated reuse licence. Outside developer mode they appear as gray neighbors inside and beside South Africa.
+South Africa, Botswana, Namibia, Eswatini and Lesotho are public. `developerCountries` in `dist/developer-mode.js` is empty; a country listed there loads only in the Changning developer mode.
 
 | Country | Levels | Boundary source | Licence |
 |---|---|---|---|
 | South Africa | 9 provinces · 44 districts and 8 metropolitan municipalities · 205 local municipalities | geoBoundaries (OCHA ROSEA, Municipal Demarcation Board, 2020) | CC BY 3.0 IGO |
 | Botswana | 10 districts · 28 census subdistricts · 519 localities | OCHA Common Operational Dataset (UNFPA), 2011 census geography also used in 2022 | CC BY-IGO |
 | Namibia | 14 regions · 121 constituencies | Namibia Statistics Agency via the Atlas of Namibia (2022) | CC BY 4.0 |
-| Eswatini (developer) | 4 regions · 59 tinkhundla | COSPE/Khetsimphilo public GIS layer | none stated |
-| Lesotho (developer) | 10 districts · 76 community and urban councils | Department of Rural Water Supply public GIS | none stated |
+| Eswatini | 4 regions · 55 tinkhundla | Central Statistics Office via OCHA Common Operational Dataset (COD-AB v01, 2020, reviewed 2025) | CC BY-IGO |
+| Lesotho | 10 districts · 78 community, urban and municipal council areas | FAO and Ministry of Local Government via OCHA Common Operational Dataset (2019) | CC BY-IGO |
 
 Lowest-level polygons form one shared topology; parent outlines are dissolved from their children, and South Africa keeps its Lesotho enclave. Each country's `sources.json` records downloads, hashes, processing and seam reports, and `statistics.json` its figures and sources. Metros are terminal jurisdictions, not repeated at the third level. Botswana's urban census districts are shown within their surrounding district.
+
+Eswatini shows the tinkhundla in place before the 2018 delimitation, which raised the count from 55 to 59. No openly licensed boundaries for the 59 exist: OCHA, geoBoundaries and OpenStreetMap all carry the earlier 55, and the only 59-unit layer found (COSPE/Khetsimphilo, ArcGIS) states no reuse licence. Lesotho's Maseru Municipal Council and Butha-Buthe Urban Council extend into Berea and Leribe; OCHA splits each at the district line, so each part is selectable within its district. The build reads the OCHA archives (`swz-cod-ab.geojson.zip`, `lso-cod-ab.shp.zip`) directly; their SHA-256 hashes are pinned in each country's `sources.json`.
 
 Statistics: South Africa has population at all three levels (Statistics South Africa mid-year estimates and Census 2022) and GDP for provinces only. Botswana has 2022 census population for districts and subdistricts; its localities have area only. Namibia has 2023 census population for regions and constituencies. Where a country publishes no area, a boundary-derived estimate is labeled as such. Missing figures stay empty rather than estimated.
 

@@ -1,8 +1,8 @@
 // This is a local preview preference. No typed characters are stored or sent.
 (()=>{
  const key='boundary-atlas-developer-v1';
- // Eswatini and Lesotho wait for openly licensed boundary sources before release.
- const developerCountries=['eswatini','lesotho'];
+ // Countries listed here load only in developer mode until they are ready for release.
+ const developerCountries=[];
  let enabled=false;try{enabled=sessionStorage.getItem(key)==='true';}catch{}
  function createSequence(){
   const phrase='dev mode';let buffer='',last=0;

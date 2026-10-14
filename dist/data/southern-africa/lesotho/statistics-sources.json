@@ -61,9 +61,9 @@
     }
   },
   "coverage": {
-    "regions": 86,
+    "regions": 88,
     "population": 10,
     "gdp": 0
   },
-  "boundaryCoverage": "10 districts and 76 community/urban council polygons from the Lesotho Department of Rural Water Supply public government GIS. The source does not state survey date or a separate reuse licence. This council layer is distinct from electoral constituencies. Geometry-derived area is a map estimate."
+  "boundaryCoverage": "10 districts and 78 council polygons (64 community councils, 12 urban council areas and 2 municipal council areas) from the FAO and Ministry of Local Government boundaries published by OCHA (COD-AB, 2019). Maseru Municipal Council and Butha-Buthe Urban Council each extend into a neighboring district and appear as one part per district. This council layer is distinct from electoral constituencies. Geometry-derived area is a map estimate."
 }

@@ -1,16 +1,16 @@
 {
-  "retrieved": "2026-10-09",
+  "retrieved": "2026-10-14",
   "counts": {
     "1": 10,
-    "2": 76,
+    "2": 78,
     "3": 0
   },
-  "coverage": "10 districts and 76 community/urban council polygons from the Lesotho Department of Rural Water Supply public government GIS. The source does not state survey date or a separate reuse licence. This council layer is distinct from electoral constituencies. Geometry-derived area is a map estimate.",
-  "processing": "Lowest-level polygons form shared topology. Parent outlines are dissolved from their children; South Africa retains its Lesotho enclave hole. Narrow digitization gaps up to 100 m are repaired, and residual numerical holes are removed from the two landlocked country silhouettes. South African exterior border edges within 4 km of the Lesotho/Eswatini reference are reconciled to that reference and overlap is erased. Internal lines contain shared edges only; coastlines remain unoutlined. International paths are merged into a single topology to draw each edge once. Local geometry loads per parent. Geometry is simplified to about 45 m north-south; the map further simplifies line details at low zoom. Area estimates are spherical polygon areas rounded to 0.1 square kilometres.",
+  "coverage": "10 districts and 78 council polygons (64 community councils, 12 urban council areas and 2 municipal council areas) from the FAO and Ministry of Local Government boundaries published by OCHA (COD-AB, 2019). Maseru Municipal Council and Butha-Buthe Urban Council each extend into a neighboring district and appear as one part per district. This council layer is distinct from electoral constituencies. Geometry-derived area is a map estimate.",
+  "processing": "Lowest-level polygons form shared topology. Parent outlines are dissolved from their children; South Africa retains its Lesotho enclave hole. Narrow digitization gaps up to 100 m are repaired, and residual numerical holes are removed from the two landlocked country silhouettes. South African exterior border edges within 4 km of the Lesotho/Eswatini reference are reconciled to that reference and overlap is erased. Internal lines contain shared edges only; coastlines remain unoutlined. International paths are merged into a single topology to draw each edge once. All subdivision geometry loads together when Lesotho is selected. Geometry is simplified to about 45 m north-south; the map further simplifies line details at low zoom. Area estimates are spherical polygon areas rounded to 0.1 square kilometres.",
   "seamReports": {
     "lesotho": {
       "changedEdges": 2562,
-      "maxDisplacementMetres": 2835.3241743817034,
+      "maxDisplacementMetres": 2768.158319296071,
       "changedRegions": [
         "ZA-M-dihlabeng",
         "ZA-M-dr-nkosazana-dlamini-zuma",
@@ -29,8 +29,8 @@
       ]
     },
     "eswatini": {
-      "changedEdges": 121,
-      "maxDisplacementMetres": 3669.3708310447246,
+      "changedEdges": 122,
+      "maxDisplacementMetres": 3759.875327003448,
       "changedRegions": [
         "ZA-M-chief-albert-luthuli",
         "ZA-M-jozini",
@@ -43,24 +43,15 @@
   },
   "sources": [
     {
-      "file": "lso-first.geojson",
-      "url": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
-      "provider": "Lesotho Department of Rural Water Supply, government GIS",
-      "year": "Not stated by source",
-      "license": "Publicly accessible government boundary layer; no explicit licence statement in service metadata",
-      "source": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer",
-      "sha256": "f7be626767aa0771972cae72947f01b3b3b077a9002d673f300ecc45a9021c93",
-      "bytes": 2413898
-    },
-    {
-      "file": "lso-second.geojson",
-      "url": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
-      "provider": "Lesotho Department of Rural Water Supply, government GIS",
-      "year": "Not stated by source",
-      "license": "Publicly accessible government boundary layer; no explicit licence statement in service metadata",
-      "source": "https://drws.gov.ls/server/rest/services/LesothoBoundaries/MapServer",
-      "sha256": "35f0601fac0103f8e05e24133e767d1caaccd43c8a877c2af60f374c6303fa24",
-      "bytes": 10123785
+      "file": "lso-cod-ab.shp.zip",
+      "url": "https://data.humdata.org/dataset/55b1367e-667a-447b-952d-5bb139835628/resource/f922a67a-9840-4174-bd1e-e4b10cc88591/download/lso_adm_fao_mlgca_2019.zip",
+      "provider": "FAO and the Lesotho Ministry of Local Government (2016), cleaned by OCHA, Common Operational Dataset COD-AB",
+      "year": 2019,
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+      "dataset": "https://data.humdata.org/dataset/cod-ab-lso",
+      "sha256": "3f924b6f483d1fcd85f98bbdfb72d8a2efa95470e7be891a24a07cc1a1a40e99",
+      "bytes": 3586302
     }
   ]
 }

@@ -4,7 +4,7 @@ import {gunzipSync} from 'node:zlib';
 import vm from 'node:vm';
 import {lineData} from '../dist/adaptive-lines.mjs';
 const root='dist/data/southern-africa',read=(c,n)=>JSON.parse(gunzipSync(fs.readFileSync(root+'/'+c+'/'+n))),countries=['south-africa','eswatini','lesotho'];
-const expected={'south-africa':[9,52,205],eswatini:[4,59,0],lesotho:[10,76,0]};
+const expected={'south-africa':[9,52,205],eswatini:[4,55,0],lesotho:[10,78,0]};
 function coordinateCheck(g){const walk=c=>{if(typeof c[0]==='number'){assert(c.every(Number.isFinite));assert(c[0]>16&&c[0]<34&&c[1]>-35&&c[1]<-21);}else c.forEach(walk);};walk(g.coordinates);}
 function ringContains(p,r){let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
 function contains(p,g){return(g.type==='Polygon'?[g.coordinates]:g.coordinates).some(poly=>ringContains(p,poly[0])&&!poly.slice(1).some(r=>ringContains(p,r)));}
@@ -22,6 +22,8 @@ for(const country of countries){
  console.log(country,cat.counts,Object.keys(cat.chunks).length,'parent geometry chunks');
 }
 assert.equal(read('eswatini','international.bin').features.length,0);assert.equal(read('lesotho','international.bin').features.length,0);
+// The two small countries load every level in one bundle, so their second level shows without a selection.
+for(const country of ['eswatini','lesotho']){const bundle=read(country,'all.bin'),counts=read(country,'catalogue.bin').counts;assert.deepEqual(bundle.levels.map(p=>p.regions.features.length),[counts[1],counts[2]],country+' bundle holds every region');}
 const lines=read('south-africa','international.bin');assert(lines.features.length>0);for(const f of lines.features)coordinateCheck(f.geometry);
 const edges=new Set();for(const f of lines.features){const paths=f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates;for(const p of paths)for(let i=1;i<p.length;i++){const a=p[i-1].join(','),b=p[i].join(',');if(a===b)continue;const key=[a,b].sort().join('|');assert(!edges.has(key),'International borders are drawn once');edges.add(key);assert(p[i][1]>-31,'Southern coast remains unoutlined');}}
 const bundle=read('south-africa','all.bin'),catalogue=read('south-africa','catalogue.bin');

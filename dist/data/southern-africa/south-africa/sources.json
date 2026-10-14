@@ -1,5 +1,5 @@
 {
-  "retrieved": "2026-10-09",
+  "retrieved": "2026-10-14",
   "counts": {
     "1": 9,
     "2": 52,
@@ -10,7 +10,7 @@
   "seamReports": {
     "lesotho": {
       "changedEdges": 2562,
-      "maxDisplacementMetres": 2835.3241743817034,
+      "maxDisplacementMetres": 2768.158319296071,
       "changedRegions": [
         "ZA-M-dihlabeng",
         "ZA-M-dr-nkosazana-dlamini-zuma",
@@ -29,8 +29,8 @@
       ]
     },
     "eswatini": {
-      "changedEdges": 121,
-      "maxDisplacementMetres": 3669.3708310447246,
+      "changedEdges": 122,
+      "maxDisplacementMetres": 3759.875327003448,
       "changedRegions": [
         "ZA-M-chief-albert-luthuli",
         "ZA-M-jozini",
@@ -75,12 +75,5 @@
       "sha256": "0ef45be83969df53abd8f77369c37bce69b10411aef256317416120b9ddd2645",
       "bytes": 6144718
     }
-  ],
-  "settlements": {
-    "count": 500,
-    "population": "Statistics South Africa 2011 census main places, reproduced by Adrian Frith; independent from municipal populations.",
-    "data": "settlements.json",
-    "namesAndFlags": "place-names-flags.json",
-    "selection": "Largest 500 named census main places with a verified gazetteer point inside both their census polygon and current municipality. Includes cities, towns, townships and larger villages."
-  }
+  ]
 }

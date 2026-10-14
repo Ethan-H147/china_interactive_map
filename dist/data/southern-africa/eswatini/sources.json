@@ -1,16 +1,16 @@
 {
-  "retrieved": "2026-10-09",
+  "retrieved": "2026-10-14",
   "counts": {
     "1": 4,
-    "2": 59,
+    "2": 55,
     "3": 0
   },
-  "coverage": "4 regions and all 59 post-2018 tinkhundla from the COSPE/Khetsimphilo cadastre-derived public GIS layer. The source layer does not state a later survey date or a separate reuse licence. Geometry-derived area is a map estimate. Source population fields have no stated census year and are not used as current statistics.",
-  "processing": "Lowest-level polygons form shared topology. Parent outlines are dissolved from their children; South Africa retains its Lesotho enclave hole. Narrow digitization gaps up to 100 m are repaired, and residual numerical holes are removed from the two landlocked country silhouettes. South African exterior border edges within 4 km of the Lesotho/Eswatini reference are reconciled to that reference and overlap is erased. Internal lines contain shared edges only; coastlines remain unoutlined. International paths are merged into a single topology to draw each edge once. Local geometry loads per parent. Geometry is simplified to about 45 m north-south; the map further simplifies line details at low zoom. Area estimates are spherical polygon areas rounded to 0.1 square kilometres.",
+  "coverage": "4 regions and 55 tinkhundla from the Central Statistics Office boundaries published by OCHA (COD-AB v01, boundaries dated 2020, reviewed October 2025). This is the delimitation before 2018, when four tinkhundla were added for a total of 59; openly licensed boundaries for the 59 are not available. Geometry-derived area is a map estimate.",
+  "processing": "Lowest-level polygons form shared topology. Parent outlines are dissolved from their children; South Africa retains its Lesotho enclave hole. Narrow digitization gaps up to 100 m are repaired, and residual numerical holes are removed from the two landlocked country silhouettes. South African exterior border edges within 4 km of the Lesotho/Eswatini reference are reconciled to that reference and overlap is erased. Internal lines contain shared edges only; coastlines remain unoutlined. International paths are merged into a single topology to draw each edge once. All subdivision geometry loads together when Eswatini is selected. Geometry is simplified to about 45 m north-south; the map further simplifies line details at low zoom. Area estimates are spherical polygon areas rounded to 0.1 square kilometres.",
   "seamReports": {
     "lesotho": {
       "changedEdges": 2562,
-      "maxDisplacementMetres": 2835.3241743817034,
+      "maxDisplacementMetres": 2768.158319296071,
       "changedRegions": [
         "ZA-M-dihlabeng",
         "ZA-M-dr-nkosazana-dlamini-zuma",
@@ -29,8 +29,8 @@
       ]
     },
     "eswatini": {
-      "changedEdges": 121,
-      "maxDisplacementMetres": 3669.3708310447246,
+      "changedEdges": 122,
+      "maxDisplacementMetres": 3759.875327003448,
       "changedRegions": [
         "ZA-M-chief-albert-luthuli",
         "ZA-M-jozini",
@@ -43,24 +43,17 @@
   },
   "sources": [
     {
-      "file": "swz-second.geojson",
-      "url": "https://services1.arcgis.com/2e5QzzsIgOpVnKkG/arcgis/rest/services/All_New_Tinkhundla_(post_2018)/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
-      "provider": "COSPE / Khetsimphilo project, Eswatini cadastre post-2018 tinkhundla",
-      "year": 2018,
-      "license": "Publicly accessible ArcGIS boundary layer; no explicit licence statement in item metadata",
-      "item": "https://www.arcgis.com/home/item.html?id=36919f6e5ad34f9f8d843025286a17bf",
-      "sha256": "4a9b2d42d9641975aaf3509fb5fb40c26c73b8b0526a4cf251ccf36b9001b9a5",
-      "bytes": 3341431
-    },
-    {
-      "file": "swz-first.topojson",
-      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SWZ/ADM1/geoBoundaries-SWZ-ADM1.topojson",
-      "provider": "OpenStreetMap, Wambacher",
-      "year": 2017,
-      "license": "Open Data Commons Open Database License 1.0",
-      "licenseURL": "https://www.openstreetmap.org/copyright",
-      "sha256": "0b4e82c98175b60301a7700dec8d3893da17511da4054f8ee12b915496a5dbcc",
-      "bytes": 22551
+      "file": "swz-cod-ab.geojson.zip",
+      "url": "https://data.humdata.org/dataset/e145e4c6-0a78-42c7-833c-5850ac3a1731/resource/8d79a417-4f3f-45c5-89d6-4fa77fd896b4/download/swz_admin_boundaries.geojson.zip",
+      "provider": "Central Statistics Office of Eswatini via OCHA ROSEA, Common Operational Dataset COD-AB v01",
+      "year": 2020,
+      "validOn": "2021-01-27",
+      "reviewed": "2025-10-30",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+      "dataset": "https://data.humdata.org/dataset/cod-ab-swz",
+      "sha256": "07d5d306c9ba731ff3469d804797d33df334232d2b1a5328bc4ce15f10ffb490",
+      "bytes": 3459801
     }
   ]
 }

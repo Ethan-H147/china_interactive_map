@@ -4,7 +4,7 @@ import {gunzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {hashFor,fromHash} from '../dist/view-state.mjs';
 import {nationalFlagImages} from '../dist/national-flags.mjs';
-const read=p=>JSON.parse(fs.readFileSync(p)),counts={'south-africa':266,eswatini:63,lesotho:86};
+const read=p=>JSON.parse(fs.readFileSync(p)),counts={'south-africa':266,eswatini:59,lesotho:88};
 for(const [country,count] of Object.entries(counts)){
  const base='dist/data/southern-africa/'+country+'/',catalogue=JSON.parse(gunzipSync(fs.readFileSync(base+'catalogue.bin'))),data=read(base+'statistics.json');
  assert.equal(Object.keys(data.regions).length,count);

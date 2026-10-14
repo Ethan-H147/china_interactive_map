@@ -3,7 +3,10 @@ import {gunzipSync,gzipSync} from 'node:zlib';
 import {configurations} from '../dist/southern-africa.mjs';
 
 // Small countries can prepare every level in one worker request on entry.
-for(const c of Object.values(configurations).filter(c=>c.loadAllSubdivisions)){
+// build-botswana-namibia.mjs writes its own bundles, which also keep country-wide
+// borders between second-level areas of different parents.
+const ownBundles=new Set(['botswana','namibia']);
+for(const [country,c] of Object.entries(configurations).filter(([country,c])=>c.loadAllSubdivisions&&!ownBundles.has(country))){
  const base='dist/'+c.base,read=file=>JSON.parse(gunzipSync(fs.readFileSync(base+file)));
  const catalogue=read('catalogue.bin'),levels=[{level:1,...read('first.bin')}];
  for(let level=2;level<=catalogue.levels.length;level++){
@@ -12,7 +15,7 @@ for(const c of Object.values(configurations).filter(c=>c.loadAllSubdivisions)){
  }
  const bytes=gzipSync(JSON.stringify({levels}),{level:9});fs.writeFileSync(base+'all.bin',bytes);
  const sourceFile=base+'sources.json',sources=JSON.parse(fs.readFileSync(sourceFile));
- sources.processing=sources.processing.replace('Local geometry loads per parent.','All subdivision geometry loads together when South Africa is selected.');
+ sources.processing=sources.processing.replace('Local geometry loads per parent.','All subdivision geometry loads together when '+c.name+' is selected.').replace('when South Africa is selected.','when '+c.name+' is selected.');
  fs.writeFileSync(sourceFile,JSON.stringify(sources,null,2)+'\n');
  console.log(c.name,levels.map(p=>p.regions.features.length).join(' / '),'regions;',bytes.length,'bytes in one country bundle');
 }
