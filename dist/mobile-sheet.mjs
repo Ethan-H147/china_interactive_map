@@ -87,7 +87,14 @@ addEventListener('pointermove', event => {
   mapTouch = null; apply('peek');
 });
 
-addEventListener('resize', () => apply(state));
+// The breadcrumb row sits below the header pill, however tall the pill and the
+// status bar make it on a given phone.
+function placeBelowHeader() {
+  const parts = [...document.querySelectorAll('.site-header > *')].map(el => el.getBoundingClientRect()).filter(r => r.height);
+  if (query.matches && parts.length) root.style.setProperty('--header-bottom', Math.round(Math.max(...parts.map(r => r.bottom))) + 'px');
+}
+new ResizeObserver(placeBelowHeader).observe(document.querySelector('.site-header'));
+addEventListener('resize', () => { placeBelowHeader(); apply(state); });
 query.addEventListener('change', () => {
   if (query.matches) apply(state);
   else { delete root.dataset.sheet; root.style.removeProperty('--sheet-height'); }
