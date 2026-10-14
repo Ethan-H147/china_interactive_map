@@ -1,0 +1,330 @@
+{{pp|small=yes}}
+{{short description|none}}
+{{distinguish|text=the [[Union Jack]], the national flag of the United Kingdom as a whole}}
+{{use British English|date=October 2019}}
+{{Use dmy dates|date=February 2021}}
+{{Infobox flag
+| Name = Flag of England
+| Article = 
+| Image = Flag of England.svg
+| Use = 111000
+| Symbol = {{FIAV|111000}} {{FIAV|normal}} {{FIAV|Equal}}
+| Proportion = 3:5<ref name="fotweng">[https://www.fotw.info/flags/gb-eng.html England (United Kingdom)] {{webarchive|url=https://web.archive.org/web/20080428103200/https://www.fotw.info/FLagS/gb-eng.html |date=28 April 2008 }}; ''[[Gallery of sovereign state flags]]''
+"The...proportion for the national flag of England is 3:5, with the each [limb of] the cross being {{frac|1|5}} of the flag's height. The same ratio is used for Scotland and Wales. The saltire on Scotland's flag is [the same width]. It was chosen as being the closest 'standard' shape to the golden rectangle. Rectangular naval rank flags are actually 2:3, with the cross [each limb] being {{fract|1|6}} of the height of the flag." Graham Bartram, 5 April 1999
+</ref>
+| Adoption = 1552
+| Design = A white field with centred red cross. Argent, a cross gules
+}}
+
+The national flag of [[England]], a [[constituent country of the United Kingdom]], is derived from [[Saint George's Cross]] (heraldic [[blazon]]: ''Argent, a cross gules''). The association of the red cross as an emblem of England can be traced back to the [[Late Middle Ages]] when it was gradually, increasingly, used alongside the [[Royal arms of England#Royal banner of England|Royal Banner]]. It became the only saint's flag permitted to be flown in public as part of the [[English Reformation]] and at a similar time became the pre-eminent [[maritime flag]] referred to as a [[White Ensign]].
+It was used as a component in the design of the [[Union Jack]] in 1606.<ref name="DCMS">{{citation |title=The Union Flag and Flags of the United Kingdom |url=http://researchbriefings.files.parliament.uk/documents/SN04474/SN04474.pdf |pages=6–8 |publisher=House of Commons Library |first=Agnieszka |last=Suchenia |date=13 March 2013 }}</ref>
+
+==Origins==
+{{Further|Saint George's Cross|Flag of Genoa}}
+[[File:Wilton_diptych;_right-hand_panel.jpg|thumb|right|Angels wearing the heraldic badge of King Richard II holding the flag of [[Saint George]] surmounted by an orb displaying a miniature map of England. [[Wilton Diptych]] ({{Circa|1395}}–1399)]]
+[[File:Uccello - Saint Georges terrassant le dragon, 1430-35.jpg|thumb|right|Saint George seen in the act of [[Saint George and the Dragon|slaying the dragon]]. He is depicted wearing a [[jupon]] displaying [[St George's Cross]]. [[Paolo Uccello]] ({{circa|1460}})]]
+[[File:John Ball encouraging Wat Tyler rebels from ca 1470 MS of Froissart Chronicles in BL.jpg|thumb|right|Illustration of Saint George's Cross, used alongside the Royal Standard by [[Wat Tyler]]'s rebels. ''[[Froissart's Chronicles]]'' [[Royal manuscripts, British Library|BL Royal]] 18 E.I, fol. 165v, {{circa|1470}}]]
+[[File:AnthonyRoll-1 Great Harry.jpg|thumb|The Tudor navy [[carrack]] ''[[Henry Grace à Dieu]]'' (launched 1514) as depicted in the 1546 [[Anthony Roll]], with St George's Cross displayed on the [[pennon|streamers]].<ref>The Tudor naval streamer was a long, tapering flag, flown from the top of the forecastle, from 20 up to 60 yards in length. "A streamer shall stand in the toppe of a shippe, or in the forecastle, and therein be putt no armes, but a man's conceit or device, and may be of the lengthe of twenty, forty, or sixty yards." – Harleian MS 2358 on ''the Syze of Banners, Standardes, Pennons, Guydhomes, Pencels, and Streamers'' (cited after Frederick Edward Hulme, ''The Flags of the World'' (1896), p. 26).</ref>]]
+
+On 21 January 1188, [[Henry II of England]] and [[Philip II of France]] agreed to go on [[Third Crusade|a crusade]], and that Henry would use a white cross and Philip a red cross.<ref>{{cite book |last1=Collins |first1=Michael |title=St George and the Dragons: The Making of English Identity |chapter=The Banner of St George |date=5 April 2018 |publisher=Fonthill |isbn=978-1-781-55649-8}}</ref>
+
+There then follows a historiographical tradition claiming that [[Richard the Lionheart]] himself adopted the full red cross flag and the patron saint from the [[Republic of Genoa]] at some point during his crusade. This idea can be traced to the [[Victorian era]],<ref>E.g.  "Richard Coeur de Lion embarked on Genoese galleys under their banner of the Red Cross and the flag of St. George, which he brought home to become the patron of Old England". ''The Journal of the Manchester Geographical Society'', Volumes 7–8, 1891, p. 139. There are variants; in another version Richard is impressed with the Genoese [[Siege of Acre (1189–91)|at Acre]].</ref> Perrin (1922) refers to it as a "common belief", and it is still popularly repeated today even though it cannot be substantiated.<ref>"I have been unable to find any solid ground for the common belief that the cross of St George was introduced as the national emblem of England by Richard I, and am of opinion that it did not begin to attain that position until the first years of the reign of Edward I". (Perrin 1922, [https://archive.org/stream/britishflagsthei00perrrich#page/n15/mode/2up p. 15])</ref>
+[[Prince Edward, Duke of Kent]] made a variation to this in a bilingual preface to a brochure made for the British Pavilion at [[Genoa Expo '92]]. The relevant passage read:
+<blockquote>The St. George's flag, a red cross on a white field, was adopted by England and the City of London in 1190 for their ships entering the Mediterranean to benefit from the protection of the Genoese fleet. The English Monarch paid an annual tribute to the [[Doge of Genoa]] for this privilege<ref>This version was taken at face value on the website of a "Ligurian Independence Movement", presented by Vincenzo Matteucci in an article entitled {{lang|it|L'Inghilterra "pagava" per poter innalzare la bandiera della gloriosa Repubblica di Genova sulle sue navi!}} ("England paid for flying on its ships the banner of the Glorious Republic of Genoa!") on that website ([http://www.mil2002.org/cronaca/2002/021000lo.htm Movimento Indipendentista Ligure] {{Webarchive|url=https://web.archive.org/web/20120212225923/http://www.mil2002.org/cronaca/2002/021000lo.htm |date=12 February 2012 }} 7 No. 3/4 2002), and posted on flags of the world.</ref><ref name=fotw>[http://www.crwflags.com/fotw/flags/it-genoa.html Genoa page] at ''[[Flags of the World (website)|Flags of the World]]'' by ed. Filippo Noceti, 2001</ref><ref>{{Cite web|url=https://www.parliament.nsw.gov.au/Hansard/Pages/HansardResult.aspx#/docid/HANSARD-1820781676-3515|title=Australian Flag – 21/04/1993 – ADJ |website=NSW Parliament |access-date=25 June 2016}}</ref></blockquote>
+
+Red crosses seem to have been used as a distinguishing mark worn by English soldiers from the reign of [[Edward I of England|Edward I]] (1270s),<ref>Perrin 1922, [https://archive.org/stream/britishflagsthei00perrrich#page/36/mode/2up/ p. 37]</ref> or perhaps slightly earlier, in the [[Battle of Evesham]] of 1265, using a red cross on their uniforms to distinguish themselves from the white crosses used by the rebel barons at the [[Battle of Lewes]] a year earlier.<ref>Curry, Anne (2000). ''The Battle of Agincourt: Sources and Interpretations''. Boydell Press. p. 275. {{ISBN|978-0-85115-802-0}}.</ref> Perrin notes a roll of accounts from 1277 where the purchase of cloth for the king's tailor is identified as destined for the manufacture of a large number of pennoncels (pennons attached to lances) and bracers (worn by archers on their left forearms) "of the arms of [[Saint George]]" for the use by the king's foot soldiers ({{lang|la|pro peditibus regis}}).<ref>Perrin 1922, p. 37</ref> Perrin concludes from this that the introduction of the Cross of St George as a "national emblem" is originally due to Edward I. By 1300, there was also a greater "banner of Saint George", but not yet in a prominent function; the king used it among especially banners of king-saints [[Saint Edward the Confessor]] and [[Saint Edmund the Martyr]] alongside the [[Royal Banner of England|royal banner]].<ref>"Among the greater banners that of St George was not as yet supreme; it was indeed only one of four, for when the Castle of Carlaverock was taken in the year 1300: {{lang|xno|Puis fist le roy porter amont  /  Sa baniere et la Seint Eymont  /  La Seint George et la Seint Edwart}} [...]" (Perrin 1922, p. 37)</ref> George had become popular as a "warrior saint" during the [[Crusades]], but the saint most closely associated with England was Edward the Confessor. This was so until the time of [[Edward III of England|Edward III]], who in thanks for Saint George's supposed intervention in his favour at the [[Battle of Crécy]] gave him a special position as a patron saint of the inceptive [[Order of the Garter]] in 1348.<ref>"The first step towards the promotion of St George to a position of predominance seems to be due to Edward III, who in gratitude for his supposed help at the Battle of Crecy founded the Chapel of St George at Windsor in 1348." (Perrin 1922, pp. 37f.)</ref> From that time, his banner was used with increasing prominence alongside the Royal Banner and became a fixed element in the hoist of the [[Royal Standards of England|Royal Standard]]. Yet the flag shown for England in the ''[[Book of All Kingdoms]]'' of 1367 is solid red (while Saint George's Cross is shown for [[Nice]] and, in a [[Jerusalem Cross|five-cross]] version, for [[flag of Georgia (country)|Tbilisi]]). The [[Wilton Diptych]] from the late 1390s shows a swallow-tailed Saint George cross pennant held by an angel in between (the then reigning) King [[Richard II of England|Richard II]] (accompanied by [[Edward the Confessor]] and [[Edmund the Martyr]]) and a scene of the [[Virgin and Child]] flanked by angels wearing Richard's own heraldic devices.{{Cn|date=January 2024}}
+
+[[Saint George's Day]] was considered a "double major feast" from 1415,<ref>It was first introduced as a minor feast day observed in the Church of England in 1222, but its omission from later lists suggests that it was not universally adopted. (Perrin 1922, p. 38).</ref> but George was still eclipsed by his "rivals" Saints Edward and [[Edmund the Martyr|Edmund]].{{Cn|date=January 2024}}
+
+[[John Cabot]], commissioned by [[Henry VII of England|Henry VII]] to sail "under our banners, flags and ensigns", may have taken a Saint George's banner to [[Newfoundland (island)|Newfoundland]] in 1497.{{citation needed|date=April 2013}}
+
+That Saint George is the primary patron saint of England is among several lasting changes of height of the [[English Reformation|English Protestant Reformation]], via the content which [[Edward VI|the teenage king]] and his Protestant advisors issued to all churches and clerics. These rules were the [[Book of Common Prayer|revised prayer book of 1552]]. Just as with the [[Marian persecutions]] (four years of counter-revolution after his natural death) all defecting clerics faced likely deprivation which was the loss of their office and if more broadly heretical, burning at the stake. The book made clear all religious flags, including saints' banners except for Saint George were abolished.<ref>"When the Prayer Book was revised under Edward VI (1547–1553), the festival of St George was abolished, with many others. Under the influence of the Reformation the banners of his former rivals, St Edward and St Edmund, together with all other religious flags in public use, except that of St George, entirely disappeared, and their place was taken by banners containing royal badges" (W. G. Perrin (1922). ''British Flags''. Cambridge University Press. p. 40).</ref> 
+
+Further use of this cross as a [[maritime flag]] alongside royal banners, is found in 1545.<ref name=fotw/>
+
+''[[Henry V (play)|Henry V]]'', the [[history play]] by [[William Shakespeare]], believed to have been written near 1599 includes the fictitious scene of the [[siege of Harfleur]] where the king's final rally is:
+<blockquote>Cry 'God for Harry, England, and Saint George!"<br />
+[Exeunt. Alarum, and chambers go off.]<ref>[https://gutenberg.org/files/1521/1521-h/1521-h.htm ''The Life of King Henry V''] Act 3, end of Scene 1 France. Before Harfleur...with scaling ladders, William Shakespeare, Project Gutenburg, Release Date: November, 1998 [eBook #1521]</ref></blockquote>
+thus promoting the notion that the cult or festivities specifically to the saint, or focus on the Order of the Garter put him significantly ahead of two other national saints &ndash; instead of depicting that they were approximately equal.  The quote became rapidly well known in London, across social classes, and thus imagery entrenched that Saint George was "historically" the primary saint.{{Cn|date=January 2024}}
+
+In 1606, after the [[Union of the Crowns]] in 1603, it was combined with the Scottish [[flag of Scotland|St Andrew's Cross]] to form the [[Union Jack]], which [[James VI & I]] ordered be flown from the main [[Top (sailing ship)|tops]] of ships from both England and Scotland. The "Red Crosse" continued to be flown from the fore-top by James' subjects in "South Britaine"—i.e., the Saint George cross was used with the new union flag on English vessels.{{Cn|date=January 2024}}
+[[File:Union Flag and St Georges Cross.jpg|thumb|250px|The flag of England flying alongside the [[flag of the United Kingdom]] in [[Southsea]], [[Portsmouth]], in July 2008]]
+In the 19th century, it became desirable for all nations of Europe (and later worldwide) to identify a national flag.{{Citation needed|reason=nations clearly had recognizable flags long before the C19th, as the above makes plain|date=November 2019}}  During that time, the terms [[British Empire|Britain]] and England were used largely interchangeably, the [[Union Flag]] was used as national flag de facto, even though never officially adopted. The observation that the Cross of St George is the "national flag of England" (as opposed to the Union Flag being the flag of all of the United Kingdom) was made in the context of [[Irish Free State|Irish irredentism]], as noted by [[G. K. Chesterton]] in 1933:
+
+<blockquote>As a very sensible Irishman said in a letter to a Dublin paper: "The Union Jack is not the national flag of England." The national flag of England is the Cross of St. George; and that, oddly enough, was splashed from one end of Dublin to the other; it was mostly displayed on shield-shaped banners, and may have been regarded by many as merely religious.<ref>[[G. K. Chesterton]] (1933). ''Christendom in Dublin''. p. 9.</ref></blockquote>
+
+==Derived flags==
+
+===Union Flag===
+{{further|Flag of the Kingdom of Great Britain}}
+[[File:Union Jack in London 2016.jpg|thumb|left|The Union Flag]]The flag of England is one of the key components of the [[Union Flag]]. The Union Flag has been used in a variety of forms since the proclamation by Orders in Council 1606,<ref>{{cite book|last=Fox-Davies|first=Arthur Charles|author-link=Arthur Charles Fox-Davies|title=The Art of Heraldry: An Encyclopædia of Armory|title-link=The Art of Heraldry: An Encyclopædia of Armory|publisher=Bloomsbury Books|location=London|year=1904 |orig-year=1986|page=399|isbn=0-906223-34-2}}</ref><ref>[http://www.royal.gov.uk/MonarchUK/Symbols/UnionJack.aspx Royal Website] {{webarchive |url=https://web.archive.org/web/20130630062430/http://www.royal.gov.uk/MonarchUK/Symbols/UnionJack.aspx |date=30 June 2013 }}</ref> when the flags [[flag of Scotland|of Scotland]] and England were first merged to symbolise the [[Union of the Crowns]].<ref>[http://www.flaginstitute.org/index.php?location=7 Flag Institute]</ref> (The Union of the Crowns having occurred in 1603). In Scotland, and in particular on Scottish vessels at sea, historical evidence suggests that a separate design of Union Flag was flown to that used in England.<ref>[http://www.crwflags.com/fotw/flags/gb-hist.html#scot Flags of the World] Scotland</ref> 
+In the [[Acts of Union 1707|Acts of Union of 1707]], which united the [[Kingdom of Scotland]] and the [[Kingdom of England]] to become the [[Kingdom of Great Britain]], it was declared that "the Crosses of St. George and St. Andrew be conjoined, in such Manner as her Majesty shall think fit, and used in all Flags, Banners, Standards and Ensigns, both at Sea and Land."<ref>{{Cite web |url=http://www.rahbarnes.demon.co.uk/Union/UnionWithScotlandAct.htm |title=Act of Union (Article 1) |access-date=7 June 2008 |archive-date=2 June 2008 |archive-url=https://web.archive.org/web/20080602172749/http://www.rahbarnes.demon.co.uk/Union/UnionWithScotlandAct.htm |url-status=dead }}</ref>
+
+From 1801, to symbolise the union of the Kingdom of Great Britain with the [[Kingdom of Ireland]], a new design which included [[St Patrick's Cross]] was adopted for the flag of the [[United Kingdom of Great Britain and Ireland]].<ref>[http://www.crwflags.com/fotw/flags/gb-hist.html Flags of the World] GB history</ref> The [[Flag of the United Kingdom]], having remained unchanged following the [[partition of Ireland]] in 1921 and creation of the [[Irish Free State]] and Northern Ireland, continues to be used as the flag of the United Kingdom of Great Britain and Northern Ireland.
+
+<gallery class="center">
+File:Flag of England.svg |Saint George's Cross. In the [[Union Flag]] this represents the entire [[England and Wales|Kingdom of England]], including [[Wales]].
+File:Union flag 1606 (Kings Colors).svg |English version of the first Union Flag, (1606), used in the [[Kingdom of England]] and, from 1707, adopted as flag of the unified [[Kingdom of Great Britain]].
+File:Union Jack 1606 Scotland.svg |The Scottish version of the first Union Flag saw limited use in the [[Kingdom of Scotland]] from 1606 to 1707, following the [[Union of the Crowns]].
+File:Flag of the United Kingdom (3-5).svg |The second Union Flag, (1801), incorporated the [[Saint Patrick's Flag|Cross of Saint Patrick]], following the [[Act of Union 1800|Union]] of the Kingdom of Great Britain and [[Kingdom of Ireland]].
+File: Development of The Union Jack.gif|The construction of the 1801 Union Flag, showing its three component flags.
+</gallery>
+
+===City of London===
+The [[flag of the City of London]] is based on the English flag, having a centred St George's Cross on a white background, with a red [[sword]] in the upper hoist [[Flag terminology|canton]] (the top left quarter).  The sword is believed to represent the sword that was used to behead [[Saint Paul (apostle)|Saint Paul]], who is the [[patron saint]] of the city.<ref name="BFN">{{usurped|1=[https://web.archive.org/web/20090123111156/http://britishflags.net/cityoflondon.html City of London]}}, Britishflags.net</ref>
+<Gallery>
+File:Flag of the City of London.svg|[[Flag of the City of London]]
+</Gallery>
+
+===Royal Navy===
+The flag used by the British [[Royal Navy]] (the [[White Ensign]]) is also based on the flag of England, consisting of St George's Cross with a [[Union Flag]] in the canton.  In addition to the United Kingdom, [[White Ensign#Commonwealth of Nations|several countries]] in the [[Commonwealth of Nations]] also have variants of the White Ensign with their own national flags in the canton, with St George's Cross sometimes being replaced by a naval badge.<ref name="fotw-ensigns">{{cite web|url=https://www.fotw.info/flags/gb-enshs.html |title=United Kingdom: history of the British ensigns |publisher=Fotw.net |access-date=11 April 2010}}</ref>
+
+<Gallery>
+File:Naval Ensign of the United Kingdom.svg|[[White Ensign]] of the [[Royal Navy]]
+</Gallery>
+
+===Universities of England===
+<gallery>
+File:Flag of the University of Bristol.svg|Flag of the [[University of Bristol]]
+File:Flag of the University of East Anglia.svg|Three flags of England appear on the castle in the flag of the [[University of East Anglia]]
+File:Flag of the University of Hull.svg|Flag of the [[University of Hull]]
+File:Flag of the University of London.svg|Flag of the [[University of London]]
+</gallery>
+
+==Contemporary use==
+===Church of England===
+[[File:All Saints Church - geograph.org.uk - 1371772.jpg|thumb|right|Flag flying on All Saints' Church, [[Shotesham]]]]
+Churches belonging to the [[Church of England]] which have a pole may fly St George's Cross. A desirable variant (per an order from the [[Earl Marshal]] in 1938) is for the church to fly the flag with the arms of the [[diocese]] in the left-hand upper corner.<ref name="cofe">[https://www.fotw.info/flags/gb_coe.html#use Church of England – Use of the flag]; ''[[Flags of the World (website)|Flags of the World]]''; 23 October 2008</ref>
+<gallery>
+File:Flag of the Diocese of Bath and Wells.svg|Flag of the [[Diocese of Bath and Wells]]
+File:Flag of the Diocese of Birmingham.svg|Flag of the [[Anglican Diocese of Birmingham|Diocese of Birmingham]]
+File:Flag of the Diocese of Blackburn updated.svg|Flag of the [[Diocese of Blackburn]]
+File:Flag of the Diocese of Bristol.svg|Flag of the [[Diocese of Bristol]]
+File:Flag of the Anglican Diocese of Canterbury.svg|Flag of the [[Diocese of Canterbury]]
+File:Flag of the Diocese of Carlisle.svg|Flag of the [[Diocese of Carlisle]]
+File:Flag of the Diocese of Chelmsford.svg|Flag of the [[Diocese of Chelmsford]]
+File:Flag of the Diocese of Chester.svg|Flag of the [[Diocese of Chester]]
+File:Flag of the Diocese of Derby.svg|Flag of the [[Diocese of Derby]]
+File:Flag of the Diocese of Ely.svg|Flag of the [[Diocese of Ely]]
+File:Flag of the Diocese of Exeter.svg|Flag of the [[Diocese of Exeter]]
+File:Flag of the Diocese of Gibraltar in Europe.svg|Flag of the [[Diocese of Gibraltar in Europe]]
+File:Flag of the Diocese of Gloucester.svg|Flag of the [[Diocese of Gloucester]]
+File:Flag of the Diocese of Guildford.svg|Flag of the [[Diocese of Guildford]]
+File:Flag of the Diocese of Hereford.svg|Flag of the [[Diocese of Hereford]]
+File:Flag of the Anglican Diocese of Leeds.svg|Flag of the [[Anglican Diocese of Leeds|Diocese of Leeds]]
+File:Flag of the Diocese of Leicester.svg|Flag of the [[Diocese of Leicester]]
+File:Flag of the Diocese of Lichfield v2.svg|Flag of the [[Diocese of Lichfield]]
+File:Flag of the Diocese of Lincoln.svg|Flag of the [[Diocese of Lincoln]]
+File:Flag of the Diocese of London.svg|Flag of the [[Diocese of London]]
+File:Flag of the Diocese of Manchester.svg|Flag of the [[Anglican Diocese of Manchester|Diocese of Manchester]]
+File:Flag of the Diocese of Newcastle.svg|Flag of the [[Diocese of Newcastle]]
+File:Flag of the Diocese of Norwich.svg|Flag of the [[Diocese of Norwich]]
+File:Flag of the Diocese of Oxford.svg|Flag of the [[Diocese of Oxford]]
+File:Flag of the Anglican Diocese of Portsmouth.svg|Flag of the [[Anglican Diocese of Portsmouth|Diocese of Portsmouth]]
+File:Flag of the Diocese of Rochester.svg|Flag of the [[Anglican Diocese of Rochester|Diocese of Rochester]]
+File:Flag of the Diocese of Salisbury.svg|Flag of the [[Diocese of Salisbury]]
+File:Flag of the Diocese of Sheffield.svg|Flag of the [[Diocese of Sheffield]]
+File:Flag of the Diocese of Southwark.svg|Flag of the [[Diocese of Southwark]]
+File:Flag of the Diocese of Southwell and Nottingham.svg|Flag of the [[Diocese of Southwell and Nottingham]]
+File:Flag of the Diocese of St Albans.svg|Flag of the [[Diocese of St Albans]]
+File:Flag of the Diocese of Truro.svg|Flag of the [[Diocese of Truro]]
+File:Flag of the Diocese of Winchester.svg|Flag of the [[Diocese of Winchester]]
+File:Flag of the Diocese of Worcester.svg|Flag of the [[Anglican Diocese of Worcester|Diocese of Worcester]]
+</gallery>
+
+===Sporting events===
+
+{{multiple image
+| align             = right
+| perrow            = 3
+| image1            = Wembley Stadium - USA v England.jpg
+| width1            = 166
+| image2            = Old Trafford - geograph.org.uk - 989306.jpg
+| width2            = 150
+| image3            = England @St James Park.jpg
+| width3            = 170
+| footer            = Sports fans creating [[Saint George's Cross]] during football games at [[Wembley Stadium]] and [[Old Trafford]], and at a rugby league game at [[St James' Park]].
+}}
+
+The flag heavily dominates for that of England at sports events in which England competes, for example during England Cricket matches (the [[Cricket World Cup]] and [[The Ashes]]), during Rugby Union matches<ref>[http://www.rfu.com/ England Rugby Football Union] {{webarchive|url=https://web.archive.org/web/20090923210311/http://www.rfu.com/ |date=23 September 2009 }}</ref> and in [[association football|football]].<ref>[https://web.archive.org/web/20071127212112/http://www.fifa.com/worldcup/teams/team=43942/index.html 2010 FIFA World Cup]</ref> It is also used in icons on the internet and on the TV screen to represent teams and players from England.{{Cn|date=January 2024}}
+
+For at least some decades before about 1996, most of the flags waved by supporters were Union Flags.<ref name="Daily Mirror17.09.05">{{cite news| title = The Saturday Soap Box: We have to make Jerusalem England's national anthem|url =http://www.billybragg.co.uk/words/words1.php?word_id=34 | newspaper = Daily Mirror|date=17 September 2005 |access-date = 1 November 2006 |archive-url = https://web.archive.org/web/20061011022931/http://www.billybragg.co.uk/words/words1.php?word_id=34 |archive-date = 11 October 2006}}</ref> In a sporting context, the flag is often seen being waved by supporters with the addition of 'ENGLAND' across its horizontal bar.{{Cn|date=January 2024}}
+
+<Gallery>
+File:English fan - RWC 2007.jpg|[[England national rugby union team|English Rugby team]] supporter waving the English flag in the streets of [[Nantes]], France in 2007
+File:London , Wembley - Giant England Flag - geograph.org.uk - 2112461.jpg|Giant England Flag at [[Wembley Stadium]]
+File:England Lionesses Bus Celebration - The Mall, London - Tuesday 29th July 2025 12.jpg|[[England women's national football team|The Lionesses]] open top bus celebration following their winning [[UEFA Women's Euro 2025]] tournament.
+File:England Cricket Celebrations.jpg|[[Cricket in England|England cricket]] fans celebrate in [[Trafalgar Square]], 2005.
+File:XIX Commonwealth Games-2010 Delhi Winners of (Mixed Team Badminton), Malaysia (Gold), India (Silver) and England (Bronze), during the medal presentation ceremony, at Siri Fort Complex, in New Delhi on October 08, 2010.jpg|England [[Commonwealth Games]] badminton team on the winner's podium at the 2010 games.
+</Gallery>
+
+=== English nationalism ===
+
+{{See also|English nationalism|English devolution}}
+
+[[file:flag of the Campaign for an English Parliament.svg|left|thumb|Flag of the [[Campaign for an English Parliament]]]]
+
+As the flag of England, it is used in [[English nationalism]]. This is largely in parallel to the use of the [[flag of Scotland]] in [[Scottish nationalism]]. However Scotland has been recognised as a nation within a nation. The flag of Scotland has been officially defined by the Scottish Parliament in 2003 and is flown there and almost universally by Scottish authorities. There is no English legislature; the entire British legislature sits in England and is only subject to very weak conventions on voting on English matters. The flag of England does not figure in legislation, and its use by English nationalists is complex as these divide among those who are [[far-right politics|far-right]] as heavily opposed to further immigration and seeking to distinguish between residents in the jobs market and welfare state system such as the [[British National Party]] (founded 1982) and the [[English Defence League]] (founded 2009) and those who merely seek the level of devolution of Scotland, or Wales.  Underscoring this complexity, in January 2012 [[Simon Hughes]], the deputy leader of the [[Liberal Democrats (UK)|Liberal Democrats]], supported calls for a [[devolved English parliament]] and which continues under such lobbies as the [[Campaign for an English Parliament]], and is occasionally a minor debate subject at all of the major parties' annual conferences.<ref name="Barnes">{{cite news|url=http://www.scotsman.com/scotland-on-sunday/uk/scottish_independence_referendum_liberal_democrats_deputy_leader_simon_hughes_calls_for_english_devolution_1_2070894|title=Scottish independence referendum: Liberal Democrats deputy leader Simon Hughes calls for English devolution|last=Barnes|first=Eddie|date=22 January 2012|work=Scotland on Sunday|publisher=Johnston Publishing Ltd.|access-date=23 January 2012|location=Edinburgh}}</ref>
+
+[[File:Operation Raise the Colours, Ladybalk Lane, Pontefract (30th August 2025) 004.jpg|thumb|right|The Flag of England and Union Flag appeared throughout England in late 2025 as part of [[Operation Raise the Colours]].]]
+
+Since the flag's widespread use in sporting events since the mid-1990s, the association with far-right nationalism has waned, and the flag is now frequently flown throughout the country both privately and by local authorities.<ref name="gu">Conn, David; [https://www.theguardian.com/football/2006/jul/12/sport.worldcup2006 Sour English stereotypes linger amid the flag-waving]; ''The Guardian''; 12 July 2006</ref>
+
+In September 2025, the England flag and the [[Union Jack]] became increasingly visible in the [[United Kingdom|UK]], in what was described as a "flag phenomenon".<ref name="Guardian2025-09-14" /> The first major display occurred in [[Weoley Castle]], a neighbourhood of largely postwar council stock homes, before spreading to other parts of [[Birmingham]] in response to the "proliferation" of [[Flag of Palestine|Palestine flags]].<ref name="Guardian2025-09-14">{{Cite news |last=Boffey |first=Daniel |date=2025-09-14 |title=Racism or celebration? What England's flag-hoisters are saying – and what others are hearing |url=https://www.theguardian.com/world/2025/sep/14/racism-or-celebration-what-englands-flag-hoisters-are-saying-and-what-others-are-hearing |work=The Guardian |language=en-GB }}</ref> The phenomenon drew media attention after local authorities in [[Birmingham]] and [[York]] ordered the removal of [[Flag of the United Kingdom|British flags]] while allowing [[Flag of Palestine|Palestine flags]] to remain, prompting public backlash and accusations of political double standards.<ref name="Guardian2025-09-14" />
+
+==Outside England==
+{{See also|Saint George's Cross}}
+
+Due to the spread of the [[British Empire]], the flag of England is currently, and was formerly used on various flags and [[coat of arms|coats of arms]] of different [[country|countries]], [[Federated state|states]] and provinces throughout the territories of the [[British Empire]]. St George's Cross is also used as the city flag of some [[Northern Italy|northern Italian]] cities, such as [[Bologna]], and other countries such as [[Flag of Georgia (country)|Georgia]].
+
+=== Australia ===
+<gallery class="left">
+Flag of New South Wales.svg|[[Flag of New South Wales]]
+Flag of the Governor of New South Wales.svg|Flag of the [[governor of New South Wales]], Australia
+Royal Standard of Australia.svg|[[King's Flag for Australia]]
+Royal Standard of Australia (1962–2022).svg|[[Queen's Personal Australian Flag|Queen Elizabeth II's personal Australian flag]] (1962–2022)
+Murray River Flag (Lower).svg|Lower [[Murray River Flag]]
+Murray River Flag (Combined).svg|Combined Murray River Flag
+Flag of Adelaide.svg|[[Flag of Adelaide]]
+Flag of Melbourne.svg|[[Flag of Melbourne]]
+Flag of Perth.svg|[[Flag of Perth]]
+City of Sydney Flag.svg|[[Flag of the City of Sydney|Flag of Sydney]]
+Anglican Church of Australia.svg|Flag of the [[Anglican Church of Australia]]
+Australian Colonial Flag.svg|[[National Colonial Flag for Australia]]
+</gallery>
+
+===Canada===
+<gallery class="left">
+Flag of Alberta.svg|[[Flag of Alberta]]
+Flag of Manitoba.svg|[[Flag of Manitoba]]
+Flag of Ontario.svg|[[Flag of Ontario]]
+Flag of Yukon.svg|[[Flag of Yukon]]
+Flag of Burgeo.svg|Flag of [[Burgeo]]
+Flag of Montreal.svg|[[Flag of Montreal]]
+Flag of Montreal (1939–2017).svg|Flag of Montreal (1939–2017)
+Anglican Church of Canada Flag.svg|Flag of the [[Anglican Church of Canada]]
+Canadian Red Ensign 1868-1921.svg|[[Flag of Canada|Flag of the Dominion of Canada]] (1868–1921)
+Hudson's Bay Company Flag (1682-1707).svg|[[Flag of the Hudson's Bay Company]] (1682–1707)
+</gallery>
+
+===Channel Islands===
+<gallery class="left">
+Flag of Alderney.svg|[[Flag of Alderney]]
+Flag of Guernsey.svg|[[Flag of Guernsey]]
+Flag of Guernsey (1936).svg|Flag of Guernsey<br />(1936–1985)
+Flag of Herm.svg|[[Flag of Herm]]
+Flag of Sark.svg|[[Flag of Sark]]
+</gallery>
+
+===Elsewhere===
+====Commonly====
+<gallery class="left">
+Flag of Fiji.svg|[[Flag of Fiji]]
+Ulster banner.svg|[[Ulster Banner]] (Northern Ireland)
+Flag of Ascension Island.svg|[[Flag of Ascension Island]]
+Flag of the Falkland Islands.svg|[[Flag of the Falkland Islands]]
+Flag of Saint Helena.svg|[[Flag of Saint Helena]]
+New England flag 1988.svg|Flag of the New England Governor's Conference (NEGC)
+Flag of Prince George's County, Maryland.svg|[[Flag of Prince George's County, Maryland|Flag]] of [[Prince George's County, Maryland|Prince George's County]], US (local, official uses)
+Flag of St George's, Bermuda.svg|Flag of [[St. George's, Bermuda]]
+</gallery>
+
+====Navies====
+{{Main|White Ensign}}
+<gallery class="left">
+Naval Ensign of the United Kingdom.svg|[[Royal Navy]] [[White Ensign]]
+Naval Ensign of Jamaica.svg|[[Flag of Jamaica|Naval Ensign of Jamaica]]
+Naval Ensign of the Bahamas.svg|[[Naval Ensign]] of the [[Bahamas]]
+Naval Ensign of Barbados.svg|[[Flag of Barbados|Naval Ensign of Barbados]]
+Naval Ensign of the Solomon Islands.svg|[[Flag of Solomon Islands|Naval Ensign of the Solomon Islands]]
+Naval Ensign of Ghana.svg|[[Flag of Ghana|Naval Ensign of Ghana]]
+Naval Ensign of Grenada.svg|[[Flag of Grenada|Naval Ensign of Grenada]]
+Naval Ensign of Saint Kitts and Nevis.svg|[[Flag of Saint Kitts and Nevis|Naval Ensign of Saint Kitts and Nevis]]
+Naval Ensign of South Africa.svg|[[South African Naval Ensign]]
+Naval Ensign of Tonga.svg|[[Flag of Tonga|Naval Ensign of Tonga]]
+Naval Ensign of Trinidad and Tobago.svg|[[Flag of Trinidad and Tobago|Naval Ensign of Trinidad and Tobago]]
+</gallery>
+
+====Nautical, non-naval====
+<gallery class="left">
+Dunkirk Jack.svg|[[Dunkirk]] Jack for all "little ships" which participated in the evacuation of 1940
+Marinha de Portugal (1911-1974, Ministro).svg|Flag of the [[Portugal|Portuguese]] Minister of Navy (1911 to 1974)
+House flag of Sydney Ferries.svg|[[Sydney Ferries]] house flag
+</gallery>
+
+====Rarely====
+<gallery class="left">
+Flag of the Prime Minister of Jamaica.svg|Prime Minister of Jamaica
+Flag of the Orange Order.svg|Flag of the [[Orange Order]]
+Purple Standard.svg|Purple Standard, used by the Orange Order
+Flag of the Grand Orange Lodge of New Zealand.svg|Flag of the Grand Orange Lodge of New Zealand
+Flag of the Loyal Orange Institution of Victoria.svg|Flag of the Loyal Orange Institution of [[Victoria (Australia)|Victoria]]
+Flag of the Governor of Saint Helena.svg|Flag of the [[governor of Saint Helena]] (official, local use)
+Flag of the United Tribes of New Zealand.svg|[[Flag of the United Tribes of New Zealand]]
+UnitedTribesUnofficial.svg|Original flag of the United Tribes of New Zealand
+Ensign of New England (St George's Cross).svg|Flag of [[New England]] (no official status but figures as a lower-order flag on a few official buildings)
+Flag of Trinity College Dublin.svg|Flag of [[Trinity College Dublin]] 
+</gallery>
+
+====Historically====
+<gallery class="left">
+British East India Company flag.svg|[[Flag of the East India Company]] (1600–1707)
+Pirate Flag of Thomas Cocklyn.svg|[[Jolly Roger|Pirate flag]] of [[Jeremiah Cocklyn]]
+Bartholomew_Roberts_Flag1A.svg|Pirate flag of [[Bartholomew Roberts]]
+British Empire flag (1930).svg|Unofficial [[British Empire flag]] (1910–?)
+Naval Ensign of India (1950–2001).svg|[[Indian Naval Ensign|Naval ensign of India]] (1950–2001)
+Naval Ensign of India (2004–2014).svg|Naval ensign of India (2004–2014)
+Naval Ensign of India (2014–2022).svg|Naval ensign of India (2014–2022)
+Flag of Jamaica (1957–1962).svg|Colonial flag of [[Jamaica]]
+Flag of the Governor of Northern Ireland (1922-1973).svg|Former flag of the [[governor of Northern Ireland]]
+Flag of the Loyalist Volunteer Force.svg|Flag of the [[Loyalist Volunteer Force]] (legally declared a terrorist group and moribund/very low-level presence from 2000)
+Flag of the Commissioners of Irish Lights (pre–1970).svg|Flag of the [[Commissioners of Irish Lights]] (pre–1970)<ref>{{cite web |url=https://www.rmg.co.uk/collections/objects/rmgc-object-326 |title=Flag, Irish Lights Commissioners |author= |date= |work=Royal Museums Greenwich |access-date=12 April 2025}}</ref>
+Flag of the British and Irish Steam Packet Company.svg|House flag of the [[British and Irish Steam Packet Company]] (B&I) dissolved 1992
+Flag of the City of Cork Steam Packet Company.svg|House flag of the City of Cork Steam Packet Company (dissolved 1969)
+House flag of the Cork Steamship Company.svg|House flag of the Cork Steamship Company (dissolved 1918)
+Flag of the Limerick Steamship Company.svg|House flag of the Limerick Steamship Company (dissolved 1970)
+House flag of the Waterford Steamship Company.svg|House flag of the [[Waterford Steamship Company]] (dissolved 1912)
+Flag of Prince George's County, Maryland (1696–1963).svg|Municipal [[Flag of Prince George's County, Maryland|flag of Prince George's County]] (1696–1963)
+Royal Standard of Jamaica (1966–2022).svg|[[Queen's Personal Jamaican Flag|Queen Elizabeth II's personal Jamaican flag]] (1966–2022)
+</gallery>
+
+==In Unicode==
+[[File:Twemoji12 1f3f4-e0067-e0062-e0065-e006e-e0067-e007f.svg|thumb|100px|[[Twemoji]] typeface Flag of England, (as per [[Twitter|X]])]]
+
+In 2017, the [[Unicode Consortium]] approved [[emoji]] support for the flag of England, alongside the flags of [[Flag of Scotland|Scotland]] and [[Flag of Wales|Wales]], in Unicode version 10.0 and Emoji version 5.0.<ref>{{Cite news |url=https://www.bbc.com/news/uk-wales-36985749 |title=Wales flag emoji decision awaited |last=Thomas |first=Huw |date=5 August 2016 |work=BBC News |access-date=18 October 2018 }}</ref><ref>{{Cite news |url=https://www.telegraph.co.uk/technology/2017/01/27/emoji-england-scotland-wales-flags-released-year/ |archive-url=https://ghostarchive.org/archive/20220112/https://www.telegraph.co.uk/technology/2017/01/27/emoji-england-scotland-wales-flags-released-year/ |archive-date=12 January 2022 |url-access=subscription |url-status=live |title=Emoji for England, Scotland and Wales flags to be released this year |last=Titcomb |first=James |date=2017 |work=[[The Daily Telegraph]] |access-date=18 October 2018 }}{{cbignore}}</ref> This was following a proposal from [[Jeremy Burge]] of [[Emojipedia]] and Owen Williams of [[BBC Cymru Wales|BBC Wales]] in March 2016,<ref>{{Cite news |url=https://www.bbc.com/news/uk-wales-36985749 |title=Wales flag emoji decision awaited |last=Thomas |first=Huw |date=5 August 2016 |work=BBC News |access-date=18 October 2018 }}</ref><ref>{{Cite news |url=https://www.telegraph.co.uk/technology/2017/01/27/emoji-england-scotland-wales-flags-released-year/ |archive-url=https://ghostarchive.org/archive/20220112/https://www.telegraph.co.uk/technology/2017/01/27/emoji-england-scotland-wales-flags-released-year/ |archive-date=12 January 2022 |url-access=subscription |url-status=live |title=Emoji for England, Scotland and Wales flags to be released this year |last=Titcomb |first=James |date=2017 |work=[[The Daily Telegraph]] |access-date=18 October 2018 }}{{cbignore}}</ref> The flag is implemented using the [[regional indicator symbol]] sequence {{mono|GB-ENG}}. Prior to this update, ''[[The Daily Telegraph]]'' reported that users had "been able to send emojis of the Union Flag, but not of the individual nations".<ref>{{Cite news |url=https://www.telegraph.co.uk/news/2016/12/11/flags-england-wales-scotland-given-thumbs-emoji-chiefs/ |archive-url=https://ghostarchive.org/archive/20220112/https://www.telegraph.co.uk/news/2016/12/11/flags-england-wales-scotland-given-thumbs-emoji-chiefs/ |archive-date=12 January 2022 |url-access=subscription |url-status=live |title=Flags of England, Wales and Scotland given thumbs up by emoji chiefs |date=11 December 2016 |work=[[The Daily Telegraph]] |access-date=18 October 2018 }}{{cbignore}}</ref>
+
+==See also==
+* [[Royal Banner of England]]
+* [[Royal coat of arms of England]]
+* [[List of English flags]]
+* [[List of British flags]]
+* [[Saint Patrick's Flag]]
+* [[Tudor Rose]]
+* [[Flags of Europe]]
+* [[Flags of the English Interregnum]]
+* [[St George's Day in England]]
+* [[Flag of Georgia (country)]]
+* [[Operation Raise the Colours]]
+
+==References==
+{{reflist}}
+
+==External links==
+{{Commons category|Flags of England}}
+
+* {{cite web|title=United Kingdom Flag History|url=http://www.britishflag.us/united-kingdom-flag-history.htm|access-date=11 July 2011|url-status=dead|archive-url=https://web.archive.org/web/20110927175112/http://www.britishflag.us/united-kingdom-flag-history.htm|archive-date=27 September 2011}}
+* [http://www.crwflags.com/fotw/flags/gb-eng.html Flag of England] at Flags of the World
+
+{{UKFlags}}
+{{Subnational flags of the United Kingdom}}
+{{Flag of Europe}}
+{{England topics}}
+
+{{DEFAULTSORT:England, Flag of}}
+[[Category:Flags of England| ]]
+[[Category:National symbols of England|Flag]]
+[[Category:Flags of the United Kingdom]]
+[[Category:Red and white flags]]
+[[Category:Flags with crosses]]
+[[Category:Flags with rectangular symmetry]]
+[[Category:National flags]]

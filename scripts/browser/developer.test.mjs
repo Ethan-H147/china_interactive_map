@@ -58,7 +58,12 @@ export default [
   ['france','Chambéry','Chambéry','Commune',['flag-fr.svg','FR-R-84'],''],
   ['spain','Toledo','Toledo','Province',['flag-es.svg','ES-A-08','ES-P-45'],''],
   ['spain','Alcalá de Henares','Alcalá de Henares','Municipality',['flag-es.svg','ES-A-13'],''],
-  ['spain','Tarragona','Tarragona','Municipality',['flag-es.svg','ES-A-09','ES-P-43'],'Tarragona · Province flag']
+  ['spain','Tarragona','Tarragona','Municipality',['flag-es.svg','ES-A-09','ES-P-43'],'Tarragona · Province flag'],
+  ['italy','Gallarate','Gallarate','Comune',['flag-it.svg','IT-R-03','IT-P-12'],'Varese · Province flag'],
+  ['italy','Turin','Turin','Metropolitan city',['flag-it.svg','IT-R-01'],''],
+  ['united-kingdom','Maidstone','Maidstone','District',['flag-gb.svg','GB-R-TLJ'],''],
+  ['united-kingdom','Edinburgh','Edinburgh','Council area',['flag-gb.svg','GB-R-TLM'],''],
+  ['united-kingdom','Belfast','Belfast','Local government district',['flag-gb.svg'],'']
  ].map(([country,query,pick,kind,flags,caption])=>({name:`${country}: ${pick} shows its flags`,options:{...desktop,developer:true},async run(page,base){
   await page.open(base,'#'+country);
   await searchAndSelect(page,query,pick,kind);

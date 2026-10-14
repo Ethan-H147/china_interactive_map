@@ -347,7 +347,7 @@ Cities and towns, like South Africa, are points independent of councils (`script
 
 ### Flags
 
-The panel stacks flags downward, as for Russia: the national flag, then the region or community, then the department or province. A commune or municipality shows its department's or province's flag, captioned with whose flag it is. Municipal and commune flags are not included.
+The panel stacks flags downward, as for Russia: the national flag, then the region or community, then the department or province, at most two levels below the national flag. A commune or municipality shows its department's or province's flag, captioned with whose flag it is. Municipal and commune flags are not included.
 
 `scripts/fetch-europe-subdivision-flags.mjs` takes each flag from Wikimedia Commons. It checks each download against the Commons checksum and records the license and author. Its choices follow two retained Wikipedia lists:
 
@@ -359,6 +359,19 @@ The panel stacks flags downward, as for Russia: the national flag, then the regi
   - Communities and Ceuta and Melilla show their statutory flags.
   - Provinces show their official flag. The six without one (Alicante, Castellón, Girona, A Coruña, Lleida, Valencia) show none.
   - A single-province community's flag appears once.
+
+- **Italy** ("List of Italian flags" and "Armoriale delle province italiane"):
+  - Regions show their flag adopted by regional law.
+  - Provinces show a flag only where the armorial records its description in the grant, not where it only shows an image: 31 of 107.
+  - Milan's pictured flag is the de facto one, so it is left out.
+  - Udine's province is now a statistical unit, so it shows none.
+  - Bergamo's and Terni's images are not on Commons, so they show none.
+- **United Kingdom:**
+  - Scotland and Wales show their national flags, and the English regions show England's.
+  - Northern Ireland has had no official flag since 1973 and shows none.
+  - Councils show none: the familiar county flags are community flags registered with the Flag Institute, not adopted by the councils.
+
+Unofficial flags are never shown.
 
 Small originals ship as SVG. Heraldic SVGs over 120 KB ship as rasters; the largest is 8.5 MB. The originals are cached in `scripts/additional-sources/europe-flags/`, which is not committed. The flags load only with developer mode. Each flag's status, source and license are in `dist/data/europe/subdivision-flag-sources.json`.
 

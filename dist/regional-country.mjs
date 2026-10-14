@@ -94,7 +94,7 @@ export async function addRegionalCountry(map,host,c){
   if(c.phoneCodes)renderPhoneCard($('phone-card'),record.phone);
   clearStatistics($('statistics'));if(record.settlement)renderStatistics($('statistics'),country+':'+record.id,settlementStatistics(record,country+':'+record.id));else if(c.hasStatistics?c.hasStatistics(record):record.level===1)renderStatistics($('statistics'),country+':'+record.id);
   $('capital-card').hidden=!record.capital||record.capital===record.en;$('capital').textContent=record.capital||'';
-  const flag=c.flags[scope];$('flag-source').hidden=!flag;if(flag){$('flag-source').href=flag.page;$('flag-source').title=flag.credit+' · '+flag.license;$('flag').src=flag.file;$('flag').alt='Flag of '+index.get(scope).en;}
+  const flag=c.flags[scope];$('flag-source').hidden=!flag;if(flag){$('flag-source').href=flag.page;$('flag-source').title=flag.credit+' · '+flag.license;$('flag').src=flag.file;$('flag').alt='Flag of '+(flag.name||index.get(scope).en);}
   // Flags stack national, first level, then the place's own; a third-level place without
   // one shows its second-level parent's, captioned with whose flag it is.
   const ownFlag=record.flag||(record.level>1?c.detailFlags?.[record.id]:null),parentFlag=!ownFlag&&record.level===3&&subscope?c.detailFlags?.[subscope]:null;

@@ -1,0 +1,2807 @@
+{{Short description|None}}
+{{about|flags of the United Kingdom in active use|historical flags|Historical flags of the British Empire and the overseas territories}}
+{{Use British English|date=February 2016}}
+{{Use dmy dates|date=March 2025}}
+[[File:County flags around Parliament Square, 2019.jpg|right|thumb|220px|[[Union Jack|Union Flag]] and County flags flying in Parliament Square, London]]
+This list includes flags that either have been in use or are currently used by the [[United Kingdom]], the individual [[countries of the United Kingdom]], the [[British Overseas Territories]] and the [[Crown Dependencies]].
+{{British flags}}
+
+The [[College of Arms]] is the authority on the flying of flags in [[England]], [[Wales]] and [[Northern Ireland]] and maintains the only official register of flags for these countries.<ref name="CoA">{{cite web|url=http://www.college-of-arms.gov.uk/about-us|title=About Us|access-date=22 December 2012|publisher=College of Arms|quote=The College is also the authority for matters relating to the flying of flags, and holds the only official registers of flags for the UK and much of the Commonwealth.}}</ref> It was established in 1484 and as part of the [[Royal Household]] operates under the authority of [[the Crown]].<ref name="CoA" /> The [[Lord Lyon King of Arms]], established prior to 1399, holds a similar role within [[Scotland]].<ref>{{cite web|url=http://www.lyon-court.com/lordlyon/238.html|title=Scottish Heraldic Flags|access-date=22 December 2012|publisher=The Court of the Lord Lyon}}</ref> A separate private body called the [[Flag Institute]], an educational charity financed by its own membership, also maintains a registry of United Kingdom flags that it styles 'the UK Flag Registry', though this has no official status under British law.<ref>{{cite web|url=http://www.flaginstitute.org/wp/flag-registry/|title=UK Flag Registry|publisher=Flag Institute|access-date=22 December 2012}}</ref>
+
+==Flags recognised by planning law==
+Certain classes of flag enjoy a special status within [[Town and country planning in the United Kingdom|English planning law]] and can be flown without needing the [[planning permission]] normally required for [[advertisements]]. These include any country’s [[national flag]], [[civil ensign]] or [[civil air ensign]]; the flag of the [[Commonwealth of Nations|Commonwealth]], the [[United Nations]] or any other international organisation of which the United Kingdom is a member; a flag of any [[List of islands of the United Kingdom|island]], [[Counties of the United Kingdom|county]], [[Districts of England|district]], [[Borough status in the United Kingdom|borough]], [[burgh]], [[parish]], [[City status in the United Kingdom|city]], [[town]] or [[village]] within the United Kingdom; the flag of the [[Black Country]], [[East Anglia]], [[Wessex]], any [[Parts of Lincolnshire|Part of Lincolnshire]], any [[Ridings of Yorkshire|Riding of Yorkshire]] or any [[Historic counties of England|historic county]] within the United Kingdom; the [[flag of St David]]; the [[flag of St Patrick]]; the flag of any administrative area within any country outside the United Kingdom; any flag of the [[British Armed Forces]]; and the [[Armed Forces Day]] flag.<ref name=":1">{{Cite web |date=2021-07-20 |title=Flying flags: a plain English guide |url=https://www.gov.uk/government/publications/flying-flags-a-plain-english-guide/flying-flags-a-plain-english-guide |access-date=2025-08-15 |website=GOV.UK |language=en}}</ref>
+
+Since the United Kingdom [[Brexit|left the European Union]], flying the [[Flag of Europe|flag of the European Union]] now requires planning permission.<ref name=":1" /><ref>{{Cite news |date=2023-06-23 |title=Brexit: City Hall unable to fly EU flag to mark vote anniversary |url=https://www.bbc.com/news/uk-england-london-65991264 |access-date=2025-08-15 |work=BBC News |language=en-GB}}</ref> However the United Kingdom remains a member of the [[Council of Europe]], which uses the same flag.<ref>{{Cite news |date=2024-05-24 |title=Former MEP will continue flying European flag after feedback |url=https://www.bbc.com/news/uk-england-oxfordshire-69056186 |access-date=2025-08-15 |work=BBC News |language=en-GB}}</ref>
+
+Certain other flags may be flown without obtaining planning permission, providing they adhere to certain restrictions including location, size, and number of flags. These include "house flags" for companies or individuals occupying a building, or temporary events taking place in a building; sports club flags (excluding sponsorship logos); the [[Rainbow flag (LGBTQ)|rainbow flag]]; flags of certain award schemes ([[Eco-Schools]], [[The King's Awards for Enterprise]], [[Investors in People]], [[Blue Flag beach|Blue Flag Award]] for beaches, and [[Green Flag Award]] for parks and open spaces); and NHS flags.<ref name=":1" />
+
+==Current national flags==
+National and subnational [[flag]]s of the [[United Kingdom]].<ref>{{cite web|url=http://www.parliament.uk/commons/lib/research/notes/snpc-04474.pdf|title=The Union Flags and flags of the United Kingdom|publisher=Parliament.uk|access-date=14 November 2012|url-status=dead|archive-url=https://web.archive.org/web/20090717062041/http://www.parliament.uk/commons/lib/research/notes/snpc-04474.pdf|archive-date=17 July 2009}}</ref>
+
+{{clear right}}
+
+===United Kingdom===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!!Use!!Description!!Status
+|-
+! scope="row" | {{ListFlag|Flag of the United Kingdom (1-2).svg|border=no|150px}}<br /><br />[[File:Flag of the United Kingdom (3-5).svg|150px]]
+| rowspan="2" | 1801–present
+| rowspan="2" | The Union Flag, also commonly known as the [[Union Jack]].<ref>{{Cite OED | Union Jack}}</ref> Used as the [[flag of the United Kingdom]]
+| rowspan="2" | A superimposition of the flags of [[England]] and [[Scotland]] with the [[Saint Patrick's Flag|Saint Patrick's Saltire]] (representing the [[Kingdom of Ireland]]).
+| National flag used by government and civilian population with the aspect ratios of either 1:2 or 3:5. A 1:2 ratio is the most common.<ref>'For the avoidance of doubt and the sake of convenience, Garter King of Arms, under the authority of the Earl Marshal, has approved two versions of the Union flag as being accurate representations suitable for use. These are of the proportions 5:3, commonly flown on land; and 2:1, commonly flown at sea.': [https://www.college-of-arms.gov.uk/resources/union-flag-approved-designs College of Arms: Union Flag approved designs]</ref>
+|-
+! scope="row" | [[File:Vertical Flag of the United Kingdom (1-2).svg|150x150px]]<br /><br />[[File:Vertical flag of the United Kingdom (3-5).svg|150x150px]]
+| Vertical national flag used by government and civilian population.
+|}
+
+====Countries of the United Kingdom====
+{{See also|Countries of the United Kingdom|Northern Ireland flags issue}}
+{| class="wikitable"
+|-
+! style="width:110px;"|Flag!!width="100px"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description!!|Status
+|-
+! scope="row" | {{ListFlag|Flag of England.svg|border=no|150px}}
+| c. 1348<ref>[{{Flag Institute|England}} Flag Institute – England]</ref>
+| [[Flag of England]], also known as the [[St George|St&nbsp;George's]] Cross
+| A red cross on a white field.<br /><br />(Argent a cross Gules)
+| National flag of England also used by the [[Church of England]], sports teams representing England and ordinary citizens.
+|-
+! scope="row" | [[File:Flag of Northern Ireland.svg|150px]]
+| 1924–1972<br />unofficial since 1972
+| [[Flag of Northern Ireland]], also known as the [[Ulster Banner]]
+| A red cross on a white field; in the centre, a crowned six-pointed star bearing the [[Red Hand of Ulster]].<br /><br />(Argent a cross gules, overall on a six-pointed star of the field ensigned by an Imperial crown proper a Dexter hand couped at the wrist of the second)
+| Northern Ireland has no official nor universally accepted flag.<ref>{{cite web|author=Department of the Official Report (Hansard), House of Lords, Westminster |url=https://publications.parliament.uk/pa/ld200607/ldhansrd/text/70118w0002.htm |title=Lords Hansard text for 18 Jan 200718 Jan 2007 (pt 0002) |publisher=Publications.parliament.uk |access-date=14 November 2012}}</ref> The [[Ulster Banner]] portrayed here was the flag of the [[Government of Northern Ireland]] between 1953 and 1972. Since 1972 this flag has continued to be used for want of another distinctive flag, almost exclusively amongst the Unionist community. The flag is commonly used for sporting events and teams from Northern Ireland, most notably in the [[Commonwealth Games]], the [[Northern Ireland national football team]] and events where Northern Irish competitors represent the province specifically such as snooker, darts and golf.
+|-
+! scope="row" | [[File:Flag of Scotland.svg|150px]]
+| c. 1542<br />(variants first appeared c. 1286)<ref>[{{Flag Institute|Scotland}} Flag Institute – Scotland]</ref>
+| [[Flag of Scotland]], also known as the [[St Andrew|St&nbsp;Andrew's]] Cross, or the Saltire
+| A diagonal white cross on a blue field.<br /><br />(Azure a [[saltire]] Argent)
+| National flag used by [[Scottish Government]] and agencies, sports teams representing Scotland and by ordinary citizens.
+|-
+! scope="row" | [[File:Flag of Wales.svg|150px]]
+| c. 1807<br />(variants first appeared c. 1485)
+| [[Flag of Wales]], also known as the Red Dragon or [[Y Ddraig Goch]]
+| A [[Welsh Dragon]] on a horizontal bicolour of white over green.<br /><br />(Per fess Argent and Vert, a dragon [[Charge (heraldry)#Attitude of animals|passant]] Gules)
+| National flag used by the [[Welsh Government]] and agencies, sports teams representing Wales and by ordinary citizens.
+|}
+
+The flags of England and of Scotland are ancient war flags which became by usage the national flags of the Kingdom of England (which included Wales) and of the Kingdom of Scotland respectively and continued in use until the [[Act of Union 1707]]. Thereafter, they were as ''de facto'' flags of those parts of the United Kingdom. The flag of Wales was formalised in 1959, but has ancient origins; the dragon was used as a battle-flag by countless Welsh rulers, the current flag being a redesign of the flag carried by [[Henry VII of England|Henry Tudor]].<ref>[https://www.bbc.co.uk/wales/history/sites/themes/society/flag_war.shtml BBC Wales History: 'The dragon and war']</ref> The [[Flag of Northern Ireland]] is controversial.<ref>{{cite web|url=http://www.newstalk.com/Why-is-there-no-Northern-Irish-flag-in-the-new-Emoji-update|title=Why is there no Northern Irish flag in the new Emoji update?|date=31 March 2017|access-date=1 December 2019|last=Dempsey|first=James|work=News Talk}}</ref> The coat of arms of the Government of Northern Ireland, a red cross on a white field, [[Defacement (flag)|defaced]] with a [[Red Hand of Ulster]] within a six pointed star topped with a crown, became used as a local flag, though the end of the province's Government in 1973 ended its official status. This flag has continued to be the internationally recognisable de facto flag of Northern Ireland through its use by international sporting organisations (for example [[FIFA]],<ref>{{cite web|url=https://www.fifa.com/associations/association=nir/index.html |archive-url=https://web.archive.org/web/20070614054719/http://www.fifa.com/associations/association=nir/index.html |url-status=dead |archive-date=14 June 2007 |title=Northern Ireland on |publisher=FIFA.com |date=15 October 2012 |access-date=14 November 2012}}</ref> [[UEFA]],<ref>{{cite web|url=http://www.uefa.com/footballeurope/countries/association=63/index.html |archive-url=https://web.archive.org/web/20070121160234/http://www.uefa.com/footballeurope/countries/association=63/index.html |url-status=dead |archive-date=21 January 2007 |title=Member associations – |publisher=[[UEFA]] |access-date=14 November 2012}}</ref> and the [[Commonwealth Games]])<ref>{{cite web |url=http://www.thecgf.com/countries/intro.asp?loc=NIR |title=Commonwealth Games Federation – Commonwealth Countries – Introduction |publisher=Thecgf.com |access-date=14 November 2012 |archive-url=https://web.archive.org/web/20170902181356/http://www.thecgf.com/countries/intro.asp?loc=NIR |archive-date=2 September 2017 |url-status=dead }}</ref> to represent Northern Ireland, though locally it has the allegiance mainly of the Unionist community. The [[St Patrick's Saltire]] is also sometimes used by the UK government in London to represent Northern Ireland when a discrete Northern Ireland flag is required.<ref>{{cite web|author=Hansard, House of Commons, Westminster| url=https://api.parliament.uk/historic-hansard/written-answers/1986/jul/22/northern-ireland-flag |work=[[Hansard|Parliamentary Debates (Hansard)]]|date=22 July 1986|title=HC Deb vol 102 c111W: Northern Ireland Flag}}</ref><ref>{{cite web|author=Hansard, House of Commons, Westminster|url=https://api.parliament.uk/historic-hansard/written-answers/1986/jul/25/flag-of-st-patrick |work=[[Hansard|Parliamentary Debates (Hansard)]]|date=25 July 1986|title=HC Deb vol 102 c571W: Flag of St. Patrick.}}</ref>
+
+== Crown Dependencies ==
+{{Main|Crown Dependencies}}
+{{See also|Bailiwick of Guernsey|Isle of Man|Jersey}}
+{{Further|Channel Islands}}
+
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of Alderney.svg|border=no|150px}}
+| 1993–present
+| [[Flag of Alderney]]
+| A red cross on a white field ([[St George's Cross]]) with an inescutcheon of the island's coat of arms. Alderney is an autonomous Crown Dependency and is part of the Bailiwick of Guernsey.
+|-
+! scope="row" | [[File:Government Ensign of Alderney.svg|150px]]
+|
+| Government ensign of Alderney
+| A [[Blue Ensign]] with the arms of [[Alderney]].
+|-
+! scope="row" | [[File:Flag of Guernsey (1936).svg|150px]]
+| 1936–1985
+| [[Flag of Guernsey]]
+| A red cross on a white field ([[St George's Cross]]).
+|-
+! scope="row" | [[File:Flag of Guernsey.svg|150px]]
+| 1985–present
+| [[Flag of Guernsey]]
+| A golden cross within a red cross on a white field ([[St George's Cross]]). Guernsey is an autonomous Crown Dependency and is part of the Bailiwick of Guernsey.
+|-
+! scope="row" | [[File:Civil Ensign of Guernsey.svg|150px]]
+| 1985–present
+| Civil ensign of Guernsey
+| A [[Red Ensign]] with a gold cross.
+|-
+! scope="row" | [[File:Government Ensign of Guernsey.svg|150px]]
+| 1985–present
+| State ensign of Guernsey
+| A [[Blue Ensign]] with a gold cross.
+|-
+! scope="row" | [[File:Flag of Herm (1950-1953).svg|150px]]
+| c.1950–1953
+| [[Flag of Herm]]
+| A dark blue field with the arms of Guernsey in the hoist and the words "HERM ISLAND" beneath it.
+|-
+! scope="row" | [[File:Flag of Herm.svg|150px]]
+| c.1953–present
+| [[Flag of Herm]]
+| A red cross on a white field ([[St George's Cross]]) with the coat of arms of the island in the canton. Herm is an island which belongs to the Bailiwick of Guernsey.
+|-
+! scope="row" | [[File:Flag of the Isle of Mann.svg|150px]]
+| 1931–present
+| [[Flag of the Isle of Man]]
+| A [[triskelion]] on a red field.
+|-
+! scope="row" | [[File:Civil Ensign of the Isle of Man.svg|150px]]
+| 1971–present
+| Civil ensign of the Isle of Man
+| A [[Red Ensign]] with a triskelion.
+|-
+! scope="row" | [[File:Flag of Jersey (pre 1981).svg|150px]]
+| before 1981
+| [[Flag of Jersey]]
+| A red saltire on a white field.
+|-
+! scope="row" | [[File:Flag of Jersey.svg|150px]]
+| 1981–present
+| [[Flag of Jersey]]
+| A red saltire on a white field defaced with the island's badge.
+|-
+! scope="row" | [[File:Civil Ensign of Jersey.svg|150px]]
+| 2010–present
+| Civil ensign of Jersey
+| A [[Red Ensign]] with a crowned coat of arms of Jersey in the hoist.
+|-
+! scope="row" | [[File:Government Ensign of Jersey.svg|150px]]
+| 1907–present
+| Government ensign of Jersey
+| A [[Blue Ensign]] with the arms of Jersey.
+|-
+! scope="row" | [[File:Jersey storm flag.svg|150px]]
+| 2010–present
+| Storm flag of Jersey
+| A long white pennant with a red border along the top and bottom, and a crowned coat of arms of Jersey in the hoist.<ref>{{cite web |url=https://news.bbc.co.uk/2/hi/europe/jersey/8653961.stm |title=Flag flown on island's bare poles |author= |date=30 April 2010 |work=BBC Jersey |access-date=1 December 2024}}</ref>
+|-
+! scope="row" | [[File:Flag of Lihou.svg|150px]]
+| 2019–present
+| Flag of [[Lihou]]
+| A green flag with a white stripe in the hoist, with the name "The Lihou Charitable Trust" in white on the green field, and a black and white [[Eurasian oystercatcher]] flying eastwards on the white stripe.<ref>{{cite web |url=https://guernseypress.com/news/2019/08/19/lihou-can-fly-own-flag/ |title=Lihou can fly own flag |author=Yves Le Marquand |date=19 August 2019 |work=Guernsey Press |access-date=31 August 2024}}</ref>
+|-
+! scope="row" | [[File:Flag of Sark.svg|150px]]
+| 1938–2020
+| [[Flag of Sark]]
+| A red cross on a white field ([[St George's Cross]]) with two lions (the arms of the [[Plantagenet]] [[Dukes of Normandy]]) in the canton overflowing the red cross. Strictly speaking, this was the personal flag of the [[List of Seigneurs of Sark|Seigneur]].
+|-
+! scope="row" | [[File:Flag of Sark (bordered).svg|150px]]
+| 2020–present
+| [[Flag of Sark]]
+| A red cross on a white field ([[St George's Cross]]) with two lions (the arms of the [[Plantagenet]] [[Dukes of Normandy]]) in the canton. Strictly speaking, this was the personal flag of the [[List of Seigneurs of Sark|Seigneur]]. Sark is an autonomous Crown Dependency and is part of the Bailiwick of Guernsey.
+|}
+
+=== Parishes of Guernsey ===
+{{Main|Parishes of Guernsey}}
+
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of Castel Parish, Bailiwick of Guernsey.gif|border=no|150px}}
+|
+| Flag of [[Castel, Guernsey|Castel]]
+|
+|-
+! scope="row" | [[File:Flag of Forest Parish, Guernsey.svg|150px]]
+|
+| Flag of [[Forest, Guernsey|Forest]]
+| A white flag defaced in the centre with a dark green shield containing a gold [[Shield of the Trinity]].
+|-
+! scope="row" | [[File:Flag of Saint Andrew Parish, Bailiwick of Guernsey.gif|150px]]
+|
+| Flag of [[Saint Andrew, Guernsey|Saint Andrew]]
+|
+|-
+! scope="row" | [[File:Flag of Saint Martin Parish, Bailiwick of Guernsey.gif|150px]]
+|
+| Flag of [[Saint Martin, Guernsey|Saint Martin]]
+|
+|-
+! scope="row" | [[File:Flag of Saint Peter Port, Guernsey.svg|150px]]
+|
+| Flag of [[Saint Peter Port]]
+| A white flag with the shield of the parish in the centre, consisting of the coat of arms of Guernsey surrounded by a blue and silver ring bearing the name "ST PIERRE PORT GUERNSEY".
+|-
+! scope="row" | [[File:Flag of Saint Pierre du Bois Parish, Guernsey.svg|150px]]
+|
+| Flag of [[Saint Pierre du Bois]]
+| A flag coloured two-thirds dark blue and one-third light blue (at the top), with a brown and green tree in the light blue section and a pair of crossed gold and silver keys (the [[Keys of Heaven]]) in the dark blue section.
+|-
+! scope="row" | [[File:Flag of Saint Sampson Parish, Bailiwick of Guernsey.gif|150px]]
+|
+| Flag of [[Saint Sampson, Guernsey|Saint Sampson]]
+|
+|-
+! scope="row" | [[File:Flag of Saint Saviour Parish, Bailiwick of Guernsey.gif|150px]]
+|
+| Flag of [[Saint Saviour, Guernsey|Saint Saviour]]
+|
+|-
+| [[File:Flag of Torteval Parish, Guernsey.svg|border|150px]]
+|
+| Flag of [[Torteval, Guernsey|Torteval]]
+| A white flag with a red field in the canton containing a gold [[Normans|Norman]] cross. At the bottom of the flag are three blue waves, with a red ship with four white sails sailing eastwards on the top wave. Below the ship is a gold scroll bearing the name "TORTEVAL", and behind the ship is a green shoreline, above which a grey gull is flying downwards. Above the gull is a grey skyline.
+|-
+! scope="row" | [[File:Flag of Vale Parish, Bailiwick of Guernsey.gif|150px]]
+|
+| Flag of [[Vale, Guernsey|Vale]]
+|
+|}
+
+=== Parishes of Jersey ===
+{{Main|Parishes of Jersey}}
+
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of Grouville Parish, Jersey.svg|border=no|150px}}
+|
+| Flag of [[Grouville]]
+| A white flag with a shield in the centre containing eight horizontal stripes of white and red.
+|-
+! scope="row" | [[File:Flag of St Brelade Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Brelade]]
+| A silver fish on a blue field.
+|-
+! scope="row" | [[File:Flag of Saint Clement Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Clement, Jersey|Saint Clement]]
+| A golden anchor on a blue field.
+|-
+! scope="row" | [[File:Flag of Saint Helier.svg|150px]]
+|
+| Flag of [[Saint Helier]]
+| Two crossed gold axes on a blue field.
+|-
+! scope="row" | [[File:Flag of Saint John Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint John, Jersey|Saint John]]
+| A silver [[Maltese cross]] on a green field.
+|-
+! scope="row" | [[File:Flag of Saint Lawrence Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Lawrence, Jersey|Saint Lawrence]]
+| A black [[gridiron (cooking)|gridiron]] on a white field.
+|-
+! scope="row" | [[File:Flag of Saint Martin Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Martin, Jersey|Saint Martin]]
+| A red flag with a shield in the centre containing seven horizontal stripes of white and red (four white and three red).
+|-
+! scope="row" | [[File:Flag of Saint Mary Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Mary, Jersey|Saint Mary]]
+| A silver [[fleur-de-lis]] on a blue field.
+|-
+! scope="row" | [[File:Flag of Saint Ouen Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Ouen, Jersey|Saint Ouen]]
+| A gold [[Latin cross]] on a blue field.
+|-
+! scope="row" | [[File:Flag of Saint Peter Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Peter, Jersey|Saint Peter]]
+| Two crossed silver keys (the [[Keys of Heaven]]) on a red field.
+|-
+! scope="row" | [[File:Flag of Saint Saviour Parish, Jersey.svg|150px]]
+|
+| Flag of [[Saint Saviour, Jersey|Saint Saviour]]
+| Three golden [[Holy Nails]] surrounded by a golden [[crown of thorns]] on a red field.
+|-
+! scope="row" | [[File:Flag of Trinity Parish, Jersey.svg|150px]]
+|
+| Flag of [[Trinity, Jersey|Trinity]]
+| A silver and gold [[Shield of the Trinity]] with black text on a green field.
+|}
+
+==British Overseas Territories==
+In 1999, the maritime flags of the British Overseas Territories were updated at the request of the [[Ministry of Defence (United Kingdom)|Ministry of Defence]].{{citation needed|date=September 2020}} The white discs were removed from the field of the flags and each respective coat of arms was increased in size for ease of identification. As the MoD only had authority over sea flags, the governments of the Overseas Territories were free to continue using the flags with white discs on land. The Overseas Territories' governments did switch to the updated flags over a staggered period of time, however some old-style flags with white discs may still be seen. Such flags have generally been adopted by [[Order in Council]]. Civil (Red Ensign) flags are under the control of the United Kingdom Secretary of State for Transport and are split into two categories: Category 1 is to register ships of unlimited tonnage and type. Category 2 is to register commercial ships and yachts of up to 150 gross registered tons.<ref>[http://www.redensigngroup.org/terms-of-reference.aspx Red Ensign Group]</ref>
+
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of Anguilla.svg|border=no|150px}}
+| 1990–present
+| [[Flag of Anguilla|Anguilla]]
+| A Blue Ensign defaced with the [[coat of arms of Anguilla]].
+|-
+! scope="row" | [[File:Flag of the United Kingdom (1-2).svg|150px]]
+| 1960–present
+| Flag used in [[Akrotiri and Dhekelia]]
+| The Union Jack is used as no territory flag exists.
+|-
+! scope="row" | [[File:Flag of Ascension Island.svg|150px]]
+| 2013–present
+| [[Flag of Ascension Island|Ascension Island]], a constituent part of [[Saint Helena, Ascension and Tristan da Cunha]]
+| A Blue Ensign defaced with the [[coat of arms of Ascension Island]].
+|-
+! scope="row" | [[File:Government Ensign of Bermuda.svg|150px]]
+| rowspan="2" | 1999–present
+| rowspan="2" | [[Flag of Bermuda|Bermuda]]
+| A Blue Ensign defaced with the [[coat of arms of Bermuda]]. Used as the government ensign.
+|-
+! scope="row" | [[File:Flag of Bermuda.svg|150px]]
+| A Red Ensign defaced with the [[coat of arms of Bermuda]]. Used on land and as the [[civil ensign]].
+|-
+! scope="row" | [[File:Flag of the British Antarctic Territory.svg|150px]]
+| rowspan="2" | 1963–present
+| rowspan="2" | [[Flag of the British Antarctic Territory|British Antarctic Territory]]
+| A [[White Ensign]] less the cross of St George defaced with the [[coat of arms of the British Antarctic Territory]]
+|-
+! scope="row" | [[File:Government Ensign of the British Antarctic Territory.svg|150px]]
+| A Blue Ensign defaced with the [[coat of arms of the British Antarctic Territory]]
+|-
+! scope="row" | [[File:Flag of the British Indian Ocean Territory.svg|150px]]
+| 1990–present
+| [[Flag of the British Indian Ocean Territory|British Indian Ocean Territory]]
+| A Blue Ensign with white wavy lines, defaced with the [[coat of arms of the British Indian Ocean Territory]].
+|-
+! scope="row" | [[File:Flag of the British Virgin Islands.svg|150px]]
+| rowspan="2" | 1960–present
+| rowspan="2" | [[Flag of the British Virgin Islands|British Virgin Islands]]
+| A Blue Ensign defaced with the [[coat of arms of the British Virgin Islands]]. Used on land and as the government ensign.
+|-
+! scope="row" | [[File:Civil Ensign of the British Virgin Islands.svg|150px]]
+| A Red Ensign defaced with the [[coat of arms of the British Virgin Islands]]. Used on land and as the [[civil ensign]].
+|-
+! scope="row" | [[File:Flag of the Cayman Islands.svg|150px]]
+| rowspan="2" | 1999–present
+| rowspan="2" | [[Flag of the Cayman Islands|Cayman Islands]]
+| A Blue Ensign defaced with the [[coat of arms of the Cayman Islands]]. Used on land and as the government ensign.
+|-
+! scope="row" | [[File:Civil Ensign of the Cayman Islands.svg|150px]]
+| A Red Ensign defaced with the [[coat of arms of the Cayman Islands]]. Used on land and as the [[civil ensign]].
+|-
+! scope="row" | [[File:Flag of the Falkland Islands.svg|150px]]
+| rowspan="2" | 1999–present
+| rowspan="2" | [[Flag of the Falkland Islands|Falkland Islands]]
+| A Blue Ensign defaced with the [[coat of arms of the Falkland Islands]]. Used on land and as the government ensign.
+|-
+! scope="row" | [[File:Civil Ensign of the Falkland Islands.svg|150px]]
+| A Red Ensign defaced with the [[coat of arms of the Falkland Islands]]. Used on land and as the [[civil ensign]].
+|-
+! scope="row" | [[File:Flag of Gibraltar.svg|150px]]
+| 1982–present
+| rowspan="3" | [[Flag of Gibraltar|Gibraltar]]<ref>{{Cite web |url=http://www.redensigngroup.org/entities/category-1/gibraltar.aspx |title=Red Ensign Group – Gibraltar |access-date=16 July 2014 |archive-date=31 August 2012 |archive-url=https://web.archive.org/web/20120831042311/http://www.redensigngroup.org/entities/category-1/gibraltar.aspx |url-status=dead }}</ref>
+| Two horizontal bands of white (top, double width) and red with a three-towered red castle in the centre of the white band; hanging from the castle gate is a gold key centred in the red band. This is the flag commonly used on land.
+|-
+! scope="row" | [[File:Government Ensign of Gibraltar.svg|150px]]
+| 1999–present
+| A [[Blue Ensign]] defaced with the badge of Gibraltar in the fly. This is the ensign for vessels owned by the Government, or in Government service.
+|-
+! scope="row" | [[File:Civil Ensign of Gibraltar.svg|150px]]
+| 1996–present
+| A [[Red Ensign]] defaced with the badge of Gibraltar in the fly. Used as the [[civil ensign]] for locally registered vessel.
+|-
+! scope="row" | [[File:Flag of Montserrat.svg|150px]]
+| 1999–present
+| [[Flag of Montserrat|Montserrat]]
+| A Blue Ensign defaced with the [[coat of arms of Montserrat]].
+|-
+! scope="row" | [[File:Flag of the Pitcairn Islands.svg|150px]]
+| 1984–present
+| [[Flag of the Pitcairn Islands|Pitcairn Islands]]
+| A Blue Ensign defaced with the [[coat of arms of the Pitcairn Islands]].
+|-
+! scope="row" | [[File:Flag of Saint Helena.svg|150px]]
+| 1984–present
+| [[Flag of Saint Helena|Saint Helena]], a constituent part of [[Saint Helena, Ascension and Tristan da Cunha]]
+| A Blue Ensign defaced with the [[coat of arms of Saint Helena]].
+|-
+! scope="row" | [[File:Flag of South Georgia and the South Sandwich Islands.svg|150px]]
+| 1985–present
+| [[Flag of South Georgia and the South Sandwich Islands|South Georgia and the South Sandwich Islands]]
+| A Blue Ensign defaced with the [[coat of arms of South Georgia and the South Sandwich Islands]].
+|-
+! scope="row" | [[File:Flag of Tristan da Cunha.svg|150px]]
+| 2002–present
+| [[Flag of Tristan da Cunha|Tristan da Cunha]], a constituent part of [[Saint Helena, Ascension and Tristan da Cunha]]
+| A Blue Ensign defaced with the [[coat of arms of Tristan da Cunha]].
+|-
+! scope="row" | [[File:Flag of the Turks and Caicos Islands.svg|150px]]
+| rowspan="2" | 1968–present
+| rowspan="2" | [[Flag of the Turks and Caicos Islands|Turks and Caicos Islands]]
+| A Blue Ensign defaced with the [[coat of arms of the Turks and Caicos Islands]].
+|-
+! scope="row" | [[File:Civil Ensign of the Turks and Caicos Islands.svg|150px]]
+| A Red Ensign defaced with the [[coat of arms of the Turks and Caicos Islands]].
+|}
+
+===Governors' flags===
+Prior to 1999, all governors' flags had smaller discs and the outer green garland without the gold ring. Therefore, the dates given do not reflect this minor, consistent change.
+
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of the Governor of Anguilla variant.svg|border=no|150px}}
+| 1990–present
+| Personal flag of the [[governor of Anguilla]]
+| A Union Jack defaced with the [[coat of arms of Anguilla]]
+|-
+! scope="row" | [[File:Flag of the Governor of Bermuda.svg|150px]]
+| Before 2011
+| Personal flag of the [[governor of Bermuda]]
+| A Union Jack defaced with the [[coat of arms of Bermuda]]
+|-
+! scope="row" | [[File:Flag of the Commissioner of the British Antarctic Territory.svg|150px]]
+| 1962–present
+| Personal flag of the [[commissioner of the British Antarctic Territory]]|| A Union Jack defaced with the [[coat of arms of the British Antarctic Territory]]
+|-
+! scope="row" | [[File:Flag of the British Indian Ocean Territory.svg|150px]]
+| 1990–present
+| Flag of the [[commissioner of the British Indian Ocean Territory]]
+| A design based on the Blue Ensign with a Union Jack in the union and wavy white lines going horizontally along the field, defaced with the [[coat of arms of the British Indian Ocean Territory]]. This flag is also used as the de facto flag of the Territory.
+|-
+! scope="row" | [[File:Flag of the Governor of the British Virgin Islands.svg|150px]]
+| 1971–present
+| Personal flag of the [[governor of the British Virgin Islands]]
+| A Union Jack defaced with the [[coat of arms of the British Virgin Islands]]
+|-
+! scope="row" | [[File:Flag of the Governor of the Cayman Islands.svg|150px]]
+| 1971–present
+| Personal flag of the [[governor of the Cayman Islands]]
+| A Union Jack defaced with the [[coat of arms of the Cayman Islands]]
+|-
+! scope="row" | [[File:Flag of the Governor of the Falkland Islands.svg|150px]]
+| 1948–present
+| Personal flag of the [[governor of the Falkland Islands]]
+| A Union Jack defaced with the [[coat of arms of the Falkland Islands]]
+|-
+! scope="row" | [[File:Flag of the Governor of Gibraltar.svg|150px]]
+| Before 2011
+| Personal flag of the [[governor of Gibraltar]]
+| A Union Jack defaced with the [[coat of arms of Gibraltar]]
+|-
+! scope="row" | [[File:Flag of the Governor of Montserrat.svg|150px]]
+| Before 2011
+| Personal flag of the [[governor of Montserrat]]
+| A Union Jack defaced with the [[coat of arms of Montserrat]]
+|-
+! scope="row" | [[File:Flag of the Governor of Saint Helena.svg|150px]]
+| Before 2011
+| Personal flag of the [[governor of Saint Helena]]
+| A Union Flag defaced with the [[coat of arms of Saint Helena]]
+|-
+! scope="row" | [[File:Flag of the Commissioner for South Georgia and the South Sandwich Islands.svg|150px]]
+| 1999–present
+| Personal flag of the [[commissioner for South Georgia and the South Sandwich Islands]]
+| A Union Jack defaced with the [[coat of arms of South Georgia and the South Sandwich Islands]]
+|-
+! scope="row" | [[File:Flag of the Administrator of Tristan da Cunha.svg|150px]]
+| 2002–present
+| Personal flag of the [[governor of Tristan da Cunha]], also used by the Administrator of Tristan da Cunha
+| A Union Jack defaced with the [[coat of arms of Tristan da Cunha]].
+|-
+! scope="row" | [[File:Flag of the Governor of the Turks and Caicos Islands.svg|150px]]
+| Before 2011
+| Personal flag of the [[governor of the Turks and Caicos Islands]]
+| A Union Jack defaced with the [[coat of arms of the Turks and Caicos Islands]]
+|}
+
+===Municipal flags===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of Hamilton, Bermuda.svg|border=no|150px}}
+|
+| Flag of [[Hamilton, Bermuda|Hamilton]], Bermuda
+|
+|-
+! scope="row" | [[File:Flag of St George's, Bermuda.svg|150px]]
+|
+| Flag of [[St. George's, Bermuda|St. George's]], Bermuda
+|
+|}
+
+==Ensigns==
+{{Main|British ensign}}
+
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"| Flag !! style="width:100px;"| Date !! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Government Ensign of the United Kingdom.svg|border=no|150px}}
+| 1801–present
+| [[Blue Ensign]], used by some organisations or territories associated with the UK and also used by [[Royal Navy Reserve]] (not for some time) Captain of [[Merchant Navy]] Ship – e.g., {{RMS|Queen Mary}}
+| A blue field, with a Union Jack in the canton
+|-
+! scope="row" | [[File:Government Service Ensign.svg|150px]]
+| 1864–present
+| [[Government Service Ensign]] (previously the Transport Ensign or Admiralty Ensign)
+| A Blue Ensign defaced with a horizontal yellow anchor
+|-
+! scope="row" | 
+| 2025<ref>{{cite web|title=Marine and fisheries compliance: fleet and aircraft|url=https://www.gov.scot/publications/marine-and-fisheries-compliance-fleet-and-aircraft/|publisher=The Scottish Government|access-date=9 February 2026|date=12 January 2026}}</ref>
+| Scottish Government [[Marine Directorate]] ensign
+| A Blue Ensign defaced with the badge showing an [[anchor]] and the letters M and D, surrounded by a wreath of thistles, all beneath the [[Crown of Scotland]]
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+| 1801–present
+| [[Red Ensign]], used by the [[British Merchant Navy|Merchant Navy]]
+| A red field, with a Union Jack in the canton
+|-
+! scope="row" | [[File:Civil jack of the United Kingdom.svg|150px]]
+| 1801–present
+| Civil Jack
+| A Union Jack with a white border
+|-
+! scope="row" | [[File:Trinity House Ensign.svg|150px]]
+|
+| The Ensign of Trinity House
+| [[Red Ensign]] defaced with the shield of the coat of arms (a [[St George's Cross]] with a sailing ship in each quarter). The Master and Deputy Master each have their own flags.
+|-
+! scope="row" | [[File:Ensign of the Royal National Lifeboat Institution.svg|150px]]
+|
+| [[Royal National Lifeboat Institution]]
+|
+|-
+! scope="row" | [[File:Red Ensign of the Maritime Volunteer Service.jpg|150px]]
+| 1994–present
+| [[Maritime Volunteer Service]]
+| 
+|-
+! scope="row" | [[File:Company of Watermen and Lightermen Ensign.gif|150px]]
+|
+| [[Company of Watermen and Lightermen]]
+|
+|-
+! scope="row" | [[File:Ensign of the Commissioners of Irish Lights.svg|150px]]
+|
+| Ensign of the [[Commissioners of Irish Lights]], used by CIL vessels in Northern Ireland
+| The Blue Ensign defaced with the commissioners' badge in the fly.
+|-
+! scope="row" | [[File:UK NHS Fleet Ensign.svg|150px]]
+| 2006–present
+| Ship of the [[National Historic Fleet]]
+|
+|-
+! scope="row" | [[File:UK National Historic Ships Ensign.svg|150px]]
+| 2006–present
+| Registered vessel of the [[National Historic Ships UK]]
+|
+|-
+! scope="row" | [[File:Civil Air Ensign of the United Kingdom.svg|150px]]
+| 1931–present
+| [[British civil air ensign|Civil air ensign]], used by civilian aircraft and at civil airports
+| A white-edged blue cross on a light blue field with the Union Jack in the canton.
+|-
+! scope="row" | [[File:Dunkirk Jack.svg|150px]]
+|
+| Dunkirk Jack, used by Member Ships of the [[Association of Dunkirk Little Ships]], which consists of civilian vessels that participated in the [[Dunkirk evacuation]].
+| The Cross of Saint George defaced with the arms of [[Dunkirk]].
+|-
+! scope="row" | [[File:Cornish Ensign.svg|150px]]
+|
+| Unofficial [[Saint Piran's Flag#Usage|Cornish ensign]] (or [[Saint Piran|St Piran's]] Ensign)<ref>[https://www.fotw.info/flags/gb-corn.html#ens Flags of the World] {{webarchive|url=https://web.archive.org/web/20070117170419/https://www.fotw.info/flags/gb-corn.html |date=17 January 2007 }}</ref>
+| The Cornish flag defaced with a Union flag in the canton.
+|-
+! scope="row" | [[File:Ensign of the Duke of Cornwall.svg|150px]]
+| 2000–present
+| Another unofficial Cornish ensign flown by the ship ''Sweet Promise'' during the 'Brest 2000' festival.
+| The Cornish flag defaced with the Standard of the Duke of Cornwall in the canton.
+|-
+! scope="row" | [[File:Devon Ensign.gif|150px]]
+| 2003–present
+| Unofficial [[Flag of Devon#Devon Ensign|Devon Ensign]] (or [[Saint Petroc|St Petroc's]] Ensign)
+| The Devon flag defaced with a Union flag in the canton.
+|-
+! scope="row" | [[File:Warwickshire English Deface.svg|150px]]
+| 2023–present
+| Unofficial [[Warwickshire]] ensign found within [[Etone College]]
+| [[St. George’s Cross|St. George's Cross]] defaced with a [[Bear and Ragged Staff]] in the canton.
+|}
+
+===Naval Service===
+{{Main|Naval Service (United Kingdom)}}
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"| Flag !! style="width:100px;"| Date !! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Naval Ensign of the United Kingdom.svg|border=no|150px}}
+| 1801–present
+| [[White Ensign]], [[Royal Navy]], usually ships bearing the prefix [[His Majesty's Ship|HMS]] (but see blue ensign), and the [[Royal Yacht Squadron]]
+| A red cross on a white field with the Union Jack in the canton
+|-
+! scope="row" | [[File:British-Royal-Fleet-Auxiliary-Ensign.svg|150px]]
+| 1968–present
+| Ensign of the [[Royal Fleet Auxiliary]]
+| A Blue Ensign defaced with a vertical yellow anchor
+|-
+! scope="row" | [[File:British Royal Maritime Auxiliary Ensign.svg|150px]]
+| 1974–2008
+| Ensign of the [[Royal Maritime Auxiliary Service]]
+| A Blue Ensign defaced with a horizontal yellow anchor with two wavy yellow lines beneath
+|-
+! scope="row" | [[File:British RNXS ensign.png|150px]]
+| 1963–present
+| Ensign of the [[Royal Naval Auxiliary Service]]
+| A Blue Ensign defaced with the shield of the [[Royal Naval Auxiliary Service]]
+|-
+! scope="row" | [[File:Naval Section Combined Cadet Force Ensign.jpg|150px]]
+|
+| [[Combined Cadet Force]] Naval Section Ensign
+| RNR Blue Ensign with CCF Naval Section badge
+|-
+! scope="row" | [[File:Ensign of the Sea Cadet Corps.svg|150px]]
+| 1942–present
+| [[Sea Cadet Corps]] Ensign
+| RNR Blue Ensign with SCC badge
+|-
+! scope="row" | [[File:Flag of the Lord High Admiral of the United Kingdom.svg|150px]]
+|
+| Flag of the [[Lord High Admiral of the United Kingdom]]
+| A fouled anchor on a crimson background.
+|-
+! scope="row" | [[File:Flag of the Royal Marines.svg|150px]]
+|
+| Flag of the [[Royal Marines|Corps of His Majesty's Royal Marines]]
+| A dark blue field with unequal horizontal yellow, green, and red stripes, and the crest of the Royal Marines.
+|-
+! scope="row" | [[File:Flag of the Commandant General Royal Marines.svg|150px]]
+|
+| Flag of the [[Commandant General Royal Marines]]
+| A dark blue field with a [[fouled anchor]], lion, and crown.
+|-
+! scope="row" | [[File:King's Colour for the Royal Navy.svg|150px]]
+|
+| King's Colour for the Royal Navy
+| A White Ensign defaced in the centre of the cross with a garter of the Order of the Garter encircling the Royal Cypher of [[King Charles III]] and surmounted by a Tudor Crown.
+|}
+
+===Army===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"| Flag !! style="width:100px;"| Date !! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of the British Army.svg|border=no|150px}}
+|
+| Non-ceremonial flag of the [[British Army]]
+| A red field defaced with the badge of the British Army.
+|-
+! scope="row" | [[File:Royal Engineers Ensign.png|150px]]
+| 1838–present
+| Ensign of the Corps of [[Royal Engineers]]
+| A blue government ensign defaced with the crest of the coat of arms of the [[Board of Ordnance]].
+|-
+! scope="row" | [[File:Flag of the Corps of Royal Engineers Camp (1952–2022).svg|150px]]
+| 1952–2022
+| Camp flag of the Royal Engineers
+|
+|-
+! scope="row" | [[File:Flag of the Corps of Royal Engineers Camp.svg|150px]]
+| 2022–present
+| Camp flag of the Royal Engineers
+|
+|-
+! scope="row" | [[File:British Army Ensign00.svg|150px]]
+|
+| Ensign of the [[Royal Logistic Corps]] for use on vessels commanded by a commissioned officer.
+| A blue government ensign defaced with the [[British Army]] badge of a crown and lion in front of crossed swords.
+|-
+! scope="row" | [[File:British Army Ensign01.svg|150px]]
+|
+| Ensign of the [[Royal Logistic Corps]] for use on vessels under command of a non-commissioned officer.
+| A blue government ensign defaced by [[British Army]] crossed swords.
+|}
+
+===Air Force===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"| Flag !! style="width:100px;"| Date !! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Ensign of the Royal Air Force.svg|border=no|150px}}
+| 1921–present
+| [[Royal Air Force Ensign]]
+| An RAF light blue field with the Royal Air Force roundel in the fly with a Union Jack in the canton
+|-
+! scope="row" | [[File:Ensign of the Royal Observer Corps (1952-1995).png|150px]]
+| 1945–1996
+| [[Royal Observer Corps]] Ensign
+| RAF Ensign with RAF roundel replaced by ROC badge
+|-
+! scope="row" | [[File:Ensign of the Air Training Corps.svg|150px]]
+|
+| [[Air Training Corps]] Ensign
+| RAF Ensign with RAF roundel replaced by ATC badge
+|-
+! scope="row" | [[File:Royal Banner RAF (King Charles III's).svg|150px]]
+|
+| King's Colour for the Royal Air Force
+| An RAF light blue field with the Union Jack in the canton. In the centre a golden cypher of [[Charles III|King Charles III]] topped by a crown in natural colours, in the lower fly-end the roundel of the RAF. The edge fringed in silver and blue.
+|-
+| [[File:Royal Banner ROC.PNG|160px]]
+| 1966–1996
+| Royal Banner of the Royal Observer Corps
+| An RAF light blue field with the golden cypher of [[Elizabeth II]], topped by the [[St Edward’s Crown]] in natural colours, in the canton. In the centre the badge of the ROC showing the [[Tudor Crown]] version. The edge fringed in silver and blue.
+|}
+
+===Combined Forces===
+{{main|Ministry of Defence (United Kingdom)|British Armed Forces}}
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"| Flag !! style="width:100px;"| Date !! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of the Ministry of Defence (United Kingdom).svg|border=no|150px}}
+| 1956–present
+| Flag of the [[British Armed Forces|Joint Services]]
+| A dark blue, red, and light blue vertical [[tricolour (flag)|tricolour]] defaced with the Joint Service badge.  A simplified version with the badge in black is also in use. The tricolour is a combination of the colours of the Armed Forces.
+|-
+! scope="row" | [[File:Flag of the British Secretary of State for Defence.svg|150px]]
+|
+| Flag of the [[Secretary of State for Defence]]
+| A dark blue, red, and light blue horizontal [[tricolour (flag)|tricolour]] defaced with a crown and lion. The tricolour is a combination of the colours of the Armed Forces.
+|-
+! scope="row" | [[File:Flag of the Chief of the Defence Staff.svg|150px]]
+| 1965–present
+| Flag of the [[Chief of the Defence Staff (United Kingdom)|Chief of the Defence Staff]]
+| A dark blue, red, and light blue horizontal [[tricolour (flag)|tricolour]] with a Union canton and defaced with the badge of the Chief of the Defence Staff. The tricolour is a combination of the colours of the Armed Forces.
+|-
+! scope="row" | [[File:Ministry Of Defence Police Ensign.svg|150px]]
+| 1971–present
+| Ensign of the [[Ministry of Defence Police]]
+| A Blue Ensign defaced with the badge of the Ministry of Defence Police.
+|-
+! scope="row" | [[File:Flag of the Combined Cadet Force.png|150px]]
+| 1948–present
+| Standard of the [[Combined Cadet Force]]
+| A green banner defaced with a tricoloured roundel: the crowns of the three services on their associated colour, surrounded by the words "Combined Cadet Force".
+|}
+
+===Yacht club ensigns and burgees===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"| Burgee!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Naval Ensign of the United Kingdom.svg|border=no|150px}}
+! scope="row" | {{ListFlag|Royal-Yacht-Squadron-Burgee.svg|border=no|150px}}
+| Ensign of the [[Royal Yacht Squadron]]
+| The same as the Naval ensign of the United Kingdom.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+| [[File:Burgee of the Royal Naval Sailing Association.gif|150px]]
+| Ensign of the [[Royal Naval Sailing Association]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Naval Volunteer Reserve Yacht Club.png|150px]]
+| Ensign of the [[Royal Naval Volunteer Reserve Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:REYC Burgee.svg|150px]]
+| Ensign of the [[Royal Engineers#Royal Engineers' Yacht Club|Royal Engineers Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+| [[File:Burgee of the Royal Cinque Ports Yacht Club.gif|150px]]
+| Ensign of the [[Royal Cinque Ports Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+| [[File:Burgee of the Royal Gourock Yacht Club.gif|150px]]
+| Ensign of the [[Royal Gourock Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:RSouthernYC.png|150px]]
+| Ensign of the [[Royal Southern Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:RNCYC Burgee.png|150px]]
+| Ensign of the [[Royal Northern and Clyde Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of royal thames yc.svg|150px]]
+| Ensign of the [[Royal Thames Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Government Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of the Sussex Motor Yacht Club.svg|150px]]
+| Burgee of the [[Sussex Motor Yacht Club]]
+| Blue Ensign.
+|-
+! scope="row" | [[File:Blue Ensign defaced with crown.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Anglesey Yacht Club.svg|150px]]
+| Ensign of the [[Royal Anglesey Yacht Club]]
+| The Blue Ensign defaced with a crown in the middle of the Union Jack.
+|-
+! scope="row" | [[File:Blue Ensign defaced with crown.svg|150px]]
+! scope="row" | [[File:Burgee of Royal Southampton YC.svg|150px]]
+| Ensign of the [[Royal Southampton Yacht Club]]
+| The Blue Ensign defaced with a crown in the middle of the Union Jack.
+|-
+! scope="row" | [[File:Blue Ensign defaced with crown.svg|150px]]
+| [[File:Burgee of Royal Torbay YC.png|150px]]
+| Ensign of the [[Royal Torbay Yacht Club]]
+| The Blue Ensign defaced with a crown in the middle of the Union Jack.
+|-
+! scope="row" | [[File:Ensign of the Bar Yacht Club.svg|150px]]
+! scope="row" | [[File:Bar Yacht Club burgee.svg|150px]]
+| Ensign of the [[Bar Yacht Club]]
+| Blue Ensign, defaced with the badge of the Bar Yacht Club.
+|-
+! scope="row" | [[File:HMS Conway Cruising Association Ensign.png|150px]]
+! scope="row" | [[File:HMS Conway Cruising Association Burgee.png|150px]]
+| Ensign of the [[HMS Conway (school ship)|HMS Conway Cruising Association]]
+| Blue Ensign, defaced with the Conway Castle Badge.
+|-
+! scope="row" | [[File:LSC Ensign.png|150px]]
+! scope="row" | [[File:Little ship club burgee.svg|150px]]
+| Ensign of the [[Little Ship Club]]
+| Blue Ensign, defaced with the LSC Emblem.
+|-
+! scope="row" | [[File:Ensign of the Poole Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of PooleYacht Club.svg|150px]]
+| Ensign of the [[Poole Yacht Club]]
+| The Blue Ensign defaced with the emblem of Poole Yacht Club.
+|-
+! scope="row" | [[File:Ensign of the Portsmouth Yacht Club.svg|150px]]
+! scope="row" |
+| Ensign of the [[Portsmouth Yacht Club]]
+| The Blue Ensign defaced with the emblem of Portsmouth Yacht Club.
+|-
+! scope="row" | [[File:Ensign of the Royal Channel Islands Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Channel Islands Yacht Club.svg|150px]]
+| Ensign of the [[Royal Channel Islands Yacht Club]]
+| The Blue Ensign defaced with the coat of arms of [[Jersey]].
+|-
+! scope="row" | [[File:Ensign of the Royal Corinthian Yacht Club.svg|150px]]
+! scope="row" | [[File:Royal Corinthian Yacht Club Burgee.png|150px]]
+| Ensign of the [[Royal Corinthian Yacht Club]]
+| The Blue Ensign defaced with the emblem of Royal Corinthian Yacht Club.
+|-
+! scope="row" | [[File:Ensign of the Royal Cornwall Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Cornwall Yacht Club.svg|150px]]
+| Ensign of the [[Royal Cornwall Yacht Club]]
+| Blue Ensign, defaced with the [[Prince of Wales's feathers heraldic badge]].
+|-
+! scope="row" | [[File:Ensign of the Royal Forth Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Forth Yacht Club.svg|150px]]
+| Ensign of the [[Royal Forth Yacht Club]]
+| The Blue Ensign defaced by a [[cross pattée]], surmounted by the Crown of Scotland.
+|-
+! scope="row" | [[File:Ensign of the Royal Gibraltar Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of Royal Gibraltar YC.svg|150px]]
+| Ensign of the [[Royal Gibraltar Yacht Club]]
+| The Blue Ensign defaced with the coat of arms of [[Gibraltar]].
+|-
+! scope="row" | [[File:Ensign of the Royal Harwich Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of royal harwich yc.svg|150px]]
+| Ensign of the [[Royal Harwich Yacht Club]]
+| The Blue Ensign defaced with a yellow rampant lion.
+|-
+! scope="row" | [[File:House of Lords Yacht Club Ensign.gif|150px]]
+! scope="row" | [[File:House of Lords Yacht Club Burgee.svg|150px]]
+| Ensign of the [[House of Lords Yacht Club]]
+| The Blue Ensign defaced with a yellow crown above an anchor.
+|-
+! scope="row" | [[File:RLYC Ensign.jpg|150px]]
+! scope="row" | [[File:RLYC burgee.png|150px]]
+| Ensign of the [[Royal London Yacht Club]]
+| The Blue Ensign defaced with the arms of the City of London.
+|-
+! scope="row" | [[File:Ensign of the Royal North of Ireland Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal North of Ireland Yacht Club.svg|150px]]
+| Ensign of the [[Royal North of Ireland Yacht Club]]
+| The Blue Ensign defaced in the fly with a yellow shamrock surmounted by a Saint Edward's Crown.
+|-
+! scope="row" | [[File:RPCYC Ensign.gif|150px]]
+| [[File:Burgee of the Royal Plymouth Corinthian Yacht Club.gif|150px]]
+| Ensign of the [[Royal Plymouth Corinthian Yacht Club]]
+| The Blue Ensign defaced with the coat of the arms of the Royal Plymouth Corinthian Yacht Club.
+|-
+! scope="row" | [[File:Ensign of the Royal Ulster Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of royal ulster yc.svg|150px]]
+| Ensign of the [[Royal Ulster Yacht Club]]
+| The Blue Ensign defaced with the [[Red Hand of Ulster]] and St Edward's Crown.
+|-
+! scope="row" | [[File:Ensign of the Royal Yorkshire Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Yorkshire Yacht Club.svg|150px]]
+| Ensign of the [[Royal Yorkshire Yacht Club]]
+| The Blue Ensign defaced in the fly with the [[White Rose of York]] surmounted by a Saint Edward's Crown.
+|-
+! scope="row" | [[File:Ensign of Medway Yacht Club.svg|150px]]
+| [[File:Burgee of the Medway Yacht Club.gif|150px]]
+| Ensign of the [[Medway Yacht Club]]
+| The Blue Ensign defaced with the emblem of Medway Yacht Club.
+|-
+! scope="row" | [[File:Ensign of Old Worcester Yacht Club.svg|150px]]
+| [[File:Burgee of the Old Worcesters Yacht Club.gif|150px]]
+| Ensign of the [[Thames Nautical Training College|Old Worcesters Yacht Club]]
+| The Blue Ensign defaced with the emblem of Old Worcesters Yacht Club.
+|-
+! scope="row" | [[File:Ensign of the Sussex Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Sussex Yacht Club.svg|150px]]
+| Ensign of the [[Sussex Yacht Club]]
+| The Blue Ensign defaced with the emblem of Sussex Yacht Club.
+|-
+! scope="row" | [[File:Ensign of the House of Commons Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the House of Commons Yacht Club.svg|150px]]
+| Ensign of the [[House of Commons Yacht Club]]
+|
+|-
+! scope="row" | [[File:Ensign of the Royal Dart Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Dart Yacht Club.svg|150px]]
+| Ensign of the [[Royal Dart Yacht Club]]
+| The Red Ensign defaced with a Royal Crown and an arrow pointed towards the hoist under the crown.
+|-
+! scope="row" | [[File:Ensign of the Royal Fowey Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Fowey Yacht Club.svg|150px]]
+| Ensign of the [[Royal Fowey Yacht Club]]
+| The Red Ensign defaced with the Coronet of the Duke of Cornwall over the [[Cornish heraldry#Duchy of Cornwall|shield of the Duchy of Cornwall]].
+|-
+! scope="row" | [[File:RHADC defaced Red Ensign.svg|150px]]
+! scope="row" |
+| Ensign of [[Royal Hamilton Amateur Dinghy Club]]
+|
+|-
+! scope="row" | [[File:RLYC Ensign.gif|150px]]
+! scope="row" |
+| Ensign of the [[Lymington#Sailing|Royal Lymington Yacht Club]]
+|
+|-
+! scope="row" | [[File:Ensign of the Royal Norfolk and Suffolk Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Norfolk and Suffolk Yacht Club.svg|150px]]
+| Ensign of the [[Royal Norfolk and Suffolk Yacht Club]]
+|
+|-
+! scope="row" | [[File:Ensign of the Royal Victoria Yacht Club.svg|150px]]
+! scope="row" | [[File:Royal Victoria Yacht Club burgee.svg|150px]]
+| Ensign of the [[Royal Victoria Yacht Club (England)|Royal Victoria Yacht Club]]
+| The Red Ensign defaced with a Royal Crown and the letters 'VR' – ''Victoria Regina''.
+|-
+! scope="row" | [[File:Ensign of the Royal Windermere Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Windermere Yacht Club.svg|150px]]
+| Ensign of the [[Royal Windermere Yacht Club]]
+| The Red Ensign defaced with a Royal Crown.
+|-
+! scope="row" | [[File:RYA Ensign.png|150px]]
+! scope="row" |
+| Ensign of the [[Royal Yacht Association]]
+| The Red Ensign defaced with a Naval Crown.
+|-
+! scope="row" | [[File:Ensign of the St Helier Yacht Club.svg|150px]]
+| [[File:Burgee of the St Helier Yacht Club.gif|150px]]
+| Ensign of the [[St Helier Yacht Club]]
+| The Red Ensign defaced with an anchor and two crossed axes.
+|-
+! scope="row" | [[File:Ensign of the West Mersea Yacht Club.svg|150px]]
+! scope="row" | [[File:Burgee of westmerseyyc.svg|150px]]
+| Ensign of the [[West Mersea Yacht Club]]
+| The Red Ensign defaced with three swords (Essex symbol).
+|-
+! scope="row" | [[File:Ensign of the Royal Air Force Sailing Association.svg|150px]]
+! scope="row" | [[File:Burgee of the Royal Air Force.svg|150px]]
+| Ensign of the [[Royal Air Force Sailing Association]]
+| The RAF Ensign defaced with an eagle.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Cargreen Yacht Club.svg|150px]]
+| Burgee of the [[Cargreen Yacht Club]]
+| A green burgee defaced with a red brick chimney outlined in black in the hoist.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Flushing Sailing Club.svg|150px]]
+| Burgee of the [[Flushing Sailing Club]]
+| A black burgee defaced with a gold letter "V".
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Helford River Sailing Club.svg|150px]]
+| Burgee of the [[Helford River Sailing Club]]
+| A blue burgee divided by a red cross outlined in white, with a gold ship in the centre.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of the Humber Yawl Club.svg|150px]]
+| Burgee of the [[Humber Yawl Club]]
+| A red burgee surrounded by a white border on all sides and defaced with the initials "HYC" in white.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Itchenor Sailing Club Burgee.png|150px]]
+| Burgee of the [[Itchenor Sailing Club]]
+| 
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of the Island Cruising Club, Salcombe.svg|150px]]
+| Burgee of the [[Island Cruising Club of Salcombe]]
+| A green burgee defaced with the monogram "ICC" in gold.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Junior Offshore Group Burgee.svg|150px]]
+| Burgee of the [[Junior Offshore Group]]
+|
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Looe Sailing Club.svg|150px]]
+| Burgee of the [[Looe Sailing Club]]
+| A diagonally divided burgee of seven red and yellow stripes (four red and three yellow) defaced with a black silhouette of a ship on the waves.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Mount’s Bay Sailing Club.svg|150px]]
+| Burgee of the [[Mount's Bay Sailing Club]]
+|
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Mylor Yacht Club.svg|150px]]
+| Burgee of the [[Mylor Yacht Club]]
+| A white burgee divided by a red Saint George's Cross with the shield from the arms of the Duchy of Cornwall in the canton.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Padstow Sailing Club.svg|150px]]
+| Burgee of the [[Padstow Sailing Club]]
+| A white burgee defaced with a red-and-white fish and surrounded by a blue border.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Penzance Sailing Club.svg|150px]]
+| Burgee of the [[Penzance Sailing Club]]
+| A black burgee divided by a white Saint Piran's Cross, with a black [[skull and crossbones]] on a white disc in the centre.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Port Navas Yacht Club.svg|150px]]
+| Burgee of the [[Port Navas Yacht Club]]
+| A black burgee with the white-coloured initials "PNYC" arranged vertically in the hoist and separated from the rest of the burgee by a vertical white line, and the rest of the burgee divided by a white Saint Piran's Cross with a gold [[ship's wheel]] to the upper hoist of the cross.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Porthpean Sailing Club.svg|150px]]
+| Burgee of the [[Porthpean Sailing Club]]
+| A blue burgee divided by a white cross, defaced in the centre with a white shield bearing a red saltire.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Quay Sailing Club.svg|150px]]
+| Burgee of [[The Quay Sailing Club]]
+| A white burgee with a crimson border, defaced with a white shield containing three black bells (two above and one below) in the hoist, and the black-coloured initials "Q.S.C." in the fly.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Restronguet Sailing Club.svg|150px]]
+| Burgee of the [[Restronguet Sailing Club]]
+| A blue burgee defaced with a white seashell and surrounded by a white border.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of the Rock Sailing and Waterski Club.svg|150px]]
+| Burgee of the [[Rock Sailing and Waterski Club]]
+| A yellow burgee defaced with a black silhouette of a camel.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of St Ives Sailing Club.svg|150px]]
+| Burgee of the [[St Ives Sailing Club]]
+|
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of St Mawes Sailing Club.svg|150px]]
+| Burgee of the [[St Mawes Sailing Club]]
+| A white-and-red quartered burgee with the shield from the arms of the Duchy of Cornwall in the canton.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of the Saltash Sailing Club.svg|150px]]
+| Burgee of the [[Saltash Sailing Club]]
+|
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of the Seadog Owners Association.svg|150px]]
+| Burgee of the [[Seadog Owners Association]]
+| A blue burgee with a golden simplified silhouette of a Seadog 30 in the middle.
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Seaview Yacht Club Burgee.svg|150px]]
+| Burgee of the [[Sea View Yacht Club]]
+|
+|-
+! scope="row" | [[File:Civil Ensign of the United Kingdom.svg|150px]]
+! scope="row" | [[File:Burgee of Torpoint Mosquito Sailing Club.svg|150px]]
+| Burgee of the [[Torpoint Mosquito Sailing Club]]
+| A dark blue burgee divided by a white cross and defaced with a red diamond in the centre.
+|}
+
+==Royal Standards==
+
+===King Charles III===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Royal standard of the United Kingdom.svg|border=no|150px}}
+| 1801 (original version) 1837 (removed Hanover arms)
+| The [[Royal Standard (United Kingdom)|Royal Standard]] of the [[United Kingdom]] (except Scotland)
+| A banner of the King's Arms, the [[Royal Coat of Arms of the United Kingdom]]
+|-
+! scope="row" | [[File:Royal Standard of the United Kingdom in Scotland.svg|150px]]
+| 1801 (original version) 1837 (removed Hanover arms)
+| The [[Royal Standard (United Kingdom)|Royal Standard]] of the [[United Kingdom]] (only Scotland)
+| A banner of the King's Arms used in Scotland, the Royal Coat of Arms of the United Kingdom used in Scotland
+|}
+
+===Standards and banners of the Prince of Wales===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Royal Standard of the Prince of Wales.svg|border=no|150px}}
+|
+| Standard of the [[Prince of Wales]], used in England and Northern Ireland
+| A banner of the coat of arms of the Prince of Wales, the Royal coat of arms of the United Kingdom [[Defacement (flag)|defaced]] with a [[Label (heraldry)|label]] of three points.
+|-
+! scope="row" | [[File:Flag of the Duke of Cornwall.svg|150px]]
+|
+| Standard of the Prince of Wales as [[Duke of Cornwall]]
+| Fifteen golden circles (''[[bezant]]s'') on a black field
+|-
+! scope="row" | [[File:Royal Standard of the Duke of Rothesay.svg|150px]]
+|
+| Standard of the Prince of Wales as [[Duke of Rothesay]].
+| The [[Royal Banner of Scotland]] defaced with a label of three points.<ref>{{cite web|url=https://www.flickr.com/photos/beery_pix/2689133146/ |title=Royal banners, Order of the Thistle &#124; Flickr – Photo Sharing! |publisher=Flickr |date=21 July 2008 |access-date=14 November 2012}}</ref>
+|-
+! scope="row" | [[File:Personal Banner of the Duke of Rothesay.svg|150px]]
+|
+| Banner of the Prince of Wales as Duke of Rothesay
+| Banner of the Duke's arms, first and fourth quarters representing the title of [[Great Steward of Scotland]], the second and third quarters representing the title of [[Lord of the Isles]], (as per the arms of [[Clan Stewart of Appin]]). In the centre on an inescutcheon the arms of the [[heir apparent]] to the [[King of Scots]]
+|-
+! scope="row" | [[File:Personal Banner of the Prince of Wales.svg|150px]]
+| 1962–present
+| Banner of the Prince of Wales, used in [[Wales]]
+| A banner of the coat of arms of Wales. In the centre on an inescutcheon the [[Honours of the Principality of Wales|coronet of the Prince of Wales]]
+|}
+
+===Other members of the Royal Family===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Royal Standard of Queen Camilla.svg|border=no|150px}}
+| 2022–present
+| Standard of [[Queen Camilla]], consort of Charles III
+| Banner of the Royal coat of arms of the United Kingdom impaling the arms of [[Bruce Shand]]
+|-
+! scope="row" | [[File:Royal Standard of Prince Harry, Duke of Sussex.svg|150px]]
+| 2022–present
+| Standard of [[Prince Harry, Duke of Sussex|the Duke of Sussex]]
+| Banner of the Duke's coat of arms, the Royal coat of arms of the United Kingdom with a three-point label bearing scallops in reference to the arms of [[Diana, Princess of Wales]]
+|-
+! scope="row" | [[File:Royal Standard of Prince Andrew, Duke of York.svg|150px]]
+| 1978–present
+| Standard of [[Andrew Mountbatten-Windsor]]
+| Banner of Andrew's coat of arms, the Royal coat of arms of the United Kingdom with a three-point label, the centre label bearing a blue anchor
+|-
+! scope="row" | [[File:Royal Standard of Princess Beatrice of York.svg|150px]]
+| 2006–present
+| Standard of [[Princess Beatrice, Mrs Edoardo Mapelli Mozzi]]
+| Banner of the Princess's coat of arms, the Royal coat of arms of the United Kingdom with a five-point label with three bees in alternating points
+|-
+! scope="row" | [[File:Royal Standard of Princess Eugenie of York.svg|150px]]
+| 2008–present
+| Standard of [[Princess Eugenie, Mrs Jack Brooksbank]]
+| Banner of the Princess's coat of arms, the Royal coat of arms of the United Kingdom with a five-point label with three thistle heads in alternating points
+|-
+! scope="row" | [[File:Royal Standard of Prince Edward, Earl of Wessex.svg|150px]]
+|
+| Standard of [[Prince Edward, Duke of Edinburgh|the Duke of Edinburgh]]
+| Banner of the Duke's coat of arms, the Royal coat of arms of the United Kingdom with a three-point label, the centre label bearing a [[Tudor Rose]]
+|-
+! scope="row" | [[File:Royal Standard of Princess Anne, Princess Royal.svg|150px]]
+|
+| Standard of [[Anne, Princess Royal|the Princess Royal]]
+| Banner of the Princess's coat of arms, the Royal coat of arms of the United Kingdom with a three-point label, the first and third labels bearing a red cross, the centre label bearing a red heart.
+|-
+! scope="row" | [[File:Royal Standard of Prince Richard, Duke of Gloucester.svg|150px]]
+| 1962–present
+| Standard of [[Prince Richard, Duke of Gloucester|the Duke of Gloucester]]
+| Banner of the Duke's coat of arms, the Royal coat of arms of the United Kingdom with a five-point label, the first, third and fifth labels bearing a red cross, the second and fourth labels bearing a red lion.
+|-
+! scope="row" | [[File:Royal Standard of Prince Edward, Duke of Kent.svg|150px]]
+|
+| Standard of [[Prince Edward, Duke of Kent|the Duke of Kent]]
+| Banner of the Duke's coat of arms, the Royal coat of arms of the United Kingdom with a five-point label, the first, third and fifth labels bearing a blue anchor, the second and fourth labels bearing a red cross.
+|-
+! scope="row" | [[File:Royal Standard of Prince Michael of Kent.svg|150px]]
+|
+| Standard of [[Prince Michael of Kent]]
+| Banner of the Prince's coat of arms, the Royal coat of arms of the United Kingdom with a five-point label, the first, third and fifth labels bearing a red cross, the second and fourth labels bearing a blue anchor.
+|-
+! scope="row" | [[File:Royal Standard of Princess Alexandra, The Honourable Lady Ogilvy.svg|150px]]
+| 1961–present
+| Standard of [[Princess Alexandra, The Honourable Lady Ogilvy]]
+| Banner of the Princess's coat of arms, the Royal coat of arms of the United Kingdom with a five-point label, the first and fifth labels bearing a red heart, the second and fourth labels bearing a blue anchor, the third label bearing a red cross.
+|}
+
+===Others===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Lionrampant.svg|border=no|150px}}
+| 1323–present
+| The [[Royal Banner of Scotland]]
+| A banner of the ancient [[Royal Arms of Scotland]], now officially used in Scotland by representatives of the sovereign, including the [[First Minister of Scotland]] (as keeper of the [[Great Seal of Scotland]]), the [[Lord High Commissioner to the General Assembly of the Church of Scotland]], the [[Lord Lyon King of Arms]] and [[Lord-Lieutenant]]s within their lieutenancies.<ref>{{cite web |url=http://www.lyon-court.com/lordlyon/237.html |title=The Court of the Lord Lyon – The Lion Rampant Flag |publisher=Lyon-court.com |access-date=14 November 2012 |archive-url=https://web.archive.org/web/20110605030445/http://www.lyon-court.com/lordlyon/237.html |archive-date=5 June 2011 |url-status=dead }}</ref> This flag is also used at the Royal residences of [[Holyrood Palace]] and [[Balmoral Castle]] when the sovereign is not present.
+|-
+! scope="row" | [[File:United-Kingdom-Lord-Lieutenant.svg|150px]]
+|
+| Flag used by the [[Lord-Lieutenant]]s, the sovereign's representative in the counties of the United Kingdom, except by those in Scotland (see above).
+| The Union Jack, defaced with a sword, crowned.
+|-
+! scope="row" | [[File:Flag of the Duchy of Lancaster.svg|150px]]
+|
+| Standard of the [[Duchy of Lancaster]]
+| The [[Royal Banner of England]], with a three-point label, each containing three [[fleurs-de-lis]]
+|-
+! scope="row" | [[File:Lord Warden Cinque Ports (Admiral Sir George Zambellas).png|150px]]
+|
+| Standard of the [[Lord Warden of the Cinque Ports]]
+| A banner of the Lord's coat of arms featuring three Lions passant guardant conjoined to three hulls, all in gold
+|}
+
+==Government==
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag House of Commons.svg|border=no|150px}}
+| 2021–present
+| Flag of the [[House of Commons of the United Kingdom|House of Commons]]
+| A gold parliamentary portcullis and coronet (set slightly towards the hoist from centre) on a field of green.
+|-
+! scope="row" | [[File:HM Customs Ensign.svg|150px]]
+|
+| Ensign of [[HM Revenue & Customs]]
+| A [[Blue Ensign]] defaced with the badge of HM Customs and Excise
+|-
+! scope="row" | [[File:Flag of Senedd Cymru.png|150px]]
+|
+| Flag of the [[Senedd Cymru]].<ref>{{cite web | url=https://www.walesonline.co.uk/news/wales-news/senedd-turns-blue-red-white-10445166 | title=The Senedd turns blue, red and white as Wales shows its solidarity with France | date=14 November 2015 }}</ref>
+| White with the logo of the Senedd Cymru in red
+|-
+! scope="row" |
+| 2008–present
+| Ensign of the [[Border Force]]
+| A [[Blue Ensign]] defaced with the badge of the [[Border Force]]
+|-
+! scope="row" | [[File:Flag of Her Majesty's Coastguard.svg|150px]]
+|
+| Ensign of [[HM Coastguard]]
+| A Blue Ensign defaced with the badge of HM Coastguard
+|-
+! scope="row" | [[File:Ensign of the Scottish Fisheries Protection Agency.svg|150px]]
+|
+| [[Ensign (flag)|Ensign]] used aboard ships of the [[Scottish Government]], such as the patrol boats of the [[Marine Scotland]].
+| A Blue Ensign defaced with the badge of the former Scottish Fisheries Protection Agency
+|-
+! scope="row" | [[File:Ensign of the British Commissioners of Northern Lighthouses.svg|150px]]
+|
+| [[Northern Lighthouse Board|Ensign of the Commissioners of the Northern Lights]]
+| A Blue Ensign defaced with a lighthouse
+|-
+! scope="row" | [[File:Northern Lighthouse Board Commissioners Flag of the United Kingdom.svg|150px]]
+|
+| [[Northern Lighthouse Board|Northern Lighthouse Board Commissioners Flag]]
+| A [[White Ensign]] with a [[Union Flag#The Union Flag before 1801|pre-1801 Union Flag]] in the [[Flag terminology|canton]], defaced with a blue lighthouse in the fly, is the only British flag to still use the pre-1801 Union Flag.<ref>[https://www.fotw.info/flags/gb-lthse.html#cnlc] {{webarchive|url=https://web.archive.org/web/20061024030624/https://www.fotw.info/flags/gb-lthse.html#cnlc|date=24 October 2006}}</ref> This flag is only flown from vessels with the Commissioners aboard and from the Headquarters of the NLB, in [[Edinburgh]].
+|-
+! scope="row" | [[File:Trinity House Ensign.svg|150px]]
+|
+| Ensign of [[Trinity House]]
+| A Red Ensign defaced with a Trinity House jack
+|-
+! scope="row" | [[File:Flag of the Metropolitan Police Service (Charles III).svg|150px]]
+|
+| Flag of the [[Metropolitan Police]]
+| The Badge of the Metropolitan Police on a blue background, with white squares at the edge
+|-
+! scope="row" | [[File:Metropolitan Police Ensign.svg|150px]]
+|
+| Ensign of the [[Metropolitan Police]]
+| The Blue Ensign, defaced with the Badge of the Metropolitan Police.
+|-
+! scope="row" | [[File:Civil Defence Service Flag.svg|150px]]
+| 1943–1945<br />1949–1968
+| Flag of the [[Civil Defence Service]]/[[Civil Defence Corps]]
+| A blue and yellow flag defaced with a [[Tudor Crown (heraldry)|Tudor Crown]] and the letters 'CD'.
+|-
+! scope="row" | [[File:Government Ensign of Wales.svg|150px]]
+| 2017–present
+| [[Ensign (flag)|Ensign]] used aboard ships of the [[Welsh Government]], such as the patrol boats of the [[Marine and Fisheries Division]].
+| A Blue Ensign defaced with a yellow dragon.
+|}
+
+==Church==
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Compassrose Flag.svg|border=no|150px}}
+|
+| [[Flag of the Anglican Communion|Flag]] of the [[Anglican Communion]]
+| A dark blue background with the symbol of the Anglican Communion (a [[compass rose]] surmounted by a bishop's [[mitre]]; in the centre is a [[St. George's cross|cross of St George]]). The [[Greek language|Greek]] motto, {{lang|grc|Ἡ ἀλήθεια ἐλευθερώσει ὑμᾶς}} ("[[The truth will set you free]]") is a quotation from [[Gospel of John|John]] 8:32.
+|-
+! scope="row" | [[File:St Patrick's saltire.svg|150px]]
+| 1999–present
+| Flag used by the [[Church of Ireland]]
+| The [[flag of Saint Patrick]] is one of two flags authorised for use on Church of Ireland buildings and grounds. The other is that of the Anglican Communion above.<ref>{{cite web|url=http://www.ireland.anglican.org/index.php?do=information&id=49 |title=Church of Ireland – A province of the Anglican Communion |publisher=Ireland.anglican.org |access-date=14 November 2012}}</ref>
+|-
+! scope="row" | [[File:Flag of the Church of Scotland.svg|150px]]
+|
+| Flag of the [[Church of Scotland]]
+| The flag of Scotland with the [[burning bush]] in the centre.
+|-
+! scope="row" | [[File:Church in Wales flag.svg|150px]]
+| 1954–present
+| [[Flag of the Church in Wales|Flag]] of the [[Church in Wales]]
+| A navy blue cross with a [[celtic cross]] in the centre.
+|-
+! scope="row" | [[File:Standard of Westminster Abbey.svg|150px]]
+|
+| Flag of [[Westminster Abbey]]
+| [[Tudor dynasty|Tudor]] arms between [[Tudor rose]]s, above [[Edward the Confessor]]'s arms.
+|-
+! scope="row" | [[File:Flag of the Church of St Margaret Westminster Abbey.svg|150px]]
+|
+| Flag of the [[St Margaret's, Westminster|Church of St Margaret, Westminster Abbey]]
+| A blue flag defaced in the centre with a gold dragon's head pierced by a cross, and a gold crowned portcullis in the canton.
+|-
+! scope="row" | [[File:Flag of Exeter Cathedral.svg|150px]]
+| 2014–present
+| Flag of [[Exeter Cathedral]]
+| The coat of arms of Exeter Cathedral on a field of blue.
+|-
+! scope="row" | [[File:Flag of Southwark Cathedral.svg|150px]]
+|
+| Flag of [[Southwark Cathedral]]
+| A banner of the Cathedral's coat of arms.
+|-
+! scope="row" | [[File:Worcester Cathedral Flag.svg|150px]]
+|
+| Flag of [[Worcester Cathedral]]
+| The Cross of Saint George defaced with the coat of arms of Worcester Cathedral in the canton.
+|-
+! scope="row" | [[File:Flag of the Church of St James the Great, Birlingham.svg|150px]]
+| 2013–present
+| Flag of the [[Birlingham#Places of worship|Church of St James the Great, Birlingham]]
+| The Cross of Saint George impaled with a blue field defaced with three gold scallop shells of Saint James (two towards the hoist and one towards the fly).
+|-
+! scope="row" | [[File:St James Church Quedgeley flag.svg|150px]]
+|
+| Flag of [[St James Church, Quedgeley]]<ref>{{cite web |url=http://www.quedgeleychurch.org.uk/history.php#flag |title=The Saint James Flag |author= |date= |work=St James' Church, Quedgeley & Kingsway |access-date=18 May 2023}}</ref>
+| Three gold scallop shells of Saint James (two above and one below) on a field of red.
+|}
+
+==Diplomatic flags==
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|British Ambassador Flag.svg|border=no|150px}}
+|
+| Flag used by [[List of diplomatic missions of the United Kingdom|British embassies]]
+| A Union Jack defaced with the [[royal coat of arms of the United Kingdom]]
+|-
+! scope="row" | [[File:Flag of the United Kingdom (1-2).svg|150px]]
+|
+| Flag used by [[List of diplomatic missions of the United Kingdom|British High Commissions]]
+| High commissions fly the Union Jack
+|-
+! scope="row" | [[File:Flag of the Consulates and Consulates General of the United Kingdom.svg|150px]]
+|
+| Flag used by [[List of diplomatic missions of the United Kingdom|British consulates and consulates-general]]
+| A Union Jack defaced with the Royal Crown
+|-
+! scope="row" | [[File:British Diplomatic Ensign.svg|150px]]
+|
+| Flag used by British consular officials when embarked in small boats; flag displayed at bow
+| A Blue Ensign defaced with the royal coat of arms of the United Kingdom
+|}
+
+==Communities and local government==
+Since 2012 it has been permitted in [[Town and country planning in the United Kingdom|planning law]] in England to fly a flag of any British [[List of islands of the United Kingdom|island]], [[Counties of the United Kingdom|county]], [[Districts of England|district]], [[Borough status in the United Kingdom|borough]], [[burgh]], [[Civil parishes in England|parish]], [[City status in the United Kingdom|city]], [[town]] or [[village]] without planning permission as an advertisement.<ref name="FlagFlyingRegulations2012">{{cite web|url=http://www.legislation.gov.uk/uksi/2012/2372/made|title=The Town and Country Planning (Control of Advertisements) (England) (Amendment) Regulations 2012|access-date=24 November 2012|year=2012|work=UK legislation|publisher=The National Archives}}</ref> Official bodies such as the [[Department for Communities and Local Government]] encourage the use of these flags<ref name="CumbriaEland">{{Cite web|year=2010|title=Cumbria flag flying outside Eland House|publisher=Department for Communities and Local Government|url=https://www.flickr.com/photos/communitiesuk/5181436248/|access-date=24 November 2012}}</ref>
+
+[[Banner of arms]] (flag form of a coat of arms) have long been used to represent local authority councils and the areas they cover.<ref name="Bartram2004">{{cite book|last=Bartram|first=Graham|title=British Flags and Emblems|year=2004|publisher=Tuckwell Press|isbn=186232297X|pages=64–65}}</ref> Some of these include the banners used by Northumberland and Hertfordshire County Councils which before 2012 had already "released" their banners of arms for use as historic county flags, in most cases a historic county flag is derived or (for the two counties) directly adopted.<ref>{{cite web|url=http://www.hertsdirect.org/mm/md/Cabinet_65/081119_cabinet_minutes.doc|title=CABINET 19 NOVEMBER 2008 MINUTES|access-date=24 November 2012|year=2008|publisher=Hertfordshire County Council}}</ref>
+
+Community (or civic) flags have also been adopted to cover small areas or places.
+
+===Local county===
+{{further|Armorial of county councils of England}}
+<!-- Incomplete each local authority banner of arms should be included, when each is divide it by country and type (England for example would have county-tier, district-tier unitary authority and Metropolitan Borough. If all are added then defunct versions for each version unless it was transferred as well as the defunct administrative county and metropolitan-county-tier  banners. Currently it is a mix between all types, current and defunct. -->
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of Angus.png|border=no|150px}}
+|
+| [[Angus, Scotland|Angus]]
+| Consisting of four-quarters containing a red crowned lion passant, a gold cinquefoil, a blue-white checked strip crossed with buckled red belt, and a depiction of the heart of Robert the Bruce to represent the four ancient earldoms of Angus.<ref>{{cite news| url=https://news.bbc.co.uk/2/hi/uk_news/scotland/tayside_and_central/7012734.stm | work=BBC News | title=Council flag plan causes flutter | date=26 September 2007}}</ref>
+|-
+! scope="row" | [[File:Flag of Cambridgeshire County Council.svg|150px]]
+| 1974–present
+| Flag of [[Cambridgeshire]] County Council<ref>{{cite web|url=http://www.flags-flagpoles-banners.co.uk/Cambridgeshire-County-Flag/|title=Cambridgeshire County Flag|access-date=13 January 2013|publisher=Flags, Flagpoles And Banners }}</ref>
+| Banner of the arms adopted after 1974 with elements from the old Cambridgeshire and Isle of Ely CC and Huntingdon and Peterborough CC.
+|-
+! scope="row" | [[File:Flag of Cornwall.svg|150px]]
+| 12th century–present
+| [[Saint Piran's Flag|St Piran's Flag]] – the Flag of Cornwall<ref name=regd/>
+| A white cross on a black field, formally adopted in 1890
+|-
+! scope="row" | [[File:Flag of Cumbria County Council.svg|150px]]
+| Defunct
+| Flag of [[Cumbria County Council]]<ref name="CumbriaEland" />
+| On the green border are Parnassus flowers (representing Cumberland) interspersed with white roses (Yorkshire) superimposed with red roses (Lancashire). The centre of the shield is made up of segments of blue, white, yellow and green divided by wavy vertical lines and zig-zag horizontal lines. This depicts the new County and from hoist to fly the vertical lines of segments show: blue and white for the sea, blue and yellow (gold) for the lakes and agriculture, green and white for mountains and lakes and green and yellow (gold) for mountains and agriculture.
+|-
+! scope="row" | [[File:Flag of Durham County Council.svg|150px]]
+| 1961, altered for post-1974 reform and transferred to unitary authority in 2009
+| [[County Durham District]]
+| A yellow cross on a blue field with lions rampant in each quarter from the [[Bishop of Durham|Bishopric of Durham]]'s arms, black diamonds on each arm (representing coal and industry) added when the arms was originally adopted with a later change to add a [[White Rose of York]] on a blue square in centre of the cross (the latter added in 1974 to represent the area of Yorkshire in Teesdale administered by the council).<ref>{{cite web |url=https://flagspot.net/flags/gb-e-dur.html |title=County Durham, England |website=Flags of the World |year=2015 |access-date=5 June 2016}}</ref>
+|-
+! scope="row" | [[File:Flag of East Sussex.svg|150px]]
+| 1889, altered for post-1974 reform
+| Flag of [[East Sussex]]<ref>{{cite web|url=http://www.flags-flagpoles-banners.co.uk/East-Sussex-County-Flag/|title=East Sussex County Flag|access-date=13 January 2013|publisher=Flags, Flagpoles And Banners }}</ref>
+| Six golden [[martlet]]s on red with a Saxon crown above, white wave later added between the crown and birds.
+|-
+! scope="row" | [[File:Flag of Greater London.svg|150px]]
+| 1965-1986, 2025–present 
+| [[Flag of Greater London]]
+| Adopted by the [[Greater London Council]] (1965–1986), this banner of arms is the last official flag of Greater London. The waves are taken from the flag of the former [[London County Council]] (1914–1965) and the Saxon crown from the flag of [[Middlesex]]. The [[Greater London Authority]] (2001–present) used multiple logo variations without officially flag until November 2025 when the arms and badge of the former Greater London Council were granted to the Greater London Authority.<ref>{{Cite web|url=https://www.crwflags.com/fotw/flags/gb-e-gla.html|title = Greater London (England)}}<ref>https://www.ianvisits.co.uk/articles/the-king-grants-the-mayor-of-london-permission-to-use-the-glcs-historic-coat-of-arms-85896/</ref><ref>https://www.thegazette.co.uk/notice/5009529</ref>
+|-
+! scope="row" | [[File:Unofficial County Flag of Greater Manchester.svg|150px]]
+| Defunct
+| [[Flag of Greater Manchester]]<ref>{{cite web|url=http://www.flyingcolours.org/product-detail.php?ID=3267|title=Greater Manchester|access-date=11 August 2013|work=County Flags|publisher=Flying Colours Flagmakers|url-status=dead|archive-url=https://web.archive.org/web/20131023015517/http://www.flyingcolours.org/product-detail.php?ID=3267|archive-date=23 October 2013}}</ref>
+| Ten golden castles (arranged in rows of 3-2-3-2) on a red background, fringed by a golden border in the style of a castle battlement.
+|-
+! scope="row" | [[File:Flag of Hampshire.svg|150px]]
+| 1992–present
+| [[Flag of Hampshire|Hampshire county banner of arms]]
+| A gold crown on red above a Lancaster rose on gold, the crown representing the former Saxon kingdom of [[Wessex]] and the rose representing England.
+|-
+! scope="row" | [[File:County Flag Of Herefordshire.svg|150px]]
+| 1889 council, re-adopted for post-1996 reformed council
+| [[Flag of Herefordshire]]<ref>{{Cite web|year=2010|title=Herefordshire flag|publisher=Department for Communities and Local Government|url=https://www.flickr.com/photos/communitiesuk/5263451649/in/set-72157624821543799/|access-date=25 November 2012}}</ref>
+|
+|-
+! scope="row" | [[File:FlagOfHertfordshire.PNG|150px]]
+| 2008–present
+| [[Flag of Hertfordshire]]<ref name=regd/>
+| On white and blue wavy background, a Hart reclining on a yellow shield. The use of blue and yellow is derived from [[Saint Alban's Cross]].
+|-
+! scope="row" | [[File:Isle of Wight Council Flag.svg|150px]]
+|
+| [[Flag of the Isle of Wight#Isle of Wight Council flag|Isle of Wight Council banner of arms]]<ref name=regd/>
+| A castle and three gold anchors on a blue background.
+|-
+! scope="row" | [[File:Flag of Lancashire County Council.svg|150px]]
+| 1903, re-adopted for post-1974 reformed council
+| Flag of [[Lancashire County Council]]
+| Red with two full width yellow triangles pointing down and one pointing up, a red rose on each yellow triangle.
+|-
+! scope="row" | [[File:Flag of Leicestershire County Council.svg|150px]]
+|
+| [[Flag of Leicestershire#History|Leicestershire banner of arms]]
+| Flag of the historic county of Leicestershire, registered with the Flag Institute on 16 July 2021<ref>{{Cite web|title=Leicestershire Flag {{!}} Free official image and info {{!}} UK Flag Registry|url=https://www.flaginstitute.org/wp/flags/leicestershire-flag/|access-date=2021-07-20|website=The Flag Institute|language=en-GB}}</ref>
+|-
+! scope="row" | [[File:County Flag of Merseyside.svg|150px]]
+| Defunct
+| Flag of [[Merseyside]]<ref>{{Cite web|title=Merseyside County Flag|publisher=Flags, Flagpoles And Banners|url=http://www.flags-flagpoles-banners.co.uk/Merseyside-County-Flag/|access-date=28 August 2013}}</ref>
+|
+|-
+! scope="row" | [[File:County Flag of Norfolk.svg|150px]]
+|
+| Flag of [[Norfolk County Council]]<ref>{{Cite web|year=2010|title=Norfolk flag flying outside Eland House|publisher=Department for Communities and Local Government|url=https://www.flickr.com/photos/communitiesuk/5464663728/in/set-72157624821543799|access-date=25 November 2012}}</ref>
+| Council banner of arms.<br /><br />For County flag see [[Flag of Norfolk]]
+|-
+! scope="row" | [[File:Flag of Northumberland.svg|150px]]
+| 1951–present
+| [[Flag of Northumberland]]<ref name=regd/> <br />
+| Local authority flag with use permitted to local people. Based on the St Oswald banner.<ref>{{cite web|url=http://www.flaginstitute.org/index.php?location=10&flagtype=county&flagid=112 |title=UK Flag Registry |publisher=Flaginstitute.org |date=20 August 2012 |access-date=14 November 2012}}</ref>
+|-
+! scope="row" | [[File:Flag of Rutland.svg|150px]]
+|
+| [[Flag of Rutland]] {{Citation needed|date=May 2022}}
+|
+|-
+! scope="row" | [[File:FlagOfSouthYorkshire.svg|150px]]
+| Defunct
+| Flag of [[South Yorkshire]]
+| Red and white waves with one and two half black lozenges to represent coal with white roses to represent Yorkshire.
+|-
+! scope="row" | [[File:Banner of arms of Staffordshire council.svg|150px]]
+|
+| Flag of [[Staffordshire]]<ref>{{Cite web|year=2010|title=Staffordshire flag flying outside Eland House|publisher=Department for Communities and Local Government|url=https://www.flickr.com/photos/communitiesuk/5750533858/in/set-72157624821543799|access-date=25 November 2012}}</ref>
+| All the devices on the flag come from arms of various Earls of Stafford. The red chevron on gold was the arms of the de Staffords. It is charged with the family's famous Stafford knot badge.
+|-
+! scope="row" | [[File:Flag of Tyne and Wear.svg|150px]]
+| Defunct
+| Flag of [[Tyne and Wear]]
+| A blue field with a white turret in the centre to represent Hadrian's wall with a white wavy line above to represent the rivers.<ref>{{cite web|url=http://www.flyingcolours.org/product-detail.php?ID=3272|title=Tyne & Wear|access-date=11 August 2013|work=County Flags|publisher=Flying Colours Flagmakers}}</ref>
+|-
+! scope="row" | [[File:County Flag of Warwickshire.svg|150px]]
+| 1931–present
+| Flag of [[Warwickshire]]<ref>{{Cite web|year=2010|title=Warwickshire flag flying outside Eland House|publisher=Department for Communities and Local Government|url=https://www.flickr.com/photos/communitiesuk/5257353984/in/set-72157624821543799/|access-date=25 November 2012}}</ref> – the Bear and Ragged Staff<ref name=":0">{{cite web|url=http://www.warwickshire.gov.uk/web/corporate/pages.nsf/Links/2AA8F837EFE001B180256A38003531A9|title=The Bear and Ragged Staff|access-date=25 November 2012|publisher=Warwickshire County Record Office|archive-url=https://web.archive.org/web/20121022000308/http://www.warwickshire.gov.uk/Web/corporate/pages.nsf/Links/2AA8F837EFE001B180256A38003531A9|archive-date=22 October 2012|url-status=dead}}</ref>
+| A silver bear with red muzzle and gold collar and chain supporting a silver ragged staff on a red shield, with three red crosses (each of which has its arms crossed) on a gold band at the top.<ref>{{cite web |url=http://www.warwickshire.gov.uk/web/corporate/pages.nsf/Links/2AA8F837EFE001B180256A38003531A9 |title=County Record Office – Bear and Ragged Staff – Warwickshire Web |publisher=Warwickshire.gov.uk |access-date=14 November 2012 |archive-url=https://web.archive.org/web/20121022000308/http://www.warwickshire.gov.uk/Web/corporate/pages.nsf/Links/2AA8F837EFE001B180256A38003531A9 |archive-date=22 October 2012 |url-status=dead }}</ref>
+|-
+! scope="row" | [[File:Flag of the West Midlands County.svg|150px]]
+| Defunct
+| Flag of the [[West Midlands (county)|West Midlands]]
+| Banner of arms of the former county council. The flag has two dancetty barrulets interlaced to form a W and M representing the initials of "West Midlands".
+|-
+! scope="row" | [[File:Flag of West Sussex.svg|150px]]
+|
+| Flag of [[West Sussex]]<ref>{{cite web|url=http://www.flags-flagpoles-banners.co.uk/West-Sussex-County-Flag|title=West Sussex County Flag|access-date=13 January 2013|publisher=Flags, Flagpoles And Banners }}</ref>
+| Banner of arms of the local authority. Blue and gold flag with six golden [[martlet]]s.
+|-
+! scope="row" | [[File:County Flag of Worcestershire.png|150px]]
+|
+| Flag of Worcestershire CC<ref>{{Cite web|year=2010|title= Worcestershire flag flying outside Eland House|publisher=Department for Communities and Local Government|url=https://www.flickr.com/photos/communitiesuk/5949654575/in/set-72157624821543799|access-date=24 November 2012}}</ref>
+| Banner of arms of the local authority.
+|}
+
+===Local district===
+{| class="wikitable"
+|- style="background:#efefef;"
+! Flag !! Date !! Use !! Description
+|-
+! scope="row" | {{ListFlag|City Flag of Aberdeen.svg|border=no|150px}}
+|
+| Flag of [[Aberdeen]]<ref name="Bartram2004" />
+| Three white/grey castles on a red field, taken from the city's coat of arms.
+|-
+! scope="row" | [[File:Flag of Belfast.svg|150px]]
+|
+| Flag of [[Belfast]]<ref name="Bartram2004" />
+| A banner of the city's coat of arms. {{UKFlagNote|regd|Belfast}}
+|-
+! scope="row" | [[File:Flag of Cardiff.svg|150px]]
+|
+| Flag of [[Cardiff]]
+| A banner of the city's coat of arms. {{UKFlagNote|regd|Cardiff}}
+|-
+! scope="row" | [[File:Flag of Durham.svg|150px]]
+|
+| Flag of [[Durham, England|Durham]]<ref name="Bartram2004" />
+| A red cross outlined in white on a black field.
+|-
+! scope="row" | [[File:Flag of Edinburgh.svg|150px]]
+|
+| Flag of [[Edinburgh]]<ref name="Bartram2004" />
+| A [[heraldic flag]] derived from the arms of Edinburgh Council.<ref>{{cite web|url=http://www.flaginstitute.org/index.php?location=10&flagtype=city&flagid=123 |title=UK Flag Registry |publisher=Flaginstitute.org |date=20 August 2012 |access-date=14 November 2012}}</ref> {{UKFlagNote|regd|Edinburgh}}
+|-
+! scope="row" | [[File:Flag of Glasgow.svg|150px]]
+|
+| Flag of [[Glasgow]]
+| A banner of the city's coat of arms.
+|-
+! scope="row" | [[File:Flag of Lincoln.svg|150px]]
+|
+| Flag of [[Lincoln, England|Lincoln]]<ref name="Bartram2004" />
+| A banner of the city's coat of arms.
+|-
+! scope="row" | [[File:Banner of the City of London (2x1).svg|150x150px]]
+|
+| Flag of the [[City of London]] (vertical banner)
+| Vertical banner of the arms of the [[City of London Corporation]].
+|-
+! scope="row" | [[File:Flag of Plymouth.svg|150px]]
+|
+| [[Flag of Plymouth]]{{Citation needed|date=May 2022}}<br />(City and Unitary Authority)
+| Banner of the arms of Plymouth City Council.{{Citation needed|date=May 2022}}
+|-
+! scope="row" | [[File:City Flag of Portsmouth.svg|150px]]
+|
+| Flag of [[Portsmouth]]<ref name="Bartram2004" />
+| A banner of the city's coat of arms.
+|-
+! scope="row" | [[File:Flag of Shrewsbury.png|150px]]
+|
+| Flag of [[Shrewsbury]]{{Citation needed|date=May 2022}}
+| A banner of the town's coat of arms, featuring three leopard faces known locally as loggerheads.{{Citation needed|date=May 2022}}
+|-
+! scope="row" | [[File:Flag of Southampton.png|150px]]
+| 2017–present
+| Flag of [[Southampton]]<ref>{{Cite web |title=Community Flag |url=https://www.southampton.gov.uk/people-places/community-involvement/community-flag/ |access-date=2022-05-22 |website=www.southampton.gov.uk |language=en}}</ref>
+| An anchor and Tudor Rose on a red and white background.
+|-
+! scope="row" | [[File:Flag of Telford and Wrekin.svg|150px]]
+| 2025–present
+| Flag of [[Telford and Wrekin]]<ref>{{Cite web |title=Showing support for Telford flag |url=https://newsroom.telford.gov.uk/news/showing-support-for-telford-flag |access-date=2025-11-25 |website= www.telford.gov.uk |language=en}}</ref>
+| [[The Iron Bridge]] on a yellow triangle and cog on a bicolour of blue and green
+|-
+! scope="row" | [[File:Flag of York.svg|150px]]
+|
+| Flag of [[York]]<ref name="Bartram2004" />
+| A banner of the city's coat of arms.
+|}
+
+===Civic===
+{{Main|Flags of cities, towns and villages in the United Kingdom}}
+{| class="wikitable"
+|- style="background:#efefef;"
+! Flag !! Date !! Use !! Description
+|-
+! scope="row" | [[File:Flag of Abingdon-on-Thames.svg|150px]]
+|
+| Flag of [[Abingdon-on-Thames]]
+| Banner of arms.
+|-
+! scope="row" | {{ListFlag|Appleby-in-Westmorland town flag.svg|border=no|150px}}
+|
+| Flag of [[Appleby-in-Westmorland]]
+| A golden heraldic apple tree on blue. {{UKFlagNote|regd|Appleby}}
+|-
+! scope="row" | [[File:Bexhill town flag.svg|150px]]
+| 1893–present
+| Flag of [[Bexhill-on-Sea]]
+| A red saltire, which divides the flag into four sections: two of them white (top and bottom) and two green (hoist and fly). {{UKFlagNote|regd|Bexhill (Sussex)}}
+|-
+! scope="row" | [[File:Birmingham City Flag.svg|150px]]
+|
+| [[Flag of Birmingham (England)|Flag of Birmingham]]<ref name="Bartram2004" />
+| Golden vertical zig-zag offset to hoist dividing blue and red, with a bulls head in the centre. The flag of city as opposed to the banner of the council. {{UKFlagNote|regd|Birmingham}}
+|-
+! scope="row" | [[File:Calne town flag.svg|150px]]
+|
+| Flag of [[Calne]]
+| Golden circle over green, blue, and white stripes. {{UKFlagNote|regd|Calne}}
+|-
+! scope="row" | [[File:Flag of Chesham.svg|150px]]
+|
+| Flag of [[Chesham]]
+| Banner of arms.
+|-
+! scope="row" | [[File:Flag of Colchester.svg|150px]]
+|
+| Flag of [[Colchester]]
+| Banner of arms.
+|-
+! scope="row" | [[File:Coventry city flag.svg|150px]]
+| 2018–present
+| Flag of [[Coventry]]<ref>{{Cite web |date=2022-12-28 |title=Heraldry of the World (HOTW) - Coventry |url=https://www.heraldry-wiki.com/heraldrywiki/index.php?title=Coventry |access-date=2023-03-29 |website=Heraldry of the World |language=en}}</ref>
+| Silhouette of [[Lady Godiva]] on a white field with two stripes in the traditional shade of [[Coventry blue]]. Updated in 2018 from the 1345 arms flag depicting an elephant. {{UKFlagNote|regd|Coventry}}
+|-
+! scope="row" | [[File:Craig-y-Dorth Flag.svg|150px]]
+|
+| Flag of Craig-y-Dorth ([[Cwmcarvan]])
+| Two golden wyverns combatant on blue and red, over a golden triangle with a red loaf. {{UKFlagNote|regd|Craig-y-Dorth}}.
+|-
+! scope="row" | [[File:Flag of Dewsbury.svg|150px]]
+|
+| Flag of [[Dewsbury]]
+| Banner of arms.
+|-
+! scope="row" | [[File:Digbeth village flag.svg|150px]]
+|
+| Flag of [[Digbeth]]
+| Triband of blue, thinner black, and white with counterchanged rings over the black-white division and ripples beneath. {{UKFlagNote|regd|Digbeth}}
+|-
+! scope="row" | [[File:Evenley village flag.svg|150px]]
+|
+| Flag of [[Evenley]]
+| Three golden cowslips on a green hoist, with a dragon slain by Saint George on the yellow field. {{UKFlagNote|regd|Evenley}}
+|-
+! scope="row" | [[File:Finchfield village flag.svg|150px]]
+|
+| Flag of [[Finchfield]]
+| Three golden finches with an interlocking pattern of stylised wheat. {{UKFlagNote|regd|Finchfield}}
+|-
+! scope="row" | [[File:Flore village flag.svg|150px]]
+|
+| Flag of [[Flore, Northamptonshire|Flore]]
+| A white blossom flower on purple and a purple plum on gold divided by a diagonal wavy line. {{UKFlagNote|regd|Flore}}
+|-
+! scope="row" | [[File:Hampton Poyle village flag.svg|150px]]
+|
+| Flag of [[Hampton Poyle]]
+| A white saltire on red with a black border with golden bezants. {{UKFlagNote|regd|Hampton Poyle}}
+|-
+! scope="row" | [[File:Horningsea village flag.svg|150px]]
+|
+| Flag of [[Horningsea]]
+| A potter at his wheel counterchanged across a vertical bisection red and white. {{UKFlagNote|regd|Horningsea}}
+|-
+! scope="row" | [[File:Kingswinford town flag.svg|150px]]
+|
+| Flag of [[Kingswinford]]
+| A white boar with a gold crown on blue. {{UKFlagNote|regd|Kingswinford}}
+|-
+! scope="row" | [[File:Flag of the City of London.svg|150px]]
+|
+| Flag of the [[City of London]]<ref name="Bartram2004" />
+| A red cross on a white field, with a red sword in the canton. A banner of the arms of the [[City of London Corporation]]. {{UKFlagNote|regd|London}}
+|-
+! scope="row" | [[File:Flag of Maidstone.svg|150px]]
+|
+| Flag of [[Maidstone]]
+| Banner of arms.
+|-
+! scope="row" | [[File:Flag of Montrose, Angus.svg|150px]]
+|
+| Flag of [[Montrose, Angus|Montrose]]
+| A red rose on a white field.
+|-
+! scope="row" | [[File:Nenthead village flag.svg|150px]]
+|
+| Flag of [[Nenthead]]
+| A green triangle with white eight pointed star over black and white hoops. {{UKFlagNote|regd|Nenthead}}
+|-
+! scope="row" | [[File:Newbury town flag.svg|150px]]
+|
+| Flag of [[Newbury, Berkshire|Newbury]]
+| Red and blue quarters with castle, teasel, wheatsheaf, and swords. A wavy white-edged blue stripe separates the upper and lower halves. {{UKFlagNote|regd|Newbury}}
+|-
+! scope="row" | [[File:Flag of Newton Abbot.svg|150px]]
+| 2009–present
+| Flag of [[Newton Abbot]]
+| A stylised image of [[St Leonard's Tower, Newton Abbot|St Leonard's Tower]] in the centre of a modified [[flag of Devon]]. The green represents the moors, the black the granite and the white the clay of the surrounding area. The cross is also used to represent a major crossroads in the town which converged on the clock tower. The arms of the cross represent the routes to [[Exeter]] and [[London]], [[Bovey Tracey]] and the [[Dartmoor|moors]], [[Totnes]] and [[Plymouth]], and [[Torquay]] and [[Brixham]].<ref>{{Cite web |title=Newton Abbot, Devon (England) |url=https://www.crwflags.com/fotw/flags/gb-e-nab.html |access-date=5 February 2020 |website=crwflags.com}}</ref><ref>{{Cite web |last=vexilo |date=17 July 2013 |title=Devon |url=https://britishcountyflags.com/2013/07/17/devon-flag/ | access-date=5 February 2020 |website=British County Flags |language=en}}</ref>
+|-
+! scope="row" | [[File:Penrith town flag.svg|150px]]
+|
+| Flag of [[Penrith, Cumbria|Penrith]]
+| A red saltire on white with blue knot/flowers in each quarter. {{UKFlagNote|regd|Penrith}}
+|-
+! scope="row" | [[File:Petersfield town flag.svg|150px]]
+|
+| Flag of [[Petersfield]]
+| Crossed keys on a green field with a central white horizontal stripe and wavy blue band along the upper edge. {{UKFlagNote|regd|Petersfield}}
+|-
+! scope="row" | [[File:Pewsey village flag.svg|150px]]
+|
+| Flag of [[Pewsey]]
+| A white horse ([[Pewsey White Horse]]) on green hills below an oaken crown. {{UKFlagNote|regd|Pewsey}}
+|-
+! scope="row" | [[File:Flag of Plumpton.svg|150px]]
+|
+| Flag of [[Plumpton, East Sussex|Plumpton]]
+| Blue on purple divided horizontally by white crossing gates, a yellow plum on each bottom corner and a centered white horse above.
+|-
+! scope="row" | [[File:Poole town flag.svg|150px]]
+|
+| Flag of [[Poole]]
+| Dolphin on wavy black and gold bars below the three scallop shells of St James. {{UKFlagNote|regd|Poole}}
+|-
+! scope="row" | [[File:Preston town flag.svg|150px]]
+|
+| Flag of [[Preston, Lancashire|Preston]]
+| A blue cross with white arm centres on white with a paschal lamb in the centre. {{UKFlagNote|regd|Preston}}
+|-
+! scope="row" | [[File:Renfrew burgh flag.svg|150px]]
+|
+| Flag of [[Renfrew]]
+| The burgh's coat of arms on a blue field.
+|-
+! scope="row" | [[File:Saint Alban's cross.svg|150px]]
+|
+| Flag of [[St Albans]]<ref name="Bartram2004" /> – the Cross of St Alban
+| A golden saltire on sky blue.
+|-
+! scope="row" | [[File:St Annes on Sea town flag.svg|150px]]
+|
+| Flag of St Anne's on Sea ([[Lytham St Annes]])
+| A white Victorian lifeboat in upper hoist above two golden wavy hoops all over blue. {{UKFlagNote|regd|St Anne's}}
+|-
+! scope="row" | [[File:Staining village flag.svg|150px]]
+|
+| Flag of [[Staining, Lancashire]]
+| A white windmill and plough on blue divided by a white diagonal series of rectangles with a blue Celtic cross in the centre. {{UKFlagNote|regd|Staining}}
+|-
+! scope="row" | [[File:Flag of Stirling.svg|150px]]
+|
+| Flag of [[Stirling]]
+| The Scottish flag defaced in the centre of the saltire with the red lion rampant from the Scottish royal banner, with two [[caltraps]] in the upper and lower sections, and two spur-rowels in the hoist and fly sections.
+|-
+! scope="row" | [[File:Tavistock Town Flag.jpg|150px]]
+|
+| Flag of the stannary town of [[Tavistock]]{{Citation needed|date=May 2022}}
+| A white field with a blue bend, defaced with the coat of arms.{{Citation needed|date=May 2022}}
+|-
+! scope="row" | [[File:Thame town flag.svg|150px]]
+| 2017–present
+| Flag of [[Thame]]
+| The flag results from a competition held in the town. It incorporates Thame Town Council’s colours with part of the town’s emblem on the hoist side, and three waves – which signify the countryside, the [[Phoenix Trail]] and the River Thame – on the fly side.<ref>{{Cite web |title=The town flag is flying!  |url=https://www.thametowncouncil.gov.uk/2017/07/26/town-flag-flying/ |website=Thame Town Council |language=en-GB}}</ref>
+|-
+! scope="row" | [[File:Flag of Tywyn, Wales.svg|150px]]
+|
+| Flag of [[Tywyn]]
+| A black raven on gold and a white dolphin on blue divided by a diagonal wavy line. {{UKFlagNote|regd|Tywyn}}
+|-
+! scope="row" | [[File:Willenhall town flag.svg|150px]]
+|
+| Flag of [[Willenhall]]
+| Three golden locks on red and a crowned set of golden crossed keys on blue divided by a crenellated vertical line. {{UKFlagNote|regd|Willenhall}}
+|-
+! scope="row" | [[File:Wing village flag.svg|150px]]
+|
+| Flag of [[Wing, Buckinghamshire]]
+| A golden bird in a golden arch all on blue. {{UKFlagNote|regd|Wing}}
+|-
+! scope="row" | [[File:Wreay village flag.svg|150px]]
+|
+| Flag of [[Wreay]]
+| A golden cross on green with a two crossed white pipes and a bell in the first quarter. {{UKFlagNote|regd|Wreay}}
+|-
+! scope="row" | [[File:Wroxton village flag.svg|150px]]
+|
+| Flag of [[Wroxton]]
+| A red cross on blue and fimbriated white with white birds, pick axe, and leaf in the quarters. {{UKFlagNote|regd|Wroxton}}
+|}
+
+===Islands===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Isle of Barra flag.svg|border=no|150px}}
+| 2017–present
+| Flag of the Isle of [[Barra]]
+| Green, with a white [[Scandinavian Cross]] showing the ancestry of the people and places names of Barra.  The green represents the green of the Barra Isles.<ref>{{cite news| url= https://www.scotsman.com/news/barra-flag-wins-official-recognition-after-long-campaign-1-4621080| title=Barra flag wins official recognition after long campaign | date=23 November 2017}}</ref>
+|-
+! scope="row" | [[File:Western Isles Council Flag.svg|150px]]
+| 9 September 1976 – present
+| Flag of the [[Comhairle nan Eilean Siar]] <small>(Council of the Western Isles)</small>
+| Or, on a fess wavy Azure between three lymphads, oars in action, sails furled Sable, flagged Gules, two barrulets wavy Argent.
+|-
+! scope="row" | [[File:Flag of Lundy.svg|150px]]
+| 1954–1969<br />2010–present
+| Flag of [[Lundy]]
+| A blue flag with a white letter "L" on the hoist side.<ref>{{cite web |url=https://www.lundy.org.uk/about-lundy/history/since-1969 |title=History since 1969 - the Landmark Trust era |author=André Coutanche |date= |work=Lundy Field Society |access-date=21 March 2024}}</ref><ref>{{cite web |url=https://britishcountyflags.com/2019/08/03/a-flag-for-lundy/ |title=A Flag for Lundy |author= |date=3 August 2019 |work=British County Flags |access-date=21 March 2024}}</ref>
+|-
+! scope="row" | [[File:2007 Flag of Orkney.svg|150px]]
+| 2007–present
+| [[Flag of Orkney]]<ref name=regd>Registered in the UK Flag Registry</ref><ref name=Lyon>Granted by the [[Lord Lyon]]</ref>
+| A blue [[Nordic cross]] outlined in yellow on a red field.
+|-
+! scope="row" | [[File:Flag of Isle of Portland.gif|150px]]
+| 14 April 2010 – present
+| Flag of the [[Isle of Portland]] {{UKFlagNote|regd|Isle_of_Portland}}
+| The colours represent the landscape of the area: Portland stone, grass and the sea. The white tower represents the castles and the naval coronet shows the long connection with the Royal Navy.<ref>[{{Flag Institute|Isle of Portland}}Flag of Isle of Portland]</ref>
+|-
+! scope="row" | [[File:ScillonianCross.svg|150px]]
+| February 2002 – present
+| [[Flag of the Isles of Scilly]]<ref name=regd/>
+| [[The Scillonian Cross]]
+|-
+! scope="row" | [[File:South Uist flag.svg|150px]]
+| 2017–present
+| Flag of [[South Uist]]<ref name=regd/><ref name=Lyon/>
+| A green flag bearing a blue Nordic cross fimbriated in white
+|-
+! scope="row" | [[File:Flag of Shetland.svg|150px]]
+| 1969–present
+| [[Flag of Shetland]]<ref name=regd/><ref name=Lyon/>
+| A white Nordic cross on a light blue field
+|-
+! scope="row" | [[File:Flag of the Isle of Skye.svg|150px]]
+| 2020–present
+| Flag of the [[Isle of Skye]]<ref name=regd/><ref name=Lyon/>
+| A yellow Hebridean Birlinn in upper hoist above a yellow Nordic Cross on a sky blue field interlaced with a white ring.
+|-
+! scope="row" | [[File:Flag of the Isle of Wight.svg|150px]]
+| 2009–present
+| [[Flag of the Isle of Wight]]<ref name=regd/>
+| A pale blue field with a nicked rhombus (a representation of the island's shape) and at the bottom six alternating bars wavy, white and navy blue.
+|}
+
+== University flags ==
+
+{| class="wikitable"
+|- style="background:#efefef;"
+! Flag !! Date !! Use !! Description
+|-
+! scope="row" | [[File:Flag of Aberdeen University.svg|150px]]
+|
+| Flag of the [[University of Aberdeen]]
+|
+|-
+! scope="row" | {{ListFlag|Bangor University flag.svg|border=no|150px}}
+|
+| Flag of [[Bangor University]]<ref name="Jonathan Dixon">{{cite web |url=https://www.fotw.info/flags/gb-w_bnu.html |title=Bangor University (Wales, United Kingdom) |author=Jonathan Dixon |date=19 September 2010 |work=Flags of the World |access-date=27 October 2022}}</ref>
+|
+|-
+! scope="row" | [[File:Flag of Edinburgh Napier University.svg|150px]]
+|
+| Flag of [[Edinburgh Napier University]]
+| A flag diagonally divided into white and red – white in the top and fly, red in the hoist and bottom.
+|-
+! scope="row" | [[File:QUB flag.svg|150px]]
+|
+| Flag of [[Queen's University Belfast]]
+|
+|-
+! scope="row" | [[File:Flag of the University of Bristol.svg|150px]]
+|
+| Flag of the [[University of Bristol]]
+|
+|-
+! scope="row" | [[File:Flag of the University of Cambridge.svg|150px]]
+|
+| [[Coat of arms of the University of Cambridge|Flag of the]] [[University of Cambridge]]<ref name="Rob Raeside">{{cite web |url=https://www.crwflags.com/fotw/flags/gb_cambu.html |title=Cambridge University (England) |author=Rob Raeside |date=29 June 2007 |work=Flags of the World |access-date=9 November 2022}}</ref>
+|
+|-
+! scope="row" | [[File:Flag of the University of East Anglia.svg|150px]]
+|
+| Flag of the [[University of East Anglia]]
+|
+|-
+! scope="row" | [[File:Flag of the University of Edinburgh.svg|150px]]
+|
+| Flag of the [[University of Edinburgh]]
+| A blue saltire on a white field, with a thistle in the upper quarter, a castle in the lower quarter, and an open book in the centre of the saltire. It is a banner of the University's coat of arms.
+|-
+! scope="row" | [[File:Flag of the University of Glasgow.svg|150px]]
+|
+| Flag of the [[University of Glasgow]]
+|
+|-
+! scope="row" | [[File:Flag of the University of Hull.svg|150px]]
+|
+| Flag of the [[University of Hull]]
+| The Cross of Saint George defaced in the centre with the University's coat of arms.
+|-
+! scope="row" | [[File:Flag of the University of Leicester.svg|150px]]
+|
+| Flag of the [[University of Leicester]]
+|
+|-
+! scope="row" | [[File:Flag of the University of London.svg|150px]]
+|
+| Flag of the [[University of London]]
+|
+|-
+! scope="row" | [[File:Flag of the University of Oxford.svg|150px]]
+|
+| [[Coat of arms of the University of Oxford|Flag of the]] [[University of Oxford]]
+| An open book with the inscription ''[[Dominus Illuminatio Mea]]'' (Latin for "The Lord is my light"), surrounded by three golden crowns (two above and one below) on a blue field.
+|-
+! scope="row" | [[File:Flag of the University of Roehampton.svg|150px]]
+|
+| Flag of the [[University of Roehampton]]<ref name="Ron Lahav and Laurence Jones">{{cite web |url=https://www.crwflags.com/fotw/flags/gb_u-roe.html |title=University of Roehampton (England) |author=Ron Lahav and Laurence Jones |date=10 February 2006 |work=Flags of the World |access-date=11 November 2022}}</ref>
+|
+|-
+! scope="row" | [[File:University of St Andrews Flag.svg|150px]]
+|
+| Flag of the [[University of St Andrews]]
+| A banner of the University's coat of arms.
+|-
+! scope="row" | [[File:Flag of Swansea University.svg|150px]]
+|
+| Flag of [[Swansea University]]
+|
+|-
+! scope="row" | [[File:Flag of Wrexham Glyndŵr University.svg|150px]]
+|
+| Flag of [[Wrexham University]]
+|
+|-
+! scope="row" | [[File:Flag of the University of Warwick.svg|150px]]
+|
+| Flag of the [[University of Warwick]]
+|
+|}
+
+==Miscellaneous==
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of the FI.svg|border=no|150px}}
+| 2016–present
+| Flag of the [[Flag Institute]]
+|
+|-
+! scope="row" | [[File:Flag of the Royal National Lifeboat Institution.svg|150px]]
+|
+| Flag of the [[Royal National Lifeboat Institution]]<ref>{{cite web |title="United Kingdom: Royal National Lifeboat Institution" |url=https://www.fotw.info/flags/gb-rnli.html |website=www.fotw.info}}</ref>
+| A red cross with a blue border on a white field, with the letters RNLI in red in each quarter, defaced with a crowned anchor.
+|-
+! scope="row" | [[File:St John Ambulance Flag.png|150px]]
+|
+| Flag of the [[St. John Ambulance|St John Ambulance Brigade]]{{Citation needed|date=May 2022}}
+|
+|-
+! scope="row" | [[File:Royal British Legion Standard.svg|150px]]
+|
+| A Branch Standard of the [[Royal British Legion]]{{Citation needed|date=May 2022}}
+| A Blue Ensign with a yellow band across the middle with the words Royal British Legion and the name of the branch.
+|-
+! scope="row" | [[File:Flag of Saint David.svg|150px]]
+|
+| [[Flag of Saint David]]
+| A gold cross on a black field. This is flown in Wales especially on St David's Day. This flag and the St Patrick's flag are not considered national flags but may be flown without special consent.<ref>{{cite web|title=Plain English guide to flying flags |url=https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/15438/flying_flags_guide.pdf |publisher=Department for Communities and Local Government |page=1 |url-status=dead |archive-url=https://web.archive.org/web/20160304075301/https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/15438/flying_flags_guide.pdf |archive-date= 4 March 2016 }}</ref>
+|-
+! scope="row" | [[File:Flag of Saint Aldhelm.svg|150px]]
+|
+| Flag of [[Saint Aldhelm]]
+| A white cross on a red field.
+|-
+! scope="row" | [[File:Flag of Saint Augustine of Canterbury.svg|150px]]
+| 2021–present
+| Flag of [[Saint Augustine of Canterbury]]<ref>{{cite web |url=https://www.churchtimes.co.uk/articles/2021/25-june/news/uk/uk-news-in-brief |title=Banner of St Augustine flies over his city |author= |date=25 June 2021 |work=Church Times |access-date=23 April 2023}}</ref>
+| A white cross on a black field with a gold bishop's pallium topped by a small gold cross in the canton.
+|-
+! scope="row" | [[File:Flag of Saint Edmund.svg|150px]]
+|
+| Flag of [[Saint Edmund the Martyr]]
+| A red Saint George's Cross on a white field, defaced in the centre with a blue shield bearing two crossed gold arrows passing through a gold crown.
+|-
+! scope="row" | [[File:Saint Peter Westminster Abbey Flag.svg|150px]]
+|
+| Flag of [[Saint Peter]], Westminster Abbey
+| Two crossed gold keys beneath a gold ring on a field of red. The symbols represent the two Patron Saints of the Abbey: the ring of Saint Edward the Confessor (founder of the Abbey), and the [[keys of Heaven|keys of Saint Peter]].
+|-
+! scope="row" | [[File:Flag of Saint Richard of Chichester.svg|150px]]
+|
+| Flag of [[Saint Richard of Chichester]]
+| A white cross on a red field with a white chalice in each quarter.
+|-
+! scope="row" | [[File:Standard of the Salvation Army.svg|150px]]
+| 1878–present
+| Flag of the [[Salvation Army]]{{Citation needed|date=May 2022}}
+| A maroon flag with a blue border defaced by a yellow star with the Salvation Army's motto "Blood & Fire" written on it.
+|-
+! scope="row" | [[File:Union Flag (including Wales).svg|150px]]<br /><br />[[File:Flag of the United Kingdom with yellow saint david.svg|150px]]<br /><br />[[File:Flag of the United Kingdom with wales.jpg|150px]]<br /><br />[[File:Union Jack Proposal.svg|150px]]
+|
+| The current UK flag (the Union Jack) holds symbolism from England, Scotland, and Northern Ireland, but lacks any symbolism of the only other UK nation in Wales. Therefore, it has been suggested the Union Jack be redesigned to include representation of Wales or a completely new or alternate flag be used.<ref name="welsh">{{cite news |url=https://news.bbc.co.uk/1/hi/uk/7114248.stm |title=Welsh dragon call for Union flag |publisher=BBC |date=27 November 2007}}</ref><ref name="face">{{cite news |url=https://www.telegraph.co.uk/news/uknews/1572168/The-new-face-of-Britain-Flag-poll-results.html |archive-url=https://ghostarchive.org/archive/20220111/https://www.telegraph.co.uk/news/uknews/1572168/The-new-face-of-Britain-Flag-poll-results.html |archive-date=11 January 2022 |url-access=subscription |url-status=live |title=The new face of Britain Flag poll results |newspaper=[[The Daily Telegraph]] |date=5 December 2007 |first=Matthew |last=Moore}}{{cbignore}}</ref>
+| Suggested redesigns of the Union Jack, including one with the red dragon from the flag of Wales added in the centre; two variations with the inclusion of yellow from the flag of Saint David; and one with the inclusion of the green element of the flag of Wales.
+|-
+! scope="row" | [[File:Flag used by British Chartists.svg|150px]]
+| 1816 to at least 1935
+| [[Republicanism in the United Kingdom|British republican]] flag proposal used within the [[Chartism]] movement.
+| A [[Republicanism in the United Kingdom|British republican]] flag, which originated in 1816, in use until at least 1935.<ref name="Riot City">{{Cite book |last=Bloom |first=Clive |date=2012 |title=Riot City |url={{GBurl|id=fr59Hr4FDDcC|p=156}} |location=London, UK |publisher=[[Palgrave Macmillan]] |pages=156–158 |isbn=978-1-137-02937-9 |access-date=2 March 2016}}</ref>
+|-
+! scope="row" | [[File:English Republican Tricolour.svg|150x150px]]
+|
+| [[Republicanism in the United Kingdom|British republican]] flag proposal within the [[Chartism]] movement.
+| The English Republican Tricolour proposed by Hugh Williams in 1838 and described in LJ "Spartacus" Linton's 1851 poem "Our Tricolour".<ref>{{Cite web |title=Flags of Political Reform in 19th Century Wales |url=https://www.crwflags.com/fotw/flags/gb_charw.html |access-date=2024-11-15 |website=www.crwflags.com}}</ref>
+|}
+
+==Historic areas==
+It is explicitly permitted to fly the flag of the [[Black Country]], [[East Anglia]], [[Wessex]], any [[Parts of Lincolnshire|Part of Lincolnshire]], any [[Riding (division)|Riding of Yorkshire]] or any [[Historic counties of England|historic county]] within the United Kingdom without needing any permission or consent.<ref name="FlagFlyingRegulations2012" />
+
+===Kingdoms===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of East Anglia.svg|border=no|150px}}
+| 1900–present
+| Flag of [[East Anglia]].<ref name=regd/>
+| The arms ascribed to the [[Wuffingas]] dynasty of East Anglia, three crowns on a blue shield, superimposed on a [[St George's Cross]] {{UKFlagNote|regd|East Anglia}}.
+|-
+! scope="row" | [[File:Flag of Mercia (2014).svg|150px]]
+| c.13th century / 2014–present<ref>Has been used since at least the 1200s, but wasn't officially adopted until 2014.</ref>
+| Flag of [[Mercia]]<ref>[https://www.flickr.com/photos/manofgreen/8537942156/ Welcome to Tamworth]</ref> – the [[Saint Alban's Cross|Cross of St Alban]]
+| A gold saltire on a blue field; the traditional flag of the Kingdom of Mercia, still flown on [[Tamworth Castle]].
+|-
+! scope="row" | [[File:Flag of Northumbria.svg|150px]]
+| Ancient
+| [[Kingdom of Northumbria]]<br / >[[North England]]<br />[[Northumbria (modern)|Modern Northumbria]]<sub> ([[Northumberland]] and the [[county of Durham]])</sub>
+| The oldest flag in England. The depiction shown here is apparently based on a brief mention in [[Bede]]'s ''[[Ecclesiastical History of the English People]]'' as a banner "composed of gold and purple" (''auro et purpura conpositum'')<ref>{{cite web|title=Northumbria |url=https://www.flaginstitute.org/wp/flags/northumbria-flag/ |website=Flag Institute |access-date=22 March 2026}}</ref><br / ><br / >Eight alternating stripes{{efn|Historic: gold and purple<br />Alternative: gold and red<br />Registered: gold and burgundy}}
+|-
+! scope="row" | [[File:Flag of Wessex.svg|150px]]
+| 1970s–present
+| Flag of [[Wessex]]<ref name=regd/>
+| A gold [[wyvern]] on a red field. {{UKFlagNote|regd|Wessex}}
+|}
+
+===Counties===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Flag of Aberdeenshire.svg|border=no|150px}}
+| 2023–present
+| [[Flag of Aberdeenshire]]
+| Party per pale or and purpure; on a castle triple-towered argent an ancient crown party per pale of the second and first. {{UKFlagNote|comp}}{{UKFlagNote|regd|Aberdeenshire}}
+|-
+! scope="row" | [[File:Flag of Anglesey.svg|150px]]
+| 2014–present
+| [[Flag of Anglesey]]
+| Gules between three lions rampant or a chevron of the second: the attributed arms of Hwfa ap Cynddelw, the traditional badge of the county. {{UKFlagNote|regd|Anglesey}}
+|-
+! scope="row" | [[File:Flag of Banffshire.svg|150px]]
+| 2023–present
+| [[Flag of Banffshire]]
+| Orange top half, with the sun in white in the upper hoist, over white and blue stripes and five counter-changed roundels in the form of a railway viaduct. {{UKFlagNote|comp}}{{UKFlagNote|regd|Banffshire}}
+|-
+! scope="row" | [[File:Bedfordshire County Flag.svg|150px]]
+| 2014–present
+| [[Flag of Bedfordshire]]
+| Based on the arms of Beauchamp, Barons of Bedford (red and gold) and Russell, [[Duke of Bedford|Dukes of Bedford]] (black with 3 scallops). Unlike the old county council banner, the bars wavy are counterchanged per pale. {{UKFlagNote|regd|Bedfordshire}}
+|-
+! scope="row" | [[File:Flag of Berkshire.svg|150px]]
+| 2017–present
+| [[Flag of Berkshire]]
+| Based on the traditional badge of the county: a stag beneath Hearne's Oak. {{UKFlagNote|regd|Berkshire}}
+|-
+! scope="row" | [[File:Flag of Berwickshire.svg|150px]]
+| 2023–present
+| [[Flag of Berwickshire]]
+| A horozontal blue and green bicolour divided in the middle by a white chain, with a leaping silver salmon in the blue section, and a curved gold ear of barley in the green section.
+|-
+! scope="row" | [[File:Flag of Buckinghamshire.svg|150px]]
+| 2011–present
+| [[Flag of Buckinghamshire]]
+| A red and black field bearing a chained swan: a traditional badge of the county. {{UKFlagNote|regd|Buckinghamshire}}{{UKFlagNote|Beeb}}
+|-
+! scope="row" | [[File:Flag of Caernarfonshire.svg|150px]]
+| 2012–present
+| [[Flag of Caernarfonshire]]
+| Vert, three eagles displayed in fess Or. {{UKFlagNote|regd|Caernarfonshire}}
+|-
+! scope="row" | [[File:Flag of Caithness.svg|150px]]
+| 2016–present
+| [[Flag of Caithness]]
+| A Scandinavian cross flag for the county's Norse heritage, with the civic badge of Caithness, a ship with a raven on its sail, in the upper hoist. {{UKFlagNote|regd|Caithness}}{{UKFlagNote|Lyon}}
+|-
+! scope="row" | [[File:Cambridgeshire Flag.svg|150px]]
+| 2015–present
+| [[Flag of Cambridgeshire]]
+| Blue with wavy lines in [[Cambridge blue]], and the three crowns of [[East Anglia]]. {{UKFlagNote|regd|Cambridgeshire}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:Cheshire Flag.svg|150px]]
+| 2013–present
+| [[Flag of Cheshire]]
+| Azure a Sword erect between three Garbs Or {{UKFlagNote|regd|Cheshire}}
+|-
+! scope="row" | [[File:Flag of Cornwall.svg|150px]]
+| 12th century – present
+| [[Saint Piran's Flag|St Piran's Flag]] – the Flag of Cornwall
+| A white cross on a black field. {{UKFlagNote|regd|Cornwall}}
+|-
+! scope="row" | [[File:Cumberland flag.svg|150px]]
+| 2012–present
+| The [[Flag of Cumberland]]
+| Based on a banner of the arms of the former Cumberland County Council.{{UKFlagNote|regd|Cumberland}}
+|-
+! scope="row" | [[File:Derbyshire flag.svg|150px]]
+| 2006–present
+| [[Flag of Derbyshire]]
+| A green cross with a white border on a sky blue field, with a gold [[Tudor rose]] in the centre. {{UKFlagNote|regd|Derbyshire}}{{UKFlagNote|Beeb}}
+|-
+! scope="row" | [[File:Flag of Devon.svg|150px]]
+| 2003–present
+| [[Flag of Devon]] – [[St Petroc]]'s flag
+| A white cross with a black border on a green field. {{UKFlagNote|regd|Devon}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:Saint Wite's Cross.svg|150px]]
+| 2008–present
+| [[Flag of Dorset]]<ref>[https://www.flickr.com/photos/communitiesuk/5134980731/in/set-72157624821543799 Dorset flag flying outside Eland House]</ref> – the Dorset Cross – St Wite's Cross
+| A white cross with a red border on a gold field.{{UKFlagNote|regd|Dorset}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:County Durham Flag.svg|150px]]
+| 2013–present
+| [[Flag of County Durham]]<ref>{{cite news| url=https://www.bbc.co.uk/news/uk-england-tees-25039676 | work=BBC News | title=County Durham flag with St Cuthbert's cross wins vote | date=21 November 2013}}</ref>
+| A gold and blue horizontal bicolour with [[St. Cuthbert]]'s Cross countercharged upon it. {{UKFlagNote|regd|County Durham}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:Flag of East Lothian.svg|150px]]
+| 2018–present
+| [[Flag of East Lothian]] (Haddingtonshire)
+| A blue field with a gold saltire voided blue; over all a lozenge with a lion rampant. {{UKFlagNote|regd|East Lothian}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:Flag of Essex.svg|150px]]
+| Possibly 6th century – present
+| [[Flag of Essex]]
+| A red field with three white, gold hilted Saxon swords ([[Seax]]es). {{UKFlagNote|regd|Essex}}
+|-
+! scope="row" | [[File:Flag of Flintshire.svg|150px]]
+| 2015–present
+| [[Flag of Flintshire]]
+| Argent, between four Cornish choughs sable a cross engrailed flory of the second. {{UKFlagNote|regd|Flintshire}}; the arms attributed to Edwin Tegeingl (Edwin ap Gronwy)
+|-
+! scope="row" | [[File:Glamorgan Flag.svg|150px]]
+| 12th century – present
+| [[Flag of Glamorgan]]
+| [[Gules]], three Chevronels [[Argent]]. {{UKFlagNote|regd|Glamorgan}}
+|-
+! scope="row" | [[File:Severn Cross.svg|150px]]
+| 2008–present
+| [[Flag of Gloucestershire]] – the Severn Cross
+| The winning entry in a competition to commemorate the county's millennium. {{UKFlagNote|regd|Gloucestershire}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:County Flag of Hampshire.svg|150px]]
+| 2019–present
+| [[Flag of Hampshire]]
+| A gold Saxon crown on a red field above a Tudor rose on a gold field.{{UKFlagNote|regd|Hampshire}}
+|-
+! scope="row" | [[File:County Flag Of Herefordshire.svg|150px]]
+| 2019–present
+| [[Flag of Herefordshire]]
+| On a dark red background, a white bull's head above three wavy lines, ordered white-blue-white.{{UKFlagNote|regd|Herefordshire}}
+|-
+! scope="row" | [[File:County Flag of Hertfordshire.svg|150px]]
+| 2008–present
+| [[Flag of Hertfordshire]]
+| On a waved background, a Hart reclining on a yellow shield – a flag displayed on the crest of the county arms{{UKFlagNote|regd|Derbyshire}}{{UKFlagNote|released}}
+|-
+! scope="row" | [[File:Flag of Huntingdonshire.svg|150px]]
+| 2009–present
+| [[Flag of Huntingdonshire]]
+| On a green background, a gold, ribboned hunting horn – a flag displayed on the crest of the county arms {{UKFlagNote|regd|Huntingdonshire}}
+|-
+! scope="row" | [[File:FlagOfKent.svg|150px]]
+| 1605–present
+| [[Flag of Kent]]<ref>{{cite web|title=Kent Invicta Flag|url=http://www.flaginstitute.org/wp/flags/ken/|website=The Flag Institute|access-date=17 October 2015}}</ref>
+| A red field with the [[white horse of Kent]]. {{UKFlagNote|regd|Kent}}
+|-
+! scope="row" | [[File:Flag of Kirkcudbrightshire.svg|150px]]
+| 2016–present
+| [[Flag of Kirkcudbrightshire]]
+| A green and white quartered field bearing the Cross of St Cuthbert (from whom the county is named). {{UKFlagNote|regd|Kirkcudbrightshire}}{{UKFlagNote|Lyon}}
+|-
+! scope="row" | [[File:Lancashire County Flag.svg|150px]]
+| 2008–present
+| [[Flag of Lancashire]]
+| The red rose of Lancashire on a yellow field. {{UKFlagNote|regd|Lancashire}}
+|-
+! scope="row" | [[File:Flag of Leicestershire.svg|150px]]
+| 2021–present
+| [[Flag of Leicestershire]]
+| Per fess dancetty gules and argent, a cinquefoil pierced ermine above a fox gules. {{UKFlagNote|regd|Leicestershire}}
+|-
+! scope="row" | [[File:Lincolnshire flag.svg|150px]]
+| 2005–present
+| [[Flag of Lincolnshire]]
+| Quarterly Vert and Azure, on a Cross Gules fimbriated Or a [[Fleur-de-Lis]] of the last. {{UKFlagNote|regd|Lincolnshire}}{{UKFlagNote|Beeb}}
+|-
+! scope="row" | [[File:Flag of Merionethshire.svg|150px]]
+| 2015–present
+| [[Flag of Merionethshire]]
+| Azure, three goats rampant Argent, armed and unguled Or; from the dexter base the sun in his splendour issuant Or. {{UKFlagNote|regd|Merioneth}}
+|-
+! scope="row" | [[File:Flag of Middlesex.svg|150px]]
+| 1910–present
+| [[Flag of Middlesex]]
+| A red field with three white, gold hilted Saxon swords or Seaxes under a gold Saxon crown. {{UKFlagNote|regd|Middlesex}}
+|-
+! scope="row" | [[File:Flag of Monmouthshire.svg|150px]]
+| 2011–present
+| [[Flag of Monmouthshire]]
+| Per pale Azure and Sable three Fleurs-de-lis Or. {{UKFlagNote|regd|Monmouthshire}}
+|-
+! scope="row" | [[File:Flag of Morayshire.svg|150px]]
+| 2023–present
+| [[Flag of Morayshire]]
+| A green strip in the hoist bearing a gold wheatsheaf; orange over blue with a wavy division. {{UKFlagNote|comp}}{{UKFlagNote|regd|Moray}}
+|-
+! scope="row" | [[File:Flag of Norfolk.svg|150px]]
+| 2014–present
+| [[Flag of Norfolk]]
+| Party per pale or and sable, a bend ermine; the attributed arms of Ralph de Gael or Guader, 1st Earl of Norfolk {{UKFlagNote|regd|Norfolk}}
+|-
+! scope="row" | [[File:Flag of Northamptonshire.svg|150px]]
+| 2014–present
+| [[Flag of Northamptonshire]]
+| Maroon with a gold cross fimbriated black, and in the centre the county's traditional rose.<ref>Northamptonshire – designed by Brady Ells.</ref> {{UKFlagNote|regd|Northamptonshire}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:Flag of Northumberland.svg|150px]]
+| 1951–present
+| [[Flag of Northumberland]]
+| Local authority flag with use permitted to local people. Based on the St Oswald banner. {{UKFlagNote|regd|Northumberland}}
+|-
+! scope="row" | [[File:County Flag of Nottinghamshire.svg|150px]]
+| 2011–present
+| [[Flag of Nottinghamshire]]
+| A red cross fimbriated white on a green field, with an inescutcheon in the centre showing Robin Hood. {{UKFlagNote|regd|Nottinghamshire}}{{UKFlagNote|Beeb}}
+|-
+! scope="row" | [[File:2007 Flag of Orkney.svg|150px]]
+| 2007–present
+| [[Flag of Orkney]]<ref name=regd/><ref name="Lyon"/>
+| A blue [[Nordic cross]] outlined in yellow on a red field. {{UKFlagNote|regd|Orkney}}{{UKFlagNote|Lyon}}
+|-
+! scope="row" | [[File:Flag of Oxfordshire.svg|150px]]
+| 2017–present
+| [[Flag of Oxfordshire]]
+| The arms of the pre-1974 County Council: blue with a red ox head on a double bend wavy, between a wheatsheaf and an oak. {{UKFlagNote|regd|Oxfordshire}}
+|-
+! scope="row" | [[File:Flag of Pembrokeshire.svg|150px]]
+| 1988–present
+| [[Flag of Pembrokeshire]]
+| A yellow cross on a blue field with a variation of the red and white Tudor rose in the centre. {{UKFlagNote|regd|Pembrokeshire}}
+|-
+! scope="row" | [[File:Rutland County Flag.svg|150px]]
+| 2015–present
+| [[Flag of Rutland]]
+| A green field strewn with acorns and a golden horseshoe in the centre. {{UKFlagNote|regd|Rutland}}
+|-
+! scope="row" | [[File:Flag of Shetland.svg|150px]]
+| 1969–present
+| [[Flag of Shetland]]
+| A white Nordic cross on a light blue field. {{UKFlagNote|regd|Shetland}}{{UKFlagNote|Lyon}}
+|-
+! scope="row" | [[File:Flag of Shropshire.svg|150px]]
+| 2012–present
+| [[Flag of Shropshire]]
+| Three leopards' faces, referred to as loggerheads locally, are a traditional emblem for Shropshire and its county town, Shrewsbury. The erminois aspect differentiates the county flag with that of Shrewsbury. {{UKFlagNote|regd|Shropshire}}{{UKFlagNote|released}}
+|-
+! scope="row" | [[File:Somerset Flag.svg|150px]]
+| 2013–present
+| [[Flag of Somerset]]
+| Or, a Dragon Rampant Gules. {{UKFlagNote|regd|Somerset}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:Staffordshire Flag.svg|150px]]
+| 2016–present
+| [[Flag of Staffordshire]]
+| A red chevron on gold, with the [[Stafford knot]].{{UKFlagNote|regd|Staffordshire}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:County Flag of Suffolk.svg|150px]]
+| 2017–present
+| [[Flag of Suffolk]]
+| A Saxon crown pierced with two arrows: the traditional emblem of St Edmund, and of Suffolk.{{UKFlagNote|regd|Suffolk}}
+|-
+! scope="row" | [[File:Flag of Surrey.svg|150px]]
+| 2014–present
+| [[County Flag of Surrey]]
+| Chequy or and azure (De Warrenne, the first Earls of Surrey) – the traditional emblem of the county.{{UKFlagNote|regd|Surrey}}
+|-
+! scope="row" | [[File:Flag of Sussex.svg|150px]]
+| 2010–present
+| [[Flag of Sussex]]<ref name=regd/>
+| Based on the traditional emblem of Sussex; Six gold [[martlet]]s on a blue field, first recorded in 1611 and used by many Sussex organisations. {{UKFlagNote|regd|Sussex}}
+|-
+! scope="row" | [[File:Flag of Sutherland 2018.svg|150px]]
+| December 2018 – present
+| [[Flag of Sutherland]]
+| White with a black saltire intersecting a black Scandinavian cross, a sun figure in the centre.  This design won a local competition, replacing a previous winner (a swooping eagle counterchanged against a vertical bicoloured red and yellow background, with three mullets at the hoist).<ref>'[https://www.pressandjournal.co.uk/fp/news/highlands/1632871/controversay-over-initial-choice-for-the-sutherland-flag/ Controversay over initial choice for the Sutherland flag]': Michelle Henderson in ''The Press and Journal'', Saturday, 15 December 2018</ref> {{UKFlagNote|regd|Sutherland}}
+|-
+! scope="row" | [[File:Flag of Warwickshire.svg|150px]]
+| August 2016 – present
+| [[Flag of Warwickshire]]
+| A bear and ragged staff (the badge of the Earls of Warwick) which has become a symbol of the county, white on red. {{UKFlagNote|regd|Warwickshire}}
+|-
+! scope="row" | [[File:Flag of Westmorland.svg|150px]]
+| 2011–present
+| [[Flag of Westmorland]]
+| A golden heraldic apple tree on white and red bars. {{UKFlagNote|regd|Westmorland}}
+|-
+! scope="row" | [[File:County_Flag_of_Wiltshire.svg|150px]]
+| 2009–present
+| [[Flag of Wiltshire]]
+| Alternating downward angled stripes of green and white bearing a green disc within six alternating green and white sections, on which stands an image of a [[great bustard]]. {{UKFlagNote|regd|Wiltshire}}<ref name="Flying the flag for Wiltshire">{{cite web|url=http://www.wiltshireflag.co.uk/ |title=Flying the flag for Wiltshire |publisher=Wiltshire Flag |access-date=14 November 2012}}</ref> Accepted by Wiltshire Council in December 2009<ref name="Wiltshire.gov.uk">{{cite web |url=http://www.wiltshire.gov.uk/latestnews.htm?aid=92915 |title=Latest News &#124; Wiltshire Council |publisher=Wiltshire.gov.uk |access-date=14 November 2012 |archive-url=https://web.archive.org/web/20120320035650/http://www.wiltshire.gov.uk/latestnews.htm?aid=92915 |archive-date=20 March 2012 |url-status=dead }}</ref>
+|-
+! scope="row" | [[File:Worcestershire flag.svg|150px]]
+| 2013–present
+| [[Flag of Worcestershire]]
+| Three black pears on a shield charged against a wavy green and blue background. {{UKFlagNote|regd|Worcestershire}}{{UKFlagNote|Beeb}}
+|-
+! scope="row" | [[File:Flag of Yorkshire.svg|150px]]
+| 1960s–present
+| [[Flags and symbols of Yorkshire|Flag of Yorkshire]]
+| A White Rose on a blue field. {{UKFlagNote|regd|Yorkshire}}
+|}
+
+===Ridings of Yorkshire===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|East Riding Of Yorkshire.svg|border=no|150px}}
+| 2013–present
+| [[Flags and symbols of Yorkshire|Flag of the East Riding of Yorkshire]]<ref>''[http://www.hulldailymail.co.uk/New-white-rose-East-Riding-flag-unveiled-Beverley/story-18769447-detail/story.html New white rose East Riding flag unveiled at Beverley Minster] {{webarchive|url=https://archive.today/20131201155404/http://www.hulldailymail.co.uk/New-white-rose-East-Riding-flag-unveiled-Beverley/story-18769447-detail/story.html |date=1 December 2013 }}'' – Hull Daily Mail</ref>
+| Per pale Azure and Vert, an inverted rose Argent. {{UKFlagNote|regd|East Riding}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:Flag of North Riding of Yorkshire.svg|150px]]
+| 2013–present
+| [[Flags and symbols of Yorkshire|Flag of the North Riding of Yorkshire]]<ref>''[http://www.thenorthernecho.co.uk/news/local/southdurham/barnardcastle/10401066.Flying_the_flag_for_the_North_Riding_of_Yorkshire/ Flying the flag for the North Riding of Yorkshire]'' – The Northern Echo</ref>
+| Vert a cross azure fimbriated or, a rose argent {{UKFlagNote|regd|North Riding}}{{UKFlagNote|Comp}}
+|-
+! scope="row" | [[File:West Riding Flag.svg|150px]]
+| 2013–present
+| [[Flags and symbols of Yorkshire|Flag of the West Riding of Yorkshire]]<ref>''[http://yorkshireboundarysociety.wordpress.com/2013/05/23/west-riding-flag-winning-design/ West Riding Flag – Winning Design]'' – Yorkshire Boundary Society</ref>
+| {{UKFlagNote|regd|West Riding}}{{UKFlagNote|Comp}}
+|}
+
+===Other regions===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Black Country Flag.svg|border=no|150px}}
+| 2012–present
+| [[Flag of the Black Country]]<ref name=regd/><ref name=localcomp>Chosen in a local competition</ref>
+| Per pall reversed Sable, Gules and Argent a pall reversed Argent over all an inverted chevron of chain counterchanged Argent, Sable, Argent. {{UKFlagNote|regd|Black Country}}
+|-
+! scope="row" | [[File:Cinque Ports towns flag.svg|150px]]
+| 2017–present
+| Flag of the [[Cinque Ports]]<ref name=regd/>
+| Three gold ships' hulls on a blue field. {{UKFlagNote|regd|Cinque Ports}}
+|-
+! scope="row" | [[File:Community flag of Cumbria.svg|150px]]
+| 2025–present
+| [[Flag of Cumbria]]<ref name=regd/>
+| A gold heraldic ancient crown on a blue background in the upper section, and a horizontal green and yellow zigzag pattern in the lower section.{{UKFlagNote|regd|Cumbria}}
+|-
+! scope="row" | [[File:Exmoor Flag.svg|150px]]
+| 2014–present
+| [[Flag of Exmoor]]<ref>{{Cite web |title=Exmoor Flag {{!}} Free official image and info {{!}} UK Flag Registry |url=https://www.flaginstitute.org/wp/flags/exmoor-flag/ |access-date=2023-03-29 |website=The Flag Institute |language=en-GB}}</ref>
+| A purple field as the main base with violet and green waves separated by parallel white lines underneath. A white stag and star holds the top hoist corner. Exmoor remains the only moorland with its own flag to this day. {{UKFlagNote|regd}}<ref>{{Cite web |title=Exmoor Flag Story |url=https://exmoorflag.co.uk/exmoor-flag-story/ |access-date=2023-03-29 |website=Exmoor Flag |language=en-GB}}</ref> {{UKFlagNote|comp}}
+|}
+
+==Historical flags==
+
+===National flags and ensigns===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Government Ensign of Northern Ireland (1929-1973).svg|border=no|150px}}
+| 1929–1973
+| [[Ensign (flag)|Ensign]] of the former Northern Ireland government.
+| The [[Blue Ensign]] defaced with the letters GNI. Used on vessels of the Northern Ireland government.
+|-
+! scope="row" | [[File:Flag of Northern Ireland (1953–1972).svg|150px]]
+| 1924–1972
+| [[The Ulster Banner]] – Flag of the former [[Executive Committee of the Privy Council of Northern Ireland|Government of Northern Ireland]] between 1953 and 1972 and still used to represent Northern Ireland in some sporting events in which Northern Ireland competes. The flag is particularly associated with the loyalist and unionist communities in [[Northern Ireland]].
+| A red cross on a white field with a [[Red Hand of Ulster|red hand]], on a six pointed white star, crowned (representing the six counties in Northern Ireland). The Ulster Banner ceased to be officially recognised with the passing of the [[Northern Ireland Constitution Act 1973]] which dissolved the [[Parliament of Northern Ireland]].
+|-
+! scope="row" | [[File:Union flag 1606 (Kings Colors).svg|150px]]
+| 1707–1801
+| Flag of the [[Kingdom of Great Britain]]
+| First version of the [[Union Jack]] used in [[Kingdom of England|England]] from 1606 and [[Kingdom of Scotland|Scotland]] from 1707 – the Flags of England and Scotland superimposed.
+|-
+! scope="row" | [[File:Union Jack 1606 Scotland.svg|150px]]
+| 1707–1801
+| [[Union Flag#Scottish Union Flag|Scottish Union Flag]]
+| Scottish Union Flag variant<ref>Portrayed flying over Edinburgh Castle c. 1693 in a print by [[John Slezer]] in ''Theatrum Scotiae''</ref><ref>Described in 1707 by Henry St George as the ''Scotts union flagg as said to be used by the Scotts'': {{Cite news| first=Simon | last=de Burton | title=How Scots lost battle of the standard | date=9 November 1999 | publisher=Johnston Press plc | url =http://www.encyclopedia.com/doc/1P2-18715263.html| work =The Scotsman | access-date = 30 June 2009 }}''Partial view at [http://www.encyclopedia.com/ Encyclopedia.com]''</ref><ref>{{Cite book|author1=William McMillan  |author2=John Alexander Stewart  |name-list-style=amp|title=The story of the Scottish flag |year=1925 |publisher=H. Hopkins |page=112}} [https://books.google.com/books?id=4slsAAAAMAAJ&q=slezer+ Google books: ''"This flag had official recognition"'']</ref><ref>{{Cite book|last=Bartram |first=Graham |title=British Flags & Emblems |year=2005 |publisher=Flag Institute/Tuckwell |page=122}} [https://books.google.com/books?id=TD1mAAAAMAAJ&q=%22Scottish+Union+Flag%22 Google books: ''"Unofficial 1606 Scottish Union Flag"'']</ref>
+|-
+! scope="row" | [[File:St_Patrick's_saltire.svg|150px]]
+| 1783–1922
+| [[Saint Patrick's Flag|Saint Patrick's Saltire]], also known as St Patrick's Cross, the symbol of [[Order of St Patrick|The Most Illustrious Order of Saint Patrick]], the British order of chivalry associated with [[Ireland]].
+| A red [[saltire]] on a white field. Used to represent Ireland in the Union Jack and unofficially to represent Ireland from the [[Act of Union 1800|Act of Union]] to the [[Anglo-Irish Treaty]].
+|-
+! scope="row" | [[File:English Red Ensign 1620.svg|150px]]
+| 1620–1707
+| English Red Ensign
+| The Red Ensign of the English Royal Navy
+|-
+! scope="row" | [[File:English White Ensign 1620.svg|150px]]
+| 1620–1707
+| English White Ensign
+| The White Ensign of the English Royal Navy
+|-
+! scope="row" | [[File:English Blue Ensign 1620.svg|150px]]
+| 1620–1707
+| English Blue Ensign
+| The Blue Ensign of the English Royal Navy
+|-
+! scope="row" | [[File:Scottish Red Ensign.svg|150px]]
+| Until 1707
+| Scottish Red Ensign, used by the [[Royal Scottish Navy]]
+| A Red Ensign with the Flag of Scotland in the canton
+|-
+! scope="row" | [[File:Red Ensign of Great Britain (1707-1800).svg|150px]]
+| 1707–1801
+| Red Ensign of Great Britain
+| The Red Ensign with the first version of the Union Jack. (This was the flag flown over the [[Thirteen Colonies]] before the [[American Revolution]])
+|-
+! scope="row" | [[File:Naval Ensign of Great Britain (1707-1800).svg|150px]]
+| 1707–1801
+| White Ensign of Great Britain
+| The White Ensign with the first version of the Union Jack.
+|-
+! scope="row" | [[File:Blue Ensign of Great Britain (1707-1800).svg|150px]]
+| 1707–1801
+| Blue Ensign of Great Britain
+| The Blue Ensign with the first version of the Union Jack.
+|-
+! scope="row" | [[File:Flag of the Commonwealth (1649-1651).svg|150px]]
+| 1649–1651
+| [[Flags of the Interregnum (British Isles)|Flag of the Commonwealth of England]]
+| St George's Cross and an Irish Harp juxtaposed.
+|-
+! scope="row" | [[File:Flag of The Commonwealth.svg|150px]]
+| 1651–1658
+| Flag of the Commonwealth of England
+| St George's Cross and St Andrew's cross quartered.
+|-
+! scope="row" | [[File:Flag of the Commonwealth (1658-1660).svg|150px]]
+| 1658–1660
+| [[Protectorate Jack|Flag of The Protectorate]]
+| The 1606 Union Jack defaced with an Irish Harp.
+|-
+! scope="row" | [[File:King's Colour for the Royal Navy (1925–1936).svg|150px]]
+| 1925–1936
+| King's Colour for the Royal Navy
+| A White Ensign defaced in the centre of the cross with a garter of the [[Order of the Garter]] encircling the Royal Cypher of [[King George V]] and surmounted by a Tudor Crown.
+|-
+! scope="row" | [[File:King's Colour for the Royal Navy (1936–1952).svg|150px]]
+| 1936–1952
+| King's Colour for the Royal Navy
+| A White Ensign defaced in the centre of the cross with a garter of the Order of the Garter encircling the Royal Cypher of [[King George VI]] and surmounted by a Tudor Crown.
+|-
+! scope="row" | [[File:Queen's Colour for the Royal Navy (1952–2022).svg|150px]]
+| 1952–2022
+| Queen's Colour for the Royal Navy
+| A White Ensign defaced in the centre of the cross with a garter of the Order of the Garter encircling the Royal Cypher of [[Queen Elizabeth II]] and surmounted by a Saint Edward's Crown.
+|}
+
+===Lord Protector's standard===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Standard of Oliver Cromwell (1653–1659).svg|border=no|150px}}
+| 1653–1659
+| Standard of the [[Lord Protector]]
+| The cross of St. George quartered with the cross of St. Andrew and the Irish Harp, and surmounted by an escutcheon with Cromwell's personal coat of arms.
+|}
+
+===Royal standards===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | [[File:Royal Banner of England.svg|150px]]
+| 1198–1340
+| Royal Banner of [[Richard I of England|King Richard I]]
+| Gules, three lions passant regardant in pale or.
+|-
+! scope="row" | [[File:Royal Standard of England (1406-1340).svg|150px]]
+| 1340–1395<br />1399–1406
+| Royal Banner of [[Edward III of England|King Edward III]]
+| The [[coat of arms of England]] quartered with the Royal Standard of France, the [[fleur-de-lis]] representing the English claim to the French throne.
+|-
+! scope="row" | [[File:Royal Standard of England (1395–1399).svg|150px]]
+| 1395–1399
+| Royal Banner of [[Richard II of England|King Richard II]]
+| The coat of arms of England impaled with attributed arms of [[Edward the Confessor|King Edward the Confessor]] (symbolising mystical union).
+|-
+! scope="row" | [[File:Royal Standard of England (1406-1603).svg|150px]]
+| 1406–1422<br />1461–1470<br />1471–1554<br />1558–1603
+| Royal Banner of [[Henry IV of England|King Henry IV]]
+| The French quartering has been altered to three fleurs-de-lys.
+|-
+! scope="row" | [[File:Royal standard of England (1422–1461).svg|150px]]
+| 1422–1461<br />1470–1471
+| Royal Banner of [[Henry VI of England|King Henry VI]]
+| The coat of arms of France impaled with the coat of arms of England.
+|-
+! scope="row" | [[File:Royal Standard of England (1554–1558).svg|150px]]
+| 1554–1558
+| Royal Banner of [[Mary I of England|Queen Mary I]] and [[Philip I of England|King Philip]]
+| The coat of arms of Habsburg Spain impaled with the coat of arms of England.
+|-
+! scope="row" | [[File:Royal Standard of Great Britain (1603-1649).svg|150px]]
+| 1603–1649<br />1660–1689<br />1702–1707
+| Royal Standard of the [[House of Stuart]], used first by [[James VI and I]] following the 1603 [[Union of the Crowns]]
+| A banner of the Royal coat of arms of James VI and I, first and fourth quarters representing the [[Kingdom of England]] and the English claim to the [[Kingdom of France]], second quarter representing the [[Kingdom of Scotland]], third quarter representing the [[Kingdom of Ireland]] (This is the first time that Ireland has been represented on the Royal Standard).
+|-
+! scope="row" | [[File:Royal Standard of England (1689-1694).svg|150px]]
+| 1689–1694
+| Royal Standard of [[William III and II|King William III and II]] and [[Mary II of England|Queen Mary II]]
+| A banner of the joint Royal coat of arms of William III and Mary II, consisting of the coat of arms of England defaced with an inescutcheon for the [[House of Nassau]] (representing William) and impaled with another undefaced version of the same coat of arms (representing Mary).
+|-
+! scope="row" | [[File:Royal_Standard_of_Great_Britain_(1689-1702).svg|150px]]
+| 1694–1702
+| Royal Standard of King William III and II
+| A banner of the Royal coat of arms of William III and II, first and fourth quarters representing England and the English claim to the French throne, second quarter representing Scotland, third quarter representing Ireland, with an [[Escutcheon (heraldry)|inescutcheon]] for the House of Nassau.
+|-
+! scope="row" | [[File:Royal Standard of Great Britain (1707-1714).svg|150px]]
+| 1707–1714
+| Royal Standard of the House of Stuart, under [[Anne, Queen of Great Britain|Queen Anne]] following the 1707 [[Acts of Union 1707|Acts of Union]]
+| A banner of the Royal coat of arms of Queen Anne, first and fourth quarters representing (newly unified) England and Scotland, second quarter representing the British claim to the French throne, third quarter representing Ireland.
+|-
+! scope="row" | [[File:Royal standard of Great Britain (1714–1801).svg|150px]]
+| 1714–1801
+| Royal Standard of Great Britain under the [[House of Hanover]] from 1714 to 1801
+| A banner of the Royal coat of arms of Great Britain, first quarter representing England and Scotland, second quarter representing the British claim to the French throne, third quarter representing Ireland, fourth quarter representing the [[Electorate of Hanover]].
+|-
+! scope="row" | [[File:Royal Standard of the United Kingdom 1801-1816.svg|150px]]
+| 1801–1816
+| Royal Standard of the United Kingdom from 1801 to 1816
+| A banner of the Royal arms from the creation of the United Kingdom on 1 January 1801; first and fourth quarters for England and Wales, second Scotland, third Ireland, with an [[Escutcheon (heraldry)|inescutcheon]] for the Electorate of Hanover.
+|-
+! scope="row" | [[File:Royal Standard of the United Kingdom (1816–1837).svg|150px]]
+| 1816–1837
+| Royal Standard of the House of Hanover from 1816 to 1837
+| The Royal arms reflecting the change to the [[Kingdom of Hanover]].
+|-
+! scope="row" | [[File:Personal flag of Queen Elizabeth II.svg|150px]]
+| 1960–2022
+| Personal Flag of [[Elizabeth II]], used by the Queen in her capacity as [[Head of the Commonwealth]]
+| A crowned letter 'E' in gold, surrounded by a garland of gold roses on a blue background.
+|}
+
+====Royal consorts====
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Duke of Edinburgh Standard.svg|border=no|150px}}
+| 1952–2021
+| [[Standard of Prince Philip, Duke of Edinburgh|Standard]] of [[Prince Philip, Duke of Edinburgh|Prince Philip]], consort of [[Elizabeth II]]
+| A banner of the coat of arms of the Duke of Edinburgh, first quarter representing Denmark, second quarter Greece, third quarter the Mountbatten family, fourth quarter Edinburgh.
+|-
+! scope="row" | [[File:Royal Standard of Queen Elizabeth, The Queen Mother.svg|150px]]
+| 1936–2002
+| Standard of [[Elizabeth Bowes-Lyon|Queen Elizabeth]], consort of [[George VI]]
+| The Royal coat of arms of the United Kingdom impaled with the arms of the [[Earl of Strathmore]]: ("bows" and "lions").
+|-
+! scope="row" | [[File:Royal Standard of Mary of Teck, Queen Consort.svg|150px]]
+| 1910–1953
+| Standard of [[Mary of Teck|Queen Mary]], consort of [[George V]]
+| The Royal coat of arms of the United Kingdom impaled with the arms of [[Prince Francis, Duke of Teck]] (the Queen's father) and [[Prince Adolphus, Duke of Cambridge]] (the Queen's maternal grandfather).
+|-
+! scope="row" | [[File:Royal Standard of Alexandra of Denmark, Queen Consort.svg|150px]]
+| 1901–1928
+| Standard of [[Alexandra of Denmark|Queen Alexandra]], consort of [[Edward VII]]
+| The Royal coat of arms of the United Kingdom impaled with the arms of the King of Denmark.
+|-
+! scope="row" | [[File:Royal Standard of Prince Albert (1857–1861).svg|150px]]
+| 1840–1861
+| Standard of [[Albert, Prince Consort|Prince Albert]], consort of [[Queen Victoria|Victoria]]
+| The Royal coat of arms of the United Kingdom defaced with a three-point label (with the second point charged with the Cross of St. George), quartered with the [[Coat of arms of Saxony|arms of Saxony]].
+|-
+! scope="row" | [[File:Royal Standard of Queen Adelaide (1830–1849).svg|150px]]
+| 1830–1849
+| Standard of [[Adelaide of Saxe-Meiningen|Queen Adelaide]], consort of [[William IV]]
+| The Royal coat of arms of the United Kingdom (1816–1837) impaled with the arms of her father, [[Georg I, Duke of Saxe-Meiningen|Duke Georg I]] of [[Saxe-Meiningen]].
+|-
+! scope="row" | [[File:Royal Standard of Caroline of Brunswick-Wolfenbüttel.svg|150px]]
+| 1820–1821
+| Standard of [[Caroline of Brunswick-Wolfenbüttel|Queen Caroline]], consort of [[George IV]]
+| The Royal coat of arms of the United Kingdom (1816–1837) impaled with the arms of her father, [[Charles William Ferdinand, Duke of Brunswick|Charles William Ferdinand]], [[Duke of Brunswick]].
+|-
+! scope="row" | [[File:Royal Standard of Queen Charlotte (1816–1818).svg|150px]]
+| 1816–1818
+| rowspan="3" | Standard of [[Charlotte of Mecklenburg-Strelitz|Queen Charlotte]], consort of [[George III]]
+| The Royal coat of arms of the United Kingdom (1816–1837) impaled with the arms of her father, [[Duke Charles Louis Frederick of Mecklenburg-Strelitz|Duke Charles Louis Frederick]] of [[Duchy of Mecklenburg-Strelitz|Mecklenburg-Strelitz]].
+|-
+! scope="row" | [[File:Royal Standard of Queen Charlotte (1801–1816).svg|150px]]
+| 1801–1816
+| The Royal coat of arms of the United Kingdom (1801–1816) impaled with the arms of her father, Duke Charles Louis Frederick of Mecklenburg-Strelitz.
+|-
+! scope="row" | [[File:Royal Standard of Queen Charlotte (1761–1801).svg|150px]]
+| 1761–1801
+| The Royal coat of arms of Great Britain (1714–1801) impaled with the arms of her father, Duke Charles Louis Frederick of Mecklenburg-Strelitz.
+|-
+! scope="row" | [[File:Royal Standard of Caroline of Brandenburg-Ansbach.svg|150px]]
+| 1727–1737
+| Standard of [[Caroline of Brandenburg-Ansbach|Queen Caroline]], consort of [[George II of Great Britain|George II]]
+| The Royal coat of arms of Great Britain (1714–1801) impaled with the arms of her father, [[John Frederick, Margrave of Brandenburg-Ansbach]].
+|}
+
+====Welsh Royal Standards====
+{{Technical|section|reason=Frequently uses heraldic terminology which may not be accessible to the general public|date=September 2010}}
+
+{| class="wikitable"
+|-
+! style="width:110px;"|Flag!! style="width:100px;"|Date!! style="width:250px;"|Use!! style="width:250px;"|Description
+|-
+! scope="row" | {{ListFlag|Glyndwr's Banner.svg|border=no|150px}}
+| 1401–1416
+| Banner adopted by [[Owain Glyndŵr]] and thought to be derived from the [[Charge (heraldry)|counter-charged]] arms of the princely Houses of [[Mathrafal]] and [[House of Dinefwr|Dinefwr]]. It is in use by the [[National Eisteddfod]] for Wales, [[Cymdeithas yr Iaith Gymraeg|Cymdeithas yr iaith]] and widely amongst independentist groups.
+| Quarterly Or and [[Gules]], four Lions [[rampant]] counter-charged
+|-
+! scope="row" | [[File:Flag of Gwynedd.png|150px]]
+| c. 1195 – 1378
+| Banner of the princely House of [[Aberffraw]] and the [[Kingdom of Gwynedd]] famously used by [[Llywelyn the Great]], [[Llywelyn ap Gruffudd]] and [[Owain Lawgoch]]. The [[Prince of Wales]] uses a version of this flag today emblazoned with a Crown on a green shield.
+| Quarterly Or and Gules, four Lions passant guardant counter-charged [[langued]] and armed Azur
+|-
+! scope="row" | [[File:Flag of Powys.svg|150px]]
+| c. 1100 – c. 1400
+| Banner of the princely House of [[Mathrafal]] used during the early Middle Ages by the rulers of [[Kingdom of Powys|Powys]], [[Powys Wenwynwyn]] and later by their heirs the ''de la Pole'' (Powysian) dynasty. Modern use is rare.
+| Or a Lion rampant Gules langued and armed Azure
+|-
+| [[File:Flag of Deheubarth.svg|150px]]
+| c. 1100 – c. 1300
+| Banner of the princely [[House of Dinefwr]] and the [[Kingdom of Deheubarth]], a realm which covered much of '''south Wales'''. The banner would have been used during the early Middle Ages and later by the [[Earl of Shrewsbury|Talbot]] dynasty who inherited the arms. Modern use is rare.
+| Gules a Lion rampant Or, a border engrailed of the last
+|-
+! scope="row" | [[File:Alternative Flag of Gwynedd.svg|150px]]
+| c. 1240 – 1282
+| Banner of the personal arms of [[Llywelyn ap Gruffudd]]
+| Argent three Lions passant Gules
+|-
+! scope="row" | [[File:Flag of Powys Fadog.svg|150px]]
+| c. 1160 – c. 1350
+| Banner of Madog ap Gruffudd Maelor, and later the Banner of [[Powys Fadog]]
+| Argent a Lion rampant Sable langued and armed Gules
+|}
+
+===Battle flags===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width: 110px;" | Flag
+! style="width: 100px;" | Date
+! style="width: 250px;" | Use
+! style="width: 250px;" | Description
+|-
+! scope="row" | {{ListFlag|Cross of neith.svg|border=no|150px}}
+| 13th century
+| Banner known as {{lang|cy|Y Groes Nawdd}} or "The [[Cross of Neith]]" said to have been the battle flag of [[Llywelyn ap Gruffudd]] (d. 1282)
+| Purpure a [[celtic cross]] Or
+|-
+! scope="row" | [[File:Y Draig Aur Owain Glyndŵr.jpg|150px]]
+| {{circa|1400}} – 1416
+| Banner known as the {{lang|cy|Y Ddraig Aur}} or 'Golden Dragon' which has ancient origins. It was famously raised over {{lang|cy|[[Caernarfon]]|italic=no}} during the [[Battle of Tuthill]] in 1401 by {{lang|cy|[[Owain Glyndŵr]]|italic=no}}
+| Argent a dragon rampant Or
+|}
+
+===County flags===
+{| class="wikitable"
+|- style="background:#efefef;"
+! style="width: 110px;" | Flag
+! style="width: 100px;" | Date
+! style="width: 250px;" | Use
+! style="width: 250px;" | Description
+|-
+! scope="row" | {{ListFlag|Former Flag of Orkney.svg|border=no|150px}}
+| pre–2007
+| Unofficial flag of Orkney
+| A red Nordic cross on a yellow field (the Cross of [[Magnus Erlendsson, Earl of Orkney|Saint Magnus]]). It was denied formal recognition by the [[Lord Lyon]] in 2001, due to similarity with other national flags, as well as the [[Emblems of the Kalmar Union|flag of the former Kalmar Union]].
+|-
+! scope="row" | [[File:Unofficial flag of Lancashire (until 2008).svg|150px]]
+| pre–2008
+| Unofficial flag of Lancashire
+| The Red Rose of Lancashire on a white field. It was denied registration by the Flag Institute, due to being almost identical to the already registered flag of the town of [[Montrose, Angus]].
+|-
+! scope="row" | [[File:Flag of Sutherland (2018).svg|150px]]
+| 2018
+| Flag of Sutherland
+| A swooping eagle, seen face on, against a vertical bicoloured red and yellow background, with the eagle counterchanged yellow and red; at the hoist three stars or mullets. Was originally unveiled as the Flag of Sutherland in February 2018, but was placed on hold due to backlash from residents. A public vote beginning in October 2018 led to the retirement of this flag in favour of the current design.
+|}
+
+==See also==
+{{Portal|Heraldry and Vexillology|United Kingdom}}
+
+{{div col}}
+*[[List of English flags]]
+**[[List of Cornish flags]]
+*[[List of Irish flags]]
+**[[List of Northern Irish flags]]
+**[[Northern Ireland flags issue]]
+*[[List of Scottish flags]]
+*[[List of Welsh flags]]
+*[[Kroaz Du]] — The Black Cross of Brittany
+*[[Vexillology]]
+*[[Vexillological symbol]]
+*[[Glossary of vexillology]]
+*[[Civil flag]]
+*[[Ensign (flag)]]
+*[[Flag families]]
+*[[Maritime flag]]
+*[[National flag]]
+*[[National coat of arms]]
+*[[National emblem]]
+*[[National seal]]
+*[[National symbol]]
+*[[State flag]]
+
+
+*Galleries and lists:
+**[[Flags of Europe]]
+**[[Gallery of sovereign state flags]]
+**[[Gallery of flags of dependent territories]]
+**[[Lists of flags]]
+**[[List of flags by design]]
+**[[List of national flags by design]]
+**[[List of national flags of sovereign states]]
+**[[List of Japanese flags]]
+**[[List of Antarctic flags]]
+**[[List of flags by color combination]]
+**[[List of sovereign states by date of current flag adoption]]
+**[[Commons:Category:Gallery pages of flags of country subdivisions|Gallery pages of flags of country subdivisions]]
+{{div col end}}
+
+==Notes==
+{{notelist}}
+
+==References==
+{{Duplicated citations|reason=DuplicateReferences script detected:
+* http://www.flaginstitute.org/wp/flags/Derbyshire/ (refs: 132, 151)
+|date=October 2026}}
+
+{{reflist|30em}}
+
+==External links==
+{{Commons category|Flags of the United Kingdom}}
+* {{FOTW|id=gb|title=United Kingdom}}
+* [https://www.royal.uk/union-jack Union Jack] at the Royal Family website
+* [http://www.flaginstitute.org/ The Flag Institute]
+* [https://piggotts.co.uk/ Where to print Flags?]
+* [http://www.flags.net/country.php?country=UNKG&section=CURR&category=NATL World Flag Database]
+* [https://web.archive.org/web/20061208055023/http://www.culture.gov.uk/flagflying/rules.htm UK Department of Culture- Ceremonial and Flag Flying]
+* [http://bristolgrenadiers.org/colours/colours.htm British Armed forces Grenadiers Colour] {{Webarchive|url=https://web.archive.org/web/20141031205250/http://www.bristolgrenadiers.org/colours/colours.htm |date=31 October 2014 }}
+
+{{UKFlags}}
+{{Union Flag}}
+{{Subnational flags of the United Kingdom}}
+{{British dependencies flags}}
+{{Lists of flags}}
+
+{{DEFAULTSORT:List of British Flags}}
+[[Category:Lists of flags of the United Kingdom| ]]
+[[Category:Lists and galleries of flags|United Kingdom]]

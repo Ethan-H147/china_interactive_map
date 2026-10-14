@@ -99,11 +99,11 @@ for(const country of ['spain','italy']){let shared=0;for(const path of lines[cou
 for(const [country,p,place] of [['united-kingdom',[1.33,51.13],'Dover'],['france',[-1.56,43.48],'Biarritz'],['spain',[-1.78,43.39],'Hondarribia'],['italy',[7.53,43.79],'Ventimiglia'],['spain',[-5.35,36.14],'La Línea'],['italy',[13.755,45.607],'Muggia bay'],['italy',[13.715,45.602],'Punta Sottile'],['france',[7.40,43.722],'Cap d’Ail'],['france',[7.447,43.751],'Roquebrune'],['spain',[-5.416,35.913],'Perejil'],['united-kingdom',[-6.2,54.05],'Carlingford Lough mouth']])assert(!near(lines[country],p,250),place+' shore is not outlined');
 // Frontiers reach the coast where OpenStreetMap's land border ways do.
 for(const [country,p,place] of [['italy',[13.7228,45.5947],'Lazzaretto'],['france',[7.4185,43.7248],'Fontvieille'],['france',[7.4392,43.749],'Larvotto'],['spain',[-5.382,35.9125],'Benzú'],['spain',[-5.3431,35.8709],'Tarajal'],['spain',[-2.952,35.3201],'Melilla north'],['spain',[-2.9294,35.2719],'Melilla south'],['spain',[-5.345,36.1532],'Gibraltar'],['united-kingdom',[-7.26,55.065],'Lough Foyle']])assert(near(lines[country],p,150),country+' frontier reaches '+place);
-// Region and department flags (France), community and province flags (Spain).
+// Subdivision flags, at most two levels below the national flag, official flags only.
 {
  const {europeFlags}=await import('../dist/europe-flags.mjs');
  const manifest=JSON.parse(fs.readFileSync('dist/data/europe/subdivision-flag-sources.json','utf8'));
- const expected={france:[13,71],spain:[19,37]};
+ const expected={france:[13,71],spain:[19,37],italy:[20,31],'united-kingdom':[11,0]};
  for(const [country,[first,detail]] of Object.entries(expected)){
   const records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/'+country+'/catalogue.bin'))).records,index=new Map(records.map(r=>[r.id,r]));
   const flags=europeFlags[country];
@@ -119,5 +119,10 @@ for(const [country,p,place] of [['italy',[13.7228,45.5947],'Lazzaretto'],['franc
  }
  for(const id of ['ES-P-03','ES-P-12','ES-P-15','ES-P-17','ES-P-25','ES-P-46'])assert(!europeFlags.spain.detailFlags[id],id+' has no official flag');
  assert(!europeFlags.france.detailFlags['FR-D-73'],'Savoie has no departmental council flag');
+ // Italy: Milan's pictured flag is the de facto one; Udine's province is now a statistical unit;
+ // Bergamo's and Terni's images are not on Commons. The UK: no official Northern Ireland flag.
+ for(const id of ['IT-P-215','IT-P-30','IT-P-16','IT-P-55'])assert(!europeFlags.italy.detailFlags[id],id+' has no verified official flag');
+ assert(!europeFlags['united-kingdom'].firstFlags['GB-R-TLN'],'Northern Ireland has no official flag');
+ assert.equal(europeFlags['united-kingdom'].firstFlags['GB-R-TLJ'].name,'England','English regions show the flag of England');
 }
 console.log('Europe: outlines and subdivision hierarchies, chunked levels, statistics for every unit, enclaves and microstates, shared France seams drawn once, land frontiers without coastline.');
