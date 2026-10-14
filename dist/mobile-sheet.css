@@ -1,0 +1,69 @@
+/* Phones: the map fills the screen and the active sidebar becomes a bottom sheet.
+   The map container ends at the sheet's top edge, so every overlay anchored to its
+   bottom (zoom controls, legends, status) stays visible above the sheet in every
+   country, while the map canvas itself keeps the full screen and never resizes.
+   mobile-sheet.mjs sets --sheet-height and html[data-sheet] (peek | half | full). */
+.sheet-handle { display: none; }
+@media (max-width: 760px) {
+  :root { --sheet-height: 176px; --sheet-gap: 12px; }
+  body { height: 100dvh; overflow: hidden; }
+
+  .site-header {
+    position: fixed; top: var(--sheet-gap); left: var(--sheet-gap); right: var(--sheet-gap); z-index: 600;
+    height: 48px; padding: 0; gap: 10px; border: 0; background: transparent; pointer-events: none;
+  }
+  .site-header > * { pointer-events: auto; }
+  .site-header h1 {
+    flex: 1; min-width: 0; height: 48px; box-sizing: border-box; padding: 0 18px; gap: 10px; align-items: center;
+    border: 1px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: 0 4px 16px rgba(23, 32, 25, .1);
+    overflow: hidden; white-space: nowrap;
+  }
+  .site-header h1 > span { font-size: 21px !important; letter-spacing: normal !important; line-height: 1; }
+  .site-header #atlas-title-local:not(:empty) { display: inline; }
+  .site-header .surprise {
+    flex: none; width: 48px; height: 48px; padding: 0; gap: 0; border-radius: 24px; font-size: 0;
+    border-color: var(--line); background: var(--paper); box-shadow: 0 4px 16px rgba(23, 32, 25, .1);
+  }
+  .site-header .surprise svg { display: block; width: 20px; height: 20px; }
+
+  .workspace { position: fixed; inset: 0; height: auto; display: block; }
+  .map-shell {
+    position: absolute; top: 0; left: 0; right: 0; bottom: var(--sheet-height); height: auto; min-height: 0;
+    border: 0; overflow: visible; transition: bottom .28s var(--ease);
+  }
+  #map { position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100dvh; }
+  .map-top { top: calc(var(--sheet-gap) + 60px); left: var(--sheet-gap); right: var(--sheet-gap); }
+  .map-actions { right: var(--sheet-gap); bottom: 44px; border-radius: 14px; }
+  .map-actions button { width: 44px; height: 44px; }
+  .map-bottom { left: var(--sheet-gap); right: 70px; bottom: 14px; }
+  .north, .map-caption { display: none; }
+  /* A fully open sheet covers the map; its controls would only sit behind the header. */
+  html[data-sheet="full"] .map-actions, html[data-sheet="full"] .map-top { visibility: hidden; }
+
+  .sidebar:not([hidden]) {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 550; height: var(--sheet-height); min-height: 0;
+    border: 0; border-radius: 22px 22px 0 0; box-shadow: 0 -6px 24px rgba(23, 32, 25, .14);
+    transition: height .28s var(--ease); overscroll-behavior: contain;
+  }
+  html[data-sheet-dragging] .sidebar, html[data-sheet-dragging] .map-shell,
+  html[data-sheet-dragging] .maplibregl-ctrl-bottom-right, html[data-sheet-dragging] .maplibregl-ctrl-bottom-left { transition: none; }
+  .sheet-handle {
+    flex: none; display: flex; align-items: center; justify-content: center; width: 100%; height: 26px; padding: 0;
+    border: 0; background: transparent; cursor: grab; touch-action: none;
+  }
+  .sheet-handle::before { content: ""; width: 40px; height: 5px; border-radius: 3px; background: #d6cbb6; }
+  .sidebar-tools { padding: 0 16px; touch-action: none; }
+  .sidebar-tools input, .sidebar-tools button { touch-action: manipulation; }
+  .panel-tabs { margin-top: 12px; gap: 22px; }
+  .panel-tabs button { min-height: 44px; }
+  .sidebar-scroll { padding: 18px 16px 24px; overflow-y: auto; }
+  html[data-sheet="peek"] .sidebar-scroll { visibility: hidden; }
+  /* Credits and links live at the end of the expanded sheet only. */
+  html:not([data-sheet="full"]) .sidebar-footer { display: none; }
+  .sidebar-footer { padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); }
+  /* MapLibre's own corner controls sit inside the full-height canvas. */
+  .maplibregl-ctrl-bottom-right, .maplibregl-ctrl-bottom-left { bottom: var(--sheet-height); transition: bottom .28s var(--ease); }
+}
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .sidebar:not([hidden]), .map-shell { transition: none; }
+}

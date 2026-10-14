@@ -15,6 +15,7 @@ try{
   modules.AtlasRegionColors='region-colors.mjs';
   modules.AtlasSouthernAfrica='southern-africa.mjs';
   modules.AtlasChinaLevels='china-levels.mjs';
+  modules.AtlasSheet='mobile-sheet.mjs';
   const rendererPromise=import('./vendor/maplibre-gl.mjs');
   await Promise.all(Object.entries(modules).map(async([name,file])=>{window[name]=await import('./'+file);}));
   const renderer=await rendererPromise;window.maplibregl=renderer;renderer.setWorkerCount(2);

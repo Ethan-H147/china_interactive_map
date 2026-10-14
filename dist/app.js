@@ -149,7 +149,7 @@ function lockCamera(){
   clearHover();
 }
 function unlockCamera(){cameraBusy=false;enabledInteractions.forEach(name=>map[name].enable());enabledInteractions=[];controls();updateLabels();}
-function navigationOptions(options={}){const top=options.paddingTopLeft||options.padding||[28,65],bottom=options.paddingBottomRight||options.padding||[55,65];return{padding:{left:top[0],top:top[1],right:bottom[0],bottom:bottom[1]},maxZoom:options.maxZoom?options.maxZoom-1:11,retainPadding:false};}
+function navigationOptions(options={}){const top=options.paddingTopLeft||options.padding||[28,65],bottom=options.paddingBottomRight||options.padding||[55,65];return{padding:{left:top[0],top:top[1],right:bottom[0],bottom:Math.max(bottom[1],window.AtlasSheet?.navigationInset()||0)},maxZoom:options.maxZoom?options.maxZoom-1:11,retainPadding:false};}
 let navigationEpoch=0,navigationCleanup,previewStart;
 function cancelNavigation(){navigationEpoch++;navigationCleanup?.(false);navigationCleanup=null;finishNavigation=null;map.stop();}
 async function navigateBounds(bounds,options={},animate=true){
