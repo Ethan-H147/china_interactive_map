@@ -32,6 +32,7 @@ function findChrome(){
 }
 
 // One browser per scenario; viewport, touch and developer mode are fixed at launch.
+// BROWSER_CPU_SLOWDOWN (e.g. 4) throttles the page like a slower machine.
 export async function launch({width=1280,height=820,mobile=false,developer=false}={}){
  const profile=fs.mkdtempSync(path.join(os.tmpdir(),'atlas-browser-'));
  const software=process.env.CI?['--use-angle=swiftshader','--enable-unsafe-swiftshader']:['--enable-gpu','--ignore-gpu-blocklist'];
@@ -46,29 +47,34 @@ export async function launch({width=1280,height=820,mobile=false,developer=false
  const on=(method,fn)=>{if(!listeners.has(method))listeners.set(method,[]);listeners.get(method).push(fn);};
  const send=(method,params={})=>new Promise((resolve,reject)=>{const i=++id;pending.set(i,d=>d.error?reject(Error(method+': '+d.error.message)):resolve(d.result));ws.send(JSON.stringify({id:i,method,params}));});
  on('Runtime.exceptionThrown',p=>problems.push('exception: '+(p.exceptionDetails.exception?.description||p.exceptionDetails.text).split('\n')[0]));
- on('Runtime.consoleAPICalled',p=>{if(p.type==='error')problems.push('console.error: '+p.args.map(a=>a.value??a.description).join(' ').slice(0,300));});
+ const warnings=[];
+ on('Runtime.consoleAPICalled',p=>{const text=p.args.map(a=>a.value??a.description).join(' ').slice(0,400);if(p.type==='error')problems.push('console.error: '+text);if(p.type==='warning')warnings.push(text);});
  on('Network.requestWillBeSent',p=>requests.push(p.request.url));
  on('Network.responseReceived',p=>{if(p.response.status>=400)failures.push(p.response.status+' '+p.response.url);});
  on('Network.loadingFailed',p=>{if(!p.canceled&&p.errorText!=='net::ERR_ABORTED')failures.push(p.errorText+' '+p.requestId);});
  await send('Page.enable');await send('Runtime.enable');await send('Network.enable');
  await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:mobile?2:1,mobile});
  if(mobile)await send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:5});
+ if(+process.env.BROWSER_CPU_SLOWDOWN>1)await send('Emulation.setCPUThrottlingRate',{rate:+process.env.BROWSER_CPU_SLOWDOWN});
  if(developer)await send('Page.addScriptToEvaluateOnNewDocument',{source:"try{sessionStorage.setItem('boundary-atlas-developer-v1','true')}catch{}"});
  const evaluate=async expression=>{const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error('evaluate: '+(r.exceptionDetails.exception?.description||r.exceptionDetails.text).split('\n')[0]);return r.result.value;};
  const waitFor=async(expression,{timeout=30000,label=expression}={})=>{const start=Date.now();for(;;){let value;try{value=await evaluate(expression);}catch{}if(value)return value;if(Date.now()-start>timeout)throw Error('Timed out waiting for '+label);await sleep(150);}};
  // The atlas is ready when startup and country switching have finished and the map is idle.
  const settle=async()=>{await waitFor("!document.documentElement.dataset.starting&&!document.documentElement.dataset.switching&&typeof map!=='undefined'&&map.loaded()&&!map.isMoving()",{timeout:90000,label:'atlas to settle'});await sleep(600);};
  const center=async selector=>{const r=await evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});if(!e)return null;e.scrollIntoView({block:'nearest'});const b=e.getBoundingClientRect();return b.width&&b.height?[b.x+b.width/2,b.y+b.height/2]:null;})()`);if(!r)throw Error('Not visible: '+selector);return r;};
- const mouse=async(type,x,y,extra={})=>send('Input.dispatchMouseEvent',{type,x,y,button:'left',clickCount:1,...extra});
- const touch=async(type,points)=>send('Input.dispatchTouchEvent',{type,touchPoints:points.map(([x,y])=>({x,y}))});
+  // Input carries explicit timestamps (seconds), so gesture speed does not depend on how
+ // quickly this machine delivers events.
+ const mouse=async(type,x,y,extra={})=>send('Input.dispatchMouseEvent',{type,x,y,button:'left',clickCount:1,timestamp:Date.now()/1000,...extra});
+ const touch=async(type,points,timestamp=Date.now()/1000)=>send('Input.dispatchTouchEvent',{type,touchPoints:points.map(([x,y])=>({x,y})),timestamp});
  const session={
-  send,evaluate,waitFor,settle,problems,requests,failures,mobile,
+  send,evaluate,waitFor,settle,problems,warnings,requests,failures,mobile,
   async open(base,hash=''){problems.length=0;failures.length=0;await send('Page.navigate',{url:base+'/'+hash});await settle();},
   // A real pointer press: touch on a phone, mouse otherwise.
   async tap(target){const [x,y]=Array.isArray(target)?target:await center(target);if(mobile){await touch('touchStart',[[x,y]]);await sleep(40);await touch('touchEnd',[]);}else{await mouse('mouseMoved',x,y);await mouse('mousePressed',x,y);await mouse('mouseReleased',x,y);}await sleep(250);},
   async drag(from,to,{steps=12,duration=240}={}){const [x0,y0]=Array.isArray(from)?from:await center(from),[x1,y1]=Array.isArray(to)?to:[x0+to.dx,y0+to.dy];
-   if(mobile){await touch('touchStart',[[x0,y0]]);for(let i=1;i<=steps;i++){await sleep(duration/steps);await touch('touchMove',[[x0+(x1-x0)*i/steps,y0+(y1-y0)*i/steps]]);}await touch('touchEnd',[]);}
-   else{await mouse('mouseMoved',x0,y0);await mouse('mousePressed',x0,y0);for(let i=1;i<=steps;i++){await sleep(duration/steps);await mouse('mouseMoved',x0+(x1-x0)*i/steps,y0+(y1-y0)*i/steps,{buttons:1});}await mouse('mouseReleased',x1,y1);}
+   const t0=Date.now()/1000,at=i=>t0+duration/1000*i/steps;
+   if(mobile){await touch('touchStart',[[x0,y0]],at(0));for(let i=1;i<=steps;i++){await sleep(duration/steps);await touch('touchMove',[[x0+(x1-x0)*i/steps,y0+(y1-y0)*i/steps]],at(i));}await touch('touchEnd',[],at(steps));}
+   else{await mouse('mouseMoved',x0,y0,{timestamp:at(0)});await mouse('mousePressed',x0,y0,{timestamp:at(0)});for(let i=1;i<=steps;i++){await sleep(duration/steps);await mouse('mouseMoved',x0+(x1-x0)*i/steps,y0+(y1-y0)*i/steps,{buttons:1,timestamp:at(i)});}await mouse('mouseReleased',x1,y1,{timestamp:at(steps)});}
    await sleep(450);},
   async key(key,{code=key,text,modifiers=0}={}){const keyCode={Enter:13,Escape:27,Tab:9,' ':32,Backspace:8,ArrowDown:40,ArrowUp:38}[key]||key.toUpperCase().charCodeAt(0);const t=text??(key.length===1?key:key==='Enter'?'\r':undefined);
    await send('Input.dispatchKeyEvent',{type:t?'keyDown':'rawKeyDown',key,code:code===' '?'Space':code,windowsVirtualKeyCode:keyCode,...(t?{text:t}:{}),modifiers});await send('Input.dispatchKeyEvent',{type:'keyUp',key,code:code===' '?'Space':code,windowsVirtualKeyCode:keyCode,modifiers});await sleep(60);},

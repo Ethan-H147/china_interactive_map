@@ -49,7 +49,7 @@ function syncDistrictLayers(){
 }
 let provinceFeatures=[],manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 const quiz={active:false,round:null,pool:[],saved:null,highlighted:[],reviewLayer:null};
-let chinaReady=false,chinaLoading,countrySwitching=false,countryEpoch=0,requestedCountry,countryPreparation,countryLoadFailed=false;
+let failedCountry=null,recoveringCountry=false,chinaReady=false,chinaLoading,countrySwitching=false,countryEpoch=0,requestedCountry,countryPreparation,countryLoadFailed=false;
 // China's packed geometry downloads from the first moment a China visit is known,
 // overlapping style, module and context loading. MapLibre's workers unpack it
 // (see maplibre-worker-protocols.mjs); the page only hands them a blob URL.
@@ -258,7 +258,10 @@ function waitForCountrySources(ids,signal){
   const failed=event=>{if(ids.includes(event.sourceId))finish(Error('Country boundary source failed'));};
   const aborted=()=>finish();
   map.on('sourcedata',check);map.on('error',failed);signal.addEventListener('abort',aborted,{once:true});
-  timer=setTimeout(()=>finish(Error('Country boundary sources timed out')),15000);
+  // Slow devices can take longer to index a large country. Waiting is only for a smooth
+  // first flight, so after 15 s the switch continues while indexing finishes; only a
+  // source error fails it.
+  timer=setTimeout(()=>finish(),15000);
   if(signal.aborted)aborted();else check();
  });
 }
@@ -271,7 +274,7 @@ async function changeAtlas(next,animate=true,flight=false){
  const targetAtlas=atlasFor(next);if(next!=='china'&&!targetAtlas)return false;
  if(!countrySwitching&&!countryLoadFailed&&next===atlasMode&&(next==='china'?chinaReady:targetAtlas.ready))return true;
  if(countrySwitching&&next===requestedCountry)return false;
- const epoch=++countryEpoch;countryPreparation?.abort();const preparation=new AbortController();countryPreparation=preparation;requestedCountry=next;saveView();countrySwitching=true;countryLoadFailed=false;controls();cancelNavigation();
+ const previous=atlasMode,epoch=++countryEpoch;countryPreparation?.abort();const preparation=new AbortController();countryPreparation=preparation;requestedCountry=next;saveView();countrySwitching=true;countryLoadFailed=false;controls();cancelNavigation();
  // Acknowledge the destination immediately while keeping the camera still during preparation.
  window.AtlasEntry.remember(next);window.AtlasTheme.applyAtlasTheme(map,next);map.setRenderWorldCopies?.(next==='russia');
  document.documentElement.dataset.switching='true';
@@ -299,10 +302,13 @@ async function changeAtlas(next,animate=true,flight=false){
   if(targetAtlas)await targetAtlas.enter(false);
   else{$('province').value='';$('selection').hidden=true;$('tab-explore').hidden=true;showPanel('layers');$('home').textContent='All China';$('mode-province').textContent='Provinces';$('mode-prefecture').textContent='Subdivisions';setMode('province',true);}
   if(epoch!==countryEpoch)return false;
-  if(countryPreparation===preparation)countryPreparation=null;unlockCamera();controls();refreshStatus();updateLabels();saveViewSoon();return true;
+  if(countryPreparation===preparation)countryPreparation=null;failedCountry=null;unlockCamera();controls();refreshStatus();updateLabels();saveViewSoon();return true;
  }catch(error){
   if(epoch!==countryEpoch)return false;
-  if(countryPreparation===preparation)countryPreparation=null;countryLoadFailed=true;countrySwitching=false;delete document.documentElement.dataset.switching;unlockCamera();$('status').hidden=false;$('status').textContent='Could not load boundaries. Click the country to retry.';console.warn('Country switch:',error);return false;
+  if(countryPreparation===preparation)countryPreparation=null;countryLoadFailed=true;countrySwitching=false;delete document.documentElement.dataset.switching;unlockCamera();console.warn('Country switch:',error);
+  // Return to the country the visitor was on, so the page stays whole, and offer a retry.
+  if(previous&&previous!==next&&!recoveringCountry){recoveringCountry=true;try{await changeAtlas(previous,false);}finally{recoveringCountry=false;}}
+  failedCountry=next;showLoadFailure();return false;
  }
 }
 function regionZoom(p){return p.parentCity?14:[810000,820000].includes(p.provinceCode||p.adcode)?p.level==='province'?14:17:p.level==='province'?8:10;}
@@ -338,7 +344,9 @@ function renderLabels(){
   labels.push(...window.AtlasLabels.render(map,candidates.filter(p=>p.centroid||p.center).map(p=>({id:p.adcode,center:p.centroid||p.center,en:englishName(p),district:Number(p.provinceCode)===310000&&p.name.endsWith('区'),local:p.level==='province'?shortName(p.name):p.name,selected:p===selectedP})),'province-label'));
 
 }
-function refreshStatus(){$('status').hidden=allReady;$('status').textContent=allReady?'':'Loading boundaries…';}
+// A country that failed to load keeps its message and Retry button until it loads.
+function showLoadFailure(){const status=$('status'),retry=document.createElement('button');retry.type='button';retry.className='status-retry';retry.textContent='Retry';retry.onclick=()=>{const country=failedCountry;failedCountry=null;refreshStatus();changeAtlas(country);};status.replaceChildren((window.AtlasEntry.countries[failedCountry]?.en||'The country')+' could not load. ',retry);status.hidden=false;}
+function refreshStatus(){if(failedCountry&&allReady){showLoadFailure();return;}$('status').hidden=allReady;$('status').textContent=allReady?'':'Loading boundaries…';}
 function renderSearch(){
   const query=$('search').value.trim().toLowerCase();const results=$('search-results');results.replaceChildren();results.hidden=!query;if(!query)return;
   const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();

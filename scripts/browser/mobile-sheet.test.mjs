@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
+import {stable} from './countries.test.mjs';
 // The phone bottom sheet, driven by real touch, keyboard and viewport changes.
 const phone={width:390,height:844,mobile:true};
 // The displayed sidebar: every country has one, only the active country's is shown.
 const sidebar=`[...document.querySelectorAll('aside.sidebar')].find(a=>!a.hidden&&getComputedStyle(a).display!=='none')`;
 const box=(page,expression)=>page.evaluate(`(()=>{const e=${expression};if(!e)return null;const b=e.getBoundingClientRect();return {x:b.x+b.width/2,y:b.y+b.height/2,top:b.top,bottom:b.bottom,left:b.left,height:b.height};})()`);
-const point=async(page,expression)=>{const b=await box(page,expression);assert(b,'Element present: '+expression);return [b.x,b.y];};
+// Waits for an element to stop moving (the sheet animates its height) before aiming at it.
+const point=async(page,expression)=>{await stable(page,`JSON.stringify(${expression}?.getBoundingClientRect())`);const b=await box(page,expression);assert(b,'Element present: '+expression);return [b.x,b.y];};
 const handle=`${sidebar}.querySelector('.sheet-handle')`,search=`${sidebar}.querySelector('.sidebar-tools input')`;
 const result=name=>`[...${sidebar}.querySelectorAll('button')].find(b=>b.getClientRects().length&&b.textContent.includes(${JSON.stringify(name)})&&!b.closest('.panel-tabs'))`;
 const state=page=>page.evaluate(`({sheet:document.documentElement.dataset.sheet,height:${sidebar}.getBoundingClientRect().height,innerHeight})`);
@@ -45,6 +47,7 @@ export default [
   assert.equal((await state(page)).sheet,'full','Focusing search opens the full sheet');
   await page.type('Suzhou');
   await page.waitFor(`!!${result('Suzhou')}`,{label:'search results'});
+  await stable(page,`[...${sidebar}.querySelectorAll('button')].filter(b=>b.getClientRects().length).map(b=>b.textContent).join('|')`);
   // The on-screen keyboard shrinks the viewport; the sheet must still fit and show results.
   await page.viewport(390,480);
   const s=await state(page);assert(s.height<=s.innerHeight,'The sheet fits above the keyboard');

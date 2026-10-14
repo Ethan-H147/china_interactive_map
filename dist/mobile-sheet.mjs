@@ -38,12 +38,14 @@ document.addEventListener('pointerdown', event => {
   if (!query.matches) return;
   const aside = event.target.closest?.('aside.sidebar'), onHandle = !!event.target.closest('.sheet-handle');
   if (!aside || !(onHandle || event.target.closest('.sidebar-tools')) || (!onHandle && event.target.closest('input, button, a, select, label'))) return;
-  drag = {y: event.clientY, start: heights()[state], moved: 0, onHandle, last: event.clientY, time: performance.now(), velocity: 0};
+  drag = {y: event.clientY, start: heights()[state], moved: 0, onHandle, last: event.clientY, time: event.timeStamp, velocity: 0};
   root.dataset.sheetDragging = '';
 });
 addEventListener('pointermove', event => {
   if (!drag) return;
-  const {peek, full} = heights(), now = performance.now();
+  // Speed comes from the input events' own timestamps, so a slow device that handles
+  // events late still measures a flick at the speed the finger moved.
+  const {peek, full} = heights(), now = event.timeStamp;
   drag.moved = Math.max(drag.moved, Math.abs(event.clientY - drag.y));
   drag.velocity = (drag.last - event.clientY) / Math.max(1, now - drag.time); drag.last = event.clientY; drag.time = now;
   if (drag.moved > 6) apply(state, Math.min(full, Math.max(peek, drag.start + drag.y - event.clientY)));
@@ -60,11 +62,15 @@ addEventListener('pointerup', () => {
   if (Math.abs(current.velocity) > .5 && next === state) { const i = states.indexOf(state) + (current.velocity > 0 ? 1 : -1); next = states[Math.max(0, Math.min(2, i))]; }
   apply(next);
 });
-// Keyboard and switch access: Enter or Space on the focused handle (a click without a
-// pointer press) steps through the heights, like a tap.
-document.addEventListener('click', event => {
-  if (query.matches && event.detail === 0 && event.target.closest?.('.sheet-handle')) apply(states[(states.indexOf(state) + 1) % states.length]);
+// Keyboard access: Enter or Space on the focused handle steps through the heights, like a
+// tap. The keys are handled directly (and their default click suppressed), so a touch tap,
+// which pointerup already handles, can never count twice.
+document.addEventListener('keydown', event => {
+  if (!query.matches || (event.key !== 'Enter' && event.key !== ' ') || !event.target.closest?.('.sheet-handle')) return;
+  event.preventDefault();
+  if (!event.repeat) apply(states[(states.indexOf(state) + 1) % states.length]);
 });
+document.addEventListener('keyup', event => { if (query.matches && event.key === ' ' && event.target.closest?.('.sheet-handle')) event.preventDefault(); });
 addEventListener('pointercancel', () => { if (drag) { drag = null; delete root.dataset.sheetDragging; apply(state); } });
 
 // Search fills the screen; choosing a tab opens the sheet.

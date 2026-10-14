@@ -23,7 +23,8 @@ for(const file of files){
    results.push({label,ok:true,ms:Date.now()-started});console.log('✓',label,`(${((Date.now()-started)/1000).toFixed(1)} s)`);
   }catch(error){
    let shot='';try{shot=await page.screenshot(label);}catch{}
-   results.push({label,ok:false});console.log('✗',label,'\n  ',error.message,shot?'\n   screenshot: '+shot:'');
+   const context=[...page.problems,...page.failures.map(f=>'request failed: '+f)].filter(p=>!error.message.includes(p)).slice(0,5);
+   results.push({label,ok:false});console.log('✗',label,'\n  ',error.message,context.length?'\n   page: '+context.join('\n   page: '):'',shot?'\n   screenshot: '+shot:'');
   }finally{await page.close();}
  }
 }
