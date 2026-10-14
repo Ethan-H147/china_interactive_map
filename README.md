@@ -303,17 +303,35 @@ Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia
 
 ## Europe (developer mode)
 
-The United Kingdom, Spain, France and Italy are outlines only for now: each country is a single selectable region with no level toggle, and all four are listed in `developerCountries`. `dist/europe.mjs` adds them through the shared regional-country page only once developer mode allows one, so public visitors download none of their geometry (only the 2 KB module).
+The United Kingdom, Spain, France and Italy are listed in `developerCountries`. `dist/europe.mjs` adds them through the shared regional-country page only once developer mode allows one, so public visitors download none of their geometry (only the 2 KB module). Countries whose subdivisions are not yet built are a single selectable region with no level toggle.
+
+### Italy
+
+20 regions, 110 provinces and equivalent units, and 7,896 comuni, from ISTAT's full-detail boundaries for statistical purposes at 1 January 2026 (CC BY 4.0). The comuni are simplified together so neighbours share edges, and regions and provinces are dissolved from them. Like China, Italy needs no separate settlement layer: every town is a comune. Regions and provinces arrive in one bundle when Italy opens (`bundledLevels: 2`); a province's comuni load when it is selected.
+
+| Level | Units | Kinds |
+|---|---|---|
+| Regions | 20 | Region, autonomous region (special statute) |
+| Provinces | 110 | Province, metropolitan city, autonomous province, free municipal consortium (Sicily), statistical unit (Friuli-Venezia Giulia's former provinces) |
+| Comuni | 7,896 | Comune; bilingual names kept as aliases |
+
+Statistics (`npm run build:europe` runs `scripts/prepare-europe-statistics.mjs`; extracts are retained in `scripts/statistics-sources/europe`):
+
+- Population: ISTAT resident population by comune at 1 January 2026 (estimate); provinces and regions are sums. ISTAT's population file still uses Sardinia's pre-reform comune codes, so the 377 Sardinian comuni are matched by name (unique within Sardinia).
+- Area: ISTAT's official surface, which is the area of these boundaries (AREA_KMQ / Shape_Area).
+- GDP and GDP per capita: Eurostat regional accounts at current prices — regions from NUTS 2 (2024; Trentino-South Tyrol sums its two autonomous provinces), provinces from NUTS 3 (2023). Sardinia's eight units of 2025 do not match Eurostat's five former provinces, so they have no provincial GDP. USD uses Eurostat's annual average euro rate.
+
+### Outlines and frontiers
 
 | Country | Coverage | Outline source | Licence |
 |---|---|---|---|
 | United Kingdom | Great Britain, Northern Ireland and their islands | Office for National Statistics, Countries (December 2024) BGC | Open Government Licence v3.0 |
 | Spain | Peninsula, Balearic and Canary Islands, Ceuta, Melilla | Instituto Geográfico Nacional via geoBoundaries | CC BY 4.0 |
 | France | Metropolitan France and Corsica (overseas regions not yet included) | IGN regions via geoBoundaries, dissolved | Etalab Open Licence 2.0 |
-| Italy | Mainland and islands; San Marino and Vatican City remain enclaves | ISTAT via geoBoundaries | CC BY 3.0 |
+| Italy | Mainland and islands; San Marino and Vatican City remain enclaves | ISTAT boundaries for statistical purposes, 1 January 2026 (dissolved from the comuni) | CC BY 4.0 |
 
 Spain's and Italy's frontier edges are moved onto the French outline, so each pair shares one edge, and Spain's Llívia takes the exact shape of its enclave in France. Land frontiers are drawn and coastlines are not. An outline edge is a frontier when a point 100–600 m beyond it lies inside a neighbouring country and a Natural Earth land boundary line is within 4 km. Neighbouring outlines (geoBoundaries) and OpenStreetMap land border ways are used only for this classification; the OpenStreetMap ways decide where the frontiers with Monaco, Ceuta, Melilla and Slovenia meet the sea, because those neighbours' outlines include territorial waters. France holds its frontiers with Spain and Italy, so every edge is drawn once.
 
 Non-atlas neighbours (Portugal, Switzerland, Germany, Ireland and others) are still the Natural Earth 1:110m background silhouettes, which do not meet the detailed frontiers.
 
-Rebuild with `npm run build:europe`; check with `npm run test:europe` (frontier lengths and continuity, enclaves, coastal ends, no coastline strokes, developer gating).
+Rebuild with `npm run build:europe`; check with `npm run test:europe` (hierarchies, chunks, statistics for every unit, frontier lengths and continuity, enclaves, coastal ends, no coastline strokes, loading modes, developer gating).

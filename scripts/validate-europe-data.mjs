@@ -16,14 +16,43 @@ const outline={},lines={};
 const frontierKm={'united-kingdom':[480,530],spain:[1300,1400],france:[2850,3000],italy:[1380,1450]};
 // Pieces: Ireland; Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea, Llívia; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
 const pieces={'united-kingdom':1,spain:5,france:5,italy:4};
+// Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
+const subdivided={italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2}};
 for(const country of countries){
  const catalogue=read(country,'catalogue.bin'),first=read(country,'first.bin'),context=read(country,'context.bin');
- assert.deepEqual(catalogue.levels,['Country']);assert.equal(catalogue.records.length,1);assert.deepEqual(catalogue.counts,{1:1});
- const [record]=catalogue.records;assert.equal(record.level,1);assert.equal(record.parent,null);assert.deepEqual(record.bounds,configurations[country].bounds,country+' selection frames the configured bounds');
- assert.equal(first.regions.features.length,1);assert.equal(first.regions.features[0].properties.id,record.id);assert.equal(first.boundaries.features.length,0);
  assert.equal(context.features.length,1);assert.equal(context.features[0].properties.country,country);
  outline[country]=context.features[0].geometry;
- assert.deepEqual(JSON.stringify(first.regions.features[0].geometry),JSON.stringify(outline[country]),country+' region and silhouette are the same outline');
+ const s=subdivided[country];
+ if(!s){
+  assert.deepEqual(catalogue.levels,['Country']);assert.equal(catalogue.records.length,1);assert.deepEqual(catalogue.counts,{1:1});
+  const [record]=catalogue.records;assert.equal(record.level,1);assert.equal(record.parent,null);assert.deepEqual(record.bounds,configurations[country].bounds,country+' selection frames the configured bounds');
+  assert.equal(first.regions.features.length,1);assert.equal(first.regions.features[0].properties.id,record.id);assert.equal(first.boundaries.features.length,0);
+  // Same polygons; their order may differ (the frontier alignment sorts France's list).
+  const shapes=g=>polygons(g).map(p=>JSON.stringify(p)).sort();
+  assert.deepEqual(shapes(first.regions.features[0].geometry),shapes(outline[country]),country+' region and silhouette are the same outline');
+ }else{
+  assert.deepEqual(catalogue.levels,s.levels);assert.deepEqual(catalogue.counts,s.counts);
+  const ids=new Map(catalogue.records.map(r=>[r.id,r]));assert.equal(ids.size,catalogue.records.length,country+' unique ids');
+  for(const r of catalogue.records){assert(r.en&&r.kind&&r.center.every(Number.isFinite)&&r.areaKm2>0,r.id+' record');if(r.level>1)assert.equal(ids.get(r.parent)?.level,r.level-1,r.id+' parent one level up');}
+  assert.equal(first.regions.features.length,s.counts[1]);assert(first.boundaries.features.length>0);
+  const bundle=read(country,'all.bin');assert.deepEqual(bundle.levels.map(l=>l.level),Array.from({length:s.bundled},(_,i)=>i+1));
+  for(const l of bundle.levels)assert.equal(l.regions.features.length,s.counts[l.level],country+' bundle level '+l.level);
+  // Every unit below level 1 is in exactly one chunk, under its own parent.
+  for(let level=2;level<=s.levels.length;level++){
+   const chunks=Object.entries(catalogue.chunks).filter(([,c])=>c.level===level);let total=0;
+   for(const [parent,c] of chunks){const data=read(country,c.file);total+=data.regions.features.length;for(const f of data.regions.features)assert.equal(ids.get(f.properties.id).parent,parent,f.properties.id+' chunk parent');}
+   assert.equal(total,s.counts[level],country+' level '+level+' chunks hold every unit');
+  }
+  // Statistics: population and area for every unit; parents sum their children.
+  const statistics=JSON.parse(fs.readFileSync(root+'/'+country+'/statistics.json')),stats=statistics.regions;
+  for(const r of catalogue.records){const m=stats[country+':'+r.id];assert(m?.population?.value>0&&m.area?.value>0,r.id+' population and area');for(const metric of [m.population,m.area,m.gdp,m.gdpPerCapita].filter(Boolean))assert(statistics.sources[metric.source],r.id+' cites a listed source');}
+  for(const r of catalogue.records.filter(r=>r.level<s.levels.length)){const sum=catalogue.records.filter(c=>c.parent===r.id).reduce((t,c)=>t+stats[country+':'+c.id].population.value,0);assert.equal(stats[country+':'+r.id].population.value,sum,r.id+' population sums its children');}
+  if(country==='italy'){
+   assert.equal(stats['italy:IT-C-058091'].population.value>2.6e6&&stats['italy:IT-C-058091'].area.value>1280,true,'Rome comune');
+   const sardinia=new Set(catalogue.records.filter(r=>r.parent==='IT-R-20').map(r=>r.id));
+   for(const r of catalogue.records.filter(r=>r.level<=2))assert.equal(!!stats['italy:'+r.id].gdp,!sardinia.has(r.id),r.id+' GDP only where Eurostat territories match');
+  }
+ }
  lines[country]=read(country,'international.bin').features.flatMap(f=>f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates);
  const km=lines[country].reduce((s,p)=>s+p.slice(1).reduce((t,q,i)=>t+metres(p[i],q),0),0)/1000;
  assert(km>=frontierKm[country][0]&&km<=frontierKm[country][1],country+' land frontier '+km.toFixed(0)+' km');
@@ -45,4 +74,4 @@ for(const country of ['spain','italy']){let shared=0;for(const path of lines[cou
 for(const [country,p,place] of [['united-kingdom',[1.33,51.13],'Dover'],['france',[-1.56,43.48],'Biarritz'],['spain',[-1.78,43.39],'Hondarribia'],['italy',[7.53,43.79],'Ventimiglia'],['spain',[-5.35,36.14],'La Línea'],['italy',[13.755,45.607],'Muggia bay'],['italy',[13.715,45.602],'Punta Sottile'],['france',[7.40,43.722],'Cap d’Ail'],['france',[7.447,43.751],'Roquebrune'],['spain',[-5.416,35.913],'Perejil'],['united-kingdom',[-6.2,54.05],'Carlingford Lough mouth']])assert(!near(lines[country],p,250),place+' shore is not outlined');
 // Frontiers reach the coast where OpenStreetMap's land border ways do.
 for(const [country,p,place] of [['italy',[13.7228,45.5947],'Lazzaretto'],['france',[7.4185,43.7248],'Fontvieille'],['france',[7.4392,43.749],'Larvotto'],['spain',[-5.382,35.9125],'Benzú'],['spain',[-5.3431,35.8709],'Tarajal'],['spain',[-2.952,35.3201],'Melilla north'],['spain',[-2.9294,35.2719],'Melilla south'],['spain',[-5.345,36.1532],'Gibraltar'],['united-kingdom',[-7.26,55.065],'Lough Foyle']])assert(near(lines[country],p,150),country+' frontier reaches '+place);
-console.log('Europe outlines: one country region each, enclaves and microstates, shared France seams drawn once, land frontiers without coastline.');
+console.log('Europe: outlines and subdivision hierarchies, chunked levels, statistics for every unit, enclaves and microstates, shared France seams drawn once, land frontiers without coastline.');

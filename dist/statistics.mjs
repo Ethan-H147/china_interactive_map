@@ -1,6 +1,6 @@
 import {prepareCountryDetails,insertInfoCard} from './country-page.mjs';
 const pending=new Map();
-const regionalBundles=Object.fromEntries(['south-africa','eswatini','lesotho','botswana','namibia'].map(c=>[c,'data/southern-africa/'+c+'/statistics.json']));
+const regionalBundles={...Object.fromEntries(['south-africa','eswatini','lesotho','botswana','namibia'].map(c=>[c,'data/southern-africa/'+c+'/statistics.json'])),...Object.fromEntries(['united-kingdom','spain','france','italy'].map(c=>[c,'data/europe/'+c+'/statistics.json']))};
 export function loadStatistics(key=''){
  const country=key.split(':')[0],bundle=['indonesia','philippines','argentina','brazil','uruguay','malaysia','singapore','russia'].includes(country)||regionalBundles[country]?country:'base';
  const url=regionalBundles[bundle]||(bundle==='russia'?'data/russia/statistics.json':bundle==='base'?'data/region-statistics.json':['malaysia','singapore'].includes(bundle)?'data/southeast-asia/'+bundle+'-statistics.json':['argentina','brazil','uruguay'].includes(bundle)?'data/south-america/'+bundle+'-statistics.json':'data/archipelago/'+bundle+'-statistics.json');
@@ -32,7 +32,7 @@ function renderPopulation(panel,record,data,onRelatedPlace){
 export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  if(!anchor?.parentElement)return;
  let population;
- if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore|russia|south-africa|eswatini|lesotho|botswana|namibia):/.test(key)){
+ if(/^(indonesia|philippines|argentina|brazil|uruguay|malaysia|singapore|russia|south-africa|eswatini|lesotho|botswana|namibia|united-kingdom|spain|france|italy):/.test(key)){
   population=anchor.parentElement.querySelector(':scope > .archipelago-population');
   if(!population){population=element('section',null,'population archipelago-population');population.setAttribute('aria-label','Population');insertInfoCard(anchor,population);}
   population.hidden=true;

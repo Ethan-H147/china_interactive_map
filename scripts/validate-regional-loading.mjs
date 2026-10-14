@@ -56,6 +56,19 @@ task=tree.restore('A11');await flush();const superseded=jobs.at(-1);tree.leave()
 assert(!sources.has('tree-first')&&!sources.has('tree-second')&&!sources.has('tree-third'),'Leaving releases all three levels and ignores late results');
 console.log('Three-level adapter: deep selection resolves ancestry, ordered parent-only chunks load, mode changes release unused municipalities, and country changes cancel every level.');
 
+// Partly bundled: provinces and districts arrive together; municipalities load per district.
+const part=await context.addRegionalCountry(map,host,{country:'part',prefix:'part',base:'data/part/',name:'Part',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities',bundledLevels:2});
+task=part.enter(false);await flush();assert.equal(jobs.at(-1).request.url,'data/part/all.bin','Entry loads the two bundled levels in one request');jobs.at(-1).onmessage({data:{levels:[1,2].map(level=>({level,blob:{},borders:{}}))}});await task;
+assert(sources.has('part-first')&&sources.has('part-second')&&!sources.has('part-third'),'Bundled levels install; municipalities stay lazy');
+await part.setMode(2);assert.equal(layers.get('part-second-fill').layout.visibility,'visible','Districts show before any province is selected');
+let before=jobs.length;task=part.restore('A11');await flush();assert.equal(jobs.length,before+1,'Only the municipality chunk is requested');assert.equal(jobs.at(-1).request.url,'data/part/third/A1.bin');complete(jobs.at(-1));await task;
+assert.equal(part.getSelection(),'A11');assert.equal(part.getMode(),3);assert(sources.has('part-second')&&sources.has('part-third'));
+task=part.restore('B11');await flush();assert(sources.has('part-second'),'Changing district keeps the bundled districts');assert.equal(jobs.at(-1).request.url,'data/part/third/B1.bin');complete(jobs.at(-1));await task;
+await part.setMode(2);assert(sources.has('part-second')&&!sources.has('part-third'),'Returning to districts releases municipality geometry only');
+task=part.restore('A1');await flush();assert.equal(jobs.at(-1).request.url,'data/part/third/A1.bin','Selecting a district opens its municipalities');complete(jobs.at(-1));await task;assert.equal(part.getMode(),3);
+part.leave();assert(!sources.has('part-first')&&!sources.has('part-second')&&!sources.has('part-third'),'Leaving releases every level');
+console.log('Partly bundled adapter: one entry request for bundled levels, districts visible without selection, municipalities load and release per district, and leaving releases all.');
+
 const whole=await context.addRegionalCountry(map,host,{country:'whole',prefix:'whole',base:'data/whole/',name:'Whole',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities',loadAllSubdivisions:true,lineTolerance:1.5});
 const allPayload={levels:[1,2,3].map(level=>({level,blob:{},borders:{}}))};
 task=whole.enter(false);await flush();assert.equal(jobs.at(-1).request.url,'data/whole/all.bin');assert(!whole.ready,'Country stays pending until every level is prepared');jobs.at(-1).onmessage({data:allPayload});await task;

@@ -4,21 +4,59 @@
     "1": 1
   },
   "coverage": "Metropolitan France and Corsica, dissolved from the IGN regions published by geoBoundaries. Overseas regions are not yet included.",
-  "processing": "Each national outline is dissolved from its source and simplified to about 33 m north-south. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Area is a spherical polygon area rounded to 1 square kilometre.",
+  "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
   "frontierKm": 2937,
   "seamReports": {
     "spain-france": {
       "changedEdges": 2218,
       "maxDisplacementMetres": 2975.6262464247525,
       "changedRegions": [
-        null
+        "ES"
       ]
     },
     "italy-france": {
-      "changedEdges": 1560,
+      "changedEdges": 1564,
       "maxDisplacementMetres": 2985.984489784613,
       "changedRegions": [
-        null
+        "IT-C-001019",
+        "IT-C-001022",
+        "IT-C-001026",
+        "IT-C-001073",
+        "IT-C-001074",
+        "IT-C-001087",
+        "IT-C-001100",
+        "IT-C-001114",
+        "IT-C-001118",
+        "IT-C-001157",
+        "IT-C-001169",
+        "IT-C-001175",
+        "IT-C-001202",
+        "IT-C-001258",
+        "IT-C-001282",
+        "IT-C-001291",
+        "IT-C-004001",
+        "IT-C-004006",
+        "IT-C-004017",
+        "IT-C-004031",
+        "IT-C-004068",
+        "IT-C-004077",
+        "IT-C-004084",
+        "IT-C-004110",
+        "IT-C-004167",
+        "IT-C-004172",
+        "IT-C-004233",
+        "IT-C-004248",
+        "IT-C-007022",
+        "IT-C-007041",
+        "IT-C-007055",
+        "IT-C-007068",
+        "IT-C-008001",
+        "IT-C-008029",
+        "IT-C-008038",
+        "IT-C-008043",
+        "IT-C-008051",
+        "IT-C-008061",
+        "IT-C-008065"
       ]
     }
   },
@@ -198,6 +236,46 @@
       "use": "Classifies land frontier; no geometry is copied.",
       "sha256": "c0022d76e8a954a6328f5193569158783c1a5ff83334d76b1764b4a89eddd734",
       "bytes": 57833931
+    },
+    {
+      "file": "osm-relation-1124039.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1124039/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1124039 (Monaco)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "6d059ef6aade6586f3f8412b69ce79fe1083cb6108fe2afb48b1452059225b50",
+      "bytes": 160780
+    },
+    {
+      "file": "osm-relation-1154756.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1154756/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1154756 (Ceuta)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "3f0bf4325e5b6a8958179ae5942136443ff412bdeff81fe345e1e5d14ee5c417",
+      "bytes": 353701
+    },
+    {
+      "file": "osm-relation-1154757.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1154757/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1154757 (Melilla)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "a5154729dfd781ea997e9bd5f3e5bead61df8f49f41564b09bf30197636139e6",
+      "bytes": 182051
+    },
+    {
+      "file": "osm-relation-218657.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/218657/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 218657 (Slovenia)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "6499a49db84ee6849a697ae255f0888e5b2d5c0ff7c80b62c79b6ad31ab03946",
+      "bytes": 11618574
     }
   ]
 }
