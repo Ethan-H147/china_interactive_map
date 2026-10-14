@@ -32,3 +32,5 @@ scripts/statistics-sources/brazil/gdp-2023.json -text
 scripts/statistics-sources/brazil/population-2026.json -text
 scripts/statistics-sources/brazil/state-tables.json -text
 scripts/statistics-sources/malaysia/exchange-rate-2015.json -text
+dist/vendor/flag-es.svg -text
+dist/vendor/flag-fr.svg -text
