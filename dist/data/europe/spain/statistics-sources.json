@@ -1,0 +1,31 @@
+{
+ "retrieved": "2026-10-14",
+ "sources": {
+  "eurostatGdpNuts2": {
+   "title": "Eurostat · Gross domestic product at current market prices by NUTS 2 region (nama_10r_2gdp)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_2gdp/default/table",
+   "license": "CC BY 4.0"
+  },
+  "eurostatGdpNuts3": {
+   "title": "Eurostat · Gross domestic product at current market prices by NUTS 3 region (nama_10r_3gdp)",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table",
+   "license": "CC BY 4.0"
+  },
+  "eurostatExchange": {
+   "title": "Eurostat · Euro/ECU exchange rates, annual data (ert_bil_eur_a), US dollar, average",
+   "url": "https://ec.europa.eu/eurostat/databrowser/view/ert_bil_eur_a/default/table",
+   "license": "CC BY 4.0"
+  },
+  "esPopulation": {
+   "title": "INE · Cifras oficiales de población de los municipios españoles: Revisión del Padrón Municipal at 1 January 2025 (table 29005)",
+   "url": "https://www.ine.es/jaxiT3/Tabla.htm?t=29005",
+   "data": "https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/29005?nult=1&tip=AM",
+   "license": "INE reuse terms (attribution)"
+  },
+  "mappedArea": {
+   "title": "Boundary-derived area",
+   "url": "data/europe/spain/sources.json",
+   "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+  }
+ }
+}

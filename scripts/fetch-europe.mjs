@@ -8,10 +8,25 @@ fs.mkdirSync(root,{recursive:true});
 const manifest={retrieved:new Date().toISOString().slice(0,10),files:{}};
 const pinned=new Map();
 for(const country of ['united-kingdom','spain','france','italy']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
+// Some servers cut long transfers; fetch those in 4 MB ranges with retries.
+async function ranged(url){
+ const size=+(await fetch(url,{method:'HEAD'})).headers.get('content-length'),parts=[];
+ for(let start=0;start<size;start+=4<<20){const end=Math.min(size,start+(4<<20))-1;for(let attempt=1;;attempt++){try{const r=await fetch(url,{headers:{Range:`bytes=${start}-${end}`}});if(r.status!==206)throw Error('status '+r.status);const b=Buffer.from(await r.arrayBuffer());if(b.length!==end-start+1)throw Error('short range');parts.push(b);break;}catch(e){if(attempt>6)throw e;await new Promise(r=>setTimeout(r,1500*attempt));}}}
+ return Buffer.concat(parts);
+}
+// Retained snapshots are reused; pass --refresh to download and review new versions.
+const refresh=process.argv.includes('--refresh');
 async function download(name,url,metadata={}){
  if(pinned.has(name)){url=pinned.get(name).url;metadata=pinned.get(name);}
- const response=await fetch(url,{signal:AbortSignal.timeout(300000),headers:{'User-Agent':'boundary-atlas (github.com/Ethan-H147/china_interactive_map)',Accept:'application/json'}});if(!response.ok)throw Error(url+' '+response.status);
- let bytes=Buffer.from(await response.arrayBuffer());
+ const target=path.join(root,name);
+ if(!refresh&&fs.existsSync(target)){
+  const bytes=fs.readFileSync(target),sha256=createHash('sha256').update(bytes).digest('hex');
+  if(pinned.has(name)&&pinned.get(name).sha256!==sha256)throw Error('Retained source differs from its pin: '+name);
+  manifest.files[name]={...metadata,url,sha256,bytes:bytes.length};console.log(name,bytes.length,'(retained)');return;
+ }
+ let bytes;
+ try{const response=await fetch(url,{signal:AbortSignal.timeout(300000),headers:{'User-Agent':'boundary-atlas (github.com/Ethan-H147/china_interactive_map)',Accept:'application/json'}});if(!response.ok)throw Object.assign(Error(url+' '+response.status),{http:true});bytes=Buffer.from(await response.arrayBuffer());}
+ catch(error){if(error.http)throw error;bytes=await ranged(url);}
  if(bytes.toString('utf8',0,100).startsWith('version https://git-lfs')){const r=await fetch(url.replace('github.com/wmgeolab/geoBoundaries/raw/','media.githubusercontent.com/media/wmgeolab/geoBoundaries/'));if(!r.ok)throw Error('LFS '+r.status);bytes=Buffer.from(await r.arrayBuffer());}
  const sha256=createHash('sha256').update(bytes).digest('hex');
  if(pinned.has(name)&&pinned.get(name).sha256!==sha256)throw Error('Pinned boundary source changed: '+name+'; review the updated source before replacing its snapshot.');
@@ -40,5 +55,7 @@ for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','A
 for(const [id,name] of [[1124039,'Monaco'],[1154756,'Ceuta'],[1154757,'Melilla'],[218657,'Slovenia']])await download('osm-relation-'+id+'.json','https://api.openstreetmap.org/api/0.6/relation/'+id+'/full.json',{provider:'OpenStreetMap contributors, boundary relation '+id+' ('+name+')',license:'Open Data Commons Open Database License 1.0',licenseURL:'https://www.openstreetmap.org/copyright',use:'Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.'});
 // Italy: ISTAT administrative boundaries for statistical purposes, 1 January 2026, full detail.
 await download('istat-limiti-2026.zip','https://www.istat.it/storage/cartografia/confini_amministrativi/non_generalizzati/2026/Limiti01012026.zip',{provider:'ISTAT, Confini delle unità amministrative a fini statistici al 1° gennaio 2026 (non generalizzati)',year:2026,license:'Creative Commons Attribution 4.0',licenseURL:'https://creativecommons.org/licenses/by/4.0/',dataset:'https://www.istat.it/notizia/confini-delle-unita-amministrative-a-fini-statistici-al-1-gennaio-2018-2/'});
+// Spain: IGN jurisdictional boundaries (BDLJE), INSPIRE GML. The server cuts long transfers, so download() falls back to ranges.
+await download('ign-lineas-limite-gml.zip','https://centrodedescargas.cnig.es/CentroDescargas/documentos/atom/au/lineas_limite_gml.zip',{provider:'Instituto Geográfico Nacional, Base de Datos de Límites Jurisdiccionales de España (BDLJE), INSPIRE administrative units',license:'Creative Commons Attribution 4.0',licenseURL:'https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf',dataset:'https://www.ign.es/atom/dataset_feeds/lin_lim_mun.es.xml'});
 await download('ne-10m-land-boundaries.geojson','https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson',{provider:'Natural Earth 1:10m admin 0 land boundary lines v5.1.2',license:'Public domain',licenseURL:'https://www.naturalearthdata.com/about/terms-of-use/',use:'Classifies outline edges as land frontier or coastline; no geometry is copied.'});
 fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');

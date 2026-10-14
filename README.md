@@ -321,12 +321,20 @@ Statistics (`npm run build:europe` runs `scripts/prepare-europe-statistics.mjs`;
 - Area: ISTAT's official surface, which is the area of these boundaries (AREA_KMQ / Shape_Area).
 - GDP and GDP per capita: Eurostat regional accounts at current prices — regions from NUTS 2 (2024; Trentino-South Tyrol sums its two autonomous provinces), provinces from NUTS 3 (2023). Sardinia's eight units of 2025 do not match Eurostat's five former provinces, so they have no provincial GDP. USD uses Eurostat's annual average euro rate.
 
+### Spain
+
+17 autonomous communities, the autonomous cities of Ceuta and Melilla, and the minor sovereign territories under central administration; 52 provinces; and 8,219 municipal units, from the Instituto Geográfico Nacional jurisdictional boundaries (BDLJE, INSPIRE GML, August 2026, CC BY 4.0). The 8,132 municipalities match INE's register exactly. The 81 condominiums — land owned jointly by several municipalities — are kept as their own units. The BDLJE lists Gibraltar among the territories outside any province, reflecting Spain's claim; it is a British overseas territory and is excluded. Isla del Perejil is labelled as claimed by Spain and Morocco, and Pheasant Island as a condominium with France. Like Italy, Spain has no settlement layer: every town is a municipality. The CNIG server cuts long transfers, so `fetch-europe.mjs` falls back to ranged requests.
+
+- Population: INE official municipal register at 1 January 2025 (table 29005); provinces and communities are sums. Condominiums and the islets have no registered population and stay empty.
+- Area: boundary-derived (spherical area of the displayed polygons), labelled as such.
+- GDP and GDP per capita: Eurostat — communities from NUTS 2 (2024), provinces from NUTS 3 (2023). The Balearic province sums its three island units and each Canary province sums its islands; per capita divides by their combined average population.
+
 ### Outlines and frontiers
 
 | Country | Coverage | Outline source | Licence |
 |---|---|---|---|
 | United Kingdom | Great Britain, Northern Ireland and their islands | Office for National Statistics, Countries (December 2024) BGC | Open Government Licence v3.0 |
-| Spain | Peninsula, Balearic and Canary Islands, Ceuta, Melilla | Instituto Geográfico Nacional via geoBoundaries | CC BY 4.0 |
+| Spain | Peninsula, Balearic and Canary Islands, Ceuta, Melilla and the minor sovereign territories | Instituto Geográfico Nacional jurisdictional boundaries (BDLJE), dissolved from the municipalities | CC BY 4.0 |
 | France | Metropolitan France and Corsica (overseas regions not yet included) | IGN regions via geoBoundaries, dissolved | Etalab Open Licence 2.0 |
 | Italy | Mainland and islands; San Marino and Vatican City remain enclaves | ISTAT boundaries for statistical purposes, 1 January 2026 (dissolved from the comuni) | CC BY 4.0 |
 

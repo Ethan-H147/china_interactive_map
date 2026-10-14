@@ -18,7 +18,7 @@ const single=collection=>{const geometries=collection.features.map(f=>f.geometry
 // Every country starts from its most detailed level (or a national outline while its
 // subdivisions are pending). Parents are dissolved from those polygons, so all levels
 // share one geometry.
-const {unzipSync}=createRequire(require.resolve('mapshaper'))('fflate');
+const {unzipSync,strFromU8}=createRequire(require.resolve('mapshaper'))('fflate');
 const {mesh}=require('topojson-client'),{topology}=require('topojson-server');
 const simplify='-clean -simplify dp interval=.0003 planar keep-shapes -clean';
 const italianRegions={1:'Piedmont',2:'Aosta Valley',3:'Lombardy',4:'Trentino-South Tyrol',5:'Veneto',6:'Friuli-Venezia Giulia',7:'Liguria',8:'Emilia-Romagna',9:'Tuscany',10:'Umbria',11:'Marche',12:'Lazio',13:'Abruzzo',14:'Molise',15:'Campania',16:'Apulia',17:'Basilicata',18:'Calabria',19:'Sicily',20:'Sardinia'};
@@ -36,10 +36,44 @@ async function loadItaly(){
  for(const f of comuni.features){const p=f.properties,id='IT-C-'+p.PRO_COM_T;assert(units.has('IT-P-'+p.COD_UTS),'Comune parent '+id);units.set(id,{level:3,parent:'IT-P-'+p.COD_UTS,en:italianExonyms[p.COMUNE]||p.COMUNE,local:p.COMUNE,kind:'Comune',...(p.COMUNE_A?{aliases:[p.COMUNE_A]}:{})});f.properties={id};}
  return {features:comuni.features,units};
 }
+const spanishCommunities={'01':'Andalusia','02':'Aragon','03':'Asturias','04':'Balearic Islands','05':'Canary Islands','06':'Cantabria','07':'Castile and León','08':'Castilla–La Mancha','09':'Catalonia','10':'Valencian Community','11':'Extremadura','12':'Galicia','13':'Community of Madrid','14':'Region of Murcia','15':'Navarre','16':'Basque Country','17':'La Rioja','18':'Ceuta','19':'Melilla','20':'Minor sovereign territories'};
+const spanishProvinces={'07':'Balearic Islands','41':'Seville','48':'Biscay','31':'Navarre','01':'Álava','03':'Alicante','12':'Castellón','46':'Valencia','54':'Minor sovereign territories'};
+// IGN jurisdictional boundaries (BDLJE, INSPIRE GML in EPSG:4258, latitude first).
+// National codes are 34 + community + province + the five-digit INE municipal code.
+function gmlUnits(text){
+ return text.split('<wfs:member>').slice(1).map(member=>{
+  const code=/<au:nationalCode>(\d+)<\/au:nationalCode>/.exec(member)[1],name=/<gn:text>([^<]*)<\/gn:text>/.exec(member)[1].trim(),condominium=!/<au:condominium[^>]*nil=/.test(member);
+  const coordinates=[...member.matchAll(/<gml:Polygon\b[\s\S]*?<\/gml:Polygon>/g)].map(([polygon])=>[...polygon.matchAll(/<gml:posList[^>]*>([^<]*)<\/gml:posList>/g)].map(([,list])=>{const n=list.trim().split(/\s+/).map(Number),ring=[];for(let i=0;i<n.length;i+=2)ring.push([n[i+1],n[i]]);return ring;}));
+  return {code,name,condominium,coordinates};
+ });
+}
+async function loadSpain(){
+ const files=unzipSync(fs.readFileSync(path.join(source,'ign-lineas-limite-gml.zip')),{filter:f=>/AdministrativeUnit_(2nd|3rd|4th)Order/.test(f.name)});
+ const text=pattern=>Object.entries(files).filter(([n])=>pattern.test(n)).map(([,d])=>strFromU8(d)).join('');
+ const units=new Map();
+ for(const u of gmlUnits(text(/2ndOrder/))){const cc=u.code.slice(2,4);units.set('ES-A-'+cc,{level:1,parent:null,en:spanishCommunities[cc],local:u.name,kind:cc==='18'||cc==='19'?'Autonomous city':cc==='20'?'Territory under central administration':'Autonomous community'});}
+ for(const u of gmlUnits(text(/3rdOrder/))){const cc=u.code.slice(2,4),pp=u.code.slice(4,6);units.set('ES-P-'+pp,{level:2,parent:'ES-A-'+cc,en:spanishProvinces[pp]||u.name,local:u.name,kind:cc==='18'||cc==='19'?'Autonomous city':cc==='20'?'Territory under central administration':'Province'});}
+ // Municipal polygons go to disk as GeoJSON, then mapshaper simplifies them together.
+ const file=path.join(source,'spain-municipalities.geojson'),out=fs.openSync(file,'w');fs.writeSync(out,'{"type":"FeatureCollection","features":[');
+ let first=true;
+ // The BDLJE lists Gibraltar among the territories outside any province, reflecting
+ // Spain's claim; it is a British overseas territory and is not mapped as Spanish.
+ const specialKinds={'54001':'Islet claimed by Spain and Morocco','54007':'Condominium with France (Pheasant Island)'};
+ for(const u of gmlUnits(text(/4thOrder/))){
+  if(u.code.endsWith('54006')){assert.equal(u.name,'Gibraltar');continue;}
+  const pp=u.code.slice(4,6),ine=u.code.slice(6),id=(u.condominium||ine.startsWith('53')?'ES-T-':'ES-M-')+ine;
+  assert(units.has('ES-P-'+pp),'Municipal parent '+u.code);assert(!units.has(id),'Unique unit '+id);
+  units.set(id,{level:3,parent:'ES-P-'+pp,en:u.name,local:u.name,kind:specialKinds[ine]||(id.startsWith('ES-T-')?'Shared territory (condominium)':pp==='54'?'Territory under central administration':'Municipality')});
+  fs.writeSync(out,(first?'':',')+JSON.stringify({type:'Feature',properties:{id},geometry:{type:'MultiPolygon',coordinates:u.coordinates}}));first=false;
+ }
+ fs.writeSync(out,']}');fs.closeSync(out);
+ const simplified=JSON.parse((await mapshaper.applyCommands(`-i "${file}" ${simplify} -o out.json format=geojson precision=.000001`))['out.json']);
+ return {features:simplified.features,units};
+}
 // Camera bounds frame the main territory; Spain's Canary Islands remain in the data.
 const countries={
  'united-kingdom':{id:'GB',en:'United Kingdom',local:'',file:'gbr-countries-2024-bgc.geojson',camera:[[-8.7,49.85],[1.8,60.9]],coverage:'Great Britain and Northern Ireland with their islands: the four countries of the Office for National Statistics December 2024 boundaries, generalised to 20 m and clipped to the coastline. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.'},
- spain:{id:'ES',en:'Spain',local:'España',file:'esp-adm0.geojson',camera:[[-9.4,35.9],[4.4,43.8]],coverage:'Peninsular Spain, the Balearic and Canary Islands, Ceuta, Melilla and the minor North African territories, from the Instituto Geográfico Nacional outline published by geoBoundaries. Llívia takes its shape from the matching enclave in the French outline.'},
+ spain:{id:'ES',en:'Spain',local:'España',file:'ign-lineas-limite-gml.zip',load:loadSpain,levels:['Autonomous community','Province','Municipality'],bundled:2,camera:[[-9.4,35.9],[4.4,43.8]],coverage:'17 autonomous communities, the autonomous cities of Ceuta and Melilla, and the minor sovereign territories under central administration (Gibraltar, which the BDLJE lists among them as Spain claims it, is a British overseas territory and is excluded); 52 provinces; and every municipality plus the shared territories (condominiums) that several municipalities own jointly, from the Instituto Geográfico Nacional jurisdictional boundaries (BDLJE). Communities and provinces are dissolved from the municipalities. Llívia takes its shape from the matching enclave in the French outline.'},
  france:{id:'FR',en:'France',local:'',file:'fra-adm1.geojson',camera:[[-5.2,41.3],[9.6,51.1]],coverage:'Metropolitan France and Corsica, dissolved from the IGN regions published by geoBoundaries. Overseas regions are not yet included.'},
  italy:{id:'IT',en:'Italy',local:'Italia',file:'istat-limiti-2026.zip',load:loadItaly,levels:['Region','Province','Comune'],bundled:2,camera:[[6.6,35.5],[18.6,47.1]],coverage:"20 regions, 110 provinces and equivalent units (metropolitan cities, autonomous provinces, Sicily's free municipal consortia and Friuli-Venezia Giulia's former provinces) and 7,896 comuni, from ISTAT's full-detail boundaries for statistical purposes at 1 January 2026. Regions and provinces are dissolved from the comuni. San Marino and Vatican City remain enclaves."}
 };
@@ -59,15 +93,19 @@ const france={type:'Feature',properties:{},geometry:outlines.france};
 const inLlivia=poly=>{const b=bounds({type:'Polygon',coordinates:poly});return b[0][0]>1.9&&b[1][0]<2.05&&b[0][1]>42.42&&b[1][1]<42.5;};
 const llivia=polygons(outlines.france).flatMap(p=>p.slice(1)).find(r=>inLlivia([r]));
 assert(llivia,'France has the Llívia enclave hole');
-for(const f of lowest.spain.features)f.geometry={type:'MultiPolygon',coordinates:polygons(f.geometry).filter(p=>!inLlivia(p))};
+// Llívia is set aside during alignment and returns with France's ring.
+const lliviaOwner=lowest.spain.features.find(f=>polygons(f.geometry).some(inLlivia));assert(lliviaOwner,'Spain has Llívia');
+const lliviaId=lliviaOwner.properties.id;
+lliviaOwner.geometry={type:'MultiPolygon',coordinates:polygons(lliviaOwner.geometry).filter(p=>!inLlivia(p))};
+if(!lliviaOwner.geometry.coordinates.length)lowest.spain.features=lowest.spain.features.filter(f=>f!==lliviaOwner);
 const seamReports={};
 for(const [country,allowed] of [['spain',inBox(-2,42.2,3.3,43.45)],['italy',inBox(6.5,43.7,7.8,46)]]){
  const result=alignCountry(lowest[country].features,france,allowed,3000);
  seamReports[country+'-france']=result.report;console.log('Aligned',country,'to France',result.report.changedEdges,'edges, max',Math.round(result.report.maxDisplacementMetres),'m');
  lowest[country]=await command(fc(result.features),'-erase france.json -clean',{'france.json':fc([france])});
 }
-// Llívia joins the Spanish unit that holds it (the national outline until municipalities arrive).
-lowest.spain.features[0].geometry={type:'MultiPolygon',coordinates:[...polygons(lowest.spain.features[0].geometry),[[...llivia].reverse()]]};
+const lliviaRing=[[...llivia].reverse()],lliviaUnit=lowest.spain.features.find(f=>f.properties.id===lliviaId);
+if(lliviaUnit)lliviaUnit.geometry={type:'MultiPolygon',coordinates:[...polygons(lliviaUnit.geometry),lliviaRing]};else lowest.spain.features.push({type:'Feature',properties:{id:lliviaId},geometry:{type:'Polygon',coordinates:lliviaRing}});
 for(const country of ['spain','italy'])outlines[country]=lowest[country].features.length===1?single(lowest[country]):single(await command(lowest[country],'-dissolve'));
 
 // Land frontiers. An outline edge is a frontier when foreign land lies just beyond it:
@@ -173,7 +211,7 @@ for(const [country,c] of Object.entries(countries)){
  for(let level=1;level<=maxLevel;level++){
   const regions=byLevel[level],points=await command(regions,'-points inner'),areas=await command(regions,'-each "areaKm2=$.area/1000000"');
   counts[level]=regions.features.length;
-  regions.features.forEach((f,i)=>{const id=f.properties.id,u=unit(id);records.push({id,parent:u.parent,level,en:u.en,local:u.local,kind:u.kind,...(u.aliases?{aliases:u.aliases}:{}),...(u.code?{code:u.code}:{}),center:points.features[i].geometry.coordinates.map(v=>round(v)),bounds:c.units?bounds(f.geometry).map(p=>p.map(v=>round(v))):c.camera,areaKm2:Math.round(areas.features[i].properties.areaKm2*10)/10});});
+  regions.features.forEach((f,i)=>{const id=f.properties.id,u=unit(id);records.push({id,parent:u.parent,level,en:u.en,local:u.local,kind:u.kind,...(u.aliases?{aliases:u.aliases}:{}),...(u.code?{code:u.code}:{}),center:points.features[i].geometry.coordinates.map(v=>round(v)),bounds:c.units?bounds(f.geometry).map(p=>p.map(v=>round(v))):c.camera,areaKm2:(a=>a<1?Math.round(a*1e4)/1e4:Math.round(a*100)/100)(areas.features[i].properties.areaKm2)});});
  }
  const payload=regions=>({regions:fc(regions.features.map(f=>({type:'Feature',properties:{id:f.properties.id},geometry:f.geometry}))),boundaries:borders(regions)});
  write(country,'first.bin',payload(byLevel[1]));

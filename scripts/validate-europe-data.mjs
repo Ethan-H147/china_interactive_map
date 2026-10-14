@@ -17,7 +17,8 @@ const frontierKm={'united-kingdom':[480,530],spain:[1300,1400],france:[2850,3000
 // Pieces: Ireland; Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea, Llívia; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
 const pieces={'united-kingdom':1,spain:5,france:5,italy:4};
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
-const subdivided={italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2}};
+// Spain's condominiums and the islets under central administration have no registered population.
+const subdivided={italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
 for(const country of countries){
  const catalogue=read(country,'catalogue.bin'),first=read(country,'first.bin'),context=read(country,'context.bin');
  assert.equal(context.features.length,1);assert.equal(context.features[0].properties.country,country);
@@ -45,8 +46,14 @@ for(const country of countries){
   }
   // Statistics: population and area for every unit; parents sum their children.
   const statistics=JSON.parse(fs.readFileSync(root+'/'+country+'/statistics.json')),stats=statistics.regions;
-  for(const r of catalogue.records){const m=stats[country+':'+r.id];assert(m?.population?.value>0&&m.area?.value>0,r.id+' population and area');for(const metric of [m.population,m.area,m.gdp,m.gdpPerCapita].filter(Boolean))assert(statistics.sources[metric.source],r.id+' cites a listed source');}
-  for(const r of catalogue.records.filter(r=>r.level<s.levels.length)){const sum=catalogue.records.filter(c=>c.parent===r.id).reduce((t,c)=>t+stats[country+':'+c.id].population.value,0);assert.equal(stats[country+':'+r.id].population.value,sum,r.id+' population sums its children');}
+  for(const r of catalogue.records){const m=stats[country+':'+r.id];assert(m?.area?.value>0,r.id+' area');assert.equal(m.population?.value>0,!s.noPopulation?.(r),r.id+' population where one is registered');for(const metric of [m.population,m.area,m.gdp,m.gdpPerCapita].filter(Boolean))assert(statistics.sources[metric.source],r.id+' cites a listed source');}
+  for(const r of catalogue.records.filter(r=>r.level<s.levels.length&&!s.noPopulation?.(r))){const sum=catalogue.records.filter(c=>c.parent===r.id).reduce((t,c)=>t+(stats[country+':'+c.id].population?.value||0),0);assert.equal(stats[country+':'+r.id].population.value,sum,r.id+' population sums its children');}
+  if(country==='spain'){
+   assert(!ids.has('ES-M-54006'),'Gibraltar is not mapped as Spanish');
+   const madrid=stats['spain:ES-M-28079'].population.value;assert(madrid>3.4e6&&madrid<3.7e6,'Madrid municipality');
+   for(const r of catalogue.records.filter(r=>r.level<=2))assert.equal(!!stats['spain:'+r.id].gdp,!['ES-A-20','ES-P-54'].includes(r.id),r.id+' GDP');
+   const llivia=read('spain','third/ES-P-17.bin').regions.features.find(f=>f.properties.id==='ES-M-17094');assert(llivia&&contains(llivia.geometry,[1.985,42.462]),'Llívia municipality fills the enclave');
+  }
   if(country==='italy'){
    assert.equal(stats['italy:IT-C-058091'].population.value>2.6e6&&stats['italy:IT-C-058091'].area.value>1280,true,'Rome comune');
    const sardinia=new Set(catalogue.records.filter(r=>r.parent==='IT-R-20').map(r=>r.id));

@@ -112,7 +112,61 @@ async function italy(){
  return regions;
 }
 
-for(const [country,build] of [['italy',italy]]){
+// GDP for a unit made of one or more Eurostat regions: summed totals, and per head from
+// their combined average population when there are several.
+function combinedGdp(rows,codes,year,source){
+ const parts=codes.map(code=>rows[code]);assert(parts.every(p=>p?.MIO_EUR?.[year]!=null),'Eurostat '+codes.join('+')+' '+year);
+ const total=parts.reduce((s,p)=>s+p.MIO_EUR[year],0);
+ const perHead=parts.length===1?(parts[0].EUR_HAB?.[year]!=null?{value:parts[0].EUR_HAB[year]}:null):{value:total*1e6/parts.reduce((s,p)=>s+p.MIO_EUR[year]*1e6/p.EUR_HAB[year],0),method:'calculated'};
+ return gdpMetrics({year,value:total},perHead,source);
+}
+const latestYear=(rows,codes)=>Math.min(...codes.map(code=>Math.max(...Object.keys(rows[code]?.MIO_EUR||{}).filter(y=>rows[code].MIO_EUR[y]!=null).map(Number))));
+async function eurostatGdp(name,prefix,nuts2){
+ return retain(name,async()=>{
+  const out={retrieved:today,nuts2:{},nuts3:{}};
+  for(const unit of ['MIO_EUR','EUR_HAB']){
+   const a=await eurostat('nama_10r_2gdp',`unit=${unit}&sinceTimePeriod=2019&`+nuts2.map(g=>'geo='+g).join('&'));for(const [g,v] of Object.entries(a.rows))(out.nuts2[g]??={label:a.labels[g]})[unit]=v;
+   const b=await eurostat('nama_10r_3gdp',`unit=${unit}&sinceTimePeriod=2019&geoLevel=nuts3`);for(const [g,v] of Object.entries(b.rows))if(g.startsWith(prefix)&&!g.endsWith('ZZZ'))(out.nuts3[g]??={label:b.labels[g]})[unit]=v;
+  }
+  return out;
+ });
+}
+const mappedArea=country=>({title:'Boundary-derived area',url:`data/europe/${country}/sources.json`,note:'Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area.'});
+
+async function spain(){
+ const catalogue=readCatalogue('spain');
+ // Population: INE official municipal register figures at 1 January 2025 (table 29005).
+ const population=await retain('spain-population-2025.json',async()=>{
+  const url='https://servicios.ine.es/wstempus/js/ES/DATOS_TABLA/29005?nult=1&tip=AM',series=await(await fetch(url,{signal:AbortSignal.timeout(600000)})).json(),values={};
+  for(const s of series){const muni=s.MetaData.find(m=>m.T3_Variable==='Municipios'),sex=s.MetaData.find(m=>m.T3_Variable==='Sexo');if(muni&&sex?.Codigo==='0'){const d=s.Data.find(x=>x.Anyo===2025);if(d)values[muni.Codigo]=d.Valor;}}
+  return {url,table:'29005',title:'Cifras oficiales del padrón por municipio',date:'2025-01-01',retrieved:today,values};
+ });
+ const gdp=await eurostatGdp('spain-gdp-eurostat.json','ES',['ES11','ES12','ES13','ES21','ES22','ES23','ES24','ES30','ES41','ES42','ES43','ES51','ES52','ES53','ES61','ES62','ES63','ES64','ES70']);
+ sources.esPopulation={title:'INE · Cifras oficiales de población de los municipios españoles: Revisión del Padrón Municipal at 1 January 2025 (table 29005)',url:'https://www.ine.es/jaxiT3/Tabla.htm?t=29005',data:population.url,license:'INE reuse terms (attribution)'};
+ sources.mappedArea=mappedArea('spain');
+ const communityNuts={'01':'ES61','02':'ES24','03':'ES12','04':'ES53','05':'ES70','06':'ES13','07':'ES41','08':'ES42','09':'ES51','10':'ES52','11':'ES43','12':'ES11','13':'ES30','14':'ES62','15':'ES22','16':'ES21','17':'ES23','18':'ES63','19':'ES64'};
+ // Provinces ↔ NUTS 3; the Balearic and Canary provinces are the sums of their island units.
+ const provinceNuts={'15':['ES111'],'27':['ES112'],'32':['ES113'],'36':['ES114'],'33':['ES120'],'39':['ES130'],'01':['ES211'],'20':['ES212'],'48':['ES213'],'31':['ES220'],'26':['ES230'],'22':['ES241'],'44':['ES242'],'50':['ES243'],'28':['ES300'],'05':['ES411'],'09':['ES412'],'24':['ES413'],'34':['ES414'],'37':['ES415'],'40':['ES416'],'42':['ES417'],'47':['ES418'],'49':['ES419'],'02':['ES421'],'13':['ES422'],'16':['ES423'],'19':['ES424'],'45':['ES425'],'06':['ES431'],'10':['ES432'],'08':['ES511'],'17':['ES512'],'25':['ES513'],'43':['ES514'],'03':['ES521'],'12':['ES522'],'46':['ES523'],'07':['ES531','ES532','ES533'],'04':['ES611'],'11':['ES612'],'14':['ES613'],'18':['ES614'],'21':['ES615'],'23':['ES616'],'29':['ES617'],'41':['ES618'],'30':['ES620'],'51':['ES630'],'52':['ES640'],'35':['ES704','ES705','ES708'],'38':['ES703','ES706','ES707','ES709']};
+ const covered=new Set(Object.values(provinceNuts).flat());assert.deepEqual(Object.keys(gdp.nuts3).filter(g=>!covered.has(g)),[],'Every Spanish NUTS 3 unit is assigned');
+ const people=r=>r.id.startsWith('ES-M-')&&r.parent!=='ES-P-54'?population.values[r.id.slice(5)]:undefined;
+ const missing=catalogue.records.filter(r=>r.id.startsWith('ES-M-')&&r.parent!=='ES-P-54'&&people(r)===undefined);assert.deepEqual(missing.map(r=>r.id),[],'Every municipality has INE population');
+ const regions={},children=new Map();for(const r of catalogue.records)if(r.parent){if(!children.has(r.parent))children.set(r.parent,[]);children.get(r.parent).push(r);}
+ const total=r=>r.level===3?people(r):(children.get(r.id)||[]).reduce((s,c)=>{const v=total(c);return v===undefined?s:(s||0)+v;},undefined);
+ for(const r of catalogue.records){
+  const key='spain:'+r.id,record={name:r.en,level:r.level},count=total(r);
+  if(count!==undefined)record.population={value:count,year:2025,date:'2025-01-01',method:'register',source:'esPopulation',periodLabel:'1 January 2025 municipal register'};
+  record.area={value:r.areaKm2,unit:'km²',method:'mapped',period:'Boundary-derived estimate',source:'mappedArea'};
+  const code=r.id.slice(5);
+  if(r.level===1&&communityNuts[code]){const year=latestYear(gdp.nuts2,[communityNuts[code]]);Object.assign(record,combinedGdp(gdp.nuts2,[communityNuts[code]],year,'eurostatGdpNuts2'));record.note=`GDP and GDP per capita are Eurostat ${year} regional accounts at current prices (NUTS 2 ${communityNuts[code]}); per capita uses Eurostat's average population. USD uses the ${year} average euro exchange rate. Area is calculated from the displayed boundary.`;}
+  else if(r.level===2&&provinceNuts[code]){const codes=provinceNuts[code],year=latestYear(gdp.nuts3,codes);Object.assign(record,combinedGdp(gdp.nuts3,codes,year,'eurostatGdpNuts3'));record.note=(codes.length>1?`GDP is the sum of Eurostat's ${year} island accounts (${codes.join(', ')}); per capita divides it by their combined average population.`:`GDP and GDP per capita are Eurostat ${year} accounts at current prices (NUTS 3 ${codes[0]}); per capita uses Eurostat's average population.`)+` USD uses the ${year} average euro exchange rate. Area is calculated from the displayed boundary.`;}
+  else if(r.id.startsWith('ES-T-'))record.note='A shared territory owned jointly by several municipalities; the municipal register counts its residents in those municipalities.';
+  else if(code==='20'||code==='54'||r.parent==='ES-P-54')record.note='Under central administration; these islets and rocks have no registered municipal population.';
+  regions[key]=record;
+ }
+ return regions;
+}
+
+for(const [country,build] of [['italy',italy],['spain',spain]]){
  const regions=await build(),dir=`dist/data/europe/${country}`,used=new Set(Object.values(regions).flatMap(r=>Object.values(r).map(m=>m?.source).filter(Boolean)).concat(Object.values(regions).flatMap(r=>[r.gdp?.exchangeSource].filter(Boolean))));
  const countrySources=Object.fromEntries(Object.entries(sources).filter(([id])=>used.has(id)));
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,retrieved:today,country,sources:countrySources,regions})+'\n');
