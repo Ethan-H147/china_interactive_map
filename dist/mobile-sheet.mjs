@@ -53,9 +53,17 @@ addEventListener('pointerup', () => {
   const current = drag; drag = null; delete root.dataset.sheetDragging;
   if (current.moved <= 6) { if (current.onHandle) apply(states[(states.indexOf(state) + 1) % states.length]); return; }
   const h = heights(), height = parseFloat(root.style.getPropertyValue('--sheet-height'));
-  // A flick moves one step in its direction; otherwise snap to the nearest height.
-  if (Math.abs(current.velocity) > .5) { const i = states.indexOf(state) + (current.velocity > 0 ? 1 : -1); apply(states[Math.max(0, Math.min(2, i))]); }
-  else apply(states.reduce((best, s) => Math.abs(h[s] - height) < Math.abs(h[best] - height) ? s : best, 'peek'));
+  // Snap to the height nearest where the release is heading (a short throw of the current
+  // speed), so a quick flick moves at least one step and a fast long drag lands where it ends.
+  const nearest = target => states.reduce((best, s) => Math.abs(h[s] - target) < Math.abs(h[best] - target) ? s : best, 'peek');
+  let next = nearest(height + current.velocity * 200);
+  if (Math.abs(current.velocity) > .5 && next === state) { const i = states.indexOf(state) + (current.velocity > 0 ? 1 : -1); next = states[Math.max(0, Math.min(2, i))]; }
+  apply(next);
+});
+// Keyboard and switch access: Enter or Space on the focused handle (a click without a
+// pointer press) steps through the heights, like a tap.
+document.addEventListener('click', event => {
+  if (query.matches && event.detail === 0 && event.target.closest?.('.sheet-handle')) apply(states[(states.indexOf(state) + 1) % states.length]);
 });
 addEventListener('pointercancel', () => { if (drag) { drag = null; delete root.dataset.sheetDragging; apply(state); } });
 
@@ -75,6 +83,16 @@ new MutationObserver(records => {
   else if (records.some(r => r.attributeName === 'hidden' && r.target.matches?.('aside.sidebar'))) apply(state);
   wasSelected = nowSelected;
 }).observe(document.body, {subtree: true, attributes: true, attributeFilter: ['hidden', 'aria-pressed']});
+// Choosing a place (from search, a list or the map) shows it: a full sheet comes down to
+// half, so the selected region is visible above it.
+let crumbText='';
+const crumb=document.getElementById('breadcrumb-region');
+if(crumb)new MutationObserver(()=>{
+ if(!query.matches)return;
+ const text=crumb.hidden?'':crumb.textContent;
+ if(text&&text!==crumbText){if(state==='full')apply('half');else atLeast('half');}
+ crumbText=text;
+}).observe(crumb,{childList:true,characterData:true,subtree:true,attributes:true,attributeFilter:['hidden']});
 // The startup panel gives way to the country's own sidebar; measure that one.
 // A new country starts with the sheet tucked away.
 new MutationObserver(records => apply(records.some(r => r.attributeName === 'data-atlas') ? 'peek' : state)).observe(root, {attributes: true, attributeFilter: ['data-starting', 'data-atlas']});

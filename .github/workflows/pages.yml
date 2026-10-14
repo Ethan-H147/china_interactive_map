@@ -20,7 +20,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  browser-tests:
+    # Real headless Chrome: phone sheet gestures and keyboard, level toggles, every
+    # country's search and selection, country switching and developer-mode gating.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run browser scenarios
+        run: node scripts/browser/run.mjs
+      - name: Keep failure screenshots
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-screenshots
+          path: artifacts/browser-tests/
   deploy:
+    needs: browser-tests
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

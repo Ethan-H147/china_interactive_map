@@ -102,6 +102,7 @@
     "test:brazil-lagoons": "node scripts/validate-brazil-lagoons.mjs",
     "test:mobile-sheet": "node --check dist/mobile-sheet.mjs && node scripts/validate-mobile-sheet.mjs",
     "build:europe": "node scripts/fetch-europe.mjs && node --max-old-space-size=6000 scripts/build-europe.mjs && node scripts/prepare-europe-statistics.mjs && node scripts/prepare-uk-settlements.mjs && node scripts/fetch-europe-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs && node scripts/build-world-land.mjs",
-    "test:europe": "node --check dist/europe.mjs && node scripts/validate-europe-data.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && node scripts/validate-developer-mode.mjs"
+    "test:europe": "node --check dist/europe.mjs && node scripts/validate-europe-data.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && node scripts/validate-developer-mode.mjs",
+    "test:browser": "node scripts/browser/run.mjs"
   }
 }

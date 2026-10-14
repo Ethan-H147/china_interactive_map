@@ -359,3 +359,7 @@ Spain's and Italy's frontier edges are moved onto the French outline, so each pa
 Non-atlas neighbours (Portugal, Switzerland, Germany, Ireland and others) are still the Natural Earth 1:110m background silhouettes, which do not meet the detailed frontiers.
 
 Rebuild with `npm run build:europe`; check with `npm run test:europe` (hierarchies, chunks, statistics for every unit, frontier lengths and continuity, enclaves, coastal ends, no coastline strokes, loading modes, developer gating).
+
+## Browser tests
+
+`npm run test:browser` (`scripts/browser/`) drives the real site in headless Chrome over the DevTools protocol, with no extra dependencies: it serves `dist/` on a free port and uses real mouse, touch and keyboard input. Every scenario fails on an assertion, a page exception, a console error or a failed request, and saves a screenshot to `artifacts/browser-tests/` when it does. Scenarios cover the phone bottom sheet (dragging, flicking, the handle by tap, Enter and Space, search with the on-screen keyboard, panning), the level toggle on phone and desktop, every public country opening, searching and selecting a place, switching countries by clicking a neighbour and by link, and developer mode (no unreleased data for public visitors, the Changning unlock, and the deepest level of each European country). The GitHub Pages workflow runs them before every deployment; set `CHROME_PATH` if Chrome is not found.
