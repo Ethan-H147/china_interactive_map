@@ -8,11 +8,11 @@ import {argentinaFlags} from './argentina-flags.mjs';
 import {brazilFlags} from './brazil-flags.mjs';
 import {renderMunicipalityList} from './municipality-list.mjs';
 import {lineData,lineSourceOptions,internationalLineSourceOptions,addInternationalBorder,adaptiveOpacity} from './adaptive-lines.mjs';
-export const countries={
- brazil:{name:'Brazil',local:'Brasil',flag:'br',center:[-52,-13],bounds:[[-74,-34],[-34,6]],color:'#dcebd9',line:'#527b59',selected:'#b9d6b2'},
- uruguay:{name:'Uruguay',local:'',flag:'uy',center:[-56,-33],bounds:[[-59,-35.5],[-53,-30]],color:'#e0edf4',line:'#5883a0',selected:'#bcd9ec'},
- argentina:{name:'Argentina',local:'',flag:'ar',center:[-65,-39],bounds:[[-74,-56],[-53,-21]],color:'#dfebf3',line:'#5883a0',selected:'#bcd9ec'}
-};
+import './countries.js';
+const registry=globalThis.AtlasCountries;
+// Other countries drawn from the same Natural Earth silhouettes, hidden while their own maps show.
+const otherPreviews=registry.ids.filter(id=>registry.countries[id].naturalEarth&&registry.countries[id].adapter!=='south-america');
+export const countries=Object.fromEntries(registry.byAdapter('south-america').map(id=>[id,{name:registry.countries[id].en,local:registry.countries[id].local,...registry.countries[id].map}]));
 export function cityDescription(record){
  if(record.cityRank===1)return 'Autonomous city';
  if(!record.boundaryAvailable)return 'City · Municipal boundary pending';
@@ -117,7 +117,7 @@ export function createSouthAmerica(map,host){
   for(const [id,c] of Object.entries(countries))if(allowed(id)&&(id!==active||!records.length))candidates.push({id,en:c.name,local:c.local,center:c.center});
   labels=window.AtlasLabels.render(map,candidates,'province-label');
  }
- function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...['malaysia','singapore','south-africa','eswatini','lesotho','botswana','namibia','united-kingdom','spain','france','italy'].filter(allowed)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility',active&&allowed(active)?'visible':'none');}
+ function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...otherPreviews.filter(allowed)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility',active&&allowed(active)?'visible':'none');}
  async function warm(){
   if(data)return;if(loading)return loading;
   loading=(async()=>{

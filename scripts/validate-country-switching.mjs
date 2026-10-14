@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {gunzipSync} from 'node:zlib';
+import '../dist/countries.js';
+const registry=globalThis.AtlasCountries;
 const read=name=>JSON.parse(gunzipSync(fs.readFileSync('dist/data/'+name+'.bin')));
 const context=read('china-context'),motion=read('china-motion');
 const ids=features=>[...new Set(features.map(f=>f.properties.adcode))].sort();
@@ -13,15 +15,15 @@ const emit=(type,event={})=>{for(const fn of [...(handlers.get(type)||[])])fn(ev
 const flush=()=>new Promise(resolve=>setImmediate(resolve));
 const source=fs.readFileSync('dist/app.js','utf8'),elements=new Map(),remembered=[];
 let overviewCountry;
-const overviewEnv=vm.createContext({map:{getLayer:id=>id==='south-america-portal-fill',queryRenderedFeatures:()=>[{properties:{country:overviewCountry}}]},window:{AtlasMotion:{queryRegions:()=>[]}}});
+const overviewEnv=vm.createContext({registry,map:{getLayer:id=>id==='south-america-portal-fill',queryRenderedFeatures:()=>[{properties:{country:overviewCountry}}]},window:{AtlasMotion:{queryRegions:()=>[]}}});
 vm.runInContext(source.slice(source.indexOf('function countryAt('),source.indexOf("map.on('click'",source.indexOf('function countryAt('))),overviewEnv);
 for(const id of ['brazil','uruguay','argentina']){overviewCountry=id;assert.equal(overviewEnv.countryAt({x:0,y:0}),id,'Global country routing recognizes the initial South American silhouettes');}
 const element=id=>{if(!elements.has(id))elements.set(id,{style:{},dataset:{},setAttribute(name,value){this[name]=value;},querySelector(){return element(id+'-symbol');},replaceChildren(...nodes){this.textContent=nodes.map(n=>typeof n==='string'?n:n.textContent).join('');this.children=nodes;}});return elements.get(id);};
 let releaseKorea,releaseMongolia;
 const koreaWait=new Promise(r=>releaseKorea=r),mongoliaWait=new Promise(r=>releaseMongolia=r);
 const atlas=wait=>({warm:()=>wait,leave(){},context(){},enter:async()=>{},ready:true});
-const env=vm.createContext({AbortController,setTimeout,clearTimeout,allReady:true,quiz:{active:false},koreaAtlas:atlas(koreaWait),mongoliaAtlas:atlas(mongoliaWait),japanAtlas:atlas(Promise.resolve()),provinceFeatures:[],window:{AtlasTheme:{applyAtlasTheme(){}},AtlasEntry:{countries:{china:{en:'China'},korea:{en:'Korea'},mongolia:{en:'Mongolia'},japan:{en:'Japan'}},remember:country=>remembered.push(country)}},AtlasSymbols:{markup:c=>c},document:{getElementById:element,createElement:tag=>({tag}),documentElement:{dataset:{}}},$:element,map:{getLayer:()=>true,setPaintProperty(){},getStyle:()=>({sources:Object.fromEntries(sources)}),getSource:id=>sources.has(id)?{}:undefined,isSourceLoaded:id=>sources.get(id),on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);}},homeBounds:[[73,17],[135,54]],navigateBounds:async()=>{moved.push(remembered.at(-1));return true;},motionRenderer:{end:async()=>{},loadCountry:()=>new Promise(()=>{})},loadChina:async()=>{},saveView(){},controls(){env.syncMapActivity();},cancelNavigation(){},clearHover(){},clearSelection(){},clearSearch(){},syncCountryFills(){},syncLayers(){},updateLabels(){},setMode(){},showPanel(){},refreshStatus(){},saveViewSoon(){},unlockCamera(){env.syncMapActivity();},fitHome:async()=>{},console});
-vm.runInContext("let failedCountry=null,recoveringCountry=false,atlasStarting=false,cameraBusy=false,atlasMode='china',countrySwitching=false,countryEpoch=0,requestedCountry,countryPreparation,countryLoadFailed=false,activeCode,philippinesAtlas,indonesiaAtlas,malaysiaAtlas,singaporeAtlas,russiaAtlas,southAmerica,southernAfrica,europe,labels=[];"+source.slice(source.indexOf('function waitForCountrySources('),source.indexOf('function regionZoom(')),env);
+const env=vm.createContext({AbortController,setTimeout,clearTimeout,allReady:true,quiz:{active:false},registry,atlasesReady:true,atlases:{korea:atlas(koreaWait),mongolia:atlas(mongoliaWait),japan:atlas(Promise.resolve())},provinceFeatures:[],window:{AtlasTheme:{applyAtlasTheme(){}},AtlasEntry:{countries:{china:{en:'China'},korea:{en:'Korea'},mongolia:{en:'Mongolia'},japan:{en:'Japan'}},remember:country=>remembered.push(country)}},AtlasSymbols:{markup:c=>c},document:{getElementById:element,createElement:tag=>({tag}),documentElement:{dataset:{}}},$:element,map:{getLayer:()=>true,setPaintProperty(){},getStyle:()=>({sources:Object.fromEntries(sources)}),getSource:id=>sources.has(id)?{}:undefined,isSourceLoaded:id=>sources.get(id),on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);}},homeBounds:[[73,17],[135,54]],navigateBounds:async()=>{moved.push(remembered.at(-1));return true;},motionRenderer:{end:async()=>{},loadCountry:()=>new Promise(()=>{})},loadChina:async()=>{},saveView(){},controls(){env.syncMapActivity();},cancelNavigation(){},clearHover(){},clearSelection(){},clearSearch(){},syncCountryFills(){},syncLayers(){},updateLabels(){},setMode(){},showPanel(){},refreshStatus(){},saveViewSoon(){},unlockCamera(){env.syncMapActivity();},fitHome:async()=>{},console});
+vm.runInContext("let failedCountry=null,recoveringCountry=false,atlasStarting=false,cameraBusy=false,atlasMode='china',countrySwitching=false,countryEpoch=0,requestedCountry,countryPreparation,countryLoadFailed=false,activeCode,southAmerica,southernAfrica,europe,labels=[];"+source.slice(source.indexOf('function waitForCountrySources('),source.indexOf('function regionZoom(')),env);
 vm.runInContext(source.slice(source.indexOf('function syncMapActivity('),source.indexOf('function controls(')),env);
 vm.runInContext(source.slice(source.indexOf('function showLoadFailure('),source.indexOf('function refreshStatus(')),env);
 const korea=env.changeAtlas('korea');
@@ -40,8 +42,8 @@ console.log('All 34 context provinces, watertight Jilin context, latest country 
 
 assert.equal(await env.changeAtlas('japan'),true);assert.equal(remembered.at(-1),'japan');
 env.window.AtlasEntry.countries.philippines={en:'Philippines'};env.window.AtlasEntry.countries.indonesia={en:'Indonesia'};
-let releasePH,releaseID;env.phWait=new Promise(r=>releasePH=r);env.idWait=new Promise(r=>releaseID=r);env.makeAtlas=atlas;
-vm.runInContext('philippinesAtlas=makeAtlas(phWait);indonesiaAtlas=makeAtlas(idWait);',env);
+let releasePH,releaseID;env.phWait=new Promise(r=>releasePH=r);env.idWait=new Promise(r=>releaseID=r);
+env.atlases.philippines=atlas(env.phWait);env.atlases.indonesia=atlas(env.idWait);
 const phRequest=env.changeAtlas('philippines'),idRequest=env.changeAtlas('indonesia');releaseID();assert.equal(await idRequest,true);releasePH();assert.equal(await phRequest,false);assert.equal(remembered.at(-1),'indonesia');
 for(const country of ['brazil','uruguay','argentina'])env.window.AtlasEntry.countries[country]={en:country};
 env.makePreviews=()=>Object.fromEntries(['brazil','uruguay','argentina'].map(country=>[country,{...atlas(Promise.resolve()),bounds:[[-74,-56],[-34,6]]}]));
@@ -58,7 +60,7 @@ for(const country of ['uruguay','argentina']){assert.equal(await env.changeAtlas
 // First visits wait for both boundary preparation and source indexing, not a fixed delay.
 let releaseCold;
 const cold=new Promise(resolve=>releaseCold=resolve);
-env.japanAtlas={...atlas(cold),warm:async()=>{await cold;sources.set('japan-first',false);}};
+env.atlases.japan={...atlas(cold),warm:async()=>{await cold;sources.set('japan-first',false);}};
 const beforeCold=moved.length,coldSwitch=env.changeAtlas('japan');
 await flush();assert.equal(moved.length,beforeCold);
 assert.equal(element('moving-indicator').hidden,false,'Keep the symbol visible while downloading cold boundaries');
@@ -68,7 +70,7 @@ assert.equal(await coldSwitch,true);assert.equal(moved.at(-1),'japan');
 assert.equal(handlers.get('sourcedata').size,0,'Readiness listeners are cleaned after success');
 
 // A new destination interrupts source warm-up without waiting for its timeout.
-env.koreaAtlas={...atlas(Promise.resolve()),warm:async()=>sources.set('korea-new',false)};
+env.atlases.korea={...atlas(Promise.resolve()),warm:async()=>sources.set('korea-new',false)};
 const beforeCancelled=moved.length,cancelledSwitch=env.changeAtlas('korea');await flush();
 assert.equal(moved.length,beforeCancelled);const replacement=env.changeAtlas('mongolia');
 assert.equal(await cancelledSwitch,false);assert.equal(await replacement,true);
@@ -76,21 +78,21 @@ assert.equal(moved.at(-1),'mongolia');assert.equal(moved.length,beforeCancelled+
 assert.equal(handlers.get('sourcedata').size,0,'Superseding a destination immediately removes its source listeners');
 
 // A source failure returns the visitor to the country they were on and offers a Retry button.
-env.japanAtlas={...atlas(Promise.resolve()),warm:async()=>sources.set('japan-failed',false)};
+env.atlases.japan={...atlas(Promise.resolve()),warm:async()=>sources.set('japan-failed',false)};
 const previousCountry=vm.runInContext('atlasMode',env),beforeFailed=moved.length,failedSwitch=env.changeAtlas('japan');await flush();
 emit('error',{sourceId:'japan-failed'});assert.equal(await failedSwitch,false);
 assert.equal(vm.runInContext('atlasMode',env),previousCountry,'The previous country is restored');assert.equal(remembered.at(-1),previousCountry,'Its link is restored');
 assert(moved.slice(beforeFailed).every(country=>country===previousCountry),'The camera never moves to the failed country');
 assert.equal(element('moving-indicator').hidden,true,'Failed loads clear the symbol so the user can retry');assert.equal(element('map-shell')['aria-busy'],'false');
 assert.equal(element('status').textContent,'Japan could not load. Retry');assert.equal(element('status').hidden,false);
-env.japanAtlas.warm=async()=>{};
+env.atlases.japan.warm=async()=>{};
 const beforeRetry=moved.length,retrySwitch=env.changeAtlas('japan');await flush();assert.equal(moved.length,beforeRetry,'Retry waits for the existing failed source instead of treating it as a ready country');
 sources.set('japan-failed',true);emit('sourcedata',{sourceId:'japan-failed'});assert.equal(await retrySwitch,true);assert.equal(moved.at(-1),'japan');
 assert.equal(handlers.get('sourcedata').size,0);assert.equal(handlers.get('error').size,0);
 
 // Optional preview sources never hold up a destination, and cached switches add no delay.
 sources.set('korea-new',true);
-env.koreaAtlas={...atlas(Promise.resolve()),warm:async()=>{sources.set('korea-preview-motion',false);sources.set('japan-unrelated',false);}};
+env.atlases.korea={...atlas(Promise.resolve()),warm:async()=>{sources.set('korea-preview-motion',false);sources.set('japan-unrelated',false);}};
 assert.equal(await env.changeAtlas('korea'),true);assert.equal(moved.at(-1),'korea');
 const cachedCount=moved.length;assert.equal(await env.changeAtlas('korea'),true);assert.equal(moved.length,cachedCount);
 console.log('First-visit source preparation precedes movement; stale warm-ups cancel immediately; failed sources preserve the camera; cached countries and optional previews remain fast.');
@@ -105,12 +107,12 @@ emit('sourcedata');await flush();assert.equal(moved.length,beforeChina,'China di
 sources.set('city-districts',true);emit('sourcedata');assert.equal(await chinaSwitch,true);assert.equal(moved.at(-1),'china');
 
 for(const country of ['malaysia','singapore'])env.window.AtlasEntry.countries[country]={en:country};
-vm.runInContext('malaysiaAtlas=makeAtlas(Promise.resolve());singaporeAtlas=makeAtlas(Promise.resolve());',env);
+env.atlases.malaysia=atlas(Promise.resolve());env.atlases.singapore=atlas(Promise.resolve());
 env.window.AtlasDev.allows=()=>true;
 for(const country of ['malaysia','singapore']){assert.equal(await env.changeAtlas(country),true);assert.equal(remembered.at(-1),country);}
 console.log('Malaysia and Singapore are public; switching succeeds without developer mode.');
 
-env.window.AtlasEntry.countries.russia={en:'Russia'};vm.runInContext('russiaAtlas=makeAtlas(Promise.resolve());',env);assert.equal(await env.changeAtlas('russia'),true);assert.equal(remembered.at(-1),'russia');
+env.window.AtlasEntry.countries.russia={en:'Russia'};env.atlases.russia=atlas(Promise.resolve());assert.equal(await env.changeAtlas('russia'),true);assert.equal(remembered.at(-1),'russia');
 
 vm.runInContext('cameraBusy=true;syncMapActivity();',env);assert.equal(element('moving-indicator').hidden,false,'Camera movement still displays the symbol');
 vm.runInContext('cameraBusy=false;syncMapActivity();',env);assert.equal(element('moving-indicator').hidden,true);

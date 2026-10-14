@@ -1,3 +1,6 @@
+import './countries.js';
+// South American layers are named after their countries (countries.js).
+const southAmericaLayers=new RegExp('^(south-('+globalThis.AtlasCountries.byAdapter('south-america').join('|')+')(-ddd)?-|arg-(local|city)-)');
 export const sourceId='satellite-imagery';
 export const satelliteSource={
   type:'raster',tileSize:256,minzoom:0,maxzoom:19,
@@ -17,7 +20,7 @@ export function provinceOpacity(visible,opacity=1){const amount=visible?opacity:
 export function blendColor(from,to,amount){const channels=color=>[1,3,5].map(i=>parseInt(color.slice(i,i+2),16));return '#'+channels(from).map((channel,i)=>Math.round(channel+(channels(to)[i]-channel)*amount).toString(16).padStart(2,'0')).join('');}
 
 function southImageryLayers(map){
-  return map.getLayersOrder().filter(id=>/^(south-(brazil|uruguay|argentina)(-ddd)?-|arg-(local|city)-)/.test(id)).map(id=>({id,type:map.getLayer(id).type})).filter(layer=>['fill','line'].includes(layer.type));
+  return map.getLayersOrder().filter(id=>southAmericaLayers.test(id)).map(id=>({id,type:map.getLayer(id).type})).filter(layer=>['fill','line'].includes(layer.type));
 }
 function createSouthImageryAppearance(map){
   const original=new Map();

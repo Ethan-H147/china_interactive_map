@@ -1,7 +1,9 @@
 import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
-const source=fs.readFileSync('dist/atlas-entry.js','utf8');
+const source=fs.readFileSync('dist/atlas-entry.js','utf8'),registrySource=fs.readFileSync('dist/countries.js','utf8');
+// The registry runs first in the page; each sandbox gets its own copy.
+const withRegistry=context=>{vm.createContext(context);vm.runInContext(registrySource,context);context.window.AtlasCountries=context.AtlasCountries;return context;};
 function boot(hash='',saved,{blocked=false,developer=false,unreleased=[]}={}){
  const stored=new Map(saved?[['boundary-atlas-country-v1',saved]]:[]);
  const elements=new Map(['atlas-title-english','atlas-title-local','atlas-title-malay','atlas-title-tamil','loading-label','startup-name','home'].map(id=>[id,{}]));
@@ -10,7 +12,7 @@ function boot(hash='',saved,{blocked=false,developer=false,unreleased=[]}={}){
  const context={fetch:url=>{fetched.push(url);return Promise.resolve({ok:true});},window:{AtlasDev:{enabled:developer,allows:country=>!unreleased.includes(country)||developer},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
   history:{replaceState(a,b,url){location.hash=new URL(url,'https://example.test').hash;}},
   localStorage:{getItem(key){if(blocked)throw Error('Storage blocked');return stored.get(key);},setItem(key,value){if(blocked)throw Error('Storage blocked');stored.set(key,value);}},AtlasSymbols:{markup:country=>'<svg>'+country+'</svg>'}};
- vm.runInNewContext(source,context);const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners,fetched};
+ vm.runInContext(source,withRegistry(context));const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners,fetched};
 }
 for(const country of ['china','korea','mongolia','japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia']){
  const developer=false;
@@ -44,7 +46,7 @@ for(const country of ['brazil','uruguay']){
 }
 const html=fs.readFileSync('dist/index.html','utf8');assert(html.indexOf('src="atlas-entry.js"')<html.indexOf('rel="stylesheet"'),'Select the theme before the first styled paint');assert(!html.includes('moving-dot'));assert(!html.includes('country-nav'));assert(!html.includes('country-welcome'));assert(!html.includes('country-open'));assert(!html.includes('country-menu'));
 assert(!fs.readFileSync('dist/south-america.mjs','utf8').includes('continent-flight'),'No continent flight buttons are created');
-const symbolContext={window:{}};vm.runInNewContext(fs.readFileSync('dist/country-symbols.js','utf8'),symbolContext);
+const symbolContext=withRegistry({window:{}});vm.runInContext(fs.readFileSync('dist/country-symbols.js','utf8'),symbolContext);
 const symbols=symbolContext.window.AtlasSymbols;
 const a=symbols.markup('mongolia'),b=symbols.markup('mongolia');assert.notEqual(a.match(/id="([^"]+)/)[1],b.match(/id="([^"]+)/)[1],'Repeated Soyombos use separate masks');
 assert.equal((a.match(/class="symbol-rotor"/g)||[]).length,1,'Only the inner symbol rotates');

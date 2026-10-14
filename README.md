@@ -360,6 +360,30 @@ Non-atlas neighbours (Portugal, Switzerland, Germany, Ireland and others) are st
 
 Rebuild with `npm run build:europe`; check with `npm run test:europe` (hierarchies, chunks, statistics for every unit, frontier lengths and continuity, enclaves, coastal ends, no coastline strokes, loading modes, developer gating).
 
+## Countries
+
+`dist/countries.js` declares every country once. Each entry has:
+
+- names and language;
+- background colour and emblem;
+- release (`release:'developer'` keeps a country in developer mode);
+- map adapter, statistics and catalogue paths, and level names;
+- the faded fill shown while another country is open, and its layers-panel prefix;
+- the options a shared link may carry (scopes, label languages, deepest level);
+- for countries drawn by the shared adapters, their map settings: levels, centre, bounds and colours.
+
+It runs as the page's first script, because the entry screen needs it before any module loads. Modules and Node scripts import the same file. The rest of the page reads it instead of naming countries:
+
+- the entry route, title, theme, emblem and developer gate;
+- link validation;
+- statistics bundles and region colours;
+- adapter set-up, country clicks and portal fills in `app.js`;
+- the world-land silhouettes.
+
+Adding a country declares it there, plus its colour theme in CSS and its data. `node scripts/validate-countries.mjs` checks that every declared file, emblem, theme and route resolves. It fails if any other page script lists three or more countries.
+
+Country-specific features stay in their own adapters: China's packed boundaries, Brazil's DDD and CEP layers, Singapore's four label languages, and the bespoke Korea, Mongolia, Japan and archipelago pages.
+
 ## Browser tests
 
-`npm run test:browser` (`scripts/browser/`) drives the real site in headless Chrome over the DevTools protocol, with no extra dependencies: it serves `dist/` on a free port and uses real mouse, touch and keyboard input. Every scenario fails on an assertion, a page exception, a console error or a failed request, and saves a screenshot to `artifacts/browser-tests/` when it does. Scenarios cover the phone bottom sheet (dragging, flicking, the handle by tap, Enter and Space, search with the on-screen keyboard, panning), the level toggle on phone and desktop, every public country opening, searching and selecting a place, switching countries by clicking a neighbour and by link, and developer mode (no unreleased data for public visitors, the Changning unlock, and the deepest level of each European country). The GitHub Pages workflow runs them before every deployment; set `CHROME_PATH` if Chrome is not found.
+`npm run test:browser` (`scripts/browser/`) drives the real site in headless Chrome over the DevTools protocol, with no extra dependencies: it serves `dist/` on a free port and uses real mouse, touch and keyboard input. Every scenario fails on an assertion, a page exception, a console error or a failed request, and saves a screenshot to `artifacts/browser-tests/` when it does. Scenarios cover the phone bottom sheet (dragging, flicking, the handle by tap, Enter and Space, search with the on-screen keyboard, panning), the level toggle on phone and desktop, every public country opening, searching and selecting a place, switching countries by clicking a neighbour and by link, and developer mode (no unreleased data for public visitors, the Changning unlock, the deepest level of each European country, shared links that reopen a third-level place with its label language, and leaving developer mode on an unreleased country). The GitHub Pages workflow runs them before every deployment; set `CHROME_PATH` if Chrome is not found.

@@ -1,13 +1,13 @@
 // Runs before styles and map imports, so a returning visitor never sees the
 // wrong country's title or loading screen while boundaries are downloaded.
 (()=>{
- const countries={'united-kingdom':{en:'United Kingdom',local:'',lang:'en',background:'#eef1f6'},spain:{en:'Spain',local:'España',lang:'es',background:'#f7f1e6'},france:{en:'France',local:'',lang:'fr',background:'#eff1f7'},italy:{en:'Italy',local:'Italia',lang:'it',background:'#eef4ee'},botswana:{en:'Botswana',local:'',lang:'tn',background:'#edf3f6'},namibia:{en:'Namibia',local:'',lang:'en',background:'#f5efe6'},'south-africa':{en:'South Africa',local:'',lang:'en',background:'#eef2e9'},eswatini:{en:'Eswatini',local:'eSwatini',lang:'ss',background:'#f5eee4'},lesotho:{en:'Lesotho',local:'',lang:'st',background:'#ecf3f5'},russia:{en:'Russia',local:'Россия',lang:'ru',background:'#edf0f6'},malaysia:{en:'Malaysia',local:'',lang:'ms',background:'#f1f1e9'},singapore:{en:'Singapore',local:'新加坡',lang:'zh',background:'#f7f2f1'},brazil:{en:'Brazil',local:'Brasil',lang:'pt',background:'#eef3e9'},uruguay:{en:'Uruguay',local:'',lang:'es',background:'#edf3f7'},argentina:{en:'Argentina',local:'',lang:'es',background:'#edf3f7'},philippines:{en:'Philippines',local:'Pilipinas',lang:'fil',background:'#edf2f8'},indonesia:{en:'Indonesia',local:'',lang:'id',background:'#faf1ef'},japan:{en:'Japan',local:'日本',lang:'ja',background:'#f5f5f5'},china:{en:'China',local:'中国',lang:'zh',background:'#f4f0e7'},korea:{en:'Korea',local:'한반도',lang:'ko',background:'#edf1f6'},mongolia:{en:'Mongolia',local:'Монгол',lang:'mn-Cyrl',background:'#eaf1f5'}};
+ const registry=window.AtlasCountries,countries=registry.countries;
  const storageKey='boundary-atlas-country-v1';
- const fromHash=hash=>/^#(china|korea|mongolia|japan|philippines|indonesia|malaysia|singapore|brazil|uruguay|argentina|russia|south-africa|eswatini|lesotho|botswana|namibia|united-kingdom|spain|france|italy)(?:\/(?:place|view)=.*)?$/i.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
+ const fromHash=hash=>registry.route.exec(hash)?.[1].toLowerCase()||(hash.startsWith('#place=')?'china':null);
  let saved;try{saved=localStorage.getItem(storageKey);}catch{}
  const allowed=country=>window.AtlasDev.allows(country);
- const requested=fromHash(location.hash)||(countries[saved]?saved:'china');
- const initial=allowed(requested)?requested:'china';
+ const requested=fromHash(location.hash)||(countries[saved]?saved:registry.fallback);
+ const initial=allowed(requested)?requested:registry.fallback;
  // China's packed boundaries are the largest startup download; begin before styles
  // and modules. app.js takes these responses instead of requesting the files again.
  const early={};
@@ -24,15 +24,15 @@
  function paint(){
   const info=countries[current];root.dataset.atlas=current;document.body.dataset.atlas=current;
   const $=id=>document.getElementById(id);
-  if($('atlas-title-english')){$('atlas-title-english').textContent=info?.en||'Atlas';$('atlas-title-english').className=current==='china'?'china-english':'korea-english';}
-  if($('atlas-title-local')){$('atlas-title-local').textContent=info?.local||'';$('atlas-title-local').className=current==='china'?'china-chinese':current==='korea'?'korean-title':current==='japan'?'japanese-title':'mongolia-title';$('atlas-title-local').lang=info?.lang||'en';}
-  for(const id of ['atlas-title-malay','atlas-title-tamil'])if($(id))$(id).hidden=current!=='singapore';
+  if($('atlas-title-english')){$('atlas-title-english').textContent=info?.en||'Atlas';$('atlas-title-english').className=info?.titleClasses?.[0]||'korea-english';}
+  if($('atlas-title-local')){$('atlas-title-local').textContent=info?.local||'';$('atlas-title-local').className=info?.titleClasses?.[1]||'mongolia-title';$('atlas-title-local').lang=info?.lang||'en';}
+  for(const id of new Set(Object.values(countries).flatMap(c=>c.extraTitles||[])))if($(id))$(id).hidden=!info?.extraTitles?.includes(id);
   document.title=info.en+(info.local?' · '+info.local:'');
   document.querySelectorAll('[data-country-symbol]').forEach(el=>{el.innerHTML=info?AtlasSymbols.markup(current):'';});
   if($('loading-label'))$('loading-label').textContent=info?'Loading '+info.en+' map…':'Loading atlas…';
   if($('startup-name'))$('startup-name').textContent=info?'Preparing '+info.en+'…':'Preparing maps…';
   if($('home'))$('home').textContent='All '+(info?.en||'countries');
-  if($('map')&&info)$('map').setAttribute('aria-label',current==='china'?'Interactive China administrative boundary map':current==='korea'?'Interactive map of North and South Korea':current==='japan'?'Interactive Japan prefecture and municipality map':current==='mongolia'?'Interactive Mongolia province and district map':current==='singapore'?'Interactive Singapore country map':current==='malaysia'?'Interactive Malaysia state and district map':'Interactive '+info.en+' administrative boundary and island map');
+  if($('map')&&info)$('map').setAttribute('aria-label',info.mapLabel||'Interactive '+info.en+' administrative boundary and island map');
  }
  window.AtlasEntry={initial,countries,fromHash,mount:paint,takeEarly(key){const response=early[key];delete early[key];return response;},remember(country,{preservePlace=true}={}){if(!countries[country]||!allowed(country))return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
  window.addEventListener('hashchange',()=>{const country=fromHash(location.hash);if(root.dataset.starting&&country)window.AtlasEntry.remember(country);});

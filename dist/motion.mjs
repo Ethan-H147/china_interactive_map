@@ -1,5 +1,7 @@
 import {setLayerVisible} from './adaptive-lines.mjs';
+import './countries.js';
 
+const {countries}=globalThis.AtlasCountries;
 const suffix='-motion';
 export function queryRegions(map,point,{layers,...options}){
  const ids=layers.filter(id=>map.getLayer(id)).flatMap(id=>map.getLayer(id+suffix)?[id,id+suffix]:[id]);
@@ -13,7 +15,7 @@ export function setFeatureState(map,target,state){
 }
 
 export function createMotionRenderer(map,initialCountry='china',{startAfter}={}){
- let nativeCountry=['japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia','south-africa','eswatini','lesotho','botswana','namibia','united-kingdom','spain','france','italy'].includes(initialCountry);
+ let nativeCountry=!!countries[initialCountry]&&!countries[initialCountry].motionLayers;
  let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise;
  let generation=0,restorePromise;
  const urls=new Map(),layers=new Map(),dynamicKeys=new Map();
@@ -46,7 +48,7 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
  function sourceUrl(source,data){const url=URL.createObjectURL(data),previous=urls.get(source);urls.set(source,url);return{url,previous};}
  const countryLoads=new Map();
  function loadCountry(country){
-  nativeCountry=['japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia','south-africa','eswatini','lesotho','botswana','namibia','united-kingdom','spain','france','italy'].includes(country);
+  nativeCountry=!!countries[country]&&!countries[country].motionLayers;
   if(nativeCountry)return Promise.resolve(false);
   if(countryLoads.has(country))return countryLoads.get(country);
   const promise=new Promise(resolve=>{

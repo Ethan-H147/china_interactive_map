@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
+import '../dist/countries.js';
 
 const source='https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson';
 const response=await fetch(source);
@@ -8,7 +9,9 @@ const world=await response.json();
 // Selectable countries already have their own reconciled coastal silhouettes.
 // Exclude the coarse versions so they cannot protrude behind detailed coasts.
 const portals=new Set(['CHN','TWN','KOR','PRK','MNG','JPN','PHL','IDN','RUS']);
-const previews={BRA:'brazil',ARG:'argentina',URY:'uruguay',MYS:'malaysia',SGP:'singapore',ZAF:'south-africa',SWZ:'eswatini',LSO:'lesotho',BWA:'botswana',NAM:'namibia',GBR:'united-kingdom',ESP:'spain',FRA:'france',ITA:'italy'};
+// Countries drawn from these silhouettes declare their Natural Earth code in countries.js.
+const {ids,countries}=globalThis.AtlasCountries;
+const previews=Object.fromEntries(ids.filter(id=>countries[id].naturalEarth).map(id=>[countries[id].naturalEarth,id]));
 // France's detailed outline is metropolitan only; French Guiana keeps its silhouette.
 const overseas=(iso,polygon)=>iso==='FRA'&&polygon[0][0][0]<-30;
 const features=world.features.filter(f=>!portals.has(f.properties.ADM0_A3)).flatMap(f=>{

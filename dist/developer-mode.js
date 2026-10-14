@@ -1,8 +1,9 @@
 // This is a local preview preference. No typed characters are stored or sent.
 (()=>{
  const key='boundary-atlas-developer-v1';
- // Countries listed here load only in developer mode until they are ready for release.
- const developerCountries=['united-kingdom','spain','france','italy'];
+ // Countries declared with release 'developer' (countries.js) load only in developer mode
+ // until they are ready for release.
+ const {ids,countries}=window.AtlasCountries,developerCountries=ids.filter(id=>countries[id].release==='developer');
  let enabled=false;try{enabled=sessionStorage.getItem(key)==='true';}catch{}
  function createSequence(){
   const phrase='dev mode';let buffer='',last=0;

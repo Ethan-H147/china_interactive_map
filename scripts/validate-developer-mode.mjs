@@ -3,12 +3,14 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const source=fs.readFileSync('dist/developer-mode.js','utf8');
 const unreleased=['united-kingdom','spain','france','italy'];
-assert(source.includes("const developerCountries=['united-kingdom','spain','france','italy'];"),'The European outlines are the only unreleased countries');
+const registry=fs.readFileSync('dist/countries.js','utf8');
 let eligible=false,now=1000;
 const events={},stored=new Map(),nodes=[];
 function node(){const children=new Map();return{dataset:{},hidden:false,open:false,setAttribute(){},append(){},focus(){this.focused=true;},showModal(){this.open=true;},close(){this.open=false;},querySelector(id){if(!children.has(id))children.set(id,node());return children.get(id);}};}
 const root=node();const context={window:{addEventListener:(name,fn)=>events[name]=fn,dispatchEvent(){}},document:{documentElement:root,body:node(),querySelector:()=>node(),createElement(){const e=node();nodes.push(e);return e;}},sessionStorage:{getItem:k=>stored.get(k),setItem:(k,v)=>stored.set(k,v)},Date:{now:()=>now},CustomEvent:class{constructor(name,options){this.name=name;this.detail=options.detail;}}};
-vm.runInNewContext(source,context);const dev=context.window.AtlasDev;
+vm.createContext(context);vm.runInContext(registry,context);context.window.AtlasCountries=context.AtlasCountries;
+const {ids,countries}=context.AtlasCountries;assert.deepEqual([...ids.filter(id=>countries[id].release==='developer')],unreleased,'The European countries are the only unreleased ones');
+vm.runInContext(source,context);const dev=context.window.AtlasDev;
 assert(!dev.enabled);assert(dev.allows('malaysia'));assert(dev.allows('singapore'));assert(dev.allows('argentina'),'Argentina is public without the Easter egg');assert(dev.allows('brazil')&&dev.allows('uruguay'),'Brazil and Uruguay are public without developer mode');assert(dev.allows('japan'));
 for(const country of unreleased)assert(!dev.allows(country),country+' stays in developer mode');
 for(const country of ['south-africa','botswana','namibia','eswatini','lesotho'])assert(dev.allows(country),'Southern African countries are public');

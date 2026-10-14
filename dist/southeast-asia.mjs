@@ -6,10 +6,9 @@ import {malaysiaFlags} from './malaysia-flags.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
 import {singaporeLabel,readSingaporeLanguage,singaporeLanguages} from './singapore-languages.mjs';
 
-export const countries={
- malaysia:{name:'Malaysia',flag:'my',center:[109,4],zoom:4,bounds:[[99.5,.8],[119.5,7.5]],fill:'#f5f0dd',selected:'#e7dca8',line:'#817244'},
- singapore:{name:'Singapore',flag:'sg',center:[103.83,1.33],zoom:10,bounds:[[103.58,1.14],[104.12,1.49]],fill:'#fff6f5',selected:'#efcbc8',line:'#ad534e'}
-};
+import './countries.js';
+const registry=globalThis.AtlasCountries;
+export const countries=Object.fromEntries(registry.byAdapter('southeast-asia').map(id=>[id,{name:registry.countries[id].en,...registry.countries[id].map}]));
 export async function addCountryPortal(map,host,country){
  const c=countries[country],base='data/southeast-asia/',prefix=c.flag,isMalaysia=country==='malaysia';
  const context=await loadCompressed(base+country+'-context.bin');

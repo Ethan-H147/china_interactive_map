@@ -1,7 +1,9 @@
 // Small vector emblems; each country animates only its moving parts.
+// Each country names its emblem in countries.js; an image path draws that image.
 window.AtlasSymbols={sequence:0,markup(country){
- if(['south-africa','eswatini','lesotho','botswana','namibia','united-kingdom','spain','france','italy'].includes(country))return '<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle class="symbol-rotor" cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="160 70"/></svg>';
- if(country==='russia'){
+ const symbol=window.AtlasCountries?.countries[country]?.symbol;
+ if(symbol==='ring')return '<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><circle class="symbol-rotor" cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="5" stroke-dasharray="160 70"/></svg>';
+ if(symbol==='matryoshka'){
   const key='matryoshka-'+(++this.sequence);
   const face='<circle cx="60" cy="30" r="9" fill="#fff2da"/><path d="M52 26q8-10 16 0q-8-4-16 0" fill="#d4a258" stroke="none"/><g fill="#49352e" stroke="none"><circle cx="56.5" cy="30" r="1.1"/><circle cx="63.5" cy="30" r="1.1"/></g><path d="M57 35q3 2.5 6 0" fill="none" stroke="#9b4944" stroke-width="1.3" stroke-linecap="round"/>';
   const cap='<path d="M40 60c2-9 11-10 11-16 0-4-5-6-5-14 0-19 28-19 28 0 0 8-5 10-5 14 0 6 9 7 11 16Z"/>';
@@ -10,19 +12,18 @@ window.AtlasSymbols={sequence:0,markup(country){
   // The fixed opening clips the moving child before the front shell is drawn.
   return `<svg class="country-symbol matryoshka" viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="${key}-opening" clipPathUnits="userSpaceOnUse"><rect width="100" height="60"/></clipPath></defs><ellipse cx="60" cy="97" rx="25" ry="2" fill="#29334a" opacity=".1"/><ellipse cx="60" cy="60" rx="20" ry="3" fill="#803239"/><g clip-path="url(#${key}-opening)"><g class="matryoshka-child"><g transform="translate(25.2 37.24)scale(.58)" fill="#365d9b" stroke="#254675" stroke-width="1.8" stroke-linejoin="round">${base}${apron}${cap}${face}</g></g></g><g fill="#b7444c" stroke="#803239" stroke-width="1.8" stroke-linejoin="round">${base}${apron}<g class="matryoshka-lid">${cap}${face}<path d="M56 42l4 4 4-4-4 10Z" fill="#fff2da" stroke="none"/></g></g></svg>`;
  }
- if(country==='philippines'){
+ if(symbol==='philippine-sun'){
   // Exact sun geometry from the national flag SVG; source in symbol-sources.
   const ray='m0 0-3.164-15.909.945-.946zl-1.169-17.831L0-19l1.169 1.169zl2.219-16.855.945.946z';
   return `<svg class="country-symbol philippines-sun" viewBox="-20 -20 40 40" aria-hidden="true"><g class="symbol-rotor" fill="#fcd116"><circle r="9"/>${Array.from({length:8},(_,i)=>`<path data-sun-ray="${i}" d="${ray}" transform="rotate(${i*45})"/>`).join('')}</g></svg>`;
  }
  // Exact emblems extracted by scripts/prepare-country-symbols.mjs.
- if(['argentina','brazil','uruguay'].includes(country))return `<img class="country-symbol symbol-rotor" src="vendor/${country==='brazil'?'brazil-globe':country+'-sun'}.svg" alt="" aria-hidden="true">`;
- if(['indonesia','malaysia','singapore'].includes(country))return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="40" stroke-width="1.5"/><path d="M50 10V90M10 50H90M22 22L78 78M22 78L78 22M34.7 13L65.3 87M13 34.7L87 65.3M13 65.3L87 34.7M34.7 87L65.3 13"/><circle cx="50" cy="50" r="8" fill="var(--map)"/></g></svg>`;
- if(country==='japan')return '<img class="country-symbol symbol-rotor" src="vendor/japan-chrysanthemum.png" alt="" aria-hidden="true">';
+ if(symbol?.includes('/'))return `<img class="country-symbol symbol-rotor" src="${symbol}" alt="" aria-hidden="true">`;
+ if(symbol==='compass')return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor" fill="none" stroke="currentColor" stroke-width="3"><circle cx="50" cy="50" r="46"/><circle cx="50" cy="50" r="40" stroke-width="1.5"/><path d="M50 10V90M10 50H90M22 22L78 78M22 78L78 22M34.7 13L65.3 87M13 34.7L87 65.3M13 65.3L87 34.7M34.7 87L65.3 13"/><circle cx="50" cy="50" r="8" fill="var(--map)"/></g></svg>`;
  const key='emblem-'+(++this.sequence);
  const taiji='<circle cx="50" cy="50" r="49" fill="#fff" stroke="#171717" stroke-width="1"/><path d="M50 1a49 49 0 0 1 0 98 24.5 24.5 0 0 1 0-49 24.5 24.5 0 0 0 0-49" fill="#171717"/><circle cx="50" cy="25.5" r="7" fill="#171717"/><circle cx="50" cy="74.5" r="7" fill="#fff"/>';
  const taegeuk='<circle cx="50" cy="50" r="49" fill="#0047a0"/><path d="M1 50a49 49 0 0 1 98 0 24.5 24.5 0 0 1-49 0 24.5 24.5 0 0 0-49 0" fill="#cd2e3a"/>';
- if(country!=='mongolia')return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor">${country==='korea'?taegeuk:taiji}</g></svg>`;
+ if(symbol!=='soyombo')return `<svg class="country-symbol" viewBox="0 0 100 100" aria-hidden="true"><g class="symbol-rotor">${symbol==='taegeuk'?taegeuk:taiji}</g></svg>`;
  // The outer Soyombo follows the existing flag asset. Its central fish turn
  // together inside a fixed circular enclosure; the flame and pillars stay still.
  return `<svg class="country-symbol soyombo" viewBox="18 68 177 344" aria-hidden="true" fill="#c29a37">
