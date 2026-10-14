@@ -20,6 +20,7 @@ for(const [id,flag] of Object.entries(southern))if(['south-africa','eswatini','l
 const newFlags=read('dist/data/botswana-namibia-flag-sources.json');
 Object.values(newFlags.flags).forEach(add);Object.values(newFlags.nationalFlags).forEach(flag=>{national[flag.file]=flag;});
 Object.values(read('dist/data/europe/flag-sources.json').flags).forEach(flag=>{national[flag.file]=flag;});
+Object.values(read('dist/data/europe/subdivision-flag-sources.json').flags).forEach(add);
 Object.assign(images,national);
 const cityNamesFile='dist/data/southern-africa/south-africa/place-names-flags.json';
 if(fs.existsSync(cityNamesFile))Object.values(read(cityNamesFile).places).forEach(place=>add(place.flag));

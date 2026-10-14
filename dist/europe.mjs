@@ -10,6 +10,10 @@ export const configurations=Object.fromEntries(Object.entries(definitions).map((
 export function createEurope(map,host){
  const portals={};let adding=null;
  const allowedAny=()=>Object.keys(configurations).some(country=>window.AtlasDev?.allows(country));
- function ensure(){if(!allowedAny())return Promise.resolve();adding??=(async()=>{for(const [country,c] of Object.entries(configurations))portals[country]=await addRegionalCountry(map,host,c);})();return adding;}
+ function ensure(){if(!allowedAny())return Promise.resolve();adding??=(async()=>{
+  // Subdivision flags load with the countries, so public visitors download none.
+  const {europeFlags}=await import('./europe-flags.mjs');
+  for(const [country,c] of Object.entries(configurations)){Object.assign(c.flags,europeFlags[country]?.firstFlags);Object.assign(c.detailFlags,europeFlags[country]?.detailFlags);portals[country]=await addRegionalCountry(map,host,c);}
+ })();return adding;}
  return {portals,ensure,handles:country=>country in configurations,syncDeveloper(){for(const portal of Object.values(portals))portal.sync();}};
 }

@@ -345,6 +345,23 @@ The 13 regions of metropolitan France (Corsica is a territorial collectivity), 9
 
 Cities and towns, like South Africa, are points independent of councils (`scripts/prepare-uk-settlements.mjs`): every built-up area or settlement with at least 1,000 residents — 4,258 places. England and Wales use ONS 2022 built-up areas with Census 2021 usual residents (London's built-up areas, omitted from ONS's towns tables, are summed from Census output areas as ONS does); Scotland uses NRS Census 2022 settlements; Northern Ireland uses NISRA 2015 settlements with Census 2021 counts (CT0100), located by GeoNames and, for villages absent there, OpenStreetMap. Welsh names are a label language.
 
+### Flags
+
+The panel stacks flags downward, as for Russia: the national flag, then the region or community, then the department or province. A commune or municipality shows its department's or province's flag, captioned with whose flag it is. Municipal and commune flags are not included.
+
+`scripts/fetch-europe-subdivision-flags.mjs` takes each flag from Wikimedia Commons. It checks each download against the Commons checksum and records the license and author. Its choices follow two retained Wikipedia lists:
+
+- **France** ("Flags of the regions of France"):
+  - Regions show the traditional flag where one is in use. Grand Est, Hauts-de-France and Pays de la Loire show the regional council's logo flag.
+  - Departments show the departmental council's flag, which is usually a logo flag.
+  - 25 departments whose council has no flag show none. Proposed banners of arms are not shown.
+- **Spain** ("Anexo:Banderas de España"):
+  - Communities and Ceuta and Melilla show their statutory flags.
+  - Provinces show their official flag. The six without one (Alicante, Castellón, Girona, A Coruña, Lleida, Valencia) show none.
+  - A single-province community's flag appears once.
+
+Small originals ship as SVG. Heraldic SVGs over 120 KB ship as rasters; the largest is 8.5 MB. The originals are cached in `scripts/additional-sources/europe-flags/`, which is not committed. The flags load only with developer mode. Each flag's status, source and license are in `dist/data/europe/subdivision-flag-sources.json`.
+
 ### Outlines and frontiers
 
 | Country | Coverage | Outline source | Licence |

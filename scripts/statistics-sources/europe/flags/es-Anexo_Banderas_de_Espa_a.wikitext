@@ -1,0 +1,977 @@
+Esta es una lista de las '''banderas''' empleadas en '''[[España]]'''. Para obtener información más detallada, véase '''[[Bandera de España]]'''.
+
+== Banderas nacionales ==
+{| class="wikitable" border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Fechas!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Flag_of_Spain.svg|borde|centro|100x100px]]
+| 1981-''actualidad''
+| [[Bandera nacional|Bandera]] y [[pabellón nacional]] (institucional y de guerra), opcional para uso civil
+| Tres franjas horizontales: roja, amarilla y roja. La franja amarilla, la central, es el doble de ancha que las rojas. Incorpora el [[escudo de España]] situado a un tercio del largo hacia el asta.
+|-
+| [[Archivo:Bandera de España (sin escudo).svg|borde|centro|100x100px]]
+| 1785/1843-1931, 1939-''actualidad''
+| [[Bandera nacional|Bandera]] y [[pabellón nacional]] civil
+| Tres franjas horizontales: roja, amarilla y roja. La franja amarilla, de doble anchura que las rojas.
+|-
+| [[Archivo:Naval jack of Spain.svg|borde|centro|100x100px]]
+| 1945-''actualidad''
+| [[Bandera de proa]]
+| Una bandera cuadrada compuesta por cuatro cuarteles que representan los Reinos medievales de España: un castillo de [[Oro (heráldica)|Oro]] en un campo de [[gules]], por [[Reino de Castilla|Castilla]]; un león de gules en un campo de [[argén]], por [[Reino de León|León]]; cuatro palos de gules en un campo de oro, por [[Reino de Aragón|Aragón]] y [[cadena]]s de oro en un campo de gules, por [[Reino de Navarra|Navarra]].
+|-
+|[[Archivo:Bandera_para_Unidades_de_las_Fuerzas_Armadas_(España).svg|borde|centro|100x100px]]
+|1977-''actualidad''
+|[[Bandera]] para [[Fuerzas Armadas (España)|Unidades de las Fuerzas Armadas]]
+|La bandera nacional, casi cuadrada, con el escudo en el centro y, rodeando a este, en la parte superior el nombre del Arma o Cuerpo a que pertenece la enseña cuando corresponda, y en la parte inferior el nombre y número del Regimiento o Unidad.
+El ejemplo muestra al "Regimiento Inmemorial del Rey Nº1" de Infantería.
+|-
+|[[Archivo:Bandera_de_Combate_para_los_Buques_de_la_Armada_(España).svg|borde|centro|100x100px]]
+|1977-''actualidad''
+|[[Bandera de combate|Bandera de Combate]] para los [[Armada española|Buques de la Armada]]
+|La bandera nacional con el escudo en el centro y, rodeando a este, en la parte superior el nombre "Armada" y en la parte inferior y en la parte inferior, la clase y el nombre del buque.
+El ejemplo muestra a la "Fragata Extremadura" de la Armada.
+|}
+
+== Estandartes reales ==
+{| class="wikitable" border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Fechas!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Estandarte_de_Felipe_VI_de_España.svg|borde|centro|100x100px]]
+| Desde 2014
+| [[Estandarte del Rey de España|Estandarte]] del [[rey de España]]
+| Una bandera cuadrada de color carmesí con el [[Escudo del Rey de España|escudo del monarca]] en el centro.
+|-
+| [[Archivo:Estandarte_de_la_Princesa_de_Asturias_(desde_2015).svg|borde|centro|100x100px]]
+| Desde 2015
+| [[Estandarte de la princesa de Asturias|Estandarte]] de la [[Príncipe de Asturias|princesa de Asturias]]
+| Una bandera cuadrada de color azul claro (el color de la [[bandera de Asturias]])<ref>[https://www.boe.es/buscar/act.php?id=BOE-A-1977-14944] [http://www.congreso.es/docu/PHist/img/imgSSLegis/4279_0109.jpg Imagen] Pese a mantener una tonalidad más clara en la descripción, tanto en la imagen reproducida en el texto consolidado del Reglamento de banderas y en la práctica se ha utiliza un tono semejante al de la bandera asturiana] Boletín Oficial del Estado.</ref> con el [[Escudo de armas de la princesa de Asturias|escudo de la princesa]] en el centro.
+|-
+| [[Archivo:Estandarte_de_Juan_Carlos_I_de_España.svg|borde|centro|100x100px]]
+| Desde 2014<ref>{{cita web|título=Disposición Transitoria del Real Decreto 527/2014, de 20 de junio, por el que se crea el Guion y el  Estandarte de Su Majestad el Rey Felipe VI y se modifica el Reglamento de  Banderas y Estandartes, Guiones, Insignias y Distintivos, aprobado por Real  Decreto 1511/1977, de 21 de enero|url=http://www.boe.es/boe/dias/2014/06/21/pdfs/BOE-A-2014-6525.pdf|fechaacceso=21 de junio de 2014|obra=Boletín Oficial del Estado n.º 151 de 21 de junio de 2014}}</ref>
+| [[Estandarte del Rey de España#Estandartes históricos|Estandarte]] del [[Juan Carlos I de España|rey Juan Carlos I]] 	
+| Una bandera cuadrada de color azul oscuro con el [[Escudo del Rey de España|escudo personal del rey Juan Carlos]] en el centro.
+|}
+
+== Pabellones navales ==
+{| class="wikitable" border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+!Bandera
+!Fechas
+!Uso
+!Descripción
+|-
+|[[Archivo:Bandera_para_Buques_o_Embarcaciones_del_Ejército_(España).svg|borde|centro|99x99px]]
+|Desde 1977
+|[[Pabellón nacional|Pabellón]] para [[Buques de Acción Marítima|Buques]] del [[Ejército de Tierra (España)|Ejército de Tierra]]
+|La bandera nacional con las letras "ET" en la franja gualda, y el emblema del Ejército de Tierra en la franja roja superior. Todo a un tercio del largo hacia el asta.
+|-
+|[[Archivo:Bandera_para_Buques_o_Embarcaciones_del_Ejército_del_Aire_(España).svg|borde|centro|99x99px]]
+|Desde 1977
+|[[Pabellón nacional|Pabellón]] para [[Buques de Acción Marítima|Buques]] del [[Ejército del Aire y del Espacio (España)|Ejército del Aire]]
+|La bandera nacional con las letras "EA" (de Ejército del Aire) en la franja gualda, y el emblema del Ejército del Aire en la franja roja superior. Todo a un tercio del largo hacia el asta.
+|-
+| [[Archivo:Bandera_del_Servicio_de_Vigilancia_Aduanera.svg|borde|centro|100x100px]]
+| Desde 1977
+| [[Pabellón nacional|Pabellón]] para Embarcaciones del [[Servicio de Vigilancia Aduanera]]
+| La bandera nacional con las letras "HH" (de Reales Haciendas) coronadas con corona real y en azul en la franja gualda, a un tercio del largo hacia el asta.
+|-
+|[[Archivo:Bandera_para_Correos_Marítimos_(España).svg|borde|centro|99x99px]]
+|Desde 1977
+|[[Pabellón nacional|Pabellón]] para Embarcaciones del Servicio de Correos Marítimos
+|La bandera nacional con las letras "CM" de color azul centradas en la franja gualda.
+|-
+|[[Archivo:Bandera_para_Embarcaciones_de_Sanidad_(España).svg|borde|centro|99x99px]]
+|Desde 1977
+|[[Pabellón nacional|Pabellón]] para Embarcaciones de [[Sanidad militar|Sanidad]]
+|La bandera nacional con la [[Cruz de Malta]] blanca fimbriada de negro en el centro.
+|-
+| [[Archivo:Bandera_de_yate.svg|borde|centro|100x100px]]
+| Desde 1875.<br />Modificada la corona en 1977
+| [[Pabellón nacional|Pabellón]] para [[yate|Embarcaciones de Recreo]]
+| La bandera nacional con una [[corona real]] azul en el centro.
+|-
+|[[Archivo:Bandera_para_Buques_Hospitales_(España).svg|borde|centro|100x100px]]
+|Desde 1977
+|Bandera para [[Barco hospital|Buques Hospital]]
+|Una bandera cuadra blanca, con una [[Cruz Roja|cruz roja]] estampada en su centro por ambas caras, según lo especifica el [[Convenio de Ginebra de 1952|Convenio de Ginebra]].
+|}
+
+== Distintivos civiles ==
+{| class="wikitable"
+!Distintivo<ref group="lower-alpha" name=distintivo>El BOE define "Distintivo" como "[...] banderas especiales que se usan para señalar la presencia de personalidades civiles o militares."</ref>
+!Fecha
+!Uso
+|-
+|[[Archivo:Distintivo_de_Altos_Cargos_Civiles_(España).svg|borde|centro|100x100px]]
+|Desde 1977
+|[[Insignia|Distintivo]] para las [[Política de España|Altas Autoridades Civiles del Estado]]<ref group="lower-alpha">Estos son: [[Presidente del Gobierno de España|Presidente del Gobierno]], [[Vicepresidente del Gobierno de España|Vicepresidente del Gobierno]], [[Consejo de Ministros (España)|Ministros del Gobierno]], [[Presidente del Congreso de los Diputados]], [[Presidente del Senado de España|Presidente del Senado]], [[Embajador|Embajadores]], [[Enviado (título)|Enviados Extraordinarios]], [[Ministro plenipotenciario|Ministros Plenipotenciarios]], y [[Encargado de negocios|Encargados de Negocios con cartas de Gabinete]]</ref>
+|-
+|[[Archivo:Distintivo_de_Encargados_de_Negocios,_Cónsules,_y_Delegados_del_Gobierno_(España).svg|borde|centro|100x100px]]
+|Desde 1977
+|[[Insignia|Distintivo]] para las [[Encargado de negocios|Encargados de Negocios]], [[Cónsul (servicio exterior)|Cónsules]], y [[Delegación del Gobierno (España)|Delegados del Gobierno]]
+|}
+
+== Insignias y distintivos militares ==
+{| class="wikitable"
+!Insignia<ref group="lower-alpha" name=insignia>El BOE define "Insignia" como "[...] banderas especiales que izadas indican la autoridad que ostenta el mando."</ref>
+!Distintivo<ref group="lower-alpha" name=distintivo></ref>
+!Uso
+|-
+|[[Archivo:Insignia_del_Jefe_del_Estado_Mayor_de_la_Defensa_(España)_(Reglamentaria).svg|borde|centro|100x100px]][[Archivo:Insignia_y_Distintivo_del_Jefe_del_Estado_Mayor_de_la_Defensa_(España)_(Texto_Consolidado).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Jefe del Estado Mayor de la Defensa (España) (Reglamentario).svg|borde|centro|100x100px]][[Archivo:Insignia_y_Distintivo_del_Jefe_del_Estado_Mayor_de_la_Defensa_(España)_(Texto_Consolidado).svg|borde|centro|100x100px]]
+|[[Jefe de Estado Mayor de la Defensa (España)|Jefe de Estado Mayor de la Defensa]]<ref group="lower-alpha" name=duplicados>Para las insignias y distintivos de algunos cargos, el [https://www.boe.es/buscar/pdf/1977/BOE-A-1977-14944-consolidado.pdf texto consolidado del RD 1511/1977] describe un diseño diferente a lo establecido en la Ley 39/2007.</ref>
+|-
+|[[Archivo:Insignia_del_Capitán_General_del_Ejército_de_Tierra_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo_de_Capitanes_Generales_de_los_Ejércitos_de_Tierra,_Mar_o_Aire_(España).svg|borde|centro|100x100px]]
+|[[Anexo:Capitanes generales del Ejército español|Capitán General del Ejército de Tierra]]
+|-
+|[[Archivo:Insignia del Capitán General de la Armada (España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo_de_Capitanes_Generales_de_los_Ejércitos_de_Tierra,_Mar_o_Aire_(España).svg|borde|centro|100x100px]]
+|[[Anexo:Capitanes generales de la Real Armada Española|Capitán General de la Armada]]
+|-
+|[[Archivo:Insignia_del_Capitán_General_del_Ejército_de_Aire_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo_de_Capitanes_Generales_de_los_Ejércitos_de_Tierra,_Mar_o_Aire_(España).svg|borde|centro|100x100px]]
+|[[Anexo:Capitanes generales del Ejército del Aire de España|Capitán general del Ejército del Aire y del Espacio]]
+|-
+|
+|[[Archivo:Distintivo del Vicario General Castrense (España).svg|borde|centro|100x100px]]
+|[[Arzobispado castrense de España|Vicario general castrense]]
+|-
+|[[Archivo:Insignia_del_Jefe_del_Estado_Mayor_del_Ejército_de_Tierra_(España)_(Reglamentaria).svg|borde|centro|100x100px]][[Archivo:Insignia_del_Jefe_del_Estado_Mayor_del_Ejército_de_Tierra_(España)_(Texto_Consolidado).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Jefe del Estado Mayor del Ejército de Tierra (España) (Reglamentario).svg|borde|centro|100x100px]][[Archivo:Distintivo del Jefe del Estado Mayor del Ejército de Tierra (España) (Texto Consolidado).svg|borde|centro|100x100px]]
+|[[Jefe de Estado Mayor del Ejército de Tierra (España)|Jefe del Estado Mayor del Ejército de Tierra]]<ref group="lower-alpha" name=duplicados></ref>
+|-
+|[[Archivo:Insignia_del_Teniente_General_del_Ejército_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Teniente General del Ejército (España).svg|borde|centro|100x100px]]
+|Teniente General del Ejército
+|-
+|[[Archivo:Insignia_del_General_de_División_del_Ejército_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del General de División del Ejército (España).svg|borde|centro|100x100px]]
+|General de División del Ejército
+|-
+|[[Archivo:Insignia_del_General_de_Brigada_del_Ejército_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del General de Brigada del Ejército (España).svg|borde|centro|100x100px]]
+|General de Brigada del Ejército
+|-
+|[[Archivo:Insignia_del_Almirante_Jefe_del_Estado_Mayor_de_la_Armada_(España)_(Reglamentaria).svg|borde|centro|100x100px]][[Archivo:Insignia_del_Almirante_Jefe_del_Estado_Mayor_de_la_Armada_(España)_(Texto_Consolidado).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Almirante Jefe del Estado Mayor de la Armada (España) (Reglamentario).svg|borde|centro|100x100px]][[Archivo:Distintivo del Almirante Jefe del Estado Mayor de la Armada (España) (Texto Consolidado).svg|borde|centro|100x100px]]
+|[[Jefe de Estado Mayor de la Armada (España)|Almirante Jefe del Estado Mayor de la Armada]]<ref group="lower-alpha" name=duplicados></ref>
+|-
+|[[Archivo:Insignia_del_Almirante_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del AImirante (España).svg|borde|centro|100x100px]]
+|[[Almirante]]
+|-
+|[[Archivo:Insignia_del_Vicealmirante_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Vicealmirante y General de División de la Armada (España).svg|borde|centro|100x100px]]
+|[[Vicealmirante]]
+|-
+|[[Archivo:Insignia_del_Contralmirante_(España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Contralmirante y General de Brigada de la Armada (España).svg|borde|centro|100x100px]]
+|[[Contraalmirante|Contralmirante]]
+|-
+|
+|[[Archivo:Distintivo del Comandante de Marina (España).svg|borde|centro|100x100px]]
+|Comandante de Marina
+|-
+|[[Archivo:Gallardetón del Capitán de Navío (España).svg|borde|centro|100x100px]]
+|
+|Capitán de Navío
+|-
+|[[Archivo:Gallardetón del Capitán de Fragata o Corbeta (España).svg|borde|centro|100x100px]]
+|
+|Capitán de Fragata o Corbeta
+|-
+|[[Archivo:Grimpolón del Jefe de Bahía (España).svg|borde|centro|100x100px]]
+|
+|Jefe de Bahía
+|-
+|[[Archivo:Insignia del Jefe del Estado Mayor del Aire (España) (Reglamentaria).svg|borde|centro|100x100px]][[Archivo:Insignia del Jefe del Estado Mayor del Aire (España) (Texto Consolidado).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Jefe del Estado Mayor del Aire (España) (Reglamentario).svg|borde|centro|100x100px]][[Archivo:Distintivo del Jefe del Estado Mayor del Aire (España) (Texto Consolidado).svg|borde|centro|100x100px]]
+|[[Jefe de Estado Mayor del Ejército del Aire y del Espacio (España)|Jefe del Estado Mayor del Aire]]<ref group="lower-alpha" name=duplicados></ref>
+|-
+|[[Archivo:Insignia del Teniente General del Ejército del Aire (España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del Teniente General del Ejército del Aire (España).svg|borde|centro|100x100px]]
+|Teniente General del Ejército del Aire
+|-
+|[[Archivo:Insignia del General de División del Ejército del Aire (España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del General de División del Ejército del Aire (España).svg|borde|centro|100x100px]]
+|General de División del Ejército del Aire
+|-
+|[[Archivo:Insignia del General de Brigada del Ejército del Aire (España).svg|borde|centro|100x100px]]
+|[[Archivo:Distintivo del General de Brigada del Ejército del Aire (España).svg|borde|centro|100x100px]]
+|General de Brigada del Ejército del Aire
+|-
+|[[Archivo:Insignia del Coronel del Ejército con Mando de Fuerzas Conjuntas (España).svg|borde|centro|100x100px]]
+|
+|Coronel del Ejército con Mando de Fuerzas Conjuntas
+|-
+|[[Archivo:Insignia del Coronel del Ejército del Aire con Mando de Fuerzas Conjuntas (España).svg|borde|centro|100x100px]]
+|
+|Coronel del Ejército del Aire con Mando de Fuerzas Conjuntas
+|-
+|
+|[[Archivo:Distintivo del Jefe de Sector Aéreo (España).svg|borde|centro|100x100px]]
+|Jefe de Sector Aéreo
+|}
+
+== Comunidades y ciudades autónomas ==
+{| border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Fechas!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Flag of Andalucía.svg|100px|borde]]
+| Diseñada por [[Blas Infante]] y aprobada en la Asamblea de Ronda en 1918. Oficial desde 1983.
+| [[Bandera de Andalucía|Bandera]] de [[Andalucía]]
+| El verde es el color de la insignia de los Omeyas y el blanco el de los estandartes almohades. También llamada [[Arbonaida]] o Arbondaira por los nacionalistas andaluces.
+|-
+| [[Archivo:Flag of Aragon.svg|100px|borde]]
+| El escudo y las franjas se usan desde el {{siglo|X||s}}. Oficial desde 1984.
+| [[Bandera de Aragón|Bandera]] de [[Aragón]]
+| Basada en la [[Señal Real de Aragón]], a la cual se superpone el escudo del Antiguo [[Reino de Aragón]], cuna y cabeza de la [[Corona de Aragón]].
+|-
+| [[Archivo:Flag of Asturias.svg|100px|borde]]
+| Basada en la [[Cruz de la Victoria]] de principios del {{siglo|X||s}} y surgida a principios del {{siglo|XIX||s}}. Oficial desde 1990.
+| [[Bandera de Asturias|Bandera]] del [[Asturias|Principado de Asturias]]
+| Cruz de la Victoria en amarillo sobre fondo azul.
+|-
+| [[Archivo:Flag of the Balearic Islands.svg|100px|borde]]
+| 
+| [[Bandera de las Islas Baleares|Bandera]] de las [[Islas Baleares]]
+| Las barras de la [[Corona de Aragón]], el castillo es el [[Palacio Real de La Almudaina]], el morado representa el mar.
+|-
+| [[Archivo:Flag of the Canary Islands.svg|100px|borde]]
+| Composición de colores de las banderas de las provincias marítimas de Tenerife y Las Palmas. Oficial desde 1982.
+| [[Bandera de Canarias|Bandera]] de [[Canarias]]
+| 
+|-
+| [[Archivo:Flag of Cantabria (Official).svg|100px|borde]]
+| 
+| [[Bandera de Cantabria|Bandera]] de [[Cantabria]]
+| La actual bandera de [[Cantabria]] utiliza los colores de la [[provincia marítima de Santander]], es decir blanco y rojo. Esta bandera era la utilizada tradicionalmente por los barcos cántabros.
+|-
+| [[Archivo:Flag of Castile-La Mancha.svg|100px|borde]]
+| 
+| [[Bandera de Castilla-La Mancha|Bandera]] de [[Castilla-La Mancha]]
+| 
+|-
+| [[Archivo:Flag of Castile and León.svg|100px|borde]]
+| Basado en el estandarte histórico que representaba la [[Corona de Castilla y León]].
+| [[Bandera de Castilla y León|Bandera]] de [[Castilla y León]]
+| 
+|-
+| [[Archivo:Flag of Catalonia.svg|100px|borde]]
+| Las cuatro franjas se usan desde el {{siglo|X||s}}. Se oficializó en 1931 y definitivamente en 1979.
+| [[Bandera de Cataluña|Bandera]] de [[Cataluña]]
+| Las barras de la [[Corona de Aragón]].
+Se le denomina también como [[Cuatribarrada]].
+|-
+| [[Archivo:Flag Ceuta.svg|100px|borde]]
+| Bandera de origen portugués usada desde la [[Edad Media]]. Oficial desde 1995.
+| [[Bandera de Ceuta|Bandera]] de [[Ceuta]]
+| 
+|-
+| [[Archivo:Flag of Extremadura with COA.svg|100px|borde]]
+| Aparece en 1970 y se hace oficial en 1983.
+| [[Bandera de Extremadura|Bandera]] de [[Extremadura]]
+| 
+|-
+| [[Archivo:Flag of Galicia.svg|100px|borde]]
+| Su origen es desconocido, utilizada desde mediados del {{siglo|XIX||s}} por el ''[[rexurdimento]]'' gallego. Se pensaba que era la bandera de la provincia marítima de La Coruña, pero es anterior.<ref>[http://consellodacultura.org/wp-content/blogs.dir/2/2007/12/simbolos_de_galicia.pdf Os Símbolos de Galicia. pp88]</ref> Oficial desde 1984.
+| [[Bandera de Galicia|Bandera]] de [[Galicia]]
+| 
+|-
+| [[Archivo:Flag of La Rioja (with coat of arms).svg|100px|borde]]
+| 
+| [[Bandera de La Rioja (España)|Bandera]] de [[La Rioja (España)|La Rioja]]
+| 
+|-
+| [[Archivo:Flag of the Community of Madrid.svg|100px|borde]]
+| Oficial desde 1983.
+| [[Bandera de la Comunidad de Madrid|Bandera]] de la [[Comunidad de Madrid]]
+| 
+|-
+| [[Archivo:Flag of Melilla.svg|100px|borde]]
+| 
+| [[Bandera de Melilla|Bandera]] de [[Melilla]]
+| 
+|-
+| [[Archivo:Flag of the Region of Murcia.svg|100px|borde]]
+| 
+| [[Bandera de la Región de Murcia|Bandera]] de la [[Región de Murcia]]
+| 
+|-
+| [[Archivo:Bandera de Navarra.svg|100px|borde]]
+| 
+| [[Bandera de Navarra|Bandera]] de la [[Navarra|Comunidad Foral de Navarra]]
+| 
+|-
+| [[Archivo:Bandera de la Comunidad Valenciana (2x3).svg|100px|borde]]
+| Oficial desde 1984.
+| [[Bandera de Valencia|Bandera]] de la [[Comunidad Valenciana]]
+| Denominada Real [[Señera]], Señera Coronada, Señera con azul o Señera tricolor.
+|-
+| [[Archivo:Flag of the Basque Country.svg|100px|borde]]
+| Creada en 1894 por los hermanos Luis y [[Sabino Arana]]. Se oficializó en 1936 y definitivamente en 1979.
+| [[Bandera del País Vasco|Bandera]] del [[País Vasco]]
+| Se le denomina también como [[Ikurriña]].
+|-
+|}
+
+== Provincias ==
+<gallery>
+Archivo:Álava.svg|[[Bandera de Álava|Bandera]] de [[Álava]] 
+Archivo:Bandera_provincia_Albacete.svg| [[Bandera de la provincia de Albacete|Bandera]] de [[Provincia de Albacete|Albacete]]
+Archivo:Without official flag.svg|[[Provincia de Alicante|Bandera de Alicante]]
+Archivo:Flag Almería Province.svg|[[Provincia de Almería|Bandera de Almería]]
+Archivo:Flag of Asturias.svg|[[Bandera de Asturias|Bandera]] de [[Asturias]]
+Archivo:Bandera_de_la_provincia_de_Ávila.svg|[[Provincia de Ávila|Bandera de Ávila]]
+Archivo:Provincia de Badajoz - Bandera.svg|[[Provincia de Badajoz|Bandera de Badajoz]]
+Archivo:Flag of the Balearic Islands.svg|[[Bandera de las Islas Baleares|Bandera]] de [[Baleares]]
+Archivo:Flag_of_Barcelona_(province).svg|[[Provincia de Barcelona|Bandera de Barcelona]]
+Archivo:Flag Burgos Province.svg|[[Provincia de Burgos|Bandera de Burgos]]
+Archivo:Flag of the province of Cáceres.svg|[[Provincia de Cáceres|Bandera de Cáceres]]
+Archivo:Flag Cádiz Province.svg|[[Provincia de Cádiz|Bandera de Cádiz]]
+Archivo:Flag of Cantabria.svg|[[Bandera de Cantabria|Bandera]] de [[Cantabria]]
+Archivo:Without official flag.svg|[[Provincia de Castellón|Bandera de Castellón]]
+Archivo:Flag Ceuta.svg|[[Bandera de Ceuta|Bandera]] de [[Ceuta]]
+Archivo:Flag Ciudad Real Province.svg|[[Provincia de Ciudad Real|Bandera de Ciudad Real]]
+Archivo:Provincia de Córdoba - Bandera.svg|[[Provincia de Córdoba (España)|Bandera de Córdoba]]
+Archivo:Flag Cuenca Province.svg|[[Provincia de Cuenca|Bandera de Cuenca]]
+Archivo:Without official flag.svg|[[Provincia de Gerona|Bandera de Gerona]]
+Archivo:Bandera de la provincia de Granada (España).svg|[[Provincia de Granada|Bandera de Granada]]
+Archivo:Flag Guadalajara Province.svg|[[Provincia de Guadalajara|Bandera de Guadalajara]]
+Archivo:Guipúzcoa.svg|[[Guipúzcoa|Bandera de Guipúzcoa]]
+Archivo:Bandera de la Provincia De Huelva.svg|[[Provincia de Huelva|Bandera de Huelva]]
+Archivo:Flag of Huesca (province).svg|[[Provincia de Huesca |Bandera de Huesca]]
+Archivo:Bandera_de_la_provincia_de_Jaén.svg|[[Provincia de Jaén (España)|Bandera de Jaén]]
+Archivo:Without official flag.svg|[[Provincia de La Coruña|Bandera de La Coruña]]
+Archivo:Flag of La Rioja (with coat of arms).svg|[[Bandera de La Rioja (España)|Bandera]] de [[La Rioja (España)|La Rioja]]
+Archivo:Provincia de Las Palmas - Bandera.svg|[[Provincia de Las Palmas|Bandera de Las Palmas]]
+Archivo:Bandera de León.svg|[[Heráldica de León|Bandera]] de [[Provincia de León|León]]
+Archivo:Without official flag.svg|[[Provincia de Lérida|Bandera de Lérida]]
+Archivo:Lugo (provincia).svg|[[Lugo (provincia)|Bandera de Lugo]]''
+Archivo:Flag of the Community of Madrid.svg|[[Bandera de la Comunidad de Madrid|Bandera]] de [[Comunidad de Madrid|Madrid]]
+Archivo:Flag Málaga Province.svg|[[Provincia de Málaga|Bandera de Málaga]]
+Archivo:Flag of Melilla.svg|[[Bandera de Melilla|Bandera]] de [[Melilla]]
+Archivo:Flag of the Region of Murcia.svg|[[Bandera de la Región de Murcia|Bandera]] de [[Región de Murcia| la Región de Murcia]]
+Archivo:Bandera de Navarra.svg|[[Bandera de Navarra|Bandera]] de [[Navarra]]
+Archivo:Provincia de Ourense - Bandera.svg|[[Provincia de Orense|Bandera de Orense]]
+Archivo:Bandera de la provincia de Palencia1.svg|[[provincia de Palencia|Bandera de Palencia]]
+Archivo:Flag Pontevedra Province.svg|[[Provincia de Pontevedra|Bandera de Pontevedra]]
+Archivo:Bandera de la provincia de Salamanca.svg|[[Bandera de Provincia de Salamanca|Bandera]] de [[Provincia de Salamanca|Salamanca]]
+Archivo:Provincia de Santa Cruz de Tenerife - Bandera.svg|[[Provincia de Santa Cruz de Tenerife|Bandera de Santa Cruz de Tenerife]]
+Archivo:Flag Segovia province.svg|[[Provincia de Segovia|Bandera de Segovia]]
+Archivo:Flag of Diputacion de Sevilla Spain.svg|[[Provincia de Sevilla|Bandera de Sevilla]]
+Archivo:Flag Soria province.svg|[[Soria (provincia)|Bandera de Soria]]
+Archivo:Bandera actual de la provincia de Tarragona.svg|[[Provincia de Tarragona|Bandera de Tarragona]]
+Archivo:Teruel (provincia).svg|[[Provincia de Teruel|Bandera de Teruel]]
+Archivo:Bandera de la provincia de Toledo.svg|[[Provincia de Toledo|Bandera de Toledo]]
+Archivo:Without official flag.svg|[[Provincia de Valencia|Bandera de Valencia]]
+Archivo:Bandera de la provincia de Valladolid.svg|[[Bandera de la Provincia de Valladolid|Bandera]] de [[Provincia de Valladolid|Valladolid]]
+Archivo:Bandera de Vizcaya 2007.svg|[[Vizcaya|Bandera de Vizcaya]]
+Archivo:Bandera de Zamora.svg|[[Provincia de Zamora|Bandera de Zamora]]
+Archivo:Bandera_de_la_provincia_de_Zaragoza.svg|[[Provincia de Zaragoza|Bandera de Zaragoza]]
+</gallery>
+
+== Islas ==
+
+=== [[Archipiélago balear]] ===
+<gallery>
+Archivo:Bandera de Formentera.svg|[[Bandera de Formentera|Bandera]] de [[Formentera]]
+Archivo:Ibiza flag.svg|[[Bandera de Ibiza|Bandera]] de [[Ibiza (isla)|Ibiza]]
+Archivo:Flag of Mallorca.svg|[[Bandera de Mallorca|Bandera]] de [[Mallorca]]
+Archivo:Bandera de Menorca.svg|[[Bandera de Menorca|Bandera]] de [[Menorca]]
+</gallery>
+
+=== [[Archipiélago canario]] ===
+<gallery>
+Archivo:Flag of El Hierro with CoA.svg|[[El Hierro|Bandera de El Hierro]]
+Archivo:Flag of Fuerteventura.svg|[[Fuerteventura|Bandera de Fuerteventura]]
+Archivo:Flag of Gran Canaria.svg|[[Gran Canaria|Bandera de Gran Canaria]]
+Archivo:Flag of La Gomera.svg|[[La Gomera|Bandera de La Gomera]]
+Archivo:Flag of La Palma with CoA.svg|[[Isla de La Palma|Bandera de La Palma]]
+Archivo:Flag of Lanzarote.svg|[[Lanzarote|Bandera de Lanzarote]]
+Archivo:Flag of Tenerife.svg|[[Tenerife|Bandera de Tenerife]]
+</gallery>
+
+== [[Comarcas]] ==
+<gallery>
+Archivo:Bandera de l'Alt Empordà.svg|[[Alto Ampurdán]] ([[Provincia de Gerona|Gerona]])
+Archivo:Bandera Comarca del Alto Guadalquivir.png|[[Alto Guadalquivir]] ([[Provincia de Córdoba (España)|Córdoba]])
+Archivo:Bandera de la Comarca del Aranda.svg|[[Comarca del Aranda]] ([[Provincia de Zaragoza|Zaragoza]])
+[[Archivo:Bandera_de_la_Mancha_con_estrella.png|[[Región de La Mancha]] ([[Provincias de Albacete|Ciudad Real|Cuenca|Toledo]])
+Archivo:Bandera del Berguedà.svg|[[Bergadá]] ([[provincia de Barcelona|Barcelona]]/[[Provincia de Lérida|Lérida]])
+Archivo:Bandera de la Comarca del Campo de Belchite.svg|[[Campo de Belchite]] ([[Provincia de Zaragoza|Zaragoza]])
+Archivo:Bandera del Campo de Cariñena.svg|[[Campo de Cariñena]] ([[Provincia de Zaragoza|Zaragoza]])
+Archivo:Bandera de la Mancomunidad del Campo de Gibraltar.svg|[[Campo de Gibraltar]] ([[Provincia de Cádiz|Cádiz]])
+Archivo:Bandera de la Comunidad de Calatayud.svg|[[Comunidad de Calatayud]] ([[Provincia de Zaragoza|Zaragoza]])
+Archivo:Bandera de El Bierzo.svg|[[bandera de El Bierzo|El Bierzo]] ([[provincia de León|León]])
+Archivo:Bandera de les Garrigues.svg|[[Garrigas]] ([[Provincia de Lérida|Lérida]])
+Archivo:Bandera de Anoia (Barcelona).svg| [[Noya]] ([[Provincia de Barcelona|Barcelona]])
+Archivo:Bandera d'Osona.svg|[[Osona]] ([[Provincia de Barcelona|Barcelona]]/[[provincia de Gerona|Gerona]])
+Archivo:Bandera del Pallars Sobirà.svg|[[Pallars Sobirá]] ([[provincia de Lérida|Lérida]])
+Archivo:Bandera del Pla d'Urgell.svg|[[Plana de Urgel]] ([[provincia de Lérida|Lérida]])
+Archivo:Bandera de la Ribera Baja del Ebro.svg|[[Ribera Baja del Ebro]] ([[Provincia de Zaragoza|Zaragoza]])
+Archivo:Bandera del Segrià.svg|[[Segriá]] ([[Provincia de Lérida|Lérida]])
+Archivo:Bandera d'Urgell.svg|[[Urgel (comarca)|Urgel]] ([[provincia de Lérida|Lérida]])
+Archivo:Bandera de la Vall d'Aran.svg|[[Valle de Arán]] ([[Provincia de Lérida|Lérida]])
+</gallery>
+
+== Banderas municipales ==
+{{main|Commons:Flags of municipalities of Spain}}
+=== [[Municipios]] de más de un millón de habitantes (según censo [[Instituto Nacional de Estadística de España|INE]] 2025) ===
+<gallery>
+Archivo:Flag of Barcelona.svg|[[Bandera de Barcelona|Barcelona]]
+Archivo:Bandera de la ciudad de Madrid.svg|[[Bandera de Madrid|Madrid]]
+</gallery>
+
+=== [[Municipios]] entre 500 000 y 1 000 000 de habitantes (según censo [[Instituto Nacional de Estadística de España|INE]] 2025) ===
+<gallery>
+Archivo:Flag of Málaga, Spain.svg|[[Málaga]]
+Archivo:Flag of Sevilla, Spain.svg|[[Sevilla (España)|Sevilla]]
+Archivo:Flag of the Land of Valencia (official).svg|[[Valencia]]
+Archivo:Zaragoza (ciudad).svg|[[Zaragoza]]
+</gallery>
+
+=== [[Municipios]] entre 200 000 y 500 000 habitantes (según censo [[Instituto Nacional de Estadística de España|INE]] 2025) ===
+<gallery>
+Archivo:Bandera de Alcalá de Henares.svg|[[Alcalá de Henares]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera d'Alacant.svg|[[Alicante]]
+Archivo:Bandera de Almería.svg|[[Almería]]
+Archivo:Bandera Badalona.svg|[[Badalona]] ([[Provincia de Barcelona|Barcelona]])
+Archivo:Bilbao.svg|[[Bilbao]] ([[Vizcaya]])
+Archivo:Bandera municipal de Cartagena.svg|[[Cartagena (España)|Cartagena]] ([[Región de Murcia|Murcia]])
+Archivo:Flag of Córdoba, Spain.svg|[[Córdoba (España)|Córdoba]]
+Archivo:Bandera de Elche - 2.png|[[Elche]] ([[Provincia de Alicante|Alicante]])
+Archivo:Bandera gijon.svg|[[Bandera de Gijón|Gijón]] ([[Asturias]])
+Archivo:Bandera de Granada (Granada).svg|[[Granada]]
+Archivo:Bandera de l'Hospitalet de Llobregat.svg|[[Hospitalet de Llobregat]] ([[Provincia de Barcelona|Barcelona]])
+Archivo:Flag of Jerez de la Frontera.svg|[[Jerez de la Frontera]] ([[Provincia de Cádiz|Cádiz]])
+Archivo:Without official flag.svg|[[La Coruña]]<ref>{{Cita web|url=https://www.laopinioncoruna.es/gran-coruna/2014/10/22/mitad-concellos-coruneses-escudo-incumple-24708805.html|título=Más de la mitad de los concellos coruñeses usa un escudo que incumple la normativa|fechaacceso=2026-09-10|apellido=Villar|nombre=Marta|fecha=2014-10-22|sitioweb=La Opinión de A Coruña|idioma=es}}</ref>
+Archivo:Flag of Las Palmas de Gran Canaria.svg|[[Las Palmas de Gran Canaria]]
+Archivo:Móstoles (bandera).svg|[[Bandera de Móstoles|Móstoles]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Flag of Murcia.svg|[[Murcia]]
+Archivo:Uvieu flag.svg|[[Bandera de Oviedo|Oviedo]] ([[Asturias]])
+Archivo:Flag of Mallorca.svg|[[Palma]] ([[Baleares]])
+Archivo:Bandera Pamplona.svg|[[Pamplona (Navarra)|Pamplona]] ([[Navarra]])
+Archivo:Flag of Sabadell.svg|[[Sabadell]] ([[Provincia de Barcelona|Barcelona]])
+Archivo:Flag Santa Cruz de Tenerife city.svg|[[Santa Cruz de Tenerife]]
+Archivo:Bandera de Terrassa (2019-).svg|[[Tarrasa]] ([[Provincia de Barcelona|Barcelona]])
+Archivo:Bandera valladolid.svg|[[Valladolid]]
+Archivo:Vigo bandera 2.png|[[Vigo]] ([[Provincia de Pontevedra|Pontevedra]])
+Archivo:Flag of Vitoria.svg|[[Vitoria]] ([[Álava]])
+</gallery>
+
+=== [[Municipios]] entre 100 000 y 200 000 habitantes (según censo [[Instituto Nacional de Estadística de España|INE]] 2025) ===
+<gallery>
+Archivo:Flag of Albacete (city) Spain.svg|[[Albacete (España)|Albacete]]
+Archivo:Flag of Alcobendas.svg|[[Alcobendas]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Flag of Alcorcón.svg|[[Alcorcón]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Flag of Algeciras.svg|[[Algeciras]] ([[provincia de Cádiz|Cádiz]])
+Archivo:Bandera de Badajoz.svg|[[Badajoz]]
+Archivo:Bandera de Barakaldo.svg|[[Baracaldo]] ([[Vizcaya]])
+Archivo:Bandera de la ciudad de Burgos (España).svg|[[Burgos]]
+Archivo:Bandera de Cádiz.svg|[[Cádiz]]
+Archivo:Bandera de Castelló de la Plana-2.svg|[[Castellón de la Plana]]
+Archivo:Flag of Dos Hermanas Spain.svg|[[Dos Hermanas]] ([[provincia de Sevilla|Sevilla]])
+Archivo:Flag of Fuenlabrada.svg|[[Fuenlabrada]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Girona.svg|[[Gerona]]
+Archivo:Bandera de Getafe.svg|[[Getafe]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Huelva1.svg|[[Huelva]]
+Archivo:Bandera de Jaén.svg|[[Jaén]]
+Archivo:Bandera de Leganes.svg|[[Leganés]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de León (ciudad).svg|[[León (España)|León]]
+Archivo:Flag of Lleida.svg|[[Lérida (España)|Lérida]]
+Archivo:Bandera Logroño.svg|[[Logroño]] ([[La Rioja (España)|La Rioja]])
+Archivo:Bandera de Lugo.svg|[[Lugo]]
+Archivo:Marbella Spain.svg|[[Marbella]] ([[provincia de Málaga|Málaga]])
+Archivo:Flag of Mataró.svg|[[Mataró]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Bandera de Orense.svg|[[Orense]]
+Archivo:Bandera de Parla 2017.svg|[[Parla]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Flag of Reus (Tarragona).svg|[[Reus]] ([[provincia de Tarragona|Tarragona]])
+Archivo:Flag of Rivas Vaciamadrid.svg|[[Rivas-Vaciamadrid]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Roquetas de Mar.svg|[[Roquetas de Mar]] ([[Provincia de Almería|Almería]])
+Archivo:Bandera de Salamanca.svg|[[Salamanca]]
+Archivo:Flag of San Cristóbal de la Laguna.svg|[[San Cristóbal de La Laguna]] ([[provincia de Santa Cruz de Tenerife|Santa Cruz de Tenerife]])
+Archivo:Bandera de San Sebastián.svg|[[San Sebastián (España)|San Sebastián]] ([[Guipúzcoa]])
+Archivo:Bandera Santa Coloma de Gramenet.png|[[Santa Coloma de Gramanet]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Santander.svg|[[Santander (España)|Santander]] ([[Cantabria]])
+Archivo:Flag of Santiago de Compostela.svg|[[Santiago de Compostela]] ([[Provincia de La Coruña|La Coruña]])
+Archivo:Bandera de Tarragona.svg|[[Tarragona]]
+Archivo:Bandera telde.svg|[[Telde]] ([[provincia de Las Palmas|Las Palmas]])
+Archivo:Bandera de Torrejón de Ardoz.svg|[[Torrejón de Ardoz]] ([[Comunidad de Madrid|Madrid]]) 
+</gallery>
+
+=== [[Municipios]] entre 50 000 y 100 000 habitantes (según censo [[Instituto Nacional de Estadística de España|INE]] 2025) ===
+<gallery>
+Archivo:Flag of Adeje.svg|[[Adeje]] ([[Provincia de Santa Cruz de Tenerife|Santa Cruz de Tenerife]])
+Archivo:Bandera de Alcalá de Guadaíra (Sevilla).svg|[[Alcalá de Guadaíra]] ([[provincia de Sevilla|Sevilla]])
+Archivo:Bandera d'Alcoi.svg|[[Alcoy]] ([[provincia de Alicante|Alicante]])
+Archivo:Bandera de Aranjuez.svg|[[Aranjuez]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Flag of Arganda del Rey.svg|[[Arganda del Rey]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Arona.svg|[[Arona]] ([[provincia de Santa Cruz de Tenerife|Santa Cruz de Tenrife]])
+Archivo:Bandera Arrecife.png|[[Arrecife (Las Palmas)|Arrecife]] ([[Provincia de Las Palmas|Las Palmas]])
+Archivo:Bandera de Ávila.svg|[[Ávila]]
+Archivo:Flag of Avilés.png|[[Avilés]] ([[Asturias]])
+Archivo:Bandera de Benalmádena.svg|[[Benalmádena]] ([[provincia de Málaga|Málaga]])
+Archivo:Bandera Benidorm.svg|[[Benidorm]] ([[provincia de Alicante|Alicante]])
+Archivo:Bandera de Boadilla del Monte.svg|[[Boadilla del Monte|Boadilla del monte]] ([[Provincia de Madrid|Madrid]])
+Archivo:Bandera de Cáceres.svg|[[Cáceres]]
+Archivo:Without official flag.svg|[[Calviá]] ([[Baleares]])
+Archivo:Bandera de Castelldefels.svg|[[Casteldefels]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Flag Ceuta.svg|[[Ceuta]]
+Archivo:Flag of Chiclana de la Frontera Spain.svg|[[Chiclana de la Frontera]] ([[provincia de Cádiz|Cádiz]])
+Archivo:Flag of Ciudad Real, Ciudad Real (Spain).svg|[[Ciudad Real]]
+Archivo:Bandera de Collado Villalba.png|[[Collado Villalba]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Colmenar Viejo.svg|'''[[Colmenar Viejo]] ([[Provincia de Madrid|Madrid]])'''
+Archivo:Bandera Cornellà.svg|[[Cornellá de Llobregat]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Flag of Coslada.PNG|[[Coslada]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Cuenca.svg|[[Cuenca (España)|Cuenca]]
+Archivo:Flag of El Ejido Spain.svg|[[El Ejido (Almería)|El Ejido]] ([[provincia de Almería|Almería]])
+Archivo:Without official flag.svg|[[El Prat de Llobregat]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Bandera de El Puerto de Santa María (Cádiz).svg|[[El Puerto de Santa María]] ([[provincia de Cádiz|Cádiz]])
+Archivo:Bandera d'Elda.svg|[[Elda]] ([[provincia de Alicante|Alicante]])
+Archivo:Bandera Estepona.svg|[[Estepona]] ([[provincia de Málaga|Málaga]])
+Archivo:Bandera de Ferrol.svg|[[Ferrol]] ([[provincia de La Coruña|La Coruña]])
+Archivo:Fuengirola flag.svg|[[Fuengirola]] ([[provincia de Málaga|Málaga]])
+Archivo:Bandera de Gandia.svg|[[Gandía]] ([[provincia de Valencia|Valencia]])
+Archivo:Granadilla de Abona bandera.png|[[Granadilla de Abona]] ([[Provincia de Santa Cruz de Tenerife|Santa Cruz de Tenerife]])
+Archivo:Flag of Granollers.gif|[[Granollers]] ([[Provincia de Barcelona|Barcelona]])
+Archivo:Bandera de Guadalajara.svg|[[Guadalajara (España)|Guadalajara]]
+Archivo:Without official flag.svg|[[Guecho]] ([[Vizcaya]])
+Archivo:Flag of Huesca.svg|[[Huesca]]
+Archivo:Without official flag.svg|[[Ibiza (ciudad)|Ibiza]] ([[Islas Baleares|Baleares]])
+Archivo:Bandera de Irun.svg|[[Irún]] ([[Guipúzcoa]])
+Archivo:Bandera lalinea.svg|[[La Línea de la Concepción]] ([[provincia de Cádiz|Cádiz]])
+Archivo:Bandera de Las Rozas.svg|[[Las Rozas de Madrid]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Linares.svg|[[Linares (Jaén)|Linares]] ([[Provincia de Jaén (España)|Jaén]])
+Archivo:Bandera de Lorca.png|[[Lorca]] ([[Región de Murcia|Murcia]])
+Archivo:Bandera de Majadahonda.gif|[[Majadahonda]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Manresa fosca.svg|[[Manresa]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Flag of Melilla.svg|[[Melilla]]
+Archivo:Bandera de Mérida.svg|[[Mérida (España)|Mérida]] ([[provincia de Badajoz|Badajoz]])
+Archivo:Bandera de Mijas (Málaga).svg|[[Mijas]] ([[provincia de Málaga|Málaga]])
+Archivo:Bandera de Molina de Segura (Murcia).svg|[[Molina de Segura]] ([[Región de Murcia|Murcia]])
+Archivo:Mollet del Vallès Spain.svg|[[Mollet del Vallés (Barcelona)|Mollet del Vallés]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Bandera de Motril (Granada).svg|[[Motril]] ([[provincia de Granada|Granada]])
+Archivo:Bandera d'Oriola (anvers).png|[[Orihuela]] ([[provincia de Alicante|Alicante]])
+Archivo:Bandera de Palencia.svg|[[Palencia]]
+Archivo:Bandera de Paterna.svg|[[Paterna]] ([[provincia de Valencia|Valencia]])
+Archivo:Flag of Pinto.svg|[[Pinto (Madrid)|Pinto]] ([[Provincia de Madrid|Madrid]])
+Archivo:Without official flag.svg|[[Ponferrada]] ([[provincia de León (España)|León]])
+Archivo:Bandera de Pontevedra.svg|[[Pontevedra]]
+Archivo:Pozuelo de Alarcón flag.svg|[[Pozuelo de Alarcón]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Rincón de la Victoria.svg|[[Rincón de la Victoria]] ([[Málaga (provincia, Espana)|Málaga]])
+Archivo:Flag of Rubi.svg|[[Rubí (Barcelona)|Rubí]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Bandera de Sagunt.svg|[[Sagunto]] ([[provincia de Valencia|Valencia]])
+Archivo:Bandera de Tunte.png|[[San Bartolomé de Tirajana]] ([[provincia de Las Palmas|Las Palmas]])
+Archivo:Flag of Sant Boi de Llobregat.svg|[[San Baudilio de Llobregat]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Bandera Sant Cugat del Vallès.png|[[San Cugat del Vallés]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Bandera de San Fernando (Cádiz).svg|[[San Fernando (Cádiz)|San Fernando]] ([[provincia de Cádiz|Cádiz]])
+Archivo:Bandera sanse.svg|[[San Sebastián de los Reyes (Madrid)|San Sebastián de los Reyes]] ([[Comunidad de Madrid|Madrid]])
+Archivo:Bandera de Sant Vicent del Raspeig.svg|[[San Vicente del Raspeig]] ([[provincia de Alicante|Alicante]])
+Archivo:Bandera de Sanlúcar de Barrameda.svg|[[Sanlúcar de Barrameda]] ([[provincia de Cádiz|Cádiz]])
+Archivo:Bandera de Santa Lucía de Tirajana.svg|[[Santa Lucía de Tirajana]] ([[provincia de Las Palmas|Las Palmas]])
+Archivo:Bandera de Cerdanyola del Vallès.svg|[[Sardañola del Vallés]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Bandera de Segovia.svg|[[Segovia (España)|Segovia]]
+Archivo:Siero flag.svg|[[Siero]] ([[Asturias]])
+Archivo:Bandera de Talavera.svg|[[Talavera de la Reina]] ([[provincia de Toledo|Toledo]])
+Archivo:Bandera de Toledo1.svg|[[Toledo]]
+Archivo:BanderaTorrelavega-Cantabria.svg|[[Torrelavega]] ([[Cantabria]])
+Archivo:Bandera de Torremolinos (Málaga).svg|[[Torremolinos]] ([[provincia de Málaga|Málaga]])
+Archivo:Without official flag.svg|[[Torrente (Valencia)|Torrente]] ([[provincia de Valencia|Valencia]])
+Archivo:Bandera de Torrevella.svg|[[Torrevieja]] ([[provincia de Alicante|Alicante]])
+Archivo:ETM Tres Cantos.PNG|[[Tres Cantos|Tres cantos]] ([[Provincia de Madrid|Madrid]])
+Archivo:Bandera Utrera escudo.svg|[[Utrera]] ([[Provincia de Sevilla|Sevilla]])
+Archivo:Bandera de Valdemoro.svg|[[Valdemoro]] ([[Provincia de Madrid|Madrid]])
+Archivo:Bandera de Vélez-Málaga.svg|[[Vélez-Málaga]] ([[provincia de Málaga|Málaga]])
+Archivo:Flag of Vic.svg|[[Vic]] ([[Provincia de Barcelona|Barcelona]])
+Archivo:Flag of Viladecans.svg|[[Viladecans]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Flag of Vilanova i la Geltrú.svg|[[Villanueva y Geltrú]] ([[provincia de Barcelona|Barcelona]])
+Archivo:Flag of Catalonia.svg|[[Villarreal (Castellón)|Villarreal]] ([[provincia de Castellón|Castellón]])
+Archivo:Bandera de Zamora.svg|[[Zamora (España)|Zamora]]
+</gallery>
+
+== Contraseñas marítimas ==
+Correspondientes a las [[provincia marítima|provincias marítimas]].
+<gallery>
+Archivo:Flag maritime algeciras.svg|<center>[[Provincia marítima de Algeciras|Algeciras]] (AL)
+Archivo:Flag maritime alicante.svg|<center>[[Provincia marítima de Alicante|Alicante]] (AT)
+Archivo:Flag maritime almeria.svg|<center>[[provincia marítima de Almería|Almería]] (AM)
+Archivo:Without official flag.svg|[[Provincia marítima de Avilés|Avilés]] (AV)
+Archivo:Flag maritime barcelona.svg|<center>[[provincia marítima de Barcelona|Barcelona]] (BA)
+Archivo:Bandera de Bilbao.svg|<center>[[Provincia marítima de Bilbao|Bilbao]] (BI)
+Archivo:Flag maritime cadiz.svg|<center>[[Provincia marítima de Cádiz|Cádiz]] (CA)
+Archivo:Flag maritime cartagena.svg|<center>[[Provincia marítima de Cartagena|Cartagena]] (CT)
+Archivo:Flag maritime castellon.svg|<center>[[Provincia marítima de Castellón|Castellón de la Plana]] (CP)
+Archivo:Flag maritime ceuta.svg|<center>[[Ceuta]] (CU)
+Archivo:Flag maritime ferrol.svg|<center>[[Provincia marítima de Ferrol|Ferrol]] (FE)
+Archivo:Flag maritime gijon.svg|<center>[[Provincia marítima de Gijón|Gijón]] (GI)
+Archivo:Flag maritime granada.svg|<center>[[Provincia marítima de Granada|Granada]] (GR)
+Archivo:Flag maritime huelva.svg|<center>[[Provincia marítima de Huelva|Huelva]] (HU)
+Archivo:Flag maritime ibiza.svg|<center>[[Ibiza (isla)|Ibiza]] (IB)
+Archivo:Flag maritime coruna.svg|<center>[[Provincia marítima de La Coruña|La Coruña]] (CO)
+Archivo:Flag maritime laspalmas.svg|<center>[[Provincia marítima de Las Palmas|Las Palmas de Gran Canaria]] (GC)
+Archivo:Flag maritime lugo.svg|<center>[[Provincia marítima de Lugo|Lugo]] (LU)
+Archivo:Flag maritime malaga.svg|<center>[[Provincia marítima de Málaga|Málaga]] (MA)
+Archivo:Flag maritime melilla.svg|<center>[[Melilla]] (MLL)
+Archivo:Flag maritime palamos.svg|<center>[[Palamós]] (PG)
+Archivo:Flag maritime mallorca.svg|<center>[[Provincia marítima de Mallorca|Palma de Mallorca]] (PM)
+Archivo:Flag maritime sansebastian.svg|<center>[[Provincia marítima de San Sebastián|San Sebastián]] (SS)
+Archivo:Flag maritime santander.svg|<center>[[Provincia marítima de Santander|Santander]] (ST)
+Archivo:Flag maritime sevilla.svg|<center>[[Provincia marítima de Sevilla|Sevilla]] (SE)
+Archivo:Flag maritime tarragona.svg|<center>[[Provincia marítima de Tarragona|Tarragona]] (TA)
+Archivo:Flag maritime tenerife.svg|<center>[[Provincia marítima de Tenerife|Santa Cruz de Tenerife]] (TE)
+Archivo:Flag maritime valencia.svg|<center>[[Provincia marítima de Valencia|Valencia]] (VA)
+Archivo:Flag maritime vigo.svg|<center>[[Provincia marítima de Vigo|Vigo]] (VI)
+Archivo:Flag maritime villagarcia.svg|<center>[[Provincia marítima de Villagarcía|Villagarcía de Arosa]] (VILL)
+</gallery>
+
+== Banderas históricas ==
+
+=== Banderas ===
+''Véase'': '''[[Bandera de España]]'''
+
+{| border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Período!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Bandera de la Infantería de los Reyes Catolicos.svg|80px]]
+| 1475-1504.<br />Uso eventual hasta 1506 
+| Bandera de la [[infantería]].
+| Bandera seis cuarteles que representan a [[Reino de Castilla]], [[Reino de León]], la [[Corona de Aragón]] y el [[Reino de Sicilia]]. 
+|-
+| [[Archivo:Flag of New Spain.svg|100px|borde]]
+| 1506-1701<br />(Uso eventual hasta 1785)
+| [[Pabellón nacional]] hasta 1701, manteniéndose como pabellón civil (mercante) posteriormente. Usada también en bastiones peninsulares y ultramarinos.
+| Bandera blanca con [[Cruz de Borgoña]] roja. 
+|-
+| [[Archivo:Burgundy merchant 1762.svg|100px|borde]]
+| 1506-1762.
+| Pabellón de la [[Marina Mercante española|Marina mercante]]
+| 
+|-
+| [[Archivo:Bandera de Costas.svg|100px|borde]]
+| 1701-1771
+| Bandera de las plazas marítimas, castillos y defensas de las costas
+|
+|-
+| [[Archivo:Pabellón sencillo de la Armada de España 1701 1785.svg|100px|borde]]
+| 1701-1785
+| [[Pabellón naval]] sencillo
+|
+|-
+| [[Archivo:Bandera de España 1701-1760.svg|100px|borde]]
+| 1701-1760
+| [[Pabellón naval]] de gala
+|
+|-
+| [[Archivo:Bandera de España 1760-1785.svg|100px|borde]]
+| 1760-1843
+|[[Pabellón naval]] (1760–1785).
+Bandera Nacional (1785–1820 / 1823–1843).
+|Bandera oficial del [[imperio español]] a partir del 1785 por un real decreto de [[Carlos III de España|Carlos III]]
+|-
+| [[Archivo:Bandera de España 1808-1813.svg|100px|borde]]
+| 1808-1813
+([[José I Bonaparte]])
+|[[Pabellón naval]]
+|
+|-
+| [[Archivo:BandMercante1785.svg|100px|borde]]
+| 1785-1927
+| Pabellón de la [[Marina Mercante española|Marina mercante]]
+|
+|-
+| [[Archivo:Flag of Spain (1785-1873 and 1875-1931).svg|100px|borde]]
+| 1785-1873, 1875-1931
+| [[Pabellón naval]] (1785–1931). Bandera nacional (1843–1873 / 1874–1931)
+|
+|-
+| [[Archivo:Flag of Spain (1873–1874).svg|100px|borde]]
+| 1873-1874
+| rowspan="2" | [[Bandera nacional|Bandera]] y [[Pabellón nacional|pabellón]] de España
+|
+|-
+| [[Archivo:Flag of Spain 1931 1939.svg|100px|borde]]
+| 1931-1939
+|
+|-
+| [[Archivo:Flag of Spain (Civil) alternate colours.svg|borde|100x100px]]
+| 1936
+| rowspan="2" | Bandera del [[bando sublevado]] durante la [[Guerra civil española|guerra civil]]
+|
+|-
+| [[Archivo:Flag of the Bando Nacional (1936–1938).svg|100px|borde]]
+| 1936-1938
+|
+|-
+| [[Archivo:Flag of Spain under Franco 1938 1945.svg|100px|borde]]
+| 1938-1945
+| rowspan="3" | [[Bandera nacional|Bandera]] y [[Pabellón nacional|pabellón]] de España
+| 
+|
+| [[Archivo:Flag of Spain 1945 1977.svg|100px|borde]]
+| 1945-1977
+|
+|-
+| [[Archivo:Flag of Spain (1977 - 1981).svg|100px|borde]]
+| 1977-1981
+|
+|}
+
+=== Históricas de provincias ===
+<gallery>
+Archivo:Bandera antigua provincia Albacete.svg|[[Provincia de Albacete]] (1956–1994)
+Archivo:Flag Almería Province (old).svg|[[Provincia de Almería]] (1952-2016)
+Archivo:Bandera antiga de la provincia de Girona.svg|[[Provincia de Gerona]] (¿?–2001)
+Archivo:Bandera provincia Jaén contorno español.svg|[[Provincia de Jaén (España)|Provincia de Jaén]] (¿?-2014)
+Archivo:Bandera antiga de la província de Lleida.svg|[[Provincia de Lérida]] (¿?–2002)
+Archivo:Bandera de la antigua provincia de Logroño.svg|[[Provincia de Logroño]] (¿?–1979)
+Archivo:Bandera de la Provincia de Madrid hasta 1983.svg|[[Provincia de Madrid]] (1833–1983)
+Archivo:Bandera de la Diputación Provincial de Murcia.svg|[[Provincia de Murcia]] (1976–1982)
+Archivo:Bandera de Navarra (1931-1937).svg|[[Provincia de Navarra]]  (1931-1937)
+Archivo:Bandera de Navarra (1937-1981).svg|[[Provincia de Navarra]] (1937-1981)
+Archivo:Bandera Provincia de Toledo.svg|[[Provincia de Toledo]] (¿?-2013)
+</gallery>
+
+=== Históricas de Ultramar === 
+<gallery>
+File:Bandera Antigua de la Ciudad de Guatemala.svg| Bandera Civil de la [[Ciudad de Guatemala]] en la [[Capitanía General de Guatemala]]
+File:Imperial Flag of Santa Maria de la Nueva Valladolid de Comayagüa (New Spain).png| Bandera de [[Comayagua]] en la [[Capitania General de Guatemala]]
+File:Flag of Sucre and Chuquisaca.svg| Bandera Civil de la [[Villa de La Plata de la Nueva Toledo]] en el [[Virreinato del Perú]]
+File:PotosiBandera.svg| Bandera Civil de la [[Villa Imperial de Potosí]] en el [[Virreinato del Perú]]
+File:Flag of Paraguay (1811).svg| Bandera de la [[Intendencia del Paraguay]] en el [[Virreinato del Río de la Plata]]
+File:State Ensign of Chile (1813-1814).svg| Bandera de la [[Patria Vieja]] usada en el gobierno Provisional en la [[Capitania General de Chile]] 
+File:Flag of Junta Suprema de Caracas.svg| Bandera de la [[Junta Suprema de Caracas]] en la [[Capitanía General de Venezuela]]
+Archivo:BANDERA VIRREINAL NOVOHISPANA.svg| Estandarte Civil de la Imperial [[Ciudad de México]] en la [[Nueva España]] 
+File: Royal Civil Banner of Caracas (1765).png| Estandarte Real de la [[Provincia de Caracas]] en el [[Virreinato de la Nueva Granada]]
+File:Flag of Puerto Rico (1873–1875).svg| Bandera de la [[Provincia de Puerto Rico]] (1873–1898).svg
+File:Flag of the Kingdom of the Two Sicilies (1816).svg| Bandera del [[Reino de las dos Sicilias]]
+File:Former Flag of Santa Isabella City.svg| Bandera de la Ciudad de [[Santa Isabel]] en la [[Guinea Española]] 
+</gallery>
+
+===Históricas de uso militar en ultramar===
+<gallery>
+File:Flag of the Mexican Royalists.svg| Bandera Realista del Regimiento de la Corona en la Nueva España usada en la [[Guerra de Independencia de México]]
+File:Batallon Provisional de Puerto Rico No3 Flag.svg| Bandera del Batallón Provisional de Puerto Rico Nº3 usada en la [[guerra hispano-estadounidense]] (1898)
+File:Spanish Admiral’s flag (1898).png| Bandera marítima del buque [[Isla de Luzón]] usada en la [[guerra hispano-estadounidense]] (1898)
+File:Civil ensign of the Spanish Netherlands.svg| Pabellón naval de la escuadra de Flandes
+File:Pabellon escuadron America.svg| Pabellón naval para los buques en Ultramar desde 1506-1701
+File:Guidon of the Battalion Veteranos de Castro.svg| Estandarte militar del batallón [[Voluntarios de Castro]] del [[Corregimiento de Chiloé]] usado en la [[Guerra de Independencia de Chile]]
+File:Royal banner of Jean de Béthencourt.svg| Estandarte de [[Jean de Béthencourt]] usado en su mandato para el [[Reino de Canarias]]
+File:Flag of Christopher Columbus.svg|Estandarte expedicionario de Cristóbal Colón "La Capitana" usado para las campañas de Expansión por Antillas y [[Tierra Firme]]
+File:Pendón real de Medina del Campo.svg| Estandarte Militar del [[Reino de Castilla y León]] utilizado en las campañas de conquista (México, Filipinas, Antillas, Tierra Firme y Perú).
+File:Estandarte de la Conquista.gif| Estandarte Militar de [[Hernán Cortés]] usado en la Campaña de [[Conquista de México]]
+File:Adverso del estandarte de Pizarro.gif| Estandarte Militar de [[Francisco Pizarro]] usado en la Campaña de [[Conquista del Perú]]
+File:Estandarte de Hidalgo.svg| Estandarte usado por [[Miguel Hidalgo y Costilla]] en la [[Guerra de Independencia de México]]
+
+</gallery>
+
+===Históricas de Compañías Comerciales en Ultramar=== 
+<gallery>
+Archivo:Real Compañía de Filipinas.svg|Bandera Mercante de la [[Real Compañía de Filipinas]] (Siglo XVII-1898)
+Archivo:Real Compañía Marítima.svg|Bandera Mercante de la [[Real Compañía Maritima]] (1789-1803)
+Archivo:Compañía General de Tabacos de Filipinas shipping flag.svg|Estandarte Mercante de la [[Compañía General de Tabacos de Filipinas]]
+</gallery>
+
+===Históricas Protectorados=== 
+<gallery>
+Archivo:Merchant flag of Spanish Morocco.svg|Bandera empleada por los buques mercantes del [[Protectorado Español de Marruecos]] (1913-1956)
+Archivo:Flag of the Tangier International Zone.svg|Bandera empleada por los buques mercantes de la [[Zona Internacional de Tánger]] (1940-1945)
+Archivo:Flag of Spanish Morocco (1912-1937).svg| Bandera del [[Protectorado Español de Marruecos]] (1912-1937)
+
+</gallery>
+
+=== Contraseñas marítimas históricas ===
+<gallery>
+Archivo:Flag maritime tenerife.svg|[[Canarias]]
+File:Ifni-Sahara Maritime Province Registration Ensign (1946-1975).svg|[[Ifni]]-[[Sáhara Español|Sáhara]] (SH)
+File:Flag of Ilo-Ilo (1886-1898 ).svg|[[Iloilo]]
+File:Província marítima Havana.png|[[La Habana]]
+File:Flag maritime mahon.svg| [[Mahon]]
+File:Prov%C3%ADncia_mar%C3%ADtima_Filipines.png|[[Manila]]
+File:Flag maritime melilla.svg|[[Melilla]]
+File:Província marítima Puerto Rico.png|[[Puerto Rico]]
+File:Flag of Maritime Province of Santa Isabel.png|[[Santa Isabel]] ([[Guinea Española]])
+File:Província marítima Santiago de Cuba.png|[[Santiago de Cuba]]
+File:Província marítima Santo Domingo.png|[[Santo Domingo]]
+</gallery>
+
+=== Estandartes reales ===
+''Véase'': '''[[Estandarte del Rey de España]]'''
+
+==== Estandartes heráldicos ====
+{| border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Fechas!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Pendón heráldico de los Reyes Catolicos de 1475-1492.svg|borde|80px]] [[Archivo:Pendón heráldico de los Reyes Catolicos de 1492-1504.svg|borde|80px]]
+| 1475 – 1492<br />1492 – 1504
+| Estandarte heráldico de los [[Reyes Católicos]]
+| 
+|-
+| [[Archivo:Estandarte Real de Carlos I.svg|80px|borde]]
+| 1518 – 1556
+| Estandarte heráldico de [[Carlos I de España|Carlos I]]
+| 
+|-
+|[[Archivo:Estandarte Real de Felipe II.svg|80px|borde]]
+| 1580 – 1668
+| Estandarte heráldico de la [[Casa de Austria]] (con las armas de [[Portugal]])
+| 
+|-
+| [[Archivo:Estandarte Real de Carlos II.svg|80px|borde]]
+| 1668 – 1700
+| Estandarte heráldico de la Casa de Austria desde 1668
+| 
+|-
+| [[Archivo:Estandarte Real de Felipe V.svg|80px|borde]]
+| 1700 – 1761
+| Estandarte heráldico de la [[casa de Borbón]]
+| 
+|-
+| [[Archivo:Estandarte real de España, Casa de Borbón (1761-1931).svg|140px]]
+| 1761 – 1868;<br />1875 – 1931
+| Estandarte heráldico de la casa de Borbón
+|
+|-
+| [[Archivo:Estandarte real de Alfonso XIII y de Juan de Borbon (1931-1975).svg|140px]]
+| 1931
+| Estandarte heráldico de [[Alfonso XIII]]
+|
+|}
+
+==== Estandartes reales (uso ordinario) ====
+{| border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Fechas!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Estandarte real de 1475-1492.svg|borde|100x100px]]
+| 1475 – 1492
+| rowspan="2" | Estandarte real de los Reyes Católicos
+| 
+|-
+| [[Archivo:Royal Standard of the Catholic Monarchs (1492-1506).svg|borde|100x100px]]
+| 1492 – 1508
+| 
+|-
+| [[Archivo:Estandarte real de 1556-1580 y 1668-1700.svg|100px|borde]]
+| 1556 – 1580;<br /> 1668 – 1700
+| Estandarte real de la Casa de Austria
+| 
+|-
+| [[Archivo:Estandarte real de 1580-1668.svg|100px|borde]]
+| 1580 – 1668
+| Estandarte real de la Casa de Austria<br />(Escudo con las armas de Portugal)
+| 
+|-
+| [[Archivo:Estandarte real de 1700-1761.svg|100px|borde]]
+| 1700 – 1761
+| rowspan="3" | Estandarte real de la casa de Borbón
+| 
+|-
+| [[Archivo:Estandarte real de 1761-1833.svg|100px|borde]]
+| 1761 – 1838
+| 
+|-
+| [[Archivo:Estandarte real de 1833-1868 y 1875-1931.svg|100px|borde]]
+| 1838 – 1868;<br />1875 – 1931
+| 
+|-
+| [[Archivo:Estandarte de Juan Carlos I de España.svg|100px|borde]]
+| 1975 – 2014<br/><small>''(Regulado desde<br />1977)''</small>
+| Estandarte real de Juan Carlos I 	
+|
+|-
+| [[Archivo:Estandarte de Felipe VI de España.svg|100px|borde]]
+| 2014 – 
+| Estandarte real de Felipe VI 	
+|
+|}
+
+==== Guiones reales (uso militar) ====
+
+{| border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|-  bgcolor="#efefef"
+! width="110"|Flag!!width="100"|Date!!width="250"|Use!!width="250"|Description
+|-
+| [[Archivo:Royal Bend of the Catholic Monarchs (obverse).svg|100px|border]][[Archivo:Royal Bend of the Catholic Monarchs (reverse).svg|100px|border]]
+| ca.1475–1508
+| [[Banda de Castilla|Guion castellano]] de los  [[Reyes Católicos]]
+|
+|-
+| [[Archivo:Royal Bend of Charles V.svg|100px|border]]
+| ca.1518–1556
+| Guion castellano de [[Carlos I de España|Carlos I]]
+|
+|-
+| [[Archivo:Guidon of King Philip II of Spain.svg|120px|border]]
+| ca.1580–1598
+| Guion real de [[Felipe II de España|Felipe II]]
+|
+|-
+| [[Archivo:Guidon of King Alfonso XIII.svg|123px]]
+| ca.1920–1931
+| Guion real de  [[Alfonso XIII]]
+|
+|}
+
+==== Estandartes de otros jefes de Estado ====
+{| border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Fechas!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Estandarte Presidencial NA.svg|100px|borde]]
+| 1931 – 1936
+| Estandarte presidencial de [[Niceto Alcalá Zamora]]
+| 
+|-
+| [[Archivo:Estandarte Presidencial MA.svg|100px|borde]]
+| 1936 – 1939
+| Estandarte presidencial de [[Manuel Azaña]]
+|
+|-
+| [[Archivo:Estandarte de Francisco Franco (variante gules).svg|100px]]
+| 1940 – 1975
+| [[Banda real de Castilla#Francisco Franco|Estandarte]] de [[Francisco Franco]]
+|
+|}
+
+==== Estandartes de otros miembros de la familia real ====
+
+{| border="2" cellpadding="4" cellspacing="0" style="margin: 1em 1em 1em 0; background: #f9f9f9; border: 1px #aaa solid; border-collapse: collapse;"
+|- bgcolor="#efefef"
+! width="110"|Bandera!!width="100"|Fechas!!width="250"|Uso!!width="250"|Descripción
+|-
+| [[Archivo:Estandarte de los Infantes de España 1893-1931.svg|100px|borde]]
+| 1893 – 1931
+| Estandarte de  los [[Infante de España|Infantes de España]]
+|
+|-
+| [[Archivo:Estandarte del Príncipe de Asturias (desde 2001).svg|100px|borde]]
+| 2001 – 2014
+| [[Estandarte de la princesa de Asturias|Estandarte]] de [[Felipe VI de España|Felipe, príncipe de Asturias]]
+| Una bandera cuadrada de color azul claro (el color de la [[bandera de Asturias]]) con el [[Escudo de armas de la princesa de Asturias|escudo del príncipe]] en el centro.
+|-
+| [[Archivo:Estandarte de la Princesa de Asturias (desde 2015).svg|100px|borde]]
+| 2015 – 
+| [[Estandarte de la princesa de Asturias|Estandarte]] de [[Leonor de Borbón|Leonor, princesa de Asturias]]
+| 
+|-
+|}
+
+== Fuentes ==
+* [http://www.crwflags.com/fotw/flags/es.html Banderas españolas] (en [[Flags of the World]])
+* [http://www.ejercito.mde.es/unidades/Madrid/ihycm/Actividades/Ciclos-Divulgativos/vexi-historia-bandera.html Historia de la bandera de España, página web del Ejército de Tierra]
+* [http://www.la-moncloa.es/NR/rdonlyres/9D52464C-0CBA-4518-9AB4-AD9279210CCE/71673/1511_1977.pdf Real Decreto 1511/1977] (Boletín Oficial del Estado número 156 — 1 de julio de 1977)
+
+== Notas ==
+{{Listaref|group=lower-alpha}}
+
+== Referencias ==
+{{listaref}}
+
+{{Control de autoridades}}
+[[Categoría:Anexos:Banderas de España| ]]

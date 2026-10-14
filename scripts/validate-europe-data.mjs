@@ -99,4 +99,25 @@ for(const country of ['spain','italy']){let shared=0;for(const path of lines[cou
 for(const [country,p,place] of [['united-kingdom',[1.33,51.13],'Dover'],['france',[-1.56,43.48],'Biarritz'],['spain',[-1.78,43.39],'Hondarribia'],['italy',[7.53,43.79],'Ventimiglia'],['spain',[-5.35,36.14],'La Línea'],['italy',[13.755,45.607],'Muggia bay'],['italy',[13.715,45.602],'Punta Sottile'],['france',[7.40,43.722],'Cap d’Ail'],['france',[7.447,43.751],'Roquebrune'],['spain',[-5.416,35.913],'Perejil'],['united-kingdom',[-6.2,54.05],'Carlingford Lough mouth']])assert(!near(lines[country],p,250),place+' shore is not outlined');
 // Frontiers reach the coast where OpenStreetMap's land border ways do.
 for(const [country,p,place] of [['italy',[13.7228,45.5947],'Lazzaretto'],['france',[7.4185,43.7248],'Fontvieille'],['france',[7.4392,43.749],'Larvotto'],['spain',[-5.382,35.9125],'Benzú'],['spain',[-5.3431,35.8709],'Tarajal'],['spain',[-2.952,35.3201],'Melilla north'],['spain',[-2.9294,35.2719],'Melilla south'],['spain',[-5.345,36.1532],'Gibraltar'],['united-kingdom',[-7.26,55.065],'Lough Foyle']])assert(near(lines[country],p,150),country+' frontier reaches '+place);
+// Region and department flags (France), community and province flags (Spain).
+{
+ const {europeFlags}=await import('../dist/europe-flags.mjs');
+ const manifest=JSON.parse(fs.readFileSync('dist/data/europe/subdivision-flag-sources.json','utf8'));
+ const expected={france:[13,71],spain:[19,37]};
+ for(const [country,[first,detail]] of Object.entries(expected)){
+  const records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/'+country+'/catalogue.bin'))).records,index=new Map(records.map(r=>[r.id,r]));
+  const flags=europeFlags[country];
+  assert.equal(Object.keys(flags.firstFlags).length,first,country+' first-level flags');assert.equal(Object.keys(flags.detailFlags).length,detail,country+' second-level flags');
+  for(const [level,set] of [[1,flags.firstFlags],[2,flags.detailFlags]])for(const [id,flag] of Object.entries(set)){
+   assert.equal(index.get(id)?.level,level,id+' is a level-'+level+' unit');
+   for(const file of [flag.file,flag.full])assert(fs.existsSync('dist/'+file),id+' file '+file);
+   assert(flag.license&&flag.credit&&flag.page.startsWith('https://commons.wikimedia.org/'),id+' source and license');
+   assert(manifest.flags[id]?.sha256&&manifest.flags[id].status,id+' recorded with its status');
+  }
+  // Municipal flags are not included; a single-province community's flag is shown once.
+  for(const [id] of Object.entries(flags.detailFlags))assert(records.filter(r=>r.parent===index.get(id).parent&&r.level===2).length>1,id+' is not the only province of its community');
+ }
+ for(const id of ['ES-P-03','ES-P-12','ES-P-15','ES-P-17','ES-P-25','ES-P-46'])assert(!europeFlags.spain.detailFlags[id],id+' has no official flag');
+ assert(!europeFlags.france.detailFlags['FR-D-73'],'Savoie has no departmental council flag');
+}
 console.log('Europe: outlines and subdivision hierarchies, chunked levels, statistics for every unit, enclaves and microstates, shared France seams drawn once, land frontiers without coastline.');

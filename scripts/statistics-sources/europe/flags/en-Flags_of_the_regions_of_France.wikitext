@@ -1,0 +1,614 @@
+{{Short description|Overview of French regional flags}}
+
+{{More citations needed|date=August 2026}}
+{{French flags}}
+
+The galleries below show flags of [[France]] attributed to the metropolitan [[regions of France|regions]], former regions, [[French departments|departments]], [[Overseas departments and regions of France|overseas regions]], [[overseas collectivities|collectivities]] and subdivisions. 
+
+The official status of many regional and territorial flags in France is often unclear. Since the late 20th centuries, many regional and local authorities have adopted [[logo]]s as their primary emblems, which are subsequently displayed on [[logo flag]]s. Such flags often serve as de facto institutional symbols but usually lack formal [[heraldry|heraldic]] or [[vexillology|vexillological]] recognition.
+
+Alongside these are numerous traditional regional flags, whose status also varies. Some historical flags date back centuries, while others are [[banner of arms|banners of arms]] or more recent designs created by private individuals or associations. In some cases, these flags have later gained semi-official or customary use through adoption by public institutions, commemorative coinage, public transport, or municipal buildings.
+
+== Metropolitan regions ==
+{| class="wikitable"
+! rowspan="2" | Region
+! colspan="2" | Flags in use
+! rowspan="2" | Proposed or alternative flags
+|-
+! [[Heraldic flag|Traditional flag]]
+! [[Logo flag]]
+|- align=center
+| [[Auvergne-Rhône-Alpes]]
+| {{ListFlag|Flag of the region Auvergne-Rhône-Alpes.svg}}
+| {{ListFlag|Flag of the Region of Auvergne-Rhône-Alpes.svg}}
+|
+|- align=center
+| [[Bourgogne-Franche-Comté]]
+| {{ListFlag|Flag of the region Bourgogne-Franche-Comté (fixed).svg}}
+| {{ListFlag|Flag of the Region of Bourgogne-Franche-Comté.svg}}
+|
+|- align=center
+| [[Brittany (administrative region)|Brittany]]
+| {{ListFlag|Flag of Brittany (Gwenn ha du).svg}}
+| {{ListFlag|Banniel logo rannvro Breizh.svg}}{{Efn|Variants of the regional council logo-flags exist.|name=VariantsA}}
+| {{ListFlag|Drapeau de la province de Bretagne (1532).svg}} {{Efn|The banner of arms of Brittany, flag of the Duchy of Brittany and the province of Brittany (1532)}}
+|- align=center
+| [[Centre-Val de Loire]]
+| {{ListFlag|Flag of Centre-Val de Loire.svg}}
+| {{ListFlag|Flag of the Region of Centre-Val de Loire.svg}}
+|
+|- align=center
+| [[Corsica]]
+| {{ListFlag|Flag of Corsica.svg}}
+| {{ListFlag|No flag.svg}}
+|
+|- align=center
+| [[Grand Est]]
+| {{ListFlag|No flag.svg}}
+| {{ListFlag|Flag of Grand Est (2022-present).svg}}
+| {{ListFlag|Proposed Flag of Grand Est - juxtaposed version.svg}}
+|- align=center
+| [[Hauts-de-France]]
+| {{ListFlag|No flag.svg}}
+| {{ListFlag|Flag of the Region of Hauts-de-France.svg}}
+| {{ListFlag|Proposed flag of Hauts-de-France.svg}}
+|- align=center
+| [[Île-de-France]]
+| {{ListFlag|Cultural flag of Île-de-France.svg}}
+| {{ListFlag|IDF flag.svg}}
+| {{ListFlag|Flag of the Île-de-France Region (symbol only).svg}}
+|- align=center
+| [[Normandy (administrative region)|Normandy]]
+| {{ListFlag|Flag of Normandie.svg}}
+| {{ListFlag|Flag of the Region of Normandy.svg}}
+|
+|- align=center
+| [[Nouvelle-Aquitaine]]
+| {{ListFlag|Flag of Nouvelle-Aquitaine.svg}} {{Efn|Registered at the French Society of Vexillology.|name=Registered}}
+| {{ListFlag|No flag.svg}}
+|
+|- align=center
+| [[Occitania (administrative region)|Occitanie]]
+| {{ListFlag|Flag of Occitanie.svg}}
+| {{ListFlag|Flag of the Region of Occitanie.svg}}
+| {{ListFlag|Flag of Occitania.svg}} {{Efn|The still popular flag of the historical region Occitania with the Occitan cross, later adopted by  Midi-Pyrénées and Languedoc-Roussillon.}}
+|- align=center
+| [[Pays de la Loire]]
+| {{ListFlag|Unofficial flag of Pays-de-la-Loire.svg}}
+| {{ListFlag|Flag of Pays de la Loire.svg}} 
+|
+|- align=center
+| [[Provence-Alpes-Côte d'Azur]]
+| {{ListFlag|Flag of Provence-Alpes-Côte d'Azur.svg}}
+| {{ListFlag|No flag.svg}}
+|
+|}
+
+== Former regions ==
+{| class="wikitable"
+! Region
+! [[Heraldic flag|Traditional flag]]
+! [[Logo flag]]
+! Region
+! [[Heraldic flag|Traditional flag]]
+! [[Logo flag]]
+! Region
+! [[Heraldic flag|Traditional flag]]
+! [[Logo flag]]
+|- align=center
+| [[Auvergne]]
+| {{ListFlag|Flag of Auvergne.svg}}
+| {{ListFlag|Flag of the former Region of Auvergne.svg}}
+| [[Champagne-Ardenne]]
+| {{ListFlag|Flag of Champagne-Ardenne.svg}}
+| {{ListFlag|Champagne Ardenne flag.svg}}
+| [[Limousin]]
+| {{ListFlag|Flag of Limousin.svg}}
+| {{ListFlag|Flag of the former Region of Limousin.svg}}
+|- align=center
+| [[Rhône-Alpes]]
+| {{ListFlag|Flag of Rhône-Alpes.svg}}
+| {{ListFlag|Flag of the former Region of Rhône-Alpes.svg}}
+| [[Lorraine]]
+| {{ListFlag|Flag of Lorraine.svg}}
+| {{ListFlag|Flag of the former Region of Lorraine.svg}}
+| [[Poitou-Charentes]]
+| {{ListFlag|Poitou-Charentes flag.svg}}
+| {{ListFlag|Flag of the former Region of Poitou-Charentes.svg}}
+|- align=center
+| [[Bourgogne]]
+| {{ListFlag|Flag of Bourgogne.svg}}
+| {{ListFlag|Flag of the former Region of Bourgogne.svg}}
+| [[Nord-Pas-de-Calais]]
+| {{ListFlag|Generic flag of Nord-Pas-de-Calais.svg}}
+| {{ListFlag|Flag of the former Region of Nord-Pas de Calais.svg}}
+| [[Languedoc-Roussillon]]
+| {{ListFlag|Flag of Languedoc-Roussillon.svg}}
+| {{ListFlag|Flag of Languedoc-Roussillon2.svg}}
+|- align=center
+| [[Franche Comte]]
+| colspan="2" | {{ListFlag|Flag of Franche-Comté.svg}}
+| [[Picardy]]
+| {{ListFlag|Flag of Picardie.svg}}
+| {{ListFlag|Flag of the former Region of Picardie.svg}}
+| [[Midi-Pyrénées]]
+| {{ListFlag|Flag of Midi-Pyrénées.svg}}
+| 
+|- align=center
+| [[Brittany]]
+| {{ListFlag|Flag of Brittany (Gwenn ha du).svg}}
+| {{ListFlag|Flag of the Region of Bretagne.svg}}{{Efn|Variants of the regional council logo-flags exist.|name=VariantsA}}
+| [[Île-de-France]]
+| {{ListFlag|Cultural flag of Île-de-France.svg}}
+| {{ListFlag|IDF flag.svg}}
+| [[Pays de la Loire]]
+| {{ListFlag|Unofficial flag of Pays-de-la-Loire.svg}}
+| {{ListFlag|Flag of Pays de la Loire.svg}}
+|- align=center
+| [[Centre-Val de Loire]]
+| colspan="2" | {{ListFlag|Flag of Centre-Val de Loire.svg}}
+| [[Basse-Normandy]]
+| {{ListFlag|Flag of Normandie.svg}}
+| {{ListFlag|Flag of the former Region of Basse-Normandie.svg}}
+| [[Provence-Alpes-Côte d'Azur]]
+| colspan="2" | {{ListFlag|Flag of Provence-Alpes-Côte d'Azur.svg}}
+|- align=center
+| [[Corsica]]
+| colspan="2" | {{ListFlag|Flag of Corsica.svg}}
+| [[Haute-Normandie]]
+| {{ListFlag|Flag of Normandie.svg}}
+| {{ListFlag|Flag of the former Region of Haute-Normandie.svg}}
+| colspan="3" rowspan="2" | 
+|- align=center
+| [[Alsace]]
+| {{ListFlag|Flag of Alsace.svg}}
+| {{ListFlag|Flag of the former Region of Alsace.svg}}
+| [[Aquitaine]]
+| {{ListFlag|Flag of Aquitaine.svg}}
+| {{ListFlag|Bandera Regió Aquitània.png}}{{Efn|Variants of the regional council logo-flags exist.|name=VariantsA}}
+|}
+
+== French Departments ==
+{| class=wikitable
+|-align=center
+!Name
+!Official Flag
+!Proposed Flag
+(Banner of Arms)
+!Name
+!Official Flag
+!Proposed Flag
+(Banner of Arms)
+!Name
+!Official Flag
+!Proposed Flag
+(Banner of Arms)
+!Name
+!Official Flag
+!Proposed Flag
+(Banner of Arms)
+|-align=center
+|[[Ain]]
+|[[File:Flag of the Department of Ain.svg|frameless|83x83px]]
+|[[File:Flag of Ain.svg|frameless|83x83px]]
+|[[Doubs]]
+|[[File:Flag of the Department of Doubs.svg|border|frameless|83x83px]]
+|[[File:Proposed flag of Doubs.svg|frameless|83x83px]]
+|[[Manche]]
+|[[File:Flag of the Department of Manche.svg|border|frameless|83x83px]]
+|[[File:Drapeau non-officiel fr département Manche.svg|frameless|83x83px]]
+|[[Haute-Savoie]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Unofficial Flag of Haute-Savoie.svg|frameless|83x83px]]
+|-align=center
+|[[Aisne]]
+|[[File:Flag of the Department of Aisne.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Aisne.svg|frameless|83x83px]]
+|[[Drôme]]
+|[[File:Flag of the Department of Drôme.svg|border|frameless|83x83px]]
+|[[File:Drapeau département fr Drôme.svg|frameless|83x83px]]
+|[[Marne (department)|Marne]]
+|[[File:Flag of the Department of Marne.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Marne.svg|frameless|83x83px]]
+|[[Paris]]
+| colspan="2" |[[File:Flag of Paris with coat of arms.svg|frameless|83x83px]]
+|-align=center
+|[[Allier]]
+|[[File:Flag of Allier Department.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Allier.svg|frameless|83x83px]]
+|[[Eure]]
+|[[File:Flag of the Department of Eure.svg|frameless|83x83px]]
+|[[File:Proposed flag of Eure.svg|frameless|83x83px]]
+|[[Haute-Marne]]
+|[[File:Flag of the Department of Haute-Marne.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Haute-Marne.svg|frameless|83x83px]]
+|[[Seine-Maritime]]
+|[[File:Flag of the Department of Seine-Maritime (Variant 1).svg|frameless|83x83px]]{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Proposed flag for Seine-Maritime.svg|frameless|83x83px]]
+|-align=center
+|[[Alpes-de-Haute-Provence]]
+|[[File:Flag of the Department of Alpes-de-Haute-Provence.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Alpes-de-Haute-Provence.svg|frameless|82x82px]]
+|[[Eure-et-Loir]]
+|[[File:Flag of the Department of Eure-et-Loir.svg|border|frameless|83x83px]]
+|[[File:Flag of Eure-et-Loir.svg|frameless|83x83px]]
+|[[Mayenne]]
+|[[File:Flag of the Department of Mayenne.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Mayenne.svg|frameless|83x83px]]
+|[[Seine-et-Marne]]
+| 
+{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Drapeau culturel pour le département de Seine-et-Marne.svg|frameless|83x83px]]
+|-align=center
+|[[Hautes-Alpes]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Flag of Hautes-Alpes.svg|frameless|83x83px]]
+|[[Finistère]]
+|[[File:Flag of Finistère Department.svg|frameless|83x83px]]
+|[[File:Drapeau Finistère.svg|frameless|82x82px]]
+|[[Meurthe-et-Moselle]]
+| 
+|[[File:Drapeau fr département Meurthe-et-Moselle.svg|frameless|83x83px]]
+|[[Yvelines]]
+|[[File:Flag of the Department of Yvelines.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Yvelines.svg|frameless|83x83px]]
+|-align=center
+|[[Alpes-Maritimes]]
+|[[File:Flag of the Department of Alpes-Maritimes.svg|frameless|83x83px]]
+|[[File:Flag of the County of Nice.svg|frameless|83x83px|border]]
+|[[Gard]]
+|[[File:Flag of Gard Department.svg|frameless|83x83px]]
+|[[File:Drapeau non-officiel fr département Gard.svg|frameless|83x83px]]
+|[[Meuse]]
+|[[File:Flag of the Department of Meuse.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Meuse.svg|frameless|83x83px]]
+|[[Deux-Sèvres]]
+|[[File:Flag of Deux-Sèvres Department.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Deux-Sèvres.svg|frameless|83x83px]]
+|-align=center
+|[[Ardèche]]
+|[[File:Flag of Ardèche Department.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Ardèche.svg|frameless|83x83px]]
+|[[Haute-Garonne]]
+|[[File:Flag of the Department of Haute-Garonne.svg|frameless|83x83px]]
+|[[File:Drapeau non-officiel fr département Haute-Garonne.svg|frameless|83x83px]]
+|[[Morbihan]]
+|[[File:Banniel departamant ar Mor-Bihan 2022.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Morbihan.svg|frameless|83x83px]]
+|[[Somme (department)|Somme]]
+|[[File:Flag of the Department of Somme (Variant 2).svg|frameless|83x83px]]{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Drapeau fr département Somme.svg|frameless|83x83px]]
+|-align=center
+|[[Ardennes (department)|Ardennes]]
+|[[File:Flag of the Department of Ardennes.svg|border|frameless|83x83px]]
+|[[File:Proposition de drapeau des Ardennes.svg|frameless|83x83px]]
+|[[Gers]]
+|[[File:Flag of Gers Department (vectorized).svg|border|frameless|83x83px]]
+|[[File:Flag of Gers.svg|border|frameless|83x83px]]
+|[[Moselle]]
+|[[File:Flag of the Department of Moselle.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Moselle.svg|frameless|83x83px]]
+|[[Tarn (department)|Tarn]]
+| 
+|[[File:Drapeau fr département Tarn.svg|frameless|83x83px]]
+|-align=center
+|[[Ariège (department)|Ariège]]
+|[[File:Flag of the Department of Ariège.svg|border|frameless|83x83px]]
+|[[File:Proposition de drapeau pour le département de l'Ariège.svg|frameless|83x83px]]
+|[[Gironde]]
+|[[File:Flag of the Department of Gironde.svg|border|frameless|83x83px]]
+|[[File:Flag of Gironde.svg|frameless|83x83px]]
+|[[Nièvre]]
+|[[File:Flag of the Department of Nièvre.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Nièvre.svg|frameless|83x83px]]
+|[[Tarn-et-Garonne]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Flag of Tarn-et-Garonne.svg|frameless|83x83px]]
+|-align=center
+|[[Aube]]
+| 
+{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Drapeau fr département Aube.svg|frameless|83x83px]]
+|[[Hérault]]
+|[[File:Flag of Hérault Department.svg|border|frameless|83x83px]]
+|[[File:Drapeau culturel fr département Hérault.svg|border|frameless|83x83px]]
+|[[Nord (French department)|Nord]]
+|[[File:Flag of the Department of Nord.svg|border|frameless|83x83px]]
+|[[File:Generic flag of Nord-Pas-de-Calais.svg|frameless|83x83px]] 
+|[[Var (department)|Var]]
+|[[File:Flag of the Department of Var.svg|border|frameless|83x83px]]
+|[[File:Proposition de drapeau pour le Var.svg|frameless|83x83px]]
+|-align=center
+|[[Aude]]
+|[[File:Flag of the Department of Aude.svg|border|frameless|83x83px]]
+|[[File:Drapeau non-officiel fr département Aude.svg|frameless|83x83px]]
+|[[Ille-et-Vilaine]]
+|[[File:Flag of the Department of Ille-et-Vilaine.svg|border|frameless|83x83px]]
+|[[File:Drapeau non-officiel fr département Ille-et-Vilaine.svg|border|frameless|83x83px]]
+|[[Oise]]
+|[[File:Flag of the Department of Oise.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Oise.svg|frameless|83x83px]]
+|[[Vaucluse]]
+|[[File:Flag of the Department of Vaucluse.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Vaucluse.svg|frameless|83x83px]]
+|-align=center
+|[[Aveyron]]
+|[[File:Flag of Aveyron Department.svg|frameless|83x83px]]
+|[[File:Flag of Rouergue.svg|frameless|83x83px]]
+|[[Indre]]
+| 
+|[[File:Drapeau département fr Indre.svg|frameless|83x83px]]
+|[[Orne]]
+|[[File:Flag of Orne Department.svg|border|frameless|83x83px]]
+|[[File:Flag of Orne.svg|frameless|83x83px]]
+|[[Vendée]]
+|[[File:Flag of the Department of Vendée (Variant 1).svg|border|frameless|83x83px]]{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Flag of Vendée.svg|border|frameless|83x83px]]
+|-align=center
+|[[Bouches-du-Rhône]]
+|[[File:Flag of the Department of Bouches-du-Rhône.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Bouches-du-Rhône.svg|frameless|82x82px]]
+|[[Indre-et-Loire]]
+| 
+|[[File:Drapeau non-officiel fr département Indre-et-Loire.svg|frameless|83x83px]]
+|[[Pas-de-Calais]]
+|[[File:Flag of Pas-de-Calais Department.svg|frameless|83x83px]]
+|[[File:Unofficial Flag of Pas-De-Calais.svg|frameless|83x83px]]
+|[[Vienne (department)|Vienne]]
+|[[File:Flag of the Department of Vienne.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Vienne.svg|frameless|83x83px]]
+|-align=center
+|[[Calvados (department)|Calvados]]
+|[[File:Flag of the Department of Calvados.svg|border|frameless|83x83px]]
+|[[File:Flag of Calvados.svg|frameless|83x83px]]
+|[[Isère]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Drapeau non-officiel département fr Isère.svg|frameless|83x83px]]
+|[[Puy-de-Dôme]]
+|[[File:Flag of Puy-de-Dôme Department.svg|border|frameless|83x83px]]
+|[[File:Drapeau proposé pour le département Puy-de-Dôme.svg|frameless|82x82px]]
+|[[Haute-Vienne]]
+|[[File:Flag of the Department of Haute-Vienne (Variant 2).svg|border|frameless|83x83px]]{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Drapeau fr département Haute-Vienne.svg|frameless|82x82px]]
+|-align=center
+|[[Cantal]]
+|[[File:Flag of the Department of Cantal.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Cantal.svg|frameless|83x83px]]
+|[[Jura (department)|Jura]]
+|[[File:Flag of the Department of Jura.svg|frameless|83x83px]]
+|[[File:Flag of Jura (department).svg|frameless|83x83px]]
+|[[Pyrénées-Atlantiques]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Drapeau proposé pour les Pyrenees-atlantiques.svg|frameless|83x83px]]
+|[[Vosges (department)|Vosges]]
+|[[File:Flag of the Department of Vosges.svg|border|frameless|83x83px]]
+|[[File:Flag of Vosges.svg|frameless|83x83px]]{{Efn|Banner of arms for this department is used co-officially with the departmental council logo-flag.|name=Co-official}}
+|-align=center
+|[[Charente]]
+|[[File:Flag of the Department of Charente (Variant 2).svg|frameless|83x83px]]{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Flag of Charente.svg|frameless|83x83px]]
+|[[Landes (department)|Landes]]
+|[[File:No_flag.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Landes.svg|frameless|83x83px]]
+|[[Hautes-Pyrénées]]
+| 
+|[[File:Proposed flag for Hautes-Pyrénées.svg|frameless|83x83px]]
+|[[Yonne]]
+| 
+|[[File:Drapeau fr département Yonne.svg|frameless|83x83px]]
+|-align=center
+|[[Charente-Maritime]]
+|[[File:Flag of the Department of Charente-Maritime.svg|border|frameless|83x83px]]
+|[[File:CharenteMaritimeFlag.svg|frameless|83x83px]]
+|[[Loir-et-Cher]]
+| 
+|[[File:Drapeau fr département Loir-et-Cher.svg|frameless|83x83px]]
+|[[Pyrénées-Orientales]]
+|[[File:Flag of the Department of Pyrénées-Orientales.svg|border|frameless|83x83px]]
+|[[File:Drapeau proposé pour le département des Pyrénées-Orientales.svg|frameless|83x83px]]
+|[[Territoire de Belfort]]
+|[[File:Flag of Territoire de Belfort.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Territoire de Belfort.svg|frameless|83x83px]]
+|-align=center
+|[[Cher (department)|Cher]]
+| 
+|[[File:Drapeau fr département Cher.svg|frameless|83x83px]]
+|[[Loire (department)|Loire]]
+|[[File:Flag of the Department of Loire.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Loire.svg|frameless|83x83px]]
+|[[Bas-Rhin]]
+|[[File:Flag of the Department of Bas-Rhin.svg|border|frameless|83x83px]]
+|[[File:Flag of Basse-Alsace.svg|frameless|83x83px]]{{Efn|Banner of arms for this department is used co-officially with the departmental council logo-flag.|name=Co-official}}
+|[[Essonne]]
+|[[File:Flag of Essonne Department.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Essonne.svg|frameless|83x83px]]
+|-align=center
+|[[Corrèze]]
+|[[File:Flag of the Department of Corrèze.svg|border|frameless|83x83px]]
+|[[File:Drapeau département fr Corrèze.svg|frameless|83x83px]]
+|[[Haute-Loire]]
+|[[File:No_flag.svg|frameless|83x83px]]
+|[[File:Drapeau département fr Haute-Loire.svg|frameless|83x83px]]
+|[[Haut-Rhin]]
+|[[File:Flag of the Department of Haut-Rhin.svg|border|frameless|83x83px]]
+|[[File:Flag of Haute-Alsace.svg|frameless|83x83px]]{{Efn|Banner of arms for this department is used co-officially with the departmental council logo-flag.|name=Co-official}}
+|[[Hauts-de-Seine]]
+|[[File:Flag of the Department of Hauts-de-Seine.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Hauts-de-Seine.svg|frameless|83x83px]]
+|-align=center
+|[[Haute-Corse]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Flag of Corsica.svg|frameless|83x83px]]
+|[[Loire-Atlantique]]
+|[[File:Flag of the Department of Loire-Atlantique.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Loire-Atlantique.svg|frameless|83x83px]]
+|[[Rhône (department)|Rhône]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Flag of Rhône.svg|frameless|83x83px]]
+|[[Seine-Saint-Denis]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Proposition de drapeau fr département Seine-Saint-Denis.svg|frameless|83x83px]]
+|-align=center
+|[[Corse-du-Sud]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Flag of Corsica.svg|frameless|83x83px]]
+|[[Loiret]]
+|[[File:Flag of the Department of Loiret.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Loiret.svg|frameless|82x82px]]
+|[[Lyon Metropolis|Grand Lyon]]
+|[[File:Flag of the Department of Grand Lyon.svg|frameless|83x83px]]
+|[[File:Bannière de Lyon.svg|frameless|83x83px]]
+|[[Val-de-Marne]]
+|[[File:Flag of the Department of Val-de-Marne.svg|border|frameless|83x83px]]
+|[[File:Drapeau culturel pour le département du Val-de-Marne.svg|frameless|83x83px]]
+|-align=center
+|[[Côte-d'Or]]
+|[[File:Flag of the Department of Côte-d'Or.svg|border|frameless|83x83px]]
+|[[File:Drapeau non-officiel fr département Côte-d'Or.svg|frameless|83x83px]]
+|[[Lot (department)|Lot]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Cultural flag of Lot.svg|frameless|83x83px]]
+|[[Haute-Saône]]
+|[[File:Flag of the Department of Haute-Saône.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Haute-Saône.svg|frameless|83x83px]]
+|[[Val-d'Oise]]
+|[[File:Flag of the Department of Val-d'Oise (Variant 2).svg|border|frameless|83x83px]]{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Drapeau fr département Val-d'Oise.svg|frameless|83x83px]]
+|-align=center
+|[[Côtes-d'Armor]]
+|[[File:Flag of the Department of Côtes-d'Armor.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Côtes-d'Armor.svg|frameless|83x83px]]
+|[[Lot-et-Garonne]]
+|[[File:No_flag.svg|frameless|83x83px]]
+|[[File:Drapeau fr département Lot-et-Garonne.svg|frameless|83x83px]]
+|[[Saône-et-Loire]]
+|[[File:Flag of Saône-et-Loire Department.svg|frameless|83x83px]]
+|[[File:Proposition de drapeau pour le département de Saône-et-Loire.svg|frameless|83x83px]]
+|
+|
+|
+|-align=center
+|[[Creuse]]
+| 
+|[[File:Drapeau fr département Creuse.svg|frameless|83x83px]]
+|[[Lozère]]
+|[[File:Flag of the Department of Lozère.svg|frameless|83x83px]]
+|[[File:Drapeau non-officiel fr département Lozère.svg|frameless|83x83px]]
+|[[Sarthe]]
+|[[File:Flag of the Department of Sarthe.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Sarthe.svg|frameless|83x83px]]
+|
+|
+|
+|-align=center
+|[[Dordogne]]
+|[[File:Flag of the Department of Dordogne.svg|border|frameless|83x83px]]
+|[[File:Drapeau fr département Dordogne.svg|frameless|83x83px]]
+|[[Maine-et-Loire]]
+|[[File:Flag of the Department of Maine-et-Loire (Variant 2).svg|border|frameless|83x83px]]{{Efn|Variants of the departmental council logo-flags exist.|name=Variants}}
+|[[File:Flag of Anjou.svg|frameless|83x83px]]
+|[[Savoie]]
+|[[File:No flag.svg|frameless|83x83px]]
+|[[File:Flag of Savoie.svg|frameless|83x83px]]
+|
+|
+|
+|}
+
+== Overseas regions and collectivities ==
+{| class="wikitable"
+|+ Flags of Overseas France
+! Territory
+! Official or co-official flag{{Efn|Official or co-official flag other than the [[flag of France|French national flag]].|name=Official}}
+! Government flag{{Efn|Flag used by the local government.|name=Government}}
+! Local flag{{Efn|Flag usually flown by the peoples of the territory.|name=Local}}
+! Traditional flag{{Efn|Flag traditionally associated with the territory, either by being a former flag, or a flag used by locals in the past.|name=Traditional}}
+|- align=center
+| [[French Guiana]]
+| {{ListFlag|No flag.svg}}
+| {{ListFlag|Flag of French Guiana (Local).svg}}
+| {{ListFlag|Flag of French Guiana.svg}}
+| {{ListFlag|Drapeau de la Guyane.svg}}
+|- align=center
+| [[French Polynesia]]<ref>{{Cite web|url=http://lexpol.cloud.pf/document.php?document=189933&deb=70&fin=71&titre=RMOpbGliw6lyYXRpb24gbsKwIDg0LTEwMzAgQVQgZHUgMjMvMTEvMTk4NA==|title=Délibération n° 84-1030 AT du 23 novembre 1984 portant approbation du drapeau et des armes de la Polynésie française|website=lexpol.pf|language= French|date = 20 January 1985|access-date = 24 November 2024|page = 70}}</ref>
+| colspan="4" | {{ListFlag|Flag of French Polynesia.svg}}
+|- align=center
+| ''[[French Southern and Antarctic Lands]]''
+| colspan="4" | {{ListFlag|Flag of the French Southern and Antarctic Lands.svg}}
+|- align=center
+| [[Guadeloupe]]
+| {{ListFlag|No flag.svg}}
+| {{ListFlag|Flag of Guadeloupe (Local).svg}}
+| colspan="2" | {{ListFlag|Unofficial flag of Guadeloupe (local).svg}} {{ListFlag|Flag of Guadeloupe (local) variant.svg}}
+|- align=center
+| [[Martinique]]
+| {{ListFlag|Flag-of-Martinique.svg}}
+| {{ListFlag|No flag.svg}}
+| {{ListFlag|Flag-of-Martinique.svg}}
+| {{ListFlag|Snake Flag of Martinique.svg}}
+|- align=center
+| [[Mayotte]]
+| {{ListFlag|No flag.svg}}
+| {{ListFlag|Flag of Mayotte (Local).svg}}
+| colspan="2" | {{ListFlag|Flag of Mayotte (local).svg}}
+|- align=center
+| [[New Caledonia]]
+| colspan="4" | {{ListFlag|Flag of FLNKS.svg}}
+|- align=center
+| [[Réunion]]
+| {{ListFlag|No flag.svg}}
+| 
+| {{ListFlag|Proposed flag of Réunion (VAR).svg}}
+| {{ListFlag|Flag of Réunion (APDR proposal).svg}}
+|- align=center
+| [[Saint Barthélemy]]
+| {{ListFlag|No flag.svg}}
+| {{ListFlag|Flag of Saint Barthélemy (Local).svg}}
+| colspan="2" | {{ListFlag|Flag of Saint Barthélemy (local).svg}}
+|- align=center
+| [[Collectivity of Saint Martin|Saint Martin]]{{Efn|Saint Martin doesn't have a co-official or an unofficial flag, so the flag of France is used.}}
+| {{ListFlag|No flag.svg}}
+| colspan="3" | {{ListFlag|Flag of France.svg}}
+|- align=center
+| [[Saint Pierre and Miquelon]]
+| {{ListFlag|No flag.svg}}
+| colspan="3" | {{ListFlag|Flag of Saint-Pierre and Miquelon.svg}}
+|- align=center
+| [[Wallis and Futuna]]
+| {{ListFlag|No flag.svg}}
+| colspan="3" | {{ListFlag|Flag of Wallis and Futuna.svg}}
+|}
+
+== Subdivisions of overseas collectivities ==
+<gallery caption="{{Flag|French Polynesia}}">
+File:Flag of the Austral Islands.svg|{{center|Flag of the [[Austral Islands]]}}
+File:Flag of the Gambier Islands.svg|{{center|Flag of the [[Gambier Islands]]}}
+File:Flag of Marquesas Islands.svg|{{center|Flag of the [[Marquesas Islands]]}}
+File:Flag of the Society Islands.svg|{{center|Flag of the [[Society Islands]]}}
+File:Flag of Tuamotu Archipelago.svg|{{center|Flag of the [[Tuamotus|Tuamotu Islands]]}}
+</gallery><gallery caption="{{Flag|New Caledonia|local}}">
+File:Iles-Loyauté drapeau.svg|Flag of [[Loyalty Islands Province]]
+File:Drapeau Province Nord Nouvelle Calédonie.svg|Flag of the [[North Province, New Caledonia|North Province]]
+File:Bandera Province Sud.svg|Flag of the [[South Province, New Caledonia|South Province]]
+</gallery><gallery caption="{{Flag|Saint Pierre and Miquelon|local}}">
+File:Flag of Miquelon-Langlade.svg|Flag of [[Miquelon-Langlade]]
+File:Flag of Saint-Pierre and Miquelon.svg|Flag of [[Saint-Pierre, Saint Pierre and Miquelon|Saint-Pierre]]
+</gallery><gallery caption="{{Flag|Wallis and Futuna|local}}">
+File:Flag of Alo.svg|Flag of [[Alo (Wallis and Futuna)|Alo]]
+File:Flag of Sigave.svg|Flag of [[Sigave|Sigavé]]
+File:Flag of Uvea.svg|Flag of [[Uvea (Wallis and Futuna)|ʻUvea]]
+</gallery>
+
+== Notes ==
+{{notelist}}
+
+== References ==
+{{reflist}}
+
+{{FranceFlags}}
+{{Lists of flags}}
+{{Regions of France}}
+
+[[Category:Lists of flags of France|French regions]]
+[[Category:Regions of France|*]]
+[[Category:Flags of regions|France]]

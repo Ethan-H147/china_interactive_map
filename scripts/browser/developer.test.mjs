@@ -50,6 +50,25 @@ export default [
    assert.equal(after.mode,3,'The third level is restored');assert.equal(after.third,'true','The third-level button shows as chosen');
    if(language)assert.equal(after.language,language,'The label language is restored');
   }})),
+ // Flags stack downward: national, region or community, then department or province. A commune
+ // or municipality shows its department's or province's flag, captioned as such.
+ ...[
+  ['france','Strasbourg','Strasbourg','Commune',['flag-fr.svg','FR-R-44','FR-D-67'],'Bas-Rhin · Department flag'],
+  ['france','Bas-Rhin','Bas-Rhin','Department',['flag-fr.svg','FR-R-44','FR-D-67'],''],
+  ['france','Chambéry','Chambéry','Commune',['flag-fr.svg','FR-R-84'],''],
+  ['spain','Toledo','Toledo','Province',['flag-es.svg','ES-A-08','ES-P-45'],''],
+  ['spain','Alcalá de Henares','Alcalá de Henares','Municipality',['flag-es.svg','ES-A-13'],''],
+  ['spain','Tarragona','Tarragona','Municipality',['flag-es.svg','ES-A-09','ES-P-43'],'Tarragona · Province flag']
+ ].map(([country,query,pick,kind,flags,caption])=>({name:`${country}: ${pick} shows its flags`,options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#'+country);
+  await searchAndSelect(page,query,pick,kind);
+  const sidebar=`[...document.querySelectorAll('aside.sidebar')].find(a=>!a.hidden&&getComputedStyle(a).display!=='none')`;
+  await page.waitFor(`[...${sidebar}.querySelectorAll('.division-flags img')].filter(i=>i.getClientRects().length).every(i=>i.complete&&i.naturalWidth>0)`,{label:'the flags to load'});
+  const shown=await page.evaluate(`[...${sidebar}.querySelectorAll('.division-flags img')].filter(i=>i.getClientRects().length).map(i=>({src:i.getAttribute('src'),top:i.getBoundingClientRect().top}))`);
+  assert.deepEqual(shown.map(i=>flags.find(f=>i.src.includes(f))),flags,'Flags shown, top to bottom: '+shown.map(i=>i.src).join(', '));
+  assert(shown.every((i,n)=>!n||i.top>shown[n-1].top),'The flags stack downward');
+  assert.equal(await page.evaluate(`(()=>{const c=${sidebar}.querySelector('.flag-caption');return c&&!c.hidden?c.textContent:'';})()`),caption);
+ }})),
  {name:'leaving developer mode on an unreleased country returns to China',options:{...desktop,developer:true},async run(page,base){
   await page.open(base,'#italy');
   assert.equal(await page.evaluate('AtlasEntry.current'),'italy');
