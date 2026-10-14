@@ -20,8 +20,14 @@ for(const [country,prefix,name,first,second] of [['philippines','ph','Philippine
 for(const [country,prefix,name] of [['malaysia','my','Malaysia'],['singapore','sg','Singapore']])pages.push([country,adapter('southeast-asia.mjs',{country,prefix,c:{name},isMalaysia:country==='malaysia',base:'data/southeast-asia/'})]);
 for(const country of ['brazil','argentina','uruguay'])pages.push([country,adapter('south-america.mjs',{})]);
 
-pages.push(['russia',adapter('regional-country.mjs',{country:'russia',prefix:'ru',base:'data/russia/',c:{name:'Russia',lang:'ru',nationalFlag:'vendor/flag-ru.svg',secondLabel:'Districts'}})]);
-for(const [country,prefix,name,firstLabel,secondLabel,thirdLabel] of [['south-africa','za','South Africa','Provinces','Districts & metros','Municipalities'],['eswatini','sz','Eswatini','Regions','Tinkhundla'],['lesotho','ls','Lesotho','Districts','Councils']])pages.push([country,adapter('regional-country.mjs',{country,prefix,base:`data/southern-africa/${country}/`,c:{name,lang:'en',nationalFlag:`vendor/flag-${prefix}.svg`,firstLabel,secondLabel,thirdLabel}})]);
+pages.push(['russia',adapter('regional-country.mjs',{maxLevel:2,country:'russia',prefix:'ru',base:'data/russia/',c:{name:'Russia',lang:'ru',nationalFlag:'vendor/flag-ru.svg',secondLabel:'Districts'}})]);
+for(const [country,prefix,name,firstLabel,secondLabel,thirdLabel] of [['south-africa','za','South Africa','Provinces','Districts & metros','Municipalities'],['eswatini','sz','Eswatini','Regions','Tinkhundla'],['lesotho','ls','Lesotho','Districts','Councils']])pages.push([country,adapter('regional-country.mjs',{maxLevel:thirdLabel?3:2,country,prefix,base:`data/southern-africa/${country}/`,c:{name,lang:'en',nationalFlag:`vendor/flag-${prefix}.svg`,firstLabel,secondLabel,thirdLabel}})]);
+// Outline-only countries have one level: its selector and outline toggle stay in the page, hidden.
+for(const [country,prefix,name] of [['united-kingdom','gb','United Kingdom'],['spain','es','Spain'],['france','fr','France'],['italy','it','Italy']]){
+ const html=adapter('regional-country.mjs',{maxLevel:1,country,prefix,base:`data/europe/${country}/`,c:{name,lang:'en',nationalFlag:`vendor/flag-${prefix}.svg`,firstLabel:'Country'}});
+ assert(new RegExp(`<select id="${prefix}-province" data-nav hidden>`).test(html)&&!html.includes(prefix+'-second-layer')&&!html.includes('undefined'),name+' has a single hidden level');
+ pages.push([country,html]);
+}
 
 // Read actual generated markup, rather than asserting the configuration shape.
 function tree(html){

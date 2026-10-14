@@ -1,0 +1,42 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+// National outlines for the United Kingdom, Spain, France and Italy, plus Natural
+// Earth land boundary lines used only to tell land frontiers from coastline.
+const root=path.resolve(process.argv[2]||'artifacts/europe-source');
+fs.mkdirSync(root,{recursive:true});
+const manifest={retrieved:new Date().toISOString().slice(0,10),files:{}};
+const pinned=new Map();
+for(const country of ['united-kingdom','spain','france','italy']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
+async function download(name,url,metadata={}){
+ if(pinned.has(name)){url=pinned.get(name).url;metadata=pinned.get(name);}
+ const response=await fetch(url,{signal:AbortSignal.timeout(300000),headers:{'User-Agent':'boundary-atlas (github.com/Ethan-H147/china_interactive_map)',Accept:'application/json'}});if(!response.ok)throw Error(url+' '+response.status);
+ let bytes=Buffer.from(await response.arrayBuffer());
+ if(bytes.toString('utf8',0,100).startsWith('version https://git-lfs')){const r=await fetch(url.replace('github.com/wmgeolab/geoBoundaries/raw/','media.githubusercontent.com/media/wmgeolab/geoBoundaries/'));if(!r.ok)throw Error('LFS '+r.status);bytes=Buffer.from(await r.arrayBuffer());}
+ const sha256=createHash('sha256').update(bytes).digest('hex');
+ if(pinned.has(name)&&pinned.get(name).sha256!==sha256)throw Error('Pinned boundary source changed: '+name+'; review the updated source before replacing its snapshot.');
+ fs.writeFileSync(path.join(root,name),bytes);
+ manifest.files[name]={url,...metadata,sha256,bytes:bytes.length};
+ console.log(name,bytes.length);
+}
+async function geoBoundaries(name,iso,level,licenseURL){
+ const meta=await(await fetch('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/')).json();
+ await download(name,meta.gjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,licenseURL,count:Number(meta.admUnitCount),via:'geoBoundaries gbOpen '+iso+' '+level});
+}
+const ons='https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Countries_December_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=1%3D1&outFields=CTRY24CD,CTRY24NM&outSR=4326&f=geojson';
+await download('gbr-countries-2024-bgc.geojson',ons,{provider:'Office for National Statistics, Countries (December 2024) Boundaries UK BGC',year:2024,license:'Open Government Licence v3.0',licenseURL:'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/',attribution:'Source: Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right 2024'});
+await geoBoundaries('esp-adm0.geojson','ESP','ADM0','https://creativecommons.org/licenses/by/4.0/');
+await geoBoundaries('fra-adm1.geojson','FRA','ADM1','https://www.etalab.gouv.fr/licence-ouverte-open-licence/');
+await geoBoundaries('ita-adm0.geojson','ITA','ADM0','https://creativecommons.org/licenses/by/3.0/');
+// Neighbouring countries: used only to tell land frontier from coastline (an outline
+// edge with foreign land just beyond it is a frontier). None of their geometry is shipped.
+// The most detailed land-only level is used where ADM0 is coarse (Belgium, Ireland, Slovenia).
+for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1']]){
+ const meta=await(await fetch('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/')).json();
+ await download('neighbour-'+iso.toLowerCase()+'-'+level.toLowerCase()+'.geojson',meta.gjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,via:'geoBoundaries gbOpen '+iso+' '+level,use:'Classifies land frontier; no geometry is copied.'});
+}
+// OpenStreetMap separates land border ways from maritime ones. Where a neighbour's outline
+// includes territorial waters, these land ways say exactly where the land frontier ends.
+for(const [id,name] of [[1124039,'Monaco'],[1154756,'Ceuta'],[1154757,'Melilla'],[218657,'Slovenia']])await download('osm-relation-'+id+'.json','https://api.openstreetmap.org/api/0.6/relation/'+id+'/full.json',{provider:'OpenStreetMap contributors, boundary relation '+id+' ('+name+')',license:'Open Data Commons Open Database License 1.0',licenseURL:'https://www.openstreetmap.org/copyright',use:'Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.'});
+await download('ne-10m-land-boundaries.geojson','https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson',{provider:'Natural Earth 1:10m admin 0 land boundary lines v5.1.2',license:'Public domain',licenseURL:'https://www.naturalearthdata.com/about/terms-of-use/',use:'Classifies outline edges as land frontier or coastline; no geometry is copied.'});
+fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');

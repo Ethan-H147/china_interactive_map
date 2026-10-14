@@ -8,10 +8,14 @@ const world=await response.json();
 // Selectable countries already have their own reconciled coastal silhouettes.
 // Exclude the coarse versions so they cannot protrude behind detailed coasts.
 const portals=new Set(['CHN','TWN','KOR','PRK','MNG','JPN','PHL','IDN','RUS']);
-const previews={BRA:'brazil',ARG:'argentina',URY:'uruguay',MYS:'malaysia',SGP:'singapore',ZAF:'south-africa',SWZ:'eswatini',LSO:'lesotho',BWA:'botswana',NAM:'namibia'};
-const features=world.features.filter(f=>!portals.has(f.properties.ADM0_A3)).map(f=>({
- type:'Feature',properties:{country:previews[f.properties.ADM0_A3]||''},geometry:f.geometry
-}));
+const previews={BRA:'brazil',ARG:'argentina',URY:'uruguay',MYS:'malaysia',SGP:'singapore',ZAF:'south-africa',SWZ:'eswatini',LSO:'lesotho',BWA:'botswana',NAM:'namibia',GBR:'united-kingdom',ESP:'spain',FRA:'france',ITA:'italy'};
+// France's detailed outline is metropolitan only; French Guiana keeps its silhouette.
+const overseas=(iso,polygon)=>iso==='FRA'&&polygon[0][0][0]<-30;
+const features=world.features.filter(f=>!portals.has(f.properties.ADM0_A3)).flatMap(f=>{
+ const iso=f.properties.ADM0_A3,parts=f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates];
+ const home=parts.filter(p=>!overseas(iso,p)),away=parts.filter(p=>overseas(iso,p));
+ return [{type:'Feature',properties:{country:previews[iso]||''},geometry:home.length===1?{type:'Polygon',coordinates:home[0]}:{type:'MultiPolygon',coordinates:home}},...(away.length?[{type:'Feature',properties:{country:''},geometry:{type:'MultiPolygon',coordinates:away}}]:[])];
+});
 const bytes=gzipSync(JSON.stringify({type:'FeatureCollection',features}),{level:9});
 await fs.writeFile('dist/data/world-land.bin',bytes);
 await fs.writeFile('dist/data/world-land-sources.json',JSON.stringify({

@@ -14,6 +14,7 @@ try{
   modules.AtlasFlagViewer='flag-viewer.mjs';
   modules.AtlasRegionColors='region-colors.mjs';
   modules.AtlasSouthernAfrica='southern-africa.mjs';
+  modules.AtlasEurope='europe.mjs';
   modules.AtlasChinaLevels='china-levels.mjs';
   modules.AtlasSheet='mobile-sheet.mjs';
   const rendererPromise=import('./vendor/maplibre-gl.mjs');

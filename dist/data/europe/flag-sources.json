@@ -1,0 +1,52 @@
+{
+  "flags": {
+    "united-kingdom": {
+      "file": "vendor/flag-gb.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_(1-2).svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(1-2).svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-gb.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(1-2).svg",
+      "width": 1200,
+      "height": 600,
+      "sha256": "e00a356422bfd478c75491f4403f3c096799f4ebba56944eb520022975d06e13"
+    },
+    "spain": {
+      "file": "vendor/flag-es.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-es.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain.svg",
+      "width": 750,
+      "height": 500,
+      "sha256": "af0b860424a9bd6af63dce070d7f7cb4c7b490c6269fc1cd4f35c45679a20500"
+    },
+    "france": {
+      "file": "vendor/flag-fr.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-fr.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg",
+      "width": 900,
+      "height": 600,
+      "sha256": "e949902c7677422d88137d385b9edbe91323470c7933824cc968aca3965fc37c"
+    },
+    "italy": {
+      "file": "vendor/flag-it.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-it.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy.svg",
+      "width": 1500,
+      "height": 1000,
+      "sha256": "c939e50605c5a08df1aaf19818f74d2919a9d3c3b7aa7cd90520b8bfc9c5dddc"
+    }
+  }
+}

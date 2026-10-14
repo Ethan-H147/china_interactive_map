@@ -300,3 +300,20 @@ Statistics: South Africa has population at all three levels (Statistics South Af
 On phones, countries with three levels show the current level as one toggle; tapping it lists every level.
 
 Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia`; check with `npm run test:southern-africa`, `npm run test:botswana-namibia` and `npm run test:south-africa-settlements`.
+
+## Europe (developer mode)
+
+The United Kingdom, Spain, France and Italy are outlines only for now: each country is a single selectable region with no level toggle, and all four are listed in `developerCountries`. `dist/europe.mjs` adds them through the shared regional-country page only once developer mode allows one, so public visitors download none of their geometry (only the 2 KB module).
+
+| Country | Coverage | Outline source | Licence |
+|---|---|---|---|
+| United Kingdom | Great Britain, Northern Ireland and their islands | Office for National Statistics, Countries (December 2024) BGC | Open Government Licence v3.0 |
+| Spain | Peninsula, Balearic and Canary Islands, Ceuta, Melilla | Instituto Geográfico Nacional via geoBoundaries | CC BY 4.0 |
+| France | Metropolitan France and Corsica (overseas regions not yet included) | IGN regions via geoBoundaries, dissolved | Etalab Open Licence 2.0 |
+| Italy | Mainland and islands; San Marino and Vatican City remain enclaves | ISTAT via geoBoundaries | CC BY 3.0 |
+
+Spain's and Italy's frontier edges are moved onto the French outline, so each pair shares one edge, and Spain's Llívia takes the exact shape of its enclave in France. Land frontiers are drawn and coastlines are not. An outline edge is a frontier when a point 100–600 m beyond it lies inside a neighbouring country and a Natural Earth land boundary line is within 4 km. Neighbouring outlines (geoBoundaries) and OpenStreetMap land border ways are used only for this classification; the OpenStreetMap ways decide where the frontiers with Monaco, Ceuta, Melilla and Slovenia meet the sea, because those neighbours' outlines include territorial waters. France holds its frontiers with Spain and Italy, so every edge is drawn once.
+
+Non-atlas neighbours (Portugal, Switzerland, Germany, Ireland and others) are still the Natural Earth 1:110m background silhouettes, which do not meet the detailed frontiers.
+
+Rebuild with `npm run build:europe`; check with `npm run test:europe` (frontier lengths and continuity, enclaves, coastal ends, no coastline strokes, developer gating).

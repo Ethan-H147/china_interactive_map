@@ -2,7 +2,7 @@
 (()=>{
  const key='boundary-atlas-developer-v1';
  // Countries listed here load only in developer mode until they are ready for release.
- const developerCountries=[];
+ const developerCountries=['united-kingdom','spain','france','italy'];
  let enabled=false;try{enabled=sessionStorage.getItem(key)==='true';}catch{}
  function createSequence(){
   const phrase='dev mode';let buffer='',last=0;

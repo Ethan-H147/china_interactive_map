@@ -5,7 +5,7 @@ let atlasStarting=true,restoringView=false;
 let zoomLock;
 const initialCountry=window.AtlasEntry?.initial;
 const initialBackground=window.AtlasEntry?.countries[initialCountry]?.background||'#f4f0e7';
-const initialPreview=window.AtlasSouthAmerica.countries[initialCountry]||window.AtlasSoutheastAsia.countries[initialCountry]||window.AtlasSouthernAfrica.configurations[initialCountry]||(initialCountry==='russia'?window.AtlasRussia.configuration:null);
+const initialPreview=window.AtlasSouthAmerica.countries[initialCountry]||window.AtlasSoutheastAsia.countries[initialCountry]||window.AtlasSouthernAfrica.configurations[initialCountry]||window.AtlasEurope.configurations[initialCountry]||(initialCountry==='russia'?window.AtlasRussia.configuration:null);
 const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:initialCountry==='russia',dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:{antialias:true},fadeDuration:0});
 map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
 window.AtlasRegionColorController=window.AtlasRegionColors.createRegionColors(map,{changed:()=>saveViewSoon(),getLevel:()=>currentAtlas()?.getMode?.()||($('mode-province').getAttribute('aria-pressed')==='true'?1:2)});
@@ -59,7 +59,7 @@ function chinaPackUrl(){
 }
 if(initialCountry==='china')chinaPackUrl().catch(()=>{});
 let comparison,southAmerica;
-let normalProvinceColors,atlasMode='china',koreaAtlas,mongoliaAtlas,japanAtlas,philippinesAtlas,indonesiaAtlas,malaysiaAtlas,singaporeAtlas,russiaAtlas,southernAfrica,capitalDisplay,waterDisplay,satelliteDisplay,namingQuiz,placeTools;
+let normalProvinceColors,atlasMode='china',koreaAtlas,mongoliaAtlas,japanAtlas,philippinesAtlas,indonesiaAtlas,malaysiaAtlas,singaporeAtlas,russiaAtlas,southernAfrica,europe,capitalDisplay,waterDisplay,satelliteDisplay,namingQuiz,placeTools;
 const regionByCode=new Map();
 const homeBounds=[[73,17.3],[135.5,54]];
 const overview=window.AtlasLabels.createHoverOverview(map,{blocked:()=>cameraBusy||countrySwitching||!allReady||quiz.active,resolve:(point,id)=>{if(atlasMode!=='china')return currentAtlas()?.hoverAt?.(point,id);const region=id?regionByCode.get(Number(id)):pickedRegion(point);if(!region)return;const p=region.feature.properties;return {en:englishName(p),local:p.name,kind:kind(p)};}});
@@ -262,11 +262,12 @@ function waitForCountrySources(ids,signal){
   if(signal.aborted)aborted();else check();
  });
 }
-function atlasFor(country){if(southernAfrica?.portals[country])return southernAfrica.portals[country];if(southAmerica?.portals[country])return southAmerica.portals[country];return country==='russia'?russiaAtlas:country==='korea'?koreaAtlas:country==='mongolia'?mongoliaAtlas:country==='japan'?japanAtlas:country==='philippines'?philippinesAtlas:country==='indonesia'?indonesiaAtlas:country==='malaysia'?malaysiaAtlas:country==='singapore'?singaporeAtlas:null;}
+function atlasFor(country){if(southernAfrica?.portals[country])return southernAfrica.portals[country];if(europe?.portals[country])return europe.portals[country];if(southAmerica?.portals[country])return southAmerica.portals[country];return country==='russia'?russiaAtlas:country==='korea'?koreaAtlas:country==='mongolia'?mongoliaAtlas:country==='japan'?japanAtlas:country==='philippines'?philippinesAtlas:country==='indonesia'?indonesiaAtlas:country==='malaysia'?malaysiaAtlas:country==='singapore'?singaporeAtlas:null;}
 function currentAtlas(){return atlasFor(atlasMode);}
 async function changeAtlas(next,animate=true,flight=false){
  if(window.AtlasDev&&!window.AtlasDev.allows(next))return false;
  if(!allReady||quiz.active||!koreaAtlas||!mongoliaAtlas||!japanAtlas||!window.AtlasEntry.countries[next])return false;
+ if(europe?.handles(next))await europe.ensure();
  const targetAtlas=atlasFor(next);if(next!=='china'&&!targetAtlas)return false;
  if(!countrySwitching&&!countryLoadFailed&&next===atlasMode&&(next==='china'?chinaReady:targetAtlas.ready))return true;
  if(countrySwitching&&next===requestedCountry)return false;
@@ -281,10 +282,10 @@ async function changeAtlas(next,animate=true,flight=false){
   currentAtlas()?.leave();clearHover();clearSelection();clearSearch();activeCode=null;atlasMode=next;
   window.AtlasRegionColorController?.setCountry(next);
   labels.forEach(label=>label.remove());labels.length=0;
-  $('china-sidebar').hidden=next!=='china';if($('mode-third'))$('mode-third').hidden=true;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
+  $('china-sidebar').hidden=next!=='china';if($('mode-third'))$('mode-third').hidden=true;$('mode-province').hidden=false;$('mode-prefecture').hidden=false;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:next!=='china'});
   syncCountryFills();syncLayers();updateLabels();koreaAtlas.context(next==='korea');mongoliaAtlas.context(next==='mongolia');japanAtlas.context(next==='japan');
-  for(const [country,id,color] of [...Object.values(window.AtlasSouthernAfrica?.configurations||{}).map(c=>[c.country,c.country+'-portal-fill',c.fill]),['russia','russia-portal-fill','#d8e2f0'],['china','china-context','#e9dfc9'],['korea','korea-portal-fill','#e7edf5'],['mongolia','mongolia-portal-fill','#d9e7ee'],['japan','japan-portal-fill','#fffdfd'],['philippines','philippines-portal-fill','#e7edf6'],['indonesia','indonesia-portal-fill','#fff5f3'],['malaysia','malaysia-portal-fill','#f5f0dd'],['singapore','singapore-portal-fill','#fff6f5']])if(map.getLayer(id))map.setPaintProperty(id,'fill-color',country===next?color:'#d7d7d3');
+  for(const [country,id,color] of [...[...Object.values(window.AtlasSouthernAfrica?.configurations||{}),...Object.values(window.AtlasEurope?.configurations||{})].map(c=>[c.country,c.country+'-portal-fill',c.fill]),['russia','russia-portal-fill','#d8e2f0'],['china','china-context','#e9dfc9'],['korea','korea-portal-fill','#e7edf5'],['mongolia','mongolia-portal-fill','#d9e7ee'],['japan','japan-portal-fill','#fffdfd'],['philippines','philippines-portal-fill','#e7edf6'],['indonesia','indonesia-portal-fill','#fff5f3'],['malaysia','malaysia-portal-fill','#f5f0dd'],['singapore','singapore-portal-fill','#fff6f5']])if(map.getLayer(id))map.setPaintProperty(id,'fill-color',country===next?color:'#d7d7d3');
   const bounds=targetAtlas?.bounds||(next==='china'?homeBounds:next==='korea'?[[124,33],[131.9,43.1]]:next==='japan'?[[122.8,24],[146.2,45.7]]:[[87.7,41.5],[120,52.2]]);
   await (next==='china'?loadChina():targetAtlas.warm());
   if(epoch!==countryEpoch)return false;
@@ -324,7 +325,7 @@ function renderLabels(){
   waterDisplay?.sync();
   satelliteDisplay?.sync();
   if(cameraBusy||countrySwitching)return;
-  for(const portal of Object.values(southernAfrica?.portals||{}))if(!portal.active)portal.updateLabels();
+  for(const portal of [...Object.values(southernAfrica?.portals||{}),...Object.values(europe?.portals||{})])if(!portal.active)portal.updateLabels();
   if(atlasMode!=='china'){labels.forEach(label=>label.remove());labels.length=0;currentAtlas()?.updateLabels();return;}
   labels.forEach(label=>label.remove());labels.length=0;
   if(quiz.active&&quiz.type==='name'){for(const place of namingQuiz?.labels()||[]){const p=regionByCode.get(place.code)?.feature.properties;if(p)addLabel(p,place.zh);}return;}
@@ -393,7 +394,7 @@ function pickedRegion(point){
 }
 function countryAt(point){
  for(const id of ['south-america-fill','south-america-portal-fill'])if(map.getLayer(id)){const hit=map.queryRenderedFeatures(point,{layers:[id]})[0];if(hit)return hit.properties.country;}
- const countries={...Object.fromEntries(Object.keys(window.AtlasSouthernAfrica?.configurations||{}).flatMap(country=>[[country+'-portal-fill',country],...['first','second','third'].map(level=>[country+'-'+level+'-fill',country])])), 'russia-first-fill':'russia','russia-portal-fill':'russia','malaysia-first-fill':'malaysia','malaysia-portal-fill':'malaysia','singapore-first-fill':'singapore','singapore-portal-fill':'singapore','philippines-first-fill':'philippines','philippines-portal-fill':'philippines','indonesia-first-fill':'indonesia','indonesia-portal-fill':'indonesia','japan-first-fill':'japan','japan-portal-fill':'japan','korea-first-fill':'korea','korea-portal-fill':'korea','mongolia-first-fill':'mongolia','mongolia-portal-fill':'mongolia','province-fill':'china','province-fragment-fill':'china','china-context':'china'};
+ const countries={...Object.fromEntries([...Object.keys(window.AtlasSouthernAfrica?.configurations||{}),...Object.keys(europe?.portals||{})].flatMap(country=>[[country+'-portal-fill',country],...['first','second','third'].map(level=>[country+'-'+level+'-fill',country])])), 'russia-first-fill':'russia','russia-portal-fill':'russia','malaysia-first-fill':'malaysia','malaysia-portal-fill':'malaysia','singapore-first-fill':'singapore','singapore-portal-fill':'singapore','philippines-first-fill':'philippines','philippines-portal-fill':'philippines','indonesia-first-fill':'indonesia','indonesia-portal-fill':'indonesia','japan-first-fill':'japan','japan-portal-fill':'japan','korea-first-fill':'korea','korea-portal-fill':'korea','mongolia-first-fill':'mongolia','mongolia-portal-fill':'mongolia','province-fill':'china','province-fragment-fill':'china','china-context':'china'};
  return window.AtlasMotion.queryRegions(map,point,{layers:Object.keys(countries)}).map(f=>countries[f.layer.id]).find(Boolean);
 }
 map.on('click',event=>{
@@ -478,9 +479,10 @@ async function init(){try{
   singaporeAtlas=await window.AtlasSoutheastAsia.addCountryPortal(map,archipelagoHost,'singapore');
   russiaAtlas=await window.AtlasRussia.addRussiaPortal(map,archipelagoHost);
   southernAfrica=await window.AtlasSouthernAfrica.addSouthernAfrica(map,archipelagoHost);
+  europe=window.AtlasEurope.createEurope(map,archipelagoHost);await europe.ensure();
   addSource('shared-context-borders',await json('data/shared-context-borders.bin'),window.AtlasLines.internationalLineSourceOptions);
   window.AtlasLines.addInternationalBorder(map,'shared-context-borders','shared-context-borders');
-  satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const panel=$(window.AtlasSouthernAfrica.configurations[atlasMode]?window.AtlasSouthernAfrica.configurations[atlasMode].prefix+'-layers-panel':atlasMode==='russia'?'ru-layers-panel':atlasMode==='korea'?'k-layers-panel':atlasMode==='mongolia'?'m-layers-panel':atlasMode==='japan'?'j-layers-panel':atlasMode==='philippines'?'ph-layers-panel':atlasMode==='indonesia'?'id-layers-panel':atlasMode==='malaysia'?'my-layers-panel':atlasMode==='singapore'?'sg-layers-panel':['brazil','uruguay','argentina'].includes(atlasMode)?'south-layers-panel':'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
+  satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const regional=window.AtlasSouthernAfrica.configurations[atlasMode]||window.AtlasEurope.configurations[atlasMode],panel=$(regional?regional.prefix+'-layers-panel':atlasMode==='russia'?'ru-layers-panel':atlasMode==='korea'?'k-layers-panel':atlasMode==='mongolia'?'m-layers-panel':atlasMode==='japan'?'j-layers-panel':atlasMode==='philippines'?'ph-layers-panel':atlasMode==='indonesia'?'id-layers-panel':atlasMode==='malaysia'?'my-layers-panel':atlasMode==='singapore'?'sg-layers-panel':['brazil','uruguay','argentina'].includes(atlasMode)?'south-layers-panel':'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
   satelliteDisplay.sync();if($('satellite-layer').checked)$('satellite-layer').dispatchEvent(new Event('change'));
   const capitalsResponse=await fetch('data/capitals.json');
   if(!capitalsResponse.ok)throw new Error('Capital locations could not load');
@@ -489,7 +491,7 @@ async function init(){try{
 
   southAmerica=window.AtlasSouthAmerica.createSouthAmerica(map,{syncAppearance:()=>satelliteDisplay?.sync(),country:()=>atlasMode,isBusy:()=>quiz.active||countrySwitching,switchAtlas:changeAtlas,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{manual:camera.manual===true})});
   window.AtlasDev.mount({eligible:()=>atlasMode==='china'&&!quiz.active&&!countrySwitching&&selected?.layer.feature.properties.adcode===310105});
-  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();southernAfrica.syncDeveloper();malaysiaAtlas.syncDeveloper();singaporeAtlas.syncDeveloper();if(!window.AtlasDev.allows(atlasMode))await changeAtlas('argentina',false);});
+  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();southernAfrica.syncDeveloper();await europe.ensure();europe.syncDeveloper();malaysiaAtlas.syncDeveloper();singaporeAtlas.syncDeveloper();if(!window.AtlasDev.allows(atlasMode))await changeAtlas('argentina',false);});
   const requestedCountry=window.AtlasEntry.current;
   controls();if(requestedCountry&&requestedCountry!=='china')await changeAtlas(requestedCountry,false);else if(!window.AtlasView.fromHash(location.hash))await followPlaceLink();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));

@@ -25,8 +25,8 @@ for(const country of ['china','korea','mongolia','japan','philippines','indonesi
 }
 const fresh=boot();assert.equal(fresh.entry.initial,'china');assert.equal(fresh.location.hash,'#china');assert.equal(fresh.context.document.documentElement.dataset.atlas,'china');
 for(const country of ['south-africa','botswana','namibia','eswatini','lesotho'])assert.equal(boot('#'+country,'china').entry.initial,country,'Released southern African countries open publicly');
-// A country withheld from release opens only in developer mode.
-for(const country of ['lesotho']){const unreleased=[country];assert.equal(boot('#'+country,country,{unreleased}).entry.initial,'china','Development routes cannot open publicly');const dev=boot('#'+country,'china',{developer:true,unreleased});assert.equal(dev.entry.initial,country);assert.equal(dev.entry.fromHash('#'+country),country);assert.equal(dev.elements.get('home').textContent,'All '+dev.entry.countries[country].en);}
+// Countries withheld from release open only in developer mode.
+for(const country of ['united-kingdom','spain','france','italy']){const unreleased=['united-kingdom','spain','france','italy'];assert.equal(boot('#'+country,country,{unreleased}).entry.initial,'china','Development routes cannot open publicly');const dev=boot('#'+country,'china',{developer:true,unreleased});assert.equal(dev.entry.initial,country);assert.equal(dev.entry.fromHash('#'+country),country);assert.equal(dev.elements.get('home').textContent,'All '+dev.entry.countries[country].en);}
 const argentinaLink='#argentina/view='+encodeURIComponent(JSON.stringify({country:'argentina',selection:'AR-CITY-21'}));
 assert.equal(boot(argentinaLink,'japan').location.hash,argentinaLink,'Shared Argentine views open publicly without losing their selection');
 for(const [country,selection] of [['malaysia','MY-01'],['singapore','SG-PN']]){const hash='#'+country+'/view='+encodeURIComponent(JSON.stringify({country,selection}));assert.equal(boot(hash,'china').location.hash,hash,'Shared public views preserve their country and selection');}
