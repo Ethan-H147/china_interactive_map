@@ -8,6 +8,7 @@ import {merge,mesh} from 'topojson-client';
 import {readData} from './read-data.mjs';
 import {alignMongolia} from './mongolia-topology.mjs';
 import {polygons} from './international-topology.mjs';
+import {visibleSegments} from '../dist/adaptive-lines.mjs';
 
 const source=new URL('./mongolia-sources/',import.meta.url),out=new URL('../dist/data/',import.meta.url);
 const read=n=>JSON.parse(fs.readFileSync(new URL(n,source)));
@@ -69,7 +70,7 @@ for(let i=0;i<all.features.length;i++){
 const st=topology({second:fc(second)});
 const countries=fc([{type:'Feature',properties:{country:'MN',en:'Mongolia',mn:'Монгол'},geometry:merge(st,st.objects.second.geometries)}]);
 const t=topology({first:fc(first),second:fc(second),countries});
-const boundaries={first:mesh(t,t.objects.first,(a,b)=>a!==b),second:mesh(t,t.objects.second,(a,b)=>a!==b&&a.properties.parent===b.properties.parent),countries:mesh(t,t.objects.countries)};
+const boundaries={first:mesh(t,t.objects.first,(a,b)=>a!==b),second:mesh(t,t.objects.second,(a,b)=>a!==b&&a.properties.parent===b.properties.parent),countries:visibleSegments(mesh(t,t.objects.countries))};
 const data={first:fc(first),second:fc(second),countries,boundaries};
 fs.writeFileSync(new URL('mongolia-boundaries.bin',out),gzipSync(JSON.stringify(data)));
 fs.writeFileSync(new URL('mongolia-outline.bin',out),gzipSync(JSON.stringify(countries)));

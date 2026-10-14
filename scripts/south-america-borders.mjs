@@ -49,17 +49,28 @@ export function municipalBorders(regions,parent){
   const t=length?Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/length)):0;
   return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy)<=tolerance;
  });
- return fc(regions.features.map(region=>{
-  const coordinates=[];
+ // An edge shared by two cities is stored once, carrying both IDs: drawing it
+ // from each city's outline stacked two translucent strokes on the same edge.
+ const segment=(a,b)=>[a.join(),b.join()].sort().join('|'),owners=new Map();
+ for(const region of regions.features)for(const ring of rings(region.geometry))for(let i=1;i<ring.length;i++){
+  const key=segment(ring[i-1],ring[i]);if(!owners.has(key))owners.set(key,new Set());owners.get(key).add(region.properties.id);
+ }
+ const groups=new Map();
+ for(const region of regions.features){
+  const id=region.properties.id;
   for(const ring of rings(region.geometry)){
-   let path=[];
+   let path=[],group=null;
+   const flush=()=>{if(path.length>1)groups.get(group).coordinates.push(path);path=[];};
    for(let i=1;i<ring.length;i++){
     const a=ring[i-1],b=ring[i],mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
-    if(onExterior(a)&&onExterior(mid)&&onExterior(b)){if(path.length>1)coordinates.push(path);path=[];}
-    else{if(!path.length)path.push(a);path.push(b);}
+    const ids=[...owners.get(segment(a,b))].sort(),key=JSON.stringify(ids);
+    // The first listed city draws a shared edge; the others skip it.
+    if(onExterior(a)&&onExterior(mid)&&onExterior(b)||ids[0]!==id){flush();continue;}
+    if(key!==group){flush();group=key;if(!groups.has(key))groups.set(key,{regionIds:ids,coordinates:[]});}
+    if(!path.length)path.push(a);path.push(b);
    }
-   if(path.length>1)coordinates.push(path);
+   flush();
   }
-  return{type:'Feature',properties:{regionIds:[region.properties.id]},geometry:{type:'MultiLineString',coordinates}};
- }).filter(f=>f.geometry.coordinates.length));
+ }
+ return fc([...groups.values()].filter(g=>g.coordinates.length).map(({regionIds,coordinates})=>({type:'Feature',properties:{regionIds},geometry:{type:'MultiLineString',coordinates}})));
 }

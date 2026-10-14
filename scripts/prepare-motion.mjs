@@ -3,7 +3,7 @@ import {gzipSync,gunzipSync} from 'node:zlib';
 import mapshaper from 'mapshaper';
 import earcut,{flatten} from 'earcut';
 import {readData} from './read-data.mjs';
-import {lineData,borderSegments,omitBorderSegments} from '../dist/adaptive-lines.mjs';
+import {lineData,borderIndex,visibleSegments} from '../dist/adaptive-lines.mjs';
 
 // Separate, disposable geometry for camera motion. The authoritative datasets
 // and the precise sources used for picking and stationary views stay untouched.
@@ -14,8 +14,8 @@ const prefectures=display.subdivisions.features.filter(f=>f.properties.level==='
 const sources={provinces:display.provinces,prefectures:collection(prefectures),others:collection(display.subdivisions.features.filter(f=>!prefectures.includes(f))),'city-districts':districts.regions};
 const water=compressed('major-water.bin');
 sources['major-water']=water;
-const excluded=borderSegments(collection([...compressed('shared-context-borders.bin').features,...compressed('russia/international.bin').features]));
-for(const [id,geometry] of Object.entries(display.boundaries))sources[id+'-boundaries']=lineData(id==='province'?omitBorderSegments(geometry,excluded):geometry);
+const excluded=borderIndex(collection([...compressed('shared-context-borders.bin').features,...compressed('russia/international.bin').features]));
+for(const [id,geometry] of Object.entries(display.boundaries))sources[id+'-boundaries']=lineData(visibleSegments(geometry,{borders:id==='province'?excluded:undefined}));
 sources['city-district-boundaries']=lineData(districts.boundaries);
 for(const [country,file] of [['korea','korea-boundaries.bin'],['mongolia','mongolia-boundaries.bin']]){
  const data=compressed(file);

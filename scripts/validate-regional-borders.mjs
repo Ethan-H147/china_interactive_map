@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
 import {createRequire} from 'node:module';
 import {pathToFileURL} from 'node:url';
-import {lineData,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth,internationalBorderPaint,addInternationalBorder,borderSegments,omitBorderSegments} from '../dist/adaptive-lines.mjs';
+import {lineData,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth,internationalBorderPaint,addInternationalBorder,borderSegments,borderIndex,liesOnBorder,omitBorderSegments} from '../dist/adaptive-lines.mjs';
 import {configurations} from '../dist/southern-africa.mjs';
 
 const require=createRequire(import.meta.url);
@@ -61,11 +61,17 @@ for(const [name,collection] of [['China–Mongolia',chinaShared],['Russia–Mong
  for(const zoom of [3,4,5,6])assert(frontierError(tiles,coordinates,zoom)<widthAt(zoom)/2,name+' stays inside the common stroke');
  console.log(name+': identical gray, width and simplification; low-zoom stroke covers the original frontier.');
 }
-const excluded=borderSegments({features:[...chinaShared.features,...russiaShared.features]});
+const sharedFeatures=[...chinaShared.features,...russiaShared.features],excluded=borderSegments({features:sharedFeatures}),index=borderIndex({features:sharedFeatures});
 const display=(await import('./read-data.mjs')).readData('display-boundaries.json');
-const filtered=omitBorderSegments(display.boundaries.province,excluded);
+const filtered=omitBorderSegments(display.boundaries.province,index);
 assert([...borderSegments(lineData(filtered))].every(key=>!excluded.has(key)),'China subdivision strokes never duplicate resolved international segments');
 assert(filtered.coordinates.length>0,'Ordinary provincial boundaries remain');
+// Vertex matching missed collinear segments whose vertices differ between surveys;
+// those drew twice and alternated thick and thin along the frontier.
+let stacked=0;for(const p of filtered.coordinates)for(let i=1;i<p.length;i++)if(liesOnBorder(index,p[i-1],p[i]))stacked++;
+assert.equal(stacked,0,'No China subdivision stroke lies on an international line');
+for(const [a,b] of [[[124.2832,39.9491],[124.2831,39.9605]],[[132.0182,45.2483],[132.1669,45.2147]]]){const near=filtered.coordinates.some(p=>p.some(([x,y])=>Math.abs(x-a[0])<.001&&Math.abs(y-a[1])<.001));assert(near,'Outlines that leave the frontier (Yalu islands, Lake Khanka) stay drawn');}
+console.log('China province strokes: none lie on an international line; departures from the frontier remain.');
 const callbacks=new Map(),layers=[];
 const map={addLayer:l=>layers.push(l),on:(event,fn)=>callbacks.set(event,fn),getStyle:()=>({layers:layers.slice()}),moveLayer(id){const i=layers.findIndex(l=>l.id===id);layers.push(...layers.splice(i,1));}};
 for(const id of ['shared-context-borders','russia-international','south-land-boundaries','korea-countries-lines'])addInternationalBorder(map,id,id);

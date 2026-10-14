@@ -13,8 +13,8 @@
     "ZA-EC": {
       "file": "ZA-EC.bin",
       "count": 48,
-      "bytes": 124758,
-      "edgeCount": 216
+      "bytes": 124762,
+      "edgeCount": 217
     },
     "ZA-FS": {
       "file": "ZA-FS.bin",
@@ -25,7 +25,7 @@
     "ZA-GP": {
       "file": "ZA-GP.bin",
       "count": 74,
-      "bytes": 144212,
+      "bytes": 144210,
       "edgeCount": 446
     },
     "ZA-KZN": {
@@ -55,8 +55,8 @@
     "ZA-NW": {
       "file": "ZA-NW.bin",
       "count": 56,
-      "bytes": 117338,
-      "edgeCount": 199
+      "bytes": 117343,
+      "edgeCount": 200
     },
     "ZA-WC": {
       "file": "ZA-WC.bin",
@@ -6570,8 +6570,8 @@
   "validation": {
     "settlements": 500,
     "centersContained": 500,
-    "edges": 2181,
+    "edges": 2183,
     "sharedSelectedCityArcs": 286,
-    "totalGzipBytes": 1184631
+    "totalGzipBytes": 1184638
   }
 }

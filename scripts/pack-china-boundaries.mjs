@@ -5,6 +5,7 @@ import {gzipSync,gunzipSync} from 'node:zlib';
 import {readDataText} from './read-data.mjs';
 import {encodePack,decodePack} from '../dist/china-pack.mjs';
 import {describeChina} from '../dist/china-sources.mjs';
+import {borderIndex,hiddenSegments} from '../dist/adaptive-lines.mjs';
 
 // The gzip JSON files remain the build inputs. Visitors download this packed copy,
 // which shares each coordinate between provinces, subdivisions, lines and districts.
@@ -14,12 +15,19 @@ const texts={
  fragments:gunzipSync(fs.readFileSync('dist/data/fill-fragments.bin')).toString('utf8')
 };
 const sha=text=>createHash('sha256').update(text).digest('hex');
-const sources=Object.fromEntries(Object.entries(texts).map(([key,text])=>[key,sha(text)]));
-const packed=gzipSync(encodePack({...Object.fromEntries(Object.entries(texts).map(([key,text])=>[key,JSON.parse(text)])),sources}),{level:9});
+// Outline segments that must not be stroked: those on an international line drawn
+// by its own layer, and those already drawn once in the same layer.
+const borderFiles=['shared-context-borders.bin','russia/international.bin'],borderText=borderFiles.map(f=>gunzipSync(fs.readFileSync('dist/data/'+f)).toString('utf8'));
+const inputs=Object.fromEntries(Object.entries(texts).map(([key,text])=>[key,JSON.parse(text)]));
+const borders=borderIndex({features:borderText.flatMap(t=>JSON.parse(t).features)});
+const lineOmissions={...Object.fromEntries(Object.entries(inputs.display.boundaries).map(([name,geometry])=>[name,hiddenSegments(geometry,{borders:name==='province'?borders:undefined})])),districts:hiddenSegments(inputs.districts.boundaries)};
+const sources={...Object.fromEntries(Object.entries(texts).map(([key,text])=>[key,sha(text)])),borders:sha(borderText.join('\n'))};
+const packed=gzipSync(encodePack({...inputs,lineOmissions,sources}),{level:9});
 const decoded=decodePack(gunzipSync(packed));
 for(const key of Object.keys(texts))assert.equal(JSON.stringify(decoded[key]),texts[key],`Packed ${key} must decode to identical JSON`);
+assert.deepEqual(decoded.lineOmissions,lineOmissions);
 fs.writeFileSync('dist/data/china-boundaries.pack.bin',packed);
 // Names, bounds and part counts let the page work without the geometry.
 fs.writeFileSync('dist/data/china-regions.json',JSON.stringify(describeChina(decoded)));
 const before=JSON.parse(fs.readFileSync('dist/data/display-boundaries.parts.json')).compressedBytes+fs.statSync('dist/data/city-districts.bin').size+fs.statSync('dist/data/fill-fragments.bin').size;
-console.log(`Region index: ${(fs.statSync('dist/data/china-regions.json').size/1024).toFixed(0)} KB. Packed China boundaries: ${(packed.length/1048576).toFixed(2)} MB (from ${(before/1048576).toFixed(2)} MB), identical after decoding.`);
+console.log(`Region index: ${(fs.statSync('dist/data/china-regions.json').size/1024).toFixed(0)} KB. Packed China boundaries: ${(packed.length/1048576).toFixed(2)} MB (from ${(before/1048576).toFixed(2)} MB), identical after decoding. Hidden outline segments: ${Object.entries(lineOmissions).map(([k,r])=>k+' '+r.reduce((n,x)=>n+x[2],0)).join(', ')}.`);

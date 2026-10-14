@@ -11,7 +11,7 @@ import {merge,mesh,feature} from 'topojson-client';
 import {readData} from './read-data.mjs';
 import {alignCountry} from './international-topology.mjs';
 import {divisionBorders} from './south-america-borders.mjs';
-import {lineData} from '../dist/adaptive-lines.mjs';
+import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';
 import {sourceNames} from './russia-names.mjs';
 
 const source=path.resolve(process.argv[2]||'artifacts/russia-source'),out='dist/data/russia';
@@ -120,7 +120,7 @@ for(const [name,reference,allowed] of neighbors){
  for(const f of silhouette.features)for(const r of rings(f.geometry)){let run=[];const flush=()=>{if(run.length>1)paths.push(run);run=[];};for(let i=1;i<r.length;i++){const a=r[i-1],b=r[i],mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];if(allowed(a,b)&&near(a)&&near(mid)&&near(b)){if(!run.length)run.push(a);run.push(b);km+=Math.hypot((a[0]-b[0])*Math.cos(mid[1]*Math.PI/180),a[1]-b[1])*111.195;}else flush();}flush();}
  shared.push({type:'Feature',properties:{neighbor:name},geometry:{type:'MultiLineString',coordinates:paths}});reports[name].sharedKilometres=km;console.log('Shared border',name,km);
 }
-write('international.bin',lineData(fc(shared)));
+write('international.bin',lineData(visibleSegments(fc(shared))));
 const flags={};
 for(const [id,m] of Object.entries(metadata)){
  const sourceFile=path.join(source,'flags',id+(fs.existsSync(path.join(source,'flags',id+'.svg'))?'.svg':'.png'));

@@ -31,7 +31,7 @@ export function encodePack(input){
  const order=['subdivisions','provinces','boundaries','annotations'];
  const display=Object.fromEntries(order.filter(key=>key in input.display).map(key=>[key,encode(input.display[key])]));
  for(const key of Object.keys(input.display))if(!(key in display))display[key]=encode(input.display[key]);
- const structure={display:Object.fromEntries(Object.keys(input.display).map(key=>[key,display[key]])),districts:encode(input.districts),fragments:encode(input.fragments),sources:input.sources};
+ const structure={display:Object.fromEntries(Object.keys(input.display).map(key=>[key,display[key]])),districts:encode(input.districts),fragments:encode(input.fragments),lineOmissions:input.lineOmissions,sources:input.sources};
  const text=new TextEncoder().encode(JSON.stringify(structure));
  const count=xs.length,values=new BigUint64Array(count*2);
  const bits=new BigInt64Array(new Float64Array([...xs,...ys]).buffer);
@@ -77,5 +77,5 @@ export function decodePack(bytes){
   if(value.type&&'coordinates' in value)return {...value,coordinates:coordinates(value.coordinates)};
   return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,key==='properties'?item:decode(item)]));
  }
- return {display:decode(structure.display),districts:decode(structure.districts),fragments:decode(structure.fragments),sources:structure.sources};
+ return {display:decode(structure.display),districts:decode(structure.districts),fragments:decode(structure.fragments),lineOmissions:structure.lineOmissions||{},sources:structure.sources};
 }

@@ -58,7 +58,6 @@ function chinaPackUrl(){
  return chinaPack??=(window.AtlasEntry.takeEarly('chinaPack')||fetch('data/china-boundaries.pack.bin')).then(r=>{if(!r.ok)throw new Error(`China boundaries: ${r.status}`);return r.blob();}).then(blob=>URL.createObjectURL(blob)).catch(error=>{chinaPack=null;throw error;});
 }
 if(initialCountry==='china')chinaPackUrl().catch(()=>{});
-const blobUrl=url=>fetch(url).then(r=>{if(!r.ok)throw new Error(`${url}: ${r.status}`);return r.blob();}).then(blob=>URL.createObjectURL(blob));
 let comparison,southAmerica;
 let normalProvinceColors,atlasMode='china',koreaAtlas,mongoliaAtlas,japanAtlas,philippinesAtlas,indonesiaAtlas,malaysiaAtlas,singaporeAtlas,russiaAtlas,southernAfrica,capitalDisplay,waterDisplay,satelliteDisplay,namingQuiz,placeTools;
 const regionByCode=new Map();
@@ -414,22 +413,21 @@ map.getCanvas().addEventListener('mouseleave',clearHover);
 async function loadChina(){
  if(chinaReady)return;if(chinaLoading)return chinaLoading;
  chinaLoading=(async()=>{
-  const borderFiles=['data/shared-context-borders.bin','data/russia/international.bin'];
-  const [packUrl,borderUrls,china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([chinaPackUrl(),Promise.all(borderFiles.map(blobUrl)),(window.AtlasEntry.takeEarly('chinaRegions')||fetch('data/china-regions.json')).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
+  const [packUrl,china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([chinaPackUrl(),(window.AtlasEntry.takeEarly('chinaRegions')||fetch('data/china-regions.json')).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=china.provinces;
   // Each MapLibre worker unpacks the boundaries once and builds its own sources.
   // The blob URLs are released when every China source has loaded.
   const pending=new Set();
-  const chinaSource=(id,options,query='')=>{pending.add(id);addSource(id,'china-pack://'+id+'?pack='+encodeURIComponent(packUrl)+query,options);};
+  const chinaSource=(id,options)=>{pending.add(id);addSource(id,'china-pack://'+id+'?pack='+encodeURIComponent(packUrl),options);};
   // The two repaired fills use unsimplified triangles. Other regions use
   // subpixel tile simplification, retaining every original source coordinate.
   chinaSource('provinces');chinaSource('prefectures');chinaSource('others');
   chinaSource('provinces-fragments',fillSourceOptions);chinaSource('prefectures-fragments',fillSourceOptions);
   // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
-  // The stored geometry and selectable polygons retain full detail. Province
-  // outlines omit segments drawn by the international border layer.
-  for(const name of china.boundaries)chinaSource(name+'-boundaries',window.AtlasLines.lineSourceOptions,name==='province'?'&borders='+borderUrls.map(encodeURIComponent).join(','):'');
+  // The stored geometry and selectable polygons retain full detail. Outlines skip
+  // segments drawn by the international border layer or already drawn once.
+  for(const name of china.boundaries)chinaSource(name+'-boundaries',window.AtlasLines.lineSourceOptions);
   for(const name of ['provinces','prefectures','others'])chinaSource(name+'-selection-edges',window.AtlasLines.lineSourceOptions);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
   addFill('province-fill','provinces',provinceColor(),1);addFill('province-fragment-fill','provinces-fragments',provinceColor(),1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('prefecture-fragment-fill','prefectures-fragments','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
@@ -439,7 +437,7 @@ async function loadChina(){
   chinaSource('city-districts');
   chinaSource('city-district-boundaries',window.AtlasLines.lineSourceOptions);
   chinaSource('city-districts-selection-edges',window.AtlasLines.lineSourceOptions);
-  const release=event=>{if(pending.has(event.sourceId)&&event.isSourceLoaded)pending.delete(event.sourceId);if(!pending.size){map.off('sourcedata',release);for(const url of [packUrl,...borderUrls])URL.revokeObjectURL(url);chinaPack=null;}};map.on('sourcedata',release);
+  const release=event=>{if(pending.has(event.sourceId)&&event.isSourceLoaded)pending.delete(event.sourceId);if(!pending.size){map.off('sourcedata',release);URL.revokeObjectURL(packUrl);chinaPack=null;}};map.on('sourcedata',release);
   addFill('city-district-fill','city-districts','#dbc886',.02);
   addLine('city-district-lines','city-district-boundaries','#9f874e',.75,window.AtlasLines.adaptiveOpacity(.9));
   addSelection('city-district-selection','city-districts');

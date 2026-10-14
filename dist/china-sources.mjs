@@ -1,10 +1,10 @@
 // Builds China's MapLibre sources from the packed boundaries. Runs inside
 // MapLibre's workers, so the full geometry never reaches the page.
-import {lineData,omitBorderSegments} from './adaptive-lines.mjs';
+import {lineData,withoutSegments} from './adaptive-lines.mjs';
 import {isPrefectureLevel} from './china-levels.mjs';
 
 const featureCollection=features=>({type:'FeatureCollection',features});
-export function chinaSourceBuilders({display,districts,fragments}){
+export function chinaSourceBuilders({display,districts,fragments,lineOmissions={}}){
  const provinces=display.provinces.features;
  const prefectures=display.subdivisions.features.filter(f=>isPrefectureLevel(f.properties));
  const others=display.subdivisions.features.filter(f=>!isPrefectureLevel(f.properties));
@@ -18,17 +18,14 @@ export function chinaSourceBuilders({display,districts,fragments}){
   others:()=>featureCollection(others),
   'provinces-fragments':()=>triangleFills(provinces),
   'prefectures-fragments':()=>triangleFills(prefectures),
-  // Province outlines omit segments drawn by the international border layer.
-  ...Object.fromEntries(Object.entries(display.boundaries).map(([name,geometry])=>[name+'-boundaries',({excluded}={})=>{
-   if(name!=='province')return lineData(geometry);
-   if(!excluded)throw Error('Province outlines need the international border segments');
-   return lineData(omitBorderSegments(geometry,excluded));
-  }])),
+  // Hidden segments (on an international line, or already drawn) are found when
+  // the pack is built; see hiddenSegments in adaptive-lines.mjs.
+  ...Object.fromEntries(Object.entries(display.boundaries).map(([name,geometry])=>[name+'-boundaries',()=>lineData(withoutSegments(geometry,lineOmissions[name]||[]))])),
   'provinces-selection-edges':()=>lineData(display.provinces),
   'prefectures-selection-edges':()=>lineData(featureCollection(prefectures)),
   'others-selection-edges':()=>lineData(featureCollection(others)),
   'city-districts':()=>districts.regions,
-  'city-district-boundaries':()=>lineData(districts.boundaries),
+  'city-district-boundaries':()=>lineData(withoutSegments(districts.boundaries,lineOmissions.districts||[])),
   'city-districts-selection-edges':()=>lineData(districts.regions)
  };
 }

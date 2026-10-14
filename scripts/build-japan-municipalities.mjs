@@ -3,7 +3,7 @@ import {gzipSync,gunzipSync,inflateRawSync} from 'node:zlib';
 import mapshaper from 'mapshaper';
 import {topology} from 'topojson-server';
 import {mesh} from 'topojson-client';
-import {lineData} from '../dist/adaptive-lines.mjs';
+import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';
 const rawDir='scripts/japan-sources/municipalities/',out='dist/data/japan-local/';
 fs.mkdirSync(out,{recursive:true});
 const fc=features=>({type:'FeatureCollection',features});
@@ -60,7 +60,7 @@ for(let i=1;i<=47;i++){
 fs.writeFileSync(rawDir+'missing-names.json',JSON.stringify(missing,null,2));if(missing.length)throw Error('Missing romanized names: '+missing.length+'; see '+rawDir+'missing-names.json');
 const municipalities=records.filter(p=>p.level===2),claimed=municipalities.filter(p=>p.disputed).length;
 const catalogue=write('catalogue.bin',{records,chunks,municipalities:municipalities.length,wards,claimed});
-const first=fc(prefectures),t=topology({regions:first}),boundaries=fc([{type:'Feature',properties:{},geometry:mesh(t,t.objects.regions)}]);fs.writeFileSync('dist/data/japan-boundaries.bin',gzipSync(JSON.stringify({first,boundaries}),{level:9}));
+const first=fc(prefectures),t=topology({regions:first}),boundaries=fc([{type:'Feature',properties:{},geometry:visibleSegments(mesh(t,t.objects.regions))}]);fs.writeFileSync('dist/data/japan-boundaries.bin',gzipSync(JSON.stringify({first,boundaries}),{level:9}));
 const light=await commands(first,'-simplify dp interval=500 keep-shapes');
 fs.writeFileSync('dist/data/japan-context.bin',gzipSync(JSON.stringify(light),{level:9}));
 fs.writeFileSync('dist/data/japan-motion.bin',gzipSync(JSON.stringify({'japan-first':light,'japan-first-edges':lineData(light),'japan-portal':light}),{level:9}));

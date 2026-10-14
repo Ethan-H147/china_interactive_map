@@ -4,6 +4,7 @@ import zlib from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {createRequire} from 'node:module';
+import {visibleSegments} from '../dist/adaptive-lines.mjs';
 
 const source='scripts/statistics-sources/south-africa-settlement-boundaries';
 const output='dist/data/southern-africa/south-africa/settlement-boundaries';
@@ -53,11 +54,11 @@ for(const provinceId of [...new Set(records.map(r=>r.provinceId))].sort()){
  }
  const edges=[...selectedArcs].map(([a,owners])=>({type:'Feature',properties:{owners:[...owners].sort()},geometry:{type:'LineString',coordinates:topology.arcs[a].map(p=>p.map(n=>+n.toFixed(6)))}}));
  for(const edge of edges)if(edge.properties.owners.length>1)shared++;
- const payload={year:2011,scope:'Census main place',regions:fc(features),boundaries:fc(edges)};
+ const payload={year:2011,scope:'Census main place',regions:fc(features),boundaries:visibleSegments(fc(edges))};
  const bin=zlib.gzipSync(JSON.stringify(payload),{level:9}),file=provinceId+'.bin';
  fs.writeFileSync(path.join(output,file),bin);
- manifest.provinces[provinceId]={file,count:members.length,bytes:bin.length,edgeCount:edges.length};
- totalBytes+=bin.length;totalEdges+=edges.length;
+ manifest.provinces[provinceId]={file,count:members.length,bytes:bin.length,edgeCount:payload.boundaries.features.length};
+ totalBytes+=bin.length;totalEdges+=payload.boundaries.features.length;
  console.log(provinceId,members.length,'cities',edges.length,'edges',bin.length,'gzip bytes');
 }
 if(Object.keys(manifest.cities).length!==500)throw Error('Expected every 500 settlement polygon');
