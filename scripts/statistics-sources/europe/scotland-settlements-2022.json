@@ -1,0 +1,4030 @@
+{
+ "retrieved": "2026-10-14",
+ "source": "https://spatialdata.gov.scot/geonetwork/srv/api/records/3d4b28c3-180d-4a21-8771-3193aa5f2e8d",
+ "values": {
+  "S53000001": {
+   "name": "Aberchirder",
+   "population": 1187,
+   "center": [
+    -2.6218,
+    57.56299
+   ]
+  },
+  "S53000002": {
+   "name": "Aberdeen, Milltimber, and Peterculter",
+   "population": 215298,
+   "center": [
+    -2.13806,
+    57.15153
+   ]
+  },
+  "S53000003": {
+   "name": "Aberdour",
+   "population": 1636,
+   "center": [
+    -3.29751,
+    56.05329
+   ]
+  },
+  "S53000004": {
+   "name": "Aberfeldy",
+   "population": 1886,
+   "center": [
+    -3.86373,
+    56.6203
+   ]
+  },
+  "S53000005": {
+   "name": "Aberfoyle",
+   "population": 737,
+   "center": [
+    -4.38849,
+    56.17897
+   ]
+  },
+  "S53000006": {
+   "name": "Aberlady",
+   "population": 1365,
+   "center": [
+    -2.86039,
+    56.00759
+   ]
+  },
+  "S53000007": {
+   "name": "Aberlour",
+   "population": 1014,
+   "center": [
+    -3.22334,
+    57.46969
+   ]
+  },
+  "S53000008": {
+   "name": "Abernethy",
+   "population": 1425,
+   "center": [
+    -3.31063,
+    56.33351
+   ]
+  },
+  "S53000009": {
+   "name": "Aboyne",
+   "population": 2937,
+   "center": [
+    -2.79408,
+    57.07323
+   ]
+  },
+  "S53000010": {
+   "name": "Addiewell and Stoneyburn",
+   "population": 3250,
+   "center": [
+    -3.61983,
+    55.84279
+   ]
+  },
+  "S53000011": {
+   "name": "Aidrie, Hamilton and Motherwell",
+   "population": 300371,
+   "center": [
+    -3.98727,
+    55.81394
+   ]
+  },
+  "S53000012": {
+   "name": "Airth",
+   "population": 1696,
+   "center": [
+    -3.76636,
+    56.06577
+   ]
+  },
+  "S53000013": {
+   "name": "Alford",
+   "population": 2792,
+   "center": [
+    -2.70394,
+    57.23281
+   ]
+  },
+  "S53000014": {
+   "name": "Allanton",
+   "population": 1047,
+   "center": [
+    -3.83419,
+    55.79921
+   ]
+  },
+  "S53000015": {
+   "name": "Alloa and Sauchie",
+   "population": 21074,
+   "center": [
+    -3.79167,
+    56.11729
+   ]
+  },
+  "S53000016": {
+   "name": "Almondbank",
+   "population": 1359,
+   "center": [
+    -3.51304,
+    56.41443
+   ]
+  },
+  "S53000017": {
+   "name": "Alness",
+   "population": 5943,
+   "center": [
+    -4.26216,
+    57.69572
+   ]
+  },
+  "S53000018": {
+   "name": "Alva",
+   "population": 4815,
+   "center": [
+    -3.79541,
+    56.15268
+   ]
+  },
+  "S53000019": {
+   "name": "Alyth",
+   "population": 2345,
+   "center": [
+    -3.22823,
+    56.62134
+   ]
+  },
+  "S53000020": {
+   "name": "Annan",
+   "population": 8695,
+   "center": [
+    -3.25266,
+    54.98811
+   ]
+  },
+  "S53000021": {
+   "name": "Annbank",
+   "population": 905,
+   "center": [
+    -4.52212,
+    55.47428
+   ]
+  },
+  "S53000022": {
+   "name": "Anstruther",
+   "population": 3928,
+   "center": [
+    -2.69541,
+    56.22469
+   ]
+  },
+  "S53000023": {
+   "name": "Arbroath",
+   "population": 23481,
+   "center": [
+    -2.59291,
+    56.56456
+   ]
+  },
+  "S53000024": {
+   "name": "Ardersier",
+   "population": 1176,
+   "center": [
+    -4.03424,
+    57.56703
+   ]
+  },
+  "S53000025": {
+   "name": "Ardrishaig",
+   "population": 1252,
+   "center": [
+    -5.44927,
+    56.01887
+   ]
+  },
+  "S53000026": {
+   "name": "Armadale",
+   "population": 12568,
+   "center": [
+    -3.69576,
+    55.89578
+   ]
+  },
+  "S53000027": {
+   "name": "Auchenblae",
+   "population": 567,
+   "center": [
+    -2.4486,
+    56.90046
+   ]
+  },
+  "S53000028": {
+   "name": "Auchinleck",
+   "population": 3683,
+   "center": [
+    -4.29318,
+    55.4697
+   ]
+  },
+  "S53000029": {
+   "name": "Auchinloch",
+   "population": 852,
+   "center": [
+    -4.14588,
+    55.91086
+   ]
+  },
+  "S53000030": {
+   "name": "Auchterarder",
+   "population": 6061,
+   "center": [
+    -3.70976,
+    56.29426
+   ]
+  },
+  "S53000031": {
+   "name": "Auchtermuchty",
+   "population": 2042,
+   "center": [
+    -3.23478,
+    56.29259
+   ]
+  },
+  "S53000032": {
+   "name": "Auldearn",
+   "population": 708,
+   "center": [
+    -3.80681,
+    57.5754
+   ]
+  },
+  "S53000033": {
+   "name": "Aviemore",
+   "population": 2832,
+   "center": [
+    -3.82354,
+    57.19657
+   ]
+  },
+  "S53000034": {
+   "name": "Avoch",
+   "population": 1073,
+   "center": [
+    -4.17501,
+    57.5682
+   ]
+  },
+  "S53000035": {
+   "name": "Avonbridge",
+   "population": 607,
+   "center": [
+    -3.74374,
+    55.93415
+   ]
+  },
+  "S53000036": {
+   "name": "Ayr",
+   "population": 61959,
+   "center": [
+    -4.61181,
+    55.47225
+   ]
+  },
+  "S53000037": {
+   "name": "Ayton",
+   "population": 650,
+   "center": [
+    -2.12568,
+    55.84117
+   ]
+  },
+  "S53000038": {
+   "name": "Baile a'Mhanaich (Balivanich)",
+   "population": 532,
+   "center": [
+    -7.36665,
+    57.4704
+   ]
+  },
+  "S53000039": {
+   "name": "Balfron",
+   "population": 1981,
+   "center": [
+    -4.33249,
+    56.07038
+   ]
+  },
+  "S53000040": {
+   "name": "Balintore",
+   "population": 1007,
+   "center": [
+    -3.91254,
+    57.75577
+   ]
+  },
+  "S53000041": {
+   "name": "Ballachulish",
+   "population": 685,
+   "center": [
+    -5.13376,
+    56.67594
+   ]
+  },
+  "S53000042": {
+   "name": "Ballater",
+   "population": 1381,
+   "center": [
+    -3.04254,
+    57.0477
+   ]
+  },
+  "S53000043": {
+   "name": "Ballingry, Lochore and Crosshill",
+   "population": 5818,
+   "center": [
+    -3.32401,
+    56.16328
+   ]
+  },
+  "S53000044": {
+   "name": "Balmedie",
+   "population": 2396,
+   "center": [
+    -2.05691,
+    57.24932
+   ]
+  },
+  "S53000045": {
+   "name": "Balmullo",
+   "population": 1321,
+   "center": [
+    -2.92924,
+    56.37916
+   ]
+  },
+  "S53000046": {
+   "name": "Banchory",
+   "population": 7581,
+   "center": [
+    -2.4967,
+    57.05518
+   ]
+  },
+  "S53000047": {
+   "name": "Banff",
+   "population": 3968,
+   "center": [
+    -2.52925,
+    57.6646
+   ]
+  },
+  "S53000048": {
+   "name": "Bankfoot",
+   "population": 1254,
+   "center": [
+    -3.51531,
+    56.50104
+   ]
+  },
+  "S53000049": {
+   "name": "Bathgate",
+   "population": 27495,
+   "center": [
+    -3.64147,
+    55.8959
+   ]
+  },
+  "S53000050": {
+   "name": "Beauly",
+   "population": 1414,
+   "center": [
+    -4.4613,
+    57.48355
+   ]
+  },
+  "S53000051": {
+   "name": "Beith",
+   "population": 5761,
+   "center": [
+    -4.63114,
+    55.75107
+   ]
+  },
+  "S53000052": {
+   "name": "Bellsbank",
+   "population": 1295,
+   "center": [
+    -4.39699,
+    55.31349
+   ]
+  },
+  "S53000053": {
+   "name": "Biggar",
+   "population": 2742,
+   "center": [
+    -3.52136,
+    55.62427
+   ]
+  },
+  "S53000054": {
+   "name": "Birkhill and Muirhead",
+   "population": 1950,
+   "center": [
+    -3.05825,
+    56.49716
+   ]
+  },
+  "S53000055": {
+   "name": "Bishopton",
+   "population": 10043,
+   "center": [
+    -4.50377,
+    55.90593
+   ]
+  },
+  "S53000056": {
+   "name": "Blackburn (Aberdeenshire)",
+   "population": 2992,
+   "center": [
+    -2.28805,
+    57.20683
+   ]
+  },
+  "S53000057": {
+   "name": "Blackford",
+   "population": 913,
+   "center": [
+    -3.78087,
+    56.26034
+   ]
+  },
+  "S53000058": {
+   "name": "Blackridge",
+   "population": 2089,
+   "center": [
+    -3.76107,
+    55.88002
+   ]
+  },
+  "S53000059": {
+   "name": "Blairgowrie",
+   "population": 9433,
+   "center": [
+    -3.33448,
+    56.58196
+   ]
+  },
+  "S53000060": {
+   "name": "Blairhall",
+   "population": 1106,
+   "center": [
+    -3.60164,
+    56.0887
+   ]
+  },
+  "S53000061": {
+   "name": "Blairmore, Kilmun and Strone",
+   "population": 656,
+   "center": [
+    -4.89782,
+    55.9866
+   ]
+  },
+  "S53000062": {
+   "name": "Bo'ness",
+   "population": 14885,
+   "center": [
+    -3.60763,
+    56.01043
+   ]
+  },
+  "S53000063": {
+   "name": "Boddam",
+   "population": 1326,
+   "center": [
+    -1.78345,
+    57.47045
+   ]
+  },
+  "S53000064": {
+   "name": "Bonnybridge, Croy and Cumbernauld",
+   "population": 78550,
+   "center": [
+    -3.98682,
+    55.95092
+   ]
+  },
+  "S53000065": {
+   "name": "Bonnyrigg, Dalkeith, Mayfield and Gorebridge",
+   "population": 56940,
+   "center": [
+    -3.06432,
+    55.88072
+   ]
+  },
+  "S53000066": {
+   "name": "Bowmore",
+   "population": 804,
+   "center": [
+    -6.28667,
+    55.75604
+   ]
+  },
+  "S53000067": {
+   "name": "Braco",
+   "population": 562,
+   "center": [
+    -3.88022,
+    56.26417
+   ]
+  },
+  "S53000068": {
+   "name": "Brae",
+   "population": 727,
+   "center": [
+    -1.36609,
+    60.39528
+   ]
+  },
+  "S53000069": {
+   "name": "Brechin",
+   "population": 7186,
+   "center": [
+    -2.65173,
+    56.73233
+   ]
+  },
+  "S53000070": {
+   "name": "Bridge of Earn",
+   "population": 2918,
+   "center": [
+    -3.40379,
+    56.34395
+   ]
+  },
+  "S53000071": {
+   "name": "Bridge of Weir",
+   "population": 4924,
+   "center": [
+    -4.57713,
+    55.85709
+   ]
+  },
+  "S53000072": {
+   "name": "Bridgend",
+   "population": 750,
+   "center": [
+    -3.53423,
+    55.96398
+   ]
+  },
+  "S53000073": {
+   "name": "Broadford",
+   "population": 1127,
+   "center": [
+    -5.86754,
+    57.24179
+   ]
+  },
+  "S53000074": {
+   "name": "Brodick",
+   "population": 943,
+   "center": [
+    -5.15671,
+    55.57667
+   ]
+  },
+  "S53000075": {
+   "name": "Brora",
+   "population": 1184,
+   "center": [
+    -3.85509,
+    58.0131
+   ]
+  },
+  "S53000076": {
+   "name": "Broxburn",
+   "population": 15418,
+   "center": [
+    -3.47673,
+    55.93473
+   ]
+  },
+  "S53000077": {
+   "name": "Buchlyvie",
+   "population": 548,
+   "center": [
+    -4.29319,
+    56.11519
+   ]
+  },
+  "S53000078": {
+   "name": "Buckie",
+   "population": 9061,
+   "center": [
+    -2.95851,
+    57.67363
+   ]
+  },
+  "S53000079": {
+   "name": "Burghead",
+   "population": 1911,
+   "center": [
+    -3.47578,
+    57.70102
+   ]
+  },
+  "S53000080": {
+   "name": "Burntisland and Kinghorn",
+   "population": 9200,
+   "center": [
+    -3.22963,
+    56.06126
+   ]
+  },
+  "S53000081": {
+   "name": "Burrelton",
+   "population": 719,
+   "center": [
+    -3.29847,
+    56.52358
+   ]
+  },
+  "S53000082": {
+   "name": "Cairneyhill",
+   "population": 2663,
+   "center": [
+    -3.53221,
+    56.06099
+   ]
+  },
+  "S53000083": {
+   "name": "Calderbank",
+   "population": 1569,
+   "center": [
+    -3.96663,
+    55.84344
+   ]
+  },
+  "S53000084": {
+   "name": "Caldercruix",
+   "population": 2485,
+   "center": [
+    -3.88533,
+    55.88983
+   ]
+  },
+  "S53000085": {
+   "name": "California",
+   "population": 780,
+   "center": [
+    -3.75028,
+    55.96706
+   ]
+  },
+  "S53000086": {
+   "name": "Callander",
+   "population": 3156,
+   "center": [
+    -4.20856,
+    56.24145
+   ]
+  },
+  "S53000087": {
+   "name": "Campbeltown",
+   "population": 4425,
+   "center": [
+    -5.60759,
+    55.42869
+   ]
+  },
+  "S53000088": {
+   "name": "Cardenden and Auchterderran",
+   "population": 5264,
+   "center": [
+    -3.25636,
+    56.14157
+   ]
+  },
+  "S53000089": {
+   "name": "Cardrona",
+   "population": 867,
+   "center": [
+    -3.10435,
+    55.63771
+   ]
+  },
+  "S53000090": {
+   "name": "Cardross",
+   "population": 2032,
+   "center": [
+    -4.65275,
+    55.96381
+   ]
+  },
+  "S53000091": {
+   "name": "Carluke",
+   "population": 14709,
+   "center": [
+    -3.8327,
+    55.73363
+   ]
+  },
+  "S53000092": {
+   "name": "Carmunnock",
+   "population": 1236,
+   "center": [
+    -4.23754,
+    55.78807
+   ]
+  },
+  "S53000093": {
+   "name": "Carnoustie",
+   "population": 11359,
+   "center": [
+    -2.71675,
+    56.50273
+   ]
+  },
+  "S53000094": {
+   "name": "Carnwath",
+   "population": 1406,
+   "center": [
+    -3.6174,
+    55.7003
+   ]
+  },
+  "S53000095": {
+   "name": "Carstairs",
+   "population": 916,
+   "center": [
+    -3.68811,
+    55.69605
+   ]
+  },
+  "S53000096": {
+   "name": "Carstairs Junction",
+   "population": 647,
+   "center": [
+    -3.66882,
+    55.69087
+   ]
+  },
+  "S53000097": {
+   "name": "Castle Douglas",
+   "population": 4056,
+   "center": [
+    -3.92976,
+    54.94488
+   ]
+  },
+  "S53000098": {
+   "name": "Castletown",
+   "population": 785,
+   "center": [
+    -3.38763,
+    58.59213
+   ]
+  },
+  "S53000099": {
+   "name": "Catrine",
+   "population": 2117,
+   "center": [
+    -4.32734,
+    55.5028
+   ]
+  },
+  "S53000100": {
+   "name": "Ceres",
+   "population": 930,
+   "center": [
+    -2.9689,
+    56.29184
+   ]
+  },
+  "S53000101": {
+   "name": "Chapelton (Aberdeenshire)",
+   "population": 626,
+   "center": [
+    -2.17442,
+    57.03301
+   ]
+  },
+  "S53000102": {
+   "name": "Chapelton (South Lanarkshire)",
+   "population": 686,
+   "center": [
+    -4.09454,
+    55.71188
+   ]
+  },
+  "S53000103": {
+   "name": "Chirnside",
+   "population": 1584,
+   "center": [
+    -2.20772,
+    55.79991
+   ]
+  },
+  "S53000104": {
+   "name": "Chryston and Muirhead",
+   "population": 5171,
+   "center": [
+    -4.10758,
+    55.90189
+   ]
+  },
+  "S53000105": {
+   "name": "Clackmannan",
+   "population": 3276,
+   "center": [
+    -3.74675,
+    56.10744
+   ]
+  },
+  "S53000106": {
+   "name": "Cleland",
+   "population": 3041,
+   "center": [
+    -3.90803,
+    55.80439
+   ]
+  },
+  "S53000107": {
+   "name": "Coalburn",
+   "population": 1297,
+   "center": [
+    -3.88422,
+    55.59212
+   ]
+  },
+  "S53000108": {
+   "name": "Coaltown of Wemyss",
+   "population": 772,
+   "center": [
+    -3.08859,
+    56.15115
+   ]
+  },
+  "S53000109": {
+   "name": "Cockenzie",
+   "population": 5234,
+   "center": [
+    -2.94801,
+    55.97005
+   ]
+  },
+  "S53000110": {
+   "name": "Coldingham",
+   "population": 514,
+   "center": [
+    -2.15464,
+    55.88659
+   ]
+  },
+  "S53000111": {
+   "name": "Coldstream",
+   "population": 2080,
+   "center": [
+    -2.2523,
+    55.64984
+   ]
+  },
+  "S53000112": {
+   "name": "Comrie (Perth and Kinross)",
+   "population": 1847,
+   "center": [
+    -3.98289,
+    56.37225
+   ]
+  },
+  "S53000113": {
+   "name": "Connel",
+   "population": 532,
+   "center": [
+    -5.38931,
+    56.45393
+   ]
+  },
+  "S53000114": {
+   "name": "Conon Bridge and Maryburgh",
+   "population": 3273,
+   "center": [
+    -4.43192,
+    57.56506
+   ]
+  },
+  "S53000115": {
+   "name": "Countesswells",
+   "population": 1419,
+   "center": [
+    -2.21151,
+    57.13448
+   ]
+  },
+  "S53000116": {
+   "name": "Coupar Angus",
+   "population": 2132,
+   "center": [
+    -3.26687,
+    56.54612
+   ]
+  },
+  "S53000117": {
+   "name": "Cowdenbeath, Lochgelly and Lumphinnans",
+   "population": 19118,
+   "center": [
+    -3.35021,
+    56.1107
+   ]
+  },
+  "S53000118": {
+   "name": "Cowie",
+   "population": 2706,
+   "center": [
+    -3.86619,
+    56.08004
+   ]
+  },
+  "S53000119": {
+   "name": "Coylton",
+   "population": 2190,
+   "center": [
+    -4.51822,
+    55.44465
+   ]
+  },
+  "S53000120": {
+   "name": "Crail",
+   "population": 1549,
+   "center": [
+    -2.62437,
+    56.26111
+   ]
+  },
+  "S53000121": {
+   "name": "Creetown",
+   "population": 664,
+   "center": [
+    -4.37803,
+    54.90113
+   ]
+  },
+  "S53000122": {
+   "name": "Crieff",
+   "population": 7142,
+   "center": [
+    -3.83996,
+    56.37367
+   ]
+  },
+  "S53000123": {
+   "name": "Crimond",
+   "population": 797,
+   "center": [
+    -1.91263,
+    57.60071
+   ]
+  },
+  "S53000124": {
+   "name": "Cromarty",
+   "population": 672,
+   "center": [
+    -4.03359,
+    57.68094
+   ]
+  },
+  "S53000125": {
+   "name": "Crook of Devon",
+   "population": 698,
+   "center": [
+    -3.55458,
+    56.18326
+   ]
+  },
+  "S53000126": {
+   "name": "Crossford (Fife)",
+   "population": 2241,
+   "center": [
+    -3.49702,
+    56.06286
+   ]
+  },
+  "S53000127": {
+   "name": "Crossford (South Lanarkshire)",
+   "population": 789,
+   "center": [
+    -3.86731,
+    55.70153
+   ]
+  },
+  "S53000128": {
+   "name": "Crosshouse",
+   "population": 2609,
+   "center": [
+    -4.55006,
+    55.61347
+   ]
+  },
+  "S53000129": {
+   "name": "Cruden Bay",
+   "population": 1585,
+   "center": [
+    -1.84805,
+    57.41958
+   ]
+  },
+  "S53000130": {
+   "name": "Cullen",
+   "population": 1239,
+   "center": [
+    -2.81621,
+    57.69093
+   ]
+  },
+  "S53000131": {
+   "name": "Cuminestown",
+   "population": 510,
+   "center": [
+    -2.32915,
+    57.54343
+   ]
+  },
+  "S53000132": {
+   "name": "Cumnock",
+   "population": 8825,
+   "center": [
+    -4.26198,
+    55.45192
+   ]
+  },
+  "S53000133": {
+   "name": "Cupar",
+   "population": 8817,
+   "center": [
+    -3.01048,
+    56.31751
+   ]
+  },
+  "S53000134": {
+   "name": "Dailly",
+   "population": 833,
+   "center": [
+    -4.72356,
+    55.27682
+   ]
+  },
+  "S53000135": {
+   "name": "Dalbeattie",
+   "population": 4137,
+   "center": [
+    -3.82028,
+    54.933
+   ]
+  },
+  "S53000136": {
+   "name": "Dalgety Bay and Hillend",
+   "population": 9461,
+   "center": [
+    -3.35481,
+    56.03643
+   ]
+  },
+  "S53000137": {
+   "name": "Dalmellington",
+   "population": 1284,
+   "center": [
+    -4.398,
+    55.32457
+   ]
+  },
+  "S53000138": {
+   "name": "Dalry",
+   "population": 5273,
+   "center": [
+    -4.72037,
+    55.7079
+   ]
+  },
+  "S53000139": {
+   "name": "Dalrymple",
+   "population": 1600,
+   "center": [
+    -4.58662,
+    55.39894
+   ]
+  },
+  "S53000140": {
+   "name": "Danderhall",
+   "population": 3385,
+   "center": [
+    -3.10216,
+    55.91023
+   ]
+  },
+  "S53000141": {
+   "name": "Darvel",
+   "population": 3697,
+   "center": [
+    -4.28141,
+    55.60983
+   ]
+  },
+  "S53000142": {
+   "name": "Dechmont",
+   "population": 660,
+   "center": [
+    -3.53591,
+    55.92121
+   ]
+  },
+  "S53000143": {
+   "name": "Denholm",
+   "population": 685,
+   "center": [
+    -2.68191,
+    55.45801
+   ]
+  },
+  "S53000144": {
+   "name": "Dingwall",
+   "population": 5265,
+   "center": [
+    -4.43337,
+    57.60268
+   ]
+  },
+  "S53000145": {
+   "name": "Dollar",
+   "population": 2844,
+   "center": [
+    -3.66914,
+    56.16352
+   ]
+  },
+  "S53000146": {
+   "name": "Dornoch",
+   "population": 1415,
+   "center": [
+    -4.0249,
+    57.88162
+   ]
+  },
+  "S53000147": {
+   "name": "Douglas",
+   "population": 1514,
+   "center": [
+    -3.84441,
+    55.55563
+   ]
+  },
+  "S53000148": {
+   "name": "Doune",
+   "population": 2184,
+   "center": [
+    -4.05205,
+    56.18959
+   ]
+  },
+  "S53000149": {
+   "name": "Drongan",
+   "population": 3078,
+   "center": [
+    -4.45966,
+    55.435
+   ]
+  },
+  "S53000150": {
+   "name": "Drumnadrochit",
+   "population": 1180,
+   "center": [
+    -4.47802,
+    57.32974
+   ]
+  },
+  "S53000151": {
+   "name": "Drumoak",
+   "population": 1006,
+   "center": [
+    -2.34357,
+    57.08185
+   ]
+  },
+  "S53000152": {
+   "name": "Drymen",
+   "population": 820,
+   "center": [
+    -4.44818,
+    56.06618
+   ]
+  },
+  "S53000153": {
+   "name": "Dufftown",
+   "population": 1515,
+   "center": [
+    -3.12515,
+    57.4459
+   ]
+  },
+  "S53000154": {
+   "name": "Dullatur",
+   "population": 692,
+   "center": [
+    -4.00868,
+    55.96807
+   ]
+  },
+  "S53000155": {
+   "name": "Dumbarton",
+   "population": 21546,
+   "center": [
+    -4.55249,
+    55.94847
+   ]
+  },
+  "S53000156": {
+   "name": "Dumfries",
+   "population": 34195,
+   "center": [
+    -3.59775,
+    55.06966
+   ]
+  },
+  "S53000157": {
+   "name": "Dunbar",
+   "population": 10777,
+   "center": [
+    -2.51684,
+    55.99988
+   ]
+  },
+  "S53000158": {
+   "name": "Dunbeg",
+   "population": 938,
+   "center": [
+    -5.44288,
+    56.44603
+   ]
+  },
+  "S53000159": {
+   "name": "Dunblane",
+   "population": 8798,
+   "center": [
+    -3.95392,
+    56.19174
+   ]
+  },
+  "S53000160": {
+   "name": "Dundee",
+   "population": 158452,
+   "center": [
+    -2.9818,
+    56.47365
+   ]
+  },
+  "S53000161": {
+   "name": "Dundonald",
+   "population": 2566,
+   "center": [
+    -4.59343,
+    55.58049
+   ]
+  },
+  "S53000162": {
+   "name": "Dunfermline",
+   "population": 77578,
+   "center": [
+    -3.42343,
+    56.06195
+   ]
+  },
+  "S53000163": {
+   "name": "Dunkeld and Birnam",
+   "population": 1194,
+   "center": [
+    -3.57988,
+    56.56193
+   ]
+  },
+  "S53000164": {
+   "name": "Dunlop",
+   "population": 1113,
+   "center": [
+    -4.53172,
+    55.71212
+   ]
+  },
+  "S53000165": {
+   "name": "Dunning",
+   "population": 885,
+   "center": [
+    -3.58528,
+    56.31251
+   ]
+  },
+  "S53000166": {
+   "name": "Dunoon, Innellan and Sandbank",
+   "population": 10318,
+   "center": [
+    -4.92982,
+    55.94961
+   ]
+  },
+  "S53000167": {
+   "name": "Duns",
+   "population": 3127,
+   "center": [
+    -2.34054,
+    55.7763
+   ]
+  },
+  "S53000168": {
+   "name": "Eaglesfield",
+   "population": 633,
+   "center": [
+    -3.18899,
+    55.06239
+   ]
+  },
+  "S53000169": {
+   "name": "Eaglesham",
+   "population": 3479,
+   "center": [
+    -4.27482,
+    55.74001
+   ]
+  },
+  "S53000170": {
+   "name": "Earlston",
+   "population": 1765,
+   "center": [
+    -2.67534,
+    55.63778
+   ]
+  },
+  "S53000171": {
+   "name": "East Calder",
+   "population": 7252,
+   "center": [
+    -3.44994,
+    55.8939
+   ]
+  },
+  "S53000172": {
+   "name": "East Helmsdale",
+   "population": 538,
+   "center": [
+    -3.65048,
+    58.11786
+   ]
+  },
+  "S53000173": {
+   "name": "East Kilbride",
+   "population": 77508,
+   "center": [
+    -4.17726,
+    55.75874
+   ]
+  },
+  "S53000174": {
+   "name": "East Linton",
+   "population": 1881,
+   "center": [
+    -2.65765,
+    55.98741
+   ]
+  },
+  "S53000175": {
+   "name": "East Wemyss",
+   "population": 1945,
+   "center": [
+    -3.06887,
+    56.15607
+   ]
+  },
+  "S53000176": {
+   "name": "Eastriggs",
+   "population": 1737,
+   "center": [
+    -3.1727,
+    54.98609
+   ]
+  },
+  "S53000177": {
+   "name": "Ecclefechan",
+   "population": 933,
+   "center": [
+    -3.25136,
+    55.05687
+   ]
+  },
+  "S53000178": {
+   "name": "Edinburgh",
+   "population": 520736,
+   "center": [
+    -3.21722,
+    55.93825
+   ]
+  },
+  "S53000179": {
+   "name": "Edzell",
+   "population": 794,
+   "center": [
+    -2.65434,
+    56.80985
+   ]
+  },
+  "S53000180": {
+   "name": "Elgin",
+   "population": 24640,
+   "center": [
+    -3.30983,
+    57.64724
+   ]
+  },
+  "S53000181": {
+   "name": "Elie and Earlsferry",
+   "population": 710,
+   "center": [
+    -2.82742,
+    56.1918
+   ]
+  },
+  "S53000182": {
+   "name": "Ellon",
+   "population": 10126,
+   "center": [
+    -2.07774,
+    57.36667
+   ]
+  },
+  "S53000183": {
+   "name": "Elphinstone",
+   "population": 541,
+   "center": [
+    -2.96542,
+    55.92311
+   ]
+  },
+  "S53000184": {
+   "name": "Errol",
+   "population": 1500,
+   "center": [
+    -3.21056,
+    56.39367
+   ]
+  },
+  "S53000185": {
+   "name": "Erskine",
+   "population": 16769,
+   "center": [
+    -4.44245,
+    55.89288
+   ]
+  },
+  "S53000186": {
+   "name": "Evanton",
+   "population": 1322,
+   "center": [
+    -4.33718,
+    57.66201
+   ]
+  },
+  "S53000187": {
+   "name": "Eyemouth",
+   "population": 3701,
+   "center": [
+    -2.09429,
+    55.87051
+   ]
+  },
+  "S53000188": {
+   "name": "Fairlie",
+   "population": 1536,
+   "center": [
+    -4.85208,
+    55.75627
+   ]
+  },
+  "S53000189": {
+   "name": "Falkirk",
+   "population": 105153,
+   "center": [
+    -3.74698,
+    56.00155
+   ]
+  },
+  "S53000190": {
+   "name": "Falkland",
+   "population": 1041,
+   "center": [
+    -3.20333,
+    56.25256
+   ]
+  },
+  "S53000191": {
+   "name": "Fallin",
+   "population": 2776,
+   "center": [
+    -3.87116,
+    56.10479
+   ]
+  },
+  "S53000192": {
+   "name": "Fauldhouse",
+   "population": 4584,
+   "center": [
+    -3.70126,
+    55.82826
+   ]
+  },
+  "S53000193": {
+   "name": "Fenwick",
+   "population": 1107,
+   "center": [
+    -4.44146,
+    55.65879
+   ]
+  },
+  "S53000194": {
+   "name": "Findhorn",
+   "population": 826,
+   "center": [
+    -3.60736,
+    57.66059
+   ]
+  },
+  "S53000195": {
+   "name": "Findochty",
+   "population": 950,
+   "center": [
+    -2.89913,
+    57.69802
+   ]
+  },
+  "S53000196": {
+   "name": "Finstown",
+   "population": 511,
+   "center": [
+    -3.11465,
+    59.0075
+   ]
+  },
+  "S53000197": {
+   "name": "Fochabers",
+   "population": 1772,
+   "center": [
+    -3.09542,
+    57.61219
+   ]
+  },
+  "S53000198": {
+   "name": "Forfar",
+   "population": 13801,
+   "center": [
+    -2.8918,
+    56.64568
+   ]
+  },
+  "S53000199": {
+   "name": "Forgandenny",
+   "population": 545,
+   "center": [
+    -3.47144,
+    56.3503
+   ]
+  },
+  "S53000200": {
+   "name": "Forres",
+   "population": 10069,
+   "center": [
+    -3.6109,
+    57.6068
+   ]
+  },
+  "S53000201": {
+   "name": "Fort Augustus",
+   "population": 568,
+   "center": [
+    -4.68281,
+    57.14416
+   ]
+  },
+  "S53000202": {
+   "name": "Fort William",
+   "population": 10302,
+   "center": [
+    -5.08668,
+    56.84252
+   ]
+  },
+  "S53000203": {
+   "name": "Forth",
+   "population": 2148,
+   "center": [
+    -3.68522,
+    55.76676
+   ]
+  },
+  "S53000204": {
+   "name": "Fortrose",
+   "population": 1688,
+   "center": [
+    -4.12379,
+    57.58123
+   ]
+  },
+  "S53000205": {
+   "name": "Fraserburgh",
+   "population": 12921,
+   "center": [
+    -2.0172,
+    57.68642
+   ]
+  },
+  "S53000206": {
+   "name": "Freuchie",
+   "population": 1188,
+   "center": [
+    -3.15499,
+    56.24786
+   ]
+  },
+  "S53000207": {
+   "name": "Friockheim",
+   "population": 1065,
+   "center": [
+    -2.6617,
+    56.63789
+   ]
+  },
+  "S53000208": {
+   "name": "Gairloch",
+   "population": 687,
+   "center": [
+    -5.7013,
+    57.73867
+   ]
+  },
+  "S53000209": {
+   "name": "Galashiels",
+   "population": 15655,
+   "center": [
+    -2.77352,
+    55.60846
+   ]
+  },
+  "S53000210": {
+   "name": "Galston",
+   "population": 4526,
+   "center": [
+    -4.38361,
+    55.5994
+   ]
+  },
+  "S53000211": {
+   "name": "Gardenstown",
+   "population": 649,
+   "center": [
+    -2.33278,
+    57.67002
+   ]
+  },
+  "S53000212": {
+   "name": "Garelochhead",
+   "population": 1707,
+   "center": [
+    -4.8215,
+    56.07084
+   ]
+  },
+  "S53000213": {
+   "name": "Gargunnock",
+   "population": 707,
+   "center": [
+    -4.08545,
+    56.12485
+   ]
+  },
+  "S53000214": {
+   "name": "Garmouth",
+   "population": 541,
+   "center": [
+    -3.10956,
+    57.66459
+   ]
+  },
+  "S53000215": {
+   "name": "Gartcosh",
+   "population": 3251,
+   "center": [
+    -4.08155,
+    55.88946
+   ]
+  },
+  "S53000216": {
+   "name": "Gartloch",
+   "population": 686,
+   "center": [
+    -4.10335,
+    55.8803
+   ]
+  },
+  "S53000217": {
+   "name": "Gatehouse of Fleet",
+   "population": 1016,
+   "center": [
+    -4.1886,
+    54.88246
+   ]
+  },
+  "S53000218": {
+   "name": "Gauldry",
+   "population": 636,
+   "center": [
+    -3.00647,
+    56.4015
+   ]
+  },
+  "S53000219": {
+   "name": "Gifford",
+   "population": 783,
+   "center": [
+    -2.74845,
+    55.90464
+   ]
+  },
+  "S53000220": {
+   "name": "Girvan",
+   "population": 6309,
+   "center": [
+    -4.8512,
+    55.23899
+   ]
+  },
+  "S53000221": {
+   "name": "Glassford",
+   "population": 676,
+   "center": [
+    -4.02678,
+    55.7005
+   ]
+  },
+  "S53000222": {
+   "name": "Glenboig",
+   "population": 3033,
+   "center": [
+    -4.05353,
+    55.8942
+   ]
+  },
+  "S53000223": {
+   "name": "Glenfarg",
+   "population": 663,
+   "center": [
+    -3.39888,
+    56.27745
+   ]
+  },
+  "S53000224": {
+   "name": "Glenluce",
+   "population": 596,
+   "center": [
+    -4.80715,
+    54.87929
+   ]
+  },
+  "S53000225": {
+   "name": "Glenmavis",
+   "population": 2165,
+   "center": [
+    -3.99635,
+    55.88561
+   ]
+  },
+  "S53000226": {
+   "name": "Glenrothes and Thornton",
+   "population": 45731,
+   "center": [
+    -3.17278,
+    56.1941
+   ]
+  },
+  "S53000227": {
+   "name": "Golspie",
+   "population": 1337,
+   "center": [
+    -3.99456,
+    57.95604
+   ]
+  },
+  "S53000228": {
+   "name": "Gourdon",
+   "population": 844,
+   "center": [
+    -2.2858,
+    56.8303
+   ]
+  },
+  "S53000229": {
+   "name": "Grantown-on-Spey",
+   "population": 2328,
+   "center": [
+    -3.61055,
+    57.33031
+   ]
+  },
+  "S53000230": {
+   "name": "Greater Glasgow",
+   "population": 1023873,
+   "center": [
+    -4.31892,
+    55.83318
+   ]
+  },
+  "S53000231": {
+   "name": "Greenlaw",
+   "population": 605,
+   "center": [
+    -2.45945,
+    55.70793
+   ]
+  },
+  "S53000232": {
+   "name": "Greenock",
+   "population": 67229,
+   "center": [
+    -4.77944,
+    55.9505
+   ]
+  },
+  "S53000233": {
+   "name": "Gretna",
+   "population": 3437,
+   "center": [
+    -3.05558,
+    54.99736
+   ]
+  },
+  "S53000234": {
+   "name": "Gullane",
+   "population": 2910,
+   "center": [
+    -2.82711,
+    56.03648
+   ]
+  },
+  "S53000235": {
+   "name": "Haddington",
+   "population": 11354,
+   "center": [
+    -2.78891,
+    55.95603
+   ]
+  },
+  "S53000236": {
+   "name": "Halkirk",
+   "population": 950,
+   "center": [
+    -3.48996,
+    58.51404
+   ]
+  },
+  "S53000237": {
+   "name": "Harthill",
+   "population": 3561,
+   "center": [
+    -3.75137,
+    55.86
+   ]
+  },
+  "S53000238": {
+   "name": "Hatton of Cruden",
+   "population": 884,
+   "center": [
+    -1.92037,
+    57.42452
+   ]
+  },
+  "S53000239": {
+   "name": "Hawick",
+   "population": 13522,
+   "center": [
+    -2.78369,
+    55.42641
+   ]
+  },
+  "S53000240": {
+   "name": "Helensburgh",
+   "population": 16035,
+   "center": [
+    -4.73019,
+    56.0093
+   ]
+  },
+  "S53000241": {
+   "name": "High Valleyfield",
+   "population": 3265,
+   "center": [
+    -3.60191,
+    56.06127
+   ]
+  },
+  "S53000242": {
+   "name": "Hillhead",
+   "population": 567,
+   "center": [
+    -4.49437,
+    55.44609
+   ]
+  },
+  "S53000243": {
+   "name": "Hillside",
+   "population": 1152,
+   "center": [
+    -2.47311,
+    56.74465
+   ]
+  },
+  "S53000244": {
+   "name": "Hopeman",
+   "population": 1628,
+   "center": [
+    -3.42937,
+    57.70528
+   ]
+  },
+  "S53000245": {
+   "name": "Houston",
+   "population": 6221,
+   "center": [
+    -4.53641,
+    55.86384
+   ]
+  },
+  "S53000246": {
+   "name": "Howwood",
+   "population": 1636,
+   "center": [
+    -4.55715,
+    55.80976
+   ]
+  },
+  "S53000247": {
+   "name": "Huntly",
+   "population": 4632,
+   "center": [
+    -2.78703,
+    57.44708
+   ]
+  },
+  "S53000248": {
+   "name": "Inchture",
+   "population": 1565,
+   "center": [
+    -3.16409,
+    56.44455
+   ]
+  },
+  "S53000249": {
+   "name": "Innerleithen",
+   "population": 3152,
+   "center": [
+    -3.06302,
+    55.61875
+   ]
+  },
+  "S53000250": {
+   "name": "Insch",
+   "population": 2685,
+   "center": [
+    -2.61307,
+    57.34173
+   ]
+  },
+  "S53000251": {
+   "name": "Inverallochy and Cairnbulg",
+   "population": 1409,
+   "center": [
+    -1.93268,
+    57.67537
+   ]
+  },
+  "S53000252": {
+   "name": "Inveraray",
+   "population": 601,
+   "center": [
+    -5.07437,
+    56.23063
+   ]
+  },
+  "S53000253": {
+   "name": "Inverbervie",
+   "population": 2279,
+   "center": [
+    -2.28027,
+    56.8425
+   ]
+  },
+  "S53000254": {
+   "name": "Invergordon",
+   "population": 3799,
+   "center": [
+    -4.16264,
+    57.69682
+   ]
+  },
+  "S53000255": {
+   "name": "Inverkip",
+   "population": 3548,
+   "center": [
+    -4.86668,
+    55.90674
+   ]
+  },
+  "S53000256": {
+   "name": "Inverness and Culloden",
+   "population": 65053,
+   "center": [
+    -4.20602,
+    57.47162
+   ]
+  },
+  "S53000257": {
+   "name": "Inverurie",
+   "population": 15106,
+   "center": [
+    -2.38053,
+    57.28418
+   ]
+  },
+  "S53000258": {
+   "name": "Irvine",
+   "population": 37355,
+   "center": [
+    -4.64729,
+    55.61235
+   ]
+  },
+  "S53000259": {
+   "name": "Jedburgh",
+   "population": 4129,
+   "center": [
+    -2.54897,
+    55.47829
+   ]
+  },
+  "S53000260": {
+   "name": "Johnshaven",
+   "population": 664,
+   "center": [
+    -2.33155,
+    56.79658
+   ]
+  },
+  "S53000261": {
+   "name": "Keith",
+   "population": 4572,
+   "center": [
+    -2.95202,
+    57.54293
+   ]
+  },
+  "S53000262": {
+   "name": "Kelso",
+   "population": 7023,
+   "center": [
+    -2.42841,
+    55.59918
+   ]
+  },
+  "S53000263": {
+   "name": "Kelty",
+   "population": 6901,
+   "center": [
+    -3.38223,
+    56.13635
+   ]
+  },
+  "S53000264": {
+   "name": "Kemnay",
+   "population": 3873,
+   "center": [
+    -2.44303,
+    57.23698
+   ]
+  },
+  "S53000265": {
+   "name": "Kilbirnie",
+   "population": 7098,
+   "center": [
+    -4.68428,
+    55.74999
+   ]
+  },
+  "S53000266": {
+   "name": "Kilcreggan",
+   "population": 1221,
+   "center": [
+    -4.84072,
+    55.98841
+   ]
+  },
+  "S53000267": {
+   "name": "Killearn",
+   "population": 1805,
+   "center": [
+    -4.37693,
+    56.0379
+   ]
+  },
+  "S53000268": {
+   "name": "Killin",
+   "population": 739,
+   "center": [
+    -4.31635,
+    56.46796
+   ]
+  },
+  "S53000269": {
+   "name": "Kilmacolm",
+   "population": 3878,
+   "center": [
+    -4.62442,
+    55.89402
+   ]
+  },
+  "S53000270": {
+   "name": "Kilmarnock",
+   "population": 51425,
+   "center": [
+    -4.49289,
+    55.60538
+   ]
+  },
+  "S53000271": {
+   "name": "Kilmaurs",
+   "population": 2705,
+   "center": [
+    -4.52757,
+    55.63819
+   ]
+  },
+  "S53000272": {
+   "name": "Kilsyth",
+   "population": 10952,
+   "center": [
+    -4.05696,
+    55.97827
+   ]
+  },
+  "S53000273": {
+   "name": "Kilwinning and Saltcoats",
+   "population": 47354,
+   "center": [
+    -4.78308,
+    55.6427
+   ]
+  },
+  "S53000274": {
+   "name": "Kincardine",
+   "population": 2882,
+   "center": [
+    -3.71671,
+    56.0703
+   ]
+  },
+  "S53000275": {
+   "name": "Kinglassie",
+   "population": 1815,
+   "center": [
+    -3.23178,
+    56.17383
+   ]
+  },
+  "S53000276": {
+   "name": "Kingseat (Aberdeenshire)",
+   "population": 877,
+   "center": [
+    -2.15804,
+    57.26207
+   ]
+  },
+  "S53000277": {
+   "name": "Kingseat (Fife)",
+   "population": 823,
+   "center": [
+    -3.4048,
+    56.09818
+   ]
+  },
+  "S53000278": {
+   "name": "Kingskettle and Kettlebridge",
+   "population": 927,
+   "center": [
+    -3.1167,
+    56.26207
+   ]
+  },
+  "S53000279": {
+   "name": "Kingswells",
+   "population": 4781,
+   "center": [
+    -2.22089,
+    57.15612
+   ]
+  },
+  "S53000280": {
+   "name": "Kingussie",
+   "population": 1360,
+   "center": [
+    -4.05215,
+    57.07954
+   ]
+  },
+  "S53000281": {
+   "name": "Kinlochleven",
+   "population": 883,
+   "center": [
+    -4.96489,
+    56.71419
+   ]
+  },
+  "S53000282": {
+   "name": "Kinloss",
+   "population": 1460,
+   "center": [
+    -3.55571,
+    57.63542
+   ]
+  },
+  "S53000283": {
+   "name": "Kinnesswood",
+   "population": 533,
+   "center": [
+    -3.32733,
+    56.21257
+   ]
+  },
+  "S53000284": {
+   "name": "Kinross",
+   "population": 5609,
+   "center": [
+    -3.4274,
+    56.20835
+   ]
+  },
+  "S53000285": {
+   "name": "Kintore",
+   "population": 4555,
+   "center": [
+    -2.34972,
+    57.229
+   ]
+  },
+  "S53000286": {
+   "name": "Kippen",
+   "population": 988,
+   "center": [
+    -4.1735,
+    56.12622
+   ]
+  },
+  "S53000287": {
+   "name": "Kirkcaldy and Dysart",
+   "population": 51117,
+   "center": [
+    -3.16301,
+    56.12568
+   ]
+  },
+  "S53000288": {
+   "name": "Kirkconnel and Kelloholm",
+   "population": 2008,
+   "center": [
+    -3.99592,
+    55.38317
+   ]
+  },
+  "S53000289": {
+   "name": "Kirkcudbright",
+   "population": 3233,
+   "center": [
+    -4.04894,
+    54.8351
+   ]
+  },
+  "S53000290": {
+   "name": "Kirkhill",
+   "population": 779,
+   "center": [
+    -4.40936,
+    57.47693
+   ]
+  },
+  "S53000291": {
+   "name": "Kirkintilloch",
+   "population": 30326,
+   "center": [
+    -4.14545,
+    55.93406
+   ]
+  },
+  "S53000292": {
+   "name": "Kirkliston",
+   "population": 5604,
+   "center": [
+    -3.40501,
+    55.957
+   ]
+  },
+  "S53000293": {
+   "name": "Kirkmuirhill and Blackwood",
+   "population": 4342,
+   "center": [
+    -3.92079,
+    55.66944
+   ]
+  },
+  "S53000294": {
+   "name": "Kirknewton",
+   "population": 1765,
+   "center": [
+    -3.41946,
+    55.88846
+   ]
+  },
+  "S53000295": {
+   "name": "Kirkwall",
+   "population": 7390,
+   "center": [
+    -2.95537,
+    58.97899
+   ]
+  },
+  "S53000296": {
+   "name": "Kirriemuir",
+   "population": 6012,
+   "center": [
+    -3.00737,
+    56.6751
+   ]
+  },
+  "S53000297": {
+   "name": "Kyle of Lochalsh",
+   "population": 650,
+   "center": [
+    -5.7155,
+    57.28609
+   ]
+  },
+  "S53000298": {
+   "name": "Ladybank",
+   "population": 1432,
+   "center": [
+    -3.12468,
+    56.27753
+   ]
+  },
+  "S53000299": {
+   "name": "Lamlash",
+   "population": 1100,
+   "center": [
+    -5.09737,
+    55.54984
+   ]
+  },
+  "S53000300": {
+   "name": "Lanark and Kirkfieldbank",
+   "population": 9897,
+   "center": [
+    -3.77305,
+    55.67268
+   ]
+  },
+  "S53000301": {
+   "name": "Langbank",
+   "population": 895,
+   "center": [
+    -4.58877,
+    55.92468
+   ]
+  },
+  "S53000302": {
+   "name": "Langholm",
+   "population": 2040,
+   "center": [
+    -2.99536,
+    55.15004
+   ]
+  },
+  "S53000303": {
+   "name": "Largs",
+   "population": 10917,
+   "center": [
+    -4.86076,
+    55.79661
+   ]
+  },
+  "S53000304": {
+   "name": "Larkhall",
+   "population": 16664,
+   "center": [
+    -3.96265,
+    55.73019
+   ]
+  },
+  "S53000305": {
+   "name": "Lauder",
+   "population": 1878,
+   "center": [
+    -2.7505,
+    55.71931
+   ]
+  },
+  "S53000306": {
+   "name": "Laurencekirk",
+   "population": 3280,
+   "center": [
+    -2.46703,
+    56.83382
+   ]
+  },
+  "S53000307": {
+   "name": "Law",
+   "population": 3285,
+   "center": [
+    -3.87899,
+    55.74994
+   ]
+  },
+  "S53000308": {
+   "name": "Lennoxtown",
+   "population": 4148,
+   "center": [
+    -4.2007,
+    55.9754
+   ]
+  },
+  "S53000309": {
+   "name": "Lerwick",
+   "population": 6709,
+   "center": [
+    -1.15505,
+    60.15461
+   ]
+  },
+  "S53000310": {
+   "name": "Lesmahagow",
+   "population": 4254,
+   "center": [
+    -3.88365,
+    55.63827
+   ]
+  },
+  "S53000311": {
+   "name": "Letham",
+   "population": 1613,
+   "center": [
+    -2.7688,
+    56.62643
+   ]
+  },
+  "S53000312": {
+   "name": "Leuchars and Guardbridge",
+   "population": 3739,
+   "center": [
+    -2.88117,
+    56.37477
+   ]
+  },
+  "S53000313": {
+   "name": "Lhanbryde",
+   "population": 1825,
+   "center": [
+    -3.21355,
+    57.63574
+   ]
+  },
+  "S53000314": {
+   "name": "Liff",
+   "population": 1889,
+   "center": [
+    -3.06675,
+    56.48084
+   ]
+  },
+  "S53000315": {
+   "name": "Limekilns and Charlestown",
+   "population": 1281,
+   "center": [
+    -3.47465,
+    56.03356
+   ]
+  },
+  "S53000316": {
+   "name": "Linlithgow",
+   "population": 12517,
+   "center": [
+    -3.60324,
+    55.97364
+   ]
+  },
+  "S53000317": {
+   "name": "Livingston",
+   "population": 65056,
+   "center": [
+    -3.52603,
+    55.89196
+   ]
+  },
+  "S53000318": {
+   "name": "Loanhead and Bilston",
+   "population": 8942,
+   "center": [
+    -3.16167,
+    55.87968
+   ]
+  },
+  "S53000319": {
+   "name": "Loans",
+   "population": 650,
+   "center": [
+    -4.62372,
+    55.55115
+   ]
+  },
+  "S53000320": {
+   "name": "Locharbriggs",
+   "population": 5481,
+   "center": [
+    -3.5695,
+    55.09335
+   ]
+  },
+  "S53000321": {
+   "name": "Lochgilphead",
+   "population": 2488,
+   "center": [
+    -5.42591,
+    56.03538
+   ]
+  },
+  "S53000322": {
+   "name": "Lochmaben",
+   "population": 2092,
+   "center": [
+    -3.44304,
+    55.1319
+   ]
+  },
+  "S53000323": {
+   "name": "Lochwinnoch",
+   "population": 2769,
+   "center": [
+    -4.62714,
+    55.79591
+   ]
+  },
+  "S53000324": {
+   "name": "Lockerbie",
+   "population": 4412,
+   "center": [
+    -3.35566,
+    55.12428
+   ]
+  },
+  "S53000325": {
+   "name": "Logan",
+   "population": 958,
+   "center": [
+    -4.23187,
+    55.45847
+   ]
+  },
+  "S53000326": {
+   "name": "Longforgan",
+   "population": 1079,
+   "center": [
+    -3.11723,
+    56.45654
+   ]
+  },
+  "S53000327": {
+   "name": "Longniddry",
+   "population": 2599,
+   "center": [
+    -2.89955,
+    55.97621
+   ]
+  },
+  "S53000328": {
+   "name": "Longridge",
+   "population": 921,
+   "center": [
+    -3.67744,
+    55.84376
+   ]
+  },
+  "S53000329": {
+   "name": "Longside",
+   "population": 1011,
+   "center": [
+    -1.93946,
+    57.51585
+   ]
+  },
+  "S53000330": {
+   "name": "Lossiemouth",
+   "population": 6654,
+   "center": [
+    -3.29045,
+    57.71836
+   ]
+  },
+  "S53000331": {
+   "name": "Lower Largo, Lundin Links and Upper Largo",
+   "population": 2397,
+   "center": [
+    -2.93702,
+    56.21622
+   ]
+  },
+  "S53000332": {
+   "name": "Lumphanan",
+   "population": 548,
+   "center": [
+    -2.68607,
+    57.12902
+   ]
+  },
+  "S53000333": {
+   "name": "Luncarty",
+   "population": 1514,
+   "center": [
+    -3.46435,
+    56.45107
+   ]
+  },
+  "S53000334": {
+   "name": "Macduff",
+   "population": 3791,
+   "center": [
+    -2.48781,
+    57.6675
+   ]
+  },
+  "S53000335": {
+   "name": "Macmerry",
+   "population": 1437,
+   "center": [
+    -2.89227,
+    55.94508
+   ]
+  },
+  "S53000336": {
+   "name": "Maidenhill",
+   "population": 1080,
+   "center": [
+    -4.3489,
+    55.75908
+   ]
+  },
+  "S53000337": {
+   "name": "Mallaig",
+   "population": 701,
+   "center": [
+    -5.82813,
+    57.00325
+   ]
+  },
+  "S53000338": {
+   "name": "Marywell and Portlethen",
+   "population": 9533,
+   "center": [
+    -2.13294,
+    57.06766
+   ]
+  },
+  "S53000339": {
+   "name": "Mauchline",
+   "population": 3807,
+   "center": [
+    -4.37938,
+    55.51439
+   ]
+  },
+  "S53000340": {
+   "name": "Maud",
+   "population": 867,
+   "center": [
+    -2.1271,
+    57.52029
+   ]
+  },
+  "S53000341": {
+   "name": "Maybole",
+   "population": 4333,
+   "center": [
+    -4.6848,
+    55.35486
+   ]
+  },
+  "S53000342": {
+   "name": "Melrose",
+   "population": 2473,
+   "center": [
+    -2.72107,
+    55.59804
+   ]
+  },
+  "S53000343": {
+   "name": "Menstrie",
+   "population": 2831,
+   "center": [
+    -3.84294,
+    56.1501
+   ]
+  },
+  "S53000344": {
+   "name": "Methil, Leven and Buckhaven",
+   "population": 31582,
+   "center": [
+    -3.02597,
+    56.19065
+   ]
+  },
+  "S53000345": {
+   "name": "Methlick",
+   "population": 634,
+   "center": [
+    -2.24161,
+    57.42994
+   ]
+  },
+  "S53000346": {
+   "name": "Methven",
+   "population": 1301,
+   "center": [
+    -3.57824,
+    56.41723
+   ]
+  },
+  "S53000347": {
+   "name": "Millerhill and Newton Village",
+   "population": 712,
+   "center": [
+    -3.08261,
+    55.91206
+   ]
+  },
+  "S53000348": {
+   "name": "Millport",
+   "population": 1173,
+   "center": [
+    -4.91638,
+    55.75678
+   ]
+  },
+  "S53000349": {
+   "name": "Milnathort",
+   "population": 1997,
+   "center": [
+    -3.41624,
+    56.22897
+   ]
+  },
+  "S53000350": {
+   "name": "Milton and Kildary",
+   "population": 626,
+   "center": [
+    -4.07289,
+    57.74258
+   ]
+  },
+  "S53000351": {
+   "name": "Milton of Campsie",
+   "population": 3829,
+   "center": [
+    -4.1625,
+    55.96186
+   ]
+  },
+  "S53000352": {
+   "name": "Mintlaw",
+   "population": 2837,
+   "center": [
+    -2.00765,
+    57.5251
+   ]
+  },
+  "S53000353": {
+   "name": "Moffat",
+   "population": 2497,
+   "center": [
+    -3.44105,
+    55.33281
+   ]
+  },
+  "S53000354": {
+   "name": "Montrose, Ferryden and Inchbraoch",
+   "population": 12431,
+   "center": [
+    -2.46543,
+    56.7225
+   ]
+  },
+  "S53000355": {
+   "name": "Moodiesburn",
+   "population": 6711,
+   "center": [
+    -4.08178,
+    55.91386
+   ]
+  },
+  "S53000356": {
+   "name": "Morningside",
+   "population": 1168,
+   "center": [
+    -3.86637,
+    55.77651
+   ]
+  },
+  "S53000357": {
+   "name": "Mossblown",
+   "population": 2119,
+   "center": [
+    -4.52879,
+    55.49095
+   ]
+  },
+  "S53000358": {
+   "name": "Mosstodloch",
+   "population": 1122,
+   "center": [
+    -3.12051,
+    57.62625
+   ]
+  },
+  "S53000359": {
+   "name": "Muir of Ord",
+   "population": 2838,
+   "center": [
+    -4.45845,
+    57.51934
+   ]
+  },
+  "S53000360": {
+   "name": "Muirkirk",
+   "population": 1324,
+   "center": [
+    -4.06611,
+    55.5212
+   ]
+  },
+  "S53000361": {
+   "name": "Munlochy",
+   "population": 557,
+   "center": [
+    -4.26218,
+    57.55112
+   ]
+  },
+  "S53000362": {
+   "name": "Murthly",
+   "population": 569,
+   "center": [
+    -3.46101,
+    56.53029
+   ]
+  },
+  "S53000363": {
+   "name": "Muthill",
+   "population": 680,
+   "center": [
+    -3.83197,
+    56.33192
+   ]
+  },
+  "S53000364": {
+   "name": "Nairn",
+   "population": 9582,
+   "center": [
+    -3.87115,
+    57.58307
+   ]
+  },
+  "S53000365": {
+   "name": "Netherburn",
+   "population": 829,
+   "center": [
+    -3.90167,
+    55.70987
+   ]
+  },
+  "S53000366": {
+   "name": "Nethy Bridge",
+   "population": 578,
+   "center": [
+    -3.65322,
+    57.26575
+   ]
+  },
+  "S53000367": {
+   "name": "New Cumnock",
+   "population": 2641,
+   "center": [
+    -4.18016,
+    55.39176
+   ]
+  },
+  "S53000368": {
+   "name": "New Deer",
+   "population": 669,
+   "center": [
+    -2.1907,
+    57.51364
+   ]
+  },
+  "S53000369": {
+   "name": "New Pitsligo",
+   "population": 1096,
+   "center": [
+    -2.19699,
+    57.59558
+   ]
+  },
+  "S53000370": {
+   "name": "Newburgh (Aberdeenshire)",
+   "population": 1652,
+   "center": [
+    -2.00383,
+    57.3187
+   ]
+  },
+  "S53000371": {
+   "name": "Newburgh (Fife)",
+   "population": 2017,
+   "center": [
+    -3.23922,
+    56.3505
+   ]
+  },
+  "S53000372": {
+   "name": "Newcastleton",
+   "population": 778,
+   "center": [
+    -2.81097,
+    55.18
+   ]
+  },
+  "S53000373": {
+   "name": "Newmachar",
+   "population": 2522,
+   "center": [
+    -2.18834,
+    57.26645
+   ]
+  },
+  "S53000374": {
+   "name": "Newmilns",
+   "population": 2562,
+   "center": [
+    -4.32315,
+    55.6092
+   ]
+  },
+  "S53000375": {
+   "name": "Newport-on-Tay and Wormit",
+   "population": 4118,
+   "center": [
+    -2.93586,
+    56.44149
+   ]
+  },
+  "S53000376": {
+   "name": "Newton Stewart",
+   "population": 3954,
+   "center": [
+    -4.48403,
+    54.95804
+   ]
+  },
+  "S53000377": {
+   "name": "Newtonhill",
+   "population": 3178,
+   "center": [
+    -2.14921,
+    57.03298
+   ]
+  },
+  "S53000378": {
+   "name": "Newtonmore",
+   "population": 1115,
+   "center": [
+    -4.11613,
+    57.06517
+   ]
+  },
+  "S53000379": {
+   "name": "Newtown St Boswells",
+   "population": 1662,
+   "center": [
+    -2.66967,
+    55.57822
+   ]
+  },
+  "S53000380": {
+   "name": "Newtyle",
+   "population": 771,
+   "center": [
+    -3.14339,
+    56.55887
+   ]
+  },
+  "S53000381": {
+   "name": "North Berwick",
+   "population": 8310,
+   "center": [
+    -2.72659,
+    56.05426
+   ]
+  },
+  "S53000382": {
+   "name": "North Kessock",
+   "population": 1319,
+   "center": [
+    -4.25693,
+    57.50489
+   ]
+  },
+  "S53000383": {
+   "name": "North Queensferry",
+   "population": 1005,
+   "center": [
+    -3.39221,
+    56.01149
+   ]
+  },
+  "S53000384": {
+   "name": "Oakley, Carnock and Comrie",
+   "population": 3950,
+   "center": [
+    -3.56499,
+    56.08489
+   ]
+  },
+  "S53000385": {
+   "name": "Oban",
+   "population": 8000,
+   "center": [
+    -5.46825,
+    56.40672
+   ]
+  },
+  "S53000386": {
+   "name": "Ochiltree",
+   "population": 992,
+   "center": [
+    -4.3626,
+    55.46197
+   ]
+  },
+  "S53000387": {
+   "name": "Oldmeldrum",
+   "population": 3174,
+   "center": [
+    -2.32141,
+    57.33633
+   ]
+  },
+  "S53000388": {
+   "name": "Ormiston",
+   "population": 2586,
+   "center": [
+    -2.94455,
+    55.91108
+   ]
+  },
+  "S53000389": {
+   "name": "Overtown",
+   "population": 2551,
+   "center": [
+    -3.91497,
+    55.75625
+   ]
+  },
+  "S53000390": {
+   "name": "Pathhead",
+   "population": 911,
+   "center": [
+    -2.96681,
+    55.86624
+   ]
+  },
+  "S53000391": {
+   "name": "Patna",
+   "population": 1962,
+   "center": [
+    -4.49673,
+    55.35965
+   ]
+  },
+  "S53000392": {
+   "name": "Peebles",
+   "population": 9108,
+   "center": [
+    -3.18664,
+    55.64882
+   ]
+  },
+  "S53000393": {
+   "name": "Pencaitland",
+   "population": 1675,
+   "center": [
+    -2.89447,
+    55.90775
+   ]
+  },
+  "S53000394": {
+   "name": "Penicuik",
+   "population": 16409,
+   "center": [
+    -3.21598,
+    55.83247
+   ]
+  },
+  "S53000395": {
+   "name": "Perth",
+   "population": 47893,
+   "center": [
+    -3.45688,
+    56.40294
+   ]
+  },
+  "S53000396": {
+   "name": "Peterhead",
+   "population": 19791,
+   "center": [
+    -1.80037,
+    57.50589
+   ]
+  },
+  "S53000397": {
+   "name": "Pitlochry",
+   "population": 2694,
+   "center": [
+    -3.72794,
+    56.70509
+   ]
+  },
+  "S53000398": {
+   "name": "Pitmedden",
+   "population": 1381,
+   "center": [
+    -2.17931,
+    57.33885
+   ]
+  },
+  "S53000399": {
+   "name": "Pittenweem",
+   "population": 1451,
+   "center": [
+    -2.72876,
+    56.21443
+   ]
+  },
+  "S53000400": {
+   "name": "Plains",
+   "population": 3112,
+   "center": [
+    -3.92865,
+    55.88118
+   ]
+  },
+  "S53000401": {
+   "name": "Plean",
+   "population": 1939,
+   "center": [
+    -3.86779,
+    56.06201
+   ]
+  },
+  "S53000402": {
+   "name": "Port Bannatyne",
+   "population": 1183,
+   "center": [
+    -5.06466,
+    55.85595
+   ]
+  },
+  "S53000403": {
+   "name": "Port Ellen",
+   "population": 794,
+   "center": [
+    -6.18089,
+    55.63026
+   ]
+  },
+  "S53000404": {
+   "name": "Portgordon",
+   "population": 755,
+   "center": [
+    -3.01324,
+    57.66291
+   ]
+  },
+  "S53000405": {
+   "name": "Portknockie",
+   "population": 1055,
+   "center": [
+    -2.85652,
+    57.70295
+   ]
+  },
+  "S53000406": {
+   "name": "Portree",
+   "population": 2281,
+   "center": [
+    -6.2012,
+    57.4157
+   ]
+  },
+  "S53000407": {
+   "name": "Portsoy",
+   "population": 1727,
+   "center": [
+    -2.69182,
+    57.68025
+   ]
+  },
+  "S53000408": {
+   "name": "Potterton",
+   "population": 854,
+   "center": [
+    -2.09678,
+    57.22988
+   ]
+  },
+  "S53000409": {
+   "name": "Prestonpans",
+   "population": 10620,
+   "center": [
+    -2.97756,
+    55.95715
+   ]
+  },
+  "S53000410": {
+   "name": "Quarrier's Village",
+   "population": 636,
+   "center": [
+    -4.61458,
+    55.86637
+   ]
+  },
+  "S53000411": {
+   "name": "Quarter",
+   "population": 712,
+   "center": [
+    -4.02819,
+    55.73959
+   ]
+  },
+  "S53000412": {
+   "name": "Ratho",
+   "population": 2278,
+   "center": [
+    -3.38138,
+    55.92324
+   ]
+  },
+  "S53000413": {
+   "name": "Rigside",
+   "population": 692,
+   "center": [
+    -3.7815,
+    55.59747
+   ]
+  },
+  "S53000414": {
+   "name": "Rosehearty",
+   "population": 1249,
+   "center": [
+    -2.11891,
+    57.69684
+   ]
+  },
+  "S53000415": {
+   "name": "Rosemarkie",
+   "population": 631,
+   "center": [
+    -4.1145,
+    57.58933
+   ]
+  },
+  "S53000416": {
+   "name": "Rosewell",
+   "population": 2277,
+   "center": [
+    -3.13794,
+    55.85082
+   ]
+  },
+  "S53000417": {
+   "name": "Roslin",
+   "population": 2016,
+   "center": [
+    -3.16799,
+    55.85876
+   ]
+  },
+  "S53000418": {
+   "name": "Rosneath",
+   "population": 1174,
+   "center": [
+    -4.79777,
+    56.01041
+   ]
+  },
+  "S53000419": {
+   "name": "Rothes",
+   "population": 1061,
+   "center": [
+    -3.20676,
+    57.52911
+   ]
+  },
+  "S53000420": {
+   "name": "Rothesay",
+   "population": 4207,
+   "center": [
+    -5.05399,
+    55.8331
+   ]
+  },
+  "S53000421": {
+   "name": "Rothienorman",
+   "population": 1087,
+   "center": [
+    -2.46401,
+    57.41173
+   ]
+  },
+  "S53000422": {
+   "name": "Saline",
+   "population": 1412,
+   "center": [
+    -3.56936,
+    56.11375
+   ]
+  },
+  "S53000423": {
+   "name": "Salsburgh",
+   "population": 1282,
+   "center": [
+    -3.87381,
+    55.84265
+   ]
+  },
+  "S53000424": {
+   "name": "Sandhaven",
+   "population": 832,
+   "center": [
+    -2.06196,
+    57.6964
+   ]
+  },
+  "S53000425": {
+   "name": "Sanquhar",
+   "population": 1913,
+   "center": [
+    -3.92439,
+    55.36798
+   ]
+  },
+  "S53000426": {
+   "name": "Scalloway",
+   "population": 1175,
+   "center": [
+    -1.26208,
+    60.14043
+   ]
+  },
+  "S53000427": {
+   "name": "Scone",
+   "population": 5232,
+   "center": [
+    -3.4007,
+    56.42101
+   ]
+  },
+  "S53000428": {
+   "name": "Seafield",
+   "population": 1304,
+   "center": [
+    -3.58861,
+    55.87783
+   ]
+  },
+  "S53000429": {
+   "name": "Selkirk",
+   "population": 5521,
+   "center": [
+    -2.83885,
+    55.55276
+   ]
+  },
+  "S53000430": {
+   "name": "Shieldhill",
+   "population": 2348,
+   "center": [
+    -3.76444,
+    55.97315
+   ]
+  },
+  "S53000431": {
+   "name": "Shotts",
+   "population": 8795,
+   "center": [
+    -3.80143,
+    55.82262
+   ]
+  },
+  "S53000432": {
+   "name": "Skelmorlie and Wemyss Bay",
+   "population": 4432,
+   "center": [
+    -4.88231,
+    55.87391
+   ]
+  },
+  "S53000433": {
+   "name": "Slamannan",
+   "population": 1169,
+   "center": [
+    -3.83515,
+    55.93484
+   ]
+  },
+  "S53000434": {
+   "name": "South Queensferry",
+   "population": 10216,
+   "center": [
+    -3.39369,
+    55.98521
+   ]
+  },
+  "S53000435": {
+   "name": "Spean Bridge",
+   "population": 563,
+   "center": [
+    -4.91193,
+    56.89484
+   ]
+  },
+  "S53000436": {
+   "name": "Springfield",
+   "population": 1039,
+   "center": [
+    -3.06601,
+    56.29551
+   ]
+  },
+  "S53000437": {
+   "name": "Springside",
+   "population": 1133,
+   "center": [
+    -4.58924,
+    55.61459
+   ]
+  },
+  "S53000438": {
+   "name": "St Andrews",
+   "population": 16460,
+   "center": [
+    -2.80567,
+    56.33488
+   ]
+  },
+  "S53000439": {
+   "name": "St Boswells",
+   "population": 1360,
+   "center": [
+    -2.64311,
+    55.57029
+   ]
+  },
+  "S53000440": {
+   "name": "St Combs",
+   "population": 632,
+   "center": [
+    -1.90739,
+    57.65808
+   ]
+  },
+  "S53000441": {
+   "name": "St Cyrus",
+   "population": 1175,
+   "center": [
+    -2.41714,
+    56.77504
+   ]
+  },
+  "S53000442": {
+   "name": "St Fergus",
+   "population": 724,
+   "center": [
+    -1.84254,
+    57.56141
+   ]
+  },
+  "S53000443": {
+   "name": "St Madoes and Glencarse",
+   "population": 1096,
+   "center": [
+    -3.30331,
+    56.37462
+   ]
+  },
+  "S53000444": {
+   "name": "St Monans",
+   "population": 1188,
+   "center": [
+    -2.76657,
+    56.20618
+   ]
+  },
+  "S53000445": {
+   "name": "Stanley",
+   "population": 1497,
+   "center": [
+    -3.4479,
+    56.48103
+   ]
+  },
+  "S53000446": {
+   "name": "Steòrnabhagh (Stornoway)",
+   "population": 6963,
+   "center": [
+    -6.38892,
+    58.22875
+   ]
+  },
+  "S53000447": {
+   "name": "Stewarton",
+   "population": 7869,
+   "center": [
+    -4.51503,
+    55.68237
+   ]
+  },
+  "S53000448": {
+   "name": "Stirling",
+   "population": 49928,
+   "center": [
+    -3.9297,
+    56.10516
+   ]
+  },
+  "S53000449": {
+   "name": "Stonehaven",
+   "population": 11177,
+   "center": [
+    -2.21862,
+    56.969
+   ]
+  },
+  "S53000450": {
+   "name": "Stonehouse",
+   "population": 5600,
+   "center": [
+    -3.98918,
+    55.69275
+   ]
+  },
+  "S53000451": {
+   "name": "Stow",
+   "population": 705,
+   "center": [
+    -2.86246,
+    55.69356
+   ]
+  },
+  "S53000452": {
+   "name": "Stranraer",
+   "population": 9751,
+   "center": [
+    -5.02377,
+    54.89953
+   ]
+  },
+  "S53000453": {
+   "name": "Strathaven",
+   "population": 8339,
+   "center": [
+    -4.06501,
+    55.67927
+   ]
+  },
+  "S53000454": {
+   "name": "Strathblane",
+   "population": 1887,
+   "center": [
+    -4.30605,
+    55.98423
+   ]
+  },
+  "S53000455": {
+   "name": "Strathkinness",
+   "population": 781,
+   "center": [
+    -2.87591,
+    56.33476
+   ]
+  },
+  "S53000456": {
+   "name": "Strathmiglo",
+   "population": 829,
+   "center": [
+    -3.26761,
+    56.27758
+   ]
+  },
+  "S53000457": {
+   "name": "Strathpeffer",
+   "population": 1108,
+   "center": [
+    -4.53955,
+    57.58868
+   ]
+  },
+  "S53000458": {
+   "name": "Strichen",
+   "population": 964,
+   "center": [
+    -2.08618,
+    57.58669
+   ]
+  },
+  "S53000459": {
+   "name": "Stromness",
+   "population": 1700,
+   "center": [
+    -3.28938,
+    58.9728
+   ]
+  },
+  "S53000460": {
+   "name": "Stuartfield",
+   "population": 909,
+   "center": [
+    -2.04326,
+    57.50437
+   ]
+  },
+  "S53000461": {
+   "name": "Symington (South Ayrshire)",
+   "population": 1619,
+   "center": [
+    -4.5597,
+    55.54967
+   ]
+  },
+  "S53000462": {
+   "name": "Symington (South Lanarkshire)",
+   "population": 763,
+   "center": [
+    -3.59469,
+    55.5989
+   ]
+  },
+  "S53000463": {
+   "name": "Tain",
+   "population": 3548,
+   "center": [
+    -4.0591,
+    57.81149
+   ]
+  },
+  "S53000464": {
+   "name": "Tarbert",
+   "population": 1129,
+   "center": [
+    -5.41604,
+    55.86203
+   ]
+  },
+  "S53000465": {
+   "name": "Tarbolton",
+   "population": 1855,
+   "center": [
+    -4.48395,
+    55.51255
+   ]
+  },
+  "S53000466": {
+   "name": "Tarland",
+   "population": 714,
+   "center": [
+    -2.85757,
+    57.12929
+   ]
+  },
+  "S53000467": {
+   "name": "Tarves",
+   "population": 1016,
+   "center": [
+    -2.22116,
+    57.37047
+   ]
+  },
+  "S53000468": {
+   "name": "Tayport",
+   "population": 3958,
+   "center": [
+    -2.879,
+    56.44637
+   ]
+  },
+  "S53000469": {
+   "name": "Thornhill (Dumfries and Galloway)",
+   "population": 1673,
+   "center": [
+    -3.76562,
+    55.2391
+   ]
+  },
+  "S53000470": {
+   "name": "Thurso",
+   "population": 7426,
+   "center": [
+    -3.5307,
+    58.59423
+   ]
+  },
+  "S53000471": {
+   "name": "Tighnabruaich",
+   "population": 580,
+   "center": [
+    -5.24459,
+    55.89203
+   ]
+  },
+  "S53000472": {
+   "name": "Tillicoultry",
+   "population": 5780,
+   "center": [
+    -3.73886,
+    56.15213
+   ]
+  },
+  "S53000473": {
+   "name": "Tobermory",
+   "population": 1045,
+   "center": [
+    -6.06984,
+    56.62508
+   ]
+  },
+  "S53000474": {
+   "name": "Torphichen",
+   "population": 675,
+   "center": [
+    -3.65502,
+    55.93252
+   ]
+  },
+  "S53000475": {
+   "name": "Torphins",
+   "population": 1315,
+   "center": [
+    -2.61992,
+    57.106
+   ]
+  },
+  "S53000476": {
+   "name": "Torrance",
+   "population": 2325,
+   "center": [
+    -4.21049,
+    55.94159
+   ]
+  },
+  "S53000477": {
+   "name": "Townhill",
+   "population": 1171,
+   "center": [
+    -3.43861,
+    56.08946
+   ]
+  },
+  "S53000478": {
+   "name": "Tranent",
+   "population": 12237,
+   "center": [
+    -2.95165,
+    55.94322
+   ]
+  },
+  "S53000479": {
+   "name": "Troon",
+   "population": 15261,
+   "center": [
+    -4.64793,
+    55.5513
+   ]
+  },
+  "S53000480": {
+   "name": "Tullibody",
+   "population": 9404,
+   "center": [
+    -3.83838,
+    56.13285
+   ]
+  },
+  "S53000481": {
+   "name": "Turriff",
+   "population": 4602,
+   "center": [
+    -2.45915,
+    57.53895
+   ]
+  },
+  "S53000482": {
+   "name": "Twechar",
+   "population": 1323,
+   "center": [
+    -4.08471,
+    55.95462
+   ]
+  },
+  "S53000483": {
+   "name": "Ullapool",
+   "population": 1469,
+   "center": [
+    -5.15886,
+    57.90014
+   ]
+  },
+  "S53000484": {
+   "name": "Uplawmoor",
+   "population": 663,
+   "center": [
+    -4.49342,
+    55.76554
+   ]
+  },
+  "S53000485": {
+   "name": "Vale of Leven",
+   "population": 23288,
+   "center": [
+    -4.57724,
+    55.98826
+   ]
+  },
+  "S53000486": {
+   "name": "Walkerburn",
+   "population": 709,
+   "center": [
+    -3.01682,
+    55.62359
+   ]
+  },
+  "S53000487": {
+   "name": "Waterfoot",
+   "population": 1319,
+   "center": [
+    -4.2817,
+    55.76479
+   ]
+  },
+  "S53000488": {
+   "name": "Wattston and Greengairs",
+   "population": 1028,
+   "center": [
+    -3.95484,
+    55.90845
+   ]
+  },
+  "S53000489": {
+   "name": "Wellbank",
+   "population": 596,
+   "center": [
+    -2.86016,
+    56.52104
+   ]
+  },
+  "S53000490": {
+   "name": "West Barns",
+   "population": 547,
+   "center": [
+    -2.5506,
+    55.99437
+   ]
+  },
+  "S53000491": {
+   "name": "West Kilbride",
+   "population": 4862,
+   "center": [
+    -4.8581,
+    55.69074
+   ]
+  },
+  "S53000492": {
+   "name": "West Linton",
+   "population": 1755,
+   "center": [
+    -3.35463,
+    55.75205
+   ]
+  },
+  "S53000493": {
+   "name": "Westhill (Aberdeenshire)",
+   "population": 11750,
+   "center": [
+    -2.28767,
+    57.15409
+   ]
+  },
+  "S53000494": {
+   "name": "Whitburn",
+   "population": 12947,
+   "center": [
+    -3.68094,
+    55.86428
+   ]
+  },
+  "S53000495": {
+   "name": "Whitecraig",
+   "population": 1253,
+   "center": [
+    -3.03523,
+    55.91938
+   ]
+  },
+  "S53000496": {
+   "name": "Whitecross",
+   "population": 762,
+   "center": [
+    -3.65264,
+    55.97282
+   ]
+  },
+  "S53000497": {
+   "name": "Whitehills",
+   "population": 1037,
+   "center": [
+    -2.57603,
+    57.67757
+   ]
+  },
+  "S53000498": {
+   "name": "Whithorn",
+   "population": 723,
+   "center": [
+    -4.4133,
+    54.73405
+   ]
+  },
+  "S53000499": {
+   "name": "Whiting Bay",
+   "population": 647,
+   "center": [
+    -5.0972,
+    55.48826
+   ]
+  },
+  "S53000500": {
+   "name": "Wick",
+   "population": 6913,
+   "center": [
+    -3.07961,
+    58.45346
+   ]
+  },
+  "S53000501": {
+   "name": "Wigtown",
+   "population": 859,
+   "center": [
+    -4.44125,
+    54.8679
+   ]
+  },
+  "S53000502": {
+   "name": "Winchburgh",
+   "population": 4283,
+   "center": [
+    -3.46256,
+    55.95701
+   ]
+  },
+  "S53000503": {
+   "name": "Yetholm",
+   "population": 584,
+   "center": [
+    -2.27633,
+    55.54765
+   ]
+  }
+ }
+}

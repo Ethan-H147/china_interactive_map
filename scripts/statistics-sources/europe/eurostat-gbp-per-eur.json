@@ -1,0 +1,13 @@
+{
+ "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&currency=GBP&statinfo=AVG&sinceTimePeriod=2019",
+ "updated": "2026-07-08T11:00:00+0200",
+ "gbpPerEur": {
+  "2019": 0.87777,
+  "2020": 0.8897,
+  "2021": 0.8596,
+  "2022": 0.85276,
+  "2023": 0.86979,
+  "2024": 0.84662,
+  "2025": 0.85679
+ }
+}

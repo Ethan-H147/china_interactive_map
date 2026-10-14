@@ -303,8 +303,7 @@ Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia
 
 ## Europe (developer mode)
 
-The United Kingdom, Spain, France and Italy are listed in `developerCountries`. `dist/europe.mjs` adds them through the shared regional-country page only once developer mode allows one, so public visitors download none of their geometry (only the 2 KB module). Countries whose subdivisions are not yet built are a single selectable region with no level toggle.
-
+The United Kingdom, Spain, France and Italy are listed in `developerCountries`. `dist/europe.mjs` adds them through the shared regional-country page only once developer mode allows one, so public visitors download none of their geometry (only the 2 KB module). 
 ### Italy
 
 20 regions, 110 provinces and equivalent units, and 7,896 comuni, from ISTAT's full-detail boundaries for statistical purposes at 1 January 2026 (CC BY 4.0). The comuni are simplified together so neighbours share edges, and regions and provinces are dissolved from them. Like China, Italy needs no separate settlement layer: every town is a comune. Regions and provinces arrive in one bundle when Italy opens (`bundledLevels: 2`); a province's comuni load when it is selected.
@@ -337,11 +336,20 @@ The 13 regions of metropolitan France (Corsica is a territorial collectivity), 9
 - Area: IGN's official commune surface as published with the outlines (undated in the source); parents are sums.
 - GDP and GDP per capita: Eurostat — regions from NUTS 1 (2024), départements from NUTS 3.
 
+### United Kingdom
+
+12 ITL1 nations and regions, 218 counties and unitary authorities, and the 164 districts of the English two-tier counties, from the ONS December 2024 local authority boundaries (generalised to 20 m, OGL v3); counties and regions are dissolved from the districts. Single-tier authorities — unitaries, metropolitan and London boroughs, and the Welsh, Scottish and Northern Irish councils — are terminal at the second level, as South Africa's metros are. Every level loads with the country (`loadAllSubdivisions`).
+
+- Population and area: ONS mid-2024 estimates and areas (MYE5); every county equals the sum of its districts.
+- GDP and GDP per capita: ONS regional GDP, current market prices, 2024 (provisional) — regions from the ITL1 tables, counties and authorities summed from the local-authority tables, per capita from the matching ONS population. ONS's September 2026 release suppresses local-authority GDP in eight ITL2 subregions (West of England; North Somerset, Somerset and Dorset; Gloucestershire and Wiltshire; North, Mid and South West, and South East Wales; Highlands and Islands; West Central Scotland) pending a corrected release, so those 51 authorities and Gloucestershire have none. USD uses Eurostat's euro reference rates (dollar–pound cross rate).
+
+Cities and towns, like South Africa, are points independent of councils (`scripts/prepare-uk-settlements.mjs`): every built-up area or settlement with at least 1,000 residents — 4,258 places. England and Wales use ONS 2022 built-up areas with Census 2021 usual residents (London's built-up areas, omitted from ONS's towns tables, are summed from Census output areas as ONS does); Scotland uses NRS Census 2022 settlements; Northern Ireland uses NISRA 2015 settlements with Census 2021 counts (CT0100), located by GeoNames and, for villages absent there, OpenStreetMap. Welsh names are a label language.
+
 ### Outlines and frontiers
 
 | Country | Coverage | Outline source | Licence |
 |---|---|---|---|
-| United Kingdom | Great Britain, Northern Ireland and their islands | Office for National Statistics, Countries (December 2024) BGC | Open Government Licence v3.0 |
+| United Kingdom | Great Britain, Northern Ireland and their islands | ONS Local Authority Districts (December 2024) BGC, dissolved | Open Government Licence v3.0 |
 | Spain | Peninsula, Balearic and Canary Islands, Ceuta, Melilla and the minor sovereign territories | Instituto Geográfico Nacional jurisdictional boundaries (BDLJE), dissolved from the municipalities | CC BY 4.0 |
 | France | Metropolitan France and Corsica (overseas regions not yet included) | IGN ADMIN EXPRESS commune outlines via geo.api.gouv.fr, dissolved | Etalab Open Licence 2.0 |
 | Italy | Mainland and islands; San Marino and Vatican City remain enclaves | ISTAT boundaries for statistical purposes, 1 January 2026 (dissolved from the comuni) | CC BY 4.0 |

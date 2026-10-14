@@ -203,7 +203,59 @@ async function france(){
  return regions;
 }
 
-for(const [country,build] of [['italy',italy],['spain',spain],['france',france]]){
+async function unitedKingdom(){
+ const catalogue=readCatalogue('united-kingdom'),{readXlsx}=await import('./read-xlsx.mjs');
+ // Population and area: ONS mid-2024 estimates (MYE5), every local authority, county and region.
+ const mye=await retain('uk-population-area-mid2024.json',async()=>{
+  const rows=readXlsx(artifacts+'/ons-mye24-tables-uk.xlsx').MYE5,header=rows.findIndex(r=>r[0]==='Code'),values={};
+  assert.equal(rows[header][3],'Area (sq km)');assert.equal(rows[header][4],'Estimated Population mid-2024');
+  for(const r of rows.slice(header+1))if(r[0])values[r[0]]={name:r[1],geography:r[2],areaKm2:r[3],population:r[4]};
+  return {url:'https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2024/mye24tablesuk.xlsx',table:'MYE5',retrieved:today,values};
+ });
+ // GDP: ONS regional GDP by local authority, current market prices (Table 5) and the
+ // population it is divided by (Table 6), latest year.
+ const gdp=await retain('uk-gdp-local-authorities.json',async()=>{
+  const book=readXlsx(artifacts+'/ons-gdp-local-authorities-1998-2024.xlsx'),table=name=>{const rows=book[name],h=rows.findIndex(r=>r[1]==='LA code'),years=rows[h].slice(3).map(Number),out={};for(const r of rows.slice(h+1))if(r[1])out[r[1]]=Object.fromEntries(years.map((y,i)=>[y,r[3+i]]).filter(([y,v])=>y&&typeof v==='number'));return out;};
+  return {url:'https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductlocalauthorities/1998to2024/regionalgrossdomesticproductgdplocalauthorities.xlsx',retrieved:today,gdp:table('Table 5'),population:table('Table 6')};
+ });
+ const itl=await retain('uk-gdp-itl1.json',async()=>{
+  const book=readXlsx(artifacts+'/ons-gdp-itl-regions-1998-2024.xlsx'),table=name=>{const rows=book[name],h=rows.findIndex(r=>r[1]==='ITL code'),years=rows[h].slice(3).map(Number),out={};for(const r of rows.slice(h+1))if(r[0]==='ITL1')out[r[1]]=Object.fromEntries(years.map((y,i)=>[y,r[3+i]]).filter(([y,v])=>y&&typeof v==='number'));return out;};
+  return {url:'https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions/1998to2024/regionalgrossdomesticproductgdpbyallinternationalterritoriallevelitlregions.xlsx',retrieved:today,gdp:table('Table 5'),population:table('Table 6')};
+ });
+ sources.ukGdpItl={title:'Office for National Statistics · Regional gross domestic product: all ITL regions, 1998 to 2024 (Tables 5 and 6, ITL1)',url:'https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductallnutslevelregions',data:itl.url,license:'Open Government Licence v3.0'};
+ const gbp=await retain('eurostat-gbp-per-eur.json',async()=>{const e=await eurostat('ert_bil_eur_a','currency=GBP&statinfo=AVG&sinceTimePeriod=2019');return {url:e.url,updated:e.updated,gbpPerEur:e.rows.all};});
+ sources.ukPopulation={title:'Office for National Statistics · Mid-year population estimates, United Kingdom, mid-2024 (MYE5)',url:'https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland',data:mye.url,license:'Open Government Licence v3.0'};
+ sources.ukArea={title:'Office for National Statistics · Area (sq km) in the mid-2024 population density table (MYE5)',url:sources.ukPopulation.url,data:mye.url,license:'Open Government Licence v3.0'};
+ sources.ukGdp={title:'Office for National Statistics · Regional gross domestic product: local authorities, 1998 to 2024 (Tables 5 and 6)',url:'https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductlocalauthorities',data:gdp.url,license:'Open Government Licence v3.0'};
+ sources.eurostatGbpExchange={title:'Eurostat · Euro/ECU exchange rates, annual data (ert_bil_eur_a), pound sterling and US dollar averages; USD per GBP is their cross rate',url:sources.eurostatExchange.url,license:'CC BY 4.0'};
+ const regionCodes={TLC:'E12000001',TLD:'E12000002',TLE:'E12000003',TLF:'E12000004',TLG:'E12000005',TLH:'E12000006',TLI:'E12000007',TLJ:'E12000008',TLK:'E12000009',TLL:'W92000004',TLM:'S92000003',TLN:'N92000002'};
+ const children=new Map();for(const r of catalogue.records)if(r.parent){if(!children.has(r.parent))children.set(r.parent,[]);children.get(r.parent).push(r);}
+ // Local authorities under a unit: a two-tier county's districts, or the unit itself.
+ const authorities=r=>children.has(r.id)?children.get(r.id).flatMap(authorities):[r.code];
+ const year=Math.max(...Object.keys(gdp.gdp.E09000001).map(Number));
+ const regions={};
+ for(const r of catalogue.records){
+  const key='united-kingdom:'+r.id,code=r.level===1?regionCodes[r.id.slice(5)]:r.code,m=mye.values[code];assert(m,key+' in MYE5 ('+code+')');
+  const sum=authorities(r).reduce((s,c)=>s+mye.values[c].population,0);assert.equal(m.population,sum,key+' population equals its local authorities');
+  const record={name:r.en,level:r.level,population:{value:m.population,year:2024,date:'2024-06-30',method:'estimate',source:'ukPopulation',periodLabel:'Mid-2024 estimate'},area:{value:Math.round(m.areaKm2*100)/100,unit:'km²',year:2024,method:'reported',source:'ukArea'}};
+  // Regions use ONS's ITL1 accounts. Below them, GDP is summed over local authorities only
+  // when ONS publishes every one: its September 2026 release suppresses authorities in eight
+  // ITL2 subregions after a conversion error, pending a corrected release.
+  const las=authorities(r),usdPerGbp=exchange.usdPerEur[year]/gbp.gbpPerEur[year];
+  const accounts=r.level===1?{gdp:itl.gdp[r.id.slice(5)]?.[year],people:itl.population[r.id.slice(5)]?.[year],source:'ukGdpItl'}:las.every(c=>gdp.gdp[c]?.[year]!=null&&gdp.population[c]?.[year])?{gdp:las.reduce((s,c)=>s+gdp.gdp[c][year],0),people:las.reduce((s,c)=>s+gdp.population[c][year],0),source:'ukGdp'}:null;
+  if(r.level===1)assert(accounts.gdp>0&&accounts.people>0,key+' ITL1 GDP');
+  if(accounts){
+   const base={year,currency:'GBP',source:accounts.source,priceBasis:'current',exchangeRate:1/usdPerGbp,exchangeYear:year,exchangeSource:'eurostatGbpExchange'};
+   record.gdp={...base,value:accounts.gdp*1e6,usd:accounts.gdp*1e6*usdPerGbp};
+   record.gdpPerCapita={...base,value:accounts.gdp*1e6/accounts.people,usd:accounts.gdp*1e6/accounts.people*usdPerGbp,method:'calculated',populationValue:accounts.people,populationYear:year,populationSource:accounts.source};
+   record.note=`GDP is the ONS ${year} estimate at current market prices${r.level===1?' for the ITL1 region':las.length>1?`, summed over ${las.length} local authorities`:''} (the latest year is provisional); GDP per capita divides it by the ONS resident population used for those accounts. The population card shows the mid-2024 estimate. USD uses the ${year} average dollar–pound cross rate from Eurostat's euro reference rates.`;
+  }else record.note='GDP is not shown: ONS suppressed local-authority estimates in this area in its September 2026 release, after an error in converting to the 2025 ITL subregions, pending a corrected release.';
+  regions[key]=record;
+ }
+ return regions;
+}
+
+for(const [country,build] of [['italy',italy],['spain',spain],['france',france],['united-kingdom',unitedKingdom]]){
  const regions=await build(),dir=`dist/data/europe/${country}`,used=new Set(Object.values(regions).flatMap(r=>Object.values(r).map(m=>m?.source).filter(Boolean)).concat(Object.values(regions).flatMap(r=>[r.gdp?.exchangeSource].filter(Boolean))));
  const countrySources=Object.fromEntries(Object.entries(sources).filter(([id])=>used.has(id)));
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,retrieved:today,country,sources:countrySources,regions})+'\n');

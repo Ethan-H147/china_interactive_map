@@ -1,23 +1,25 @@
 {
   "retrieved": "2026-10-14",
   "counts": {
-    "1": 1
+    "1": 12,
+    "2": 218,
+    "3": 164
   },
-  "coverage": "Great Britain and Northern Ireland with their islands: the four countries of the Office for National Statistics December 2024 boundaries, generalised to 20 m and clipped to the coastline. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.",
+  "coverage": "The 12 ITL1 nations and regions, 218 counties and unitary authorities (including metropolitan and London boroughs and the Welsh, Scottish and Northern Irish councils) and the 164 districts of the English two-tier counties, from the Office for National Statistics December 2024 local authority boundaries, generalised to 20 m and clipped to the coastline. Counties and regions are dissolved from the districts; single-tier authorities have no districts below them. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
   "frontierKm": 504,
   "seamReports": {},
   "sources": [
     {
-      "file": "gbr-countries-2024-bgc.geojson",
-      "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Countries_December_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=1%3D1&outFields=CTRY24CD,CTRY24NM&outSR=4326&f=geojson",
-      "provider": "Office for National Statistics, Countries (December 2024) Boundaries UK BGC",
+      "file": "ons-lad-dec-2024-bgc.geojson",
+      "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=1%3D1&outFields=LAD24CD,LAD24NM,LAD24NMW&outSR=4326&f=geojson",
+      "provider": "Office for National Statistics, Local Authority Districts (December 2024) Boundaries UK BGC",
       "year": 2024,
       "license": "Open Government Licence v3.0",
       "licenseURL": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
       "attribution": "Source: Office for National Statistics licensed under the Open Government Licence v.3.0. Contains OS data © Crown copyright and database right 2024",
-      "sha256": "ee0eab74e38ec77615736c681e8ef8ec7d83d67870452eb09bedec8703f70e26",
-      "bytes": 12556159
+      "sha256": "decfd01f18d5ab5095cb8bb95f43329e57fcc39a2aedf914ec036afb5e72b9ea",
+      "bytes": 19628491
     },
     {
       "file": "ne-10m-land-boundaries.geojson",

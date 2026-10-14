@@ -89,9 +89,34 @@ async function loadFrance(){
  const simplified=JSON.parse((await mapshaper.applyCommands(`-i "${file}" ${simplify} -o out.json format=geojson precision=.000001`))['out.json']);
  return {features:simplified.features,units};
 }
+// United Kingdom: ONS local authority districts (December 2024, generalised to 20 m),
+// grouped into counties and unitary authorities and the 12 ITL1 nations and regions.
+// Single-tier authorities (unitaries, metropolitan and London boroughs, Welsh, Scottish
+// and Northern Irish councils) are level-2 units with no districts below them.
+const ukRegions={TLC:'North East',TLD:'North West',TLE:'Yorkshire and The Humber',TLF:'East Midlands',TLG:'West Midlands',TLH:'East of England',TLI:'London',TLJ:'South East',TLK:'South West',TLL:'Wales',TLM:'Scotland',TLN:'Northern Ireland'};
+const ukKinds={E10:'County',E06:'Unitary authority',E08:'Metropolitan borough',E09:'London borough',W06:'Principal area',S12:'Council area',N09:'Local government district'};
+async function loadUK(){
+ const lad=read('ons-lad-dec-2024-bgc.geojson'),ctyua=read('ons-ctyua-dec-2024-bgc.geojson'),itl=read('ons-itl1-jan-2025-bgc.geojson');
+ const joined=await command(fc(lad.features.map(f=>({type:'Feature',properties:{LAD:f.properties.LAD24CD,NM:f.properties.LAD24NM,NMW:f.properties.LAD24NMW||''},geometry:f.geometry}))),'-join ctyua.json fields=CTYUA24CD largest-overlap -join itl.json fields=ITL125CD largest-overlap',{'ctyua.json':ctyua,'itl.json':itl});
+ const units=new Map(),counties=new Map(ctyua.features.map(f=>[f.properties.CTYUA24CD,f.properties]));
+ for(const f of itl.features){const code=f.properties.ITL125CD;assert(ukRegions[code],'ITL1 '+code);units.set('GB-R-'+code,{level:1,parent:null,en:ukRegions[code],local:ukRegions[code],kind:['TLL','TLM','TLN'].includes(code)?'Nation':'Region'});}
+ const features=[];
+ for(const f of joined.features){
+  // A district whose code is itself a county or unitary code is that unit; only the
+  // English two-tier districts (E07) take their county by overlap.
+  const p=f.properties;if(counties.has(p.LAD))p.CTYUA24CD=p.LAD;else assert(p.LAD.startsWith('E07'),'Two-tier district '+p.LAD);
+  const county=counties.get(p.CTYUA24CD);assert(county&&p.ITL125CD&&(p.LAD===p.CTYUA24CD||p.CTYUA24CD.startsWith('E10')),'Parents of '+p.LAD);
+  const cid='GB-C-'+p.CTYUA24CD,kind=ukKinds[p.CTYUA24CD.slice(0,3)];assert(kind,'Kind of '+p.CTYUA24CD);
+  if(!units.has(cid))units.set(cid,{level:2,parent:'GB-R-'+p.ITL125CD,en:county.CTYUA24NM,local:county.CTYUA24NMW||county.CTYUA24NM,kind:p.CTYUA24CD==='E09000001'?'City of London':kind,code:p.CTYUA24CD});
+  const id=p.LAD===p.CTYUA24CD?cid:'GB-D-'+p.LAD;
+  if(id!==cid)units.set(id,{level:3,parent:cid,en:p.NM,local:p.NMW||p.NM,kind:'District',code:p.LAD});
+  features.push({type:'Feature',properties:{id},geometry:f.geometry});
+ }
+ return {features:(await command(fc(features),simplify)).features,units};
+}
 // Camera bounds frame the main territory; Spain's Canary Islands remain in the data.
 const countries={
- 'united-kingdom':{id:'GB',en:'United Kingdom',local:'',file:'gbr-countries-2024-bgc.geojson',camera:[[-8.7,49.85],[1.8,60.9]],coverage:'Great Britain and Northern Ireland with their islands: the four countries of the Office for National Statistics December 2024 boundaries, generalised to 20 m and clipped to the coastline. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.'},
+ 'united-kingdom':{id:'GB',en:'United Kingdom',local:'',file:'ons-lad-dec-2024-bgc.geojson',load:loadUK,levels:['Nation or region','County or unitary authority','District'],bundled:3,camera:[[-8.7,49.85],[1.8,60.9]],coverage:'The 12 ITL1 nations and regions, 218 counties and unitary authorities (including metropolitan and London boroughs and the Welsh, Scottish and Northern Irish councils) and the 164 districts of the English two-tier counties, from the Office for National Statistics December 2024 local authority boundaries, generalised to 20 m and clipped to the coastline. Counties and regions are dissolved from the districts; single-tier authorities have no districts below them. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.'},
  spain:{id:'ES',en:'Spain',local:'España',file:'ign-lineas-limite-gml.zip',load:loadSpain,levels:['Autonomous community','Province','Municipality'],bundled:2,camera:[[-9.4,35.9],[4.4,43.8]],coverage:'17 autonomous communities, the autonomous cities of Ceuta and Melilla, and the minor sovereign territories under central administration (Gibraltar, which the BDLJE lists among them as Spain claims it, is a British overseas territory and is excluded); 52 provinces; and every municipality plus the shared territories (condominiums) that several municipalities own jointly, from the Instituto Geográfico Nacional jurisdictional boundaries (BDLJE). Communities and provinces are dissolved from the municipalities. Llívia takes its shape from the matching enclave in the French outline.'},
  france:{id:'FR',en:'France',local:'',file:'france-communes-*.geojson',load:loadFrance,levels:['Region','Department','Commune'],bundled:2,camera:[[-5.2,41.3],[9.6,51.1]],coverage:'The 13 regions of metropolitan France (including the territorial collectivity of Corsica), its 96 départements and every commune, from IGN ADMIN EXPRESS outlines published by geo.api.gouv.fr. Regions and départements are dissolved from the communes. Overseas regions are not yet included.'},
  italy:{id:'IT',en:'Italy',local:'Italia',file:'istat-limiti-2026.zip',load:loadItaly,levels:['Region','Province','Comune'],bundled:2,camera:[[6.6,35.5],[18.6,47.1]],coverage:"20 regions, 110 provinces and equivalent units (metropolitan cities, autonomous provinces, Sicily's free municipal consortia and Friuli-Venezia Giulia's former provinces) and 7,896 comuni, from ISTAT's full-detail boundaries for statistical purposes at 1 January 2026. Regions and provinces are dissolved from the comuni. San Marino and Vatican City remain enclaves."}
@@ -224,7 +249,7 @@ for(const [country,c] of Object.entries(countries)){
  // Each level: the most detailed polygons, or their union per ancestor.
  const byLevel={};
  for(let level=maxLevel;level>=1;level--){
-  const tagged=fc(lowest[country].features.map(f=>({type:'Feature',properties:{id:ancestor(f.properties.id,level)},geometry:f.geometry})));
+  const tagged=fc(lowest[country].features.filter(f=>unit(f.properties.id).level>=level).map(f=>({type:'Feature',properties:{id:ancestor(f.properties.id,level)},geometry:f.geometry})));
   byLevel[level]=level===maxLevel?tagged:await command(tagged,'-dissolve id');
  }
  for(let level=1;level<=maxLevel;level++){
