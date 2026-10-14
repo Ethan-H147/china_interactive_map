@@ -41,6 +41,15 @@
   }
   .map-breadcrumb button { border: 0; background: transparent; }
   .map-breadcrumb:has(#breadcrumb-region[hidden]) { padding-right: 3px; }
+  /* Three or more levels: show the current one; the full list opens vertically. */
+  .map-mode[data-collapsed-levels]:not([data-open]) button[aria-pressed="false"]:not(#mode-lock) { display: none; }
+  .map-mode[data-collapsed-levels]:not([data-open]) button[aria-pressed="true"]::after {
+    content: ""; display: inline-block; width: 6px; height: 6px; margin-left: 9px;
+    border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-3px) rotate(45deg);
+  }
+  .map-mode[data-collapsed-levels][data-open] { flex-direction: column; align-items: stretch; gap: 2px; }
+  .map-mode[data-collapsed-levels][data-open] button { min-height: 44px; text-align: left; }
+  .map-mode[data-collapsed-levels][data-open] #mode-lock { display: none; }
   .map-actions { right: var(--sheet-gap); bottom: 44px; border-radius: 14px; }
   .map-actions button { width: 44px; height: 44px; }
   .map-bottom { left: var(--sheet-gap); right: 70px; bottom: 14px; }

@@ -94,6 +94,28 @@ function placeBelowHeader() {
   if (query.matches && parts.length) root.style.setProperty('--header-bottom', Math.round(Math.max(...parts.map(r => r.bottom))) + 'px');
 }
 new ResizeObserver(placeBelowHeader).observe(document.querySelector('.site-header'));
+// Three or more levels do not fit beside the breadcrumb on a phone: the toggle shows
+// the current level, tapping it lists every level vertically, and a choice closes it.
+const levelToggle = document.querySelector('.map-mode');
+const levels = () => [...levelToggle.querySelectorAll('button')].filter(b => b.id !== 'mode-lock' && !b.hidden);
+function syncLevels() {
+  if (!levelToggle) return;
+  const collapse = query.matches && levels().length > 2;
+  levelToggle.toggleAttribute('data-collapsed-levels', collapse);
+  if (!collapse) levelToggle.removeAttribute('data-open');
+}
+document.addEventListener('click', event => {
+  const button = event.target.closest?.('.map-mode[data-collapsed-levels] button');
+  if (!button || button.id === 'mode-lock') return;
+  if (levelToggle.hasAttribute('data-open')) { levelToggle.removeAttribute('data-open'); return; }
+  event.preventDefault(); event.stopPropagation();
+  levelToggle.setAttribute('data-open', '');
+}, true);
+document.addEventListener('pointerdown', event => { if (levelToggle?.hasAttribute('data-open') && !event.target.closest('.map-mode')) levelToggle.removeAttribute('data-open'); });
+if (levelToggle) new MutationObserver(syncLevels).observe(levelToggle, {subtree: true, attributes: true, attributeFilter: ['hidden']});
+query.addEventListener('change', syncLevels);
+syncLevels();
+
 addEventListener('resize', () => { placeBelowHeader(); apply(state); });
 query.addEventListener('change', () => {
   if (query.matches) apply(state);

@@ -278,3 +278,23 @@ South American international borders are drawn from a separate shared-edge mesh 
 Malaysia's 13 states and three federal territories display official DOSM population estimates (2026), reported land area (2024, Statistics Yearbook table 1.1), and real GDP (2025, constant 2015 MYR). Real GDP per capita is calculated with DOSM’s population from the same 2025 year, and its constant-price basis and denominator are disclosed. Both real GDP and real GDP per capita show approximate USD values in constant 2015 dollars, using the World Bank / IMF 2015 average exchange rate (1 USD = 3.90550026302768 MYR). The July 2026 release provides a separate Putrajaya series. District selections clear these totals. Compact, hashed source snapshots are retained in `scripts/statistics-sources/malaysia`; `npm run build:malaysia-statistics` reproduces the public statistics file and `npm run test:malaysia-statistics` verifies coverage, units, sources and selection cancellation.
 
 All map credits remain linked behind the bottom-right circled i. Hover or keyboard focus reveals them; click/tap toggles them, and Escape or an outside click closes them. `npm run test:map-sources` verifies these interactions. The bottom-right selection prompt is hidden.
+
+## Southern Africa
+
+South Africa, Botswana and Namibia are public. Eswatini and Lesotho load only in the Changning developer mode (`developerCountries` in `dist/developer-mode.js`) until openly licensed boundary sources replace their current layers, which are publicly accessible government GIS services without a stated reuse licence. Outside developer mode they appear as gray neighbors inside and beside South Africa.
+
+| Country | Levels | Boundary source | Licence |
+|---|---|---|---|
+| South Africa | 9 provinces · 44 districts and 8 metropolitan municipalities · 205 local municipalities | geoBoundaries (OCHA ROSEA, Municipal Demarcation Board, 2020) | CC BY 3.0 IGO |
+| Botswana | 10 districts · 28 census subdistricts · 519 localities | OCHA Common Operational Dataset (UNFPA), 2011 census geography also used in 2022 | CC BY-IGO |
+| Namibia | 14 regions · 121 constituencies | Namibia Statistics Agency via the Atlas of Namibia (2022) | CC BY 4.0 |
+| Eswatini (developer) | 4 regions · 59 tinkhundla | COSPE/Khetsimphilo public GIS layer | none stated |
+| Lesotho (developer) | 10 districts · 76 community and urban councils | Department of Rural Water Supply public GIS | none stated |
+
+Lowest-level polygons form one shared topology; parent outlines are dissolved from their children, and South Africa keeps its Lesotho enclave. Each country's `sources.json` records downloads, hashes, processing and seam reports, and `statistics.json` its figures and sources. Metros are terminal jurisdictions, not repeated at the third level. Botswana's urban census districts are shown within their surrounding district.
+
+Statistics: South Africa has population at all three levels (Statistics South Africa mid-year estimates and Census 2022) and GDP for provinces only. Botswana has 2022 census population for districts and subdistricts; its localities have area only. Namibia has 2023 census population for regions and constituencies. Where a country publishes no area, a boundary-derived estimate is labeled as such. Missing figures stay empty rather than estimated.
+
+On phones, countries with three levels show the current level as one toggle; tapping it lists every level.
+
+Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia`; check with `npm run test:southern-africa`, `npm run test:botswana-namibia` and `npm run test:south-africa-settlements`.
