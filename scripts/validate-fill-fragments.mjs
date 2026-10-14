@@ -11,9 +11,11 @@ const originals=[...data.provinces.features,...data.subdivisions.features].filte
 const renderer=fs.readFileSync('dist/app.js','utf8');
 const tolerance=Number(renderer.match(/const fillSourceOptions=\{tolerance:([.\d]+)/)[1]);
 assert.equal(tolerance,0,'Fill triangles must not be simplified independently');
+// China's sources are built in MapLibre's workers (china-sources.mjs); app.js chooses their options.
+const builders=fs.readFileSync('dist/china-sources.mjs','utf8');
 for(const id of ['provinces','prefectures']){
- assert(renderer.includes(`addSource('${id}',regularFills(`),'Ordinary fill sources keep subpixel simplification');
- assert(renderer.includes(`addSource('${id}-fragments',triangleFills(`),'Only repaired triangles use zero tolerance');
+ assert(renderer.includes(`chinaSource('${id}');`)&&builders.includes(`${id}:()=>regularFills(`),'Ordinary fill sources keep subpixel simplification');
+ assert(renderer.includes(`chinaSource('${id}-fragments',fillSourceOptions);`)&&builders.includes(`'${id}-fragments':()=>triangleFills(`),'Only repaired triangles use zero tolerance');
 }
 const options={extent:8192,buffer:2048,maxZoom:18,tolerance:tolerance*16};
 function tileDeviation(tile){

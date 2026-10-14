@@ -14,8 +14,7 @@ const archive=path.join(source,'MP_SA_20.zip');
 if(!fs.existsSync(archive))throw Error('Download the pinned census archive and extract into '+source+'/raw; see README.md.');
 if(createHash('sha256').update(fs.readFileSync(archive)).digest('hex')!==pinned)throw Error('Census archive hash changed; review source before rebuilding.');
 if(!fs.existsSync(topoFile)||process.argv.includes('--rebuild')){
- let require=createRequire(import.meta.url),mapshaper;
- try{mapshaper=require.resolve('mapshaper/bin/mapshaper');}catch{require=createRequire(path.resolve('../../china-atlas/package.json'));mapshaper=require.resolve('mapshaper/bin/mapshaper');}
+ const mapshaper=createRequire(import.meta.url).resolve('mapshaper/bin/mapshaper');
  execFileSync(process.execPath,[mapshaper,path.join(source,'raw/MP_SA_20.SHP'),'-proj','wgs84','-simplify','dp','interval=5','keep-shapes','-o',topoFile,'format=topojson','no-quantization'],{stdio:'inherit'});
 }
 const topology=JSON.parse(fs.readFileSync(topoFile));

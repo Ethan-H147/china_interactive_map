@@ -7,7 +7,7 @@ import {pathToFileURL} from 'node:url';
 import {lineData,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth,internationalBorderPaint,addInternationalBorder,borderSegments,omitBorderSegments} from '../dist/adaptive-lines.mjs';
 import {configurations} from '../dist/southern-africa.mjs';
 
-const require=createRequire(fs.existsSync('node_modules/@maplibre/geojson-vt')?path.resolve('package.json'):path.resolve('../../china-atlas/package.json'));
+const require=createRequire(import.meta.url);
 const {GeoJSONVT}=await import(pathToFileURL(path.join(path.dirname(require.resolve('@maplibre/geojson-vt')),'geojson-vt.mjs')));
 const bundle=JSON.parse(gunzipSync(fs.readFileSync('dist/data/southern-africa/south-africa/all.bin')));
 const key=(a,b)=>[a.join(','),b.join(',')].sort().join('|');

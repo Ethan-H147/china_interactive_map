@@ -6,11 +6,11 @@ function boot(hash='',saved,{blocked=false,developer=false}={}){
  const stored=new Map(saved?[['boundary-atlas-country-v1',saved]]:[]);
  const elements=new Map(['atlas-title-english','atlas-title-local','atlas-title-malay','atlas-title-tamil','loading-label','startup-name','home'].map(id=>[id,{}]));
  const symbols=[{}],location={hash,pathname:'/',search:''};
- const listeners={};
- const context={window:{AtlasDev:{enabled:developer,allows:country=>!['south-africa','eswatini','lesotho','botswana','namibia'].includes(country)||developer},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
+ const listeners={},fetched=[];
+ const context={fetch:url=>{fetched.push(url);return Promise.resolve({ok:true});},window:{AtlasDev:{enabled:developer,allows:country=>!['south-africa','eswatini','lesotho','botswana','namibia'].includes(country)||developer},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
   history:{replaceState(a,b,url){location.hash=new URL(url,'https://example.test').hash;}},
   localStorage:{getItem(key){if(blocked)throw Error('Storage blocked');return stored.get(key);},setItem(key,value){if(blocked)throw Error('Storage blocked');stored.set(key,value);}},AtlasSymbols:{markup:country=>'<svg>'+country+'</svg>'}};
- vm.runInNewContext(source,context);const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners};
+ vm.runInNewContext(source,context);const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners,fetched};
 }
 for(const country of ['china','korea','mongolia','japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia']){
  const developer=false;
@@ -57,3 +57,22 @@ for(const path of sun.matchAll(/data-sun-ray="\d" d="([^"]+)"/g))assert.equal(pa
 assert(sun.includes('<circle r="9"/>'),'Preserve the flag disk-to-ray proportions');assert(sun.includes('viewBox="-20 -20 40 40"'));
 assert.equal(fs.readFileSync('dist/vendor/flag-ph.svg','utf8').replace(/\r/g,''),referenceFlag.replace(/\r/g,''),'Displayed flag and loading sun share the same reference artwork');
 const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));assert(wheel.includes('M50 10V90'),'Keep the carriage wheel available');
+{
+ // Startup preloads must name real files that the page actually requests; a stale
+ // entry would download a file twice or not at all.
+ const page=fs.readFileSync('dist/index.html','utf8'),code=fs.readdirSync('dist').filter(f=>/\.(m?js)$/.test(f)).map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
+ const preloads=[...page.matchAll(/<link rel="preload" as="fetch" crossorigin href="data\/([^"]+)">/g)].map(m=>m[1]);
+ assert(preloads.length>=20,'Startup context files are preloaded');
+ for(const file of preloads){
+  assert(fs.existsSync('dist/data/'+file),'Preloaded file exists: '+file);
+  // Paths may be assembled at runtime, e.g. 'data/archipelago/'+country+'-context.bin'.
+  const name=file.split('/').pop(),stem=name.slice(name.indexOf('-')+1),dir=file.split('/')[0];
+  assert(code.includes(file)||(code.includes(name)||code.includes(stem))&&(!file.includes('/')||code.includes(dir+'/')),'Preloaded file is requested by the page: '+file);
+ }
+ const entry=fs.readFileSync('dist/atlas-entry.js','utf8'),app=fs.readFileSync('dist/app.js','utf8');
+ assert.deepEqual(boot('#china').fetched,['data/china-boundaries.pack.bin','data/china-regions.json'],'China visits start the packed boundaries immediately');
+ assert.deepEqual(boot('#japan').fetched,[],'Other countries do not download China');
+ const early=boot('#china').entry;assert(early.takeEarly('chinaPack'));assert.equal(early.takeEarly('chinaPack'),undefined,'An early response is handed over once');
+ for(const key of ['chinaPack','chinaRegions'])assert(entry.includes(`['${key}',`)&&app.includes(`takeEarly('${key}')`),'Early China response is consumed: '+key);
+ console.log(`Startup preloads: ${preloads.length} files exist and are requested; early China downloads are consumed.`);
+}

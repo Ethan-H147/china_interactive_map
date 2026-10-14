@@ -12,7 +12,7 @@ export function setFeatureState(map,target,state){
  if(fragment&&map.getSource(fragment))setFeatureState(map,{...target,source:fragment},state);
 }
 
-export function createMotionRenderer(map,initialCountry='china'){
+export function createMotionRenderer(map,initialCountry='china',{startAfter}={}){
  let nativeCountry=['japan','philippines','indonesia','malaysia','singapore','brazil','uruguay','argentina','russia','south-africa','eswatini','lesotho','botswana','namibia'].includes(initialCountry);
  let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise;
  let generation=0,restorePromise;
@@ -56,7 +56,8 @@ export function createMotionRenderer(map,initialCountry='china'){
    worker.onerror=()=>{worker.terminate();resolve(false);};
   });countryLoads.set(country,promise);return promise;
  }
- const ready=loadCountry(initialCountry);
+ // Waiting keeps the preview download from competing with the first view's data.
+ const ready=Promise.resolve(startAfter).then(()=>loadCountry(initialCountry));
  function install(){
   const style=map.getStyle();
   const updatedSources=new Set();let added=false;

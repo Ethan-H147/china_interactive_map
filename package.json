@@ -1,4 +1,5 @@
 {
+  "name": "boundary-atlas",
   "devDependencies": {
     "maplibre-gl": "6.11.2",
     "mapshaper": "0.7.72",
@@ -31,13 +32,13 @@
     "posttest": "npm run test:entry && npm run test:experience && npm run test:countries && npm run test:statistics && npm run test:japan && npm run test:zhuhai-macau && npm run test:archipelago && npm run test:archipelago-statistics && npm run test:argentina-statistics",
     "test:statistics": "node --check dist/statistics.mjs && node scripts/validate-region-statistics.mjs",
     "build": "node scripts/build-boundaries.mjs && node scripts/reconcile-international.mjs && npm run build:fills",
-    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && npm run test:taiwan && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore && npm run test:water && npm run test:names-quiz && npm run test:satellite && npm run test:shenzhen && npm run test:pearl-coast && npm run test:province-population && npm run test:mongolia && npm run test:fills && npm run test:motion",
+    "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && npm run test:taiwan && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore && npm run test:water && npm run test:names-quiz && npm run test:satellite && npm run test:shenzhen && npm run test:pearl-coast && npm run test:province-population && npm run test:mongolia && npm run test:fills && npm run test:motion && npm run test:china-pack",
     "start": "node scripts/serve.mjs",
     "build:korea": "node scripts/fetch-korea.mjs && node scripts/build-korea-coast.mjs && node scripts/build-korea.mjs && node scripts/reconcile-international.mjs && npm run build:fills",
     "test:korea": "node --check dist/korea.js && node scripts/validate-korea.mjs && node scripts/validate-korea-rendering.mjs && node scripts/validate-international.mjs",
     "test:capitals": "node --check dist/capitals.mjs && node scripts/validate-capitals.mjs",
     "test:explore": "node --check dist/explore.mjs && node scripts/validate-explore.mjs",
-    "build:districts": "node scripts/prepare-city-districts.mjs && npm run build:motion",
+    "build:districts": "node scripts/prepare-city-districts.mjs && npm run build:china-pack && npm run build:motion",
     "build:gallery": "node scripts/prepare-gallery.mjs",
     "build:water": "node scripts/prepare-water.mjs && npm run build:motion",
     "test:water": "node --check dist/water.mjs && node scripts/validate-water.mjs && node scripts/validate-river-conflation.mjs",
@@ -54,7 +55,7 @@
     "build:mongolia": "node scripts/mongolia-build.mjs && npm run build:motion",
     "test:province-population": "node scripts/validate-province-population.mjs",
     "test:mongolia": "node --check dist/mongolia.mjs && node scripts/validate-mongolia.mjs && node scripts/validate-mongolia-rendering.mjs",
-    "build:fills": "node scripts/prepare-fill-fragments.mjs && npm run build:motion",
+    "build:fills": "node scripts/prepare-fill-fragments.mjs && npm run build:china-pack && npm run build:motion",
     "test:fills": "node scripts/validate-fill-fragments.mjs",
     "build:motion": "node scripts/prepare-motion.mjs && node scripts/prepare-context.mjs && node scripts/prepare-shared-context.mjs",
     "test:motion": "node --check dist/motion-worker.mjs && node scripts/validate-motion.mjs",
@@ -92,6 +93,8 @@
     "test:hover": "node --check dist/hover-overview.mjs && node scripts/validate-hover-overview.mjs && node scripts/validate-hover-point-query.mjs",
     "test:international-borders": "node --check dist/adaptive-lines.mjs && node --check dist/regional-country.mjs && node scripts/validate-regional-borders.mjs && node scripts/validate-regional-loading.mjs",
     "build:botswana-namibia": "node scripts/build-botswana-namibia.mjs && node scripts/prepare-botswana-namibia-statistics.mjs && node scripts/prepare-botswana-namibia-settlements.mjs && node scripts/prepare-region-colors.mjs && node scripts/prepare-flag-images.mjs",
-    "test:botswana-namibia": "node --check dist/southern-africa.mjs && node scripts/validate-botswana-namibia.mjs && npm run test:entry && npm run test:international-borders"
+    "test:botswana-namibia": "node --check dist/southern-africa.mjs && node scripts/validate-botswana-namibia.mjs && npm run test:entry && npm run test:international-borders",
+    "build:china-pack": "node --max-old-space-size=8000 scripts/pack-china-boundaries.mjs",
+    "test:china-pack": "node --check dist/china-pack.mjs && node --check dist/china-sources.mjs && node --check dist/maplibre-worker-protocols.mjs && node --max-old-space-size=8000 scripts/validate-china-pack.mjs"
   }
 }

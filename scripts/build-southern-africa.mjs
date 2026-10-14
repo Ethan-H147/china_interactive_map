@@ -5,11 +5,11 @@ import {createRequire} from 'node:module';
 import {pathToFileURL} from 'node:url';
 import {gzipSync} from 'node:zlib';
 import {lineData} from '../dist/adaptive-lines.mjs';
-const dependencyRoot=process.env.ATLAS_DEPENDENCY_ROOT||path.resolve('../../china-atlas/package.json');
-const localDependencies=fs.existsSync('node_modules/mapshaper');
-const require=createRequire(localDependencies?path.resolve('package.json'):dependencyRoot);
+// Resolve packages from this script's location, so any checkout or staging folder works.
+const dependencyRoot=process.env.ATLAS_DEPENDENCY_ROOT;
+const require=createRequire(dependencyRoot||import.meta.url);
 const mapshaper=require('mapshaper'),{feature,mesh}=require('topojson-client'),{topology}=require('topojson-server');
-const {alignCountry}=await import(localDependencies?new URL('./international-topology.mjs',import.meta.url):pathToFileURL(path.join(path.dirname(dependencyRoot),'scripts/international-topology.mjs')));
+const {alignCountry}=await import(dependencyRoot?pathToFileURL(path.join(path.dirname(dependencyRoot),'scripts/international-topology.mjs')):new URL('./international-topology.mjs',import.meta.url));
 const source=path.resolve(process.argv[2]||'artifacts/southern-africa-source'),out='dist/data/southern-africa';
 const read=n=>JSON.parse(fs.readFileSync(path.join(source,n))),fc=features=>({type:'FeatureCollection',features});
 const original=n=>{const d=read(n);return d.type==='Topology'?feature(d,Object.values(d.objects)[0]):d;};

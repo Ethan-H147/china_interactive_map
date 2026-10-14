@@ -49,3 +49,20 @@ const parentRegion={feature:{properties:{adcode:310000}}};parentView.selected={l
 parentView.quiz.active=true;parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true,'Quiz scope button is manual as well');
 console.log('The bottom parent/overview control requests explicit navigation in all nine countries and quizzes, without changing the zoom-lock setting.');
 
+{
+ // A stalled flight (throttled background tab) must land on its target, never stay over the previous country.
+ let timeout;const jumps=[],stalledEvents=new Map();
+ const stalledMap={getCanvas:()=>({addEventListener(){}}),stop(){},jumpTo(camera){jumps.push(camera);stalledEvents.get('moveend')?.();},cameraForBounds:b=>({center:b,zoom:5}),project:c=>({x:c[0],y:c[1]}),getContainer:()=>({clientWidth:800,clientHeight:600}),getZoom:()=>4,once:(name,fn)=>stalledEvents.set(name,fn),off:(name,fn)=>{if(stalledEvents.get(name)===fn)stalledEvents.delete(name);},flyTo(){},easeTo(){}};
+ const stalled=vm.createContext({map:stalledMap,zoomLock:null,updateLabels(){},motionRenderer:{begin:async()=>{},end:async()=>{}},navigationOptions:()=>({}),reducedMotion:{matches:false},atlasStarting:false,restoringView:false,lockCamera(){},unlockCamera(){},saveViewSoon(){},setTimeout:fn=>{timeout=fn;return 1;},clearTimeout(){},console});
+ vm.runInContext('let finishNavigation;'+source.slice(source.indexOf('let navigationEpoch='),source.indexOf('function fitHome(')),stalled);
+ const flight=stalled.navigateBounds([104,35]);await new Promise(setImmediate);timeout();
+ assert.equal(await flight,true);assert.deepEqual(jumps,[{center:[104,35],zoom:5}],'Timed-out flight lands on its target');
+ // v1 views may hold another country's camera; their settings migrate without it.
+ const legacy=new Map([['boundary-atlas-view-v1-china',JSON.stringify({v:1,country:'china',center:[134.894702,35.915793],zoom:4.15,colorBy:'gdp',layers:{'label-layer':false}})]]);
+ const legacyStorage={getItem:k=>legacy.get(k),setItem:(k,v)=>legacy.set(k,v),removeItem:k=>legacy.delete(k)};
+ const migrated=read('china',legacyStorage);assert.equal(migrated.camera,false);assert.equal(migrated.colorBy,'gdp');assert.equal(migrated.layers['label-layer'],false);
+ assert.equal(legacy.has('boundary-atlas-view-v1-china'),false,'Legacy view is read once');
+ write({...migrated,center:[104,35],zoom:4},legacyStorage);assert.equal(read('china',legacyStorage).camera,undefined,'New views restore their camera');
+ assert(source.includes('if(saved.camera!==false)map.jumpTo('),'Restore skips a dropped camera');
+ console.log('Stalled country flights land on their target, and legacy saved views drop their camera once.');
+}

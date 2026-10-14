@@ -1,4 +1,6 @@
-# China Atlas
+# Boundary Atlas
+
+Boundary Atlas is the project's working name; the public site name is not yet decided.
 
 Interactive static map using DataV GeoAtlas, official Taiwan, Hong Kong and Macau boundaries, and AreaCity/Amap outlines for Xinxing and Baiyang. MapLibre GL JS 6.11.2 and the boundary snapshot are bundled. Optional satellite imagery loads from EOX.
 
@@ -18,9 +20,11 @@ To refresh names, run `node scripts/fetch-region-names.mjs` and `node scripts/fe
 
 MapLibre draws boundaries with WebGL. Geometry tiling and triangulation run in two workers, and panning moves GPU buffers instead of repainting full-country SVG paths. China, Korea, Mongolia and Japan use zero source simplification tolerance and a maximum source zoom of 18. The newer archipelago sources use a 0.25-pixel tiling tolerance and maximum source zoom of 16. The map supports zoom 16, with closer automatic views for Hong Kong and Macau. Pixel ratio follows the device; no reduced-resolution canvas is used.
 
-The display dataset is stored as a lossless gzip stream split into files below 4 MiB each. `display-boundaries.parts.json` records the uncompressed checksum. The browser decompresses the original coordinates before sending them to MapLibre. No vertices are removed. Hover queries are suspended during movement; labels update after movement ends.
+The display dataset is stored as a lossless gzip stream split into files below 4 MiB each. `display-boundaries.parts.json` records the uncompressed checksum. These parts remain the build inputs. Visitors download `china-boundaries.pack.bin` instead: the display boundaries, city districts and fill fragments with each coordinate pair stored once as exact float64 bits and every ring referring to its points by index (about 5.4 MB instead of 21.4 MB). It decodes to byte-identical JSON. MapLibre's workers unpack it and build China's sources directly (`maplibre-worker-protocols.mjs`), so the geometry never passes through the page; the page reads names, bounds and part counts from `china-regions.json`. Province outlines still omit the segments drawn by the international border layer. `npm run build:china-pack` regenerates both files after any change to the inputs, and `npm run test:china-pack` fails if either is stale or if any worker-built source differs from the former main-thread build. No vertices are removed. Hover queries are suspended during movement; labels update after movement ends.
 
-Automatic navigation locks map input and navigation controls until its movement completes, with a timeout recovery for background tabs. Reduced-motion preferences use an immediate move. Labels remain on the map during motion and their spacing is refreshed afterward. A single resize observer owns map sizing to avoid competing recenter operations.
+Startup downloads begin as early as possible: `atlas-entry.js` requests China's pack before styles and modules load, and `index.html` preloads the outline files that every country loads at startup. Motion previews download after the first view is usable.
+
+Automatic navigation locks map input and navigation controls until its movement completes, with a timeout recovery for background tabs that lands the camera on its destination. Reduced-motion preferences use an immediate move. Labels remain on the map during motion and their spacing is refreshed afterward. A single resize observer owns map sizing to avoid competing recenter operations.
 
 Calligraphic headings use bundled Ma Shan Zheng and Marck Script subsets, with their open font licenses in `dist/vendor`.
 
@@ -110,7 +114,7 @@ Source: https://datav.aliyun.com/portal/school/atlas/area_selector
 
 ## Renderer assets
 
-Run `node scripts/vendor-renderer.mjs` after `npm ci` to copy the pinned MapLibre browser modules, worker, stylesheet, and license. These assets are served locally. The standard map requires no external basemap or API key.
+Run `node scripts/vendor-renderer.mjs` after `npm ci` to copy the pinned MapLibre browser modules, worker, stylesheet, and license. The script removes one statement from the worker: a GeoJSON source loaded from a URL no longer copies its parsed data back to the page, which only `GeoJSONSource.getData()` uses and the atlas never calls. The script stops if a MapLibre upgrade changes that code. These assets are served locally. The standard map requires no external basemap or API key.
 
 ## Satellite imagery
 

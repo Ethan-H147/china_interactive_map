@@ -8,6 +8,10 @@
  const allowed=country=>window.AtlasDev.allows(country);
  const requested=fromHash(location.hash)||(countries[saved]?saved:'china');
  const initial=allowed(requested)?requested:'china';
+ // China's packed boundaries are the largest startup download; begin before styles
+ // and modules. app.js takes these responses instead of requesting the files again.
+ const early={};
+ if(initial==='china')for(const [key,url] of [['chinaPack','data/china-boundaries.pack.bin'],['chinaRegions','data/china-regions.json']]){early[key]=fetch(url);early[key].catch(()=>{});}
  let current=initial;
  const root=document.documentElement;root.dataset.atlas=initial;root.dataset.starting='true';
  function persist(country){try{localStorage.setItem(storageKey,country);}catch{}}
@@ -30,6 +34,6 @@
   if($('home'))$('home').textContent='All '+(info?.en||'countries');
   if($('map')&&info)$('map').setAttribute('aria-label',current==='china'?'Interactive China administrative boundary map':current==='korea'?'Interactive map of North and South Korea':current==='japan'?'Interactive Japan prefecture and municipality map':current==='mongolia'?'Interactive Mongolia province and district map':current==='singapore'?'Interactive Singapore country map':current==='malaysia'?'Interactive Malaysia state and district map':'Interactive '+info.en+' administrative boundary and island map');
  }
- window.AtlasEntry={initial,countries,fromHash,mount:paint,remember(country,{preservePlace=true}={}){if(!countries[country]||!allowed(country))return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
+ window.AtlasEntry={initial,countries,fromHash,mount:paint,takeEarly(key){const response=early[key];delete early[key];return response;},remember(country,{preservePlace=true}={}){if(!countries[country]||!allowed(country))return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};
  window.addEventListener('hashchange',()=>{const country=fromHash(location.hash);if(root.dataset.starting&&country)window.AtlasEntry.remember(country);});
 })();

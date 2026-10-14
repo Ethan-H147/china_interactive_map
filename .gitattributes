@@ -1,3 +1,5 @@
+# Tests checksum exact source bytes, so keep LF on every platform.
+* text=auto eol=lf
 # Preserve downloaded flag originals and their recorded byte checksums.
 dist/vendor/japan-local/*.svg -text
 dist/vendor/russia-city-flags/*.svg -text
@@ -5,3 +7,28 @@ dist/vendor/flag-originals/*.svg -text
 scripts/argentina-sources/flags/*.svg -text
 # Keep the official CSV's bytes identical to its recorded source checksum.
 scripts/statistics-sources/argentina/*.csv -text
+# These downloaded originals use CRLF; their recorded checksums cover those bytes.
+dist/vendor/flag-bw.svg -text
+dist/vendor/leaflet-LICENSE.txt -text
+dist/vendor/leaflet.css -text
+dist/vendor/south-africa-city-flags/capetown.svg -text
+dist/vendor/south-africa-city-flags/makhanda.svg -text
+dist/vendor/southern-africa-flags/ZA-MP.svg -text
+scripts/additional-sources/hk-districts-official.json -text
+scripts/additional-sources/singapore/planning-areas-2025.geojson -text
+scripts/brazil-sources/flags/BR-17.svg -text
+scripts/brazil-sources/flags/BR-25.svg -text
+scripts/brazil-sources/flags/BR-29.svg -text
+scripts/brazil-sources/flags/BR-33.svg -text
+scripts/brazil-sources/flags/BR-35.svg -text
+scripts/brazil-sources/flags/BR-42.svg -text
+scripts/flag-sources/russia/RU-KHM.svg -text
+scripts/mongolia-sources/nso-original-service.json -text
+scripts/statistics-sources/botswana-namibia-cities/census-city-source.json -text
+scripts/statistics-sources/botswana-namibia-cities/namibia-final-town-table.txt -text
+scripts/statistics-sources/botswana-namibia-cities/ramotswa-station-osm.json -text
+scripts/statistics-sources/botswana-namibia-cities/wikidata-labels.json -text
+scripts/statistics-sources/brazil/gdp-2023.json -text
+scripts/statistics-sources/brazil/population-2026.json -text
+scripts/statistics-sources/brazil/state-tables.json -text
+scripts/statistics-sources/malaysia/exchange-rate-2015.json -text

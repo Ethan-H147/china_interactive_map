@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {queryRegions} from '../dist/motion.mjs';
 import {setSubdivisionHeading} from '../dist/country-page.mjs';
 import {readDataText} from './read-data.mjs';
+import {isPrefectureLevel} from '../dist/china-levels.mjs';
 
 const read=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
 const app=read('../dist/app.js'),html=read('../dist/index.html')+read('../dist/china-page.mjs');
@@ -28,7 +29,7 @@ function inRing([x,y],ring){
 }
 const parts=g=>g.type==='MultiPolygon'?g.coordinates:[g.coordinates];
 const inPolygon=(p,rings)=>inRing(p,rings[0])&&!rings.slice(1).some(r=>inRing(p,r));
-const context=vm.createContext({window:{AtlasMotion:{queryRegions}},$:id=>elements.get(id),regionByCode,provinceTypes:{},quiz:{active:false},districtsVisible:()=>false,map:{
+const context=vm.createContext({window:{AtlasMotion:{queryRegions},AtlasChinaLevels:{isPrefectureLevel}},$:id=>elements.get(id),regionByCode,provinceTypes:{},quiz:{active:false},districtsVisible:()=>false,map:{
   getLayer:id=>['province-fill','prefecture-fill','other-fill','province-fragment-fill','prefecture-fragment-fill'].includes(id)?{id}:undefined,
   queryRenderedFeatures(point,{layers}){
     return regions.filter(f=>parts(f.geometry).some(poly=>inPolygon(point,poly))).map(f=>({

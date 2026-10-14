@@ -9,5 +9,11 @@ export function validate(value){
 }
 export function fromHash(hash){try{const m=/^#(china|korea|mongolia|japan|philippines|indonesia|malaysia|singapore|brazil|uruguay|argentina|russia|south-africa|eswatini|lesotho|botswana|namibia)\/view=(.*)$/i.exec(hash);if(!m||m[2].length>10000)return null;const value=validate(JSON.parse(decodeURIComponent(m[2])));return value?.country===m[1].toLowerCase()?value:null;}catch{return null;}}
 export function hashFor(view){const valid=validate(view);return valid?'#'+valid.country+'/view='+encodeURIComponent(JSON.stringify(valid)):null;}
-export function read(country,storage){try{return validate(JSON.parse(storage.getItem('boundary-atlas-view-v1-'+country)));}catch{return null;}}
-export function write(view,storage){const valid=validate(view);if(!valid)return;try{storage.setItem('boundary-atlas-view-v1-'+valid.country,JSON.stringify(valid));}catch{}}
+const storageKey='boundary-atlas-view-v2-',legacyKey='boundary-atlas-view-v1-';
+// v1 views could record the previous country's camera after an interrupted
+// country flight. Keep their settings once, without the camera.
+export function read(country,storage){
+ try{const view=validate(JSON.parse(storage.getItem(storageKey+country)));if(view)return view;}catch{}
+ try{const legacy=validate(JSON.parse(storage.getItem(legacyKey+country)));storage.removeItem?.(legacyKey+country);return legacy&&{...legacy,camera:false};}catch{return null;}
+}
+export function write(view,storage){const valid=validate(view);if(!valid)return;try{storage.setItem(storageKey+valid.country,JSON.stringify(valid));}catch{}}
