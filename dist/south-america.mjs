@@ -162,7 +162,7 @@ export function createSouthAmerica(map,host){
     const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer);layers.push(layer.id);};
     add({id:'south-'+id+suffix+'-fill',type:'fill',source:sources[0],paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],c.selected,c.color],'fill-antialias':false}});
     add({id:'south-'+id+suffix+'-borders',type:'line',source:sources[1],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':['interpolate',['linear'],['zoom'],2,.6,7,1.15],'line-opacity':id==='uruguay'?adaptiveOpacity(.8):.8}});
-    add({id:'south-'+id+suffix+'-selection',type:'line',source:sources[0],filter:['==',['get','id'],''],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':2,...(id==='uruguay'?{'line-opacity':adaptiveOpacity()}: {})}});
+    add({id:'south-'+id+suffix+'-selection',type:'line',source:sources[2],filter:['==',['get','id'],''],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':2,...(id==='uruguay'?{'line-opacity':adaptiveOpacity()}: {})}});
     const controller=new AbortController();sourceWait=controller;
     if(installed.has(id))await waitForSources(sources,controller.signal);
     if(sourceWait===controller)sourceWait=null;

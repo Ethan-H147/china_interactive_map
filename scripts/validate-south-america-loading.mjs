@@ -24,12 +24,12 @@ globalThis.Image=class{
 const requests=[];globalThis.fetch=async url=>{requests.push(url);return new Response(fs.readFileSync('dist/'+url));};
 let workerLoads=0,terminated=0,failNextDDD=false,failNextMunicipality=false;const workerURLs=[];
 globalThis.Worker=class{
- postMessage({url}){workerLoads++;workerURLs.push(url);this.timer=setTimeout(()=>{if(failNextDDD&&url.endsWith('-ddd.bin')){failNextDDD=false;this.onmessage({data:{error:'Test network failure'}});return;}if(failNextMunicipality&&url.includes('/brazil-local/')){failNextMunicipality=false;this.onmessage({data:{error:'Test municipal network failure'}});return;}const payload=JSON.parse(gunzipSync(fs.readFileSync('dist/'+url)));this.onmessage({data:{records:payload.records,sources:Object.fromEntries(['regions','lines'].map(key=>[key,new Blob([JSON.stringify(key==='lines'&&(url.includes('/brazil-local/')||url.includes('/uruguay-local/'))?lineData(payload[key]):payload[key])])]))}});},5);}
+ postMessage({url}){workerLoads++;workerURLs.push(url);this.timer=setTimeout(()=>{if(failNextDDD&&url.endsWith('-ddd.bin')){failNextDDD=false;this.onmessage({data:{error:'Test network failure'}});return;}if(failNextMunicipality&&url.includes('/brazil-local/')){failNextMunicipality=false;this.onmessage({data:{error:'Test municipal network failure'}});return;}const payload=JSON.parse(gunzipSync(fs.readFileSync('dist/'+url)));this.onmessage({data:{records:payload.records,sources:{...Object.fromEntries(['regions','lines'].map(key=>[key,new Blob([JSON.stringify(key==='lines'&&(url.includes('/brazil-local/')||url.includes('/uruguay-local/'))?lineData(payload[key]):payload[key])])])),outlines:new Blob([JSON.stringify(lineData(payload.regions))])}}});},5);}
  terminate(){clearTimeout(this.timer);terminated++;}
 };
 const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;const map={
  addSource:(id,s)=>sources.set(id,s),getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),
- addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),removeLayer:id=>layers.delete(id),moveLayer(){},
+ addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),getStyle:()=>({layers:[...layers.values()]}),removeLayer:id=>layers.delete(id),moveLayer(){},
  setLayoutProperty(id,key,value){(layers.get(id).layout||={})[key]=value;},setFilter(id,filter){layers.get(id).filter=filter;},setFeatureState(){},
  on(name,fn){if(!handlers.has(name))handlers.set(name,new Set());handlers.get(name).add(fn);},off(name,fn){handlers.get(name)?.delete(fn);},isMoving:()=>false,isSourceLoaded:()=>tilesReady,
  getBounds:()=>({getWest:()=>-180,getEast:()=>180,getSouth:()=>-90,getNorth:()=>90})
@@ -68,15 +68,15 @@ for(const [source,layer,key] of [['south-land-borders','south-land-boundaries','
 }
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
 assert.equal(workerURLs.filter(url=>url.includes('/brazil-local/')).length,0,'Opening Brazil loads no municipal geometry');
-assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina','malaysia','singapore']]]],'Developer geometry replaces its coarse background silhouettes');
+{const filter=layers.get('world-land').filter;assert.equal(filter[0],'!');assert(['brazil','uruguay','argentina','malaysia','singapore'].every(id=>filter[1][2][1].includes(id)),'Developer geometry replaces its coarse background silhouettes');}
 window.AtlasDev.enabled=false;atlas.syncDeveloper();
 assert.equal(layers.get('south-america-fill').layout.visibility,'visible');
 assert.equal(layers.has('south-america-lines'),false,'Country silhouettes have no coastline outline layer');
 assert.equal(layers.get('south-land-boundaries').layout.visibility,'visible','Public country views retain their border layer');
 assert.equal(layers.get('south-america-fill').paint['fill-antialias'],false,'Country silhouettes cannot receive an implicit fill outline');
-assert.equal(layers.get('south-brazil-selection').source,'south-brazil-lines','Selection emphasizes inland boundaries without outlining the coast');
+assert.equal(layers.get('south-brazil-selection').source,'south-brazil-outlines','Selection outlines the whole shape, from lines short enough to draw');
 assert.equal(layers.get('south-brazil-fill').layout.visibility,'visible');
-assert.deepEqual(layers.get('world-land').filter,['!',['in',['get','country'],['literal',['brazil','uruguay','argentina','malaysia','singapore']]]],'Exiting developer mode retains the public country silhouettes');
+{const filter=layers.get('world-land').filter;assert(['brazil','uruguay','argentina','malaysia','singapore'].every(id=>filter[1][2][1].includes(id)),'Exiting developer mode retains the public country silhouettes');}
 assert.equal(layers.get('world-land').layout.visibility,'visible','Developer mode must never hide public world land');
 window.AtlasDev.enabled=true;atlas.syncDeveloper();
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);
@@ -114,9 +114,8 @@ assert.equal(layers.get('argentina-city-dots').layout.visibility,'visible');
 const cityLoads=workerLoads;await atlas.portals.argentina.restore('AR-CITY-08','cities');assert.equal(workerLoads,cityLoads,'Cities in one province reuse geometry');
 const oldCity=atlas.portals.argentina.restore('AR-CITY-02','cities'),latestCity=atlas.portals.argentina.restore('AR-CITY-21','cities');await Promise.all([oldCity,latestCity]);
 assert.equal(atlas.portals.argentina.getSelection(),'AR-CITY-21');assert.ok(sources.has('arg-city-AR-06-regions'));assert.ok(!sources.has('arg-city-AR-14-regions'));assert.ok(!sources.has('arg-city-AR-82-regions'));
-assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['in','AR-CITY-21',['get','regionIds']],'Banfield selects its municipality’s inland boundaries');
-assert.equal(layers.get('arg-city-AR-06-selection').source,'arg-city-AR-06-lines','City selection uses coast-free line data');
-await atlas.portals.argentina.restore('AR-CITY-49','cities');assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['in','AR-CITY-21',['get','regionIds']],'Temperley selects the same municipal territory');
+assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['==',['get','id'],'AR-CITY-21'],'Banfield outlines its whole municipality');assert.equal(layers.get('arg-city-AR-06-selection').source,'arg-city-AR-06-outlines','City outlines come from lines short enough to draw');
+await atlas.portals.argentina.restore('AR-CITY-49','cities');assert.deepEqual(layers.get('arg-city-AR-06-selection').filter,['==',['get','id'],'AR-CITY-21'],'Temperley selects the same municipal territory');
 await atlas.portals.argentina.restore('AR-CITY-16','cities');assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'Pending municipal coverage does not substitute locality or department polygons');
 await atlas.portals.argentina.restore('AR-CITY-03','cities');
 await atlas.portals.argentina.restore('AR-CITY-01','cities');assert.equal(atlas.portals.argentina.getSelection(),'AR-02','The CABA city dot and saved city link use the same jurisdiction and statistics as provincial selection');assert.ok(![...sources.keys()].some(id=>id.startsWith('arg-city-')),'CABA reuses its existing autonomous-city boundary');

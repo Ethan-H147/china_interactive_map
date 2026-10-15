@@ -49,15 +49,16 @@ export async function addRegionalCountry(map,host,c){
  function prepare(file){cancel();return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./country-boundary-worker.mjs',import.meta.url),{type:'module'}),job={worker,reject};pending=job;const finish=()=>{worker.terminate();if(pending===job)pending=null;};worker.onmessage=({data})=>{finish();data.error?reject(Error(data.error)):resolve(data);};worker.onerror=e=>{finish();reject(Error(e.message));};worker.postMessage({url:base+file});});}
  function indexed(key,token){return new Promise(resolve=>{let timer;const finish=value=>{clearTimeout(timer);map.off('sourcedata',check);map.off('error',failed);if(cancelIndex===abort)cancelIndex=null;resolve(value);};const abort=()=>finish(false),check=()=>{if(!active||token!==detailEpoch)finish(false);else if(map.getSource(key)&&map.isSourceLoaded(key))finish(true);},failed=e=>{if(e.sourceId===key)finish(false);};cancelIndex=abort;map.on('sourcedata',check);map.on('error',failed);timer=setTimeout(abort,15000);check();});}
  function install(key,payload,level){
-  const url=URL.createObjectURL(payload.blob),edgeUrl=URL.createObjectURL(payload.borders),edge=key+'-edges';
+  const url=URL.createObjectURL(payload.blob),edgeUrl=URL.createObjectURL(payload.borders),outlineUrl=URL.createObjectURL(payload.outlines),edge=key+'-edges',outline=key+'-outlines';
   map.addSource(key,{type:'geojson',data:url,promoteId:'id',tolerance:0,buffer:128,maxzoom:16,attribution:c.attribution});
   map.addSource(edge,{...edgeOptions,data:edgeUrl});
+  map.addSource(outline,{...lineSourceOptions,tolerance:0,data:outlineUrl});
   const layers=[key+'-fill',key+'-lines',key+'-selected'];
   map.addLayer({id:layers[0],type:'fill',source:key,layout:{visibility:'none'},paint:{'fill-color':c.fill,'fill-antialias':false}});
   // Borders are shared lines, each drawn once; the selected outline is the unit's whole shape,
   // coast and water edges included, as in every country.
-  for(const [id,selectedLine] of [[layers[1],false],[layers[2],true]])map.addLayer({id,type:'line',source:selectedLine?key:edge,...(selectedLine?{filter:['==',['get','id'],'']}:{}),layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':lineWidth(level,selectedLine),'line-opacity':adaptiveOpacity(selectedLine?1:level===1?.8:.65)}});
-  installed.set(key,{layers,sources:[key,edge],urls:[url,edgeUrl],level});
+  for(const [id,selectedLine] of [[layers[1],false],[layers[2],true]])map.addLayer({id,type:'line',source:selectedLine?outline:edge,...(selectedLine?{filter:['==',['get','id'],'']}:{}),layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':lineWidth(level,selectedLine),'line-opacity':adaptiveOpacity(selectedLine?1:level===1?.8:.65)}});
+  installed.set(key,{layers,sources:[key,edge,outline],urls:[url,edgeUrl,outlineUrl],level});
   // Every outline must remain above every fill, including parent boundaries
   // shared by municipalities in different districts. Draw province lines last.
   for(const entry of [...installed.values()].sort((a,b)=>b.level-a.level))for(const id of entry.layers.slice(1))map.moveLayer(id);

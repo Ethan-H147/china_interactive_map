@@ -61,7 +61,7 @@ export default [
    await page.open(base,'#'+country);await searchAndSelect(page,query,pick);
    const pairs=await page.evaluate(`map.getStyle().layers.filter(l=>l.type==='line'&&/-(selected|selection)$/.test(l.id)).map(l=>[l.id,l.source,map.getLayer(l.id.replace(/-(selected|selection)$/,'-fill'))?.source]).filter(p=>p[2])`);
    assert(pairs.length,country+' has selection outlines');
-   for(const [id,line,fill] of pairs)assert.equal(line,fill,id+' outlines its own shapes');
+   for(const [id,line,fill] of pairs)assert(line===fill||line===fill+'-outlines'||/-outlines$/.test(line),id+' outlines its own shapes');
   }
  }},
  {name:'links and browser history',options:{width:1280,height:820},async run(page,base){

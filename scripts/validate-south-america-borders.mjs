@@ -15,7 +15,8 @@ let checked=0;
 function verify(payload){
  const owners=new Map(),drawn=new Set();
  for(const region of payload.regions.features)for(const segment of new Set(segments(region.geometry))){if(!owners.has(segment))owners.set(segment,new Set());owners.get(segment).add(region.properties.id);}
- for(const line of payload.lines.features)for(const segment of segments(line.geometry)){
+ // Channel borders (build-channel-borders.mjs) run down the middle of water, not along polygon edges.
+ for(const line of payload.lines.features.filter(f=>!f.properties.channel))for(const segment of segments(line.geometry)){
   const adjacent=owners.get(segment);
   assert.ok(adjacent?.size>1,'Never stroke an exterior coast, lake shore or isolated island');
   assert.deepEqual(line.properties.regionIds,[...adjacent].sort(),'Selected borders carry the actual neighboring division IDs');

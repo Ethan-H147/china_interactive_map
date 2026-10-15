@@ -40,7 +40,7 @@ export async function addJapanPortal(map,host){
  let active=false,ready=false,selected=null,hovered=null,scope=null,mode=1,labels=[],loading,preparedPromise,facts,localFacts,catalogue,searchPlaces,baseWorker,pendingWorker,detailPromise,detailTimer,cancelPaint,generation=0,detailEpoch=0,selectionEpoch=0,localReady=false,childRecords=[],childLimit=25;
  const visible=(id,value)=>{if(map.getLayer(id))setLayerVisible(map,id,value);};
  const clearLabels=()=>{labels.forEach(m=>m.remove());labels=[];};
- function state(record,value){if(!record)return;const sources=record.level===1?['japan-first','japan-first-selection-edges','japan-local-first']:record.level===2?['japan-local-second']:['japan-local-wards'];for(const source of sources)if(map.getSource(source))window.AtlasMotion.setFeatureState(map,{source,id:record.id},value);}
+ function state(record,value){if(!record)return;const sources=record.level===1?['japan-first','japan-first-selection-edges','japan-local-first','japan-local-first-outlines']:record.level===2?['japan-local-second','japan-local-second-outlines']:['japan-local-wards','japan-local-wards-outlines'];for(const source of sources)if(map.getSource(source))window.AtlasMotion.setFeatureState(map,{source,id:record.id},value);}
  const clearHover=()=>{state(hovered,{hover:false});hovered=null;};
  const panel=name=>{for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}};
  const detailMessage=(text,retry=false)=>{$('detail-status').textContent=text;$('detail-status').hidden=!text;$('retry').hidden=!retry;};
@@ -100,26 +100,27 @@ export async function addJapanPortal(map,host){
   setMode(2,true);if(fit)await host.fit(p.level===1?p.focusBounds||p.bounds:p.focusBounds||p.bounds,p.level===1?11:14,camera);if(token===selectionEpoch&&active)scheduleDetail();
  }
  function cancelDetail(){detailEpoch++;clearTimeout(detailTimer);cancelPaint?.();if(pendingWorker){pendingWorker.worker.terminate();pendingWorker.reject(new DOMException('Selection changed','AbortError'));pendingWorker=null;}detailPromise=null;}
- function removeLocal(){cancelDetail();localReady=false;for(const entry of localSources.splice(0)){for(const suffix of ['-selected','-lines','-fill'])if(map.getLayer(entry.id+suffix))map.removeLayer(entry.id+suffix);for(const id of [entry.id,entry.id+'-edges'])if(map.getSource(id))map.removeSource(id);URL.revokeObjectURL(entry.url);if(entry.edgeUrl)URL.revokeObjectURL(entry.edgeUrl);}detailMessage('');}
+ function removeLocal(){cancelDetail();localReady=false;for(const entry of localSources.splice(0)){for(const suffix of ['-selected','-lines','-fill'])if(map.getLayer(entry.id+suffix))map.removeLayer(entry.id+suffix);for(const id of [entry.id,entry.id+'-edges',entry.id+'-outlines'])if(map.getSource(id))map.removeSource(id);URL.revokeObjectURL(entry.url);for(const url of [entry.edgeUrl,entry.outlineUrl])if(url)URL.revokeObjectURL(url);}detailMessage('');}
  async function reset(fit=true,camera={}){if(!ready||host.isBusy())return;selectionEpoch++;clearHover();state(selected,{selected:false});state(index.get(scope),{selected:false});selected=null;scope=null;removeLocal();$('province').value='';$('tab-explore').hidden=true;panel('layers');document.getElementById('breadcrumb-region').hidden=true;setMode(1,true);if(fit)await host.fit(home,8,camera);}
  function prepareLocal(file){return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./archipelago-worker.mjs',import.meta.url),{type:'module'}),request={worker,reject};pendingWorker=request;worker.onmessage=e=>{worker.terminate();if(pendingWorker===request)pendingWorker=null;e.data.error?reject(Error(e.data.error)):resolve(e.data);};worker.onerror=e=>{worker.terminate();if(pendingWorker===request)pendingWorker=null;reject(Error(e.message));};worker.postMessage({url:'data/japan-local/'+file});});}
  // Unit lines come from the shared edges (no coasts); the selected outline keeps the whole polygon.
- function installLocal(id,blob,level,edges){
-  const url=URL.createObjectURL(blob),edgeUrl=edges&&URL.createObjectURL(edges);map.addSource(id,{type:'geojson',data:url,promoteId:'id',tolerance:.25,maxzoom:16,buffer:64,attribution:'Japan: <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html">MLIT / GSI · 2026</a>'});
+ function installLocal(id,blob,level,edges,outlines){
+  const url=URL.createObjectURL(blob),edgeUrl=edges&&URL.createObjectURL(edges),outlineUrl=outlines&&URL.createObjectURL(outlines);map.addSource(id,{type:'geojson',data:url,promoteId:'id',tolerance:.25,maxzoom:16,buffer:64,attribution:'Japan: <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html">MLIT / GSI · 2026</a>'});
   map.addLayer({id:id+'-fill',type:'fill',source:id,layout:{visibility:'none'},paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],'#efd2d8',['boolean',['feature-state','hover'],false],'#f6e6e9','#fffdfd'],'fill-opacity':1,'fill-antialias':false}});
+  if(outlineUrl)map.addSource(id+'-outlines',{type:'geojson',data:outlineUrl,promoteId:'id',tolerance:.25,maxzoom:16,buffer:64});
   if(edgeUrl)map.addSource(id+'-edges',{type:'geojson',data:edgeUrl,tolerance:.25,maxzoom:16,buffer:64});
   map.addLayer({id:id+'-lines',type:'line',source:edgeUrl?id+'-edges':id,layout:{visibility:'none','line-join':'round'},paint:{'line-color':'#bd7480','line-width':level===1?.9:.55,'line-opacity':.8}});
-  map.addLayer({id:id+'-selected',type:'line',source:id,layout:{visibility:'none','line-join':'round'},paint:{'line-color':'#bc002d','line-width':level===1?1.4:1.8,'line-opacity':['case',['boolean',['feature-state','selected'],false],1,0]}});
-  localSources.push({id,url,edgeUrl,level});state(index.get(scope),{selected:true});state(selected,{selected:true});
+  map.addLayer({id:id+'-selected',type:'line',source:outlineUrl?id+'-outlines':id,layout:{visibility:'none','line-join':'round'},paint:{'line-color':'#bc002d','line-width':level===1?1.4:1.8,'line-opacity':['case',['boolean',['feature-state','selected'],false],1,0]}});
+  localSources.push({id,url,edgeUrl,outlineUrl,level});state(index.get(scope),{selected:true});state(selected,{selected:true});
  }
  function painted(token){return new Promise(resolve=>{let timer;const cancel=()=>finish(false);const finish=value=>{clearTimeout(timer);map.off('render',check);if(cancelPaint===cancel)cancelPaint=null;resolve(value);};const check=()=>{if(token!==detailEpoch||!active)finish(false);else if(localSources.filter(e=>e.level!==3||wardScope()).every(e=>map.getSource(e.id)&&map.isSourceLoaded(e.id)))finish(true);};cancelPaint=cancel;map.on('render',check);timer=setTimeout(()=>finish(false),8000);map.triggerRepaint();});}
  async function loadDetail(){
   if(!active||!ready||!scope||mode!==2||localReady||detailPromise||host.isMoving?.()||map.isMoving())return;
   const entry=catalogue.chunks[scope],token=detailEpoch,place=scope;if(!entry||entry.decodedBytes>12*1024*1024){detailMessage('Local boundaries exceed the display budget. Prefecture map remains available.',true);return;}
-  const job=(async()=>{detailMessage('Loading municipal boundaries…');const {sources,edges={}}=await prepareLocal(entry.file);if(token!==detailEpoch||!active||scope!==place)return;
+  const job=(async()=>{detailMessage('Loading municipal boundaries…');const {sources,edges={},outlines={}}=await prepareLocal(entry.file);if(token!==detailEpoch||!active||scope!==place)return;
    // Avoid uploading geometry while a camera flight is in progress.
    while(host.isMoving?.()||map.isMoving()){await new Promise(resolve=>setTimeout(resolve,50));if(token!==detailEpoch||!active)return;}
-   for(const [key,blob] of Object.entries(sources))installLocal('japan-local-'+key,blob,key==='first'?1:key==='second'?2:3,edges[key]);
+   for(const [key,blob] of Object.entries(sources))installLocal('japan-local-'+key,blob,key==='first'?1:key==='second'?2:3,edges[key],outlines[key]);
    for(const e of localSources)map.moveLayer(e.id+'-fill');for(const e of localSources)map.moveLayer(e.id+'-lines');for(const e of localSources)map.moveLayer(e.id+'-selected');
    // Keep nationwide prefecture edges above local fills and below local strokes.
    map.moveLayer('japan-first-lines',localSources[0].id+'-lines');

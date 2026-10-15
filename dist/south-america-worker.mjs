@@ -4,6 +4,8 @@ self.onmessage=async({data})=>{
  try{
   const payload=await loadCompressed(data.url),sources={};
   for(const key of ['regions','lines'])sources[key]=new Blob([JSON.stringify(key==='lines'&&(data.url.endsWith('/uruguay-first.bin')||data.url.includes('/brazil-local/')||data.url.includes('/uruguay-local/'))?lineData(payload[key]):payload[key])],{type:'application/json'});
+  // Selected outlines as lines split below the renderer's vertex limit (see country-boundary-worker.mjs).
+  sources.outlines=new Blob([JSON.stringify(lineData(payload.regions))],{type:'application/json'});
   self.postMessage({records:payload.records,sources});
  }catch(error){self.postMessage({error:error.message});}
 };

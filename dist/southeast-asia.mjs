@@ -61,14 +61,14 @@ export async function addCountryPortal(map,host,country){
  function cancel(){cancelIndex?.();if(pending){const p=pending;pending=null;p.worker.terminate();p.reject(new DOMException('Selection changed','AbortError'));}}
  function indexed(key,token){return new Promise(resolve=>{let timer;const finish=value=>{clearTimeout(timer);map.off('sourcedata',check);map.off('error',failed);if(cancelIndex===abort)cancelIndex=null;resolve(value);};const abort=()=>finish(false),check=()=>{if(!active||token!==detailEpoch)finish(false);else if(map.getSource(key)&&map.isSourceLoaded(key))finish(true);},failed=e=>{if(e.sourceId===key)finish(false);};cancelIndex=abort;map.on('sourcedata',check);map.on('error',failed);timer=setTimeout(abort,5000);check();});}
  function prepare(file){cancel();return new Promise((resolve,reject)=>{const worker=new Worker(new URL('./southeast-asia-worker.mjs',import.meta.url),{type:'module'}),job={worker,reject};pending=job;const finish=()=>{worker.terminate();if(pending===job)pending=null;};worker.onmessage=({data})=>{finish();data.error?reject(Error(data.error)):resolve(data);};worker.onerror=e=>{finish();reject(Error(e.message));};worker.postMessage({url:base+file});});}
- function install(key,{blob,borders},level){
+ function install(key,{blob,borders,outlines},level){
   const url=URL.createObjectURL(blob);map.addSource(key,{type:'geojson',data:url,promoteId:'id',tolerance:.15,buffer:64,maxzoom:16,attribution:isMalaysia?'Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a>':'Singapore: <a href="https://data.gov.sg/datasets/d_2cc750190544007400b2cfd5d7f53209/view">URA</a> (Singapore Open Data Licence) · Names: <a href="https://en.wikipedia.org/wiki/Planning_areas_of_Singapore">Wikipedia</a> (CC BY-SA 4.0)'});
   const layers=[key+'-fill',key+'-lines',key+'-selected'];
-  const urls=[url],sources=[key],edgeSource=borders?key+'-edges':key;
+  const urls=[url],sources=[key],edgeSource=borders?key+'-edges':key,outlineSource=key+'-outlines',outlineUrl=URL.createObjectURL(outlines);urls.push(outlineUrl);sources.push(outlineSource);map.addSource(outlineSource,{...lineSourceOptions,tolerance:.15,data:outlineUrl});
   if(borders){const edgeUrl=URL.createObjectURL(borders);urls.push(edgeUrl);sources.push(edgeSource);map.addSource(edgeSource,{...lineSourceOptions,data:edgeUrl});}
   map.addLayer({id:layers[0],type:'fill',source:key,layout:{visibility:'none'},paint:{'fill-color':c.fill,'fill-antialias':false}});
   map.addLayer({id:layers[1],type:'line',source:edgeSource,layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':level===1?.9:.55,'line-opacity':borders?adaptiveOpacity(level===1?.8:.65):level===1?.8:.65}});
-  map.addLayer({id:layers[2],type:'line',source:key,filter:['==',['get','id'],''],layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':1.8,...(borders?{'line-opacity':adaptiveOpacity()}:{})}});
+  map.addLayer({id:layers[2],type:'line',source:outlineSource,filter:['==',['get','id'],''],layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':1.8,...(borders?{'line-opacity':adaptiveOpacity()}:{})}});
   installed.set(key,{urls,sources,layers,level,borders:!!borders});
   // District fills stay below every state's outlines, even outside the selection.
   for(const entry of installed.values())if(entry.level===1)for(const id of entry.layers.slice(1))map.moveLayer(id);

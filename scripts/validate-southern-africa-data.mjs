@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
 import vm from 'node:vm';
 import {lineData} from '../dist/adaptive-lines.mjs';
+import {polygonParts} from '../dist/polygon-parts.mjs';
+import {MAX_LINE_POINTS} from '../dist/korea-lines.mjs';
 const root='dist/data/southern-africa',read=(c,n)=>JSON.parse(gunzipSync(fs.readFileSync(root+'/'+c+'/'+n))),countries=['south-africa','eswatini','lesotho'];
 const expected={'south-africa':[9,52,205],eswatini:[4,55,0],lesotho:[10,78,0]};
 function coordinateCheck(g){const walk=c=>{if(typeof c[0]==='number'){assert(c.every(Number.isFinite));assert(c[0]>16&&c[0]<34&&c[1]>-35&&c[1]<-21);}else c.forEach(walk);};walk(g.coordinates);}
@@ -31,13 +33,17 @@ assert.deepEqual(bundle.levels.map(p=>p.level),[1,2,3]);
 for(const part of bundle.levels){
  const parts=part.level===1?[read('south-africa','first.bin')]:Object.values(catalogue.chunks).filter(c=>c.level===part.level).map(c=>read('south-africa',c.file));
  assert.deepEqual(part.regions.features,parts.flatMap(p=>p.regions.features),'Country bundle preserves every original polygon');
- assert.deepEqual(part.boundaries.features,parts.flatMap(p=>p.boundaries.features),'Country bundle preserves shared edges without adding coastlines');
+ const plain=features=>features.filter(f=>!f.properties.channel),channels=features=>new Set(features.filter(f=>f.properties.channel).map(f=>JSON.stringify(f)));
+ assert.deepEqual(plain(part.boundaries.features),parts.flatMap(p=>plain(p.boundaries.features)),'Country bundle preserves shared edges without adding coastlines');
+ // Channel borders (build-channel-borders.mjs) appear once in the bundle and in each chunk holding an owner.
+ assert.deepEqual(channels(part.boundaries.features),channels(parts.flatMap(p=>p.boundaries.features)),'Country bundle keeps the channel borders of its chunks');
  assert.deepEqual(part.regions.features.map(f=>f.properties.id).sort(),catalogue.records.filter(r=>r.level===part.level).map(r=>r.id).sort());
 }
 let response;
-const worker=vm.createContext({Blob,lineData,loadCompressed:async()=>bundle,self:{postMessage:r=>{response=r;}}});
+const worker=vm.createContext({Blob,lineData,polygonParts,loadCompressed:async()=>bundle,self:{postMessage:r=>{response=r;}}});
 vm.runInContext(fs.readFileSync('dist/country-boundary-worker.mjs','utf8').replace(/^import .*;\r?\n/gm,''),worker);
 await worker.self.onmessage({data:{url:'all.bin'}});
 assert(!response.error);assert.equal(response.levels.length,3);
-for(const part of response.levels){assert.equal(JSON.parse(await part.blob.text()).features.length,expected['south-africa'][part.level-1]);assert(JSON.parse(await part.borders.text()).features.every(f=>Number.isFinite(f.properties.visibleZoom)),'Country-wide borders retain zoom-dependent detail handling');}
+// Polygons arrive split into parts (polygon-parts.mjs); selected outlines as paths short enough to draw.
+for(const part of response.levels){assert.equal(new Set(JSON.parse(await part.blob.text()).features.map(f=>f.properties.id)).size,expected['south-africa'][part.level-1]);assert(JSON.parse(await part.outlines.text()).features.every(f=>f.geometry.coordinates.length<=MAX_LINE_POINTS),'Selected outlines stay below the renderer vertex limit');assert(JSON.parse(await part.borders.text()).features.every(f=>Number.isFinite(f.properties.visibleZoom)),'Country-wide borders retain zoom-dependent detail handling');}
 console.log('Southern Africa geography, hierarchy, enclave, coastline, parent chunks and complete South Africa worker bundle passed.');
