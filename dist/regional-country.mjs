@@ -54,7 +54,9 @@ export async function addRegionalCountry(map,host,c){
   map.addSource(edge,{...edgeOptions,data:edgeUrl});
   const layers=[key+'-fill',key+'-lines',key+'-selected'];
   map.addLayer({id:layers[0],type:'fill',source:key,layout:{visibility:'none'},paint:{'fill-color':c.fill,'fill-antialias':false}});
-  for(const [id,selectedLine] of [[layers[1],false],[layers[2],true]])map.addLayer({id,type:'line',source:edge,...(selectedLine?{filter:['in','',['get','owners']]}:{}),layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':lineWidth(level,selectedLine),'line-opacity':adaptiveOpacity(selectedLine?1:level===1?.8:.65)}});
+  // Borders are shared lines, each drawn once; the selected outline is the unit's whole shape,
+  // coast and water edges included, as in every country.
+  for(const [id,selectedLine] of [[layers[1],false],[layers[2],true]])map.addLayer({id,type:'line',source:selectedLine?key:edge,...(selectedLine?{filter:['==',['get','id'],'']}:{}),layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':lineWidth(level,selectedLine),'line-opacity':adaptiveOpacity(selectedLine?1:level===1?.8:.65)}});
   installed.set(key,{layers,sources:[key,edge],urls:[url,edgeUrl],level});
   // Every outline must remain above every fill, including parent boundaries
   // shared by municipalities in different districts. Draw province lines last.
@@ -65,7 +67,7 @@ export async function addRegionalCountry(map,host,c){
  function sync(){
   const highlighted=selected?.settlement?(c.settlementBoundaries?null:index.get(selected.parent)):selected;
   if(c.settlements&&map.getLayer(country+'-settlements')){setLayerVisible(map,country+'-settlements',active&&allowed()&&$('settlement-layer').checked);map.setFilter(country+'-settlements',['<=',['get','minzoom'],map.getZoom()]);}
-  for(const {layers,level} of installed.values()){const show=active&&allowed()&&(level===1||!lazy(level)&&level<=mode||level===2&&mode>=2&&scope===detailScope||level===3&&mode===3&&subscope===thirdScope);setLayerVisible(map,layers[0],show);setLayerVisible(map,layers[1],show&&$(level===1?'province-layer':level===2?'second-layer':'third-layer').checked);setLayerVisible(map,layers[2],show);map.setFilter(layers[2],['in',highlighted?.level===level?highlighted.id:'',['get','owners']]);map.setPaintProperty(layers[0],'fill-color',['case',['==',['get','id'],highlighted?.id||''],c.selected,c.fill]);}
+  for(const {layers,level} of installed.values()){const show=active&&allowed()&&(level===1||!lazy(level)&&level<=mode||level===2&&mode>=2&&scope===detailScope||level===3&&mode===3&&subscope===thirdScope);setLayerVisible(map,layers[0],show);setLayerVisible(map,layers[1],show&&$(level===1?'province-layer':level===2?'second-layer':'third-layer').checked);setLayerVisible(map,layers[2],show);map.setFilter(layers[2],['==',['get','id'],highlighted?.level===level?highlighted.id:'']);map.setPaintProperty(layers[0],'fill-color',['case',['==',['get','id'],highlighted?.id||''],c.selected,c.fill]);}
   setLayerVisible(map,country+'-portal-fill',allowed()&&!active);setLayerVisible(map,country+'-international',allowed());if(c.neighbours)setLayerVisible(map,country+'-neighbours',allowed());satellitePaint();host.syncAppearance?.();updateLabels();
  }
  async function cityDetail(province,id=''){if(!cityBorders||!active||!id||!province)return;const token=++cityLoadingEpoch;loading(true);message();try{await cityBorders.setProvince(province,id);if(active&&token===cityLoadingEpoch)satellitePaint();}catch(error){if(active&&token===cityLoadingEpoch)message('City boundaries could not load.');}finally{if(active&&token===cityLoadingEpoch)loading(false);}}

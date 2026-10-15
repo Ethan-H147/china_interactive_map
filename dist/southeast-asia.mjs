@@ -68,7 +68,7 @@ export async function addCountryPortal(map,host,country){
   if(borders){const edgeUrl=URL.createObjectURL(borders);urls.push(edgeUrl);sources.push(edgeSource);map.addSource(edgeSource,{...lineSourceOptions,data:edgeUrl});}
   map.addLayer({id:layers[0],type:'fill',source:key,layout:{visibility:'none'},paint:{'fill-color':c.fill,'fill-antialias':false}});
   map.addLayer({id:layers[1],type:'line',source:edgeSource,layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':level===1?.9:.55,'line-opacity':borders?adaptiveOpacity(level===1?.8:.65):level===1?.8:.65}});
-  map.addLayer({id:layers[2],type:'line',source:edgeSource,filter:borders?['in','',['get','owners']]:['==',['get','id'],''],layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':1.8,...(borders?{'line-opacity':adaptiveOpacity()}:{})}});
+  map.addLayer({id:layers[2],type:'line',source:key,filter:['==',['get','id'],''],layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':1.8,...(borders?{'line-opacity':adaptiveOpacity()}:{})}});
   installed.set(key,{urls,sources,layers,level,borders:!!borders});
   // District fills stay below every state's outlines, even outside the selection.
   for(const entry of installed.values())if(entry.level===1)for(const id of entry.layers.slice(1))map.moveLayer(id);
@@ -78,7 +78,7 @@ export async function addCountryPortal(map,host,country){
   for(const {layers} of installed.values()){map.setPaintProperty(layers[0],'fill-opacity',satellite?1-opacity:1);for(const id of layers.slice(1))map.setPaintProperty(id,'line-color',satellite&&opacity>.5?'#fff0bb':c.line);}
  }
  function sync(){
-  for(const {layers,level,borders} of installed.values()){const detail=level===2,show=active&&(!detail||mode===2&&scope===detailScope);visible(layers[0],show);visible(layers[1],show&&(detail?$('second-layer').checked:$('province-layer').checked));visible(layers[2],show);const id=selected?.level===level?selected.id:'';map.setFilter(layers[2],borders?['in',id,['get','owners']]:['==',['get','id'],id]);map.setPaintProperty(layers[0],'fill-color',['case',['==',['get','id'],selected?.id||''],c.selected,c.fill]);}
+  for(const {layers,level,borders} of installed.values()){const detail=level===2,show=active&&(!detail||mode===2&&scope===detailScope);visible(layers[0],show);visible(layers[1],show&&(detail?$('second-layer').checked:$('province-layer').checked));visible(layers[2],show);const id=selected?.level===level?selected.id:'';map.setFilter(layers[2],['==',['get','id'],id]);map.setPaintProperty(layers[0],'fill-color',['case',['==',['get','id'],selected?.id||''],c.selected,c.fill]);}
   visible(country+'-portal-fill',window.AtlasDev.allows(country)&&!active);satellitePaint();host.syncAppearance?.();updateLabels();
  }
  function updateLabels(){if(!active||!ready||host.isMoving?.()||map.isMoving())return;clearLabels();if(!$('label-layer').checked)return;const b=map.getBounds(),list=catalogue.records.filter(r=>(r.level===1&&!(mode===2&&r.id===scope)||mode===2&&r.parent===scope&&r.level===2)&&r.center[0]>=b.getWest()&&r.center[0]<=b.getEast()&&r.center[1]>=b.getSouth()&&r.center[1]<=b.getNorth());labels=window.AtlasLabels.render(map,list.slice(0,75).map(r=>({...r,selected:r===selected,...(!isMalaysia?{lines:[name(r)],lang:language}:{})})),'korea-marker');}

@@ -118,7 +118,7 @@ export function createSouthAmerica(map,host){
   for(const [id,c] of Object.entries(countries))if(allowed(id)&&(id!==active||!records.length))candidates.push({id,en:c.name,local:c.local,center:c.center});
   labels=window.AtlasLabels.render(map,candidates,'province-label');
  }
- function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...otherPreviews.filter(allowed)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility',active&&allowed(active)?'visible':'none');}
+ function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...otherPreviews.filter(allowed)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility','visible');}
  async function warm(){
   if(data)return;if(loading)return loading;
   loading=(async()=>{
@@ -162,7 +162,7 @@ export function createSouthAmerica(map,host){
     const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer);layers.push(layer.id);};
     add({id:'south-'+id+suffix+'-fill',type:'fill',source:sources[0],paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],c.selected,c.color],'fill-antialias':false}});
     add({id:'south-'+id+suffix+'-borders',type:'line',source:sources[1],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':['interpolate',['linear'],['zoom'],2,.6,7,1.15],'line-opacity':id==='uruguay'?adaptiveOpacity(.8):.8}});
-    add({id:'south-'+id+suffix+'-selection',type:'line',source:sources[1],filter:['in','',['get','regionIds']],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':2,...(id==='uruguay'?{'line-opacity':adaptiveOpacity()}: {})}});
+    add({id:'south-'+id+suffix+'-selection',type:'line',source:sources[0],filter:['==',['get','id'],''],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':2,...(id==='uruguay'?{'line-opacity':adaptiveOpacity()}: {})}});
     const controller=new AbortController();sourceWait=controller;
     if(installed.has(id))await waitForSources(sources,controller.signal);
     if(sourceWait===controller)sourceWait=null;
@@ -199,7 +199,7 @@ export function createSouthAmerica(map,host){
    brazilLayer=mode;selected=null;$('search').value='';sidebar.querySelector('.sidebar-scroll').scrollTop=0;if(mode==='states')await brazil.setMode(1);renderControls();renderSelection();syncLayers();saveLayer();
   }finally{if(epoch===layerEpoch){layerBusy=false;syncTypeButtons();$('layer-status').hidden=true;}}
  }
- function syncLayers(){const entry=installed.get(active);if(entry){map.setLayoutProperty(entry.layers[0],'visibility','visible');map.setLayoutProperty(entry.layers[1],'visibility',$('outlines').checked?'visible':'none');map.setLayoutProperty(entry.layers[2],'visibility','visible');map.setFilter(entry.layers[2],['in',provinceId(selected)||'',['get','regionIds']]);}if(active==='argentina'){argentina.sync();argentinaCities.sync();cityDots.sync();}if(active==='brazil')brazil.sync();if(active==='uruguay')uruguay.sync();contextFilters();for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.moveLayer(id);host.syncAppearance?.();updateLabels();}
+ function syncLayers(){const entry=installed.get(active);if(entry){map.setLayoutProperty(entry.layers[0],'visibility','visible');map.setLayoutProperty(entry.layers[1],'visibility',$('outlines').checked?'visible':'none');map.setLayoutProperty(entry.layers[2],'visibility','visible');map.setFilter(entry.layers[2],['==',['get','id'],provinceId(selected)||'']);}if(active==='argentina'){argentina.sync();argentinaCities.sync();cityDots.sync();}if(active==='brazil')brazil.sync();if(active==='uruguay')uruguay.sync();contextFilters();for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.moveLayer(id);host.syncAppearance?.();updateLabels();}
  function renderSelection(){
   renderProvinceFlag();
   $('tab-explore').hidden=!selected;if(!selected)panel('layers');

@@ -54,6 +54,16 @@ export default [
   assert.equal(await page.evaluate('AtlasEntry.current'),'indonesia','Retry opens the country');
   assert.equal(await page.evaluate(`!document.getElementById('status').hidden&&document.getElementById('status').getClientRects().length>0`),false,'The message clears');
  }},
+ // A selected place is outlined all the way round, coast and water edges included: each
+ // selection outline is drawn from its fill's own shapes, not from the shared border lines.
+ {name:'selected outlines follow each whole shape',options:{width:1280,height:820},async run(page,base){
+  for(const [country,query,pick] of [['brazil','Rio de Janeiro','Rio de Janeiro'],['south-africa','Western Cape','Western Cape'],['malaysia','Selangor','Selangor'],['argentina','Mendoza','Mendoza']]){
+   await page.open(base,'#'+country);await searchAndSelect(page,query,pick);
+   const pairs=await page.evaluate(`map.getStyle().layers.filter(l=>l.type==='line'&&/-(selected|selection)$/.test(l.id)).map(l=>[l.id,l.source,map.getLayer(l.id.replace(/-(selected|selection)$/,'-fill'))?.source]).filter(p=>p[2])`);
+   assert(pairs.length,country+' has selection outlines');
+   for(const [id,line,fill] of pairs)assert.equal(line,fill,id+' outlines its own shapes');
+  }
+ }},
  {name:'links and browser history',options:{width:1280,height:820},async run(page,base){
   await page.open(base,'#japan');
   await page.evaluate(`location.hash='#korea'`);await page.settle();
