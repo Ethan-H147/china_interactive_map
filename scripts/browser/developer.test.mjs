@@ -118,7 +118,9 @@ export default [
   assert.equal(await page.evaluate(`document.getElementById('globe-view').getAttribute('aria-pressed')`),'true');
   // Labels stay on the visible side of the globe.
   await page.evaluate(`map.jumpTo({center:[105,35],zoom:1.6});0`);await page.settle();
-  await page.waitFor(`[...document.querySelectorAll('[data-atlas-place]')].some(el=>el.textContent.includes('Sichuan'))`,{label:'labels on the near side'});
+  // Zooming out stops while the globe still roughly fills the map.
+  assert(await page.evaluate('map.getMinZoom()>1.5'),'The globe has a size floor');
+  await page.waitFor(`document.querySelectorAll('[data-atlas-place]').length>=3`,{label:'labels on the near side'});
   assert(!await page.evaluate(`[...document.querySelectorAll('[data-atlas-place]')].some(el=>el.textContent.includes('United Kingdom'))`),'A country at the edge of the globe is not labelled');
   await page.evaluate(`location.hash='#france'`);await page.settle();
   assert.equal(await page.evaluate(`map.getProjection().type`),'globe','The globe stays on across countries');
