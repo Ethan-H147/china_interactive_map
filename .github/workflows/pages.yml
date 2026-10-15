@@ -58,6 +58,8 @@ jobs:
         run: npm ci --ignore-scripts
       - name: Check country data and international borders
         run: npm run test:botswana-namibia
+      - name: Check satellite transparency and polygon rendering
+        run: npm run test:satellite && npm run test:polygon-parts
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website

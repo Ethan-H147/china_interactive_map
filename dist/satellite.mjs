@@ -49,7 +49,7 @@ export function createSatelliteDisplay(map,host,ui={
   function message(text){ui.status.textContent=text;ui.status.hidden=!text;}
   function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);
     const southLayers=southImageryLayers(map);
-    const contextLayers=map.getLayersOrder().filter(id=>id.endsWith('-portal-fill')||id==='china-context'||id==='south-america-fill');
+    const contextLayers=map.getLayersOrder().filter(id=>id.endsWith('-portal-fill')||id.endsWith('-neighbours')||id==='china-context'||id==='south-america-fill');
     const layers=[...contextLayers,'province-fill','province-fragment-fill','korea-first-fill','mongolia-first-fill','japan-first-fill',...southLayers.map(layer=>layer.id)].filter(id=>map.getLayer(id)).join(',');
     if(visible!==lastVisible||(visible&&(opacity!==lastOpacity||layers!==lastLayers))){
     lastLayers=layers;

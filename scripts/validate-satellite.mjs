@@ -15,7 +15,7 @@ assert.match(satelliteSource.attribution,/Esri/);
 
 function element(value){return {value,hidden:true,checked:false,textContent:'',handlers:{},addEventListener(type,handler){this.handlers[type]=handler;},fire(type){this.handlers[type]();}};}
 const ui={input:element(),options:element(),opacity:element('100'),output:element(),status:element()};
-const contextIds=['china-context','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','russia-portal-fill'];
+const contextIds=['china-context','korea-portal-fill','mongolia-portal-fill','japan-portal-fill','russia-portal-fill','france-neighbours'];
 const layers=new Map([['province-fill',{}],...contextIds.map(id=>[id,{type:'fill',paint:{'fill-opacity':1}}])]),sources=new Map(),events={},insertions=[],appearances=[];
 let mode='china',quiz=false,timeout,cancelled=0;
 const map={getLayer:id=>layers.get(id),getSource:id=>sources.get(id),
@@ -36,6 +36,7 @@ events.sourcedata({sourceId,tile:{state:'errored'}});assert.equal(appearances.le
 events.sourcedata({sourceId,tile:{state:'loaded'}});assert.deepEqual(appearances,[true]);assert.ok(cancelled);
 for(const id of contextIds)assert.equal(layers.get(id).paint['fill-opacity'],0,'No gray country patch over imagery');
 layers.set('future-portal-fill',{type:'fill',paint:{'fill-opacity':1}});display.sync();assert.equal(layers.get('future-portal-fill').paint['fill-opacity'],0,'New context countries reveal already-loaded imagery without a separate country list');contextIds.push('future-portal-fill');
+layers.set('future-neighbours',{type:'fill',paint:{'fill-opacity':1}});display.sync();assert.equal(layers.get('future-neighbours').paint['fill-opacity'],0,'Late-added neighbouring land also reveals imagery');contextIds.push('future-neighbours');
 ui.opacity.value='40';ui.opacity.fire('input');assert.equal(layers.get(sourceId).paint['raster-opacity'],.4);assert.equal(ui.output.textContent,'40%');
 for(const id of contextIds)assert.equal(layers.get(id).paint['fill-opacity'],.6,'All country context fills follow imagery opacity');
 quiz=true;display.sync();assert.equal(layers.get(sourceId).layout.visibility,'none');assert.equal(appearances.at(-1),false);assert.equal(ui.input.checked,true);

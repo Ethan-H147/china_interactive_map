@@ -2,6 +2,7 @@ import {createSettlementBoundaries} from './settlement-boundaries.mjs';
 import {renderPhoneCard} from './place-contact-card.mjs';
 import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementStatistics} from './settlement-layer.mjs';
 import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
+import {polygonParts} from './polygon-parts.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {addInternationalBorder,setLayerVisible,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth as lineWidth,adaptiveOpacity} from './adaptive-lines.mjs';
@@ -31,11 +32,11 @@ export async function addRegionalCountry(map,host,c){
  let settlements=[],supplement,placeLanguage='both',cityManifest,cityBorders,phoneData,cityLoadingEpoch=0;
  let active=false,ready=false,catalogue,search,selected,scope,subscope,detailScope,thirdScope,mode=1,labels=[],warming,pending,cancelIndex,generation=0,detailEpoch=0,selectionEpoch=0;
  const context=await loadCompressed(base+'context.bin');
- map.addSource(country+'-portal',{type:'geojson',data:context,tolerance:0,attribution:c.attribution});
+ map.addSource(country+'-portal',{type:'geojson',data:polygonParts(context),tolerance:0,attribution:c.attribution});
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  // Foreign land beside a far territory, drawn at this country's precision beneath it (French
  // Guiana's Suriname and Brazil): an atlas country in the portal grey, others in the world's.
- if(c.neighbours){map.addSource(country+'-neighbours',{type:'geojson',data:await loadCompressed(base+'neighbours.bin'),tolerance:0});map.addLayer({id:country+'-neighbours',type:'fill',source:country+'-neighbours',paint:{'fill-color':['case',['in',['get','country'],['literal',window.AtlasCountries.ids]],'#d7d7d3','#e5e5e1'],'fill-antialias':false}},country+'-portal-fill');}
+ if(c.neighbours){map.addSource(country+'-neighbours',{type:'geojson',data:polygonParts(await loadCompressed(base+'neighbours.bin')),tolerance:0});map.addLayer({id:country+'-neighbours',type:'fill',source:country+'-neighbours',paint:{'fill-color':['case',['in',['get','country'],['literal',window.AtlasCountries.ids]],'#d7d7d3','#e5e5e1'],'fill-antialias':false}},country+'-portal-fill');}
  const international=await loadCompressed(base+'international.bin');
  map.addSource(country+'-international',{...internationalLineSourceOptions,data:international,attribution:c.attribution});
  addInternationalBorder(map,country+'-international',country+'-international');
