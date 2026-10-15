@@ -1,13 +1,13 @@
 {
-  "retrieved": "2026-10-14",
+  "retrieved": "2026-10-15",
   "counts": {
-    "1": 12,
-    "2": 218,
+    "1": 28,
+    "2": 226,
     "3": 164
   },
   "coverage": "The 12 ITL1 nations and regions, 218 counties and unitary authorities (including metropolitan and London boroughs and the Welsh, Scottish and Northern Irish councils) and the 164 districts of the English two-tier counties, from the Office for National Statistics December 2024 local authority boundaries, generalised to 20 m and clipped to the coastline. Counties and regions are dissolved from the districts; single-tier authorities have no districts below them. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
-  "frontierKm": 504,
+  "frontierKm": 645,
   "seamReports": {},
   "sources": [
     {
@@ -186,6 +186,39 @@
       "bytes": 57833931
     },
     {
+      "file": "neighbour-sur-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen SUR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SUR/ADM0/geoBoundaries-SUR-ADM0.geojson",
+      "sha256": "76a366acc169c28c9a921e6fa125db0682eadeec13fd952874f015bc91e4ad6d",
+      "bytes": 191070
+    },
+    {
+      "file": "neighbour-bra-adm0.geojson",
+      "provider": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+      "year": "2020",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "via": "geoBoundaries gbOpen BRA ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BRA/ADM0/geoBoundaries-BRA-ADM0.geojson",
+      "sha256": "27abfa7db7bb960c6eb88b770ba5daacd07cf6bfd2a0bf33175042b215502899",
+      "bytes": 1952674
+    },
+    {
+      "file": "neighbour-cyp-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen CYP ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CYP/ADM0/geoBoundaries-CYP-ADM0.geojson",
+      "sha256": "87ede4e9e630eec610eba9c017dc9645fb088a3aff61b8a510349080f9c78efb",
+      "bytes": 701631
+    },
+    {
       "file": "osm-relation-1124039.json",
       "url": "https://api.openstreetmap.org/api/0.6/relation/1124039/full.json",
       "provider": "OpenStreetMap contributors, boundary relation 1124039 (Monaco)",
@@ -224,6 +257,16 @@
       "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
       "sha256": "6499a49db84ee6849a697ae255f0888e5b2d5c0ff7c80b62c79b6ad31ab03946",
       "bytes": 11618574
+    },
+    {
+      "file": "osm-relation-1231790.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1231790 (Sint Maarten)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1231790/full.json",
+      "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
+      "bytes": 565922
     }
   ]
 }

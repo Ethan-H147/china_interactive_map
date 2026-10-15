@@ -5,6 +5,7 @@ import {createRequire} from 'node:module';
 import {gzipSync} from 'node:zlib';
 import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';
 import {alignCountry,polygons} from './international-topology.mjs';
+import {readTerritory,coastLand,relationArea} from './europe-overseas.mjs';
 const require=createRequire(import.meta.url);
 const mapshaper=require('mapshaper');
 const source=path.resolve(process.argv[2]||'artifacts/europe-source'),out='dist/data/europe';
@@ -13,6 +14,13 @@ async function command(data,commands,files={}){const result=JSON.parse((await ma
 function bounds(g){const b=[Infinity,Infinity,-Infinity,-Infinity];const walk=c=>{if(typeof c[0]==='number'){b[0]=Math.min(b[0],c[0]);b[1]=Math.min(b[1],c[1]);b[2]=Math.max(b[2],c[0]);b[3]=Math.max(b[3],c[1]);}else c.forEach(walk);};walk(g.coordinates);return [[b[0],b[1]],[b[2],b[3]]];}
 function write(country,name,data){const dir=out+'/'+country;fs.mkdirSync(path.dirname(dir+'/'+name),{recursive:true});const bytes=gzipSync(JSON.stringify(data),{level:9});fs.writeFileSync(dir+'/'+name,bytes);return bytes.length;}
 const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1]-b[1])*111195;
+// A territory's land: OpenStreetMap coastline (or other land, given) clipped to its boundary
+// relation, which includes territorial waters.
+async function osmLand(name,land){
+ const t=readTerritory(source,name),area=relationArea(t.relation,name),coast=land||coastLand(t.coastline,name);
+ const clipped=await command(fc([{type:'Feature',properties:{},geometry:{type:'MultiPolygon',coordinates:coast}}]),'-clip clip.json',{'clip.json':fc([{type:'Feature',properties:{},geometry:{type:'MultiPolygon',coordinates:area}}])});
+ const geometry=clipped.features.find(f=>f.geometry)?.geometry;assert(geometry,name+' has land');return geometry;
+}
 const single=collection=>{const geometries=collection.features.map(f=>f.geometry).filter(Boolean);return {type:'MultiPolygon',coordinates:geometries.flatMap(polygons)};};
 
 // Every country starts from its most detailed level (or a national outline while its
@@ -47,6 +55,7 @@ function gmlUnits(text){
   return {code,name,condominium,coordinates};
  });
 }
+let gibraltar;
 async function loadSpain(){
  const files=unzipSync(fs.readFileSync(path.join(source,'ign-lineas-limite-gml.zip')),{filter:f=>/AdministrativeUnit_(2nd|3rd|4th)Order/.test(f.name)});
  const text=pattern=>Object.entries(files).filter(([n])=>pattern.test(n)).map(([,d])=>strFromU8(d)).join('');
@@ -57,10 +66,12 @@ async function loadSpain(){
  const file=path.join(source,'spain-municipalities.geojson'),out=fs.openSync(file,'w');fs.writeSync(out,'{"type":"FeatureCollection","features":[');
  let first=true;
  // The BDLJE lists Gibraltar among the territories outside any province, reflecting
- // Spain's claim; it is a British overseas territory and is not mapped as Spanish.
+ // Spain's claim; it is a British overseas territory and is not mapped as Spanish. Its
+ // outline is simplified with Spain's municipalities, so the frontier matches exactly, and
+ // then goes to the United Kingdom.
  const specialKinds={'54001':'Islet claimed by Spain and Morocco','54007':'Condominium with France (Pheasant Island)'};
  for(const u of gmlUnits(text(/4thOrder/))){
-  if(u.code.endsWith('54006')){assert.equal(u.name,'Gibraltar');continue;}
+  if(u.code.endsWith('54006')){assert.equal(u.name,'Gibraltar');fs.writeSync(out,(first?'':',')+JSON.stringify({type:'Feature',properties:{id:'GB-O-GI'},geometry:{type:'MultiPolygon',coordinates:u.coordinates}}));first=false;continue;}
   const pp=u.code.slice(4,6),ine=u.code.slice(6),id=(u.condominium||ine.startsWith('53')?'ES-T-':'ES-M-')+ine;
   assert(units.has('ES-P-'+pp),'Municipal parent '+u.code);assert(!units.has(id),'Unique unit '+id);
   units.set(id,{level:3,parent:'ES-P-'+pp,en:u.name,local:u.name,kind:specialKinds[ine]||(id.startsWith('ES-T-')?'Shared territory (condominium)':pp==='54'?'Territory under central administration':'Municipality')});
@@ -68,23 +79,46 @@ async function loadSpain(){
  }
  fs.writeSync(out,']}');fs.closeSync(out);
  const simplified=JSON.parse((await mapshaper.applyCommands(`-i "${file}" ${simplify} -o out.json format=geojson precision=.000001`))['out.json']);
- return {features:simplified.features,units};
+ gibraltar=simplified.features.find(f=>f.properties.id==='GB-O-GI');assert(gibraltar,'Gibraltar outline');
+ return {features:simplified.features.filter(f=>f!==gibraltar),units};
 }
 const frenchRegions={'11':'Île-de-France','24':'Centre-Val de Loire','27':'Bourgogne-Franche-Comté','28':'Normandy','32':'Hauts-de-France','44':'Grand Est','52':'Pays de la Loire','53':'Brittany','75':'Nouvelle-Aquitaine','76':'Occitania','84':'Auvergne-Rhône-Alpes','93':"Provence-Alpes-Côte d'Azur",'94':'Corsica'};
-// France: IGN commune outlines from geo.api.gouv.fr, one file per metropolitan département.
+// Overseas regions (each a single overseas department) and their departments' English names.
+const frenchOverseasRegions={'01':'Guadeloupe','02':'Martinique','03':'French Guiana','04':'Réunion','06':'Mayotte'};
+const frenchOverseasDepartements={'971':'Guadeloupe','972':'Martinique','973':'French Guiana','974':'Réunion','976':'Mayotte'};
+// Overseas collectivities: their communes are their second level (Wallis and Futuna's three
+// are chiefdom districts); Saint-Barthélemy and Saint-Martin are each a single former commune.
+const frenchCollectivities={'975':['Saint Pierre and Miquelon','Saint-Pierre-et-Miquelon','Overseas collectivity'],'977':['Saint Barthélemy','Saint-Barthélemy','Overseas collectivity'],'978':['Saint Martin','Saint-Martin','Overseas collectivity'],'986':['Wallis and Futuna','Wallis-et-Futuna','Overseas collectivity'],'987':['French Polynesia','Polynésie française','Overseas collectivity'],'988':['New Caledonia','Nouvelle-Calédonie','Sui generis collectivity']};
+// The French Southern Lands' four island districts (Adélie Land, an Antarctic claim, is not
+// mapped) and Clipperton, from OpenStreetMap.
+const frenchSouthernDistricts=[['FR-T-KER','Kerguelen Islands','Îles Kerguelen','kerguelen'],['FR-T-CRO','Crozet Islands','Îles Crozet','crozet'],['FR-T-SPA','Saint Paul and Amsterdam Islands','Îles Saint-Paul et Amsterdam','saint-paul-amsterdam'],['FR-T-EPA','Scattered Islands','Îles Éparses','scattered-islands']];
+// France: IGN commune outlines from geo.api.gouv.fr, one file per département or collectivity.
 async function loadFrance(){
  const units=new Map();
- for(const r of read('france-regions.json'))if(frenchRegions[r.code])units.set('FR-R-'+r.code,{level:1,parent:null,en:frenchRegions[r.code],local:r.nom,kind:r.code==='94'?'Territorial collectivity':'Region'});
+ for(const r of read('france-regions.json')){
+  if(frenchRegions[r.code])units.set('FR-R-'+r.code,{level:1,parent:null,en:frenchRegions[r.code],local:r.nom,kind:r.code==='94'?'Territorial collectivity':'Region'});
+  else if(frenchOverseasRegions[r.code])units.set('FR-R-'+r.code,{level:1,parent:null,en:frenchOverseasRegions[r.code],local:r.nom,kind:'Overseas region',overseas:true});
+ }
  const departements=read('france-departements.json').filter(d=>units.has('FR-R-'+d.codeRegion));
- for(const d of departements)units.set('FR-D-'+d.code,{level:2,parent:'FR-R-'+d.codeRegion,en:d.nom,local:d.nom,kind:'Department',code:d.code});
- assert.equal(units.size,13+96,'13 regions and 96 départements');
+ for(const d of departements)units.set('FR-D-'+d.code,{level:2,parent:'FR-R-'+d.codeRegion,en:frenchOverseasDepartements[d.code]||d.nom,local:d.nom,kind:frenchOverseasDepartements[d.code]?'Overseas department':'Department',code:d.code});
+ assert.equal(units.size,18+101,'13 metropolitan and 5 overseas regions, 101 départements');
  const file=path.join(source,'france-communes.geojson'),out=fs.openSync(file,'w');fs.writeSync(out,'{"type":"FeatureCollection","features":[');
- let first=true;
+ let first=true;const put=(id,geometry)=>{fs.writeSync(out,(first?'':',')+JSON.stringify({type:'Feature',properties:{id},geometry}));first=false;};
  for(const d of departements)for(const f of read('france-communes-'+d.code+'.geojson').features){
   const p=f.properties,id='FR-C-'+p.code;assert.equal(p.codeDepartement,d.code,'Commune département '+id);assert(!units.has(id),'Unique commune '+id);
   units.set(id,{level:3,parent:'FR-D-'+d.code,en:p.nom,local:p.nom,kind:'Commune'});
-  fs.writeSync(out,(first?'':',')+JSON.stringify({type:'Feature',properties:{id},geometry:f.geometry}));first=false;
+  put(id,f.geometry);
  }
+ for(const [code,[en,local,kind]] of Object.entries(frenchCollectivities)){
+  const region='FR-R-'+code,communes=read('france-communes-'+code+'.geojson').features;
+  units.set(region,{level:1,parent:null,en,local,kind,overseas:true,code});
+  if(communes.length===1){put(region,communes[0].geometry);continue;}
+  for(const f of communes){const id='FR-C-'+f.properties.code;assert(!units.has(id),'Unique commune '+id);units.set(id,{level:2,parent:region,en:f.properties.nom,local:f.properties.nom,kind:code==='986'?'District (chiefdom)':'Commune'});put(id,f.geometry);}
+ }
+ units.set('FR-R-984',{level:1,parent:null,en:'French Southern and Antarctic Lands',local:'Terres australes et antarctiques françaises',kind:'Overseas territory',overseas:true});
+ for(const [id,en,local,name] of frenchSouthernDistricts){units.set(id,{level:2,parent:'FR-R-984',en,local,kind:'District'});put(id,await osmLand(name));}
+ units.set('FR-R-989',{level:1,parent:null,en:'Clipperton Island',local:'Île de Clipperton',kind:'State-owned island',overseas:true});
+ put('FR-R-989',await osmLand('clipperton'));
  fs.writeSync(out,']}');fs.closeSync(out);
  const simplified=JSON.parse((await mapshaper.applyCommands(`-i "${file}" ${simplify} -o out.json format=geojson precision=.000001`))['out.json']);
  return {features:simplified.features,units};
@@ -95,6 +129,7 @@ async function loadFrance(){
 // and Northern Irish councils) are level-2 units with no districts below them.
 const ukRegions={TLC:'North East',TLD:'North West',TLE:'Yorkshire and The Humber',TLF:'East Midlands',TLG:'West Midlands',TLH:'East of England',TLI:'London',TLJ:'South East',TLK:'South West',TLL:'Wales',TLM:'Scotland',TLN:'Northern Ireland'};
 const ukKinds={E10:'County',E06:'Unitary authority',E08:'Metropolitan borough',E09:'London borough',W06:'Principal area',S12:'Council area',N09:'Local government district'};
+const ukOverseasTerritories=[['GB-O-AI','Anguilla','anguilla'],['GB-O-BM','Bermuda','bermuda'],['GB-O-IO','British Indian Ocean Territory','british-indian-ocean-territory'],['GB-O-VG','British Virgin Islands','british-virgin-islands'],['GB-O-KY','Cayman Islands','cayman-islands'],['GB-O-FK','Falkland Islands','falkland-islands'],['GB-O-MS','Montserrat','montserrat'],['GB-O-PN','Pitcairn Islands','pitcairn-islands'],['GB-O-GS','South Georgia and the South Sandwich Islands','south-georgia'],['GB-O-TC','Turks and Caicos Islands','turks-and-caicos']];
 async function loadUK(){
  const lad=read('ons-lad-dec-2024-bgc.geojson'),ctyua=read('ons-ctyua-dec-2024-bgc.geojson'),itl=read('ons-itl1-jan-2025-bgc.geojson');
  const joined=await command(fc(lad.features.map(f=>({type:'Feature',properties:{LAD:f.properties.LAD24CD,NM:f.properties.LAD24NM,NMW:f.properties.LAD24NMW||''},geometry:f.geometry}))),'-join ctyua.json fields=CTYUA24CD largest-overlap -join itl.json fields=ITL125CD largest-overlap',{'ctyua.json':ctyua,'itl.json':itl});
@@ -112,6 +147,26 @@ async function loadUK(){
   if(id!==cid)units.set(id,{level:3,parent:cid,en:p.NM,local:p.NMW||p.NM,kind:'District',code:p.LAD});
   features.push({type:'Feature',properties:{id},geometry:f.geometry});
  }
+ // British Overseas Territories and Crown Dependencies, from OpenStreetMap. Gibraltar joins
+ // after Spain is loaded (its outline is the hole in Spain's), and the Sovereign Base Areas
+ // take Cyprus's coastline.
+ const territory=(id,en,kind,extra={})=>units.set(id,{level:1,parent:null,en,local:en,kind,overseas:true,...extra});
+ for(const [id,en,name] of ukOverseasTerritories){territory(id,en,'British Overseas Territory',id==='GB-O-FK'?{claimedBy:'argentina'}:{});features.push({type:'Feature',properties:{id},geometry:await osmLand(name)});}
+ territory('GB-O-SH','Saint Helena, Ascension and Tristan da Cunha','British Overseas Territory');
+ for(const [id,en,name] of [['GB-O-SH-HL','Saint Helena','saint-helena'],['GB-O-SH-AC','Ascension Island','ascension'],['GB-O-SH-TA','Tristan da Cunha','tristan-da-cunha']]){units.set(id,{level:2,parent:'GB-O-SH',en,local:en,kind:'Constituent part'});features.push({type:'Feature',properties:{id},geometry:await osmLand(name)});}
+ const cyprus=coastLand(read('osm-coastline-cyprus.json').elements,'Cyprus');
+ territory('GB-O-SBA','Akrotiri and Dhekelia','British Overseas Territory',{aliases:['Sovereign Base Areas']});
+ for(const [id,en,name] of [['GB-O-SBA-A','Akrotiri','akrotiri'],['GB-O-SBA-D','Dhekelia','dhekelia']]){units.set(id,{level:2,parent:'GB-O-SBA',en,local:en,kind:'Sovereign Base Area'});features.push({type:'Feature',properties:{id},geometry:await osmLand(name,cyprus)});}
+ territory('GB-X-JE','Jersey','Crown Dependency');features.push({type:'Feature',properties:{id:'GB-X-JE'},geometry:await osmLand('jersey')});
+ territory('GB-X-IM','Isle of Man','Crown Dependency');features.push({type:'Feature',properties:{id:'GB-X-IM'},geometry:await osmLand('isle-of-man')});
+ // The Bailiwick of Guernsey: Alderney and Sark (with Brecqhou) are set apart from Guernsey,
+ // which keeps Herm, Jethou and Lihou.
+ territory('GB-X-GG','Bailiwick of Guernsey','Crown Dependency');
+ // Alderney's and Sark's relations follow their coasts; their land comes from the Bailiwick's coastline.
+ const bailiwick=coastLand(readTerritory(source,'guernsey').coastline,'Guernsey');
+ const alderney=await osmLand('alderney',bailiwick),sark=await osmLand('sark',bailiwick);
+ const guernsey=(await command(fc([{type:'Feature',properties:{},geometry:await osmLand('guernsey')}]),'-erase parts.json',{'parts.json':fc([alderney,sark].map(geometry=>({type:'Feature',properties:{},geometry})))})).features[0].geometry;
+ for(const [id,en,geometry] of [['GB-X-GG-G','Guernsey',guernsey],['GB-X-GG-A','Alderney',alderney],['GB-X-GG-S','Sark',sark]]){units.set(id,{level:2,parent:'GB-X-GG',en,local:en,kind:'Island'});features.push({type:'Feature',properties:{id},geometry});}
  return {features:(await command(fc(features),simplify)).features,units};
 }
 // Camera bounds frame the main territory; Spain's Canary Islands remain in the data.
@@ -151,13 +206,19 @@ for(const [country,allowed] of [['spain',inBox(-2,42.2,3.3,43.45)],['italy',inBo
 const lliviaRing=[[...llivia].reverse()],lliviaUnit=lowest.spain.features.find(f=>f.properties.id===lliviaId);
 if(lliviaUnit)lliviaUnit.geometry={type:'MultiPolygon',coordinates:[...polygons(lliviaUnit.geometry),lliviaRing]};else lowest.spain.features.push({type:'Feature',properties:{id:lliviaId},geometry:{type:'Polygon',coordinates:lliviaRing}});
 for(const country of ['spain','italy'])outlines[country]=lowest[country].features.length===1?single(lowest[country]):single(await command(lowest[country],'-dissolve'));
+// Gibraltar joins the United Kingdom once Spain is loaded.
+countries['united-kingdom'].units.set('GB-O-GI',{level:1,parent:null,en:'Gibraltar',local:'Gibraltar',kind:'British Overseas Territory',overseas:true});
+lowest['united-kingdom'].features.push(gibraltar);
+outlines['united-kingdom']=single(await command(lowest['united-kingdom'],'-dissolve'));
 
 // Land frontiers. An outline edge is a frontier when foreign land lies just beyond it:
 // a point 100 m or 300 m outward falls inside a neighbouring country (another outline
 // here, or a geoBoundaries outline used only for this test), and a Natural Earth 1:10m
 // land boundary line passes within 4 km. Coastline has sea beyond it. Probing out to
 // 600 m, and closing short gaps inland, tolerates neighbouring sources that sit apart.
-const ne=read('ne-10m-land-boundaries.geojson').features.flatMap(f=>(f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates)).filter(line=>line.some(p=>p[0]>-20&&p[0]<25&&p[1]>25&&p[1]<62));
+// Europe, and the overseas land frontiers: French Guiana, Saint-Martin and Cyprus.
+const frontierBoxes=[[-20,25,25,62],[-56,1.5,-51,6.5],[-63.3,17.9,-62.9,18.2],[32,34.4,34.8,35.4]];
+const ne=read('ne-10m-land-boundaries.geojson').features.flatMap(f=>(f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates)).filter(line=>line.some(p=>frontierBoxes.some(([w,s,e,n])=>p[0]>w&&p[0]<e&&p[1]>s&&p[1]<n)));
 const grid=new Map(),cell=.05,reach=4000;
 ne.forEach((line,l)=>{for(let i=1;i<line.length;i++){const a=line[i-1],b=line[i];for(let x=Math.floor(Math.min(a[0],b[0])/cell)-1;x<=Math.floor(Math.max(a[0],b[0])/cell)+1;x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell)-1;y<=Math.floor(Math.max(a[1],b[1])/cell)+1;y++){const k=x+','+y;if(!grid.has(k))grid.set(k,[]);grid.get(k).push([l,i]);}}});
 // Distance to the nearest Natural Earth boundary line.
@@ -179,7 +240,7 @@ function landIndex(rings){
 const rings=geometry=>polygons(geometry).flat();
 // The Moroccan, Monégasque and Slovenian outlines include territorial waters, so a probe
 // inside them counts only within 200 m of an OpenStreetMap land border way.
-const maritime=new Set(['mar-adm0','mco-adm0','svn-adm2']);
+const maritime=new Set(['mar-adm0','mco-adm0','svn-adm2','sxm-osm']);
 const landWays=[];
 for(const name of fs.readdirSync(source).filter(n=>n.startsWith('osm-relation-'))){
  const elements=read(name).elements,nodes=new Map(elements.filter(e=>e.type==='node').map(e=>[e.id,[e.lon,e.lat]]));
@@ -188,35 +249,44 @@ for(const name of fs.readdirSync(source).filter(n=>n.startsWith('osm-relation-')
 const wayEdges=[],wayGrid=new Map();
 for(const way of landWays)for(let i=1;i<way.length;i++){const a=way[i-1],b=way[i],k=wayEdges.push([a,b])-1;for(let x=Math.floor(Math.min(a[0],b[0])/cell)-1;x<=Math.floor(Math.max(a[0],b[0])/cell)+1;x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell)-1;y<=Math.floor(Math.max(a[1],b[1])/cell)+1;y++){const key=x+','+y;if(!wayGrid.has(key))wayGrid.set(key,[]);wayGrid.get(key).push(k);}}
 function nearLandWay(p,limit=200){for(const k of wayGrid.get(Math.floor(p[0]/cell)+','+Math.floor(p[1]/cell))||[]){const [a,b]=wayEdges[k],c=Math.cos(p[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],u=Math.max(0,Math.min(1,((p[0]-a[0])*c*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));if(metres(p,[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])])<=limit)return true;}return false;}
-const neighbours=['prt-adm0','and-adm0','gib-adm0','mar-adm0','bel-adm2','lux-adm0','deu-adm0','che-adm0','mco-adm0','aut-adm0','svn-adm2','smr-adm0','vat-adm0','irl-adm1'].map(file=>({maritime:maritime.has(file),inside:landIndex(read('neighbour-'+file+'.geojson').features.flatMap(f=>rings(f.geometry)))}));
+const neighbours=['prt-adm0','and-adm0','gib-adm0','mar-adm0','bel-adm2','lux-adm0','deu-adm0','che-adm0','mco-adm0','aut-adm0','svn-adm2','smr-adm0','vat-adm0','irl-adm1','sur-adm0','bra-adm0','cyp-adm0'].map(file=>({file,maritime:maritime.has(file),inside:landIndex(read('neighbour-'+file+'.geojson').features.flatMap(f=>rings(f.geometry)))}));
+// Sint Maarten has no geoBoundaries outline: its OpenStreetMap relation (with territorial waters).
+{const elements=read('osm-relation-1231790.json').elements,nodes=new Map(elements.filter(e=>e.type==='node').map(e=>[e.id,{lon:e.lon,lat:e.lat}])),ways=new Map(elements.filter(e=>e.type==='way').map(e=>[e.id,e.nodes.map(id=>nodes.get(id))]));
+ const relation=elements.find(e=>e.type==='relation'&&e.id===1231790);
+ const area=relationArea({members:relation.members.map(m=>({...m,geometry:ways.get(m.ref)}))},'Sint Maarten');
+ neighbours.push({maritime:maritime.has('sxm-osm'),inside:landIndex(area.flat())});}
 const atlasLand=Object.fromEntries(Object.entries(outlines).map(([country,g])=>[country,landIndex(rings(g))]));
 const signedArea=ring=>ring.slice(1).reduce((s,p,i)=>s+ring[i][0]*p[1]-p[0]*ring[i][1],0);
 function frontierPaths(country,exclude=()=>false){
- const foreign=[...neighbours,...Object.entries(atlasLand).filter(([c])=>c!==country).map(([,inside])=>({maritime:false,inside}))];
+ // geoBoundaries' Gibraltar is a neighbour of Spain, and the United Kingdom's own territory.
+ const foreign=[...neighbours.filter(n=>!(country==='united-kingdom'&&n.file==='gib-adm0')),...Object.entries(atlasLand).filter(([c])=>c!==country).map(([,inside])=>({maritime:false,inside}))];
  const paths=[];
  for(const poly of polygons(outlines[country]))for(const [r,ring] of poly.entries()){
   const n=ring.length-1;if(n<3)continue;
   // Foreign side: outside an exterior ring, inside a hole.
   const side=(signedArea(ring)>0)===(r===0)?-1:1;
   const distance=ring.map(p=>frontierDistance(p)),onLandWay=ring.map(p=>nearLandWay(p));
+  // French Guiana's river frontiers are up to 2 km wide and its tripoints lie in forest far
+  // from any source line, so rings in the Americas probe further and close longer inland gaps.
+  const wide=ring.some(p=>p[0]<-30),gap=wide?8000:3000;
   const flags=Array.from({length:n},(_,i)=>{
-   const a=ring[i],b=ring[i+1];if(distance[i]>reach||distance[i+1]>reach)return false;
+   const a=ring[i],b=ring[i+1],limit=wide?10000:reach;if(distance[i]>limit||distance[i+1]>limit)return false;
    const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return false;
    const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],nx=-dy/len*side,ny=dx/len*side;
    const shoreSafe=onLandWay[i]&&onLandWay[i+1];
-   return [100,300,600].some(d=>{const p=[m[0]+nx*d/111195/c,m[1]+ny*d/111195];return foreign.some(f=>(!f.maritime||shoreSafe)&&f.inside(p));});
+   return (wide?[100,300,600,1000,1500,2500]:[100,300,600]).some(d=>{const p=[m[0]+nx*d/111195/c,m[1]+ny*d/111195];return foreign.some(f=>(!f.maritime||shoreSafe)&&f.inside(p));});
   });
   if(!flags.some(Boolean))continue;
   // Close gaps of up to 3 km where neighbouring sources sit further apart or a river
   // meanders. A gap facing open sea (points 300 m, 600 m and 1.5 km beyond all belong
   // to no country, this one included) is coastline and stays open.
   const anyone=[...foreign.map(f=>f.inside),atlasLand[country]];
-  const beyond=i=>{const a=ring[i],b=ring[i+1],c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return true;return [300,600,1500].some(d=>{const p=[(a[0]+b[0])/2-dy/len*side*d/111195/c,(a[1]+b[1])/2+dx/len*side*d/111195];return anyone.some(inside=>inside(p));});};
+  const beyond=i=>{const a=ring[i],b=ring[i+1],c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return true;return (wide?[300,600,1500,3000,5000]:[300,600,1500]).some(d=>{const p=[(a[0]+b[0])/2-dy/len*side*d/111195/c,(a[1]+b[1])/2+dx/len*side*d/111195];return anyone.some(inside=>inside(p));});};
   const start=flags.indexOf(true);
   for(let k=1;k<=n;k++){
    const i=(start+k)%n;if(flags[i])continue;
-   const span=[];let length=0,j=i;while(!flags[j]&&length<=3000){span.push(j);length+=metres(ring[j],ring[j+1]);j=(j+1)%n;}
-   if(length<=3000&&span.every(beyond))span.forEach(t=>flags[t]=true);
+   const span=[];let length=0,j=i;while(!flags[j]&&length<=gap){span.push(j);length+=metres(ring[j],ring[j+1]);j=(j+1)%n;}
+   if(length<=gap&&span.every(beyond))span.forEach(t=>flags[t]=true);
    k+=span.length-1;
   }
   for(let i=0;i<n;i++)if(flags[i]&&exclude(ring[i],ring[i+1]))flags[i]=false;
@@ -228,11 +298,18 @@ function frontierPaths(country,exclude=()=>false){
  // shore), not a frontier of their own; enclave rings are kept whatever their size.
  return paths.filter(p=>metres(p[0],p.at(-1))<1||p.slice(1).reduce((t,q,i)=>t+metres(p[i],q),0)>=1000);
 }
-// Shared frontiers with France belong to France, so each edge is drawn once.
-const franceEdges=[];for(const poly of polygons(outlines.france))for(const ring of poly)for(let i=1;i<ring.length;i++)franceEdges.push([ring[i-1],ring[i]]);
-const fGrid=new Map();franceEdges.forEach(([a,b],i)=>{for(let x=Math.floor(Math.min(a[0],b[0])/cell);x<=Math.floor(Math.max(a[0],b[0])/cell);x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell);y<=Math.floor(Math.max(a[1],b[1])/cell);y++){const k=x+','+y;if(!fGrid.has(k))fGrid.set(k,[]);fGrid.get(k).push(i);}});
-function nearFrance(p){for(const i of fGrid.get(Math.floor(p[0]/cell)+','+Math.floor(p[1]/cell))||[]){const [a,b]=franceEdges[i],c=Math.cos(p[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],u=Math.max(0,Math.min(1,((p[0]-a[0])*c*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));if(metres(p,[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])])<2)return true;}return false;}
-const sharedWithFrance=(a,b)=>nearFrance(a)&&nearFrance(b)&&nearFrance([(a[0]+b[0])/2,(a[1]+b[1])/2]);
+// A frontier shared with France belongs to France, and Gibraltar's to Spain, so each edge is
+// drawn once.
+function sharedWith(country){
+ const edges=[];for(const poly of polygons(outlines[country]))for(const ring of poly)for(let i=1;i<ring.length;i++)edges.push([ring[i-1],ring[i]]);
+ const grid=new Map();edges.forEach(([a,b],i)=>{for(let x=Math.floor(Math.min(a[0],b[0])/cell);x<=Math.floor(Math.max(a[0],b[0])/cell);x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell);y<=Math.floor(Math.max(a[1],b[1])/cell);y++){const k=x+','+y;if(!grid.has(k))grid.set(k,[]);grid.get(k).push(i);}});
+ const near=p=>{for(const i of grid.get(Math.floor(p[0]/cell)+','+Math.floor(p[1]/cell))||[]){const [a,b]=edges[i],c=Math.cos(p[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],u=Math.max(0,Math.min(1,((p[0]-a[0])*c*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));if(metres(p,[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])])<2)return true;}return false;};
+ return (a,b)=>near(a)&&near(b)&&near([(a[0]+b[0])/2,(a[1]+b[1])/2]);
+}
+const sharedWithFrance=sharedWith('france');
+// Gibraltar's one land frontier is the fence, which Spain draws; its marina and harbour coasts
+// face La Línea across water, so the United Kingdom draws no frontier there.
+const inGibraltar=(a,b)=>[a,b].every(p=>p[0]>-5.4&&p[0]<-5.3&&p[1]>36.1&&p[1]<36.16);
 
 // Shared internal borders of a level, one line per pair of owners, each edge drawn once.
 function borders(regions){const t=topology({regions}),owners=new Map(),groups=new Map();for(const f of t.objects.regions.geometries)for(const arc of new Set(f.arcs.flat(Infinity).map(a=>a<0?~a:a))){if(!owners.has(arc))owners.set(arc,new Set());owners.get(arc).add(f.properties.id);}for(const [arc,ids]of owners){if(ids.size<2)continue;const list=[...ids].sort(),key=list.join('|');if(!groups.has(key))groups.set(key,{owners:list,arcs:[]});groups.get(key).arcs.push([arc]);}return visibleSegments(fc([...groups.values()].map(({owners,arcs})=>({type:'Feature',properties:{owners},geometry:mesh(t,{type:'MultiLineString',arcs})}))));}
@@ -242,7 +319,6 @@ const processing='Polygons are simplified to about 33 m north-south, with neighb
 for(const [country,c] of Object.entries(countries)){
  const geometry=outlines[country];
  fs.rmSync(out+'/'+country,{recursive:true,force:true});
- write(country,'context.bin',fc([{type:'Feature',properties:{country},geometry}]));
  const levels=c.levels||['Country'],maxLevel=levels.length,records=[],chunks={},counts={};
  const unit=id=>c.units?.get(id)||{level:1,parent:null,en:c.en,local:c.local||c.en,kind:'Country'};
  const ancestor=(id,level)=>{let u=id;while(unit(u).level>level)u=unit(u).parent;return u;};
@@ -252,10 +328,17 @@ for(const [country,c] of Object.entries(countries)){
   const tagged=fc(lowest[country].features.filter(f=>unit(f.properties.id).level>=level).map(f=>({type:'Feature',properties:{id:ancestor(f.properties.id,level)},geometry:f.geometry})));
   byLevel[level]=level===maxLevel?tagged:await command(tagged,'-dissolve id');
  }
+ // The portal shown while another country is open: the home territory as one shape, and each
+ // overseas territory as its own, carrying its id and bounds so a click opens it directly.
+ // A territory another atlas country draws as its own claim (the Falklands, in Argentina's
+ // map) carries that country, and is hidden while its map is open.
+ const overseasFirst=byLevel[1].features.filter(f=>unit(f.properties.id).overseas);
+ const homeGeometry=overseasFirst.length?single(await command(fc(byLevel[1].features.filter(f=>!unit(f.properties.id).overseas)),'-dissolve')):geometry;
+ write(country,'context.bin',fc([{type:'Feature',properties:{country},geometry:homeGeometry},...overseasFirst.map(f=>{const u=unit(f.properties.id),b=bounds(f.geometry);return {type:'Feature',properties:{country,region:f.properties.id,bounds:[...b[0],...b[1]].map(v=>round(v)),...(u.claimedBy?{claimedBy:u.claimedBy}:{})},geometry:f.geometry};})]));
  for(let level=1;level<=maxLevel;level++){
   const regions=byLevel[level],points=await command(regions,'-points inner'),areas=await command(regions,'-each "areaKm2=$.area/1000000"');
   counts[level]=regions.features.length;
-  regions.features.forEach((f,i)=>{const id=f.properties.id,u=unit(id);records.push({id,parent:u.parent,level,en:u.en,local:u.local,kind:u.kind,...(u.aliases?{aliases:u.aliases}:{}),...(u.code?{code:u.code}:{}),center:points.features[i].geometry.coordinates.map(v=>round(v)),bounds:c.units?bounds(f.geometry).map(p=>p.map(v=>round(v))):c.camera,areaKm2:(a=>a<1?Math.round(a*1e4)/1e4:Math.round(a*100)/100)(areas.features[i].properties.areaKm2)});});
+  regions.features.forEach((f,i)=>{const id=f.properties.id,u=unit(id);records.push({id,parent:u.parent,level,en:u.en,local:u.local,kind:u.kind,...(u.overseas?{overseas:true}:{}),...(u.aliases?{aliases:u.aliases}:{}),...(u.code?{code:u.code}:{}),center:points.features[i].geometry.coordinates.map(v=>round(v)),bounds:c.units?bounds(f.geometry).map(p=>p.map(v=>round(v))):c.camera,areaKm2:(a=>a<1?Math.round(a*1e4)/1e4:Math.round(a*100)/100)(areas.features[i].properties.areaKm2)});});
  }
  const payload=regions=>({regions:fc(regions.features.map(f=>({type:'Feature',properties:{id:f.properties.id},geometry:f.geometry}))),boundaries:borders(regions)});
  write(country,'first.bin',payload(byLevel[1]));
@@ -267,7 +350,7 @@ for(const [country,c] of Object.entries(countries)){
   chunks[id]={file,count:children.features.length,level,bytes:write(country,file,data),decodedBytes:Buffer.byteLength(JSON.stringify(data))};
  }
  write(country,'catalogue.bin',{records,chunks,counts,levels});
- const paths=frontierPaths(country,country==='spain'||country==='italy'?sharedWithFrance:()=>false);
+ const paths=frontierPaths(country,country==='spain'||country==='italy'?sharedWithFrance:country==='united-kingdom'?inGibraltar:()=>false);
  const length=paths.reduce((s,p)=>s+p.slice(1).reduce((t,q,i)=>t+metres(p[i],q),0),0);
  write(country,'international.bin',lineData(fc(paths.map(coordinates=>({type:'Feature',properties:{countries:[country]},geometry:{type:'LineString',coordinates}})))));
  // A wildcard source name lists every matching file (France has one per département).

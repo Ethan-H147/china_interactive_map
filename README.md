@@ -345,6 +345,37 @@ The 13 regions of metropolitan France (Corsica is a territorial collectivity), 9
 
 Cities and towns, like South Africa, are points independent of councils (`scripts/prepare-uk-settlements.mjs`): every built-up area or settlement with at least 1,000 residents — 4,258 places. England and Wales use ONS 2022 built-up areas with Census 2021 usual residents (London's built-up areas, omitted from ONS's towns tables, are summed from Census output areas as ONS does); Scotland uses NRS Census 2022 settlements; Northern Ireland uses NISRA 2015 settlements with Census 2021 counts (CT0100), located by GeoNames and, for villages absent there, OpenStreetMap. Welsh names are a label language.
 
+### Overseas territories
+
+**France** adds its five overseas regions (Guadeloupe, Martinique, French Guiana, Réunion, Mayotte), each with its département and communes.
+
+- **Collectivities.** The six overseas collectivities are Saint Pierre and Miquelon, Saint Barthélemy, Saint Martin, Wallis and Futuna, French Polynesia and New Caledonia. Their communes are their second level. Saint Barthélemy and Saint Martin are each a single former commune.
+- **French Southern Lands.** Four island districts (Kerguelen, Crozet, Saint Paul and Amsterdam, the Scattered Islands). Adélie Land, an Antarctic claim, is not mapped.
+- **Clipperton Island** is mapped too.
+- **Sources.** Outlines come from IGN, through geo.api.gouv.fr. The French Southern Lands and Clipperton have no communes, so their land comes from OpenStreetMap.
+
+**The United Kingdom** adds its fourteen overseas territories except the British Antarctic Territory, and the three Crown Dependencies.
+
+- **Subdivided territories.**
+  - Saint Helena, Ascension and Tristan da Cunha has its three parts as the second level.
+  - Akrotiri and Dhekelia has its two Sovereign Base Areas.
+  - The Bailiwick of Guernsey has Guernsey, Alderney and Sark.
+- **Sources.** Land comes from OpenStreetMap coastline inside each territory's boundary relation. The Sovereign Base Areas take Cyprus's coastline. Gibraltar is the Spanish boundary data's own outline, simplified with Spain's municipalities, so it meets La Línea exactly; Spain draws the frontier fence.
+- **Claims and pending transfers.**
+  - The Falklands carry Argentina's claim: while Argentina's map is open, they are hidden from the UK's shape and remain Argentina's own drawing.
+  - The British Indian Ocean Territory is mapped as British. The 2025 treaty transferring it to Mauritius is not yet in force.
+
+**Camera and clicks.** Each country's own views frame its home territory only: the country view, a metropolitan region and a search for it. A territory's shape on the world map carries its id and bounds. Clicking one while another country is open switches country, selects the territory and fills the screen with it, without stopping at the home view.
+
+**Statistics.**
+
+- **French population.** INSEE's legal populations; Mayotte's exhaustive count of November 2025 to January 2026 (its authenticating decree is due); the censuses of French Polynesia (2022), New Caledonia (2025) and Wallis and Futuna (2023).
+- **British population.** Each territory's latest official count or estimate from its own statistics office, with its year shown. Anguilla's and the British Virgin Islands' latest published censuses are 2011 and 2010.
+- **GDP.** The overseas regions have Eurostat GDP; the collectivities and British territories show none.
+- **Area.** IGN's commune surfaces for French communes; boundary-derived area elsewhere.
+- **No permanent population.** The British Indian Ocean Territory, South Georgia, Ascension, the French Southern Lands and Clipperton.
+- **Counted elsewhere.** The Sovereign Base Areas' Cypriot residents are counted in Cyprus's census.
+
 ### Flags
 
 The panel stacks flags downward, as for Russia: the national flag, then the region or community, then the department or province, at most two levels below the national flag. A commune or municipality shows its department's or province's flag, captioned with whose flag it is. Municipal and commune flags are not included.
@@ -370,6 +401,9 @@ The panel stacks flags downward, as for Russia: the national flag, then the regi
   - Scotland and Wales show their national flags, and the English regions show England's.
   - Northern Ireland has had no official flag since 1973 and shows none.
   - Councils show none: the familiar county flags are community flags registered with the Flag Institute, not adopted by the councils.
+
+- **Overseas France:** each territory's official or co-official flag, otherwise the flag its local government uses. Réunion and Saint-Martin have neither.
+- **British overseas territories and Crown Dependencies:** their official flags. Saint Helena, Ascension and Tristan da Cunha each have their own. The Sovereign Base Areas fly only the Union Flag.
 
 Unofficial flags are never shown.
 

@@ -46,13 +46,30 @@ await geoBoundaries('ita-adm0.geojson','ITA','ADM0','https://creativecommons.org
 // Neighbouring countries: used only to tell land frontier from coastline (an outline
 // edge with foreign land just beyond it is a frontier). None of their geometry is shipped.
 // The most detailed land-only level is used where ADM0 is coarse (Belgium, Ireland, Slovenia).
-for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1']]){
+for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1'],['SUR','ADM0'],['BRA','ADM0'],['CYP','ADM0']]){
  const meta=await(await fetch('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/')).json();
  await download('neighbour-'+iso.toLowerCase()+'-'+level.toLowerCase()+'.geojson',meta.gjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,via:'geoBoundaries gbOpen '+iso+' '+level,use:'Classifies land frontier; no geometry is copied.'});
 }
 // OpenStreetMap separates land border ways from maritime ones. Where a neighbour's outline
 // includes territorial waters, these land ways say exactly where the land frontier ends.
-for(const [id,name] of [[1124039,'Monaco'],[1154756,'Ceuta'],[1154757,'Melilla'],[218657,'Slovenia']])await download('osm-relation-'+id+'.json','https://api.openstreetmap.org/api/0.6/relation/'+id+'/full.json',{provider:'OpenStreetMap contributors, boundary relation '+id+' ('+name+')',license:'Open Data Commons Open Database License 1.0',licenseURL:'https://www.openstreetmap.org/copyright',use:'Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.'});
+for(const [id,name] of [[1124039,'Monaco'],[1154756,'Ceuta'],[1154757,'Melilla'],[218657,'Slovenia'],[1231790,'Sint Maarten']])await download('osm-relation-'+id+'.json','https://api.openstreetmap.org/api/0.6/relation/'+id+'/full.json',{provider:'OpenStreetMap contributors, boundary relation '+id+' ('+name+')',license:'Open Data Commons Open Database License 1.0',licenseURL:'https://www.openstreetmap.org/copyright',use:'Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.'});
+// British Overseas Territories and Crown Dependencies, and France's Southern Lands (without
+// Adélie Land) and Clipperton: each territory's OpenStreetMap boundary relation, which includes
+// territorial waters, and the coastline ways inside it. The build keeps the land inside each
+// relation. The Sovereign Base Areas border Cyprus, so the island's whole coastline is kept too.
+const osmTerritories={anguilla:2177161,bermuda:1993208,'british-indian-ocean-territory':1993867,'british-virgin-islands':285454,'cayman-islands':2185366,'falkland-islands':2185374,montserrat:537257,'pitcairn-islands':2185375,'saint-helena':155987,ascension:156166,'tristan-da-cunha':3672278,'south-georgia':1983628,'turks-and-caicos':547479,akrotiri:3267302,dhekelia:3267303,jersey:367988,guernsey:270009,alderney:1973200,sark:1973199,'isle-of-man':62269,kerguelen:6063085,crozet:1263891,'saint-paul-amsterdam':6063092,'scattered-islands':6063099,clipperton:2573009};
+const osmMeta=what=>({provider:'OpenStreetMap contributors, '+what,license:'Open Data Commons Open Database License 1.0',licenseURL:'https://www.openstreetmap.org/copyright'});
+// Overpass servers are often busy: retry, alternating between two public instances.
+async function viaOverpass(name,query,metadata){
+ for(let attempt=0;;attempt++){
+  const server=attempt%2?'https://overpass.private.coffee/api/interpreter':'https://overpass-api.de/api/interpreter';
+  try{return await download(name,server+'?data='+encodeURIComponent(query),metadata);}
+  catch(error){if(!error.http||attempt>=7)throw error;console.log(name,'busy, retrying');await new Promise(r=>setTimeout(r,20000*(attempt+1)));}
+ }
+}
+for(const [key,id] of Object.entries(osmTerritories))
+ await viaOverpass('osm-territory-'+key+'.json',`[out:json][timeout:900];rel(${id});out geom;rel(${id});map_to_area->.a;way(area.a)[natural=coastline];out body geom;`,{...osmMeta('boundary relation '+id+' and the coastline ways inside it'),relation:id});
+await viaOverpass('osm-coastline-cyprus.json','[out:json][timeout:900];way[natural=coastline](34.4,32.2,35.75,34.7);out body geom;',osmMeta('coastline ways of Cyprus, for the Sovereign Base Areas'));
 // Italy: ISTAT administrative boundaries for statistical purposes, 1 January 2026, full detail.
 await download('istat-limiti-2026.zip','https://www.istat.it/storage/cartografia/confini_amministrativi/non_generalizzati/2026/Limiti01012026.zip',{provider:'ISTAT, Confini delle unità amministrative a fini statistici al 1° gennaio 2026 (non generalizzati)',year:2026,license:'Creative Commons Attribution 4.0',licenseURL:'https://creativecommons.org/licenses/by/4.0/',dataset:'https://www.istat.it/notizia/confini-delle-unita-amministrative-a-fini-statistici-al-1-gennaio-2018-2/'});
 // Spain: IGN jurisdictional boundaries (BDLJE), INSPIRE GML. The server cuts long transfers, so download() falls back to ranges.
@@ -63,7 +80,9 @@ const geoApi='https://geo.api.gouv.fr';
 const geoMeta={provider:'Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces',license:'Etalab Open Licence 2.0',licenseURL:'https://www.etalab.gouv.fr/licence-ouverte-open-licence/',dataset:'https://geo.api.gouv.fr/decoupage-administratif'};
 await download('france-regions.json',geoApi+'/regions?fields=nom,code',geoMeta);
 await download('france-departements.json',geoApi+'/departements?fields=nom,code,codeRegion',geoMeta);
-for(const d of JSON.parse(fs.readFileSync(path.join(root,'france-departements.json'))).filter(d=>d.code.length===2))
+// Overseas: the five overseas departments (regions) and six collectivities with communes.
+const overseasDepartements=['971','972','973','974','976','975','977','978','986','987','988'];
+for(const d of [...JSON.parse(fs.readFileSync(path.join(root,'france-departements.json'))).filter(d=>d.code.length===2),...overseasDepartements.map(code=>({code}))])
  await download('france-communes-'+d.code+'.geojson',`${geoApi}/departements/${d.code}/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface`,geoMeta);
 await download('insee-populations-2023.xlsx','https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.xlsx',{provider:'INSEE, populations de référence en vigueur au 1er janvier 2026 (date de référence statistique 1er janvier 2023)',year:2023,license:'Etalab Open Licence 2.0',licenseURL:'https://www.insee.fr/fr/information/2381863',dataset:'https://www.insee.fr/fr/statistiques/8680726'});
 // United Kingdom: ONS local authority districts, counties and unitary authorities, and ITL1 regions.

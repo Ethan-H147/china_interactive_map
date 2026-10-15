@@ -2,23 +2,19 @@ import fs from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
 import '../dist/countries.js';
 
-const source='https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson';
+const source='https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_110m_admin_0_countries.geojson';
 const response=await fetch(source);
 if(!response.ok)throw Error('World land: '+response.status);
 const world=await response.json();
 // Selectable countries already have their own reconciled coastal silhouettes.
 // Exclude the coarse versions so they cannot protrude behind detailed coasts.
 const portals=new Set(['CHN','TWN','KOR','PRK','MNG','JPN','PHL','IDN','RUS']);
-// Countries drawn from these silhouettes declare their Natural Earth code in countries.js.
+// Countries drawn from these silhouettes declare their Natural Earth codes in countries.js
+// (France and the United Kingdom include their overseas territories); a country's silhouettes
+// are hidden while its own map is available.
 const {ids,countries}=globalThis.AtlasCountries;
-const previews=Object.fromEntries(ids.filter(id=>countries[id].naturalEarth).map(id=>[countries[id].naturalEarth,id]));
-// France's detailed outline is metropolitan only; French Guiana keeps its silhouette.
-const overseas=(iso,polygon)=>iso==='FRA'&&polygon[0][0][0]<-30;
-const features=world.features.filter(f=>!portals.has(f.properties.ADM0_A3)).flatMap(f=>{
- const iso=f.properties.ADM0_A3,parts=f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates];
- const home=parts.filter(p=>!overseas(iso,p)),away=parts.filter(p=>overseas(iso,p));
- return [{type:'Feature',properties:{country:previews[iso]||''},geometry:home.length===1?{type:'Polygon',coordinates:home[0]}:{type:'MultiPolygon',coordinates:home}},...(away.length?[{type:'Feature',properties:{country:''},geometry:{type:'MultiPolygon',coordinates:away}}]:[])];
-});
+const previews=Object.fromEntries(ids.flatMap(id=>[countries[id].naturalEarth||[]].flat().map(code=>[code,id])));
+const features=world.features.filter(f=>!portals.has(f.properties.ADM0_A3)).map(f=>({type:'Feature',properties:{country:previews[f.properties.ADM0_A3]||''},geometry:f.geometry}));
 const bytes=gzipSync(JSON.stringify({type:'FeatureCollection',features}),{level:9});
 await fs.writeFile('dist/data/world-land.bin',bytes);
 await fs.writeFile('dist/data/world-land-sources.json',JSON.stringify({

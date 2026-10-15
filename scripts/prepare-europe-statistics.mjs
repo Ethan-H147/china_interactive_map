@@ -166,11 +166,21 @@ async function spain(){
  return regions;
 }
 
+// An INSEE web table of populations: {code: municipal population}, where each row's label
+// begins with the commune's number within its territory ("11. Anaa", "01 - Acoua").
+async function inseeTable(page,prefix,label){
+ const html=await (await fetch(page,{headers:{'User-Agent':'boundary-atlas statistics (github.com/Ethan-H147/china_interactive_map)'}})).text();
+ const rows=[...html.match(/<table[\s\S]*?<\/table>/)[0].matchAll(/<tr[\s\S]*?<\/tr>/g)].map(r=>[...r[0].matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/g)].map(c=>c[1].replace(/<[^>]+>/g,'').replace(/&nbsp;|\s+/g,' ').trim()));
+ const values={};for(const row of rows){const m=label(row[0]);if(m&&/^[\d ]+$/.test(row[1]))values[prefix(m)]=Number(row[1].replace(/ /g,''));}
+ return {page,retrieved:today,values};
+}
 async function france(){
  const catalogue=readCatalogue('france'),{readXlsx}=await import('./read-xlsx.mjs');
  // Population: INSEE legal populations in force on 1 January 2026 (statistical reference
  // date 1 January 2023), municipal population. Paris, Lyon and Marseille are listed by
- // municipal arrondissement, so each city is the sum of its arrondissements.
+ // municipal arrondissement, so each city is the sum of its arrondissements. The file covers
+ // the overseas departments except Mayotte, and Saint-Pierre-et-Miquelon, Saint-Barthélemy
+ // and Saint-Martin.
  const population=await retain('france-population-2023.json',async()=>{
   const rows=readXlsx(artifacts+'/insee-populations-2023.xlsx').Communes,header=rows.findIndex(r=>r[5]==='Code commune'),values={};
   for(const r of rows.slice(header+1)){if(!r[5])continue;const dep=String(r[2]),code=dep.length===3?dep+String(r[5]).padStart(2,'0').slice(-2):dep+String(r[5]).padStart(3,'0');values[code]=r[7];}
@@ -178,31 +188,125 @@ async function france(){
   for(const [city,arrondissements] of Object.entries(cities)){const parts=Object.keys(values).filter(k=>arrondissements.test(k));assert(parts.length>=9,'Arrondissements of '+city);values[city]=parts.reduce((s,k)=>s+values[k],0);for(const k of parts)delete values[k];}
   return {url:'https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.xlsx',page:'https://www.insee.fr/fr/statistiques/8680726',reference:'2023-01-01',inForce:'2026-01-01',retrieved:today,values};
  });
+ // The territories INSEE counts separately, municipal population by commune: Mayotte's
+ // exhaustive count of November 2025 to January 2026 (its authenticating decree is due at the
+ // end of 2026), and the censuses of French Polynesia (2022), New Caledonia (2025) and Wallis
+ // and Futuna (2023, by district).
+ const numbered=territory=>label=>{const m=/^(\d{2})(?:\.| -)\s/.exec(label);return m&&territory+m[1];};
+ const overseas={
+  mayotte:await retain('france-population-mayotte-2026.json',()=>inseeTable('https://www.insee.fr/fr/statistiques/9021428',c=>c,numbered('976'))),
+  polynesia:await retain('france-population-polynesia-2022.json',()=>inseeTable('https://www.insee.fr/fr/statistiques/6689891',c=>c,numbered('987'))),
+  caledonia:await retain('france-population-new-caledonia-2025.json',()=>inseeTable('https://www.insee.fr/fr/statistiques/8658726',c=>c,numbered('988'))),
+  wallis:await retain('france-population-wallis-futuna-2023.json',()=>inseeTable('https://www.insee.fr/fr/statistiques/7756933',c=>c,label=>({Alo:'98611',Sigave:'98612',Uvea:'98613'})[label]))
+ };
+ assert.equal(Object.values(overseas.mayotte.values).reduce((s,v)=>s+v,0),323153,'Mayotte 2026 count');
+ assert.equal(Object.values(overseas.polynesia.values).reduce((s,v)=>s+v,0),278786,'French Polynesia 2022 census');
+ assert.equal(Object.values(overseas.caledonia.values).reduce((s,v)=>s+v,0),264596,'New Caledonia 2025 census');
+ assert.equal(Object.values(overseas.wallis.values).reduce((s,v)=>s+v,0),11151,'Wallis and Futuna 2023 census');
+ const periods={
+  frPopulation:{year:2023,date:'2023-01-01',method:'census',periodLabel:'2023 legal population (in force 2026)'},
+  frPopulationMayotte:{year:2026,date:'2026-01-01',method:'census',periodLabel:'Exhaustive count, Nov 2025 – Jan 2026 (decree pending)'},
+  frPopulationPolynesia:{year:2022,date:'2022-08-18',method:'census',periodLabel:'2022 census legal population'},
+  frPopulationCaledonia:{year:2025,date:'2025-04-22',method:'census',periodLabel:'2025 census legal population (in force 2026)'},
+  frPopulationWallis:{year:2023,date:'2023-07-27',method:'census',periodLabel:'2023 census legal population'}
+ };
+ const commune={};
+ for(const [code,v] of Object.entries(population.values))commune[code]={value:v,source:'frPopulation'};
+ for(const [key,source] of [['mayotte','frPopulationMayotte'],['polynesia','frPopulationPolynesia'],['caledonia','frPopulationCaledonia'],['wallis','frPopulationWallis']])for(const [code,v] of Object.entries(overseas[key].values))commune[code]={value:v,source};
  // Area: IGN's official commune surface (hectares) as published with the outlines.
  const area=await retain('france-area.json',async()=>{const values={};for(const name of fs.readdirSync(artifacts).filter(n=>/^france-communes-\w+\.geojson$/.test(n)))for(const f of JSON.parse(fs.readFileSync(path.join(artifacts,name))).features)values[f.properties.code]=f.properties.surface;return {source:'geo.api.gouv.fr surface (hectares), IGN ADMIN EXPRESS',values};});
  const gdp=await eurostatGdp('france-gdp-eurostat.json','FR',['FR1','FRB','FRC','FRD','FRE','FRF','FRG','FRH','FRI','FRJ','FRK','FRL','FRM']);
+ // The overseas regions are retained separately, so the metropolitan extract is unchanged.
+ const overseasGdp=await eurostatGdp('france-overseas-gdp-eurostat.json','FRY',['FRY1','FRY2','FRY3','FRY4','FRY5']);
+ for(const level of ['nuts2','nuts3'])Object.assign(gdp[level],overseasGdp[level]);
  sources.frPopulation={title:'INSEE · Populations de référence en vigueur au 1er janvier 2026 (date de référence statistique 1er janvier 2023), municipal population',url:population.page,data:population.url,license:'Etalab Open Licence 2.0'};
+ sources.frPopulationMayotte={title:'INSEE · Populations des communes de Mayotte en 2026 (exhaustive count, 27 November 2025 to 10 January 2026), municipal population; to be authenticated by decree',url:overseas.mayotte.page,license:'Etalab Open Licence 2.0'};
+ sources.frPopulationPolynesia={title:'INSEE and ISPF · Populations légales des communes de Polynésie française en 2022, municipal population (decree no. 2022-1592)',url:overseas.polynesia.page,license:'Etalab Open Licence 2.0'};
+ sources.frPopulationCaledonia={title:'INSEE and ISEE · Populations de référence des communes de Nouvelle-Calédonie en 2025, municipal population (decree no. 2025-966)',url:overseas.caledonia.page,license:'Etalab Open Licence 2.0'};
+ sources.frPopulationWallis={title:'INSEE · Populations légales des circonscriptions des îles Wallis et Futuna en 2023, municipal population (decree no. 2023-1233)',url:overseas.wallis.page,license:'Etalab Open Licence 2.0'};
  sources.frArea={title:'IGN ADMIN EXPRESS official commune surface, published by geo.api.gouv.fr',url:'https://geo.api.gouv.fr/decoupage-administratif/communes',license:'Etalab Open Licence 2.0'};
- const regionNuts={'11':'FR1','24':'FRB','27':'FRC','28':'FRD','32':'FRE','44':'FRF','52':'FRG','53':'FRH','75':'FRI','76':'FRJ','84':'FRK','93':'FRL','94':'FRM'};
+ sources.frMappedArea={title:'Boundary-derived area of the OpenStreetMap land outline (French Southern Lands and Clipperton, which have no communes)',url:'https://www.openstreetmap.org/copyright',license:'Open Data Commons Open Database License 1.0'};
+ const regionNuts={'11':'FR1','24':'FRB','27':'FRC','28':'FRD','32':'FRE','44':'FRF','52':'FRG','53':'FRH','75':'FRI','76':'FRJ','84':'FRK','93':'FRL','94':'FRM','01':'FRY1','02':'FRY2','03':'FRY3','04':'FRY4','06':'FRY5'};
  const nuts3ByName=new Map(Object.entries(gdp.nuts3).filter(([g])=>g.length===5).map(([g,v])=>[normal(v.label),g]));
  const children=new Map();for(const r of catalogue.records)if(r.parent){if(!children.has(r.parent))children.set(r.parent,[]);children.get(r.parent).push(r);}
- const sum=(r,values,convert=v=>v)=>r.level===3?convert(values[r.id.slice(5)]):(children.get(r.id)||[]).reduce((s,c)=>s+sum(c,values,convert),0);
- const missing=catalogue.records.filter(r=>r.level===3&&(population.values[r.id.slice(5)]===undefined||area.values[r.id.slice(5)]===undefined));
- assert.deepEqual(missing.map(r=>r.id),[],'Every commune has INSEE population and IGN surface');
+ // A unit without children is a commune (FR-C-), a collectivity that is a single former
+ // commune (Saint-Barthélemy, Saint-Martin), or an uninhabited OpenStreetMap territory.
+ const leafCode=r=>r.id.startsWith('FR-C-')?r.id.slice(5):{'FR-R-977':'97701','FR-R-978':'97801'}[r.id];
+ const leaves=r=>children.has(r.id)?children.get(r.id).flatMap(leaves):[r];
+ const uninhabited=r=>leaves(r).every(l=>!leafCode(l));
+ const missing=catalogue.records.filter(r=>!children.has(r.id)&&leafCode(r)&&(!commune[leafCode(r)]||!(area.values[leafCode(r)]>0)));
+ assert.deepEqual(missing.map(r=>r.id),[],'Every commune has an INSEE population and IGN surface');
  const regions={},unmatched=[];
  for(const r of catalogue.records){
-  const key='france:'+r.id,record={name:r.en,level:r.level};
-  record.population={value:sum(r,population.values),year:2023,date:'2023-01-01',method:'census',source:'frPopulation',periodLabel:'2023 legal population (in force 2026)'};
-  record.area={value:Math.round(sum(r,area.values,v=>v/100)*100)/100,unit:'km²',method:'reported',source:'frArea'};
+  const key='france:'+r.id,record={name:r.en,level:r.level},parts=leaves(r);
+  if(uninhabited(r)){
+   record.area={value:r.areaKm2,unit:'km²',method:'mapped',source:'frMappedArea'};
+   record.note='No permanent population: the islands host only rotating scientific, military and meteorological staff, or none at all.';
+   regions[key]=record;continue;
+  }
+  const counted=parts.map(l=>commune[leafCode(l)]),source=counted[0].source;assert(counted.every(c=>c.source===source),key+' population from one source');
+  record.population={value:counted.reduce((s,c)=>s+c.value,0),...periods[source],source};
+  record.area={value:Math.round(parts.reduce((s,l)=>s+area.values[leafCode(l)]/100,0)*100)/100,unit:'km²',method:'reported',source:'frArea'};
   const code=r.id.slice(5);
-  if(r.level===1){const g=regionNuts[code],year=latestYear(gdp.nuts2,[g]);Object.assign(record,combinedGdp(gdp.nuts2,[g],year,'eurostatGdpNuts2'));record.note=`GDP and GDP per capita are Eurostat ${year} regional accounts at current prices (NUTS 1 ${g}); per capita uses Eurostat's average population. USD uses the ${year} average euro exchange rate.`;}
-  else if(r.level===2){const g=nuts3ByName.get(normal(r.local));if(!g){unmatched.push(r.local);}else{const year=latestYear(gdp.nuts3,[g]);Object.assign(record,combinedGdp(gdp.nuts3,[g],year,'eurostatGdpNuts3'));record.note=`GDP and GDP per capita are Eurostat ${year} accounts at current prices (NUTS 3 ${g}); per capita uses Eurostat's average population. USD uses the ${year} average euro exchange rate.`;}}
+  if(r.level===1&&regionNuts[code]){const g=regionNuts[code],year=latestYear(gdp.nuts2,[g]);Object.assign(record,combinedGdp(gdp.nuts2,[g],year,'eurostatGdpNuts2'));record.note=`GDP and GDP per capita are Eurostat ${year} regional accounts at current prices (NUTS ${g.length===3?1:2} ${g}); per capita uses Eurostat's average population. USD uses the ${year} average euro exchange rate.`;}
+  else if(r.level===2&&r.id.startsWith('FR-D-')){const g=nuts3ByName.get(normal(r.local));if(!g){unmatched.push(r.local);}else{const year=latestYear(gdp.nuts3,[g]);Object.assign(record,combinedGdp(gdp.nuts3,[g],year,'eurostatGdpNuts3'));record.note=`GDP and GDP per capita are Eurostat ${year} accounts at current prices (NUTS 3 ${g}); per capita uses Eurostat's average population. USD uses the ${year} average euro exchange rate.`;}}
+  else if(r.overseas||r.id.startsWith('FR-C-')&&catalogue.records.find(p=>p.id===r.parent)?.overseas)record.note??=r.level===1?'GDP is not shown: the overseas collectivities are outside the EU regional accounts.':undefined;
+  if(record.note===undefined)delete record.note;
   regions[key]=record;
  }
  assert.deepEqual(unmatched,[],'Every département has NUTS 3 GDP');
  return regions;
 }
 
+// British Overseas Territories and Crown Dependencies: each territory's latest official count or
+// estimate, from its own statistics office (none publishes for the whole set). Areas are
+// boundary-derived. A territory without a permanent population, or whose residents are counted
+// elsewhere, gives a note instead.
+const ukTerritories={
+ 'GB-O-AI':{value:13572,year:2011,method:'census',periodLabel:'2011 census (2024 census results not yet published)',source:'aiPopulation'},
+ 'GB-O-BM':{value:63356,year:2023,date:'2023-12-31',method:'estimate',periodLabel:'Year-end 2023 estimate',source:'bmPopulation'},
+ 'GB-O-VG':{value:28054,year:2010,method:'census',periodLabel:'2010 census (2023 census results not yet published)',source:'vgPopulation'},
+ 'GB-O-KY':{value:90577,year:2025,method:'estimate',periodLabel:'Fall 2025 labour force survey estimate',source:'kyPopulation'},
+ 'GB-O-FK':{value:3662,year:2021,date:'2021-10-10',method:'census',periodLabel:'2021 census, usually resident',source:'fkPopulation'},
+ 'GB-O-MS':{value:4386,year:2023,method:'census',periodLabel:'2023 census, usual residents (preliminary key findings)',source:'msPopulation'},
+ 'GB-O-PN':{value:50,year:2025,method:'estimate',periodLabel:'Mid-2025 estimate',source:'pnPopulation'},
+ 'GB-O-SH-HL':{value:4439,year:2021,date:'2021-02-07',method:'census',periodLabel:'2021 census, resident population',source:'shPopulation'},
+ 'GB-O-SH-TA':{value:222,year:2026,date:'2026-09-30',method:'estimate',periodLabel:'Resident islanders, 30 September 2026',source:'taPopulation'},
+ 'GB-O-TC':{value:50828,year:2024,method:'estimate',periodLabel:'2024 estimate (provisional)',source:'tcPopulation'},
+ 'GB-O-GI':{value:37936,year:2022,date:'2022-11-14',method:'census',periodLabel:'2022 census, usually resident',source:'giPopulation'},
+ 'GB-X-JE':{value:104490,year:2025,date:'2025-12-31',method:'estimate',periodLabel:'End-2025 estimate (provisional)',source:'jePopulation'},
+ 'GB-X-IM':{value:84069,year:2021,date:'2021-04-25',method:'census',periodLabel:'2021 census',source:'imPopulation'},
+ 'GB-X-GG-G':{value:64991,year:2023,date:'2023-03-31',method:'estimate',periodLabel:'March 2023, rolling electronic census',source:'ggPopulation'},
+ 'GB-X-GG-A':{value:2167,year:2023,date:'2023-03-31',method:'estimate',periodLabel:'March 2023, rolling electronic census',source:'alderneyPopulation'},
+ 'GB-X-GG-S':{value:562,year:2022,date:'2022-04-27',method:'census',periodLabel:'2022 census',source:'sarkPopulation'}
+};
+const ukTerritoryNotes={
+ 'GB-O-IO':'No permanent population: the islands host only military personnel and contractors. Sovereignty is to pass to Mauritius under the treaty signed on 22 May 2025, which is not yet in force.',
+ 'GB-O-GS':'No permanent population: only government officers, scientists and museum staff, on rotation.',
+ 'GB-O-SH-AC':'No permanent population: residents are the employees of the organisations operating on the island and their families.',
+ 'GB-O-SBA':'No separate population is published: the Cypriot residents of the Sovereign Base Areas are counted in the Republic of Cyprus census, and service personnel are not.',
+ 'GB-O-SBA-A':'No separate population is published: the Cypriot residents of the Sovereign Base Areas are counted in the Republic of Cyprus census, and service personnel are not.',
+ 'GB-O-SBA-D':'No separate population is published: the Cypriot residents of the Sovereign Base Areas are counted in the Republic of Cyprus census, and service personnel are not.'
+};
+const ukTerritorySources={
+ aiPopulation:{title:'Anguilla Statistics Department · Population and Housing Census 2011',url:'https://statistics.gov.ai/'},
+ bmPopulation:{title:'Government of Bermuda, Department of Statistics · Bermuda Digest of Statistics 2024 (estimated year-end population)',url:'https://www.gov.bm/files/media-library/20260413/0c8cf37e-bermuda_digest_of_statistics_2024.pdf'},
+ vgPopulation:{title:'Government of the Virgin Islands, Central Statistics Office · Population and Housing Census 2010',url:'https://www.bvi.gov.vg/departments/central-statistics-office-0'},
+ kyPopulation:{title:'Cayman Islands Economics and Statistics Office · Labour Force Survey Report, Fall 2025',url:'https://www.eso.ky/storage/page_docums/uploadFilePdf/946/The%20Cayman%20Islands%20Labour%20Force%20Survey%20Report%20Fall%202025%20Final.pdf'},
+ fkPopulation:{title:'Falkland Islands Government · Census 2021',url:'https://falklands.gov.fk/policy/2021-census/census'},
+ msPopulation:{title:'Government of Montserrat, Statistics Department · Key findings of the 2023 Population and Housing Census',url:'https://www.gov.ms/2024/04/19/key-findings-of-the-2023-population-and-housing-census/'},
+ pnPopulation:{title:'Pacific Community (SPC) Statistics for Development Division · Pitcairn Islands mid-2025 population estimate',url:'https://pacificdata.org/updates/blog/did-you-know/2025/07/stat-of-the-week-50-people-is-the-estimated-population-of-the'},
+ shPopulation:{title:'St Helena Government · 2021 Population and Housing Census, main report',url:'https://www.sainthelena.gov.sh/documents/Census-2021-Main-Report.pdf'},
+ taPopulation:{title:'Tristan da Cunha Government · Population update, 30 September 2026',url:'https://www.tristandc.com/population.php'},
+ tcPopulation:{title:'Turks and Caicos Islands Statistics Authority · Population, 2000 to 2024',url:'https://www.gov.tc/stats/statistics/social/5-population'},
+ giPopulation:{title:'HM Government of Gibraltar Statistics Office · Census of Gibraltar 2022, usually resident population (as tabulated by City Population)',url:'https://citypopulation.de/en/gibraltar/cities/'},
+ jePopulation:{title:'Statistics Jersey · Population and migration 2025: total population',url:'https://stats.je/publication/population-and-migration-2025-total-population/'},
+ imPopulation:{title:'Statistics Isle of Man · 2021 Isle of Man Census Report, Part I',url:'https://www.gov.im/media/1375604/2021-01-27-census-report-part-i-final-2.pdf'},
+ ggPopulation:{title:'States of Guernsey · Population (Rolling Electronic Census), Guernsey excluding Alderney and Sark',url:'https://www.gov.gg/population'},
+ alderneyPopulation:{title:'States of Alderney · Facts and figures (Rolling Electronic Census)',url:'https://alderney.gov.gg/data'},
+ sarkPopulation:{title:'States of Guernsey · Sark population, census of 27 April 2022',url:'https://www.gov.gg/population'},
+ ukMappedArea:{title:'Boundary-derived land area of the territory outline (OpenStreetMap coastline; Gibraltar from the Spanish IGN boundary data)',url:'https://www.openstreetmap.org/copyright',license:'Open Data Commons Open Database License 1.0'}
+};
 async function unitedKingdom(){
  const catalogue=readCatalogue('united-kingdom'),{readXlsx}=await import('./read-xlsx.mjs');
  // Population and area: ONS mid-2024 estimates (MYE5), every local authority, county and region.
@@ -234,7 +338,21 @@ async function unitedKingdom(){
  const authorities=r=>children.has(r.id)?children.get(r.id).flatMap(authorities):[r.code];
  const year=Math.max(...Object.keys(gdp.gdp.E09000001).map(Number));
  const regions={};
- for(const r of catalogue.records){
+ Object.assign(sources,ukTerritorySources);
+ const records=new Map(catalogue.records.map(r=>[r.id,r])),overseas=r=>r.overseas||records.get(r.parent)?.overseas;
+ for(const r of catalogue.records.filter(overseas)){
+  const key='united-kingdom:'+r.id,record={name:r.en,level:r.level,area:{value:r.areaKm2,unit:'km²',method:'mapped',source:'ukMappedArea'}};
+  const parts=catalogue.records.filter(c=>c.parent===r.id),counted=parts.map(c=>ukTerritories[c.id]).filter(Boolean);
+  if(ukTerritories[r.id])record.population={...ukTerritories[r.id]};
+  else if(counted.length){
+   record.population={value:counted.reduce((s,c)=>s+c.value,0),year:Math.max(...counted.map(c=>c.year)),method:'calculated',periodLabel:'Sum of '+parts.filter(c=>ukTerritories[c.id]).map(c=>c.en).join(', '),source:counted[0].source};
+   if(parts.some(c=>!ukTerritories[c.id]))record.note=parts.filter(c=>!ukTerritories[c.id]).map(c=>c.en).join(', ')+' has no permanent population.';
+  }
+  else record.note=ukTerritoryNotes[r.id];
+  assert(record.population||record.note,key+' population or note');
+  regions[key]=record;
+ }
+ for(const r of catalogue.records.filter(r=>!overseas(r))){
   const key='united-kingdom:'+r.id,code=r.level===1?regionCodes[r.id.slice(5)]:r.code,m=mye.values[code];assert(m,key+' in MYE5 ('+code+')');
   const sum=authorities(r).reduce((s,c)=>s+mye.values[c].population,0);assert.equal(m.population,sum,key+' population equals its local authorities');
   const record={name:r.en,level:r.level,population:{value:m.population,year:2024,date:'2024-06-30',method:'estimate',source:'ukPopulation',periodLabel:'Mid-2024 estimate'},area:{value:Math.round(m.areaKm2*100)/100,unit:'km²',year:2024,method:'reported',source:'ukArea'}};

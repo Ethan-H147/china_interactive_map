@@ -15,6 +15,11 @@
 //   England's; Northern Ireland has had no official flag since 1973 and shows none. County and
 //   council flags are not shown: the well-known county flags are community flags registered
 //   with the Flag Institute, not adopted by the councils.
+//  Overseas France: each territory's official or co-official flag, otherwise the flag its local
+//   government uses ("Flags of Overseas France" in the same French list); Réunion and
+//   Saint-Martin have neither. The UK's overseas territories and Crown Dependencies show their
+//   official flags; Saint Helena, Ascension and Tristan da Cunha each have their own, the
+//   territory as a whole none, and the Sovereign Base Areas fly the Union Flag only.
 // Unofficial flags and municipal and commune flags are not included.
 // Usage: node scripts/fetch-europe-subdivision-flags.mjs [--refresh]
 import {readFile,writeFile,mkdir,rm} from 'node:fs/promises';
@@ -49,6 +54,10 @@ const franceRegions=[
  ['93','Flag of Provence-Alpes-Côte d\'Azur.svg',TRADITIONAL]
 ];
 // Spain, communities and autonomous cities: [INE code, Commons file].
+const OFFICIAL='Official flag',GOVERNMENT='Flag of the local government';
+const franceOverseas=[['FR-R-01','Flag of Guadeloupe (Local).svg',GOVERNMENT],['FR-R-02','Flag-of-Martinique.svg',OFFICIAL],['FR-R-03','Flag of French Guiana (Local).svg',GOVERNMENT],['FR-R-06','Flag of Mayotte (Local).svg',GOVERNMENT],['FR-R-975','Flag of Saint-Pierre and Miquelon.svg',GOVERNMENT],['FR-R-977','Flag of Saint Barthélemy (Local).svg',GOVERNMENT],['FR-R-986','Flag of Wallis and Futuna.svg',GOVERNMENT],['FR-R-987','Flag of French Polynesia.svg',OFFICIAL],['FR-R-988','Flag of FLNKS.svg','Co-official flag (flown with the French flag)'],['FR-R-984','Flag of the French Southern and Antarctic Lands.svg',OFFICIAL]];
+const ukOverseas=[['GB-O-AI','Flag of Anguilla.svg'],['GB-O-BM','Flag of Bermuda.svg'],['GB-O-IO','Flag of the British Indian Ocean Territory.svg'],['GB-O-VG','Flag of the British Virgin Islands.svg'],['GB-O-KY','Flag of the Cayman Islands.svg'],['GB-O-FK','Flag of the Falkland Islands.svg'],['GB-O-GI','Flag of Gibraltar.svg'],['GB-O-MS','Flag of Montserrat.svg'],['GB-O-PN','Flag of the Pitcairn Islands.svg'],['GB-O-GS','Flag of South Georgia and the South Sandwich Islands.svg'],['GB-O-TC','Flag of the Turks and Caicos Islands.svg'],['GB-X-JE','Flag of Jersey.svg'],['GB-X-IM','Flag of the Isle of Man.svg'],['GB-X-GG','Flag of Guernsey.svg']].map(([id,file])=>[id,file,OFFICIAL]);
+const ukOverseasParts=[['GB-O-SH-HL','Flag of Saint Helena.svg'],['GB-O-SH-AC','Flag of Ascension Island.svg'],['GB-O-SH-TA','Flag of Tristan da Cunha.svg'],['GB-X-GG-A','Flag of Alderney.svg'],['GB-X-GG-S','Flag of Sark.svg']].map(([id,file])=>[id,file,OFFICIAL]);
 const spainCommunities=[['01','Flag of Andalucía.svg'],['02','Flag of Aragon.svg'],['03','Flag of Asturias.svg'],['04','Flag of the Balearic Islands.svg'],['05','Flag of the Canary Islands.svg'],['06','Flag of Cantabria (Official).svg'],['07','Flag of Castile and León.svg'],['08','Flag of Castile-La Mancha.svg'],['09','Flag of Catalonia.svg'],['10','Bandera de la Comunidad Valenciana (2x3).svg'],['11','Flag of Extremadura with COA.svg'],['12','Flag of Galicia.svg'],['13','Flag of the Community of Madrid.svg'],['14','Flag of the Region of Murcia.svg'],['15','Bandera de Navarra.svg'],['16','Flag of the Basque Country.svg'],['17','Flag of La Rioja (with coat of arms).svg'],['18','Flag Ceuta.svg'],['19','Flag of Melilla.svg']];
 
 // Italy, regions: the "Official regional flags" tables of the retained English list.
@@ -124,10 +133,10 @@ const {france,spain}=records;
 // United Kingdom: [region code, Commons file, status, name shown].
 const england=['TLC','TLD','TLE','TLF','TLG','TLH','TLI','TLJ','TLK'].map(code=>['GB-R-'+code,'Flag of England.svg','National flag of England','England']);
 const selections={
- france:{first:franceRegions.map(([code,file,status])=>['FR-R-'+code,file,status]),detail:await franceDepartments(france)},
+ france:{first:[...franceRegions.map(([code,file,status])=>['FR-R-'+code,file,status]),...franceOverseas],detail:await franceDepartments(france)},
  spain:{first:spainCommunities.map(([code,file])=>['ES-A-'+code,file,code>'17'?'Official flag of the autonomous city':'Official flag (Statute of Autonomy)']),detail:await spainProvinces(spain)},
  italy:{first:await italyRegions(records.italy),detail:await italyProvinces(records.italy)},
- 'united-kingdom':{first:[['GB-R-TLM','Flag of Scotland.svg','National flag of Scotland','Scotland'],['GB-R-TLL','Flag of Wales.svg','National flag of Wales','Wales'],...england],detail:[]}
+ 'united-kingdom':{first:[['GB-R-TLM','Flag of Scotland.svg','National flag of Scotland','Scotland'],['GB-R-TLL','Flag of Wales.svg','National flag of Wales','Wales'],...england,...ukOverseas],detail:ukOverseasParts}
 };
 // A province that is its community's only province shows the community flag once.
 const childCount=records=>records.reduce((m,r)=>(r.parent&&m.set(r.parent,(m.get(r.parent)||0)+1),m),new Map());

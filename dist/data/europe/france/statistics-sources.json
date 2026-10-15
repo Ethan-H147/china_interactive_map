@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-10-14",
+ "retrieved": "2026-10-15",
  "sources": {
   "eurostatGdpNuts2": {
    "title": "Eurostat · Gross domestic product at current market prices by NUTS 2 region (nama_10r_2gdp; NUTS 1 for French regions)",
@@ -22,10 +22,35 @@
    "data": "https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.xlsx",
    "license": "Etalab Open Licence 2.0"
   },
+  "frPopulationMayotte": {
+   "title": "INSEE · Populations des communes de Mayotte en 2026 (exhaustive count, 27 November 2025 to 10 January 2026), municipal population; to be authenticated by decree",
+   "url": "https://www.insee.fr/fr/statistiques/9021428",
+   "license": "Etalab Open Licence 2.0"
+  },
+  "frPopulationPolynesia": {
+   "title": "INSEE and ISPF · Populations légales des communes de Polynésie française en 2022, municipal population (decree no. 2022-1592)",
+   "url": "https://www.insee.fr/fr/statistiques/6689891",
+   "license": "Etalab Open Licence 2.0"
+  },
+  "frPopulationCaledonia": {
+   "title": "INSEE and ISEE · Populations de référence des communes de Nouvelle-Calédonie en 2025, municipal population (decree no. 2025-966)",
+   "url": "https://www.insee.fr/fr/statistiques/8658726",
+   "license": "Etalab Open Licence 2.0"
+  },
+  "frPopulationWallis": {
+   "title": "INSEE · Populations légales des circonscriptions des îles Wallis et Futuna en 2023, municipal population (decree no. 2023-1233)",
+   "url": "https://www.insee.fr/fr/statistiques/7756933",
+   "license": "Etalab Open Licence 2.0"
+  },
   "frArea": {
    "title": "IGN ADMIN EXPRESS official commune surface, published by geo.api.gouv.fr",
    "url": "https://geo.api.gouv.fr/decoupage-administratif/communes",
    "license": "Etalab Open Licence 2.0"
+  },
+  "frMappedArea": {
+   "title": "Boundary-derived area of the OpenStreetMap land outline (French Southern Lands and Clipperton, which have no communes)",
+   "url": "https://www.openstreetmap.org/copyright",
+   "license": "Open Data Commons Open Database License 1.0"
   }
  }
 }

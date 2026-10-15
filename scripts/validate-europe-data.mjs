@@ -13,18 +13,27 @@ const contains=(g,p)=>polygons(g).some(poly=>inRing(p,poly[0])&&!poly.slice(1).s
 const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1]-b[1])*111195;
 const outline={},lines={};
 // Land frontier lengths, excluding the France–Spain and France–Italy seams France holds.
-const frontierKm={'united-kingdom':[480,530],spain:[1300,1400],france:[2850,3000],italy:[1380,1450]};
-// Pieces: Ireland; Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea, Llívia; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
-const pieces={'united-kingdom':1,spain:5,france:5,italy:4};
+const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450]};
+// Pieces: Ireland and Cyprus (Akrotiri, Dhekelia in four pieces, its two Cypriot enclaves);
+// Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea,
+// Llívia, French Guiana (Suriname, Brazil, and five short pieces at the Brazilian tripoint),
+// Saint-Martin; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
+const pieces={'united-kingdom':8,spain:5,france:13,italy:4};
 // The six Meuse villages destroyed at Verdun in 1916 remain communes with no inhabitants.
 const zeroPopulation=new Set(['FR-C-55039','FR-C-55050','FR-C-55139','FR-C-55189','FR-C-55239','FR-C-55307']);
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
 // Spain's condominiums and the islets under central administration have no registered population.
-const subdivided={'united-kingdom':{levels:['Nation or region','County or unitary authority','District'],counts:{1:12,2:218,3:164},bundled:3},france:{levels:['Region','Department','Commune'],counts:{1:13,2:96,3:34746},bundled:2},italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
+const subdivided={'united-kingdom':{levels:['Nation or region','County or unitary authority','District'],counts:{1:28,2:226,3:164},bundled:3,noPopulation:r=>['GB-O-IO','GB-O-GS','GB-O-SH-AC','GB-O-SBA','GB-O-SBA-A','GB-O-SBA-D'].includes(r.id)},france:{levels:['Region','Department','Commune'],counts:{1:26,2:191,3:34875},bundled:2,noPopulation:r=>/^FR-(R-98[49]|T-)/.test(r.id)},italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
 for(const country of countries){
  const catalogue=read(country,'catalogue.bin'),first=read(country,'first.bin'),context=read(country,'context.bin');
- assert.equal(context.features.length,1);assert.equal(context.features[0].properties.country,country);
- outline[country]=context.features[0].geometry;
+ // The portal: the home territory, then each overseas territory with its id and bounds.
+ assert(context.features.every(f=>f.properties.country===country),country+' portal features');
+ assert(!context.features[0].properties.region,country+' portal starts with the home territory');
+ const territories=context.features.slice(1);
+ for(const t of territories){const r=catalogue.records.find(r=>r.id===t.properties.region);assert(r?.overseas&&r.level===1,t.properties.region+' is an overseas territory');assert.deepEqual(t.properties.bounds,[...r.bounds[0],...r.bounds[1]],r.id+' portal bounds');}
+ assert.equal(territories.length,catalogue.records.filter(r=>r.overseas).length,country+' every overseas territory has its own portal shape');
+ assert.deepEqual(territories.filter(t=>t.properties.claimedBy).map(t=>t.properties.region+':'+t.properties.claimedBy),country==='united-kingdom'?['GB-O-FK:argentina']:[],'Only the Falklands are drawn by another atlas country');
+ outline[country]=context.features.length===1?context.features[0].geometry:{type:'MultiPolygon',coordinates:context.features.flatMap(f=>polygons(f.geometry))};
  const s=subdivided[country];
  if(!s){
   assert.deepEqual(catalogue.levels,['Country']);assert.equal(catalogue.records.length,1);assert.deepEqual(catalogue.counts,{1:1});
@@ -51,8 +60,11 @@ for(const country of countries){
   for(const r of catalogue.records){const m=stats[country+':'+r.id];assert(m?.area?.value>0,r.id+' area');assert.equal(Number.isInteger(m.population?.value),!s.noPopulation?.(r),r.id+' population where one is registered');if(m.population)assert(m.population.value>0||zeroPopulation.has(r.id),r.id+' populated');for(const metric of [m.population,m.area,m.gdp,m.gdpPerCapita].filter(Boolean))assert(statistics.sources[metric.source],r.id+' cites a listed source');}
   for(const r of catalogue.records.filter(r=>r.level<s.levels.length&&!s.noPopulation?.(r)&&catalogue.records.some(c=>c.parent===r.id))){const sum=catalogue.records.filter(c=>c.parent===r.id).reduce((t,c)=>t+(stats[country+':'+c.id].population?.value||0),0);assert.equal(stats[country+':'+r.id].population.value,sum,r.id+' population sums its children');}
   if(country==='united-kingdom'){
-   assert.equal(Object.values(stats).filter(m=>m.level===1).reduce((s,m)=>s+m.population.value,0),69281437,'UK mid-2024 total');
-   for(const r of catalogue.records.filter(r=>r.level===1))assert(stats['united-kingdom:'+r.id].gdp,r.id+' ITL1 GDP');
+   const home=catalogue.records.filter(r=>r.level===1&&!r.overseas);
+   assert.equal(home.reduce((s,r)=>s+stats['united-kingdom:'+r.id].population.value,0),69281437,'UK mid-2024 total');
+   for(const r of home)assert(stats['united-kingdom:'+r.id].gdp,r.id+' ITL1 GDP');
+   for(const [id,value] of [['GB-O-GI',37936],['GB-O-FK',3662],['GB-X-JE',104490],['GB-X-IM',84069],['GB-X-GG',67720]])assert.equal(stats['united-kingdom:'+id].population.value,value,id+' population');
+   for(const id of ['GB-O-IO','GB-O-GS','GB-O-SBA'])assert(!stats['united-kingdom:'+id].population&&stats['united-kingdom:'+id].note,id+' explains its missing population');
    // Cities and towns: points independent of councils, each inside the authority it names.
    const places=JSON.parse(fs.readFileSync(root+'/united-kingdom/settlements.json')).records;
    assert(places.length>4000,'A large list of cities and towns');assert(places.every(p=>p.population.value>=1000&&ids.get(p.parentId)&&ids.get(p.provinceId)?.level===1),'Settlements have population and parents');
@@ -63,7 +75,10 @@ for(const country of countries){
   if(country==='france'){
    assert.equal(stats['france:FR-C-75056'].population.value,stats['france:FR-D-75'].population.value,'Paris is one commune and one department');
    for(const city of ['FR-C-75056','FR-C-69123','FR-C-13055'])assert(stats['france:'+city].population.value>500000,city+' sums its arrondissements');
-   for(const r of catalogue.records.filter(r=>r.level<=2))assert(stats['france:'+r.id].gdp,r.id+' GDP');
+   // Regions and départements, overseas ones included, have Eurostat GDP; the collectivities do not.
+   for(const r of catalogue.records.filter(r=>r.level<=2&&/^FR-[RD]-ddd?$/.test(r.id)&&!/^FR-R-9/.test(r.id)))assert(stats['france:'+r.id].gdp,r.id+' GDP');
+   for(const [id,value] of [['FR-R-06',323153],['FR-R-987',278786],['FR-R-988',264596],['FR-R-986',11151]])assert.equal(stats['france:'+id].population.value,value,id+' population');
+   for(const id of ['FR-R-984','FR-R-989','FR-T-KER'])assert(!stats['france:'+id].population,id+' has no permanent population');
    const llivia=polygons(outline.france).flatMap(p=>p.slice(1)).length;assert(llivia>=1,'France keeps the Llívia hole');
   }
   if(country==='spain'){
@@ -103,7 +118,7 @@ for(const [country,p,place] of [['italy',[13.7228,45.5947],'Lazzaretto'],['franc
 {
  const {europeFlags}=await import('../dist/europe-flags.mjs');
  const manifest=JSON.parse(fs.readFileSync('dist/data/europe/subdivision-flag-sources.json','utf8'));
- const expected={france:[13,71],spain:[19,37],italy:[20,31],'united-kingdom':[11,0]};
+ const expected={france:[23,71],spain:[19,37],italy:[20,31],'united-kingdom':[25,5]};
  for(const [country,[first,detail]] of Object.entries(expected)){
   const records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/'+country+'/catalogue.bin'))).records,index=new Map(records.map(r=>[r.id,r]));
   const flags=europeFlags[country];

@@ -1,13 +1,13 @@
 {
-  "retrieved": "2026-10-14",
+  "retrieved": "2026-10-15",
   "counts": {
-    "1": 13,
-    "2": 96,
-    "3": 34746
+    "1": 26,
+    "2": 191,
+    "3": 34875
   },
   "coverage": "The 13 regions of metropolitan France (including the territorial collectivity of Corsica), its 96 départements and every commune, from IGN ADMIN EXPRESS outlines published by geo.api.gouv.fr. Regions and départements are dissolved from the communes. Overseas regions are not yet included.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
-  "frontierKm": 2936,
+  "frontierKm": 4175,
   "seamReports": {
     "spain-france": {
       "changedEdges": 2582,
@@ -1103,6 +1103,116 @@
       "bytes": 724243
     },
     {
+      "file": "france-communes-971.geojson",
+      "url": "https://geo.api.gouv.fr/departements/971/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "61296101b9dfab6c56a59d36e12a239fb2d2de6ca70f2d698773fa9265645cc0",
+      "bytes": 914754
+    },
+    {
+      "file": "france-communes-972.geojson",
+      "url": "https://geo.api.gouv.fr/departements/972/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "134e95c4ee0ea01461ccf4a3d351d2268b1d2fff9f2d546e2f457355ee847d8d",
+      "bytes": 885378
+    },
+    {
+      "file": "france-communes-973.geojson",
+      "url": "https://geo.api.gouv.fr/departements/973/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "309b02f8fa6314a6d0754f525279b0c4d4db3bc526f4ced768d8235eaec53367",
+      "bytes": 2086253
+    },
+    {
+      "file": "france-communes-974.geojson",
+      "url": "https://geo.api.gouv.fr/departements/974/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "f3bd8dfc4698adc3cc216d6a1c80e470ae94268e0b4c77993597ee0e20fca7d9",
+      "bytes": 821525
+    },
+    {
+      "file": "france-communes-976.geojson",
+      "url": "https://geo.api.gouv.fr/departements/976/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "1fea88695d026bf1641471fd9c64e1def6e5732befbb918a68921ea8a5cb74cc",
+      "bytes": 236622
+    },
+    {
+      "file": "france-communes-975.geojson",
+      "url": "https://geo.api.gouv.fr/departements/975/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "1719664584aa42830f191e25b6f84674e2d0029f59379b1f10c0d34267e35462",
+      "bytes": 208007
+    },
+    {
+      "file": "france-communes-977.geojson",
+      "url": "https://geo.api.gouv.fr/departements/977/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "fc00c036a0c0ffa4bae1c6bf7f922238e54e3f5e7176a7160badecb445de5b4d",
+      "bytes": 66614
+    },
+    {
+      "file": "france-communes-978.geojson",
+      "url": "https://geo.api.gouv.fr/departements/978/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "0ea4df616e70d5f776dec69a062cec6360274dd25200985ddbffcaaedd12b051",
+      "bytes": 48940
+    },
+    {
+      "file": "france-communes-986.geojson",
+      "url": "https://geo.api.gouv.fr/departements/986/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "e85bb944042d830ef544af5a78e34c379980269aa19c69b6044e859983e3e2f1",
+      "bytes": 45346
+    },
+    {
+      "file": "france-communes-987.geojson",
+      "url": "https://geo.api.gouv.fr/departements/987/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "a8e5cd60c39ea44747485fb9c766d1a4a4098c1df08d43a56f45aebf604c8f61",
+      "bytes": 7864393
+    },
+    {
+      "file": "france-communes-988.geojson",
+      "url": "https://geo.api.gouv.fr/departements/988/communes?format=geojson&geometry=contour&fields=nom,code,codeDepartement,codeRegion,surface",
+      "provider": "Etalab geo.api.gouv.fr, IGN ADMIN EXPRESS commune outlines and official surfaces",
+      "license": "Etalab Open Licence 2.0",
+      "licenseURL": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+      "dataset": "https://geo.api.gouv.fr/decoupage-administratif",
+      "sha256": "cac60d068960ace3870d48f2982b6f654c07c0bbdd00691ed94a585d496d195b",
+      "bytes": 6621026
+    },
+    {
       "file": "ne-10m-land-boundaries.geojson",
       "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
       "provider": "Natural Earth 1:10m admin 0 land boundary lines v5.1.2",
@@ -1267,6 +1377,39 @@
       "bytes": 57833931
     },
     {
+      "file": "neighbour-sur-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen SUR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SUR/ADM0/geoBoundaries-SUR-ADM0.geojson",
+      "sha256": "76a366acc169c28c9a921e6fa125db0682eadeec13fd952874f015bc91e4ad6d",
+      "bytes": 191070
+    },
+    {
+      "file": "neighbour-bra-adm0.geojson",
+      "provider": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+      "year": "2020",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "via": "geoBoundaries gbOpen BRA ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BRA/ADM0/geoBoundaries-BRA-ADM0.geojson",
+      "sha256": "27abfa7db7bb960c6eb88b770ba5daacd07cf6bfd2a0bf33175042b215502899",
+      "bytes": 1952674
+    },
+    {
+      "file": "neighbour-cyp-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen CYP ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CYP/ADM0/geoBoundaries-CYP-ADM0.geojson",
+      "sha256": "87ede4e9e630eec610eba9c017dc9645fb088a3aff61b8a510349080f9c78efb",
+      "bytes": 701631
+    },
+    {
       "file": "osm-relation-1124039.json",
       "url": "https://api.openstreetmap.org/api/0.6/relation/1124039/full.json",
       "provider": "OpenStreetMap contributors, boundary relation 1124039 (Monaco)",
@@ -1305,6 +1448,16 @@
       "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
       "sha256": "6499a49db84ee6849a697ae255f0888e5b2d5c0ff7c80b62c79b6ad31ab03946",
       "bytes": 11618574
+    },
+    {
+      "file": "osm-relation-1231790.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1231790 (Sint Maarten)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1231790/full.json",
+      "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
+      "bytes": 565922
     }
   ]
 }

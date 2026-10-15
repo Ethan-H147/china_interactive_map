@@ -74,6 +74,38 @@ export default [
   assert(shown.every((i,n)=>!n||i.top>shown[n-1].top),'The flags stack downward');
   assert.equal(await page.evaluate(`(()=>{const c=${sidebar}.querySelector('.flag-caption');return c&&!c.hidden?c.textContent:'';})()`),caption);
  }})),
+ // Overseas territories: a click on one from another country opens it directly, selected and
+ // filling the screen; the home country's own views ignore its far-off territories.
+ ...[['Gibraltar','united-kingdom','GB-O-GI',[-5.348,36.13],13],['Réunion','france','FR-R-04',[55.53,-21.13],9]].map(([name,country,id,at,zoom])=>({name:`a click on ${name} from China opens it`,options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#china');
+  const point=await page.evaluate(`(()=>{map.jumpTo({center:${JSON.stringify(at)},zoom:${zoom}});const p=map.project(${JSON.stringify(at)}),r=map.getCanvas().getBoundingClientRect();return [r.left+p.x,r.top+p.y];})()`);
+  await page.settle();await page.tap(point);await page.settle();
+  await page.waitFor(`AtlasEntry.current===${JSON.stringify(country)}&&currentAtlas()?.getSelection()===${JSON.stringify(id)}`,{label:name+' selected in '+country,timeout:30000});
+  const view=await page.evaluate(`(()=>{const r=currentAtlas().getSelection(),b=map.getBounds();return {zoom:map.getZoom(),center:map.getCenter().toArray(),crumb:document.getElementById('breadcrumb-region').textContent,span:b.getEast()-b.getWest()};})()`);
+  assert(view.crumb.includes(name),'The breadcrumb names '+name);
+  assert(Math.abs(view.center[0]-at[0])<1&&Math.abs(view.center[1]-at[1])<1,'The camera is on '+name+', not the home country: '+view.center);
+  assert(view.span<3,'The territory fills the screen ('+view.span.toFixed(2)+'° wide)');
+ }})),
+ {name:"France's home view ignores its overseas territories",options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#france');
+  const c=await page.evaluate('map.getCenter().toArray()');
+  assert(c[0]>-6&&c[0]<10&&c[1]>41&&c[1]<52,'The camera frames metropolitan France: '+c);
+  await searchAndSelect(page,'Brittany','Brittany','Region');
+  const b=await page.evaluate('(()=>{const b=map.getBounds();return [b.getWest(),b.getSouth(),b.getEast(),b.getNorth()];})()');
+  assert(b[0]>-10&&b[2]<5,'A metropolitan region frames itself only: '+b);
+ }},
+ {name:"the Falklands stay Argentina's own drawing while Argentina is open",options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#argentina');
+  const point=await page.evaluate(`(()=>{map.jumpTo({center:[-59,-51.7],zoom:7});const p=map.project([-59,-51.7]),r=map.getCanvas().getBoundingClientRect();return [r.left+p.x,r.top+p.y];})()`);
+  await page.settle();
+  assert.equal(await page.evaluate(`map.queryRenderedFeatures(map.project([-59,-51.7]),{layers:['united-kingdom-portal-fill']}).length`),0,"The UK's Falklands are hidden while Argentina is open");
+  await page.tap(point);await page.settle();
+  assert.equal(await page.evaluate('AtlasEntry.current'),'argentina','A click stays in Argentina');
+  await page.evaluate(`location.hash='#china'`);await page.settle();
+  const again=await page.evaluate(`(()=>{map.jumpTo({center:[-59,-51.7],zoom:7});const p=map.project([-59,-51.7]),r=map.getCanvas().getBoundingClientRect();return [r.left+p.x,r.top+p.y];})()`);
+  await page.settle();await page.tap(again);
+  await page.waitFor(`AtlasEntry.current==='united-kingdom'&&currentAtlas()?.getSelection()==='GB-O-FK'`,{label:'the Falklands in the UK',timeout:30000});
+ }},
  {name:'leaving developer mode on an unreleased country returns to China',options:{...desktop,developer:true},async run(page,base){
   await page.open(base,'#italy');
   assert.equal(await page.evaluate('AtlasEntry.current'),'italy');

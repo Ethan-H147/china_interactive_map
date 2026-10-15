@@ -1,5 +1,5 @@
 {
- "retrieved": "2026-10-14",
+ "retrieved": "2026-10-15",
  "sources": {
   "ukGdpItl": {
    "title": "Office for National Statistics · Regional gross domestic product: all ITL regions, 1998 to 2024 (Tables 5 and 6, ITL1)",
@@ -29,6 +29,75 @@
    "title": "Eurostat · Euro/ECU exchange rates, annual data (ert_bil_eur_a), pound sterling and US dollar averages; USD per GBP is their cross rate",
    "url": "https://ec.europa.eu/eurostat/databrowser/view/ert_bil_eur_a/default/table",
    "license": "CC BY 4.0"
+  },
+  "aiPopulation": {
+   "title": "Anguilla Statistics Department · Population and Housing Census 2011",
+   "url": "https://statistics.gov.ai/"
+  },
+  "bmPopulation": {
+   "title": "Government of Bermuda, Department of Statistics · Bermuda Digest of Statistics 2024 (estimated year-end population)",
+   "url": "https://www.gov.bm/files/media-library/20260413/0c8cf37e-bermuda_digest_of_statistics_2024.pdf"
+  },
+  "vgPopulation": {
+   "title": "Government of the Virgin Islands, Central Statistics Office · Population and Housing Census 2010",
+   "url": "https://www.bvi.gov.vg/departments/central-statistics-office-0"
+  },
+  "kyPopulation": {
+   "title": "Cayman Islands Economics and Statistics Office · Labour Force Survey Report, Fall 2025",
+   "url": "https://www.eso.ky/storage/page_docums/uploadFilePdf/946/The%20Cayman%20Islands%20Labour%20Force%20Survey%20Report%20Fall%202025%20Final.pdf"
+  },
+  "fkPopulation": {
+   "title": "Falkland Islands Government · Census 2021",
+   "url": "https://falklands.gov.fk/policy/2021-census/census"
+  },
+  "msPopulation": {
+   "title": "Government of Montserrat, Statistics Department · Key findings of the 2023 Population and Housing Census",
+   "url": "https://www.gov.ms/2024/04/19/key-findings-of-the-2023-population-and-housing-census/"
+  },
+  "pnPopulation": {
+   "title": "Pacific Community (SPC) Statistics for Development Division · Pitcairn Islands mid-2025 population estimate",
+   "url": "https://pacificdata.org/updates/blog/did-you-know/2025/07/stat-of-the-week-50-people-is-the-estimated-population-of-the"
+  },
+  "shPopulation": {
+   "title": "St Helena Government · 2021 Population and Housing Census, main report",
+   "url": "https://www.sainthelena.gov.sh/documents/Census-2021-Main-Report.pdf"
+  },
+  "taPopulation": {
+   "title": "Tristan da Cunha Government · Population update, 30 September 2026",
+   "url": "https://www.tristandc.com/population.php"
+  },
+  "tcPopulation": {
+   "title": "Turks and Caicos Islands Statistics Authority · Population, 2000 to 2024",
+   "url": "https://www.gov.tc/stats/statistics/social/5-population"
+  },
+  "giPopulation": {
+   "title": "HM Government of Gibraltar Statistics Office · Census of Gibraltar 2022, usually resident population (as tabulated by City Population)",
+   "url": "https://citypopulation.de/en/gibraltar/cities/"
+  },
+  "jePopulation": {
+   "title": "Statistics Jersey · Population and migration 2025: total population",
+   "url": "https://stats.je/publication/population-and-migration-2025-total-population/"
+  },
+  "imPopulation": {
+   "title": "Statistics Isle of Man · 2021 Isle of Man Census Report, Part I",
+   "url": "https://www.gov.im/media/1375604/2021-01-27-census-report-part-i-final-2.pdf"
+  },
+  "ggPopulation": {
+   "title": "States of Guernsey · Population (Rolling Electronic Census), Guernsey excluding Alderney and Sark",
+   "url": "https://www.gov.gg/population"
+  },
+  "alderneyPopulation": {
+   "title": "States of Alderney · Facts and figures (Rolling Electronic Census)",
+   "url": "https://alderney.gov.gg/data"
+  },
+  "sarkPopulation": {
+   "title": "States of Guernsey · Sark population, census of 27 April 2022",
+   "url": "https://www.gov.gg/population"
+  },
+  "ukMappedArea": {
+   "title": "Boundary-derived land area of the territory outline (OpenStreetMap coastline; Gibraltar from the Spanish IGN boundary data)",
+   "url": "https://www.openstreetmap.org/copyright",
+   "license": "Open Data Commons Open Database License 1.0"
   }
  }
 }
