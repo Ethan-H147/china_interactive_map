@@ -2,7 +2,7 @@
 .site-header h1{position:relative}
 .country-switch{display:inherit;grid-template-columns:inherit;align-items:inherit;gap:inherit;min-width:0;max-width:100%;margin:0;padding:0;border:0;border-radius:6px;background:none;color:inherit;font:inherit;line-height:inherit;text-align:start;cursor:pointer}
 .country-switch:focus-visible{outline:2px solid var(--red);outline-offset:6px}
-.country-switch-chevron{align-self:center;flex:none;width:18px;height:18px;fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease),stroke .15s}
+.country-switch-chevron{align-self:center;position:relative;top:3px;flex:none;width:18px;height:18px;fill:none;stroke:var(--muted);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s var(--ease),stroke .15s}
 .country-switch:hover .country-switch-chevron{stroke:var(--ink)}
 .country-switch[aria-expanded=true] .country-switch-chevron{transform:rotate(180deg)}
 body[data-atlas=singapore] .country-switch-chevron{grid-column:3;grid-row:1/span 2}
