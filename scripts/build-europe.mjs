@@ -332,6 +332,28 @@ for(const [country,c] of Object.entries(countries)){
  // overseas territory as its own, carrying its id and bounds so a click opens it directly.
  // A territory another atlas country draws as its own claim (the Falklands, in Argentina's
  // map) carries that country, and is hidden while its map is open.
+ // French Guiana's land neighbours, drawn beneath France: all of Suriname and Brazil's north as
+ // far as Amapá's coast, their land from geoBoundaries and their frontier exactly France's (IGN), since the
+ // world map's 1:110m silhouettes cannot meet the detailed outline. Land between those
+ // outlines and Guiana's (the sources differ by up to a few kilometres) goes to the nearer
+ // neighbour; open water reaching the edge of the area is sea and stays empty.
+ if(country==='france'){
+  const guiana=byLevel[1].features.find(f=>f.properties.id==='FR-R-03');
+  // The area ends inside Guyana and Brazil's interior, where the detailed and 1:110m land share
+  // one grey, so no seam shows.
+  const edge=[-58.3,.8,-49.5,6.3];
+  const box={type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[[[edge[0],edge[1]],[edge[2],edge[1]],[edge[2],edge[3]],[edge[0],edge[3]],[edge[0],edge[1]]]]}};
+  const local=async(file,name)=>(await command(fc(read(file).features.map(f=>({type:'Feature',properties:{country:name},geometry:f.geometry}))),'-clip box.json -dissolve country '+simplify,{'box.json':fc([box])})).features[0];
+  const parts={suriname:[await local('neighbour-sur-adm0.geojson','suriname')],brazil:[await local('neighbour-bra-adm0.geojson','brazil')]};
+  const rest=await command(fc([box]),'-erase land.json -explode',{'land.json':fc([...parts.suriname,...parts.brazil,guiana])});
+  const onEdge=g=>polygons(g).flat(2).some(p=>[0,2].some(i=>Math.abs(p[0]-edge[i])<1e-6)||[1,3].some(i=>Math.abs(p[1]-edge[i])<1e-6));
+  const near=(p,f)=>Math.min(...polygons(f.geometry).flat().flatMap(ring=>ring.map(q=>metres(p,q))));
+  for(const gap of rest.features.filter(f=>f.geometry&&!onEdge(f.geometry))){const p=polygons(gap.geometry)[0][0][0];parts[near(p,parts.suriname[0])<=near(p,parts.brazil[0])?'suriname':'brazil'].push(gap);}
+  const neighbours=[];
+  for(const [name,list] of Object.entries(parts))neighbours.push(...(await command(fc(list.map(f=>({type:'Feature',properties:{country:name},geometry:f.geometry}))),'-dissolve2 country -erase guiana.json',{'guiana.json':fc([guiana])})).features.filter(f=>f.geometry));
+  write(country,'neighbours.bin',fc(neighbours));
+  console.log('French Guiana neighbours:',neighbours.map(f=>f.properties.country+' '+polygons(f.geometry).length+' polygons').join(', '));
+ }
  const overseasFirst=byLevel[1].features.filter(f=>unit(f.properties.id).overseas);
  const homeGeometry=overseasFirst.length?single(await command(fc(byLevel[1].features.filter(f=>!unit(f.properties.id).overseas)),'-dissolve')):geometry;
  write(country,'context.bin',fc([{type:'Feature',properties:{country},geometry:homeGeometry},...overseasFirst.map(f=>{const u=unit(f.properties.id),b=bounds(f.geometry);return {type:'Feature',properties:{country,region:f.properties.id,bounds:[...b[0],...b[1]].map(v=>round(v)),...(u.claimedBy?{claimedBy:u.claimedBy}:{})},geometry:f.geometry};})]));

@@ -80,6 +80,15 @@ for(const country of countries){
    for(const [id,value] of [['FR-R-06',323153],['FR-R-987',278786],['FR-R-988',264596],['FR-R-986',11151]])assert.equal(stats['france:'+id].population.value,value,id+' population');
    for(const id of ['FR-R-984','FR-R-989','FR-T-KER'])assert(!stats['france:'+id].population,id+' has no permanent population');
    const llivia=polygons(outline.france).flatMap(p=>p.slice(1)).length;assert(llivia>=1,'France keeps the Llívia hole');
+   // French Guiana's neighbours meet its frontier: just beyond every frontier point lies drawn
+   // Surinamese or Brazilian land, never a gap.
+   const neighbours=read('france','neighbours.bin').features,guiana=context.features.find(f=>f.properties.region==='FR-R-03').geometry;
+   assert.deepEqual(neighbours.map(f=>f.properties.country).sort(),['brazil','suriname']);
+   const frontier=read('france','international.bin').features.flatMap(f=>f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates).filter(l=>l[0][0]<-50&&l[0][0]>-56);
+   let probes=0,covered=0;
+   for(const line of frontier)for(let i=5;i<line.length-5;i+=10){const [a,b]=[line[i-1],line[i+1]],c=Math.cos(line[i][1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)continue;
+    for(const side of [1,-1]){const p=[line[i][0]-dy/len*side*150/111195/c,line[i][1]+dx/len*side*150/111195];if(contains(guiana,p))continue;probes++;if(neighbours.some(f=>contains(f.geometry,p)))covered++;}}
+   assert(probes>300&&covered/probes>.99,'Guiana neighbours meet the frontier: '+covered+'/'+probes);
   }
   if(country==='spain'){
    assert(!ids.has('ES-M-54006'),'Gibraltar is not mapped as Spanish');

@@ -365,6 +365,8 @@ Cities and towns, like South Africa, are points independent of councils (`script
   - The Falklands carry Argentina's claim: while Argentina's map is open, they are hidden from the UK's shape and remain Argentina's own drawing.
   - The British Indian Ocean Territory is mapped as British. The 2025 treaty transferring it to Mauritius is not yet in force.
 
+**French Guiana's neighbours.** The world map's 1:110m silhouettes cannot meet a detailed outline. France's data therefore draws Suriname and northern Brazil beneath it: land from geoBoundaries, frontier exactly IGN's, and the strip between the two sources given to the nearer neighbour. South America's preview silhouettes now sit just above the world map, beneath every country's own layers.
+
 **Camera and clicks.** Each country's own views frame its home territory only: the country view, a metropolitan region and a search for it. A territory's shape on the world map carries its id and bounds. Clicking one while another country is open switches country, selects the territory and fills the screen with it, without stopping at the home view.
 
 **Statistics.**

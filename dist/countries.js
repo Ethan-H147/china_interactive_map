@@ -85,7 +85,7 @@
    {firstLabel:'Communities',secondLabel:'Provinces',thirdLabel:'Municipalities',bundledLevels:2,searchLabel:'Find a community, province or municipality',statistics:true,center:[-3.6,40.2],zoom:4.9,bounds:[[-9.4,35.9],[4.4,43.8]],fill:'#f4e7cb',selected:'#ebd09d',line:'#9c4a2f'},
    {colors:{levels:'Autonomous communities & cities'},levelNames:['Communities & autonomous cities','Provinces','Municipalities'],naturalEarth:'ESP'})},
   france:{en:'France',local:'',lang:'fr',background:'#eff1f7',release:'developer',...regional('europe','fr',
-   {firstLabel:'Regions',secondLabel:'Departments',thirdLabel:'Communes',bundledLevels:2,searchLabel:'Find a region, department or commune',statistics:true,center:[2.4,46.6],zoom:4.9,bounds:[[-5.2,41.3],[9.6,51.1]],fill:'#e3e8f4',selected:'#c3cce7',line:'#35508b'},
+   {firstLabel:'Regions',secondLabel:'Departments',thirdLabel:'Communes',bundledLevels:2,neighbours:true,searchLabel:'Find a region, department or commune',statistics:true,center:[2.4,46.6],zoom:4.9,bounds:[[-5.2,41.3],[9.6,51.1]],fill:'#e3e8f4',selected:'#c3cce7',line:'#35508b'},
    {colors:{levels:'Regions'},levelNames:['Regions','Departments','Communes'],naturalEarth:['FRA','NCL','ATF']})},
   italy:{en:'Italy',local:'Italia',lang:'it',background:'#eef4ee',release:'developer',...regional('europe','it',
    {firstLabel:'Regions',secondLabel:'Provinces',thirdLabel:'Comuni',bundledLevels:2,searchLabel:'Find a region, province or comune',statistics:true,center:[12.6,42.2],zoom:4.8,bounds:[[6.6,35.5],[18.6,47.1]],fill:'#e3eedf',selected:'#c3dcbd',line:'#3e7845'},
