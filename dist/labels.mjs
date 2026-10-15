@@ -20,6 +20,8 @@ export function getLanguage(){return language;}
 export function setLanguage(value){language=['en','local','both'].includes(value)?value:'both';document.querySelectorAll('[data-label-language]').forEach(el=>el.value=language);}
 export function render(map,candidates,className){
  measure??=document.createElement('canvas').getContext('2d');
+ // On the globe, places on the far side, or near its edge where they project poorly, are left out.
+ if(map.getProjection?.()?.type==='globe'){const c=map.getCenter(),r=Math.PI/180;candidates=candidates.filter(({center:[x,y]})=>Math.sin(y*r)*Math.sin(c.lat*r)+Math.cos(y*r)*Math.cos(c.lat*r)*Math.cos((x-c.lng)*r)>Math.cos(65*r));}
  const items=candidates.map(item=>{
   const lines=item.lines||labelLines(item.en,item.local,language,item.district),point=map.project(item.center);
   const widths=lines.map((line,i)=>{measure.font=(item.selected?'600 ':'')+(i?'14px Arial':'16px Arial');return measure.measureText(line).width;});

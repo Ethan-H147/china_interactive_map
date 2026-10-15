@@ -1,19 +1,19 @@
 import assert from 'node:assert/strict';
 import {searchAndSelect} from './countries.test.mjs';
-// Unreleased countries stay out of reach and out of the network until developer mode,
-// which opens from Changning by typing "dev mode"; then each loads to its deepest level.
+// Developer mode opens from Changning by typing "dev mode". The European countries, once behind
+// it, are public: each opens directly and loads to its deepest level.
 const desktop={width:1280,height:820};
-const unreleased=['united-kingdom','spain','france','italy'];
-const europeRequests=page=>page.requests.filter(u=>/\/data\/europe\//.test(u));
+const europe=['united-kingdom','spain','france','italy'];
 
 export default [
- {name:'public visitors cannot open or download unreleased countries',options:desktop,async run(page,base){
-  for(const country of unreleased){
+ {name:'the European countries are public',options:desktop,async run(page,base){
+  for(const country of europe){
    await page.open(base,'#'+country);
-   assert.equal(await page.evaluate('AtlasEntry.current'),'china',country+' falls back to China');
+   assert.equal(await page.evaluate('AtlasEntry.current'),country,country+' opens without developer mode');
   }
-  await page.evaluate(`location.hash='#korea'`);await page.settle();
-  assert.deepEqual(europeRequests(page),[],'No European data is requested');
+  // A first view elsewhere does not wait for Europe's previews; they follow it.
+  await page.open(base,'#korea');
+  await page.waitFor(`!!map.getLayer('united-kingdom-portal-fill')`,{label:"Europe's previews after the first view",timeout:30000});
  }},
  {name:'Changning unlocks developer mode',options:desktop,async run(page,base){
   await page.open(base,'#china');
@@ -28,7 +28,7 @@ export default [
   assert.equal(await page.evaluate('AtlasEntry.current'),'italy','Italy opens in developer mode');
  }},
  ...[['italy','Bergamo','Bergamo','Comune'],['spain','Llívia','Llívia','Municipality'],['france','Fleury-devant','Fleury-devant-Douaumont','Commune'],['united-kingdom','Maidstone','Maidstone','District'],['united-kingdom','Cardiff','Cardiff','built-up area']].map(([country,query,pick,kind])=>({
-  name:`${country}: ${pick} (${kind})`,options:{...desktop,developer:true},async run(page,base){
+  name:`${country}: ${pick} (${kind})`,options:desktop,async run(page,base){
    await page.open(base,'#'+country);
    assert.equal(await page.evaluate('AtlasEntry.current'),country);
    await searchAndSelect(page,query,pick,kind);
@@ -36,7 +36,7 @@ export default [
   }})),
  // A shared link reopens the same place at its own level, with the chosen label language.
  ...[['spain','Llívia','Llívia','Municipality',null],['united-kingdom','Maidstone','Maidstone','District','cy']].map(([country,query,pick,kind,language])=>({
-  name:`${country}: a link keeps ${pick} at its level`,options:{...desktop,developer:true},async run(page,base){
+  name:`${country}: a link keeps ${pick} at its level`,options:desktop,async run(page,base){
    await page.open(base,'#'+country);
    await searchAndSelect(page,query,pick,kind);
    if(language)await page.evaluate(`currentAtlas().setLanguage('${language}')`);
@@ -64,7 +64,7 @@ export default [
   ['united-kingdom','Maidstone','Maidstone','District',['flag-gb.svg','GB-R-TLJ'],''],
   ['united-kingdom','Edinburgh','Edinburgh','Council area',['flag-gb.svg','GB-R-TLM'],''],
   ['united-kingdom','Belfast','Belfast','Local government district',['flag-gb.svg'],'']
- ].map(([country,query,pick,kind,flags,caption])=>({name:`${country}: ${pick} shows its flags`,options:{...desktop,developer:true},async run(page,base){
+ ].map(([country,query,pick,kind,flags,caption])=>({name:`${country}: ${pick} shows its flags`,options:desktop,async run(page,base){
   await page.open(base,'#'+country);
   await searchAndSelect(page,query,pick,kind);
   const sidebar=`[...document.querySelectorAll('aside.sidebar')].find(a=>!a.hidden&&getComputedStyle(a).display!=='none')`;
@@ -76,7 +76,7 @@ export default [
  }})),
  // Overseas territories: a click on one from another country opens it directly, selected and
  // filling the screen; the home country's own views ignore its far-off territories.
- ...[['Gibraltar','united-kingdom','GB-O-GI',[-5.348,36.13],13],['Réunion','france','FR-R-04',[55.53,-21.13],9]].map(([name,country,id,at,zoom])=>({name:`a click on ${name} from China opens it`,options:{...desktop,developer:true},async run(page,base){
+ ...[['Gibraltar','united-kingdom','GB-O-GI',[-5.348,36.13],13],['Réunion','france','FR-R-04',[55.53,-21.13],9]].map(([name,country,id,at,zoom])=>({name:`a click on ${name} from China opens it`,options:desktop,async run(page,base){
   await page.open(base,'#china');
   const point=await page.evaluate(`(()=>{map.jumpTo({center:${JSON.stringify(at)},zoom:${zoom}});const p=map.project(${JSON.stringify(at)}),r=map.getCanvas().getBoundingClientRect();return [r.left+p.x,r.top+p.y];})()`);
   await page.settle();await page.tap(point);await page.settle();
@@ -86,7 +86,7 @@ export default [
   assert(Math.abs(view.center[0]-at[0])<1&&Math.abs(view.center[1]-at[1])<1,'The camera is on '+name+', not the home country: '+view.center);
   assert(view.span<3,'The territory fills the screen ('+view.span.toFixed(2)+'° wide)');
  }})),
- {name:"France's home view ignores its overseas territories",options:{...desktop,developer:true},async run(page,base){
+ {name:"France's home view ignores its overseas territories",options:desktop,async run(page,base){
   await page.open(base,'#france');
   const c=await page.evaluate('map.getCenter().toArray()');
   assert(c[0]>-6&&c[0]<10&&c[1]>41&&c[1]<52,'The camera frames metropolitan France: '+c);
@@ -94,7 +94,7 @@ export default [
   const b=await page.evaluate('(()=>{const b=map.getBounds();return [b.getWest(),b.getSouth(),b.getEast(),b.getNorth()];})()');
   assert(b[0]>-10&&b[2]<5,'A metropolitan region frames itself only: '+b);
  }},
- {name:"the Falklands stay Argentina's own drawing while Argentina is open",options:{...desktop,developer:true},async run(page,base){
+ {name:"the Falklands stay Argentina's own drawing while Argentina is open",options:desktop,async run(page,base){
   await page.open(base,'#argentina');
   const point=await page.evaluate(`(()=>{map.jumpTo({center:[-59,-51.7],zoom:7});const p=map.project([-59,-51.7]),r=map.getCanvas().getBoundingClientRect();return [r.left+p.x,r.top+p.y];})()`);
   await page.settle();
@@ -107,12 +107,22 @@ export default [
   await page.settle();await page.tap(again);
   await page.waitFor(`AtlasEntry.current==='united-kingdom'&&currentAtlas()?.getSelection()==='GB-O-FK'`,{label:'the Falklands in the UK',timeout:30000});
  }},
- {name:'leaving developer mode on an unreleased country returns to China',options:{...desktop,developer:true},async run(page,base){
-  await page.open(base,'#italy');
-  assert.equal(await page.evaluate('AtlasEntry.current'),'italy');
+ {name:'the globe view is a developer-mode toggle',options:desktop,async run(page,base){
+  await page.open(base,'#china');
+  assert(await page.evaluate(`document.getElementById('globe-view').hidden&&map.getProjection().type==='mercator'`),'Public visitors see the flat map only');
+ }},
+ {name:'developer mode switches the map to a globe and back',options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#china');
+  await page.tap('#globe-view');await page.settle();
+  assert.equal(await page.evaluate(`map.getProjection().type`),'globe');
+  assert.equal(await page.evaluate(`document.getElementById('globe-view').getAttribute('aria-pressed')`),'true');
+  // Labels stay on the visible side of the globe.
+  await page.evaluate(`map.jumpTo({center:[105,35],zoom:1.6});0`);await page.settle();
+  await page.waitFor(`[...document.querySelectorAll('[data-atlas-place]')].some(el=>el.textContent.includes('Sichuan'))`,{label:'labels on the near side'});
+  assert(!await page.evaluate(`[...document.querySelectorAll('[data-atlas-place]')].some(el=>el.textContent.includes('United Kingdom'))`),'A country at the edge of the globe is not labelled');
+  await page.evaluate(`location.hash='#france'`);await page.settle();
+  assert.equal(await page.evaluate(`map.getProjection().type`),'globe','The globe stays on across countries');
   await page.tap('.developer-exit');await page.settle();
-  await page.waitFor(`AtlasEntry.current==='china'`,{label:'China to open',timeout:30000});
-  assert.equal(await page.evaluate('AtlasDev.enabled'),false);
-  assert.equal(await page.evaluate('location.hash.startsWith("#china")'),true,'The link follows');
+  assert(await page.evaluate(`map.getProjection().type==='mercator'&&document.getElementById('globe-view').hidden`),'Leaving developer mode returns to the flat map');
  }}
 ];

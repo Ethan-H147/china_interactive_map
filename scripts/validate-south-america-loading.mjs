@@ -68,7 +68,7 @@ for(const [source,layer,key] of [['south-land-borders','south-land-boundaries','
 }
 assert.equal(workerLoads,1);assert.ok(sources.has('south-brazil-regions'));assert.equal(atlas.portals.brazil.ready,true);
 assert.equal(workerURLs.filter(url=>url.includes('/brazil-local/')).length,0,'Opening Brazil loads no municipal geometry');
-{const filter=layers.get('world-land').filter;assert.equal(filter[0],'!');assert(['brazil','uruguay','argentina','malaysia','singapore'].every(id=>filter[1][2][1].includes(id)),'Developer geometry replaces its coarse background silhouettes');}
+{const filter=layers.get('world-land').filter;assert.equal(filter[0],'!');assert(['brazil','uruguay','argentina'].every(id=>filter[1][2][1].includes(id)),'Developer geometry replaces its coarse background silhouettes');assert(!filter[1][2][1].includes('malaysia'),'A country keeps its world silhouette until its own preview is drawn');}
 window.AtlasDev.enabled=false;atlas.syncDeveloper();
 assert.equal(layers.get('south-america-fill').layout.visibility,'visible');
 assert.equal(layers.has('south-america-lines'),false,'Country silhouettes have no coastline outline layer');
@@ -76,7 +76,7 @@ assert.equal(layers.get('south-land-boundaries').layout.visibility,'visible','Pu
 assert.equal(layers.get('south-america-fill').paint['fill-antialias'],false,'Country silhouettes cannot receive an implicit fill outline');
 assert.equal(layers.get('south-brazil-selection').source,'south-brazil-outlines','Selection outlines the whole shape, from lines short enough to draw');
 assert.equal(layers.get('south-brazil-fill').layout.visibility,'visible');
-{const filter=layers.get('world-land').filter;assert(['brazil','uruguay','argentina','malaysia','singapore'].every(id=>filter[1][2][1].includes(id)),'Exiting developer mode retains the public country silhouettes');}
+{const filter=layers.get('world-land').filter;assert(['brazil','uruguay','argentina'].every(id=>filter[1][2][1].includes(id)),'Exiting developer mode retains the public country silhouettes');}
 assert.equal(layers.get('world-land').layout.visibility,'visible','Developer mode must never hide public world land');
 window.AtlasDev.enabled=true;atlas.syncDeveloper();
 atlas.portals.brazil.leave();assert.ok(!sources.has('south-brazil-regions'));assert.ok(!sources.has('south-brazil-lines'));assert.equal(atlas.portals.brazil.ready,false);

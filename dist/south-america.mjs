@@ -31,6 +31,8 @@ export function createSouthAmerica(map,host){
  const postalSource='https://docs.precisely.com/docs-gated/data/gfk-boundaries/2022/en-us/pdf/EN_GfK_Worldwide_digital_maps_without_prices.pdf';
  const installed=new Map(),catalogues=new Map(),jobs=new Map();
  const allowed=id=>window.AtlasDev.allows(id),availableCountries=()=>Object.keys(countries).filter(allowed);
+ // The world map's silhouette of another atlas country gives way only once that country's own preview is drawn.
+ const previewReady=id=>allowed(id)&&(!registry.countries[id].portal||!!map.getLayer(registry.countries[id].portal.layer));
  // The preview silhouettes sit just above the world map, beneath every country's own layers.
  if(map.getSource('world-land')){const layers=map.getStyle().layers,above=layers[layers.findIndex(l=>l.id==='world-land')+1]?.id;map.addLayer({id:'south-america-portal-fill',type:'fill',source:'world-land',filter:['in',['get','country'],['literal',availableCountries()]],paint:{'fill-color':'#d7d7d3','fill-antialias':false}},above);}
  const detailHost=city=>({active:()=>active==='argentina'&&(!city||selected?.level===3),selected:()=>selected,outlines:()=>$('outlines').checked,waitForSources,changed:()=>{if(active==='argentina')syncLayers();},status:message=>{if(active==='argentina'&&(!city||selected?.level===3)){$('layer-status').hidden=!message;$('layer-status').textContent=message;}}});
@@ -118,7 +120,7 @@ export function createSouthAmerica(map,host){
   for(const [id,c] of Object.entries(countries))if(allowed(id)&&(id!==active||!records.length))candidates.push({id,en:c.name,local:c.local,center:c.center});
   labels=window.AtlasLabels.render(map,candidates,'province-label');
  }
- function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...otherPreviews.filter(allowed)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility','visible');}
+ function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...otherPreviews.filter(previewReady)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility','visible');}
  async function warm(){
   if(data)return;if(loading)return loading;
   loading=(async()=>{

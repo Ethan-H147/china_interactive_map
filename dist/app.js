@@ -501,7 +501,9 @@ async function init(){try{
   for(const id of registry.ids){const create=adapters[registry.countries[id].adapter];if(create)atlases[id]=await create(id);}
   atlasesReady=true;
   southernAfrica=await window.AtlasSouthernAfrica.addSouthernAfrica(map,archipelagoHost);
-  europe=window.AtlasEurope.createEurope(map,archipelagoHost);await europe.ensure();
+  // Europe's previews are large (the UK's carries 20 m coasts and its overseas territories), so
+  // they load after the first view unless Europe is the first view.
+  europe=window.AtlasEurope.createEurope(map,archipelagoHost);if(europe.handles(window.AtlasEntry.current))await europe.ensure();
   addSource('shared-context-borders',await json('data/shared-context-borders.bin'),window.AtlasLines.internationalLineSourceOptions);
   window.AtlasLines.addInternationalBorder(map,'shared-context-borders','shared-context-borders');
   // Every public country's frontiers, whichever country is open (scripts/build-atlas-frontiers.mjs).
@@ -521,12 +523,13 @@ async function init(){try{
   controls();if(requestedCountry&&requestedCountry!=='china')await changeAtlas(requestedCountry,false);else if(!window.AtlasView.fromHash(location.hash))await followPlaceLink();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));
   await window.AtlasRegionColorController?.setCountry(atlasMode);
-  setupViewControls();await restoreView();
+  setupViewControls();await restoreView();syncGlobe();
   atlasStarting=false;window.AtlasEntry.ready();finishStartup();controls();refreshStatus();updateLabels();
   $('map-loading').hidden=true;
   // South America's detailed shapes and borders load once the first view is ready, so those
   // countries never sit as coarse previews before someone opens one.
   southAmerica.warmContext().catch(e=>console.warn(e));
+  europe.ensure().then(()=>{europe.syncDeveloper();southAmerica.syncDeveloper();syncPortals(atlasMode);}).catch(e=>console.warn(e));
 
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 let viewSaveTimer,viewControlsReady=false;
@@ -626,7 +629,11 @@ function viewParent(){
   const parent=p.parentCity?regionByCode.get(p.parentCity):provinceLayers.get(p.provinceCode||activeCode);
   return parent?selectRegion(parent,parent.feature.properties.adcode,true,camera):reset(camera);
 }
-$('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);$('retry').onclick=()=>location.reload();
+$('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);
+// Developer mode: the map as a globe (MapLibre's globe projection), flat otherwise and for everyone else.
+function syncGlobe(){const button=$('globe-view');button.hidden=!window.AtlasDev.enabled;if(!window.AtlasDev.enabled)button.setAttribute('aria-pressed','false');const type=button.getAttribute('aria-pressed')==='true'?'globe':'mercator';if(map&&map.getProjection?.()?.type!==type){map.setProjection({type});updateLabels();}}
+$('globe-view').onclick=()=>{$('globe-view').setAttribute('aria-pressed',String($('globe-view').getAttribute('aria-pressed')!=='true'));syncGlobe();};
+window.addEventListener('atlas-developer-change',syncGlobe);$('retry').onclick=()=>location.reload();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 function quizPool(settings={scope:$('quiz-scope').value,includeTaiwan:$('quiz-taiwan').checked}){return AtlasQuiz.candidates([...regionByCode.values()],settings);}
 function initQuiz(){

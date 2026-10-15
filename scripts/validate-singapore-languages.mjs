@@ -12,5 +12,5 @@ assert.equal(readSingaporeLanguage({getItem(){throw Error('Blocked storage');}})
 for(const language of ['both','local','bad'])assert.equal(validate({v:1,country:'singapore',center:[103.83,1.33],zoom:10,language}).language,'en');
 for(const country of ['china','japan','korea','malaysia'])for(const language of ['en','local','both'])assert.equal(validate({v:1,country,center:[110,3],zoom:5,language}).language,language);
 const app=fs.readFileSync('dist/app.js','utf8');assert(app.includes("if(singapore)select.dataset.singaporeLanguage=''"),'Singapore selector must not be changed by another country’s global language control');
-const html=fs.readFileSync('dist/index.html','utf8');for(const [id,lang,name] of [['atlas-title-malay','ms','Singapura'],['atlas-title-tamil','ta','சிங்கப்பூர்']])assert(html.includes('id="'+id+'" lang="'+lang+'" hidden>'+name));
+const html=fs.readFileSync('dist/index.html','utf8');for(const [id,lang,name] of [['atlas-title-malay','ms','Singapura'],['atlas-title-tamil','ta','சிங்கப்பூர்']])assert(new RegExp('id="'+id+'"[^>]*lang="'+lang+'" hidden>'+name).test(html));
 console.log('Four Singapore label languages, names, independent storage, shared views, blocked storage and unchanged country language choices passed.');
