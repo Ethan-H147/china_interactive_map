@@ -99,6 +99,7 @@ export default [
   const point=await page.evaluate(`(()=>{map.jumpTo({center:[-59,-51.7],zoom:7});const p=map.project([-59,-51.7]),r=map.getCanvas().getBoundingClientRect();return [r.left+p.x,r.top+p.y];})()`);
   await page.settle();
   assert.equal(await page.evaluate(`map.queryRenderedFeatures(map.project([-59,-51.7]),{layers:['united-kingdom-portal-fill']}).length`),0,"The UK's Falklands are hidden while Argentina is open");
+  for(const [island,p] of [['West Falkland',[-60,-51.75]],['East Falkland',[-58.5,-51.75]],['Stanley',[-57.95,-51.7]]])assert(await page.evaluate(`map.queryRenderedFeatures(map.project(${JSON.stringify(p)})).some(f=>f.layer.id==='south-argentina-fill'&&f.properties.id==='AR-94')`),island+' is drawn in Tierra del Fuego');
   await page.tap(point);await page.settle();
   assert.equal(await page.evaluate('AtlasEntry.current'),'argentina','A click stays in Argentina');
   await page.evaluate(`location.hash='#china'`);await page.settle();

@@ -362,7 +362,7 @@ Cities and towns, like South Africa, are points independent of councils (`script
   - The Bailiwick of Guernsey has Guernsey, Alderney and Sark.
 - **Sources.** Land comes from OpenStreetMap coastline inside each territory's boundary relation. The Sovereign Base Areas take Cyprus's coastline. Gibraltar is the Spanish boundary data's own outline, simplified with Spain's municipalities, so it meets La Línea exactly; Spain draws the frontier fence.
 - **Claims and pending transfers.**
-  - The Falklands carry Argentina's claim: while Argentina's map is open, they are hidden from the UK's shape and remain Argentina's own drawing.
+  - The Falklands carry Argentina's claim: while Argentina's map is open, they are hidden from the UK's shape and Argentina's map draws them as IGN does, in Tierra del Fuego province. `scripts/prepare-argentina-malvinas.mjs` adds both islands; the earlier build kept only West Falkland. Selecting Tierra del Fuego frames its main island, not the Malvinas.
   - The British Indian Ocean Territory is mapped as British. The 2025 treaty transferring it to Mauritius is not yet in force.
 
 **French Guiana's neighbours.** The world map's 1:110m silhouettes cannot meet a detailed outline. France's data therefore draws Suriname and northern Brazil beneath it: land from geoBoundaries, frontier exactly IGN's, and the strip between the two sources given to the nearer neighbour. South America's preview silhouettes now sit just above the world map, beneath every country's own layers.
