@@ -23,8 +23,13 @@ jobs:
   browser-tests:
     # Real headless Chrome: phone sheet gestures and keyboard, level toggles, every
     # country's search and selection, country switching and developer-mode gating.
+    # The suite runs in five parallel shards (scripts/browser/run.mjs --shard), about 4 minutes each.
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5]
     steps:
       - name: Check out website
         uses: actions/checkout@v4
@@ -33,12 +38,12 @@ jobs:
         with:
           node-version: '22'
       - name: Run browser scenarios
-        run: node scripts/browser/run.mjs
+        run: node scripts/browser/run.mjs --shard=${{ matrix.shard }}/5
       - name: Keep failure screenshots
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: browser-test-screenshots
+          name: browser-test-screenshots-${{ matrix.shard }}
           path: artifacts/browser-tests/
   deploy:
     needs: browser-tests
