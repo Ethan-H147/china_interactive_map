@@ -18,7 +18,10 @@
     border: 1px solid var(--line); border-radius: 24px; background: var(--paper); box-shadow: 0 4px 16px rgba(23, 32, 25, .1);
     overflow: hidden; white-space: nowrap;
   }
-  .site-header h1 > span { font-size: 21px !important; letter-spacing: normal !important; line-height: 1; }
+  .site-header h1 .country-switch > span { font-size: 21px !important; letter-spacing: normal !important; line-height: 1; }
+  /* The pill holds one line: Singapore's Malay and Tamil names stay in the full header and the country menu. */
+  .site-header .country-switch :is(.title-malay, .title-tamil) { display: none; }
+  body[data-atlas=singapore] .country-switch-chevron { grid-row: 1; }
   .site-header #atlas-title-local:not(:empty) { display: inline; }
   .site-header .surprise {
     flex: none; width: 48px; height: 48px; padding: 0; gap: 0; border-radius: 24px; font-size: 0;

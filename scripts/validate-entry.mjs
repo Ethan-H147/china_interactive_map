@@ -44,7 +44,8 @@ for(const country of ['brazil','uruguay']){
  const remembered=boot('',country);assert.equal(remembered.entry.initial,country,'Public countries reopen without developer mode');
  normal.entry.remember(country);assert.equal(normal.entry.current,country);
 }
-const html=fs.readFileSync('dist/index.html','utf8');assert(html.indexOf('src="atlas-entry.js"')<html.indexOf('rel="stylesheet"'),'Select the theme before the first styled paint');assert(!html.includes('moving-dot'));assert(!html.includes('country-nav'));assert(!html.includes('country-welcome'));assert(!html.includes('country-open'));assert(!html.includes('country-menu'));
+const html=fs.readFileSync('dist/index.html','utf8');assert(html.indexOf('src="atlas-entry.js"')<html.indexOf('rel="stylesheet"'),'Select the theme before the first styled paint');assert(!html.includes('moving-dot'));assert(!html.includes('country-nav'));assert(!html.includes('country-welcome'));assert(!html.includes('country-open'));// The country name opens the country menu (country-menu.js), a button inside the heading.
+assert(/<h1><button id="country-switch"[^>]*aria-haspopup="menu"[^>]*aria-controls="country-menu"/.test(html),'The country name is the country menu button');assert(html.includes('<div id="country-menu" class="country-menu" role="menu"'));
 assert(!fs.readFileSync('dist/south-america.mjs','utf8').includes('continent-flight'),'No continent flight buttons are created');
 const symbolContext=withRegistry({window:{}});vm.runInContext(fs.readFileSync('dist/country-symbols.js','utf8'),symbolContext);
 const symbols=symbolContext.window.AtlasSymbols;

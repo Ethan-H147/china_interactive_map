@@ -437,6 +437,8 @@ Rebuild with `npm run build:europe`; check with `npm run test:europe` (hierarchi
 
 ## Countries
 
+The country name in the header opens a menu of every country the visitor can open (developer-mode countries only in developer mode), each written as its own header writes it: the same English and local names, scripts, fonts, colours and flag stripe. Each option carries `data-atlas`, which the country themes and title rules match as well as `body`, so a country's look is declared once. Choosing one follows the country's link. `dist/country-menu.js` and `dist/country-menu.css`; the `country-menu` browser scenarios check it on desktop (mouse and keyboard) and on a phone.
+
 `dist/countries.js` declares every country once. Each entry has:
 
 - names and language;

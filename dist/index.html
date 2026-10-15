@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Atlas</title>
-  <script src="countries.js"></script><script src="country-symbols.js"></script><script src="developer-mode.js"></script><script src="atlas-entry.js"></script>
+  <script src="countries.js"></script><script src="country-symbols.js"></script><script src="developer-mode.js"></script><script src="atlas-entry.js"></script><script src="country-menu.js"></script>
   <!-- Every country loads these at startup, one after another. Preloading fetches them in parallel. -->
   <link rel="modulepreload" href="vendor/maplibre-gl.mjs"><link rel="modulepreload" href="vendor/maplibre-gl-shared.mjs">
   <link rel="preload" as="fetch" crossorigin href="data/world-land.bin"><link rel="preload" as="fetch" crossorigin href="data/china-context.bin"><link rel="preload" as="fetch" crossorigin href="data/province-population.json"><link rel="preload" as="fetch" crossorigin href="data/shared-context-borders.bin"><link rel="preload" as="fetch" crossorigin href="data/russia/international.bin"><link rel="preload" as="fetch" crossorigin href="data/korea-context.bin"><link rel="preload" as="fetch" crossorigin href="data/mongolia-context.bin"><link rel="preload" as="fetch" crossorigin href="data/japan-context.bin"><link rel="preload" as="fetch" crossorigin href="data/archipelago/philippines-context.bin"><link rel="preload" as="fetch" crossorigin href="data/archipelago/indonesia-context.bin"><link rel="preload" as="fetch" crossorigin href="data/southeast-asia/malaysia-context.bin"><link rel="preload" as="fetch" crossorigin href="data/southeast-asia/singapore-context.bin"><link rel="preload" as="fetch" crossorigin href="data/russia/context.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/south-africa/context.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/south-africa/international.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/botswana/context.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/botswana/international.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/namibia/context.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/namibia/international.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/eswatini/context.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/eswatini/international.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/lesotho/context.bin"><link rel="preload" as="fetch" crossorigin href="data/southern-africa/lesotho/international.bin"><link rel="preload" as="fetch" crossorigin href="data/capitals.json">
@@ -14,14 +14,16 @@
   <link rel="stylesheet" href="korea.css"><link rel="stylesheet" href="mongolia.css"><link rel="stylesheet" href="explore.css"><link rel="stylesheet" href="atlas-theme.css"><script src="stories.js" defer></script><script type="module" src="gpu-loader.js"></script>
   <link rel="stylesheet" href="country-symbols.css"><link rel="stylesheet" href="atlas-entry.css"><link rel="stylesheet" href="south-america.css"><link rel="stylesheet" href="statistics.css"><link rel="stylesheet" href="country-page.css"><link rel="stylesheet" href="map-sources.css">
 <link rel="stylesheet" href="compare.css"><link rel="stylesheet" href="archipelago.css"><link rel="stylesheet" href="developer-mode.css"><link rel="stylesheet" href="southeast-asia.css"><link rel="stylesheet" href="regional-country.css"><link rel="stylesheet" href="flag-viewer.css"><link rel="stylesheet" href="region-colors.css">
+<link rel="stylesheet" href="country-menu.css">
 <link rel="stylesheet" href="mobile-sheet.css">
 </head>
 <body>
 <header class="site-header">
-  <h1><span id="atlas-title-english" class="korea-english" lang="en">Atlas</span><span id="atlas-title-local"></span><span id="atlas-title-malay" lang="ms" hidden>Singapura</span><span id="atlas-title-tamil" lang="ta" hidden>சிங்கப்பூர்</span></h1>
+  <h1><button id="country-switch" class="country-switch" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="country-menu"><span id="atlas-title-english" class="korea-english title-english" lang="en">Atlas</span><span id="atlas-title-local" class="title-local"></span><span id="atlas-title-malay" class="title-malay" lang="ms" hidden>Singapura</span><span id="atlas-title-tamil" class="title-tamil" lang="ta" hidden>சிங்கப்பூர்</span><svg class="country-switch-chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></button></h1>
+  <div id="country-menu" class="country-menu" role="menu" aria-labelledby="country-switch" hidden></div>
   <button id="surprise" class="surprise" data-nav disabled>Random place <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></svg></button>
 </header>
-<script>AtlasEntry.mount();</script>
+<script>AtlasEntry.mount();AtlasCountryMenu.mount();</script>
 <div class="workspace">
   <aside class="sidebar startup-sidebar" aria-label="Preparing atlas"><span id="startup-name">Preparing maps…</span></aside>
   <main class="map-shell" id="map-shell" data-level="province" aria-busy="false">

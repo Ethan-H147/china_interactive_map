@@ -1,7 +1,7 @@
-:root[data-atlas=philippines]{--ink:#26364b;--muted:#6c7b8e;--red:#285888;--red-dark:#183e68;--gold:#c39a37;--line:#dbe4ed;--paper:#fcfdff;--map:#edf2f8}
-:root[data-atlas=indonesia]{--ink:#3b3030;--muted:#857473;--red:#b83932;--red-dark:#902b25;--gold:#b88a42;--line:#eddfdc;--paper:#fffdfc;--map:#faf1ef}
-body[data-atlas=philippines]{--accent-soft:#28588812;--surface-soft:#eef3f9;--title-accent:#bf3340;--header-stripe:linear-gradient(90deg,#285888 50%,#bf3340 50%)}
-body[data-atlas=indonesia]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--header-stripe:linear-gradient(90deg,#c83630 50%,#e5dedb 50%)}
+:root[data-atlas=philippines],.country-option[data-atlas=philippines]{--ink:#26364b;--muted:#6c7b8e;--red:#285888;--red-dark:#183e68;--gold:#c39a37;--line:#dbe4ed;--paper:#fcfdff;--map:#edf2f8}
+:root[data-atlas=indonesia],.country-option[data-atlas=indonesia]{--ink:#3b3030;--muted:#857473;--red:#b83932;--red-dark:#902b25;--gold:#b88a42;--line:#eddfdc;--paper:#fffdfc;--map:#faf1ef}
+body[data-atlas=philippines],.country-option[data-atlas=philippines]{--accent-soft:#28588812;--surface-soft:#eef3f9;--title-accent:#bf3340;--header-stripe:linear-gradient(90deg,#285888 50%,#bf3340 50%)}
+body[data-atlas=indonesia],.country-option[data-atlas=indonesia]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--header-stripe:linear-gradient(90deg,#c83630 50%,#e5dedb 50%)}
 
 .archipelago-sidebar .selection-top img{height:auto}
 .archipelago-sidebar [id$=search-results]{max-height:260px;overflow-y:auto;border:1px solid var(--line);margin-top:8px;border-radius:4px}
@@ -9,7 +9,7 @@ body[data-atlas=indonesia]{--accent-soft:#b8393212;--surface-soft:#faf0ed;--head
 .archipelago-children{max-height:290px;overflow-y:auto;margin:18px 0}
 .site-header #atlas-title-local:empty{display:none}
 body:is([data-atlas=philippines],[data-atlas=indonesia]) .map-mode{background:var(--paper);border-color:var(--line)}
-body:is([data-atlas=philippines],[data-atlas=indonesia]) #atlas-title-local{font:24px Georgia,serif;letter-spacing:0}
+body:is([data-atlas=philippines],[data-atlas=indonesia]) #atlas-title-local,.country-option:is([data-atlas=philippines],[data-atlas=indonesia]) .title-local{font:24px Georgia,serif;letter-spacing:0}
 @media(max-width:760px){.site-header{gap:10px}.site-header h1{min-width:0;flex-shrink:1}.site-header .surprise{width:36px;height:36px;padding:0;font-size:0;flex:none}.site-header .surprise svg{display:block;width:18px;height:18px}.site-header #atlas-title-local{display:none}body[data-atlas=philippines] .site-header #atlas-title-english{font-size:27px}.site-header #atlas-title-english{overflow:hidden;text-overflow:ellipsis}.map-top .map-mode button{max-width:115px}.archipelago-sidebar h2{font-size:32px}}
 
 .boundary-note{margin:18px 0;padding-top:14px;border-top:1px solid var(--line);font-size:14px;line-height:1.6;color:var(--muted)}.boundary-note p{margin:0 0 6px}

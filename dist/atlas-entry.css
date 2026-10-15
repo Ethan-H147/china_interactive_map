@@ -1,5 +1,5 @@
-:root[data-atlas=korea]{--ink:#243248;--muted:#687489;--red:#285387;--red-dark:#1b3d69;--gold:#bc3d46;--line:#dce3ed;--paper:#fdfefe;--map:#edf1f6}
-:root[data-atlas=mongolia]{--ink:#253747;--muted:#627585;--red:#24628d;--red-dark:#174b71;--gold:#b18b37;--line:#d9e3e9;--paper:#fcfdfd;--map:#eaf1f5}
+:root[data-atlas=korea],.country-option[data-atlas=korea]{--ink:#243248;--muted:#687489;--red:#285387;--red-dark:#1b3d69;--gold:#bc3d46;--line:#dce3ed;--paper:#fdfefe;--map:#edf1f6}
+:root[data-atlas=mongolia],.country-option[data-atlas=mongolia]{--ink:#253747;--muted:#627585;--red:#24628d;--red-dark:#174b71;--gold:#b18b37;--line:#d9e3e9;--paper:#fcfdfd;--map:#eaf1f5}
 .startup-sidebar{display:none;align-items:center;justify-content:center;gap:18px;color:var(--muted);font-size:14px;flex-direction:column}
 :root[data-starting] .workspace>aside:not(.startup-sidebar){display:none!important}
 :root[data-starting] .startup-sidebar{display:flex}
@@ -9,7 +9,7 @@
 
 :root[data-switching] .workspace>aside:not(.startup-sidebar){display:none!important}:root[data-switching] .startup-sidebar{display:flex}
 
-:root[data-atlas=japan]{--ink:#302d30;--muted:#797178;--red:#bc002d;--red-dark:#8e0022;--gold:#ba963c;--line:#eadfe2;--paper:#fff;--map:#f5f5f5}
+:root[data-atlas=japan],.country-option[data-atlas=japan]{--ink:#302d30;--muted:#797178;--red:#bc002d;--red-dark:#8e0022;--gold:#ba963c;--line:#eadfe2;--paper:#fff;--map:#f5f5f5}
 .japanese-title{font-family:serif;font-size:32px;letter-spacing:4px;color:var(--red)}.japanese-name{font-family:serif;font-size:24px;color:var(--red);margin-top:0}.japan-flags{display:flex;flex-direction:column;gap:8px;align-items:center}.japan-flags img{display:block;width:40px;height:auto;max-height:30px;object-fit:contain;box-shadow:0 0 0 1px #00000012}.japan-flags a{display:block}#j-search-results{max-height:250px;overflow:auto}#j-selection-name{font-size:35px}.japan-flags{margin-left:auto}
 
 #j-subdivisions{border-block:1px solid var(--line);padding:14px 0;margin:20px 0}#j-subdivisions summary{cursor:pointer;font-size:14px;color:var(--muted)}#j-child-filter{width:100%;margin:14px 0 8px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--paper);color:var(--ink)}#j-children{max-height:280px;overflow:auto;overscroll-behavior:contain}#j-children .search-result{text-align:left;width:100%;font-size:13px;padding:10px 12px}#j-detail-status{font-size:13px;color:var(--muted);padding-block:10px}
