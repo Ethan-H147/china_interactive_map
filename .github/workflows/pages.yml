@@ -24,6 +24,8 @@ jobs:
     # Real headless Chrome: phone sheet gestures and keyboard, level toggles, every
     # country's search and selection, country switching and developer-mode gating.
     # The suite runs in five parallel shards (scripts/browser/run.mjs --shard), about 4 minutes each.
+    # A commit whose message contains [skip tests] (changes the owner says need no test) deploys without it.
+    if: ${{ !contains(github.event.head_commit.message, '[skip tests]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -47,6 +49,7 @@ jobs:
           path: artifacts/browser-tests/
   deploy:
     needs: browser-tests
+    if: ${{ !cancelled() && (needs.browser-tests.result == 'success' || needs.browser-tests.result == 'skipped') }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
