@@ -26,6 +26,8 @@ export default [
   assert.equal((await state(page)).sheet,'full','A quick upward flick steps one height');
   await page.drag(await point(page,handle),{dx:0,dy:900},{duration:500});
   assert.equal((await state(page)).sheet,'peek','Dragging past the bottom returns to peek');
+  // The sheet animates to its new height; compare once it has settled.
+  await stable(page,`${sidebar}.getBoundingClientRect().height`);
   assert(Math.abs((await state(page)).height-peek)<2,'Peek height is stable');
  }},
  {name:'handle tap and keyboard',options:phone,async run(page,base){
