@@ -1,0 +1,26 @@
+{
+  "description": "Frontiers of the public atlas countries not drawn by a dedicated layer: land frontiers from each country's own outline, and the water borders between two atlas countries from Natural Earth 1:10m boundary lines.",
+  "retrieved": "2026-10-15",
+  "frontierKm": 52657,
+  "pieces": 156,
+  "sources": {
+    "ne-10m-countries.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
+      "provider": "Natural Earth v5.1.2",
+      "license": "Public domain",
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255"
+    },
+    "ne-10m-lakes.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "provider": "Natural Earth v5.1.2",
+      "license": "Public domain",
+      "sha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9"
+    },
+    "ne-10m-land-boundaries.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2",
+      "license": "Public domain",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a"
+    }
+  }
+}

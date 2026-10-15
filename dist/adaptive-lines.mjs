@@ -97,7 +97,8 @@ export const liesOnBorder=(index,a,b)=>samples.every(t=>onBorder(index,a[0]+(b[0
 // pieces. Returns the hidden segments as [path, first segment, count] ranges; paths
 // of a FeatureCollection are numbered across its features in order.
 const linePaths=input=>input.type==='FeatureCollection'?input.features.flatMap(f=>linePaths(f.geometry)):input.type==='LineString'?[input.coordinates]:input.coordinates;
-export function hiddenSegments(geometry,{borders,retraced=true,tolerance=.5}={}){
+// hide(path): indices of further segments not to stroke (China's coasts, scripts/china-shore.mjs).
+export function hiddenSegments(geometry,{borders,hide,retraced=true,tolerance=.5}={}){
  const paths=linePaths(geometry),hidden=paths.map(()=>new Set());
  const index=()=>{
   const grid=new Map();
@@ -112,6 +113,7 @@ export function hiddenSegments(geometry,{borders,retraced=true,tolerance=.5}={})
  // so the retrace rule never hides them.
  const covered=(drawn,a,b)=>retraced&&metres(a,b)>=2*tolerance&&liesOnBorder(drawn,a,b);
  if(borders)paths.forEach((path,p)=>{for(let i=0;i<path.length-1;i++)if(liesOnBorder(borders,path[i],path[i+1]))hidden[p].add(i);});
+ if(hide)paths.forEach((path,p)=>{for(const i of hide(path))hidden[p].add(i);});
  if(retraced){
   // Forward: hide what earlier strokes already draw. Backward: hide what a later,
   // longer stroke draws, so the result does not depend on drawing order.

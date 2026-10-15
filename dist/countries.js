@@ -4,12 +4,14 @@
 // module loads); modules and Node scripts import it for the same global.
 (()=>{
  if(globalThis.AtlasCountries)return;
+ // ownFrontier: its own lines draw its frontiers while open, so the shared frontier layer
+ // (data/atlas-frontiers.bin) hides them then.
  // motionLayers: drawn by the shared motion renderer (motion.mjs); motionData: has data/<id>-motion.bin.
  // Regional countries share one adapter (regional-country.mjs); their map settings live here,
  // and their statistics card adds density and shows only the economy figures a place has.
  const regional=(adapter,prefix,map,extra)=>({adapter,prefix,symbol:'ring',regionalStatistics:true,map,...extra});
  const countries={
-  china:{en:'China',local:'中国',lang:'zh',background:'#f4f0e7',adapter:'china',prefix:'',symbol:'taiji',motionLayers:true,motionData:true,
+  china:{en:'China',local:'中国',lang:'zh',background:'#f4f0e7',adapter:'china',prefix:'',symbol:'taiji',ownFrontier:true,motionLayers:true,motionData:true,
    titleClasses:['china-english','china-chinese'],mapLabel:'Interactive China administrative boundary map',
    statistics:'data/region-statistics.json',colors:{population:'china',levels:'Provinces & territories',geography:{id:'adcode',parent:'provinceCode'},layers:/^(province|prefecture|other|city-district)(-fragment)?-fill$/,primary:/^province(-fragment)?-fill$/},
    levelNames:['Provinces & territories','Subdivisions','City districts'],
@@ -33,10 +35,10 @@
   philippines:{en:'Philippines',local:'Pilipinas',lang:'fil',background:'#edf2f8',adapter:'archipelago',prefix:'ph',symbol:'philippine-sun',
    statistics:'data/archipelago/philippines-statistics.json',colors:{catalogue:'data/archipelago/philippines-catalogue.bin',population:'philippines',levels:'Regions'},
    levelNames:['Regions','Provinces'],portal:{fill:'#e7edf6'},controls:['ph-province-layer','ph-second-layer','ph-label-layer']},
-  indonesia:{en:'Indonesia',local:'',lang:'id',background:'#faf1ef',adapter:'archipelago',prefix:'id',symbol:'compass',
+  indonesia:{en:'Indonesia',local:'',lang:'id',background:'#faf1ef',adapter:'archipelago',prefix:'id',symbol:'compass',ownFrontier:true,
    statistics:'data/archipelago/indonesia-statistics.json',colors:{catalogue:'data/archipelago/indonesia-catalogue.bin',levels:'Provinces'},
    levelNames:['Provinces','Regencies & cities'],portal:{fill:'#fff5f3'},controls:['id-province-layer','id-second-layer','id-label-layer']},
-  malaysia:{en:'Malaysia',local:'',lang:'ms',background:'#f1f1e9',adapter:'southeast-asia',prefix:'my',symbol:'compass',
+  malaysia:{en:'Malaysia',local:'',lang:'ms',background:'#f1f1e9',adapter:'southeast-asia',prefix:'my',symbol:'compass',ownFrontier:true,
    mapLabel:'Interactive Malaysia state and district map',
    statistics:'data/southeast-asia/malaysia-statistics.json',colors:{catalogue:'data/southeast-asia/malaysia-catalogue.bin',levels:'States & federal territories'},
    levelNames:['States & federal territories','Districts'],controls:['my-province-layer','my-second-layer','my-label-layer'],naturalEarth:'MYS',

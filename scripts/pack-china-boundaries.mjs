@@ -6,6 +6,7 @@ import {readDataText} from './read-data.mjs';
 import {encodePack,decodePack} from '../dist/china-pack.mjs';
 import {describeChina} from '../dist/china-sources.mjs';
 import {borderIndex,hiddenSegments} from '../dist/adaptive-lines.mjs';
+import {chinaShore} from './china-shore.mjs';
 
 // The gzip JSON files remain the build inputs. Visitors download this packed copy,
 // which shares each coordinate between provinces, subdivisions, lines and districts.
@@ -16,11 +17,11 @@ const texts={
 };
 const sha=text=>createHash('sha256').update(text).digest('hex');
 // Outline segments that must not be stroked: those on an international line drawn
-// by its own layer, and those already drawn once in the same layer.
+// by its own layer, province coasts (china-shore.mjs), and those already drawn once in the same layer.
 const borderFiles=['shared-context-borders.bin','russia/international.bin'],borderText=borderFiles.map(f=>gunzipSync(fs.readFileSync('dist/data/'+f)).toString('utf8'));
 const inputs=Object.fromEntries(Object.entries(texts).map(([key,text])=>[key,JSON.parse(text)]));
 const borders=borderIndex({features:borderText.flatMap(t=>JSON.parse(t).features)});
-const lineOmissions={...Object.fromEntries(Object.entries(inputs.display.boundaries).map(([name,geometry])=>[name,hiddenSegments(geometry,{borders:name==='province'?borders:undefined})])),districts:hiddenSegments(inputs.districts.boundaries)};
+const lineOmissions={...Object.fromEntries(Object.entries(inputs.display.boundaries).map(([name,geometry])=>[name,hiddenSegments(geometry,name==='province'?{borders,hide:chinaShore(inputs.display)}:{})])),districts:hiddenSegments(inputs.districts.boundaries)};
 const sources={...Object.fromEntries(Object.entries(texts).map(([key,text])=>[key,sha(text)])),borders:sha(borderText.join('\n'))};
 const packed=gzipSync(encodePack({...inputs,lineOmissions,sources}),{level:9});
 const decoded=decodePack(gunzipSync(packed));

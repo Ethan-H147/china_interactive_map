@@ -271,6 +271,9 @@ function waitForCountrySources(ids,signal){
 }
 // Faded country shapes: the open country's in its colour; another country's territory that
 // the open country draws as its own claim is hidden.
+// A country whose own lines draw its frontiers while open (countries.js: ownFrontier) hides its
+// frontiers in the shared layer meanwhile, so each edge is drawn once.
+function syncFrontiers(open){if(map.getLayer('atlas-frontiers'))map.setFilter('atlas-frontiers',registry.countries[open]?.ownFrontier?['!',['in',' '+open+' ',['concat',' ',['get','countries'],' ']]]:null);}
 function syncPortals(open){for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,['!=',['coalesce',['get','claimedBy'],''],open]);}}}
 function atlasFor(country){return atlases[country]||{'southern-africa':southernAfrica,europe,'south-america':southAmerica}[registry.countries[country]?.adapter]?.portals[country]||null;}
 function currentAtlas(){return atlasFor(atlasMode);}
@@ -297,7 +300,7 @@ async function changeAtlas(next,animate=true,flight=false,focus=null){
   $('china-sidebar').hidden=next!=='china';if($('mode-third'))$('mode-third').hidden=true;$('mode-province').hidden=false;$('mode-prefecture').hidden=false;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:next!=='china'});
   syncCountryFills();syncLayers();updateLabels();for(const [country,atlas] of Object.entries(atlases))atlas.context?.(next===country);
-  syncPortals(next);
+  syncPortals(next);syncFrontiers(next);
   const bounds=focus?[focus.bounds.slice(0,2),focus.bounds.slice(2)]:targetAtlas?.bounds||registry.countries[next].home.bounds||homeBounds;
   await (next==='china'?loadChina():targetAtlas.warm());
   if(epoch!==countryEpoch)return false;
@@ -501,6 +504,9 @@ async function init(){try{
   europe=window.AtlasEurope.createEurope(map,archipelagoHost);await europe.ensure();
   addSource('shared-context-borders',await json('data/shared-context-borders.bin'),window.AtlasLines.internationalLineSourceOptions);
   window.AtlasLines.addInternationalBorder(map,'shared-context-borders','shared-context-borders');
+  // Every public country's frontiers, whichever country is open (scripts/build-atlas-frontiers.mjs).
+  addSource('atlas-frontiers',await json('data/atlas-frontiers.bin'),window.AtlasLines.internationalLineSourceOptions);
+  window.AtlasLines.addInternationalBorder(map,'atlas-frontiers','atlas-frontiers');syncFrontiers(atlasMode);
   satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const panel=$(registry.countries[atlasMode]?.panel||'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
   satelliteDisplay.sync();if($('satellite-layer').checked)$('satellite-layer').dispatchEvent(new Event('change'));
   const capitalsResponse=await fetch('data/capitals.json');
@@ -518,8 +524,9 @@ async function init(){try{
   setupViewControls();await restoreView();
   atlasStarting=false;window.AtlasEntry.ready();finishStartup();controls();refreshStatus();updateLabels();
   $('map-loading').hidden=true;
-  // Other countries retain only small clickable context silhouettes. Their
-  // full datasets load when visited, never as a background startup download.
+  // South America's detailed shapes and borders load once the first view is ready, so those
+  // countries never sit as coarse previews before someone opens one.
+  southAmerica.warmContext().catch(e=>console.warn(e));
 
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;}}
 let viewSaveTimer,viewControlsReady=false;

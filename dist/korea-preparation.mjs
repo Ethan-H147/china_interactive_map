@@ -1,4 +1,5 @@
 import {lineData} from './adaptive-lines.mjs';
+import {withChannels} from './edge-runs.mjs';
 export function prepareKorea(data){
  const metadata={first:{type:'FeatureCollection',features:[]},second:{type:'FeatureCollection',features:[]}};
  const sources={};
@@ -8,6 +9,6 @@ export function prepareKorea(data){
   sources['korea-'+level]=blob(data[level]);
   sources['korea-'+level+'-selection-edges']=blob(lineData(data[level]));
  }
- for(const [name,geometry] of Object.entries(data.boundaries))sources['korea-'+name+'-edges']=blob(lineData(geometry));
+ for(const [name,geometry] of Object.entries(data.boundaries))sources['korea-'+name+'-edges']=blob(lineData(withChannels(geometry,data.channels?.[name])));
  return{metadata,sources};
 }

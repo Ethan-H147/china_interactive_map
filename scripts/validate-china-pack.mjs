@@ -6,6 +6,7 @@ import {readDataText} from './read-data.mjs';
 import {decodePack,encodePack} from '../dist/china-pack.mjs';
 import {describeChina,chinaSourceBuilders} from '../dist/china-sources.mjs';
 import {lineData,borderIndex,hiddenSegments,visibleSegments,liesOnBorder} from '../dist/adaptive-lines.mjs';
+import {chinaShore} from './china-shore.mjs';
 import {isPrefectureLevel} from '../dist/china-levels.mjs';
 
 const app=fs.readFileSync('dist/app.js','utf8');
@@ -34,11 +35,11 @@ const triangleFills=features=>fc(features.filter(f=>fragments[f.properties.adcod
 const borders=['dist/data/shared-context-borders.bin','dist/data/russia/international.bin'].map(f=>JSON.parse(gunzipSync(fs.readFileSync(f))));
 const excluded=borderIndex(fc(borders.flatMap(b=>b.features)));
 // The stored hidden-segment ranges must match the current outlines and borders.
-const lineOmissions={...Object.fromEntries(Object.entries(display.boundaries).map(([name,geometry])=>[name,hiddenSegments(geometry,{borders:name==='province'?excluded:undefined})])),districts:hiddenSegments(districts.boundaries)};
+const shore=chinaShore(display),lineOmissions={...Object.fromEntries(Object.entries(display.boundaries).map(([name,geometry])=>[name,hiddenSegments(geometry,name==='province'?{borders:excluded,hide:shore}:{})])),districts:hiddenSegments(districts.boundaries)};
 assert.deepEqual(packed.lineOmissions,lineOmissions,'Hidden outline segments are stale; run node scripts/pack-china-boundaries.mjs');
 assert.equal(packed.sources.borders,createHash('sha256').update(['shared-context-borders.bin','russia/international.bin'].map(f=>gunzipSync(fs.readFileSync('dist/data/'+f)).toString('utf8')).join('\n')).digest('hex'),'International borders changed since the pack was built');
 const expected={provinces:regularFills(display.provinces.features),prefectures:regularFills(prefectures),others:fc(others),'provinces-fragments':triangleFills(display.provinces.features),'prefectures-fragments':triangleFills(prefectures),
- ...Object.fromEntries(Object.entries(display.boundaries).map(([name,geometry])=>[name+'-boundaries',lineData(visibleSegments(geometry,{borders:name==='province'?excluded:undefined}))])),
+ ...Object.fromEntries(Object.entries(display.boundaries).map(([name,geometry])=>[name+'-boundaries',lineData(visibleSegments(geometry,name==='province'?{borders:excluded,hide:shore}:{}))])),
  'provinces-selection-edges':lineData(display.provinces),'prefectures-selection-edges':lineData(fc(prefectures)),'others-selection-edges':lineData(fc(others)),
  'city-districts':districts.regions,'city-district-boundaries':lineData(visibleSegments(districts.boundaries)),'city-districts-selection-edges':lineData(districts.regions)};
 assert.deepEqual(Object.keys(builders).sort(),Object.keys(expected).sort());

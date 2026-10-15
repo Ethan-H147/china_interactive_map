@@ -253,5 +253,5 @@ export function createSouthAmerica(map,host){
  };}
  async function fly(bounds){await warm();const target=map.cameraForBounds(bounds,{padding:45,maxZoom:6});if(!target)return;return new Promise(resolve=>{map.once('moveend',resolve);map.flyTo({...target,duration:2800,curve:1.65,minZoom:.65,retainPadding:false,essential:false,easing:t=>t*t*(3-2*t)});});}
  contextFilters();updateLabels();
- return{portals:Object.fromEntries(Object.keys(countries).map(id=>[id,portal(id)])),fly,syncDeveloper};
+ return{portals:Object.fromEntries(Object.keys(countries).map(id=>[id,portal(id)])),fly,syncDeveloper,warmContext:warm};
 }

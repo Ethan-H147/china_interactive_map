@@ -1,4 +1,5 @@
 import {lineData} from './adaptive-lines.mjs';
+import {withChannels} from './edge-runs.mjs';
 export function prepareMongolia(data){
  const metadata={},sources={},blob=value=>new Blob([JSON.stringify(value)],{type:'application/json'});
  for(const level of ['first','second']){
@@ -6,6 +7,6 @@ export function prepareMongolia(data){
   sources['mongolia-'+level]=blob(data[level]);
   sources['mongolia-'+level+'-selection-edges']=blob(lineData(data[level]));
  }
- for(const [level,geometry] of Object.entries(data.boundaries))sources['mongolia-'+level+'-edges']=blob(lineData(geometry));
+ for(const [level,geometry] of Object.entries(data.boundaries))sources['mongolia-'+level+'-edges']=blob(lineData(withChannels(geometry,data.channels?.[level])));
  return {metadata,sources};
 }

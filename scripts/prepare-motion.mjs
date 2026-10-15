@@ -4,6 +4,8 @@ import mapshaper from 'mapshaper';
 import earcut,{flatten} from 'earcut';
 import {readData} from './read-data.mjs';
 import {lineData,borderIndex,visibleSegments} from '../dist/adaptive-lines.mjs';
+import {chinaShore} from './china-shore.mjs';
+import {withChannels} from '../dist/edge-runs.mjs';
 
 // Separate, disposable geometry for camera motion. The authoritative datasets
 // and the precise sources used for picking and stationary views stay untouched.
@@ -15,12 +17,14 @@ const sources={provinces:display.provinces,prefectures:collection(prefectures),o
 const water=compressed('major-water.bin');
 sources['major-water']=water;
 const excluded=borderIndex(collection([...compressed('shared-context-borders.bin').features,...compressed('russia/international.bin').features]));
-for(const [id,geometry] of Object.entries(display.boundaries))sources[id+'-boundaries']=lineData(visibleSegments(geometry,{borders:id==='province'?excluded:undefined}));
+// Coasts stay unstroked in motion too (china-shore.mjs).
+const shore=chinaShore(display);
+for(const [id,geometry] of Object.entries(display.boundaries))sources[id+'-boundaries']=lineData(visibleSegments(geometry,id==='province'?{borders:excluded,hide:shore}:{}));
 sources['city-district-boundaries']=lineData(districts.boundaries);
 for(const [country,file] of [['korea','korea-boundaries.bin'],['mongolia','mongolia-boundaries.bin']]){
- const data=compressed(file);
+ const data=compressed(file),channels=compressed(country+'-channels.bin');
  for(const level of ['first','second'])sources[country+'-'+level]=data[level];
- for(const [level,geometry] of Object.entries(data.boundaries))sources[country+'-'+level+'-edges']=lineData(geometry);
+ for(const [level,geometry] of Object.entries(data.boundaries))sources[country+'-'+level+'-edges']=lineData(withChannels(geometry,channels[level]));
  const outline=compressed(country+'-outline.bin');sources[country+'-portal']=outline;sources[country+'-portal-edges']=lineData(outline);
 }
 const count=g=>typeof g[0]==='number'?1:g.reduce((n,c)=>n+count(c),0);
