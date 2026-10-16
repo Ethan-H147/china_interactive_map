@@ -15,9 +15,14 @@ for(const p of [[80,60],[37.6,55.75],[134,45],[170,65],[-175,66],[20.5,54.7],[14
 for(const country of ['brazil','argentina','uruguay'])assert.equal(data.features.filter(f=>f.properties.country===country).length,1,'Unreleased countries retain background land only');
 assert.ok(data.features.every(f=>Object.keys(f.properties).join(',')==='country'),'No subdivision data in the world background');
 const sources=new Map(),layers=[];
-globalThis.fetch=async url=>{assert.equal(url,'data/world-land.bin');return new Response(bytes);};
-await addWorldLand({addSource:(id,s)=>sources.set(id,s),addLayer:l=>layers.push(l)});
-assert.equal(layers.length,1);assert.equal(layers[0].type,'fill');assert.equal(layers[0].maxzoom,undefined,'Land must remain visible beyond national overview zoom');
+// China's non-atlas neighbours load separately, after the world map, at China's precision.
+const neighbourBytes=fs.readFileSync('dist/data/china-neighbours.bin');
+assert.ok(neighbourBytes.length<300_000,'China neighbour band stays small');
+globalThis.fetch=async url=>{assert.ok(['data/world-land.bin','data/china-neighbours.bin'].includes(url),url);return new Response(url.endsWith('world-land.bin')?bytes:neighbourBytes);};
+await addWorldLand({addSource:(id,s)=>sources.set(id,s),addLayer:l=>layers.push(l),getStyle:()=>({layers})});
+await new Promise(r=>setTimeout(r,50));
+assert.equal(layers.length,2);assert.equal(layers[1].id,'china-neighbour-land');assert.equal(layers[1].paint['fill-color'],layers[0].paint['fill-color'],'Neighbour band shares the background grey');
+assert.ok(sources.get('china-neighbour-land').data.features.every(f=>f.geometry.type==='Polygon'),'One polygon per feature');assert.equal(layers[0].type,'fill');assert.equal(layers[0].maxzoom,undefined,'Land must remain visible beyond national overview zoom');
 assert.equal(layers[0].paint['fill-opacity'],undefined,'No world-layer fade during zoom');
 assert.ok(sources.get('world-land').maxzoom<=6,'Do not index coarse land at subdivision zoom levels');
 const brightness=hex=>[1,3,5].reduce((s,i)=>s+parseInt(hex.slice(i,i+2),16),0);

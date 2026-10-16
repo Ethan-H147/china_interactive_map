@@ -71,10 +71,11 @@ for(const country of Object.keys(outlines)){
   const n=ring.length-1;if(n<3)continue;
   // Foreign side: outside an exterior ring, inside a hole.
   const side=(signedArea(ring)>0)===(r===0)?-1:1;
-  // China's outline follows its claims in the Himalaya and Karakoram (Aksai Chin, the Shaksgam
-  // valley, South Tibet), far from Natural Earth's lines, so there an edge is a frontier when land
-  // outside China lies all the way out to 3 km (not a sliver between two provinces' sources).
-  const claimZone=ring.map(p=>country==='china'&&p[0]>72&&p[0]<98.5&&p[1]>26&&p[1]<37.5);
+  // China's outline (DataV) sits far from Natural Earth's lines in places: along its claims in the
+  // Himalaya and Karakoram (Aksai Chin, the Shaksgam valley, South Tibet) and wherever its
+  // generalised edge wanders (the Tian Shan). There an edge is a frontier when land outside China
+  // lies all the way out to 3 km (not a sliver between two provinces' sources, nor the sea).
+  const claimZone=ring.map(()=>country==='china');
   const near=ring.map((p,i)=>boundary(p)<=6000||claimZone[i]);
   if(!near.some(Boolean))continue;
   const outward=(i,d)=>{const a=ring[i],b=ring[i+1],c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return null;return [(a[0]+b[0])/2-dy/len*side*d/111195/c,(a[1]+b[1])/2+dx/len*side*d/111195];};
