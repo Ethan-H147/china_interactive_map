@@ -149,6 +149,15 @@ export default [
   // Iceland's towns and Turkey's province-centre cities are dots of their own.
   await page.waitFor(`map.getSource('${country}-settlements')&&map.querySourceFeatures('${country}-settlements').length>0`,{label:country+' settlement dots'});
  }})),
+ // Chile, Paraguay and Peru: their lowest units, under their parents; Chile and Peru show capitals.
+ ...[['chile','Pozo Almonte','CL-C-01401','Tamarugal',true],['paraguay','Lambaré','PY-T-1107','Central',false],['peru','Barranco','PE-D-150104','Lima',true]].map(([country,query,id,parent,capitals])=>({name:`${country}: ${query} opens in developer mode`,options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#'+country);
+  assert.equal(await page.evaluate('AtlasEntry.current'),country);
+  await searchAndSelect(page,query,query);
+  await page.waitFor(`currentAtlas()?.getSelection()===${JSON.stringify(id)}`,{label:query+' selected'});
+  assert(await page.evaluate(`[...document.querySelectorAll('.map-breadcrumb')].some(b=>b.getClientRects().length&&b.textContent.includes(${JSON.stringify(parent)}))`),query+' sits under '+parent);
+  if(capitals)await page.waitFor(`!!map.getSource('${country}-settlements')&&!!map.getLayer('${country}-settlements')`,{label:country+' capitals'});
+ }})),
  {name:'india: Sikkim opens in developer mode',options:{...desktop,developer:true},async run(page,base){
   await page.open(base,'#india');
   assert.equal(await page.evaluate('AtlasEntry.current'),'india');

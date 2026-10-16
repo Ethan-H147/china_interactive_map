@@ -1,0 +1,16 @@
+{
+ "retrieved": "2026-10-16",
+ "sources": {
+  "mappedArea": {
+   "title": "Boundary-derived area",
+   "url": "data/europe/paraguay/sources.json",
+   "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+  },
+  "pyPopulation": {
+   "title": "Censo Nacional de Población y Viviendas 2022, resultados finales: población total por área urbana-rural, según departamento y distrito (cuadro A1) (Instituto Nacional de Estadística (INE), Paraguay)",
+   "url": "https://www.ine.gov.py/censo2022/",
+   "data": "https://www.ine.gov.py/censo2022/documentos/Resultados%20finales_Estructura%20de%20la%20poblacion%20por%20edad%20y%20sexo_2022.xlsx",
+   "license": "INE Paraguay open data (attribution)"
+  }
+ }
+}

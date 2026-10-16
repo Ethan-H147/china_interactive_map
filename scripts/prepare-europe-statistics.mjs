@@ -3,6 +3,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 import {gunzipSync} from 'node:zlib';
+import {polygons,landIndex} from './geo-index.mjs';
 // Population, area and GDP for the European countries, in the shared statistics format.
 // Retained source extracts live in scripts/statistics-sources/europe; pass --refresh to
 // download them again.
@@ -429,7 +430,47 @@ function india(){
  return Object.fromEntries(catalogue.records.map(r=>{const value=census.values[r.id.slice(3)];assert(value>0,'Census population for '+r.id);return ['india:'+r.id,{name:r.en,level:r.level,population:{value,year:2011,date:census.date,method:'census',source:'inPopulation',periodLabel:'2011 census'},area:{value:r.areaKm2,unit:'km²',method:'mapped',period:'Boundary-derived estimate, including the areas India claims',source:'mappedArea'}}];}));
 }
 
-for(const [country,build] of [['italy',italy],['spain',spain],['france',france],['united-kingdom',unitedKingdom],['iceland',iceland],['turkey',turkey],['india',india]]){
+// Totals of the lowest level per unit, summed up the hierarchy; areas are boundary-derived.
+function summed(country,people,source,population){
+ const catalogue=readCatalogue(country),children=new Map(),levels=Math.max(...catalogue.records.map(r=>r.level));
+ for(const r of catalogue.records)if(r.parent){if(!children.has(r.parent))children.set(r.parent,[]);children.get(r.parent).push(r);}
+ const missing=catalogue.records.filter(r=>r.level===levels&&!(people(r)>=0));assert.deepEqual(missing.map(r=>r.id),[],country+': every unit has a population');
+ const total=r=>r.level===levels?people(r):(children.get(r.id)||[]).reduce((s,c)=>s+total(c),0);
+ sources.mappedArea=mappedArea(country);
+ return Object.fromEntries(catalogue.records.map(r=>[country+':'+r.id,{name:r.en,level:r.level,population:{value:total(r),source,...population},area:{value:r.areaKm2,unit:'km²',method:'mapped',period:'Boundary-derived estimate',source:'mappedArea'}}]));
+}
+// Chile: the 2024 census by commune (INE's person-level microdata, counted by
+// scripts/extract-chile-census.py). The 60 people counted in Antártica, which is not mapped, are left out.
+function chile(){
+ const census=JSON.parse(fs.readFileSync(path.join(retained,'chile-census-2024.json')));
+ assert.equal(census.national,18480432,'Chile 2024 census total');
+ sources.clPopulation={title:census.title+' ('+census.publisher+')',url:census.page,data:census.url,license:'INE Chile open data (attribution)',note:'Persons enumerated, counted per commune from the census microdata.'};
+ return summed('chile',r=>census.values[r.id.slice(5)],'clPopulation',{year:2024,date:census.date,method:'census',periodLabel:'2024 census'});
+}
+// Peru: INEI's 2025 district estimates, as OpenStreetMap records them for each UBIGEO code. The 19
+// districts created since IGN's 2020 boundaries count in the district they were created from
+// (the one containing their centre); Mazamari and Pangoa count together, as IGN maps them.
+function peru(){
+ const osm=JSON.parse(fs.readFileSync(path.join(retained,'peru-osm-2025.json'))).units,catalogue=readCatalogue('peru');
+ const people={};for(const [code,u] of Object.entries(osm))if(code.length===6&&u.level===8&&u.population!=null)people[code]=u.population;
+ const ids=new Set(catalogue.records.filter(r=>r.level===3).map(r=>r.id.slice(5)));
+ const districtShapes=Object.values(catalogue.chunks).filter(c=>c.level===3).flatMap(c=>JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/peru/'+c.file))).regions.features).map(f=>({id:f.properties.id,inside:landIndex(polygons(f.geometry).flat())})),locate=p=>districtShapes.find(d=>d.inside(p))?.id;
+ people['120699']=(people['120604']||0)+(people['120606']||0);delete people['120604'];delete people['120606'];
+ for(const [code,u] of Object.entries(osm))if(code.length===6&&!ids.has(code)&&u.center&&people[code]!=null){const into=locate(u.center)?.slice(5);assert(into,'Peruvian district '+code+' lies in a mapped district');people[into]=(people[into]||0)+people[code];delete people[code];}
+ sources.pePopulation={title:'INEI population estimates by district for 2025, as recorded in OpenStreetMap',url:'https://www.inei.gob.pe/',data:'scripts/statistics-sources/europe/peru-osm-2025.json',license:'Open Data Commons Open Database License 1.0 (OpenStreetMap)',note:'Districts created after IGN\'s 2020 boundaries are counted in the district they were created from.'};
+ return summed('peru',r=>people[r.id.slice(5)],'pePopulation',{year:2025,date:'2025-06-30',method:'estimate',periodLabel:'2025 estimate (INEI)'});
+}
+// Paraguay: the 2022 census (final results) by district, matched by name within each department.
+function paraguay(){
+ const census=JSON.parse(fs.readFileSync(path.join(retained,'paraguay-census-2022.json'))),catalogue=readCatalogue('paraguay');
+ const plain=s=>s.normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z]/g,'');
+ const department=new Map(catalogue.records.filter(r=>r.level===1).map(r=>[r.id,plain(r.en)]));
+ const byName=new Map(census.districts.map(d=>[plain(d.department)+'/'+plain(d.name),d.population]));
+ sources.pyPopulation={title:census.title+' ('+census.publisher+')',url:census.page,data:census.url,license:'INE Paraguay open data (attribution)'};
+ return summed('paraguay',r=>byName.get(department.get(r.parent)+'/'+plain(r.en)),'pyPopulation',{year:2022,date:census.date,method:'census',periodLabel:'2022 census'});
+}
+
+for(const [country,build] of [['italy',italy],['spain',spain],['france',france],['united-kingdom',unitedKingdom],['iceland',iceland],['turkey',turkey],['india',india],['chile',chile],['paraguay',paraguay],['peru',peru]]){
  const regions=await build(),dir=`dist/data/europe/${country}`,used=new Set(Object.values(regions).flatMap(r=>Object.values(r).map(m=>m?.source).filter(Boolean)).concat(Object.values(regions).flatMap(r=>[r.gdp?.exchangeSource].filter(Boolean))));
  const countrySources=Object.fromEntries(Object.entries(sources).filter(([id])=>used.has(id)));
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,retrieved:today,country,sources:countrySources,regions})+'\n');

@@ -1,0 +1,422 @@
+{
+ "title": "National and regional capitals in OpenStreetMap (place nodes tagged capital=2/yes or 4)",
+ "source": "OpenStreetMap contributors",
+ "license": "Open Data Commons Open Database License 1.0",
+ "url": "https://www.openstreetmap.org/copyright",
+ "retrieved": "2026-10-16",
+ "note": "Talagante, tagged capital=4, is a provincial capital and is left out; Santiago and Lima are tagged capital=yes.",
+ "chile": [
+  {
+   "osm": 50020503,
+   "name": "La Serena",
+   "en": "La Serena",
+   "capital": "4",
+   "center": [
+    -71.25196,
+    -29.9027
+   ]
+  },
+  {
+   "osm": 50028181,
+   "name": "Talca",
+   "en": "Talca",
+   "capital": "4",
+   "center": [
+    -71.66603,
+    -35.42653
+   ]
+  },
+  {
+   "osm": 84466877,
+   "name": "Puerto Montt",
+   "en": "Puerto Montt",
+   "capital": "4",
+   "center": [
+    -72.93959,
+    -41.4718
+   ]
+  },
+  {
+   "osm": 181356942,
+   "name": "Punta Arenas",
+   "en": "Punta Arenas",
+   "capital": "4",
+   "center": [
+    -70.90782,
+    -53.16257
+   ]
+  },
+  {
+   "osm": 214189449,
+   "name": "Chillán",
+   "en": null,
+   "capital": "4",
+   "center": [
+    -72.10332,
+    -36.60666
+   ]
+  },
+  {
+   "osm": 214203803,
+   "name": "Iquique",
+   "en": "Iquique",
+   "capital": "4",
+   "center": [
+    -70.15246,
+    -20.21407
+   ]
+  },
+  {
+   "osm": 214204892,
+   "name": "Rancagua",
+   "en": null,
+   "capital": "4",
+   "center": [
+    -70.74072,
+    -34.17024
+   ]
+  },
+  {
+   "osm": 214210491,
+   "name": "Coyhaique",
+   "en": "Coyhaique",
+   "capital": "4",
+   "center": [
+    -72.06849,
+    -45.57118
+   ]
+  },
+  {
+   "osm": 214220794,
+   "name": "Antofagasta",
+   "en": "Antofagasta",
+   "capital": "4",
+   "center": [
+    -70.398,
+    -23.64637
+   ]
+  },
+  {
+   "osm": 214229792,
+   "name": "Copiapó",
+   "en": "Copiapó",
+   "capital": "4",
+   "center": [
+    -70.33228,
+    -27.36647
+   ]
+  },
+  {
+   "osm": 330756068,
+   "name": "Concepción",
+   "en": "Concepción",
+   "capital": "4",
+   "center": [
+    -73.05021,
+    -36.82707
+   ]
+  },
+  {
+   "osm": 1515015048,
+   "name": "Temuco",
+   "en": "Temuco",
+   "capital": "4",
+   "center": [
+    -72.59054,
+    -38.73589
+   ]
+  },
+  {
+   "osm": 3298545361,
+   "name": "Valparaíso",
+   "en": null,
+   "capital": "4",
+   "center": [
+    -71.61967,
+    -33.04585
+   ]
+  },
+  {
+   "osm": 3444930202,
+   "name": "Arica",
+   "en": null,
+   "capital": "4",
+   "center": [
+    -70.32114,
+    -18.47853
+   ]
+  },
+  {
+   "osm": 3956170554,
+   "name": "Valdivia",
+   "en": "Valdivia",
+   "capital": "4",
+   "center": [
+    -73.24599,
+    -39.81413
+   ]
+  },
+  {
+   "osm": 50016356,
+   "name": "Santiago",
+   "en": null,
+   "capital": "2",
+   "center": [
+    -70.65107,
+    -33.4377
+   ]
+  }
+ ],
+ "peru": [
+  {
+   "osm": 27434277,
+   "name": "Iquitos",
+   "en": "Iquitos",
+   "capital": "4",
+   "center": [
+    -73.24441,
+    -3.74936
+   ]
+  },
+  {
+   "osm": 59043304,
+   "name": "Puno",
+   "en": "Puno",
+   "capital": "4",
+   "center": [
+    -70.02841,
+    -15.84075
+   ]
+  },
+  {
+   "osm": 59115290,
+   "name": "Cuzco",
+   "en": "Cuzco",
+   "capital": "4",
+   "center": [
+    -71.97854,
+    -13.51709
+   ]
+  },
+  {
+   "osm": 107988853,
+   "name": "Callao",
+   "en": "Callao",
+   "capital": "4",
+   "center": [
+    -77.13911,
+    -12.05226
+   ]
+  },
+  {
+   "osm": 253855157,
+   "name": "Arequipa",
+   "en": "Arequipa",
+   "capital": "4",
+   "center": [
+    -71.53696,
+    -16.39887
+   ]
+  },
+  {
+   "osm": 258064159,
+   "name": "Ica",
+   "en": "Ica",
+   "capital": "4",
+   "center": [
+    -75.72909,
+    -14.0641
+   ]
+  },
+  {
+   "osm": 268116782,
+   "name": "Huancavelica",
+   "en": "Huancavelica",
+   "capital": "4",
+   "center": [
+    -74.9731,
+    -12.78728
+   ]
+  },
+  {
+   "osm": 268127318,
+   "name": "Huancayo",
+   "en": "Huancayo",
+   "capital": "4",
+   "center": [
+    -75.2101,
+    -12.0681
+   ]
+  },
+  {
+   "osm": 268599713,
+   "name": "Abancay",
+   "en": "Abancay",
+   "capital": "4",
+   "center": [
+    -72.87887,
+    -13.63735
+   ]
+  },
+  {
+   "osm": 268802158,
+   "name": "Puerto Maldonado",
+   "en": "Puerto Maldonado",
+   "capital": "4",
+   "center": [
+    -69.18668,
+    -12.59386
+   ]
+  },
+  {
+   "osm": 272029209,
+   "name": "Ayacucho",
+   "en": "Ayacucho",
+   "capital": "4",
+   "center": [
+    -74.2257,
+    -13.16043
+   ]
+  },
+  {
+   "osm": 272367389,
+   "name": "Huaraz",
+   "en": "Huaraz",
+   "capital": "4",
+   "center": [
+    -77.529,
+    -9.52985
+   ]
+  },
+  {
+   "osm": 272377981,
+   "name": "Trujillo",
+   "en": "Trujillo",
+   "capital": "4",
+   "center": [
+    -79.02877,
+    -8.11168
+   ]
+  },
+  {
+   "osm": 272378756,
+   "name": "Cajamarca",
+   "en": "Cajamarca",
+   "capital": "4",
+   "center": [
+    -78.51731,
+    -7.15667
+   ]
+  },
+  {
+   "osm": 272379571,
+   "name": "Piura",
+   "en": "Piura",
+   "capital": "4",
+   "center": [
+    -80.62666,
+    -5.19711
+   ]
+  },
+  {
+   "osm": 272399411,
+   "name": "Cerro de Pasco",
+   "en": "Cerro de Pasco",
+   "capital": "4",
+   "center": [
+    -76.25611,
+    -10.68359
+   ]
+  },
+  {
+   "osm": 272401474,
+   "name": "Huánuco",
+   "en": "Huánuco",
+   "capital": "4",
+   "center": [
+    -76.23948,
+    -9.92933
+   ]
+  },
+  {
+   "osm": 320100077,
+   "name": "Chiclayo",
+   "en": "Chiclayo",
+   "capital": "4",
+   "center": [
+    -79.83872,
+    -6.77161
+   ]
+  },
+  {
+   "osm": 338539511,
+   "name": "Tumbes",
+   "en": "Tumbes",
+   "capital": "4",
+   "center": [
+    -80.45965,
+    -3.57079
+   ]
+  },
+  {
+   "osm": 340140307,
+   "name": "Chachapoyas",
+   "en": "Chachapoyas",
+   "capital": "4",
+   "center": [
+    -77.87146,
+    -6.22932
+   ]
+  },
+  {
+   "osm": 411804007,
+   "name": "Moyobamba",
+   "en": "Moyobamba",
+   "capital": "4",
+   "center": [
+    -76.97468,
+    -6.03473
+   ]
+  },
+  {
+   "osm": 1815856037,
+   "name": "Moquegua",
+   "en": "Moquegua",
+   "capital": "4",
+   "center": [
+    -70.93456,
+    -17.1938
+   ]
+  },
+  {
+   "osm": 2875442305,
+   "name": "Pucallpa",
+   "en": "Pucallpa",
+   "capital": "4",
+   "center": [
+    -74.53875,
+    -8.38207
+   ]
+  },
+  {
+   "osm": 4590192817,
+   "name": "Tacna",
+   "en": "Tacna",
+   "capital": "4",
+   "center": [
+    -70.2511,
+    -18.01386
+   ]
+  },
+  {
+   "osm": 4289361265,
+   "name": "Lima",
+   "en": null,
+   "capital": "2",
+   "center": [
+    -77.03059,
+    -12.04598
+   ]
+  }
+ ]
+}

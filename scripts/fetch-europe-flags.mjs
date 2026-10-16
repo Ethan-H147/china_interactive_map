@@ -14,7 +14,10 @@ const sources={
  italy:{file:'vendor/flag-it.svg',...commons('Flag_of_Italy.svg','0/03')},
  iceland:{file:'vendor/flag-is.svg',...commons('Flag_of_Iceland.svg','c/ce')},
  turkey:{file:'vendor/flag-tr.svg',...commons('Flag_of_Turkey.svg','b/b4')},
- india:{file:'vendor/flag-in.svg',...commons('Flag_of_India.svg','4/41')}
+ india:{file:'vendor/flag-in.svg',...commons('Flag_of_India.svg','4/41')},
+ chile:{file:'vendor/flag-cl.svg',...commons('Flag_of_Chile.svg','7/78')},
+ paraguay:{file:'vendor/flag-py.svg',...commons('Flag_of_Paraguay.svg','2/27')},
+ peru:{file:'vendor/flag-pe.svg',...commons('Flag_of_Peru.svg','c/cf')}
 };
 for(const [country,flag] of Object.entries(sources)){
  const known=manifest.flags[country],path=resolve(dist,flag.file);let bytes;

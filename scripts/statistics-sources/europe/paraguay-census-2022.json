@@ -1,0 +1,1346 @@
+{
+ "title": "Censo Nacional de Población y Viviendas 2022, resultados finales: población total por área urbana-rural, según departamento y distrito (cuadro A1)",
+ "publisher": "Instituto Nacional de Estadística (INE), Paraguay",
+ "url": "https://www.ine.gov.py/censo2022/documentos/Resultados%20finales_Estructura%20de%20la%20poblacion%20por%20edad%20y%20sexo_2022.xlsx",
+ "page": "https://www.ine.gov.py/censo2022/",
+ "date": "2022-11-09",
+ "retrieved": "2026-10-16",
+ "national": 6109903,
+ "departments": {
+  "Asunción": 462241,
+  "Concepción": 206181,
+  "San Pedro": 355175,
+  "Cordillera": 268037,
+  "Guairá": 179555,
+  "Caaguazú": 431519,
+  "Caazapá": 139479,
+  "Itapúa": 449642,
+  "Misiones": 111142,
+  "Paraguarí": 200472,
+  "Alto Paraná": 763702,
+  "Central": 1883927,
+  "Ñeembucú": 76719,
+  "Amambay": 179412,
+  "Canindeyú": 191114,
+  "Presidente Hayes": 123313,
+  "Boquerón": 71078,
+  "Alto Paraguay": 17195
+ },
+ "districts": [
+  {
+   "department": "Asunción",
+   "name": "Asunción",
+   "population": 462241
+  },
+  {
+   "department": "Concepción",
+   "name": "Concepción",
+   "population": 73360
+  },
+  {
+   "department": "Concepción",
+   "name": "Belén",
+   "population": 10605
+  },
+  {
+   "department": "Concepción",
+   "name": "Horqueta",
+   "population": 39548
+  },
+  {
+   "department": "Concepción",
+   "name": "Loreto",
+   "population": 13580
+  },
+  {
+   "department": "Concepción",
+   "name": "San Carlos del Apa",
+   "population": 856
+  },
+  {
+   "department": "Concepción",
+   "name": "San Lázaro",
+   "population": 11192
+  },
+  {
+   "department": "Concepción",
+   "name": "Yby Yaú",
+   "population": 19468
+  },
+  {
+   "department": "Concepción",
+   "name": "Azote'y",
+   "population": 6731
+  },
+  {
+   "department": "Concepción",
+   "name": "Sargento José Félix López",
+   "population": 6153
+  },
+  {
+   "department": "Concepción",
+   "name": "San Alfredo",
+   "population": 2385
+  },
+  {
+   "department": "Concepción",
+   "name": "Paso Barreto",
+   "population": 3988
+  },
+  {
+   "department": "Concepción",
+   "name": "Arroyito",
+   "population": 8292
+  },
+  {
+   "department": "Concepción",
+   "name": "Paso Horqueta",
+   "population": 7646
+  },
+  {
+   "department": "Concepción",
+   "name": "Itacuá",
+   "population": 2377
+  },
+  {
+   "department": "San Pedro",
+   "name": "San Pedro del Ycuamandyyú",
+   "population": 32267
+  },
+  {
+   "department": "San Pedro",
+   "name": "Antequera",
+   "population": 4250
+  },
+  {
+   "department": "San Pedro",
+   "name": "Choré",
+   "population": 23548
+  },
+  {
+   "department": "San Pedro",
+   "name": "General Elizardo Aquino",
+   "population": 16971
+  },
+  {
+   "department": "San Pedro",
+   "name": "Itacurubí del Rosario",
+   "population": 10507
+  },
+  {
+   "department": "San Pedro",
+   "name": "Lima",
+   "population": 10303
+  },
+  {
+   "department": "San Pedro",
+   "name": "Nueva Germania",
+   "population": 5690
+  },
+  {
+   "department": "San Pedro",
+   "name": "San Estanislao",
+   "population": 46405
+  },
+  {
+   "department": "San Pedro",
+   "name": "San Pablo",
+   "population": 3415
+  },
+  {
+   "department": "San Pedro",
+   "name": "Tacuatí",
+   "population": 13847
+  },
+  {
+   "department": "San Pedro",
+   "name": "Unión",
+   "population": 5032
+  },
+  {
+   "department": "San Pedro",
+   "name": "25 de Diciembre",
+   "population": 8703
+  },
+  {
+   "department": "San Pedro",
+   "name": "Villa del Rosario",
+   "population": 8617
+  },
+  {
+   "department": "San Pedro",
+   "name": "General Francisco Isidoro Resquín",
+   "population": 10019
+  },
+  {
+   "department": "San Pedro",
+   "name": "Yataity del Norte",
+   "population": 10113
+  },
+  {
+   "department": "San Pedro",
+   "name": "Guajayvi",
+   "population": 28214
+  },
+  {
+   "department": "San Pedro",
+   "name": "Capiibary",
+   "population": 30570
+  },
+  {
+   "department": "San Pedro",
+   "name": "Santa Rosa del Aguaray",
+   "population": 39643
+  },
+  {
+   "department": "San Pedro",
+   "name": "Yrybucua",
+   "population": 12271
+  },
+  {
+   "department": "San Pedro",
+   "name": "Liberación",
+   "population": 19100
+  },
+  {
+   "department": "San Pedro",
+   "name": "San Vicente Pancholo",
+   "population": 11571
+  },
+  {
+   "department": "San Pedro",
+   "name": "San José del Rosario",
+   "population": 4119
+  },
+  {
+   "department": "Cordillera",
+   "name": "Caacupé",
+   "population": 50409
+  },
+  {
+   "department": "Cordillera",
+   "name": "Altos",
+   "population": 14641
+  },
+  {
+   "department": "Cordillera",
+   "name": "Arroyos y Esteros",
+   "population": 20347
+  },
+  {
+   "department": "Cordillera",
+   "name": "Atyrá",
+   "population": 15988
+  },
+  {
+   "department": "Cordillera",
+   "name": "Caraguatay",
+   "population": 10143
+  },
+  {
+   "department": "Cordillera",
+   "name": "Emboscada",
+   "population": 21182
+  },
+  {
+   "department": "Cordillera",
+   "name": "Eusebio Ayala",
+   "population": 19334
+  },
+  {
+   "department": "Cordillera",
+   "name": "Isla Pucú",
+   "population": 5304
+  },
+  {
+   "department": "Cordillera",
+   "name": "Itacurubí de la Cordillera",
+   "population": 8961
+  },
+  {
+   "department": "Cordillera",
+   "name": "Juan de Mena",
+   "population": 6341
+  },
+  {
+   "department": "Cordillera",
+   "name": "Loma Grande",
+   "population": 3836
+  },
+  {
+   "department": "Cordillera",
+   "name": "Mbocayaty del Yhaguy",
+   "population": 3316
+  },
+  {
+   "department": "Cordillera",
+   "name": "Nueva Colombia",
+   "population": 4602
+  },
+  {
+   "department": "Cordillera",
+   "name": "Piribebuy",
+   "population": 25758
+  },
+  {
+   "department": "Cordillera",
+   "name": "Primero de Marzo",
+   "population": 4997
+  },
+  {
+   "department": "Cordillera",
+   "name": "San Bernardino",
+   "population": 12216
+  },
+  {
+   "department": "Cordillera",
+   "name": "Santa Elena",
+   "population": 4346
+  },
+  {
+   "department": "Cordillera",
+   "name": "Tobatí",
+   "population": 27435
+  },
+  {
+   "department": "Cordillera",
+   "name": "Valenzuela",
+   "population": 5907
+  },
+  {
+   "department": "Cordillera",
+   "name": "San José Obrero",
+   "population": 2974
+  },
+  {
+   "department": "Guairá",
+   "name": "Villarrica",
+   "population": 62565
+  },
+  {
+   "department": "Guairá",
+   "name": "Borja",
+   "population": 7758
+  },
+  {
+   "department": "Guairá",
+   "name": "Capitán Mauricio José Troche",
+   "population": 9590
+  },
+  {
+   "department": "Guairá",
+   "name": "Coronel Martínez",
+   "population": 4505
+  },
+  {
+   "department": "Guairá",
+   "name": "Félix Pérez Cardozo",
+   "population": 4805
+  },
+  {
+   "department": "Guairá",
+   "name": "Gral. Eugenio A. Garay",
+   "population": 6752
+  },
+  {
+   "department": "Guairá",
+   "name": "Independencia",
+   "population": 19235
+  },
+  {
+   "department": "Guairá",
+   "name": "Itapé",
+   "population": 6070
+  },
+  {
+   "department": "Guairá",
+   "name": "Iturbe",
+   "population": 7166
+  },
+  {
+   "department": "Guairá",
+   "name": "José Fassardi",
+   "population": 5139
+  },
+  {
+   "department": "Guairá",
+   "name": "Mbocayaty",
+   "population": 8003
+  },
+  {
+   "department": "Guairá",
+   "name": "Natalicio Talavera",
+   "population": 3843
+  },
+  {
+   "department": "Guairá",
+   "name": "Ñumí",
+   "population": 2864
+  },
+  {
+   "department": "Guairá",
+   "name": "San Salvador",
+   "population": 2565
+  },
+  {
+   "department": "Guairá",
+   "name": "Yataity",
+   "population": 4173
+  },
+  {
+   "department": "Guairá",
+   "name": "Doctor Bottrell",
+   "population": 1321
+  },
+  {
+   "department": "Guairá",
+   "name": "Paso Yobai",
+   "population": 20562
+  },
+  {
+   "department": "Guairá",
+   "name": "Tebicuary",
+   "population": 2639
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Coronel Oviedo",
+   "population": 98323
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Caaguazú",
+   "population": 98200
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Carayaó",
+   "population": 10832
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Dr. Cecilio Báez",
+   "population": 4812
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Santa Rosa del Mbutuy",
+   "population": 8467
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Dr. Juan Manuel Frutos",
+   "population": 20451
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Repatriación",
+   "population": 24459
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Nueva Londres",
+   "population": 3594
+  },
+  {
+   "department": "Caaguazú",
+   "name": "San Joaquín",
+   "population": 11949
+  },
+  {
+   "department": "Caaguazú",
+   "name": "San José de los Arroyos",
+   "population": 13926
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Yhú",
+   "population": 22524
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Dr. J. Eulogio Estigarribia",
+   "population": 38894
+  },
+  {
+   "department": "Caaguazú",
+   "name": "R.I. 3 Corrales",
+   "population": 6021
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Raúl Arsenio Oviedo",
+   "population": 12543
+  },
+  {
+   "department": "Caaguazú",
+   "name": "José Domingo Ocampos",
+   "population": 7459
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Mariscal Francisco Solano López",
+   "population": 5338
+  },
+  {
+   "department": "Caaguazú",
+   "name": "La Pastora",
+   "population": 3294
+  },
+  {
+   "department": "Caaguazú",
+   "name": "3 de Febrero",
+   "population": 7492
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Simón Bolivar",
+   "population": 4740
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Vaquería",
+   "population": 10498
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Tembiaporá",
+   "population": 12877
+  },
+  {
+   "department": "Caaguazú",
+   "name": "Nueva Toledo",
+   "population": 4826
+  },
+  {
+   "department": "Caazapá",
+   "name": "Caazapá",
+   "population": 23654
+  },
+  {
+   "department": "Caazapá",
+   "name": "Abaí",
+   "population": 21964
+  },
+  {
+   "department": "Caazapá",
+   "name": "Buena Vista",
+   "population": 4296
+  },
+  {
+   "department": "Caazapá",
+   "name": "Dr. Moisés S. Bertoni",
+   "population": 3815
+  },
+  {
+   "department": "Caazapá",
+   "name": "Gral. Higinio Morínigo",
+   "population": 4728
+  },
+  {
+   "department": "Caazapá",
+   "name": "Maciel",
+   "population": 3461
+  },
+  {
+   "department": "Caazapá",
+   "name": "San Juan Nepomuceno",
+   "population": 28233
+  },
+  {
+   "department": "Caazapá",
+   "name": "Tavaí",
+   "population": 16409
+  },
+  {
+   "department": "Caazapá",
+   "name": "Yegros",
+   "population": 5072
+  },
+  {
+   "department": "Caazapá",
+   "name": "Yuty",
+   "population": 14924
+  },
+  {
+   "department": "Caazapá",
+   "name": "3 de Mayo",
+   "population": 12923
+  },
+  {
+   "department": "Itapúa",
+   "name": "Encarnación",
+   "population": 106842
+  },
+  {
+   "department": "Itapúa",
+   "name": "Bella Vista",
+   "population": 10447
+  },
+  {
+   "department": "Itapúa",
+   "name": "Cambyretá",
+   "population": 47717
+  },
+  {
+   "department": "Itapúa",
+   "name": "Capitán Meza",
+   "population": 9253
+  },
+  {
+   "department": "Itapúa",
+   "name": "Capitán Miranda",
+   "population": 9528
+  },
+  {
+   "department": "Itapúa",
+   "name": "Nueva Alborada",
+   "population": 4896
+  },
+  {
+   "department": "Itapúa",
+   "name": "Carmen del Paraná",
+   "population": 6417
+  },
+  {
+   "department": "Itapúa",
+   "name": "Coronel Bogado",
+   "population": 17192
+  },
+  {
+   "department": "Itapúa",
+   "name": "Carlos Antonio López",
+   "population": 13792
+  },
+  {
+   "department": "Itapúa",
+   "name": "Natalio",
+   "population": 14865
+  },
+  {
+   "department": "Itapúa",
+   "name": "Fram",
+   "population": 8357
+  },
+  {
+   "department": "Itapúa",
+   "name": "General Artigas",
+   "population": 8623
+  },
+  {
+   "department": "Itapúa",
+   "name": "General Delgado",
+   "population": 5695
+  },
+  {
+   "department": "Itapúa",
+   "name": "Hohenau",
+   "population": 12809
+  },
+  {
+   "department": "Itapúa",
+   "name": "Jesús",
+   "population": 5197
+  },
+  {
+   "department": "Itapúa",
+   "name": "José Leandro Oviedo",
+   "population": 2417
+  },
+  {
+   "department": "Itapúa",
+   "name": "Obligado",
+   "population": 13606
+  },
+  {
+   "department": "Itapúa",
+   "name": "Mayor Julio Dionisio Otaño",
+   "population": 10101
+  },
+  {
+   "department": "Itapúa",
+   "name": "San Cosme y Damián",
+   "population": 7397
+  },
+  {
+   "department": "Itapúa",
+   "name": "San Pedro del Paraná",
+   "population": 22318
+  },
+  {
+   "department": "Itapúa",
+   "name": "San Rafael del Paraná",
+   "population": 14166
+  },
+  {
+   "department": "Itapúa",
+   "name": "Trinidad",
+   "population": 7972
+  },
+  {
+   "department": "Itapúa",
+   "name": "Edelira",
+   "population": 17362
+  },
+  {
+   "department": "Itapúa",
+   "name": "Tomás Romero Pereira",
+   "population": 25419
+  },
+  {
+   "department": "Itapúa",
+   "name": "Alto Verá",
+   "population": 11503
+  },
+  {
+   "department": "Itapúa",
+   "name": "La Paz",
+   "population": 2669
+  },
+  {
+   "department": "Itapúa",
+   "name": "Yatytay",
+   "population": 8651
+  },
+  {
+   "department": "Itapúa",
+   "name": "San Juan del Paraná",
+   "population": 9083
+  },
+  {
+   "department": "Itapúa",
+   "name": "Pirapó",
+   "population": 6075
+  },
+  {
+   "department": "Itapúa",
+   "name": "Itapúa Poty",
+   "population": 9273
+  },
+  {
+   "department": "Misiones",
+   "name": "San Juan Bautista de las Misiones",
+   "population": 20979
+  },
+  {
+   "department": "Misiones",
+   "name": "Ayolas",
+   "population": 17337
+  },
+  {
+   "department": "Misiones",
+   "name": "San Ignacio",
+   "population": 29430
+  },
+  {
+   "department": "Misiones",
+   "name": "San Miguel",
+   "population": 5116
+  },
+  {
+   "department": "Misiones",
+   "name": "San Patricio",
+   "population": 3193
+  },
+  {
+   "department": "Misiones",
+   "name": "Santa María",
+   "population": 7481
+  },
+  {
+   "department": "Misiones",
+   "name": "Santa Rosa",
+   "population": 16403
+  },
+  {
+   "department": "Misiones",
+   "name": "Santiago",
+   "population": 5995
+  },
+  {
+   "department": "Misiones",
+   "name": "Villa Florida",
+   "population": 3066
+  },
+  {
+   "department": "Misiones",
+   "name": "Yabebyry",
+   "population": 2142
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Paraguarí",
+   "population": 20678
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Acahay",
+   "population": 12646
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Caapucú",
+   "population": 6045
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Caballero",
+   "population": 4795
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Carapeguá",
+   "population": 29351
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Escobar",
+   "population": 4747
+  },
+  {
+   "department": "Paraguarí",
+   "name": "La Colmena",
+   "population": 5254
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Mbuyapey",
+   "population": 6838
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Pirayú",
+   "population": 17419
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Quiindy",
+   "population": 14488
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Quyquyhó",
+   "population": 4589
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Roque González de Santa Cruz",
+   "population": 9637
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Sapucái",
+   "population": 5218
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Tebicuary-mí",
+   "population": 3225
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Yaguarón",
+   "population": 29242
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Ybycuí",
+   "population": 17972
+  },
+  {
+   "department": "Paraguarí",
+   "name": "Ybytymí",
+   "population": 5360
+  },
+  {
+   "department": "Paraguarí",
+   "name": "María Antonia",
+   "population": 2968
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Ciudad del Este",
+   "population": 325819
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Presidente Franco",
+   "population": 88744
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Domingo Martínez de Irala",
+   "population": 5035
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Dr. Juan León Mallorquín",
+   "population": 16144
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Hernandarias",
+   "population": 83285
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Itakyry",
+   "population": 27340
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Juan E. O'leary",
+   "population": 16092
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Ñacunday",
+   "population": 6468
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Yguazú",
+   "population": 8131
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Los Cedrales",
+   "population": 7258
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Minga Guazú",
+   "population": 81072
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "San Cristóbal",
+   "population": 8563
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Santa Rita",
+   "population": 27249
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Naranjal",
+   "population": 6608
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Santa Rosa del Monday",
+   "population": 5923
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Minga Porá",
+   "population": 11959
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Mbaracayú",
+   "population": 6406
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "San Alberto",
+   "population": 11162
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Iruña",
+   "population": 3943
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Santa Fe del Paraná",
+   "population": 3981
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Tavapy",
+   "population": 6903
+  },
+  {
+   "department": "Alto Paraná",
+   "name": "Dr. Raúl Peña",
+   "population": 5617
+  },
+  {
+   "department": "Central",
+   "name": "Areguá",
+   "population": 70298
+  },
+  {
+   "department": "Central",
+   "name": "Capiatá",
+   "population": 236999
+  },
+  {
+   "department": "Central",
+   "name": "Fernando de la Mora",
+   "population": 110255
+  },
+  {
+   "department": "Central",
+   "name": "Guarambaré",
+   "population": 27695
+  },
+  {
+   "department": "Central",
+   "name": "Itá",
+   "population": 69049
+  },
+  {
+   "department": "Central",
+   "name": "Itauguá",
+   "population": 93213
+  },
+  {
+   "department": "Central",
+   "name": "Lambaré",
+   "population": 127150
+  },
+  {
+   "department": "Central",
+   "name": "Limpio",
+   "population": 139652
+  },
+  {
+   "department": "Central",
+   "name": "Luque",
+   "population": 259705
+  },
+  {
+   "department": "Central",
+   "name": "Mariano Roque Alonso",
+   "population": 85133
+  },
+  {
+   "department": "Central",
+   "name": "Nueva Italia",
+   "population": 9941
+  },
+  {
+   "department": "Central",
+   "name": "Ñemby",
+   "population": 116383
+  },
+  {
+   "department": "Central",
+   "name": "San Antonio",
+   "population": 57843
+  },
+  {
+   "department": "Central",
+   "name": "San Lorenzo",
+   "population": 225395
+  },
+  {
+   "department": "Central",
+   "name": "Villa Elisa",
+   "population": 71383
+  },
+  {
+   "department": "Central",
+   "name": "Villeta",
+   "population": 35941
+  },
+  {
+   "department": "Central",
+   "name": "Ypacaraí",
+   "population": 21030
+  },
+  {
+   "department": "Central",
+   "name": "Ypané",
+   "population": 66700
+  },
+  {
+   "department": "Central",
+   "name": "J. Augusto Saldívar",
+   "population": 60162
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Pilar",
+   "population": 34741
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Alberdi",
+   "population": 7536
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Cerrito",
+   "population": 4340
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Desmochados",
+   "population": 1171
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Gral. José Eduvigis Díaz",
+   "population": 3164
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Guazú-Cuá",
+   "population": 1393
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Humaitá",
+   "population": 2391
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Isla Umbú",
+   "population": 2166
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Laureles",
+   "population": 2323
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Mayor José Dejesús Martínez",
+   "population": 3037
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Paso de Patria",
+   "population": 1809
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "San Juan Bautista de Ñeembucú",
+   "population": 3803
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Tacuaras",
+   "population": 2717
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Villa Franca",
+   "population": 1138
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Villa Oliva",
+   "population": 3377
+  },
+  {
+   "department": "Ñeembucú",
+   "name": "Villalbín",
+   "population": 1613
+  },
+  {
+   "department": "Amambay",
+   "name": "Pedro Juan Caballero",
+   "population": 127437
+  },
+  {
+   "department": "Amambay",
+   "name": "Bella Vista",
+   "population": 12027
+  },
+  {
+   "department": "Amambay",
+   "name": "Capitán Bado",
+   "population": 18851
+  },
+  {
+   "department": "Amambay",
+   "name": "Zanja Pytã",
+   "population": 5419
+  },
+  {
+   "department": "Amambay",
+   "name": "Karapaí",
+   "population": 4988
+  },
+  {
+   "department": "Amambay",
+   "name": "Cerro Corá",
+   "population": 10690
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Salto del Guairá",
+   "population": 28553
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Corpus Christi",
+   "population": 7739
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Villa Curuguaty",
+   "population": 33561
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Villa Ygatimí",
+   "population": 13074
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Itanará",
+   "population": 2191
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Ypejhú",
+   "population": 8607
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Francisco Caballero Alvarez",
+   "population": 7842
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Katueté",
+   "population": 10774
+  },
+  {
+   "department": "Canindeyú",
+   "name": "La Paloma del Espíritu Santo",
+   "population": 7284
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Nueva Esperanza",
+   "population": 11069
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Yasy Cañy",
+   "population": 20399
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Ybyrarobaná",
+   "population": 8468
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Yby Pytá",
+   "population": 12284
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Maracaná",
+   "population": 15357
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Puerto Adela",
+   "population": 1326
+  },
+  {
+   "department": "Canindeyú",
+   "name": "Laurel",
+   "population": 2586
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Benjamín Aceval",
+   "population": 22008
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Puerto Pinasco",
+   "population": 9241
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Villa Hayes",
+   "population": 47967
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Nanawa",
+   "population": 6005
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "José Falcón",
+   "population": 3693
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Tte. 1° Manuel Irala Fernández",
+   "population": 20145
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Teniente Esteban Martínez",
+   "population": 2743
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "General José María Bruguez",
+   "population": 2491
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Campo Aceval",
+   "population": 5848
+  },
+  {
+   "department": "Presidente Hayes",
+   "name": "Nueva Asunción",
+   "population": 3172
+  },
+  {
+   "department": "Boquerón",
+   "name": "Mariscal José Félix Estigarribia",
+   "population": 13174
+  },
+  {
+   "department": "Boquerón",
+   "name": "Filadelfia",
+   "population": 20595
+  },
+  {
+   "department": "Boquerón",
+   "name": "Loma Plata",
+   "population": 20545
+  },
+  {
+   "department": "Boquerón",
+   "name": "Boquerón",
+   "population": 16764
+  },
+  {
+   "department": "Alto Paraguay",
+   "name": "Fuerte Olimpo",
+   "population": 4586
+  },
+  {
+   "department": "Alto Paraguay",
+   "name": "Puerto Casado",
+   "population": 5439
+  },
+  {
+   "department": "Alto Paraguay",
+   "name": "Bahía Negra",
+   "population": 2768
+  },
+  {
+   "department": "Alto Paraguay",
+   "name": "Carmelo Peralta",
+   "population": 4402
+  }
+ ]
+}

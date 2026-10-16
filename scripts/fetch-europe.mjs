@@ -7,7 +7,7 @@ const root=path.resolve(process.argv[2]||'artifacts/europe-source');
 fs.mkdirSync(root,{recursive:true});
 const manifest={retrieved:new Date().toISOString().slice(0,10),files:{}};
 const pinned=new Map();
-for(const country of ['united-kingdom','spain','france','italy','iceland','turkey','india']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
+for(const country of ['united-kingdom','spain','france','italy','iceland','turkey','india','chile','peru','paraguay']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
 // Some servers cut long transfers; fetch those in 4 MB ranges with retries.
 async function ranged(url){
  const size=+(await fetch(url,{method:'HEAD'})).headers.get('content-length'),parts=[];
@@ -48,10 +48,18 @@ await geoBoundaries('ita-adm0.geojson','ITA','ADM0','https://creativecommons.org
 // India: the 36 states and union territories as DataMeet and the Election Commission draw them
 // (India's official boundaries, including its claims), CC BY 2.5 India.
 await geoBoundaries('ind-adm1.geojson','IND','ADM1','https://creativecommons.org/licenses/by/2.5/in/');
+// Chile: the 345 communes of the Library of the National Congress (BCN), via geoBoundaries (CC BY
+// 3.0 IGO), and OCHA's table of Chile's official codes (CUT) for regions, provinces and communes.
+await geoBoundaries('chl-adm3.geojson','CHL','ADM3','https://creativecommons.org/licenses/by/3.0/igo/');
+await download('chl-ocha-tabular.xlsx','https://data.humdata.org/dataset/41d5a318-783f-4da4-8960-ab938cc8a12f/resource/76c05c15-5c0e-46fa-98f3-bc4a4afc15a8/download/chl_adminboundaries_tabulardata.xlsx',{provider:'OCHA, Chile administrative names and P-codes (from INE Chile)',license:'Creative Commons Attribution for Intergovernmental Organisations',licenseURL:'https://creativecommons.org/licenses/by/3.0/igo/legalcode',use:'Official codes (CUT) for the communes, matched by name.'});
+// Peru: IGN's departments, provinces and districts (2020), and Paraguay: INE's departments and
+// districts (2026), both as OCHA publishes them (CC BY-IGO).
+await download('per-ign-admin-boundaries.geojson.zip','https://data.humdata.org/dataset/54fc7f4d-f4c0-4892-91f6-2fe7c1ecf363/resource/63647792-0951-40d2-a30e-4a0e60f7a176/download/per_admin_boundaries.geojson.zip',{provider:'Instituto Geográfico Nacional del Perú (IGN), via OCHA Common Operational Datasets (cod-ab-per), valid from 14 July 2020',license:'Creative Commons Attribution for Intergovernmental Organisations',licenseURL:'https://creativecommons.org/licenses/by/3.0/igo/legalcode'});
+await download('pry-ine-admin-boundaries.geojson.zip','https://data.humdata.org/dataset/212cd82f-bcb8-445f-8b32-aa194387f6c3/resource/9d74ce1f-40d9-488b-8e7c-b710c1997f01/download/pry_admin_boundaries.geojson.zip',{provider:'Instituto Nacional de Estadística del Paraguay (INE, formerly DGEEC), via OCHA Common Operational Datasets (cod-ab-pry), valid from 29 July 2026',license:'Creative Commons Attribution for Intergovernmental Organisations',licenseURL:'https://creativecommons.org/licenses/by/3.0/igo/legalcode'});
 // Neighbouring countries: used only to tell land frontier from coastline (an outline
 // edge with foreign land just beyond it is a frontier). None of their geometry is shipped.
 // The most detailed land-only level is used where ADM0 is coarse (Belgium, Ireland, Slovenia).
-for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1'],['SUR','ADM0'],['BRA','ADM0'],['CYP','ADM0'],['GRC','ADM0'],['BGR','ADM0'],['GEO','ADM0'],['ARM','ADM0'],['AZE','ADM0'],['IRN','ADM1'],['IRQ','ADM2'],['SYR','ADM0'],['PAK','ADM0'],['AFG','ADM0'],['NPL','ADM0'],['BTN','ADM0'],['BGD','ADM0'],['MMR','ADM0']]){
+for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1'],['SUR','ADM0'],['BRA','ADM0'],['CYP','ADM0'],['GRC','ADM0'],['BGR','ADM0'],['GEO','ADM0'],['ARM','ADM0'],['AZE','ADM0'],['IRN','ADM1'],['IRQ','ADM2'],['SYR','ADM0'],['PAK','ADM0'],['AFG','ADM0'],['NPL','ADM0'],['BTN','ADM0'],['BGD','ADM0'],['MMR','ADM0'],['BOL','ADM0'],['ECU','ADM0'],['COL','ADM0']]){
  const meta=await metadata('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/');
  await download('neighbour-'+iso.toLowerCase()+'-'+level.toLowerCase()+'.geojson',meta.gjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,via:'geoBoundaries gbOpen '+iso+' '+level,use:'Classifies land frontier; no geometry is copied.'});
 }

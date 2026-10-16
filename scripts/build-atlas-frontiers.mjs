@@ -43,13 +43,15 @@ const rings=Object.fromEntries(Object.entries(outlines).map(([c,d])=>[c,d.featur
 const inside=Object.fromEntries(Object.entries(rings).map(([c,polys])=>[c,landIndex(polys.flat())]));
 const signedArea=ring=>ring.slice(1).reduce((s,p,i)=>s+ring[i][0]*p[1]-p[0]*ring[i][1],0);
 
-// Claims that overlap: China's frontier inside India's outline (developer mode's India, with
-// India's official boundaries) is hidden while India's map is open.
-const indiaFile='dist/data/europe/india/first.bin',inIndia=fs.existsSync(indiaFile)?landIndex(load(indiaFile).regions.features.flatMap(f=>polygons(f.geometry)).flat()):()=>false;
+// Claims that overlap: a frontier line inside the outline of a country the regional build draws
+// with its own claims (developer mode's India, Chile, Paraguay and Peru) is that country's claim
+// line seen from the other side (China's in Arunachal Pradesh, Argentina's in the Southern
+// Patagonian Ice Field), hidden while that country's map is open.
+const claimants=['india','chile','paraguay','peru'].flatMap(country=>{const file='dist/data/europe/'+country+'/first.bin';return fs.existsSync(file)?[{country,inside:landIndex(load(file).regions.features.flatMap(f=>polygons(f.geometry)).flat())}]:[];});
 function claimRuns(path,country){
- const inside=(a,b)=>{if(country!=='china')return false;const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return false;const m=[(a[0]+b[0])/2,(a[1]+b[1])/2];return [1,-1].every(side=>inIndia([m[0]-dy/len*side*100/111195/c,m[1]+dx/len*side*100/111195]));};
+ const claimant=(a,b)=>{const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return null;const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],sides=[1,-1].map(side=>[m[0]-dy/len*side*100/111195/c,m[1]+dx/len*side*100/111195]);return claimants.find(k=>k.country!==country&&sides.every(p=>k.inside(p)))?.country||null;};
  const runs=[];let current=null;
- for(let i=1;i<path.length;i++){const claim=inside(path[i-1],path[i])?'india':null;if(!current||claim!==current.claim){current={claim,coordinates:[path[i-1]]};runs.push(current);}current.coordinates.push(path[i]);}
+ for(let i=1;i<path.length;i++){const claim=claimant(path[i-1],path[i]);if(!current||claim!==current.claim){current={claim,coordinates:[path[i-1]]};runs.push(current);}current.coordinates.push(path[i]);}
  return runs;
 }
 const accepted=[],features=[];

@@ -1,0 +1,17 @@
+{
+ "retrieved": "2026-10-16",
+ "sources": {
+  "mappedArea": {
+   "title": "Boundary-derived area",
+   "url": "data/europe/chile/sources.json",
+   "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+  },
+  "clPopulation": {
+   "title": "Censo de Población y Vivienda 2024: personas censadas por comuna (Instituto Nacional de Estadísticas (INE), Chile)",
+   "url": "https://censo2024.ine.gob.cl/resultados/",
+   "data": "https://storage.googleapis.com/bktdescargascenso2024/viv_hog_per_censo2024.zip",
+   "license": "INE Chile open data (attribution)",
+   "note": "Persons enumerated, counted per commune from the census microdata."
+  }
+ }
+}

@@ -5,7 +5,10 @@ import {configurations} from '../dist/europe.mjs';
 
 // Outline-only countries: one level-1 region per country, drawn land frontiers, no coastlines.
 const root='dist/data/europe',read=(c,n)=>JSON.parse(gunzipSync(fs.readFileSync(root+'/'+c+'/'+n)));
-const countries=['united-kingdom','spain','france','italy','iceland','india','turkey'];
+const countries=['united-kingdom','spain','france','italy','iceland','india','chile','paraguay','peru','turkey'];
+// Countries reconciled with outlines drawn outside this build, and the countries whose claims
+// their portals carry apart.
+const claimsAgainst={india:['china'],chile:['argentina'],paraguay:['argentina','brazil'],peru:[]};
 assert.deepEqual(Object.keys(configurations),countries);
 const polygons=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
 function inRing(p,ring){let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if(a[1]>p[1]!==b[1]>p[1]&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
@@ -13,27 +16,28 @@ const contains=(g,p)=>polygons(g).some(poly=>inRing(p,poly[0])&&!poly.slice(1).s
 const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1]-b[1])*111195;
 const outline={},lines={};
 // Land frontier lengths, excluding the France–Spain and France–Italy seams France holds.
-const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450],iceland:[0,0],india:[13300,13500],turkey:[2800,3000]};
+const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450],iceland:[0,0],india:[13300,13500],chile:[1450,1600],paraguay:[740,800],peru:[3150,3350],turkey:[2800,3000]};
 // Pieces: Ireland and Cyprus (Akrotiri, Dhekelia in four pieces, its two Cypriot enclaves);
 // Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea,
 // Llívia, French Guiana (Suriname, Brazil, and five short pieces at the Brazilian tripoint),
 // Saint-Martin; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
 // Turkey: Greece and Bulgaria from the Aegean to the Black Sea; Georgia to Syria from the Black
 // Sea to the Mediterranean. Iceland has no land frontier.
-const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:64,turkey:2};
+const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:64,chile:14,paraguay:8,peru:59,turkey:2};
 // The six Meuse villages destroyed at Verdun in 1916 remain communes with no inhabitants.
 const zeroPopulation=new Set(['FR-C-55039','FR-C-55050','FR-C-55139','FR-C-55189','FR-C-55239','FR-C-55307']);
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
 // Spain's condominiums and the islets under central administration have no registered population.
-const subdivided={'united-kingdom':{levels:['Nation or region','County or unitary authority','District'],counts:{1:28,2:226,3:164},bundled:3,noPopulation:r=>['GB-O-IO','GB-O-GS','GB-O-SH-AC','GB-O-SBA','GB-O-SBA-A','GB-O-SBA-D'].includes(r.id)},france:{levels:['Region','Department','Commune'],counts:{1:26,2:191,3:34875},bundled:2,noPopulation:r=>/^FR-(R-98[49]|T-)/.test(r.id)},italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},iceland:{levels:['Region','Municipality'],counts:{1:8,2:61},bundled:2},india:{levels:['State or union territory'],counts:{1:36},bundled:1},turkey:{levels:['Statistical region','Province','District'],counts:{1:12,2:81,3:973},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
+const subdivided={'united-kingdom':{levels:['Nation or region','County or unitary authority','District'],counts:{1:28,2:226,3:164},bundled:3,noPopulation:r=>['GB-O-IO','GB-O-GS','GB-O-SH-AC','GB-O-SBA','GB-O-SBA-A','GB-O-SBA-D'].includes(r.id)},france:{levels:['Region','Department','Commune'],counts:{1:26,2:191,3:34875},bundled:2,noPopulation:r=>/^FR-(R-98[49]|T-)/.test(r.id)},italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},iceland:{levels:['Region','Municipality'],counts:{1:8,2:61},bundled:2},india:{levels:['State or union territory'],counts:{1:36},bundled:1},chile:{levels:['Region','Province','Commune'],counts:{1:16,2:56,3:345},bundled:2},paraguay:{levels:['Department','District'],counts:{1:18,2:263},bundled:2},peru:{levels:['Department','Province','District'],counts:{1:25,2:196,3:1873},bundled:2},turkey:{levels:['Statistical region','Province','District'],counts:{1:12,2:81,3:973},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
 for(const country of countries){
  const catalogue=read(country,'catalogue.bin'),first=read(country,'first.bin'),context=read(country,'context.bin');
  // The portal: the home territory, then each overseas territory with its id and bounds.
  assert(context.features.every(f=>f.properties.country===country),country+' portal features');
  assert(!context.features[0].properties.region,country+' portal starts with the home territory');
  // India's portal adds the land both India and China claim, hidden while China's map is open.
- const territories=context.features.slice(1).filter(f=>country!=='india');
- if(country==='india')assert(context.features.length>2&&context.features.slice(1).every(f=>f.properties.claimedBy==='china'),'India portal: home, then the claims China holds');
+ const territories=context.features.slice(1).filter(()=>!claimsAgainst[country]);
+ if(claimsAgainst[country])assert(context.features.slice(1).every(f=>claimsAgainst[country].includes(f.properties.claimedBy)),country+' portal: home, then the claims its references hold');
+ if(country==='india'||country==='chile')assert(context.features.length>1,country+' has claims shared with '+claimsAgainst[country]);
  for(const t of territories){const r=catalogue.records.find(r=>r.id===t.properties.region);assert(r?.overseas&&r.level===1,t.properties.region+' is an overseas territory');assert.deepEqual(t.properties.bounds,[...r.bounds[0],...r.bounds[1]],r.id+' portal bounds');}
  assert.equal(territories.length,catalogue.records.filter(r=>r.overseas).length,country+' every overseas territory has its own portal shape');
  assert.deepEqual(territories.filter(t=>t.properties.claimedBy).map(t=>t.properties.region+':'+t.properties.claimedBy),country==='united-kingdom'?['GB-O-FK:argentina']:[],'Only the Falklands are drawn by another atlas country');

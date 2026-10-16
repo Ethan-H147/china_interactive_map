@@ -1,0 +1,17 @@
+{
+ "retrieved": "2026-10-16",
+ "sources": {
+  "mappedArea": {
+   "title": "Boundary-derived area",
+   "url": "data/europe/peru/sources.json",
+   "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+  },
+  "pePopulation": {
+   "title": "INEI population estimates by district for 2025, as recorded in OpenStreetMap",
+   "url": "https://www.inei.gob.pe/",
+   "data": "scripts/statistics-sources/europe/peru-osm-2025.json",
+   "license": "Open Data Commons Open Database License 1.0 (OpenStreetMap)",
+   "note": "Districts created after IGN's 2020 boundaries are counted in the district they were created from."
+  }
+ }
+}

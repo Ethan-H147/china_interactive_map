@@ -91,7 +91,21 @@ async function turkey(){
  return {records:unique,unplaced:outside,sources:[{id:'osm-places',title:places.title,url:'https://www.openstreetmap.org/copyright',license:'Open Data Commons Open Database License 1.0'}],selection:'Every OpenStreetMap city (province centre) in Türkiye. Towns are left out: each district is named after its own central town. Populations are not shown: TÜİK publishes city populations only in tables that cannot be retained by script.'};
 }
 
-for(const [country,build] of [['iceland',iceland],['turkey',turkey]]){
+// Chile and Peru: their communes and districts are municipalities named after their own towns, so
+// towns are not shown; the national and regional capitals, which often span several of them
+// (Greater Santiago, Lima, Greater Concepción), are dots of their own, from OpenStreetMap, without
+// populations (INE's and INEI's urban-area figures are not openly downloadable by city). Paraguay's
+// capitals each match one district, so it has none.
+function capitals(country,idPrefix){
+ const list=JSON.parse(fs.readFileSync(path.join(retained,'latam-capitals-osm.json')))[country];
+ const catalogue=readBin(`dist/data/europe/${country}/catalogue.bin`),parents=new Map(catalogue.records.map(r=>[r.id,r.parent]));
+ const lowest=Object.values(catalogue.chunks).filter(c=>c.level===3).flatMap(c=>readBin(`dist/data/europe/${country}/`+c.file).regions.features),unit=locator(lowest);
+ const records=list.map(p=>{const parentId=unit(p.center);assert(parentId,p.name+' lies in a mapped unit');return {id:idPrefix+p.osm,en:p.en||p.name,name:p.name,kind:p.capital==='2'?'National capital':'Regional capital',center:p.center,parentId,provinceId:parents.get(parents.get(parentId)),aliases:p.en&&p.en!==p.name?[p.en]:[],minzoom:p.capital==='2'?3:5};});
+ return {records,unplaced:[],sources:[{id:'osm-capitals',title:'National and regional capitals in OpenStreetMap',url:'https://www.openstreetmap.org/copyright',license:'Open Data Commons Open Database License 1.0'}],selection:'The national capital and every regional capital, from OpenStreetMap. Towns are left out: each '+(country==='chile'?'commune':'district')+' is named after its own town. Populations are not shown.'};
+}
+const chile=()=>capitals('chile','CL-S-'),peru=()=>capitals('peru','PE-S-');
+
+for(const [country,build] of [['iceland',iceland],['turkey',turkey],['chile',chile],['peru',peru]]){
  const {records,unplaced,sources,selection}=await build();
  fs.writeFileSync(`dist/data/europe/${country}/settlements.json`,JSON.stringify({country,records,sources,selection})+'\n');
  // The settlement layer also reads extra place names and flags; these countries have none yet.

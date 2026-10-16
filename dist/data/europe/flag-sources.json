@@ -83,6 +83,42 @@
       "width": 900,
       "height": 600,
       "sha256": "95d7239707482165fbc0f685d5f493633639f16771c1fef9701f7ee66dcdf343"
+    },
+    "chile": {
+      "file": "vendor/flag-cl.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Chile.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-cl.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Chile.svg",
+      "width": 900,
+      "height": 600,
+      "sha256": "ca4d50dcf36926c82f02b895975f351a639b0aa1b91bb6ef776f4f07f225cc34"
+    },
+    "paraguay": {
+      "file": "vendor/flag-py.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Paraguay.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Paraguay.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-py.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Paraguay.svg",
+      "width": 1200,
+      "height": 660,
+      "sha256": "f564b33791a5612195cbbb8e58d4d7ba4235cecc9778111404bb3758bd144441"
+    },
+    "peru": {
+      "file": "vendor/flag-pe.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Peru.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-pe.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Peru.svg",
+      "width": 900,
+      "height": 600,
+      "sha256": "4358cec747829a0009dac86055e74e60b05e6eb57eba5f7bc30da2c88168a7f2"
     }
   }
 }

@@ -1,0 +1,491 @@
+{
+  "retrieved": "2026-10-16",
+  "counts": {
+    "1": 25,
+    "2": 196,
+    "3": 1873
+  },
+  "coverage": "Peru's 24 departments and the Constitutional Province of Callao, 196 provinces and 1,873 districts, from the National Geographic Institute (IGN) boundaries published by OCHA (July 2020; 19 districts created since are within their former districts). Spanish names follow OpenStreetMap for the same UBIGEO codes. Edges within 3 km of Brazil's and Chile's outlines are moved onto them.",
+  "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
+  "frontierKm": 3264,
+  "seamReports": {
+    "peru-brazil": {
+      "changedEdges": 7055,
+      "maxDisplacementMetres": 2556.5534777397374,
+      "changedRegions": [
+        "PE-D-160502",
+        "PE-D-250101",
+        "PE-D-170301",
+        "PE-D-250104",
+        "PE-D-250401",
+        "PE-D-160511",
+        "PE-D-160403",
+        "PE-D-250204"
+      ]
+    },
+    "peru-chile": {
+      "changedEdges": 46,
+      "maxDisplacementMetres": 2554.0408875370345,
+      "changedRegions": [
+        "PE-D-230111",
+        "PE-D-230107",
+        "PE-D-230101"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "file": "per-ign-admin-boundaries.geojson.zip",
+      "provider": "Instituto Geográfico Nacional del Perú (IGN), via OCHA Common Operational Datasets (cod-ab-per), valid from 14 July 2020",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations",
+      "licenseURL": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+      "url": "https://data.humdata.org/dataset/54fc7f4d-f4c0-4892-91f6-2fe7c1ecf363/resource/63647792-0951-40d2-a30e-4a0e60f7a176/download/per_admin_boundaries.geojson.zip",
+      "sha256": "2f0ec51b7a0899b407546aa644621e1c3255cba59fdda76fcde6975ca6baafb3",
+      "bytes": 45145713
+    },
+    {
+      "file": "ne-10m-land-boundaries.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth 1:10m admin 0 land boundary lines v5.1.2",
+      "license": "Public domain",
+      "licenseURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "use": "Classifies outline edges as land frontier or coastline; no geometry is copied.",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    },
+    {
+      "file": "ne-10m-countries.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
+      "provider": "Natural Earth 1:10m admin 0 countries v5.1.2",
+      "license": "Public domain",
+      "licenseURL": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "use": "India's land neighbours (its frontier), and the line of control that bounds the Kashmir Pakistan administers in India's portal.",
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255",
+      "bytes": 13287234
+    },
+    {
+      "file": "neighbour-prt-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PRT/ADM0/geoBoundaries-PRT-ADM0.geojson",
+      "provider": "DG Territory",
+      "year": "2016",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen PRT ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "95bb6c8e989e941ec8c42ddef6fb67e39e1a10c353b977873d9e0d93a67a55c1",
+      "bytes": 17117339
+    },
+    {
+      "file": "neighbour-and-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AND/ADM0/geoBoundaries-AND-ADM0.geojson",
+      "provider": "geoBoundaries, Wikimedia Commons",
+      "year": "2007",
+      "license": "Public Domain",
+      "via": "geoBoundaries gbOpen AND ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "6cb835ac2a6a2fffe8b81f08b4a3dc366adac4083e61cbe9918bd0ab795234b1",
+      "bytes": 32660
+    },
+    {
+      "file": "neighbour-gib-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GIB/ADM0/geoBoundaries-GIB-ADM0.geojson",
+      "provider": "raster2polygon from Sentinel-2 10m Land Cover where Image Year = 2021 / exclude gridcode = 1 (water) / dissolve / erase adm0 overlap / processed by IMB",
+      "year": "2021",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "via": "geoBoundaries gbOpen GIB ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "66b89469a4956ab5946999b5f5d65c9bb26fea02349a08e2575227703de30ebc",
+      "bytes": 19752
+    },
+    {
+      "file": "neighbour-mar-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MAR/ADM0/geoBoundaries-MAR-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen MAR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "02b24d4b9540e2760584d9a89fe0c1f4c6393b2adeb8e69d226c4fd90e9ff3ce",
+      "bytes": 1949570
+    },
+    {
+      "file": "neighbour-bel-adm2.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BEL/ADM2/geoBoundaries-BEL-ADM2.geojson",
+      "provider": "Statistics Belgium",
+      "year": "2015",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen BEL ADM2",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "7f0edefd09bf3b30e20830f8a001cea8e2636a06c3fa13b56931785dd216f948",
+      "bytes": 4089309
+    },
+    {
+      "file": "neighbour-lux-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LUX/ADM0/geoBoundaries-LUX-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen LUX ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "4a8520b25b82ae16a8385f26a95886f78a9cac2812893947f97a423760bded8f",
+      "bytes": 635926
+    },
+    {
+      "file": "neighbour-deu-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/DEU/ADM0/geoBoundaries-DEU-ADM0.geojson",
+      "provider": "Federal Agency for Cartography and Geodesy",
+      "year": "2021",
+      "license": "Data license Germany - Attribution - Version 2.0",
+      "via": "geoBoundaries gbOpen DEU ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "1a0ed87d95e64f3b7dd3a6e23add532d9c70301c1ad8f8fb1664ebac6699bdbe",
+      "bytes": 2815542
+    },
+    {
+      "file": "neighbour-che-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CHE/ADM0/geoBoundaries-CHE-ADM0.geojson",
+      "provider": "Federal Office of Topography swisstopo",
+      "year": "2022",
+      "license": "Federal Office of Topography swisstopo License",
+      "via": "geoBoundaries gbOpen CHE ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "3eb2414cea931ee2c2927d718b8ef57b4e492543bd8a34af4233e1d43007a55d",
+      "bytes": 2242292
+    },
+    {
+      "file": "neighbour-mco-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MCO/ADM0/geoBoundaries-MCO-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen MCO ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "782f642ae163ac729516d8e7faa223f354c32b2719577bb332d7eb7be7e7b7c1",
+      "bytes": 22866
+    },
+    {
+      "file": "neighbour-aut-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AUT/ADM0/geoBoundaries-AUT-ADM0.geojson",
+      "provider": "Federal Office for Metrology and Survey, Austria, Derived from ADM4 layer",
+      "year": "2017",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "via": "geoBoundaries gbOpen AUT ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "ae3048c48e97713a4b06481eb3793d4ae85c14799218851d1ff0cd5d8dc66d1b",
+      "bytes": 10890832
+    },
+    {
+      "file": "neighbour-svn-adm2.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SVN/ADM2/geoBoundaries-SVN-ADM2.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen SVN ADM2",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "b5e2bb260cd78a05e16a457d85cc3fce83b9ad7f65cbefc7feae6f4b836a97fe",
+      "bytes": 5188866
+    },
+    {
+      "file": "neighbour-smr-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SMR/ADM0/geoBoundaries-SMR-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen SMR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "2109c65de0bcba5bc61e6d227e1c5669f8244c436fbb433f8a7405c3e8031bed",
+      "bytes": 36030
+    },
+    {
+      "file": "neighbour-vat-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/VAT/ADM0/geoBoundaries-VAT-ADM0.geojson",
+      "provider": "geoBoundaries, Wikimedia Commons",
+      "year": "2017",
+      "license": "Public Domain",
+      "via": "geoBoundaries gbOpen VAT ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "7deb521dbc378d5bce40dda500caca3addc1adcaea0d56658f4121a13bad7def",
+      "bytes": 7108
+    },
+    {
+      "file": "neighbour-irl-adm1.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRL/ADM1/geoBoundaries-IRL-ADM1.geojson",
+      "provider": "Ordce Survey Ireland",
+      "year": "2022",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "via": "geoBoundaries gbOpen IRL ADM1",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "c0022d76e8a954a6328f5193569158783c1a5ff83334d76b1764b4a89eddd734",
+      "bytes": 57833931
+    },
+    {
+      "file": "neighbour-sur-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen SUR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SUR/ADM0/geoBoundaries-SUR-ADM0.geojson",
+      "sha256": "76a366acc169c28c9a921e6fa125db0682eadeec13fd952874f015bc91e4ad6d",
+      "bytes": 191070
+    },
+    {
+      "file": "neighbour-bra-adm0.geojson",
+      "provider": "Instituto Brasileiro de Geografia e Estatística (IBGE)",
+      "year": "2020",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "via": "geoBoundaries gbOpen BRA ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BRA/ADM0/geoBoundaries-BRA-ADM0.geojson",
+      "sha256": "27abfa7db7bb960c6eb88b770ba5daacd07cf6bfd2a0bf33175042b215502899",
+      "bytes": 1952674
+    },
+    {
+      "file": "neighbour-cyp-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen CYP ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/CYP/ADM0/geoBoundaries-CYP-ADM0.geojson",
+      "sha256": "87ede4e9e630eec610eba9c017dc9645fb088a3aff61b8a510349080f9c78efb",
+      "bytes": 701631
+    },
+    {
+      "file": "neighbour-grc-adm0.geojson",
+      "provider": "EuroGeoGraphics, Regional IM Working Group - Europe",
+      "year": "2016",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "via": "geoBoundaries gbOpen GRC ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GRC/ADM0/geoBoundaries-GRC-ADM0.geojson",
+      "sha256": "b365300a1ee06f0e13230a48c2cd3d95ec384f4521f427a23d72c046a852cadf",
+      "bytes": 1208143
+    },
+    {
+      "file": "neighbour-bgr-adm0.geojson",
+      "provider": "geoBoundaries, Wikimedia",
+      "year": "2019",
+      "license": "Public Domain",
+      "via": "geoBoundaries gbOpen BGR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGR/ADM0/geoBoundaries-BGR-ADM0.geojson",
+      "sha256": "5d4899950d612adc7df3ab726f6b5e831b654ed1952787060878b024efa73a6a",
+      "bytes": 68703
+    },
+    {
+      "file": "neighbour-geo-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "via": "geoBoundaries gbOpen GEO ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/GEO/ADM0/geoBoundaries-GEO-ADM0.geojson",
+      "sha256": "dde0bc1946730be54fcf9e0e72c552953eb1b5848b805583e87fe8ef4c6b6375",
+      "bytes": 537358
+    },
+    {
+      "file": "neighbour-arm-adm0.geojson",
+      "provider": "geoBoundaries, Wikimedia",
+      "year": "2005",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "via": "geoBoundaries gbOpen ARM ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ARM/ADM0/geoBoundaries-ARM-ADM0.geojson",
+      "sha256": "3a0d673dc347a5ae2eb5622b4dcaf65090c50f8a7ce8cf2c750ec37464260f2b",
+      "bytes": 49147
+    },
+    {
+      "file": "neighbour-aze-adm0.geojson",
+      "provider": "Sentinel-2 10-Meter Land Use/LandCover",
+      "year": "2021",
+      "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+      "via": "geoBoundaries gbOpen AZE ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AZE/ADM0/geoBoundaries-AZE-ADM0.geojson",
+      "sha256": "4deeecd07b6edd6f5acb45fd05cf017cc0294a2266da84cea99dbf592ac9c6eb",
+      "bytes": 13123480
+    },
+    {
+      "file": "neighbour-irn-adm1.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRN/ADM1/geoBoundaries-IRN-ADM1.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen IRN ADM1",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "564a3eeff1e12ec0b3bfc55d027b0a2b05cefab521ee0b2e487446db12dec70d",
+      "bytes": 9458408
+    },
+    {
+      "file": "neighbour-irq-adm2.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/IRQ/ADM2/geoBoundaries-IRQ-ADM2.geojson",
+      "provider": "Iraq Central Statistics Office, OCHA Iraq",
+      "year": "2021",
+      "license": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+      "via": "geoBoundaries gbOpen IRQ ADM2",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "757287a87829806eaf2247a76aee870804a6304006ac4b52cb39729be00c5cae",
+      "bytes": 935412
+    },
+    {
+      "file": "neighbour-syr-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen SYR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SYR/ADM0/geoBoundaries-SYR-ADM0.geojson",
+      "sha256": "cb40f33ab4724dbbb6afd0d7d4a67ea6f6900dfd69d2c5eb46c23a3457963d94",
+      "bytes": 408413
+    },
+    {
+      "file": "neighbour-pak-adm0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen PAK ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PAK/ADM0/geoBoundaries-PAK-ADM0.geojson",
+      "sha256": "0caf6e9e0153e3fe482b9c6ed0aa745bdea9b282423bb9b2ca6ce905e09439d8",
+      "bytes": 2676167
+    },
+    {
+      "file": "neighbour-afg-adm0.geojson",
+      "provider": "geoBoundaries, ArcGIS Hub",
+      "year": "2014",
+      "license": "Public Domain",
+      "via": "geoBoundaries gbOpen AFG ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/AFG/ADM0/geoBoundaries-AFG-ADM0.geojson",
+      "sha256": "3bf95b6660bc11f097f965ff48aab9f557d7b3bde8b00eeaf7ac5b1485baad62",
+      "bytes": 1055531
+    },
+    {
+      "file": "neighbour-npl-adm0.geojson",
+      "provider": "Geoboundaries, Open Data Nepal",
+      "year": "2019",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "via": "geoBoundaries gbOpen NPL ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/NPL/ADM0/geoBoundaries-NPL-ADM0.geojson",
+      "sha256": "fc0f32802e64cb5e9c95a11af4ad2d3589df8406476707c974c4f8bb9ee07004",
+      "bytes": 2893276
+    },
+    {
+      "file": "neighbour-btn-adm0.geojson",
+      "provider": "geoBoundaries, Wikimedia Commons; credit to author 'Babbage'",
+      "year": "2010",
+      "license": "Creative Commons Attribution 3.0 License",
+      "via": "geoBoundaries gbOpen BTN ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BTN/ADM0/geoBoundaries-BTN-ADM0.geojson",
+      "sha256": "035550a8428684b14230fc04bcd48e3b25375f567c654cc1555f7a5eec942eb7",
+      "bytes": 22972
+    },
+    {
+      "file": "neighbour-bgd-adm0.geojson",
+      "provider": "geoBoundaries, Wikimedia Commons",
+      "year": "2015",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "via": "geoBoundaries gbOpen BGD ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM0/geoBoundaries-BGD-ADM0.geojson",
+      "sha256": "7ea26da4885354041422911ee5dfc631b687792ade960b15c88b8c44f14f5470",
+      "bytes": 66748
+    },
+    {
+      "file": "neighbour-mmr-adm0.geojson",
+      "provider": "OpenStreetMap",
+      "year": "2021",
+      "license": "Creative Commons Attribution-ShareAlike 2.0",
+      "via": "geoBoundaries gbOpen MMR ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MMR/ADM0/geoBoundaries-MMR-ADM0.geojson",
+      "sha256": "5857a9a0d091b68c2b8e07fd9e8edb1fa0cd7e8b6cad87651dcd1419e4103874",
+      "bytes": 1687990
+    },
+    {
+      "file": "neighbour-bol-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BOL/ADM0/geoBoundaries-BOL-ADM0.geojson",
+      "provider": "GeoBolivia, Derived from ADM3 layer",
+      "year": "2015",
+      "license": "Public Domain",
+      "via": "geoBoundaries gbOpen BOL ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "65d3926f721a1810fb7659f4bd1b575db1a02ab5c9658a38cc83b6a13e85ba15",
+      "bytes": 4034693
+    },
+    {
+      "file": "neighbour-ecu-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/ECU/ADM0/geoBoundaries-ECU-ADM0.geojson",
+      "provider": "geoBoundaries, Wikimedia Commons",
+      "year": "2011",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "via": "geoBoundaries gbOpen ECU ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "523cf48366449bb98d562f61e05ef0a3de9afb82f8c3be7b7409a29d508b1fbf",
+      "bytes": 170839
+    },
+    {
+      "file": "neighbour-col-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/COL/ADM0/geoBoundaries-COL-ADM0.geojson",
+      "provider": "Geoboundaries, Wikimedia",
+      "year": "2022",
+      "license": "CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+      "via": "geoBoundaries gbOpen COL ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "2e9951c9139bee3de8c81545fd3a767a8b28bbebcd037533fa82a0b16e40b81a",
+      "bytes": 32672
+    },
+    {
+      "file": "osm-relation-1124039.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1124039/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1124039 (Monaco)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "6d059ef6aade6586f3f8412b69ce79fe1083cb6108fe2afb48b1452059225b50",
+      "bytes": 160780
+    },
+    {
+      "file": "osm-relation-1154756.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1154756/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1154756 (Ceuta)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "3f0bf4325e5b6a8958179ae5942136443ff412bdeff81fe345e1e5d14ee5c417",
+      "bytes": 353701
+    },
+    {
+      "file": "osm-relation-1154757.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1154757/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1154757 (Melilla)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "a5154729dfd781ea997e9bd5f3e5bead61df8f49f41564b09bf30197636139e6",
+      "bytes": 182051
+    },
+    {
+      "file": "osm-relation-218657.json",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/218657/full.json",
+      "provider": "OpenStreetMap contributors, boundary relation 218657 (Slovenia)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "sha256": "6499a49db84ee6849a697ae255f0888e5b2d5c0ff7c80b62c79b6ad31ab03946",
+      "bytes": 11618574
+    },
+    {
+      "file": "osm-relation-1231790.json",
+      "provider": "OpenStreetMap contributors, boundary relation 1231790 (Sint Maarten)",
+      "license": "Open Data Commons Open Database License 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "use": "Land border ways (admin_level 2, not maritime) bound the frontier with neighbours whose outlines include territorial waters; no geometry is copied.",
+      "url": "https://api.openstreetmap.org/api/0.6/relation/1231790/full.json",
+      "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
+      "bytes": 565922
+    }
+  ]
+}
