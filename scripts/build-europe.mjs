@@ -170,10 +170,50 @@ async function loadUK(){
  return {features:(await command(fc(features),simplify)).features,units};
 }
 // Camera bounds frame the main territory; Spain's Canary Islands remain in the data.
+// Iceland: IS 50V municipalities, parts merged by municipal number. The eight regions
+// (landshlutar) hold the municipalities whose number starts with their digit, as Statistics
+// Iceland groups them (the capital region takes 0 and 1); region ids follow ISO 3166-2:IS.
+const icelandRegions={1:['Capital Region','Höfuðborgarsvæðið'],2:['Southern Peninsula','Suðurnes'],3:['West','Vesturland'],4:['Westfjords','Vestfirðir'],5:['Northwest','Norðurland vestra'],6:['Northeast','Norðurland eystra'],7:['East','Austurland'],8:['South','Suðurland']};
+const icelandExonyms={'Reykjavíkurborg':'Reykjavík','Kópavogsbær':'Kópavogur','Hafnarfjarðarkaupstaður':'Hafnarfjörður','Akureyrarbær':'Akureyri','Akraneskaupstaður':'Akranes','Vestmannaeyjabær':'Vestmannaeyjar','Bolungarvíkurkaupstaður':'Bolungarvík','Seltjarnarnesbær':'Seltjarnarnes','Grindavíkurbær':'Grindavík','Hveragerðisbær':'Hveragerði','Grundarfjarðarbær':'Grundarfjörður'};
+async function loadIceland(){
+ const raw=read('isl-sveitarfelog-is50v.geojson');
+ const merged=await command(fc(raw.features.map(f=>({type:'Feature',properties:{code:String(f.properties.nrsveitarfelags).padStart(4,'0'),name:f.properties.sveitarfelag},geometry:f.geometry}))),'-dissolve code copy-fields=name '+simplify);
+ const units=new Map(Object.entries(icelandRegions).map(([digit,[en,local]])=>['IS-R-'+digit,{level:1,parent:null,en,local,kind:'Region'}]));
+ for(const f of merged.features){
+  const {code,name}=f.properties,region=code[0]==='0'?'1':code[0];assert(icelandRegions[region],'Iceland region for '+code);
+  units.set('IS-M-'+code,{level:2,parent:'IS-R-'+region,en:icelandExonyms[name]||name.replace(/^Sveitarfélagið /,''),local:name,kind:'Municipality'});f.properties={id:'IS-M-'+code};
+ }
+ assert.equal(merged.features.length,61,'Iceland has 61 municipalities');
+ return {features:merged.features,units};
+}
+// Turkey: the 81 provinces and 973 districts of the General Command of Mapping (HGM), via OCHA.
+// Provinces carry ISO 3166-2:TR (licence-plate) codes, from the P-codes (TUR001 is plate 01); the
+// 12 statistical regions (İBBS level 1, NUTS 1) group the provinces as TÜİK does. Names are the
+// Turkish ones, as English writes them too (HGM's English names only drop the diacritics), except
+// Istanbul; the undotted forms stay searchable. HGM's Turkish names lose the dotless ı and write İ
+// as i with a combining dot, so each is spelled as OpenStreetMap's Turkish name that differs from it
+// only in dots and accents (two districts OpenStreetMap lacks are spelled here).
+const turkishSpellings=(()=>{const fold=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ı/g,'i').toLowerCase(),names=JSON.parse(fs.readFileSync('scripts/statistics-sources/europe/turkey-names-osm.json')).names.concat('Nazımiye','Sarıkaya'),byFold=new Map(names.map(n=>[fold(n),n]));return name=>byFold.get(fold(name))||name.replace(/i̇/g,'i');})();
+const turkishRegions={TR1:['Istanbul','İstanbul'],TR2:['West Marmara','Batı Marmara'],TR3:['Aegean','Ege'],TR4:['East Marmara','Doğu Marmara'],TR5:['West Anatolia','Batı Anadolu'],TR6:['Mediterranean','Akdeniz'],TR7:['Central Anatolia','Orta Anadolu'],TR8:['West Black Sea','Batı Karadeniz'],TR9:['East Black Sea','Doğu Karadeniz'],TRA:['Northeast Anatolia','Kuzeydoğu Anadolu'],TRB:['Central East Anatolia','Ortadoğu Anadolu'],TRC:['Southeast Anatolia','Güneydoğu Anadolu']};
+const turkishProvinceRegions={TR1:['34'],TR2:['10','17','22','39','59'],TR3:['03','09','20','35','43','45','48','64'],TR4:['11','14','16','26','41','54','77','81'],TR5:['06','42','70'],TR6:['01','07','15','31','32','33','46','80'],TR7:['38','40','50','51','58','66','68','71'],TR8:['05','18','19','37','55','57','60','67','74','78'],TR9:['08','28','29','52','53','61'],TRA:['04','24','25','36','69','75','76'],TRB:['12','13','23','30','44','49','62','65'],TRC:['02','21','27','47','56','63','72','73','79']};
+async function loadTurkey(){
+ const files=unzipSync(fs.readFileSync(path.join(source,'tur-hgm-admin-boundaries.geojson.zip'))),layer=name=>JSON.parse(strFromU8(files[Object.keys(files).find(k=>k.endsWith(name))]));
+ const regionOf=new Map(Object.entries(turkishProvinceRegions).flatMap(([region,codes])=>codes.map(code=>[code,region])));
+ assert.equal(regionOf.size,81,'Every Turkish province has a statistical region');
+ const units=new Map(Object.entries(turkishRegions).map(([code,[en,local]])=>['TR-R-'+code,{level:1,parent:null,en,local,kind:'Statistical region'}]));
+ const plate=pcode=>pcode.slice(4,6);
+ for(const f of layer('tur_admin1.geojson').features){const p=f.properties,code=plate(p.adm1_pcode);assert(regionOf.has(code),'Province '+p.adm1_pcode);units.set('TR-P-'+code,{level:2,parent:'TR-R-'+regionOf.get(code),en:code==='34'?'Istanbul':turkishSpellings(p.adm1_name1),local:turkishSpellings(p.adm1_name1),kind:'Province',code,...(p.adm1_name!==turkishSpellings(p.adm1_name1)?{aliases:[p.adm1_name]}:{})});}
+ const districts=layer('tur_admin2.geojson').features.map(f=>{const p=f.properties,id='TR-D-'+p.adm2_pcode.slice(3);assert(units.has('TR-P-'+plate(p.adm1_pcode)),'District parent '+id);units.set(id,{level:3,parent:'TR-P-'+plate(p.adm1_pcode),en:turkishSpellings(p.adm2_name1),local:turkishSpellings(p.adm2_name1),kind:/ Merkez$/.test(p.adm2_name1)?'Central district':'District',...(p.adm2_name!==turkishSpellings(p.adm2_name1)?{aliases:[p.adm2_name]}:{})});return {type:'Feature',properties:{id},geometry:f.geometry};});
+ assert.equal(districts.length,973,'Turkey has 973 districts');
+ const simplified=await command(fc(districts),simplify);
+ return {features:simplified.features,units};
+}
 const countries={
  'united-kingdom':{id:'GB',en:'United Kingdom',local:'',file:'ons-lad-dec-2024-bgc.geojson',load:loadUK,levels:['Nation or region','County or unitary authority','District'],bundled:3,camera:[[-8.7,49.85],[1.8,60.9]],coverage:'The 12 ITL1 nations and regions, 218 counties and unitary authorities (including metropolitan and London boroughs and the Welsh, Scottish and Northern Irish councils) and the 164 districts of the English two-tier counties, from the Office for National Statistics December 2024 local authority boundaries, generalised to 20 m and clipped to the coastline. Counties and regions are dissolved from the districts; single-tier authorities have no districts below them. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.'},
  spain:{id:'ES',en:'Spain',local:'España',file:'ign-lineas-limite-gml.zip',load:loadSpain,levels:['Autonomous community','Province','Municipality'],bundled:2,camera:[[-9.4,35.9],[4.4,43.8]],coverage:'17 autonomous communities, the autonomous cities of Ceuta and Melilla, and the minor sovereign territories under central administration (Gibraltar, which the BDLJE lists among them as Spain claims it, is a British overseas territory and is excluded); 52 provinces; and every municipality plus the shared territories (condominiums) that several municipalities own jointly, from the Instituto Geográfico Nacional jurisdictional boundaries (BDLJE). Communities and provinces are dissolved from the municipalities. Llívia takes its shape from the matching enclave in the French outline.'},
  france:{id:'FR',en:'France',local:'',file:'france-communes-*.geojson',load:loadFrance,levels:['Region','Department','Commune'],bundled:2,camera:[[-5.2,41.3],[9.6,51.1]],coverage:'The 13 regions of metropolitan France (including the territorial collectivity of Corsica), its 96 départements and every commune, from IGN ADMIN EXPRESS outlines published by geo.api.gouv.fr. Regions and départements are dissolved from the communes. Overseas regions are not yet included.'},
+ iceland:{id:'IS',en:'Iceland',local:'Ísland',file:'isl-sveitarfelog-is50v.geojson',load:loadIceland,levels:['Region','Municipality'],bundled:2,camera:[[-24.6,63.2],[-13.4,66.6]],coverage:'The eight regions (landshlutar) and 61 municipalities (sveitarfélög), from the IS 50V municipal boundaries of the Icelandic Institute of Natural History (formerly the National Land Survey), land only. Regions group the municipalities by their municipal number, as Statistics Iceland does, and are dissolved from them.'},
+ turkey:{id:'TR',en:'Turkey',local:'Türkiye',file:'tur-hgm-admin-boundaries.geojson.zip',load:loadTurkey,levels:['Statistical region','Province','District'],bundled:2,camera:[[25.6,35.8],[44.9,42.2]],coverage:'The 12 statistical regions (İBBS level 1), 81 provinces and 973 districts, from the General Command of Mapping (HGM) boundaries published by OCHA (valid from 1 January 2022, January 2026 edition). Provinces and regions are dissolved from the districts; regions group the provinces as TÜİK does.'},
  italy:{id:'IT',en:'Italy',local:'Italia',file:'istat-limiti-2026.zip',load:loadItaly,levels:['Region','Province','Comune'],bundled:2,camera:[[6.6,35.5],[18.6,47.1]],coverage:"20 regions, 110 provinces and equivalent units (metropolitan cities, autonomous provinces, Sicily's free municipal consortia and Friuli-Venezia Giulia's former provinces) and 7,896 comuni, from ISTAT's full-detail boundaries for statistical purposes at 1 January 2026. Regions and provinces are dissolved from the comuni. San Marino and Vatican City remain enclaves."}
 };
 const outlines={},lowest={};
@@ -217,7 +257,8 @@ outlines['united-kingdom']=single(await command(lowest['united-kingdom'],'-disso
 // land boundary line passes within 4 km. Coastline has sea beyond it. Probing out to
 // 600 m, and closing short gaps inland, tolerates neighbouring sources that sit apart.
 // Europe, and the overseas land frontiers: French Guiana, Saint-Martin and Cyprus.
-const frontierBoxes=[[-20,25,25,62],[-56,1.5,-51,6.5],[-63.3,17.9,-62.9,18.2],[32,34.4,34.8,35.4]];
+// Turkey's frontiers run from the Evros (26°E) to Iran (44.8°E).
+const frontierBoxes=[[-20,25,25,62],[-56,1.5,-51,6.5],[-63.3,17.9,-62.9,18.2],[32,34.4,34.8,35.4],[25.5,35.5,45,42.2]];
 const ne=read('ne-10m-land-boundaries.geojson').features.flatMap(f=>(f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates)).filter(line=>line.some(p=>frontierBoxes.some(([w,s,e,n])=>p[0]>w&&p[0]<e&&p[1]>s&&p[1]<n)));
 const grid=new Map(),cell=.05,reach=4000;
 ne.forEach((line,l)=>{for(let i=1;i<line.length;i++){const a=line[i-1],b=line[i];for(let x=Math.floor(Math.min(a[0],b[0])/cell)-1;x<=Math.floor(Math.max(a[0],b[0])/cell)+1;x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell)-1;y<=Math.floor(Math.max(a[1],b[1])/cell)+1;y++){const k=x+','+y;if(!grid.has(k))grid.set(k,[]);grid.get(k).push([l,i]);}}});
@@ -249,7 +290,7 @@ for(const name of fs.readdirSync(source).filter(n=>n.startsWith('osm-relation-')
 const wayEdges=[],wayGrid=new Map();
 for(const way of landWays)for(let i=1;i<way.length;i++){const a=way[i-1],b=way[i],k=wayEdges.push([a,b])-1;for(let x=Math.floor(Math.min(a[0],b[0])/cell)-1;x<=Math.floor(Math.max(a[0],b[0])/cell)+1;x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell)-1;y<=Math.floor(Math.max(a[1],b[1])/cell)+1;y++){const key=x+','+y;if(!wayGrid.has(key))wayGrid.set(key,[]);wayGrid.get(key).push(k);}}
 function nearLandWay(p,limit=200){for(const k of wayGrid.get(Math.floor(p[0]/cell)+','+Math.floor(p[1]/cell))||[]){const [a,b]=wayEdges[k],c=Math.cos(p[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],u=Math.max(0,Math.min(1,((p[0]-a[0])*c*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));if(metres(p,[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])])<=limit)return true;}return false;}
-const neighbours=['prt-adm0','and-adm0','gib-adm0','mar-adm0','bel-adm2','lux-adm0','deu-adm0','che-adm0','mco-adm0','aut-adm0','svn-adm2','smr-adm0','vat-adm0','irl-adm1','sur-adm0','bra-adm0','cyp-adm0'].map(file=>({file,maritime:maritime.has(file),inside:landIndex(read('neighbour-'+file+'.geojson').features.flatMap(f=>rings(f.geometry)))}));
+const neighbours=['prt-adm0','and-adm0','gib-adm0','mar-adm0','bel-adm2','lux-adm0','deu-adm0','che-adm0','mco-adm0','aut-adm0','svn-adm2','smr-adm0','vat-adm0','irl-adm1','sur-adm0','bra-adm0','cyp-adm0','grc-adm0','bgr-adm0','geo-adm0','arm-adm0','aze-adm0','irn-adm1','irq-adm2','syr-adm0'].map(file=>({file,maritime:maritime.has(file),inside:landIndex(read('neighbour-'+file+'.geojson').features.flatMap(f=>rings(f.geometry)))}));
 // Sint Maarten has no geoBoundaries outline: its OpenStreetMap relation (with territorial waters).
 {const elements=read('osm-relation-1231790.json').elements,nodes=new Map(elements.filter(e=>e.type==='node').map(e=>[e.id,{lon:e.lon,lat:e.lat}])),ways=new Map(elements.filter(e=>e.type==='way').map(e=>[e.id,e.nodes.map(id=>nodes.get(id))]));
  const relation=elements.find(e=>e.type==='relation'&&e.id===1231790);
@@ -267,8 +308,9 @@ function frontierPaths(country,exclude=()=>false){
   const side=(signedArea(ring)>0)===(r===0)?-1:1;
   const distance=ring.map(p=>frontierDistance(p)),onLandWay=ring.map(p=>nearLandWay(p));
   // French Guiana's river frontiers are up to 2 km wide and its tripoints lie in forest far
-  // from any source line, so rings in the Americas probe further and close longer inland gaps.
-  const wide=ring.some(p=>p[0]<-30),gap=wide?8000:3000;
+  // from any source line, so rings in the Americas probe further and close longer inland gaps;
+  // so does Turkey, whose eastern neighbours' outlines are coarse (Iraq's, Iran's, Syria's).
+  const wide=ring.some(p=>p[0]<-30)||country==='turkey',gap=wide?8000:3000;
   const flags=Array.from({length:n},(_,i)=>{
    const a=ring[i],b=ring[i+1],limit=wide?10000:reach;if(distance[i]>limit||distance[i+1]>limit)return false;
    const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return false;
@@ -286,7 +328,10 @@ function frontierPaths(country,exclude=()=>false){
   for(let k=1;k<=n;k++){
    const i=(start+k)%n;if(flags[i])continue;
    const span=[];let length=0,j=i;while(!flags[j]&&length<=gap){span.push(j);length+=metres(ring[j],ring[j+1]);j=(j+1)%n;}
-   if(length<=gap&&span.every(beyond))span.forEach(t=>flags[t]=true);
+   // Turkey's neighbours' sources do not quite meet at tripoints and border rivers (Iraq–Iran,
+   // Armenia), leaving slivers that belong to no one; its frontier reaches the sea only at its four
+   // ends, so breaks of up to 1.5 km between frontier pieces close regardless.
+   if(length<=gap&&(span.every(beyond)||country==='turkey'&&length<=1500))span.forEach(t=>flags[t]=true);
    k+=span.length-1;
   }
   for(let i=0;i<n;i++)if(flags[i]&&exclude(ring[i],ring[i+1]))flags[i]=false;

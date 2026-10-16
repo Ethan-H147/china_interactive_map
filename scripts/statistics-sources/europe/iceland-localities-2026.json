@@ -1,0 +1,609 @@
+{
+ "url": "https://px.hagstofa.is/pxis/api/v1/is/Ibuar/mannfjoldi/2_byggdir/Byggdakjarnar/MAN030102.px",
+ "table": "MAN030102",
+ "title": "Mannfjöldi eftir þéttbýlisstöðum, kyni og aldri 1. janúar 1998-2026",
+ "date": "2026-01-01",
+ "retrieved": "2026-10-16",
+ "values": [
+  {
+   "code": "0",
+   "name": "Alls",
+   "population": 394324
+  },
+  {
+   "code": "30",
+   "name": "Álftanes",
+   "population": 2916
+  },
+  {
+   "code": "50",
+   "name": "Stór-Reykjavík",
+   "population": 247162
+  },
+  {
+   "code": "70",
+   "name": "Mosfellsbær",
+   "population": 0
+  },
+  {
+   "code": "80",
+   "name": "Mosfellsdalur",
+   "population": 245
+  },
+  {
+   "code": "90",
+   "name": "Grundarhverfi, Kjalarnesi",
+   "population": 655
+  },
+  {
+   "code": "100",
+   "name": "Strjálbýli á höfuðborgarsvæði",
+   "population": 934
+  },
+  {
+   "code": "110",
+   "name": "Grindavík",
+   "population": 817
+  },
+  {
+   "code": "111",
+   "name": "Hafnir",
+   "population": 122
+  },
+  {
+   "code": "120",
+   "name": "Sandgerði",
+   "population": 2188
+  },
+  {
+   "code": "130",
+   "name": "Garður",
+   "population": 2006
+  },
+  {
+   "code": "141",
+   "name": "Keflavík og Njarðvík",
+   "population": 22572
+  },
+  {
+   "code": "160",
+   "name": "Vogar",
+   "population": 1818
+  },
+  {
+   "code": "180",
+   "name": "Strjálbýli á Suðurnesjum",
+   "population": 121
+  },
+  {
+   "code": "190",
+   "name": "Akranes og nágr.",
+   "population": 8607
+  },
+  {
+   "code": "195",
+   "name": "Melahverfi, Hvalfirði",
+   "population": 165
+  },
+  {
+   "code": "191",
+   "name": "Hvanneyri",
+   "population": 270
+  },
+  {
+   "code": "192",
+   "name": "Kleppjárnsreykir",
+   "population": 54
+  },
+  {
+   "code": "193",
+   "name": "Reykholt, Borgarfirði",
+   "population": 72
+  },
+  {
+   "code": "200",
+   "name": "Borgarnes",
+   "population": 2250
+  },
+  {
+   "code": "205",
+   "name": "Bifröst",
+   "population": 247
+  },
+  {
+   "code": "210",
+   "name": "Hellissandur",
+   "population": 365
+  },
+  {
+   "code": "211",
+   "name": "Rif",
+   "population": 139
+  },
+  {
+   "code": "220",
+   "name": "Ólafsvík",
+   "population": 978
+  },
+  {
+   "code": "230",
+   "name": "Grundarfjörður",
+   "population": 810
+  },
+  {
+   "code": "240",
+   "name": "Stykkishólmur",
+   "population": 1218
+  },
+  {
+   "code": "250",
+   "name": "Búðardalur",
+   "population": 239
+  },
+  {
+   "code": "331",
+   "name": "Strjálbýli á Vesturlandi",
+   "population": 2583
+  },
+  {
+   "code": "339",
+   "name": "Reykhólar",
+   "population": 125
+  },
+  {
+   "code": "340",
+   "name": "Patreksfjörður",
+   "population": 714
+  },
+  {
+   "code": "350",
+   "name": "Tálknafjörður",
+   "population": 218
+  },
+  {
+   "code": "360",
+   "name": "Bíldudalur",
+   "population": 237
+  },
+  {
+   "code": "370",
+   "name": "Þingeyri",
+   "population": 289
+  },
+  {
+   "code": "380",
+   "name": "Flateyri",
+   "population": 223
+  },
+  {
+   "code": "390",
+   "name": "Suðureyri",
+   "population": 301
+  },
+  {
+   "code": "400",
+   "name": "Bolungarvík",
+   "population": 985
+  },
+  {
+   "code": "420",
+   "name": "Hnífsdalur",
+   "population": 212
+  },
+  {
+   "code": "410",
+   "name": "Ísafjörður",
+   "population": 2807
+  },
+  {
+   "code": "430",
+   "name": "Súðavík",
+   "population": 174
+  },
+  {
+   "code": "431",
+   "name": "Drangsnes",
+   "population": 75
+  },
+  {
+   "code": "440",
+   "name": "Hólmavík",
+   "population": 309
+  },
+  {
+   "code": "521",
+   "name": "Strjálbýli á Vestfjörðum",
+   "population": 672
+  },
+  {
+   "code": "529",
+   "name": "Laugarbakki",
+   "population": 65
+  },
+  {
+   "code": "530",
+   "name": "Hvammstangi",
+   "population": 597
+  },
+  {
+   "code": "540",
+   "name": "Blönduós",
+   "population": 853
+  },
+  {
+   "code": "550",
+   "name": "Skagaströnd",
+   "population": 440
+  },
+  {
+   "code": "560",
+   "name": "Sauðárkrókur",
+   "population": 2672
+  },
+  {
+   "code": "561",
+   "name": "Varmahlíð",
+   "population": 155
+  },
+  {
+   "code": "562",
+   "name": "Hólar í Hjaltadal",
+   "population": 93
+  },
+  {
+   "code": "570",
+   "name": "Hofsós",
+   "population": 164
+  },
+  {
+   "code": "580",
+   "name": "Siglufjörður",
+   "population": 1159
+  },
+  {
+   "code": "641",
+   "name": "Strjálbýli á Norðurlandi vestra",
+   "population": 2314
+  },
+  {
+   "code": "649",
+   "name": "Grímsey",
+   "population": 47
+  },
+  {
+   "code": "650",
+   "name": "Ólafsfjörður",
+   "population": 771
+  },
+  {
+   "code": "660",
+   "name": "Dalvík",
+   "population": 1385
+  },
+  {
+   "code": "670",
+   "name": "Hrísey",
+   "population": 156
+  },
+  {
+   "code": "671",
+   "name": "Litli-Árskógssandur",
+   "population": 111
+  },
+  {
+   "code": "672",
+   "name": "Hauganes",
+   "population": 118
+  },
+  {
+   "code": "673",
+   "name": "Hjalteyri",
+   "population": 0
+  },
+  {
+   "code": "680",
+   "name": "Akureyri og nágr.",
+   "population": 20467
+  },
+  {
+   "code": "681",
+   "name": "Kristnes",
+   "population": 0
+  },
+  {
+   "code": "682",
+   "name": "Hrafnagil",
+   "population": 398
+  },
+  {
+   "code": "684",
+   "name": "Öngulsstaðir",
+   "population": 89
+  },
+  {
+   "code": "685",
+   "name": "Brúnahlíð, Eyjafirði",
+   "population": 143
+  },
+  {
+   "code": "687",
+   "name": "Veigastaðir",
+   "population": 74
+  },
+  {
+   "code": "688",
+   "name": "Sólberg",
+   "population": 56
+  },
+  {
+   "code": "689",
+   "name": "Svalbarðseyri",
+   "population": 285
+  },
+  {
+   "code": "690",
+   "name": "Grenivík",
+   "population": 298
+  },
+  {
+   "code": "701",
+   "name": "Laugar",
+   "population": 120
+  },
+  {
+   "code": "710",
+   "name": "Húsavík",
+   "population": 2403
+  },
+  {
+   "code": "700",
+   "name": "Reykjahlíð",
+   "population": 270
+  },
+  {
+   "code": "705",
+   "name": "Vogar við Mývatn",
+   "population": 60
+  },
+  {
+   "code": "711",
+   "name": "Kópasker",
+   "population": 126
+  },
+  {
+   "code": "720",
+   "name": "Raufarhöfn",
+   "population": 166
+  },
+  {
+   "code": "730",
+   "name": "Þórshöfn",
+   "population": 341
+  },
+  {
+   "code": "861",
+   "name": "Strjálbýli á Norðurlandi eystra",
+   "population": 3188
+  },
+  {
+   "code": "869",
+   "name": "Bakkafjörður",
+   "population": 65
+  },
+  {
+   "code": "870",
+   "name": "Vopnafjörður",
+   "population": 503
+  },
+  {
+   "code": "891",
+   "name": "Borgarfjörður eystri",
+   "population": 99
+  },
+  {
+   "code": "900",
+   "name": "Seyðisfjörður",
+   "population": 648
+  },
+  {
+   "code": "890",
+   "name": "Fellabær",
+   "population": 408
+  },
+  {
+   "code": "901",
+   "name": "Hallormsstaður",
+   "population": 56
+  },
+  {
+   "code": "902",
+   "name": "Egilsstaðir",
+   "population": 2719
+  },
+  {
+   "code": "903",
+   "name": "Eiðar",
+   "population": 0
+  },
+  {
+   "code": "910",
+   "name": "Neskaupstaður",
+   "population": 1478
+  },
+  {
+   "code": "920",
+   "name": "Eskifjörður",
+   "population": 1063
+  },
+  {
+   "code": "930",
+   "name": "Reyðarfjörður",
+   "population": 1470
+  },
+  {
+   "code": "940",
+   "name": "Fáskrúðsfjörður",
+   "population": 707
+  },
+  {
+   "code": "950",
+   "name": "Stöðvarfjörður",
+   "population": 167
+  },
+  {
+   "code": "960",
+   "name": "Breiðdalsvík",
+   "population": 153
+  },
+  {
+   "code": "970",
+   "name": "Djúpivogur",
+   "population": 407
+  },
+  {
+   "code": "971",
+   "name": "Nesjahverfi, Hornafirði",
+   "population": 105
+  },
+  {
+   "code": "980",
+   "name": "Höfn í Hornafirði",
+   "population": 1813
+  },
+  {
+   "code": "990",
+   "name": "Hof",
+   "population": 68
+  },
+  {
+   "code": "1081",
+   "name": "Strjálbýli á Austurlandi",
+   "population": 1333
+  },
+  {
+   "code": "1089",
+   "name": "Kirkjubæjarklaustur",
+   "population": 210
+  },
+  {
+   "code": "1090",
+   "name": "Vík í Mýrdal",
+   "population": 740
+  },
+  {
+   "code": "1100",
+   "name": "Vestmannaeyjar",
+   "population": 4518
+  },
+  {
+   "code": "1101",
+   "name": "Skógar",
+   "population": 0
+  },
+  {
+   "code": "1110",
+   "name": "Hvolsvöllur",
+   "population": 1181
+  },
+  {
+   "code": "1120",
+   "name": "Hella",
+   "population": 1083
+  },
+  {
+   "code": "1125",
+   "name": "Þykkvibær",
+   "population": 85
+  },
+  {
+   "code": "1121",
+   "name": "Rauðalækur",
+   "population": 0
+  },
+  {
+   "code": "1130",
+   "name": "Stokkseyri",
+   "population": 523
+  },
+  {
+   "code": "1140",
+   "name": "Eyrarbakki",
+   "population": 615
+  },
+  {
+   "code": "1145",
+   "name": "Tjarnabyggð",
+   "population": 230
+  },
+  {
+   "code": "1150",
+   "name": "Selfoss og nágr.",
+   "population": 11066
+  },
+  {
+   "code": "1155",
+   "name": "Brautarholt, Skeiðum",
+   "population": 92
+  },
+  {
+   "code": "1157",
+   "name": "Árnes",
+   "population": 74
+  },
+  {
+   "code": "1160",
+   "name": "Flúðir",
+   "population": 539
+  },
+  {
+   "code": "1161",
+   "name": "Laugarás",
+   "population": 116
+  },
+  {
+   "code": "1162",
+   "name": "Reykholt, Biskupstungum",
+   "population": 474
+  },
+  {
+   "code": "1163",
+   "name": "Laugarvatn",
+   "population": 280
+  },
+  {
+   "code": "1164",
+   "name": "Sólheimar, Grímsnesi",
+   "population": 91
+  },
+  {
+   "code": "1167",
+   "name": "Borg, Grímsnesi",
+   "population": 275
+  },
+  {
+   "code": "1168",
+   "name": "Gljúfurárholt",
+   "population": 101
+  },
+  {
+   "code": "1169",
+   "name": "Vellir",
+   "population": 55
+  },
+  {
+   "code": "1170",
+   "name": "Hveragerði og nágr.",
+   "population": 3353
+  },
+  {
+   "code": "1180",
+   "name": "Þorlákshöfn",
+   "population": 2316
+  },
+  {
+   "code": "1301",
+   "name": "Strjálbýli á Suðurlandi",
+   "population": 6567
+  }
+ ]
+}

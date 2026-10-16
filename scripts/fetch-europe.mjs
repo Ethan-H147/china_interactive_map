@@ -1,13 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-// National outlines for the United Kingdom, Spain, France and Italy, plus Natural
+// National outlines for the United Kingdom, Spain, France, Italy, Iceland and Turkey, plus Natural
 // Earth land boundary lines used only to tell land frontiers from coastline.
 const root=path.resolve(process.argv[2]||'artifacts/europe-source');
 fs.mkdirSync(root,{recursive:true});
 const manifest={retrieved:new Date().toISOString().slice(0,10),files:{}};
 const pinned=new Map();
-for(const country of ['united-kingdom','spain','france','italy']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
+for(const country of ['united-kingdom','spain','france','italy','iceland','turkey']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
 // Some servers cut long transfers; fetch those in 4 MB ranges with retries.
 async function ranged(url){
  const size=+(await fetch(url,{method:'HEAD'})).headers.get('content-length'),parts=[];
@@ -34,8 +34,10 @@ async function download(name,url,metadata={}){
  manifest.files[name]={url,...metadata,sha256,bytes:bytes.length};
  console.log(name,bytes.length);
 }
+// geoBoundaries metadata, retried: its API often times out.
+async function metadata(url){for(let attempt=1;;attempt++){try{const r=await fetch(url,{signal:AbortSignal.timeout(60000)});if(!r.ok)throw Error(url+" "+r.status);return await r.json();}catch(error){if(attempt>=6)throw error;console.log("geoBoundaries busy, retrying");await new Promise(r=>setTimeout(r,5000*attempt));}}}
 async function geoBoundaries(name,iso,level,licenseURL){
- const meta=await(await fetch('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/')).json();
+ const meta=await metadata('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/');
  await download(name,meta.gjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,licenseURL,count:Number(meta.admUnitCount),via:'geoBoundaries gbOpen '+iso+' '+level});
 }
 const ons='https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Countries_December_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=1%3D1&outFields=CTRY24CD,CTRY24NM&outSR=4326&f=geojson';
@@ -46,8 +48,8 @@ await geoBoundaries('ita-adm0.geojson','ITA','ADM0','https://creativecommons.org
 // Neighbouring countries: used only to tell land frontier from coastline (an outline
 // edge with foreign land just beyond it is a frontier). None of their geometry is shipped.
 // The most detailed land-only level is used where ADM0 is coarse (Belgium, Ireland, Slovenia).
-for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1'],['SUR','ADM0'],['BRA','ADM0'],['CYP','ADM0']]){
- const meta=await(await fetch('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/')).json();
+for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1'],['SUR','ADM0'],['BRA','ADM0'],['CYP','ADM0'],['GRC','ADM0'],['BGR','ADM0'],['GEO','ADM0'],['ARM','ADM0'],['AZE','ADM0'],['IRN','ADM1'],['IRQ','ADM2'],['SYR','ADM0']]){
+ const meta=await metadata('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/');
  await download('neighbour-'+iso.toLowerCase()+'-'+level.toLowerCase()+'.geojson',meta.gjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,via:'geoBoundaries gbOpen '+iso+' '+level,use:'Classifies land frontier; no geometry is copied.'});
 }
 // OpenStreetMap separates land border ways from maritime ones. Where a neighbour's outline
@@ -90,5 +92,11 @@ const onsMeta=(title,year)=>({provider:'Office for National Statistics, '+title,
 await download('ons-lad-dec-2024-bgc.geojson','https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_December_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=1%3D1&outFields=LAD24CD,LAD24NM,LAD24NMW&outSR=4326&f=geojson',onsMeta('Local Authority Districts (December 2024) Boundaries UK BGC',2024));
 await download('ons-ctyua-dec-2024-bgc.geojson','https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Counties_and_Unitary_Authorities_December_2024_Boundaries_UK_BGC/FeatureServer/0/query?where=1%3D1&outFields=CTYUA24CD,CTYUA24NM,CTYUA24NMW&outSR=4326&f=geojson',onsMeta('Counties and Unitary Authorities (December 2024) Boundaries UK BGC',2024));
 await download('ons-itl1-jan-2025-bgc.geojson','https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/ITL1_JAN_2025_UK_BGC/FeatureServer/0/query?where=1%3D1&outFields=ITL125CD,ITL125NM&outSR=4326&f=geojson',onsMeta('International Territorial Level 1 (January 2025) Boundaries UK BGC',2025));
+// Iceland: municipalities (sveitarfélög) from the IS 50V database of the Icelandic Institute of Natural
+// History (formerly the National Land Survey, LMÍ), land only, CC BY 4.0.
+await download('isl-sveitarfelog-is50v.geojson','https://gis.lmi.is/geoserver/IS_50V/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=IS_50V:mork_sveitarf_flakar&outputFormat=application/json&srsName=EPSG:4326',{provider:'Náttúrufræðistofnun Íslands (formerly Landmælingar Íslands), IS 50V municipal boundaries (mork_sveitarf_flakar)',license:'Creative Commons Attribution 4.0',licenseURL:'https://creativecommons.org/licenses/by/4.0/'});
+// Turkey: provinces and districts of the General Command of Mapping (HGM), as published by OCHA
+// (Common Operational Dataset, January 2026), CC BY-IGO.
+await download('tur-hgm-admin-boundaries.geojson.zip','https://data.humdata.org/dataset/d74086a0-f398-4474-9e12-1b9a70907bd0/resource/470bd810-2240-4ce0-b5c4-17434112ce41/download/tur_admin_boundaries.geojson.zip',{provider:'General Command of Mapping (Harita Genel Müdürlüğü), via OCHA Common Operational Datasets (cod-ab-tur), valid from 1 January 2022, published January 2026',license:'Creative Commons Attribution for Intergovernmental Organisations 3.0',licenseURL:'https://creativecommons.org/licenses/by/3.0/igo/',dataset:'https://data.humdata.org/dataset/cod-ab-tur'});
 await download('ne-10m-land-boundaries.geojson','https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson',{provider:'Natural Earth 1:10m admin 0 land boundary lines v5.1.2',license:'Public domain',licenseURL:'https://www.naturalearthdata.com/about/terms-of-use/',use:'Classifies outline edges as land frontier or coastline; no geometry is copied.'});
 fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');

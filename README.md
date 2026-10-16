@@ -312,7 +312,7 @@ Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia
 
 ## Europe
 
-The United Kingdom, Spain, France and Italy are public. `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
+The United Kingdom, Spain, France and Italy are public; Iceland and Turkey are in developer mode. `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
 
 ### Italy
 
@@ -354,6 +354,21 @@ The 13 regions of metropolitan France (Corsica is a territorial collectivity), 9
 - GDP and GDP per capita: ONS regional GDP, current market prices, 2024 (provisional) — regions from the ITL1 tables, counties and authorities summed from the local-authority tables, per capita from the matching ONS population. ONS's September 2026 release suppresses local-authority GDP in eight ITL2 subregions (West of England; North Somerset, Somerset and Dorset; Gloucestershire and Wiltshire; North, Mid and South West, and South East Wales; Highlands and Islands; West Central Scotland) pending a corrected release, so those 51 authorities and Gloucestershire have none. USD uses Eurostat's euro reference rates (dollar–pound cross rate).
 
 Cities and towns, like South Africa, are points independent of councils (`scripts/prepare-uk-settlements.mjs`): every built-up area or settlement with at least 1,000 residents — 4,258 places. England and Wales use ONS 2022 built-up areas with Census 2021 usual residents (London's built-up areas, omitted from ONS's towns tables, are summed from Census output areas as ONS does); Scotland uses NRS Census 2022 settlements; Northern Ireland uses NISRA 2015 settlements with Census 2021 counts (CT0100), located by GeoNames and, for villages absent there, OpenStreetMap. Welsh names are a label language.
+
+### Iceland (developer mode)
+
+The eight regions (landshlutar) and 61 municipalities (sveitarfélög), from the IS 50V municipal boundaries of the Icelandic Institute of Natural History (formerly the National Land Survey, LMÍ; CC BY 4.0), land only. Regions group the municipalities by the first digit of their municipal number, as Statistics Iceland does (the capital region takes 0 and 1), and use ISO 3166-2:IS codes. Iceland has no land frontier.
+
+- Population: Statistics Iceland, 1 January 2026, by municipality (MAN02005); regions are sums. Areas are boundary-derived. No GDP is shown: Statistics Iceland's regional accounts use other groupings and lag several years.
+- Towns and villages are points independent of the municipalities (`scripts/prepare-europe-settlements.mjs`): each locality Statistics Iceland counts (MAN030102, 1 January 2026) at the centre of its urban nucleus in the IS 50V place-name areas. Greater Reykjavík (Reykjavík, Kópavogur, Hafnarfjörður, Garðabær, Seltjarnarnes) is one locality; eight small localities without a mapped outline are left out.
+
+### Turkey (developer mode)
+
+The 12 statistical regions (İBBS level 1), 81 provinces and 973 districts, from the General Command of Mapping (HGM) boundaries as OCHA publishes them (cod-ab-tur, January 2026 edition, CC BY-IGO). Provinces use ISO 3166-2:TR plate codes and Turkish names (as English writes them too), except Istanbul; regions group the provinces as TÜİK does. HGM drops the dotless ı and decomposes İ, so names take the spelling of OpenStreetMap's Turkish name that matches them up to dots and accents (retained in `scripts/statistics-sources/europe/turkey-names-osm.json`).
+
+- Land frontier: 2,911 km in two pieces (Greece and Bulgaria; Georgia to Syria). The Iraqi and Iranian neighbours use geoBoundaries' detailed levels, Turkey's rings probe further like French Guiana's, and breaks of up to 1.5 km at tripoints close.
+- Population: TÜİK's address-based register at 31 December 2022 by district, as OCHA publishes it (cod-ps-tur); provinces and regions are sums. TÜİK's later tables sit behind a browser check and cannot be retained by script. Areas are boundary-derived; no GDP is shown.
+- Cities: the 81 province centres, as OpenStreetMap points. A city such as Ankara spans several districts, so it stands apart from them; districts are named after their own central towns, so towns are not shown. Without an official city population, the dots set their own appearance zoom (`minzoom`, read by `settlementZoom`).
 
 ### Overseas territories
 

@@ -373,7 +373,52 @@ async function unitedKingdom(){
  return regions;
 }
 
-for(const [country,build] of [['italy',italy],['spain',spain],['france',france],['united-kingdom',unitedKingdom]]){
+// Iceland: Statistics Iceland's population by municipality at 1 January 2026 (table MAN02005,
+// municipalities as of that date); regions are sums. Areas are boundary-derived. Statistics
+// Iceland's regional GDP uses other groupings and lags several years, so none is shown.
+async function iceland(){
+ const catalogue=readCatalogue('iceland');
+ const population=await retain('iceland-population-2026.json',async()=>{
+  const url='https://px.hagstofa.is/pxen/api/v1/en/Ibuar/mannfjoldi/2_byggdir/sveitarfelog/MAN02005.px';
+  const body={query:[{code:'Sveitarfélag',selection:{filter:'all',values:['*']}},{code:'Aldur',selection:{filter:'item',values:['-1']}},{code:'Ár',selection:{filter:'item',values:['2026']}},{code:'Kyn',selection:{filter:'item',values:['0']}}],response:{format:'json'}};
+  const r=await fetch(url,{method:'POST',body:JSON.stringify(body),signal:AbortSignal.timeout(300000)});if(!r.ok)throw Error(url+' '+r.status);
+  const values={};for(const row of (await r.json()).data)if(row.key[0]!=='9999')values[row.key[0]]=Number(row.values[0]);
+  return {url,table:'MAN02005',title:'Population by municipality, age and sex 1998-2026 - Division into municipalities as of 1 January 2026',date:'2026-01-01',retrieved:today,values};
+ });
+ sources.isPopulation={title:'Statistics Iceland · Population by municipality, age and sex, 1 January 2026 (MAN02005)',url:'https://px.hagstofa.is/pxen/pxweb/en/Ibuar/Ibuar__mannfjoldi__2_byggdir__sveitarfelog/MAN02005.px',data:population.url,license:'Statistics Iceland open data (attribution)'};
+ sources.mappedArea=mappedArea('iceland');
+ const people=r=>r.level===2?population.values[r.id.slice(5)]:undefined;
+ const missing=catalogue.records.filter(r=>r.level===2&&people(r)===undefined);assert.deepEqual(missing.map(r=>r.id),[],'Every Icelandic municipality has a population');
+ const total=r=>r.level===2?people(r):catalogue.records.filter(c=>c.parent===r.id).reduce((s,c)=>s+people(c),0);
+ const regions={};
+ for(const r of catalogue.records)regions['iceland:'+r.id]={name:r.en,level:r.level,population:{value:total(r),year:2026,date:'2026-01-01',method:'register',source:'isPopulation',periodLabel:'1 January 2026 population register'},area:{value:r.areaKm2,unit:'km²',method:'mapped',period:'Boundary-derived estimate',source:'mappedArea'}};
+ return regions;
+}
+
+// Turkey: TÜİK's address-based population register (ADNKS) at 31 December 2022 by district, as OCHA
+// publishes it with the HGM district codes; provinces and regions are sums. TÜİK's own later tables
+// sit behind a browser check, so cannot be retained by script. Areas are boundary-derived.
+async function turkey(){
+ const catalogue=readCatalogue('turkey');
+ const population=await retain('turkey-population-2022.json',async()=>{
+  const url='https://data.humdata.org/dataset/79d8aa16-f74e-4881-99a7-81cbd976b8c6/resource/c016354b-091a-4820-a43a-8aeebf012ecc/download/tur_admpop_adm2_2022.csv';
+  const r=await fetch(url,{signal:AbortSignal.timeout(300000)});if(!r.ok)throw Error(url+' '+r.status);
+  const [head,...rows]=(await r.text()).replace(/^﻿/,'').trim().split(/\r?\n/).map(l=>l.split(',')),col=name=>head.indexOf(name),values={};
+  for(const row of rows)values[row[col('ADM2_PCODE')]]=Number(row[col('T_TL')]);
+  return {url,title:'Türkiye subnational population statistics, 2022 (TÜİK address-based population register)',date:'2022-12-31',retrieved:today,values};
+ });
+ sources.trPopulation={title:'TÜİK · Address-based population registration system (ADNKS) results at 31 December 2022, by district, via OCHA (cod-ps-tur)',url:'https://data.humdata.org/dataset/cod-ps-tur',data:population.url,license:'Creative Commons Attribution for Intergovernmental Organisations'};
+ sources.mappedArea=mappedArea('turkey');
+ const people=r=>r.level===3?population.values['TUR'+r.id.slice(5)]:undefined;
+ const missing=catalogue.records.filter(r=>r.level===3&&people(r)===undefined);assert.deepEqual(missing.map(r=>r.id),[],'Every Turkish district has a population');
+ const children=new Map();for(const r of catalogue.records)if(r.parent){if(!children.has(r.parent))children.set(r.parent,[]);children.get(r.parent).push(r);}
+ const total=r=>r.level===3?people(r):(children.get(r.id)||[]).reduce((s,c)=>s+total(c),0);
+ const regions={};
+ for(const r of catalogue.records)regions['turkey:'+r.id]={name:r.en,level:r.level,population:{value:total(r),year:2022,date:'2022-12-31',method:'register',source:'trPopulation',periodLabel:'31 December 2022 address-based register'},area:{value:r.areaKm2,unit:'km²',method:'mapped',period:'Boundary-derived estimate',source:'mappedArea'}};
+ return regions;
+}
+
+for(const [country,build] of [['italy',italy],['spain',spain],['france',france],['united-kingdom',unitedKingdom],['iceland',iceland],['turkey',turkey]]){
  const regions=await build(),dir=`dist/data/europe/${country}`,used=new Set(Object.values(regions).flatMap(r=>Object.values(r).map(m=>m?.source).filter(Boolean)).concat(Object.values(regions).flatMap(r=>[r.gdp?.exchangeSource].filter(Boolean))));
  const countrySources=Object.fromEntries(Object.entries(sources).filter(([id])=>used.has(id)));
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,retrieved:today,country,sources:countrySources,regions})+'\n');

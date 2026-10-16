@@ -91,7 +91,13 @@
    {colors:{levels:'Regions'},levelNames:['Regions','Departments','Communes'],naturalEarth:['FRA','NCL','ATF']})},
   italy:{en:'Italy',local:'Italia',lang:'it',background:'#eef4ee',...regional('europe','it',
    {firstLabel:'Regions',secondLabel:'Provinces',thirdLabel:'Comuni',bundledLevels:2,searchLabel:'Find a region, province or comune',statistics:true,center:[12.6,42.2],zoom:4.8,bounds:[[6.6,35.5],[18.6,47.1]],fill:'#e3eedf',selected:'#c3dcbd',line:'#3e7845'},
-   {colors:{levels:'Regions'},levelNames:['Regions','Provinces','Comuni'],naturalEarth:'ITA'})}
+   {colors:{levels:'Regions'},levelNames:['Regions','Provinces','Comuni'],naturalEarth:'ITA'})},
+  iceland:{en:'Iceland',local:'Ísland',lang:'is',background:'#eef3f7',release:'developer',...regional('europe','is',
+   {firstLabel:'Regions',secondLabel:'Municipalities',loadAllSubdivisions:true,settlements:true,searchLabel:'Find a region, municipality or town',statistics:true,center:[-18.6,64.95],zoom:5.6,bounds:[[-24.6,63.2],[-13.4,66.6]],fill:'#e2eaf3',selected:'#c2d3e8',line:'#2f5d8c'},
+   {colors:{levels:'Regions'},levelNames:['Regions','Municipalities'],naturalEarth:'ISL'})},
+  turkey:{en:'Turkey',local:'Türkiye',lang:'tr',background:'#f7efee',release:'developer',...regional('europe','tr',
+   {firstLabel:'Regions',secondLabel:'Provinces',thirdLabel:'Districts',bundledLevels:2,settlements:true,searchLabel:'Find a region, province, district or city',statistics:true,center:[35.2,39.1],zoom:5.3,bounds:[[25.6,35.8],[44.9,42.2]],fill:'#f3e4e2',selected:'#e8c5c0',line:'#a8362c'},
+   {colors:{levels:'Statistical regions'},levelNames:['Statistical regions','Provinces','Districts'],naturalEarth:'TUR'})}
  };
  const fallback='china',defaultLanguages=['en','local','both'];
  for(const [id,c] of Object.entries(countries)){

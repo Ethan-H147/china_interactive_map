@@ -5,7 +5,7 @@ import {configurations} from '../dist/europe.mjs';
 
 // Outline-only countries: one level-1 region per country, drawn land frontiers, no coastlines.
 const root='dist/data/europe',read=(c,n)=>JSON.parse(gunzipSync(fs.readFileSync(root+'/'+c+'/'+n)));
-const countries=['united-kingdom','spain','france','italy'];
+const countries=['united-kingdom','spain','france','italy','iceland','turkey'];
 assert.deepEqual(Object.keys(configurations),countries);
 const polygons=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
 function inRing(p,ring){let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if(a[1]>p[1]!==b[1]>p[1]&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
@@ -13,17 +13,19 @@ const contains=(g,p)=>polygons(g).some(poly=>inRing(p,poly[0])&&!poly.slice(1).s
 const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1]-b[1])*111195;
 const outline={},lines={};
 // Land frontier lengths, excluding the France–Spain and France–Italy seams France holds.
-const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450]};
+const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450],iceland:[0,0],turkey:[2800,3000]};
 // Pieces: Ireland and Cyprus (Akrotiri, Dhekelia in four pieces, its two Cypriot enclaves);
 // Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea,
 // Llívia, French Guiana (Suriname, Brazil, and five short pieces at the Brazilian tripoint),
 // Saint-Martin; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
-const pieces={'united-kingdom':8,spain:5,france:13,italy:4};
+// Turkey: Greece and Bulgaria from the Aegean to the Black Sea; Georgia to Syria from the Black
+// Sea to the Mediterranean. Iceland has no land frontier.
+const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,turkey:2};
 // The six Meuse villages destroyed at Verdun in 1916 remain communes with no inhabitants.
 const zeroPopulation=new Set(['FR-C-55039','FR-C-55050','FR-C-55139','FR-C-55189','FR-C-55239','FR-C-55307']);
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
 // Spain's condominiums and the islets under central administration have no registered population.
-const subdivided={'united-kingdom':{levels:['Nation or region','County or unitary authority','District'],counts:{1:28,2:226,3:164},bundled:3,noPopulation:r=>['GB-O-IO','GB-O-GS','GB-O-SH-AC','GB-O-SBA','GB-O-SBA-A','GB-O-SBA-D'].includes(r.id)},france:{levels:['Region','Department','Commune'],counts:{1:26,2:191,3:34875},bundled:2,noPopulation:r=>/^FR-(R-98[49]|T-)/.test(r.id)},italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
+const subdivided={'united-kingdom':{levels:['Nation or region','County or unitary authority','District'],counts:{1:28,2:226,3:164},bundled:3,noPopulation:r=>['GB-O-IO','GB-O-GS','GB-O-SH-AC','GB-O-SBA','GB-O-SBA-A','GB-O-SBA-D'].includes(r.id)},france:{levels:['Region','Department','Commune'],counts:{1:26,2:191,3:34875},bundled:2,noPopulation:r=>/^FR-(R-98[49]|T-)/.test(r.id)},italy:{levels:['Region','Province','Comune'],counts:{1:20,2:110,3:7896},bundled:2},iceland:{levels:['Region','Municipality'],counts:{1:8,2:61},bundled:2},turkey:{levels:['Statistical region','Province','District'],counts:{1:12,2:81,3:973},bundled:2},spain:{levels:['Autonomous community','Province','Municipality'],counts:{1:20,2:53,3:8219},bundled:2,noPopulation:r=>r.id.startsWith('ES-T-')||['ES-A-20','ES-P-54'].includes(r.id)||r.parent==='ES-P-54'}};
 for(const country of countries){
  const catalogue=read(country,'catalogue.bin'),first=read(country,'first.bin'),context=read(country,'context.bin');
  // The portal: the home territory, then each overseas territory with its id and bounds.
@@ -149,4 +151,11 @@ for(const [country,p,place] of [['italy',[13.7228,45.5947],'Lazzaretto'],['franc
  assert(!europeFlags['united-kingdom'].firstFlags['GB-R-TLN'],'Northern Ireland has no official flag');
  assert.equal(europeFlags['united-kingdom'].firstFlags['GB-R-TLJ'].name,'England','English regions show the flag of England');
 }
-console.log('Europe: outlines and subdivision hierarchies, chunked levels, statistics for every unit, enclaves and microstates, shared France seams drawn once, land frontiers without coastline.');
+// Iceland: Statistics Iceland's 2026 register and its localities; Turkey: TÜİK's 2022 register and
+// a city dot for every province centre.
+{const stats=JSON.parse(fs.readFileSync(root+'/iceland/statistics.json')).regions,regions=Object.entries(stats).filter(([,r])=>r.level===1);
+ assert(regions.reduce((t,[,r])=>t+r.population.value,0)>385000,'Iceland 1 January 2026 total');
+ const places=JSON.parse(fs.readFileSync(root+'/iceland/settlements.json')).records;assert(places.length>100&&places.some(p=>p.en==='Greater Reykjavík'&&p.population.value>240000),'Iceland localities');
+ const tr=JSON.parse(fs.readFileSync(root+'/turkey/statistics.json')).regions;assert.equal(Object.values(tr).filter(r=>r.level===1).reduce((t,r)=>t+r.population.value,0),85279553,'Turkey 31 December 2022 total');
+ const towns=JSON.parse(fs.readFileSync(root+'/turkey/settlements.json')).records;assert(towns.length>=80&&towns.every(t=>t.kind.startsWith('City')),'Turkish cities: the province centres only');}
+console.log('Europe (six countries): outlines and subdivision hierarchies, chunked levels, statistics for every unit, enclaves and microstates, shared France seams drawn once, land frontiers without coastline.');

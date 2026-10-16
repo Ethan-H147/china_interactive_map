@@ -1,0 +1,10057 @@
+{
+ "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A300%5D%3Barea%5B%22ISO3166-1%22%3D%22TR%22%5D%5Badmin_level%3D2%5D-%3E.tr%3Bnode(area.tr)%5B%22place%22~%22%5E(city%7Ctown)%24%22%5D%3Bout%3B",
+ "title": "OpenStreetMap place=city and place=town nodes in Türkiye",
+ "retrieved": "2026-10-16",
+ "places": [
+  {
+   "osm": 14644309,
+   "place": "town",
+   "name": "İskenderun",
+   "en": "İskenderun",
+   "center": [
+    36.17104,
+    36.59023
+   ]
+  },
+  {
+   "osm": 25869410,
+   "place": "city",
+   "name": "Ankara",
+   "en": "Ankara",
+   "center": [
+    32.85405,
+    39.92078
+   ]
+  },
+  {
+   "osm": 25869574,
+   "place": "city",
+   "name": "Edirne",
+   "en": null,
+   "center": [
+    26.55872,
+    41.67593
+   ]
+  },
+  {
+   "osm": 25869575,
+   "place": "city",
+   "name": "Çanakkale",
+   "en": null,
+   "center": [
+    26.40289,
+    40.14627
+   ]
+  },
+  {
+   "osm": 25869577,
+   "place": "city",
+   "name": "Kırklareli",
+   "en": "Kırklareli",
+   "center": [
+    27.22355,
+    41.73702
+   ]
+  },
+  {
+   "osm": 25869582,
+   "place": "city",
+   "name": "Balıkesir",
+   "en": "Balıkesir",
+   "center": [
+    27.88798,
+    39.64739
+   ]
+  },
+  {
+   "osm": 25869694,
+   "place": "city",
+   "name": "Muğla",
+   "en": null,
+   "center": [
+    28.36373,
+    37.21518
+   ]
+  },
+  {
+   "osm": 25869708,
+   "place": "town",
+   "name": "Adapazarı",
+   "en": "Adapazarı",
+   "center": [
+    30.40203,
+    40.77552
+   ]
+  },
+  {
+   "osm": 25869720,
+   "place": "city",
+   "name": "Afyonkarahisar",
+   "en": "Afyonkarahisar",
+   "center": [
+    30.5387,
+    38.75686
+   ]
+  },
+  {
+   "osm": 25869729,
+   "place": "city",
+   "name": "Bilecik",
+   "en": null,
+   "center": [
+    29.97529,
+    40.14351
+   ]
+  },
+  {
+   "osm": 25869752,
+   "place": "city",
+   "name": "Burdur",
+   "en": null,
+   "center": [
+    30.28873,
+    37.72484
+   ]
+  },
+  {
+   "osm": 25869768,
+   "place": "city",
+   "name": "Düzce",
+   "en": "Düzce",
+   "center": [
+    31.15954,
+    40.83915
+   ]
+  },
+  {
+   "osm": 25869769,
+   "place": "city",
+   "name": "Eskişehir",
+   "en": "Eskisehir",
+   "center": [
+    30.51912,
+    39.77439
+   ]
+  },
+  {
+   "osm": 25869814,
+   "place": "city",
+   "name": "Konya",
+   "en": "Konya",
+   "center": [
+    32.49244,
+    37.87273
+   ]
+  },
+  {
+   "osm": 25869815,
+   "place": "city",
+   "name": "Kütahya",
+   "en": null,
+   "center": [
+    29.98579,
+    39.41991
+   ]
+  },
+  {
+   "osm": 25869819,
+   "place": "city",
+   "name": "Manisa",
+   "en": "Manisa",
+   "center": [
+    27.4334,
+    38.61258
+   ]
+  },
+  {
+   "osm": 25869820,
+   "place": "city",
+   "name": "Uşak",
+   "en": "Uşak",
+   "center": [
+    29.40584,
+    38.67404
+   ]
+  },
+  {
+   "osm": 25869857,
+   "place": "city",
+   "name": "Yalova",
+   "en": null,
+   "center": [
+    29.26999,
+    40.65825
+   ]
+  },
+  {
+   "osm": 26480399,
+   "place": "city",
+   "name": "Adana",
+   "en": "Adana",
+   "center": [
+    35.32529,
+    36.98636
+   ]
+  },
+  {
+   "osm": 26480484,
+   "place": "city",
+   "name": "Hakkâri",
+   "en": "Hakkâri",
+   "center": [
+    43.73779,
+    37.5767
+   ]
+  },
+  {
+   "osm": 26480571,
+   "place": "city",
+   "name": "Van",
+   "en": null,
+   "center": [
+    43.39461,
+    38.50088
+   ]
+  },
+  {
+   "osm": 26480597,
+   "place": "city",
+   "name": "Iğdır",
+   "en": null,
+   "center": [
+    44.0468,
+    39.92188
+   ]
+  },
+  {
+   "osm": 26480875,
+   "place": "city",
+   "name": "Kahramanmaraş",
+   "en": null,
+   "center": [
+    36.92751,
+    37.58127
+   ]
+  },
+  {
+   "osm": 26481523,
+   "place": "city",
+   "name": "Mersin",
+   "en": "Mersin",
+   "center": [
+    34.62984,
+    36.79784
+   ]
+  },
+  {
+   "osm": 26481742,
+   "place": "city",
+   "name": "Osmaniye",
+   "en": "Osmaniye",
+   "center": [
+    36.25077,
+    37.07336
+   ]
+  },
+  {
+   "osm": 26482024,
+   "place": "town",
+   "name": "Eğirdir",
+   "en": null,
+   "center": [
+    30.85004,
+    37.87443
+   ]
+  },
+  {
+   "osm": 26482164,
+   "place": "town",
+   "name": "Keçiborlu",
+   "en": null,
+   "center": [
+    30.30036,
+    37.94488
+   ]
+  },
+  {
+   "osm": 26482228,
+   "place": "city",
+   "name": "Aksaray",
+   "en": null,
+   "center": [
+    34.02691,
+    38.37054
+   ]
+  },
+  {
+   "osm": 26482281,
+   "place": "city",
+   "name": "Karaman",
+   "en": "Karaman",
+   "center": [
+    33.21946,
+    37.18085
+   ]
+  },
+  {
+   "osm": 26482287,
+   "place": "city",
+   "name": "Kayseri",
+   "en": "Kayseri",
+   "center": [
+    35.48732,
+    38.7219
+   ]
+  },
+  {
+   "osm": 26482294,
+   "place": "city",
+   "name": "Kırıkkale",
+   "en": "Kırıkkale",
+   "center": [
+    33.50585,
+    39.84105
+   ]
+  },
+  {
+   "osm": 26482519,
+   "place": "city",
+   "name": "Kırşehir",
+   "en": "Kırşehir",
+   "center": [
+    34.16056,
+    39.14611
+   ]
+  },
+  {
+   "osm": 26482523,
+   "place": "city",
+   "name": "Nevşehir",
+   "en": "Nevşehir",
+   "center": [
+    34.71507,
+    38.62504
+   ]
+  },
+  {
+   "osm": 26482716,
+   "place": "city",
+   "name": "Niğde",
+   "en": "Niğde",
+   "center": [
+    34.67645,
+    37.96985
+   ]
+  },
+  {
+   "osm": 26482940,
+   "place": "city",
+   "name": "Sivas",
+   "en": null,
+   "center": [
+    37.01452,
+    39.75036
+   ]
+  },
+  {
+   "osm": 26482958,
+   "place": "city",
+   "name": "Yozgat",
+   "en": "Yozgat",
+   "center": [
+    34.8081,
+    39.8222
+   ]
+  },
+  {
+   "osm": 26482974,
+   "place": "city",
+   "name": "Amasya",
+   "en": "Amasya",
+   "center": [
+    35.83291,
+    40.65032
+   ]
+  },
+  {
+   "osm": 26482975,
+   "place": "city",
+   "name": "Artvin",
+   "en": "Artvin",
+   "center": [
+    41.82874,
+    41.18308
+   ]
+  },
+  {
+   "osm": 26483113,
+   "place": "city",
+   "name": "Bartın",
+   "en": "Bartın",
+   "center": [
+    32.33662,
+    41.63505
+   ]
+  },
+  {
+   "osm": 26483234,
+   "place": "city",
+   "name": "Bayburt",
+   "en": "Bayburt",
+   "center": [
+    40.2205,
+    40.25516
+   ]
+  },
+  {
+   "osm": 26483306,
+   "place": "city",
+   "name": "Çorum",
+   "en": "Çorum",
+   "center": [
+    34.95373,
+    40.54991
+   ]
+  },
+  {
+   "osm": 26483307,
+   "place": "city",
+   "name": "Giresun",
+   "en": "Giresun",
+   "center": [
+    38.38415,
+    40.91763
+   ]
+  },
+  {
+   "osm": 26483350,
+   "place": "city",
+   "name": "Gümüşhane",
+   "en": "Gümüşhane",
+   "center": [
+    39.47573,
+    40.46178
+   ]
+  },
+  {
+   "osm": 26485694,
+   "place": "city",
+   "name": "Karabük",
+   "en": "Karabük",
+   "center": [
+    32.62312,
+    41.19554
+   ]
+  },
+  {
+   "osm": 26485876,
+   "place": "city",
+   "name": "Kastamonu",
+   "en": "Kastamonu",
+   "center": [
+    33.77701,
+    41.37654
+   ]
+  },
+  {
+   "osm": 26486071,
+   "place": "city",
+   "name": "Ordu",
+   "en": "Ordu",
+   "center": [
+    37.87977,
+    40.98523
+   ]
+  },
+  {
+   "osm": 26486097,
+   "place": "city",
+   "name": "Rize",
+   "en": "Rize",
+   "center": [
+    40.51991,
+    41.02482
+   ]
+  },
+  {
+   "osm": 26486105,
+   "place": "city",
+   "name": "Samsun",
+   "en": "Samsun",
+   "center": [
+    36.33206,
+    41.29461
+   ]
+  },
+  {
+   "osm": 26486164,
+   "place": "city",
+   "name": "Sinop",
+   "en": "Sinop",
+   "center": [
+    35.15115,
+    42.02658
+   ]
+  },
+  {
+   "osm": 26486186,
+   "place": "city",
+   "name": "Tokat",
+   "en": null,
+   "center": [
+    36.55216,
+    40.32335
+   ]
+  },
+  {
+   "osm": 26486267,
+   "place": "city",
+   "name": "Zonguldak",
+   "en": null,
+   "center": [
+    31.7876,
+    41.45268
+   ]
+  },
+  {
+   "osm": 26486334,
+   "place": "city",
+   "name": "Ağrı",
+   "en": null,
+   "center": [
+    43.05049,
+    39.71913
+   ]
+  },
+  {
+   "osm": 26486338,
+   "place": "city",
+   "name": "Ardahan",
+   "en": "Ardahan",
+   "center": [
+    42.70356,
+    41.1103
+   ]
+  },
+  {
+   "osm": 26486414,
+   "place": "city",
+   "name": "Bingöl",
+   "en": "Bingöl",
+   "center": [
+    40.49723,
+    38.88613
+   ]
+  },
+  {
+   "osm": 26486498,
+   "place": "city",
+   "name": "Bitlis",
+   "en": "Bitlis",
+   "center": [
+    42.10846,
+    38.40205
+   ]
+  },
+  {
+   "osm": 26486523,
+   "place": "city",
+   "name": "Elâzığ",
+   "en": "Elazığ",
+   "center": [
+    39.22271,
+    38.67472
+   ]
+  },
+  {
+   "osm": 26486736,
+   "place": "city",
+   "name": "Muş",
+   "en": null,
+   "center": [
+    41.48989,
+    38.73222
+   ]
+  },
+  {
+   "osm": 26486753,
+   "place": "city",
+   "name": "Erzincan",
+   "en": "Erzincan",
+   "center": [
+    39.49103,
+    39.74676
+   ]
+  },
+  {
+   "osm": 26486754,
+   "place": "city",
+   "name": "Erzurum",
+   "en": "Erzurum",
+   "center": [
+    41.27277,
+    39.90632
+   ]
+  },
+  {
+   "osm": 26486777,
+   "place": "city",
+   "name": "Kars",
+   "en": null,
+   "center": [
+    43.09475,
+    40.60708
+   ]
+  },
+  {
+   "osm": 26486997,
+   "place": "city",
+   "name": "Malatya",
+   "en": null,
+   "center": [
+    38.31913,
+    38.34868
+   ]
+  },
+  {
+   "osm": 26487261,
+   "place": "city",
+   "name": "Tunceli",
+   "en": null,
+   "center": [
+    39.54827,
+    39.10606
+   ]
+  },
+  {
+   "osm": 26487468,
+   "place": "city",
+   "name": "Adıyaman",
+   "en": "Adıyaman",
+   "center": [
+    38.2773,
+    37.7603
+   ]
+  },
+  {
+   "osm": 26487469,
+   "place": "city",
+   "name": "Batman",
+   "en": null,
+   "center": [
+    41.12776,
+    37.88357
+   ]
+  },
+  {
+   "osm": 26487666,
+   "place": "city",
+   "name": "Diyarbakır",
+   "en": "Diyarbakır",
+   "center": [
+    40.23635,
+    37.91622
+   ]
+  },
+  {
+   "osm": 26487670,
+   "place": "city",
+   "name": "Gaziantep",
+   "en": "Gaziantep",
+   "center": [
+    37.37926,
+    37.06283
+   ]
+  },
+  {
+   "osm": 26487717,
+   "place": "city",
+   "name": "Kilis",
+   "en": "Kilis",
+   "center": [
+    37.11461,
+    36.71656
+   ]
+  },
+  {
+   "osm": 26487735,
+   "place": "city",
+   "name": "Mardin",
+   "en": null,
+   "center": [
+    40.73544,
+    37.31326
+   ]
+  },
+  {
+   "osm": 26487743,
+   "place": "city",
+   "name": "Şanlıurfa",
+   "en": "Şanlıurfa",
+   "center": [
+    38.79193,
+    37.15962
+   ]
+  },
+  {
+   "osm": 26487823,
+   "place": "city",
+   "name": "Siirt",
+   "en": null,
+   "center": [
+    41.94218,
+    37.92736
+   ]
+  },
+  {
+   "osm": 26487882,
+   "place": "city",
+   "name": "Şırnak",
+   "en": "Şırnak",
+   "center": [
+    42.45703,
+    37.52196
+   ]
+  },
+  {
+   "osm": 26504188,
+   "place": "town",
+   "name": "Havsa",
+   "en": null,
+   "center": [
+    26.82056,
+    41.5493
+   ]
+  },
+  {
+   "osm": 26504223,
+   "place": "town",
+   "name": "Keşan",
+   "en": null,
+   "center": [
+    26.63031,
+    40.85488
+   ]
+  },
+  {
+   "osm": 26504225,
+   "place": "town",
+   "name": "İpsala",
+   "en": null,
+   "center": [
+    26.38398,
+    40.92171
+   ]
+  },
+  {
+   "osm": 26504247,
+   "place": "town",
+   "name": "Bakırköy",
+   "en": "Bakırköy",
+   "center": [
+    28.87445,
+    40.97826
+   ]
+  },
+  {
+   "osm": 26504699,
+   "place": "town",
+   "name": "Büyükçekmece",
+   "en": null,
+   "center": [
+    28.57976,
+    41.02165
+   ]
+  },
+  {
+   "osm": 26504810,
+   "place": "town",
+   "name": "Fatih",
+   "en": null,
+   "center": [
+    28.94793,
+    41.01928
+   ]
+  },
+  {
+   "osm": 26504855,
+   "place": "town",
+   "name": "Küçükçekmece",
+   "en": null,
+   "center": [
+    28.7712,
+    40.99187
+   ]
+  },
+  {
+   "osm": 26505044,
+   "place": "town",
+   "name": "Zeytinburnu",
+   "en": null,
+   "center": [
+    28.90375,
+    40.98987
+   ]
+  },
+  {
+   "osm": 26505047,
+   "place": "town",
+   "name": "Üsküdar",
+   "en": null,
+   "center": [
+    29.01513,
+    41.02655
+   ]
+  },
+  {
+   "osm": 26505104,
+   "place": "town",
+   "name": "Babaeski",
+   "en": null,
+   "center": [
+    27.09178,
+    41.43026
+   ]
+  },
+  {
+   "osm": 26505108,
+   "place": "town",
+   "name": "Gebze",
+   "en": null,
+   "center": [
+    29.43177,
+    40.80067
+   ]
+  },
+  {
+   "osm": 26505109,
+   "place": "town",
+   "name": "Çerkezköy",
+   "en": null,
+   "center": [
+    27.99947,
+    41.28625
+   ]
+  },
+  {
+   "osm": 26505113,
+   "place": "town",
+   "name": "Çorlu",
+   "en": null,
+   "center": [
+    27.80411,
+    41.15909
+   ]
+  },
+  {
+   "osm": 26505332,
+   "place": "town",
+   "name": "Kâğıthane",
+   "en": null,
+   "center": [
+    28.97302,
+    41.08121
+   ]
+  },
+  {
+   "osm": 26505356,
+   "place": "town",
+   "name": "Esenyurt",
+   "en": null,
+   "center": [
+    28.68011,
+    41.03429
+   ]
+  },
+  {
+   "osm": 26780103,
+   "place": "town",
+   "name": "Nazilli",
+   "en": null,
+   "center": [
+    28.32421,
+    37.90975
+   ]
+  },
+  {
+   "osm": 27003762,
+   "place": "town",
+   "name": "Gerede",
+   "en": "Gerede",
+   "center": [
+    32.20091,
+    40.79875
+   ]
+  },
+  {
+   "osm": 27003763,
+   "place": "town",
+   "name": "Kızılcahamam",
+   "en": null,
+   "center": [
+    32.65286,
+    40.47009
+   ]
+  },
+  {
+   "osm": 27004276,
+   "place": "town",
+   "name": "Safranbolu",
+   "en": "Safranbolu",
+   "center": [
+    32.69296,
+    41.24567
+   ]
+  },
+  {
+   "osm": 27004846,
+   "place": "town",
+   "name": "Amasra",
+   "en": null,
+   "center": [
+    32.3867,
+    41.74892
+   ]
+  },
+  {
+   "osm": 27005103,
+   "place": "town",
+   "name": "Kurucaşile",
+   "en": null,
+   "center": [
+    32.72079,
+    41.84389
+   ]
+  },
+  {
+   "osm": 27010651,
+   "place": "town",
+   "name": "Doğanyurt",
+   "en": null,
+   "center": [
+    33.46046,
+    42.0056
+   ]
+  },
+  {
+   "osm": 27010652,
+   "place": "town",
+   "name": "İnebolu",
+   "en": null,
+   "center": [
+    33.7599,
+    41.97858
+   ]
+  },
+  {
+   "osm": 27010654,
+   "place": "town",
+   "name": "Abana",
+   "en": null,
+   "center": [
+    34.00772,
+    41.9785
+   ]
+  },
+  {
+   "osm": 27010655,
+   "place": "town",
+   "name": "Çatalzeytin",
+   "en": null,
+   "center": [
+    34.22268,
+    41.95311
+   ]
+  },
+  {
+   "osm": 27010656,
+   "place": "town",
+   "name": "Türkeli",
+   "en": null,
+   "center": [
+    34.33959,
+    41.9483
+   ]
+  },
+  {
+   "osm": 27010658,
+   "place": "town",
+   "name": "Gerze",
+   "en": null,
+   "center": [
+    35.19962,
+    41.80327
+   ]
+  },
+  {
+   "osm": 27010659,
+   "place": "town",
+   "name": "Yakakent",
+   "en": null,
+   "center": [
+    35.53159,
+    41.63295
+   ]
+  },
+  {
+   "osm": 27010660,
+   "place": "town",
+   "name": "Alaçam",
+   "en": null,
+   "center": [
+    35.59733,
+    41.60686
+   ]
+  },
+  {
+   "osm": 27010661,
+   "place": "town",
+   "name": "Bafra",
+   "en": "Bafra",
+   "center": [
+    35.90248,
+    41.5666
+   ]
+  },
+  {
+   "osm": 27013436,
+   "place": "town",
+   "name": "Eynesil",
+   "en": null,
+   "center": [
+    39.1434,
+    41.06469
+   ]
+  },
+  {
+   "osm": 27013437,
+   "place": "town",
+   "name": "Görele",
+   "en": null,
+   "center": [
+    38.99862,
+    41.03352
+   ]
+  },
+  {
+   "osm": 27013438,
+   "place": "town",
+   "name": "Tirebolu",
+   "en": null,
+   "center": [
+    38.81463,
+    41.0072
+   ]
+  },
+  {
+   "osm": 27013439,
+   "place": "town",
+   "name": "Bulancak",
+   "en": null,
+   "center": [
+    38.23188,
+    40.93892
+   ]
+  },
+  {
+   "osm": 27013440,
+   "place": "town",
+   "name": "Piraziz",
+   "en": null,
+   "center": [
+    38.12476,
+    40.95257
+   ]
+  },
+  {
+   "osm": 27013441,
+   "place": "town",
+   "name": "Perşembe",
+   "en": null,
+   "center": [
+    37.77363,
+    41.06695
+   ]
+  },
+  {
+   "osm": 27013442,
+   "place": "town",
+   "name": "Fatsa",
+   "en": null,
+   "center": [
+    37.50022,
+    41.03088
+   ]
+  },
+  {
+   "osm": 27013443,
+   "place": "town",
+   "name": "Ünye",
+   "en": "Ünye",
+   "center": [
+    37.28536,
+    41.12624
+   ]
+  },
+  {
+   "osm": 27013444,
+   "place": "town",
+   "name": "Terme",
+   "en": null,
+   "center": [
+    36.97217,
+    41.20904
+   ]
+  },
+  {
+   "osm": 27018246,
+   "place": "town",
+   "name": "Şavşat",
+   "en": "Şavşat",
+   "center": [
+    42.35689,
+    41.25249
+   ]
+  },
+  {
+   "osm": 27018247,
+   "place": "town",
+   "name": "Borçka",
+   "en": null,
+   "center": [
+    41.67467,
+    41.36025
+   ]
+  },
+  {
+   "osm": 27018248,
+   "place": "town",
+   "name": "Hopa",
+   "en": null,
+   "center": [
+    41.41816,
+    41.38875
+   ]
+  },
+  {
+   "osm": 27018249,
+   "place": "town",
+   "name": "Arhavi",
+   "en": null,
+   "center": [
+    41.30935,
+    41.35207
+   ]
+  },
+  {
+   "osm": 27018250,
+   "place": "town",
+   "name": "Fındıklı",
+   "en": null,
+   "center": [
+    41.14142,
+    41.27123
+   ]
+  },
+  {
+   "osm": 27018251,
+   "place": "town",
+   "name": "Ardeşen",
+   "en": null,
+   "center": [
+    40.98942,
+    41.19188
+   ]
+  },
+  {
+   "osm": 27018252,
+   "place": "town",
+   "name": "Pazar",
+   "en": null,
+   "center": [
+    40.88685,
+    41.18026
+   ]
+  },
+  {
+   "osm": 27018253,
+   "place": "town",
+   "name": "Çayeli",
+   "en": null,
+   "center": [
+    40.7237,
+    41.08783
+   ]
+  },
+  {
+   "osm": 27019567,
+   "place": "town",
+   "name": "Çıldır",
+   "en": "Çıldır",
+   "center": [
+    43.13502,
+    41.1269
+   ]
+  },
+  {
+   "osm": 27028518,
+   "place": "town",
+   "name": "Horasan",
+   "en": null,
+   "center": [
+    42.16901,
+    40.04001
+   ]
+  },
+  {
+   "osm": 27031554,
+   "place": "town",
+   "name": "Elmadağ",
+   "en": null,
+   "center": [
+    33.23439,
+    39.91732
+   ]
+  },
+  {
+   "osm": 27031556,
+   "place": "town",
+   "name": "Yahşihan",
+   "en": null,
+   "center": [
+    33.45242,
+    39.84975
+   ]
+  },
+  {
+   "osm": 27031557,
+   "place": "town",
+   "name": "Balışeyh",
+   "en": null,
+   "center": [
+    33.71834,
+    39.90972
+   ]
+  },
+  {
+   "osm": 27031558,
+   "place": "town",
+   "name": "Yerköy",
+   "en": null,
+   "center": [
+    34.46836,
+    39.64138
+   ]
+  },
+  {
+   "osm": 27031559,
+   "place": "town",
+   "name": "Sorgun",
+   "en": null,
+   "center": [
+    35.18543,
+    39.80987
+   ]
+  },
+  {
+   "osm": 27031561,
+   "place": "town",
+   "name": "Akdağmadeni",
+   "en": null,
+   "center": [
+    35.88055,
+    39.66122
+   ]
+  },
+  {
+   "osm": 27031562,
+   "place": "town",
+   "name": "İmranlı",
+   "en": null,
+   "center": [
+    38.11293,
+    39.876
+   ]
+  },
+  {
+   "osm": 27031568,
+   "place": "town",
+   "name": "Tercan",
+   "en": null,
+   "center": [
+    40.383,
+    39.77649
+   ]
+  },
+  {
+   "osm": 27031569,
+   "place": "town",
+   "name": "Aşkale",
+   "en": "Aşkale",
+   "center": [
+    40.69431,
+    39.92172
+   ]
+  },
+  {
+   "osm": 27077401,
+   "place": "town",
+   "name": "Korkuteli",
+   "en": null,
+   "center": [
+    30.19705,
+    37.06665
+   ]
+  },
+  {
+   "osm": 27151550,
+   "place": "town",
+   "name": "Ürgüp",
+   "en": "Ürgüp",
+   "center": [
+    34.9116,
+    38.63005
+   ]
+  },
+  {
+   "osm": 27152738,
+   "place": "town",
+   "name": "Seydişehir",
+   "en": null,
+   "center": [
+    31.84833,
+    37.41937
+   ]
+  },
+  {
+   "osm": 27154703,
+   "place": "town",
+   "name": "Akseki",
+   "en": null,
+   "center": [
+    31.78968,
+    37.04564
+   ]
+  },
+  {
+   "osm": 27168490,
+   "place": "town",
+   "name": "Kemer",
+   "en": null,
+   "center": [
+    30.56386,
+    36.60138
+   ]
+  },
+  {
+   "osm": 27426565,
+   "place": "town",
+   "name": "Bağcılar",
+   "en": null,
+   "center": [
+    28.85676,
+    41.03455
+   ]
+  },
+  {
+   "osm": 28903589,
+   "place": "town",
+   "name": "Kuşadası",
+   "en": null,
+   "center": [
+    27.26687,
+    37.86324
+   ]
+  },
+  {
+   "osm": 28967289,
+   "place": "town",
+   "name": "Marmaris",
+   "en": null,
+   "center": [
+    28.27427,
+    36.85225
+   ]
+  },
+  {
+   "osm": 29427947,
+   "place": "town",
+   "name": "Yenimahalle",
+   "en": null,
+   "center": [
+    32.80878,
+    39.96611
+   ]
+  },
+  {
+   "osm": 29520684,
+   "place": "town",
+   "name": "Bozüyük",
+   "en": null,
+   "center": [
+    30.03462,
+    39.90678
+   ]
+  },
+  {
+   "osm": 29523865,
+   "place": "town",
+   "name": "Orhangazi",
+   "en": null,
+   "center": [
+    29.31083,
+    40.49554
+   ]
+  },
+  {
+   "osm": 29523873,
+   "place": "town",
+   "name": "Gemlik",
+   "en": null,
+   "center": [
+    29.15707,
+    40.43017
+   ]
+  },
+  {
+   "osm": 29524056,
+   "place": "town",
+   "name": "İnegöl",
+   "en": "İnegöl",
+   "center": [
+    29.50965,
+    40.08004
+   ]
+  },
+  {
+   "osm": 32998731,
+   "place": "town",
+   "name": "Bodrum",
+   "en": null,
+   "center": [
+    27.43065,
+    37.0344
+   ]
+  },
+  {
+   "osm": 32998738,
+   "place": "town",
+   "name": "Milas",
+   "en": null,
+   "center": [
+    27.77998,
+    37.31627
+   ]
+  },
+  {
+   "osm": 36540470,
+   "place": "town",
+   "name": "Manavgat",
+   "en": "Manavgat",
+   "center": [
+    31.44067,
+    36.78701
+   ]
+  },
+  {
+   "osm": 51995506,
+   "place": "town",
+   "name": "Demre",
+   "en": null,
+   "center": [
+    29.98762,
+    36.24457
+   ]
+  },
+  {
+   "osm": 60075195,
+   "place": "town",
+   "name": "Alanya",
+   "en": null,
+   "center": [
+    32.00194,
+    36.54367
+   ]
+  },
+  {
+   "osm": 84326092,
+   "place": "town",
+   "name": "Akyurt",
+   "en": null,
+   "center": [
+    33.08707,
+    40.13075
+   ]
+  },
+  {
+   "osm": 84361365,
+   "place": "town",
+   "name": "Pursaklar",
+   "en": null,
+   "center": [
+    32.89691,
+    40.03811
+   ]
+  },
+  {
+   "osm": 87829487,
+   "place": "town",
+   "name": "Derinkuyu",
+   "en": null,
+   "center": [
+    34.73362,
+    38.37439
+   ]
+  },
+  {
+   "osm": 87832528,
+   "place": "town",
+   "name": "Avanos",
+   "en": null,
+   "center": [
+    34.84687,
+    38.71874
+   ]
+  },
+  {
+   "osm": 87882597,
+   "place": "town",
+   "name": "Yeşilhisar",
+   "en": null,
+   "center": [
+    35.08868,
+    38.35228
+   ]
+  },
+  {
+   "osm": 87883871,
+   "place": "town",
+   "name": "İncesu",
+   "en": "Incesu",
+   "center": [
+    35.18382,
+    38.62338
+   ]
+  },
+  {
+   "osm": 89061394,
+   "place": "town",
+   "name": "Güzelyurt",
+   "en": null,
+   "center": [
+    34.37142,
+    38.27787
+   ]
+  },
+  {
+   "osm": 92233894,
+   "place": "town",
+   "name": "Sivrihisar",
+   "en": null,
+   "center": [
+    31.5368,
+    39.45103
+   ]
+  },
+  {
+   "osm": 92476762,
+   "place": "town",
+   "name": "Yatağan",
+   "en": null,
+   "center": [
+    28.13951,
+    37.34167
+   ]
+  },
+  {
+   "osm": 95606756,
+   "place": "town",
+   "name": "Hacıbektaş",
+   "en": null,
+   "center": [
+    34.56088,
+    38.94288
+   ]
+  },
+  {
+   "osm": 95615042,
+   "place": "town",
+   "name": "Gülşehir",
+   "en": "Gülşehir",
+   "center": [
+    34.61926,
+    38.74263
+   ]
+  },
+  {
+   "osm": 100777714,
+   "place": "town",
+   "name": "Develi",
+   "en": null,
+   "center": [
+    35.4901,
+    38.38793
+   ]
+  },
+  {
+   "osm": 105352067,
+   "place": "town",
+   "name": "Mucur",
+   "en": null,
+   "center": [
+    34.38001,
+    39.05987
+   ]
+  },
+  {
+   "osm": 105374706,
+   "place": "town",
+   "name": "Keskin",
+   "en": null,
+   "center": [
+    33.61517,
+    39.67399
+   ]
+  },
+  {
+   "osm": 105402136,
+   "place": "town",
+   "name": "Karapınar",
+   "en": null,
+   "center": [
+    33.54763,
+    37.71776
+   ]
+  },
+  {
+   "osm": 105404824,
+   "place": "town",
+   "name": "Ereğli",
+   "en": "Eregli",
+   "center": [
+    34.04734,
+    37.51407
+   ]
+  },
+  {
+   "osm": 105864823,
+   "place": "town",
+   "name": "Sultanhanı",
+   "en": null,
+   "center": [
+    33.54898,
+    38.24742
+   ]
+  },
+  {
+   "osm": 105871679,
+   "place": "town",
+   "name": "Acıgöl",
+   "en": null,
+   "center": [
+    34.50897,
+    38.55016
+   ]
+  },
+  {
+   "osm": 105917986,
+   "place": "town",
+   "name": "Yahyalı",
+   "en": null,
+   "center": [
+    35.3541,
+    38.10034
+   ]
+  },
+  {
+   "osm": 107587129,
+   "place": "town",
+   "name": "Pınarbaşı",
+   "en": null,
+   "center": [
+    36.39413,
+    38.72145
+   ]
+  },
+  {
+   "osm": 109307186,
+   "place": "town",
+   "name": "Kozaklı",
+   "en": null,
+   "center": [
+    34.85321,
+    39.21474
+   ]
+  },
+  {
+   "osm": 111936748,
+   "place": "town",
+   "name": "Malkara",
+   "en": null,
+   "center": [
+    26.90238,
+    40.89308
+   ]
+  },
+  {
+   "osm": 112026609,
+   "place": "town",
+   "name": "Pozantı",
+   "en": null,
+   "center": [
+    34.87182,
+    37.42151
+   ]
+  },
+  {
+   "osm": 112041345,
+   "place": "town",
+   "name": "Ulukışla",
+   "en": null,
+   "center": [
+    34.48427,
+    37.54653
+   ]
+  },
+  {
+   "osm": 116693025,
+   "place": "town",
+   "name": "Halkapınar",
+   "en": null,
+   "center": [
+    34.18661,
+    37.4335
+   ]
+  },
+  {
+   "osm": 116736868,
+   "place": "town",
+   "name": "Ayrancı",
+   "en": null,
+   "center": [
+    33.68938,
+    37.36021
+   ]
+  },
+  {
+   "osm": 125200176,
+   "place": "town",
+   "name": "Belen",
+   "en": null,
+   "center": [
+    36.19445,
+    36.49167
+   ]
+  },
+  {
+   "osm": 125251280,
+   "place": "town",
+   "name": "Nurdağı",
+   "en": null,
+   "center": [
+    36.74094,
+    37.17791
+   ]
+  },
+  {
+   "osm": 125351451,
+   "place": "city",
+   "name": "Ceyhan",
+   "en": "Ceyhan",
+   "center": [
+    35.817,
+    37.02591
+   ]
+  },
+  {
+   "osm": 125362353,
+   "place": "town",
+   "name": "Kozan",
+   "en": "Kozan",
+   "center": [
+    35.81663,
+    37.44779
+   ]
+  },
+  {
+   "osm": 125482794,
+   "place": "town",
+   "name": "İslahiye",
+   "en": "Islahiye",
+   "center": [
+    36.63313,
+    37.02511
+   ]
+  },
+  {
+   "osm": 125557912,
+   "place": "town",
+   "name": "Nizip",
+   "en": "Nizip",
+   "center": [
+    37.7972,
+    37.01011
+   ]
+  },
+  {
+   "osm": 125561825,
+   "place": "town",
+   "name": "Birecik",
+   "en": null,
+   "center": [
+    37.98003,
+    37.03153
+   ]
+  },
+  {
+   "osm": 125580947,
+   "place": "town",
+   "name": "Halfeti",
+   "en": null,
+   "center": [
+    37.94574,
+    37.23092
+   ]
+  },
+  {
+   "osm": 125617049,
+   "place": "town",
+   "name": "Kâhta",
+   "en": null,
+   "center": [
+    38.62172,
+    37.78607
+   ]
+  },
+  {
+   "osm": 127523041,
+   "place": "town",
+   "name": "Doğubayazıt",
+   "en": "Doğubayazıt",
+   "center": [
+    44.07936,
+    39.54834
+   ]
+  },
+  {
+   "osm": 127549379,
+   "place": "town",
+   "name": "Çaldıran",
+   "en": null,
+   "center": [
+    43.90294,
+    39.13552
+   ]
+  },
+  {
+   "osm": 127550920,
+   "place": "town",
+   "name": "Muradiye",
+   "en": null,
+   "center": [
+    43.76117,
+    38.9903
+   ]
+  },
+  {
+   "osm": 127587026,
+   "place": "town",
+   "name": "Erciş",
+   "en": null,
+   "center": [
+    43.35911,
+    39.02899
+   ]
+  },
+  {
+   "osm": 127600285,
+   "place": "town",
+   "name": "Patnos",
+   "en": null,
+   "center": [
+    42.86123,
+    39.23342
+   ]
+  },
+  {
+   "osm": 127629141,
+   "place": "town",
+   "name": "Malazgirt",
+   "en": null,
+   "center": [
+    42.54095,
+    39.14614
+   ]
+  },
+  {
+   "osm": 127772021,
+   "place": "town",
+   "name": "Solhan",
+   "en": null,
+   "center": [
+    41.05181,
+    38.96594
+   ]
+  },
+  {
+   "osm": 128353481,
+   "place": "town",
+   "name": "Gürün",
+   "en": null,
+   "center": [
+    37.27094,
+    38.72133
+   ]
+  },
+  {
+   "osm": 129442224,
+   "place": "town",
+   "name": "Ahlat",
+   "en": null,
+   "center": [
+    42.48333,
+    38.75465
+   ]
+  },
+  {
+   "osm": 129456786,
+   "place": "town",
+   "name": "Adilcevaz",
+   "en": "Adilcevaz",
+   "center": [
+    42.73464,
+    38.80431
+   ]
+  },
+  {
+   "osm": 129981601,
+   "place": "town",
+   "name": "Beyşehir",
+   "en": null,
+   "center": [
+    31.72284,
+    37.68023
+   ]
+  },
+  {
+   "osm": 129990579,
+   "place": "town",
+   "name": "Kadınhanı",
+   "en": null,
+   "center": [
+    32.21221,
+    38.24005
+   ]
+  },
+  {
+   "osm": 129990829,
+   "place": "town",
+   "name": "Sarayönü",
+   "en": null,
+   "center": [
+    32.40557,
+    38.26396
+   ]
+  },
+  {
+   "osm": 130027075,
+   "place": "town",
+   "name": "Çumra",
+   "en": null,
+   "center": [
+    32.78118,
+    37.57133
+   ]
+  },
+  {
+   "osm": 130069684,
+   "place": "town",
+   "name": "Digor",
+   "en": null,
+   "center": [
+    43.41195,
+    40.37651
+   ]
+  },
+  {
+   "osm": 130072433,
+   "place": "town",
+   "name": "Akyaka",
+   "en": null,
+   "center": [
+    43.62381,
+    40.74001
+   ]
+  },
+  {
+   "osm": 130177715,
+   "place": "town",
+   "name": "Suruç",
+   "en": null,
+   "center": [
+    38.4243,
+    36.97518
+   ]
+  },
+  {
+   "osm": 130178855,
+   "place": "town",
+   "name": "Harran",
+   "en": null,
+   "center": [
+    39.02514,
+    36.87101
+   ]
+  },
+  {
+   "osm": 130180711,
+   "place": "town",
+   "name": "Viranşehir",
+   "en": null,
+   "center": [
+    39.76201,
+    37.23289
+   ]
+  },
+  {
+   "osm": 130181318,
+   "place": "town",
+   "name": "Ceylanpınar",
+   "en": null,
+   "center": [
+    40.05141,
+    36.84332
+   ]
+  },
+  {
+   "osm": 130182651,
+   "place": "town",
+   "name": "Kızıltepe",
+   "en": null,
+   "center": [
+    40.5848,
+    37.19166
+   ]
+  },
+  {
+   "osm": 130187400,
+   "place": "town",
+   "name": "Nusaybin",
+   "en": "Nusaybin",
+   "center": [
+    41.21662,
+    37.06674
+   ]
+  },
+  {
+   "osm": 130188991,
+   "place": "town",
+   "name": "Cizre",
+   "en": null,
+   "center": [
+    42.18547,
+    37.33244
+   ]
+  },
+  {
+   "osm": 130190040,
+   "place": "town",
+   "name": "Silopi",
+   "en": null,
+   "center": [
+    42.47075,
+    37.24916
+   ]
+  },
+  {
+   "osm": 130193871,
+   "place": "town",
+   "name": "Midyat",
+   "en": null,
+   "center": [
+    41.37331,
+    37.41527
+   ]
+  },
+  {
+   "osm": 132157183,
+   "place": "town",
+   "name": "Çınar",
+   "en": null,
+   "center": [
+    40.41511,
+    37.72368
+   ]
+  },
+  {
+   "osm": 132184666,
+   "place": "town",
+   "name": "Bismil",
+   "en": null,
+   "center": [
+    40.66344,
+    37.84812
+   ]
+  },
+  {
+   "osm": 132243996,
+   "place": "town",
+   "name": "Hasankeyf",
+   "en": null,
+   "center": [
+    41.41609,
+    37.73047
+   ]
+  },
+  {
+   "osm": 132276616,
+   "place": "town",
+   "name": "Gercüş",
+   "en": null,
+   "center": [
+    41.38524,
+    37.56831
+   ]
+  },
+  {
+   "osm": 132946604,
+   "place": "town",
+   "name": "Ömerli",
+   "en": null,
+   "center": [
+    40.95388,
+    37.40213
+   ]
+  },
+  {
+   "osm": 132955424,
+   "place": "town",
+   "name": "Yeşilli",
+   "en": null,
+   "center": [
+    40.82301,
+    37.33961
+   ]
+  },
+  {
+   "osm": 133034637,
+   "place": "town",
+   "name": "Silvan",
+   "en": null,
+   "center": [
+    41.00561,
+    38.14115
+   ]
+  },
+  {
+   "osm": 134338789,
+   "place": "town",
+   "name": "Hani",
+   "en": null,
+   "center": [
+    40.39514,
+    38.41157
+   ]
+  },
+  {
+   "osm": 134356073,
+   "place": "town",
+   "name": "Lice",
+   "en": null,
+   "center": [
+    40.64769,
+    38.46031
+   ]
+  },
+  {
+   "osm": 134398226,
+   "place": "town",
+   "name": "Ergani",
+   "en": null,
+   "center": [
+    39.76092,
+    38.26898
+   ]
+  },
+  {
+   "osm": 134459260,
+   "place": "town",
+   "name": "Eğil",
+   "en": "Egil",
+   "center": [
+    40.08452,
+    38.25755
+   ]
+  },
+  {
+   "osm": 134474416,
+   "place": "town",
+   "name": "Çermik",
+   "en": null,
+   "center": [
+    39.44968,
+    38.13549
+   ]
+  },
+  {
+   "osm": 134491851,
+   "place": "town",
+   "name": "Siverek",
+   "en": null,
+   "center": [
+    39.31774,
+    37.75409
+   ]
+  },
+  {
+   "osm": 134497553,
+   "place": "town",
+   "name": "Hilvan",
+   "en": null,
+   "center": [
+    38.95469,
+    37.58617
+   ]
+  },
+  {
+   "osm": 134533227,
+   "place": "town",
+   "name": "Bozova",
+   "en": null,
+   "center": [
+    38.52536,
+    37.36196
+   ]
+  },
+  {
+   "osm": 135026079,
+   "place": "town",
+   "name": "Kağızman",
+   "en": null,
+   "center": [
+    43.12046,
+    40.14068
+   ]
+  },
+  {
+   "osm": 135080036,
+   "place": "town",
+   "name": "Sivrice",
+   "en": null,
+   "center": [
+    39.30826,
+    38.44742
+   ]
+  },
+  {
+   "osm": 135231669,
+   "place": "town",
+   "name": "Kovancılar",
+   "en": null,
+   "center": [
+    39.86591,
+    38.71893
+   ]
+  },
+  {
+   "osm": 135276429,
+   "place": "town",
+   "name": "Karakoçan",
+   "en": null,
+   "center": [
+    40.03803,
+    38.95645
+   ]
+  },
+  {
+   "osm": 135289853,
+   "place": "town",
+   "name": "Genç",
+   "en": null,
+   "center": [
+    40.55661,
+    38.74954
+   ]
+  },
+  {
+   "osm": 137734589,
+   "place": "town",
+   "name": "Eruh",
+   "en": null,
+   "center": [
+    42.18084,
+    37.7506
+   ]
+  },
+  {
+   "osm": 137759851,
+   "place": "town",
+   "name": "Kurtalan",
+   "en": null,
+   "center": [
+    41.70019,
+    37.92611
+   ]
+  },
+  {
+   "osm": 137977575,
+   "place": "town",
+   "name": "Yüksekova",
+   "en": null,
+   "center": [
+    44.28217,
+    37.57177
+   ]
+  },
+  {
+   "osm": 138008774,
+   "place": "town",
+   "name": "Şemdinli",
+   "en": null,
+   "center": [
+    44.57251,
+    37.30676
+   ]
+  },
+  {
+   "osm": 142015170,
+   "place": "town",
+   "name": "Gelendost",
+   "en": null,
+   "center": [
+    31.01371,
+    38.12147
+   ]
+  },
+  {
+   "osm": 142033597,
+   "place": "town",
+   "name": "Yalvaç",
+   "en": null,
+   "center": [
+    31.17435,
+    38.30029
+   ]
+  },
+  {
+   "osm": 142157546,
+   "place": "town",
+   "name": "Akşehir",
+   "en": null,
+   "center": [
+    31.4202,
+    38.35885
+   ]
+  },
+  {
+   "osm": 142280107,
+   "place": "town",
+   "name": "Kula",
+   "en": null,
+   "center": [
+    28.64743,
+    38.54689
+   ]
+  },
+  {
+   "osm": 142303358,
+   "place": "town",
+   "name": "Turgutlu",
+   "en": "Turgutlu",
+   "center": [
+    27.70842,
+    38.50005
+   ]
+  },
+  {
+   "osm": 142434638,
+   "place": "town",
+   "name": "Ilgın",
+   "en": null,
+   "center": [
+    31.91787,
+    38.28177
+   ]
+  },
+  {
+   "osm": 144571173,
+   "place": "town",
+   "name": "Gülağaç",
+   "en": null,
+   "center": [
+    34.34605,
+    38.39409
+   ]
+  },
+  {
+   "osm": 144590473,
+   "place": "town",
+   "name": "Ortaköy",
+   "en": null,
+   "center": [
+    34.04122,
+    38.73662
+   ]
+  },
+  {
+   "osm": 146293515,
+   "place": "town",
+   "name": "Ulaş",
+   "en": null,
+   "center": [
+    37.04123,
+    39.44436
+   ]
+  },
+  {
+   "osm": 146306281,
+   "place": "town",
+   "name": "Şarkışla",
+   "en": null,
+   "center": [
+    36.4098,
+    39.3505
+   ]
+  },
+  {
+   "osm": 146395683,
+   "place": "town",
+   "name": "Kangal",
+   "en": null,
+   "center": [
+    37.39091,
+    39.23566
+   ]
+  },
+  {
+   "osm": 146569724,
+   "place": "town",
+   "name": "Zara",
+   "en": null,
+   "center": [
+    37.75907,
+    39.8972
+   ]
+  },
+  {
+   "osm": 146579097,
+   "place": "town",
+   "name": "Suşehri",
+   "en": null,
+   "center": [
+    38.08557,
+    40.16273
+   ]
+  },
+  {
+   "osm": 146609444,
+   "place": "town",
+   "name": "Şebinkarahisar",
+   "en": null,
+   "center": [
+    38.42361,
+    40.2886
+   ]
+  },
+  {
+   "osm": 146775319,
+   "place": "town",
+   "name": "Gemerek",
+   "en": null,
+   "center": [
+    36.0711,
+    39.18312
+   ]
+  },
+  {
+   "osm": 146779059,
+   "place": "town",
+   "name": "Sarıoğlan",
+   "en": null,
+   "center": [
+    35.96725,
+    39.07706
+   ]
+  },
+  {
+   "osm": 147752024,
+   "place": "town",
+   "name": "Zile",
+   "en": "Zile",
+   "center": [
+    35.88235,
+    40.30053
+   ]
+  },
+  {
+   "osm": 147972883,
+   "place": "town",
+   "name": "Yıldızeli",
+   "en": null,
+   "center": [
+    36.60163,
+    39.86672
+   ]
+  },
+  {
+   "osm": 149039804,
+   "place": "town",
+   "name": "Sungurlu",
+   "en": null,
+   "center": [
+    34.37534,
+    40.16382
+   ]
+  },
+  {
+   "osm": 149048411,
+   "place": "town",
+   "name": "Boğazkale",
+   "en": null,
+   "center": [
+    34.60923,
+    40.02154
+   ]
+  },
+  {
+   "osm": 149049507,
+   "place": "town",
+   "name": "Alaca",
+   "en": null,
+   "center": [
+    34.84148,
+    40.16901
+   ]
+  },
+  {
+   "osm": 149137340,
+   "place": "town",
+   "name": "Mecitözü",
+   "en": null,
+   "center": [
+    35.29534,
+    40.52059
+   ]
+  },
+  {
+   "osm": 149181127,
+   "place": "town",
+   "name": "Merzifon",
+   "en": null,
+   "center": [
+    35.46354,
+    40.87214
+   ]
+  },
+  {
+   "osm": 149197670,
+   "place": "town",
+   "name": "Gümüşhacıköy",
+   "en": null,
+   "center": [
+    35.2159,
+    40.87362
+   ]
+  },
+  {
+   "osm": 149208556,
+   "place": "town",
+   "name": "Osmancık",
+   "en": null,
+   "center": [
+    34.80104,
+    40.97148
+   ]
+  },
+  {
+   "osm": 149243446,
+   "place": "town",
+   "name": "Suluova",
+   "en": null,
+   "center": [
+    35.64556,
+    40.83641
+   ]
+  },
+  {
+   "osm": 149262630,
+   "place": "town",
+   "name": "Taşova",
+   "en": null,
+   "center": [
+    36.32197,
+    40.76035
+   ]
+  },
+  {
+   "osm": 149360226,
+   "place": "town",
+   "name": "Erbaa",
+   "en": null,
+   "center": [
+    36.57151,
+    40.6728
+   ]
+  },
+  {
+   "osm": 149380858,
+   "place": "town",
+   "name": "Reşadiye",
+   "en": null,
+   "center": [
+    37.33832,
+    40.39207
+   ]
+  },
+  {
+   "osm": 149472740,
+   "place": "town",
+   "name": "Pamukkale",
+   "en": "Pamukkale",
+   "center": [
+    29.12231,
+    37.91656
+   ]
+  },
+  {
+   "osm": 150557132,
+   "place": "town",
+   "name": "Balâ",
+   "en": null,
+   "center": [
+    33.12375,
+    39.55336
+   ]
+  },
+  {
+   "osm": 150560868,
+   "place": "town",
+   "name": "Kaman",
+   "en": null,
+   "center": [
+    33.7244,
+    39.3589
+   ]
+  },
+  {
+   "osm": 150625069,
+   "place": "town",
+   "name": "Kavak",
+   "en": null,
+   "center": [
+    36.04314,
+    41.07734
+   ]
+  },
+  {
+   "osm": 150637725,
+   "place": "town",
+   "name": "Ladik",
+   "en": null,
+   "center": [
+    35.89457,
+    40.90822
+   ]
+  },
+  {
+   "osm": 150640916,
+   "place": "town",
+   "name": "Havza",
+   "en": "Havza",
+   "center": [
+    35.66535,
+    40.96606
+   ]
+  },
+  {
+   "osm": 151086455,
+   "place": "town",
+   "name": "Kelkit",
+   "en": null,
+   "center": [
+    39.43598,
+    40.12552
+   ]
+  },
+  {
+   "osm": 151132155,
+   "place": "town",
+   "name": "Köse",
+   "en": null,
+   "center": [
+    39.65302,
+    40.20962
+   ]
+  },
+  {
+   "osm": 153199152,
+   "place": "town",
+   "name": "Saray",
+   "en": null,
+   "center": [
+    44.16955,
+    38.64935
+   ]
+  },
+  {
+   "osm": 153214025,
+   "place": "town",
+   "name": "Özalp",
+   "en": null,
+   "center": [
+    43.99114,
+    38.65759
+   ]
+  },
+  {
+   "osm": 153238275,
+   "place": "town",
+   "name": "Orta",
+   "en": null,
+   "center": [
+    33.10775,
+    40.62703
+   ]
+  },
+  {
+   "osm": 153259057,
+   "place": "town",
+   "name": "Çerkeş",
+   "en": null,
+   "center": [
+    32.89094,
+    40.81132
+   ]
+  },
+  {
+   "osm": 153273595,
+   "place": "town",
+   "name": "Tosya",
+   "en": "Tosya",
+   "center": [
+    34.03861,
+    41.0165
+   ]
+  },
+  {
+   "osm": 156261180,
+   "place": "town",
+   "name": "Senirkent",
+   "en": null,
+   "center": [
+    30.55035,
+    38.1078
+   ]
+  },
+  {
+   "osm": 158316331,
+   "place": "town",
+   "name": "Çavdır",
+   "en": null,
+   "center": [
+    29.69,
+    37.15499
+   ]
+  },
+  {
+   "osm": 158330287,
+   "place": "town",
+   "name": "Pazarcık",
+   "en": null,
+   "center": [
+    37.29352,
+    37.48949
+   ]
+  },
+  {
+   "osm": 158579574,
+   "place": "town",
+   "name": "Türkoğlu",
+   "en": null,
+   "center": [
+    36.84742,
+    37.38648
+   ]
+  },
+  {
+   "osm": 158637133,
+   "place": "town",
+   "name": "İmamoğlu",
+   "en": "Imamoglu",
+   "center": [
+    35.66134,
+    37.25771
+   ]
+  },
+  {
+   "osm": 158679532,
+   "place": "town",
+   "name": "Kadirli",
+   "en": "Kadirli",
+   "center": [
+    36.09745,
+    37.37396
+   ]
+  },
+  {
+   "osm": 158685518,
+   "place": "town",
+   "name": "Silifke",
+   "en": null,
+   "center": [
+    33.92604,
+    36.37782
+   ]
+  },
+  {
+   "osm": 158689427,
+   "place": "town",
+   "name": "Mut",
+   "en": null,
+   "center": [
+    33.43726,
+    36.64342
+   ]
+  },
+  {
+   "osm": 158690492,
+   "place": "town",
+   "name": "Ermenek",
+   "en": null,
+   "center": [
+    32.88887,
+    36.6389
+   ]
+  },
+  {
+   "osm": 158753598,
+   "place": "town",
+   "name": "Arsuz",
+   "en": null,
+   "center": [
+    35.88654,
+    36.41257
+   ]
+  },
+  {
+   "osm": 158753769,
+   "place": "town",
+   "name": "Samandağ",
+   "en": null,
+   "center": [
+    35.97994,
+    36.08516
+   ]
+  },
+  {
+   "osm": 160179822,
+   "place": "town",
+   "name": "Hassa",
+   "en": null,
+   "center": [
+    36.51722,
+    36.80011
+   ]
+  },
+  {
+   "osm": 160231986,
+   "place": "town",
+   "name": "Kırıkhan",
+   "en": null,
+   "center": [
+    36.36217,
+    36.49896
+   ]
+  },
+  {
+   "osm": 160352108,
+   "place": "town",
+   "name": "Posof",
+   "en": "Posof",
+   "center": [
+    42.72795,
+    41.50838
+   ]
+  },
+  {
+   "osm": 161777271,
+   "place": "town",
+   "name": "Tuzluca",
+   "en": "Tuzluca",
+   "center": [
+    43.66379,
+    40.04022
+   ]
+  },
+  {
+   "osm": 161938984,
+   "place": "town",
+   "name": "Bulanık",
+   "en": null,
+   "center": [
+    42.27083,
+    39.09239
+   ]
+  },
+  {
+   "osm": 162019740,
+   "place": "town",
+   "name": "Varto",
+   "en": null,
+   "center": [
+    41.45466,
+    39.17209
+   ]
+  },
+  {
+   "osm": 162030052,
+   "place": "town",
+   "name": "Hınıs",
+   "en": null,
+   "center": [
+    41.70033,
+    39.35849
+   ]
+  },
+  {
+   "osm": 162090408,
+   "place": "town",
+   "name": "Karayazı",
+   "en": null,
+   "center": [
+    42.14312,
+    39.70167
+   ]
+  },
+  {
+   "osm": 162138657,
+   "place": "town",
+   "name": "Tekman",
+   "en": null,
+   "center": [
+    41.50938,
+    39.64675
+   ]
+  },
+  {
+   "osm": 162310373,
+   "place": "town",
+   "name": "Tutak",
+   "en": "Tutak",
+   "center": [
+    42.77275,
+    39.53936
+   ]
+  },
+  {
+   "osm": 162360291,
+   "place": "town",
+   "name": "Hamur",
+   "en": null,
+   "center": [
+    42.9882,
+    39.60933
+   ]
+  },
+  {
+   "osm": 164071833,
+   "place": "town",
+   "name": "Besni",
+   "en": null,
+   "center": [
+    37.86227,
+    37.69109
+   ]
+  },
+  {
+   "osm": 164102749,
+   "place": "town",
+   "name": "Araban",
+   "en": null,
+   "center": [
+    37.68942,
+    37.42529
+   ]
+  },
+  {
+   "osm": 164123029,
+   "place": "town",
+   "name": "Yavuzeli",
+   "en": null,
+   "center": [
+    37.56694,
+    37.31787
+   ]
+  },
+  {
+   "osm": 164179600,
+   "place": "town",
+   "name": "Gölbaşı",
+   "en": null,
+   "center": [
+    37.63956,
+    37.7844
+   ]
+  },
+  {
+   "osm": 164735360,
+   "place": "town",
+   "name": "Doğanşehir",
+   "en": null,
+   "center": [
+    37.87844,
+    38.09341
+   ]
+  },
+  {
+   "osm": 164775558,
+   "place": "town",
+   "name": "Tut",
+   "en": null,
+   "center": [
+    37.91495,
+    37.79445
+   ]
+  },
+  {
+   "osm": 165820003,
+   "place": "town",
+   "name": "Honaz",
+   "en": null,
+   "center": [
+    29.2697,
+    37.75239
+   ]
+  },
+  {
+   "osm": 165822211,
+   "place": "town",
+   "name": "Bozkurt",
+   "en": null,
+   "center": [
+    29.60729,
+    37.82247
+   ]
+  },
+  {
+   "osm": 165823775,
+   "place": "town",
+   "name": "Baklan",
+   "en": null,
+   "center": [
+    29.60697,
+    37.97668
+   ]
+  },
+  {
+   "osm": 165847587,
+   "place": "town",
+   "name": "Çivril",
+   "en": null,
+   "center": [
+    29.73738,
+    38.30059
+   ]
+  },
+  {
+   "osm": 165854426,
+   "place": "town",
+   "name": "Sivaslı",
+   "en": null,
+   "center": [
+    29.68395,
+    38.50003
+   ]
+  },
+  {
+   "osm": 165906468,
+   "place": "town",
+   "name": "Dinar",
+   "en": null,
+   "center": [
+    30.16625,
+    38.06763
+   ]
+  },
+  {
+   "osm": 165932712,
+   "place": "town",
+   "name": "Uluborlu",
+   "en": null,
+   "center": [
+    30.44918,
+    38.07874
+   ]
+  },
+  {
+   "osm": 166025538,
+   "place": "town",
+   "name": "Tavas",
+   "en": null,
+   "center": [
+    29.07126,
+    37.57293
+   ]
+  },
+  {
+   "osm": 166058658,
+   "place": "town",
+   "name": "Kuyucak",
+   "en": null,
+   "center": [
+    28.45964,
+    37.91492
+   ]
+  },
+  {
+   "osm": 166082906,
+   "place": "town",
+   "name": "Çine",
+   "en": null,
+   "center": [
+    28.06231,
+    37.61247
+   ]
+  },
+  {
+   "osm": 166270308,
+   "place": "town",
+   "name": "Köyceğiz",
+   "en": null,
+   "center": [
+    28.68894,
+    36.9585
+   ]
+  },
+  {
+   "osm": 166273551,
+   "place": "town",
+   "name": "Ortaca",
+   "en": "Ortaca",
+   "center": [
+    28.76542,
+    36.8389
+   ]
+  },
+  {
+   "osm": 166280786,
+   "place": "town",
+   "name": "Dalaman",
+   "en": null,
+   "center": [
+    28.80027,
+    36.76721
+   ]
+  },
+  {
+   "osm": 166321178,
+   "place": "town",
+   "name": "Kumluca",
+   "en": null,
+   "center": [
+    30.28584,
+    36.3669
+   ]
+  },
+  {
+   "osm": 168032569,
+   "place": "town",
+   "name": "Akhisar",
+   "en": null,
+   "center": [
+    27.84019,
+    38.92405
+   ]
+  },
+  {
+   "osm": 168038709,
+   "place": "town",
+   "name": "Kırkağaç",
+   "en": null,
+   "center": [
+    27.67303,
+    39.10994
+   ]
+  },
+  {
+   "osm": 168071818,
+   "place": "town",
+   "name": "Menemen",
+   "en": null,
+   "center": [
+    27.0718,
+    38.61139
+   ]
+  },
+  {
+   "osm": 168091686,
+   "place": "town",
+   "name": "Saruhanlı",
+   "en": null,
+   "center": [
+    27.57192,
+    38.73494
+   ]
+  },
+  {
+   "osm": 168200884,
+   "place": "town",
+   "name": "Gölmarmara",
+   "en": null,
+   "center": [
+    27.9157,
+    38.71219
+   ]
+  },
+  {
+   "osm": 168265036,
+   "place": "town",
+   "name": "Kınık",
+   "en": null,
+   "center": [
+    27.38048,
+    39.0876
+   ]
+  },
+  {
+   "osm": 168354908,
+   "place": "town",
+   "name": "Havran",
+   "en": null,
+   "center": [
+    27.10025,
+    39.55762
+   ]
+  },
+  {
+   "osm": 168371330,
+   "place": "town",
+   "name": "Susurluk",
+   "en": null,
+   "center": [
+    28.15319,
+    39.91838
+   ]
+  },
+  {
+   "osm": 168425015,
+   "place": "town",
+   "name": "Bandırma",
+   "en": null,
+   "center": [
+    27.96976,
+    40.35547
+   ]
+  },
+  {
+   "osm": 168439485,
+   "place": "town",
+   "name": "Karacabey",
+   "en": null,
+   "center": [
+    28.35906,
+    40.21598
+   ]
+  },
+  {
+   "osm": 168480516,
+   "place": "town",
+   "name": "Biga",
+   "en": null,
+   "center": [
+    27.24284,
+    40.22698
+   ]
+  },
+  {
+   "osm": 168501777,
+   "place": "town",
+   "name": "Lapseki",
+   "en": null,
+   "center": [
+    26.6846,
+    40.34437
+   ]
+  },
+  {
+   "osm": 168586664,
+   "place": "town",
+   "name": "Yenişehir",
+   "en": null,
+   "center": [
+    29.65219,
+    40.26263
+   ]
+  },
+  {
+   "osm": 168619310,
+   "place": "town",
+   "name": "Osmaneli",
+   "en": null,
+   "center": [
+    30.01662,
+    40.35907
+   ]
+  },
+  {
+   "osm": 168729889,
+   "place": "town",
+   "name": "Hendek",
+   "en": null,
+   "center": [
+    30.74527,
+    40.7955
+   ]
+  },
+  {
+   "osm": 168751771,
+   "place": "town",
+   "name": "Akçakoca",
+   "en": null,
+   "center": [
+    31.12398,
+    41.08823
+   ]
+  },
+  {
+   "osm": 168766439,
+   "place": "town",
+   "name": "Ereğli",
+   "en": "Karadeniz Ereğli",
+   "center": [
+    31.42297,
+    41.27955
+   ]
+  },
+  {
+   "osm": 169080638,
+   "place": "town",
+   "name": "Ayvacık",
+   "en": null,
+   "center": [
+    26.40313,
+    39.60119
+   ]
+  },
+  {
+   "osm": 169083234,
+   "place": "town",
+   "name": "Ezine",
+   "en": null,
+   "center": [
+    26.34339,
+    39.7857
+   ]
+  },
+  {
+   "osm": 169452876,
+   "place": "town",
+   "name": "Tavşanlı",
+   "en": null,
+   "center": [
+    29.49553,
+    39.54512
+   ]
+  },
+  {
+   "osm": 169476863,
+   "place": "town",
+   "name": "Kepsut",
+   "en": null,
+   "center": [
+    28.15288,
+    39.68987
+   ]
+  },
+  {
+   "osm": 169483048,
+   "place": "town",
+   "name": "Dursunbey",
+   "en": null,
+   "center": [
+    28.62538,
+    39.58801
+   ]
+  },
+  {
+   "osm": 170359818,
+   "place": "town",
+   "name": "Çekerek",
+   "en": null,
+   "center": [
+    35.50725,
+    40.06496
+   ]
+  },
+  {
+   "osm": 170741611,
+   "place": "town",
+   "name": "Sandıklı",
+   "en": null,
+   "center": [
+    30.27254,
+    38.46476
+   ]
+  },
+  {
+   "osm": 170926574,
+   "place": "town",
+   "name": "Yunak",
+   "en": null,
+   "center": [
+    31.73801,
+    38.81086
+   ]
+  },
+  {
+   "osm": 170931777,
+   "place": "town",
+   "name": "Tuzlukçu",
+   "en": null,
+   "center": [
+    31.62706,
+    38.47292
+   ]
+  },
+  {
+   "osm": 170990013,
+   "place": "town",
+   "name": "Atabey",
+   "en": null,
+   "center": [
+    30.63741,
+    37.95093
+   ]
+  },
+  {
+   "osm": 171106534,
+   "place": "town",
+   "name": "Yusufeli",
+   "en": null,
+   "center": [
+    41.52709,
+    40.81083
+   ]
+  },
+  {
+   "osm": 172994128,
+   "place": "town",
+   "name": "Haymana",
+   "en": null,
+   "center": [
+    32.49879,
+    39.43414
+   ]
+  },
+  {
+   "osm": 173058779,
+   "place": "town",
+   "name": "Şereflikoçhisar",
+   "en": null,
+   "center": [
+    33.54388,
+    38.93893
+   ]
+  },
+  {
+   "osm": 173106356,
+   "place": "town",
+   "name": "Tarsus",
+   "en": "Tarsus",
+   "center": [
+    34.89515,
+    36.91648
+   ]
+  },
+  {
+   "osm": 173706263,
+   "place": "town",
+   "name": "Kalecik",
+   "en": null,
+   "center": [
+    33.41023,
+    40.10383
+   ]
+  },
+  {
+   "osm": 173756283,
+   "place": "town",
+   "name": "Ilgaz",
+   "en": null,
+   "center": [
+    33.62534,
+    40.92489
+   ]
+  },
+  {
+   "osm": 175667196,
+   "place": "town",
+   "name": "Battalgazi",
+   "en": null,
+   "center": [
+    38.3655,
+    38.42505
+   ]
+  },
+  {
+   "osm": 176991149,
+   "place": "town",
+   "name": "Maden",
+   "en": null,
+   "center": [
+    39.67023,
+    38.39323
+   ]
+  },
+  {
+   "osm": 177124036,
+   "place": "town",
+   "name": "Mazgirt",
+   "en": null,
+   "center": [
+    39.60591,
+    39.01955
+   ]
+  },
+  {
+   "osm": 177135877,
+   "place": "town",
+   "name": "Pertek",
+   "en": null,
+   "center": [
+    39.32765,
+    38.86556
+   ]
+  },
+  {
+   "osm": 177140954,
+   "place": "town",
+   "name": "Hozat",
+   "en": null,
+   "center": [
+    39.21939,
+    39.10759
+   ]
+  },
+  {
+   "osm": 177207477,
+   "place": "town",
+   "name": "Divriği",
+   "en": null,
+   "center": [
+    38.11554,
+    39.37117
+   ]
+  },
+  {
+   "osm": 177249517,
+   "place": "town",
+   "name": "Arapgir",
+   "en": null,
+   "center": [
+    38.48983,
+    39.04224
+   ]
+  },
+  {
+   "osm": 177380444,
+   "place": "town",
+   "name": "Kemaliye",
+   "en": null,
+   "center": [
+    38.49653,
+    39.2621
+   ]
+  },
+  {
+   "osm": 177397606,
+   "place": "town",
+   "name": "Keban",
+   "en": null,
+   "center": [
+    38.74444,
+    38.79431
+   ]
+  },
+  {
+   "osm": 177430042,
+   "place": "town",
+   "name": "Arguvan",
+   "en": null,
+   "center": [
+    38.26276,
+    38.78179
+   ]
+  },
+  {
+   "osm": 177456636,
+   "place": "town",
+   "name": "Hekimhan",
+   "en": null,
+   "center": [
+    37.9307,
+    38.81651
+   ]
+  },
+  {
+   "osm": 177458648,
+   "place": "town",
+   "name": "Kuluncak",
+   "en": null,
+   "center": [
+    37.67074,
+    38.88486
+   ]
+  },
+  {
+   "osm": 178351293,
+   "place": "town",
+   "name": "Devrek",
+   "en": null,
+   "center": [
+    31.95583,
+    41.21888
+   ]
+  },
+  {
+   "osm": 178415901,
+   "place": "town",
+   "name": "Çaycuma",
+   "en": null,
+   "center": [
+    32.07282,
+    41.42695
+   ]
+  },
+  {
+   "osm": 178591693,
+   "place": "town",
+   "name": "Küre",
+   "en": null,
+   "center": [
+    33.71026,
+    41.80588
+   ]
+  },
+  {
+   "osm": 178597100,
+   "place": "town",
+   "name": "Taşköprü",
+   "en": null,
+   "center": [
+    34.21283,
+    41.50748
+   ]
+  },
+  {
+   "osm": 178610690,
+   "place": "town",
+   "name": "Boyabat",
+   "en": null,
+   "center": [
+    34.76723,
+    41.46897
+   ]
+  },
+  {
+   "osm": 178624828,
+   "place": "town",
+   "name": "Durağan",
+   "en": null,
+   "center": [
+    35.05581,
+    41.41797
+   ]
+  },
+  {
+   "osm": 179413784,
+   "place": "town",
+   "name": "İspir",
+   "en": null,
+   "center": [
+    40.99996,
+    40.48338
+   ]
+  },
+  {
+   "osm": 179474159,
+   "place": "town",
+   "name": "Demirözü",
+   "en": null,
+   "center": [
+    39.89129,
+    40.16303
+   ]
+  },
+  {
+   "osm": 179475953,
+   "place": "town",
+   "name": "Aydıntepe",
+   "en": null,
+   "center": [
+    40.14739,
+    40.38899
+   ]
+  },
+  {
+   "osm": 186458189,
+   "place": "town",
+   "name": "Reyhanlı",
+   "en": null,
+   "center": [
+    36.56723,
+    36.26845
+   ]
+  },
+  {
+   "osm": 194300754,
+   "place": "town",
+   "name": "Beylikova",
+   "en": null,
+   "center": [
+    31.20756,
+    39.69222
+   ]
+  },
+  {
+   "osm": 194972836,
+   "place": "town",
+   "name": "Pazaryeri",
+   "en": null,
+   "center": [
+    29.90313,
+    39.99541
+   ]
+  },
+  {
+   "osm": 195009067,
+   "place": "town",
+   "name": "Çan",
+   "en": null,
+   "center": [
+    27.05116,
+    40.02895
+   ]
+  },
+  {
+   "osm": 195020357,
+   "place": "town",
+   "name": "Yenice",
+   "en": null,
+   "center": [
+    27.25554,
+    39.92975
+   ]
+  },
+  {
+   "osm": 196124605,
+   "place": "town",
+   "name": "Bucak",
+   "en": null,
+   "center": [
+    30.58554,
+    37.45674
+   ]
+  },
+  {
+   "osm": 196852985,
+   "place": "town",
+   "name": "Karamanlı",
+   "en": null,
+   "center": [
+    29.8226,
+    37.37093
+   ]
+  },
+  {
+   "osm": 196857609,
+   "place": "town",
+   "name": "Yeşilova",
+   "en": null,
+   "center": [
+    29.75524,
+    37.50644
+   ]
+  },
+  {
+   "osm": 196974648,
+   "place": "town",
+   "name": "Tefenni",
+   "en": null,
+   "center": [
+    29.77598,
+    37.31325
+   ]
+  },
+  {
+   "osm": 197017594,
+   "place": "town",
+   "name": "Kemer",
+   "en": null,
+   "center": [
+    30.06113,
+    37.3539
+   ]
+  },
+  {
+   "osm": 197038859,
+   "place": "town",
+   "name": "Gölhisar",
+   "en": null,
+   "center": [
+    29.51072,
+    37.15109
+   ]
+  },
+  {
+   "osm": 197085265,
+   "place": "town",
+   "name": "Altınyayla",
+   "en": null,
+   "center": [
+    29.54677,
+    36.99618
+   ]
+  },
+  {
+   "osm": 197250653,
+   "place": "town",
+   "name": "Elmalı",
+   "en": "Elmalı",
+   "center": [
+    29.91836,
+    36.73838
+   ]
+  },
+  {
+   "osm": 197286978,
+   "place": "town",
+   "name": "Finike",
+   "en": null,
+   "center": [
+    30.14453,
+    36.30461
+   ]
+  },
+  {
+   "osm": 197993787,
+   "place": "town",
+   "name": "Derik",
+   "en": null,
+   "center": [
+    40.26988,
+    37.3647
+   ]
+  },
+  {
+   "osm": 198004939,
+   "place": "town",
+   "name": "Mazıdağı",
+   "en": null,
+   "center": [
+    40.48649,
+    37.47732
+   ]
+  },
+  {
+   "osm": 198017312,
+   "place": "town",
+   "name": "Savur",
+   "en": null,
+   "center": [
+    40.88737,
+    37.53684
+   ]
+  },
+  {
+   "osm": 198982309,
+   "place": "town",
+   "name": "Aydıncık",
+   "en": null,
+   "center": [
+    35.28516,
+    40.13025
+   ]
+  },
+  {
+   "osm": 199071463,
+   "place": "town",
+   "name": "Sarıkaya",
+   "en": null,
+   "center": [
+    35.37551,
+    39.49359
+   ]
+  },
+  {
+   "osm": 199102358,
+   "place": "town",
+   "name": "Çandır",
+   "en": null,
+   "center": [
+    35.51386,
+    39.2446
+   ]
+  },
+  {
+   "osm": 199117580,
+   "place": "town",
+   "name": "Çayıralan",
+   "en": null,
+   "center": [
+    35.64637,
+    39.3048
+   ]
+  },
+  {
+   "osm": 199314504,
+   "place": "town",
+   "name": "Şefaatli",
+   "en": null,
+   "center": [
+    34.75652,
+    39.49614
+   ]
+  },
+  {
+   "osm": 199340633,
+   "place": "town",
+   "name": "Çiçekdağı",
+   "en": null,
+   "center": [
+    34.4158,
+    39.6036
+   ]
+  },
+  {
+   "osm": 199357769,
+   "place": "town",
+   "name": "Boztepe",
+   "en": null,
+   "center": [
+    34.26399,
+    39.27161
+   ]
+  },
+  {
+   "osm": 199366210,
+   "place": "town",
+   "name": "Akpınar",
+   "en": null,
+   "center": [
+    33.96393,
+    39.44797
+   ]
+  },
+  {
+   "osm": 199683823,
+   "place": "town",
+   "name": "Yenifakılı",
+   "en": null,
+   "center": [
+    35.00189,
+    39.21105
+   ]
+  },
+  {
+   "osm": 199699731,
+   "place": "town",
+   "name": "Felahiye",
+   "en": null,
+   "center": [
+    35.56749,
+    39.09071
+   ]
+  },
+  {
+   "osm": 199700344,
+   "place": "town",
+   "name": "Özvatan",
+   "en": null,
+   "center": [
+    35.69921,
+    39.10593
+   ]
+  },
+  {
+   "osm": 199710561,
+   "place": "town",
+   "name": "Akkışla",
+   "en": null,
+   "center": [
+    36.17099,
+    39.00146
+   ]
+  },
+  {
+   "osm": 199715262,
+   "place": "town",
+   "name": "Bünyan",
+   "en": null,
+   "center": [
+    35.85774,
+    38.84582
+   ]
+  },
+  {
+   "osm": 199753741,
+   "place": "town",
+   "name": "Sarız",
+   "en": null,
+   "center": [
+    36.49703,
+    38.48024
+   ]
+  },
+  {
+   "osm": 199785572,
+   "place": "town",
+   "name": "Tufanbeyli",
+   "en": null,
+   "center": [
+    36.22207,
+    38.2603
+   ]
+  },
+  {
+   "osm": 200477920,
+   "place": "town",
+   "name": "Andırın",
+   "en": null,
+   "center": [
+    36.35525,
+    37.57502
+   ]
+  },
+  {
+   "osm": 200724805,
+   "place": "town",
+   "name": "Altunhisar",
+   "en": null,
+   "center": [
+    34.37151,
+    37.99901
+   ]
+  },
+  {
+   "osm": 200809733,
+   "place": "town",
+   "name": "Emirgazi",
+   "en": null,
+   "center": [
+    33.83595,
+    37.90355
+   ]
+  },
+  {
+   "osm": 200934723,
+   "place": "town",
+   "name": "Çamardı",
+   "en": null,
+   "center": [
+    34.98639,
+    37.83441
+   ]
+  },
+  {
+   "osm": 200968408,
+   "place": "town",
+   "name": "Çiftlik",
+   "en": null,
+   "center": [
+    34.4848,
+    38.17497
+   ]
+  },
+  {
+   "osm": 201350955,
+   "place": "town",
+   "name": "Ağaçören",
+   "en": null,
+   "center": [
+    33.91558,
+    38.86897
+   ]
+  },
+  {
+   "osm": 201369679,
+   "place": "town",
+   "name": "Eskil",
+   "en": null,
+   "center": [
+    33.41282,
+    38.4017
+   ]
+  },
+  {
+   "osm": 201384032,
+   "place": "town",
+   "name": "Sarıyahşi",
+   "en": null,
+   "center": [
+    33.84554,
+    38.98493
+   ]
+  },
+  {
+   "osm": 201571724,
+   "place": "town",
+   "name": "Talas",
+   "en": null,
+   "center": [
+    35.54946,
+    38.69295
+   ]
+  },
+  {
+   "osm": 202976161,
+   "place": "town",
+   "name": "Gazipaşa",
+   "en": null,
+   "center": [
+    32.31751,
+    36.26827
+   ]
+  },
+  {
+   "osm": 202994576,
+   "place": "town",
+   "name": "İbradı",
+   "en": null,
+   "center": [
+    31.59694,
+    37.09694
+   ]
+  },
+  {
+   "osm": 203340671,
+   "place": "town",
+   "name": "Serik",
+   "en": null,
+   "center": [
+    31.10475,
+    36.91687
+   ]
+  },
+  {
+   "osm": 203558856,
+   "place": "town",
+   "name": "Akören",
+   "en": null,
+   "center": [
+    32.37252,
+    37.45233
+   ]
+  },
+  {
+   "osm": 203610216,
+   "place": "town",
+   "name": "Altınekin",
+   "en": "Altınekin",
+   "center": [
+    32.86915,
+    38.30731
+   ]
+  },
+  {
+   "osm": 203652392,
+   "place": "town",
+   "name": "Cihanbeyli",
+   "en": "Cihanbeyli",
+   "center": [
+    32.92373,
+    38.65899
+   ]
+  },
+  {
+   "osm": 203673363,
+   "place": "town",
+   "name": "Sultandağı",
+   "en": null,
+   "center": [
+    31.22901,
+    38.53226
+   ]
+  },
+  {
+   "osm": 203675489,
+   "place": "town",
+   "name": "Çay",
+   "en": null,
+   "center": [
+    31.02737,
+    38.59257
+   ]
+  },
+  {
+   "osm": 203680254,
+   "place": "town",
+   "name": "Bolvadin",
+   "en": null,
+   "center": [
+    31.04549,
+    38.71159
+   ]
+  },
+  {
+   "osm": 203686353,
+   "place": "town",
+   "name": "Çobanlar",
+   "en": null,
+   "center": [
+    30.78152,
+    38.70162
+   ]
+  },
+  {
+   "osm": 203706865,
+   "place": "town",
+   "name": "İscehisar",
+   "en": null,
+   "center": [
+    30.75097,
+    38.86209
+   ]
+  },
+  {
+   "osm": 203708104,
+   "place": "town",
+   "name": "Bayat",
+   "en": null,
+   "center": [
+    30.92558,
+    38.98442
+   ]
+  },
+  {
+   "osm": 203735304,
+   "place": "town",
+   "name": "Çifteler",
+   "en": null,
+   "center": [
+    31.03787,
+    39.37574
+   ]
+  },
+  {
+   "osm": 203746554,
+   "place": "town",
+   "name": "Mahmudiye",
+   "en": null,
+   "center": [
+    30.98755,
+    39.4947
+   ]
+  },
+  {
+   "osm": 203752293,
+   "place": "town",
+   "name": "Seyitgazi",
+   "en": null,
+   "center": [
+    30.69602,
+    39.44432
+   ]
+  },
+  {
+   "osm": 203770944,
+   "place": "town",
+   "name": "İhsaniye",
+   "en": null,
+   "center": [
+    30.41675,
+    39.03193
+   ]
+  },
+  {
+   "osm": 204769050,
+   "place": "town",
+   "name": "Başmakçı",
+   "en": null,
+   "center": [
+    30.00978,
+    37.89736
+   ]
+  },
+  {
+   "osm": 204775031,
+   "place": "town",
+   "name": "Dazkırı",
+   "en": null,
+   "center": [
+    29.86045,
+    37.91936
+   ]
+  },
+  {
+   "osm": 204781245,
+   "place": "town",
+   "name": "Evciler",
+   "en": null,
+   "center": [
+    29.88574,
+    38.04171
+   ]
+  },
+  {
+   "osm": 204797292,
+   "place": "town",
+   "name": "Hocalar",
+   "en": null,
+   "center": [
+    29.96688,
+    38.58081
+   ]
+  },
+  {
+   "osm": 204812505,
+   "place": "town",
+   "name": "Şuhut",
+   "en": null,
+   "center": [
+    30.54613,
+    38.53396
+   ]
+  },
+  {
+   "osm": 204815981,
+   "place": "town",
+   "name": "Kızılören",
+   "en": null,
+   "center": [
+    30.14916,
+    38.25783
+   ]
+  },
+  {
+   "osm": 204820865,
+   "place": "town",
+   "name": "Sinanpaşa",
+   "en": null,
+   "center": [
+    30.24521,
+    38.74519
+   ]
+  },
+  {
+   "osm": 204833059,
+   "place": "town",
+   "name": "Derbent",
+   "en": null,
+   "center": [
+    32.01725,
+    38.01375
+   ]
+  },
+  {
+   "osm": 204844679,
+   "place": "town",
+   "name": "Derebucak",
+   "en": null,
+   "center": [
+    31.51068,
+    37.3915
+   ]
+  },
+  {
+   "osm": 205307640,
+   "place": "town",
+   "name": "Bozkır",
+   "en": null,
+   "center": [
+    32.2472,
+    37.18987
+   ]
+  },
+  {
+   "osm": 205314501,
+   "place": "town",
+   "name": "Ahırlı",
+   "en": null,
+   "center": [
+    32.11895,
+    37.23871
+   ]
+  },
+  {
+   "osm": 205317859,
+   "place": "town",
+   "name": "Hadim",
+   "en": null,
+   "center": [
+    32.4558,
+    36.98609
+   ]
+  },
+  {
+   "osm": 205320635,
+   "place": "town",
+   "name": "Taşkent",
+   "en": null,
+   "center": [
+    32.49262,
+    36.92392
+   ]
+  },
+  {
+   "osm": 205324394,
+   "place": "town",
+   "name": "Başyayla",
+   "en": null,
+   "center": [
+    32.67985,
+    36.75303
+   ]
+  },
+  {
+   "osm": 205332267,
+   "place": "town",
+   "name": "Kazımkarabekir",
+   "en": null,
+   "center": [
+    32.95826,
+    37.22653
+   ]
+  },
+  {
+   "osm": 205344402,
+   "place": "town",
+   "name": "Hüyük",
+   "en": null,
+   "center": [
+    31.59733,
+    37.95478
+   ]
+  },
+  {
+   "osm": 205405594,
+   "place": "town",
+   "name": "Mihalgazi",
+   "en": "Mihalgazi",
+   "center": [
+    30.57823,
+    40.02639
+   ]
+  },
+  {
+   "osm": 205406241,
+   "place": "town",
+   "name": "Sarıcakaya",
+   "en": null,
+   "center": [
+    30.61895,
+    40.03895
+   ]
+  },
+  {
+   "osm": 206015269,
+   "place": "town",
+   "name": "İnönü",
+   "en": null,
+   "center": [
+    30.14275,
+    39.81604
+   ]
+  },
+  {
+   "osm": 206030600,
+   "place": "town",
+   "name": "Söğüt",
+   "en": null,
+   "center": [
+    30.18143,
+    40.01555
+   ]
+  },
+  {
+   "osm": 206038196,
+   "place": "town",
+   "name": "İnhisar",
+   "en": null,
+   "center": [
+    30.38485,
+    40.05029
+   ]
+  },
+  {
+   "osm": 206090171,
+   "place": "town",
+   "name": "Gölpazarı",
+   "en": null,
+   "center": [
+    30.31654,
+    40.28394
+   ]
+  },
+  {
+   "osm": 206143870,
+   "place": "town",
+   "name": "Nallıhan",
+   "en": null,
+   "center": [
+    31.35035,
+    40.18882
+   ]
+  },
+  {
+   "osm": 206145098,
+   "place": "town",
+   "name": "Mudurnu",
+   "en": null,
+   "center": [
+    31.21123,
+    40.4657
+   ]
+  },
+  {
+   "osm": 206149664,
+   "place": "town",
+   "name": "Seben",
+   "en": null,
+   "center": [
+    31.57135,
+    40.40851
+   ]
+  },
+  {
+   "osm": 206150499,
+   "place": "town",
+   "name": "Beypazarı",
+   "en": null,
+   "center": [
+    31.92046,
+    40.16565
+   ]
+  },
+  {
+   "osm": 206151514,
+   "place": "town",
+   "name": "Ayaş",
+   "en": null,
+   "center": [
+    32.33242,
+    40.01514
+   ]
+  },
+  {
+   "osm": 206152620,
+   "place": "town",
+   "name": "Güdül",
+   "en": null,
+   "center": [
+    32.24323,
+    40.21046
+   ]
+  },
+  {
+   "osm": 206153148,
+   "place": "town",
+   "name": "Çamlıdere",
+   "en": null,
+   "center": [
+    32.47583,
+    40.49148
+   ]
+  },
+  {
+   "osm": 206161761,
+   "place": "town",
+   "name": "Günyüzü",
+   "en": null,
+   "center": [
+    31.80968,
+    39.38427
+   ]
+  },
+  {
+   "osm": 206205926,
+   "place": "town",
+   "name": "Çukurca",
+   "en": null,
+   "center": [
+    43.61104,
+    37.24682
+   ]
+  },
+  {
+   "osm": 206211867,
+   "place": "town",
+   "name": "Uludere",
+   "en": null,
+   "center": [
+    42.85136,
+    37.44674
+   ]
+  },
+  {
+   "osm": 206218389,
+   "place": "town",
+   "name": "İdil",
+   "en": null,
+   "center": [
+    41.8924,
+    37.34019
+   ]
+  },
+  {
+   "osm": 206218616,
+   "place": "town",
+   "name": "Güçlükonak",
+   "en": null,
+   "center": [
+    41.91113,
+    37.47116
+   ]
+  },
+  {
+   "osm": 206245995,
+   "place": "town",
+   "name": "Dargeçit",
+   "en": null,
+   "center": [
+    41.7206,
+    37.54595
+   ]
+  },
+  {
+   "osm": 206251817,
+   "place": "town",
+   "name": "Pervari",
+   "en": null,
+   "center": [
+    42.54799,
+    37.9325
+   ]
+  },
+  {
+   "osm": 206257924,
+   "place": "town",
+   "name": "Gevaş",
+   "en": null,
+   "center": [
+    43.10827,
+    38.29529
+   ]
+  },
+  {
+   "osm": 206258054,
+   "place": "town",
+   "name": "Edremit",
+   "en": null,
+   "center": [
+    43.26023,
+    38.42581
+   ]
+  },
+  {
+   "osm": 206258308,
+   "place": "town",
+   "name": "Gürpınar",
+   "en": null,
+   "center": [
+    43.40918,
+    38.32398
+   ]
+  },
+  {
+   "osm": 206261233,
+   "place": "town",
+   "name": "Çatak",
+   "en": null,
+   "center": [
+    43.0592,
+    38.00691
+   ]
+  },
+  {
+   "osm": 206358448,
+   "place": "town",
+   "name": "Bahçesaray",
+   "en": null,
+   "center": [
+    42.80773,
+    38.12372
+   ]
+  },
+  {
+   "osm": 206360408,
+   "place": "town",
+   "name": "Hizan",
+   "en": null,
+   "center": [
+    42.42632,
+    38.22501
+   ]
+  },
+  {
+   "osm": 207012749,
+   "place": "town",
+   "name": "Hasköy",
+   "en": null,
+   "center": [
+    41.68853,
+    38.68262
+   ]
+  },
+  {
+   "osm": 207133522,
+   "place": "town",
+   "name": "Korkut",
+   "en": null,
+   "center": [
+    41.783,
+    38.7388
+   ]
+  },
+  {
+   "osm": 207141485,
+   "place": "town",
+   "name": "Güroymak",
+   "en": "Güroymak",
+   "center": [
+    42.02533,
+    38.57417
+   ]
+  },
+  {
+   "osm": 207142420,
+   "place": "town",
+   "name": "Mutki",
+   "en": null,
+   "center": [
+    41.92194,
+    38.40897
+   ]
+  },
+  {
+   "osm": 207312856,
+   "place": "town",
+   "name": "Taşlıçay",
+   "en": null,
+   "center": [
+    43.37768,
+    39.63333
+   ]
+  },
+  {
+   "osm": 207357822,
+   "place": "town",
+   "name": "Selim",
+   "en": null,
+   "center": [
+    42.79084,
+    40.46407
+   ]
+  },
+  {
+   "osm": 207372316,
+   "place": "town",
+   "name": "Sarıkamış",
+   "en": null,
+   "center": [
+    42.58947,
+    40.33374
+   ]
+  },
+  {
+   "osm": 207427350,
+   "place": "town",
+   "name": "Susuz",
+   "en": null,
+   "center": [
+    43.12869,
+    40.77923
+   ]
+  },
+  {
+   "osm": 208056890,
+   "place": "town",
+   "name": "Kızılırmak",
+   "en": null,
+   "center": [
+    33.98724,
+    40.34598
+   ]
+  },
+  {
+   "osm": 208147124,
+   "place": "town",
+   "name": "Sulakyurt",
+   "en": null,
+   "center": [
+    33.71567,
+    40.15768
+   ]
+  },
+  {
+   "osm": 208153532,
+   "place": "town",
+   "name": "Delice",
+   "en": null,
+   "center": [
+    34.0313,
+    39.94552
+   ]
+  },
+  {
+   "osm": 208173012,
+   "place": "town",
+   "name": "Uğurludağ",
+   "en": null,
+   "center": [
+    34.45249,
+    40.44631
+   ]
+  },
+  {
+   "osm": 208223598,
+   "place": "town",
+   "name": "Dodurga",
+   "en": null,
+   "center": [
+    34.81033,
+    40.85531
+   ]
+  },
+  {
+   "osm": 208246180,
+   "place": "town",
+   "name": "Oğuzlar",
+   "en": null,
+   "center": [
+    34.70433,
+    40.75337
+   ]
+  },
+  {
+   "osm": 208289105,
+   "place": "town",
+   "name": "Laçin",
+   "en": null,
+   "center": [
+    34.88435,
+    40.7738
+   ]
+  },
+  {
+   "osm": 208296019,
+   "place": "town",
+   "name": "Hamamözü",
+   "en": null,
+   "center": [
+    35.02421,
+    40.7832
+   ]
+  },
+  {
+   "osm": 208466506,
+   "place": "town",
+   "name": "Çarşamba",
+   "en": null,
+   "center": [
+    36.72702,
+    41.19829
+   ]
+  },
+  {
+   "osm": 208474494,
+   "place": "town",
+   "name": "Ayvacık",
+   "en": null,
+   "center": [
+    36.63049,
+    40.98906
+   ]
+  },
+  {
+   "osm": 208474840,
+   "place": "town",
+   "name": "Salıpazarı",
+   "en": null,
+   "center": [
+    36.82574,
+    41.08129
+   ]
+  },
+  {
+   "osm": 208522695,
+   "place": "town",
+   "name": "İkizce",
+   "en": null,
+   "center": [
+    37.0778,
+    41.05443
+   ]
+  },
+  {
+   "osm": 208523143,
+   "place": "town",
+   "name": "Çaybaşı",
+   "en": null,
+   "center": [
+    37.09866,
+    41.01719
+   ]
+  },
+  {
+   "osm": 208523535,
+   "place": "town",
+   "name": "Almus",
+   "en": null,
+   "center": [
+    36.90373,
+    40.37501
+   ]
+  },
+  {
+   "osm": 208527535,
+   "place": "town",
+   "name": "Niksar",
+   "en": null,
+   "center": [
+    36.94349,
+    40.59133
+   ]
+  },
+  {
+   "osm": 208529717,
+   "place": "town",
+   "name": "Akkuş",
+   "en": null,
+   "center": [
+    37.01774,
+    40.7925
+   ]
+  },
+  {
+   "osm": 208529828,
+   "place": "town",
+   "name": "Aybastı",
+   "en": null,
+   "center": [
+    37.39881,
+    40.68462
+   ]
+  },
+  {
+   "osm": 208530104,
+   "place": "town",
+   "name": "Başçiftlik",
+   "en": null,
+   "center": [
+    37.16832,
+    40.54691
+   ]
+  },
+  {
+   "osm": 208531026,
+   "place": "town",
+   "name": "Kemah",
+   "en": null,
+   "center": [
+    39.03539,
+    39.60049
+   ]
+  },
+  {
+   "osm": 208532214,
+   "place": "town",
+   "name": "İliç",
+   "en": null,
+   "center": [
+    38.56483,
+    39.45641
+   ]
+  },
+  {
+   "osm": 208555330,
+   "place": "town",
+   "name": "Üzümlü",
+   "en": null,
+   "center": [
+    39.70103,
+    39.71011
+   ]
+  },
+  {
+   "osm": 208626087,
+   "place": "town",
+   "name": "Alucra",
+   "en": null,
+   "center": [
+    38.76518,
+    40.31967
+   ]
+  },
+  {
+   "osm": 208670009,
+   "place": "town",
+   "name": "Şiran",
+   "en": null,
+   "center": [
+    39.12523,
+    40.18983
+   ]
+  },
+  {
+   "osm": 208703034,
+   "place": "town",
+   "name": "Torul",
+   "en": null,
+   "center": [
+    39.29264,
+    40.55766
+   ]
+  },
+  {
+   "osm": 212488422,
+   "place": "city",
+   "name": "Isparta",
+   "en": "Isparta",
+   "center": [
+    30.55506,
+    37.76367
+   ]
+  },
+  {
+   "osm": 212512899,
+   "place": "town",
+   "name": "Çardak",
+   "en": null,
+   "center": [
+    29.67339,
+    37.82755
+   ]
+  },
+  {
+   "osm": 212542347,
+   "place": "town",
+   "name": "Çal",
+   "en": null,
+   "center": [
+    29.39729,
+    38.08135
+   ]
+  },
+  {
+   "osm": 212557275,
+   "place": "town",
+   "name": "Bekilli",
+   "en": null,
+   "center": [
+    29.42082,
+    38.22949
+   ]
+  },
+  {
+   "osm": 212562711,
+   "place": "town",
+   "name": "Karahallı",
+   "en": null,
+   "center": [
+    29.53134,
+    38.32063
+   ]
+  },
+  {
+   "osm": 212567130,
+   "place": "town",
+   "name": "Ulubey",
+   "en": null,
+   "center": [
+    29.29095,
+    38.41931
+   ]
+  },
+  {
+   "osm": 212577787,
+   "place": "town",
+   "name": "Eşme",
+   "en": null,
+   "center": [
+    28.96701,
+    38.39987
+   ]
+  },
+  {
+   "osm": 212602865,
+   "place": "town",
+   "name": "Güney",
+   "en": null,
+   "center": [
+    29.06522,
+    38.15393
+   ]
+  },
+  {
+   "osm": 212626253,
+   "place": "town",
+   "name": "Buldan",
+   "en": null,
+   "center": [
+    28.83267,
+    38.04424
+   ]
+  },
+  {
+   "osm": 212647885,
+   "place": "town",
+   "name": "Sarıgöl",
+   "en": null,
+   "center": [
+    28.69658,
+    38.23823
+   ]
+  },
+  {
+   "osm": 212661866,
+   "place": "town",
+   "name": "Alaşehir",
+   "en": null,
+   "center": [
+    28.51658,
+    38.35075
+   ]
+  },
+  {
+   "osm": 212691105,
+   "place": "town",
+   "name": "Kiraz",
+   "en": null,
+   "center": [
+    28.20158,
+    38.23037
+   ]
+  },
+  {
+   "osm": 212783408,
+   "place": "town",
+   "name": "Bayındır",
+   "en": null,
+   "center": [
+    27.64837,
+    38.22003
+   ]
+  },
+  {
+   "osm": 212878614,
+   "place": "town",
+   "name": "Selçuk",
+   "en": null,
+   "center": [
+    27.3685,
+    37.94796
+   ]
+  },
+  {
+   "osm": 212899700,
+   "place": "town",
+   "name": "Torbalı",
+   "en": null,
+   "center": [
+    27.36164,
+    38.14998
+   ]
+  },
+  {
+   "osm": 212925914,
+   "place": "town",
+   "name": "Menderes",
+   "en": null,
+   "center": [
+    27.13814,
+    38.25516
+   ]
+  },
+  {
+   "osm": 212945147,
+   "place": "town",
+   "name": "Seferihisar",
+   "en": null,
+   "center": [
+    26.83422,
+    38.19503
+   ]
+  },
+  {
+   "osm": 213013259,
+   "place": "town",
+   "name": "Koçarlı",
+   "en": null,
+   "center": [
+    27.70734,
+    37.76222
+   ]
+  },
+  {
+   "osm": 244313619,
+   "place": "town",
+   "name": "Palu",
+   "en": null,
+   "center": [
+    39.92888,
+    38.69348
+   ]
+  },
+  {
+   "osm": 247991461,
+   "place": "town",
+   "name": "İznik",
+   "en": "Iznik",
+   "center": [
+    29.72237,
+    40.43034
+   ]
+  },
+  {
+   "osm": 247999748,
+   "place": "town",
+   "name": "Şile",
+   "en": null,
+   "center": [
+    29.61252,
+    41.17441
+   ]
+  },
+  {
+   "osm": 248521661,
+   "place": "town",
+   "name": "Mudanya",
+   "en": null,
+   "center": [
+    28.88379,
+    40.37526
+   ]
+  },
+  {
+   "osm": 249848764,
+   "place": "town",
+   "name": "Simav",
+   "en": null,
+   "center": [
+    28.98001,
+    39.08867
+   ]
+  },
+  {
+   "osm": 251301080,
+   "place": "town",
+   "name": "Eyüpsultan",
+   "en": null,
+   "center": [
+    28.93274,
+    41.04784
+   ]
+  },
+  {
+   "osm": 251302611,
+   "place": "town",
+   "name": "Şişli",
+   "en": null,
+   "center": [
+    28.98316,
+    41.06379
+   ]
+  },
+  {
+   "osm": 251302687,
+   "place": "town",
+   "name": "Beşiktaş",
+   "en": null,
+   "center": [
+    29.00753,
+    41.04285
+   ]
+  },
+  {
+   "osm": 251303423,
+   "place": "town",
+   "name": "Beykoz",
+   "en": null,
+   "center": [
+    29.09204,
+    41.1343
+   ]
+  },
+  {
+   "osm": 251351233,
+   "place": "town",
+   "name": "Çınarcık",
+   "en": null,
+   "center": [
+    29.1193,
+    40.6434
+   ]
+  },
+  {
+   "osm": 251358378,
+   "place": "town",
+   "name": "Ümraniye",
+   "en": null,
+   "center": [
+    29.0963,
+    41.02564
+   ]
+  },
+  {
+   "osm": 251364890,
+   "place": "town",
+   "name": "Maltepe",
+   "en": null,
+   "center": [
+    29.13108,
+    40.92475
+   ]
+  },
+  {
+   "osm": 251364891,
+   "place": "town",
+   "name": "Kartal",
+   "en": null,
+   "center": [
+    29.18589,
+    40.8885
+   ]
+  },
+  {
+   "osm": 251376256,
+   "place": "town",
+   "name": "Tuzla",
+   "en": null,
+   "center": [
+    29.30342,
+    40.81617
+   ]
+  },
+  {
+   "osm": 251377106,
+   "place": "town",
+   "name": "Çiftlikköy",
+   "en": null,
+   "center": [
+    29.32292,
+    40.66452
+   ]
+  },
+  {
+   "osm": 251382196,
+   "place": "town",
+   "name": "Darıca",
+   "en": null,
+   "center": [
+    29.38406,
+    40.75748
+   ]
+  },
+  {
+   "osm": 251430615,
+   "place": "town",
+   "name": "Derince",
+   "en": null,
+   "center": [
+    29.83076,
+    40.75745
+   ]
+  },
+  {
+   "osm": 251431533,
+   "place": "town",
+   "name": "Gölcük",
+   "en": null,
+   "center": [
+    29.81959,
+    40.71692
+   ]
+  },
+  {
+   "osm": 251435023,
+   "place": "town",
+   "name": "Körfez",
+   "en": null,
+   "center": [
+    29.78394,
+    40.76076
+   ]
+  },
+  {
+   "osm": 251436812,
+   "place": "town",
+   "name": "Karamürsel",
+   "en": null,
+   "center": [
+    29.61659,
+    40.69125
+   ]
+  },
+  {
+   "osm": 251436818,
+   "place": "town",
+   "name": "Altınova",
+   "en": "Altınova",
+   "center": [
+    29.50994,
+    40.69635
+   ]
+  },
+  {
+   "osm": 251540499,
+   "place": "town",
+   "name": "Dikili",
+   "en": null,
+   "center": [
+    26.88925,
+    39.07497
+   ]
+  },
+  {
+   "osm": 252126565,
+   "place": "town",
+   "name": "Döşemealtı",
+   "en": null,
+   "center": [
+    30.60133,
+    37.02296
+   ]
+  },
+  {
+   "osm": 252134905,
+   "place": "town",
+   "name": "Gündoğmuş",
+   "en": null,
+   "center": [
+    31.99833,
+    36.81434
+   ]
+  },
+  {
+   "osm": 256195264,
+   "place": "town",
+   "name": "Eldivan",
+   "en": null,
+   "center": [
+    33.49662,
+    40.53068
+   ]
+  },
+  {
+   "osm": 256593596,
+   "place": "town",
+   "name": "Şarkikaraağaç",
+   "en": null,
+   "center": [
+    31.36609,
+    38.08071
+   ]
+  },
+  {
+   "osm": 256593597,
+   "place": "town",
+   "name": "Aksu",
+   "en": null,
+   "center": [
+    31.07111,
+    37.79889
+   ]
+  },
+  {
+   "osm": 256593598,
+   "place": "town",
+   "name": "Sütçüler",
+   "en": null,
+   "center": [
+    30.98056,
+    37.49499
+   ]
+  },
+  {
+   "osm": 256593599,
+   "place": "town",
+   "name": "Gönen",
+   "en": null,
+   "center": [
+    30.51286,
+    37.95754
+   ]
+  },
+  {
+   "osm": 256593600,
+   "place": "town",
+   "name": "Yenişarbademli",
+   "en": null,
+   "center": [
+    31.38784,
+    37.70727
+   ]
+  },
+  {
+   "osm": 256756241,
+   "place": "town",
+   "name": "Çeltikçi",
+   "en": null,
+   "center": [
+    30.48261,
+    37.5338
+   ]
+  },
+  {
+   "osm": 256756243,
+   "place": "town",
+   "name": "Ağlasun",
+   "en": null,
+   "center": [
+    30.53319,
+    37.64966
+   ]
+  },
+  {
+   "osm": 256907869,
+   "place": "town",
+   "name": "Sultanhisar",
+   "en": null,
+   "center": [
+    28.15434,
+    37.89008
+   ]
+  },
+  {
+   "osm": 256907870,
+   "place": "town",
+   "name": "Buharkent",
+   "en": null,
+   "center": [
+    28.7435,
+    37.96547
+   ]
+  },
+  {
+   "osm": 256907871,
+   "place": "town",
+   "name": "Köşk",
+   "en": null,
+   "center": [
+    28.0518,
+    37.8532
+   ]
+  },
+  {
+   "osm": 256907872,
+   "place": "town",
+   "name": "Karacasu",
+   "en": null,
+   "center": [
+    28.60626,
+    37.73068
+   ]
+  },
+  {
+   "osm": 256907873,
+   "place": "town",
+   "name": "Yenipazar",
+   "en": null,
+   "center": [
+    28.19573,
+    37.82329
+   ]
+  },
+  {
+   "osm": 256907875,
+   "place": "town",
+   "name": "Karpuzlu",
+   "en": null,
+   "center": [
+    27.83609,
+    37.55903
+   ]
+  },
+  {
+   "osm": 256909632,
+   "place": "town",
+   "name": "Ula",
+   "en": null,
+   "center": [
+    28.41637,
+    37.10292
+   ]
+  },
+  {
+   "osm": 256909637,
+   "place": "town",
+   "name": "Fethiye",
+   "en": null,
+   "center": [
+    29.11534,
+    36.62212
+   ]
+  },
+  {
+   "osm": 256909638,
+   "place": "town",
+   "name": "Kavaklıdere",
+   "en": null,
+   "center": [
+    28.36493,
+    37.44563
+   ]
+  },
+  {
+   "osm": 258376969,
+   "place": "town",
+   "name": "Erdemli",
+   "en": null,
+   "center": [
+    34.31029,
+    36.60571
+   ]
+  },
+  {
+   "osm": 258376970,
+   "place": "town",
+   "name": "Çamlıyayla",
+   "en": null,
+   "center": [
+    34.59344,
+    37.16654
+   ]
+  },
+  {
+   "osm": 258382159,
+   "place": "town",
+   "name": "Sarıveliler",
+   "en": null,
+   "center": [
+    32.61822,
+    36.69853
+   ]
+  },
+  {
+   "osm": 258385002,
+   "place": "town",
+   "name": "Feke",
+   "en": null,
+   "center": [
+    35.91165,
+    37.81476
+   ]
+  },
+  {
+   "osm": 258385004,
+   "place": "town",
+   "name": "Karaisalı",
+   "en": null,
+   "center": [
+    35.05864,
+    37.25718
+   ]
+  },
+  {
+   "osm": 258385005,
+   "place": "town",
+   "name": "Saimbeyli",
+   "en": null,
+   "center": [
+    36.08883,
+    37.98456
+   ]
+  },
+  {
+   "osm": 258385006,
+   "place": "town",
+   "name": "Aladağ",
+   "en": null,
+   "center": [
+    35.39444,
+    37.54525
+   ]
+  },
+  {
+   "osm": 258386910,
+   "place": "town",
+   "name": "Elbistan",
+   "en": "Elbistan",
+   "center": [
+    37.1903,
+    38.20223
+   ]
+  },
+  {
+   "osm": 259053207,
+   "place": "town",
+   "name": "Didim",
+   "en": null,
+   "center": [
+    27.26848,
+    37.36969
+   ]
+  },
+  {
+   "osm": 259060254,
+   "place": "town",
+   "name": "Karataş",
+   "en": null,
+   "center": [
+    35.38414,
+    36.5646
+   ]
+  },
+  {
+   "osm": 259060255,
+   "place": "town",
+   "name": "Yumurtalık",
+   "en": null,
+   "center": [
+    35.79159,
+    36.76759
+   ]
+  },
+  {
+   "osm": 259070143,
+   "place": "town",
+   "name": "Aydıncık",
+   "en": null,
+   "center": [
+    33.32242,
+    36.1452
+   ]
+  },
+  {
+   "osm": 259070145,
+   "place": "town",
+   "name": "Gülnar",
+   "en": null,
+   "center": [
+    33.39901,
+    36.33866
+   ]
+  },
+  {
+   "osm": 259221037,
+   "place": "town",
+   "name": "Kale",
+   "en": null,
+   "center": [
+    28.84631,
+    37.44379
+   ]
+  },
+  {
+   "osm": 259221039,
+   "place": "town",
+   "name": "Sarayköy",
+   "en": null,
+   "center": [
+    28.92308,
+    37.92443
+   ]
+  },
+  {
+   "osm": 259221040,
+   "place": "town",
+   "name": "Serinhisar",
+   "en": null,
+   "center": [
+    29.26389,
+    37.58013
+   ]
+  },
+  {
+   "osm": 259221041,
+   "place": "town",
+   "name": "Çameli",
+   "en": null,
+   "center": [
+    29.34472,
+    37.07611
+   ]
+  },
+  {
+   "osm": 259221043,
+   "place": "town",
+   "name": "Acıpayam",
+   "en": null,
+   "center": [
+    29.35051,
+    37.42738
+   ]
+  },
+  {
+   "osm": 259221044,
+   "place": "town",
+   "name": "Beyağaç",
+   "en": null,
+   "center": [
+    28.89603,
+    37.23568
+   ]
+  },
+  {
+   "osm": 259653887,
+   "place": "town",
+   "name": "Düziçi",
+   "en": null,
+   "center": [
+    36.45341,
+    37.24012
+   ]
+  },
+  {
+   "osm": 259653888,
+   "place": "town",
+   "name": "Toprakkale",
+   "en": null,
+   "center": [
+    36.14579,
+    37.06734
+   ]
+  },
+  {
+   "osm": 259653889,
+   "place": "town",
+   "name": "Sumbas",
+   "en": null,
+   "center": [
+    36.02476,
+    37.45362
+   ]
+  },
+  {
+   "osm": 259653890,
+   "place": "town",
+   "name": "Hasanbeyli",
+   "en": null,
+   "center": [
+    36.55554,
+    37.13093
+   ]
+  },
+  {
+   "osm": 259660566,
+   "place": "town",
+   "name": "Doğanhisar",
+   "en": null,
+   "center": [
+    31.67686,
+    38.14602
+   ]
+  },
+  {
+   "osm": 259660567,
+   "place": "town",
+   "name": "Meram",
+   "en": null,
+   "center": [
+    32.49465,
+    37.86795
+   ]
+  },
+  {
+   "osm": 259669692,
+   "place": "town",
+   "name": "Karatay",
+   "en": null,
+   "center": [
+    32.50304,
+    37.87104
+   ]
+  },
+  {
+   "osm": 259669693,
+   "place": "town",
+   "name": "Güneysınır",
+   "en": null,
+   "center": [
+    32.72114,
+    37.29807
+   ]
+  },
+  {
+   "osm": 259669695,
+   "place": "town",
+   "name": "Kulu",
+   "en": null,
+   "center": [
+    33.08053,
+    39.09031
+   ]
+  },
+  {
+   "osm": 259669697,
+   "place": "town",
+   "name": "Çeltik",
+   "en": null,
+   "center": [
+    31.79062,
+    39.0234
+   ]
+  },
+  {
+   "osm": 259829034,
+   "place": "town",
+   "name": "Dörtyol",
+   "en": null,
+   "center": [
+    36.22741,
+    36.83531
+   ]
+  },
+  {
+   "osm": 259829035,
+   "place": "town",
+   "name": "Yayladağı",
+   "en": null,
+   "center": [
+    36.0626,
+    35.90295
+   ]
+  },
+  {
+   "osm": 259829036,
+   "place": "town",
+   "name": "Kumlu",
+   "en": null,
+   "center": [
+    36.45409,
+    36.36479
+   ]
+  },
+  {
+   "osm": 259829037,
+   "place": "town",
+   "name": "Altınözü",
+   "en": null,
+   "center": [
+    36.24956,
+    36.11434
+   ]
+  },
+  {
+   "osm": 259829039,
+   "place": "town",
+   "name": "Erzin",
+   "en": null,
+   "center": [
+    36.19911,
+    36.95588
+   ]
+  },
+  {
+   "osm": 259835596,
+   "place": "town",
+   "name": "Afşin",
+   "en": null,
+   "center": [
+    36.91529,
+    38.24385
+   ]
+  },
+  {
+   "osm": 259835597,
+   "place": "town",
+   "name": "Göksun",
+   "en": null,
+   "center": [
+    36.49456,
+    38.02131
+   ]
+  },
+  {
+   "osm": 259835598,
+   "place": "town",
+   "name": "Ekinözü",
+   "en": null,
+   "center": [
+    37.18941,
+    38.06067
+   ]
+  },
+  {
+   "osm": 259835600,
+   "place": "town",
+   "name": "Nurhak",
+   "en": null,
+   "center": [
+    37.44219,
+    37.96615
+   ]
+  },
+  {
+   "osm": 259835601,
+   "place": "town",
+   "name": "Çağlayancerit",
+   "en": null,
+   "center": [
+    37.29278,
+    37.74997
+   ]
+  },
+  {
+   "osm": 260633604,
+   "place": "town",
+   "name": "Narlıdere",
+   "en": null,
+   "center": [
+    27.0011,
+    38.39544
+   ]
+  },
+  {
+   "osm": 260633607,
+   "place": "town",
+   "name": "Güzelbahçe",
+   "en": null,
+   "center": [
+    26.87555,
+    38.37552
+   ]
+  },
+  {
+   "osm": 260633616,
+   "place": "town",
+   "name": "Karaburun",
+   "en": null,
+   "center": [
+    26.5098,
+    38.63544
+   ]
+  },
+  {
+   "osm": 260633618,
+   "place": "town",
+   "name": "Çeşme",
+   "en": "Çeşme",
+   "center": [
+    26.30296,
+    38.3244
+   ]
+  },
+  {
+   "osm": 260633621,
+   "place": "town",
+   "name": "Beydağ",
+   "en": null,
+   "center": [
+    28.21069,
+    38.08703
+   ]
+  },
+  {
+   "osm": 260633623,
+   "place": "town",
+   "name": "Kemalpaşa",
+   "en": null,
+   "center": [
+    27.41643,
+    38.42757
+   ]
+  },
+  {
+   "osm": 260633626,
+   "place": "town",
+   "name": "Buca",
+   "en": null,
+   "center": [
+    27.16865,
+    38.38349
+   ]
+  },
+  {
+   "osm": 260633628,
+   "place": "town",
+   "name": "Aliağa",
+   "en": "Aliaga",
+   "center": [
+    26.97137,
+    38.80343
+   ]
+  },
+  {
+   "osm": 260633635,
+   "place": "town",
+   "name": "Balçova",
+   "en": null,
+   "center": [
+    27.05787,
+    38.39531
+   ]
+  },
+  {
+   "osm": 260633638,
+   "place": "town",
+   "name": "Gaziemir",
+   "en": null,
+   "center": [
+    27.12693,
+    38.32133
+   ]
+  },
+  {
+   "osm": 260633640,
+   "place": "town",
+   "name": "Foça",
+   "en": null,
+   "center": [
+    26.75477,
+    38.66892
+   ]
+  },
+  {
+   "osm": 260633642,
+   "place": "town",
+   "name": "Bornova",
+   "en": null,
+   "center": [
+    27.21919,
+    38.46619
+   ]
+  },
+  {
+   "osm": 269046970,
+   "place": "town",
+   "name": "Orhaneli",
+   "en": null,
+   "center": [
+    28.98669,
+    39.90266
+   ]
+  },
+  {
+   "osm": 270059039,
+   "place": "town",
+   "name": "Gölbaşı",
+   "en": null,
+   "center": [
+    32.80667,
+    39.79253
+   ]
+  },
+  {
+   "osm": 275888790,
+   "place": "town",
+   "name": "Yenice",
+   "en": null,
+   "center": [
+    32.32793,
+    41.20067
+   ]
+  },
+  {
+   "osm": 279456431,
+   "place": "town",
+   "name": "Araç",
+   "en": "Araç",
+   "center": [
+    33.32493,
+    41.2412
+   ]
+  },
+  {
+   "osm": 289534897,
+   "place": "city",
+   "name": "Bursa",
+   "en": "Bursa",
+   "center": [
+    29.0675,
+    40.18257
+   ]
+  },
+  {
+   "osm": 290044714,
+   "place": "town",
+   "name": "Erdek",
+   "en": null,
+   "center": [
+    27.79099,
+    40.39744
+   ]
+  },
+  {
+   "osm": 294184145,
+   "place": "town",
+   "name": "Çelikhan",
+   "en": null,
+   "center": [
+    38.24239,
+    38.03331
+   ]
+  },
+  {
+   "osm": 297713840,
+   "place": "town",
+   "name": "Vezirköprü",
+   "en": null,
+   "center": [
+    35.46047,
+    41.14339
+   ]
+  },
+  {
+   "osm": 299834532,
+   "place": "town",
+   "name": "Aksu",
+   "en": null,
+   "center": [
+    30.84771,
+    36.94751
+   ]
+  },
+  {
+   "osm": 303135461,
+   "place": "town",
+   "name": "Oğuzeli",
+   "en": "Oğuzeli",
+   "center": [
+    37.50855,
+    36.96511
+   ]
+  },
+  {
+   "osm": 303139107,
+   "place": "town",
+   "name": "19 Mayıs",
+   "en": "Ondokuzmayıs",
+   "center": [
+    36.08105,
+    41.49366
+   ]
+  },
+  {
+   "osm": 303225990,
+   "place": "town",
+   "name": "Çüngüş",
+   "en": null,
+   "center": [
+    39.28817,
+    38.21174
+   ]
+  },
+  {
+   "osm": 303236769,
+   "place": "town",
+   "name": "Dicle",
+   "en": "Dicle",
+   "center": [
+    40.07182,
+    38.37281
+   ]
+  },
+  {
+   "osm": 303241430,
+   "place": "town",
+   "name": "Hazro",
+   "en": null,
+   "center": [
+    40.78085,
+    38.25383
+   ]
+  },
+  {
+   "osm": 303241538,
+   "place": "town",
+   "name": "Kocaköy",
+   "en": null,
+   "center": [
+    40.50435,
+    38.29057
+   ]
+  },
+  {
+   "osm": 303241723,
+   "place": "town",
+   "name": "Kulp",
+   "en": null,
+   "center": [
+    41.012,
+    38.50043
+   ]
+  },
+  {
+   "osm": 303245892,
+   "place": "town",
+   "name": "Beşiri",
+   "en": null,
+   "center": [
+    41.29277,
+    37.91625
+   ]
+  },
+  {
+   "osm": 303254444,
+   "place": "town",
+   "name": "Musabeyli",
+   "en": null,
+   "center": [
+    36.91559,
+    36.88613
+   ]
+  },
+  {
+   "osm": 303255054,
+   "place": "town",
+   "name": "Polateli",
+   "en": null,
+   "center": [
+    37.14288,
+    36.84084
+   ]
+  },
+  {
+   "osm": 303257072,
+   "place": "town",
+   "name": "Gerger",
+   "en": null,
+   "center": [
+    39.03332,
+    38.02934
+   ]
+  },
+  {
+   "osm": 303257135,
+   "place": "town",
+   "name": "Samsat",
+   "en": null,
+   "center": [
+    38.48092,
+    37.5785
+   ]
+  },
+  {
+   "osm": 303257384,
+   "place": "town",
+   "name": "Sincik",
+   "en": null,
+   "center": [
+    38.61943,
+    38.02913
+   ]
+  },
+  {
+   "osm": 303258139,
+   "place": "town",
+   "name": "Akçadağ",
+   "en": null,
+   "center": [
+    37.97113,
+    38.34436
+   ]
+  },
+  {
+   "osm": 303258661,
+   "place": "town",
+   "name": "Doğanyol",
+   "en": null,
+   "center": [
+    39.03808,
+    38.30995
+   ]
+  },
+  {
+   "osm": 303258780,
+   "place": "town",
+   "name": "Kale",
+   "en": null,
+   "center": [
+    38.76871,
+    38.4175
+   ]
+  },
+  {
+   "osm": 303259606,
+   "place": "town",
+   "name": "Pütürge",
+   "en": null,
+   "center": [
+    38.87023,
+    38.19734
+   ]
+  },
+  {
+   "osm": 303259800,
+   "place": "town",
+   "name": "Yazıhan",
+   "en": null,
+   "center": [
+    38.18011,
+    38.59567
+   ]
+  },
+  {
+   "osm": 303262121,
+   "place": "town",
+   "name": "Ağın",
+   "en": null,
+   "center": [
+    38.71398,
+    38.94391
+   ]
+  },
+  {
+   "osm": 303262472,
+   "place": "town",
+   "name": "Alacakaya",
+   "en": null,
+   "center": [
+    39.86252,
+    38.46217
+   ]
+  },
+  {
+   "osm": 303262760,
+   "place": "town",
+   "name": "Arıcak",
+   "en": null,
+   "center": [
+    40.1345,
+    38.56343
+   ]
+  },
+  {
+   "osm": 303263705,
+   "place": "town",
+   "name": "Baskil",
+   "en": null,
+   "center": [
+    38.82376,
+    38.56777
+   ]
+  },
+  {
+   "osm": 303266913,
+   "place": "town",
+   "name": "Çemişgezek",
+   "en": null,
+   "center": [
+    38.91043,
+    39.06286
+   ]
+  },
+  {
+   "osm": 303267593,
+   "place": "town",
+   "name": "Nazımiye",
+   "en": null,
+   "center": [
+    39.82883,
+    39.17943
+   ]
+  },
+  {
+   "osm": 303267892,
+   "place": "town",
+   "name": "Ovacık",
+   "en": null,
+   "center": [
+    39.21445,
+    39.35838
+   ]
+  },
+  {
+   "osm": 303268142,
+   "place": "town",
+   "name": "Pülümür",
+   "en": null,
+   "center": [
+    39.89907,
+    39.48761
+   ]
+  },
+  {
+   "osm": 303269074,
+   "place": "town",
+   "name": "Otlukbeli",
+   "en": null,
+   "center": [
+    40.02168,
+    39.97195
+   ]
+  },
+  {
+   "osm": 303269877,
+   "place": "town",
+   "name": "Akıncılar",
+   "en": null,
+   "center": [
+    38.34684,
+    40.07872
+   ]
+  },
+  {
+   "osm": 303270510,
+   "place": "town",
+   "name": "Doğanşar",
+   "en": null,
+   "center": [
+    37.53651,
+    40.21423
+   ]
+  },
+  {
+   "osm": 303270839,
+   "place": "town",
+   "name": "Gölova",
+   "en": null,
+   "center": [
+    38.60843,
+    40.06129
+   ]
+  },
+  {
+   "osm": 303271551,
+   "place": "town",
+   "name": "Hafik",
+   "en": null,
+   "center": [
+    37.38896,
+    39.85459
+   ]
+  },
+  {
+   "osm": 303272142,
+   "place": "town",
+   "name": "Koyulhisar",
+   "en": null,
+   "center": [
+    37.83228,
+    40.30132
+   ]
+  },
+  {
+   "osm": 303590816,
+   "place": "town",
+   "name": "Sulusaray",
+   "en": null,
+   "center": [
+    36.08361,
+    39.9975
+   ]
+  },
+  {
+   "osm": 303603800,
+   "place": "town",
+   "name": "Kiğı",
+   "en": null,
+   "center": [
+    40.34963,
+    39.31037
+   ]
+  },
+  {
+   "osm": 303608838,
+   "place": "town",
+   "name": "Adaklı",
+   "en": null,
+   "center": [
+    40.48266,
+    39.22853
+   ]
+  },
+  {
+   "osm": 303608876,
+   "place": "town",
+   "name": "Karlıova",
+   "en": null,
+   "center": [
+    41.01024,
+    39.2946
+   ]
+  },
+  {
+   "osm": 303608996,
+   "place": "town",
+   "name": "Yedisu",
+   "en": null,
+   "center": [
+    40.54512,
+    39.43396
+   ]
+  },
+  {
+   "osm": 303689267,
+   "place": "town",
+   "name": "Çat",
+   "en": null,
+   "center": [
+    40.97742,
+    39.61195
+   ]
+  },
+  {
+   "osm": 303689550,
+   "place": "town",
+   "name": "Karaçoban",
+   "en": null,
+   "center": [
+    42.11163,
+    39.35049
+   ]
+  },
+  {
+   "osm": 303690139,
+   "place": "town",
+   "name": "Köprüköy",
+   "en": null,
+   "center": [
+    41.87279,
+    39.97064
+   ]
+  },
+  {
+   "osm": 303753529,
+   "place": "town",
+   "name": "Narman",
+   "en": null,
+   "center": [
+    41.87114,
+    40.3452
+   ]
+  },
+  {
+   "osm": 303753638,
+   "place": "town",
+   "name": "Oltu",
+   "en": null,
+   "center": [
+    41.99598,
+    40.54594
+   ]
+  },
+  {
+   "osm": 303754345,
+   "place": "town",
+   "name": "Olur",
+   "en": null,
+   "center": [
+    42.13324,
+    40.82682
+   ]
+  },
+  {
+   "osm": 303754661,
+   "place": "town",
+   "name": "Pasinler",
+   "en": null,
+   "center": [
+    41.67449,
+    39.97731
+   ]
+  },
+  {
+   "osm": 303769950,
+   "place": "town",
+   "name": "Şenkaya",
+   "en": null,
+   "center": [
+    42.34525,
+    40.56114
+   ]
+  },
+  {
+   "osm": 303771403,
+   "place": "town",
+   "name": "Tortum",
+   "en": null,
+   "center": [
+    41.55083,
+    40.29708
+   ]
+  },
+  {
+   "osm": 303771886,
+   "place": "town",
+   "name": "Uzundere",
+   "en": null,
+   "center": [
+    41.54833,
+    40.53268
+   ]
+  },
+  {
+   "osm": 303773879,
+   "place": "town",
+   "name": "Damal",
+   "en": null,
+   "center": [
+    42.841,
+    41.34233
+   ]
+  },
+  {
+   "osm": 303774245,
+   "place": "town",
+   "name": "Göle",
+   "en": null,
+   "center": [
+    42.60784,
+    40.79305
+   ]
+  },
+  {
+   "osm": 303781516,
+   "place": "town",
+   "name": "Ardanuç",
+   "en": null,
+   "center": [
+    42.06818,
+    41.12229
+   ]
+  },
+  {
+   "osm": 303781620,
+   "place": "town",
+   "name": "Murgul",
+   "en": null,
+   "center": [
+    41.56413,
+    41.27968
+   ]
+  },
+  {
+   "osm": 303781851,
+   "place": "town",
+   "name": "Çamlıhemşin",
+   "en": null,
+   "center": [
+    41.0057,
+    41.04557
+   ]
+  },
+  {
+   "osm": 303785822,
+   "place": "town",
+   "name": "Güneysu",
+   "en": null,
+   "center": [
+    40.61359,
+    40.97715
+   ]
+  },
+  {
+   "osm": 303786262,
+   "place": "town",
+   "name": "Hemşin",
+   "en": null,
+   "center": [
+    40.8988,
+    41.04752
+   ]
+  },
+  {
+   "osm": 303797705,
+   "place": "town",
+   "name": "Çamoluk",
+   "en": null,
+   "center": [
+    38.73398,
+    40.13517
+   ]
+  },
+  {
+   "osm": 303799612,
+   "place": "town",
+   "name": "Çanakçı",
+   "en": null,
+   "center": [
+    39.00932,
+    40.91699
+   ]
+  },
+  {
+   "osm": 303801121,
+   "place": "town",
+   "name": "Dereli",
+   "en": null,
+   "center": [
+    38.44913,
+    40.73904
+   ]
+  },
+  {
+   "osm": 303802018,
+   "place": "town",
+   "name": "Doğankent",
+   "en": null,
+   "center": [
+    38.91473,
+    40.80992
+   ]
+  },
+  {
+   "osm": 303802116,
+   "place": "town",
+   "name": "Espiye",
+   "en": null,
+   "center": [
+    38.71172,
+    40.94832
+   ]
+  },
+  {
+   "osm": 303803334,
+   "place": "town",
+   "name": "Güce",
+   "en": null,
+   "center": [
+    38.80803,
+    40.89403
+   ]
+  },
+  {
+   "osm": 303803474,
+   "place": "town",
+   "name": "Keşap",
+   "en": null,
+   "center": [
+    38.51386,
+    40.91515
+   ]
+  },
+  {
+   "osm": 303803793,
+   "place": "town",
+   "name": "Yağlıdere",
+   "en": null,
+   "center": [
+    38.62516,
+    40.86054
+   ]
+  },
+  {
+   "osm": 303810355,
+   "place": "town",
+   "name": "Çamaş",
+   "en": null,
+   "center": [
+    37.52811,
+    40.90256
+   ]
+  },
+  {
+   "osm": 303811738,
+   "place": "town",
+   "name": "Gölköy",
+   "en": null,
+   "center": [
+    37.6156,
+    40.68735
+   ]
+  },
+  {
+   "osm": 303813169,
+   "place": "town",
+   "name": "Gürgentepe",
+   "en": null,
+   "center": [
+    37.60086,
+    40.78862
+   ]
+  },
+  {
+   "osm": 303813934,
+   "place": "town",
+   "name": "Kabadüz",
+   "en": null,
+   "center": [
+    37.89089,
+    40.85981
+   ]
+  },
+  {
+   "osm": 303814903,
+   "place": "town",
+   "name": "Gülyalı",
+   "en": null,
+   "center": [
+    38.05858,
+    40.96625
+   ]
+  },
+  {
+   "osm": 303815256,
+   "place": "town",
+   "name": "Korgan",
+   "en": null,
+   "center": [
+    37.34414,
+    40.82956
+   ]
+  },
+  {
+   "osm": 303815568,
+   "place": "town",
+   "name": "Kumru",
+   "en": null,
+   "center": [
+    37.26182,
+    40.87198
+   ]
+  },
+  {
+   "osm": 303815662,
+   "place": "town",
+   "name": "Mesudiye",
+   "en": null,
+   "center": [
+    37.77357,
+    40.46356
+   ]
+  },
+  {
+   "osm": 303815967,
+   "place": "town",
+   "name": "Ulubey",
+   "en": null,
+   "center": [
+    37.75854,
+    40.87303
+   ]
+  },
+  {
+   "osm": 303892325,
+   "place": "town",
+   "name": "Göynücek",
+   "en": null,
+   "center": [
+    35.52369,
+    40.39715
+   ]
+  },
+  {
+   "osm": 304005234,
+   "place": "town",
+   "name": "Asarcık",
+   "en": null,
+   "center": [
+    36.23482,
+    41.03603
+   ]
+  },
+  {
+   "osm": 304007613,
+   "place": "town",
+   "name": "Erfelek",
+   "en": null,
+   "center": [
+    34.90805,
+    41.87936
+   ]
+  },
+  {
+   "osm": 304008799,
+   "place": "town",
+   "name": "Dikmen",
+   "en": null,
+   "center": [
+    35.26506,
+    41.65162
+   ]
+  },
+  {
+   "osm": 304009106,
+   "place": "town",
+   "name": "Saraydüzü",
+   "en": null,
+   "center": [
+    34.8486,
+    41.32952
+   ]
+  },
+  {
+   "osm": 304011819,
+   "place": "town",
+   "name": "Azdavay",
+   "en": null,
+   "center": [
+    33.30094,
+    41.64208
+   ]
+  },
+  {
+   "osm": 304012215,
+   "place": "town",
+   "name": "Bozkurt",
+   "en": null,
+   "center": [
+    34.01263,
+    41.9588
+   ]
+  },
+  {
+   "osm": 304012641,
+   "place": "town",
+   "name": "Daday",
+   "en": null,
+   "center": [
+    33.46375,
+    41.47516
+   ]
+  },
+  {
+   "osm": 304013079,
+   "place": "town",
+   "name": "Devrekâni",
+   "en": "Devrekani",
+   "center": [
+    33.83709,
+    41.60256
+   ]
+  },
+  {
+   "osm": 304013356,
+   "place": "town",
+   "name": "Hanönü",
+   "en": null,
+   "center": [
+    34.468,
+    41.62557
+   ]
+  },
+  {
+   "osm": 304017634,
+   "place": "town",
+   "name": "İhsangazi",
+   "en": "Ihsangazi",
+   "center": [
+    33.55592,
+    41.20401
+   ]
+  },
+  {
+   "osm": 304018557,
+   "place": "town",
+   "name": "Pınarbaşı",
+   "en": null,
+   "center": [
+    33.11088,
+    41.6036
+   ]
+  },
+  {
+   "osm": 304019190,
+   "place": "town",
+   "name": "Şenpazar",
+   "en": null,
+   "center": [
+    33.23287,
+    41.8086
+   ]
+  },
+  {
+   "osm": 304019783,
+   "place": "town",
+   "name": "Seydiler",
+   "en": null,
+   "center": [
+    33.71863,
+    41.61885
+   ]
+  },
+  {
+   "osm": 304183065,
+   "place": "town",
+   "name": "Bayat",
+   "en": null,
+   "center": [
+    34.25666,
+    40.64457
+   ]
+  },
+  {
+   "osm": 304183359,
+   "place": "town",
+   "name": "İskilip",
+   "en": "Iskilip",
+   "center": [
+    34.47101,
+    40.73069
+   ]
+  },
+  {
+   "osm": 304184266,
+   "place": "town",
+   "name": "Kargı",
+   "en": null,
+   "center": [
+    34.49122,
+    41.13275
+   ]
+  },
+  {
+   "osm": 304188036,
+   "place": "town",
+   "name": "Ortaköy",
+   "en": null,
+   "center": [
+    35.25039,
+    40.2728
+   ]
+  },
+  {
+   "osm": 304188549,
+   "place": "town",
+   "name": "Atkaracalar",
+   "en": null,
+   "center": [
+    33.07539,
+    40.81614
+   ]
+  },
+  {
+   "osm": 304189963,
+   "place": "town",
+   "name": "Korgun",
+   "en": null,
+   "center": [
+    33.51849,
+    40.73484
+   ]
+  },
+  {
+   "osm": 304190029,
+   "place": "town",
+   "name": "Kurşunlu",
+   "en": null,
+   "center": [
+    33.26135,
+    40.84073
+   ]
+  },
+  {
+   "osm": 304190726,
+   "place": "town",
+   "name": "Şabanözü",
+   "en": null,
+   "center": [
+    33.28262,
+    40.48316
+   ]
+  },
+  {
+   "osm": 304190981,
+   "place": "town",
+   "name": "Yapraklı",
+   "en": null,
+   "center": [
+    33.77877,
+    40.75709
+   ]
+  },
+  {
+   "osm": 304191472,
+   "place": "town",
+   "name": "Eflani",
+   "en": null,
+   "center": [
+    32.95819,
+    41.42294
+   ]
+  },
+  {
+   "osm": 304192861,
+   "place": "town",
+   "name": "Alaplı",
+   "en": null,
+   "center": [
+    31.38618,
+    41.18038
+   ]
+  },
+  {
+   "osm": 304193918,
+   "place": "town",
+   "name": "Gökçebey",
+   "en": null,
+   "center": [
+    32.14296,
+    41.30564
+   ]
+  },
+  {
+   "osm": 304194266,
+   "place": "town",
+   "name": "Dörtdivan",
+   "en": null,
+   "center": [
+    32.06266,
+    40.72074
+   ]
+  },
+  {
+   "osm": 304194318,
+   "place": "town",
+   "name": "Göynük",
+   "en": null,
+   "center": [
+    30.78662,
+    40.39832
+   ]
+  },
+  {
+   "osm": 304198831,
+   "place": "town",
+   "name": "Kıbrıscık",
+   "en": null,
+   "center": [
+    31.84872,
+    40.40879
+   ]
+  },
+  {
+   "osm": 304198880,
+   "place": "town",
+   "name": "Mengen",
+   "en": null,
+   "center": [
+    32.07483,
+    40.93966
+   ]
+  },
+  {
+   "osm": 304198960,
+   "place": "town",
+   "name": "Yeniçağa",
+   "en": null,
+   "center": [
+    32.03364,
+    40.77039
+   ]
+  },
+  {
+   "osm": 304199256,
+   "place": "town",
+   "name": "Çilimli",
+   "en": null,
+   "center": [
+    31.04663,
+    40.89325
+   ]
+  },
+  {
+   "osm": 304199406,
+   "place": "town",
+   "name": "Cumayeri",
+   "en": null,
+   "center": [
+    30.95041,
+    40.87469
+   ]
+  },
+  {
+   "osm": 304199407,
+   "place": "town",
+   "name": "Gümüşova",
+   "en": null,
+   "center": [
+    30.9386,
+    40.84658
+   ]
+  },
+  {
+   "osm": 304199562,
+   "place": "town",
+   "name": "Gölyaka",
+   "en": null,
+   "center": [
+    30.99644,
+    40.77672
+   ]
+  },
+  {
+   "osm": 304203438,
+   "place": "town",
+   "name": "Kaynaşlı",
+   "en": null,
+   "center": [
+    31.3192,
+    40.7721
+   ]
+  },
+  {
+   "osm": 304203547,
+   "place": "town",
+   "name": "Yığılca",
+   "en": null,
+   "center": [
+    31.44467,
+    40.96
+   ]
+  },
+  {
+   "osm": 304203781,
+   "place": "town",
+   "name": "Akyazı",
+   "en": null,
+   "center": [
+    30.62461,
+    40.68142
+   ]
+  },
+  {
+   "osm": 304203825,
+   "place": "town",
+   "name": "Ferizli",
+   "en": null,
+   "center": [
+    30.48462,
+    40.94018
+   ]
+  },
+  {
+   "osm": 304203910,
+   "place": "town",
+   "name": "Geyve",
+   "en": null,
+   "center": [
+    30.29025,
+    40.50905
+   ]
+  },
+  {
+   "osm": 304236760,
+   "place": "town",
+   "name": "Karapürçek",
+   "en": null,
+   "center": [
+    30.53752,
+    40.64218
+   ]
+  },
+  {
+   "osm": 304236980,
+   "place": "town",
+   "name": "Kaynarca",
+   "en": null,
+   "center": [
+    30.30554,
+    41.03405
+   ]
+  },
+  {
+   "osm": 304237020,
+   "place": "town",
+   "name": "Kocaali",
+   "en": null,
+   "center": [
+    30.85074,
+    41.05428
+   ]
+  },
+  {
+   "osm": 304237354,
+   "place": "town",
+   "name": "Pamukova",
+   "en": null,
+   "center": [
+    30.1693,
+    40.50562
+   ]
+  },
+  {
+   "osm": 304237491,
+   "place": "town",
+   "name": "Söğütlü",
+   "en": null,
+   "center": [
+    30.47166,
+    40.90392
+   ]
+  },
+  {
+   "osm": 304237861,
+   "place": "town",
+   "name": "Taraklı",
+   "en": null,
+   "center": [
+    30.49216,
+    40.39658
+   ]
+  },
+  {
+   "osm": 304240268,
+   "place": "town",
+   "name": "Kandıra",
+   "en": null,
+   "center": [
+    30.15233,
+    41.07039
+   ]
+  },
+  {
+   "osm": 304240812,
+   "place": "town",
+   "name": "Kofçaz",
+   "en": null,
+   "center": [
+    27.15785,
+    41.94496
+   ]
+  },
+  {
+   "osm": 304241532,
+   "place": "town",
+   "name": "Pehlivanköy",
+   "en": null,
+   "center": [
+    26.92025,
+    41.34704
+   ]
+  },
+  {
+   "osm": 304241634,
+   "place": "town",
+   "name": "Pınarhisar",
+   "en": null,
+   "center": [
+    27.51578,
+    41.6255
+   ]
+  },
+  {
+   "osm": 304241703,
+   "place": "town",
+   "name": "Vize",
+   "en": null,
+   "center": [
+    27.76704,
+    41.57287
+   ]
+  },
+  {
+   "osm": 304241920,
+   "place": "town",
+   "name": "Enez",
+   "en": null,
+   "center": [
+    26.08457,
+    40.72503
+   ]
+  },
+  {
+   "osm": 304242098,
+   "place": "town",
+   "name": "Lalapaşa",
+   "en": null,
+   "center": [
+    26.7361,
+    41.83904
+   ]
+  },
+  {
+   "osm": 304242238,
+   "place": "town",
+   "name": "Meriç",
+   "en": null,
+   "center": [
+    26.42008,
+    41.19134
+   ]
+  },
+  {
+   "osm": 304242428,
+   "place": "town",
+   "name": "Süloğlu",
+   "en": null,
+   "center": [
+    26.90801,
+    41.7657
+   ]
+  },
+  {
+   "osm": 304242552,
+   "place": "town",
+   "name": "Uzunköprü",
+   "en": null,
+   "center": [
+    26.6856,
+    41.26259
+   ]
+  },
+  {
+   "osm": 304256149,
+   "place": "town",
+   "name": "Muratlı",
+   "en": null,
+   "center": [
+    27.50151,
+    41.17229
+   ]
+  },
+  {
+   "osm": 304257975,
+   "place": "town",
+   "name": "Armutlu",
+   "en": null,
+   "center": [
+    28.82801,
+    40.51962
+   ]
+  },
+  {
+   "osm": 304259833,
+   "place": "town",
+   "name": "Termal",
+   "en": null,
+   "center": [
+    29.17429,
+    40.60618
+   ]
+  },
+  {
+   "osm": 304829679,
+   "place": "town",
+   "name": "Bayramiç",
+   "en": null,
+   "center": [
+    26.613,
+    39.80862
+   ]
+  },
+  {
+   "osm": 304831414,
+   "place": "town",
+   "name": "Büyükorhan",
+   "en": null,
+   "center": [
+    28.88541,
+    39.77091
+   ]
+  },
+  {
+   "osm": 304835304,
+   "place": "town",
+   "name": "Harmancık",
+   "en": null,
+   "center": [
+    29.15382,
+    39.67722
+   ]
+  },
+  {
+   "osm": 304835835,
+   "place": "town",
+   "name": "Keles",
+   "en": null,
+   "center": [
+    29.23417,
+    39.91289
+   ]
+  },
+  {
+   "osm": 304836688,
+   "place": "town",
+   "name": "Yenipazar",
+   "en": null,
+   "center": [
+    30.51908,
+    40.17668
+   ]
+  },
+  {
+   "osm": 304839627,
+   "place": "town",
+   "name": "Balya",
+   "en": null,
+   "center": [
+    27.57966,
+    39.74986
+   ]
+  },
+  {
+   "osm": 304839795,
+   "place": "town",
+   "name": "Bigadiç",
+   "en": null,
+   "center": [
+    28.13196,
+    39.3913
+   ]
+  },
+  {
+   "osm": 304842173,
+   "place": "town",
+   "name": "Gönen",
+   "en": null,
+   "center": [
+    27.6564,
+    40.10441
+   ]
+  },
+  {
+   "osm": 304844501,
+   "place": "town",
+   "name": "İvrindi",
+   "en": null,
+   "center": [
+    27.48526,
+    39.58202
+   ]
+  },
+  {
+   "osm": 304844844,
+   "place": "town",
+   "name": "Manyas",
+   "en": null,
+   "center": [
+    27.96799,
+    40.04769
+   ]
+  },
+  {
+   "osm": 304845159,
+   "place": "town",
+   "name": "Marmara",
+   "en": "Marmara",
+   "center": [
+    27.55678,
+    40.58615
+   ]
+  },
+  {
+   "osm": 304845540,
+   "place": "town",
+   "name": "Savaştepe",
+   "en": null,
+   "center": [
+    27.65599,
+    39.3856
+   ]
+  },
+  {
+   "osm": 304845824,
+   "place": "town",
+   "name": "Sındırgı",
+   "en": null,
+   "center": [
+    28.17491,
+    39.23871
+   ]
+  },
+  {
+   "osm": 304846601,
+   "place": "town",
+   "name": "Aslanapa",
+   "en": null,
+   "center": [
+    29.86963,
+    39.21522
+   ]
+  },
+  {
+   "osm": 304847057,
+   "place": "town",
+   "name": "Çavdarhisar",
+   "en": null,
+   "center": [
+    29.61952,
+    39.19439
+   ]
+  },
+  {
+   "osm": 304849807,
+   "place": "town",
+   "name": "Domaniç",
+   "en": null,
+   "center": [
+    29.61185,
+    39.8014
+   ]
+  },
+  {
+   "osm": 304850321,
+   "place": "town",
+   "name": "Dumlupınar",
+   "en": null,
+   "center": [
+    29.97764,
+    38.85436
+   ]
+  },
+  {
+   "osm": 304850409,
+   "place": "town",
+   "name": "Emet",
+   "en": null,
+   "center": [
+    29.25859,
+    39.34146
+   ]
+  },
+  {
+   "osm": 304850608,
+   "place": "town",
+   "name": "Gediz",
+   "en": null,
+   "center": [
+    29.39396,
+    38.98984
+   ]
+  },
+  {
+   "osm": 304853292,
+   "place": "town",
+   "name": "Hisarcık",
+   "en": null,
+   "center": [
+    29.23129,
+    39.25051
+   ]
+  },
+  {
+   "osm": 304853582,
+   "place": "town",
+   "name": "Pazarlar",
+   "en": null,
+   "center": [
+    29.12312,
+    38.99463
+   ]
+  },
+  {
+   "osm": 304853927,
+   "place": "town",
+   "name": "Şaphane",
+   "en": null,
+   "center": [
+    29.21995,
+    39.02541
+   ]
+  },
+  {
+   "osm": 304855246,
+   "place": "town",
+   "name": "Alpu",
+   "en": null,
+   "center": [
+    30.95836,
+    39.76584
+   ]
+  },
+  {
+   "osm": 304856070,
+   "place": "town",
+   "name": "Han",
+   "en": null,
+   "center": [
+    30.86344,
+    39.15843
+   ]
+  },
+  {
+   "osm": 304856575,
+   "place": "town",
+   "name": "Mihalıççık",
+   "en": null,
+   "center": [
+    31.49607,
+    39.86664
+   ]
+  },
+  {
+   "osm": 304917010,
+   "place": "town",
+   "name": "Ahmetli",
+   "en": null,
+   "center": [
+    27.93858,
+    38.5203
+   ]
+  },
+  {
+   "osm": 305063281,
+   "place": "town",
+   "name": "Demirci",
+   "en": null,
+   "center": [
+    28.65837,
+    39.04742
+   ]
+  },
+  {
+   "osm": 305063374,
+   "place": "town",
+   "name": "Gördes",
+   "en": null,
+   "center": [
+    28.28865,
+    38.93304
+   ]
+  },
+  {
+   "osm": 305063520,
+   "place": "town",
+   "name": "Köprübaşı",
+   "en": null,
+   "center": [
+    28.40295,
+    38.74802
+   ]
+  },
+  {
+   "osm": 305063766,
+   "place": "town",
+   "name": "Selendi",
+   "en": null,
+   "center": [
+    28.87021,
+    38.74343
+   ]
+  },
+  {
+   "osm": 305116259,
+   "place": "town",
+   "name": "Banaz",
+   "en": null,
+   "center": [
+    29.75319,
+    38.73997
+   ]
+  },
+  {
+   "osm": 365352543,
+   "place": "town",
+   "name": "Şarköy",
+   "en": null,
+   "center": [
+    27.11219,
+    40.61487
+   ]
+  },
+  {
+   "osm": 373148735,
+   "place": "town",
+   "name": "Hacılar",
+   "en": null,
+   "center": [
+    35.44977,
+    38.64427
+   ]
+  },
+  {
+   "osm": 411669667,
+   "place": "town",
+   "name": "Ayvalık",
+   "en": null,
+   "center": [
+    26.69167,
+    39.3181
+   ]
+  },
+  {
+   "osm": 411759722,
+   "place": "town",
+   "name": "Salihli",
+   "en": "Salihli",
+   "center": [
+    28.139,
+    38.48606
+   ]
+  },
+  {
+   "osm": 428039507,
+   "place": "city",
+   "name": "İzmir",
+   "en": "İzmir",
+   "center": [
+    27.12847,
+    38.41925
+   ]
+  },
+  {
+   "osm": 428039517,
+   "place": "city",
+   "name": "Antalya",
+   "en": "Antalya",
+   "center": [
+    30.70302,
+    36.88657
+   ]
+  },
+  {
+   "osm": 435104822,
+   "place": "town",
+   "name": "Ovacık",
+   "en": null,
+   "center": [
+    32.92001,
+    41.07589
+   ]
+  },
+  {
+   "osm": 507687414,
+   "place": "town",
+   "name": "Datça",
+   "en": null,
+   "center": [
+    27.68739,
+    36.72634
+   ]
+  },
+  {
+   "osm": 512552945,
+   "place": "city",
+   "name": "Trabzon",
+   "en": "Trabzon",
+   "center": [
+    39.73015,
+    41.00546
+   ]
+  },
+  {
+   "osm": 618744094,
+   "place": "town",
+   "name": "Saraykent",
+   "en": null,
+   "center": [
+    35.51079,
+    39.69316
+   ]
+  },
+  {
+   "osm": 672056339,
+   "place": "town",
+   "name": "Pazaryolu",
+   "en": null,
+   "center": [
+    40.77383,
+    40.41431
+   ]
+  },
+  {
+   "osm": 722616836,
+   "place": "town",
+   "name": "Seydikemer",
+   "en": null,
+   "center": [
+    29.36218,
+    36.64816
+   ]
+  },
+  {
+   "osm": 740515009,
+   "place": "town",
+   "name": "Darende",
+   "en": null,
+   "center": [
+    37.49265,
+    38.55731
+   ]
+  },
+  {
+   "osm": 778990623,
+   "place": "town",
+   "name": "Çubuk",
+   "en": null,
+   "center": [
+    33.02895,
+    40.2389
+   ]
+  },
+  {
+   "osm": 824194947,
+   "place": "town",
+   "name": "Dilovası",
+   "en": null,
+   "center": [
+    29.5261,
+    40.77561
+   ]
+  },
+  {
+   "osm": 824442251,
+   "place": "town",
+   "name": "Gelibolu",
+   "en": "Gelibolu",
+   "center": [
+    26.67225,
+    40.40541
+   ]
+  },
+  {
+   "osm": 884078675,
+   "place": "town",
+   "name": "Başkale",
+   "en": null,
+   "center": [
+    44.01627,
+    38.04491
+   ]
+  },
+  {
+   "osm": 884301792,
+   "place": "town",
+   "name": "Baykan",
+   "en": null,
+   "center": [
+    41.78569,
+    38.16287
+   ]
+  },
+  {
+   "osm": 893918781,
+   "place": "town",
+   "name": "Edremit",
+   "en": null,
+   "center": [
+    27.01568,
+    39.59384
+   ]
+  },
+  {
+   "osm": 941362532,
+   "place": "town",
+   "name": "Başiskele",
+   "en": null,
+   "center": [
+    29.9287,
+    40.71293
+   ]
+  },
+  {
+   "osm": 941458046,
+   "place": "town",
+   "name": "Çayırova",
+   "en": null,
+   "center": [
+    29.38151,
+    40.83369
+   ]
+  },
+  {
+   "osm": 954621171,
+   "place": "town",
+   "name": "Kadışehri",
+   "en": null,
+   "center": [
+    35.79176,
+    39.99747
+   ]
+  },
+  {
+   "osm": 958005608,
+   "place": "town",
+   "name": "Etimesgut",
+   "en": null,
+   "center": [
+    32.66208,
+    39.94894
+   ]
+  },
+  {
+   "osm": 958017625,
+   "place": "town",
+   "name": "Evren",
+   "en": null,
+   "center": [
+    33.80786,
+    39.02212
+   ]
+  },
+  {
+   "osm": 958020973,
+   "place": "town",
+   "name": "Kahramankazan",
+   "en": null,
+   "center": [
+    32.68131,
+    40.20544
+   ]
+  },
+  {
+   "osm": 958022183,
+   "place": "town",
+   "name": "Keçiören",
+   "en": null,
+   "center": [
+    32.86698,
+    39.97771
+   ]
+  },
+  {
+   "osm": 958023242,
+   "place": "town",
+   "name": "Mamak",
+   "en": null,
+   "center": [
+    32.90822,
+    39.93298
+   ]
+  },
+  {
+   "osm": 958038129,
+   "place": "town",
+   "name": "Altındağ",
+   "en": null,
+   "center": [
+    32.8662,
+    39.95236
+   ]
+  },
+  {
+   "osm": 958038131,
+   "place": "town",
+   "name": "Çankaya",
+   "en": null,
+   "center": [
+    32.8555,
+    39.88533
+   ]
+  },
+  {
+   "osm": 958049062,
+   "place": "town",
+   "name": "Sarıçam",
+   "en": null,
+   "center": [
+    35.39899,
+    37.01974
+   ]
+  },
+  {
+   "osm": 958050999,
+   "place": "town",
+   "name": "Seyhan",
+   "en": "Seyhan",
+   "center": [
+    35.32142,
+    36.98991
+   ]
+  },
+  {
+   "osm": 958189996,
+   "place": "town",
+   "name": "Muratpaşa",
+   "en": null,
+   "center": [
+    30.72089,
+    36.88886
+   ]
+  },
+  {
+   "osm": 959404324,
+   "place": "town",
+   "name": "Tepebaşı",
+   "en": null,
+   "center": [
+    30.51405,
+    39.78099
+   ]
+  },
+  {
+   "osm": 959404760,
+   "place": "town",
+   "name": "Odunpazarı",
+   "en": null,
+   "center": [
+    30.52376,
+    39.76555
+   ]
+  },
+  {
+   "osm": 959452165,
+   "place": "town",
+   "name": "Yayladere",
+   "en": null,
+   "center": [
+    40.06858,
+    39.22751
+   ]
+  },
+  {
+   "osm": 959469289,
+   "place": "town",
+   "name": "Nilüfer",
+   "en": null,
+   "center": [
+    28.98479,
+    40.217
+   ]
+  },
+  {
+   "osm": 959626931,
+   "place": "town",
+   "name": "Osmangazi",
+   "en": null,
+   "center": [
+    29.06121,
+    40.19822
+   ]
+  },
+  {
+   "osm": 959632404,
+   "place": "town",
+   "name": "Yıldırım",
+   "en": null,
+   "center": [
+    29.12819,
+    40.18664
+   ]
+  },
+  {
+   "osm": 960316916,
+   "place": "town",
+   "name": "Bahşılı",
+   "en": null,
+   "center": [
+    33.47179,
+    39.81325
+   ]
+  },
+  {
+   "osm": 960342111,
+   "place": "town",
+   "name": "Çelebi",
+   "en": null,
+   "center": [
+    33.52441,
+    39.4637
+   ]
+  },
+  {
+   "osm": 960440433,
+   "place": "town",
+   "name": "Akçakent",
+   "en": null,
+   "center": [
+    34.09622,
+    39.62502
+   ]
+  },
+  {
+   "osm": 960440435,
+   "place": "town",
+   "name": "Karakeçili",
+   "en": null,
+   "center": [
+    33.378,
+    39.59321
+   ]
+  },
+  {
+   "osm": 961415454,
+   "place": "town",
+   "name": "Bağlar",
+   "en": null,
+   "center": [
+    40.20829,
+    37.91732
+   ]
+  },
+  {
+   "osm": 961416307,
+   "place": "town",
+   "name": "Kayapınar",
+   "en": null,
+   "center": [
+    40.18458,
+    37.94378
+   ]
+  },
+  {
+   "osm": 961416647,
+   "place": "town",
+   "name": "Yenişehir",
+   "en": null,
+   "center": [
+    40.2299,
+    37.92005
+   ]
+  },
+  {
+   "osm": 961662502,
+   "place": "town",
+   "name": "Yakutiye",
+   "en": null,
+   "center": [
+    41.27939,
+    39.91833
+   ]
+  },
+  {
+   "osm": 961669400,
+   "place": "town",
+   "name": "Karkamış",
+   "en": null,
+   "center": [
+    37.99945,
+    36.83198
+   ]
+  },
+  {
+   "osm": 961697683,
+   "place": "town",
+   "name": "Şehitkamil",
+   "en": null,
+   "center": [
+    37.39498,
+    37.07276
+   ]
+  },
+  {
+   "osm": 961779872,
+   "place": "town",
+   "name": "Akdeniz",
+   "en": null,
+   "center": [
+    34.63321,
+    36.80206
+   ]
+  },
+  {
+   "osm": 961793235,
+   "place": "town",
+   "name": "Toroslar",
+   "en": null,
+   "center": [
+    34.61042,
+    36.82076
+   ]
+  },
+  {
+   "osm": 965795474,
+   "place": "town",
+   "name": "Adalar",
+   "en": "Adalar",
+   "center": [
+    29.12933,
+    40.87417
+   ]
+  },
+  {
+   "osm": 965804205,
+   "place": "town",
+   "name": "Başakşehir",
+   "en": null,
+   "center": [
+    28.79507,
+    41.10758
+   ]
+  },
+  {
+   "osm": 965804730,
+   "place": "town",
+   "name": "Beylikdüzü",
+   "en": null,
+   "center": [
+    28.63729,
+    41.00381
+   ]
+  },
+  {
+   "osm": 965804875,
+   "place": "town",
+   "name": "Çatalca",
+   "en": null,
+   "center": [
+    28.46052,
+    41.14368
+   ]
+  },
+  {
+   "osm": 965806119,
+   "place": "town",
+   "name": "Esenler",
+   "en": null,
+   "center": [
+    28.88245,
+    41.03762
+   ]
+  },
+  {
+   "osm": 965806995,
+   "place": "town",
+   "name": "Gaziosmanpaşa",
+   "en": "Gaziosmanpaşa",
+   "center": [
+    28.91225,
+    41.05783
+   ]
+  },
+  {
+   "osm": 965807755,
+   "place": "town",
+   "name": "Güngören",
+   "en": null,
+   "center": [
+    28.87265,
+    41.02528
+   ]
+  },
+  {
+   "osm": 965808549,
+   "place": "town",
+   "name": "Pendik",
+   "en": null,
+   "center": [
+    29.23497,
+    40.87687
+   ]
+  },
+  {
+   "osm": 965808713,
+   "place": "town",
+   "name": "Sancaktepe",
+   "en": "Sancaktepe",
+   "center": [
+    29.22886,
+    40.99052
+   ]
+  },
+  {
+   "osm": 965825479,
+   "place": "town",
+   "name": "Karabağlar",
+   "en": null,
+   "center": [
+    27.12693,
+    38.399
+   ]
+  },
+  {
+   "osm": 965861111,
+   "place": "town",
+   "name": "Melikgazi",
+   "en": "Melikgazi",
+   "center": [
+    35.50566,
+    38.71991
+   ]
+  },
+  {
+   "osm": 965861114,
+   "place": "town",
+   "name": "Kocasinan",
+   "en": null,
+   "center": [
+    35.49498,
+    38.73626
+   ]
+  },
+  {
+   "osm": 966564525,
+   "place": "town",
+   "name": "Altıntaş",
+   "en": null,
+   "center": [
+    30.10758,
+    39.06035
+   ]
+  },
+  {
+   "osm": 966583366,
+   "place": "town",
+   "name": "Kabataş",
+   "en": null,
+   "center": [
+    37.44993,
+    40.75239
+   ]
+  },
+  {
+   "osm": 966586540,
+   "place": "town",
+   "name": "Arifiye",
+   "en": null,
+   "center": [
+    30.36212,
+    40.71447
+   ]
+  },
+  {
+   "osm": 966586901,
+   "place": "town",
+   "name": "Erenler",
+   "en": null,
+   "center": [
+    30.41089,
+    40.75636
+   ]
+  },
+  {
+   "osm": 966588659,
+   "place": "town",
+   "name": "Serdivan",
+   "en": null,
+   "center": [
+    30.36296,
+    40.76041
+   ]
+  },
+  {
+   "osm": 966597337,
+   "place": "town",
+   "name": "Atakum",
+   "en": null,
+   "center": [
+    36.27047,
+    41.33226
+   ]
+  },
+  {
+   "osm": 966598785,
+   "place": "town",
+   "name": "Canik",
+   "en": null,
+   "center": [
+    36.35563,
+    41.26713
+   ]
+  },
+  {
+   "osm": 966705606,
+   "place": "town",
+   "name": "İlkadım",
+   "en": null,
+   "center": [
+    36.33468,
+    41.2902
+   ]
+  },
+  {
+   "osm": 966710147,
+   "place": "town",
+   "name": "Şirvan",
+   "en": null,
+   "center": [
+    42.02993,
+    38.06179
+   ]
+  },
+  {
+   "osm": 967646777,
+   "place": "town",
+   "name": "Altınyayla",
+   "en": null,
+   "center": [
+    36.75155,
+    39.27167
+   ]
+  },
+  {
+   "osm": 967654404,
+   "place": "town",
+   "name": "Pazar",
+   "en": null,
+   "center": [
+    36.28229,
+    40.27578
+   ]
+  },
+  {
+   "osm": 973638052,
+   "place": "town",
+   "name": "Hanak",
+   "en": null,
+   "center": [
+    42.8449,
+    41.23677
+   ]
+  },
+  {
+   "osm": 973639425,
+   "place": "town",
+   "name": "Beytüşşebap",
+   "en": null,
+   "center": [
+    43.17022,
+    37.57095
+   ]
+  },
+  {
+   "osm": 1039378511,
+   "place": "town",
+   "name": "Eskipazar",
+   "en": null,
+   "center": [
+    32.53142,
+    40.94467
+   ]
+  },
+  {
+   "osm": 1071337375,
+   "place": "town",
+   "name": "Tekkeköy",
+   "en": null,
+   "center": [
+    36.4578,
+    41.2135
+   ]
+  },
+  {
+   "osm": 1108652930,
+   "place": "town",
+   "name": "Derecik",
+   "en": null,
+   "center": [
+    44.31193,
+    37.08128
+   ]
+  },
+  {
+   "osm": 1256499266,
+   "place": "town",
+   "name": "Gökçeada",
+   "en": "Gökçeada",
+   "center": [
+    25.90846,
+    40.20039
+   ]
+  },
+  {
+   "osm": 1295886150,
+   "place": "town",
+   "name": "Kemalpaşa",
+   "en": null,
+   "center": [
+    41.52705,
+    41.48108
+   ]
+  },
+  {
+   "osm": 1306858550,
+   "place": "town",
+   "name": "Babadağ",
+   "en": null,
+   "center": [
+    28.85638,
+    37.80771
+   ]
+  },
+  {
+   "osm": 1364374795,
+   "place": "town",
+   "name": "Demirköy",
+   "en": null,
+   "center": [
+    27.76515,
+    41.82415
+   ]
+  },
+  {
+   "osm": 1401140308,
+   "place": "town",
+   "name": "Eşmekaya",
+   "en": null,
+   "center": [
+    33.44483,
+    38.26
+   ]
+  },
+  {
+   "osm": 1483521211,
+   "place": "town",
+   "name": "Burhaniye",
+   "en": null,
+   "center": [
+    26.98074,
+    39.50302
+   ]
+  },
+  {
+   "osm": 1483521281,
+   "place": "town",
+   "name": "Gömeç",
+   "en": null,
+   "center": [
+    26.84116,
+    39.39015
+   ]
+  },
+  {
+   "osm": 1490570786,
+   "place": "town",
+   "name": "Mezitli",
+   "en": null,
+   "center": [
+    34.5307,
+    36.74953
+   ]
+  },
+  {
+   "osm": 1492169370,
+   "place": "town",
+   "name": "Aziziye",
+   "en": null,
+   "center": [
+    41.10601,
+    39.94547
+   ]
+  },
+  {
+   "osm": 1583572036,
+   "place": "town",
+   "name": "Elbeyli",
+   "en": null,
+   "center": [
+    37.46687,
+    36.67504
+   ]
+  },
+  {
+   "osm": 1607194628,
+   "place": "town",
+   "name": "Karasu",
+   "en": null,
+   "center": [
+    30.69246,
+    41.09561
+   ]
+  },
+  {
+   "osm": 1651655687,
+   "place": "town",
+   "name": "Beyoğlu",
+   "en": null,
+   "center": [
+    28.97368,
+    41.02842
+   ]
+  },
+  {
+   "osm": 1713927077,
+   "place": "town",
+   "name": "Payas",
+   "en": null,
+   "center": [
+    36.2152,
+    36.75593
+   ]
+  },
+  {
+   "osm": 1805807416,
+   "place": "town",
+   "name": "Artova",
+   "en": null,
+   "center": [
+    36.29153,
+    40.11753
+   ]
+  },
+  {
+   "osm": 1834499447,
+   "place": "town",
+   "name": "Çayırlı",
+   "en": null,
+   "center": [
+    40.03718,
+    39.80408
+   ]
+  },
+  {
+   "osm": 1846826471,
+   "place": "city",
+   "name": "Tekirdağ",
+   "en": null,
+   "center": [
+    27.51078,
+    40.97812
+   ]
+  },
+  {
+   "osm": 1882099475,
+   "place": "city",
+   "name": "İstanbul",
+   "en": "Istanbul",
+   "center": [
+    28.97587,
+    41.00638
+   ]
+  },
+  {
+   "osm": 2249942771,
+   "place": "town",
+   "name": "Sapanca",
+   "en": null,
+   "center": [
+    30.26738,
+    40.69161
+   ]
+  },
+  {
+   "osm": 2268241778,
+   "place": "town",
+   "name": "Eceabat",
+   "en": null,
+   "center": [
+    26.3591,
+    40.18521
+   ]
+  },
+  {
+   "osm": 2291050947,
+   "place": "town",
+   "name": "Karaköprü",
+   "en": null,
+   "center": [
+    38.79585,
+    37.20465
+   ]
+  },
+  {
+   "osm": 2292400087,
+   "place": "town",
+   "name": "Eleşkirt",
+   "en": null,
+   "center": [
+    42.67547,
+    39.79838
+   ]
+  },
+  {
+   "osm": 2320982850,
+   "place": "town",
+   "name": "Yeşilyurt",
+   "en": null,
+   "center": [
+    36.21943,
+    40.0073
+   ]
+  },
+  {
+   "osm": 2352111108,
+   "place": "town",
+   "name": "Sincan",
+   "en": null,
+   "center": [
+    32.57944,
+    39.96551
+   ]
+  },
+  {
+   "osm": 2377755863,
+   "place": "town",
+   "name": "Yalıhüyük",
+   "en": null,
+   "center": [
+    32.08542,
+    37.30057
+   ]
+  },
+  {
+   "osm": 2400030573,
+   "place": "town",
+   "name": "Ulus",
+   "en": null,
+   "center": [
+    32.64102,
+    41.58394
+   ]
+  },
+  {
+   "osm": 2433634466,
+   "place": "town",
+   "name": "Tomarza",
+   "en": "Tomarza",
+   "center": [
+    35.80091,
+    38.44769
+   ]
+  },
+  {
+   "osm": 2453983928,
+   "place": "town",
+   "name": "Refahiye",
+   "en": null,
+   "center": [
+    38.76817,
+    39.90275
+   ]
+  },
+  {
+   "osm": 2470725919,
+   "place": "town",
+   "name": "Tillo",
+   "en": null,
+   "center": [
+    42.01252,
+    37.95006
+   ]
+  },
+  {
+   "osm": 2479710430,
+   "place": "town",
+   "name": "Artuklu",
+   "en": null,
+   "center": [
+    40.72513,
+    37.32098
+   ]
+  },
+  {
+   "osm": 2513587079,
+   "place": "town",
+   "name": "Çatalpınar",
+   "en": null,
+   "center": [
+    37.45318,
+    40.87899
+   ]
+  },
+  {
+   "osm": 2655731848,
+   "place": "town",
+   "name": "Selçuklu",
+   "en": null,
+   "center": [
+    32.48739,
+    37.87687
+   ]
+  },
+  {
+   "osm": 2673025441,
+   "place": "town",
+   "name": "Kadıköy",
+   "en": null,
+   "center": [
+    29.02456,
+    40.9913
+   ]
+  },
+  {
+   "osm": 2686428097,
+   "place": "town",
+   "name": "Sarıyer",
+   "en": null,
+   "center": [
+    29.05726,
+    41.16858
+   ]
+  },
+  {
+   "osm": 2686436887,
+   "place": "town",
+   "name": "Avcılar",
+   "en": null,
+   "center": [
+    28.72167,
+    40.97994
+   ]
+  },
+  {
+   "osm": 2687911675,
+   "place": "town",
+   "name": "Hayrabolu",
+   "en": null,
+   "center": [
+    27.10818,
+    41.21467
+   ]
+  },
+  {
+   "osm": 2802953296,
+   "place": "town",
+   "name": "Altıeylül",
+   "en": null,
+   "center": [
+    27.88344,
+    39.64463
+   ]
+  },
+  {
+   "osm": 2802953297,
+   "place": "town",
+   "name": "Karesi",
+   "en": null,
+   "center": [
+    27.88534,
+    39.64642
+   ]
+  },
+  {
+   "osm": 2803523479,
+   "place": "town",
+   "name": "Merkezefendi",
+   "en": null,
+   "center": [
+    29.08417,
+    37.78439
+   ]
+  },
+  {
+   "osm": 2806803518,
+   "place": "town",
+   "name": "Dulkadiroğlu",
+   "en": null,
+   "center": [
+    36.93124,
+    37.57977
+   ]
+  },
+  {
+   "osm": 2806803519,
+   "place": "town",
+   "name": "Onikişubat",
+   "en": null,
+   "center": [
+    36.92374,
+    37.57776
+   ]
+  },
+  {
+   "osm": 2810805005,
+   "place": "town",
+   "name": "Eyyübiye",
+   "en": null,
+   "center": [
+    38.78247,
+    37.14814
+   ]
+  },
+  {
+   "osm": 2810805006,
+   "place": "town",
+   "name": "Haliliye",
+   "en": null,
+   "center": [
+    38.79556,
+    37.16749
+   ]
+  },
+  {
+   "osm": 2833270692,
+   "place": "town",
+   "name": "Soma",
+   "en": null,
+   "center": [
+    27.60888,
+    39.18517
+   ]
+  },
+  {
+   "osm": 2953688338,
+   "place": "town",
+   "name": "Çukurova",
+   "en": null,
+   "center": [
+    35.28233,
+    37.04689
+   ]
+  },
+  {
+   "osm": 3091128788,
+   "place": "town",
+   "name": "Polatlı",
+   "en": "Polatlı",
+   "center": [
+    32.1437,
+    39.58522
+   ]
+  },
+  {
+   "osm": 3138228252,
+   "place": "town",
+   "name": "Çiğli",
+   "en": null,
+   "center": [
+    27.06164,
+    38.49438
+   ]
+  },
+  {
+   "osm": 3237808469,
+   "place": "town",
+   "name": "Ağlı",
+   "en": "Ağlı",
+   "center": [
+    33.55379,
+    41.68715
+   ]
+  },
+  {
+   "osm": 3279111811,
+   "place": "town",
+   "name": "Kaş",
+   "en": "Kaş",
+   "center": [
+    29.64134,
+    36.19938
+   ]
+  },
+  {
+   "osm": 3384307097,
+   "place": "town",
+   "name": "Sur",
+   "en": null,
+   "center": [
+    40.23665,
+    37.91107
+   ]
+  },
+  {
+   "osm": 3430080962,
+   "place": "town",
+   "name": "Şahinbey",
+   "en": null,
+   "center": [
+    37.3794,
+    37.05759
+   ]
+  },
+  {
+   "osm": 3479054194,
+   "place": "city",
+   "name": "Bolu",
+   "en": "Bolu",
+   "center": [
+    31.61105,
+    40.7333
+   ]
+  },
+  {
+   "osm": 3583978567,
+   "place": "town",
+   "name": "Akçakale",
+   "en": null,
+   "center": [
+    38.94868,
+    36.7083
+   ]
+  },
+  {
+   "osm": 3600271631,
+   "place": "town",
+   "name": "Arpaçay",
+   "en": null,
+   "center": [
+    43.32901,
+    40.84643
+   ]
+  },
+  {
+   "osm": 3804980140,
+   "place": "town",
+   "name": "Karşıyaka",
+   "en": null,
+   "center": [
+    27.11962,
+    38.4554
+   ]
+  },
+  {
+   "osm": 3818481861,
+   "place": "town",
+   "name": "Bergama",
+   "en": null,
+   "center": [
+    27.17736,
+    39.11895
+   ]
+  },
+  {
+   "osm": 3933476042,
+   "place": "town",
+   "name": "Ataşehir",
+   "en": null,
+   "center": [
+    29.11352,
+    40.99294
+   ]
+  },
+  {
+   "osm": 3933638335,
+   "place": "town",
+   "name": "Bayraklı",
+   "en": null,
+   "center": [
+    27.16336,
+    38.46508
+   ]
+  },
+  {
+   "osm": 3933738725,
+   "place": "town",
+   "name": "Konak",
+   "en": null,
+   "center": [
+    27.12827,
+    38.41872
+   ]
+  },
+  {
+   "osm": 3933776715,
+   "place": "town",
+   "name": "Urla",
+   "en": "Urla",
+   "center": [
+    26.7673,
+    38.32282
+   ]
+  },
+  {
+   "osm": 3939230757,
+   "place": "town",
+   "name": "Yüreğir",
+   "en": null,
+   "center": [
+    35.34088,
+    36.98946
+   ]
+  },
+  {
+   "osm": 3968309469,
+   "place": "town",
+   "name": "Şehzadeler",
+   "en": null,
+   "center": [
+    27.4303,
+    38.61402
+   ]
+  },
+  {
+   "osm": 3968358450,
+   "place": "town",
+   "name": "Yunusemre",
+   "en": null,
+   "center": [
+    27.41946,
+    38.60865
+   ]
+  },
+  {
+   "osm": 3975403457,
+   "place": "town",
+   "name": "Yenişehir",
+   "en": null,
+   "center": [
+    34.59245,
+    36.78228
+   ]
+  },
+  {
+   "osm": 4476599506,
+   "place": "town",
+   "name": "İpekyolu",
+   "en": null,
+   "center": [
+    43.39551,
+    38.50382
+   ]
+  },
+  {
+   "osm": 4476611340,
+   "place": "town",
+   "name": "Süleymanpaşa",
+   "en": null,
+   "center": [
+    27.50385,
+    40.97717
+   ]
+  },
+  {
+   "osm": 4479054391,
+   "place": "town",
+   "name": "Tuşba",
+   "en": null,
+   "center": [
+    43.37528,
+    38.51231
+   ]
+  },
+  {
+   "osm": 4479083307,
+   "place": "town",
+   "name": "Altınordu",
+   "en": "Altınordu",
+   "center": [
+    37.89643,
+    40.97866
+   ]
+  },
+  {
+   "osm": 4537599783,
+   "place": "town",
+   "name": "Söke",
+   "en": null,
+   "center": [
+    27.40563,
+    37.75198
+   ]
+  },
+  {
+   "osm": 4784580877,
+   "place": "town",
+   "name": "Kapaklı",
+   "en": null,
+   "center": [
+    27.97615,
+    41.32686
+   ]
+  },
+  {
+   "osm": 4956178015,
+   "place": "town",
+   "name": "Palandöken",
+   "en": null,
+   "center": [
+    41.27059,
+    39.887
+   ]
+  },
+  {
+   "osm": 4961413248,
+   "place": "town",
+   "name": "Yeşilyurt",
+   "en": null,
+   "center": [
+    38.24745,
+    38.29549
+   ]
+  },
+  {
+   "osm": 4999225517,
+   "place": "town",
+   "name": "Saray",
+   "en": null,
+   "center": [
+    27.9214,
+    41.44268
+   ]
+  },
+  {
+   "osm": 5048705440,
+   "place": "town",
+   "name": "Sultanbeyli",
+   "en": null,
+   "center": [
+    29.26713,
+    40.96702
+   ]
+  },
+  {
+   "osm": 5048705441,
+   "place": "town",
+   "name": "Çekmeköy",
+   "en": null,
+   "center": [
+    29.17391,
+    41.03516
+   ]
+  },
+  {
+   "osm": 5280097216,
+   "place": "town",
+   "name": "Emirdağ",
+   "en": null,
+   "center": [
+    31.15026,
+    39.0195
+   ]
+  },
+  {
+   "osm": 5409624448,
+   "place": "town",
+   "name": "Boğazlıyan",
+   "en": null,
+   "center": [
+    35.24628,
+    39.19126
+   ]
+  },
+  {
+   "osm": 5798692759,
+   "place": "city",
+   "name": "Çankırı",
+   "en": "Çankırı",
+   "center": [
+    33.62127,
+    40.59719
+   ]
+  },
+  {
+   "osm": 5841697946,
+   "place": "town",
+   "name": "Ergene",
+   "en": null,
+   "center": [
+    27.76778,
+    41.18774
+   ]
+  },
+  {
+   "osm": 6196594141,
+   "place": "city",
+   "name": "Denizli",
+   "en": "Denizli",
+   "center": [
+    29.09665,
+    37.78279
+   ]
+  },
+  {
+   "osm": 6635643818,
+   "place": "town",
+   "name": "Turhal",
+   "en": null,
+   "center": [
+    36.08339,
+    40.38776
+   ]
+  },
+  {
+   "osm": 6748920076,
+   "place": "town",
+   "name": "Tatvan",
+   "en": "Tatvan",
+   "center": [
+    42.28781,
+    38.4932
+   ]
+  },
+  {
+   "osm": 7427633848,
+   "place": "town",
+   "name": "Bayrampaşa",
+   "en": null,
+   "center": [
+    28.91184,
+    41.03455
+   ]
+  },
+  {
+   "osm": 7446867755,
+   "place": "town",
+   "name": "Bozcaada",
+   "en": null,
+   "center": [
+    26.07019,
+    39.83473
+   ]
+  },
+  {
+   "osm": 7913119650,
+   "place": "town",
+   "name": "Ayancık",
+   "en": null,
+   "center": [
+    34.58831,
+    41.94607
+   ]
+  },
+  {
+   "osm": 8092342856,
+   "place": "town",
+   "name": "Büyükkarıştıran",
+   "en": null,
+   "center": [
+    27.54299,
+    41.30033
+   ]
+  },
+  {
+   "osm": 8097170572,
+   "place": "town",
+   "name": "Defne",
+   "en": "Defne",
+   "center": [
+    36.14766,
+    36.19519
+   ]
+  },
+  {
+   "osm": 8097170582,
+   "place": "town",
+   "name": "Antakya",
+   "en": "Antakya",
+   "center": [
+    36.16376,
+    36.20365
+   ]
+  },
+  {
+   "osm": 8175975751,
+   "place": "town",
+   "name": "Mustafakemalpaşa",
+   "en": null,
+   "center": [
+    28.41327,
+    40.03505
+   ]
+  },
+  {
+   "osm": 8177556543,
+   "place": "town",
+   "name": "Kilimli",
+   "en": null,
+   "center": [
+    31.83842,
+    41.48695
+   ]
+  },
+  {
+   "osm": 8177556544,
+   "place": "town",
+   "name": "Kozlu",
+   "en": null,
+   "center": [
+    31.74728,
+    41.43387
+   ]
+  },
+  {
+   "osm": 8250973366,
+   "place": "town",
+   "name": "İzmit",
+   "en": null,
+   "center": [
+    29.95056,
+    40.77211
+   ]
+  },
+  {
+   "osm": 8250973367,
+   "place": "town",
+   "name": "Kartepe",
+   "en": null,
+   "center": [
+    30.01128,
+    40.74544
+   ]
+  },
+  {
+   "osm": 8365533943,
+   "place": "town",
+   "name": "Gürsu",
+   "en": null,
+   "center": [
+    29.19356,
+    40.21758
+   ]
+  },
+  {
+   "osm": 8365595104,
+   "place": "town",
+   "name": "Kestel",
+   "en": null,
+   "center": [
+    29.21287,
+    40.20075
+   ]
+  },
+  {
+   "osm": 8372193233,
+   "place": "town",
+   "name": "Lüleburgaz",
+   "en": "Lüleburgaz",
+   "center": [
+    27.35547,
+    41.40414
+   ]
+  },
+  {
+   "osm": 8414940054,
+   "place": "town",
+   "name": "Marmaraereğlisi",
+   "en": null,
+   "center": [
+    27.955,
+    40.96937
+   ]
+  },
+  {
+   "osm": 8458146161,
+   "place": "town",
+   "name": "Sultangazi",
+   "en": null,
+   "center": [
+    28.86144,
+    41.10433
+   ]
+  },
+  {
+   "osm": 8550841965,
+   "place": "town",
+   "name": "Bor",
+   "en": null,
+   "center": [
+    34.56273,
+    37.89632
+   ]
+  },
+  {
+   "osm": 8554044151,
+   "place": "town",
+   "name": "Kozluk",
+   "en": null,
+   "center": [
+    41.48829,
+    38.19259
+   ]
+  },
+  {
+   "osm": 8554084717,
+   "place": "town",
+   "name": "Sason",
+   "en": null,
+   "center": [
+    41.4202,
+    38.3339
+   ]
+  },
+  {
+   "osm": 8577129143,
+   "place": "town",
+   "name": "Diyadin",
+   "en": "Diyadin",
+   "center": [
+    43.6712,
+    39.53977
+   ]
+  },
+  {
+   "osm": 8582371040,
+   "place": "town",
+   "name": "Arnavutköy",
+   "en": null,
+   "center": [
+    28.74124,
+    41.18447
+   ]
+  },
+  {
+   "osm": 8603453649,
+   "place": "city",
+   "name": "Aydın",
+   "en": "Aydin",
+   "center": [
+    27.84359,
+    37.84838
+   ]
+  },
+  {
+   "osm": 8603453650,
+   "place": "town",
+   "name": "Efeler",
+   "en": null,
+   "center": [
+    27.83373,
+    37.84717
+   ]
+  },
+  {
+   "osm": 8603453651,
+   "place": "town",
+   "name": "Menteşe",
+   "en": null,
+   "center": [
+    28.36459,
+    37.21788
+   ]
+  },
+  {
+   "osm": 8626802602,
+   "place": "town",
+   "name": "Anamur",
+   "en": null,
+   "center": [
+    32.83121,
+    36.08032
+   ]
+  },
+  {
+   "osm": 8629257541,
+   "place": "town",
+   "name": "Çarşıbaşı",
+   "en": null,
+   "center": [
+    39.37849,
+    41.08258
+   ]
+  },
+  {
+   "osm": 8629257542,
+   "place": "town",
+   "name": "Ortahisar",
+   "en": null,
+   "center": [
+    39.72576,
+    41.00622
+   ]
+  },
+  {
+   "osm": 8629257544,
+   "place": "town",
+   "name": "Yomra",
+   "en": null,
+   "center": [
+    39.84712,
+    40.95925
+   ]
+  },
+  {
+   "osm": 8629257545,
+   "place": "town",
+   "name": "Arsin",
+   "en": null,
+   "center": [
+    39.93259,
+    40.95373
+   ]
+  },
+  {
+   "osm": 8629257546,
+   "place": "town",
+   "name": "Araklı",
+   "en": null,
+   "center": [
+    40.05804,
+    40.93582
+   ]
+  },
+  {
+   "osm": 8629473098,
+   "place": "town",
+   "name": "Bozyazı",
+   "en": null,
+   "center": [
+    32.97429,
+    36.10482
+   ]
+  },
+  {
+   "osm": 8630644444,
+   "place": "town",
+   "name": "Akçaabat",
+   "en": null,
+   "center": [
+    39.57067,
+    41.02163
+   ]
+  },
+  {
+   "osm": 8630644445,
+   "place": "town",
+   "name": "Kepez",
+   "en": null,
+   "center": [
+    30.71499,
+    36.91763
+   ]
+  },
+  {
+   "osm": 8630644446,
+   "place": "town",
+   "name": "Konyaaltı",
+   "en": null,
+   "center": [
+    30.65036,
+    36.87261
+   ]
+  },
+  {
+   "osm": 8630644447,
+   "place": "town",
+   "name": "Tire",
+   "en": null,
+   "center": [
+    27.73182,
+    38.0895
+   ]
+  },
+  {
+   "osm": 8630644448,
+   "place": "town",
+   "name": "Ödemiş",
+   "en": null,
+   "center": [
+    27.97725,
+    38.22815
+   ]
+  },
+  {
+   "osm": 8630644449,
+   "place": "town",
+   "name": "Germencik",
+   "en": null,
+   "center": [
+    27.60468,
+    37.87252
+   ]
+  },
+  {
+   "osm": 8630644450,
+   "place": "town",
+   "name": "İncirliova",
+   "en": "İncirliova",
+   "center": [
+    27.72346,
+    37.8538
+   ]
+  },
+  {
+   "osm": 8630644451,
+   "place": "town",
+   "name": "Bozdoğan",
+   "en": null,
+   "center": [
+    28.3132,
+    37.67391
+   ]
+  },
+  {
+   "osm": 8638059584,
+   "place": "town",
+   "name": "Beşikdüzü",
+   "en": null,
+   "center": [
+    39.22804,
+    41.05273
+   ]
+  },
+  {
+   "osm": 8638059585,
+   "place": "town",
+   "name": "Vakfıkebir",
+   "en": null,
+   "center": [
+    39.27619,
+    41.04724
+   ]
+  },
+  {
+   "osm": 8638059586,
+   "place": "town",
+   "name": "Tonya",
+   "en": null,
+   "center": [
+    39.29081,
+    40.88635
+   ]
+  },
+  {
+   "osm": 8638059587,
+   "place": "town",
+   "name": "Şalpazarı",
+   "en": null,
+   "center": [
+    39.19384,
+    40.94181
+   ]
+  },
+  {
+   "osm": 8638059588,
+   "place": "town",
+   "name": "Düzköy",
+   "en": null,
+   "center": [
+    39.42611,
+    40.87383
+   ]
+  },
+  {
+   "osm": 8638059589,
+   "place": "town",
+   "name": "Maçka",
+   "en": null,
+   "center": [
+    39.61272,
+    40.81204
+   ]
+  },
+  {
+   "osm": 8638059596,
+   "place": "town",
+   "name": "Köprübaşı",
+   "en": null,
+   "center": [
+    40.12424,
+    40.80721
+   ]
+  },
+  {
+   "osm": 8638059597,
+   "place": "town",
+   "name": "Dernekpazarı",
+   "en": null,
+   "center": [
+    40.24789,
+    40.79963
+   ]
+  },
+  {
+   "osm": 8638059600,
+   "place": "town",
+   "name": "Çaykara",
+   "en": null,
+   "center": [
+    40.24204,
+    40.74786
+   ]
+  },
+  {
+   "osm": 8638059603,
+   "place": "town",
+   "name": "Sürmene",
+   "en": null,
+   "center": [
+    40.11348,
+    40.91277
+   ]
+  },
+  {
+   "osm": 8638059606,
+   "place": "town",
+   "name": "Hayrat",
+   "en": null,
+   "center": [
+    40.36805,
+    40.88917
+   ]
+  },
+  {
+   "osm": 8638059608,
+   "place": "town",
+   "name": "Of",
+   "en": null,
+   "center": [
+    40.26941,
+    40.94764
+   ]
+  },
+  {
+   "osm": 8638059612,
+   "place": "town",
+   "name": "İyidere",
+   "en": null,
+   "center": [
+    40.36097,
+    41.01198
+   ]
+  },
+  {
+   "osm": 8638064817,
+   "place": "town",
+   "name": "Derepazarı",
+   "en": null,
+   "center": [
+    40.42158,
+    41.02433
+   ]
+  },
+  {
+   "osm": 8638064819,
+   "place": "town",
+   "name": "Kalkandere",
+   "en": null,
+   "center": [
+    40.44251,
+    40.92795
+   ]
+  },
+  {
+   "osm": 8638064821,
+   "place": "town",
+   "name": "İkizdere",
+   "en": null,
+   "center": [
+    40.55957,
+    40.77799
+   ]
+  },
+  {
+   "osm": 8647442778,
+   "place": "town",
+   "name": "Silivri",
+   "en": null,
+   "center": [
+    28.24817,
+    41.07425
+   ]
+  },
+  {
+   "osm": 8662325083,
+   "place": "town",
+   "name": "Cide",
+   "en": null,
+   "center": [
+    33.00371,
+    41.89157
+   ]
+  },
+  {
+   "osm": 8663230289,
+   "place": "town",
+   "name": "Kürtün",
+   "en": null,
+   "center": [
+    39.08571,
+    40.70186
+   ]
+  },
+  {
+   "osm": 8723157821,
+   "place": "town",
+   "name": "Karakoyunlu",
+   "en": null,
+   "center": [
+    44.17366,
+    39.97115
+   ]
+  },
+  {
+   "osm": 8723157828,
+   "place": "town",
+   "name": "Aralık",
+   "en": "Aralık",
+   "center": [
+    44.51604,
+    39.8737
+   ]
+  },
+  {
+   "osm": 8776956027,
+   "place": "town",
+   "name": "Bahçe",
+   "en": null,
+   "center": [
+    36.58205,
+    37.20421
+   ]
+  },
+  {
+   "osm": 8907264284,
+   "place": "town",
+   "name": "Bayramören",
+   "en": null,
+   "center": [
+    33.20396,
+    40.94307
+   ]
+  },
+  {
+   "osm": 11212606075,
+   "place": "city",
+   "name": "Kocaeli",
+   "en": "Kocaeli",
+   "center": [
+    29.94074,
+    40.76539
+   ]
+  },
+  {
+   "osm": 11212641962,
+   "place": "city",
+   "name": "Sakarya",
+   "en": null,
+   "center": [
+    30.40386,
+    40.77263
+   ]
+  },
+  {
+   "osm": 12110587584,
+   "place": "city",
+   "name": "Hatay",
+   "en": "Hatay",
+   "center": [
+    36.16029,
+    36.20255
+   ]
+  },
+  {
+   "osm": 14148472959,
+   "place": "town",
+   "name": "Işıklar Kasabası Başin Yaylası",
+   "en": null,
+   "center": [
+    33.68005,
+    37.93882
+   ]
+  }
+ ]
+}

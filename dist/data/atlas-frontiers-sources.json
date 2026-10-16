@@ -1,6 +1,6 @@
 {
   "description": "Frontiers of the public atlas countries not drawn by a dedicated layer: land frontiers from each country's own outline, and the water borders between two atlas countries from Natural Earth 1:10m boundary lines.",
-  "retrieved": "2026-10-15",
+  "retrieved": "2026-10-16",
   "frontierKm": 52657,
   "pieces": 156,
   "sources": {

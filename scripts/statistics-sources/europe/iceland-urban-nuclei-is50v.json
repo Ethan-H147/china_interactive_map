@@ -1,0 +1,1078 @@
+{
+ "url": "https://gis.lmi.is/geoserver/IS_50V/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=IS_50V:ornefni_flakar&outputFormat=application/json&srsName=EPSG:4326&CQL_FILTER=ornefnaflokkur%3D'%C3%9E%C3%A9ttb%C3%BDli'",
+ "title": "IS 50V place-name areas, urban nuclei (byggðarkjarni)",
+ "retrieved": "2026-10-16",
+ "places": [
+  {
+   "name": "Klif",
+   "center": [
+    -21.99434,
+    64.15642
+   ]
+  },
+  {
+   "name": "Einarsflöt",
+   "center": [
+    -22.0124,
+    64.10642
+   ]
+  },
+  {
+   "name": "Önnumói",
+   "center": [
+    -22.014,
+    64.10592
+   ]
+  },
+  {
+   "name": "Eyrarbakki",
+   "center": [
+    -21.14124,
+    63.86019
+   ]
+  },
+  {
+   "name": "Hella",
+   "center": [
+    -20.39683,
+    63.83635
+   ]
+  },
+  {
+   "name": "Ísafjörður",
+   "center": [
+    -23.14614,
+    66.07041
+   ]
+  },
+  {
+   "name": "Fáskrúðsfjörður",
+   "center": [
+    -14.01206,
+    64.92916
+   ]
+  },
+  {
+   "name": "Breiðdalsvík",
+   "center": [
+    -14.00441,
+    64.78814
+   ]
+  },
+  {
+   "name": "Stokkseyri",
+   "center": [
+    -21.05436,
+    63.83573
+   ]
+  },
+  {
+   "name": "Bíldudalur",
+   "center": [
+    -23.60304,
+    65.68361
+   ]
+  },
+  {
+   "name": "Hnífsdalur",
+   "center": [
+    -23.1269,
+    66.10977
+   ]
+  },
+  {
+   "name": "Eiðar",
+   "center": [
+    -14.34967,
+    65.37251
+   ]
+  },
+  {
+   "name": "Reyðarfjörður",
+   "center": [
+    -14.2168,
+    65.03236
+   ]
+  },
+  {
+   "name": "Flúðir",
+   "center": [
+    -20.31773,
+    64.13282
+   ]
+  },
+  {
+   "name": "Vestmannaeyjar",
+   "center": [
+    -20.27344,
+    63.44238
+   ]
+  },
+  {
+   "name": "Borg",
+   "center": [
+    -20.76495,
+    64.07621
+   ]
+  },
+  {
+   "name": "Hafnarfjörður",
+   "center": [
+    -21.97727,
+    64.06391
+   ]
+  },
+  {
+   "name": "Hallormsstaður",
+   "center": [
+    -14.74028,
+    65.0938
+   ]
+  },
+  {
+   "name": "Grundarhverfi",
+   "center": [
+    -21.83188,
+    64.23921
+   ]
+  },
+  {
+   "name": "Hveragerði",
+   "center": [
+    -21.19079,
+    64.00267
+   ]
+  },
+  {
+   "name": "Seyðisfjörður",
+   "center": [
+    -13.99156,
+    65.26599
+   ]
+  },
+  {
+   "name": "Keflavík",
+   "center": [
+    -22.55454,
+    64.00216
+   ]
+  },
+  {
+   "name": "Siglufjörður",
+   "center": [
+    -18.91002,
+    66.14952
+   ]
+  },
+  {
+   "name": "Neskaupstaður",
+   "center": [
+    -13.72491,
+    65.14598
+   ]
+  },
+  {
+   "name": "Álftanes",
+   "center": [
+    -22.02147,
+    64.10322
+   ]
+  },
+  {
+   "name": "Súðavík",
+   "center": [
+    -22.9903,
+    66.03424
+   ]
+  },
+  {
+   "name": "Vopnafjörður",
+   "center": [
+    -14.82698,
+    65.75386
+   ]
+  },
+  {
+   "name": "Bifröst",
+   "center": [
+    -21.55182,
+    64.76673
+   ]
+  },
+  {
+   "name": "Nesjahverfi",
+   "center": [
+    -15.22387,
+    64.31362
+   ]
+  },
+  {
+   "name": "Borgarnes",
+   "center": [
+    -21.91216,
+    64.54541
+   ]
+  },
+  {
+   "name": "Búðardalur",
+   "center": [
+    -21.76798,
+    65.10895
+   ]
+  },
+  {
+   "name": "Reykjahlíð",
+   "center": [
+    -16.90652,
+    65.64238
+   ]
+  },
+  {
+   "name": "Akureyri",
+   "center": [
+    -18.09743,
+    65.6838
+   ]
+  },
+  {
+   "name": "Akranes",
+   "center": [
+    -22.04611,
+    64.31648
+   ]
+  },
+  {
+   "name": "Rauðalækur",
+   "center": [
+    -20.44105,
+    63.86571
+   ]
+  },
+  {
+   "name": "Bakkafjörður",
+   "center": [
+    -14.80338,
+    66.03781
+   ]
+  },
+  {
+   "name": "Grindavík",
+   "center": [
+    -22.42718,
+    63.83942
+   ]
+  },
+  {
+   "name": "Borðeyri",
+   "center": [
+    -21.09586,
+    65.20887
+   ]
+  },
+  {
+   "name": "Kleppjárnsreykir",
+   "center": [
+    -21.40462,
+    64.65521
+   ]
+  },
+  {
+   "name": "Hauganes",
+   "center": [
+    -18.30298,
+    65.92384
+   ]
+  },
+  {
+   "name": "Garðabær",
+   "center": [
+    -21.92096,
+    64.09417
+   ]
+  },
+  {
+   "name": "Hellissandur",
+   "center": [
+    -23.88307,
+    64.91758
+   ]
+  },
+  {
+   "name": "Sauðárkrókur",
+   "center": [
+    -19.65115,
+    65.75118
+   ]
+  },
+  {
+   "name": "Stöðvarfjörður",
+   "center": [
+    -13.87601,
+    64.83352
+   ]
+  },
+  {
+   "name": "Grenivík",
+   "center": [
+    -18.18104,
+    65.94825
+   ]
+  },
+  {
+   "name": "Laugarbakki",
+   "center": [
+    -20.89237,
+    65.32742
+   ]
+  },
+  {
+   "name": "Ólafsfjörður",
+   "center": [
+    -18.65407,
+    66.07271
+   ]
+  },
+  {
+   "name": "Vogar",
+   "center": [
+    -22.38805,
+    63.98236
+   ]
+  },
+  {
+   "name": "Raufarhöfn",
+   "center": [
+    -15.94958,
+    66.45392
+   ]
+  },
+  {
+   "name": "Laugarvatn",
+   "center": [
+    -20.73373,
+    64.21422
+   ]
+  },
+  {
+   "name": "Bakkagerði",
+   "center": [
+    -13.82017,
+    65.52708
+   ]
+  },
+  {
+   "name": "Varmahlíð",
+   "center": [
+    -19.44941,
+    65.55332
+   ]
+  },
+  {
+   "name": "Hvolsvöllur",
+   "center": [
+    -20.22455,
+    63.75101
+   ]
+  },
+  {
+   "name": "Þykkvibær",
+   "center": [
+    -20.61157,
+    63.74679
+   ]
+  },
+  {
+   "name": "Seltjarnarnes",
+   "center": [
+    -22.0012,
+    64.15138
+   ]
+  },
+  {
+   "name": "Skógar",
+   "center": [
+    -19.49748,
+    63.52817
+   ]
+  },
+  {
+   "name": "Hofsós",
+   "center": [
+    -19.4158,
+    65.8987
+   ]
+  },
+  {
+   "name": "Hrísey",
+   "center": [
+    -18.37718,
+    65.97931
+   ]
+  },
+  {
+   "name": "Sandgerði",
+   "center": [
+    -22.69876,
+    64.03734
+   ]
+  },
+  {
+   "name": "Skagaströnd",
+   "center": [
+    -20.30097,
+    65.8248
+   ]
+  },
+  {
+   "name": "Djúpivogur",
+   "center": [
+    -14.28488,
+    64.65758
+   ]
+  },
+  {
+   "name": "Vík",
+   "center": [
+    -19.0073,
+    63.4188
+   ]
+  },
+  {
+   "name": "Ólafsvík",
+   "center": [
+    -23.70426,
+    64.89508
+   ]
+  },
+  {
+   "name": "Dalvík",
+   "center": [
+    -18.53062,
+    65.97179
+   ]
+  },
+  {
+   "name": "Hafnir",
+   "center": [
+    -22.68756,
+    63.9346
+   ]
+  },
+  {
+   "name": "Hólmavík",
+   "center": [
+    -21.67904,
+    65.70315
+   ]
+  },
+  {
+   "name": "Þorlákshöfn",
+   "center": [
+    -21.37466,
+    63.85889
+   ]
+  },
+  {
+   "name": "Egilsstaðir",
+   "center": [
+    -14.39311,
+    65.26372
+   ]
+  },
+  {
+   "name": "Stykkishólmur",
+   "center": [
+    -22.73088,
+    65.07583
+   ]
+  },
+  {
+   "name": "Suðureyri",
+   "center": [
+    -23.5266,
+    66.12977
+   ]
+  },
+  {
+   "name": "Eskifjörður",
+   "center": [
+    -14.01631,
+    65.07136
+   ]
+  },
+  {
+   "name": "Garður",
+   "center": [
+    -22.65044,
+    64.07043
+   ]
+  },
+  {
+   "name": "Reykholt",
+   "center": [
+    -20.44367,
+    64.17741
+   ]
+  },
+  {
+   "name": "Reykholt",
+   "center": [
+    -21.29052,
+    64.66484
+   ]
+  },
+  {
+   "name": "Þórshöfn",
+   "center": [
+    -15.3366,
+    66.19685
+   ]
+  },
+  {
+   "name": "Hvammstangi",
+   "center": [
+    -20.94574,
+    65.39579
+   ]
+  },
+  {
+   "name": "Njarðvík",
+   "center": [
+    -22.54673,
+    63.98254
+   ]
+  },
+  {
+   "name": "Litli-Árskógssandur",
+   "center": [
+    -18.35344,
+    65.94508
+   ]
+  },
+  {
+   "name": "Drangsnes",
+   "center": [
+    -21.4433,
+    65.68882
+   ]
+  },
+  {
+   "name": "Húsavík",
+   "center": [
+    -17.34765,
+    66.04466
+   ]
+  },
+  {
+   "name": "Kópavogur",
+   "center": [
+    -21.88558,
+    64.10367
+   ]
+  },
+  {
+   "name": "Selfoss",
+   "center": [
+    -20.99958,
+    63.93565
+   ]
+  },
+  {
+   "name": "Höfn",
+   "center": [
+    -15.20523,
+    64.2506
+   ]
+  },
+  {
+   "name": "Tálknafjörður",
+   "center": [
+    -23.82347,
+    65.62584
+   ]
+  },
+  {
+   "name": "Bolungarvík",
+   "center": [
+    -23.25334,
+    66.15652
+   ]
+  },
+  {
+   "name": "Grundarfjörður",
+   "center": [
+    -23.25841,
+    64.92368
+   ]
+  },
+  {
+   "name": "Hjalteyri",
+   "center": [
+    -18.19628,
+    65.84979
+   ]
+  },
+  {
+   "name": "Kópasker",
+   "center": [
+    -16.44622,
+    66.29975
+   ]
+  },
+  {
+   "name": "Reykhólar",
+   "center": [
+    -22.20139,
+    65.4478
+   ]
+  },
+  {
+   "name": "Flateyri",
+   "center": [
+    -23.51347,
+    66.04857
+   ]
+  },
+  {
+   "name": "Kirkjubæjarklaustur",
+   "center": [
+    -18.05001,
+    63.79022
+   ]
+  },
+  {
+   "name": "Svalbarðseyri",
+   "center": [
+    -18.08549,
+    65.74361
+   ]
+  },
+  {
+   "name": "Patreksfjörður",
+   "center": [
+    -23.98327,
+    65.59535
+   ]
+  },
+  {
+   "name": "Laugarás",
+   "center": [
+    -20.50038,
+    64.11623
+   ]
+  },
+  {
+   "name": "Hólar",
+   "center": [
+    -19.11174,
+    65.73301
+   ]
+  },
+  {
+   "name": "Mosfellsbær",
+   "center": [
+    -21.68316,
+    64.16441
+   ]
+  },
+  {
+   "name": "Rif",
+   "center": [
+    -23.81522,
+    64.9229
+   ]
+  },
+  {
+   "name": "Blönduós",
+   "center": [
+    -20.28845,
+    65.66012
+   ]
+  },
+  {
+   "name": "Reykjavík",
+   "center": [
+    -21.86192,
+    64.13136
+   ]
+  },
+  {
+   "name": "Arnarstapi",
+   "center": [
+    -23.63042,
+    64.76844
+   ]
+  },
+  {
+   "name": "Norðurtún",
+   "center": [
+    -22.01268,
+    64.107
+   ]
+  },
+  {
+   "name": "Lónsbakki",
+   "center": [
+    -18.15381,
+    65.70305
+   ]
+  },
+  {
+   "name": "Fjósaflöt",
+   "center": [
+    -21.3733,
+    63.85672
+   ]
+  },
+  {
+   "name": "Háfshverfi",
+   "center": [
+    -20.69695,
+    63.78174
+   ]
+  },
+  {
+   "name": "Árnes",
+   "center": [
+    -20.24898,
+    64.0419
+   ]
+  },
+  {
+   "name": "Tjarnabyggð",
+   "center": [
+    -21.09168,
+    63.8959
+   ]
+  },
+  {
+   "name": "Inn-Þorpið",
+   "center": [
+    -13.8138,
+    65.20481
+   ]
+  },
+  {
+   "name": "Breiðamýri",
+   "center": [
+    -22.02034,
+    64.10397
+   ]
+  },
+  {
+   "name": "Mói",
+   "center": [
+    -20.3218,
+    64.13079
+   ]
+  },
+  {
+   "name": "Laugar",
+   "center": [
+    -17.35879,
+    65.72118
+   ]
+  },
+  {
+   "name": "Hestamýri",
+   "center": [
+    -22.0092,
+    64.1051
+   ]
+  },
+  {
+   "name": "Sólheimar",
+   "center": [
+    -20.64307,
+    64.06723
+   ]
+  },
+  {
+   "name": "Brúnahlíð",
+   "center": [
+    -18.02582,
+    65.65498
+   ]
+  },
+  {
+   "name": "Búðareyri",
+   "center": [
+    -13.99138,
+    65.26634
+   ]
+  },
+  {
+   "name": "Kristnes",
+   "center": [
+    -18.08749,
+    65.59548
+   ]
+  },
+  {
+   "name": "Út-Þorpið",
+   "center": [
+    -13.79659,
+    65.20294
+   ]
+  },
+  {
+   "name": "Hvanneyri",
+   "center": [
+    -21.76409,
+    64.56426
+   ]
+  },
+  {
+   "name": "Rimi",
+   "center": [
+    -22.0195,
+    64.10666
+   ]
+  },
+  {
+   "name": "Plæging",
+   "center": [
+    -22.01662,
+    64.10735
+   ]
+  },
+  {
+   "name": "Ásbrú",
+   "center": [
+    -22.57976,
+    63.97074
+   ]
+  },
+  {
+   "name": "Brautarholt",
+   "center": [
+    -20.52033,
+    64.0222
+   ]
+  },
+  {
+   "name": "Norðurvararflórar",
+   "center": [
+    -21.37522,
+    63.85818
+   ]
+  },
+  {
+   "name": "Unubakki",
+   "center": [
+    -21.3765,
+    63.86024
+   ]
+  },
+  {
+   "name": "Eiðisdældir",
+   "center": [
+    -21.98263,
+    64.14988
+   ]
+  },
+  {
+   "name": "Gerði",
+   "center": [
+    -21.9976,
+    64.1537
+   ]
+  },
+  {
+   "name": "Hellnar",
+   "center": [
+    -23.65074,
+    64.75106
+   ]
+  },
+  {
+   "name": "Grandi",
+   "center": [
+    -22.01166,
+    64.10194
+   ]
+  },
+  {
+   "name": "Lambhúsveita",
+   "center": [
+    -22.00424,
+    64.10508
+   ]
+  },
+  {
+   "name": "Kúaflöt",
+   "center": [
+    -22.01937,
+    64.10418
+   ]
+  },
+  {
+   "name": "Aurvöllur",
+   "center": [
+    -22.01665,
+    64.10828
+   ]
+  },
+  {
+   "name": "Gerðistún",
+   "center": [
+    -22.01818,
+    64.10739
+   ]
+  },
+  {
+   "name": "Melahverfi",
+   "center": [
+    -21.8398,
+    64.38211
+   ]
+  },
+  {
+   "name": "Brekkuþorp",
+   "center": [
+    -13.79934,
+    65.2039
+   ]
+  },
+  {
+   "name": "Vífilsstaðir",
+   "center": [
+    -21.8887,
+    64.08209
+   ]
+  },
+  {
+   "name": "Hallatún",
+   "center": [
+    -22.012,
+    64.10595
+   ]
+  },
+  {
+   "name": "Sölvaflöt",
+   "center": [
+    -21.16092,
+    63.86614
+   ]
+  },
+  {
+   "name": "Flúðatún",
+   "center": [
+    -20.31992,
+    64.12894
+   ]
+  },
+  {
+   "name": "Hulduhvammur",
+   "center": [
+    -20.32002,
+    64.12972
+   ]
+  },
+  {
+   "name": "Árbæjarhverfi",
+   "center": [
+    -21.0289,
+    63.94517
+   ]
+  },
+  {
+   "name": "Grímsey",
+   "center": [
+    -18.00996,
+    66.5379
+   ]
+  },
+  {
+   "name": "Brúnsbrekka",
+   "center": [
+    -20.32094,
+    64.13768
+   ]
+  },
+  {
+   "name": "Moluflöt",
+   "center": [
+    -20.32398,
+    64.13828
+   ]
+  },
+  {
+   "name": "Skriðuvellir",
+   "center": [
+    -18.0541,
+    63.7897
+   ]
+  },
+  {
+   "name": "Þingeyri",
+   "center": [
+    -23.48736,
+    65.87497
+   ]
+  },
+  {
+   "name": "Grjót",
+   "center": [
+    -21.38627,
+    63.85686
+   ]
+  },
+  {
+   "name": "Fellabær",
+   "center": [
+    -14.42587,
+    65.28479
+   ]
+  },
+  {
+   "name": "Torfdalur",
+   "center": [
+    -20.32719,
+    64.13127
+   ]
+  },
+  {
+   "name": "Högnastaðatún",
+   "center": [
+    -20.31939,
+    64.13693
+   ]
+  },
+  {
+   "name": "Innnes",
+   "center": [
+    -22.03683,
+    64.31041
+   ]
+  },
+  {
+   "name": "Hrafnagilshverfi",
+   "center": [
+    -18.09499,
+    65.57272
+   ]
+  },
+  {
+   "name": "Steinsstaðabyggð",
+   "center": [
+    -19.35358,
+    65.46875
+   ]
+  },
+  {
+   "name": "Kleifar",
+   "center": [
+    -18.64618,
+    66.09326
+   ]
+  },
+  {
+   "name": "Halinn",
+   "center": [
+    -22.01606,
+    64.10778
+   ]
+  }
+ ]
+}

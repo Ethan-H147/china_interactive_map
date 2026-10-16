@@ -129,5 +129,22 @@ export default [
   assert.equal(await page.evaluate(`map.getProjection().type`),'globe','The choice is remembered on the next visit');
   await page.tap('#globe-view');await page.settle();
   assert(await page.evaluate(`map.getProjection().type==='mercator'&&map.getMinZoom()===.5`),'The button returns to the flat map');
- }}
+ }},
+ {name:'Iceland and Turkey wait in developer mode',options:desktop,async run(page,base){
+  for(const country of ['iceland','turkey']){
+   await page.open(base,'#'+country);
+   assert.equal(await page.evaluate('AtlasEntry.current'),'china',country+' falls back to China for the public');
+  }
+ }},
+ ...[['iceland','Kópavogur','IS-M-1000','Capital Region'],['turkey','Çankaya',null,'Ankara']].map(([country,query,id,parent])=>({name:`${country}: ${query} opens in developer mode`,options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#'+country);
+  assert.equal(await page.evaluate('AtlasEntry.current'),country);
+  await searchAndSelect(page,query,query);
+  await page.waitFor(`!!currentAtlas()?.getSelection()`,{label:query+' selected'});
+  const selection=await page.evaluate('currentAtlas().getSelection()');
+  if(id)assert.equal(selection,id);else assert(selection.startsWith('TR-D-'),query+' is a district: '+selection);
+  assert(await page.evaluate(`[...document.querySelectorAll('.map-breadcrumb')].some(b=>b.getClientRects().length&&b.textContent.includes(${JSON.stringify(parent)}))`),query+' sits under '+parent);
+  // Iceland's towns and Turkey's province-centre cities are dots of their own.
+  await page.waitFor(`map.getSource('${country}-settlements')&&map.querySourceFeatures('${country}-settlements').length>0`,{label:country+' settlement dots'});
+ }}))
 ];

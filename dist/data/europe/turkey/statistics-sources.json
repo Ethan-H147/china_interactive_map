@@ -1,0 +1,16 @@
+{
+ "retrieved": "2026-10-16",
+ "sources": {
+  "mappedArea": {
+   "title": "Boundary-derived area",
+   "url": "data/europe/turkey/sources.json",
+   "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+  },
+  "trPopulation": {
+   "title": "TÜİK · Address-based population registration system (ADNKS) results at 31 December 2022, by district, via OCHA (cod-ps-tur)",
+   "url": "https://data.humdata.org/dataset/cod-ps-tur",
+   "data": "https://data.humdata.org/dataset/79d8aa16-f74e-4881-99a7-81cbd976b8c6/resource/c016354b-091a-4820-a43a-8aeebf012ecc/download/tur_admpop_adm2_2022.csv",
+   "license": "Creative Commons Attribution for Intergovernmental Organisations"
+  }
+ }
+}

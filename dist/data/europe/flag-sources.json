@@ -47,6 +47,30 @@
       "width": 1500,
       "height": 1000,
       "sha256": "c939e50605c5a08df1aaf19818f74d2919a9d3c3b7aa7cd90520b8bfc9c5dddc"
+    },
+    "iceland": {
+      "file": "vendor/flag-is.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iceland.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-is.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Iceland.svg",
+      "width": 1250,
+      "height": 900,
+      "sha256": "225f2c249cb0ae48bb954cc768c49f3f7143ae6150c0a44f58cedbb6a9a995b4"
+    },
+    "turkey": {
+      "file": "vendor/flag-tr.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkey.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-tr.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkey.svg",
+      "width": 1200,
+      "height": 800,
+      "sha256": "5a47e932cdb371d9708d8c9a209d3acfd006cdd3ee7dd38ae44df6180e170e90"
     }
   }
 }
