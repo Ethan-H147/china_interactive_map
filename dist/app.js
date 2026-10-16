@@ -56,14 +56,33 @@ let failedCountry=null,recoveringCountry=false,chinaReady=false,chinaLoading,cou
 // China's packed geometry downloads from the first moment a China visit is known,
 // overlapping style, module and context loading. MapLibre's workers unpack it
 // (see maplibre-worker-protocols.mjs); the page only hands them a blob URL.
-// Developer mode draws every county-level division of mainland China (prepare-china-counties.mjs)
-// in place of the five-city district overlay; the page is reloaded when the mode changes.
-const chinaCounties=!!window.AtlasDev?.enabled,chinaFiles=window.AtlasEntry.chinaFiles(chinaCounties);
 let chinaPack;
 function chinaPackUrl(){
- return chinaPack??=(window.AtlasEntry.takeEarly('chinaPack')||fetch(chinaFiles.chinaPack)).then(r=>{if(!r.ok)throw new Error(`China boundaries: ${r.status}`);return r.blob();}).then(blob=>URL.createObjectURL(blob)).catch(error=>{chinaPack=null;throw error;});
+ return chinaPack??=(window.AtlasEntry.takeEarly('chinaPack')||fetch('data/china-boundaries.pack.bin')).then(r=>{if(!r.ok)throw new Error(`China boundaries: ${r.status}`);return r.blob();}).then(blob=>URL.createObjectURL(blob)).catch(error=>{chinaPack=null;throw error;});
 }
 if(initialCountry==='china')chinaPackUrl().catch(()=>{});
+// Developer mode draws every county-level division of mainland China (prepare-china-counties.mjs) in
+// place of the five-city district overlay. Its pack loads after China's map is ready, so the first
+// view waits for none of it; turning developer mode off reloads the page.
+let chinaCounties=false,chinaCountiesLoading=null,chinaArticles;
+function loadChinaCounties(){
+ return chinaCountiesLoading??=(async()=>{
+  const [pack,regions,names]=await Promise.all([fetch('data/china-counties.pack.bin').then(r=>{if(!r.ok)throw Error('China counties: '+r.status);return r.blob();}),json('data/china-counties-regions.json'),json('data/china-county-names.json')]);
+  Object.assign(regionNames,names.regions);Object.assign(chinaArticles.regions,names.articles);
+  // The five-city districts leave the index; the counties (the five cities' refined ones among them) take their place.
+  const selectedCode=selected?.layer.feature.properties.parentCity?selected.layer.feature.properties.adcode:null;
+  for(let i=regionIndex.length-1;i>=0;i--)if(regionIndex[i].layer.feature.properties.parentCity){regionByCode.delete(regionIndex[i].layer.feature.properties.adcode);regionIndex.splice(i,1);}
+  for(const code of districtCities){const list=detailLayers.get(code);if(list)detailLayers.set(code,list.filter(l=>!l.feature.properties.parentCity));}
+  districtCities=new Set(regions.districts.map(f=>f.properties.parentCity));
+  for(const f of regions.districts){const code=f.properties.parentCity;if(!detailLayers.has(code))detailLayers.set(code,[]);detailLayers.get(code).push(bindRegion(f,f.properties.provinceCode));}
+  const url=URL.createObjectURL(pack);
+  for(const id of ['city-districts','city-district-boundaries','city-districts-selection-edges'])map.getSource(id)?.setData('china-pack://'+id+'?pack='+encodeURIComponent(url));
+  map.once('idle',()=>setTimeout(()=>URL.revokeObjectURL(url),15000));
+  if(selectedCode&&regionByCode.get(selectedCode))selected.layer=regionByCode.get(selectedCode);
+  comparison.register('china',{regions:[...provinceLayers.values(),...regionByCode.values()].filter((l,i,a)=>a.findIndex(x=>x.feature.properties.adcode===l.feature.properties.adcode)===i),name:englishName,kind,provincePopulation,regionPopulation});
+  chinaCounties=true;syncLayers();
+ })().catch(error=>{chinaCountiesLoading=null;throw error;});
+}
 let comparison,southAmerica;
 // Each country's own adapter, created in init; the regional groups and South America hold portals per country.
 const atlases={};
@@ -282,7 +301,10 @@ function waitForCountrySources(ids,signal){
 // claim line that is not the line of actual control (claimants) shows only on its claimants' maps.
 const unclaimed=open=>['all',['!=',['coalesce',['get','claimedBy'],''],open],['any',['!',['has','claimants']],['in',open||'-',['get','claimants']]]];
 function syncFrontiers(open){if(map.getLayer('atlas-frontiers'))map.setFilter('atlas-frontiers',registry.countries[open]?.ownFrontier?['all',['!',['in',' '+open+' ',['concat',' ',['get','countries'],' ']]],unclaimed(open)]:unclaimed(open));}
-function syncPortals(open){for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,unclaimed(open));}if(map.getLayer(country+'-international'))map.setFilter(country+'-international',unclaimed(open));}}
+// China's displayed land in the neighbour band (world-land.mjs) sits beneath its simplified portal on
+// other maps; on China's own map it would show through a selected or hovered province's fill.
+const neighbourLandFilter=open=>open==='china'?['!=',['get','country'],'china']:null;
+function syncPortals(open){if(map.getLayer('china-neighbour-land'))map.setFilter('china-neighbour-land',neighbourLandFilter(open));for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,unclaimed(open));}if(map.getLayer(country+'-international'))map.setFilter(country+'-international',unclaimed(open));}}
 function atlasFor(country){return atlases[country]||{'southern-africa':southernAfrica,europe,'south-america':southAmerica}[registry.countries[country]?.adapter]?.portals[country]||null;}
 function currentAtlas(){return atlasFor(atlasMode);}
 // focus: an overseas territory to open directly ({region, bounds}); the camera goes to it
@@ -445,7 +467,7 @@ map.getCanvas().addEventListener('mouseleave',clearHover);
 async function loadChina(){
  if(chinaReady)return;if(chinaLoading)return chinaLoading;
  chinaLoading=(async()=>{
-  const [packUrl,china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([chinaPackUrl(),(window.AtlasEntry.takeEarly('chinaRegions')||fetch(chinaFiles.chinaRegions)).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json(chinaCounties?'data/china-county-names.json':'data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};if(districtNames.articles)Object.assign(articles.regions,districtNames.articles);xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
+  const [packUrl,china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([chinaPackUrl(),(window.AtlasEntry.takeEarly('chinaRegions')||fetch('data/china-regions.json')).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};chinaArticles=articles;xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=china.provinces;
   // Each MapLibre worker unpacks the boundaries once and builds its own sources.
@@ -488,6 +510,7 @@ async function loadChina(){
   comparison.register('china',{regions:[...provinceLayers.values(),...regionByCode.values()].filter((l,i,a)=>a.findIndex(x=>x.feature.properties.adcode===l.feature.properties.adcode)===i),name:englishName,kind,provincePopulation,regionPopulation});
   $('compare-open').onclick=()=>comparison.open();$('compare-place').onclick=()=>comparison.open(selected?.layer.feature.properties.adcode);
   chinaReady=true;initQuiz();syncLayers();
+  if(window.AtlasDev?.enabled)loadChinaCounties().catch(error=>console.warn('China counties',error));
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:atlasMode!=='china'});
   syncCountryFills();syncLayers();
  })().catch(error=>{chinaLoading=null;throw error;});return chinaLoading;
@@ -527,7 +550,7 @@ async function init(){try{
 
   southAmerica=window.AtlasSouthAmerica.createSouthAmerica(map,{syncAppearance:()=>satelliteDisplay?.sync(),country:()=>atlasMode,isBusy:()=>quiz.active||countrySwitching,switchAtlas:changeAtlas,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{manual:camera.manual===true})});
   window.AtlasDev.mount({eligible:()=>atlasMode==='china'&&!quiz.active&&!countrySwitching&&selected?.layer.feature.properties.adcode===310105});
-  window.addEventListener('atlas-developer-change',async()=>{if(chinaReady&&!!window.AtlasDev.enabled!==chinaCounties){location.reload();return;}southAmerica.syncDeveloper();southernAfrica.syncDeveloper();await europe.ensure();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
+  window.addEventListener('atlas-developer-change',async()=>{if(chinaReady&&!window.AtlasDev.enabled&&chinaCountiesLoading){location.reload();return;}if(chinaReady&&window.AtlasDev.enabled)loadChinaCounties().catch(error=>console.warn('China counties',error));southAmerica.syncDeveloper();southernAfrica.syncDeveloper();await europe.ensure();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
   const requestedCountry=window.AtlasEntry.current;
   controls();if(requestedCountry&&requestedCountry!=='china')await changeAtlas(requestedCountry,false);else if(!window.AtlasView.fromHash(location.hash))await followPlaceLink();
   if(!map.loaded())await new Promise(resolve=>map.once('idle',resolve));

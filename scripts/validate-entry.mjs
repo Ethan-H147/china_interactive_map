@@ -78,6 +78,6 @@ const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));a
  assert.deepEqual(boot('#china').fetched,['data/china-boundaries.pack.bin','data/china-regions.json'],'China visits start the packed boundaries immediately');
  assert.deepEqual(boot('#japan').fetched,[],'Other countries do not download China');
  const early=boot('#china').entry;assert(early.takeEarly('chinaPack'));assert.equal(early.takeEarly('chinaPack'),undefined,'An early response is handed over once');
- for(const key of ['chinaPack','chinaRegions'])assert(entry.includes(`${key}:'data/`)&&app.includes(`takeEarly('${key}')`),'Early China response is consumed: '+key);
+ for(const key of ['chinaPack','chinaRegions'])assert(entry.includes(`['${key}',`)&&app.includes(`takeEarly('${key}')`),'Early China response is consumed: '+key);
  console.log(`Startup preloads: ${preloads.length} files exist and are requested; early China downloads are consumed.`);
 }

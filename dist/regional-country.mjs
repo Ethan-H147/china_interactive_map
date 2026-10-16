@@ -32,11 +32,13 @@ export async function addRegionalCountry(map,host,c){
  let settlements=[],supplement,placeLanguage='both',cityManifest,cityBorders,phoneData,cityLoadingEpoch=0;
  let active=false,ready=false,catalogue,search,selected,scope,subscope,detailScope,thirdScope,mode=1,labels=[],warming,pending,cancelIndex,generation=0,detailEpoch=0,selectionEpoch=0;
  const context=await loadCompressed(base+'context.bin');
- map.addSource(country+'-portal',{type:'geojson',data:polygonParts(context),tolerance:0,attribution:c.attribution});
+ // Portals and the neighbours beneath them are tiled with sub-pixel simplification (0.25 px, as the
+ // archipelago does): Chile's portal alone has 355,000 vertices, all drawn at a world view otherwise.
+ map.addSource(country+'-portal',{type:'geojson',data:polygonParts(context),tolerance:.25,attribution:c.attribution});
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  // Foreign land beside a far territory, drawn at this country's precision beneath it (French
  // Guiana's Suriname and Brazil): an atlas country in the portal grey, others in the world's.
- if(c.neighbours){map.addSource(country+'-neighbours',{type:'geojson',data:polygonParts(await loadCompressed(base+'neighbours.bin')),tolerance:0});map.addLayer({id:country+'-neighbours',type:'fill',source:country+'-neighbours',paint:{'fill-color':['case',['in',['get','country'],['literal',window.AtlasCountries.ids]],'#d7d7d3','#e5e5e1'],'fill-antialias':false}},country+'-portal-fill');}
+ if(c.neighbours){map.addSource(country+'-neighbours',{type:'geojson',data:polygonParts(await loadCompressed(base+'neighbours.bin')),tolerance:.25});map.addLayer({id:country+'-neighbours',type:'fill',source:country+'-neighbours',paint:{'fill-color':['case',['in',['get','country'],['literal',window.AtlasCountries.ids]],'#d7d7d3','#e5e5e1'],'fill-antialias':false}},country+'-portal-fill');}
  const international=await loadCompressed(base+'international.bin');
  map.addSource(country+'-international',{...internationalLineSourceOptions,data:international,attribution:c.attribution});
  addInternationalBorder(map,country+'-international',country+'-international');

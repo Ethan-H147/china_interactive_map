@@ -23,8 +23,8 @@ export default [
   await page.type('dev mode');
   await page.waitFor(`document.getElementById('developer-dialog')?.open`,{label:'the developer dialog'});
   await page.tap('.developer-continue');
-  // China reloads with every county-level division.
-  await page.waitFor(`AtlasDev.enabled&&chinaCounties&&chinaReady`,{label:"China's counties after the reload",timeout:60000});await page.settle();
+  // China then loads every county-level division in the background.
+  await page.waitFor(`AtlasDev.enabled&&chinaCounties`,{label:"China's counties",timeout:60000});
   assert.equal(await page.evaluate('AtlasDev.enabled'),true);
   await page.evaluate(`location.hash='#italy'`);await page.settle();
   assert.equal(await page.evaluate('AtlasEntry.current'),'italy','Italy opens in developer mode');
@@ -179,7 +179,7 @@ export default [
  // its five-city overlay.
  {name:'China shows every county-level division in developer mode',options:{...desktop,developer:true},async run(page,base){
   await page.open(base,'#china');
-  assert.equal(await page.evaluate('chinaCounties'),true);
+  await page.waitFor('chinaCounties',{label:"China's counties",timeout:60000});
   await searchAndSelect(page,'Chengdu','Chengdu');
   await page.waitFor(`map.getLayer('city-district-fill')&&map.getLayoutProperty('city-district-fill','visibility')==='visible'&&map.querySourceFeatures('city-districts',{filter:['==',['get','parentCity'],510100]}).length>=20`,{label:"Chengdu's counties"});
   await searchAndSelect(page,'Pidu','Pidu District');
@@ -190,6 +190,6 @@ export default [
   await page.open(base,'#china');
   assert.equal(await page.evaluate('chinaCounties'),false);
   assert.equal(await page.evaluate('districtCities.size'),5);
-  assert(!page.requests.some(url=>/china-(boundaries-dev|regions-dev|county-names)/.test(url)),'The public map downloads none of the county data');
+  assert(!page.requests.some(url=>/china-(counties|county-names)/.test(url)),'The public map downloads none of the county data');
  }}
 ];

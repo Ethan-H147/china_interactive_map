@@ -179,7 +179,7 @@ Developer mode draws all 2,727 county-level divisions of mainland China's prefec
 - **Refined cities.** Hangzhou, Nanjing, Suzhou, Guangzhou and Shenzhen keep their refined districts from the public overlay.
 - **Names.** English names and Wikipedia links come from Wikidata's division codes (P442), retained in `scripts/additional-sources/china-counties/`.
 
-The developer pack (`china-boundaries-dev.pack.bin`, about 15 MB) and its region index load only in developer mode. Turning the mode on or off on China's map reloads the page. The public pack is unchanged.
+The counties travel in a pack of their own (`china-counties.pack.bin`, about 10 MB, with `china-counties-regions.json` and `china-county-names.json`). They load after China's map is ready, and only in developer mode, so the first view never waits for them. Turning developer mode on swaps them in; turning it off reloads the page. The public pack is unchanged.
 
 `npm run test:china-counties` checks the counts, names, and that counties tile each prefecture without overlap. Across prefectures, counties overlap only where the displayed prefecture outlines already do (about 8 km² nationally, at most 1 km² per pair).
 

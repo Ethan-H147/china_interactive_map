@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {readDataText} from './read-data.mjs';
 import {encodePack,decodePack} from '../dist/china-pack.mjs';
-import {describeChina} from '../dist/china-sources.mjs';
+import {describeChina,describeRegion} from '../dist/china-sources.mjs';
 import {borderIndex,hiddenSegments} from '../dist/adaptive-lines.mjs';
 import {chinaShore} from './china-shore.mjs';
 
@@ -37,14 +37,16 @@ fs.writeFileSync('dist/data/china-regions.json',JSON.stringify(describeChina(dec
 const before=JSON.parse(fs.readFileSync('dist/data/display-boundaries.parts.json')).compressedBytes+fs.statSync('dist/data/city-districts.bin').size+fs.statSync('dist/data/fill-fragments.bin').size;
 console.log(`Region index: ${(fs.statSync('dist/data/china-regions.json').size/1024).toFixed(0)} KB. Packed China boundaries: ${(packed.length/1048576).toFixed(2)} MB (from ${(before/1048576).toFixed(2)} MB), identical after decoding. Hidden outline segments: ${Object.entries(lineOmissions).map(([k,r])=>k+' '+r.reduce((n,x)=>n+x[2],0)).join(', ')}.`);
 
-// Developer mode: the same pack with every county-level division of mainland China
-// (prepare-china-counties.mjs) in place of the five-city district overlay.
+// Developer mode: every county-level division of mainland China (prepare-china-counties.mjs), as a
+// pack of its own loaded after China's map is ready; it replaces the five-city district overlay.
 if(fs.existsSync('dist/data/china-counties.bin')){
  const countiesText=gunzipSync(fs.readFileSync('dist/data/china-counties.bin')).toString('utf8'),counties=JSON.parse(countiesText);
- const devPacked=gzipSync(encodePack({...inputs,districts:counties,lineOmissions:{...lineOmissions,districts:hiddenSegments(counties.boundaries)},sources:{...sources,districts:sha(countiesText)}}),{level:9});
- const devDecoded=decodePack(gunzipSync(devPacked));
- assert.equal(JSON.stringify(devDecoded.districts),countiesText,'Packed counties must decode to identical JSON');
- fs.writeFileSync('dist/data/china-boundaries-dev.pack.bin',devPacked);
- fs.writeFileSync('dist/data/china-regions-dev.json',JSON.stringify(describeChina(devDecoded)));
- console.log(`Developer pack with ${counties.regions.features.length} counties: ${(devPacked.length/1048576).toFixed(2)} MB; region index ${(fs.statSync('dist/data/china-regions-dev.json').size/1024).toFixed(0)} KB.`);
+ const empty={type:'FeatureCollection',features:[]};
+ const countyPack=gzipSync(encodePack({display:{provinces:empty,subdivisions:empty,boundaries:{}},districts:counties,fragments:{},lineOmissions:{districts:hiddenSegments(counties.boundaries)},sources:{districts:sha(countiesText)}}),{level:9});
+ const countyDecoded=decodePack(gunzipSync(countyPack));
+ assert.equal(JSON.stringify(countyDecoded.districts),countiesText,'Packed counties must decode to identical JSON');
+ fs.writeFileSync('dist/data/china-counties.pack.bin',countyPack);
+ fs.writeFileSync('dist/data/china-counties-regions.json',JSON.stringify({districts:countyDecoded.districts.regions.features.map(describeRegion)}));
+ for(const old of ['china-boundaries-dev.pack.bin','china-regions-dev.json'])fs.rmSync('dist/data/'+old,{force:true});
+ console.log(`County pack with ${counties.regions.features.length} counties: ${(countyPack.length/1048576).toFixed(2)} MB; index ${(fs.statSync('dist/data/china-counties-regions.json').size/1024).toFixed(0)} KB.`);
 }
