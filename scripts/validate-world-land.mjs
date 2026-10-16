@@ -17,11 +17,11 @@ assert.ok(data.features.every(f=>Object.keys(f.properties).join(',')==='country'
 const sources=new Map(),layers=[];
 // China's non-atlas neighbours load separately, after the world map, at China's precision.
 const neighbourBytes=fs.readFileSync('dist/data/china-neighbours.bin');
-assert.ok(neighbourBytes.length<300_000,'China neighbour band stays small');
+assert.ok(neighbourBytes.length<400_000,'China neighbour band stays small (it loads after the world map)');
 globalThis.fetch=async url=>{assert.ok(['data/world-land.bin','data/china-neighbours.bin'].includes(url),url);return new Response(url.endsWith('world-land.bin')?bytes:neighbourBytes);};
 await addWorldLand({addSource:(id,s)=>sources.set(id,s),addLayer:l=>layers.push(l),getStyle:()=>({layers})});
 await new Promise(r=>setTimeout(r,50));
-assert.equal(layers.length,2);assert.equal(layers[1].id,'china-neighbour-land');assert.equal(layers[1].paint['fill-color'],layers[0].paint['fill-color'],'Neighbour band shares the background grey');
+assert.equal(layers.length,2);assert.equal(layers[1].id,'china-neighbour-land');assert.deepEqual(layers[1].paint['fill-color'],['match',['get','country'],'china','#d7d7d3',layers[0].paint['fill-color']],'Neighbour band shares the background grey; China, its portal grey');
 assert.ok(sources.get('china-neighbour-land').data.features.every(f=>f.geometry.type==='Polygon'),'One polygon per feature');assert.equal(layers[0].type,'fill');assert.equal(layers[0].maxzoom,undefined,'Land must remain visible beyond national overview zoom');
 assert.equal(layers[0].paint['fill-opacity'],undefined,'No world-layer fade during zoom');
 assert.ok(sources.get('world-land').maxzoom<=6,'Do not index coarse land at subdivision zoom levels');

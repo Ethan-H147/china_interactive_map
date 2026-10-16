@@ -1,8 +1,8 @@
 // China's province outlines come from one mesh that includes every outer edge. Coasts (and lake
 // and river shores with no other province near) are hidden, so coasts are drawn only around the
 // selected place. An outer edge stays when another province's outline lies within 1.5 km (a
-// river or a gap between the sources) or an international line within 3 km (China draws its own
-// frontier while open: countries.js ownFrontier); such stretches shorter than 1 km with coast at
+// river or a gap between the sources) or an international line within 3 km (those on a frontier
+// are then left to the frontier layers by the pack); such stretches shorter than 1 km with coast at
 // both ends are coast passing near a neighbour, and are hidden too. The pack and its validator
 // share this rule. Returns hide(path): the indices of a line path's segments to leave unstroked.
 import {load,polygons,metres,landIndex,lineIndex,linesOf} from './geo-index.mjs';

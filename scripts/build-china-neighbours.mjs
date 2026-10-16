@@ -22,7 +22,9 @@ const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1
 const shape=(country,geometry)=>({type:'Feature',properties:{country},geometry});
 const outline=file=>load(file).features.map(f=>shape('',f.geometry));
 
-const china=outline('dist/data/china-context.bin'),others=[...outline('dist/data/mongolia-context.bin'),...outline('dist/data/russia/context.bin')];
+// China's displayed provinces, which its map fills (china-context.bin, its simplified portal, sits
+// up to 300 m off them).
+const china=(await import('./read-data.mjs')).readData('display-boundaries.json').provinces.features.map(f=>shape('',f.geometry)),others=[...outline('dist/data/mongolia-context.bin'),...outline('dist/data/russia/context.bin')];
 const india=load('dist/data/europe/india/context.bin').features[0],indiaNeighbours=load('dist/data/europe/india/neighbours.bin').features;
 const drawn=[shape('india',india.geometry),...indiaNeighbours];
 const key=p=>p[0].toFixed(5)+','+p[1].toFixed(5);
@@ -50,7 +52,11 @@ for(const [edge,isos] of [[[66,34,92,50],[['kaz','kazakhstan'],['kgz','kyrgyzsta
 const cell=.25,cells=new Set();
 for(const f of china)for(const p of polygons(f.geometry).flat(2)){if(p[0]<60||p[0]>112||p[1]<5||p[1]>52)continue;const x=Math.floor(p[0]/cell),y=Math.floor(p[1]/cell);for(let dx=-3;dx<=3;dx++)for(let dy=-3;dy<=3;dy++)cells.add((x+dx)+','+(y+dy));}
 const band=await command(fc([...cells].map(k=>{const [x,y]=k.split(',').map(Number);return shape('',{type:'Polygon',coordinates:[[[x*cell,y*cell],[(x+1)*cell,y*cell],[(x+1)*cell,(y+1)*cell],[x*cell,(y+1)*cell],[x*cell,y*cell]]]});})),'-dissolve2');
-const clipped=await command(fc(drawn.map(f=>shape(f.properties.country||'',f.geometry))),'-clip band.json',{'band.json':fc(band)});
+// China's own displayed land is in the band too, in its portal grey: while another country is open
+// China shows its simplified portal (china-context.bin), which sits up to 300 m off the edge the
+// neighbours were matched to.
+const chinaLand=await command(fc(china.map(f=>shape('china',f.geometry))),'-dissolve2 country');
+const clipped=await command(fc([...chinaLand,...drawn.map(f=>shape(f.properties.country||'',f.geometry))]),'-clip band.json',{'band.json':fc(band)});
 const features=clipped.map(f=>({type:'Feature',properties:{country:f.properties.country||''},geometry:f.geometry}));
 fs.writeFileSync('dist/data/china-neighbours.bin',gzipSync(JSON.stringify(fc(features)),{level:9}));
 console.log('China neighbours:',features.map(f=>f.properties.country).join(', '),';',(fs.statSync('dist/data/china-neighbours.bin').size/1048576).toFixed(2),'MB');

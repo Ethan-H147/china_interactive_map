@@ -5,10 +5,10 @@
   },
   "coverage": "India's 28 states and 8 union territories, from geoBoundaries' copy of the DataMeet map (after the Election Commission of India), with India's official boundaries. Where they meet China's outline, India's edges are moved onto it, and land between the two goes to India; the areas both countries claim are drawn by whichever country's map is open.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
-  "frontierKm": 13402,
+  "frontierKm": 13372,
   "seamReports": {
     "india-china": {
-      "changedEdges": 2302,
+      "changedEdges": 2301,
       "maxDisplacementMetres": 2999.479091500356,
       "changedRegions": [
         "IN-SK",
@@ -426,6 +426,61 @@
       "use": "Classifies land frontier; no geometry is copied.",
       "sha256": "2e9951c9139bee3de8c81545fd3a767a8b28bbebcd037533fa82a0b16e40b81a",
       "bytes": 32672
+    },
+    {
+      "file": "neighbour-kaz-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KAZ/ADM0/geoBoundaries-KAZ-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen KAZ ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "244f11881bcbfcfc58f74e53db89f844f033d090a9d087b888a90688561a7107",
+      "bytes": 2001665
+    },
+    {
+      "file": "neighbour-kgz-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KGZ/ADM0/geoBoundaries-KGZ-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen KGZ ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "a351671d0b922acca947522284384f3e29c4039e738e60b5d71cd31321c1d8f3",
+      "bytes": 728725
+    },
+    {
+      "file": "neighbour-tjk-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/TJK/ADM0/geoBoundaries-TJK-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen TJK ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "fe4eed1352b47d8e6ce163568a9b144cbc0a8b3dc971af49f2fd055e035aa633",
+      "bytes": 490489
+    },
+    {
+      "file": "neighbour-lao-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/LAO/ADM0/geoBoundaries-LAO-ADM0.geojson",
+      "provider": "OpenStreetMap, Wambacher",
+      "year": "2017",
+      "license": "Open Data Commons Open Database License 1.0",
+      "via": "geoBoundaries gbOpen LAO ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "ba429d6121d6c193752bb3daaa1438a59fe339857fb168c258d23af2c5e0d0cd",
+      "bytes": 1294523
+    },
+    {
+      "file": "neighbour-vnm-adm0.geojson",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/VNM/ADM0/geoBoundaries-VNM-ADM0.geojson",
+      "provider": "geoBoundaries, Wikipedia",
+      "year": "2016",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "via": "geoBoundaries gbOpen VNM ADM0",
+      "use": "Classifies land frontier; no geometry is copied.",
+      "sha256": "2e82dbe0662f0f592902ef3e79011e438d63c7a356d43b3df0553b38866b501b",
+      "bytes": 200084
     },
     {
       "file": "osm-relation-1124039.json",

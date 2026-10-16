@@ -5,6 +5,7 @@ import {createRequire} from 'node:module';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';
 import {alignCountry,polygons} from './international-topology.mjs';
+import {withoutRetraced} from './channel-lines.mjs';
 import {readTerritory,coastLand,relationArea} from './europe-overseas.mjs';
 const AdmZip=createRequire(import.meta.url)('adm-zip');
 const require=createRequire(import.meta.url);
@@ -345,7 +346,8 @@ outlines['united-kingdom']=single(await command(lowest['united-kingdom'],'-disso
 // between the sources going to the nearest neighbour) are drawn beneath the country at this
 // precision, since the world map's 1:110m silhouettes cannot meet these outlines.
 const referenceOutline=geometry=>({type:'Feature',properties:{},geometry});
-const chinaOutline=single(await command(fc(JSON.parse(gunzipSync(fs.readFileSync('dist/data/china-context.bin'))).features.map(f=>({type:'Feature',properties:{},geometry:f.geometry}))),'-dissolve -clean'));
+// China's displayed provinces (china-context.bin, its simplified portal, sits up to 300 m off them).
+const chinaOutline=single(await command(fc((await import('./read-data.mjs')).readData('display-boundaries.json').provinces.features.map(f=>({type:'Feature',properties:{},geometry:f.geometry}))),'-dissolve -clean'));
 const southAmerica=JSON.parse(gunzipSync(fs.readFileSync('dist/data/flight-context.bin'))).features;
 const southAmericanOutline=country=>single(fc(southAmerica.filter(f=>f.properties.country===country)));
 const references={china:chinaOutline,argentina:southAmericanOutline('argentina'),brazil:southAmericanOutline('brazil')};
@@ -375,10 +377,17 @@ async function reconcile(country,{align,edge,holes=[],neighbours=[],administered
  lowest[country]=await command(fc([...units,...gaps.map(f=>({type:'Feature',properties:{id:nearest(polygons(f.geometry)[0][0][0])},geometry:f.geometry}))]),'-dissolve2 id -clean');
  outlines[country]=single(await command(lowest[country],'-dissolve'));
  console.log(country+': filled',gaps.length,'gaps of',Math.round(gaps.reduce((s,f)=>s+area(f.geometry),0)),'km²');
- // The portal shown while another country is open: the country without its references, plus each
- // overlap of 20 km² or more as a claim; smaller overlaps are slivers between the sources.
- const own=fc([{type:'Feature',properties:{},geometry:outlines[country]}]),claims=[];
- for(const r of refs){const overlap=pieces(await command(own,'-clip ref.json -explode',{'ref.json':fc([r.feature])}));claims.push(...overlap.filter(f=>area(f.geometry)>=20).map(f=>({type:'Feature',properties:{country,claimedBy:r.name},geometry:f.geometry})));console.log(country+': claims shared with',r.name,overlap.filter(f=>area(f.geometry)>=20).map(f=>Math.round(area(f.geometry))+' km²').join(', ')||'none','; slivers',overlap.filter(f=>area(f.geometry)<20).length);}
+ // Where the country overlaps a reference, pieces of 20 km² or more are claims both make, carried by
+ // the portal while another country is open; smaller ones are slivers between the sources, which
+ // the units give up, so the country's own map meets the reference's edge exactly too.
+ const claims=[],slivers=[];
+ for(const r of refs){
+  const overlap=pieces(await command(fc([{type:'Feature',properties:{},geometry:outlines[country]}]),'-clip ref.json -explode',{'ref.json':fc([r.feature])}));
+  claims.push(...overlap.filter(f=>area(f.geometry)>=20).map(f=>({type:'Feature',properties:{country,claimedBy:r.name},geometry:f.geometry})));slivers.push(...overlap.filter(f=>area(f.geometry)<20));
+  console.log(country+': claims shared with',r.name,overlap.filter(f=>area(f.geometry)>=20).map(f=>Math.round(area(f.geometry))+' km²').join(', ')||'none','; slivers',overlap.filter(f=>area(f.geometry)<20).length);
+ }
+ if(slivers.length){lowest[country]=fc(pieces(await command(lowest[country],'-erase slivers.json -clean',{'slivers.json':fc(slivers)})));outlines[country]=single(await command(lowest[country],'-dissolve'));}
+ const own=fc([{type:'Feature',properties:{},geometry:outlines[country]}]);
  const outside=await administered(own);
  const home=pieces(await command(own,'-erase cut.json -clean',{'cut.json':fc([...refs.map(r=>r.feature),...outside])}));
  // Other land neighbours: the drawn outlines win where they overlap, except that a neighbour keeps
@@ -603,7 +612,8 @@ for(const [country,c] of Object.entries(countries)){
  // Each path splits where it enters or leaves a reference's outline.
  const claimAt=claimOf(country),lines=[];for(const p of paths){let current=null,claim;for(let i=1;i<p.length;i++){const inside=claimAt(p[i-1],p[i]);if(!current||inside!==claim){current=[p[i-1]];claim=inside;lines.push({claim,coordinates:current});}current.push(p[i]);}}
  // A split can leave a stub of a few metres doubling back along its neighbour.
- write(country,'international.bin',lineData(fc(lines.filter(l=>l.coordinates.slice(1).reduce((t,q,i)=>t+metres(l.coordinates[i],q),0)>=20).map(({claim,coordinates})=>({type:'Feature',properties:{countries:[country],...(claim?{claimedBy:claim}:{})},geometry:{type:'LineString',coordinates}})))));
+ // A ring that doubles back on itself (a spike in a source) is drawn once.
+ write(country,'international.bin',lineData(fc(withoutRetraced(lines.filter(l=>l.coordinates.slice(1).reduce((t,q,i)=>t+metres(l.coordinates[i],q),0)>=20).map(({claim,coordinates})=>({type:'Feature',properties:{countries:[country],...(claim?{claimedBy:claim}:{})},geometry:{type:'LineString',coordinates}}))))));
  // A wildcard source name lists every matching file (France has one per département).
  const own=c.file.includes('*')?Object.keys(manifest.files).filter(n=>n.startsWith(c.file.split('*')[0])||n==='france-regions.json'||n==='france-departements.json'):[c.file];
  const files=[...own,'ne-10m-land-boundaries.geojson',...(reconciled[country]?['ne-10m-countries.geojson']:[]),...Object.keys(manifest.files).filter(n=>n.startsWith('neighbour-')||n.startsWith('osm-relation-'))];

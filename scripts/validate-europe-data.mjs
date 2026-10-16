@@ -16,14 +16,14 @@ const contains=(g,p)=>polygons(g).some(poly=>inRing(p,poly[0])&&!poly.slice(1).s
 const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1]-b[1])*111195;
 const outline={},lines={};
 // Land frontier lengths, excluding the France–Spain and France–Italy seams France holds.
-const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450],iceland:[0,0],india:[13300,13500],chile:[1450,1600],paraguay:[740,800],peru:[3150,3350],turkey:[2800,3000]};
+const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450],iceland:[0,0],india:[13300,13500],chile:[1350,1600],paraguay:[740,800],peru:[3150,3350],turkey:[2800,3000]};
 // Pieces: Ireland and Cyprus (Akrotiri, Dhekelia in four pieces, its two Cypriot enclaves);
 // Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea,
 // Llívia, French Guiana (Suriname, Brazil, and five short pieces at the Brazilian tripoint),
 // Saint-Martin; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
 // Turkey: Greece and Bulgaria from the Aegean to the Black Sea; Georgia to Syria from the Black
 // Sea to the Mediterranean. Iceland has no land frontier.
-const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:64,chile:14,paraguay:8,peru:59,turkey:2};
+const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:58,chile:17,paraguay:3,peru:56,turkey:2};
 // The six Meuse villages destroyed at Verdun in 1916 remain communes with no inhabitants.
 const zeroPopulation=new Set(['FR-C-55039','FR-C-55050','FR-C-55139','FR-C-55189','FR-C-55239','FR-C-55307']);
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.

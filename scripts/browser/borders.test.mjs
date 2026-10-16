@@ -28,8 +28,8 @@ export default [
   await page.waitFor(`!!map.getLayer('south-america-fill')&&map.isSourceLoaded('flight-context')&&map.getLayoutProperty('south-land-boundaries','visibility')==='visible'`,{label:"South America's shapes and borders"});
  }},
  {name:'a country drawing its own frontier hides the shared copy while open',options:{width:1100,height:760},async run(page,base){
-  await page.open(base,'#china');
-  assert(JSON.stringify(await page.evaluate(`map.getFilter('atlas-frontiers')`)).includes(' china '),'China hides its shared frontier while open');
+  await page.open(base,'#indonesia');
+  assert(JSON.stringify(await page.evaluate(`map.getFilter('atlas-frontiers')`)).includes(' indonesia '),'Indonesia hides its shared frontier while open');
   await page.evaluate(`location.hash='#japan'`);await page.settle();
   // Only lines inside land the open country claims are filtered (Japan has none).
   assert.deepEqual(await page.evaluate(`map.getFilter('atlas-frontiers')`),['!=',['coalesce',['get','claimedBy'],''],'japan'],'Every frontier shows with Japan open');

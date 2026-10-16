@@ -11,7 +11,7 @@
  // and their statistics card adds density and shows only the economy figures a place has.
  const regional=(adapter,prefix,map,extra)=>({adapter,prefix,symbol:'ring',regionalStatistics:true,map,...extra});
  const countries={
-  china:{en:'China',local:'中国',lang:'zh',background:'#f4f0e7',adapter:'china',prefix:'',symbol:'taiji',ownFrontier:true,motionLayers:true,motionData:true,
+  china:{en:'China',local:'中国',lang:'zh',background:'#f4f0e7',adapter:'china',prefix:'',symbol:'taiji',motionLayers:true,motionData:true,
    titleClasses:['china-english','china-chinese'],mapLabel:'Interactive China administrative boundary map',
    statistics:'data/region-statistics.json',colors:{population:'china',levels:'Provinces & territories',geography:{id:'adcode',parent:'provinceCode'},layers:/^(province|prefecture|other|city-district)(-fragment)?-fill$/,primary:/^province(-fragment)?-fill$/},
    levelNames:['Provinces & territories','Subdivisions','City districts'],

@@ -15,6 +15,7 @@ import fs from 'node:fs';
 import {gzipSync} from 'node:zlib';
 import {lineData} from '../dist/adaptive-lines.mjs';
 import {withoutRetraced} from './channel-lines.mjs';
+import {readData} from './read-data.mjs';
 import {sources,load,polygons,metres,landIndex,lineIndex,linesOf,countryAt,land,boundaryLines} from './natural-earth.mjs';
 
 // Frontiers drawn by their own layers already.
@@ -28,7 +29,9 @@ const existing=lineIndex([
 // Each public country's own outline (European countries are drawn by the Europe build).
 const flight=load('dist/data/flight-context.bin');
 const outlines={
- china:load('dist/data/china-context.bin'),korea:load('dist/data/korea-context.bin'),mongolia:load('dist/data/mongolia-context.bin'),
+ // China's outline is the displayed provinces' (china-context.bin, China's simplified portal, sits up
+ // to 300 m off them), so its frontier lies on the edge China's map fills.
+ china:readData('display-boundaries.json').provinces,korea:load('dist/data/korea-context.bin'),mongolia:load('dist/data/mongolia-context.bin'),
  indonesia:load('dist/data/archipelago/indonesia-context.bin'),philippines:load('dist/data/archipelago/philippines-context.bin'),
  malaysia:load('dist/data/southeast-asia/malaysia-context.bin'),singapore:load('dist/data/southeast-asia/singapore-context.bin'),
  russia:load('dist/data/russia/context.bin'),

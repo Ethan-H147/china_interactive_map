@@ -18,7 +18,11 @@ const texts={
 const sha=text=>createHash('sha256').update(text).digest('hex');
 // Outline segments that must not be stroked: those on an international line drawn
 // by its own layer, province coasts (china-shore.mjs), and those already drawn once in the same layer.
+// China's land frontiers with its other neighbours are drawn by the shared frontier layer
+// (atlas-frontiers.bin) as long continuous lines, so the province outline leaves them too: cut into
+// short pieces, each fading in by its own length, it drew them unevenly.
 const borderFiles=['shared-context-borders.bin','russia/international.bin'],borderText=borderFiles.map(f=>gunzipSync(fs.readFileSync('dist/data/'+f)).toString('utf8'));
+borderText.push(JSON.stringify({type:'FeatureCollection',features:JSON.parse(gunzipSync(fs.readFileSync('dist/data/atlas-frontiers.bin'))).features.filter(f=>(' '+f.properties.countries+' ').includes(' china '))}));
 const inputs=Object.fromEntries(Object.entries(texts).map(([key,text])=>[key,JSON.parse(text)]));
 const borders=borderIndex({features:borderText.flatMap(t=>JSON.parse(t).features)});
 const lineOmissions={...Object.fromEntries(Object.entries(inputs.display.boundaries).map(([name,geometry])=>[name,hiddenSegments(geometry,name==='province'?{borders,hide:chinaShore(inputs.display)}:{})])),districts:hiddenSegments(inputs.districts.boundaries)};

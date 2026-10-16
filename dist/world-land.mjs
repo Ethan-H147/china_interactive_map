@@ -14,9 +14,10 @@ export async function addWorldLand(map){
  }});
  // China's non-atlas land neighbours at the precision of China's outline, in a band along it
  // (build-china-neighbours.mjs), so they meet China without gaps; loaded after the world map.
- // Each polygon is its own feature (polygon-parts.mjs), unsimplified like the other portals.
+ // Each polygon is its own feature (polygon-parts.mjs), unsimplified like the other portals. China's
+ // own displayed land, under its simplified portal, is in the portal grey.
  loadCompressed('data/china-neighbours.bin').then(neighbours=>{
   map.addSource('china-neighbour-land',{type:'geojson',data:polygonParts(neighbours),tolerance:0,maxzoom:10});
-  map.addLayer({id:'china-neighbour-land',type:'fill',source:'china-neighbour-land',paint:{'fill-color':'#e5e5e1','fill-antialias':false}},map.getStyle().layers[map.getStyle().layers.findIndex(l=>l.id==='world-land')+1]?.id);
+  map.addLayer({id:'china-neighbour-land',type:'fill',source:'china-neighbour-land',paint:{'fill-color':['match',['get','country'],'china','#d7d7d3','#e5e5e1'],'fill-antialias':false}},map.getStyle().layers[map.getStyle().layers.findIndex(l=>l.id==='world-land')+1]?.id);
  }).catch(error=>console.warn('China neighbours',error));
 }
