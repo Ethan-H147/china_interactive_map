@@ -278,8 +278,9 @@ function waitForCountrySources(ids,signal){
 // the open country draws as its own claim is hidden.
 // A country whose own lines draw its frontiers while open (countries.js: ownFrontier) hides its
 // frontiers in the shared layer meanwhile, so each edge is drawn once. Where two claims overlap
-// (China's and India's), a frontier inside the land the open country claims is hidden too.
-const unclaimed=open=>['!=',['coalesce',['get','claimedBy'],''],open];
+// (China's and India's), a frontier inside the land the open country claims is hidden too, and a
+// claim line that is not the line of actual control (claimants) shows only on its claimants' maps.
+const unclaimed=open=>['all',['!=',['coalesce',['get','claimedBy'],''],open],['any',['!',['has','claimants']],['in',open||'-',['get','claimants']]]];
 function syncFrontiers(open){if(map.getLayer('atlas-frontiers'))map.setFilter('atlas-frontiers',registry.countries[open]?.ownFrontier?['all',['!',['in',' '+open+' ',['concat',' ',['get','countries'],' ']]],unclaimed(open)]:unclaimed(open));}
 function syncPortals(open){for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,unclaimed(open));}if(map.getLayer(country+'-international'))map.setFilter(country+'-international',unclaimed(open));}}
 function atlasFor(country){return atlases[country]||{'southern-africa':southernAfrica,europe,'south-america':southAmerica}[registry.countries[country]?.adapter]?.portals[country]||null;}

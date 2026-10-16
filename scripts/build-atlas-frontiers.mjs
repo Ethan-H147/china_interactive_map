@@ -50,12 +50,21 @@ const signedArea=ring=>ring.slice(1).reduce((s,p,i)=>s+ring[i][0]*p[1]-p[0]*ring
 // with its own claims (developer mode's India, Chile, Paraguay and Peru) is that country's claim
 // line seen from the other side (China's in Arunachal Pradesh, Argentina's in the Southern
 // Patagonian Ice Field), hidden while that country's map is open.
-const claimants=['india','chile','paraguay','peru'].flatMap(country=>{const file='dist/data/europe/'+country+'/first.bin';return fs.existsSync(file)?[{country,inside:landIndex(load(file).regions.features.flatMap(f=>polygons(f.geometry)).flat())}]:[];});
+const claimants=['india','chile','paraguay','peru'].flatMap(country=>{const file='dist/data/europe/'+country+'/first.bin';if(!fs.existsSync(file))return [];
+ // The claim areas this country's portal carries apart, and whether the other country holds most of
+ // each by Natural Earth's de facto boundaries.
+ const areas=load('dist/data/europe/'+country+'/context.bin').features.filter(f=>f.properties.claimedBy).map(f=>{const g=f.geometry,inArea=landIndex(polygons(g).flat()),b=[Infinity,Infinity,-Infinity,-Infinity];for(const p of polygons(g).flat(2)){b[0]=Math.min(b[0],p[0]);b[1]=Math.min(b[1],p[1]);b[2]=Math.max(b[2],p[0]);b[3]=Math.max(b[3],p[1]);}let yes=0,all=0;for(let i=0;i<=20;i++)for(let j=0;j<=20;j++){const p=[b[0]+(b[2]-b[0])*i/20,b[1]+(b[3]-b[1])*j/20];if(!inArea(p))continue;all++;if(ownIso[f.properties.claimedBy]?.includes(countryAt(p)))yes++;}return {inside:inArea,heldByReference:all?yes/all>.5:false};});
+ return [{country,inside:landIndex(load(file).regions.features.flatMap(f=>polygons(f.geometry)).flat()),areas}];});
+// The claim line is also the line of actual control where the claim area it bounds is mostly held
+// by this country by Natural Earth's de facto boundaries (China holds Aksai Chin); otherwise it is
+// contested (China's line in Arunachal Pradesh) and third countries' maps leave it to the other.
 function claimRuns(path,country){
- const claimant=(a,b)=>{const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return null;const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],sides=[1,-1].map(side=>[m[0]-dy/len*side*100/111195/c,m[1]+dx/len*side*100/111195]);return claimants.find(k=>k.country!==country&&sides.every(p=>k.inside(p)))?.country||null;};
+ const claimant=(a,b)=>{const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return null;const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],at=d=>[1,-1].map(side=>[m[0]-dy/len*side*d/111195/c,m[1]+dx/len*side*d/111195]),sides=at(100);
+  const k=claimants.find(k=>k.country!==country&&sides.every(p=>k.inside(p)));if(!k)return null;
+  const claimed=at(300).find(p=>inside[country](p)),area=claimed&&k.areas.find(a=>a.inside(claimed));return area?.heldByReference?k.country:k.country+'|contested';};
  const runs=[];let current=null;
  for(let i=1;i<path.length;i++){const claim=claimant(path[i-1],path[i]);if(!current||claim!==current.claim){current={claim,coordinates:[path[i-1]]};runs.push(current);}current.coordinates.push(path[i]);}
- return runs;
+ return runs.map(r=>({...r,claim:r.claim?.split('|')[0]||null,contested:!!r.claim?.endsWith('|contested')}));
 }
 const accepted=[],features=[];
 const taken=()=>lineIndex(accepted);
@@ -103,7 +112,7 @@ for(const country of Object.keys(outlines)){
    // The neighbour, when it is an atlas country too (the frontier is then drawn once).
    const mid=p[Math.floor(p.length/2)],neighbours=Object.keys(inside).filter(c=>c!==country&&[1500,3000].some(d=>{const i=ring.indexOf(mid);return i>=0&&i<n&&inside[c](outward(i,d)||mid);}));
    // Where China's claim line runs inside India's outline, India's map (when open) draws its own.
-   for(const run of claimRuns(p,country))features.push({type:'Feature',properties:{countries:[country,...neighbours].join(' '),...(run.claim?{claimedBy:run.claim}:{})},geometry:{type:'LineString',coordinates:run.coordinates}});
+   for(const run of claimRuns(p,country))features.push({type:'Feature',properties:{countries:[country,...neighbours].join(' '),...(run.claim?{claimedBy:run.claim,...(run.contested?{claimants:country+' '+run.claim}:{})}:{})},geometry:{type:'LineString',coordinates:run.coordinates}});
    accepted.push(p);landPaths.push(p);pieces++;
   }
  }

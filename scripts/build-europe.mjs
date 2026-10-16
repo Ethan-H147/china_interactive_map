@@ -537,9 +537,20 @@ const sharedWithFrance=outlines.france?sharedWith(outlines.france):()=>false;
 // claim, shown only while that country's map is closed.
 const referenceShapes=country=>(reconciled[country]?.references||[]).map(name=>({name,geometry:references[name]||outlines[name]}));
 const sharedWithReferences=country=>{const tests=referenceShapes(country).map(r=>sharedWith(r.geometry));return (a,b)=>tests.some(t=>t(a,b));};
+// A claim line also says whether it is the line of actual control: where the claim area it bounds is
+// mostly the country's own by Natural Earth's de facto boundaries (India holds Arunachal Pradesh),
+// its claim line is the one third countries' maps draw; otherwise (China holds Aksai Chin) the line
+// is contested, shown only on its claimants' maps. Returns '', the reference's name, or name|contested.
+const naturalIso={india:'IND',chile:'CHL',paraguay:'PRY',peru:'PER'};
+// Who holds a claim area: the country holding most of it by Natural Earth's de facto boundaries.
+function heldBy(geometry,inside){const b=bounds(geometry),contains=landIndex(polygons(geometry).flat());let yes=0,all=0;for(let i=0;i<=20;i++)for(let j=0;j<=20;j++){const p=[b[0][0]+(b[1][0]-b[0][0])*i/20,b[0][1]+(b[1][1]-b[0][1])*j/20];if(!contains(p))continue;all++;if(inside(p))yes++;}return all?yes/all>.5:false;}
 function claimOf(country){
- const tests=referenceShapes(country).map(r=>({name:r.name,inside:landIndex(rings(r.geometry))}));
- return (a,b)=>{const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return null;const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],sides=[1,-1].map(side=>[m[0]-dy/len*side*100/111195/c,m[1]+dx/len*side*100/111195]);return tests.find(t=>sides.every(p=>t.inside(p)))?.name||null;};
+ const tests=referenceShapes(country).map(r=>({name:r.name,inside:landIndex(rings(r.geometry))})),mine=landIndex(rings(outlines[country]));
+ const held=landIndex(naturalEarth.filter(f=>f.properties.ADM0_A3===naturalIso[country]).flatMap(f=>rings(f.geometry)));
+ const areas=(reconciled[country]?.context||[]).filter(f=>f.properties.claimedBy).map(f=>({inside:landIndex(polygons(f.geometry).flat()),mine:heldBy(f.geometry,held)}));
+ return (a,b)=>{const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return '';const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],at=d=>[1,-1].map(side=>[m[0]-dy/len*side*d/111195/c,m[1]+dx/len*side*d/111195]),sides=at(100);
+  const t=tests.find(t=>sides.every(p=>t.inside(p)));if(!t)return '';
+  const claimed=at(300).find(p=>mine(p)),area=claimed&&areas.find(k=>k.inside(claimed));return area?.mine?t.name:t.name+'|contested';};
 }
 // Gibraltar's one land frontier is the fence, which Spain draws; its marina and harbour coasts
 // face La Línea across water, so the United Kingdom draws no frontier there.
@@ -610,10 +621,10 @@ for(const [country,c] of Object.entries(countries)){
  const paths=frontierPaths(country,country==='spain'||country==='italy'?sharedWithFrance:country==='united-kingdom'?inGibraltar:reconciled[country]?sharedWithReferences(country):()=>false);
  const length=paths.reduce((s,p)=>s+p.slice(1).reduce((t,q,i)=>t+metres(p[i],q),0),0);
  // Each path splits where it enters or leaves a reference's outline.
- const claimAt=claimOf(country),lines=[];for(const p of paths){let current=null,claim;for(let i=1;i<p.length;i++){const inside=claimAt(p[i-1],p[i]);if(!current||inside!==claim){current=[p[i-1]];claim=inside;lines.push({claim,coordinates:current});}current.push(p[i]);}}
+ const claimAt=reconciled[country]?claimOf(country):()=>'',lines=[];for(const p of paths){let current=null,claim;for(let i=1;i<p.length;i++){const inside=claimAt(p[i-1],p[i]);if(!current||inside!==claim){current=[p[i-1]];claim=inside;lines.push({claim,coordinates:current});}current.push(p[i]);}}
  // A split can leave a stub of a few metres doubling back along its neighbour.
  // A ring that doubles back on itself (a spike in a source) is drawn once.
- write(country,'international.bin',lineData(fc(withoutRetraced(lines.filter(l=>l.coordinates.slice(1).reduce((t,q,i)=>t+metres(l.coordinates[i],q),0)>=20).map(({claim,coordinates})=>({type:'Feature',properties:{countries:[country],...(claim?{claimedBy:claim}:{})},geometry:{type:'LineString',coordinates}}))))));
+ write(country,'international.bin',lineData(fc(withoutRetraced(lines.filter(l=>l.coordinates.slice(1).reduce((t,q,i)=>t+metres(l.coordinates[i],q),0)>=20).map(({claim,coordinates})=>({type:'Feature',properties:{countries:[country],...(claim?{claimedBy:claim.split('|')[0],...(claim.endsWith('|contested')?{claimants:country+' '+claim.split('|')[0]}:{})}:{})},geometry:{type:'LineString',coordinates}}))))));
  // A wildcard source name lists every matching file (France has one per département).
  const own=c.file.includes('*')?Object.keys(manifest.files).filter(n=>n.startsWith(c.file.split('*')[0])||n==='france-regions.json'||n==='france-departements.json'):[c.file];
  const files=[...own,'ne-10m-land-boundaries.geojson',...(reconciled[country]?['ne-10m-countries.geojson']:[]),...Object.keys(manifest.files).filter(n=>n.startsWith('neighbour-')||n.startsWith('osm-relation-'))];
