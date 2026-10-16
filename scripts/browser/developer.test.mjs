@@ -23,6 +23,8 @@ export default [
   await page.type('dev mode');
   await page.waitFor(`document.getElementById('developer-dialog')?.open`,{label:'the developer dialog'});
   await page.tap('.developer-continue');
+  // China reloads with every county-level division.
+  await page.waitFor(`AtlasDev.enabled&&chinaCounties&&chinaReady`,{label:"China's counties after the reload",timeout:60000});await page.settle();
   assert.equal(await page.evaluate('AtlasDev.enabled'),true);
   await page.evaluate(`location.hash='#italy'`);await page.settle();
   assert.equal(await page.evaluate('AtlasEntry.current'),'italy','Italy opens in developer mode');
@@ -163,5 +165,22 @@ export default [
   for(const layer of ['india-portal-fill','india-international','atlas-frontiers'])assert(await hides(layer,'china'),layer+' hides China-held claims while China is open');
   await page.open(base,'#india');
   assert(await hides('atlas-frontiers','india'),"China's claim lines inside India's outline hide while India is open");
+ }},
+ // Developer mode draws every county-level division of mainland China; the public map keeps
+ // its five-city overlay.
+ {name:'China shows every county-level division in developer mode',options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#china');
+  assert.equal(await page.evaluate('chinaCounties'),true);
+  await searchAndSelect(page,'Chengdu','Chengdu');
+  await page.waitFor(`map.getLayer('city-district-fill')&&map.getLayoutProperty('city-district-fill','visibility')==='visible'&&map.querySourceFeatures('city-districts',{filter:['==',['get','parentCity'],510100]}).length>=20`,{label:"Chengdu's counties"});
+  await searchAndSelect(page,'Pidu','Pidu District');
+  assert.equal(await page.evaluate('selected?.layer.feature.properties.adcode'),510117,'Pidu District is selected');
+  assert(await page.evaluate(`[...document.querySelectorAll('.map-breadcrumb')].some(b=>b.getClientRects().length&&b.textContent.includes('Chengdu'))`),'Pidu sits under Chengdu');
+ }},
+ {name:'the public China keeps its five-city districts',options:desktop,async run(page,base){
+  await page.open(base,'#china');
+  assert.equal(await page.evaluate('chinaCounties'),false);
+  assert.equal(await page.evaluate('districtCities.size'),5);
+  assert(!page.requests.some(url=>/china-(boundaries-dev|regions-dev|county-names)/.test(url)),'The public map downloads none of the county data');
  }}
 ];

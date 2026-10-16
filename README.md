@@ -169,6 +169,20 @@ The gallery covers 20 landmarks across Beijing, Shanghai, Hangzhou, Nanjing, Suz
 `npm run test:explore` verifies article coverage, all 53 district names, geometry containment and overlaps, photo dimensions and credits, gallery scope, quiz exclusion and district → city → province navigation. District source hashes and coverage measurements are published in `city-district-sources.json`.
 
 
+### Every county-level division (developer mode)
+
+Developer mode draws all 2,727 county-level divisions of mainland China's prefecture-level areas (districts, counties, county-level cities, banners and their autonomous forms) in place of the five-city overlay, plus Suzhou Industrial Park. The municipalities' 86 districts are already their second level, and the 32 directly administered units are their own areas, so mainland China's 2,845 county-level divisions are all covered. Dongguan, Zhongshan, Jiayuguan and Danzhou have none. Kinmen, which the PRC lists under Quanzhou, stays Taiwan's Kinmen County.
+
+`npm run build:china-counties` builds them from AreaCity release 2025.251231.260403 (`ok_geo.csv.7z`, SHA-256 recorded in `china-county-sources.json`; extract it to `artifacts/areacity/x/`).
+- **Geometry.** Amap geometry is converted from GCJ-02 to WGS84 and simplified to about 60 m as one layer, then clipped to each prefecture's displayed outline, so counties nest exactly.
+- **Filling and slivers.** Prefecture land AreaCity leaves uncovered goes to the county sharing most of its edge, or the nearest one for an island. Detached slivers under 2 km² that border, or lie within 20 m of, another county join it.
+- **Refined cities.** Hangzhou, Nanjing, Suzhou, Guangzhou and Shenzhen keep their refined districts from the public overlay.
+- **Names.** English names and Wikipedia links come from Wikidata's division codes (P442), retained in `scripts/additional-sources/china-counties/`.
+
+The developer pack (`china-boundaries-dev.pack.bin`, about 15 MB) and its region index load only in developer mode. Turning the mode on or off on China's map reloads the page. The public pack is unchanged.
+
+`npm run test:china-counties` checks the counts, names, and that counties tile each prefecture without overlap. Across prefectures, counties overlap only where the displayed prefecture outlines already do (about 8 km² nationally, at most 1 km² per pair).
+
 ## Huqiu and Suzhou Industrial Park
 
 The district overlay follows current management in Suzhou. Suzhou Industrial Park is a separately selectable development zone under Suzhou, not a detached part of Huqiu. Its extent comes from OpenStreetMap relation 7363894, checked against the park government’s administrative history and current five-street structure. The previous eastern Huqiu component is assigned whole to the park to preserve its shared exterior edge; the new park polygon is cut out of neighboring district polygons before the shared line mesh is built. The retained source is in `scripts/additional-sources/city-districts/suzhou-industrial-park.geojson` (ODbL). The internal map identifier is a string, not an invented administrative code.

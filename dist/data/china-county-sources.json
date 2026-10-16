@@ -1,0 +1,1996 @@
+{
+ "provider": "AreaCity / Amap (GCJ-02, converted to WGS84); the five refined city overlays from city-district-sources.json",
+ "release": "https://github.com/xiangyuecn/AreaCity-JsSpider-StatsGov/releases/tag/2025.251231.260403",
+ "archive": "ok_geo.csv.7z",
+ "archiveSHA256": "675c3e9b8dec6444994d3ef53259a145304f6a957db8a5e601e55c0b9e61e21a",
+ "license": "MIT",
+ "processing": "Simplified to about 60 m as one layer, clipped to each displayed prefecture; uncovered prefecture land joins the county sharing most of its edge, or the nearest county for an island.",
+ "counties": 2728,
+ "prefectures": [
+  {
+   "city": 130100,
+   "counties": 22,
+   "filledPieces": 213,
+   "movedSlivers": 2
+  },
+  {
+   "city": 130200,
+   "counties": 14,
+   "filledPieces": 328,
+   "movedSlivers": 0
+  },
+  {
+   "city": 130300,
+   "counties": 7,
+   "filledPieces": 157,
+   "movedSlivers": 0
+  },
+  {
+   "city": 130400,
+   "counties": 18,
+   "filledPieces": 266,
+   "movedSlivers": 0
+  },
+  {
+   "city": 130500,
+   "counties": 18,
+   "filledPieces": 187,
+   "movedSlivers": 1
+  },
+  {
+   "city": 130600,
+   "counties": 24,
+   "filledPieces": 364,
+   "movedSlivers": 0
+  },
+  {
+   "city": 130700,
+   "counties": 16,
+   "filledPieces": 416,
+   "movedSlivers": 0
+  },
+  {
+   "city": 130800,
+   "counties": 11,
+   "filledPieces": 500,
+   "movedSlivers": 0
+  },
+  {
+   "city": 130900,
+   "counties": 16,
+   "filledPieces": 316,
+   "movedSlivers": 1
+  },
+  {
+   "city": 131000,
+   "counties": 10,
+   "filledPieces": 426,
+   "movedSlivers": 0
+  },
+  {
+   "city": 131100,
+   "counties": 11,
+   "filledPieces": 244,
+   "movedSlivers": 1
+  },
+  {
+   "city": 140100,
+   "counties": 10,
+   "filledPieces": 165,
+   "movedSlivers": 0
+  },
+  {
+   "city": 140200,
+   "counties": 10,
+   "filledPieces": 191,
+   "movedSlivers": 1
+  },
+  {
+   "city": 140300,
+   "counties": 5,
+   "filledPieces": 81,
+   "movedSlivers": 0
+  },
+  {
+   "city": 140400,
+   "counties": 12,
+   "filledPieces": 162,
+   "movedSlivers": 2
+  },
+  {
+   "city": 140500,
+   "counties": 6,
+   "filledPieces": 148,
+   "movedSlivers": 1
+  },
+  {
+   "city": 140600,
+   "counties": 6,
+   "filledPieces": 135,
+   "movedSlivers": 0
+  },
+  {
+   "city": 140700,
+   "counties": 11,
+   "filledPieces": 226,
+   "movedSlivers": 1
+  },
+  {
+   "city": 140800,
+   "counties": 13,
+   "filledPieces": 147,
+   "movedSlivers": 1
+  },
+  {
+   "city": 140900,
+   "counties": 14,
+   "filledPieces": 217,
+   "movedSlivers": 0
+  },
+  {
+   "city": 141000,
+   "counties": 17,
+   "filledPieces": 206,
+   "movedSlivers": 2
+  },
+  {
+   "city": 141100,
+   "counties": 13,
+   "filledPieces": 214,
+   "movedSlivers": 0
+  },
+  {
+   "city": 150100,
+   "counties": 9,
+   "filledPieces": 134,
+   "movedSlivers": 0
+  },
+  {
+   "city": 150200,
+   "counties": 9,
+   "filledPieces": 157,
+   "movedSlivers": 0
+  },
+  {
+   "city": 150300,
+   "counties": 3,
+   "filledPieces": 46,
+   "movedSlivers": 0
+  },
+  {
+   "city": 150400,
+   "counties": 12,
+   "filledPieces": 454,
+   "movedSlivers": 0
+  },
+  {
+   "city": 150500,
+   "counties": 8,
+   "filledPieces": 417,
+   "movedSlivers": 1
+  },
+  {
+   "city": 150600,
+   "counties": 9,
+   "filledPieces": 303,
+   "movedSlivers": 1
+  },
+  {
+   "city": 150700,
+   "counties": 14,
+   "filledPieces": 793,
+   "movedSlivers": 0
+  },
+  {
+   "city": 150800,
+   "counties": 7,
+   "filledPieces": 135,
+   "movedSlivers": 0
+  },
+  {
+   "city": 150900,
+   "counties": 11,
+   "filledPieces": 224,
+   "movedSlivers": 0
+  },
+  {
+   "city": 152200,
+   "counties": 6,
+   "filledPieces": 427,
+   "movedSlivers": 0
+  },
+  {
+   "city": 152500,
+   "counties": 12,
+   "filledPieces": 342,
+   "movedSlivers": 0
+  },
+  {
+   "city": 152900,
+   "counties": 3,
+   "filledPieces": 258,
+   "movedSlivers": 0
+  },
+  {
+   "city": 210100,
+   "counties": 13,
+   "filledPieces": 509,
+   "movedSlivers": 0
+  },
+  {
+   "city": 210200,
+   "counties": 10,
+   "filledPieces": 583,
+   "movedSlivers": 1
+  },
+  {
+   "city": 210300,
+   "counties": 7,
+   "filledPieces": 369,
+   "movedSlivers": 0
+  },
+  {
+   "city": 210400,
+   "counties": 7,
+   "filledPieces": 353,
+   "movedSlivers": 0
+  },
+  {
+   "city": 210500,
+   "counties": 6,
+   "filledPieces": 322,
+   "movedSlivers": 2
+  },
+  {
+   "city": 210600,
+   "counties": 6,
+   "filledPieces": 258,
+   "movedSlivers": 2
+  },
+  {
+   "city": 210700,
+   "counties": 7,
+   "filledPieces": 327,
+   "movedSlivers": 1
+  },
+  {
+   "city": 210800,
+   "counties": 6,
+   "filledPieces": 221,
+   "movedSlivers": 4
+  },
+  {
+   "city": 210900,
+   "counties": 7,
+   "filledPieces": 300,
+   "movedSlivers": 0
+  },
+  {
+   "city": 211000,
+   "counties": 7,
+   "filledPieces": 231,
+   "movedSlivers": 0
+  },
+  {
+   "city": 211100,
+   "counties": 4,
+   "filledPieces": 138,
+   "movedSlivers": 2
+  },
+  {
+   "city": 211200,
+   "counties": 7,
+   "filledPieces": 502,
+   "movedSlivers": 1
+  },
+  {
+   "city": 211300,
+   "counties": 7,
+   "filledPieces": 533,
+   "movedSlivers": 0
+  },
+  {
+   "city": 211400,
+   "counties": 6,
+   "filledPieces": 276,
+   "movedSlivers": 0
+  },
+  {
+   "city": 220100,
+   "counties": 11,
+   "filledPieces": 738,
+   "movedSlivers": 6
+  },
+  {
+   "city": 220200,
+   "counties": 9,
+   "filledPieces": 654,
+   "movedSlivers": 0
+  },
+  {
+   "city": 220300,
+   "counties": 5,
+   "filledPieces": 520,
+   "movedSlivers": 1
+  },
+  {
+   "city": 220400,
+   "counties": 4,
+   "filledPieces": 239,
+   "movedSlivers": 0
+  },
+  {
+   "city": 220500,
+   "counties": 7,
+   "filledPieces": 515,
+   "movedSlivers": 1
+  },
+  {
+   "city": 220600,
+   "counties": 6,
+   "filledPieces": 481,
+   "movedSlivers": 0
+  },
+  {
+   "city": 220700,
+   "counties": 5,
+   "filledPieces": 373,
+   "movedSlivers": 0
+  },
+  {
+   "city": 220800,
+   "counties": 5,
+   "filledPieces": 261,
+   "movedSlivers": 0
+  },
+  {
+   "city": 222400,
+   "counties": 8,
+   "filledPieces": 794,
+   "movedSlivers": 0
+  },
+  {
+   "city": 230100,
+   "counties": 18,
+   "filledPieces": 737,
+   "movedSlivers": 0
+  },
+  {
+   "city": 230200,
+   "counties": 16,
+   "filledPieces": 479,
+   "movedSlivers": 1
+  },
+  {
+   "city": 230300,
+   "counties": 9,
+   "filledPieces": 399,
+   "movedSlivers": 0
+  },
+  {
+   "city": 230400,
+   "counties": 8,
+   "filledPieces": 243,
+   "movedSlivers": 1
+  },
+  {
+   "city": 230500,
+   "counties": 8,
+   "filledPieces": 395,
+   "movedSlivers": 0
+  },
+  {
+   "city": 230600,
+   "counties": 9,
+   "filledPieces": 236,
+   "movedSlivers": 2
+  },
+  {
+   "city": 230700,
+   "counties": 10,
+   "filledPieces": 546,
+   "movedSlivers": 0
+  },
+  {
+   "city": 230800,
+   "counties": 10,
+   "filledPieces": 600,
+   "movedSlivers": 1
+  },
+  {
+   "city": 230900,
+   "counties": 4,
+   "filledPieces": 209,
+   "movedSlivers": 19
+  },
+  {
+   "city": 231000,
+   "counties": 10,
+   "filledPieces": 539,
+   "movedSlivers": 1
+  },
+  {
+   "city": 231100,
+   "counties": 6,
+   "filledPieces": 572,
+   "movedSlivers": 1
+  },
+  {
+   "city": 231200,
+   "counties": 10,
+   "filledPieces": 556,
+   "movedSlivers": 2
+  },
+  {
+   "city": 232700,
+   "counties": 4,
+   "filledPieces": 423,
+   "movedSlivers": 0
+  },
+  {
+   "city": 320100,
+   "counties": 11,
+   "source": "city-districts.bin (refined)"
+  },
+  {
+   "city": 320200,
+   "counties": 7,
+   "filledPieces": 184,
+   "movedSlivers": 1
+  },
+  {
+   "city": 320300,
+   "counties": 10,
+   "filledPieces": 343,
+   "movedSlivers": 3
+  },
+  {
+   "city": 320400,
+   "counties": 6,
+   "filledPieces": 226,
+   "movedSlivers": 0
+  },
+  {
+   "city": 320500,
+   "counties": 10,
+   "source": "city-districts.bin (refined)"
+  },
+  {
+   "city": 320600,
+   "counties": 7,
+   "filledPieces": 173,
+   "movedSlivers": 2
+  },
+  {
+   "city": 320700,
+   "counties": 6,
+   "filledPieces": 183,
+   "movedSlivers": 0
+  },
+  {
+   "city": 320800,
+   "counties": 7,
+   "filledPieces": 202,
+   "movedSlivers": 0
+  },
+  {
+   "city": 320900,
+   "counties": 9,
+   "filledPieces": 200,
+   "movedSlivers": 2
+  },
+  {
+   "city": 321000,
+   "counties": 6,
+   "filledPieces": 145,
+   "movedSlivers": 0
+  },
+  {
+   "city": 321100,
+   "counties": 6,
+   "filledPieces": 150,
+   "movedSlivers": 0
+  },
+  {
+   "city": 321200,
+   "counties": 6,
+   "filledPieces": 166,
+   "movedSlivers": 0
+  },
+  {
+   "city": 321300,
+   "counties": 5,
+   "filledPieces": 180,
+   "movedSlivers": 0
+  },
+  {
+   "city": 330100,
+   "counties": 13,
+   "source": "city-districts.bin (refined)"
+  },
+  {
+   "city": 330200,
+   "counties": 10,
+   "filledPieces": 292,
+   "movedSlivers": 0
+  },
+  {
+   "city": 330300,
+   "counties": 12,
+   "filledPieces": 394,
+   "movedSlivers": 2
+  },
+  {
+   "city": 330400,
+   "counties": 7,
+   "filledPieces": 163,
+   "movedSlivers": 0
+  },
+  {
+   "city": 330500,
+   "counties": 5,
+   "filledPieces": 182,
+   "movedSlivers": 0
+  },
+  {
+   "city": 330600,
+   "counties": 6,
+   "filledPieces": 269,
+   "movedSlivers": 0
+  },
+  {
+   "city": 330700,
+   "counties": 9,
+   "filledPieces": 347,
+   "movedSlivers": 0
+  },
+  {
+   "city": 330800,
+   "counties": 6,
+   "filledPieces": 301,
+   "movedSlivers": 0
+  },
+  {
+   "city": 330900,
+   "counties": 4,
+   "filledPieces": 2208,
+   "movedSlivers": 2
+  },
+  {
+   "city": 331000,
+   "counties": 9,
+   "filledPieces": 369,
+   "movedSlivers": 1
+  },
+  {
+   "city": 331100,
+   "counties": 9,
+   "filledPieces": 382,
+   "movedSlivers": 0
+  },
+  {
+   "city": 340100,
+   "counties": 9,
+   "filledPieces": 228,
+   "movedSlivers": 0
+  },
+  {
+   "city": 340200,
+   "counties": 7,
+   "filledPieces": 186,
+   "movedSlivers": 0
+  },
+  {
+   "city": 340300,
+   "counties": 7,
+   "filledPieces": 154,
+   "movedSlivers": 0
+  },
+  {
+   "city": 340400,
+   "counties": 7,
+   "filledPieces": 128,
+   "movedSlivers": 0
+  },
+  {
+   "city": 340500,
+   "counties": 6,
+   "filledPieces": 165,
+   "movedSlivers": 1
+  },
+  {
+   "city": 340600,
+   "counties": 4,
+   "filledPieces": 159,
+   "movedSlivers": 0
+  },
+  {
+   "city": 340700,
+   "counties": 4,
+   "filledPieces": 106,
+   "movedSlivers": 2
+  },
+  {
+   "city": 340800,
+   "counties": 10,
+   "filledPieces": 171,
+   "movedSlivers": 1
+  },
+  {
+   "city": 341000,
+   "counties": 7,
+   "filledPieces": 217,
+   "movedSlivers": 0
+  },
+  {
+   "city": 341100,
+   "counties": 8,
+   "filledPieces": 299,
+   "movedSlivers": 0
+  },
+  {
+   "city": 341200,
+   "counties": 8,
+   "filledPieces": 254,
+   "movedSlivers": 3
+  },
+  {
+   "city": 341300,
+   "counties": 5,
+   "filledPieces": 298,
+   "movedSlivers": 0
+  },
+  {
+   "city": 341500,
+   "counties": 7,
+   "filledPieces": 250,
+   "movedSlivers": 0
+  },
+  {
+   "city": 341600,
+   "counties": 4,
+   "filledPieces": 203,
+   "movedSlivers": 0
+  },
+  {
+   "city": 341700,
+   "counties": 4,
+   "filledPieces": 165,
+   "movedSlivers": 1
+  },
+  {
+   "city": 341800,
+   "counties": 7,
+   "filledPieces": 276,
+   "movedSlivers": 0
+  },
+  {
+   "city": 360100,
+   "counties": 9,
+   "filledPieces": 210,
+   "movedSlivers": 1
+  },
+  {
+   "city": 360200,
+   "counties": 4,
+   "filledPieces": 237,
+   "movedSlivers": 0
+  },
+  {
+   "city": 360300,
+   "counties": 5,
+   "filledPieces": 169,
+   "movedSlivers": 0
+  },
+  {
+   "city": 360400,
+   "counties": 13,
+   "filledPieces": 359,
+   "movedSlivers": 2
+  },
+  {
+   "city": 360500,
+   "counties": 2,
+   "filledPieces": 220,
+   "movedSlivers": 1
+  },
+  {
+   "city": 360600,
+   "counties": 3,
+   "filledPieces": 140,
+   "movedSlivers": 0
+  },
+  {
+   "city": 360700,
+   "counties": 18,
+   "filledPieces": 652,
+   "movedSlivers": 0
+  },
+  {
+   "city": 360800,
+   "counties": 13,
+   "filledPieces": 512,
+   "movedSlivers": 0
+  },
+  {
+   "city": 360900,
+   "counties": 10,
+   "filledPieces": 547,
+   "movedSlivers": 1
+  },
+  {
+   "city": 361000,
+   "counties": 11,
+   "filledPieces": 371,
+   "movedSlivers": 1
+  },
+  {
+   "city": 361100,
+   "counties": 12,
+   "filledPieces": 572,
+   "movedSlivers": 0
+  },
+  {
+   "city": 370100,
+   "counties": 12,
+   "filledPieces": 348,
+   "movedSlivers": 1
+  },
+  {
+   "city": 370200,
+   "counties": 10,
+   "filledPieces": 536,
+   "movedSlivers": 1
+  },
+  {
+   "city": 370300,
+   "counties": 8,
+   "filledPieces": 340,
+   "movedSlivers": 0
+  },
+  {
+   "city": 370400,
+   "counties": 6,
+   "filledPieces": 126,
+   "movedSlivers": 0
+  },
+  {
+   "city": 370500,
+   "counties": 5,
+   "filledPieces": 209,
+   "movedSlivers": 1
+  },
+  {
+   "city": 370600,
+   "counties": 11,
+   "filledPieces": 417,
+   "movedSlivers": 0
+  },
+  {
+   "city": 370700,
+   "counties": 12,
+   "filledPieces": 392,
+   "movedSlivers": 1
+  },
+  {
+   "city": 370800,
+   "counties": 11,
+   "filledPieces": 358,
+   "movedSlivers": 1
+  },
+  {
+   "city": 370900,
+   "counties": 6,
+   "filledPieces": 276,
+   "movedSlivers": 0
+  },
+  {
+   "city": 371000,
+   "counties": 4,
+   "filledPieces": 247,
+   "movedSlivers": 0
+  },
+  {
+   "city": 371100,
+   "counties": 4,
+   "filledPieces": 150,
+   "movedSlivers": 0
+  },
+  {
+   "city": 371300,
+   "counties": 12,
+   "filledPieces": 351,
+   "movedSlivers": 0
+  },
+  {
+   "city": 371400,
+   "counties": 11,
+   "filledPieces": 332,
+   "movedSlivers": 1
+  },
+  {
+   "city": 371500,
+   "counties": 8,
+   "filledPieces": 217,
+   "movedSlivers": 2
+  },
+  {
+   "city": 371600,
+   "counties": 7,
+   "filledPieces": 379,
+   "movedSlivers": 1
+  },
+  {
+   "city": 371700,
+   "counties": 9,
+   "filledPieces": 191,
+   "movedSlivers": 0
+  },
+  {
+   "city": 410100,
+   "counties": 12,
+   "filledPieces": 174,
+   "movedSlivers": 8
+  },
+  {
+   "city": 410200,
+   "counties": 9,
+   "filledPieces": 225,
+   "movedSlivers": 0
+  },
+  {
+   "city": 410300,
+   "counties": 14,
+   "filledPieces": 278,
+   "movedSlivers": 0
+  },
+  {
+   "city": 410400,
+   "counties": 10,
+   "filledPieces": 254,
+   "movedSlivers": 1
+  },
+  {
+   "city": 410500,
+   "counties": 9,
+   "filledPieces": 374,
+   "movedSlivers": 1
+  },
+  {
+   "city": 410600,
+   "counties": 5,
+   "filledPieces": 136,
+   "movedSlivers": 0
+  },
+  {
+   "city": 410700,
+   "counties": 12,
+   "filledPieces": 210,
+   "movedSlivers": 1
+  },
+  {
+   "city": 410800,
+   "counties": 10,
+   "filledPieces": 127,
+   "movedSlivers": 2
+  },
+  {
+   "city": 410900,
+   "counties": 6,
+   "filledPieces": 187,
+   "movedSlivers": 0
+  },
+  {
+   "city": 411000,
+   "counties": 6,
+   "filledPieces": 217,
+   "movedSlivers": 1
+  },
+  {
+   "city": 411100,
+   "counties": 5,
+   "filledPieces": 177,
+   "movedSlivers": 0
+  },
+  {
+   "city": 411200,
+   "counties": 6,
+   "filledPieces": 272,
+   "movedSlivers": 1
+  },
+  {
+   "city": 411300,
+   "counties": 13,
+   "filledPieces": 366,
+   "movedSlivers": 4
+  },
+  {
+   "city": 411400,
+   "counties": 9,
+   "filledPieces": 301,
+   "movedSlivers": 1
+  },
+  {
+   "city": 411500,
+   "counties": 10,
+   "filledPieces": 403,
+   "movedSlivers": 0
+  },
+  {
+   "city": 411600,
+   "counties": 10,
+   "filledPieces": 334,
+   "movedSlivers": 0
+  },
+  {
+   "city": 411700,
+   "counties": 10,
+   "filledPieces": 323,
+   "movedSlivers": 0
+  },
+  {
+   "city": 420100,
+   "counties": 13,
+   "filledPieces": 289,
+   "movedSlivers": 4
+  },
+  {
+   "city": 420200,
+   "counties": 6,
+   "filledPieces": 150,
+   "movedSlivers": 0
+  },
+  {
+   "city": 420300,
+   "counties": 8,
+   "filledPieces": 332,
+   "movedSlivers": 3
+  },
+  {
+   "city": 420500,
+   "counties": 13,
+   "filledPieces": 353,
+   "movedSlivers": 1
+  },
+  {
+   "city": 420600,
+   "counties": 9,
+   "filledPieces": 333,
+   "movedSlivers": 1
+  },
+  {
+   "city": 420700,
+   "counties": 3,
+   "filledPieces": 96,
+   "movedSlivers": 0
+  },
+  {
+   "city": 420800,
+   "counties": 5,
+   "filledPieces": 245,
+   "movedSlivers": 0
+  },
+  {
+   "city": 420900,
+   "counties": 7,
+   "filledPieces": 283,
+   "movedSlivers": 2
+  },
+  {
+   "city": 421000,
+   "counties": 8,
+   "filledPieces": 316,
+   "movedSlivers": 1
+  },
+  {
+   "city": 421100,
+   "counties": 10,
+   "filledPieces": 331,
+   "movedSlivers": 0
+  },
+  {
+   "city": 421200,
+   "counties": 6,
+   "filledPieces": 216,
+   "movedSlivers": 1
+  },
+  {
+   "city": 421300,
+   "counties": 3,
+   "filledPieces": 205,
+   "movedSlivers": 0
+  },
+  {
+   "city": 422800,
+   "counties": 8,
+   "filledPieces": 499,
+   "movedSlivers": 0
+  },
+  {
+   "city": 430100,
+   "counties": 9,
+   "filledPieces": 378,
+   "movedSlivers": 0
+  },
+  {
+   "city": 430200,
+   "counties": 9,
+   "filledPieces": 271,
+   "movedSlivers": 1
+  },
+  {
+   "city": 430300,
+   "counties": 5,
+   "filledPieces": 238,
+   "movedSlivers": 4
+  },
+  {
+   "city": 430400,
+   "counties": 12,
+   "filledPieces": 404,
+   "movedSlivers": 0
+  },
+  {
+   "city": 430500,
+   "counties": 12,
+   "filledPieces": 366,
+   "movedSlivers": 0
+  },
+  {
+   "city": 430600,
+   "counties": 9,
+   "filledPieces": 349,
+   "movedSlivers": 1
+  },
+  {
+   "city": 430700,
+   "counties": 9,
+   "filledPieces": 387,
+   "movedSlivers": 0
+  },
+  {
+   "city": 430800,
+   "counties": 4,
+   "filledPieces": 204,
+   "movedSlivers": 0
+  },
+  {
+   "city": 430900,
+   "counties": 6,
+   "filledPieces": 385,
+   "movedSlivers": 0
+  },
+  {
+   "city": 431000,
+   "counties": 11,
+   "filledPieces": 450,
+   "movedSlivers": 0
+  },
+  {
+   "city": 431100,
+   "counties": 11,
+   "filledPieces": 406,
+   "movedSlivers": 2
+  },
+  {
+   "city": 431200,
+   "counties": 12,
+   "filledPieces": 622,
+   "movedSlivers": 0
+  },
+  {
+   "city": 431300,
+   "counties": 5,
+   "filledPieces": 303,
+   "movedSlivers": 0
+  },
+  {
+   "city": 433100,
+   "counties": 8,
+   "filledPieces": 321,
+   "movedSlivers": 1
+  },
+  {
+   "city": 450100,
+   "counties": 12,
+   "filledPieces": 572,
+   "movedSlivers": 0
+  },
+  {
+   "city": 450200,
+   "counties": 10,
+   "filledPieces": 408,
+   "movedSlivers": 0
+  },
+  {
+   "city": 450300,
+   "counties": 17,
+   "filledPieces": 374,
+   "movedSlivers": 1
+  },
+  {
+   "city": 450400,
+   "counties": 7,
+   "filledPieces": 365,
+   "movedSlivers": 1
+  },
+  {
+   "city": 450500,
+   "counties": 4,
+   "filledPieces": 123,
+   "movedSlivers": 1
+  },
+  {
+   "city": 450600,
+   "counties": 4,
+   "filledPieces": 152,
+   "movedSlivers": 0
+  },
+  {
+   "city": 450700,
+   "counties": 4,
+   "filledPieces": 291,
+   "movedSlivers": 0
+  },
+  {
+   "city": 450800,
+   "counties": 5,
+   "filledPieces": 328,
+   "movedSlivers": 0
+  },
+  {
+   "city": 450900,
+   "counties": 7,
+   "filledPieces": 373,
+   "movedSlivers": 1
+  },
+  {
+   "city": 451000,
+   "counties": 12,
+   "filledPieces": 492,
+   "movedSlivers": 1
+  },
+  {
+   "city": 451100,
+   "counties": 5,
+   "filledPieces": 275,
+   "movedSlivers": 0
+  },
+  {
+   "city": 451200,
+   "counties": 11,
+   "filledPieces": 462,
+   "movedSlivers": 2
+  },
+  {
+   "city": 451300,
+   "counties": 6,
+   "filledPieces": 404,
+   "movedSlivers": 1
+  },
+  {
+   "city": 451400,
+   "counties": 7,
+   "filledPieces": 346,
+   "movedSlivers": 1
+  },
+  {
+   "city": 460100,
+   "counties": 4,
+   "filledPieces": 46,
+   "movedSlivers": 0
+  },
+  {
+   "city": 460200,
+   "counties": 4,
+   "filledPieces": 36,
+   "movedSlivers": 0
+  },
+  {
+   "city": 460300,
+   "counties": 2,
+   "filledPieces": 252,
+   "movedSlivers": 0
+  },
+  {
+   "city": 460400,
+   "counties": 0
+  },
+  {
+   "city": 510100,
+   "counties": 20,
+   "filledPieces": 241,
+   "movedSlivers": 2
+  },
+  {
+   "city": 510300,
+   "counties": 6,
+   "filledPieces": 208,
+   "movedSlivers": 15
+  },
+  {
+   "city": 510400,
+   "counties": 5,
+   "filledPieces": 165,
+   "movedSlivers": 4
+  },
+  {
+   "city": 510500,
+   "counties": 7,
+   "filledPieces": 323,
+   "movedSlivers": 0
+  },
+  {
+   "city": 510600,
+   "counties": 6,
+   "filledPieces": 194,
+   "movedSlivers": 0
+  },
+  {
+   "city": 510700,
+   "counties": 9,
+   "filledPieces": 383,
+   "movedSlivers": 3
+  },
+  {
+   "city": 510800,
+   "counties": 7,
+   "filledPieces": 306,
+   "movedSlivers": 2
+  },
+  {
+   "city": 510900,
+   "counties": 5,
+   "filledPieces": 185,
+   "movedSlivers": 1
+  },
+  {
+   "city": 511000,
+   "counties": 5,
+   "filledPieces": 218,
+   "movedSlivers": 3
+  },
+  {
+   "city": 511100,
+   "counties": 11,
+   "filledPieces": 231,
+   "movedSlivers": 0
+  },
+  {
+   "city": 511300,
+   "counties": 9,
+   "filledPieces": 274,
+   "movedSlivers": 1
+  },
+  {
+   "city": 511400,
+   "counties": 6,
+   "filledPieces": 230,
+   "movedSlivers": 0
+  },
+  {
+   "city": 511500,
+   "counties": 10,
+   "filledPieces": 249,
+   "movedSlivers": 12
+  },
+  {
+   "city": 511600,
+   "counties": 6,
+   "filledPieces": 249,
+   "movedSlivers": 0
+  },
+  {
+   "city": 511700,
+   "counties": 7,
+   "filledPieces": 397,
+   "movedSlivers": 2
+  },
+  {
+   "city": 511800,
+   "counties": 8,
+   "filledPieces": 175,
+   "movedSlivers": 2
+  },
+  {
+   "city": 511900,
+   "counties": 5,
+   "filledPieces": 197,
+   "movedSlivers": 9
+  },
+  {
+   "city": 512000,
+   "counties": 3,
+   "filledPieces": 232,
+   "movedSlivers": 1
+  },
+  {
+   "city": 513200,
+   "counties": 13,
+   "filledPieces": 595,
+   "movedSlivers": 0
+  },
+  {
+   "city": 513300,
+   "counties": 18,
+   "filledPieces": 803,
+   "movedSlivers": 1
+  },
+  {
+   "city": 513400,
+   "counties": 17,
+   "filledPieces": 496,
+   "movedSlivers": 1
+  },
+  {
+   "city": 520100,
+   "counties": 10,
+   "filledPieces": 181,
+   "movedSlivers": 0
+  },
+  {
+   "city": 520200,
+   "counties": 4,
+   "filledPieces": 230,
+   "movedSlivers": 0
+  },
+  {
+   "city": 520300,
+   "counties": 14,
+   "filledPieces": 595,
+   "movedSlivers": 0
+  },
+  {
+   "city": 520400,
+   "counties": 6,
+   "filledPieces": 225,
+   "movedSlivers": 0
+  },
+  {
+   "city": 520500,
+   "counties": 8,
+   "filledPieces": 379,
+   "movedSlivers": 4
+  },
+  {
+   "city": 520600,
+   "counties": 10,
+   "filledPieces": 433,
+   "movedSlivers": 1
+  },
+  {
+   "city": 522300,
+   "counties": 8,
+   "filledPieces": 269,
+   "movedSlivers": 1
+  },
+  {
+   "city": 522600,
+   "counties": 16,
+   "filledPieces": 616,
+   "movedSlivers": 4
+  },
+  {
+   "city": 522700,
+   "counties": 12,
+   "filledPieces": 574,
+   "movedSlivers": 0
+  },
+  {
+   "city": 530100,
+   "counties": 14,
+   "filledPieces": 346,
+   "movedSlivers": 1
+  },
+  {
+   "city": 530300,
+   "counties": 9,
+   "filledPieces": 437,
+   "movedSlivers": 0
+  },
+  {
+   "city": 530400,
+   "counties": 9,
+   "filledPieces": 363,
+   "movedSlivers": 2
+  },
+  {
+   "city": 530500,
+   "counties": 5,
+   "filledPieces": 235,
+   "movedSlivers": 0
+  },
+  {
+   "city": 530600,
+   "counties": 11,
+   "filledPieces": 317,
+   "movedSlivers": 1
+  },
+  {
+   "city": 530700,
+   "counties": 5,
+   "filledPieces": 287,
+   "movedSlivers": 1
+  },
+  {
+   "city": 530800,
+   "counties": 10,
+   "filledPieces": 410,
+   "movedSlivers": 0
+  },
+  {
+   "city": 530900,
+   "counties": 8,
+   "filledPieces": 191,
+   "movedSlivers": 0
+  },
+  {
+   "city": 532300,
+   "counties": 10,
+   "filledPieces": 314,
+   "movedSlivers": 0
+  },
+  {
+   "city": 532500,
+   "counties": 13,
+   "filledPieces": 451,
+   "movedSlivers": 0
+  },
+  {
+   "city": 532600,
+   "counties": 8,
+   "filledPieces": 276,
+   "movedSlivers": 0
+  },
+  {
+   "city": 532800,
+   "counties": 3,
+   "filledPieces": 206,
+   "movedSlivers": 0
+  },
+  {
+   "city": 532900,
+   "counties": 12,
+   "filledPieces": 309,
+   "movedSlivers": 0
+  },
+  {
+   "city": 533100,
+   "counties": 5,
+   "filledPieces": 207,
+   "movedSlivers": 0
+  },
+  {
+   "city": 533300,
+   "counties": 4,
+   "filledPieces": 304,
+   "movedSlivers": 0
+  },
+  {
+   "city": 533400,
+   "counties": 3,
+   "filledPieces": 348,
+   "movedSlivers": 0
+  },
+  {
+   "city": 540100,
+   "counties": 8,
+   "filledPieces": 202,
+   "movedSlivers": 0
+  },
+  {
+   "city": 540200,
+   "counties": 18,
+   "filledPieces": 844,
+   "movedSlivers": 0
+  },
+  {
+   "city": 540300,
+   "counties": 11,
+   "filledPieces": 705,
+   "movedSlivers": 1
+  },
+  {
+   "city": 540400,
+   "counties": 7,
+   "filledPieces": 565,
+   "movedSlivers": 0
+  },
+  {
+   "city": 540500,
+   "counties": 12,
+   "filledPieces": 302,
+   "movedSlivers": 1
+  },
+  {
+   "city": 540600,
+   "counties": 11,
+   "filledPieces": 1056,
+   "movedSlivers": 0
+  },
+  {
+   "city": 542500,
+   "counties": 7,
+   "filledPieces": 848,
+   "movedSlivers": 0
+  },
+  {
+   "city": 610100,
+   "counties": 13,
+   "filledPieces": 188,
+   "movedSlivers": 3
+  },
+  {
+   "city": 610200,
+   "counties": 4,
+   "filledPieces": 135,
+   "movedSlivers": 0
+  },
+  {
+   "city": 610300,
+   "counties": 12,
+   "filledPieces": 255,
+   "movedSlivers": 0
+  },
+  {
+   "city": 610400,
+   "counties": 14,
+   "filledPieces": 235,
+   "movedSlivers": 1
+  },
+  {
+   "city": 610500,
+   "counties": 11,
+   "filledPieces": 243,
+   "movedSlivers": 0
+  },
+  {
+   "city": 610600,
+   "counties": 13,
+   "filledPieces": 462,
+   "movedSlivers": 3
+  },
+  {
+   "city": 610700,
+   "counties": 11,
+   "filledPieces": 315,
+   "movedSlivers": 1
+  },
+  {
+   "city": 610800,
+   "counties": 12,
+   "filledPieces": 514,
+   "movedSlivers": 3
+  },
+  {
+   "city": 610900,
+   "counties": 10,
+   "filledPieces": 261,
+   "movedSlivers": 2
+  },
+  {
+   "city": 611000,
+   "counties": 7,
+   "filledPieces": 242,
+   "movedSlivers": 0
+  },
+  {
+   "city": 620100,
+   "counties": 8,
+   "filledPieces": 301,
+   "movedSlivers": 1
+  },
+  {
+   "city": 620200,
+   "counties": 0
+  },
+  {
+   "city": 620300,
+   "counties": 2,
+   "filledPieces": 80,
+   "movedSlivers": 0
+  },
+  {
+   "city": 620400,
+   "counties": 5,
+   "filledPieces": 332,
+   "movedSlivers": 0
+  },
+  {
+   "city": 620500,
+   "counties": 7,
+   "filledPieces": 247,
+   "movedSlivers": 1
+  },
+  {
+   "city": 620600,
+   "counties": 4,
+   "filledPieces": 266,
+   "movedSlivers": 0
+  },
+  {
+   "city": 620700,
+   "counties": 6,
+   "filledPieces": 290,
+   "movedSlivers": 1
+  },
+  {
+   "city": 620800,
+   "counties": 7,
+   "filledPieces": 344,
+   "movedSlivers": 0
+  },
+  {
+   "city": 620900,
+   "counties": 7,
+   "filledPieces": 345,
+   "movedSlivers": 1
+  },
+  {
+   "city": 621000,
+   "counties": 8,
+   "filledPieces": 426,
+   "movedSlivers": 1
+  },
+  {
+   "city": 621100,
+   "counties": 7,
+   "filledPieces": 303,
+   "movedSlivers": 2
+  },
+  {
+   "city": 621200,
+   "counties": 9,
+   "filledPieces": 353,
+   "movedSlivers": 0
+  },
+  {
+   "city": 622900,
+   "counties": 8,
+   "filledPieces": 148,
+   "movedSlivers": 0
+  },
+  {
+   "city": 623000,
+   "counties": 8,
+   "filledPieces": 521,
+   "movedSlivers": 3
+  },
+  {
+   "city": 630100,
+   "counties": 7,
+   "filledPieces": 142,
+   "movedSlivers": 0
+  },
+  {
+   "city": 630200,
+   "counties": 6,
+   "filledPieces": 208,
+   "movedSlivers": 0
+  },
+  {
+   "city": 632200,
+   "counties": 4,
+   "filledPieces": 362,
+   "movedSlivers": 0
+  },
+  {
+   "city": 632300,
+   "counties": 4,
+   "filledPieces": 293,
+   "movedSlivers": 1
+  },
+  {
+   "city": 632500,
+   "counties": 5,
+   "filledPieces": 297,
+   "movedSlivers": 1
+  },
+  {
+   "city": 632600,
+   "counties": 6,
+   "filledPieces": 524,
+   "movedSlivers": 0
+  },
+  {
+   "city": 632700,
+   "counties": 6,
+   "filledPieces": 889,
+   "movedSlivers": 0
+  },
+  {
+   "city": 632800,
+   "counties": 7,
+   "filledPieces": 992,
+   "movedSlivers": 1
+  },
+  {
+   "city": 640100,
+   "counties": 6,
+   "filledPieces": 139,
+   "movedSlivers": 0
+  },
+  {
+   "city": 640200,
+   "counties": 3,
+   "filledPieces": 83,
+   "movedSlivers": 0
+  },
+  {
+   "city": 640300,
+   "counties": 5,
+   "filledPieces": 378,
+   "movedSlivers": 0
+  },
+  {
+   "city": 640400,
+   "counties": 5,
+   "filledPieces": 339,
+   "movedSlivers": 0
+  },
+  {
+   "city": 640500,
+   "counties": 3,
+   "filledPieces": 303,
+   "movedSlivers": 0
+  },
+  {
+   "city": 350100,
+   "counties": 13,
+   "filledPieces": 468,
+   "movedSlivers": 2
+  },
+  {
+   "city": 350200,
+   "counties": 6,
+   "filledPieces": 90,
+   "movedSlivers": 2
+  },
+  {
+   "city": 350300,
+   "counties": 5,
+   "filledPieces": 239,
+   "movedSlivers": 1
+  },
+  {
+   "city": 350400,
+   "counties": 11,
+   "filledPieces": 501,
+   "movedSlivers": 0
+  },
+  {
+   "city": 350500,
+   "counties": 11,
+   "filledPieces": 356,
+   "movedSlivers": 1
+  },
+  {
+   "city": 350600,
+   "counties": 11,
+   "filledPieces": 229,
+   "movedSlivers": 3
+  },
+  {
+   "city": 350700,
+   "counties": 10,
+   "filledPieces": 614,
+   "movedSlivers": 0
+  },
+  {
+   "city": 350800,
+   "counties": 7,
+   "filledPieces": 357,
+   "movedSlivers": 0
+  },
+  {
+   "city": 350900,
+   "counties": 9,
+   "filledPieces": 559,
+   "movedSlivers": 1
+  },
+  {
+   "city": 650100,
+   "counties": 8,
+   "filledPieces": 148,
+   "movedSlivers": 0
+  },
+  {
+   "city": 650200,
+   "counties": 4,
+   "filledPieces": 139,
+   "movedSlivers": 0
+  },
+  {
+   "city": 650400,
+   "counties": 3,
+   "filledPieces": 213,
+   "movedSlivers": 0
+  },
+  {
+   "city": 650500,
+   "counties": 3,
+   "filledPieces": 168,
+   "movedSlivers": 0
+  },
+  {
+   "city": 652300,
+   "counties": 7,
+   "filledPieces": 281,
+   "movedSlivers": 0
+  },
+  {
+   "city": 652700,
+   "counties": 4,
+   "filledPieces": 204,
+   "movedSlivers": 9
+  },
+  {
+   "city": 652800,
+   "counties": 9,
+   "filledPieces": 651,
+   "movedSlivers": 2
+  },
+  {
+   "city": 652900,
+   "counties": 9,
+   "filledPieces": 249,
+   "movedSlivers": 0
+  },
+  {
+   "city": 653000,
+   "counties": 4,
+   "filledPieces": 328,
+   "movedSlivers": 0
+  },
+  {
+   "city": 653100,
+   "counties": 12,
+   "filledPieces": 404,
+   "movedSlivers": 2
+  },
+  {
+   "city": 653200,
+   "counties": 8,
+   "filledPieces": 333,
+   "movedSlivers": 0
+  },
+  {
+   "city": 654000,
+   "counties": 11,
+   "filledPieces": 373,
+   "movedSlivers": 0
+  },
+  {
+   "city": 654200,
+   "counties": 7,
+   "filledPieces": 626,
+   "movedSlivers": 2
+  },
+  {
+   "city": 654300,
+   "counties": 7,
+   "filledPieces": 200,
+   "movedSlivers": 2
+  },
+  {
+   "city": 440100,
+   "counties": 11,
+   "source": "city-districts.bin (refined)"
+  },
+  {
+   "city": 440200,
+   "counties": 10,
+   "filledPieces": 469,
+   "movedSlivers": 0
+  },
+  {
+   "city": 440300,
+   "counties": 9,
+   "source": "city-districts.bin (refined)"
+  },
+  {
+   "city": 440500,
+   "counties": 7,
+   "filledPieces": 158,
+   "movedSlivers": 0
+  },
+  {
+   "city": 440600,
+   "counties": 5,
+   "filledPieces": 257,
+   "movedSlivers": 0
+  },
+  {
+   "city": 440700,
+   "counties": 7,
+   "filledPieces": 349,
+   "movedSlivers": 0
+  },
+  {
+   "city": 440800,
+   "counties": 9,
+   "filledPieces": 432,
+   "movedSlivers": 2
+  },
+  {
+   "city": 440900,
+   "counties": 5,
+   "filledPieces": 477,
+   "movedSlivers": 0
+  },
+  {
+   "city": 441200,
+   "counties": 8,
+   "filledPieces": 321,
+   "movedSlivers": 1
+  },
+  {
+   "city": 441300,
+   "counties": 5,
+   "filledPieces": 910,
+   "movedSlivers": 0
+  },
+  {
+   "city": 441400,
+   "counties": 8,
+   "filledPieces": 398,
+   "movedSlivers": 0
+  },
+  {
+   "city": 441500,
+   "counties": 4,
+   "filledPieces": 249,
+   "movedSlivers": 1
+  },
+  {
+   "city": 441600,
+   "counties": 6,
+   "filledPieces": 422,
+   "movedSlivers": 0
+  },
+  {
+   "city": 441700,
+   "counties": 4,
+   "filledPieces": 264,
+   "movedSlivers": 1
+  },
+  {
+   "city": 441800,
+   "counties": 8,
+   "filledPieces": 396,
+   "movedSlivers": 1
+  },
+  {
+   "city": 441900,
+   "counties": 0
+  },
+  {
+   "city": 442000,
+   "counties": 0
+  },
+  {
+   "city": 445100,
+   "counties": 3,
+   "filledPieces": 154,
+   "movedSlivers": 1
+  },
+  {
+   "city": 445200,
+   "counties": 5,
+   "filledPieces": 234,
+   "movedSlivers": 0
+  },
+  {
+   "city": 445300,
+   "counties": 5,
+   "filledPieces": 336,
+   "movedSlivers": 2
+  },
+  {
+   "city": 440400,
+   "counties": 3,
+   "filledPieces": 1306,
+   "movedSlivers": 3
+  }
+ ]
+}
