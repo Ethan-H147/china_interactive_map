@@ -364,8 +364,11 @@ async function reconcile(country,{align,edge,holes=[],neighbours=[],administered
  const units=(await command(fc(features),'-clean')).features;
  const enclosed=pieces(await command(fc([box]),'-erase land.json -explode',{'land.json':fc([...units,...refs.map(r=>r.feature)])})).filter(f=>!onEdge(f.geometry));
  const holeShapes=holes.map(([name,p])=>{const f=enclosed.find(f=>inside(f,p));assert(f,name+' lies between '+country+' and its references');return {type:'Feature',properties:{country:name},geometry:f.geometry};});
- // Other enclosed land is a gap between the sources; each goes to the unit nearest it.
- const gaps=enclosed.filter(f=>!holeShapes.some(h=>h.geometry===f.geometry));
+ // Other enclosed land touching the country is a gap between the sources; each goes to the unit
+ // nearest it. Holes inside a reference that do not touch the country (China's outline, dissolved
+ // from its provinces, keeps specks where they do not quite meet) are left alone.
+ const ownVertices=new Set(units.flatMap(f=>polygons(f.geometry).flat(2).map(p=>p[0].toFixed(5)+','+p[1].toFixed(5))));
+ const gaps=enclosed.filter(f=>!holeShapes.some(h=>h.geometry===f.geometry)&&polygons(f.geometry).flat(2).some(p=>ownVertices.has(p[0].toFixed(5)+','+p[1].toFixed(5))));
  assert(gaps.every(f=>area(f.geometry)<1000),'Only slivers lie between '+country+' and its references: '+gaps.filter(f=>area(f.geometry)>=1000).map(f=>Math.round(area(f.geometry))+' km² at '+polygons(f.geometry)[0][0][0].map(v=>v.toFixed(2))).join('; '));
  const vertices=units.map(f=>({id:f.properties.id,points:polygons(f.geometry).flat(2)}));
  const nearest=p=>{let best=null,d=Infinity;for(const v of vertices)for(const q of v.points){const m=metres(p,q);if(m<d){d=m;best=v.id;}}return best;};
