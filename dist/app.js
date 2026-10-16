@@ -630,14 +630,14 @@ function viewParent(){
   return parent?selectRegion(parent,parent.feature.properties.adcode,true,camera):reset(camera);
 }
 $('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);
-// Developer mode: the map as a globe (MapLibre's globe projection), flat otherwise and for everyone else.
-function syncGlobe(){const button=$('globe-view');button.hidden=!window.AtlasDev.enabled;if(!window.AtlasDev.enabled)button.setAttribute('aria-pressed','false');const type=button.getAttribute('aria-pressed')==='true'?'globe':'mercator';if(map&&map.getProjection?.()?.type!==type){map.setProjection({type});updateLabels();}globeFloor();}
+// The map as a globe (MapLibre's globe projection) or flat; the choice is remembered in this browser.
+const globeKey='boundary-atlas-globe-v1';try{if(localStorage.getItem(globeKey)==='true')$('globe-view').setAttribute('aria-pressed','true');}catch{}
+function syncGlobe(){const button=$('globe-view');const type=button.getAttribute('aria-pressed')==='true'?'globe':'mercator';if(map&&map.getProjection?.()?.type!==type){map.setProjection({type});updateLabels();}globeFloor();}
 // The globe's smallest size nearly fills the map (about 95% of its shorter side, calibrated by eye: MapLibre draws it
 // smaller than the 512·2^zoom/π px diameter suggests); the flat map keeps zoom 0.5.
 function globeFloor(){const globe=map.getProjection?.()?.type==='globe',c=map.getContainer();map.setMinZoom(globe?Math.max(.5,Math.log2(1.33*Math.min(c.clientWidth,c.clientHeight)*Math.PI/512)):.5);}
 map.on('resize',globeFloor);
-$('globe-view').onclick=()=>{$('globe-view').setAttribute('aria-pressed',String($('globe-view').getAttribute('aria-pressed')!=='true'));syncGlobe();};
-window.addEventListener('atlas-developer-change',syncGlobe);$('retry').onclick=()=>location.reload();
+$('globe-view').onclick=()=>{const on=$('globe-view').getAttribute('aria-pressed')!=='true';$('globe-view').setAttribute('aria-pressed',String(on));try{localStorage.setItem(globeKey,String(on));}catch{}syncGlobe();};$('retry').onclick=()=>location.reload();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 function quizPool(settings={scope:$('quiz-scope').value,includeTaiwan:$('quiz-taiwan').checked}){return AtlasQuiz.candidates([...regionByCode.values()],settings);}
 function initQuiz(){

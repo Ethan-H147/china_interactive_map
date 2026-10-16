@@ -107,11 +107,12 @@ export default [
   await page.settle();await page.tap(again);
   await page.waitFor(`AtlasEntry.current==='united-kingdom'&&currentAtlas()?.getSelection()==='GB-O-FK'`,{label:'the Falklands in the UK',timeout:30000});
  }},
- {name:'the globe view is a developer-mode toggle',options:desktop,async run(page,base){
+ {name:'the globe button stands apart from the zoom controls',options:desktop,async run(page,base){
   await page.open(base,'#china');
-  assert(await page.evaluate(`document.getElementById('globe-view').hidden&&map.getProjection().type==='mercator'`),'Public visitors see the flat map only');
+  assert(await page.evaluate(`(()=>{const b=document.getElementById('globe-view');return !b.hidden&&!b.closest('.map-actions')&&b.getClientRects().length>0;})()`),'Everyone sees the globe button, outside the zoom bar');
+  assert.equal(await page.evaluate(`map.getProjection().type`),'mercator','The map starts flat');
  }},
- {name:'developer mode switches the map to a globe and back',options:{...desktop,developer:true},async run(page,base){
+ {name:'the globe button switches the map to a globe and back',options:desktop,async run(page,base){
   await page.open(base,'#china');
   await page.tap('#globe-view');await page.settle();
   assert.equal(await page.evaluate(`map.getProjection().type`),'globe');
@@ -124,7 +125,9 @@ export default [
   assert(!await page.evaluate(`[...document.querySelectorAll('[data-atlas-place]')].some(el=>el.textContent.includes('United Kingdom'))`),'A country at the edge of the globe is not labelled');
   await page.evaluate(`location.hash='#france'`);await page.settle();
   assert.equal(await page.evaluate(`map.getProjection().type`),'globe','The globe stays on across countries');
-  await page.tap('.developer-exit');await page.settle();
-  assert(await page.evaluate(`map.getProjection().type==='mercator'&&document.getElementById('globe-view').hidden`),'Leaving developer mode returns to the flat map');
+  await page.open(base,'#china');
+  assert.equal(await page.evaluate(`map.getProjection().type`),'globe','The choice is remembered on the next visit');
+  await page.tap('#globe-view');await page.settle();
+  assert(await page.evaluate(`map.getProjection().type==='mercator'&&map.getMinZoom()===.5`),'The button returns to the flat map');
  }}
 ];

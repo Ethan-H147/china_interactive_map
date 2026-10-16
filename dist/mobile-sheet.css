@@ -53,13 +53,15 @@
   .map-mode[data-collapsed-levels][data-open] { flex-direction: column; align-items: stretch; gap: 2px; }
   .map-mode[data-collapsed-levels][data-open] button { min-height: 44px; text-align: left; }
   .map-mode[data-collapsed-levels][data-open] #mode-lock { display: none; }
-  .map-actions { right: var(--sheet-gap); bottom: 44px; border-radius: 14px; }
+  .map-side { right: var(--sheet-gap); bottom: 44px; gap: 8px; }
+  .map-actions { border-radius: 14px; }
+  .globe-toggle { width: 46px; height: 46px; border-radius: 14px; }
   .map-actions button { width: 44px; height: 44px; }
   .map-bottom { left: var(--sheet-gap); right: 70px; bottom: 14px; }
   /* Desktop-only: widening the sidebar has no meaning in a full-width sheet. */
   .north, .map-caption, .details-expand { display: none; }
   /* A fully open sheet covers the map; its controls would only sit behind the header. */
-  html[data-sheet="full"] .map-actions, html[data-sheet="full"] .map-top { visibility: hidden; }
+  html[data-sheet="full"] .map-side, html[data-sheet="full"] .map-top { visibility: hidden; }
 
   .sidebar:not([hidden]) {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 550; height: var(--sheet-height); min-height: 0;
