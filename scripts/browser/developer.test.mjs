@@ -130,8 +130,8 @@ export default [
   await page.tap('#globe-view');await page.settle();
   assert(await page.evaluate(`map.getProjection().type==='mercator'&&map.getMinZoom()===.5`),'The button returns to the flat map');
  }},
- {name:'Iceland and Turkey wait in developer mode',options:desktop,async run(page,base){
-  for(const country of ['iceland','turkey']){
+ {name:'Iceland, India and Turkey wait in developer mode',options:desktop,async run(page,base){
+  for(const country of ['iceland','india','turkey']){
    await page.open(base,'#'+country);
    assert.equal(await page.evaluate('AtlasEntry.current'),'china',country+' falls back to China for the public');
   }
@@ -146,5 +146,22 @@ export default [
   assert(await page.evaluate(`[...document.querySelectorAll('.map-breadcrumb')].some(b=>b.getClientRects().length&&b.textContent.includes(${JSON.stringify(parent)}))`),query+' sits under '+parent);
   // Iceland's towns and Turkey's province-centre cities are dots of their own.
   await page.waitFor(`map.getSource('${country}-settlements')&&map.querySourceFeatures('${country}-settlements').length>0`,{label:country+' settlement dots'});
- }}))
+ }})),
+ {name:'india: Sikkim opens in developer mode',options:{...desktop,developer:true},async run(page,base){
+  await page.open(base,'#india');
+  assert.equal(await page.evaluate('AtlasEntry.current'),'india');
+  await searchAndSelect(page,'Sikkim','Sikkim');
+  await page.waitFor(`currentAtlas()?.getSelection()==='IN-SK'`,{label:'Sikkim selected'});
+ }},
+ // China and India both claim Aksai Chin and Arunachal Pradesh: each map draws its own claim.
+ {name:'China and India each draw their own claim',options:{...desktop,developer:true},async run(page,base){
+  const hides=(layer,country)=>page.evaluate(`JSON.stringify(map.getFilter('${layer}')||null).includes('"claimedBy"],""],"${country}"')`);
+  await page.open(base,'#china');
+  await page.waitFor(`!!map.getLayer('india-portal-fill')&&!!map.getLayer('india-international')`,{label:'India portal'});
+  await page.evaluate(`map.jumpTo({center:[86,29],zoom:4.4});0`);await page.settle();
+  assert(await page.evaluate(`map.querySourceFeatures('india-portal').some(f=>f.properties.claimedBy==='china')`),'India portal carries the claims China holds');
+  for(const layer of ['india-portal-fill','india-international','atlas-frontiers'])assert(await hides(layer,'china'),layer+' hides China-held claims while China is open');
+  await page.open(base,'#india');
+  assert(await hides('atlas-frontiers','india'),"China's claim lines inside India's outline hide while India is open");
+ }}
 ];

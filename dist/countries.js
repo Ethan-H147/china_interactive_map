@@ -95,6 +95,9 @@
   iceland:{en:'Iceland',local:'Ísland',lang:'is',background:'#eef3f7',release:'developer',...regional('europe','is',
    {firstLabel:'Regions',secondLabel:'Municipalities',loadAllSubdivisions:true,settlements:true,searchLabel:'Find a region, municipality or town',statistics:true,center:[-18.6,64.95],zoom:5.6,bounds:[[-24.6,63.2],[-13.4,66.6]],fill:'#e2eaf3',selected:'#c2d3e8',line:'#2f5d8c'},
    {colors:{levels:'Regions'},levelNames:['Regions','Municipalities'],naturalEarth:'ISL'})},
+  india:{en:'India',local:'भारत',lang:'hi',background:'#f8f2ea',release:'developer',...regional('europe','in',
+   {firstLabel:'States',neighbours:true,searchLabel:'Find a state or union territory',statistics:true,center:[80.5,22.5],zoom:4.3,bounds:[[68,6.5],[97.5,37.1]],fill:'#f5e7d6',selected:'#ecc9a0',line:'#b5651d'},
+   {colors:{levels:'States & union territories',economy:false},levelNames:['States & union territories'],naturalEarth:'IND'})},
   turkey:{en:'Turkey',local:'Türkiye',lang:'tr',background:'#f7efee',release:'developer',...regional('europe','tr',
    {firstLabel:'Regions',secondLabel:'Provinces',thirdLabel:'Districts',bundledLevels:2,settlements:true,searchLabel:'Find a region, province, district or city',statistics:true,center:[35.2,39.1],zoom:5.3,bounds:[[25.6,35.8],[44.9,42.2]],fill:'#f3e4e2',selected:'#e8c5c0',line:'#a8362c'},
    {colors:{levels:'Statistical regions'},levelNames:['Statistical regions','Provinces','Districts'],naturalEarth:'TUR'})}

@@ -272,9 +272,11 @@ function waitForCountrySources(ids,signal){
 // Faded country shapes: the open country's in its colour; another country's territory that
 // the open country draws as its own claim is hidden.
 // A country whose own lines draw its frontiers while open (countries.js: ownFrontier) hides its
-// frontiers in the shared layer meanwhile, so each edge is drawn once.
-function syncFrontiers(open){if(map.getLayer('atlas-frontiers'))map.setFilter('atlas-frontiers',registry.countries[open]?.ownFrontier?['!',['in',' '+open+' ',['concat',' ',['get','countries'],' ']]]:null);}
-function syncPortals(open){for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,['!=',['coalesce',['get','claimedBy'],''],open]);}}}
+// frontiers in the shared layer meanwhile, so each edge is drawn once. Where two claims overlap
+// (China's and India's), a frontier inside the land the open country claims is hidden too.
+const unclaimed=open=>['!=',['coalesce',['get','claimedBy'],''],open];
+function syncFrontiers(open){if(map.getLayer('atlas-frontiers'))map.setFilter('atlas-frontiers',registry.countries[open]?.ownFrontier?['all',['!',['in',' '+open+' ',['concat',' ',['get','countries'],' ']]],unclaimed(open)]:unclaimed(open));}
+function syncPortals(open){for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,unclaimed(open));}if(map.getLayer(country+'-international'))map.setFilter(country+'-international',unclaimed(open));}}
 function atlasFor(country){return atlases[country]||{'southern-africa':southernAfrica,europe,'south-america':southAmerica}[registry.countries[country]?.adapter]?.portals[country]||null;}
 function currentAtlas(){return atlasFor(atlasMode);}
 // focus: an overseas territory to open directly ({region, bounds}); the camera goes to it

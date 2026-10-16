@@ -32,7 +32,7 @@ const marked=c=>c.features.map(f=>({...f,properties:{...f.properties,channel:tru
 const unmarked=c=>c.features.filter(f=>!f.properties.channel);
 
 // Regional countries: catalogue chunks hold the level below their parent.
-if(run('regional'))for(const base of ['europe/united-kingdom','europe/spain','europe/france','europe/italy','europe/iceland','europe/turkey','russia',...['south-africa','botswana','namibia','eswatini','lesotho'].map(c=>'southern-africa/'+c)]){
+if(run('regional'))for(const base of ['europe/united-kingdom','europe/spain','europe/france','europe/italy','europe/iceland','europe/turkey','europe/india','russia',...['south-africa','botswana','namibia','eswatini','lesotho'].map(c=>'southern-africa/'+c)]){
  const catalogue=load(data+base+'/catalogue.bin'),first=load(data+base+'/first.bin'),levelOf=new Map(catalogue.records.map(r=>[r.id,r.level]));
  const parts=[{level:1,file:'first.bin',payload:first},...Object.entries(catalogue.chunks).map(([id,e])=>({level:e.level??levelOf.get(id)+1,file:e.file,entry:e,payload:load(data+base+'/'+e.file)}))];
  const land=landOf(first.regions.features),byLevel=new Map();for(const p of parts){if(!byLevel.has(p.level))byLevel.set(p.level,[]);byLevel.get(p.level).push(p);}

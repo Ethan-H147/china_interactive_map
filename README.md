@@ -312,7 +312,7 @@ Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia
 
 ## Europe
 
-The United Kingdom, Spain, France and Italy are public; Iceland and Turkey are in developer mode. `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
+The United Kingdom, Spain, France and Italy are public; Iceland, Turkey and India are in developer mode (India shares the European pipeline, though it is not European). `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
 
 ### Italy
 
@@ -369,6 +369,14 @@ The 12 statistical regions (İBBS level 1), 81 provinces and 973 districts, from
 - Land frontier: 2,911 km in two pieces (Greece and Bulgaria; Georgia to Syria). The Iraqi and Iranian neighbours use geoBoundaries' detailed levels, Turkey's rings probe further like French Guiana's, and breaks of up to 1.5 km at tripoints close.
 - Population: TÜİK's address-based register at 31 December 2022 by district, as OCHA publishes it (cod-ps-tur); provinces and regions are sums. TÜİK's later tables sit behind a browser check and cannot be retained by script. Areas are boundary-derived; no GDP is shown.
 - Cities: the 81 province centres, as OpenStreetMap points. A city such as Ankara spans several districts, so it stands apart from them; districts are named after their own central towns, so towns are not shown. Without an official city population, the dots set their own appearance zoom (`minzoom`, read by `settlementZoom`).
+
+### India (developer mode)
+
+The 28 states and 8 union territories, first level only for now, from geoBoundaries' copy of the DataMeet map (after the Election Commission of India, CC BY 2.5 India), with India's official boundaries. Ids are current ISO 3166-2:IN codes; names are English with Hindi. The map shows 2011, so West Bengal's former enclaves in Bangladesh (exchanged in 2015) are dropped. Areas are boundary-derived; population is not yet included.
+
+- **Matching China.** China's outline is the reference. Indian edges within 3 km of it move onto it, and land left between the two goes to the nearest state, so the frontier is one line. Nepal and Bhutan are the land the two outlines enclose. Pakistan, Afghanistan, Bangladesh and Myanmar come from geoBoundaries, cut by India's and China's outlines, with land between the sources going to the nearest neighbour. All six are drawn beneath India at this precision instead of the world map's 1:110m silhouettes.
+- **Overlapping claims.** Both countries claim Aksai Chin, the Shaksgam valley, Arunachal Pradesh (South Tibet) and some smaller tracts. Each map draws its own claim, as with the Falklands. India's portal carries the land China's outline holds as separate shapes (`claimedBy: china`), hidden while China's map is open. Its frontier lines inside China's outline are tagged the same way. China's frontier lines inside India's outline are tagged `claimedBy: india`, hidden while India's map is open. The Kashmir that Pakistan administers is left out of India's portal, so other maps show it as Pakistan's; India's own map covers it with India's claim.
+- **China's frontier.** China's outline follows its claims in the Himalaya and Karakoram, far from Natural Earth's boundary lines. There, an edge counts as a frontier when land outside China lies all the way out to 3 km. That restores about 2,000 km of China's frontier with India, Bhutan and Myanmar.
 
 ### Overseas territories
 

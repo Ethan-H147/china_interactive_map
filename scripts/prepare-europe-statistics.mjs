@@ -418,7 +418,18 @@ async function turkey(){
  return regions;
 }
 
-for(const [country,build] of [['italy',italy],['spain',spain],['france',france],['united-kingdom',unitedKingdom],['iceland',iceland],['turkey',turkey]]){
+// India: the 2011 census by state and union territory (scripts/statistics-sources/europe/
+// india-population-2011.json, which records how the later states are counted). Areas are
+// boundary-derived, so they include India's claims.
+function india(){
+ const catalogue=readCatalogue('india'),census=JSON.parse(fs.readFileSync(path.join(retained,'india-population-2011.json')));
+ assert.equal(Object.values(census.values).reduce((s,v)=>s+v,0),census.national,'India 2011 census total');
+ sources.inPopulation={title:census.title+' ('+census.publisher+')',url:census.url,license:'Government of India open data',note:census.note};
+ sources.mappedArea=mappedArea('india');
+ return Object.fromEntries(catalogue.records.map(r=>{const value=census.values[r.id.slice(3)];assert(value>0,'Census population for '+r.id);return ['india:'+r.id,{name:r.en,level:r.level,population:{value,year:2011,date:census.date,method:'census',source:'inPopulation',periodLabel:'2011 census'},area:{value:r.areaKm2,unit:'km²',method:'mapped',period:'Boundary-derived estimate, including the areas India claims',source:'mappedArea'}}];}));
+}
+
+for(const [country,build] of [['italy',italy],['spain',spain],['france',france],['united-kingdom',unitedKingdom],['iceland',iceland],['turkey',turkey],['india',india]]){
  const regions=await build(),dir=`dist/data/europe/${country}`,used=new Set(Object.values(regions).flatMap(r=>Object.values(r).map(m=>m?.source).filter(Boolean)).concat(Object.values(regions).flatMap(r=>[r.gdp?.exchangeSource].filter(Boolean))));
  const countrySources=Object.fromEntries(Object.entries(sources).filter(([id])=>used.has(id)));
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,retrieved:today,country,sources:countrySources,regions})+'\n');

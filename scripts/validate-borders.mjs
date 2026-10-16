@@ -33,7 +33,7 @@ for(const country of ['philippines','indonesia']){
  const catalogue=load(data+'southeast-asia/malaysia-catalogue.bin');checkRuns(load(data+'southeast-asia/malaysia-first.bin'),'Malaysia');
  for(const [id,e] of Object.entries(catalogue.chunks))checkRuns(load(data+'southeast-asia/'+e.file),'Malaysia '+id);
 }
-for(const base of ['europe/united-kingdom','europe/spain','europe/france','europe/italy','europe/iceland','europe/turkey','russia',...['south-africa','botswana','namibia','eswatini','lesotho'].map(c=>'southern-africa/'+c)]){
+for(const base of ['europe/united-kingdom','europe/spain','europe/france','europe/italy','europe/iceland','europe/turkey','europe/india','russia',...['south-africa','botswana','namibia','eswatini','lesotho'].map(c=>'southern-africa/'+c)]){
  const catalogue=load(data+base+'/catalogue.bin');
  for(const p of [load(data+base+'/first.bin'),...Object.values(catalogue.chunks).map(e=>load(data+base+'/'+e.file))]){const ids=new Set(p.regions.features.map(f=>f.properties.id));for(const f of p.boundaries.features)if(f.properties.channel){assert(f.properties.owners.some(id=>ids.has(id)),base+': channel owner');channels++;}}
 }

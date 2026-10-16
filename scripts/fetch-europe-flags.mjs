@@ -13,7 +13,8 @@ const sources={
  france:{file:'vendor/flag-fr.svg',...commons('Flag_of_France.svg','c/c3')},
  italy:{file:'vendor/flag-it.svg',...commons('Flag_of_Italy.svg','0/03')},
  iceland:{file:'vendor/flag-is.svg',...commons('Flag_of_Iceland.svg','c/ce')},
- turkey:{file:'vendor/flag-tr.svg',...commons('Flag_of_Turkey.svg','b/b4')}
+ turkey:{file:'vendor/flag-tr.svg',...commons('Flag_of_Turkey.svg','b/b4')},
+ india:{file:'vendor/flag-in.svg',...commons('Flag_of_India.svg','4/41')}
 };
 for(const [country,flag] of Object.entries(sources)){
  const known=manifest.flags[country],path=resolve(dist,flag.file);let bytes;

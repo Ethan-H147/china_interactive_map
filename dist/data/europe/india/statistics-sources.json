@@ -1,0 +1,16 @@
+{
+ "retrieved": "2026-10-16",
+ "sources": {
+  "mappedArea": {
+   "title": "Boundary-derived area",
+   "url": "data/europe/india/sources.json",
+   "note": "Spherical area calculated from the displayed boundary polygon, not an independently surveyed land area."
+  },
+  "inPopulation": {
+   "title": "Census of India 2011, Primary Census Abstract: total population by state and union territory (Office of the Registrar General and Census Commissioner, India)",
+   "url": "https://censusindia.gov.in/census.website/data/census-tables",
+   "license": "Government of India open data",
+   "note": "State totals transcribed from the Primary Census Abstract; they sum to India's census total of 1,210,854,977. Andhra Pradesh and Telangana are counted within their boundaries after the 2014 reorganisation (including the seven mandals moved to Andhra Pradesh); Ladakh is Leh and Kargil districts, and Jammu and Kashmir the rest of the former state; Dadra and Nagar Haveli and Daman and Diu are summed. Manipur includes the census estimate for its three uncounted subdivisions."
+  }
+ }
+}

@@ -43,6 +43,15 @@ const rings=Object.fromEntries(Object.entries(outlines).map(([c,d])=>[c,d.featur
 const inside=Object.fromEntries(Object.entries(rings).map(([c,polys])=>[c,landIndex(polys.flat())]));
 const signedArea=ring=>ring.slice(1).reduce((s,p,i)=>s+ring[i][0]*p[1]-p[0]*ring[i][1],0);
 
+// Claims that overlap: China's frontier inside India's outline (developer mode's India, with
+// India's official boundaries) is hidden while India's map is open.
+const indiaFile='dist/data/europe/india/first.bin',inIndia=fs.existsSync(indiaFile)?landIndex(load(indiaFile).regions.features.flatMap(f=>polygons(f.geometry)).flat()):()=>false;
+function claimRuns(path,country){
+ const inside=(a,b)=>{if(country!=='china')return false;const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return false;const m=[(a[0]+b[0])/2,(a[1]+b[1])/2];return [1,-1].every(side=>inIndia([m[0]-dy/len*side*100/111195/c,m[1]+dx/len*side*100/111195]));};
+ const runs=[];let current=null;
+ for(let i=1;i<path.length;i++){const claim=inside(path[i-1],path[i])?'india':null;if(!current||claim!==current.claim){current={claim,coordinates:[path[i-1]]};runs.push(current);}current.coordinates.push(path[i]);}
+ return runs;
+}
 const accepted=[],features=[];
 const taken=()=>lineIndex(accepted);
 for(const country of Object.keys(outlines)){
@@ -60,12 +69,16 @@ for(const country of Object.keys(outlines)){
   const n=ring.length-1;if(n<3)continue;
   // Foreign side: outside an exterior ring, inside a hole.
   const side=(signedArea(ring)>0)===(r===0)?-1:1;
-  const near=ring.map(p=>boundary(p)<=6000);
+  // China's outline follows its claims in the Himalaya and Karakoram (Aksai Chin, the Shaksgam
+  // valley, South Tibet), far from Natural Earth's lines, so there an edge is a frontier when land
+  // outside China lies all the way out to 3 km (not a sliver between two provinces' sources).
+  const claimZone=ring.map(p=>country==='china'&&p[0]>72&&p[0]<98.5&&p[1]>26&&p[1]<37.5);
+  const near=ring.map((p,i)=>boundary(p)<=6000||claimZone[i]);
   if(!near.some(Boolean))continue;
   const outward=(i,d)=>{const a=ring[i],b=ring[i+1],c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return null;return [(a[0]+b[0])/2-dy/len*side*d/111195/c,(a[1]+b[1])/2+dx/len*side*d/111195];};
   const foreign=(p,atlasSide)=>!!p&&!own(p)&&(atlasSide?insideOther(p):land(p));
   // Land frontier: foreign land immediately beyond the edge. Water borders come later.
-  const flags=Array.from({length:n},(_,i)=>{if(!near[i]||!near[i+1])return false;const m=[(ring[i][0]+ring[i+1][0])/2,(ring[i][1]+ring[i+1][1])/2],atlasSide=toAtlas(m)<toWorld(m);return (atlasSide?[100,300,600]:[100,300,600,1000,1500,2500,5000]).some(d=>foreign(outward(i,d),atlasSide));});
+  const flags=Array.from({length:n},(_,i)=>{if(!near[i]||!near[i+1])return false;if(boundary(ring[i])>6000||boundary(ring[i+1])>6000)return [300,1000,3000].every(d=>foreign(outward(i,d),false));const m=[(ring[i][0]+ring[i+1][0])/2,(ring[i][1]+ring[i+1][1])/2],atlasSide=toAtlas(m)<toWorld(m);return (atlasSide?[100,300,600]:[100,300,600,1000,1500,2500,5000]).some(d=>foreign(outward(i,d),atlasSide));});
   const coastEdges=()=>{for(let i=0;i<n;i++)if(!flags[i])coast.push([ring[i],ring[i+1]]);};
   if(!flags.some(Boolean)){coastEdges();continue;}
   // Gaps of up to 15 km close where land lies within 5 km beyond (river islands, a channel of
@@ -83,7 +96,9 @@ for(const country of Object.keys(outlines)){
    const length=p.slice(1).reduce((t,q,i)=>t+metres(p[i],q),0);if(length<1000&&metres(p[0],p.at(-1))>1)continue;
    // The neighbour, when it is an atlas country too (the frontier is then drawn once).
    const mid=p[Math.floor(p.length/2)],neighbours=Object.keys(inside).filter(c=>c!==country&&[1500,3000].some(d=>{const i=ring.indexOf(mid);return i>=0&&i<n&&inside[c](outward(i,d)||mid);}));
-   features.push({type:'Feature',properties:{countries:[country,...neighbours].join(' ')},geometry:{type:'LineString',coordinates:p}});accepted.push(p);landPaths.push(p);pieces++;
+   // Where China's claim line runs inside India's outline, India's map (when open) draws its own.
+   for(const run of claimRuns(p,country))features.push({type:'Feature',properties:{countries:[country,...neighbours].join(' '),...(run.claim?{claimedBy:run.claim}:{})},geometry:{type:'LineString',coordinates:run.coordinates}});
+   accepted.push(p);landPaths.push(p);pieces++;
   }
  }
  // Water frontiers between two atlas countries (a border lagoon, where both outlines leave

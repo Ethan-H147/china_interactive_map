@@ -21,7 +21,7 @@ for(const id of ids){
  assert(exists(c.statistics),id+' statistics file: '+c.statistics);
  for(const key of ['catalogue','extraCatalogue'])if(c.colors?.[key])assert(exists(c.colors[key]),id+' '+key+': '+c.colors[key]);
  assert(c.colors?.levels,id+' names its colour level');
- if(c.levelNames)assert(c.levelNames.length>=2&&c.levelNames.length<=3,id+' level names');
+ if(c.levelNames)assert(c.levelNames.length>=1&&c.levelNames.length<=3,id+' level names');
  if(c.map?.flag)assert(exists('vendor/flag-'+c.map.flag+'.svg')||exists('vendor/flag-'+c.map.flag+'.webp'),id+' flag');
  if(c.adapter==='southern-africa'||c.adapter==='europe'||c.adapter==='russia')assert(exists('vendor/flag-'+c.prefix+'.svg'),id+' national flag');
  if(c.portal)assert.match(c.portal.fill,/^#[0-9a-f]{6}$/,id+' portal fill');

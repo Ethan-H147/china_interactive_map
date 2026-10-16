@@ -71,6 +71,18 @@
       "width": 1200,
       "height": 800,
       "sha256": "5a47e932cdb371d9708d8c9a209d3acfd006cdd3ee7dd38ae44df6180e170e90"
+    },
+    "india": {
+      "file": "vendor/flag-in.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_India.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-in.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_India.svg",
+      "width": 900,
+      "height": 600,
+      "sha256": "95d7239707482165fbc0f685d5f493633639f16771c1fef9701f7ee66dcdf343"
     }
   }
 }

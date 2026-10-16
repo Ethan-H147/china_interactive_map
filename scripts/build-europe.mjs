@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-import {gzipSync} from 'node:zlib';
+import {gzipSync,gunzipSync} from 'node:zlib';
 import {lineData,visibleSegments} from '../dist/adaptive-lines.mjs';
 import {alignCountry,polygons} from './international-topology.mjs';
 import {readTerritory,coastLand,relationArea} from './europe-overseas.mjs';
@@ -14,6 +14,8 @@ async function command(data,commands,files={}){const result=JSON.parse((await ma
 function bounds(g){const b=[Infinity,Infinity,-Infinity,-Infinity];const walk=c=>{if(typeof c[0]==='number'){b[0]=Math.min(b[0],c[0]);b[1]=Math.min(b[1],c[1]);b[2]=Math.max(b[2],c[0]);b[3]=Math.max(b[3],c[1]);}else c.forEach(walk);};walk(g.coordinates);return [[b[0],b[1]],[b[2],b[3]]];}
 function write(country,name,data){const dir=out+'/'+country;fs.mkdirSync(path.dirname(dir+'/'+name),{recursive:true});const bytes=gzipSync(JSON.stringify(data),{level:9});fs.writeFileSync(dir+'/'+name,bytes);return bytes.length;}
 const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1]-b[1])*111195;
+// Area in km² (planar, scaled at each ring's latitude).
+const area=g=>polygons(g).reduce((s,poly)=>s+poly.reduce((t,ring,r)=>{const c=Math.cos(ring[0][1]*Math.PI/180);const a=Math.abs(ring.slice(1).reduce((u,p,i)=>u+ring[i][0]*p[1]-p[0]*ring[i][1],0))/2*c*111.195**2;return t+(r?-a:a);},0),0);
 // A territory's land: OpenStreetMap coastline (or other land, given) clipped to its boundary
 // relation, which includes territorial waters.
 async function osmLand(name,land){
@@ -193,7 +195,7 @@ async function loadIceland(){
 // Istanbul; the undotted forms stay searchable. HGM's Turkish names lose the dotless ı and write İ
 // as i with a combining dot, so each is spelled as OpenStreetMap's Turkish name that differs from it
 // only in dots and accents (two districts OpenStreetMap lacks are spelled here).
-const turkishSpellings=(()=>{const fold=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ı/g,'i').toLowerCase(),names=JSON.parse(fs.readFileSync('scripts/statistics-sources/europe/turkey-names-osm.json')).names.concat('Nazımiye','Sarıkaya'),byFold=new Map(names.map(n=>[fold(n),n]));return name=>byFold.get(fold(name))||name.replace(/i̇/g,'i');})();
+const turkishSpellings=(()=>{const fold=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/ı/g,'i').toLowerCase(),names=JSON.parse(fs.readFileSync('scripts/statistics-sources/europe/turkey-names-osm.json')).names.concat('Nazımiye','Sarıkaya'),byFold=new Map(names.map(n=>[fold(n),n]));return name=>byFold.get(fold(name))||name.replace(/i̇/g,'i');})();
 const turkishRegions={TR1:['Istanbul','İstanbul'],TR2:['West Marmara','Batı Marmara'],TR3:['Aegean','Ege'],TR4:['East Marmara','Doğu Marmara'],TR5:['West Anatolia','Batı Anadolu'],TR6:['Mediterranean','Akdeniz'],TR7:['Central Anatolia','Orta Anadolu'],TR8:['West Black Sea','Batı Karadeniz'],TR9:['East Black Sea','Doğu Karadeniz'],TRA:['Northeast Anatolia','Kuzeydoğu Anadolu'],TRB:['Central East Anatolia','Ortadoğu Anadolu'],TRC:['Southeast Anatolia','Güneydoğu Anadolu']};
 const turkishProvinceRegions={TR1:['34'],TR2:['10','17','22','39','59'],TR3:['03','09','20','35','43','45','48','64'],TR4:['11','14','16','26','41','54','77','81'],TR5:['06','42','70'],TR6:['01','07','15','31','32','33','46','80'],TR7:['38','40','50','51','58','66','68','71'],TR8:['05','18','19','37','55','57','60','67','74','78'],TR9:['08','28','29','52','53','61'],TRA:['04','24','25','36','69','75','76'],TRB:['12','13','23','30','44','49','62','65'],TRC:['02','21','27','47','56','63','72','73','79']};
 async function loadTurkey(){
@@ -208,14 +210,43 @@ async function loadTurkey(){
  const simplified=await command(fc(districts),simplify);
  return {features:simplified.features,units};
 }
+// India: the 36 states and union territories (geoBoundaries' copy of DataMeet's map, which
+// follows the Election Commission), with India's official boundaries. Ids are the current
+// ISO 3166-2:IN codes; names are English, with Hindi beside them.
+const indianNames={AN:['Andaman and Nicobar Islands','अंडमान और निकोबार द्वीपसमूह'],AP:['Andhra Pradesh','आन्ध्र प्रदेश'],AR:['Arunachal Pradesh','अरुणाचल प्रदेश'],AS:['Assam','असम'],BR:['Bihar','बिहार'],CH:['Chandigarh','चण्डीगढ़'],CG:['Chhattisgarh','छत्तीसगढ़'],DH:['Dadra and Nagar Haveli and Daman and Diu','दादरा और नगर हवेली और दमन और दीव'],DL:['Delhi','दिल्ली'],GA:['Goa','गोवा'],GJ:['Gujarat','गुजरात'],HP:['Himachal Pradesh','हिमाचल प्रदेश'],HR:['Haryana','हरियाणा'],JH:['Jharkhand','झारखण्ड'],JK:['Jammu and Kashmir','जम्मू और कश्मीर'],KA:['Karnataka','कर्नाटक'],KL:['Kerala','केरल'],LA:['Ladakh','लद्दाख'],LD:['Lakshadweep','लक्षद्वीप'],MH:['Maharashtra','महाराष्ट्र'],ML:['Meghalaya','मेघालय'],MN:['Manipur','मणिपुर'],MP:['Madhya Pradesh','मध्य प्रदेश'],MZ:['Mizoram','मिज़ोरम'],NL:['Nagaland','नागालैण्ड'],OD:['Odisha','ओडिशा'],PB:['Punjab','पंजाब'],PY:['Puducherry','पुडुचेरी'],RJ:['Rajasthan','राजस्थान'],SK:['Sikkim','सिक्किम'],TS:['Telangana','तेलंगाना'],TN:['Tamil Nadu','तमिल नाडु'],TR:['Tripura','त्रिपुरा'],UP:['Uttar Pradesh','उत्तर प्रदेश'],UK:['Uttarakhand','उत्तराखण्ड'],WB:['West Bengal','पश्चिम बंगाल']};
+const indianUnionTerritories=new Set(['AN','CH','DH','DL','JK','LA','LD','PY']);
+// geoBoundaries keeps four codes ISO 3166-2:IN has since changed.
+const indianCodes={OR:'OD',CT:'CG',UT:'UK',TG:'TS'};
+async function loadIndia(){
+ const units=new Map(),features=read('ind-adm1.geojson').features.map(f=>{
+  const code=f.properties.shapeISO.slice(3),current=indianCodes[code]||code,[en,local]=indianNames[current]||[];assert(en,'Indian state '+code);
+  const plain=f.properties.shapeName.normalize('NFD').replace(/\p{M}/gu,'');
+  units.set('IN-'+current,{level:1,parent:null,en,local,kind:indianUnionTerritories.has(current)?'Union territory':'State',code:current,...(plain!==en?{aliases:[plain]}:{})});
+  return {type:'Feature',properties:{id:'IN-'+current},geometry:f.geometry};
+ });
+ // The map shows 2011, before the 2015 land boundary agreement: West Bengal's enclaves inside
+ // Bangladesh (every separate part under 10 km² around Cooch Behar) became Bangladeshi, so they
+ // are dropped.
+ const westBengal=features.find(f=>f.properties.id==='IN-WB'),parts=polygons(westBengal.geometry);
+ const enclave=poly=>{const ring=poly[0],c=[ring.reduce((s,p)=>s+p[0],0)/ring.length,ring.reduce((s,p)=>s+p[1],0)/ring.length];return c[0]>88.5&&c[0]<89.9&&c[1]>25.8&&c[1]<26.6&&area({type:'Polygon',coordinates:[ring]})<10;};
+ westBengal.geometry={type:'MultiPolygon',coordinates:parts.filter(p=>!enclave(p))};
+ console.log('India: dropped',parts.length-westBengal.geometry.coordinates.length,'former enclaves in Bangladesh');
+ assert.equal(units.size,36,'India has 28 states and 8 union territories');
+ return {features:(await command(fc(features),simplify)).features,units};
+}
 const countries={
  'united-kingdom':{id:'GB',en:'United Kingdom',local:'',file:'ons-lad-dec-2024-bgc.geojson',load:loadUK,levels:['Nation or region','County or unitary authority','District'],bundled:3,camera:[[-8.7,49.85],[1.8,60.9]],coverage:'The 12 ITL1 nations and regions, 218 counties and unitary authorities (including metropolitan and London boroughs and the Welsh, Scottish and Northern Irish councils) and the 164 districts of the English two-tier counties, from the Office for National Statistics December 2024 local authority boundaries, generalised to 20 m and clipped to the coastline. Counties and regions are dissolved from the districts; single-tier authorities have no districts below them. Crown Dependencies (Isle of Man, Jersey, Guernsey) and overseas territories are not part of the United Kingdom and are excluded.'},
  spain:{id:'ES',en:'Spain',local:'España',file:'ign-lineas-limite-gml.zip',load:loadSpain,levels:['Autonomous community','Province','Municipality'],bundled:2,camera:[[-9.4,35.9],[4.4,43.8]],coverage:'17 autonomous communities, the autonomous cities of Ceuta and Melilla, and the minor sovereign territories under central administration (Gibraltar, which the BDLJE lists among them as Spain claims it, is a British overseas territory and is excluded); 52 provinces; and every municipality plus the shared territories (condominiums) that several municipalities own jointly, from the Instituto Geográfico Nacional jurisdictional boundaries (BDLJE). Communities and provinces are dissolved from the municipalities. Llívia takes its shape from the matching enclave in the French outline.'},
  france:{id:'FR',en:'France',local:'',file:'france-communes-*.geojson',load:loadFrance,levels:['Region','Department','Commune'],bundled:2,camera:[[-5.2,41.3],[9.6,51.1]],coverage:'The 13 regions of metropolitan France (including the territorial collectivity of Corsica), its 96 départements and every commune, from IGN ADMIN EXPRESS outlines published by geo.api.gouv.fr. Regions and départements are dissolved from the communes. Overseas regions are not yet included.'},
  iceland:{id:'IS',en:'Iceland',local:'Ísland',file:'isl-sveitarfelog-is50v.geojson',load:loadIceland,levels:['Region','Municipality'],bundled:2,camera:[[-24.6,63.2],[-13.4,66.6]],coverage:'The eight regions (landshlutar) and 61 municipalities (sveitarfélög), from the IS 50V municipal boundaries of the Icelandic Institute of Natural History (formerly the National Land Survey), land only. Regions group the municipalities by their municipal number, as Statistics Iceland does, and are dissolved from them.'},
  turkey:{id:'TR',en:'Turkey',local:'Türkiye',file:'tur-hgm-admin-boundaries.geojson.zip',load:loadTurkey,levels:['Statistical region','Province','District'],bundled:2,camera:[[25.6,35.8],[44.9,42.2]],coverage:'The 12 statistical regions (İBBS level 1), 81 provinces and 973 districts, from the General Command of Mapping (HGM) boundaries published by OCHA (valid from 1 January 2022, January 2026 edition). Provinces and regions are dissolved from the districts; regions group the provinces as TÜİK does.'},
+ india:{id:'IN',en:'India',local:'भारत',file:'ind-adm1.geojson',load:loadIndia,levels:['State or union territory'],camera:[[68,6.5],[97.5,37.1]],coverage:"India's 28 states and 8 union territories, from geoBoundaries' copy of the DataMeet map (after the Election Commission of India), with India's official boundaries. Where they meet China's outline, India's edges are moved onto it, and land between the two goes to India; the areas both countries claim are drawn by whichever country's map is open."},
  italy:{id:'IT',en:'Italy',local:'Italia',file:'istat-limiti-2026.zip',load:loadItaly,levels:['Region','Province','Comune'],bundled:2,camera:[[6.6,35.5],[18.6,47.1]],coverage:"20 regions, 110 provinces and equivalent units (metropolitan cities, autonomous provinces, Sicily's free municipal consortia and Friuli-Venezia Giulia's former provinces) and 7,896 comuni, from ISTAT's full-detail boundaries for statistical purposes at 1 January 2026. Regions and provinces are dissolved from the comuni. San Marino and Vatican City remain enclaves."}
 };
+// ONLY=india (comma-separated) builds just those countries while developing; the full build
+// needs every country (Spain's and Italy's frontiers align to France's).
+const only=process.env.ONLY?.split(',');
+if(only)for(const country of Object.keys(countries))if(!only.includes(country))delete countries[country];
 const outlines={},lowest={};
 for(const [country,c] of Object.entries(countries)){
  if(c.load){const loaded=await c.load();c.units=loaded.units;lowest[country]=fc(loaded.features);}
@@ -227,6 +258,8 @@ for(const [country,c] of Object.entries(countries)){
 // edges within the Pyrenees and Alpine corridors move onto France's line, and any
 // remaining overlap is erased, so each pair shares exactly one edge.
 const inBox=(w,s,e,n)=>(a,b)=>[a,b].every(p=>p[0]>=w&&p[0]<=e&&p[1]>=s&&p[1]<=n);
+const seamReports={};
+if(!only){
 const france={type:'Feature',properties:{},geometry:outlines.france};
 // Spain's Llívia is the hole in France near Puigcerdà; use that ring exactly.
 const inLlivia=poly=>{const b=bounds({type:'Polygon',coordinates:poly});return b[0][0]>1.9&&b[1][0]<2.05&&b[0][1]>42.42&&b[1][1]<42.5;};
@@ -237,7 +270,6 @@ const lliviaOwner=lowest.spain.features.find(f=>polygons(f.geometry).some(inLliv
 const lliviaId=lliviaOwner.properties.id;
 lliviaOwner.geometry={type:'MultiPolygon',coordinates:polygons(lliviaOwner.geometry).filter(p=>!inLlivia(p))};
 if(!lliviaOwner.geometry.coordinates.length)lowest.spain.features=lowest.spain.features.filter(f=>f!==lliviaOwner);
-const seamReports={};
 for(const [country,allowed] of [['spain',inBox(-2,42.2,3.3,43.45)],['italy',inBox(6.5,43.7,7.8,46)]]){
  const result=alignCountry(lowest[country].features,france,allowed,3000);
  seamReports[country+'-france']=result.report;console.log('Aligned',country,'to France',result.report.changedEdges,'edges, max',Math.round(result.report.maxDisplacementMetres),'m');
@@ -250,6 +282,67 @@ for(const country of ['spain','italy'])outlines[country]=lowest[country].feature
 countries['united-kingdom'].units.set('GB-O-GI',{level:1,parent:null,en:'Gibraltar',local:'Gibraltar',kind:'British Overseas Territory',overseas:true});
 lowest['united-kingdom'].features.push(gibraltar);
 outlines['united-kingdom']=single(await command(lowest['united-kingdom'],'-dissolve'));
+}
+
+// China's outline (the atlas's own, as China's map draws it) is the reference for India's
+// frontier with China, Nepal and Bhutan. Indian edges within 3 km of it move onto it, and land
+// left between the two goes to the nearest state, so the shared frontier is one line. Nepal and
+// Bhutan are the land the two enclose, drawn beneath India at this precision (the world map's
+// 1:110m silhouettes cannot meet these outlines). Both countries claim Aksai Chin, the Shaksgam
+// valley and Arunachal Pradesh (South Tibet), and some smaller tracts: India's map draws India's
+// claim, and while China's is open India's portal leaves out everything China's outline holds.
+// While other maps are open it also leaves out the Kashmir that Pakistan administers.
+const chinaOutline=single(await command(fc(JSON.parse(gunzipSync(fs.readFileSync('dist/data/china-context.bin'))).features.map(f=>({type:'Feature',properties:{},geometry:f.geometry}))),'-dissolve -clean'));
+const china={type:'Feature',properties:{},geometry:chinaOutline};
+const indiaParts={};
+if(lowest.india){
+ const result=alignCountry(lowest.india.features,china,inBox(72,26,98.5,37.5),3000);
+ seamReports['india-china']=result.report;console.log('Aligned India to China',result.report.changedEdges,'edges, max',Math.round(result.report.maxDisplacementMetres),'m');
+ const edge=[66,5,100,38],box={type:'Feature',properties:{},geometry:{type:'Polygon',coordinates:[[[edge[0],edge[1]],[edge[2],edge[1]],[edge[2],edge[3]],[edge[0],edge[3]],[edge[0],edge[1]]]]}};
+ const states=(await command(fc(result.features),'-clean')).features;
+ const rest=(await command(fc([box]),'-erase land.json -explode',{'land.json':fc([...states,china])})).features.filter(f=>f.geometry&&polygons(f.geometry)[0]?.[0]?.length);
+ const onEdge=g=>polygons(g).flat(2).some(p=>[0,2].some(i=>Math.abs(p[0]-edge[i])<1e-6)||[1,3].some(i=>Math.abs(p[1]-edge[i])<1e-6));
+ const enclosed=rest.filter(f=>!onEdge(f.geometry)),inside=(f,p)=>landIndex(polygons(f.geometry).flat())(p);
+ const nepal=enclosed.find(f=>inside(f,[85.32,27.7])),bhutan=enclosed.find(f=>inside(f,[89.64,27.47]));assert(nepal&&bhutan,'Nepal and Bhutan lie between India and China');
+ indiaParts.neighbours=[{type:'Feature',properties:{country:'nepal'},geometry:nepal.geometry},{type:'Feature',properties:{country:'bhutan'},geometry:bhutan.geometry}];
+ // Other enclosed land is a gap between the two sources; each goes to the state nearest it.
+ const gaps=enclosed.filter(f=>f!==nepal&&f!==bhutan);
+ assert(gaps.every(f=>area(f.geometry)<1000),'Only slivers lie between India and China: '+gaps.filter(f=>area(f.geometry)>=1000).map(f=>Math.round(area(f.geometry))+' km² at '+polygons(f.geometry)[0][0][0].map(v=>v.toFixed(2))).join('; '));
+ const vertices=states.map(f=>({id:f.properties.id,points:polygons(f.geometry).flat(2)}));
+ const nearest=p=>{let best=null,d=Infinity;for(const v of vertices)for(const q of v.points){const m=metres(p,q);if(m<d){d=m;best=v.id;}}return best;};
+ const filled=gaps.map(f=>({type:'Feature',properties:{id:nearest(polygons(f.geometry)[0][0][0])},geometry:f.geometry}));
+ lowest.india=await command(fc([...states,...filled]),'-dissolve2 id -clean');
+ outlines.india=single(await command(lowest.india,'-dissolve'));
+ console.log('India: filled',gaps.length,'gaps of',Math.round(gaps.reduce((s,f)=>s+area(f.geometry),0)),'km²');
+ // The portal shown while another country is open.
+ const indiaFeature=fc([{type:'Feature',properties:{},geometry:outlines.india}]);
+ const overlap=(await command(indiaFeature,'-clip china.json -explode',{'china.json':fc([china])})).features.filter(f=>f.geometry);
+ const claims=overlap.filter(f=>area(f.geometry)>=20);
+ const pakistan=(await command(indiaFeature,'-clip pakistan.json -explode',{'pakistan.json':fc(read('ne-10m-countries.geojson').features.filter(f=>f.properties.ADM0_A3==='PAK'))})).features.filter(f=>f.geometry&&area(f.geometry)>=1000);
+ assert.equal(pakistan.length,1,'Pakistan administers one part of Kashmir');
+ const home=(await command(indiaFeature,'-erase cut.json -clean',{'cut.json':fc([china,...pakistan])})).features.filter(f=>f.geometry);
+ indiaParts.context=[{type:'Feature',properties:{country:'india'},geometry:single(fc(home))},...claims.map(f=>({type:'Feature',properties:{country:'india',claimedBy:'china'},geometry:f.geometry}))];
+ // India's other land neighbours, from geoBoundaries, drawn beneath it the same way: India's and
+ // China's outlines win where they overlap (Pakistan keeps the Kashmir it administers, which India's
+ // map covers with its own claim), and land enclosed between the sources goes to the nearest
+ // neighbour, so India's and China's edges stay their own. Beyond the area the world map takes over.
+ const others=[];
+ for(const [iso,name] of [['pak','pakistan'],['afg','afghanistan'],['bgd','bangladesh'],['mmr','myanmar']]){
+  const cut=['bgd','mmr'].includes(iso)?[china,...indiaFeature.features]:[china,...home];
+  const g=(await command(fc(read('neighbour-'+iso+'-adm0.geojson').features.map(f=>({type:'Feature',properties:{country:name},geometry:f.geometry}))),'-clip box.json -erase cut.json -dissolve country -clean',{'box.json':fc([box]),'cut.json':fc(cut)})).features.find(f=>f.geometry);
+  if(g)others.push(g);
+ }
+ const drawn=[...lowest.india.features,china,...indiaParts.neighbours,...others];
+ const loose=(await command(fc([box]),'-erase land.json -explode',{'land.json':fc(drawn)})).features.filter(f=>f.geometry&&polygons(f.geometry)[0]?.[0]?.length&&!onEdge(f.geometry));
+ const neighbourPoints=[...indiaParts.neighbours,...others].map(f=>({country:f.properties.country,points:polygons(f.geometry).flat(2).filter((p,i)=>i%4===0)}));
+ const nearestNeighbour=p=>{let best=null,d=Infinity;for(const v of neighbourPoints)for(const q of v.points){const m=metres(p,q);if(m<d){d=m;best=v.country;}}return best;};
+ const byCountry=new Map([...indiaParts.neighbours,...others].map(f=>[f.properties.country,[f]]));
+ for(const f of loose)byCountry.get(nearestNeighbour(polygons(f.geometry)[0][0][0])).push(f);
+ indiaParts.neighbours=[];
+ for(const [country,list] of byCountry)indiaParts.neighbours.push(...(await command(fc(list.map(f=>({type:'Feature',properties:{country},geometry:f.geometry}))),'-dissolve2 country -clean')).features.filter(f=>f.geometry));
+ console.log('India neighbours:',indiaParts.neighbours.map(f=>f.properties.country).join(', '),'; filled',loose.length,'gaps of',Math.round(loose.reduce((s,f)=>s+area(f.geometry),0)),'km²');
+ console.log('India: claims shared with China',claims.map(f=>Math.round(area(f.geometry))+' km²').join(', '),'; slivers',overlap.length-claims.length,'; Pakistan-administered',Math.round(area(pakistan[0].geometry)),'km²');
+}
 
 // Land frontiers. An outline edge is a frontier when foreign land lies just beyond it:
 // a point 100 m or 300 m outward falls inside a neighbouring country (another outline
@@ -290,12 +383,15 @@ for(const name of fs.readdirSync(source).filter(n=>n.startsWith('osm-relation-')
 const wayEdges=[],wayGrid=new Map();
 for(const way of landWays)for(let i=1;i<way.length;i++){const a=way[i-1],b=way[i],k=wayEdges.push([a,b])-1;for(let x=Math.floor(Math.min(a[0],b[0])/cell)-1;x<=Math.floor(Math.max(a[0],b[0])/cell)+1;x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell)-1;y<=Math.floor(Math.max(a[1],b[1])/cell)+1;y++){const key=x+','+y;if(!wayGrid.has(key))wayGrid.set(key,[]);wayGrid.get(key).push(k);}}
 function nearLandWay(p,limit=200){for(const k of wayGrid.get(Math.floor(p[0]/cell)+','+Math.floor(p[1]/cell))||[]){const [a,b]=wayEdges[k],c=Math.cos(p[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],u=Math.max(0,Math.min(1,((p[0]-a[0])*c*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));if(metres(p,[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])])<=limit)return true;}return false;}
-const neighbours=['prt-adm0','and-adm0','gib-adm0','mar-adm0','bel-adm2','lux-adm0','deu-adm0','che-adm0','mco-adm0','aut-adm0','svn-adm2','smr-adm0','vat-adm0','irl-adm1','sur-adm0','bra-adm0','cyp-adm0','grc-adm0','bgr-adm0','geo-adm0','arm-adm0','aze-adm0','irn-adm1','irq-adm2','syr-adm0'].map(file=>({file,maritime:maritime.has(file),inside:landIndex(read('neighbour-'+file+'.geojson').features.flatMap(f=>rings(f.geometry)))}));
+const neighbours=['prt-adm0','and-adm0','gib-adm0','mar-adm0','bel-adm2','lux-adm0','deu-adm0','che-adm0','mco-adm0','aut-adm0','svn-adm2','smr-adm0','vat-adm0','irl-adm1','sur-adm0','bra-adm0','cyp-adm0','grc-adm0','bgr-adm0','geo-adm0','arm-adm0','aze-adm0','irn-adm1','irq-adm2','syr-adm0','pak-adm0','afg-adm0','npl-adm0','btn-adm0','bgd-adm0','mmr-adm0'].map(file=>({file,maritime:maritime.has(file),inside:landIndex(read('neighbour-'+file+'.geojson').features.flatMap(f=>rings(f.geometry)))}));
 // Sint Maarten has no geoBoundaries outline: its OpenStreetMap relation (with territorial waters).
 {const elements=read('osm-relation-1231790.json').elements,nodes=new Map(elements.filter(e=>e.type==='node').map(e=>[e.id,{lon:e.lon,lat:e.lat}])),ways=new Map(elements.filter(e=>e.type==='way').map(e=>[e.id,e.nodes.map(id=>nodes.get(id))]));
  const relation=elements.find(e=>e.type==='relation'&&e.id===1231790);
  const area=relationArea({members:relation.members.map(m=>({...m,geometry:ways.get(m.ref)}))},'Sint Maarten');
  neighbours.push({maritime:maritime.has('sxm-osm'),inside:landIndex(area.flat())});}
+// India's neighbours' geoBoundaries outlines are coarse in places (Bangladesh, Bhutan), so Natural
+// Earth's countries around India count too, and China's own outline.
+neighbours.push({maritime:false,inside:landIndex(rings(chinaOutline))},{maritime:false,inside:landIndex(read('ne-10m-countries.geojson').features.filter(f=>f.properties.ADM0_A3!=='IND'&&(b=>b[0][0]<100&&b[1][0]>60&&b[0][1]<40&&b[1][1]>0)(bounds(f.geometry))).flatMap(f=>rings(f.geometry)))});
 const atlasLand=Object.fromEntries(Object.entries(outlines).map(([country,g])=>[country,landIndex(rings(g))]));
 const signedArea=ring=>ring.slice(1).reduce((s,p,i)=>s+ring[i][0]*p[1]-p[0]*ring[i][1],0);
 function frontierPaths(country,exclude=()=>false){
@@ -310,9 +406,10 @@ function frontierPaths(country,exclude=()=>false){
   // French Guiana's river frontiers are up to 2 km wide and its tripoints lie in forest far
   // from any source line, so rings in the Americas probe further and close longer inland gaps;
   // so does Turkey, whose eastern neighbours' outlines are coarse (Iraq's, Iran's, Syria's).
-  const wide=ring.some(p=>p[0]<-30)||country==='turkey',gap=wide?8000:3000;
+  const wide=ring.some(p=>p[0]<-30)||country==='turkey'||country==='india',gap=wide?8000:3000;
   const flags=Array.from({length:n},(_,i)=>{
-   const a=ring[i],b=ring[i+1],limit=wide?10000:reach;if(distance[i]>limit||distance[i+1]>limit)return false;
+   // India's frontier follows its claims, which Natural Earth's lines do not.
+   const a=ring[i],b=ring[i+1],limit=country==='india'?Infinity:wide?10000:reach;if(distance[i]>limit||distance[i+1]>limit)return false;
    const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return false;
    const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],nx=-dy/len*side,ny=dx/len*side;
    const shoreSafe=onLandWay[i]&&onLandWay[i+1];
@@ -345,13 +442,17 @@ function frontierPaths(country,exclude=()=>false){
 }
 // A frontier shared with France belongs to France, and Gibraltar's to Spain, so each edge is
 // drawn once.
-function sharedWith(country){
- const edges=[];for(const poly of polygons(outlines[country]))for(const ring of poly)for(let i=1;i<ring.length;i++)edges.push([ring[i-1],ring[i]]);
+function sharedWith(geometry){
+ const edges=[];for(const poly of polygons(geometry))for(const ring of poly)for(let i=1;i<ring.length;i++)edges.push([ring[i-1],ring[i]]);
  const grid=new Map();edges.forEach(([a,b],i)=>{for(let x=Math.floor(Math.min(a[0],b[0])/cell);x<=Math.floor(Math.max(a[0],b[0])/cell);x++)for(let y=Math.floor(Math.min(a[1],b[1])/cell);y<=Math.floor(Math.max(a[1],b[1])/cell);y++){const k=x+','+y;if(!grid.has(k))grid.set(k,[]);grid.get(k).push(i);}});
  const near=p=>{for(const i of grid.get(Math.floor(p[0]/cell)+','+Math.floor(p[1]/cell))||[]){const [a,b]=edges[i],c=Math.cos(p[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],u=Math.max(0,Math.min(1,((p[0]-a[0])*c*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));if(metres(p,[a[0]+u*(b[0]-a[0]),a[1]+u*(b[1]-a[1])])<2)return true;}return false;};
  return (a,b)=>near(a)&&near(b)&&near([(a[0]+b[0])/2,(a[1]+b[1])/2]);
 }
-const sharedWithFrance=sharedWith('france');
+const sharedWithFrance=outlines.france?sharedWith(outlines.france):()=>false,sharedWithChina=sharedWith(chinaOutline);
+// China's outline lies inside India's claims where China holds them; India's frontier there is
+// India's claim, shown only while China's map is closed.
+const inChina=landIndex(rings(chinaOutline));
+function insideChina(a,b){const c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return false;const m=[(a[0]+b[0])/2,(a[1]+b[1])/2];return [1,-1].every(side=>inChina([m[0]-dy/len*side*100/111195/c,m[1]+dx/len*side*100/111195]));}
 // Gibraltar's one land frontier is the fence, which Spain draws; its marina and harbour coasts
 // face La Línea across water, so the United Kingdom draws no frontier there.
 const inGibraltar=(a,b)=>[a,b].every(p=>p[0]>-5.4&&p[0]<-5.3&&p[1]>36.1&&p[1]<36.16);
@@ -401,7 +502,8 @@ for(const [country,c] of Object.entries(countries)){
  }
  const overseasFirst=byLevel[1].features.filter(f=>unit(f.properties.id).overseas);
  const homeGeometry=overseasFirst.length?single(await command(fc(byLevel[1].features.filter(f=>!unit(f.properties.id).overseas)),'-dissolve')):geometry;
- write(country,'context.bin',fc([{type:'Feature',properties:{country},geometry:homeGeometry},...overseasFirst.map(f=>{const u=unit(f.properties.id),b=bounds(f.geometry);return {type:'Feature',properties:{country,region:f.properties.id,bounds:[...b[0],...b[1]].map(v=>round(v)),...(u.claimedBy?{claimedBy:u.claimedBy}:{})},geometry:f.geometry};})]));
+ if(country==='india'){write(country,'context.bin',fc(indiaParts.context));write(country,'neighbours.bin',fc(indiaParts.neighbours));}
+ else write(country,'context.bin',fc([{type:'Feature',properties:{country},geometry:homeGeometry},...overseasFirst.map(f=>{const u=unit(f.properties.id),b=bounds(f.geometry);return {type:'Feature',properties:{country,region:f.properties.id,bounds:[...b[0],...b[1]].map(v=>round(v)),...(u.claimedBy?{claimedBy:u.claimedBy}:{})},geometry:f.geometry};})]));
  for(let level=1;level<=maxLevel;level++){
   const regions=byLevel[level],points=await command(regions,'-points inner'),areas=await command(regions,'-each "areaKm2=$.area/1000000"');
   counts[level]=regions.features.length;
@@ -417,12 +519,16 @@ for(const [country,c] of Object.entries(countries)){
   chunks[id]={file,count:children.features.length,level,bytes:write(country,file,data),decodedBytes:Buffer.byteLength(JSON.stringify(data))};
  }
  write(country,'catalogue.bin',{records,chunks,counts,levels});
- const paths=frontierPaths(country,country==='spain'||country==='italy'?sharedWithFrance:country==='united-kingdom'?inGibraltar:()=>false);
+ // China draws its frontier with India.
+ const paths=frontierPaths(country,country==='spain'||country==='italy'?sharedWithFrance:country==='united-kingdom'?inGibraltar:country==='india'?sharedWithChina:()=>false);
  const length=paths.reduce((s,p)=>s+p.slice(1).reduce((t,q,i)=>t+metres(p[i],q),0),0);
- write(country,'international.bin',lineData(fc(paths.map(coordinates=>({type:'Feature',properties:{countries:[country]},geometry:{type:'LineString',coordinates}})))));
+ // Each path splits where it enters or leaves China's outline.
+ const lines=[];for(const p of paths){let current=null,claim=null;for(let i=1;i<p.length;i++){const inside=country==='india'&&insideChina(p[i-1],p[i]);if(!current||inside!==claim){current=[p[i-1]];claim=inside;lines.push({claim,coordinates:current});}current.push(p[i]);}}
+ // A split can leave a stub of a few metres doubling back along its neighbour.
+ write(country,'international.bin',lineData(fc(lines.filter(l=>l.coordinates.slice(1).reduce((t,q,i)=>t+metres(l.coordinates[i],q),0)>=20).map(({claim,coordinates})=>({type:'Feature',properties:{countries:[country],...(claim?{claimedBy:'china'}:{})},geometry:{type:'LineString',coordinates}})))));
  // A wildcard source name lists every matching file (France has one per département).
  const own=c.file.includes('*')?Object.keys(manifest.files).filter(n=>n.startsWith(c.file.split('*')[0])||n==='france-regions.json'||n==='france-departements.json'):[c.file];
- const files=[...own,'ne-10m-land-boundaries.geojson',...Object.keys(manifest.files).filter(n=>n.startsWith('neighbour-')||n.startsWith('osm-relation-'))];
+ const files=[...own,'ne-10m-land-boundaries.geojson',...(country==='india'?['ne-10m-countries.geojson']:[]),...Object.keys(manifest.files).filter(n=>n.startsWith('neighbour-')||n.startsWith('osm-relation-'))];
  fs.writeFileSync(out+'/'+country+'/sources.json',JSON.stringify({retrieved:manifest.retrieved,counts,coverage:c.coverage,processing,frontierKm:Math.round(length/1000),seamReports:Object.fromEntries(Object.entries(seamReports).filter(([k])=>k.includes(country))),sources:files.map(n=>({file:n,...manifest.files[n]}))},null,2)+'\n');
  console.log(country,counts,'chunks',Object.keys(chunks).length,'; land frontier',Math.round(length/1000),'km in',paths.length,'paths');
 }

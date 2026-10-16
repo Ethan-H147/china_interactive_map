@@ -7,7 +7,7 @@ const root=path.resolve(process.argv[2]||'artifacts/europe-source');
 fs.mkdirSync(root,{recursive:true});
 const manifest={retrieved:new Date().toISOString().slice(0,10),files:{}};
 const pinned=new Map();
-for(const country of ['united-kingdom','spain','france','italy','iceland','turkey']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
+for(const country of ['united-kingdom','spain','france','italy','iceland','turkey','india']){const file='dist/data/europe/'+country+'/sources.json';if(fs.existsSync(file))for(const s of JSON.parse(fs.readFileSync(file)).sources)pinned.set(s.file,s);}
 // Some servers cut long transfers; fetch those in 4 MB ranges with retries.
 async function ranged(url){
  const size=+(await fetch(url,{method:'HEAD'})).headers.get('content-length'),parts=[];
@@ -45,10 +45,13 @@ await download('gbr-countries-2024-bgc.geojson',ons,{provider:'Office for Nation
 await geoBoundaries('esp-adm0.geojson','ESP','ADM0','https://creativecommons.org/licenses/by/4.0/');
 await geoBoundaries('fra-adm1.geojson','FRA','ADM1','https://www.etalab.gouv.fr/licence-ouverte-open-licence/');
 await geoBoundaries('ita-adm0.geojson','ITA','ADM0','https://creativecommons.org/licenses/by/3.0/');
+// India: the 36 states and union territories as DataMeet and the Election Commission draw them
+// (India's official boundaries, including its claims), CC BY 2.5 India.
+await geoBoundaries('ind-adm1.geojson','IND','ADM1','https://creativecommons.org/licenses/by/2.5/in/');
 // Neighbouring countries: used only to tell land frontier from coastline (an outline
 // edge with foreign land just beyond it is a frontier). None of their geometry is shipped.
 // The most detailed land-only level is used where ADM0 is coarse (Belgium, Ireland, Slovenia).
-for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1'],['SUR','ADM0'],['BRA','ADM0'],['CYP','ADM0'],['GRC','ADM0'],['BGR','ADM0'],['GEO','ADM0'],['ARM','ADM0'],['AZE','ADM0'],['IRN','ADM1'],['IRQ','ADM2'],['SYR','ADM0']]){
+for(const [iso,level] of [['PRT','ADM0'],['AND','ADM0'],['GIB','ADM0'],['MAR','ADM0'],['BEL','ADM2'],['LUX','ADM0'],['DEU','ADM0'],['CHE','ADM0'],['MCO','ADM0'],['AUT','ADM0'],['SVN','ADM2'],['SMR','ADM0'],['VAT','ADM0'],['IRL','ADM1'],['SUR','ADM0'],['BRA','ADM0'],['CYP','ADM0'],['GRC','ADM0'],['BGR','ADM0'],['GEO','ADM0'],['ARM','ADM0'],['AZE','ADM0'],['IRN','ADM1'],['IRQ','ADM2'],['SYR','ADM0'],['PAK','ADM0'],['AFG','ADM0'],['NPL','ADM0'],['BTN','ADM0'],['BGD','ADM0'],['MMR','ADM0']]){
  const meta=await metadata('https://www.geoboundaries.org/api/current/gbOpen/'+iso+'/'+level+'/');
  await download('neighbour-'+iso.toLowerCase()+'-'+level.toLowerCase()+'.geojson',meta.gjDownloadURL,{provider:meta.boundarySource,year:meta.boundaryYearRepresented,license:meta.boundaryLicense,via:'geoBoundaries gbOpen '+iso+' '+level,use:'Classifies land frontier; no geometry is copied.'});
 }
@@ -99,4 +102,5 @@ await download('isl-sveitarfelog-is50v.geojson','https://gis.lmi.is/geoserver/IS
 // (Common Operational Dataset, January 2026), CC BY-IGO.
 await download('tur-hgm-admin-boundaries.geojson.zip','https://data.humdata.org/dataset/d74086a0-f398-4474-9e12-1b9a70907bd0/resource/470bd810-2240-4ce0-b5c4-17434112ce41/download/tur_admin_boundaries.geojson.zip',{provider:'General Command of Mapping (Harita Genel Müdürlüğü), via OCHA Common Operational Datasets (cod-ab-tur), valid from 1 January 2022, published January 2026',license:'Creative Commons Attribution for Intergovernmental Organisations 3.0',licenseURL:'https://creativecommons.org/licenses/by/3.0/igo/',dataset:'https://data.humdata.org/dataset/cod-ab-tur'});
 await download('ne-10m-land-boundaries.geojson','https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson',{provider:'Natural Earth 1:10m admin 0 land boundary lines v5.1.2',license:'Public domain',licenseURL:'https://www.naturalearthdata.com/about/terms-of-use/',use:'Classifies outline edges as land frontier or coastline; no geometry is copied.'});
+await download('ne-10m-countries.geojson','https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson',{provider:'Natural Earth 1:10m admin 0 countries v5.1.2',license:'Public domain',licenseURL:'https://www.naturalearthdata.com/about/terms-of-use/',use:"India's land neighbours (its frontier), and the line of control that bounds the Kashmir Pakistan administers in India's portal."});
 fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
