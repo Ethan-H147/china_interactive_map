@@ -31,7 +31,8 @@ export default [
   await page.open(base,'#china');
   assert(JSON.stringify(await page.evaluate(`map.getFilter('atlas-frontiers')`)).includes(' china '),'China hides its shared frontier while open');
   await page.evaluate(`location.hash='#japan'`);await page.settle();
-  assert(!await page.evaluate(`map.getFilter('atlas-frontiers')`),'Every frontier shows with Japan open');
+  // Only lines inside land the open country claims are filtered (Japan has none).
+  assert.deepEqual(await page.evaluate(`map.getFilter('atlas-frontiers')`),['!=',['coalesce',['get','claimedBy'],''],'japan'],'Every frontier shows with Japan open');
  }},
  {name:'outlines leave coasts to the selected place',options:{width:1100,height:760},async run(page,base){
   for(const country of ['china','japan','philippines','indonesia','malaysia','korea']){
