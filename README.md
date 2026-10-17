@@ -330,7 +330,7 @@ Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia
 
 ## Europe
 
-The United Kingdom, Spain, France and Italy are public; Iceland, Turkey, India, Chile, Paraguay and Peru are in developer mode (the last four share the European pipeline, though they are not European). `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
+The United Kingdom, Spain, France, Italy and Chile are public; Iceland, Turkey, India, Paraguay and Peru are in developer mode (India and the South American countries share the European pipeline, though they are not European). `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
 
 ### Italy
 
@@ -401,7 +401,7 @@ The 28 states and 8 union territories, first level only for now, from geoBoundar
 - **China's frontier line.** On China's map the frontier is drawn by the shared frontier layer as long continuous lines, like every other country's. The province outline leaves those edges: cut into short pieces, each fading in by its own length, it drew them unevenly.
 - **China's frontier everywhere.** DataV's generalised outline sits far from Natural Earth's lines along its claims and in places such as the Tian Shan. Anywhere along China's outline, an edge counts as a frontier when land outside China lies all the way out to 3 km. Every stretch of China's land border is drawn.
 
-### Chile, Paraguay and Peru (developer mode)
+### Chile, Paraguay and Peru (Paraguay and Peru in developer mode)
 
 The three share India's reconciliation (`reconcile` in `build-europe.mjs`): edges within 3 km of a neighbouring atlas outline move onto it, enclosed slivers go to the nearest unit, and each country's other land neighbours (Bolivia, Ecuador, Colombia) are drawn beneath it from geoBoundaries. Chile meets Argentina's outline, Paraguay Argentina's and Brazil's, and Peru Brazil's and Chile's. Population and boundary-derived area; no GDP yet; no subdivision flags yet.
 

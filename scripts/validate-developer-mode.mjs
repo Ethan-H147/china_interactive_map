@@ -3,7 +3,7 @@ import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const source=fs.readFileSync('dist/developer-mode.js','utf8');
 // Iceland and Turkey are in developer mode while they are reviewed.
-const unreleased=['iceland','india','chile','paraguay','peru','turkey'];
+const unreleased=['iceland','india','paraguay','peru','turkey'];
 const registry=fs.readFileSync('dist/countries.js','utf8');
 let eligible=false,now=1000;
 const events={},stored=new Map(),nodes=[];

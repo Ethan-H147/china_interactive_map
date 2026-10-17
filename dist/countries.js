@@ -98,7 +98,7 @@
   india:{en:'India',local:'भारत',lang:'hi',background:'#f8f2ea',release:'developer',...regional('europe','in',
    {firstLabel:'States',neighbours:true,searchLabel:'Find a state or union territory',statistics:true,center:[80.5,22.5],zoom:4.3,bounds:[[68,6.5],[97.5,37.1]],fill:'#f5e7d6',selected:'#ecc9a0',line:'#b5651d'},
    {colors:{levels:'States & union territories',economy:false},levelNames:['States & union territories'],naturalEarth:'IND'})},
-  chile:{en:'Chile',local:'',lang:'es',background:'#f0f3f9',release:'developer',...regional('europe','cl',
+  chile:{en:'Chile',local:'',lang:'es',background:'#f0f3f9',...regional('europe','cl',
    {firstLabel:'Regions',secondLabel:'Provinces',thirdLabel:'Communes',bundledLevels:2,neighbours:true,settlements:true,searchLabel:'Find a region, province, commune or city',statistics:true,center:[-71,-37],zoom:3.6,bounds:[[-76,-56],[-66.4,-17.5]],fill:'#e5eaf4',selected:'#c3cfe8',line:'#2b4c9b'},
    {colors:{levels:'Regions',economy:false},levelNames:['Regions','Provinces','Communes'],naturalEarth:'CHL'})},
   paraguay:{en:'Paraguay',local:'',lang:'es',background:'#f1f6f1',release:'developer',...regional('europe','py',
