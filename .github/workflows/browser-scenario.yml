@@ -35,6 +35,7 @@ jobs:
           try{
             for(const scenario of scenarios){
               const page=await launch(scenario.options);
+              const evaluate=page.evaluate;page.evaluate=async expression=>{const value=await evaluate(expression);if(expression==='districtFrames')console.log('Moving frame samples:',JSON.stringify(value));return value;};
               try{
                 await scenario.run(page,server.url);
                 assert.deepEqual([...page.problems,...page.failures],[]);
