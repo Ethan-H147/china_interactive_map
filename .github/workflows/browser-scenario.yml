@@ -1,0 +1,55 @@
+name: Diagnose a browser scenario
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: Browser test file name, without .test.mjs
+        required: true
+        default: china-district-motion
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  scenario:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run the selected scenario with diagnostics
+        env:
+          SCENARIO: ${{ inputs.file }}
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import {launch,startServer} from './scripts/browser/harness.mjs';
+          const file=process.env.SCENARIO;
+          assert(/^[a-z0-9-]+$/.test(file),'Use a browser test file name');
+          const scenarios=(await import('./scripts/browser/'+file+'.test.mjs')).default;
+          const server=await startServer();
+          try{
+            for(const scenario of scenarios){
+              const page=await launch(scenario.options);
+              try{
+                await scenario.run(page,server.url);
+                assert.deepEqual([...page.problems,...page.failures],[]);
+                console.log('Passed:',scenario.name);
+              }finally{
+                try{console.log('Diagnostics:',JSON.stringify(await page.evaluate('({frames:globalThis.districtFrames, moving:map.isMoving(), busy:cameraBusy, reducedMotion:reducedMotion.matches, snapshot:AtlasCountryMemory.snapshot()})')));}catch{}
+                await page.screenshot('diagnostic-'+file);
+                await page.close();
+              }
+            }
+          }finally{await server.close();}
+          JS
+      - name: Keep diagnostic screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-diagnostic-${{ github.run_id }}
+          path: artifacts/browser-tests/
