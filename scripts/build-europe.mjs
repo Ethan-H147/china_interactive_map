@@ -389,7 +389,10 @@ async function reconcile(country,{align,edge,holes=[],neighbours=[],administered
  if(slivers.length){lowest[country]=fc(pieces(await command(lowest[country],'-erase slivers.json -clean',{'slivers.json':fc(slivers)})));outlines[country]=single(await command(lowest[country],'-dissolve'));}
  const own=fc([{type:'Feature',properties:{},geometry:outlines[country]}]);
  const outside=await administered(own);
- const home=pieces(await command(own,'-erase cut.json -clean',{'cut.json':fc([...refs.map(r=>r.feature),...outside])}));
+ // Normalize the dissolved polygon topology before clipping it. After sliver removal,
+ // clipping Chile's uncleaned outline can drop its mainland while retaining the islands.
+ const home=pieces(await command(own,'-clean -erase cut.json -clean',{'cut.json':fc([...refs.map(r=>r.feature),...outside])}));
+ if(country==='chile')for(const p of [[-70.31,-18.48],[-70.65,-33.45],[-70.91,-53.16]])assert(home.some(f=>inside(f,p)),'Chile portal retains mainland at '+p);
  // Other land neighbours: the drawn outlines win where they overlap, except that a neighbour keeps
  // land it administers that the country claims (keepClaimed), which the country's map covers.
  const others=[];

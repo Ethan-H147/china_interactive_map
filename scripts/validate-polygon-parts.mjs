@@ -5,6 +5,7 @@ import {GeoJSONVT} from '@maplibre/geojson-vt';
 import {classifyRings} from '@maplibre/maplibre-gl-style-spec';
 import earcut from 'earcut';
 import {polygonParts} from '../dist/polygon-parts.mjs';
+import {decodeGeo} from '../dist/geo-pack.mjs';
 
 const read=(country,name)=>JSON.parse(gunzipSync(fs.readFileSync(`dist/data/europe/${country}/${name}.bin`)));
 const collection=features=>({type:'FeatureCollection',features});
@@ -42,6 +43,17 @@ function filled(index,point,z){
 assert.equal(filled(oldTiles,[-8,43],4),false,'Fixture reproduces mainland Galicia disappearing at zoom 4');
 let checks=0;
 for(let z=3;z<=10;z++)for(const point of [[-8,43],[-7.8,42.7],[-7.5,42.3]]){assert(filled(fixedTiles,point,z),`Galicia stays filled at ${point}, zoom ${z}`);checks++;}
+// Chile's national outline once lost its mainland during border reconciliation. Check both
+// the build output and the compact copy actually downloaded, using the renderer's triangles.
+const chilePoints=[['Arica',[-70.31,-18.48]],['Antofagasta',[-70.3,-23.65]],['Santiago',[-70.65,-33.45]],['Concepción',[-73.05,-36.82]],['Puerto Montt',[-72.94,-41.47]],['Punta Arenas',[-70.91,-53.16]],['Chiloé',[-73.8,-42.5]],['Rapa Nui',[-109.35,-27.12]]];
+let chileChecks=0;
+for(const [format,context] of [['source',read('chile','context')],['compact',decodeGeo(gunzipSync(fs.readFileSync('dist/data/compact/europe/chile/context.bin'))) ]]){
+ const home=collection(context.features.filter(f=>!f.properties.claimedBy));
+ const tiles=new GeoJSONVT(polygonParts(home),{...options,tolerance:.25});
+ for(let z=3;z<=9;z++)for(const [place,point] of chilePoints){assert(filled(tiles,point,z),format+' Chile contains '+place+' at zoom '+z);chileChecks++;}
+ for(const [place,point] of [['Mendoza',[-68.84,-32.89]],['La Paz',[-68.12,-16.49]],['Pacific Ocean',[-73,-33.5]]])assert(!filled(tiles,point,6),format+' Chile excludes '+place);
+}
+console.log('Chile mainland and islands: '+chileChecks+' rendered samples across zooms 3–9 in source and compact outlines.');
 // Holes must still exclude water/enclaves; splitting must never turn a hole into an island.
 const ring=(a,b,c,d)=>[[a,b],[c,b],[c,d],[a,d],[a,b]];
 const holed={type:'Feature',id:7,properties:{id:'test'},geometry:{type:'MultiPolygon',coordinates:[[ring(0,0,10,10),ring(3,3,7,7).reverse()],[ring(20,0,25,5)]]}};
