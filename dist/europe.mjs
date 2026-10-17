@@ -5,12 +5,14 @@ import './countries.js';
 const {countries,byAdapter}=globalThis.AtlasCountries;
 const definitions=Object.fromEntries(byAdapter('europe').map(id=>[id,{name:countries[id].en,prefix:countries[id].prefix,lang:countries[id].lang,...countries[id].map}]));
 export const configurations=Object.fromEntries(Object.entries(definitions).map(([country,definition])=>[country,{country,firstLabel:'Country',searchLabel:'Find a place',...definition,base:`data/europe/${country}/`,nationalFlag:`vendor/flag-${definition.prefix}.svg`,contextLabels:true,flags:{},detailFlags:{},hasStatistics:()=>!!definition.statistics,attribution:`${definition.name}: <a href="data/europe/${country}/sources.json">Boundary sources & coverage</a>`}]));
-// Unreleased countries are added only once developer mode allows them, so public
-// visitors download none of their geometry. Each call adds the allowed countries not yet added.
+// Every country here gets its portal, released or not: an unreleased country's portal still draws its
+// land (Chile beside Argentina); its map opens only in developer mode (portal.sync). Each call adds
+// the countries not yet added.
 export function createEurope(map,host){
  const portals={},queued=new Set();let adding=Promise.resolve(),flags=null;
  function ensure(){
-  const wanted=Object.keys(configurations).filter(country=>!queued.has(country)&&window.AtlasDev?.allows(country));
+  if(!Object.keys(configurations).some(country=>window.AtlasDev?.allows(country)))return adding;
+  const wanted=Object.keys(configurations).filter(country=>!queued.has(country));
   if(!wanted.length)return adding;
   for(const country of wanted)queued.add(country);
   adding=adding.catch(()=>{}).then(async()=>{

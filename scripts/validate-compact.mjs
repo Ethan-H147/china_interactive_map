@@ -26,7 +26,7 @@ for(const file of present){
 assert.equal(compactUrl('data/china-context.bin'),'data/compact/china-context.bin');
 assert.equal(compactUrl('data/southern-africa/botswana/context.bin'),'data/compact/southern-africa/botswana/context.bin');
 assert.equal(String(compactUrl(new URL('https://example.test/site/data/korea-context.bin'))),'https://example.test/site/data/compact/korea-context.bin');
-for(const other of ['data/korea-boundaries.bin','data/china-boundaries.pack.bin','data/europe/iceland/context.bin','vendor/metadata/china-context.bin'])assert.equal(compactUrl(other),other);
+for(const other of ['data/korea-boundaries.bin','data/china-boundaries.pack.bin','data/europe/iceland/sources.json','vendor/metadata/china-context.bin'])assert.equal(compactUrl(other),other);
 // Preloads name the file the page actually requests, so nothing downloads twice.
 const page=fs.readFileSync('dist/index.html','utf8');
 const preloads=[...page.matchAll(/<link rel="preload" as="fetch" crossorigin href="(data\/[^"]+)">/g)].map(m=>m[1]),later=JSON.parse(page.match(/<script type="application\/json" id="later-preloads">([^<]+)<\/script>/)[1]);

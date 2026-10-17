@@ -26,6 +26,8 @@ export default [
   // China then loads every county-level division in the background.
   await page.waitFor(`AtlasDev.enabled&&chinaCounties`,{label:"China's counties",timeout:60000});
   assert.equal(await page.evaluate('AtlasDev.enabled'),true);
+  // Unreleased countries' portals load after every first view, so they draw at once (Chile beside Argentina).
+  assert(await page.evaluate(`['chile','peru','paraguay','india','turkey','iceland'].every(c=>!!map.getLayer(c+'-portal-fill'))`),'Unreleased portals are ready when developer mode opens');
   await page.evaluate(`location.hash='#italy'`);await page.settle();
   assert.equal(await page.evaluate('AtlasEntry.current'),'italy','Italy opens in developer mode');
  }},

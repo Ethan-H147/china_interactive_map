@@ -15,7 +15,7 @@ export const compactSources=[
  'southeast-asia/malaysia-context.bin','southeast-asia/singapore-context.bin',
  'russia/context.bin','russia/international.bin',
  ...['south-africa','botswana','namibia','eswatini','lesotho'].flatMap(c=>[`southern-africa/${c}/context.bin`,`southern-africa/${c}/international.bin`]),
- ...['united-kingdom','spain','france','italy'].flatMap(c=>['context','neighbours','international'].map(f=>`europe/${c}/${f}.bin`))
+ ...['united-kingdom','spain','france','italy','iceland','india','chile','paraguay','peru','turkey'].flatMap(c=>['context','neighbours','international'].map(f=>`europe/${c}/${f}.bin`))
 ];
 
 if(import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
