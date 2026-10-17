@@ -408,9 +408,9 @@ function renderSearch(){
 }
 for(const [code,s] of Object.entries(stories)){const b=document.createElement('button');b.className='discovery-card';b.type='button';b.dataset.nav='';b.disabled=true;const mark=document.createElement('span');mark.className='region-mark';mark.lang='zh';mark.setAttribute('aria-hidden','true');mark.textContent=s.mark;const content=document.createElement('span');const strong=document.createElement('strong');strong.textContent=s.name;const small=document.createElement('small');small.textContent=s.place;content.append(strong,small);b.append(mark,content);b.onclick=()=>selectRegion(provinceLayers.get(Number(code)),Number(code));$('discovery-cards').append(b);}
 async function json(url){
-  const r=await fetch(window.AtlasGeoPack.compactUrl(url));if(!r.ok)throw new Error(`${url}: ${r.status}`);
-  if(!url.endsWith('.gz')&&!url.endsWith('.bin'))return r.json();
-  return window.AtlasGeoPack.decodeData(await r.arrayBuffer());
+  const bytes=await window.AtlasGeoPack.fetchBytes(window.AtlasGeoPack.compactUrl(url));
+  if(!url.endsWith('.gz')&&!url.endsWith('.bin'))return JSON.parse(new TextDecoder().decode(bytes));
+  return window.AtlasGeoPack.decodeData(bytes);
 }
 // Source geometry retains full detail; rendering tiles omit subpixel detail.
 const sourceOptions={type:'geojson',tolerance:.375,maxzoom:18,buffer:128};
@@ -603,15 +603,17 @@ async function addPortals(){
 async function addRegions(layerSets,capitals){
   const [start,beforePortals,afterPortals]=layerSets,now=new Set(map.getStyle().layers.map(l=>l.id));
   const raised=[...now].filter(id=>beforePortals.has(id)&&!start.has(id)||!afterPortals.has(id));
-  southernAfrica=await window.AtlasSouthernAfrica.addSouthernAfrica(map,archipelagoHost);
+  // Each step stands alone: one that fails to load leaves the others, and every country switch, working.
+  const step=async(name,run)=>{try{await run();}catch(error){console.warn(name+' could not load',error);}};
+  await step('Southern Africa',async()=>{southernAfrica=await window.AtlasSouthernAfrica.addSouthernAfrica(map,archipelagoHost);});
   // Europe's previews are large (the UK's carries 20 m coasts and its overseas territories), so
   // they load after the first view unless Europe is the first view.
-  europe=window.AtlasEurope.createEurope(map,archipelagoHost);if(europe.handles(window.AtlasEntry.current))await europe.ensure();
+  europe=window.AtlasEurope.createEurope(map,archipelagoHost);if(europe.handles(window.AtlasEntry.current))await step('Europe',()=>europe.ensure());
   for(const id of raised)if(map.getLayer(id))map.moveLayer(id);
-  capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitals);
+  await step('Capitals',async()=>{capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitals);});
   southAmerica=window.AtlasSouthAmerica.createSouthAmerica(map,{syncAppearance:()=>satelliteDisplay?.sync(),country:()=>atlasMode,isBusy:()=>quiz.active||countrySwitching,switchAtlas:changeAtlas,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{manual:camera.manual===true})});
   window.AtlasDev.mount({eligible:()=>atlasMode==='china'&&!quiz.active&&!countrySwitching&&selected?.layer.feature.properties.adcode===310105});
-  window.addEventListener('atlas-developer-change',async()=>{if(chinaReady&&!window.AtlasDev.enabled&&chinaCountiesLoading){location.reload();return;}if(chinaReady&&window.AtlasDev.enabled)loadChinaCounties().catch(error=>console.warn('China counties',error));southAmerica.syncDeveloper();southernAfrica.syncDeveloper();await europe.ensure();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
+  window.addEventListener('atlas-developer-change',async()=>{if(chinaReady&&!window.AtlasDev.enabled&&chinaCountiesLoading){location.reload();return;}if(chinaReady&&window.AtlasDev.enabled)loadChinaCounties().catch(error=>console.warn('China counties',error));southAmerica.syncDeveloper();southernAfrica?.syncDeveloper();await europe.ensure();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
   atlasesReady=true;finishAtlases();
 }
 let viewSaveTimer,viewControlsReady=false;

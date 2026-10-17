@@ -93,6 +93,16 @@ export function compactUrl(url){
  const replaced=text.slice(0,at)+'data/compact/'+text.slice(at+5);
  return url instanceof URL?new URL(replaced):replaced;
 }
+// A data file's bytes, downloaded again (twice at most) when the network drops the request or
+// its body (a CDN mid-deploy does). HTTP errors and cancellations are not retried.
+export async function fetchBytes(url,init){
+ for(let attempt=0;;attempt++){
+  let response;
+  try{response=await fetch(url,init);if(response.ok)return await response.arrayBuffer();}
+  catch(error){if(error?.name!=='TypeError'||init?.signal?.aborted||attempt===2)throw error;await new Promise(resolve=>setTimeout(resolve,500*(attempt+1)));continue;}
+  throw Error(`${url}: ${response.status}`);
+ }
+}
 // Body bytes of a fetched data file: gunzipped, then a compact copy decoded or JSON parsed.
 export async function decodeData(bytes){
  let view=new Uint8Array(bytes);
@@ -104,7 +114,6 @@ export async function decodeData(bytes){
 // geometry to them. transform: 'parts' (polygon-parts.mjs) or 'coastal' (coastal-detail.mjs).
 // The blob URL stays valid: MapLibre fetches a source's data again whenever it reloads it.
 export async function addWorkerSource(map,id,url,options,transform){
- const response=await fetch(compactUrl(url));if(!response.ok)throw Error(`${url}: ${response.status}`);
- const blob=URL.createObjectURL(await response.blob());
+ const blob=URL.createObjectURL(new Blob([await fetchBytes(compactUrl(url))]));
  map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(transform?'&transform='+transform:'')});
 }
