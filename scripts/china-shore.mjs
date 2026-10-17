@@ -20,6 +20,9 @@ export function chinaShore(display){
   if(!metres(a,b))return 0;
   const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],c=Math.cos(m[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],n=Math.hypot(dx,dy),step=30/111195;
   const [left,right]=[1,-1].map(s=>provinceAt([m[0]-dy/n*step*s/c,m[1]+dx/n*step*s]));if(left&&right)return left===right?2:0;
+  // A narrow island can put both 30 m probes in water. With no owner, the
+  // nearest-outline query would mistake its own coast for another province.
+  if(!left&&!right)return 2;
   return neighbour(m,left||right)===null&&frontier(m)>3000?2:1;
  };
  return path=>{

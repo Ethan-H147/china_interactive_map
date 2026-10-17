@@ -85,7 +85,10 @@ for(const country of Object.keys(outlines)){
   const side=(signedArea(ring)>0)===(r===0)?-1:1;
   // China's outline (DataV) sits far from Natural Earth's lines in places: along its claims in the
   // Himalaya and Karakoram (Aksai Chin, the Shaksgam valley, South Tibet) and wherever its
-  // generalised edge wanders (the Tian Shan). There an edge is a frontier when land outside China
+  // generalised edge wanders (the Tian Shan). Far from a reference border, the land beyond
+  // must also belong to a different reference country: coarse reference coastlines can extend
+  // beyond detailed island coasts, but that sliver of the same country is not a frontier.
+  // There an edge is a frontier when land outside China
   // lies all the way out to 3 km (not a sliver between two provinces' sources, nor the sea).
   const claimZone=ring.map(()=>country==='china');
   const near=ring.map((p,i)=>boundary(p)<=6000||claimZone[i]);
@@ -93,7 +96,7 @@ for(const country of Object.keys(outlines)){
   const outward=(i,d)=>{const a=ring[i],b=ring[i+1],c=Math.cos((a[1]+b[1])*Math.PI/360),dx=(b[0]-a[0])*c,dy=b[1]-a[1],len=Math.hypot(dx,dy);if(!len)return null;return [(a[0]+b[0])/2-dy/len*side*d/111195/c,(a[1]+b[1])/2+dx/len*side*d/111195];};
   const foreign=(p,atlasSide)=>!!p&&!own(p)&&(atlasSide?insideOther(p):land(p));
   // Land frontier: foreign land immediately beyond the edge. Water borders come later.
-  const flags=Array.from({length:n},(_,i)=>{if(!near[i]||!near[i+1])return false;if(boundary(ring[i])>6000||boundary(ring[i+1])>6000)return [300,1000,3000].every(d=>foreign(outward(i,d),false));const m=[(ring[i][0]+ring[i+1][0])/2,(ring[i][1]+ring[i+1][1])/2],atlasSide=toAtlas(m)<toWorld(m);return (atlasSide?[100,300,600]:[100,300,600,1000,1500,2500,5000]).some(d=>foreign(outward(i,d),atlasSide));});
+  const flags=Array.from({length:n},(_,i)=>{if(!near[i]||!near[i+1])return false;if(boundary(ring[i])>6000||boundary(ring[i+1])>6000)return [300,1000,3000].every(d=>{const p=outward(i,d);return foreign(p,false)&&!mine.includes(countryAt(p));});const m=[(ring[i][0]+ring[i+1][0])/2,(ring[i][1]+ring[i+1][1])/2],atlasSide=toAtlas(m)<toWorld(m);return (atlasSide?[100,300,600]:[100,300,600,1000,1500,2500,5000]).some(d=>foreign(outward(i,d),atlasSide));});
   const coastEdges=()=>{for(let i=0;i<n;i++)if(!flags[i])coast.push([ring[i],ring[i+1]]);};
   if(!flags.some(Boolean)){coastEdges();continue;}
   // Gaps of up to 15 km close where land lies within 5 km beyond (river islands, a channel of
