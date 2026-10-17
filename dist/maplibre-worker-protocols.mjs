@@ -1,6 +1,7 @@
 // Loaded into MapLibre's workers with importScriptInWorkers.
 import {decodePack} from './china-pack.mjs';
 import {chinaSourceBuilders} from './china-sources.mjs';
+import {loadAtlasData} from './atlas-data.mjs';
 
 // MapLibre otherwise sends blob: requests to the page, which parses the JSON on
 // the main thread and copies it back. Fetching here keeps parsing in the worker.
@@ -32,3 +33,6 @@ self.addProtocol('china-pack',async request=>{
  const build=(await unpack(params.get('pack')))[id];if(!build)throw Error('Unknown China source '+id);
  return {data:build()};
 });
+
+// Outline files the page hands over as blob URLs (geo-pack.mjs addWorkerSource), decoded here.
+self.addProtocol('atlas-data',async request=>({data:await loadAtlasData(request.url)}));

@@ -69,8 +69,9 @@ const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));a
  // The page preloads China's first-view files; app.js preloads every other country's outline after that view.
  const first=[...page.matchAll(/<link rel="preload" as="fetch" crossorigin href="data\/([^"]+)">/g)].map(m=>m[1]);
  const later=JSON.parse(page.match(/<script type="application\/json" id="later-preloads">([^<]+)<\/script>/)[1]).map(u=>u.replace(/^data\//,''));
- assert(first.includes('atlas-frontiers.bin')&&first.includes('china-context.bin')&&first.length<=8,'Only first-view files are preloaded by the page');
- assert(later.length>=15&&!later.some(f=>first.includes(f)),'Other countries\' outlines are preloaded later, once each');
+ const source=file=>file.replace(/^compact\//,'');
+ for(const file of ['atlas-frontiers.bin','china-context.bin','korea-context.bin','mongolia-context.bin','japan-context.bin','russia/context.bin'])assert(first.map(source).includes(file),"China's first view preloads "+file);
+ assert(!first.some(f=>f.includes('southern-africa/'))&&later.length>=10&&later.every(f=>f.includes('southern-africa/')),"Southern Africa's outlines are preloaded after the first view, once each");
  assert(code.includes("$('later-preloads')"),'app.js requests the later preloads');
  const preloads=[...first,...later];
  for(const file of preloads){
@@ -80,9 +81,9 @@ const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));a
   assert(code.includes(file)||(code.includes(name)||code.includes(stem))&&(!file.includes('/')||code.includes(dir+'/')),'Preloaded file is requested by the page: '+file);
  }
  const entry=fs.readFileSync('dist/atlas-entry.js','utf8'),app=fs.readFileSync('dist/app.js','utf8');
- assert.deepEqual(boot('#china').fetched,['data/china-boundaries.pack.bin','data/china-regions.json'],'China visits start the packed boundaries immediately');
+ assert.deepEqual(boot('#china').fetched,['data/china-overview.pack.bin','data/china-regions.json'],'China visits start the overview boundaries immediately');
  assert.deepEqual(boot('#japan').fetched,[],'Other countries do not download China');
- const early=boot('#china').entry;assert(early.takeEarly('chinaPack'));assert.equal(early.takeEarly('chinaPack'),undefined,'An early response is handed over once');
- for(const key of ['chinaPack','chinaRegions'])assert(entry.includes(`['${key}',`)&&app.includes(`takeEarly('${key}')`),'Early China response is consumed: '+key);
+ const early=boot('#china').entry;assert(early.takeEarly('chinaOverview'));assert.equal(early.takeEarly('chinaOverview'),undefined,'An early response is handed over once');
+ for(const key of ['chinaOverview','chinaRegions'])assert(entry.includes(`['${key}',`)&&(app.includes(`takeEarly('${key}')`)||app.includes(`packBlobUrl('${key}',`)&&app.includes('takeEarly(key)')),'Early China response is consumed: '+key);
  console.log(`Startup preloads: ${first.length} first-view and ${later.length} later files exist and are requested; early China downloads are consumed.`);
 }

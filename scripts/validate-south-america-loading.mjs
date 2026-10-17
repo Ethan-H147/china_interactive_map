@@ -191,7 +191,7 @@ await mode('states').onclick();atlas.portals.brazil.leave();
 country='brazil';const loading=atlas.portals.brazil.warm();await Promise.resolve();await Promise.resolve();
 atlas.portals.brazil.leave();country='china';await assert.rejects(loading,{name:'AbortError'});
 assert.ok(![...sources.keys()].some(id=>/^south-(brazil|argentina|uruguay)-/.test(id)));assert.ok(terminated>=3);
-assert.equal(requests.filter(url=>url==='data/flight-context.bin').length,1);
+assert.equal(requests.filter(url=>url==='data/compact/flight-context.bin').length,1,'The flight silhouettes load once, from their compact copy');
 console.log('Public countries, zero geometry on Asian entry, per-country loading, worker cancellation and release of inactive boundaries passed.');
 console.log('DDD demand loading, readiness without flashing, failure recovery, latest layer priority, cross-state restoration and truthful pending postal mode passed.');
 console.log('Argentina deferred geometry, provincial border retention, shared-province reuse, rapid selection priority, saved-child restoration, level lock and staged source cancellation passed.');

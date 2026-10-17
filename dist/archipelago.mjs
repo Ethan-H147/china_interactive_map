@@ -1,13 +1,14 @@
 import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
-import {splitCoastalDetail,coastalDetailZoom,coastalDetailIds,coastalPartId} from './coastal-detail.mjs';
+import {coastalDetailZoom,coastalDetailIds,coastalPartId} from './coastal-detail.mjs';
 import {loadCompressed} from './korea-data.mjs';
+import {addWorkerSource} from './geo-pack.mjs';
 import {setLayerVisible} from './adaptive-lines.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {BoundaryBudget,chooseChunks} from './boundary-budget.mjs';
 const configuration={philippines:{name:'Philippines',prefix:'ph',first:'Regions',second:'Provinces',home:[[116,4.3],[127.2,21.5]],fill:'#e7edf6',selected:'#c5d7ee',line:'#366393'},indonesia:{name:'Indonesia',prefix:'id',first:'Provinces',second:'Regencies & cities',home:[[94.5,-11.3],[141.2,6.3]],fill:'#fff5f3',selected:'#f2ccc8',line:'#b55a52'}};
 export async function addArchipelagoPortal(map,host,country){
  const config=configuration[country],{name,prefix,home}=config;
- const context=await loadCompressed('data/archipelago/'+country+'-context.bin');map.addSource(country+'-portal',{type:'geojson',data:country==='indonesia'?splitCoastalDetail(context,{context:true}):context,tolerance:0});
+ await addWorkerSource(map,country+'-portal','data/archipelago/'+country+'-context.bin',{type:'geojson',tolerance:0},country==='indonesia'?'coastal':'');
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  const sidebar=createCountryPage({id:country+'-sidebar',label:'Explore '+name,classes:'sidebar archipelago-sidebar',
  prefix:`${prefix}-`,

@@ -10,8 +10,9 @@
  const initial=allowed(requested)?requested:registry.fallback;
  // China's packed boundaries are the largest startup download; begin before styles
  // and modules. app.js takes these responses instead of requesting the files again.
+ // The overview pack draws the first view; app.js requests the full pack after it.
  const early={};
- if(initial==='china')for(const [key,url] of [['chinaPack','data/china-boundaries.pack.bin'],['chinaRegions','data/china-regions.json']]){early[key]=fetch(url);early[key].catch(()=>{});}
+ if(initial==='china')for(const [key,url] of [['chinaOverview','data/china-overview.pack.bin'],['chinaRegions','data/china-regions.json']]){early[key]=fetch(url);early[key].catch(()=>{});}
  let current=initial;
  const root=document.documentElement;root.dataset.atlas=initial;root.dataset.starting='true';
  function persist(country){try{localStorage.setItem(storageKey,country);}catch{}}

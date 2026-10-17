@@ -3,6 +3,11 @@
 import {lineData,withoutSegments} from './adaptive-lines.mjs';
 import {isPrefectureLevel} from './china-levels.mjs';
 
+// China's first view draws from an overview pack rounded to 1e-4 degrees (at most 5.6 m),
+// then switches to the full pack. At zoom 10 and below that is under a quarter of a
+// device pixel on a 2x screen; a first view closer than that waits for the full pack.
+export const OVERVIEW_SCALE=1e4,OVERVIEW_MAX_ZOOM=10;
+
 const featureCollection=features=>({type:'FeatureCollection',features});
 export function chinaSourceBuilders({display,districts,fragments,lineOmissions={}}){
  const provinces=display.provinces.features;

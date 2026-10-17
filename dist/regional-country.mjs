@@ -2,8 +2,8 @@ import {createSettlementBoundaries} from './settlement-boundaries.mjs';
 import {renderPhoneCard} from './place-contact-card.mjs';
 import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementStatistics} from './settlement-layer.mjs';
 import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
-import {polygonParts} from './polygon-parts.mjs';
 import {loadCompressed} from './korea-data.mjs';
+import {addWorkerSource} from './geo-pack.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {addInternationalBorder,setLayerVisible,lineSourceOptions,internationalLineSourceOptions,regionalLineWidth as lineWidth,adaptiveOpacity} from './adaptive-lines.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
@@ -31,16 +31,14 @@ export async function addRegionalCountry(map,host,c){
  const $=id=>document.getElementById(prefix+'-'+id),installed=new Map(),index=new Map();
  let settlements=[],supplement,placeLanguage='both',cityManifest,cityBorders,phoneData,cityLoadingEpoch=0;
  let active=false,ready=false,catalogue,search,selected,scope,subscope,detailScope,thirdScope,mode=1,labels=[],warming,pending,cancelIndex,generation=0,detailEpoch=0,selectionEpoch=0;
- const context=await loadCompressed(base+'context.bin');
  // Portals and the neighbours beneath them are tiled with sub-pixel simplification (0.25 px, as the
  // archipelago does): Chile's portal alone has 355,000 vertices, all drawn at a world view otherwise.
- map.addSource(country+'-portal',{type:'geojson',data:polygonParts(context),tolerance:.25,attribution:c.attribution});
+ await addWorkerSource(map,country+'-portal',base+'context.bin',{type:'geojson',tolerance:.25,attribution:c.attribution},'parts');
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  // Foreign land beside a far territory, drawn at this country's precision beneath it (French
  // Guiana's Suriname and Brazil): an atlas country in the portal grey, others in the world's.
- if(c.neighbours){map.addSource(country+'-neighbours',{type:'geojson',data:polygonParts(await loadCompressed(base+'neighbours.bin')),tolerance:.25});map.addLayer({id:country+'-neighbours',type:'fill',source:country+'-neighbours',paint:{'fill-color':['case',['in',['get','country'],['literal',window.AtlasCountries.ids]],'#d7d7d3','#e5e5e1'],'fill-antialias':false}},country+'-portal-fill');}
- const international=await loadCompressed(base+'international.bin');
- map.addSource(country+'-international',{...internationalLineSourceOptions,data:international,attribution:c.attribution});
+ if(c.neighbours){await addWorkerSource(map,country+'-neighbours',base+'neighbours.bin',{type:'geojson',tolerance:.25},'parts');map.addLayer({id:country+'-neighbours',type:'fill',source:country+'-neighbours',paint:{'fill-color':['case',['in',['get','country'],['literal',window.AtlasCountries.ids]],'#d7d7d3','#e5e5e1'],'fill-antialias':false}},country+'-portal-fill');}
+ await addWorkerSource(map,country+'-international',base+'international.bin',{...internationalLineSourceOptions,attribution:c.attribution});
  addInternationalBorder(map,country+'-international',country+'-international');
  if(c.thirdLabel&&!document.getElementById('mode-third')){const button=document.createElement('button');button.id='mode-third';button.type='button';button.hidden=true;button.setAttribute('data-nav','');button.setAttribute('aria-pressed','false');document.getElementById('mode-lock').before(button);}
  function panel(name){for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}}

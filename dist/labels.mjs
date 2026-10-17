@@ -15,7 +15,9 @@ export function placeLabels(candidates,width,height){
   occupied.push(r);accepted.push(item);
  }return accepted;
 }
-let language='both',measure;
+// Text widths per font and line; labels are placed again after every map movement.
+let language='both',measure;const widths=new Map();
+function textWidth(font,text){const key=font+'|'+text;let width=widths.get(key);if(width===undefined){measure.font=font;width=measure.measureText(text).width;widths.set(key,width);}return width;}
 export function getLanguage(){return language;}
 export function setLanguage(value){language=['en','local','both'].includes(value)?value:'both';document.querySelectorAll('[data-label-language]').forEach(el=>el.value=language);}
 export function render(map,candidates,className){
@@ -24,8 +26,8 @@ export function render(map,candidates,className){
  if(map.getProjection?.()?.type==='globe'){const c=map.getCenter(),r=Math.PI/180;candidates=candidates.filter(({center:[x,y]})=>Math.sin(y*r)*Math.sin(c.lat*r)+Math.cos(y*r)*Math.cos(c.lat*r)*Math.cos((x-c.lng)*r)>Math.cos(65*r));}
  const items=candidates.map(item=>{
   const lines=item.lines||labelLines(item.en,item.local,language,item.district),point=map.project(item.center);
-  const widths=lines.map((line,i)=>{measure.font=(item.selected?'600 ':'')+(i?'14px Arial':'16px Arial');return measure.measureText(line).width;});
-  return {...item,lines,x:point.x,y:point.y,w:Math.max(...widths)+4,h:lines.length*21};
+  const w=Math.max(...lines.map((line,i)=>textWidth((item.selected?'600 ':'')+(i?'14px Arial':'16px Arial'),line)));
+  return {...item,lines,x:point.x,y:point.y,w:w+4,h:lines.length*21};
  });
  return placeLabels(items,map.getContainer().clientWidth,map.getContainer().clientHeight).map(item=>{
   const el=document.createElement('div');el.dataset.atlasPlace=String(item.id);el.className=item.className||className;if(item.onClick){el.setAttribute('role','button');el.tabIndex=0;el.onclick=e=>{e.stopPropagation();item.onClick();};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();item.onClick();}};}el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];

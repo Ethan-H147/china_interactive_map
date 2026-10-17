@@ -1,10 +1,11 @@
 import {setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
+import {addWorkerSource} from './geo-pack.mjs';
 import {mongoliaPanel} from './mongolia-panel.mjs';
 import {adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-lines.mjs';
 export async function addMongoliaPortal(map,host){
- const outline=await loadCompressed('data/mongolia-context.bin'),home=[[87.7,41.5],[120,52.2]];
- map.addSource('mongolia-portal',{type:'geojson',data:outline,tolerance:0,maxzoom:18,buffer:128});
+ const home=[[87.7,41.5],[120,52.2]];
+ await addWorkerSource(map,'mongolia-portal','data/mongolia-context.bin',{type:'geojson',tolerance:0,maxzoom:18,buffer:128});
  map.addLayer({id:'mongolia-portal-fill',type:'fill',source:'mongolia-portal',paint:{'fill-color':'#d7d7d3','fill-opacity':1,'fill-antialias':false}},map.getLayer('province-fill')?'province-fill':undefined);
  const template=document.createElement('template');template.innerHTML=mongoliaPanel;
  const sidebar=template.content.querySelector('aside'),dialog=template.content.querySelector('dialog');

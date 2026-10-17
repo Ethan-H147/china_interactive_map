@@ -1,5 +1,6 @@
 import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
+import {addWorkerSource} from './geo-pack.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {setLayerVisible,lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
 import {malaysiaFlags} from './malaysia-flags.mjs';
@@ -11,8 +12,7 @@ const registry=globalThis.AtlasCountries;
 export const countries=Object.fromEntries(registry.byAdapter('southeast-asia').map(id=>[id,{name:registry.countries[id].en,...registry.countries[id].map}]));
 export async function addCountryPortal(map,host,country){
  const c=countries[country],base='data/southeast-asia/',prefix=c.flag,isMalaysia=country==='malaysia';
- const context=await loadCompressed(base+country+'-context.bin');
- map.addSource(country+'-portal',{type:'geojson',data:context,tolerance:0,attribution:isMalaysia?'Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a>':'Singapore: <a href="https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view">SLA</a> (Singapore Open Data Licence)'});
+ await addWorkerSource(map,country+'-portal',base+country+'-context.bin',{type:'geojson',tolerance:0,attribution:isMalaysia?'Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a>':'Singapore: <a href="https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view">SLA</a> (Singapore Open Data Licence)'});
  map.addLayer({id:country+'-portal-fill',type:'fill',source:country+'-portal',layout:{visibility:'none'},paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  const sidebar=createCountryPage({id:country+'-sidebar',label:'Explore '+c.name,classes:'sidebar southeast-sidebar',
  prefix:`${prefix}-`,

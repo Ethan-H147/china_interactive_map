@@ -4,6 +4,8 @@ import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import {BoundaryBudget,chooseChunks} from '../dist/boundary-budget.mjs';
 import {hashFor,fromHash} from '../dist/view-state.mjs';
+import {loadAtlasData} from '../dist/atlas-data.mjs';
+import {assertNearGeo} from './geo-compare.mjs';
 const read=name=>JSON.parse(gunzipSync(fs.readFileSync('dist/data/archipelago/'+name+'.bin')));
 for(const [country,firstCount,secondCount] of [['philippines',18,82],['indonesia',38,514]]){
  const data=read(country+'-catalogue'),overview=read(country+'-overview');
@@ -46,7 +48,7 @@ const element=id=>{if(!elements.has(id))elements.set(id,new Element());return el
 globalThis.document={createElement:()=>new Element(),getElementById:element,querySelector:element};globalThis.Option=class extends Element{constructor(text,value){super();this.textContent=text;this.value=value;}};
 const statisticsCalls=[];globalThis.window={AtlasLabels:{render:()=>[]},AtlasStatistics:{renderStatistics:(_anchor,key)=>statisticsCalls.push(key),clearStatistics:()=>statisticsCalls.push(null)}};Object.defineProperty(globalThis,'navigator',{value:{connection:{}},configurable:true});
 element('satellite-layer').checked=false;element('satellite-opacity').value='100';
-const fetched=[];globalThis.fetch=async url=>{fetched.push(url);return new Response(fs.readFileSync('dist/'+url));};
+const fetched=[],nodeFetch=globalThis.fetch;globalThis.fetch=async url=>{if(String(url).startsWith('blob:'))return nodeFetch(url);fetched.push(url);return new Response(fs.readFileSync('dist/'+url));};
 const requests=[],deferred=[];let hold=false;
 globalThis.Worker=class{postMessage({url}){requests.push(url);const finish=()=>{if(this.ended)return;const input=read(url.replace('data/archipelago/','').replace('.bin','')),sources=Object.fromEntries(Object.entries(input).map(([k,v])=>[k,new Blob([JSON.stringify(url.includes('/indonesia-')?splitCoastalDetail(v):v)])]));this.onmessage({data:{sources}});};if(hold)deferred.push(finish);else queueMicrotask(finish);}terminate(){this.ended=true;}};
 const sources=new Map(),layers=new Map(),events=new Map(),featureStates=[];let rendered=[];let bounds=[[116,4],[128,22]],zoom=3,mapWidth=390,allowPaint=true;
@@ -54,7 +56,9 @@ const map={getContainer:()=>({clientWidth:mapWidth}),addSource:(id,data)=>{asser
 const host={isBusy:()=>false,isMoving:()=>false,fit:async b=>{bounds=b;zoom=6;},syncAppearance(){}};
 map.isSourceLoaded=()=>allowPaint;map.triggerRepaint=()=>{if(allowPaint)queueMicrotask(()=>events.get('render')?.forEach(f=>f()));};
 const {addArchipelagoPortal}=await import('../dist/archipelago.mjs');
-const ph=await addArchipelagoPortal(map,host,'philippines'),id=await addArchipelagoPortal(map,host,'indonesia');assert.deepEqual(fetched,['data/archipelago/philippines-context.bin','data/archipelago/indonesia-context.bin']);
+const ph=await addArchipelagoPortal(map,host,'philippines'),id=await addArchipelagoPortal(map,host,'indonesia');assert.deepEqual(fetched,['data/compact/archipelago/philippines-context.bin','data/compact/archipelago/indonesia-context.bin']);
+// MapLibre's workers decode the portals (atlas-data.mjs); Indonesia's splits its delta coast as the page once did.
+assertNearGeo(await loadAtlasData(sources.get('indonesia-portal').data),splitCoastalDetail(JSON.parse(gunzipSync(fs.readFileSync('dist/data/archipelago/indonesia-context.bin'))),{context:true}),'Indonesia portal');
 await ph.enter(false);assert.deepEqual(requests,['data/archipelago/philippines-overview.bin']);assert(!fetched.some(x=>x.includes('indonesia-catalogue')));
 assert.equal(element('mode-lock').hidden,false);element('mode-lock').setAttribute('aria-pressed','true');element('ph-province').value='PH07';await element('ph-province').onchange();assert.equal(element('mode-province').getAttribute('aria-pressed'),'true','Locked region selection must stay at the first level');ph.setMode(2);await ph.home();assert.equal(element('mode-prefecture').getAttribute('aria-pressed'),'true','Reset respects a locked second level');ph.setMode(1);assert.equal(element('mode-province').getAttribute('aria-pressed'),'true','Manual level changes remain available while locked');element('mode-lock').setAttribute('aria-pressed','false');
 element('ph-search').value='Isabela City';element('ph-search').oninput();assert.equal(element('ph-search-results').children[0].children[0].textContent,'Isabela City');await element('ph-search-results').children[0].onclick();assert.equal(element('ph-selection-kind').textContent,'COMPONENT CITY');assert.deepEqual(layers.get('philippines-second-exception').paint['line-dasharray'],[3,2]);assert.deepEqual(layers.get('philippines-second-selected').filter.slice(0,2),['all',['!=',['get','special'],true]]);assert.equal(element('ph-selection-meta').textContent||'','');assert(element('ph-note-text').textContent.includes('Region IX'));assert.equal(element('ph-selection-note').hidden,false);assert.equal(element('ph-note-source').href,'https://psa.gov.ph/classification/psgc/summary');element('ph-province').value='PH19';await element('ph-province').onchange();assert.equal(element('ph-child-summary').textContent,'Provinces ');assert.equal(element('ph-child-summary').children.at(-1).textContent,'5');assert(element('ph-note-text').textContent.includes('BARMM'));

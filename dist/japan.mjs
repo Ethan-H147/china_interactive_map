@@ -2,13 +2,14 @@ import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
 import {loadJapanLocalFacts,japanPopulation,japanLocalStatistics} from './japan-local-facts.mjs';
 import {japanComparisonProfile} from './compare.mjs';
 import {loadCompressed} from './korea-data.mjs';
+import {addWorkerSource} from './geo-pack.mjs';
 import {adaptiveOpacity,setLayerVisible} from './adaptive-lines.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 const firstSources=['japan-first','japan-first-edges','japan-first-selection-edges'];
 export const searchOptions={compare:(a,b)=>['Designated city','City','Special ward','Town','Village','City ward'].indexOf(a.kind)-['Designated city','City','Special ward','Town','Village','City ward'].indexOf(b.kind)};
 export async function addJapanPortal(map,host){
- const home=[[122.8,24],[146.2,45.7]],outline=await loadCompressed('data/japan-context.bin');
- map.addSource('japan-portal',{type:'geojson',data:outline,tolerance:.5});
+ const home=[[122.8,24],[146.2,45.7]];
+ await addWorkerSource(map,'japan-portal','data/japan-context.bin',{type:'geojson',tolerance:.5});
  map.addLayer({id:'japan-portal-fill',type:'fill',source:'japan-portal',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  const sidebar=createCountryPage({id:'japan-sidebar',label:'Explore Japan',
  prefix:`j-`,
