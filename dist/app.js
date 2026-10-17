@@ -580,6 +580,13 @@ async function showFirstView(){
  setupViewControls();await restoreView();syncGlobe();
  atlasStarting=false;window.AtlasEntry.ready();finishStartup();controls();refreshStatus();updateLabels();
  $('map-loading').hidden=true;
+ storeForRepeatVisits();
+}
+// sw.js keeps this deploy's files on the device; it is handed the files the first view
+// loaded before it took control.
+function storeForRepeatVisits(){
+ if(!('serviceWorker' in navigator))return;
+ navigator.serviceWorker.register('sw.js').then(()=>navigator.serviceWorker.ready).then(registration=>registration.active?.postMessage({store:[...new Set(performance.getEntriesByType('resource').map(e=>e.name).filter(url=>url.startsWith(location.origin)))]})).catch(()=>{});
 }
 let archipelagoHost;
 async function addPortals(){

@@ -37,6 +37,8 @@ Startup downloads begin as early as possible: `atlas-entry.js` requests China's 
 
 The outline files loaded at startup and right after it are published as compact copies under `dist/data/compact/` (`npm run build:compact`, run by `build:borders` and `build:world-land`): the gzip GeoJSON files stay the build inputs every script reads, while the page requests the copy (`compactUrl` in `geo-pack.mjs`), about half the size. MapLibre's workers decode them (`atlas-data.mjs`, through `addWorkerSource`), so the page never copies their geometry to the workers. `npm run test:compact` fails if a copy is stale or a coordinate moves more than 5.6 mm.
 
+`dist/sw.js` keeps each deploy's files on visitors' devices, so a repeat visit downloads nothing but the page. The Pages workflow stamps `version.json` with the commit; a new version empties the store. Without a version (local preview, other hosts) nothing is stored.
+
 Automatic navigation locks map input and navigation controls until its movement completes, with a timeout recovery for background tabs that lands the camera on its destination. Reduced-motion preferences use an immediate move. Labels remain on the map during motion and their spacing is refreshed afterward. A single resize observer owns map sizing to avoid competing recenter operations.
 
 Calligraphic headings use bundled Ma Shan Zheng and Marck Script subsets, with their open font licenses in `dist/vendor`.

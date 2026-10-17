@@ -68,6 +68,9 @@ jobs:
         run: npm run test:botswana-namibia
       - name: Check satellite transparency and polygon rendering
         run: npm run test:satellite && npm run test:polygon-parts
+      - name: Stamp the deployed version
+        # dist/sw.js keeps each version's files on visitors' devices and empties them when this changes.
+        run: echo "{\"version\":\"${{ github.sha }}\"}" > dist/version.json
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website
