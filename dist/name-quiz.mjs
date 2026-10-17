@@ -80,6 +80,7 @@ export function createNameQuiz(host){
   return{
     start:begin,
     pause(){stop();save();},
+    release(){stop();round=null;scope=null;scopeName=null;},
     labels(){return round?round.places.filter(p=>round.found.has(p.code)||revealed):[];},
     draft(scope){const draft=read().drafts?.[scope];return draft&&Array.isArray(draft.found)&&draft.found.length?draft:null;},
     best(scope){const best=read().best?.[scope];return best?`Personal best: ${best.unassisted} / ${best.total} without hints · ${time(best.elapsed)}`:'';},

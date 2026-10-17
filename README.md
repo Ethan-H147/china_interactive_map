@@ -6,6 +6,8 @@ Interactive static map using DataV GeoAtlas, official Taiwan, Hong Kong and Maca
 
 ## Exploring and rendering
 
+Detailed country data uses one shared three-country memory budget. The active country and up to two recent countries stay cached; older country datasets unload and return on demand. See [country memory](docs/country-memory.md) for cleanup and checks.
+
 Map settings is the default panel. Selecting a region opens its details; Featured regions is temporarily hidden. Cultural cards are assigned to their province and specific subdivision codes. Subdivision lists appear only for a region whose children are included in the dataset.
 
 Districts and directly administered county-level divisions are visible and selectable by default. In subdivision mode, they take priority over the underlying province. Disconnected parts share a region identity and selection state. Xinjiang's direct cities are identified as county-level cities. `node scripts/validate-selection.mjs` checks every part of its 12 mapped direct cities, layer visibility, and selection priority.

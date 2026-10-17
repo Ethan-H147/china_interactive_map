@@ -30,3 +30,34 @@ export function createMapResources(map){
   }
  }};
 }
+
+// Reserve before loading, retain the active country, and release the oldest inactive
+// country before admitting another. Loading reservations count toward the limit.
+export function createCountryResidency({limit=3,dispose=async()=>{}}={}){
+ if(!Number.isInteger(limit)||limit<2)throw Error('Country limit must be at least two');
+ const records=new Map(),pending=new Map();let active,clock=0,queue=Promise.resolve();
+ function ensure(id,load){
+  if(pending.has(id))return pending.get(id);
+  const reserve=queue.then(async()=>{
+   let record=records.get(id);
+   if(!record){
+    if(records.size>=limit){
+     const victim=[...records.values()].filter(r=>r.id!==active).sort((a,b)=>a.used-b.used)[0];
+     if(!victim)throw Error('No inactive country can be released');
+     await victim.done?.catch(()=>{});await dispose(victim.id);records.delete(victim.id);
+    }
+    record={id};records.set(id,record);
+   }
+   record.used=++clock;record.status='loading';return record;
+  });
+  queue=reserve.then(()=>{},()=>{});
+  const job=reserve.then(async record=>{
+   record.done=job;
+   try{const value=await load();record.status='ready';return value;}
+   catch(error){try{await dispose(id);}finally{records.delete(id);}throw error;}
+  }).finally(()=>{if(pending.get(id)===job)pending.delete(id);});
+  pending.set(id,job);return job;
+ }
+ return {limit,ensure,activate(id){active=id;const r=records.get(id);if(r)r.used=++clock;},
+  snapshot:()=>({limit,active,countries:[...records.values()].sort((a,b)=>a.used-b.used).map(({id,status})=>({id,status}))})};
+}

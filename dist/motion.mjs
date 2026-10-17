@@ -47,7 +47,7 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
   for(const [original,{id,visibility}] of layers){setLayerVisible(map,original,visibility==='visible');setLayerVisible(map,id,false);}
  }
  function sourceUrl(source,data){const url=URL.createObjectURL(data),previous=urls.get(source);urls.set(source,url);return{url,previous};}
- const countryLoads=new Map();
+ const countryLoads=new Map(),countrySources=new Map(),workers=new Map();
  function loadCountry(country){
   nativeCountry=!!countries[country]&&!countries[country].motionLayers;
   if(nativeCountry)return Promise.resolve(false);
@@ -55,13 +55,17 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
   const promise=new Promise(resolve=>{
    const url=new URL('./motion-worker.mjs',import.meta.url);url.searchParams.set('country',country);
    const worker=new Worker(url,{type:'module'});
-   worker.onmessage=event=>{worker.terminate();if(event.data.sources)sources={...sources,...event.data.sources};resolve(!!event.data.sources);};
-   worker.onerror=()=>{worker.terminate();resolve(false);};
+   workers.set(country,{worker,resolve});
+   worker.onmessage=event=>{worker.terminate();workers.delete(country);if(event.data.sources){sources={...sources,...event.data.sources};countrySources.set(country,Object.keys(event.data.sources));}resolve(!!event.data.sources);};
+   worker.onerror=()=>{worker.terminate();workers.delete(country);resolve(false);};
   });countryLoads.set(country,promise);return promise;
  }
  // Waiting keeps the preview download from competing with the first view's data.
  const ready=Promise.resolve(startAfter).then(()=>loadCountry(initialCountry));
  function install(){
+  // A retained country may have released its detailed layers on leaving.
+  for(const [original,entry]of [...layers])if(!map.getLayer(original)){if(map.getLayer(entry.id))map.removeLayer(entry.id);layers.delete(original);}
+  for(const [id,url]of [...urls])if(!(map.getStyle().layers||[]).some(layer=>layer.source===id)){if(map.getSource(id))map.removeSource(id);URL.revokeObjectURL(url);urls.delete(id);dynamicKeys.delete(id);}
   const style=map.getStyle();
   const updatedSources=new Set();let added=false;
   for(const rendered of style.layers){
@@ -162,5 +166,13 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
  window.addEventListener('pagehide',event=>{if(!event.persisted)urls.forEach(url=>URL.revokeObjectURL(url));});
  async function prepare(){if(sources&&!active&&!restoring&&map.getStyle())install();}
  ready.then(prepare).catch(()=>{});
- return{ready,prepare,begin,end,loadCountry};
+ return{ready,prepare,begin,end,loadCountry,unloadCountry(country){
+  const running=workers.get(country);if(running){running.worker.terminate();running.resolve(false);workers.delete(country);}
+  for(const source of countrySources.get(country)||[]){
+   for(const [original,entry]of [...layers])if(map.getLayer(entry.id)?.source===source+suffix){map.removeLayer(entry.id);layers.delete(original);}
+   const id=source+suffix;if(map.getSource(id))map.removeSource(id);
+   if(urls.has(id)){URL.revokeObjectURL(urls.get(id));urls.delete(id);}dynamicKeys.delete(id);if(sources)delete sources[source];
+  }
+  countrySources.delete(country);countryLoads.delete(country);
+ }};
 }

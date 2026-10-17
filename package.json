@@ -111,7 +111,7 @@
     "build:compact": "node scripts/build-compact.mjs",
     "test:compact": "node --check dist/geo-pack.mjs && node scripts/validate-compact.mjs",
     "test:borders": "node --check dist/edge-runs.mjs && node --check scripts/channel-lines.mjs && node scripts/validate-borders.mjs && npm run test:frontier-continuity",
-    "test:runtime": "node --check dist/map-scene.mjs && node --check dist/country-loader.mjs && node scripts/validate-background-order.mjs && node scripts/validate-country-loader.mjs && node scripts/validate-satellite.mjs",
+    "test:runtime": "node --check dist/map-scene.mjs && node --check dist/country-loader.mjs && node scripts/validate-background-order.mjs && node scripts/validate-country-loader.mjs && node scripts/validate-satellite.mjs && node scripts/validate-country-memory.mjs",
     "test:frontier-continuity": "node scripts/validate-frontier-arcs.mjs && node scripts/validate-pilcomayo-junction.mjs",
     "build:country-expansion": "node --max-old-space-size=8000 scripts/build-country-expansion.mjs && node scripts/prepare-denmark-towns.mjs && npm run build:mexico-water && node scripts/fetch-europe-flags.mjs && node scripts/fetch-north-america-flags.mjs && node scripts/render-municipal-flags.mjs && node scripts/fetch-europe-expansion-flags.mjs && node scripts/prepare-flag-images.mjs && node --max-old-space-size=6000 scripts/prepare-expansion-economy.mjs && node scripts/prepare-region-colors.mjs && node scripts/build-world-land.mjs && npm run build:compact",
     "test:country-expansion": "node scripts/validate-country-expansion.mjs && npm run test:north-america-flags && npm run test:mexico-water && npm run test:expansion-economy && npm run test:us-territories && npm run test:denmark",

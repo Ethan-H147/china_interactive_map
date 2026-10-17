@@ -81,3 +81,5 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
   const retry=element('button','Retry','quiet-button');retry.type='button';retry.onclick=()=>renderStatistics(anchor,key,provided);panel.append(retry);
  }
 }
+
+export function releaseStatistics(country,retained=[]){const url=statisticsUrl(country);if(!retained.some(id=>statisticsUrl(id)===url))pending.delete(url);}

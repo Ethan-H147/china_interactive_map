@@ -130,5 +130,5 @@ export function createRegionColors(map,host={}){
   hover.replaceChildren(el('span',root.name),el('strong',(m?.usdEstimate?'≈ ':'')+metricNumber(m?.value,key)+(m?key.startsWith('gdp')?' USD':key==='populationDensity'?' /km²':'':'')),el('small',m?.year?String(m.year):''));hover.title=m?.note||'';
  });
  map.on('movestart',()=>hover.replaceChildren());map.getCanvas().addEventListener('mouseleave',()=>hover.replaceChildren());
- return {setCountry,setMetric,getMetric:()=>key,sync,suspend(value){suspended=value;options();drawLegend();sync();},retry:()=>error&&setCountry(country,key)};
+ return {releaseCountry:id=>cache.delete(id),setCountry,setMetric,getMetric:()=>key,sync,suspend(value){suspended=value;options();drawLegend();sync();},retry:()=>error&&setCountry(country,key)};
 }

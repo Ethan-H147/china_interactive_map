@@ -61,7 +61,7 @@ export function createArgentinaLocal(map,host,config={}){
   document.getElementById('map-hint').textContent=config.parentNoun?(mode===1?'Select a '+config.parentNoun:parent?'Select a municipality':'Select a '+config.parentNoun+' to view municipalities'):mode===1?'Select a province':config.level===3?(parent?'Select a city':'Select a province to view cities'):parent==='AR-06'?'Select a partido':parent==='AR-02'?'Select a comuna':parent?'Select a department':'Select a province to view subdivisions';
   return show(parent);
  }
- return{warm,search:q=>search?.(q)||[],find:id=>index?.records.find(r=>r.id===id),children:parent=>index?.records.filter(r=>r.parent===parent)||[],
+ return{unload(){release();scope=null;index=indexJob=search=undefined;},warm,search:q=>search?.(q)||[],find:id=>index?.records.find(r=>r.id===id),children:parent=>index?.records.filter(r=>r.parent===parent)||[],
   get mode(){return mode;},get scope(){return scope;},get records(){return index?.records||[];},get visibleRecords(){return mode===2?entry?.records||[]:[];},
   show,setMode,sync,clear(){scope=null;release();host.status('');if(host.active()){document.getElementById('map-hint').textContent=mode===1?'Select a '+(config.parentNoun||'province'):'Select a '+(config.parentNoun||'province')+' to view '+noun;host.changed();}},hit(point){if(mode!==2||!entry)return;const feature=map.queryRenderedFeatures(point,{layers:[entry.layers[0]]})[0];return feature&&index.records.find(r=>r.id===feature.properties.id);}
  };

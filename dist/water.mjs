@@ -14,7 +14,7 @@ export function createWaterDisplay(map,host){
   const input=document.getElementById('water-layer');
   const status=document.getElementById('water-status');
   const ids=['major-lakes','major-lake-shores','major-rivers'];
-  let enabled=false,loading=null,ready=false,lastVisibility;
+  let enabled=false,loading=null,ready=false,lastVisibility,generation=0;
   function sync(){
     if(!ready)return;
     const visible=waterVisible({enabled,mode:host.mode(),quiz:host.quiz()});
@@ -23,7 +23,7 @@ export function createWaterDisplay(map,host){
     ids.forEach(id=>map.setLayoutProperty(id,'visibility',visible?'visible':'none'));
   }
   async function load(){
-    const data=await host.load();
+    const token=generation,data=await host.load();if(token!==generation)return;
     // Match the boundary line tile settings so coincident vertices remain
     // consistent as the GPU simplifies them at each zoom level.
     map.addSource('major-water',{type:'geojson',data,tolerance:.65,maxzoom:18,buffer:128});
@@ -31,7 +31,7 @@ export function createWaterDisplay(map,host){
     addWaterLayers(map,'major-water',ids,{before});
     ready=true;sync();
   }
-  input.addEventListener('change',async()=>{
+  const change=async()=>{
     enabled=input.checked;
     if(enabled&&!ready){
       status.textContent='Loading waterways…';status.hidden=false;
@@ -44,6 +44,6 @@ export function createWaterDisplay(map,host){
       }
     }
     sync();
-  });
-  return{sync};
+  };input.addEventListener('change',change);
+  return{sync,dispose(){generation++;input.removeEventListener('change',change);for(const id of ids)if(map.getLayer(id))map.removeLayer(id);if(map.getSource('major-water'))map.removeSource('major-water');loading=null;ready=false;}};
 }

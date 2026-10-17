@@ -5,7 +5,7 @@ export function createExplorer(articles,landmarks){
  const dialog=document.getElementById('photo-viewer'),photo=document.getElementById('viewer-image');
  const link=(label,url)=>{const a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;};
  document.getElementById('viewer-close').onclick=()=>dialog.close();
- dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+ const close=event=>{if(event.target===dialog)dialog.close();};dialog.addEventListener('click',close);
  function open(place){
   const p=place.photo;photo.src=p.src;photo.alt=place.en;photo.width=p.width;photo.height=p.height;
   document.getElementById('viewer-title').textContent=place.en+' · '+place.zh;
@@ -14,7 +14,7 @@ export function createExplorer(articles,landmarks){
   document.getElementById('viewer-resolution').textContent=`${p.width.toLocaleString()} × ${p.height.toLocaleString()} pixels · Converted to WebP, original dimensions retained`;
   dialog.showModal();
  }
- return {render(code){
+ return {dispose(){if(dialog.open)dialog.close();dialog.removeEventListener('click',close);links.replaceChildren();gallery.replaceChildren();photo.removeAttribute('src');},render(code){
   links.replaceChildren();const record=articles.regions[code];links.hidden=!record;
   if(record){const label=document.createElement('span');label.textContent='Wikipedia';links.append(label);for(const lang of ['en','zh'])if(record[lang])links.append(link(lang==='en'?'English ↗':'中文 ↗',record[lang].url));}
   gallery.replaceChildren();const places=landmarksFor(landmarks,code);gallery.hidden=!places.length;if(!places.length)return;

@@ -12,3 +12,5 @@ export function japanLocalStatistics(facts,id){
  const value=facts.records[id]?.area;
  return {regions:{['japan:'+id]:{area:value==null?null:{value,unit:'km²',year:2025,source:'japan-census',method:'reported',note:'Reference area reported in the 2025 census.'}}},sources:{'japan-census':facts.source}};
 }
+
+export function releaseJapanLocalFacts(){pending=null;}
