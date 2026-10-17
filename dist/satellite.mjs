@@ -1,6 +1,5 @@
-import './countries.js';
-// South American layers are named after their countries (countries.js).
-const southAmericaLayers=new RegExp('^(south-('+globalThis.AtlasCountries.byAdapter('south-america').join('|')+')(-ddd)?-|arg-(local|city)-)');
+import {createMapScene} from './map-scene.mjs';
+export {provinceOpacity,blendColor} from './map-scene.mjs';
 export const sourceId='satellite-imagery';
 export const satelliteSource={
   type:'raster',tileSize:256,minzoom:0,maxzoom:19,
@@ -9,33 +8,6 @@ export const satelliteSource={
 };
 export function satelliteVisible({enabled,quiz}){return enabled&&!quiz;}
 export function imageryOpacity(value){const number=Number(value);return Number.isFinite(number)?Math.max(0,Math.min(100,number))/100:1;}
-export function provinceOpacity(visible,opacity=1){const amount=visible?opacity:0;return ['case',
-  ['boolean',['feature-state','inactive'],false],1-amount,
-  ['boolean',['feature-state','quizActive'],false],1,
-  ['boolean',['feature-state','quizCorrect'],false],.65,
-  ['boolean',['feature-state','quizWrong'],false],.55,
-  ['boolean',['feature-state','selected'],false],.3-.12*amount,
-  ['boolean',['feature-state','hover'],false],.35-.2*amount,
-  1-amount];}
-export function blendColor(from,to,amount){const channels=color=>[1,3,5].map(i=>parseInt(color.slice(i,i+2),16));return '#'+channels(from).map((channel,i)=>Math.round(channel+(channels(to)[i]-channel)*amount).toString(16).padStart(2,'0')).join('');}
-
-function southImageryLayers(map){
-  return map.getLayersOrder().filter(id=>southAmericaLayers.test(id)).map(id=>({id,type:map.getLayer(id).type})).filter(layer=>['fill','line'].includes(layer.type));
-}
-function createSouthImageryAppearance(map){
-  const original=new Map();
-  return (visible,opacity,layers)=>{
-    const present=new Set(layers.map(layer=>layer.id));
-    for(const id of original.keys())if(!present.has(id))original.delete(id);
-    for(const layer of layers){
-      const property=layer.type==='fill'?'fill-opacity':'line-color';
-      if(!original.has(layer.id))original.set(layer.id,map.getPaintProperty(layer.id,property)??1);
-      const base=original.get(layer.id);
-      const value=!visible?base:layer.type==='fill'?['+',['*',base,1-opacity],['*',opacity,['case',['boolean',['feature-state','selected'],false],.18,0]]]:blendColor(base,layer.id.endsWith('-selection')?'#fff0bb':'#f5dfab',opacity);
-      map.setPaintProperty(layer.id,property,value);
-    }
-  };
-}
 export function createSatelliteDisplay(map,host,ui={
   input:document.getElementById('satellite-layer'),
   options:document.getElementById('satellite-options'),
@@ -43,21 +15,15 @@ export function createSatelliteDisplay(map,host,ui={
   output:document.getElementById('satellite-opacity-value'),
   status:document.getElementById('satellite-status')
 }){
-  let enabled=false,ready=false,hasTile=false,lastVisible=false,lastOpacity=1,lastLayout,timer,lastLayers='';
-  const southAppearance=createSouthImageryAppearance(map);
+  let enabled=false,ready=false,hasTile=false,lastVisible=false,lastOpacity=1,lastLayout,timer;
+  const scene=createMapScene(map);
   const schedule=host.schedule||setTimeout,cancel=host.cancel||clearTimeout;
   function message(text){ui.status.textContent=text;ui.status.hidden=!text;}
-  function appearance(visible){const opacity=imageryOpacity(ui.opacity.value);
-    const southLayers=southImageryLayers(map);
-    const contextLayers=map.getLayersOrder().filter(id=>id.endsWith('-portal-fill')||id.endsWith('-neighbours')||id==='china-context'||id==='south-america-fill');
-    const layers=[...contextLayers,'province-fill','province-fragment-fill','korea-first-fill','mongolia-first-fill','japan-first-fill',...southLayers.map(layer=>layer.id)].filter(id=>map.getLayer(id)).join(',');
-    if(visible!==lastVisible||(visible&&(opacity!==lastOpacity||layers!==lastLayers))){
-    lastLayers=layers;
-    lastVisible=visible;lastOpacity=opacity;
-    for(const id of contextLayers)map.setPaintProperty(id,'fill-opacity',visible?1-opacity:1);
-    southAppearance(visible,opacity,southLayers);
-    host.onVisible(visible,opacity);
-  }}
+  function appearance(visible){
+    const opacity=imageryOpacity(ui.opacity.value);
+    scene.setSatellite(visible,opacity);
+    if(visible!==lastVisible||opacity!==lastOpacity){lastVisible=visible;lastOpacity=opacity;host.onVisible?.(visible,opacity);}
+  }
   function stopTimer(){if(timer!==undefined){cancel(timer);timer=undefined;}}
   function fail(){
     stopTimer();enabled=false;ui.input.checked=false;ui.options.hidden=true;
@@ -72,12 +38,12 @@ export function createSatelliteDisplay(map,host,ui={
     if(ready)return;
     map.addSource(sourceId,satelliteSource);
     // Keep imagery below every country's selectable fills and boundary lines.
-    map.addLayer({id:sourceId,type:'raster',source:sourceId,layout:{visibility:'none'},paint:{'raster-opacity':imageryOpacity(ui.opacity.value),'raster-fade-duration':200}},'china-context');
+    map.addLayer({id:sourceId,metadata:{atlas:{role:'imagery'}},type:'raster',source:sourceId,layout:{visibility:'none'},paint:{'raster-opacity':imageryOpacity(ui.opacity.value),'raster-fade-duration':200}});
     ready=true;
   }
   function sync(){
     host.placeControls?.();
-    const visible=satelliteVisible({enabled,mode:host.mode(),quiz:host.quiz()});
+    const visible=satelliteVisible({enabled,quiz:host.quiz()});
     ui.options.hidden=!enabled;
     if(!ready){appearance(false);return;}
     if(visible!==lastLayout){map.setLayoutProperty(sourceId,'visibility',visible?'visible':'none');lastLayout=visible;}
@@ -108,7 +74,7 @@ export function createSatelliteDisplay(map,host,ui={
     const opacity=imageryOpacity(ui.opacity.value);
     ui.output.textContent=Math.round(opacity*100)+'%';
     if(ready)map.setPaintProperty(sourceId,'raster-opacity',opacity);
-    appearance(satelliteVisible({enabled,mode:host.mode(),quiz:host.quiz()})&&hasTile);
+    appearance(satelliteVisible({enabled,quiz:host.quiz()})&&hasTile);
   });
-  return{sync};
+  return{sync,get state(){return {enabled,ready,hasTile,...scene.satellite};}};
 }

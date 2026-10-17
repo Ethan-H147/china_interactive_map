@@ -1,0 +1,56 @@
+{
+  "retrieved": "2026-10-17",
+  "counts": {
+    "1": 26,
+    "2": 273,
+    "3": 1985
+  },
+  "frontiers": [
+    {
+      "pair": "AUT-CHE",
+      "vertices": 70,
+      "endpointErrorMetres": 2132,
+      "method": "continuous outline arc"
+    },
+    {
+      "pair": "AUT-CHE",
+      "vertices": 560,
+      "endpointErrorMetres": 1539,
+      "method": "continuous outline arc"
+    },
+    {
+      "pair": "CHE-LIE",
+      "vertices": 67,
+      "endpointErrorMetres": 1128,
+      "method": "continuous outline arc"
+    }
+  ],
+  "kinds": {
+    "Canton": 26,
+    "District": 135,
+    "Municipality": 2110,
+    "Cantonal lake area": 11,
+    "Shared territory": 2
+  },
+  "coverage": "All 26 cantons, 135 districts and 2,110 political municipalities at 1 January 2026, plus two shared territories and eleven cantonal lake areas. Cantons without districts connect directly to their municipalities; no district is invented. Liechtenstein and foreign enclaves are excluded.",
+  "processing": "All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.",
+  "sources": [
+    {
+      "file": "swiss2026.zip",
+      "url": "https://data.geo.admin.ch/ch.swisstopo.swissboundaries3d/swissboundaries3d_2026-01/swissboundaries3d_2026-01_2056_5728.shp.zip",
+      "provider": "swisstopo · swissBOUNDARIES3D, 1 January 2026",
+      "license": "Open government data, attribution: © swisstopo",
+      "licenseUrl": "https://www.swisstopo.admin.ch/en/conditions-for-the-use-of-free-geodata-and-geoservices",
+      "sha256": "a467d7eec8395d746253c68095c75a2540b52064bc83a6b35cf101efb625733d",
+      "bytes": 35969375
+    },
+    {
+      "file": "ne-10m-land-boundaries.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    }
+  ]
+}

@@ -29,7 +29,7 @@ export default [
   // Unreleased countries' portals load after every first view, so they draw at once (Chile beside Argentina).
   assert(await page.evaluate(`['chile','peru','paraguay','india','turkey','iceland'].every(c=>!!map.getLayer(c+'-portal-fill'))`),'Unreleased portals are ready when developer mode opens');
   await page.evaluate(`location.hash='#italy'`);await page.settle();
-  assert.equal(await page.evaluate('AtlasEntry.current'),'italy','Italy opens in developer mode');
+  assert.equal(await page.evaluate('AtlasEntry.current'),'italy','Italy opens publicly');
  }},
  ...[['italy','Bergamo','Bergamo','Comune'],['spain','Llívia','Llívia','Municipality'],['france','Fleury-devant','Fleury-devant-Douaumont','Commune'],['united-kingdom','Maidstone','Maidstone','District'],['united-kingdom','Cardiff','Cardiff','built-up area']].map(([country,query,pick,kind])=>({
   name:`${country}: ${pick} (${kind})`,options:desktop,async run(page,base){
@@ -134,13 +134,13 @@ export default [
   await page.tap('#globe-view');await page.settle();
   assert(await page.evaluate(`map.getProjection().type==='mercator'&&map.getMinZoom()===.5`),'The button returns to the flat map');
  }},
- {name:'Iceland, India and Turkey wait in developer mode',options:desktop,async run(page,base){
+ {name:'Iceland, India and Turkey are public',options:desktop,async run(page,base){
   for(const country of ['iceland','india','turkey']){
    await page.open(base,'#'+country);
-   assert.equal(await page.evaluate('AtlasEntry.current'),'china',country+' falls back to China for the public');
+   assert.equal(await page.evaluate('AtlasEntry.current'),country,country+' opens for the public');
   }
  }},
- ...[['iceland','Kópavogur','IS-M-1000','Capital Region'],['turkey','Çankaya',null,'Ankara']].map(([country,query,id,parent])=>({name:`${country}: ${query} opens in developer mode`,options:{...desktop,developer:true},async run(page,base){
+ ...[['iceland','Kópavogur','IS-M-1000','Capital Region'],['turkey','Çankaya',null,'Ankara']].map(([country,query,id,parent])=>({name:`${country}: ${query} opens publicly`,options:desktop,async run(page,base){
   await page.open(base,'#'+country);
   assert.equal(await page.evaluate('AtlasEntry.current'),country);
   await searchAndSelect(page,query,query);
@@ -152,7 +152,7 @@ export default [
   await page.waitFor(`map.getSource('${country}-settlements')&&map.querySourceFeatures('${country}-settlements').length>0`,{label:country+' settlement dots'});
  }})),
  // Chile, Paraguay and Peru: their lowest units, under their parents; Chile and Peru show capitals.
- ...[['chile','Pozo Almonte','CL-C-01401','Tamarugal',true],['paraguay','Lambaré','PY-T-1107','Central',false],['peru','Barranco','PE-D-150104','Lima',true]].map(([country,query,id,parent,capitals])=>({name:`${country}: ${query} opens in developer mode`,options:{...desktop,developer:true},async run(page,base){
+ ...[['chile','Pozo Almonte','CL-C-01401','Tamarugal',true],['paraguay','Lambaré','PY-T-1107','Central',false],['peru','Barranco','PE-D-150104','Lima',true]].map(([country,query,id,parent,capitals])=>({name:`${country}: ${query} opens publicly`,options:desktop,async run(page,base){
   await page.open(base,'#'+country);
   assert.equal(await page.evaluate('AtlasEntry.current'),country);
   await searchAndSelect(page,query,query);
@@ -160,14 +160,14 @@ export default [
   assert(await page.evaluate(`[...document.querySelectorAll('.map-breadcrumb')].some(b=>b.getClientRects().length&&b.textContent.includes(${JSON.stringify(parent)}))`),query+' sits under '+parent);
   if(capitals)await page.waitFor(`!!map.getSource('${country}-settlements')&&!!map.getLayer('${country}-settlements')`,{label:country+' capitals'});
  }})),
- {name:'india: Sikkim opens in developer mode',options:{...desktop,developer:true},async run(page,base){
+ {name:'india: Sikkim opens publicly',options:desktop,async run(page,base){
   await page.open(base,'#india');
   assert.equal(await page.evaluate('AtlasEntry.current'),'india');
   await searchAndSelect(page,'Sikkim','Sikkim');
   await page.waitFor(`currentAtlas()?.getSelection()==='IN-SK'`,{label:'Sikkim selected'});
  }},
  // China and India both claim Aksai Chin and Arunachal Pradesh: each map draws its own claim.
- {name:'China and India each draw their own claim',options:{...desktop,developer:true},async run(page,base){
+ {name:'China and India each draw their own claim',options:desktop,async run(page,base){
   const hides=(layer,country)=>page.evaluate(`JSON.stringify(map.getFilter('${layer}')||null).includes('"claimedBy"],""],"${country}"')`);
   await page.open(base,'#china');
   await page.waitFor(`!!map.getLayer('india-portal-fill')&&!!map.getLayer('india-international')`,{label:'India portal'});
@@ -177,9 +177,8 @@ export default [
   await page.open(base,'#india');
   assert(await hides('atlas-frontiers','india'),"China's claim lines inside India's outline hide while India is open");
  }},
- // Developer mode draws every county-level division of mainland China; the public map keeps
- // its five-city overlay.
- {name:'China shows every county-level division in developer mode',options:{...desktop,developer:true},async run(page,base){
+ // County coverage is shared by public and developer views.
+ {name:'China shows every county-level division in developer mode',options:desktop,async run(page,base){
   await page.open(base,'#china');
   await page.waitFor('chinaCounties',{label:"China's counties",timeout:60000});
   await searchAndSelect(page,'Chengdu','Chengdu');
@@ -188,10 +187,9 @@ export default [
   assert.equal(await page.evaluate('selected?.layer.feature.properties.adcode'),510117,'Pidu District is selected');
   assert(await page.evaluate(`[...document.querySelectorAll('.map-breadcrumb')].some(b=>b.getClientRects().length&&b.textContent.includes('Chengdu'))`),'Pidu sits under Chengdu');
  }},
- {name:'the public China keeps its five-city districts',options:desktop,async run(page,base){
+ {name:'public China includes every prefecture with county divisions',options:desktop,async run(page,base){
   await page.open(base,'#china');
-  assert.equal(await page.evaluate('chinaCounties'),false);
-  assert.equal(await page.evaluate('districtCities.size'),5);
-  assert(!page.requests.some(url=>/china-(counties|county-names)/.test(url)),'The public map downloads none of the county data');
+  await page.waitFor('chinaCounties',{label:'public counties',timeout:60000});
+  assert.equal(await page.evaluate('districtCities.size'),329);
  }}
 ];

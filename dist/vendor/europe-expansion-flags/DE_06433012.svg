@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW Home & Student X8 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40.0001mm" height="100mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 20513 51282"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#2B2A29;stroke-width:39.0769}
+    .str0 {stroke:black;stroke-width:39.0769}
+    .fil5 {fill:none}
+    .fil1 {fill:#FEFEFE}
+    .fil4 {fill:#FEFEFE}
+    .fil0 {fill:#D9DADA}
+    .fil3 {fill:black}
+    .fil2 {fill:#0033AB}
+   ]]>
+  </style>
+ </defs>
+ <rect class="fil0" x="-33846" y="-82308" width="107692" height="152308"/>
+ <g id="Ebene_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_152188896">
+   <g>
+    <polygon class="fil1" points="159,0 20513,0 20513,51282 159,51282 "/>
+    <rect class="fil2" width="10240" height="51282"/>
+   </g>
+   <g>
+    <path class="fil3 str0" d="M5520 13233l-997 1152c592,-6 657,584 694,1166l278 4321c126,1974 844,5201 5015,5203 2340,1 4494,-2154 4596,-5030l161 -4574c31,-867 184,-1236 723,-1137l-1027 -1125c-52,123 -165,200 -275,174 -3249,-765 -5439,-900 -8781,-5 -132,35 -341,5 -387,-145z"/>
+    <path class="fil4 str0" d="M4933 14101l589 -817c56,154 322,148 621,56 2713,-839 5853,-695 8461,34 277,77 271,-3 343,-91l456 818 -10470 0z"/>
+    <path class="fil2 str0" d="M10168 13012c-1710,0 -3664,420 -5235,1089 172,67 491,512 521,1042 84,1512 30,3122 76,4626 84,2737 1705,5070 4638,5070 2935,0 4595,-2384 4679,-5121 46,-1503 37,-3083 121,-4595 30,-530 263,-955 435,-1022 -1572,-669 -3525,-1089 -5235,-1089z"/>
+    <g>
+     <line class="fil5 str1" x1="10038" y1="18916" x2="10038" y2= "22249" />
+     <polygon class="fil1 str1" points="9527,23531 9527,15839 7476,16864 7476,17121 6963,16095 10553,14300 10553,21993 12604,20967 12604,20711 13117,21736 "/>
+     <polygon class="fil1 str1" points="7415,18403 7616,19464 8636,19108 7818,19813 8636,20518 7616,20162 7415,21223 7213,20162 6194,20518 7012,19813 6194,19108 7213,19464 "/>
+     <polygon class="fil1 str1" points="12921,15839 13122,16900 14142,16544 13324,17249 14142,17954 13122,17598 12921,18659 12719,17598 11700,17954 12518,17249 11700,16544 12719,16900 "/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

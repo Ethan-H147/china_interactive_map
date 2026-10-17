@@ -173,7 +173,7 @@ The gallery covers 20 landmarks across Beijing, Shanghai, Hangzhou, Nanjing, Suz
 `npm run test:explore` verifies article coverage, all 53 district names, geometry containment and overlaps, photo dimensions and credits, gallery scope, quiz exclusion and district → city → province navigation. District source hashes and coverage measurements are published in `city-district-sources.json`.
 
 
-### Every county-level division (developer mode)
+### Every county-level division
 
 Developer mode draws all 2,727 county-level divisions of mainland China's prefecture-level areas (districts, counties, county-level cities, banners and their autonomous forms) in place of the five-city overlay, plus Suzhou Industrial Park. The municipalities' 86 districts are already their second level, and the 32 directly administered units are their own areas, so mainland China's 2,845 county-level divisions are all covered. Dongguan, Zhongshan, Jiayuguan and Danzhou have none. Kinmen, which the PRC lists under Quanzhou, stays Taiwan's Kinmen County.
 
@@ -183,7 +183,7 @@ Developer mode draws all 2,727 county-level divisions of mainland China's prefec
 - **Refined cities.** Hangzhou, Nanjing, Suzhou, Guangzhou and Shenzhen keep their refined districts from the public overlay.
 - **Names.** English names and Wikipedia links come from Wikidata's division codes (P442), retained in `scripts/additional-sources/china-counties/`.
 
-The counties travel in a pack of their own (`china-counties.pack.bin`, about 4.3 MB, with `china-counties-regions.json` and `china-county-names.json`). They load after China's map is ready, and only in developer mode, so the first view never waits for them. Turning developer mode on swaps them in; turning it off reloads the page. The public pack is unchanged.
+The counties travel in a pack of their own (`china-counties.pack.bin`, about 4.3 MB, with `china-counties-regions.json` and `china-county-names.json`). They load for everyone after China's map is ready, so the first view never waits for them. Turning developer mode on swaps them in; turning it off reloads the page. The public pack is unchanged.
 
 `npm run test:china-counties` checks the counts, names, and that counties tile each prefecture without overlap. Across prefectures, counties overlap only where the displayed prefecture outlines already do (about 8 km² nationally, at most 1 km² per pair).
 
@@ -278,7 +278,7 @@ The **CEP** view is deliberately pending, as requested. It draws no postal polyg
 
 Each country's geometry loads only when visited, inflates in a temporary worker, and leaves MapLibre when the country changes. Only small name catalogues and the flight silhouettes remain cached; the silhouettes and shared borders load right after the first view, whichever country is open. Shared topology supplies a single boundary mesh and interior label positions. Country silhouettes use the same dissolved subdivisions to avoid duplicate coastlines. The datasets are about 1.68 MB and 0.54 MB compressed (5.06 MB and 1.96 MB decoded). Rebuild with `npm run build:south-america`; downloaded originals remain in the ignored `artifacts/south-america-source/` directory. Provenance, download URLs, input hashes and processing limits are published with the country sources. `npm run test:south-america` checks coverage, capital separation, shared boundaries, labels, search, file budgets, developer gating, loading cancellation and geometry release.
 
-### Argentine provincial statistics (developer preview)
+### Argentine provincial statistics
 
 All 23 provinces and Buenos Aires City have official INDEC 2026 midyear population projections, IGN 2022 reported area in km², and CEPAL 2024 real gross value added at constant 2004 prices. Current-price PBG and per-capita PBG are verified for eight jurisdictions: Buenos Aires City, Buenos Aires Province, Corrientes, Entre Ríos, Jujuy, Santa Fe, Tierra del Fuego and Tucumán. Santa Fe uses preliminary 2025 accounts; the other seven use provisional or preliminary 2024 accounts. Missing nominal accounts remain unavailable. Constant-price output is labeled separately and is never converted at a current exchange rate. Nominal USD uses the matching-year World Bank official annual average rate.
 
@@ -330,7 +330,7 @@ Rebuild with `npm run build:southern-africa` and `npm run build:botswana-namibia
 
 ## Europe
 
-The United Kingdom, Spain, France, Italy and Chile are public; Iceland, Turkey, India, Paraguay and Peru are in developer mode (India and the South American countries share the European pipeline, though they are not European). `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
+The United Kingdom, Spain, France, Italy, Chile, Paraguay, Peru, Iceland, Turkey and India are public (India and the South American countries share the European pipeline, though they are not European). `dist/europe.mjs` adds them through the shared regional-country page. Their previews are large (the UK's carries 20 m coasts and its overseas territories), so unless a European country is the first view they load right after it, and the world map keeps its coarse silhouettes of them until their own previews are drawn.
 
 ### Italy
 
@@ -373,14 +373,14 @@ The 13 regions of metropolitan France (Corsica is a territorial collectivity), 9
 
 Cities and towns, like South Africa, are points independent of councils (`scripts/prepare-uk-settlements.mjs`): every built-up area or settlement with at least 1,000 residents — 4,258 places. England and Wales use ONS 2022 built-up areas with Census 2021 usual residents (London's built-up areas, omitted from ONS's towns tables, are summed from Census output areas as ONS does); Scotland uses NRS Census 2022 settlements; Northern Ireland uses NISRA 2015 settlements with Census 2021 counts (CT0100), located by GeoNames and, for villages absent there, OpenStreetMap. Welsh names are a label language.
 
-### Iceland (developer mode)
+### Iceland
 
 The eight regions (landshlutar) and 61 municipalities (sveitarfélög), from the IS 50V municipal boundaries of the Icelandic Institute of Natural History (formerly the National Land Survey, LMÍ; CC BY 4.0), land only. Regions group the municipalities by the first digit of their municipal number, as Statistics Iceland does (the capital region takes 0 and 1), and use ISO 3166-2:IS codes. Iceland has no land frontier.
 
 - Population: Statistics Iceland, 1 January 2026, by municipality (MAN02005); regions are sums. Areas are boundary-derived. No GDP is shown: Statistics Iceland's regional accounts use other groupings and lag several years.
 - Towns and villages are points independent of the municipalities (`scripts/prepare-europe-settlements.mjs`): each locality Statistics Iceland counts (MAN030102, 1 January 2026) at the centre of its urban nucleus in the IS 50V place-name areas. Greater Reykjavík (Reykjavík, Kópavogur, Hafnarfjörður, Garðabær, Seltjarnarnes) is one locality; eight small localities without a mapped outline are left out.
 
-### Turkey (developer mode)
+### Turkey
 
 The 12 statistical regions (İBBS level 1), 81 provinces and 973 districts, from the General Command of Mapping (HGM) boundaries as OCHA publishes them (cod-ab-tur, January 2026 edition, CC BY-IGO). Provinces use ISO 3166-2:TR plate codes and Turkish names (as English writes them too), except Istanbul; regions group the provinces as TÜİK does. HGM drops the dotless ı and decomposes İ, so names take the spelling of OpenStreetMap's Turkish name that matches them up to dots and accents (retained in `scripts/statistics-sources/europe/turkey-names-osm.json`).
 
@@ -388,7 +388,7 @@ The 12 statistical regions (İBBS level 1), 81 provinces and 973 districts, from
 - Population: TÜİK's address-based register at 31 December 2022 by district, as OCHA publishes it (cod-ps-tur); provinces and regions are sums. TÜİK's later tables sit behind a browser check and cannot be retained by script. Areas are boundary-derived; no GDP is shown.
 - Cities: the 81 province centres, as OpenStreetMap points. A city such as Ankara spans several districts, so it stands apart from them; districts are named after their own central towns, so towns are not shown. Without an official city population, the dots set their own appearance zoom (`minzoom`, read by `settlementZoom`).
 
-### India (developer mode)
+### India
 
 The 28 states and 8 union territories, first level only for now, from geoBoundaries' copy of the DataMeet map (after the Election Commission of India, CC BY 2.5 India), with India's official boundaries. Ids are current ISO 3166-2:IN codes; names are English with Hindi. The map shows 2011, so West Bengal's former enclaves in Bangladesh (exchanged in 2015) are dropped. Areas are boundary-derived; population is not yet included.
 
@@ -401,7 +401,9 @@ The 28 states and 8 union territories, first level only for now, from geoBoundar
 - **China's frontier line.** On China's map the frontier is drawn by the shared frontier layer as long continuous lines, like every other country's. The province outline leaves those edges: cut into short pieces, each fading in by its own length, it drew them unevenly.
 - **China's frontier everywhere.** DataV's generalised outline sits far from Natural Earth's lines along its claims and in places such as the Tian Shan. Anywhere along China's outline, an edge counts as a frontier when land outside China lies all the way out to 3 km. Every stretch of China's land border is drawn.
 
-### Chile, Paraguay and Peru (Paraguay and Peru in developer mode)
+### Chile, Paraguay and Peru
+
+Paraguay and Peru became available outside developer mode locally on 17 October 2026. Their original addition dates remain in the country log. The Salta–Formosa junction is reconciled before dissolving Argentina, so the provincial source gap cannot become a spike in the shared Pilcomayo frontier.
 
 The three share India's reconciliation (`reconcile` in `build-europe.mjs`): edges within 3 km of a neighbouring atlas outline move onto it, enclosed slivers go to the nearest unit, and each country's other land neighbours (Bolivia, Ecuador, Colombia) are drawn beneath it from geoBoundaries. Chile meets Argentina's outline, Paraguay Argentina's and Brazil's, and Peru Brazil's and Chile's. Population and boundary-derived area; no GDP yet; no subdivision flags yet.
 
@@ -431,6 +433,8 @@ The three share India's reconciliation (`reconcile` in `build-europe.mjs`): edge
   - The British Indian Ocean Territory is mapped as British. The 2025 treaty transferring it to Mauritius is not yet in force.
 
 **French Guiana's neighbours.** The world map's 1:110m silhouettes cannot meet a detailed outline. France's data therefore draws Suriname and northern Brazil beneath it: land from geoBoundaries, frontier exactly IGN's, and the strip between the two sources given to the nearer neighbour. South America's preview silhouettes now sit just above the world map, beneath every country's own layers.
+
+**The United States** adds all five inhabited territories and the nine Minor Outlying Islands as first-level places. The inhabited territories use Census 2025 outlines; minor-island land and lagoons use the same OpenStreetMap coastline method as the UK and French territories. All fourteen carry their own portal destinations. Military bases on foreign soil and independent associated states are excluded. [Coverage, sources and verification](docs/us-territories.md).
 
 **Camera and clicks.** Each country's own views frame its home territory only: the country view, a metropolitan region and a search for it. A territory's shape on the world map carries its id and bounds. Clicking one while another country is open switches country, selects the territory and fills the screen with it, without stopping at the home view.
 
@@ -526,3 +530,5 @@ Country-specific features stay in their own adapters: China's packed boundaries,
 `npm run test:browser` (`scripts/browser/`) drives the real site in headless Chrome over the DevTools protocol, with no extra dependencies: it serves `dist/` on a free port and uses real mouse, touch and keyboard input. Every scenario fails on an assertion, a page exception, a console error or a failed request, and saves a screenshot to `artifacts/browser-tests/` when it does. Scenarios cover the phone bottom sheet (dragging, flicking, the handle by tap, Enter and Space, search with the on-screen keyboard, panning), the level toggle on phone and desktop, every public country opening, searching and selecting a place, switching countries by clicking a neighbour and by link, and developer mode (no unreleased data for public visitors, the Changning unlock, the deepest level of each European country, shared links that reopen a third-level place with its label language, and leaving developer mode on an unreleased country). The GitHub Pages workflow runs them before every deployment; set `CHROME_PATH` if Chrome is not found.
 
 The deploy workflow splits the suite into five parallel jobs (`node scripts/browser/run.mjs --shard=i/5`, scenarios dealt round-robin), about 4 minutes each instead of about 20 in one job; deploy waits for all five. Pushes that change only documentation (outside `dist/`, `scripts/` and `package.json`) do not run the workflow, and a commit whose message contains `[skip tests]` (a change the owner says needs no test) deploys without the browser suite.
+
+All 35 countries became public on 17 October 2026, including Iceland, India and Turkey. The optional Changning developer mode no longer gates any current map. US mainland context exports normalize dissolved geometry into valid polygon features; Alaska, Hawaii and territories retain their own entry destinations.

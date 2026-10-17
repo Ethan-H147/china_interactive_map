@@ -1,29 +1,23 @@
-import {addRegionalCountry} from './regional-country.mjs';
-import {compactFiles} from './compact-files.mjs';
+import {createRegionalCollection} from './regional-collection.mjs';
 import './countries.js';
+import {vaticanProfile} from './vatican-profile.mjs';
 
 // Each country's levels and map settings are declared in countries.js.
 const {countries,byAdapter}=globalThis.AtlasCountries;
 const definitions=Object.fromEntries(byAdapter('europe').map(id=>[id,{name:countries[id].en,prefix:countries[id].prefix,lang:countries[id].lang,...countries[id].map}]));
-export const configurations=Object.fromEntries(Object.entries(definitions).map(([country,definition])=>[country,{country,firstLabel:'Country',searchLabel:'Find a place',...definition,base:`data/europe/${country}/`,nationalFlag:`vendor/flag-${definition.prefix}.svg`,contextLabels:true,flags:{},detailFlags:{},hasStatistics:()=>!!definition.statistics,attribution:`${definition.name}: <a href="data/europe/${country}/sources.json">Boundary sources & coverage</a>`}]));
-// Every country here gets its portal, released or not: an unreleased country's portal still draws its
-// land (Chile beside Argentina); its map opens only in developer mode (portal.sync). Each call adds
-// the countries not yet added.
+export const configurations=Object.fromEntries(Object.entries(definitions).map(([country,definition])=>[country,{country,firstLabel:'Country',searchLabel:'Find a place',...definition,base:`data/europe/${country}/`,nationalFlag:`vendor/flag-${definition.prefix}.svg`,contextLabels:true,flags:{},detailFlags:{},hasStatistics:()=>!!definition.statistics,attribution:`${definition.name}: <a href="data/europe/${country}/sources.json">Boundary sources & coverage</a>${definition.boundaryCredit?' · '+definition.boundaryCredit:''}`}]));
 export function createEurope(map,host){
- const portals={},queued=new Set();let adding=Promise.resolve(),flags=null;
- function ensure(){
-  if(!Object.keys(configurations).some(country=>window.AtlasDev?.allows(country)))return adding;
-  const wanted=Object.keys(configurations).filter(country=>!queued.has(country));
-  if(!wanted.length)return adding;
-  for(const country of wanted)queued.add(country);
-  // Their outline files are all requested now, so each portal is ready when its turn comes; the
-  // portals are still added one at a time, in this order, which keeps their layers in order.
-  if(globalThis.document)for(const file of compactFiles.filter(file=>wanted.some(country=>file.startsWith('europe/'+country+'/')))){const link=document.createElement('link');link.rel='preload';link.as='fetch';link.crossOrigin='anonymous';link.href='data/compact/'+file;document.head.append(link);}
-  adding=adding.catch(()=>{}).then(async()=>{
-   flags??=(await import('./europe-flags.mjs')).europeFlags;
-   for(const country of wanted){const c=configurations[country];Object.assign(c.flags,flags[country]?.firstFlags);Object.assign(c.detailFlags,flags[country]?.detailFlags);portals[country]=await addRegionalCountry(map,host,c);}
-  });
-  return adding;
- }
- return {portals,ensure,handles:country=>country in configurations,syncDeveloper(){for(const portal of Object.values(portals))portal.sync();}};
+ let flags;
+ const registry=globalThis.AtlasCountries;
+ const flagSets={'europe-expansion':async()=>(await import('./europe-expansion-flags.mjs')).europeExpansionFlags,'north-america':async()=>(await import('./north-america-flags.mjs')).northAmericaFlags};
+ return createRegionalCollection(map,host,configurations,{async prepare(country,config){
+  flags??=(await import('./europe-flags.mjs')).europeFlags;
+  if(country==='vatican-city')Object.assign(config,vaticanProfile);
+  config.childPages=registry.ids.filter(id=>registry.countries[id].parent===country).map(id=>({id,name:registry.countries[id].en,local:registry.countries[id].local}));
+  config.parentPage=registry.countries[country].parent;
+  const flagSet=registry.countries[country].flagSet;
+  const selectedFlags=flags[country]||(flagSet?(await flagSets[flagSet]())[country]:null);
+  Object.assign(config.flags,selectedFlags?.firstFlags);
+  Object.assign(config.detailFlags,selectedFlags?.detailFlags);
+ }});
 }

@@ -1,0 +1,40 @@
+{
+  "retrieved": "2026-10-17",
+  "counts": {
+    "1": 13
+  },
+  "frontiers": [],
+  "kinds": {
+    "Province": 10,
+    "Territory": 3
+  },
+  "coverage": "All ten provinces and three territories, from the Statistics Canada/geoBoundaries 2023 release. No lower administrative detail.",
+  "processing": "All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.",
+  "sources": [
+    {
+      "file": "canada-provinces.geojson",
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/41af8f1/releaseData/gbOpen/CAN/ADM1/geoBoundaries-CAN-ADM1_simplified.geojson",
+      "provider": "Statistics Canada · 2023 boundaries, geoBoundaries pinned release",
+      "license": "Statistics Canada Open Licence",
+      "licenseUrl": "https://www.statcan.gc.ca/en/reference/licence",
+      "sha256": "0c9e4fc56c8b9ce958960ffabd1556fbe7c3ec0deeea346a2b5b7dff05e35449",
+      "bytes": 26022306
+    },
+    {
+      "file": "canada-population.zip",
+      "url": "https://www150.statcan.gc.ca/n1/tbl/csv/17100009-eng.zip",
+      "provider": "Statistics Canada · Table 17-10-0009-01, quarterly population estimates",
+      "license": "Statistics Canada Open Licence",
+      "sha256": "b50bf05150e42edf3771ceb1d6868581fb6747b5886e0d1450b8b3437958bd0b",
+      "bytes": 30842
+    },
+    {
+      "file": "ne-10m-land-boundaries.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    }
+  ]
+}

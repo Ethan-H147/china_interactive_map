@@ -67,7 +67,7 @@ export async function launch({width=1280,height=820,mobile=false,developer=false
  const mouse=async(type,x,y,extra={})=>send('Input.dispatchMouseEvent',{type,x,y,button:'left',clickCount:1,timestamp:Date.now()/1000,...extra});
  const touch=async(type,points,timestamp=Date.now()/1000)=>send('Input.dispatchTouchEvent',{type,touchPoints:points.map(([x,y])=>({x,y})),timestamp});
  const session={
-  send,evaluate,waitFor,settle,problems,warnings,requests,failures,mobile,
+  send,on,evaluate,waitFor,settle,problems,warnings,requests,failures,mobile,
   async open(base,hash=''){problems.length=0;failures.length=0;await send('Page.navigate',{url:base+'/'+hash});await settle();},
   // A real pointer press: touch on a phone, mouse otherwise.
   async tap(target){const [x,y]=Array.isArray(target)?target:await center(target);if(mobile){await touch('touchStart',[[x,y]]);await sleep(40);await touch('touchEnd',[]);}else{await mouse('mouseMoved',x,y);await mouse('mousePressed',x,y);await mouse('mouseReleased',x,y);}await sleep(250);},

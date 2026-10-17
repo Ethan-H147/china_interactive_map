@@ -34,3 +34,16 @@ scripts/statistics-sources/brazil/state-tables.json -text
 scripts/statistics-sources/malaysia/exchange-rate-2015.json -text
 dist/vendor/flag-es.svg -text
 dist/vendor/flag-fr.svg -text
+
+# Preserve new downloaded flag originals and their recorded byte checksums.
+dist/vendor/europe-expansion-flags/*.svg -text
+dist/vendor/north-america-flags/*.svg -text
+dist/vendor/flag-be.svg -text
+dist/vendor/flag-ca.svg -text
+dist/vendor/flag-ch.svg -text
+dist/vendor/flag-de.svg -text
+dist/vendor/flag-mx.svg -text
+dist/vendor/flag-nl.svg -text
+dist/vendor/flag-us.svg -text
+dist/vendor/flag-va.svg -text
+scripts/flag-renderings/*.svg -text

@@ -8,6 +8,14 @@ const manifestPath=resolve(dist,'data/europe/flag-sources.json');
 let manifest;try{manifest=JSON.parse(await readFile(manifestPath,'utf8'));}catch{manifest={flags:{}};}
 const commons=(file,path)=>({original:'https://upload.wikimedia.org/wikipedia/commons/'+path+'/'+encodeURIComponent(file).replace(/%2C/g,','),page:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file.replace(/ /g,'_')),credit:'Wikimedia Commons',license:'Public domain'});
 const sources={
+ 'vatican-city':{file:'vendor/flag-va.svg',...commons('Flag_of_Vatican_City_(2023–present).svg','b/b3')},
+ germany:{file:'vendor/flag-de.svg',...commons('Flag_of_Germany.svg','b/ba')},
+ belgium:{file:'vendor/flag-be.svg',...commons('Flag_of_Belgium.svg','6/65')},
+ switzerland:{file:'vendor/flag-ch.svg',...commons('Flag_of_Switzerland.svg','f/f3')},
+ netherlands:{file:'vendor/flag-nl.svg',...commons('Flag_of_the_Netherlands.svg','2/20')},
+ 'united-states':{file:'vendor/flag-us.svg',...commons('Flag_of_the_United_States.svg','a/a4')},
+ canada:{file:'vendor/flag-ca.svg',...commons('Flag_of_Canada.svg','c/cf')},
+ mexico:{file:'vendor/flag-mx.svg',...commons('Flag_of_Mexico.svg','f/fc')},
  'united-kingdom':{file:'vendor/flag-gb.svg',...commons('Flag_of_the_United_Kingdom_(1-2).svg','a/a5')},
  spain:{file:'vendor/flag-es.svg',...commons('Flag_of_Spain.svg','9/9a')},
  france:{file:'vendor/flag-fr.svg',...commons('Flag_of_France.svg','c/c3')},
@@ -23,7 +31,12 @@ for(const [country,flag] of Object.entries(sources)){
  const known=manifest.flags[country],path=resolve(dist,flag.file);let bytes;
  try{bytes=await readFile(path);}catch{}
  if(!bytes||process.argv.includes('--refresh')){
-  const response=await fetch(flag.original,{headers:{'User-Agent':'Atlas/1.0 (flag source preservation)'}});
+  let response;
+  for(let attempt=0;attempt<4;attempt++){
+   response=await fetch(flag.original,{headers:{'User-Agent':'Atlas/1.0 (flag source preservation)'}});
+   if(response.ok||![429,502,503].includes(response.status))break;
+   await new Promise(resolve=>setTimeout(resolve,3000*(attempt+1)));
+  }
   if(!response.ok)throw Error(`${country}: HTTP ${response.status}`);
   bytes=Buffer.from(await response.arrayBuffer());
   if(!bytes.toString('utf8').includes('<svg'))throw Error(`${country}: original is not SVG`);

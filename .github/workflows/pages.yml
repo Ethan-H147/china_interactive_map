@@ -67,7 +67,7 @@ jobs:
       - name: Check country data and international borders
         run: npm run test:botswana-namibia
       - name: Check satellite transparency and polygon rendering
-        run: npm run test:satellite && npm run test:polygon-parts
+        run: npm run test:runtime && npm run test:frontier-continuity && npm run test:europe && npm run test:compact
       - name: Stamp the deployed version
         # dist/sw.js keeps each version's files on visitors' devices and empties them when this changes.
         run: echo "{\"version\":\"${{ github.sha }}\"}" > dist/version.json

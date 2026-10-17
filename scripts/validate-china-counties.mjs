@@ -1,4 +1,4 @@
-// Developer mode's county-level divisions of mainland China (prepare-china-counties.mjs).
+// Public and developer county-level divisions of mainland China (prepare-china-counties.mjs).
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
@@ -45,9 +45,9 @@ const overlap=overlaps.reduce((s,f)=>s+area(f.geometry),0);
 assert(within<.05,'Counties of one prefecture do not overlap: '+within.toFixed(3)+' km²');
 assert(overlap<10,'Overlap across prefectures stays as the displayed outlines have it: '+overlap.toFixed(2)+' km²');
 for(const [code,en] of [[320505,'Huqiu District'],[510104,'Jinjiang District'],[654201,'Tacheng']])assert(names.regions[code].en.startsWith(en),code+' '+en);
-// The county pack carries them alone (loaded after China's map in developer mode); the public pack
-// keeps the five-city overlay.
+// The county pack loads after the initial China view for everyone. The small initial
+// pack retains its overview overlay until the complete county source is ready.
 const dev=decodePack(gunzipSync(fs.readFileSync('dist/data/china-counties.pack.bin'))),pub=decodePack(gunzipSync(fs.readFileSync('dist/data/china-boundaries.pack.bin')));
 assert.equal(dev.districts.regions.features.length,2728);assert.equal(pub.districts.regions.features.length,JSON.parse(gunzipSync(fs.readFileSync('dist/data/city-districts.bin'))).regions.features.length,'The public pack keeps its overlay');
 assert.equal(dev.display.provinces.features.length+dev.display.subdivisions.features.length,0,'The county pack carries no provinces or prefectures');assert.equal(JSON.parse(fs.readFileSync('dist/data/china-counties-regions.json')).districts.length,2728,'The county index describes every county');
-console.log(`China counties: ${regions.length} in ${cities.size} prefectures, tiling each within ${(worst*100).toFixed(2)}%, ${overlap.toFixed(2)} km² overlap; developer mode only.`);
+console.log(`China counties: ${regions.length} in ${cities.size} prefectures, tiling each within ${(worst*100).toFixed(2)}%, ${overlap.toFixed(2)} km² overlap; available in public and developer views.`);

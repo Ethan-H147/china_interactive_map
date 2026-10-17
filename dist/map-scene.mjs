@@ -1,0 +1,101 @@
+// One scene owns drawing order and satellite paint for every country.
+// Country modules supply normal paint; exceptional layers declare atlas metadata.
+const scenes=new WeakMap();
+export const layerBands=Object.freeze({background:0,land:10,imagery:20,context:30,fill:40,water:45,border:50,selection:60,waterLine:65,marker:70,label:80});
+const defaults={background:'background',raster:'imagery',fill:'fill',line:'border',circle:'marker',symbol:'label'};
+const same=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+const clone=value=>value===undefined?undefined:structuredClone(value);
+function numericOutputs(value,transform){
+ if(Array.isArray(value)&&['interpolate','interpolate-hcl','interpolate-lab'].includes(value[0])&&value[2]?.[0]==='zoom')
+  return value.map((v,i)=>i>=4&&i%2===0?transform(v):v);
+ if(Array.isArray(value)&&value[0]==='step'&&value[1]?.[0]==='zoom')
+  return value.map((v,i)=>i>=2&&i%2===0?transform(v):v);
+ return transform(value);
+}
+function fade(base,amount,highlight){
+ if(!amount||base===0)return base;
+ return numericOutputs(base,value=>!highlight&&typeof value==='number'?value*(1-amount):highlight?['+',['*',value,1-amount],['*',amount,['case',['boolean',['feature-state','selected'],false],.18,['boolean',['feature-state','hover'],false],.15,0]]]:['*',value,1-amount]);
+}
+export function blendColor(from,to,amount){
+ if(!amount)return from;if(amount===1)return to;
+ const rgb=color=>typeof color==='string'&&/^#[\da-f]{3}([\da-f]{3})?$/i.test(color)?(color.length===4?color.slice(1).split('').map(v=>v+v).join(''):color.slice(1)).match(/../g).map(v=>parseInt(v,16)):null;
+ const a=rgb(from),b=rgb(to);
+ if(a&&b)return '#'+a.map((v,i)=>Math.round(v+(b[i]-v)*amount).toString(16).padStart(2,'0')).join('');
+ return numericOutputs(from,value=>['interpolate',['linear'],amount,0,value,1,to]);
+}
+export function provinceOpacity(visible,opacity=1){
+ const amount=visible?opacity:0;return ['case',
+ ['boolean',['feature-state','inactive'],false],1-amount,
+ ['boolean',['feature-state','quizActive'],false],1,
+ ['boolean',['feature-state','quizCorrect'],false],.65,
+ ['boolean',['feature-state','quizWrong'],false],.55,
+ ['boolean',['feature-state','selected'],false],.3-.12*amount,
+ ['boolean',['feature-state','hover'],false],.35-.2*amount,1-amount];
+}
+export const getMapScene=map=>scenes.get(map);
+export function createMapScene(map){
+ if(scenes.has(map))return scenes.get(map);
+ const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty'].map(key=>[key,map[key].bind(map)]));
+ const entries=new Map();let satellite={visible:false,opacity:1};
+ const layers=()=>map.getStyle()?.layers||[];
+ const describe=layer=>{
+  const atlas=layer.metadata?.atlas||{},role=atlas.role||defaults[layer.type];
+  if(!(role in layerBands))throw Error('Declare an atlas layer role for '+layer.id);
+  return {type:layer.type,role,paint:clone(layer.paint||{}),satellite:atlas.satellite??{},rendered:{}};
+ };
+ const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
+ function anchor(id,role,before){
+  const present=layers().filter(l=>l.id!==id),band=layerBands[role];
+  // A caller may reorder within its band, never cross another band's boundary.
+  if(before&&present.some(l=>l.id===before&&rank(l)===band))return before;
+  return present.find(l=>rank(l)>band)?.id;
+ }
+ function paint(entry){
+  const out=clone(entry.paint),amount=satellite.visible?satellite.opacity:0,rule=entry.satellite;
+  if(rule===false)return out;
+  if(entry.type==='fill'){
+   const base=entry.paint['fill-opacity']??1,mode=rule.fill||(entry.role==='context'?'fade':entry.role==='fill'?'highlight':'none');
+   out['fill-opacity']=base;
+   if(mode==='province')out['fill-opacity']=provinceOpacity(satellite.visible,satellite.opacity);
+   else if(mode!=='none')out['fill-opacity']=fade(base,amount,mode==='highlight');
+  }
+  if(entry.type==='line'){
+   if(rule.lineOpacity==='fade')out['line-opacity']=fade(entry.paint['line-opacity']??1,amount,false);
+   else if(entry.role==='border'||entry.role==='selection')out['line-color']=blendColor(entry.paint['line-color']??'#000000',rule.lineColor||'#fff0bb',amount);
+  }
+  return out;
+ }
+ function render(id,entry){
+  for(const [key,value] of Object.entries(paint(entry)))if(!same(entry.rendered[key],value)){native.setPaintProperty(id,key,value);entry.rendered[key]=clone(value);}
+ }
+ map.addLayer=function(definition,before){
+  if(map.getLayer(definition.id))throw Error('Layer already exists: '+definition.id);
+  const entry=describe(definition),rendered=paint(entry);
+  native.addLayer({...definition,paint:rendered},anchor(definition.id,entry.role,before));
+  entries.set(definition.id,entry);entry.rendered=clone(rendered);return map;
+ };
+ map.moveLayer=function(id,before){
+  const layer=map.getLayer(id);if(!layer)return native.moveLayer(id,before);
+  native.moveLayer(id,anchor(id,entries.get(id)?.role||describe(layer).role,before));return map;
+ };
+ map.removeLayer=function(id){const result=native.removeLayer(id);entries.delete(id);return result;};
+ map.setPaintProperty=function(id,key,value,...options){
+  const entry=entries.get(id);if(!entry)return native.setPaintProperty(id,key,value,...options);
+  if(value==null){delete entry.paint[key];native.setPaintProperty(id,key,value,...options);delete entry.rendered[key];}
+  else entry.paint[key]=clone(value);
+  render(id,entry);return map;
+ };
+ const scene={
+  setSatellite(visible,opacity=1){
+   const next={visible:!!visible,opacity:Math.max(0,Math.min(1,opacity))};
+   if(same(next,satellite))return;satellite=next;
+   for(const [id,entry] of entries)render(id,entry);
+  },
+  get satellite(){return {...satellite};},
+  basePaint(id,key){const entry=entries.get(id);return clone(entry?(entry.paint[key]??(key==='fill-opacity'?1:key==='line-color'?'#000000':undefined)):map.getPaintProperty(id,key));},
+  baseLayer(layer){return {...layer,paint:clone(entries.get(layer.id)?.paint||layer.paint)};},
+  role(id){return entries.get(id)?.role;},
+  assertOrder(){let previous=-Infinity;for(const layer of layers()){const current=rank(layer);if(current<previous)throw Error('Layer outside its band: '+layer.id);previous=current;}return true;}
+ };
+ scenes.set(map,scene);return scene;
+}

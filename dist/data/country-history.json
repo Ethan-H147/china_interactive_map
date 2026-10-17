@@ -1,0 +1,463 @@
+{
+  "version": 1,
+  "timeZone": "America/Chicago",
+  "meaning": "First implementation in the atlas, including developer-only or outline-only additions. This is not the boundary dataset year, source retrieval date, or public deployment date. Historical dates are reconstructed from the first tracked implementation; local additions are explicitly identified.",
+  "entries": [
+    {
+      "country": "china",
+      "name": "China",
+      "addedOn": "2026-10-02",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "b7ef5e969f17181112e38385299f49f40aae6cc3",
+        "committedAt": "2026-10-02T13:44:22-05:00",
+        "subject": "Build China Atlas from published administrative boundaries",
+        "paths": [
+          "dist/index.html"
+        ]
+      }
+    },
+    {
+      "country": "korea",
+      "name": "Korea",
+      "addedOn": "2026-10-02",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "16ee848c8254945fc25598e60d48934f886cd87a",
+        "committedAt": "2026-10-02T20:00:05-05:00",
+        "subject": "Update Site source",
+        "paths": [
+          "dist/korea.js",
+          "dist/data/korea*"
+        ]
+      }
+    },
+    {
+      "country": "mongolia",
+      "name": "Mongolia",
+      "addedOn": "2026-10-04",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "034fd44c693c34d415c4fa654aad51c27f0ec4f4",
+        "committedAt": "2026-10-04T21:02:48-05:00",
+        "subject": "Update Site source",
+        "paths": [
+          "dist/mongolia.mjs",
+          "dist/mongolia.js",
+          "dist/data/mongolia*"
+        ]
+      }
+    },
+    {
+      "country": "indonesia",
+      "name": "Indonesia",
+      "addedOn": "2026-10-05",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "9724e8b15a4696b16a2b32af35d8b9d5f3b06415",
+        "committedAt": "2026-10-05T23:08:11-05:00",
+        "subject": "Add Philippines and Indonesia with bounded on-demand borders and island search",
+        "paths": [
+          "dist/data/archipelago/indonesia*"
+        ]
+      }
+    },
+    {
+      "country": "japan",
+      "name": "Japan",
+      "addedOn": "2026-10-05",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "ffd57da2096577810a97b658eb5ac99f0531d63b",
+        "committedAt": "2026-10-05T13:58:16-05:00",
+        "subject": "Add Japan prefectures, national theme and prefectural flags",
+        "paths": [
+          "dist/japan.mjs",
+          "dist/japan.js",
+          "dist/data/japan*"
+        ]
+      }
+    },
+    {
+      "country": "philippines",
+      "name": "Philippines",
+      "addedOn": "2026-10-05",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "9724e8b15a4696b16a2b32af35d8b9d5f3b06415",
+        "committedAt": "2026-10-05T23:08:11-05:00",
+        "subject": "Add Philippines and Indonesia with bounded on-demand borders and island search",
+        "paths": [
+          "dist/data/archipelago/philippines*"
+        ]
+      }
+    },
+    {
+      "country": "argentina",
+      "name": "Argentina",
+      "addedOn": "2026-10-06",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "15efef7f31b9f62421a8a21d832adc9176a9ef40",
+        "committedAt": "2026-10-06T18:43:04-05:00",
+        "subject": "Add Brazilian states and Argentine provinces in developer mode",
+        "paths": [
+          "dist/data/south-america/argentina*"
+        ]
+      }
+    },
+    {
+      "country": "brazil",
+      "name": "Brazil",
+      "addedOn": "2026-10-06",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "15efef7f31b9f62421a8a21d832adc9176a9ef40",
+        "committedAt": "2026-10-06T18:43:04-05:00",
+        "subject": "Add Brazilian states and Argentine provinces in developer mode",
+        "paths": [
+          "dist/data/south-america/brazil*"
+        ]
+      }
+    },
+    {
+      "country": "uruguay",
+      "name": "Uruguay",
+      "addedOn": "2026-10-06",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "fbf260f7c0b56b5033e96a10c3d1343cba8d367c",
+        "committedAt": "2026-10-06T19:23:59-05:00",
+        "subject": "Add Uruguay departments and reconcile South America borders",
+        "paths": [
+          "dist/data/south-america/uruguay*"
+        ]
+      }
+    },
+    {
+      "country": "malaysia",
+      "name": "Malaysia",
+      "addedOn": "2026-10-07",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "24d745fae51a4a7880b56f1bb48c3030c7064487",
+        "committedAt": "2026-10-07T21:37:35-05:00",
+        "subject": "Add separate Malaysia and Singapore developer maps",
+        "paths": [
+          "dist/data/southeast-asia/malaysia*"
+        ]
+      }
+    },
+    {
+      "country": "singapore",
+      "name": "Singapore",
+      "addedOn": "2026-10-07",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "24d745fae51a4a7880b56f1bb48c3030c7064487",
+        "committedAt": "2026-10-07T21:37:35-05:00",
+        "subject": "Add separate Malaysia and Singapore developer maps",
+        "paths": [
+          "dist/data/southeast-asia/singapore*"
+        ]
+      }
+    },
+    {
+      "country": "russia",
+      "name": "Russia",
+      "addedOn": "2026-10-08",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "8bbaf04307c9a6e17508cc4b70f6bf52e889f7c1",
+        "committedAt": "2026-10-08T23:42:49-05:00",
+        "subject": "Add Russia regions and districts with regional statistics and flags",
+        "paths": [
+          "dist/data/russia/"
+        ]
+      }
+    },
+    {
+      "country": "eswatini",
+      "name": "Eswatini",
+      "addedOn": "2026-10-09",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "ba5fe18928885a45b1ffbbb65aaf868e68763bc6",
+        "committedAt": "2026-10-09T17:12:27-05:00",
+        "subject": "Add South Africa, Eswatini and Lesotho in developer mode",
+        "paths": [
+          "dist/data/southern-africa/eswatini/"
+        ]
+      }
+    },
+    {
+      "country": "lesotho",
+      "name": "Lesotho",
+      "addedOn": "2026-10-09",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "ba5fe18928885a45b1ffbbb65aaf868e68763bc6",
+        "committedAt": "2026-10-09T17:12:27-05:00",
+        "subject": "Add South Africa, Eswatini and Lesotho in developer mode",
+        "paths": [
+          "dist/data/southern-africa/lesotho/"
+        ]
+      }
+    },
+    {
+      "country": "south-africa",
+      "name": "South Africa",
+      "addedOn": "2026-10-09",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "ba5fe18928885a45b1ffbbb65aaf868e68763bc6",
+        "committedAt": "2026-10-09T17:12:27-05:00",
+        "subject": "Add South Africa, Eswatini and Lesotho in developer mode",
+        "paths": [
+          "dist/data/southern-africa/south-africa/"
+        ]
+      }
+    },
+    {
+      "country": "botswana",
+      "name": "Botswana",
+      "addedOn": "2026-10-13",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "f98882fe4358abea0c4d5a97cfe763c38112778a",
+        "committedAt": "2026-10-13T18:02:30-05:00",
+        "subject": "Update Site source",
+        "paths": [
+          "dist/data/southern-africa/botswana/"
+        ]
+      }
+    },
+    {
+      "country": "namibia",
+      "name": "Namibia",
+      "addedOn": "2026-10-13",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "f98882fe4358abea0c4d5a97cfe763c38112778a",
+        "committedAt": "2026-10-13T18:02:30-05:00",
+        "subject": "Update Site source",
+        "paths": [
+          "dist/data/southern-africa/namibia/"
+        ]
+      }
+    },
+    {
+      "country": "france",
+      "name": "France",
+      "addedOn": "2026-10-14",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "e5255d02b991b0e115191f220753f1dbe7dd57a3",
+        "committedAt": "2026-10-14T04:52:51-05:00",
+        "subject": "Add United Kingdom, Spain, France and Italy outlines in developer mode",
+        "paths": [
+          "dist/data/europe/france/"
+        ]
+      }
+    },
+    {
+      "country": "italy",
+      "name": "Italy",
+      "addedOn": "2026-10-14",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "e5255d02b991b0e115191f220753f1dbe7dd57a3",
+        "committedAt": "2026-10-14T04:52:51-05:00",
+        "subject": "Add United Kingdom, Spain, France and Italy outlines in developer mode",
+        "paths": [
+          "dist/data/europe/italy/"
+        ]
+      }
+    },
+    {
+      "country": "spain",
+      "name": "Spain",
+      "addedOn": "2026-10-14",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "e5255d02b991b0e115191f220753f1dbe7dd57a3",
+        "committedAt": "2026-10-14T04:52:51-05:00",
+        "subject": "Add United Kingdom, Spain, France and Italy outlines in developer mode",
+        "paths": [
+          "dist/data/europe/spain/"
+        ]
+      }
+    },
+    {
+      "country": "united-kingdom",
+      "name": "United Kingdom",
+      "addedOn": "2026-10-14",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "e5255d02b991b0e115191f220753f1dbe7dd57a3",
+        "committedAt": "2026-10-14T04:52:51-05:00",
+        "subject": "Add United Kingdom, Spain, France and Italy outlines in developer mode",
+        "paths": [
+          "dist/data/europe/united-kingdom/"
+        ]
+      }
+    },
+    {
+      "country": "iceland",
+      "name": "Iceland",
+      "addedOn": "2026-10-15",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "e7dc4fe46e74220fd65246e597393348829da2c2",
+        "committedAt": "2026-10-15T22:46:36-05:00",
+        "subject": "Add Iceland and Turkey in developer mode",
+        "paths": [
+          "dist/data/europe/iceland/"
+        ]
+      }
+    },
+    {
+      "country": "turkey",
+      "name": "Turkey",
+      "addedOn": "2026-10-15",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "e7dc4fe46e74220fd65246e597393348829da2c2",
+        "committedAt": "2026-10-15T22:46:36-05:00",
+        "subject": "Add Iceland and Turkey in developer mode",
+        "paths": [
+          "dist/data/europe/turkey/"
+        ]
+      }
+    },
+    {
+      "country": "chile",
+      "name": "Chile",
+      "addedOn": "2026-10-16",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "10d5ad8b1a6cdc0a47ab9d7209e94415abd386f5",
+        "committedAt": "2026-10-16T03:35:33-05:00",
+        "subject": "Add Chile, Paraguay and Peru in developer mode",
+        "paths": [
+          "dist/data/europe/chile/"
+        ]
+      }
+    },
+    {
+      "country": "india",
+      "name": "India",
+      "addedOn": "2026-10-16",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "cc5032676727f7cd15f0e249c3c5cff6b62131c2",
+        "committedAt": "2026-10-16T01:12:08-05:00",
+        "subject": "Add India in developer mode, matched to China's outline",
+        "paths": [
+          "dist/data/europe/india/"
+        ]
+      }
+    },
+    {
+      "country": "paraguay",
+      "name": "Paraguay",
+      "addedOn": "2026-10-16",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "10d5ad8b1a6cdc0a47ab9d7209e94415abd386f5",
+        "committedAt": "2026-10-16T03:35:33-05:00",
+        "subject": "Add Chile, Paraguay and Peru in developer mode",
+        "paths": [
+          "dist/data/europe/paraguay/"
+        ]
+      }
+    },
+    {
+      "country": "peru",
+      "name": "Peru",
+      "addedOn": "2026-10-16",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "10d5ad8b1a6cdc0a47ab9d7209e94415abd386f5",
+        "committedAt": "2026-10-16T03:35:33-05:00",
+        "subject": "Add Chile, Paraguay and Peru in developer mode",
+        "paths": [
+          "dist/data/europe/peru/"
+        ]
+      }
+    },
+    {
+      "country": "belgium",
+      "name": "Belgium",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+      }
+    },
+    {
+      "country": "canada",
+      "name": "Canada",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+      }
+    },
+    {
+      "country": "germany",
+      "name": "Germany",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+      }
+    },
+    {
+      "country": "mexico",
+      "name": "Mexico",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+      }
+    },
+    {
+      "country": "netherlands",
+      "name": "Netherlands",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+      }
+    },
+    {
+      "country": "switzerland",
+      "name": "Switzerland",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+      }
+    },
+    {
+      "country": "united-states",
+      "name": "United States",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+      }
+    },
+    {
+      "country": "vatican-city",
+      "name": "Vatican City",
+      "parent": "italy",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally as an independent sovereign country, accessed as a subpage of Italy. Not yet committed or deployed."
+      }
+    }
+  ]
+}

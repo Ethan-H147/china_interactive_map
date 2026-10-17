@@ -4,10 +4,11 @@ import {countryColorData,colorLayerProfile} from '../dist/region-color-data.mjs'
 import {comparisonRecords,metricScale,shadeExpression,shadePalette,missingColor,createRegionColors} from '../dist/region-colors.mjs';
 import {validate,hashFor,fromHash} from '../dist/view-state.mjs';
 const datasets=Object.fromEntries(Object.keys(countryColorData).map(country=>[country,JSON.parse(fs.readFileSync('dist/data/region-colors/'+country+'.json'))]));
-const counts={'united-kingdom':28,france:26,spain:20,italy:20,botswana:10,namibia:14,'south-africa':9,eswatini:4,lesotho:10,china:34,korea:29,mongolia:22,japan:47,indonesia:38,philippines:18,malaysia:16,singapore:5,russia:83,brazil:27,uruguay:19,argentina:24,iceland:8,india:36,chile:16,paraguay:18,peru:25,turkey:12};
+const counts={'vatican-city':0,germany:16,belgium:3,switzerland:26,netherlands:12,'united-states':65,canada:13,mexico:32,'united-kingdom':28,france:26,spain:20,italy:20,botswana:10,namibia:14,'south-africa':9,eswatini:4,lesotho:10,china:34,korea:29,mongolia:22,japan:47,indonesia:38,philippines:18,malaysia:16,singapore:5,russia:83,brazil:27,uruguay:19,argentina:24,iceland:8,india:36,chile:16,paraguay:18,peru:25,turkey:12};
 for(const [country,data]of Object.entries(datasets)){
  assert.equal(comparisonRecords(data,1).length,counts[country],country+' first-level comparison units');assert.equal(new Set(data.records.map(r=>r.id)).size,data.records.length);
  for(const r of data.records)for(const [key,m]of Object.entries(r.metrics)){assert(Number.isFinite(m.value)&&m.value>=0,country+' '+r.id+' '+key);assert(m.sourceUrl,'Traceable metric source');if(key.startsWith('gdp'))assert.equal(m.unit,'USD','Economic values must share a currency');}
+ if(!data.records.length){for(const key of ['population','populationDensity','gdp','gdpPerCapita'])assert.equal(metricScale(data,key),null,country+' has no invented comparison values');continue;}
  const population=metricScale(data,'population');assert(population&&population.count>=2,country+' population shading');assert.equal(population.color(undefined),missingColor);
  for(const key of ['population','populationDensity','gdp','gdpPerCapita']){const scale=metricScale(data,key);if(!scale)continue;assert(scale.bins.length<=7);assert.equal(scale.bins.reduce((s,b)=>s+b.count,0),scale.count,'Every valid value belongs to one group');}
  if(countryColorData[country].economy===false){assert.equal(metricScale(data,'gdp'),null);assert.equal(metricScale(data,'gdpPerCapita'),null);}

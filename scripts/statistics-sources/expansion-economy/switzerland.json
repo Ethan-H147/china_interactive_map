@@ -1,0 +1,200 @@
+{
+ "retrieved": "2026-10-17",
+ "currency": "CHF",
+ "provider": "Swiss Federal Statistical Office · cantonal GDP and GDP per capita",
+ "url": "https://www.bfs.admin.ch/bfs/en/home/statistics/national-economy/national-accounts/gross-domestic-product-canton.html",
+ "sources": [
+  {
+   "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/orderNr:je-e-04.02.06.01/master",
+   "sha256": "fb5ebcca30863b297c2e1894393fb051229871b1311324c53fbd93e8c0dfdf77"
+  },
+  {
+   "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/orderNr:je-e-04.02.06.03/master",
+   "sha256": "f018074423cfab71d78ba38819032e33ce6ce2f979dabac6fd16a8a3b443d885"
+  }
+ ],
+ "rows": {
+  "CH-K-1": {
+   "name": "Zurich",
+   "year": 2022,
+   "gdp": 164494808130,
+   "gdpPerCapita": 104619.53263,
+   "status": "provisional"
+  },
+  "CH-K-2": {
+   "name": "Berne",
+   "year": 2022,
+   "gdp": 89362154390,
+   "gdpPerCapita": 85151.01114,
+   "status": "provisional"
+  },
+  "CH-K-3": {
+   "name": "Lucerne",
+   "year": 2022,
+   "gdp": 31924234500,
+   "gdpPerCapita": 75544.49424,
+   "status": "provisional"
+  },
+  "CH-K-4": {
+   "name": "Uri",
+   "year": 2022,
+   "gdp": 2171116300,
+   "gdpPerCapita": 58391.59543,
+   "status": "provisional"
+  },
+  "CH-K-5": {
+   "name": "Schwyz",
+   "year": 2022,
+   "gdp": 11622675910,
+   "gdpPerCapita": 70738.63411,
+   "status": "provisional"
+  },
+  "CH-K-6": {
+   "name": "Obwalden",
+   "year": 2022,
+   "gdp": 2888793770,
+   "gdpPerCapita": 74902.28212,
+   "status": "provisional"
+  },
+  "CH-K-7": {
+   "name": "Nidwalden",
+   "year": 2022,
+   "gdp": 3309652810,
+   "gdpPerCapita": 74951.93982,
+   "status": "provisional"
+  },
+  "CH-K-8": {
+   "name": "Glarus",
+   "year": 2022,
+   "gdp": 3117553550,
+   "gdpPerCapita": 75429.85326,
+   "status": "provisional"
+  },
+  "CH-K-9": {
+   "name": "Zug",
+   "year": 2022,
+   "gdp": 25176262910,
+   "gdpPerCapita": 192957.78069,
+   "status": "provisional"
+  },
+  "CH-K-10": {
+   "name": "Fribourg",
+   "year": 2022,
+   "gdp": 21423644090,
+   "gdpPerCapita": 64502.43149,
+   "status": "provisional"
+  },
+  "CH-K-11": {
+   "name": "Solothurn",
+   "year": 2022,
+   "gdp": 20762725060,
+   "gdpPerCapita": 73802.94804,
+   "status": "provisional"
+  },
+  "CH-K-12": {
+   "name": "Basel-Stadt",
+   "year": 2022,
+   "gdp": 41203459090,
+   "gdpPerCapita": 209781.83042,
+   "status": "provisional"
+  },
+  "CH-K-13": {
+   "name": "Basel-Landschaft",
+   "year": 2022,
+   "gdp": 22811960900,
+   "gdpPerCapita": 77692.91593,
+   "status": "provisional"
+  },
+  "CH-K-14": {
+   "name": "Schaffhausen",
+   "year": 2022,
+   "gdp": 8541543460.000001,
+   "gdpPerCapita": 100958.50056,
+   "status": "provisional"
+  },
+  "CH-K-15": {
+   "name": "Appenzell A. Rh.",
+   "year": 2022,
+   "gdp": 3748998430,
+   "gdpPerCapita": 67340.82544,
+   "status": "provisional"
+  },
+  "CH-K-16": {
+   "name": "Appenzell I. Rh.",
+   "year": 2022,
+   "gdp": 1237718580,
+   "gdpPerCapita": 75525.90804,
+   "status": "provisional"
+  },
+  "CH-K-17": {
+   "name": "St. Gallen",
+   "year": 2022,
+   "gdp": 44588822960,
+   "gdpPerCapita": 85320.15123,
+   "status": "provisional"
+  },
+  "CH-K-18": {
+   "name": "Graubünden",
+   "year": 2022,
+   "gdp": 16725530019.999998,
+   "gdpPerCapita": 82817.283,
+   "status": "provisional"
+  },
+  "CH-K-19": {
+   "name": "Aargau",
+   "year": 2022,
+   "gdp": 47538210860,
+   "gdpPerCapita": 67224.21811,
+   "status": "provisional"
+  },
+  "CH-K-20": {
+   "name": "Thurgau",
+   "year": 2022,
+   "gdp": 20291588620,
+   "gdpPerCapita": 70504.15252,
+   "status": "provisional"
+  },
+  "CH-K-21": {
+   "name": "Ticino",
+   "year": 2022,
+   "gdp": 36083616750,
+   "gdpPerCapita": 102190.34939,
+   "status": "provisional"
+  },
+  "CH-K-22": {
+   "name": "Vaud",
+   "year": 2022,
+   "gdp": 64500130220,
+   "gdpPerCapita": 78021.25225,
+   "status": "provisional"
+  },
+  "CH-K-23": {
+   "name": "Valais",
+   "year": 2022,
+   "gdp": 21807304230,
+   "gdpPerCapita": 61386.57416,
+   "status": "provisional"
+  },
+  "CH-K-24": {
+   "name": "Neuchâtel",
+   "year": 2022,
+   "gdp": 18724213170,
+   "gdpPerCapita": 106165.29127,
+   "status": "provisional"
+  },
+  "CH-K-25": {
+   "name": "Geneva",
+   "year": 2022,
+   "gdp": 61231334170,
+   "gdpPerCapita": 119643.62523,
+   "status": "provisional"
+  },
+  "CH-K-26": {
+   "name": "Jura",
+   "year": 2022,
+   "gdp": 5799196750,
+   "gdpPerCapita": 78546.37592,
+   "status": "provisional"
+  }
+ }
+}

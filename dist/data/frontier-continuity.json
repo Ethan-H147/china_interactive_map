@@ -1,0 +1,96 @@
+{
+  "method": "One continuous detailed-outline arc per reference frontier; shared tripoints join once; no per-piece opacity fading.",
+  "references": "Natural Earth v5.1.2 land boundary topology; existing displayed national outlines",
+  "frontiers": [
+    {
+      "pair": "BRA-PRY",
+      "owner": "brazil",
+      "outline": "flight-context.bin",
+      "vertices": 1934,
+      "endpoints": [
+        [
+          -58.164741,
+          -20.160799
+        ],
+        [
+          -54.594373,
+          -25.577375
+        ]
+      ],
+      "endpointErrorMetres": 2256,
+      "km": 1380
+    },
+    {
+      "pair": "ARG-PRY",
+      "owner": "argentina",
+      "outline": "flight-context.bin",
+      "vertices": 2665,
+      "endpoints": [
+        [
+          -54.594373,
+          -25.577375
+        ],
+        [
+          -62.6444,
+          -22.23925
+        ]
+      ],
+      "endpointErrorMetres": 2935,
+      "km": 2029
+    },
+    {
+      "pair": "PRY-BOL",
+      "owner": "paraguay",
+      "outline": "europe/paraguay/context.bin",
+      "vertices": 131,
+      "endpoints": [
+        [
+          -62.6444,
+          -22.23925
+        ],
+        [
+          -58.164741,
+          -20.160799
+        ]
+      ],
+      "endpointErrorMetres": 1780,
+      "km": 755
+    },
+    {
+      "pair": "PER-ECU",
+      "owner": "peru",
+      "outline": "europe/peru/context.bin",
+      "vertices": 3197,
+      "endpoints": [
+        [
+          -75.273501,
+          -0.132159
+        ],
+        [
+          -80.318574,
+          -3.383715
+        ]
+      ],
+      "endpointErrorMetres": 5697,
+      "km": 1531
+    },
+    {
+      "pair": "PER-COL",
+      "owner": "peru",
+      "outline": "europe/peru/context.bin",
+      "vertices": 1885,
+      "endpoints": [
+        [
+          -69.948225,
+          -4.236161
+        ],
+        [
+          -75.273501,
+          -0.132159
+        ]
+      ],
+      "endpointErrorMetres": 4863,
+      "km": 1484
+    }
+  ]
+}

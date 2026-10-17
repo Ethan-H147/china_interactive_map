@@ -1,0 +1,73 @@
+{
+  "provider": "Eurostat · nama_10r_3gdp",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table",
+  "currency": "EUR",
+  "retrieved": "2026-10-17",
+  "sources": [
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEF&geo=DE9&geo=DE6&geo=DE7&geo=DEB&geo=DEA&geo=DE5&geo=DE1&geo=DE2&geo=DE8&geo=DED&geo=DEG&geo=DEE&geo=DEC&geo=DE4&geo=DE3&geo=DEF0B&geo=DE922&geo=DE947&geo=DEF0C&geo=DEF0F&geo=DE933&geo=DE600&geo=DE911&geo=DE912&geo=DE913&geo=DE914&geo=DE934&geo=DE923&geo=DE935&geo=DE925&geo=DE926&geo=DE916&geo=DE917&geo=DE936&geo=DEF0D&geo=DE937&geo=DE918&geo=DE927&geo=DE91A&geo=DE91B&geo=DE938&geo=DE928&geo=DEF0E&geo=DE939",
+      "sha256": "f11d2c5ba41433c8f5073928c765f38612efb3a6ec3c4106961ef6ad5814533a",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DE931&geo=DE91C&geo=DE93A&geo=DE932&geo=DE929&geo=DE93B&geo=DE941&geo=DE942&geo=DE943&geo=DE944&geo=DE945&geo=DE946&geo=DEF07&geo=DEF08&geo=DEF01&geo=DEF02&geo=DEF03&geo=DEF04&geo=DEF05&geo=DEF09&geo=DEF0A&geo=DEF06&geo=DE722&geo=DEB13&geo=DEB1C&geo=DE735&geo=DE736&geo=DEB15&geo=DEB14&geo=DE723&geo=DE737&geo=DEB11&geo=DEB12&geo=DE724&geo=DE725&geo=DE731&geo=DE732&geo=DE733&geo=DE734&geo=DE718&geo=DE719&geo=DE949&geo=DEA26&geo=DEA27&geo=DEA47",
+      "sha256": "a774813a7dfa5b5c21102680563333522c425473ceecdc5bb1d0af09a94cde9a",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEA51&geo=DEA52&geo=DEA53&geo=DEA54&geo=DEA55&geo=DEA56&geo=DE721&geo=DEA28&geo=DEA57&geo=DE94A&geo=DEA58&geo=DE71A&geo=DE94B&geo=DEA29&geo=DEA59&geo=DEA5A&geo=DE94C&geo=DEA2A&geo=DEA5B&geo=DE71B&geo=DE94D&geo=DEA2B&geo=DEA2C&geo=DEA5C&geo=DE71C&geo=DE94E&geo=DEA31&geo=DEA32&geo=DEA33&geo=DE711&geo=DE712&geo=DE713&geo=DE71D&geo=DEA34&geo=DEA35&geo=DE714&geo=DE715&geo=DE94F&geo=DE94G&geo=DEA36&geo=DE94H&geo=DEA37&geo=DE716&geo=DE501&geo=DE502",
+      "sha256": "c3e33a2b7842dc5b1c03c3061bf11028bc7aa671473f1b63002d261ba32e4bd6",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEA11&geo=DEA12&geo=DEA13&geo=DEA14&geo=DEA15&geo=DEA16&geo=DEA17&geo=DEA18&geo=DEA19&geo=DEA38&geo=DEA1A&geo=DEA1B&geo=DEA41&geo=DEA42&geo=DE717&geo=DE71E&geo=DEA1C&geo=DEA1D&geo=DEA43&geo=DEA1E&geo=DEA1F&geo=DEA44&geo=DEA45&geo=DEA22&geo=DEA23&geo=DEA24&geo=DEA2D&geo=DEA46&geo=DE948&geo=DEB22&geo=DEB24&geo=DEB3B&geo=DEB23&geo=DEB25&geo=DEB31&geo=DEB32&geo=DEB33&geo=DEB34&geo=DEB35&geo=DEB36&geo=DEB37&geo=DEB38&geo=DEB39&geo=DEB3A&geo=DEB1A",
+      "sha256": "f37e574c3058e9abba31f58f134572e9cf45de6a40eeb9122f6f31192d0601d0",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEB18&geo=DEB1D&geo=DEB1B&geo=DEB21&geo=DEB17&geo=DE113&geo=DE114&geo=DE128&geo=DE129&geo=DE12A&geo=DE13A&geo=DE141&geo=DE11D&geo=DE121&geo=DE122&geo=DE123&geo=DE134&geo=DE115&geo=DE12B&geo=DE116&geo=DE117&geo=DE118&geo=DE124&geo=DE12C&geo=DE135&geo=DE119&geo=DE136&geo=DE11A&geo=DE131&geo=DE132&geo=DE125&geo=DE126&geo=DE127&geo=DE137&geo=DE11B&geo=DE138&geo=DE133&geo=DE11C&geo=DE139&geo=DEB3J&geo=DEB3C&geo=DEB3E&geo=DEB3F&geo=DEB3H&geo=DEB3K",
+      "sha256": "49b1f9412ae003b158c0fbeab000007dd7a2f2d0e1e2366d37ddba6d8da54ecb",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEB3D&geo=DEB3G&geo=DEB3I&geo=DE111&geo=DE112&geo=DE238&geo=DE25C&geo=DE261&geo=DE262&geo=DE263&geo=DE264&geo=DE27B&geo=DE27C&geo=DE239&geo=DE24B&geo=DE24C&geo=DE26A&geo=DE26B&geo=DE24D&geo=DE265&geo=DE251&geo=DE252&geo=DE253&geo=DE254&geo=DE255&geo=DE256&geo=DE26C&geo=DE23A&geo=DE241&geo=DE242&geo=DE243&geo=DE244&geo=DE245&geo=DE271&geo=DE272&geo=DE273&geo=DE274&geo=DE275&geo=DE266&geo=DE257&geo=DE276&geo=DE267&geo=DE246&geo=DE258&geo=DE259",
+      "sha256": "d40618288c80336c5b5176329f7a0cc514862d2805807822aaeea3904a89c689",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DE277&geo=DE268&geo=DE247&geo=DE278&geo=DE269&geo=DE248&geo=DE25A&geo=DE249&geo=DE279&geo=DE25B&geo=DE27A&geo=DE24A&geo=DE228&geo=DE229&geo=DE142&geo=DE216&geo=DE217&geo=DE21J&geo=DE21K&geo=DE237&geo=DE143&geo=DE218&geo=DE144&geo=DE145&geo=DE219&geo=DE22A&geo=DE21L&geo=DE21M&geo=DE22B&geo=DE21A&geo=DE146&geo=DE21B&geo=DE21N&geo=DE22C&geo=DE231&geo=DE232&geo=DE233&geo=DE234&geo=DE21C&geo=DE221&geo=DE222&geo=DE223&geo=DE224&geo=DE147&geo=DE21D",
+      "sha256": "1a7b6c4e6c390cc241c15b4f40f1fd07d92e9dacfcecd588ed1837e9b75ba7a8",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DE235&geo=DE148&geo=DE21E&geo=DE225&geo=DE21F&geo=DE236&geo=DE149&geo=DE21G&geo=DE226&geo=DE227&geo=DE211&geo=DE212&geo=DE213&geo=DE214&geo=DE21H&geo=DE215&geo=DE21I&geo=DE80M&geo=DED2D&geo=DEG0R&geo=DE80O&geo=DEE08&geo=DED41&geo=DED42&geo=DEE09&geo=DED2E&geo=DE80N&geo=DEE06&geo=DED2F&geo=DEE0A&geo=DED43&geo=DED51&geo=DED52&geo=DEE0B&geo=DEE0C&geo=DED53&geo=DED44&geo=DEE0D&geo=DEE01&geo=DEE02&geo=DED45&geo=DEE0E&geo=DEE03&geo=DEE04&geo=DED21",
+      "sha256": "b7efc8e9500f6ab58d0be7ba385f0d2cb91dd8b6eb81755ed0c2813d33f3c33b",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEG01&geo=DEG02&geo=DEG03&geo=DEG0S&geo=DEG05&geo=DEE05&geo=DED2C&geo=DEG06&geo=DEE07&geo=DEG07&geo=DE80J&geo=DEC05&geo=DEC06&geo=DE40C&geo=DE80L&geo=DE27D&geo=DE300&geo=DE401&geo=DE40D&geo=DE27E&geo=DE402&geo=DE403&geo=DE404&geo=DE405&geo=DE40E&geo=DE406&geo=DE80K&geo=DEC01&geo=DE40F&geo=DEC02&geo=DE407&geo=DE40G&geo=DEC03&geo=DE408&geo=DE40H&geo=DEC04&geo=DE409&geo=DE40I&geo=DE803&geo=DE804&geo=DE40A&geo=DE40B&geo=DEG09&geo=DEG0J&geo=DEG0A",
+      "sha256": "fd4c4840dbf4cd3e6c6a1d1a06c2a8bf0a6d2157a9ff0049cb18d68372229756",
+      "updated": "2026-02-10T11:00:00+0100"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEG0K&geo=DEG0Q&geo=DEG0C&geo=DEG0L&geo=DEG0D&geo=DEG0M&geo=DEG0E&geo=DEG0T&geo=DEG0G&geo=DEG0V&geo=DEG0U",
+      "sha256": "ea65c97cbb4cd6c927f3356d5826250e071708d914547946d21abd3966943d54",
+      "updated": "2026-02-10T11:00:00+0100"
+    }
+  ],
+  "coverage": {
+    "retrieved": "2026-10-17",
+    "retainedSource": "scripts/statistics-sources/expansion-economy/germany.json",
+    "coveredRegions": 416,
+    "years": [
+      2023,
+      2024
+    ],
+    "scope": "States and districts / independent cities"
+  },
+  "exchange": {
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2020&currency=USD&currency=CAD&currency=CHF&currency=MXN",
+    "updated": "2026-07-08T11:00:00+0200",
+    "sha256": "e448ffcb873d77975ebd533d3a3a0e739f05e92764d320d28b78e2c6b51083b5"
+  }
+}

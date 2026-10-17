@@ -1,3 +1,4 @@
+import {mapPalette,backgroundLandColor} from '../dist/map-palette.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
@@ -26,12 +27,15 @@ await addWorldLand({addSource:(id,s)=>sources.set(id,s),addLayer:l=>layers.push(
 await new Promise(r=>setTimeout(r,50));
 for(const [id,source] of sources)sources.set(id,{...source,data:await loadAtlasData(source.data)});
 assertNearGeo(sources.get('world-land').data,data,'World land as drawn');
-assert.equal(layers.length,2);assert.equal(layers[1].id,'china-neighbour-land');assert.deepEqual(layers[1].paint['fill-color'],['match',['get','country'],'china','#d7d7d3',layers[0].paint['fill-color']],'Neighbour band shares the background grey; China, its portal grey');
+assert.equal(layers.length,2);assert.equal(layers[1].id,'china-neighbour-land');assert.deepEqual(layers[1].paint['fill-color'],layers[0].paint['fill-color'],'Neighbour band shares the background grey; China, its portal grey');
 assert.ok(sources.get('china-neighbour-land').data.features.every(f=>f.geometry.type==='Polygon'),'One polygon per feature');assert.equal(layers[0].type,'fill');assert.equal(layers[0].maxzoom,undefined,'Land must remain visible beyond national overview zoom');
 assert.equal(layers[0].paint['fill-opacity'],undefined,'No world-layer fade during zoom');
 assert.ok(sources.get('world-land').maxzoom<=6,'Do not index coarse land at subdivision zoom levels');
 const brightness=hex=>[1,3,5].reduce((s,i)=>s+parseInt(hex.slice(i,i+2),16),0);
-assert.ok(brightness(layers[0].paint['fill-color'])>brightness('#d7d7d3'),'Background must be lighter than clickable countries');
+assert.ok(brightness(mapPalette.foreign)>brightness(mapPalette.country),'Background must be lighter than clickable countries');
+assert.deepEqual(layers[0].paint['fill-color'],backgroundLandColor(),'Fallbacks share the country-preview palette');
+const visible=layers[0].paint['fill-color'][1][2][1];assert(visible.includes('chile'),'Chile is dark before its detailed outline loads');assert(visible.includes('peru')&&visible.includes('paraguay'),'Peru and Paraguay are public from the first frame');for(const id of ['iceland','india','turkey'])assert(visible.includes(id),'Released countries share the public preview gray: '+id);
+const all=backgroundLandColor(()=>true)[1][2][1];assert(all.includes('peru'),'Developer mode uses the same palette contract');
 const app=fs.readFileSync('dist/app.js','utf8');
 assert.ok(app.indexOf("import('./world-land.mjs')")<app.indexOf("workerSource('china-context'"),'World background must sit below country fills and satellite imagery');
 const routing=app.slice(app.indexOf('function countryAt('),app.indexOf("map.on('click'",app.indexOf('function countryAt(')));

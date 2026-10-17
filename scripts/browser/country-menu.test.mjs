@@ -10,8 +10,10 @@ export default [[1280,820,false],[390,844,true]].map(([width,height,mobile])=>({
  await page.tap('#country-switch');
  await page.waitFor(menuOpen,{label:'the country menu'});
  const options=JSON.parse(await page.evaluate(`JSON.stringify([...document.querySelectorAll('.country-option')].map(o=>[o.dataset.atlas,o.textContent,o.getAttribute('aria-current')]))`));
- assert.deepEqual(options.map(o=>o[0]),await page.evaluate('AtlasCountries.ids.filter(id=>AtlasDev.allows(id))'),'Every country the visitor can open is listed');
+ assert.deepEqual(options.map(o=>o[0]),await page.evaluate('AtlasCountries.ids.filter(id=>!AtlasCountries.countries[id].parent&&AtlasDev.allows(id))'),'Every top-level country the visitor can open is listed');
  for(const [id,text] of options){const c=await page.evaluate('AtlasCountries.countries['+JSON.stringify(id)+']');assert(text.includes(c.en)&&text.includes(c.local||''),id+' keeps its English and local names');}
+ const stripes=await page.evaluate("[...document.querySelectorAll('.country-option')].map(e=>({country:e.dataset.atlas,image:getComputedStyle(e).backgroundImage}))");
+ for(const stripe of stripes)assert(stripe.image.includes('linear-gradient('),stripe.country+' has a valid stripe image');
  assert.deepEqual(options.filter(o=>o[2]==='true').map(o=>o[0]),['japan'],'The open country is marked');
  assert.equal(await page.evaluate(focused),'japan','The open country takes focus');
  if(!mobile){

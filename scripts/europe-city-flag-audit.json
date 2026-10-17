@@ -1,0 +1,3256 @@
+{
+ "checkedOn": "2026-10-17",
+ "criterion": "Every municipality with at least 50,000 residents in the atlas 1 January 2024 population data, plus provincial/state capitals. All earlier German independent-city flags are retained separately. Administrative boundaries and names retain the atlas 2024 snapshot.",
+ "cities": [
+  {
+   "id": "DE_02000000",
+   "country": "germany",
+   "name": "Hamburg",
+   "population": 1910160,
+   "existing": false,
+   "source": "Flag of Hamburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q1055",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03101000",
+   "country": "germany",
+   "name": "Braunschweig",
+   "population": 252066,
+   "existing": true,
+   "source": "DEU Braunschweig Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2773",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03102000",
+   "country": "germany",
+   "name": "Salzgitter",
+   "population": 105039,
+   "existing": true,
+   "source": "Flagge Salzgitter.svg",
+   "reference": "http://www.wikidata.org/entity/Q3200",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03103000",
+   "country": "germany",
+   "name": "Wolfsburg",
+   "population": 127256,
+   "existing": true,
+   "source": "Flagge Wolfsburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3014",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03252006",
+   "country": "germany",
+   "name": "Hameln",
+   "population": 57916,
+   "existing": false,
+   "source": "DEU Hamelin Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4062",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03254021",
+   "country": "germany",
+   "name": "Hildesheim",
+   "population": 102325,
+   "existing": false,
+   "source": "Flagge Hildesheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q3185",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03355022",
+   "country": "germany",
+   "name": "Lüneburg",
+   "population": 77511,
+   "existing": false,
+   "source": "Flagge Lueneburg.svg",
+   "reference": "https://en.wikipedia.org/wiki/L%C3%BCneburg",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03153017",
+   "country": "germany",
+   "name": "Goslar",
+   "population": 50253,
+   "existing": false,
+   "source": "Flagge Goslar.svg",
+   "reference": "http://www.wikidata.org/entity/Q3896",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_01060063",
+   "country": "germany",
+   "name": "Norderstedt",
+   "population": 82719,
+   "existing": false,
+   "source": "Norderstedt-Flagge.png",
+   "reference": "https://en.wikipedia.org/wiki/Norderstedt",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03157006",
+   "country": "germany",
+   "name": "Peine",
+   "population": 51521,
+   "existing": false,
+   "source": "Flag green red 5x3.svg",
+   "reference": "http://www.wikidata.org/entity/Q6850",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03158037",
+   "country": "germany",
+   "name": "Wolfenbüttel",
+   "population": 53034,
+   "existing": false,
+   "source": "Flag red white blue 5x3.svg",
+   "reference": "http://www.wikidata.org/entity/Q4122",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03351006",
+   "country": "germany",
+   "name": "Celle",
+   "population": 70293,
+   "existing": false,
+   "source": "Flagge Celle.svg",
+   "reference": "http://www.wikidata.org/entity/Q3933",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03159016",
+   "country": "germany",
+   "name": "Göttingen",
+   "population": 120261,
+   "existing": false,
+   "source": "Flagge Goettingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3033",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03241001",
+   "country": "germany",
+   "name": "Hanover",
+   "population": 548186,
+   "existing": false,
+   "source": "Flagge Hannover.svg",
+   "reference": "http://www.wikidata.org/entity/Q1715",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03241005",
+   "country": "germany",
+   "name": "Garbsen",
+   "population": 61594,
+   "existing": false,
+   "source": "Garbsen municipal flag rendition.svg",
+   "reference": "https://www.garbsen.de/rathaus/verwaltung/stadtrecht/",
+   "status": "Municipal flag rendition"
+  },
+  {
+   "id": "DE_03241010",
+   "country": "germany",
+   "name": "Langenhagen",
+   "population": 55746,
+   "existing": false,
+   "source": "Langenhagen municipal flag rendition.svg",
+   "reference": "https://www.langenhagen.de/downloads/datei/ZDAxMDE0MTNlMDAzZDA3ZFZsT09aVWFZeUFPa0U4TFJoN2grWmpDV2MydVgrL293RDFOazNoUEJ0OHJRWnJxREdTSHg2bDY5OS92YU1xUzRaZDg5ai9vNlRlZjF6OTNkVkJqU0RxVkdmODNaNlg0NHowdExNWHEzZTAyZXh3VHJDSE42ZTA4ZEJJczZSUjJzU0VoSUw0OUZIZTRwVkFlSEVkdjJudz09",
+   "status": "Municipal flag rendition"
+  },
+  {
+   "id": "DE_03401000",
+   "country": "germany",
+   "name": "Delmenhorst",
+   "population": 78979,
+   "existing": true,
+   "source": "Flagge Delmenhorst.svg",
+   "reference": "http://www.wikidata.org/entity/Q3907",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03402000",
+   "country": "germany",
+   "name": "Emden",
+   "population": 50659,
+   "existing": true,
+   "source": "Flagge Emden.svg",
+   "reference": "http://www.wikidata.org/entity/Q4174",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03403000",
+   "country": "germany",
+   "name": "Oldenburg (Oldenburg)",
+   "population": 174629,
+   "existing": true,
+   "source": "Flagge der kreisfreien Stadt Oldenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2936",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03404000",
+   "country": "germany",
+   "name": "Osnabrück",
+   "population": 166960,
+   "existing": true,
+   "source": "Hissflagge der Stadt Osnabrück.svg",
+   "reference": "http://www.wikidata.org/entity/Q2916",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03405000",
+   "country": "germany",
+   "name": "Wilhelmshaven",
+   "population": 76247,
+   "existing": true,
+   "source": "Flagge Wilhelmshaven.svg",
+   "reference": "http://www.wikidata.org/entity/Q3857",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_01001000",
+   "country": "germany",
+   "name": "Flensburg",
+   "population": 92667,
+   "existing": true,
+   "source": "Flagge Flensburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3798",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_01002000",
+   "country": "germany",
+   "name": "Kiel",
+   "population": 248873,
+   "existing": true,
+   "source": "Flagge der kreisfreien Stadt Kiel.svg",
+   "reference": "http://www.wikidata.org/entity/Q1707",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_01003000",
+   "country": "germany",
+   "name": "Lübeck",
+   "population": 219044,
+   "existing": true,
+   "source": "Flagge Luebeck.svg",
+   "reference": "http://www.wikidata.org/entity/Q2843",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_01004000",
+   "country": "germany",
+   "name": "Neumünster",
+   "population": 80185,
+   "existing": true,
+   "source": "Flagge Neumünster.svg",
+   "reference": "http://www.wikidata.org/entity/Q3879",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_01056015",
+   "country": "germany",
+   "name": "Elmshorn",
+   "population": 50728,
+   "existing": false,
+   "source": "Flagge Elmshorn.png",
+   "reference": "http://www.wikidata.org/entity/Q6845",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06532023",
+   "country": "germany",
+   "name": "Wetzlar",
+   "population": 54629,
+   "existing": false,
+   "source": "DEU Wetzlar Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4178",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07133006",
+   "country": "germany",
+   "name": "Bad Kreuznach",
+   "population": 52989,
+   "existing": false,
+   "source": "Bad Kreuznach Banner.svg",
+   "reference": "https://en.wikipedia.org/wiki/Bad%20Kreuznach",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07111000",
+   "country": "germany",
+   "name": "Koblenz",
+   "population": 115298,
+   "existing": true,
+   "source": "DEU Koblenz Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3104",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06534014",
+   "country": "germany",
+   "name": "Marburg",
+   "population": 78203,
+   "existing": false,
+   "source": "Flagge Marburg 2.svg",
+   "reference": "https://en.wikipedia.org/wiki/Marburg",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06611000",
+   "country": "germany",
+   "name": "Kassel",
+   "population": 204687,
+   "existing": true,
+   "source": "Flagge Kassel.svg",
+   "reference": "http://www.wikidata.org/entity/Q2865",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06631009",
+   "country": "germany",
+   "name": "Fulda",
+   "population": 70366,
+   "existing": false,
+   "source": "Flagge der Stadt Fulda.png",
+   "reference": "http://www.wikidata.org/entity/Q3963",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05362008",
+   "country": "germany",
+   "name": "Bergheim",
+   "population": 62172,
+   "existing": false,
+   "source": "Flagge Bergheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q3989",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05362020",
+   "country": "germany",
+   "name": "Erftstadt",
+   "population": 50018,
+   "existing": false,
+   "source": "Flagge der Stadt Erftstadt.svg",
+   "reference": "https://en.wikipedia.org/wiki/Erftstadt",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05362024",
+   "country": "germany",
+   "name": "Frechen",
+   "population": 53128,
+   "existing": false,
+   "source": "Flagge Frechen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Frechen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05362028",
+   "country": "germany",
+   "name": "Hürth",
+   "population": 61252,
+   "existing": false,
+   "source": "Flagge Huerth.svg",
+   "reference": "http://www.wikidata.org/entity/Q4060",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05362032",
+   "country": "germany",
+   "name": "Kerpen",
+   "population": 67627,
+   "existing": false,
+   "source": "Flagge Kerpen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3959",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05362036",
+   "country": "germany",
+   "name": "Pulheim",
+   "population": 56284,
+   "existing": false,
+   "source": "Banner Pulheim.svg",
+   "reference": "https://en.wikipedia.org/wiki/Pulheim",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05774032",
+   "country": "germany",
+   "name": "Paderborn",
+   "population": 155749,
+   "existing": false,
+   "source": "Flagge der Stadt Paderborn.svg",
+   "reference": "http://www.wikidata.org/entity/Q2971",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05911000",
+   "country": "germany",
+   "name": "Bochum",
+   "population": 366385,
+   "existing": true,
+   "source": "DEU Bochum Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2103",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05913000",
+   "country": "germany",
+   "name": "Dortmund",
+   "population": 595471,
+   "existing": true,
+   "source": "Flag of Dortmund.svg",
+   "reference": "http://www.wikidata.org/entity/Q1295",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05914000",
+   "country": "germany",
+   "name": "Hagen",
+   "population": 190490,
+   "existing": true,
+   "source": "Flagge der Stadt Hagen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2871",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05915000",
+   "country": "germany",
+   "name": "Hamm",
+   "population": 180761,
+   "existing": true,
+   "source": "Flagge der Stadt Hamm.svg",
+   "reference": "http://www.wikidata.org/entity/Q2880",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05916000",
+   "country": "germany",
+   "name": "Herne",
+   "population": 157896,
+   "existing": true,
+   "source": "Flagge der Stadt Herne.svg",
+   "reference": "http://www.wikidata.org/entity/Q2904",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03454032",
+   "country": "germany",
+   "name": "Lingen (Ems)",
+   "population": 57075,
+   "existing": false,
+   "source": "Flagge Lingen (Ems).svg",
+   "reference": "http://www.wikidata.org/entity/Q4185",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05954016",
+   "country": "germany",
+   "name": "Hattingen",
+   "population": 54620,
+   "existing": false,
+   "source": "Flagge Hattingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q4082",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05954036",
+   "country": "germany",
+   "name": "Witten",
+   "population": 95724,
+   "existing": false,
+   "source": "Flagge Witten.svg",
+   "reference": "http://www.wikidata.org/entity/Q3764",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05958004",
+   "country": "germany",
+   "name": "Arnsberg",
+   "population": 74206,
+   "existing": false,
+   "source": "Flagge Arnsberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3912",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06435014",
+   "country": "germany",
+   "name": "Hanau",
+   "population": 103184,
+   "existing": false,
+   "source": "Flagge Hanau.svg",
+   "reference": "https://en.wikipedia.org/wiki/Hanau",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05366016",
+   "country": "germany",
+   "name": "Euskirchen",
+   "population": 60256,
+   "existing": false,
+   "source": "Flagge Euskirchen.svg",
+   "reference": "http://www.wikidata.org/entity/Q4074",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05962024",
+   "country": "germany",
+   "name": "Iserlohn",
+   "population": 92404,
+   "existing": false,
+   "source": "Flagge Iserlohn.svg",
+   "reference": "http://www.wikidata.org/entity/Q1130",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05962032",
+   "country": "germany",
+   "name": "Lüdenscheid",
+   "population": 71463,
+   "existing": false,
+   "source": "Flagge Luedenscheid.svg",
+   "reference": "http://www.wikidata.org/entity/Q3893",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_03456015",
+   "country": "germany",
+   "name": "Nordhorn",
+   "population": 55619,
+   "existing": false,
+   "source": "Flagge Nordhorn.svg",
+   "reference": "http://www.wikidata.org/entity/Q4133",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05962040",
+   "country": "germany",
+   "name": "Menden (Sauerland)",
+   "population": 52177,
+   "existing": false,
+   "source": "Flagge Menden.svg",
+   "reference": "http://www.wikidata.org/entity/Q4086",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05374012",
+   "country": "germany",
+   "name": "Gummersbach",
+   "population": 51845,
+   "existing": false,
+   "source": "Flagge Gummersbach.svg",
+   "reference": "http://www.wikidata.org/entity/Q4181",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05970040",
+   "country": "germany",
+   "name": "Siegen",
+   "population": 102114,
+   "existing": false,
+   "source": "Flagge Siegen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3167",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05378004",
+   "country": "germany",
+   "name": "Bergisch Gladbach",
+   "population": 112660,
+   "existing": false,
+   "source": "Flagge Bergisch Gladbach.svg",
+   "reference": "http://www.wikidata.org/entity/Q3117",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05974028",
+   "country": "germany",
+   "name": "Lippstadt",
+   "population": 69047,
+   "existing": false,
+   "source": "Banner Lippstadt HS.svg",
+   "reference": "http://www.wikidata.org/entity/Q3943",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05978024",
+   "country": "germany",
+   "name": "Lünen",
+   "population": 87266,
+   "existing": false,
+   "source": "Flagge Luenen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3822",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05382056",
+   "country": "germany",
+   "name": "Sankt Augustin",
+   "population": 56692,
+   "existing": false,
+   "source": "Flagge Sankt Augustin.svg",
+   "reference": "http://www.wikidata.org/entity/Q4090",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05382068",
+   "country": "germany",
+   "name": "Troisdorf",
+   "population": 76503,
+   "existing": false,
+   "source": "Flagge Troisdorf.svg",
+   "reference": "http://www.wikidata.org/entity/Q3900",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05512000",
+   "country": "germany",
+   "name": "Bottrop",
+   "population": 118705,
+   "existing": true,
+   "source": "Flagge der Stadt Bottrop.svg",
+   "reference": "http://www.wikidata.org/entity/Q3069",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05513000",
+   "country": "germany",
+   "name": "Gelsenkirchen",
+   "population": 265885,
+   "existing": true,
+   "source": "Flagge der kreisfreien Stadt Gelsenkirchen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2765",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05515000",
+   "country": "germany",
+   "name": "Münster",
+   "population": 322904,
+   "existing": true,
+   "source": "Flagge der kreisfreien Stadt Münster (Westfalen).svg",
+   "reference": "http://www.wikidata.org/entity/Q2742",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05978036",
+   "country": "germany",
+   "name": "Unna",
+   "population": 60223,
+   "existing": false,
+   "source": "Flagge Unna.svg",
+   "reference": "http://www.wikidata.org/entity/Q3949",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06411000",
+   "country": "germany",
+   "name": "Darmstadt",
+   "population": 164792,
+   "existing": true,
+   "source": "Hissflagge der Stadt Darmstadt.svg",
+   "reference": "http://www.wikidata.org/entity/Q2973",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06412000",
+   "country": "germany",
+   "name": "Frankfurt am Main",
+   "population": 775790,
+   "existing": true,
+   "source": "Flag of Frankfurt am Main.svg",
+   "reference": "http://www.wikidata.org/entity/Q1794",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06413000",
+   "country": "germany",
+   "name": "Offenbach am Main",
+   "population": 135490,
+   "existing": true,
+   "source": "Flagge Offenbach am Main.svg",
+   "reference": "http://www.wikidata.org/entity/Q3042",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05554008",
+   "country": "germany",
+   "name": "Bocholt",
+   "population": 72409,
+   "existing": false,
+   "source": "Flagge Bocholt.svg",
+   "reference": "http://www.wikidata.org/entity/Q3917",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05554020",
+   "country": "germany",
+   "name": "Gronau (Westf.)",
+   "population": 50151,
+   "existing": false,
+   "source": "Flagge Gronau.svg",
+   "reference": "http://www.wikidata.org/entity/Q6924",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06414000",
+   "country": "germany",
+   "name": "Wiesbaden",
+   "population": 285522,
+   "existing": true,
+   "source": "Flagge Wiesbaden.svg",
+   "reference": "http://www.wikidata.org/entity/Q1721",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05562004",
+   "country": "germany",
+   "name": "Castrop-Rauxel",
+   "population": 74370,
+   "existing": false,
+   "source": "Flagge Castrop-Rauxel.svg",
+   "reference": "http://www.wikidata.org/entity/Q3898",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05562012",
+   "country": "germany",
+   "name": "Dorsten",
+   "population": 76842,
+   "existing": false,
+   "source": "Banner Dorsten.svg",
+   "reference": "http://www.wikidata.org/entity/Q3886",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05562014",
+   "country": "germany",
+   "name": "Gladbeck",
+   "population": 75799,
+   "existing": false,
+   "source": "Flagge Gladbeck.svg",
+   "reference": "http://www.wikidata.org/entity/Q3905",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05562020",
+   "country": "germany",
+   "name": "Herten",
+   "population": 62204,
+   "existing": false,
+   "source": "Banner Herten.svg",
+   "reference": "http://www.wikidata.org/entity/Q3985",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05562024",
+   "country": "germany",
+   "name": "Marl",
+   "population": 85001,
+   "existing": false,
+   "source": "Flagge Marl.svg",
+   "reference": "http://www.wikidata.org/entity/Q3813",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05562032",
+   "country": "germany",
+   "name": "Recklinghausen",
+   "population": 111693,
+   "existing": false,
+   "source": "Flagge Recklinghausen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3050",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05566028",
+   "country": "germany",
+   "name": "Ibbenbüren",
+   "population": 52688,
+   "existing": false,
+   "source": "Flagge Ibbenbueren.svg",
+   "reference": "https://en.wikipedia.org/wiki/Ibbenb%C3%BCren",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_04011000",
+   "country": "germany",
+   "name": "Bremen",
+   "population": 577026,
+   "existing": true,
+   "source": "Flag of Bremen.svg",
+   "reference": "http://www.wikidata.org/entity/Q24879",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_04012000",
+   "country": "germany",
+   "name": "Bremerhaven",
+   "population": 114677,
+   "existing": true,
+   "source": "Flagge Bremerhaven.svg",
+   "reference": "http://www.wikidata.org/entity/Q2706",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05111000",
+   "country": "germany",
+   "name": "Düsseldorf",
+   "population": 631217,
+   "existing": true,
+   "source": "Flagge der Landeshauptstadt Duesseldorf.svg",
+   "reference": "http://www.wikidata.org/entity/Q1718",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05112000",
+   "country": "germany",
+   "name": "Duisburg",
+   "population": 503707,
+   "existing": true,
+   "source": "Flagge der Stadt Duisburg mit Wappen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2100",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05113000",
+   "country": "germany",
+   "name": "Essen",
+   "population": 586608,
+   "existing": true,
+   "source": "Flagge Essen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2066",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05114000",
+   "country": "germany",
+   "name": "Krefeld",
+   "population": 228550,
+   "existing": true,
+   "source": "Flagge Krefeld.svg",
+   "reference": "http://www.wikidata.org/entity/Q2805",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05116000",
+   "country": "germany",
+   "name": "Mönchengladbach",
+   "population": 268943,
+   "existing": true,
+   "source": "Flagge der kreisfreien Stadt Mönchengladbach.svg",
+   "reference": "http://www.wikidata.org/entity/Q2758",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05117000",
+   "country": "germany",
+   "name": "Mülheim an der Ruhr",
+   "population": 173255,
+   "existing": true,
+   "source": "DEU Mülheim an der Ruhr Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2899",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05119000",
+   "country": "germany",
+   "name": "Oberhausen",
+   "population": 211099,
+   "existing": true,
+   "source": "Flagge Oberhausen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2838",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05120000",
+   "country": "germany",
+   "name": "Remscheid",
+   "population": 112970,
+   "existing": true,
+   "source": "Flagge Remscheid.svg",
+   "reference": "https://de.wikipedia.org/wiki/Remscheid",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05122000",
+   "country": "germany",
+   "name": "Solingen",
+   "population": 161545,
+   "existing": true,
+   "source": "Flagge Solingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2942",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05566076",
+   "country": "germany",
+   "name": "Rheine",
+   "population": 78220,
+   "existing": false,
+   "source": "Flagge Rheine.svg",
+   "reference": "http://www.wikidata.org/entity/Q3890",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05570004",
+   "country": "germany",
+   "name": "Ahlen",
+   "population": 53278,
+   "existing": false,
+   "source": "Banner Ahlen.svg",
+   "reference": "http://www.wikidata.org/entity/Q1132",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05124000",
+   "country": "germany",
+   "name": "Wuppertal",
+   "population": 358938,
+   "existing": true,
+   "source": "Flagge Wuppertal.svg",
+   "reference": "http://www.wikidata.org/entity/Q2107",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05154036",
+   "country": "germany",
+   "name": "Kleve",
+   "population": 53458,
+   "existing": false,
+   "source": "DEU Kleve Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q6842",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05711000",
+   "country": "germany",
+   "name": "Bielefeld",
+   "population": 338410,
+   "existing": true,
+   "source": "Hissflagge Bielefeld.svg",
+   "reference": "http://www.wikidata.org/entity/Q2112",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05754008",
+   "country": "germany",
+   "name": "Gütersloh",
+   "population": 102464,
+   "existing": false,
+   "source": "Flagge der Stadt Gütersloh.svg",
+   "reference": "http://www.wikidata.org/entity/Q3771",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05158016",
+   "country": "germany",
+   "name": "Hilden",
+   "population": 55689,
+   "existing": false,
+   "source": "Flagge Hilden.svg",
+   "reference": "http://www.wikidata.org/entity/Q4094",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05158020",
+   "country": "germany",
+   "name": "Langenfeld (Rheinland)",
+   "population": 59908,
+   "existing": false,
+   "source": "Flagge Langenfeld.svg",
+   "reference": "http://www.wikidata.org/entity/Q4048",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05158028",
+   "country": "germany",
+   "name": "Ratingen",
+   "population": 87513,
+   "existing": false,
+   "source": "Flagge Ratingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3791",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05158032",
+   "country": "germany",
+   "name": "Velbert",
+   "population": 82462,
+   "existing": false,
+   "source": "Flagge Velbert.svg",
+   "reference": "http://www.wikidata.org/entity/Q3840",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05162004",
+   "country": "germany",
+   "name": "Dormagen",
+   "population": 65170,
+   "existing": false,
+   "source": "Flagge Dormagen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3978",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05162008",
+   "country": "germany",
+   "name": "Grevenbroich",
+   "population": 64588,
+   "existing": false,
+   "source": "Flagge Grevenbroich.svg",
+   "reference": "https://en.wikipedia.org/wiki/Grevenbroich",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05162022",
+   "country": "germany",
+   "name": "Meerbusch",
+   "population": 57440,
+   "existing": false,
+   "source": "Flagge Meerbusch.svg",
+   "reference": "http://www.wikidata.org/entity/Q4105",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05758012",
+   "country": "germany",
+   "name": "Herford",
+   "population": 67265,
+   "existing": false,
+   "source": "Flagge Herford.svg",
+   "reference": "http://www.wikidata.org/entity/Q3971",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05162024",
+   "country": "germany",
+   "name": "Neuss",
+   "population": 155163,
+   "existing": false,
+   "source": "Flagge Neuss.svg",
+   "reference": "http://www.wikidata.org/entity/Q2948",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05166032",
+   "country": "germany",
+   "name": "Viersen",
+   "population": 79250,
+   "existing": false,
+   "source": "Flagge Viersen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3902",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05166036",
+   "country": "germany",
+   "name": "Willich",
+   "population": 50212,
+   "existing": false,
+   "source": "Flagge der Stadt Willich.svg",
+   "reference": "http://www.wikidata.org/entity/Q4171",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05170008",
+   "country": "germany",
+   "name": "Dinslaken",
+   "population": 67949,
+   "existing": false,
+   "source": "Flagge Dinslaken.svg",
+   "reference": "http://www.wikidata.org/entity/Q3939",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05170024",
+   "country": "germany",
+   "name": "Moers",
+   "population": 105606,
+   "existing": false,
+   "source": "DEU Moers Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3132",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05766008",
+   "country": "germany",
+   "name": "Bad Salzuflen",
+   "population": 54585,
+   "existing": false,
+   "source": "Flagge Bad Salzuflen.svg",
+   "reference": "http://www.wikidata.org/entity/Q4108",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06433012",
+   "country": "germany",
+   "name": "Rüsselsheim am Main",
+   "population": 67656,
+   "existing": false,
+   "source": "Rüsselsheim Flagge.svg",
+   "reference": "https://en.wikipedia.org/wiki/R%C3%BCsselsheim%20am%20Main",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06531005",
+   "country": "germany",
+   "name": "Gießen",
+   "population": 94996,
+   "existing": false,
+   "source": "Flagge Gießen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Gie%C3%9Fen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05170048",
+   "country": "germany",
+   "name": "Wesel",
+   "population": 61277,
+   "existing": false,
+   "source": "Flagge Wesel.svg",
+   "reference": "http://www.wikidata.org/entity/Q4011",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05314000",
+   "country": "germany",
+   "name": "Bonn",
+   "population": 335789,
+   "existing": true,
+   "source": "Flagge der kreisfreien Stadt Bonn.svg",
+   "reference": "http://www.wikidata.org/entity/Q586",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05315000",
+   "country": "germany",
+   "name": "Cologne",
+   "population": 1087353,
+   "existing": true,
+   "source": "Flagge Köln.svg",
+   "reference": "http://www.wikidata.org/entity/Q365",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05316000",
+   "country": "germany",
+   "name": "Leverkusen",
+   "population": 166414,
+   "existing": true,
+   "source": "Flagge Leverkusen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2938",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05334002",
+   "country": "germany",
+   "name": "Aachen",
+   "population": 252769,
+   "existing": false,
+   "source": "Flagge Aachen.svg",
+   "reference": "http://www.wikidata.org/entity/Q1017",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05334012",
+   "country": "germany",
+   "name": "Eschweiler",
+   "population": 56132,
+   "existing": false,
+   "source": "Flagge Eschweiler.svg",
+   "reference": "http://www.wikidata.org/entity/Q4083",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05766020",
+   "country": "germany",
+   "name": "Detmold",
+   "population": 74835,
+   "existing": false,
+   "source": "Flagge Detmold.svg",
+   "reference": "http://www.wikidata.org/entity/Q3922",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_06434001",
+   "country": "germany",
+   "name": "Bad Homburg v. d. Höhe",
+   "population": 55995,
+   "existing": false,
+   "source": "DEU Bad Homburg vor der Höhe Banner (COA).svg",
+   "reference": "http://www.wikidata.org/entity/Q4165",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05334032",
+   "country": "germany",
+   "name": "Stolberg (Rhld.)",
+   "population": 56584,
+   "existing": false,
+   "source": "Flagge Stolberg Rhld.svg",
+   "reference": "http://www.wikidata.org/entity/Q4068",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05358008",
+   "country": "germany",
+   "name": "Düren",
+   "population": 93323,
+   "existing": false,
+   "source": "Flagge der Stadt Düren.svg",
+   "reference": "http://www.wikidata.org/entity/Q1884",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_05770024",
+   "country": "germany",
+   "name": "Minden",
+   "population": 83100,
+   "existing": false,
+   "source": "Flagge Minden.svg",
+   "reference": "http://www.wikidata.org/entity/Q3846",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07312000",
+   "country": "germany",
+   "name": "Kaiserslautern",
+   "population": 101486,
+   "existing": true,
+   "source": "Flag of Kaiserslautern.svg",
+   "reference": "http://www.wikidata.org/entity/Q3758",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07314000",
+   "country": "germany",
+   "name": "Ludwigshafen am Rhein",
+   "population": 176110,
+   "existing": true,
+   "source": "Flagge Stadt Ludwigshafen am Rhein.svg",
+   "reference": "http://www.wikidata.org/entity/Q2910",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07315000",
+   "country": "germany",
+   "name": "Mainz",
+   "population": 222889,
+   "existing": true,
+   "source": "Mainz Flagge Hissformat.svg",
+   "reference": "http://www.wikidata.org/entity/Q1720",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07316000",
+   "country": "germany",
+   "name": "Neustadt an der Weinstraße",
+   "population": 53920,
+   "existing": true,
+   "source": "Flagge Stadt Neustadt an der Weinstraße.svg",
+   "reference": "http://www.wikidata.org/entity/Q4149",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07318000",
+   "country": "germany",
+   "name": "Speyer",
+   "population": 51203,
+   "existing": true,
+   "source": "Flag of Speyer.svg",
+   "reference": "http://www.wikidata.org/entity/Q6829",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07319000",
+   "country": "germany",
+   "name": "Worms",
+   "population": 85609,
+   "existing": true,
+   "source": "Flagge Worms.svg",
+   "reference": "http://www.wikidata.org/entity/Q3852",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07138045",
+   "country": "germany",
+   "name": "Neuwied",
+   "population": 66243,
+   "existing": false,
+   "source": "Flag of Neuwied.svg",
+   "reference": "http://www.wikidata.org/entity/Q3967",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_07211000",
+   "country": "germany",
+   "name": "Trier",
+   "population": 112737,
+   "existing": true,
+   "source": "Flagge Trier.svg",
+   "reference": "http://www.wikidata.org/entity/Q3138",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08231000",
+   "country": "germany",
+   "name": "Pforzheim",
+   "population": 128992,
+   "existing": true,
+   "source": "Flag of Pforzheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q3046",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08117026",
+   "country": "germany",
+   "name": "Göppingen",
+   "population": 59300,
+   "existing": false,
+   "source": "Flagge Göppingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/G%C3%B6ppingen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08136088",
+   "country": "germany",
+   "name": "Aalen",
+   "population": 69147,
+   "existing": false,
+   "source": "Hissflagge Aalen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3951",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08211000",
+   "country": "germany",
+   "name": "Baden-Baden",
+   "population": 57420,
+   "existing": true,
+   "source": "DEU Baden-Baden Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4100",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08212000",
+   "country": "germany",
+   "name": "Karlsruhe",
+   "population": 309964,
+   "existing": true,
+   "source": "DEU Karlsruhe Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q1040",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08118048",
+   "country": "germany",
+   "name": "Ludwigsburg",
+   "population": 94859,
+   "existing": false,
+   "source": "Flagge Ludwigsburg.svg",
+   "reference": "https://en.wikipedia.org/wiki/Ludwigsburg",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08317096",
+   "country": "germany",
+   "name": "Offenburg",
+   "population": 62195,
+   "existing": false,
+   "source": "Flag of Offenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q4044",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08119079",
+   "country": "germany",
+   "name": "Waiblingen",
+   "population": 55917,
+   "existing": false,
+   "source": "Flagge Waiblingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Waiblingen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08121000",
+   "country": "germany",
+   "name": "Heilbronn",
+   "population": 130093,
+   "existing": true,
+   "source": "Flagge Heilbronn.svg",
+   "reference": "http://www.wikidata.org/entity/Q715",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08216043",
+   "country": "germany",
+   "name": "Rastatt",
+   "population": 51800,
+   "existing": false,
+   "source": "Flagge Rastatt.svg",
+   "reference": "https://en.wikipedia.org/wiki/Rastatt",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08311000",
+   "country": "germany",
+   "name": "Freiburg im Breisgau",
+   "population": 237244,
+   "existing": true,
+   "source": "Flagge Freiburg im Breisgau.svg",
+   "reference": "http://www.wikidata.org/entity/Q2833",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08221000",
+   "country": "germany",
+   "name": "Heidelberg",
+   "population": 162960,
+   "existing": true,
+   "source": "Flagge Heidelberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2966",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08222000",
+   "country": "germany",
+   "name": "Mannheim",
+   "population": 316877,
+   "existing": true,
+   "source": "Flagge Mannheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q2119",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08326074",
+   "country": "germany",
+   "name": "Villingen-Schwenningen",
+   "population": 89145,
+   "existing": false,
+   "source": "Flagge Villingen-Schwenningen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Villingen-Schwenningen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08335043",
+   "country": "germany",
+   "name": "Konstanz",
+   "population": 85770,
+   "existing": false,
+   "source": "Flagge Konstanz.svg",
+   "reference": "http://www.wikidata.org/entity/Q3834",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08336050",
+   "country": "germany",
+   "name": "Lörrach",
+   "population": 50670,
+   "existing": false,
+   "source": "Banner Loerrach.svg",
+   "reference": "http://www.wikidata.org/entity/Q6855",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08136065",
+   "country": "germany",
+   "name": "Schwäbisch Gmünd",
+   "population": 62726,
+   "existing": false,
+   "source": "DEU Schwäbisch Gmünd Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4037",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08111000",
+   "country": "germany",
+   "name": "Stuttgart",
+   "population": 633484,
+   "existing": true,
+   "source": "Flagge Stuttgart.svg",
+   "reference": "http://www.wikidata.org/entity/Q1022",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08115003",
+   "country": "germany",
+   "name": "Böblingen",
+   "population": 52093,
+   "existing": false,
+   "source": "Flagge Boeblingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q6931",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08115045",
+   "country": "germany",
+   "name": "Sindelfingen",
+   "population": 65504,
+   "existing": false,
+   "source": "Flagge Sindelfingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Sindelfingen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08116019",
+   "country": "germany",
+   "name": "Esslingen am Neckar",
+   "population": 95881,
+   "existing": false,
+   "source": "Flagge Esslingen am Neckar.svg",
+   "reference": "http://www.wikidata.org/entity/Q3786",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09661000",
+   "country": "germany",
+   "name": "Aschaffenburg",
+   "population": 72918,
+   "existing": true,
+   "source": "Flagge Aschaffenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3942",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09662000",
+   "country": "germany",
+   "name": "Schweinfurt",
+   "population": 55067,
+   "existing": true,
+   "source": "Flagge Schweinfurt.svg",
+   "reference": "http://www.wikidata.org/entity/Q4126",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09663000",
+   "country": "germany",
+   "name": "Würzburg",
+   "population": 128246,
+   "existing": true,
+   "source": "Flagge Würzburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2999",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09562000",
+   "country": "germany",
+   "name": "Erlangen",
+   "population": 117806,
+   "existing": true,
+   "source": "Flagge Erlangen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3126",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09563000",
+   "country": "germany",
+   "name": "Fürth",
+   "population": 132032,
+   "existing": true,
+   "source": "Flagge Fürth.svg",
+   "reference": "http://www.wikidata.org/entity/Q3075",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09564000",
+   "country": "germany",
+   "name": "Nuremberg",
+   "population": 526091,
+   "existing": true,
+   "source": "Flagge Nürnberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2090",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09461000",
+   "country": "germany",
+   "name": "Bamberg",
+   "population": 80580,
+   "existing": true,
+   "source": "Flagge Bamberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3936",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09462000",
+   "country": "germany",
+   "name": "Bayreuth",
+   "population": 74907,
+   "existing": true,
+   "source": "Flagge Bayreuth.svg",
+   "reference": "http://www.wikidata.org/entity/Q3923",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09761000",
+   "country": "germany",
+   "name": "Augsburg",
+   "population": 303150,
+   "existing": true,
+   "source": "DEU Augsburg Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2749",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09763000",
+   "country": "germany",
+   "name": "Kempten (Allgäu)",
+   "population": 70713,
+   "existing": true,
+   "source": "Flagge Kempten (Allgäu).svg",
+   "reference": "http://www.wikidata.org/entity/Q3994",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09775135",
+   "country": "germany",
+   "name": "Neu-Ulm",
+   "population": 61780,
+   "existing": false,
+   "source": "DEU Neu-Ulm Banner.svg",
+   "reference": "http://www.wikidata.org/entity/Q4120",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08416041",
+   "country": "germany",
+   "name": "Tübingen",
+   "population": 93615,
+   "existing": false,
+   "source": "Flagge Tübingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/T%C3%BCbingen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08421000",
+   "country": "germany",
+   "name": "Ulm",
+   "population": 129942,
+   "existing": true,
+   "source": "Flagge Ulm.svg",
+   "reference": "http://www.wikidata.org/entity/Q3012",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09362000",
+   "country": "germany",
+   "name": "Regensburg",
+   "population": 159465,
+   "existing": true,
+   "source": "Flagge Regensburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2978",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09261000",
+   "country": "germany",
+   "name": "Landshut",
+   "population": 75272,
+   "existing": true,
+   "source": "Flagge Landshut.svg",
+   "reference": "http://www.wikidata.org/entity/Q3974",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09262000",
+   "country": "germany",
+   "name": "Passau",
+   "population": 54401,
+   "existing": true,
+   "source": "Flagge Passau.svg",
+   "reference": "http://www.wikidata.org/entity/Q4190",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08435016",
+   "country": "germany",
+   "name": "Friedrichshafen",
+   "population": 63441,
+   "existing": false,
+   "source": "Flagge Friedrichshafen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Friedrichshafen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08436064",
+   "country": "germany",
+   "name": "Ravensburg",
+   "population": 51788,
+   "existing": false,
+   "source": "Flag of Ravensburg.svg",
+   "reference": "https://en.wikipedia.org/wiki/Ravensburg",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09161000",
+   "country": "germany",
+   "name": "Ingolstadt",
+   "population": 142308,
+   "existing": true,
+   "source": "Flagge Ingolstadt.svg",
+   "reference": "http://www.wikidata.org/entity/Q3004",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09162000",
+   "country": "germany",
+   "name": "Munich",
+   "population": 1510378,
+   "existing": true,
+   "source": "Flag of Munich (striped).svg",
+   "reference": "http://www.wikidata.org/entity/Q1726",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_09163000",
+   "country": "germany",
+   "name": "Rosenheim",
+   "population": 65192,
+   "existing": true,
+   "source": "Flagge Rosenheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q4007",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_08415061",
+   "country": "germany",
+   "name": "Reutlingen",
+   "population": 118528,
+   "existing": false,
+   "source": "Flagge Reutlingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3085",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_14511000",
+   "country": "germany",
+   "name": "Chemnitz",
+   "population": 250681,
+   "existing": true,
+   "source": "Flag of Chemnitz.svg",
+   "reference": "http://www.wikidata.org/entity/Q2795",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_13075039",
+   "country": "germany",
+   "name": "Greifswald",
+   "population": 60071,
+   "existing": false,
+   "source": "Hissflagge der Stadt Greifswald.svg",
+   "reference": "http://www.wikidata.org/entity/Q4098",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_14713000",
+   "country": "germany",
+   "name": "Leipzig",
+   "population": 619879,
+   "existing": true,
+   "source": "Flag of Leipzig.svg",
+   "reference": "http://www.wikidata.org/entity/Q2079",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_14523320",
+   "country": "germany",
+   "name": "Plauen",
+   "population": 65218,
+   "existing": false,
+   "source": "Flag of Plauen.png",
+   "reference": "https://en.wikipedia.org/wiki/Plauen",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_15001000",
+   "country": "germany",
+   "name": "Dessau-Roßlau",
+   "population": 79686,
+   "existing": true,
+   "source": "Flagge Dessau-Roßlau.svg",
+   "reference": "http://www.wikidata.org/entity/Q3828",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_15002000",
+   "country": "germany",
+   "name": "Halle (Saale)",
+   "population": 242172,
+   "existing": true,
+   "source": "Flagge Halle (Saale).svg",
+   "reference": "http://www.wikidata.org/entity/Q2814",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_15003000",
+   "country": "germany",
+   "name": "Magdeburg",
+   "population": 240114,
+   "existing": true,
+   "source": "Flagge Magdeburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q1733",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_14524330",
+   "country": "germany",
+   "name": "Zwickau",
+   "population": 87593,
+   "existing": false,
+   "source": "Flagge Zwickau.svg",
+   "reference": "http://www.wikidata.org/entity/Q3778",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_14612000",
+   "country": "germany",
+   "name": "Dresden",
+   "population": 566222,
+   "existing": true,
+   "source": "Flag of Dresden.svg",
+   "reference": "http://www.wikidata.org/entity/Q1731",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_16051000",
+   "country": "germany",
+   "name": "Erfurt",
+   "population": 215675,
+   "existing": true,
+   "source": "Flagge der kreisfreien Stadt Erfurt laut Hauptsatzung.svg",
+   "reference": "http://www.wikidata.org/entity/Q1729",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_16052000",
+   "country": "germany",
+   "name": "Gera",
+   "population": 94847,
+   "existing": true,
+   "source": "Hissflagge Gera.svg",
+   "reference": "http://www.wikidata.org/entity/Q3750",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_16053000",
+   "country": "germany",
+   "name": "Jena",
+   "population": 110791,
+   "existing": true,
+   "source": "Flag of Jena.svg",
+   "reference": "http://www.wikidata.org/entity/Q3150",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_16055000",
+   "country": "germany",
+   "name": "Weimar",
+   "population": 65611,
+   "existing": true,
+   "source": "Hissflagge Weimar.svg",
+   "reference": "https://de.wikipedia.org/wiki/Weimar",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_14626110",
+   "country": "germany",
+   "name": "Görlitz",
+   "population": 56694,
+   "existing": false,
+   "source": "DEU Görlitz flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4077",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_13071107",
+   "country": "germany",
+   "name": "Neubrandenburg",
+   "population": 64390,
+   "existing": false,
+   "source": "Flagge Neubrandenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3958",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_11000000",
+   "country": "germany",
+   "name": "Berlin",
+   "population": 3782202,
+   "existing": false,
+   "source": "Flag of Berlin.svg",
+   "reference": "http://www.wikidata.org/entity/Q64",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_12051000",
+   "country": "germany",
+   "name": "Brandenburg an der Havel",
+   "population": 73921,
+   "existing": true,
+   "source": "Flagge der Stadt Brandenburg an der Havel.svg",
+   "reference": "http://www.wikidata.org/entity/Q3931",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_12052000",
+   "country": "germany",
+   "name": "Cottbus/Chóśebuz",
+   "population": 100010,
+   "existing": true,
+   "source": "DEU Cottbus Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3214",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_12053000",
+   "country": "germany",
+   "name": "Frankfurt (Oder)",
+   "population": 58818,
+   "existing": true,
+   "source": "Hissflagge der Stadt Frankfurt an der Oder.svg",
+   "reference": "http://www.wikidata.org/entity/Q4024",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_12054000",
+   "country": "germany",
+   "name": "Potsdam",
+   "population": 187119,
+   "existing": true,
+   "source": "Flag of Potsdam.svg",
+   "reference": "http://www.wikidata.org/entity/Q1711",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_10041100",
+   "country": "germany",
+   "name": "Saarbrücken",
+   "population": 183509,
+   "existing": false,
+   "source": "Flag of Saarbrücken.svg",
+   "reference": "http://www.wikidata.org/entity/Q1724",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_13003000",
+   "country": "germany",
+   "name": "Rostock",
+   "population": 210795,
+   "existing": true,
+   "source": "Flagge der Hansestadt Rostock.svg",
+   "reference": "http://www.wikidata.org/entity/Q2861",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_13004000",
+   "country": "germany",
+   "name": "Schwerin",
+   "population": 98733,
+   "existing": true,
+   "source": "Flagge Schwerin.svg",
+   "reference": "http://www.wikidata.org/entity/Q1709",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "DE_13073088",
+   "country": "germany",
+   "name": "Stralsund",
+   "population": 59450,
+   "existing": false,
+   "source": "Flag of Stralsund.svg",
+   "reference": "http://www.wikidata.org/entity/Q4065",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0439",
+   "country": "netherlands",
+   "name": "Purmerend",
+   "population": 95168,
+   "existing": false,
+   "source": "Flag of Purmerend.svg",
+   "reference": "http://www.wikidata.org/entity/Q110423208",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0453",
+   "country": "netherlands",
+   "name": "Velsen",
+   "population": 69241,
+   "existing": false,
+   "source": "Velsen vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9970",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0479",
+   "country": "netherlands",
+   "name": "Zaanstad",
+   "population": 161389,
+   "existing": false,
+   "source": "Flag of Zaanstad.svg",
+   "reference": "http://www.wikidata.org/entity/Q9978",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0484",
+   "country": "netherlands",
+   "name": "Alphen aan den Rijn",
+   "population": 114966,
+   "existing": false,
+   "source": "Vlag Alphen aan den Rijn.svg",
+   "reference": "http://www.wikidata.org/entity/Q213246",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0502",
+   "country": "netherlands",
+   "name": "Capelle aan den IJssel",
+   "population": 67925,
+   "existing": false,
+   "source": "Capelle aan den IJssel vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q734860",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0503",
+   "country": "netherlands",
+   "name": "Delft",
+   "population": 109577,
+   "existing": false,
+   "source": "Flag of Delft.svg",
+   "reference": "http://www.wikidata.org/entity/Q690",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0505",
+   "country": "netherlands",
+   "name": "Dordrecht",
+   "population": 122070,
+   "existing": false,
+   "source": "Flag of Dordrecht.svg",
+   "reference": "http://www.wikidata.org/entity/Q26421",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0513",
+   "country": "netherlands",
+   "name": "Gouda",
+   "population": 75758,
+   "existing": false,
+   "source": "Flag of Gouda.svg",
+   "reference": "http://www.wikidata.org/entity/Q84125",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0518",
+   "country": "netherlands",
+   "name": "The Hague",
+   "population": 566221,
+   "existing": false,
+   "source": "Flag of The Hague.svg",
+   "reference": "http://www.wikidata.org/entity/Q36600",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0537",
+   "country": "netherlands",
+   "name": "Katwijk",
+   "population": 66966,
+   "existing": false,
+   "source": "Katwijk vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q208764",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0546",
+   "country": "netherlands",
+   "name": "Leiden",
+   "population": 130108,
+   "existing": false,
+   "source": "Flag of Leiden.svg",
+   "reference": "http://www.wikidata.org/entity/Q43631",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0599",
+   "country": "netherlands",
+   "name": "Rotterdam",
+   "population": 670610,
+   "existing": false,
+   "source": "Flag of Rotterdam.svg",
+   "reference": "http://www.wikidata.org/entity/Q2680952",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0603",
+   "country": "netherlands",
+   "name": "Rijswijk",
+   "population": 59642,
+   "existing": false,
+   "source": "Flag of Rijswijk.svg",
+   "reference": "http://www.wikidata.org/entity/Q506745",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0606",
+   "country": "netherlands",
+   "name": "Schiedam",
+   "population": 81838,
+   "existing": false,
+   "source": "Flag of Schiedam.svg",
+   "reference": "http://www.wikidata.org/entity/Q204709",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0622",
+   "country": "netherlands",
+   "name": "Vlaardingen",
+   "population": 76409,
+   "existing": false,
+   "source": "Flag of Vlaardingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q210007",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0632",
+   "country": "netherlands",
+   "name": "Woerden",
+   "population": 53724,
+   "existing": false,
+   "source": "Woerden vlag 2017.svg",
+   "reference": "http://www.wikidata.org/entity/Q5128",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0637",
+   "country": "netherlands",
+   "name": "Zoetermeer",
+   "population": 128434,
+   "existing": false,
+   "source": "Zoetermeer vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q26432",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0687",
+   "country": "netherlands",
+   "name": "Middelburg",
+   "population": 50004,
+   "existing": false,
+   "source": "Middelburg vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10076",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0715",
+   "country": "netherlands",
+   "name": "Terneuzen",
+   "population": 55132,
+   "existing": false,
+   "source": "Terneuzen vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10081",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0748",
+   "country": "netherlands",
+   "name": "Bergen op Zoom",
+   "population": 69694,
+   "existing": false,
+   "source": "Bergen op Zoom vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9814",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0758",
+   "country": "netherlands",
+   "name": "Breda",
+   "population": 188078,
+   "existing": false,
+   "source": "Flag of Breda.svg",
+   "reference": "http://www.wikidata.org/entity/Q9822",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0772",
+   "country": "netherlands",
+   "name": "Eindhoven",
+   "population": 246417,
+   "existing": false,
+   "source": "Flag of Eindhoven.svg",
+   "reference": "http://www.wikidata.org/entity/Q9832",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0794",
+   "country": "netherlands",
+   "name": "Helmond",
+   "population": 95874,
+   "existing": false,
+   "source": "Helmond vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9844",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0796",
+   "country": "netherlands",
+   "name": "'s-Hertogenbosch",
+   "population": 160757,
+   "existing": false,
+   "source": "Flag of 's-Hertogenbosch.svg",
+   "reference": "http://www.wikidata.org/entity/Q9807",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0826",
+   "country": "netherlands",
+   "name": "Oosterhout",
+   "population": 57924,
+   "existing": false,
+   "source": "Flag of Oosterhout.svg",
+   "reference": "http://www.wikidata.org/entity/Q9858",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0828",
+   "country": "netherlands",
+   "name": "Oss",
+   "population": 94634,
+   "existing": false,
+   "source": "Flag of Oss.svg",
+   "reference": "http://www.wikidata.org/entity/Q9859",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0855",
+   "country": "netherlands",
+   "name": "Tilburg",
+   "population": 229836,
+   "existing": false,
+   "source": "Flag of Tilburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q26430",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0867",
+   "country": "netherlands",
+   "name": "Waalwijk",
+   "population": 50302,
+   "existing": false,
+   "source": "Waalwijk vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q745038",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0917",
+   "country": "netherlands",
+   "name": "Heerlen",
+   "population": 87461,
+   "existing": false,
+   "source": "Heerlen vlag officieel.svg",
+   "reference": "http://www.wikidata.org/entity/Q9799",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0935",
+   "country": "netherlands",
+   "name": "Maastricht",
+   "population": 125285,
+   "existing": false,
+   "source": "Flag of Maastricht.svg",
+   "reference": "http://www.wikidata.org/entity/Q1309",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0957",
+   "country": "netherlands",
+   "name": "Roermond",
+   "population": 60743,
+   "existing": false,
+   "source": "Roermond vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q8167972",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0983",
+   "country": "netherlands",
+   "name": "Venlo",
+   "population": 103789,
+   "existing": false,
+   "source": "Venlo vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9777",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0988",
+   "country": "netherlands",
+   "name": "Weert",
+   "population": 51079,
+   "existing": false,
+   "source": "Flag of Weert.svg",
+   "reference": "http://www.wikidata.org/entity/Q9774",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0995",
+   "country": "netherlands",
+   "name": "Lelystad",
+   "population": 84080,
+   "existing": false,
+   "source": "Flag of Lelystad.svg",
+   "reference": "http://www.wikidata.org/entity/Q166065",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0014",
+   "country": "netherlands",
+   "name": "Groningen",
+   "population": 243768,
+   "existing": false,
+   "source": "Flag of Groningen City.svg",
+   "reference": "http://www.wikidata.org/entity/Q892526",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0034",
+   "country": "netherlands",
+   "name": "Almere",
+   "population": 226500,
+   "existing": false,
+   "source": "Almere vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q83178",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1581",
+   "country": "netherlands",
+   "name": "Utrechtse Heuvelrug",
+   "population": 50550,
+   "existing": false,
+   "source": "Utrechtse Heuvelrug vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10043",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1621",
+   "country": "netherlands",
+   "name": "Lansingerland",
+   "population": 65594,
+   "existing": false,
+   "source": "Flag Lansingerland.svg",
+   "reference": "http://www.wikidata.org/entity/Q1144739",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1674",
+   "country": "netherlands",
+   "name": "Roosendaal",
+   "population": 77559,
+   "existing": false,
+   "source": "Roosendaal vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9861",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0074",
+   "country": "netherlands",
+   "name": "Heerenveen",
+   "population": 51787,
+   "existing": false,
+   "source": "Heerenveen flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q574558",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0080",
+   "country": "netherlands",
+   "name": "Leeuwarden",
+   "population": 128810,
+   "existing": false,
+   "source": "Leeuwarden vlag 2014.svg",
+   "reference": "http://www.wikidata.org/entity/Q2311189",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0090",
+   "country": "netherlands",
+   "name": "Smallingerland",
+   "population": 56661,
+   "existing": false,
+   "source": "Smallingerland flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q507065",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0106",
+   "country": "netherlands",
+   "name": "Assen",
+   "population": 69701,
+   "existing": false,
+   "source": "Flag of Assen.svg",
+   "reference": "http://www.wikidata.org/entity/Q798",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0114",
+   "country": "netherlands",
+   "name": "Emmen",
+   "population": 109346,
+   "existing": false,
+   "source": "Emmen vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q14641",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0118",
+   "country": "netherlands",
+   "name": "Hoogeveen",
+   "population": 56591,
+   "existing": false,
+   "source": "Flag of Hoogeveen.svg",
+   "reference": "http://www.wikidata.org/entity/Q208012",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0141",
+   "country": "netherlands",
+   "name": "Almelo",
+   "population": 74317,
+   "existing": false,
+   "source": "Almelo flag outline.svg",
+   "reference": "http://www.wikidata.org/entity/Q988",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0150",
+   "country": "netherlands",
+   "name": "Deventer",
+   "population": 103405,
+   "existing": false,
+   "source": "Deventer vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10001",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0153",
+   "country": "netherlands",
+   "name": "Enschede",
+   "population": 161738,
+   "existing": false,
+   "source": "Vlag stad Enschede.svg",
+   "reference": "http://www.wikidata.org/entity/Q134486510",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0160",
+   "country": "netherlands",
+   "name": "Hardenberg",
+   "population": 62932,
+   "existing": false,
+   "source": "Flag of Hardenberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3916626",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0164",
+   "country": "netherlands",
+   "name": "Hengelo",
+   "population": 83058,
+   "existing": false,
+   "source": "Flag of Hengelo, Overijssel.svg",
+   "reference": "http://www.wikidata.org/entity/Q10006",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0166",
+   "country": "netherlands",
+   "name": "Kampen",
+   "population": 56177,
+   "existing": false,
+   "source": "Flag of Kampen.svg",
+   "reference": "http://www.wikidata.org/entity/Q23814173",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0171",
+   "country": "netherlands",
+   "name": "Noordoostpolder",
+   "population": 50035,
+   "existing": false,
+   "source": "Noordoostpolder vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q69262",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0193",
+   "country": "netherlands",
+   "name": "Zwolle",
+   "population": 133141,
+   "existing": false,
+   "source": "Flag of Zwolle.svg",
+   "reference": "http://www.wikidata.org/entity/Q793",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0200",
+   "country": "netherlands",
+   "name": "Apeldoorn",
+   "population": 168211,
+   "existing": false,
+   "source": "Apeldoorn vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q101918",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0202",
+   "country": "netherlands",
+   "name": "Arnhem",
+   "population": 167632,
+   "existing": false,
+   "source": "VlagArnhem.svg",
+   "reference": "http://www.wikidata.org/entity/Q1310",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0203",
+   "country": "netherlands",
+   "name": "Barneveld",
+   "population": 62592,
+   "existing": false,
+   "source": "Barneveld vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q164098",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0222",
+   "country": "netherlands",
+   "name": "Doetinchem",
+   "population": 59623,
+   "existing": false,
+   "source": "Flag of Doetinchem.svg",
+   "reference": "http://www.wikidata.org/entity/Q145845",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1783",
+   "country": "netherlands",
+   "name": "Westland",
+   "population": 115941,
+   "existing": false,
+   "source": "Westland municipality flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q26556",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1883",
+   "country": "netherlands",
+   "name": "Sittard-Geleen",
+   "population": 92650,
+   "existing": false,
+   "source": "Flag of Sittard-Geleen.svg",
+   "reference": "http://www.wikidata.org/entity/Q9781",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0228",
+   "country": "netherlands",
+   "name": "Ede",
+   "population": 123532,
+   "existing": false,
+   "source": "Flag of Ede.svg",
+   "reference": "http://www.wikidata.org/entity/Q26555",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0268",
+   "country": "netherlands",
+   "name": "Nijmegen",
+   "population": 187049,
+   "existing": false,
+   "source": "Flag of Nijmegen.svg",
+   "reference": "http://www.wikidata.org/entity/Q47887",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1900",
+   "country": "netherlands",
+   "name": "Súdwest-Fryslân",
+   "population": 90421,
+   "existing": false,
+   "source": "Súdwest-Fryslân vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q1473276",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1904",
+   "country": "netherlands",
+   "name": "Stichtse Vecht",
+   "population": 65878,
+   "existing": false,
+   "source": "Stichtse Vecht vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10042",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1916",
+   "country": "netherlands",
+   "name": "Leidschendam-Voorburg",
+   "population": 78229,
+   "existing": false,
+   "source": "Leidschendam-Voorburg vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q112675",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1924",
+   "country": "netherlands",
+   "name": "Goeree-Overflakkee",
+   "population": 51867,
+   "existing": false,
+   "source": "Goeree-Overflakkee gemeentevlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q933459",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1926",
+   "country": "netherlands",
+   "name": "Pijnacker-Nootdorp",
+   "population": 57932,
+   "existing": false,
+   "source": "Pijnacker-Nootdorp vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q281768",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1930",
+   "country": "netherlands",
+   "name": "Nissewaard",
+   "population": 87639,
+   "existing": false,
+   "source": "Nissewaard gemeentevlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q14853527",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1931",
+   "country": "netherlands",
+   "name": "Krimpenerwaard",
+   "population": 57785,
+   "existing": false,
+   "source": "Flag of Krimpenerwaard.svg",
+   "reference": "http://www.wikidata.org/entity/Q15991891",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1940",
+   "country": "netherlands",
+   "name": "De Fryske Marren",
+   "population": 51929,
+   "existing": false,
+   "source": "De Friese Meren vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2114866",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1942",
+   "country": "netherlands",
+   "name": "Gooise Meren",
+   "population": 60370,
+   "existing": false,
+   "source": "Flag of Gooise Meren.svg",
+   "reference": "http://www.wikidata.org/entity/Q18335889",
+   "status": "Unofficial municipal logo flag"
+  },
+  {
+   "id": "NL_GM0307",
+   "country": "netherlands",
+   "name": "Amersfoort",
+   "population": 161852,
+   "existing": false,
+   "source": "Amersfoort vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q992",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1948",
+   "country": "netherlands",
+   "name": "Meierijstad",
+   "population": 84304,
+   "existing": false,
+   "source": "Meierijstad vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q18655255",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1952",
+   "country": "netherlands",
+   "name": "Midden-Groningen",
+   "population": 61433,
+   "existing": false,
+   "source": "Midden-Groningen logo.svg",
+   "reference": "https://lokaleregelgeving.overheid.nl/CVDR717425/1",
+   "status": "Municipal logo flag"
+  },
+  {
+   "id": "NL_GM1959",
+   "country": "netherlands",
+   "name": "Altena",
+   "population": 58277,
+   "existing": false,
+   "source": "Flag of Altena.svg",
+   "reference": "http://www.wikidata.org/entity/Q28057171",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1960",
+   "country": "netherlands",
+   "name": "West Betuwe",
+   "population": 52948,
+   "existing": false,
+   "source": "Vlag West Betuwe.svg",
+   "reference": "http://www.wikidata.org/entity/Q30142059",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1961",
+   "country": "netherlands",
+   "name": "Vijfheerenlanden",
+   "population": 61669,
+   "existing": false,
+   "source": "Flag of Vijfheerenlanden.svg",
+   "reference": "http://www.wikidata.org/entity/Q29032345",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1963",
+   "country": "netherlands",
+   "name": "Hoeksche Waard",
+   "population": 90256,
+   "existing": false,
+   "source": "Flag of Hoeksche Waard.svg",
+   "reference": "http://www.wikidata.org/entity/Q56682979",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0321",
+   "country": "netherlands",
+   "name": "Houten",
+   "population": 50847,
+   "existing": false,
+   "source": "Flag of Houten.svg",
+   "reference": "http://www.wikidata.org/entity/Q10044",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0344",
+   "country": "netherlands",
+   "name": "Utrecht",
+   "population": 374238,
+   "existing": false,
+   "source": "Flag of Utrecht city.svg",
+   "reference": "http://www.wikidata.org/entity/Q803",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0345",
+   "country": "netherlands",
+   "name": "Veenendaal",
+   "population": 69440,
+   "existing": false,
+   "source": "Veenendaal Netherlands flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q1840",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0355",
+   "country": "netherlands",
+   "name": "Zeist",
+   "population": 66641,
+   "existing": false,
+   "source": "Flag of Zeist.svg",
+   "reference": "http://www.wikidata.org/entity/Q10056",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0356",
+   "country": "netherlands",
+   "name": "Nieuwegein",
+   "population": 65971,
+   "existing": false,
+   "source": "Flag of Nieuwegein.svg",
+   "reference": "http://www.wikidata.org/entity/Q10050",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1969",
+   "country": "netherlands",
+   "name": "Westerkwartier",
+   "population": 64896,
+   "existing": false,
+   "source": "Westerkwartier vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q30011757",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1980",
+   "country": "netherlands",
+   "name": "Dijk en Waard",
+   "population": 90076,
+   "existing": false,
+   "source": "Gemeente Dijk en Waard Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q104758977",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1982",
+   "country": "netherlands",
+   "name": "Land van Cuijk",
+   "population": 91722,
+   "existing": false,
+   "source": "Vlag Land van Cuijk.svg",
+   "reference": "http://www.wikidata.org/entity/Q107242476",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1991",
+   "country": "netherlands",
+   "name": "Maashorst",
+   "population": 59222,
+   "existing": false,
+   "source": "Vlag van de Gemeente Maashorst.svg",
+   "reference": "http://www.wikidata.org/entity/Q104758976",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM1992",
+   "country": "netherlands",
+   "name": "Voorne aan Zee",
+   "population": 74304,
+   "existing": false,
+   "source": "Flag Voorne aan Zee.svg",
+   "reference": "http://www.wikidata.org/entity/Q106436626",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0361",
+   "country": "netherlands",
+   "name": "Alkmaar",
+   "population": 112304,
+   "existing": false,
+   "source": "Alkmaar Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q972",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0362",
+   "country": "netherlands",
+   "name": "Amstelveen",
+   "population": 95014,
+   "existing": false,
+   "source": "Amstelveen flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9898",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0363",
+   "country": "netherlands",
+   "name": "Amsterdam",
+   "population": 931298,
+   "existing": false,
+   "source": "Flag of Amsterdam.svg",
+   "reference": "http://www.wikidata.org/entity/Q9899",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0392",
+   "country": "netherlands",
+   "name": "Haarlem",
+   "population": 167636,
+   "existing": false,
+   "source": "Flag Haarlem.svg",
+   "reference": "http://www.wikidata.org/entity/Q9920",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0394",
+   "country": "netherlands",
+   "name": "Haarlemmermeer",
+   "population": 163128,
+   "existing": false,
+   "source": "Haarlemmermeer vlag 2019.svg",
+   "reference": "http://www.wikidata.org/entity/Q9924",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0400",
+   "country": "netherlands",
+   "name": "Den Helder",
+   "population": 56432,
+   "existing": false,
+   "source": "Flag of Den Helder.svg",
+   "reference": "http://www.wikidata.org/entity/Q9911",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0402",
+   "country": "netherlands",
+   "name": "Hilversum",
+   "population": 94435,
+   "existing": false,
+   "source": "Hilversum vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9934",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "NL_GM0405",
+   "country": "netherlands",
+   "name": "Hoorn",
+   "population": 75645,
+   "existing": false,
+   "source": "Flag of Hoorn.svg",
+   "reference": "http://www.wikidata.org/entity/Q9938",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_11002",
+   "country": "belgium",
+   "name": "Antwerp",
+   "population": 544759,
+   "existing": false,
+   "source": "Flag of Antwerp (City).svg",
+   "reference": "http://www.wikidata.org/entity/Q12892",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_12025",
+   "country": "belgium",
+   "name": "Mechelen / Malines",
+   "population": 89313,
+   "existing": false,
+   "source": "Flag of Mechlin.svg",
+   "reference": "http://www.wikidata.org/entity/Q162022",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_25112",
+   "country": "belgium",
+   "name": "Wavre / Waver",
+   "population": 35558,
+   "existing": false,
+   "source": "Flag of Wavre.svg",
+   "reference": "http://www.wikidata.org/entity/Q181314",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_31005",
+   "country": "belgium",
+   "name": "Bruges",
+   "population": 119869,
+   "existing": false,
+   "source": "Vlag van Brugge.png",
+   "reference": "http://www.wikidata.org/entity/Q12994",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_34022",
+   "country": "belgium",
+   "name": "Kortrijk / Courtrai",
+   "population": 80032,
+   "existing": false,
+   "source": "Flag of Kortrijk.svg",
+   "reference": "http://www.wikidata.org/entity/Q12995",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_35013",
+   "country": "belgium",
+   "name": "Oostende / Ostende",
+   "population": 72586,
+   "existing": false,
+   "source": "Afbeelding OostendeVlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q12996",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21001",
+   "country": "belgium",
+   "name": "Anderlecht",
+   "population": 126581,
+   "existing": false,
+   "source": "Flag of Anderlecht.svg",
+   "reference": "http://www.wikidata.org/entity/Q12886",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21004",
+   "country": "belgium",
+   "name": "Brussels",
+   "population": 196828,
+   "existing": true,
+   "source": "Vlag van Brussel (stad).svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21007",
+   "country": "belgium",
+   "name": "Vorst (Brussel-Hoofdstad) / Forest (Bruxelles-Capitale)",
+   "population": 58044,
+   "existing": false,
+   "source": "Flag of Vorst.svg",
+   "reference": "http://www.wikidata.org/entity/Q72946",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21009",
+   "country": "belgium",
+   "name": "Ixelles / Elsene",
+   "population": 89278,
+   "existing": false,
+   "source": "Flag of Elsene.svg",
+   "reference": "http://www.wikidata.org/entity/Q208713",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21010",
+   "country": "belgium",
+   "name": "Jette",
+   "population": 54107,
+   "existing": false,
+   "source": "Flag of Jette.svg",
+   "reference": "http://www.wikidata.org/entity/Q241918",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21012",
+   "country": "belgium",
+   "name": "Molenbeek-Saint-Jean / Sint-Jans-Molenbeek",
+   "population": 98365,
+   "existing": false,
+   "source": "Molenbeek-Saint-Jean Belgium.svg",
+   "reference": "http://www.wikidata.org/entity/Q180775",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21015",
+   "country": "belgium",
+   "name": "Schaerbeek / Schaarbeek",
+   "population": 130405,
+   "existing": false,
+   "source": "Schaerbeek Belgium.svg",
+   "reference": "http://www.wikidata.org/entity/Q12887",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21016",
+   "country": "belgium",
+   "name": "Uccle / Ukkel",
+   "population": 86806,
+   "existing": false,
+   "source": "Flag of Uccle.svg",
+   "reference": "http://www.wikidata.org/entity/Q203312",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_21018",
+   "country": "belgium",
+   "name": "Woluwe-Saint-Lambert / Sint-Lambrechts-Woluwe",
+   "population": 60771,
+   "existing": false,
+   "source": "Bandera Woluwe St Lambert.svg",
+   "reference": "http://www.wikidata.org/entity/Q211764",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_24062",
+   "country": "belgium",
+   "name": "Leuven / Louvain",
+   "population": 104009,
+   "existing": false,
+   "source": "Flag of Leuven.svg",
+   "reference": "http://www.wikidata.org/entity/Q118958",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_44021",
+   "country": "belgium",
+   "name": "Ghent",
+   "population": 269597,
+   "existing": false,
+   "source": "Vlag van Gent.svg",
+   "reference": "http://www.wikidata.org/entity/Q1296",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_46003",
+   "country": "belgium",
+   "name": "Beveren (Sint-Niklaas) / Beveren (Saint-Nicolas)",
+   "population": 50838,
+   "existing": false,
+   "source": "Flag of Beveren.svg",
+   "reference": "http://www.wikidata.org/entity/Q270644",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_92094",
+   "country": "belgium",
+   "name": "Namur / Namen",
+   "population": 114142,
+   "existing": false,
+   "source": "Flag of Namur.svg",
+   "reference": "http://www.wikidata.org/entity/Q134121",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_46021",
+   "country": "belgium",
+   "name": "Sint-Niklaas (Sint-Niklaas) / Saint-Nicolas (Saint-Nicolas)",
+   "population": 81863,
+   "existing": false,
+   "source": "Flag of Sint-Niklaas.svg",
+   "reference": "http://www.wikidata.org/entity/Q13127",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_52011",
+   "country": "belgium",
+   "name": "Charleroi",
+   "population": 204322,
+   "existing": false,
+   "source": "Drapeau ville be Charleroi.svg",
+   "reference": "http://www.wikidata.org/entity/Q81046",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_53053",
+   "country": "belgium",
+   "name": "Mons / Bergen",
+   "population": 96358,
+   "existing": false,
+   "source": "Flag of Mons.svg",
+   "reference": "http://www.wikidata.org/entity/Q83407",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_57081",
+   "country": "belgium",
+   "name": "Tournai / Doornik",
+   "population": 68554,
+   "existing": false,
+   "source": "Flag of Tournai.svg",
+   "reference": "http://www.wikidata.org/entity/Q173219",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_57096",
+   "country": "belgium",
+   "name": "Mouscron / Moeskroen",
+   "population": 59987,
+   "existing": false,
+   "source": "Drapeau ville be Mouscron.svg",
+   "reference": "http://www.wikidata.org/entity/Q220145",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_58001",
+   "country": "belgium",
+   "name": "La Louvière",
+   "population": 81241,
+   "existing": false,
+   "source": "Flag of La Louvière.svg",
+   "reference": "http://www.wikidata.org/entity/Q211572",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_62063",
+   "country": "belgium",
+   "name": "Liège / Luik",
+   "population": 195778,
+   "existing": false,
+   "source": "LuikVlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3992",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_62096",
+   "country": "belgium",
+   "name": "Seraing",
+   "population": 64266,
+   "existing": false,
+   "source": "Flag of Seraing.svg",
+   "reference": "http://www.wikidata.org/entity/Q194037",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_63079",
+   "country": "belgium",
+   "name": "Verviers",
+   "population": 55770,
+   "existing": false,
+   "source": "Verviers Belgium.svg",
+   "reference": "http://www.wikidata.org/entity/Q202954",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_71016",
+   "country": "belgium",
+   "name": "Genk",
+   "population": 67877,
+   "existing": false,
+   "source": "Genk vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q189692",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_71022",
+   "country": "belgium",
+   "name": "Hasselt",
+   "population": 80828,
+   "existing": false,
+   "source": "Hasselt (B) vlag.svg",
+   "reference": "https://en.wikipedia.org/wiki/Hasselt",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_81001",
+   "country": "belgium",
+   "name": "Arlon / Aarlen",
+   "population": 31310,
+   "existing": false,
+   "source": "Flag of Arlon.svg",
+   "reference": "http://www.wikidata.org/entity/Q675960",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_36015",
+   "country": "belgium",
+   "name": "Roeselare / Roulers",
+   "population": 66262,
+   "existing": false,
+   "source": "Flag of Roeselare.svg",
+   "reference": "http://www.wikidata.org/entity/Q211037",
+   "status": "Municipal flag"
+  },
+  {
+   "id": "BE_41002",
+   "country": "belgium",
+   "name": "Aalst (Aalst) / Alost (Alost)",
+   "population": 90995,
+   "existing": false,
+   "source": "Aalst (Oost-Vlaanderen) vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q13121",
+   "status": "Municipal flag"
+  }
+ ]
+}

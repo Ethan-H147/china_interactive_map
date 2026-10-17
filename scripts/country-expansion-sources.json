@@ -1,0 +1,95 @@
+{
+  "retrieved": "2026-10-17",
+  "files": {
+    "lau2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "provider": "Eurostat GISCO · LAU 2024",
+      "license": "Eurostat GISCO non-commercial use; © EuroGeographics for the administrative boundaries",
+      "licenseUrl": "https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units",
+      "sha256": "ae07901e0a11cb7891d1a6d6a31cfd833e25672ca318908856b0e34a1acca594",
+      "bytes": 149866427
+    },
+    "nuts2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326.geojson",
+      "provider": "Eurostat GISCO · NUTS 2024",
+      "license": "Eurostat GISCO non-commercial use; © EuroGeographics for the administrative boundaries",
+      "licenseUrl": "https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units",
+      "sha256": "b013441a23f5a29cd394c88f9f2621dea4e0fd5b18f0458dc708e48defd6aabb",
+      "bytes": 66954478
+    },
+    "swiss2026.zip": {
+      "url": "https://data.geo.admin.ch/ch.swisstopo.swissboundaries3d/swissboundaries3d_2026-01/swissboundaries3d_2026-01_2056_5728.shp.zip",
+      "provider": "swisstopo · swissBOUNDARIES3D, 1 January 2026",
+      "license": "Open government data, attribution: © swisstopo",
+      "licenseUrl": "https://www.swisstopo.admin.ch/en/conditions-for-the-use-of-free-geodata-and-geoservices",
+      "sha256": "a467d7eec8395d746253c68095c75a2540b52064bc83a6b35cf101efb625733d",
+      "bytes": 35969375
+    },
+    "us-states-2025.zip": {
+      "url": "https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_us_state_500k.zip",
+      "provider": "US Census Bureau · 2025 cartographic state boundaries, 1:500,000",
+      "license": "Public domain",
+      "sha256": "9cbfe171dad1555e11770c981d8f4db9e687a65c86f5bdae684eeb487e2e9b80",
+      "bytes": 3245373
+    },
+    "canada-provinces.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/41af8f1/releaseData/gbOpen/CAN/ADM1/geoBoundaries-CAN-ADM1_simplified.geojson",
+      "provider": "Statistics Canada · 2023 boundaries, geoBoundaries pinned release",
+      "license": "Statistics Canada Open Licence",
+      "licenseUrl": "https://www.statcan.gc.ca/en/reference/licence",
+      "sha256": "0c9e4fc56c8b9ce958960ffabd1556fbe7c3ec0deeea346a2b5b7dff05e35449",
+      "bytes": 26022306
+    },
+    "mexico-states.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/90a1d52/releaseData/gbOpen/MEX/ADM1/geoBoundaries-MEX-ADM1.geojson",
+      "provider": "INEGI · 2020 state boundaries, geoBoundaries pinned release",
+      "license": "CC BY 3.0 IGO",
+      "sha256": "7cfdc0e6a3f1420ba57b12b971db9b3c9febda8e7b00565e159a25b6dd4f35e0",
+      "bytes": 36153635
+    },
+    "us-population.csv": {
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv",
+      "provider": "US Census Bureau · July 2025 state population estimates",
+      "license": "Public domain",
+      "sha256": "92188e29cb0a67dcf95afa7d6c47359409782f086478b70ea4128eb70e223ca9",
+      "bytes": 53555
+    },
+    "canada-population.zip": {
+      "url": "https://www150.statcan.gc.ca/n1/tbl/csv/17100009-eng.zip",
+      "provider": "Statistics Canada · Table 17-10-0009-01, quarterly population estimates",
+      "license": "Statistics Canada Open Licence",
+      "sha256": "b50bf05150e42edf3771ceb1d6868581fb6747b5886e0d1450b8b3437958bd0b",
+      "bytes": 30842
+    },
+    "mexico-population.zip": {
+      "url": "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip",
+      "provider": "INEGI · 2020 Population and Housing Census, ITER national extract",
+      "license": "INEGI free use with attribution",
+      "sha256": "9342fdbd45bda5897f2b827a12904843b6f8fb85d4e72da299e09e4d2422ab60",
+      "bytes": 36615814
+    },
+    "ne-10m-land-boundaries.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    },
+    "mexico-inegi-states.geojson": {
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee",
+      "provider": "INEGI · Marco Geoestadístico, December 2025; water-inclusive state envelopes",
+      "license": "INEGI free use with attribution",
+      "licenseUrl": "https://www.inegi.org.mx/inegi/terminos.html",
+      "sha256": "170c3ea5ff472f08ece97970dc90ad4ba8c6f503e33859655f315091c105cc91",
+      "bytes": 28836523
+    },
+    "us-minor-islands-coastline.json": {
+      "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A90%5D%3B(way%5B%22natural%22%3D%22coastline%22%5D(0%2C-176.6%2C0.4%2C-176.3)%3Bway%5B%22natural%22%3D%22coastline%22%5D(0.6%2C-176.8%2C1%2C-176.5)%3Bway%5B%22natural%22%3D%22coastline%22%5D(-0.5%2C-160.2%2C-0.2%2C-159.8)%3Bway%5B%22natural%22%3D%22coastline%22%5D(16.5%2C-169.7%2C16.9%2C-169.3)%3Bway%5B%22natural%22%3D%22coastline%22%5D(6.2%2C-162.6%2C6.6%2C-162.2)%3Bway%5B%22natural%22%3D%22coastline%22%5D(28%2C-177.6%2C28.4%2C-177.1)%3Bway%5B%22natural%22%3D%22coastline%22%5D(18.2%2C-75.2%2C18.6%2C-74.8)%3Bway%5B%22natural%22%3D%22coastline%22%5D(5.7%2C-162.3%2C6.1%2C-161.9)%3Bway%5B%22natural%22%3D%22coastline%22%5D(19.1%2C166.4%2C19.5%2C166.8)%3B)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · directed coastline ways for all nine US Minor Outlying Islands",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "7b3e9efb8c8c2ccefef3778794653c0b8222806d772eb9c6028b1ec31cd16be6",
+      "bytes": 483439
+    }
+  }
+}

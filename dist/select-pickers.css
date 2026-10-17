@@ -1,0 +1,39 @@
+/* Keep desktop pickers in the page's top layer, with native select semantics.
+   Touch layouts and browsers without base-select retain their platform picker. */
+@supports (appearance:base-select){
+ @media (min-width:761px) and (pointer:fine){
+  aside.sidebar select:not([multiple]):is(:not([size]),[size="0"],[size="1"]),
+  aside.sidebar select:not([multiple]):is(:not([size]),[size="0"],[size="1"])::picker(select){
+   appearance:base-select;
+  }
+  aside.sidebar select::picker(select){
+   font:inherit;
+   font-size:14px;
+   color:var(--ink);
+   background:var(--paper);
+   border:1px solid var(--line);
+   border-radius:5px;
+   box-shadow:0 8px 24px #0002;
+   padding:4px;
+   max-block-size:min(320px,50dvh);
+   overflow:auto;
+   overscroll-behavior:contain;
+  }
+  aside.sidebar select option{
+   padding:8px 10px;
+   min-block-size:34px;
+   border-radius:3px;
+   cursor:pointer;
+  }
+  aside.sidebar select option:is(:hover,:focus-visible){
+   background:color-mix(in srgb,var(--red) 10%,var(--paper));
+   outline:none;
+  }
+  aside.sidebar select option:checked{
+   font-weight:600;
+   background:color-mix(in srgb,var(--red) 7%,var(--paper));
+  }
+  aside.sidebar select option:disabled{color:var(--muted);cursor:default}
+  aside.sidebar select::picker-icon{color:var(--muted)}
+ }
+}

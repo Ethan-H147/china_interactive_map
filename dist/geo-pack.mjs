@@ -115,5 +115,5 @@ export async function decodeData(bytes){
 // The blob URL stays valid: MapLibre fetches a source's data again whenever it reloads it.
 export async function addWorkerSource(map,id,url,options,transform){
  const blob=URL.createObjectURL(new Blob([await fetchBytes(compactUrl(url))]));
- map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(transform?'&transform='+transform:'')});
+ try{map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(transform?'&transform='+transform:'')});}catch(error){URL.revokeObjectURL(blob);throw error;}
 }

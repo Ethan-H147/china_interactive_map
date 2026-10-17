@@ -1,0 +1,30 @@
+{
+  "provider": "Swiss Federal Statistical Office · cantonal GDP and GDP per capita",
+  "url": "https://www.bfs.admin.ch/bfs/en/home/statistics/national-economy/national-accounts/gross-domestic-product-canton.html",
+  "currency": "CHF",
+  "retrieved": "2026-10-17",
+  "sources": [
+    {
+      "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/orderNr:je-e-04.02.06.01/master",
+      "sha256": "fb5ebcca30863b297c2e1894393fb051229871b1311324c53fbd93e8c0dfdf77"
+    },
+    {
+      "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/orderNr:je-e-04.02.06.03/master",
+      "sha256": "f018074423cfab71d78ba38819032e33ce6ce2f979dabac6fd16a8a3b443d885"
+    }
+  ],
+  "coverage": {
+    "retrieved": "2026-10-17",
+    "retainedSource": "scripts/statistics-sources/expansion-economy/switzerland.json",
+    "coveredRegions": 26,
+    "years": [
+      2022
+    ],
+    "scope": "Cantons"
+  },
+  "exchange": {
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2020&currency=USD&currency=CAD&currency=CHF&currency=MXN",
+    "updated": "2026-07-08T11:00:00+0200",
+    "sha256": "e448ffcb873d77975ebd533d3a3a0e739f05e92764d320d28b78e2c6b51083b5"
+  }
+}

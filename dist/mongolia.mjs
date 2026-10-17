@@ -6,7 +6,7 @@ import {adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-line
 export async function addMongoliaPortal(map,host){
  const home=[[87.7,41.5],[120,52.2]];
  await addWorkerSource(map,'mongolia-portal','data/mongolia-context.bin',{type:'geojson',tolerance:0,maxzoom:18,buffer:128});
- map.addLayer({id:'mongolia-portal-fill',type:'fill',source:'mongolia-portal',paint:{'fill-color':'#d7d7d3','fill-opacity':1,'fill-antialias':false}},map.getLayer('province-fill')?'province-fill':undefined);
+ map.addLayer({id:'mongolia-portal-fill',metadata:{atlas:{role:'context'}},type:'fill',source:'mongolia-portal',paint:{'fill-color':'#d7d7d3','fill-opacity':1,'fill-antialias':false}},map.getLayer('province-fill')?'province-fill':undefined);
  const template=document.createElement('template');template.innerHTML=mongoliaPanel;
  const sidebar=template.content.querySelector('aside'),dialog=template.content.querySelector('dialog');
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));document.body.append(dialog);
@@ -77,7 +77,7 @@ async function ensureData(){
    for(const [id,blob] of Object.entries(prepared.sources)){const url=URL.createObjectURL(blob);urls.push(url);map.addSource(id,{type:'geojson',tolerance:.375,maxzoom:18,buffer:128,promoteId:'id',...(id.endsWith('-edges')?lineSourceOptions:{}),data:url,attribution:'<a href="https://www.nso.mn/" target="_blank" rel="noopener">National Statistics Office of Mongolia</a>'});}
    for(const level of ['first','second']){for(const f of data[level].features)index.set(f.properties.id,f);const id='mongolia-'+level+'-fill';layerIds.push(id);map.addLayer({id,type:'fill',source:'mongolia-'+level,paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],'#b6d0e1',['boolean',['feature-state','hover'],false],'#d9bd72','#d9e7ee'],'fill-opacity':level==='first'?1:['case',['boolean',['feature-state','selected'],false],.65,['boolean',['feature-state','hover'],false],.4,.01],'fill-antialias':false}});}
    for(const level of ['second','first']){const id='mongolia-'+level+'-lines';layerIds.push(id);map.addLayer({id,type:'line',source:'mongolia-'+level+'-edges',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':level==='second'?'#94adbd':'#4e7d98','line-width':['interpolate',['linear'],['zoom'],3,level==='second'?.35:.65,8,level==='second'?.7:1.2],'line-opacity':adaptiveOpacity(level==='second'?.8:1)}});}
-   for(const level of ['first','second']){const id='mongolia-'+level+'-selected';layerIds.push(id);map.addLayer({id,type:'line',source:'mongolia-'+level+'-selection-edges',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#ad4037','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}});}
+   for(const level of ['first','second']){const id='mongolia-'+level+'-selected';layerIds.push(id);map.addLayer({id,metadata:{atlas:{role:'selection'}},type:'line',source:'mongolia-'+level+'-selection-edges',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#ad4037','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}});}
    for(const id of layerIds)show(id,false);
    for(const f of [...data.first.features].sort((a,b)=>a.properties.en.localeCompare(b.properties.en)))$('province').append(new Option(name(f.properties),f.properties.id));
    ready=true;host.controls();

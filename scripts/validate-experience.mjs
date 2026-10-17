@@ -66,3 +66,7 @@ console.log('The bottom parent/overview control requests explicit navigation in 
  assert(source.includes('if(saved.camera!==false)map.jumpTo('),'Restore skips a dropped camera');
  console.log('Stalled country flights land on their target, and legacy saved views drop their camera once.');
 }
+
+assert(validate({...view,country:'canada',center:[-75,83]}),'Arctic views can be saved');
+assert(validate({...view,country:'united-states',center:[-187,52]}),'Aleutian views can be saved');
+assert.equal(validate({...view,country:'canada',center:[-75,86]}),null,'Mercator latitude is bounded');

@@ -1,0 +1,3388 @@
+{
+ "retrieved": "2026-10-17",
+ "currency": "EUR",
+ "provider": "Eurostat · nama_10r_3gdp",
+ "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table",
+ "sources": [
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEF&geo=DE9&geo=DE6&geo=DE7&geo=DEB&geo=DEA&geo=DE5&geo=DE1&geo=DE2&geo=DE8&geo=DED&geo=DEG&geo=DEE&geo=DEC&geo=DE4&geo=DE3&geo=DEF0B&geo=DE922&geo=DE947&geo=DEF0C&geo=DEF0F&geo=DE933&geo=DE600&geo=DE911&geo=DE912&geo=DE913&geo=DE914&geo=DE934&geo=DE923&geo=DE935&geo=DE925&geo=DE926&geo=DE916&geo=DE917&geo=DE936&geo=DEF0D&geo=DE937&geo=DE918&geo=DE927&geo=DE91A&geo=DE91B&geo=DE938&geo=DE928&geo=DEF0E&geo=DE939",
+   "sha256": "f11d2c5ba41433c8f5073928c765f38612efb3a6ec3c4106961ef6ad5814533a",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DE931&geo=DE91C&geo=DE93A&geo=DE932&geo=DE929&geo=DE93B&geo=DE941&geo=DE942&geo=DE943&geo=DE944&geo=DE945&geo=DE946&geo=DEF07&geo=DEF08&geo=DEF01&geo=DEF02&geo=DEF03&geo=DEF04&geo=DEF05&geo=DEF09&geo=DEF0A&geo=DEF06&geo=DE722&geo=DEB13&geo=DEB1C&geo=DE735&geo=DE736&geo=DEB15&geo=DEB14&geo=DE723&geo=DE737&geo=DEB11&geo=DEB12&geo=DE724&geo=DE725&geo=DE731&geo=DE732&geo=DE733&geo=DE734&geo=DE718&geo=DE719&geo=DE949&geo=DEA26&geo=DEA27&geo=DEA47",
+   "sha256": "a774813a7dfa5b5c21102680563333522c425473ceecdc5bb1d0af09a94cde9a",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEA51&geo=DEA52&geo=DEA53&geo=DEA54&geo=DEA55&geo=DEA56&geo=DE721&geo=DEA28&geo=DEA57&geo=DE94A&geo=DEA58&geo=DE71A&geo=DE94B&geo=DEA29&geo=DEA59&geo=DEA5A&geo=DE94C&geo=DEA2A&geo=DEA5B&geo=DE71B&geo=DE94D&geo=DEA2B&geo=DEA2C&geo=DEA5C&geo=DE71C&geo=DE94E&geo=DEA31&geo=DEA32&geo=DEA33&geo=DE711&geo=DE712&geo=DE713&geo=DE71D&geo=DEA34&geo=DEA35&geo=DE714&geo=DE715&geo=DE94F&geo=DE94G&geo=DEA36&geo=DE94H&geo=DEA37&geo=DE716&geo=DE501&geo=DE502",
+   "sha256": "c3e33a2b7842dc5b1c03c3061bf11028bc7aa671473f1b63002d261ba32e4bd6",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEA11&geo=DEA12&geo=DEA13&geo=DEA14&geo=DEA15&geo=DEA16&geo=DEA17&geo=DEA18&geo=DEA19&geo=DEA38&geo=DEA1A&geo=DEA1B&geo=DEA41&geo=DEA42&geo=DE717&geo=DE71E&geo=DEA1C&geo=DEA1D&geo=DEA43&geo=DEA1E&geo=DEA1F&geo=DEA44&geo=DEA45&geo=DEA22&geo=DEA23&geo=DEA24&geo=DEA2D&geo=DEA46&geo=DE948&geo=DEB22&geo=DEB24&geo=DEB3B&geo=DEB23&geo=DEB25&geo=DEB31&geo=DEB32&geo=DEB33&geo=DEB34&geo=DEB35&geo=DEB36&geo=DEB37&geo=DEB38&geo=DEB39&geo=DEB3A&geo=DEB1A",
+   "sha256": "f37e574c3058e9abba31f58f134572e9cf45de6a40eeb9122f6f31192d0601d0",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEB18&geo=DEB1D&geo=DEB1B&geo=DEB21&geo=DEB17&geo=DE113&geo=DE114&geo=DE128&geo=DE129&geo=DE12A&geo=DE13A&geo=DE141&geo=DE11D&geo=DE121&geo=DE122&geo=DE123&geo=DE134&geo=DE115&geo=DE12B&geo=DE116&geo=DE117&geo=DE118&geo=DE124&geo=DE12C&geo=DE135&geo=DE119&geo=DE136&geo=DE11A&geo=DE131&geo=DE132&geo=DE125&geo=DE126&geo=DE127&geo=DE137&geo=DE11B&geo=DE138&geo=DE133&geo=DE11C&geo=DE139&geo=DEB3J&geo=DEB3C&geo=DEB3E&geo=DEB3F&geo=DEB3H&geo=DEB3K",
+   "sha256": "49b1f9412ae003b158c0fbeab000007dd7a2f2d0e1e2366d37ddba6d8da54ecb",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEB3D&geo=DEB3G&geo=DEB3I&geo=DE111&geo=DE112&geo=DE238&geo=DE25C&geo=DE261&geo=DE262&geo=DE263&geo=DE264&geo=DE27B&geo=DE27C&geo=DE239&geo=DE24B&geo=DE24C&geo=DE26A&geo=DE26B&geo=DE24D&geo=DE265&geo=DE251&geo=DE252&geo=DE253&geo=DE254&geo=DE255&geo=DE256&geo=DE26C&geo=DE23A&geo=DE241&geo=DE242&geo=DE243&geo=DE244&geo=DE245&geo=DE271&geo=DE272&geo=DE273&geo=DE274&geo=DE275&geo=DE266&geo=DE257&geo=DE276&geo=DE267&geo=DE246&geo=DE258&geo=DE259",
+   "sha256": "d40618288c80336c5b5176329f7a0cc514862d2805807822aaeea3904a89c689",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DE277&geo=DE268&geo=DE247&geo=DE278&geo=DE269&geo=DE248&geo=DE25A&geo=DE249&geo=DE279&geo=DE25B&geo=DE27A&geo=DE24A&geo=DE228&geo=DE229&geo=DE142&geo=DE216&geo=DE217&geo=DE21J&geo=DE21K&geo=DE237&geo=DE143&geo=DE218&geo=DE144&geo=DE145&geo=DE219&geo=DE22A&geo=DE21L&geo=DE21M&geo=DE22B&geo=DE21A&geo=DE146&geo=DE21B&geo=DE21N&geo=DE22C&geo=DE231&geo=DE232&geo=DE233&geo=DE234&geo=DE21C&geo=DE221&geo=DE222&geo=DE223&geo=DE224&geo=DE147&geo=DE21D",
+   "sha256": "1a7b6c4e6c390cc241c15b4f40f1fd07d92e9dacfcecd588ed1837e9b75ba7a8",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DE235&geo=DE148&geo=DE21E&geo=DE225&geo=DE21F&geo=DE236&geo=DE149&geo=DE21G&geo=DE226&geo=DE227&geo=DE211&geo=DE212&geo=DE213&geo=DE214&geo=DE21H&geo=DE215&geo=DE21I&geo=DE80M&geo=DED2D&geo=DEG0R&geo=DE80O&geo=DEE08&geo=DED41&geo=DED42&geo=DEE09&geo=DED2E&geo=DE80N&geo=DEE06&geo=DED2F&geo=DEE0A&geo=DED43&geo=DED51&geo=DED52&geo=DEE0B&geo=DEE0C&geo=DED53&geo=DED44&geo=DEE0D&geo=DEE01&geo=DEE02&geo=DED45&geo=DEE0E&geo=DEE03&geo=DEE04&geo=DED21",
+   "sha256": "b7efc8e9500f6ab58d0be7ba385f0d2cb91dd8b6eb81755ed0c2813d33f3c33b",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEG01&geo=DEG02&geo=DEG03&geo=DEG0S&geo=DEG05&geo=DEE05&geo=DED2C&geo=DEG06&geo=DEE07&geo=DEG07&geo=DE80J&geo=DEC05&geo=DEC06&geo=DE40C&geo=DE80L&geo=DE27D&geo=DE300&geo=DE401&geo=DE40D&geo=DE27E&geo=DE402&geo=DE403&geo=DE404&geo=DE405&geo=DE40E&geo=DE406&geo=DE80K&geo=DEC01&geo=DE40F&geo=DEC02&geo=DE407&geo=DE40G&geo=DEC03&geo=DE408&geo=DE40H&geo=DEC04&geo=DE409&geo=DE40I&geo=DE803&geo=DE804&geo=DE40A&geo=DE40B&geo=DEG09&geo=DEG0J&geo=DEG0A",
+   "sha256": "fd4c4840dbf4cd3e6c6a1d1a06c2a8bf0a6d2157a9ff0049cb18d68372229756",
+   "updated": "2026-02-10T11:00:00+0100"
+  },
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=DEG0K&geo=DEG0Q&geo=DEG0C&geo=DEG0L&geo=DEG0D&geo=DEG0M&geo=DEG0E&geo=DEG0T&geo=DEG0G&geo=DEG0V&geo=DEG0U",
+   "sha256": "ea65c97cbb4cd6c927f3356d5826250e071708d914547946d21abd3966943d54",
+   "updated": "2026-02-10T11:00:00+0100"
+  }
+ ],
+ "rows": {
+  "DEF": {
+   "name": "Schleswig-Holstein",
+   "year": 2024,
+   "gdp": 127512330000,
+   "gdpPerCapita": 43100,
+   "status": "provisional",
+   "sourceGeo": "DEF"
+  },
+  "DE9": {
+   "name": "Niedersachsen",
+   "year": 2024,
+   "gdp": 383465210000,
+   "gdpPerCapita": 47900,
+   "status": "provisional",
+   "sourceGeo": "DE9"
+  },
+  "DE6": {
+   "name": "Hamburg",
+   "year": 2024,
+   "gdp": 162581050000,
+   "gdpPerCapita": 87500,
+   "status": "provisional",
+   "sourceGeo": "DE6"
+  },
+  "DE7": {
+   "name": "Hessen",
+   "year": 2024,
+   "gdp": 370852140000,
+   "gdpPerCapita": 59100,
+   "status": "provisional",
+   "sourceGeo": "DE7"
+  },
+  "DEB": {
+   "name": "Rheinland-Pfalz",
+   "year": 2024,
+   "gdp": 184881600000,
+   "gdpPerCapita": 44800,
+   "status": "provisional",
+   "sourceGeo": "DEB"
+  },
+  "DEA": {
+   "name": "Nordrhein-Westfalen",
+   "year": 2024,
+   "gdp": 875430910000,
+   "gdpPerCapita": 48600,
+   "status": "provisional",
+   "sourceGeo": "DEA"
+  },
+  "DE5": {
+   "name": "Bremen",
+   "year": 2024,
+   "gdp": 41423780000,
+   "gdpPerCapita": 58900,
+   "status": "provisional",
+   "sourceGeo": "DE5"
+  },
+  "DE1": {
+   "name": "Baden-Württemberg",
+   "year": 2024,
+   "gdp": 655471540000,
+   "gdpPerCapita": 58300,
+   "status": "provisional",
+   "sourceGeo": "DE1"
+  },
+  "DE2": {
+   "name": "Bayern",
+   "year": 2024,
+   "gdp": 797327730000,
+   "gdpPerCapita": 60300,
+   "status": "provisional",
+   "sourceGeo": "DE2"
+  },
+  "DE8": {
+   "name": "Mecklenburg-Vorpommern",
+   "year": 2024,
+   "gdp": 61593120000,
+   "gdpPerCapita": 39100,
+   "status": "provisional",
+   "sourceGeo": "DE8"
+  },
+  "DED": {
+   "name": "Sachsen",
+   "year": 2024,
+   "gdp": 162214100000,
+   "gdpPerCapita": 40100,
+   "status": "provisional",
+   "sourceGeo": "DED"
+  },
+  "DEG": {
+   "name": "Thüringen",
+   "year": 2024,
+   "gdp": 78200760000,
+   "gdpPerCapita": 37100,
+   "status": "provisional",
+   "sourceGeo": "DEG"
+  },
+  "DEE": {
+   "name": "Sachsen-Anhalt",
+   "year": 2024,
+   "gdp": 79577400000,
+   "gdpPerCapita": 37200,
+   "status": "provisional",
+   "sourceGeo": "DEE"
+  },
+  "DEC": {
+   "name": "Saarland",
+   "year": 2024,
+   "gdp": 42756700000,
+   "gdpPerCapita": 42200,
+   "status": "provisional",
+   "sourceGeo": "DEC"
+  },
+  "DE4": {
+   "name": "Brandenburg",
+   "year": 2024,
+   "gdp": 97829610000,
+   "gdpPerCapita": 38300,
+   "status": "provisional",
+   "sourceGeo": "DE4"
+  },
+  "DE3": {
+   "name": "Berlin",
+   "year": 2024,
+   "gdp": 207852020000,
+   "gdpPerCapita": 56600,
+   "status": "provisional",
+   "sourceGeo": "DE3"
+  },
+  "DEF0B": {
+   "name": "Rendsburg-Eckernförde",
+   "year": 2023,
+   "gdp": 10435240000,
+   "gdpPerCapita": 37600,
+   "status": "provisional",
+   "sourceGeo": "DEF0B"
+  },
+  "DE922": {
+   "name": "Diepholz",
+   "year": 2023,
+   "gdp": 8641730000,
+   "gdpPerCapita": 39200,
+   "status": "provisional",
+   "sourceGeo": "DE922"
+  },
+  "DE947": {
+   "name": "Aurich",
+   "year": 2023,
+   "gdp": 6582080000,
+   "gdpPerCapita": 34900,
+   "status": "provisional",
+   "sourceGeo": "DE947"
+  },
+  "DEF0C": {
+   "name": "Schleswig-Flensburg",
+   "year": 2023,
+   "gdp": 7406140000,
+   "gdpPerCapita": 36200,
+   "status": "provisional",
+   "sourceGeo": "DEF0C"
+  },
+  "DEF0F": {
+   "name": "Stormarn",
+   "year": 2023,
+   "gdp": 10456700000,
+   "gdpPerCapita": 42500,
+   "status": "provisional",
+   "sourceGeo": "DEF0F"
+  },
+  "DE933": {
+   "name": "Harburg",
+   "year": 2023,
+   "gdp": 7997660000,
+   "gdpPerCapita": 30300,
+   "status": "provisional",
+   "sourceGeo": "DE933"
+  },
+  "DE600": {
+   "name": "Hamburg",
+   "year": 2023,
+   "gdp": 155055060000,
+   "gdpPerCapita": 84200,
+   "status": "provisional",
+   "sourceGeo": "DE600"
+  },
+  "DE911": {
+   "name": "Braunschweig, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 21673090000,
+   "gdpPerCapita": 85500,
+   "status": "provisional",
+   "sourceGeo": "DE911"
+  },
+  "DE912": {
+   "name": "Salzgitter, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5870130000,
+   "gdpPerCapita": 56000,
+   "status": "provisional",
+   "sourceGeo": "DE912"
+  },
+  "DE913": {
+   "name": "Wolfsburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 23817160000,
+   "gdpPerCapita": 185100,
+   "status": "provisional",
+   "sourceGeo": "DE913"
+  },
+  "DE914": {
+   "name": "Gifhorn",
+   "year": 2023,
+   "gdp": 4915460000,
+   "gdpPerCapita": 28000,
+   "status": "provisional",
+   "sourceGeo": "DE914"
+  },
+  "DE934": {
+   "name": "Lüchow-Dannenberg",
+   "year": 2023,
+   "gdp": 1605420000,
+   "gdpPerCapita": 34300,
+   "status": "provisional",
+   "sourceGeo": "DE934"
+  },
+  "DE923": {
+   "name": "Hameln-Pyrmont",
+   "year": 2023,
+   "gdp": 5905380000,
+   "gdpPerCapita": 39200,
+   "status": "provisional",
+   "sourceGeo": "DE923"
+  },
+  "DE935": {
+   "name": "Lüneburg, Landkreis",
+   "year": 2023,
+   "gdp": 6814070000,
+   "gdpPerCapita": 38100,
+   "status": "provisional",
+   "sourceGeo": "DE935"
+  },
+  "DE925": {
+   "name": "Hildesheim",
+   "year": 2023,
+   "gdp": 9792160000,
+   "gdpPerCapita": 36500,
+   "status": "provisional",
+   "sourceGeo": "DE925"
+  },
+  "DE926": {
+   "name": "Holzminden",
+   "year": 2023,
+   "gdp": 2800730000,
+   "gdpPerCapita": 42300,
+   "status": "provisional",
+   "sourceGeo": "DE926"
+  },
+  "DE916": {
+   "name": "Goslar",
+   "year": 2023,
+   "gdp": 4681390000,
+   "gdpPerCapita": 36600,
+   "status": "provisional",
+   "sourceGeo": "DE916"
+  },
+  "DE917": {
+   "name": "Helmstedt",
+   "year": 2023,
+   "gdp": 2516300000,
+   "gdpPerCapita": 27700,
+   "status": "provisional",
+   "sourceGeo": "DE917"
+  },
+  "DE936": {
+   "name": "Osterholz",
+   "year": 2023,
+   "gdp": 3116580000,
+   "gdpPerCapita": 27400,
+   "status": "provisional",
+   "sourceGeo": "DE936"
+  },
+  "DEF0D": {
+   "name": "Segeberg",
+   "year": 2023,
+   "gdp": 11154200000,
+   "gdpPerCapita": 39700,
+   "status": "provisional",
+   "sourceGeo": "DEF0D"
+  },
+  "DE937": {
+   "name": "Rotenburg (Wümme)",
+   "year": 2023,
+   "gdp": 7081310000,
+   "gdpPerCapita": 42900,
+   "status": "provisional",
+   "sourceGeo": "DE937"
+  },
+  "DE918": {
+   "name": "Northeim",
+   "year": 2023,
+   "gdp": 4446880000,
+   "gdpPerCapita": 35200,
+   "status": "provisional",
+   "sourceGeo": "DE918"
+  },
+  "DE927": {
+   "name": "Nienburg (Weser)",
+   "year": 2023,
+   "gdp": 4668470000,
+   "gdpPerCapita": 38400,
+   "status": "provisional",
+   "sourceGeo": "DE927"
+  },
+  "DE91A": {
+   "name": "Peine",
+   "year": 2023,
+   "gdp": 3637490000,
+   "gdpPerCapita": 26600,
+   "status": "provisional",
+   "sourceGeo": "DE91A"
+  },
+  "DE91B": {
+   "name": "Wolfenbüttel",
+   "year": 2023,
+   "gdp": 3112530000,
+   "gdpPerCapita": 26300,
+   "status": "provisional",
+   "sourceGeo": "DE91B"
+  },
+  "DE938": {
+   "name": "Heidekreis",
+   "year": 2023,
+   "gdp": 6056570000,
+   "gdpPerCapita": 42400,
+   "status": "provisional",
+   "sourceGeo": "DE938"
+  },
+  "DE928": {
+   "name": "Schaumburg",
+   "year": 2023,
+   "gdp": 4965160000,
+   "gdpPerCapita": 31600,
+   "status": "provisional",
+   "sourceGeo": "DE928"
+  },
+  "DEF0E": {
+   "name": "Steinburg",
+   "year": 2023,
+   "gdp": 4786160000,
+   "gdpPerCapita": 36200,
+   "status": "provisional",
+   "sourceGeo": "DEF0E"
+  },
+  "DE939": {
+   "name": "Stade",
+   "year": 2023,
+   "gdp": 7997880000,
+   "gdpPerCapita": 38600,
+   "status": "provisional",
+   "sourceGeo": "DE939"
+  },
+  "DE931": {
+   "name": "Celle",
+   "year": 2023,
+   "gdp": 6911610000,
+   "gdpPerCapita": 40000,
+   "status": "provisional",
+   "sourceGeo": "DE931"
+  },
+  "DE91C": {
+   "name": "Göttingen",
+   "year": 2023,
+   "gdp": 14242430000,
+   "gdpPerCapita": 43400,
+   "status": "provisional",
+   "sourceGeo": "DE91C"
+  },
+  "DE93A": {
+   "name": "Uelzen",
+   "year": 2023,
+   "gdp": 3452140000,
+   "gdpPerCapita": 37800,
+   "status": "provisional",
+   "sourceGeo": "DE93A"
+  },
+  "DE932": {
+   "name": "Cuxhaven",
+   "year": 2023,
+   "gdp": 6362350000,
+   "gdpPerCapita": 31900,
+   "status": "provisional",
+   "sourceGeo": "DE932"
+  },
+  "DE929": {
+   "name": "Region Hannover",
+   "year": 2023,
+   "gdp": 65696850000.00001,
+   "gdpPerCapita": 57800,
+   "status": "provisional",
+   "sourceGeo": "DE929"
+  },
+  "DE93B": {
+   "name": "Verden",
+   "year": 2023,
+   "gdp": 5339040000,
+   "gdpPerCapita": 38700,
+   "status": "provisional",
+   "sourceGeo": "DE93B"
+  },
+  "DE941": {
+   "name": "Delmenhorst, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2322410000,
+   "gdpPerCapita": 28500,
+   "status": "provisional",
+   "sourceGeo": "DE941"
+  },
+  "DE942": {
+   "name": "Emden, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4105630000,
+   "gdpPerCapita": 82700,
+   "status": "provisional",
+   "sourceGeo": "DE942"
+  },
+  "DE943": {
+   "name": "Oldenburg (Oldenburg), Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 9938420000,
+   "gdpPerCapita": 56700,
+   "status": "provisional",
+   "sourceGeo": "DE943"
+  },
+  "DE944": {
+   "name": "Osnabrück, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10248470000,
+   "gdpPerCapita": 61800,
+   "status": "provisional",
+   "sourceGeo": "DE944"
+  },
+  "DE945": {
+   "name": "Wilhelmshaven, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3708870000,
+   "gdpPerCapita": 48800,
+   "status": "provisional",
+   "sourceGeo": "DE945"
+  },
+  "DE946": {
+   "name": "Ammerland",
+   "year": 2023,
+   "gdp": 5264480000,
+   "gdpPerCapita": 41500,
+   "status": "provisional",
+   "sourceGeo": "DE946"
+  },
+  "DEF07": {
+   "name": "Nordfriesland",
+   "year": 2023,
+   "gdp": 7814170000,
+   "gdpPerCapita": 46100,
+   "status": "provisional",
+   "sourceGeo": "DEF07"
+  },
+  "DEF08": {
+   "name": "Ostholstein",
+   "year": 2023,
+   "gdp": 7108790000,
+   "gdpPerCapita": 35300,
+   "status": "provisional",
+   "sourceGeo": "DEF08"
+  },
+  "DEF01": {
+   "name": "Flensburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4948080000,
+   "gdpPerCapita": 51400,
+   "status": "provisional",
+   "sourceGeo": "DEF01"
+  },
+  "DEF02": {
+   "name": "Kiel, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 14647180000,
+   "gdpPerCapita": 58400,
+   "status": "provisional",
+   "sourceGeo": "DEF02"
+  },
+  "DEF03": {
+   "name": "Lübeck, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 12545040000,
+   "gdpPerCapita": 57900,
+   "status": "provisional",
+   "sourceGeo": "DEF03"
+  },
+  "DEF04": {
+   "name": "Neumünster, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4464830000,
+   "gdpPerCapita": 56400,
+   "status": "provisional",
+   "sourceGeo": "DEF04"
+  },
+  "DEF05": {
+   "name": "Dithmarschen",
+   "year": 2023,
+   "gdp": 6086020000,
+   "gdpPerCapita": 45700,
+   "status": "provisional",
+   "sourceGeo": "DEF05"
+  },
+  "DEF09": {
+   "name": "Pinneberg",
+   "year": 2023,
+   "gdp": 11269050000,
+   "gdpPerCapita": 34900,
+   "status": "provisional",
+   "sourceGeo": "DEF09"
+  },
+  "DEF0A": {
+   "name": "Plön",
+   "year": 2023,
+   "gdp": 3418310000,
+   "gdpPerCapita": 26200,
+   "status": "provisional",
+   "sourceGeo": "DEF0A"
+  },
+  "DEF06": {
+   "name": "Herzogtum Lauenburg",
+   "year": 2023,
+   "gdp": 5820420000,
+   "gdpPerCapita": 28400,
+   "status": "provisional",
+   "sourceGeo": "DEF06"
+  },
+  "DE722": {
+   "name": "Lahn-Dill-Kreis",
+   "year": 2023,
+   "gdp": 10951010000,
+   "gdpPerCapita": 43100,
+   "status": "provisional",
+   "sourceGeo": "DE722"
+  },
+  "DEB13": {
+   "name": "Altenkirchen (Westerwald)",
+   "year": 2023,
+   "gdp": 4310580000,
+   "gdpPerCapita": 32700,
+   "status": "provisional",
+   "sourceGeo": "DEB13"
+  },
+  "DEB1C": {
+   "name": "Cochem-Zell",
+   "year": 2023,
+   "gdp": 2480390000,
+   "gdpPerCapita": 40300,
+   "status": "provisional",
+   "sourceGeo": "DEB1C"
+  },
+  "DE735": {
+   "name": "Schwalm-Eder-Kreis",
+   "year": 2023,
+   "gdp": 7108570000,
+   "gdpPerCapita": 39500,
+   "status": "provisional",
+   "sourceGeo": "DE735"
+  },
+  "DE736": {
+   "name": "Waldeck-Frankenberg",
+   "year": 2023,
+   "gdp": 7379970000,
+   "gdpPerCapita": 47600,
+   "status": "provisional",
+   "sourceGeo": "DE736"
+  },
+  "DEB15": {
+   "name": "Birkenfeld",
+   "year": 2023,
+   "gdp": 2891600000,
+   "gdpPerCapita": 35100,
+   "status": "provisional",
+   "sourceGeo": "DEB15"
+  },
+  "DEB14": {
+   "name": "Bad Kreuznach",
+   "year": 2023,
+   "gdp": 5972490000,
+   "gdpPerCapita": 36400,
+   "status": "provisional",
+   "sourceGeo": "DEB14"
+  },
+  "DE723": {
+   "name": "Limburg-Weilburg",
+   "year": 2023,
+   "gdp": 6451030000,
+   "gdpPerCapita": 37100,
+   "status": "provisional",
+   "sourceGeo": "DE723"
+  },
+  "DE737": {
+   "name": "Werra-Meißner-Kreis",
+   "year": 2023,
+   "gdp": 3545200000,
+   "gdpPerCapita": 36200,
+   "status": "provisional",
+   "sourceGeo": "DE737"
+  },
+  "DEB11": {
+   "name": "Koblenz, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10245410000,
+   "gdpPerCapita": 90400,
+   "status": "provisional",
+   "sourceGeo": "DEB11"
+  },
+  "DEB12": {
+   "name": "Ahrweiler",
+   "year": 2023,
+   "gdp": 4316820000,
+   "gdpPerCapita": 33700,
+   "status": "provisional",
+   "sourceGeo": "DEB12"
+  },
+  "DE724": {
+   "name": "Marburg-Biedenkopf",
+   "year": 2023,
+   "gdp": 11921550000,
+   "gdpPerCapita": 49100,
+   "status": "provisional",
+   "sourceGeo": "DE724"
+  },
+  "DE725": {
+   "name": "Vogelsbergkreis",
+   "year": 2023,
+   "gdp": 3599940000,
+   "gdpPerCapita": 35500,
+   "status": "provisional",
+   "sourceGeo": "DE725"
+  },
+  "DE731": {
+   "name": "Kassel, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 13264770000,
+   "gdpPerCapita": 67400,
+   "status": "provisional",
+   "sourceGeo": "DE731"
+  },
+  "DE732": {
+   "name": "Fulda",
+   "year": 2023,
+   "gdp": 10561040000,
+   "gdpPerCapita": 47600,
+   "status": "provisional",
+   "sourceGeo": "DE732"
+  },
+  "DE733": {
+   "name": "Hersfeld-Rotenburg",
+   "year": 2023,
+   "gdp": 5223970000,
+   "gdpPerCapita": 44200,
+   "status": "provisional",
+   "sourceGeo": "DE733"
+  },
+  "DE734": {
+   "name": "Kassel, Landkreis",
+   "year": 2023,
+   "gdp": 9053600000,
+   "gdpPerCapita": 39300,
+   "status": "provisional",
+   "sourceGeo": "DE734"
+  },
+  "DE718": {
+   "name": "Hochtaunuskreis",
+   "year": 2023,
+   "gdp": 17429850000,
+   "gdpPerCapita": 72800,
+   "status": "provisional",
+   "sourceGeo": "DE718"
+  },
+  "DE719": {
+   "name": "Main-Kinzig-Kreis",
+   "year": 2023,
+   "gdp": 16838759999.999998,
+   "gdpPerCapita": 40300,
+   "status": "provisional",
+   "sourceGeo": "DE719"
+  },
+  "DE949": {
+   "name": "Emsland",
+   "year": 2023,
+   "gdp": 18083010000,
+   "gdpPerCapita": 54300,
+   "status": "provisional",
+   "sourceGeo": "DE949"
+  },
+  "DEA26": {
+   "name": "Düren",
+   "year": 2023,
+   "gdp": 9793910000,
+   "gdpPerCapita": 35300,
+   "status": "provisional",
+   "sourceGeo": "DEA26"
+  },
+  "DEA27": {
+   "name": "Rhein-Erft-Kreis",
+   "year": 2023,
+   "gdp": 20203420000,
+   "gdpPerCapita": 42500,
+   "status": "provisional",
+   "sourceGeo": "DEA27"
+  },
+  "DEA47": {
+   "name": "Paderborn",
+   "year": 2023,
+   "gdp": 14127040000,
+   "gdpPerCapita": 44900,
+   "status": "provisional",
+   "sourceGeo": "DEA47"
+  },
+  "DEA51": {
+   "name": "Bochum, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 15966750000,
+   "gdpPerCapita": 44800,
+   "status": "provisional",
+   "sourceGeo": "DEA51"
+  },
+  "DEA52": {
+   "name": "Dortmund, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 29577580000,
+   "gdpPerCapita": 49300,
+   "status": "provisional",
+   "sourceGeo": "DEA52"
+  },
+  "DEA53": {
+   "name": "Hagen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 7510250000,
+   "gdpPerCapita": 39500,
+   "status": "provisional",
+   "sourceGeo": "DEA53"
+  },
+  "DEA54": {
+   "name": "Hamm, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 6603100000,
+   "gdpPerCapita": 36800,
+   "status": "provisional",
+   "sourceGeo": "DEA54"
+  },
+  "DEA55": {
+   "name": "Herne, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5227480000,
+   "gdpPerCapita": 33500,
+   "status": "provisional",
+   "sourceGeo": "DEA55"
+  },
+  "DEA56": {
+   "name": "Ennepe-Ruhr-Kreis",
+   "year": 2023,
+   "gdp": 11341630000,
+   "gdpPerCapita": 36000,
+   "status": "provisional",
+   "sourceGeo": "DEA56"
+  },
+  "DE721": {
+   "name": "Gießen, Landkreis",
+   "year": 2023,
+   "gdp": 12187480000,
+   "gdpPerCapita": 45600,
+   "status": "provisional",
+   "sourceGeo": "DE721"
+  },
+  "DEA28": {
+   "name": "Euskirchen",
+   "year": 2023,
+   "gdp": 6774000000,
+   "gdpPerCapita": 33800,
+   "status": "provisional",
+   "sourceGeo": "DEA28"
+  },
+  "DEA57": {
+   "name": "Hochsauerlandkreis",
+   "year": 2023,
+   "gdp": 11716060000,
+   "gdpPerCapita": 44900,
+   "status": "provisional",
+   "sourceGeo": "DEA57"
+  },
+  "DE94A": {
+   "name": "Friesland (DE)",
+   "year": 2023,
+   "gdp": 3340030000,
+   "gdpPerCapita": 33300,
+   "status": "provisional",
+   "sourceGeo": "DE94A"
+  },
+  "DEA58": {
+   "name": "Märkischer Kreis",
+   "year": 2023,
+   "gdp": 17193590000,
+   "gdpPerCapita": 42000,
+   "status": "provisional",
+   "sourceGeo": "DEA58"
+  },
+  "DE71A": {
+   "name": "Main-Taunus-Kreis",
+   "year": 2023,
+   "gdp": 17330000000,
+   "gdpPerCapita": 72800,
+   "status": "provisional",
+   "sourceGeo": "DE71A"
+  },
+  "DE94B": {
+   "name": "Grafschaft Bentheim",
+   "year": 2023,
+   "gdp": 5995150000,
+   "gdpPerCapita": 41700,
+   "status": "provisional",
+   "sourceGeo": "DE94B"
+  },
+  "DEA29": {
+   "name": "Heinsberg",
+   "year": 2023,
+   "gdp": 8372740000,
+   "gdpPerCapita": 32000,
+   "status": "provisional",
+   "sourceGeo": "DEA29"
+  },
+  "DEA59": {
+   "name": "Olpe",
+   "year": 2023,
+   "gdp": 7393440000,
+   "gdpPerCapita": 55800,
+   "status": "provisional",
+   "sourceGeo": "DEA59"
+  },
+  "DEA5A": {
+   "name": "Siegen-Wittgenstein",
+   "year": 2023,
+   "gdp": 12639420000,
+   "gdpPerCapita": 46000,
+   "status": "provisional",
+   "sourceGeo": "DEA5A"
+  },
+  "DE94C": {
+   "name": "Leer",
+   "year": 2023,
+   "gdp": 5895420000,
+   "gdpPerCapita": 34800,
+   "status": "provisional",
+   "sourceGeo": "DE94C"
+  },
+  "DEA2A": {
+   "name": "Oberbergischer Kreis",
+   "year": 2023,
+   "gdp": 11712330000,
+   "gdpPerCapita": 42800,
+   "status": "provisional",
+   "sourceGeo": "DEA2A"
+  },
+  "DEA5B": {
+   "name": "Soest",
+   "year": 2023,
+   "gdp": 13447490000,
+   "gdpPerCapita": 44800,
+   "status": "provisional",
+   "sourceGeo": "DEA5B"
+  },
+  "DE71B": {
+   "name": "Odenwaldkreis",
+   "year": 2023,
+   "gdp": 3041150000,
+   "gdpPerCapita": 32200,
+   "status": "provisional",
+   "sourceGeo": "DE71B"
+  },
+  "DE94D": {
+   "name": "Oldenburg, Landkreis",
+   "year": 2023,
+   "gdp": 4622050000,
+   "gdpPerCapita": 35100,
+   "status": "provisional",
+   "sourceGeo": "DE94D"
+  },
+  "DEA2B": {
+   "name": "Rheinisch-Bergischer Kreis",
+   "year": 2023,
+   "gdp": 9155090000,
+   "gdpPerCapita": 32300,
+   "status": "provisional",
+   "sourceGeo": "DEA2B"
+  },
+  "DEA2C": {
+   "name": "Rhein-Sieg-Kreis",
+   "year": 2023,
+   "gdp": 20515330000,
+   "gdpPerCapita": 34000,
+   "status": "provisional",
+   "sourceGeo": "DEA2C"
+  },
+  "DEA5C": {
+   "name": "Unna",
+   "year": 2023,
+   "gdp": 14639730000,
+   "gdpPerCapita": 37000,
+   "status": "provisional",
+   "sourceGeo": "DEA5C"
+  },
+  "DE71C": {
+   "name": "Offenbach, Landkreis",
+   "year": 2023,
+   "gdp": 17187670000,
+   "gdpPerCapita": 48400,
+   "status": "provisional",
+   "sourceGeo": "DE71C"
+  },
+  "DE94E": {
+   "name": "Osnabrück, Landkreis",
+   "year": 2023,
+   "gdp": 14278120000,
+   "gdpPerCapita": 40100,
+   "status": "provisional",
+   "sourceGeo": "DE94E"
+  },
+  "DEA31": {
+   "name": "Bottrop, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3446340000,
+   "gdpPerCapita": 29100,
+   "status": "provisional",
+   "sourceGeo": "DEA31"
+  },
+  "DEA32": {
+   "name": "Gelsenkirchen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10279450000,
+   "gdpPerCapita": 38600,
+   "status": "provisional",
+   "sourceGeo": "DEA32"
+  },
+  "DEA33": {
+   "name": "Münster, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 21784210000,
+   "gdpPerCapita": 71200,
+   "status": "provisional",
+   "sourceGeo": "DEA33"
+  },
+  "DE711": {
+   "name": "Darmstadt, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 15417260000,
+   "gdpPerCapita": 94200,
+   "status": "provisional",
+   "sourceGeo": "DE711"
+  },
+  "DE712": {
+   "name": "Frankfurt am Main, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 90525280000,
+   "gdpPerCapita": 120900,
+   "status": "provisional",
+   "sourceGeo": "DE712"
+  },
+  "DE713": {
+   "name": "Offenbach am Main, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 6643280000,
+   "gdpPerCapita": 50600,
+   "status": "provisional",
+   "sourceGeo": "DE713"
+  },
+  "DE71D": {
+   "name": "Rheingau-Taunus-Kreis",
+   "year": 2023,
+   "gdp": 5485520000,
+   "gdpPerCapita": 29500,
+   "status": "provisional",
+   "sourceGeo": "DE71D"
+  },
+  "DEA34": {
+   "name": "Borken",
+   "year": 2023,
+   "gdp": 17870070000,
+   "gdpPerCapita": 47200,
+   "status": "provisional",
+   "sourceGeo": "DEA34"
+  },
+  "DEA35": {
+   "name": "Coesfeld",
+   "year": 2023,
+   "gdp": 8253299999.999999,
+   "gdpPerCapita": 36600,
+   "status": "provisional",
+   "sourceGeo": "DEA35"
+  },
+  "DE714": {
+   "name": "Wiesbaden, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 21087150000,
+   "gdpPerCapita": 73700,
+   "status": "provisional",
+   "sourceGeo": "DE714"
+  },
+  "DE715": {
+   "name": "Bergstraße",
+   "year": 2023,
+   "gdp": 9761610000,
+   "gdpPerCapita": 35600,
+   "status": "provisional",
+   "sourceGeo": "DE715"
+  },
+  "DE94F": {
+   "name": "Vechta",
+   "year": 2023,
+   "gdp": 8611520000,
+   "gdpPerCapita": 59000,
+   "status": "provisional",
+   "sourceGeo": "DE94F"
+  },
+  "DE94G": {
+   "name": "Wesermarsch",
+   "year": 2023,
+   "gdp": 3844410000,
+   "gdpPerCapita": 43100,
+   "status": "provisional",
+   "sourceGeo": "DE94G"
+  },
+  "DEA36": {
+   "name": "Recklinghausen",
+   "year": 2023,
+   "gdp": 19026180000,
+   "gdpPerCapita": 30600,
+   "status": "provisional",
+   "sourceGeo": "DEA36"
+  },
+  "DE94H": {
+   "name": "Wittmund",
+   "year": 2023,
+   "gdp": 1983130000,
+   "gdpPerCapita": 35400,
+   "status": "provisional",
+   "sourceGeo": "DE94H"
+  },
+  "DEA37": {
+   "name": "Steinfurt",
+   "year": 2023,
+   "gdp": 18457760000,
+   "gdpPerCapita": 41100,
+   "status": "provisional",
+   "sourceGeo": "DEA37"
+  },
+  "DE716": {
+   "name": "Darmstadt-Dieburg",
+   "year": 2023,
+   "gdp": 10140630000,
+   "gdpPerCapita": 33600,
+   "status": "provisional",
+   "sourceGeo": "DE716"
+  },
+  "DE501": {
+   "name": "Bremen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 35482310000,
+   "gdpPerCapita": 61100,
+   "status": "provisional",
+   "sourceGeo": "DE501"
+  },
+  "DE502": {
+   "name": "Bremerhaven, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5079020000,
+   "gdpPerCapita": 42800,
+   "status": "provisional",
+   "sourceGeo": "DE502"
+  },
+  "DEA11": {
+   "name": "Düsseldorf, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 64081570000,
+   "gdpPerCapita": 104100,
+   "status": "provisional",
+   "sourceGeo": "DEA11"
+  },
+  "DEA12": {
+   "name": "Duisburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 20262320000,
+   "gdpPerCapita": 40300,
+   "status": "provisional",
+   "sourceGeo": "DEA12"
+  },
+  "DEA13": {
+   "name": "Essen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 31287560000,
+   "gdpPerCapita": 54600,
+   "status": "provisional",
+   "sourceGeo": "DEA13"
+  },
+  "DEA14": {
+   "name": "Krefeld, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 11076690000,
+   "gdpPerCapita": 48100,
+   "status": "provisional",
+   "sourceGeo": "DEA14"
+  },
+  "DEA15": {
+   "name": "Mönchengladbach, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10956700000,
+   "gdpPerCapita": 41000,
+   "status": "provisional",
+   "sourceGeo": "DEA15"
+  },
+  "DEA16": {
+   "name": "Mülheim an der Ruhr, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 8007510000,
+   "gdpPerCapita": 46400,
+   "status": "provisional",
+   "sourceGeo": "DEA16"
+  },
+  "DEA17": {
+   "name": "Oberhausen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 7477630000,
+   "gdpPerCapita": 35000,
+   "status": "provisional",
+   "sourceGeo": "DEA17"
+  },
+  "DEA18": {
+   "name": "Remscheid, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4899250000,
+   "gdpPerCapita": 43000,
+   "status": "provisional",
+   "sourceGeo": "DEA18"
+  },
+  "DEA19": {
+   "name": "Solingen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5554600000,
+   "gdpPerCapita": 33500,
+   "status": "provisional",
+   "sourceGeo": "DEA19"
+  },
+  "DEA38": {
+   "name": "Warendorf",
+   "year": 2023,
+   "gdp": 11163290000,
+   "gdpPerCapita": 39600,
+   "status": "provisional",
+   "sourceGeo": "DEA38"
+  },
+  "DEA1A": {
+   "name": "Wuppertal, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 14548760000,
+   "gdpPerCapita": 40600,
+   "status": "provisional",
+   "sourceGeo": "DEA1A"
+  },
+  "DEA1B": {
+   "name": "Kleve",
+   "year": 2023,
+   "gdp": 11994690000,
+   "gdpPerCapita": 37600,
+   "status": "provisional",
+   "sourceGeo": "DEA1B"
+  },
+  "DEA41": {
+   "name": "Bielefeld, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 18053670000,
+   "gdpPerCapita": 54500,
+   "status": "provisional",
+   "sourceGeo": "DEA41"
+  },
+  "DEA42": {
+   "name": "Gütersloh",
+   "year": 2023,
+   "gdp": 21463330000,
+   "gdpPerCapita": 59200,
+   "status": "provisional",
+   "sourceGeo": "DEA42"
+  },
+  "DE717": {
+   "name": "Groß-Gerau",
+   "year": 2023,
+   "gdp": 14911030000,
+   "gdpPerCapita": 55800,
+   "status": "provisional",
+   "sourceGeo": "DE717"
+  },
+  "DE71E": {
+   "name": "Wetteraukreis",
+   "year": 2023,
+   "gdp": 11307480000,
+   "gdpPerCapita": 36500,
+   "status": "provisional",
+   "sourceGeo": "DE71E"
+  },
+  "DEA1C": {
+   "name": "Mettmann",
+   "year": 2023,
+   "gdp": 27192990000,
+   "gdpPerCapita": 55600,
+   "status": "provisional",
+   "sourceGeo": "DEA1C"
+  },
+  "DEA1D": {
+   "name": "Rhein-Kreis Neuss",
+   "year": 2023,
+   "gdp": 21447120000,
+   "gdpPerCapita": 47000,
+   "status": "provisional",
+   "sourceGeo": "DEA1D"
+  },
+  "DEA43": {
+   "name": "Herford",
+   "year": 2023,
+   "gdp": 10155190000,
+   "gdpPerCapita": 39900,
+   "status": "provisional",
+   "sourceGeo": "DEA43"
+  },
+  "DEA1E": {
+   "name": "Viersen",
+   "year": 2023,
+   "gdp": 10467870000,
+   "gdpPerCapita": 35300,
+   "status": "provisional",
+   "sourceGeo": "DEA1E"
+  },
+  "DEA1F": {
+   "name": "Wesel",
+   "year": 2023,
+   "gdp": 16044370000,
+   "gdpPerCapita": 35100,
+   "status": "provisional",
+   "sourceGeo": "DEA1F"
+  },
+  "DEA44": {
+   "name": "Höxter",
+   "year": 2023,
+   "gdp": 4697480000,
+   "gdpPerCapita": 33800,
+   "status": "provisional",
+   "sourceGeo": "DEA44"
+  },
+  "DEA45": {
+   "name": "Lippe",
+   "year": 2023,
+   "gdp": 12891110000,
+   "gdpPerCapita": 37000,
+   "status": "provisional",
+   "sourceGeo": "DEA45"
+  },
+  "DEA22": {
+   "name": "Bonn, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 28501500000,
+   "gdpPerCapita": 88500,
+   "status": "provisional",
+   "sourceGeo": "DEA22"
+  },
+  "DEA23": {
+   "name": "Köln, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 80305270000,
+   "gdpPerCapita": 78500,
+   "status": "provisional",
+   "sourceGeo": "DEA23"
+  },
+  "DEA24": {
+   "name": "Leverkusen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 9211800000,
+   "gdpPerCapita": 55000,
+   "status": "provisional",
+   "sourceGeo": "DEA24"
+  },
+  "DEA2D": {
+   "name": "Städteregion Aachen",
+   "year": 2023,
+   "gdp": 26080780000,
+   "gdpPerCapita": 44900,
+   "status": "provisional",
+   "sourceGeo": "DEA2D"
+  },
+  "DEA46": {
+   "name": "Minden-Lübbecke",
+   "year": 2023,
+   "gdp": 14853990000,
+   "gdpPerCapita": 46300,
+   "status": "provisional",
+   "sourceGeo": "DEA46"
+  },
+  "DE948": {
+   "name": "Cloppenburg",
+   "year": 2023,
+   "gdp": 8296980000,
+   "gdpPerCapita": 47100,
+   "status": "provisional",
+   "sourceGeo": "DE948"
+  },
+  "DEB22": {
+   "name": "Bernkastel-Wittlich",
+   "year": 2023,
+   "gdp": 4528110000,
+   "gdpPerCapita": 40000,
+   "status": "provisional",
+   "sourceGeo": "DEB22"
+  },
+  "DEB24": {
+   "name": "Vulkaneifel",
+   "year": 2023,
+   "gdp": 2480280000,
+   "gdpPerCapita": 41700,
+   "status": "provisional",
+   "sourceGeo": "DEB24"
+  },
+  "DEB3B": {
+   "name": "Alzey-Worms",
+   "year": 2023,
+   "gdp": 4171210000,
+   "gdpPerCapita": 32000,
+   "status": "provisional",
+   "sourceGeo": "DEB3B"
+  },
+  "DEB23": {
+   "name": "Eifelkreis Bitburg-Prüm",
+   "year": 2023,
+   "gdp": 3699130000,
+   "gdpPerCapita": 36900,
+   "status": "provisional",
+   "sourceGeo": "DEB23"
+  },
+  "DEB25": {
+   "name": "Trier-Saarburg",
+   "year": 2023,
+   "gdp": 3703400000,
+   "gdpPerCapita": 24800,
+   "status": "provisional",
+   "sourceGeo": "DEB25"
+  },
+  "DEB31": {
+   "name": "Frankenthal (Pfalz), Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2201430000,
+   "gdpPerCapita": 45800,
+   "status": "provisional",
+   "sourceGeo": "DEB31"
+  },
+  "DEB32": {
+   "name": "Kaiserslautern, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 6048030000,
+   "gdpPerCapita": 60200,
+   "status": "provisional",
+   "sourceGeo": "DEB32"
+  },
+  "DEB33": {
+   "name": "Landau in der Pfalz, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2618340000,
+   "gdpPerCapita": 54700,
+   "status": "provisional",
+   "sourceGeo": "DEB33"
+  },
+  "DEB34": {
+   "name": "Ludwigshafen am Rhein, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 14066710000,
+   "gdpPerCapita": 80500,
+   "status": "provisional",
+   "sourceGeo": "DEB34"
+  },
+  "DEB35": {
+   "name": "Mainz, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 19682630000,
+   "gdpPerCapita": 88400,
+   "status": "provisional",
+   "sourceGeo": "DEB35"
+  },
+  "DEB36": {
+   "name": "Neustadt an der Weinstraße, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2030100000,
+   "gdpPerCapita": 38500,
+   "status": "provisional",
+   "sourceGeo": "DEB36"
+  },
+  "DEB37": {
+   "name": "Pirmasens, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 1871570000,
+   "gdpPerCapita": 47400,
+   "status": "provisional",
+   "sourceGeo": "DEB37"
+  },
+  "DEB38": {
+   "name": "Speyer, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3304780000,
+   "gdpPerCapita": 66300,
+   "status": "provisional",
+   "sourceGeo": "DEB38"
+  },
+  "DEB39": {
+   "name": "Worms, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3795360000,
+   "gdpPerCapita": 44200,
+   "status": "provisional",
+   "sourceGeo": "DEB39"
+  },
+  "DEB3A": {
+   "name": "Zweibrücken, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2173410000,
+   "gdpPerCapita": 65200,
+   "status": "provisional",
+   "sourceGeo": "DEB3A"
+  },
+  "DEB1A": {
+   "name": "Rhein-Lahn-Kreis",
+   "year": 2023,
+   "gdp": 4074210000,
+   "gdpPerCapita": 32600,
+   "status": "provisional",
+   "sourceGeo": "DEB1A"
+  },
+  "DEB18": {
+   "name": "Neuwied",
+   "year": 2023,
+   "gdp": 7634080000,
+   "gdpPerCapita": 40500,
+   "status": "provisional",
+   "sourceGeo": "DEB18"
+  },
+  "DEB1D": {
+   "name": "Rhein-Hunsrück-Kreis",
+   "year": 2023,
+   "gdp": 4682040000,
+   "gdpPerCapita": 44100,
+   "status": "provisional",
+   "sourceGeo": "DEB1D"
+  },
+  "DEB1B": {
+   "name": "Westerwaldkreis",
+   "year": 2023,
+   "gdp": 9020650000,
+   "gdpPerCapita": 43500,
+   "status": "provisional",
+   "sourceGeo": "DEB1B"
+  },
+  "DEB21": {
+   "name": "Trier, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5906040000,
+   "gdpPerCapita": 57000,
+   "status": "provisional",
+   "sourceGeo": "DEB21"
+  },
+  "DEB17": {
+   "name": "Mayen-Koblenz",
+   "year": 2023,
+   "gdp": 8333990000,
+   "gdpPerCapita": 38500,
+   "status": "provisional",
+   "sourceGeo": "DEB17"
+  },
+  "DE113": {
+   "name": "Esslingen",
+   "year": 2023,
+   "gdp": 28345160000,
+   "gdpPerCapita": 53000,
+   "status": "provisional",
+   "sourceGeo": "DE113"
+  },
+  "DE114": {
+   "name": "Göppingen",
+   "year": 2023,
+   "gdp": 9720770000,
+   "gdpPerCapita": 37600,
+   "status": "provisional",
+   "sourceGeo": "DE114"
+  },
+  "DE128": {
+   "name": "Rhein-Neckar-Kreis",
+   "year": 2023,
+   "gdp": 25714560000,
+   "gdpPerCapita": 46200,
+   "status": "provisional",
+   "sourceGeo": "DE128"
+  },
+  "DE129": {
+   "name": "Pforzheim, Stadtkreis",
+   "year": 2023,
+   "gdp": 6508400000,
+   "gdpPerCapita": 48400,
+   "status": "provisional",
+   "sourceGeo": "DE129"
+  },
+  "DE12A": {
+   "name": "Calw",
+   "year": 2023,
+   "gdp": 5735790000,
+   "gdpPerCapita": 35700,
+   "status": "provisional",
+   "sourceGeo": "DE12A"
+  },
+  "DE13A": {
+   "name": "Waldshut",
+   "year": 2023,
+   "gdp": 6345050000,
+   "gdpPerCapita": 37000,
+   "status": "provisional",
+   "sourceGeo": "DE13A"
+  },
+  "DE141": {
+   "name": "Reutlingen",
+   "year": 2023,
+   "gdp": 14643570000,
+   "gdpPerCapita": 50100,
+   "status": "provisional",
+   "sourceGeo": "DE141"
+  },
+  "DE11D": {
+   "name": "Ostalbkreis",
+   "year": 2023,
+   "gdp": 17879260000,
+   "gdpPerCapita": 56400,
+   "status": "provisional",
+   "sourceGeo": "DE11D"
+  },
+  "DE121": {
+   "name": "Baden-Baden, Stadtkreis",
+   "year": 2023,
+   "gdp": 3973270000,
+   "gdpPerCapita": 70600,
+   "status": "provisional",
+   "sourceGeo": "DE121"
+  },
+  "DE122": {
+   "name": "Karlsruhe, Stadtkreis",
+   "year": 2023,
+   "gdp": 25609350000,
+   "gdpPerCapita": 83300,
+   "status": "provisional",
+   "sourceGeo": "DE122"
+  },
+  "DE123": {
+   "name": "Karlsruhe, Landkreis",
+   "year": 2023,
+   "gdp": 19511400000,
+   "gdpPerCapita": 42900,
+   "status": "provisional",
+   "sourceGeo": "DE123"
+  },
+  "DE134": {
+   "name": "Ortenaukreis",
+   "year": 2023,
+   "gdp": 21143210000,
+   "gdpPerCapita": 47800,
+   "status": "provisional",
+   "sourceGeo": "DE134"
+  },
+  "DE115": {
+   "name": "Ludwigsburg",
+   "year": 2023,
+   "gdp": 31768290000,
+   "gdpPerCapita": 59600,
+   "status": "provisional",
+   "sourceGeo": "DE115"
+  },
+  "DE12B": {
+   "name": "Enzkreis",
+   "year": 2023,
+   "gdp": 7555580000,
+   "gdpPerCapita": 37900,
+   "status": "provisional",
+   "sourceGeo": "DE12B"
+  },
+  "DE116": {
+   "name": "Rems-Murr-Kreis",
+   "year": 2023,
+   "gdp": 17781930000,
+   "gdpPerCapita": 40500,
+   "status": "provisional",
+   "sourceGeo": "DE116"
+  },
+  "DE117": {
+   "name": "Heilbronn, Stadtkreis",
+   "year": 2023,
+   "gdp": 8787230000,
+   "gdpPerCapita": 67200,
+   "status": "provisional",
+   "sourceGeo": "DE117"
+  },
+  "DE118": {
+   "name": "Heilbronn, Landkreis",
+   "year": 2023,
+   "gdp": 27286380000,
+   "gdpPerCapita": 77400,
+   "status": "provisional",
+   "sourceGeo": "DE118"
+  },
+  "DE124": {
+   "name": "Rastatt",
+   "year": 2023,
+   "gdp": 11729850000,
+   "gdpPerCapita": 50800,
+   "status": "provisional",
+   "sourceGeo": "DE124"
+  },
+  "DE12C": {
+   "name": "Freudenstadt",
+   "year": 2023,
+   "gdp": 5647660000,
+   "gdpPerCapita": 46400,
+   "status": "provisional",
+   "sourceGeo": "DE12C"
+  },
+  "DE135": {
+   "name": "Rottweil",
+   "year": 2023,
+   "gdp": 7329940000,
+   "gdpPerCapita": 52300,
+   "status": "provisional",
+   "sourceGeo": "DE135"
+  },
+  "DE119": {
+   "name": "Hohenlohekreis",
+   "year": 2023,
+   "gdp": 7523720000,
+   "gdpPerCapita": 65500,
+   "status": "provisional",
+   "sourceGeo": "DE119"
+  },
+  "DE136": {
+   "name": "Schwarzwald-Baar-Kreis",
+   "year": 2023,
+   "gdp": 10000060000,
+   "gdpPerCapita": 46900,
+   "status": "provisional",
+   "sourceGeo": "DE136"
+  },
+  "DE11A": {
+   "name": "Schwäbisch Hall",
+   "year": 2023,
+   "gdp": 11354330000,
+   "gdpPerCapita": 56900,
+   "status": "provisional",
+   "sourceGeo": "DE11A"
+  },
+  "DE131": {
+   "name": "Freiburg im Breisgau, Stadtkreis",
+   "year": 2023,
+   "gdp": 14845120000,
+   "gdpPerCapita": 63000,
+   "status": "provisional",
+   "sourceGeo": "DE131"
+  },
+  "DE132": {
+   "name": "Breisgau-Hochschwarzwald",
+   "year": 2023,
+   "gdp": 9578670000,
+   "gdpPerCapita": 35400,
+   "status": "provisional",
+   "sourceGeo": "DE132"
+  },
+  "DE125": {
+   "name": "Heidelberg, Stadtkreis",
+   "year": 2023,
+   "gdp": 10967980000,
+   "gdpPerCapita": 70800,
+   "status": "provisional",
+   "sourceGeo": "DE125"
+  },
+  "DE126": {
+   "name": "Mannheim, Stadtkreis",
+   "year": 2023,
+   "gdp": 25323390000,
+   "gdpPerCapita": 80200,
+   "status": "provisional",
+   "sourceGeo": "DE126"
+  },
+  "DE127": {
+   "name": "Neckar-Odenwald-Kreis",
+   "year": 2023,
+   "gdp": 5391590000,
+   "gdpPerCapita": 37100,
+   "status": "provisional",
+   "sourceGeo": "DE127"
+  },
+  "DE137": {
+   "name": "Tuttlingen",
+   "year": 2023,
+   "gdp": 8527660000,
+   "gdpPerCapita": 59100,
+   "status": "provisional",
+   "sourceGeo": "DE137"
+  },
+  "DE11B": {
+   "name": "Main-Tauber-Kreis",
+   "year": 2023,
+   "gdp": 6602660000,
+   "gdpPerCapita": 49600,
+   "status": "provisional",
+   "sourceGeo": "DE11B"
+  },
+  "DE138": {
+   "name": "Konstanz",
+   "year": 2023,
+   "gdp": 12419360000,
+   "gdpPerCapita": 42800,
+   "status": "provisional",
+   "sourceGeo": "DE138"
+  },
+  "DE133": {
+   "name": "Emmendingen",
+   "year": 2023,
+   "gdp": 6809470000,
+   "gdpPerCapita": 40400,
+   "status": "provisional",
+   "sourceGeo": "DE133"
+  },
+  "DE11C": {
+   "name": "Heidenheim",
+   "year": 2023,
+   "gdp": 5946110000,
+   "gdpPerCapita": 44000,
+   "status": "provisional",
+   "sourceGeo": "DE11C"
+  },
+  "DE139": {
+   "name": "Lörrach",
+   "year": 2023,
+   "gdp": 9147970000,
+   "gdpPerCapita": 38700,
+   "status": "provisional",
+   "sourceGeo": "DE139"
+  },
+  "DEB3J": {
+   "name": "Mainz-Bingen",
+   "year": 2023,
+   "gdp": 10276060000,
+   "gdpPerCapita": 49900,
+   "status": "provisional",
+   "sourceGeo": "DEB3J"
+  },
+  "DEB3C": {
+   "name": "Bad Dürkheim",
+   "year": 2023,
+   "gdp": 3618000000,
+   "gdpPerCapita": 27000,
+   "status": "provisional",
+   "sourceGeo": "DEB3C"
+  },
+  "DEB3E": {
+   "name": "Germersheim",
+   "year": 2023,
+   "gdp": 5777620000,
+   "gdpPerCapita": 44000,
+   "status": "provisional",
+   "sourceGeo": "DEB3E"
+  },
+  "DEB3F": {
+   "name": "Kaiserslautern, Landkreis",
+   "year": 2023,
+   "gdp": 2893460000,
+   "gdpPerCapita": 27300,
+   "status": "provisional",
+   "sourceGeo": "DEB3F"
+  },
+  "DEB3H": {
+   "name": "Südliche Weinstraße",
+   "year": 2023,
+   "gdp": 3659280000,
+   "gdpPerCapita": 32400,
+   "status": "provisional",
+   "sourceGeo": "DEB3H"
+  },
+  "DEB3K": {
+   "name": "Südwestpfalz",
+   "year": 2023,
+   "gdp": 1871240000,
+   "gdpPerCapita": 20800,
+   "status": "provisional",
+   "sourceGeo": "DEB3K"
+  },
+  "DEB3D": {
+   "name": "Donnersbergkreis",
+   "year": 2023,
+   "gdp": 2480280000,
+   "gdpPerCapita": 33200,
+   "status": "provisional",
+   "sourceGeo": "DEB3D"
+  },
+  "DEB3G": {
+   "name": "Kusel",
+   "year": 2023,
+   "gdp": 1588340000,
+   "gdpPerCapita": 22700,
+   "status": "provisional",
+   "sourceGeo": "DEB3G"
+  },
+  "DEB3I": {
+   "name": "Rhein-Pfalz-Kreis",
+   "year": 2023,
+   "gdp": 3673180000,
+   "gdpPerCapita": 23700,
+   "status": "provisional",
+   "sourceGeo": "DEB3I"
+  },
+  "DE111": {
+   "name": "Stuttgart, Stadtkreis",
+   "year": 2023,
+   "gdp": 72331040000,
+   "gdpPerCapita": 118100,
+   "status": "provisional",
+   "sourceGeo": "DE111"
+  },
+  "DE112": {
+   "name": "Böblingen",
+   "year": 2023,
+   "gdp": 34135150000,
+   "gdpPerCapita": 86900,
+   "status": "provisional",
+   "sourceGeo": "DE112"
+  },
+  "DE238": {
+   "name": "Regensburg, Landkreis",
+   "year": 2023,
+   "gdp": 6502600000,
+   "gdpPerCapita": 33700,
+   "status": "provisional",
+   "sourceGeo": "DE238"
+  },
+  "DE25C": {
+   "name": "Weißenburg-Gunzenhausen",
+   "year": 2023,
+   "gdp": 3742150000,
+   "gdpPerCapita": 39600,
+   "status": "provisional",
+   "sourceGeo": "DE25C"
+  },
+  "DE261": {
+   "name": "Aschaffenburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 6160690000,
+   "gdpPerCapita": 85200,
+   "status": "provisional",
+   "sourceGeo": "DE261"
+  },
+  "DE262": {
+   "name": "Schweinfurt, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 6177880000,
+   "gdpPerCapita": 115000,
+   "status": "provisional",
+   "sourceGeo": "DE262"
+  },
+  "DE263": {
+   "name": "Würzburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10079430000,
+   "gdpPerCapita": 76600,
+   "status": "provisional",
+   "sourceGeo": "DE263"
+  },
+  "DE264": {
+   "name": "Aschaffenburg, Landkreis",
+   "year": 2023,
+   "gdp": 7703490000,
+   "gdpPerCapita": 45100,
+   "status": "provisional",
+   "sourceGeo": "DE264"
+  },
+  "DE27B": {
+   "name": "Ostallgäu",
+   "year": 2023,
+   "gdp": 6697030000,
+   "gdpPerCapita": 47600,
+   "status": "provisional",
+   "sourceGeo": "DE27B"
+  },
+  "DE27C": {
+   "name": "Unterallgäu",
+   "year": 2023,
+   "gdp": 7301910000,
+   "gdpPerCapita": 50600,
+   "status": "provisional",
+   "sourceGeo": "DE27C"
+  },
+  "DE239": {
+   "name": "Schwandorf",
+   "year": 2023,
+   "gdp": 6923330000,
+   "gdpPerCapita": 46700,
+   "status": "provisional",
+   "sourceGeo": "DE239"
+  },
+  "DE24B": {
+   "name": "Kulmbach",
+   "year": 2023,
+   "gdp": 3296680000,
+   "gdpPerCapita": 46000,
+   "status": "provisional",
+   "sourceGeo": "DE24B"
+  },
+  "DE24C": {
+   "name": "Lichtenfels",
+   "year": 2023,
+   "gdp": 2777300000,
+   "gdpPerCapita": 41100,
+   "status": "provisional",
+   "sourceGeo": "DE24C"
+  },
+  "DE26A": {
+   "name": "Main-Spessart",
+   "year": 2023,
+   "gdp": 5843740000,
+   "gdpPerCapita": 46500,
+   "status": "provisional",
+   "sourceGeo": "DE26A"
+  },
+  "DE26B": {
+   "name": "Schweinfurt, Landkreis",
+   "year": 2023,
+   "gdp": 3232520000,
+   "gdpPerCapita": 28200,
+   "status": "provisional",
+   "sourceGeo": "DE26B"
+  },
+  "DE24D": {
+   "name": "Wunsiedel i. Fichtelgebirge",
+   "year": 2023,
+   "gdp": 3295800000,
+   "gdpPerCapita": 46400,
+   "status": "provisional",
+   "sourceGeo": "DE24D"
+  },
+  "DE265": {
+   "name": "Bad Kissingen",
+   "year": 2023,
+   "gdp": 4256270000.0000005,
+   "gdpPerCapita": 41200,
+   "status": "provisional",
+   "sourceGeo": "DE265"
+  },
+  "DE251": {
+   "name": "Ansbach, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3088660000,
+   "gdpPerCapita": 77900,
+   "status": "provisional",
+   "sourceGeo": "DE251"
+  },
+  "DE252": {
+   "name": "Erlangen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 13609850000,
+   "gdpPerCapita": 118700,
+   "status": "provisional",
+   "sourceGeo": "DE252"
+  },
+  "DE253": {
+   "name": "Fürth, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 6212910000,
+   "gdpPerCapita": 47300,
+   "status": "provisional",
+   "sourceGeo": "DE253"
+  },
+  "DE254": {
+   "name": "Nürnberg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 38630200000,
+   "gdpPerCapita": 73600,
+   "status": "provisional",
+   "sourceGeo": "DE254"
+  },
+  "DE255": {
+   "name": "Schwabach, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 1847260000,
+   "gdpPerCapita": 45200,
+   "status": "provisional",
+   "sourceGeo": "DE255"
+  },
+  "DE256": {
+   "name": "Ansbach, Landkreis",
+   "year": 2023,
+   "gdp": 7075180000,
+   "gdpPerCapita": 37900,
+   "status": "provisional",
+   "sourceGeo": "DE256"
+  },
+  "DE26C": {
+   "name": "Würzburg, Landkreis",
+   "year": 2023,
+   "gdp": 5729660000,
+   "gdpPerCapita": 35700,
+   "status": "provisional",
+   "sourceGeo": "DE26C"
+  },
+  "DE23A": {
+   "name": "Tirschenreuth",
+   "year": 2023,
+   "gdp": 3789890000,
+   "gdpPerCapita": 52200,
+   "status": "provisional",
+   "sourceGeo": "DE23A"
+  },
+  "DE241": {
+   "name": "Bamberg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5849320000,
+   "gdpPerCapita": 78300,
+   "status": "provisional",
+   "sourceGeo": "DE241"
+  },
+  "DE242": {
+   "name": "Bayreuth, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5769510000,
+   "gdpPerCapita": 79200,
+   "status": "provisional",
+   "sourceGeo": "DE242"
+  },
+  "DE243": {
+   "name": "Coburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4991330000,
+   "gdpPerCapita": 122400,
+   "status": "provisional",
+   "sourceGeo": "DE243"
+  },
+  "DE244": {
+   "name": "Hof, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2440210000,
+   "gdpPerCapita": 52700,
+   "status": "provisional",
+   "sourceGeo": "DE244"
+  },
+  "DE245": {
+   "name": "Bamberg, Landkreis",
+   "year": 2023,
+   "gdp": 4651060000,
+   "gdpPerCapita": 31500,
+   "status": "provisional",
+   "sourceGeo": "DE245"
+  },
+  "DE271": {
+   "name": "Augsburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 16693919999.999998,
+   "gdpPerCapita": 56100,
+   "status": "provisional",
+   "sourceGeo": "DE271"
+  },
+  "DE272": {
+   "name": "Kaufbeuren, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2059550000.0000002,
+   "gdpPerCapita": 45000,
+   "status": "provisional",
+   "sourceGeo": "DE272"
+  },
+  "DE273": {
+   "name": "Kempten (Allgäu), Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4419510000,
+   "gdpPerCapita": 67400,
+   "status": "provisional",
+   "sourceGeo": "DE273"
+  },
+  "DE274": {
+   "name": "Memmingen, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3182820000,
+   "gdpPerCapita": 72500,
+   "status": "provisional",
+   "sourceGeo": "DE274"
+  },
+  "DE275": {
+   "name": "Aichach-Friedberg",
+   "year": 2023,
+   "gdp": 4817800000,
+   "gdpPerCapita": 35500,
+   "status": "provisional",
+   "sourceGeo": "DE275"
+  },
+  "DE266": {
+   "name": "Rhön-Grabfeld",
+   "year": 2023,
+   "gdp": 4066980000,
+   "gdpPerCapita": 51300,
+   "status": "provisional",
+   "sourceGeo": "DE266"
+  },
+  "DE257": {
+   "name": "Erlangen-Höchstadt",
+   "year": 2023,
+   "gdp": 6158830000,
+   "gdpPerCapita": 44500,
+   "status": "provisional",
+   "sourceGeo": "DE257"
+  },
+  "DE276": {
+   "name": "Augsburg, Landkreis",
+   "year": 2023,
+   "gdp": 9646000000,
+   "gdpPerCapita": 37000,
+   "status": "provisional",
+   "sourceGeo": "DE276"
+  },
+  "DE267": {
+   "name": "Haßberge",
+   "year": 2023,
+   "gdp": 3305440000,
+   "gdpPerCapita": 39600,
+   "status": "provisional",
+   "sourceGeo": "DE267"
+  },
+  "DE246": {
+   "name": "Bayreuth, Landkreis",
+   "year": 2023,
+   "gdp": 2973050000,
+   "gdpPerCapita": 28800,
+   "status": "provisional",
+   "sourceGeo": "DE246"
+  },
+  "DE258": {
+   "name": "Fürth, Landkreis",
+   "year": 2023,
+   "gdp": 3225080000,
+   "gdpPerCapita": 27400,
+   "status": "provisional",
+   "sourceGeo": "DE258"
+  },
+  "DE259": {
+   "name": "Nürnberger Land",
+   "year": 2023,
+   "gdp": 6692110000,
+   "gdpPerCapita": 39600,
+   "status": "provisional",
+   "sourceGeo": "DE259"
+  },
+  "DE277": {
+   "name": "Dillingen a.d. Donau",
+   "year": 2023,
+   "gdp": 4271930000.0000005,
+   "gdpPerCapita": 43600,
+   "status": "provisional",
+   "sourceGeo": "DE277"
+  },
+  "DE268": {
+   "name": "Kitzingen",
+   "year": 2023,
+   "gdp": 4408120000,
+   "gdpPerCapita": 48500,
+   "status": "provisional",
+   "sourceGeo": "DE268"
+  },
+  "DE247": {
+   "name": "Coburg, Landkreis",
+   "year": 2023,
+   "gdp": 2882290000,
+   "gdpPerCapita": 34100,
+   "status": "provisional",
+   "sourceGeo": "DE247"
+  },
+  "DE278": {
+   "name": "Günzburg",
+   "year": 2023,
+   "gdp": 6629050000,
+   "gdpPerCapita": 51400,
+   "status": "provisional",
+   "sourceGeo": "DE278"
+  },
+  "DE269": {
+   "name": "Miltenberg",
+   "year": 2023,
+   "gdp": 5698570000,
+   "gdpPerCapita": 44900,
+   "status": "provisional",
+   "sourceGeo": "DE269"
+  },
+  "DE248": {
+   "name": "Forchheim",
+   "year": 2023,
+   "gdp": 4640770000,
+   "gdpPerCapita": 40100,
+   "status": "provisional",
+   "sourceGeo": "DE248"
+  },
+  "DE25A": {
+   "name": "Neustadt a. d. Aisch-Bad Windsheim",
+   "year": 2023,
+   "gdp": 3901670000,
+   "gdpPerCapita": 38700,
+   "status": "provisional",
+   "sourceGeo": "DE25A"
+  },
+  "DE249": {
+   "name": "Hof, Landkreis",
+   "year": 2023,
+   "gdp": 4229450000,
+   "gdpPerCapita": 45600,
+   "status": "provisional",
+   "sourceGeo": "DE249"
+  },
+  "DE279": {
+   "name": "Neu-Ulm",
+   "year": 2023,
+   "gdp": 7785600000,
+   "gdpPerCapita": 42900,
+   "status": "provisional",
+   "sourceGeo": "DE279"
+  },
+  "DE25B": {
+   "name": "Roth",
+   "year": 2023,
+   "gdp": 4996800000,
+   "gdpPerCapita": 39100,
+   "status": "provisional",
+   "sourceGeo": "DE25B"
+  },
+  "DE27A": {
+   "name": "Lindau (Bodensee)",
+   "year": 2023,
+   "gdp": 3890390000,
+   "gdpPerCapita": 47400,
+   "status": "provisional",
+   "sourceGeo": "DE27A"
+  },
+  "DE24A": {
+   "name": "Kronach",
+   "year": 2023,
+   "gdp": 2731320000,
+   "gdpPerCapita": 42000,
+   "status": "provisional",
+   "sourceGeo": "DE24A"
+  },
+  "DE228": {
+   "name": "Passau, Landkreis",
+   "year": 2023,
+   "gdp": 7503470000,
+   "gdpPerCapita": 38800,
+   "status": "provisional",
+   "sourceGeo": "DE228"
+  },
+  "DE229": {
+   "name": "Regen",
+   "year": 2023,
+   "gdp": 3254860000,
+   "gdpPerCapita": 42000,
+   "status": "provisional",
+   "sourceGeo": "DE229"
+  },
+  "DE142": {
+   "name": "Tübingen, Landkreis",
+   "year": 2023,
+   "gdp": 9995460000,
+   "gdpPerCapita": 43100,
+   "status": "provisional",
+   "sourceGeo": "DE142"
+  },
+  "DE216": {
+   "name": "Bad Tölz-Wolfratshausen",
+   "year": 2023,
+   "gdp": 4711820000,
+   "gdpPerCapita": 36400,
+   "status": "provisional",
+   "sourceGeo": "DE216"
+  },
+  "DE217": {
+   "name": "Dachau",
+   "year": 2023,
+   "gdp": 5724630000,
+   "gdpPerCapita": 37800,
+   "status": "provisional",
+   "sourceGeo": "DE217"
+  },
+  "DE21J": {
+   "name": "Pfaffenhofen a. d. Ilm",
+   "year": 2023,
+   "gdp": 7013540000,
+   "gdpPerCapita": 54400,
+   "status": "provisional",
+   "sourceGeo": "DE21J"
+  },
+  "DE21K": {
+   "name": "Rosenheim, Landkreis",
+   "year": 2023,
+   "gdp": 10833100000,
+   "gdpPerCapita": 42300,
+   "status": "provisional",
+   "sourceGeo": "DE21K"
+  },
+  "DE237": {
+   "name": "Neustadt a. d. Waldnaab",
+   "year": 2023,
+   "gdp": 3999210000,
+   "gdpPerCapita": 41700,
+   "status": "provisional",
+   "sourceGeo": "DE237"
+  },
+  "DE143": {
+   "name": "Zollernalbkreis",
+   "year": 2023,
+   "gdp": 8190130000,
+   "gdpPerCapita": 42400,
+   "status": "provisional",
+   "sourceGeo": "DE143"
+  },
+  "DE218": {
+   "name": "Ebersberg",
+   "year": 2023,
+   "gdp": 6227030000,
+   "gdpPerCapita": 43700,
+   "status": "provisional",
+   "sourceGeo": "DE218"
+  },
+  "DE144": {
+   "name": "Ulm, Stadtkreis",
+   "year": 2023,
+   "gdp": 12947060000,
+   "gdpPerCapita": 100800,
+   "status": "provisional",
+   "sourceGeo": "DE144"
+  },
+  "DE145": {
+   "name": "Alb-Donau-Kreis",
+   "year": 2023,
+   "gdp": 7868800000,
+   "gdpPerCapita": 39100,
+   "status": "provisional",
+   "sourceGeo": "DE145"
+  },
+  "DE219": {
+   "name": "Eichstätt",
+   "year": 2023,
+   "gdp": 5981030000,
+   "gdpPerCapita": 44400,
+   "status": "provisional",
+   "sourceGeo": "DE219"
+  },
+  "DE22A": {
+   "name": "Rottal-Inn",
+   "year": 2023,
+   "gdp": 5376260000,
+   "gdpPerCapita": 44700,
+   "status": "provisional",
+   "sourceGeo": "DE22A"
+  },
+  "DE21L": {
+   "name": "Starnberg",
+   "year": 2023,
+   "gdp": 7516280000,
+   "gdpPerCapita": 54200,
+   "status": "provisional",
+   "sourceGeo": "DE21L"
+  },
+  "DE21M": {
+   "name": "Traunstein",
+   "year": 2023,
+   "gdp": 9374050000,
+   "gdpPerCapita": 54700,
+   "status": "provisional",
+   "sourceGeo": "DE21M"
+  },
+  "DE22B": {
+   "name": "Straubing-Bogen",
+   "year": 2023,
+   "gdp": 3756600000,
+   "gdpPerCapita": 36400,
+   "status": "provisional",
+   "sourceGeo": "DE22B"
+  },
+  "DE21A": {
+   "name": "Erding",
+   "year": 2023,
+   "gdp": 5486830000,
+   "gdpPerCapita": 39400,
+   "status": "provisional",
+   "sourceGeo": "DE21A"
+  },
+  "DE146": {
+   "name": "Biberach",
+   "year": 2023,
+   "gdp": 13001030000,
+   "gdpPerCapita": 63100,
+   "status": "provisional",
+   "sourceGeo": "DE146"
+  },
+  "DE21B": {
+   "name": "Freising",
+   "year": 2023,
+   "gdp": 11140190000,
+   "gdpPerCapita": 61000,
+   "status": "provisional",
+   "sourceGeo": "DE21B"
+  },
+  "DE21N": {
+   "name": "Weilheim-Schongau",
+   "year": 2023,
+   "gdp": 6780350000,
+   "gdpPerCapita": 49300,
+   "status": "provisional",
+   "sourceGeo": "DE21N"
+  },
+  "DE22C": {
+   "name": "Dingolfing-Landau",
+   "year": 2023,
+   "gdp": 7538830000,
+   "gdpPerCapita": 75300,
+   "status": "provisional",
+   "sourceGeo": "DE22C"
+  },
+  "DE231": {
+   "name": "Amberg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3323280000,
+   "gdpPerCapita": 78800,
+   "status": "provisional",
+   "sourceGeo": "DE231"
+  },
+  "DE232": {
+   "name": "Regensburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 16298800000,
+   "gdpPerCapita": 109700,
+   "status": "provisional",
+   "sourceGeo": "DE232"
+  },
+  "DE233": {
+   "name": "Weiden i. d. Opf, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2921600000,
+   "gdpPerCapita": 69000,
+   "status": "provisional",
+   "sourceGeo": "DE233"
+  },
+  "DE234": {
+   "name": "Amberg-Sulzbach",
+   "year": 2023,
+   "gdp": 3623590000,
+   "gdpPerCapita": 34900,
+   "status": "provisional",
+   "sourceGeo": "DE234"
+  },
+  "DE21C": {
+   "name": "Fürstenfeldbruck",
+   "year": 2023,
+   "gdp": 7536090000,
+   "gdpPerCapita": 34900,
+   "status": "provisional",
+   "sourceGeo": "DE21C"
+  },
+  "DE221": {
+   "name": "Landshut, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 5007200000,
+   "gdpPerCapita": 72800,
+   "status": "provisional",
+   "sourceGeo": "DE221"
+  },
+  "DE222": {
+   "name": "Passau, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4230220000.0000005,
+   "gdpPerCapita": 80400,
+   "status": "provisional",
+   "sourceGeo": "DE222"
+  },
+  "DE223": {
+   "name": "Straubing, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3230110000,
+   "gdpPerCapita": 68400,
+   "status": "provisional",
+   "sourceGeo": "DE223"
+  },
+  "DE224": {
+   "name": "Deggendorf",
+   "year": 2023,
+   "gdp": 6377240000,
+   "gdpPerCapita": 52900,
+   "status": "provisional",
+   "sourceGeo": "DE224"
+  },
+  "DE147": {
+   "name": "Bodenseekreis",
+   "year": 2023,
+   "gdp": 13478910000,
+   "gdpPerCapita": 61100,
+   "status": "provisional",
+   "sourceGeo": "DE147"
+  },
+  "DE21D": {
+   "name": "Garmisch-Partenkirchen",
+   "year": 2023,
+   "gdp": 3570930000,
+   "gdpPerCapita": 40000,
+   "status": "provisional",
+   "sourceGeo": "DE21D"
+  },
+  "DE235": {
+   "name": "Cham",
+   "year": 2023,
+   "gdp": 6366070000,
+   "gdpPerCapita": 49800,
+   "status": "provisional",
+   "sourceGeo": "DE235"
+  },
+  "DE148": {
+   "name": "Ravensburg",
+   "year": 2023,
+   "gdp": 15172250000,
+   "gdpPerCapita": 52600,
+   "status": "provisional",
+   "sourceGeo": "DE148"
+  },
+  "DE21E": {
+   "name": "Landsberg am Lech",
+   "year": 2023,
+   "gdp": 5438120000,
+   "gdpPerCapita": 45200,
+   "status": "provisional",
+   "sourceGeo": "DE21E"
+  },
+  "DE225": {
+   "name": "Freyung-Grafenau",
+   "year": 2023,
+   "gdp": 3169900000,
+   "gdpPerCapita": 40500,
+   "status": "provisional",
+   "sourceGeo": "DE225"
+  },
+  "DE21F": {
+   "name": "Miesbach",
+   "year": 2023,
+   "gdp": 4863230000,
+   "gdpPerCapita": 50300,
+   "status": "provisional",
+   "sourceGeo": "DE21F"
+  },
+  "DE236": {
+   "name": "Neumarkt i. d. OPf.",
+   "year": 2023,
+   "gdp": 6563140000,
+   "gdpPerCapita": 47700,
+   "status": "provisional",
+   "sourceGeo": "DE236"
+  },
+  "DE149": {
+   "name": "Sigmaringen",
+   "year": 2023,
+   "gdp": 6006210000,
+   "gdpPerCapita": 45300,
+   "status": "provisional",
+   "sourceGeo": "DE149"
+  },
+  "DE21G": {
+   "name": "Mühldorf a. Inn",
+   "year": 2023,
+   "gdp": 5123690000,
+   "gdpPerCapita": 42400,
+   "status": "provisional",
+   "sourceGeo": "DE21G"
+  },
+  "DE226": {
+   "name": "Kelheim",
+   "year": 2023,
+   "gdp": 5200320000,
+   "gdpPerCapita": 41600,
+   "status": "provisional",
+   "sourceGeo": "DE226"
+  },
+  "DE227": {
+   "name": "Landshut, Landkreis",
+   "year": 2023,
+   "gdp": 7643930000,
+   "gdpPerCapita": 47600,
+   "status": "provisional",
+   "sourceGeo": "DE227"
+  },
+  "DE211": {
+   "name": "Ingolstadt, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 22803150000,
+   "gdpPerCapita": 164200,
+   "status": "provisional",
+   "sourceGeo": "DE211"
+  },
+  "DE212": {
+   "name": "München, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 150229490000,
+   "gdpPerCapita": 100900,
+   "status": "provisional",
+   "sourceGeo": "DE212"
+  },
+  "DE213": {
+   "name": "Rosenheim, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3946230000,
+   "gdpPerCapita": 61600,
+   "status": "provisional",
+   "sourceGeo": "DE213"
+  },
+  "DE214": {
+   "name": "Altötting",
+   "year": 2023,
+   "gdp": 6910520000,
+   "gdpPerCapita": 61300,
+   "status": "provisional",
+   "sourceGeo": "DE214"
+  },
+  "DE21H": {
+   "name": "München, Landkreis",
+   "year": 2023,
+   "gdp": 52413250000,
+   "gdpPerCapita": 149200,
+   "status": "provisional",
+   "sourceGeo": "DE21H"
+  },
+  "DE215": {
+   "name": "Berchtesgadener Land",
+   "year": 2023,
+   "gdp": 4558110000,
+   "gdpPerCapita": 43500,
+   "status": "provisional",
+   "sourceGeo": "DE215"
+  },
+  "DE21I": {
+   "name": "Neuburg-Schrobenhausen",
+   "year": 2023,
+   "gdp": 4303570000,
+   "gdpPerCapita": 43700,
+   "status": "provisional",
+   "sourceGeo": "DE21I"
+  },
+  "DE80M": {
+   "name": "Nordwestmecklenburg",
+   "year": 2023,
+   "gdp": 5019350000,
+   "gdpPerCapita": 31900,
+   "status": "provisional",
+   "sourceGeo": "DE80M"
+  },
+  "DED2D": {
+   "name": "Görlitz",
+   "year": 2023,
+   "gdp": 9153880000,
+   "gdpPerCapita": 37100,
+   "status": "provisional",
+   "sourceGeo": "DED2D"
+  },
+  "DEG0R": {
+   "name": "Wartburgkreis",
+   "year": 2023,
+   "gdp": 5962420000,
+   "gdpPerCapita": 38100,
+   "status": "provisional",
+   "sourceGeo": "DEG0R"
+  },
+  "DE80O": {
+   "name": "Ludwigslust-Parchim",
+   "year": 2023,
+   "gdp": 6738740000,
+   "gdpPerCapita": 32200,
+   "status": "provisional",
+   "sourceGeo": "DE80O"
+  },
+  "DEE08": {
+   "name": "Burgenlandkreis",
+   "year": 2023,
+   "gdp": 5984420000,
+   "gdpPerCapita": 34200,
+   "status": "provisional",
+   "sourceGeo": "DEE08"
+  },
+  "DED41": {
+   "name": "Chemnitz, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10795870000,
+   "gdpPerCapita": 44200,
+   "status": "provisional",
+   "sourceGeo": "DED41"
+  },
+  "DED42": {
+   "name": "Erzgebirgskreis",
+   "year": 2023,
+   "gdp": 9551190000,
+   "gdpPerCapita": 29600,
+   "status": "provisional",
+   "sourceGeo": "DED42"
+  },
+  "DEE09": {
+   "name": "Harz",
+   "year": 2023,
+   "gdp": 6395740000,
+   "gdpPerCapita": 30800,
+   "status": "provisional",
+   "sourceGeo": "DEE09"
+  },
+  "DED2E": {
+   "name": "Meißen",
+   "year": 2023,
+   "gdp": 8195930000,
+   "gdpPerCapita": 34100,
+   "status": "provisional",
+   "sourceGeo": "DED2E"
+  },
+  "DE80N": {
+   "name": "Vorpommern-Greifswald",
+   "year": 2023,
+   "gdp": 7890700000,
+   "gdpPerCapita": 34900,
+   "status": "provisional",
+   "sourceGeo": "DE80N"
+  },
+  "DEE06": {
+   "name": "Jerichower Land",
+   "year": 2023,
+   "gdp": 2886450000,
+   "gdpPerCapita": 32500,
+   "status": "provisional",
+   "sourceGeo": "DEE06"
+  },
+  "DED2F": {
+   "name": "Sächsische Schweiz-Osterzgebirge",
+   "year": 2023,
+   "gdp": 6986170000,
+   "gdpPerCapita": 28500,
+   "status": "provisional",
+   "sourceGeo": "DED2F"
+  },
+  "DEE0A": {
+   "name": "Mansfeld-Südharz",
+   "year": 2023,
+   "gdp": 3733500000,
+   "gdpPerCapita": 28600,
+   "status": "provisional",
+   "sourceGeo": "DEE0A"
+  },
+  "DED43": {
+   "name": "Mittelsachsen",
+   "year": 2023,
+   "gdp": 10032360000,
+   "gdpPerCapita": 33700,
+   "status": "provisional",
+   "sourceGeo": "DED43"
+  },
+  "DED51": {
+   "name": "Leipzig, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 29212790000,
+   "gdpPerCapita": 48200,
+   "status": "provisional",
+   "sourceGeo": "DED51"
+  },
+  "DED52": {
+   "name": "Leipzig",
+   "year": 2023,
+   "gdp": 8481780000.000001,
+   "gdpPerCapita": 32600,
+   "status": "provisional",
+   "sourceGeo": "DED52"
+  },
+  "DEE0B": {
+   "name": "Saalekreis",
+   "year": 2023,
+   "gdp": 7997110000,
+   "gdpPerCapita": 43800,
+   "status": "provisional",
+   "sourceGeo": "DEE0B"
+  },
+  "DEE0C": {
+   "name": "Salzlandkreis",
+   "year": 2023,
+   "gdp": 6288780000,
+   "gdpPerCapita": 34400,
+   "status": "provisional",
+   "sourceGeo": "DEE0C"
+  },
+  "DED53": {
+   "name": "Nordsachsen",
+   "year": 2023,
+   "gdp": 7482120000,
+   "gdpPerCapita": 37300,
+   "status": "provisional",
+   "sourceGeo": "DED53"
+  },
+  "DED44": {
+   "name": "Vogtlandkreis",
+   "year": 2023,
+   "gdp": 7019010000,
+   "gdpPerCapita": 31700,
+   "status": "provisional",
+   "sourceGeo": "DED44"
+  },
+  "DEE0D": {
+   "name": "Stendal",
+   "year": 2023,
+   "gdp": 3961550000,
+   "gdpPerCapita": 37000,
+   "status": "provisional",
+   "sourceGeo": "DEE0D"
+  },
+  "DEE01": {
+   "name": "Dessau-Roßlau, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2945140000,
+   "gdpPerCapita": 38700,
+   "status": "provisional",
+   "sourceGeo": "DEE01"
+  },
+  "DEE02": {
+   "name": "Halle (Saale), Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 9178850000,
+   "gdpPerCapita": 40300,
+   "status": "provisional",
+   "sourceGeo": "DEE02"
+  },
+  "DED45": {
+   "name": "Zwickau",
+   "year": 2023,
+   "gdp": 12205330000,
+   "gdpPerCapita": 39300,
+   "status": "provisional",
+   "sourceGeo": "DED45"
+  },
+  "DEE0E": {
+   "name": "Wittenberg",
+   "year": 2023,
+   "gdp": 3818570000,
+   "gdpPerCapita": 31200,
+   "status": "provisional",
+   "sourceGeo": "DEE0E"
+  },
+  "DEE03": {
+   "name": "Magdeburg, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10340220000,
+   "gdpPerCapita": 42700,
+   "status": "provisional",
+   "sourceGeo": "DEE03"
+  },
+  "DEE04": {
+   "name": "Altmarkkreis Salzwedel",
+   "year": 2023,
+   "gdp": 2598080000,
+   "gdpPerCapita": 32000,
+   "status": "provisional",
+   "sourceGeo": "DEE04"
+  },
+  "DED21": {
+   "name": "Dresden, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 28833010000,
+   "gdpPerCapita": 51300,
+   "status": "provisional",
+   "sourceGeo": "DED21"
+  },
+  "DEG01": {
+   "name": "Erfurt, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10859150000,
+   "gdpPerCapita": 49500,
+   "status": "provisional",
+   "sourceGeo": "DEG01"
+  },
+  "DEG02": {
+   "name": "Gera, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 3466810000,
+   "gdpPerCapita": 36500,
+   "status": "provisional",
+   "sourceGeo": "DEG02"
+  },
+  "DEG03": {
+   "name": "Jena, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 6418620000,
+   "gdpPerCapita": 58200,
+   "status": "provisional",
+   "sourceGeo": "DEG03"
+  },
+  "DEG0S": {
+   "name": "Suhl, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 1329200000,
+   "gdpPerCapita": 36600,
+   "status": "provisional",
+   "sourceGeo": "DEG0S"
+  },
+  "DEG05": {
+   "name": "Weimar, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2435940000,
+   "gdpPerCapita": 37200,
+   "status": "provisional",
+   "sourceGeo": "DEG05"
+  },
+  "DEE05": {
+   "name": "Anhalt-Bitterfeld",
+   "year": 2023,
+   "gdp": 5955410000,
+   "gdpPerCapita": 38700,
+   "status": "provisional",
+   "sourceGeo": "DEE05"
+  },
+  "DED2C": {
+   "name": "Bautzen",
+   "year": 2023,
+   "gdp": 10209710000,
+   "gdpPerCapita": 34600,
+   "status": "provisional",
+   "sourceGeo": "DED2C"
+  },
+  "DEG06": {
+   "name": "Eichsfeld",
+   "year": 2023,
+   "gdp": 3168370000,
+   "gdpPerCapita": 32000,
+   "status": "provisional",
+   "sourceGeo": "DEG06"
+  },
+  "DEE07": {
+   "name": "Börde",
+   "year": 2023,
+   "gdp": 6156640000,
+   "gdpPerCapita": 36500,
+   "status": "provisional",
+   "sourceGeo": "DEE07"
+  },
+  "DEG07": {
+   "name": "Nordhausen",
+   "year": 2023,
+   "gdp": 2637060000,
+   "gdpPerCapita": 32300,
+   "status": "provisional",
+   "sourceGeo": "DEG07"
+  },
+  "DE80J": {
+   "name": "Mecklenburgische Seenplatte",
+   "year": 2023,
+   "gdp": 9368030000,
+   "gdpPerCapita": 37800,
+   "status": "provisional",
+   "sourceGeo": "DE80J"
+  },
+  "DEC05": {
+   "name": "Saarpfalz-Kreis",
+   "year": 2023,
+   "gdp": 6853260000,
+   "gdpPerCapita": 47400,
+   "status": "provisional",
+   "sourceGeo": "DEC05"
+  },
+  "DEC06": {
+   "name": "St. Wendel",
+   "year": 2023,
+   "gdp": 3132780000,
+   "gdpPerCapita": 35600,
+   "status": "provisional",
+   "sourceGeo": "DEC06"
+  },
+  "DE40C": {
+   "name": "Oder-Spree",
+   "year": 2023,
+   "gdp": 7475440000,
+   "gdpPerCapita": 41500,
+   "status": "provisional",
+   "sourceGeo": "DE40C"
+  },
+  "DE80L": {
+   "name": "Vorpommern-Rügen",
+   "year": 2023,
+   "gdp": 7440300000,
+   "gdpPerCapita": 34400,
+   "status": "provisional",
+   "sourceGeo": "DE80L"
+  },
+  "DE27D": {
+   "name": "Donau-Ries",
+   "year": 2023,
+   "gdp": 7982880000,
+   "gdpPerCapita": 59500,
+   "status": "provisional",
+   "sourceGeo": "DE27D"
+  },
+  "DE300": {
+   "name": "Berlin",
+   "year": 2023,
+   "gdp": 199564580000,
+   "gdpPerCapita": 54700,
+   "status": "provisional",
+   "sourceGeo": "DE300"
+  },
+  "DE401": {
+   "name": "Brandenburg an der Havel, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2951700000,
+   "gdpPerCapita": 40000,
+   "status": "provisional",
+   "sourceGeo": "DE401"
+  },
+  "DE40D": {
+   "name": "Ostprignitz-Ruppin",
+   "year": 2023,
+   "gdp": 3321970000,
+   "gdpPerCapita": 33400,
+   "status": "provisional",
+   "sourceGeo": "DE40D"
+  },
+  "DE27E": {
+   "name": "Oberallgäu",
+   "year": 2023,
+   "gdp": 6558650000,
+   "gdpPerCapita": 42900,
+   "status": "provisional",
+   "sourceGeo": "DE27E"
+  },
+  "DE402": {
+   "name": "Cottbus, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4430240000,
+   "gdpPerCapita": 46900,
+   "status": "provisional",
+   "sourceGeo": "DE402"
+  },
+  "DE403": {
+   "name": "Frankfurt (Oder), Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 2629500000,
+   "gdpPerCapita": 46300,
+   "status": "provisional",
+   "sourceGeo": "DE403"
+  },
+  "DE404": {
+   "name": "Potsdam, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 9550420000,
+   "gdpPerCapita": 52000,
+   "status": "provisional",
+   "sourceGeo": "DE404"
+  },
+  "DE405": {
+   "name": "Barnim",
+   "year": 2023,
+   "gdp": 5224850000,
+   "gdpPerCapita": 27200,
+   "status": "provisional",
+   "sourceGeo": "DE405"
+  },
+  "DE40E": {
+   "name": "Potsdam-Mittelmark",
+   "year": 2023,
+   "gdp": 7256700000,
+   "gdpPerCapita": 33000,
+   "status": "provisional",
+   "sourceGeo": "DE40E"
+  },
+  "DE406": {
+   "name": "Dahme-Spreewald",
+   "year": 2023,
+   "gdp": 8462620000.000001,
+   "gdpPerCapita": 47800,
+   "status": "provisional",
+   "sourceGeo": "DE406"
+  },
+  "DE80K": {
+   "name": "Landkreis Rostock",
+   "year": 2023,
+   "gdp": 7298850000,
+   "gdpPerCapita": 33400,
+   "status": "provisional",
+   "sourceGeo": "DE80K"
+  },
+  "DEC01": {
+   "name": "Regionalverband Saarbrücken",
+   "year": 2023,
+   "gdp": 17113990000.000002,
+   "gdpPerCapita": 51600,
+   "status": "provisional",
+   "sourceGeo": "DEC01"
+  },
+  "DE40F": {
+   "name": "Prignitz",
+   "year": 2023,
+   "gdp": 2744350000,
+   "gdpPerCapita": 36000,
+   "status": "provisional",
+   "sourceGeo": "DE40F"
+  },
+  "DEC02": {
+   "name": "Merzig-Wadern",
+   "year": 2023,
+   "gdp": 3395100000,
+   "gdpPerCapita": 31000,
+   "status": "provisional",
+   "sourceGeo": "DEC02"
+  },
+  "DE407": {
+   "name": "Elbe-Elster",
+   "year": 2023,
+   "gdp": 3261100000,
+   "gdpPerCapita": 32900,
+   "status": "provisional",
+   "sourceGeo": "DE407"
+  },
+  "DE40G": {
+   "name": "Spree-Neiße",
+   "year": 2023,
+   "gdp": 5690360000,
+   "gdpPerCapita": 51300,
+   "status": "provisional",
+   "sourceGeo": "DE40G"
+  },
+  "DEC03": {
+   "name": "Neunkirchen",
+   "year": 2023,
+   "gdp": 3969000000,
+   "gdpPerCapita": 29700,
+   "status": "provisional",
+   "sourceGeo": "DEC03"
+  },
+  "DE408": {
+   "name": "Havelland",
+   "year": 2023,
+   "gdp": 4344410000,
+   "gdpPerCapita": 25700,
+   "status": "provisional",
+   "sourceGeo": "DE408"
+  },
+  "DE40H": {
+   "name": "Teltow-Fläming",
+   "year": 2023,
+   "gdp": 7646780000,
+   "gdpPerCapita": 43300,
+   "status": "provisional",
+   "sourceGeo": "DE40H"
+  },
+  "DEC04": {
+   "name": "Saarlouis",
+   "year": 2023,
+   "gdp": 7896610000,
+   "gdpPerCapita": 38300,
+   "status": "provisional",
+   "sourceGeo": "DEC04"
+  },
+  "DE409": {
+   "name": "Märkisch-Oderland",
+   "year": 2023,
+   "gdp": 5423560000,
+   "gdpPerCapita": 27500,
+   "status": "provisional",
+   "sourceGeo": "DE409"
+  },
+  "DE40I": {
+   "name": "Uckermark",
+   "year": 2023,
+   "gdp": 4571580000,
+   "gdpPerCapita": 38800,
+   "status": "provisional",
+   "sourceGeo": "DE40I"
+  },
+  "DE803": {
+   "name": "Rostock, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 10339230000,
+   "gdpPerCapita": 50600,
+   "status": "provisional",
+   "sourceGeo": "DE803"
+  },
+  "DE804": {
+   "name": "Schwerin, Kreisfreie Stadt",
+   "year": 2023,
+   "gdp": 4938450000,
+   "gdpPerCapita": 50500,
+   "status": "provisional",
+   "sourceGeo": "DE804"
+  },
+  "DE40A": {
+   "name": "Oberhavel",
+   "year": 2023,
+   "gdp": 6777060000,
+   "gdpPerCapita": 31200,
+   "status": "provisional",
+   "sourceGeo": "DE40A"
+  },
+  "DE40B": {
+   "name": "Oberspreewald-Lausitz",
+   "year": 2023,
+   "gdp": 3822180000,
+   "gdpPerCapita": 35100,
+   "status": "provisional",
+   "sourceGeo": "DE40B"
+  },
+  "DEG09": {
+   "name": "Unstrut-Hainich-Kreis",
+   "year": 2023,
+   "gdp": 3238650000,
+   "gdpPerCapita": 32300,
+   "status": "provisional",
+   "sourceGeo": "DEG09"
+  },
+  "DEG0J": {
+   "name": "Saale-Holzland-Kreis",
+   "year": 2023,
+   "gdp": 2601150000,
+   "gdpPerCapita": 31000,
+   "status": "provisional",
+   "sourceGeo": "DEG0J"
+  },
+  "DEG0A": {
+   "name": "Kyffhäuserkreis",
+   "year": 2023,
+   "gdp": 2088670000,
+   "gdpPerCapita": 28700,
+   "status": "provisional",
+   "sourceGeo": "DEG0A"
+  },
+  "DEG0K": {
+   "name": "Saale-Orla-Kreis",
+   "year": 2023,
+   "gdp": 2830400000,
+   "gdpPerCapita": 36200,
+   "status": "provisional",
+   "sourceGeo": "DEG0K"
+  },
+  "DEG0Q": {
+   "name": "Schmalkalden-Meiningen",
+   "year": 2023,
+   "gdp": 4089100000,
+   "gdpPerCapita": 33700,
+   "status": "provisional",
+   "sourceGeo": "DEG0Q"
+  },
+  "DEG0C": {
+   "name": "Gotha",
+   "year": 2023,
+   "gdp": 4698580000,
+   "gdpPerCapita": 34300,
+   "status": "provisional",
+   "sourceGeo": "DEG0C"
+  },
+  "DEG0L": {
+   "name": "Greiz",
+   "year": 2023,
+   "gdp": 2722890000,
+   "gdpPerCapita": 28700,
+   "status": "provisional",
+   "sourceGeo": "DEG0L"
+  },
+  "DEG0D": {
+   "name": "Sömmerda",
+   "year": 2023,
+   "gdp": 2246320000,
+   "gdpPerCapita": 32900,
+   "status": "provisional",
+   "sourceGeo": "DEG0D"
+  },
+  "DEG0M": {
+   "name": "Altenburger Land",
+   "year": 2023,
+   "gdp": 2443820000,
+   "gdpPerCapita": 27800,
+   "status": "provisional",
+   "sourceGeo": "DEG0M"
+  },
+  "DEG0E": {
+   "name": "Hildburghausen",
+   "year": 2023,
+   "gdp": 1689720000,
+   "gdpPerCapita": 27700,
+   "status": "provisional",
+   "sourceGeo": "DEG0E"
+  },
+  "DEG0T": {
+   "name": "Ilm-Kreis",
+   "year": 2023,
+   "gdp": 3944800000,
+   "gdpPerCapita": 36900,
+   "status": "provisional",
+   "sourceGeo": "DEG0T"
+  },
+  "DEG0G": {
+   "name": "Weimarer Land",
+   "year": 2023,
+   "gdp": 3136290000,
+   "gdpPerCapita": 37800,
+   "status": "provisional",
+   "sourceGeo": "DEG0G"
+  },
+  "DEG0V": {
+   "name": "Sonneberg",
+   "year": 2023,
+   "gdp": 1716980000,
+   "gdpPerCapita": 30600,
+   "status": "provisional",
+   "sourceGeo": "DEG0V"
+  },
+  "DEG0U": {
+   "name": "Saalfeld-Rudolstadt",
+   "year": 2023,
+   "gdp": 3311790000,
+   "gdpPerCapita": 32700,
+   "status": "provisional",
+   "sourceGeo": "DEG0U"
+  }
+ }
+}

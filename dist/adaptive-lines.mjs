@@ -33,24 +33,9 @@ export const lineSourceOptions={type:'geojson',tolerance:.65,maxzoom:18,buffer:1
 export const internationalLineSourceOptions={...lineSourceOptions,tolerance:.125};
 export const regionalLineWidth=(level,selected=false)=>['interpolate',['linear'],['zoom'],2,selected?.7:level===1?.45:.25,6,selected?1.1:level===1?.75:.45,10,selected?1.7:level===1?.9:.55];
 
-export const internationalBorderPaint=()=>({'line-color':'#aaa9a2','line-width':regionalLineWidth(1),'line-opacity':adaptiveOpacity()});
-const borderMaps=new WeakSet();
+export const internationalBorderPaint=()=>({'line-color':'#aaa9a2','line-width':regionalLineWidth(1),'line-opacity':1});
 export function addInternationalBorder(map,id,source,layout={}){
- map.addLayer({id,type:'line',source,metadata:{atlasInternationalBorder:true},layout:{'line-join':'round','line-cap':'round',...layout},paint:internationalBorderPaint()});
- if(borderMaps.has(map))return;
- borderMaps.add(map);
- let queued=false;
- map.on('styledata',()=>{
-  if(queued)return;queued=true;
-  queueMicrotask(()=>{
-   queued=false;
-   const layers=map.getStyle().layers;
-   const borders=layers.filter(l=>l.metadata?.atlasInternationalBorder);
-   const lastFill=layers.findLastIndex(l=>l.type==='fill'||l.type==='raster');
-   // Later country fills must never cover an already installed shared stroke.
-   for(const border of borders)if(layers.findIndex(l=>l.id===border.id)<lastFill)map.moveLayer(border.id);
-  });
- });
+ map.addLayer({id,type:'line',source,metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round',...layout},paint:internationalBorderPaint()});
 }
 
 const segmentKey=(a,b)=>[a.map(v=>v.toFixed(6)).join(','),b.map(v=>v.toFixed(6)).join(',')].sort().join('|');

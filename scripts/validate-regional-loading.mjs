@@ -1,3 +1,6 @@
+import {backgroundLandColor} from '../dist/map-palette.mjs';
+import {createMapResources} from '../dist/country-loader.mjs';
+import {createMapScene} from '../dist/map-scene.mjs';
 import {polygonParts} from '../dist/polygon-parts.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -7,19 +10,19 @@ import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlement
 import {regionalLineWidth} from '../dist/adaptive-lines.mjs';
 const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
- if(!elements.has(id))elements.set(id,{id,dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},classList:{toggle(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){}});
+ if(!elements.has(id))elements.set(id,{id,parentElement:{hidden:false},dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},classList:{toggle(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){},querySelectorAll(){return [];},removeAttribute(k){delete this.attributes[k];},remove(){}});
  return elements.get(id);
 };
 element('mode-lock').attributes['aria-pressed']='false';element('satellite-layer').checked=false;element('satellite-opacity').value='60';
 const bounds=[[30,50],[31,51]],records=[...['A','B'].map(id=>({id,en:id,local:id,kind:'Region',level:1,center:[30.5,50.5],bounds})),...['A','B'].map(parent=>({id:parent+'1',en:parent+' District',parent,level:2,kind:'District',center:[30.5,50.5],bounds}))];
 const catalogue={records,chunks:{A:{file:'second/A.bin',count:1},B:{file:'second/B.bin',count:1}}};
 let hit;const layerOrder=[];
-const map={addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l){layers.set(l.id,l);layerOrder.push(l.id);},getLayer:id=>layers.get(id),removeLayer(id){layers.delete(id);layerOrder.splice(layerOrder.indexOf(id),1);},moveLayer(id){layerOrder.splice(layerOrder.indexOf(id),1);layerOrder.push(id);},setPaintProperty(){},setFilter(){},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
-let nextURL=0;
-const context=vm.createContext({console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
+const map={addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l,before){layers.set(l.id,l);const index=layerOrder.indexOf(before);if(index<0)layerOrder.push(l.id);else layerOrder.splice(index,0,l.id);},getLayer:id=>layers.get(id),removeLayer(id){layers.delete(id);layerOrder.splice(layerOrder.indexOf(id),1);},moveLayer(id){layerOrder.splice(layerOrder.indexOf(id),1);layerOrder.push(id);},setPaintProperty(id,key,value){(layers.get(id).paint??={})[key]=value;},setFilter(){},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
+let nextURL=0,labelRecords=[];
+const context=vm.createContext({backgroundLandColor,createMapResources,console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
  Worker:class{constructor(){jobs.push(this);}postMessage(data){this.request=data;}terminate(){this.terminated=true;}},
  document:{getElementById:element,createElement:tag=>element('new-'+tag+'-'+Math.random()),querySelector:()=>({insertBefore(){}})},
- window:{AtlasSymbols:{markup:()=>'<svg/>'},AtlasLabels:{render:()=>[]}},
+ window:{AtlasCountries:{ids:['brazil','france']},AtlasSymbols:{markup:()=>'<svg/>'},AtlasLabels:{render:(_map,records)=>{labelRecords=records;return [];}}},
  createCountryPage:options=>element(options.id),setSubdivisionHeading:(node,label,count)=>node.textContent=label+' '+count,
  loadCompressed:async file=>file.endsWith('catalogue.bin')?catalogue:{type:'FeatureCollection',features:[]},createPlaceSearch,polygonParts,
  // Outlines are decoded in MapLibre's workers (geo-pack.mjs addWorkerSource); the source names its file.
@@ -27,11 +30,15 @@ const context=vm.createContext({console,setTimeout,clearTimeout,DOMException,Opt
  addInternationalBorder(map,id,source){map.addLayer({id,type:'line',source,paint:{}});},setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineWidth:regionalLineWidth,lineSourceOptions:{type:'geojson'},internationalLineSourceOptions:{type:'geojson',tolerance:.125},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){}});
 const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replace("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
 vm.runInContext(source,context);
+map.getStyle=()=>({layers:layerOrder.map(id=>layers.get(id))});map.getPaintProperty=(id,key)=>layers.get(id)?.paint?.[key];createMapScene(map);
 const host={isBusy:()=>false,fit:async b=>fits.push(b),controls(){}};
-const atlas=await context.addRegionalCountry(map,host,{country:'test',prefix:'test',base:'data/test/',name:'Test',nationalFlag:'flag.svg',flags:{},detailFlags:{B1:{file:'city.svg',page:'https://example.org/city-flag',credit:'Official flag',license:'Public domain'}},hasStatistics:r=>r.level===1||r.id==='B1',bounds,firstLabel:'Regions',secondLabel:'Districts'});
+for(const [id,role] of [['world-land','land'],['china-context','context'],['south-brazil-fill','fill']])map.addLayer({id,type:'fill',metadata:{atlas:{role}}});
+const atlas=await context.addRegionalCountry(map,host,{country:'test',neighbours:true,prefix:'test',base:'data/test/',name:'Test',nationalFlag:'flag.svg',flags:{},detailFlags:{B1:{file:'city.svg',page:'https://example.org/city-flag',credit:'Official flag',license:'Public domain'}},hasStatistics:r=>r.level===1||r.id==='B1',bounds,firstLabel:'Regions',secondLabel:'Districts'});
+assert(layerOrder.indexOf('test-neighbours')<layerOrder.indexOf('south-brazil-fill'),'A late neighbouring-land layer cannot cover the active Brazil map');
 const flush=()=>new Promise(resolve=>setImmediate(resolve)),complete=job=>job.onmessage({data:{blob:{},borders:{}}});
 const entering=atlas.enter(false);await flush();assert.equal(jobs[0].request.url,'data/test/first.bin');complete(jobs[0]);await entering;
 assert(atlas.ready);assert(!sources.has('test-second'),'Entry does not load district geometry');
+const originalBounds=map.getBounds;map.getRenderWorldCopies=()=>true;map.getBounds=()=>({getWest:()=>-330,getEast:()=>-329,getSouth:()=>50,getNorth:()=>51});atlas.updateLabels();assert(labelRecords.some(r=>r.id==='A'&&r.center[0]===-329.5),'Regional labels follow the visible world copy');assert.equal(records[0].center[0],30.5,'Wrapped label positions never mutate the catalogue');map.getBounds=originalBounds;map.getRenderWorldCopies=()=>false;
 assert.equal(atlas.hoverAt(null,'A').en,'A','The shared overview resolves full catalogue names without selecting');assert.equal(atlas.getSelection(),null);
 const select=id=>{element('test-province').value=id;return element('test-province').onchange();};
 const first=select('A');await flush();const obsolete=jobs.at(-1);
@@ -48,7 +55,9 @@ console.log('Shared regional loader: districts load on selection, superseded wor
 
 records.push(...['A','B'].map(parent=>({id:parent+'11',en:parent+' Municipality',parent:parent+'1',level:3,kind:'Municipality',center:[30.5,50.5],bounds})));
 catalogue.chunks.A1={file:'third/A1.bin',count:1};catalogue.chunks.B1={file:'third/B1.bin',count:1};
-const tree=await context.addRegionalCountry(map,host,{country:'tree',prefix:'tree',base:'data/tree/',name:'Tree',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities'});
+map.addLayer({id:'satellite-imagery',type:'raster'},'china-context');
+const tree=await context.addRegionalCountry(map,host,{country:'tree',neighbours:true,prefix:'tree',base:'data/tree/',name:'Tree',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Provinces',secondLabel:'Districts',thirdLabel:'Municipalities'});
+assert(layerOrder.indexOf('tree-neighbours')<layerOrder.indexOf('satellite-imagery'),'Neighbour land loaded after satellite stays underneath the imagery');
 let task=tree.enter(false);await flush();complete(jobs.at(-1));await task;
 assert(!sources.has('tree-second')&&!sources.has('tree-third'),'Third-level country entry remains lazy');
 task=tree.restore('A11');await flush();assert.equal(jobs.at(-1).request.url,'data/tree/second/A.bin');complete(jobs.at(-1));await flush();assert.equal(jobs.at(-1).request.url,'data/tree/third/A1.bin');complete(jobs.at(-1));await task;

@@ -54,11 +54,15 @@ function fakeMap(){
  };
  return map;
 }
-const map=fakeMap(),motion=createMotionRenderer(map);await motion.ready;
+prepared.live={data:blob([feature(21)]),ids:[21]};
+const map=fakeMap();map.sources.set('live',{type:'geojson'});map.layers.push({id:'live-border',source:'live',type:'line',metadata:{atlas:{motion:'live'}},paint:{'line-opacity':1}});
+const motion=createMotionRenderer(map);await motion.ready;
 map.sources.set('provinces-fragments',{type:'geojson',promoteId:'adcode'});
 setFeatureState(map,{source:'provinces',id:220000},{inactive:true});assert.equal(map.getFeatureState({source:'provinces-fragments',id:220000}).inactive,true);
 setFeatureState(map,{source:'prefectures',id:11},{selected:true});
 assert(await motion.begin());
+assert(!map.getLayer('live-border-motion'),'Live geometry never switches to a preview');
+assert.notEqual(map.getLayoutProperty('live-border','visibility'),'none','Live borders persist through movement');
 assert.equal(map.getLayoutProperty('province-fill','visibility'),'none');
 assert.equal(map.getLayoutProperty('province-fill-motion','visibility'),'visible');
 assert.equal(map.getLayoutProperty('prefecture-selection-motion','visibility'),'none');

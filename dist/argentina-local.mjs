@@ -47,7 +47,7 @@ export function createArgentinaLocal(map,host,config={}){
    const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer,config.before||'south-argentina-borders');staged.layers.push(layer.id);};
    add({id:prefix+requested+'-fill',type:'fill',source:staged.sources[0],paint:{'fill-color':config.fill||'#a9cee6','fill-opacity':['case',['boolean',['feature-state','selected'],false],config.selectedOnly?.18:.65,0],'fill-antialias':false}});
    add({id:prefix+requested+'-borders',type:'line',source:staged.sources[1],layout:{'line-join':'round'},paint:{'line-color':config.line||'#5883a0','line-width':['interpolate',['linear'],['zoom'],3,.4,8,.8],'line-opacity':config.adaptive?adaptiveOpacity(.65):.65}});
-   add({id:prefix+requested+'-selection',type:'line',source:staged.sources[2],filter:['==',['get','id'],''],layout:{'line-join':'round'},paint:{'line-color':config.line||'#3979a3','line-width':2,...(config.adaptive?{'line-opacity':adaptiveOpacity()}: {})}});
+   add({id:prefix+requested+'-selection',metadata:{atlas:{role:'selection'}},type:'line',source:staged.sources[2],filter:['==',['get','id'],''],layout:{'line-join':'round'},paint:{'line-color':config.line||'#3979a3','line-width':2,...(config.adaptive?{'line-opacity':adaptiveOpacity()}: {})}});
    wait=new AbortController();await host.waitForSources(staged.sources,wait.signal);
    if(token!==epoch||!host.active())return;
    entry=staged;staged=null;sync();host.status('');host.changed();

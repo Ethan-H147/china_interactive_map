@@ -10,10 +10,11 @@ class Element{constructor(){this.dataset={};}setAttribute(){}insertBefore(){}}
 globalThis.document={createElement:()=>new Element(),querySelector:()=>new Element(),getElementById:()=>new Element()};
 const pages=[['china',mountChinaPage().innerHTML],['korea',koreaPanel],['mongolia',mongoliaPanel]];
 function adapter(file,context){
- const source=fs.readFileSync('dist/'+file,'utf8'),start=source.indexOf('const sidebar=createCountryPage(')+'const sidebar='.length;
- assert(start>='const sidebar='.length,file+' uses the common page');
+ const source=fs.readFileSync('dist/'+file,'utf8'),assignment=/(?:const )?sidebar=createCountryPage\(/.exec(source);
+ assert(assignment,file+' uses the common page');
+ const start=assignment.index+assignment[0].indexOf('createCountryPage(');
  const end=source.indexOf(');',start)+1;
- return vm.runInNewContext(source.slice(start,end),{createCountryPage,...context}).innerHTML;
+ return vm.runInNewContext(source.slice(start,end),{createCountryPage,firstControls:context.maxLevel>1||!!context.c?.firstLabel&&context.c.firstLabel!=='Country',...context}).innerHTML;
 }
 pages.push(['japan',adapter('japan.mjs',{})]);
 for(const [country,prefix,name,first,second] of [['philippines','ph','Philippines','Regions','Provinces'],['indonesia','id','Indonesia','Provinces','Regencies & cities']])pages.push([country,adapter('archipelago.mjs',{country,prefix,name,config:{first,second}})]);
@@ -26,6 +27,13 @@ for(const [country,prefix,name,firstLabel,secondLabel,thirdLabel] of [['south-af
 for(const [country,prefix,name] of [['united-kingdom','gb','United Kingdom'],['spain','es','Spain'],['france','fr','France'],['italy','it','Italy']]){
  const html=adapter('regional-country.mjs',{maxLevel:1,country,prefix,base:`data/europe/${country}/`,c:{name,lang:'en',nationalFlag:`vendor/flag-${prefix}.svg`,firstLabel:'Country'}});
  assert(new RegExp(`<select id="${prefix}-province" data-nav hidden>`).test(html)&&!html.includes(prefix+'-second-layer')&&!html.includes('undefined'),name+' has a single hidden level');
+ pages.push([country,html]);
+}
+
+for(const [country,prefix,label]of [['united-states','us','States'],['canada','ca','Provinces'],['mexico','mx','States']]){
+ const html=adapter('regional-country.mjs',{maxLevel:1,country,prefix,base:'data/europe/'+country+'/',c:{name:country,lang:'en',nationalFlag:'vendor/flag-'+prefix+'.svg',firstLabel:label}});
+ assert(html.includes('<select id="'+prefix+'-province" data-nav>'),'A single subdivision level retains its selector');
+ assert(!html.includes('<label hidden><span>'+label+' outlines'),'A single subdivision level retains its outline toggle');
  pages.push([country,html]);
 }
 

@@ -1,0 +1,35 @@
+{
+  "provider": "US Bureau of Economic Analysis · SAGDP1 line 3, annual current-dollar GDP",
+  "url": "https://www.bea.gov/data/gdp/gdp-state",
+  "populationUrl": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv",
+  "currency": "USD",
+  "retrieved": "2026-10-17",
+  "sources": [
+    {
+      "url": "https://apps.bea.gov/regional/zip/SAGDP.zip",
+      "sha256": "3d3c5bc7bd243138cd4ec07d6f5e862bdb533683a538c3a6db61aa2fbc7085ef"
+    },
+    {
+      "url": "https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv",
+      "sha256": "92188e29cb0a67dcf95afa7d6c47359409782f086478b70ea4128eb70e223ca9"
+    }
+  ],
+  "national": {
+    "year": 2025,
+    "gdp": 30861292000000
+  },
+  "coverage": {
+    "retrieved": "2026-10-17",
+    "retainedSource": "scripts/statistics-sources/expansion-economy/united-states.json",
+    "coveredRegions": 51,
+    "years": [
+      2025
+    ],
+    "scope": "First-level administrative divisions"
+  },
+  "exchange": {
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2020&currency=USD&currency=CAD&currency=CHF&currency=MXN",
+    "updated": "2026-07-08T11:00:00+0200",
+    "sha256": "e448ffcb873d77975ebd533d3a3a0e739f05e92764d320d28b78e2c6b51083b5"
+  }
+}

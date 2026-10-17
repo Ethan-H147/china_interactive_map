@@ -2,7 +2,7 @@
   "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_110m_admin_0_countries.geojson",
   "description": "Natural Earth 1:110m background land silhouettes. Supported Asian countries and Russia use the atlas’s existing detailed context instead. China’s other land neighbours are drawn above them at the precision of China’s outline, in a band along it (china-neighbours.bin, world-land.mjs). No administrative boundaries or click targets.",
   "license": "Public domain",
-  "retrieved": "2026-10-16",
+  "retrieved": "2026-10-17",
   "features": 168,
-  "bytes": 76143
+  "bytes": 76248
 }

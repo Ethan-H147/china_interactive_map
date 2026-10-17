@@ -1,0 +1,173 @@
+{
+  "retrieved": "2026-10-17",
+  "provider": "SEMARNAT INFOTECA / CONAGUA national hydrography",
+  "license": "Mexican government open geographic information; attribution: SEMARNAT / CONAGUA; underlying INEGI hydrography",
+  "sources": [
+    {
+      "title": "National water bodies (lakes, lagoons, reservoirs and intermittent waters)",
+      "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2",
+      "sourceFeatures": 9379
+    },
+    {
+      "title": "Principal rivers, CONAGUA 2016 series",
+      "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/1",
+      "sourceFeatures": 51
+    }
+  ],
+  "coverage": "National water-body polygons and principal rivers. Seasonal/intermittent water shapes are geographic context, not current water levels. The dataset does not contain every tributary. Polygon islands are preserved, polygons are clipped to Mexico, and boundary rivers use a 500 m corridor.",
+  "processing": "Esri clockwise outer rings and counterclockwise islands converted to GeoJSON, clipped independently of administrative subdivisions, simplified about 17 m in latitude. Toggling water never changes the state polygons or their border meshes.",
+  "lakes": 9377,
+  "rivers": 51,
+  "compressedBytes": 3924311,
+  "sourcePins": {
+    "retrieved": "2026-10-17",
+    "files": {
+      "water-metadata.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2?f=pjson",
+        "sha256": "aa599e0c9b5effc6ce5bbfa28a50eac0f6dffc3860ad8131d4d7fccd573b8a14",
+        "bytes": 22790
+      },
+      "water-ids.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=1%3D1&returnIdsOnly=true",
+        "sha256": "e5a6ab00c4b3bbd0e7ad86f3cbf4e45167d13345b11e2cbfec36b1526671c184",
+        "bytes": 45834
+      },
+      "water-00000.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%201%20AND%20OBJECTID%20%3C%3D%20400&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "c77952ab150577e4369a97ce91c937335946e4c340581657722faf5db27cea0e",
+        "bytes": 760173
+      },
+      "water-00400.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%20401%20AND%20OBJECTID%20%3C%3D%20800&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "a7bb5382dc65a1bcc2dd47fc78ec02f27c8d1a507fa413232c6100b4f52932c7",
+        "bytes": 558604
+      },
+      "water-00800.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%20801%20AND%20OBJECTID%20%3C%3D%201200&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "95d1c119e9ffe33162f2b9f68d00b3afdaf9760bf32690ea9058c25e6f9f48be",
+        "bytes": 504590
+      },
+      "water-01200.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%201201%20AND%20OBJECTID%20%3C%3D%201600&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "894fa21b5e11af38eeb4a65c2b9c2ee1061db83414f5a030ab90d425b3fad6f9",
+        "bytes": 479944
+      },
+      "water-01600.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%201601%20AND%20OBJECTID%20%3C%3D%202000&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "2351acb63107c148ba20f8fb3f02c1764d47162743b4be85f793c6580bd2992c",
+        "bytes": 344948
+      },
+      "water-02000.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%202001%20AND%20OBJECTID%20%3C%3D%202400&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "0da2f5060a9f208b37358ff326ac140b97f0198a61346e7d9919ce47437f5218",
+        "bytes": 369647
+      },
+      "water-02400.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%202401%20AND%20OBJECTID%20%3C%3D%202800&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "fa5736d48cf25c367cd991ec626d909a39ddeadec77140733b55496f7425ea4c",
+        "bytes": 261646
+      },
+      "water-02800.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%202801%20AND%20OBJECTID%20%3C%3D%203200&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "f7669a2172d53835b8c105944434ed0b582e70a2b0d18b4cfd64720a50555a8d",
+        "bytes": 276512
+      },
+      "water-03200.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%203201%20AND%20OBJECTID%20%3C%3D%203600&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "b47f6eba464d3cc18d20948a29638414a45e9c93b22c9c3b7def37111b653453",
+        "bytes": 364223
+      },
+      "water-03600.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%203601%20AND%20OBJECTID%20%3C%3D%204000&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "22eba78d0d143dfa4590e1bfc9910c6f4b223011e4c98e187839730799add335",
+        "bytes": 325914
+      },
+      "water-04000.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%204001%20AND%20OBJECTID%20%3C%3D%204400&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "95385622f35d68fc0405039dcba574dcb3fe5cd3ed78d8e76aec81ef9a00e661",
+        "bytes": 326645
+      },
+      "water-04400.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%204401%20AND%20OBJECTID%20%3C%3D%204800&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "fa361c1b32598823ce2464c2f5287c3e31ed03c1ac50ea04f5428b83cfc96cf0",
+        "bytes": 246739
+      },
+      "water-04800.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%204801%20AND%20OBJECTID%20%3C%3D%205200&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "dfe30663abf94e833231674c1dd4530ec064294ddc2b9a5cdd8758cfceb778eb",
+        "bytes": 205664
+      },
+      "water-05200.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%205201%20AND%20OBJECTID%20%3C%3D%205600&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "5a1f739281b4fc5e24fda0cf29875581c268975d5d305732a451347344e5dec2",
+        "bytes": 268703
+      },
+      "water-05600.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%205601%20AND%20OBJECTID%20%3C%3D%206000&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "7b40995c94f1f2f68fc727a82a15a56fc57ab820af5b9a4a919369928c7c77b2",
+        "bytes": 318257
+      },
+      "water-06000.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%206001%20AND%20OBJECTID%20%3C%3D%206400&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "a36dd8081c2b5e0ca9a685123247d627f79589a82044a0d1c8b94f62ffb7a686",
+        "bytes": 452544
+      },
+      "water-06400.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%206401%20AND%20OBJECTID%20%3C%3D%206800&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "3b6513f52049722d5aa3217ae7cc40c8ce60400e94fc3f4814915b36e2e92c83",
+        "bytes": 445017
+      },
+      "water-06800.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%206801%20AND%20OBJECTID%20%3C%3D%207200&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "536ea607c3f52fdae71b563a484aa1d9e59ba56e83db4b6d64957b94a3c00add",
+        "bytes": 544478
+      },
+      "water-07200.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%207201%20AND%20OBJECTID%20%3C%3D%207600&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "1f9ced4501bed14cdc25ce6093ce1010c5ed38ea3cdc0723219d4c3691eb7a95",
+        "bytes": 615421
+      },
+      "water-07600.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%207601%20AND%20OBJECTID%20%3C%3D%208000&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "7b869b1ef535dab14359286d79c42e5208492589c99eeff5c14fc584777055b8",
+        "bytes": 477505
+      },
+      "water-08000.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%208001%20AND%20OBJECTID%20%3C%3D%208400&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "48d83230c0f27c50c2fd53fc945644c828dffb56abe9968eb6f64413062f7c91",
+        "bytes": 510001
+      },
+      "water-08400.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%208401%20AND%20OBJECTID%20%3C%3D%208800&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "c0fa30e87d32ebb3eddbb87c79e1ecf15537f6941277c35939e0a60a96fd6709",
+        "bytes": 1268008
+      },
+      "water-08800.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%208801%20AND%20OBJECTID%20%3C%3D%209200&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "0a895c6d43aa17bb56fdb9cb4daf556643b470c29b7058caf36408dc4ad20336",
+        "bytes": 744806
+      },
+      "water-09200.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/2/query?f=json&where=OBJECTID%20%3E%3D%209201%20AND%20OBJECTID%20%3C%3D%209379&outFields=OBJECTID%2CDESCRIBE%2CNOMBRE%2CDESCRIBE_T%2CNOM_EDO%2CShape_Area&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "4ae240d21bf92ba81c9713bf4ab6017c44ab124edc1f280b800a310048a20cbe",
+        "bytes": 333700
+      },
+      "rivers-metadata.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/1?f=pjson",
+        "sha256": "f7cc6a4498df3e98ab5f85a6523e985d819da3f653029620f9970d53b9d61090",
+        "bytes": 4858
+      },
+      "rivers-ids.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/1/query?f=json&where=1%3D1&returnIdsOnly=true",
+        "sha256": "01e4c148c250ebd7f72bcc0096dca2c2cc4be19e00f7729ecff02151f42cb84e",
+        "bytes": 190
+      },
+      "rivers-00000.json": {
+        "url": "https://geomatica.semarnat.gob.mx/arcgis/rest/services/INFOTECA/Agua/MapServer/1/query?f=json&where=OBJECTID%20%3E%3D%201%20AND%20OBJECTID%20%3C%3D%2051&outFields=OBJECTID%2Cnom_rio%2Corden_rio%2Clongitud&outSR=4326&geometryPrecision=6&maxAllowableOffset=0.0001",
+        "sha256": "e331d137dac4640da0fa098eb55a922241291ece785189d7aa5f03c171784901",
+        "bytes": 4590007
+      }
+    }
+  },
+  "sha256": "2fadd24c73f23d4213ac01e16114e06c985086209bd24656d3f009970b3b687c"
+}

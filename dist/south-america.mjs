@@ -34,7 +34,7 @@ export function createSouthAmerica(map,host){
  // The world map's silhouette of another atlas country gives way only once that country's own preview is drawn.
  const previewReady=id=>allowed(id)&&(!registry.countries[id].portal||!!map.getLayer(registry.countries[id].portal.layer));
  // The preview silhouettes sit just above the world map, beneath every country's own layers.
- if(map.getSource('world-land')){const layers=map.getStyle().layers,above=layers[layers.findIndex(l=>l.id==='world-land')+1]?.id;map.addLayer({id:'south-america-portal-fill',type:'fill',source:'world-land',filter:['in',['get','country'],['literal',availableCountries()]],paint:{'fill-color':'#d7d7d3','fill-antialias':false}},above);}
+ if(map.getSource('world-land')){const layers=map.getStyle().layers,above=layers[layers.findIndex(l=>l.id==='world-land')+1]?.id;map.addLayer({id:'south-america-portal-fill',metadata:{atlas:{role:'context'}},type:'fill',source:'world-land',filter:['in',['get','country'],['literal',availableCountries()]],paint:{'fill-color':'#d7d7d3','fill-antialias':false}},above);}
  const detailHost=city=>({active:()=>active==='argentina'&&(!city||selected?.level===3),selected:()=>selected,outlines:()=>$('outlines').checked,waitForSources,changed:()=>{if(active==='argentina')syncLayers();},status:message=>{if(active==='argentina'&&(!city||selected?.level===3)){$('layer-status').hidden=!message;$('layer-status').textContent=message;}}});
  const argentina=createArgentinaLocal(map,detailHost(false));
  const brazil=createArgentinaLocal(map,{active:()=>active==='brazil'&&allowed('brazil')&&brazilLayer==='states'&&!layerBusy,selected:()=>selected,outlines:()=>$('outlines').checked,waitForSources,changed:()=>{if(active==='brazil')syncLayers();},status:message=>{if(active==='brazil'&&!layerBusy){$('layer-status').hidden=!message;$('layer-status').textContent=message;}}},{base:'data/south-america/brazil-local/',prefix:'br-local-',before:'south-brazil-borders',noun:'municipalities',parentNoun:'state',fill:'#91bb86',line:'#527b59',adaptive:true,attribution:'Municipal boundaries: <a href="https://www.ibge.gov.br/geociencias/organizacao-do-territorio/estrutura-territorial/15774-malhas.html">IBGE · 2025</a>'});
@@ -126,7 +126,7 @@ export function createSouthAmerica(map,host){
   loading=(async()=>{
    const context=await loadCompressed('data/flight-context.bin');data=context;
    map.addSource('flight-context',{type:'geojson',data:context,tolerance:.25,buffer:64,maxzoom:16,attribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay'});
-   map.addLayer({id:'south-america-fill',type:'fill',source:'flight-context',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
+   map.addLayer({id:'south-america-fill',metadata:{atlas:{role:'context'}},type:'fill',source:'flight-context',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
    map.addSource('south-land-borders',{...internationalLineSourceOptions,data:lineData(context.landBorders)});
    map.addSource('south-river-borders',{...internationalLineSourceOptions,data:lineData(context.riverBorders),attribution:'International river boundary: <a href="https://www.ign.gob.ar/NuestrasActividades/InformacionGeoespacial/CapasSIG">IGN</a>'});
    for(const [id,source] of [['south-land-boundaries','south-land-borders'],['south-river-boundaries','south-river-borders']])addInternationalBorder(map,id,source,{visibility:'none'});
@@ -164,7 +164,7 @@ export function createSouthAmerica(map,host){
     const add=layer=>{layer.layout={...layer.layout,visibility:'none'};map.addLayer(layer);layers.push(layer.id);};
     add({id:'south-'+id+suffix+'-fill',type:'fill',source:sources[0],paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],c.selected,c.color],'fill-antialias':false}});
     add({id:'south-'+id+suffix+'-borders',type:'line',source:sources[1],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':['interpolate',['linear'],['zoom'],2,.6,7,1.15],'line-opacity':id==='uruguay'?adaptiveOpacity(.8):.8}});
-    add({id:'south-'+id+suffix+'-selection',type:'line',source:sources[2],filter:['==',['get','id'],''],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':2,...(id==='uruguay'?{'line-opacity':adaptiveOpacity()}: {})}});
+    add({id:'south-'+id+suffix+'-selection',metadata:{atlas:{role:'selection'}},type:'line',source:sources[2],filter:['==',['get','id'],''],layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':2,...(id==='uruguay'?{'line-opacity':adaptiveOpacity()}: {})}});
     const controller=new AbortController();sourceWait=controller;
     if(installed.has(id))await waitForSources(sources,controller.signal);
     if(sourceWait===controller)sourceWait=null;

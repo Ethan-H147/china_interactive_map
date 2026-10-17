@@ -1,0 +1,1921 @@
+{
+ "notes": "Regional and municipal flags mapped by administrative ID, including every municipality with 50,000 residents in the atlas 2024 snapshot and provincial capitals. Hainaut and Liege retain traditional banners explicitly labeled unofficial. City, province, district and historical designs are distinct. Original municipal artwork is preserved; captions distinguish logo flags and statutory renderings.",
+ "flags": {
+  "DEF": {
+   "country": "germany",
+   "file": "Flag of Schleswig-Holstein.svg",
+   "reference": "http://www.wikidata.org/entity/Q1194"
+  },
+  "DE9": {
+   "country": "germany",
+   "file": "Flag of Lower Saxony.svg",
+   "reference": "http://www.wikidata.org/entity/Q1197"
+  },
+  "DE6": {
+   "country": "germany",
+   "file": "Flag of Hamburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q1055"
+  },
+  "DE7": {
+   "country": "germany",
+   "file": "Flag of Hesse.svg",
+   "reference": "http://www.wikidata.org/entity/Q1199"
+  },
+  "DEB": {
+   "country": "germany",
+   "file": "Flag of Rhineland-Palatinate.svg",
+   "reference": "http://www.wikidata.org/entity/Q1200"
+  },
+  "DEA": {
+   "country": "germany",
+   "file": "Flag of North Rhine-Westphalia.svg",
+   "reference": "http://www.wikidata.org/entity/Q1198"
+  },
+  "DE5": {
+   "country": "germany",
+   "file": "Flag of Bremen.svg",
+   "reference": "http://www.wikidata.org/entity/Q1209"
+  },
+  "DE1": {
+   "country": "germany",
+   "file": "Flag of Baden-Württemberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q985"
+  },
+  "DE2": {
+   "country": "germany",
+   "file": "Flag of Bavaria (lozengy).svg",
+   "reference": "http://www.wikidata.org/entity/Q980"
+  },
+  "DE8": {
+   "country": "germany",
+   "file": "Flag of Mecklenburg-Western Pomerania.svg",
+   "reference": "http://www.wikidata.org/entity/Q1196"
+  },
+  "DED": {
+   "country": "germany",
+   "file": "Flag of Saxony.svg",
+   "reference": "http://www.wikidata.org/entity/Q1202"
+  },
+  "DEG": {
+   "country": "germany",
+   "file": "Flag of Thuringia.svg",
+   "reference": "http://www.wikidata.org/entity/Q1205"
+  },
+  "DEE": {
+   "country": "germany",
+   "file": "Flag of Saxony-Anhalt (state).svg",
+   "reference": "http://www.wikidata.org/entity/Q1206"
+  },
+  "DEC": {
+   "country": "germany",
+   "file": "Flag of Saarland.svg",
+   "reference": "http://www.wikidata.org/entity/Q1201"
+  },
+  "DE4": {
+   "country": "germany",
+   "file": "Flag of Brandenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q1208"
+  },
+  "DE3": {
+   "country": "germany",
+   "file": "Flag of Berlin.svg",
+   "reference": "http://www.wikidata.org/entity/Q64"
+  },
+  "DE911": {
+   "country": "germany",
+   "file": "DEU Braunschweig Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2773"
+  },
+  "DE912": {
+   "country": "germany",
+   "file": "Flagge Salzgitter.svg",
+   "reference": "http://www.wikidata.org/entity/Q3200"
+  },
+  "DE913": {
+   "country": "germany",
+   "file": "Flagge Wolfsburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3014"
+  },
+  "DE941": {
+   "country": "germany",
+   "file": "Flagge Delmenhorst.svg",
+   "reference": "http://www.wikidata.org/entity/Q3907"
+  },
+  "DE942": {
+   "country": "germany",
+   "file": "Flagge Emden.svg",
+   "reference": "http://www.wikidata.org/entity/Q4174"
+  },
+  "DE943": {
+   "country": "germany",
+   "file": "Flagge der kreisfreien Stadt Oldenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2936"
+  },
+  "DE944": {
+   "country": "germany",
+   "file": "Hissflagge der Stadt Osnabrück.svg",
+   "reference": "http://www.wikidata.org/entity/Q2916"
+  },
+  "DE945": {
+   "country": "germany",
+   "file": "Flagge Wilhelmshaven.svg",
+   "reference": "http://www.wikidata.org/entity/Q3857"
+  },
+  "DEF01": {
+   "country": "germany",
+   "file": "Flagge Flensburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3798"
+  },
+  "DEF02": {
+   "country": "germany",
+   "file": "Flagge der kreisfreien Stadt Kiel.svg",
+   "reference": "http://www.wikidata.org/entity/Q1707"
+  },
+  "DEF03": {
+   "country": "germany",
+   "file": "Flagge Luebeck.svg",
+   "reference": "http://www.wikidata.org/entity/Q2843"
+  },
+  "DEF04": {
+   "country": "germany",
+   "file": "Flagge Neumünster.svg",
+   "reference": "http://www.wikidata.org/entity/Q3879"
+  },
+  "DEB11": {
+   "country": "germany",
+   "file": "DEU Koblenz Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3104"
+  },
+  "DE731": {
+   "country": "germany",
+   "file": "Flagge Kassel.svg",
+   "reference": "http://www.wikidata.org/entity/Q2865"
+  },
+  "DEA51": {
+   "country": "germany",
+   "file": "DEU Bochum Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2103"
+  },
+  "DEA52": {
+   "country": "germany",
+   "file": "Flag of Dortmund.svg",
+   "reference": "http://www.wikidata.org/entity/Q1295"
+  },
+  "DEA53": {
+   "country": "germany",
+   "file": "Flagge der Stadt Hagen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2871"
+  },
+  "DEA54": {
+   "country": "germany",
+   "file": "Flagge der Stadt Hamm.svg",
+   "reference": "http://www.wikidata.org/entity/Q2880"
+  },
+  "DEA55": {
+   "country": "germany",
+   "file": "Flagge der Stadt Herne.svg",
+   "reference": "http://www.wikidata.org/entity/Q2904"
+  },
+  "DEA31": {
+   "country": "germany",
+   "file": "Flagge der Stadt Bottrop.svg",
+   "reference": "http://www.wikidata.org/entity/Q3069"
+  },
+  "DEA32": {
+   "country": "germany",
+   "file": "Flagge der kreisfreien Stadt Gelsenkirchen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2765"
+  },
+  "DEA33": {
+   "country": "germany",
+   "file": "Flagge der kreisfreien Stadt Münster (Westfalen).svg",
+   "reference": "http://www.wikidata.org/entity/Q2742"
+  },
+  "DE711": {
+   "country": "germany",
+   "file": "Hissflagge der Stadt Darmstadt.svg",
+   "reference": "http://www.wikidata.org/entity/Q2973"
+  },
+  "DE712": {
+   "country": "germany",
+   "file": "Flag of Frankfurt am Main.svg",
+   "reference": "http://www.wikidata.org/entity/Q1794"
+  },
+  "DE713": {
+   "country": "germany",
+   "file": "Flagge Offenbach am Main.svg",
+   "reference": "http://www.wikidata.org/entity/Q3042"
+  },
+  "DE714": {
+   "country": "germany",
+   "file": "Flagge Wiesbaden.svg",
+   "reference": "http://www.wikidata.org/entity/Q1721"
+  },
+  "DE501": {
+   "country": "germany",
+   "file": "Flag of Bremen.svg",
+   "reference": "http://www.wikidata.org/entity/Q24879"
+  },
+  "DE502": {
+   "country": "germany",
+   "file": "Flagge Bremerhaven.svg",
+   "reference": "http://www.wikidata.org/entity/Q2706"
+  },
+  "DEA11": {
+   "country": "germany",
+   "file": "Flagge der Landeshauptstadt Duesseldorf.svg",
+   "reference": "http://www.wikidata.org/entity/Q1718"
+  },
+  "DEA12": {
+   "country": "germany",
+   "file": "Flagge der Stadt Duisburg mit Wappen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2100"
+  },
+  "DEA13": {
+   "country": "germany",
+   "file": "Flagge Essen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2066"
+  },
+  "DEA14": {
+   "country": "germany",
+   "file": "Flagge Krefeld.svg",
+   "reference": "http://www.wikidata.org/entity/Q2805"
+  },
+  "DEA15": {
+   "country": "germany",
+   "file": "Flagge der kreisfreien Stadt Mönchengladbach.svg",
+   "reference": "http://www.wikidata.org/entity/Q2758"
+  },
+  "DEA16": {
+   "country": "germany",
+   "file": "DEU Mülheim an der Ruhr Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2899"
+  },
+  "DEA17": {
+   "country": "germany",
+   "file": "Flagge Oberhausen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2838"
+  },
+  "DEA18": {
+   "country": "germany",
+   "file": "Flagge Remscheid.svg",
+   "reference": "https://de.wikipedia.org/wiki/Remscheid"
+  },
+  "DEA19": {
+   "country": "germany",
+   "file": "Flagge Solingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2942"
+  },
+  "DEA1A": {
+   "country": "germany",
+   "file": "Flagge Wuppertal.svg",
+   "reference": "http://www.wikidata.org/entity/Q2107"
+  },
+  "DEA41": {
+   "country": "germany",
+   "file": "Hissflagge Bielefeld.svg",
+   "reference": "http://www.wikidata.org/entity/Q2112"
+  },
+  "DEA22": {
+   "country": "germany",
+   "file": "Flagge der kreisfreien Stadt Bonn.svg",
+   "reference": "http://www.wikidata.org/entity/Q586"
+  },
+  "DEA23": {
+   "country": "germany",
+   "file": "Flagge Köln.svg",
+   "reference": "http://www.wikidata.org/entity/Q365"
+  },
+  "DEA24": {
+   "country": "germany",
+   "file": "Flagge Leverkusen.svg",
+   "reference": "http://www.wikidata.org/entity/Q2938"
+  },
+  "DEB31": {
+   "country": "germany",
+   "file": "Flagge Frankenthal.svg",
+   "reference": "https://de.wikipedia.org/wiki/Frankenthal%20(Pfalz)"
+  },
+  "DEB32": {
+   "country": "germany",
+   "file": "Flag of Kaiserslautern.svg",
+   "reference": "http://www.wikidata.org/entity/Q3758"
+  },
+  "DEB33": {
+   "country": "germany",
+   "file": "Flagge Landau in der Pfalz.svg",
+   "reference": "http://www.wikidata.org/entity/Q7052"
+  },
+  "DEB34": {
+   "country": "germany",
+   "file": "Flagge Stadt Ludwigshafen am Rhein.svg",
+   "reference": "http://www.wikidata.org/entity/Q2910"
+  },
+  "DEB35": {
+   "country": "germany",
+   "file": "Mainz Flagge Hissformat.svg",
+   "reference": "http://www.wikidata.org/entity/Q1720"
+  },
+  "DEB36": {
+   "country": "germany",
+   "file": "Flagge Stadt Neustadt an der Weinstraße.svg",
+   "reference": "http://www.wikidata.org/entity/Q4149"
+  },
+  "DEB37": {
+   "country": "germany",
+   "file": "Flag of Pirmasens.svg",
+   "reference": "http://www.wikidata.org/entity/Q14849"
+  },
+  "DEB38": {
+   "country": "germany",
+   "file": "Flag of Speyer.svg",
+   "reference": "http://www.wikidata.org/entity/Q6829"
+  },
+  "DEB39": {
+   "country": "germany",
+   "file": "Flagge Worms.svg",
+   "reference": "http://www.wikidata.org/entity/Q3852"
+  },
+  "DEB3A": {
+   "country": "germany",
+   "file": "Flag of Zweibrücken.svg",
+   "reference": "http://www.wikidata.org/entity/Q16017"
+  },
+  "DEB21": {
+   "country": "germany",
+   "file": "Flagge Trier.svg",
+   "reference": "http://www.wikidata.org/entity/Q3138"
+  },
+  "DE129": {
+   "country": "germany",
+   "file": "Flag of Pforzheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q3046"
+  },
+  "DE121": {
+   "country": "germany",
+   "file": "DEU Baden-Baden Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4100"
+  },
+  "DE122": {
+   "country": "germany",
+   "file": "DEU Karlsruhe Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q1040"
+  },
+  "DE117": {
+   "country": "germany",
+   "file": "Flagge Heilbronn.svg",
+   "reference": "http://www.wikidata.org/entity/Q715"
+  },
+  "DE131": {
+   "country": "germany",
+   "file": "Flagge Freiburg im Breisgau.svg",
+   "reference": "http://www.wikidata.org/entity/Q2833"
+  },
+  "DE125": {
+   "country": "germany",
+   "file": "Flagge Heidelberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2966"
+  },
+  "DE126": {
+   "country": "germany",
+   "file": "Flagge Mannheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q2119"
+  },
+  "DE111": {
+   "country": "germany",
+   "file": "Flagge Stuttgart.svg",
+   "reference": "http://www.wikidata.org/entity/Q1022"
+  },
+  "DE261": {
+   "country": "germany",
+   "file": "Flagge Aschaffenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3942"
+  },
+  "DE262": {
+   "country": "germany",
+   "file": "Flagge Schweinfurt.svg",
+   "reference": "http://www.wikidata.org/entity/Q4126"
+  },
+  "DE263": {
+   "country": "germany",
+   "file": "Flagge Würzburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2999"
+  },
+  "DE251": {
+   "country": "germany",
+   "file": "Flagge Ansbach.svg",
+   "reference": "http://www.wikidata.org/entity/Q14859"
+  },
+  "DE252": {
+   "country": "germany",
+   "file": "Flagge Erlangen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3126"
+  },
+  "DE253": {
+   "country": "germany",
+   "file": "Flagge Fürth.svg",
+   "reference": "http://www.wikidata.org/entity/Q3075"
+  },
+  "DE254": {
+   "country": "germany",
+   "file": "Flagge Nürnberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2090"
+  },
+  "DE255": {
+   "country": "germany",
+   "file": "Flagge Schwabach.svg",
+   "reference": "http://www.wikidata.org/entity/Q14889"
+  },
+  "DE241": {
+   "country": "germany",
+   "file": "Flagge Bamberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3936"
+  },
+  "DE242": {
+   "country": "germany",
+   "file": "Flagge Bayreuth.svg",
+   "reference": "http://www.wikidata.org/entity/Q3923"
+  },
+  "DE243": {
+   "country": "germany",
+   "file": "Flagge Coburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q14821"
+  },
+  "DE244": {
+   "country": "germany",
+   "file": "Flagge Hof.svg",
+   "reference": "http://www.wikidata.org/entity/Q6938"
+  },
+  "DE271": {
+   "country": "germany",
+   "file": "DEU Augsburg Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2749"
+  },
+  "DE272": {
+   "country": "germany",
+   "file": "Flagge Kaufbeuren.svg",
+   "reference": "http://www.wikidata.org/entity/Q14805"
+  },
+  "DE273": {
+   "country": "germany",
+   "file": "Flagge Kempten (Allgäu).svg",
+   "reference": "http://www.wikidata.org/entity/Q3994"
+  },
+  "DE274": {
+   "country": "germany",
+   "file": "Flagge Memmingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q14825"
+  },
+  "DE144": {
+   "country": "germany",
+   "file": "Flagge Ulm.svg",
+   "reference": "http://www.wikidata.org/entity/Q3012"
+  },
+  "DE231": {
+   "country": "germany",
+   "file": "Flagge Amberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q7042"
+  },
+  "DE232": {
+   "country": "germany",
+   "file": "Flagge Regensburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q2978"
+  },
+  "DE233": {
+   "country": "germany",
+   "file": "Flagge Weiden in der Oberpfalz.svg",
+   "reference": "http://www.wikidata.org/entity/Q14803"
+  },
+  "DE221": {
+   "country": "germany",
+   "file": "Flagge Landshut.svg",
+   "reference": "http://www.wikidata.org/entity/Q3974"
+  },
+  "DE222": {
+   "country": "germany",
+   "file": "Flagge Passau.svg",
+   "reference": "http://www.wikidata.org/entity/Q4190"
+  },
+  "DE223": {
+   "country": "germany",
+   "file": "Flagge Straubing.svg",
+   "reference": "http://www.wikidata.org/entity/Q7027"
+  },
+  "DE211": {
+   "country": "germany",
+   "file": "Flagge Ingolstadt.svg",
+   "reference": "http://www.wikidata.org/entity/Q3004"
+  },
+  "DE212": {
+   "country": "germany",
+   "file": "Flag of Munich (striped).svg",
+   "reference": "http://www.wikidata.org/entity/Q1726"
+  },
+  "DE213": {
+   "country": "germany",
+   "file": "Flagge Rosenheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q4007"
+  },
+  "DED41": {
+   "country": "germany",
+   "file": "Flag of Chemnitz.svg",
+   "reference": "http://www.wikidata.org/entity/Q2795"
+  },
+  "DED51": {
+   "country": "germany",
+   "file": "Flag of Leipzig.svg",
+   "reference": "http://www.wikidata.org/entity/Q2079"
+  },
+  "DEE01": {
+   "country": "germany",
+   "file": "Flagge Dessau-Roßlau.svg",
+   "reference": "http://www.wikidata.org/entity/Q3828"
+  },
+  "DEE02": {
+   "country": "germany",
+   "file": "Flagge Halle (Saale).svg",
+   "reference": "http://www.wikidata.org/entity/Q2814"
+  },
+  "DEE03": {
+   "country": "germany",
+   "file": "Flagge Magdeburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q1733"
+  },
+  "DED21": {
+   "country": "germany",
+   "file": "Flag of Dresden.svg",
+   "reference": "http://www.wikidata.org/entity/Q1731"
+  },
+  "DEG01": {
+   "country": "germany",
+   "file": "Flagge der kreisfreien Stadt Erfurt laut Hauptsatzung.svg",
+   "reference": "http://www.wikidata.org/entity/Q1729"
+  },
+  "DEG02": {
+   "country": "germany",
+   "file": "Hissflagge Gera.svg",
+   "reference": "http://www.wikidata.org/entity/Q3750"
+  },
+  "DEG03": {
+   "country": "germany",
+   "file": "Flag of Jena.svg",
+   "reference": "http://www.wikidata.org/entity/Q3150"
+  },
+  "DEG0S": {
+   "country": "germany",
+   "file": "Hissflagge Suhl.svg",
+   "reference": "http://www.wikidata.org/entity/Q14891"
+  },
+  "DEG05": {
+   "country": "germany",
+   "file": "Hissflagge Weimar.svg",
+   "reference": "https://de.wikipedia.org/wiki/Weimar"
+  },
+  "DE401": {
+   "country": "germany",
+   "file": "Flagge der Stadt Brandenburg an der Havel.svg",
+   "reference": "http://www.wikidata.org/entity/Q3931"
+  },
+  "DE402": {
+   "country": "germany",
+   "file": "DEU Cottbus Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3214"
+  },
+  "DE403": {
+   "country": "germany",
+   "file": "Hissflagge der Stadt Frankfurt an der Oder.svg",
+   "reference": "http://www.wikidata.org/entity/Q4024"
+  },
+  "DE404": {
+   "country": "germany",
+   "file": "Flag of Potsdam.svg",
+   "reference": "http://www.wikidata.org/entity/Q1711"
+  },
+  "DE803": {
+   "country": "germany",
+   "file": "Flagge der Hansestadt Rostock.svg",
+   "reference": "http://www.wikidata.org/entity/Q2861"
+  },
+  "DE804": {
+   "country": "germany",
+   "file": "Flagge Schwerin.svg",
+   "reference": "http://www.wikidata.org/entity/Q1709"
+  },
+  "NL32": {
+   "country": "netherlands",
+   "file": "Flag of North Holland.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL36": {
+   "country": "netherlands",
+   "file": "Flag of Zuid-Holland.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL35": {
+   "country": "netherlands",
+   "file": "Utrecht (province)-Flag.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL34": {
+   "country": "netherlands",
+   "file": "Flag of Zeeland.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL22": {
+   "country": "netherlands",
+   "file": "Flag of Gelderland.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL12": {
+   "country": "netherlands",
+   "file": "Frisian flag.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL41": {
+   "country": "netherlands",
+   "file": "North Brabant-Flag.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL11": {
+   "country": "netherlands",
+   "file": "Flag of Groningen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL42": {
+   "country": "netherlands",
+   "file": "Flag of Limburg (Netherlands).svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL23": {
+   "country": "netherlands",
+   "file": "Flag of Flevoland.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL13": {
+   "country": "netherlands",
+   "file": "Flag of Drenthe.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "NL21": {
+   "country": "netherlands",
+   "file": "Flag of Overijssel.svg",
+   "reference": "https://en.wikipedia.org/wiki/Flags_of_provinces_of_the_Netherlands"
+  },
+  "BE2": {
+   "country": "belgium",
+   "file": "Flag of Flanders.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE3": {
+   "country": "belgium",
+   "file": "Flag of Wallonia.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE1": {
+   "country": "belgium",
+   "file": "Flag of the Brussels-Capital Region.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE21": {
+   "country": "belgium",
+   "file": "Flag of Antwerp.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE22": {
+   "country": "belgium",
+   "file": "Flag of Limburg (Belgium).svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE23": {
+   "country": "belgium",
+   "file": "Vlag van Oost-Vlaanderen.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE24": {
+   "country": "belgium",
+   "file": "Flemish Brabant flag.png",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE25": {
+   "country": "belgium",
+   "file": "Flag of West Flanders.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE31": {
+   "country": "belgium",
+   "file": "Flag Walloon-brabant.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE34": {
+   "country": "belgium",
+   "file": "Official flag of the Arelerland.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE35": {
+   "country": "belgium",
+   "file": "Flag province namur.svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "BE_21004": {
+   "country": "belgium",
+   "file": "Vlag van Brussel (stad).svg",
+   "reference": "https://en.wikipedia.org/wiki/List_of_Belgian_flags"
+  },
+  "DE_02000000": {
+   "country": "germany",
+   "file": "Flag of Hamburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q1055"
+  },
+  "DE_03252006": {
+   "country": "germany",
+   "file": "DEU Hamelin Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4062"
+  },
+  "DE_03254021": {
+   "country": "germany",
+   "file": "Flagge Hildesheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q3185"
+  },
+  "DE_03355022": {
+   "country": "germany",
+   "file": "Flagge Lueneburg.svg",
+   "reference": "https://en.wikipedia.org/wiki/L%C3%BCneburg"
+  },
+  "DE_03153017": {
+   "country": "germany",
+   "file": "Flagge Goslar.svg",
+   "reference": "http://www.wikidata.org/entity/Q3896"
+  },
+  "DE_01060063": {
+   "country": "germany",
+   "file": "Norderstedt-Flagge.png",
+   "reference": "https://en.wikipedia.org/wiki/Norderstedt"
+  },
+  "DE_03157006": {
+   "country": "germany",
+   "file": "Flag green red 5x3.svg",
+   "reference": "http://www.wikidata.org/entity/Q6850"
+  },
+  "DE_03158037": {
+   "country": "germany",
+   "file": "Flag red white blue 5x3.svg",
+   "reference": "http://www.wikidata.org/entity/Q4122"
+  },
+  "DE_03351006": {
+   "country": "germany",
+   "file": "Flagge Celle.svg",
+   "reference": "http://www.wikidata.org/entity/Q3933"
+  },
+  "DE_03159016": {
+   "country": "germany",
+   "file": "Flagge Goettingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3033"
+  },
+  "DE_03241001": {
+   "country": "germany",
+   "file": "Flagge Hannover.svg",
+   "reference": "http://www.wikidata.org/entity/Q1715"
+  },
+  "DE_01056015": {
+   "country": "germany",
+   "file": "Flagge Elmshorn.png",
+   "reference": "http://www.wikidata.org/entity/Q6845"
+  },
+  "DE_06532023": {
+   "country": "germany",
+   "file": "DEU Wetzlar Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4178"
+  },
+  "DE_07133006": {
+   "country": "germany",
+   "file": "Bad Kreuznach Banner.svg",
+   "reference": "https://en.wikipedia.org/wiki/Bad%20Kreuznach"
+  },
+  "DE_06534014": {
+   "country": "germany",
+   "file": "Flagge Marburg 2.svg",
+   "reference": "https://en.wikipedia.org/wiki/Marburg"
+  },
+  "DE_06631009": {
+   "country": "germany",
+   "file": "Flagge der Stadt Fulda.png",
+   "reference": "http://www.wikidata.org/entity/Q3963"
+  },
+  "DE_05362008": {
+   "country": "germany",
+   "file": "Flagge Bergheim.svg",
+   "reference": "http://www.wikidata.org/entity/Q3989"
+  },
+  "DE_05362020": {
+   "country": "germany",
+   "file": "Flagge der Stadt Erftstadt.svg",
+   "reference": "https://en.wikipedia.org/wiki/Erftstadt"
+  },
+  "DE_05362024": {
+   "country": "germany",
+   "file": "Flagge Frechen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Frechen"
+  },
+  "DE_05362028": {
+   "country": "germany",
+   "file": "Flagge Huerth.svg",
+   "reference": "http://www.wikidata.org/entity/Q4060"
+  },
+  "DE_05362032": {
+   "country": "germany",
+   "file": "Flagge Kerpen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3959"
+  },
+  "DE_05362036": {
+   "country": "germany",
+   "file": "Banner Pulheim.svg",
+   "reference": "https://en.wikipedia.org/wiki/Pulheim"
+  },
+  "DE_05774032": {
+   "country": "germany",
+   "file": "Flagge der Stadt Paderborn.svg",
+   "reference": "http://www.wikidata.org/entity/Q2971"
+  },
+  "DE_03454032": {
+   "country": "germany",
+   "file": "Flagge Lingen (Ems).svg",
+   "reference": "http://www.wikidata.org/entity/Q4185"
+  },
+  "DE_05954016": {
+   "country": "germany",
+   "file": "Flagge Hattingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q4082"
+  },
+  "DE_05954036": {
+   "country": "germany",
+   "file": "Flagge Witten.svg",
+   "reference": "http://www.wikidata.org/entity/Q3764"
+  },
+  "DE_05958004": {
+   "country": "germany",
+   "file": "Flagge Arnsberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3912"
+  },
+  "DE_06435014": {
+   "country": "germany",
+   "file": "Flagge Hanau.svg",
+   "reference": "https://en.wikipedia.org/wiki/Hanau"
+  },
+  "DE_05366016": {
+   "country": "germany",
+   "file": "Flagge Euskirchen.svg",
+   "reference": "http://www.wikidata.org/entity/Q4074"
+  },
+  "DE_05962024": {
+   "country": "germany",
+   "file": "Flagge Iserlohn.svg",
+   "reference": "http://www.wikidata.org/entity/Q1130"
+  },
+  "DE_05962032": {
+   "country": "germany",
+   "file": "Flagge Luedenscheid.svg",
+   "reference": "http://www.wikidata.org/entity/Q3893"
+  },
+  "DE_03456015": {
+   "country": "germany",
+   "file": "Flagge Nordhorn.svg",
+   "reference": "http://www.wikidata.org/entity/Q4133"
+  },
+  "DE_05962040": {
+   "country": "germany",
+   "file": "Flagge Menden.svg",
+   "reference": "http://www.wikidata.org/entity/Q4086"
+  },
+  "DE_05374012": {
+   "country": "germany",
+   "file": "Flagge Gummersbach.svg",
+   "reference": "http://www.wikidata.org/entity/Q4181"
+  },
+  "DE_05970040": {
+   "country": "germany",
+   "file": "Flagge Siegen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3167"
+  },
+  "DE_05378004": {
+   "country": "germany",
+   "file": "Flagge Bergisch Gladbach.svg",
+   "reference": "http://www.wikidata.org/entity/Q3117"
+  },
+  "DE_05974028": {
+   "country": "germany",
+   "file": "Banner Lippstadt HS.svg",
+   "reference": "http://www.wikidata.org/entity/Q3943"
+  },
+  "DE_05978024": {
+   "country": "germany",
+   "file": "Flagge Luenen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3822"
+  },
+  "DE_05382056": {
+   "country": "germany",
+   "file": "Flagge Sankt Augustin.svg",
+   "reference": "http://www.wikidata.org/entity/Q4090"
+  },
+  "DE_05382068": {
+   "country": "germany",
+   "file": "Flagge Troisdorf.svg",
+   "reference": "http://www.wikidata.org/entity/Q3900"
+  },
+  "DE_05978036": {
+   "country": "germany",
+   "file": "Flagge Unna.svg",
+   "reference": "http://www.wikidata.org/entity/Q3949"
+  },
+  "DE_05554008": {
+   "country": "germany",
+   "file": "Flagge Bocholt.svg",
+   "reference": "http://www.wikidata.org/entity/Q3917"
+  },
+  "DE_05554020": {
+   "country": "germany",
+   "file": "Flagge Gronau.svg",
+   "reference": "http://www.wikidata.org/entity/Q6924"
+  },
+  "DE_05562004": {
+   "country": "germany",
+   "file": "Flagge Castrop-Rauxel.svg",
+   "reference": "http://www.wikidata.org/entity/Q3898"
+  },
+  "DE_05562012": {
+   "country": "germany",
+   "file": "Banner Dorsten.svg",
+   "reference": "http://www.wikidata.org/entity/Q3886"
+  },
+  "DE_05562014": {
+   "country": "germany",
+   "file": "Flagge Gladbeck.svg",
+   "reference": "http://www.wikidata.org/entity/Q3905"
+  },
+  "DE_05562020": {
+   "country": "germany",
+   "file": "Banner Herten.svg",
+   "reference": "http://www.wikidata.org/entity/Q3985"
+  },
+  "DE_05562024": {
+   "country": "germany",
+   "file": "Flagge Marl.svg",
+   "reference": "http://www.wikidata.org/entity/Q3813"
+  },
+  "DE_05562032": {
+   "country": "germany",
+   "file": "Flagge Recklinghausen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3050"
+  },
+  "DE_05566028": {
+   "country": "germany",
+   "file": "Flagge Ibbenbueren.svg",
+   "reference": "https://en.wikipedia.org/wiki/Ibbenb%C3%BCren"
+  },
+  "DE_05566076": {
+   "country": "germany",
+   "file": "Flagge Rheine.svg",
+   "reference": "http://www.wikidata.org/entity/Q3890"
+  },
+  "DE_05570004": {
+   "country": "germany",
+   "file": "Banner Ahlen.svg",
+   "reference": "http://www.wikidata.org/entity/Q1132"
+  },
+  "DE_05154036": {
+   "country": "germany",
+   "file": "DEU Kleve Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q6842"
+  },
+  "DE_05754008": {
+   "country": "germany",
+   "file": "Flagge der Stadt Gütersloh.svg",
+   "reference": "http://www.wikidata.org/entity/Q3771"
+  },
+  "DE_05158016": {
+   "country": "germany",
+   "file": "Flagge Hilden.svg",
+   "reference": "http://www.wikidata.org/entity/Q4094"
+  },
+  "DE_05158020": {
+   "country": "germany",
+   "file": "Flagge Langenfeld.svg",
+   "reference": "http://www.wikidata.org/entity/Q4048"
+  },
+  "DE_05158028": {
+   "country": "germany",
+   "file": "Flagge Ratingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3791"
+  },
+  "DE_05158032": {
+   "country": "germany",
+   "file": "Flagge Velbert.svg",
+   "reference": "http://www.wikidata.org/entity/Q3840"
+  },
+  "DE_05162004": {
+   "country": "germany",
+   "file": "Flagge Dormagen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3978"
+  },
+  "DE_05162008": {
+   "country": "germany",
+   "file": "Flagge Grevenbroich.svg",
+   "reference": "https://en.wikipedia.org/wiki/Grevenbroich"
+  },
+  "DE_05162022": {
+   "country": "germany",
+   "file": "Flagge Meerbusch.svg",
+   "reference": "http://www.wikidata.org/entity/Q4105"
+  },
+  "DE_05758012": {
+   "country": "germany",
+   "file": "Flagge Herford.svg",
+   "reference": "http://www.wikidata.org/entity/Q3971"
+  },
+  "DE_05162024": {
+   "country": "germany",
+   "file": "Flagge Neuss.svg",
+   "reference": "http://www.wikidata.org/entity/Q2948"
+  },
+  "DE_05166032": {
+   "country": "germany",
+   "file": "Flagge Viersen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3902"
+  },
+  "DE_05166036": {
+   "country": "germany",
+   "file": "Flagge der Stadt Willich.svg",
+   "reference": "http://www.wikidata.org/entity/Q4171"
+  },
+  "DE_05170008": {
+   "country": "germany",
+   "file": "Flagge Dinslaken.svg",
+   "reference": "http://www.wikidata.org/entity/Q3939"
+  },
+  "DE_05170024": {
+   "country": "germany",
+   "file": "DEU Moers Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3132"
+  },
+  "DE_05766008": {
+   "country": "germany",
+   "file": "Flagge Bad Salzuflen.svg",
+   "reference": "http://www.wikidata.org/entity/Q4108"
+  },
+  "DE_06433012": {
+   "country": "germany",
+   "file": "Rüsselsheim Flagge.svg",
+   "reference": "https://en.wikipedia.org/wiki/R%C3%BCsselsheim%20am%20Main"
+  },
+  "DE_06531005": {
+   "country": "germany",
+   "file": "Flagge Gießen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Gie%C3%9Fen"
+  },
+  "DE_05170048": {
+   "country": "germany",
+   "file": "Flagge Wesel.svg",
+   "reference": "http://www.wikidata.org/entity/Q4011"
+  },
+  "DE_05334002": {
+   "country": "germany",
+   "file": "Flagge Aachen.svg",
+   "reference": "http://www.wikidata.org/entity/Q1017"
+  },
+  "DE_05334012": {
+   "country": "germany",
+   "file": "Flagge Eschweiler.svg",
+   "reference": "http://www.wikidata.org/entity/Q4083"
+  },
+  "DE_05766020": {
+   "country": "germany",
+   "file": "Flagge Detmold.svg",
+   "reference": "http://www.wikidata.org/entity/Q3922"
+  },
+  "DE_06434001": {
+   "country": "germany",
+   "file": "DEU Bad Homburg vor der Höhe Banner (COA).svg",
+   "reference": "http://www.wikidata.org/entity/Q4165"
+  },
+  "DE_05334032": {
+   "country": "germany",
+   "file": "Flagge Stolberg Rhld.svg",
+   "reference": "http://www.wikidata.org/entity/Q4068"
+  },
+  "DE_05358008": {
+   "country": "germany",
+   "file": "Flagge der Stadt Düren.svg",
+   "reference": "http://www.wikidata.org/entity/Q1884"
+  },
+  "DE_05770024": {
+   "country": "germany",
+   "file": "Flagge Minden.svg",
+   "reference": "http://www.wikidata.org/entity/Q3846"
+  },
+  "DE_07138045": {
+   "country": "germany",
+   "file": "Flag of Neuwied.svg",
+   "reference": "http://www.wikidata.org/entity/Q3967"
+  },
+  "DE_08117026": {
+   "country": "germany",
+   "file": "Flagge Göppingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/G%C3%B6ppingen"
+  },
+  "DE_08136088": {
+   "country": "germany",
+   "file": "Hissflagge Aalen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3951"
+  },
+  "DE_08118048": {
+   "country": "germany",
+   "file": "Flagge Ludwigsburg.svg",
+   "reference": "https://en.wikipedia.org/wiki/Ludwigsburg"
+  },
+  "DE_08317096": {
+   "country": "germany",
+   "file": "Flag of Offenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q4044"
+  },
+  "DE_08119079": {
+   "country": "germany",
+   "file": "Flagge Waiblingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Waiblingen"
+  },
+  "DE_08216043": {
+   "country": "germany",
+   "file": "Flagge Rastatt.svg",
+   "reference": "https://en.wikipedia.org/wiki/Rastatt"
+  },
+  "DE_08326074": {
+   "country": "germany",
+   "file": "Flagge Villingen-Schwenningen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Villingen-Schwenningen"
+  },
+  "DE_08335043": {
+   "country": "germany",
+   "file": "Flagge Konstanz.svg",
+   "reference": "http://www.wikidata.org/entity/Q3834"
+  },
+  "DE_08336050": {
+   "country": "germany",
+   "file": "Banner Loerrach.svg",
+   "reference": "http://www.wikidata.org/entity/Q6855"
+  },
+  "DE_08136065": {
+   "country": "germany",
+   "file": "DEU Schwäbisch Gmünd Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4037"
+  },
+  "DE_08115003": {
+   "country": "germany",
+   "file": "Flagge Boeblingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q6931"
+  },
+  "DE_08115045": {
+   "country": "germany",
+   "file": "Flagge Sindelfingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Sindelfingen"
+  },
+  "DE_08116019": {
+   "country": "germany",
+   "file": "Flagge Esslingen am Neckar.svg",
+   "reference": "http://www.wikidata.org/entity/Q3786"
+  },
+  "DE_09775135": {
+   "country": "germany",
+   "file": "DEU Neu-Ulm Banner.svg",
+   "reference": "http://www.wikidata.org/entity/Q4120"
+  },
+  "DE_08416041": {
+   "country": "germany",
+   "file": "Flagge Tübingen.svg",
+   "reference": "https://en.wikipedia.org/wiki/T%C3%BCbingen"
+  },
+  "DE_08435016": {
+   "country": "germany",
+   "file": "Flagge Friedrichshafen.svg",
+   "reference": "https://en.wikipedia.org/wiki/Friedrichshafen"
+  },
+  "DE_08436064": {
+   "country": "germany",
+   "file": "Flag of Ravensburg.svg",
+   "reference": "https://en.wikipedia.org/wiki/Ravensburg"
+  },
+  "DE_08415061": {
+   "country": "germany",
+   "file": "Flagge Reutlingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q3085"
+  },
+  "DE_13075039": {
+   "country": "germany",
+   "file": "Hissflagge der Stadt Greifswald.svg",
+   "reference": "http://www.wikidata.org/entity/Q4098"
+  },
+  "DE_14523320": {
+   "country": "germany",
+   "file": "Flag of Plauen.png",
+   "reference": "https://en.wikipedia.org/wiki/Plauen"
+  },
+  "DE_14524330": {
+   "country": "germany",
+   "file": "Flagge Zwickau.svg",
+   "reference": "http://www.wikidata.org/entity/Q3778"
+  },
+  "DE_14626110": {
+   "country": "germany",
+   "file": "DEU Görlitz flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q4077"
+  },
+  "DE_13071107": {
+   "country": "germany",
+   "file": "Flagge Neubrandenburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3958"
+  },
+  "DE_11000000": {
+   "country": "germany",
+   "file": "Flag of Berlin.svg",
+   "reference": "http://www.wikidata.org/entity/Q64"
+  },
+  "DE_10041100": {
+   "country": "germany",
+   "file": "Flag of Saarbrücken.svg",
+   "reference": "http://www.wikidata.org/entity/Q1724"
+  },
+  "DE_13073088": {
+   "country": "germany",
+   "file": "Flag of Stralsund.svg",
+   "reference": "http://www.wikidata.org/entity/Q4065"
+  },
+  "NL_GM0439": {
+   "country": "netherlands",
+   "file": "Flag of Purmerend.svg",
+   "reference": "http://www.wikidata.org/entity/Q110423208"
+  },
+  "NL_GM0453": {
+   "country": "netherlands",
+   "file": "Velsen vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9970"
+  },
+  "NL_GM0479": {
+   "country": "netherlands",
+   "file": "Flag of Zaanstad.svg",
+   "reference": "http://www.wikidata.org/entity/Q9978"
+  },
+  "NL_GM0484": {
+   "country": "netherlands",
+   "file": "Vlag Alphen aan den Rijn.svg",
+   "reference": "http://www.wikidata.org/entity/Q213246"
+  },
+  "NL_GM0502": {
+   "country": "netherlands",
+   "file": "Capelle aan den IJssel vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q734860"
+  },
+  "NL_GM0503": {
+   "country": "netherlands",
+   "file": "Flag of Delft.svg",
+   "reference": "http://www.wikidata.org/entity/Q690"
+  },
+  "NL_GM0505": {
+   "country": "netherlands",
+   "file": "Flag of Dordrecht.svg",
+   "reference": "http://www.wikidata.org/entity/Q26421"
+  },
+  "NL_GM0513": {
+   "country": "netherlands",
+   "file": "Flag of Gouda.svg",
+   "reference": "http://www.wikidata.org/entity/Q84125"
+  },
+  "NL_GM0518": {
+   "country": "netherlands",
+   "file": "Flag of The Hague.svg",
+   "reference": "http://www.wikidata.org/entity/Q36600"
+  },
+  "NL_GM0537": {
+   "country": "netherlands",
+   "file": "Katwijk vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q208764"
+  },
+  "NL_GM0546": {
+   "country": "netherlands",
+   "file": "Flag of Leiden.svg",
+   "reference": "http://www.wikidata.org/entity/Q43631"
+  },
+  "NL_GM0599": {
+   "country": "netherlands",
+   "file": "Flag of Rotterdam.svg",
+   "reference": "http://www.wikidata.org/entity/Q2680952"
+  },
+  "NL_GM0603": {
+   "country": "netherlands",
+   "file": "Flag of Rijswijk.svg",
+   "reference": "http://www.wikidata.org/entity/Q506745"
+  },
+  "NL_GM0606": {
+   "country": "netherlands",
+   "file": "Flag of Schiedam.svg",
+   "reference": "http://www.wikidata.org/entity/Q204709"
+  },
+  "NL_GM0622": {
+   "country": "netherlands",
+   "file": "Flag of Vlaardingen.svg",
+   "reference": "http://www.wikidata.org/entity/Q210007"
+  },
+  "NL_GM0632": {
+   "country": "netherlands",
+   "file": "Woerden vlag 2017.svg",
+   "reference": "http://www.wikidata.org/entity/Q5128"
+  },
+  "NL_GM0637": {
+   "country": "netherlands",
+   "file": "Zoetermeer vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q26432"
+  },
+  "NL_GM0687": {
+   "country": "netherlands",
+   "file": "Middelburg vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10076"
+  },
+  "NL_GM0715": {
+   "country": "netherlands",
+   "file": "Terneuzen vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10081"
+  },
+  "NL_GM0748": {
+   "country": "netherlands",
+   "file": "Bergen op Zoom vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9814"
+  },
+  "NL_GM0758": {
+   "country": "netherlands",
+   "file": "Flag of Breda.svg",
+   "reference": "http://www.wikidata.org/entity/Q9822"
+  },
+  "NL_GM0772": {
+   "country": "netherlands",
+   "file": "Flag of Eindhoven.svg",
+   "reference": "http://www.wikidata.org/entity/Q9832"
+  },
+  "NL_GM0794": {
+   "country": "netherlands",
+   "file": "Helmond vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9844"
+  },
+  "NL_GM0796": {
+   "country": "netherlands",
+   "file": "Flag of 's-Hertogenbosch.svg",
+   "reference": "http://www.wikidata.org/entity/Q9807"
+  },
+  "NL_GM0826": {
+   "country": "netherlands",
+   "file": "Flag of Oosterhout.svg",
+   "reference": "http://www.wikidata.org/entity/Q9858"
+  },
+  "NL_GM0828": {
+   "country": "netherlands",
+   "file": "Flag of Oss.svg",
+   "reference": "http://www.wikidata.org/entity/Q9859"
+  },
+  "NL_GM0855": {
+   "country": "netherlands",
+   "file": "Flag of Tilburg.svg",
+   "reference": "http://www.wikidata.org/entity/Q26430"
+  },
+  "NL_GM0867": {
+   "country": "netherlands",
+   "file": "Waalwijk vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q745038"
+  },
+  "NL_GM0917": {
+   "country": "netherlands",
+   "file": "Heerlen vlag officieel.svg",
+   "reference": "http://www.wikidata.org/entity/Q9799"
+  },
+  "NL_GM0935": {
+   "country": "netherlands",
+   "file": "Flag of Maastricht.svg",
+   "reference": "http://www.wikidata.org/entity/Q1309"
+  },
+  "NL_GM0957": {
+   "country": "netherlands",
+   "file": "Roermond vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q8167972"
+  },
+  "NL_GM0983": {
+   "country": "netherlands",
+   "file": "Venlo vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9777"
+  },
+  "NL_GM0988": {
+   "country": "netherlands",
+   "file": "Flag of Weert.svg",
+   "reference": "http://www.wikidata.org/entity/Q9774"
+  },
+  "NL_GM0995": {
+   "country": "netherlands",
+   "file": "Flag of Lelystad.svg",
+   "reference": "http://www.wikidata.org/entity/Q166065"
+  },
+  "NL_GM0014": {
+   "country": "netherlands",
+   "file": "Flag of Groningen City.svg",
+   "reference": "http://www.wikidata.org/entity/Q892526"
+  },
+  "NL_GM0034": {
+   "country": "netherlands",
+   "file": "Almere vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q83178"
+  },
+  "NL_GM1581": {
+   "country": "netherlands",
+   "file": "Utrechtse Heuvelrug vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10043"
+  },
+  "NL_GM1621": {
+   "country": "netherlands",
+   "file": "Flag Lansingerland.svg",
+   "reference": "http://www.wikidata.org/entity/Q1144739"
+  },
+  "NL_GM1674": {
+   "country": "netherlands",
+   "file": "Roosendaal vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9861"
+  },
+  "NL_GM0074": {
+   "country": "netherlands",
+   "file": "Heerenveen flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q574558"
+  },
+  "NL_GM0080": {
+   "country": "netherlands",
+   "file": "Leeuwarden vlag 2014.svg",
+   "reference": "http://www.wikidata.org/entity/Q2311189"
+  },
+  "NL_GM0090": {
+   "country": "netherlands",
+   "file": "Smallingerland flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q507065"
+  },
+  "NL_GM0106": {
+   "country": "netherlands",
+   "file": "Flag of Assen.svg",
+   "reference": "http://www.wikidata.org/entity/Q798"
+  },
+  "NL_GM0114": {
+   "country": "netherlands",
+   "file": "Emmen vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q14641"
+  },
+  "NL_GM0118": {
+   "country": "netherlands",
+   "file": "Flag of Hoogeveen.svg",
+   "reference": "http://www.wikidata.org/entity/Q208012"
+  },
+  "NL_GM0141": {
+   "country": "netherlands",
+   "file": "Almelo flag outline.svg",
+   "reference": "http://www.wikidata.org/entity/Q988"
+  },
+  "NL_GM0150": {
+   "country": "netherlands",
+   "file": "Deventer vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10001"
+  },
+  "NL_GM0153": {
+   "country": "netherlands",
+   "file": "Vlag stad Enschede.svg",
+   "reference": "http://www.wikidata.org/entity/Q134486510"
+  },
+  "NL_GM0160": {
+   "country": "netherlands",
+   "file": "Flag of Hardenberg.svg",
+   "reference": "http://www.wikidata.org/entity/Q3916626"
+  },
+  "NL_GM0164": {
+   "country": "netherlands",
+   "file": "Flag of Hengelo, Overijssel.svg",
+   "reference": "http://www.wikidata.org/entity/Q10006"
+  },
+  "NL_GM0166": {
+   "country": "netherlands",
+   "file": "Flag of Kampen.svg",
+   "reference": "http://www.wikidata.org/entity/Q23814173"
+  },
+  "NL_GM0171": {
+   "country": "netherlands",
+   "file": "Noordoostpolder vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q69262"
+  },
+  "NL_GM0193": {
+   "country": "netherlands",
+   "file": "Flag of Zwolle.svg",
+   "reference": "http://www.wikidata.org/entity/Q793"
+  },
+  "NL_GM0200": {
+   "country": "netherlands",
+   "file": "Apeldoorn vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q101918"
+  },
+  "NL_GM0202": {
+   "country": "netherlands",
+   "file": "VlagArnhem.svg",
+   "reference": "http://www.wikidata.org/entity/Q1310"
+  },
+  "NL_GM0203": {
+   "country": "netherlands",
+   "file": "Barneveld vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q164098"
+  },
+  "NL_GM0222": {
+   "country": "netherlands",
+   "file": "Flag of Doetinchem.svg",
+   "reference": "http://www.wikidata.org/entity/Q145845"
+  },
+  "NL_GM1783": {
+   "country": "netherlands",
+   "file": "Westland municipality flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q26556"
+  },
+  "NL_GM1883": {
+   "country": "netherlands",
+   "file": "Flag of Sittard-Geleen.svg",
+   "reference": "http://www.wikidata.org/entity/Q9781"
+  },
+  "NL_GM0228": {
+   "country": "netherlands",
+   "file": "Flag of Ede.svg",
+   "reference": "http://www.wikidata.org/entity/Q26555"
+  },
+  "NL_GM0268": {
+   "country": "netherlands",
+   "file": "Flag of Nijmegen.svg",
+   "reference": "http://www.wikidata.org/entity/Q47887"
+  },
+  "NL_GM1900": {
+   "country": "netherlands",
+   "file": "Súdwest-Fryslân vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q1473276"
+  },
+  "NL_GM1904": {
+   "country": "netherlands",
+   "file": "Stichtse Vecht vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q10042"
+  },
+  "NL_GM1916": {
+   "country": "netherlands",
+   "file": "Leidschendam-Voorburg vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q112675"
+  },
+  "NL_GM1924": {
+   "country": "netherlands",
+   "file": "Goeree-Overflakkee gemeentevlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q933459"
+  },
+  "NL_GM1926": {
+   "country": "netherlands",
+   "file": "Pijnacker-Nootdorp vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q281768"
+  },
+  "NL_GM1930": {
+   "country": "netherlands",
+   "file": "Nissewaard gemeentevlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q14853527"
+  },
+  "NL_GM1931": {
+   "country": "netherlands",
+   "file": "Flag of Krimpenerwaard.svg",
+   "reference": "http://www.wikidata.org/entity/Q15991891"
+  },
+  "NL_GM1940": {
+   "country": "netherlands",
+   "file": "De Friese Meren vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q2114866"
+  },
+  "NL_GM1942": {
+   "country": "netherlands",
+   "file": "Flag of Gooise Meren.svg",
+   "reference": "http://www.wikidata.org/entity/Q18335889",
+   "status": "Unofficial municipal logo flag"
+  },
+  "NL_GM0307": {
+   "country": "netherlands",
+   "file": "Amersfoort vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q992"
+  },
+  "NL_GM1948": {
+   "country": "netherlands",
+   "file": "Meierijstad vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q18655255"
+  },
+  "NL_GM1952": {
+   "country": "netherlands",
+   "file": "Midden-Groningen logo.svg",
+   "reference": "https://lokaleregelgeving.overheid.nl/CVDR717425/1",
+   "scope": "Municipal logo flag"
+  },
+  "NL_GM1959": {
+   "country": "netherlands",
+   "file": "Flag of Altena.svg",
+   "reference": "http://www.wikidata.org/entity/Q28057171"
+  },
+  "NL_GM1960": {
+   "country": "netherlands",
+   "file": "Vlag West Betuwe.svg",
+   "reference": "http://www.wikidata.org/entity/Q30142059"
+  },
+  "NL_GM1961": {
+   "country": "netherlands",
+   "file": "Flag of Vijfheerenlanden.svg",
+   "reference": "http://www.wikidata.org/entity/Q29032345"
+  },
+  "NL_GM1963": {
+   "country": "netherlands",
+   "file": "Flag of Hoeksche Waard.svg",
+   "reference": "http://www.wikidata.org/entity/Q56682979"
+  },
+  "NL_GM0321": {
+   "country": "netherlands",
+   "file": "Flag of Houten.svg",
+   "reference": "http://www.wikidata.org/entity/Q10044"
+  },
+  "NL_GM0344": {
+   "country": "netherlands",
+   "file": "Flag of Utrecht city.svg",
+   "reference": "http://www.wikidata.org/entity/Q803"
+  },
+  "NL_GM0345": {
+   "country": "netherlands",
+   "file": "Veenendaal Netherlands flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q1840"
+  },
+  "NL_GM0355": {
+   "country": "netherlands",
+   "file": "Flag of Zeist.svg",
+   "reference": "http://www.wikidata.org/entity/Q10056"
+  },
+  "NL_GM0356": {
+   "country": "netherlands",
+   "file": "Flag of Nieuwegein.svg",
+   "reference": "http://www.wikidata.org/entity/Q10050"
+  },
+  "NL_GM1969": {
+   "country": "netherlands",
+   "file": "Westerkwartier vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q30011757"
+  },
+  "NL_GM1980": {
+   "country": "netherlands",
+   "file": "Gemeente Dijk en Waard Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q104758977"
+  },
+  "NL_GM1982": {
+   "country": "netherlands",
+   "file": "Vlag Land van Cuijk.svg",
+   "reference": "http://www.wikidata.org/entity/Q107242476"
+  },
+  "NL_GM1991": {
+   "country": "netherlands",
+   "file": "Vlag van de Gemeente Maashorst.svg",
+   "reference": "http://www.wikidata.org/entity/Q104758976"
+  },
+  "NL_GM1992": {
+   "country": "netherlands",
+   "file": "Flag Voorne aan Zee.svg",
+   "reference": "http://www.wikidata.org/entity/Q106436626"
+  },
+  "NL_GM0361": {
+   "country": "netherlands",
+   "file": "Alkmaar Flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q972"
+  },
+  "NL_GM0362": {
+   "country": "netherlands",
+   "file": "Amstelveen flag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9898"
+  },
+  "NL_GM0363": {
+   "country": "netherlands",
+   "file": "Flag of Amsterdam.svg",
+   "reference": "http://www.wikidata.org/entity/Q9899"
+  },
+  "NL_GM0392": {
+   "country": "netherlands",
+   "file": "Flag Haarlem.svg",
+   "reference": "http://www.wikidata.org/entity/Q9920"
+  },
+  "NL_GM0394": {
+   "country": "netherlands",
+   "file": "Haarlemmermeer vlag 2019.svg",
+   "reference": "http://www.wikidata.org/entity/Q9924"
+  },
+  "NL_GM0400": {
+   "country": "netherlands",
+   "file": "Flag of Den Helder.svg",
+   "reference": "http://www.wikidata.org/entity/Q9911"
+  },
+  "NL_GM0402": {
+   "country": "netherlands",
+   "file": "Hilversum vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q9934"
+  },
+  "NL_GM0405": {
+   "country": "netherlands",
+   "file": "Flag of Hoorn.svg",
+   "reference": "http://www.wikidata.org/entity/Q9938"
+  },
+  "BE_11002": {
+   "country": "belgium",
+   "file": "Flag of Antwerp (City).svg",
+   "reference": "http://www.wikidata.org/entity/Q12892"
+  },
+  "BE_12025": {
+   "country": "belgium",
+   "file": "Flag of Mechlin.svg",
+   "reference": "http://www.wikidata.org/entity/Q162022"
+  },
+  "BE_25112": {
+   "country": "belgium",
+   "file": "Flag of Wavre.svg",
+   "reference": "http://www.wikidata.org/entity/Q181314"
+  },
+  "BE_31005": {
+   "country": "belgium",
+   "file": "Vlag van Brugge.png",
+   "reference": "http://www.wikidata.org/entity/Q12994"
+  },
+  "BE_34022": {
+   "country": "belgium",
+   "file": "Flag of Kortrijk.svg",
+   "reference": "http://www.wikidata.org/entity/Q12995"
+  },
+  "BE_35013": {
+   "country": "belgium",
+   "file": "Afbeelding OostendeVlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q12996"
+  },
+  "BE_21001": {
+   "country": "belgium",
+   "file": "Flag of Anderlecht.svg",
+   "reference": "http://www.wikidata.org/entity/Q12886"
+  },
+  "BE_21007": {
+   "country": "belgium",
+   "file": "Flag of Vorst.svg",
+   "reference": "http://www.wikidata.org/entity/Q72946"
+  },
+  "BE_21009": {
+   "country": "belgium",
+   "file": "Flag of Elsene.svg",
+   "reference": "http://www.wikidata.org/entity/Q208713"
+  },
+  "BE_21010": {
+   "country": "belgium",
+   "file": "Flag of Jette.svg",
+   "reference": "http://www.wikidata.org/entity/Q241918"
+  },
+  "BE_21012": {
+   "country": "belgium",
+   "file": "Molenbeek-Saint-Jean Belgium.svg",
+   "reference": "http://www.wikidata.org/entity/Q180775"
+  },
+  "BE_21015": {
+   "country": "belgium",
+   "file": "Schaerbeek Belgium.svg",
+   "reference": "http://www.wikidata.org/entity/Q12887"
+  },
+  "BE_21016": {
+   "country": "belgium",
+   "file": "Flag of Uccle.svg",
+   "reference": "http://www.wikidata.org/entity/Q203312"
+  },
+  "BE_21018": {
+   "country": "belgium",
+   "file": "Bandera Woluwe St Lambert.svg",
+   "reference": "http://www.wikidata.org/entity/Q211764"
+  },
+  "BE_24062": {
+   "country": "belgium",
+   "file": "Flag of Leuven.svg",
+   "reference": "http://www.wikidata.org/entity/Q118958"
+  },
+  "BE_44021": {
+   "country": "belgium",
+   "file": "Vlag van Gent.svg",
+   "reference": "http://www.wikidata.org/entity/Q1296"
+  },
+  "BE_46003": {
+   "country": "belgium",
+   "file": "Flag of Beveren.svg",
+   "reference": "http://www.wikidata.org/entity/Q270644"
+  },
+  "BE_92094": {
+   "country": "belgium",
+   "file": "Flag of Namur.svg",
+   "reference": "http://www.wikidata.org/entity/Q134121"
+  },
+  "BE_46021": {
+   "country": "belgium",
+   "file": "Flag of Sint-Niklaas.svg",
+   "reference": "http://www.wikidata.org/entity/Q13127"
+  },
+  "BE_52011": {
+   "country": "belgium",
+   "file": "Drapeau ville be Charleroi.svg",
+   "reference": "http://www.wikidata.org/entity/Q81046"
+  },
+  "BE_53053": {
+   "country": "belgium",
+   "file": "Flag of Mons.svg",
+   "reference": "http://www.wikidata.org/entity/Q83407"
+  },
+  "BE_57081": {
+   "country": "belgium",
+   "file": "Flag of Tournai.svg",
+   "reference": "http://www.wikidata.org/entity/Q173219"
+  },
+  "BE_57096": {
+   "country": "belgium",
+   "file": "Drapeau ville be Mouscron.svg",
+   "reference": "http://www.wikidata.org/entity/Q220145"
+  },
+  "BE_58001": {
+   "country": "belgium",
+   "file": "Flag of La Louvière.svg",
+   "reference": "http://www.wikidata.org/entity/Q211572"
+  },
+  "BE_62063": {
+   "country": "belgium",
+   "file": "LuikVlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q3992"
+  },
+  "BE_62096": {
+   "country": "belgium",
+   "file": "Flag of Seraing.svg",
+   "reference": "http://www.wikidata.org/entity/Q194037"
+  },
+  "BE_63079": {
+   "country": "belgium",
+   "file": "Verviers Belgium.svg",
+   "reference": "http://www.wikidata.org/entity/Q202954"
+  },
+  "BE_71016": {
+   "country": "belgium",
+   "file": "Genk vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q189692"
+  },
+  "BE_71022": {
+   "country": "belgium",
+   "file": "Hasselt (B) vlag.svg",
+   "reference": "https://en.wikipedia.org/wiki/Hasselt"
+  },
+  "BE_81001": {
+   "country": "belgium",
+   "file": "Flag of Arlon.svg",
+   "reference": "http://www.wikidata.org/entity/Q675960"
+  },
+  "BE_36015": {
+   "country": "belgium",
+   "file": "Flag of Roeselare.svg",
+   "reference": "http://www.wikidata.org/entity/Q211037"
+  },
+  "BE_41002": {
+   "country": "belgium",
+   "file": "Aalst (Oost-Vlaanderen) vlag.svg",
+   "reference": "http://www.wikidata.org/entity/Q13121"
+  },
+  "BE32": {
+   "country": "belgium",
+   "file": "Generieke vlag van Henegouwen.svg",
+   "status": "Unofficial provincial banner",
+   "reference": "https://www.crwflags.com/fotw/flags/be-wht.html"
+  },
+  "BE33": {
+   "country": "belgium",
+   "file": "Flag of the Province of Liège.svg",
+   "status": "Unofficial provincial banner",
+   "reference": "https://www.crwflags.com/fotw/flags/be-wlg.html"
+  },
+  "DE_03241005": {
+   "country": "germany",
+   "file": "Garbsen municipal flag rendition.svg",
+   "localOriginal": "scripts/flag-renderings/garbsen-flag.svg",
+   "scope": "Municipal flag rendition",
+   "reference": "https://www.garbsen.de/rathaus/verwaltung/stadtrecht/",
+   "credit": "Boundary Atlas; public-domain municipal arms from Wikimedia Commons",
+   "license": "Public domain (official municipal symbols)",
+   "width": 900,
+   "height": 600
+  },
+  "DE_03241010": {
+   "country": "germany",
+   "file": "Langenhagen municipal flag rendition.svg",
+   "localOriginal": "scripts/flag-renderings/langenhagen-flag.svg",
+   "scope": "Municipal flag rendition",
+   "reference": "https://www.langenhagen.de/downloads/datei/ZDAxMDE0MTNlMDAzZDA3ZFZsT09aVWFZeUFPa0U4TFJoN2grWmpDV2MydVgrL293RDFOazNoUEJ0OHJRWnJxREdTSHg2bDY5OS92YU1xUzRaZDg5ai9vNlRlZjF6OTNkVkJqU0RxVkdmODNaNlg0NHowdExNWHEzZTAyZXh3VHJDSE42ZTA4ZEJJczZSUjJzU0VoSUw0OUZIZTRwVkFlSEVkdjJudz09",
+   "credit": "Boundary Atlas; public-domain municipal arms from Wikimedia Commons",
+   "license": "Public domain (official municipal symbols)",
+   "width": 900,
+   "height": 600
+  }
+ }
+}

@@ -33,3 +33,46 @@ body[data-atlas=russia] #atlas-title-local,.country-option[data-atlas=russia] .t
 :root[data-atlas=paraguay],body[data-atlas=paraguay],.country-option[data-atlas=paraguay]{--ink:#24302a;--muted:#6c7a70;--red:#3d6b4a;--red-dark:#2c5136;--gold:#c8a24a;--line:#dde8de;--paper:#fbfdfb;--map:#f1f6f1;--surface-soft:#edf4ee;--title-accent:#3d6b4a;--header-stripe:linear-gradient(90deg,#d52b1e 0 33%,#fff 33% 67%,#0038a8 67%)}
 :root[data-atlas=peru],body[data-atlas=peru],.country-option[data-atlas=peru]{--ink:#3a2424;--muted:#876c6c;--red:#b3262f;--red-dark:#8a1c23;--gold:#c8a24a;--line:#efdcda;--paper:#fffbfb;--map:#f9f0ef;--surface-soft:#f8ecea;--title-accent:#b3262f;--header-stripe:linear-gradient(90deg,#d91023 0 33%,#fff 33% 67%,#d91023 67%)}
 body:is([data-atlas=united-kingdom],[data-atlas=spain],[data-atlas=france],[data-atlas=italy],[data-atlas=iceland],[data-atlas=turkey],[data-atlas=india],[data-atlas=chile],[data-atlas=paraguay],[data-atlas=peru]) .north path:last-child{fill:var(--gold)}
+:root[data-atlas=germany],body[data-atlas=germany],.country-option[data-atlas=germany]{--ink:#29323c;--muted:#6d747a;--red:#5d6f31;--red-dark:#5d6f31;--gold:#c4d4ac;--line:#e4eadc;--paper:#fdfdfb;--map:#edf0eb;--surface-soft:#edf0eb;--title-accent:#5d6f31;--header-stripe:linear-gradient(90deg,#111 0 33.333%,#d00 33.333% 66.667%,#ffce00 66.667%)}
+:root[data-atlas=belgium],body[data-atlas=belgium],.country-option[data-atlas=belgium]{--ink:#29323c;--muted:#6d747a;--red:#8c7134;--red-dark:#8c7134;--gold:#e3cc99;--line:#f2e6cf;--paper:#fdfdfb;--map:#f6f0e5;--surface-soft:#f6f0e5;--title-accent:#8c7134;--header-stripe:linear-gradient(90deg,#111 0 33.333%,#fdda24 33.333% 66.667%,#ef3340 66.667%)}
+:root[data-atlas=switzerland],body[data-atlas=switzerland],.country-option[data-atlas=switzerland]{--ink:#29323c;--muted:#6d747a;--red:#a8433b;--red-dark:#a8433b;--gold:#e6bfba;--line:#f2e1df;--paper:#fdfdfb;--map:#f8efef;--surface-soft:#f8efef;--title-accent:#a8433b;--header-stripe:linear-gradient(90deg,#d52b1e 0 42%,#fff 42% 58%,#d52b1e 58%)}
+:root[data-atlas=netherlands],body[data-atlas=netherlands],.country-option[data-atlas=netherlands]{--ink:#29323c;--muted:#6d747a;--red:#a2642a;--red-dark:#a2642a;--gold:#e8c9a4;--line:#f2e6d8;--paper:#fdfdfb;--map:#f7f1e9;--surface-soft:#f7f1e9;--title-accent:#a2642a;--header-stripe:linear-gradient(90deg,#ae1c28 0 33.333%,#fff 33.333% 66.667%,#21468b 66.667%)}
+:root[data-atlas=united-states],body[data-atlas=united-states],.country-option[data-atlas=united-states]{--ink:#29323c;--muted:#6d747a;--red:#3f6296;--red-dark:#3f6296;--gold:#bccde7;--line:#e1e8f3;--paper:#fdfdfb;--map:#edf1f7;--surface-soft:#edf1f7;--title-accent:#3f6296;--header-stripe:linear-gradient(90deg,#3c3b6e 0 30%,#b22234 30% 40%,#fff 40% 50%,#b22234 50% 60%,#fff 60% 70%,#b22234 70% 80%,#fff 80% 90%,#b22234 90%)}
+:root[data-atlas=canada],body[data-atlas=canada],.country-option[data-atlas=canada]{--ink:#29323c;--muted:#6d747a;--red:#a33d3d;--red-dark:#a33d3d;--gold:#e4bbb8;--line:#f2e1df;--paper:#fdfdfb;--map:#f7eeee;--surface-soft:#f7eeee;--title-accent:#a33d3d;--header-stripe:linear-gradient(90deg,#d52b1e 0 25%,#fff 25% 75%,#d52b1e 75%)}
+:root[data-atlas=mexico],body[data-atlas=mexico],.country-option[data-atlas=mexico]{--ink:#29323c;--muted:#6d747a;--red:#477a40;--red-dark:#477a40;--gold:#bdd8b5;--line:#e1eedd;--paper:#fdfdfb;--map:#eef4ed;--surface-soft:#eef4ed;--title-accent:#477a40;--header-stripe:linear-gradient(90deg,#006847 0 33.333%,#fff 33.333% 66.667%,#ce1126 66.667%)}
+
+/* Sidebar thumbnail proportions are independent of the original flag viewer. */
+.division-flags img[src="vendor/flag-be.svg"]{width:40px;height:calc(40px * 2 / 3);object-fit:fill}
+
+:root[data-atlas=vatican-city],body[data-atlas=vatican-city],.country-option[data-atlas=vatican-city]{--ink:#3d3527;--muted:#84755c;--red:#96712c;--red-dark:#725218;--gold:#d2ac52;--line:#e8dfc8;--paper:#fffdf6;--map:#f7f3e8;--surface-soft:#f8f2e3;--title-accent:#96712c;--header-stripe:linear-gradient(90deg,#e4bd48 0 50%,#fffdf6 50% 100%)}
+body[data-atlas=vatican-city] .sidebar{background:radial-gradient(ellipse at 50% 20%,#fffdf7,#f7f0df)}
+body[data-atlas=vatican-city] .title-english,body[data-atlas=vatican-city] .country-selection h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.025em}
+body[data-atlas=vatican-city] .country-local{font-family:Georgia,'Times New Roman',serif;font-style:italic}
+body[data-atlas=vatican-city] .country-selection-heading{border-bottom:1px solid #cfb46c;padding-bottom:22px}
+body[data-atlas=vatican-city] .country-symbol{animation:none}
+body[data-atlas=vatican-city] .region-color-control,body[data-atlas=vatican-city] .details-expand{display:none}
+.country-parent-link{display:block;margin-top:12px;font-size:12px;color:var(--red);text-decoration:none}
+.country-parent-link:hover{text-decoration:underline}
+.country-subpage-link{display:grid;grid-template-columns:1fr auto;gap:5px 10px;padding:16px 18px;margin:0 0 24px;border:1px solid var(--line);border-left:3px solid #bd963a;border-radius:4px;background:linear-gradient(120deg,#fffdf7,#f6edce);color:#6c531e;text-decoration:none}
+.country-subpage-link>span:first-child{font-family:Georgia,serif;font-size:21px}
+.country-subpage-link small{grid-row:2;font-size:12px;color:#887955}
+.country-subpage-link>span:last-child{grid-column:2;grid-row:1/3;align-self:center}
+.country-subpage-link:focus-visible,.vatican-places button:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.vatican-devotion{text-align:center;padding:22px 0 28px}
+.vatican-aureole{width:130px;height:130px;display:grid;place-items:center;margin:0 auto;background:radial-gradient(circle,#ead59455,transparent 70%)}
+.vatican-aureole img{width:112px;height:auto;max-height:130px;object-fit:contain}
+.vatican-blessing{font-family:Georgia,'Times New Roman',serif;font-size:28px;font-style:italic;color:#8c6a26;margin:12px 0}
+.vatican-foundation{display:grid;gap:7px;margin:25px 0 0;padding:22px 0 0;border-top:1px solid var(--line)}
+.vatican-foundation span,.vatican-places h3{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.vatican-foundation strong{font-family:Georgia,serif;font-size:20px;font-weight:400}
+.vatican-foundation a{font-size:11px;color:var(--red)}
+.vatican-places{border-top:1px solid var(--line);padding:22px 0}
+.vatican-places h3{margin:0 0 15px}
+.vatican-places button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:13px 0;color:var(--ink);font-family:Georgia,serif;font-size:17px;cursor:pointer;transition:transform 160ms ease-out}
+.vatican-places button span{display:block;margin-top:5px;font-size:12px;font-style:italic;color:var(--muted)}
+.vatican-places button:active{transform:scale(.98)}
+.vatican-landmark{font-family:Georgia,'Times New Roman',serif!important;color:#725218!important}
+@media(hover:hover) and (pointer:fine){.vatican-places button:hover{color:var(--red)}.country-subpage-link:hover{border-color:#bd963a}}
+@media(prefers-reduced-motion:reduce){.vatican-places button{transition:none}.vatican-places button:active{transform:none}}
+
+.country-source-options{max-width:100%;font-size:11px}.country-source-options summary{cursor:pointer;color:var(--muted);text-underline-offset:3px}.country-source-options[open]{flex-basis:100%}.country-source-options>a{display:inline-block;margin-top:12px}.flag-visibility-choice{display:flex;align-items:center;gap:8px;padding:12px 0 2px;font-size:11px;line-height:1.5;cursor:pointer;color:var(--muted)}.flag-visibility-choice input{flex:none;width:14px;height:14px;margin:0;accent-color:var(--red)}

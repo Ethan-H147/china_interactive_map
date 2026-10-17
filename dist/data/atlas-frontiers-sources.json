@@ -1,8 +1,8 @@
 {
   "description": "Frontiers of the public atlas countries not drawn by a dedicated layer: land frontiers from each country's own outline, and the water borders between two atlas countries from Natural Earth 1:10m boundary lines.",
   "retrieved": "2026-10-16",
-  "frontierKm": 54664,
-  "pieces": 398,
+  "frontierKm": 58454,
+  "pieces": 293,
   "sources": {
     "ne-10m-countries.geojson": {
       "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
@@ -22,5 +22,97 @@
       "license": "Public domain",
       "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a"
     }
-  }
+  },
+  "continuousFrontiers": [
+    {
+      "pair": "BRA-PRY",
+      "owner": "brazil",
+      "outline": "flight-context.bin",
+      "vertices": 1934,
+      "endpoints": [
+        [
+          -58.164741,
+          -20.160799
+        ],
+        [
+          -54.594373,
+          -25.577375
+        ]
+      ],
+      "endpointErrorMetres": 2256,
+      "km": 1380
+    },
+    {
+      "pair": "ARG-PRY",
+      "owner": "argentina",
+      "outline": "flight-context.bin",
+      "vertices": 2665,
+      "endpoints": [
+        [
+          -54.594373,
+          -25.577375
+        ],
+        [
+          -62.6444,
+          -22.23925
+        ]
+      ],
+      "endpointErrorMetres": 2935,
+      "km": 2029
+    },
+    {
+      "pair": "PRY-BOL",
+      "owner": "paraguay",
+      "outline": "europe/paraguay/context.bin",
+      "vertices": 131,
+      "endpoints": [
+        [
+          -62.6444,
+          -22.23925
+        ],
+        [
+          -58.164741,
+          -20.160799
+        ]
+      ],
+      "endpointErrorMetres": 1780,
+      "km": 755
+    },
+    {
+      "pair": "PER-ECU",
+      "owner": "peru",
+      "outline": "europe/peru/context.bin",
+      "vertices": 3197,
+      "endpoints": [
+        [
+          -75.273501,
+          -0.132159
+        ],
+        [
+          -80.318574,
+          -3.383715
+        ]
+      ],
+      "endpointErrorMetres": 5697,
+      "km": 1531
+    },
+    {
+      "pair": "PER-COL",
+      "owner": "peru",
+      "outline": "europe/peru/context.bin",
+      "vertices": 1885,
+      "endpoints": [
+        [
+          -69.948225,
+          -4.236161
+        ],
+        [
+          -75.273501,
+          -0.132159
+        ]
+      ],
+      "endpointErrorMetres": 4863,
+      "km": 1484
+    }
+  ]
 }

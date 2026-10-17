@@ -6,7 +6,7 @@
   },
   "coverage": "Paraguay's 17 departments and Asunción, and 263 districts, from the National Statistics Institute (INE) boundaries published by OCHA (July 2026). Departments are dissolved from the districts; edges within 3 km of Argentina's and Brazil's outlines are moved onto them.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
-  "frontierKm": 762,
+  "frontierKm": 755,
   "seamReports": {
     "paraguay-argentina": {
       "changedEdges": 3910,
@@ -601,6 +601,23 @@
       "url": "https://api.openstreetmap.org/api/0.6/relation/1231790/full.json",
       "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
       "bytes": 565922
+    }
+  ],
+  "sharedFrontiers": [
+    {
+      "pair": "BRA-PRY",
+      "owner": "brazil",
+      "source": "atlas-frontiers.bin"
+    },
+    {
+      "pair": "ARG-PRY",
+      "owner": "argentina",
+      "source": "atlas-frontiers.bin"
+    },
+    {
+      "pair": "PRY-BOL",
+      "owner": "paraguay",
+      "source": "atlas-frontiers.bin"
     }
   ]
 }

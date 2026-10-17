@@ -3,6 +3,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {gzipSync,gunzipSync} from 'node:zlib';
 import {pathToFileURL} from 'node:url';
+import '../dist/countries.js';
 
 // Compact copies (dist/geo-pack.mjs) of the gzip GeoJSON outlines visitors download at
 // startup and right after it. The gzip JSON files stay the build inputs and outputs every
@@ -15,7 +16,7 @@ export const compactSources=[
  'southeast-asia/malaysia-context.bin','southeast-asia/singapore-context.bin',
  'russia/context.bin','russia/international.bin',
  ...['south-africa','botswana','namibia','eswatini','lesotho'].flatMap(c=>[`southern-africa/${c}/context.bin`,`southern-africa/${c}/international.bin`]),
- ...['united-kingdom','spain','france','italy','iceland','india','chile','paraguay','peru','turkey'].flatMap(c=>['context','neighbours','international'].map(f=>`europe/${c}/${f}.bin`))
+ ...globalThis.AtlasCountries.byAdapter('europe').flatMap(c=>['context','neighbours','international'].map(f=>`europe/${c}/${f}.bin`))
 ];
 
 if(import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){

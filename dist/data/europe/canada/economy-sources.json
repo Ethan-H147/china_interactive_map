@@ -1,0 +1,35 @@
+{
+  "provider": "Statistics Canada · Table 36-10-0222-01, expenditure-based GDP at current market prices",
+  "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610022201",
+  "populationUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901",
+  "currency": "CAD",
+  "retrieved": "2026-10-17",
+  "sources": [
+    {
+      "url": "https://www150.statcan.gc.ca/n1/tbl/csv/36100222-eng.zip",
+      "sha256": "438e0832790ba0c1ff4e6b159eef71902052bc77472c1895a96030e36f1f4fea"
+    },
+    {
+      "url": "https://www150.statcan.gc.ca/n1/tbl/csv/17100009-eng.zip",
+      "sha256": "b50bf05150e42edf3771ceb1d6868581fb6747b5886e0d1450b8b3437958bd0b"
+    }
+  ],
+  "national": {
+    "year": 2024,
+    "gdp": 3108551000000
+  },
+  "coverage": {
+    "retrieved": "2026-10-17",
+    "retainedSource": "scripts/statistics-sources/expansion-economy/canada.json",
+    "coveredRegions": 13,
+    "years": [
+      2024
+    ],
+    "scope": "First-level administrative divisions"
+  },
+  "exchange": {
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2020&currency=USD&currency=CAD&currency=CHF&currency=MXN",
+    "updated": "2026-07-08T11:00:00+0200",
+    "sha256": "e448ffcb873d77975ebd533d3a3a0e739f05e92764d320d28b78e2c6b51083b5"
+  }
+}

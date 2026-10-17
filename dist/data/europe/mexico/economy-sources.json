@@ -1,0 +1,35 @@
+{
+  "provider": "INEGI · PIBE, current-price GDP at market prices including net taxes on products",
+  "url": "https://www.inegi.org.mx/programas/pibent/2018/",
+  "populationUrl": "https://www.datos.gob.mx/dataset/proyecciones-de-poblacion/resource/de522924-f4d8-4523-a6fd-6b2efe73f3af",
+  "currency": "MXN",
+  "retrieved": "2026-10-17",
+  "sources": [
+    {
+      "url": "https://www.inegi.org.mx/contenidos/programas/pibent/2018/datosabiertos/pibe_datos_abiertos_csv.zip",
+      "sha256": "863504527a0867aa2a03b69e790c71c5557651d8405e5faec231fdfbef6d6ea3"
+    },
+    {
+      "url": "https://repodatos.atdt.gob.mx/CONAPO/proyecciones/00_Pob_Mitad_1950_2070.csv",
+      "sha256": "89db6adc7930965fb5b5c01ad3a98765ed90afa6a151c2cfb913acc2b9e0cac6"
+    }
+  ],
+  "national": {
+    "year": 2023,
+    "gdp": 31855566278999.996
+  },
+  "coverage": {
+    "retrieved": "2026-10-17",
+    "retainedSource": "scripts/statistics-sources/expansion-economy/mexico.json",
+    "coveredRegions": 32,
+    "years": [
+      2023
+    ],
+    "scope": "First-level administrative divisions"
+  },
+  "exchange": {
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2020&currency=USD&currency=CAD&currency=CHF&currency=MXN",
+    "updated": "2026-07-08T11:00:00+0200",
+    "sha256": "e448ffcb873d77975ebd533d3a3a0e739f05e92764d320d28b78e2c6b51083b5"
+  }
+}

@@ -119,6 +119,102 @@
       "width": 900,
       "height": 600,
       "sha256": "4358cec747829a0009dac86055e74e60b05e6eb57eba5f7bc30da2c88168a7f2"
+    },
+    "germany": {
+      "file": "vendor/flag-de.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-de.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany.svg",
+      "width": 1000,
+      "height": 600,
+      "sha256": "44a4580e94ae11037b8983e43e37a220e72f884217dba5b33a94309db2dcd88b"
+    },
+    "belgium": {
+      "file": "vendor/flag-be.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Belgium.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-be.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Belgium.svg",
+      "width": 900,
+      "height": 780,
+      "sha256": "95933c385c9e72479ec7e63f6cbca50d07695fd2e41fab334ea549c20b234fd1"
+    },
+    "switzerland": {
+      "file": "vendor/flag-ch.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Switzerland.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-ch.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Switzerland.svg",
+      "width": 512,
+      "height": 512,
+      "sha256": "900a0befb655721c1b52b5ec2754f2f553f52b230443aaf016cc224e6a0707ce"
+    },
+    "netherlands": {
+      "file": "vendor/flag-nl.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Netherlands.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-nl.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Netherlands.svg",
+      "width": 900,
+      "height": 600,
+      "sha256": "9c2a624a9ca5a82940d8902a7b818230d7bc2efde991837d6f78bc78c1b27110"
+    },
+    "united-states": {
+      "file": "vendor/flag-us.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-us.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States.svg",
+      "width": 1235,
+      "height": 650,
+      "sha256": "48f0d3e4a7bf2d5c0c8d09cd975696acb2f3af601aaca80c537933ad9ec166ec"
+    },
+    "canada": {
+      "file": "vendor/flag-ca.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-ca.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada.svg",
+      "width": 1200,
+      "height": 600,
+      "sha256": "95b9eb0eaa176454215088c005a07df3df7564093b9f1d6475bb1fd61a16bb10"
+    },
+    "mexico": {
+      "file": "vendor/flag-mx.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-mx.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico.svg",
+      "width": 980,
+      "height": 560,
+      "sha256": "bcfebaa9d94827919e65c5414e4ee35a076f89520a1b57d75e0949e1ca81c3b9"
+    },
+    "vatican-city": {
+      "file": "vendor/flag-va.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Flag_of_Vatican_City_(2023%E2%80%93present).svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Vatican_City_(2023%E2%80%93present).svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-va.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Vatican_City_(2023%E2%80%93present).svg",
+      "width": 1000,
+      "height": 1000,
+      "sha256": "59ac80ec65dde9fbbf6456609baa583218bf4290bd2a50b2616c354b1660724e"
     }
   }
 }

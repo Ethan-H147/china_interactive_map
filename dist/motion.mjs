@@ -1,3 +1,4 @@
+import {getMapScene} from './map-scene.mjs';
 import {setLayerVisible} from './adaptive-lines.mjs';
 import './countries.js';
 
@@ -63,9 +64,10 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
  function install(){
   const style=map.getStyle();
   const updatedSources=new Set();let added=false;
-  for(const layer of style.layers){
+  for(const rendered of style.layers){
+   const layer=getMapScene(map)?.baseLayer(rendered)||rendered;
    // Resolved frontiers keep their precise shared geometry throughout movement.
-   if(layer.metadata?.atlasInternationalBorder)continue;
+   if(layer.metadata?.atlasInternationalBorder||layer.metadata?.atlas?.motion==='live')continue;
    if(!sources[layer.source]||layer.id.endsWith(suffix))continue;
    const id=layer.id+suffix,source=layer.source+suffix;
    const prepared=sources[layer.source];
@@ -95,7 +97,7 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
     added=true;
    }
    // Preserve the current atlas theme, satellite appearance and quiz filters.
-   for(const [key,value] of Object.entries(layer.paint||{}))if(JSON.stringify(map.getPaintProperty(id,key))!==JSON.stringify(value))map.setPaintProperty(id,key,value);
+   for(const [key,value] of Object.entries(layer.paint||{}))if(JSON.stringify((getMapScene(map)?.basePaint(id,key)??map.getPaintProperty(id,key)))!==JSON.stringify(value))map.setPaintProperty(id,key,value);
    if(JSON.stringify(map.getFilter(id)||null)!==JSON.stringify(layer.filter||null))map.setFilter(id,layer.filter||null);
   }
   // Motion layers form a complete overlay in the original drawing order.

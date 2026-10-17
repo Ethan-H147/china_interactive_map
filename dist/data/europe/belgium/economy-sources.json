@@ -1,0 +1,27 @@
+{
+  "provider": "Eurostat · nama_10r_3gdp",
+  "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table",
+  "currency": "EUR",
+  "retrieved": "2026-10-17",
+  "sources": [
+    {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=BE2&geo=BE3&geo=BE1&geo=BE21&geo=BE24&geo=BE31&geo=BE25&geo=BE10&geo=BE23&geo=BE34&geo=BE35&geo=BE32&geo=BE33&geo=BE22",
+      "sha256": "64ea43848b862e8228afafafee9e8393cecd640d8a666de3ceac5f19bdd84b30",
+      "updated": "2026-02-10T11:00:00+0100"
+    }
+  ],
+  "coverage": {
+    "retrieved": "2026-10-17",
+    "retainedSource": "scripts/statistics-sources/expansion-economy/belgium.json",
+    "coveredRegions": 14,
+    "years": [
+      2024
+    ],
+    "scope": "Regions and provinces / Brussels equivalent"
+  },
+  "exchange": {
+    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2020&currency=USD&currency=CAD&currency=CHF&currency=MXN",
+    "updated": "2026-07-08T11:00:00+0200",
+    "sha256": "e448ffcb873d77975ebd533d3a3a0e739f05e92764d320d28b78e2c6b51083b5"
+  }
+}

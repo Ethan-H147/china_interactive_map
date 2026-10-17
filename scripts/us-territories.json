@@ -1,0 +1,145 @@
+{
+  "scopeUrl": "https://www.doi.gov/node/11613",
+  "populationUrl": "https://www.census.gov/library/stories/2021/10/first-2020-census-united-states-island-areas-data-released-today.html",
+  "puertoRicoPopulationUrl": "https://www.census.gov/quickfacts/PR",
+  "territories": [
+    {
+      "id": "US-AS",
+      "name": "American Samoa",
+      "code": "AS",
+      "population": 49710,
+      "iso": "ASM"
+    },
+    {
+      "id": "US-GU",
+      "name": "Guam",
+      "code": "GU",
+      "population": 153836,
+      "iso": "GUM"
+    },
+    {
+      "id": "US-MP",
+      "name": "Northern Mariana Islands",
+      "code": "MP",
+      "population": 47329,
+      "iso": "MNP"
+    },
+    {
+      "id": "US-PR",
+      "name": "Puerto Rico",
+      "local": "Puerto Rico",
+      "code": "PR",
+      "population": 3285874,
+      "iso": "PRI"
+    },
+    {
+      "id": "US-VI",
+      "name": "U.S. Virgin Islands",
+      "code": "VI",
+      "population": 87146,
+      "iso": "VIR"
+    },
+    {
+      "id": "US-UM-81",
+      "name": "Baker Island",
+      "code": "UM-81",
+      "box": [
+        -176.6,
+        0,
+        -176.3,
+        0.4
+      ]
+    },
+    {
+      "id": "US-UM-84",
+      "name": "Howland Island",
+      "code": "UM-84",
+      "box": [
+        -176.8,
+        0.6,
+        -176.5,
+        1
+      ]
+    },
+    {
+      "id": "US-UM-86",
+      "name": "Jarvis Island",
+      "code": "UM-86",
+      "box": [
+        -160.2,
+        -0.5,
+        -159.8,
+        -0.2
+      ]
+    },
+    {
+      "id": "US-UM-67",
+      "name": "Johnston Atoll",
+      "code": "UM-67",
+      "box": [
+        -169.7,
+        16.5,
+        -169.3,
+        16.9
+      ]
+    },
+    {
+      "id": "US-UM-89",
+      "name": "Kingman Reef",
+      "code": "UM-89",
+      "box": [
+        -162.6,
+        6.2,
+        -162.2,
+        6.6
+      ]
+    },
+    {
+      "id": "US-UM-71",
+      "name": "Midway Atoll",
+      "code": "UM-71",
+      "box": [
+        -177.6,
+        28,
+        -177.1,
+        28.4
+      ]
+    },
+    {
+      "id": "US-UM-76",
+      "name": "Navassa Island",
+      "code": "UM-76",
+      "box": [
+        -75.2,
+        18.2,
+        -74.8,
+        18.6
+      ],
+      "note": "Administered by the United States and also claimed by Haiti."
+    },
+    {
+      "id": "US-UM-95",
+      "name": "Palmyra Atoll",
+      "code": "UM-95",
+      "box": [
+        -162.3,
+        5.7,
+        -161.9,
+        6.1
+      ],
+      "note": "An incorporated US territory."
+    },
+    {
+      "id": "US-UM-79",
+      "name": "Wake Island",
+      "code": "UM-79",
+      "box": [
+        166.4,
+        19.1,
+        166.8,
+        19.5
+      ],
+      "note": "A US territory with military administration; overseas bases on foreign soil are excluded."
+    }
+  ]
+}

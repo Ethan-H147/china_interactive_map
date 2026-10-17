@@ -5,6 +5,7 @@ import mapshaper from 'mapshaper';
 import {divisionBorders,internationalBorders} from './south-america-borders.mjs';
 import {uruguayBorderTopology,uruguayOutlineMethod} from './uruguay-border-topology.mjs';
 import {alignCountry} from './international-topology.mjs';
+import {argentinaBorderTopology} from './argentina-border-topology.mjs';
 const root='artifacts/south-america-source/',out='dist/data/south-america/';
 fs.mkdirSync(out,{recursive:true});
 const fc=features=>({type:'FeatureCollection',features});
@@ -40,6 +41,7 @@ for(const country of ['brazil','argentina','uruguay']){
   const malvinas=b=>b[0][0]>=-61.6&&b[1][0]<=-57.5&&b[0][1]>=-53.1&&b[1][1]<=-50.9;
   for(const f of regions.features){const polygons=f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;const kept=polygons.filter(p=>{const b=bounds(p);return malvinas(b)||b[0][1]>-60&&(b[0][1]>-48||b[0][0]<-60);});f.geometry={type:'MultiPolygon',coordinates:kept};}
   regions.features=regions.features.filter(f=>f.geometry.coordinates.length);
+  regions.features=argentinaBorderTopology(regions.features);
   regions=await command(regions,'-clean -simplify dp interval=75 keep-shapes');
  }
  for(const f of regions.features){const p=f.properties;

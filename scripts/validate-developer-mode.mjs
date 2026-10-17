@@ -2,20 +2,20 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import assert from 'node:assert/strict';
 const source=fs.readFileSync('dist/developer-mode.js','utf8');
-// Iceland and Turkey are in developer mode while they are reviewed.
-const unreleased=['iceland','india','paraguay','peru','turkey'];
+// Every current country is public; the optional workshop mode remains available.
+const unreleased=[];
 const registry=fs.readFileSync('dist/countries.js','utf8');
 let eligible=false,now=1000;
 const events={},stored=new Map(),nodes=[];
 function node(){const children=new Map();return{dataset:{},hidden:false,open:false,setAttribute(){},append(){},focus(){this.focused=true;},showModal(){this.open=true;},close(){this.open=false;},querySelector(id){if(!children.has(id))children.set(id,node());return children.get(id);}};}
 const root=node();const context={window:{addEventListener:(name,fn)=>events[name]=fn,dispatchEvent(){}},document:{documentElement:root,body:node(),querySelector:()=>node(),createElement(){const e=node();nodes.push(e);return e;}},sessionStorage:{getItem:k=>stored.get(k),setItem:(k,v)=>stored.set(k,v)},Date:{now:()=>now},CustomEvent:class{constructor(name,options){this.name=name;this.detail=options.detail;}}};
 vm.createContext(context);vm.runInContext(registry,context);context.window.AtlasCountries=context.AtlasCountries;
-const {ids,countries}=context.AtlasCountries;assert.deepEqual([...ids.filter(id=>countries[id].release==='developer')],unreleased,'Only Iceland and Turkey wait in developer mode');
+const {ids,countries}=context.AtlasCountries;assert.deepEqual([...ids.filter(id=>countries[id].release==='developer')],unreleased,'All countries are public');
 vm.runInContext(source,context);const dev=context.window.AtlasDev;
 assert(!dev.enabled);assert(dev.allows('malaysia'));assert(dev.allows('singapore'));assert(dev.allows('argentina'),'Argentina is public without the Easter egg');assert(dev.allows('brazil')&&dev.allows('uruguay'),'Brazil and Uruguay are public without developer mode');assert(dev.allows('japan'));
-for(const country of unreleased)assert(!dev.allows(country),country+' stays in developer mode');
+for(const country of ids)assert(dev.allows(country),country+' is available without developer mode');
 for(const country of ['south-africa','botswana','namibia','eswatini','lesotho'])assert(dev.allows(country),'Southern African countries are public');
-for(const country of ['united-kingdom','spain','france','italy'])assert(dev.allows(country),'European countries are public');
+for(const country of ['united-kingdom','spain','france','italy','paraguay','peru'])assert(dev.allows(country),'European countries are public');
 dev.mount({eligible:()=>eligible});const dialog=nodes[0],exit=nodes[1];
 function type(text,{editing=false,repeat=false,ctrl=false}={}){for(const key of text){now+=30;events.keydown({key,repeat,ctrlKey:ctrl,target:{closest:()=>editing?{}:null},preventDefault(){}});}}
 type('dev mode');assert(!dialog.open,'Other districts cannot activate the Easter egg');
@@ -28,7 +28,7 @@ dialog.querySelector('[data-cancel]').onclick();assert(!dialog.open);assert(!dev
 type('dev mode');dialog.querySelector('.developer-continue').onclick();assert(dev.enabled);assert(dev.allows('malaysia'));assert(dev.allows('singapore'));assert(dev.allows('brazil'));assert(!exit.hidden);assert.equal(root.dataset.developer,'true');assert.equal(stored.get('boundary-atlas-developer-v1'),'true');
 for(const country of unreleased)assert(dev.allows(country),'Developer mode enables '+country);
 exit.onclick();assert(!dev.enabled);assert(exit.hidden);assert(!root.dataset.developer);assert(dev.allows('uruguay')&&dev.allows('brazil'),'Both countries remain public after developer mode exits');assert(dev.allows('argentina'),'Exiting developer mode keeps Argentina available');
-for(const country of unreleased)assert(!dev.allows(country),'Exiting hides '+country);
+for(const country of ids)assert(dev.allows(country),'Exiting keeps '+country+' public');
 assert(dev.allows('malaysia')&&dev.allows('singapore'),'Public maps remain available after developer mode exits');
 type('dev mode');eligible=false;dialog.querySelector('.developer-continue').onclick();assert(!dev.enabled,'Selection must still qualify when Continue is clicked');
 console.log('Changning-only phrase, editing exclusion, expiry, confirmation, cancellation and tab-scoped exit passed.');

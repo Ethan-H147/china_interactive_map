@@ -1,0 +1,111 @@
+{
+ "retrieved": "2026-10-17",
+ "currency": "EUR",
+ "provider": "Eurostat · nama_10r_3gdp",
+ "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table",
+ "sources": [
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=NL32&geo=NL36&geo=NL35&geo=NL34&geo=NL22&geo=NL12&geo=NL41&geo=NL11&geo=NL42&geo=NL23&geo=NL13&geo=NL21",
+   "sha256": "e34a9c332eb068048cfda3d5e4f6e31c60eee452a75aa97ac54c2750a87846b4",
+   "updated": "2026-02-10T11:00:00+0100"
+  }
+ ],
+ "rows": {
+  "NL32": {
+   "name": "Noord-Holland",
+   "year": 2024,
+   "gdp": 243326960000,
+   "gdpPerCapita": 81500,
+   "status": "provisional",
+   "sourceGeo": "NL32"
+  },
+  "NL36": {
+   "name": "Zuid-Holland",
+   "year": 2024,
+   "gdp": 231244800000,
+   "gdpPerCapita": 60000,
+   "status": "provisional",
+   "sourceGeo": "NL36"
+  },
+  "NL35": {
+   "name": "Utrecht",
+   "year": 2024,
+   "gdp": 106260200000,
+   "gdpPerCapita": 75600,
+   "status": "provisional",
+   "sourceGeo": "NL35"
+  },
+  "NL34": {
+   "name": "Zeeland",
+   "year": 2024,
+   "gdp": 20626480000,
+   "gdpPerCapita": 52600,
+   "status": "provisional",
+   "sourceGeo": "NL34"
+  },
+  "NL22": {
+   "name": "Gelderland",
+   "year": 2024,
+   "gdp": 114886970000,
+   "gdpPerCapita": 53300,
+   "status": "provisional",
+   "sourceGeo": "NL22"
+  },
+  "NL12": {
+   "name": "Friesland (NL)",
+   "year": 2024,
+   "gdp": 30149140000,
+   "gdpPerCapita": 45500,
+   "status": "provisional",
+   "sourceGeo": "NL12"
+  },
+  "NL41": {
+   "name": "Noord-Brabant",
+   "year": 2024,
+   "gdp": 171620660000,
+   "gdpPerCapita": 64600,
+   "status": "provisional",
+   "sourceGeo": "NL41"
+  },
+  "NL11": {
+   "name": "Groningen",
+   "year": 2024,
+   "gdp": 32845699999.999996,
+   "gdpPerCapita": 54600,
+   "status": "provisional",
+   "sourceGeo": "NL11"
+  },
+  "NL42": {
+   "name": "Limburg (NL)",
+   "year": 2024,
+   "gdp": 58266940000,
+   "gdpPerCapita": 51400,
+   "status": "provisional",
+   "sourceGeo": "NL42"
+  },
+  "NL23": {
+   "name": "Flevoland",
+   "year": 2024,
+   "gdp": 21878930000,
+   "gdpPerCapita": 48200,
+   "status": "provisional",
+   "sourceGeo": "NL23"
+  },
+  "NL13": {
+   "name": "Drenthe",
+   "year": 2024,
+   "gdp": 22580930000,
+   "gdpPerCapita": 44700,
+   "status": "provisional",
+   "sourceGeo": "NL13"
+  },
+  "NL21": {
+   "name": "Overijssel",
+   "year": 2024,
+   "gdp": 64470150000,
+   "gdpPerCapita": 54100,
+   "status": "provisional",
+   "sourceGeo": "NL21"
+  }
+ }
+}

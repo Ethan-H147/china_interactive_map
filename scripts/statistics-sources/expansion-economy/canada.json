@@ -1,0 +1,166 @@
+{
+ "retrieved": "2026-10-17",
+ "currency": "CAD",
+ "provider": "Statistics Canada · Table 36-10-0222-01, expenditure-based GDP at current market prices",
+ "url": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610022201",
+ "populationUrl": "https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901",
+ "sources": [
+  {
+   "url": "https://www150.statcan.gc.ca/n1/tbl/csv/36100222-eng.zip",
+   "sha256": "438e0832790ba0c1ff4e6b159eef71902052bc77472c1895a96030e36f1f4fea"
+  },
+  {
+   "url": "https://www150.statcan.gc.ca/n1/tbl/csv/17100009-eng.zip",
+   "sha256": "b50bf05150e42edf3771ceb1d6868581fb6747b5886e0d1450b8b3437958bd0b"
+  }
+ ],
+ "rows": {
+  "CA-NL": {
+   "name": "Newfoundland and Labrador",
+   "year": 2024,
+   "gdp": 42219000000,
+   "gdpPerCapita": 77454.68555074485,
+   "populationValue": 545080,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-PE": {
+   "name": "Prince Edward Island",
+   "year": 2024,
+   "gdp": 10889000000,
+   "gdpPerCapita": 60876.95464278327,
+   "populationValue": 178869,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-NS": {
+   "name": "Nova Scotia",
+   "year": 2024,
+   "gdp": 65338000000,
+   "gdpPerCapita": 60480.78792198536,
+   "populationValue": 1080310,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-NB": {
+   "name": "New Brunswick",
+   "year": 2024,
+   "gdp": 48302000000,
+   "gdpPerCapita": 56354.23059242994,
+   "populationValue": 857114,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-QB": {
+   "name": "Quebec",
+   "year": 2024,
+   "gdp": 616771000000,
+   "gdpPerCapita": 68665.06084402323,
+   "populationValue": 8982312,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-ON": {
+   "name": "Ontario",
+   "year": 2024,
+   "gdp": 1197020000000,
+   "gdpPerCapita": 74393.62132278226,
+   "populationValue": 16090358,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-MB": {
+   "name": "Manitoba",
+   "year": 2024,
+   "gdp": 96125000000,
+   "gdpPerCapita": 64602.174934288916,
+   "populationValue": 1487953,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-SK": {
+   "name": "Saskatchewan",
+   "year": 2024,
+   "gdp": 112839000000,
+   "gdpPerCapita": 90619.4687422703,
+   "populationValue": 1245196,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-AB": {
+   "name": "Alberta",
+   "year": 2024,
+   "gdp": 473937000000,
+   "gdpPerCapita": 96686.41793465456,
+   "populationValue": 4901795,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-BC": {
+   "name": "British Columbia",
+   "year": 2024,
+   "gdp": 429089000000,
+   "gdpPerCapita": 75821.42721459993,
+   "populationValue": 5659205,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-YT": {
+   "name": "Yukon",
+   "year": 2024,
+   "gdp": 4349000000,
+   "gdpPerCapita": 91206.50965752994,
+   "populationValue": 47683,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-NT": {
+   "name": "Northwest Territories",
+   "year": 2024,
+   "gdp": 5123000000,
+   "gdpPerCapita": 113155.45346114768,
+   "populationValue": 45274,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  },
+  "CA-NU": {
+   "name": "Nunavut",
+   "year": 2024,
+   "gdp": 5668000000,
+   "gdpPerCapita": 136762.86072772898,
+   "populationValue": 41444,
+   "populationYear": 2024,
+   "populationDate": "2024-07-01",
+   "populationSource": "canadaGdpPopulation",
+   "calculated": true
+  }
+ },
+ "national": {
+  "year": 2024,
+  "gdp": 3108551000000
+ }
+}

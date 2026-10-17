@@ -1,3 +1,4 @@
+import {createMapScene} from '../dist/map-scene.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -72,15 +73,15 @@ let stacked=0;for(const p of filtered.coordinates)for(let i=1;i<p.length;i++)if(
 assert.equal(stacked,0,'No China subdivision stroke lies on an international line');
 for(const [a,b] of [[[124.2832,39.9491],[124.2831,39.9605]],[[132.0182,45.2483],[132.1669,45.2147]]]){const near=filtered.coordinates.some(p=>p.some(([x,y])=>Math.abs(x-a[0])<.001&&Math.abs(y-a[1])<.001));assert(near,'Outlines that leave the frontier (Yalu islands, Lake Khanka) stay drawn');}
 console.log('China province strokes: none lie on an international line; departures from the frontier remain.');
-const callbacks=new Map(),layers=[];
-const map={addLayer:l=>layers.push(l),on:(event,fn)=>callbacks.set(event,fn),getStyle:()=>({layers:layers.slice()}),moveLayer(id){const i=layers.findIndex(l=>l.id===id);layers.push(...layers.splice(i,1));}};
-for(const id of ['shared-context-borders','russia-international','south-land-boundaries','korea-countries-lines'])addInternationalBorder(map,id,id);
-for(const layer of layers)assert.deepEqual(layer.paint,internationalBorderPaint(),'Every renderer uses exactly the same paint');
-layers.push({id:'later-country-fill',type:'fill'});callbacks.get('styledata')();await new Promise(resolve=>queueMicrotask(resolve));
-assert.equal(layers[0].id,'later-country-fill','New country fills stay below every international stroke');
+const layers=[],map={addLayer(l,before){const i=layers.findIndex(l=>l.id===before);layers.splice(i<0?layers.length:i,0,l);},getLayer:id=>layers.find(l=>l.id===id),getStyle:()=>({layers}),getPaintProperty:(id,key)=>layers.find(l=>l.id===id)?.paint?.[key],setPaintProperty(){},removeLayer(id){layers.splice(layers.findIndex(l=>l.id===id),1);},moveLayer(){}};
+createMapScene(map);
+for(const id of ['south-land-boundaries','korea-countries-lines'])addInternationalBorder(map,id,id);
+for(const layer of layers)assert.deepEqual(layer.paint,internationalBorderPaint(),'Every renderer uses the same normal paint');
+map.addLayer({id:'later-country-fill',type:'fill'});
+assert.equal(layers[0].id,'later-country-fill','Late fills stay below international strokes without a style-event repair');
 for(const file of ['dist/regional-country.mjs','dist/south-america.mjs','dist/korea.js','dist/app.js'])assert(fs.readFileSync(file,'utf8').includes('addInternationalBorder('),file+' uses the universal border renderer');
 assert(!fs.readFileSync('dist/mongolia.mjs','utf8').includes("['second','first','countries']"),'Mongolia has no duplicate exterior stroke');
-assert(fs.readFileSync('dist/motion.mjs','utf8').includes('if(layer.metadata?.atlasInternationalBorder)continue'),'Camera movement retains exact international geometry');
+assert.match(fs.readFileSync('dist/motion.mjs','utf8'),/if\(layer\.metadata\?\.atlasInternationalBorder(?:\|\|[^)]*)?\)continue/,'Camera movement retains exact international geometry');
 for(const country of ['lesotho','eswatini']){
  const outline=readCountry(country,'context.bin'),coordinates=outline.features.flatMap(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).flat().flat());
  let oldWorst=0,newWorst=0;

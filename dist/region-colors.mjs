@@ -1,3 +1,4 @@
+import {getMapScene} from './map-scene.mjs';
 import {countryColorData,colorMetrics,colorLabels,colorLayerProfile} from './region-color-data.mjs';
 export const shadePalette=['#e3eee9','#c7e2d8','#a5d2c8','#7bb9b1','#529ca4','#367b8d','#285675'];
 export const missingColor='#d6d5cf';
@@ -76,7 +77,7 @@ export function createRegionColors(map,host={}){
  function sync(){
   scheduled=false;const layers=map.getStyle()?.layers||[];refreshScale(layers);const enabled=!suspended&&key!=='none'&&scale;
   const primary=layers.find(l=>colorLayerProfile(l,country)?.primary&&!l.id.endsWith('-motion'));
-  const primaryEntry=primary&&styles.get(primary.id),primaryCurrent=primary&&(map.getPaintProperty(primary.id,'fill-opacity')??1);
+  const primaryEntry=primary&&styles.get(primary.id),primaryCurrent=primary&&((getMapScene(map)?.basePaint(primary.id,'fill-opacity')??map.getPaintProperty(primary.id,'fill-opacity'))??1);
   const primaryOpacity=primaryEntry&&signature(primaryCurrent)===primaryEntry.writtenOpacity?primaryEntry.opacity:primaryCurrent;
   const present=new Set(layers.map(l=>l.id));for(const id of styles.keys())if(!present.has(id))styles.delete(id);
   for(const layer of layers){
@@ -84,7 +85,7 @@ export function createRegionColors(map,host={}){
    if(entry&&entry.ref!==ref){styles.delete(layer.id);entry=null;}
    const profile=enabled&&colorLayerProfile(layer,country);
    if(!entry&&!profile)continue;
-   const current=map.getPaintProperty(layer.id,'fill-color')??'#000000',opacity=map.getPaintProperty(layer.id,'fill-opacity')??1;
+   const current=(getMapScene(map)?.basePaint(layer.id,'fill-color')??map.getPaintProperty(layer.id,'fill-color'))??'#000000',opacity=(getMapScene(map)?.basePaint(layer.id,'fill-opacity')??map.getPaintProperty(layer.id,'fill-opacity'))??1;
    if(!entry){
     const original=styles.get(layer.id.replace(/-motion$/,''));
     entry={ref,color:original&&signature(current)===original.writtenColor?original.color:current,opacity:original&&signature(opacity)===original.writtenOpacity?original.opacity:opacity,writtenColor:signature(current),writtenOpacity:signature(opacity)};styles.set(layer.id,entry);

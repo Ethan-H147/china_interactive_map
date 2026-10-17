@@ -12,6 +12,7 @@ assert(countries[fallback]&&!countries[fallback].release,'The fallback country i
 for(const id of ids){
  const c=countries[id];
  assert.equal(c.id,id);
+ if(c.parent){assert(countries[c.parent]&&!countries[c.parent].parent,id+' navigation parent exists and is top-level');assert.notEqual(c.parent,id);}
  for(const field of ['en','lang','adapter','symbol','statistics'])assert(c[field],id+' declares '+field);
  assert(typeof c.local==='string',id+' declares a local name, even if empty');
  assert.match(c.background,/^#[0-9a-f]{6}$/,id+' background');
@@ -47,3 +48,8 @@ assert.deepEqual(offenders,[],'Country lists belong in countries.js');
 const html=fs.readFileSync('dist/index.html','utf8');
 assert(html.indexOf('src="countries.js"')>=0&&html.indexOf('src="countries.js"')<Math.min(html.indexOf('src="country-symbols.js"'),html.indexOf('src="developer-mode.js"'),html.indexOf('src="atlas-entry.js"')),'The registry loads before the scripts that read it');
 console.log(`Country registry: ${ids.length} countries declared once; files, emblems, themes, routes and link options resolve, and no other script lists countries.`);
+
+const history=JSON.parse(fs.readFileSync('dist/data/country-history.json','utf8'));
+assert.equal(history.timeZone,'America/Chicago');
+assert.deepEqual(history.entries.map(e=>e.country).sort(),[...ids].sort(),'Every country records its addition date exactly once');
+for(const e of history.entries){assert.equal(e.name,countries[e.country].en);assert(/^\d{4}-\d{2}-\d{2}$/.test(e.addedOn)&&Number.isFinite(Date.parse(e.addedOn)),e.country+' addition date');assert(['first-tracked-implementation','local-implementation'].includes(e.basis));assert(e.basis==='first-tracked-implementation'?/^[a-f0-9]{40}$/.test(e.evidence.commit):!!e.evidence.note,e.country+' date evidence');}

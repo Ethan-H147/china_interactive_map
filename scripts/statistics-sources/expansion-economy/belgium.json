@@ -1,0 +1,127 @@
+{
+ "retrieved": "2026-10-17",
+ "currency": "EUR",
+ "provider": "Eurostat · nama_10r_3gdp",
+ "url": "https://ec.europa.eu/eurostat/databrowser/view/nama_10r_3gdp/default/table",
+ "sources": [
+  {
+   "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=BE2&geo=BE3&geo=BE1&geo=BE21&geo=BE24&geo=BE31&geo=BE25&geo=BE10&geo=BE23&geo=BE34&geo=BE35&geo=BE32&geo=BE33&geo=BE22",
+   "sha256": "64ea43848b862e8228afafafee9e8393cecd640d8a666de3ceac5f19bdd84b30",
+   "updated": "2026-02-10T11:00:00+0100"
+  }
+ ],
+ "rows": {
+  "BE2": {
+   "name": "Vlaams Gewest",
+   "year": 2024,
+   "gdp": 367495490000,
+   "gdpPerCapita": 53600,
+   "status": "provisional",
+   "sourceGeo": "BE2"
+  },
+  "BE3": {
+   "name": "Région wallonne",
+   "year": 2024,
+   "gdp": 144427350000,
+   "gdpPerCapita": 38800,
+   "status": "provisional",
+   "sourceGeo": "BE3"
+  },
+  "BE1": {
+   "name": "Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest",
+   "year": 2024,
+   "gdp": 108152970000,
+   "gdpPerCapita": 85300,
+   "status": "provisional",
+   "sourceGeo": "BE1"
+  },
+  "BE21": {
+   "name": "Prov. Antwerpen",
+   "year": 2024,
+   "gdp": 117766570000,
+   "gdpPerCapita": 60700,
+   "status": "provisional",
+   "sourceGeo": "BE21"
+  },
+  "BE24": {
+   "name": "Prov. Vlaams-Brabant",
+   "year": 2024,
+   "gdp": 68661940000,
+   "gdpPerCapita": 57100,
+   "status": "provisional",
+   "sourceGeo": "BE24"
+  },
+  "BE31": {
+   "name": "Prov. Brabant wallon",
+   "year": 2024,
+   "gdp": 28893160000,
+   "gdpPerCapita": 69500,
+   "status": "provisional",
+   "sourceGeo": "BE31"
+  },
+  "BE25": {
+   "name": "Prov. West-Vlaanderen",
+   "year": 2024,
+   "gdp": 64563760000,
+   "gdpPerCapita": 52400,
+   "status": "provisional",
+   "sourceGeo": "BE25"
+  },
+  "BE10": {
+   "name": "Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest",
+   "year": 2024,
+   "gdp": 108152970000,
+   "gdpPerCapita": 85300,
+   "status": "provisional",
+   "sourceGeo": "BE10"
+  },
+  "BE23": {
+   "name": "Prov. Oost-Vlaanderen",
+   "year": 2024,
+   "gdp": 78272440000,
+   "gdpPerCapita": 49500,
+   "status": "provisional",
+   "sourceGeo": "BE23"
+  },
+  "BE34": {
+   "name": "Prov. Luxembourg (BE)",
+   "year": 2024,
+   "gdp": 9719440000,
+   "gdpPerCapita": 32500,
+   "status": "provisional",
+   "sourceGeo": "BE34"
+  },
+  "BE35": {
+   "name": "Prov. Namur",
+   "year": 2024,
+   "gdp": 18215520000,
+   "gdpPerCapita": 35800,
+   "status": "provisional",
+   "sourceGeo": "BE35"
+  },
+  "BE32": {
+   "name": "Prov. Hainaut",
+   "year": 2024,
+   "gdp": 44184030000,
+   "gdpPerCapita": 32300,
+   "status": "provisional",
+   "sourceGeo": "BE32"
+  },
+  "BE33": {
+   "name": "Prov. Liège",
+   "year": 2024,
+   "gdp": 43415200000,
+   "gdpPerCapita": 38400,
+   "status": "provisional",
+   "sourceGeo": "BE33"
+  },
+  "BE22": {
+   "name": "Prov. Limburg (BE)",
+   "year": 2024,
+   "gdp": 38230780000,
+   "gdpPerCapita": 42200,
+   "status": "provisional",
+   "sourceGeo": "BE22"
+  }
+ }
+}

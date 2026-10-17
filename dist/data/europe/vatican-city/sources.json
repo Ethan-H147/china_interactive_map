@@ -1,0 +1,17 @@
+{
+  "country": "Vatican City",
+  "navigationParent": "italy",
+  "sovereignty": "Independent sovereign state; grouped under Italy for atlas navigation only.",
+  "retrieved": "2026-10-17",
+  "boundary": {
+    "source": "https://www.openstreetmap.org/relation/36989",
+    "download": "https://polygons.openstreetmap.fr/get_geojson.py?id=36989&params=0",
+    "license": "Open Database License (ODbL)",
+    "credit": "© OpenStreetMap contributors",
+    "retainedExtract": "scripts/vatican-boundary.geojson",
+    "extractSha256": "2a00ff4a3c7ce1b9fcf4d3371b054276eb36541a2d2569ac6044644e60d8f648"
+  },
+  "processing": "Only the contiguous Vatican City enclave is included. OSM relation 36989 also contains Holy See extraterritorial properties in Italy; these are excluded, in accordance with the Vatican geography page. Boundary is a cartographic representation, not a cadastral survey.",
+  "officialGeography": "https://www.vaticanstate.va/en/state-and-government/general-informations/geography.html",
+  "flag": "2023 Fundamental Law Annex A; original artwork in the shared flag catalogue."
+}

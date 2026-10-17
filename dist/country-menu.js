@@ -10,9 +10,9 @@
   const options=()=>[...menu.querySelectorAll('[role=menuitem]')];
   function render(){
    const current=window.AtlasEntry.current;
-   menu.replaceChildren(...registry.ids.filter(id=>window.AtlasDev.allows(id)).map(id=>{
+   menu.replaceChildren(...registry.ids.filter(id=>!registry.countries[id].parent&&window.AtlasDev.allows(id)).map(id=>{
     const option=document.createElement('button');option.type='button';option.setAttribute('role','menuitem');option.className='country-option';option.dataset.atlas=id;option.tabIndex=-1;
-    if(id===current)option.setAttribute('aria-current','true');
+    if(id===(registry.countries[current].parent||current))option.setAttribute('aria-current','true');
     const title=document.createElement('span');title.className='country-option-title';
     for(const part of window.AtlasEntry.titleParts(id)){if(!part.text)continue;const span=document.createElement('span');span.className=part.className;span.lang=part.lang;span.textContent=part.text;title.append(span);}
     option.append(title);option.addEventListener('click',()=>choose(id));return option;

@@ -1,0 +1,59 @@
+{
+  "retrieved": "2026-10-17",
+  "counts": {
+    "1": 32
+  },
+  "frontiers": [
+    {
+      "pair": "BLZ-MEX",
+      "vertices": 93,
+      "endpointErrorMetres": 0,
+      "method": "reference through water"
+    },
+    {
+      "pair": "BLZ-MEX",
+      "vertices": 2,
+      "endpointErrorMetres": 0,
+      "method": "reference through water"
+    },
+    {
+      "pair": "GTM-MEX",
+      "vertices": 870,
+      "endpointErrorMetres": 1240,
+      "method": "continuous outline arc"
+    }
+  ],
+  "kinds": {
+    "State": 31,
+    "Federal entity": 1
+  },
+  "coverage": "All 31 states and Mexico City, from INEGI December 2025 water-inclusive state envelopes. Population remains the 2020 census. Inland water is a separate optional overlay; no lower administrative detail.",
+  "processing": "All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.",
+  "sources": [
+    {
+      "file": "mexico-inegi-states.geojson",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee",
+      "provider": "INEGI · Marco Geoestadístico, December 2025; water-inclusive state envelopes",
+      "license": "INEGI free use with attribution",
+      "licenseUrl": "https://www.inegi.org.mx/inegi/terminos.html",
+      "sha256": "170c3ea5ff472f08ece97970dc90ad4ba8c6f503e33859655f315091c105cc91",
+      "bytes": 28836523
+    },
+    {
+      "file": "mexico-population.zip",
+      "url": "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip",
+      "provider": "INEGI · 2020 Population and Housing Census, ITER national extract",
+      "license": "INEGI free use with attribution",
+      "sha256": "9342fdbd45bda5897f2b827a12904843b6f8fb85d4e72da299e09e4d2422ab60",
+      "bytes": 36615814
+    },
+    {
+      "file": "ne-10m-land-boundaries.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    }
+  ]
+}
