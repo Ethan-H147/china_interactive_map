@@ -1,0 +1,94 @@
+{
+ "url": "https://bank.stat.gl/api/v1/en/Greenland/NR/NRX10.px",
+ "retrieved": "2026-10-17",
+ "sha256": "86d6caf80f0c255912d608de902330510a1277b53b69619855bd64089f7e2211",
+ "query": {
+  "query": [
+   {
+    "code": "units",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "L"
+     ]
+    }
+   },
+   {
+    "code": "account",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "01",
+      "02"
+     ]
+    }
+   },
+   {
+    "code": "time",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "2023"
+     ]
+    }
+   }
+  ],
+  "response": {
+   "format": "json"
+  }
+ },
+ "data": {
+  "columns": [
+   {
+    "code": "units",
+    "text": "units",
+    "type": "d"
+   },
+   {
+    "code": "account",
+    "text": "account",
+    "type": "d"
+   },
+   {
+    "code": "time",
+    "text": "Aar",
+    "type": "t"
+   },
+   {
+    "code": "Trends in GDP",
+    "text": "Trends in GDP",
+    "type": "c"
+   }
+  ],
+  "comments": [],
+  "data": [
+   {
+    "key": [
+     "L",
+     "01",
+     "2023"
+    ],
+    "values": [
+     "22918.9"
+    ]
+   },
+   {
+    "key": [
+     "L",
+     "02",
+     "2023"
+    ],
+    "values": [
+     "405.2"
+    ]
+   }
+  ],
+  "metadata": [
+   {
+    "updated": "2025-03-20T11:00:00Z",
+    "label": "Trends in GDP by units, account and Aar",
+    "source": "Statistics Greenland"
+   }
+  ]
+ }
+}

@@ -532,3 +532,5 @@ Country-specific features stay in their own adapters: China's packed boundaries,
 The deploy workflow splits the suite into five parallel jobs (`node scripts/browser/run.mjs --shard=i/5`, scenarios dealt round-robin), about 4 minutes each instead of about 20 in one job; deploy waits for all five. Pushes that change only documentation (outside `dist/`, `scripts/` and `package.json`) do not run the workflow, and a commit whose message contains `[skip tests]` (a change the owner says needs no test) deploys without the browser suite.
 
 All 35 countries became public on 17 October 2026, including Iceland, India and Turkey. The optional Changning developer mode no longer gates any current map. US mainland context exports normalize dissolved geometry into valid polygon features; Alaska, Hawaii and territories retain their own entry destinations.
+
+Denmark was added on 17 October 2026 with its five current regions, 98 municipalities and separately administered Christiansø, plus Greenland and the Faroe Islands. [Coverage, sources and rebuild checks](docs/denmark.md).

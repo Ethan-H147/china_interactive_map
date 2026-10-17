@@ -90,6 +90,22 @@
       "licenseUrl": "https://www.openstreetmap.org/copyright",
       "sha256": "7b3e9efb8c8c2ccefef3778794653c0b8222806d772eb9c6028b1ec31cd16be6",
       "bytes": 483439
+    },
+    "greenland-municipalities.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/GRL/ADM1/geoBoundaries-GRL-ADM1.geojson",
+      "provider": "geoBoundaries · Greenland 2020 municipalities, pinned release 9469f09",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://www.geoboundaries.org/api/current/gbOpen/GRL/ADM1/",
+      "sha256": "a3132d9511f99c11a70aa40969567e29aa6f12d347117286025f87c6cdde86b0",
+      "bytes": 1758212
+    },
+    "faroe-municipalities.geojson": {
+      "url": "https://gis.us.fo/arcgis/rest/services/fyrisitingarlig_kort/us_kommunur/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+      "provider": "Umhvørvisstovan · official Faroese municipalities, May 2026 service data",
+      "license": "© Umhvørvisstovan; source attribution",
+      "licenseUrl": "https://gis.us.fo/arcgis/rest/services/fyrisitingarlig_kort/us_kommunur/MapServer",
+      "sha256": "6955ea049447e413a2a8a919e62e9818f0ea05865579f18dcc3d86bfe2489efc",
+      "bytes": 1510660
     }
   }
 }

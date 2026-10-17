@@ -47,3 +47,5 @@ dist/vendor/flag-nl.svg -text
 dist/vendor/flag-us.svg -text
 dist/vendor/flag-va.svg -text
 scripts/flag-renderings/*.svg -text
+
+dist/vendor/flag-dk.svg -text

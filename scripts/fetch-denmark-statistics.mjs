@@ -1,0 +1,17 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash}from'node:crypto';
+const out='scripts/statistics-sources/denmark';fs.mkdirSync(out,{recursive:true});
+const stamp='2026-10-17',hash=b=>createHash('sha256').update(b).digest('hex');
+async function json(name,url,body){const file=out+'/'+name+'.json';if(fs.existsSync(file))return JSON.parse(fs.readFileSync(file));const r=await fetch(url,{...(body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(90000)});assert(r.ok,url+' '+r.status);const bytes=Buffer.from(await r.arrayBuffer()),data=JSON.parse(bytes);assert(!data.error,JSON.stringify(data.error));const saved={url,retrieved:stamp,sha256:hash(bytes),...(body?{query:body}:{}),data};fs.writeFileSync(file,JSON.stringify(saved,null,1)+'\n');return saved;}
+async function px(name,url,choose){const meta=await json(name+'-metadata',url),j=meta.data;const filters=choose(j.variables),body={query:j.variables.map(v=>({code:v.code,selection:{filter:'item',values:filters[v.code]||[v.values[0]]}})),response:{format:'json'}};return json(name,url,body);}
+const dkMeta=await json('denmark-population-metadata','https://api.statbank.dk/v1/tableinfo/FOLK1A?format=JSON&lang=en');
+const times=dkMeta.data.variables.find(v=>v.time).values,last=times.at(-1).id;
+await json('denmark-population','https://api.statbank.dk/v1/data',{table:'FOLK1A',format:'JSONSTAT',lang:'en',variables:[{code:'OMRÅDE',values:['*']},{code:'KØN',values:['TOT']},{code:'ALDER',values:['IALT']},{code:'CIVILSTAND',values:['TOT']},{code:'Tid',values:[last]}]});
+await px('faroe-population','https://statbank.hagstova.fo/api/v1/en/H2/IB/IB01/fo_midalal.px',vars=>({measure:['POP'],'municipality/village':vars.find(v=>v.code==='municipality/village').values.filter((id,i)=>!vars.find(v=>v.code==='municipality/village').valueTexts[i].startsWith('- ')),sex:['TOTAL'],year:['2026']}));
+await px('greenland-population','https://bank.stat.gl/api/v1/en/Greenland/BE/BE01/BE0140/BEXSTM2.PX',vars=>({age:vars.find(v=>v.code==='age').values,residence:['0'],'place of birth':['T'],municipality:vars.find(v=>v.code==='municipality').values,gender:['T'],time:['2026']}));
+await px('greenland-localities','https://bank.stat.gl/api/v1/en/Greenland/BE/BE01/BE0140/BEXSTM4.PX',vars=>({age:vars.find(v=>v.code==='age').values,'place of birth':['T'],locality:vars.find(v=>v.code==='locality').values,gender:['T'],time:['2026']}));
+await px('greenland-gdp','https://bank.stat.gl/api/v1/en/Greenland/NR/NRX10.px',()=>({units:['L'],account:['01','02'],time:['2023']}));
+await px('faroe-gdp','https://statbank.hagstova.fo/api/v1/en/H2/TB/TB02/tb_btu.px',()=>({transaction:['B1u'],year:['2025']}));
+await px('faroe-gdp-pc','https://statbank.hagstova.fo/api/v1/en/H2/TB/TB02/tb_btu_ib.px',()=>({component:['GDP per capita (1,000 DKK)'],year:['2025']}));
+await json('regional-gdp','https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_2gdp?format=JSON&unit=MIO_NAC&unit=EUR_HAB&sinceTimePeriod=2023&'+['DK01','DK02','DK03','DK04','DK05'].map(id=>'geo='+id).join('&'));
+await json('exchange','https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2023&currency=USD&currency=DKK');
+console.log('Retained Denmark, Greenland and Faroe population/GDP sources; Denmark population '+last+'.');

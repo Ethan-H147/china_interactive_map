@@ -1,0 +1,447 @@
+{
+ "url": "https://statbank.hagstova.fo/api/v1/en/H2/IB/IB01/fo_midalal.px",
+ "retrieved": "2026-10-17",
+ "sha256": "8d89a85421c0e6520b1c91a10a2df62e7db49ec16314256997c02a566c3ea8df",
+ "query": {
+  "query": [
+   {
+    "code": "measure",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "POP"
+     ]
+    }
+   },
+   {
+    "code": "municipality/village",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "9999",
+      "4101",
+      "410301",
+      "4105",
+      "410502",
+      "410701",
+      "410801",
+      "4106",
+      "420301",
+      "420401",
+      "4206",
+      "420703",
+      "420706",
+      "421201",
+      "420803",
+      "420805",
+      "430303",
+      "4701",
+      "470102",
+      "470104",
+      "470106",
+      "430806",
+      "431102",
+      "4403",
+      "4502",
+      "460203",
+      "460401",
+      "460601",
+      "460702",
+      "460704"
+     ]
+    }
+   },
+   {
+    "code": "sex",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "TOTAL"
+     ]
+    }
+   },
+   {
+    "code": "year",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "2026"
+     ]
+    }
+   }
+  ],
+  "response": {
+   "format": "json"
+  }
+ },
+ "data": {
+  "columns": [
+   {
+    "code": "measure",
+    "text": "measure",
+    "type": "d"
+   },
+   {
+    "code": "municipality/village",
+    "text": "municipality/village",
+    "comment": "The borders between Froðba, Tvøroyri and Trongisvág were adjusted in June 2009\r\n",
+    "type": "d"
+   },
+   {
+    "code": "sex",
+    "text": "sex",
+    "type": "d"
+   },
+   {
+    "code": "year",
+    "text": "year",
+    "type": "t"
+   },
+   {
+    "code": "Population",
+    "text": "Population",
+    "type": "c"
+   }
+  ],
+  "comments": [],
+  "data": [
+   {
+    "key": [
+     "POP",
+     "9999",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "54880"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "4101",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "763"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "410301",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "2285"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "4105",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "73"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "410502",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1639"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "410701",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "48"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "410801",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "105"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "4106",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "112"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "420301",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "631"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "420401",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "426"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "4206",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "5537"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "420703",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "144"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "420706",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "602"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "421201",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1618"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "420803",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "324"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "420805",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "4435"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "430303",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "542"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "4701",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1285"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "470102",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "168"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "470104",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "487"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "470106",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "35"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "430806",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "333"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "431102",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1786"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "4403",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1253"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "4502",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "23461"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "460203",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1697"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "460401",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "2181"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "460601",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1325"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "460702",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "1256"
+    ]
+   },
+   {
+    "key": [
+     "POP",
+     "460704",
+     "TOTAL",
+     "2026"
+    ],
+    "values": [
+     "329"
+    ]
+   }
+  ],
+  "metadata": [
+   {
+    "updated": "2022-01-28T09:30:00Z",
+    "label": "Population by measure, municipality/village, sex and year",
+    "source": "Statistics Faroe Islands: www.hagstova.fo/en"
+   }
+  ]
+ }
+}

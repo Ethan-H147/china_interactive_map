@@ -1,0 +1,12 @@
+import fs from'node:fs';import assert from'node:assert/strict';import{gunzipSync}from'node:zlib';import{retained}from'./denmark-statistics.mjs';
+const source='https://kort.nunagis.gl/refserver/rest/services/Kortportal/Byer_og_bygder/MapServer/1/query?where=1%3D1&outFields=*&outSR=4326&f=geojson',cache='scripts/boundary-sources/denmark/greenland-towns.geojson';
+let geo;if(fs.existsSync(cache))geo=JSON.parse(fs.readFileSync(cache));else{const r=await fetch(source);assert(r.ok);geo=await r.json();assert(geo.features?.length);fs.writeFileSync(cache,JSON.stringify(geo)+'\n');}
+const meta=retained('greenland-localities-metadata').data.variables.find(v=>v.code==='locality'),byName=new Map(meta.values.map((id,i)=>[meta.valueTexts[i].replace(/\(town\)$/,'').trim(),id])),totals=new Map();
+for(const row of retained('greenland-localities').data.data)totals.set(row.key[2],(totals.get(row.key[2])||0)+ +row.values[0]);
+const municipalities={'955':'GL-KU','956':'GL-SM','957':'GL-QE','959':'GL-QT','960':'GL-AV'},records=[];
+for(const f of geo.features){const p=f.properties,name=p['Ny_grønlandsk'],code=byName.get(name),value=totals.get(code);if(!code||!value)continue;const parent=municipalities[code.slice(0,3)];assert(parent,name+' municipality');
+ records.push({id:'DK-S-'+code,en:name,name,local:name,kind:'Town',center:f.geometry.coordinates,parentId:parent,provinceId:'DK-GL',aliases:[p['Gammel_grønlandsk'],p.Dansk].filter(Boolean),population:{value,year:2026,source:'https://bank.stat.gl/BEESTM4',periodLabel:'1 July 2026 population',scope:'Town proper',scopeNote:'Town proper'},provenance:{coordinates:source,population:'https://bank.stat.gl/BEESTM4'}});}
+assert(records.some(r=>r.en==='Nuuk'&&r.population.value>20000));
+const out=process.env.DENMARK_OUTPUT||'dist/data/europe/denmark';fs.mkdirSync(out,{recursive:true});
+fs.writeFileSync(out+'/settlements.json',JSON.stringify({country:'denmark',records,sources:[{title:'NunaGIS · official Greenland town points',url:source},{title:'Statistics Greenland · population in localities, 1 July 2026',url:'https://bank.stat.gl/BEESTM4'}],selection:'Inhabited Greenland towns represented by the official NunaGIS town layer, with 2026 registered town populations. Danish and Faroese cities are searchable as municipalities.'})+'\n');
+fs.writeFileSync(out+'/place-names-flags.json',JSON.stringify({retrieved:'2026-10-17',places:{},sources:[]})+'\n');console.log('Greenland towns: '+records.length+' official points with 2026 resident populations. Nuuk: '+records.find(r=>r.en==='Nuuk').population.value);

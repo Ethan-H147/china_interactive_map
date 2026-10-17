@@ -1,16 +1,17 @@
+import '../../dist/countries.js';
 
 import assert from'node:assert/strict';
 import{europeExpansionFlags as flags}from'../../dist/europe-expansion-flags.mjs';
 import{searchAndSelect}from'./countries.test.mjs';
 export default [
  ...Object.entries(flags).map(([country,c])=>({name:country+' all regional flags and originals',options:{width:1280,height:820},async run(page,base){
-  await page.open(base,'#'+country);const optionPrefix={germany:'de',belgium:'be',netherlands:'nl'}[country];await page.tap('#'+optionPrefix+'-source-options summary');await page.tap('#'+optionPrefix+'-optional-flags');
+  await page.open(base,'#'+country);const optionPrefix=globalThis.AtlasCountries.countries[country].prefix;await page.tap('#'+optionPrefix+'-source-options summary');const optional='#'+optionPrefix+'-optional-flags';if(await page.evaluate('!!document.querySelector('+JSON.stringify(optional)+')?.getClientRects().length'))await page.tap(optional);
   for(const [id,f]of [...Object.entries(c.firstFlags),...Object.entries(c.detailFlags)]){
    await page.evaluate('currentAtlas().restore('+JSON.stringify(id)+')');
-   const own=!!c.detailFlags[id],prefix={germany:'de',belgium:'be',netherlands:'nl'}[country],image=prefix+(own?'-detail-flag':'-flag');
+   const own=!!c.detailFlags[id],prefix=globalThis.AtlasCountries.countries[country].prefix,image=prefix+(own?'-detail-flag':'-flag');
    await page.waitFor('(()=>{const i=document.getElementById('+JSON.stringify(image)+');return !i.closest("a").hidden&&i.getAttribute("src")==='+JSON.stringify(f.file)+'&&i.complete&&i.naturalWidth>0})()',{label:id+' flag'});
   }
-  const prefix={germany:'de',belgium:'be',netherlands:'nl'}[country],id=Object.keys(c.firstFlags)[0],f=c.firstFlags[id];
+  const prefix=globalThis.AtlasCountries.countries[country].prefix,id=Object.keys(c.firstFlags)[0],f=c.firstFlags[id];
   await page.evaluate('currentAtlas().restore('+JSON.stringify(id)+')');await page.tap('#'+prefix+'-flag-source');
   await page.waitFor('document.getElementById("flag-viewer").open&&document.getElementById("flag-viewer-image").getAttribute("src")==='+JSON.stringify(f.full));await page.key('Escape');
   await page.screenshot('europe-flags-'+country);

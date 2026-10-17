@@ -40,8 +40,8 @@ Dates use America/Chicago. "Added" means the first implementation in the atlas, 
 | 2026-10-17 | Netherlands | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | Switzerland | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | United States | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
-
 | 2026-10-17 | Vatican City | — | Local implementation; sovereign country opened as a subpage of Italy. Not deployed. |
+| 2026-10-17 | Denmark | Local implementation | Five regions, 98 municipalities and Christiansø, including Greenland and the Faroe Islands with their own subdivisions and focused entry. |
 
 The machine-readable log is [dist/data/country-history.json](../dist/data/country-history.json). Add an entry whenever a country is added to countries.js; npm run test:entry checks that every country has a date. Keep later releases and coverage expansions separate from the original addition date.
 

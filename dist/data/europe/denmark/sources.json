@@ -1,0 +1,63 @@
+{
+  "retrieved": "2026-10-17",
+  "counts": {
+    "1": 8,
+    "2": 133
+  },
+  "frontiers": [],
+  "kinds": {
+    "Region": 5,
+    "State-administered area": 1,
+    "Self-governing territory": 2,
+    "Municipality": 132,
+    "National park / unincorporated area": 1
+  },
+  "coverage": "Denmark: five regions and 98 municipalities (GISCO 2024), with Christiansø kept outside the municipal and regional hierarchy. Greenland: five municipalities and the Northeast Greenland National Park (2020 geoBoundaries outline). Faroe Islands: all 29 municipalities from Umhvørvisstovan, May 2026. Greenland and the Faroe Islands open directly at their own location. The Danish regional merger takes effect in 2027 and is not applied early.",
+  "processing": "All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.",
+  "sources": [
+    {
+      "file": "lau2024.geojson",
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "provider": "Eurostat GISCO · LAU 2024",
+      "license": "Eurostat GISCO non-commercial use; © EuroGeographics for the administrative boundaries",
+      "licenseUrl": "https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units",
+      "sha256": "ae07901e0a11cb7891d1a6d6a31cfd833e25672ca318908856b0e34a1acca594",
+      "bytes": 149866427
+    },
+    {
+      "file": "nuts2024.geojson",
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326.geojson",
+      "provider": "Eurostat GISCO · NUTS 2024",
+      "license": "Eurostat GISCO non-commercial use; © EuroGeographics for the administrative boundaries",
+      "licenseUrl": "https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units",
+      "sha256": "b013441a23f5a29cd394c88f9f2621dea4e0fd5b18f0458dc708e48defd6aabb",
+      "bytes": 66954478
+    },
+    {
+      "file": "greenland-municipalities.geojson",
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/GRL/ADM1/geoBoundaries-GRL-ADM1.geojson",
+      "provider": "geoBoundaries · Greenland 2020 municipalities, pinned release 9469f09",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://www.geoboundaries.org/api/current/gbOpen/GRL/ADM1/",
+      "sha256": "a3132d9511f99c11a70aa40969567e29aa6f12d347117286025f87c6cdde86b0",
+      "bytes": 1758212
+    },
+    {
+      "file": "faroe-municipalities.geojson",
+      "url": "https://gis.us.fo/arcgis/rest/services/fyrisitingarlig_kort/us_kommunur/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+      "provider": "Umhvørvisstovan · official Faroese municipalities, May 2026 service data",
+      "license": "© Umhvørvisstovan; source attribution",
+      "licenseUrl": "https://gis.us.fo/arcgis/rest/services/fyrisitingarlig_kort/us_kommunur/MapServer",
+      "sha256": "6955ea049447e413a2a8a919e62e9818f0ea05865579f18dcc3d86bfe2489efc",
+      "bytes": 1510660
+    },
+    {
+      "file": "ne-10m-land-boundaries.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    }
+  ]
+}

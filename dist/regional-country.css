@@ -76,3 +76,5 @@ body[data-atlas=vatican-city] .region-color-control,body[data-atlas=vatican-city
 @media(prefers-reduced-motion:reduce){.vatican-places button{transition:none}.vatican-places button:active{transform:none}}
 
 .country-source-options{max-width:100%;font-size:11px}.country-source-options summary{cursor:pointer;color:var(--muted);text-underline-offset:3px}.country-source-options[open]{flex-basis:100%}.country-source-options>a{display:inline-block;margin-top:12px}.flag-visibility-choice{display:flex;align-items:center;gap:8px;padding:12px 0 2px;font-size:11px;line-height:1.5;cursor:pointer;color:var(--muted)}.flag-visibility-choice input{flex:none;width:14px;height:14px;margin:0;accent-color:var(--red)}
+
+:root[data-atlas=denmark],body[data-atlas=denmark],.country-option[data-atlas=denmark]{--ink:#382c2c;--muted:#7b6b69;--red:#a33b36;--red-dark:#842c28;--gold:#c99678;--line:#e9d9d5;--paper:#fffdfb;--map:#f8eeee;--surface-soft:#f8eeee;--title-accent:#a33b36;--header-stripe:linear-gradient(90deg,#c8102e 0 28%,#fff 28% 34%,#c8102e 34%)}

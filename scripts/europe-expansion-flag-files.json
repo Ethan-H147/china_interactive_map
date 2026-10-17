@@ -1916,6 +1916,16 @@
    "license": "Public domain (official municipal symbols)",
    "width": 900,
    "height": 600
+  },
+  "DK-GL": {
+   "country": "denmark",
+   "file": "Flag of Greenland.svg",
+   "reference": "https://naalakkersuisut.gl/Nyheder/2026/01/1301_flag?sc_lang=da"
+  },
+  "DK-FO": {
+   "country": "denmark",
+   "file": "Flag of the Faroe Islands.svg",
+   "reference": "https://www.government.fo/en/foreign-relations/representations-of-the-faroe-islands-abroad/the-representation-of-the-faroe-islands-in-london/flag-of-the-faroe-islands"
   }
  }
 }

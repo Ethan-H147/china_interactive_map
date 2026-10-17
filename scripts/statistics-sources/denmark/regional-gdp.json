@@ -1,0 +1,181 @@
+{
+ "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_2gdp?format=JSON&unit=MIO_NAC&unit=EUR_HAB&sinceTimePeriod=2023&geo=DK01&geo=DK02&geo=DK03&geo=DK04&geo=DK05",
+ "retrieved": "2026-10-17",
+ "sha256": "29f1d1ba2e9fa046ad16a50b7e21c68fd991871706ba5a7a354ea1d157e85570",
+ "data": {
+  "version": "2.0",
+  "class": "dataset",
+  "label": "Gross domestic product (GDP) at current market prices by NUTS 2 region",
+  "source": "ESTAT",
+  "updated": "2026-02-10T11:00:00+0100",
+  "value": {
+   "0": 85000,
+   "1": 90600,
+   "2": 44600,
+   "3": 46500,
+   "4": 54500,
+   "5": 55500,
+   "6": 54600,
+   "7": 55900,
+   "8": 50000,
+   "9": 51500,
+   "10": 1204821.37,
+   "11": 1298865.67,
+   "12": 282828.08,
+   "13": 296129.12,
+   "14": 502359.77,
+   "15": 513333.59,
+   "16": 554044.96,
+   "17": 571120.52,
+   "18": 221418.87,
+   "19": 227884.66
+  },
+  "id": [
+   "freq",
+   "unit",
+   "geo",
+   "time"
+  ],
+  "size": [
+   1,
+   2,
+   5,
+   2
+  ],
+  "dimension": {
+   "freq": {
+    "label": "Time frequency",
+    "category": {
+     "index": {
+      "A": 0
+     },
+     "label": {
+      "A": "Annual"
+     }
+    }
+   },
+   "unit": {
+    "label": "Unit of measure",
+    "category": {
+     "index": {
+      "EUR_HAB": 0,
+      "MIO_NAC": 1
+     },
+     "label": {
+      "EUR_HAB": "Euro per inhabitant",
+      "MIO_NAC": "Million units of national currency"
+     }
+    }
+   },
+   "geo": {
+    "label": "Geopolitical entity (reporting)",
+    "category": {
+     "index": {
+      "DK01": 0,
+      "DK02": 1,
+      "DK03": 2,
+      "DK04": 3,
+      "DK05": 4
+     },
+     "label": {
+      "DK01": "Hovedstaden",
+      "DK02": "Sjælland",
+      "DK03": "Syddanmark",
+      "DK04": "Midtjylland",
+      "DK05": "Nordjylland"
+     }
+    }
+   },
+   "time": {
+    "label": "Time",
+    "category": {
+     "index": {
+      "2023": 0,
+      "2024": 1
+     },
+     "label": {
+      "2023": "2023",
+      "2024": "2024"
+     }
+    }
+   }
+  },
+  "extension": {
+   "lang": "EN",
+   "id": "NAMA_10R_2GDP",
+   "agencyId": "ESTAT",
+   "version": "1.0",
+   "datastructure": {
+    "id": "NAMA_10R_2GDP",
+    "agencyId": "ESTAT",
+    "version": "30.0"
+   },
+   "annotation": [
+    {
+     "type": "CREATED",
+     "date": "2016-02-26T09:01:01+0100"
+    },
+    {
+     "type": "DISSEMINATION_DOI_XML",
+     "title": "<adms:identifier xmlns:adms=\"http://www.w3.org/ns/adms#\" xmlns:skos=\"http://www.w3.org/2004/02/skos/core.html\" xmlns:dct=\"http://purl.org/dc/terms/\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><adms:Identifier rdf:about=\"https://doi.org/10.2908/NAMA_10R_2GDP\"><skos:notation rdf:datatype=\"http://purl.org/spar/datacite/doi\">10.2908/NAMA_10R_2GDP</skos:notation><dct:creator rdf:resource=\"http://publications.europa.eu/resource/authority/corporate-body/ESTAT\"/><dct:issued rdf:datatype=\"http://www.w3.org/2001/XMLSchema#date\">2023-01-19</dct:issued></adms:Identifier></adms:identifier>"
+    },
+    {
+     "type": "DISSEMINATION_OBJECT_TYPE",
+     "title": "DATASET"
+    },
+    {
+     "type": "DISSEMINATION_TIMESTAMP_DATA",
+     "date": "2026-02-10T11:00:00+0100"
+    },
+    {
+     "type": "DISSEMINATION_TIMESTAMP_GLOBAL",
+     "date": "2026-02-10T11:00:00+0100"
+    },
+    {
+     "type": "DISSEMINATION_TIMESTAMP_PLANNED",
+     "date": "2026-02-10T11:00:00+0100"
+    },
+    {
+     "type": "ESMS_HTML",
+     "title": "Explanatory texts (metadata)",
+     "href": "https://ec.europa.eu/eurostat/cache/metadata/en/reg_eco10_esms.htm"
+    },
+    {
+     "type": "ESMS_SDMX",
+     "title": "Explanatory texts (metadata)",
+     "href": "https://ec.europa.eu/eurostat/api/dissemination/files?file=metadata/reg_eco10_esms.sdmx.zip"
+    },
+    {
+     "type": "OBS_COUNT",
+     "title": "75931"
+    },
+    {
+     "type": "OBS_PERIOD_OVERALL_LATEST",
+     "title": "2024"
+    },
+    {
+     "type": "OBS_PERIOD_OVERALL_OLDEST",
+     "title": "2000"
+    },
+    {
+     "type": "SOURCE_INSTITUTIONS",
+     "text": "Eurostat"
+    },
+    {
+     "type": "UPDATE_DATA",
+     "date": "2026-02-10T11:00:00+0100"
+    },
+    {
+     "type": "UPDATE_STRUCTURE",
+     "date": "2026-02-10T11:00:00+0100"
+    }
+   ],
+   "positions-with-no-data": {
+    "freq": [],
+    "unit": [],
+    "geo": [],
+    "time": []
+   }
+  }
+ }
+}

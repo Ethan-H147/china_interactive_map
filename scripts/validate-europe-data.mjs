@@ -9,7 +9,7 @@ const countries=['united-kingdom','spain','france','italy','iceland','india','ch
 // Countries reconciled with outlines drawn outside this build, and the countries whose claims
 // their portals carry apart.
 const claimsAgainst={india:['china'],chile:['argentina'],paraguay:['argentina','brazil'],peru:[]};
-assert.deepEqual(Object.keys(configurations).sort(),[...countries,'germany','belgium','switzerland','netherlands','united-states','canada','mexico','vatican-city'].sort());
+assert.deepEqual(Object.keys(configurations).sort(),[...globalThis.AtlasCountries.byAdapter('europe')].sort());
 const polygons=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
 function inRing(p,ring){let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if(a[1]>p[1]!==b[1]>p[1]&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
 const contains=(g,p)=>polygons(g).some(poly=>inRing(p,poly[0])&&!poly.slice(1).some(hole=>inRing(p,hole)));

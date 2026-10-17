@@ -1,0 +1,74 @@
+{
+ "url": "https://statbank.hagstova.fo/api/v1/en/H2/TB/TB02/tb_btu_ib.px",
+ "retrieved": "2026-10-17",
+ "sha256": "729b630f57431b4523f7229826fabcea14d6f450539405acb4e1b9b7a7aa1847",
+ "query": {
+  "query": [
+   {
+    "code": "component",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "GDP per capita (1,000 DKK)"
+     ]
+    }
+   },
+   {
+    "code": "year",
+    "selection": {
+     "filter": "item",
+     "values": [
+      "2025"
+     ]
+    }
+   }
+  ],
+  "response": {
+   "format": "json"
+  }
+ },
+ "data": {
+  "columns": [
+   {
+    "code": "component",
+    "text": "component",
+    "type": "d"
+   },
+   {
+    "code": "year",
+    "text": "year",
+    "type": "t"
+   },
+   {
+    "code": "Gross domestic product at current prices",
+    "text": "Gross domestic product at current prices",
+    "type": "c"
+   }
+  ],
+  "comments": [
+   {
+    "variable": "year",
+    "value": "2025",
+    "comment": "first edition\r\n"
+   }
+  ],
+  "data": [
+   {
+    "key": [
+     "GDP per capita (1,000 DKK)",
+     "2025"
+    ],
+    "values": [
+     "539.0"
+    ]
+   }
+  ],
+  "metadata": [
+   {
+    "updated": "2000-01-01T09:30:00Z",
+    "label": "Gross domestic product at current prices by component and year",
+    "source": "<A HREF=http://www.hagstova.fo/en TARGET=_blank>Statistics Faroe Islands</A>"
+   }
+  ]
+ }
+}

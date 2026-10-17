@@ -1,0 +1,97 @@
+{
+ "url": "https://statbank.hagstova.fo/api/v1/en/H2/TB/TB02/tb_btu.px",
+ "retrieved": "2026-10-17",
+ "sha256": "117745bcf3dc43b5267a7e30d329b385ed1e257601c3317969a3db73aec05f17",
+ "data": {
+  "title": "TB02010 Gross domestic product at current prices (1998-2025)",
+  "variables": [
+   {
+    "code": "transaction",
+    "text": "transaction",
+    "values": [
+     "B1u",
+     "D21,D31",
+     "B1v",
+     "D29,D39",
+     "B1f",
+     "D1",
+     "B2"
+    ],
+    "valueTexts": [
+     "Gross domestic product",
+     "-  Taxes on products, net",
+     "Gross value added",
+     "-  Other taxes on production, net",
+     "Gross domestic factor income",
+     "-  Compensation of employees",
+     "Gross operating surplus"
+    ]
+   },
+   {
+    "code": "year",
+    "text": "year",
+    "values": [
+     "1998",
+     "1999",
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012",
+     "2013",
+     "2014",
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "valueTexts": [
+     "1998",
+     "1999",
+     "2000",
+     "2001",
+     "2002",
+     "2003",
+     "2004",
+     "2005",
+     "2006",
+     "2007",
+     "2008",
+     "2009",
+     "2010",
+     "2011",
+     "2012",
+     "2013",
+     "2014",
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "time": true
+   }
+  ]
+ }
+}

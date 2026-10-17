@@ -8,6 +8,7 @@ const manifestPath=resolve(dist,'data/europe/flag-sources.json');
 let manifest;try{manifest=JSON.parse(await readFile(manifestPath,'utf8'));}catch{manifest={flags:{}};}
 const commons=(file,path)=>({original:'https://upload.wikimedia.org/wikipedia/commons/'+path+'/'+encodeURIComponent(file).replace(/%2C/g,','),page:'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(file.replace(/ /g,'_')),credit:'Wikimedia Commons',license:'Public domain'});
 const sources={
+ denmark:{file:'vendor/flag-dk.svg',...commons('Flag_of_Denmark.svg','9/9c')},
  'vatican-city':{file:'vendor/flag-va.svg',...commons('Flag_of_Vatican_City_(2023–present).svg','b/b3')},
  germany:{file:'vendor/flag-de.svg',...commons('Flag_of_Germany.svg','b/ba')},
  belgium:{file:'vendor/flag-be.svg',...commons('Flag_of_Belgium.svg','6/65')},

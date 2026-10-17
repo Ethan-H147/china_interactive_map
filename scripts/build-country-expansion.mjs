@@ -1,4 +1,6 @@
 import fs from 'node:fs';
+import {extendDenmark} from './denmark.mjs';
+import {applyDenmarkStatistics} from './denmark-statistics.mjs';
 import {countryContext} from './country-context.mjs';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
@@ -32,12 +34,12 @@ function borders(regions){
  return visibleSegments(fc([...groups.values()].map(({owners,arcs})=>({type:'Feature',properties:{owners},geometry:mesh(t,{type:'MultiLineString',arcs})}))));
 }
 const norm=s=>String(s).normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-const exonyms={...{"München":"Munich","München, Kreisfreie Stadt":"Munich","München, Landkreis":"Munich district","Köln":"Cologne","Köln, Kreisfreie Stadt":"Cologne","Nürnberg":"Nuremberg","Nürnberg, Kreisfreie Stadt":"Nuremberg","Hannover":"Hanover","Region Hannover":"Hanover Region","Antwerpen / Anvers":"Antwerp","Gent / Gand":"Ghent","Brugge / Bruges":"Bruges","Bruxelles / Brussel":"Brussels","'s-Gravenhage":"The Hague","Région de Bruxelles-Capitale/ Brussels Hoofdstedelijk Gewest":"Brussels-Capital Region"},'Bayern':'Bavaria','Hessen':'Hesse','Niedersachsen':'Lower Saxony','Nordrhein-Westfalen':'North Rhine-Westphalia','Rheinland-Pfalz':'Rhineland-Palatinate','Sachsen':'Saxony','Sachsen-Anhalt':'Saxony-Anhalt','Thüringen':'Thuringia','Vlaams Gewest':'Flanders','Région wallonne':'Wallonia','Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest':'Brussels-Capital Region','Prov. Antwerpen':'Antwerp','Prov. Limburg (BE)':'Limburg','Prov. Oost-Vlaanderen':'East Flanders','Prov. Vlaams-Brabant':'Flemish Brabant','Prov. West-Vlaanderen':'West Flanders','Prov. Brabant wallon':'Walloon Brabant','Prov. Hainaut':'Hainaut','Prov. Liège':'Liège','Prov. Luxembourg (BE)':'Luxembourg','Prov. Namur':'Namur','Noord-Holland':'North Holland','Zuid-Holland':'South Holland','Noord-Brabant':'North Brabant','Fryslân':'Friesland','Zürich':'Zurich','Genève':'Geneva','Luzern':'Lucerne','Graubünden':'Grisons','Ticino':'Ticino','Vaud':'Vaud','Wallis':'Valais','Neuchâtel':'Neuchâtel'};
+const exonyms={'Hovedstaden':'Capital Region of Denmark','Sjælland':'Zealand','Syddanmark':'Southern Denmark','Midtjylland':'Central Denmark','Nordjylland':'North Denmark','København':'Copenhagen',...{"München":"Munich","München, Kreisfreie Stadt":"Munich","München, Landkreis":"Munich district","Köln":"Cologne","Köln, Kreisfreie Stadt":"Cologne","Nürnberg":"Nuremberg","Nürnberg, Kreisfreie Stadt":"Nuremberg","Hannover":"Hanover","Region Hannover":"Hanover Region","Antwerpen / Anvers":"Antwerp","Gent / Gand":"Ghent","Brugge / Bruges":"Bruges","Bruxelles / Brussel":"Brussels","'s-Gravenhage":"The Hague","Région de Bruxelles-Capitale/ Brussels Hoofdstedelijk Gewest":"Brussels-Capital Region"},'Bayern':'Bavaria','Hessen':'Hesse','Niedersachsen':'Lower Saxony','Nordrhein-Westfalen':'North Rhine-Westphalia','Rheinland-Pfalz':'Rhineland-Palatinate','Sachsen':'Saxony','Sachsen-Anhalt':'Saxony-Anhalt','Thüringen':'Thuringia','Vlaams Gewest':'Flanders','Région wallonne':'Wallonia','Région de Bruxelles-Capitale/Brussels Hoofdstedelijk Gewest':'Brussels-Capital Region','Prov. Antwerpen':'Antwerp','Prov. Limburg (BE)':'Limburg','Prov. Oost-Vlaanderen':'East Flanders','Prov. Vlaams-Brabant':'Flemish Brabant','Prov. West-Vlaanderen':'West Flanders','Prov. Brabant wallon':'Walloon Brabant','Prov. Hainaut':'Hainaut','Prov. Liège':'Liège','Prov. Luxembourg (BE)':'Luxembourg','Prov. Namur':'Namur','Noord-Holland':'North Holland','Zuid-Holland':'South Holland','Noord-Brabant':'North Brabant','Fryslân':'Friesland','Zürich':'Zurich','Genève':'Geneva','Luzern':'Lucerne','Graubünden':'Grisons','Ticino':'Ticino','Vaud':'Vaud','Wallis':'Valais','Neuchâtel':'Neuchâtel'};
 const english=n=>exonyms[n]||n.replace(/^Prov\. /,'');
 const nuts=read('nuts2024.geojson').features;
 let lau;
 async function loadGisco(country,iso,firstNuts,secondNuts){
- lau??=read('lau2024.geojson').features.filter(f=>['DE','BE','NL'].includes(f.properties.CNTR_CODE));
+ lau??=read('lau2024.geojson').features.filter(f=>['DE','BE','NL','DK'].includes(f.properties.CNTR_CODE));
  const units=new Map(),first=nuts.filter(f=>f.properties.CNTR_CODE===iso&&f.properties.LEVL_CODE===firstNuts),second=secondNuts?nuts.filter(f=>f.properties.CNTR_CODE===iso&&f.properties.LEVL_CODE===secondNuts):[];
  for(const f of first){const p=f.properties,id=p.NUTS_ID;units.set(id,{id,level:1,parent:null,en:english(p.NUTS_NAME),local:p.NUTS_NAME,kind:country==='germany'?'State':country==='belgium'?'Region':'Province',code:id});}
  for(const f of second){const p=f.properties,id=p.NUTS_ID,parent=id.slice(0,3);assert(units.has(parent),id+' parent');units.set(id,{id,level:2,parent,en:english(p.NUTS_NAME),local:p.NUTS_NAME,kind:country==='germany'?(/Stadtkreis|Kreisfreie Stadt/.test(p.NUTS_NAME)?'Independent city':'District'):id==='BE10'?'Capital region':'Province',code:id});}
@@ -47,6 +49,7 @@ async function loadGisco(country,iso,firstNuts,secondNuts){
  const unresolved=[];
  for(let i=0;i<features.length;i++){
   const f=features[i],p=f.properties,point=points[i].geometry.coordinates,id=p.GISCO_ID,cleanName=country==='germany'?p.LAU_NAME.split(',')[0].trim():p.LAU_NAME,match=parents.filter(r=>r.inside(point));
+  if(country==='denmark'&&id==='DK_411'){units.set(id,{id,level:1,parent:null,en:'Christiansø',local:'Christiansø',kind:'State-administered area',code:'411',aliases:['Ertholmene'],reportedArea:p.AREA_KM2});f.properties={id};continue;}
   if(match.length!==1){unresolved.push([id,p.LAU_NAME,point,match.map(r=>r.id)]);continue;}
   units.set(id,{id,level:second.length?3:2,parent:match[0].id,en:english(cleanName),local:cleanName,...((cleanName!==p.LAU_NAME||cleanName==="'s-Gravenhage")?{aliases:[p.LAU_NAME,...(cleanName==="'s-Gravenhage"?['Den Haag']:[])]}:{}),kind:/gemfr\.|gemeindefrei/.test(p.LAU_NAME)?'Unincorporated area':'Municipality',code:id.split('_')[1],population:p.POP_2024>=0?{value:p.POP_2024,year:2024,date:'2024-01-01',periodLabel:'2024 resident population',source:'giscoPopulation'}:null,reportedArea:p.AREA_KM2});
   f.properties={id};
@@ -95,6 +98,7 @@ async function loadNorth(country){
 }
 const definitions={
  germany:()=>loadGisco('germany','DE',1,3),
+ denmark:async()=>extendDenmark(await loadGisco('denmark','DK',2),read),
  belgium:()=>loadGisco('belgium','BE',1,2),
  netherlands:()=>loadGisco('netherlands','NL',2),
  switzerland:loadSwiss,
@@ -150,9 +154,10 @@ for(const [country,d]of Object.entries(datasets)){
  write('catalogue.bin',{records,chunks,counts,levels});
  const metrics=new Map();
  function stats(id){if(metrics.has(id))return metrics.get(id);const u=units.get(id);if(u.population){metrics.set(id,u.population);return u.population;}const children=records.filter(r=>r.parent===id);if(!children.length)return null;const parts=children.map(r=>stats(r.id));if(parts.some(p=>!p))return null;const result={...parts[0],value:parts.reduce((s,p)=>s+p.value,0),method:'sum of component administrative units'};metrics.set(id,result);return result;}
- const regions={};for(const r of records){const population=stats(r.id);if(country==='united-states'&&r.overseas){regions[country+':'+r.id]=territoryStat(r,population);continue;}regions[country+':'+r.id]={name:r.en,level:r.level,parent:r.parent,...(population?{population}:{}),area:{value:r.areaKm2,unit:'km²',year:country==='switzerland'?2026:country==='united-states'||country==='mexico'?2025:2024,method:units.get(r.id).reportedArea?'reported':'mapped',source:units.get(r.id).reportedArea?'boundaryArea':'mappedArea',...(country==='united-states'?{label:'Land area'}:{})}};}
+ const regions={};for(const r of records){const population=stats(r.id);if(country==='united-states'&&r.overseas){regions[country+':'+r.id]=territoryStat(r,population);continue;}regions[country+':'+r.id]={name:r.en,level:r.level,parent:r.parent,...(population?{population}:{}),area:{value:r.areaKm2,unit:'km²',year:units.get(r.id).areaYear|| (country==='switzerland'?2026:country==='united-states'||country==='mexico'?2025:2024),method:units.get(r.id).reportedArea?'reported':'mapped',source:units.get(r.id).reportedArea?'boundaryArea':'mappedArea',...(country==='united-states'?{label:'Land area'}:{})}};}
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,country,retrieved:pins.retrieved,sources:{...sourcesOfStatistics,...territoryStatisticsSources,boundaryArea:{title:'Area reported in the official boundary dataset',url:'data/europe/'+country+'/sources.json'},mappedArea:{...sourcesOfStatistics.mappedArea,url:'data/europe/'+country+'/sources.json'}},regions}));
  const used=[...d.files,'ne-10m-land-boundaries.geojson'].map(file=>({file,...pins.files[file]}));
  fs.writeFileSync(dir+'/sources.json',JSON.stringify({retrieved:pins.retrieved,counts,frontiers:frontierReports[country],kinds:records.reduce((o,r)=>(o[r.kind]=(o[r.kind]||0)+1,o),{}),coverage:d.coverage,processing:'All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.',sources:used},null,2)+'\n');
+ if(country==='denmark')applyDenmarkStatistics(dir);
  console.log('Built',country,counts,'chunks',Object.keys(chunks).length);
 }

@@ -5573,8 +5573,8 @@
    "sha256": "9ec30ec1a64b2620b2ea831684e642f04ac44ba6baec5723310dd4a26f91018d",
    "commonsSha1": "59d9920f6b27c72966807b7ee74147aa39b3f2ec",
    "reference": "http://www.wikidata.org/entity/Q18335889",
-   "status": "Unofficial municipal logo flag",
-   "sourceKind": "commons"
+   "sourceKind": "commons",
+   "status": "Unofficial municipal logo flag"
   },
   "NL_GM0307": {
    "country": "netherlands",
@@ -5628,8 +5628,8 @@
    "sha256": "c046c4cb810014b39a04e6fa8efbf46c191fb300adfd2a24f407dfa61a4fd3f8",
    "commonsSha1": "2ad956943d0661f3269f5eaba596395d4eee9029",
    "reference": "https://lokaleregelgeving.overheid.nl/CVDR717425/1",
-   "scope": "Municipal logo flag",
-   "sourceKind": "commons"
+   "sourceKind": "commons",
+   "scope": "Municipal logo flag"
   },
   "NL_GM1959": {
    "country": "netherlands",
@@ -6229,8 +6229,8 @@
    "sha256": "80589b2d20bfb83baa668af70d5f5690c00d4874a57452c774a4cdc201ca1e4f",
    "commonsSha1": "a557fb2c0cc66fb2ced6fdb29444d6f0709a933e",
    "reference": "https://www.crwflags.com/fotw/flags/be-wht.html",
-   "status": "Unofficial provincial banner",
-   "sourceKind": "commons"
+   "sourceKind": "commons",
+   "status": "Unofficial provincial banner"
   },
   "BE33": {
    "country": "belgium",
@@ -6249,8 +6249,8 @@
    "sha256": "e549c674556f5d402d138810d9bf7fd9540b5aa7186d9c35f2903d26ad2d333e",
    "commonsSha1": "6db1577aedd792d5ba2f6774f9bcf724add4d976",
    "reference": "https://www.crwflags.com/fotw/flags/be-wlg.html",
-   "status": "Unofficial provincial banner",
-   "sourceKind": "commons"
+   "sourceKind": "commons",
+   "status": "Unofficial provincial banner"
   },
   "BE22": {
    "country": "belgium",
@@ -6871,6 +6871,42 @@
    "sha256": "9a82548d92ef8a505e9e097da6634fa77913f10b918d4798a49c3416dc41a627",
    "commonsSha1": "fa7887be4b7dfb32f48c3706a9d22ebb1543fc56",
    "reference": "http://www.wikidata.org/entity/Q13121",
+   "sourceKind": "commons"
+  },
+  "DK-GL": {
+   "country": "denmark",
+   "level": 1,
+   "name": "Greenland",
+   "file": "vendor/europe-expansion-flags/DK-GL.webp",
+   "full": "vendor/europe-expansion-flags/DK-GL.svg",
+   "width": 900,
+   "height": 600,
+   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Greenland.svg",
+   "source": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_Greenland.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "commonsFile": "Flag of Greenland.svg",
+   "credit": "Jeffrey Connell (IceKarma)",
+   "license": "Public domain",
+   "sha256": "065a9b2df9818172930374164d25b464076b87cc6222da4514018b23a2bda4c2",
+   "commonsSha1": "89868bdd79fa4cb051c8810953d39a1128e6971f",
+   "reference": "https://naalakkersuisut.gl/Nyheder/2026/01/1301_flag?sc_lang=da",
+   "sourceKind": "commons"
+  },
+  "DK-FO": {
+   "country": "denmark",
+   "level": 1,
+   "name": "Faroe Islands",
+   "file": "vendor/europe-expansion-flags/DK-FO.webp",
+   "full": "vendor/europe-expansion-flags/DK-FO.svg",
+   "width": 1100,
+   "height": 800,
+   "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Faroe_Islands.svg",
+   "source": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Flag_of_the_Faroe_Islands.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "commonsFile": "Flag of the Faroe Islands.svg",
+   "credit": "It was made by User:IceKarma (Jeffrey Connell), who released it to the public domain.",
+   "license": "Public domain",
+   "sha256": "2022a096665d511f43184258767680b7c4efefc3b33cb1122121b7ce0bf9d394",
+   "commonsSha1": "f6f18df0507289fa03276d4f5b7d4a6934c0bdd4",
+   "reference": "https://www.government.fo/en/foreign-relations/representations-of-the-faroe-islands-abroad/the-representation-of-the-faroe-islands-in-london/flag-of-the-faroe-islands",
    "sourceKind": "commons"
   }
  }

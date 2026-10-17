@@ -458,6 +458,15 @@
       "evidence": {
         "note": "Added locally as an independent sovereign country, accessed as a subpage of Italy. Not yet committed or deployed."
       }
+    },
+    {
+      "country": "denmark",
+      "name": "Denmark",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Denmark added with its current five regions, 98 municipalities and Christiansø, plus Greenland and the Faroe Islands with focused territorial entry and local subdivisions."
+      }
     }
   ]
 }

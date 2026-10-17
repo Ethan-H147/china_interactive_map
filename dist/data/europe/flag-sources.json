@@ -215,6 +215,18 @@
       "width": 1000,
       "height": 1000,
       "sha256": "59ac80ec65dde9fbbf6456609baa583218bf4290bd2a50b2616c354b1660724e"
+    },
+    "denmark": {
+      "file": "vendor/flag-dk.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Denmark.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "full": "vendor/flag-dk.svg",
+      "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Denmark.svg",
+      "width": 37,
+      "height": 28,
+      "sha256": "f27c3fa734ea66c662061219e8cc21f886cf36f798f822fca27e55c84afe8648"
     }
   }
 }
