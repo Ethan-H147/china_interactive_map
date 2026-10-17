@@ -66,8 +66,13 @@ const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));a
  // Startup preloads must name real files that the page actually requests; a stale
  // entry would download a file twice or not at all.
  const page=fs.readFileSync('dist/index.html','utf8'),code=fs.readdirSync('dist').filter(f=>/\.(m?js)$/.test(f)).map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
- const preloads=[...page.matchAll(/<link rel="preload" as="fetch" crossorigin href="data\/([^"]+)">/g)].map(m=>m[1]);
- assert(preloads.length>=20,'Startup context files are preloaded');
+ // The page preloads China's first-view files; app.js preloads every other country's outline after that view.
+ const first=[...page.matchAll(/<link rel="preload" as="fetch" crossorigin href="data\/([^"]+)">/g)].map(m=>m[1]);
+ const later=JSON.parse(page.match(/<script type="application\/json" id="later-preloads">([^<]+)<\/script>/)[1]).map(u=>u.replace(/^data\//,''));
+ assert(first.includes('atlas-frontiers.bin')&&first.includes('china-context.bin')&&first.length<=8,'Only first-view files are preloaded by the page');
+ assert(later.length>=15&&!later.some(f=>first.includes(f)),'Other countries\' outlines are preloaded later, once each');
+ assert(code.includes("$('later-preloads')"),'app.js requests the later preloads');
+ const preloads=[...first,...later];
  for(const file of preloads){
   assert(fs.existsSync('dist/data/'+file),'Preloaded file exists: '+file);
   // Paths may be assembled at runtime, e.g. 'data/archipelago/'+country+'-context.bin'.
@@ -79,5 +84,5 @@ const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));a
  assert.deepEqual(boot('#japan').fetched,[],'Other countries do not download China');
  const early=boot('#china').entry;assert(early.takeEarly('chinaPack'));assert.equal(early.takeEarly('chinaPack'),undefined,'An early response is handed over once');
  for(const key of ['chinaPack','chinaRegions'])assert(entry.includes(`['${key}',`)&&app.includes(`takeEarly('${key}')`),'Early China response is consumed: '+key);
- console.log(`Startup preloads: ${preloads.length} files exist and are requested; early China downloads are consumed.`);
+ console.log(`Startup preloads: ${first.length} first-view and ${later.length} later files exist and are requested; early China downloads are consumed.`);
 }
