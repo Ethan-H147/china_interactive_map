@@ -21,7 +21,7 @@ export function createExplorer(articles,landmarks){
   const heading=document.createElement('h3');heading.textContent='Landmarks';gallery.append(heading);
   for(const place of places){
    const card=document.createElement('figure'),button=document.createElement('button');button.type='button';button.className='landmark-photo';button.setAttribute('aria-label','View full-resolution photo of '+place.en);
-   const image=document.createElement('img');image.src=place.photo.src;image.width=place.photo.width;image.height=place.photo.height;image.alt=place.en;image.loading='lazy';image.decoding='async';
+   const image=document.createElement('img');const shown=place.photo.display||place.photo;image.src=shown.src;image.width=shown.width;image.height=shown.height;image.alt=place.en;image.loading='lazy';image.decoding='async';
    const expand=document.createElement('span');expand.className='photo-expand';expand.textContent='↗';expand.setAttribute('aria-hidden','true');button.append(image,expand);button.onclick=()=>open(place);
    const caption=document.createElement('figcaption'),name=document.createElement('strong'),chinese=document.createElement('span');name.textContent=place.en;chinese.textContent=place.zh;chinese.lang='zh-Hans';caption.append(name,chinese);
    const credit=document.createElement('small');credit.append(link(place.photo.author+' · '+place.photo.license,place.photo.source));

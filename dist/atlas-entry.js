@@ -30,7 +30,6 @@
   document.title=info.en+(info.local?' · '+info.local:'');
   document.querySelectorAll('[data-country-symbol]').forEach(el=>{el.innerHTML=info?AtlasSymbols.markup(current):'';});
   if($('loading-label'))$('loading-label').textContent=info?'Loading '+info.en+' map…':'Loading atlas…';
-  if($('startup-name'))$('startup-name').textContent=info?'Preparing '+info.en+'…':'Preparing maps…';
   if($('home'))$('home').textContent='All '+(info?.en||'countries');
   if($('map')&&info)$('map').setAttribute('aria-label',info.mapLabel||'Interactive '+info.en+' administrative boundary and island map');
  }

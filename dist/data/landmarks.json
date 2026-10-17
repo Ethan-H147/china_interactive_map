@@ -20,7 +20,12 @@
         "author": "Pixelflake",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/forbidden-city.webp",
+          "width": 1200,
+          "height": 600
+        }
       }
     },
     {
@@ -42,7 +47,12 @@
         "author": "Balon Greyjoy",
         "license": "CC0",
         "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/temple-of-heaven.webp",
+          "width": 1200,
+          "height": 1800
+        }
       }
     },
     {
@@ -64,7 +74,12 @@
         "author": "HALUK COMERTEL",
         "license": "CC BY 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/oriental-pearl-bund.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     },
     {
@@ -86,7 +101,12 @@
         "author": "钉钉",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/the-bund.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     },
     {
@@ -108,7 +128,12 @@
         "author": "Takashishin",
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/west-lake.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     },
     {
@@ -130,7 +155,12 @@
         "author": "David290",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/leifeng-pagoda.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     },
     {
@@ -152,7 +182,12 @@
         "author": "xiquinhosilva",
         "license": "CC BY 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/sun-yat-sen.webp",
+          "width": 1200,
+          "height": 800
+        }
       }
     },
     {
@@ -174,7 +209,12 @@
         "author": "纳瓦拉的亨利",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/fuzimiao.webp",
+          "width": 1200,
+          "height": 1200
+        }
       }
     },
     {
@@ -196,7 +236,12 @@
         "author": "Zhangzhugang",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/humble-garden.webp",
+          "width": 1200,
+          "height": 800
+        }
       }
     },
     {
@@ -218,7 +263,12 @@
         "author": "Chainwit.",
         "license": "CC BY 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/tiger-hill.webp",
+          "width": 1200,
+          "height": 1600
+        }
       }
     },
     {
@@ -240,7 +290,12 @@
         "author": "Tim Wu",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/canton-tower.webp",
+          "width": 1200,
+          "height": 2267
+        }
       }
     },
     {
@@ -262,7 +317,12 @@
         "author": "Eduardo M. C.",
         "license": "CC BY 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/chen-clan.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     },
     {
@@ -284,7 +344,12 @@
         "author": "Shihu7",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/ping-an.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     },
     {
@@ -306,7 +371,12 @@
         "author": "Sparktour",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/civic-center.webp",
+          "width": 1200,
+          "height": 800
+        }
       }
     },
     {
@@ -328,7 +398,12 @@
         "author": "xiquinhosilva",
         "license": "CC BY 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/terracotta-army.webp",
+          "width": 1200,
+          "height": 795
+        }
       }
     },
     {
@@ -350,7 +425,12 @@
         "author": "Alex Kwok",
         "license": "CC BY-SA 3.0",
         "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/giant-wild-goose.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     },
     {
@@ -372,7 +452,12 @@
         "author": "George Lu",
         "license": "CC BY 2.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/chengdu-pandas.webp",
+          "width": 1200,
+          "height": 800
+        }
       }
     },
     {
@@ -394,7 +479,12 @@
         "author": "Daderot",
         "license": "CC0",
         "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/wuhou-shrine.webp",
+          "width": 1200,
+          "height": 800
+        }
       }
     },
     {
@@ -416,7 +506,12 @@
         "author": "Jonashtand",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/hongya-cave.webp",
+          "width": 1200,
+          "height": 675
+        }
       }
     },
     {
@@ -438,7 +533,12 @@
         "author": "G41rn8",
         "license": "CC BY-SA 4.0",
         "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-        "changes": "Converted to WebP; original pixel dimensions retained."
+        "changes": "Converted to WebP; original pixel dimensions retained.",
+        "display": {
+          "src": "photos/display/dazu-carvings.webp",
+          "width": 1200,
+          "height": 900
+        }
       }
     }
   ]

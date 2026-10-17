@@ -41,7 +41,7 @@
     "test:china-counties": "node --max-old-space-size=7000 scripts/validate-china-counties.mjs",
     "build:districts": "node scripts/prepare-city-districts.mjs && npm run build:china-pack && npm run build:motion",
     "build:china-counties": "node --max-old-space-size=7000 scripts/prepare-china-counties.mjs && node scripts/prepare-china-county-names.mjs && npm run build:china-pack",
-    "build:gallery": "node scripts/prepare-gallery.mjs",
+    "build:gallery": "node scripts/prepare-gallery.mjs && node scripts/prepare-gallery-display.mjs",
     "build:water": "node scripts/prepare-water.mjs && npm run build:motion",
     "test:water": "node --check dist/water.mjs && node scripts/validate-water.mjs && node scripts/validate-river-conflation.mjs",
     "test:names-quiz": "node --check dist/name-quiz.mjs && node --check dist/place-tools.mjs && node scripts/validate-name-quiz.mjs",

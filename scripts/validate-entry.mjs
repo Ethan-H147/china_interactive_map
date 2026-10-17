@@ -6,7 +6,7 @@ const source=fs.readFileSync('dist/atlas-entry.js','utf8'),registrySource=fs.rea
 const withRegistry=context=>{vm.createContext(context);vm.runInContext(registrySource,context);context.window.AtlasCountries=context.AtlasCountries;return context;};
 function boot(hash='',saved,{blocked=false,developer=false,unreleased=[]}={}){
  const stored=new Map(saved?[['boundary-atlas-country-v1',saved]]:[]);
- const elements=new Map(['atlas-title-english','atlas-title-local','atlas-title-malay','atlas-title-tamil','loading-label','startup-name','home'].map(id=>[id,{}]));
+ const elements=new Map(['atlas-title-english','atlas-title-local','atlas-title-malay','atlas-title-tamil','loading-label','home'].map(id=>[id,{}]));
  const symbols=[{}],location={hash,pathname:'/',search:''};
  const listeners={},fetched=[];
  const context={fetch:url=>{fetched.push(url);return Promise.resolve({ok:true});},window:{AtlasDev:{enabled:developer,allows:country=>!unreleased.includes(country)||developer},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,

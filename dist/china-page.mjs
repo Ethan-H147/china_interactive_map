@@ -57,7 +57,6 @@ export function mountChinaPage(){
           <p class="quiz-instruction">Find on the map</p><h2 id="quiz-question" tabindex="-1"></h2><p id="quiz-question-chinese" lang="zh"></p>
           <div id="quiz-feedback" class="quiz-feedback" role="status" aria-live="polite" hidden><strong id="quiz-feedback-title"></strong><p id="quiz-feedback-detail"></p></div>
           <div class="quiz-round-actions"><button id="quiz-reveal" class="quiet-button" data-quiz-nav>Show answer</button><button id="quiz-view" class="quiet-button" data-quiz-nav hidden>View answer</button><button id="quiz-next" class="quiz-primary" data-quiz-nav hidden>Next question</button></div>
-          <button id="quiz-end" class="quiz-text-button" data-quiz-nav>End quiz</button>
         </section>
         <section id="quiz-results" hidden aria-labelledby="quiz-results-title">
           <span class="eyebrow">QUIZ COMPLETE</span><h2 id="quiz-results-title" tabindex="-1">Results</h2><p id="quiz-result-score" class="quiz-result-score"></p><p id="quiz-result-detail"></p>

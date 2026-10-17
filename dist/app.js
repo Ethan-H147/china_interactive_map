@@ -804,7 +804,7 @@ function configureQuiz(){
 }
 for(const id of ['quiz-type','quiz-scope','quiz-taiwan','quiz-length'])$(id).addEventListener('change',updateQuizSetup);
 $('quiz-start').onclick=()=>startQuiz();$('quiz-resume').onclick=()=>startQuiz(true);$('quiz-again').onclick=()=>startQuiz();$('quiz-reveal').onclick=()=>answerQuiz();$('quiz-next').onclick=nextQuizQuestion;
-$('quiz-view').onclick=()=>viewQuizAnswer();$('quiz-end').onclick=configureQuiz;$('quiz-configure').onclick=configureQuiz;
+$('quiz-view').onclick=()=>viewQuizAnswer();$('quiz-configure').onclick=configureQuiz;
 $('quiz-map-reveal').onclick=()=>answerQuiz();$('quiz-map-next').onclick=nextQuizQuestion;
 map.getCanvas().addEventListener('keydown',event=>{if(event.key==='Enter'&&quiz.active&&!cameraBusy){event.preventDefault();const region=pickedRegion([map.getContainer().clientWidth/2,map.getContainer().clientHeight/2]);if(region)answerQuiz(region.feature.properties.adcode);}});
 map.getCanvas().addEventListener('focus',()=>{$('quiz-crosshair').hidden=!quiz.active||quiz.type==='name';});map.getCanvas().addEventListener('blur',()=>{$('quiz-crosshair').hidden=true;});
