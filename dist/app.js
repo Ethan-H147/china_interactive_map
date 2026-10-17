@@ -563,7 +563,7 @@ async function init(){try{
   // countries never sit as coarse previews before someone opens one.
   southAmerica.warmContext().catch(e=>console.warn(e));
   europe.ensure().then(()=>{europe.syncDeveloper();southAmerica.syncDeveloper();syncPortals(atlasMode);}).catch(e=>console.warn(e));
-}catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;}}
+}catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;finishAtlases();}}
 // Startup preloads in index.html cover China's first view; southern Africa's outline files are
 // listed there too and requested here, after that view or straight away.
 let preloadedLater=false;
@@ -582,8 +582,8 @@ async function showFirstView(){
  $('map-loading').hidden=true;
  storeForRepeatVisits();
 }
-// sw.js keeps this deploy's files on the device; it is handed the files the first view
-// loaded before it took control.
+// sw.js keeps this deploy's files on the device and serves them from the next visit on; it is
+// handed the files this visit loaded.
 function storeForRepeatVisits(){
  if(!('serviceWorker' in navigator))return;
  navigator.serviceWorker.register('sw.js').then(()=>navigator.serviceWorker.ready).then(registration=>registration.active?.postMessage({store:[...new Set(performance.getEntriesByType('resource').map(e=>e.name).filter(url=>url.startsWith(location.origin)))]})).catch(()=>{});

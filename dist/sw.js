@@ -3,11 +3,12 @@
 // stored per version, and a new version empties the store. Without a version (local preview,
 // other hosts) nothing is stored and every request goes to the network as usual.
 // Pages always come from the network, so a page and the files it asks for share one version.
+// The worker never takes over a page already open: it serves from the next visit on, and the
+// first visit hands it the files it loaded, which it copies in the background.
 const prefix='atlas-';
 let checking=null;
 
 self.addEventListener('install',()=>self.skipWaiting());
-self.addEventListener('activate',event=>event.waitUntil(self.clients.claim()));
 
 // version.json bypasses the browser and CDN caches so a deploy is seen at once.
 async function checkVersion(){
@@ -22,11 +23,12 @@ async function currentStore(){return (await caches.keys()).find(name=>name.start
 function navigate(request){checking=checkVersion();return fetch(request,{cache:'no-cache'});}
 
 async function cached(request){
- const store=await (checking??=checkVersion());
+ let store=null;try{store=await (checking??=checkVersion());}catch{}
  if(!store)return fetch(request);
- const cache=await caches.open(store),hit=await cache.match(request);if(hit)return hit;
+ // A failing store never fails the request: it goes to the network instead.
+ let cache;try{cache=await caches.open(store);const hit=await cache.match(request);if(hit)return hit;}catch{cache=null;}
  const response=await fetch(request);
- if(response.status===200&&response.type==='basic')cache.put(request,response.clone()).catch(()=>{});
+ if(cache&&response.status===200&&response.type==='basic')cache.put(request,response.clone()).catch(()=>{});
  return response;
 }
 

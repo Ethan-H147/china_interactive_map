@@ -102,9 +102,9 @@ export async function decodeData(bytes){
 // A GeoJSON source whose data file the page fetches (so its preload applies) and MapLibre's
 // workers decode (maplibre-worker-protocols.mjs, atlas-data://), so the page never copies the
 // geometry to them. transform: 'parts' (polygon-parts.mjs) or 'coastal' (coastal-detail.mjs).
+// The blob URL stays valid: MapLibre fetches a source's data again whenever it reloads it.
 export async function addWorkerSource(map,id,url,options,transform){
  const response=await fetch(compactUrl(url));if(!response.ok)throw Error(`${url}: ${response.status}`);
  const blob=URL.createObjectURL(await response.blob());
  map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(transform?'&transform='+transform:'')});
- const release=event=>{if(event.sourceId===id&&event.isSourceLoaded){map.off('sourcedata',release);URL.revokeObjectURL(blob);}};map.on('sourcedata',release);
 }
