@@ -1,4 +1,5 @@
 import {addRegionalCountry} from './regional-country.mjs';
+import {compactFiles} from './compact-files.mjs';
 import './countries.js';
 
 // Each country's levels and map settings are declared in countries.js.
@@ -15,6 +16,9 @@ export function createEurope(map,host){
   const wanted=Object.keys(configurations).filter(country=>!queued.has(country));
   if(!wanted.length)return adding;
   for(const country of wanted)queued.add(country);
+  // Their outline files are all requested now, so each portal is ready when its turn comes; the
+  // portals are still added one at a time, in this order, which keeps their layers in order.
+  if(globalThis.document)for(const file of compactFiles.filter(file=>wanted.some(country=>file.startsWith('europe/'+country+'/')))){const link=document.createElement('link');link.rel='preload';link.as='fetch';link.crossOrigin='anonymous';link.href='data/compact/'+file;document.head.append(link);}
   adding=adding.catch(()=>{}).then(async()=>{
    flags??=(await import('./europe-flags.mjs')).europeFlags;
    for(const country of wanted){const c=configurations[country];Object.assign(c.flags,flags[country]?.firstFlags);Object.assign(c.detailFlags,flags[country]?.detailFlags);portals[country]=await addRegionalCountry(map,host,c);}
