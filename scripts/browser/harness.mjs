@@ -60,7 +60,7 @@ export async function launch({width=1280,height=820,mobile=false,developer=false
  const evaluate=async expression=>{const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error('evaluate: '+(r.exceptionDetails.exception?.description||r.exceptionDetails.text).split('\n')[0]);return r.result.value;};
  const waitFor=async(expression,{timeout=30000,label=expression}={})=>{const start=Date.now();for(;;){let value;try{value=await evaluate(expression);}catch{}if(value)return value;if(Date.now()-start>timeout)throw Error('Timed out waiting for '+label);await sleep(150);}};
  // The atlas is ready when startup and country switching have finished and the map is idle.
- const settle=async()=>{await waitFor("!document.documentElement.dataset.starting&&!document.documentElement.dataset.switching&&typeof map!=='undefined'&&map.loaded()&&!map.isMoving()",{timeout:90000,label:'atlas to settle'});await sleep(600);};
+ const settle=async()=>{await waitFor("!document.documentElement.dataset.starting&&!document.documentElement.dataset.switching&&typeof map!=='undefined'&&map.loaded()&&!map.isMoving()&&!cameraBusy",{timeout:90000,label:'atlas to settle'});await sleep(600);};
  const center=async selector=>{const r=await evaluate(`(()=>{const e=document.querySelector(${JSON.stringify(selector)});if(!e)return null;e.scrollIntoView({block:'nearest'});const b=e.getBoundingClientRect();return b.width&&b.height?[b.x+b.width/2,b.y+b.height/2]:null;})()`);if(!r)throw Error('Not visible: '+selector);return r;};
   // Input carries explicit timestamps (seconds), so gesture speed does not depend on how
  // quickly this machine delivers events.

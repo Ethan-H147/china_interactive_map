@@ -1,7 +1,7 @@
 /* Keep desktop pickers in the page's top layer, with native select semantics.
-   Touch layouts and browsers without base-select retain their platform picker. */
+   Small-screen layouts and browsers without base-select retain their platform picker. */
 @supports (appearance:base-select){
- @media (min-width:761px) and (pointer:fine){
+ @media (min-width:761px){
   aside.sidebar select:not([multiple]):is(:not([size]),[size="0"],[size="1"]),
   aside.sidebar select:not([multiple]):is(:not([size]),[size="0"],[size="1"])::picker(select){
    appearance:base-select;

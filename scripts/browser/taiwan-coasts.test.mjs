@@ -10,7 +10,7 @@ async function outlines(page,points,layers){
 export default cases.map(([query,name,code,center,zoom])=>({name:name+' coasts show only when selected',options:{width:1280,height:820},async run(page,base){
  const region=regions.find(f=>f.properties.adcode===code),all=polygons(region.geometry).flat().flat(),step=Math.max(1,Math.floor(all.length/350)),points=all.filter((_,i)=>i%step===0);
  await page.open(base,'#china');await page.tap('#mode-prefecture');
- const frame=async()=>{await page.evaluate('void map.jumpTo({center:'+JSON.stringify(center)+',zoom:'+zoom+'})');await page.settle();};
+ const frame=async()=>{await page.settle();await page.evaluate('void map.jumpTo({center:'+JSON.stringify(center)+',zoom:'+zoom+'})');await page.settle();};
  await frame();
  const normal=['province-lines','prefecture-lines','other-lines','atlas-frontiers'];
  let result=await outlines(page,points,normal);assert(result.tested>10,'Exercise visible island coasts');assert.equal(result.ink,0,'Unselected coast has no brown or gray stroke');
