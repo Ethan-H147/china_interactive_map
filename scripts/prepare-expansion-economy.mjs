@@ -107,6 +107,7 @@ datasets.mexico=await retain('mexico.json',async()=>{
 });console.log('mexico',Object.keys(datasets.mexico.rows).length,'GDP states/entities');
 // Apply metrics to the current geometry/population cards without replacing their population periods.
 for(const [country,data]of Object.entries(datasets)){
+  if(process.env.ONLY&&!process.env.ONLY.split(",").includes(country))continue;
  const path='dist/data/europe/'+country+'/statistics.json',statistics=read(path);
  const source=country+'Gdp',populationSource=Object.values(data.rows).find(r=>r.populationSource)?.populationSource;
  statistics.sources[source]={title:data.provider,url:data.url,license:country==='germany'||country==='belgium'||country==='netherlands'?'CC BY 4.0':country==='united-states'?'Public domain':'Official statistics, attribution required'};

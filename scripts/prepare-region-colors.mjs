@@ -36,6 +36,7 @@ const supplements={
 export function prepareRegionColors(){
  const outputs={};
  for(const [country,c]of Object.entries(countryColorData)){
+  if(process.env.ONLY&&!process.env.ONLY.split(",").includes(country))continue;
   const d=read('dist/'+c.statistics),catalogue=c.catalogue?read('dist/'+c.catalogue):null;
   const geography=[...(catalogue?.records||['first','second','third'].flatMap(k=>catalogue?.[k]?.features.map(f=>f.properties)||[])),...(c.extraCatalogue?read('dist/'+c.extraCatalogue).records:[])];
   const first=geography.filter(r=>r.level===1),extra=c.population?supplements[c.population](first):{};

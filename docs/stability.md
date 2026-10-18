@@ -29,3 +29,9 @@ Italy's Vatican enclave repair changed two lazy geometry chunks without updating
 Compact-data rebuilds keep old files available until replacements are ready and replace each file atomically. This prevents transient missing-data responses in an already open preview while shared geometry is being rebuilt.
 
 The first completed audit and isolated performance baseline are recorded in stability-audit-2026-10-18.md and performance-baselines/2026-10-18.json.
+
+## Swiss coordinate alignment
+
+Switzerland’s ESRI source WKT omits the transformation from the CH1903+ datum to WGS84. The importer now declares the complete LV95 source projection, including swisstopo’s three-parameter datum shift, before building any administrative geometry. The shared geometry is rebuilt through every level, portal context, border mesh, catalogue center/bounds and compact copy. Reported population/GDP values retain their original periods; mapped area and derived density follow the corrected geography.
+
+Run npm run test:swiss-alignment for an independent LV95 origin control, retained France/Italy frontier samples, all Swiss geometry chunks, and real rendered-fill/border checks. Desktop and phone scenarios exercise zooms 11, 13 and 15, flat/globe projections, and both active Switzerland and background Switzerland after switching to Morocco. The datum check is also part of the CI stability-data gate. ONLY=switzerland scopes economic/color preparation during a Swiss rebuild.

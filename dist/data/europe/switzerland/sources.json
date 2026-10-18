@@ -1,5 +1,15 @@
 {
   "retrieved": "2026-10-17",
+  "projection": {
+    "source": "EPSG:2056, CH1903+ / LV95",
+    "target": "EPSG:4326, WGS84",
+    "datumShiftMetres": [
+      674.374,
+      15.056,
+      405.346
+    ],
+    "reference": "https://www.swisstopo.admin.ch/dam/en/sd-web/rbTNT25PXkEA/georef_d.pdf"
+  },
   "counts": {
     "1": 26,
     "2": 273,
@@ -9,19 +19,19 @@
     {
       "pair": "AUT-CHE",
       "vertices": 70,
-      "endpointErrorMetres": 2132,
+      "endpointErrorMetres": 1852,
       "method": "continuous outline arc"
     },
     {
       "pair": "AUT-CHE",
       "vertices": 560,
-      "endpointErrorMetres": 1539,
+      "endpointErrorMetres": 1501,
       "method": "continuous outline arc"
     },
     {
       "pair": "CHE-LIE",
       "vertices": 67,
-      "endpointErrorMetres": 1128,
+      "endpointErrorMetres": 1068,
       "method": "continuous outline arc"
     }
   ],

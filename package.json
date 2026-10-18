@@ -179,7 +179,8 @@
     "measure:stability": "node scripts/browser/measure-stability.mjs",
     "test:preview": "node scripts/test-preview.mjs",
     "test:spatial-audit": "node --max-old-space-size=10000 scripts/audit-spatial.mjs",
-    "test:stability-data": "node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz",
-    "test:map-view-picker": "node scripts/validate-map-view-picker.mjs && node scripts/browser/run.mjs map-view-dropdown"
+    "test:stability-data": "node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz && node scripts/validate-swiss-alignment.mjs",
+    "test:map-view-picker": "node scripts/validate-map-view-picker.mjs && node scripts/browser/run.mjs map-view-dropdown",
+    "test:swiss-alignment": "node scripts/validate-swiss-alignment.mjs && node scripts/browser/run.mjs swiss-alignment"
   }
 }
