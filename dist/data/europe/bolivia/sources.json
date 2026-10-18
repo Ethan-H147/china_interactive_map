@@ -61,5 +61,16 @@
       "revision": "2b8c56488f937f67ad04b5f71885f739615b6d02",
       "url": "https://github.com/lab-tecnosocial/municipios-bolivia-2024/tree/2b8c56488f937f67ad04b5f71885f739615b6d02"
     }
+  },
+  "titicacaShoreline": {
+    "date": "2026-10-18",
+    "relations": [
+      3000330,
+      10675802
+    ],
+    "source": "data/titicaca/sources.json",
+    "changedRecords": 33,
+    "license": "Derived water-clipped geometry: © OpenStreetMap contributors, ODbL 1.0; original administrative source licenses remain applicable.",
+    "method": "Both mapped lake basins are erased from every fill level, selection geometry and context, preserving island holes. Political international lines across the lake are retained separately. Population dates and administrative identities are unchanged."
   }
 }

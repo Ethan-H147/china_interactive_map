@@ -22,3 +22,5 @@ await fs.writeFile('dist/data/world-land-sources.json',JSON.stringify({
  license:'Public domain',retrieved:new Date().toISOString().slice(0,10),features:features.length,bytes:bytes.length
 },null,2)+'\n');
 console.log('World land:',features.length,'silhouettes;',bytes.length,'bytes compressed');
+
+await (await import('./titicaca-water.mjs')).writeTiticacaWater();await (await import('./mask-titicaca.mjs')).maskTiticacaWorld();

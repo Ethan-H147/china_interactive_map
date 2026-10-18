@@ -637,3 +637,5 @@ for(const [country,c] of Object.entries(countries)){
 }
 if(!only||only.includes('india')){const {prepareIndiaNames}=await import('./prepare-india-names.mjs');prepareIndiaNames(out+'/india/');}
 console.log('Europe build complete.');
+
+if(!only||only.includes('peru')){await (await import('./titicaca-water.mjs')).writeTiticacaWater();await (await import('./mask-titicaca.mjs')).maskTiticacaCountry('peru');}

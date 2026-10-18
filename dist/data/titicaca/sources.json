@@ -1,0 +1,26 @@
+{
+  "retrieved": "2026-10-18",
+  "description": "Main Lake Titicaca plus Lago Menor / Wiñaymarca, preserving island inner rings. OSM notes fluctuating wetland water extent near Puno; this is a pinned mapped shoreline, not a water-level observation.",
+  "files": {
+    "osm-3000330.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/3000330/full.json",
+      "relation": 3000330,
+      "version": 157,
+      "timestamp": "2026-06-15T21:46:37Z",
+      "bytes": 4367479,
+      "sha256": "c0519b57f57adde31aedc1a4ceafa1bcb3bf15c8a03799d0d9bc51edfaceb7a0",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors"
+    },
+    "osm-10675802.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/10675802/full.json",
+      "relation": 10675802,
+      "version": 6,
+      "timestamp": "2026-01-24T15:18:41Z",
+      "bytes": 1561663,
+      "sha256": "7f39dafb92b906991397f69311d7b2ee6b5adaa877e77ac210d10d22d06d35db",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors"
+    }
+  }
+}

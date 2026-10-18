@@ -88,8 +88,8 @@
     "owner": "peru",
     "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
     "canonicalSource": "dist/data/europe/peru/first.bin",
-    "canonicalSha256": "5721d6549d3de92fe271583af1c67bde31b1fea20e31e2613ddf225928d315cc",
-    "changedEdges": 4717,
+    "canonicalSha256": "2e1221bec393b49561b6199ba730de57358a7f002fdb2568fcc9d62cca6f160e",
+    "changedEdges": 4730,
     "maxDisplacementMetres": 2493.3977884986325,
     "changedRegions": [
       "BO-M-020305",

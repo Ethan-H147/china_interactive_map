@@ -554,5 +554,25 @@
       "owner": "peru",
       "source": "atlas-frontiers.bin"
     }
-  ]
+  ],
+  "titicacaShoreline": {
+    "date": "2026-10-18",
+    "relations": [
+      3000330,
+      10675802
+    ],
+    "source": "data/titicaca/sources.json",
+    "changedRecords": 34,
+    "islandRefinement": {
+      "district": "PE-D-210103",
+      "ways": [
+        220405132,
+        220405133
+      ],
+      "ownership": "https://www.gob.pe/institucion/muniamantani/institucional",
+      "note": "Amantaní and Taquile retain their existing district ownership; detailed mapped shorelines replace the coarse island outlines."
+    },
+    "license": "Derived water-clipped geometry: © OpenStreetMap contributors, ODbL 1.0; original administrative source licenses remain applicable.",
+    "method": "Both mapped lake basins are erased from every fill level, selection geometry and context, preserving island holes. Political international lines across the lake are retained separately. Population dates and administrative identities are unchanged."
+  }
 }
