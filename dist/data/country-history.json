@@ -548,8 +548,16 @@
       "country": "bolivia",
       "name": "Bolivia",
       "addedOn": "2026-10-18",
-      "basis": "local-implementation",
+      "basis": "first-tracked-implementation",
       "evidence": {
+        "commit": "375923f040a599f7923d5d960ac633e1ed8bd3a3",
+        "committedAt": "2026-10-18T15:59:04-05:00",
+        "subject": "Add Bolivia administrative maps and census statistics; log Bolivia and Morocco",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-bolivia.mjs",
+          "dist/data/europe/bolivia/catalogue.bin"
+        ],
         "note": "First implemented on 18 October 2026: nine departments, 112 actual provinces, 340 municipalities and three Indigenous territories; final 2024 census population; shared regional renderer."
       }
     }

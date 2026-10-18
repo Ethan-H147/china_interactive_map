@@ -49,7 +49,7 @@ Dates use America/Chicago. "Added" means the first implementation in the atlas, 
 | 2026-10-18 | Thailand | Local implementation | 76 provinces plus Bangkok; districts and subdistricts; not deployed. |
 | 2026-10-18 | Vietnam | Local implementation | 34 provincial units and 3,321 commune-level units; current two-tier structure; not deployed. |
 | 2026-10-18 | Morocco | [326a3b1](https://github.com/Ethan-H147/china_interactive_map/commit/326a3b1dc4a73b6cec108638519ee9592f5f4d8f) | 12 regions, 75 provinces/prefectures and 1,502 mapped communes; published 18 October 2026. |
-| 2026-10-18 | Bolivia | Local implementation | Nine departments, 112 actual provinces, 340 municipalities and three Indigenous territories; final 2024 census statistics. |
+| 2026-10-18 | Bolivia | [375923f](https://github.com/Ethan-H147/china_interactive_map/commit/375923f040a599f7923d5d960ac633e1ed8bd3a3) | Nine departments, 112 actual provinces, 340 municipalities and three Indigenous territories; final 2024 census statistics. |
 
 The machine-readable log is [dist/data/country-history.json](../dist/data/country-history.json). Add an entry whenever a country is added to countries.js; npm run test:entry checks that every country has a date. Keep later releases and coverage expansions separate from the original addition date.
 
