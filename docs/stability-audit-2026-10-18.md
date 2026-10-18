@@ -39,3 +39,11 @@ See stability.md for commands, coverage and limits. Detailed generated reports a
 The full cloud suite exposed a missing Morocco menu stripe and an asynchronous map-view refresh that could overwrite an open native dropdown choice. The stripe now uses the shared gradient format; same-country status updates preserve a pending choice. US/Canada deepest-level fixtures now exercise municipalities, and the Netherlands methodology fixture includes all 18 first-level maps with their own verified economic figures. The expanded suite is split into ten CI shards to stay within job limits, and browser reports checkpoint after every scenario so interrupted runs remain visibly incomplete. Targeted desktop/phone regressions cover these repairs.
 
 The hosted Site uses the version-pinned same-origin delivery adapter in hosting/, which avoids copying the entire 1.03 GiB asset tree into the provider build. Complete data remain in the public GitHub source; the adapter has strict path/method checks, streams unchanged bytes, strips source-view-only headers, and forwards no user credentials or query strings. Its unit and real browser smoke checks are recorded separately from the local atlas baseline.
+
+## Publication verification
+
+Site version 175 is live at https://china-boundary-atlas.hys0423.chatgpt.site. Representative served scripts, styles and Morocco binary data matched the tested source byte for byte. All three live desktop/phone/Spanish-frontier scenarios passed. Runtime assets are pinned to GitHub commit 278003387b94aa86802beee27958a21ebe6cfd62; the hosting pin and audited source are published on main.
+
+The cloud hosting adapter check passed. The new full cloud data gate passed; the ten-group browser suite was still running at handoff, independently of the 89 passing local audit scenarios. Track its result at https://github.com/Ethan-H147/china_interactive_map/actions/runs/39157649694. This report does not claim that broader suite passed.
+
+The owned local preview was stopped after handoff. Restart from any directory with npm --prefix C:/Users/huyus/Projects/boundary-atlas start. A temporary source-transfer branch remains in the hosting repository because automatic approval review declined its optional deletion; it does not change the deployment.
