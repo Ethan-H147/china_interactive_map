@@ -119,7 +119,7 @@ Attribution: This data is derived from administrative-dong boundaries released b
 
 ## Preview
 
-Run `node scripts/serve.mjs` and open http://127.0.0.1:4173.
+Run `npm start` and open http://127.0.0.1:4174/.
 
 ## Boundary coverage
 
