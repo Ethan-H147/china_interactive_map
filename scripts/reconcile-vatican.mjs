@@ -17,3 +17,6 @@ for(const [relative,expected]of Object.entries(targets)){
 }
 // Italy owns the shared international edge. Vatican's selection uses the same polygon.
 fs.writeFileSync('dist/data/europe/vatican-city/international.bin',gzipSync(JSON.stringify({type:'FeatureCollection',features:[]})));
+
+// Reconciled geometry changes the chunk byte sizes used by validation and memory estimates.
+const {refreshChunkAccounting}=await import('./refresh-chunk-accounting.mjs');refreshChunkAccounting(root);

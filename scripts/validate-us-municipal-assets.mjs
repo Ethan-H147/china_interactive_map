@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import sharp from 'sharp';
+import {flagThumbnail} from './flag-thumbnail.mjs';
+import {createPlaceSearch} from '../dist/place-search.mjs';
+const source=Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="20000" height="10000" viewBox="0 0 20000 10000"><path fill="#f00" d="M0 0H20000V10000H0Z"/></svg>'),copy=Buffer.from(source);
+const thumbnail=await flagThumbnail(source,{width:512,height:256}),info=await sharp(thumbnail).metadata();
+assert.equal(info.height,180);assert.equal(info.width,360);assert.deepEqual(source,copy,'Rasterization must not modify the original');
+const {data}=await sharp(thumbnail).removeAlpha().raw().toBuffer({resolveWithObject:true});assert.deepEqual([...data.subarray(0,3)],[255,0,0]);
+const city={id:'city',en:'Chicago',level:3},zip={id:'zip',en:'ZIP 60601',aliases:['Chicago'],level:2,thematic:true},npa={id:'npa',en:'Area code 312',aliases:['Chicago','312'],level:2,thematic:true};
+const search=createPlaceSearch([zip,npa,city],{rankGroup:(r,q)=>r.thematic&&/[a-z]/i.test(q)&&!/\b(?:zip|code|npa)\b/i.test(q)?1:0});
+assert.equal(search('Chicago')[0].id,'city');assert.equal(search('60601')[0].id,'zip');assert.equal(search('312')[0].id,'npa');assert.equal(search('Area code 312')[0].id,'npa');
+console.log('Municipal assets: bounded SVG rasterization, unchanged originals and named-city / explicit-code search priority passed.');

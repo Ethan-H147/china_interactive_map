@@ -57,9 +57,9 @@ export function prepareRegionColors(){
   });
   const parents=Object.fromEntries(records.filter(r=>r.level>1&&r.parent).map(r=>[r.id,r.parent])),withChildren=new Set(Object.values(parents));
   // Metros and ordinary Japanese municipalities remain leaf units beside third-level children.
-  for(const r of records)if(r.level===2&&geography.some(g=>g.level===3)&&!withChildren.has(r.id))r.leaf=true;
+  for(const r of records)if(country!=='united-states'&&r.level===2&&geography.some(g=>g.level===3)&&!withChildren.has(r.id))r.leaf=true;
   const supportedLevels=new Set(records.filter(r=>Object.keys(r.metrics).length).map(r=>r.level));
-  const data={version:2,country,level:c.levels,levels:subdivisionColorLabels[country]||[c.levels],records:records.filter(r=>supportedLevels.has(r.level)),parents};outputs[country]=data;
+  const data={version:2,country,level:c.levels,levels:subdivisionColorLabels[country]||[c.levels],records:records.filter(r=>supportedLevels.has(r.level)&&(country!=='united-states'||r.level!==3||Object.keys(r.metrics).length)),...(country==='united-states'?{counts:Object.fromEntries([1,2,3].map(level=>[level,records.filter(r=>r.level===level).length]))}:{}),parents};outputs[country]=data;
   fs.mkdirSync(new URL('dist/data/region-colors/',root),{recursive:true});fs.writeFileSync(new URL('dist/data/region-colors/'+country+'.json',root),JSON.stringify(data));
   console.log(country,Object.fromEntries([1,2,3].map(level=>[level,{regions:records.filter(r=>r.level===level).length,...Object.fromEntries(['population','populationDensity','gdp','gdpPerCapita'].map(k=>[k,records.filter(r=>r.level===level&&r.metrics[k]).length]))}])));
  }return outputs;

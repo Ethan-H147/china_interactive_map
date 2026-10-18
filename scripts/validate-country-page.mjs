@@ -14,7 +14,7 @@ function adapter(file,context){
  assert(assignment,file+' uses the common page');
  const start=assignment.index+assignment[0].indexOf('createCountryPage(');
  const end=source.indexOf(');',start)+1;
- return vm.runInNewContext(source.slice(start,end),{createCountryPage,firstControls:context.maxLevel>1||!!context.c?.firstLabel&&context.c.firstLabel!=='Country',...context}).innerHTML;
+ return vm.runInNewContext(source.slice(start,end),{createCountryPage,hasViews:false,viewDefinitions:[],firstControls:context.maxLevel>1||!!context.c?.firstLabel&&context.c.firstLabel!=='Country',...context}).innerHTML;
 }
 pages.push(['japan',adapter('japan.mjs',{})]);
 for(const [country,prefix,name,first,second] of [['philippines','ph','Philippines','Regions','Provinces'],['indonesia','id','Indonesia','Provinces','Regencies & cities']])pages.push([country,adapter('archipelago.mjs',{country,prefix,name,config:{first,second}})]);

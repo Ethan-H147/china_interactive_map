@@ -22,7 +22,7 @@ const records={};for(const c of ['united-states','canada'])records[c]=JSON.parse
 // Explicit subdivision-ID mapping: display names alone can resolve to another country.
 const flagFiles=JSON.parse(await fs.readFile('scripts/north-america-flag-files.json','utf8'));
 const fileFor=r=>{if(!flagFiles[r.id])throw Error('No reviewed flag source for '+r.id);return flagFiles[r.id];};
-const selected=Object.entries(records).flatMap(([country,list])=>list.filter(r=>!r.populationStatus).map(r=>({country,r,file:fileFor(r)})));
+const selected=Object.entries(records).flatMap(([country,list])=>list.filter(r=>r.level===1&&!r.populationStatus).map(r=>({country,r,file:fileFor(r)})));
 const info=new Map();
 const changed=selected.filter(({r,file})=>refresh||!previous.flags[r.id]||previous.flags[r.id].commonsFile!==file);
 if(changed.length){

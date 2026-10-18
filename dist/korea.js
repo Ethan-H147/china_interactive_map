@@ -1,3 +1,4 @@
+import {onMapHover} from './pointer-performance.mjs';
 import {setSubdivisionHeading} from './country-page.mjs';
 import {koreaComparisonProfile} from './compare.mjs';
 import {koreaPanel} from './korea-panel.mjs';
@@ -65,7 +66,7 @@ function renderLabels(){
 }
 function picked(point){const layers=mode===2&&$('prefecture-layer').checked?['korea-second-fill','korea-first-fill']:['korea-first-fill'];const hits=window.AtlasMotion.queryRegions(map,point,{layers});for(const id of layers){const hit=hits.find(f=>f.layer.id===id);if(hit)return index.get(hit.properties.id);}}
 map.on('click',event=>{if(!active||!ready||host.isBusy())return;const f=picked(event.point);if(f)select(f);});
-map.on('mousemove',event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';});
+onMapHover(map,event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';});
 map.on('movestart',clearHover);map.on('moveend',updateLabels);map.on('resize',updateLabels);map.getCanvas().addEventListener('mouseleave',clearHover);
 $('search').addEventListener('input',()=>{const q=$('search').value.trim().toLowerCase(),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/[^\p{L}\p{N}]/gu,'').toLowerCase();const matches=[...index.values()].filter(f=>(f.properties.en+' '+nativeName(f.properties)).toLowerCase().includes(q)||normalize(f.properties.en).includes(normalize(q))).slice(0,15);for(const f of matches){const b=document.createElement('button');b.className='search-result';b.dataset.nav='';const strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=f.properties.en+' · '+nativeName(f.properties);small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||countryNames[f.properties.country]);b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length){const p=document.createElement('p');p.textContent='No matching places.';box.append(p);}});
 $('search').onkeydown=event=>{if(event.isComposing)return;const box=$('search-results');if(event.key==='Enter'&&!box.hidden){event.preventDefault();box.querySelector('button')?.click();}if(event.key==='Escape')box.hidden=true;};

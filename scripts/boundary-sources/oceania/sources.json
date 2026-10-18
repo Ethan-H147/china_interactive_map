@@ -1,0 +1,144 @@
+{
+  "retrieved": "2026-10-17",
+  "sources": {
+    "nz-local-population-2023": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Population_change_between_the_2018_and_2023_Censuses_TALB_FINAL/FeatureServer/0",
+      "provider": "Stats NZ · 2023 Census usually resident population by territorial authority/local board",
+      "license": "CC BY 4.0",
+      "sha256": "f816408d261cf4c99b2e0228ae5f9f0efd518a1f63853b1641723a850bdb00e9",
+      "bytes": 33951
+    },
+    "nz-region-population-2023": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Population_change_between_the_2018_and_2023_Censuses_Regional_Council_FINAL/FeatureServer/0",
+      "provider": "Stats NZ · 2023 Census usually resident population by regional council",
+      "license": "CC BY 4.0",
+      "sha256": "a5f2722691251531f506d316f0fae93bfd6404d25d8a8ec97bee2cd6be7a04af",
+      "bytes": 8694
+    },
+    "au-population-2025": {
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/Hosted/LGA_Regional_Population_2025/FeatureServer/1",
+      "provider": "ABS · estimated resident population at 30 June 2025",
+      "license": "CC BY 4.0",
+      "sha256": "ed33cc6f0f01cb15f13c15dbe5747ecef4ac53c8c692860da01410f9406622bc",
+      "bytes": 89735
+    },
+    "nz-regions-2025": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Regional_Council_2025/FeatureServer/0",
+      "provider": "Stats NZ · regional councils, 1 January 2025",
+      "license": "CC BY 4.0 · Stats NZ",
+      "sha256": "20cd3c3e4761f233023e3c307944c374e4767927b3f70686c6cde7c37a45eaac",
+      "bytes": 9478329
+    },
+    "nz-authorities-2026": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Territorial_Authority_2026/FeatureServer/0",
+      "provider": "Stats NZ · territorial authorities, 1 January 2026",
+      "license": "CC BY 4.0 · Stats NZ",
+      "sha256": "49caafba6b27ec33fb8c7f0719b0fa18ccbaaf3d427a8394af00425b510cd7ee",
+      "bytes": 96723292
+    },
+    "au-lga-2025": {
+      "url": "https://geo.abs.gov.au/arcgis/rest/services/ASGS2025/LGA/MapServer/0",
+      "provider": "Australian Bureau of Statistics · full-resolution ASGS LGA 2025",
+      "license": "CC BY 4.0 · Commonwealth of Australia (ABS)",
+      "sha256": "95edb692135f88578bc141d291d3da4b35b344247e79db2365e329e141b51cb0",
+      "bytes": 137807926
+    },
+    "nz-land-linz": {
+      "url": "https://services.arcgis.com/xdsHIIxuCWByZiCB/arcgis/rest/services/LINZ_NZ_Coastline/FeatureServer/0",
+      "provider": "Toitū Te Whenua LINZ · NZ Coastline land polygons, full available resolution",
+      "license": "CC BY 4.0 · LINZ",
+      "sha256": "69c1c67967c022fc5591764089317feadaa81dd53d3a954620d7ebfde9d947bc",
+      "bytes": 142543115
+    },
+    "overseas-coastlines": {
+      "url": "https://overpass.private.coffee/api/interpreter",
+      "provider": "OpenStreetMap · directed coastlines inside exact territory relations",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "query": "[out:json][timeout:180];(rel(2559345);rel(3225677);rel(2177227);rel(2184233);rel(1558556);rel(2186600););map_to_area->.a;way(area.a)[natural=coastline];out geom;",
+      "sha256": "d290a559326bf9670d8626dfaf32c309ef77176219e9b5addd0caecbce54d29b",
+      "bytes": 2085917
+    },
+    "territory-identities": {
+      "url": "https://en.wikipedia.org/w/api.php",
+      "provider": "Wikipedia exact page identities",
+      "sha256": "5705c6c2e9c9455b4da75325994a46cadaf7eb9fb9670f975b4b9776b6a7cf15",
+      "bytes": 1867
+    },
+    "territory-wikidata": {
+      "url": "https://www.wikidata.org/w/api.php",
+      "provider": "Wikidata identity/OSM relation claims",
+      "license": "CC0",
+      "sha256": "f32b9a59e1428f4c2cfe254477abf2063c14c30d246109fc598b6922c6ca93b1",
+      "bytes": 430576
+    },
+    "nz-parent-relations": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Meshblock_Higher_Geographies_2026/FeatureServer/0/query?where=1%3D1&outFields=TA2026_V1_00%2CREGC2025_V1_00&returnGeometry=false&returnDistinctValues=true&f=json",
+      "provider": "Stats NZ · distinct TA2026 / REGC2025 relationships from 2026 meshblock higher geographies",
+      "license": "CC BY 4.0",
+      "sha256": "3d01cfcf28e4b82a5c51bf9ce0eb99dc69eb7a1bd05db526420a253a0f72bb24",
+      "bytes": 6235
+    },
+    "antarctic-land": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
+      "provider": "Natural Earth v5.1.2 · Antarctic land coastline (claim sectors are not exclusive sovereignty)",
+      "license": "Public domain",
+      "sha256": "78911fff08c831fb0c3f2f225981f817b255729d540069f8489a3d9788bc7d8b",
+      "bytes": 564456
+    },
+    "macquarie-coastline": {
+      "url": "https://overpass-api.de/api/interpreter",
+      "provider": "OpenStreetMap · Macquarie Island, part of Tasmania",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "query": "[out:json][timeout:90];way[\"natural\"=\"coastline\"](-55.1,158.5,-54.3,159.2);out geom;",
+      "sha256": "c58fe8a0a397822d4122d63f81f9e71ea9ad94c7c759c57a5f63330bd996fc89",
+      "bytes": 347422
+    },
+    "flag-artwork": {
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3AFlag+of+Australia.svg%7CFile%3AFlag+of+New+Zealand.svg%7CFile%3AFlag+of+New+South+Wales.svg%7CFile%3AFlag+of+Victoria+%28Australia%29.svg%7CFile%3AFlag+of+Queensland.svg%7CFile%3AFlag+of+South+Australia.svg%7CFile%3AFlag+of+Western+Australia.svg%7CFile%3AFlag+of+Tasmania.svg%7CFile%3AFlag+of+the+Northern+Territory.svg%7CFile%3AFlag+of+the+Australian+Capital+Territory.svg%7CFile%3AFlag+of+Norfolk+Island.svg%7CFile%3AFlag+of+Christmas+Island.svg%7CFile%3AFlag+of+the+Cocos+%28Keeling%29+Islands.svg%7CFile%3AFlag+of+the+Cook+Islands.svg%7CFile%3AFlag+of+Niue.svg%7CFile%3AFlag+of+Tokelau.svg&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&format=json&formatversion=2&redirects=1",
+      "provider": "Wikimedia Commons · exact official national, state and territory flag artwork",
+      "license": "Per-file license retained in imageinfo/extmetadata",
+      "sha256": "ef338be08a7c516b067fea3c03b8b386540fd2f7960838a049b627adbb75103a",
+      "bytes": 56761
+    },
+    "au-gdp-2025": {
+      "url": "https://www.abs.gov.au/statistics/economy/national-accounts/australian-national-accounts-state-accounts/2024-25-financial-year/5220001_Annual_Gross_State_Product_All_States.xlsx",
+      "provider": "ABS · State Accounts 2024–25, Table 1, current-price gross state product and published per-capita series",
+      "license": "CC BY 4.0",
+      "sha256": "00c4483cfeb2e38cd2c57375f46acb51bf824e0d735cd961ae6e38621590e659",
+      "bytes": 93104
+    },
+    "exchange-2025": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&sinceTimePeriod=2025&currency=USD&currency=AUD&currency=NZD",
+      "provider": "Eurostat · 2025 annual average currencies per euro",
+      "license": "CC BY 4.0",
+      "sha256": "87321dd02465eef6ae2cfcb7197410ef4e86c240716f42aa3179647a3b427f1f",
+      "bytes": 2650
+    },
+    "nz-gdp-2025": {
+      "url": "https://www3.parliament.nz/en/pb/library-research-papers/monthly-economic-review/monthly-economic-review-may-2026/",
+      "provider": "New Zealand Parliamentary Library · published Stats NZ 2025 regional GDP and per capita table",
+      "license": "New Zealand Parliamentary copyright, statistical facts with attribution",
+      "sha256": "60629b3942bd98de82b0b05e50e2195ae641be35e5e14a7068b75f7f12463df6",
+      "bytes": 950
+    },
+    "cocos-community-flag-artwork": {
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&titles=File%3AFlag+of+the+Cocos+%28Keeling%29+Island.svg&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&format=json&formatversion=2",
+      "provider": "Wikimedia Commons · community flag artwork; status kept optional due to differing Commonwealth descriptions",
+      "sha256": "bf4d5f82c8bafc7329035d73248d45c856b74c86011885859ec663eb125f5dcb",
+      "bytes": 3060
+    },
+    "realm-island-identities": {
+      "url": "https://en.wikipedia.org/w/api.php",
+      "provider": "Wikipedia exact island identities",
+      "sha256": "18ba25c08424f0d32966b40b3ad7ef78401e55ae258cad63c2b623fed155dda5",
+      "bytes": 3323
+    },
+    "realm-island-coordinates": {
+      "url": "https://www.wikidata.org/w/api.php",
+      "provider": "Wikidata · coordinates for named Cook Islands and Tokelau atolls",
+      "license": "CC0",
+      "sha256": "362d6cf123d09735b8c960cd7e2a17720512885ed2175c0400bc3332449e52c5",
+      "bytes": 280353
+    }
+  }
+}

@@ -1,0 +1,3 @@
+import {arcgis} from './mainland-seasia-sources.mjs';
+const layer='https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/',thMeta={provider:'Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service',license:'Public government map service; retain original attribution and source link',retrieved:'2026-10-18'};
+const provinces=await arcgis('th-provinces',layer+'1',thMeta,'1=1',false);await arcgis('th-districts',layer+'2',thMeta,'1=1',false);let next=0;await Promise.all(Array.from({length:4},async()=>{while(next<provinces.features.length){const p=provinces.features[next++].properties.PROV_CODE;await arcgis('th-subdistricts-'+p,layer+'3',thMeta,"PROV_CODE='"+p+"'");}}));

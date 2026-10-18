@@ -1,0 +1,295 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 2377,
+        "ns": 0,
+        "title": "Andhra Pradesh",
+        "pageprops": {
+          "wikibase_item": "Q1159"
+        }
+      },
+      {
+        "pageid": 14189,
+        "ns": 0,
+        "title": "Haryana",
+        "pageprops": {
+          "wikibase_item": "Q1174"
+        }
+      },
+      {
+        "pageid": 14190,
+        "ns": 0,
+        "title": "Himachal Pradesh",
+        "pageprops": {
+          "wikibase_item": "Q1177"
+        }
+      },
+      {
+        "pageid": 16880,
+        "ns": 0,
+        "title": "Karnataka",
+        "pageprops": {
+          "wikibase_item": "Q1185"
+        }
+      },
+      {
+        "pageid": 20629,
+        "ns": 0,
+        "title": "Maharashtra",
+        "pageprops": {
+          "wikibase_item": "Q1191"
+        }
+      },
+      {
+        "pageid": 26291,
+        "ns": 0,
+        "title": "Rajasthan",
+        "pageprops": {
+          "wikibase_item": "Q1437"
+        }
+      },
+      {
+        "pageid": 29918,
+        "ns": 0,
+        "title": "Tamil Nadu",
+        "pageprops": {
+          "wikibase_item": "Q1445"
+        }
+      },
+      {
+        "pageid": 34040,
+        "ns": 0,
+        "title": "West Bengal",
+        "pageprops": {
+          "wikibase_item": "Q1356"
+        }
+      },
+      {
+        "pageid": 37756,
+        "ns": 0,
+        "title": "Delhi",
+        "pageprops": {
+          "wikibase_item": "Q1353"
+        }
+      },
+      {
+        "pageid": 47734,
+        "ns": 0,
+        "title": "Chhattisgarh",
+        "pageprops": {
+          "wikibase_item": "Q1168"
+        }
+      },
+      {
+        "pageid": 47898,
+        "ns": 0,
+        "title": "Andaman and Nicobar Islands",
+        "pageprops": {
+          "wikibase_item": "Q40888"
+        }
+      },
+      {
+        "pageid": 47945,
+        "ns": 0,
+        "title": "Madhya Pradesh",
+        "pageprops": {
+          "wikibase_item": "Q1188"
+        }
+      },
+      {
+        "pageid": 53707,
+        "ns": 0,
+        "title": "Gujarat",
+        "pageprops": {
+          "wikibase_item": "Q1061"
+        }
+      },
+      {
+        "pageid": 68143,
+        "ns": 0,
+        "title": "Puducherry (union territory)",
+        "pageprops": {
+          "wikibase_item": "Q66743"
+        }
+      },
+      {
+        "pageid": 140372,
+        "ns": 0,
+        "title": "Sikkim",
+        "pageprops": {
+          "wikibase_item": "Q1505"
+        }
+      },
+      {
+        "pageid": 178710,
+        "ns": 0,
+        "title": "Arunachal Pradesh",
+        "pageprops": {
+          "wikibase_item": "Q1162"
+        }
+      },
+      {
+        "pageid": 186162,
+        "ns": 0,
+        "title": "Assam",
+        "pageprops": {
+          "wikibase_item": "Q1164"
+        }
+      },
+      {
+        "pageid": 197225,
+        "ns": 0,
+        "title": "Jharkhand",
+        "pageprops": {
+          "wikibase_item": "Q1184"
+        }
+      },
+      {
+        "pageid": 211915,
+        "ns": 0,
+        "title": "Chandigarh",
+        "pageprops": {
+          "wikibase_item": "Q43433"
+        }
+      },
+      {
+        "pageid": 231623,
+        "ns": 0,
+        "title": "Uttar Pradesh",
+        "pageprops": {
+          "wikibase_item": "Q1498"
+        }
+      },
+      {
+        "pageid": 250724,
+        "ns": 0,
+        "title": "Odisha",
+        "pageprops": {
+          "wikibase_item": "Q22048"
+        }
+      },
+      {
+        "pageid": 303611,
+        "ns": 0,
+        "title": "Ladakh",
+        "pageprops": {
+          "wikibase_item": "Q200667"
+        }
+      },
+      {
+        "pageid": 319196,
+        "ns": 0,
+        "title": "Tripura",
+        "pageprops": {
+          "wikibase_item": "Q1363"
+        }
+      },
+      {
+        "pageid": 326019,
+        "ns": 0,
+        "title": "Meghalaya",
+        "pageprops": {
+          "wikibase_item": "Q1195"
+        }
+      },
+      {
+        "pageid": 408677,
+        "ns": 0,
+        "title": "Nagaland",
+        "pageprops": {
+          "wikibase_item": "Q1599"
+        }
+      },
+      {
+        "pageid": 422642,
+        "ns": 0,
+        "title": "Manipur",
+        "pageprops": {
+          "wikibase_item": "Q1193"
+        }
+      },
+      {
+        "pageid": 442482,
+        "ns": 0,
+        "title": "Bihar",
+        "pageprops": {
+          "wikibase_item": "Q1165"
+        }
+      },
+      {
+        "pageid": 461211,
+        "ns": 0,
+        "title": "Mizoram",
+        "pageprops": {
+          "wikibase_item": "Q1502"
+        }
+      },
+      {
+        "pageid": 990267,
+        "ns": 0,
+        "title": "Telangana",
+        "pageprops": {
+          "wikibase_item": "Q677037"
+        }
+      },
+      {
+        "pageid": 1429154,
+        "ns": 0,
+        "title": "Uttarakhand",
+        "pageprops": {
+          "wikibase_item": "Q1499"
+        }
+      },
+      {
+        "pageid": 2354676,
+        "ns": 0,
+        "title": "Lakshadweep",
+        "pageprops": {
+          "wikibase_item": "Q26927"
+        }
+      },
+      {
+        "pageid": 4349459,
+        "ns": 0,
+        "title": "Kerala",
+        "pageprops": {
+          "wikibase_item": "Q1186"
+        }
+      },
+      {
+        "pageid": 23397776,
+        "ns": 0,
+        "title": "Punjab, India",
+        "pageprops": {
+          "wikibase_item": "Q22424"
+        }
+      },
+      {
+        "pageid": 40010153,
+        "ns": 0,
+        "title": "Goa",
+        "pageprops": {
+          "wikibase_item": "Q1171"
+        }
+      },
+      {
+        "pageid": 61449812,
+        "ns": 0,
+        "title": "Jammu and Kashmir (union territory)",
+        "pageprops": {
+          "wikibase_item": "Q66278313"
+        }
+      },
+      {
+        "pageid": 61582372,
+        "ns": 0,
+        "title": "Dadra and Nagar Haveli and Daman and Diu",
+        "pageprops": {
+          "wikibase_item": "Q77997266"
+        }
+      }
+    ]
+  }
+}

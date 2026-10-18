@@ -95,6 +95,18 @@
   'vatican-city':{parent:'italy',mapLabel:'Interactive map of Vatican City and its landmarks',en:'Vatican City',local:'Città del Vaticano',lang:'it',background:'#f7f3e8',home:{maxZoom:16},...regional('europe','va',
    {firstLabel:'Country',searchLabel:'Find Vatican City',statistics:true,initialSelection:'VA',center:[12.4513,41.9035],zoom:15,bounds:[[12.4457878,41.9002048],[12.4583653,41.9073829]],fill:'#eee3bd',selected:'#eee3bd',line:'#9b792e',boundaryCredit:'© OpenStreetMap contributors · ODbL'},
    {colors:{levels:'Country',economy:false},levelNames:['Country'],symbol:'vendor/vatican-seal.png'})},
+  ireland:{flagSet:'atlantic',en:'Ireland',local:'Éire',lang:'ga',background:'#f0f4eb',...regional('europe','ie',
+   {boundaryCredit:'© Tailte Éireann · CC BY 4.0',firstLabel:'Regions',secondLabel:'Counties & cities',thirdLabel:'Municipal districts',deferOutlines:true,parallelDetails:true,searchDuration:550,searchLabel:'Find a county, city or district',statistics:true,center:[-8,53.4],zoom:5.6,bounds:[[-10.7,51.35],[-5.9,55.45]],fill:'#e4ecd9',selected:'#c7d9ac',line:'#57793b'},
+   {colors:{levels:'Regional assembly areas',economy:true},levelNames:['Regions','Counties & cities','Municipal districts'],naturalEarth:'IRL'})},
+  portugal:{flagSet:'atlantic',en:'Portugal',local:'',lang:'pt',background:'#f3f2e9',...regional('europe','pt',
+   {boundaryCredit:'© Direção-Geral do Território · CAOP2025',firstLabel:'Districts & islands',secondLabel:'Municipalities',thirdLabel:'Parishes',deferOutlines:true,parallelDetails:true,searchDuration:550,searchLabel:'Find a district, municipality or parish',statistics:true,center:[-8,39.7],zoom:5.4,bounds:[[-9.6,36.9],[-6.1,42.2]],fill:'#e7ecda',selected:'#c5d3a4',line:'#52703b'},
+   {colors:{levels:'Districts & autonomous regions',economy:true},levelNames:['Districts & autonomous regions','Municipalities','Civil parishes'],naturalEarth:'PRT'})},
+  australia:{flagSet:'oceania',en:'Australia',local:'',lang:'en',background:'#f3f4eb',...regional('europe','au',
+   {boundaryCredit:'© Commonwealth of Australia (ABS) · © OpenStreetMap contributors · ODbL',firstLabel:'States & territories',secondLabel:'Local government areas',deferOutlines:true,parallelDetails:true,searchDuration:550,searchLabel:'Find a state, council or territory',statistics:true,center:[134,-25.5],zoom:3.7,bounds:[[112,-44],[154,-10]],fill:'#e8edda',selected:'#d3dba7',line:'#657331'},
+   {colors:{levels:'States & territories',economy:true},levelNames:['States & territories','Local government areas'],naturalEarth:['AUS','NFK','HMD','ATC','CXR','CCK']})},
+  'new-zealand':{flagSet:'oceania',worldCopies:true,en:'New Zealand',local:'Aotearoa',lang:'mi',background:'#eef1f7',...regional('europe','nz',
+   {boundaryCredit:'© Stats NZ · © Toitū Te Whenua LINZ · © OpenStreetMap contributors · ODbL',firstLabel:'Regions & islands',secondLabel:'Local areas',deferOutlines:true,parallelDetails:true,searchDuration:550,searchLabel:'Find a region, district or island',statistics:true,center:[172.5,-40.8],zoom:4.5,bounds:[[165,-47.5],[179.3,-33.8]],fill:'#e2e8f3',selected:'#bccce6',line:'#3e5f91'},
+   {colors:{levels:'Regions & islands',economy:true},levelNames:['Regions & islands','Territorial authorities & island groups'],naturalEarth:['NZL','COK','NIU','TKL']})},
   denmark:{flagSet:'europe-expansion',en:'Denmark',local:'Danmark',lang:'da',background:'#f8eeee',...regional('europe','dk',
    {boundaryCredit:'© EuroGeographics · © Umhvørvisstovan · geoBoundaries',firstLabel:'Regions & territories',secondLabel:'Municipalities',bundledLevels:2,settlements:true,searchLabel:'Find a region, municipality or territory',statistics:true,center:[10.2,56.1],zoom:5.5,bounds:[[8.0,54.55],[15.3,57.9]],fill:'#f2e2df',selected:'#e6bbb6',line:'#a33b36'},
    {colors:{levels:'Regions & territories',economy:true},levelNames:['Regions & territories','Municipalities & unincorporated areas'],naturalEarth:['DNK','GRL','FRO']})},
@@ -107,23 +119,32 @@
   'switzerland':{en:"Switzerland",local:"Schweiz · Suisse · Svizzera · Svizra",lang:"de",background:"#f8efef",...regional('europe',"ch",
    {"firstLabel":"Cantons","secondLabel":"Districts & municipalities","bundledLevels":2,"thirdLabel":"Municipalities","searchLabel":"Find a region or subdivision","statistics":true,"center":[8.2,46.8],"zoom":6.5,"bounds":[[5.9,45.8],[10.6,47.85]],"fill":"#f2e1df","selected":"#e6bfba","line":"#a8433b"},
    {"colors":{"levels":"Cantons","economy":true},"levelNames":["Cantons","Districts & municipalities","Municipalities"],"naturalEarth":"CHE"})},
-  'netherlands':{flagSet:'europe-expansion',en:"Netherlands",local:"Nederland",lang:"nl",background:"#f7f1e9",...regional('europe',"nl",
-   {"boundaryCredit":"© EuroGeographics for the administrative boundaries","firstLabel":"Provinces","secondLabel":"Municipalities","bundledLevels":2,"searchLabel":"Find a province or municipality","statistics":true,"center":[5.3,52.2],"zoom":6.3,"bounds":[[3.3,50.7],[7.25,53.6]],"fill":"#f2e6d8","selected":"#e8c9a4","line":"#a2642a"},
-   {"colors":{"levels":"Provinces","economy":true},"levelNames":["Provinces","Municipalities"],"naturalEarth":"NLD"})},
+  'netherlands':{additionalFlagSets:['atlantic'],flagSet:'europe-expansion',en:"Netherlands",local:"Nederland",lang:"nl",background:"#f7f1e9",...regional('europe',"nl",
+   {"boundaryCredit":"© EuroGeographics for the administrative boundaries","firstLabel":"Provinces & Caribbean","secondLabel":"Municipalities","bundledLevels":2,"searchLabel":"Find a province, municipality or island","statistics":true,"center":[5.3,52.2],"zoom":6.3,"bounds":[[3.3,50.7],[7.25,53.6]],"fill":"#f2e6d8","selected":"#e8c9a4","line":"#a2642a"},
+   {"colors":{"levels":"Provinces & Caribbean","economy":true},"levelNames":["Provinces & Caribbean","Municipalities"],"naturalEarth":["NLD","ABW","CUW","SXM","BES"]})},
   'united-states':{flagSet:'north-america',worldCopies:true,en:"United States",local:"",lang:"en",background:"#edf1f7",...regional('europe',"us",
-   {"boundaryCredit":"© OpenStreetMap contributors · ODbL (Minor Outlying Islands)","firstLabel":"States & territories","searchLabel":"Find a state or territory","statistics":true,"center":[-98.5,38.5],"zoom":3.6,"bounds":[[-125,24.4],[-66.8,49.5]],"fill":"#e1e8f3","selected":"#bccde7","line":"#3f6296"},
-   {"colors":{"levels":"States & territories","economy":true},"levelNames":["States & territories"],"naturalEarth":["USA","PRI","VIR","ASM","GUM","MNP","UMI"]})},
+   {"boundaryCredit":"© OpenStreetMap contributors · ODbL (Minor Outlying Islands)","firstLabel":"States & territories","secondLabel":"Counties & equivalents","areaCodes":true,"deferOutlines":true,"parallelDetails":true,"searchDuration":550,"thirdLabel":"Municipalities","thirdScope":"state","censusPlaces":true,"municipalFacts":"municipalities/facts.json","thematicViews":[{"id":"zip-codes","label":"ZIP codes","outlineLabel":"ZIP-area outlines","hint":"Choose a state or territory, or search a ZIP code."}],"searchLabel":"Find a US place or code","statistics":true,"center":[-98.5,38.5],"zoom":3.6,"bounds":[[-125,24.4],[-66.8,49.5]],"fill":"#e1e8f3","selected":"#bccde7","line":"#3f6296"},
+   {"colors":{"levels":"States & territories","economy":true},"levelNames":["States & territories","Counties & equivalents","Municipalities"],"view":{"scopes":["area-codes","zip-codes"]},"naturalEarth":["USA","PRI","VIR","ASM","GUM","MNP","UMI"]})},
   'canada':{flagSet:'north-america',en:"Canada",local:"",lang:"en",background:"#f7eeee",...regional('europe',"ca",
-   {"firstLabel":"Provinces & territories","searchLabel":"Find a state or territory","statistics":true,"center":[-103,60],"zoom":2.7,"bounds":[[-141.1,41.6],[-52.4,83.2]],"fill":"#f2e1df","selected":"#e4bbb8","line":"#a33d3d"},
-   {"colors":{"levels":"Provinces & territories","economy":true},"levelNames":["Provinces & territories"],"naturalEarth":"CAN"})},
+   {"firstLabel":"Provinces & territories","secondLabel":"Census divisions","thirdLabel":"Municipalities & equivalents","deferOutlines":true,"parallelDetails":true,"searchDuration":550,"municipalFacts":"municipalities/facts.json","searchLabel":"Find a Canadian municipality or region","statistics":true,"center":[-103,60],"zoom":2.7,"bounds":[[-141.1,41.6],[-52.4,83.2]],"fill":"#f2e1df","selected":"#e4bbb8","line":"#a33d3d"},
+   {"colors":{"levels":"Provinces & territories","economy":true},"levelNames":["Provinces & territories","Census divisions","Municipalities & equivalents"],"naturalEarth":"CAN"})},
   'mexico':{en:"Mexico",local:"México",lang:"es",background:"#eef4ed",...regional('europe',"mx",
    {"water":"water.bin","waterAttribution":"Water: <a href=\"data/europe/mexico/water-sources.json\">SEMARNAT / CONAGUA</a>","firstLabel":"States & Mexico City","searchLabel":"Find a state or federal district","statistics":true,"center":[-102.5,23.8],"zoom":4,"bounds":[[-118.5,14.4],[-86.4,32.8]],"fill":"#e1eedd","selected":"#bdd8b5","line":"#477a40"},
    {"colors":{"levels":"States & Mexico City","economy":true},"levelNames":["States & Mexico City"],"naturalEarth":"MEX"})},
   iceland:{en:'Iceland',local:'Ísland',lang:'is',background:'#eef3f7',...regional('europe','is',
    {firstLabel:'Regions',secondLabel:'Municipalities',loadAllSubdivisions:true,settlements:true,searchLabel:'Find a region, municipality or town',statistics:true,center:[-18.6,64.95],zoom:5.6,bounds:[[-24.6,63.2],[-13.4,66.6]],fill:'#e2eaf3',selected:'#c2d3e8',line:'#2f5d8c'},
    {colors:{levels:'Regions'},levelNames:['Regions','Municipalities'],naturalEarth:'ISL'})},
+  morocco:{en:'Morocco',local:'المغرب',lang:'ar',background:'#f6efeb',...regional('europe','ma',
+   {firstLabel:'Regions',secondLabel:'Provinces & prefectures',thirdLabel:'Communes',deferOutlines:true,parallelDetails:true,searchLabel:'Find a region, province or commune',statistics:true,center:[-8.5,29],zoom:4.5,bounds:[[-17.2,20.7],[-.95,36]],fill:'#f1e4da',selected:'#e5c3ad',line:'#a34b3d',boundaryCredit:'© OpenStreetMap contributors · ODbL 1.0'},
+   {colors:{levels:'Regions',economy:false},levelNames:['Regions','Provinces & prefectures','Communes'],naturalEarth:['MAR','SAH']})},
+  thailand:{en:'Thailand',local:'ประเทศไทย',lang:'th',background:'#f4f0f6',...regional('europe','th',
+   {firstLabel:'Provinces & Bangkok',secondLabel:'Districts',thirdLabel:'Subdistricts & islands',deferOutlines:true,parallelDetails:true,searchLabel:'Find a province, district or subdistrict',statistics:true,center:[101,15],zoom:4.7,bounds:[[97.3,5.5],[105.7,20.6]],fill:'#eee7f1',selected:'#d9c5df',line:'#725286'},
+   {colors:{levels:'Provinces & Bangkok',economy:false},levelNames:['Provinces & Bangkok','Districts','Subdistricts & islands'],naturalEarth:'THA'})},
+  vietnam:{en:'Vietnam',local:'Việt Nam',lang:'vi',background:'#f8efeb',...regional('europe','vn',
+   {firstLabel:'Provinces & cities',secondLabel:'Communes & wards',deferOutlines:true,parallelDetails:true,searchLabel:'Find a province, commune, ward or special zone',statistics:true,center:[107,16],zoom:4.7,bounds:[[102.1,8.1],[109.6,23.5]],fill:'#f3e5dc',selected:'#e8c2ac',line:'#aa5237'},
+   {colors:{levels:'Provinces & cities',economy:false},levelNames:['Provinces & cities','Communes, wards & special zones'],naturalEarth:'VNM'})},
   india:{en:'India',local:'भारत',lang:'hi',background:'#f8f2ea',...regional('europe','in',
-   {firstLabel:'States',neighbours:true,searchLabel:'Find a state or union territory',statistics:true,center:[80.5,22.5],zoom:4.3,bounds:[[68,6.5],[97.5,37.1]],fill:'#f5e7d6',selected:'#ecc9a0',line:'#b5651d'},
+   {firstLabel:'States & union territories',neighbours:true,nameVariants:{collapseAfter:3},searchLabel:'Find a state or union territory',statistics:true,center:[80.5,22.5],zoom:4.3,bounds:[[68,6.5],[97.5,37.1]],fill:'#f5e7d6',selected:'#ecc9a0',line:'#b5651d'},
    {colors:{levels:'States & union territories',economy:false},levelNames:['States & union territories'],naturalEarth:'IND'})},
   chile:{en:'Chile',local:'',lang:'es',background:'#f0f3f9',...regional('europe','cl',
    {firstLabel:'Regions',secondLabel:'Provinces',thirdLabel:'Communes',bundledLevels:2,neighbours:true,settlements:true,searchLabel:'Find a region, province, commune or city',statistics:true,center:[-71,-37],zoom:3.6,bounds:[[-76,-56],[-66.4,-17.5]],fill:'#e5eaf4',selected:'#c3cfe8',line:'#2b4c9b'},
@@ -141,11 +162,12 @@
  const fallback='china',defaultLanguages=['en','local','both'];
  for(const [id,c] of Object.entries(countries)){
   c.id=id;
+  if(['united-states','canada','spain','france','germany','italy','malaysia','india','morocco'].includes(id))c.quiz={level:1,...(id==='spain'?{exclude:['ES-A-20']}: {}),...(id==='united-states'?{bounds:c.map.bounds,insets:['US-AK','US-HI']}: {})};
   if(c.adapter==='southern-africa'||c.adapter==='europe'){
    const base=`data/${c.adapter}/${id}/`,m=c.map;
    Object.assign(c,{base,statistics:base+'statistics.json',colors:{catalogue:base+'catalogue.bin',...c.colors}});
    c.hitLayers=[id+'-portal-fill',...['first','second','third'].map(level=>id+'-'+level+'-fill')];
-   c.controls=[c.prefix+'-province-layer',...(m.secondLabel?[c.prefix+'-second-layer']:[]),...(m.thirdLabel?[c.prefix+'-third-layer']:[]),c.prefix+'-label-layer',...(m.settlements?[c.prefix+'-settlement-layer']:[]),...(m.water?[c.prefix+'-water-layer']:[])];
+   c.controls=[c.prefix+'-province-layer',...(m.secondLabel?[c.prefix+'-second-layer']:[]),...(m.thirdLabel?[c.prefix+'-third-layer']:[]),c.prefix+'-label-layer',...(m.settlements?[c.prefix+'-settlement-layer']:[]),...(m.water?[c.prefix+'-water-layer']:[]),...(m.censusPlaces?[c.prefix+'-census-places']:[])];
   }
   // The faded fill shown while another country is open; regional countries use their map fill.
   if(!c.portal&&c.map?.fill)c.portal={fill:c.map.fill};

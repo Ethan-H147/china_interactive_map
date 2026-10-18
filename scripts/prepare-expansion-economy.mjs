@@ -43,7 +43,7 @@ const rates=await retain('exchange.json',async()=>{
 const datasets={};
 for(const country of ['germany','belgium','netherlands']){
  datasets[country]=await retain(country+'.json',async()=>{
-  const records=catalogue(country).filter(r=>country==='netherlands'?r.level===1:r.level<=2),raw={},sources=[];
+  const records=catalogue(country).filter(r=>country==='netherlands'?r.level===1&&!r.overseas:r.level<=2),raw={},sources=[];
   for(let i=0;i<records.length;i+=45){
    const batch=records.slice(i,i+45),url='https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&'+batch.map(r=>'geo='+r.id).join('&');
    const source=await download(country+'-gdp-'+i+'.json',url,'json'),j=JSON.parse(source.bytes);sources.push({url,sha256:source.sha256,updated:j.updated});
@@ -78,7 +78,7 @@ datasets['united-states']=await retain('united-states.json',async()=>{
  const populationSource=await download('us-population.csv','https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/state/totals/NST-EST2025-ALLDATA.csv');
  const population=csv(populationSource.bytes.toString()).filter(r=>r.SUMLEV==='040'),gdpByName=new Map(all.map(r=>[r.GeoName,r])),popByName=new Map(population.map(r=>[r.NAME,r]));
  const latest=Math.max(...Object.keys(all[0]).filter(k=>/^\d{4}$/.test(k)).map(Number));const rows={};
- for(const r of catalogue('united-states').filter(r=>!r.overseas)){const g=gdpByName.get(r.en),p=popByName.get(r.en);assert(g&&p,r.id+' official rows');assert.equal(g.Unit,'Millions of current dollars');const year=latest;assert(+g[year]>0&&+p['POPESTIMATE'+year]>0);const total=+g[year]*1e6,denominator=+p['POPESTIMATE'+year];rows[r.id]={name:r.en,year,gdp:total,gdpPerCapita:total/denominator,populationValue:denominator,populationYear:year,populationDate:year+'-07-01',populationSource:'usGdpPopulation',calculated:true};}
+ for(const r of catalogue('united-states').filter(r=>r.level===1&&!r.overseas)){const g=gdpByName.get(r.en),p=popByName.get(r.en);assert(g&&p,r.id+' official rows');assert.equal(g.Unit,'Millions of current dollars');const year=latest;assert(+g[year]>0&&+p['POPESTIMATE'+year]>0);const total=+g[year]*1e6,denominator=+p['POPESTIMATE'+year];rows[r.id]={name:r.en,year,gdp:total,gdpPerCapita:total/denominator,populationValue:denominator,populationYear:year,populationDate:year+'-07-01',populationSource:'usGdpPopulation',calculated:true};}
  return {retrieved:today,currency:'USD',provider:'US Bureau of Economic Analysis · SAGDP1 line 3, annual current-dollar GDP',url:'https://www.bea.gov/data/gdp/gdp-state',sources:[{url:source.url,sha256:source.sha256},{url:populationSource.url,sha256:populationSource.sha256}],populationUrl:populationSource.url,rows,national:{year:latest,gdp:+all.find(r=>r.GeoFIPS==='00000')[latest]*1e6}};
 });console.log('united-states',Object.keys(datasets['united-states'].rows).length,'GDP states/DC');
 datasets.canada=await retain('canada.json',async()=>{
@@ -87,7 +87,7 @@ datasets.canada=await retain('canada.json',async()=>{
  assert(data.length,'Canada current-price market-price GDP');
  const population=await download('canada-population.zip','https://www150.statcan.gc.ca/n1/tbl/csv/17100009-eng.zip','zip'),people=csv(zipText(population.bytes,n=>n==='17100009.csv'));
  const year=Math.max(...data.map(r=>+r.REF_DATE)),rows={};
- for(const r of catalogue('canada')){const g=data.find(x=>x.GEO===r.en&&+x.REF_DATE===year),p=people.find(x=>x.GEO===r.en&&x.REF_DATE===year+'-07-01');assert(g&&p,r.id+' GDP/population '+year);assert.equal(g.SCALAR_FACTOR,'millions');const total=+g.VALUE*1e6,denominator=+p.VALUE;rows[r.id]={name:r.en,year,gdp:total,gdpPerCapita:total/denominator,populationValue:denominator,populationYear:year,populationDate:year+'-07-01',populationSource:'canadaGdpPopulation',calculated:true};}
+ for(const r of catalogue('canada').filter(r=>r.level===1)){const g=data.find(x=>x.GEO===r.en&&+x.REF_DATE===year),p=people.find(x=>x.GEO===r.en&&x.REF_DATE===year+'-07-01');assert(g&&p,r.id+' GDP/population '+year);assert.equal(g.SCALAR_FACTOR,'millions');const total=+g.VALUE*1e6,denominator=+p.VALUE;rows[r.id]={name:r.en,year,gdp:total,gdpPerCapita:total/denominator,populationValue:denominator,populationYear:year,populationDate:year+'-07-01',populationSource:'canadaGdpPopulation',calculated:true};}
  return {retrieved:today,currency:'CAD',provider:'Statistics Canada · Table 36-10-0222-01, expenditure-based GDP at current market prices',url:'https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=3610022201',populationUrl:'https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1710000901',sources:[{url:source.url,sha256:source.sha256},{url:population.url,sha256:population.sha256}],rows,national:{year,gdp:+data.find(x=>x.GEO==='Canada'&&+x.REF_DATE===year).VALUE*1e6}};
 });console.log('canada',Object.keys(datasets.canada.rows).length,'GDP provinces/territories');
 datasets.mexico=await retain('mexico.json',async()=>{
@@ -114,6 +114,7 @@ for(const [country,data]of Object.entries(datasets)){
  if(populationSource)statistics.sources[populationSource]={title:country==='united-states'?'US Census Bureau · same-year July 1 state population estimates':country==='canada'?'Statistics Canada · same-year July 1 population estimates, Table 17-10-0009-01':'CONAPO · same-year midyear state population projections, 2020–2070',url:data.populationUrl,license:'Official statistics, attribution required'};
  let count=0;
  for(const [key,record]of Object.entries(statistics.regions)){
+  if(country==='netherlands'&&key.startsWith('netherlands:NL-'))continue;
   const r=data.rows[key.slice(country.length+1)];delete record.gdp;delete record.gdpPerCapita;if(!r)continue;
   const currency=data.currency,localPerUsd=currency==='USD'?1:currency==='EUR'?1/rates.values.USD[r.year]:rates.values[currency][r.year]/rates.values.USD[r.year];assert(localPerUsd>0,currency+' annual conversion '+r.year);
   const common={year:r.year,currency,priceBasis:'current',source,...(r.status?{status:r.status}:{}),...(currency!=='USD'?{exchangeRate:localPerUsd,exchangeYear:r.year,exchangeSource:'economyExchange'}:{})};

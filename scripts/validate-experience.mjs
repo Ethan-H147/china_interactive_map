@@ -21,7 +21,7 @@ const memory=new Map(),storage={getItem:k=>memory.get(k),setItem:(k,v)=>memory.s
 assert.deepEqual(labelLines('Busan','부산','en'),['Busan']);assert.deepEqual(labelLines('Busan','부산','local'),['부산']);assert.deepEqual(labelLines('Busan','부산','both'),['Busan','부산']);
 const overlapping=[{id:'a',x:200,y:150,w:100,h:40},{id:'b',x:210,y:150,w:100,h:40,selected:true},{id:'c',x:400,y:150,w:100,h:40},{id:'edge',x:5,y:150,w:100,h:40}];
 assert.deepEqual(placeLabels(overlapping,600,400).map(p=>p.id),['b','c']);
-const source=fs.readFileSync('dist/app.js','utf8');assert(source.includes("if(initialCountry==='china')await loadChina()"));assert(!source.includes('koreaAtlas.warm()'));assert(!source.includes('enabledInteractions.forEach(name=>map[name].disable())'));
+const source=fs.readFileSync('dist/app.js','utf8');assert(source.includes("if(initialCountry==='china'){await countryMemory.ensure('china',loadChina);"));assert(!source.includes('koreaAtlas.warm()'));assert(!source.includes('enabledInteractions.forEach(name=>map[name].disable())'));
 console.log('View links, bounded state, country isolation, blocked storage, label languages, collision priority and country-first loading passed.');
 import vm from 'node:vm';
 let releasePreview,beginCalls=0,unlocks=0;const moves=[],events=new Map();
@@ -32,6 +32,7 @@ const first=nav.navigateBounds([410,310]);const second=nav.navigateBounds([1600,
 assert.equal(await first,false,'A superseded selection is cancelled');await Promise.resolve();await Promise.resolve();assert.equal(beginCalls,1,'Rapid selections share preview preparation');assert.equal(moves.length,1);assert.equal(moves[0].kind,'fly');events.get('moveend')();assert.equal(await second,true);await Promise.resolve();
 const third=nav.navigateBounds([420,300]);releasePreview();await new Promise(setImmediate);assert.equal(moves.at(-1).kind,'ease');assert(moves.at(-1).duration<460);events.get('moveend')();await third;assert(unlocks>=1);
 console.log('Camera cancellation, shared preparation, latest-selection priority, nearby easing and distant flights passed.');
+const fastSearch=nav.navigateBounds([1600,300],{maxDuration:550});releasePreview();await new Promise(setImmediate);assert.equal(moves.at(-1).duration,550,'Search navigation can cap distant flights without changing the default');events.get('moveend')();await fastSearch;
 const zoomButton={setAttribute(){}};nav.zoomLock=createZoomLock(zoomButton,{getStorage:()=>null,onLock:()=>nav.cancelNavigation()});
 const movingSelection=nav.navigateBounds([1500,300]);releasePreview();await new Promise(setImmediate);const movesBeforeLock=moves.length,previewsBeforeLock=beginCalls;
 zoomButton.onclick();assert.equal(await movingSelection,false,'Locking interrupts an in-progress automatic flight');

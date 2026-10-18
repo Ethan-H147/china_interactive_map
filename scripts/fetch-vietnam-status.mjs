@@ -1,0 +1,1 @@
+import {retain,request} from './mainland-seasia-sources.mjs';const url='https://ttbc-hcm.gov.vn/9-thanh-pho-truc-thuoc-trung-uong-tu-20-9-2026-1022144.html';await retain('vn-september-city-upgrades',url,{provider:'Ho Chi Minh City Press Center · nine centrally governed cities effective 20 September 2026'},async()=>({html:await(await request(url)).text()}));

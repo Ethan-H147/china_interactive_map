@@ -1,0 +1,8 @@
+import fs from 'node:fs';import {municipalSourceRequest as request} from './municipal-source-request.mjs';
+import {gunzipSync} from 'node:zlib';
+const root='scripts/name-sources/india';fs.mkdirSync(root,{recursive:true});
+const states=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/india/catalogue.bin'))).records;
+const titles=states.map(r=>r.en==='Punjab'?'Punjab, India':r.en==='Puducherry'?'Puducherry (union territory)':r.en==='Jammu and Kashmir'?'Jammu and Kashmir (union territory)':r.en);
+const url='https://en.wikipedia.org/w/api.php?'+new URLSearchParams({action:'query',titles:titles.join('|'),prop:'pageprops',ppprop:'wikibase_item',redirects:'1',format:'json',formatversion:'2'}),r=await request(url);if(!r.ok)throw Error('Wikipedia identity '+r.status);const identity=await r.json(),ids=identity.query.pages.map(p=>p.pageprops?.wikibase_item).filter(Boolean);if(ids.length!==36)throw Error('Missing or ambiguous state identity');
+const source='https://www.wikidata.org/w/api.php?'+new URLSearchParams({action:'wbgetentities',ids:ids.join('|'),props:'labels|claims',format:'json'}),response=await request(source);if(!response.ok)throw Error('Wikidata names '+response.status);const data=await response.json();if(Object.keys(data.entities||{}).length!==36)throw Error('Incomplete source response');
+fs.writeFileSync(root+'/identity.json',JSON.stringify(identity,null,2)+'\n');fs.writeFileSync(root+'/wikidata.json',JSON.stringify({retrieved:new Date().toISOString().slice(0,10),license:'CC0',source,...data},null,2)+'\n');console.log('Retained 36 exact state/UT identities and Wikidata language-label snapshots. Review source changes, then run build:india-names.');

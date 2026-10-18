@@ -1,0 +1,7 @@
+import fs from 'node:fs';import {createRequire} from 'node:module';import {request,arcgis,retain,manifest,root,sha,archive} from './mainland-seasia-sources.mjs';
+const require=createRequire(import.meta.url),{unzipSync}=createRequire(require.resolve('mapshaper'))('fflate');
+const revision='8b78ba5118715e1fa81769286724db79346abf52',raw='https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/'+revision+'/',vnMeta={provider:'Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn',license:'MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography',revision,geometryDate:'2026-07-25',namesDate:'2026-09-20'};
+await retain('vn-identities',raw+'json/full_json_generated_data_vn_units.json',vnMeta);await retain('vn-metadata',raw+'json/vn_provinces_metadata.json',vnMeta);
+const url=raw+'json/vn_provinces_wards_geojson.zip',bytes=await archive('vn-archive',url,vnMeta);
+{const all=unzipSync(bytes,{filter:f=>f.name.endsWith('.geojson')}),groups=new Map();for(const [name,b] of Object.entries(all)){const match=name.match(/(?:^|\/)(\d{2})_[^/]+\//);if(!match)throw Error('Unexpected member '+name);if(!groups.has(match[1]))groups.set(match[1],{province:[],wards:[]});const f=JSON.parse(Buffer.from(b));groups.get(match[1])[name.includes('/wards/')?'wards':'province'].push(...f.features);}for(const [code,data]of groups)await retain('vn-'+code,url,{...vnMeta,archiveMemberProvince:code},async()=>data);}
+await import('./fetch-thailand-boundaries.mjs');

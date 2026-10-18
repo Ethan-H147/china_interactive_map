@@ -438,6 +438,11 @@ The three share India's reconciliation (`reconcile` in `build-europe.mjs`): edge
 
 **The United States** adds all five inhabited territories and the nine Minor Outlying Islands as first-level places. The inhabited territories use Census 2025 outlines; minor-island land and lagoons use the same OpenStreetMap coastline method as the UK and French territories. All fourteen carry their own portal destinations. Military bases on foreign soil and independent associated states are excluded. [Coverage, sources and verification](docs/us-territories.md).
 
+US counties use all 3,235 counties and equivalents in the Census 2025 boundary file, including Connecticut planning regions and the inhabited territories. Choose a state or search a county; geometry loads one state at a time. The Area codes view covers all 378 in-service US geographic codes in the 17 October 2026 NANPA snapshot, with 29 non-geographic service codes and three planned codes listed separately. Its public-domain UCLA reference polygons are generalized and reconciled with current overlays; small later rate-center boundary adjustments may not be reflected. State GDP and official flags remain separate from county and telephone-area data.
+
+Rebuild these local US details with `npm run build:us-details`; verify the data with `npm run test:us-details` and the interactions with `node scripts/browser/run.mjs us-details`. Source releases and hashes are recorded in `scripts/us-detail-sources.json`; the mutable NANPA snapshot is retained under `scripts/boundary-sources/united-states/`.
+
+
 **Camera and clicks.** Each country's own views frame its home territory only: the country view, a metropolitan region and a search for it. A territory's shape on the world map carries its id and bounds. Clicking one while another country is open switches country, selects the territory and fills the screen with it, without stopping at the home view.
 
 **Statistics.**
@@ -536,3 +541,13 @@ The deploy workflow splits the suite into five parallel jobs (`node scripts/brow
 All 35 countries became public on 17 October 2026, including Iceland, India and Turkey. The optional Changning developer mode no longer gates any current map. US mainland context exports normalize dissolved geometry into valid polygon features; Alaska, Hawaii and territories retain their own entry destinations.
 
 Denmark was added on 17 October 2026 with its five current regions, 98 municipalities and separately administered Christiansø, plus Greenland and the Faroe Islands. [Coverage, sources and rebuild checks](docs/denmark.md).
+
+US counties, area codes, nationwide ZIP search and municipal boundaries for all 50 states are available in the local preview. [Coverage, distinctions, sources and rebuild instructions](docs/us-local-geography.md). The 500 largest functioning municipal governments have July 2025 Census population estimates, with sourced flags where verified. [Municipal facts, ranking and flag sources](docs/us-municipal-facts.md).
+
+Canada’s local preview includes 293 census divisions, 5,161 municipal/equivalent boundaries, July 2025 population estimates for 5,155 local units, and 308 sourced flags among the 500 largest eligible municipal units. Boundaries use the matching 2021 census geography; detail loads per province and division. [Coverage, flag review, sources and rebuild checks](docs/canada-local-geography.md).
+
+Shared pointer and statistical-hover performance measurements, guarantees and repeatable checks are documented in [docs/map-performance.md](docs/map-performance.md).
+
+## Stability and local preview
+
+From this project directory, run `npm start` and open http://127.0.0.1:4174/. The preview displays a notice if its server stops. Run `npm run test:regression` for the map and feature audit, `npm run test:stability-data` for data consistency, `npm run test:preview` for server recovery, and `npm run measure:stability` for navigation, frame stalls and memory measurements. See [the audit workflow](docs/stability.md) and [Morocco coverage and rebuild notes](docs/morocco.md).

@@ -1,0 +1,81 @@
+{
+  "retrieved": "2026-10-17",
+  "coverage": "All 16 regions and the separate Chatham Islands authority, plus 66 other territorial authorities. Whole cross-region districts retain every official regional relationship, without splitting or duplicate populations. 2025 regional geography and 2026 territorial authorities are clipped to full available LINZ land; population retains its 2023 Census basis. Includes the Kermadec and five subantarctic island groups, Tokelau, Cook Islands and Niue (self-governing states in free association), and the labelled Ross Antarctic claim. Named Cook Islands (15 island groups) and Tokelau (three atolls) have land-only local pages and focused entry. These are geographic groups, not fabricated council polygons.",
+  "counts": {
+    "1": 28,
+    "2": 84
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "nz-regions-2025": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Regional_Council_2025/FeatureServer/0",
+      "provider": "Stats NZ · regional councils, 1 January 2025",
+      "license": "CC BY 4.0 · Stats NZ",
+      "sha256": "20cd3c3e4761f233023e3c307944c374e4767927b3f70686c6cde7c37a45eaac",
+      "bytes": 9478329
+    },
+    "nz-authorities-2026": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Territorial_Authority_2026/FeatureServer/0",
+      "provider": "Stats NZ · territorial authorities, 1 January 2026",
+      "license": "CC BY 4.0 · Stats NZ",
+      "sha256": "49caafba6b27ec33fb8c7f0719b0fa18ccbaaf3d427a8394af00425b510cd7ee",
+      "bytes": 96723292
+    },
+    "nz-land-linz": {
+      "url": "https://services.arcgis.com/xdsHIIxuCWByZiCB/arcgis/rest/services/LINZ_NZ_Coastline/FeatureServer/0",
+      "provider": "Toitū Te Whenua LINZ · NZ Coastline land polygons, full available resolution",
+      "license": "CC BY 4.0 · LINZ",
+      "sha256": "69c1c67967c022fc5591764089317feadaa81dd53d3a954620d7ebfde9d947bc",
+      "bytes": 142543115
+    },
+    "nz-parent-relations": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Meshblock_Higher_Geographies_2026/FeatureServer/0/query?where=1%3D1&outFields=TA2026_V1_00%2CREGC2025_V1_00&returnGeometry=false&returnDistinctValues=true&f=json",
+      "provider": "Stats NZ · distinct TA2026 / REGC2025 relationships from 2026 meshblock higher geographies",
+      "license": "CC BY 4.0",
+      "sha256": "3d01cfcf28e4b82a5c51bf9ce0eb99dc69eb7a1bd05db526420a253a0f72bb24",
+      "bytes": 6235
+    },
+    "nz-region-population-2023": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Population_change_between_the_2018_and_2023_Censuses_Regional_Council_FINAL/FeatureServer/0",
+      "provider": "Stats NZ · 2023 Census usually resident population by regional council",
+      "license": "CC BY 4.0",
+      "sha256": "a5f2722691251531f506d316f0fae93bfd6404d25d8a8ec97bee2cd6be7a04af",
+      "bytes": 8694
+    },
+    "nz-local-population-2023": {
+      "url": "https://services2.arcgis.com/vKb0s8tBIA3bdocZ/arcgis/rest/services/Population_change_between_the_2018_and_2023_Censuses_TALB_FINAL/FeatureServer/0",
+      "provider": "Stats NZ · 2023 Census usually resident population by territorial authority/local board",
+      "license": "CC BY 4.0",
+      "sha256": "f816408d261cf4c99b2e0228ae5f9f0efd518a1f63853b1641723a850bdb00e9",
+      "bytes": 33951
+    },
+    "overseas-coastlines": {
+      "url": "https://overpass.private.coffee/api/interpreter",
+      "provider": "OpenStreetMap · directed coastlines inside exact territory relations",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "query": "[out:json][timeout:180];(rel(2559345);rel(3225677);rel(2177227);rel(2184233);rel(1558556);rel(2186600););map_to_area->.a;way(area.a)[natural=coastline];out geom;",
+      "sha256": "d290a559326bf9670d8626dfaf32c309ef77176219e9b5addd0caecbce54d29b",
+      "bytes": 2085917
+    },
+    "antarctic-land": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
+      "provider": "Natural Earth v5.1.2 · Antarctic land coastline (claim sectors are not exclusive sovereignty)",
+      "license": "Public domain",
+      "sha256": "78911fff08c831fb0c3f2f225981f817b255729d540069f8489a3d9788bc7d8b",
+      "bytes": 564456
+    },
+    "realm-island-identities": {
+      "url": "https://en.wikipedia.org/w/api.php",
+      "provider": "Wikipedia exact island identities",
+      "sha256": "18ba25c08424f0d32966b40b3ad7ef78401e55ae258cad63c2b623fed155dda5",
+      "bytes": 3323
+    },
+    "realm-island-coordinates": {
+      "url": "https://www.wikidata.org/w/api.php",
+      "provider": "Wikidata · coordinates for named Cook Islands and Tokelau atolls",
+      "license": "CC0",
+      "sha256": "362d6cf123d09735b8c960cd7e2a17720512885ed2175c0400bc3332449e52c5",
+      "bytes": 280353
+    }
+  }
+}

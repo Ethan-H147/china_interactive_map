@@ -1,0 +1,20 @@
+.map-selection{display:flex;align-items:flex-start;gap:6px;min-width:0}
+.map-view{flex:none;width:36px;height:40px;padding:8px;color:transparent;font-size:16px;appearance:none;border:1px solid var(--line);border-radius:5px;background:var(--paper) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m4 6 4 4 4-4' fill='none' stroke='%23787166' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center/16px;box-shadow:0 2px 8px #403c3508;cursor:pointer}
+.map-view option{color:var(--ink);font-size:14px}
+.map-selection[data-thematic] .map-mode{display:none!important}
+.map-selection[data-thematic] .map-view{width:auto;max-width:210px;padding:8px 30px 8px 12px;color:var(--red-dark);font-size:12px;background-position:right 8px center}
+@supports(appearance:base-select){
+ @media(min-width:761px){
+  .map-view,.map-view::picker(select){appearance:base-select}
+  .map-view{gap:0;align-items:center;overflow:hidden}
+  .map-view::picker-icon{display:none}
+  .map-view::picker(select){min-inline-size:190px;padding:4px;font:14px 'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:5px;box-shadow:0 8px 24px #0002}
+  .map-view option{padding:10px;min-height:36px;border-radius:3px;cursor:pointer}
+  .map-view option:checked{background:var(--surface-soft,var(--line));font-weight:600}
+  .map-view option:is(:hover,:focus-visible){background:color-mix(in srgb,var(--red) 10%,var(--paper));outline:none}
+  .map-selection[data-thematic] .map-view{padding-right:30px}
+ }
+}
+@media(max-width:760px){.map-view{width:44px;height:44px}.map-selection{gap:4px}.map-selection[data-thematic] .map-view{font-size:13px}.map-selection .map-mode{min-width:0}.map-selection .map-mode:not([data-open])>button:not(#mode-lock){min-width:0;max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+
+@media(max-width:400px){.map-selection .map-mode[data-collapsed-levels]:not([data-open]) button[data-view-short-label]{font-size:0}.map-selection .map-mode[data-collapsed-levels]:not([data-open]) button[data-view-short-label]::before{content:attr(data-view-short-label);font-size:11px}}

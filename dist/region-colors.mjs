@@ -1,3 +1,4 @@
+import {onMapHover} from './pointer-performance.mjs';
 import {getMapScene} from './map-scene.mjs';
 import {countryColorData,colorMetrics,colorLabels,colorLayerProfile} from './region-color-data.mjs';
 export const shadePalette=['#e3eee9','#c7e2d8','#a5d2c8','#7bb9b1','#529ca4','#367b8d','#285675'];
@@ -16,7 +17,7 @@ export function metricScale(data,key,level=1){
  const thresholds=[...new Set(shadePalette.map((_,i)=>values[Math.ceil(values.length*(i+1)/shadePalette.length)-1]))];
  const bins=thresholds.map((max,i)=>({max,min:i?thresholds[i-1]:values[0],color:shadePalette[thresholds.length===1?Math.floor(shadePalette.length/2):Math.round(i*(shadePalette.length-1)/(thresholds.length-1))],count:values.filter(v=>v<=max&&(!i||v>thresholds[i-1])).length}));
  const years=[...new Set(metrics.map(m=>m.year).filter(Boolean))].sort();
- return {key,level,records,resolve,label:data.levels?.[level-1]||data.level,bins,min:values[0],max:values.at(-1),count:values.length,total:records.length,years,unit:metrics[0].unit,baseYear:metrics[0].baseYear,estimated:metrics.some(m=>m.usdEstimate),constant:metrics.some(m=>m.priceBasis==='constant'),metric,color:value=>Number.isFinite(value)?bins.find(b=>value<=b.max)?.color||bins.at(-1).color:missingColor};
+ return {key,level,records,resolve,label:data.levels?.[level-1]||data.level,bins,min:values[0],max:values.at(-1),count:values.length,total:data.counts?.[level]??records.length,years,unit:metrics[0].unit,baseYear:metrics[0].baseYear,estimated:metrics.some(m=>m.usdEstimate),constant:metrics.some(m=>m.priceBasis==='constant'),metric,color:value=>Number.isFinite(value)?bins.find(b=>value<=b.max)?.color||bins.at(-1).color:missingColor};
 }
 export function shadeExpression(data,scale,profile){
  const id=['to-string',['coalesce',['get','regionId'],['get',profile.id],'']],parent=['to-string',['coalesce',['get',profile.parent],'']];
@@ -37,6 +38,7 @@ function flatOpacity(base){
  return result;
 }
 export function createRegionColors(map,host={}){
+ let hoverProfiles=new Map(),hoverUnit,hoverMetric;
  let country,data,key='none',scale,epoch=0,scheduled=false,suspended=false,error=false,viewLevel=1;
  const cache=new Map(),styles=new Map(),preferences=new Map(),scales=new Map(),expressions=new Map();
  const legend=el('section',undefined,'region-color-legend');legend.id='region-color-legend';legend.hidden=true;legend.setAttribute('aria-label','Map color legend');
@@ -66,7 +68,7 @@ export function createRegionColors(map,host={}){
   period.textContent=[scale.label,scale.estimated?'≈ USD':scale.unit,scale.years.length===1?scale.years[0]:scale.years.length?scale.years[0]+'–'+scale.years.at(-1):null,scale.constant?'constant '+scale.baseYear+' prices':null].filter(Boolean).join(' · ');
   ramp.replaceChildren();for(let i=0;i<scale.bins.length;i++){const bin=scale.bins[i],swatch=el('span');swatch.style.background=bin.color;swatch.title=(i?'>'+metricNumber(bin.min,key):metricNumber(bin.min,key))+' – '+metricNumber(bin.max,key)+' · '+bin.count+' regions';ramp.append(swatch);}
   limits.replaceChildren(el('span',metricNumber(scale.min,key,true)),el('span',metricNumber(scale.max,key,true)));
-  hover.replaceChildren();notes.replaceChildren(el('p',scale.label+'. Up to seven groups based on this level’s value distribution; tied values stay together. Each country and subdivision level has its own scale.'));
+  hoverUnit=hoverMetric=undefined;hover.replaceChildren();notes.replaceChildren(el('p',scale.label+'. Up to seven groups based on this level’s value distribution; tied values stay together. Each country and subdivision level has its own scale.'));
   if(scale.level<viewLevel&&!getScale(key,viewLevel))notes.append(el('p','This measure is available only at the '+scale.label.toLowerCase()+' level.'));
   const coverage=el('p'),chip=el('span',undefined,'region-color-missing');coverage.append(chip,document.createTextNode('No data · '+scale.count+'/'+scale.total+' regions covered'));notes.append(coverage);
   if(scale.years.length>1)notes.append(el('p','Latest available figures use different years. Check the date beside each value.'));
@@ -76,6 +78,7 @@ export function createRegionColors(map,host={}){
  }
  function sync(){
   scheduled=false;const layers=map.getStyle()?.layers||[];refreshScale(layers);const enabled=!suspended&&key!=='none'&&scale;
+  hoverProfiles=new Map(enabled?layers.filter(l=>colorLayerProfile(l,country)&&l.layout?.visibility!=='none').map(l=>[l.id,colorLayerProfile(l,country)]):[]);
   const primary=layers.find(l=>colorLayerProfile(l,country)?.primary&&!l.id.endsWith('-motion'));
   const primaryEntry=primary&&styles.get(primary.id),primaryCurrent=primary&&((getMapScene(map)?.basePaint(primary.id,'fill-opacity')??map.getPaintProperty(primary.id,'fill-opacity'))??1);
   const primaryOpacity=primaryEntry&&signature(primaryCurrent)===primaryEntry.writtenOpacity?primaryEntry.opacity:primaryCurrent;
@@ -120,15 +123,15 @@ export function createRegionColors(map,host={}){
  // Level changes can leave all geometry visible and emit no MapLibre style event.
  if(typeof MutationObserver!=='undefined'){const levels=new MutationObserver(schedule);for(const id of ['mode-province','mode-prefecture','mode-third']){const button=document.getElementById(id);if(button)levels.observe(button,{attributes:true,attributeFilter:['aria-pressed']});}}
  map.on('styledata',schedule);
- map.on('mousemove',event=>{
+ onMapHover(map,event=>{
   if(!scale||suspended||map.isMoving())return;
-  const layers=(map.getStyle()?.layers||[]).filter(l=>colorLayerProfile(l,country)&&l.layout?.visibility!=='none').map(l=>l.id);
-  const unit=f=>{const p=f.properties,profile=colorLayerProfile(f.layer,country);return profile&&scale.resolve(p.regionId??p[profile.id],p[profile.parent]);};
+  const layers=[...hoverProfiles.keys()].filter(id=>map.getLayer(id)&&map.getLayoutProperty(id,'visibility')!=='none');
+  const unit=f=>{const p=f.properties,profile=hoverProfiles.get(f.layer.id);return profile&&scale.resolve(p.regionId??p[profile.id],p[profile.parent]);};
   const hit=layers.length?map.queryRenderedFeatures(event.point,{layers}).find(unit):null;
-  if(!hit){hover.replaceChildren();return;}
-  const root=unit(hit),m=root&&scale.metric(root);
+  if(!hit){if(hoverUnit){hoverUnit=hoverMetric=undefined;hover.replaceChildren();}return;}
+  const root=unit(hit),m=root&&scale.metric(root);if(root===hoverUnit&&m===hoverMetric)return;hoverUnit=root;hoverMetric=m;
   hover.replaceChildren(el('span',root.name),el('strong',(m?.usdEstimate?'≈ ':'')+metricNumber(m?.value,key)+(m?key.startsWith('gdp')?' USD':key==='populationDensity'?' /km²':'':'')),el('small',m?.year?String(m.year):''));hover.title=m?.note||'';
  });
- map.on('movestart',()=>hover.replaceChildren());map.getCanvas().addEventListener('mouseleave',()=>hover.replaceChildren());
+ const clearHover=()=>{hoverUnit=hoverMetric=undefined;hover.replaceChildren();};map.on('movestart',clearHover);map.getCanvas().addEventListener('mouseleave',clearHover);
  return {releaseCountry:id=>cache.delete(id),setCountry,setMetric,getMetric:()=>key,sync,suspend(value){suspended=value;options();drawLegend();sync();},retry:()=>error&&setCountry(country,key)};
 }

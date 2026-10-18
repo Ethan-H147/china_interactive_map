@@ -7,7 +7,7 @@ export const colorMetrics = ['population','populationDensity','gdp','gdpPerCapit
 export const colorLabels = {none:'None',population:'Population',populationDensity:'Population density',gdp:'GDP',gdpPerCapita:'GDP per capita'};
 export const subdivisionColorLabels=Object.fromEntries(ids.filter(id=>countries[id].levelNames).map(id=>[id,countries[id].levelNames]));
 export function colorLayerProfile(layer,country){
- const c=countryColorData[country];if(!c||layer.type!=='fill')return null;
+ const c=countryColorData[country];if(!c||layer.type!=='fill'||layer.metadata?.atlas?.thematic)return null;
  const id=layer.id.replace(/-motion$/,'');
  const layers=c.layers||new RegExp('^'+country+'-(?!portal|international).*-fill$');
  if(!layers.test(id)||/(?:city|settlement)-(?:hit|fill)$/.test(id))return null;

@@ -22,12 +22,12 @@ export const compactSources=[
 if(import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
  const {encodeGeo}=await import('../dist/geo-pack.mjs');
  const present=compactSources.filter(f=>fs.existsSync('dist/data/'+f));
- fs.rmSync('dist/data/compact',{recursive:true,force:true});
+ // Keep the previous compact files available to open previews until each replacement is ready.
  let before=0,after=0;
  for(const file of present){
   const source=fs.readFileSync('dist/data/'+file),text=gunzipSync(source).toString('utf8');
   const packed=gzipSync(encodeGeo(JSON.parse(text),{source:createHash('sha256').update(text).digest('hex')}),{level:9});
-  fs.mkdirSync(path.dirname('dist/data/compact/'+file),{recursive:true});fs.writeFileSync('dist/data/compact/'+file,packed);
+  fs.mkdirSync(path.dirname('dist/data/compact/'+file),{recursive:true});const target='dist/data/compact/'+file;fs.writeFileSync(target+'.tmp',packed);fs.renameSync(target+'.tmp',target);
   before+=source.length;after+=packed.length;
   console.log(file.padEnd(44),(source.length/1024).toFixed(0).padStart(6),'KB ->',(packed.length/1024).toFixed(0).padStart(5),'KB');
  }

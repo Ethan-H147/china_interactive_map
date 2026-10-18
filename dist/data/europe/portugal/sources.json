@@ -1,0 +1,46 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "All 18 mainland districts, the Azores and Madeira autonomous regions, all 308 municipalities and all 3,258 civil parishes, with Corvo retained as a terminal municipality in official CAOP2025. Includes all nine Azores islands, Porto Santo, Desertas and the Savage Islands within their official municipalities. Parent geometry dissolves from the same full-resolution parish topology. Population is GISCO 2024 and is not redistributed to 2025 restored parishes. GDP is available for the two autonomous regions; statistical NUTS GDP is not mislabeled as district GDP.",
+  "counts": {
+    "1": 20,
+    "2": 308,
+    "3": 3258
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "pt-caop2025-ram": {
+      "url": "https://geo2.dgterritorio.gov.pt/caop/CAOP_RAM_2025-gpkg.zip",
+      "provider": "Direção-Geral do Território · CAOP2025, approved 28 January 2026",
+      "license": "CC BY 4.0 · DGT",
+      "licenseUrl": "https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop",
+      "sha256": "ae568ca2006e91205601309ff46bc8ae0cc73236165f095f8aa99a5b9a17e5d6",
+      "bytes": 15235290,
+      "archive": true
+    },
+    "pt-caop2025-raa": {
+      "url": "https://geo2.dgterritorio.gov.pt/caop/CAOP_RAA_2025-gpkg.zip",
+      "provider": "Direção-Geral do Território · CAOP2025, approved 28 January 2026",
+      "license": "CC BY 4.0 · DGT",
+      "licenseUrl": "https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop",
+      "sha256": "b0e3b4fe5544647eb4593e0222c6430fae7e50c97f953d8ceae10707c4df9dcf",
+      "bytes": 15909724,
+      "archive": true
+    },
+    "pt-caop2025-continente": {
+      "url": "https://geo2.dgterritorio.gov.pt/caop/CAOP_Continente_2025-gpkg.zip",
+      "provider": "Direção-Geral do Território · CAOP2025, approved 28 January 2026",
+      "license": "CC BY 4.0 · DGT",
+      "licenseUrl": "https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop",
+      "sha256": "87cd67f4b1fbadf23d9324e6fb231ff05531e4db347af36ccc7c6cbabe3ecd1d",
+      "bytes": 111647845,
+      "archive": true
+    },
+    "corvoStatus": {
+      "url": "https://www.cm-corvo.pt/wp-content/uploads/2026/01/ata-de-18-de-Dezembro-2025.pdf",
+      "provider": "Municipality of Corvo · minutes of 18 December 2025, Article 136 of the Azores Political-Administrative Statute",
+      "license": "Official municipal record",
+      "sha256": "49bc2bb1e26f3c5af0bb198c4b607f9cd0738b40cd62951188e4358c6b1ecc09",
+      "bytes": 234
+    }
+  }
+}

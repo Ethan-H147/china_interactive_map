@@ -9,7 +9,7 @@ export const configurations=Object.fromEntries(Object.entries(definitions).map((
 export function createEurope(map,host){
  let flags;
  const registry=globalThis.AtlasCountries;
- const flagSets={'europe-expansion':async()=>(await import('./europe-expansion-flags.mjs')).europeExpansionFlags,'north-america':async()=>(await import('./north-america-flags.mjs')).northAmericaFlags};
+ const flagSets={atlantic:async()=>(await import('./atlantic-flags.mjs')).atlanticFlags,oceania:async()=>(await import('./oceania-flags.mjs')).oceaniaFlags,'europe-expansion':async()=>(await import('./europe-expansion-flags.mjs')).europeExpansionFlags,'north-america':async()=>(await import('./north-america-flags.mjs')).northAmericaFlags};
  return createRegionalCollection(map,host,configurations,{async prepare(country,config){
   flags??=(await import('./europe-flags.mjs')).europeFlags;
   if(country==='vatican-city')Object.assign(config,vaticanProfile);
@@ -19,5 +19,6 @@ export function createEurope(map,host){
   const selectedFlags=flags[country]||(flagSet?(await flagSets[flagSet]())[country]:null);
   Object.assign(config.flags,selectedFlags?.firstFlags);
   Object.assign(config.detailFlags,selectedFlags?.detailFlags);
+  for(const extra of registry.countries[country].additionalFlagSets||[]){const additions=(await flagSets[extra]())[country];Object.assign(config.flags,additions?.firstFlags);Object.assign(config.detailFlags,additions?.detailFlags);}
  }});
 }

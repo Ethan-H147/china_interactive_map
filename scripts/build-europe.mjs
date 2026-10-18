@@ -634,4 +634,5 @@ for(const [country,c] of Object.entries(countries)){
  fs.writeFileSync(out+'/'+country+'/sources.json',JSON.stringify({retrieved:manifest.retrieved,counts,coverage:c.coverage,processing,frontierKm:Math.round(length/1000),seamReports:Object.fromEntries(Object.entries(seamReports).filter(([k])=>k.includes(country))),sources:files.map(n=>({file:n,...manifest.files[n]}))},null,2)+'\n');
  console.log(country,counts,'chunks',Object.keys(chunks).length,'; land frontier',Math.round(length/1000),'km in',paths.length,'paths');
 }
+if(!only||only.includes('india')){const {prepareIndiaNames}=await import('./prepare-india-names.mjs');prepareIndiaNames(out+'/india/');}
 console.log('Europe build complete.');

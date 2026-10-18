@@ -124,7 +124,7 @@ const levelToggle = document.querySelector('.map-mode');
 const levels = () => [...levelToggle.querySelectorAll('button')].filter(b => b.id !== 'mode-lock' && !b.hidden);
 function syncLevels() {
   if (!levelToggle) return;
-  const collapse = query.matches && levels().length > 2;
+  const collapse = query.matches && (levels().length > 2 || !document.getElementById('map-view')?.hidden && levels().length > 1);
   levelToggle.toggleAttribute('data-collapsed-levels', collapse);
   if (!collapse) levelToggle.removeAttribute('data-open');
 }
@@ -136,7 +136,7 @@ document.addEventListener('click', event => {
   levelToggle.setAttribute('data-open', '');
 }, true);
 document.addEventListener('pointerdown', event => { if (levelToggle?.hasAttribute('data-open') && !event.target.closest('.map-mode')) levelToggle.removeAttribute('data-open'); });
-if (levelToggle) new MutationObserver(syncLevels).observe(levelToggle, {subtree: true, attributes: true, attributeFilter: ['hidden']});
+if (levelToggle) new MutationObserver(syncLevels).observe(document.getElementById('map-selection')||levelToggle, {subtree: true, attributes: true, attributeFilter: ['hidden']});
 query.addEventListener('change', syncLevels);
 syncLevels();
 
@@ -149,3 +149,10 @@ if (query.matches) apply('peek');
 
 // Camera flights keep the selected region above the half-open sheet.
 export function navigationInset() { return query.matches ? heights().half + 16 : 0; }
+
+// A map quiz can make room for its inset maps while its question stays over the map.
+export async function collapse(){
+ if(!query.matches||state==='peek')return;
+ apply('peek');
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)await new Promise(resolve=>setTimeout(resolve,300));
+}

@@ -23,3 +23,9 @@ scripts/korea-sources/north-coast.json
 scripts/korea-sources/north-metadata.json
 scripts/korea-sources/north-adm2-metadata.json
 scripts/additional-sources/europe-flags/
+
+# Original CAOP archives are a reproducible, hash-pinned download cache.
+/scripts/boundary-sources/atlantic/*.zip
+
+# Retained source archives are hash-pinned in the adjacent manifest.
+scripts/boundary-sources/mainland-seasia/*.zip

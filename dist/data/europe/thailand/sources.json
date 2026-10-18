@@ -1,0 +1,709 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "76 provinces plus Bangkok special administrative area, with districts and subdistricts from the DDPM public government service. Multipart rows dissolve by exact official administrative code; parent geometry is derived from the same local land topology. Bangkok khet/khwaeng retain their correct labels. Registered population is published by NSO/DOPA for 2024, including Thai and non-Thai registered residents; it is not census usually-resident population. Full available geometry remains at close zoom, while district/subdistrict chunks load on demand. Source counts and hierarchy are validated during the build. Local-area verification against a separately retained code register: 7420 code-matched subdistricts, 234 geographic islands, 1 municipal footprint and 3 older subdistrict footprints. 16 current subdistricts lack separate geometry in this boundary source, mainly later Bangkok splits; their borders are not invented. A malformed source district code on Ko Thian is corrected to 2306 from its six-digit source hierarchy.",
+  "counts": {
+    "1": 77,
+    "2": 928,
+    "3": 7658
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "th-population-77": {
+      "url": "https://www.nso.go.th/public/e-book/Statistical-Yearbook/SYB-2025/77/",
+      "provider": "National Statistical Office Thailand · Statistical Yearbook 2025 Table 1.5, DOPA registered population 2024",
+      "sha256": "391a26266c13b9496d130fc4e6c431497169e394326ad26020a292a04f179e39",
+      "bytes": 7586
+    },
+    "th-population-78": {
+      "url": "https://www.nso.go.th/public/e-book/Statistical-Yearbook/SYB-2025/78/",
+      "provider": "National Statistical Office Thailand · Statistical Yearbook 2025 Table 1.5, DOPA registered population 2024",
+      "sha256": "82f79d9c41f10a4c966d20a34453a4f27a175386a1cd59e3ae451bf5d25d0e80",
+      "bytes": 7914
+    },
+    "th-population-79": {
+      "url": "https://www.nso.go.th/public/e-book/Statistical-Yearbook/SYB-2025/79/",
+      "provider": "National Statistical Office Thailand · Statistical Yearbook 2025 Table 1.5, DOPA registered population 2024",
+      "sha256": "44040162ce56aff3eb6a387660777e633a8d329747a6544cf64bd5dafee71b16",
+      "bytes": 7978
+    },
+    "th-provinces": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/1",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "1ed40528ca7ae483ca0ea9908d10eaa0e09d6c4fb26b0b20dc17d5d88adaa200",
+      "bytes": 38323
+    },
+    "th-districts": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/2",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "f63b56e7e52f931465f3320b65aa206b643bce2a18bd380e5b556d6fa8a1b5f6",
+      "bytes": 552101
+    },
+    "th-subdistricts-13": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "223db2316fdc295df72cef5540ba00d6f03a6ac853eb1518fa9bc11bd04b339e",
+      "bytes": 123504
+    },
+    "th-subdistricts-12": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "1d8f6845e4b20dc113c10e62a3c08ebf042a6969872cff5f334a4f27a9c2b62c",
+      "bytes": 225904
+    },
+    "th-subdistricts-11": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "ac7f845396465541f4f06b5deb43c2a4c93efa5e7dce27c24581c4ce19dcdf00",
+      "bytes": 437454
+    },
+    "th-subdistricts-15": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "f6d902104e5c9ec948d2a0332399b8e1df3e5e29e9cbd173dcdd4e7c867b97c9",
+      "bytes": 749671
+    },
+    "th-subdistricts-17": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "b8f73628b68fa1f85b269ca227cc52e4debc0d23dbc48eacb6915ee98ab0e051",
+      "bytes": 268021
+    },
+    "th-subdistricts-16": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "6b50590e494fb773e6dc6223d1c3e60d7751276216511526b522c5a9fbeca05b",
+      "bytes": 763576
+    },
+    "th-subdistricts-14": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "cb81efc8bc903acb744d7b724b1f5a6ca4b6ee4ddaf8f5886429a06c651cd952",
+      "bytes": 1101584
+    },
+    "th-subdistricts-10": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "a465ae9fb212f54a52fdc3b0df70f81fdaac44ee796c774bef4d0053e1b1538d",
+      "bytes": 1413127
+    },
+    "th-subdistricts-18": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "7e97f39114136f207334a6ac7bb0513b1cd4d5fafaa6a19505dbfb48ea8100c2",
+      "bytes": 472224
+    },
+    "th-subdistricts-21": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "940a6b820493cc6a542d5d35db627a0a18838cb68a7bf984784ad2f76967f4f2",
+      "bytes": 775220
+    },
+    "th-subdistricts-19": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "e5dea50298d04271447d30ac590326ea3f3fe3e818e3ea6e36135dc8edd81a86",
+      "bytes": 736650
+    },
+    "th-subdistricts-22": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "25f59ba7343ff322345ca4706b945269e2fc6b911c549f4d049cc6c014466889",
+      "bytes": 1210476
+    },
+    "th-subdistricts-20": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "27588536fdb6cbc689855f08c88e79252daf697059bca4521b8e304c62334796",
+      "bytes": 1814734
+    },
+    "th-subdistricts-23": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "cdc9f14087b926ffd68f5b650da1f9bc50125eeeaf7a4d8f38732ce57e8a972d",
+      "bytes": 1008975
+    },
+    "th-subdistricts-24": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "b738b847dcf33d3554539993035438b15e63992cbf3948debb97eb2dc491a177",
+      "bytes": 939565
+    },
+    "th-subdistricts-26": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "bc192e6963c1064884b7451d7aab1a90bd2efab180ffbc1fa46b301bea5ea0e9",
+      "bytes": 476525
+    },
+    "th-subdistricts-27": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "0c82733708ce136f05ad903f12ccc4637fa9daf232876e633226bf39558c9a86",
+      "bytes": 903048
+    },
+    "th-subdistricts-25": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "edebeea24fca18b4a552b331528e6529fde8130b619e958478bb25206acf0210",
+      "bytes": 1184704
+    },
+    "th-subdistricts-31": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "694b038c7a98789fad99f5ea8444e2b3c5e6d72fb4b6f1dd871b9f9cd56c935f",
+      "bytes": 1059625
+    },
+    "th-subdistricts-30": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "ae8bf4d6565fca46594878a498549bc7e9dcdc0c9919c7863084eb5c3e25b94d",
+      "bytes": 1997806
+    },
+    "th-subdistricts-35": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "69ac7c549da4e9d7fa340bdcc41c73807ede797cc927a0ef2c72cb640af8deb6",
+      "bytes": 979331
+    },
+    "th-subdistricts-32": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "788bbfa339ace6278741675315574af9ee0acd5af5ceddfd54ac0564ce6c072e",
+      "bytes": 2589622
+    },
+    "th-subdistricts-34": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "e631831a87704029b606d5f6b4067123f9fd3a862119230185f937ee9e80d668",
+      "bytes": 2503971
+    },
+    "th-subdistricts-36": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "82ee2bbb5219b87179f9fb602825b6f4b1de21a322e13690f76ea04d249cc9dc",
+      "bytes": 1104969
+    },
+    "th-subdistricts-37": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "ff2da669c86a6b0f2c6cc012acf1fb2781ecb2071d0691f66654f9c07943bde3",
+      "bytes": 1355566
+    },
+    "th-subdistricts-33": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "97465ba52e44f9d2608b14d2e4fe5bc10da19dc305fb0612578f134f6c050592",
+      "bytes": 3236388
+    },
+    "th-subdistricts-39": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "d5cd2485d5e66f27f391ce61114515dae2d20b843be58bf3850a16a974f62a14",
+      "bytes": 493923
+    },
+    "th-subdistricts-38": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "7d7456cd75fd82be82995976f6486313d7c8e11353329089bdceb71057fb0863",
+      "bytes": 1364784
+    },
+    "th-subdistricts-43": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "000204a6cb13b7e384a7a8401feb7f195a1b22f7bedbd9aa0e70020b3e4e11ab",
+      "bytes": 1190125
+    },
+    "th-subdistricts-42": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "24043aa679336f2d4b1a441e59bd516de08ab589dde3c536213a2824d0aef7b3",
+      "bytes": 2327684
+    },
+    "th-subdistricts-40": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "3d0f18630e169189197b40d873eab6d2b7b8ace6a539d3a0f23d023d598b9b44",
+      "bytes": 2425922
+    },
+    "th-subdistricts-41": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "29249a19c06b49f6a1a2c259422f2f3a1099e27cd545ac44b431bbd57e08c660",
+      "bytes": 2127414
+    },
+    "th-subdistricts-44": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "0d39acf19aca1b4dea300e5ce895d16fa521aaadde42ffe0bf5fba430a220d6e",
+      "bytes": 802275
+    },
+    "th-subdistricts-48": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "14eceac0f3126284bc45bb4d9a087a9a038f70414f73c10a7bf5e2bac325303a",
+      "bytes": 1117177
+    },
+    "th-subdistricts-45": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "d54bf72db464226113142f773b87daa865f122129ede095fc8e996bb8b52a469",
+      "bytes": 1295370
+    },
+    "th-subdistricts-49": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "c83eb08535b5df80d0154b219b0b2f242a8f79164b491424010ff391364d9231",
+      "bytes": 524589
+    },
+    "th-subdistricts-51": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "19b0b77dbc1b09b225a449331a2f040c15894d6343a47a117372b2feb9ae5590",
+      "bytes": 601194
+    },
+    "th-subdistricts-47": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "168acc55c8ce30994a6c73d465e4c37904798d90f4b8607b58fcebdce68de133",
+      "bytes": 2236042
+    },
+    "th-subdistricts-46": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "d2de56c92882f866278d1d1f599d6a5da1499d99782525b49159ccf1935f5576",
+      "bytes": 2914145
+    },
+    "th-subdistricts-52": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "1c5a3ff54131480be7289218e042d2e181d588ecbe828b17836bdbce04e32e8a",
+      "bytes": 1093544
+    },
+    "th-subdistricts-53": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "561e4f3724a4a63eb26e6b73947bc80e9c4c66b2c5e5462ed1a5ea34e8362963",
+      "bytes": 1872162
+    },
+    "th-subdistricts-54": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "979ea03e9120bf29dd414f6727a806748f9c2b4b207487ca1132c6f8be024f35",
+      "bytes": 2048013
+    },
+    "th-subdistricts-56": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "c9754e262d06e7c77d3fbdf9598c5356bee8018a155ca4f08ad496a992f95ccf",
+      "bytes": 912348
+    },
+    "th-subdistricts-55": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "668e415967fa9cef9391d060d59a1a85234d43cf0ebce763870256be0de4b63e",
+      "bytes": 2518173
+    },
+    "th-subdistricts-57": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "12a02f066898f08e3e9e76d370b26145576cb742644fcd4c1e43770886dbbe94",
+      "bytes": 1232784
+    },
+    "th-subdistricts-50": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "8b80e43640584eab0154c7841cee854bc0c46bd4aade0c166b93518fc2c0ac55",
+      "bytes": 4909683
+    },
+    "th-subdistricts-58": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "ec24cccb32223baeee9dd21c8abeb296a65b88928070bddf9da2e12225a0b384",
+      "bytes": 1640011
+    },
+    "th-subdistricts-61": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "fcd7dbc73028a6d0b59b95e0c64d8095b279796f3c8547f17c9e91290f045401",
+      "bytes": 675994
+    },
+    "th-subdistricts-60": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "9aaec9e3257d77f7ae7163669d499c82c87abcdea857fb0356abc5d86d40e997",
+      "bytes": 1214983
+    },
+    "th-subdistricts-62": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "a0c4506ddb412f215de73ea38007776920818c1ec1d247157914fd991e0791f9",
+      "bytes": 705782
+    },
+    "th-subdistricts-64": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "9974d367350b93356815de6c48ae901f9bdfefc1678902ad8392f273091202b3",
+      "bytes": 606309
+    },
+    "th-subdistricts-66": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "d42665ba13405eb47179cec548622b679e302ee7e02440b89262535b84e0f7c2",
+      "bytes": 696088
+    },
+    "th-subdistricts-63": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "324f8c4683a30b6cb224099bd55994e598e321ebbde44b07f881abab448e4483",
+      "bytes": 1188703
+    },
+    "th-subdistricts-70": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "1b1cac6d3b49e1308224145b96ca74026b0704f02c683c9b041fef4a6f81cd08",
+      "bytes": 697279
+    },
+    "th-subdistricts-67": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "7be343851c05a495deb30dc0c8b7aaee216066f081ddcb8ac347fb41dc741a77",
+      "bytes": 1371538
+    },
+    "th-subdistricts-72": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "2155c3c52037d1dc9d0d13df59baa67075094634dfd60a42587e5699f16bc6b0",
+      "bytes": 750012
+    },
+    "th-subdistricts-74": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "fe94f70f851053d17c91b66b39204ee6112449b12480bbdf16eff65dd2f5e23a",
+      "bytes": 240824
+    },
+    "th-subdistricts-71": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "7ad3de357228ce1f9172f1f17e6d2a454820d8807ca44d25a5d0d563f8c14859",
+      "bytes": 1424725
+    },
+    "th-subdistricts-65": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "ed291aacfae45317a25fc7d9f56549bcbd7db99ed067434ab6936682b5f996eb",
+      "bytes": 2719775
+    },
+    "th-subdistricts-73": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "bfd1c5b38648b4a4df659440ae47dec5c0371c819ff632f797a0c76f79750400",
+      "bytes": 473889
+    },
+    "th-subdistricts-75": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "6d11d5120aefebc48bbcc55de1beed7973e38f112831836dcfd5e98ee88452c5",
+      "bytes": 346133
+    },
+    "th-subdistricts-76": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "2c9703fc2b84ccc695ac866281022a1d259509e8f2ccfda9ce55eddaecc7d8b5",
+      "bytes": 756065
+    },
+    "th-subdistricts-77": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "d2db5d4d906e0a8844da348f057fdd5a1cd8342ac1d8ee6748013e95f26f24a8",
+      "bytes": 676295
+    },
+    "th-subdistricts-83": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "f95ef8997dff3fe840e17ac060ef88bd1fc46a42c258465a9a580cebe34b9678",
+      "bytes": 312156
+    },
+    "th-subdistricts-81": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "d6635896d5162aa136a22b93fbdb506436f56e9617303bfdf1f305d9dca05e75",
+      "bytes": 849069
+    },
+    "th-subdistricts-82": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "6b282be85afc0e40db9837168820e48d8461969cdf871556b2afc325e59b71e1",
+      "bytes": 736594
+    },
+    "th-subdistricts-80": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "dc16afeda23614cccd3d9d37e469640b185cd630c9f6df5014364ee4b3bb2ff3",
+      "bytes": 1590228
+    },
+    "th-subdistricts-85": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "7bea081e5d002e454fb01ead1fad40baa7aba8d6f34cb86910747787718fd98b",
+      "bytes": 708296
+    },
+    "th-subdistricts-86": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "5dc8779e4b826abbe0bbc6c450cececaa3a6f8d0a8378cf614413a42fe2f0845",
+      "bytes": 841817
+    },
+    "th-subdistricts-92": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "c94891beb068e467d6e875ecf6445cf48fe94672b1ce64fb7a7d30094cd3809a",
+      "bytes": 779415
+    },
+    "th-subdistricts-84": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "258d99c7ce26cd1d151f816ddb7baaa6803e9e7afbd969bb00bc98277059bd04",
+      "bytes": 1365880
+    },
+    "th-subdistricts-94": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "22324f51e0cfcde79b0515add770390a401d8e1f8717c33406a176c78453a61f",
+      "bytes": 538005
+    },
+    "th-subdistricts-90": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "bb17baee7187af405ae9d8989ccf26c84a6b854d6321a70ac9ef64a62d94b5a2",
+      "bytes": 1070248
+    },
+    "th-subdistricts-93": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "6b8a50ad54985b35afe9ad01c036e81c22582844a4a81e83be06965513e3ed22",
+      "bytes": 621264
+    },
+    "th-subdistricts-95": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "62fc72a6d15e40a5b9883a1aad3185872832250a3260b568d89a07e3772338af",
+      "bytes": 499162
+    },
+    "th-subdistricts-96": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "dc5e099f64a25f26c39448079330a8012bc4a6fcce67fade9d1f4533930e65ef",
+      "bytes": 650801
+    },
+    "th-subdistricts-91": {
+      "url": "https://gis-portal.disaster.go.th/arcgis/rest/services/MapDX/DPM_TH_Boundary/FeatureServer/3",
+      "provider": "Thailand Department of Disaster Prevention and Mitigation · DPM_TH_Boundary public map service",
+      "license": "Public government map service; retain original attribution and source link",
+      "retrieved": "2026-10-18",
+      "sha256": "7c0c9d2bcb7f418227ad325719f3ec09a8e3f8b518a2ae265981b8b9e34458a3",
+      "bytes": 993885
+    },
+    "th-code-register-district": {
+      "url": "https://raw.githubusercontent.com/kongvut/thai-province-data/3dddbb03345635206c96f7089297d3d6faf9057b/api/latest/district.json",
+      "provider": "Kongvut Sangkla · independent Thai administrative name/code register",
+      "license": "MIT",
+      "revision": "3dddbb03345635206c96f7089297d3d6faf9057b",
+      "sha256": "02c4b370e8076b6fa88ec3c0deb6e7a16480a69992a50d85c16a02364a4dfb05",
+      "bytes": 226373
+    },
+    "th-code-register-sub_district": {
+      "url": "https://raw.githubusercontent.com/kongvut/thai-province-data/3dddbb03345635206c96f7089297d3d6faf9057b/api/latest/sub_district.json",
+      "provider": "Kongvut Sangkla · independent Thai administrative name/code register",
+      "license": "MIT",
+      "revision": "3dddbb03345635206c96f7089297d3d6faf9057b",
+      "sha256": "3664cba8aa54ac69434162b92cd6291f65d83820a2dd945854ae7422789621df",
+      "bytes": 2129436
+    },
+    "shared-frontier-reference": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "86b18f72ab2ad4a508cde3d2a357b28ddedcb489bb2395219d8a7bbb28c0a963",
+      "bytes": 2284668
+    }
+  },
+  "localCoverage": {
+    "subdistricts": 7420,
+    "islands": 234,
+    "municipalities": 1,
+    "legacy": 3,
+    "missingCurrentSubdistrictCodes": [
+      "TH-100910",
+      "TH-101406",
+      "TH-102602",
+      "TH-103402",
+      "TH-103403",
+      "TH-104402",
+      "TH-104403",
+      "TH-104702",
+      "TH-104703",
+      "TH-105002",
+      "TH-105003",
+      "TH-105004",
+      "TH-105005",
+      "TH-530407",
+      "TH-710101",
+      "TH-710102"
+    ]
+  }
+}

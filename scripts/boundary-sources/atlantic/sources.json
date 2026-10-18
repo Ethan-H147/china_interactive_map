@@ -1,0 +1,225 @@
+{
+  "retrieved": "2026-10-18",
+  "sources": {
+    "pt-caop2025-ram": {
+      "url": "https://geo2.dgterritorio.gov.pt/caop/CAOP_RAM_2025-gpkg.zip",
+      "provider": "Direção-Geral do Território · CAOP2025, approved 28 January 2026",
+      "license": "CC BY 4.0 · DGT",
+      "licenseUrl": "https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop",
+      "sha256": "ae568ca2006e91205601309ff46bc8ae0cc73236165f095f8aa99a5b9a17e5d6",
+      "bytes": 15235290,
+      "archive": true
+    },
+    "pt-caop2025-raa": {
+      "url": "https://geo2.dgterritorio.gov.pt/caop/CAOP_RAA_2025-gpkg.zip",
+      "provider": "Direção-Geral do Território · CAOP2025, approved 28 January 2026",
+      "license": "CC BY 4.0 · DGT",
+      "licenseUrl": "https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop",
+      "sha256": "b0e3b4fe5544647eb4593e0222c6430fae7e50c97f953d8ceae10707c4df9dcf",
+      "bytes": 15909724,
+      "archive": true
+    },
+    "ie-local-authorities-2026": {
+      "url": "https://services-eu1.arcgis.com/FH5XCsx8rYXqnjF5/arcgis/rest/services/National_Statutory_Boundaries_-_Local_Authorities__Ungeneralised_-_2026/FeatureServer/3",
+      "provider": "Tailte Éireann · National Statutory Boundaries, ungeneralised 2026",
+      "license": "CC BY 4.0",
+      "sha256": "a636628d2d3d752477e0757f46fa070f000916554ded3075cbabb86b75f633f6",
+      "bytes": 77160293
+    },
+    "ie-municipal-districts-2026": {
+      "url": "https://services-eu1.arcgis.com/FH5XCsx8rYXqnjF5/arcgis/rest/services/National_Statutory_Boundaries_-_Municipal_Districts_Ungeneralised_-_2026/FeatureServer/5",
+      "provider": "Tailte Éireann · National Statutory Boundaries, ungeneralised 2026",
+      "license": "CC BY 4.0",
+      "sha256": "1b7eaf54affe07a44ee2f04748991c7a32d007c114ee39a95a8d84dca1c2f2ba",
+      "bytes": 84968362
+    },
+    "ie-regional-assemblies": {
+      "url": "https://services.arcgis.com/NzlPQPKn5QF9v2US/arcgis/rest/services/Planning_Boundary_Data/FeatureServer/4",
+      "provider": "Department of Housing, Local Government and Heritage",
+      "license": "CC BY 4.0",
+      "sha256": "a90026213c9f334cba1b7f8e2ad07f021a63fc9f637ce55fdc9869857afcb6b9",
+      "bytes": 48460434
+    },
+    "dutch-island-identities": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageprops&titles=Aruba%7CCura%C3%A7ao%7CSint+Maarten%7CBonaire%7CSaba%7CSint+Eustatius",
+      "provider": "Wikipedia page identities",
+      "sha256": "eaf44a6fe6c51e9990a69085b8847f84831fe0c8582a782bb9be952f95fb4efe",
+      "bytes": 1194
+    },
+    "dutch-island-wikidata": {
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q21203%7CQ25279%7CQ25396%7CQ26180%7CQ251075%7CQ26273&props=claims%7Clabels&languages=en%7Cnl",
+      "provider": "Wikidata",
+      "license": "CC0",
+      "sha256": "23d53cf387277c0905e9617e3580c843fb576a7b5c0041f050d6894e61610a77",
+      "bytes": 684212
+    },
+    "ie-population-2022": {
+      "url": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FY003B/JSON-stat/2.0/en",
+      "provider": "CSO · Census 2022, FY003B",
+      "license": "CC BY 4.0",
+      "sha256": "4f00c1b73fe2a460fd15da6e73d379a19648c0a8a98a94170a23d8c9e8eed81e",
+      "bytes": 11191
+    },
+    "saba-island-identity": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageprops&titles=Saba+%28island%29",
+      "provider": "Wikipedia exact island entity identity",
+      "sha256": "24fe2e9f2248b816a515d8faa0790813e7e068407b3dfbed33a3ca70a3d18d8e",
+      "bytes": 216
+    },
+    "saba-island-wikidata": {
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q25528&props=claims%7Clabels&languages=en%7Cnl",
+      "provider": "Wikidata",
+      "license": "CC0",
+      "sha256": "f58e6aa9c5250c2e992e8cb700d4c255105798b9e28ed0550f52aeda133bc375",
+      "bytes": 60920
+    },
+    "atlantic-regional-gdp": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_2gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=IE04&geo=IE05&geo=IE06&geo=PT20&geo=PT30",
+      "provider": "Eurostat · nama_10r_2gdp, current-price GDP and per capita",
+      "license": "CC BY 4.0",
+      "sha256": "0527d0777adf82dc7c0f7a31a01a18ce771f2306b2dcc74c3be1ab6fb34674a6",
+      "bytes": 3243
+    },
+    "eur-usd-exchange": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&statinfo=AVG&currency=USD&sinceTimePeriod=2021",
+      "provider": "Eurostat · annual average USD per EUR",
+      "license": "CC BY 4.0",
+      "sha256": "249c699d988e9dd212d3c632c4b5743a2af2c894ad15a7e873d8915b4d391816",
+      "bytes": 2694
+    },
+    "dutch-relation-tags": {
+      "url": "https://overpass-api.de/api/interpreter",
+      "provider": "OpenStreetMap · territory relation metadata",
+      "license": "ODbL 1.0",
+      "sha256": "c26f80a6054fa7f8e26db003c552a444151c7011fc304700fa273b0637d21917",
+      "bytes": 13757
+    },
+    "pt-caop2025-continente": {
+      "url": "https://geo2.dgterritorio.gov.pt/caop/CAOP_Continente_2025-gpkg.zip",
+      "provider": "Direção-Geral do Território · CAOP2025, approved 28 January 2026",
+      "license": "CC BY 4.0 · DGT",
+      "licenseUrl": "https://www.dgterritorio.gov.pt/atividades/cartografia/cartografia-tematica/caop",
+      "sha256": "87cd67f4b1fbadf23d9324e6fb231ff05531e4db347af36ccc7c6cbabe3ecd1d",
+      "bytes": 111647845,
+      "archive": true
+    },
+    "dutch-coast-NL-AW": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(1231749)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(12.2578295%2C-70.2695876%2C12.823%2C-69.661226)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · administrative relation 1231749 and directed coastline ways",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "58f37735b02bc8ab4ed7e40d59066405df98f2e7c6489a0a2f2ea9e3a4c0b7da",
+      "bytes": 570702
+    },
+    "dutch-coast-NL-CW": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(1216719)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(11.777%2C-69.3673493%2C12.592%2C-68.4413348)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · administrative relation 1216719 and directed coastline ways",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "324220143f2b15d0edc589b63e888032af5d456691fd05144930fe0bfb22e020",
+      "bytes": 694864
+    },
+    "dutch-coast-NL-SX": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(1231790)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.96%2C-63.2%2C18.14%2C-62.95)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · administrative relation 1231790 and directed coastline ways",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "bb004ff596434862831af1fff84e15d6697da0f3f3bad90282d0624087d7c455",
+      "bytes": 616392
+    },
+    "dutch-coast-NL-BQ1": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324450)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(11.825%2C-68.6255319%2C12.512%2C-67.9916303)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · administrative relation 2324450 and directed coastline ways",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "e5b025cde930c375b53e026aae1a3fde9d9571ca3409c93be7f72038e1b21756",
+      "bytes": 344263
+    },
+    "dutch-coast-NL-BQ2": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324451)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.414%2C-63.4688243%2C17.85%2C-63.0260278)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · administrative relation 2324451 and directed coastline ways",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "80954853c6d51673193c75b869ff452b2d2e33a16033eab79fea71e24beefb77",
+      "bytes": 81446
+    },
+    "dutch-coast-NL-BQ3": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324452)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.2767349%2C-63.1986111%2C17.7269948%2C-62.7847057)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · administrative relation 2324452 and directed coastline ways",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "d9ee4b6584728252b74460b29772946bc57ec9a2c3a33e6845dd8ced5f968a7e",
+      "bytes": 119787
+    },
+    "cork-county-population-2022": {
+      "url": "https://www.cso.ie/en/releasesandpublications/ep/p-cpini/irelandandnorthernireland-ajointcensuspublication2021-2022/populationandage/",
+      "provider": "CSO · reviewed value from official joint census release, 2 July 2025",
+      "license": "CC BY 4.0",
+      "sha256": "f4320a086a891cc2e2a0ac317643dfa027e1c99e1e619d894d2a09c2980196ca",
+      "bytes": 197
+    },
+    "dutch-caribbean-population-2026": {
+      "url": "https://www.cbs.nl/en-gb/news/2026/22/population-of-the-caribbean-netherlands-up-by-over-1-2-thousand-in-2025",
+      "provider": "CBS · reviewed official release, 27 May 2026",
+      "license": "CC BY 4.0",
+      "sha256": "08a6fe5062329068cd2a05613d54643fa05374718c320a2be8083bd9114e82cd",
+      "bytes": 75
+    },
+    "atlantic-flag-artwork": {
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&titles=File%3AFlag+of+Ireland.svg%7CFile%3AFlag+of+Portugal.svg%7CFile%3AFlag+of+the+Azores.svg%7CFile%3AFlag+of+Madeira.svg%7CFile%3AFlag+of+Aruba.svg%7CFile%3AFlag+of+Cura%C3%A7ao.svg%7CFile%3AFlag+of+Sint+Maarten.svg%7CFile%3AFlag+of+Bonaire.svg%7CFile%3AFlag+of+Saba.svg%7CFile%3AFlag+of+Sint+Eustatius.svg",
+      "provider": "Wikimedia Commons · exact flag artwork and licence metadata",
+      "sha256": "93266b598200ba2138395370de653ee6257b0ade2248cf0366067c4097abf82a",
+      "bytes": 31137
+    },
+    "kingdom-SP.POP.TOTL": {
+      "url": "https://api.worldbank.org/v2/country/ABW;CUW;SXM/indicator/SP.POP.TOTL?format=json&date=2022:2025&per_page=100",
+      "provider": "World Bank · World Development Indicators, national official sources",
+      "license": "CC BY 4.0",
+      "sha256": "61bbb9f5b05786eab85fa50a7ba0bc9dc08cc0f6876d48e54502d1793564ebe4",
+      "bytes": 2480
+    },
+    "kingdom-NY.GDP.MKTP.CD": {
+      "url": "https://api.worldbank.org/v2/country/ABW%3BCUW%3BSXM/indicator/NY.GDP.MKTP.CD?format=json&date=2022:2025&per_page=100",
+      "provider": "World Bank · World Development Indicators, national official sources",
+      "license": "CC BY 4.0",
+      "sha256": "3921ff3e1e37572067a607b96a6ffe86567ee5687b3ed6daecd5d530c638b9b8",
+      "bytes": 2614
+    },
+    "kingdom-NY.GDP.PCAP.CD": {
+      "url": "https://api.worldbank.org/v2/country/ABW%3BCUW%3BSXM/indicator/NY.GDP.PCAP.CD?format=json&date=2022:2025&per_page=100",
+      "provider": "World Bank · World Development Indicators, national official sources",
+      "license": "CC BY 4.0",
+      "sha256": "d52f7f330bbcef50334f9090275fd298017d5d00fe244e15a1f8a192b795ae01",
+      "bytes": 2746
+    },
+    "dutch-coast-NL-BQ3-land": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324452)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.45%2C-63.02%2C17.54%2C-62.93)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · administrative relation 2324452 and directed coastline ways",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "289745dadfd10e8829f5d539bf45c950f317bdaa25365aedbefca8e793dd4e9a",
+      "bytes": 49852
+    },
+    "bes-gdp-84789ENG": {
+      "url": "https://opendata.cbs.nl/ODataApi/OData/84789ENG",
+      "provider": "CBS StatLine · official Caribbean Netherlands GDP, current prices",
+      "license": "CBS open data, attribution required",
+      "sha256": "96e9fc5abeb917eaa04364ba6d570871ae8e848798b7b3820d34146114568a4f",
+      "bytes": 15943
+    },
+    "bes-gdp-85251ENG": {
+      "url": "https://opendata.cbs.nl/ODataApi/OData/85251ENG",
+      "provider": "CBS StatLine · official Caribbean Netherlands GDP, current prices",
+      "license": "CBS open data, attribution required",
+      "sha256": "b400654323be7174b9723141e6aa68d47c53c5e566772189ef9938ea973d4a30",
+      "bytes": 8187
+    },
+    "corvo-local-government-status": {
+      "url": "https://www.cm-corvo.pt/wp-content/uploads/2026/01/ata-de-18-de-Dezembro-2025.pdf",
+      "provider": "Municipality of Corvo · minutes of 18 December 2025, Article 136 of the Azores Political-Administrative Statute",
+      "license": "Official municipal record",
+      "sha256": "49bc2bb1e26f3c5af0bb198c4b607f9cd0738b40cd62951188e4358c6b1ecc09",
+      "bytes": 234
+    }
+  }
+}

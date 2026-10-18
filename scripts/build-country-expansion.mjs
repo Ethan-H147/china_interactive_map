@@ -1,4 +1,9 @@
+import {buildCanadaLocal} from './build-canada-local.mjs';
+import {prepareCanadaMunicipalFacts} from './prepare-canada-municipal-facts.mjs';
+import {prepareCanadaStatisticsSources} from './prepare-canada-statistics.mjs';
+import {fetchCanadaLocal} from './fetch-canada-local.mjs';
 import fs from 'node:fs';
+import {buildUSCounties} from './build-us-counties.mjs';
 import {extendDenmark} from './denmark.mjs';
 import {applyDenmarkStatistics} from './denmark-statistics.mjs';
 import {countryContext} from './country-context.mjs';
@@ -159,5 +164,10 @@ for(const [country,d]of Object.entries(datasets)){
  const used=[...d.files,'ne-10m-land-boundaries.geojson'].map(file=>({file,...pins.files[file]}));
  fs.writeFileSync(dir+'/sources.json',JSON.stringify({retrieved:pins.retrieved,counts,frontiers:frontierReports[country],kinds:records.reduce((o,r)=>(o[r.kind]=(o[r.kind]||0)+1,o),{}),coverage:d.coverage,processing:'All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.',sources:used},null,2)+'\n');
  if(country==='denmark')applyDenmarkStatistics(dir);
+ if(country==='united-states')await buildUSCounties(dir+'/');
+ if(country==='canada'){await fetchCanadaLocal();await prepareCanadaStatisticsSources();await buildCanadaLocal(dir+'/');prepareCanadaMunicipalFacts(dir+'/');}
  console.log('Built',country,counts,'chunks',Object.keys(chunks).length);
 }
+
+// Retained overseas additions are part of ordinary Netherlands rebuilds.
+if(datasets.netherlands&&!process.env.EXPANSION_OUTPUT)await import('./add-dutch-caribbean.mjs');

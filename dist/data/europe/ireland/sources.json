@@ -1,0 +1,40 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "Republic of Ireland only: three regional assembly areas, all 31 county/city local authorities and all 100 municipal, borough and metropolitan districts in Tailte Éireann 2026. The six Dublin-area and standalone city councils without municipal districts remain valid terminal council pages. Full local source detail is retained; all parent levels dissolve from one topology. Population is the 2022 Census, with Cork city/county separated using the CSO joint census publication. No estimates are assigned to municipal districts, and Northern Ireland remains within the United Kingdom page. Ireland has no overseas territories.",
+  "counts": {
+    "1": 3,
+    "2": 31,
+    "3": 100
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "ie-local-authorities-2026": {
+      "url": "https://services-eu1.arcgis.com/FH5XCsx8rYXqnjF5/arcgis/rest/services/National_Statutory_Boundaries_-_Local_Authorities__Ungeneralised_-_2026/FeatureServer/3",
+      "provider": "Tailte Éireann · National Statutory Boundaries, ungeneralised 2026",
+      "license": "CC BY 4.0",
+      "sha256": "a636628d2d3d752477e0757f46fa070f000916554ded3075cbabb86b75f633f6",
+      "bytes": 77160293
+    },
+    "ie-municipal-districts-2026": {
+      "url": "https://services-eu1.arcgis.com/FH5XCsx8rYXqnjF5/arcgis/rest/services/National_Statutory_Boundaries_-_Municipal_Districts_Ungeneralised_-_2026/FeatureServer/5",
+      "provider": "Tailte Éireann · National Statutory Boundaries, ungeneralised 2026",
+      "license": "CC BY 4.0",
+      "sha256": "1b7eaf54affe07a44ee2f04748991c7a32d007c114ee39a95a8d84dca1c2f2ba",
+      "bytes": 84968362
+    },
+    "ie-regional-assemblies": {
+      "url": "https://services.arcgis.com/NzlPQPKn5QF9v2US/arcgis/rest/services/Planning_Boundary_Data/FeatureServer/4",
+      "provider": "Department of Housing, Local Government and Heritage",
+      "license": "CC BY 4.0",
+      "sha256": "a90026213c9f334cba1b7f8e2ad07f021a63fc9f637ce55fdc9869857afcb6b9",
+      "bytes": 48460434
+    },
+    "ie-population-2022": {
+      "url": "https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FY003B/JSON-stat/2.0/en",
+      "provider": "CSO · Census 2022, FY003B",
+      "license": "CC BY 4.0",
+      "sha256": "4f00c1b73fe2a460fd15da6e73d379a19648c0a8a98a94170a23d8c9e8eed81e",
+      "bytes": 11191
+    }
+  }
+}

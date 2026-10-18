@@ -1,0 +1,254 @@
+[
+  {
+    "id": "IN-PY",
+    "en": "Puducherry",
+    "primary": "Tamil",
+    "names": 3,
+    "otherLanguages": 0
+  },
+  {
+    "id": "IN-MH",
+    "en": "Maharashtra",
+    "primary": "Marathi",
+    "names": 6,
+    "otherLanguages": 5
+  },
+  {
+    "id": "IN-NL",
+    "en": "Nagaland",
+    "primary": "English",
+    "names": 1,
+    "otherLanguages": 15
+  },
+  {
+    "id": "IN-LD",
+    "en": "Lakshadweep",
+    "primary": "Malayalam",
+    "names": 2,
+    "otherLanguages": 1
+  },
+  {
+    "id": "IN-UP",
+    "en": "Uttar Pradesh",
+    "primary": "Hindi",
+    "names": 4,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-TN",
+    "en": "Tamil Nadu",
+    "primary": "Tamil",
+    "names": 5,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-CG",
+    "en": "Chhattisgarh",
+    "primary": "Hindi",
+    "names": 1,
+    "otherLanguages": 5
+  },
+  {
+    "id": "IN-GJ",
+    "en": "Gujarat",
+    "primary": "Gujarati",
+    "names": 2,
+    "otherLanguages": 4
+  },
+  {
+    "id": "IN-DL",
+    "en": "Delhi",
+    "primary": "Hindi",
+    "names": 3,
+    "otherLanguages": 0
+  },
+  {
+    "id": "IN-SK",
+    "en": "Sikkim",
+    "primary": "Nepali",
+    "names": 6,
+    "otherLanguages": 6
+  },
+  {
+    "id": "IN-TR",
+    "en": "Tripura",
+    "primary": "Bengali",
+    "names": 4,
+    "otherLanguages": 5
+  },
+  {
+    "id": "IN-WB",
+    "en": "West Bengal",
+    "primary": "Bengali",
+    "names": 6,
+    "otherLanguages": 8
+  },
+  {
+    "id": "IN-OD",
+    "en": "Odisha",
+    "primary": "Odia",
+    "names": 5,
+    "otherLanguages": 8
+  },
+  {
+    "id": "IN-BR",
+    "en": "Bihar",
+    "primary": "Hindi",
+    "names": 7,
+    "otherLanguages": 1
+  },
+  {
+    "id": "IN-LA",
+    "en": "Ladakh",
+    "primary": "Ladakhi (Bhoti)",
+    "names": 3,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-RJ",
+    "en": "Rajasthan",
+    "primary": "Hindi",
+    "names": 3,
+    "otherLanguages": 10
+  },
+  {
+    "id": "IN-TS",
+    "en": "Telangana",
+    "primary": "Telugu",
+    "names": 3,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-AP",
+    "en": "Andhra Pradesh",
+    "primary": "Telugu",
+    "names": 5,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-MZ",
+    "en": "Mizoram",
+    "primary": "Mizo",
+    "names": 1,
+    "otherLanguages": 5
+  },
+  {
+    "id": "IN-AR",
+    "en": "Arunachal Pradesh",
+    "primary": "English",
+    "names": 3,
+    "otherLanguages": 10
+  },
+  {
+    "id": "IN-ML",
+    "en": "Meghalaya",
+    "primary": "Khasi",
+    "names": 3,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-JH",
+    "en": "Jharkhand",
+    "primary": "Hindi",
+    "names": 9,
+    "otherLanguages": 9
+  },
+  {
+    "id": "IN-AS",
+    "en": "Assam",
+    "primary": "Assamese",
+    "names": 6,
+    "otherLanguages": 9
+  },
+  {
+    "id": "IN-MN",
+    "en": "Manipur",
+    "primary": "Meitei",
+    "names": 3,
+    "otherLanguages": 8
+  },
+  {
+    "id": "IN-KA",
+    "en": "Karnataka",
+    "primary": "Kannada",
+    "names": 8,
+    "otherLanguages": 2
+  },
+  {
+    "id": "IN-UK",
+    "en": "Uttarakhand",
+    "primary": "Hindi",
+    "names": 6,
+    "otherLanguages": 2
+  },
+  {
+    "id": "IN-DH",
+    "en": "Dadra and Nagar Haveli and Daman and Diu",
+    "primary": "Gujarati",
+    "names": 2,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-MP",
+    "en": "Madhya Pradesh",
+    "primary": "Hindi",
+    "names": 2,
+    "otherLanguages": 9
+  },
+  {
+    "id": "IN-GA",
+    "en": "Goa",
+    "primary": "Konkani",
+    "names": 3,
+    "otherLanguages": 0
+  },
+  {
+    "id": "IN-KL",
+    "en": "Kerala",
+    "primary": "Malayalam",
+    "names": 5,
+    "otherLanguages": 2
+  },
+  {
+    "id": "IN-CH",
+    "en": "Chandigarh",
+    "primary": "Punjabi",
+    "names": 3,
+    "otherLanguages": 0
+  },
+  {
+    "id": "IN-AN",
+    "en": "Andaman and Nicobar Islands",
+    "primary": "Hindi",
+    "names": 5,
+    "otherLanguages": 1
+  },
+  {
+    "id": "IN-HP",
+    "en": "Himachal Pradesh",
+    "primary": "Hindi",
+    "names": 3,
+    "otherLanguages": 6
+  },
+  {
+    "id": "IN-JK",
+    "en": "Jammu and Kashmir",
+    "primary": "Kashmiri",
+    "names": 5,
+    "otherLanguages": 3
+  },
+  {
+    "id": "IN-PB",
+    "en": "Punjab",
+    "primary": "Punjabi",
+    "names": 3,
+    "otherLanguages": 0
+  },
+  {
+    "id": "IN-HR",
+    "en": "Haryana",
+    "primary": "Hindi",
+    "names": 3,
+    "otherLanguages": 2
+  }
+]

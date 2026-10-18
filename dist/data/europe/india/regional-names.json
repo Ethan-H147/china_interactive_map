@@ -1,0 +1,3611 @@
+{
+  "retrieved": "2026-10-17",
+  "coverage": "All 28 Indian states and eight union territories. Selected established regional and Indigenous language communities; very small groups and a census-wide migrant-language inventory are outside scope. Attested state-name forms are distinguished from language-presence entries. Romanized traditional forms are explicitly marked. This is not an official-language register or a claim of exhaustive dialect coverage.",
+  "sources": [
+    {
+      "title": "Census of India 2011: C-16, population by mother tongue",
+      "url": "https://censusindia.gov.in/nada/index.php/catalog/10191"
+    },
+    {
+      "title": "Commissioner for Linguistic Minorities: 52nd report (2014–2015), historical state profiles",
+      "url": "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+    },
+    {
+      "title": "Wikidata: individually attributed language labels, CC0",
+      "url": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+    }
+  ],
+  "records": {
+    "IN-PY": {
+      "wikidata": "Q66743",
+      "primary": {
+        "code": "ta",
+        "text": "புதுச்சேரி",
+        "lang": "ta",
+        "language": "Tamil",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q66743",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "ta",
+          "text": "புதுச்சேரி",
+          "lang": "ta",
+          "language": "Tamil",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q66743",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "te",
+          "text": "పుదుచ్చేరి",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q66743",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ml",
+          "text": "പുതുച്ചേരി",
+          "lang": "ml",
+          "language": "Malayalam",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q66743",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-MH": {
+      "wikidata": "Q1191",
+      "primary": {
+        "code": "mr",
+        "text": "महाराष्ट्र",
+        "lang": "mr",
+        "language": "Marathi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1191",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "mr",
+          "text": "महाराष्ट्र",
+          "lang": "mr",
+          "language": "Marathi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1191",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ur",
+          "text": "مہاراشٹر",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1191",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "gu",
+          "text": "મહારાષ્ટ્ર",
+          "lang": "gu",
+          "language": "Gujarati",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1191",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "kn",
+          "text": "ಮಹಾರಾಷ್ಟ್ರ",
+          "lang": "kn",
+          "language": "Kannada",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1191",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "te",
+          "text": "మహారాష్ట్ర",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1191",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "gom",
+          "text": "महाराष्ट्र",
+          "lang": "gom",
+          "language": "Konkani",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1191",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "gon",
+          "language": "Gondi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "korku",
+          "language": "Korku",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bhb",
+          "language": "Bhili",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "varli",
+          "language": "Warli",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "ahirani",
+          "language": "Ahirani / Khandeshi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-NL": {
+      "wikidata": "Q1599",
+      "primary": {
+        "code": "en",
+        "text": "Nagaland",
+        "lang": "en",
+        "language": "English",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1599",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "en",
+          "text": "Nagaland",
+          "lang": "en",
+          "language": "English",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1599",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "nagamese",
+          "language": "Nagamese",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "ao",
+          "language": "Ao",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "angami",
+          "language": "Angami / Tenyidie",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "sumi",
+          "language": "Sumi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lotha",
+          "language": "Lotha",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "konyak",
+          "language": "Konyak",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "chokri",
+          "language": "Chokri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "khezha",
+          "language": "Khezha",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "phom",
+          "language": "Phom",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "sangtam",
+          "language": "Sangtam",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "yimkhiung",
+          "language": "Yimkhiung",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "chang",
+          "language": "Chang",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "rengma",
+          "language": "Rengma",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "liangmai",
+          "language": "Liangmai",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "zeme",
+          "language": "Zeme",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-LD": {
+      "wikidata": "Q26927",
+      "primary": {
+        "code": "ml",
+        "text": "ലക്ഷദ്വീപ്",
+        "lang": "ml",
+        "language": "Malayalam",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q26927",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "ml",
+          "text": "ലക്ഷദ്വീപ്",
+          "lang": "ml",
+          "language": "Malayalam",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q26927",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "dv",
+          "text": "ލަކްޝަދީބު",
+          "lang": "dv",
+          "language": "Mahl (Dhivehi)",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q26927",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "jeseri",
+          "language": "Jeseri",
+          "sources": [
+            "https://lakshadweep.gov.in/islands/",
+            "https://lakshadweep.gov.in/tourist-place/minicoy/"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://lakshadweep.gov.in/islands/",
+        "https://lakshadweep.gov.in/tourist-place/minicoy/"
+      ]
+    },
+    "IN-UP": {
+      "wikidata": "Q1498",
+      "primary": {
+        "code": "hi",
+        "text": "उत्तर प्रदेश",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1498",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "उत्तर प्रदेश",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1498",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "bho",
+          "text": "उत्तर प्रदेश",
+          "lang": "bho",
+          "language": "Bhojpuri",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1498",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "awa",
+          "text": "उत्तर प्रदेश",
+          "lang": "awa",
+          "language": "Awadhi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1498",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "اتر پردیش",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1498",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "braj",
+          "language": "Braj",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bundeli",
+          "language": "Bundeli",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kannauji",
+          "language": "Kannauji",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-TN": {
+      "wikidata": "Q1445",
+      "primary": {
+        "code": "ta",
+        "text": "தமிழ்நாடு",
+        "lang": "ta",
+        "language": "Tamil",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1445",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "ta",
+          "text": "தமிழ்நாடு",
+          "lang": "ta",
+          "language": "Tamil",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1445",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "te",
+          "text": "తమిళనాడు",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1445",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "kn",
+          "text": "ತಮಿಳುನಾಡು",
+          "lang": "kn",
+          "language": "Kannada",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1445",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ml",
+          "text": "തമിഴ്‌നാട്",
+          "lang": "ml",
+          "language": "Malayalam",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1445",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "تامل ناڈو",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1445",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "saurashtra",
+          "language": "Saurashtra",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "badaga",
+          "language": "Badaga",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "irula",
+          "language": "Irula",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-CG": {
+      "wikidata": "Q1168",
+      "primary": {
+        "code": "hi",
+        "text": "छत्तीसगढ़",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1168",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "छत्तीसगढ़",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1168",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "hne",
+          "language": "Chhattisgarhi",
+          "sources": [
+            "https://scert.cg.gov.in/pdf/mle/mleresources.htm"
+          ]
+        },
+        {
+          "code": "gon",
+          "language": "Gondi",
+          "sources": [
+            "https://scert.cg.gov.in/pdf/mle/mleresources.htm"
+          ]
+        },
+        {
+          "code": "kru",
+          "language": "Kurukh",
+          "sources": [
+            "https://scert.cg.gov.in/pdf/mle/mleresources.htm"
+          ]
+        },
+        {
+          "code": "halbi",
+          "language": "Halbi",
+          "sources": [
+            "https://scert.cg.gov.in/pdf/mle/mleresources.htm"
+          ]
+        },
+        {
+          "code": "bhatri",
+          "language": "Bhatri",
+          "sources": [
+            "https://scert.cg.gov.in/pdf/mle/mleresources.htm"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://scert.cg.gov.in/pdf/mle/mleresources.htm"
+      ]
+    },
+    "IN-GJ": {
+      "wikidata": "Q1061",
+      "primary": {
+        "code": "gu",
+        "text": "ગુજરાત",
+        "lang": "gu",
+        "language": "Gujarati",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1061",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "gu",
+          "text": "ગુજરાત",
+          "lang": "gu",
+          "language": "Gujarati",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1061",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "sd",
+          "text": "گجرات",
+          "lang": "sd",
+          "language": "Sindhi",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1061",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "kfr",
+          "language": "Kutchi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bhb",
+          "language": "Bhili",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "varli",
+          "language": "Warli",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "dhodia",
+          "language": "Dhodia",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-DL": {
+      "wikidata": "Q1353",
+      "primary": {
+        "code": "hi",
+        "text": "दिल्ली",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1353",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "दिल्ली",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1353",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ur",
+          "text": "دہلی",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1353",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "pa",
+          "text": "ਦਿੱਲੀ",
+          "lang": "pa",
+          "language": "Punjabi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1353",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-SK": {
+      "wikidata": "Q1505",
+      "primary": {
+        "code": "ne",
+        "text": "सिक्किम",
+        "lang": "ne",
+        "language": "Nepali",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1505",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "ne",
+          "text": "सिक्किम",
+          "lang": "ne",
+          "language": "Nepali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1505",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "sip",
+          "text": "Beymul Demazong",
+          "lang": "sip-Latn",
+          "language": "Sikkimese (Bhutia)",
+          "dir": "ltr",
+          "source": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department",
+          "type": "traditional regional name",
+          "romanized": true,
+          "license": "source text attribution",
+          "primary": false
+        },
+        {
+          "code": "lep",
+          "text": "Nye-mae-el",
+          "lang": "lep-Latn",
+          "language": "Lepcha",
+          "dir": "ltr",
+          "source": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department",
+          "type": "traditional regional name",
+          "romanized": true,
+          "license": "source text attribution",
+          "primary": false
+        },
+        {
+          "code": "lif",
+          "text": "Su Khim",
+          "lang": "lif-Latn",
+          "language": "Limbu",
+          "dir": "ltr",
+          "source": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department",
+          "type": "traditional regional name",
+          "romanized": true,
+          "license": "source text attribution",
+          "primary": false
+        },
+        {
+          "code": "bo",
+          "text": "འབྲས་ལྗོངས།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1505",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "new",
+          "text": "सिक्किम",
+          "lang": "new",
+          "language": "Newar",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1505",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "gurung",
+          "language": "Gurung",
+          "sources": [
+            "https://www.sikkim.gov.in/departments/education-department/teaching-of-languages-in-sikkim",
+            "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department"
+          ]
+        },
+        {
+          "code": "tamang",
+          "language": "Tamang",
+          "sources": [
+            "https://www.sikkim.gov.in/departments/education-department/teaching-of-languages-in-sikkim",
+            "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department"
+          ]
+        },
+        {
+          "code": "magar",
+          "language": "Magar",
+          "sources": [
+            "https://www.sikkim.gov.in/departments/education-department/teaching-of-languages-in-sikkim",
+            "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department"
+          ]
+        },
+        {
+          "code": "sherpa",
+          "language": "Sherpa",
+          "sources": [
+            "https://www.sikkim.gov.in/departments/education-department/teaching-of-languages-in-sikkim",
+            "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department"
+          ]
+        },
+        {
+          "code": "sunwar",
+          "language": "Sunwar",
+          "sources": [
+            "https://www.sikkim.gov.in/departments/education-department/teaching-of-languages-in-sikkim",
+            "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department"
+          ]
+        },
+        {
+          "code": "rai",
+          "language": "Rai varieties",
+          "sources": [
+            "https://www.sikkim.gov.in/departments/education-department/teaching-of-languages-in-sikkim",
+            "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://www.sikkim.gov.in/departments/education-department/teaching-of-languages-in-sikkim",
+        "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department"
+      ]
+    },
+    "IN-TR": {
+      "wikidata": "Q1363",
+      "primary": {
+        "code": "bn",
+        "text": "ত্রিপুরা",
+        "lang": "bn",
+        "language": "Bengali",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1363",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "bn",
+          "text": "ত্রিপুরা",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1363",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "trp",
+          "text": "Twipra",
+          "lang": "trp-Latn",
+          "language": "Kokborok",
+          "dir": "ltr",
+          "source": "https://trci.tripura.gov.in/sites/default/files/2023-09/SAIMA_2020.pdf",
+          "type": "attested language label",
+          "license": "source text attribution",
+          "primary": false
+        },
+        {
+          "code": "mni",
+          "text": "ꯇ꯭ꯔꯤꯄꯨꯨꯔꯥ",
+          "lang": "mni",
+          "language": "Meitei",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1363",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bpy",
+          "text": "ত্রিপুরা",
+          "lang": "bpy",
+          "language": "Bishnupriya Manipuri",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1363",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "reang",
+          "language": "Bru / Reang",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "ccp",
+          "language": "Chakma",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "halam",
+          "language": "Halam",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "rki",
+          "language": "Rakhine (Mog)",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lus",
+          "language": "Mizo",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-WB": {
+      "wikidata": "Q1356",
+      "primary": {
+        "code": "bn",
+        "text": "পশ্চিমবঙ্গ",
+        "lang": "bn",
+        "language": "Bengali",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1356",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "bn",
+          "text": "পশ্চিমবঙ্গ",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1356",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ne",
+          "text": "पश्चिम बङ्गाल",
+          "lang": "ne",
+          "language": "Nepali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1356",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "sat",
+          "text": "ᱯᱚᱪᱷᱤᱢ ᱵᱟᱝᱞᱟ",
+          "lang": "sat",
+          "language": "Santali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1356",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "مغربی بنگال",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1356",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "hi",
+          "text": "पश्चिम बंगाल",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1356",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "or",
+          "text": "ପଶ୍ଚିମ ବଙ୍ଗ",
+          "lang": "or",
+          "language": "Odia",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1356",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "rajbanshi",
+          "language": "Rajbanshi / Kamtapuri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kyw",
+          "language": "Kurmali",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kru",
+          "language": "Kurukh",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "unr",
+          "language": "Mundari",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "hoc",
+          "language": "Ho",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lep",
+          "language": "Lepcha",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lif",
+          "language": "Limbu",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "sip",
+          "language": "Sikkimese (Bhutia)",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-OD": {
+      "wikidata": "Q22048",
+      "primary": {
+        "code": "or",
+        "text": "ଓଡ଼ିଶା",
+        "lang": "or",
+        "language": "Odia",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q22048",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "or",
+          "text": "ଓଡ଼ିଶା",
+          "lang": "or",
+          "language": "Odia",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q22048",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "sat",
+          "text": "ᱳᱰᱤᱥᱟ",
+          "lang": "sat",
+          "language": "Santali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q22048",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "te",
+          "text": "ఒరిస్సా",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q22048",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bn",
+          "text": "ওড়িশা",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q22048",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "اڑیسہ",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q22048",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "kxu",
+          "language": "Kui",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kxv",
+          "language": "Kuvi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "srb",
+          "language": "Sora",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "hoc",
+          "language": "Ho",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "spv",
+          "language": "Sambalpuri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kyw",
+          "language": "Kurmali",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kru",
+          "language": "Kurukh",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bhumij",
+          "language": "Bhumij",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-BR": {
+      "wikidata": "Q1165",
+      "primary": {
+        "code": "hi",
+        "text": "बिहार",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1165",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "बिहार",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1165",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "bho",
+          "text": "बिहार",
+          "lang": "bho",
+          "language": "Bhojpuri",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1165",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "mai",
+          "text": "बिहार",
+          "lang": "mai",
+          "language": "Maithili",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1165",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "anp",
+          "text": "बिहार",
+          "lang": "anp",
+          "language": "Angika",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1165",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "بہار",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1165",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "sat",
+          "text": "ᱵᱤᱦᱟᱨ",
+          "lang": "sat",
+          "language": "Santali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1165",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bn",
+          "text": "বিহার",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1165",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "mag",
+          "language": "Magahi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-LA": {
+      "wikidata": "Q200667",
+      "primary": {
+        "code": "lbj",
+        "text": "ལ་དྭགས",
+        "lang": "lbj",
+        "language": "Ladakhi (Bhoti)",
+        "dir": "ltr",
+        "source": "https://lpdd.ladakh.gov.in/Overview.php",
+        "type": "attested language label",
+        "license": "source text attribution",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "lbj",
+          "text": "ལ་དྭགས",
+          "lang": "lbj",
+          "language": "Ladakhi (Bhoti)",
+          "dir": "ltr",
+          "source": "https://lpdd.ladakh.gov.in/Overview.php",
+          "type": "attested language label",
+          "license": "source text attribution",
+          "primary": true
+        },
+        {
+          "code": "ur",
+          "text": "لداخ",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q200667",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ks",
+          "text": "لَداخ",
+          "lang": "ks",
+          "language": "Kashmiri",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q200667",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "prx",
+          "language": "Purgi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bft",
+          "language": "Balti",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "scl",
+          "language": "Shina",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-RJ": {
+      "wikidata": "Q1437",
+      "primary": {
+        "code": "hi",
+        "text": "राजस्थान",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1437",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "राजस्थान",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1437",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ur",
+          "text": "راجستھان",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1437",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "sd",
+          "text": "راجستان",
+          "lang": "sd",
+          "language": "Sindhi",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1437",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "raj",
+          "language": "Rajasthani",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "marwari",
+          "language": "Marwari",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "mewari",
+          "language": "Mewari",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "dhundhari",
+          "language": "Dhundhari",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "hadoti",
+          "language": "Hadoti",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "bagri",
+          "language": "Bagri",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "wagdi",
+          "language": "Wagdi",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "mewati",
+          "language": "Mewati",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "braj",
+          "language": "Braj",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        },
+        {
+          "code": "bhb",
+          "language": "Bhili",
+          "sources": [
+            "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://www.tourism.rajasthan.gov.in/hi/about-rajasthan.html"
+      ]
+    },
+    "IN-TS": {
+      "wikidata": "Q677037",
+      "primary": {
+        "code": "te",
+        "text": "తెలంగాణ",
+        "lang": "te",
+        "language": "Telugu",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q677037",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "te",
+          "text": "తెలంగాణ",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q677037",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ur",
+          "text": "تلنگانہ",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q677037",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "mr",
+          "text": "तेलंगणा",
+          "lang": "mr",
+          "language": "Marathi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q677037",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "gon",
+          "language": "Gondi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kff",
+          "language": "Koya",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lmn",
+          "language": "Lambadi / Banjara",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-AP": {
+      "wikidata": "Q1159",
+      "primary": {
+        "code": "te",
+        "text": "ఆంధ్రప్రదేశ్",
+        "lang": "te",
+        "language": "Telugu",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1159",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "te",
+          "text": "ఆంధ్రప్రదేశ్",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1159",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ur",
+          "text": "آندھرا پردیش",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1159",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "or",
+          "text": "ଆନ୍ଧ୍ର ପ୍ରଦେଶ",
+          "lang": "or",
+          "language": "Odia",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1159",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "kn",
+          "text": "ಆಂಧ್ರ ಪ್ರದೇಶ",
+          "lang": "kn",
+          "language": "Kannada",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1159",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ta",
+          "text": "ஆந்திரப் பிரதேசம்",
+          "lang": "ta",
+          "language": "Tamil",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1159",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "gon",
+          "language": "Gondi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kff",
+          "language": "Koya",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lmn",
+          "language": "Lambadi / Banjara",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-MZ": {
+      "wikidata": "Q1502",
+      "primary": {
+        "code": "lus",
+        "text": "Mizoram",
+        "lang": "lus",
+        "language": "Mizo",
+        "dir": "ltr",
+        "source": "https://dipr.mizoram.gov.in/",
+        "type": "attested language label",
+        "license": "source text attribution",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "lus",
+          "text": "Mizoram",
+          "lang": "lus",
+          "language": "Mizo",
+          "dir": "ltr",
+          "source": "https://dipr.mizoram.gov.in/",
+          "type": "attested language label",
+          "license": "source text attribution",
+          "primary": true
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "hmr",
+          "language": "Hmar",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lai",
+          "language": "Lai",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "mara",
+          "language": "Mara",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "ccp",
+          "language": "Chakma",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "reang",
+          "language": "Bru / Reang",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-AR": {
+      "wikidata": "Q1162",
+      "primary": {
+        "code": "en",
+        "text": "Arunachal Pradesh",
+        "lang": "en",
+        "language": "English",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1162",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "en",
+          "text": "Arunachal Pradesh",
+          "lang": "en",
+          "language": "English",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1162",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "hi",
+          "text": "अरुणाचल प्रदेश",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1162",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bo",
+          "text": "ཨ་རུ་ནཱ་ཅལ་མངའ་སྡེ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1162",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "nyishi",
+          "language": "Nyishi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "adi",
+          "language": "Adi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "galo",
+          "language": "Galo",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "apatani",
+          "language": "Apatani",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "tagin",
+          "language": "Tagin",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "monpa",
+          "language": "Monpa",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "nocte",
+          "language": "Nocte",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "wancho",
+          "language": "Wancho",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "tangsa",
+          "language": "Tangsa",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "mishmi",
+          "language": "Mishmi varieties",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-ML": {
+      "wikidata": "Q1195",
+      "primary": {
+        "code": "kha",
+        "text": "Meghalaya",
+        "lang": "kha",
+        "language": "Khasi",
+        "dir": "ltr",
+        "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2251194&lang=2&reg=48",
+        "type": "attested language label",
+        "license": "source text attribution",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "kha",
+          "text": "Meghalaya",
+          "lang": "kha",
+          "language": "Khasi",
+          "dir": "ltr",
+          "source": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2251194&lang=2&reg=48",
+          "type": "attested language label",
+          "license": "source text attribution",
+          "primary": true
+        },
+        {
+          "code": "grt",
+          "text": "Meghalaya",
+          "lang": "grt",
+          "language": "Garo",
+          "dir": "ltr",
+          "source": "https://meghalaya.gov.in/sites/default/files/documents/Megh_SHG_III_2009.pdf",
+          "type": "attested language label",
+          "license": "source text attribution",
+          "primary": false
+        },
+        {
+          "code": "ne",
+          "text": "मेघालय",
+          "lang": "ne",
+          "language": "Nepali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1195",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "pnar",
+          "language": "Pnar",
+          "sources": [
+            "https://www.megartsculture.gov.in/festivals-garo.html",
+            "https://www.megipr.gov.in/about-meghalaya.html"
+          ]
+        },
+        {
+          "code": "aml",
+          "language": "War-Jaintia",
+          "sources": [
+            "https://www.megartsculture.gov.in/festivals-garo.html",
+            "https://www.megipr.gov.in/about-meghalaya.html"
+          ]
+        },
+        {
+          "code": "hajong",
+          "language": "Hajong",
+          "sources": [
+            "https://www.megartsculture.gov.in/festivals-garo.html",
+            "https://www.megipr.gov.in/about-meghalaya.html"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://www.megartsculture.gov.in/festivals-garo.html",
+        "https://www.megipr.gov.in/about-meghalaya.html"
+      ]
+    },
+    "IN-JH": {
+      "wikidata": "Q1184",
+      "primary": {
+        "code": "hi",
+        "text": "झारखण्ड",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1184",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "झारखण्ड",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "sat",
+          "text": "ᱡᱷᱟᱨᱠᱷᱚᱸᱰ",
+          "lang": "sat",
+          "language": "Santali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bho",
+          "text": "झारखंड",
+          "lang": "bho",
+          "language": "Bhojpuri",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "mai",
+          "text": "झारखण्ड",
+          "lang": "mai",
+          "language": "Maithili",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "mag",
+          "text": "झारखण्ड",
+          "lang": "mag",
+          "language": "Magahi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "anp",
+          "text": "झारखंड",
+          "lang": "anp",
+          "language": "Angika",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "جھارکھنڈ",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bn",
+          "text": "ঝাড়খণ্ড",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "or",
+          "text": "ଝାଡ଼ଖଣ୍ଡ",
+          "lang": "or",
+          "language": "Odia",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1184",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "unr",
+          "language": "Mundari",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "hoc",
+          "language": "Ho",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "kru",
+          "language": "Kurukh",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "sck",
+          "language": "Nagpuri / Sadri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "kyw",
+          "language": "Kurmali",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "khortha",
+          "language": "Khortha",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "panchpargania",
+          "language": "Panchpargania",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "khr",
+          "language": "Kharia",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        },
+        {
+          "code": "bhumij",
+          "language": "Bhumij",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+            "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/45248/download/48955/LSI_JHARKHAND.pdf",
+        "https://jepc.jharkhand.gov.in/Application/uploadDocuments/Document/Doc_61565090741.pdf"
+      ]
+    },
+    "IN-AS": {
+      "wikidata": "Q1164",
+      "primary": {
+        "code": "as",
+        "text": "অসম",
+        "lang": "as",
+        "language": "Assamese",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1164",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "as",
+          "text": "অসম",
+          "lang": "as",
+          "language": "Assamese",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1164",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "bn",
+          "text": "আসাম",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1164",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "brx",
+          "text": "आसाम",
+          "lang": "brx",
+          "language": "Bodo",
+          "dir": "ltr",
+          "source": "https://www.sebaonline.org/textbooks/class-9/BODO%20MIL_Rapid%20Reader_BAIDIMWIYANI%20ASAM_Bodo_Class%20IX-X.pdf",
+          "type": "attested language label",
+          "license": "source text attribution",
+          "primary": false
+        },
+        {
+          "code": "ne",
+          "text": "आसाम",
+          "lang": "ne",
+          "language": "Nepali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1164",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bpy",
+          "text": "অসম",
+          "lang": "bpy",
+          "language": "Bishnupriya Manipuri",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1164",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "sat",
+          "text": "ᱟᱥᱟᱢ",
+          "lang": "sat",
+          "language": "Santali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1164",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "mjw",
+          "language": "Karbi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "mrg",
+          "language": "Mising",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "dis",
+          "language": "Dimasa",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "rah",
+          "language": "Rabha",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "der",
+          "language": "Deori",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "grt",
+          "language": "Garo",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "hmr",
+          "language": "Hmar",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "sck",
+          "language": "Nagpuri / Sadri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kru",
+          "language": "Kurukh",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-MN": {
+      "wikidata": "Q1193",
+      "primary": {
+        "code": "mni",
+        "text": "ꯃꯅꯤꯄꯨꯔ",
+        "lang": "mni",
+        "language": "Meitei",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1193",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "mni",
+          "text": "ꯃꯅꯤꯄꯨꯔ",
+          "lang": "mni",
+          "language": "Meitei",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1193",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "bpy",
+          "text": "মণিপুর",
+          "lang": "bpy",
+          "language": "Bishnupriya Manipuri",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1193",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bn",
+          "text": "মণিপুর",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1193",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "thadou",
+          "language": "Thadou",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "tangkhul",
+          "language": "Tangkhul",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "rongmei",
+          "language": "Rongmei",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "pck",
+          "language": "Paite",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "hmr",
+          "language": "Hmar",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "vaiphei",
+          "language": "Vaiphei",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "zom",
+          "language": "Zou",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "mao",
+          "language": "Mao",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-KA": {
+      "wikidata": "Q1185",
+      "primary": {
+        "code": "kn",
+        "text": "ಕರ್ನಾಟಕ",
+        "lang": "kn",
+        "language": "Kannada",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1185",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "kn",
+          "text": "ಕರ್ನಾಟಕ",
+          "lang": "kn",
+          "language": "Kannada",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "tcy",
+          "text": "ಕರ್ನಾಟಕ",
+          "lang": "tcy",
+          "language": "Tulu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "کرناٹک",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "te",
+          "text": "కర్ణాటక",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ta",
+          "text": "கருநாடகம்",
+          "lang": "ta",
+          "language": "Tamil",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "mr",
+          "text": "कर्नाटक",
+          "lang": "mr",
+          "language": "Marathi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ml",
+          "text": "കർണാടക",
+          "lang": "ml",
+          "language": "Malayalam",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "gom",
+          "text": "कर्नाटक",
+          "lang": "gom",
+          "language": "Konkani",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1185",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "kfa",
+          "language": "Kodava",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "lmn",
+          "language": "Lambadi / Banjara",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-UK": {
+      "wikidata": "Q1499",
+      "primary": {
+        "code": "hi",
+        "text": "उत्तराखण्ड",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1499",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "उत्तराखण्ड",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1499",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "gbm",
+          "text": "उत्तराखण्ड",
+          "lang": "gbm",
+          "language": "Garhwali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1499",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ne",
+          "text": "उत्तराखण्ड",
+          "lang": "ne",
+          "language": "Nepali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1499",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "pa",
+          "text": "ਉਤਰਾਖੰਡ",
+          "lang": "pa",
+          "language": "Punjabi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1499",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "اتراکھنڈ",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1499",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "bo",
+          "text": "ཨུཏྟརཱཁཎྜ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1499",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "kfy",
+          "language": "Kumaoni",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "jaunsari",
+          "language": "Jaunsari",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-DH": {
+      "wikidata": "Q77997266",
+      "primary": {
+        "code": "gu",
+        "text": "દાદરા અને નગર હવેલી અને દમણ અને દીવ",
+        "lang": "gu",
+        "language": "Gujarati",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q77997266",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "gu",
+          "text": "દાદરા અને નગર હવેલી અને દમણ અને દીવ",
+          "lang": "gu",
+          "language": "Gujarati",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q77997266",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "mr",
+          "text": "दादरा व नगर हवेली आणि दमण व दीव",
+          "lang": "mr",
+          "language": "Marathi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q77997266",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "varli",
+          "language": "Warli",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "dhodia",
+          "language": "Dhodia",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kokna",
+          "language": "Kokna",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-MP": {
+      "wikidata": "Q1188",
+      "primary": {
+        "code": "hi",
+        "text": "मध्य प्रदेश",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1188",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "मध्य प्रदेश",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1188",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ur",
+          "text": "مدھیہ پردیش",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1188",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "gon",
+          "language": "Gondi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bhb",
+          "language": "Bhili",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bhilali",
+          "language": "Bhilali",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bareli",
+          "language": "Bareli",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "korku",
+          "language": "Korku",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bundeli",
+          "language": "Bundeli",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "bagri",
+          "language": "Bagri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "malvi",
+          "language": "Malvi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "nimadi",
+          "language": "Nimadi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-GA": {
+      "wikidata": "Q1171",
+      "primary": {
+        "code": "gom",
+        "text": "गोंय",
+        "lang": "gom",
+        "language": "Konkani",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1171",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "gom",
+          "text": "गोंय",
+          "lang": "gom",
+          "language": "Konkani",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1171",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "mr",
+          "text": "गोवा",
+          "lang": "mr",
+          "language": "Marathi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1171",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "kn",
+          "text": "ಗೋವಾ",
+          "lang": "kn",
+          "language": "Kannada",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1171",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-KL": {
+      "wikidata": "Q1186",
+      "primary": {
+        "code": "ml",
+        "text": "കേരളം",
+        "lang": "ml",
+        "language": "Malayalam",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1186",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "ml",
+          "text": "കേരളം",
+          "lang": "ml",
+          "language": "Malayalam",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1186",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "ta",
+          "text": "கேரளம்",
+          "lang": "ta",
+          "language": "Tamil",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1186",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "kn",
+          "text": "ಕೇರಳಮ್",
+          "lang": "kn",
+          "language": "Kannada",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1186",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "tcy",
+          "text": "ಕೇರಳ",
+          "lang": "tcy",
+          "language": "Tulu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1186",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "gom",
+          "text": "केरळ",
+          "lang": "gom",
+          "language": "Konkani",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1186",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "paniya",
+          "language": "Paniya",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "irula",
+          "language": "Irula",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-CH": {
+      "wikidata": "Q43433",
+      "primary": {
+        "code": "pa",
+        "text": "ਚੰਡੀਗੜ੍ਹ",
+        "lang": "pa",
+        "language": "Punjabi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q43433",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "pa",
+          "text": "ਚੰਡੀਗੜ੍ਹ",
+          "lang": "pa",
+          "language": "Punjabi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q43433",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "hi",
+          "text": "चण्डीगढ़",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q43433",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "چندی گڑھ",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q43433",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-AN": {
+      "wikidata": "Q40888",
+      "primary": {
+        "code": "hi",
+        "text": "अण्डमान और निकोबार द्वीपसमूह",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q40888",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "अण्डमान और निकोबार द्वीपसमूह",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q40888",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "bn",
+          "text": "আন্দামান ও নিকোবর দ্বীপপুঞ্জ",
+          "lang": "bn",
+          "language": "Bengali",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q40888",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ta",
+          "text": "அந்தமான் நிக்கோபார் தீவுகள்",
+          "lang": "ta",
+          "language": "Tamil",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q40888",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "te",
+          "text": "అండమాన్ నికోబార్ దీవులు",
+          "lang": "te",
+          "language": "Telugu",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q40888",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ml",
+          "text": "ആന്തമാൻ നിക്കോബാർ ദ്വീപുകൾ",
+          "lang": "ml",
+          "language": "Malayalam",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q40888",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "nicobari",
+          "language": "Nicobarese",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-HP": {
+      "wikidata": "Q1177",
+      "primary": {
+        "code": "hi",
+        "text": "हिमाचल प्रदेश",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1177",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "हिमाचल प्रदेश",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1177",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "bo",
+          "text": "ཧི་མ་ཅལ་མངའ་སྡེ།",
+          "lang": "bo",
+          "language": "Tibetan",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1177",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "pa",
+          "text": "ਹਿਮਾਚਲ ਪ੍ਰਦੇਸ਼",
+          "lang": "pa",
+          "language": "Punjabi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1177",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "kangri",
+          "language": "Kangri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "mandeali",
+          "language": "Mandeali",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kullui",
+          "language": "Kullui",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "chambeali",
+          "language": "Chambeali",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "kfk",
+          "language": "Kinnauri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "spiti",
+          "language": "Spiti Bhoti",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-JK": {
+      "wikidata": "Q66278313",
+      "primary": {
+        "code": "ks",
+        "text": "جۆم تہٕ کٔشیٖر",
+        "lang": "ks",
+        "language": "Kashmiri",
+        "dir": "rtl",
+        "source": "https://www.wikidata.org/wiki/Q66278313",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "ks",
+          "text": "جۆم تہٕ کٔشیٖر",
+          "lang": "ks",
+          "language": "Kashmiri",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q66278313",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "doi",
+          "text": "जम्मू ते कश्मीर",
+          "lang": "doi",
+          "language": "Dogri",
+          "dir": "ltr",
+          "source": "https://www.dogri.org/poems/jammoo",
+          "type": "attested language label",
+          "license": "source text attribution",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "جموں و کشمیر",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q66278313",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "pa",
+          "text": "ਜੰਮੂ ਅਤੇ ਕਸ਼ਮੀਰ",
+          "lang": "pa",
+          "language": "Punjabi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q66278313",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "hi",
+          "text": "जम्मू और कश्मीर",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q66278313",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "gujari",
+          "language": "Gojri",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "pothwari",
+          "language": "Pahari-Pothwari",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "scl",
+          "language": "Shina",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-PB": {
+      "wikidata": "Q22424",
+      "primary": {
+        "code": "pa",
+        "text": "ਪੰਜਾਬ",
+        "lang": "pa",
+        "language": "Punjabi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q22424",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "pa",
+          "text": "ਪੰਜਾਬ",
+          "lang": "pa",
+          "language": "Punjabi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q22424",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "hi",
+          "text": "पंजाब",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q22424",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "پنجاب",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q22424",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    },
+    "IN-HR": {
+      "wikidata": "Q1174",
+      "primary": {
+        "code": "hi",
+        "text": "हरियाणा",
+        "lang": "hi",
+        "language": "Hindi",
+        "dir": "ltr",
+        "source": "https://www.wikidata.org/wiki/Q1174",
+        "type": "attested language label",
+        "license": "CC0",
+        "primary": true
+      },
+      "names": [
+        {
+          "code": "hi",
+          "text": "हरियाणा",
+          "lang": "hi",
+          "language": "Hindi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1174",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": true
+        },
+        {
+          "code": "pa",
+          "text": "ਹਰਿਆਣਾ",
+          "lang": "pa",
+          "language": "Punjabi",
+          "dir": "ltr",
+          "source": "https://www.wikidata.org/wiki/Q1174",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        },
+        {
+          "code": "ur",
+          "text": "ہریانہ",
+          "lang": "ur",
+          "language": "Urdu",
+          "dir": "rtl",
+          "source": "https://www.wikidata.org/wiki/Q1174",
+          "type": "attested language label",
+          "license": "CC0",
+          "primary": false
+        }
+      ],
+      "otherLanguages": [
+        {
+          "code": "haryanvi",
+          "language": "Haryanvi",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        },
+        {
+          "code": "mewati",
+          "language": "Mewati",
+          "sources": [
+            "https://censusindia.gov.in/nada/index.php/catalog/10191",
+            "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+          ]
+        }
+      ],
+      "coverageSources": [
+        "https://censusindia.gov.in/nada/index.php/catalog/10191",
+        "https://minorityaffairs.gov.in/WriteReadData/RTF1984/9607554317.pdf"
+      ]
+    }
+  }
+}

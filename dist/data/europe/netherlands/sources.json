@@ -1,7 +1,7 @@
 {
   "retrieved": "2026-10-17",
   "counts": {
-    "1": 12,
+    "1": 18,
     "2": 342
   },
   "frontiers": [],
@@ -9,7 +9,7 @@
     "Province": 12,
     "Municipality": 342
   },
-  "coverage": "The twelve European provinces and 342 municipalities as of 1 January 2024. Caribbean Netherlands and the constituent countries Aruba, Curaçao and Sint Maarten are outside this release.",
+  "coverage": "Twelve European provinces and 342 municipalities (GISCO 2024), plus all six Dutch Caribbean jurisdictions with focused island entry. All six Dutch Caribbean jurisdictions: Aruba, Curaçao and Sint Maarten (constituent countries), and Bonaire, Sint Eustatius and Saba (Caribbean public bodies). No European province or administrative subdivision is fabricated for these islands. Full OSM land coastlines are clipped to the verified administrative relation, excluding territorial sea. All six open the Netherlands page directly at the selected island.",
   "processing": "All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.",
   "sources": [
     {
@@ -38,5 +38,129 @@
       "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
       "bytes": 2284669
     }
-  ]
+  ],
+  "caribbean": {
+    "addedOn": "2026-10-18",
+    "coverage": "All six Dutch Caribbean jurisdictions: Aruba, Curaçao and Sint Maarten (constituent countries), and Bonaire, Sint Eustatius and Saba (Caribbean public bodies). No European province or administrative subdivision is fabricated for these islands. Full OSM land coastlines are clipped to the verified administrative relation, excluding territorial sea. All six open the Netherlands page directly at the selected island.",
+    "sources": {
+      "dutch-island-identities": {
+        "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageprops&titles=Aruba%7CCura%C3%A7ao%7CSint+Maarten%7CBonaire%7CSaba%7CSint+Eustatius",
+        "provider": "Wikipedia page identities",
+        "sha256": "eaf44a6fe6c51e9990a69085b8847f84831fe0c8582a782bb9be952f95fb4efe",
+        "bytes": 1194
+      },
+      "dutch-island-wikidata": {
+        "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q21203%7CQ25279%7CQ25396%7CQ26180%7CQ251075%7CQ26273&props=claims%7Clabels&languages=en%7Cnl",
+        "provider": "Wikidata",
+        "license": "CC0",
+        "sha256": "23d53cf387277c0905e9617e3580c843fb576a7b5c0041f050d6894e61610a77",
+        "bytes": 684212
+      },
+      "dutch-relation-tags": {
+        "url": "https://overpass-api.de/api/interpreter",
+        "provider": "OpenStreetMap · territory relation metadata",
+        "license": "ODbL 1.0",
+        "sha256": "c26f80a6054fa7f8e26db003c552a444151c7011fc304700fa273b0637d21917",
+        "bytes": 13757
+      },
+      "dutch-coast-NL-AW": {
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(1231749)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(12.2578295%2C-70.2695876%2C12.823%2C-69.661226)%3Bout%20geom%3B",
+        "provider": "OpenStreetMap · administrative relation 1231749 and directed coastline ways",
+        "license": "ODbL 1.0 · © OpenStreetMap contributors",
+        "licenseUrl": "https://www.openstreetmap.org/copyright",
+        "sha256": "58f37735b02bc8ab4ed7e40d59066405df98f2e7c6489a0a2f2ea9e3a4c0b7da",
+        "bytes": 570702
+      },
+      "dutch-coast-NL-CW": {
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(1216719)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(11.777%2C-69.3673493%2C12.592%2C-68.4413348)%3Bout%20geom%3B",
+        "provider": "OpenStreetMap · administrative relation 1216719 and directed coastline ways",
+        "license": "ODbL 1.0 · © OpenStreetMap contributors",
+        "licenseUrl": "https://www.openstreetmap.org/copyright",
+        "sha256": "324220143f2b15d0edc589b63e888032af5d456691fd05144930fe0bfb22e020",
+        "bytes": 694864
+      },
+      "dutch-coast-NL-SX": {
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(1231790)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.96%2C-63.2%2C18.14%2C-62.95)%3Bout%20geom%3B",
+        "provider": "OpenStreetMap · administrative relation 1231790 and directed coastline ways",
+        "license": "ODbL 1.0 · © OpenStreetMap contributors",
+        "licenseUrl": "https://www.openstreetmap.org/copyright",
+        "sha256": "bb004ff596434862831af1fff84e15d6697da0f3f3bad90282d0624087d7c455",
+        "bytes": 616392
+      },
+      "dutch-coast-NL-BQ1": {
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324450)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(11.825%2C-68.6255319%2C12.512%2C-67.9916303)%3Bout%20geom%3B",
+        "provider": "OpenStreetMap · administrative relation 2324450 and directed coastline ways",
+        "license": "ODbL 1.0 · © OpenStreetMap contributors",
+        "licenseUrl": "https://www.openstreetmap.org/copyright",
+        "sha256": "e5b025cde930c375b53e026aae1a3fde9d9571ca3409c93be7f72038e1b21756",
+        "bytes": 344263
+      },
+      "dutch-coast-NL-BQ2": {
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324451)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.414%2C-63.4688243%2C17.85%2C-63.0260278)%3Bout%20geom%3B",
+        "provider": "OpenStreetMap · administrative relation 2324451 and directed coastline ways",
+        "license": "ODbL 1.0 · © OpenStreetMap contributors",
+        "licenseUrl": "https://www.openstreetmap.org/copyright",
+        "sha256": "80954853c6d51673193c75b869ff452b2d2e33a16033eab79fea71e24beefb77",
+        "bytes": 81446
+      },
+      "dutch-coast-NL-BQ3": {
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324452)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.2767349%2C-63.1986111%2C17.7269948%2C-62.7847057)%3Bout%20geom%3B",
+        "provider": "OpenStreetMap · administrative relation 2324452 and directed coastline ways",
+        "license": "ODbL 1.0 · © OpenStreetMap contributors",
+        "licenseUrl": "https://www.openstreetmap.org/copyright",
+        "sha256": "d9ee4b6584728252b74460b29772946bc57ec9a2c3a33e6845dd8ced5f968a7e",
+        "bytes": 119787
+      },
+      "dutch-caribbean-population-2026": {
+        "url": "https://www.cbs.nl/en-gb/news/2026/22/population-of-the-caribbean-netherlands-up-by-over-1-2-thousand-in-2025",
+        "provider": "CBS · reviewed official release, 27 May 2026",
+        "license": "CC BY 4.0",
+        "sha256": "08a6fe5062329068cd2a05613d54643fa05374718c320a2be8083bd9114e82cd",
+        "bytes": 75
+      },
+      "kingdom-SP.POP.TOTL": {
+        "url": "https://api.worldbank.org/v2/country/ABW;CUW;SXM/indicator/SP.POP.TOTL?format=json&date=2022:2025&per_page=100",
+        "provider": "World Bank · World Development Indicators, national official sources",
+        "license": "CC BY 4.0",
+        "sha256": "61bbb9f5b05786eab85fa50a7ba0bc9dc08cc0f6876d48e54502d1793564ebe4",
+        "bytes": 2480
+      },
+      "kingdom-NY.GDP.MKTP.CD": {
+        "url": "https://api.worldbank.org/v2/country/ABW%3BCUW%3BSXM/indicator/NY.GDP.MKTP.CD?format=json&date=2022:2025&per_page=100",
+        "provider": "World Bank · World Development Indicators, national official sources",
+        "license": "CC BY 4.0",
+        "sha256": "3921ff3e1e37572067a607b96a6ffe86567ee5687b3ed6daecd5d530c638b9b8",
+        "bytes": 2614
+      },
+      "kingdom-NY.GDP.PCAP.CD": {
+        "url": "https://api.worldbank.org/v2/country/ABW%3BCUW%3BSXM/indicator/NY.GDP.PCAP.CD?format=json&date=2022:2025&per_page=100",
+        "provider": "World Bank · World Development Indicators, national official sources",
+        "license": "CC BY 4.0",
+        "sha256": "d52f7f330bbcef50334f9090275fd298017d5d00fe244e15a1f8a192b795ae01",
+        "bytes": 2746
+      },
+      "dutch-coast-NL-BQ3-land": {
+        "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brelation(2324452)%3Bout%20geom%3Bway%5B%22natural%22%3D%22coastline%22%5D(17.45%2C-63.02%2C17.54%2C-62.93)%3Bout%20geom%3B",
+        "provider": "OpenStreetMap · administrative relation 2324452 and directed coastline ways",
+        "license": "ODbL 1.0 · © OpenStreetMap contributors",
+        "licenseUrl": "https://www.openstreetmap.org/copyright",
+        "sha256": "289745dadfd10e8829f5d539bf45c950f317bdaa25365aedbefca8e793dd4e9a",
+        "bytes": 49852
+      },
+      "bes-gdp-84789ENG": {
+        "url": "https://opendata.cbs.nl/ODataApi/OData/84789ENG",
+        "provider": "CBS StatLine · official Caribbean Netherlands GDP, current prices",
+        "license": "CBS open data, attribution required",
+        "sha256": "96e9fc5abeb917eaa04364ba6d570871ae8e848798b7b3820d34146114568a4f",
+        "bytes": 15943
+      },
+      "bes-gdp-85251ENG": {
+        "url": "https://opendata.cbs.nl/ODataApi/OData/85251ENG",
+        "provider": "CBS StatLine · official Caribbean Netherlands GDP, current prices",
+        "license": "CBS open data, attribution required",
+        "sha256": "b400654323be7174b9723141e6aa68d47c53c5e566772189ef9938ea973d4a30",
+        "bytes": 8187
+      }
+    }
+  }
 }

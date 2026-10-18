@@ -1,0 +1,17 @@
+[
+  {
+    "pair": "KHM-THA",
+    "vertices": 10101,
+    "endpointErrorMetres": 1014.2161743505551
+  },
+  {
+    "pair": "MMR-THA",
+    "vertices": 30967,
+    "endpointErrorMetres": 520.1963013074853
+  },
+  {
+    "pair": "LAO-THA",
+    "vertices": 24456,
+    "endpointErrorMetres": 797.1180716429984
+  }
+]

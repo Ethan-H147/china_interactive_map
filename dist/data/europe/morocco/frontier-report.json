@@ -1,0 +1,17 @@
+[
+  {
+    "pair": "DZA-MAR",
+    "vertices": 5372,
+    "endpointErrorMetres": 2008.890300310326
+  },
+  {
+    "pair": "MRT-SAH",
+    "vertices": 652,
+    "endpointErrorMetres": 4326.832203514192
+  },
+  {
+    "pair": "DZA-SAH",
+    "vertices": 5,
+    "endpointErrorMetres": 5320.130705252316
+  }
+]

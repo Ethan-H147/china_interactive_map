@@ -11,10 +11,12 @@ for(const [country,[firstCount,allCount]]of Object.entries(counts)){
  const stats=read(root+'statistics.json'),source=read('scripts/statistics-sources/expansion-economy/'+country+'.json'),colors=read('dist/data/region-colors/'+country+'.json'),catalogue=JSON.parse(gunzipSync(fs.readFileSync(root+'catalogue.bin'))).records;
  assert.equal(AtlasCountries.countries[country].colors.economy,true);
  assert.equal(Object.keys(source.rows).length,allCount);
- assert.equal(Object.values(stats.regions).filter(r=>r.gdp).length,allCount);
+ assert.equal(Object.values(stats.regions).filter(r=>r.gdp&&r.gdp.source===country+'Gdp').length,allCount);
  for(const record of catalogue){
+  if(country==='netherlands'&&record.overseas)continue;
   const r=stats.regions[country+':'+record.id],s=source.rows[record.id];
-  assert(r.area&&(r.population||record.populationStatus==='no-permanent-population'),'Area and available resident population remain available');
+  if(country==='united-states'&&record.level===3){assert(!r?.gdp&&!r?.gdpPerCapita&&!s,'Municipalities never inherit state GDP');continue;}
+  assert(r.area&&(r.population||country==='canada'&&r.note?.includes('source does not publish')||record.populationStatus==='no-permanent-population'||country==='united-states'&&record.level===2&&+record.code.slice(0,2)>=60&&r.note),'Area and available resident population remain available');
   if(!s){assert(!r.gdp&&!r.gdpPerCapita,record.id+' does not inherit a larger region’s GDP');continue;}
   for(const field of ['gdp','gdpPerCapita']){
    const m=r[field];assert.equal(m.value,s[field]);assert.equal(m.year,s.year);assert.equal(m.currency,source.currency);assert.equal(m.priceBasis,'current');assert(stats.sources[m.source]?.url);
@@ -29,7 +31,7 @@ for(const [country,[firstCount,allCount]]of Object.entries(counts)){
   }
   assert(r.gdpPerCapita.value<2e6&&r.gdpPerCapita.value>1000,'Plausible per-person value; no million/billion scale error');
  }
- for(const key of ['gdp','gdpPerCapita']){const scale=metricScale(colors,key,1);assert.equal(scale.count,firstCount,country+' complete first-level '+key+' shading');assert.equal(scale.unit,'USD');}
+ for(const key of ['gdp','gdpPerCapita']){const scale=metricScale(colors,key,1);assert.equal(scale.count,firstCount+(country==='netherlands'?catalogue.filter(r=>r.overseas&&stats.regions[country+':'+r.id][key]).length:0),country+' complete first-level '+key+' shading');assert.equal(scale.unit,'USD');}
  const sum=Object.values(source.rows).reduce((n,r)=>n+r.gdp,0);
  if(country==='mexico')assert(Math.abs(sum-source.national.gdp)<1,'Mexican state GDP sums to its published national total');
  if(country==='united-states')assert(sum>3e13&&sum<3.2e13,'Annual US state GDP scale and complete coverage');

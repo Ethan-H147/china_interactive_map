@@ -1,0 +1,2289 @@
+{
+ "retrieved": "2026-10-17",
+ "flags": {
+  "US-PLACE-1258715": {
+   "id": "US-PLACE-1258715",
+   "name": "Port St. Lucie",
+   "parent": "US-FL",
+   "code": "1258715",
+   "source": "https://www.crwflags.com/fotw/images/u/us-flpsl.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-flpsl.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "72e09513c2a579b4fa755757faf97267bf0b4fbd",
+   "sha256": "8fa0873e8ca3762a578ec1981d446779d4d3a37d27b9d1608303e7cb5cb7c1ba",
+   "full": "vendor/us-municipal-flags/US-PLACE-1258715.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1258715.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q667749",
+    "article": "https://en.wikipedia.org/wiki/Port_St._Lucie%2C_Florida",
+    "fips": "1258715",
+    "parent": "US-FL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-flpsl.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-flpsl.html",
+    "description": "e | search | disclaimer and copyright | write us | mirrors image located by Valentin Poposki , 4 February 2012 Description of the flag Seal See also: Tradition St. Lucie County County and Municipal flags of Florida Florida United States of America Description of the flag A white flag with (probably) a black border, and the seal in the center in orange and green. Seal image located by Paul Bassinson , 24 June 2019 Source: https://www.stlucieco.gov/ Paul Bassinson</e",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4845744": {
+   "id": "US-PLACE-4845744",
+   "name": "McKinney",
+   "parent": "US-TX",
+   "code": "4845744",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txmkn.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txmkn.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "be1638dea8d14eb5e1daa4cadcb6c32511de60e8",
+   "sha256": "744fbc0c99309bdcc8b36d5500b626f19cc924232e5c0f5848d7fd5366409158",
+   "full": "vendor/us-municipal-flags/US-PLACE-4845744.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4845744.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q51697",
+    "article": "https://en.wikipedia.org/wiki/McKinney%2C_Texas",
+    "fips": "4845744",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txmkn.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txmkn.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 6 July 2021 based on photo located by Valentin Poposki , 11 July 2012 Description of the flag The seal The logo See also: Collin County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag A white flag, with the city logo centered depicting the name in black above a green bar bearing the state name in white, the logo &quot;Unique by nature&quot; below that, and above a stylized tree. The city logo now used has a sans serif typeface for the city motto. However, the flag uses a script typeface. I couldn't find a more recent photo of the to see if it more closely resembles",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4830464": {
+   "id": "US-PLACE-4830464",
+   "name": "Grand Prairie",
+   "parent": "US-TX",
+   "code": "4830464",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txgpr2.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txgpr.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "c50692f0ed14f09fffe917f6b6aeadd21785e721",
+   "sha256": "87eb99c21629fc38280ad6ff1cce4e545654449718e353119204d79d9bd4d8f0",
+   "full": "vendor/us-municipal-flags/US-PLACE-4830464.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4830464.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q51694",
+    "article": "https://en.wikipedia.org/wiki/Grand_Prairie%2C_Texas",
+    "fips": "4830464",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txgpr.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txgpr.html",
+    "description": "A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 5 July 2019 Description of the flag The seal Former logo (used on flags) See also: Dallas County Ellis County Tarrant County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag A green flag with the logo displaying the name in white before some rushes in pale green. The seal image located by Paul Bassinson , 31 December 2019 Source: <a href=\"https://www.dentistingrandprairi",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-CONCITY-1304200": {
+   "id": "US-CONCITY-1304200",
+   "name": "Augusta-Richmond County",
+   "parent": "US-GA",
+   "code": "1304200",
+   "source": "https://www.crwflags.com/fotw/images/u/us-ga-au.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-ga-au.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "72c17f8e088628d6946a7baa395c13122190b032",
+   "sha256": "d94f1f90f636183425f643ba0893588c590c26d3a3c38a1979779702c02f39fe",
+   "full": "vendor/us-municipal-flags/US-CONCITY-1304200.gif",
+   "file": "vendor/us-municipal-flags/US-CONCITY-1304200.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q181962",
+    "article": "https://en.wikipedia.org/wiki/Augusta%2C_Georgia",
+    "fips": "1304200",
+    "parent": "US-GA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-ga-au.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-ga-au.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors 2:3 image(s) by permission of David B. Martucci image(s) from American City Flags, Raven 9-10 (2002-2003), courtesy of the North American Vexillological Association, which retains copyright. Current Flag Design Symbolism Selection Designer More about the Flag Former city flag Augusta National Golf Club See also: Augusta Technical College Augusta University Paine College Richmond County County and Municipal flags of Georgia Georgia United States of Am",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4847892": {
+   "id": "US-PLACE-4847892",
+   "name": "Mesquite",
+   "parent": "US-TX",
+   "code": "4847892",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txmsq.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txmsq.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "94ae32d59c05aea7c5fd588eb8496495f5da5ea1",
+   "sha256": "2968ce5db24702acd657cbc9f1b5fdbeaecc869bed87d8ef1592556e36c03db9",
+   "full": "vendor/us-municipal-flags/US-PLACE-4847892.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4847892.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q51696",
+    "article": "https://en.wikipedia.org/wiki/Mesquite%2C_Texas",
+    "fips": "4847892",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txmsq.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txmsq.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 15 March 2021 The flag See also: Dallas County Kaufman County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America The flag The city administration informs that Mesquite has no flag. Valentin Poposki , 1 May 2009 A flag used in 2020 shows the city name in green above the slogan Texas - Real Texas Flavor. Fred Drews , 15 April 2020",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4845384": {
+   "id": "US-PLACE-4845384",
+   "name": "McAllen",
+   "parent": "US-TX",
+   "code": "4845384",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txmca.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txmca.html",
+   "width": 323,
+   "height": 216,
+   "sourceSha1": "1e9520f5e63a9a374214ef71cedc750a98ad4f9f",
+   "sha256": "794cdb1588f90da7e629140bd4972900f7a40d94d72456acabea776d302d8688",
+   "full": "vendor/us-municipal-flags/US-PLACE-4845384.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4845384.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q51698",
+    "article": "https://en.wikipedia.org/wiki/McAllen%2C_Texas",
+    "fips": "4845384",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txmca.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txmca.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 6 June 2020 Description of the flag The seal See also: Hidalgo County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag McAllen, Texas adopted a city seal flag in 2015: http://www.themonitor.com/life/article_b8861d82-9e1e-11e5-83eb-03688bbc944f.html . \"Mayor Jim Darling recently unveiled McAllen�s new city seal on a flag which will be displayed during special events. The flag, gifted to the City by the McAllen Chamber of Commerce, will be used during Sister City events, among other occasions.\" Dave Fowler , 1 January 2018 The",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1225175": {
+   "id": "US-PLACE-1225175",
+   "name": "Gainesville",
+   "parent": "US-FL",
+   "code": "1225175",
+   "source": "https://www.crwflags.com/fotw/images/u/us-fl-gainesville.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-flgai.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "f6ece814963231706df5f8aa0f3b25d495c6a234",
+   "sha256": "18a34fac491a6989fd7c33f97284de468ed39206419751b15bc416ba09657e9c",
+   "full": "vendor/us-municipal-flags/US-PLACE-1225175.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1225175.webp",
+   "credit": "Eugene Ipavec",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q487999",
+    "article": "https://en.wikipedia.org/wiki/Gainesville%2C_Florida",
+    "fips": "1225175",
+    "parent": "US-FL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-flgai.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-flgai.html",
+    "description": "search | disclaimer and copyright | write us | mirrors image by Eugene Ipavec , 30 August 2009 Description of the flag Seal See also: Santa Fe College University of Florida Alachua County Florida County and Municipal flags of Florida Florida United States of America Description of the Flag The flag of the City of Gainesville, Florida, is white with city seal on it. It can be seen on a photo here at www.flickr.com/photos/mikeautry1/267194730 . The seal can be seen at en.wikipedia.org/wiki/File:GainesvilleCitySealblue.jpg . Aleksandar Nemet , 29 August 2009 Note that the s",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4856000": {
+   "id": "US-PLACE-4856000",
+   "name": "Pasadena",
+   "parent": "US-TX",
+   "code": "4856000",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txpas.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txpas.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "d7ce772ff67acab0ca8df710d8c0c0fc0fbf00a6",
+   "sha256": "813037c540c799aff6663ddaa51e79e64fb131de8f0521deabedd6fb9b45db77",
+   "full": "vendor/us-municipal-flags/US-PLACE-4856000.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4856000.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q51695",
+    "article": "https://en.wikipedia.org/wiki/Pasadena%2C_Texas",
+    "fips": "4856000",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txpas.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txpas.html",
+    "description": "search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 30 May 2019 Description of the flag The seal Former flag See also: Texas Chiropractic College Harris County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag The City of Pasadena, Texas has a flag consisting of the city logo on a white background: http://www.ci.pasadena.tx.us/users/0033/images/Web_Mayor%20Jeff%20Wagner.jpg https://pbs.twimg.com/profile_images/886248256321310722/_dZ1-RQH.jpg Dave Fowler , 17 Febru",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4863500": {
+   "id": "US-PLACE-4863500",
+   "name": "Round Rock",
+   "parent": "US-TX",
+   "code": "4863500",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txrrk.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txrrk.html",
+   "width": 358,
+   "height": 216,
+   "sourceSha1": "241c4c6333cf9d65d95bb4fd151d5040b5f0aa3c",
+   "sha256": "3f644ac47cf2253370fe4aa0decff2633dc4a2dff32be4a0bfafc959959130f2",
+   "full": "vendor/us-municipal-flags/US-PLACE-4863500.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4863500.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q128334",
+    "article": "https://en.wikipedia.org/wiki/Round_Rock%2C_Texas",
+    "fips": "4863500",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txrrk.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txrrk.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 12 July 2019 Description of the flag The seal See also: Williamson County Travis County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag I don't know when the flag was adopted, but a photo of the town's public library in Wikipedia is dated 1 January 2007 ( https://en.wikipedia.org/wiki/Round_Rock_Public_Library ). The flag is white, with three &quot;paintbrushed&quot; stripes in two shades of blue and red, in which lies a white star. The name is below in blue and red. Masao Okazaki , 12 July 2019 <A NAME=",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-2684000": {
+   "id": "US-PLACE-2684000",
+   "name": "Warren",
+   "parent": "US-MI",
+   "code": "2684000",
+   "source": "https://www.crwflags.com/fotw/images/u/us-miwrr1.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-miwrr.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "9926f2acdd31337633323e23959ee984233d86bf",
+   "sha256": "f4bd115cc031d182d0d867ea2ac1ba6c9c642d35f89100a3439369c8be3f9dd5",
+   "full": "vendor/us-municipal-flags/US-PLACE-2684000.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-2684000.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q499401",
+    "article": "https://en.wikipedia.org/wiki/Warren%2C_Michigan",
+    "fips": "2684000",
+    "parent": "US-MI"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-miwrr.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-miwrr.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 30 August 2021 The flag Seal Variant of the flag See also: Macomb Community College Macomb County County and Municipal flags of Michigan Michigan United States of America The flag According to this Google Maps photo (Nov 2020), the flag of Warren is different from the one of the FOTW page: <a href=\"https://www.google.com/maps/place/Warren+City+Hall/@42.5117224,-83.0253054,3a,15y,18.07h,102.95t/data=!3m7!1e1!3m5!1ssYCSUNHBSuT2yoTIcc96EQ!2e0!6shttps://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=sYCSUNHBSuT2yoTIcc96EQ&cb_client=maps_sv.tactile.gps&w=203&h=100&yaw=69.80675&pitch=0&thumbfov=100!7i16384!8i8192!4m7!3m6!1s0x8824da688c2f952d:0x763f864b86f7c925!8m2!3d42.5118015!4",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-3825700": {
+   "id": "US-PLACE-3825700",
+   "name": "Fargo",
+   "parent": "US-ND",
+   "code": "3825700",
+   "source": "https://www.crwflags.com/fotw/images/u/us-ndfar.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-ndfar.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "3984fcc59a29e0ba8b929315dd61c9cd0968555f",
+   "sha256": "20970ca4c421323a310ca1f98fee971f092a12c66714ac61e083f4fe292f3fac",
+   "full": "vendor/us-municipal-flags/US-PLACE-3825700.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-3825700.webp",
+   "credit": "David Sigley",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q34109",
+    "article": "https://en.wikipedia.org/wiki/Fargo%2C_North_Dakota",
+    "fips": "3825700",
+    "parent": "US-ND"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-ndfar.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-ndfar.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by David Sigley , 27 January 2023 based on photo Flag White version Flag design competition Logo Fire department Police department See also: North Dakota State University Cass County County and Municipal flags of North Dakota North Dakota United States of America Flag The city of Fargo uses a blue flag with the city logo on it. Links: Google Streetview of the flag: https://www.google.com/maps David Sigley , 27 January 2023 <a",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5335415": {
+   "id": "US-PLACE-5335415",
+   "name": "Kent",
+   "parent": "US-WA",
+   "code": "5335415",
+   "source": "https://www.crwflags.com/fotw/images/u/us-waken.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-waken.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "027aa68135502f820e66a51552bfb14f3890bef9",
+   "sha256": "0f57eea4e90a4064cd92972c504e854eb9ffc6e9a9f803213e05792df23713aa",
+   "full": "vendor/us-municipal-flags/US-PLACE-5335415.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5335415.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q844008",
+    "article": "https://en.wikipedia.org/wiki/Kent%2C_Washington",
+    "fips": "5335415",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-waken.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-waken.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image located by Masao Okazaki , 11 June 2020 About the flag Logo See also: Western Governors University of Washington King County County and Municipal flags of Washington Washington United States of America About the flag The flag is white with a very stylized drawing showing a blue triangular form meeting a green swish at a red disk, and the name below in black. Photos of Kent's flag posted in the Flickr albums of the Association of Washington Cities show dark and light blue lines at the hoist. The flag has appeared since at least 2013, but this is the best photograph, from 2017. https://www.flickr.com/photos/awcities/35465123361/in/album",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-2676460": {
+   "id": "US-PLACE-2676460",
+   "name": "Sterling Heights",
+   "parent": "US-MI",
+   "code": "2676460",
+   "source": "https://www.crwflags.com/fotw/images/u/us-misth.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-misth.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "5ac2f492d88c892f290f3fda65dbd5f73c7b995a",
+   "sha256": "d5667bd5f890c632259c2261fe060b4e5ecca610de3fe7977bed41031ba09b3f",
+   "full": "vendor/us-municipal-flags/US-PLACE-2676460.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-2676460.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q927243",
+    "article": "https://en.wikipedia.org/wiki/Sterling_Heights%2C_Michigan",
+    "fips": "2676460",
+    "parent": "US-MI"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-misth.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-misth.html",
+    "description": "e | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 29 May 2023 Description of the flag Logo See also: Macomb County County and Municipal flags of Michigan Michigan United States of America Description of the flag The flag of Sterling Heights is a logo on a white background: https://pbs.twimg.com/media/DuySfI0V4AAc3xE?format=jpg&name=medium https://www.facebook.com/photo.php?fbid=634654078690026&set=pb.100064363196832.-2207520000.&type=3 Masao Okazaki , 29 May 2023 Logo <IMG SRC=\"../images/u/us-misth-l.gif\" ALT=\"[Sterling Hei",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4856348": {
+   "id": "US-PLACE-4856348",
+   "name": "Pearland",
+   "parent": "US-TX",
+   "code": "4856348",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txpea.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txpea.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "708cde1d112b032038f345d5a12095f58be01e11",
+   "sha256": "464192da8557cec094ace93e1315add72771c861f168d975ee47bf6e4b2889a1",
+   "full": "vendor/us-municipal-flags/US-PLACE-4856348.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4856348.webp",
+   "credit": "Rob Raeside",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q982550",
+    "article": "https://en.wikipedia.org/wiki/Pearland%2C_Texas",
+    "fips": "4856348",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txpea.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txpea.html",
+    "description": "e | search | disclaimer and copyright | write us | mirrors image by Rob Raeside , 7 December 2016 Description of the flag The seal Police Department See also: Brazoria County Fort Bend County Harris County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag The flag of the City of Pearland, Texas, is white with city logo on it. Information thanks to Michelle A. Smith, CPRP, Director of Parks & Recreation, City of Pearland. Valentin Poposki , 7 October 2009 Pearland now has a new logo. Rick Wyatt , 7 December 2016 Previous flag <A HREF=\"../images/u/us-txpea1.gi",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4815976": {
+   "id": "US-PLACE-4815976",
+   "name": "College Station",
+   "parent": "US-TX",
+   "code": "4815976",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txcst.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txcst.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "0877e4f1567c3612c58a70778aad9ad012dcc854",
+   "sha256": "fa972697753f4c2c06835ef89c9eddfb71bbed30af13203b0ddb97c83ab06d17",
+   "full": "vendor/us-municipal-flags/US-PLACE-4815976.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4815976.webp",
+   "credit": "Eugene Ipavec",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q695511",
+    "article": "https://en.wikipedia.org/wiki/College_Station%2C_Texas",
+    "fips": "4815976",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txcst.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txcst.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image by Eugene Ipavec , 19 November 2009 Description of the flag The logo See also: Texas A&M University Brazos County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag The flag of the City of College Station is white with the city logo on it. The logo consists of two curves, red over grey, making letters &quot;C&quot; and &quot;S&quot;, and a blue five-pointed star. Under that &quot;City of College Station&quot; and under that &quot;Home of Texas A&M University&quot;. Information and image by Ashley Burns, City of College Station Communications Intern. About the city: &quot;College Station is a city in",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4853388": {
+   "id": "US-PLACE-4853388",
+   "name": "Odessa",
+   "parent": "US-TX",
+   "code": "4853388",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txode3.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txode.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "ddceaeb574de72f164b72aab64facb7e6d745b7e",
+   "sha256": "c16a97c0f257b7b9eb4af077896a4c870670323f47df331d0e72128f57265f2d",
+   "full": "vendor/us-municipal-flags/US-PLACE-4853388.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4853388.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q128361",
+    "article": "https://en.wikipedia.org/wiki/Odessa%2C_Texas",
+    "fips": "4853388",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txode.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txode.html",
+    "description": "A> | search | disclaimer and copyright | write us | mirrors image located by Masao Okazaki , 11 February 2012 Description of the flag Previous flag The logo See also: Colleges and universities Odessa College Texas Tech University Health Sciences Center University of Texas of the Permian Basin Ector County Midland County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag Videos from Odessa's Youtube page show that the city flag changed in February 2017. A flag with an old logo appeared until February 14, 2017, but was replaced with a flag with the",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-0623182": {
+   "id": "US-PLACE-0623182",
+   "name": "Fairfield",
+   "parent": "US-CA",
+   "code": "0623182",
+   "source": "https://www.crwflags.com/fotw/images/u/us-caffd.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-caffd.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "9202f21ec090b1a95a5b0f8f2eeffdbf69d4fd3d",
+   "sha256": "6f9e6cbccd5132d370394aebe85ecfda08faa7b19a826e59a8115218cbce52ef",
+   "full": "vendor/us-municipal-flags/US-PLACE-0623182.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-0623182.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q323432",
+    "article": "https://en.wikipedia.org/wiki/Fairfield%2C_California",
+    "fips": "0623182",
+    "parent": "US-CA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-caffd.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-caffd.html",
+    "description": "homepage | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 17 July 2025 Description of the Flag The seal See also: Solano Community College Solano County Municipal flags of California (index page) California United States of America Description of the flag The flag can be seen in this photo: https://www.facebook.com/photo.php?fbid=1126595262839223&set=pb.100064662794985.-2207520000&type=3 Masao Okazaki , 17 July 2025 The seal image located by Paul Bassinson , 6 May 2019 Source: <a href=\"http://p",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1656260": {
+   "id": "US-PLACE-1656260",
+   "name": "Nampa",
+   "parent": "US-ID",
+   "code": "1656260",
+   "source": "https://www.crwflags.com/fotw/images/u/us-idnam.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-idnam.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "89054e7c0e155a3588a12508d3d9958486a4a161",
+   "sha256": "a75851ed3eeeb68920905e5af3f51a556b7c9843f155736c7cbf318750484170",
+   "full": "vendor/us-municipal-flags/US-PLACE-1656260.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1656260.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q622633",
+    "article": "https://en.wikipedia.org/wiki/Nampa%2C_Idaho",
+    "fips": "1656260",
+    "parent": "US-ID"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-idnam.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-idnam.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 17 April 2021 based on image located by Valentin Poposki , 15 January 2008 Source: www.waymarking.com Description of the flag Seal See also: College of Western Idaho Northwest Nazarene University Canyon County County and Municipal flags of Idaho Idaho United States of America Description of the Flag \"Nampa is the largest city in Canyon County, Idaho, United States, and the second largest in the state. Only the capital city, Boise, is larger. As of the 2000 Census the population of Nampa was 51,867 (2006 estimat",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4841980": {
+   "id": "US-PLACE-4841980",
+   "name": "League City",
+   "parent": "US-TX",
+   "code": "4841980",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txlea.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txlea.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "c6f173c067d3820777f236e0ef8c071588f4a078",
+   "sha256": "32e7e4b271da3d470705f04d56781a872d24f37214199c408defec237740783b",
+   "full": "vendor/us-municipal-flags/US-PLACE-4841980.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4841980.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q982639",
+    "article": "https://en.wikipedia.org/wiki/League_City%2C_Texas",
+    "fips": "4841980",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txlea.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txlea.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 12 July 2022 Description of the flag The seal Logo flag See also: Chambers County Galveston County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag Set inside a broad red-narrow white-red frame, a white rectangle, overlain by the seal with a light blue outer ring and depicting a spreading tree in the center. An image above is an extract from a photo submitted by Walter Hanby to the &quot;Dolphin Talk&quot;, 27 September 2012. Source: thedolphintalk.com/2012/09/27/endeavours-final-flight (no longer accessible, image archived here ) Iv",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4982950": {
+   "id": "US-PLACE-4982950",
+   "name": "West Jordan",
+   "parent": "US-UT",
+   "code": "4982950",
+   "source": "https://www.crwflags.com/fotw/images/u/us-utwjo.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-utwjo.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "2b9cacbdd69770f265998dfcec88d429c129d924",
+   "sha256": "c3bf8a07d2d3ba399e7c48f8b78f41f3d43cb83041950161ef3c9e455806bcaa",
+   "full": "vendor/us-municipal-flags/US-PLACE-4982950.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4982950.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q52466",
+    "article": "https://en.wikipedia.org/wiki/West_Jordan%2C_Utah",
+    "fips": "4982950",
+    "parent": "US-UT"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-utwjo.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-utwjo.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 24 January 2024 based on photo Description of the flag Seals Logo See also: Salt Lake County County and Municipal Flags of Utah Utah United States of America Description of the flag The flag for the city of West Jordan, Utah, consists of the logo (the stacked version) on a white bedsheet, which I have attached along with the source. Flag Source https://www.google.com/maps Ethan Dubrow , 23 January 2024 <a na",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1723074": {
+   "id": "US-PLACE-1723074",
+   "name": "Elgin",
+   "parent": "US-IL",
+   "code": "1723074",
+   "source": "https://www.crwflags.com/fotw/images/u/us-ilelg.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-ilelg.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "7053073a08d1e6681e74b114ec6c54d8585c04a9",
+   "sha256": "6b16c1834790d7513a07b22aa924d25b287136d99f8b7d9cf6490978629d61c6",
+   "full": "vendor/us-municipal-flags/US-PLACE-1723074.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1723074.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q499887",
+    "article": "https://en.wikipedia.org/wiki/Elgin%2C_Illinois",
+    "fips": "1723074",
+    "parent": "US-IL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-ilelg.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-ilelg.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors Image by Masao Okazaki , 20 September based on photo located by Valentin Poposki , 14 June 2019 Description of the flag The seal Logo flag See also: Elgin Community College Judson University National Louis University Cook County Kane County County and Municipal flags of Illinois Illinois United States of America Description of the flag One flag is a seal on a white field: https://www.facebook.com/ Valentin Poposki , 14 June 2019 Th",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-3714100": {
+   "id": "US-PLACE-3714100",
+   "name": "Concord",
+   "parent": "US-NC",
+   "code": "3714100",
+   "source": "https://www.crwflags.com/fotw/images/u/us-ncccd.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-ncccd.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "b396d511a63538ba4047678999bbba867e86b83b",
+   "sha256": "b6d4d55af3a6b9be7fcd52b994c1fcbddb95434edd717d2e1ea0b3e1ab1c0c26",
+   "full": "vendor/us-municipal-flags/US-PLACE-3714100.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-3714100.webp",
+   "credit": "Ethan Dubrow",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q1030184",
+    "article": "https://en.wikipedia.org/wiki/Concord%2C_North_Carolina",
+    "fips": "3714100",
+    "parent": "US-NC"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-ncccd.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-ncccd.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Ethan Dubrow , 22 July 2024 Description of the flag Seal Logo See also: Rowan-Cabarrus Community College Cabarrus County County and Municipal Flags of North Carolina North Carolina United States of America Description of the flag The city has informed me it has no flag. Valentin Poposki , 1 May 2009 The flag consists of the logo, in white, centered on a strong red bedsheet. Concord is the seat of Cabarrus County, and is its most populous municipality with 105,240 residents as of the 2020 census. The logo in the flag has the motto omitted. Source: https://www.facebook.com/photo.php<",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-3563460": {
+   "id": "US-PLACE-3563460",
+   "name": "Rio Rancho",
+   "parent": "US-NM",
+   "code": "3563460",
+   "source": "https://www.crwflags.com/fotw/images/u/us-nmrra.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-nmrra.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "82805d01063ca72eae512384b11e3bbc89212c45",
+   "sha256": "9adc7c3226faf5ac00613252e355d9f3d7d49aa9c58eab88681f74dc71c57e62",
+   "full": "vendor/us-municipal-flags/US-PLACE-3563460.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-3563460.webp",
+   "credit": "Eugene Ipavec",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q33555",
+    "article": "https://en.wikipedia.org/wiki/Rio_Rancho%2C_New_Mexico",
+    "fips": "3563460",
+    "parent": "US-NM"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-nmrra.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-nmrra.html",
+    "description": "/a> | search | disclaimer and copyright | write us | mirrors image by Eugene Ipavec , 7 July 2009 Description Seal 30th anniversary seal See also: Sandoval County County and Municipal Flags of New Mexico New Mexico United States of America Description The flag of the City of Rio Rancho, New Mexico, is white with city seal on it and the city slogan &quot;THE CITY OF VISION&quot; below the seal. Here are the relevant sections of the City Code: 11.01 ADOPTION OF SEAL. The city seal shall contain the words, \"The Great Seal of the City of Rio Rancho, New Mexico,\" approximately along the outer edges, and the date \"1981\" on the bottom edge. The seal is an adaptation of a drawing submitted as a result of a public seal design contest. The winning drawing was submitted by Nino Carpenito, a stude",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1212875": {
+   "id": "US-PLACE-1212875",
+   "name": "Clearwater",
+   "parent": "US-FL",
+   "code": "1212875",
+   "source": "https://www.crwflags.com/fotw/images/u/us-flcle.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-flcle.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "82eed71ea66b2c8e6bd199457754707b3e4edb2f",
+   "sha256": "d08ecd669dd0321aee79c631af3a08ed4c041524c9ad7e90973d6bb83c5ff565",
+   "full": "vendor/us-municipal-flags/US-PLACE-1212875.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1212875.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q244146",
+    "article": "https://en.wikipedia.org/wiki/Clearwater%2C_Florida",
+    "fips": "1212875",
+    "parent": "US-FL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-flcle.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-flcle.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 12 October 2023 based on photo located by Valentin Poposki , 1 November 2008, provided by City Clerk personnel who took a photo of the flag for us. Description of the flag Seal See also: Pinellas County County and Municipal flags of Florida Florida United States of America Description of the Flag A white flag with a city seal centered, depicting a sunset scene on a beach with two palm trees. Valentin Poposki , 1 November 2008 Seal image located by Paul Bassinson , 24 June 2019 Source: <a href=\"https://www.picclickimg.",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4874144": {
+   "id": "US-PLACE-4874144",
+   "name": "Tyler",
+   "parent": "US-TX",
+   "code": "4874144",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txtyl.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txtyl.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "9e6dc7cb8dc4e1f2443071d58787590bfcad9f8d",
+   "sha256": "bb6ed9e61a30956f4e92a18526ca5a6a4025f626720d3a4d2c4f16611767eb0d",
+   "full": "vendor/us-municipal-flags/US-PLACE-4874144.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4874144.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q499169",
+    "article": "https://en.wikipedia.org/wiki/Tyler%2C_Texas",
+    "fips": "4874144",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txtyl.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txtyl.html",
+    "description": "search | disclaimer and copyright | write us | mirrors image located by Dave Fowler , 17 February 2018 Description of the flag Seal Previous flag See also: Texas College University of Texas at Tyler Smith County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag The City of Tyler, Texas has a flag in front of their city hall: https://en.wikipedia.org/wiki/Tyler_City_Hall#/media/File:TylerCityHall1.JPG It is this logo on a white background: <a href=\"https://bloximages.newyork1.vip.townnews.com/tylerpaper.com/content/tncms/assets/v3/editorial/f/9c/f9c45da0-",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5322640": {
+   "id": "US-PLACE-5322640",
+   "name": "Everett",
+   "parent": "US-WA",
+   "code": "5322640",
+   "source": "https://www.crwflags.com/fotw/images/u/us-waeve.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-waeve.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "79b0cf00ba3ab6b8e483f1b13e9e065652a8bfa4",
+   "sha256": "82a9408b42640cde7c74060fc8b8b5d5264e4153872eaeb5bca287edde3bf45f",
+   "full": "vendor/us-municipal-flags/US-PLACE-5322640.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5322640.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q392599",
+    "article": "https://en.wikipedia.org/wiki/Everett%2C_Washington",
+    "fips": "5322640",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-waeve.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-waeve.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 21 May 2021 Based on: https://www.flickr.com/photos/awcities/9344741505/in/album-72157634756930512/ Description of the flag Seal Seal image located by Paul Bassinson , 16 February 2020 Source: http://www.ismaelsinc.com/ Paul Bassinson , 16 February 2020 See also: Snohomish County County and Municipal flags of Washington Washington United States of America Description of the flag</H",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1216475": {
+   "id": "US-PLACE-1216475",
+   "name": "Davie",
+   "parent": "US-FL",
+   "code": "1216475",
+   "source": "https://www.crwflags.com/fotw/images/u/us-fldav.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-fldav.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "f4466b19650a0dc79243df69591e13a129491d7a",
+   "sha256": "eda5a7d337faeaa0148f79cf6b2f60d205c12b8a68f16e63d6e4c136c76ff382",
+   "full": "vendor/us-municipal-flags/US-PLACE-1216475.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1216475.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q985438",
+    "article": "https://en.wikipedia.org/wiki/Davie%2C_Florida",
+    "fips": "1216475",
+    "parent": "US-FL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-fldav.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-fldav.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 19 July 2020 The flag See also: Broward County County and Municipal flags of Florida Florida United States of America The Flag The town of Davie has informed me that it does not have a flag. Valentin Poposki , 1 September 2010 Valentin Poposki posted a photo to the FOTW Facebook group in 2019: https://www.facebook.com/photo?fbid=10214327121840432&set=gm.2695523673795671 It depicts the seal on a white flag with the name above and below. Masao Okazaki , 19 July 2020",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1254200": {
+   "id": "US-PLACE-1254200",
+   "name": "Palm Coast",
+   "parent": "US-FL",
+   "code": "1254200",
+   "source": "https://www.crwflags.com/fotw/images/u/us-flpmc.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-flpmc.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "18a070e319c797fc6b0d8909aea21c2cf3782c25",
+   "sha256": "6ce98b7f1196b1ed72000aeb18099d4aaf1f9eb97886f9a73f6aef7c6dd3fedf",
+   "full": "vendor/us-municipal-flags/US-PLACE-1254200.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1254200.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q610463",
+    "article": "https://en.wikipedia.org/wiki/Palm_Coast%2C_Florida",
+    "fips": "1254200",
+    "parent": "US-FL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-flpmc.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-flpmc.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 10 August 2021 Description of the flag Seal See also: Flagler County County and Municipal flags of Florida Florida United States of America Description of the Flag The flag, which has the city seal on a white background, appears on the town's Facebook page: https://www.facebook.com/PalmCoastGov/photos/4429393700428500/ https://www.facebook.com/PalmCoastGov/photos/4211671862200686 I found the largest version of the seal here: https://mediad.publicbroadcasting.net/p/wjct/files/styles",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5367167": {
+   "id": "US-PLACE-5367167",
+   "name": "Spokane Valley",
+   "parent": "US-WA",
+   "code": "5367167",
+   "source": "https://www.crwflags.com/fotw/images/u/us-waspv.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-waspv.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "0798df1703156c4b985ff964e05bbdb4331255de",
+   "sha256": "9e597d47a137963880d58ce58da52385f740dfa0e8fa12b175e6143d67bb23e7",
+   "full": "vendor/us-municipal-flags/US-PLACE-5367167.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5367167.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q988065",
+    "article": "https://en.wikipedia.org/wiki/Spokane_Valley%2C_Washington",
+    "fips": "5367167",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-waspv.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-waspv.html",
+    "description": "e | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 14 May 2021 based on photo located by Valentin Poposki , 9 July 2012 Source: https://www.flickr.com/photos/awcities/48250299042/in/album-72157709544358762/ Description of the flag See also: Spokane County County and Municipal flags of Washington Washington United States of America Description of the flag A white flag with the name written large across the flag, a green mountain outline above it, and a blue river outline below it.",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4870808": {
+   "id": "US-PLACE-4870808",
+   "name": "Sugar Land",
+   "parent": "US-TX",
+   "code": "4870808",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txsug.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txsug.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "9b8fc581b4a0b87d74db1900d4a8063726c0b17e",
+   "sha256": "2123952a77d558ac2b9de07ec412225a026ecff8c11372db7ec4ed8d359f2c48",
+   "full": "vendor/us-municipal-flags/US-PLACE-4870808.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4870808.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q93340",
+    "article": "https://en.wikipedia.org/wiki/Sugar_Land%2C_Texas",
+    "fips": "4870808",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txsug.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txsug.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 28 March 2023 Description of the flag Seal 60th anniversary seal See also: University of Houston, Sugar Land Fort Bend County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag The city seal is circular in shape. It has an outer ring and an inner ring. Inside the outer ring are the words CITY OF SUGAR LAND in block capitals, aligned at the top and the date 1959 at the bottom. This represents the date of incorporation as a &quot;General Law&quot; city. In the inner circle is a five pointed star of Texas, with capital letters spelling the name of the state, TEXAS in between the points. The letters are a",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4829336": {
+   "id": "US-PLACE-4829336",
+   "name": "Georgetown",
+   "parent": "US-TX",
+   "code": "4829336",
+   "source": "https://www.crwflags.com/fotw/images/u/us-txggt2.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-txggt.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "937f6ea97ce3deb0ce6c83bc9e093c44e7a35f8e",
+   "sha256": "7a674989e6af7166f349fa510812141dbe073e3a24b2bc25b590fb28fc3f2e42",
+   "full": "vendor/us-municipal-flags/US-PLACE-4829336.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4829336.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q990898",
+    "article": "https://en.wikipedia.org/wiki/Georgetown%2C_Texas",
+    "fips": "4829336",
+    "parent": "US-TX"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-txggt.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-txggt.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image located by Masao Okazaki , 19 April 2023 Description of the flag Previous flag See also: Southwestern Christian College Williamson County Municipal Flags of Texas (index page) County Flags of Texas (index page) Texas United States of America Description of the flag At the June 26, 2018, city council meeting Mayor Dale Ross proposed that a city logo used since 2005 be placed on an official flag. The flag was adopted by a score of 4 to 2, with one council member voting against it because it didn't follow NAVA &quot;Good Flag, Bad Flag&quot; guidelines and another member not caring about flags other than those of Texas and the USA. City council minutes: <a href=\"https://records.georgetown.org/WebLink/PDFExpo",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-2509000": {
+   "id": "US-PLACE-2509000",
+   "name": "Brockton",
+   "parent": "US-MA",
+   "code": "2509000",
+   "source": "https://www.crwflags.com/fotw/images/u/us-mabrk2.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-mabrk.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "aeff60fe1e5d36f3b676f56ba34b985c9c8070f7",
+   "sha256": "695b521b0e453913d09c034d073eeccd92e90b0688147f70c267a4b5c089053a",
+   "full": "vendor/us-municipal-flags/US-PLACE-2509000.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-2509000.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q49193",
+    "article": "https://en.wikipedia.org/wiki/Brockton%2C_Massachusetts",
+    "fips": "2509000",
+    "parent": "US-MA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-mabrk.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-mabrk.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 21 March 2021 Description of the flag Colored variant flag See also: Massasoit Community College Plymouth County County and Municipal flags of Massachusetts Massachusetts Clickable map of Massachusetts United States of America Description of the flag White flag with the seal centered. Based on image obtained from https://www.facebook.com/brocktonpolice/photos/2244445015869605 Paul Bassinson , 20 March 2021 Colored variant flag <IMG SRC=\"../images/u/us-mabrk.jpg\" ALT=\"[Flag of Brockton, Massachusetts]\" BORDER=0 HEIGHT=\"216\" width=\"",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1368516": {
+   "id": "US-PLACE-1368516",
+   "name": "Sandy Springs",
+   "parent": "US-GA",
+   "code": "1368516",
+   "source": "https://www.crwflags.com/fotw/images/u/us-gassp.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-gassp.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "5c29aab2e017e3187e125f8e16bb380525755288",
+   "sha256": "062a92d7b99c757d86d5d41aab82419a2b0f7211f2b57e0b64e03beb8e5f929d",
+   "full": "vendor/us-municipal-flags/US-PLACE-1368516.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1368516.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q914884",
+    "article": "https://en.wikipedia.org/wiki/Sandy_Springs%2C_Georgia",
+    "fips": "1368516",
+    "parent": "US-GA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-gassp.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-gassp.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 30 March 2021 Description of the Flag Seal See also: Fulton County County and Municipal flags of Georgia Georgia United States of America Description of the Flag Sandy Springs (formerly Hammond) is a newly incorporated city, as of December 2005, and a suburb of Atlanta, Georgia. Located in Fulton County, Georgia, just south of Roswell, it is named for the sandy springs that still exist in the city as a protected historic site. Sandy Springs is Georgia's eighth-largest city, with an estimated 2006 population of 85,771. It is the second-largest of the three principal cities of the Atlanta-Sandy Springs-Marietta, Georgia Metropolitan Statistical Area, which is the main component of the larger Atlanta-Sandy Springs-Gainesville, Georgia-Alabama (",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5357745": {
+   "id": "US-PLACE-5357745",
+   "name": "Renton",
+   "parent": "US-WA",
+   "code": "5357745",
+   "source": "https://www.crwflags.com/fotw/images/u/us-waren2.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-waren.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "69a092c2802bdb70f9253078f4a6e2bac0289faf",
+   "sha256": "6987c9f541342eac3c166ba62e93b31138887f14ab206169a9edcd9f3fa05e5f",
+   "full": "vendor/us-municipal-flags/US-PLACE-5357745.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5357745.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q679952",
+    "article": "https://en.wikipedia.org/wiki/Renton%2C_Washington",
+    "fips": "5357745",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-waren.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-waren.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 24 January 2023 based on photo City Description of the flag Seal Earlier flag See also: King County Washington United States of America City About the city: &quot;Renton is a city in King County, Washington, United States. A suburb situated 13 miles (21 km) southeast of Seattle, Washington, Renton straddles the southeast shore of Lake Washington. The city's population was 50,052 at the 2000 census. The State of Washington Office of Financial Management estimates the City of Renton's population to be 78,780 as of April 1, 2008. The population increased dramatically with the recent annexation of the Benson Hill communities directly southeast of the city. According to the data from the O",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5176432": {
+   "id": "US-PLACE-5176432",
+   "name": "Suffolk",
+   "parent": "US-VA",
+   "code": "5176432",
+   "source": "https://www.crwflags.com/fotw/images/u/us-vasuf.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-vasuf.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "a8e9e4bd7f618086dfcef714fb6312a31e732a4d",
+   "sha256": "6a52d13276cd7a8db4ee0a0a814d805aa8b91640c3e6362d0bc6f332c4cc6a68",
+   "full": "vendor/us-municipal-flags/US-PLACE-5176432.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5176432.webp",
+   "credit": "Peter Orenski",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q342428",
+    "article": "https://en.wikipedia.org/wiki/Suffolk%2C_Virginia",
+    "fips": "5176432",
+    "parent": "US-VA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-vasuf.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-vasuf.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Peter Orenski , 2 October 2011 Description of the flag The seal See also: County and Municipal flags of Virginia Virginia United States of America Description of the flag A blue flag with the city shield centered. An image of the flag can be seen at https://www.facebook.com/233249363360358/photos/pb.100064662552922.-2207520000../4605251332826784/?type=3 Paul Bassinson , 21 March 2022 The seal image located by Paul Bassinson , 1 February 2020 Source: <a href=\"http://www.suffolkva.us/ImageRep",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-0668252": {
+   "id": "US-PLACE-0668252",
+   "name": "San Mateo",
+   "parent": "US-CA",
+   "code": "0668252",
+   "source": "https://www.crwflags.com/fotw/images/u/us-caxmt.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-caxmt.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "27ca511117541e59cc2d14553f8b4f66ee0c4d3c",
+   "sha256": "3dd500e76a54b57333d8e9d71993d39ca76be3b2919a9d4ba5102a761be4917a",
+   "full": "vendor/us-municipal-flags/US-PLACE-0668252.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-0668252.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q169943",
+    "article": "https://en.wikipedia.org/wiki/San_Mateo%2C_California",
+    "fips": "0668252",
+    "parent": "US-CA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-caxmt.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-caxmt.html",
+    "description": "homepage | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 6 July 2025 based on photo Description of the flag The seal See also: College of San Mateo Gurnick Academy San Mateo County Municipal flags of California (index page) California United States of America Description of the flag Flag is the city seal on a white field. Facebook photos of the flag https://www.facebook.com/photo.php?fbid=747046907850243&set=pb.100076348211261.-2207520000&type=3 https://www.facebook.com/photo/?fbid=470",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-2545000": {
+   "id": "US-PLACE-2545000",
+   "name": "New Bedford",
+   "parent": "US-MA",
+   "code": "2545000",
+   "source": "https://www.crwflags.com/fotw/images/u/us-manbf.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-manbf.html",
+   "width": 324,
+   "height": 216,
+   "sourceSha1": "1baca9584d40dcf95704275ecfd40283f2a241fd",
+   "sha256": "ab7fabdf4060140db2f8fa5c9009205d0af622591b28ffaf005c7fa0d3c6ae1e",
+   "full": "vendor/us-municipal-flags/US-PLACE-2545000.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-2545000.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q49147",
+    "article": "https://en.wikipedia.org/wiki/New_Bedford%2C_Massachusetts",
+    "fips": "2545000",
+    "parent": "US-MA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-manbf.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-manbf.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image from www.state.ma.us/bsb/images/New_Bedford.jpg Description of the flag Seal Police flag See also: Bristol County County and Municipal flags of Massachusetts Massachusetts Clickable map of Massachusetts United States of America Whaling owner's flags displayed on the &quot;Charles W. Morgan&quot; Description of the flag From www.ci.new-bedford.ma.us/Nav24.htm The City Seal of New Bedford is inscribed in Latin, typical for a Massachusetts seal of the mid-nineteenth century. The upper inscription: &quot;Nova Bedfordia Condita A.D. 1787&quot; translates to &quot;New Bedford, founded",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1224125": {
+   "id": "US-PLACE-1224125",
+   "name": "Fort Myers",
+   "parent": "US-FL",
+   "code": "1224125",
+   "source": "https://www.crwflags.com/fotw/images/u/us-flfmy.jpg",
+   "page": "https://www.crwflags.com/fotw/flags/us-flfmy.html",
+   "width": 286,
+   "height": 216,
+   "sourceSha1": "f3f286b61b9f2dc06fe72872302ff06e9cb27b79",
+   "sha256": "b239ffbab7a08d9b71adfed270be9e314254afc6e0c9781047714cb2607cc596",
+   "full": "vendor/us-municipal-flags/US-PLACE-1224125.jpg",
+   "file": "vendor/us-municipal-flags/US-PLACE-1224125.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q506451",
+    "article": "https://en.wikipedia.org/wiki/Fort_Myers%2C_Florida",
+    "fips": "1224125",
+    "parent": "US-FL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-flfmy.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-flfmy.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image located by Valentin Poposki , 7 April 2012 Source: City Administration. Description of the flag Seal See also: Florida Gulf Coast University Florida SouthWestern State College Southern Technical College Lee County County and Municipal flags of Florida Florida United States of America Description of the Flag A white flag with the city seal inside a yellow floral outline. Seal image located by Paul Bassinson , 24 June 2019 Source: <a href=\"https://www.cityftmyers.com/images/CivicAlerts/1/FM-Seal-S-TRA",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5323515": {
+   "id": "US-PLACE-5323515",
+   "name": "Federal Way",
+   "parent": "US-WA",
+   "code": "5323515",
+   "source": "https://www.crwflags.com/fotw/images/u/us-wafew2.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-wafew.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "db91b71714d4e8b6b7489a272e07892a2dd08442",
+   "sha256": "d83f21ebcc535d049d42373045fc0c7326b4588b148b85df34f5ec71b8661efc",
+   "full": "vendor/us-municipal-flags/US-PLACE-5323515.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5323515.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q821112",
+    "article": "https://en.wikipedia.org/wiki/Federal_Way%2C_Washington",
+    "fips": "5323515",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-wafew.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-wafew.html",
+    "description": "A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 11 June 2020 Based on: https://www.flickr.com/photos Description of the flag Earlier version of the flag Seal See also: King County County and Municipal flags of Washington Washington United States of America Description of the flag &quot;Federal Way is a city in King County, Washington, United States. Federal Way is considered a bedroom community by some people that is located between Seattle and Tacoma. Its western boundary is Puget Sound. It is bordered by Des Moines on the north, Kent, Auburn, unincorporated King County, and Milton on the east and Tacoma and Fife on the south. As of the 2000 census, the city had a total population of 83,",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5539225": {
+   "id": "US-PLACE-5539225",
+   "name": "Kenosha",
+   "parent": "US-WI",
+   "code": "5539225",
+   "source": "https://www.crwflags.com/fotw/images/u/us-wiken2.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-wiken.html",
+   "width": 362,
+   "height": 216,
+   "sourceSha1": "4940cd6b0c39abbf6db1ea9d7d1190e760b6307d",
+   "sha256": "d6a80ce644f56a85326e2dd64c8ed9eff2995e420a1f3544e02e0e46f30480e7",
+   "full": "vendor/us-municipal-flags/US-PLACE-5539225.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5539225.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q462161",
+    "article": "https://en.wikipedia.org/wiki/Kenosha%2C_Wisconsin",
+    "fips": "5539225",
+    "parent": "US-WI"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-wiken.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-wiken.html",
+    "description": "A> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 25 June 2019 Description of the flag Previous flag The seal See also: Kenosha County County and Municipal flags of Wisconsin Wisconsin United States of America Description of the flag A white flag bearing the city logo.After seeing undated photos of the flag on the Internet, I emailed the city and received this response from Administrative Assistant Franca Carls: &quot;The City of Kenosha's rebranding project started in 2015 and was completed in 2016. The flag displays our logo which is seen here in my signature panel. We ordered flags in 2016.&quot; Masao Okazaki , 6 July 2019 Previous flag",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5380010": {
+   "id": "US-PLACE-5380010",
+   "name": "Yakima",
+   "parent": "US-WA",
+   "code": "5380010",
+   "source": "https://www.crwflags.com/fotw/images/u/us-wayak.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-wayak.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "711faebaf88e525528dea7d9b0917f7463c4abe9",
+   "sha256": "8bd4a056b55f42628466120747aadf5568cc33684b28b3e1e6b3293b2ddcd107",
+   "full": "vendor/us-municipal-flags/US-PLACE-5380010.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5380010.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q499203",
+    "article": "https://en.wikipedia.org/wiki/Yakima%2C_Washington",
+    "fips": "5380010",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-wayak.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-wayak.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 9 July 2021 Description of the flag Seal See also: Yakima Valley Community College Pacific Northwest University Yakima County County and Municipal flags of Washington Washington United States of America Description of the flag The flag of the City of Yakima, Washington is white with city logo on it. The logo dated from 1995 and was adopted by the city council via resolution #95- 100. Unfortunately, the records do not indicate any official description, meaning or the logo designer. Courtesy by Sonya Claar Tee, Executive Secretary, City of Yakima. About the city: &quot;Yakima is a city in central Washington and the county seat of Yakima County, Washington, Un",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5335940": {
+   "id": "US-PLACE-5335940",
+   "name": "Kirkland",
+   "parent": "US-WA",
+   "code": "5335940",
+   "source": "https://www.crwflags.com/fotw/images/u/us-wakkd.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-wakkd.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "0b21856cea2e0f085a8ce010d1565554450be28c",
+   "sha256": "14fd161da7cb49857923b926c30de195c6cb5b014bc55be7c041f1d3cd1f3ee6",
+   "full": "vendor/us-municipal-flags/US-PLACE-5335940.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5335940.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q936768",
+    "article": "https://en.wikipedia.org/wiki/Kirkland%2C_Washington",
+    "fips": "5335940",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-wakkd.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-wakkd.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 11 June 2020 Description of the flag Logo See also: King County County and Municipal Flags of Washington Washington United States of America Description of the flag Image based on a 2013 photo of the flag from the Flickr album of the Association of Washington Cities. https://www.flickr.com/photos/awcities/albums/72157634756930512 A green flag with the seal centered. Masao Okazaki , 11 June 2020 Logo image located by Paul Bassinson , 16 February 2020 Source: <a href=\"http://www.wh",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-2038900": {
+   "id": "US-PLACE-2038900",
+   "name": "Lawrence",
+   "parent": "US-KS",
+   "code": "2038900",
+   "source": "https://www.crwflags.com/fotw/images/u/us-kslaw.jpg",
+   "page": "https://www.crwflags.com/fotw/flags/us-kslaw.html",
+   "width": 465,
+   "height": 264,
+   "sourceSha1": "2ff43db65ee4eaf2630b61c313b6202d9aa26c2c",
+   "sha256": "8016532fd82690822eb9aa2aa6a663ddabd57979d07a3c3c9b804225a73b6c51",
+   "full": "vendor/us-municipal-flags/US-PLACE-2038900.jpg",
+   "file": "vendor/us-municipal-flags/US-PLACE-2038900.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q493840",
+    "article": "https://en.wikipedia.org/wiki/Lawrence%2C_Kansas",
+    "fips": "2038900",
+    "parent": "US-KS"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-kslaw.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-kslaw.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image located by Valentin Poposki , 23 October 2008 Source: www.waymarking.com/waymarks/WM2XTK Description of the flag Variant flag Logo See also: Haskell Indian Nations University Pinnacle Career Institute Douglas County County and Municipal flags of Kansas Kansas United States of America Description of the flag Lawrence is the sixth largest city in the U.S. State of Kansas and the county seat of Douglas County. Located in northeastern Kansas, Lawrence is the anchor city of the Lawrence, Kansas Metropolitan Area which encompasses all of Douglas County. Located forty-one miles west of Kansas City, Missouri, it is situat",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4944320": {
+   "id": "US-PLACE-4944320",
+   "name": "Lehi",
+   "parent": "US-UT",
+   "code": "4944320",
+   "source": "https://www.crwflags.com/fotw/images/u/us-utleh.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-utleh.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "b36de17f03cdb5ea5109bef5fe7c8290b9842c93",
+   "sha256": "91a475edfe1b35b215e4d362c3cd60be6e23e4609827e764ec3126c1dd9c769c",
+   "full": "vendor/us-municipal-flags/US-PLACE-4944320.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4944320.webp",
+   "credit": "M asao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q1010595",
+    "article": "https://en.wikipedia.org/wiki/Lehi%2C_Utah",
+    "fips": "4944320",
+    "parent": "US-UT"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-utleh.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-utleh.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by M asao Okazaki , 18 June 2020 Description of the flag Previous flag The seal The logo New flag proposal See also: Utah County County and Municipal Flags of Utah Utah United States of America Description of the Flag The town of Lehi UT appears to have started using a new flag in 2015. This is how the flag appeared in 2016 on the city's Facebook page: https://www.facebook.com/lehicity/ The logo first appeared on the city's Facebook page in January 2015. It was designed by a company called Jibe Media: https://jibemedia.com/work/lehi-city/ M asao Okazaki , 18 June 2020",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-2649000": {
+   "id": "US-PLACE-2649000",
+   "name": "Livonia",
+   "parent": "US-MI",
+   "code": "2649000",
+   "source": "https://www.crwflags.com/fotw/images/u/us-miliv.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-miliv.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "971e1bd68b59f75d70834381b99e64ab4b0651b0",
+   "sha256": "d942aac252be5d8196ece4dbada2d1d17e9d0e3d6f86d11e500e3542ed58fd71",
+   "full": "vendor/us-municipal-flags/US-PLACE-2649000.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-2649000.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q853552",
+    "article": "https://en.wikipedia.org/wiki/Livonia%2C_Michigan",
+    "fips": "2649000",
+    "parent": "US-MI"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-miliv.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-miliv.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 26 June 2022 based on photo Description of the flag Seal See also: American Montessori Academy Madonna University Schoolcraft College Wayne County County and Municipal flags of Michigan Michigan United States of America Description of the flag The City of Livonia and Wayne County flags appear in the fourth photo on this page . The Livonia flag is white with city seal in the middle. Valentin Poposki , 25 March 2006 The City of Livonia (c. 36 sq. miles; 100,54",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-2430325": {
+   "id": "US-PLACE-2430325",
+   "name": "Frederick",
+   "parent": "US-MD",
+   "code": "2430325",
+   "source": "https://www.crwflags.com/fotw/images/u/us-mdfrd.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-mdfrd.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "b66e2a120da5797cfeef851a42d29b8b4fa1b594",
+   "sha256": "fe3dfac3c903cf5214bdbfb019f8452d298f73a99141b9dd483ea81f4b33d0c7",
+   "full": "vendor/us-municipal-flags/US-PLACE-2430325.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-2430325.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q472675",
+    "article": "https://en.wikipedia.org/wiki/Frederick%2C_Maryland",
+    "fips": "2430325",
+    "parent": "US-MD"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-mdfrd.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-mdfrd.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 9 July 2021 based on photo located by Valentin Poposki , 9 November 2005 Source: www.cityoffrederick.com Description of the flag Seal See also: Frederick Community College Hood College Frederick County County and Municipal flags of Maryland Maryland United States of America Description of the Flag The flag is blue with a white/red ringed central disk bearing a blue on white silhouette of the city skyline. Around the disk are 26 white stars. Based on an image at <A HREF=\"http://web.",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4041850": {
+   "id": "US-PLACE-4041850",
+   "name": "Lawton",
+   "parent": "US-OK",
+   "code": "4041850",
+   "source": "https://www.crwflags.com/fotw/images/u/us-oklaw.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-oklaw.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "5603938978c102e3ea483798a3e42ddb36b6d2f2",
+   "sha256": "7df91eaea48c5c246d9862fd58868f576ff97a0420d9ea145688570868884047",
+   "full": "vendor/us-municipal-flags/US-PLACE-4041850.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4041850.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q503336",
+    "article": "https://en.wikipedia.org/wiki/Lawton%2C_Oklahoma",
+    "fips": "4041850",
+    "parent": "US-OK"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-oklaw.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-oklaw.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 9 July 2021 Flag Seal Earlier flag See also: Comanche County County and Municipal flags of Oklahoma Oklahoma United States of America Flag Lawton OK has had at least 2 different flags in the past decade. Since about 2020, the city has used a flag that is based on a city seal that's been used since at least 2012. https://www.facebook.com/CityofLawton/photos/3543702135734233 https://www.facebook.com/CityofLawton/photos/3437657069672074/ https://z94.com/mayor-stan-booker-and-councilman-jay-burk-facing-recal",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-0615044": {
+   "id": "US-PLACE-0615044",
+   "name": "Compton",
+   "parent": "US-CA",
+   "code": "0615044",
+   "source": "https://www.crwflags.com/fotw/images/u/us-cacmn.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-cacmn.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "205bcedefeb9e219915d230c8f6fd41288ed49a5",
+   "sha256": "6f7ec26d3c599f9e0c56e583f9b73d2e78a5ac3af2a1f169d2d593a3fb0725a2",
+   "full": "vendor/us-municipal-flags/US-PLACE-0615044.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-0615044.webp",
+   "credit": "Daniel Rentería",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q487119",
+    "article": "https://en.wikipedia.org/wiki/Compton%2C_California",
+    "fips": "0615044",
+    "parent": "US-CA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-cacmn.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-cacmn.html",
+    "description": "homepage | search | disclaimer and copyright | write us | mirrors image by Daniel Renter�a , 12 July 2025 based on photo located by Dave Fowler , 28 June 2025 Description of the flag The seal Compton Unified School District See also: Compton College Los Angeles County Municipal flags of California (index page) California United States of America Description of the flag the city flag is the city seal on white. Videos of the flag: https://dissolve.com/video/Flag-seal-City-Compton-waving-wind-rights-managed-stock-video-footage/002-D118-258-263 Daniel Renter�a , 12 July 2025 Seal <a",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1216725": {
+   "id": "US-PLACE-1216725",
+   "name": "Deerfield Beach",
+   "parent": "US-FL",
+   "code": "1216725",
+   "source": "https://www.crwflags.com/fotw/images/u/us-fldfb.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-fldfb.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "13a115404429573376a7d443bf9c4fff17f8ccb9",
+   "sha256": "333d7cdc1c85fc9bf0e7d0d6434287a6b9987b83f9de9529d3109b0585d3790d",
+   "full": "vendor/us-municipal-flags/US-PLACE-1216725.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1216725.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q584849",
+    "article": "https://en.wikipedia.org/wiki/Deerfield_Beach%2C_Florida",
+    "fips": "1216725",
+    "parent": "US-FL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-fldfb.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-fldfb.html",
+    "description": "e | search | disclaimer and copyright | write us | mirrors image located by Masao Okazaki , 13 July 2023 Description of the flag Previous flag Seal See also: South Florida Bible College and Theological Seminary Broward County County and Municipal flags of Florida Florida United States of America Description of the Flag I was sent an image of the flag and the resolution of adoption by Assistant City Clerk Yadzia Roa. RESOLUTION NO. 2022/109 was passed and the flag was adopted on June 21, 2022 for the following reasons: WHEREAS, the City of Deerfield Beach desires to adopt an official City flag; and WHEREAS, after several weeks of research and creating multiple renderings, the Public Affairs and Marketing Department has submitted a flag design that closel",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-5335275": {
+   "id": "US-PLACE-5335275",
+   "name": "Kennewick",
+   "parent": "US-WA",
+   "code": "5335275",
+   "source": "https://www.crwflags.com/fotw/images/u/us-wakwk15.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-wakwk.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "1c442c8cbe277d0a7d33365806ebb49b53367324",
+   "sha256": "19e16242f0286fc02683b0867a8913ca43960c9527551ec34851383cb74bc205",
+   "full": "vendor/us-municipal-flags/US-PLACE-5335275.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-5335275.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q844033",
+    "article": "https://en.wikipedia.org/wiki/Kennewick%2C_Washington",
+    "fips": "5335275",
+    "parent": "US-WA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-wakwk.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-wakwk.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 11 June 2020 Description of the flag Previous flag Seal See also: Benton County County and Municipal Flags of Washington Washington United States of America Description of the flag Photo of the flag from the Flickr albums of the Association of Washington Cities. Kennewick 2017 https://www.flickr.com/photos/awcities/35427246512/in/album-72157683523670740/ Masao Okazaki , 11 June 2020 Previous flag image by Masao Okazaki , 11 June 2",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4970850": {
+   "id": "US-PLACE-4970850",
+   "name": "South Jordan",
+   "parent": "US-UT",
+   "code": "4970850",
+   "source": "https://www.crwflags.com/fotw/images/u/us-utsjo.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-utsjo.html",
+   "width": 323,
+   "height": 216,
+   "sourceSha1": "fb5ff9e613c7944440c42bc4144f8d8d72059af3",
+   "sha256": "0ebcec8f1e70293f6ef05a246dcc81ac303a47dcb29026abdac33d75484c44ac",
+   "full": "vendor/us-municipal-flags/US-PLACE-4970850.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4970850.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q52467",
+    "article": "https://en.wikipedia.org/wiki/South_Jordan%2C_Utah",
+    "fips": "4970850",
+    "parent": "US-UT"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-utsjo.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-utsjo.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 17 April 2021 based on image located by Valentin Poposki , 26 January 2012 Source: www.waymarking.com/ Description of the flag The logo See also: Salt Lake County County and Municipal Flags of Utah Utah United States of America Description of the Flag A white flag displaying the name and a large green tree toward the fly. The logo image located by Paul Bassinson , 22 January 2020 Source: <a href=\"https://ehq-production-us-california.im",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-0659444": {
+   "id": "US-PLACE-0659444",
+   "name": "Rancho Cordova",
+   "parent": "US-CA",
+   "code": "0659444",
+   "source": "https://www.crwflags.com/fotw/images/u/us-carco.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-carco.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "d5143406b0c0cbf0aa9ed124f326fb06baf0716a",
+   "sha256": "8a51762a0fd4499ef684f6e53eb75749ad2e99a35bdd2d5a21cf3a734fbc8d3d",
+   "full": "vendor/us-municipal-flags/US-PLACE-0659444.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-0659444.webp",
+   "credit": "David Sigley",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q986928",
+    "article": "https://en.wikipedia.org/wiki/Rancho_Cordova%2C_California",
+    "fips": "0659444",
+    "parent": "US-CA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-carco.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-carco.html",
+    "description": "| search | disclaimer and copyright | write us | mirrors image by David Sigley , 22 September 2024 Description of the flag Seal Logo See also: Sacramento County Municipal flags of California (index page) California United States of America Description of the flag The flag is a white field with the city seal in the center. Photos of the flag: https://www.facebook.com/photo.php https://www.cityofranchocordova.org David Sigley , 22 September 2024 The seal <IMG SRC=\"../images/u/us-carco).gif\" ALT=\"[City seal]\" BORDER=0",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4147000": {
+   "id": "US-PLACE-4147000",
+   "name": "Medford",
+   "parent": "US-OR",
+   "code": "4147000",
+   "source": "https://www.crwflags.com/fotw/images/u/us-ormed.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-ormed.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "c17f29bd80ce24390e2036177bd9144fcc968a73",
+   "sha256": "ad4813aeda448abf0668b7b3275d76a9b353ad1fb3f95bfe744b36668b6b6bee",
+   "full": "vendor/us-municipal-flags/US-PLACE-4147000.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4147000.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q836663",
+    "article": "https://en.wikipedia.org/wiki/Medford%2C_Oregon",
+    "fips": "4147000",
+    "parent": "US-OR"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-ormed.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-ormed.html",
+    "description": "omepage | search | disclaimer and copyright | write us | mirrors image located by Masao Okazaki , 25 July 2026 based on photo Description of the flag Seal The logo See also: Jackson County County and Municipal Flags of Oregon Oregon United States of America Description of the flag The flag of Medford has a color-reversed logo on a blue field. Photos of flag https://www.facebook.com/photo/?fbid=1372420751592204&set=pb.100064728753974.-2207520000 https://www.facebook.com/photo.php?fbid=1372420764925536&set=pb.100064728753974.-2207520000&type=3 Ma",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-1973335": {
+   "id": "US-PLACE-1973335",
+   "name": "Sioux City",
+   "parent": "US-IA",
+   "code": "1973335",
+   "source": "https://www.crwflags.com/fotw/images/u/us-iasux.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-iasux.html",
+   "width": 381,
+   "height": 216,
+   "sourceSha1": "e6c0fa5280e6dd20035efd656c489090ee471d7d",
+   "sha256": "5a1e66e263a635f603f203a64fec67b4f185f709d42c45782c3a27d31571d0e7",
+   "full": "vendor/us-municipal-flags/US-PLACE-1973335.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-1973335.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q489255",
+    "article": "https://en.wikipedia.org/wiki/Sioux_City%2C_Iowa",
+    "fips": "1973335",
+    "parent": "US-IA"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-iasux.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-iasux.html",
+    "description": "/A> | search | disclaimer and copyright | write us | mirrors image located by Valentin Poposki , 27 October 2008 Description of the flag Logo See also: Briar Cliff University Morningside College Western Iowa Tech Community College Woodbury County County and Municipal flags of Iowa Iowa United States of America Description of the flag I received from the city clerk of the City of Sioux City, Iowa, an image of the flag. According to original file name &quot;City of Sioux City Flag 2008&quot;, I assume that the city flag is new one - adopted this year. It is a white flag with the city name written in black, and a gold star below a small letter o in Sioux. Valentin Poposki , 27 October 2008 <a name=",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-0103076": {
+   "id": "US-PLACE-0103076",
+   "name": "Auburn",
+   "parent": "US-AL",
+   "code": "0103076",
+   "source": "https://www.crwflags.com/fotw/images/u/us-alaub.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-alaub.html",
+   "width": 384,
+   "height": 216,
+   "sourceSha1": "762579337a44f2e37dae7e5ae861e2f9bb77d4ea",
+   "sha256": "f5e94c8fab9221e43e468d2d2a63d0b3b560b1282507eb916998f217f4eb6d19",
+   "full": "vendor/us-municipal-flags/US-PLACE-0103076.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-0103076.webp",
+   "credit": "Flags of the World contributors; see image credit on source page",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q79728",
+    "article": "https://en.wikipedia.org/wiki/Auburn%2C_Alabama",
+    "fips": "0103076",
+    "parent": "US-AL"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-alaub.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-alaub.html",
+    "description": "e | search | disclaimer and copyright | write us | mirrors image located by Valentin Poposki , 24 July 2006 Source: en.wikipedia.org/wiki/Auburn,_Alabama Description of the flag Logo See also: Lee County County and Municipal flags of Alabama Alabama United States of America Description of the flag Flag is vertically divided, 2:3, the narrower part orange, with a gray wreath surrounding a grey oriental lamp with a red flame, above the name AUBURN. The wider part is horizontally divided approximately 4:1:1:1:1:1 white-gray-white-red-white-gray. &quot;Auburn is a city in east central Alabama, near the Georgia border. It is the largest city in Lee County with a 2005 population of 49,928 (according to the U.S. Census estimates). Auburn is the educational and cultura",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  },
+  "US-PLACE-4419180": {
+   "id": "US-PLACE-4419180",
+   "name": "Cranston",
+   "parent": "US-RI",
+   "code": "4419180",
+   "source": "https://www.crwflags.com/fotw/images/u/us-ri-cr.gif",
+   "page": "https://www.crwflags.com/fotw/flags/us-ri-cr.html",
+   "width": 360,
+   "height": 216,
+   "sourceSha1": "bbfcfd74b0a02d846cfde331d3721260a28203e3",
+   "sha256": "5db1ccb3edee26e728ea6638b466701bacd1429ab65ba2473f390dfef910f889",
+   "full": "vendor/us-municipal-flags/US-PLACE-4419180.gif",
+   "file": "vendor/us-municipal-flags/US-PLACE-4419180.webp",
+   "credit": "Masao Okazaki",
+   "license": "Source rights as credited by Flags of the World",
+   "repository": "fotw",
+   "identity": {
+    "qid": "Q49197",
+    "article": "https://en.wikipedia.org/wiki/Cranston%2C_Rhode_Island",
+    "fips": "4419180",
+    "parent": "US-RI"
+   },
+   "evidence": {
+    "municipality": "https://www.crwflags.com/fotw/flags/us-ri-cr.html",
+    "artwork": "https://www.crwflags.com/fotw/flags/us-ri-cr.html",
+    "description": "> | search | disclaimer and copyright | write us | mirrors image by Masao Okazaki , 31 December 2020 Description of the flag City Seal Police Department See also: Providence County County and Municipal Flags of Rhode Island Rhode Island United States of America Description of the flag The flag of the City is blue, of standard size, bearing on each side of the center the representation of the Coat of Arms of the City. The shield is red with a white border, the representation of the three cranes upon the shield is in white; the words DUM VIGILO CURO are imposed in yellow and gold upon the representation of a white ribbon with a red border under the shield. https://www.cranstonri.gov/about/ The City of Cranston is part of the large metropolitan area of Providence and is located just s",
+    "match": "State-specific specialist reference, current municipal flag section; excludes seal, former flag, proposals and unrelated organizations"
+   },
+   "retrieved": "2026-10-17"
+  }
+ },
+ "audit": [
+  {
+   "id": "US-PLACE-0602000",
+   "name": "Anaheim",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-caana.html"
+  },
+  {
+   "id": "US-PLACE-1258715",
+   "name": "Port St. Lucie",
+   "status": "added",
+   "file": "us-flpsl.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-flpsl.html"
+  },
+  {
+   "id": "US-PLACE-4845744",
+   "name": "McKinney",
+   "status": "added",
+   "file": "us-txmkn.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txmkn.html"
+  },
+  {
+   "id": "US-PLACE-0137000",
+   "name": "Huntsville",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-alhun.html"
+  },
+  {
+   "id": "US-PLACE-4830464",
+   "name": "Grand Prairie",
+   "status": "added",
+   "file": "us-txgpr2.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txgpr.html"
+  },
+  {
+   "id": "US-CONCITY-1304200",
+   "name": "Augusta-Richmond County",
+   "status": "added",
+   "file": "us-ga-au.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-ga-au.html"
+  },
+  {
+   "id": "US-PLACE-4123850",
+   "name": "Eugene",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-oreug.html"
+  },
+  {
+   "id": "US-PLACE-4819972",
+   "name": "Denton",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-txdnt.html"
+  },
+  {
+   "id": "US-PLACE-0664224",
+   "name": "Salinas",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-casal.html"
+  },
+  {
+   "id": "US-PLACE-1349008",
+   "name": "Macon-Bibb County",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-gamac.html"
+  },
+  {
+   "id": "US-PLACE-5305210",
+   "name": "Bellevue",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-wabvu.html"
+  },
+  {
+   "id": "US-PLACE-4847892",
+   "name": "Mesquite",
+   "status": "added",
+   "file": "us-txmsq.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txmsq.html"
+  },
+  {
+   "id": "US-PLACE-4845384",
+   "name": "McAllen",
+   "status": "added",
+   "file": "us-txmca.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txmca.html"
+  },
+  {
+   "id": "US-PLACE-1225175",
+   "name": "Gainesville",
+   "status": "added",
+   "file": "us-fl-gainesville.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-flgai.html"
+  },
+  {
+   "id": "US-PLACE-4856000",
+   "name": "Pasadena",
+   "status": "added",
+   "file": "us-txpas.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txpas.html"
+  },
+  {
+   "id": "US-PLACE-4863500",
+   "name": "Round Rock",
+   "status": "added",
+   "file": "us-txrrk.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txrrk.html"
+  },
+  {
+   "id": "US-PLACE-2684000",
+   "name": "Warren",
+   "status": "added",
+   "file": "us-miwrr1.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-miwrr.html"
+  },
+  {
+   "id": "US-PLACE-3825700",
+   "name": "Fargo",
+   "status": "added",
+   "file": "us-ndfar.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-ndfar.html"
+  },
+  {
+   "id": "US-PLACE-5335415",
+   "name": "Kent",
+   "status": "added",
+   "file": "us-waken.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-waken.html"
+  },
+  {
+   "id": "US-PLACE-2676460",
+   "name": "Sterling Heights",
+   "status": "added",
+   "file": "us-misth.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-misth.html"
+  },
+  {
+   "id": "US-PLACE-4856348",
+   "name": "Pearland",
+   "status": "added",
+   "file": "us-txpea.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txpea.html"
+  },
+  {
+   "id": "US-PLACE-4815976",
+   "name": "College Station",
+   "status": "added",
+   "file": "us-txcst.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txcst.html"
+  },
+  {
+   "id": "US-PLACE-1276600",
+   "name": "West Palm Beach",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-flwpb.html"
+  },
+  {
+   "id": "US-PLACE-4853388",
+   "name": "Odessa",
+   "status": "added",
+   "file": "us-txode3.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txode.html"
+  },
+  {
+   "id": "US-PLACE-4850820",
+   "name": "New Braunfels",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-txnbf.html"
+  },
+  {
+   "id": "US-PLACE-0623182",
+   "name": "Fairfield",
+   "status": "added",
+   "file": "us-caffd.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-caffd.html"
+  },
+  {
+   "id": "US-PLACE-0606000",
+   "name": "Berkeley",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-caber.html"
+  },
+  {
+   "id": "US-PLACE-2935000",
+   "name": "Independence",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-moind.html"
+  },
+  {
+   "id": "US-PLACE-1656260",
+   "name": "Nampa",
+   "status": "added",
+   "file": "us-idnam.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-idnam.html"
+  },
+  {
+   "id": "US-PLACE-4841980",
+   "name": "League City",
+   "status": "added",
+   "file": "us-txlea.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txlea.html"
+  },
+  {
+   "id": "US-PLACE-4816432",
+   "name": "Conroe",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-txcnr.html"
+  },
+  {
+   "id": "US-PLACE-0646842",
+   "name": "Menifee",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-camnf.html"
+  },
+  {
+   "id": "US-PLACE-4982950",
+   "name": "West Jordan",
+   "status": "added",
+   "file": "us-utwjo.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-utwjo.html"
+  },
+  {
+   "id": "US-PLACE-1723074",
+   "name": "Elgin",
+   "status": "added",
+   "file": "us-ilelg.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-ilelg.html"
+  },
+  {
+   "id": "US-PLACE-0832155",
+   "name": "Greeley",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-cogre.html"
+  },
+  {
+   "id": "US-PLACE-3714100",
+   "name": "Concord",
+   "status": "added",
+   "file": "us-ncccd.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-ncccd.html"
+  },
+  {
+   "id": "US-PLACE-3563460",
+   "name": "Rio Rancho",
+   "status": "added",
+   "file": "us-nmrra.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-nmrra.html"
+  },
+  {
+   "id": "US-PLACE-1212875",
+   "name": "Clearwater",
+   "status": "added",
+   "file": "us-flcle.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-flcle.html"
+  },
+  {
+   "id": "US-PLACE-4874144",
+   "name": "Tyler",
+   "status": "added",
+   "file": "us-txtyl.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txtyl.html"
+  },
+  {
+   "id": "US-PLACE-5322640",
+   "name": "Everett",
+   "status": "added",
+   "file": "us-waeve.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-waeve.html"
+  },
+  {
+   "id": "US-PLACE-1216475",
+   "name": "Davie",
+   "status": "added",
+   "file": "us-fldav.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-fldav.html"
+  },
+  {
+   "id": "US-PLACE-4822660",
+   "name": "Edinburg",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-txedi.html"
+  },
+  {
+   "id": "US-PLACE-1254200",
+   "name": "Palm Coast",
+   "status": "added",
+   "file": "us-flpmc.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-flpmc.html"
+  },
+  {
+   "id": "US-PLACE-5367167",
+   "name": "Spokane Valley",
+   "status": "added",
+   "file": "us-waspv.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-waspv.html"
+  },
+  {
+   "id": "US-PLACE-4870808",
+   "name": "Sugar Land",
+   "status": "added",
+   "file": "us-txsug.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txsug.html"
+  },
+  {
+   "id": "US-PLACE-4105800",
+   "name": "Bend",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-orben.html"
+  },
+  {
+   "id": "US-PLACE-0637692",
+   "name": "Jurupa Valley",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-cajur.html"
+  },
+  {
+   "id": "US-PLACE-4829336",
+   "name": "Georgetown",
+   "status": "added",
+   "file": "us-txggt2.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-txggt.html"
+  },
+  {
+   "id": "US-PLACE-2509000",
+   "name": "Brockton",
+   "status": "added",
+   "file": "us-mabrk2.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-mabrk.html"
+  },
+  {
+   "id": "US-PLACE-0807850",
+   "name": "Boulder",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-cobou.html"
+  },
+  {
+   "id": "US-PLACE-1368516",
+   "name": "Sandy Springs",
+   "status": "added",
+   "file": "us-gassp.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-gassp.html"
+  },
+  {
+   "id": "US-PLACE-5357745",
+   "name": "Renton",
+   "status": "added",
+   "file": "us-waren2.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-waren.html"
+  },
+  {
+   "id": "US-PLACE-5176432",
+   "name": "Suffolk",
+   "status": "added",
+   "file": "us-vasuf.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-vasuf.html"
+  },
+  {
+   "id": "US-PLACE-0668252",
+   "name": "San Mateo",
+   "status": "added",
+   "file": "us-caxmt.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-caxmt.html"
+  },
+  {
+   "id": "US-PLACE-2545000",
+   "name": "New Bedford",
+   "status": "added",
+   "file": "us-manbf.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-manbf.html"
+  },
+  {
+   "id": "US-PLACE-1224125",
+   "name": "Fort Myers",
+   "status": "added",
+   "file": "us-flfmy.jpg",
+   "source": "https://www.crwflags.com/fotw/flags/us-flfmy.html"
+  },
+  {
+   "id": "US-PLACE-4864472",
+   "name": "San Angelo",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-txsag.html"
+  },
+  {
+   "id": "US-PLACE-5323515",
+   "name": "Federal Way",
+   "status": "added",
+   "file": "us-wafew2.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-wafew.html"
+  },
+  {
+   "id": "US-PLACE-5539225",
+   "name": "Kenosha",
+   "status": "added",
+   "file": "us-wiken2.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-wiken.html"
+  },
+  {
+   "id": "US-PLACE-4105350",
+   "name": "Beaverton",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-orbea.html"
+  },
+  {
+   "id": "US-PLACE-5380010",
+   "name": "Yakima",
+   "status": "added",
+   "file": "us-wayak.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-wayak.html"
+  },
+  {
+   "id": "US-PLACE-5335940",
+   "name": "Kirkland",
+   "status": "added",
+   "file": "us-wakkd.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-wakkd.html"
+  },
+  {
+   "id": "US-PLACE-0645484",
+   "name": "Manteca",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-caman.html"
+  },
+  {
+   "id": "US-PLACE-1249675",
+   "name": "North Port",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-flnpt.html"
+  },
+  {
+   "id": "US-PLACE-2038900",
+   "name": "Lawrence",
+   "status": "added",
+   "file": "us-kslaw.jpg",
+   "source": "https://www.crwflags.com/fotw/flags/us-kslaw.html"
+  },
+  {
+   "id": "US-PLACE-4548535",
+   "name": "Mount Pleasant",
+   "status": "not-added",
+   "reason": "Uncertain design/adoption, historical/proposed flag, nonmunicipal flag or insufficient current artwork evidence",
+   "source": "https://www.crwflags.com/fotw/flags/us-scmtp.html"
+  },
+  {
+   "id": "US-PLACE-4944320",
+   "name": "Lehi",
+   "status": "added",
+   "file": "us-utleh.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-utleh.html"
+  },
+  {
+   "id": "US-PLACE-0668196",
+   "name": "San Marcos",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-caxmr.html"
+  },
+  {
+   "id": "US-PLACE-2649000",
+   "name": "Livonia",
+   "status": "added",
+   "file": "us-miliv.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-miliv.html"
+  },
+  {
+   "id": "US-PLACE-3350260",
+   "name": "Nashua",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-nhnas.html"
+  },
+  {
+   "id": "US-PLACE-2430325",
+   "name": "Frederick",
+   "status": "added",
+   "file": "us-mdfrd.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-mdfrd.html"
+  },
+  {
+   "id": "US-PLACE-1712385",
+   "name": "Champaign",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-ilcha.html"
+  },
+  {
+   "id": "US-PLACE-4842016",
+   "name": "Leander",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-txlnd.html"
+  },
+  {
+   "id": "US-PLACE-3413690",
+   "name": "Clifton",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-njcli.html"
+  },
+  {
+   "id": "US-PLACE-4041850",
+   "name": "Lawton",
+   "status": "added",
+   "file": "us-oklaw.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-oklaw.html"
+  },
+  {
+   "id": "US-PLACE-0615044",
+   "name": "Compton",
+   "status": "added",
+   "file": "us-cacmn.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-cacmn.html"
+  },
+  {
+   "id": "US-PLACE-0670000",
+   "name": "Santa Monica",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-caxmo.html"
+  },
+  {
+   "id": "US-PLACE-1216725",
+   "name": "Deerfield Beach",
+   "status": "added",
+   "file": "us-fldfb.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-fldfb.html"
+  },
+  {
+   "id": "US-PLACE-4848768",
+   "name": "Mission",
+   "status": "not-added",
+   "reason": "No current municipal flag image; seals/logos are not substituted",
+   "source": "https://www.crwflags.com/fotw/flags/us-txmis.html"
+  },
+  {
+   "id": "US-PLACE-5335275",
+   "name": "Kennewick",
+   "status": "added",
+   "file": "us-wakwk15.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-wakwk.html"
+  },
+  {
+   "id": "US-PLACE-4970850",
+   "name": "South Jordan",
+   "status": "added",
+   "file": "us-utsjo.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-utsjo.html"
+  },
+  {
+   "id": "US-PLACE-0659444",
+   "name": "Rancho Cordova",
+   "status": "added",
+   "file": "us-carco.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-carco.html"
+  },
+  {
+   "id": "US-PLACE-4147000",
+   "name": "Medford",
+   "status": "added",
+   "file": "us-ormed.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-ormed.html"
+  },
+  {
+   "id": "US-PLACE-1973335",
+   "name": "Sioux City",
+   "status": "added",
+   "file": "us-iasux.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-iasux.html"
+  },
+  {
+   "id": "US-PLACE-0103076",
+   "name": "Auburn",
+   "status": "added",
+   "file": "us-alaub.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-alaub.html"
+  },
+  {
+   "id": "US-PLACE-4419180",
+   "name": "Cranston",
+   "status": "added",
+   "file": "us-ri-cr.gif",
+   "source": "https://www.crwflags.com/fotw/flags/us-ri-cr.html"
+  }
+ ]
+}

@@ -429,7 +429,13 @@
       "basis": "local-implementation",
       "evidence": {
         "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
-      }
+      },
+      "updates": [
+        {
+          "date": "2026-10-18",
+          "note": "Added all six Dutch Caribbean jurisdictions with focused island entry; original country addition date retained."
+        }
+      ]
     },
     {
       "country": "switzerland",
@@ -466,6 +472,69 @@
       "basis": "local-implementation",
       "evidence": {
         "note": "Denmark added with its current five regions, 98 municipalities and Christiansø, plus Greenland and the Faroe Islands with focused territorial entry and local subdivisions."
+      }
+    },
+    {
+      "country": "australia",
+      "name": "Australia",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally with states, internal and external territories, full-resolution ABS local areas, flags and sourced statistics."
+      }
+    },
+    {
+      "country": "new-zealand",
+      "name": "New Zealand",
+      "addedOn": "2026-10-17",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally with regions, territorial authorities, offshore islands and the Realm’s associated states/dependencies."
+      }
+    },
+    {
+      "country": "ireland",
+      "name": "Ireland",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally with three regional assembly areas, all 31 county/city local authorities and all 100 municipal districts, official 2026 boundaries, census statistics and regional GDP."
+      }
+    },
+    {
+      "country": "portugal",
+      "name": "Portugal",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally with mainland districts, Azores and Madeira, all 308 municipalities and 3,258 civil parishes from CAOP2025; Corvo remains a municipality without parishes."
+      }
+    },
+    {
+      "country": "thailand",
+      "name": "Thailand",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally with the shared regional renderer, sourced native names, lazy administrative geometry and country palette. Vietnam uses the current 34-province two-tier structure."
+      }
+    },
+    {
+      "country": "vietnam",
+      "name": "Vietnam",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally with the shared regional renderer, sourced native names, lazy administrative geometry and country palette. Vietnam uses the current 34-province two-tier structure."
+      }
+    },
+    {
+      "country": "morocco",
+      "name": "Morocco",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added Morocco through the shared regional atlas with pinned HCP/OSM source snapshots."
       }
     }
   ]

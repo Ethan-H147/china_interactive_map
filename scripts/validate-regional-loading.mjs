@@ -7,6 +7,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {createPlaceSearch} from '../dist/place-search.mjs';
 import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementStatistics} from '../dist/settlement-layer.mjs';
+import {selectionLineSourceOptions} from '../dist/outline-detail.mjs';
 import {regionalLineWidth} from '../dist/adaptive-lines.mjs';
 const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
@@ -17,11 +18,12 @@ element('mode-lock').attributes['aria-pressed']='false';element('satellite-layer
 const bounds=[[30,50],[31,51]],records=[...['A','B'].map(id=>({id,en:id,local:id,kind:'Region',level:1,center:[30.5,50.5],bounds})),...['A','B'].map(parent=>({id:parent+'1',en:parent+' District',parent,level:2,kind:'District',center:[30.5,50.5],bounds}))];
 const catalogue={records,chunks:{A:{file:'second/A.bin',count:1},B:{file:'second/B.bin',count:1}}};
 let hit;const layerOrder=[];
-const map={addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l,before){layers.set(l.id,l);const index=layerOrder.indexOf(before);if(index<0)layerOrder.push(l.id);else layerOrder.splice(index,0,l.id);},getLayer:id=>layers.get(id),removeLayer(id){layers.delete(id);layerOrder.splice(layerOrder.indexOf(id),1);},moveLayer(id){layerOrder.splice(layerOrder.indexOf(id),1);layerOrder.push(id);},setPaintProperty(id,key,value){(layers.get(id).paint??={})[key]=value;},setFilter(){},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
+const states=new Map();
+const map={setFeatureState({source,id},state){states.set(source+'|'+id,state);},removeFeatureState({source,id}){states.delete(source+'|'+id);},addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l,before){layers.set(l.id,l);const index=layerOrder.indexOf(before);if(index<0)layerOrder.push(l.id);else layerOrder.splice(index,0,l.id);},getLayer:id=>layers.get(id),removeLayer(id){layers.delete(id);layerOrder.splice(layerOrder.indexOf(id),1);},moveLayer(id){layerOrder.splice(layerOrder.indexOf(id),1);layerOrder.push(id);},setPaintProperty(id,key,value){(layers.get(id).paint??={})[key]=value;},setFilter(){},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
 let nextURL=0,labelRecords=[];
-const context=vm.createContext({backgroundLandColor,createMapResources,console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
+const context=vm.createContext({createFirstLevelQuiz:()=>undefined,backgroundLandColor,createMapResources,selectionLineSourceOptions,console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
  Worker:class{constructor(){jobs.push(this);}postMessage(data){this.request=data;}terminate(){this.terminated=true;}},
- document:{getElementById:element,createElement:tag=>element('new-'+tag+'-'+Math.random()),querySelector:()=>({insertBefore(){}})},
+ document:{createDocumentFragment:()=>element('fragment-'+Math.random()),getElementById:element,createElement:tag=>element('new-'+tag+'-'+Math.random()),querySelector:()=>({insertBefore(){}})},
  window:{AtlasCountries:{ids:['brazil','france']},AtlasSymbols:{markup:()=>'<svg/>'},AtlasLabels:{render:(_map,records)=>{labelRecords=records;return [];}}},
  createCountryPage:options=>element(options.id),setSubdivisionHeading:(node,label,count)=>node.textContent=label+' '+count,
  loadCompressed:async file=>file.endsWith('catalogue.bin')?catalogue:{type:'FeatureCollection',features:[]},createPlaceSearch,polygonParts,
@@ -45,7 +47,7 @@ const first=select('A');await flush();const obsolete=jobs.at(-1);
 const second=select('B');await flush();assert(obsolete.terminated,'Selecting a new region terminates the previous worker');
 complete(jobs.at(-1));await second;await first;assert.equal(atlas.getSelection(),'B');assert.equal(fits.length,1,'Cancelled selections never move the camera');
 assert(sources.has('test-second'));assert.equal([...sources.keys()].filter(id=>id==='test-second').length,1);
-await atlas.restore('B1');assert(!element('test-detail-flag-source').hidden);assert.equal(element('test-detail-flag').src,'city.svg');assert.equal(statistics.at(-1),'test:B1','City selection renders its own card');
+assert(states.get('test-first|B')?.selected,'Selection sets GPU state on the existing province source');const fillStyle=JSON.stringify(layers.get('test-first-fill').paint['fill-color']);await atlas.restore('B1');assert(!states.has('test-first|B'),'Moving to a district clears the old province selection');assert(states.get('test-second|B1')?.selected);assert.equal(JSON.stringify(layers.get('test-first-fill').paint['fill-color']),fillStyle,'Selection does not recompile fill paint');assert(!element('test-detail-flag-source').hidden);assert.equal(element('test-detail-flag').src,'city.svg');assert.equal(statistics.at(-1),'test:B1','City selection renders its own card');
 const third=select('A');await flush();assert(!sources.has('test-second'),'Previous district geometry is released before fetching another region');
 assert(element('test-detail-flag-source').hidden,'Selecting a region removes the third city flag');
 const late=jobs.at(-1);atlas.leave();assert(late.terminated);complete(late);await third;
@@ -62,6 +64,10 @@ let task=tree.enter(false);await flush();complete(jobs.at(-1));await task;
 assert(!sources.has('tree-second')&&!sources.has('tree-third'),'Third-level country entry remains lazy');
 task=tree.restore('A11');await flush();assert.equal(jobs.at(-1).request.url,'data/tree/second/A.bin');complete(jobs.at(-1));await flush();assert.equal(jobs.at(-1).request.url,'data/tree/third/A1.bin');complete(jobs.at(-1));await task;
 assert.equal(tree.getSelection(),'A11');assert.equal(tree.getMode(),3);assert(sources.has('tree-second')&&sources.has('tree-third'),'Deep links resolve and load their full ancestry');
+element('mode-lock').attributes['aria-pressed']='true';
+for(const [id,layer]of [['A1','second'],['A','first']]){hit={layer:{id:'tree-'+layer+'-fill'},properties:{id}};assert.equal(tree.hoverAt(null),null,'Locked municipalities reject parent polygon hits');assert.equal(tree.hoverAt(null,id),null,'Parent labels cannot bypass the locked level');}
+hit={layer:{id:'tree-third-fill'},properties:{id:'A11'}};assert.equal(tree.hoverAt(null).id,'A11','Locked municipalities remain selectable');
+element('mode-lock').attributes['aria-pressed']='false';hit={layer:{id:'tree-second-fill'},properties:{id:'A1'}};assert.equal(tree.hoverAt(null).id,'A1','Unlock restores parent fallback');hit=undefined;
 task=tree.restore('B11');await flush();assert(!sources.has('tree-second')&&!sources.has('tree-third'),'Changing province releases both detailed levels');complete(jobs.at(-1));await flush();complete(jobs.at(-1));await task;
 await tree.setMode(2);assert(sources.has('tree-second')&&!sources.has('tree-third'),'Returning to districts releases municipality geometry');
 task=tree.restore('A11');await flush();const superseded=jobs.at(-1);tree.leave();assert(superseded.terminated);complete(superseded);await task;
@@ -124,3 +130,28 @@ const clearedBefore=cleared;await settlements.restore('A11');assert(cleared>clea
 hit={layer:{id:'places-settlements'},properties:{id:'C1'}};for(const fn of handlers.get('click'))fn({point:[0,0]});await flush();assert.equal(settlements.getSelection(),'C1');assert.equal(cityLoads.at(-1).id,'C1','Clicking a city dot requests exactly that city outline');
 settlements.leave();assert(!sources.has('places-settlements')&&!layers.has('places-settlements'));
 console.log('Settlement adapter: independent city cards and source links, multilingual search, scoped flags, point selection, shared language and complete release passed.');
+
+// Independent detail chunks can be fetched and installed as one cancellable batch.
+const batched=await context.addRegionalCountry(map,host,{country:'batch',prefix:'batch',base:'data/batch/',name:'Batch',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'States',secondLabel:'Counties',thirdLabel:'Municipalities',parallelDetails:true,deferOutlines:true});
+task=batched.enter(false);await flush();complete(jobs.at(-1));await task;
+const batchPayload={chunks:[{blob:{},borders:{}},{blob:{},borders:{}}]};
+task=batched.restore('A11');await flush();
+assert.deepEqual(Array.from(jobs.at(-1).request.urls),['data/batch/second/A.bin','data/batch/third/A1.bin']);
+assert.equal(jobs.at(-1).request.deferOutlines,true);
+jobs.at(-1).onmessage({data:batchPayload});await task;
+assert.equal(batched.getSelection(),'A11');assert(sources.has('batch-second')&&sources.has('batch-third'));
+const oldSelection=batched.restore('B11');await flush();const oldBatch=jobs.at(-1);
+task=batched.restore('A11');await flush();assert(oldBatch.terminated,'New selection cancels every request in the old batch');
+oldBatch.onmessage({data:batchPayload});jobs.at(-1).onmessage({data:batchPayload});await task;await oldSelection;
+assert.equal(batched.getSelection(),'A11','Late batches cannot overwrite the latest selection');
+batched.leave();assert(!sources.has('batch-first')&&!sources.has('batch-second')&&!sources.has('batch-third'));
+console.log('Parallel regional details: independent requests, atomic installation, selected-outline readiness, superseded batches and complete release passed.');
+// Data may be indexed while off-screen tiles are deliberately not ready.
+const originalAdd=map.addSource,originalLoaded=map.isSourceLoaded;
+map.addSource=(id,options)=>{originalAdd(id,options);if(id.startsWith('offscreen-'))sources.get(id).loaded=()=>true;};
+map.isSourceLoaded=id=>id.startsWith('offscreen-')?false:originalLoaded(id);
+const offscreen=await context.addRegionalCountry(map,host,{country:'offscreen',prefix:'offscreen',base:'data/offscreen/',name:'Islands',nationalFlag:'flag.svg',flags:{},bounds,firstLabel:'Regions',secondLabel:'Islands',parallelDetails:true});
+task=offscreen.enter(false);await flush();complete(jobs.at(-1));await task;
+task=offscreen.restore('A1');await flush();jobs.at(-1).onmessage({data:{blob:{},borders:{},outlines:{},hasBorders:false}});await task;
+assert(sources.has('offscreen-second'),'Off-screen data is retained rather than timing out waiting for visible tiles');assert.equal(element('offscreen-error').textContent,'');assert.equal(offscreen.getSelection(),'A1');offscreen.leave();map.addSource=originalAdd;map.isSourceLoaded=originalLoaded;
+console.log('Off-screen islands: worker-indexed geometry and empty border layers become ready without waiting for visible map tiles.');

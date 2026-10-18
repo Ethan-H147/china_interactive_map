@@ -1,0 +1,12 @@
+[
+  {
+    "pair": "KHM-VNM",
+    "vertices": 56427,
+    "endpointErrorMetres": 2661.212387837304
+  },
+  {
+    "pair": "LAO-VNM",
+    "vertices": 74747,
+    "endpointErrorMetres": 4599.077132408344
+  }
+]

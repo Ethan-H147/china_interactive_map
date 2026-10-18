@@ -1,3 +1,4 @@
+import {onMapHover} from './pointer-performance.mjs';
 import {setSubdivisionHeading} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
@@ -57,7 +58,7 @@ function renderLabels(){
  }
  function picked(point){const layers=mode===2&&$('district-layer').checked?['mongolia-second-fill','mongolia-first-fill']:['mongolia-first-fill'];const hits=window.AtlasMotion.queryRegions(map,point,{layers});for(const layer of layers){const hit=hits.find(h=>h.layer.id===layer);if(hit)return index.get(hit.properties.id);}}
  map.on('click',event=>{if(active&&ready&&!host.isBusy()){const f=picked(event.point);if(f)select(f);}});
- map.on('mousemove',event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';});
+ onMapHover(map,event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';});
  map.on('movestart',clearHover);map.on('moveend',updateLabels);map.on('resize',updateLabels);map.getCanvas().addEventListener('mouseleave',clearHover);
  const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/[^\p{L}\p{N}]/gu,'').toLowerCase();
  $('search').oninput=()=>{const q=normalize($('search').value),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const matches=[...index.values()].filter(f=>normalize(name(f.properties)).includes(q)).slice(0,18);for(const f of matches){const b=document.createElement('button');b.dataset.nav='';b.className='search-result';const strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=name(f.properties);small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||'Mongolia');b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length)box.textContent='No matching places.';};

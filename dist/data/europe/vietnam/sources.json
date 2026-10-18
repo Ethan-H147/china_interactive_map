@@ -1,0 +1,457 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "34 first-level units (25 provinces, nine centrally governed cities after the September 2026 status changes) and all 3,321 commune-level units under the two-tier system operating since July 2025. No abolished districts are introduced. Official unit codes and English/Vietnamese names from the retained September 2026 code list; July 2026 GIS export from the national mapping publisher through the attributed MIT dataset. The source includes Vietnamese claims to offshore island groups; mapped geometry follows this source and is not a determination of sovereignty. Local detail loads only per province; full retained resolution is available at close zoom. Published administrative population is included where a matching post-merger government series is available; missing figures are not estimated. Offshore Paracel and Spratly administrative sea/reef envelopes are replaced with retained detailed OpenStreetMap dry-land coastline inside the source envelopes; claims remain explicitly described.",
+  "counts": {
+    "1": 34,
+    "2": 3321
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "vn-identities": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/full_json_generated_data_vn_units.json",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "sha256": "423c456f19f754ec9410ce1930b5de89fb6d0b3698de274f361966303535248a",
+      "bytes": 1271566
+    },
+    "vn-metadata": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_metadata.json",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "sha256": "03b05fb77e622ba4d9d99740a026d2fe7d50d39270ea0723819cf53a0f750686",
+      "bytes": 97
+    },
+    "vn-archive": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "bytes": 49943442,
+      "sha256": "3e44d87ec775fea9159b2d8625add8d81aa7ea1dc8fe0d89b772b34d488353ee",
+      "archive": true
+    },
+    "vn-01": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "01",
+      "sha256": "cd6d1893360ea1c79c541fe354deaa3cdd62565cdda0b97d189156b647106197",
+      "bytes": 3107799
+    },
+    "vn-04": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "04",
+      "sha256": "ab41351ac5a0d2d61fd38c92776ad0393791a1e53787a07a02fdf3d589e86b87",
+      "bytes": 3003332
+    },
+    "vn-08": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "08",
+      "sha256": "9193006bf9ee2362898749bef8c91e4d16f7ea9068a8ec69c3b9d091dac6205a",
+      "bytes": 8587139
+    },
+    "vn-11": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "11",
+      "sha256": "cf5aebb9d934d3a3c4b2352c621242b6e7936e706bd9665fc8fa820efc5d4322",
+      "bytes": 3654092
+    },
+    "vn-12": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "12",
+      "sha256": "4e52a10b97b719de6bdbc23bf6949da5247770c063461d88e28104611444d464",
+      "bytes": 3950373
+    },
+    "vn-14": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "14",
+      "sha256": "9ab15670a0975cdebeb74b6cf16ae6a46e0dfc602fa5f7ccdf7b4d84d0ddfc0b",
+      "bytes": 4565014
+    },
+    "vn-15": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "15",
+      "sha256": "0c75c4c784657b2329596a8c716cf8c29b3cecb99f93afea4fbd0bb8082e1aaf",
+      "bytes": 5734844
+    },
+    "vn-19": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "19",
+      "sha256": "80bdb7eb8cfa3f7f26b20b991225af06d08f05b69962f2393fdd3d875dc45e2e",
+      "bytes": 4103084
+    },
+    "vn-20": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "20",
+      "sha256": "8cc5d6a53b37ee38fc626a2ebb8df1d333f35c48b20c425adcbe484d3fc3b35d",
+      "bytes": 4225835
+    },
+    "vn-22": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "22",
+      "sha256": "af5dc7b9026191c9a2cb2c56e2833f3293ea782bfd8ddad006768eaba9b35eb0",
+      "bytes": 4670629
+    },
+    "vn-24": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "24",
+      "sha256": "7b2b902f6226425cd29e10155ec7363b0bea545da8053a0998c4d187317322e2",
+      "bytes": 3610467
+    },
+    "vn-25": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "25",
+      "sha256": "337d3f966136eeb60da8c386f53bf2d8bf7ae5616847e139577af512510890a4",
+      "bytes": 6154609
+    },
+    "vn-31": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "31",
+      "sha256": "0aa78356ffd61a48a992d0f4dbb7f1a753aff5595844365677b9c5a3f37cf214",
+      "bytes": 2103369
+    },
+    "vn-33": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "33",
+      "sha256": "411b1bd882b6b497fb0dadb7a9f264f6ff4812d6b96102dfa2febebe8a85ac61",
+      "bytes": 1863657
+    },
+    "vn-37": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "37",
+      "sha256": "9a7986fc6094c6d8882dd6fd223aa1f7952b9ac775b12c92b47cb9ad0099afe8",
+      "bytes": 2426853
+    },
+    "vn-38": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "38",
+      "sha256": "25c8769527c144f01beab752a155bea0f0239ae4cb955ad0d0ecb597d2822533",
+      "bytes": 5462356
+    },
+    "vn-40": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "40",
+      "sha256": "4d919aae21ac2b89f88b724fe38bc1fec045f1d19a6f2df2939ec8c5f969aedf",
+      "bytes": 5922777
+    },
+    "vn-42": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "42",
+      "sha256": "4ad6be09939c2be7ce8c003bac2a732dd49ddc68ae2a6d61c9884c52a3b0499d",
+      "bytes": 2409966
+    },
+    "vn-44": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "44",
+      "sha256": "0bd739c8cb18d72c099da51e169309a629892de50de3d9be926b3cac97045a18",
+      "bytes": 4105441
+    },
+    "vn-46": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "46",
+      "sha256": "b7a07ba39929f45ff47c4bdd87c88bdeacc61646f779a2de2a5bc6efd4c57eeb",
+      "bytes": 3028691
+    },
+    "vn-48": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "48",
+      "sha256": "10a56d8f7c8851556d8f2c555b1db06be65ff538c52d342c853e8a1cc96504ba",
+      "bytes": 4034809
+    },
+    "vn-51": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "51",
+      "sha256": "e6046dec191826946cb0a5c716c642ee433d0f0a67b57b34b1f69c8f718747bf",
+      "bytes": 5049866
+    },
+    "vn-52": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "52",
+      "sha256": "174e434ee7298a3b6e69945d713a960025a779aa03068f315cf16b06df33b051",
+      "bytes": 9577536
+    },
+    "vn-56": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "56",
+      "sha256": "644a06be42b6d002f871f0f6e4eb7d0e79e5ab4e370572f2d23f9f87801422af",
+      "bytes": 3926548
+    },
+    "vn-66": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "66",
+      "sha256": "9926373f1f4f4555d4f0295b0e20fe1e04af42d2970cf55bfaecfd665c24df29",
+      "bytes": 9419465
+    },
+    "vn-68": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "68",
+      "sha256": "cc08a8aa4b37a586bbdf042b14d6a582da17ed8ad77490a32091085b312a924f",
+      "bytes": 12126083
+    },
+    "vn-75": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "75",
+      "sha256": "c6558f6a3cceb51fded4548b8de4851917b30ef113adea7b32e6d1b2876d910f",
+      "bytes": 8563335
+    },
+    "vn-79": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "79",
+      "sha256": "1f3b7e74c8e549ad41b8c5ae4cf85a5145bab7640a2685b9846fc98ff3938cc5",
+      "bytes": 5113397
+    },
+    "vn-80": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "80",
+      "sha256": "f75424995ec9bc88f282d917814215172a2fe19a9805ada76a442e6bd04ccc67",
+      "bytes": 3608505
+    },
+    "vn-82": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "82",
+      "sha256": "80adcc92c9397e3f4416326f077677386b207a1ccf237670ffbc494f54775cd9",
+      "bytes": 3746880
+    },
+    "vn-86": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "86",
+      "sha256": "b46a70c31d08ad019b853a20b194e823f1f3e30a79974f8f35304eff933c6371",
+      "bytes": 4338275
+    },
+    "vn-91": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "91",
+      "sha256": "ce18632f8d55a449758a40f5147d36b5fd90ab2f32602ff5382fc66e83ac87a1",
+      "bytes": 4579443
+    },
+    "vn-92": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "92",
+      "sha256": "50da4695da2a51f073a314bb0c382a5f8ce189b4e2ee574dedd5ec2da73b2f10",
+      "bytes": 3628703
+    },
+    "vn-96": {
+      "url": "https://raw.githubusercontent.com/ThangLeQuoc/vietnamese-provinces-database/8b78ba5118715e1fa81769286724db79346abf52/json/vn_provinces_wards_geojson.zip",
+      "provider": "Thang Le Quoc · national code list and GIS export from sapnhap.bando.com.vn",
+      "license": "MIT (dataset repository); underlying map attributed to Vietnam Publishing House of Natural Resources, Environment and Cartography",
+      "revision": "8b78ba5118715e1fa81769286724db79346abf52",
+      "geometryDate": "2026-07-25",
+      "namesDate": "2026-09-20",
+      "archiveMemberProvince": "96",
+      "sha256": "aaa49c4b8aae72144cc80c25c15cb30d3d5c613183b289028a201bda55e4ac83",
+      "bytes": 4974723
+    },
+    "vn-province-facts": {
+      "url": "https://vnpa.moh.gov.vn/tra-cuu-ban-do-dan-so-trung-tam-hanh-chinh-grdp-cua-34-tinh-thanh-sau-sap-nhap/",
+      "provider": "Vietnam Population Authority · province figures following the 2025 reorganisation",
+      "sha256": "017ba4099e9ee38d41d4a6d3b7c3d16076d3abe8528458fc7292521ec3da5a30",
+      "bytes": 297672
+    },
+    "vn-reform-population": {
+      "url": "https://xaydungchinhsach.chinhphu.vn/chi-tiet-34-don-vi-hanh-chinh-cap-tinh-tu-12-6-2025-119250612141845533.htm",
+      "provider": "Government of Vietnam · Resolution 202/2025, administrative population basis",
+      "sha256": "5132f4f1793ec479d263ba3026bc315457fdbb3987c0397df068df90ebf6b22c",
+      "bytes": 568444
+    },
+    "vn-paracels-land": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A150%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D(15.5%2C110.5%2C17.5%2C113)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · directed natural=coastline ways; land only, without administrative sea envelopes",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "8e6f8bec3cfc2258569877ab41756c910986d2acb28fa0a070b7f836f183ae11",
+      "bytes": 132141
+    },
+    "vn-spratlys-land": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A150%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D(7%2C109.5%2C12%2C117.5)%3Bout%20geom%3B",
+      "provider": "OpenStreetMap · directed natural=coastline ways; land only, without administrative sea envelopes",
+      "license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "sha256": "b103df503373e3a66397cad44e3a5cdebaf3e0afc87a302af5a32bd2bc98afe3",
+      "bytes": 2631542
+    },
+    "vn-september-city-upgrades": {
+      "url": "https://ttbc-hcm.gov.vn/9-thanh-pho-truc-thuoc-trung-uong-tu-20-9-2026-1022144.html",
+      "provider": "Ho Chi Minh City Press Center · nine centrally governed cities effective 20 September 2026",
+      "sha256": "bc985f309d9a199f4892d9bd5be7ab3b8971d9c2b5b8b8004c8efde8a6ba5644",
+      "bytes": 50465
+    },
+    "shared-frontier-reference": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "86b18f72ab2ad4a508cde3d2a357b28ddedcb489bb2395219d8a7bbb28c0a963",
+      "bytes": 2284668
+    }
+  }
+}

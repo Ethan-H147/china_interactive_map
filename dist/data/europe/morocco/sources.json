@@ -1,0 +1,135 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "12 regions, 75 provinces/prefectures and 1,502 mapped communes out of the 1,503 HCP identities. Names retain the source French and Arabic. Sidi Mohamed Benmansour (04.281.05.11) has no geometry; an approximately 88 km² source gap near Ifrane/Boulemane is retained, with no invented boundaries. Eight Casablanca prefectures of arrondissements are not treated as peer provinces. Parent outlines are unions of the retained commune land polygons, preserving holes. Only exterior edges beside Ceuta and Melilla are aligned to the atlas existing Spanish polygons, which retain ownership of the single shared frontier stroke. Boundaries follow the source Moroccan administrative hierarchy, including Western Sahara; this represents source coverage and does not determine sovereignty. Attributes: HCP, CC BY 4.0. Boundaries and derived spatial fields: © OpenStreetMap contributors, ODbL 1.0; the retained source snapshots and generated geometry are available for reuse under the same terms.",
+  "counts": {
+    "1": 12,
+    "2": 75,
+    "3": 1502
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "attributes/regions.json": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/attributes/regions.json",
+      "sha256": "d7c85e21a2705c8c380091c9e86542eea7294eb3f74b85c7b887f0581ca719bb",
+      "bytes": 5312,
+      "license": "CC BY 4.0"
+    },
+    "attributes/provinces.json": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/attributes/provinces.json",
+      "sha256": "6605a803adf8a32543168d40e5c44e6e7f937c3b91531c6f3891840eeab590c6",
+      "bytes": 39474,
+      "license": "CC BY 4.0"
+    },
+    "attributes/communes.json": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/attributes/communes.json",
+      "sha256": "a8840149a21d582af918893a84a85feb04c7acc6bc97e76e8f3738d5d1cd173b",
+      "bytes": 1753991,
+      "license": "CC BY 4.0"
+    },
+    "sources.json": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/sources.json",
+      "sha256": "70f3177ceab3da9a4892bfab15e85a5c78e3f361601b2be181af341331f0c17e",
+      "bytes": 6175,
+      "license": "See source manifest"
+    },
+    "geometry/README.md": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/README.md",
+      "sha256": "d65ce95fe304fccc81077f239a8131495cfea8a1335ad9876dddba006cc85454",
+      "bytes": 1639,
+      "license": "ODbL 1.0"
+    },
+    "geometry/LICENSE": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/LICENSE",
+      "sha256": "4f4bf6b6c9b459481be2585e05f87cd5d346084d35e145a7aae5efaf18799ecb",
+      "bytes": 488,
+      "license": "ODbL 1.0"
+    },
+    "geometry/01.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/01.topojson",
+      "sha256": "b87f93b717d223c1643f6047bd3c64842ad9a37f3704d5920ec94b252458e995",
+      "bytes": 281987,
+      "license": "ODbL 1.0"
+    },
+    "geometry/02.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/02.topojson",
+      "sha256": "954f069af0bf24ed78e35a30ed7b1761b3f56c737c949d474680d08fbe2eb85d",
+      "bytes": 259863,
+      "license": "ODbL 1.0"
+    },
+    "geometry/03.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/03.topojson",
+      "sha256": "3f6579e2be9aa4c17484c5e085e615f748978099cf6f315da7c5b6492ab89263",
+      "bytes": 196606,
+      "license": "ODbL 1.0"
+    },
+    "geometry/04.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/04.topojson",
+      "sha256": "8bbf0bf0b80505b379c3e241d466711099b676dd58409bd55b49ec88e1e192bc",
+      "bytes": 169561,
+      "license": "ODbL 1.0"
+    },
+    "geometry/05.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/05.topojson",
+      "sha256": "502de8304c7af333f16fdab326e69f16eda328907f0f8764bc0b405f2cf2ffa3",
+      "bytes": 92326,
+      "license": "ODbL 1.0"
+    },
+    "geometry/06.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/06.topojson",
+      "sha256": "f3627bc9543d1669bb5abfa453fc7a50ae73473984d68af0bc5211ad5e72c31b",
+      "bytes": 172208,
+      "license": "ODbL 1.0"
+    },
+    "geometry/07.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/07.topojson",
+      "sha256": "1d29fe92b8b348f5575e8143e1affc9a3a54afa0a3b210fb88efd0d2310b5b8a",
+      "bytes": 222847,
+      "license": "ODbL 1.0"
+    },
+    "geometry/08.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/08.topojson",
+      "sha256": "7e37f59b0eb7a06713e110973247d34de5e63c24eb6100d5aedef4aaca13ae10",
+      "bytes": 87701,
+      "license": "ODbL 1.0"
+    },
+    "geometry/09.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/09.topojson",
+      "sha256": "2cc36ab5d23a17c83fcb8266f36e6ad98b9bdd53679bda992c706d1e23637c5b",
+      "bytes": 148610,
+      "license": "ODbL 1.0"
+    },
+    "geometry/10.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/10.topojson",
+      "sha256": "8e73e58dd493051bdb3558415a0b1418d0ab734e8d3c6354ea08ccfbc6916a8a",
+      "bytes": 65237,
+      "license": "ODbL 1.0"
+    },
+    "geometry/11.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/11.topojson",
+      "sha256": "7abab30c1723e3833b1916e70719f496fc0d98cbc64ccc72f3a4fd5471611026",
+      "bytes": 107004,
+      "license": "ODbL 1.0"
+    },
+    "geometry/12.topojson": {
+      "url": "https://raw.githubusercontent.com/zkousama/morocco-communes/a3e0849d111ae4c7387327d5befbcca67443dc98/data/v1/geometry/12.topojson",
+      "sha256": "43eff1027bbad67ace5c367a80e9bbf7d23bdbf85addbdb3af94705e38467059",
+      "bytes": 163132,
+      "license": "ODbL 1.0"
+    },
+    "reference/frontiers.json": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669,
+      "license": "Public domain"
+    },
+    "canonicalSpain": {
+      "url": "data/europe/spain/first.bin",
+      "sha256": "883aa2dd17fc93a7c384666bffc8ec9a73c83d8c7a751a3a883e2b28ec525ea6",
+      "license": "See Spain boundary sources"
+    },
+    "upstreamRevision": {
+      "revision": "a3e0849d111ae4c7387327d5befbcca67443dc98",
+      "url": "https://github.com/zkousama/morocco-communes/tree/a3e0849d111ae4c7387327d5befbcca67443dc98"
+    }
+  }
+}

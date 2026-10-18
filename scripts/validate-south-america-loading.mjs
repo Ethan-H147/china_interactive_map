@@ -27,7 +27,7 @@ globalThis.Worker=class{
  postMessage({url}){workerLoads++;workerURLs.push(url);this.timer=setTimeout(()=>{if(failNextDDD&&url.endsWith('-ddd.bin')){failNextDDD=false;this.onmessage({data:{error:'Test network failure'}});return;}if(failNextMunicipality&&url.includes('/brazil-local/')){failNextMunicipality=false;this.onmessage({data:{error:'Test municipal network failure'}});return;}const payload=JSON.parse(gunzipSync(fs.readFileSync('dist/'+url)));this.onmessage({data:{records:payload.records,sources:{...Object.fromEntries(['regions','lines'].map(key=>[key,new Blob([JSON.stringify(key==='lines'&&(url.includes('/brazil-local/')||url.includes('/uruguay-local/'))?lineData(payload[key]):payload[key])])])),outlines:new Blob([JSON.stringify(lineData(payload.regions))])}}});},5);}
  terminate(){clearTimeout(this.timer);terminated++;}
 };
-const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;const map={
+const sources=new Map(),layers=new Map(),handlers=new Map();let tilesReady=true;const map={getCanvas:()=>({style:{},addEventListener(){},removeEventListener(){}}),
  addSource:(id,s)=>sources.set(id,s),getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),
  addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),getStyle:()=>({layers:[...layers.values()]}),removeLayer:id=>layers.delete(id),moveLayer(){},
  setLayoutProperty(id,key,value){(layers.get(id).layout||={})[key]=value;},setFilter(id,filter){layers.get(id).filter=filter;},setFeatureState(){},
@@ -60,7 +60,7 @@ for(const [source,layer,key] of [['south-land-borders','south-land-boundaries','
  const retained=sources.get(source),style=layers.get(layer);
  for(const field of ['tolerance','buffer','maxzoom'])assert.equal(retained[field],internationalLineSourceOptions[field],'Reuse the shared zoom-aware line settings: '+field);
  assert.deepEqual(retained.data,lineData(borderContext[key]),'Preserve the exact shared/official paths while adding visibility metadata');
- assert.deepEqual(style.paint['line-opacity'],adaptiveOpacity(),'Small paths fade continuously with zoom');
+ assert.deepEqual(style.paint['line-opacity'],internationalBorderPaint()['line-opacity'],'International borders retain the shared reference opacity');
  assert.deepEqual(style.paint,internationalBorderPaint(),'International borders use the universal paint');
  const count=tolerance=>{const tiles=new GeoJSONVT(retained.data,{maxZoom:18,extent:8192,buffer:128,tolerance:tolerance*8192/512});let points=0;for(let x=0;x<8;x++)for(let y=0;y<8;y++)points+=tiles.getTile(3,x,y)?.features.reduce((n,f)=>n+f.geometry.reduce((s,p)=>s+p.length,0),0)||0;return points;};
  console.log(source+' zoom 3 vertices:',count(0),'→',count(retained.tolerance));
@@ -150,7 +150,7 @@ atlas.portals.uruguay.leave();assert(![...sources.keys()].some(id=>id.startsWith
 country='brazil';await atlas.portals.brazil.warm();await atlas.portals.brazil.enter();
 assert.equal(workerURLs.filter(url=>url.endsWith('-ddd.bin')).length,0,'DDD is not fetched with the ordinary Brazil view');
 const sidebar=get('.workspace').children.find(e=>e.className==='sidebar south-america-sidebar');
-const mode=key=>sidebar.querySelector('[data-layer="'+key+'"]');
+const mode=key=>({onclick:()=>{const select=get('map-view');select.value=key;return select.onchange();}});
 tilesReady=false;const ddd=mode('ddd').onclick();
 const until=async predicate=>{for(let i=0;i<300&&!predicate();i++)await new Promise(r=>setTimeout(r,1));assert.ok(predicate(),'Expected map loading stage');};
 await until(()=>sources.has('south-brazil-ddd-regions'));

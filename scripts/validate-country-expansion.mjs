@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {load,polygons,landIndex,metres,linesOf} from './geo-index.mjs';
 import '../dist/countries.js';
-const expected={germany:{1:16,2:400,3:10978},belgium:{1:3,2:11,3:581},netherlands:{1:12,2:342},switzerland:{1:26,2:273,3:1985},'united-states':{1:65},canada:{1:13},mexico:{1:32}};
+const expected={germany:{1:16,2:400,3:10978},belgium:{1:3,2:11,3:581},netherlands:{1:18,2:342},switzerland:{1:26,2:273,3:1985},'united-states':{1:65,2:3235,3:50130},canada:{1:13,2:293,3:5161},mexico:{1:32}};
 const pins=JSON.parse(fs.readFileSync('scripts/country-expansion-sources.json'));
 for(const [country,counts]of Object.entries(expected)){
  const c=AtlasCountries.countries[country],root='dist/'+c.base,data=load(root+'catalogue.bin'),first=load(root+'first.bin'),context=load(root+'context.bin'),international=load(root+'international.bin'),stats=load(root+'statistics.json'),sources=load(root+'sources.json'),index=new Map(data.records.map(r=>[r.id,r]));
@@ -10,9 +10,12 @@ for(const [country,counts]of Object.entries(expected)){
  assert(context.features.length>0&&context.features.every(f=>f.geometry&&f.properties.country===country),country+' portal has real polygons');
  for(const r of data.records){
   assert(r.en&&r.kind&&r.center?.every(Number.isFinite)&&r.areaKm2>0,r.id+' metadata');
-  assert(r.level===1?r.parent===null:index.get(r.parent)?.level===r.level-1,r.id+' parent level');
+  assert(r.level===1?r.parent===null:index.get(r.parent)?.level===(country==='united-states'&&r.level===3?1:r.level-1),r.id+' parent level');
+  if(country==='united-states'&&r.level===3){assert(r.boundaryYear===2025&&typeof r.incorporated==='boolean');continue;}
   const s=stats.regions[country+':'+r.id];assert(s?.area.value>0,r.id+' area');
   if(r.populationStatus)assert(!s.population&&s.note.includes('No permanent population'),r.id+' has no invented resident count');
+  else if(country==='united-states'&&r.level===2&&!s.population){assert(+r.code.slice(0,2)>=60&&s.note,'Territorial equivalents retain explicitly unavailable population');}
+  else if(country==='canada'&&!s.population)assert(s.note?.includes('source does not publish'),'Unpublished estimate remains unavailable');
   else {assert(s.population?.value>=0,r.id+' population');assert(stats.sources[s.population.source]?.url,r.id+' recorded population source');}
  }
  for(const [parent,chunk]of Object.entries(data.chunks)){
@@ -21,16 +24,16 @@ for(const [country,counts]of Object.entries(expected)){
   assert(payload.regions.features.every(f=>index.get(f.properties.id)?.parent===parent),parent+' correct children');
   for(const f of payload.boundaries.features)assert(f.properties.owners.every(id=>index.has(id)),parent+' shared edge owners');
  }
- if(c.map.secondLabel){
+ if(c.map.secondLabel&&(c.map.bundledLevels>1||c.map.loadAllSubdivisions)){
   const bundle=load(root+'all.bin');assert.deepEqual(bundle.levels.map(p=>p.level),[1,2],country+' two initial levels');
   for(const level of bundle.levels)assert.equal(level.regions.features.length,counts[level.level],country+' bundle count');
- }else{
+ }else if(!c.map.secondLabel){
   assert.equal(data.levels.length,1,country+' only first-level units');assert.equal(Object.keys(data.chunks).length,0,country+' no lower-level chunks');
   assert(!c.controls.some(id=>/second|third/.test(id)),country+' no lower-level controls');
  }
  assert(sources.sources.every(s=>s.sha256===pins.files[s.file]?.sha256),country+' pinned sources');
  // A selected unit must actually cover its label point at every level.
- const parts=[first,...Object.values(data.chunks).map(chunk=>load(root+chunk.file))];
+ const parts=[first,...Object.values({...data.chunks,...data.thirdChunks}).map(chunk=>load(root+chunk.file))];
  for(const f of parts.flatMap(p=>p.regions.features)){
   assert(polygons(f.geometry).flat(2).every(p=>p.length===2&&p.every(Number.isFinite)),country+' finite 2D geometry');
   assert(landIndex(polygons(f.geometry).flat())(index.get(f.properties.id).center),f.properties.id+' inner label point');

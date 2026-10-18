@@ -9,7 +9,7 @@ const reviewedFiles=JSON.parse(fs.readFileSync('scripts/north-america-flag-files
 assert.equal(reviewedFiles['US-GA'],'Flag of the State of Georgia.svg','Georgia must explicitly identify the US state');
 const images=JSON.parse(fs.readFileSync('dist/data/flag-images.json'));
 for(const [country,count] of [['united-states',56],['canada',13]]){
- const records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/'+country+'/catalogue.bin'))).records.filter(r=>!r.populationStatus);
+ const records=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/'+country+'/catalogue.bin'))).records.filter(r=>r.level===1&&!r.populationStatus);
  const flags=northAmericaFlags[country].firstFlags;
  assert.equal(records.length,count);assert.deepEqual(Object.keys(flags).sort(),records.map(r=>r.id).sort());
  for(const r of records){

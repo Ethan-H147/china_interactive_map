@@ -1,0 +1,99 @@
+{
+ "retrieved": "2026-10-18",
+ "provider": "Statistics Canada 2021 cartographic boundaries, distributed by Agriculture and Agri-Food Canada (original, not the separate 1 km generalized service)",
+ "license": "Statistics Canada Open Licence",
+ "original": "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21",
+ "service": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer",
+ "files": {
+  "division-roster.json.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/2/query?f=geojson&where=1%3D1&outFields=*&returnGeometry=false",
+   "sha256": "fcfe4c85d5107f974f111669755d7c6194d1f72253b957b3f1f6a02a32ea7f28",
+   "bytes": 187535,
+   "count": 293
+  },
+  "municipal-roster.json.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=1%3D1&outFields=*&returnGeometry=false",
+   "sha256": "2554af78c10eeb5f1817b7d1c1a19d403e1b07aff0e94cc28a33875946852e4a",
+   "bytes": 4780120,
+   "count": 5161
+  },
+  "municipal-10.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D10&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "dff73a87b9b20c12ff8cc1c301a7f8fe16755dd5acc18ea2578f29497f8585eb",
+   "bytes": 118834523,
+   "count": 384
+  },
+  "municipal-11.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D11&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "5eb714de1ab04b3c4a357b5c01b7b8aacccb5e344bf60ed2128b120b5357f5aa",
+   "bytes": 1415093,
+   "count": 98
+  },
+  "municipal-12.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D12&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "9534602a8d8ac3888b81022ee48e0c479c2dfd61aa69097f2b2dbfe343d2fbfd",
+   "bytes": 8043470,
+   "count": 96
+  },
+  "municipal-13.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D13&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "b94e35e873837695761013e8add9b1d1622e51227d11e3a331befcfca962f817",
+   "bytes": 5467634,
+   "count": 278
+  },
+  "municipal-24.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D24&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "000e498c1fc59578d65cc9864d62f255da8c820d54767361ae3d05ca5efc2811",
+   "bytes": 62798594,
+   "count": 1284
+  },
+  "municipal-35.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D35&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "324ab06a20859e772a88b083287690fefa9fb9ba6a6000fad0041e6e7be0be2b",
+   "bytes": 102577209,
+   "count": 556
+  },
+  "municipal-46.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D46&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "6ace5f8f3ce577605bb504fe5fec1274222f5fbd2a8e1fb34a2e8e6baba984a8",
+   "bytes": 21217216,
+   "count": 255
+  },
+  "municipal-47.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D47&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "9b1d113fdbcaa59b89d4bf720524428872655f96f972cd68c2346a4a0ca6c682",
+   "bytes": 8849709,
+   "count": 946
+  },
+  "municipal-48.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D48&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "408e2c64038cb99e9b71958e882cbf376c3bdb4df71707b5be03de46a15b29dc",
+   "bytes": 7838123,
+   "count": 420
+  },
+  "municipal-59.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D59&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "d1efcf82c3ae17a743303e408102bd75406414b0cddfac2e973154cd9ba74a04",
+   "bytes": 77576184,
+   "count": 745
+  },
+  "municipal-60.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D60&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "49e75f0caf4ad0587d99b9b0e0105f1687ce8abc01ba7807de03e075b07cc738",
+   "bytes": 11563014,
+   "count": 34
+  },
+  "municipal-61.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D61&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "e838d4f3a3dc60c8aa0f482bc6abc8c9b8c36bade0f21f191daf0ca8f496514c",
+   "bytes": 29416490,
+   "count": 37
+  },
+  "municipal-62.geojson.gz": {
+   "url": "https://services.arcgis.com/lGOekm0RsNxYnT3j/ArcGIS/rest/services/Statistics_Canada_2021_census_boundaries/FeatureServer/4/query?f=geojson&where=PRUID%3D62&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6",
+   "sha256": "aecd62730e450c46bb595e519b737e695b8c33951bd70267cc65e3529b274de3",
+   "bytes": 1113315,
+   "count": 28
+  }
+ }
+}

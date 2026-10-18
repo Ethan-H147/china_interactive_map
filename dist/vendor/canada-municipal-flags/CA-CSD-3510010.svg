@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="448" height="224" viewBox="0 0 9600 4800">
+	<title>Flag of Kingston, Ontario</title>
+	<defs>
+		<path id="wave" d="m-360 3820c349 0 611-150 960-150 349 0 611 150 960 150 349 0 611-150 960-150 349 0 611 150 960 150 349 0 611-150 960-150 349 0 611 150 960 150 349 0 611-150 960-150 349 0 611 150 960 150 349 0 611-150 960-150 349 0 611 150 960 150 349 0 611-150 960-150"/>
+		<clipPath id="even">
+			<path d="m-1468 0v-171h2936V0zm0-307v-161h2936v161zm0-275v-136h2936v136zm0-275v-129h2936v129zm0-270v-139h2936v139zm0-260v-126h2936v126zm0-250v-127h2936v127z"/>
+		</clipPath>
+		<clipPath id="odd">
+			<path d="m-1468-171v-136h2936v136zm0-297v-114h2936v114zm0-250v-139h2936v139zm0-268v-141h2936v141zm0-280v-121h2936v121zm0-247v-124h2936v124z"/>
+		</clipPath>
+		<clipPath id="f">
+			<path d="m0 0h9600v4800H0z"/>
+		</clipPath>
+	</defs>
+	<path fill="#c8102e" d="m0 0h9600v4800H0z"/>
+	<g stroke="#000" stroke-linejoin="round" fill="none" stroke-width="28">
+		<g transform="translate(2520,3300)"> <!-- tower -->
+			<path fill="#fff" d="m-1344-1764v-276h2688v276zM-1468 0l77-1764h2782L1468 0zm-32-2040L0-2756l1500 716z"/>
+			<path stroke-width="10" d="m-1344-1810h2688m-2688-46h2688m-2688-46h2688m-2688-46h2688m-2688-46h2688"/>
+			<path stroke-width="19" d="m-1461-171h2922m-2916-136h2910m-2903-161h2896m-2891-114h2886m-2880-136h2874m-2868-139h2862m-2856-129h2850m-2844-141h416m460 0H543m460 0h416m-2832-139h2826m-2820-121h2814m-2809-126h2804m-2799-124h2794"/>
+			<path stroke-width="19" clip-path="url(#even)" d="m0 0v-1764"/>
+			<g id="left">
+				<path stroke-width="19" d="m0-2756-1098 716M0-2756l-402 716"/>
+				<path d="m-984-1764v-276m624 276v-276"/>
+				<g clip-path="url(#even)">
+					<path stroke-width="10" d="m-1440 0 76-1764"/>
+					<path stroke-width="12" d="m-1356 0 71-1764"/>
+					<path stroke-width="14" d="m-1221 0 64-1764"/>
+					<path stroke-width="16" d="m-1038 0 54-1764"/>
+					<path stroke-width="17" d="m-816 0 18-718m13-548 12-498"/>
+					<path stroke-width="19" d="m-562 0 30-1764M-286 0l15-1764"/>
+				</g>
+				<g clip-path="url(#odd)">
+					<path stroke-width="9" d="m-1461 0 77-1764"/>
+					<path stroke-width="11" d="m-1405 0 74-1764"/>
+					<path stroke-width="13" d="m-1295 0 68-1764"/>
+					<path stroke-width="15" d="m-1135 0 60-1764"/>
+					<path stroke-width="17" d="m-931 0 20-718m15-548 14-498"/>
+					<path stroke-width="18" d="m-692 0 15-718m11-548 10-498"/>
+					<path stroke-width="19" d="m-426 0 22-1764M-144 0l8-1764"/>
+				</g>
+				<path stroke="none" fill="#000" d="m-933-718 9-302a1 1 0 0 1 278 0l-6 302zm789-1138v-184h288v184zm-1092 0v-184h144v184zm439 0v-184h250v184z"/>
+				<path stroke-width="17"  d="m-791-1020-212-107m212 107-178-246m178 246-58-246m58 246 73-246m-73 246 212-246m-212 246 248-107"/>
+			</g>
+			<use transform="scale(-1,1)" xlink:href="#left"/>
+			<circle fill="#fff" r="72" cy="-2808"/>
+		</g>
+		<g transform="translate(7320,2262)"> <!-- crowns -->
+			<g id="crown">
+				<path fill="#ffc72c" d="m-511-586 224 337 24-425 155 404L0-688l108 418 155-404 24 425 224-337L319 4a320 60 0 0 1-638 0z"/>
+				<path d="m-319 4a320 60 0 1 1 638 0"/>
+				<path stroke="none" fill="#000" d="m-335-44a335 63 0 1 1 670 0L319 4a320 60 0 1 0-638 0zm-32-100a368 69 0 1 1 734 1l-9 29a358 67 0 1 0-716-1z"/>
+			</g>
+			<use x="-685" y="-940" xlink:href="#crown"/>
+			<use x="685" y="-940" xlink:href="#crown"/>
+		</g>
+	</g>
+	<g clip-path="url(#f)"> <!-- water -->
+		<use  xlink:href="#wave" stroke="#000" stroke-width="1190"/>
+		<use  xlink:href="#wave" stroke="#fff" stroke-width="1134"/>
+		<use  xlink:href="#wave" stroke="#0033A0" stroke-width="378"/>
+	</g>
+</svg>

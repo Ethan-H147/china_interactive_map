@@ -42,8 +42,17 @@ Dates use America/Chicago. "Added" means the first implementation in the atlas, 
 | 2026-10-17 | United States | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | Vatican City | — | Local implementation; sovereign country opened as a subpage of Italy. Not deployed. |
 | 2026-10-17 | Denmark | Local implementation | Five regions, 98 municipalities and Christiansø, including Greenland and the Faroe Islands with their own subdivisions and focused entry. |
+| 2026-10-17 | Australia | Local implementation | States, local government areas and all external territories; not deployed. |
+| 2026-10-17 | New Zealand | Local implementation | Regions, territorial authorities, offshore islands and Realm partners; not deployed. |
+| 2026-10-18 | Ireland | Local implementation | Three regions, 31 local authorities and 100 municipal districts; not deployed. |
+| 2026-10-18 | Portugal | Local implementation | Districts, Azores, Madeira, 308 municipalities and all 3,258 CAOP2025 civil parishes; Corvo has no parish; not deployed. |
+| 2026-10-18 | Thailand | Local implementation | 76 provinces plus Bangkok; districts and subdistricts; not deployed. |
+| 2026-10-18 | Vietnam | Local implementation | 34 provincial units and 3,321 commune-level units; current two-tier structure; not deployed. |
 
 The machine-readable log is [dist/data/country-history.json](../dist/data/country-history.json). Add an entry whenever a country is added to countries.js; npm run test:entry checks that every country has a date. Keep later releases and coverage expansions separate from the original addition date.
 
 
 US territory expansion — 17 October 2026, local: added the five inhabited US territories and all nine Minor Outlying Islands within the US page. This does not change the United States’ original addition date or the country count. See [US territories](us-territories.md).
+
+
+Netherlands Caribbean expansion — 18 October 2026, local: Aruba, Curaçao, Sint Maarten, Bonaire, Sint Eustatius and Saba. The original Netherlands addition date is unchanged.

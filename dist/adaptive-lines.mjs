@@ -3,7 +3,7 @@ import {splitLinePaths} from './korea-lines.mjs';
 const mercatorY=lat=>(1-Math.log(Math.tan(Math.PI/4+lat*Math.PI/360))/Math.PI)/2;
 // A line's projected footprint controls when an island outline becomes useful.
 // This is evaluated continuously by the GPU; no geometry swaps occur during motion.
-export function lineData(input){
+export function lineData(input,{minimumPixels=1.5,areaSensitive=false}={}){
  const collection=input.type==='FeatureCollection'?input:input.type==='Feature'?{type:'FeatureCollection',features:[input]}:{type:'FeatureCollection',features:[{type:'Feature',properties:{},geometry:input}]};
  const result=[];
  for(const f of collection.features){
@@ -13,9 +13,17 @@ export function lineData(input){
    const x=path.map(p=>p[0]/360),y=path.map(p=>mercatorY(p[1]));
    let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
    for(let i=0;i<path.length;i++){minX=Math.min(minX,x[i]);maxX=Math.max(maxX,x[i]);minY=Math.min(minY,y[i]);maxY=Math.max(maxY,y[i]);}
-   const span=Math.hypot(maxX-minX,maxY-minY)*512;
-   // Fade between a 1.5 px and 4 px diagonal; every path is fully visible up close.
-   const visibleZoom=span>0?Math.log2(1.5/span):24;
+   let span=Math.hypot(maxX-minX,maxY-minY)*512;
+   if(areaSensitive&&path.length>3&&path[0][0]===path.at(-1)[0]&&path[0][1]===path.at(-1)[1]){
+    // Long, narrow islands and holes should not acquire thick outlines while
+    // their filled area is still only a handful of pixels. Translate first to
+    // keep the shoelace calculation accurate for tiny municipal polygons.
+    let area=0;for(let i=1;i<path.length;i++)area+=(x[i-1]-x[0])*(y[i]-y[0])-(x[i]-x[0])*(y[i-1]-y[0]);
+    span=Math.min(span,2*Math.sqrt(Math.abs(area)/2)*512);
+   }
+   // The standard profile fades from 1.5 to 4 px; selection outlines use a
+   // larger footprint. The existing GPU fade restores every ring up close.
+   const visibleZoom=span>0?Math.log2(minimumPixels/span):24;
    const properties={...f.properties,visibleZoom};
    result.push(...splitLinePaths([path],properties).features);
   }

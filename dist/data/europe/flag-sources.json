@@ -227,6 +227,83 @@
       "width": 37,
       "height": 28,
       "sha256": "f27c3fa734ea66c662061219e8cc21f886cf36f798f822fca27e55c84afe8648"
+    },
+    "australia": {
+      "file": "vendor/flag-au.svg",
+      "full": "vendor/flag-au.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Australia.svg",
+      "credit": "Original: Ivor Evans, Leslie John Hawkins, Egbert John Nuttall, Annie Dorrington and William Stevens Vector:  Ian Fieggen",
+      "license": "Public domain",
+      "width": 1280,
+      "height": 640,
+      "sha256": "8ccf95cf3507e88d10aa57a1e3b3853d72933c6784e6f67fe3cd3bf12ea68a4d"
+    },
+    "new-zealand": {
+      "file": "vendor/flag-nz.svg",
+      "full": "vendor/flag-nz.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Zealand.svg",
+      "credit": "Original: Albert Hastings Markham Vector:  Zscout370, Hugh Jass, s. File history",
+      "license": "Public domain",
+      "width": 1200,
+      "height": 600,
+      "sha256": "e4b1bc62d8283cbefc000b9538d6cb58019b18651bb9e0818ccaffa9ed8716f1"
+    },
+    "ireland": {
+      "file": "vendor/flag-ie.svg",
+      "full": "vendor/flag-ie.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ireland.svg",
+      "credit": "Éire",
+      "license": "Public domain",
+      "width": 1200,
+      "height": 600,
+      "sha256": "96c46e68d8588fd10d30bcb3ff7b9ab4ffb08c41902aa5455c99722bce676e69"
+    },
+    "portugal": {
+      "file": "vendor/flag-pt.svg",
+      "full": "vendor/flag-pt.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Portugal.svg",
+      "credit": "Original: Columbano Bordalo Pinheiro (1910; generic design) Vector:  Vítor Luís Rodrigues; António Martins-Tuválkin (2004; this specific vector set: see sources)",
+      "license": "Public domain",
+      "width": 600,
+      "height": 400,
+      "sha256": "20ddeda8a3c2960f6d8d7cf88cec827aad537143431a0828e789f55d0cd923ce"
+    },
+    "thailand": {
+      "file": "vendor/flag-th.svg",
+      "full": "vendor/flag-th.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Thailand.svg",
+      "credit": "Zscout370",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "sha256": "f137bb494e00c3c29e9d03fbf4d15c2650d82f2a8f02cf51341f6a4557117db9"
+    },
+    "vietnam": {
+      "file": "vendor/flag-vn.svg",
+      "full": "vendor/flag-vn.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Vietnam.svg",
+      "credit": "See File history below for details.",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "sha256": "175120e06bb95dda22133758395f352acb46433ff81eee449326db54e78af2c4"
+    },
+    "morocco": {
+      "file": "vendor/flag-ma.svg",
+      "full": "vendor/flag-ma.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Morocco.svg",
+      "credit": "Denelson83, Zscout370",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "sha256": "576f97976dfd505c002d39b34eeef0f95f29e6396e26870b0a3887d7bb8e42b4"
     }
   }
 }

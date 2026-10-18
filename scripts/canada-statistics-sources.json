@@ -1,0 +1,21 @@
+{
+ "retrieved": "2026-10-18",
+ "files": {
+  "population-2025.csv": {
+   "table": "17100155",
+   "url": "https://www150.statcan.gc.ca/n1/tbl/csv/17100155-eng.zip",
+   "sha256": "095c9fd3c4573eb9f89b937336bc2b9d4898a3da4c7756ddc6f243102796781b",
+   "bytes": 16725682,
+   "retained": "scripts/statistics-sources/canada/population-2025.csv.gz",
+   "license": "Statistics Canada Open Licence"
+  },
+  "census-area.csv": {
+   "table": "98100004",
+   "url": "https://www150.statcan.gc.ca/n1/tbl/csv/98100004-eng.zip",
+   "sha256": "57f0f87e6cf53fa1df4b4a3e4ffdb0587fdd00bc7bd79e09a7ec121d8e064643",
+   "bytes": 734473,
+   "retained": "scripts/statistics-sources/canada/census-area.csv.gz",
+   "license": "Statistics Canada Open Licence"
+  }
+ }
+}

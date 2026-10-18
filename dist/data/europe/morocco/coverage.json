@@ -1,0 +1,24 @@
+{
+  "revision": "a3e0849d111ae4c7387327d5befbcca67443dc98",
+  "identityCounts": {
+    "regions": 12,
+    "provinces": 75,
+    "communes": 1503
+  },
+  "mappedCounts": {
+    "regions": 12,
+    "provinces": 75,
+    "communes": 1502
+  },
+  "missingGeometry": [
+    {
+      "code": "04.281.05.11",
+      "name": {
+        "fr": "Sidi Mohamed Benmansour",
+        "ar": "سيدي محمد بنمنصور"
+      },
+      "population2024": 24703
+    }
+  ],
+  "nationalPopulation2024": 36828330
+}

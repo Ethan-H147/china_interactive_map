@@ -18,7 +18,9 @@ try{
   modules.AtlasChinaLevels='china-levels.mjs';
   modules.AtlasSheet='mobile-sheet.mjs';
   modules.AtlasCountryLoader='country-loader.mjs';
+  modules.AtlasCameraFit='camera-fit.mjs';
   modules.AtlasMapScene='map-scene.mjs';
+  modules.AtlasPointer='pointer-performance.mjs';
   modules.AtlasGeoPack='geo-pack.mjs';
   modules.AtlasChinaSources='china-sources.mjs';
   const rendererPromise=import('./vendor/maplibre-gl.mjs');

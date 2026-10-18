@@ -1,0 +1,1 @@
+import{retain}from'./mainland-seasia-sources.mjs';const url='https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson';await retain('shared-frontier-reference',url,{provider:'Natural Earth v5.1.2 · international boundary reference topology',license:'Public domain'});

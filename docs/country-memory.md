@@ -6,6 +6,8 @@ The application keeps detailed data for at most three countries: the active coun
 
 All adapters expose `unload()`. It releases detailed MapLibre layers and sources, object URLs, catalogues, search indexes and selected-place DOM references. China also releases its county data, quiz records and water overlay. The shared eviction callback clears country motion blobs/workers, statistics, comparison profiles and color-data caches. Recent countries retain whatever reusable data their adapter normally keeps on leaving; three is a ceiling, not a requirement to retain all geometry.
 
+US county, municipal, area-code and ZIP-area geometry loads for one state or territory at a time. Changing the parent, changing map type or leaving the US removes those detailed sources and revokes their object URLs. Nationwide search uses small catalogues without retaining every state’s geometry; the US still occupies one country slot.
+
 Flags load as the interface needs them instead of decoding every regional and city flag on country entry. Browser HTTP and service-worker disk caches can still make returning to an unloaded country faster; those caches do not keep the decoded country dataset alive in the page.
 
 Checks:

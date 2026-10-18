@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {gunzipSync} from 'node:zlib';
 import vm from 'node:vm';
 import {lineData} from '../dist/adaptive-lines.mjs';
+import {selectionLineData} from '../dist/outline-detail.mjs';
 import {polygonParts} from '../dist/polygon-parts.mjs';
 import {MAX_LINE_POINTS} from '../dist/korea-lines.mjs';
 const root='dist/data/southern-africa',read=(c,n)=>JSON.parse(gunzipSync(fs.readFileSync(root+'/'+c+'/'+n))),countries=['south-africa','eswatini','lesotho'];
@@ -40,7 +41,7 @@ for(const part of bundle.levels){
  assert.deepEqual(part.regions.features.map(f=>f.properties.id).sort(),catalogue.records.filter(r=>r.level===part.level).map(r=>r.id).sort());
 }
 let response;
-const worker=vm.createContext({Blob,lineData,polygonParts,loadCompressed:async()=>bundle,self:{postMessage:r=>{response=r;}}});
+const worker=vm.createContext({Blob,TextEncoder,lineData,selectionLineData,polygonParts,loadCompressed:async()=>bundle,self:{postMessage:r=>{response=r;}}});
 vm.runInContext(fs.readFileSync('dist/country-boundary-worker.mjs','utf8').replace(/^import .*;\r?\n/gm,''),worker);
 await worker.self.onmessage({data:{url:'all.bin'}});
 assert(!response.error);assert.equal(response.levels.length,3);

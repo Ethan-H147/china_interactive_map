@@ -47,9 +47,26 @@ jobs:
         with:
           name: browser-test-screenshots-${{ matrix.shard }}
           path: artifacts/browser-tests/
+  stability-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - name: Audit identities, hierarchy, geometry, coverage, overlaps and quiz pools
+        run: npm run test:stability-data
+      - name: Save data audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-data-audit
+          path: artifacts/stability/
   deploy:
-    needs: browser-tests
-    if: ${{ !cancelled() && (needs.browser-tests.result == 'success' || needs.browser-tests.result == 'skipped') }}
+    needs: [browser-tests, stability-data]
+    if: ${{ !cancelled() && (needs.browser-tests.result == 'success' || needs.browser-tests.result == 'skipped') && needs.stability-data.result == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

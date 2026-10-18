@@ -1,0 +1,13 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import {gzipSync,gunzipSync} from 'node:zlib';
+export const directory='artifacts/us-source';
+export const sourceDefinitions={
+ 'counties.zip':{url:'https://www2.census.gov/geo/tiger/GENZ2025/shp/cb_2025_us_county_500k.zip',provider:'US Census Bureau · 2025 counties and county equivalents, 1:500,000',license:'Public domain'},
+ 'population.csv':{url:'https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/counties/totals/co-est2025-alldata.csv',provider:'US Census Bureau · 1 July 2025 county population estimates',license:'Public domain'},
+ 'nanpa.csv':{url:'https://reports.nanpa.com/public/npa_report.csv',provider:'NANPA · NPA database, 17 October 2026 snapshot',license:'Public numbering assignments'},
+ 'area-codes.geojson':{url:'https://raw.githubusercontent.com/1ec5/nanp-boundaries/4f7e2bd24443160d71420b8885dc6af04a5fe0a8/area-codes.geojson',provider:'UCLA Geoportal · North America Telephone Area Code Boundaries, 14 October 2015, preserved by 1ec5',license:'Public domain',licenseUrl:'https://github.com/1ec5/nanp-boundaries/blob/4f7e2bd24443160d71420b8885dc6af04a5fe0a8/LICENSE.md'}
+};
+// Tests can use retained mutable snapshots without a build cache or network.
+export function readUSSource(file){const cache=directory+'/'+file,retained='scripts/boundary-sources/united-states/'+file+'.gz';return fs.existsSync(cache)?fs.readFileSync(cache):fs.existsSync(retained)?gunzipSync(fs.readFileSync(retained)):null;}
+export async function fetchUSDetails(names=Object.keys(sourceDefinitions)){fs.mkdirSync(directory,{recursive:true});const pinFile='scripts/us-detail-sources.json',pins=fs.existsSync(pinFile)?JSON.parse(fs.readFileSync(pinFile)):{retrieved:'2026-10-17',files:{}};for(const file of names){const source=sourceDefinitions[file];const target=directory+'/'+file,retained='scripts/boundary-sources/united-states/'+file+'.gz';if(!fs.existsSync(target)){if(fs.existsSync(retained))fs.writeFileSync(target,gunzipSync(fs.readFileSync(retained)));else {const r=await fetch(source.url,{signal:AbortSignal.timeout(300000)});if(!r.ok)throw Error(source.url+' '+r.status);fs.writeFileSync(target,Buffer.from(await r.arrayBuffer()));}}const bytes=fs.readFileSync(target),sha256=createHash('sha256').update(bytes).digest('hex');if(pins.files[file]?.sha256&&pins.files[file].sha256!==sha256)throw Error(file+' differs from pinned snapshot');pins.files[file]={...source,sha256,bytes:bytes.length};if(file==='nanpa.csv'){fs.mkdirSync('scripts/boundary-sources/united-states',{recursive:true});fs.writeFileSync(retained,gzipSync(bytes,{level:9}));}}fs.writeFileSync(pinFile,JSON.stringify(pins,null,2)+'\n');return pins;}

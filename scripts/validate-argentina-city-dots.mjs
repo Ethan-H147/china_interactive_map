@@ -8,14 +8,15 @@ assert.equal(cityDescription({en:'Banfield',boundaryName:'Lomas de Zamora',bound
 assert.equal(cityDescription({en:'Rosario',boundaryName:'Rosario',boundaryAvailable:true}),'City · Municipal boundary');
 assert.match(cityDescription({en:'La Banda',boundaryAvailable:false}),/pending/);
 let active=false,enabled=true,selected=null,query=[];
+const frames=[];globalThis.requestAnimationFrame=fn=>{frames.push(fn);return frames.length;};globalThis.cancelAnimationFrame=()=>{};
 const sources=new Map(),layers=new Map(),handlers=new Map(),states=[];
-const canvas={style:{},title:''};
+const canvas={style:{},title:'',addEventListener(){},removeEventListener(){}};
 const map={addSource:(id,data)=>sources.set(id,data),getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer:l=>layers.set(l.id,l),getLayer:id=>layers.get(id),removeLayer:id=>layers.delete(id),setLayoutProperty(id,k,v){(layers.get(id).layout||={})[k]=v;},setFeatureState:(id,state)=>states.push({id,state}),on:(name,fn)=>handlers.set(name,fn),queryRenderedFeatures:()=>query,project:p=>({x:p[0],y:p[1]}),getCanvas:()=>canvas};
 const records=[{id:'a',en:'Banfield',level:3,point:[100,100]},{id:'b',en:'Temperley',level:3,point:[106,106]}];
 const dots=createCityDots(map,{active:()=>active,enabled:()=>enabled,selected:()=>selected});assert.equal(sources.size,0);
 active=true;dots.install(records);assert.equal(sources.size,1);assert.equal(layers.get('argentina-city-dots').type,'circle');
 query=records.map(r=>({properties:{id:r.id}}));assert.equal(dots.hit({x:105,y:105}).id,'b','Nearest city wins in a cluster');
-handlers.get('mousemove')({point:{x:105,y:105}});assert.equal(canvas.title,'Temperley');assert.equal(canvas.style.cursor,'pointer');
+handlers.get('mousemove')({point:{x:105,y:105}});while(frames.length)frames.shift()();assert.equal(canvas.title,'Temperley');assert.equal(canvas.style.cursor,'pointer');
 selected=records[0];dots.sync();assert.equal(states.at(-1).id.id,'a');selected=records[1];dots.sync();assert.deepEqual(states.slice(-2).map(s=>s.state.selected),[false,true]);
 enabled=false;dots.sync();assert.equal(layers.get('argentina-city-dots').layout.visibility,'none');assert.equal(dots.hit({x:105,y:105}),undefined,'Hidden dots cannot steal a department click');assert.equal(canvas.title,'');assert.equal(canvas.style.cursor,'');assert.equal(selected.id,'b','Hiding dots retains the selected municipal boundary');
 enabled=true;dots.sync();assert.equal(layers.get('argentina-city-dots').layout.visibility,'visible');assert.equal(dots.hit({x:105,y:105}).id,'b');

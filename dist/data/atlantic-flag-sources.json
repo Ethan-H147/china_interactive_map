@@ -1,0 +1,93 @@
+{
+  "retrieved": "2026-10-18",
+  "flags": {
+    "PT-AC": {
+      "file": "vendor/atlantic-flags/PT-AC.webp",
+      "full": "vendor/atlantic-flags/PT-AC.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Flag_of_the_Azores.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Azores.svg",
+      "credit": "Tonyjeff",
+      "license": "Public domain",
+      "width": 844,
+      "height": 562,
+      "sha256": "948a2270a492694fdea64fe80e22d3a5c1746de8dbcd768df4ce663766a39886"
+    },
+    "PT-MA": {
+      "file": "vendor/atlantic-flags/PT-MA.webp",
+      "full": "vendor/atlantic-flags/PT-MA.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_Madeira.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Madeira.svg",
+      "credit": "Original:  Brian Boru Vector:  Nuno Tavares",
+      "license": "CC BY-SA 1.0",
+      "width": 1200,
+      "height": 800,
+      "sha256": "0ffdf650a6de625bb8a10ba0f50ebd162e337b288a3d1d97eb036ab74129c7b2"
+    },
+    "NL-AW": {
+      "file": "vendor/atlantic-flags/NL-AW.webp",
+      "full": "vendor/atlantic-flags/NL-AW.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Aruba.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Aruba.svg",
+      "credit": "Original: Whitney Smith Vector:  Wester",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "sha256": "36ccbc50112a928cb2b9fe3737a52619a54342ab93164486e8ee5a6add4e2996"
+    },
+    "NL-CW": {
+      "file": "vendor/atlantic-flags/NL-CW.webp",
+      "full": "vendor/atlantic-flags/NL-CW.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_Cura%C3%A7ao.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Cura%C3%A7ao.svg",
+      "credit": "Original: Unknown Vector:  David Benbennick",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "sha256": "b9e715071845eb35562310ebff1f869b73e7f1fb5a13f9344b2bb7f218841cfd"
+    },
+    "NL-SX": {
+      "file": "vendor/atlantic-flags/NL-SX.webp",
+      "full": "vendor/atlantic-flags/NL-SX.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Sint_Maarten.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sint_Maarten.svg",
+      "credit": "User:Shervinafshar, based on work of User:Washiucho. Earlier non-PD versions by User:SiBr4, User:Fry1989, and User:Andrwsc.",
+      "license": "Public domain",
+      "width": 675,
+      "height": 450,
+      "sha256": "9258f024b05d8a365b785f550b061d280b3579a95058336b557339c84333fe48"
+    },
+    "NL-BQ1": {
+      "file": "vendor/atlantic-flags/NL-BQ1.webp",
+      "full": "vendor/atlantic-flags/NL-BQ1.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Flag_of_Bonaire.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bonaire.svg",
+      "credit": "Mike Rohsopht",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "sha256": "9d45ce5733ac212bbffcc25838d744054f50c05c1c5091a484378360fb8a25d5"
+    },
+    "NL-BQ2": {
+      "file": "vendor/atlantic-flags/NL-BQ2.webp",
+      "full": "vendor/atlantic-flags/NL-BQ2.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Flag_of_Saba.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Saba.svg",
+      "credit": "Wikimedia Commons",
+      "license": "CC BY-SA 3.0",
+      "width": 750,
+      "height": 500,
+      "sha256": "44aa575e08fc69a36f578d6667a5c9c6fc17fdbd43e1d981aeb38522c513bccb"
+    },
+    "NL-BQ3": {
+      "file": "vendor/atlantic-flags/NL-BQ3.webp",
+      "full": "vendor/atlantic-flags/NL-BQ3.svg",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_Sint_Eustatius.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Sint_Eustatius.svg",
+      "credit": "User:Andrwsc",
+      "license": "CC BY-SA 4.0",
+      "width": 900,
+      "height": 600,
+      "sha256": "86f32dff0303860da24b7ab63c89ca7df6053332b95a6e67090b95723c3a7eb7"
+    }
+  }
+}

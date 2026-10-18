@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {gunzipSync} from 'node:zlib';import {createHash} from 'node:crypto';
+import {prepareIndiaNames} from './prepare-india-names.mjs';import {profiles,languageLabels} from './india-language-profiles.mjs';import {createPlaceSearch} from '../dist/place-search.mjs';
+const root='dist/data/europe/india/',data=JSON.parse(fs.readFileSync(root+'regional-names.json')),catalogue=JSON.parse(gunzipSync(fs.readFileSync(root+'catalogue.bin'))),source=JSON.parse(fs.readFileSync('scripts/name-sources/india/wikidata.json'));
+assert.equal(Object.keys(data.records).length,36);assert.equal(Object.keys(profiles).length,36);assert.equal(catalogue.records.length,36);let names=0,languages=0;
+for(const r of catalogue.records){
+ const profile=data.records[r.id],codes=[...new Set([profiles[r.code][0],...profiles[r.code][1].split(' ')])];assert(profile);assert(source.entities[profile.wikidata]);assert(profile.primary.text);assert.equal(r.local,profile.primary.text);assert.equal(r.localLang,profile.primary.lang);assert.equal(r.localDir,profile.primary.dir);
+ assert.deepEqual([...profile.names.map(n=>n.code),...profile.otherLanguages.map(n=>n.code)].sort(),codes.sort(),'Coverage is independent of name availability: '+r.id);
+ for(const n of profile.names){assert(n.text&&n.language&&n.lang&&n.source.startsWith('https://'));assert(languageLabels[n.code]);assert(['ltr','rtl'].includes(n.dir));if(n.romanized)assert(n.lang.endsWith('-Latn'));assert(r.aliases.includes(n.text));names++;}
+ for(const n of profile.otherLanguages){assert(n.language&&n.sources.length);assert(!Object.hasOwn(n,'text'),'Missing attestations never become guessed translations');languages++;}
+ assert.equal(new Set(r.regionalNames.map(n=>n.code)).size,r.regionalNames.length);assert(profile.names.every(n=>!['de','fr','ja','es','ru','zh','war','zaiwa','bru'].includes(n.code)),'Unrelated foreign-language exonyms stay out of the regional profile');
+}
+const record=id=>catalogue.records.find(r=>r.id===id),regional=(id,code)=>data.records[id].names.find(n=>n.code===code);
+assert.equal(record('IN-TN').local,'தமிழ்நாடு');assert.equal(record('IN-KL').local,'കേരളം');assert.equal(record('IN-PB').local,'ਪੰਜਾਬ');assert.equal(record('IN-KA').local,'ಕರ್ನಾಟಕ');assert.equal(record('IN-GA').local,'गोंय');assert.equal(record('IN-MN').localLang,'mni');
+assert.equal(regional('IN-AS','brx').text,'आसाम');assert.equal(regional('IN-TR','trp').text,'Twipra');assert.equal(regional('IN-LD','dv').dir,'rtl');assert.equal(regional('IN-JK','ks').dir,'rtl');assert.match(regional('IN-JH','sat').text,/\p{Script=Ol_Chiki}/u);assert.match(record('IN-LA').local,/\p{Script=Tibetan}/u);
+for(const code of ['sip','lep','lif'])assert(regional('IN-SK',code).romanized);assert(data.records['IN-JH'].otherLanguages.some(n=>n.code==='hoc'));assert(data.records['IN-NL'].otherLanguages.some(n=>n.code==='ao'));
+const search=createPlaceSearch(catalogue.records);for(const [query,id]of [['தமிழ்நாடு','IN-TN'],['കേരളം','IN-KL'],['ਪੰਜਾਬ','IN-PB'],['ᱡᱷᱟᱨᱠᱷᱚᱸᱰ','IN-JH'],['Twipra','IN-TR'],['Nye-mae-el','IN-SK']])assert(search(query).some(r=>r.id===id),'Regional-name search '+query);
+const hash=()=>createHash('sha256').update(fs.readFileSync(root+'catalogue.bin')).digest('hex'),before=hash();prepareIndiaNames();assert.equal(hash(),before,'Rebuilds retain aliases and stable metadata');
+console.log('India names: '+names+' attested forms, '+languages+' language-presence records; 36 exact identities, proper primary scripts, RTL, traditional forms, native search and idempotent build passed.');

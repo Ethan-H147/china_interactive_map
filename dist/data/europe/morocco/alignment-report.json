@@ -1,0 +1,19 @@
+[
+  {
+    "region": "ES-A-18",
+    "changedEdges": 341,
+    "maxDisplacementMetres": 167.26924400874103,
+    "changedRegions": [
+      "MA-01.573.01.01",
+      "MA-01.573.01.09"
+    ]
+  },
+  {
+    "region": "ES-A-19",
+    "changedEdges": 140,
+    "maxDisplacementMetres": 425.1471049620766,
+    "changedRegions": [
+      "MA-02.381.01.03"
+    ]
+  }
+]

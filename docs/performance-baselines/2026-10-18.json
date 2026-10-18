@@ -1,0 +1,312 @@
+{
+  "at": "2026-10-18T18:26:05.682Z",
+  "viewport": [
+    1280,
+    900
+  ],
+  "memoryMethod": "Windows browser process tree, sampled roughly every 500 ms plus enumeration time. Working sets are summed and can double-count shared pages; private bytes are committed memory, not RAM. JS heap excludes workers/GPU. Peak samples are not a hard maximum. Renderer/GPU and test-machine load affect timings.",
+  "rows": [
+    {
+      "country": "china",
+      "navigationMs": 3799,
+      "selectionMs": 221,
+      "frames": 1321,
+      "frameP95Ms": 7.299999999999272,
+      "maxFrameMs": 157.10000000000036,
+      "stallsOver50Ms": 3,
+      "stallsOver100Ms": 1,
+      "longTasksOver50Ms": 1,
+      "maxLongTaskMs": 150,
+      "peakSampledWorkingSetMiB": 3164.01953125,
+      "peakSampledPrivateMiB": 2916.9609375,
+      "memorySamples": 7,
+      "jsHeapMiB": 65.32549667358398,
+      "residency": {
+        "limit": 3,
+        "active": "china",
+        "countries": [
+          {
+            "id": "morocco",
+            "status": "ready"
+          },
+          {
+            "id": "china",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "canada",
+      "navigationMs": 2960,
+      "selectionMs": 838,
+      "frames": 1470,
+      "frameP95Ms": 7.200000000000728,
+      "maxFrameMs": 64.39999999999964,
+      "stallsOver50Ms": 1,
+      "stallsOver100Ms": 0,
+      "longTasksOver50Ms": 0,
+      "maxLongTaskMs": 0,
+      "peakSampledWorkingSetMiB": 4099.43359375,
+      "peakSampledPrivateMiB": 3862.69921875,
+      "memorySamples": 7,
+      "jsHeapMiB": 90.05514907836914,
+      "residency": {
+        "limit": 3,
+        "active": "canada",
+        "countries": [
+          {
+            "id": "morocco",
+            "status": "ready"
+          },
+          {
+            "id": "china",
+            "status": "ready"
+          },
+          {
+            "id": "canada",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "united-states",
+      "navigationMs": 2165,
+      "selectionMs": 327,
+      "frames": 806,
+      "frameP95Ms": 7.200000000000728,
+      "maxFrameMs": 600.2000000000007,
+      "stallsOver50Ms": 6,
+      "stallsOver100Ms": 2,
+      "longTasksOver50Ms": 4,
+      "maxLongTaskMs": 600,
+      "peakSampledWorkingSetMiB": 4187.98828125,
+      "peakSampledPrivateMiB": 3968.7265625,
+      "memorySamples": 5,
+      "jsHeapMiB": 157.99688720703125,
+      "residency": {
+        "limit": 3,
+        "active": "united-states",
+        "countries": [
+          {
+            "id": "china",
+            "status": "ready"
+          },
+          {
+            "id": "canada",
+            "status": "ready"
+          },
+          {
+            "id": "united-states",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "russia",
+      "navigationMs": 2929,
+      "selectionMs": 807,
+      "frames": 1433,
+      "frameP95Ms": 7.200000000000728,
+      "maxFrameMs": 67.69999999999709,
+      "stallsOver50Ms": 1,
+      "stallsOver100Ms": 0,
+      "longTasksOver50Ms": 0,
+      "maxLongTaskMs": 0,
+      "peakSampledWorkingSetMiB": 5301.03515625,
+      "peakSampledPrivateMiB": 5151.37109375,
+      "memorySamples": 8,
+      "jsHeapMiB": 157.10093688964844,
+      "residency": {
+        "limit": 3,
+        "active": "russia",
+        "countries": [
+          {
+            "id": "canada",
+            "status": "ready"
+          },
+          {
+            "id": "united-states",
+            "status": "ready"
+          },
+          {
+            "id": "russia",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "brazil",
+      "navigationMs": 1380,
+      "selectionMs": 434,
+      "frames": 838,
+      "frameP95Ms": 7.299999999999272,
+      "maxFrameMs": 61,
+      "stallsOver50Ms": 2,
+      "stallsOver100Ms": 0,
+      "longTasksOver50Ms": 0,
+      "maxLongTaskMs": 0,
+      "peakSampledWorkingSetMiB": 5532,
+      "peakSampledPrivateMiB": 5378.84765625,
+      "memorySamples": 4,
+      "jsHeapMiB": 197.19503021240234,
+      "residency": {
+        "limit": 3,
+        "active": "brazil",
+        "countries": [
+          {
+            "id": "united-states",
+            "status": "ready"
+          },
+          {
+            "id": "russia",
+            "status": "ready"
+          },
+          {
+            "id": "brazil",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "indonesia",
+      "navigationMs": 1671,
+      "selectionMs": 188,
+      "frames": 840,
+      "frameP95Ms": 10.5,
+      "maxFrameMs": 68,
+      "stallsOver50Ms": 1,
+      "stallsOver100Ms": 0,
+      "longTasksOver50Ms": 0,
+      "maxLongTaskMs": 0,
+      "peakSampledWorkingSetMiB": 5764.45703125,
+      "peakSampledPrivateMiB": 5648.27734375,
+      "memorySamples": 5,
+      "jsHeapMiB": 201.4182014465332,
+      "residency": {
+        "limit": 3,
+        "active": "indonesia",
+        "countries": [
+          {
+            "id": "russia",
+            "status": "ready"
+          },
+          {
+            "id": "brazil",
+            "status": "ready"
+          },
+          {
+            "id": "indonesia",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "thailand",
+      "navigationMs": 1564,
+      "selectionMs": 265,
+      "frames": 906,
+      "frameP95Ms": 7.19999999999709,
+      "maxFrameMs": 50,
+      "stallsOver50Ms": 0,
+      "stallsOver100Ms": 0,
+      "longTasksOver50Ms": 0,
+      "maxLongTaskMs": 0,
+      "peakSampledWorkingSetMiB": 6022.70703125,
+      "peakSampledPrivateMiB": 5912.87109375,
+      "memorySamples": 4,
+      "jsHeapMiB": 55.44668960571289,
+      "residency": {
+        "limit": 3,
+        "active": "thailand",
+        "countries": [
+          {
+            "id": "brazil",
+            "status": "ready"
+          },
+          {
+            "id": "indonesia",
+            "status": "ready"
+          },
+          {
+            "id": "thailand",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "vietnam",
+      "navigationMs": 2298,
+      "selectionMs": 495,
+      "frames": 1214,
+      "frameP95Ms": 7.099999999998545,
+      "maxFrameMs": 35.799999999995634,
+      "stallsOver50Ms": 0,
+      "stallsOver100Ms": 0,
+      "longTasksOver50Ms": 0,
+      "maxLongTaskMs": 0,
+      "peakSampledWorkingSetMiB": 5683.625,
+      "peakSampledPrivateMiB": 5558.1484375,
+      "memorySamples": 6,
+      "jsHeapMiB": 64.28125,
+      "residency": {
+        "limit": 3,
+        "active": "vietnam",
+        "countries": [
+          {
+            "id": "indonesia",
+            "status": "ready"
+          },
+          {
+            "id": "thailand",
+            "status": "ready"
+          },
+          {
+            "id": "vietnam",
+            "status": "ready"
+          }
+        ]
+      }
+    },
+    {
+      "country": "morocco",
+      "navigationMs": 1440,
+      "selectionMs": 234,
+      "frames": 836,
+      "frameP95Ms": 7.30000000000291,
+      "maxFrameMs": 35.900000000001455,
+      "stallsOver50Ms": 0,
+      "stallsOver100Ms": 0,
+      "longTasksOver50Ms": 0,
+      "maxLongTaskMs": 0,
+      "peakSampledWorkingSetMiB": 4754.15234375,
+      "peakSampledPrivateMiB": 4528.6875,
+      "memorySamples": 4,
+      "jsHeapMiB": 57.8958740234375,
+      "residency": {
+        "limit": 3,
+        "active": "morocco",
+        "countries": [
+          {
+            "id": "thailand",
+            "status": "ready"
+          },
+          {
+            "id": "vietnam",
+            "status": "ready"
+          },
+          {
+            "id": "morocco",
+            "status": "ready"
+          }
+        ]
+      }
+    }
+  ]
+}

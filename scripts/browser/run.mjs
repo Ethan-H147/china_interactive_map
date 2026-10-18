@@ -36,6 +36,7 @@ for(const file of files){
  }
 }
 await server.close();
+fs.mkdirSync('artifacts/stability',{recursive:true});fs.writeFileSync('artifacts/stability/browser-results-'+(filters.join('-').replace(/[^a-zA-Z0-9-]/g,'-').slice(0,120)||'all')+'-'+shard+'-of-'+shards+'.json',JSON.stringify({at:new Date().toISOString(),filters,shard,shards,results},null,2)+'\n');
 const failed=results.filter(r=>!r.ok);
 console.log(`\nBrowser scenarios${shards>1?` (shard ${shard}/${shards})`:''}: ${results.length-failed.length}/${results.length} passed.`);
 process.exit(failed.length||!results.length?1:0);
