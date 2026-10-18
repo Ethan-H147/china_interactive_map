@@ -16,6 +16,8 @@ if(!(shards>=1&&shard>=1&&shard<=shards))throw Error('Invalid --shard: '+shardAr
 let position=0;
 const files=fs.readdirSync(dir).filter(f=>f.endsWith('.test.mjs')).sort();
 const server=await startServer(),results=[];
+const reportFile='artifacts/stability/browser-results-'+(filters.join('-').replace(/[^a-zA-Z0-9-]/g,'-').slice(0,120)||'all')+'-'+shard+'-of-'+shards+'.json';
+function checkpoint(complete=false){fs.mkdirSync('artifacts/stability',{recursive:true});fs.writeFileSync(reportFile,JSON.stringify({at:new Date().toISOString(),filters,shard,shards,complete,results},null,2)+'\n');}
 for(const file of files){
  const scenarios=(await import(pathToFileURL(path.join(dir,file)))).default;
  for(const scenario of scenarios){
@@ -32,11 +34,11 @@ for(const file of files){
    let shot='';try{shot=await page.screenshot(label);}catch{}
    const context=[...page.problems,...page.failures.map(f=>'request failed: '+f)].filter(p=>!error.message.includes(p)).slice(0,5);
    results.push({label,ok:false});console.log('✗',label,'\n  ',error.message,context.length?'\n   page: '+context.join('\n   page: '):'',shot?'\n   screenshot: '+shot:'');
-  }finally{await page.close();}
+  }finally{await page.close();checkpoint();}
  }
 }
 await server.close();
-fs.mkdirSync('artifacts/stability',{recursive:true});fs.writeFileSync('artifacts/stability/browser-results-'+(filters.join('-').replace(/[^a-zA-Z0-9-]/g,'-').slice(0,120)||'all')+'-'+shard+'-of-'+shards+'.json',JSON.stringify({at:new Date().toISOString(),filters,shard,shards,results},null,2)+'\n');
+checkpoint(true);
 const failed=results.filter(r=>!r.ok);
 console.log(`\nBrowser scenarios${shards>1?` (shard ${shard}/${shards})`:''}: ${results.length-failed.length}/${results.length} passed.`);
 process.exit(failed.length||!results.length?1:0);

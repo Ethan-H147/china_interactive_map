@@ -5,8 +5,8 @@ const places=[
  ['belgium','Ixelles','Ixelles','Municipality',3],
  ['netherlands','Utrecht','Utrecht','Municipality',2],
  ['switzerland','Zurich','Zurich','Municipality',3],
- ['united-states','Alaska','Alaska','State',1],
- ['canada','Nunavut','Nunavut','Territory',1],
+ ['united-states','San Diego CA','San Diego','City',3],
+ ['canada','Toronto ON','Toronto','City',3],
  ['mexico','Mexico City','Mexico City','Federal entity',1]
 ];
 export default [
@@ -21,8 +21,8 @@ export default [
   assert.equal(await page.evaluate('AtlasDev.enabled'),false);
   assert.equal(await page.evaluate('mapScene.assertOrder()'),true);
   assert(await page.evaluate("map.queryRenderedFeatures({layers:['"+country+"-first-fill']}).length>0"),country+' visible first-level geometry');
-  if(['united-states','canada','mexico'].includes(country)){const prefix={"united-states":"us",canada:"ca",mexico:"mx"}[country];assert(await page.evaluate('!document.getElementById('+JSON.stringify(prefix+'-province')+').hidden'),'State/province selector remains available');assert.equal(await page.evaluate('document.getElementById("mode-lock").parentElement.hidden'),true,'No empty level switcher');}
-  await searchAndSelect(page,query,pick,kind);
+  if(['united-states','canada','mexico'].includes(country)){const prefix={"united-states":"us",canada:"ca",mexico:"mx"}[country];assert(await page.evaluate('!document.getElementById('+JSON.stringify(prefix+'-province')+').hidden'),'State/province selector remains available');assert.equal(await page.evaluate('document.getElementById("mode-lock").parentElement.hidden'),!await page.evaluate('!!AtlasCountries.countries['+JSON.stringify(country)+'].map.secondLabel'),'Level switcher follows the declared hierarchy');}
+  await searchAndSelect(page,query,pick,kind);await page.waitFor('document.getElementById('+JSON.stringify(country+'-sidebar')+').getAttribute("aria-busy")!=="true"',{timeout:60000});await page.settle();
   assert.equal(await page.evaluate('currentAtlas().getMode()'),level);
   assert(await page.evaluate("map.queryRenderedFeatures({layers:map.getStyle().layers.filter(l=>l.type==='line'&&l.id.startsWith('"+country+"-')&&map.getLayoutProperty(l.id,'visibility')!=='none').map(l=>l.id)}).length>0"),country+' selected subdivision edges render');
   assert(await page.evaluate("[...document.querySelectorAll('aside.sidebar')].find(a=>!a.hidden&&getComputedStyle(a).display!=='none').innerText.includes('Population')"),'Population card shows');

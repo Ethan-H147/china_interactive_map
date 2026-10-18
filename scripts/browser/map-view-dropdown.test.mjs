@@ -1,11 +1,12 @@
 import assert from 'node:assert/strict';
 import {searchAndSelect} from './countries.test.mjs';
 export async function chooseMapView(page,value){
+ await page.waitFor('document.getElementById("map-view").getAttribute("aria-busy")==="false"',{timeout:60000});await page.settle();
  const indices=await page.evaluate('(()=>{const s=document.getElementById("map-view");return {current:s.selectedIndex,target:[...s.options].findIndex(o=>o.value==='+JSON.stringify(value)+')}})()');
  assert(indices.target>=0,'Map view is available');await page.tap('#map-view');
  assert(await page.evaluate('document.getElementById("map-view").matches(":open")'),'The dropdown opens on its first click');
  const diff=indices.target-indices.current;for(let i=0;i<Math.abs(diff);i++)await page.key(diff>0?'ArrowDown':'ArrowUp');await page.key('Enter');
- await page.waitFor('document.getElementById("map-view").value==='+JSON.stringify(value)+'&&document.getElementById("map-view").getAttribute("aria-busy")==="false"');await page.settle();
+ await page.waitFor('document.getElementById("map-view").value==='+JSON.stringify(value)+'&&document.getElementById("map-view").getAttribute("aria-busy")==="false"',{timeout:60000});await page.settle();
 }
 export default [
  ...[{width:1280,height:820},{width:390,height:844,mobile:true},{width:320,height:780,mobile:true}].flatMap(options=>[

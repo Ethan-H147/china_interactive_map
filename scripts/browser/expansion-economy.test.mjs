@@ -39,7 +39,7 @@ export default [
   await page.send('Page.navigate',{url:base+'/data/statistics-methodology.html'});
   await page.waitFor('!!globalThis.AtlasCountries&&document.querySelectorAll("#coverage tr").length===AtlasCountries.ids.length',{label:'automatic country coverage table'});
   const rows=await page.evaluate('Object.fromEntries([...document.querySelectorAll("#coverage tr")].map(r=>{const c=[...r.cells].map(c=>c.textContent);return [c[0],c.slice(1)]}))');
-  for(const [name,count,gdpCount=count]of [['Germany',16],['Belgium',3],['Netherlands',12],['Switzerland',26],['United States',65,51],['Canada',13],['Mexico',32]]){
+  for(const [name,count,gdpCount=count]of [['Germany',16],['Belgium',3],['Netherlands',18],['Switzerland',26],['United States',65,51],['Canada',13],['Mexico',32]]){
    assert.equal(+rows[name][0],count);assert.equal(+rows[name][3],gdpCount);assert.equal(+rows[name][4],gdpCount);
   }
   assert((await page.evaluate('document.body.textContent')).includes('same-year July 1 population'));

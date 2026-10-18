@@ -5,7 +5,7 @@ Morocco was added with 12 regions, 75 provinces/prefectures and 1,502 mapped com
 ## Verified results
 
 - All 43 countries passed refresh → switch → satellite → return with rendered administrative fills, border ordering, actual imagery-layer readiness and resident-country checks.
-- 78 distinct browser scenarios passed, including desktop/phone, close coastlines, selection during camera movement, search/click/label/saved-view identity, locked subdivisions, quiz scoring/restoration, globe framing and eviction/re-entry.
+- 89 distinct browser scenarios passed, including desktop/phone, close coastlines, selection during camera movement, search/click/label/saved-view identity, locked subdivisions, quiz scoring/restoration, globe framing and eviction/re-entry.
 - The structural audit passed across 32 regional/Russia datasets: 151,041 catalogue identities and 59,492,965 geometry positions, including duplicated whole districts under declared multiple parents. Code uniqueness, parent relationships, ring structure, mapped coverage and chunk byte accounting were checked. Other adapter families retain their dedicated validators.
 - Full deepest-level unions in Morocco, Thailand and Vietnam showed no material overlaps or mismatch with parent footprints; selected offshore/foreign water checks passed. Source-specific current administrative classifications and missing coverage remain explicit.
 - Shared entry, runtime, compact geometry, color scales, statistics, country pages and the regional publishing gate passed. Preview startup, health, cache bypass, port conflicts, shutdown notification and restart recovery passed.
@@ -33,3 +33,9 @@ The largest observed main-thread task was 600 ms during the US visit. The summed
 Working set is sampled for the owned Chrome process tree, roughly every 500 ms plus enumeration time, and can double-count shared pages. Private bytes are committed memory rather than physical RAM; renderer JS heap excludes workers and GPU resources. Peaks are sampled observations, not guaranteed maxima. The raw baseline, including per-country residency snapshots, is in performance-baselines/2026-10-18.json. Repeat on the same hardware/viewport before comparing timings or setting thresholds.
 
 See stability.md for commands, coverage and limits. Detailed generated reports and screenshots remain in artifacts/stability and artifacts/browser-tests locally; CI saves audit reports on future runs.
+
+## Extended cloud audit follow-up
+
+The full cloud suite exposed a missing Morocco menu stripe and an asynchronous map-view refresh that could overwrite an open native dropdown choice. The stripe now uses the shared gradient format; same-country status updates preserve a pending choice. US/Canada deepest-level fixtures now exercise municipalities, and the Netherlands methodology fixture includes all 18 first-level maps with their own verified economic figures. The expanded suite is split into ten CI shards to stay within job limits, and browser reports checkpoint after every scenario so interrupted runs remain visibly incomplete. Targeted desktop/phone regressions cover these repairs.
+
+The hosted Site uses the version-pinned same-origin delivery adapter in hosting/, which avoids copying the entire 1.03 GiB asset tree into the provider build. Complete data remain in the public GitHub source; the adapter has strict path/method checks, streams unchanged bytes, strips source-view-only headers, and forwards no user credentials or query strings. Its unit and real browser smoke checks are recorded separately from the local atlas baseline.

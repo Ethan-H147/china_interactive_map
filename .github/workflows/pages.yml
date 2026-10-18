@@ -23,7 +23,7 @@ jobs:
   browser-tests:
     # Real headless Chrome: phone sheet gestures and keyboard, level toggles, every
     # country's search and selection, country switching and developer-mode gating.
-    # The suite runs in five parallel shards (scripts/browser/run.mjs --shard), about 4 minutes each.
+    # Ten parallel shards keep the expanded suite within the job time limit.
     # A commit whose message contains [skip tests] (changes the owner says need no test) deploys without it.
     if: ${{ !contains(github.event.head_commit.message, '[skip tests]') }}
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        shard: [1, 2, 3, 4, 5]
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     steps:
       - name: Check out website
         uses: actions/checkout@v4
@@ -40,13 +40,15 @@ jobs:
         with:
           node-version: '22'
       - name: Run browser scenarios
-        run: node scripts/browser/run.mjs --shard=${{ matrix.shard }}/5
-      - name: Keep failure screenshots
-        if: failure()
+        run: node scripts/browser/run.mjs --shard=${{ matrix.shard }}/10
+      - name: Keep audit reports and failure screenshots
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: browser-test-screenshots-${{ matrix.shard }}
-          path: artifacts/browser-tests/
+          path: |
+            artifacts/browser-tests/
+            artifacts/stability/
   stability-data:
     runs-on: ubuntu-latest
     timeout-minutes: 20

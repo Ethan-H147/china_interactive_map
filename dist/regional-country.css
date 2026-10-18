@@ -96,4 +96,4 @@ body[data-atlas=vatican-city] .region-color-control,body[data-atlas=vatican-city
 .country-local:lang(th){font-family:'Nirmala UI','Leelawadee UI',sans-serif}
 
 :root[data-atlas=morocco],.country-option[data-atlas=morocco]{--ink:#392e29;--muted:#80726b;--red:#a34b3d;--red-dark:#803b30;--gold:#a78140;--line:#e5d8ce;--paper:#fffdfa;--map:#f6efeb}
-body[data-atlas=morocco],.country-option[data-atlas=morocco]{--accent-soft:#a34b3d14;--surface-soft:#f7efea;--title-accent:#a34b3d;--header-stripe:#a34b3d}
+body[data-atlas=morocco],.country-option[data-atlas=morocco]{--accent-soft:#a34b3d14;--surface-soft:#f7efea;--title-accent:#a34b3d;--header-stripe:linear-gradient(90deg,#a34b3d 0 76%,#2b704c 76%)}
