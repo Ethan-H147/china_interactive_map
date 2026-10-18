@@ -97,3 +97,5 @@ body[data-atlas=vatican-city] .region-color-control,body[data-atlas=vatican-city
 
 :root[data-atlas=morocco],.country-option[data-atlas=morocco]{--ink:#392e29;--muted:#80726b;--red:#a34b3d;--red-dark:#803b30;--gold:#a78140;--line:#e5d8ce;--paper:#fffdfa;--map:#f6efeb}
 body[data-atlas=morocco],.country-option[data-atlas=morocco]{--accent-soft:#a34b3d14;--surface-soft:#f7efea;--title-accent:#a34b3d;--header-stripe:linear-gradient(90deg,#a34b3d 0 76%,#2b704c 76%)}
+
+:root[data-atlas=bolivia],body[data-atlas=bolivia],.country-option[data-atlas=bolivia]{--ink:#3a3424;--muted:#81775e;--red:#8b702e;--red-dark:#69531f;--gold:#c8a24a;--line:#e7dfc5;--paper:#fffdf6;--map:#f6f3e6;--surface-soft:#f4efd9;--title-accent:#8b702e;--header-stripe:linear-gradient(90deg,#d52b1e 0 33.333%,#f9e300 33.333% 66.667%,#007934 66.667%)}

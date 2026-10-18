@@ -1,0 +1,55 @@
+{
+  "revision": "2b8c56488f937f67ad04b5f71885f739615b6d02",
+  "retrieved": "2026-10-18",
+  "files": {
+    "municipalities.topojson": {
+      "url": "https://raw.githubusercontent.com/lab-tecnosocial/municipios-bolivia-2024/2b8c56488f937f67ad04b5f71885f739615b6d02/municipios_bolivia_2024_detalle.topojson",
+      "license": "CC BY 4.0",
+      "credit": "Lab TecnoSocial (2026), municipal territorial units of Bolivia CPV-2024, derived from SDSN Bolivia and INE",
+      "sha256": "5673cb1f2a9f12eaa6bc054a3576f041f889007fe8761e076df09c6601844a75",
+      "bytes": 10815796
+    },
+    "municipalities.csv": {
+      "url": "https://raw.githubusercontent.com/lab-tecnosocial/municipios-bolivia-2024/2b8c56488f937f67ad04b5f71885f739615b6d02/municipios_bolivia_2024.csv",
+      "license": "CC BY 4.0",
+      "credit": "Lab TecnoSocial; INE codes and names",
+      "sha256": "270b34b3b619862fce961455e801f9b5546e37a922824ea122a072efea53ddff",
+      "bytes": 27852
+    },
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/lab-tecnosocial/municipios-bolivia-2024/2b8c56488f937f67ad04b5f71885f739615b6d02/README.md",
+      "license": "CC BY 4.0",
+      "credit": "Lab TecnoSocial",
+      "sha256": "cf794385f706cad99944e84c8ebc0b4ee53eb6715ee1d97f0fd9cce20f250832",
+      "bytes": 17848
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/lab-tecnosocial/municipios-bolivia-2024/2b8c56488f937f67ad04b5f71885f739615b6d02/LICENSE",
+      "license": "CC BY 4.0",
+      "credit": "Lab TecnoSocial",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "bytes": 18657
+    },
+    "frontiers.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "license": "Public domain",
+      "credit": "Natural Earth v5.1.2",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    },
+    "flag.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg",
+      "license": "Public domain (PD-Bolivia, simple design)",
+      "credit": "Civil flag of Bolivia; Wikimedia Commons",
+      "sha256": "714854e37084cc25c195efdd14d5392a8c64ea03128f7fa858b7677e83a5556e",
+      "bytes": 264
+    },
+    "census2024.html": {
+      "url": "https://cpv2024.ine.gob.bo/",
+      "license": "Official public census statistics; attribution: Instituto Nacional de Estadística, Bolivia",
+      "credit": "INE Bolivia, CPV 2024 final population results",
+      "sha256": "46b55623ed687675d66911fbfe24aa3a40cf48dc1948413e2b605547cbfab5d3",
+      "bytes": 887915
+    }
+  }
+}

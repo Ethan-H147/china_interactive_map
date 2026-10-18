@@ -304,6 +304,18 @@
       "width": 900,
       "height": 600,
       "sha256": "576f97976dfd505c002d39b34eeef0f95f29e6396e26870b0a3887d7bb8e42b4"
+    },
+    "bolivia": {
+      "file": "vendor/flag-bo.svg",
+      "full": "vendor/flag-bo.svg",
+      "name": "Bolivia civil flag",
+      "width": 1100,
+      "height": 750,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bolivia.svg",
+      "credit": "Civil flag of Bolivia",
+      "license": "Public domain (PD-Bolivia; simple design)",
+      "sha256": "714854e37084cc25c195efdd14d5392a8c64ea03128f7fa858b7677e83a5556e"
     }
   }
 }

@@ -1,0 +1,16 @@
+{
+  "revision": "2b8c56488f937f67ad04b5f71885f739615b6d02",
+  "departments": 9,
+  "provinces": 112,
+  "municipalities": 340,
+  "indigenousTerritories": 3,
+  "municipalLevelUnits": 343,
+  "population2024": 11365333,
+  "overlapRemovedKm2": 731.6994463505689,
+  "directTerritory": "BO-M-080901",
+  "geometryCounts": {
+    "1": 9,
+    "2": 113,
+    "3": 342
+  }
+}

@@ -1,8 +1,8 @@
 # Country addition log
 
-All 35 countries are included: 27 reconstructed from earlier Git commits and eight local additions. Each historical entry links to its first implementation commit.
+All 44 registered country maps are included. Historical addition dates are preserved; Morocco and Bolivia were first implemented on 18 October 2026.
 
-Dates use America/Chicago. "Added" means the first implementation in the atlas, including an initial outline or developer-only version. It does not mean the date of public deployment, a dataset year, or a source retrieval date. The seven additions on 17 October 2026 remain local changes.
+Dates use America/Chicago. "Added" means the first implementation in the atlas, including an initial outline or developer-only version. It does not mean the date of public deployment, a dataset year, or a source retrieval date. Entries describe the first implementation. The earlier local additions through Morocco were subsequently committed and published on 18 October 2026; their original addition dates are unchanged.
 
 | Added | Country | Commit | Commit description / status |
 | --- | --- | --- | --- |
@@ -33,21 +33,23 @@ Dates use America/Chicago. "Added" means the first implementation in the atlas, 
 | 2026-10-16 | India | [cc50326](https://github.com/Ethan-H147/china_interactive_map/commit/cc5032676727f7cd15f0e249c3c5cff6b62131c2) | Add India in developer mode, matched to China's outline |
 | 2026-10-16 | Paraguay | [10d5ad8](https://github.com/Ethan-H147/china_interactive_map/commit/10d5ad8b1a6cdc0a47ab9d7209e94415abd386f5) | Add Chile, Paraguay and Peru in developer mode |
 | 2026-10-16 | Peru | [10d5ad8](https://github.com/Ethan-H147/china_interactive_map/commit/10d5ad8b1a6cdc0a47ab9d7209e94415abd386f5) | Add Chile, Paraguay and Peru in developer mode |
-| 2026-10-17 | Belgium | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
+| 2026-10-17 | Belgium | — | First implemented locally on 17 October 2026; committed and published on 18 October 2026. |
 | 2026-10-17 | Canada | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | Germany | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | Mexico | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | Netherlands | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | Switzerland | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
 | 2026-10-17 | United States | — | Added in the local country expansion on 17 October 2026; not yet committed or deployed. |
-| 2026-10-17 | Vatican City | — | Local implementation; sovereign country opened as a subpage of Italy. Not deployed. |
+| 2026-10-17 | Vatican City | — | Local implementation; sovereign country opened as a subpage of Italy. Published 18 October 2026. |
 | 2026-10-17 | Denmark | Local implementation | Five regions, 98 municipalities and Christiansø, including Greenland and the Faroe Islands with their own subdivisions and focused entry. |
-| 2026-10-17 | Australia | Local implementation | States, local government areas and all external territories; not deployed. |
+| 2026-10-17 | Australia | Local implementation | States, local government areas and all external territories; published 18 October 2026. |
 | 2026-10-17 | New Zealand | Local implementation | Regions, territorial authorities, offshore islands and Realm partners; not deployed. |
 | 2026-10-18 | Ireland | Local implementation | Three regions, 31 local authorities and 100 municipal districts; not deployed. |
 | 2026-10-18 | Portugal | Local implementation | Districts, Azores, Madeira, 308 municipalities and all 3,258 CAOP2025 civil parishes; Corvo has no parish; not deployed. |
 | 2026-10-18 | Thailand | Local implementation | 76 provinces plus Bangkok; districts and subdistricts; not deployed. |
 | 2026-10-18 | Vietnam | Local implementation | 34 provincial units and 3,321 commune-level units; current two-tier structure; not deployed. |
+| 2026-10-18 | Morocco | [326a3b1](https://github.com/Ethan-H147/china_interactive_map/commit/326a3b1dc4a73b6cec108638519ee9592f5f4d8f) | 12 regions, 75 provinces/prefectures and 1,502 mapped communes; published 18 October 2026. |
+| 2026-10-18 | Bolivia | Local implementation | Nine departments, 112 actual provinces, 340 municipalities and three Indigenous territories; final 2024 census statistics. |
 
 The machine-readable log is [dist/data/country-history.json](../dist/data/country-history.json). Add an entry whenever a country is added to countries.js; npm run test:entry checks that every country has a date. Keep later releases and coverage expansions separate from the original addition date.
 

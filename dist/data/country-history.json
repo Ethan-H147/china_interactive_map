@@ -392,7 +392,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+        "note": "Added in the local country expansion on 17 October 2026; subsequently committed and published on 18 October 2026."
       }
     },
     {
@@ -401,7 +401,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+        "note": "Added in the local country expansion on 17 October 2026; subsequently committed and published on 18 October 2026."
       }
     },
     {
@@ -410,7 +410,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+        "note": "Added in the local country expansion on 17 October 2026; subsequently committed and published on 18 October 2026."
       }
     },
     {
@@ -419,7 +419,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+        "note": "Added in the local country expansion on 17 October 2026; subsequently committed and published on 18 October 2026."
       }
     },
     {
@@ -428,7 +428,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+        "note": "Added in the local country expansion on 17 October 2026; subsequently committed and published on 18 October 2026."
       },
       "updates": [
         {
@@ -443,7 +443,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+        "note": "Added in the local country expansion on 17 October 2026; subsequently committed and published on 18 October 2026."
       }
     },
     {
@@ -452,7 +452,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added in the local country expansion on 17 October 2026; not yet committed or deployed."
+        "note": "Added in the local country expansion on 17 October 2026; subsequently committed and published on 18 October 2026."
       }
     },
     {
@@ -462,7 +462,7 @@
       "addedOn": "2026-10-17",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added locally as an independent sovereign country, accessed as a subpage of Italy. Not yet committed or deployed."
+        "note": "Added locally as an independent sovereign country, accessed as a subpage of Italy. Subsequently committed and published on 18 October 2026."
       }
     },
     {
@@ -532,9 +532,25 @@
       "country": "morocco",
       "name": "Morocco",
       "addedOn": "2026-10-18",
+      "basis": "first-tracked-implementation",
+      "evidence": {
+        "commit": "326a3b1dc4a73b6cec108638519ee9592f5f4d8f",
+        "committedAt": "2026-10-18T13:27:48-05:00",
+        "subject": "Update Site source",
+        "paths": [
+          "dist/data/europe/morocco/catalogue.bin",
+          "scripts/build-morocco.mjs"
+        ],
+        "note": "12 regions, 75 provinces/prefectures and 1,502 mapped communes; one official commune has no source geometry. Published 18 October 2026."
+      }
+    },
+    {
+      "country": "bolivia",
+      "name": "Bolivia",
+      "addedOn": "2026-10-18",
       "basis": "local-implementation",
       "evidence": {
-        "note": "Added Morocco through the shared regional atlas with pinned HCP/OSM source snapshots."
+        "note": "First implemented on 18 October 2026: nine departments, 112 actual provinces, 340 municipalities and three Indigenous territories; final 2024 census population; shared regional renderer."
       }
     }
   ]

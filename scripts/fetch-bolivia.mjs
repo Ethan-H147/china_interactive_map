@@ -1,0 +1,14 @@
+import fs from 'node:fs';import {gzipSync,gunzipSync} from 'node:zlib';import {createHash} from 'node:crypto';import {pathToFileURL} from 'node:url';import path from 'node:path';
+export const root='scripts/boundary-sources/bolivia',revision='2b8c56488f937f67ad04b5f71885f739615b6d02';
+const base='https://raw.githubusercontent.com/lab-tecnosocial/municipios-bolivia-2024/'+revision+'/';
+export async function fetchBolivia(){fs.mkdirSync(root,{recursive:true});const old=fs.existsSync(root+'/manifest.json')?JSON.parse(fs.readFileSync(root+'/manifest.json')):{files:{}},sources={
+ 'municipalities.topojson':{url:base+'municipios_bolivia_2024_detalle.topojson',license:'CC BY 4.0',credit:'Lab TecnoSocial (2026), municipal territorial units of Bolivia CPV-2024, derived from SDSN Bolivia and INE'},
+ 'municipalities.csv':{url:base+'municipios_bolivia_2024.csv',license:'CC BY 4.0',credit:'Lab TecnoSocial; INE codes and names'},
+ 'README.md':{url:base+'README.md',license:'CC BY 4.0',credit:'Lab TecnoSocial'},
+ 'LICENSE':{url:base+'LICENSE',license:'CC BY 4.0',credit:'Lab TecnoSocial'},
+ 'frontiers.geojson':{url:'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson',license:'Public domain',credit:'Natural Earth v5.1.2'},
+ 'flag.svg':{url:'https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg',license:'Public domain (PD-Bolivia, simple design)',credit:'Civil flag of Bolivia; Wikimedia Commons'},
+ 'census2024.html':{url:'https://cpv2024.ine.gob.bo/',license:'Official public census statistics; attribution: Instituto Nacional de Estadística, Bolivia',credit:'INE Bolivia, CPV 2024 final population results'}
+};for(const[name,source]of Object.entries(sources)){const file=root+'/'+name+'.gz';let bytes;if(fs.existsSync(file))bytes=gunzipSync(fs.readFileSync(file));else{const r=await fetch(source.url,{signal:AbortSignal.timeout(90000)});if(!r.ok)throw Error(source.url+' '+r.status);bytes=Buffer.from(await r.arrayBuffer());fs.writeFileSync(file,gzipSync(bytes,{level:9}));}const sha256=createHash('sha256').update(bytes).digest('hex');if(old.files[name]?.sha256&&old.files[name].sha256!==sha256)throw Error('Pinned Bolivia source changed: '+name);sources[name]={...source,sha256,bytes:bytes.length};console.log(name,bytes.length);}fs.writeFileSync(root+'/manifest.json',JSON.stringify({revision,retrieved:'2026-10-18',files:sources},null,2)+'\n');}
+export const readBolivia=name=>{const bytes=gunzipSync(fs.readFileSync(root+'/'+name+'.gz')),manifest=JSON.parse(fs.readFileSync(root+'/manifest.json'));if(createHash('sha256').update(bytes).digest('hex')!==manifest.files[name].sha256)throw Error('Changed retained Bolivia source: '+name);return bytes.toString('utf8');};
+if(process.argv[1]&&pathToFileURL(path.resolve(process.argv[1])).href===import.meta.url)await fetchBolivia();

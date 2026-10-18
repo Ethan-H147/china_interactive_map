@@ -551,3 +551,9 @@ Shared pointer and statistical-hover performance measurements, guarantees and re
 ## Stability and local preview
 
 From this project directory, run `npm start` and open http://127.0.0.1:4174/. The preview displays a notice if its server stops. Run `npm run test:regression` for the map and feature audit, `npm run test:stability-data` for data consistency, `npm run test:preview` for server recovery, and `npm run measure:stability` for navigation, frame stalls and memory measurements. See [the audit workflow](docs/stability.md) and [Morocco coverage and rebuild notes](docs/morocco.md).
+
+### Bolivia
+
+Added 18 October 2026: nine departments, 112 provinces, 340 municipalities and three Indigenous territories. Full-detail municipal geometry and INE codes are pinned to Lab TecnoSocial revision 2b8c56488f937f67ad04b5f71885f739615b6d02 (CC BY 4.0), derived from SDSN Bolivia 2025 and INE CPV-2024. All 343 municipal population rows match the official final 2024 census, totalling 11,365,333; parent populations are atlas sums. Territorio Indígena Multiétnico is directly under Beni, with no invented province. Source unassigned lake/salt-flat areas remain unassigned; existing neighbours keep ownership of their shared border strokes. No GDP or subdivision flags are inferred.
+
+Use npm run build:bolivia, npm run test:bolivia and npm run test:bolivia-browser. Both Bolivia and Morocco are recorded in docs/country-additions.md and dist/data/country-history.json; addition dates refer to first implementation, not deployment.

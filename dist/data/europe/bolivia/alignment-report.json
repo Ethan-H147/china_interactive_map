@@ -1,0 +1,113 @@
+[
+  {
+    "owner": "brazil",
+    "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
+    "canonicalSource": "dist/data/flight-context.bin",
+    "canonicalSha256": "98d307338f23fe57955b3dfd3b13de1d3df6b531db884da2f0533ffe67984819",
+    "changedEdges": 21300,
+    "maxDisplacementMetres": 2376.0321354295766,
+    "changedRegions": [
+      "BO-M-070301",
+      "BO-M-071201",
+      "BO-M-071401",
+      "BO-M-071402",
+      "BO-M-080202",
+      "BO-M-080701",
+      "BO-M-080703",
+      "BO-M-080801",
+      "BO-M-080802",
+      "BO-M-090101",
+      "BO-M-090102",
+      "BO-M-090103",
+      "BO-M-090104",
+      "BO-M-090401",
+      "BO-M-090402",
+      "BO-M-090501",
+      "BO-M-090503"
+    ]
+  },
+  {
+    "owner": "argentina",
+    "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
+    "canonicalSource": "dist/data/flight-context.bin",
+    "canonicalSha256": "98d307338f23fe57955b3dfd3b13de1d3df6b531db884da2f0533ffe67984819",
+    "changedEdges": 4716,
+    "maxDisplacementMetres": 1778.6244283069611,
+    "changedRegions": [
+      "BO-M-050801",
+      "BO-M-051001",
+      "BO-M-051002",
+      "BO-M-051003",
+      "BO-M-051501",
+      "BO-M-060201",
+      "BO-M-060202",
+      "BO-M-060301",
+      "BO-M-060302",
+      "BO-M-060303",
+      "BO-M-060402"
+    ]
+  },
+  {
+    "owner": "paraguay",
+    "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
+    "canonicalSource": "dist/data/europe/paraguay/first.bin",
+    "canonicalSha256": "e0efd94b5f4b9db17942b5797a72fdac43032d0d0873bbf251d62b2a60515eac",
+    "changedEdges": 440,
+    "maxDisplacementMetres": 2455.539960795832,
+    "changedRegions": [
+      "BO-M-011003",
+      "BO-M-060303",
+      "BO-M-070702",
+      "BO-M-071401"
+    ]
+  },
+  {
+    "owner": "chile",
+    "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
+    "canonicalSource": "dist/data/europe/chile/first.bin",
+    "canonicalSha256": "15186a24a8428e59ba3f9eb7a28f30646dd46c1f3a8a5f74f74a27a4e04be045",
+    "changedEdges": 1579,
+    "maxDisplacementMetres": 2473.0540454508982,
+    "changedRegions": [
+      "BO-M-020303",
+      "BO-M-020305",
+      "BO-M-021901",
+      "BO-M-040401",
+      "BO-M-040402",
+      "BO-M-040901",
+      "BO-M-040902",
+      "BO-M-041501",
+      "BO-M-041502",
+      "BO-M-050901",
+      "BO-M-050902",
+      "BO-M-051001",
+      "BO-M-051401"
+    ]
+  },
+  {
+    "owner": "peru",
+    "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
+    "canonicalSource": "dist/data/europe/peru/first.bin",
+    "canonicalSha256": "5721d6549d3de92fe271583af1c67bde31b1fea20e31e2613ddf225928d315cc",
+    "changedEdges": 4717,
+    "maxDisplacementMetres": 2493.3977884986325,
+    "changedRegions": [
+      "BO-M-020305",
+      "BO-M-020401",
+      "BO-M-020402",
+      "BO-M-020404",
+      "BO-M-020701",
+      "BO-M-020702",
+      "BO-M-020804",
+      "BO-M-020805",
+      "BO-M-021501",
+      "BO-M-021601",
+      "BO-M-021701",
+      "BO-M-021703",
+      "BO-M-021901",
+      "BO-M-021902",
+      "BO-M-090103",
+      "BO-M-090203"
+    ]
+  }
+]

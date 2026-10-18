@@ -1,3 +1,4 @@
+import '../dist/countries.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -409,7 +410,7 @@ async function reconcile(country,{align,edge,holes=[],neighbours=[],administered
  const neighbourShapes=[];
  for(const [name,list] of byCountry)neighbourShapes.push(...(await command(fc(list.map(f=>({type:'Feature',properties:{country:name},geometry:f.geometry}))),'-dissolve2 country -clean')).features.filter(f=>f.geometry));
  console.log(country+' neighbours:',neighbourShapes.map(f=>f.properties.country).join(', ')||'none','; filled',drawn.length?loose.length:0,'gaps');
- reconciled[country]={context:[{type:'Feature',properties:{country},geometry:single(fc(home))},...claims],neighbours:neighbourShapes,references:refs.map(r=>r.name)};
+ reconciled[country]={context:[{type:'Feature',properties:{country},geometry:single(fc(home))},...claims],neighbours:neighbourShapes.filter(f=>!globalThis.AtlasCountries.countries[f.properties.country]),references:refs.map(r=>r.name)};
 }
 // India: the Kashmir that Pakistan administers is left out of its portal too, so other maps
 // show it as Pakistan's; India's own map covers it with India's claim.

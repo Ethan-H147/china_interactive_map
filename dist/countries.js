@@ -149,6 +149,9 @@
   chile:{en:'Chile',local:'',lang:'es',background:'#f0f3f9',...regional('europe','cl',
    {firstLabel:'Regions',secondLabel:'Provinces',thirdLabel:'Communes',bundledLevels:2,neighbours:true,settlements:true,searchLabel:'Find a region, province, commune or city',statistics:true,center:[-71,-37],zoom:3.6,bounds:[[-76,-56],[-66.4,-17.5]],fill:'#e5eaf4',selected:'#c3cfe8',line:'#2b4c9b'},
    {colors:{levels:'Regions',economy:false},levelNames:['Regions','Provinces','Communes'],naturalEarth:'CHL'})},
+  bolivia:{en:'Bolivia',local:'',lang:'es',background:'#f6f3e6',...regional('europe','bo',
+   {firstLabel:'Departments',secondLabel:'Provinces & territory',thirdLabel:'Municipalities & territories',deferOutlines:true,searchLabel:'Find a department, province, municipality or territory',statistics:true,center:[-64.7,-17],zoom:4.9,bounds:[[-69.7,-22.91],[-57.4,-9.6]],fill:'#eee8cc',selected:'#dfca8e',line:'#8b702e'},
+   {colors:{levels:'Departments',economy:false},levelNames:['Departments','Provinces & territory','Municipalities & territories'],naturalEarth:'BOL'})},
   paraguay:{en:'Paraguay',local:'',lang:'es',background:'#f1f6f1',...regional('europe','py',
    {firstLabel:'Departments',secondLabel:'Districts',loadAllSubdivisions:true,neighbours:true,searchLabel:'Find a department or district',statistics:true,center:[-58.4,-23.4],zoom:5.6,bounds:[[-62.7,-27.7],[-54.2,-19.2]],fill:'#e5efe6',selected:'#c3dbc6',line:'#3d6b4a'},
    {colors:{levels:'Departments & Asunción',economy:false},levelNames:['Departments','Districts'],naturalEarth:'PRY'})},
@@ -162,7 +165,7 @@
  const fallback='china',defaultLanguages=['en','local','both'];
  for(const [id,c] of Object.entries(countries)){
   c.id=id;
-  if(['united-states','canada','spain','france','germany','italy','malaysia','india','morocco'].includes(id))c.quiz={level:1,...(id==='spain'?{exclude:['ES-A-20']}: {}),...(id==='united-states'?{bounds:c.map.bounds,insets:['US-AK','US-HI']}: {})};
+  if(['united-states','canada','spain','france','germany','italy','malaysia','india','morocco','bolivia'].includes(id))c.quiz={level:1,...(id==='spain'?{exclude:['ES-A-20']}: {}),...(id==='united-states'?{bounds:c.map.bounds,insets:['US-AK','US-HI']}: {})};
   if(c.adapter==='southern-africa'||c.adapter==='europe'){
    const base=`data/${c.adapter}/${id}/`,m=c.map;
    Object.assign(c,{base,statistics:base+'statistics.json',colors:{catalogue:base+'catalogue.bin',...c.colors}});
