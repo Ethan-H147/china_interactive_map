@@ -1,0 +1,66 @@
+[
+  {
+    "owner": "pakistan",
+    "runs": [
+      {
+        "id": "AF-17",
+        "edges": 1806
+      },
+      {
+        "id": "AF-05",
+        "edges": 15
+      },
+      {
+        "id": "AF-12",
+        "edges": 2107
+      },
+      {
+        "id": "AF-13",
+        "edges": 224
+      },
+      {
+        "id": "AF-16",
+        "edges": 384
+      },
+      {
+        "id": "AF-27",
+        "edges": 842
+      },
+      {
+        "id": "AF-14",
+        "edges": 867
+      },
+      {
+        "id": "AF-15",
+        "edges": 723
+      },
+      {
+        "id": "AF-30",
+        "edges": 266
+      },
+      {
+        "id": "AF-06",
+        "edges": 889
+      },
+      {
+        "id": "AF-26",
+        "edges": 312
+      },
+      {
+        "id": "AF-34",
+        "edges": 30
+      }
+    ],
+    "maxEndpointDisplacementMetres": 1149.8914207168768
+  },
+  {
+    "owner": "china",
+    "runs": [
+      {
+        "id": "AF-17",
+        "edges": 216
+      }
+    ],
+    "maxEndpointDisplacementMetres": 1673.2463879553557
+  }
+]

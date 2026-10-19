@@ -1,0 +1,66 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "Twenty dzongkhags and 205 gewog reference areas, OCHA ROAP / HDX 2020 geometry. Trashiyangtse uses its full current name rather than source shorthand Yangtse. District populations are official NSB 2024 projections based on the 2017 census; no gewog populations are inferred. The reference layer does not separately delineate urban thromdes; it must not be interpreted as a complete map of municipal governance. Subdivision names are English only. Shared display borders follow the existing atlas India and China reference geometry.",
+  "counts": {
+    "1": 20,
+    "2": 205
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "bhutan-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-btn",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "c1fd7be298f2a8c19ae84ed296df816f3f46c77c7b34c841c8caa67e55ea25a0",
+      "bytes": 29265
+    },
+    "bhutan-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/cff13277-eac9-49b0-8436-e80f42eb4684/resource/c82bb508-86e6-4b61-bbe4-93bdf3d24faa/download/btn_admin_boundaries.geojson.zip",
+      "license": "CC BY 3.0 IGO",
+      "credit": "OCHA ROAP",
+      "description": "Bhutan administrative level 0-2 boundaries (COD-AB) dataset version 01.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 20   \n- Admin 2: 205   \n  \n  \nDates associated with this dataset:  \n- 30 October 2025: dataset reviewed for accuracy and completeness  \n- 26 October 2020: valid for use by the humanitarian community  \n- 01 January 2020: last edit to the dataset before publishing  \n- 01 January 2020: boundaries created by the source  \n  \nContributed by [OCHA Regional Office for Asia and the Pacific (ROAP)](https://data.humdata.org/organization/ocha-roap).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "a47d8a2028670f1b34a96f4992db3d7200b992de9d217620b54b0765600b1300",
+      "bytes": 3243201
+    },
+    "bhutan-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-btn",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "1fcdb36a56db56cfe71260b40047c779ffe5720b0cf8af8dc07a69394462c0f2",
+      "bytes": 31218
+    },
+    "bhutan-population0.csv": {
+      "url": "https://data.humdata.org/dataset/8ad894a9-631e-4247-918f-63b9dbc25002/resource/66855009-9c15-4042-b1fa-79d0726a20f6/download/btn_admpop_adm0_2024.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA",
+      "description": "Bhutan administrative level 0-1 sex and age disaggregated 2024 projected population statistics\r\n\r\nREFERENCE YEAR:  2024\r\n\r\nThe CSV tables are suitable for database or GIS linkage to the [Bhutan - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-btn) layers using the ADM0 and ADM1_PCODE fields",
+      "resource": "btn_admpop_adm0_2024.csv",
+      "sha256": "5d23386306411ea3704d1be62bbeb4c79d6d8d08fbcbd87e38cdca17b07d2946",
+      "bytes": 759
+    },
+    "bhutan-population1.csv": {
+      "url": "https://data.humdata.org/dataset/8ad894a9-631e-4247-918f-63b9dbc25002/resource/bb4f0db2-bfe9-4814-8a4e-fedddac1561c/download/btn_admpop_adm1_2024.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA",
+      "description": "Bhutan administrative level 0-1 sex and age disaggregated 2024 projected population statistics\r\n\r\nREFERENCE YEAR:  2024\r\n\r\nThe CSV tables are suitable for database or GIS linkage to the [Bhutan - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-btn) layers using the ADM0 and ADM1_PCODE fields",
+      "resource": "btn_admpop_adm1_2024.csv",
+      "sha256": "1a50bd1f1ddb0ca79f6ff5b58caa7de38bd6379259f6f7e9852c4131a4562286",
+      "bytes": 5826
+    },
+    "bhutan-population-note.pdf": {
+      "url": "https://data.humdata.org/dataset/8ad894a9-631e-4247-918f-63b9dbc25002/resource/6420709d-9f51-4131-a5d9-301aec3c4796/download/btn-cod-ps-2024-explanatory-note.pdf",
+      "license": "UNFPA explanatory note",
+      "credit": "UNFPA via HDX",
+      "sha256": "c09770b2f9e902b68a099d455b45c5705c34b58d27d80058b09a51361398404e",
+      "bytes": 1483735
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "license": "Public domain"
+    },
+    "neighbourAlignment": {
+      "reference": "data/europe/bhutan/alignment-report.json",
+      "policy": "Whole shared reference edges; existing neighbour land takes precedence over source-survey overlap."
+    }
+  }
+}

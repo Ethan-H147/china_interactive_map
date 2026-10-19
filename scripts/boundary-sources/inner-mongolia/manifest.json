@@ -1,0 +1,18 @@
+{
+  "source": "Existing detailed DataV/AreaCity atlas geometry in WGS84 before Inner Mongolia full shared-arc reconciliation.",
+  "sha256": "157867a18fb2fe7110a744513b17174f695a1550eab33503763d169ae4b38c29",
+  "files": {
+    "before.bin": {
+      "sha256": "157867a18fb2fe7110a744513b17174f695a1550eab33503763d169ae4b38c29",
+      "bytes": 1503136
+    },
+    "reference-arcs.json": {
+      "sha256": "46f5f5294ee3bca2551bcb1bd1f390468fc2b263be0642de968f1133f5c761bd",
+      "bytes": 153728
+    },
+    "counties-before.bin": {
+      "sha256": "1aea4cab34d7b69a00d69c47aa316f17f0d5aee16b6d140a9d3d8a31901c621c",
+      "bytes": 2821205
+    }
+  }
+}

@@ -34,6 +34,8 @@ const municipal='dist/data/us-municipal-flag-sources.json';
 if(fs.existsSync(municipal))Object.values(read(municipal).flags).forEach(add);
 const expansion='dist/data/europe-expansion-flag-sources.json';
 if(fs.existsSync(expansion))Object.values(read(expansion).flags).forEach(add);
+// Retained SVG and WebP thumbnail variants share the same sourced original artwork.
+for(const name of fs.readdirSync('dist/vendor').filter(n=>/^flag-.*\.(svg|webp)$/.test(n))){const file='vendor/'+name;if(!national[file]){const peer=file.replace(/\.(svg|webp)$/,(_,ext)=>ext==='svg'?'.webp':'.svg');if(national[peer])national[file]=national[peer];}}
 Object.assign(images,national);
 const cityNamesFile='dist/data/southern-africa/south-africa/place-names-flags.json';
 if(fs.existsSync(cityNamesFile))Object.values(read(cityNamesFile).places).forEach(place=>add(place.flag));

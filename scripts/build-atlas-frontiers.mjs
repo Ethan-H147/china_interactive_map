@@ -141,3 +141,7 @@ fs.writeFileSync('dist/data/atlas-frontiers.bin',gzipSync(JSON.stringify(out),{l
 const km=features.reduce((s,f)=>s+f.geometry.coordinates.slice(1).reduce((t,q,i)=>t+metres(f.geometry.coordinates[i],q),0),0)/1000;
 fs.writeFileSync('dist/data/atlas-frontiers-sources.json',JSON.stringify({description:'Frontiers of the public atlas countries not drawn by a dedicated layer: land frontiers from each country\'s own outline, and the water borders between two atlas countries from Natural Earth 1:10m boundary lines.',retrieved:new Date().toISOString().slice(0,10),frontierKm:Math.round(km),pieces:features.length,sources},null,2)+'\n');
 console.log('Atlas frontiers:',features.length,'pieces,',Math.round(km),'km,',fs.statSync('dist/data/atlas-frontiers.bin').size,'bytes');
+
+await (await import('./reconcile-timor-frontier.mjs')).reconcileTimorFrontier();
+
+await (await import('./reconcile-brunei-frontier.mjs')).reconcileBruneiFrontier();

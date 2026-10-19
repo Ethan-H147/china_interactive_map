@@ -28,3 +28,44 @@ body[data-atlas=korea] .maplibregl-ctrl-attrib,body[data-atlas=mongolia] .maplib
 body[data-atlas=korea] .maplibregl-ctrl-attrib a,body[data-atlas=mongolia] .maplibregl-ctrl-attrib a{color:var(--muted)}
 body[data-atlas=korea] .north path:last-child,body[data-atlas=mongolia] .north path:last-child{fill:var(--gold)}
 body[data-atlas=korea] .map-actions button:hover,body[data-atlas=mongolia] .map-actions button:hover{background:var(--surface-soft)}
+
+body[data-atlas=timor-leste]{--red:#9e4433;--red-dark:#7f3427;--ink:#352b25;--muted:#826b59;--gold:#c39b4d;--line:#e9d7c3;--paper:#fffaf4;--map:#fbf2eb;--surface-soft:#f5e7d7;--accent-soft:#eed0b4}
+
+body[data-atlas=brunei]{--red:#8f6e18;--red-dark:#6c510d;--ink:#302c20;--muted:#827757;--gold:#c4a33f;--line:#e9dfbd;--paper:#fffcf1;--map:#f7f4e6;--surface-soft:#f5edd2;--accent-soft:#ebd794}
+
+:root[data-atlas=pakistan],body[data-atlas=pakistan],.country-option[data-atlas=pakistan]{--red:#286442;--red-dark:#19492f;--ink:#263b2b;--muted:#64796b;--gold:#b99c50;--line:#d8e5db;--paper:#fcfefc;--map:#edf3ef;--surface-soft:#eef5ef;--accent-soft:#d7e9dc}
+:root[data-atlas=kazakhstan],body[data-atlas=kazakhstan],.country-option[data-atlas=kazakhstan]{--red:#167c9c;--red-dark:#105f79;--ink:#233e48;--muted:#637d87;--gold:#c7a943;--line:#d6e7ec;--paper:#fcfefe;--map:#edf5f7;--surface-soft:#eaf4f7;--accent-soft:#cde7ef}
+
+:root[data-atlas=greece],body[data-atlas=greece],.country-option[data-atlas=greece]{--red:#2865a0;--red-dark:#1d4d7c;--ink:#26394c;--muted:#687e93;--gold:#b69b61;--line:#d6e2ed;--paper:#fcfdff;--map:#eff4fa;--surface-soft:#edf3f9;--accent-soft:#d3e2f2}
+:root[data-atlas=cyprus],body[data-atlas=cyprus],.country-option[data-atlas=cyprus]{--red:#77743c;--red-dark:#58572c;--ink:#3c3a28;--muted:#85816a;--gold:#bc813a;--line:#e4dfcc;--paper:#fffdf6;--map:#f6f4ed;--surface-soft:#f3efdf;--accent-soft:#e1dab8}
+
+:root[data-atlas=afghanistan],body[data-atlas=afghanistan],.country-option[data-atlas=afghanistan]{--red:#536b37;--red-dark:#3c5127;--ink:#303b28;--muted:#788267;--gold:#b79b54;--line:#e0e6d2;--paper:#fdfef9;--map:#f2f4eb;--surface-soft:#edf1e2;--accent-soft:#dce5c5}
+:root[data-atlas=kyrgyzstan],body[data-atlas=kyrgyzstan],.country-option[data-atlas=kyrgyzstan]{--red:#a64b32;--red-dark:#803620;--ink:#483227;--muted:#927769;--gold:#c59a43;--line:#edddd2;--paper:#fffaf7;--map:#f9f0eb;--surface-soft:#f7eae1;--accent-soft:#edcfb8}
+.control-overview{padding:0 0 24px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.control-overview-toggle{display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;color:var(--ink)}
+.control-overview-toggle input,.control-formal-toggle input{accent-color:var(--red)}
+.control-date{font-size:11px;color:var(--muted);margin:9px 0 14px}
+.control-legend{list-style:none;padding:0;margin:0;display:grid;gap:9px;font-size:12px;line-height:1.5}
+.control-legend li{display:flex;align-items:center;gap:9px}
+.control-legend i{width:11px;height:11px;flex:none;border-radius:3px;background:var(--swatch)}
+.control-caveat,.control-assessment{font-size:11px;line-height:1.65;color:var(--muted);margin:14px 0}
+.control-area-buttons{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0}
+.control-area-buttons button{font-size:11px;padding:7px 9px;text-align:left}
+.control-formal-toggle{display:flex;gap:8px;align-items:center;font-size:12px;margin:14px 0}
+.control-selection{border-left:3px solid var(--gold);padding:0 0 0 12px;margin:20px 0;font-size:12px;line-height:1.65}
+.control-selection h3{font-size:16px;color:var(--ink);margin:0 0 8px}
+.control-selection p{margin:8px 0}
+.control-relationships{margin:16px 0;font-size:12px;line-height:1.65}
+.control-relationships>summary{color:var(--red);cursor:pointer}
+.control-actor-list details{margin:13px 0}.control-actor-list summary{cursor:pointer;font-weight:500}
+.control-source{font-size:11px}
+
+:root[data-atlas=myanmar],body[data-atlas=myanmar],.country-option[data-atlas=myanmar]{--red:#796647;--red-dark:#5c4b2f;--ink:#343d2b;--muted:#7f846c;--gold:#b69b3d;--line:#e2e4d4;--paper:#fffef7;--map:#f4f3e9;--surface-soft:#f1f2e6;--accent-soft:#dce2c8;--header-stripe:linear-gradient(90deg,#d1b63d 0 33.3%,#4d8251 33.3% 66.6%,#b54a43 66.6%)}
+:root[data-atlas=laos],body[data-atlas=laos],.country-option[data-atlas=laos]{--red:#31517f;--red-dark:#233c61;--ink:#29384c;--muted:#708098;--gold:#ae4945;--line:#dae1ee;--paper:#fcfdff;--map:#eff2f8;--surface-soft:#eaf0f8;--accent-soft:#d4dff0;--header-stripe:linear-gradient(90deg,#ae4945 0 25%,#31517f 25% 75%,#ae4945 75%)}
+
+:root[data-atlas=norway],body[data-atlas=norway],.country-option[data-atlas=norway]{--red:#a53c38;--red-dark:#7e2c2b;--ink:#3f3035;--muted:#8c7479;--gold:#315b81;--line:#e9d8d5;--paper:#fffcfa;--map:#f8eeee;--surface-soft:#f7eae7;--accent-soft:#e9c8c2;--header-stripe:linear-gradient(90deg,#a53c38 0 32%,#fbf8f4 32% 39%,#315b81 39% 61%,#fbf8f4 61% 68%,#a53c38 68%)}
+:root[data-atlas=sweden],body[data-atlas=sweden],.country-option[data-atlas=sweden]{--red:#28658f;--red-dark:#174c73;--ink:#293d4c;--muted:#718794;--gold:#b4902b;--line:#d5e2ec;--paper:#fcfdff;--map:#edf3f8;--surface-soft:#eaf1f8;--accent-soft:#d1e1ee;--header-stripe:linear-gradient(90deg,#28658f 0 39%,#d7b443 39% 61%,#28658f 61%)}
+:root[data-atlas=finland],body[data-atlas=finland],.country-option[data-atlas=finland]{--red:#3b618c;--red-dark:#294a70;--ink:#2b3a4b;--muted:#76859a;--gold:#a99665;--line:#d8e1ec;--paper:#fcfdff;--map:#eff3f8;--surface-soft:#ebf0f8;--accent-soft:#d4e0ef;--header-stripe:linear-gradient(90deg,#e6edf5 0 39%,#3b618c 39% 61%,#e6edf5 61%)}
+:root[data-atlas=nepal],body[data-atlas=nepal],.country-option[data-atlas=nepal]{--red:#a13c50;--red-dark:#782b3c;--ink:#432e34;--muted:#90727b;--gold:#3b5b8a;--line:#ead8dc;--paper:#fffafb;--map:#f8efef;--surface-soft:#f6e7eb;--accent-soft:#e8c7d0;--header-stripe:linear-gradient(90deg,#a13c50 0 80%,#3b5b8a 80%)}
+:root[data-atlas=bhutan],body[data-atlas=bhutan],.country-option[data-atlas=bhutan]{--red:#9a712d;--red-dark:#72501d;--ink:#463b25;--muted:#8c7d60;--gold:#b36438;--line:#e8dfca;--paper:#fffdf5;--map:#f8f3e8;--surface-soft:#f4eddc;--accent-soft:#e8d6ae;--header-stripe:linear-gradient(90deg,#c49b37 0 50%,#b36438 50%)}
+:root[data-atlas=bangladesh],body[data-atlas=bangladesh],.country-option[data-atlas=bangladesh]{--red:#376b4a;--red-dark:#244e34;--ink:#2b3d30;--muted:#718773;--gold:#ac4f4e;--line:#d8e6d9;--paper:#fcfefb;--map:#edf4ef;--surface-soft:#eaf2e8;--accent-soft:#cce1cb;--header-stripe:linear-gradient(90deg,#376b4a 0 40%,#ac4f4e 40% 60%,#376b4a 60%)}

@@ -532,5 +532,15 @@
       "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
       "bytes": 565922
     }
-  ]
+  ],
+  "pakistanIndiaReconciliation": {
+    "date": "2026-10-18",
+    "reference": "data/europe/pakistan/context-reconciliation.json",
+    "water": "Natural Earth v5.1.2 lakes (public domain)",
+    "policy": "The northern background silhouette follows the existing Pakistan disputed-area display edge through Kashmir and Siachen to the actual Chinese seam; it is drawn as one continuous path, with nearby duplicate claim strokes hidden in Pakistan view. Detailed India claim coverage is unchanged. One continuous regular shared border follows the retained detailed India outline and is drawn once per view. Existing Kashmir claim/control coverage is preserved. Claim visibility uses political coverage including inland water; Mangla and Tarbela are excluded from all country and fallback land fills. Pakistan administrative boundaries retain their full political paths across water."
+  },
+  "chinaFrontierReconciliation": {
+    "reference": "data/europe/pakistan/china-frontier-reconciliation.json",
+    "policy": "Continuous displayed China outline shared by Pakistan land and the western India background. Existing detailed India claim geometry and source population figures remain intact. Disputed-area strokes keep their claim metadata and India-view alternatives. Pakistan source Siachen diagonal extent is retained and meets one common projected China junction."
+  }
 }

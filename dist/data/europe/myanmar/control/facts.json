@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-18",
+  "records": [
+    {
+      "id": "MM-CONTROL-WA-NORTH",
+      "en": "Wa northern territory",
+      "local": "",
+      "parent": "MM-222",
+      "level": 1,
+      "kind": "Ceasefire administration",
+      "controlActor": true,
+      "center": [
+        98.960414,
+        22.53941
+      ],
+      "bounds": [
+        [
+          98.437,
+          21.567
+        ],
+        [
+          99.692,
+          23.48744
+        ]
+      ],
+      "aliases": [
+        "Wa",
+        "Wa State",
+        "UWSA",
+        "Northern Wa",
+        "United Wa State Army",
+        "United Wa State Party"
+      ],
+      "group": "uwsa",
+      "actor": "UWSA / United Wa State Party",
+      "label": "Wa ceasefire administration",
+      "color": "#7164b5",
+      "relationship": "A separate armed administration under a ceasefire relationship. It is not part of the military chain of command and should not be treated as a branch of the NUG/PDF resistance.",
+      "note": "The northern and southern territories are separate. Southern Wa territory lies outside the formal Wa Self-Administered Division. Wa remains within Myanmar; this is not an internationally recognised country.",
+      "url": "https://myanmar.iiss.org/analysis/northeast",
+      "asOf": "Reference territory · effective boundary date unspecified",
+      "source": "IISS Myanmar Conflict Map · retrieved 18 October 2026"
+    },
+    {
+      "id": "MM-CONTROL-MONGLA",
+      "en": "Mongla / NDAA area",
+      "local": "",
+      "parent": "MM-222",
+      "level": 1,
+      "kind": "Ceasefire administration",
+      "controlActor": true,
+      "center": [
+        99.79642,
+        21.697935
+      ],
+      "bounds": [
+        [
+          99.586,
+          21.061505
+        ],
+        [
+          101.164538,
+          22.070762
+        ]
+      ],
+      "aliases": [
+        "Mong La",
+        "Mongla",
+        "NDAA",
+        "Special Region 4"
+      ],
+      "group": "ndaa",
+      "actor": "NDAA / National Democratic Alliance Army",
+      "label": "Mongla ceasefire administration",
+      "color": "#b18a2f",
+      "relationship": "A separate ceasefire administration in eastern Shan State, distinct from Wa, the central military authorities and the NUG/PDF resistance.",
+      "note": "Mongla is the NDAA headquarters. A ceasefire relationship is different from direct rule by the military.",
+      "url": "https://myanmar.iiss.org/analysis/northeast",
+      "asOf": "Reference territory · effective boundary date unspecified",
+      "source": "IISS Myanmar Conflict Map · retrieved 18 October 2026"
+    },
+    {
+      "id": "MM-CONTROL-WA-SOUTH",
+      "en": "Wa southern territory",
+      "local": "",
+      "parent": "MM-222",
+      "level": 1,
+      "kind": "Ceasefire administration",
+      "controlActor": true,
+      "center": [
+        99.303113,
+        20.256105
+      ],
+      "bounds": [
+        [
+          98.518144,
+          19.670983
+        ],
+        [
+          99.781,
+          20.729
+        ]
+      ],
+      "aliases": [
+        "Wa",
+        "Wa State",
+        "UWSA",
+        "Southern Wa",
+        "United Wa State Army",
+        "United Wa State Party"
+      ],
+      "group": "uwsa",
+      "actor": "UWSA / United Wa State Party",
+      "label": "Wa ceasefire administration",
+      "color": "#7164b5",
+      "relationship": "A separate armed administration under a ceasefire relationship. It is not part of the military chain of command and should not be treated as a branch of the NUG/PDF resistance.",
+      "note": "The northern and southern territories are separate. Southern Wa territory lies outside the formal Wa Self-Administered Division. Wa remains within Myanmar; this is not an internationally recognised country.",
+      "url": "https://myanmar.iiss.org/analysis/northeast",
+      "asOf": "Reference territory · effective boundary date unspecified",
+      "source": "IISS Myanmar Conflict Map · retrieved 18 October 2026"
+    }
+  ],
+  "military": [
+    {
+      "id": "MM-CENTRE-NAYPYITAW",
+      "name": "Naypyitaw",
+      "center": [
+        96.13,
+        19.75
+      ],
+      "date": "April 2026",
+      "url": "https://myanmar.iiss.org/analysis/war-by-other-means",
+      "note": "Seat of the military-backed national authorities. A point showing a governing centre, not a polygon of surrounding military control."
+    },
+    {
+      "id": "MM-CENTRE-YANGON",
+      "name": "Yangon",
+      "center": [
+        96.16,
+        16.8
+      ],
+      "date": "Reporting through 17 July 2026",
+      "url": "https://acleddata.com/report/state-repression-increases-under-myanmar-militarys-new-leadership",
+      "note": "Reported military-controlled urban centre. Resistance activity can occur inside cities; this marker does not assign its whole township or region to one side."
+    },
+    {
+      "id": "MM-CENTRE-MANDALAY",
+      "name": "Mandalay",
+      "center": [
+        96.1,
+        21.98
+      ],
+      "date": "Reporting through 17 July 2026",
+      "url": "https://acleddata.com/report/state-repression-increases-under-myanmar-militarys-new-leadership",
+      "note": "Reported military-controlled urban centre. The wider region includes resistance and contested areas; this is not a region-wide control boundary."
+    }
+  ],
+  "actors": [
+    {
+      "id": "resistance",
+      "name": "NUG / PDFs and resistance forces",
+      "group": "resistance",
+      "note": "The National Unity Government and many People’s Defence Forces cooperate with several ethnic armed organisations. They are not one army with a single chain of command; local alliances and control vary.",
+      "url": "https://myanmar.iiss.org/methodology"
+    },
+    {
+      "id": "aa",
+      "name": "Arakan Army / ULA",
+      "group": "resistance",
+      "parent": "MM-012",
+      "note": "An ethnic armed administration centred on Rakhine, pursuing its own political aims. Membership of an anti-military alliance does not mean subordination to the NUG.",
+      "url": "https://myanmar.iiss.org/analysis/northeast"
+    },
+    {
+      "id": "kia",
+      "name": "Kachin Independence Organisation / Army",
+      "group": "resistance",
+      "parent": "MM-001",
+      "note": "An ethnic armed organisation with its own administration and command, cooperating with parts of the wider resistance.",
+      "url": "https://myanmar.iiss.org/methodology"
+    },
+    {
+      "id": "knu",
+      "name": "Karen and Karenni organisations",
+      "group": "resistance",
+      "parent": "MM-003",
+      "note": "KNU/KNLA, Karenni organisations and local defence forces have distinct leaderships and partnerships. Their operations are not equivalent to full control of every township where they are active.",
+      "url": "https://myanmar.iiss.org/methodology"
+    },
+    {
+      "id": "shan",
+      "name": "MNDAA, TNLA, SSPP and RCSS",
+      "group": "mixed",
+      "parent": "MM-222",
+      "note": "Shan State contains several separate armed actors. Some have ceasefire arrangements, some oppose the military, and relationships change. They should not all be coloured as one resistance bloc.",
+      "url": "https://mmpeacemonitor.org/en/en-news/fpncc-members-hold-consecutive-meetings-with-military-junta/"
+    },
+    {
+      "id": "militias",
+      "name": "Military-aligned militias",
+      "group": "military",
+      "note": "Groups such as the PNA, Pyu Saw Htee and SNA have military-aligned relationships. They are different from the ceasefire administrations in Wa and Mongla.",
+      "url": "https://myanmar.iiss.org/methodology"
+    }
+  ],
+  "territoryDate": "Boundary effective date unspecified; source snapshot 18 October 2026",
+  "nationalAssessment": {
+    "year": 2025,
+    "published": "2026-01-31",
+    "resistancePercent": 38,
+    "townsHeld": 87,
+    "url": "https://ispmyanmar.com/2026mp003/",
+    "note": "ISP-Myanmar retrospective assessment for 2025. This is not a current territorial-control percentage and does not mean the other 62% was uniformly military-controlled."
+  },
+  "coverage": "Three approximate stable ceasefire-territory polygons and three dated urban military-centre markers. Areas without a classified polygon are unclassified or mixed, not automatically military-controlled. Other armed actors are described without inventing frontlines. Formal self-administered areas are a separate administrative reference."
+}

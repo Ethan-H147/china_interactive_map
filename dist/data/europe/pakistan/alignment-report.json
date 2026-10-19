@@ -1,0 +1,35 @@
+{
+  "canonicalNeighbours": [
+    {
+      "owner": "china",
+      "changedEdges": 422,
+      "maxDisplacementMetres": 1519.526866973557,
+      "changedRegions": [
+        "PK-3"
+      ]
+    },
+    {
+      "owner": "india",
+      "pair": "IND-PAK",
+      "scope": "Continuous regular land frontier identified by Natural Earth; Kashmir claim and control-line coverage unchanged",
+      "vertices": 1890,
+      "runs": [
+        {
+          "id": "PK-6",
+          "edges": 747
+        },
+        {
+          "id": "PK-7",
+          "edges": 659
+        }
+      ],
+      "maxEndpointDisplacementMetres": 1321.3221266741455
+    }
+  ],
+  "frontiers": [
+    {
+      "source": "WFP COD-AB exterior land edge, with source coastline omitted and Chinese shared-edge ownership retained",
+      "pieces": 2582
+    }
+  ]
+}

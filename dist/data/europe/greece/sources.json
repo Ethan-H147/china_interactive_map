@@ -1,0 +1,98 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "13 administrative regions and the autonomous monastic area of Mount Athos, 74 regional units and 332 current municipalities. Full detailed ELSTAT 2021 census cartography; English and Greek names, official census populations at every level and Eurostat regional GDP. Municipalities include urban and rural territory, so separate city dots are not duplicated. Mount Athos is shown once, not as a municipality. Census boundaries are for statistical use and are not legal evidence of administrative limits. Parents dissolve from the municipal geometry so all levels share edges. Lakes are excluded, the Evros frontier matches Turkey and political lines cross water continuously.",
+  "counts": {
+    "1": 14,
+    "2": 74,
+    "3": 332
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "greece-regions.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/GRC/ADM2/geoBoundaries-GRC-ADM2.geojson",
+      "license": "CC BY 4.0",
+      "credit": "EuroGeoGraphics, Regional IM Working Group - Europe, via geoBoundaries",
+      "year": 2016,
+      "bytes": 1329310,
+      "sha256": "005ac2734762f33b822ed568991bb8ec8c1b5e46fc99a4a7557e65d7ed0d8f4a"
+    },
+    "greece-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GRC/ADM2/",
+      "license": "Source metadata",
+      "credit": "geoBoundaries",
+      "bytes": 1748,
+      "sha256": "8e1433e32e04943164b8f7cb83925068e4307f65e4345a67c0d4b6b388b19fb2"
+    },
+    "greece-census2021.pdf": {
+      "url": "https://elstat-outsourcers.statistics.gr/census_results_2022_en.pdf",
+      "license": "Official ELSTAT statistics, reuse with attribution",
+      "credit": "Hellenic Statistical Authority, 2021 Population and Housing Census, 17 March 2023",
+      "year": 2021,
+      "bytes": 24126752,
+      "sha256": "194aba2d7fafd370223cd3a0cc8206ef3abff8f7ad9e13ac77f8d0169756bb72"
+    },
+    "greece-administration2024.pdf": {
+      "url": "https://www.ypes.gr/wp-content/uploads/2024/06/STRUCTURE-OPERATION-LRD-ENGLISH-VERSION-2024.pdf",
+      "license": "Official published administrative information, with attribution",
+      "credit": "Hellenic Ministry of Interior",
+      "year": 2024,
+      "bytes": 1822890,
+      "sha256": "f11d58d145b64f6bc8958f28f5f0e61264cdaccbec4dc97c42faf3e9959289d7"
+    },
+    "flag-gr.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
+      "license": "Public domain",
+      "credit": "Greece national flag, Wikimedia Commons",
+      "bytes": 284,
+      "sha256": "d65b82614f0cd167a767abfda1abc1ef99e87ef48e5755f3d33e4526e3cad365"
+    },
+    "turkey": {
+      "url": "data/europe/turkey/sources.json",
+      "credit": "Existing detailed Turkey outline, shared Evros frontier"
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "license": "Public domain"
+    },
+    "greece-regional-units.zip": {
+      "url": "https://www.statistics.gr/documents/20181/1194366/PERIF_ENOT_2021.zip/8fd47af0-7ae6-c186-1a51-5c51404764bc",
+      "credit": "ELSTAT census regional units 2021",
+      "year": 2021,
+      "license": "Official ELSTAT data; attribution required; census boundaries are not legal evidence of administrative limits",
+      "bytes": 1970290,
+      "sha256": "0619b183eb0d9b3b420fc4ed6d312049681a19c8bed04ddd5b5aa6722ee82713"
+    },
+    "greece-municipalities.zip": {
+      "url": "https://www.statistics.gr/documents/20181/1194366/DHMOI_2021.zip/55e3ba79-3475-70b8-5f8a-b912eeee389c",
+      "credit": "ELSTAT census municipalities 2021",
+      "year": 2021,
+      "license": "Official ELSTAT data; attribution required; census boundaries are not legal evidence of administrative limits",
+      "bytes": 2596449,
+      "sha256": "b16817eb6f1a2c2527a598c3d7e6c0a16a4bc017f756d64ceedcb963d96d1174"
+    },
+    "greece-census.xlsx": {
+      "url": "https://www.statistics.gr/documents/20181/17286366/mon_plith_2021.xlsx/7adf2ca4-0baf-7b19-2860-1e7caea81e7f?t=1679066566128",
+      "credit": "ELSTAT resident census 2021, municipalities and regions, March2023",
+      "year": 2021,
+      "license": "Official ELSTAT data; attribution required; census boundaries are not legal evidence of administrative limits",
+      "bytes": 70805,
+      "sha256": "149f9e52c6db9c279de56211de323bf452e1427f8063a7cb1a0b06bf34deb019"
+    },
+    "greece-gdp-MIO_EUR.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_2gdp?format=JSON&unit=MIO_EUR&sinceTimePeriod=2021&geo=EL51&geo=EL52&geo=EL53&geo=EL54&geo=EL61&geo=EL62&geo=EL63&geo=EL64&geo=EL65&geo=EL30&geo=EL41&geo=EL42&geo=EL43",
+      "credit": "Eurostat GDP at current market prices by NUTS2 region",
+      "year": 2024,
+      "license": "CC BY 4.0",
+      "bytes": 3879,
+      "sha256": "5b6b68eb7174275b23d4a5be8f863476727bf1d4994be4acae77c6da3b8b9fa5"
+    },
+    "greece-gdp-EUR_HAB.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_2gdp?format=JSON&unit=EUR_HAB&sinceTimePeriod=2021&geo=EL51&geo=EL52&geo=EL53&geo=EL54&geo=EL61&geo=EL62&geo=EL63&geo=EL64&geo=EL65&geo=EL30&geo=EL41&geo=EL42&geo=EL43",
+      "credit": "Eurostat GDP at current market prices by NUTS2 region",
+      "year": 2024,
+      "license": "CC BY 4.0",
+      "bytes": 3995,
+      "sha256": "8f940b866761d7d684b9fda0bb9bd67f92c2e9a84e75e0ffaccc195bcb94529e"
+    }
+  }
+}

@@ -10,6 +10,9 @@ import {outlineIndex} from './channel-lines.mjs';
 
 export const shoreFrontierFiles=['shared-context-borders.bin','russia/international.bin','atlas-frontiers.bin'];
 export function chinaShore(display){
+ const segmentKey=(a,b)=>[a.map(v=>v.toFixed(7)).join(','),b.map(v=>v.toFixed(7)).join(',')].sort().join('|');
+ const segmentOwners=new Map();for(const f of display.provinces.features)for(const polygon of polygons(f.geometry))for(const ring of polygon)for(let i=1;i<ring.length;i++){const key=segmentKey(ring[i-1],ring[i]);if(!segmentOwners.has(key))segmentOwners.set(key,new Set());segmentOwners.get(key).add(f.properties.adcode);}
+ const shared=new Set([...segmentOwners].filter(([,owners])=>owners.size>1).map(([key])=>key));
  const provinces=new Map(display.provinces.features.map(f=>[String(f.properties.adcode),f])),neighbour=outlineIndex(provinces,1500);
  const boxes=[...provinces].map(([id,f])=>{const rings=polygons(f.geometry).flat(),b=[Infinity,Infinity,-Infinity,-Infinity];for(const r of rings)for(const p of r){b[0]=Math.min(b[0],p[0]);b[1]=Math.min(b[1],p[1]);b[2]=Math.max(b[2],p[0]);b[3]=Math.max(b[3],p[1]);}return {id,rings,b,index:null};});
  const provinceAt=p=>{for(const u of boxes){if(p[0]<u.b[0]||p[0]>u.b[2]||p[1]<u.b[1]||p[1]>u.b[3])continue;u.index??=landIndex(u.rings);if(u.index(p))return u.id;}return null;};
@@ -17,7 +20,8 @@ export function chinaShore(display){
  // 0: two provinces on its sides; 1: outer edge that stays; 2: shore (the same province on both
  // sides is a narrow inlet).
  const kind=(a,b)=>{
-  if(!metres(a,b))return 0;
+  // Exact shared topology outranks probes that can cross a nearby bend.
+  if(shared.has(segmentKey(a,b))||!metres(a,b))return 0;
   const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],c=Math.cos(m[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],n=Math.hypot(dx,dy),step=30/111195;
   const [left,right]=[1,-1].map(s=>provinceAt([m[0]-dy/n*step*s/c,m[1]+dx/n*step*s]));if(left&&right)return left===right?2:0;
   // A narrow island can put both 30 m probes in water. With no owner, the

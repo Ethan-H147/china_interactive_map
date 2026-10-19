@@ -1,0 +1,331 @@
+{
+  "officialRayons": 40,
+  "retainedRayons": 39,
+  "decision": "Do not expose incomplete and outdated second-level geography",
+  "records": [
+    {
+      "relation": 15567419,
+      "parent": "KG-B",
+      "name": "Kyzyl-Kyya",
+      "local": "Кызыл-Кыя шаары"
+    },
+    {
+      "relation": 4033822,
+      "parent": "KG-B",
+      "name": "Leylek District",
+      "local": "Лейлек району"
+    },
+    {
+      "relation": 4033859,
+      "parent": "KG-B",
+      "name": "Batken District",
+      "local": "Баткен району"
+    },
+    {
+      "relation": 4033820,
+      "parent": "KG-B",
+      "name": "Kadamjay District",
+      "local": "Кадамжай району"
+    },
+    {
+      "relation": 4039638,
+      "parent": "KG-B",
+      "name": "Sülüktü City",
+      "local": "Сүлүктү шаары"
+    },
+    {
+      "relation": 15574105,
+      "parent": "KG-N",
+      "name": "Jumgal District",
+      "local": "Жумгал району"
+    },
+    {
+      "relation": 15576908,
+      "parent": "KG-N",
+      "name": "Koçkor district",
+      "local": "Кочкор району"
+    },
+    {
+      "relation": 15577237,
+      "parent": "KG-N",
+      "name": "Ak-Talaa District",
+      "local": "Ак-Талаа району"
+    },
+    {
+      "relation": 15579065,
+      "parent": "KG-N",
+      "name": "Naryn District",
+      "local": "Нарын району"
+    },
+    {
+      "relation": 15577641,
+      "parent": "KG-N",
+      "name": "Naryn City",
+      "local": "Нарын шаары"
+    },
+    {
+      "relation": 15579154,
+      "parent": "KG-N",
+      "name": "At-Bashy District",
+      "local": "Ат-Башы району"
+    },
+    {
+      "relation": 15570396,
+      "parent": "KG-O",
+      "name": "Nookat District",
+      "local": "Ноокат району"
+    },
+    {
+      "relation": 15570537,
+      "parent": "KG-O",
+      "name": "Aravan District",
+      "local": "Араван району"
+    },
+    {
+      "relation": 15570558,
+      "parent": "KG-O",
+      "name": "Kara-Suu District",
+      "local": "Кара-Суу району"
+    },
+    {
+      "relation": 15570597,
+      "parent": "KG-O",
+      "name": "Özgön District",
+      "local": "Өзгөн району"
+    },
+    {
+      "relation": 15570762,
+      "parent": "KG-O",
+      "name": "Alay District",
+      "local": "Алай району"
+    },
+    {
+      "relation": 15570761,
+      "parent": "KG-O",
+      "name": "Kara-Kulja District",
+      "local": "Кара-Кулжа району"
+    },
+    {
+      "relation": 7491199,
+      "parent": "KG-O",
+      "name": "Chong-Alay District",
+      "local": "Чоң-Алай району"
+    },
+    {
+      "relation": 15547630,
+      "parent": "KG-J",
+      "name": "Kök-Jangak City",
+      "local": "Көк-Жаңгак шаары"
+    },
+    {
+      "relation": 15547629,
+      "parent": "KG-J",
+      "name": "Suzak District",
+      "local": "Сузак району"
+    },
+    {
+      "relation": 15547631,
+      "parent": "KG-J",
+      "name": "Manas",
+      "local": "Манас"
+    },
+    {
+      "relation": 15547843,
+      "parent": "KG-J",
+      "name": "Mailuu-Suu City",
+      "local": "Майлуу-Суу шаары"
+    },
+    {
+      "relation": 15553326,
+      "parent": "KG-J",
+      "name": "Toguz-Toro District",
+      "local": "Тогуз-торо району"
+    },
+    {
+      "relation": 15553602,
+      "parent": "KG-J",
+      "name": "Bazar-Korgon District",
+      "local": "Базар-Коргон району"
+    },
+    {
+      "relation": 15554117,
+      "parent": "KG-J",
+      "name": "Nooken District",
+      "local": "Ноокен району"
+    },
+    {
+      "relation": 15554967,
+      "parent": "KG-J",
+      "name": "Taş-Kömür City",
+      "local": "Таш-Көмүр шаары"
+    },
+    {
+      "relation": 15554968,
+      "parent": "KG-J",
+      "name": "Aksy District",
+      "local": "Аксы району"
+    },
+    {
+      "relation": 15554969,
+      "parent": "KG-J",
+      "name": "Toktogul District",
+      "local": "Токтогул району"
+    },
+    {
+      "relation": 15567054,
+      "parent": "KG-J",
+      "name": "Ala-Buka District",
+      "local": "Ала-Бука району"
+    },
+    {
+      "relation": 15567113,
+      "parent": "KG-J",
+      "name": "Chatkal District",
+      "local": "Чаткал району"
+    },
+    {
+      "relation": 15573322,
+      "parent": "KG-T",
+      "name": "Talas District",
+      "local": "Талас району"
+    },
+    {
+      "relation": 15573321,
+      "parent": "KG-T",
+      "name": "Talas City",
+      "local": "Талас шаары"
+    },
+    {
+      "relation": 15573702,
+      "parent": "KG-T",
+      "name": "Bakay-Ata District",
+      "local": "Бакай-Ата району"
+    },
+    {
+      "relation": 15573753,
+      "parent": "KG-T",
+      "name": "Kara-Buura District",
+      "local": "Кара-Буура району"
+    },
+    {
+      "relation": 15573783,
+      "parent": "KG-T",
+      "name": "Manas District",
+      "local": "Манас району"
+    },
+    {
+      "relation": 15585749,
+      "parent": "KG-Y",
+      "name": "Karakol City",
+      "local": "Каракол шаары"
+    },
+    {
+      "relation": 15586036,
+      "parent": "KG-Y",
+      "name": "Balykchy",
+      "local": "Балыкчы"
+    },
+    {
+      "relation": 15586335,
+      "parent": "KG-Y",
+      "name": "Tong District",
+      "local": "Тоң району"
+    },
+    {
+      "relation": 15586552,
+      "parent": "KG-Y",
+      "name": "Issyk-Kul District",
+      "local": "Ысык-Көл району"
+    },
+    {
+      "relation": 15586855,
+      "parent": "KG-Y",
+      "name": "Tüp District",
+      "local": "Түп району"
+    },
+    {
+      "relation": 15587161,
+      "parent": "KG-Y",
+      "name": "Ak-Suu District",
+      "local": "Ак-Суу району"
+    },
+    {
+      "relation": 15587294,
+      "parent": "KG-Y",
+      "name": "Jeti-Ögüz District",
+      "local": "Жети-Өгүз району"
+    },
+    {
+      "relation": 2444081,
+      "parent": "KG-C",
+      "name": "Chuy District",
+      "local": "Чүй району"
+    },
+    {
+      "relation": 7727465,
+      "parent": "KG-C",
+      "name": "Tokmok City",
+      "local": "Токмок шаары"
+    },
+    {
+      "relation": 2444079,
+      "parent": "KG-C",
+      "name": "Panfilov District",
+      "local": "Панфилов району"
+    },
+    {
+      "relation": 2444075,
+      "parent": "KG-C",
+      "name": "Alamüdün District",
+      "local": "Аламүдүн району"
+    },
+    {
+      "relation": 2444080,
+      "parent": "KG-C",
+      "name": "Sokuluk District",
+      "local": "Сокулук району"
+    },
+    {
+      "relation": 2444078,
+      "parent": "KG-C",
+      "name": "Moskva District",
+      "local": "Москва району"
+    },
+    {
+      "relation": 2444076,
+      "parent": "KG-C",
+      "name": "Jayyl District",
+      "local": "Жайыл району"
+    },
+    {
+      "relation": 2444077,
+      "parent": "KG-C",
+      "name": "Kemin District",
+      "local": "Кемин району"
+    },
+    {
+      "relation": 15600026,
+      "parent": "KG-GB",
+      "name": "First of May District",
+      "local": "Биринчи май району"
+    },
+    {
+      "relation": 15600027,
+      "parent": "KG-GB",
+      "name": "Lenin District",
+      "local": "Ленин району"
+    },
+    {
+      "relation": 15600028,
+      "parent": "KG-GB",
+      "name": "October District",
+      "local": "Октябрь району"
+    },
+    {
+      "relation": 15600029,
+      "parent": "KG-GB",
+      "name": "Sverdlov District",
+      "local": "Свердлов району"
+    }
+  ]
+}

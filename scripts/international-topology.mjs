@@ -42,7 +42,7 @@ export function alignCountry(features,canonical,allowed,maxDistance=2500,candida
   const a=path[i-1],b=path[i];if(!exteriorEdges.has(edgeKey(a,b))||!candidate(a,b))continue;
   const from=nearest(a),to=nearest(b);if(!from||!to)continue;
   let delta=to.position-from.position;if(delta>n/2)delta-=n;if(delta<-n/2)delta+=n;
-  if(options&&Math.abs(delta)<1e-8)continue;
+  if(options&&!options.allowCollapse&&Math.abs(delta)<1e-8)continue;
   if(Math.abs(delta)>1500)continue;
   const replacement=[from.q];
   if(delta>=0){for(let j=Math.floor(from.position)+1;j<from.position+delta;j++)replacement.push(ring[(j%n+n)%n]);}

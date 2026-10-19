@@ -8,7 +8,7 @@ const root='dist/data/europe',read=(c,n)=>JSON.parse(gunzipSync(fs.readFileSync(
 const countries=['united-kingdom','spain','france','italy','iceland','india','chile','paraguay','peru','turkey'];
 // Countries reconciled with outlines drawn outside this build, and the countries whose claims
 // their portals carry apart.
-const claimsAgainst={india:['china'],chile:['argentina'],paraguay:['argentina','brazil'],peru:[]};
+const claimsAgainst={india:['china','pakistan'],chile:['argentina'],paraguay:['argentina','brazil'],peru:[]};
 assert.deepEqual(Object.keys(configurations).sort(),[...globalThis.AtlasCountries.byAdapter('europe')].sort());
 const polygons=g=>g.type==='Polygon'?[g.coordinates]:g.coordinates;
 function inRing(p,ring){let inside=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const a=ring[i],b=ring[j];if(a[1]>p[1]!==b[1]>p[1]&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;}
@@ -23,7 +23,7 @@ const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250
 // Saint-Martin; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
 // Turkey: Greece and Bulgaria from the Aegean to the Black Sea; Georgia to Syria from the Black
 // Sea to the Mediterranean. Iceland has no land frontier.
-const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:58,chile:17,paraguay:3,peru:56,turkey:2};
+const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:53,chile:17,paraguay:3,peru:56,turkey:2};
 // The six Meuse villages destroyed at Verdun in 1916 remain communes with no inhabitants.
 const zeroPopulation=new Set(['FR-C-55039','FR-C-55050','FR-C-55139','FR-C-55189','FR-C-55239','FR-C-55307']);
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
@@ -173,7 +173,7 @@ assert.equal(Object.values(JSON.parse(fs.readFileSync(root+'/india/statistics.js
  for(const [p,place] of [[[91.86,27.59],'Tawang'],[[79.5,35.2],'Aksai Chin']])assert(!contains(home,p)&&claims.some(f=>contains(f.geometry,p)),place+' is a claim China holds, apart from India’s portal');
  assert(!contains(home,[74.3,35.9])&&!claims.some(f=>contains(f.geometry,[74.3,35.9])),'Pakistan-administered Kashmir is outside India’s portal');
  assert(contains(home,[88.61,27.33])&&contains(home,[77.2,28.6]),'India’s portal holds Sikkim and Delhi');
- assert.deepEqual(read('india','neighbours.bin').features.map(f=>f.properties.country).sort(),['afghanistan','bangladesh','bhutan','myanmar','nepal','pakistan']);
+ assert.deepEqual(read('india','neighbours.bin').features.map(f=>f.properties.country).sort(),['afghanistan','bangladesh','bhutan','myanmar','nepal'],'Pakistan now uses its full country portal');
  for(const [p,place] of [[[85.32,27.7],'Kathmandu'],[[89.64,27.47],'Thimphu'],[[90.4,23.8],'Dhaka']])assert(read('india','neighbours.bin').features.some(f=>contains(f.geometry,p)),place+' is drawn beneath India');
  // The former Indian enclaves in Bangladesh, exchanged in 2015, are gone.
  assert(!polygons(states.find(f=>f.properties.id==='IN-WB').geometry).some(p=>p[0].every(q=>q[0]>88.5&&q[0]<89.9&&q[1]>25.8&&q[1]<26.6)),'West Bengal keeps no enclaves in Bangladesh');

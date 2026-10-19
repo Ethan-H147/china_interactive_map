@@ -7,12 +7,6 @@
   },
   "frontiers": [
     {
-      "pair": "DEU-DNK",
-      "vertices": 52,
-      "endpointErrorMetres": 0,
-      "method": "reference through water"
-    },
-    {
       "pair": "DEU-POL",
       "vertices": 6,
       "endpointErrorMetres": 0,
@@ -59,6 +53,27 @@
       "vertices": 337,
       "endpointErrorMetres": 6331,
       "method": "continuous outline arc"
+    },
+    {
+      "pair": "DEU-DNK",
+      "vertices": 47,
+      "endpointErrorMetres": 0,
+      "method": "Shared municipality-derived land frontier, separate BKG VG25 sea boundaries; sea endpoints join the displayed GISCO shoreline.",
+      "boundaryType": "land"
+    },
+    {
+      "pair": "DEU-DNK",
+      "vertices": 32,
+      "endpointErrorMetres": 0,
+      "method": "Shared municipality-derived land frontier, separate BKG VG25 sea boundaries; sea endpoints join the displayed GISCO shoreline.",
+      "boundaryType": "water"
+    },
+    {
+      "pair": "DEU-DNK",
+      "vertices": 46,
+      "endpointErrorMetres": 0,
+      "method": "Shared municipality-derived land frontier, separate BKG VG25 sea boundaries; sea endpoints join the displayed GISCO shoreline.",
+      "boundaryType": "water"
     }
   ],
   "kinds": {
@@ -96,6 +111,48 @@
       "license": "Public domain",
       "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
       "bytes": 2284669
+    },
+    {
+      "file": "bkg-vg25-lines.geojson.gz",
+      "retrieved": "2026-10-19",
+      "url": "https://sgx.geodatenzentrum.de/wfs_vg25?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg25:vg25_li&bbox=8.25,54.65,10.1,55.15,urn:ogc:def:crs:OGC:1.3:CRS84&srsName=urn:ogc:def:crs:OGC:1.3:CRS84&outputFormat=application/json",
+      "sha256": "e7a884f70ca29cecb8367148a93ebcc063aef7d8c6850c62d7a734710ea359b7",
+      "bytes": 1233661,
+      "provider": "Bundesamt für Kartographie und Geodäsie · VG25 WFS administrative boundary lines, retrieved 19 October 2026",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "documentation": "https://sgx.geodatenzentrum.de/web_public/gdz/dokumentation/deu/vg25.pdf"
     }
-  ]
+  ],
+  "germanyDenmarkRepair": {
+    "pair": "DEU-DNK",
+    "method": "Shared municipality-derived land frontier, separate BKG VG25 sea boundaries; sea endpoints join the displayed GISCO shoreline.",
+    "landVertices": 47,
+    "landEndpoints": [
+      [
+        8.658527,
+        54.908945
+      ],
+      [
+        9.420152,
+        54.831956
+      ]
+    ],
+    "officialShoreEndpointErrorMetres": {
+      "west": 9.529723723677106,
+      "east": 8.982421980941629
+    },
+    "bkgSource": "scripts/boundary-sources/germany-denmark/sources.json",
+    "retrieved": "2026-10-19",
+    "source": {
+      "retrieved": "2026-10-19",
+      "url": "https://sgx.geodatenzentrum.de/wfs_vg25?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg25:vg25_li&bbox=8.25,54.65,10.1,55.15,urn:ogc:def:crs:OGC:1.3:CRS84&srsName=urn:ogc:def:crs:OGC:1.3:CRS84&outputFormat=application/json",
+      "sha256": "e7a884f70ca29cecb8367148a93ebcc063aef7d8c6850c62d7a734710ea359b7",
+      "bytes": 1233661,
+      "provider": "Bundesamt für Kartographie und Geodäsie · VG25 WFS administrative boundary lines, retrieved 19 October 2026",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "documentation": "https://sgx.geodatenzentrum.de/web_public/gdz/dokumentation/deu/vg25.pdf"
+    }
+  }
 }

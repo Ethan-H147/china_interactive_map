@@ -9,7 +9,7 @@ export const configurations=Object.fromEntries(Object.entries(definitions).map((
 export function createEurope(map,host){
  let flags;
  const registry=globalThis.AtlasCountries;
- const flagSets={atlantic:async()=>(await import('./atlantic-flags.mjs')).atlanticFlags,oceania:async()=>(await import('./oceania-flags.mjs')).oceaniaFlags,'europe-expansion':async()=>(await import('./europe-expansion-flags.mjs')).europeExpansionFlags,'north-america':async()=>(await import('./north-america-flags.mjs')).northAmericaFlags};
+ const flagSets={nordic:async()=>(await import('./nordic-flags.mjs')).nordicFlags,atlantic:async()=>(await import('./atlantic-flags.mjs')).atlanticFlags,oceania:async()=>(await import('./oceania-flags.mjs')).oceaniaFlags,'europe-expansion':async()=>(await import('./europe-expansion-flags.mjs')).europeExpansionFlags,'north-america':async()=>(await import('./north-america-flags.mjs')).northAmericaFlags};
  return createRegionalCollection(map,host,configurations,{async prepare(country,config){
   flags??=(await import('./europe-flags.mjs')).europeFlags;
   if(country==='vatican-city')Object.assign(config,vaticanProfile);

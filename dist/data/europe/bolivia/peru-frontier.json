@@ -1,0 +1,137 @@
+{
+  "pair": "PER-BOL",
+  "owner": "peru",
+  "date": "2026-10-19",
+  "method": "One continuous outline. Peru detailed land edge is shared by Bolivia leaves and dissolved parents; independent common OSM country-relation ways cross the two lake basins. Mapped shorelines and island holes are unchanged.",
+  "landReaches": [
+    {
+      "name": "north",
+      "vertices": 1840,
+      "endpoints": [
+        [
+          -69.550616,
+          -10.953073
+        ],
+        [
+          -69.330624,
+          -15.53688
+        ]
+      ]
+    },
+    {
+      "name": "peninsula",
+      "vertices": 33,
+      "endpoints": [
+        [
+          -69.101771,
+          -16.224427
+        ],
+        [
+          -68.956645,
+          -16.196567
+        ]
+      ]
+    },
+    {
+      "name": "south",
+      "vertices": 146,
+      "endpoints": [
+        [
+          -69.036589,
+          -16.560315
+        ],
+        [
+          -69.468442,
+          -17.504171
+        ]
+      ]
+    }
+  ],
+  "vertices": 2049,
+  "lakeEndpointAdjustmentsMetres": [
+    94.02159354661913,
+    116.45535378436765,
+    144.40026532398127,
+    119.52412749037279
+  ],
+  "municipalRuns": [
+    {
+      "id": "BO-M-020401",
+      "edges": 22
+    },
+    {
+      "id": "BO-M-020402",
+      "edges": 19
+    },
+    {
+      "id": "BO-M-020404",
+      "edges": 12
+    },
+    {
+      "id": "BO-M-020701",
+      "edges": 293
+    },
+    {
+      "id": "BO-M-020702",
+      "edges": 345
+    },
+    {
+      "id": "BO-M-021501",
+      "edges": 1086
+    },
+    {
+      "id": "BO-M-021601",
+      "edges": 50
+    },
+    {
+      "id": "BO-M-090103",
+      "edges": 4
+    },
+    {
+      "id": "BO-M-090203",
+      "edges": 15
+    },
+    {
+      "id": "BO-M-021701",
+      "edges": 25
+    },
+    {
+      "id": "BO-M-021703",
+      "edges": 8
+    },
+    {
+      "id": "BO-M-020305",
+      "edges": 1
+    },
+    {
+      "id": "BO-M-020804",
+      "edges": 17
+    },
+    {
+      "id": "BO-M-020804",
+      "edges": 2
+    },
+    {
+      "id": "BO-M-020805",
+      "edges": 46
+    },
+    {
+      "id": "BO-M-020805",
+      "edges": 1
+    },
+    {
+      "id": "BO-M-021901",
+      "edges": 39
+    },
+    {
+      "id": "BO-M-021901",
+      "edges": 2
+    },
+    {
+      "id": "BO-M-021902",
+      "edges": 44
+    }
+  ],
+  "maxMunicipalJunctionDisplacementMetres": 0.057802300663553276,
+  "lakeSources": "data/europe/peru/bolivia-frontier-sources.json"
+}

@@ -6,7 +6,7 @@ export function configureMapViewPicker({country,value,options,onChange,busy=fals
  const signature=JSON.stringify(options),sameOwner=owner===country,changed=select.dataset.options!==signature;
  if(changed){select.replaceChildren(...options.map(o=>new Option(o.label,o.value)));select.dataset.options=signature;}
  for(const b of group.querySelectorAll?.('.map-mode>button:not(#mode-lock)')||[]){if(b.hidden||!b.textContent)continue;b.dataset.viewShortLabel=b.textContent.split(' & ')[0];b.setAttribute('aria-label',b.textContent);}
- owner=country;select.hidden=false;if(!open||!sameOwner||changed)select.value=value;select.setAttribute('aria-busy',String(busy));
+ owner=country;if(select.hidden)select.hidden=false;if((!open||!sameOwner||changed)&&select.value!==value)select.value=value;select.setAttribute('aria-busy',String(busy));
  const label=options.find(o=>o.value===value)?.label||'Administrative';
  select.title='Map view: '+label;select.setAttribute('aria-label','Map view: '+label);
  if(thematic)group.dataset.thematic='true';else delete group.dataset.thematic;

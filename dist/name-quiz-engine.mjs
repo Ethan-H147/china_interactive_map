@@ -13,7 +13,9 @@ export function createNameRound(places,saved){
 export function submitName(round,value){
   if(round.complete)return{status:'complete'};
   const text=normalizeName(value);if(!text)return{status:'empty'};
-  const matches=round.places.filter(p=>aliases(p).has(text));
+  // Prefer complete display names before considering shared short aliases.
+  const exact=round.places.filter(p=>[p.en,p.zh].some(n=>n&&normalizeName(n)===text));
+  const matches=exact.length?exact:round.places.filter(p=>aliases(p).has(text));
   if(matches.length>1)return{status:'ambiguous'};
   if(!matches.length)return{status:'unknown'};
   const place=matches[0];if(round.found.has(place.code))return{status:'duplicate',place};

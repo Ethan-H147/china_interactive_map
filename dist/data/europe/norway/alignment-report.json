@@ -1,0 +1,13 @@
+[
+  {
+    "country": "norway",
+    "pair": "NOR-RUS",
+    "runs": [
+      {
+        "id": "NO-M-5605",
+        "edges": 77
+      }
+    ],
+    "maxEndpointDisplacementMetres": 906.9398004400081
+  }
+]

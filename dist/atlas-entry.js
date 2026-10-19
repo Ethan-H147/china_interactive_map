@@ -31,7 +31,7 @@
   document.title=info.en+(info.local?' · '+info.local:'');
   document.querySelectorAll('[data-country-symbol]').forEach(el=>{el.innerHTML=info?AtlasSymbols.markup(current):'';});
   if($('loading-label'))$('loading-label').textContent=info?'Loading '+info.en+' map…':'Loading atlas…';
-  if($('home'))$('home').textContent='All '+(info?.en||'countries');
+  if($('home'))$('home').textContent=info?.en||'Countries';
   if($('map')&&info)$('map').setAttribute('aria-label',info.mapLabel||'Interactive '+info.en+' administrative boundary and island map');
  }
  window.AtlasEntry={initial,countries,fromHash,mount:paint,takeEarly(key){const response=early[key];delete early[key];return response;},remember(country,{preservePlace=true}={}){if(!countries[country]||!allowed(country))return;current=country;persist(country);setUrl(country,preservePlace);paint();},ready(){delete root.dataset.starting;},get current(){return current;}};

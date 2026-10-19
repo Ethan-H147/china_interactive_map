@@ -45,3 +45,20 @@ export function prepareCountryDetails(anchor){
 export function setSubdivisionHeading(heading,label,count){
  heading.textContent=label+' ';const value=document.createElement('span');value.className='division-count';value.textContent=String(count);heading.append(value);
 }
+
+// Parents use the same selection action as search and map clicks.
+export function setMapBreadcrumb(items){
+ const root=document.getElementById('breadcrumb-region');root.replaceChildren();root.hidden=!items.length;
+ items.forEach(({label,select},i)=>{
+  if(i){const separator=document.createElement('span');separator.className='breadcrumb-separator';separator.textContent=' / ';separator.setAttribute('aria-hidden','true');root.append(separator);}
+  const node=document.createElement(select?'button':'span');node.textContent=label;
+  if(select){node.type='button';node.className='breadcrumb-parent';node.dataset.nav='';node.setAttribute('aria-label','View '+label);node.onclick=select;}
+  else{node.className='breadcrumb-current';node.setAttribute('aria-current','location');}
+  root.append(node);
+ });
+}
+export function setRegionBreadcrumb(record,parentOf,labelOf,select){
+ const path=[],seen=new Set();let item=record;
+ while(item&&!seen.has(item)){seen.add(item);path.unshift(item);item=parentOf(item);}
+ setMapBreadcrumb(path.map(item=>({label:labelOf(item),...(item!==record?{select:()=>select(item)}:{})})));
+}

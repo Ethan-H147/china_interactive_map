@@ -27,3 +27,5 @@ for(const owner of ['chile','paraguay','peru']){const file='dist/data/europe/'+o
 fs.writeFileSync('dist/vendor/flag-bo.svg',readBolivia('flag.svg'));const flagFile='dist/data/europe/flag-sources.json',flags=JSON.parse(fs.readFileSync(flagFile));flags.flags.bolivia={file:'vendor/flag-bo.svg',full:'vendor/flag-bo.svg',name:'Bolivia civil flag',width:1100,height:750,source:manifest.files['flag.svg'].url,page:'https://commons.wikimedia.org/wiki/File:Flag_of_Bolivia.svg',credit:'Civil flag of Bolivia',license:'Public domain (PD-Bolivia; simple design)',sha256:manifest.files['flag.svg'].sha256};fs.writeFileSync(flagFile,JSON.stringify(flags,null,2)+'\n');
 
 await (await import('./titicaca-water.mjs')).writeTiticacaWater();await (await import('./mask-titicaca.mjs')).maskTiticacaCountry('bolivia');
+
+await (await import('./reconcile-bolivia-peru.mjs')).reconcileBoliviaPeru();

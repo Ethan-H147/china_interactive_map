@@ -1,3 +1,4 @@
+import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
@@ -17,7 +18,7 @@ for(const p of catalogue.filter(c=>c.disputed))assert.equal(japanPopulation(fact
 const flags=JSON.parse(fs.readFileSync('dist/data/japan-local-flags.json'));
 assert(Object.keys(flags.flags).length>=1741);
 assert(catalogue.filter(p=>p.level===2&&!p.disputed).every(p=>flags.flags[p.id]),'Every ordinary municipality has a verified flag record');
-for(const [id,r]of Object.entries(flags.flags)){assert(catalogue.some(p=>p.id===id));assert(r.page.startsWith('https://commons.wikimedia.org/'));assert(r.license);assert(r.bytes<=1024*1024);if(!r.file.startsWith('https://')){const file=fs.readFileSync('dist/'+r.file);assert.equal(file.length,r.bytes);if(r.file.endsWith('.svg'))assert(!/<script|<foreignObject|\son\w+\s*=|javascript:|(?:href|src)\s*=\s*["'](?:https?:|\/\/)/i.test(file.toString()));}else assert.equal(new URL(r.file).hostname,'upload.wikimedia.org');assert.equal(facts.records[id].flag.file,r.file);}
+for(const [id,r]of Object.entries(flags.flags)){assert(catalogue.some(p=>p.id===id));assert(r.page.startsWith('https://commons.wikimedia.org/'));assert(r.license);assert(r.bytes<=1024*1024);if(!r.file.startsWith('https://')){const file=fs.readFileSync('dist/'+r.file);if(file.length!==r.bytes&&r.file.endsWith('.svg')){const originalLineEndings=Buffer.from(file.toString().replace(/\r?\n/g,'\r\n'));assert.equal(originalLineEndings.length,r.bytes);assert.equal(createHash('sha256').update(originalLineEndings).digest('hex'),r.sha256,'Only Git newline normalization may change source bytes');}else assert.equal(file.length,r.bytes);if(r.file.endsWith('.svg'))assert(!/<script|<foreignObject|\son\w+\s*=|javascript:|(?:href|src)\s*=\s*["'](?:https?:|\/\/)/i.test(file.toString()));}else assert.equal(new URL(r.file).hostname,'upload.wikimedia.org');assert.equal(facts.records[id].flag.file,r.file);}
 assert(fs.statSync('dist/data/japan-local-facts.bin').size<250000,'Country-only metadata stays small');
 assert.equal(japanLocalStatistics(facts,'JP-13104').regions['japan:JP-13104'].area.value,18.22);
 

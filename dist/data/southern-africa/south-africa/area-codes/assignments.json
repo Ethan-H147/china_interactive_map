@@ -1,0 +1,6347 @@
+{
+  "codes": [
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015",
+    "016",
+    "017",
+    "018",
+    "021",
+    "022",
+    "023",
+    "027",
+    "028",
+    "031",
+    "032",
+    "033",
+    "034",
+    "035",
+    "036",
+    "039",
+    "040",
+    "041",
+    "042",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "048",
+    "049",
+    "051",
+    "053",
+    "054",
+    "056",
+    "057",
+    "058"
+  ],
+  "places": [
+    {
+      "id": "ZA-C-798026",
+      "en": "Soweto",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.85849,
+        -26.26781
+      ],
+      "population": 1271628,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.health.gov.za/ccmdd-pick-up-points/"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-798015",
+      "en": "Johannesburg",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.04363,
+        -26.20227
+      ],
+      "population": 957441,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799035",
+      "en": "Pretoria",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.18783,
+        -25.74486
+      ],
+      "population": 741651,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599054",
+      "en": "Durban",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.0292,
+        -29.8579
+      ],
+      "population": 595061,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797005",
+      "en": "Tembisa",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.22762,
+        -26.00979
+      ],
+      "population": 463109,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199041",
+      "en": "Cape Town",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.42322,
+        -33.92584
+      ],
+      "population": 433688,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797031",
+      "en": "Katlehong",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.157,
+        -26.33995
+      ],
+      "population": 407294,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=258&sname=Katlehong+%28Gauteng%29",
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1396&sname=Katlehong+North+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599163",
+      "en": "Umlazi",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.88333,
+        -29.96667
+      ],
+      "population": 404811,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=650&sname=Umlazi+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799021",
+      "en": "Soshanguve",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.09919,
+        -25.47288
+      ],
+      "population": 403162,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199038",
+      "en": "Khayelitsha",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.67916,
+        -34.03932
+      ],
+      "population": 391749,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1315&sname=Khayelitsha+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-798016",
+      "en": "Randburg",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.00123,
+        -26.0941
+      ],
+      "population": 337053,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799046",
+      "en": "Mamelodi",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.36534,
+        -25.71301
+      ],
+      "population": 334577,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=200&sname=Mamelodi+%28Gauteng%29",
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1239&sname=Mamelodi+East+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-798022",
+      "en": "Roodepoort",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.8725,
+        -26.1625
+      ],
+      "population": 326416,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-299007",
+      "en": "Gqeberha",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.61494,
+        -33.96109
+      ],
+      "population": 312392,
+      "codes": [
+        "041"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199039",
+      "en": "Mitchells Plain",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.62365,
+        -34.05341
+      ],
+      "population": 310485,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=231&sname=Mitchells+Plain+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260113",
+      "en": "East London",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.91162,
+        -33.01529
+      ],
+      "population": 267007,
+      "codes": [
+        "043"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797010",
+      "en": "Boksburg",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.25958,
+        -26.21197
+      ],
+      "population": 260321,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-499023",
+      "en": "Bloemfontein",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        26.214,
+        -29.12107
+      ],
+      "population": 256185,
+      "codes": [
+        "051"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797008",
+      "en": "Germiston",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.164,
+        -26.215
+      ],
+      "population": 255863,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799059",
+      "en": "Centurion",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.18577,
+        -25.85891
+      ],
+      "population": 236580,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-566003",
+      "en": "Pietermaritzburg",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.39278,
+        -29.61679
+      ],
+      "population": 223448,
+      "codes": [
+        "033"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-760004",
+      "en": "Sebokeng",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.84409,
+        -26.55898
+      ],
+      "population": 218515,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-677006",
+      "en": "Klerksdorp",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.66672,
+        -26.85213
+      ],
+      "population": 186515,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-299006",
+      "en": "Bethelsdorp",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.51242,
+        -33.88856
+      ],
+      "population": 182012,
+      "codes": [
+        "041"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=886&sname=Bethelsdorp+%28Eastern+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-499030",
+      "en": "Botshabelo",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        26.72595,
+        -29.26737
+      ],
+      "population": 181712,
+      "codes": [
+        "051"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599051",
+      "en": "Phoenix",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.0051,
+        -29.70306
+      ],
+      "population": 176989,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=619&sname=Phoenix+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599055",
+      "en": "KwaMashu",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.96204,
+        -29.75105
+      ],
+      "population": 175663,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797006",
+      "en": "Kempton Park",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.2377,
+        -26.10859
+      ],
+      "population": 171575,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797032",
+      "en": "Vosloorus",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.20756,
+        -26.35745
+      ],
+      "population": 163216,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=271&sname=Vosloorus+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797011",
+      "en": "Benoni",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.32078,
+        -26.18848
+      ],
+      "population": 158777,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260088",
+      "en": "Mdantsane",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.77656,
+        -32.93324
+      ],
+      "population": 156835,
+      "codes": [
+        "043"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199018",
+      "en": "Kraaifontein",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.71723,
+        -33.84808
+      ],
+      "population": 154615,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797012",
+      "en": "Etwatwa",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.45472,
+        -26.12516
+      ],
+      "population": 151866,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=460&sname=Etwatwa+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599116",
+      "en": "Pinetown",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.88674,
+        -29.82068
+      ],
+      "population": 144026,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-566016",
+      "en": "Edendale",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.31498,
+        -29.65247
+      ],
+      "population": 140891,
+      "codes": [
+        "033"
+      ],
+      "assignmentSources": [
+        "https://www2.kznhealth.gov.za/rabiesvaccine.htm"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-763004",
+      "en": "Krugersdorp",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.77515,
+        -26.08577
+      ],
+      "population": 140643,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-299008",
+      "en": "Motherwell",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.5858,
+        -33.7943
+      ],
+      "population": 140351,
+      "codes": [
+        "041"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=894&sname=Motherwell+%28Eastern+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797026",
+      "en": "Tsakane",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.38208,
+        -26.35626
+      ],
+      "population": 135994,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=270&sname=Tsakane+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-760002",
+      "en": "Evaton",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.85,
+        -26.53333
+      ],
+      "population": 132851,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=429&sname=Evaton+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-974044",
+      "en": "Polokwane",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        29.46885,
+        -23.90449
+      ],
+      "population": 130028,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797014",
+      "en": "Daveyton",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.42492,
+        -26.13816
+      ],
+      "population": 127967,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599056",
+      "en": "Ntuzuma",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.949,
+        -29.739
+      ],
+      "population": 125394,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1288&sname=Ntuzuma+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797018",
+      "en": "Springs",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.47173,
+        -26.25837
+      ],
+      "population": 121610,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797029",
+      "en": "Alberton",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.12225,
+        -26.26786
+      ],
+      "population": 121536,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799029",
+      "en": "Winterveld",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.02786,
+        -25.41676
+      ],
+      "population": 120826,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-524009",
+      "en": "Madadeni",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.03596,
+        -27.74548
+      ],
+      "population": 119497,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1100&sname=Madadeni+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199015",
+      "en": "Parow",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.59992,
+        -33.89723
+      ],
+      "population": 119462,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-866011",
+      "en": "Embalenhle",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.06667,
+        -26.53333
+      ],
+      "population": 118889,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=983&sname=Embalenhle+%28Mpumalanga%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-177006",
+      "en": "George",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.46173,
+        -33.963
+      ],
+      "population": 114291,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199016",
+      "en": "Bellville",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.62847,
+        -33.90022
+      ],
+      "population": 112507,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-166008",
+      "en": "Paarl",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.97523,
+        -33.73378
+      ],
+      "population": 112045,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799030",
+      "en": "Mabopane",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.064,
+        -25.509
+      ],
+      "population": 110972,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-538015",
+      "en": "Empangeni",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.89329,
+        -28.76197
+      ],
+      "population": 110340,
+      "codes": [
+        "035"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-868002",
+      "en": "eMalahleni",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.23323,
+        -25.87133
+      ],
+      "population": 108673,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-299009",
+      "en": "KwaNobuhle",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.38841,
+        -33.81756
+      ],
+      "population": 107474,
+      "codes": [
+        "041"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=933&sname=Kwanobuhle+%28Eastern+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797030",
+      "en": "Tokoza",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.129,
+        -26.36
+      ],
+      "population": 105827,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=269&sname=Tokoza+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-662049",
+      "en": "Rustenburg",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.24208,
+        -25.66756
+      ],
+      "population": 104612,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797023",
+      "en": "Kwa-Thema",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.40009,
+        -26.29575
+      ],
+      "population": 103727,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-299003",
+      "en": "Kariega",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.40074,
+        -33.75562
+      ],
+      "population": 103639,
+      "codes": [
+        "041"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-760009",
+      "en": "Vereeniging",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.92615,
+        -26.67313
+      ],
+      "population": 99787,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-383006",
+      "en": "Kimberley",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        24.76232,
+        -28.73226
+      ],
+      "population": 96977,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-294040",
+      "en": "Mthatha",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.78443,
+        -31.58893
+      ],
+      "population": 96114,
+      "codes": [
+        "047"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-760008",
+      "en": "Vanderbijlpark",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.83795,
+        -26.71171
+      ],
+      "population": 95840,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199014",
+      "en": "Milnerton",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.49317,
+        -33.88445
+      ],
+      "population": 95630,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=126&sname=Milnerton+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199035",
+      "en": "Blue Downs",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.687,
+        -33.98
+      ],
+      "population": 92330,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://resource.capetown.gov.za/documentcentre/Documents/Forms%2C%20notices%2C%20tariffs%20and%20lists/Rec_and_Parks_Facility_Contact_List.pdf"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799034",
+      "en": "Ga-Rankuwa",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.99471,
+        -25.61692
+      ],
+      "population": 90945,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-798028",
+      "en": "Lenasia",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.83564,
+        -26.32052
+      ],
+      "population": 89714,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-676005",
+      "en": "Ikageng",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.03074,
+        -26.73818
+      ],
+      "population": 87701,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=348&sname=Ikageng+%28North+West%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-798004",
+      "en": "Midrand",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.118,
+        -25.976
+      ],
+      "population": 87387,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=464&sname=Midrand+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-869005",
+      "en": "Middelburg",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.46482,
+        -25.77507
+      ],
+      "population": 87348,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-861008",
+      "en": "Ermelo",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.98333,
+        -26.53333
+      ],
+      "population": 83865,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-974043",
+      "en": "Seshego",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        29.38802,
+        -23.84664
+      ],
+      "population": 83863,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-478010",
+      "en": "Zamdela",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        27.84353,
+        -26.83731
+      ],
+      "population": 82339,
+      "codes": [
+        "051"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1241&sname=Zamdela+%28Free+State%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-764002",
+      "en": "Randfontein",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.70203,
+        -26.1844
+      ],
+      "population": 80492,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-168007",
+      "en": "Worcester",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.44852,
+        -33.64651
+      ],
+      "population": 78906,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-677007",
+      "en": "Kanana",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.62986,
+        -26.9639
+      ],
+      "population": 78419,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=352&sname=Kanana+%28North+West%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-524018",
+      "en": "Osizweni",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.11898,
+        -27.78645
+      ],
+      "population": 77845,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-869004",
+      "en": "Mhluzi",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.43993,
+        -25.75013
+      ],
+      "population": 76462,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1023&sname=Mhluzi+%28Mpumalanga%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797027",
+      "en": "Duduza",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.40628,
+        -26.37959
+      ],
+      "population": 73295,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=243&sname=Duduza+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797022",
+      "en": "Brakpan",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.36938,
+        -26.23656
+      ],
+      "population": 73080,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-514019",
+      "en": "Ezakheni",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        29.91334,
+        -28.62236
+      ],
+      "population": 70809,
+      "codes": [
+        "036"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1092&sname=Ezakheni+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-499028",
+      "en": "Thabanchu",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        26.83898,
+        -29.20932
+      ],
+      "population": 70118,
+      "codes": [
+        "051"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-966131",
+      "en": "Thohoyandou",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.48497,
+        -22.94564
+      ],
+      "population": 69453,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-871013",
+      "en": "Tweefontein",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        28.83431,
+        -25.34604
+      ],
+      "population": 67902,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1028&sname=Tweefontein+%28Mpumalanga%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199004",
+      "en": "Atlantis",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.48335,
+        -33.56668
+      ],
+      "population": 67491,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-514018",
+      "en": "Ladysmith",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        29.77896,
+        -28.55874
+      ],
+      "population": 64855,
+      "codes": [
+        "036"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799056",
+      "en": "Atteridgeville",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.08073,
+        -25.77037
+      ],
+      "population": 64425,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-467009",
+      "en": "Welkom",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        26.73506,
+        -27.97742
+      ],
+      "population": 64130,
+      "codes": [
+        "057"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-766003",
+      "en": "Khutsong",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.32103,
+        -26.32459
+      ],
+      "population": 62458,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1293&sname=Khutsong+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-866008",
+      "en": "Bethal",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.46553,
+        -26.45794
+      ],
+      "population": 60779,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799037",
+      "en": "Akasia",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.09278,
+        -25.65611
+      ],
+      "population": 59455,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=206&sname=Akasia+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-874065",
+      "en": "Mbombela",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        30.96935,
+        -25.47512
+      ],
+      "population": 58672,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799008",
+      "en": "Temba",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.26438,
+        -25.38171
+      ],
+      "population": 58431,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-862009",
+      "en": "Piet Retief",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        30.81323,
+        -27.00706
+      ],
+      "population": 57428,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-538011",
+      "en": "Richards Bay",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        32.03768,
+        -28.78301
+      ],
+      "population": 57387,
+      "codes": [
+        "035"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-379002",
+      "en": "Upington",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        21.25612,
+        -28.44776
+      ],
+      "population": 57220,
+      "codes": [
+        "054"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199021",
+      "en": "Belhar",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.62701,
+        -33.94481
+      ],
+      "population": 56234,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1269&sname=Belhar+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-524010",
+      "en": "Newcastle",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        29.9318,
+        -27.75796
+      ],
+      "population": 56144,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799053",
+      "en": "Nellmapius",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.351,
+        -25.747
+      ],
+      "population": 56111,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://www.tshwane.gov.za/?page_id=649"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199047",
+      "en": "Strand",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.82751,
+        -34.10687
+      ],
+      "population": 55558,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-166005",
+      "en": "Wellington",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.0112,
+        -33.63981
+      ],
+      "population": 55543,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-761006",
+      "en": "Meyerton",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.0195,
+        -26.55987
+      ],
+      "population": 55283,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199045",
+      "en": "Somerset West",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.82113,
+        -34.08401
+      ],
+      "population": 55166,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-764004",
+      "en": "Mohlakeng",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.69635,
+        -26.22599
+      ],
+      "population": 55033,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1916&sname=Mohlakeng+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599113",
+      "en": "KwaDabeka",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.90817,
+        -29.77536
+      ],
+      "population": 54953,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=641&sname=KwaDabeka+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599160",
+      "en": "Queensburgh",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.90643,
+        -29.87769
+      ],
+      "population": 54846,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://environment.durban.gov.za/page/cleansing-and-solid-waste"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-566001",
+      "en": "Northdale",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.39164,
+        -29.55917
+      ],
+      "population": 54822,
+      "codes": [
+        "033"
+      ],
+      "assignmentSources": [
+        "https://www2.kznhealth.gov.za/northdale/SE.htm"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-472008",
+      "en": "Phuthaditjhaba",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        28.81582,
+        -28.52423
+      ],
+      "population": 54661,
+      "codes": [
+        "058"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199017",
+      "en": "Durbanville",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.6486,
+        -33.83079
+      ],
+      "population": 54286,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=112&sname=Durbanville+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599139",
+      "en": "KwaNdengezi",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.77777,
+        -29.83751
+      ],
+      "population": 53843,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=639&sname=KwaNdengezi+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599111",
+      "en": "Newlands East",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.99333,
+        -29.77905
+      ],
+      "population": 52566,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=618&sname=Newlands+East+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199034",
+      "en": "Mfuleni",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.67291,
+        -33.99806
+      ],
+      "population": 52274,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=125&sname=Mfuleni+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599114",
+      "en": "Clermont",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.89788,
+        -29.79312
+      ],
+      "population": 52075,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.gov.za/about-government/contact-directory/kzn-thusong/archie-gumede-thusong-service-centre"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-596004",
+      "en": "Kokstad",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        29.42412,
+        -30.54723
+      ],
+      "population": 51561,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-592012",
+      "en": "Stanger",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.28954,
+        -29.32816
+      ],
+      "population": 51536,
+      "codes": [
+        "032"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-180009",
+      "en": "Knysna",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        23.04713,
+        -34.03627
+      ],
+      "population": 51078,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199026",
+      "en": "Goodwood",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.54881,
+        -33.90492
+      ],
+      "population": 50285,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=114&sname=Goodwood+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-264004",
+      "en": "Grahamstown",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.53276,
+        -33.30422
+      ],
+      "population": 50217,
+      "codes": [
+        "046"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-662048",
+      "en": "Tlhabane",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.2175,
+        -25.64028
+      ],
+      "population": 50073,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797007",
+      "en": "Edenvale",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.15247,
+        -26.14095
+      ],
+      "population": 49292,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799054",
+      "en": "Ekangala",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.73,
+        -25.668
+      ],
+      "population": 48493,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1291&sname=Ekangala+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-529014",
+      "en": "Vryheid",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.79165,
+        -27.76952
+      ],
+      "population": 47365,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-874071",
+      "en": "Matsulu",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.35693,
+        -25.52297
+      ],
+      "population": 47306,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-765002",
+      "en": "Bekkersdal",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.69926,
+        -26.28336
+      ],
+      "population": 47213,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1289&sname=Bekkersdal+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199020",
+      "en": "Kuils River",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.70663,
+        -33.94208
+      ],
+      "population": 46686,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=120&sname=Kuilsrivier+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-760013",
+      "en": "Bophelong",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.79747,
+        -26.69385
+      ],
+      "population": 46089,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://www.gov.za/sites/default/files/thusongsc.pdf"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-677008",
+      "en": "Khuma",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.86618,
+        -26.84933
+      ],
+      "population": 45895,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=355&sname=Khuma+%28North+West%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-871006",
+      "en": "Kwaggafontein",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        28.94224,
+        -25.32729
+      ],
+      "population": 45104,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1018&sname=Kwaggafontein+%28Mpumalanga%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-981003",
+      "en": "Bela-Bela",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        28.29417,
+        -24.885
+      ],
+      "population": 45001,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199019",
+      "en": "Brackenfell",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.69961,
+        -33.88427
+      ],
+      "population": 44842,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-271161",
+      "en": "Butterworth",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.14981,
+        -32.33083
+      ],
+      "population": 44039,
+      "codes": [
+        "047"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-281017",
+      "en": "Queenstown",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.87533,
+        -31.89756
+      ],
+      "population": 43971,
+      "codes": [
+        "045"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-864006",
+      "en": "Standerton",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.24152,
+        -26.93366
+      ],
+      "population": 43966,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-676004",
+      "en": "Potchefstroom",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.1,
+        -26.71667
+      ],
+      "population": 43448,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-177007",
+      "en": "Thembalethu",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.485,
+        -34.00294
+      ],
+      "population": 43103,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1230&sname=Thembalethu+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-967004",
+      "en": "Musina",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.04074,
+        -22.34881
+      ],
+      "population": 42678,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599002",
+      "en": "Tongaat",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.11552,
+        -29.57366
+      ],
+      "population": 42554,
+      "codes": [
+        "032"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199025",
+      "en": "Elsies Rivier",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.58541,
+        -33.93073
+      ],
+      "population": 42479,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=113&sname=Elsies+River+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-661024",
+      "en": "Letlhabile",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.83925,
+        -25.48238
+      ],
+      "population": 41334,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-671004",
+      "en": "Schweizer-Reneke",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.32931,
+        -27.18871
+      ],
+      "population": 41226,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-982120",
+      "en": "Mahwelereng",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        28.98269,
+        -24.14581
+      ],
+      "population": 41072,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-873012",
+      "en": "Mashishing",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        30.4199,
+        -25.08991
+      ],
+      "population": 40714,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-864007",
+      "en": "Sakhile",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.20612,
+        -26.97
+      ],
+      "population": 40418,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1000&sname=Sakhile+%28Mpumalanga%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-866006",
+      "en": "Secunda",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.16667,
+        -26.55
+      ],
+      "population": 40198,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-299004",
+      "en": "Despatch",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.46284,
+        -33.80172
+      ],
+      "population": 39619,
+      "codes": [
+        "041"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199036",
+      "en": "Eerste Rivier",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.72395,
+        -34.01243
+      ],
+      "population": 39237,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-661028",
+      "en": "Klipgat",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.96667,
+        -25.45
+      ],
+      "population": 38671,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=288&sname=Klipgat+%28North+West%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-163004",
+      "en": "Vredenburg",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        17.98997,
+        -32.90719
+      ],
+      "population": 38382,
+      "codes": [
+        "022"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-797028",
+      "en": "Nigel",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.47713,
+        -26.43138
+      ],
+      "population": 38318,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-760012",
+      "en": "Sharpeville",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.87434,
+        -26.68415
+      ],
+      "population": 37599,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=452&sname=Sharpeville+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599034",
+      "en": "Verulam",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.04709,
+        -29.6434
+      ],
+      "population": 37273,
+      "codes": [
+        "032"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-872026",
+      "en": "Siyabuswa",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.04454,
+        -25.11319
+      ],
+      "population": 36882,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199050",
+      "en": "Muizenberg",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.47969,
+        -34.09702
+      ],
+      "population": 36857,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=234&sname=Muizenberg+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-278003",
+      "en": "Cradock",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.61918,
+        -32.16422
+      ],
+      "population": 36671,
+      "codes": [
+        "048"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-963011",
+      "en": "Namakgale",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        31.03119,
+        -23.93399
+      ],
+      "population": 36365,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-762015",
+      "en": "Ratanda",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.32674,
+        -26.55233
+      ],
+      "population": 36102,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1296&sname=Ratanda+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-877135",
+      "en": "Mkhuhlu",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.2385,
+        -24.98776
+      ],
+      "population": 35864,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-506014",
+      "en": "Port Shepstone",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.45499,
+        -30.74137
+      ],
+      "population": 35633,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-762014",
+      "en": "Heidelberg",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.35921,
+        -26.50476
+      ],
+      "population": 35563,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-976042",
+      "en": "Lebowakgomo",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        29.50078,
+        -24.31457
+      ],
+      "population": 35087,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-574003",
+      "en": "Dundee",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.23371,
+        -28.16678
+      ],
+      "population": 34924,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-661031",
+      "en": "Hebron",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        28.0228,
+        -25.55024
+      ],
+      "population": 34694,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1278&sname=Hebron+%28North+West%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-662025",
+      "en": "Phokeng",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.15962,
+        -25.56732
+      ],
+      "population": 34597,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260044",
+      "en": "King William's Town",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.39377,
+        -32.88076
+      ],
+      "population": 34019,
+      "codes": [
+        "043"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-974084",
+      "en": "Mankweng",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        29.70557,
+        -23.88384
+      ],
+      "population": 33738,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=767&sname=Mankweng+%28Limpopo%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-877015",
+      "en": "Acornhoek",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.09467,
+        -24.5878
+      ],
+      "population": 33529,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199037",
+      "en": "Macassar",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.76334,
+        -34.06405
+      ],
+      "population": 33225,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=123&sname=Macassar+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-478009",
+      "en": "Sasolburg",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        27.81695,
+        -26.81358
+      ],
+      "population": 30699,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599115",
+      "en": "Westville",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.937,
+        -29.82554
+      ],
+      "population": 30508,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=652&sname=Westville+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-171009",
+      "en": "Grabouw",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.01509,
+        -34.15152
+      ],
+      "population": 30337,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-982123",
+      "en": "Mokopane",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        29.00974,
+        -24.19436
+      ],
+      "population": 30151,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-176014",
+      "en": "Mossel Bay",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.14605,
+        -34.18307
+      ],
+      "population": 29887,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599102",
+      "en": "Kloof",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.82325,
+        -29.78529
+      ],
+      "population": 29704,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-178004",
+      "en": "Oudtshoorn",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.19955,
+        -33.60047
+      ],
+      "population": 29143,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-529022",
+      "en": "Mondlo",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.71769,
+        -27.98299
+      ],
+      "population": 28871,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=704&sname=Mondlo+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-163008",
+      "en": "Saldanha",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        17.9442,
+        -33.01167
+      ],
+      "population": 28142,
+      "codes": [
+        "022"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-472001",
+      "en": "Harrismith",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        29.12946,
+        -28.27276
+      ],
+      "population": 27869,
+      "codes": [
+        "058"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-586031",
+      "en": "Mtubatuba",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        32.18483,
+        -28.41789
+      ],
+      "population": 27237,
+      "codes": [
+        "035"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-268009",
+      "en": "Jeffrey's Bay",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        24.92146,
+        -34.04526
+      ],
+      "population": 27107,
+      "codes": [
+        "042"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-506051",
+      "en": "Margate",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.37052,
+        -30.8636
+      ],
+      "population": 26785,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-261003",
+      "en": "Graaff Reinet",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        24.53075,
+        -32.25215
+      ],
+      "population": 26585,
+      "codes": [
+        "049"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-669029",
+      "en": "Dinokana",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.87711,
+        -25.45433
+      ],
+      "population": 26409,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-668011",
+      "en": "Lichtenburg",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.15968,
+        -26.152
+      ],
+      "population": 26338,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-960029",
+      "en": "Giyani",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.71868,
+        -23.30246
+      ],
+      "population": 25954,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-563015",
+      "en": "Mpophomeni",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.18618,
+        -29.56822
+      ],
+      "population": 25732,
+      "codes": [
+        "033"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-276071",
+      "en": "Fort Beaufort",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.63376,
+        -32.77477
+      ],
+      "population": 25668,
+      "codes": [
+        "046"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-661034",
+      "en": "Brits",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.78022,
+        -25.63473
+      ],
+      "population": 25604,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-670005",
+      "en": "Huhudi",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        24.74107,
+        -26.97398
+      ],
+      "population": 25457,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1238&sname=Huhudi+%28North+West%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-475005",
+      "en": "Kroonstad",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        27.23488,
+        -27.65036
+      ],
+      "population": 24723,
+      "codes": [
+        "056"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-273045",
+      "en": "Stutterheim",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.42396,
+        -32.57076
+      ],
+      "population": 24673,
+      "codes": [
+        "043"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-863008",
+      "en": "Volksrust",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.88175,
+        -27.36541
+      ],
+      "population": 24281,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-386005",
+      "en": "Jan Kempdorp",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        24.83051,
+        -27.92246
+      ],
+      "population": 24220,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-371004",
+      "en": "De Aar",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        24.0123,
+        -30.64966
+      ],
+      "population": 23760,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-766004",
+      "en": "Carletonville",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.39767,
+        -26.36094
+      ],
+      "population": 23000,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-665022",
+      "en": "Madibogo",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.1823,
+        -26.41866
+      ],
+      "population": 22556,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-962049",
+      "en": "Nkowakowa",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.28708,
+        -23.88782
+      ],
+      "population": 22484,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-760011",
+      "en": "Boipatong",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.85136,
+        -26.66596
+      ],
+      "population": 22168,
+      "codes": [
+        "016"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=274&sname=Boipatong+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-570010",
+      "en": "Estcourt",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        29.86619,
+        -29.01269
+      ],
+      "population": 22071,
+      "codes": [
+        "036"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-169003",
+      "en": "Robertson",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.88537,
+        -33.80342
+      ],
+      "population": 21929,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-467010",
+      "en": "Virginia",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        26.86593,
+        -28.10391
+      ],
+      "population": 21846,
+      "codes": [
+        "057"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260039",
+      "en": "Dimbaza",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.21742,
+        -32.83483
+      ],
+      "population": 21783,
+      "codes": [
+        "040"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-386004",
+      "en": "Pampierstad",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        24.68768,
+        -27.78324
+      ],
+      "population": 21707,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-563009",
+      "en": "Howick",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.23057,
+        -29.47795
+      ],
+      "population": 21639,
+      "codes": [
+        "033"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799012",
+      "en": "Hammanskraal",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.287,
+        -25.40892
+      ],
+      "population": 21345,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-670004",
+      "en": "Vryburg",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        24.7284,
+        -26.95659
+      ],
+      "population": 21182,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-871020",
+      "en": "Verena",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.02763,
+        -25.48251
+      ],
+      "population": 20793,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-966171",
+      "en": "Lwamondo",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.40458,
+        -23.03847
+      ],
+      "population": 20218,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-268007",
+      "en": "Humansdorp",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        24.76912,
+        -34.02903
+      ],
+      "population": 20123,
+      "codes": [
+        "042"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-376005",
+      "en": "Douglas",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        23.7743,
+        -29.05531
+      ],
+      "population": 20083,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-183005",
+      "en": "Beaufort West",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.58295,
+        -32.35671
+      ],
+      "population": 20066,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-668008",
+      "en": "Itsoseng",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.88124,
+        -26.08159
+      ],
+      "population": 19959,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-581095",
+      "en": "Ulundi",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.41617,
+        -28.33523
+      ],
+      "population": 19840,
+      "codes": [
+        "035"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-662063",
+      "en": "Marikana",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.47475,
+        -25.699
+      ],
+      "population": 19522,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-674043",
+      "en": "Ganyesa",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        24.17612,
+        -26.59613
+      ],
+      "population": 19290,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-592044",
+      "en": "Ballito",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.21396,
+        -29.53598
+      ],
+      "population": 19234,
+      "codes": [
+        "032"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-668012",
+      "en": "Boikhutso",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.1344,
+        -26.18029
+      ],
+      "population": 19111,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799058",
+      "en": "Laudium",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.10386,
+        -25.78702
+      ],
+      "population": 19102,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=198&sname=Laudium+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-167018",
+      "en": "Stellenbosch",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.86676,
+        -33.93462
+      ],
+      "population": 19068,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-278001",
+      "en": "Middelburg",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.00633,
+        -31.49285
+      ],
+      "population": 18681,
+      "codes": [
+        "049"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-672027",
+      "en": "Taung",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        24.78659,
+        -27.53113
+      ],
+      "population": 18289,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260086",
+      "en": "Zwelitsha",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.42586,
+        -32.91999
+      ],
+      "population": 18189,
+      "codes": [
+        "040"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-160010",
+      "en": "Vredendal",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.50119,
+        -31.66833
+      ],
+      "population": 18170,
+      "codes": [
+        "027"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-677009",
+      "en": "Stilfontein",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.76829,
+        -26.84493
+      ],
+      "population": 17942,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199042",
+      "en": "Hout Bay",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.34837,
+        -34.0331
+      ],
+      "population": 17900,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=223&sname=Hout+Bay+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-978038",
+      "en": "Lephalale",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        27.74477,
+        -23.66607
+      ],
+      "population": 17639,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-167007",
+      "en": "Franschhoek",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.1198,
+        -33.91075
+      ],
+      "population": 17556,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-574004",
+      "en": "Glencoe",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.14702,
+        -28.17827
+      ],
+      "population": 17548,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-170005",
+      "en": "Swellendam",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        20.44171,
+        -34.02262
+      ],
+      "population": 17537,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-370004",
+      "en": "Colesberg",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        25.09718,
+        -30.71999
+      ],
+      "population": 16869,
+      "codes": [
+        "051"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-860020",
+      "en": "Carolina",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        30.11489,
+        -26.06927
+      ],
+      "population": 16846,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199055",
+      "en": "Gordons Bay",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.87678,
+        -34.15559
+      ],
+      "population": 16776,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-470005",
+      "en": "Bethlehem",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        28.30707,
+        -28.23078
+      ],
+      "population": 16236,
+      "codes": [
+        "058"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-561006",
+      "en": "Umzinto",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.66275,
+        -30.31002
+      ],
+      "population": 16205,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-175001",
+      "en": "Riversdale",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        21.25725,
+        -34.09345
+      ],
+      "population": 16176,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-288002",
+      "en": "Aliwal North",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.71141,
+        -30.69366
+      ],
+      "population": 16001,
+      "codes": [
+        "051"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-173003",
+      "en": "Bredasdorp",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        20.04031,
+        -34.53215
+      ],
+      "population": 15524,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-866004",
+      "en": "Kinross",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.08668,
+        -26.41663
+      ],
+      "population": 15246,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-169001",
+      "en": "Montagu",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        20.12106,
+        -33.78664
+      ],
+      "population": 15176,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-276096",
+      "en": "Alice",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.8344,
+        -32.78749
+      ],
+      "population": 15143,
+      "codes": [
+        "040"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-667020",
+      "en": "Mafikeng",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.64421,
+        -25.86522
+      ],
+      "population": 15117,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-660038",
+      "en": "Makapanstad",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        28.1262,
+        -25.24373
+      ],
+      "population": 15076,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-281066",
+      "en": "Whittlesea",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.82437,
+        -32.17588
+      ],
+      "population": 14756,
+      "codes": [
+        "040"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=920&sname=Whittlesea+%28Eastern+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-589080",
+      "en": "Eshowe",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.4699,
+        -28.88649
+      ],
+      "population": 14744,
+      "codes": [
+        "035"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-962048",
+      "en": "Tzaneen",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.16351,
+        -23.83322
+      ],
+      "population": 14571,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-285025",
+      "en": "Cala",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.6952,
+        -31.52356
+      ],
+      "population": 14520,
+      "codes": [
+        "047"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-285001",
+      "en": "Elliot",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.85,
+        -31.33306
+      ],
+      "population": 14376,
+      "codes": [
+        "045"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-861004",
+      "en": "Breyten",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.98696,
+        -26.30176
+      ],
+      "population": 14347,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-375005",
+      "en": "Prieska",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        22.74251,
+        -29.66803
+      ],
+      "population": 14246,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-506029",
+      "en": "Gamalakhe",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.33484,
+        -30.8063
+      ],
+      "population": 14098,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-179008",
+      "en": "Kwanokuthula",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        23.31393,
+        -34.05461
+      ],
+      "population": 14016,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1237&sname=Kwanokuthula+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599173",
+      "en": "Amanzimtoti",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.88527,
+        -30.05219
+      ],
+      "population": 13813,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-262003",
+      "en": "Somerset East",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        25.58804,
+        -32.72173
+      ],
+      "population": 13619,
+      "codes": [
+        "042"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-382001",
+      "en": "Danielskuil",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        23.53951,
+        -28.18873
+      ],
+      "population": 13597,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-281067",
+      "en": "Sada",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.81501,
+        -32.19704
+      ],
+      "population": 13493,
+      "codes": [
+        "040"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-286214",
+      "en": "Ugie",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.23351,
+        -31.19809
+      ],
+      "population": 13467,
+      "codes": [
+        "045"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-677012",
+      "en": "Orkney",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.67272,
+        -26.98023
+      ],
+      "population": 13435,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-678009",
+      "en": "Makwassie",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.99497,
+        -27.31564
+      ],
+      "population": 13351,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-877069",
+      "en": "Thulamahashe",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.21181,
+        -24.72455
+      ],
+      "population": 13333,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-599100",
+      "en": "Hillcrest",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.76396,
+        -29.77475
+      ],
+      "population": 13329,
+      "codes": [
+        "031"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=637&sname=Hillcrest+%28Kwazulu-Natal%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-963007",
+      "en": "Phalaborwa",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        31.14107,
+        -23.94299
+      ],
+      "population": 13108,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-361021",
+      "en": "Kuruman",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        23.43552,
+        -27.46353
+      ],
+      "population": 13057,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-171011",
+      "en": "Caledon",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.4265,
+        -34.22997
+      ],
+      "population": 13020,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-872032",
+      "en": "Vaalbank",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        28.85563,
+        -25.15226
+      ],
+      "population": 12814,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1029&sname=Vaalbank+%28Mpumalanga%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-364012",
+      "en": "Springbok",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        17.8865,
+        -29.66434
+      ],
+      "population": 12790,
+      "codes": [
+        "027"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-592021",
+      "en": "Groutville",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.24607,
+        -29.38943
+      ],
+      "population": 12638,
+      "codes": [
+        "032"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-178003",
+      "en": "Dysselsdorp",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.44391,
+        -33.57565
+      ],
+      "population": 12544,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799072",
+      "en": "Bronkhorstspruit",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.74248,
+        -25.81015
+      ],
+      "population": 12470,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-295171",
+      "en": "Matatiele",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.81161,
+        -30.34357
+      ],
+      "population": 12466,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-597029",
+      "en": "Ixopo",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.08333,
+        -30.15
+      ],
+      "population": 12461,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-863001",
+      "en": "Amersfoort",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.86643,
+        -27.00941
+      ],
+      "population": 12335,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-980006",
+      "en": "Modimolle",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        28.4,
+        -24.7
+      ],
+      "population": 12185,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-870007",
+      "en": "Siyathuthuka",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.99466,
+        -25.67447
+      ],
+      "population": 12159,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-962054",
+      "en": "Lenyenye",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.26965,
+        -23.97056
+      ],
+      "population": 12099,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-162009",
+      "en": "Piketberg",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.75704,
+        -32.90323
+      ],
+      "population": 12075,
+      "codes": [
+        "022"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-378013",
+      "en": "Keimoes",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        20.96325,
+        -28.70146
+      ],
+      "population": 12000,
+      "codes": [
+        "054"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-875006",
+      "en": "Barberton",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.05319,
+        -25.78842
+      ],
+      "population": 11997,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199052",
+      "en": "Fish Hoek",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.42484,
+        -34.13419
+      ],
+      "population": 11890,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=256&sname=Fish+Hoek+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-268003",
+      "en": "Hankey",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        24.88359,
+        -33.83308
+      ],
+      "population": 11761,
+      "codes": [
+        "042"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-172020",
+      "en": "Gans Bay",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.35048,
+        -34.58301
+      ],
+      "population": 11598,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=44&sname=Gans+Bay+%28Western+Cape%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-199007",
+      "en": "Melkbosstrand",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.44286,
+        -33.72614
+      ],
+      "population": 11586,
+      "codes": [
+        "021"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-280001",
+      "en": "Molteno",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        26.36246,
+        -31.39675
+      ],
+      "population": 11553,
+      "codes": [
+        "045"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-362003",
+      "en": "Kathu",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        23.04929,
+        -27.69569
+      ],
+      "population": 11510,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-286074",
+      "en": "Mount Fletcher",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.5061,
+        -30.69268
+      ],
+      "population": 11488,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260106",
+      "en": "Gonubie",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.01496,
+        -32.94433
+      ],
+      "population": 11471,
+      "codes": [
+        "043"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-561011",
+      "en": "Scottburgh",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.75316,
+        -30.28666
+      ],
+      "population": 11403,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260032",
+      "en": "Bisho",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.44218,
+        -32.84721
+      ],
+      "population": 11192,
+      "codes": [
+        "040"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-270302",
+      "en": "Idutywa",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.30489,
+        -32.09618
+      ],
+      "population": 11076,
+      "codes": [
+        "047"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-569012",
+      "en": "Ekuvukeni",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.15513,
+        -28.46752
+      ],
+      "population": 11018,
+      "codes": [
+        "034"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-162006",
+      "en": "Velddrif",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.17859,
+        -32.78518
+      ],
+      "population": 11017,
+      "codes": [
+        "022"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-666023",
+      "en": "Sannieshof",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.80894,
+        -26.52946
+      ],
+      "population": 11016,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-872008",
+      "en": "Marapyane",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        28.80119,
+        -25.00973
+      ],
+      "population": 10886,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-664077",
+      "en": "Mogwase",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.21605,
+        -25.27748
+      ],
+      "population": 10743,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-281029",
+      "en": "Ilinge",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.04267,
+        -31.97676
+      ],
+      "population": 10689,
+      "codes": [
+        "047"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-666024",
+      "en": "Delareyville",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.45907,
+        -26.68638
+      ],
+      "population": 10630,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-176006",
+      "en": "Groot Brakrivier",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.22574,
+        -34.04368
+      ],
+      "population": 10619,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-168003",
+      "en": "De Doorns",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.66625,
+        -33.47709
+      ],
+      "population": 10583,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-172014",
+      "en": "Hermanus",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.23446,
+        -34.4187
+      ],
+      "population": 10457,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-165007",
+      "en": "Ceres",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.31095,
+        -33.36889
+      ],
+      "population": 10413,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-460007",
+      "en": "Koffiefontein",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        25.00309,
+        -29.40661
+      ],
+      "population": 10402,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-164016",
+      "en": "Malmesbury",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.72714,
+        -33.4608
+      ],
+      "population": 10299,
+      "codes": [
+        "022"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-374001",
+      "en": "Hopetown",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        24.08518,
+        -29.62464
+      ],
+      "population": 10259,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-765008",
+      "en": "Westonaria",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.6486,
+        -26.31905
+      ],
+      "population": 10259,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=489&sname=Westonaria+%28Gauteng%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-362005",
+      "en": "Olifantshoek",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        22.73621,
+        -27.94261
+      ],
+      "population": 10233,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-866005",
+      "en": "Evander",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        29.10973,
+        -26.47056
+      ],
+      "population": 10166,
+      "codes": [
+        "017"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-171001",
+      "en": "Villiersdorp",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.29219,
+        -33.99121
+      ],
+      "population": 10004,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-876054",
+      "en": "Mbuzini",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.95254,
+        -25.93318
+      ],
+      "population": 9988,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://www.saps.gov.za/contacts/stationdetails.php?sid=1049&sname=Mbuzini+%28Mpumalanga%29"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-287137",
+      "en": "Barkly East",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.59567,
+        -30.9683
+      ],
+      "population": 9986,
+      "codes": [
+        "045"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-974024",
+      "en": "Koloti",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        29.30492,
+        -23.72657
+      ],
+      "population": 9953,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-665018",
+      "en": "Kraaipan",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        25.3,
+        -26.28333
+      ],
+      "population": 9933,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-961097",
+      "en": "Ga-Kgapane",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.22324,
+        -23.64378
+      ],
+      "population": 9879,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-284179",
+      "en": "Engcobo",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28,
+        -31.66667
+      ],
+      "population": 9835,
+      "codes": [
+        "047"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-765012",
+      "en": "Glen Harvie",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.61592,
+        -26.38989
+      ],
+      "population": 9818,
+      "codes": [
+        "010",
+        "011"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-366005",
+      "en": "Calvinia",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        19.77601,
+        -31.47069
+      ],
+      "population": 9680,
+      "codes": [
+        "027"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-877036",
+      "en": "Hluvukani",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.34103,
+        -24.64528
+      ],
+      "population": 9631,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-504016",
+      "en": "Harding",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        29.88401,
+        -30.57643
+      ],
+      "population": 9544,
+      "codes": [
+        "039"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-378020",
+      "en": "Kakamas",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        20.6147,
+        -28.77341
+      ],
+      "population": 9538,
+      "codes": [
+        "054"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-463001",
+      "en": "Dewetsdorp",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        26.66511,
+        -29.58274
+      ],
+      "population": 9498,
+      "codes": [
+        "051"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-766024",
+      "en": "Fochville",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        27.49387,
+        -26.48862
+      ],
+      "population": 9497,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-467004",
+      "en": "Odendaalsrus",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        26.69072,
+        -27.87394
+      ],
+      "population": 9393,
+      "codes": [
+        "057"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-664060",
+      "en": "Mabeskraal",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.80561,
+        -25.19372
+      ],
+      "population": 9282,
+      "codes": [
+        "014"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-877094",
+      "en": "Shatale",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        31.04708,
+        -24.79571
+      ],
+      "population": 9155,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-873009",
+      "en": "Sabie",
+      "local": "",
+      "parent": "ZA-MP",
+      "center": [
+        30.78001,
+        -25.0999
+      ],
+      "population": 9148,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-669036",
+      "en": "Zeerust",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        26.07512,
+        -25.53695
+      ],
+      "population": 9093,
+      "codes": [
+        "018"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-169007",
+      "en": "Bonnievale",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        20.09924,
+        -33.93224
+      ],
+      "population": 9092,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-577023",
+      "en": "Greytown",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        30.59279,
+        -29.06415
+      ],
+      "population": 9090,
+      "codes": [
+        "033"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-165004",
+      "en": "Tulbagh",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.14116,
+        -33.28596
+      ],
+      "population": 8969,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-282263",
+      "en": "Cofimvaba",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.58045,
+        -32.00115
+      ],
+      "population": 8783,
+      "codes": [
+        "047"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-799049",
+      "en": "Cullinan",
+      "local": "",
+      "parent": "ZA-GP",
+      "center": [
+        28.52364,
+        -25.67088
+      ],
+      "population": 8693,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-962043",
+      "en": "Nwamitwa",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        30.40124,
+        -23.74042
+      ],
+      "population": 8672,
+      "codes": [
+        "015"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-661013",
+      "en": "Jericho",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.80488,
+        -25.33575
+      ],
+      "population": 8612,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-286181",
+      "en": "Maclear",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        28.35183,
+        -31.07104
+      ],
+      "population": 8559,
+      "codes": [
+        "045"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-460005",
+      "en": "Petrusburg",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        25.41435,
+        -29.11597
+      ],
+      "population": 8435,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-592007",
+      "en": "Darnall",
+      "local": "",
+      "parent": "ZA-KZN",
+      "center": [
+        31.35755,
+        -29.26679
+      ],
+      "population": 8435,
+      "codes": [
+        "032"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-662044",
+      "en": "Bethanie",
+      "local": "",
+      "parent": "ZA-NW",
+      "center": [
+        27.60922,
+        -25.55478
+      ],
+      "population": 8429,
+      "codes": [
+        "012"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-984033",
+      "en": "Motetema",
+      "local": "",
+      "parent": "ZA-LP",
+      "center": [
+        29.46186,
+        -25.09468
+      ],
+      "population": 8422,
+      "codes": [
+        "013"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-163012",
+      "en": "Langebaan",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        18.0315,
+        -33.09751
+      ],
+      "population": 8297,
+      "codes": [
+        "022"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-180007",
+      "en": "Sedgefield",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        22.8055,
+        -34.0211
+      ],
+      "population": 8286,
+      "codes": [
+        "044"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-175003",
+      "en": "Heidelberg",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        20.95661,
+        -34.09127
+      ],
+      "population": 8259,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-384013",
+      "en": "Barkly West",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        24.52151,
+        -28.53537
+      ],
+      "population": 8258,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-369005",
+      "en": "Victoria West",
+      "local": "",
+      "parent": "ZA-NC",
+      "center": [
+        23.11461,
+        -31.40364
+      ],
+      "population": 8254,
+      "codes": [
+        "053"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-172012",
+      "en": "Hawston",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        19.13099,
+        -34.38634
+      ],
+      "population": 8214,
+      "codes": [
+        "028"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-260061",
+      "en": "Ilitha",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.5305,
+        -32.89243
+      ],
+      "population": 8145,
+      "codes": [
+        "040"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-168001",
+      "en": "Touwsrivier",
+      "local": "",
+      "parent": "ZA-WC",
+      "center": [
+        20.03092,
+        -33.33826
+      ],
+      "population": 8126,
+      "codes": [
+        "023"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-272001",
+      "en": "Komga",
+      "local": "",
+      "parent": "ZA-EC",
+      "center": [
+        27.892,
+        -32.57704
+      ],
+      "population": 8090,
+      "codes": [
+        "043"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    },
+    {
+      "id": "ZA-C-477001",
+      "en": "Parys",
+      "local": "",
+      "parent": "ZA-FS",
+      "center": [
+        27.45727,
+        -26.9033
+      ],
+      "population": 8071,
+      "codes": [
+        "056"
+      ],
+      "assignmentSources": [
+        "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+      ],
+      "partial": true
+    }
+  ],
+  "localityProvenance": [
+    {
+      "id": "icasa",
+      "title": "ICASA National Numbering Plan Regulations, Table 3",
+      "url": "https://www.icasa.org.za/uploads/files/NumberingPlanReg.pdf"
+    },
+    {
+      "id": "telkom",
+      "title": "Telkom South African town dialling codes",
+      "url": "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html"
+    },
+    {
+      "id": "saps",
+      "title": "South African Police Service official station contact directory",
+      "url": "https://www.saps.gov.za/contacts/provdetails.php?pid=9SA"
+    },
+    {
+      "id": "local-soweto",
+      "title": "Department of Health: Alma Health Care, Protea Point, Soweto (010); local post offices and practices (011)",
+      "url": "https://www.health.gov.za/ccmdd-pick-up-points/"
+    },
+    {
+      "id": "local-edendale",
+      "title": "KZN Department of Health: Edendale Hospital contacts",
+      "url": "https://www2.kznhealth.gov.za/rabiesvaccine.htm"
+    },
+    {
+      "id": "local-bluedowns",
+      "title": "City of Cape Town recreation facility contacts: Blue Downs Stadium",
+      "url": "https://resource.capetown.gov.za/documentcentre/Documents/Forms%2C%20notices%2C%20tariffs%20and%20lists/Rec_and_Parks_Facility_Contact_List.pdf"
+    },
+    {
+      "id": "local-nellmapius",
+      "title": "City of Tshwane: Nellmapius Clinic",
+      "url": "https://www.tshwane.gov.za/?page_id=649"
+    },
+    {
+      "id": "local-clermont",
+      "title": "Government contact directory: Archie Gumede Thusong Service Centre, Clermont",
+      "url": "https://www.gov.za/about-government/contact-directory/kzn-thusong/archie-gumede-thusong-service-centre"
+    },
+    {
+      "id": "local-queensburgh",
+      "title": "eThekwini: Queensburgh area collection contacts",
+      "url": "https://environment.durban.gov.za/page/cleansing-and-solid-waste"
+    },
+    {
+      "id": "local-bophelong",
+      "title": "Government contact directory: Bophelong Thusong Service Centre",
+      "url": "https://www.gov.za/sites/default/files/thusongsc.pdf"
+    },
+    {
+      "id": "local-northdale",
+      "title": "KZN Department of Health: Northdale Hospital",
+      "url": "https://www2.kznhealth.gov.za/northdale/SE.htm"
+    }
+  ],
+  "originalCoverage": {
+    "total": 500,
+    "verified": 345,
+    "unmatched": 155
+  }
+}

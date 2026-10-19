@@ -4,6 +4,7 @@ import {load,polygons,landIndex,metres,linesOf} from './geo-index.mjs';
 import '../dist/countries.js';
 const expected={germany:{1:16,2:400,3:10978},belgium:{1:3,2:11,3:581},netherlands:{1:18,2:342},switzerland:{1:26,2:273,3:1985},'united-states':{1:65,2:3235,3:50130},canada:{1:13,2:293,3:5161},mexico:{1:32}};
 const pins=JSON.parse(fs.readFileSync('scripts/country-expansion-sources.json'));
+const additionalPins={'bkg-vg25-lines.geojson.gz':load('scripts/boundary-sources/germany-denmark/sources.json')};
 for(const [country,counts]of Object.entries(expected)){
  const c=AtlasCountries.countries[country],root='dist/'+c.base,data=load(root+'catalogue.bin'),first=load(root+'first.bin'),context=load(root+'context.bin'),international=load(root+'international.bin'),stats=load(root+'statistics.json'),sources=load(root+'sources.json'),index=new Map(data.records.map(r=>[r.id,r]));
  assert.equal(c.release,undefined,country+' is public');assert.deepEqual(data.counts,counts,country+' administrative counts');assert.equal(index.size,data.records.length,country+' unique IDs');
@@ -31,7 +32,7 @@ for(const [country,counts]of Object.entries(expected)){
   assert.equal(data.levels.length,1,country+' only first-level units');assert.equal(Object.keys(data.chunks).length,0,country+' no lower-level chunks');
   assert(!c.controls.some(id=>/second|third/.test(id)),country+' no lower-level controls');
  }
- assert(sources.sources.every(s=>s.sha256===pins.files[s.file]?.sha256),country+' pinned sources');
+ assert(sources.sources.every(s=>s.sha256===(pins.files[s.file]||additionalPins[s.file])?.sha256),country+' pinned sources');
  // A selected unit must actually cover its label point at every level.
  const parts=[first,...Object.values({...data.chunks,...data.thirdChunks}).map(chunk=>load(root+chunk.file))];
  for(const f of parts.flatMap(p=>p.regions.features)){

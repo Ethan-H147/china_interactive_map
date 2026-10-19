@@ -1,0 +1,194 @@
+{
+  "retrieved": "2026-10-19",
+  "files": {
+    "nepal-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-npl",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "1cb96d642073ce2079c044b2a4ae765a3a5284cf3edc3c42fce6e3a6aab0b828",
+      "bytes": 20883
+    },
+    "nepal-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/07db728a-4f0f-4e98-8eb0-8fa9df61f01c/resource/dea34e50-37d5-4e36-98ae-2b7b1b4c43de/download/npl_admin_boundaries.geojson.zip",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Survey Department of Nepal (http://ngiip.gov.np/index.php), UN Resident Coordinators Office in Nepal (https://un.org.np/)",
+      "description": "Nepal administrative level 0-3 boundaries (COD-AB) dataset version 02.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 7   \n- Admin 2: 77   \n- Admin 3: 775   \n  \n  \nDates associated with this dataset:  \n- 30 October 2025: dataset reviewed for accuracy and completeness  \n- 14 March 2024: valid for use by the humanitarian community  \n- 01 January 2024: last edit to the dataset before publishing  \n- 01 January 2024: boundaries created by the source  \n  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "9f6713c41d65396f611ddce5879faecf8e2d494edbd1d6611612445ad46b6707",
+      "bytes": 60438906
+    },
+    "nepal-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-npl",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "891346b1ab2eadc78a5241ea932a9155edf2c30e3b35023ab14fb489cdfceea4",
+      "bytes": 30121
+    },
+    "nepal-population0.csv": {
+      "url": "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/20ca4f0f-a371-43fa-92ae-a5ffcd5a225d/download/npl_admpop_adm0_2023.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Census of population",
+      "description": "Nepal administrative levels 0-2 sex and age disaggregated projected 2023 population statistics\r\n\r\nREFERENCE YEAR:  2023\r\n\r\nThese CSV tables are suitable for database or GIS linkage to the [Nepal - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-npl) polygon shapefiles using the ADM0, ADM1, and ADM2_PCODE fields .",
+      "resource": "npl_admpop_adm0_2023.csv",
+      "sha256": "655acce79c642e1364c0e0e351816d7a14b8ff6f8d89f3f77a1b45376ae950de",
+      "bytes": 889
+    },
+    "nepal-population1.csv": {
+      "url": "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/f188f906-1647-4655-908f-a6e75bd655f5/download/npl_admpop_adm1_2023.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Census of population",
+      "description": "Nepal administrative levels 0-2 sex and age disaggregated projected 2023 population statistics\r\n\r\nREFERENCE YEAR:  2023\r\n\r\nThese CSV tables are suitable for database or GIS linkage to the [Nepal - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-npl) polygon shapefiles using the ADM0, ADM1, and ADM2_PCODE fields .",
+      "resource": "npl_admpop_adm1_2023.csv",
+      "sha256": "ffd922e59947c5d29c3ae4d5501a73d4cc0e0f1d55eaedf2bbab75a841b3dd8c",
+      "bytes": 3222
+    },
+    "nepal-population2.csv": {
+      "url": "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/57161f46-c404-4784-a952-a6e5ba2ed625/download/npl_admpop_adm2_2023.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Census of population",
+      "description": "Nepal administrative levels 0-2 sex and age disaggregated projected 2023 population statistics\r\n\r\nREFERENCE YEAR:  2023\r\n\r\nThese CSV tables are suitable for database or GIS linkage to the [Nepal - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-npl) polygon shapefiles using the ADM0, ADM1, and ADM2_PCODE fields .",
+      "resource": "npl_admpop_adm2_2023.csv",
+      "sha256": "20333499167201f9ef3e872a67c1692d375930bd4037204b6f3681d85ccf19da",
+      "bytes": 26907
+    },
+    "bhutan-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-btn",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "c1fd7be298f2a8c19ae84ed296df816f3f46c77c7b34c841c8caa67e55ea25a0",
+      "bytes": 29265
+    },
+    "bhutan-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/cff13277-eac9-49b0-8436-e80f42eb4684/resource/c82bb508-86e6-4b61-bbe4-93bdf3d24faa/download/btn_admin_boundaries.geojson.zip",
+      "license": "CC BY 3.0 IGO",
+      "credit": "OCHA ROAP",
+      "description": "Bhutan administrative level 0-2 boundaries (COD-AB) dataset version 01.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 20   \n- Admin 2: 205   \n  \n  \nDates associated with this dataset:  \n- 30 October 2025: dataset reviewed for accuracy and completeness  \n- 26 October 2020: valid for use by the humanitarian community  \n- 01 January 2020: last edit to the dataset before publishing  \n- 01 January 2020: boundaries created by the source  \n  \nContributed by [OCHA Regional Office for Asia and the Pacific (ROAP)](https://data.humdata.org/organization/ocha-roap).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "a47d8a2028670f1b34a96f4992db3d7200b992de9d217620b54b0765600b1300",
+      "bytes": 3243201
+    },
+    "bhutan-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-btn",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "1fcdb36a56db56cfe71260b40047c779ffe5720b0cf8af8dc07a69394462c0f2",
+      "bytes": 31218
+    },
+    "bhutan-population0.csv": {
+      "url": "https://data.humdata.org/dataset/8ad894a9-631e-4247-918f-63b9dbc25002/resource/66855009-9c15-4042-b1fa-79d0726a20f6/download/btn_admpop_adm0_2024.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA",
+      "description": "Bhutan administrative level 0-1 sex and age disaggregated 2024 projected population statistics\r\n\r\nREFERENCE YEAR:  2024\r\n\r\nThe CSV tables are suitable for database or GIS linkage to the [Bhutan - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-btn) layers using the ADM0 and ADM1_PCODE fields",
+      "resource": "btn_admpop_adm0_2024.csv",
+      "sha256": "5d23386306411ea3704d1be62bbeb4c79d6d8d08fbcbd87e38cdca17b07d2946",
+      "bytes": 759
+    },
+    "bhutan-population1.csv": {
+      "url": "https://data.humdata.org/dataset/8ad894a9-631e-4247-918f-63b9dbc25002/resource/bb4f0db2-bfe9-4814-8a4e-fedddac1561c/download/btn_admpop_adm1_2024.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA",
+      "description": "Bhutan administrative level 0-1 sex and age disaggregated 2024 projected population statistics\r\n\r\nREFERENCE YEAR:  2024\r\n\r\nThe CSV tables are suitable for database or GIS linkage to the [Bhutan - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-btn) layers using the ADM0 and ADM1_PCODE fields",
+      "resource": "btn_admpop_adm1_2024.csv",
+      "sha256": "1a50bd1f1ddb0ca79f6ff5b58caa7de38bd6379259f6f7e9852c4131a4562286",
+      "bytes": 5826
+    },
+    "bhutan-population-note.pdf": {
+      "url": "https://data.humdata.org/dataset/8ad894a9-631e-4247-918f-63b9dbc25002/resource/6420709d-9f51-4131-a5d9-301aec3c4796/download/btn-cod-ps-2024-explanatory-note.pdf",
+      "license": "UNFPA explanatory note",
+      "credit": "UNFPA via HDX",
+      "sha256": "c09770b2f9e902b68a099d455b45c5705c34b58d27d80058b09a51361398404e",
+      "bytes": 1483735
+    },
+    "bangladesh-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bgd",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "bc928e922145802fd0765de0baefffd60531d2cedba39ecc689aa07a0566a9d1",
+      "bytes": 37803
+    },
+    "bangladesh-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/cec2abe3-d8b7-4025-9362-9f7e780f2a07/download/bgd_admin_boundaries.geojson.zip",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Bangladesh Bureau of Statistics (BBS)",
+      "description": "Bangladesh administrative level 0-3 boundaries (COD-AB) dataset version 03.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 8 Division  \n- Admin 2: 64 District  \n- Admin 3: 507 Upazila  \n  \n  \nNote: The normal administrative level 3 feature type(s) are Upazila (495 features) and City Corporation (12 units).  \n  \n  \nDates associated with this dataset:  \n- 01 June 2025: dataset reviewed for accuracy and completeness  \n- 21 May 2023: valid for use by the humanitarian community  \n- 01 June 2025: last edit to the dataset before publishing  \n- 01 January 2010: boundaries created by the source  \n  \nContributed by [OCHA Regional Office for Asia and the Pacific (ROAP)](https://data.humdata.org/organization/ocha-roap).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "ec54c97c2004bbee084afa3f662abb202d8ec038dbfd398af2ebb9b1bf3ec9e5",
+      "bytes": 37759475
+    },
+    "bangladesh-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-bgd",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "131b039b99040a8fc19abc1fbf83ab80cb423694f63c94542a5e619b2a60d513",
+      "bytes": 14481
+    },
+    "bangladesh-population0.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/1c543545-dae9-48ee-8b3c-33a15e9e3df6/download/bgd_admpop_adm0_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm0_2022.csv",
+      "sha256": "4d1fec582653df8b3567216b4e77c70105a950a42186f467277aafaf09618549",
+      "bytes": 929
+    },
+    "bangladesh-population1.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/333171ff-5d91-4074-a7be-ca43e1dfb8a1/download/bgd_admpop_adm1_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm1_2022.csv",
+      "sha256": "8fa17b55b5179e6601333433d1741c8440d9106035847f7bf962257146018f9d",
+      "bytes": 3930
+    },
+    "bangladesh-population2.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/43bfa9fd-f571-4973-9f31-91093e1e6142/download/bgd_admpop_adm2_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm2_2022.csv",
+      "sha256": "fdad72f6f4a8c7038251f7efe27c50ec252d88f96f9222ab18d9ff4497ddb00e",
+      "bytes": 25948
+    },
+    "bangladesh-population3.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/f23d4da2-e473-4960-9d94-37df92c8d044/download/bgd_admpop_adm3_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm3_2022.csv",
+      "sha256": "c7d2a94d40c57a5438eec67cc5f14c79ee09887d9b518aab757614bcdcc355b7",
+      "bytes": 200685
+    },
+    "flag-np.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg",
+      "license": "Public domain",
+      "credit": "National flag, Wikimedia Commons",
+      "sha256": "98b33ea847a3f6e6f21c777423acc9d80512a85f858d967ceaf56d206c10be1e",
+      "bytes": 1523
+    },
+    "flag-bt.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg",
+      "license": "Public domain",
+      "credit": "National flag, Wikimedia Commons",
+      "sha256": "bfbf299f9ee043d6fcc11c12cfe2dede242579b948f93a38d3c2e0ba4ebab383",
+      "bytes": 36864
+    },
+    "flag-bd.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg",
+      "license": "Public domain",
+      "credit": "National flag, Wikimedia Commons",
+      "sha256": "453b90fee62df5770d9610e8ba99e047f63f986a027cc071f2a90d79c8012150",
+      "bytes": 156
+    },
+    "bangladesh-census2022.pdf": {
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/9ce5bd160bb14a1ab1eabe886adddb9a.pdf",
+      "license": "Official BBS statistical facts with attribution",
+      "credit": "Bangladesh Bureau of Statistics · Population and Housing Census 2022 National Report Volume I",
+      "sha256": "1c315d497629a71df9805b0ff7b3debec033a174dbf8418e4b5912326f86eac6",
+      "bytes": 10307919
+    },
+    "nepal-census2021.csv": {
+      "url": "https://censusresults.nsonepal.gov.np/files/national/csv/NR_Indv01_PopulationBySex.csv",
+      "license": "Official NSO statistical facts with attribution",
+      "credit": "National Statistics Office Nepal · National Population and Housing Census 2021",
+      "sha256": "b6ce57070962b73687bef970c9d2ff9e15f5cbbe7211c14ce72aba3d825f0049",
+      "bytes": 6221
+    }
+  }
+}

@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
+import {edgeLines} from '../dist/edge-runs.mjs';
+import {lineIndex,linesOf} from './geo-index.mjs';
 import {gunzipSync} from 'node:zlib';
 const read=file=>JSON.parse(gunzipSync(fs.readFileSync(file)));
 const fc=features=>({type:'FeatureCollection',features});
@@ -20,5 +22,9 @@ for(const level of ['first','second'])collections.push(['Indonesia detailed '+le
 const samples=report.shared.coordinates.flatMap(path=>path.slice(1).flatMap((p,i)=>[p,[(p[0]+path[i][0])/2,(p[1]+path[i][1])/2]]));
 for(const [name,collection] of collections){const nearest=nearestIn(collection);let max=0;for(const p of samples)max=Math.max(max,nearest(p));assert(max<1,name+' must follow the shared path within rounding precision; got '+max+' m');console.log(name+': '+samples.length+' border samples, maximum separation '+max.toFixed(3)+' m');}
 assert(fs.statSync(id+'indonesia-context.bin').size<320000,'Reconciled national context stays under 320 KB compressed');
-assert(fs.statSync(my+'malaysia-context.bin').size<150000,'Malaysia context stays under 150 KB compressed');
+assert(fs.statSync(my+'malaysia-context.bin').size<180000,'Malaysia context with both Brunei frontiers stays under 180 KB compressed');
 console.log('Continuous Borneo mainland and Sebatik borders agree at every map level.');
+
+// Geometry agreement alone missed gaps in the actual unselected outline runs.
+const drawnCollections=[['Malaysia states',[read(my+'malaysia-first.bin')]],['Malaysia districts',['MY-12','MY-13'].map(code=>read(my+'malaysia/'+code+'.bin'))],['Indonesia province overview',[overview.first]],['Indonesia regency overview',[overview.second]],...['first','second'].map(level=>['Indonesia detailed '+level,['ID61','ID64','ID65'].map(code=>read(id+'indonesia-'+code+'.bin')[level])])];
+for(const[name,parts]of drawnCollections){const distance=lineIndex(parts.flatMap(c=>linesOf(edgeLines(c))));let maximum=0;for(const p of samples)maximum=Math.max(maximum,distance(p));assert(maximum<1,name+' must STROKE the entire Borneo border, got '+maximum+' m');console.log(name+': all '+samples.length+' actual outline samples covered');}

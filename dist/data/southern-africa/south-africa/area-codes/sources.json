@@ -1,0 +1,47 @@
+{
+  "retrieved": "2026-10-18",
+  "asOf": "18 October 2026",
+  "sourceName": "ICASA · Telkom · SAPS",
+  "source": "https://www.icasa.org.za/uploads/files/NumberingPlanReg.pdf",
+  "coverage": "37 geographic codes · full reference regions · 345 verified towns",
+  "warning": "Approximate area-code regions. Darker towns have verified codes; lighter countryside is estimated from nearby towns. Boundaries are not official.",
+  "sources": {
+    "south-africa-icasa.pdf": {
+      "url": "https://www.icasa.org.za/uploads/files/NumberingPlanReg.pdf",
+      "publisher": "ICASA",
+      "date": "2016",
+      "license": "Official published numbering facts, with attribution",
+      "sha256": "bb7d9822d68bb7539510642f120a9e8638fce9d18dfe43c4ee6ab5c3155fe918",
+      "bytes": 621047
+    },
+    "south-africa-2026-amendment.pdf": {
+      "url": "https://www.icasa.org.za/uploads/files/54930-1-7-ICASA-1-Numbering-Plan-Regs-4th-Ammendment.pdf",
+      "publisher": "ICASA",
+      "date": "2026-07-01",
+      "license": "Official published numbering facts, with attribution",
+      "sha256": "fbf6a5456ea2d258d6b307fc30a0108256451d53cd6cbb89620f4284b9bde085",
+      "bytes": 778000
+    },
+    "south-africa-telkom.html": {
+      "url": "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html",
+      "publisher": "Telkom",
+      "license": "Factual town/code assignments extracted with attribution; no boundary claim",
+      "sha256": "14d8c4e0490c4e9dd46f3dc77f7cedfa69843c749cce2c7af1f546f1ce843567",
+      "bytes": 122068
+    }
+  },
+  "referenceRegions": {
+    "approximate": true,
+    "landMask": "../context.bin",
+    "anchors": 345,
+    "projection": "Longitude scaled by cos(30 degrees south); Euclidean nearest verified town",
+    "precedence": "Verified town polygons override rural interpolation"
+  },
+  "geometrySource": "../settlement-boundaries/manifest.json",
+  "method": "Approximate reference regions derived by nearest verified town in a longitude-scaled planar projection, clipped to atlas South Africa land. Verified Stats SA town polygons take precedence over interpolation. These are not official telephone boundaries. Darker town footprints retain individually verified Telkom/SAPS/local-government assignments. ICASA supplies the released geographic code set, including the shared 010/011 region.",
+  "counts": {
+    "codes": 37,
+    "footprints": 36,
+    "places": 345
+  }
+}

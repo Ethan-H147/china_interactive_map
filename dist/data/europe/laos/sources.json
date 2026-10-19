@@ -1,0 +1,61 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "17 provinces and Vientiane Capital prefecture (18 first-level units), plus all 148 districts. Complete English/Lao names, explicit parent PCodes and 2024 LSB/UNFPA population projections based on the 2015 census. Every district code and parent matches the current population release; totals sum to 7,631,798. These are projections, not the 2025 census. Includes Xaisomboon/Xaysomboun and distinguishes Vientiane province from the capital prefecture. Geometry from the National Geographic Department / UNICEF via OCHA HDX,2019, reviewed2025; inland water excluded. Shared detailed borders follow existing China, Thailand, Vietnam and newly added Myanmar geometry.",
+  "counts": {
+    "1": 18,
+    "2": 148
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "laos-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/9eb6aff1-9e3f-43d3-99a6-f415fe4b4dff/resource/3541e1a1-a15f-4c5f-982a-0747e441611a/download/lao_admin_boundaries.geojson.zip",
+      "license": "CC BY3.0 IGO",
+      "credit": "OCHA HDX / Lao national administrative boundaries",
+      "year": 2019,
+      "reviewed": "2025-10-30",
+      "sha256": "29558f548fa427f6488d9f779f26b9cbaf92431710f76d92fa53943d44a9ebb3",
+      "bytes": 7475885
+    },
+    "laos-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lao",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "fe06fbbb1e72cfb4c44925f971615562f06091e34c77b535821a6706550a4473",
+      "bytes": 16365
+    },
+    "laos-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-lao",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "b4591ba870c7c969e43747554dd5b40845f02fc27aaee615aec7d3c8fc5d8f43",
+      "bytes": 38882
+    },
+    "laos-population1.csv": {
+      "url": "https://data.humdata.org/dataset/f9ec8c86-e300-443b-bd04-a6c9923c29ef/resource/55d90dae-f476-4fe1-bcc5-0745087154ee/download/lao_admpop_adm1_2024.csv",
+      "license": "CC BY3.0 IGO",
+      "credit": "UNFPA, Lao Statistics Bureau via OCHA HDX; 2024 population projections",
+      "year": 2024,
+      "sha256": "bc097d18f04f9ceb1bf65a7fcaddfb5389450e176c11879f1d5278a8626efdf8",
+      "bytes": 7112
+    },
+    "laos-population2.csv": {
+      "url": "https://data.humdata.org/dataset/f9ec8c86-e300-443b-bd04-a6c9923c29ef/resource/87e60232-7af8-43c3-bc47-685f2a770ab1/download/lao_admpop_adm2_2024.csv",
+      "license": "CC BY3.0 IGO",
+      "credit": "UNFPA, Lao Statistics Bureau via OCHA HDX; 2024 population projections",
+      "year": 2024,
+      "sha256": "3106023f8666db969878210a0add41f66c50fcaed54440a0e975e8155673fb7d",
+      "bytes": 50137
+    },
+    "flag-la.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg",
+      "license": "Public domain",
+      "credit": "Laos national flag, Wikimedia Commons",
+      "sha256": "4d8b2ffd9f0565f534f6cafb6c389b31d538465ae8fefc72a42797959884b44a",
+      "bytes": 233
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "license": "Public domain"
+    }
+  }
+}

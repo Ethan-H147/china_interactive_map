@@ -1,0 +1,30 @@
+{
+  "description": "Existing atlas input snapshots retained before adding Pakistan and Kazakhstan. Used to keep prior India/China claim and neighbor geometry reproducible.",
+  "files": {
+    "indiaContext": {
+      "sourcePath": "dist/data/europe/india/context.bin",
+      "sha256": "0ba6ba003e0886b12e8aa4bc3b7fb8ccdcba6dfbe7155dd9992b707dfdf33b3f",
+      "bytes": 531879
+    },
+    "indiaLines": {
+      "sourcePath": "dist/data/europe/india/international.bin",
+      "sha256": "2450784fc49e5ef8632add63872c0ca9171a3924f205d64bc1c50d954b2406ca",
+      "bytes": 210996
+    },
+    "indiaNeighbours": {
+      "sourcePath": "dist/data/europe/india/neighbours.bin",
+      "sha256": "70530fc84ee98eb40a79c95f5f59246d3ca626e1efc77ca62e0875573db535b7",
+      "bytes": 933630
+    },
+    "chinaNeighbours": {
+      "sourcePath": "dist/data/china-neighbours.bin",
+      "sha256": "900c3cb0ad9e52570484019de9262855d7f23e9b5d460aa37e17c68ef0fcf555",
+      "bytes": 350423
+    },
+    "indiaFirst": {
+      "sourcePath": "dist/data/europe/india/first.bin",
+      "sha256": "780aa8f4aa33d6da7d7b9132db5a4c325c2c8af423989506af98712b2d6cfeef",
+      "bytes": 2367209
+    }
+  }
+}

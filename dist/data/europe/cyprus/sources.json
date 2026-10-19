@@ -1,0 +1,176 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "Six Republic of Cyprus districts, with current municipalities, communities and municipal quarters using the official June 2026 CYSTAT geographical code crosswalk and full DLS administrative geometry (CC BY 4.0). The July 2024 municipality mergers are represented; cities and towns are already subdivisions, so no duplicate city dots are added. Rural service clusters are not substituted for their independent communities. Northern areas use Republic administrative geography, not the de facto northern local-government system. UK sovereign-base land is removed at every level and their three Cypriot enclaves remain exact. Local 2021 census populations are shown only for complete government-controlled units whose territory is retained. Partly controlled, unmatched, and base-clipped unit totals are omitted, along with whole-district populations and GDP. All levels share one dissolved local geometry.",
+  "counts": {
+    "1": 6,
+    "2": 540,
+    "3": 91
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "cyprus-districts.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/CYP/ADM1/geoBoundaries-CYP-ADM1.geojson",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors, Wambacher, via geoBoundaries",
+      "year": 2017,
+      "bytes": 584292,
+      "sha256": "ef9ff9388a98aa0b12f31a1245dd4d579a926276f9813602e709697b6bb9ac0c"
+    },
+    "cyprus-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CYP/ADM1/",
+      "license": "Source metadata",
+      "credit": "geoBoundaries",
+      "bytes": 1735,
+      "sha256": "04a44e213f0a66ac21817f2e0d9ef176600040331fe60f1688cd7d9fa64a9ab6"
+    },
+    "flag-cy.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg",
+      "license": "Public domain",
+      "credit": "Cyprus national flag, Wikimedia Commons",
+      "bytes": 23916,
+      "sha256": "6b7eb910db8e80c07b15c12875b3aab1e08882904461de46f7cde9711b683c5e"
+    },
+    "cyprus-enclave-power-station.json": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/10/query?geometry=%7B%22x%22%3A33.744453%2C%22y%22%3A34.984255%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=DIST_CODE%2CDIST_NM_E&returnGeometry=false&f=json",
+      "license": "Official administrative identity verification; no geometry redistributed",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "bytes": 356,
+      "sha256": "57879e478abac9634df57c8fbe773913d92e31b4d342d535eb4facbf1cc4884d"
+    },
+    "cyprus-enclave-ormideia.json": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/10/query?geometry=%7B%22x%22%3A33.771605%2C%22y%22%3A34.994481%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=DIST_CODE%2CDIST_NM_E&returnGeometry=false&f=json",
+      "license": "Official administrative identity verification; no geometry redistributed",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "bytes": 356,
+      "sha256": "57879e478abac9634df57c8fbe773913d92e31b4d342d535eb4facbf1cc4884d"
+    },
+    "cyprus-enclave-xylotymbou.json": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/10/query?geometry=%7B%22x%22%3A33.742607%2C%22y%22%3A35.016852%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=DIST_CODE%2CDIST_NM_E&returnGeometry=false&f=json",
+      "license": "Official administrative identity verification; no geometry redistributed",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "bytes": 356,
+      "sha256": "57879e478abac9634df57c8fbe773913d92e31b4d342d535eb4facbf1cc4884d"
+    },
+    "administration": {
+      "url": "https://www.gov.cy/moi-districtadm/en/organisation/who-we-are/",
+      "credit": "Republic of Cyprus District Administration Offices"
+    },
+    "ukBases": {
+      "url": "data/europe/united-kingdom/sources.json",
+      "credit": "Existing UK sovereign base area geometry"
+    },
+    "divisionReference": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "license": "Public domain"
+    },
+    "unficyp": {
+      "url": "https://unficyp.unmissions.org/en/about-unficyp",
+      "credit": "UNFICYP"
+    },
+    "geocodes2026-en.xlsx": {
+      "url": "https://library.cystat.gov.cy/NEW/Geocodes_with%20Toponyms-EN-090626.xlsx",
+      "license": "Official CYSTAT statistics; reuse with attribution",
+      "credit": "Statistical Service of the Republic of Cyprus, 2026 geographical classification",
+      "year": 2026,
+      "bytes": 153859,
+      "sha256": "cec2ff44b08ef84a6c78355a4a29d2ad472b33c3f0431ba53d6a0f5877c9e3b5"
+    },
+    "geocodes2026-el.xlsx": {
+      "url": "https://library.cystat.gov.cy/NEW/Geocodes_with%20Toponyms-EL-090626.xlsx",
+      "license": "Official CYSTAT statistics; reuse with attribution",
+      "credit": "Statistical Service of the Republic of Cyprus, 2026 geographical classification, Greek names",
+      "year": 2026,
+      "bytes": 156051,
+      "sha256": "6e4edd4f1944b7af4ecf94ad67e352abdfdf759b100924b3941d1d72903e7db5"
+    },
+    "municipalities-communities.geojson": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/12/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&geometryPrecision=6&orderByFields=OBJECTID+ASC&f=geojson",
+      "pageSize": 50,
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://data.gov.cy/en/dataset/187",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "year": 2024,
+      "bytes": 12536370,
+      "sha256": "d9b3849ebcd4da2edef9896e0b53e0887b70ac619d0fefa1b81c976756987c8b"
+    },
+    "municipalities-communities-metadata.json": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/12?f=pjson",
+      "license": "CC BY 4.0",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "bytes": 4129,
+      "sha256": "fd139cd90c18db88a24533de5b9825c93e073877531e26bc5314c8635a104bcc"
+    },
+    "census2021-metadata.json": {
+      "url": "https://cystatdb.cystat.gov.cy/api/v1/en/8.CYSTAT-DB/Population/Census%20of%20Population%20and%20Housing%202021/Population/Population%20-%20Place%20of%20Residence/1891114E.px",
+      "license": "Official CYSTAT statistics; reuse with attribution",
+      "credit": "Statistical Service of the Republic of Cyprus",
+      "year": 2021,
+      "bytes": 12450,
+      "sha256": "e74c47c4c4909b40831741fa7015a286183b6d0d33a0e797f33da5ee2e56d341"
+    },
+    "census2021-totals.json": {
+      "url": "https://cystatdb.cystat.gov.cy/api/v1/en/8.CYSTAT-DB/Population/Census%20of%20Population%20and%20Housing%202021/Population/Population%20-%20Place%20of%20Residence/1891114E.px",
+      "method": "POST",
+      "body": {
+        "query": [
+          {
+            "code": "DISTRICT, MUNICIPALITY / COMMUNITY, QUARTER",
+            "selection": {
+              "filter": "all",
+              "values": [
+                "*"
+              ]
+            }
+          },
+          {
+            "code": "SEX",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "0"
+              ]
+            }
+          },
+          {
+            "code": "AGE",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "0"
+              ]
+            }
+          }
+        ],
+        "response": {
+          "format": "json-stat2"
+        }
+      },
+      "license": "Official CYSTAT statistics; reuse with attribution",
+      "credit": "Statistical Service of the Republic of Cyprus, 2021 census, final results",
+      "year": 2021,
+      "bytes": 21101,
+      "sha256": "9bc97119d4de15c703c3ca7b8e478b7df564560425e2d71030a2168a68c0b85b"
+    },
+    "boundary-license.html": {
+      "url": "https://data.gov.cy/en/dataset/187",
+      "license": "CC BY 4.0",
+      "credit": "Cyprus National Open Data Portal, Department of Lands and Surveys",
+      "bytes": 67290,
+      "sha256": "148e1562e3c46ca7a815131a5af024fe020aec14d24291fefa9b7794b8714a07"
+    },
+    "statistics-license.pdf": {
+      "url": "https://library.cystat.gov.cy/NEW/DISSEMINATION_POLICY-EN.pdf",
+      "license": "Official CYSTAT statistics; reuse with attribution",
+      "credit": "Statistical Service of the Republic of Cyprus",
+      "bytes": 301380,
+      "sha256": "604206d25b36224b80f3bf330efac5c93ac862c1fa5274c2c147366aececa58d"
+    },
+    "classification-announcement.html": {
+      "url": "https://www.cystat.gov.cy/el/Announcement?id=74185",
+      "license": "Official CYSTAT information; reuse with attribution",
+      "credit": "Statistical Service of the Republic of Cyprus, 9 June 2026",
+      "bytes": 54112,
+      "sha256": "7f72bfaf53d7b46e7f3d0c85092155c3c8042823d59fdb85a2c852f82c191ba9"
+    }
+  }
+}

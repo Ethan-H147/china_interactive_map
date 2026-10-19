@@ -1,0 +1,10 @@
+{
+  "retrieved": "2026-10-19",
+  "url": "https://sgx.geodatenzentrum.de/wfs_vg25?service=WFS&version=2.0.0&request=GetFeature&typeNames=vg25:vg25_li&bbox=8.25,54.65,10.1,55.15,urn:ogc:def:crs:OGC:1.3:CRS84&srsName=urn:ogc:def:crs:OGC:1.3:CRS84&outputFormat=application/json",
+  "sha256": "e7a884f70ca29cecb8367148a93ebcc063aef7d8c6850c62d7a734710ea359b7",
+  "bytes": 1233661,
+  "provider": "Bundesamt für Kartographie und Geodäsie · VG25 WFS administrative boundary lines, retrieved 19 October 2026",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "documentation": "https://sgx.geodatenzentrum.de/web_public/gdz/dokumentation/deu/vg25.pdf"
+}

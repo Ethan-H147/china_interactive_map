@@ -1,0 +1,30 @@
+{
+  "retrieved": "2026-10-18",
+  "asOf": "1 March 2026",
+  "sourceName": "MIC Japan",
+  "source": "https://www.soumu.go.jp/main_content/000141817.pdf",
+  "coverage": "387 geographic area codes · municipality and ward reference coverage",
+  "warning": "Municipal coverage, not exact telephone boundaries. Gray areas contain several codes; check the official address exceptions.",
+  "sources": {
+    "japan-mic.pdf": {
+      "url": "https://www.soumu.go.jp/main_content/000141817.pdf",
+      "publisher": "MIC Japan",
+      "date": "2026-03-01",
+      "license": "Public Data License 1.0; derived coverage marked separately",
+      "sha256": "7c49aca526eb5a82d6e8fc492a2fe750ca86513af840eaa30bf216844300287f",
+      "bytes": 331259
+    }
+  },
+  "method": "MIC numbering-area coverage joined to MLIT 2026 municipalities and designated-city wards. Full domestic codes retained. Municipalities shared by codes stay as a shared footprint; no address-level telephone boundary is inferred. Geometry generalized to 50 metres.",
+  "counts": {
+    "codes": 387,
+    "footprints": 503,
+    "places": 1892
+  },
+  "administrativeRename": {
+    "from": "篠山市",
+    "to": "丹波篠山市",
+    "source": "https://www.mayors.or.jp/p_city/city_namechange/"
+  },
+  "geometrySource": "../japan-local-source.json"
+}

@@ -1,0 +1,75 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "Seven current provinces, including Koshi and Madhesh, and all 77 districts. Official NSO 2021 census populations sum to 29,164,578. HDX Survey Department / UNRCO 2024 boundary reference. The 775-feature source third level mixes local governments and protected areas, so that ambiguous level is not exposed. No translated subdivision names are inferred from the English-only source. Shared display edges use the existing atlas India and China geometry; the western junction has a documented source alignment adjustment. Competing territorial claims are not determined by this reference map.",
+  "counts": {
+    "1": 7,
+    "2": 77
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "nepal-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-npl",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "1cb96d642073ce2079c044b2a4ae765a3a5284cf3edc3c42fce6e3a6aab0b828",
+      "bytes": 20883
+    },
+    "nepal-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/07db728a-4f0f-4e98-8eb0-8fa9df61f01c/resource/dea34e50-37d5-4e36-98ae-2b7b1b4c43de/download/npl_admin_boundaries.geojson.zip",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Survey Department of Nepal (http://ngiip.gov.np/index.php), UN Resident Coordinators Office in Nepal (https://un.org.np/)",
+      "description": "Nepal administrative level 0-3 boundaries (COD-AB) dataset version 02.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 7   \n- Admin 2: 77   \n- Admin 3: 775   \n  \n  \nDates associated with this dataset:  \n- 30 October 2025: dataset reviewed for accuracy and completeness  \n- 14 March 2024: valid for use by the humanitarian community  \n- 01 January 2024: last edit to the dataset before publishing  \n- 01 January 2024: boundaries created by the source  \n  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "9f6713c41d65396f611ddce5879faecf8e2d494edbd1d6611612445ad46b6707",
+      "bytes": 60438906
+    },
+    "nepal-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-npl",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "891346b1ab2eadc78a5241ea932a9155edf2c30e3b35023ab14fb489cdfceea4",
+      "bytes": 30121
+    },
+    "nepal-population0.csv": {
+      "url": "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/20ca4f0f-a371-43fa-92ae-a5ffcd5a225d/download/npl_admpop_adm0_2023.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Census of population",
+      "description": "Nepal administrative levels 0-2 sex and age disaggregated projected 2023 population statistics\r\n\r\nREFERENCE YEAR:  2023\r\n\r\nThese CSV tables are suitable for database or GIS linkage to the [Nepal - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-npl) polygon shapefiles using the ADM0, ADM1, and ADM2_PCODE fields .",
+      "resource": "npl_admpop_adm0_2023.csv",
+      "sha256": "655acce79c642e1364c0e0e351816d7a14b8ff6f8d89f3f77a1b45376ae950de",
+      "bytes": 889
+    },
+    "nepal-population1.csv": {
+      "url": "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/f188f906-1647-4655-908f-a6e75bd655f5/download/npl_admpop_adm1_2023.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Census of population",
+      "description": "Nepal administrative levels 0-2 sex and age disaggregated projected 2023 population statistics\r\n\r\nREFERENCE YEAR:  2023\r\n\r\nThese CSV tables are suitable for database or GIS linkage to the [Nepal - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-npl) polygon shapefiles using the ADM0, ADM1, and ADM2_PCODE fields .",
+      "resource": "npl_admpop_adm1_2023.csv",
+      "sha256": "ffd922e59947c5d29c3ae4d5501a73d4cc0e0f1d55eaedf2bbab75a841b3dd8c",
+      "bytes": 3222
+    },
+    "nepal-population2.csv": {
+      "url": "https://data.humdata.org/dataset/e71f53d9-2339-4df5-b76e-397957ec65dc/resource/57161f46-c404-4784-a952-a6e5ba2ed625/download/npl_admpop_adm2_2023.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Census of population",
+      "description": "Nepal administrative levels 0-2 sex and age disaggregated projected 2023 population statistics\r\n\r\nREFERENCE YEAR:  2023\r\n\r\nThese CSV tables are suitable for database or GIS linkage to the [Nepal - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-npl) polygon shapefiles using the ADM0, ADM1, and ADM2_PCODE fields .",
+      "resource": "npl_admpop_adm2_2023.csv",
+      "sha256": "20333499167201f9ef3e872a67c1692d375930bd4037204b6f3681d85ccf19da",
+      "bytes": 26907
+    },
+    "nepal-census2021.csv": {
+      "url": "https://censusresults.nsonepal.gov.np/files/national/csv/NR_Indv01_PopulationBySex.csv",
+      "license": "Official NSO statistical facts with attribution",
+      "credit": "National Statistics Office Nepal · National Population and Housing Census 2021",
+      "sha256": "b6ce57070962b73687bef970c9d2ff9e15f5cbbe7211c14ce72aba3d825f0049",
+      "bytes": 6221
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "license": "Public domain"
+    },
+    "neighbourAlignment": {
+      "reference": "data/europe/nepal/alignment-report.json",
+      "policy": "Whole shared reference edges; existing neighbour land takes precedence over source-survey overlap."
+    }
+  }
+}

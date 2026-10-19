@@ -7,7 +7,7 @@ export function createQuizInsets(ids,prompt,choose){
  for(const [index,id] of ids.entries()){
   const shape=quizInsetShapes[id];if(!shape)throw Error('Missing quiz inset: '+id);
   const box=document.createElement('div'),button=document.createElement('button'),caption=document.createElement('span');
-  box.className='quiz-inset';box.tabIndex=-1;box.dataset.place=id;button.type='button';button.setAttribute('aria-label','Select state in inset '+(index+1));
+  box.className='quiz-inset';box.tabIndex=-1;box.dataset.place=id;button.type='button';button.setAttribute('aria-label','Select place in inset '+(index+1));
   button.innerHTML='<svg viewBox="'+shape.viewBox+'" aria-hidden="true" focusable="false"><path d="'+shape.path+'" fill-rule="evenodd"/></svg>';
   caption.className='quiz-inset-name';caption.setAttribute('aria-hidden','true');button.append(caption);button.onclick=()=>choose(id);box.append(button);root.append(box);items.set(id,{box,button,caption,index});
  }
@@ -19,7 +19,7 @@ export function createQuizInsets(ids,prompt,choose){
   update({records,solved,review,wrong,missed,canAnswer}){
    for(const [id,{box,button,caption,index}] of items){const correct=solved.has(id)||review?.id===id,bad=!correct&&(wrong===id||missed?.has(id)),record=records.find(r=>r.id===id),known=correct||bad;
     box.dataset.status=correct?'correct':bad?'incorrect':'unanswered';box.dataset.review=String(review?.id===id);button.disabled=!canAnswer;
-    caption.textContent=known?record.en:'';button.setAttribute('aria-label',known?record.en+(correct?' · correct':' · incorrect'):'Select state in inset '+(index+1));
+    caption.textContent=known?record.en:'';button.setAttribute('aria-label',known?record.en+(correct?' · correct':' · incorrect'):'Select place in inset '+(index+1));
    }
    position();
   },

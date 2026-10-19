@@ -24,3 +24,13 @@ await fs.writeFile('dist/data/world-land-sources.json',JSON.stringify({
 console.log('World land:',features.length,'silhouettes;',bytes.length,'bytes compressed');
 
 await (await import('./titicaca-water.mjs')).writeTiticacaWater();await (await import('./mask-titicaca.mjs')).maskTiticacaWorld();
+
+await (await import('./pakistan-water.mjs')).maskPakistanWorld();
+
+await (await import('./kyrgyzstan-water.mjs')).maskKyrgyzstanWorld();
+
+await (await import('./myanmar-laos-water.mjs')).maskMyanmarLaosWorld();
+
+await (await import('./nordic-world.mjs')).reconcileNordicWorld();
+
+await (await import('./himalaya-world.mjs')).reconcileHimalayaWorld();

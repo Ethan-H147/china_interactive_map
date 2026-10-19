@@ -1992,5 +1992,13 @@
    "filledPieces": 1306,
    "movedSlivers": 3
   }
- ]
+ ],
+ "westernProvinceSeams": {
+  "source": "western-province-seams.json",
+  "method": "County outer arcs follow the same reconciled Xinjiang/Tibet/Qinghai boundaries as prefectures and provinces. Existing internal county edges and identities are preserved."
+ },
+ "innerMongoliaSeams": {
+  "source": "inner-mongolia-seams.json",
+  "method": "Affected counties follow their reconciled prefecture outlines, with original internal shared edges retained and small residual border gaps assigned to the nearest adjacent county."
+ }
 }

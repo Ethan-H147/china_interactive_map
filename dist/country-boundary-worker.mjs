@@ -25,6 +25,7 @@ self.onmessage=async({data})=>{
   const prepare=part=>{
    const regions=polygonParts(part.regions),indexed=data.deferOutlines?indexedRegions(regions):null;
    return {
+    ...(part.towns?{towns:prepare(part.towns)}:{}),
     blob:indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
     borders:new Blob([JSON.stringify(lineData(part.boundaries))],{type:'application/json'}),
     hasBorders:part.boundaries.features.length>0,

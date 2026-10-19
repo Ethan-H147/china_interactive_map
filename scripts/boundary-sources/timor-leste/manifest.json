@@ -1,0 +1,42 @@
+{
+  "retrieved": "2026-10-18",
+  "files": {
+    "boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/ee4a485c-9180-43db-9672-55e18dac5f96/resource/bd7e9c73-e440-4761-94f1-17dde8e8faf0/download/tls_admin_boundaries.geojson.zip",
+      "license": "CC BY-IGO",
+      "credit": "Timor-Leste Direcção Geral de Estatística; OCHA COD-AB distribution",
+      "date": "2020-01-01",
+      "sha256": "13f665028f5b04a8d25ea4ce12fe2b6a764b5c66ca3308ca8828946eb7207cfe",
+      "bytes": 7879077
+    },
+    "population2025.csv": {
+      "url": "https://portal.municipio.gov.tl/wp-content/uploads/2025/09/REKAPITULASAUN-DADUS-POPULASAUN-ATE-SETEMBRU-2025-1.csv",
+      "license": "Official published administrative population data; attribution to Ministry of State Administration, Timor-Leste",
+      "credit": "Ministry of State Administration, municipal population register, September 2025",
+      "date": "2025-09",
+      "sha256": "e1833550b703f4c85dd05fdb4e3953fe25994ccd0b83811c812ac6c4911caad5",
+      "bytes": 786
+    },
+    "flag.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Flag_of_East_Timor.svg",
+      "license": "Public domain (national flag; simple geometric design)",
+      "credit": "Flag of Timor-Leste; Wikimedia Commons",
+      "sha256": "086a0f322643bef67059a6b64be35c788aef86a9941f6640b220255e7180ae93",
+      "bytes": 338
+    },
+    "frontiers.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "license": "Public domain",
+      "credit": "Natural Earth v5.1.2",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    },
+    "hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tls",
+      "license": "CC BY-IGO",
+      "credit": "OCHA Humanitarian Data Exchange source metadata",
+      "sha256": "b51be5f33701eee0ff2add86b723755bfd264a18ad073469f1a7148901747e7f",
+      "bytes": 31406
+    }
+  }
+}

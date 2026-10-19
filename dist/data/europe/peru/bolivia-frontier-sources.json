@@ -1,0 +1,80 @@
+{
+  "retrieved": "2026-10-19",
+  "provider": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "purpose": "Common Peru/Bolivia admin-2 relation members across Lake Titicaca and Lago Menor, independently of physical lake shorelines. Reference boundaries, not a legal determination.",
+  "files": {
+    "relation-288247.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/288247.json",
+      "id": 288247,
+      "type": "relation",
+      "version": 502,
+      "timestamp": "2026-10-15T03:30:30Z",
+      "bytes": 30139,
+      "sha256": "48b2a516cb36f4a0a2f11a8d03d56cadce6f46b4ecc442a449b0a0151da2b7ed"
+    },
+    "relation-252645.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/252645.json",
+      "id": 252645,
+      "type": "relation",
+      "version": 423,
+      "timestamp": "2026-08-07T00:22:03Z",
+      "bytes": 34638,
+      "sha256": "c71cfd0809422c04e8f85e2155be0a81e2440c8a0f25c862095ffa7c168c7769"
+    },
+    "way-45823377.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/45823377/full.json",
+      "id": 45823377,
+      "type": "way",
+      "version": 16,
+      "timestamp": "2016-06-14T03:35:45Z",
+      "bytes": 4168,
+      "sha256": "a20438e74981d1dc6c762ab5d4255f777d802aafa6b90bb29a4629c2308183b3"
+    },
+    "way-245345483.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/245345483/full.json",
+      "id": 245345483,
+      "type": "way",
+      "version": 2,
+      "timestamp": "2016-06-14T03:35:43Z",
+      "bytes": 960,
+      "sha256": "e38a4096b9c4896c9fc29539723e760bf65fddc8c7f0e8bfd45b4daf61893d83"
+    },
+    "way-146459488.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/146459488/full.json",
+      "id": 146459488,
+      "type": "way",
+      "version": 3,
+      "timestamp": "2016-06-14T03:35:43Z",
+      "bytes": 1664,
+      "sha256": "d6ad39c877103379822897755c4bd93b8a03e0b0a5893a15d17b18966c6d0412"
+    },
+    "way-146458452.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/146458452/full.json",
+      "id": 146458452,
+      "type": "way",
+      "version": 2,
+      "timestamp": "2016-06-14T03:35:43Z",
+      "bytes": 1142,
+      "sha256": "93c2bb35733c5455eab66a826612c0591e306028701c46ac8c9d0b83b0805953"
+    },
+    "way-146458451.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/146458451/full.json",
+      "id": 146458451,
+      "type": "way",
+      "version": 2,
+      "timestamp": "2016-06-14T03:35:43Z",
+      "bytes": 964,
+      "sha256": "cf10d9453f50f73eedda455f1ac2587a3b92e3fb778ecdfafe3d78f1228ec529"
+    },
+    "way-245358791.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/245358791/full.json",
+      "id": 245358791,
+      "type": "way",
+      "version": 3,
+      "timestamp": "2016-06-14T03:35:43Z",
+      "bytes": 1415,
+      "sha256": "5988c0c902b5c9e8e4eb62aa771b970fffd2a151ed031e664e9234ee8477e08b"
+    }
+  }
+}

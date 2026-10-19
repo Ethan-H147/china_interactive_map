@@ -1,3 +1,5 @@
+import {reconcileInnerMongoliaFeatures} from './inner-mongolia-seams.mjs';
+import {reconcileWesternProvinceFeatures,westernJunction} from './western-province-seams.mjs';
 import fs from 'node:fs';
 import {topology} from 'topojson-server';
 import {merge, mesh} from 'topojson-client';
@@ -86,6 +88,10 @@ const hkTopology=topology({regions:{type:'FeatureCollection',features:sar.filter
 features=reconcileShenzhenHongKong(features,{geometry:merge(hkTopology,hkTopology.objects.regions.geometries)}).features;
 features=(await refinePearlCoast(features,JSON.parse(gunzipSync(fs.readFileSync(new URL('pearl-coast-land.bin',root)))))).features;
 features=(await refineEastCoast(features,JSON.parse(gunzipSync(fs.readFileSync(new URL('east-coast-land.bin',root)))))).features;
+const western=await reconcileWesternProvinceFeatures(features);features=western.features;
+fs.writeFileSync(new URL('western-province-seams.json',root),JSON.stringify({method:'Full shared province arcs reconciled before province unions and boundary meshes are built.',junction:westernJunction,arcs:western.reports},null,2)+'\n');
+const innerMongolia=await reconcileInnerMongoliaFeatures(features);features=innerMongolia.features;
+fs.writeFileSync(new URL('inner-mongolia-seams.json',root),JSON.stringify({method:'Full Inner Mongolia border reconciliation before province unions and shared meshes.',arcs:innerMongolia.reports,junctionCollars:innerMongolia.collars,secondaryArcs:innerMongolia.secondaryArcs},null,2)+'\n');
 const topo=topology({regions:{type:'FeatureCollection',features}});
 const regions=topo.objects.regions;
 const provinces={type:'FeatureCollection',features:manifest.coverage.map(entry=>({
@@ -112,6 +118,8 @@ const parts=[];for(let offset=0,index=0;offset<compressed.length;offset+=4*1024*
 fs.writeFileSync(new URL('display-boundaries.parts.json',root),JSON.stringify({compression:'gzip',parts,compressedBytes:compressed.length,uncompressedBytes:serialized.length,sha256:createHash('sha256').update(serialized).digest('hex')},null,2));
 const provenance=read('additional-sources.json');
 provenance.processing={simplification:false,zhuhai:'Detailed DataV district union replaces coastal coverage within [113.48,22.08,113.61,22.26]. The entire old port island is replaced by the connected OpenStreetMap shoreline; Macau government polygons retain jurisdiction.',displayCoordinateSystem:'WGS84',mainland:'DataV and AreaCity GCJ-02 coordinates numerically converted to WGS84, retaining every source vertex before government overlays.',coordinateReference:'https://help.aliyun.com/en/datav/datav-7-0/user-guide/map-data-format-1',xinjiang:'New cities clipped to the existing detailed Xinjiang extent, then erased from the older prefectures. Coincident overlay vertices joined within 1e-10 degrees.',taiwan:'Official county/city polygons replace the coarse Taiwan outline. Overlapping older Fujian island components are replaced as whole components to prevent residual coastlines.',sar:'Official Hong Kong land-clipped districts and Macau parish/area polygons replace previous SAR geometry after legacy gap repair. Their land polygons are erased from neighboring Guangdong to prevent overlapping fills.',replacedFujianIslandParts:[...replaced],retainedOtherProvinceBordersAfterCoordinateConversion:26};
+provenance.processing.innerMongoliaSeams='All eight Inner Mongolia neighboring borders use shared complete arcs at province, prefecture and county level; see inner-mongolia-seams.json.';
+provenance.processing.westernProvinceSeams='Complete Xinjiang/Tibet/Qinghai shared arcs reconciled before parent unions and boundary meshes. See western-province-seams.json.';
 provenance.processing.macau="Macau shared parish edges are reconciled with 1e-8 degree vertex snapping and a 0.5 m sliver-gap threshold before coastline extraction. No simplification is applied; validation bounds boundary displacement to 0.5 m.";
 provenance.processing.shenzhen='Shenzhen display coverage is clipped to detailed OpenStreetMap physical land. Original administrative sources and Hong Kong polygons remain unchanged. No coastline simplification is applied; offshore jurisdiction is not depicted as land.';
 provenance.processing.pearlCoast=pearlCoastMethod;

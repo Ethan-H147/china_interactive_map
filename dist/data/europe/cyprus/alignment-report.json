@@ -1,0 +1,57 @@
+{
+  "ukBases": [
+    {
+      "changedEdges": 182,
+      "maxDisplacementMetres": 1101.0412127401607,
+      "changedRegions": [
+        "CY-02"
+      ]
+    },
+    {
+      "changedEdges": 147,
+      "maxDisplacementMetres": 2976.1681124241113,
+      "changedRegions": [
+        "CY-03",
+        "CY-04"
+      ]
+    },
+    {
+      "changedEdges": 0,
+      "maxDisplacementMetres": 0,
+      "changedRegions": []
+    },
+    {
+      "changedEdges": 55,
+      "maxDisplacementMetres": 1810.8993359838373,
+      "changedRegions": [
+        "CY-03",
+        "CY-04"
+      ]
+    },
+    {
+      "changedEdges": 10,
+      "maxDisplacementMetres": 2351.8869442416894,
+      "changedRegions": [
+        "CY-03",
+        "CY-04"
+      ]
+    }
+  ],
+  "enclaves": [
+    {
+      "name": "power-station",
+      "district": "CY-03",
+      "verification": "cyprus-enclave-power-station.json"
+    },
+    {
+      "name": "ormideia",
+      "district": "CY-03",
+      "verification": "cyprus-enclave-ormideia.json"
+    },
+    {
+      "name": "xylotymbou",
+      "district": "CY-03",
+      "verification": "cyprus-enclave-xylotymbou.json"
+    }
+  ]
+}

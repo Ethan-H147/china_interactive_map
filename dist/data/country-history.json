@@ -560,6 +560,214 @@
         ],
         "note": "First implemented on 18 October 2026: nine departments, 112 actual provinces, 340 municipalities and three Indigenous territories; final 2024 census population; shared regional renderer."
       }
+    },
+    {
+      "country": "timor-leste",
+      "name": "Timor-Leste",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally on 18 October 2026: 14 first-level municipality/special-region units, Ataúro separated from Díli, official September 2025 population register; not committed or published.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/timor-leste/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "brunei",
+      "name": "Brunei",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally on 18 October 2026: four districts and 39 mukims; Nadi.BN CC BY 4.0 geometry, official DEPS 2025 district estimates, continuous shared border with Malaysia. Not published.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/brunei/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "pakistan",
+      "name": "Pakistan",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Seven first-level provinces/territories, 2023 census populations, Urdu names; WFP/OCHA HDX boundaries. Outdated district files omitted. Added locally; not published.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/pakistan/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "kazakhstan",
+      "name": "Kazakhstan",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "17 regions and three republican cities, including Abai, Jetisu and Ulytau; Kazakh names and official September 2026 population estimates. Outdated district files omitted. Added locally; not published. Coverage expanded locally on 18 October 2026 with a separately selectable Baikonur special-status city and its documented lease status.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/kazakhstan/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "greece",
+      "name": "Greece",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "13 regions plus Mount Athos, 74 regional units and 332 municipalities; official ELSTAT 2021 census figures at all levels, Eurostat regional GDP, shared Turkey frontier and a 14-place quiz. Local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/greece/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "cyprus",
+      "name": "Cyprus",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Six districts, 540 current municipalities/communities and 91 municipal quarters using the official June2026 classification; July2024 mergers, local census facts, UK base separation and district quiz. Incompatible population scopes omitted. Local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/cyprus/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "afghanistan",
+      "name": "Afghanistan",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "34 provinces with English/Dari names, 2026 OCHA estimates, lake masking, matched Pakistan/China borders and province quiz. Incomplete district geometry omitted. Local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/afghanistan/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "kyrgyzstan",
+      "name": "Kyrgyzstan",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Seven regions and two independent cities, official 2026 statistics, English/Kyrgyz/Russian names, lake masking, matched Kazakhstan/China borders and quiz. Incomplete districts omitted; city-expansion geometry limits identified. Local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/kyrgyzstan/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "myanmar",
+      "name": "Myanmar",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "15 states, regions and union territory with 330 townships, English/Burmese names, historical 2014 census, first-level quiz and a separate local control reference showing Wa north/south, NDAA, military centres and formal self-administered areas.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/myanmar/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "laos",
+      "name": "Laos",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "18 provinces/capital units and 148 districts, English/Lao names, matched 2024 population projections, shared frontiers and first-level quiz. Local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/laos/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "norway",
+      "name": "Norway",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "15 counties, 357 municipalities, Svalbard, Jan Mayen, Bouvet Island and explicitly labelled Antarctic dependencies/claims; current official population and land area; local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/norway/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "sweden",
+      "name": "Sweden",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "21 counties and 290 municipalities, domestic islands including Gotland and Öland, current official population and land area; no overseas dependencies; local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/sweden/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "finland",
+      "name": "Finland",
+      "addedOn": "2026-10-18",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "19 regions and 308 municipalities including autonomous Åland and its 16 municipalities; English, Finnish and Swedish names, official population and land area; local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/finland/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "nepal",
+      "name": "Nepal",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "7 provinces and 77 districts; official 2021 NSO census population; local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/nepal/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "bhutan",
+      "name": "Bhutan",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "20 dzongkhags and 205 gewog reference areas; official NSB 2024 district projections; local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/bhutan/catalogue.bin"
+        ]
+      }
+    },
+    {
+      "country": "bangladesh",
+      "name": "Bangladesh",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "8 divisions, 64 districts, 495 upazilas and 12 city corporations; official 2022 BBS district census counts; local only.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/bangladesh/catalogue.bin"
+        ]
+      }
     }
   ]
 }

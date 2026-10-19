@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-19",
+  "policy": "Each new country owns its complete shared stroke. Coincident older strokes are omitted once; other claims and frontiers are preserved. New country land is clipped to the existing neighbouring reference shapes; no source overlap is interpreted as new land ownership.",
+  "removed": {
+    "dist/data/atlas-frontiers.bin": 0,
+    "dist/data/europe/india/international.bin": 1,
+    "dist/data/europe/myanmar/international.bin": 0
+  },
+  "frontiers": [
+    {
+      "pair": "NPL-CHN",
+      "owner": "nepal",
+      "vertices": 350,
+      "endpoints": [
+        [
+          87.666408,
+          27.809823
+        ],
+        [
+          81.037206,
+          30.206217
+        ]
+      ]
+    },
+    {
+      "pair": "NPL-IND",
+      "owner": "nepal",
+      "vertices": 3510,
+      "endpoints": [
+        [
+          81.037206,
+          30.206217
+        ],
+        [
+          88.135187,
+          27.881945
+        ]
+      ]
+    },
+    {
+      "pair": "NPL-CHN",
+      "owner": "nepal",
+      "vertices": 19,
+      "endpoints": [
+        [
+          88.135187,
+          27.881945
+        ],
+        [
+          87.666408,
+          27.809823
+        ]
+      ]
+    },
+    {
+      "pair": "BTN-CHN",
+      "owner": "bhutan",
+      "vertices": 5,
+      "endpoints": [
+        [
+          88.940264,
+          27.265024
+        ],
+        [
+          88.91004,
+          27.276623
+        ]
+      ]
+    },
+    {
+      "pair": "BTN-IND",
+      "owner": "bhutan",
+      "vertices": 666,
+      "endpoints": [
+        [
+          88.91004,
+          27.276623
+        ],
+        [
+          91.619076,
+          27.862569
+        ]
+      ]
+    },
+    {
+      "pair": "BTN-CHN",
+      "owner": "bhutan",
+      "vertices": 142,
+      "endpoints": [
+        [
+          91.619076,
+          27.862569
+        ],
+        [
+          88.940264,
+          27.265024
+        ]
+      ]
+    },
+    {
+      "pair": "BGD-IND",
+      "owner": "bangladesh",
+      "vertices": 12340,
+      "endpoints": [
+        [
+          92.603167,
+          21.977136
+        ],
+        [
+          89.064076,
+          22.125485
+        ]
+      ]
+    },
+    {
+      "pair": "BGD-MMR",
+      "owner": "bangladesh",
+      "vertices": 535,
+      "endpoints": [
+        [
+          92.265076,
+          21.061096
+        ],
+        [
+          92.603167,
+          21.977136
+        ]
+      ]
+    }
+  ]
+}

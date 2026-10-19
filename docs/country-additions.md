@@ -1,6 +1,6 @@
 # Country addition log
 
-All 44 registered country maps are included. Historical addition dates are preserved; Morocco and Bolivia were first implemented on 18 October 2026.
+All 54 registered country maps are included. Historical addition dates are preserved; Morocco and Bolivia were first implemented on 18 October 2026.
 
 Dates use America/Chicago. "Added" means the first implementation in the atlas, including an initial outline or developer-only version. It does not mean the date of public deployment, a dataset year, or a source retrieval date. Entries describe the first implementation. The earlier local additions through Morocco were subsequently committed and published on 18 October 2026; their original addition dates are unchanged.
 
@@ -50,6 +50,14 @@ Dates use America/Chicago. "Added" means the first implementation in the atlas, 
 | 2026-10-18 | Vietnam | Local implementation | 34 provincial units and 3,321 commune-level units; current two-tier structure; not deployed. |
 | 2026-10-18 | Morocco | [326a3b1](https://github.com/Ethan-H147/china_interactive_map/commit/326a3b1dc4a73b6cec108638519ee9592f5f4d8f) | 12 regions, 75 provinces/prefectures and 1,502 mapped communes; published 18 October 2026. |
 | 2026-10-18 | Bolivia | [375923f](https://github.com/Ethan-H147/china_interactive_map/commit/375923f040a599f7923d5d960ac633e1ed8bd3a3) | Nine departments, 112 actual provinces, 340 municipalities and three Indigenous territories; final 2024 census statistics. |
+| 2026-10-18 | Timor-Leste | Local implementation | 14 first-level units: 13 municipalities, including Ataúro, plus Oe-Cusse Ambeno special administrative region; September 2025 official population register. Current lower-level boundaries unavailable; municipality map and quiz only; not published. |
+| 2026-10-18 | Brunei | Local implementation | Four districts, 39 mukims and official 2025 district population estimates; shared Malaysia border aligned at every level; not published. |
+
+| 2026-10-18 | Pakistan | Local implementation | Seven provinces/territories, Urdu names and separately sourced 2023 census figures; first-level quiz; not published. |
+| 2026-10-18 | Kazakhstan | Local implementation | 17 regions and three republican cities, post-2022 reforms, Kazakh names and September 2026 estimates; first-level quiz; not published. |
+
+| 2026-10-18 | Greece | Local implementation | 13 regions plus Mount Athos, 74 regional units and 332 municipalities; census facts, regional GDP and a region quiz; not published. |
+| 2026-10-18 | Cyprus | Local implementation | Six districts, 540 municipalities/communities and 91 municipal quarters; current reform codes, local census facts and a district quiz; not published. |
 
 The machine-readable log is [dist/data/country-history.json](../dist/data/country-history.json). Add an entry whenever a country is added to countries.js; npm run test:entry checks that every country has a date. Keep later releases and coverage expansions separate from the original addition date.
 
@@ -58,3 +66,24 @@ US territory expansion — 17 October 2026, local: added the five inhabited US t
 
 
 Netherlands Caribbean expansion — 18 October 2026, local: Aruba, Curaçao, Sint Maarten, Bonaire, Sint Eustatius and Saba. The original Netherlands addition date is unchanged.
+
+
+Kazakhstan coverage expansion — 18 October 2026, local: added the special-status city of Baikonur as a separately selectable map and quiz unit using the retained geokz city boundary. Kazakhstan sovereignty and Russian lease status are documented. The country addition date and official count of 17 regions and three republican cities are unchanged.
+
+| 2026-10-18 | Afghanistan | Local only | 34 provinces; English/Dari, OCHA estimates, province quiz. |
+
+| 2026-10-18 | Kyrgyzstan | Local only | Seven regions and two cities; official NSC statistics, three label languages, region quiz; source limits documented. |
+
+| 2026-10-18 | Myanmar | Local only | 15 first-level units and 330 townships; separate dated control/actor reference. |
+
+| 2026-10-18 | Laos | Local only | 18 provinces/capital units and 148 districts; official 2024 population projections. |
+
+| 2026-10-18 | Norway | Local only | 15 counties, 357 municipalities, Arctic territories and southern dependencies; Antarctic claims identified explicitly. |
+| 2026-10-18 | Sweden | Local only | 21 counties, 290 municipalities and domestic islands; official population and land area. |
+| 2026-10-18 | Finland | Local only | 19 regions and 308 municipalities, including autonomous Åland and its 16 municipalities; official bilingual names and statistics. |
+
+Bolivia–Peru border correction — 19 October 2026, local: reconciled the full river frontier and both shorter land crossings to Peru's detailed edge at every Bolivia subdivision level. A single continuous stroke replaces disconnected fragments and old lake-coast loops. Lake crossings use six pinned ways shared by both OpenStreetMap country relations; only endpoints move (under 150 m) to meet the mapped land. Water masking and island ownership remain unchanged. The border is a geographic reference, not a legal determination. Full-edge probes and browser pixel checks cover the previously missing river section and the Copacabana peninsula.
+
+| 2026-10-19 | Nepal | Local only | 7 current provinces and 77 districts; official NSO 2021 census population; English subdivision names; the ambiguous 775-feature local/protected-area source is not exposed. |
+| 2026-10-19 | Bhutan | Local only | 20 dzongkhags and 205 gewog reference areas; NSB 2024 district projections based on 2017 census; urban thromdes are not separately delineated in the retained source. |
+| 2026-10-19 | Bangladesh | Local only | 8 divisions, 64 districts, 495 upazilas and 12 city corporations; BBS 2022 enumerated district/division census population, distinct from adjusted totals; English subdivision names. |

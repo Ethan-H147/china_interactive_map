@@ -1,0 +1,158 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "17 regions and the three cities of republican significance (Astana, Almaty and Shymkent), matching the July 2026 official inventory, plus the separately selectable special-status city of Baikonur (21 map units). Baikonur uses the KATO 431900000 city boundary from the same geokz snapshot, clipped out of the Kyzylorda display fill without changing the country footprint. Its Kazakhstan sovereignty and lease to Russia until 2050 are documented by the city administration. Official Kyzylorda statistics still include Baikonur; no separate city population is invented. Includes Abai, Jetisu and Ulytau, created in 2022. Source geography is geokz January 2024 under CC BY 4.0; the remaining outdated district layer is intentionally omitted. Kazakhstan KATO and source PCodes retained; historical ISO letter codes are not presented as current codes. Shared frontiers are aligned to the atlas China and Russia land edges. Natural Earth lakes and Caspian water are removed from land fills. Official regional population estimates are dated 1 September 2026.",
+  "counts": {
+    "1": 21
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "kazakhstan-population.html": {
+      "url": "https://stat.gov.kz/en/region/",
+      "license": "Official statistics reuse with attribution: https://stat.gov.kz/en/description/",
+      "credit": "Bureau of National Statistics, Kazakhstan",
+      "date": "2026-09-01",
+      "sha256": "9466644971430690d1e2ef1936da634be3145fc1a2bb7dc622d0ebe45353c5c9",
+      "bytes": 283542
+    },
+    "kazakhstan-administration.html": {
+      "url": "https://stat.gov.kz/en/industries/social-statistics/demography%20/publications/513321/",
+      "license": "Official statistics reuse with attribution",
+      "credit": "Bureau of National Statistics, Kazakhstan",
+      "date": "2026-07-01",
+      "sha256": "39471c75602657fd2cc1892a66078c6e4edc21be2ea9c05e942249c1b5d2d047",
+      "bytes": 66193
+    },
+    "kazakhstan-LICENSE.md": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/LICENSE.md",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111",
+      "bytes": 18651
+    },
+    "kazakhstan-README.md": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/README.md",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "sha256": "7e881c09c535c2b51fcec940343086a52f42fe83012fe05612f0f77aadfcc511",
+      "bytes": 6623
+    },
+    "flag-kz.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg",
+      "license": "Public domain",
+      "credit": "Kazakhstan national flag; Wikimedia Commons",
+      "sha256": "bcf331e5a92785976aabe77aeac25de912e97d4e20557c521359e1033d1450af",
+      "bytes": 9668
+    },
+    "kazakhstan.shp": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm1_2024.shp",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "e9cd4e520b263ebe2f984be026b25850be56853ecf6e623ab041cf21d0dfe6f7",
+      "bytes": 419824
+    },
+    "kazakhstan.shx": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm1_2024.shx",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "4bf4bbbd34a272c4fd43a482b190d2f57d4fe6d5cf97b9657f65eef4a07ef684",
+      "bytes": 260
+    },
+    "kazakhstan.dbf": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm1_2024.dbf",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "d54e7f6e68e2a0f8778b8231aba861d77794b38f0a4fc009006ac67a2010fd95",
+      "bytes": 16586
+    },
+    "kazakhstan.prj": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm1_2024.prj",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "kazakhstan.cpg": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm1_2024.cpg",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    },
+    "kazakhstan-adm2.shp": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm2_2024.shp",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "6821c48a27c5c77c20d1cf71365a0c4078d48e28494b19fa9a6be4c7c2b63a49",
+      "bytes": 1020936
+    },
+    "kazakhstan-adm2.shx": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm2_2024.shx",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "9486f1b1f95a2eaceb23fc6834f68bd549dbb4bf0b47d833075850fd6b1d9dd6",
+      "bytes": 1892
+    },
+    "kazakhstan-adm2.dbf": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm2_2024.dbf",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "e0fb676d93cdacb3b3a583fa64a679ce1e0a5456b464308f05a2a1c09f1c1168",
+      "bytes": 253634
+    },
+    "kazakhstan-adm2.prj": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm2_2024.prj",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+      "bytes": 145
+    },
+    "kazakhstan-adm2.cpg": {
+      "url": "https://raw.githubusercontent.com/arodionoff/geokz/41c1a00454ec9e01bda031b5074920bd82de02ce/inst/shape/kaz_admbnda_adm2_2024.cpg",
+      "license": "CC BY 4.0",
+      "credit": "geokz, Alexander Rodionov",
+      "revision": "41c1a00454ec9e01bda031b5074920bd82de02ce",
+      "year": 2024,
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    },
+    "kazakhstan-baikonur-status.html": {
+      "url": "https://portal.baikonuradm.ru/index.php?mod=447",
+      "license": "Official published status information, with attribution",
+      "credit": "Baikonur City Administration",
+      "sha256": "44900268d5e151940a58e80fab86c4fe3a1b13cb6c4360f9f643237ce117ef6f",
+      "bytes": 68698
+    },
+    "kazakhstan-baikonur-lease.html": {
+      "url": "https://portal.baikonuradm.ru/index.php?mod=city",
+      "license": "Official published status information, with attribution",
+      "credit": "Baikonur City Administration",
+      "sha256": "bde2fdf8bf387cfff4292a8de0a495b3ba92452ada848f0e474204c787fecf56",
+      "bytes": 24041
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "license": "Public domain",
+      "credit": "Natural Earth v5.1.2"
+    }
+  }
+}

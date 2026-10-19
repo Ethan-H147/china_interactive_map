@@ -16,5 +16,5 @@ export async function countryContext(country,regions,units,command){
  };
  const coordinates=parts(home);assert(coordinates.length,'Country context must retain mainland land');
  return fc([{type:'Feature',properties:{country},geometry:{type:'MultiPolygon',coordinates}},
-  ...regions.features.filter(focused).map(f=>({...f,properties:{country,region:f.properties.id,bounds:units.get(f.properties.id).bounds.flat()}}))]);
+  ...regions.features.filter(focused).map(f=>({...f,properties:{country,region:f.properties.id,bounds:(units.get(f.properties.id).navigationBounds||units.get(f.properties.id).bounds).flat()}}))]);
 }

@@ -1,0 +1,12 @@
+{
+  "owner": "indonesia",
+  "canonicalSource": "dist/data/archipelago/indonesia-ID53.bin",
+  "canonicalGeometrySha256": "2e023e696ac7b305700841b35ef25a4943d1fbe728557ea703b1aa9197b2b276",
+  "changedEdges": 10937,
+  "maxDisplacementMetres": 1584.2027934425807,
+  "changedRegions": [
+    "TL-M-04",
+    "TL-M-05",
+    "TL-M-12"
+  ]
+}

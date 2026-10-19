@@ -1,0 +1,178 @@
+{
+  "retrieved": "2026-10-18",
+  "files": {
+    "myanmar-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mmr",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "01618bc7ca8d82cd9749da0bf37b267ace4e96d39f707569e8c1d2846fe26613",
+      "bytes": 20444
+    },
+    "myanmar-admin1.zip": {
+      "url": "https://data.themimu.info/api/files/resources/a0feb2a2-5356-40c9-87e6-1925b78e456c/myanmar-state-and-region-boundaries-mimu-pcodev9-4.zip",
+      "license": "MIMU data licence; free use with attribution",
+      "credit": "Myanmar Information Management Unit (MIMU), PCode v9.4",
+      "year": 2024,
+      "sha256": "ec011bd148656cd0c239df87e736be52940502644b10f84e3f0ce3c297a4049c",
+      "bytes": 1497102
+    },
+    "myanmar-townships.zip": {
+      "url": "https://data.themimu.info/api/files/resources/361513c4-22d4-4f85-9920-1a9afc2ac1cb/myanmar-township-boundaries-mimu-pcodev9-4.zip",
+      "license": "MIMU data licence; free use with attribution",
+      "credit": "Myanmar Information Management Unit (MIMU), PCode v9.4",
+      "year": 2024,
+      "sha256": "e2b374de465b7450d61b947773320fa807c9fc1328a72e720579f4a18bc58570",
+      "bytes": 3509493
+    },
+    "myanmar-selfadmin.zip": {
+      "url": "https://data.themimu.info/api/files/resources/b2604cb9-d355-409d-a308-a21df2b5b795/myanmar-self-administered-regions-boundaries-mimu-pcodev9-4.zip",
+      "license": "MIMU data licence; free use with attribution",
+      "credit": "Myanmar Information Management Unit (MIMU), PCode v9.4",
+      "year": 2024,
+      "sha256": "6ca15983fe95565f311af511c114d2c6b67fff29a6e1a3ad0104407e08096f01",
+      "bytes": 108669
+    },
+    "myanmar-administrative-source.html": {
+      "url": "https://data.themimu.info/en/dataset/myanmar-administrative-boundary",
+      "license": "Source metadata",
+      "credit": "MIMU",
+      "updated": "2026-08-14",
+      "sha256": "e9df86c8123fb8233e81995a6083f5919026e4af0313f9b1ad5ada89eef05fd2",
+      "bytes": 179156
+    },
+    "myanmar-pcodes.html": {
+      "url": "https://www.themimu.info/place-codes",
+      "license": "Source metadata",
+      "credit": "MIMU",
+      "sha256": "9aab13b60cb3d7f2f2759b1927786928ced33a5e21aaee69426a85a11164c7e1",
+      "bytes": 80902
+    },
+    "laos-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/9eb6aff1-9e3f-43d3-99a6-f415fe4b4dff/resource/3541e1a1-a15f-4c5f-982a-0747e441611a/download/lao_admin_boundaries.geojson.zip",
+      "license": "CC BY3.0 IGO",
+      "credit": "OCHA HDX / Lao national administrative boundaries",
+      "year": 2019,
+      "reviewed": "2025-10-30",
+      "sha256": "29558f548fa427f6488d9f779f26b9cbaf92431710f76d92fa53943d44a9ebb3",
+      "bytes": 7475885
+    },
+    "laos-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lao",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "fe06fbbb1e72cfb4c44925f971615562f06091e34c77b535821a6706550a4473",
+      "bytes": 16365
+    },
+    "laos-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-lao",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "b4591ba870c7c969e43747554dd5b40845f02fc27aaee615aec7d3c8fc5d8f43",
+      "bytes": 38882
+    },
+    "laos-population1.csv": {
+      "url": "https://data.humdata.org/dataset/f9ec8c86-e300-443b-bd04-a6c9923c29ef/resource/55d90dae-f476-4fe1-bcc5-0745087154ee/download/lao_admpop_adm1_2024.csv",
+      "license": "CC BY3.0 IGO",
+      "credit": "UNFPA, Lao Statistics Bureau via OCHA HDX; 2024 population projections",
+      "year": 2024,
+      "sha256": "bc097d18f04f9ceb1bf65a7fcaddfb5389450e176c11879f1d5278a8626efdf8",
+      "bytes": 7112
+    },
+    "laos-population2.csv": {
+      "url": "https://data.humdata.org/dataset/f9ec8c86-e300-443b-bd04-a6c9923c29ef/resource/87e60232-7af8-43c3-bc47-685f2a770ab1/download/lao_admpop_adm2_2024.csv",
+      "license": "CC BY3.0 IGO",
+      "credit": "UNFPA, Lao Statistics Bureau via OCHA HDX; 2024 population projections",
+      "year": 2024,
+      "sha256": "3106023f8666db969878210a0add41f66c50fcaed54440a0e975e8155673fb7d",
+      "bytes": 50137
+    },
+    "flag-mm.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg",
+      "license": "Public domain",
+      "credit": "Myanmar national flag, Wikimedia Commons",
+      "sha256": "b96625d297f111bf6f588251780f972d3f6e3b1f663831c164bd35e93a06ba2a",
+      "bytes": 636
+    },
+    "flag-la.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg",
+      "license": "Public domain",
+      "credit": "Laos national flag, Wikimedia Commons",
+      "sha256": "4d8b2ffd9f0565f534f6cafb6c389b31d538465ae8fefc72a42797959884b44a",
+      "bytes": 233
+    },
+    "myanmar-iiss-dashboard.js": {
+      "url": "https://myanmar.iiss.org/_app/immutable/chunks/L26jvRJT.js",
+      "license": "Copyright IISS. Research and private study permitted; public redistribution not licensed.",
+      "credit": "IISS Myanmar Conflict Map",
+      "effectiveDate": "Territory polygon date unspecified; retrieved 2026-10-18",
+      "terms": "https://www.iiss.org/terms-and-conditions/",
+      "sha256": "0c5fe3ee81f60ab0903398341a698b69d335a30e5bcf0c1d7c9f8230283ab061",
+      "bytes": 535284
+    },
+    "myanmar-iiss-methodology.html": {
+      "url": "https://myanmar.iiss.org/methodology",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "91dfee0d0f3e59c61725d5417b3f05202da7e8670304b5860c54f1fb84a9615e",
+      "bytes": 44736
+    },
+    "myanmar-iiss-terms.html": {
+      "url": "https://www.iiss.org/terms-and-conditions/",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "c5ca8260d366b1888d71c090214ee5cf70889c692b98efbeac992a6c1ab83e96",
+      "bytes": 39098
+    },
+    "myanmar-isp2026.html": {
+      "url": "https://ispmyanmar.com/2026mp003/",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "ISP-Myanmar",
+      "sha256": "8b028dd63948f45d941df8240eaca97a74767c7c8961c9f680197dd78ede2398",
+      "bytes": 153804
+    },
+    "myanmar-iiss-2026-analysis.html": {
+      "url": "https://myanmar.iiss.org/analysis/war-by-other-means",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "6f329378270947b776f77f2bb432b8ef80b120cd120ae8fc52f074b28e530a79",
+      "bytes": 69639
+    },
+    "myanmar-iiss-northeast.html": {
+      "url": "https://myanmar.iiss.org/analysis/northeast",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "50de004c761dd38a52ac5c9e5fb1d8a370558270d5af3a04496c9b96cc6325f5",
+      "bytes": 1152832
+    },
+    "myanmar-census2014.pdf": {
+      "url": "https://www.themimu.info/sites/themimu.info/files/documents/Census_Data_Sheet_Eng_2015.pdf",
+      "license": "Official census factual statistics, MIMU/UNFPA attribution",
+      "credit": "Department of Population, UNFPA, MIMU",
+      "year": 2014,
+      "sha256": "88023913be2c6c377fb9efacf46f3692f2bd42360e20aab62157ef37e5de1f94",
+      "bytes": 2633570
+    },
+    "myanmar-acled2026.html": {
+      "url": "https://acleddata.com/report/state-repression-increases-under-myanmar-militarys-new-leadership",
+      "license": "Copyright ACLED; local reference, factual paraphrases with attribution",
+      "credit": "ACLED",
+      "asOf": "2026-07-17",
+      "sha256": "dd7a6bfa0772f3fbc310bfea1057d50f69c67c2e67edb782b0413fd155be4452",
+      "bytes": 95332
+    },
+    "myanmar-inle-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/5661748/full.json",
+      "license": "ODbL1.0",
+      "credit": "© OpenStreetMap contributors",
+      "sha256": "33dd8f4834802cf0c9908194f49d9e2bd6d2582529ae73a9e5f484367f6674c3",
+      "bytes": 149862
+    },
+    "myanmar-indawgyi-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/7181898/full.json",
+      "license": "ODbL1.0",
+      "credit": "© OpenStreetMap contributors",
+      "sha256": "06640d5aef63d5f46e4fef85964525d0de3fc7866092606c2adf5607b7da2959",
+      "bytes": 575791
+    }
+  }
+}

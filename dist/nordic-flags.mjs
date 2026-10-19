@@ -1,0 +1,2 @@
+// Åland retains its own flag within Finland.
+export const nordicFlags={"finland":{"firstFlags":{"FI-21":{"name":"Åland","file":"vendor/nordic-flags/FI-21.svg","full":"vendor/nordic-flags/FI-21.svg","width":520,"height":340,"page":"https://www.regeringen.ax/aland-omvarlden/alands-flagga","source":"https://upload.wikimedia.org/wikipedia/commons/5/52/Flag_of_%C3%85land.svg","credit":"Åland official flag / Wikimedia Commons","license":"Public domain"}},"detailFlags":{}}};

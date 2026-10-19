@@ -19,7 +19,7 @@ export const mongoliaPanel=`<aside id="mongolia-sidebar" class="sidebar mongolia
 },
  cards:`<div id="m-selection-meta" class="country-card-anchor" hidden></div><section id="m-population" class="population" hidden><h3>Population</h3><p id="m-population-total" class="population-total"></p><p id="m-population-scope" class="population-scope"></p><p id="m-population-date" class="population-period"></p><a id="m-population-source" target="_blank" rel="noopener">Wikipedia: population data</a></section>`,
  subdivisions:`<details id="m-subdivisions" open><summary>Districts</summary><div id="m-region-list"></div></details>`,
- actions:`<div id="m-parent-context" class="parent-context" hidden><span id="m-parent-kind" class="name-caption">Province</span><button id="m-parent-region" class="quiet-button" data-nav><span id="m-parent-english"></span><span id="m-parent-local" lang="mn-Cyrl"></span></button></div>`,
+ actions:``,
  footer:`<button id="m-about-open">Sources &amp; coverage</button><span class="creator-credit">Created by Ethan Hu</span>`,
  extraPanels:``,
  afterPanels:``

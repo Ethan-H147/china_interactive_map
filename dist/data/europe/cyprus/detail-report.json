@@ -1,0 +1,43 @@
+{
+  "oldDlsUnits": 613,
+  "rawAreaKm2": 9270.714724533547,
+  "secondAreaKm2": 9270.714652389479,
+  "thirdAreaKm2": 1850.1810938493857,
+  "currentClassificationRows": 631,
+  "second": 540,
+  "municipalities": 29,
+  "communities": 511,
+  "third": 91,
+  "populationRecords": 392,
+  "unknownCrosswalk": [],
+  "zeroPopulation": [],
+  "censusTotal": 923381,
+  "geometryNote": "Raw DLS administrative cadastral territory includes village areas inside the UK bases. The consuming map build must clip every level to its canonical Cyprus land and keep UK sovereign-base land separate. This helper does not align external borders. No place dots: the city/town areas are already municipal or community subdivisions.",
+  "levels": [
+    "Districts",
+    "Municipalities & communities",
+    "Municipal quarters"
+  ],
+  "excludedLevels": "The ordinary neighbourhood quarters (enories) below municipal quarters are not exposed as another atlas level. Rural community service clusters are cooperative groupings, not municipal governments, and are not substituted for the individual communities.",
+  "mappedCounts": {
+    "1": 6,
+    "2": 540,
+    "3": 91
+  },
+  "excluded": [],
+  "mappedPopulationRecords": 370,
+  "sourceAreaKm2": 9270.714724533547,
+  "mappedAreaKm2": 9016.001455870452,
+  "ukRemovedKm2": 254.65554607446546,
+  "enclaves": [
+    {
+      "id": "CY-42004106"
+    },
+    {
+      "id": "CY-42004106"
+    },
+    {
+      "id": "CY-42004105"
+    }
+  ]
+}

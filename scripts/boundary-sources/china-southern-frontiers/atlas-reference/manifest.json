@@ -1,0 +1,25 @@
+{
+  "retrieved": "2026-10-18",
+  "files": {
+    "pakistanPolitical": {
+      "sourcePath": "dist/data/europe/pakistan/political.bin",
+      "sha256": "7027413336d77dcc28e0b49c0515ad121007c0632a91f8996f03926f2904c350"
+    },
+    "pakistanLines": {
+      "sourcePath": "dist/data/europe/pakistan/international.bin",
+      "sha256": "aa7918b525fc083fe06f31c35ac2c36c31497c427430e0c5f32ca475add24ae9"
+    },
+    "indiaContext": {
+      "sourcePath": "dist/data/europe/india/context.bin",
+      "sha256": "07a93de32525a7cf255476183ab518b7560704ac68892847f7af8348a565a3b4"
+    },
+    "indiaLines": {
+      "sourcePath": "dist/data/europe/india/international.bin",
+      "sha256": "3469ff257819cece404b73e98d81b66d3fde4e8ddbc4a8418c0b6d5524fe713d"
+    },
+    "frontiers": {
+      "sourcePath": "dist/data/atlas-frontiers.bin",
+      "sha256": "ea44912804c847ec940756dc2b93bf13825aa282d2db08a4856e3ae22e5855b0"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "retrieved": "2026-10-18",
+  "files": {
+    "districts.geojson": {
+      "url": "https://raw.githubusercontent.com/bruneiverse/bruneimap/ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac/data-raw/maps/map_data/geojson/districts_latlon.txt.geojson",
+      "license": "CC BY 4.0",
+      "credit": "Nadi.BN GIS data distributed by bruneiverse/bruneimap",
+      "revision": "ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac",
+      "sha256": "71155a758299d8d0cb5980605081ca61737ffa4cbc41447609c0a5f76bffd63b",
+      "bytes": 1566602
+    },
+    "mukims.geojson": {
+      "url": "https://raw.githubusercontent.com/bruneiverse/bruneimap/ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac/data-raw/maps/map_data/geojson/mukims_latlon.txt.geojson",
+      "license": "CC BY 4.0",
+      "credit": "Nadi.BN GIS data distributed by bruneiverse/bruneimap",
+      "revision": "ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac",
+      "sha256": "9c32effd42c47f16347d6d04eedaa4738c3a070de7b30666c61768fd38e32e0a",
+      "bytes": 1951012
+    },
+    "kampongs.geojson": {
+      "url": "https://raw.githubusercontent.com/bruneiverse/bruneimap/ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac/data-raw/maps/map_data/geojson/kampongs_latlon.txt.geojson",
+      "license": "CC BY 4.0",
+      "credit": "Nadi.BN GIS data distributed by bruneiverse/bruneimap",
+      "revision": "ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac",
+      "sha256": "5469742cc8d989de208a3537305cffe518ac0cb5137303523075baacfcae6ac7",
+      "bytes": 6462552
+    },
+    "mukimdata.csv": {
+      "url": "https://raw.githubusercontent.com/bruneiverse/bruneimap/ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac/data-raw/maps/map_data/mukimdata.csv",
+      "license": "CC BY 4.0",
+      "credit": "Nadi.BN GIS data distributed by bruneiverse/bruneimap",
+      "revision": "ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac",
+      "sha256": "2e5a2163d70f741ae4a12346d37ea266c9fe0fa4c9b3f15676ad3983197a88ed",
+      "bytes": 2576
+    },
+    "malaysia-reference.bin": {
+      "url": "https://raw.githubusercontent.com/Ethan-H147/china_interactive_map/7f0271932ccc3459b62382a0cc9d57b50c0d905c/dist/data/southeast-asia/malaysia-first.bin",
+      "license": "Existing atlas geometry from DOSM Malaysia data-open; retained only to locate border mouths",
+      "credit": "Department of Statistics Malaysia / existing Boundary Atlas Sarawak geometry",
+      "sha256": "853928069352c07d1f34deb0f28a3cb31733a8c45bcd1f2882e32d253f1966e2",
+      "bytes": 178017
+    },
+    "frontiers.geojson": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "license": "Public domain",
+      "credit": "Natural Earth v5.1.2 (frontier identification only)",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    },
+    "processing.R": {
+      "url": "https://raw.githubusercontent.com/bruneiverse/bruneimap/ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac/data-raw/maps/surveydept.R",
+      "license": "GPL-3.0 source processing reference; no software copied into runtime",
+      "credit": "bruneiverse/bruneimap",
+      "revision": "ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac",
+      "sha256": "9df02dfce0720d115eea9381ad9310260773e7ea0bd3c89304e6aa2236e4fab0",
+      "bytes": 11685
+    },
+    "README.md": {
+      "url": "https://raw.githubusercontent.com/bruneiverse/bruneimap/ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac/README.md",
+      "license": "Retained source license statement",
+      "credit": "bruneiverse/bruneimap",
+      "revision": "ca3b69985e3d0a9eaf85ad38843d5ba3086be7ac",
+      "sha256": "5384ea0dbcde610f31bd1d5183a6db9ffe214a10195c7aca83418ac463071921",
+      "bytes": 9369
+    },
+    "population2025.pdf": {
+      "url": "https://deps.mofe.gov.bn/wp-content/uploads/2026/04/POP_2025_RPT.pdf",
+      "license": "Official published statistics; attribution to Department of Economic Planning and Statistics, Brunei",
+      "credit": "DEPS, Population Estimates 2025",
+      "date": "2025",
+      "sha256": "971de9832bbecf8d657c7699342f9c5e77b9cfef3b9eaf3aeb653cd4554c8708",
+      "bytes": 3014410
+    },
+    "flag.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg",
+      "license": "Public domain",
+      "credit": "Flag of Brunei; Wikimedia Commons",
+      "sha256": "11c704ce4271bcbddd1c372cb6dd457a278c51ce7db7ad98ab5f5c5517695dd6",
+      "bytes": 31244
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "15 current counties, 357 municipalities and five separately identified territories/dependencies. GISCO 2024 1:1m land geometry cross-checked against current Kartverket codes; all 357 codes agree. Official SSB January 2026 population and land area. Svalbard, Jan Mayen, Bouvet and Peter I use Norwegian Polar Institute coastline polygons, including glacier-covered land and excluding lakes. Queen Maud Land is explicitly an Antarctic claim, clipped to real Antarctic land and 85°S for the map. Svalbard and Jan Mayen are parts of Norway, not counties; Bouvet, Peter I and Queen Maud Land are dependencies. No marine administrative polygons are filled as land.",
+  "counts": {
+    "1": 20,
+    "2": 357
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "finland-regions.json": {
+      "url": "https://geo.stat.fi/geoserver/vaestoalue/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=vaestoalue:maakunta_vaki2025&outputFormat=application/json&srsName=EPSG:4326",
+      "credit": "Statistics Finland",
+      "license": "CC BY 4.0",
+      "bytes": 102121,
+      "sha256": "1c79e4bfb0e35d6b0d093191c335b90a132ebfb16612e9d178ffdeeda739dea3"
+    },
+    "sweden-population-metadata.json": {
+      "url": "https://api.scb.se/OV0104/v1/doris/en/ssd/BE/BE0101/BE0101A/FolkmangdDecCKM",
+      "credit": "Statistics Sweden",
+      "license": "CC0",
+      "bytes": 11354,
+      "sha256": "ea18ddb52223dd446c21ee9dfc4e36e0e2f00572bde1d4fceb826dae3ceb0298"
+    },
+    "finland-municipalities.json": {
+      "url": "https://geo.stat.fi/geoserver/vaestoalue/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=vaestoalue:kunta_vaki2025&outputFormat=application/json&srsName=EPSG:4326",
+      "credit": "Statistics Finland",
+      "license": "CC BY 4.0",
+      "bytes": 339366,
+      "sha256": "70b01cfc7dfdee4fbe5a4eeb8a9c2dfdfe8dff57072aee56bc119058874ceb6b"
+    },
+    "norway-units.json": {
+      "url": "https://ws.geonorge.no/kommuneinfo/v1/fylkerkommuner?utkoordsys=4326",
+      "credit": "Kartverket",
+      "license": "CC BY 4.0",
+      "bytes": 275990,
+      "sha256": "8f960894e6824e3c908a27560da42b53a3d044b2225fe607c7c05e488324eee0"
+    },
+    "sweden-boundaries.zip": {
+      "url": "https://www.scb.se/contentassets/3443fea3fa6640f7a57ea15d9a372d33/shape_svenska_260225.zip",
+      "credit": "Statistics Sweden",
+      "license": "CC0",
+      "bytes": 214808,
+      "sha256": "26a7030a23648ad25a69acee16f08974148eafd076bfa8dd76013060693f51f4"
+    },
+    "sweden-area-metadata.json": {
+      "url": "https://api.scb.se/OV0104/v1/doris/en/ssd/MI/MI0802/Areal2025",
+      "credit": "Statistics Sweden",
+      "license": "CC0",
+      "bytes": 420198,
+      "sha256": "d101f1e6b5616e94a62f074dbc7f378c5b668023dfdd08da71ea47d951a4a3f0"
+    },
+    "flag-no.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
+      "credit": "National flag artwork / Wikimedia Commons",
+      "license": "Public domain",
+      "bytes": 319,
+      "sha256": "be906b906b9063a909154d9bae757ef6aa5927c67f678200d4e846101b1adc09"
+    },
+    "flag-fi.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg",
+      "credit": "National flag artwork / Wikimedia Commons",
+      "license": "Public domain",
+      "bytes": 241,
+      "sha256": "644a2d69b1a97f4e71b4a8341916a321ef9b2666774d3e12a7c0d95f56e7f2b3"
+    },
+    "flag-se.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Sweden.svg",
+      "credit": "National flag artwork / Wikimedia Commons",
+      "license": "Public domain",
+      "bytes": 193,
+      "sha256": "350fa9d5023de2ed2fd7fd0f9d0de04e25551d6154aab859949bb7c81543f10b"
+    },
+    "norway-population-metadata.json": {
+      "url": "https://data.ssb.no/api/v0/en/table/07459",
+      "credit": "Statistics Norway",
+      "license": "CC BY 4.0",
+      "bytes": 27521,
+      "sha256": "e18e799e4f7ba4e6bbf231643b60b1ad42ff6773afab76001fbf46b244301ce2"
+    },
+    "finland-areas.xlsx": {
+      "url": "https://www.maanmittauslaitos.fi/media/31709/download",
+      "credit": "National Land Survey of Finland",
+      "license": "CC BY 4.0",
+      "bytes": 39267,
+      "sha256": "b5b894fe0568efd08a47197bf2cfcc94dba78a6e94350dc2d7198d3eae54f327"
+    },
+    "finland-parent-codes.json": {
+      "url": "https://api.stat.fi/classificationservice/open/api/classifications/v2/correspondenceTables/kunta_1_20260101%23maakunta_1_20260101/maps?content=data&meta=min&lang=en&format=json",
+      "credit": "Statistics Finland",
+      "license": "CC BY 4.0",
+      "bytes": 474703,
+      "sha256": "ee43d61fb7a40df309d7c1fe271c93792ca4e2b371401bf937697acdd016721a"
+    },
+    "sweden-area.json": {
+      "url": "https://api.scb.se/OV0104/v1/doris/en/ssd/MI/MI0802/Areal2025",
+      "credit": "Statistics Sweden",
+      "license": "CC0",
+      "bytes": 15772,
+      "sha256": "ad6b0794ef6dabc962670ae8f81f510cec836e3dd513d3621fdec77fe424f7b0"
+    },
+    "sweden-population.json": {
+      "url": "https://api.scb.se/OV0104/v1/doris/en/ssd/BE/BE0101/BE0101A/FolkmangdDecCKM",
+      "credit": "Statistics Sweden",
+      "license": "CC0",
+      "bytes": 18863,
+      "sha256": "b1d0e9d1d65e06ab9fa1d0b55433c7879d7faf6ecc56a7c861ee8eb0ba03a2d4"
+    },
+    "bouvet.zip": {
+      "url": "https://next.api.npolar.no/dataset/19700322-beab-40e7-b867-c3f0c2756071/attachment/4140ed2a-bfbd-40d3-93dd-4eb2f5d043af/_blob",
+      "credit": "© Norwegian Polar Institute",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://geodata.npolar.no/bruksvilkar/",
+      "bytes": 115805,
+      "sha256": "e7410ff789f8d20cbf7c68b0eb911780d49ed5afd88d3847a3c940909feec76c"
+    },
+    "peter-i.zip": {
+      "url": "https://next.api.npolar.no/dataset/29105abc-5309-498e-b3fd-e69de6814122/attachment/f5cf29de-87b1-468d-8202-0b0c68c2b565/_blob",
+      "credit": "© Norwegian Polar Institute",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://geodata.npolar.no/bruksvilkar/",
+      "bytes": 123522,
+      "sha256": "49523b878f318ff398f28338cd35fb32ef27db995bed15d6cc17c23cd13122cb"
+    },
+    "norway-population.json": {
+      "url": "https://data.ssb.no/api/v0/en/table/07459",
+      "credit": "Statistics Norway",
+      "license": "CC BY 4.0",
+      "bytes": 3933243,
+      "sha256": "90a0b478b40b0df6cfbc823a75caf2e0d2c8aebca2b56bd3601474f325811b38"
+    },
+    "jan-mayen.zip": {
+      "url": "https://next.api.npolar.no/dataset/3d1b17f3-a22e-478e-8e5d-4a1118a1e8b0/attachment/e7722be4-0734-4a1d-95f1-064d99d8dbf9/_blob",
+      "credit": "© Norwegian Polar Institute",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://geodata.npolar.no/bruksvilkar/",
+      "bytes": 4335689,
+      "sha256": "c3e06833affc45d22a68aee32b19e32e3d3d482339bc03db29209816150e426d"
+    },
+    "svalbard.zip": {
+      "url": "https://next.api.npolar.no/dataset/a23acc28-288b-49ba-ac6d-025d1fdee246/attachment/663eeae6-67ae-4c7f-a4ff-3d1fc8930efb/_blob",
+      "credit": "© Norwegian Polar Institute",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://geodata.npolar.no/bruksvilkar/",
+      "bytes": 63635188,
+      "sha256": "45eddd853bca35f5e240468d0872239539dd168e4269023344e56a2fc3f1bc40"
+    },
+    "nordic-lau-2024.json": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat / GISCO © EuroGeographics",
+      "license": "Eurostat GISCO administrative boundary download provisions; non-commercial educational use with attribution",
+      "licenseUrl": "https://ec.europa.eu/eurostat/web/gisco/geodata/administrative-units/local-administrative-units",
+      "filter": "CNTR_CODE in NO,SE,FI; current codes cross-checked against 2026 national registers; Finnish Pertunmaa merged into Mäntyharju",
+      "sourceBytes": 149866427,
+      "sourceSha256": "ae07901e0a11cb7891d1a6d6a31cfd833e25672ca318908856b0e34a1acca594",
+      "bytes": 8292467,
+      "sha256": "c934f3431dce269722b00452ec3effee0276546d3efe7d88fa8add803f5c5f39"
+    },
+    "norway-area.json": {
+      "url": "https://data.ssb.no/api/v0/en/table/09280",
+      "credit": "Statistics Norway",
+      "license": "CC BY 4.0",
+      "bytes": 19494,
+      "sha256": "24f9edf38a7571fbc6888b2d29954653ea7592d40a0cb0d237d917ee06efc630"
+    },
+    "flag-ax.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Flag_of_%C3%85land.svg",
+      "credit": "Åland official flag / Wikimedia Commons",
+      "license": "Public domain",
+      "bytes": 256,
+      "sha256": "df64c5be1cc6592dc1aa6bd6891a8950f021311a86503ecc56143968c3ed4932"
+    },
+    "ne-lakes.json": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "credit": "Natural Earth v5.1.2",
+      "license": "Public domain",
+      "bytes": 5043554,
+      "sha256": "2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9"
+    },
+    "ne-countries.json": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
+      "credit": "Natural Earth v5.1.2",
+      "license": "Public domain",
+      "bytes": 13287234,
+      "sha256": "239eec57ac17f100a11e2536cffc56752c318b50ae765b0918ff7aab4ce8f255"
+    },
+    "ne-borders.json": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "credit": "Natural Earth v5.1.2",
+      "license": "Public domain",
+      "bytes": 2284669,
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a"
+    }
+  }
+}

@@ -31,6 +31,8 @@ const context=vm.createContext({createFirstLevelQuiz:()=>undefined,backgroundLan
  addWorkerSource:async(map,id,url,options,transform)=>map.addSource(id,{...options,data:url,transform}),
  addInternationalBorder(map,id,source){map.addLayer({id,type:'line',source,paint:{}});},setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineWidth:regionalLineWidth,lineSourceOptions:{type:'geojson'},internationalLineSourceOptions:{type:'geojson',tolerance:.125},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){}});
 const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replace("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
+const breadcrumbSource=fs.readFileSync('dist/country-page.mjs','utf8');
+vm.runInContext(breadcrumbSource.slice(breadcrumbSource.indexOf('export function setMapBreadcrumb')).replaceAll('export function','function'),context);
 vm.runInContext(source,context);
 map.getStyle=()=>({layers:layerOrder.map(id=>layers.get(id))});map.getPaintProperty=(id,key)=>layers.get(id)?.paint?.[key];createMapScene(map);
 const host={isBusy:()=>false,fit:async b=>fits.push(b),controls(){}};

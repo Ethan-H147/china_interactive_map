@@ -1,3 +1,4 @@
+import {cameraForBounds} from '../dist/camera-fit.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {validate,hashFor,fromHash,read,write} from '../dist/view-state.mjs';
@@ -26,10 +27,10 @@ console.log('View links, bounded state, country isolation, blocked storage, labe
 import vm from 'node:vm';
 let releasePreview,beginCalls=0,unlocks=0;const moves=[],events=new Map();
 const fakeMap={stop(){events.get('moveend')?.();},getCanvas:()=>({addEventListener(){}}),cameraForBounds:b=>({center:b,zoom:6}),project:c=>({x:c[0],y:c[1]}),getContainer:()=>({clientWidth:800,clientHeight:600}),getZoom:()=>6,once:(name,fn)=>events.set(name,fn),off:(name,fn)=>{if(events.get(name)===fn)events.delete(name);},flyTo:options=>moves.push({kind:'fly',...options}),easeTo:options=>moves.push({kind:'ease',...options})};
-const nav=vm.createContext({map:fakeMap,zoomLock:null,updateLabels(){},motionRenderer:{begin(){beginCalls++;return new Promise(resolve=>releasePreview=resolve);},end:async()=>{}},navigationOptions:()=>({}),reducedMotion:{matches:false},atlasStarting:false,restoringView:false,lockCamera(){},unlockCamera(){unlocks++;},saveViewSoon(){},setTimeout:()=>1,clearTimeout(){},console});
+const nav=vm.createContext({window:{AtlasCameraFit:{cameraForBounds}},map:fakeMap,zoomLock:null,updateLabels(){},motionRenderer:{begin(){beginCalls++;return new Promise(resolve=>releasePreview=resolve);},end:async()=>{}},navigationOptions:()=>({}),reducedMotion:{matches:false},atlasStarting:false,restoringView:false,lockCamera(){},unlockCamera(){unlocks++;},saveViewSoon(){},setTimeout:()=>1,clearTimeout(){},console});
 vm.runInContext('let finishNavigation;'+source.slice(source.indexOf('let navigationEpoch='),source.indexOf('function fitHome(')),nav);
 const first=nav.navigateBounds([410,310]);const second=nav.navigateBounds([1600,300]);releasePreview();
-assert.equal(await first,false,'A superseded selection is cancelled');await Promise.resolve();await Promise.resolve();assert.equal(beginCalls,1,'Rapid selections share preview preparation');assert.equal(moves.length,1);assert.equal(moves[0].kind,'fly');events.get('moveend')();assert.equal(await second,true);await Promise.resolve();
+assert.equal(await first,false,'A superseded selection is cancelled');await new Promise(setImmediate);assert.equal(beginCalls,1,'Rapid selections share preview preparation');assert.equal(moves.length,1);assert.equal(moves[0].kind,'fly');events.get('moveend')();assert.equal(await second,true);await Promise.resolve();
 const third=nav.navigateBounds([420,300]);releasePreview();await new Promise(setImmediate);assert.equal(moves.at(-1).kind,'ease');assert(moves.at(-1).duration<460);events.get('moveend')();await third;assert(unlocks>=1);
 console.log('Camera cancellation, shared preparation, latest-selection priority, nearby easing and distant flights passed.');
 const fastSearch=nav.navigateBounds([1600,300],{maxDuration:550});releasePreview();await new Promise(setImmediate);assert.equal(moves.at(-1).duration,550,'Search navigation can cap distant flights without changing the default');events.get('moveend')();await fastSearch;
@@ -42,7 +43,7 @@ zoomButton.onclick();const unlockedSelection=nav.navigateBounds([410,300]);relea
 console.log('Locked selection leaves the camera unchanged, skips preview work, cancels an active flight, permits manual zoom and resumes automatic navigation on unlock.');
 const parentCalls=[];
 const parentView=vm.createContext({allReady:true,quiz:{active:false},atlasMode:'indonesia',selected:null,currentAtlas:()=>({viewParent:camera=>parentCalls.push(camera)}),reset:camera=>parentCalls.push(camera),fitQuizScope:(animate,camera)=>parentCalls.push(camera),regionByCode:new Map(),provinceLayers:new Map(),selectRegion:(region,code,fit,camera)=>parentCalls.push(camera)});
-vm.runInContext(source.slice(source.indexOf('function viewParent(){'),source.indexOf("$('zoom-in').onclick=")),parentView);
+vm.runInContext(source.slice(source.indexOf('function viewParent(){'),source.indexOf("$('zoom-in').onclick=",source.indexOf('function viewParent(){'))),parentView);
 for(const country of ['korea','mongolia','japan','philippines','indonesia','brazil','uruguay','argentina']){parentView.atlasMode=country;parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true,country+' parent button requests manual navigation');}
 parentView.atlasMode='china';parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true,'China overview button remains manual');
 parentView.selected={layer:{feature:{properties:{level:'province'}}}};parentView.viewParent();assert.equal(parentCalls.at(-1).manual,true);
@@ -54,7 +55,7 @@ console.log('The bottom parent/overview control requests explicit navigation in 
  // A stalled flight (throttled background tab) must land on its target, never stay over the previous country.
  let timeout;const jumps=[],stalledEvents=new Map();
  const stalledMap={getCanvas:()=>({addEventListener(){}}),stop(){},jumpTo(camera){jumps.push(camera);stalledEvents.get('moveend')?.();},cameraForBounds:b=>({center:b,zoom:5}),project:c=>({x:c[0],y:c[1]}),getContainer:()=>({clientWidth:800,clientHeight:600}),getZoom:()=>4,once:(name,fn)=>stalledEvents.set(name,fn),off:(name,fn)=>{if(stalledEvents.get(name)===fn)stalledEvents.delete(name);},flyTo(){},easeTo(){}};
- const stalled=vm.createContext({map:stalledMap,zoomLock:null,updateLabels(){},motionRenderer:{begin:async()=>{},end:async()=>{}},navigationOptions:()=>({}),reducedMotion:{matches:false},atlasStarting:false,restoringView:false,lockCamera(){},unlockCamera(){},saveViewSoon(){},setTimeout:fn=>{timeout=fn;return 1;},clearTimeout(){},console});
+ const stalled=vm.createContext({window:{AtlasCameraFit:{cameraForBounds}},map:stalledMap,zoomLock:null,updateLabels(){},motionRenderer:{begin:async()=>{},end:async()=>{}},navigationOptions:()=>({}),reducedMotion:{matches:false},atlasStarting:false,restoringView:false,lockCamera(){},unlockCamera(){},saveViewSoon(){},setTimeout:fn=>{timeout=fn;return 1;},clearTimeout(){},console});
  vm.runInContext('let finishNavigation;'+source.slice(source.indexOf('let navigationEpoch='),source.indexOf('function fitHome(')),stalled);
  const flight=stalled.navigateBounds([104,35]);await new Promise(setImmediate);timeout();
  assert.equal(await flight,true);assert.deepEqual(jumps,[{center:[104,35],zoom:5}],'Timed-out flight lands on its target');

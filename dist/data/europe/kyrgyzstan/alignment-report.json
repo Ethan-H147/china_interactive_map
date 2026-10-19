@@ -1,0 +1,38 @@
+[
+  {
+    "owner": "kazakhstan",
+    "runs": [
+      {
+        "id": "KG-T",
+        "edges": 1169
+      },
+      {
+        "id": "KG-Y",
+        "edges": 1937
+      },
+      {
+        "id": "KG-C",
+        "edges": 2647
+      }
+    ],
+    "maxEndpointDisplacementMetres": 4922.842944462607
+  },
+  {
+    "owner": "china",
+    "runs": [
+      {
+        "id": "KG-N",
+        "edges": 4351
+      },
+      {
+        "id": "KG-O",
+        "edges": 1998
+      },
+      {
+        "id": "KG-Y",
+        "edges": 1879
+      }
+    ],
+    "maxEndpointDisplacementMetres": 286.5290960554767
+  }
+]

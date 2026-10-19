@@ -1,0 +1,32 @@
+/* Global preferences live independently of country sidebars and map views. */
+.settings-open{flex:none;display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid var(--line);border-radius:4px;background:transparent;color:var(--red)}
+.settings-open svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.site-header{column-gap:16px}.site-header .surprise{margin-left:auto}
+body .site-header :is(.surprise,.settings-open){border-radius:4px;background:transparent}
+body .site-header .settings-open{border-color:var(--red);color:var(--red)}
+.site-header .settings-open svg{stroke:currentColor}
+body .site-header :is(.surprise,.settings-open):focus-visible{outline-color:var(--red)}
+#atlas-settings{width:min(500px,calc(100vw - 32px));max-width:none;max-height:calc(100dvh - 40px);margin:auto;padding:0;border:1px solid var(--line);border-radius:18px;background:var(--paper);color:var(--ink);box-shadow:0 24px 80px #211e2433;overflow:hidden}
+#atlas-settings[open]{display:flex;flex-direction:column}
+#atlas-settings::backdrop{background:#1d25284d;backdrop-filter:blur(3px)}
+.settings-heading{flex:none;display:flex;align-items:center;justify-content:space-between;padding:24px 28px 18px;border-bottom:1px solid var(--line)}
+.settings-eyebrow{font-size:10px;font-weight:650;letter-spacing:1.5px;color:var(--red)}.settings-heading h2{margin:0;font-size:32px}
+#settings-close{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:50%;background:transparent}#settings-close svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}
+.settings-content{padding:24px 28px;overflow:auto;overscroll-behavior:contain;min-height:0}.settings-content fieldset{margin:0;padding:0;border:0;min-width:0}.settings-content fieldset+fieldset{margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.settings-content legend{float:left;width:100%;padding:0;margin-bottom:8px;font-size:13px;font-weight:650;color:var(--red)}.settings-content legend+*{clear:both}
+.settings-row{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px;cursor:pointer}.settings-row strong{display:block;font-size:14px;font-weight:500}.settings-row small{display:block;font-size:12px;line-height:1.5;color:var(--muted);margin-top:3px}
+.settings-row input{appearance:none;flex:none;width:40px;height:24px;margin:0;border:1px solid var(--line);border-radius:20px;background:#bab7af;position:relative;cursor:pointer;transition:background-color 140ms ease}
+.settings-row input::before{content:'';position:absolute;width:18px;height:18px;top:2px;left:2px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0002;transition:transform 140ms var(--ease)}.settings-row input:checked{background:var(--red);border-color:var(--red)}.settings-row input:checked::before{transform:translateX(16px)}
+.settings-field{display:block;font-size:13px;margin-top:18px}.settings-field select{display:block;width:100%;min-height:44px;margin:8px 0 0;padding:10px 12px;border:1px solid var(--line);border-radius:7px;background:var(--paper);color:var(--ink);font-size:14px}
+.settings-footer{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 28px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}#settings-reset{min-height:36px;padding:6px 0;background:transparent;font-size:12px;color:var(--red);text-decoration:underline;text-underline-offset:4px}
+html[data-hide-place-names] #map :is(.province-label,.korea-marker,.settlement-label,.vatican-landmark):not([data-atlas-country-label]){display:none!important}
+html[data-hide-country-names] [data-atlas-country-label]{display:none!important}
+html[data-label-size=large] #map :is([data-atlas-place],.province-label){font-size:18px!important;line-height:24px!important}html[data-label-size=large] #map :is([data-atlas-place],.province-label) small{font-size:16px!important;line-height:24px!important}
+html[data-reduce-motion] *,html[data-reduce-motion] *::before,html[data-reduce-motion] *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+@media(hover:hover) and (pointer:fine){body .site-header :is(.surprise,.settings-open):hover,#settings-close:hover{background:color-mix(in srgb,var(--red) 8%,var(--paper))}#settings-reset:hover{color:var(--red-dark)}}
+@media(max-width:760px){body .site-header :is(.surprise,.settings-open){border-radius:24px;background:var(--paper)}html .site-header{column-gap:8px}.site-header .settings-open{width:48px;height:48px;border-radius:50%;border-color:var(--line);box-shadow:0 4px 16px #1720191a}.site-header h1{padding-inline:14px}.site-header h1 #atlas-title-local:not(:empty){display:none}.site-header .country-switch>span{max-width:100%;overflow:hidden;text-overflow:ellipsis}.site-header h1 .country-switch{display:flex;align-items:center;gap:8px;width:100%}.site-header h1 .country-switch-chevron{margin-left:auto}.site-header h1 .country-switch>span{min-width:0}#atlas-settings{width:calc(100vw - 24px);max-height:calc(100dvh - 24px);border-radius:16px}.settings-heading{padding:18px 20px 14px}.settings-content{padding:20px}.settings-footer{padding:14px 20px}}
+@media(prefers-reduced-motion:reduce){.settings-row input,.settings-row input::before{transition:none}}
+
+/* English place headings share one saved size across country adapters. */
+.country-selection-heading>h2{font-size:var(--place-heading-size,36px)!important;line-height:1.18;overflow-wrap:anywhere}
+.settings-slider{clear:both;margin-top:18px}.settings-slider label{display:flex;align-items:baseline;justify-content:space-between;gap:16px;font-size:13px}.settings-slider output{font-variant-numeric:tabular-nums;color:var(--red);white-space:nowrap}.settings-slider small{display:block;margin-top:5px;font-size:12px;color:var(--muted);line-height:1.5}.settings-slider input[type=range]{display:block;width:100%;height:36px;margin:5px 0 0;accent-color:var(--red);cursor:pointer}

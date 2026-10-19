@@ -1,0 +1,85 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "Eight divisions, 64 districts, 495 upazilas and 12 separately identified city corporations, BBS / HDX administrative reference valid May 2023. Parent geometry is derived from the same local shapes. Official 2022 final enumerated division/district populations from BBS National Report Volume I Table 01 sum to 165,158,616, including slum and floating population. They are not the adjusted national total. No local population counts or Bengali subdivision names are inferred; country name is bilingual. Chattogram, Cumilla, Barishal and other modern names retain source aliases. Shared display boundaries follow existing India and Myanmar edges; actual coastal water is independent of political outlines.",
+  "counts": {
+    "1": 8,
+    "2": 64,
+    "3": 507
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "bangladesh-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bgd",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "bc928e922145802fd0765de0baefffd60531d2cedba39ecc689aa07a0566a9d1",
+      "bytes": 37803
+    },
+    "bangladesh-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/cec2abe3-d8b7-4025-9362-9f7e780f2a07/download/bgd_admin_boundaries.geojson.zip",
+      "license": "CC BY 3.0 IGO",
+      "credit": "Bangladesh Bureau of Statistics (BBS)",
+      "description": "Bangladesh administrative level 0-3 boundaries (COD-AB) dataset version 03.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 8 Division  \n- Admin 2: 64 District  \n- Admin 3: 507 Upazila  \n  \n  \nNote: The normal administrative level 3 feature type(s) are Upazila (495 features) and City Corporation (12 units).  \n  \n  \nDates associated with this dataset:  \n- 01 June 2025: dataset reviewed for accuracy and completeness  \n- 21 May 2023: valid for use by the humanitarian community  \n- 01 June 2025: last edit to the dataset before publishing  \n- 01 January 2010: boundaries created by the source  \n  \nContributed by [OCHA Regional Office for Asia and the Pacific (ROAP)](https://data.humdata.org/organization/ocha-roap).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "ec54c97c2004bbee084afa3f662abb202d8ec038dbfd398af2ebb9b1bf3ec9e5",
+      "bytes": 37759475
+    },
+    "bangladesh-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-bgd",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "131b039b99040a8fc19abc1fbf83ab80cb423694f63c94542a5e619b2a60d513",
+      "bytes": 14481
+    },
+    "bangladesh-population0.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/1c543545-dae9-48ee-8b3c-33a15e9e3df6/download/bgd_admpop_adm0_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm0_2022.csv",
+      "sha256": "4d1fec582653df8b3567216b4e77c70105a950a42186f467277aafaf09618549",
+      "bytes": 929
+    },
+    "bangladesh-population1.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/333171ff-5d91-4074-a7be-ca43e1dfb8a1/download/bgd_admpop_adm1_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm1_2022.csv",
+      "sha256": "8fa17b55b5179e6601333433d1741c8440d9106035847f7bf962257146018f9d",
+      "bytes": 3930
+    },
+    "bangladesh-population2.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/43bfa9fd-f571-4973-9f31-91093e1e6142/download/bgd_admpop_adm2_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm2_2022.csv",
+      "sha256": "fdad72f6f4a8c7038251f7efe27c50ec252d88f96f9222ab18d9ff4497ddb00e",
+      "bytes": 25948
+    },
+    "bangladesh-population3.csv": {
+      "url": "https://data.humdata.org/dataset/fdf0606c-8a3b-421a-b3e8-903301e5b2ff/resource/f23d4da2-e473-4960-9d94-37df92c8d044/download/bgd_admpop_adm3_2022.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "UNFPA and US Census Bureau (USCB)",
+      "description": "Bangladesh administrative level 0-3 sex and age disaggregated 2022 population statistics\r\n\r\nREFERENCE YEAR:  2022\r\n\r\nThese population statistics tables are suitable for database or GIS linkage with the administrative level 0-3 [Bangladesh - Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-bgd) shapefiles using the ADM0, ADM1, ADM2, and ADM3_PCODE fields.",
+      "resource": "bgd_admpop_adm3_2022.csv",
+      "sha256": "c7d2a94d40c57a5438eec67cc5f14c79ee09887d9b518aab757614bcdcc355b7",
+      "bytes": 200685
+    },
+    "bangladesh-census2022.pdf": {
+      "url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/9ce5bd160bb14a1ab1eabe886adddb9a.pdf",
+      "license": "Official BBS statistical facts with attribution",
+      "credit": "Bangladesh Bureau of Statistics · Population and Housing Census 2022 National Report Volume I",
+      "sha256": "1c315d497629a71df9805b0ff7b3debec033a174dbf8418e4b5912326f86eac6",
+      "bytes": 10307919
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "license": "Public domain"
+    },
+    "neighbourAlignment": {
+      "reference": "data/europe/bangladesh/alignment-report.json",
+      "policy": "Whole shared reference edges; existing neighbour land takes precedence over source-survey overlap."
+    }
+  }
+}

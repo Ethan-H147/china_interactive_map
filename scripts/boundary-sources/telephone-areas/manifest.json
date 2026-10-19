@@ -1,0 +1,36 @@
+{
+  "retrieved": "2026-10-18",
+  "files": {
+    "japan-mic.pdf": {
+      "url": "https://www.soumu.go.jp/main_content/000141817.pdf",
+      "publisher": "MIC Japan",
+      "date": "2026-03-01",
+      "license": "Public Data License 1.0; derived coverage marked separately",
+      "sha256": "7c49aca526eb5a82d6e8fc492a2fe750ca86513af840eaa30bf216844300287f",
+      "bytes": 331259
+    },
+    "south-africa-icasa.pdf": {
+      "url": "https://www.icasa.org.za/uploads/files/NumberingPlanReg.pdf",
+      "publisher": "ICASA",
+      "date": "2016",
+      "license": "Official published numbering facts, with attribution",
+      "sha256": "bb7d9822d68bb7539510642f120a9e8638fce9d18dfe43c4ee6ab5c3155fe918",
+      "bytes": 621047
+    },
+    "south-africa-2026-amendment.pdf": {
+      "url": "https://www.icasa.org.za/uploads/files/54930-1-7-ICASA-1-Numbering-Plan-Regs-4th-Ammendment.pdf",
+      "publisher": "ICASA",
+      "date": "2026-07-01",
+      "license": "Official published numbering facts, with attribution",
+      "sha256": "fbf6a5456ea2d258d6b307fc30a0108256451d53cd6cbb89620f4284b9bde085",
+      "bytes": 778000
+    },
+    "south-africa-telkom.html": {
+      "url": "https://ecdev2.telkom.co.za/corporate/customer-support/utilities/useful_information/sa_codes.html",
+      "publisher": "Telkom",
+      "license": "Factual town/code assignments extracted with attribution; no boundary claim",
+      "sha256": "14d8c4e0490c4e9dd46f3dc77f7cedfa69843c749cce2c7af1f546f1ce843567",
+      "bytes": 122068
+    }
+  }
+}

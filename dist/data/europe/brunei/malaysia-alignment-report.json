@@ -1,0 +1,22 @@
+{
+  "owner": "brunei",
+  "reports": [
+    {
+      "changedEdges": 1628,
+      "maxDisplacementMetres": 0.06917801185673997,
+      "changedRegions": [
+        "MY-13-24",
+        "MY-13-25",
+        "MY-13-26"
+      ]
+    },
+    {
+      "changedEdges": 2174,
+      "maxDisplacementMetres": 0.07878087157837173,
+      "changedRegions": [
+        "MY-13-26",
+        "MY-13-27"
+      ]
+    }
+  ]
+}

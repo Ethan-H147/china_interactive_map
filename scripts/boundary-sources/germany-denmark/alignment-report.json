@@ -1,0 +1,20 @@
+{
+  "pair": "DEU-DNK",
+  "method": "Shared municipality-derived land frontier, separate BKG VG25 sea boundaries; sea endpoints join the displayed GISCO shoreline.",
+  "landVertices": 47,
+  "landEndpoints": [
+    [
+      8.658527,
+      54.908945
+    ],
+    [
+      9.420152,
+      54.831956
+    ]
+  ],
+  "officialShoreEndpointErrorMetres": {
+    "west": 9.529723723677106,
+    "east": 8.982421980941629
+  },
+  "bkgSource": "scripts/boundary-sources/germany-denmark/sources.json"
+}

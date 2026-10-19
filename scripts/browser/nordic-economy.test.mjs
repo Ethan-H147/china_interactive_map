@@ -1,0 +1,19 @@
+import assert from 'node:assert/strict';
+import {searchAndSelect} from './countries.test.mjs';
+const cases=[{country:'sweden',prefix:'se',query:'Stockholm',name:'Stockholm',kind:'County',id:'SE-01',metric:'GDP',currency:'SEK',year:'2024',value:'2.13 trillion'},{country:'finland',prefix:'fi',query:'Ahvenanmaa',name:'Åland',kind:'Autonomous region',id:'FI-21',metric:'GDP',currency:'EUR',year:'2023',value:'1.63 billion'},{country:'norway',prefix:'no',query:'Oslo',name:'Oslo',kind:'County',id:'NO-03',metric:'Gross value added (GVA)',currency:'NOK',year:'2023',value:'832.56 billion'}];
+export default cases.flatMap(d=>[1280,390].map(width=>({name:d.country+' verified economics and map coverage '+width,options:{width,height:900,mobile:width===390},async run(p,base){
+ await p.open(base,'#'+d.country);await searchAndSelect(p,d.query,d.name,d.kind);assert.equal(await p.evaluate('currentAtlas().getSelection()'),d.id);
+ const panel='#'+d.country+'-sidebar .statistics-economy';await p.waitFor('document.querySelector('+JSON.stringify(panel)+')?.textContent.includes('+JSON.stringify(d.metric)+')');
+ const text=await p.evaluate('document.querySelector('+JSON.stringify(panel)+').textContent');for(const token of [d.currency,d.year,d.value])assert(text.includes(token),text);assert(!text.includes('Not available'));if(d.country==='norway')assert(!text.includes('GDP'));
+ await p.evaluate('document.querySelector('+JSON.stringify(panel)+').scrollIntoView({block:"center"})');await p.screenshot('nordic-economy-'+d.country+'-'+width);
+ if(d.country==='norway'){
+  await searchAndSelect(p,'Akershus','Akershus','County');await p.waitFor('document.querySelector("#norway-sidebar .region-statistics")?.dataset.region==="norway:NO-32"');assert(!await p.evaluate('!!document.querySelector("#norway-sidebar .statistics-economy")'));assert((await p.evaluate('document.querySelector("#norway-sidebar .statistics-details").textContent')).includes('former combined Viken'));
+  await searchAndSelect(p,'Svalbard','Svalbard','Special territory');await p.waitFor('document.querySelector("#norway-sidebar .statistics-economy")?.textContent.includes("GVA")');assert.equal(await p.evaluate('document.querySelectorAll("#norway-sidebar .statistics-economy dd").length'),1,'No unverified Svalbard per-capita output');
+ }else{
+  await p.tap('#'+d.prefix+'-tab-layers');const select='#'+d.prefix+'-region-color';for(const key of ['gdp','gdpPerCapita']){await p.evaluate('(()=>{const s=document.querySelector('+JSON.stringify(select)+');s.value='+JSON.stringify(key)+';s.dispatchEvent(new Event("change",{bubbles:true}));})()');await p.settle();assert.equal(await p.evaluate('AtlasRegionColorController.getMetric()'),key);assert(Array.isArray(await p.evaluate('map.getPaintProperty('+JSON.stringify(d.country+'-first-fill')+',"fill-color")')),'GDP paints real region fills');}
+  const hash=await p.evaluate('AtlasView.hashFor(captureView())');await p.open(base,hash);assert.equal(await p.evaluate('AtlasRegionColorController.getMetric()'),'gdpPerCapita');
+  if(d.country==='sweden'){await searchAndSelect(p,'Stockholm','Stockholm','Municipality');await p.waitFor('document.querySelector("#sweden-sidebar .statistics-economy")?.textContent.includes("1.27 trillion")');assert((await p.evaluate('document.querySelector("#sweden-sidebar .statistics-economy").textContent')).includes('1,272,000'));}
+  else{await searchAndSelect(p,'Helsinki','Helsinki','Municipality');await p.waitFor('document.querySelector("#finland-sidebar .region-statistics")?.dataset.region==="finland:FI-M-091"');assert(!await p.evaluate('!!document.querySelector("#finland-sidebar .statistics-economy")'),'Municipalities do not borrow regional GDP');}
+ }
+ assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));assert.equal(await p.evaluate('mapScene.assertOrder()'),true);
+}})));

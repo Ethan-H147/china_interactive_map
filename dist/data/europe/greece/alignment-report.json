@@ -1,0 +1,21 @@
+{
+  "turkey": [
+    {
+      "id": "GR-M-0301",
+      "edges": 313
+    },
+    {
+      "id": "GR-M-0302",
+      "edges": 97
+    },
+    {
+      "id": "GR-M-0303",
+      "edges": 208
+    },
+    {
+      "id": "GR-M-0305",
+      "edges": 225
+    }
+  ],
+  "maxEndpointDisplacementMetres": 2064.049177948906
+}

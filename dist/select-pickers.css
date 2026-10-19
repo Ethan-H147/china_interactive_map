@@ -1,12 +1,16 @@
-/* Keep desktop pickers in the page's top layer, with native select semantics.
-   Small-screen layouts and browsers without base-select retain their platform picker. */
+/* All desktop dropdowns use the same in-page picker, including those in dialogs.
+   Phones and browsers without base-select retain their platform picker. */
 @supports (appearance:base-select){
  @media (min-width:761px){
-  aside.sidebar select:not([multiple]):is(:not([size]),[size="0"],[size="1"]),
-  aside.sidebar select:not([multiple]):is(:not([size]),[size="0"],[size="1"])::picker(select){
+  select:not([multiple]):is(:not([size]),[size="0"],[size="1"]),
+  select:not([multiple]):is(:not([size]),[size="0"],[size="1"])::picker(select){
    appearance:base-select;
   }
-  aside.sidebar select::picker(select){
+  select:not([multiple]):is(:not([size]),[size="0"],[size="1"]){
+   display:inline-flex;align-items:center;justify-content:space-between;gap:8px;
+  }
+  select::picker-icon{flex:none}
+  select::picker(select){
    font:inherit;
    font-size:14px;
    color:var(--ink);
@@ -19,21 +23,21 @@
    overflow:auto;
    overscroll-behavior:contain;
   }
-  aside.sidebar select option{
+  select option{
    padding:8px 10px;
    min-block-size:34px;
    border-radius:3px;
    cursor:pointer;
   }
-  aside.sidebar select option:is(:hover,:focus-visible){
+  select option:is(:hover,:focus-visible){
    background:color-mix(in srgb,var(--red) 10%,var(--paper));
    outline:none;
   }
-  aside.sidebar select option:checked{
+  select option:checked{
    font-weight:600;
    background:color-mix(in srgb,var(--red) 7%,var(--paper));
   }
-  aside.sidebar select option:disabled{color:var(--muted);cursor:default}
-  aside.sidebar select::picker-icon{color:var(--muted)}
+  select option:disabled{color:var(--muted);cursor:default}
+  select::picker-icon{color:var(--muted)}
  }
 }

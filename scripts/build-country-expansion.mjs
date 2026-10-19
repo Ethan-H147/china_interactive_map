@@ -6,6 +6,8 @@ import {fetchCanadaLocal} from './fetch-canada-local.mjs';
 import fs from 'node:fs';
 import {buildUSCounties} from './build-us-counties.mjs';
 import {extendDenmark} from './denmark.mjs';
+import {germanyDenmarkFrontier} from './germany-denmark-frontier.mjs';
+import {fetchGermanyDenmarkFrontier} from './fetch-germany-denmark-frontier.mjs';
 import {applyDenmarkStatistics} from './denmark-statistics.mjs';
 import {countryContext} from './country-context.mjs';
 import assert from 'node:assert/strict';
@@ -118,12 +120,18 @@ const national=read('ne-10m-land-boundaries.geojson').features;
 // frontiers retain France/Italy's geometry.
 const ownership=new Set(),frontierReports={};
 for(const c of ['france','italy','spain','united-kingdom']){const iso=globalThis.AtlasCountries.countries[c].naturalEarth;for(const f of national)if([].concat(iso).some(i=>[f.properties.ADM0_A3_L,f.properties.ADM0_A3_R].includes(i)))ownership.add([f.properties.ADM0_A3_L,f.properties.ADM0_A3_R].sort().join('-'));}
-function frontiers(country,outline){
+async function frontiers(country,outline){
  const iso=[].concat(globalThis.AtlasCountries.countries[country].naturalEarth),groups=new Map(),arcs=[];
  for(const f of national){const sides=[f.properties.ADM0_A3_L,f.properties.ADM0_A3_R];if(!sides.some(code=>iso.includes(code)))continue;const pair=sides.sort().join('-');const prior=Object.keys(definitions).slice(0,Object.keys(definitions).indexOf(country)).flatMap(c=>[].concat(globalThis.AtlasCountries.countries[c].naturalEarth));if(ownership.has(pair)||sides.some(s=>prior.includes(s)))continue;if(!groups.has(pair))groups.set(pair,{lines:[],water:false});groups.get(pair).lines.push(...linesOf(fc([f])));groups.get(pair).water||=f.properties.TYPE==='Water Indicator';}
- for(const [pair,group]of groups){for(const reference of joinReferencePaths(group.lines)){if(reference.length<2||reference.slice(1).reduce((n,p,i)=>n+metres(reference[i],p),0)<2)continue;const resolved=group.water?{path:reference,error:0,method:'reference through water'}:{...selectFrontierArc(outline,reference),method:'continuous outline arc'};if(resolved.path.length<2)continue;arcs.push({pair,...resolved});}ownership.add(pair);}
+ for(const [pair,group]of groups){
+  if(pair==='DEU-DNK'){
+   await fetchGermanyDenmarkFrontier();
+   const danish=await command(fc(lau.filter(f=>f.properties.CNTR_CODE==='DK')),'-clean -simplify dp interval=.0003 planar keep-shapes -clean -dissolve');
+   const resolved=germanyDenmarkFrontier(outline,danish,national);arcs.push(...resolved.data.features.flatMap(f=>linesOf(fc([f])).map(path=>({pair,path,error:0,method:resolved.report.method,boundaryType:f.properties.boundaryType,reference:f.properties.reference}))));ownership.add(pair);continue;
+  }
+  for(const reference of joinReferencePaths(group.lines)){if(reference.length<2||reference.slice(1).reduce((n,p,i)=>n+metres(reference[i],p),0)<2)continue;const resolved=group.water?{path:reference,error:0,method:'reference through water'}:{...selectFrontierArc(outline,reference),method:'continuous outline arc'};if(resolved.path.length<2)continue;arcs.push({pair,...resolved});}ownership.add(pair);}
  frontierReports[country]=arcs.map(a=>({pair:a.pair,vertices:a.path.length,endpointErrorMetres:Math.round(a.error),method:a.method}));
- return lineData(fc(withoutRetraced(arcs.map(a=>({type:'Feature',properties:{countries:[country],pair:a.pair},geometry:{type:'LineString',coordinates:a.path}})))));
+ return lineData(fc(withoutRetraced(arcs.map(a=>({type:'Feature',properties:{countries:[country],pair:a.pair,...(a.boundaryType?{boundaryType:a.boundaryType,reference:a.reference}:{})},geometry:{type:'LineString',coordinates:a.path}})))));
 }
 const sourcesOfStatistics={
  giscoPopulation:{title:'Eurostat GISCO · resident population and area of LAU 2024',url:'https://ec.europa.eu/eurostat/web/gisco/geodata/statistical-units/local-administrative-units',license:'Eurostat GISCO terms; © EuroGeographics'},
@@ -148,7 +156,7 @@ for(const [country,d]of Object.entries(datasets)){
  }
  const outline=await command(byLevel[1],'-dissolve');
  write('context.bin',await countryContext(country,byLevel[1],new Map(records.filter(r=>r.level===1).map(r=>[r.id,r])),command));
- write('international.bin',frontiers(country,outline));
+ write('international.bin',await frontiers(country,outline));
  const whole={};for(let level=1;level<=maxLevel;level++)whole[level]={regions:byLevel[level],boundaries:borders(byLevel[level])};
  write('first.bin',whole[1]);
  const bundled=Math.min(2,maxLevel);if(maxLevel>1)write('all.bin',{levels:Array.from({length:bundled},(_,i)=>({level:i+1,...whole[i+1]}))});
@@ -164,6 +172,7 @@ for(const [country,d]of Object.entries(datasets)){
  fs.writeFileSync(dir+'/statistics.json',JSON.stringify({version:1,country,retrieved:pins.retrieved,sources:{...sourcesOfStatistics,...territoryStatisticsSources,boundaryArea:{title:'Area reported in the official boundary dataset',url:'data/europe/'+country+'/sources.json'},mappedArea:{...sourcesOfStatistics.mappedArea,url:'data/europe/'+country+'/sources.json'}},regions}));
  const used=[...d.files,'ne-10m-land-boundaries.geojson'].map(file=>({file,...pins.files[file]}));
  fs.writeFileSync(dir+'/sources.json',JSON.stringify({retrieved:pins.retrieved,...(country==='switzerland'?{projection:{source:'EPSG:2056, CH1903+ / LV95',target:'EPSG:4326, WGS84',datumShiftMetres:[674.374,15.056,405.346],reference:'https://www.swisstopo.admin.ch/dam/en/sd-web/rbTNT25PXkEA/georef_d.pdf'}}:{}),counts,frontiers:frontierReports[country],kinds:records.reduce((o,r)=>(o[r.kind]=(o[r.kind]||0)+1,o),{}),coverage:d.coverage,processing:'All subdivisions use the shared regional renderer. Parent polygons are dissolved from one municipal topology; shared internal edges are stored once. Geometry is simplified together to about 33 m north-south after the source generalisation. Deeper levels load per parent. Land frontiers retain the existing France/Italy reference where present and are drawn once; reference border lines cross large lakes and sea channels independently of coastlines. Population retains the original reference date; no GDP values are inferred.',sources:used},null,2)+'\n');
+ if(country==='germany'){const source=JSON.parse(fs.readFileSync('scripts/boundary-sources/germany-denmark/sources.json')),file=dir+'/sources.json',info=JSON.parse(fs.readFileSync(file));info.sources.push({file:'bkg-vg25-lines.geojson.gz',...source});fs.writeFileSync(file,JSON.stringify(info,null,2)+'\n');}
  if(country==='denmark')applyDenmarkStatistics(dir);
  if(country==='united-states')await buildUSCounties(dir+'/');
  if(country==='canada'){await fetchCanadaLocal();await prepareCanadaStatisticsSources();await buildCanadaLocal(dir+'/');prepareCanadaMunicipalFacts(dir+'/');}

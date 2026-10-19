@@ -24,3 +24,11 @@ Denmark, Greenland and Faroese flag originals, dimensions, source links and loss
 Germany keeps ownership of the existing shared German–Danish border, so adding Denmark cannot double the stroke. Source geography and the international reference retain their recorded source vintages.
 
 Run `npm run build:denmark` for a reproducible country rebuild and `npm run test:denmark` for data checks. `node scripts/browser/run.mjs denmark` covers public entry, Copenhagen, Nuuk, phone layouts, shared links, territorial clicks and flags.
+
+## Germany–Denmark border correction, 19 October 2026
+
+The former border builder grouped Natural Earth land and water segments together. The presence of any water segment made the entire pair use the coarse reference line, which crossed Flensburg and disagreed with both countries’ subdivisions. The repair uses the exact common GISCO municipal land edge, already identical on both sides, and separate official BKG VG25 international boundary lines through the North Sea and Flensburg Fjord. The land/sea joins meet the displayed coast exactly; their positions are within 10 metres of BKG’s reference. The fill polygons and city boundaries do not need moving. Germany remains the only owner of the shared stroke.
+
+BKG VG25 is credited under CC BY 4.0. Its WFS response, query URL and SHA-256 pin are retained in `scripts/boundary-sources/germany-denmark/`; official documentation is at [BKG’s VG25 service](https://gdz.bkg.bund.de/index.php/default/wfs-verwaltungsgebiete-1-25-000-stand-31-12-wfs-vg25.html). This remains a generalised atlas, not a cadastral map.
+
+Ordinary German country rebuilds preserve this correction. `npm run build:germany-denmark-border` reapplies only the border and refreshes its compact browser copy. `npm run test:germany-denmark-border` verifies every administrative level, a continuous shoreline join, the official reference and a 20-metre sampling check that the line never crosses Flensburg’s interior. `npm run test:browser:germany-denmark-border` checks the visible stroke from Germany, Denmark and another country, on desktop and phone.

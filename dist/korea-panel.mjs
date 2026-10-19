@@ -19,7 +19,7 @@ export const koreaPanel=`<aside id="korea-sidebar" class="sidebar korea-sidebar"
 },
  cards:`<div id="k-selection-meta" class="country-card-anchor" hidden></div>`,
  subdivisions:`<details id="k-subdivisions" open><summary id="k-subdivisions-title">Subdivisions</summary><div id="k-region-list"></div></details>`,
- actions:`<button id="k-compare-place" class="quiet-button" type="button">Compare this region</button><div id="k-parent-context" class="parent-context" hidden><span class="name-caption">Parent region</span><button id="k-parent-region" class="quiet-button" data-nav><span id="k-parent-english"></span><span id="k-parent-chinese" lang="ko"></span><span id="k-parent-hanja" lang="ko-Hani" hidden></span></button></div>`,
+ actions:`<button id="k-compare-place" class="quiet-button" type="button">Compare this region</button>`,
  footer:`<button id="k-compare-open" type="button">Compare regions</button><button id="k-about-open">Sources &amp; coverage</button><span class="creator-credit">Created by Ethan Hu</span>`,
  extraPanels:``,
  afterPanels:``,

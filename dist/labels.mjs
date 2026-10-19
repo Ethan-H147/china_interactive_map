@@ -1,3 +1,4 @@
+import {getSettings} from './settings.mjs';
 export {createHoverOverview} from './hover-overview.mjs';
 export function labelLines(english,local,language='both',district=false){
  if(district&&!/\b(?:District|Dist\.)$/i.test(english))english+=' District';
@@ -21,13 +22,14 @@ function textWidth(font,text){const key=font+'|'+text;let width=widths.get(key);
 export function getLanguage(){return language;}
 export function setLanguage(value){language=['en','local','both'].includes(value)?value:'both';document.querySelectorAll('[data-label-language]').forEach(el=>el.value=language);}
 export function render(map,candidates,className){
+ const settings=getSettings(),large=settings.labelSize==='large';candidates=candidates.filter(item=>item.countryLabel?settings.countryNames:settings.placeNames);
  measure??=document.createElement('canvas').getContext('2d');
  // On the globe, places on the far side, or near its edge where they project poorly, are left out.
  if(map.getProjection?.()?.type==='globe'){const c=map.getCenter(),r=Math.PI/180;candidates=candidates.filter(({center:[x,y]})=>Math.sin(y*r)*Math.sin(c.lat*r)+Math.cos(y*r)*Math.cos(c.lat*r)*Math.cos((x-c.lng)*r)>Math.cos(65*r));}
  const items=candidates.map(item=>{
-  const lines=item.lines||labelLines(item.en,item.local,language,item.district),point=map.project(item.center);
-  const w=Math.max(...lines.map((line,i)=>textWidth((item.selected?'600 ':'')+(i?'14px Arial':'16px Arial'),line)));
-  return {...item,lines,x:point.x,y:point.y,w:w+4,h:lines.length*21};
+  const lines=item.lines||labelLines(item.en,item.local,item.countryLabel?settings.countryLanguage:language,item.district),point=map.project(item.center);
+  const w=Math.max(...lines.map((line,i)=>textWidth((item.selected?'600 ':'')+(large?(i?'16px Arial':'18px Arial'):(i?'14px Arial':'16px Arial')),line)));
+  return {...item,lines,x:point.x,y:point.y,w:w+4,h:lines.length*(large?24:21)};
  });
  return placeLabels(items,map.getContainer().clientWidth,map.getContainer().clientHeight).map(item=>{
   const el=document.createElement('div');el.dataset.atlasPlace=String(item.id);el.className=item.className||className;if(item.onClick){el.setAttribute('role','button');el.tabIndex=0;el.onclick=e=>{e.stopPropagation();item.onClick();};el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();item.onClick();}};}el.classList.toggle('selected-label',!!item.selected);el.textContent=item.lines[0];
@@ -37,3 +39,13 @@ export function render(map,candidates,className){
  });
 }
 
+
+// Country names use their own land anchors, independent of camera framing and loaded adapters.
+export function countryLabelCandidates(active,allows=()=>true,centerLongitude){
+ return globalThis.AtlasCountries.ids.filter(id=>id!==active&&allows(id)).flatMap(id=>globalThis.AtlasCountries.countries[id].labelPoints.map(label=>({...label,country:id,countryLabel:true,center:Number.isFinite(centerLongitude)?[label.center[0]+360*Math.round((centerLongitude-label.center[0])/360),label.center[1]]:label.center})));
+}
+export function createCountryLabels(map,{allows=()=>true}={}){
+ let markers=[];
+ const clear=()=>{markers.forEach(marker=>marker.remove());markers=[];};
+ return {clear,sync(active){clear();const candidates=countryLabelCandidates(active,allows,map.getRenderWorldCopies?.()?map.getCenter().lng:undefined);markers=render(map,candidates,'province-label');for(const marker of markers)marker.getElement().dataset.atlasCountryLabel='true';}};
+}

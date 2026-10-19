@@ -1,0 +1,139 @@
+[
+  {
+    "country": "finland",
+    "pair": "FIN-RUS",
+    "runs": [
+      {
+        "id": "FI-M-146",
+        "edges": 36
+      },
+      {
+        "id": "FI-M-148",
+        "edges": 9
+      },
+      {
+        "id": "FI-M-153",
+        "edges": 14
+      },
+      {
+        "id": "FI-M-167",
+        "edges": 10
+      },
+      {
+        "id": "FI-M-260",
+        "edges": 19
+      },
+      {
+        "id": "FI-M-689",
+        "edges": 12
+      },
+      {
+        "id": "FI-M-290",
+        "edges": 37
+      },
+      {
+        "id": "FI-M-700",
+        "edges": 2
+      },
+      {
+        "id": "FI-M-305",
+        "edges": 30
+      },
+      {
+        "id": "FI-M-732",
+        "edges": 61
+      },
+      {
+        "id": "FI-M-742",
+        "edges": 6
+      },
+      {
+        "id": "FI-M-405",
+        "edges": 28
+      },
+      {
+        "id": "FI-M-422",
+        "edges": 30
+      },
+      {
+        "id": "FI-M-758",
+        "edges": 20
+      },
+      {
+        "id": "FI-M-777",
+        "edges": 47
+      },
+      {
+        "id": "FI-M-489",
+        "edges": 3
+      },
+      {
+        "id": "FI-M-848",
+        "edges": 13
+      },
+      {
+        "id": "FI-M-580",
+        "edges": 26
+      },
+      {
+        "id": "FI-M-935",
+        "edges": 3
+      }
+    ],
+    "maxEndpointDisplacementMetres": 4658.678524977763
+  },
+  {
+    "country": "finland",
+    "pair": "FIN-NOR",
+    "runs": [
+      {
+        "id": "FI-M-047",
+        "edges": 64
+      },
+      {
+        "id": "FI-M-148",
+        "edges": 23
+      },
+      {
+        "id": "FI-M-148",
+        "edges": 69
+      },
+      {
+        "id": "FI-M-890",
+        "edges": 151
+      }
+    ],
+    "maxEndpointDisplacementMetres": 4716.789293072765
+  },
+  {
+    "country": "finland",
+    "pair": "FIN-SWE",
+    "runs": [
+      {
+        "id": "FI-M-047",
+        "edges": 141
+      },
+      {
+        "id": "FI-M-273",
+        "edges": 52
+      },
+      {
+        "id": "FI-M-498",
+        "edges": 85
+      },
+      {
+        "id": "FI-M-851",
+        "edges": 32
+      },
+      {
+        "id": "FI-M-854",
+        "edges": 53
+      },
+      {
+        "id": "FI-M-976",
+        "edges": 37
+      }
+    ],
+    "maxEndpointDisplacementMetres": 1902.5462716627887
+  }
+]

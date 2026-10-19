@@ -1,0 +1,69 @@
+{
+  "retrieved": "2026-10-18",
+  "publicRedistributionLicensed": false,
+  "license": "IISS reference geometry is copyright IISS; requested local research/private-study use only. No public reuse permission is claimed.",
+  "terms": "https://www.iiss.org/terms-and-conditions/",
+  "sources": {
+    "myanmar-selfadmin.zip": {
+      "url": "https://data.themimu.info/api/files/resources/b2604cb9-d355-409d-a308-a21df2b5b795/myanmar-self-administered-regions-boundaries-mimu-pcodev9-4.zip",
+      "license": "MIMU data licence; free use with attribution",
+      "credit": "Myanmar Information Management Unit (MIMU), PCode v9.4",
+      "year": 2024,
+      "sha256": "6ca15983fe95565f311af511c114d2c6b67fff29a6e1a3ad0104407e08096f01",
+      "bytes": 108669
+    },
+    "myanmar-iiss-dashboard.js": {
+      "url": "https://myanmar.iiss.org/_app/immutable/chunks/L26jvRJT.js",
+      "license": "Copyright IISS. Research and private study permitted; public redistribution not licensed.",
+      "credit": "IISS Myanmar Conflict Map",
+      "effectiveDate": "Territory polygon date unspecified; retrieved 2026-10-18",
+      "terms": "https://www.iiss.org/terms-and-conditions/",
+      "sha256": "0c5fe3ee81f60ab0903398341a698b69d335a30e5bcf0c1d7c9f8230283ab061",
+      "bytes": 535284
+    },
+    "myanmar-iiss-methodology.html": {
+      "url": "https://myanmar.iiss.org/methodology",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "91dfee0d0f3e59c61725d5417b3f05202da7e8670304b5860c54f1fb84a9615e",
+      "bytes": 44736
+    },
+    "myanmar-iiss-terms.html": {
+      "url": "https://www.iiss.org/terms-and-conditions/",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "c5ca8260d366b1888d71c090214ee5cf70889c692b98efbeac992a6c1ab83e96",
+      "bytes": 39098
+    },
+    "myanmar-isp2026.html": {
+      "url": "https://ispmyanmar.com/2026mp003/",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "ISP-Myanmar",
+      "sha256": "8b028dd63948f45d941df8240eaca97a74767c7c8961c9f680197dd78ede2398",
+      "bytes": 153804
+    },
+    "myanmar-iiss-2026-analysis.html": {
+      "url": "https://myanmar.iiss.org/analysis/war-by-other-means",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "6f329378270947b776f77f2bb432b8ef80b120cd120ae8fc52f074b28e530a79",
+      "bytes": 69639
+    },
+    "myanmar-iiss-northeast.html": {
+      "url": "https://myanmar.iiss.org/analysis/northeast",
+      "license": "Copyright source; retained local research reference, paraphrased with attribution",
+      "credit": "IISS",
+      "sha256": "50de004c761dd38a52ac5c9e5fb1d8a370558270d5af3a04496c9b96cc6325f5",
+      "bytes": 1152832
+    },
+    "myanmar-acled2026.html": {
+      "url": "https://acleddata.com/report/state-repression-increases-under-myanmar-militarys-new-leadership",
+      "license": "Copyright ACLED; local reference, factual paraphrases with attribution",
+      "credit": "ACLED",
+      "asOf": "2026-07-17",
+      "sha256": "dd7a6bfa0772f3fbc310bfea1057d50f69c67c2e67edb782b0413fd155be4452",
+      "bytes": 95332
+    }
+  },
+  "processing": "Exact three IISS polygon features extracted from public source M2. Clipped to Myanmar land, preserving holes and national borders. MIMU self-administered regions remain separate; they are not substituted for Wa territorial control. Military points are governing/urban centres, never whole-township control polygons."
+}

@@ -1,0 +1,47 @@
+{
+  "canonicalNeighbours": [
+    {
+      "owner": "china",
+      "changedEdges": 1195,
+      "maxDisplacementMetres": 2470.383464801627,
+      "changedRegions": [
+        "KZ-10",
+        "KZ-19",
+        "KZ-33",
+        "KZ-63"
+      ]
+    },
+    {
+      "owner": "russia",
+      "changedEdges": 4898,
+      "maxDisplacementMetres": 1499.8611975385297,
+      "changedRegions": [
+        "KZ-10",
+        "KZ-15",
+        "KZ-23",
+        "KZ-27",
+        "KZ-39",
+        "KZ-55",
+        "KZ-59",
+        "KZ-63"
+      ]
+    }
+  ],
+  "frontiers": [
+    {
+      "pair": "KAZ-KGZ",
+      "vertices": 2841,
+      "endpointErrorMetres": 4472.722366285815
+    },
+    {
+      "pair": "KAZ-TKM",
+      "vertices": 335,
+      "endpointErrorMetres": 2936.4919155754856
+    },
+    {
+      "pair": "KAZ-UZB",
+      "vertices": 1568,
+      "endpointErrorMetres": 2445.2569946249773
+    }
+  ]
+}

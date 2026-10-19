@@ -1,5 +1,5 @@
 import {onMapHover} from './pointer-performance.mjs';
-import {createCountryPage,setSubdivisionHeading} from './country-page.mjs';
+import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
 import {coastalDetailZoom,coastalDetailIds,coastalPartId} from './coastal-detail.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
@@ -31,7 +31,7 @@ export async function addArchipelagoPortal(map,host,country){
 },
  cards:`<div id="${prefix}-selection-meta" class="country-card-anchor" hidden></div><aside id="${prefix}-selection-note" class="boundary-note" hidden><p id="${prefix}-note-text"></p><a id="${prefix}-note-source" target="_blank" rel="noopener">PSA classification</a></aside>`,
  subdivisions:`<h3 id="${prefix}-child-summary" hidden></h3><div id="${prefix}-children" class="archipelago-children"></div>`,
- actions:`<nav class="region-articles"><a id="${prefix}-article" target="_blank" rel="noopener">Name & location source</a></nav><button id="${prefix}-parent" class="quiet-button" hidden></button>`,
+ actions:`<nav class="region-articles"><a id="${prefix}-article" target="_blank" rel="noopener">Name & location source</a></nav>`,
  footer:`<a href="data/archipelago/${country}-sources.json" target="_blank" rel="noopener">Sources & coverage</a><span>Created by Ethan Hu</span>`,
  extraPanels:``,
  afterPanels:`<p id="${prefix}-detail-status" role="status" hidden></p><button id="${prefix}-retry" class="quiet-button" hidden>Retry detail</button>`
@@ -76,10 +76,10 @@ export async function addArchipelagoPortal(map,host,country){
   const parent=record.level===0?null:index.get(record.parent);
   if(country==='indonesia'?record.level===1:(record.level===2&&!record.special)||record.id==='PH13')window.AtlasStatistics.renderStatistics($('selection-meta'),country+':'+record.id);else window.AtlasStatistics.clearStatistics($('selection-meta'));
   $('selection-note').hidden=!record.note;$('note-text').textContent=record.note||'';$('note-source').hidden=!record.noteSource;if(record.noteSource)$('note-source').href=record.noteSource;
-  $('parent').hidden=!parent;$('parent').textContent=parent?'View '+parent.en:'';$('parent').onclick=()=>select(parent);$('article').href=record.geonames?'https://www.geonames.org/'+record.geonames:'data/archipelago/'+country+'-sources.json';$('article').textContent=record.geonames?'GeoNames · Island source':'Boundary source & coverage';
+  $('article').href=record.geonames?'https://www.geonames.org/'+record.geonames:'data/archipelago/'+country+'-sources.json';$('article').textContent=record.geonames?'GeoNames · Island source':'Boundary source & coverage';
   $('children').replaceChildren();if(record.level===1||record.level===2)for(const child of catalogue.records.filter(p=>record.level===1?p.level===2&&p.parent===record.id:p.province===record.id).sort((a,b)=>a.en.localeCompare(b.en))){const b=document.createElement('button');b.type='button';b.className='search-result';b.textContent=child.en+' · '+child.kind;b.onclick=()=>select(child);$('children').append(b);}
   const childCount=$('children').children.length;$('child-summary').hidden=!childCount;setSubdivisionHeading($('child-summary'),record.level===1?config.second:'Subdivisions',childCount);
-  $('tab-explore').hidden=false;panel('explore');sidebar.querySelector('.sidebar-scroll').scrollTop=0;document.getElementById('breadcrumb-region').hidden=false;document.getElementById('breadcrumb-region').textContent=(parent?parent.en+' / ':'')+record.en;
+  $('tab-explore').hidden=false;panel('explore');sidebar.querySelector('.sidebar-scroll').scrollTop=0;setRegionBreadcrumb(record,r=>r.level===0?null:index.get(r.parent),r=>r.en,select);
   if(record.level===1||record.level===2)setMode(2,true);sync();
   const bounds=record.bounds||[[record.center[0]-(record.kind==='Island group'?1.5:.12),record.center[1]-(record.kind==='Island group'?1.5:.12)],[record.center[0]+(record.kind==='Island group'?1.5:.12),record.center[1]+(record.kind==='Island group'?1.5:.12)]];if(fit)await host.fit(bounds,record.level===0?13:12,camera);if(epoch===selectionEpoch&&active)scheduleDetails();
  }

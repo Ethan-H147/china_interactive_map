@@ -17,7 +17,15 @@ import {load,polygons,metres,landIndex,lineIndex,land,boundaryLines} from './nat
 import {outlineIndex} from './channel-lines.mjs';
 import {edgeLines} from '../dist/edge-runs.mjs';
 
-const data='dist/data/';
+const data='dist/data/',only=process.env.ONLY?.split(',');
+// Reconciled land borders are more precise than Natural Earth's land mask.
+// Preserve their complete path, including stretches the coarse mask places in water.
+const borneo=lineIndex(load(data+'southeast-asia/borneo-border-report.json').shared.coordinates);
+const timorFile=data+'europe/timor-leste/frontier-reference.json',timor=fs.existsSync(timorFile)?lineIndex(load(timorFile).paths):null;
+const followsTimor=(a,b)=>timor&&[0,.25,.5,.75,1].every(t=>timor([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t])<1);
+const bruneiFile=data+'europe/brunei/frontier-reference.json',brunei=fs.existsSync(bruneiFile)?lineIndex(load(bruneiFile).paths):null;
+const followsBrunei=(a,b)=>brunei&&[0,.25,.5,.75,1].every(t=>brunei([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t])<1);
+const followsBorneo=(a,b)=>[0,.25,.5,.75,1].every(t=>borneo([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t])<1);
 const write=(file,value)=>{const json=JSON.stringify(value),bytes=gzipSync(json,{level:9});fs.writeFileSync(data+file,bytes);return {bytes:bytes.length,decodedBytes:Buffer.byteLength(json)};};
 const key=(a,b)=>a[0]<b[0]||a[0]===b[0]&&a[1]<b[1]?a+';'+b:b+';'+a;
 // Units with a shape of their own (the Philippines' Isabela City is drawn over Basilan with its own dashed line).
@@ -27,6 +35,9 @@ const drawn=f=>f.geometry&&!f.properties.special;
 function frontierTest(own){
  const near=lineIndex(boundaryLines.filter(b=>b.sides.filter(s=>own.includes(s)).length===1).flatMap(b=>b.lines));
  return (a,b)=>{
+  if(own.some(iso=>iso==='IDN'||iso==='MYS')&&followsBorneo(a,b))return true;
+  if(own.includes('IDN')&&followsTimor(a,b))return true;
+  if(own.includes('MYS')&&followsBrunei(a,b))return true;
   const m=[(a[0]+b[0])/2,(a[1]+b[1])/2];if(near(m)>4000||!metres(a,b))return false;
   // Land 800 m out on both sides: a frontier (or a border river), never a coast.
   const c=Math.cos(m[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],n=Math.hypot(dx,dy),step=800/111195;
@@ -67,7 +78,7 @@ function attach(collections,frontier,once,stats,tolerance){
 const report={};
 const run=(name,collections,frontier,once,tolerance=60)=>{const stats=report[name]??={shared:0,exterior:0,frontier:0,near:0,unmatched:0};attach(collections,frontier,once,stats,tolerance);};
 // Philippines and Indonesia: an overview (every unit of each level) and one chunk per region or province.
-for(const [country,own] of [['philippines',['PHL']],['indonesia',['IDN']]]){
+for(const [country,own] of [['philippines',['PHL']],['indonesia',['IDN']]].filter(([country])=>!only||only.includes(country))){
  const frontier=frontierTest(own),catalogueFile='archipelago/'+country+'-catalogue.bin',catalogue=load(data+catalogueFile);
  const overview=load(data+'archipelago/'+country+'-overview.bin'),chunks=Object.fromEntries(Object.entries(catalogue.chunks).map(([id,e])=>[id,load(data+'archipelago/'+e.file)]));
  for(const [level,tolerance] of [['first',600],['second',1000]]){run(country,[overview[level]],frontier,false,tolerance);run(country,Object.values(chunks).map(c=>c[level]),frontier,false);}
@@ -77,20 +88,20 @@ for(const [country,own] of [['philippines',['PHL']],['indonesia',['IDN']]]){
 }
 // Japan's prefecture overview: its prefectures were simplified apart, so neighbours' edges only
 // nearly meet; each near pair is drawn once, replacing the build's own shared edges.
-{
+if(!only||only.includes('japan')){
  const overview=load(data+'japan-boundaries.bin');run('japan',[overview.first],()=>false,true,300);
  overview.boundaries={type:'FeatureCollection',features:[{type:'Feature',properties:{},geometry:{type:'MultiLineString',coordinates:edgeLines(overview.first).features.flatMap(f=>f.geometry.coordinates)}}]};
  delete overview.first.edgeRuns;write('japan-boundaries.bin',overview);
 }
 // Japan's municipal chunks.
-{
+if(!only||only.includes('japan')){
  const catalogue=load(data+'japan-local/catalogue.bin'),chunks=Object.fromEntries(Object.entries(catalogue.chunks).map(([id,e])=>[id,load(data+'japan-local/'+e.file)]));
  for(const level of new Set(Object.values(chunks).flatMap(Object.keys)))run('japan',Object.values(chunks).filter(c=>c[level]).map(c=>c[level]),()=>false,false);
  for(const [id,chunk] of Object.entries(chunks))Object.assign(catalogue.chunks[id],write('japan-local/'+catalogue.chunks[id].file,chunk));
  write('japan-local/catalogue.bin',catalogue);
 }
 // Malaysia: states and districts. Singapore counts as Malaysia's own, so the Johor Strait stays a coast.
-{
+if(!only||only.includes('malaysia')){
  const frontier=frontierTest(['MYS','SGP']),first=load(data+'southeast-asia/malaysia-first.bin'),catalogue=load(data+'southeast-asia/malaysia-catalogue.bin');
  const chunks=Object.fromEntries(Object.entries(catalogue.chunks).map(([id,e])=>[id,load(data+'southeast-asia/'+e.file)]));
  run('malaysia',[first],frontier,true,300);run('malaysia',Object.values(chunks),frontier,true);

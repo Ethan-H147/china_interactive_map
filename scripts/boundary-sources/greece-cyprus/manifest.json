@@ -1,0 +1,86 @@
+{
+  "retrieved": "2026-10-18",
+  "files": {
+    "greece-regions.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/GRC/ADM2/geoBoundaries-GRC-ADM2.geojson",
+      "license": "CC BY 4.0",
+      "credit": "EuroGeoGraphics, Regional IM Working Group - Europe, via geoBoundaries",
+      "year": 2016,
+      "bytes": 1329310,
+      "sha256": "005ac2734762f33b822ed568991bb8ec8c1b5e46fc99a4a7557e65d7ed0d8f4a"
+    },
+    "greece-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/GRC/ADM2/",
+      "license": "Source metadata",
+      "credit": "geoBoundaries",
+      "bytes": 1748,
+      "sha256": "8e1433e32e04943164b8f7cb83925068e4307f65e4345a67c0d4b6b388b19fb2"
+    },
+    "cyprus-districts.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/CYP/ADM1/geoBoundaries-CYP-ADM1.geojson",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors, Wambacher, via geoBoundaries",
+      "year": 2017,
+      "bytes": 584292,
+      "sha256": "ef9ff9388a98aa0b12f31a1245dd4d579a926276f9813602e709697b6bb9ac0c"
+    },
+    "cyprus-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/CYP/ADM1/",
+      "license": "Source metadata",
+      "credit": "geoBoundaries",
+      "bytes": 1735,
+      "sha256": "04a44e213f0a66ac21817f2e0d9ef176600040331fe60f1688cd7d9fa64a9ab6"
+    },
+    "greece-census2021.pdf": {
+      "url": "https://elstat-outsourcers.statistics.gr/census_results_2022_en.pdf",
+      "license": "Official ELSTAT statistics, reuse with attribution",
+      "credit": "Hellenic Statistical Authority, 2021 Population and Housing Census, 17 March 2023",
+      "year": 2021,
+      "bytes": 24126752,
+      "sha256": "194aba2d7fafd370223cd3a0cc8206ef3abff8f7ad9e13ac77f8d0169756bb72"
+    },
+    "greece-administration2024.pdf": {
+      "url": "https://www.ypes.gr/wp-content/uploads/2024/06/STRUCTURE-OPERATION-LRD-ENGLISH-VERSION-2024.pdf",
+      "license": "Official published administrative information, with attribution",
+      "credit": "Hellenic Ministry of Interior",
+      "year": 2024,
+      "bytes": 1822890,
+      "sha256": "f11d58d145b64f6bc8958f28f5f0e61264cdaccbec4dc97c42faf3e9959289d7"
+    },
+    "flag-gr.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
+      "license": "Public domain",
+      "credit": "Greece national flag, Wikimedia Commons",
+      "bytes": 284,
+      "sha256": "d65b82614f0cd167a767abfda1abc1ef99e87ef48e5755f3d33e4526e3cad365"
+    },
+    "flag-cy.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg",
+      "license": "Public domain",
+      "credit": "Cyprus national flag, Wikimedia Commons",
+      "bytes": 23916,
+      "sha256": "6b7eb910db8e80c07b15c12875b3aab1e08882904461de46f7cde9711b683c5e"
+    },
+    "cyprus-enclave-power-station.json": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/10/query?geometry=%7B%22x%22%3A33.744453%2C%22y%22%3A34.984255%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=DIST_CODE%2CDIST_NM_E&returnGeometry=false&f=json",
+      "license": "Official administrative identity verification; no geometry redistributed",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "bytes": 356,
+      "sha256": "57879e478abac9634df57c8fbe773913d92e31b4d342d535eb4facbf1cc4884d"
+    },
+    "cyprus-enclave-ormideia.json": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/10/query?geometry=%7B%22x%22%3A33.771605%2C%22y%22%3A34.994481%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=DIST_CODE%2CDIST_NM_E&returnGeometry=false&f=json",
+      "license": "Official administrative identity verification; no geometry redistributed",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "bytes": 356,
+      "sha256": "57879e478abac9634df57c8fbe773913d92e31b4d342d535eb4facbf1cc4884d"
+    },
+    "cyprus-enclave-xylotymbou.json": {
+      "url": "https://eservices.dls.moi.gov.cy/arcgis/rest/services/National/AdminBoundaries_Indexes_EN/MapServer/10/query?geometry=%7B%22x%22%3A33.742607%2C%22y%22%3A35.016852%2C%22spatialReference%22%3A%7B%22wkid%22%3A4326%7D%7D&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=DIST_CODE%2CDIST_NM_E&returnGeometry=false&f=json",
+      "license": "Official administrative identity verification; no geometry redistributed",
+      "credit": "Republic of Cyprus Department of Lands and Surveys",
+      "bytes": 356,
+      "sha256": "57879e478abac9634df57c8fbe773913d92e31b4d342d535eb4facbf1cc4884d"
+    }
+  }
+}

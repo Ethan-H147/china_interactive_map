@@ -50,13 +50,13 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
   const record=data.regions[key];panel.replaceChildren();
   if(!record){panel.append(element('p','Statistics have not been verified for this division.','statistics-note'));return;}
   if(population)renderPopulation(population,record,data,onRelatedPlace);
-  if(record.population&&!['area','gdp','gdpPerCapita','realGdp','realGva','exports'].some(field=>record[field])){panel.hidden=true;return;}
+  if(record.population&&!['area','gdp','gdpPerCapita','gva','gvaPerCapita','realGdp','realGva','exports'].some(field=>record[field])){panel.hidden=true;return;}
   const area=element('section',null,'statistics-area'),economy=element('section',null,'statistics-economy');
-  const hasEconomy=!countries[key.split(':')[0]]?.regionalStatistics||['gdp','realGdp','realGva','exports'].some(field=>record[field]);
+  const hasEconomy=!countries[key.split(':')[0]]?.regionalStatistics||['gdp','gva','realGdp','realGva','exports'].some(field=>record[field]);
   area.append(element('h3','Area'));economy.append(element('h3','Economy'));panel.append(area);if(!key.startsWith('singapore:')&&hasEconomy)panel.append(economy);
   const areaValues=element('dl',null,'statistics-values'),economyValues=element('dl',null,'statistics-values');area.append(areaValues);
   const argentina=key.startsWith('argentina:');
-  const detailedMetrics=[['area','Area'],...(key.startsWith('singapore:')||!hasEconomy?[]:record.exports?[['exports','Goods exports']]:record.realGdp?[['realGdp','Real GDP'],...(record.realGdpPerCapita?[['realGdpPerCapita','Real GDP per capita']]:[])]:[['gdp','GDP'],['gdpPerCapita','GDP per capita']]),...(record.realGva?[['realGva','Real gross value added'],...(!record.gdpPerCapita?[['realGvaPerCapita','Real GVA per capita']]:[])]:[])];
+  const detailedMetrics=[['area','Area'],...(key.startsWith('singapore:')||!hasEconomy?[]:record.gva?[['gva','Gross value added (GVA)'],...(record.gvaPerCapita?[['gvaPerCapita','GVA per capita']]:[])]:record.exports?[['exports','Goods exports']]:record.realGdp?[['realGdp','Real GDP'],...(record.realGdpPerCapita?[['realGdpPerCapita','Real GDP per capita']]:[])]:[['gdp','GDP'],['gdpPerCapita','GDP per capita']]),...(record.realGva?[['realGva','Real gross value added'],...(!record.gdpPerCapita?[['realGvaPerCapita','Real GVA per capita']]:[])]:[])];
   const metrics=argentina?[['area','Area'],...(record.gdp?[['gdp','GDP'],['gdpPerCapita','GDP per capita']]:[['realGva','Economic output'],['realGvaPerCapita','Output per capita']])]:detailedMetrics;
   if(argentina&&!record.gdp)economy.append(element('p','GDP has not yet been verified for this province. These figures show inflation-adjusted economic output.','statistics-note'));
   economy.append(economyValues);

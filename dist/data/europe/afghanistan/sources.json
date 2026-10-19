@@ -1,0 +1,57 @@
+{
+  "retrieved": "2026-10-18",
+  "coverage": "34 provinces with English and Dari names, source administrative PCodes and 2026 OCHA humanitarian population estimates. Geometry created May2019, reviewed June2025 and edited March2026 by AGCHO/NSIA/OCHA. Districts are omitted: HDX explicitly warns that its 401-district geometry cannot represent all 457 districts designated for 2026. Local names are Dari, not independently verified Pashto. Population totals use the 2026 HDX resource, independently consistent with the IPC OCHA 48.6 million national planning figure; not a census. Inland lake water excluded from land fills. Whole shared frontier arcs use existing atlas Pakistan and China geometry. The tricolour flag follows the UN member-state directory convention and is identified as such.",
+  "counts": {
+    "1": 34
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "afghanistan-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/4c303d7b-8eae-4a5a-a3aa-b2331fa39d74/resource/330aad34-2254-4622-afac-e98ace1524ae/download/afg_admin_boundaries.geojson.zip",
+      "license": "CC BY 3.0 IGO",
+      "credit": "AGCHO / NSIA, OCHA Afghanistan via HDX COD-AB v03",
+      "year": 2019,
+      "reviewed": "2025-06-01",
+      "edited": "2026-03-25",
+      "sha256": "5ac4daf868a9a03cbb26d5702fdb52d06eb00d4b084483f991bffcf956aa8cc3",
+      "bytes": 14418882
+    },
+    "afghanistan-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-afg",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "d960ecb5d86f4998ddda00d126edf05472c2d532eba4fa59dc384c23ad5f200a",
+      "bytes": 59500
+    },
+    "afghanistan-population2026.csv": {
+      "url": "https://data.humdata.org/dataset/79484094-6e4a-4fbd-9152-66b42a9b32e0/resource/90ba48e4-648f-4efc-97df-54fe05132e5e/download/afg_admpop_adm1_2026.csv",
+      "license": "CC BY 3.0 IGO",
+      "credit": "OCHA humanitarian population estimates, via HDX",
+      "year": 2026,
+      "sha256": "fabbadcc5e9e35c7f8fa40a4cd3eb37e998ead137d262ba7f1bbb9343c304e0b",
+      "bytes": 10660
+    },
+    "afghanistan-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-afg",
+      "license": "Source metadata",
+      "credit": "OCHA HDX",
+      "sha256": "d03a03a7211111b4498182250912d979a37fd22b46bc1dbd8ce102e70784e0ea",
+      "bytes": 27160
+    },
+    "flag-af.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Flag_of_Afghanistan_%282013%E2%80%932021%29.svg",
+      "license": "Public domain",
+      "credit": "Afghanistan tricolour used in the UN member-state directory; the de facto authorities use a different flag",
+      "sha256": "95b0f7f331c4dc216a8434ada0db1656bae973b555573ca021bdefbbf32cd57c",
+      "bytes": 232397
+    },
+    "lakes": {
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_lakes.geojson",
+      "license": "Public domain"
+    },
+    "canonicalNeighbours": {
+      "url": "data/europe/pakistan/sources.json",
+      "detail": "Existing atlas China and Pakistan edges reused along the complete shared frontier."
+    }
+  }
+}

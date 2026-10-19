@@ -80,6 +80,10 @@ document.addEventListener('click', event => { if (query.matches && event.target.
 // Selecting a region opens the sheet to half; clearing it tucks the sheet away.
 const selected = () => { const crumb = document.getElementById('breadcrumb-region'); return !!crumb && !crumb.hidden; };
 let wasSelected = false;
+// Reselecting the same search result leaves the breadcrumb text unchanged.
+document.addEventListener('click', event => {
+  if (query.matches && state === 'full' && selected() && event.target.closest?.('aside.sidebar .search-result')) apply('half');
+});
 new MutationObserver(records => {
   if (!query.matches) return;
   const nowSelected = selected();
@@ -154,5 +158,5 @@ export function navigationInset() { return query.matches ? heights().half + 16 :
 export async function collapse(){
  if(!query.matches||state==='peek')return;
  apply('peek');
- if(!matchMedia('(prefers-reduced-motion: reduce)').matches)await new Promise(resolve=>setTimeout(resolve,300));
+ if(!(globalThis.AtlasSettings?.prefersReducedMotion?.()??matchMedia('(prefers-reduced-motion: reduce)').matches))await new Promise(resolve=>setTimeout(resolve,300));
 }
