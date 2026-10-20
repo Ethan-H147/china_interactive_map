@@ -37,3 +37,25 @@ Measurements and CPU profiles are written under the ignored artifacts/map-perfor
 Local preview: http://127.0.0.1:4174/?preview=map-performance#canada
 
 No commit or publishing is part of this update.
+
+
+Panning follow-up — 19 October 2026
+
+Russia's default view was maintaining 137 GeoJSON sources. Nineteen were empty optional international-border references. Their visible borders are supplied by the existing shared frontier layers, and the empty references have no pixels or click targets. The compact-data build now records which FeatureCollections contain zero features. The regional loader skips those optional sources and their empty layers. Nonempty, unknown and explicitly required sources still load normally. The manifest validator checks the empty list against every retained input, so a future source update cannot silently remain on that list after a normal build.
+
+Russia's default view now maintains 118 sources and 120 layers, down from 137 sources and 139 layers: about 14% fewer sources. Boundary files, polygon coordinates, fill precision, line tolerances, antialiasing, labels, camera settings and the three-country residency limit are unchanged.
+
+The real-drag profile uses three 600 ms mouse drags at a 1440 × 900 viewport. Initial local Chrome measurements, without CPU throttling, were:
+
+| View | Sources before → after | 95th-percentile moving frame before → after |
+| --- | ---: | ---: |
+| Russia default | 137 → 118 | 10.7 → 7.1 ms |
+| European Russia | 137 → 118 | 7.1 → 3.7 ms |
+| Sakhalin coast | 140 → 121 | 7.2 → 7.1 ms |
+| Europe overview | 140 → 121 | 7.2 → 7.2 ms |
+
+A separate sequential comparison with two-times CPU slowdown and a warm-up drag measured 14.3 → 14.2 ms at the 95th percentile on Russia's default view. The reduction in source bookkeeping is deterministic; frame timing varies with GPU, caching and machine load, so this is a modest overhead reduction rather than a fixed FPS gain. Benchmark-only restoration of the original empty sources provides the before configuration without changing the user's preview.
+
+The browser regression reinstalls all 19 original empty references and compares the actual WebGL framebuffer before and after. Every pixel matched exactly at Russia's overview, a detailed coast, and a European view. The 10 targeted browser scenarios also cover refresh/country switch/satellite/return in Russia, Canada and Brunei, Borneo border continuity through zoom, Cambodia/Ukraine navigation and mobile quizzes, Crimea entry from Russia, and background frontier pixels.
+
+Repeat with npm run test:empty-map-sources. Run node scripts/browser/measure-pan-performance.mjs after for the four-view profile. Add --with-empty-borders to restore the original source arrangement in the benchmark browser; --case=russia-default limits the sweep. BROWSER_CPU_SLOWDOWN can be set for a slower-machine comparison. Run benchmarks sequentially, separately from other browser tests. Measurements and CPU profiles are saved under artifacts/map-performance/. No publishing is part of this change.

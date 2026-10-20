@@ -66,3 +66,8 @@ fs.writeFileSync(new URL('display-boundaries.parts.json',root),JSON.stringify({c
 fs.writeFileSync(new URL('korea-boundaries.bin',root),gzipSync(JSON.stringify(korea)));
 fs.writeFileSync(new URL('korea-outline.bin',root),gzipSync(JSON.stringify(countries)));
 fs.writeFileSync(new URL('international-border-report.json',root),JSON.stringify({source:'https://www.openstreetmap.org/relation/192734',method:'Adjacent exterior polygon edges within 2.5 km are projected onto the existing North Korean boundary and inherit its intervening vertices. Detected enclosed land-border gaps touching both countries use a separate repair within 5 km, restricted to the gap edges. Interior junctions follow their shared exterior endpoint. Coastlines outside the corridor retain source geometry.',south:sk.report,china:cn.report},null,2));
+
+// Reapply the pinned shared Tumen/Yalu arcs after rebuilding upstream country geometry.
+if(fs.existsSync('scripts/boundary-sources/korean-frontiers/resolved.bin'))await import('./reconcile-korean-frontiers.mjs');
+
+if(fs.existsSync('scripts/boundary-sources/china-russia/resolved.bin'))await (await import('./china-russia-frontier.mjs')).reconcileChinaRussia();

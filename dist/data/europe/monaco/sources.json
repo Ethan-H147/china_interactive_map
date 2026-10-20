@@ -1,0 +1,37 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "Independent sovereign Monaco, grouped under France for navigation only. Current OSM coastline includes the Mareterra reclamation and port basins; territorial waters are excluded. A 100 m corridor reconciles differing land-border surveys to the existing French display. One country shape is provided, not invented administrative subdivisions. Only Monaco’s national flag is shown.",
+  "counts": {
+    "1": 1
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "boundary": {
+      "url": "https://polygons.openstreetmap.fr/get_geojson.py?id=1124039&params=0",
+      "sha256": "bb53f9f74ecf8cc87f9a7000ab147df9f08ff0f8c70642c053c17cadd776bc3c"
+    },
+    "coastline": {
+      "urls": [
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.409000,43.722000,7.421000,43.733000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.409000,43.733000,7.421000,43.744000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.409000,43.744000,7.421000,43.755000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.421000,43.722000,7.433000,43.733000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.421000,43.733000,7.433000,43.744000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.421000,43.744000,7.433000,43.755000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.433000,43.722000,7.445000,43.733000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.433000,43.733000,7.445000,43.744000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.433000,43.744000,7.445000,43.755000"
+      ],
+      "processing": "Only coastline ways retained from nine bounding-box responses, with node coordinates joined; all unrelated objects discarded.",
+      "sha256": "b464883e5b06a3a3ca6f3b0b66adc7f8bacc7fe9e0597f9c9ffcbfc9afd399c4",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors"
+    },
+    "displayAlignment": {
+      "reference": "Existing France regional outline",
+      "corridorMetres": 100,
+      "physicalAreaKm2": 2.0841174223977066,
+      "displayAreaKm2": 2.080337930288833
+    }
+  }
+}

@@ -35,7 +35,7 @@ const extract=(start,end)=>app.slice(app.indexOf(start),app.indexOf(end,app.inde
 const mapRound=createRound(hubei,4,()=>.4),states=new Map(),highlighted=[];
 const quiz={active:true,round:mapRound,highlighted,reviewLayer:null};
 let completed=false;
-const context={quiz,cameraBusy:false,AtlasQuiz:{advance},Set,clearHover(){},updateLabels(){},setRegionState(layer,state){states.set(layer.feature.properties.adcode,state);},renderQuizQuestion(){},fitQuizScope(){},renderQuizResults(){completed=true;}};
+const context={quiz,cameraBusy:false,legacyQuizFlash:null,clearTimeout(){},$:()=>({checked:true}),AtlasQuiz:{advance},Set,clearHover(){},updateLabels(){},setRegionState(layer,state){states.set(layer.feature.properties.adcode,state);},renderQuizQuestion(){},fitQuizScope(){},renderQuizResults(){completed=true;}};
 runInNewContext(extract('function clearQuizHighlights(', 'function syncQuizStyle(')+extract('async function nextQuizQuestion(', 'function viewQuizAnswer('),context);
 const mark=(layer,correct=true)=>{quiz.highlighted.push(layer);states.set(layer.feature.properties.adcode,{quizCorrect:correct,quizWrong:!correct});};
 const a=mapRound.questions[0],b=mapRound.questions[1],c=mapRound.questions[2],d=mapRound.questions[3],code=l=>l.feature.properties.adcode;

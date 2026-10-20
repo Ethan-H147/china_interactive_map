@@ -9,11 +9,11 @@ export const configurations=Object.fromEntries(Object.entries(definitions).map((
 export function createEurope(map,host){
  let flags;
  const registry=globalThis.AtlasCountries;
- const flagSets={nordic:async()=>(await import('./nordic-flags.mjs')).nordicFlags,atlantic:async()=>(await import('./atlantic-flags.mjs')).atlanticFlags,oceania:async()=>(await import('./oceania-flags.mjs')).oceaniaFlags,'europe-expansion':async()=>(await import('./europe-expansion-flags.mjs')).europeExpansionFlags,'north-america':async()=>(await import('./north-america-flags.mjs')).northAmericaFlags};
+ const flagSets={poland:async()=>(await import('./poland-flags.mjs')).polandFlags,baltic:async()=>(await import('./baltic-flags.mjs')).balticFlags,soviet:async()=>(await import('./soviet-flags.mjs')).sovietFlags,nordic:async()=>(await import('./nordic-flags.mjs')).nordicFlags,atlantic:async()=>(await import('./atlantic-flags.mjs')).atlanticFlags,oceania:async()=>(await import('./oceania-flags.mjs')).oceaniaFlags,'europe-expansion':async()=>(await import('./europe-expansion-flags.mjs')).europeExpansionFlags,'north-america':async()=>(await import('./north-america-flags.mjs')).northAmericaFlags};
  return createRegionalCollection(map,host,configurations,{async prepare(country,config){
   flags??=(await import('./europe-flags.mjs')).europeFlags;
   if(country==='vatican-city')Object.assign(config,vaticanProfile);
-  config.childPages=registry.ids.filter(id=>registry.countries[id].parent===country).map(id=>({id,name:registry.countries[id].en,local:registry.countries[id].local}));
+  config.childPages=registry.ids.filter(id=>registry.countries[id].parent===country&&!['monaco','vatican-city'].includes(id)).map(id=>({id,name:registry.countries[id].en,local:registry.countries[id].local}));
   config.parentPage=registry.countries[country].parent;
   const flagSet=registry.countries[country].flagSet;
   const selectedFlags=flags[country]||(flagSet?(await flagSets[flagSet]())[country]:null);

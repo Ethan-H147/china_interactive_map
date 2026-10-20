@@ -4,6 +4,7 @@ import {gunzipSync} from 'node:zlib';
 import {GeoJSONVT} from '@maplibre/geojson-vt';
 import earcut,{flatten,deviation} from 'earcut';
 import {readData} from './read-data.mjs';
+import {load} from './geo-index.mjs';
 
 const data=readData('display-boundaries.json');
 const fragments=JSON.parse(gunzipSync(fs.readFileSync('dist/data/fill-fragments.bin')));
@@ -33,7 +34,9 @@ function tileDeviation(tile){
  return {relative:worst,absolute};
 }
 // Reproduce the visible overdraw at the original problematic tile.
-const yanbian=originals.find(f=>f.properties.adcode===222400);
+// Keep the original failing geometry pinned: current border cleanup can remove
+// the zero-width loops that made the ordinary polygon triangulator fail.
+const yanbian=load('scripts/boundary-sources/korean-frontiers/atlas-reference/china.bin').subdivisions.features.find(f=>f.properties.adcode===222400);
 assert(tileDeviation(new GeoJSONVT(yanbian,{...options,tolerance:0}).getTile(5,27,11)).relative>.01,'The regression fixture must reproduce the original triangle');
 let tiles=0,maxError=0;
 for(const f of originals){

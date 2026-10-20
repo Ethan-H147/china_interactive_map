@@ -112,3 +112,5 @@ for(const [country,build] of [['iceland',iceland],['turkey',turkey],['chile',chi
  fs.writeFileSync(`dist/data/europe/${country}/place-names-flags.json`,JSON.stringify({retrieved:today,languages:{},places:{},sources:[]})+'\n');
  console.log(country,records.length,'settlements; not placed:',unplaced.slice(0,20).join(', ')||'none',unplaced.length>20?'…':'');
 }
+
+(await import('./prepare-turkey-names.mjs')).prepareTurkeyNames();

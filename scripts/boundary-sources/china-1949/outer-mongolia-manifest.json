@@ -1,0 +1,12 @@
+{
+  "retrieved": "2026-10-19",
+  "url": "https://www.virtualshanghai.net/Asset/Source/dbData_ID-198_No-01.zip",
+  "page": "https://www.virtualshanghai.net/Data/Tables?ID=198",
+  "title": "Provinces in Republican China (boundaries), 1912–1921: Mongolia reference outline",
+  "credit": "Christian Henriot / ENP-China, ERC grant 788476; source Geonames",
+  "license": "CC0 1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "sha256": "65dde9b44ccded3419be42e3f15cee94734752ee21aa83a6c153c0181d3f589e",
+  "bytes": 249607,
+  "coverage": "Only the Mongolia feature is used, including Tannu Uriankhai (Tuva). An earlier historical extent shown for reference, not a claim of ROC administration in 1949."
+}

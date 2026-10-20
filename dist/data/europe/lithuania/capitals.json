@@ -1,0 +1,157 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-19",
+  "coverage": "County centres for Estonia and Lithuania; the Latvian national capital is an independent state-city polygon.",
+  "records": [
+    {
+      "id": "LT-C-1-CAPITAL",
+      "parent": "LT-C-1",
+      "en": "Alytus",
+      "local": "Alytus",
+      "names": {
+        "lt": "Alytus"
+      },
+      "center": [
+        24.041,
+        54.396
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-10-CAPITAL",
+      "parent": "LT-C-10",
+      "en": "Vilnius",
+      "local": "Vilnius",
+      "names": {
+        "lt": "Vilnius"
+      },
+      "center": [
+        25.28,
+        54.688
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-2-CAPITAL",
+      "parent": "LT-C-2",
+      "en": "Kaunas",
+      "local": "Kaunas",
+      "names": {
+        "lt": "Kaunas"
+      },
+      "center": [
+        23.904,
+        54.898
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-3-CAPITAL",
+      "parent": "LT-C-3",
+      "en": "Klaipėda",
+      "local": "Klaipėda",
+      "names": {
+        "lt": "Klaipėda"
+      },
+      "center": [
+        21.14,
+        55.711
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-4-CAPITAL",
+      "parent": "LT-C-4",
+      "en": "Marijampolė",
+      "local": "Marijampolė",
+      "names": {
+        "lt": "Marijampolė"
+      },
+      "center": [
+        23.354,
+        54.559
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-5-CAPITAL",
+      "parent": "LT-C-5",
+      "en": "Panevėžys",
+      "local": "Panevėžys",
+      "names": {
+        "lt": "Panevėžys"
+      },
+      "center": [
+        24.358,
+        55.734
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-6-CAPITAL",
+      "parent": "LT-C-6",
+      "en": "Šiauliai",
+      "local": "Šiauliai",
+      "names": {
+        "lt": "Šiauliai"
+      },
+      "center": [
+        23.316,
+        55.934
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-7-CAPITAL",
+      "parent": "LT-C-7",
+      "en": "Tauragė",
+      "local": "Tauragė",
+      "names": {
+        "lt": "Tauragė"
+      },
+      "center": [
+        22.289,
+        55.252
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-8-CAPITAL",
+      "parent": "LT-C-8",
+      "en": "Telšiai",
+      "local": "Telšiai",
+      "names": {
+        "lt": "Telšiai"
+      },
+      "center": [
+        22.248,
+        55.981
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    },
+    {
+      "id": "LT-C-9-CAPITAL",
+      "parent": "LT-C-9",
+      "en": "Utena",
+      "local": "Utena",
+      "names": {
+        "lt": "Utena"
+      },
+      "center": [
+        25.599,
+        55.497
+      ],
+      "role": "County centre",
+      "source": "https://osp.stat.gov.lt/en/regionine-statistika-pagal-statistikos-sritis"
+    }
+  ]
+}

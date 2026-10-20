@@ -23,8 +23,14 @@ export default [
  {name:'phone: two levels stay side by side',options:phone,async run(page,base){
   await page.open(base,'#china');
   assert.equal((await shown(page)).length,2);
-  await page.open(base,'#japan');
+  await page.open(base,'#mongolia');
   assert.equal((await shown(page)).length,2,'Switching countries resets the toggle');
+  await page.open(base,'#japan');
+  assert.deepEqual(await shown(page),['Prefectures'],'The area-code view picker uses the compact level menu');
+  await page.tap(await button(page,'Prefectures'));
+  assert.deepEqual(await shown(page),['Prefectures','Municipalities']);
+  await page.tap(await button(page,'Municipalities'));await page.settle();
+  assert.deepEqual(await shown(page),['Municipalities'],'Choosing a level closes the compact menu');
  }},
  {name:'desktop: every level visible and switchable',options:{width:1280,height:820},async run(page,base){
   await page.open(base,'#south-africa');

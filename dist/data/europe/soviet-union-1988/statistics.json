@@ -1,0 +1,366 @@
+{
+  "version": 1,
+  "country": "soviet-union-1988",
+  "retrieved": "2026-10-19",
+  "sources": {
+    "boundaryArea": {
+      "title": "Historical republic total area, MSU GIS attributes (thousand km², rounded)",
+      "url": "https://www.hist.msu.ru/departments/8616/projects/maps/eng/"
+    },
+    "census1989": {
+      "title": "1989 All-Union census · republic population (Demoscope table reproduction)",
+      "url": "https://www.demoscope.ru/weekly/ssp/sng89_reg1.php"
+    },
+    "census1989Russia": {
+      "title": "1989 All-Union census · republic population (Demoscope table reproduction)",
+      "url": "https://www.demoscope.ru/weekly/ssp/rus89_reg1.php"
+    }
+  },
+  "regions": {
+    "soviet-union-1988:SU-RU": {
+      "name": "Russian SFSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 17075400,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 147400537,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989Russia",
+        "note": "All-Union census. Urban: 108,425,580 (73.6%); rural: 38,974,957."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-GE": {
+      "name": "Georgian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 69700,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 5443359,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 3,035,748 (55.8%); rural: 2,407,611."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-UA": {
+      "name": "Ukrainian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 603700,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 51706742,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 34,587,662 (66.9%); rural: 17,119,080."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-MD": {
+      "name": "Moldavian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 33700,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 4337592,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 2,036,407 (46.9%); rural: 2,301,185."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-BY": {
+      "name": "Byelorussian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 207600,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 10199709,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 6,678,585 (65.5%); rural: 3,521,124."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-LT": {
+      "name": "Lithuanian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 65200,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 3689779,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 2,509,311 (68.0%); rural: 1,180,468."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-LV": {
+      "name": "Latvian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 64500,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 2680029,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 1,905,911 (71.1%); rural: 774,118."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-TJ": {
+      "name": "Tajik SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 143100,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 5108576,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 1,668,110 (32.7%); rural: 3,440,466."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-UZ": {
+      "name": "Uzbek SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 447400,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 19905156,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 8,110,784 (40.7%); rural: 11,794,372."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-KZ": {
+      "name": "Kazakh SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 2717300,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 16536511,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 9,465,351 (57.2%); rural: 7,071,160."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-TM": {
+      "name": "Turkmen SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 488100,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 3533925,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 1,603,517 (45.4%); rural: 1,930,408."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-EE": {
+      "name": "Estonian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 45100,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 1572916,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 1,125,975 (71.6%); rural: 446,941."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-AM": {
+      "name": "Armenian SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 29800,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 3287677,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 2,229,540 (67.8%); rural: 1,058,137."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-AZ": {
+      "name": "Azerbaijan SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 86600,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 7037867,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 3,789,985 (53.9%); rural: 3,247,882."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    },
+    "soviet-union-1988:SU-KG": {
+      "name": "Kirghiz SSR",
+      "level": 1,
+      "parent": null,
+      "area": {
+        "value": 198500,
+        "unit": "km²",
+        "year": 1989,
+        "source": "boundaryArea",
+        "method": "reported",
+        "label": "Historical total area"
+      },
+      "population": {
+        "value": 4290442,
+        "year": 1989,
+        "date": "1989-01-12",
+        "method": "census",
+        "periodLabel": "12 January 1989 census",
+        "source": "census1989",
+        "note": "All-Union census. Urban: 1,640,889 (38.2%); rural: 2,649,553."
+      },
+      "note": "Historical republic area reported with the GIS (rounded); includes inland water. Density uses this total area, not modern land area."
+    }
+  }
+}

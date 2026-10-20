@@ -16,9 +16,9 @@ export function createQuizInsets(ids,prompt,choose){
  const observer=new ResizeObserver(position);observer.observe(prompt);observer.observe(shell);position();
  return{
   has:id=>items.has(id),
-  update({records,solved,review,wrong,missed,canAnswer}){
-   for(const [id,{box,button,caption,index}] of items){const correct=solved.has(id)||review?.id===id,bad=!correct&&(wrong===id||missed?.has(id)),record=records.find(r=>r.id===id),known=correct||bad;
-    box.dataset.status=correct?'correct':bad?'incorrect':'unanswered';box.dataset.review=String(review?.id===id);button.disabled=!canAnswer;
+  update({records,solved,review,wrong,missed,target,canAnswer}){
+   for(const [id,{box,button,caption,index}] of items){const correct=solved.has(id)||review?.id===id,bad=!correct&&((wrong instanceof Set?wrong.has(id):wrong===id)||missed?.has(id)),record=records.find(r=>r.id===id),known=correct||bad;
+    box.dataset.status=correct?'correct':bad?'incorrect':target===id?'target':'unanswered';box.dataset.review=String(review?.id===id);button.disabled=!canAnswer;
     caption.textContent=known?record.en:'';button.setAttribute('aria-label',known?record.en+(correct?' · correct':' · incorrect'):'Select place in inset '+(index+1));
    }
    position();

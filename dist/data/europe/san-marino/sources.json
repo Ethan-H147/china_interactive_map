@@ -1,0 +1,25 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "All nine castelli. The retained geoBoundaries source represents 2017, not a 2026 boundary survey. External display edges are reconciled to the existing Italian enclave outline. Area is calculated from the display geometry; no local population or economic data is inferred.",
+  "counts": {
+    "1": 9
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "boundaries": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SMR/ADM1/geoBoundaries-SMR-ADM1.geojson",
+      "sha256": "f38971470e5198134b91f99770040dc2794c393109c7f2d468be249e2f174e00",
+      "metadata": {
+        "url": "https://www.geoboundaries.org/api/current/gbOpen/SMR/ADM1/",
+        "sha256": "e84d21cfcfdf136385585e05f6eb8b1e3c4f585a2248a73a0053538e8041959d"
+      },
+      "provider": "geoBoundaries / OpenStreetMap / Wambacher",
+      "license": "ODbL 1.0",
+      "representedYear": 2017
+    },
+    "displayAlignment": {
+      "reference": "Existing detailed Italy first-level enclave ring",
+      "policy": "Clip external slivers and assign uncovered edge fragments to the nearest existing castello. Internal source divisions are retained; the shared national outline is identical to Italy."
+    }
+  }
+}

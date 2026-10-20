@@ -1,0 +1,25 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "12 current cantons and 100 communes from the official ACT dataset updated 5 October 2026. Canton fills are dissolved from the same commune polygons so their edges agree at both levels. External display edges follow the existing France, Germany and Belgium outlines within a 300 m candidate corridor; original ACT geometry is retained unchanged among the sources. Historical districts in the download are intentionally excluded: districts were abolished in 2015. Identifiers preserve the source LAU codes; no population or economic values are inferred.",
+  "counts": {
+    "1": 12,
+    "2": 100
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "displayAlignment": {
+      "corridorMetres": 300,
+      "reference": "Existing France, Germany and Belgium detailed display outlines",
+      "officialSourceAreaKm2": 2589.8644850718165,
+      "displayAreaKm2": 2593.035475316536,
+      "policy": "Only national-edge source differences are reconciled; administrative identities and the internal commune edges remain from ACT."
+    },
+    "boundaries": {
+      "url": "https://download.data.public.lu/resources/limites-administratives-du-grand-duche-de-luxembourg/20261005-030016/limadmin.geojson",
+      "sha256": "6c3128de3763704397d9a7c44ea04d952fd467fc88a368e2d188c236cbfbae83",
+      "provider": "Administration du cadastre et de la topographie",
+      "license": "CC0",
+      "page": "https://data.public.lu/fr/datasets/limites-administratives-du-grand-duche-de-luxembourg/"
+    }
+  }
+}

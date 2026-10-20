@@ -1,0 +1,31 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "15 counties, 78 current municipalities and 4,715 distinct official settlement/city-district units (4,717 source polygon records, duplicate codes dissolved) from September 2026. Jõhvi includes former Toila after the 2025 merger. Official January 2026 population and published statistical area for counties and municipalities; detailed settlement population is not substituted with parent totals. Counties are territorial units without county governments. Towns, villages and city districts are polygon subdivisions, not independent city dots.",
+  "counts": {
+    "1": 15,
+    "2": 78,
+    "3": 4715
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "boundaries": {
+      "title": "Administrative and settlement units, Estonian Land and Spatial Development Board · 2 September 2026",
+      "url": "https://geoportaal.maaamet.ee/eng/spatial-data/administrative-and-settlement-division-p312.html",
+      "license": "Unrestricted use with source and validity-date attribution",
+      "date": "2026-09-02"
+    },
+    "population": {
+      "title": "Statistics Estonia · RV0291U, population, area and density, 1 January 2026",
+      "url": "https://andmed.stat.ee/api/v1/en/stat/RV0291U"
+    },
+    "gdp": {
+      "title": "Statistics Estonia · RAA0051, county GDP at market prices, 2024, million euro",
+      "url": "https://andmed.stat.ee/api/v1/en/stat/RAA0051"
+    },
+    "alignment": {
+      "title": "Display edge reconciliation",
+      "report": [],
+      "note": "Detailed child polygons share the same outer display edge as their parent; Baltic mutual edges are reconciled together; Estonia’s lake frontier comes from the separate official full administrative-border layer. This is a display alignment, not a legal boundary determination."
+    }
+  }
+}

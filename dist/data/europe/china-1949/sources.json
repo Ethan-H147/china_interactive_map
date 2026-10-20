@@ -1,0 +1,68 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "1949 nominal administrative snapshot: 35 provinces, Tibet Area, Outer Mongolia (earlier reference extent), Hainan Special Administrative Region (from April 1949), and 12 special-municipality location points. Province cartography is the CC0 1947–1949 reconstruction by Christian Henriot / ENP-China. This is not a military-control map. Municipal territories remain unresolved within the province polygons. Outer Mongolia is a former-claim reference extent from the 1912–1921 configuration, including Tuva; it was not controlled by the ROC in 1949. The ROC recognized Mongolian independence in January 1946; Tuva was incorporated into the USSR in 1944. Coasts, lake treatment and offshore claims are approximate at the source scale.",
+  "counts": {
+    "1": 38
+  },
+  "processing": "Historical source polygons projected to WGS84, cleaned together and rounded to six decimal places; shared edges stored once. Hainan island components separated for its 1949 administrative status. Outer Mongolia added from the earlier 1912–1921 reference extent, including Tuva, with non-control and recognition dates disclosed. Source-scale coast and lake treatment retained without applying modern land/water masks. Municipality points provide locations only; province geometry contains unresolved municipal cutouts. Modern map data is never rewritten.",
+  "sources": {
+    "capitals": {
+      "administrativeReference": {
+        "title": "Capital column in the user-provided administrative reference",
+        "url": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+      },
+      "jiangsuArchive": {
+        "title": "Jiangsu Provincial Archives: provincial government moved to Zhenjiang in 1929",
+        "url": "https://dajs.gov.cn/art/2022/11/10/art_123_9708.html"
+      },
+      "jilinGazetteer": {
+        "title": "Jilin provincial gazetteer: capital remained Jilin before the 1954 move to Changchun",
+        "url": "https://dfz.jl.gov.cn/zsjl/201111/t20111122_5216469.html"
+      },
+      "mapReference": {
+        "title": "Academia Sinica GIS: Republic of China New Map, 1947",
+        "url": "https://gis.sinica.edu.tw/showwmts/index.php?l=China_Map_1947&s=ccts",
+        "note": "Historical map reference; point coordinates are approximate city locations."
+      }
+    },
+    "provinces": {
+      "retrieved": "2026-10-19",
+      "url": "https://www.virtualshanghai.net/Asset/Source/dbData_ID-198_No-05.zip",
+      "page": "https://www.virtualshanghai.net/Data/Tables?ID=198",
+      "title": "Provinces in Republican China (boundaries), 1947–1949",
+      "credit": "Christian Henriot / ENP-China, ERC grant 788476; source Geonames",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "31fc07eb58545675ad3b3790e04abf7c5de3d76aac8649fec04aa94789d38b31",
+      "bytes": 258308
+    },
+    "outerMongolia": {
+      "retrieved": "2026-10-19",
+      "url": "https://www.virtualshanghai.net/Asset/Source/dbData_ID-198_No-01.zip",
+      "page": "https://www.virtualshanghai.net/Data/Tables?ID=198",
+      "title": "Provinces in Republican China (boundaries), 1912–1921: Mongolia reference outline",
+      "credit": "Christian Henriot / ENP-China, ERC grant 788476; source Geonames",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sha256": "65dde9b44ccded3419be42e3f15cee94734752ee21aa83a6c153c0181d3f589e",
+      "bytes": 249607,
+      "coverage": "Only the Mongolia feature is used, including Tannu Uriankhai (Tuva). An earlier historical extent shown for reference, not a claim of ROC administration in 1949."
+    },
+    "mongolianIndependence": {
+      "title": "January 1946 communiqué recognizing Outer Mongolian independence",
+      "url": "https://history.state.gov/historicaldocuments/frus1946v10/d958"
+    },
+    "tuva": {
+      "title": "National Archive of the Republic of Tuva: incorporation into the USSR, 1944",
+      "url": "https://gosarhivrt.ru/?p=13369"
+    },
+    "administration": {
+      "url": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "title": "Administrative divisions of the Republic of China, late 1940s"
+    },
+    "municipalities": {
+      "description": "Twelve historical first-order municipalities shown as approximate city-location dots. No modern municipal polygon is substituted for a historical boundary.",
+      "reference": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    }
+  }
+}

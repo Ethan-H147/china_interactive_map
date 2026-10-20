@@ -1,0 +1,58 @@
+{
+  "retrieved": "2026-10-20",
+  "sources": [
+    {
+      "title": "OpenStreetMap country boundary relations and their shared ways",
+      "urls": [
+        "https://www.openstreetmap.org/relation/192734",
+        "https://www.openstreetmap.org/relation/270056",
+        "https://www.openstreetmap.org/relation/60189",
+        "https://www.openstreetmap.org/relation/8426165",
+        "https://www.openstreetmap.org/relation/13284720",
+        "https://www.openstreetmap.org/relation/3781418",
+        "https://www.openstreetmap.org/relation/6648083"
+      ],
+      "license": "© OpenStreetMap contributors · ODbL 1.0"
+    },
+    {
+      "title": "Three-country junction protocol",
+      "url": "https://treaty.mfa.gov.cn/tykfiles/20180718/1531876080380.pdf"
+    }
+  ],
+  "method": "Complete shared non-maritime OSM boundary arcs replace mismatched exterior runs, using a single Tumen tripoint. Interior subdivision boundaries and coasts outside the repair remain intact. The old Natural Earth junction is not used as a detailed geometry anchor. Border strokes are stored once and stay fully visible at every zoom. Display policy requested by the atlas owner suppresses all 22 small river enclaves: their separate outlines and Korean fill are removed, and the enclosing Chinese display region fills the cutouts. Original OSM island geometry and attribution remain separately retained; this is cartographic generalization, not a change to the source border claim.",
+  "files": {
+    "north-korea.json.gz": {
+      "sha256": "3821dc4548b9f0af96bcbc44a3ab16d88ecbf1f4cb5f574f5adc3e4808660135"
+    },
+    "china.json.gz": {
+      "sha256": "e8192d4fb4bd2de38eb6a22e9ac55e1d113c7998dda5b07b2967361351ef1e23"
+    },
+    "russia.json.gz": {
+      "sha256": "e0f7594c6c71759f3a39d7df66b07cfe3bb54d4063e60a9405ace859965785e1"
+    },
+    "china-russia-junction.json.gz": {
+      "sha256": "910636d269578ee7bb09e310ebd6e352a3518d9a166fc34b86cbe68ec28fd0ef"
+    },
+    "district-8426165.json.gz": {
+      "sha256": "3c128bb048aad56d8ca3e93e37c00ca104ef9a39b9fcfb61c3ce26af6952d464"
+    },
+    "district-13284720.json.gz": {
+      "sha256": "10d715adfcd1dccf1c4c8e8ee638d5823e9db874efeb5958dc78382756e26f16"
+    },
+    "province-3781418.json.gz": {
+      "sha256": "c62b9a6b9bfef95e27c338df943ce550e5617d5d54e0361b91ef37bb869f6e05"
+    },
+    "province-6648083.json.gz": {
+      "sha256": "43ea4c7ee1fe67b676764d8362986c91697e5de05961dfc383e0420327e07ce9"
+    }
+  },
+  "junction": [
+    130.637009,
+    42.418332
+  ],
+  "islands": {
+    "count": 22,
+    "display": "Suppressed at the user request: no separate island border or Korean overlay; enclosing Chinese display fills the cutout.",
+    "sourceGeometry": "data/korean-river-islands.bin"
+  }
+}

@@ -17,15 +17,16 @@ export default [
   await page.screenshot('europe-flags-'+country);
  }})),
  ...[{width:1440,height:960},{width:390,height:844,mobile:true}].map(options=>({name:'Vatican Italy subpage '+options.width,options,async run(page,base){
-  await page.open(base,'#italy');if(options.mobile)await page.tap('#it-tab-layers');await page.tap('a.country-subpage-link[href="#vatican-city"]');await page.settle();
+  await page.open(base,'#italy');if(options.mobile)await page.tap('#it-tab-layers');assert.equal(await page.evaluate('document.querySelectorAll("#italy-sidebar a.country-subpage-link").length'),0);await page.open(base,'#vatican-city');await page.settle();
   await page.waitFor('AtlasEntry.current==="vatican-city"&&currentAtlas()?.ready&&currentAtlas().getSelection()==="VA"');
   assert.equal(await page.evaluate('document.getElementById("va-name").textContent'),'Vatican City');assert(await page.evaluate('map.getZoom()>14'));
   await page.tap('#country-switch');assert.equal(await page.evaluate('document.querySelectorAll("#country-menu [data-atlas=vatican-city]").length'),0);assert.equal(await page.evaluate('document.querySelector("#country-menu [aria-current=true]").dataset.atlas'),'italy');await page.key('Escape');
+  await page.evaluate('document.querySelector(".vatican-devotion").scrollIntoView({block:"center"})');
   await page.screenshot('vatican-'+options.width);
   await page.evaluate('document.querySelector("[data-landmark=va-square]").scrollIntoView({block:"center"})');
   await page.tap('[data-landmark=va-square]');await page.settle();assert(await page.evaluate('map.getCenter().lng>12.454'));
   await page.open(base,'#vatican-city');assert.equal(await page.evaluate('currentAtlas().getSelection()'),'VA');
-  await page.tap('.country-parent-link');await page.settle();assert.equal(await page.evaluate('AtlasEntry.current'),'italy');
+  await page.tap('#vatican-city-sidebar .country-parent-link');await page.settle();assert.equal(await page.evaluate('AtlasEntry.current'),'italy');
   assert.equal(await page.evaluate('document.querySelector("#italy-sidebar").hidden'),false);
  }}))
 ];

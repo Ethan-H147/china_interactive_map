@@ -5,6 +5,7 @@ import {countryLabelCandidates} from '../dist/labels.mjs';
 import {load,polygons,landIndex} from './geo-index.mjs';
 const registry=globalThis.AtlasCountries,flight=load('dist/data/flight-context.bin');
 for(const c of Object.values(registry.countries)){
+ if(c.snapshot){assert.deepEqual(c.labelPoints,[],'Historical snapshots do not label the modern world');continue;}
  const candidates=[c.base&&'dist/'+c.base+'context.bin',`dist/data/${c.id}/context.bin`,`dist/data/${c.id}-context.bin`,`dist/data/${c.adapter}/${c.id}-context.bin`].filter(Boolean),file=candidates.find(f=>fs.existsSync(f));
  const data=file?load(file):{features:flight.features.filter(f=>f.properties.country===c.id)};
  assert(data.features.length,'Country mask available for '+c.id);

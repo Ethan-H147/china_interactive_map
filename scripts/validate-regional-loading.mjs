@@ -28,7 +28,7 @@ const context=vm.createContext({createFirstLevelQuiz:()=>undefined,backgroundLan
  createCountryPage:options=>element(options.id),setSubdivisionHeading:(node,label,count)=>node.textContent=label+' '+count,
  loadCompressed:async file=>file.endsWith('catalogue.bin')?catalogue:{type:'FeatureCollection',features:[]},createPlaceSearch,polygonParts,
  // Outlines are decoded in MapLibre's workers (geo-pack.mjs addWorkerSource); the source names its file.
- addWorkerSource:async(map,id,url,options,transform)=>map.addSource(id,{...options,data:url,transform}),
+ addWorkerSource:async(map,id,url,options,transform)=>{map.addSource(id,{...options,data:url,transform});return true;},
  addInternationalBorder(map,id,source){map.addLayer({id,type:'line',source,paint:{}});},setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineWidth:regionalLineWidth,lineSourceOptions:{type:'geojson'},internationalLineSourceOptions:{type:'geojson',tolerance:.125},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){}});
 const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replace("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
 const breadcrumbSource=fs.readFileSync('dist/country-page.mjs','utf8');

@@ -21,7 +21,7 @@ export function joinReferencePaths(lines){
  }
  return joined;
 }
-export function selectFrontierArc(outline,reference){
+export function selectFrontierArc(outline,reference,{maximumScoreMetres=15000}={}){
  let best;
  for(const feature of outline.features)for(const polygon of polygons(feature.geometry)){
   const ring=polygon[0].slice(0,-1);if(ring.length<3)continue;
@@ -39,7 +39,7 @@ export function selectFrontierArc(outline,reference){
  const distance=lineIndex([reference]);
  const score=path=>{const sampled=path.filter((_,i)=>i%Math.max(1,Math.floor(path.length/200))===0);return sampled.reduce((s,p)=>s+Math.min(100000,distance(p)),0)/sampled.length;};
  const a=walk(1),b=walk(-1),path=score(a)<score(b)?a:b;
- if(score(path)>15000)throw Error('Selected outline arc leaves the reference frontier');
+ if(score(path)>maximumScoreMetres)throw Error('Selected outline arc leaves the reference frontier: '+JSON.stringify({score:score(path),error:best.error,ends:[path[0],path.at(-1)],vertices:path.length}));
  return {path,error:best.error,reference};
 }
 export function removeArcSegments(collection,keys,skip=()=>false){

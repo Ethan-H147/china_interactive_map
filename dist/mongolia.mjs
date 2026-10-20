@@ -7,7 +7,7 @@ import {adaptiveOpacity,lineSourceOptions,setLayerVisible} from './adaptive-line
 export async function addMongoliaPortal(map,host){
  const home=[[87.7,41.5],[120,52.2]];
  await addWorkerSource(map,'mongolia-portal','data/mongolia-context.bin',{type:'geojson',tolerance:0,maxzoom:18,buffer:128});
- map.addLayer({id:'mongolia-portal-fill',metadata:{atlas:{role:'context'}},type:'fill',source:'mongolia-portal',paint:{'fill-color':'#d7d7d3','fill-opacity':1,'fill-antialias':false}},map.getLayer('province-fill')?'province-fill':undefined);
+ map.addLayer({id:'mongolia-portal-fill',metadata:{atlas:{role:'context',contextCountry:'mongolia'}},type:'fill',source:'mongolia-portal',paint:{'fill-color':'#d7d7d3','fill-opacity':1,'fill-antialias':false}},map.getLayer('province-fill')?'province-fill':undefined);
  const template=document.createElement('template');template.innerHTML=mongoliaPanel;
  const sidebar=template.content.querySelector('aside'),dialog=template.content.querySelector('dialog');
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));document.body.append(dialog);

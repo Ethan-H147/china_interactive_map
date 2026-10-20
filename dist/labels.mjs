@@ -42,6 +42,7 @@ export function render(map,candidates,className){
 
 // Country names use their own land anchors, independent of camera framing and loaded adapters.
 export function countryLabelCandidates(active,allows=()=>true,centerLongitude){
+ if(globalThis.AtlasCountries.countries[active]?.snapshot)return [];
  return globalThis.AtlasCountries.ids.filter(id=>id!==active&&allows(id)).flatMap(id=>globalThis.AtlasCountries.countries[id].labelPoints.map(label=>({...label,country:id,countryLabel:true,center:Number.isFinite(centerLongitude)?[label.center[0]+360*Math.round((centerLongitude-label.center[0])/360),label.center[1]]:label.center})));
 }
 export function createCountryLabels(map,{allows=()=>true}={}){

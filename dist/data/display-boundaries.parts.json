@@ -4,10 +4,9 @@
     "display-boundaries.00.bin",
     "display-boundaries.01.bin",
     "display-boundaries.02.bin",
-    "display-boundaries.03.bin",
-    "display-boundaries.04.bin"
+    "display-boundaries.03.bin"
   ],
-  "compressedBytes": 20626574,
-  "uncompressedBytes": 62154915,
-  "sha256": "5070b7672157197eac960d27836173032327233aad2680e316878e01e5555dc8"
+  "compressedBytes": 13924799,
+  "uncompressedBytes": 46440326,
+  "sha256": "cfc7290f632a552d29041ca3da6026fa2608b406d93e277090c7af3ae562f08c"
 }

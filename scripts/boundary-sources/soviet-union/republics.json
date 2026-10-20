@@ -1,0 +1,325 @@
+{
+  "referenceDate": "1988-01-01",
+  "boundaryDate": "1989-01-01",
+  "censusDate": "1989-01-12",
+  "totalPopulation": 286730817,
+  "provenance": "Republic-level census figures transcribed from the published Demoscope reproduction of the 1989 All-Union census tables; source HTML was inspected but not downloaded. These replace inconsistent regional aggregate totals in the GIS attributes.",
+  "censusSources": [
+    "https://www.demoscope.ru/weekly/ssp/sng89_reg1.php",
+    "https://www.demoscope.ru/weekly/ssp/rus89_reg1.php"
+  ],
+  "capitalSource": "https://countrystudies.us/russia/93.htm",
+  "records": [
+    {
+      "id": "SU-RU",
+      "ssr": "РСФСР",
+      "en": "Russian SFSR",
+      "ru": "РСФСР",
+      "population": 147400537,
+      "urban": 108425580,
+      "rural": 38974957,
+      "capital": "Moscow",
+      "capitalRu": "Москва",
+      "center": [
+        37.62,
+        55.75
+      ],
+      "flagMatch": "Russian",
+      "aliases": [
+        "Russia",
+        "RSFSR",
+        "Russian Soviet Federative Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-UA",
+      "ssr": "УССР",
+      "en": "Ukrainian SSR",
+      "ru": "Украинская ССР",
+      "population": 51706742,
+      "urban": 34587662,
+      "rural": 17119080,
+      "capital": "Kiev",
+      "capitalRu": "Киев",
+      "center": [
+        30.52,
+        50.45
+      ],
+      "flagMatch": "Ukrainian",
+      "aliases": [
+        "Ukraine",
+        "Kyiv",
+        "Ukrainian Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-BY",
+      "ssr": "БССР",
+      "en": "Byelorussian SSR",
+      "ru": "Белорусская ССР",
+      "population": 10199709,
+      "urban": 6678585,
+      "rural": 3521124,
+      "capital": "Minsk",
+      "capitalRu": "Минск",
+      "center": [
+        27.56,
+        53.9
+      ],
+      "flagMatch": "Byelorussian",
+      "aliases": [
+        "Belarus",
+        "Belarusian SSR",
+        "Byelorussian Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-UZ",
+      "ssr": "УзССР",
+      "en": "Uzbek SSR",
+      "ru": "Узбекская ССР",
+      "population": 19905156,
+      "urban": 8110784,
+      "rural": 11794372,
+      "capital": "Tashkent",
+      "capitalRu": "Ташкент",
+      "center": [
+        69.24,
+        41.31
+      ],
+      "flagMatch": "Uzbek",
+      "aliases": [
+        "Uzbekistan",
+        "Uzbek Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-KZ",
+      "ssr": "КазССР",
+      "en": "Kazakh SSR",
+      "ru": "Казахская ССР",
+      "population": 16536511,
+      "urban": 9465351,
+      "rural": 7071160,
+      "capital": "Alma-Ata",
+      "capitalRu": "Алма-Ата",
+      "center": [
+        76.89,
+        43.24
+      ],
+      "flagMatch": "Kazakh",
+      "aliases": [
+        "Kazakhstan",
+        "Almaty",
+        "Kazakh Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-GE",
+      "ssr": "ГрузССР",
+      "en": "Georgian SSR",
+      "ru": "Грузинская ССР",
+      "population": 5443359,
+      "urban": 3035748,
+      "rural": 2407611,
+      "capital": "Tbilisi",
+      "capitalRu": "Тбилиси",
+      "center": [
+        44.8,
+        41.72
+      ],
+      "flagMatch": "Georgian",
+      "aliases": [
+        "Georgia",
+        "Georgian Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-AZ",
+      "ssr": "АзССР",
+      "en": "Azerbaijan SSR",
+      "ru": "Азербайджанская ССР",
+      "population": 7037867,
+      "urban": 3789985,
+      "rural": 3247882,
+      "capital": "Baku",
+      "capitalRu": "Баку",
+      "center": [
+        49.87,
+        40.41
+      ],
+      "flagMatch": "Azerbaijan",
+      "aliases": [
+        "Azerbaijan",
+        "Azerbaijani SSR",
+        "Azerbaijan Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-LT",
+      "ssr": "ЛитССР",
+      "en": "Lithuanian SSR",
+      "ru": "Литовская ССР",
+      "population": 3689779,
+      "urban": 2509311,
+      "rural": 1180468,
+      "capital": "Vilnius",
+      "capitalRu": "Вильнюс",
+      "center": [
+        25.28,
+        54.69
+      ],
+      "flagMatch": "Lithuanian",
+      "aliases": [
+        "Lithuania",
+        "Lithuanian Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-MD",
+      "ssr": "МССР",
+      "en": "Moldavian SSR",
+      "ru": "Молдавская ССР",
+      "population": 4337592,
+      "urban": 2036407,
+      "rural": 2301185,
+      "capital": "Kishinev",
+      "capitalRu": "Кишинёв",
+      "center": [
+        28.83,
+        47.01
+      ],
+      "flagMatch": "Moldavian",
+      "aliases": [
+        "Moldova",
+        "Chisinau",
+        "Chișinău",
+        "Moldovan SSR",
+        "Moldavian Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-LV",
+      "ssr": "ЛатССР",
+      "en": "Latvian SSR",
+      "ru": "Латвийская ССР",
+      "population": 2680029,
+      "urban": 1905911,
+      "rural": 774118,
+      "capital": "Riga",
+      "capitalRu": "Рига",
+      "center": [
+        24.11,
+        56.95
+      ],
+      "flagMatch": "Latvian",
+      "aliases": [
+        "Latvia",
+        "Latvian Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-KG",
+      "ssr": "КиргССР",
+      "en": "Kirghiz SSR",
+      "ru": "Киргизская ССР",
+      "population": 4290442,
+      "urban": 1640889,
+      "rural": 2649553,
+      "capital": "Frunze",
+      "capitalRu": "Фрунзе",
+      "center": [
+        74.59,
+        42.87
+      ],
+      "flagMatch": "Kirghiz",
+      "aliases": [
+        "Kyrgyzstan",
+        "Bishkek",
+        "Kyrgyz SSR",
+        "Kirghiz Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-TJ",
+      "ssr": "ТаджССР",
+      "en": "Tajik SSR",
+      "ru": "Таджикская ССР",
+      "population": 5108576,
+      "urban": 1668110,
+      "rural": 3440466,
+      "capital": "Dushanbe",
+      "capitalRu": "Душанбе",
+      "center": [
+        68.78,
+        38.56
+      ],
+      "flagMatch": "Tajik",
+      "aliases": [
+        "Tajikistan",
+        "Tajik Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-AM",
+      "ssr": "АрмССР",
+      "en": "Armenian SSR",
+      "ru": "Армянская ССР",
+      "population": 3287677,
+      "urban": 2229540,
+      "rural": 1058137,
+      "capital": "Yerevan",
+      "capitalRu": "Ереван",
+      "center": [
+        44.51,
+        40.18
+      ],
+      "flagMatch": "Armenian",
+      "aliases": [
+        "Armenia",
+        "Armenian Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-TM",
+      "ssr": "ТуркССР",
+      "en": "Turkmen SSR",
+      "ru": "Туркменская ССР",
+      "population": 3533925,
+      "urban": 1603517,
+      "rural": 1930408,
+      "capital": "Ashkhabad",
+      "capitalRu": "Ашхабад",
+      "center": [
+        58.38,
+        37.96
+      ],
+      "flagMatch": "Turkmen",
+      "aliases": [
+        "Turkmenistan",
+        "Ashgabat",
+        "Turkmen Soviet Socialist Republic"
+      ]
+    },
+    {
+      "id": "SU-EE",
+      "ssr": "ЭстССР",
+      "en": "Estonian SSR",
+      "ru": "Эстонская ССР",
+      "population": 1572916,
+      "urban": 1125975,
+      "rural": 446941,
+      "capital": "Tallinn",
+      "capitalRu": "Таллин",
+      "center": [
+        24.75,
+        59.44
+      ],
+      "flagMatch": "Estonian",
+      "aliases": [
+        "Estonia",
+        "Estonian Soviet Socialist Republic"
+      ]
+    }
+  ]
+}

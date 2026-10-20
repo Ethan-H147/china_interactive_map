@@ -12,7 +12,7 @@ fs.mkdirSync(snapshot,{recursive:true});
 const base='https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/';
 // Explicit selection avoids filling the map with every available tributary.
 const rivers=new Set(['Tuotuo','Tongtian','Jinsha','Chang Jiang','Yangtze','Huang','Nanpan','Hongshui','Xun','Xi','Bei','Dong','Heilong Jiang','Amur','Songhua','Di’er Songhua','Nen','Ussuri','Liao','Xiliao','Huai','Hai','Yongding','Han','Min','Fuchun','Lancang','Za','Nu','Yarlung','Maquan','Tarim','Yarkant','Aksu','Ile','Künes','Ertix','Jialing','Yalong','Gan','Xiang','Yuan','Wei','Yalu']);
-const lakes=new Set(['Qinghai Hu','Poyang Hu','Dongting Hu','Tai Hu','Hongze Hu','Hulun Nuur','Bosten Hu','Nam Co','Siling Co','Chao Hu','Lake Khanka','Weishan Hu','Ebinur Hu','Ngoring Hu','Gyaring Hu','Yamzho Yumco','Mapam Yumco','Tangra Yumco','Xinanjiang Shuiku','Danjiangkou Shuiku']);
+const lakes=new Set(['Qinghai Hu','Poyang Hu','Dongting Hu','Tai Hu','Hongze Hu','Hulun Nuur','Bosten Hu','Nam Co','Siling Co','Chao Hu','Weishan Hu','Ebinur Hu','Ngoring Hu','Gyaring Hu','Yamzho Yumco','Mapam Yumco','Tangra Yumco','Xinanjiang Shuiku','Danjiangkou Shuiku']);
 const sources=[];
 async function selectedSource(kind,names){
   const filename=`ne_10m_${kind}.geojson`,url=base+filename,file=new URL(filename,snapshot);
@@ -23,6 +23,7 @@ async function selectedSource(kind,names){
     fs.writeFileSync(file,JSON.stringify(data));
   }
   const bytes=fs.readFileSync(file),data=JSON.parse(bytes);
+  data.features=data.features.filter(f=>names.has(f.properties.name));
   sources.push({url,snapshot:path.basename(file.pathname),sha256:createHash('sha256').update(bytes).digest('hex'),selection:[...names]});
   return data;
 }
@@ -71,7 +72,7 @@ const clipped=await mapshaper.applyCommands('-i rivers.json -clip mask.json -o r
 const features=JSON.parse(clipped['rivers.json']).features.map(f=>({...f,properties:{kind:'river',name:f.properties.name,sourceId:f.properties.dissolve,rank:f.properties.scalerank}}));
 // Estuary channels reach open water and must not be clipped by the land mask.
 features.push({type:'Feature',properties:{kind:'river',name:'Yangtze',sourceId:'osm-relation-9392345',rank:1},geometry:{type:'MultiLineString',coordinates:estuaryLines}});
-// Show the entire water body for the shared international lake, Khanka.
+// Permanent cross-border lake holes are separate from this optional overlay.
 features.push(...lakeData.features.map(f=>({...f,properties:{kind:'lake',name:f.properties.name_en||f.properties.name,zh:f.properties.name_zh,sourceId:String(f.properties.ne_id),rank:f.properties.scalerank}})));
 const dishuiFile=new URL('dishui-lake.geojson',snapshot),dishuiBytes=fs.readFileSync(dishuiFile),dishui=JSON.parse(dishuiBytes);
 features.push(dishui);
@@ -85,7 +86,7 @@ fs.writeFileSync(new URL('dist/data/river-boundary-report.json',root),JSON.strin
 // another difference from the administrative geometry at close zoom levels.
 const json=JSON.stringify(collection);
 fs.writeFileSync(new URL('dist/data/major-water.bin',root),gzipSync(json,{level:9}));
-const metadata={source:'Natural Earth and OpenStreetMap contributors',release:'Natural Earth 5.1.2; OSM snapshot '+yangtzeSource.properties.retrieved,license:'ODbL 1.0; underlying Natural Earth features are public domain',licenseUrl:'https://opendatacommons.org/licenses/odbl/1-0/',coordinateSystem:'WGS84',scale:'Natural Earth 1:10,000,000 with mapped OSM lower Yangtze and Dishui Lake',coverage:'Selected major rivers, lakes and reservoirs in China. Natural Earth river courses are clipped to the existing China extent with a 5 km corridor for international border rivers. The lower Yangtze and its estuary branches continue to open water using OpenStreetMap; these are not clipped to land. Lake Khanka is shown in full. Dishui Lake retains its mapped water edge and interior islands. These features are for geographic context, not current water levels.',sources,riverSections:features.filter(f=>f.properties.kind==='river').length,lakes:features.filter(f=>f.properties.kind==='lake').length};
+const metadata={source:'Natural Earth and OpenStreetMap contributors',release:'Natural Earth 5.1.2; OSM snapshot '+yangtzeSource.properties.retrieved,license:'ODbL 1.0; underlying Natural Earth features are public domain',licenseUrl:'https://opendatacommons.org/licenses/odbl/1-0/',coordinateSystem:'WGS84',scale:'Natural Earth 1:10,000,000 with mapped OSM lower Yangtze and Dishui Lake',coverage:'Selected major rivers, lakes and reservoirs in China. Natural Earth river courses are clipped to the existing China extent with a 5 km corridor for international border rivers. The lower Yangtze and its estuary branches continue to open water using OpenStreetMap; these are not clipped to land. Dishui Lake retains its mapped water edge and interior islands. These features are for geographic context, not current water levels.',sources,riverSections:features.filter(f=>f.properties.kind==='river').length,lakes:features.filter(f=>f.properties.kind==='lake').length};
 metadata.reconciliation={report:'data/river-boundary-report.json',originalOverlay:'data/major-water-original.bin',method:aligned.report.method,alignedKilometres:aligned.report.alignedKilometres};
 fs.writeFileSync(new URL('dist/data/major-water-sources.json',root),JSON.stringify(metadata,null,2)+'\n');
 console.log(JSON.stringify({riverSections:metadata.riverSections,lakes:metadata.lakes,compressedBytes:gzipSync(json,{level:9}).length}));

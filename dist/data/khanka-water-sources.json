@@ -1,0 +1,47 @@
+{
+  "retrieved": "2026-10-20",
+  "water": {
+    "url": "https://nominatim.openstreetmap.org/search?q=Lake%20Khanka&format=jsonv2&polygon_geojson=1&limit=1",
+    "relation": 1125603,
+    "provider": "OpenStreetMap contributors",
+    "license": "ODbL 1.0",
+    "licenseURL": "https://www.openstreetmap.org/copyright"
+  },
+  "satellite": {
+    "provider": "Esri World Imagery",
+    "url": "https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/export?bbox=131.94%2C44.49%2C132.9%2C45.38&bboxSR=4326&imageSR=4326&size=1600%2C1600&format=png&f=json",
+    "extent": {
+      "xmin": 131.94,
+      "ymin": 44.45499999999999,
+      "xmax": 132.9,
+      "ymax": 45.415,
+      "spatialReference": {
+        "wkid": 4326,
+        "latestWkid": 4326
+      }
+    },
+    "comparison": "artifacts/border-lake-research/khanka-shoreline-comparison.png",
+    "method": "Detailed mapped shoreline compared with visible water edge in satellite imagery; reservoir/lake level and capture dates vary."
+  },
+  "politicalBoundary": "Existing atlas China outline retained across the lake; no sovereignty or administrative border changes.",
+  "files": {
+    "osm-khanka.json.gz": {
+      "sha256": "48701c37586cdaa1ef977cb9a01ba6159f0fb9db2f34705694443ef1fb1260c1"
+    },
+    "china-political-reference.bin": {
+      "sha256": "9a7d68c397d08b6ce3f35b58a35538132479a5c457f192bc2409e382465ff6e2"
+    },
+    "frontier.json": {
+      "sha256": "e6248b0c0510695fc5112d8d427ef743318a8c7dde93d10f6de6c9338c86e883"
+    },
+    "atlas-reference/first.bin": {
+      "sha256": "000afd7af99fc9209a0fa32eeec67f2360f92b96e3aa80913e957370d5e66cc8"
+    },
+    "atlas-reference/second/RU-PRI.bin": {
+      "sha256": "a2853cc8b39d6864127fd037350ff24aa1b22291b50f1e45a0449aaf0be2f9e9"
+    },
+    "atlas-reference/international.bin": {
+      "sha256": "c83dfbd8ff4c0e37db96052459a0553168aeb25615b8c29be34d1e28907ff9f4"
+    }
+  }
+}

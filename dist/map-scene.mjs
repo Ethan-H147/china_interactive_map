@@ -35,13 +35,13 @@ export function provinceOpacity(visible,opacity=1){
 export const getMapScene=map=>scenes.get(map);
 export function createMapScene(map){
  if(scenes.has(map))return scenes.get(map);
- const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty'].map(key=>[key,map[key].bind(map)]));
- const entries=new Map();let satellite={visible:false,opacity:1};
+ const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty','setLayoutProperty'].map(key=>[key,map[key].bind(map)]));
+ const entries=new Map();let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[];
  const layers=()=>map.getStyle()?.layers||[];
  const describe=layer=>{
   const atlas=layer.metadata?.atlas||{},role=atlas.role||defaults[layer.type];
   if(!(role in layerBands))throw Error('Declare an atlas layer role for '+layer.id);
-  return {type:layer.type,role,paint:clone(layer.paint||{}),satellite:atlas.satellite??{},rendered:{}};
+  return {type:layer.type,role,contextCountry:atlas.contextCountry,paint:clone(layer.paint||{}),satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
  };
  const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
  function anchor(id,role,before){
@@ -65,13 +65,14 @@ export function createMapScene(map){
   }
   return out;
  }
+ const visibility=(id,entry)=>snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
  function render(id,entry){
   for(const [key,value] of Object.entries(paint(entry)))if(!same(entry.rendered[key],value)){native.setPaintProperty(id,key,value);entry.rendered[key]=clone(value);}
  }
  map.addLayer=function(definition,before){
   if(map.getLayer(definition.id))throw Error('Layer already exists: '+definition.id);
   const entry=describe(definition),rendered=paint(entry);
-  native.addLayer({...definition,paint:rendered},anchor(definition.id,entry.role,before));
+  native.addLayer({...definition,layout:{...definition.layout,visibility:visibility(definition.id,entry)},paint:rendered},anchor(definition.id,entry.role,before));
   entries.set(definition.id,entry);entry.rendered=clone(rendered);return map;
  };
  map.moveLayer=function(id,before){
@@ -85,7 +86,9 @@ export function createMapScene(map){
   else entry.paint[key]=clone(value);
   render(id,entry);return map;
  };
+ map.setLayoutProperty=function(id,key,value,...options){const entry=entries.get(id);if(key==='visibility'&&entry){entry.visibility=value||'visible';return native.setLayoutProperty(id,key,visibility(id,entry),...options);}return native.setLayoutProperty(id,key,value,...options);};
  const scene={
+  setSnapshot(id,{replaceContexts=[]}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts))return;snapshot=id;snapshotContexts=[...replaceContexts];for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));},
   setSatellite(visible,opacity=1){
    const next={visible:!!visible,opacity:Math.max(0,Math.min(1,opacity))};
    if(same(next,satellite))return;satellite=next;

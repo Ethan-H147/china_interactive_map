@@ -16,3 +16,5 @@
 
 .quiz-insets:has(>.quiz-inset:nth-child(3)){height:248px;grid-template-columns:1fr 1fr}.quiz-insets:has(>.quiz-inset:nth-child(3)) .quiz-inset:nth-child(n+3){border-top:1px solid #93a3b8}.quiz-insets:has(>.quiz-inset:nth-child(3)) .quiz-inset:nth-child(3){border-left:0}
 @media(max-width:760px){.quiz-insets:has(>.quiz-inset:nth-child(3)){height:184px}}
+
+.quiz-inset[data-status=target] path{fill:#d4ad55;stroke:#926b16;stroke-width:2}.quiz-color-toggle{margin-top:20px}.quiz-level-choice{margin-bottom:22px}.quiz-level-choice select{width:100%}

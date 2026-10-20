@@ -1,0 +1,37 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "35 municipalities and seven independent state cities (42 local governments), with 586 town and rural-parish subdivisions. Full-resolution State Address Register October 2026 geometry. Varakļāni merged into Madona on 1 July 2025; the revised Madona unit uses code 0038001. Official 2026 population/land area, and published 2023 municipal GDP on the revised structure. The new Carnikava town/parish split has no separately verified January 2026 population and retains no invented split counts. State cities do not acquire duplicate children. Town/parish polygons include settlements, so separate duplicate city dots are not added.",
+  "counts": {
+    "1": 42,
+    "2": 586
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "boundaries": {
+      "title": "State Land Service of Latvia · State Address Register spatial data, October 2026",
+      "url": "https://data.gov.lv/dati/dataset/varis-atvertie-dati/resource/b643b1b3-223f-4394-9beb-18524f8b0b82",
+      "license": "CC BY 4.0",
+      "date": "2026-10-12"
+    },
+    "population": {
+      "title": "Central Statistical Bureau of Latvia · IRS051, resident population on current 2026 territorial units",
+      "url": "https://api.stat.gov.lv/api/v2/tables/IRS051/metadata?lang=en"
+    },
+    "gdp": {
+      "title": "CSB Latvia · IKR060, GDP and GDP per capita, 2023, revised municipality structure",
+      "url": "https://api.stat.gov.lv/api/v2/tables/IKR060/metadata?lang=en"
+    },
+    "alignment": {
+      "title": "Display edge reconciliation",
+      "report": [
+        {
+          "country": "latvia",
+          "other": "EST",
+          "runs": 21,
+          "maxEndpointDisplacementMetres": 1363.8866685366954
+        }
+      ],
+      "note": "Detailed child polygons share the same outer display edge as their parent; Baltic mutual edges are reconciled together; Estonia’s lake frontier comes from the separate official full administrative-border layer. This is a display alignment, not a legal boundary determination."
+    }
+  }
+}

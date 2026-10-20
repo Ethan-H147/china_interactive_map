@@ -57,6 +57,6 @@ const band=await command(fc([...cells].map(k=>{const [x,y]=k.split(',').map(Numb
 // neighbours were matched to.
 const chinaLand=await command(fc(china.map(f=>shape('china',f.geometry))),'-dissolve2 country');
 const clipped=await command(fc([...chinaLand,...drawn.map(f=>shape(f.properties.country||'',f.geometry))]),'-clip band.json',{'band.json':fc(band)});
-const features=clipped.map(f=>({type:'Feature',properties:{country:f.properties.country||''},geometry:f.geometry}));
+const features=clipped.filter(f=>f.properties.country!=='vietnam').map(f=>({type:'Feature',properties:{country:f.properties.country||''},geometry:f.geometry}));
 fs.writeFileSync('dist/data/china-neighbours.bin',gzipSync(JSON.stringify(fc(features)),{level:9}));
 console.log('China neighbours:',features.map(f=>f.properties.country).join(', '),';',(fs.statSync('dist/data/china-neighbours.bin').size/1048576).toFixed(2),'MB');

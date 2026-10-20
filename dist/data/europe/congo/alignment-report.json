@@ -1,0 +1,400 @@
+[
+  {
+    "pair": "COG-COD",
+    "runs": [
+      {
+        "id": "CG-D-NA",
+        "edges": 26
+      },
+      {
+        "id": "CG-D-08",
+        "edges": 187
+      },
+      {
+        "id": "CG-D-07",
+        "edges": 316
+      },
+      {
+        "id": "CG-D-11",
+        "edges": 419
+      },
+      {
+        "id": "CG-D-01",
+        "edges": 165
+      },
+      {
+        "id": "CG-D-02",
+        "edges": 12
+      },
+      {
+        "id": "CG-D-09",
+        "edges": 27
+      },
+      {
+        "id": "CG-D-DL",
+        "edges": 103
+      },
+      {
+        "id": "CG-D-CO",
+        "edges": 174
+      }
+    ],
+    "maxEndpointDisplacementMetres": 4049.984815055747
+  },
+  {
+    "pair": "AGO-NAM",
+    "runs": [
+      {
+        "id": "AO-M-24-18",
+        "edges": 759
+      },
+      {
+        "id": "AO-M-26-10",
+        "edges": 7
+      },
+      {
+        "id": "AO-M-26-12",
+        "edges": 49
+      },
+      {
+        "id": "AO-M-26-13",
+        "edges": 253
+      },
+      {
+        "id": "AO-M-26-16",
+        "edges": 12
+      },
+      {
+        "id": "AO-M-26-21",
+        "edges": 6
+      },
+      {
+        "id": "AO-M-26-23",
+        "edges": 5
+      },
+      {
+        "id": "AO-M-27-12",
+        "edges": 274
+      },
+      {
+        "id": "AO-M-27-13",
+        "edges": 239
+      },
+      {
+        "id": "AO-M-27-16",
+        "edges": 18
+      },
+      {
+        "id": "AO-M-30-12",
+        "edges": 436
+      },
+      {
+        "id": "AO-M-30-14",
+        "edges": 16
+      },
+      {
+        "id": "AO-M-30-18",
+        "edges": 69
+      }
+    ],
+    "maxEndpointDisplacementMetres": 2981.294947206723
+  },
+  {
+    "pair": "AGO-COD",
+    "runs": [
+      {
+        "id": "AO-M-10-10",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-11",
+        "edges": 49
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 45
+      },
+      {
+        "id": "AO-M-10-14",
+        "edges": 34
+      },
+      {
+        "id": "AO-M-10-15",
+        "edges": 45
+      },
+      {
+        "id": "AO-M-10-16",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-18",
+        "edges": 325
+      },
+      {
+        "id": "AO-M-10-19",
+        "edges": 73
+      }
+    ],
+    "maxEndpointDisplacementMetres": 3641.3893774095864
+  },
+  {
+    "pair": "AGO-COD",
+    "runs": [
+      {
+        "id": "AO-M-11-10",
+        "edges": 115
+      },
+      {
+        "id": "AO-M-11-14",
+        "edges": 18
+      },
+      {
+        "id": "AO-M-11-15",
+        "edges": 82
+      },
+      {
+        "id": "AO-M-11-15",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-11-15",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-11-18",
+        "edges": 267
+      },
+      {
+        "id": "AO-M-11-19",
+        "edges": 13
+      },
+      {
+        "id": "AO-M-11-19",
+        "edges": 4
+      },
+      {
+        "id": "AO-M-11-19",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-12-15",
+        "edges": 28
+      },
+      {
+        "id": "AO-M-12-26",
+        "edges": 27
+      },
+      {
+        "id": "AO-M-12-26",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-12-28",
+        "edges": 318
+      },
+      {
+        "id": "AO-M-12-28",
+        "edges": 9
+      },
+      {
+        "id": "AO-M-12-29",
+        "edges": 218
+      },
+      {
+        "id": "AO-M-17-14",
+        "edges": 195
+      },
+      {
+        "id": "AO-M-17-24",
+        "edges": 116
+      },
+      {
+        "id": "AO-M-18-10",
+        "edges": 774
+      },
+      {
+        "id": "AO-M-18-11",
+        "edges": 268
+      },
+      {
+        "id": "AO-M-18-12",
+        "edges": 3
+      },
+      {
+        "id": "AO-M-18-17",
+        "edges": 5
+      },
+      {
+        "id": "AO-M-18-19",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-18-19",
+        "edges": 129
+      },
+      {
+        "id": "AO-M-18-21",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-18-21",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-18-23",
+        "edges": 226
+      },
+      {
+        "id": "AO-M-18-24",
+        "edges": 16
+      },
+      {
+        "id": "AO-M-18-25",
+        "edges": 363
+      },
+      {
+        "id": "AO-M-19-14",
+        "edges": 395
+      },
+      {
+        "id": "AO-M-19-17",
+        "edges": 257
+      },
+      {
+        "id": "AO-M-19-19",
+        "edges": 121
+      },
+      {
+        "id": "AO-M-29-10",
+        "edges": 513
+      },
+      {
+        "id": "AO-M-29-14",
+        "edges": 24
+      },
+      {
+        "id": "AO-M-29-17",
+        "edges": 117
+      },
+      {
+        "id": "AO-M-29-18",
+        "edges": 97
+      }
+    ],
+    "maxEndpointDisplacementMetres": 12840.9556322582
+  },
+  {
+    "pair": "AGO-COG",
+    "runs": [
+      {
+        "id": "AO-M-10-12",
+        "edges": 44
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-12",
+        "edges": 3
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 14
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 4
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 3
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 1
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-13",
+        "edges": 2
+      },
+      {
+        "id": "AO-M-10-17",
+        "edges": 25
+      },
+      {
+        "id": "AO-M-10-18",
+        "edges": 15
+      },
+      {
+        "id": "AO-M-10-19",
+        "edges": 87
+      }
+    ],
+    "maxEndpointDisplacementMetres": 4032.915340196518
+  }
+]

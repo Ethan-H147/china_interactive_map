@@ -1,0 +1,32 @@
+{
+  "retrieved": "2026-10-20",
+  "ring": [
+    [
+      23.041622,
+      54.340974
+    ],
+    [
+      23.038004,
+      54.331465
+    ],
+    [
+      23.032216,
+      54.320148
+    ],
+    [
+      23.041622,
+      54.340974
+    ]
+  ],
+  "verification": {
+    "provider": "Esri World Imagery",
+    "bbox": [
+      23.025,
+      54.315,
+      23.05,
+      54.347
+    ],
+    "description": "Forest and farmland, not a lake. The thin triangular hole is an old/new boundary overlay remainder outside the current Lithuanian polygon."
+  },
+  "license": "Natural Earth public domain; Lithuanian boundary-derived overlay retains CC BY 4.0 attribution."
+}

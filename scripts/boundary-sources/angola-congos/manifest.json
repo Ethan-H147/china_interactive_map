@@ -1,0 +1,141 @@
+{
+  "retrieved": "2026-10-19",
+  "files": {
+    "angola-item.json": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/b0669d5f0d4f4c078c79a1a96a8eb5b5?f=json",
+      "sha256": "6a0a9285496042a80696451c41b1753bb11646d3c97a1fd7d9e9c776c8e7a2b3",
+      "bytes": 1969
+    },
+    "angola-provinces-metadata.json": {
+      "url": "https://services9.arcgis.com/P9hzJERM3hbkT6mx/arcgis/rest/services/Nova_DPA_2024_Ajustada_INE/FeatureServer/2?f=json",
+      "sha256": "6fc026d5e6aec12edc17d9c0071ada32b30508b5fffff9b5a9e104d09e21428a",
+      "bytes": 10549
+    },
+    "angola-provinces.geojson": {
+      "url": "https://services9.arcgis.com/P9hzJERM3hbkT6mx/arcgis/rest/services/Nova_DPA_2024_Ajustada_INE/FeatureServer/2/query?f=geojson&where=1%3D1&outFields=*&outSR=4326&geometryPrecision=6",
+      "credit": "INE — Cartografia Censitária 2024, public ArcGIS service",
+      "license": "Publicly accessible GIS reference; no explicit open-data license stated by publisher",
+      "year": 2025,
+      "sha256": "40b5da54a9fcb0f9df3e11464b628abf65d891c246aa1a6fb85e049dc0ec1820",
+      "bytes": 11888190
+    },
+    "angola-municipalities-metadata.json": {
+      "url": "https://services9.arcgis.com/P9hzJERM3hbkT6mx/arcgis/rest/services/Nova_DPA_2024_Ajustada_INE/FeatureServer/0?f=json",
+      "sha256": "4bdc45ff0c0feb2f5ea08e1a3ca6d9bac9f84d3418562a43bd5adaca582c94b1",
+      "bytes": 10934
+    },
+    "angola-municipalities.geojson": {
+      "url": "https://services9.arcgis.com/P9hzJERM3hbkT6mx/arcgis/rest/services/Nova_DPA_2024_Ajustada_INE/FeatureServer/0/query?f=geojson&where=1%3D1&outFields=*&outSR=4326&geometryPrecision=6",
+      "credit": "INE — Cartografia Censitária 2024, public ArcGIS service",
+      "license": "Publicly accessible GIS reference; no explicit open-data license stated by publisher",
+      "year": 2025,
+      "sha256": "1023382f119f66e247fc171bd1bb9de64f7c27ed480c6ce176da9643670263b2",
+      "bytes": 40477603
+    },
+    "cog-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cog",
+      "sha256": "c12485db36dc112717ea70d365b7f4d9ff2786d56b638d0c1ea24c9075ea1076",
+      "bytes": 35380
+    },
+    "cog-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/762e2263-c6f1-4ef6-a3bc-48338a6484a8/resource/c8722e6c-218e-4e33-a52b-a791bef3bb46/download/cog_admin_boundaries.geojson.zip",
+      "credit": "OCHA HDX COD-AB; source credits retained in metadata",
+      "license": "CC BY 3.0 IGO",
+      "year": 2017,
+      "sha256": "0d5e0be8828b2b3e0c945e071acdf299de2234c7e2a6c8649a45daf82b0c8001",
+      "bytes": 543681
+    },
+    "cod-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cod",
+      "sha256": "13c9d4dcaf825236e7a8f4a2e103e8919706d55fa7b505f7d4fec9918fdd2999",
+      "bytes": 60134
+    },
+    "cod-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/f42132b9-8cc6-4201-b020-9259c56e8868/resource/97260e2b-65b1-41e3-aef2-fb0e6874e406/download/cod_admin_boundaries.geojson.zip",
+      "credit": "OCHA HDX COD-AB; source credits retained in metadata",
+      "license": "CC BY 3.0 IGO",
+      "year": 2019,
+      "sha256": "e4103dfa6e594e1e247d476f0c40431c6ab1774666ea914724a64248248a6181",
+      "bytes": 25462633
+    },
+    "cod-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-cod",
+      "sha256": "56406a5671648e672d2a4d4a18d9ca4f8a1b2061ca6ebc0c5374f5b64408d35d",
+      "bytes": 23675
+    },
+    "congo-laws2024.pdf": {
+      "url": "https://www.sgg.cg/JO/2024/congo-jo-2024-42.pdf",
+      "credit": "Journal officiel de la République du Congo, 17 October 2024",
+      "license": "Official administrative facts with attribution",
+      "year": 2024,
+      "sha256": "44e306df8c64cffac4734b4483bd16d90307659a9dbe65bc2700f964342000dc",
+      "bytes": 7573393
+    },
+    "angola-census.html": {
+      "url": "https://censo2024.ine.gov.ao/",
+      "credit": "INE Angola, official 2024 census",
+      "license": "Published statistical facts with attribution",
+      "year": 2024,
+      "sha256": "1663ce60259c468bfd293d452f5097e42d08f17a504054f0eba60cc8bf388e8c",
+      "bytes": 185493
+    },
+    "angola-census2024.pdf": {
+      "url": "https://www.ine.gov.ao/Arquivos/arquivosCarregados/Carregados/Publicacao_638992698392586291.pdf",
+      "credit": "INE Angola, Resultados Definitivos RGPH 2024",
+      "license": "Published statistical facts with attribution",
+      "year": 2024,
+      "sha256": "337e184c20d2b33fdb3eb557abe9bfe18e15bec64a4a3abd2e567b504a498fb7",
+      "bytes": 19802369
+    },
+    "flag-ao.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Flag_of_Angola.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "c1b3fb116d39434b4426bae3b90c2162ff5aa257a585eaf8535ae8412776dc33",
+      "bytes": 2227
+    },
+    "flag-cg.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Flag_of_the_Republic_of_the_Congo.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "79b0117de76bf4ba824f21dc1320584d9f74337b2290e4ac1c12eefd72820c5c",
+      "bytes": 204
+    },
+    "flag-cd.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "c862865e11e9bac140fa7d4a3b99c131bfedc98e178d747ac3fe8a0341dd3945",
+      "bytes": 542
+    },
+    "cod-population2024.xlsx": {
+      "url": "https://data.humdata.org/dataset/d1160fa9-1d58-4f96-9df5-edbff2e80895/resource/9509b41f-efb2-4305-ac43-1e735e3efc60/download/drc-hpc-projection-population-2024.xlsx",
+      "credit": "OCHA DRC, HPC 2024 planning population projection",
+      "license": "CC BY 3.0 IGO",
+      "year": 2024,
+      "sha256": "7ee3a7b0997df2c17d93de3de5e5179798d6acdd27b3014f6324a7fa87e3089f",
+      "bytes": 611970
+    },
+    "worldbank-AGO.json": {
+      "url": "https://api.worldbank.org/v2/country/AGO/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2024:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "4cef8de20947aa486f41ad4ad01e831485472f856f7bae348c1dea464056dc9a",
+      "bytes": 1328
+    },
+    "worldbank-COG.json": {
+      "url": "https://api.worldbank.org/v2/country/COG/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2024:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "dfc6a8085a7710a729db0a44dcc211f3aa774f4440d0003ccdc42f6ccad00987",
+      "bytes": 1354
+    },
+    "worldbank-COD.json": {
+      "url": "https://api.worldbank.org/v2/country/COD/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2024:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "a3a15f27d26044d11bc99453c63eaeac982df748e0feb6b09996cf8df0f8398d",
+      "bytes": 1390
+    }
+  }
+}

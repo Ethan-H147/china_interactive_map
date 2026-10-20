@@ -1,0 +1,660 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-19",
+  "coverage": "Reference provincial capitals and regional seats for the historical administrative scheme. Wartime and late-1949 government relocations are not animated. Points are approximate city locations, not surveyed government-office sites. Northeastern seats may be nominal rather than ROC-controlled. Historical Liaoyuan is Shuangliao. Kulun denotes Ulaanbaatar in the earlier Outer Mongolia reference.",
+  "sources": {
+    "administrativeReference": {
+      "title": "Capital column in the user-provided administrative reference",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    "jiangsuArchive": {
+      "title": "Jiangsu Provincial Archives: provincial government moved to Zhenjiang in 1929",
+      "url": "https://dajs.gov.cn/art/2022/11/10/art_123_9708.html"
+    },
+    "jilinGazetteer": {
+      "title": "Jilin provincial gazetteer: capital remained Jilin before the 1954 move to Changchun",
+      "url": "https://dfz.jl.gov.cn/zsjl/201111/t20111122_5216469.html"
+    },
+    "mapReference": {
+      "title": "Academia Sinica GIS: Republic of China New Map, 1947",
+      "url": "https://gis.sinica.edu.tw/showwmts/index.php?l=China_Map_1947&s=ccts",
+      "note": "Historical map reference; point coordinates are approximate city locations."
+    }
+  },
+  "records": [
+    {
+      "id": "ROC-CAPITAL-JIANGXI",
+      "parent": "ROC-JIANGXI",
+      "en": "Nanchang",
+      "local": "南昌",
+      "names": {
+        "zh-Hant": "南昌"
+      },
+      "center": [
+        115.89,
+        28.68
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-TIBET",
+      "parent": "ROC-TIBET",
+      "en": "Lhasa",
+      "local": "拉薩",
+      "names": {
+        "zh-Hant": "拉薩"
+      },
+      "center": [
+        91.13,
+        29.65
+      ],
+      "aliases": [],
+      "role": "Regional seat",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-NINGXIA",
+      "parent": "ROC-NINGXIA",
+      "en": "Yinchuan",
+      "local": "銀川",
+      "names": {
+        "zh-Hant": "銀川"
+      },
+      "center": [
+        106.23,
+        38.48
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-XIKANG",
+      "parent": "ROC-XIKANG",
+      "en": "Kangding",
+      "local": "康定",
+      "names": {
+        "zh-Hant": "康定"
+      },
+      "center": [
+        101.96,
+        30.05
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-YUNNAN",
+      "parent": "ROC-YUNNAN",
+      "en": "Kunming",
+      "local": "昆明",
+      "names": {
+        "zh-Hant": "昆明"
+      },
+      "center": [
+        102.71,
+        25.04
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-HEJIANG",
+      "parent": "ROC-HEJIANG",
+      "en": "Jiamusi",
+      "local": "佳木斯",
+      "names": {
+        "zh-Hant": "佳木斯"
+      },
+      "center": [
+        130.37,
+        46.8
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-CHAHAR",
+      "parent": "ROC-CHAHAR",
+      "en": "Zhangyuan",
+      "local": "張垣",
+      "names": {
+        "zh-Hant": "張垣"
+      },
+      "center": [
+        114.88,
+        40.82
+      ],
+      "aliases": [
+        "Zhangjiakou",
+        "張家口"
+      ],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-JEHOL",
+      "parent": "ROC-JEHOL",
+      "en": "Chengde",
+      "local": "承德",
+      "names": {
+        "zh-Hant": "承德"
+      },
+      "center": [
+        117.94,
+        40.97
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-SHANXI",
+      "parent": "ROC-SHANXI",
+      "en": "Taiyuan",
+      "local": "太原",
+      "names": {
+        "zh-Hant": "太原"
+      },
+      "center": [
+        112.55,
+        37.87
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-GUIZHOU",
+      "parent": "ROC-GUIZHOU",
+      "en": "Guiyang",
+      "local": "貴陽",
+      "names": {
+        "zh-Hant": "貴陽"
+      },
+      "center": [
+        106.71,
+        26.58
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-HENAN",
+      "parent": "ROC-HENAN",
+      "en": "Kaifeng",
+      "local": "開封",
+      "names": {
+        "zh-Hant": "開封"
+      },
+      "center": [
+        114.35,
+        34.8
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-ANHUI",
+      "parent": "ROC-ANHUI",
+      "en": "Hefei",
+      "local": "合肥",
+      "names": {
+        "zh-Hant": "合肥"
+      },
+      "center": [
+        117.28,
+        31.86
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-HUBEI",
+      "parent": "ROC-HUBEI",
+      "en": "Wuchang",
+      "local": "武昌",
+      "names": {
+        "zh-Hant": "武昌"
+      },
+      "center": [
+        114.31,
+        30.55
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-NENJIANG",
+      "parent": "ROC-NENJIANG",
+      "en": "Qiqihar",
+      "local": "齊齊哈爾",
+      "names": {
+        "zh-Hant": "齊齊哈爾"
+      },
+      "center": [
+        123.92,
+        47.35
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-HUNAN",
+      "parent": "ROC-HUNAN",
+      "en": "Changsha",
+      "local": "長沙",
+      "names": {
+        "zh-Hant": "長沙"
+      },
+      "center": [
+        112.94,
+        28.2
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-SUIYUAN",
+      "parent": "ROC-SUIYUAN",
+      "en": "Guisui",
+      "local": "歸綏",
+      "names": {
+        "zh-Hant": "歸綏"
+      },
+      "center": [
+        111.67,
+        40.82
+      ],
+      "aliases": [
+        "Hohhot",
+        "呼和浩特"
+      ],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-SHAANXI",
+      "parent": "ROC-SHAANXI",
+      "en": "Xi’an",
+      "local": "西安",
+      "names": {
+        "zh-Hant": "西安"
+      },
+      "center": [
+        108.94,
+        34.26
+      ],
+      "aliases": [
+        "Xi'an"
+      ],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-XINGAN",
+      "parent": "ROC-XINGAN",
+      "en": "Hailar",
+      "local": "海拉爾",
+      "names": {
+        "zh-Hant": "海拉爾"
+      },
+      "center": [
+        119.74,
+        49.21
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-SICHUAN",
+      "parent": "ROC-SICHUAN",
+      "en": "Chengdu",
+      "local": "成都",
+      "names": {
+        "zh-Hant": "成都"
+      },
+      "center": [
+        104.07,
+        30.67
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-GANSU",
+      "parent": "ROC-GANSU",
+      "en": "Lanzhou",
+      "local": "蘭州",
+      "names": {
+        "zh-Hant": "蘭州"
+      },
+      "center": [
+        103.83,
+        36.06
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-QINGHAI",
+      "parent": "ROC-QINGHAI",
+      "en": "Xining",
+      "local": "西寧",
+      "names": {
+        "zh-Hant": "西寧"
+      },
+      "center": [
+        101.78,
+        36.62
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-XINJIANG",
+      "parent": "ROC-XINJIANG",
+      "en": "Dihua",
+      "local": "迪化",
+      "names": {
+        "zh-Hant": "迪化"
+      },
+      "center": [
+        87.62,
+        43.82
+      ],
+      "aliases": [
+        "Ürümqi",
+        "Urumqi",
+        "烏魯木齊"
+      ],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-ZHEJIANG",
+      "parent": "ROC-ZHEJIANG",
+      "en": "Hangzhou",
+      "local": "杭州",
+      "names": {
+        "zh-Hant": "杭州"
+      },
+      "center": [
+        120.15,
+        30.27
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-HEILONGJIANG",
+      "parent": "ROC-HEILONGJIANG",
+      "en": "Bei’an",
+      "local": "北安",
+      "names": {
+        "zh-Hant": "北安"
+      },
+      "center": [
+        126.48,
+        48.24
+      ],
+      "aliases": [
+        "Bei'an"
+      ],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-LIAONING",
+      "parent": "ROC-LIAONING",
+      "en": "Shenyang",
+      "local": "瀋陽",
+      "names": {
+        "zh-Hant": "瀋陽"
+      },
+      "center": [
+        123.43,
+        41.8
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-HEBEI",
+      "parent": "ROC-HEBEI",
+      "en": "Qingyuan",
+      "local": "清苑",
+      "names": {
+        "zh-Hant": "清苑"
+      },
+      "center": [
+        115.49,
+        38.87
+      ],
+      "aliases": [
+        "Baoding",
+        "保定"
+      ],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-GUANGXI",
+      "parent": "ROC-GUANGXI",
+      "en": "Guilin",
+      "local": "桂林",
+      "names": {
+        "zh-Hant": "桂林"
+      },
+      "center": [
+        110.3,
+        25.28
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-SHANDONG",
+      "parent": "ROC-SHANDONG",
+      "en": "Jinan",
+      "local": "濟南",
+      "names": {
+        "zh-Hant": "濟南"
+      },
+      "center": [
+        117.02,
+        36.67
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-FUJIAN",
+      "parent": "ROC-FUJIAN",
+      "en": "Fuzhou",
+      "local": "福州",
+      "names": {
+        "zh-Hant": "福州"
+      },
+      "center": [
+        119.3,
+        26.08
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-JIANGSU",
+      "parent": "ROC-JIANGSU",
+      "en": "Zhenjiang",
+      "local": "鎮江",
+      "names": {
+        "zh-Hant": "鎮江"
+      },
+      "center": [
+        119.45,
+        32.2
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-GUANGDONG",
+      "parent": "ROC-GUANGDONG",
+      "en": "Guangzhou",
+      "local": "廣州",
+      "names": {
+        "zh-Hant": "廣州"
+      },
+      "center": [
+        113.26,
+        23.13
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-TAIWAN",
+      "parent": "ROC-TAIWAN",
+      "en": "Taipei",
+      "local": "臺北",
+      "names": {
+        "zh-Hant": "臺北"
+      },
+      "center": [
+        121.56,
+        25.04
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-LIAOBEI",
+      "parent": "ROC-LIAOBEI",
+      "en": "Liaoyuan",
+      "local": "遼源",
+      "names": {
+        "zh-Hant": "遼源"
+      },
+      "center": [
+        123.5,
+        43.51
+      ],
+      "aliases": [
+        "Shuangliao",
+        "雙遼"
+      ],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "note": "Historical Liaoyuan is present-day Shuangliao, not the present-day city named Liaoyuan."
+    },
+    {
+      "id": "ROC-CAPITAL-JILIN",
+      "parent": "ROC-JILIN",
+      "en": "Jilin",
+      "local": "吉林",
+      "names": {
+        "zh-Hant": "吉林"
+      },
+      "center": [
+        126.55,
+        43.84
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-SONGJIANG",
+      "parent": "ROC-SONGJIANG",
+      "en": "Mudanjiang",
+      "local": "牡丹江",
+      "names": {
+        "zh-Hant": "牡丹江"
+      },
+      "center": [
+        129.6,
+        44.58
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-ANDONG",
+      "parent": "ROC-ANDONG",
+      "en": "Tonghua",
+      "local": "通化",
+      "names": {
+        "zh-Hant": "通化"
+      },
+      "center": [
+        125.94,
+        41.73
+      ],
+      "aliases": [],
+      "role": "Provincial capital",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-HAINAN",
+      "parent": "ROC-HAINAN",
+      "en": "Haikou",
+      "local": "海口",
+      "names": {
+        "zh-Hant": "海口"
+      },
+      "center": [
+        110.33,
+        20.03
+      ],
+      "aliases": [],
+      "role": "Regional seat",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions"
+    },
+    {
+      "id": "ROC-CAPITAL-MONGOLIA",
+      "parent": "ROC-MONGOLIA",
+      "en": "Kulun",
+      "local": "庫倫",
+      "names": {
+        "zh-Hant": "庫倫"
+      },
+      "center": [
+        106.92,
+        47.92
+      ],
+      "aliases": [
+        "Ulaanbaatar",
+        "Urga",
+        "烏蘭巴托"
+      ],
+      "role": "Regional seat",
+      "source": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "note": "Historical reference seat only; Outer Mongolia was not under ROC control."
+    }
+  ]
+}

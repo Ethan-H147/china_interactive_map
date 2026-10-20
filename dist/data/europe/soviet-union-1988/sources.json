@@ -1,0 +1,34 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "15 union republics. Flag/reference date: 1 January 1988. Historical GIS: 1 January 1989, dissolved from 155 regional source features; Snake Island assigned to the Ukrainian SSR. Republic census population: 12 January 1989. Boundaries are a historical administrative reference, not current sovereignty or control. The Baltic incorporation was not internationally universally recognized.",
+  "counts": {
+    "1": 15
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "boundaries": {
+      "title": "MSU Digital Atlas · USSR administrative divisions, 1 January 1989",
+      "url": "https://www.hist.msu.ru/departments/8616/projects/maps/files/USSR_1989_1.zip",
+      "page": "https://www.hist.msu.ru/departments/8616/projects/maps/eng/",
+      "credit": "Valetov, T. Ya. \"Digital Atlas of the Administrative Division of Russia / the USSR in the 20th Century\". In: Digital Humanities Projects Parade, ed. A. Yu. Volodin. Siberian Federal University Press, 2025.",
+      "license": "Free to use for research and other non-commercial purposes; attribution requested. Not CC0.",
+      "licenseUrl": "https://www.hist.msu.ru/departments/8616/projects/maps/eng/",
+      "sha256": "7a1c62510bc695f8142a5cbda9175903c47e69e559814758f9f4b7c77e5da097",
+      "retained": "scripts/boundary-sources/soviet-union/USSR_1989_1.zip"
+    },
+    "census": {
+      "title": "1989 All-Union census · republic population (Demoscope table reproduction)",
+      "urls": [
+        "https://www.demoscope.ru/weekly/ssp/sng89_reg1.php",
+        "https://www.demoscope.ru/weekly/ssp/rus89_reg1.php"
+      ],
+      "retained": "scripts/boundary-sources/soviet-union/republics.json",
+      "date": "1989-01-12"
+    },
+    "capitals": {
+      "title": "Library of Congress Russia Country Study · Table 4, former Soviet republics",
+      "url": "https://countrystudies.us/russia/93.htm",
+      "note": "Used for capital names, not the inconsistent population column."
+    }
+  }
+}

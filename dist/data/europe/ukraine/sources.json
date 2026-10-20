@@ -1,0 +1,58 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "27 first-level divisions: 24 oblasts, Autonomous Republic of Crimea, Kyiv and Sevastopol. Sevastopol’s full administrative extent replaces the source’s urban footprint using a 2017 OSM/geoBoundaries polygon clipped to the same land silhouette; territorial sea is excluded. Also 126 mainland raions under the 2020 reform, from the September 2025 OCHA COD-AB v05 reference reviewed December 2025. Crimea is included as internationally recognised Ukrainian territory, with a visible UN-sourced occupation note. No live front line is implied. Crimea child boundaries are omitted because of source nesting exceptions; Kyiv and Sevastopol are not duplicated as raions. The Chornobyl exclusion-zone pseudo-unit is omitted. Regional population estimates are dated 1 January 2022, before the full-scale invasion, and exclude unavailable Crimea/Sevastopol values; no current regional figures are invented. National figures are separately sourced World Bank estimates. Inland lakes/reservoirs are removed using the retained Natural Earth reference, which may predate local shoreline changes. The drained Kakhovka Reservoir polygon is explicitly excluded from the old water mask; remaining river/floodplain detail is not presented as a current survey.",
+  "counts": {
+    "1": 27,
+    "2": 126
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "ukr-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ukr",
+      "sha256": "bac0ac82b65489c78ab9fb5c6f3c542441849c5db99742cb6553b344e67d26c0",
+      "bytes": 60824
+    },
+    "ukr-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ukr",
+      "sha256": "f3ea7d9a8e93c93630b172d60e135a950d30a25943bea2b88de8e8bf3d24727d",
+      "bytes": 4625
+    },
+    "ukr-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/d23f529f-31e4-4021-a65b-13987e5cfb42/resource/681beb86-391b-4a08-8140-ca52e80fcdce/download/ukr_admin_boundaries.geojson.zip",
+      "credit": "State Scientific Production Enterprise \"Kartographia\"",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "year": 2025,
+      "sha256": "b8604bc983e1e54a6f7c10186a5cf8474cb8ed49eb038b4bef8091d92c286790",
+      "bytes": 83953609
+    },
+    "crimea-un.html": {
+      "url": "https://ukraine.ohchr.org/en/reports/crimea-and-occupied-territory-secretary-general",
+      "credit": "United Nations Human Rights Monitoring Mission in Ukraine",
+      "license": "UN report links with attribution",
+      "sha256": "abd51ea191aa4b141f72bdee29093d7cc19a18336a330615eb00cd2bc871a4e8",
+      "bytes": 69131
+    },
+    "ukr-population2022.pdf": {
+      "url": "https://www.ukrstat.gov.ua/druk/publicat/kat_u/2022/zb/05/zb_Nas.pdf",
+      "credit": "State Statistics Service of Ukraine, Number of Present Population at 1 January 2022",
+      "license": "Official published statistical facts",
+      "year": 2022,
+      "tls": "Official public server certificate expired at retrieval; retained PDF signature and checksum verified",
+      "bytes": 1352790,
+      "sha256": "33295ced92921aa5f068935ad4cf2dbdbdadf86a6f30572f75b332da5f893ebc"
+    },
+    "ukr-geoboundaries-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/UKR/ADM1/",
+      "sha256": "7f1d639bb2cafd0a6168933d223a53c852676f89e7e8042dee43b85653d3ff47",
+      "bytes": 1743
+    },
+    "ukr-sevastopol-reference.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/UKR/ADM1/geoBoundaries-UKR-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "sha256": "b2f9f4ad2e9be5888523219c0bb46a24332ead16b46305409098048fd361a2d6",
+      "bytes": 3919902
+    }
+  }
+}

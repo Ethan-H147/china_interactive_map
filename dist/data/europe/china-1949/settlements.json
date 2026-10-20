@@ -1,0 +1,293 @@
+{
+  "records": [
+    {
+      "id": "ROC-CITY-NANJING",
+      "code": "ROC-CITY-NANJING",
+      "en": "Nanjing",
+      "local": "南京",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "南京"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Nanking"
+      ],
+      "center": [
+        118.78,
+        32.05
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "National capital; a special municipality. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-SHANGHAI",
+      "code": "ROC-CITY-SHANGHAI",
+      "en": "Shanghai",
+      "local": "上海",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "上海"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [],
+      "center": [
+        121.47,
+        31.23
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Special municipality. The city boundary changed substantially during the Republican period. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-HARBIN",
+      "code": "ROC-CITY-HARBIN",
+      "en": "Harbin",
+      "local": "哈爾濱",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "哈爾濱"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Haerbin"
+      ],
+      "center": [
+        126.64,
+        45.76
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Nominal ROC special municipality; under Communist administration from 1946. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-SHENYANG",
+      "code": "ROC-CITY-SHENYANG",
+      "en": "Shenyang",
+      "local": "瀋陽",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "瀋陽"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Mukden"
+      ],
+      "center": [
+        123.43,
+        41.8
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Special municipality; changed hands during the civil war. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-DALIAN",
+      "code": "ROC-CITY-DALIAN",
+      "en": "Dalian",
+      "local": "大連",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "大連"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Dairen"
+      ],
+      "center": [
+        121.61,
+        38.91
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Nominal ROC special municipality; the area was under Soviet administration in the late 1940s. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-BEIPING",
+      "code": "ROC-CITY-BEIPING",
+      "en": "Beiping",
+      "local": "北平",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "北平"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Peking",
+        "Beijing"
+      ],
+      "center": [
+        116.4,
+        39.91
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "The historical name Beiping is used here; renamed Beijing in 1949. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-TIANJIN",
+      "code": "ROC-CITY-TIANJIN",
+      "en": "Tianjin",
+      "local": "天津",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "天津"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Tientsin"
+      ],
+      "center": [
+        117.2,
+        39.13
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Special municipality. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-CHONGQING",
+      "code": "ROC-CITY-CHONGQING",
+      "en": "Chongqing",
+      "local": "重慶",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "重慶"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Chungking"
+      ],
+      "center": [
+        106.55,
+        29.56
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Special municipality; its historical area was much smaller than the present municipality. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-HANKOU",
+      "code": "ROC-CITY-HANKOU",
+      "en": "Hankou",
+      "local": "漢口",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "漢口"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Hankow",
+        "Wuhan"
+      ],
+      "center": [
+        114.29,
+        30.59
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Separate historical special municipality, not the whole of present-day Wuhan. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-GUANGZHOU",
+      "code": "ROC-CITY-GUANGZHOU",
+      "en": "Guangzhou",
+      "local": "廣州",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "廣州"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Canton"
+      ],
+      "center": [
+        113.26,
+        23.13
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Special municipality. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-XIAN",
+      "code": "ROC-CITY-XIAN",
+      "en": "Xi’an",
+      "local": "西安",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "西安"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Xi'an",
+        "Sian"
+      ],
+      "center": [
+        108.94,
+        34.26
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Special municipality from 1948. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    },
+    {
+      "id": "ROC-CITY-QINGDAO",
+      "code": "ROC-CITY-QINGDAO",
+      "en": "Qingdao",
+      "local": "青島",
+      "localLang": "zh-Hant",
+      "names": {
+        "zh-Hant": "青島"
+      },
+      "kind": "Special municipality",
+      "kindLocal": "院轄市",
+      "aliases": [
+        "Tsingtao"
+      ],
+      "center": [
+        120.38,
+        36.07
+      ],
+      "minzoom": 3.2,
+      "parentId": null,
+      "statusNote": "Special municipality. Location point only; historical municipal boundaries have not been reconstructed.",
+      "statusSource": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)#Administrative_divisions",
+      "statusSourceLabel": " Administrative reference"
+    }
+  ]
+}

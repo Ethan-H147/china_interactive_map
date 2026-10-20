@@ -1,0 +1,113 @@
+{
+  "retrieved": "2026-10-19",
+  "files": {
+    "khm-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-khm",
+      "sha256": "aa98a53d738aef6680b9d11af4c38b03d3d8e0e08d97bfbacbf78d741a619c10",
+      "bytes": 20044
+    },
+    "khm-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-khm",
+      "sha256": "9aa66e5c299c13f06c85e9cbc8dff25c4b16ac374eb3620a52b48f54667486b6",
+      "bytes": 31954
+    },
+    "ukr-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ukr",
+      "sha256": "bac0ac82b65489c78ab9fb5c6f3c542441849c5db99742cb6553b344e67d26c0",
+      "bytes": 60824
+    },
+    "ukr-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ukr",
+      "sha256": "f3ea7d9a8e93c93630b172d60e135a950d30a25943bea2b88de8e8bf3d24727d",
+      "bytes": 4625
+    },
+    "khm-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/7472f7e0-3deb-44d9-bd36-38237c666a2e/resource/2926d754-10b7-4742-889c-eb37aedd1d03/download/khm_admin_boundaries.geojson.zip",
+      "credit": "Department of Geography of the Ministry of Land Management, Urbanization and Construction in 2008, WFP",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "year": 2018,
+      "sha256": "09b349284b10c38626387787ca183e110734f2b2822740bad2559ff952abd041",
+      "bytes": 3102706
+    },
+    "ukr-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/d23f529f-31e4-4021-a65b-13987e5cfb42/resource/681beb86-391b-4a08-8140-ca52e80fcdce/download/ukr_admin_boundaries.geojson.zip",
+      "credit": "State Scientific Production Enterprise \"Kartographia\"",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "year": 2025,
+      "sha256": "b8604bc983e1e54a6f7c10186a5cf8474cb8ed49eb038b4bef8091d92c286790",
+      "bytes": 83953609
+    },
+    "khm-population2024.csv": {
+      "url": "https://data.humdata.org/dataset/770386b0-d7c6-4ea7-abbc-beccac38c192/resource/b7476c8d-33d7-4460-9a9a-6d63ba738056/download/khm_admpop_adm1_2024.csv",
+      "credit": "Cambodia National Institute of Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "year": 2024,
+      "sha256": "e60ec6f5ec6559d86a9bb9ad937adcfef5c19e698cdeb08185fcf37fea5aa484",
+      "bytes": 9138
+    },
+    "worldbank-KHM.json": {
+      "url": "https://api.worldbank.org/v2/country/KHM/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2024:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "6c5e4db907f4642c2f938ae19f6ff183d8faf515e23002ec4273c603420822a5",
+      "bytes": 1340
+    },
+    "worldbank-UKR.json": {
+      "url": "https://api.worldbank.org/v2/country/UKR/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2024:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "937f7ace461694d57eab7782662e2039499f5adc411211ad8d72ddd889fd566d",
+      "bytes": 1330
+    },
+    "flag-kh.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "d3e7df02fdb48d08e6784f4c3eead2c026fe458a8cdea8d09c78cded471eac35",
+      "bytes": 10374
+    },
+    "flag-ua.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "77e3eb29bbc7d4bae51f2e959d4ef4656eb1e34484cf772b4081a22f4af5256b",
+      "bytes": 182
+    },
+    "crimea-un.html": {
+      "url": "https://ukraine.ohchr.org/en/reports/crimea-and-occupied-territory-secretary-general",
+      "credit": "United Nations Human Rights Monitoring Mission in Ukraine",
+      "license": "UN report links with attribution",
+      "sha256": "abd51ea191aa4b141f72bdee29093d7cc19a18336a330615eb00cd2bc871a4e8",
+      "bytes": 69131
+    },
+    "khm-gazetteer.html": {
+      "url": "https://db.ncdd.gov.kh/gazetteer/view/index.castle",
+      "credit": "Cambodia NCDD official Gazetteer",
+      "license": "Published administrative facts with attribution",
+      "sha256": "05b922e6ea96d8ff4caecd48cc2b553b86e20717884ce48c50c716a0d03a47fd",
+      "bytes": 249559
+    },
+    "ukr-population2022.pdf": {
+      "url": "https://www.ukrstat.gov.ua/druk/publicat/kat_u/2022/zb/05/zb_Nas.pdf",
+      "credit": "State Statistics Service of Ukraine, Number of Present Population at 1 January 2022",
+      "license": "Official published statistical facts",
+      "year": 2022,
+      "tls": "Official public server certificate expired at retrieval; retained PDF signature and checksum verified",
+      "bytes": 1352790,
+      "sha256": "33295ced92921aa5f068935ad4cf2dbdbdadf86a6f30572f75b332da5f893ebc"
+    },
+    "ukr-geoboundaries-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/UKR/ADM1/",
+      "sha256": "7f1d639bb2cafd0a6168933d223a53c852676f89e7e8042dee43b85653d3ff47",
+      "bytes": 1743
+    },
+    "ukr-sevastopol-reference.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/UKR/ADM1/geoBoundaries-UKR-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "sha256": "b2f9f4ad2e9be5888523219c0bb46a24332ead16b46305409098048fd361a2d6",
+      "bytes": 3919902
+    }
+  }
+}

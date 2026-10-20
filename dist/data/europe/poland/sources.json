@@ -1,0 +1,34 @@
+{
+  "retrieved": "2026-10-20",
+  "coverage": "All 16 voivodeships, 380 counties (314 powiats and 66 city-counties), and 2,479 gminas. Current PRG geometry and official 1 January 2026 population and area; 2024 regional GDP. Municipal geometry cleaned and simplified together at 2 metres; parent geometry dissolved from the same shared edges. City and rural gminas sharing a seat remain separate.",
+  "counts": {
+    "1": 16,
+    "2": 380,
+    "3": 2479
+  },
+  "processing": "Official PRG gmina geometry cleaned and simplified together at 2 metres, then dissolved by exact TERYT parents. All three levels share the same edges. Complete shared international arcs replace the neighboring display edges; mapped lagoon water is carved out separately. Detailed gmina geometry loads per selected county.",
+  "sources": [
+    {
+      "title": "GUGiK · National Register of Boundaries (PRG), 20 October 2026",
+      "url": "https://www.geoportal.gov.pl/en/data/national-register-of-boundaries/",
+      "license": "Free reuse, source attribution",
+      "service": "https://ogcapi.geoportal.gov.pl/res/ims/maps/PRG/apiFeatures/collections?f=json"
+    },
+    {
+      "title": "Statistics Poland · Area and population in the territorial profile in 2026",
+      "url": "https://stat.gov.pl/obszary-tematyczne/ludnosc/ludnosc/powierzchnia-i-ludnosc-w-przekroju-terytorialnym-w-2026-r-,7,23.html"
+    },
+    {
+      "title": "Statistics Poland · GDP and gross value added by regions, 2024, published 30 September 2026",
+      "url": "https://stat.gov.pl/obszary-tematyczne/rachunki-narodowe/rachunki-regionalne/produkt-krajowy-brutto-i-wartosc-dodana-brutto-w-przekroju-regionow-w-2024-r-,7,9.html"
+    },
+    {
+      "title": "Cross-border lagoon shorelines · © OpenStreetMap contributors, ODbL 1.0",
+      "url": "https://www.openstreetmap.org/relation/8140878",
+      "otherRelations": [
+        6962883,
+        7645796
+      ]
+    }
+  ]
+}

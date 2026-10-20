@@ -133,3 +133,13 @@ fs.writeFileSync(out+'/sources.json',JSON.stringify({retrieved:'2026-10-08',boun
 console.log('Russia complete',records.filter(r=>r.level===1).length,records.filter(r=>r.level===2).length);
 
 
+
+// Keep the newer Baltic exterior display edges and lake shoreline on Russia rebuilds.
+if(fs.existsSync('scripts/boundary-sources/baltic-frontiers/sources.json'))await (await import('./reconcile-baltic-russia.mjs')).reconcileBalticRussia();
+
+if(fs.existsSync('scripts/boundary-sources/khanka/sources.json'))await (await import('./khanka-water.mjs')).reconcileKhanka();
+
+// Reapply the pinned shared Tumen/Yalu arcs after rebuilding upstream country geometry.
+if(fs.existsSync('scripts/boundary-sources/korean-frontiers/resolved.bin'))await import('./reconcile-korean-frontiers.mjs');
+
+if(fs.existsSync('scripts/boundary-sources/china-russia/resolved.bin')){await (await import('./china-russia-frontier.mjs')).reconcileChinaRussia();await (await import('./khanka-water.mjs')).reconcileKhanka();}

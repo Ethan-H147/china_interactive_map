@@ -1,0 +1,84 @@
+{
+  "url": "https://api.stat.gov.lv/api/v2/tables/IKR060/data?lang=en&outputFormat=json-stat2",
+  "query": {
+    "selection": [
+      {
+        "variableCode": "INDICATOR",
+        "valueCodes": [
+          "B1GQ"
+        ]
+      },
+      {
+        "variableCode": "AREA",
+        "valueCodes": [
+          "LV",
+          "LV00A",
+          "LV00C",
+          "LV00B",
+          "LV009",
+          "LV005",
+          "LV0001000",
+          "LV0002000",
+          "LV0003000",
+          "LV0031010",
+          "LV0004000",
+          "LV0005000",
+          "LV0040010",
+          "LV0006000",
+          "LV0054010",
+          "LV0007000",
+          "LV0020000",
+          "LV0021000",
+          "LV0022000",
+          "LV0023000",
+          "LV0024000",
+          "LV0025000",
+          "LV0026000",
+          "LV0027000",
+          "LV0028000",
+          "LV0029000",
+          "LV0030000",
+          "LV0031000",
+          "LV0032000",
+          "LV0033000",
+          "LV0034000",
+          "LV0035000",
+          "LV0036000",
+          "LV0037000",
+          "LV0038001",
+          "LV0039000",
+          "LV0040000",
+          "LV0041000",
+          "LV0042000",
+          "LV0043000",
+          "LV0044000",
+          "LV0045000",
+          "LV0046000",
+          "LV0047000",
+          "LV0048000",
+          "LV0049000",
+          "LV0051000",
+          "LV0052000",
+          "LV0053000",
+          "LV0054000",
+          "LV0056000",
+          "LVZ"
+        ]
+      },
+      {
+        "variableCode": "ContentsCode",
+        "valueCodes": [
+          "IKR060",
+          "IKR062",
+          "IKR061"
+        ]
+      },
+      {
+        "variableCode": "TIME",
+        "valueCodes": [
+          "2023"
+        ]
+      }
+    ]
+  }
+}

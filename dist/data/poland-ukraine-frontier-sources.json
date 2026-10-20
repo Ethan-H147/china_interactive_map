@@ -1,0 +1,16 @@
+{
+  "source": "../poland/frontiers.bin",
+  "boundary": "GUGiK PRG national boundary, 20 October 2026",
+  "method": "The complete Polish administrative frontier is shared with Ukrainian regions, districts and overview; one continuous international stroke is rendered by Poland.",
+  "endpoints": [
+    [
+      22.565369,
+      49.08798
+    ],
+    [
+      23.617661,
+      51.507932
+    ]
+  ],
+  "vertices": 5318
+}

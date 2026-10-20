@@ -27,7 +27,8 @@ for(const country of ['korea','mongolia']){
   for(const poly of polygons(f.geometry))for(const ring of poly){let path=[];const flush=()=>{if(path.length>1)paths.push(path);path=[];};
    for(let i=1;i<ring.length;i++){
     const a=ring[i-1],b=ring[i],mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
-    if(nearest(mid)<.02&&nearest(a)<.02&&nearest(b)<.02){if(!path.length)path.push(a);path.push(b);km+=Math.hypot((a[0]-b[0])*Math.cos(mid[1]*Math.PI/180),a[1]-b[1])*111.195;}else flush();
+    // Six-decimal display coordinates can differ from retained source vertices by up to 0.08 m.
+    if(nearest(mid)<.2&&nearest(a)<.2&&nearest(b)<.2){if(!path.length)path.push(a);path.push(b);km+=Math.hypot((a[0]-b[0])*Math.cos(mid[1]*Math.PI/180),a[1]-b[1])*111.195;}else flush();
    }flush();
   }
  }
@@ -36,3 +37,6 @@ for(const country of ['korea','mongolia']){
  console.log(country,Math.round(km)+' km of shared land border');
 }
 fs.writeFileSync('dist/data/shared-context-borders.bin',gzipSync(JSON.stringify(lineData({type:'FeatureCollection',features})),{level:9}));
+
+// Complete shared river arcs and the Tumen junction survive every rebuild.
+(await import('./korean-frontiers.mjs')).preserveKoreanFrontiers();

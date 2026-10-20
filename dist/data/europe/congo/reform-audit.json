@@ -1,0 +1,46 @@
+{
+  "source": "https://www.sgg.cg/JO/2024/congo-jo-2024-42.pdf",
+  "groups": [
+    [
+      "CG-D-DL",
+      "Djoué-Léfini",
+      "Odziba",
+      [
+        "Ignie",
+        "Mayama",
+        "Vindza",
+        "Kimba",
+        "Ngabe"
+      ]
+    ],
+    [
+      "CG-D-NA",
+      "Nkéni-Alima",
+      "Gamboma",
+      [
+        "Gamboma",
+        "Abala",
+        "Allembe",
+        "Ollombo",
+        "Ongogni",
+        "Makotimpoko"
+      ]
+    ],
+    [
+      "CG-D-CO",
+      "Congo-Oubangui",
+      "Mossaka",
+      [
+        "Mossaka",
+        "Bokoma",
+        "Liranga",
+        "Loukolela"
+      ]
+    ]
+  ],
+  "unresolved": [
+    "Kintélé and Île Mbamou transfer to Brazzaville",
+    "New district boundaries; only department groups are exposed"
+  ],
+  "policy": "Reference geometry reconstructed from the 2017 OCHA district polygons using the department membership in Laws 25–27/2024. The 2024 Kintélé and Île Mbamou transfer to Brazzaville is not resolved by this source; nearby Brazzaville and Djoué-Léfini geometry is approximate. Districts are not exposed because post-reform coverage is incomplete."
+}

@@ -12,6 +12,7 @@
 // atlas countries is drawn once. European frontiers come from the Europe build.
 // Usage: node scripts/build-atlas-frontiers.mjs (Natural Earth sources are downloaded once)
 import fs from 'node:fs';
+import '../dist/countries.js';
 import {gzipSync} from 'node:zlib';
 import {lineData} from '../dist/adaptive-lines.mjs';
 import {withoutRetraced} from './channel-lines.mjs';
@@ -20,6 +21,7 @@ import {sources,load,polygons,metres,landIndex,lineIndex,linesOf,countryAt,land,
 
 // Frontiers drawn by their own layers already.
 const existing=lineIndex([
+ ...globalThis.AtlasCountries.byAdapter('europe').filter(id=>globalThis.AtlasCountries.countries[id].map.dedicatedFrontier).flatMap(id=>linesOf(load('dist/data/europe/'+id+'/international.bin'))),
  ...linesOf(load('dist/data/shared-context-borders.bin')),
  ...linesOf(load('dist/data/russia/international.bin')),
  ...['south-africa','botswana','namibia','eswatini','lesotho'].flatMap(c=>linesOf(load(`dist/data/southern-africa/${c}/international.bin`))),
@@ -145,3 +147,16 @@ console.log('Atlas frontiers:',features.length,'pieces,',Math.round(km),'km,',fs
 await (await import('./reconcile-timor-frontier.mjs')).reconcileTimorFrontier();
 
 await (await import('./reconcile-brunei-frontier.mjs')).reconcileBruneiFrontier();
+
+// Myanmar/Laos use complete reconciled shared arcs; their old per-country lines are removed.
+// Restore these on every global rebuild, as for the Timor and Brunei frontiers above.
+(await import('./reconcile-myanmar-laos.mjs')).reconcileMyanmarLaosFrontiers();
+
+(await import('./baltic-junction.mjs')).preserveBalticJunctionStroke();
+
+// A mapped lake shore is not an international frontier across its opposite bank.
+(await import('./baltic-frontier-shores.mjs')).removeBalticShoreFrontiers();
+
+(await import('./korean-frontiers.mjs')).preserveKoreanFrontiers();
+
+if(fs.existsSync('scripts/boundary-sources/china-russia/resolved.bin'))(await import('./china-russia-frontier.mjs')).removeOldChinaRussiaFrontiers();

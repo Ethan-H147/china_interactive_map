@@ -32,6 +32,10 @@ const municipalExtra='dist/data/us-municipal-fotw-flag-sources.json';
 if(fs.existsSync(municipalExtra))Object.values(read(municipalExtra).flags).forEach(add);
 const municipal='dist/data/us-municipal-flag-sources.json';
 if(fs.existsSync(municipal))Object.values(read(municipal).flags).forEach(add);
+const baltic='dist/data/baltic-flag-sources.json';
+if(fs.existsSync(baltic))Object.values(read(baltic).flags).forEach(add);
+const soviet='dist/data/soviet-flag-sources.json';
+if(fs.existsSync(soviet))Object.values(read(soviet).flags).forEach(add);
 const expansion='dist/data/europe-expansion-flag-sources.json';
 if(fs.existsSync(expansion))Object.values(read(expansion).flags).forEach(add);
 // Retained SVG and WebP thumbnail variants share the same sourced original artwork.
@@ -39,6 +43,7 @@ for(const name of fs.readdirSync('dist/vendor').filter(n=>/^flag-.*\.(svg|webp)$
 Object.assign(images,national);
 const cityNamesFile='dist/data/southern-africa/south-africa/place-names-flags.json';
 if(fs.existsSync(cityNamesFile))Object.values(read(cityNamesFile).places).forEach(place=>add(place.flag));
+if(fs.existsSync('dist/data/poland-flag-sources.json'))Object.entries(read('dist/data/poland-flag-sources.json').flags).forEach(([id,flag])=>{if(id==='poland')national[flag.file]=flag;else add(flag);});
 fs.writeFileSync('dist/national-flags.mjs','// Original national artwork and dimensions, independent of thumbnail proportions.\nexport const nationalFlagImages='+JSON.stringify(national)+';\n');
 fs.writeFileSync('dist/data/flag-images.json',JSON.stringify(images));
 console.log('Shared flag image catalogue:',Object.keys(images).length,'sourced flags.');

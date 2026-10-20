@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {load,polygons,landIndex,lineIndex,linesOf,metres} from './geo-index.mjs';import {fc} from './build-regional-dataset.mjs';import {readData} from './read-data.mjs';import {khankaWater} from './khanka-water.mjs';
+const cn=readData('display-boundaries.json'),ru=load('dist/data/russia/first.bin').regions,pl=load('dist/data/europe/poland/first.bin').regions,ua=load('dist/data/europe/ukraine/first.bin').regions,contexts={china:load('dist/data/china-context.bin'),russia:load('dist/data/russia/context.bin'),poland:load('dist/data/europe/poland/context.bin'),ukraine:load('dist/data/europe/ukraine/context.bin')},lake=landIndex(khankaWater().features.flatMap(f=>polygons(f.geometry).flat())),makeLand=d=>landIndex(d.features.flatMap(f=>polygons(f.geometry).flat())),makeEdge=d=>lineIndex(d.features.flatMap(f=>polygons(f.geometry).flat())),detailed={china:cn.provinces,russia:ru,poland:pl,ukraine:ua};
+let samples=0;const errors=[];
+for(const [name,lines,countries]of [['China–Russia',load('scripts/boundary-sources/china-russia/resolved.bin'),['china','russia']],['Poland–Ukraine',load('scripts/boundary-sources/poland-ukraine/resolved.bin'),['poland','ukraine']]]){
+ for(const [view,shapes]of [['detail',detailed],['overview',contexts]]){const land=countries.map(c=>makeLand(shapes[c])),edge=countries.map(c=>makeEdge(shapes[c]));for(const path of linesOf(lines))for(let i=1;i<path.length;i++){
+ const a=path[i-1],b=path[i],m=[(a[0]+b[0])/2,(a[1]+b[1])/2];if(metres(a,b)<20||Math.min(metres(m,path[0]),metres(m,path.at(-1)))<1500||lake(m))continue;
+ const c=Math.cos(m[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],length=Math.hypot(dx,dy);if(!length)continue;
+ for(const side of [-1,1]){const p=[m[0]-dy/length*side*10/111195/c,m[1]+dx/length*side*10/111195];if(lake(p))continue;samples++;const hits=land.map(hit=>hit(p));if(hits.filter(Boolean).length!==1)errors.push({name,view,p,hits});}
+ for(let n=0;n<edge.length;n++)if(edge[n](m)>5)errors.push({name,view,edge:countries[n],p:m,d:edge[n](m)});
+ }}
+}
+console.log('Two-sided shared-border probes',samples,'failures',errors.length,errors.slice(0,8));assert.equal(errors.length,0,'No visible border fill gaps, overlaps or stray outline geometry');
+const islands=load('dist/data/korean-river-islands.bin'),korea=load('dist/data/korea-boundaries.bin'),insideChina=makeLand(cn.provinces),insideKorea=makeLand(korea.countries);for(const f of islands.features){assert(insideChina(f.properties.center));assert(!insideKorea(f.properties.center));}assert(!load('dist/data/shared-context-borders.bin').features.some(f=>f.properties.island));
+for(const country of ['russia','ukraine']){const base=country==='russia'?'dist/data/russia/':'dist/data/europe/ukraine/',cat=load(base+'catalogue.bin');for(const ch of Object.values(cat.chunks))assert.equal(ch.bytes,fs.statSync(base+ch.file).size,'Current chunk size '+ch.file);}
+console.log('Continuous country lines, requested river-island suppression and chunk metadata passed.');

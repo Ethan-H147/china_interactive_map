@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-19",
+  "sources": {
+    "administrativeNames": {
+      "title": "Turkish names (name:tr) of the provinces and districts in OpenStreetMap",
+      "url": "https://www.openstreetmap.org/copyright",
+      "license": "Open Data Commons Open Database License 1.0"
+    },
+    "municipalities": {
+      "url": "https://www.tbb.gov.tr/tr/buyuksehir-ve-il-belediyeleri",
+      "title": "Türkiye Belediyeler Birliği: Büyükşehir ve İl Belediyeleri",
+      "sha256": "a08d04116443d2be252f73722710243514e6371e807b441a8a7d7499a204c865"
+    }
+  },
+  "coverage": {
+    "regions": 12,
+    "provinces": 81,
+    "districts": 973,
+    "cityDots": 82,
+    "municipalNames": 1136
+  },
+  "policy": "Displayed names retain Turkish İ/i and I/ı. ASCII spellings remain search aliases. Municipality names are matched by province code and exact folded locality name in the TBB directory; they identify related municipal governments and do not change administrative polygon types or boundaries."
+}

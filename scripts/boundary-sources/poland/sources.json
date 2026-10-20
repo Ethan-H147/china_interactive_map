@@ -1,0 +1,66 @@
+{
+  "retrieved": "2026-10-20",
+  "sources": [
+    {
+      "title": "GUGiK · National Register of Boundaries (PRG), 20 October 2026",
+      "url": "https://www.geoportal.gov.pl/en/data/national-register-of-boundaries/",
+      "license": "Free reuse, source attribution",
+      "service": "https://ogcapi.geoportal.gov.pl/res/ims/maps/PRG/apiFeatures/collections?f=json"
+    },
+    {
+      "title": "Statistics Poland · Area and population in the territorial profile in 2026",
+      "url": "https://stat.gov.pl/obszary-tematyczne/ludnosc/ludnosc/powierzchnia-i-ludnosc-w-przekroju-terytorialnym-w-2026-r-,7,23.html"
+    },
+    {
+      "title": "Statistics Poland · GDP and gross value added by regions, 2024, published 30 September 2026",
+      "url": "https://stat.gov.pl/obszary-tematyczne/rachunki-narodowe/rachunki-regionalne/produkt-krajowy-brutto-i-wartosc-dodana-brutto-w-przekroju-regionow-w-2024-r-,7,9.html"
+    },
+    {
+      "title": "GUGiK PRG · Internal marine waters, current service extract; Gulf geometry version June 2018",
+      "url": "https://ogcapi.geoportal.gov.pl/res/ims/maps/PRG/apiFeatures/collections/MorskieWodyWewnetrzne/items?f=json&limit=100"
+    },
+    {
+      "title": "Mapped Vistula and Szczecin lagoons · © OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "url": "https://www.openstreetmap.org/relation/8140878",
+      "otherRelations": [
+        6962883,
+        7645796
+      ]
+    }
+  ],
+  "files": {
+    "voivodeships.json.gz": {
+      "sha256": "22630b4970dd838610794ff3098990d5af1a336758a814fff1d35643c6302e1c",
+      "bytes": 3790830
+    },
+    "counties.json.gz": {
+      "sha256": "bb1fe8844cbd353810f556c0591b148bfdc09ba134ccb2da5b87ac8a69ed0f88",
+      "bytes": 19550286
+    },
+    "gminas.json.gz": {
+      "sha256": "19939a5e6c6bb02cc31753761204017d9b83025a1f68ae7acadbe65c162e933a",
+      "bytes": 47121388
+    },
+    "population-area-2026.xlsx": {
+      "sha256": "23ac0140f7c24a9a3d5c6ee335d88d3c6a133bc02d70d856f4e3c07387a1842e",
+      "bytes": 476466
+    },
+    "gdp-2024.xlsx": {
+      "sha256": "da656c7ad94a886198339b9570132d6fb694d6c96f9f8e57daffa728f76b542e",
+      "bytes": 82695
+    },
+    "marine-water.json.gz": {
+      "sha256": "c4054ed2f2aa7a060e8f1b62a2e8c5643d34518603101ca8f4b931cdd270ddc2",
+      "bytes": 433737
+    },
+    "lagoons.json.gz": {
+      "sha256": "69c29b15169650f10e29a713e29a1be03dec1cd42b9201c4bd4b1f80fca3c9b5",
+      "bytes": 165939
+    },
+    "exchange-2024.json": {
+      "sha256": "0b191bf33fd64b6a7ca466caab67abec68c8d6cfdbebdcafe93e3933ed1c8f37",
+      "bytes": 328
+    }
+  }
+}

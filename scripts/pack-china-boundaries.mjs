@@ -13,6 +13,8 @@ import {OVERVIEW_SCALE} from '../dist/china-sources.mjs';
 // The gzip JSON files remain the build inputs. Visitors download this packed copy,
 // which shares each coordinate between provinces, subdivisions, lines and districts,
 // rounded to 1e-7 degrees (dist/china-pack.mjs).
+// Reapply the permanent lake mask after upstream administrative builds.
+await (await import('./khanka-water.mjs')).reconcileKhanka();
 const texts={
  display:readDataText('display-boundaries.json'),
  districts:gunzipSync(fs.readFileSync('dist/data/city-districts.bin')).toString('utf8'),

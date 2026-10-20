@@ -1,0 +1,21 @@
+# Soviet Union historical snapshot
+
+The snapshot opens beside Russia at `#soviet-union-1988` and stays out of the present-day country list. Its flag reference date is **1 January 1988**. Lithuania's Soviet flag is therefore the 1953–1988 version, before restoration of the tricolor in November 1988. All fifteen union republics have their own official flag, population, historical total area, density, capital and searchable English/Russian names. Capital dots select the corresponding republic. Period names include Kiev, Alma-Ata, Kishinev, Frunze and Ashkhabad; modern names remain searchable aliases.
+
+## Sources and dates
+
+- Boundaries: [T. Ya. Valetov / Moscow State University Digital Atlas](https://www.hist.msu.ru/departments/8616/projects/maps/eng/), USSR layer dated **1 January 1989**. The retained shapefile contains 155 regional features. They are dissolved together into fifteen republics; Snake Island's unassigned source feature is assigned to the Ukrainian SSR. Shared source edges are stored once. The date-line geometry is unwrapped eastward so Chukotka does not span the map.
+- Population: **12 January 1989 All-Union census**, [fourteen republics](https://www.demoscope.ru/weekly/ssp/sng89_reg1.php) and [Russian SFSR/USSR totals](https://www.demoscope.ru/weekly/ssp/rus89_reg1.php), reproduced by Demoscope Weekly. The fifteen figures total 286,730,817 in this table revision. Urban/rural counts appear in the population definitions. The GIS's inconsistent regional population sums are not used as republic totals.
+- Areas: rounded historical total areas from the MSU attributes, in thousands of square kilometres. These include inland water and are not current land-area measurements. Density divides the 1989 census population by that reported area.
+- Capitals: [Library of Congress Russia Country Study, Table 4](https://countrystudies.us/russia/93.htm), used for names rather than its inconsistent population column. The fifteen reference points are checked against their republic polygons.
+- Flags: original SVG artwork and public-domain metadata from Wikimedia Commons. Every flag retains its description-page link, dimensions and SHA-256 checksum in `dist/data/soviet-flag-sources.json`; the national flag is recorded with the shared national sources. These are SSR flags, not modern successor-state flags.
+
+## Scope and limitations
+
+The flag date, boundary-source date and census date are stated separately in the interface. The 1989 historical layer supplies the late-Soviet union-republic layout for the 1988 reference; it is not presented as a precise daily reconstruction of effective control. Crimea/Sevastopol are in the Ukrainian SSR; Abkhazia and South Ossetia are inside the Georgian SSR; Nagorno-Karabakh and Nakhichevan are inside the Azerbaijan SSR. Baltic incorporation was not universally recognized internationally. This historical layer does not alter any present-day country dataset. Sub-republic administrative units and economic estimates are not exposed; comparable GDP is not invented from modern values or Soviet net material product.
+
+**Boundary licensing:** MSU permits research and other non-commercial use, with requested attribution. This is not CC0 or an unrestricted commercial-data license. The present implementation is a local educational preview. Attribution: Valetov, T. Ya. “Digital Atlas of the Administrative Division of Russia / the USSR in the 20th Century”. In: *Digital Humanities Projects Parade*, ed. A. Yu. Volodin. Krasnoyarsk: Siberian Federal University Press, 2025.
+
+Rebuild with `npm run build:soviet-snapshot`. Retained source bytes, transcribed census facts, provenance and checksums are under `scripts/boundary-sources/soviet-union/`. Rebuilds use cached flags and the retained archive; they only download missing flag originals. Validate with `npm run test:soviet-snapshot` and `node scripts/browser/run.mjs soviet-snapshot`.
+
+The source splits Chukotka and Wrangel Island at the date line, with projection offsets between the paired cuts. The builder aligns only those four cut runs at 180° and dissolves the pieces before producing land, context and outlines. Historical external borders are retained; the RSFSR is not replaced with modern Russian geometry. The header stripe uses the flag artwork’s #cc0000 field color.

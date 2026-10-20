@@ -1,0 +1,81 @@
+{
+  "retrieved": "2026-10-19",
+  "files": {
+    "luxembourg-population.xlsx": {
+      "url": "https://statistiques.public.lu/dam-assets/fr/donnees-autres-formats/population-et-emploi/etat-de-la-population/B1116.xlsx",
+      "sha256": "f380b060b9875b5f06562369426dcca83d1b0801404bdb20daa420df559087cd"
+    },
+    "luxembourg-population-2026.html": {
+      "url": "https://statistiques.public.lu/fr/actualites/2026/stn15-population-2026.html",
+      "sha256": "b61e3f7a1f3b13bc20f633709c12de22717755e8cd9ecc7d8ed1cc754d2ed32e"
+    },
+    "san-marino-economy.html": {
+      "url": "https://www.statistica.sm/pub1/StatisticaSM/Dati-statistici/Economia.html",
+      "sha256": "26f905e57196acbda88573c5b5759aa13151992725b96e8d1871ecfac4b043fe"
+    },
+    "san-marino-population.xlsx": {
+      "url": "https://www.statistica.sm/pub1/StatisticaSM/dam/jcr%3Af2871962-4ff6-4672-b42a-52fb0d539877/popolazione_residente_per_castello.xlsx",
+      "sha256": "a277a6e7a065057b9f4a57042b190771bc7c15a60c09e4906a13c12f1a946e51"
+    },
+    "monaco-population.html": {
+      "url": "https://www.imsee.mc/Population-et-emploi/Recensement-de-la-population",
+      "sha256": "b76a96234cab3deeb1dc02ef829835f8fbdefbc5579eb4eb4edcfdc7ff6b635d"
+    },
+    "monaco-gdp.html": {
+      "url": "https://www.imsee.mc/Economie-et-Finance/PIB",
+      "sha256": "c99d5cf26c565fdf3db1660d8ff1b5cc51c7b42e28d5286044d9580d3ceae749"
+    },
+    "monaco-gdp-current.html": {
+      "url": "https://imsee.mc/thematiques/economie/pib",
+      "sha256": "4373de32637fd716a32955fa2e7373bf26da974f5d9e20b8ad46339ab3711577"
+    },
+    "monaco-population-current.html": {
+      "url": "https://imsee.mc/thematiques/population/recensement-de-la-population",
+      "sha256": "5b91812b0f1cf565340a6d8e21a288e27dc0f282d29e3b9864e3772dcf72690e"
+    },
+    "monaco-figures-current.html": {
+      "url": "https://imsee.mc/publications/monaco-en-chiffres-edition-2026",
+      "sha256": "4f441a9edfc104b3c63a951b9926bd4f184b805c3bca9432c92ce7432e60900d"
+    },
+    "san-marino-gdp.html": {
+      "url": "https://www.statistica.sm/pub1/StatisticaSM/Dati-statistici/Economia/Contabilit%C3%A0-nazionale.html",
+      "sha256": "df4ca661d3f7cfd733aef0bf35cbd6879ed275cec13e19fe80ff7927da67ed28"
+    },
+    "monaco-gdp-2024.pdf": {
+      "url": "https://imsee.mc/content/download/276254/file/Rapport%20PIB%202024.pdf?inLanguage=fre-FR&version=3",
+      "sha256": "255c6111112c617b086b21e97db2afbdb5f7e10e55065ff3bbed1bc5b0ffacd0"
+    },
+    "monaco-census-2025.pdf": {
+      "url": "https://imsee.mc/content/download/310026/file/Rapport%20Recensement%202025.pdf?inLanguage=fre-FR&version=4",
+      "sha256": "11c0120eb495d800b2072ffe122d7b13707941d8b6ca8da6fe2e79d5fac04308"
+    },
+    "monaco-figures-2026.pdf": {
+      "url": "https://imsee.mc/content/download/313716/file/IMSEE_Magazine_Monaco%20en%20Chiffres%202026_160x240mm_0226-82690-DH_Interactif_Complet%20Light.pdf?inLanguage=fre-FR&version=2",
+      "sha256": "4ee2ea311bf463472bdaa227a5cb6a3d58be6286dbd004c1a73dd5dad41e550c"
+    },
+    "san-marino-indicators.xlsx": {
+      "url": "https://www.statistica.sm/pub1/StatisticaSM/dam/jcr:d2628821-04b7-4ede-9bbd-fb571cfa5764/indicatori_economici_selezionati.xlsx",
+      "sha256": "cade8537f20e3a3dab36fe17cc20fcf25bbc3d42b590737b144cd8b466172c36"
+    },
+    "luxembourg-gdp.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?geo=LU&na_item=B1GQ&unit=CP_MEUR&sinceTimePeriod=2024",
+      "sha256": "76e3a19b60a5f11670adc0577ea5f2a1b0db7ce2c0d3a4cfe106b0a3cb7e1dbc"
+    },
+    "luxembourg-gdp-per-capita.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_pc?geo=LU&na_item=B1GQ&unit=CP_EUR_HAB&sinceTimePeriod=2024",
+      "sha256": "7947c81ba316fed6d65601dd278b7417650a8ec6d484e8fd9f647c5fd105b02b"
+    },
+    "ecb-usd.csv": {
+      "url": "https://data-api.ecb.europa.eu/service/data/EXR/A.USD.EUR.SP00.A?startPeriod=2024&endPeriod=2025&format=csvdata",
+      "sha256": "f0334e90bbdcd3bb35ce19c961d56a7e0f8fa5b609aee3df7aa514214342c3a7"
+    },
+    "san-marino-territory.html": {
+      "url": "https://www.statistica.sm/pub1/StatisticaSM/Dati-statistici/Territorio.html",
+      "sha256": "af349c31a42613b8581ff5bd91161999d1d9c22ba4bebe52c79286392002d20d"
+    },
+    "san-marino-country.pdf": {
+      "url": "https://www.gov.sm/pub2/GovSM/dam/jcr%3A1976abad-99e5-454c-af79-cf0c7de98f6d/Conoscere%20la%20Storia%20della%20Repubblica%20di%20San%20Marino.pdf",
+      "sha256": "d1cae56690e9356d756a92670ff29c3668800d5a47507a8220d8f8c25f8948c9"
+    }
+  }
+}

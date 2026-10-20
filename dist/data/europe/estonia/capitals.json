@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-19",
+  "coverage": "County centres for Estonia and Lithuania; the Latvian national capital is an independent state-city polygon.",
+  "records": [
+    {
+      "id": "EE-0045-CAPITAL",
+      "parent": "EE-0045",
+      "en": "Jõhvi",
+      "local": "Jõhvi",
+      "names": {
+        "et": "Jõhvi"
+      },
+      "center": [
+        27.413,
+        59.359
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0056-CAPITAL",
+      "parent": "EE-0056",
+      "en": "Haapsalu",
+      "local": "Haapsalu",
+      "names": {
+        "et": "Haapsalu"
+      },
+      "center": [
+        23.536,
+        58.944
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0071-CAPITAL",
+      "parent": "EE-0071",
+      "en": "Rapla",
+      "local": "Rapla",
+      "names": {
+        "et": "Rapla"
+      },
+      "center": [
+        24.792,
+        59.008
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0074-CAPITAL",
+      "parent": "EE-0074",
+      "en": "Kuressaare",
+      "local": "Kuressaare",
+      "names": {
+        "et": "Kuressaare"
+      },
+      "center": [
+        22.485,
+        58.253
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0084-CAPITAL",
+      "parent": "EE-0084",
+      "en": "Viljandi",
+      "local": "Viljandi",
+      "names": {
+        "et": "Viljandi"
+      },
+      "center": [
+        25.59,
+        58.364
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0039-CAPITAL",
+      "parent": "EE-0039",
+      "en": "Kärdla",
+      "local": "Kärdla",
+      "names": {
+        "et": "Kärdla"
+      },
+      "center": [
+        22.749,
+        58.997
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0037-CAPITAL",
+      "parent": "EE-0037",
+      "en": "Tallinn",
+      "local": "Tallinn",
+      "names": {
+        "et": "Tallinn"
+      },
+      "center": [
+        24.7536,
+        59.437
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0060-CAPITAL",
+      "parent": "EE-0060",
+      "en": "Rakvere",
+      "local": "Rakvere",
+      "names": {
+        "et": "Rakvere"
+      },
+      "center": [
+        26.356,
+        59.347
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0064-CAPITAL",
+      "parent": "EE-0064",
+      "en": "Põlva",
+      "local": "Põlva",
+      "names": {
+        "et": "Põlva"
+      },
+      "center": [
+        27.069,
+        58.061
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0081-CAPITAL",
+      "parent": "EE-0081",
+      "en": "Valga",
+      "local": "Valga",
+      "names": {
+        "et": "Valga"
+      },
+      "center": [
+        26.048,
+        57.777
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0079-CAPITAL",
+      "parent": "EE-0079",
+      "en": "Tartu",
+      "local": "Tartu",
+      "names": {
+        "et": "Tartu"
+      },
+      "center": [
+        26.726,
+        58.378
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0068-CAPITAL",
+      "parent": "EE-0068",
+      "en": "Pärnu",
+      "local": "Pärnu",
+      "names": {
+        "et": "Pärnu"
+      },
+      "center": [
+        24.497,
+        58.385
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0052-CAPITAL",
+      "parent": "EE-0052",
+      "en": "Paide",
+      "local": "Paide",
+      "names": {
+        "et": "Paide"
+      },
+      "center": [
+        25.554,
+        58.885
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0087-CAPITAL",
+      "parent": "EE-0087",
+      "en": "Võru",
+      "local": "Võru",
+      "names": {
+        "et": "Võru"
+      },
+      "center": [
+        26.998,
+        57.847
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    },
+    {
+      "id": "EE-0050-CAPITAL",
+      "parent": "EE-0050",
+      "en": "Jõgeva",
+      "local": "Jõgeva",
+      "names": {
+        "et": "Jõgeva"
+      },
+      "center": [
+        26.393,
+        58.746
+      ],
+      "role": "County centre",
+      "source": "https://www.elvl.ee/kohalikud-omavalitsused/eesti-haldusjaotuse-kaart"
+    }
+  ]
+}

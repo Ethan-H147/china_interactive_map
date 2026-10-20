@@ -32,6 +32,7 @@ let before=0,after=0;
 const output={};
 for(const [id,input] of Object.entries(sources)){
  const data=input.type==='FeatureCollection'?input:collection([input]);
+ if(!data.features.length){output[id]=data;continue;}
  const polygon=data.features[0].geometry.type.includes('Polygon');
  if(!polygon)data.features=data.features.filter(f=>f.properties.visibleZoom===undefined||f.properties.visibleZoom<9);
  before+=data.features.reduce((n,f)=>n+count(f.geometry.coordinates),0);
@@ -47,6 +48,11 @@ for(const [id,input] of Object.entries(sources)){
  output[id]=simplified;
  console.log(id,simplified.features.length,simplified.features.reduce((n,f)=>n+count(f.geometry.coordinates),0));
 }
+// Both sides retain the same river vertices while moving; simplification cannot reopen seams.
+await (await import('./korean-frontiers.mjs')).repairKoreanMotion(output);
+await (await import('./china-russia-frontier.mjs')).repairChinaRussiaMotion(output);
+// Keep the satellite-checked Khanka cutout exact while moving the map.
+for(const [id,data,code]of [['provinces',display.provinces,230000],['prefectures',display.subdivisions,230300]]){const precise=data.features.find(f=>f.properties.adcode===code);if(precise)output[id].features=output[id].features.map(f=>f.properties.adcode===code?precise:f);}
 // Small, close-up territories need finer motion geometry than large provinces.
 for(const code of [810000,820000]){const precise=display.provinces.features.find(f=>f.properties.adcode===code);output.provinces.features=output.provinces.features.filter(f=>f.properties.adcode!==code);output.provinces.features.push(precise);}
 // Avoid the same tile-rounded touching-hole defect as the detailed Jilin fill.

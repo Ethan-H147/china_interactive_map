@@ -1,0 +1,43 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "25 first-level divisions: 24 provinces and Phnom Penh capital. Current English/Khmer names and administrative codes checked against the NCDD gazetteer; 2024 NIS/UNFPA population projections. Polygon reference is OCHA 2018, reviewed October 2024. Older district boundaries are omitted because the gazetteer now lists 210 district-level units while the polygon snapshot has 197. Tonle Sap and mapped inland lakes are excluded from fills. Shared frontiers follow the existing Thailand, Laos and Vietnam atlas geometry.",
+  "counts": {
+    "1": 25
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "khm-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-khm",
+      "sha256": "aa98a53d738aef6680b9d11af4c38b03d3d8e0e08d97bfbacbf78d741a619c10",
+      "bytes": 20044
+    },
+    "khm-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-khm",
+      "sha256": "9aa66e5c299c13f06c85e9cbc8dff25c4b16ac374eb3620a52b48f54667486b6",
+      "bytes": 31954
+    },
+    "khm-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/7472f7e0-3deb-44d9-bd36-38237c666a2e/resource/2926d754-10b7-4742-889c-eb37aedd1d03/download/khm_admin_boundaries.geojson.zip",
+      "credit": "Department of Geography of the Ministry of Land Management, Urbanization and Construction in 2008, WFP",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "year": 2018,
+      "sha256": "09b349284b10c38626387787ca183e110734f2b2822740bad2559ff952abd041",
+      "bytes": 3102706
+    },
+    "khm-population2024.csv": {
+      "url": "https://data.humdata.org/dataset/770386b0-d7c6-4ea7-abbc-beccac38c192/resource/b7476c8d-33d7-4460-9a9a-6d63ba738056/download/khm_admpop_adm1_2024.csv",
+      "credit": "Cambodia National Institute of Statistics",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "year": 2024,
+      "sha256": "e60ec6f5ec6559d86a9bb9ad937adcfef5c19e698cdeb08185fcf37fea5aa484",
+      "bytes": 9138
+    },
+    "khm-gazetteer.html": {
+      "url": "https://db.ncdd.gov.kh/gazetteer/view/index.castle",
+      "credit": "Cambodia NCDD official Gazetteer",
+      "license": "Published administrative facts with attribution",
+      "sha256": "05b922e6ea96d8ff4caecd48cc2b553b86e20717884ce48c50c716a0d03a47fd",
+      "bytes": 249559
+    }
+  }
+}

@@ -194,12 +194,11 @@ async function loadIceland(){
 // Turkey: the 81 provinces and 973 districts of the General Command of Mapping (HGM), via OCHA.
 // Provinces carry ISO 3166-2:TR (licence-plate) codes, from the P-codes (TUR001 is plate 01); the
 // 12 statistical regions (İBBS level 1, NUTS 1) group the provinces as TÜİK does. Names are the
-// Turkish ones, as English writes them too (HGM's English names only drop the diacritics), except
-// Istanbul; the undotted forms stay searchable. HGM's Turkish names lose the dotless ı and write İ
+// Turkish ones; ASCII forms stay searchable. HGM's Turkish names lose the dotless ı and write İ
 // as i with a combining dot, so each is spelled as OpenStreetMap's Turkish name that differs from it
 // only in dots and accents (two districts OpenStreetMap lacks are spelled here).
 const turkishSpellings=(()=>{const fold=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/ı/g,'i').toLowerCase(),names=JSON.parse(fs.readFileSync('scripts/statistics-sources/europe/turkey-names-osm.json')).names.concat('Nazımiye','Sarıkaya'),byFold=new Map(names.map(n=>[fold(n),n]));return name=>byFold.get(fold(name))||name.replace(/i̇/g,'i');})();
-const turkishRegions={TR1:['Istanbul','İstanbul'],TR2:['West Marmara','Batı Marmara'],TR3:['Aegean','Ege'],TR4:['East Marmara','Doğu Marmara'],TR5:['West Anatolia','Batı Anadolu'],TR6:['Mediterranean','Akdeniz'],TR7:['Central Anatolia','Orta Anadolu'],TR8:['West Black Sea','Batı Karadeniz'],TR9:['East Black Sea','Doğu Karadeniz'],TRA:['Northeast Anatolia','Kuzeydoğu Anadolu'],TRB:['Central East Anatolia','Ortadoğu Anadolu'],TRC:['Southeast Anatolia','Güneydoğu Anadolu']};
+const turkishRegions={TR1:['İstanbul','İstanbul'],TR2:['West Marmara','Batı Marmara'],TR3:['Aegean','Ege'],TR4:['East Marmara','Doğu Marmara'],TR5:['West Anatolia','Batı Anadolu'],TR6:['Mediterranean','Akdeniz'],TR7:['Central Anatolia','Orta Anadolu'],TR8:['West Black Sea','Batı Karadeniz'],TR9:['East Black Sea','Doğu Karadeniz'],TRA:['Northeast Anatolia','Kuzeydoğu Anadolu'],TRB:['Central East Anatolia','Ortadoğu Anadolu'],TRC:['Southeast Anatolia','Güneydoğu Anadolu']};
 const turkishProvinceRegions={TR1:['34'],TR2:['10','17','22','39','59'],TR3:['03','09','20','35','43','45','48','64'],TR4:['11','14','16','26','41','54','77','81'],TR5:['06','42','70'],TR6:['01','07','15','31','32','33','46','80'],TR7:['38','40','50','51','58','66','68','71'],TR8:['05','18','19','37','55','57','60','67','74','78'],TR9:['08','28','29','52','53','61'],TRA:['04','24','25','36','69','75','76'],TRB:['12','13','23','30','44','49','62','65'],TRC:['02','21','27','47','56','63','72','73','79']};
 async function loadTurkey(){
  const files=unzipSync(fs.readFileSync(path.join(source,'tur-hgm-admin-boundaries.geojson.zip'))),layer=name=>JSON.parse(strFromU8(files[Object.keys(files).find(k=>k.endsWith(name))]));
@@ -207,7 +206,7 @@ async function loadTurkey(){
  assert.equal(regionOf.size,81,'Every Turkish province has a statistical region');
  const units=new Map(Object.entries(turkishRegions).map(([code,[en,local]])=>['TR-R-'+code,{level:1,parent:null,en,local,kind:'Statistical region'}]));
  const plate=pcode=>pcode.slice(4,6);
- for(const f of layer('tur_admin1.geojson').features){const p=f.properties,code=plate(p.adm1_pcode);assert(regionOf.has(code),'Province '+p.adm1_pcode);units.set('TR-P-'+code,{level:2,parent:'TR-R-'+regionOf.get(code),en:code==='34'?'Istanbul':turkishSpellings(p.adm1_name1),local:turkishSpellings(p.adm1_name1),kind:'Province',code,...(p.adm1_name!==turkishSpellings(p.adm1_name1)?{aliases:[p.adm1_name]}:{})});}
+ for(const f of layer('tur_admin1.geojson').features){const p=f.properties,code=plate(p.adm1_pcode);assert(regionOf.has(code),'Province '+p.adm1_pcode);units.set('TR-P-'+code,{level:2,parent:'TR-R-'+regionOf.get(code),en:turkishSpellings(p.adm1_name1),local:turkishSpellings(p.adm1_name1),kind:'Province',code,...(p.adm1_name!==turkishSpellings(p.adm1_name1)?{aliases:[p.adm1_name]}:{})});}
  const districts=layer('tur_admin2.geojson').features.map(f=>{const p=f.properties,id='TR-D-'+p.adm2_pcode.slice(3);assert(units.has('TR-P-'+plate(p.adm1_pcode)),'District parent '+id);units.set(id,{level:3,parent:'TR-P-'+plate(p.adm1_pcode),en:turkishSpellings(p.adm2_name1),local:turkishSpellings(p.adm2_name1),kind:/ Merkez$/.test(p.adm2_name1)?'Central district':'District',...(p.adm2_name!==turkishSpellings(p.adm2_name1)?{aliases:[p.adm2_name]}:{})});return {type:'Feature',properties:{id},geometry:f.geometry};});
  assert.equal(districts.length,973,'Turkey has 973 districts');
  const simplified=await command(fc(districts),simplify);
@@ -639,3 +638,5 @@ if(!only||only.includes('india')){const {prepareIndiaNames}=await import('./prep
 console.log('Europe build complete.');
 
 if(!only||only.includes('peru')){await (await import('./titicaca-water.mjs')).writeTiticacaWater();await (await import('./mask-titicaca.mjs')).maskTiticacaCountry('peru');}
+
+if(!only||only.includes('turkey')){const {prepareTurkeyNames}=await import('./prepare-turkey-names.mjs');prepareTurkeyNames();}

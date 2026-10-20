@@ -9,7 +9,7 @@
 // points in first-use order: the x column then the y column, each as zigzag differences
 // between consecutive int32 values (wrapping, so a jump across 180° stays exact), split
 // into four byte planes for compression.
-import {compactFiles} from './compact-files.mjs';
+import {compactFiles,emptyGeometryFiles} from './compact-files.mjs';
 
 export const SCALE=1e7;
 const magic=[66,65,81,49];
@@ -85,7 +85,7 @@ export const decodeGeo=bytes=>decodeGeoStructure(bytes).value;
 
 // Published compact copies sit under data/compact/ beside their gzip JSON build files
 // (scripts/build-compact.mjs). Requests for a listed file go to its compact copy.
-const compact=new Set(compactFiles);
+const compact=new Set(compactFiles),emptyGeometry=new Set(emptyGeometryFiles);
 export function compactUrl(url){
  const text=String(url),match=/(^|\/)data\//.exec(text);if(!match)return url;
  const at=match.index+match[1].length;
@@ -113,7 +113,12 @@ export async function decodeData(bytes){
 // workers decode (maplibre-worker-protocols.mjs, atlas-data://), so the page never copies the
 // geometry to them. transform: 'parts' (polygon-parts.mjs) or 'coastal' (coastal-detail.mjs).
 // The blob URL stays valid: MapLibre fetches a source's data again whenever it reloads it.
-export async function addWorkerSource(map,id,url,options,transform){
+export async function addWorkerSource(map,id,url,options,transform,{skipEmpty=false}={}){
+ // Empty references have no pixels or hit targets. Keep them out of the renderer's
+ // per-frame source/tile bookkeeping; the build verifies this list against geometry.
+ const file=/(?:^|\/)data\/(?:compact\/)?([^?#]+)/.exec(String(url))?.[1];
+ if(skipEmpty&&emptyGeometry.has(file))return false;
  const blob=URL.createObjectURL(new Blob([await fetchBytes(compactUrl(url))]));
  try{map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(transform?'&transform='+transform:'')});}catch(error){URL.revokeObjectURL(blob);throw error;}
+ return true;
 }

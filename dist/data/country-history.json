@@ -768,6 +768,160 @@
           "dist/data/europe/bangladesh/catalogue.bin"
         ]
       }
+    },
+    {
+      "country": "monaco",
+      "name": "Monaco",
+      "parent": "france",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sovereign Monaco subpage under France for navigation, with Monaco national flag and current physical coastline.",
+        "paths": [
+          "dist/data/europe/monaco/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "luxembourg",
+      "name": "Luxembourg",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Official ACT 2026 boundaries: 12 cantons and 100 communes.",
+        "paths": [
+          "dist/data/europe/luxembourg/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "san-marino",
+      "name": "San Marino",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Nine castelli from the retained geoBoundaries/OSM source, aligned to the existing Italian enclave border.",
+        "paths": [
+          "dist/data/europe/san-marino/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "angola",
+      "name": "Angola",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Current 21 provinces and 326 municipalities, INE census cartography and final 2024 provincial census.",
+        "paths": [
+          "dist/data/europe/angola/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "congo",
+      "name": "Congo",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Shared page for two sovereign countries: Republic of the Congo and Democratic Republic of the Congo, with 15 departments and 26 provinces.",
+        "paths": [
+          "dist/data/europe/congo/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "cambodia",
+      "name": "Cambodia",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Local country addition with retained OCHA source data, named subdivisions, statistics and shared quiz UI.",
+        "paths": [
+          "dist/data/europe/cambodia/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "ukraine",
+      "name": "Ukraine",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Local country addition with retained OCHA source data, named subdivisions, statistics and shared quiz UI.",
+        "paths": [
+          "dist/data/europe/ukraine/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "china-1949",
+      "name": "Republic of China",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Historical snapshot (1949), not a new present-day country; CC0 1947–1949 province reconstruction, earlier Outer Mongolia reference extent with non-control note, and twelve municipality location points. Hidden from the country list; accessed beside China."
+      }
+    },
+    {
+      "country": "soviet-union-1988",
+      "name": "Soviet Union",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Historical snapshot under Russia, hidden from the present-day country menu: 15 union republics, 1988 SSR flags, 1989 MSU historical GIS and census data.",
+        "paths": [
+          "dist/data/europe/soviet-union-1988/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "estonia",
+      "name": "Estonia",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Local implementation: 15 counties, 78 municipalities and current official settlement polygons; Estonian names, 2026 Statistics Estonia population and county GDP.",
+        "paths": [
+          "dist/data/europe/estonia/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "latvia",
+      "name": "Latvia",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Local implementation: 42 current local governments and town/parish polygons; 2026 population/land area and published municipal GDP, including revised Madona.",
+        "paths": [
+          "dist/data/europe/latvia/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "lithuania",
+      "name": "Lithuania",
+      "addedOn": "2026-10-19",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Local implementation: 10 counties, 60 municipalities and current eldership geometry; 2026 official resident population and 2024 county GDP.",
+        "paths": [
+          "dist/data/europe/lithuania/sources.json"
+        ]
+      }
+    },
+    {
+      "country": "poland",
+      "name": "Poland",
+      "addedOn": "2026-10-20",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Local implementation: 16 voivodeships, 380 counties and 2479 gminas, with GUGiK PRG boundaries, population and regional GDP.",
+        "paths": [
+          "dist/data/europe/poland/sources.json"
+        ]
+      }
     }
   ]
 }

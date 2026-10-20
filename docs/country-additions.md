@@ -87,3 +87,21 @@ Bolivia–Peru border correction — 19 October 2026, local: reconciled the full
 | 2026-10-19 | Nepal | Local only | 7 current provinces and 77 districts; official NSO 2021 census population; English subdivision names; the ambiguous 775-feature local/protected-area source is not exposed. |
 | 2026-10-19 | Bhutan | Local only | 20 dzongkhags and 205 gewog reference areas; NSB 2024 district projections based on 2017 census; urban thromdes are not separately delineated in the retained source. |
 | 2026-10-19 | Bangladesh | Local only | 8 divisions, 64 districts, 495 upazilas and 12 city corporations; BBS 2022 enumerated district/division census population, distinct from adjusted totals; English subdivision names. |
+
+| 2026-10-19 | Angola | Local only | 21 provinces and 326 municipalities from INE census cartography; final 2024 provincial census and national economic cards; Cabinda retained. |
+| 2026-10-19 | Congo · both republics | Local only | Shared page for two sovereign countries, separate national flags and cards, 26 DRC provinces and 15 Republic of the Congo departments. Recent Brazzaville-area geometry is explicitly approximate. |
+
+| 2026-10-19 | Cambodia | Local implementation: 25 provinces/capital, Khmer names and 2024 population projections. |
+| 2026-10-19 | Ukraine | Local implementation: 27 top-level divisions including Crimea/Sevastopol, 126 mainland raions and Ukrainian names. |
+
+| 2026-10-19 | Republic of China · 1949 historical snapshot | Local only | A dated view under China, not a new present-day country. 35 provinces, Tibet Area, Outer Mongolia as an earlier reference extent with non-control footnote, and Hainan SAR; 12 special municipalities shown as selectable location points with unresolved historical limits disclosed. CC0 ENP-China province reconstruction, English/traditional Chinese names and historical aliases. |
+
+ROC snapshot follow-up — local: suppressed modern China/Mongolia preview and coarse fallback land while the historical view is active; added 35 provincial-capital dots and three regional-seat dots, historical names, a layer toggle and click-through to the province details.
+
+| 2026-10-19 | Soviet Union · 1988 historical snapshot | Local only | Dated view under Russia, not a new present-day country. Fifteen union republics with official 1 January 1988 flags, MSU 1 January 1989 historical GIS, 1989 census population, reported area and period capital names/dots. See [sources and limits](soviet-snapshot.md). |
+
+| 2026-10-19 | Estonia | Local only | 15 counties, 78 current municipalities and 4,715 settlement/city-district units; official 2026 population/area and 2024 county economy. |
+| 2026-10-19 | Latvia | Local only | 42 current local governments and 586 towns/parishes; full-resolution current boundaries, 2026 population/land area and municipal economy. |
+| 2026-10-19 | Lithuania | Local only | 10 counties, 60 municipalities and 533 eldership polygons; official 2026 population, registry area and 2024 county economy. |
+
+Baltic details, dates, source licenses and known coverage limits: [Baltic countries](baltics.md).

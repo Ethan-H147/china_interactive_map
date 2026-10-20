@@ -1,0 +1,1092 @@
+PRODUIT INTÉRIEUR BRUT       2024
+             Novembre 2025
+                                                                     Sommaire
+
+1.        Le Produit Intérieur Brut ................................................................................................. 3
+1.1.      Contexte économique mondial .................................................................................................................... 3
+1.2.      Résultats du PIB national.............................................................................................................................. 4
+1.2.1.    Synthèse des résultats .................................................................................................................................... 4
+1.2.2.    Montant et évolution du PIB ............................................................................................................................ 5
+1.2.3.    Structure du PIB .............................................................................................................................................. 6
+1.2.4.    PIB par secteur d’activité ................................................................................................................................ 7
+1.3.      PIB « per capita » et par salarié .................................................................................................................. 10
+1.3.1.    Le PIB « per capita » : la présence sur le territoire économique ................................................................... 10
+1.3.2.    Le PIB par salarié........................................................................................................................................... 11
+2.        Méthodologie et dispositif de calcul du PIB................................................................ 12
+2.1.      Cadre réglementaire et méthodologie retenue ........................................................................................ 12
+2.1.1.    Le Système européen des comptes 1995 (SEC 95) ..................................................................................... 12
+2.1.2.    Le Système européen des comptes 2010 (SEC 2010) ................................................................................. 12
+2.1.3.    Le PIB au cœur du raisonnement économique ............................................................................................. 13
+2.1.4.    La détermination du PIB ................................................................................................................................ 13
+2.2.      Dispositif mis en place en Principauté ...................................................................................................... 14
+2.2.1.    Détermination des algorithmes de calcul ...................................................................................................... 14
+2.2.2.    Méthode d’extrapolation retenue pour les résultats du PIB ......................................................................... 14
+2.2.3.    Détermination du PIB par secteur ................................................................................................................. 15
+2.2.4.    Un PIB en euros courants et en euros constants ......................................................................................... 15
+2.3.      Algorithme de calcul du PIB ....................................................................................................................... 16
+2.3.1.    Produit Intérieur Brut ..................................................................................................................................... 16
+2.3.2.    Rémunérations et charges sociales (D1) ....................................................................................................... 16
+2.3.3.    Excédent Brut d’Exploitation et revenus mixtes ........................................................................................... 16
+2.3.4.    Impôts sur la production (D2) ........................................................................................................................ 17
+2.3.5.    Subventions (D3)............................................................................................................................................ 17
+
+Annexe : Évolution du PIB en volume dans le monde............................................................... 18
+
+
+
+
+                                                         Produit Intérieur Brut 2024 – Novembre 2025                                                                     2
+1. Le Produit Intérieur Brut
+
+1.1.      Contexte économique mondial
+
+Depuis 2020, l’économie mondiale subit une succession de chocs majeurs : la pandémie et ses retombées socio-
+économiques, les tensions et conflits géopolitiques, la crise énergétique et le resserrement des politiques monétaires
+qui en a résulté, ou encore la montée des tensions commerciales ou protectionnistes. Pourtant, malgré ces
+turbulences, le système économique mondial a démontré une certaine capacité de résilience. En particulier, la baisse
+récente de l’inflation a contribué à restaurer le pouvoir d’achat des ménages dans plusieurs régions et à atténuer
+partiellement les effets cumulés de ces perturbations.
+
+Selon la Banque mondiale 1, la croissance de l’économie mondiale atteint ainsi 2,9 % en volume 2 en 2024, un rythme
+comparable à celui enregistré en 2023. En revanche, celle des économies à revenu élevé reste limitée à 1,9 %. La zone
+euro affiche une performance particulièrement modeste, à 0,9 % cette année contre 0,4 % l’an passé, mettant en
+évidence d’importantes disparités régionales. Ainsi, si la dynamique mondiale est portée par plusieurs économies
+asiatiques, telles que le Viet Nam (+7,1 %), l’Inde (+6,5 %), la Chine (+5,0 %) ou encore Singapour (+4,4 %), la plupart
+des économies développées peinent à dépasser les 3 %, à l’image des États-Unis (+2,8 %), de la France (+1,2 %) ou
+du Luxembourg (+1,0 %), tandis que d’autres, comme l’Allemagne (-0,2 %), enregistrent une contraction de leur PIB.
+
+À Monaco, la dynamique économique se distingue nettement du reste des économies avancées. Sa vitalité se reflète
+dans la plupart des indicateurs économiques : en 2024, le volume global des échanges internationaux a bondi de
+12,2 %, l’emploi dans le secteur privé a crû de 5,5 % et les finances de l’État affichent un nouvel excédent. Autant de
+signes d’une économie monégasque particulièrement résiliente et robuste. Seule la progression du chiffre d’affaires,
+hors Activités financières et d’assurance, reste plus contenue cette année (+1,2 %, contre +5,5 % en 2023).
+
+Ainsi, après trois années de forte reprise post-crise sanitaire, la Principauté enregistre en 2024 une nouvelle
+accélération de sa croissance, parmi les plus importantes à l’échelle internationale. Le PIB atteint 10,28 milliards
+d’euros, soit une progression corrigée de l’inflation de 8,8 % (contre +5,4 % en 2023). Depuis 2015, il a augmenté de
+près de 53 %, soit presque le double de la croissance mondiale (+28 %), près de quatre fois celle de la zone euro
+(+13 %) et cinq fois celle de la France (+11 % environ).
+
+
+                              Figure 1 : Évolution décennale du PIB selon la zone géographique
+                Indice base 100 en 2015
+          160
+
+          150
+
+          140
+
+          130
+
+          120
+
+          110
+
+          100
+
+           90
+                  2015       2016        2017        2018        2019        2020         2021     2022       2023        2024
+
+                                           Monaco             France          Zone euro          Monde
+Lecture : Le PIB monégasque a progressé de 52,9 % en volume entre 2015 et 2024 (indice 152,9 en 2024). Sur la même période, le PIB de la Zone
+euro a augmenté de 27,7 % (indice 127,7).
+Sources : Banque mondiale (extraction du 21/10/2025), IMSEE
+
+
+
+
+1
+    Banque mondiale (2025). Croissance du PIB (% annuel) [Base de données]. Consulté le 21 octobre 2025.
+2
+    Corrigée de l’inflation
+
+                                                  Produit Intérieur Brut 2024 – Novembre 2025                                              3
+1.2.      Résultats du PIB national
+
+1.2.1.       Synthèse des résultats
+
+Le PIB de la Principauté de Monaco dépasse pour la première fois les 10 milliards d’euros (10,28 milliards d’euros),
+contre 9,25 milliards en 2023 (cf. Tableau 1). Le taux de croissance réel 3 atteint 8,8 %, soit près de trois points de plus
+que celui observé l’année précédente (cf. Tableau 2). Depuis 2015, le PIB a augmenté de 52,9 %, ce qui équivaut à un
+taux de croissance annuel moyen de 4,8 %.
+
+Conformément à l’approche retenue à Monaco, où le PIB est considéré comme un indicateur de revenu (cf. 2.1.4. La
+détermination du PIB), il se décompose en quatre composantes (cf. Tableau 3) :
+    • L’Excédent Brut d’Exploitation (EBE), assimilé à la « rémunération » ou au revenu productif des entreprises,
+       totalise près de 5 milliards d’euros (+12,2 %). Il représente 45,6 % du PIB hors subventions et demeure le
+       premier contributeur au PIB en 2024.
+    • La rémunération des salariés, correspondant à la redistribution de la richesse créée sous forme de salaires et
+       de cotisations, atteint 4,4 milliards d’euros, soit 41,0 % du PIB hors subventions. Elle enregistre une hausse
+       de 11,7 %, soit plus de trois fois la croissance du nombre de salariés actifs 4.
+    • Les impôts sur la production progressent plus modérément (+3,2 %) et atteignent un total de 1,4 milliard
+       d’euros, ce qui représente un poids dans le PIB hors subventions de 13,4 %.
+    • Les subventions suivent une hausse similaire aux impôts (+3,1 %) et s’élèvent à 503 millions d’euros.
+
+Les évolutions sectorielles du PIB sont quasi exclusivement positives. Cinq grands secteurs d’activité (GSA)
+enregistrent une progression à deux chiffres de leur PIB en valeur, tandis qu’un seul secteur d’activité diminue
+(cf. Tableau 4).
+
+Trois GSA représentent toujours plus de la moitié de la richesse créée : Les Activités scientifiques et techniques,
+services administratifs et de soutien (23,5 %), les Activités financières et d’assurance (17,6 %) et la Construction
+(9,6 %), qui dépasse cette année le Commerce de gros (cf. Figure 5).
+
+Le PIB « per capita » franchit un seuil symbolique, dépassant les 100 000 euros pour atteindre 107 213 euros, soit une
+augmentation de 6,2 % compte tenu de l’inflation (cf. Tableau 6).
+
+Le PIB par salarié affiche également de solides performances, franchissant les 150 000 euros (156 500 euros) en 2024
+grâce à une croissance réelle de 5,2 %. L’écart avec le PIB par salarié français continue ainsi de s’accentuer (cf.
+Tableau 7).
+
+
+
+
+3
+    Correction faite de l’inflation
+4
+    Salarié ayant travaillé au moins une heure durant le mois de décembre de l’année considérée
+
+                                                Produit Intérieur Brut 2024 – Novembre 2025                               4
+1.2.2.       Montant et évolution du PIB
+
+Le PIB est évalué en « valeur » 5, c'est-à-dire en euros courants, tandis que la croissance correspond à son évolution
+corrigée de l'inflation (PIB en volume). L'indice utilisé pour cette correction est calculé annuellement par l'INSEE (cf.
+2.2.4. Un PIB en euros courants et en euros constants). Depuis 2024, l'année 2020 a remplacé 2014 comme année de
+référence (base 100). Ce changement a modifié, à la marge, le montant des PIB en volume 6 et leurs évolutions.
+
+                                      Tableau 1 : Évolution décennale du PIB en valeur
+                                         2015      2016      2017       2018      2019      2020      2021       2022      2023     2024
+         PIB                          5 646,4   5 846,3   5 692,1    6 083,5   6 595,5   5 892,8   7 290,9    8 357,1   9 252,0 10 279,0
+Unité : million d’euros
+Source : IMSEE
+
+                                      Tableau 2 : Évolution décennale du PIB en volume
+                                         2015      2016      2017       2018      2019      2020      2021       2022      2023     2024
+         PIB en valeur                5 646,4   5 846,3   5 692,1    6 083,5   6 595,5   5 892,8   7 290,9    8 357,1   9 252,0 10 279,0
+         Indice des prix du PIB         93,9      94,3      94,9       95,9      97,1     100,0       101,2    104,3     109,5     111,8
+         PIB en volume                6 016,4   6 197,4   5 998,7    6 340,5   6 792,0   5 892,8   7 202,9    8 014,4   8 450,7   9 196,9
+         Evolution en volume                      3,0%     -3,2%       5,7%      7,1%    -13,2%    22,2%      11,3%       5,4%      8,8%
+Unité : million d’euros
+Sources : INSEE, IMSEE
+
+En 2024, le PIB monégasque atteint 10,28 milliards d’euros (+1,03 milliard d’euros), ce qui correspond à une croissance
+réelle de 8,8 % (corrigée de l’inflation). Cette variation se distingue ainsi de celle du chiffre d’affaires, dont la hausse
+est restée modérée en 2024 (+1,2 %).
+
+Sur la décennie, le niveau de richesse créée a augmenté de plus de 50 % en tenant compte de l’évolution des prix.
+Cela se traduit par une hausse de 4,8 % en moyenne chaque année depuis 2015. Sur les cinq dernières années, cette
+progression atteint même 56,1 %, soit un taux de croissance annuel moyen de près de 12 %.
+
+                                   Figure 2 : Évolution décennale du PIB en euros courants
+
+    11 000
+    10 500
+    10 000
+     9 500
+     9 000
+     8 500
+     8 000
+     7 500
+     7 000
+     6 500
+     6 000
+     5 500
+     5 000
+     4 500
+     4 000
+                2015        2016      2017         2018             2019        2020           2021           2022        2023         2024
+Unité : million d’euros
+Source : IMSEE
+
+
+
+
+5
+  Le PIB en valeur est exprimé en « euros courants ».
+6
+  Le PIB en volume est exprimé en « euros constants » base 100 en 2020. Il est corrigé de l’inflation par l’Indice des prix du produit
+intérieur brut et de ses composantes, publié par l’INSEE.
+
+                                                 Produit Intérieur Brut 2024 – Novembre 2025                                                  5
+1.2.3.        Structure du PIB 7
+
+En 2024, toutes les composantes du PIB ont progressé par rapport à l’année précédente. Les subventions sont les
+seules à réduire le montant du PIB puisqu’elles impactent négativement l’agrégat dans l’approche revenu, retenue en
+Principauté (cf. 2.1.4. La détermination du PIB).
+
+                      Tableau 3 : Évolution décennale de la structure du PIB en millions d’euros courants
+                                                                                                                                             Var
+                                      2015       2016       2017      2018      2019      2020      2021      2022      2023       2024    23/24
+     EBE                            2 456,5    2 569,9    2 333,7   2 600,3   2 957,5   2 725,9   3 395,0   4 015,1   4 382,6    4 915,6   12,2%
+     Rémunérations des salariés     2 694,7    2 772,0    2 884,9   2 959,6   3 096,8   2 925,3   3 220,1   3 589,2   3 955,7    4 420,1   11,7%
+     Impôts                          726,2      746,0      746,5     811,4     858,8      927,5   1 055,9   1 152,3   1 401,6    1 446,1   3,2%
+     Subventions                    -231,0     -241,6     -272,9    -287,7    -317,5    -685,9    -380,0    -399,5    -487,9      -502,9   3,1%
+   PIB en valeur                    5 646,4    5 846,3    5 692,1   6 083,5   6 595,5   5 892,8   7 290,9   8 357,1   9 252,0 10 279,0     11,1%
+Unité : million d’euros
+Source : IMSEE
+
+                      Figure 3 : Évolution décennale des composantes du PIB en millions d’euros courants
+    5 500
+    5 000
+    4 500
+    4 000
+    3 500
+    3 000
+    2 500
+    2 000
+    1 500
+    1 000
+     500
+        0
+    -500
+-1 000
+               2015        2016         2017             2018        2019          2020           2021         2022             2023       2024
+
+                             EBE         Rémunérations des salariés              Impôts            Subventions
+
+Unité : million d’euros
+Source : IMSEE
+
+L’EBE approche les 5 milliards d’euros en 2024. En hausse de 12,2 % par rapport à l’année précédente, il représente
+45,6 % du PIB hors subventions et demeure la principale composante du PIB monégasque.
+
+La rémunération des salariés reste d’un niveau comparable à celui de l’EBE. Elle s’élève à 4,4 milliards d’euros, ce qui
+représente 41,0 % de la richesse créée hors subventions. Sa progression est soutenue (+11,7 % sur l’année), un
+rythme plus de trois fois supérieur à celui de l’augmentation du nombre de salariés en Principauté, tous secteurs
+confondus (public et privé).
+
+Porté une nouvelle fois par la hausse des recettes de taxe sur la valeur ajoutée (TVA), notamment immobilière, le
+montant des impôts progresse de 3,2 % et se chiffre à 1,4 milliard d’euros. Leur évolution étant plus contenue que
+celle de l’EBE et de la rémunération des salariés, leur poids dans le PIB hors subvention perd un point de pourcentage
+(13,4 %).
+
+Les subventions croissent dans des proportions similaires aux impôts en 2024 (+3,1 %) et atteignent un peu plus de
+500 millions d’euros.
+
+
+
+
+7
+    Les variations au sein de cette sous-partie sont exprimées en valeur et ne tiennent ainsi pas compte de l’inflation.
+
+                                                    Produit Intérieur Brut 2024 – Novembre 2025                                                    6
+1.2.4.            PIB par secteur d’activité 8
+
+La répartition sectorielle du PIB montre des évolutions positives pour la quasi-totalité des GSA monégasques. Seul le
+Commerce de détail a connu une diminution cette année.
+
+                                           Figure 4 : PIB par GSA en 2023 et 2024 en millions d’euros courants
+3 000
+                                                                                                                                                                                  2023
+                                                                                                                                                                                  2024
+2 500
+
+
+
+2 000
+
+
+
+1 500
+
+
+
+1 000
+
+
+
+    500
+
+
+
+      0
+          Act. scientif. et Act. financ. et Construction   Commerce de Hébergement        Admin.,       Activités    Commerce de Autres activités Information et Industries   Transport et
+           tech., serv. d'assurance                           gros     et restauration enseig., santé immobilières      détail    de servicess communication                  entreposage
+           adm. et de                                                                    et action
+              soutien                                                                     sociale
+Unité : million d’euros
+Source : IMSEE
+
+                                   Tableau 4 : Évolution décennale du PIB par GSA en millions d’euros courants
+                                                                                                                                                                            Var     Poids
+                                                 2015          2016       2017        2018        2019        2020        2021        2022        2023         2024       23/24      2024
+Activités scientifiques et
+techniques, services                             837,5        866,7       967,0    1 090,5     1 181,7     1 213,4     1 550,1     1 738,8      2 256,5     2 416,5       7,1%     23,5%
+administratifs et de soutien
+Activités financières et
+                                                 950,2        942,3     1 010,6      968,5     1 105,6     1 085,1     1 160,4     1 484,3      1 721,3     1 804,1       4,8%     17,6%
+d'assurance
+Construction                                     718,8        837,9       494,3      576,8       656,8       689,4       665,7       743,5        794,9       984,5      23,8%       9,6%
+Commerce de gros                                 541,9        510,3       479,6      565,8       551,4       514,1       728,6       899,9        863,9       879,3       1,8%       8,6%
+Hébergement et restauration                      374,2        360,3       466,5      511,7       605,9       198,8       489,4       675,3        730,3       828,8      13,5%       8,1%
+Administration,
+enseignement, santé et                           404,3        399,6       411,2      416,8       562,1       500,9       537,1       478,8        565,9       755,0      33,4%       7,3%
+action sociale
+Activités immobilières                           494,6        522,2       566,8      616,4       610,0       570,6       590,0       635,6        611,1       635,7       4,0%       6,2%
+Commerce de détail                               334,3        343,4       346,0      336,1       357,7       293,3       485,9       526,9        573,3       553,9      -3,4%       5,4%
+Autres activités de services                     266,8        370,6       194,6      257,2       198,8       174,5       294,7       289,6        275,4       462,8      68,1%       4,5%
+
+Information et communication                     250,2        271,8       302,4      314,7       337,3       293,5       342,7       352,9        332,0       361,7       8,9%       3,5%
+Industries manufacturières,
+                                                 274,5        229,4       234,4      223,0       203,0       188,4       249,0       282,4        269,3       330,9      22,9%       3,2%
+extractives et autres
+Transport et entreposage                         199,1        192,0       218,6      206,0       225,2       170,8       197,5       249,3        258,0       265,8       3,0%       2,6%
+PIB                                           5 646,4       5 846,3     5 692,1    6 083,5     6 595,5     5 892,8     7 290,9     8 357,1      9 252,0 10 279,0         11,1%      100%
+Unité : million d’euros
+Source : IMSEE
+
+Une fois encore, les Activités scientifiques et techniques, services administratifs et de soutien réalisent de loin le PIB
+sectoriel le plus élevé. Avec 2,4 milliards d’euros, elles représentent près du quart de la richesse créée en Principauté,
+tous secteurs confondus. Leur croissance de 7,1 % résulte principalement de la hausse de l’EBE des Activités
+spécialisées, scientifiques et techniques diverses (incluant notamment les services de conseil technique et spécialisé),
+ainsi que de l’augmentation de la masse salariale dans l’intérim.
+
+La hausse des Activités financières et d’assurance est plus modérée cette année, mais est tout de même de près de
+5 %. En dépit d’une réduction de l’EBE du secteur, l’importante progression de la rémunération des salariés de
+l’Intermédiation monétaire a permis de maintenir la croissance du PIB du GSA. Ce dernier s’élève à 1,8 milliard d’euros
+en 2024, soit 17,6 % du total.
+
+
+8
+    Les variations au sein de cette sous-partie sont exprimées en valeur et ne tiennent ainsi pas compte de l’inflation.
+
+                                                                         Produit Intérieur Brut 2024 – Novembre 2025                                                                         7
+Portée par la promotion immobilière, la Construction enregistre une nette progression de son EBE, entraînant une
+hausse du PIB sectoriel de 23,8 %. Le niveau de richesse créée par ce secteur approche ainsi le milliard d’euros, soit
+près d’un dixième du total.
+
+À 879,3 millions d’euros, le Commerce de gros a la plus faible croissance de PIB cette année (+1,8 %). En détail, l’EBE
+est resté stable, mais la masse salariale du secteur a progressé de plus de 8 %.
+
+L’Hébergement et restauration poursuit sa dynamique soutenue. Après une croissance de 8,2 % l’an passé, il
+augmente en 2024 de 13,5 %. Ce secteur, durement éprouvé par la crise sanitaire, a significativement progressé de
+36,8 % par rapport à 2019.
+
+Le PIB de l’Administration, enseignement, santé et action sociale connaît une forte croissance de 33,4 % et s’établit
+en 2024 à 755,0 millions d’euros. Celle-ci provient essentiellement de la création de la Caisse Monégasque de Retraite
+Complémentaire (CMRC) et des premières cotisations collectées.
+
+Après un repli en 2023, les Activités immobilières retrouvent leur niveau de PIB de 2022 grâce aux recettes de TVA
+générées par la commercialisation de plusieurs programmes immobiliers.
+
+Avec un PIB de 462,8 millions d’euros, les Autres activités de services enregistrent une croissance remarquable de
+68,1 % cette année, notamment due aux Activités liées au sport. Dans une moindre mesure, la progression du niveau
+de richesse créée par les Industries manufacturières, extractives et autres est également notable (+22,9 %).
+
+Le Commerce de détail est le seul secteur accusant une baisse de son PIB en 2024 (-3,4 %). Celle-ci provient d’une
+réduction du résultat net réalisé dans le Commerce de détail d’habillement en magasin spécialisé et dans le Commerce
+de véhicules automobiles, et ce en dépit d’une hausse de la rémunération des salariés du GSA.
+
+                                          Figure 5 : Répartition sectorielle du PIB 2024
+
+                                                  Industries
+                                              manufacturières,       Transport et
+                           Information et    extractives et autres   entreposage
+                          communication              3,2%                2,6%
+                               3,5%                                                                Activités scientifiques
+                    Autres activités de                                                               et techniques,
+                         services                                                                         services
+                          4,5%                                                                      administratifs et de
+                                                                                                           soutien
+                                                                                                           23,5%
+                  Commerce de détail
+                       5,4%
+
+                         Activités
+                       immobilières
+                          6,2%
+
+                     Administration,
+                  enseignement, santé
+                    et action sociale                                                              Activités financières
+                          7,3%                                                                       et d'assurance
+                                                                                                           17,6%
+
+                                Hébergement et
+                                 restauration                                       Construction
+                                    8,1%
+                                                                                       9,6%
+                                                 Commerce de gros
+                                                     8,6%
+
+
+
+Source : IMSEE
+
+En 2024, la part du PIB de la Construction dépasse celle du Commerce de gros, une situation qui n’était plus arrivé
+depuis 2020. Les trois principaux contributeurs au PIB de la Principauté sont donc les Activités scientifiques et
+techniques, services administratifs et de soutien, les Activités financières et d’assurance et la Construction. Ensemble,
+ils représentent plus de la moitié du PIB monégasque en 2024 (50,6 %).
+
+
+
+
+                                                Produit Intérieur Brut 2024 – Novembre 2025                                  8
+                                       Figure 6 : Évolution de la répartition sectorielle du PIB
+Activités scientifiques et techniques, services administratifs
+                         et de soutien
+                            Activités financières et d'assurance
+
+                                                      Construction
+
+                                              Commerce de gros
+
+                                    Hébergement et restauration
+
+       Administration, enseignement, santé et action sociale
+
+                                           Activités immobilières
+
+                                             Commerce de détail
+
+                                     Autres activités de services
+
+                                  Information et communication
+
+             Industries manufacturières, extractives et autres
+
+                                       Transport et entreposage
+
+                                                                     0%          5%          10%       15%         20%         25%   30%
+                                                                    2023       2024
+Lecture : La part du PIB des Activités financières et d’assurance dans le PIB total est de 17,6 % en 2024, contre 18,6 % en 2023.
+Source : IMSEE
+
+La répartition sectorielle du PIB connaît en 2024 quelques variations par rapport à 2023. Cinq secteurs d’activité voient
+leur part dans le niveau de richesse créée progresser. Parmi eux, la Construction dépasse désormais le Commerce de
+gros, tandis que l’Administration, enseignement, santé et action sociale gagne deux rangs. Les Autres activités de
+services devancent quant à elles le secteur de l’Information et communication.
+
+
+
+
+                                                    Produit Intérieur Brut 2024 – Novembre 2025                                        9
+1.3.      PIB « per capita » et par salarié
+
+La situation de la Principauté de Monaco est atypique par bien des aspects, notamment en ce qui concerne sa
+population résidente et sa population salariée.
+
+En 2024, pour 38 423 résidents, la Principauté compte 65 680 salariés actifs, dont 87,5 % sont domiciliés hors de
+Monaco. Cette situation très singulière, voire unique au monde, rend les comparaisons internationales délicates et
+limite la pertinence de certains indicateurs économiques traditionnels, en particulier le PIB par habitant.
+
+Cependant, afin de permettre de situer la Principauté dans son environnement et dans un contexte international, deux
+PIB par individu sont déterminés « ad hoc ». Il s’agit d’une part d’un PIB « per capita », calculé depuis 2005, et d’autre
+part d’un PIB par salarié, mesuré depuis 2010.
+
+
+1.3.1.        Le PIB « per capita » : la présence sur le territoire économique
+
+Le Système européen comptable (SEC) retient, pour le calcul du PIB par habitant, la population résidente sur le
+territoire économique. Toutefois, il importe de tenir compte des spécificités locales.
+
+Dans le cas de la Principauté, la population salariée est composée en grande majorité de travailleurs ne résidant pas
+sur le territoire monégasque. Compte tenu de leur poids économique et de leur participation quotidienne à la création
+de richesse, il est apparu pertinent de déterminer une population de référence pour le calcul du PIB « per capita ».
+
+La population de référence retenue comprend deux composantes : la population résidente et la population non-
+résidente salariée sur le territoire économique.
+
+              Tableau 5 : Évolution décennale de la population de référence pour le calcul du PIB « per capita »
+                                         2015       2016       2017      2018      2019      2020       2021       2022       2023       2024 Var 23/24
+Résidents (toutes nationalités)         37 900     37 550     38 350    38 300    38 150    38 350     39 100     38 950     38 367     38 423    0,1%
+Salariés non résidents                  42 931     43 559     45 497    47 581    49 261    47 115     49 862     52 260     55 169     57 452       4,1%
+        dont salariés privé             40 726    41 306     43 155     45 158    46 759    44 503     47 151     49 485    52 280     54 467        4,2%
+        dont salariés public             2 205     2 253      2 342      2 423     2 502     2 612      2 711      2 775     2 889      2 985        3,3%
+Population totale de référence          80 831     81 109     83 847    85 881    87 411    85 465     88 962     91 210     93 536     95 874       2,5%
+Sources : Caisses Sociales de Monaco, Direction des Ressources Humaines et de la Formation de la Fonction Publique, IMSEE
+
+En ajoutant le nombre de salariés non-résidents aux 38 423 résidents de la Principauté 9, la population globale de
+référence en 2024 s’élève à 95 874 (+2 338 en comparaison avec 2023).
+
+                                      Tableau 6 : Évolution décennale du PIB « per capita »
+                                               2015    2016    2017    2018    2019    2020    2021    2022    2023     2024
+       PIB en million d'euros courants      5 646,4 5 846,3 5 692,1 6 083,5 6 595,5 5 892,8 7 290,9 8 357,1 9 252,0 10 279,0
+       Population totale retenue            80 831 81 109 83 847 85 881 87 411 85 465 88 962 91 210 93 536 95 874
+       PIB "per capita" en euros courants   69 855 72 080 67 887 70 837 75 454 68 950 81 956 91 625 98 914 107 213
+       Indice des prix du PIB                    93,9       94,3       94,9      95,9      97,1      100,0      101,2      104,3      109,5      111,8
+    PIB "per capita" en euros constants      74 432     76 408     71 544     73 829    77 701 68 950        80 966     87 867       90 348     95 926
+    Evolution en volume                                  2,7%      -6,4%       3,2%      5,2% -11,3%         17,4%       8,5%         2,8%       6,2%
+Sources : INSEE, IMSEE
+
+En 2024, le PIB « per capita » dépasse nettement les 100 000 euros. La population de référence ayant augmenté de
+2,5 %, la croissance du PIB « per capita » est mathématiquement inférieure à celle du PIB. Celle-ci atteint tout de
+même 6,2 % en volume.
+
+Sur la décennie, le PIB « per capita » a progressé de 28,9 %, soit une augmentation en moyenne chaque année de
+2,9 %, correction faite de l’inflation.
+
+
+
+
+9
+  Depuis 2023, la nouvelle méthode de recensement basée sur les registres mise en place par l’IMSEE permet de déterminer
+exhaustivement la population résidente.
+
+                                                   Produit Intérieur Brut 2024 – Novembre 2025                                                           10
+1.3.2.        Le PIB par salarié
+
+Le PIB par salarié 10 est un indicateur pouvant être utilisé comme élément de mesure et de comparaison de la
+productivité économique.
+
+                                           Tableau 7 : Évolution décennale du PIB par salarié
+                                                 2015    2016    2017    2018    2019    2020    2021    2022    2023     2024
+       PIB en million d'euros courants        5 646,4 5 846,3 5 692,1 6 083,5 6 595,5 5 892,8 7 290,9 8 357,1 9 252,0 10 279,0
+       Population salariée                     51 956 52 447 54 303 56 311 57 870 55 383 58 157 60 519 63 479 65 680
+       PIB par salarié en euros courants      108 677 111 471 104 822 108 034 113 972 106 402 125 367 138 090 145 748 156 500
+       Indice des prix du PIB                       93,9       94,3       94,9       95,9       97,1     100,0          101,2      104,3      109,5      111,8
+    PIB par salarié en euros constants        115 799 118 164 110 468 112 597 117 366 106 402 123 853 132 426 133 127 140 025
+    Evolution en volume                                 2,0% -6,5%      1,9%    4,2% -9,3% 16,4%        6,9%    0,5%    5,2%
+Sources : INSEE, IMSEE
+
+Le PIB par salarié passe les 150 000 euros en 2024, après une croissance réelle de 5,2 %. Celle-ci est atténuée par
+l’augmentation de la population salariée de 3,5 % cette année.
+
+                        Tableau 8 : Évolution décennale du PIB par salarié français en euros constants 11
+                                              2015    2016    2017            2018       2019       2020         2021       2022       2023       2024 Var 23/24
+PIB en milliard d'euros constants          2 345,6 2 365,8 2 415,1         2 454,9    2 504,6    2 318,3      2 477,8    2 545,1    2 581,8    2 612,5      1,2%
+Population salariée en milliers            24 774     24 960     25 280    25 425     25 804     25 737       26 555      26 893     27 053     27 067       0,1%
+PIB par salarié en euros constants         94 684     94 786     95 536    96 552     97 062     90 075       93 311      94 640     95 433     96 520       1,1%
+Note : Base 100 en 2020
+Sources : INSEE, IMSEE
+
+                Tableau 9 : Évolution décennale du PIB par salarié à Monaco et en France en euros constants
+                                            2015       2016       2017       2018       2019       2020         2021       2022       2023       2024 Var 23/24
+Monaco                                 115 799 118 164 110 468 112 597 117 366 106 402 123 853 132 426 133 127 140 025                                       5,2%
+France                                     94 684     94 786     95 536    96 552     97 062     90 075       93 311      94 640     95 433     96 520       1,1%
+Ecart Monaco / France                      22,3%      24,7%      15,6%     16,6%      20,9%      18,1%        32,7%       39,9%      39,5%      45,1%
+Unité : euros, base 100 en 2020
+Sources : INSEE, IMSEE
+
+                 Figure 7 : Évolution décennale du PIB par salarié à Monaco et en France en euros constants
+              150 000
+              140 000
+              130 000
+              120 000
+              110 000
+              100 000
+               90 000
+               80 000
+               70 000
+                           2015      2016        2017          2018        2019         2020           2021       2022          2023          2024
+
+                                                                          Monaco                France
+Unité : euros, base 100 en 2020
+Sources : INSEE, IMSEE
+
+En comparaison avec son homologue français, le PIB par salarié monégasque reste largement supérieur et l’écart se
+creuse encore cette année. En effet, le PIB par salarié français n’a progressé que de 1,1 % en 2024 (contre 5,2 % à
+Monaco). Il est ainsi supérieur de 45,1 % en Principauté (+43 504 euros), soit plus du double de l’écart observé dix
+ans auparavant.
+
+
+
+
+10
+     Salariés actifs ayant travaillé au moins une heure durant le mois de décembre de l’année considérée
+11
+     Les données françaises pour 2023 et 2024 sont provisoires.
+
+                                                      Produit Intérieur Brut 2024 – Novembre 2025                                                                11
+2. Méthodologie et dispositif de calcul du PIB
+Ce document présente les résultats du calcul du Produit Intérieur Brut (PIB) pour l’année 2024 et rappelle les grands
+principes et choix méthodologiques nécessaires à son élaboration.
+
+Le Produit Intérieur Brut (PIB) synthétise l’activité économique et constitue un élément d’information indispensable
+dans le débat économique contemporain. Il permet de suivre et d’apprécier l’efficacité des politiques économiques
+menées et d’établir des comparaisons avec d’autres États, notamment au sein de l’Union européenne.
+
+Le premier calcul du PIB en Principauté fut réalisé en 2005, et celui-ci fait depuis l’objet d’un rapport annuel. Depuis
+2006, les résultats sont détaillés par secteur d’activité et présentés également en euros constants, permettant de
+corriger les effets de l’inflation.
+
+Les données du PIB de l’année précédente sont enrichies des déclarations arrivées après la date limite. Une nouvelle
+extrapolation est ainsi calculée et intégrée, ce qui entraîne une modification des montants des PIB et donc des taux
+de croissance précédemment publiés.
+
+
+2.1.     Cadre réglementaire et méthodologie retenue
+
+2.1.1.     Le Système européen des comptes 1995 (SEC 95)
+
+Le Système européen de comptes nationaux et régionaux (SEC 95), entré en vigueur en 1999 et cohérent pour
+l’essentiel avec le Système de Comptabilité Nationale des Nations Unies (SCN 1993), définit un cadre qui assure la
+cohérence des évaluations au sein de l’Union Européenne.
+
+Dans un souci de comparabilité et de transparence vis-à-vis de la communauté internationale et dans la mesure des
+informations disponibles, la Principauté s’est appuyée sur le SEC 95 pour élaborer les outils de mesure de la richesse
+nationale que sont le Produit Intérieur Brut (PIB) et le Revenu National Brut (R.N.B.) 12.
+
+
+2.1.2.     Le Système européen des comptes 2010 (SEC 2010)
+
+Le SEC 95 est remplacé progressivement par le SEC 2010. L’année 2014 constitue pour plusieurs pays (notamment
+la France et la Suisse), l’année de révision des comptes nationaux et de publication des premiers agrégats selon le
+SEC 2010.
+
+Les principales modifications apportées résident dans la prise en compte des dépenses de recherche et
+développement et des dépenses militaires.
+
+Les dépenses de recherche et développement dans le SEC 1995 sont considérées comme des dépenses courantes
+et enregistrées comme de la consommation intermédiaire. Elles ont comme conséquence de diminuer le PIB du pays.
+Or, ces dépenses ont un impact durable et leur influence peut être mesurée sur plusieurs années. C’est pourquoi selon
+le SEC 2010, elles doivent être considérées comme des investissements, ce qui augmente le niveau du PIB.
+
+Les dépenses militaires sont traitées quant à elles dans le SEC 1995, en tant que consommation intermédiaire de
+l’État, si l’équipement militaire ne peut pas être utilisé pour des besoins civils (les avions de chasse par exemple). Dans
+le SEC 2010, il a été décidé d’enregistrer toutes les dépenses d’armement comme un investissement, si la durée de
+vie est supérieure à une année.
+
+D’autres changements de méthodologie ou de concepts sont également apportés par le nouveau système européen
+des comptes. Tous ne sont pas encore méthodologiquement aboutis, comme l’estimation de la production de services
+par les assureurs non-vie et les réassureurs.
+
+
+
+
+12
+    Le revenu national brut est la somme de l'ensemble des revenus primaires (bruts) perçus par les unités économiques résidentes
+(excédent brut d'exploitation, revenu mixte brut, rémunération des salariés, impôts nets de subventions sur la production et les
+importations, revenus de la propriété perçus moins versés).
+Il est égal au produit intérieur brut (PIB) diminué des revenus primaires versés à des unités économiques non-résidentes et augmenté
+des revenus primaires reçus du reste du monde par des unités résidentes.
+Il donne une mesure des revenus primaires reçus par l'ensemble des unités économiques résidentes et permet des comparaisons
+internationales.
+Source : INSEE
+
+                                               Produit Intérieur Brut 2024 – Novembre 2025                                       12
+La situation particulière de la Principauté de Monaco (union douanière et monétaire avec la France, absence de
+système de comptabilité nationale) conduit à l’absence de certaines informations économiques.
+
+Cette raison explique le fait que le calcul du PIB en Principauté ne prenne pas en compte certaines données. C’est le
+cas notamment des loyers fictifs (estimation de la valeur des loyers qu’auraient payés les habitants d’un logement s’ils
+en avaient été locataires et non propriétaires), retenus comme faisant partie du PIB selon le SEC 2010 et jamais estimés
+à Monaco.
+
+Cette raison explique aussi que les modifications apportées par le SEC 2010 ne soient pas intégrées dans le calcul du
+PIB à Monaco, qui continue à se référer à la version du SEC de 1995.
+
+La non-prise en compte d’éléments constitutifs du PIB en Principauté de Monaco en minore l’estimation.
+
+
+2.1.3.    Le PIB au cœur du raisonnement économique
+
+Le PIB est l’un des agrégats permettant de déterminer la richesse nationale et son évolution, c’est-à-dire la croissance
+économique.
+
+Il constitue avec le Revenu National Brut (R.N.B.) une synthèse des considérations théoriques de la macroéconomie
+et des considérations pratiques du cadre européen de comptabilité nationale.
+
+
+2.1.4.    La détermination du PIB
+
+Le PIB peut s’appréhender de trois manières, équivalentes en termes de résultat :
+    • Comme indicateur d’activité (approche production)
+        Le PIB est la somme des valeurs ajoutées (VA) brutes des différents secteurs institutionnels ou des différentes
+        branches d’activité, diminuée des subventions sur les produits, soit :
+                 PIB = somme des VA brutes
+                        + Impôts sur les produits
+                        - Subventions sur les produits
+    • Comme indicateur de produit (approche dépense)
+        Le PIB est la valeur des biens et services issus de la production des unités résidentes et disponibles pour des
+        emplois finals. Il est calculé comme somme des emplois finals de biens et services par les unités
+        institutionnelles résidentes.
+    • Comme indicateur de revenu (approche revenu)
+        Le PIB est égal à la somme des revenus primaires distribués par les unités productrices résidentes déduite
+        des subventions.
+                 PIB = Rémunération des salariés
+                        + Excédent Brut d’Exploitation et revenu mixte
+                        + Impôts sur la production
+                        - Subventions
+
+La Principauté a retenu l’approche du PIB comme indicateur de revenu dans la mesure où cette approche
+n’implique pas la mise en place immédiate de la comptabilité nationale. Les grands équilibres comptables permettent
+de comprendre la cohérence macroéconomique de ce choix.
+
+Le PIB ainsi calculé est évalué en « valeur », c’est-à-dire en euros courants.
+
+Pour évaluer la croissance « réelle » des agrégats, il importe d’isoler l’effet dû à la variation des prix, de l’effet
+« volume ». Pour ce faire, le PIB en « valeur » est déflaté de la variation moyenne de prix observée au cours de l’année
+écoulée. Cela permet d’obtenir le PIB « en volume ».
+
+L’indice des prix utilisé pour ces calculs est celui de la France publié par l’INSEE. Le PIB en volume est calculé en
+fonction de la variation de l’indice des prix à la consommation en prenant comme base l’année 2020.
+
+
+
+
+                                           Produit Intérieur Brut 2024 – Novembre 2025                               13
+Périmètre de calcul : la résidence
+
+Le périmètre de calcul est l’économie nationale. Celle-ci regroupe l’ensemble des unités résidentes, soit les unités
+possédant un centre d’intérêt économique sur le territoire économique.
+    • La détermination du champ d’observation implique la définition d’un territoire économique regroupant :
+           o Le territoire géographique de ce pays ;
+           o Les enceintes des zones franches, entrepôts et usines sous contrôle douanier ;
+           o L’espace aérien national, les eaux territoriales et la plate-forme continentale située dans les eaux
+               internationales sur laquelle le pays dispose de droits exclusifs ;
+           o Les enclaves territoriales ;
+           o Les gisements situés dans les eaux internationales exploités par des unités résidentes.
+    • Un temps d’observation : l’année
+           o Une unité est reconnue comme ayant un centre d’intérêt économique sur le territoire si elle y exerce
+               des activités économiques pendant une période relativement longue c’est-à-dire pendant une durée
+               d’un an ou plus. Le critère de la nationalité n’intervient pas ; toute autre unité est classée comme non-
+               résidente.
+    • Le découpage du territoire économique en différentes nomenclatures : agents économiques, opérations
+        économiques, comptes.
+
+
+2.2.     Dispositif mis en place en Principauté
+
+Afin de répondre aux objectifs exposés précédemment, le Gouvernement a mis en place en 2005 un groupe de travail
+sur ce sujet ayant pour objectifs de définir le territoire donné et de recenser les agents économiques. Il s’agit de
+déterminer les éléments statistiques nécessaires à l’élaboration des agrégats financiers, notamment par la mise en
+place d’une enquête statistique nationale indispensable à l’élaboration du PIB.
+
+L’IMSEE (Institut Monégasque de la Statistique et des Études Économiques), créé par l’Ordonnance Souveraine
+n° 3.095 du 24/01/2011 et émanation de la Division des Statistiques et des Études Économiques, est aujourd’hui
+naturellement en charge du calcul du PIB de la Principauté.
+
+
+2.2.1.     Détermination des algorithmes de calcul
+
+Ce projet visait principalement à définir les algorithmes de calcul des agrégats économiques (cf. 2.3. Algorithme de
+calcul du PIB) et mettre en cohérence l’ensemble des informations recensées.
+
+
+2.2.2.     Méthode d’extrapolation retenue pour les résultats du PIB
+
+Depuis la mise en œuvre du calcul du PIB en 2005, les données relatives à l’Excédent Brut d’Exploitation (EBE) des
+agents économiques monégasques ont été obtenues au travers d’une enquête.
+
+Sur les 11 999 agents économiques concernés en 2024, le taux de dossiers traités a été de 79,9 % (contre 79,3 % en
+2023). Pour appréhender le niveau global d’EBE, et pallier le reliquat de non-réponse, des procédures statistiques
+d’extrapolation sont utilisées (avec une méthodologie constante depuis l’origine). Certaines informations concernant
+les sociétés non-répondantes ont tout de même pu être exploitées, en particulier la forme juridique, le secteur et sous-
+secteur d’activité ainsi que l’effectif pour certaines d’entre elles.
+
+Dans un premier temps, les variables discriminantes de l’EBE ont été déterminées sur la base des informations
+transmises par les sociétés répondantes. Ainsi, les analyses statistiques ont permis de déterminer cinq variables
+discriminantes :
+    1. La taille de l’entreprise : les 100 entreprises réalisant les chiffres d’affaires les plus importants ont été traitées
+        différemment. L’objectif est de ne pas reproduire le caractère atypique de ces sociétés sur l’ensemble des
+        sociétés non-répondantes ;
+    2. La forme juridique ;
+    3. L’appartenance à un secteur d’activité ;
+    4. L’effectif de la société ;
+    5. La masse salariale.
+
+
+
+
+                                             Produit Intérieur Brut 2024 – Novembre 2025                                  14
+Néanmoins, les informations disponibles sur les sociétés non-répondantes n’ont pas permis d’exploiter la totalité de
+ces variables explicatives. En effet, à titre d’exemple, les analyses statistiques montrent que le nombre de salariés
+semble être une variable discriminante de l’EBE. Cependant, cette information n’a pu être exploitée dans la mesure où
+le nombre de salariés est rarement disponible pour les sociétés non-répondantes. Les travaux ont donc été recentrés
+sur les variables connues de ces entités, à savoir la forme juridique, le secteur et le sous-secteur d’activité.
+
+Dans un second temps, les résultats issus des analyses discriminantes ont été corrigés du biais entraîné par l’existence
+de valeurs atypiques. Ainsi, pour une forme juridique et un sous-secteur d’activité, 90 % des données ont été
+conservées pour l’extrapolation. L’objectif étant d’avoir une estimation moins volatile de l’EBE et non biaisée par des
+entreprises singulières de la classe considérée. Après avoir corrigé les estimations moyennes d’EBE par classe,
+l’extrapolation a pu être effectuée en utilisant l’information disponible des sociétés non-répondantes.
+
+
+2.2.3.        Détermination du PIB par secteur
+
+Dans le cadre des analyses effectuées par la plupart des administrations monégasques, 12 secteurs d’activités au sein
+du tissu économique de la Principauté ont été identifiés.
+
+Des hypothèses structurantes pour le calcul du PIB par secteur :
+
+Concernant les salaires, l’IMSEE, s’appuie sur les données communiquées par les Caisses Sociales de Monaco.
+
+L’EBE de chacun des secteurs a été extrapolé en s’appuyant sur la même méthode que celle retenue pour le calcul
+global du PIB (cf. supra).
+
+Les subventions ont été affectées et pondérées à chacun des secteurs selon leur nature et leur destination.
+
+Concernant la répartition des impôts par secteur d’activité, plusieurs analyses ont été menées.
+
+Sur ces bases, les règles de ventilation suivantes ont été arrêtées :
+    • Concernant la TVA collectée, une petite partie est constituée d'un compte « Non ventilés par secteur ». Il a été
+        admis qu'il était envisageable d'appliquer à ce poste une clé de répartition, correspondant à celle de la partie
+        connue par secteur de la TVA perçue.
+    • De la même manière, il a été admis que cette clé de répartition pouvait s'appliquer à l'ensemble des autres
+        postes ci-dessous listés :
+             o Reversement français au titre du compte de partage de la TVA ;
+             o Droits d'importation ;
+             o Droits annuels de naturalisation des navires ;
+             o Taxe intérieure de consommation sur les produits énergétiques (T.I.C.P.E.) et droits de consommation
+                 sur les tabacs ;
+             o Bénéfices du Monopole des tabacs ;
+             o Droit de bail ;
+             o Droits de timbre ;
+             o Taxes sur les conventions d'assurance ;
+             o Droit de consommation sur les alcools ;
+             o Droits perçus sur les véhicules des entreprises.
+    • En revanche, il a été convenu d'affecter les articles budgétaires « TVA Immobilière » et « Droits de mutation à
+        titre onéreux » au secteur de l'immobilier.
+
+
+2.2.4.        Un PIB en euros courants et en euros constants
+
+Pour évaluer le PIB en euros constants, a été appliqué aux agrégats 2020 un indice de revalorisation / d’inflation.
+Compte tenu des caractéristiques et de la situation géographique du territoire de la Principauté, il a été convenu de
+s’appuyer sur les données et hypothèses retenues pour évaluer le PIB français et communiquées par l’INSEE.
+
+Les comptes annuels à prix constants (dit aussi « en volume ») de la base 2020 sont présentés « au prix de l’année
+précédente, chaînés, base 2020 » (1.103 Indices de prix du produit intérieur brut et de ses composantes 13).
+
+
+
+
+13
+     https://www.insee.fr/fr/statistiques/8068749
+
+                                                    Produit Intérieur Brut 2024 – Novembre 2025                      15
+L’objectif de cette présentation est de fournir aux utilisateurs des agrégats, les meilleures séries temporelles à prix
+constants. En effet, l’évolution d’un agrégat à prix constants est plus interprétable lorsque l’année des prix constants
+est assez proche de l’année des prix sous revue.
+
+Les évolutions des agrégats à prix constants des comptes nationaux annuels pour une année donnée sont calculées
+en prenant comme base les agrégats à prix courants de l’année précédente et en leur appliquant les évolutions aux
+prix de l’année précédente. Ces séries sont ensuite nommées 100 en 2020, puis multipliées par la valeur à prix courants
+de l’agrégat en 2020, afin que les utilisateurs aient en même temps à leur disposition l’ordre de grandeur de l’agrégat.
+
+
+2.3.     Algorithme de calcul du PIB
+
+
+2.3.1.       Produit Intérieur Brut
+
+PIB      =          Rémunérations et charges sociales (D1)
+                  + Excédent Brut d’Exploitation et Revenus mixtes
+                  + Impôts sur la production (D2)
+                  - Subventions (D3)
+
+
+2.3.2.       Rémunérations et charges sociales (D1)
+
+D1       =           Salaires & traitements bruts en espèces
+                   + Cotisations sociales effectives à la charge des employeurs
+                   + Cotisations sociales imputées à la charge des employeurs
+
+
+2.3.3.       Excédent Brut d’Exploitation et revenus mixtes
+
+Si le déclarant remplit le questionnaire Q1 détaillé :
+EBE     =           Chiffre d’Affaires HT
+                 + Production immobilisée
+                 - Montant des achats
+                 ± Variations des stocks
+                 - Consommations de l’exercice
+                 + Subventions d’exploitation
+                 - Impôts, taxes et versements assimilés
+                 - Salaires & Rémunérations brutes
+                 - Total des cotisations sociales
+
+Si le déclarant remplit le questionnaire Q2 simplifié :
+EBE     =          CA / Honoraires et/ou Soins facturés
+                 - Achats et charges de l’exercice
+                 ± Variations des stocks
+                 + Subventions d’exploitation
+                 - Salaires et rémunérations brutes
+                 - Total des cotisations sociales
+
+
+
+
+                                             Produit Intérieur Brut 2024 – Novembre 2025                             16
+2.3.4.         Impôts sur la production (D2)
+
+D2         =          TVA
+                    + Impôts sur les importations (D212)
+                    + Autres impôts sur les produits (D214)
+                    + Autres impôts sur la production
+
+                    TVA
+                    TVA     =        D211
+                                   + TVA nette collectée en Principauté (hors TVA immobilière)
+                                   ± Versements français au titre du compte de partage
+                    Impôts sur les importations
+                    D212 =           Droits d’importation
+                                   + Droit annuel de naturalisation des navires
+                    Autres impôts sur les produits
+                    D214 =           T.I.C.P.E. et droits de consommation sur les tabacs
+                                   + Bénéfices du monopole des tabacs
+                                   + Droits de mutation à titre onéreux
+                                   + Droit de bail
+                                   + Droit de timbre
+                                   + Taxe sur les conventions d'assurance
+                                   + TVA immobilière
+                                   + Droit de consommation sur les alcools
+
+                    Autres impôts sur la production
+                    D29     =     Impôts liés à la propriété ou l’utilisation de biens immobiliers, de machines, de
+                                  véhicules et d’équipements. Impôts sur masse salariale, sur autorisation d’exercer une
+                                  activité professionnelle, sur les émissions polluantes
+
+
+2.3.5.         Subventions (D3) 14
+
+D3         =          Dotation de fonctionnement de la mairie
+                    + Dotation de fonctionnement du CHPG
+                    + Dotation de fonctionnement des autres établissements publics
+                    + Subventions dans le domaine éducatif et culturel
+                    + Subventions des politiques publiques
+                    + Subventions dans le domaine social et humanitaire
+                    + Aides au sport
+                    + Organisation de manifestations en Principauté
+
+
+
+
+14
+     D3 = (D393 + D399)
+
+                                               Produit Intérieur Brut 2024 – Novembre 2025                           17
+Annexe : Évolution du PIB en volume dans le monde
+                    Tableau 10 : Taux de croissance du PIB en volume dans quelques pays du monde
+                                          2015      2016    2017      2018       2019      2020    2021   2022    2023    2024
+        Monaco                            4,9%     3,0%    -3,2%      5,7%       7,1%    -13,2%   22,2% 11,3%     5,4%    8,8%
+        Viet Nam                          7,0%     6,7%     6,9%      7,5%       7,4%      2,9%    2,6%   8,5%    5,1%    7,1%
+        Inde                              8,0%     8,3%     6,8%      6,5%       3,9%     -5,8%    9,7%   7,6%    9,2%    6,5%
+        Malte                             9,6%     4,1% 13,0%         7,2%       4,1%     -3,4%   13,3%   4,3%    6,8%    6,0%
+        Chine                             7,0%     6,8%     6,9%      6,8%       6,1%      2,3%    8,6%   3,1%    5,4%    5,0%
+        Singapour                         3,0%     3,7%     4,5%      3,5%       1,3%     -3,8%    9,8%   4,1%    1,8%    4,4%
+        Fédération de Russie             -2,0%     0,2%     1,8%      2,8%       2,2%     -2,7%    5,9%  -1,4%    4,1%    4,3%
+        Serbie                            1,3%     3,0%     2,4%      4,6%       4,8%     -1,0%    7,9%   2,6%    3,8%    3,9%
+        Croatie                           2,3%     3,5%     3,3%      2,9%       3,1%     -8,3%   12,6%   7,3%    3,3%    3,8%
+        Danemark                          2,1%     3,1%     3,1%      1,9%       1,7%     -1,8%    7,4%   1,5%    2,5%    3,7%
+        Chypre                            3,4%     6,6%     5,8%      6,3%       5,9%     -3,2%   11,4%   7,2%    2,8%    3,4%
+        Andorre                           1,4%     3,7%     0,3%      1,6%       2,0%    -11,2%    8,3%   9,6%    2,6%    3,4%
+        Algérie                           3,2%     3,9%     1,5%      1,4%       0,9%     -5,0%    3,8%   3,6%    4,1%    3,3%
+        Maroc                             4,3%     0,5%     5,1%      3,1%       2,9%     -7,2%    8,2%   1,5%    3,4%    3,2%
+        Türkiye                           6,1%     3,3%     7,5%      3,0%       0,8%      1,9%   11,4%   5,5%    5,1%    3,2%
+        Espagne                           4,1%     2,9%     2,9%      2,4%       2,0%    -10,9%    6,7%   6,2%    2,7%    3,2%
+        Bahreïn                           2,5%     3,8%     5,0%      2,1%       2,1%     -5,9%    4,4%   6,2%    3,9%    3,0%
+        Pologne                           4,4%     3,0%     5,2%      6,2%       4,6%     -2,0%    6,9%   5,3%    0,2%    2,9%
+        Ukraine                          -9,8%     2,4%     2,4%      3,5%       3,2%     -3,8%    3,4% -28,8%    5,5%    2,9%
+        Monde                             3,1%     2,8%     3,5%      3,3%       2,7%     -2,8%    6,4%   3,4%    2,9%    2,9%
+        Bulgarie                          3,4%     3,0%     2,7%      2,5%       3,8%     -3,2%    7,8%   4,0%    1,9%    2,8%
+        États-Unis                        2,9%     1,8%     2,5%      3,0%       2,6%     -2,2%    6,1%   2,5%    2,9%    2,8%
+        Lituanie                          2,8%     2,7%     4,6%      4,9%       4,7%      0,0%    6,4%   2,5%    0,3%    2,8%
+        Qatar                             4,8%     3,1%    -1,5%      1,2%       0,7%     -3,6%    1,6%   4,2%    1,2%    2,8%
+        Égypte, République arabe d’       4,4%     4,3%     4,2%      5,3%       5,6%      3,6%    3,3%   6,6%    3,8%    2,4%
+        Grèce                            -0,2%     0,0%     1,5%      2,1%       2,3%     -9,2%    8,7%   5,7%    2,3%    2,3%
+        Norvège                           1,9%     1,2%     2,5%      0,8%       1,1%     -1,3%    3,9%   3,2%    0,1%    2,1%
+        Portugal                          1,6%     2,0%     3,3%      2,9%       2,7%     -8,2%    5,6%   7,0%    2,6%    1,9%
+        Arabie saoudite                   4,7%     1,7%     1,2%      3,2%       1,7%     -3,8%    6,5% 12,0%     0,5%    1,8%
+        Slovénie                          2,4%     3,0%     5,2%      4,4%       3,5%     -4,1%    8,4%   2,7%    2,1%    1,6%
+        Canada                            0,6%     1,0%     3,0%      2,7%       1,9%     -5,0%    6,0%   4,2%    1,5%    1,5%
+        Australie                         2,2%     2,8%     2,3%      2,9%       2,2%     -0,1%    2,1%   4,2%    3,4%    1,4%
+        Tunisie                           1,0%     1,1%     2,2%      2,6%       1,6%     -9,0%    4,7%   2,7%    0,0%    1,4%
+        Suisse                            1,6%     2,1%     1,4%      2,9%       1,1%     -2,1%    5,6%   3,0%    0,7%    1,3%
+        Irlande                          24,6%     1,2% 10,0%         7,5%       5,0%      7,2%   16,3%   8,6%   -5,5%    1,2%
+        France                            1,1%     0,9%     2,1%      1,6%       2,0%     -7,4%    6,9%   2,6%    0,9%    1,2%
+        République tchèque                5,0%     2,6%     5,2%      2,8%       3,6%     -5,3%    4,0%   2,8%   -0,1%    1,1%
+        Royaume-Uni                       2,2%     1,9%     2,7%      1,4%       1,6%    -10,3%    8,6%   4,8%    0,4%    1,1%
+        Luxembourg                        2,3%     5,0%     1,3%      1,6%       2,7%     -0,5%    6,9%  -1,1%   -0,7%    1,0%
+        Union européenne                  2,4%     1,9%     2,8%      2,1%       1,9%     -5,6%    6,4%   3,5%    0,5%    1,0%
+        Belgique                          1,5%     1,2%     1,5%      1,9%       2,4%     -4,8%    6,2%   4,3%    1,2%    1,0%
+        Pays-Bas                          2,1%     2,4%     2,8%      2,3%       2,3%     -3,9%    6,3%   5,0%    0,1%    1,0%
+        Suède                             4,4%     2,3%     1,8%      1,9%       2,5%     -2,0%    5,9%   1,5%   -0,1%    1,0%
+        Israël                            2,2%     4,5%     4,3%      4,0%       3,7%     -2,0%    9,4%   6,3%    1,8%    0,9%
+        Zone euro                         2,1%     1,8%     2,6%      1,8%       1,6%     -6,0%    6,4%   3,5%    0,4%    0,9%
+        Roumanie                          3,2%     2,9%     8,2%      6,1%       3,9%     -3,7%    5,5%   4,0%    2,4%    0,8%
+        Italie                            0,9%     1,2%     1,6%      0,8%       0,4%     -8,9%    8,9%   4,8%    0,7%    0,7%
+        Afrique du Sud                    1,3%     0,7%     1,2%      1,6%       0,3%     -6,2%    5,0%   1,9%    0,7%    0,6%
+        Islande                           4,4%     6,3%     4,2%      4,9%       1,9%     -6,9%    5,0%   9,0%    5,6%    0,5%
+        Hongrie                           3,7%     2,4%     4,1%      5,6%       5,1%     -4,3%    7,2%   4,3%   -0,8%    0,5%
+        Corée, République de              2,8%     2,9%     3,2%      2,9%       2,2%     -0,7%    4,3%   2,6%    1,4%    0,0%
+        Liban                             0,5%     1,6%     0,9%     -1,9%      -6,9%    -21,4%   -7,0%  -0,6%   -0,8%    0,0%
+        Nouvelle-Zélande                  3,7%     3,8%     3,4%      3,5%       2,3%     -0,3%    4,5%   3,5%    1,4%   -0,1%
+        Finlande                          0,5%     2,6%     3,3%      1,2%       1,3%     -2,5%    2,7%   0,8%   -0,9%   -0,2%
+        Allemagne                         1,7%     2,3%     2,7%      1,1%       1,0%     -4,1%    3,7%   1,4%   -0,3%   -0,2%
+        Estonie                           1,8%     3,1%     5,6%      3,7%       3,7%     -2,9%    7,2%   0,1%   -3,0%   -0,3%
+        Lettonie                          3,8%     2,6%     3,4%      4,3%       0,7%     -3,5%    6,9%   1,8%    2,9%   -0,4%
+        Autriche                          1,3%     2,1%     2,3%      2,5%       1,8%     -6,3%    4,8%   5,3%   -1,0%   -1,2%
+        Iraq                              2,6% 13,8%       -1,8%      2,6%       5,5%    -12,0%    1,5%   8,0%    0,5%   -1,5%
+        Argentine                         2,7%    -2,1%     2,8%     -2,6%      -2,0%     -9,9%   10,4%   5,3%   -1,6%   -1,7%
+Source : Banque mondiale (extraction du 21/10/2025), IMSEE
+
+
+
+
+                                                 Produit Intérieur Brut 2024 – Novembre 2025                                     18
+                Figure 8 : Évolution décennale du taux de croissance du PIB selon la zone géographique
+  25%
+
+  20%
+
+  15%
+
+  10%
+
+    5%
+
+    0%
+
+   -5%
+
+ -10%
+
+ -15%
+             2015         2016        2017         2018         2019          2020             2021      2022   2023   2024
+
+                                         Monaco            France            Zone euro                Monde
+Sources : Banque mondiale (extraction du 21/10/2025), IMSEE
+
+
+
+
+                                                 Produit Intérieur Brut 2024 – Novembre 2025                                  19
+Produit Intérieur Brut
+2024
+Novembre 2025
+
+
+
+
+Pour consulter les publications de
+l’IMSEE :
+imsee.mc/Publications
+
+
+
+
+Pour suivre les actualités de
+l’IMSEE :
+imsee.mc/Actualites
+
+
+
+
+Pour vous abonner à la newsletter
+de l’IMSEE :
+imsee.mc/Newsletters
+
+
+
+
+Pour consulter notre page
+LinkedIn :
+linkedin.com/company/imsee
+
+
+
+
+INSTITUT MONÉGASQUE DE LA
+STATISTIQUE ET DES ÉTUDES
+ÉCONOMIQUES
+9 rue du Gabian
+98000 MONACO
+imsee.mc
+
+
+
+
+                                                                                   ISSN-L 2311-5386
+                                     Produit Intérieur Brut 2024 – Novembre 2025             20
+

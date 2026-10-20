@@ -1,0 +1,64 @@
+{
+  "retrieved": "2026-10-19",
+  "files": {
+    "luxembourg.geojson": {
+      "url": "https://download.data.public.lu/resources/limites-administratives-du-grand-duche-de-luxembourg/20261005-030016/limadmin.geojson",
+      "sha256": "6c3128de3763704397d9a7c44ea04d952fd467fc88a368e2d188c236cbfbae83"
+    },
+    "luxembourg-hierarchy.csv": {
+      "url": "https://download.data.public.lu/resources/limites-administratives-du-grand-duche-de-luxembourg/20240709-164127/commune-canton-district-circonscription-arrondissements.csv",
+      "sha256": "382df434bb103d72cde9ad227d4bcbd0518f4d8fddcdf7249a94b291897a52e0"
+    },
+    "san-marino-api.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SMR/ADM1/",
+      "sha256": "e84d21cfcfdf136385585e05f6eb8b1e3c4f585a2248a73a0053538e8041959d"
+    },
+    "monaco-api.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/MCO/ADM0/",
+      "sha256": "3c54cf72b7d153cd7b16745c9400e48b35c4b49b791fc690e49af31312fc12e9"
+    },
+    "san-marino.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/SMR/ADM1/geoBoundaries-SMR-ADM1.geojson",
+      "sha256": "f38971470e5198134b91f99770040dc2794c393109c7f2d468be249e2f174e00"
+    },
+    "monaco.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MCO/ADM0/geoBoundaries-MCO-ADM0.geojson",
+      "sha256": "782f642ae163ac729516d8e7faa223f354c32b2719577bb332d7eb7be7e7b7c1"
+    },
+    "flags-metadata.json": {
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&prop=imageinfo&iiprop=url%7Csize%7Cextmetadata&titles=File%3AFlag+of+Monaco.svg%7CFile%3AFlag+of+Luxembourg.svg%7CFile%3AFlag+of+San+Marino.svg",
+      "sha256": "40cf1df7aadc774acbd97cec7a7da76e8d1f03e1f8407fda2dced32fcf0450e3"
+    },
+    "flag-lu.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "57c7d95e31cbb37cc41072b7c4c6149cc2286b37758c908e8335a4a7449cdf5e"
+    },
+    "flag-mc.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Monaco.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "28d1941e74f7b9e235ad7b5ad740cbb33d6564394b8efa2cbd6a8701504b68af"
+    },
+    "flag-sm.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_San_Marino.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "050539f131fb13e8d0bf192a5130f4a08866fc71762f409c6656806b23a19be4"
+    },
+    "monaco-current.geojson": {
+      "url": "https://polygons.openstreetmap.fr/get_geojson.py?id=1124039&params=0",
+      "sha256": "bb53f9f74ecf8cc87f9a7000ab147df9f08ff0f8c70642c053c17cadd776bc3c"
+    },
+    "monaco-coast.json": {
+      "urls": [
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.409000,43.722000,7.421000,43.733000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.409000,43.733000,7.421000,43.744000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.409000,43.744000,7.421000,43.755000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.421000,43.722000,7.433000,43.733000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.421000,43.733000,7.433000,43.744000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.421000,43.744000,7.433000,43.755000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.433000,43.722000,7.445000,43.733000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.433000,43.733000,7.445000,43.744000",
+        "https://api.openstreetmap.org/api/0.6/map.json?bbox=7.433000,43.744000,7.445000,43.755000"
+      ],
+      "processing": "Only coastline ways retained from nine bounding-box responses, with node coordinates joined; all unrelated objects discarded.",
+      "sha256": "b464883e5b06a3a3ca6f3b0b66adc7f8bacc7fe9e0597f9c9ffcbfc9afd399c4"
+    }
+  }
+}

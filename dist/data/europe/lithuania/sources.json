@@ -1,0 +1,38 @@
+{
+  "retrieved": "2026-10-19",
+  "coverage": "10 counties, 60 municipalities and 533 mapped current elderships. SSVA/Centre of Registers INSPIRE geometry dated 30 September 2026. Six municipalities have no eldership polygons in this source and are shown at municipal level. Current official 2026 population is matched by administrative code; unmatched newer eldership codes retain no population rather than inheriting a parent total. County administrations were abolished in 2010. County GDP is Eurostat 2024; no municipal GDP is invented. Municipality area comes from the Centre of Registers API.",
+  "counts": {
+    "1": 10,
+    "2": 60,
+    "3": 533
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "boundaries": {
+      "title": "SSVA / Centre of Registers · INSPIRE Administrative Units, 30 September 2026",
+      "url": "https://www.geoportal.lt/metadata-catalog/catalog/search/resource/details.page?uuid=%7B2BADE6E6-1D35-456F-9441-6DC82E4FBD14%7D",
+      "license": "CC BY 4.0",
+      "date": "2026-09-30"
+    },
+    "population": {
+      "title": "State Data Agency of Lithuania · S3R167_M3010320, resident population by administrative territorial unit and sex, 1 January 2026",
+      "url": "https://osp-rs.stat.gov.lt/rest_json/data/S3R167_M3010320/?startPeriod=2026&endPeriod=2026"
+    },
+    "gdp": {
+      "title": "Eurostat · nama_10r_3gdp, county GDP and GDP per capita at current market prices, 2024",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?geo=LT011"
+    },
+    "alignment": {
+      "title": "Display edge reconciliation",
+      "report": [
+        {
+          "country": "lithuania",
+          "other": "LVA",
+          "runs": 33,
+          "maxEndpointDisplacementMetres": 482.7754965081469
+        }
+      ],
+      "note": "Detailed child polygons share the same outer display edge as their parent; Baltic mutual edges are reconciled together; Estonia’s lake frontier comes from the separate official full administrative-border layer. This is a display alignment, not a legal boundary determination."
+    }
+  }
+}

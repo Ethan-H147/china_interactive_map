@@ -1,0 +1,97 @@
+{
+  "retrieved": "2026-10-20",
+  "files": {
+    "peipus": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Lake%20Peipus&format=jsonv2&polygon_geojson=1&limit=1",
+      "provider": "OpenStreetMap contributors via Nominatim",
+      "license": "ODbL 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "relation": 1318060,
+      "sha256": "0130aaafc902e276e2aec179c492344bb771a06a8c4ad57b61d45771104d2a9e"
+    },
+    "curonian": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Curonian%20Lagoon&format=jsonv2&polygon_geojson=1&limit=1",
+      "provider": "OpenStreetMap contributors via Nominatim",
+      "license": "ODbL 1.0",
+      "licenseURL": "https://www.openstreetmap.org/copyright",
+      "relation": 7546467,
+      "sha256": "db6a8e720634020e14ae8e269c364b6b23c217a8cd24fb524975bbc96320f5be"
+    },
+    "atlas-reference/first.bin": {
+      "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
+      "license": "ODbL 1.0",
+      "sha256": "a181771d067389e0700203ce97abcf955d45189406415e2c3d3abd3475afec7b"
+    },
+    "atlas-reference/context.bin": {
+      "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
+      "license": "ODbL 1.0",
+      "sha256": "524958b660a6bbb711daa8b039fd0c92aa7727a26643ad0715086dd9fe3a2990"
+    },
+    "atlas-reference/international.bin": {
+      "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
+      "license": "ODbL 1.0",
+      "sha256": "9b721b6bbc20138ec8e9d79e549577e3e56ec2b85505c2517cd6f3d6945f6cb4"
+    },
+    "atlas-reference/catalogue.bin": {
+      "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
+      "license": "ODbL 1.0",
+      "sha256": "dc01e3b4282c14eb702b0a5866a8515c8a9dd40178f71a64752f9d4eda4de641"
+    },
+    "atlas-reference/second/RU-PSK.bin": {
+      "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
+      "license": "ODbL 1.0",
+      "sha256": "0049eba534b9f679a44dc7068aa8298d9802c0655f70cd590517640ea311d3b0"
+    },
+    "atlas-reference/second/RU-LEN.bin": {
+      "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
+      "license": "ODbL 1.0",
+      "sha256": "20fedca53a0f49b36a79777091a8f7c6a3c5d854c8a736f080741f70b747e276"
+    },
+    "atlas-reference/second/RU-KGD.bin": {
+      "source": "Russia geoBoundaries 2017 atlas display before Baltic shoreline alignment",
+      "license": "ODbL 1.0",
+      "sha256": "beec77e49ad0fed285e2ed6b043d478ed48f345128a6a767cdfd69febc7af18a"
+    }
+  },
+  "satelliteVerification": {
+    "provider": "Esri World Imagery · Esri, Vantor, Earthstar Geographics, and the GIS User Community",
+    "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+    "bbox": [
+      26.8,
+      57.65,
+      28.35,
+      59.1
+    ],
+    "purpose": "Visual comparison only. Detailed vector shoreline uses OpenStreetMap; no satellite pixels are redistributed in the atlas."
+  },
+  "districtPolicy": "Gdovsky District and other internal Russian administrative boundary strokes retain their original coordinates. Land fills exclude water; water masking does not move district boundaries.",
+  "alignment": [
+    {
+      "pair": "EST-RUS",
+      "kind": "regions",
+      "runs": [
+        {
+          "id": "RU-PSK",
+          "edges": 403
+        },
+        {
+          "id": "RU-LEN",
+          "edges": 93
+        }
+      ],
+      "maxEndpointDisplacementMetres": 596.3903387798164
+    },
+    {
+      "pair": "LTU-RUS",
+      "kind": "regions",
+      "runs": [
+        {
+          "id": "RU-KGD",
+          "edges": 605
+        }
+      ],
+      "maxEndpointDisplacementMetres": 18.397655563504035
+    }
+  ],
+  "policy": "Baltic international boundary from official Estonian/Lithuanian administrative geometry. Russian land fills and exterior display edge follow it; original internal administrative strokes, including Gdovsky District, are retained verbatim. Full OSM lake shoreline is a land mask, not a new administrative boundary."
+}

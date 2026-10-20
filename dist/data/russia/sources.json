@@ -2598,5 +2598,18 @@
       "license": "Public domain (official Russian symbols, PD-RU-exempt)",
       "sha256": "c0936e95f55d12237ea448964468464977b963dfd62001cd4cb8c35e2da5617d"
     }
+  },
+  "balticFrontiers": {
+    "source": "data/russia/baltic-frontiers-sources.json",
+    "retrieved": "2026-10-20",
+    "policy": "Baltic international boundary from official Estonian/Lithuanian administrative geometry. Russian land fills and exterior display edge follow it; original internal administrative strokes, including Gdovsky District, are retained verbatim. Full OSM lake shoreline is a land mask, not a new administrative boundary."
+  },
+  "khankaWater": {
+    "source": "data/khanka-water-sources.json",
+    "policy": "Satellite-checked lake land mask; existing international reference and internal district strokes retained."
+  },
+  "koreanFrontiers": {
+    "source": "data/korean-frontiers-sources.json",
+    "method": "Complete shared non-maritime OSM boundary arcs replace mismatched exterior runs, using a single Tumen tripoint. Interior subdivision boundaries and coasts outside the repair remain intact. The old Natural Earth junction is not used as a detailed geometry anchor. Border strokes are stored once and stay fully visible at every zoom. Display policy requested by the atlas owner suppresses all 22 small river enclaves: their separate outlines and Korean fill are removed, and the enclosing Chinese display region fills the cutouts. Original OSM island geometry and attribution remain separately retained; this is cartographic generalization, not a change to the source border claim."
   }
 }
