@@ -39,6 +39,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Install browser test dependencies
+        run: npm ci --ignore-scripts
       - name: Run browser scenarios
         run: node scripts/browser/run.mjs --shard=${{ matrix.shard }}/10
       - name: Keep audit reports and failure screenshots
