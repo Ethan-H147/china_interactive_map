@@ -2,7 +2,7 @@
 
 Added on 17 October 2026. Denmark uses the shared European country renderer, country registry, two-level hierarchy, statistics cards, label languages, color scales and flag viewer.
 
-Denmark has five regions and 98 municipalities. Christiansø is a separate state-administered area, not an invented municipality or part of a region. The 2027 regional merger is not applied early. GISCO's 2024 LAU geography matches the other newly added European countries. Parent fills and interior borders are built from one cleaned municipal topology; unselected coasts have no stroke.
+Denmark has five regions and 98 municipalities. Christiansø is a separate state-administered area, not an invented municipality or part of a region. The 2027 regional merger is not applied early. DAGI's July 2026 municipal interior geography matches the detailed parish layer; the retained GISCO national silhouette preserves the existing coast and German frontier. Parent fills and interior borders are built from one cleaned municipal topology; unselected coasts have no stroke.
 
 Greenland and the Faroe Islands are mapped as self-governing territories under Denmark. Clicking either opens Denmark with that territory selected and fits its own bounds, using the same shared context-entry path as US, UK and French territories. Denmark's ordinary home button still frames European Denmark.
 

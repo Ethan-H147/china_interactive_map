@@ -19,7 +19,10 @@ export function germanyDenmarkFrontier(germany,denmark,national){
  const refs=joinReferencePaths(linesOf({features:national.filter(f=>f.properties.TYPE!=='Water Indicator'&&['DEU','DNK'].every(c=>[f.properties.ADM0_A3_L,f.properties.ADM0_A3_R].includes(c)))}));assert.equal(refs.length,1);
  // The Danish coastline supplies the land endpoint: Natural Earth's endpoint in
  // Flensburg harbour is south of the actual border and cannot select Germany's arc.
- let land=selectFrontierArc(denmark,refs[0]).path;if(land[0][0]>land.at(-1)[0])land=land.reverse();
+ const maskFile='scripts/boundary-sources/denmark/atlas-land-mask.geojson.gz';
+ const referenceLand=fs.existsSync(maskFile)?load(maskFile):denmark;
+ let land=selectFrontierArc(referenceLand,refs[0]).path;if(land[0][0]>land.at(-1)[0])land=land.reverse();
+ const danishEdge=lineIndex(denmark.features.flatMap(f=>f.geometry.type==='Polygon'?f.geometry.coordinates:f.geometry.coordinates.flat()));assert(land.every(p=>danishEdge(p)<1),'Pinned land frontier remains on the Danish outline');
  const counterpart=selectFrontierArc(germany,land).path,toLand=lineIndex([land]),toOther=lineIndex([counterpart]);assert(land.every(p=>toOther(p)<1)&&counterpart.every(p=>toLand(p)<1),'Both countries use the same municipal land frontier');
  const reference=officialBorder(),west=project(reference,land[0]),east=project(reference,land.at(-1));assert(west.position<east.position);assert(west.distance<100&&east.distance<100,'GISCO land endpoints meet the official border within 100 metres');
  const marineWest=[...reference.slice(0,Math.ceil(west.position)),land[0]],marineEast=[land.at(-1),...reference.slice(Math.floor(east.position)+1)];

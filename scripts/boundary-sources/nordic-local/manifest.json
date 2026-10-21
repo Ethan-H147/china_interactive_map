@@ -441,6 +441,126 @@
       "polygonRings": 288,
       "country": "sweden",
       "archive": false
+    },
+    "denmark-municipalities-part-0.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=0",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 2176967,
+      "sha256": "54c1bed05beb5883e8985d0e2ef132821505ef24e6fc184d531205d7531ca5ab",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-10.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=10",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 909435,
+      "sha256": "39473c23b48d1bb5cd516705991509f3f44b2898a4ece4880df7e80b718ae2b9",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-20.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=20",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 1767882,
+      "sha256": "713d507d69711bc0c720500dfed60631c9b9fad83ca39c04d42bdca0e78a4d3c",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-30.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=30",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 4221782,
+      "sha256": "e2406f27c38865b49adff9e85085c9aac8a3660c9d8813dfcaebea61f544049d",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-40.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=40",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 5854162,
+      "sha256": "a8bedffbd0c63e4b3ee19e69f7fdc284fcacb935b98f0ff94a6aebeb2530e199",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-50.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=50",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 4598106,
+      "sha256": "f001e3fe9224d2d9a402de98141832b959b1b8cf481b29ab05f6a0c9fdeac0e7",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-60.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=60",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 5189756,
+      "sha256": "5c4ef17e6117210136d22ef59f033199253c0c627fea1a3c7a77695915a47e40",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-70.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=70",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 4355311,
+      "sha256": "157b79a40e413e14b261320bf50a97812f9dbac24815a684529f9cd316927cb6",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-80.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=80",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 10,
+      "bytes": 3873193,
+      "sha256": "6f65680f20036189c20e50aa39c397e7530e4ff742a6d7e2fe68a4ec602b18e9",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
+    },
+    "denmark-municipalities-part-90.geojson": {
+      "url": "https://geodata.skivekommune.dk/server/rest/services/GeoFokus_Data/Administrative_graenser/FeatureServer/2/query?where=1%3D1&outFields=OBJECTID%2Ckommunekod%2Cnavn%2CRegionsKode%2CUdenforKommuneInddeling%2CSkala%2CStatus%2CVirkningfra%2CVirkningtil%2CRegistreringfra%2CRegistreringtil%2CDataspecifikation&returnGeometry=true&outSR=4326&f=geojson&resultRecordCount=10&orderByFields=OBJECTID+ASC&geometryPrecision=7&resultOffset=90",
+      "publisher": "Klimadatastyrelsen / Skive municipality DAGI republication",
+      "license": "CC BY 4.0",
+      "retrievedAt": "2026-10-21T08:16:22.722Z",
+      "country": "denmark",
+      "format": "geojson",
+      "geometryCount": 9,
+      "bytes": 4985425,
+      "sha256": "5023aa2f59bf74a3aa2065ccbe03f1f3572cd6eef4bbcb913bd016464c3e3ebc",
+      "reference": "DAGI municipality layer, effective through 2 July 2026; Christiansø retained in source and excluded from municipal hierarchy."
     }
   }
 }
