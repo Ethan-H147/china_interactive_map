@@ -274,6 +274,21 @@
   const languages=c.view?.languages||c.map?.labelLanguages?.map(([code])=>code)||defaultLanguages;
   c.view={scopes:[],...c.view,languages,language:c.view?.language||(languages.includes('both')?'both':languages[0]),maxMode:c.map?.thirdLabel?3:2};
  }
+ // Menu geography is independent of the shared map adapters. Transcontinental views
+ // appear once: Russia in Europe; Turkey and Kazakhstan in Asia.
+ const continentMembers={
+  "Africa": "angola botswana congo eswatini lesotho morocco namibia south-africa",
+  "Asia": "afghanistan bangladesh bhutan brunei cambodia china cyprus india indonesia japan kazakhstan korea kyrgyzstan laos malaysia mongolia myanmar nepal pakistan philippines singapore thailand timor-leste turkey vietnam",
+  "Europe": "belgium netherlands denmark estonia finland france germany greece iceland ireland italy latvia lithuania luxembourg norway poland portugal russia san-marino spain sweden switzerland ukraine united-kingdom",
+  "North America": "canada mexico united-states",
+  "Oceania": "australia new-zealand",
+  "South America": "argentina bolivia brazil chile paraguay peru uruguay"
+};
+ for(const [continent,members] of Object.entries(continentMembers))for(const id of members.split(' ')){
+  if(!countries[id])throw Error('Unknown menu country: '+id);
+  countries[id].continent=continent;
+ }
+ for(const c of Object.values(countries))if(c.parent)c.continent=countries[c.parent].continent;
  const ids=Object.keys(countries);
  globalThis.AtlasCountries=Object.freeze({
   ids,countries,fallback,

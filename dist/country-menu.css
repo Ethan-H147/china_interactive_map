@@ -7,22 +7,30 @@
 .country-switch[aria-expanded=true] .country-switch-chevron{transform:rotate(180deg)}
 body[data-atlas=singapore] .country-switch-chevron{grid-column:3;grid-row:1/span 2}
 
-.country-menu{position:absolute;top:calc(100% + 8px);left:24px;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;width:min(780px,calc(100vw - 48px));max-height:calc(100dvh - 120px);overflow:auto;box-sizing:border-box;padding:8px;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 18px 48px rgba(30,26,20,.16);transform-origin:top left;animation:country-menu-in .16s var(--ease)}
+.country-menu{position:absolute;top:calc(100% + 8px);left:24px;z-index:1;display:block;width:min(780px,calc(100vw - 48px));max-height:calc(100dvh - var(--country-menu-top,120px) - 12px);overflow:auto;overscroll-behavior:contain;-webkit-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;padding:8px;border:1px solid var(--line);border-radius:12px;background:var(--paper);box-shadow:0 18px 48px rgba(30,26,20,.16);transform-origin:top left;animation:country-menu-in .16s var(--ease)}
 .country-menu[hidden]{display:none}
 @keyframes country-menu-in{from{opacity:0;transform:translateY(-4px) scale(.98)}}
 @media(prefers-reduced-motion:reduce){.country-menu{animation:none}.country-switch-chevron{transition:none}}
 
-/* Each option takes its country's theme (data-atlas) and header stripe; its title is the header's, smaller. */
+/* Group labels stay outside the keyboard sequence of country choices. */
+.country-group+.country-group{margin-top:14px}
+.country-group-heading{padding:6px 10px 8px;font:600 12px/1.4 'Segoe UI',Arial,sans-serif;letter-spacing:.06em;color:var(--muted)}
+.country-group-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+
+/* Retain each country's typefaces and colours with explicit menu sizes. */
 .country-option{--title-accent:var(--red);--header-stripe:linear-gradient(90deg,var(--red),var(--red));display:flex;align-items:center;min-height:58px;min-width:0;box-sizing:border-box;padding:9px 14px 7px;border:1px solid transparent;border-radius:8px;background:var(--paper) var(--header-stripe) top/100% 3px no-repeat;color:var(--ink);text-align:start;cursor:pointer;overflow:hidden;transition:border-color .15s,box-shadow .15s}
 .country-option[data-atlas=china]{--ink:#302c27;--muted:#787166;--red:#a7382b;--paper:#fffdf8;--line:#e7dfd1}
 .country-option:hover{border-color:var(--line);box-shadow:0 2px 8px rgba(30,26,20,.07)}
 .country-option:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
 .country-option[aria-current=true]{border-color:var(--red)}
-.country-option-title{display:flex;align-items:baseline;gap:20px;min-width:0;line-height:1.2;white-space:nowrap;zoom:.52}
+.country-menu .country-option .country-option-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:3px 8px;min-width:0;width:100%;line-height:1.35;white-space:normal}
+.country-menu .country-option .country-option-title>span{min-width:0;max-width:100%;font-size:14px;line-height:1.35;letter-spacing:normal;white-space:normal;overflow-wrap:anywhere}
+.country-menu .country-option .country-option-title>.title-english{flex-basis:100%;font-size:clamp(16px,1.6vw,18px)}
+.country-menu .country-option .country-option-title>:is(.title-malay,.title-tamil){font-size:12px}
 .country-option .title-local:empty{display:none}
 
-@media(max-width:900px){.country-menu{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.country-menu{left:12px;right:12px;width:auto;grid-template-columns:1fr;max-height:calc(100dvh - 96px)}.country-option{min-height:52px}}
+@media(max-width:900px){.country-group-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.country-menu{left:12px;right:12px;width:auto}.country-group-options{grid-template-columns:1fr}.country-option{min-height:52px}}
 
 /* A dated map is a separate view, loaded only when opened. */
 body[data-atlas=china-1949]{--ink:#302c27;--muted:#787166;--red:#a7382b;--red-dark:#87291f;--gold:#b18a46;--line:#e7dfd1;--paper:#fffdf8;--map:#f4f0e7}

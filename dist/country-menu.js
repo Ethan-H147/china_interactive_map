@@ -10,16 +10,34 @@
   const options=()=>[...menu.querySelectorAll('[role=menuitem]')];
   function render(){
    const current=window.AtlasEntry.current;
-   menu.replaceChildren(...registry.ids.filter(id=>!registry.countries[id].parent&&window.AtlasDev.allows(id)).map(id=>{
+   const groups=new Map();
+   for(const id of registry.ids.filter(id=>!registry.countries[id].parent&&window.AtlasDev.allows(id))){
+    const continent=registry.countries[id].continent;
+    if(!groups.has(continent))groups.set(continent,[]);
+    groups.get(continent).push(id);
+   }
+   menu.replaceChildren(...[...groups].sort(([a],[b])=>a.localeCompare(b,'en')).map(([continent,ids],index)=>{
+    const group=document.createElement('div');group.className='country-group';group.setAttribute('role','group');
+    const heading=document.createElement('div');heading.className='country-group-heading';heading.id='country-continent-'+index;heading.textContent=continent;
+    group.setAttribute('aria-labelledby',heading.id);
+    const items=document.createElement('div');items.className='country-group-options';items.setAttribute('role','presentation');
+    items.append(...ids.sort((a,b)=>registry.countries[a].en.localeCompare(registry.countries[b].en,'en')).map(id=>{
     const option=document.createElement('button');option.type='button';option.setAttribute('role','menuitem');option.className='country-option';option.dataset.atlas=id;option.tabIndex=-1;
     if(id===(registry.countries[current].parent||current))option.setAttribute('aria-current','true');
     const title=document.createElement('span');title.className='country-option-title';
     for(const part of window.AtlasEntry.titleParts(id)){if(!part.text)continue;const span=document.createElement('span');span.className=part.className;span.lang=part.lang;span.textContent=part.text;title.append(span);}
     option.append(title);option.addEventListener('click',()=>choose(id));return option;
+    }));
+    group.append(heading,items);return group;
    }));
   }
+  function fit(){
+   if(menu.hidden)return;
+   menu.style.setProperty('--country-menu-top',(toggle.closest('.site-header').getBoundingClientRect().top+menu.offsetTop)+'px');
+  }
+  window.addEventListener('resize',fit);
   function open(){
-   render();menu.hidden=false;toggle.setAttribute('aria-expanded','true');
+   render();menu.hidden=false;toggle.setAttribute('aria-expanded','true');fit();
    (menu.querySelector('[aria-current=true]')||options()[0])?.focus();
    document.addEventListener('pointerdown',outside,true);
   }
