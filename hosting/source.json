@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/Ethan-H147/china_interactive_map",
-  "commit": "c6085a306887d6b8169f159c49a6e94df5f19e27",
-  "files": 10205,
-  "runtimeTree": "cfe471efbf7d2bc17792815e72f8c13819b886d6",
+  "commit": "7c983ddc73929d3576921d9b425b24828919c6b5",
+  "files": 10209,
+  "runtimeTree": "a2c6820e162626dbd1c79559146d241290cb7666",
   "delivery": "Only allowlisted immutable public dist assets are fetched; browser URLs stay same-origin. The Worker streams bytes and caches by source commit. Incoming credentials, cookies and queries are not forwarded. version.json identifies the source commit."
 }
