@@ -23,4 +23,11 @@ const update='_updateSources(e){for(let t in this.tileManagers)this.tileManagers
 for(const needle of [coverage,update])assert.equal(main.split(needle).length,2,'MapLibre changed; review source coverage reuse');
 main=main.replace(coverage,'n=atlasCoveringTiles(Fo,e,{tileSize:this.usedForTerrain?this.tileSize:this._source.tileSize');
 main=main.replace(update,'_updateSources(e){return atlasRunSourceUpdate(e,()=>{for(let t in this.tileManagers)this.tileManagers[t].update(e,this.map.terrain)})}');
-fs.writeFileSync(renderer,"import {coveringTiles as atlasCoveringTiles,runSourceUpdate as atlasRunSourceUpdate} from '../globe-renderer.mjs';\n"+main);
+
+// Native symbol ordering includes extra fading tiles and a bearing-dependent sort.
+// Sources without visible symbols and sources unused by every layer need no list.
+const tileDraws='a={},o={},s={};for(let e in i){let t=i[e];t.used&&t.prepare(this.context),a[e]=t.getVisibleCoordinates(!1),o[e]=a[e].slice().reverse(),s[e]=t.getVisibleCoordinates(!0).reverse()}';
+assert.equal(main.split(tileDraws).length,2,'MapLibre changed; review tile draw-list pruning');
+main=main.replace(tileDraws,'a={},o={},s={};const atlasTileDraws=atlasPrepareTileDraws(this);for(let e in i){let t=i[e];t.used&&t.prepare(this.context),a[e]=atlasVisibleCoordinates(t,!1,atlasTileDraws,e),o[e]=a[e].slice().reverse(),s[e]=atlasVisibleCoordinates(t,!0,atlasTileDraws,e).reverse()}');
+
+fs.writeFileSync(renderer,"import {coveringTiles as atlasCoveringTiles,runSourceUpdate as atlasRunSourceUpdate,prepareTileDraws as atlasPrepareTileDraws,visibleCoordinates as atlasVisibleCoordinates} from '../globe-renderer.mjs';\n"+main);

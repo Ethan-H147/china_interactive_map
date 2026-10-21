@@ -282,7 +282,7 @@
     "build:clean-frontiers": "node --max-old-space-size=12000 scripts/reconcile-poland-ukraine.mjs && node --max-old-space-size=12000 scripts/korean-river-islands.mjs && node --max-old-space-size=12000 scripts/china-russia-frontier.mjs && npm run build:fills && npm run build:compact",
     "test:clean-frontiers": "node --max-old-space-size=10000 scripts/validate-clean-frontiers.mjs && npm run test:korean-frontiers && node scripts/browser/run.mjs clean-frontiers",
     "preview:ipad": "node scripts/serve.mjs --lan",
-    "test:tablet-performance": "node scripts/validate-tablet-performance.mjs && node scripts/browser/run.mjs tablet-performance",
+    "test:tablet-performance": "node scripts/validate-tablet-performance.mjs && node scripts/validate-render-budget.mjs && node scripts/browser/run.mjs tablet-performance render-budget",
     "measure:tablet-performance": "node scripts/browser/measure-tablet-performance.mjs",
     "test:trackpad-controls": "node scripts/validate-trackpad-controls.mjs && node scripts/browser/run.mjs trackpad-controls",
     "build:context-coverage": "node scripts/build-context-coverage.mjs",
@@ -293,7 +293,7 @@
     "fetch:nordic-local": "node scripts/fetch-nordic-local.mjs",
     "build:nordic-local": "node --max-old-space-size=7000 scripts/build-nordic-local.mjs && node scripts/prepare-region-colors.mjs norway sweden finland iceland",
     "test:nordic-local": "node scripts/validate-nordic-local.mjs && node scripts/browser/run.mjs nordic-local",
-    "test:globe-renderer": "node --check dist/globe-renderer.mjs && node scripts/validate-globe-renderer.mjs && node scripts/validate-frame-timing.mjs && node scripts/browser/run.mjs globe-renderer",
+    "test:globe-renderer": "node --check dist/globe-renderer.mjs && node scripts/validate-globe-renderer.mjs && node scripts/validate-frame-timing.mjs && node scripts/browser/run.mjs globe-renderer tile-draw-lists",
     "measure:globe-renderer": "node scripts/browser/measure-globe-renderer.mjs"
   }
 }

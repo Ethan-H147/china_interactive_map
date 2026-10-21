@@ -71,3 +71,22 @@ export function attachGlobeRenderer(map,{version=globalThis.maplibregl?.getVersi
  map.on('webglcontextlost',invalidate);map.on('webglcontextrestored',restore);
  return{snapshot,setEnabled(value){active=!!value;setSourceCoverageEnabled(transformOf(map),active&&supported);invalidate();map.triggerRepaint();},destroy(){invalidate();unhook();setSourceCoverageEnabled(transformOf(map),false);map.off('webglcontextlost',invalidate);map.off('webglcontextrestored',restore);}};
 }
+
+// A source without visible symbol layers has no symbol draw pass. Avoid its
+// separate bearing sort and matrix-cache population; leave native tile loading alone.
+let tileDrawReuse=true;
+export const setTileDrawReuse=value=>{tileDrawReuse=!!value;};
+export function prepareTileDraws(painter){
+ const style=painter.style;if(!painter.transform)return null;const control=coverageControl(painter.transform);
+ if(!tileDrawReuse||!control.enabled||!style?.projection?.useSubdivision||style.map?.terrain||painter.renderToTexture)return null;
+ const symbols=new Set();
+ for(const id of style._order){const layer=style._layers[id];if(layer.type==='custom')return null;if(layer.type==='symbol'&&!layer.isHidden(painter.transform.zoom))symbols.add(layer.source);}
+ return{symbols,control};
+}
+export function visibleCoordinates(manager,symbol,batch,id){
+ if(batch){
+  if(manager.used===false&&!manager.usedForTerrain){batch.control.unusedCoordinateListsSkipped=(batch.control.unusedCoordinateListsSkipped||0)+1;return[];}
+  if(symbol&&!batch.symbols.has(id)){batch.control.symbolCoordinateListsSkipped=(batch.control.symbolCoordinateListsSkipped||0)+1;return[];}
+ }
+ return manager.getVisibleCoordinates(symbol);
+}

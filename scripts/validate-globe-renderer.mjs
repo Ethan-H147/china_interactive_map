@@ -45,3 +45,22 @@ for(const name of ['terrain','callback','flat']){
  runSourceUpdate(f.transform,()=>{coveringTiles(f.native,f.transform,f.options);coveringTiles(f.native,f.transform,f.options);});assert.equal(f.calls,2,name+' keeps native source coverage');
 }
 console.log('Source coverage reuse: independent mutable tile IDs, option keys, camera changes, scope cleanup, reentrancy, disabled and native fallbacks passed.');
+
+// Symbol tiles have different fading and bearing order. Only skip their list
+// when no visible symbol layer uses that source; do not substitute fill order.
+{
+ const {prepareTileDraws,visibleCoordinates,setTileDrawReuse}=await import('../dist/globe-renderer.mjs');
+ const transform={zoom:3},layers={fill:{type:'fill',source:'land',isHidden:()=>false},symbols:{type:'symbol',source:'labels',isHidden:()=>false},hidden:{type:'symbol',source:'hidden-labels',isHidden:()=>true}};
+ const painter={transform,style:{projection:{useSubdivision:true},map:{},_order:Object.keys(layers),_layers:layers}};
+ let calls=[];const manager={used:true,getVisibleCoordinates(symbol){calls.push(symbol);return[{key:symbol?'symbol-fade-tile':'fill-tile'}];}};
+ let batch=prepareTileDraws(painter);assert.deepEqual(visibleCoordinates(manager,true,batch,'labels'),[{key:'symbol-fade-tile'}]);assert.deepEqual(visibleCoordinates(manager,false,batch,'land'),[{key:'fill-tile'}]);assert.deepEqual(visibleCoordinates(manager,true,batch,'land'),[]);assert.deepEqual(visibleCoordinates(manager,true,batch,'hidden-labels'),[]);assert.deepEqual(calls,[true,false]);
+ manager.used=false;assert.deepEqual(visibleCoordinates(manager,false,batch,'land'),[]);manager.usedForTerrain=true;assert.equal(visibleCoordinates(manager,false,batch,'land')[0].key,'fill-tile','Terrain tiles retain native coordinates');
+ for(const mode of ['terrain','custom','flat','offscreen','disabled']){
+  const test={...painter,style:{...painter.style,map:{},_layers:{...layers}}};
+  if(mode==='terrain')test.style.map.terrain={};if(mode==='custom')test.style._layers.fill={...layers.fill,type:'custom'};if(mode==='flat')test.style.projection={useSubdivision:false};if(mode==='offscreen')test.renderToTexture={};if(mode==='disabled')setSourceCoverageEnabled(transform,false);
+  assert.equal(prepareTileDraws(test),null,mode+' preserves native tile traversal');setSourceCoverageEnabled(transform,true);
+ }
+ setTileDrawReuse(false);assert.equal(prepareTileDraws(painter),null);setTileDrawReuse(true);
+ assert.equal(visibleCoordinates(manager,true,null,'anything')[0].key,'symbol-fade-tile');
+}
+console.log('Tile draw lists: visible symbols, hidden symbols, unused and terrain sources, native fallbacks and diagnostic toggle passed.');

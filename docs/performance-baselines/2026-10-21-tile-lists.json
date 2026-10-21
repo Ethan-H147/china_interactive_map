@@ -1,0 +1,104 @@
+{
+  "environment": "Windows Chrome 156, 1366 x 1024 CSS pixels, DPR 2, moving map ratio 1. Native stencil and source-coverage reuse enabled in both configurations. Sequential 2.4 second pans after a 1.3 second warmup. These are instrumented main-thread timings, not iPad FPS or GPU presentation times.",
+  "analysis": "Exclude the first China pair for JIT warmup; keep all three Sweden pairs. Repeated tile traversal reduction is deterministic; timing varies with machine load.",
+  "rows": [
+    {
+      "country": "china",
+      "enabled": true,
+      "frames": 257,
+      "cpuMs": 7.7813229572013425,
+      "paintMs": 3.504280155615207,
+      "sourceMs": 2.274708171192093
+    },
+    {
+      "country": "china",
+      "enabled": false,
+      "frames": 300,
+      "cpuMs": 6.6590000000083815,
+      "paintMs": 3.254666666639969,
+      "sourceMs": 1.8469999999941016
+    },
+    {
+      "country": "china",
+      "enabled": true,
+      "frames": 388,
+      "cpuMs": 5.066752577310947,
+      "paintMs": 2.2698453608252223,
+      "sourceMs": 1.5384020618338272
+    },
+    {
+      "country": "china",
+      "enabled": false,
+      "frames": 343,
+      "cpuMs": 5.8618075801616225,
+      "paintMs": 2.8338192419743615,
+      "sourceMs": 1.6408163265300693
+    },
+    {
+      "country": "china",
+      "enabled": true,
+      "frames": 369,
+      "cpuMs": 5.237127371280023,
+      "paintMs": 2.336314363138836,
+      "sourceMs": 1.5864498644996545
+    },
+    {
+      "country": "china",
+      "enabled": false,
+      "frames": 371,
+      "cpuMs": 5.37223719676575,
+      "paintMs": 2.592722371984976,
+      "sourceMs": 1.5021563342463657
+    },
+    {
+      "country": "sweden",
+      "enabled": true,
+      "frames": 506,
+      "cpuMs": 4.045256917000465,
+      "paintMs": 1.7531620553435148,
+      "sourceMs": 1.2150197628528439
+    },
+    {
+      "country": "sweden",
+      "enabled": false,
+      "frames": 522,
+      "cpuMs": 3.958812260527478,
+      "paintMs": 1.8881226053775442,
+      "sourceMs": 1.0948275862095727
+    },
+    {
+      "country": "sweden",
+      "enabled": true,
+      "frames": 509,
+      "cpuMs": 4.009430255388661,
+      "paintMs": 1.7581532416583454,
+      "sourceMs": 1.1891944990237198
+    },
+    {
+      "country": "sweden",
+      "enabled": false,
+      "frames": 448,
+      "cpuMs": 4.653348214291327,
+      "paintMs": 2.2098214285547977,
+      "sourceMs": 1.3020089285710128
+    },
+    {
+      "country": "sweden",
+      "enabled": true,
+      "frames": 574,
+      "cpuMs": 3.5391986062677208,
+      "paintMs": 1.5193379790926165,
+      "sourceMs": 1.0944250871115835
+    },
+    {
+      "country": "sweden",
+      "enabled": false,
+      "frames": 539,
+      "cpuMs": 3.814285714289861,
+      "paintMs": 1.8116883116762166,
+      "sourceMs": 1.0604823747630783
+    }
+  ],
+  "problems": [],
+  "failures": []
+}
