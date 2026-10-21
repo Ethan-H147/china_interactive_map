@@ -27,7 +27,6 @@ export function summarize(intervals,duration,draws){
 export function attach(map,{refreshLabels=()=>{}}={}){
  const bootAntialias=preferences.antialias;
  let moving=false,reduced=false,inputActive=false,settingRatio=false,restoreTimer,frame=0,lastFrame,start=0,draws=0,intervals=[],last=null,lastPaint=0,labelsSuppressed=false,panel,output,report;
- let gestureRatios=[],gestureCanvas,drawIntervals=[],lastDraw,cullMaximum=0;
  let observedRatio=globalThis.devicePixelRatio||1;
  function applyRatio(){
   const ratio=targetRatio(globalThis.devicePixelRatio,preferences.quality,reduced);
@@ -41,22 +40,20 @@ export function attach(map,{refreshLabels=()=>{}}={}){
   if(now-lastPaint>500){paint(now);lastPaint=now;}
   frame=requestAnimationFrame(sample);
  }
- const sceneStats=()=>globalThis.AtlasMapScene?.getMapScene(map)?.cullingStats()||null;
- function gestureStats(now){return {...summarize(intervals,now-start,draws),durationMs:Math.round(now-start),pixelRatioMin:gestureRatios.length?Math.min(...gestureRatios):null,pixelRatioMax:gestureRatios.length?Math.max(...gestureRatios):null,canvasAtStart:gestureCanvas,renderGapP95:summarize(drawIntervals,0,0).p95,contextLayersCulledMax:cullMaximum};}
- const currentStats=now=>moving?gestureStats(now):last;
+ const currentStats=now=>moving?summarize(intervals,now-start,draws):last;
  function snapshot(){
   const canvas=map.getCanvas(),container=map.getContainer(),style=map.getStyle();
   return {country:globalThis.AtlasEntry?.current,projection:map.getProjection()?.type,quality:preferences.quality,
    antialiasRequested:bootAntialias,antialiasActual:map.painter?.context?.gl?.getContextAttributes()?.antialias??null,
    devicePixelRatio:globalThis.devicePixelRatio,pixelRatio:map.getPixelRatio(),canvas:[canvas.width,canvas.height],viewport:[container.clientWidth,container.clientHeight],
-   moving,labelsSuppressed,contextCulling:sceneStats(),markers:container.querySelectorAll('.maplibregl-marker').length,
+   moving,labelsSuppressed,markers:container.querySelectorAll('.maplibregl-marker').length,
    sources:Object.keys(style?.sources||{}).length,visibleLayers:style?.layers?.filter(l=>l.layout?.visibility!=='none').length,
    lastGesture:currentStats(performance.now()),userAgent:navigator.userAgent};
  }
  function paint(now=performance.now()){
   if(!output)return;
   const stats=currentStats(now),prefix=moving?'Moving':'Last pan';
-  output.textContent=stats?.samples?`${prefix}: ${stats.drawFps} draw fps · ${stats.p95} ms frame-gap p95`:'Pan the map to measure';
+  output.textContent=stats?.samples?`${prefix}: ${stats.drawFps} draw fps · ${stats.p95} ms p95`:'Pan the map to measure';
   panel.querySelector('[data-perf-detail]').textContent=`${map.getProjection()?.type||'flat'} · ${map.getPixelRatio().toFixed(2)}× · ${labelsSuppressed?'labels off':'labels on'}`;
   if(report&&!report.hidden)report.value=JSON.stringify(snapshot(),null,2);
  }
@@ -84,13 +81,12 @@ export function attach(map,{refreshLabels=()=>{}}={}){
   if(settingRatio||document.hidden)return;
   clearTimeout(restoreTimer);restoreTimer=undefined;
   if(moving)return;moving=true;last=null;start=performance.now();draws=0;intervals=[];lastFrame=undefined;
-  gestureRatios=[];drawIntervals=[];lastDraw=undefined;cullMaximum=0;gestureCanvas=[map.getCanvas().width,map.getCanvas().height];
   if(preferences.diagnostics&&!document.hidden&&!frame)frame=requestAnimationFrame(sample);
  }
  function end(){
   if(settingRatio)return;
   if(!moving)return;
-  if(preferences.diagnostics)last=gestureStats(performance.now());
+  if(preferences.diagnostics)last=summarize(intervals,performance.now()-start,draws);
   moving=false;stopSampling();paint();restoreSoon();
  }
  function restoreSoon(){
@@ -110,7 +106,7 @@ export function attach(map,{refreshLabels=()=>{}}={}){
  const inputTypes=['mousedown','touchstart','wheel','keydown'],releaseTypes=['mouseup','touchend','touchcancel','pointercancel'];
  for(const type of inputTypes)canvas.addEventListener(type,prepareInput,{capture:true,passive:true});
  for(const type of releaseTypes)globalThis.addEventListener(type,releaseInput,{capture:true,passive:true});
- const render=()=>{if(moving&&preferences.diagnostics){const now=performance.now();draws++;gestureRatios.push(map.getPixelRatio());if(lastDraw!==undefined)drawIntervals.push(now-lastDraw);lastDraw=now;cullMaximum=Math.max(cullMaximum,sceneStats()?.culledLayers||0);}};
+ const render=()=>{if(moving&&preferences.diagnostics)draws++;};
  function resize(){const ratio=globalThis.devicePixelRatio||1;if(ratio!==observedRatio){observedRatio=ratio;if(!map.isMoving())applyRatio();}}
  function visibility(){if(document.hidden){end();stopSampling();clearTimeout(restoreTimer);inputActive=false;reduced=false;applyRatio();}else if(map.isMoving()){begin();}else{inputActive=false;reduced=false;applyRatio();}}
  map.on('movestart',begin);map.on('moveend',end);map.on('render',render);
