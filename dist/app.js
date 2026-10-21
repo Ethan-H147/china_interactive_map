@@ -754,6 +754,8 @@ map.on('resize',globeFloor);
 $('globe-view').onclick=()=>{const on=$('globe-view').getAttribute('aria-pressed')!=='true';$('globe-view').setAttribute('aria-pressed',String(on));try{localStorage.setItem(globeKey,String(on));}catch{}if(window.AtlasSettings.getSettings().projection!==(on?'globe':'mercator'))window.AtlasSettings.setSettings({projection:on?'globe':'mercator'});syncGlobe();};$('retry').onclick=()=>location.reload();
 window.AtlasSettings.mountSettings({refreshLabels:updateLabels,refreshStyling:updateProvinceStyling,getProjection:()=>$('globe-view').getAttribute('aria-pressed')==='true'?'globe':'mercator',setProjection:value=>{if(($('globe-view').getAttribute('aria-pressed')==='true')!==(value==='globe'))$('globe-view').click();}});
 window.AtlasPerformanceController.mountSettings();
+window.AtlasInputController=window.AtlasInput.attach(map,{canInteract:()=>!atlasStarting&&!countrySwitching,beforeInput:event=>{if(cameraBusy){cancelNavigation();const epoch=navigationEpoch;Promise.resolve(motionRenderer.end()).then(()=>{if(epoch===navigationEpoch)unlockCamera();});}window.AtlasPerformanceController.prepareInput(event);}});
+window.AtlasInputController.mountSettings();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 function quizPool(settings={scope:$('quiz-scope').value,includeTaiwan:$('quiz-taiwan').checked}){return AtlasQuiz.candidates([...regionByCode.values()],settings);}
 function initQuiz(){

@@ -283,6 +283,7 @@
     "test:clean-frontiers": "node --max-old-space-size=10000 scripts/validate-clean-frontiers.mjs && npm run test:korean-frontiers && node scripts/browser/run.mjs clean-frontiers",
     "preview:ipad": "node scripts/serve.mjs --lan",
     "test:tablet-performance": "node scripts/validate-tablet-performance.mjs && node scripts/browser/run.mjs tablet-performance",
-    "measure:tablet-performance": "node scripts/browser/measure-tablet-performance.mjs"
+    "measure:tablet-performance": "node scripts/browser/measure-tablet-performance.mjs",
+    "test:trackpad-controls": "node scripts/validate-trackpad-controls.mjs && node scripts/browser/run.mjs trackpad-controls"
   }
 }

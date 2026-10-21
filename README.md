@@ -47,6 +47,14 @@ Automatic navigation locks map input and navigation controls until its movement 
 
 Calligraphic headings use bundled Ma Shan Zheng and Marck Script subsets, with their open font licenses in `dist/vendor`.
 
+## Mouse and trackpad controls
+
+Settings → **Mouse & trackpad on this device** selects Automatic, Trackpad (scroll to pan), or Mouse (scroll to zoom). Automatic uses trackpad controls on Apple devices, including iPads that report a Mac platform, and mouse controls elsewhere. The choice stays on this device independently of account settings. Reset settings restores Automatic.
+
+Trackpad controls pan in both axes with ordinary two-finger scrolling, honor the OS momentum stream, and keep pinch zoom. Click-drag and direct touchscreen gestures still work. Wheel deltas are accumulated once per display frame. A constant-easing camera update applies the full movement and groups end-of-gesture work instead of rebuilding labels on every input event. Safari scale events provide a trackpad-pinch fallback, with a single driver per pinch to avoid double zoom when wheel events accompany them. Touchscreen pinch stays with MapLibre. Map controls never intercept scrolling in the settings dialog.
+
+Run `npm run test:trackpad-controls` for wheel normalization, device defaults, real browser wheel pan/pinch, mouse override/persistence, Safari event fallback and touchscreen pinch. Safari event fallback is simulated in Chrome; the physical iPad trackpad remains the device check.
+
 ## iPad local preview
 
 Run `npm run preview:ipad` on the Windows PC, then open the printed **iPad (same network)** HTTP address in Safari on the iPad. Both devices must share a reachable home network; Ethernet on the PC is fine when it connects to the same router. Keep the terminal and PC awake. Refresh after edits, or tap the preview's **Reload** notice when local files change. There is no build or GitHub push for ordinary JS/CSS edits.
