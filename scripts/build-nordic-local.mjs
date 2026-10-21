@@ -1,4 +1,3 @@
-import {buildDenmarkLocal} from './build-denmark-local.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
@@ -17,7 +16,7 @@ const sum=data=>data.features.reduce((n,f)=>n+area(f.geometry),0);
 export async function buildNordicLocal(countries=Object.keys(localDefinitions)){
  const sources=manifest();
  for(const country of countries){
-  if(country==='denmark'){await buildDenmarkLocal();continue;}
+  assert(localDefinitions[country],'Local subdivisions are not enabled for '+country);
   const definition=localDefinitions[country],base='dist/data/europe/'+country+'/',catalogue=load(base+'catalogue.bin'),facts=load(base+'statistics.json'),provenance=load(base+'sources.json');
   const parents=new Map(catalogue.records.filter(r=>r.level===2).map(r=>[r.id,r])),geometry=new Map(),baseFiles={};
   for(const name of ['first.bin',...fs.existsSync(base+'all.bin')?['all.bin']:[],...Object.values(catalogue.chunks).filter(c=>c.level!==3).map(c=>c.file)]){

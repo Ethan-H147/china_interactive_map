@@ -9,9 +9,9 @@ import {command,fc} from './build-regional-dataset.mjs';
 import {geographicAreaKm2 as area} from './geographic-area.mjs';
 import {manifest,readLocalSource,sha} from './fetch-nordic-local.mjs';
 import '../dist/countries.js';
-const expected={norway:[20,357,1547],sweden:[21,290,3363],finland:[19,308,115],denmark:[8,133,2096],iceland:[8,61,10]};
-const omitted={norway:[],sweden:[],finland:['FI-HKI-Aluemeri'],denmark:['DK-S-7568'],iceland:[]};
-const probes={norway:'NO-M-0301',sweden:'SE-M-0180',finland:'FI-M-091',denmark:'DK_101',iceland:'IS-M-0000'};
+const expected={norway:[20,357,1547],sweden:[21,290,3363],finland:[19,308,115],iceland:[8,61,10]};
+const omitted={norway:[],sweden:[],finland:['FI-HKI-Aluemeri'],iceland:[]};
+const probes={norway:'NO-M-0301',sweden:'SE-M-0180',finland:'FI-M-091',iceland:'IS-M-0000'};
 for(const name of Object.keys(manifest().files))readLocalSource(name);
 const swedish=new Map(JSON.parse(readLocalSource('sweden-regso-2025.geojson')).features.map(f=>['SE-R-'+f.properties.regsokod,f.properties]));
 const norwegian=new Map(JSON.parse(readLocalSource('norway-classification-2026.json')).classificationItems.filter(r=>r.level==='1').map(r=>[r.code,r.name]));
@@ -46,7 +46,6 @@ for(const [country,counts]of Object.entries(expected)){
  assert(Math.abs(sum-union)<.01,country+' local fills do not overlap');
  if(country==='finland'){assert.deepEqual(report.parents.map(p=>p.id).sort(),['FI-M-049','FI-M-091']);assert.equal(locals.filter(r=>r.parent==='FI-M-091').length,59);assert.equal(locals.filter(r=>r.parent==='FI-M-049').length,56);assert.equal(records.get('FI-HKI-02').names.sv,'Gloet');}
  if(country==='iceland')assert.deepEqual(report.parents.map(p=>p.id),['IS-M-0000']);
- if(country==='denmark'){assert(!locals.some(r=>/^DK-(GL|FO)/.test(r.parent)),'No invented territory parishes');assert(locals.some(r=>r.parents?.length>1),'Cross-municipal parishes retain a shared identity');}
  if(country==='sweden'){
   for(const id of ['SE-M-0180','SE-M-0125','SE-M-2380']){const mapped=load(base+cat.chunks[id].file).regions.features.reduce((n,f)=>n+area(f.geometry),0),official=records.get(id).areaKm2;assert(Math.abs(mapped-official)/official<.05,'Mapped land stays near official municipal land area '+id);}
   const land=landIndex([...seen.values()].flatMap(value=>polygons(JSON.parse(value)).flat()));

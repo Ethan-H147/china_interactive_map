@@ -1,11 +1,10 @@
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-import {readLocalSource,manifest} from './fetch-nordic-local.mjs';
+import {readLocalSource} from './fetch-nordic-local.mjs';
 const require=createRequire(import.meta.url),dependencies=createRequire(require.resolve('mapshaper')),{unzipSync}=dependencies('fflate'),{DOMParser}=dependencies('@xmldom/xmldom');
 const json=name=>JSON.parse(readLocalSource(name).toString('utf8').replace(/^\uFEFF/,''));
 const title=(name,locale)=>name.toLocaleLowerCase(locale).replace(/(^|[\s-])\p{L}/gu,s=>s.toLocaleUpperCase(locale));
 export const localDefinitions={
- denmark:{label:'Parishes',year:2026,kind:'Parish',kindLocal:'Sogn',lang:'da',note:'Official DAGI parish. Parishes are ecclesiastical areas and may cross municipal boundaries. Navigation uses mapped land overlap, with the largest overlap as the primary municipality; all parish land parts are retained.'},
  norway:{label:'Statistical areas',year:2025,kind:'Statistical area',kindLocal:'Delområde',lang:'nb',note:'Named statistical subarea (delområde), dissolved from Kartverket basic statistical units. It has no separate municipal government. Geometry: December 2025; names: SSB 2026 classification.'},
  sweden:{label:'Statistical areas',year:2025,kind:'Statistical area',kindLocal:'RegSO',lang:'sv',note:'Named regional statistical area (RegSO 2025), within a municipality. This is a statistical division, not a separate local government.'},
  finland:{label:'Helsinki & Espoo districts',year:2026,kind:'City district',lang:'fi',note:'Official city district. Local coverage in this release is Helsinki and Espoo; other Finnish municipalities retain their existing municipality-level map.'},
@@ -32,9 +31,7 @@ export function localFeatures(country){
   return{type:'Feature',properties:{id},geometry:feature.geometry};
  };
  let features;
- if(country==='denmark'){
-  features=Object.keys(manifest().files).filter(name=>name.startsWith('denmark-parishes-part-')).flatMap(name=>json(name).features).map(f=>{const p=f.properties,code=String(p.SogneKode);return make(f,'DK-S-'+code,code,null,p.Navn);});
- }else if(country==='norway'){
+ if(country==='norway'){
   const zip=unzipSync(readLocalSource('norway-grunnkretser.zip'),{filter:file=>/_Grunnkrets_GeoJSON\.geojson$/.test(file.name)});
   const bytes=Object.values(zip)[0];assert(bytes,'Retained grunnkrets geometry');
   const source=JSON.parse(Buffer.from(bytes).toString('utf8').replace(/^\uFEFF/,''));

@@ -130,7 +130,7 @@
     "build:us-territories": "node scripts/add-us-territories.mjs && node scripts/fetch-north-america-flags.mjs && node scripts/prepare-flag-images.mjs && npm run build:us-details",
     "test:us-territories": "node scripts/validate-country-context.mjs && node scripts/validate-us-territories.mjs",
     "test:select-pickers": "node scripts/browser/run.mjs select-pickers",
-    "build:denmark": "node --max-old-space-size=8000 scripts/build-denmark.mjs && node --max-old-space-size=7000 scripts/build-nordic-local.mjs denmark && node scripts/prepare-region-colors.mjs denmark",
+    "build:denmark": "node --max-old-space-size=8000 scripts/build-denmark.mjs",
     "test:denmark": "node --check scripts/denmark.mjs && node scripts/validate-denmark.mjs",
     "build:us-details": "node --max-old-space-size=7000 scripts/build-us-counties.mjs && node --max-old-space-size=7000 scripts/build-us-area-codes.mjs && npm run build:us-local && node scripts/prepare-region-colors.mjs && npm run build:compact",
     "test:us-details": "node --check dist/area-code-card.mjs && node scripts/validate-us-details.mjs && npm run test:us-local",
@@ -291,8 +291,7 @@
     "test:render-work": "node scripts/validate-render-work.mjs && node scripts/browser/run.mjs render-work",
     "measure:render-work": "node scripts/browser/measure-render-work.mjs",
     "fetch:nordic-local": "node scripts/fetch-nordic-local.mjs",
-    "build:nordic-local": "node --max-old-space-size=7000 scripts/build-nordic-local.mjs && node scripts/prepare-region-colors.mjs norway sweden denmark finland iceland",
-    "test:nordic-local": "node scripts/validate-nordic-local.mjs && node scripts/browser/run.mjs nordic-local && node scripts/validate-denmark-local.mjs",
-    "test:denmark-local": "node scripts/validate-denmark-local.mjs"
+    "build:nordic-local": "node --max-old-space-size=7000 scripts/build-nordic-local.mjs && node scripts/prepare-region-colors.mjs norway sweden finland iceland",
+    "test:nordic-local": "node scripts/validate-nordic-local.mjs && node scripts/browser/run.mjs nordic-local"
   }
 }

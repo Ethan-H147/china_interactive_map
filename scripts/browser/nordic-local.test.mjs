@@ -5,7 +5,6 @@ const fixtures=[
  {country:'norway',parent:'NO-M-0301',child:'NO-D-03012300',parentName:'Oslo'},
  {country:'sweden',parent:'SE-M-0180',child:'SE-R-0180R093',parentName:'Stockholm'},
  {country:'finland',parent:'FI-M-091',child:'FI-HKI-02',parentName:'Helsinki'},
- {country:'denmark',parent:'DK_101',child:'DK-S-7003',parentName:'Copenhagen'},
  {country:'iceland',parent:'IS-M-0000',child:'IS-RV-1',parentName:'Reykjavík'}
 ].map(f=>({...f,record:load('dist/data/europe/'+f.country+'/catalogue.bin').records.find(r=>r.id===f.child)}));
 const toggles=p=>p.evaluate("[...document.querySelectorAll('.map-mode>button:not(#mode-lock)')].filter(b=>b.getClientRects().length).map(b=>b.id)");

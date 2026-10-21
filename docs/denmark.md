@@ -2,7 +2,7 @@
 
 Added on 17 October 2026. Denmark uses the shared European country renderer, country registry, two-level hierarchy, statistics cards, label languages, color scales and flag viewer.
 
-Denmark has five regions and 98 municipalities. Christiansø is a separate state-administered area, not an invented municipality or part of a region. The 2027 regional merger is not applied early. DAGI's July 2026 municipal interior geography matches the detailed parish layer; the retained GISCO national silhouette preserves the existing coast and German frontier. Parent fills and interior borders are built from one cleaned municipal topology; unselected coasts have no stroke.
+Denmark has five regions and 98 municipalities. Christiansø is a separate state-administered area, not an invented municipality or part of a region. The 2027 regional merger is not applied early. GISCO's 2024 LAU geography matches the other newly added European countries. Parent fills and interior borders are built from one cleaned municipal topology; unselected coasts have no stroke.
 
 Greenland and the Faroe Islands are mapped as self-governing territories under Denmark. Clicking either opens Denmark with that territory selected and fits its own bounds, using the same shared context-entry path as US, UK and French territories. Denmark's ordinary home button still frames European Denmark.
 
@@ -32,7 +32,3 @@ The former border builder grouped Natural Earth land and water segments together
 BKG VG25 is credited under CC BY 4.0. Its WFS response, query URL and SHA-256 pin are retained in `scripts/boundary-sources/germany-denmark/`; official documentation is at [BKG’s VG25 service](https://gdz.bkg.bund.de/index.php/default/wfs-verwaltungsgebiete-1-25-000-stand-31-12-wfs-vg25.html). This remains a generalised atlas, not a cadastral map.
 
 Ordinary German country rebuilds preserve this correction. `npm run build:germany-denmark-border` reapplies only the border and refreshes its compact browser copy. `npm run test:germany-denmark-border` verifies every administrative level, a continuous shoreline join, the official reference and a 20-metre sampling check that the line never crosses Flensburg’s interior. `npm run test:browser:germany-denmark-border` checks the visible stroke from Germany, Denmark and another country, on desktop and phone.
-
-## Parish detail
-
-See [Nordic local subdivisions](nordic-local-areas.md) for the DAGI parish layer, cross-municipal navigation, source coverage and two-button drill-down.
