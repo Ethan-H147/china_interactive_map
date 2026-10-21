@@ -62,3 +62,7 @@ Every conversion uses the economic metric's own annual-average exchange rate. Cu
 `npm run fetch:nordics` restores boundary inputs, verifies their retained hashes and retrieves the pinned-year official economic tables. `npm run build:nordics` builds country data, territory inset silhouettes, world previews, comparison data, flags and compact assets. The existing detailed Russia dataset is a required neighboring reference. `npm run test:nordics` checks economic coverage and conversions as well as identifiers, hierarchy, child coverage, land anchors, water exclusions, official facts, source links, names, source hashes and shared frontier overlaps. `npm run test:browser:nordics` checks desktop and phone navigation, municipality search, saved views, languages, quizzes, camera preservation, remote islands, territory insets and Åland's flag.
 
 For economics alone, run `npm run fetch:nordic-economy`, then `npm run build:nordic-economy`. `npm run test:nordic-economy` checks source hashes, exact published values, coverage limits, source-year population denominators, currency conversions and agreement between cards and map data. The dedicated browser scenarios are `node scripts/browser/run.mjs nordic-economy`.
+
+## Local subdivisions
+
+See [Nordic local subdivisions](nordic-local-areas.md) for the statistical-area and city-district layers, source coverage, two-button drill-down and rebuild instructions.

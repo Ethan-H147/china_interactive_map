@@ -105,7 +105,7 @@
     "build:brazil-lagoons": "node --max-old-space-size=12000 scripts/open-brazil-lagoons.mjs",
     "test:brazil-lagoons": "node scripts/validate-brazil-lagoons.mjs",
     "test:mobile-sheet": "node --check dist/mobile-sheet.mjs && node scripts/validate-mobile-sheet.mjs",
-    "build:europe": "node scripts/fetch-europe.mjs && node --max-old-space-size=6000 scripts/build-europe.mjs && node scripts/prepare-europe-statistics.mjs && node scripts/prepare-uk-settlements.mjs && node scripts/prepare-europe-settlements.mjs && node scripts/fetch-europe-flags.mjs && node scripts/fetch-europe-subdivision-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs && node scripts/build-vatican.mjs && node scripts/reconcile-vatican.mjs && node --max-old-space-size=7000 scripts/build-china-neighbours.mjs && node scripts/build-world-land.mjs && npm run build:borders",
+    "build:europe": "node scripts/fetch-europe.mjs && node --max-old-space-size=6000 scripts/build-europe.mjs && node scripts/prepare-europe-statistics.mjs && node scripts/prepare-uk-settlements.mjs && node scripts/prepare-europe-settlements.mjs && node scripts/fetch-nordic-local.mjs iceland && node --max-old-space-size=7000 scripts/build-nordic-local.mjs iceland && node scripts/fetch-europe-flags.mjs && node scripts/fetch-europe-subdivision-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs && node scripts/build-vatican.mjs && node scripts/reconcile-vatican.mjs && node --max-old-space-size=7000 scripts/build-china-neighbours.mjs && node scripts/build-world-land.mjs && npm run build:borders",
     "test:polygon-parts": "node scripts/validate-polygon-parts.mjs",
     "test:europe": "node scripts/validate-polygon-parts.mjs && node --check dist/europe.mjs && node scripts/validate-europe-data.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && node scripts/validate-developer-mode.mjs && npm run test:country-expansion",
     "test:browser": "node scripts/browser/run.mjs",
@@ -130,7 +130,7 @@
     "build:us-territories": "node scripts/add-us-territories.mjs && node scripts/fetch-north-america-flags.mjs && node scripts/prepare-flag-images.mjs && npm run build:us-details",
     "test:us-territories": "node scripts/validate-country-context.mjs && node scripts/validate-us-territories.mjs",
     "test:select-pickers": "node scripts/browser/run.mjs select-pickers",
-    "build:denmark": "node --max-old-space-size=8000 scripts/build-denmark.mjs",
+    "build:denmark": "node --max-old-space-size=8000 scripts/build-denmark.mjs && node --max-old-space-size=7000 scripts/build-nordic-local.mjs denmark && node scripts/prepare-region-colors.mjs denmark",
     "test:denmark": "node --check scripts/denmark.mjs && node scripts/validate-denmark.mjs",
     "build:us-details": "node --max-old-space-size=7000 scripts/build-us-counties.mjs && node --max-old-space-size=7000 scripts/build-us-area-codes.mjs && npm run build:us-local && node scripts/prepare-region-colors.mjs && npm run build:compact",
     "test:us-details": "node --check dist/area-code-card.mjs && node scripts/validate-us-details.mjs && npm run test:us-local",
@@ -230,8 +230,8 @@
     "build:inner-mongolia-seams": "node scripts/reconcile-inner-mongolia.mjs && node scripts/reconcile-inner-mongolia-counties.mjs && npm run build:fills && npm run build:compact",
     "test:inner-mongolia-seams": "node scripts/validate-inner-mongolia-seams.mjs",
     "test:browser:inner-mongolia-seams": "node scripts/browser/run.mjs inner-mongolia-seams",
-    "fetch:nordics": "node scripts/fetch-nordics.mjs && node scripts/fetch-nordic-economy.mjs",
-    "build:nordics": "node --max-old-space-size=7000 scripts/build-nordics.mjs && node scripts/build-quiz-insets.mjs && node scripts/build-world-land.mjs && node scripts/prepare-region-colors.mjs && node scripts/prepare-flag-images.mjs && node scripts/build-compact.mjs",
+    "fetch:nordics": "node scripts/fetch-nordics.mjs && node scripts/fetch-nordic-economy.mjs && node scripts/fetch-nordic-local.mjs norway sweden finland",
+    "build:nordics": "node --max-old-space-size=7000 scripts/build-nordics.mjs && node --max-old-space-size=7000 scripts/build-nordic-local.mjs norway sweden finland && node scripts/build-quiz-insets.mjs && node scripts/build-world-land.mjs && node scripts/prepare-region-colors.mjs norway sweden finland && node scripts/prepare-flag-images.mjs && node scripts/build-compact.mjs",
     "test:nordics": "node scripts/validate-nordics.mjs && node scripts/validate-nordic-economy.mjs",
     "test:browser:nordics": "node scripts/browser/run.mjs nordics nordic-economy",
     "fetch:nordic-economy": "node scripts/fetch-nordic-economy.mjs",
@@ -289,6 +289,9 @@
     "test:context-visibility": "node scripts/validate-context-visibility.mjs && node scripts/browser/run.mjs context-visibility",
     "measure:map-workload": "node scripts/browser/profile-map-workload.mjs",
     "test:render-work": "node scripts/validate-render-work.mjs && node scripts/browser/run.mjs render-work",
-    "measure:render-work": "node scripts/browser/measure-render-work.mjs"
+    "measure:render-work": "node scripts/browser/measure-render-work.mjs",
+    "fetch:nordic-local": "node scripts/fetch-nordic-local.mjs",
+    "build:nordic-local": "node --max-old-space-size=7000 scripts/build-nordic-local.mjs && node scripts/prepare-region-colors.mjs norway sweden denmark finland iceland",
+    "test:nordic-local": "node scripts/validate-nordic-local.mjs && node scripts/browser/run.mjs nordic-local"
   }
 }

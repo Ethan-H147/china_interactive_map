@@ -1,0 +1,807 @@
+{
+  "country": "denmark",
+  "retrieved": "2026-10-21",
+  "type": "Parishes",
+  "sourceUnits": 2097,
+  "baseFiles": {
+    "first.bin": "d808eebdc782f3264925686fa04934fff1aad9e3e1b50743203cee6fa9a386cf",
+    "all.bin": "e30d9f7a88688f87fe8e3c15a7ded7c86bab3fd0ec604b74d03c309cfded3528",
+    "second/DK04.bin": "71e5293dd2d1cf0e5eb012fb08e58cbe9eb8a3a954f26287ce775456aa45c114",
+    "second/DK05.bin": "c8ecd613f9398e2b022d549613e0e715a479f3c85d1597b879d1d6213f2d248b",
+    "second/DK01.bin": "7c04134ce448e4be196baf723650c915177ee32a3d6769a10caf0f68ea8c703d",
+    "second/DK02.bin": "dec88bd912f2f68aaf03b14209c7ca85b7b50aa3c67d4c1520126ec8b6fc1b8e",
+    "second/DK03.bin": "d50e79c3fa9f4b1aae7b352d1189470859ec230c7e2c2aaecf5e83bf793ded7c",
+    "second/DK-GL.bin": "3614e04269af19bb2b5437cf0c5154b736623ff387d6800543ddf4937434595d",
+    "second/DK-FO.bin": "d4df1a5a9396cb7f9e5899c478441bb55c424aafed474ff5cce93c18e42e90ba"
+  },
+  "originalFacts": "2a15592cb758d38d69442ddb2da7833333c52de8431b254444b77c19ea57662b",
+  "parents": [
+    {
+      "id": "DK_376",
+      "count": 42,
+      "parentAreaKm2": 909.8047136554248,
+      "coveredAreaKm2": 1041.7049319673247,
+      "bytes": 124856,
+      "decodedBytes": 446115
+    },
+    {
+      "id": "DK_390",
+      "count": 29,
+      "parentAreaKm2": 627.8857998321298,
+      "coveredAreaKm2": 675.0186510421091,
+      "bytes": 104708,
+      "decodedBytes": 376946
+    },
+    {
+      "id": "DK_316",
+      "count": 40,
+      "parentAreaKm2": 578.5023648855642,
+      "coveredAreaKm2": 1047.4138749438478,
+      "bytes": 129354,
+      "decodedBytes": 458061
+    },
+    {
+      "id": "DK_671",
+      "count": 21,
+      "parentAreaKm2": 251.41007213657235,
+      "coveredAreaKm2": 504.07697934356975,
+      "bytes": 66640,
+      "decodedBytes": 231963
+    },
+    {
+      "id": "DK_540",
+      "count": 29,
+      "parentAreaKm2": 496.93709211902626,
+      "coveredAreaKm2": 669.8898799798862,
+      "bytes": 100530,
+      "decodedBytes": 354604
+    },
+    {
+      "id": "DK_420",
+      "count": 43,
+      "parentAreaKm2": 513.3299611195192,
+      "coveredAreaKm2": 796.2754397728155,
+      "bytes": 159673,
+      "decodedBytes": 577174
+    },
+    {
+      "id": "DK_741",
+      "count": 1,
+      "parentAreaKm2": 116.62937707647058,
+      "coveredAreaKm2": 111.54438926141023,
+      "bytes": 12314,
+      "decodedBytes": 41705
+    },
+    {
+      "id": "DK_561",
+      "count": 50,
+      "parentAreaKm2": 758.7110747221033,
+      "coveredAreaKm2": 1259.5489574446601,
+      "bytes": 133537,
+      "decodedBytes": 478090
+    },
+    {
+      "id": "DK_773",
+      "count": 32,
+      "parentAreaKm2": 368.39097172152043,
+      "coveredAreaKm2": 360.6800484392284,
+      "bytes": 64718,
+      "decodedBytes": 239773
+    },
+    {
+      "id": "DK_482",
+      "count": 18,
+      "parentAreaKm2": 292.166473426834,
+      "coveredAreaKm2": 285.885987690203,
+      "bytes": 42778,
+      "decodedBytes": 158880
+    },
+    {
+      "id": "DK_492",
+      "count": 6,
+      "parentAreaKm2": 91.22746013388769,
+      "coveredAreaKm2": 85.09824772562638,
+      "bytes": 10830,
+      "decodedBytes": 43007
+    },
+    {
+      "id": "DK_479",
+      "count": 36,
+      "parentAreaKm2": 416.7717019034356,
+      "coveredAreaKm2": 570.2407674236829,
+      "bytes": 113058,
+      "decodedBytes": 422057
+    },
+    {
+      "id": "DK_430",
+      "count": 54,
+      "parentAreaKm2": 637.2602840614356,
+      "coveredAreaKm2": 996.0691365268412,
+      "bytes": 191460,
+      "decodedBytes": 694231
+    },
+    {
+      "id": "DK_615",
+      "count": 50,
+      "parentAreaKm2": 525.1322393871462,
+      "coveredAreaKm2": 1020.4772282510177,
+      "bytes": 188214,
+      "decodedBytes": 672364
+    },
+    {
+      "id": "DK_706",
+      "count": 47,
+      "parentAreaKm2": 697.5557411669347,
+      "coveredAreaKm2": 1075.773933782091,
+      "bytes": 147771,
+      "decodedBytes": 537255
+    },
+    {
+      "id": "DK_727",
+      "count": 22,
+      "parentAreaKm2": 225.8186757282543,
+      "coveredAreaKm2": 353.09861276920265,
+      "bytes": 64795,
+      "decodedBytes": 238869
+    },
+    {
+      "id": "DK_766",
+      "count": 51,
+      "parentAreaKm2": 552.3784299429202,
+      "coveredAreaKm2": 941.9853392155314,
+      "bytes": 186778,
+      "decodedBytes": 682364
+    },
+    {
+      "id": "DK_563",
+      "count": 1,
+      "parentAreaKm2": 64.01989641810732,
+      "coveredAreaKm2": 62.840501970568624,
+      "bytes": 7138,
+      "decodedBytes": 24259
+    },
+    {
+      "id": "DK_360",
+      "count": 42,
+      "parentAreaKm2": 900.1303419209353,
+      "coveredAreaKm2": 957.4611276443551,
+      "bytes": 104347,
+      "decodedBytes": 376895
+    },
+    {
+      "id": "DK_330",
+      "count": 54,
+      "parentAreaKm2": 577.3672460474143,
+      "coveredAreaKm2": 832.0388199978851,
+      "bytes": 123089,
+      "decodedBytes": 454277
+    },
+    {
+      "id": "DK_707",
+      "count": 45,
+      "parentAreaKm2": 726.3704153066303,
+      "coveredAreaKm2": 1004.793173941668,
+      "bytes": 114498,
+      "decodedBytes": 429445
+    },
+    {
+      "id": "DK_825",
+      "count": 3,
+      "parentAreaKm2": 119.08976136453336,
+      "coveredAreaKm2": 114.58020883012296,
+      "bytes": 19062,
+      "decodedBytes": 70135
+    },
+    {
+      "id": "DK_336",
+      "count": 22,
+      "parentAreaKm2": 251.48986222147371,
+      "coveredAreaKm2": 376.4158197730735,
+      "bytes": 42346,
+      "decodedBytes": 164291
+    },
+    {
+      "id": "DK_320",
+      "count": 34,
+      "parentAreaKm2": 404.72921175843567,
+      "coveredAreaKm2": 684.6752922383528,
+      "bytes": 84927,
+      "decodedBytes": 318303
+    },
+    {
+      "id": "DK_259",
+      "count": 30,
+      "parentAreaKm2": 257.19015678273695,
+      "coveredAreaKm2": 507.2582724085712,
+      "bytes": 87285,
+      "decodedBytes": 323844
+    },
+    {
+      "id": "DK_370",
+      "count": 56,
+      "parentAreaKm2": 685.7649112001004,
+      "coveredAreaKm2": 1004.6793075812634,
+      "bytes": 145433,
+      "decodedBytes": 542952
+    },
+    {
+      "id": "DK_760",
+      "count": 66,
+      "parentAreaKm2": 1493.2597019901025,
+      "coveredAreaKm2": 2298.5174294635485,
+      "bytes": 198500,
+      "decodedBytes": 698749
+    },
+    {
+      "id": "DK_329",
+      "count": 33,
+      "parentAreaKm2": 294.06480288250583,
+      "coveredAreaKm2": 610.7742716236415,
+      "bytes": 77803,
+      "decodedBytes": 293238
+    },
+    {
+      "id": "DK_657",
+      "count": 65,
+      "parentAreaKm2": 1319.6246262141553,
+      "coveredAreaKm2": 2762.5896670346124,
+      "bytes": 245669,
+      "decodedBytes": 862548
+    },
+    {
+      "id": "DK_101",
+      "count": 76,
+      "parentAreaKm2": 94.59520918233808,
+      "coveredAreaKm2": 163.30490729192823,
+      "bytes": 69593,
+      "decodedBytes": 282302
+    },
+    {
+      "id": "DK_147",
+      "count": 17,
+      "parentAreaKm2": 8.656334144498059,
+      "coveredAreaKm2": 18.174375862611633,
+      "bytes": 7343,
+      "decodedBytes": 45710
+    },
+    {
+      "id": "DK_157",
+      "count": 13,
+      "parentAreaKm2": 25.337661984768037,
+      "coveredAreaKm2": 42.04746241063218,
+      "bytes": 10393,
+      "decodedBytes": 49905
+    },
+    {
+      "id": "DK_159",
+      "count": 17,
+      "parentAreaKm2": 24.528113823443707,
+      "coveredAreaKm2": 82.54816230890967,
+      "bytes": 16073,
+      "decodedBytes": 70238
+    },
+    {
+      "id": "DK_151",
+      "count": 11,
+      "parentAreaKm2": 34.115374157077014,
+      "coveredAreaKm2": 146.90504780701286,
+      "bytes": 21689,
+      "decodedBytes": 87917
+    },
+    {
+      "id": "DK_161",
+      "count": 7,
+      "parentAreaKm2": 13.499500742005745,
+      "coveredAreaKm2": 50.68402512760221,
+      "bytes": 6618,
+      "decodedBytes": 32579
+    },
+    {
+      "id": "DK_163",
+      "count": 10,
+      "parentAreaKm2": 12.233078529826797,
+      "coveredAreaKm2": 55.06738767098752,
+      "bytes": 8470,
+      "decodedBytes": 44445
+    },
+    {
+      "id": "DK_173",
+      "count": 17,
+      "parentAreaKm2": 39.11266553968413,
+      "coveredAreaKm2": 129.29250767293098,
+      "bytes": 23531,
+      "decodedBytes": 95923
+    },
+    {
+      "id": "DK_190",
+      "count": 15,
+      "parentAreaKm2": 56.817143616448696,
+      "coveredAreaKm2": 198.70214983300437,
+      "bytes": 28635,
+      "decodedBytes": 112330
+    },
+    {
+      "id": "DK_230",
+      "count": 15,
+      "parentAreaKm2": 73.1606626404958,
+      "coveredAreaKm2": 162.83018328476376,
+      "bytes": 29172,
+      "decodedBytes": 118692
+    },
+    {
+      "id": "DK_175",
+      "count": 11,
+      "parentAreaKm2": 12.045952880641433,
+      "coveredAreaKm2": 39.00060450411799,
+      "bytes": 7498,
+      "decodedBytes": 40212
+    },
+    {
+      "id": "DK_153",
+      "count": 9,
+      "parentAreaKm2": 21.118192233605534,
+      "coveredAreaKm2": 60.18876883281047,
+      "bytes": 6679,
+      "decodedBytes": 35125
+    },
+    {
+      "id": "DK_187",
+      "count": 5,
+      "parentAreaKm2": 9.01392226297408,
+      "coveredAreaKm2": 45.12093036005852,
+      "bytes": 4244,
+      "decodedBytes": 19265
+    },
+    {
+      "id": "DK_167",
+      "count": 8,
+      "parentAreaKm2": 22.782371287799233,
+      "coveredAreaKm2": 36.66630200602107,
+      "bytes": 5358,
+      "decodedBytes": 27998
+    },
+    {
+      "id": "DK_165",
+      "count": 9,
+      "parentAreaKm2": 23.52026234359031,
+      "coveredAreaKm2": 100.46238018882246,
+      "bytes": 11194,
+      "decodedBytes": 51326
+    },
+    {
+      "id": "DK_185",
+      "count": 9,
+      "parentAreaKm2": 65.89168261491369,
+      "coveredAreaKm2": 96.23185159361576,
+      "bytes": 19409,
+      "decodedBytes": 72747
+    },
+    {
+      "id": "DK_155",
+      "count": 3,
+      "parentAreaKm2": 18.75772679452306,
+      "coveredAreaKm2": 36.2372653924664,
+      "bytes": 4911,
+      "decodedBytes": 20563
+    },
+    {
+      "id": "DK_550",
+      "count": 40,
+      "parentAreaKm2": 1183.5526722727186,
+      "coveredAreaKm2": 1639.9618450409073,
+      "bytes": 99824,
+      "decodedBytes": 354375
+    },
+    {
+      "id": "DK_240",
+      "count": 18,
+      "parentAreaKm2": 125.17720620567343,
+      "coveredAreaKm2": 291.6557515967495,
+      "bytes": 41032,
+      "decodedBytes": 156654
+    },
+    {
+      "id": "DK_169",
+      "count": 18,
+      "parentAreaKm2": 77.89781510004362,
+      "coveredAreaKm2": 217.50739111708933,
+      "bytes": 31515,
+      "decodedBytes": 122557
+    },
+    {
+      "id": "DK_265",
+      "count": 35,
+      "parentAreaKm2": 212.59180279084157,
+      "coveredAreaKm2": 474.8424454892038,
+      "bytes": 81168,
+      "decodedBytes": 300548
+    },
+    {
+      "id": "DK_183",
+      "count": 9,
+      "parentAreaKm2": 25.970161512864617,
+      "coveredAreaKm2": 97.57610719070446,
+      "bytes": 8658,
+      "decodedBytes": 46068
+    },
+    {
+      "id": "DK_253",
+      "count": 11,
+      "parentAreaKm2": 61.1654631044611,
+      "coveredAreaKm2": 121.81594265160835,
+      "bytes": 13335,
+      "decodedBytes": 62152
+    },
+    {
+      "id": "DK_201",
+      "count": 14,
+      "parentAreaKm2": 67.55262601861412,
+      "coveredAreaKm2": 239.1686381347952,
+      "bytes": 30992,
+      "decodedBytes": 117898
+    },
+    {
+      "id": "DK_250",
+      "count": 27,
+      "parentAreaKm2": 251.4070536172445,
+      "coveredAreaKm2": 378.9680713454234,
+      "bytes": 67550,
+      "decodedBytes": 244389
+    },
+    {
+      "id": "DK_269",
+      "count": 11,
+      "parentAreaKm2": 40.871162822320095,
+      "coveredAreaKm2": 118.04201248512409,
+      "bytes": 20302,
+      "decodedBytes": 81856
+    },
+    {
+      "id": "DK_350",
+      "count": 30,
+      "parentAreaKm2": 241.39945622575812,
+      "coveredAreaKm2": 476.22786912401773,
+      "bytes": 86237,
+      "decodedBytes": 318962
+    },
+    {
+      "id": "DK_340",
+      "count": 34,
+      "parentAreaKm2": 308.1826629807306,
+      "coveredAreaKm2": 713.7760198355372,
+      "bytes": 86385,
+      "decodedBytes": 316930
+    },
+    {
+      "id": "DK_217",
+      "count": 14,
+      "parentAreaKm2": 123.46896256780254,
+      "coveredAreaKm2": 246.02016882116266,
+      "bytes": 33328,
+      "decodedBytes": 128229
+    },
+    {
+      "id": "DK_270",
+      "count": 21,
+      "parentAreaKm2": 280.7969454404377,
+      "coveredAreaKm2": 477.2028926105428,
+      "bytes": 47912,
+      "decodedBytes": 180123
+    },
+    {
+      "id": "DK_210",
+      "count": 11,
+      "parentAreaKm2": 112.50136509186498,
+      "coveredAreaKm2": 278.9232504958977,
+      "bytes": 26396,
+      "decodedBytes": 101804
+    },
+    {
+      "id": "DK_661",
+      "count": 46,
+      "parentAreaKm2": 803.916438699117,
+      "coveredAreaKm2": 1505.964906402912,
+      "bytes": 181924,
+      "decodedBytes": 629610
+    },
+    {
+      "id": "DK_219",
+      "count": 28,
+      "parentAreaKm2": 211.82489399623438,
+      "coveredAreaKm2": 491.9025486417924,
+      "bytes": 61028,
+      "decodedBytes": 229906
+    },
+    {
+      "id": "DK_223",
+      "count": 7,
+      "parentAreaKm2": 31.549180099890265,
+      "coveredAreaKm2": 111.8704690504498,
+      "bytes": 17138,
+      "decodedBytes": 70879
+    },
+    {
+      "id": "DK_779",
+      "count": 45,
+      "parentAreaKm2": 692.5085660131343,
+      "coveredAreaKm2": 908.146873843149,
+      "bytes": 120275,
+      "decodedBytes": 416708
+    },
+    {
+      "id": "DK_260",
+      "count": 11,
+      "parentAreaKm2": 122.95592949745017,
+      "coveredAreaKm2": 230.89473880509843,
+      "bytes": 22177,
+      "decodedBytes": 84628
+    },
+    {
+      "id": "DK_306",
+      "count": 17,
+      "parentAreaKm2": 359.79200051958793,
+      "coveredAreaKm2": 486.39153692239836,
+      "bytes": 40489,
+      "decodedBytes": 144452
+    },
+    {
+      "id": "DK_400",
+      "count": 21,
+      "parentAreaKm2": 589.7472987233938,
+      "coveredAreaKm2": 582.9785459566991,
+      "bytes": 78002,
+      "decodedBytes": 284911
+    },
+    {
+      "id": "DK_580",
+      "count": 31,
+      "parentAreaKm2": 939.009680563043,
+      "coveredAreaKm2": 1420.3004547040903,
+      "bytes": 127177,
+      "decodedBytes": 437323
+    },
+    {
+      "id": "DK_791",
+      "count": 98,
+      "parentAreaKm2": 1418.6324204771154,
+      "coveredAreaKm2": 2266.95443306869,
+      "bytes": 287666,
+      "decodedBytes": 1035774
+    },
+    {
+      "id": "DK_573",
+      "count": 46,
+      "parentAreaKm2": 1235.9343058529032,
+      "coveredAreaKm2": 1885.236592393052,
+      "bytes": 151184,
+      "decodedBytes": 530563
+    },
+    {
+      "id": "DK_751",
+      "count": 76,
+      "parentAreaKm2": 472.820748790261,
+      "coveredAreaKm2": 793.5494714928452,
+      "bytes": 165080,
+      "decodedBytes": 621043
+    },
+    {
+      "id": "DK_810",
+      "count": 41,
+      "parentAreaKm2": 631.9397347439887,
+      "coveredAreaKm2": 1415.1761872748627,
+      "bytes": 154926,
+      "decodedBytes": 545805
+    },
+    {
+      "id": "DK_813",
+      "count": 34,
+      "parentAreaKm2": 653.9818638489314,
+      "coveredAreaKm2": 1039.6682505165104,
+      "bytes": 160240,
+      "decodedBytes": 572582
+    },
+    {
+      "id": "DK_665",
+      "count": 28,
+      "parentAreaKm2": 516.2670919470759,
+      "coveredAreaKm2": 646.0327069496378,
+      "bytes": 93706,
+      "decodedBytes": 334750
+    },
+    {
+      "id": "DK_575",
+      "count": 43,
+      "parentAreaKm2": 811.8679126503854,
+      "coveredAreaKm2": 1587.2932711560954,
+      "bytes": 155865,
+      "decodedBytes": 559817
+    },
+    {
+      "id": "DK_510",
+      "count": 43,
+      "parentAreaKm2": 816.5913818872091,
+      "coveredAreaKm2": 1420.120280510976,
+      "bytes": 182314,
+      "decodedBytes": 641253
+    },
+    {
+      "id": "DK_787",
+      "count": 54,
+      "parentAreaKm2": 1104.1827457309405,
+      "coveredAreaKm2": 1127.103170591235,
+      "bytes": 117290,
+      "decodedBytes": 419595
+    },
+    {
+      "id": "DK_849",
+      "count": 37,
+      "parentAreaKm2": 874.7087090929673,
+      "coveredAreaKm2": 1186.1933194987791,
+      "bytes": 87476,
+      "decodedBytes": 307831
+    },
+    {
+      "id": "DK_440",
+      "count": 20,
+      "parentAreaKm2": 208.8022203126111,
+      "coveredAreaKm2": 322.61210385193345,
+      "bytes": 64093,
+      "decodedBytes": 234903
+    },
+    {
+      "id": "DK_621",
+      "count": 44,
+      "parentAreaKm2": 604.0209247974835,
+      "coveredAreaKm2": 1078.043457965929,
+      "bytes": 177376,
+      "decodedBytes": 638896
+    },
+    {
+      "id": "DK_410",
+      "count": 27,
+      "parentAreaKm2": 301.2224476715227,
+      "coveredAreaKm2": 419.7942886402998,
+      "bytes": 79878,
+      "decodedBytes": 287503
+    },
+    {
+      "id": "DK_630",
+      "count": 64,
+      "parentAreaKm2": 1060.8704842039451,
+      "coveredAreaKm2": 1822.9237908986577,
+      "bytes": 236895,
+      "decodedBytes": 837678
+    },
+    {
+      "id": "DK_607",
+      "count": 16,
+      "parentAreaKm2": 135.7598782979141,
+      "coveredAreaKm2": 258.45454109554566,
+      "bytes": 47313,
+      "decodedBytes": 170895
+    },
+    {
+      "id": "DK_851",
+      "count": 83,
+      "parentAreaKm2": 1140.6175190990239,
+      "coveredAreaKm2": 1985.2113375463048,
+      "bytes": 217254,
+      "decodedBytes": 773306
+    },
+    {
+      "id": "DK_530",
+      "count": 26,
+      "parentAreaKm2": 540.0930145369845,
+      "coveredAreaKm2": 1217.5459784448142,
+      "bytes": 79473,
+      "decodedBytes": 273924
+    },
+    {
+      "id": "DK_756",
+      "count": 40,
+      "parentAreaKm2": 734.6178603132138,
+      "coveredAreaKm2": 1772.6365409879338,
+      "bytes": 156639,
+      "decodedBytes": 541926
+    },
+    {
+      "id": "DK_746",
+      "count": 42,
+      "parentAreaKm2": 455.10436847935307,
+      "coveredAreaKm2": 890.7856916145333,
+      "bytes": 116971,
+      "decodedBytes": 427074
+    },
+    {
+      "id": "DK_740",
+      "count": 56,
+      "parentAreaKm2": 862.3536743756046,
+      "coveredAreaKm2": 1618.9043649555326,
+      "bytes": 177762,
+      "decodedBytes": 636611
+    },
+    {
+      "id": "DK_710",
+      "count": 67,
+      "parentAreaKm2": 540.1524903775068,
+      "coveredAreaKm2": 1029.6749532857234,
+      "bytes": 187751,
+      "decodedBytes": 687037
+    },
+    {
+      "id": "DK_846",
+      "count": 50,
+      "parentAreaKm2": 724.4137281840335,
+      "coveredAreaKm2": 1295.9675671697876,
+      "bytes": 150051,
+      "decodedBytes": 543936
+    },
+    {
+      "id": "DK_730",
+      "count": 77,
+      "parentAreaKm2": 749.1952755505944,
+      "coveredAreaKm2": 1144.6317080174806,
+      "bytes": 195408,
+      "decodedBytes": 725375
+    },
+    {
+      "id": "DK_326",
+      "count": 40,
+      "parentAreaKm2": 609.9500746932014,
+      "coveredAreaKm2": 865.4991269324884,
+      "bytes": 102255,
+      "decodedBytes": 370240
+    },
+    {
+      "id": "DK_860",
+      "count": 55,
+      "parentAreaKm2": 927.1646837632936,
+      "coveredAreaKm2": 1393.3634962662184,
+      "bytes": 190892,
+      "decodedBytes": 696900
+    },
+    {
+      "id": "DK_840",
+      "count": 52,
+      "parentAreaKm2": 620.3519254961624,
+      "coveredAreaKm2": 1310.70075911971,
+      "bytes": 161289,
+      "decodedBytes": 601398
+    },
+    {
+      "id": "DK_450",
+      "count": 29,
+      "parentAreaKm2": 277.93844288598456,
+      "coveredAreaKm2": 490.64814860647715,
+      "bytes": 94060,
+      "decodedBytes": 342824
+    },
+    {
+      "id": "DK_461",
+      "count": 53,
+      "parentAreaKm2": 305.21215507099737,
+      "coveredAreaKm2": 648.8598810200074,
+      "bytes": 140047,
+      "decodedBytes": 516389
+    },
+    {
+      "id": "DK_480",
+      "count": 36,
+      "parentAreaKm2": 452.0019378915607,
+      "coveredAreaKm2": 614.0903457977654,
+      "bytes": 104136,
+      "decodedBytes": 385418
+    },
+    {
+      "id": "DK_820",
+      "count": 54,
+      "parentAreaKm2": 769.8909329099051,
+      "coveredAreaKm2": 1160.661583065291,
+      "bytes": 158635,
+      "decodedBytes": 576198
+    }
+  ],
+  "omitted": [
+    "DK-S-7568"
+  ]
+}

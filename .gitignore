@@ -29,3 +29,6 @@ scripts/additional-sources/europe-flags/
 
 # Retained source archives are hash-pinned in the adjacent manifest.
 scripts/boundary-sources/mainland-seasia/*.zip
+
+# Hash-pinned official Nordic source archive; restore with fetch:nordic-local.
+/scripts/boundary-sources/nordic-local/*.zip

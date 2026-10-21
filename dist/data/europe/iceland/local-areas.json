@@ -1,0 +1,30 @@
+{
+  "country": "iceland",
+  "retrieved": "2026-10-21",
+  "type": "Reykjavík districts",
+  "sourceUnits": 10,
+  "baseFiles": {
+    "first.bin": "78776759977c110d33712733bb0338476cea9bf42a0f66e1c639b8d52845349c",
+    "all.bin": "5afc51622945cff046433119f9d3da772aa6b9e9583fdf34d920ba8fb18658cc",
+    "second/IS-R-4.bin": "41a4bc7d320b0004f73de934e9d4c487a6b113c6d6555afc2a3be2ac423fe3f2",
+    "second/IS-R-6.bin": "e1d34ba1fce74a87bfce0b8b43b833d43da7d79c30dbd8e37269e5b1d3d5d43e",
+    "second/IS-R-1.bin": "65b922f1754c6352db70cb9ef1903a2191b06f6a600e49417ad2087c0d711ac2",
+    "second/IS-R-8.bin": "cf296b96ef49b0c5014c62b102f0b54ded51022c301aae4394299524124af5a5",
+    "second/IS-R-3.bin": "75a1c73d061ae90cc878c1cb3440a61e989c0b60f480af7500291d29e6058963",
+    "second/IS-R-2.bin": "71837c9c22bd0a7ac679f04e7b24c1b1354646d709e083fd06c0608a14b0889d",
+    "second/IS-R-5.bin": "1170d2c58b53a64b90472a73002dcffe9b23a54e4d9e908262345c62e6c5dca8",
+    "second/IS-R-7.bin": "62af53b24db5144ffacf3b166b38a2612cf9c1f71fd5f6b353da49689a202294"
+  },
+  "originalFacts": "21c8a074b3f98fbb7e6bf4881b1331b2004cd454ae8d027af737dacd7866fbfb",
+  "parents": [
+    {
+      "id": "IS-M-0000",
+      "count": 10,
+      "parentAreaKm2": 243.21700845857634,
+      "coveredAreaKm2": 236.86505631445615,
+      "bytes": 19572,
+      "decodedBytes": 77868
+    }
+  ],
+  "omitted": []
+}

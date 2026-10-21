@@ -1,0 +1,2354 @@
+{
+  "country": "sweden",
+  "retrieved": "2026-10-21",
+  "type": "Statistical areas",
+  "sourceUnits": 3363,
+  "baseFiles": {
+    "first.bin": "e4d65a977456b80350506f4d33b734add1d894a107bbf5970189af311f09a52c",
+    "second/SE-19.bin": "f8e388c4dbb38132c384decd64bd1e6098484d730fd929e33282de6e3ed4c3ad",
+    "second/SE-20.bin": "4e97e8d794187af1c6ec3c4e3f2186b5a51a53c0ca1ef345c75e97841a2908d7",
+    "second/SE-21.bin": "70c35b8b715812c2b7e29ebe9af3f7a494c4301b1f723c8f35a0d60872879b66",
+    "second/SE-22.bin": "a95397df0d3fdfedde55ebd58dec02d8739c93e27e4f49940a5ead6d4fd02285",
+    "second/SE-23.bin": "1138907c33c7615f149e028222cd1aaf49875ee2f09733c955971e404abf9924",
+    "second/SE-24.bin": "67c47dc862ac9781cc273a2667d1d07effb1edcd2e8e0fc4988b7f94f9678938",
+    "second/SE-25.bin": "2e9cd31acfcd97d20a6bf36449740f374ff6903681c9819101a059773ca4421e",
+    "second/SE-12.bin": "33603387a7f0b59d10e8c291f9349c4a42d4cca6127eb93cd04fe77cb570cd68",
+    "second/SE-13.bin": "7e67411d977f45a553b89bb0a14efcc2a67219060c25e8cae33cf083ab8c17dc",
+    "second/SE-01.bin": "9b0f2cb670657b2926a96b54dab1444115baf8fb8137f94d470f5d7ccf0ca86d",
+    "second/SE-18.bin": "b85712f357f5172c5d9a70d038e1391df88af23fdb9f2728fdae23f0658fffb8",
+    "second/SE-03.bin": "4f9d8aaa08c3f1d635eab4b4daa7d88b29a2ec10d13f83483fa74011de3b4372",
+    "second/SE-14.bin": "aa99a7fd20b05e1d1891c01b2da5e356d0b98c54f2b6fb9389f6de57477b580e",
+    "second/SE-04.bin": "c1a37bc05be8775a0a78e3fd0743c78462959ab82d99cd1fa8dc7162f4201012",
+    "second/SE-05.bin": "cdabb048035395baa0f1e08f4a0e4d7c3c43cb7405aea9d7f706988cf2fbb90a",
+    "second/SE-06.bin": "b5f5def7371b6e01fb53d3227fafd6f9ef840124f6d8f606075b7b11661db879",
+    "second/SE-07.bin": "dd3c832a1c0dd407f2c497f942d443648e845ee1e33172efb82fb13161145373",
+    "second/SE-08.bin": "94eda7ca44dbf4b4b7223d0db36c8941b806f0e6df3735fc15be1f2a66ba13ee",
+    "second/SE-17.bin": "6e13d6190891745a10e281f93d0bc596d7ef0b48b5bfb3c3afd3df5bf6b9f7d4",
+    "second/SE-09.bin": "61ba9aa058698769c4ed3a19ffc238c96abfacb6ed8df471aaa8e983c64d33a4",
+    "second/SE-10.bin": "4e805768515c27933cdc75bdff83da353d5da8294817d22311c8dfaa819305dd"
+  },
+  "originalFacts": "d93c57f10668c1676ce38f3b64ca797985f867458ed565858d4057bb2f7865a5",
+  "parents": [
+    {
+      "id": "SE-M-1961",
+      "count": 8,
+      "parentAreaKm2": 170.87426235293594,
+      "coveredAreaKm2": 169.62485710242805,
+      "bytes": 10437,
+      "decodedBytes": 50790
+    },
+    {
+      "id": "SE-M-1962",
+      "count": 4,
+      "parentAreaKm2": 449.04274504418515,
+      "coveredAreaKm2": 444.9273645551463,
+      "bytes": 7648,
+      "decodedBytes": 38580
+    },
+    {
+      "id": "SE-M-1980",
+      "count": 50,
+      "parentAreaKm2": 852.844414662289,
+      "coveredAreaKm2": 961.5553859283589,
+      "bytes": 144348,
+      "decodedBytes": 525826
+    },
+    {
+      "id": "SE-M-2085",
+      "count": 10,
+      "parentAreaKm2": 1652.1637987992792,
+      "coveredAreaKm2": 1645.7690381345203,
+      "bytes": 19503,
+      "decodedBytes": 82262
+    },
+    {
+      "id": "SE-M-1981",
+      "count": 5,
+      "parentAreaKm2": 1194.334289588496,
+      "coveredAreaKm2": 1188.7811209711747,
+      "bytes": 16770,
+      "decodedBytes": 74196
+    },
+    {
+      "id": "SE-M-1982",
+      "count": 5,
+      "parentAreaKm2": 310.27889856040235,
+      "coveredAreaKm2": 308.5268196328568,
+      "bytes": 9639,
+      "decodedBytes": 47735
+    },
+    {
+      "id": "SE-M-1983",
+      "count": 9,
+      "parentAreaKm2": 620.8871253570217,
+      "coveredAreaKm2": 626.272524829783,
+      "bytes": 26184,
+      "decodedBytes": 96833
+    },
+    {
+      "id": "SE-M-1984",
+      "count": 9,
+      "parentAreaKm2": 323.36030162339,
+      "coveredAreaKm2": 321.3466492358917,
+      "bytes": 7707,
+      "decodedBytes": 42544
+    },
+    {
+      "id": "SE-M-2029",
+      "count": 6,
+      "parentAreaKm2": 1302.3688265902113,
+      "coveredAreaKm2": 1285.2880730364625,
+      "bytes": 15851,
+      "decodedBytes": 62639
+    },
+    {
+      "id": "SE-M-2281",
+      "count": 31,
+      "parentAreaKm2": 3463.0816054618713,
+      "coveredAreaKm2": 3453.426634740499,
+      "bytes": 50181,
+      "decodedBytes": 186510
+    },
+    {
+      "id": "SE-M-2021",
+      "count": 4,
+      "parentAreaKm2": 1662.6524617907683,
+      "coveredAreaKm2": 1658.6230251678676,
+      "bytes": 10422,
+      "decodedBytes": 54724
+    },
+    {
+      "id": "SE-M-2023",
+      "count": 6,
+      "parentAreaKm2": 4324.242527137657,
+      "coveredAreaKm2": 4317.671631242429,
+      "bytes": 8323,
+      "decodedBytes": 39619
+    },
+    {
+      "id": "SE-M-2026",
+      "count": 6,
+      "parentAreaKm2": 810.2806755573263,
+      "coveredAreaKm2": 807.2272189392643,
+      "bytes": 12446,
+      "decodedBytes": 60638
+    },
+    {
+      "id": "SE-M-2031",
+      "count": 6,
+      "parentAreaKm2": 2111.5489709937574,
+      "coveredAreaKm2": 2105.819338027756,
+      "bytes": 11519,
+      "decodedBytes": 51428
+    },
+    {
+      "id": "SE-M-2034",
+      "count": 4,
+      "parentAreaKm2": 1799.6457509171837,
+      "coveredAreaKm2": 1796.7502580611133,
+      "bytes": 7822,
+      "decodedBytes": 40486
+    },
+    {
+      "id": "SE-M-2062",
+      "count": 12,
+      "parentAreaKm2": 2949.6339733426034,
+      "coveredAreaKm2": 2933.8351648050575,
+      "bytes": 20941,
+      "decodedBytes": 87126
+    },
+    {
+      "id": "SE-M-2080",
+      "count": 19,
+      "parentAreaKm2": 2278.995009341816,
+      "coveredAreaKm2": 2240.4467174473953,
+      "bytes": 38579,
+      "decodedBytes": 142708
+    },
+    {
+      "id": "SE-M-2039",
+      "count": 5,
+      "parentAreaKm2": 7101.906307559802,
+      "coveredAreaKm2": 7085.906339725327,
+      "bytes": 8356,
+      "decodedBytes": 43541
+    },
+    {
+      "id": "SE-M-2061",
+      "count": 8,
+      "parentAreaKm2": 1060.5212570770843,
+      "coveredAreaKm2": 1055.4730766880848,
+      "bytes": 13097,
+      "decodedBytes": 59569
+    },
+    {
+      "id": "SE-M-2081",
+      "count": 17,
+      "parentAreaKm2": 636.3196592675799,
+      "coveredAreaKm2": 621.8321441827075,
+      "bytes": 21800,
+      "decodedBytes": 89687
+    },
+    {
+      "id": "SE-M-2082",
+      "count": 6,
+      "parentAreaKm2": 626.8215401971356,
+      "coveredAreaKm2": 620.9561616647032,
+      "bytes": 11695,
+      "decodedBytes": 53360
+    },
+    {
+      "id": "SE-M-2083",
+      "count": 5,
+      "parentAreaKm2": 925.8019677634801,
+      "coveredAreaKm2": 923.0819903760525,
+      "bytes": 10654,
+      "decodedBytes": 52413
+    },
+    {
+      "id": "SE-M-2084",
+      "count": 5,
+      "parentAreaKm2": 643.3751635628466,
+      "coveredAreaKm2": 640.4055397575388,
+      "bytes": 11487,
+      "decodedBytes": 56666
+    },
+    {
+      "id": "SE-M-2101",
+      "count": 2,
+      "parentAreaKm2": 1132.1490618729333,
+      "coveredAreaKm2": 1128.9013723262117,
+      "bytes": 4130,
+      "decodedBytes": 20498
+    },
+    {
+      "id": "SE-M-2104",
+      "count": 3,
+      "parentAreaKm2": 447.656138741077,
+      "coveredAreaKm2": 444.02829654847585,
+      "bytes": 3925,
+      "decodedBytes": 20716
+    },
+    {
+      "id": "SE-M-2121",
+      "count": 3,
+      "parentAreaKm2": 2020.6945859151838,
+      "coveredAreaKm2": 2016.159962860915,
+      "bytes": 7838,
+      "decodedBytes": 42468
+    },
+    {
+      "id": "SE-M-2132",
+      "count": 5,
+      "parentAreaKm2": 1454.5227105060785,
+      "coveredAreaKm2": 1452.3043146194382,
+      "bytes": 10543,
+      "decodedBytes": 49912
+    },
+    {
+      "id": "SE-M-2161",
+      "count": 7,
+      "parentAreaKm2": 5619.577245895031,
+      "coveredAreaKm2": 5609.133080516907,
+      "bytes": 27099,
+      "decodedBytes": 101628
+    },
+    {
+      "id": "SE-M-2180",
+      "count": 22,
+      "parentAreaKm2": 1673.3841682549482,
+      "coveredAreaKm2": 1669.6103658813931,
+      "bytes": 36245,
+      "decodedBytes": 137437
+    },
+    {
+      "id": "SE-M-2181",
+      "count": 11,
+      "parentAreaKm2": 1203.4123185660994,
+      "coveredAreaKm2": 1195.3840219641531,
+      "bytes": 18278,
+      "decodedBytes": 78720
+    },
+    {
+      "id": "SE-M-2182",
+      "count": 10,
+      "parentAreaKm2": 1185.1577400959084,
+      "coveredAreaKm2": 1178.937740345201,
+      "bytes": 25248,
+      "decodedBytes": 100102
+    },
+    {
+      "id": "SE-M-2262",
+      "count": 8,
+      "parentAreaKm2": 825.1820742706373,
+      "coveredAreaKm2": 820.9934312917566,
+      "bytes": 15993,
+      "decodedBytes": 71665
+    },
+    {
+      "id": "SE-M-2183",
+      "count": 13,
+      "parentAreaKm2": 1979.64837611784,
+      "coveredAreaKm2": 1971.6609738739896,
+      "bytes": 20943,
+      "decodedBytes": 89323
+    },
+    {
+      "id": "SE-M-2184",
+      "count": 18,
+      "parentAreaKm2": 2762.116321556712,
+      "coveredAreaKm2": 2753.378405446379,
+      "bytes": 40363,
+      "decodedBytes": 153103
+    },
+    {
+      "id": "SE-M-2260",
+      "count": 4,
+      "parentAreaKm2": 3159.117985530667,
+      "coveredAreaKm2": 3152.051834019569,
+      "bytes": 10266,
+      "decodedBytes": 48936
+    },
+    {
+      "id": "SE-M-2280",
+      "count": 10,
+      "parentAreaKm2": 1103.2350966742197,
+      "coveredAreaKm2": 1101.273216577715,
+      "bytes": 7938,
+      "decodedBytes": 42863
+    },
+    {
+      "id": "SE-M-2284",
+      "count": 20,
+      "parentAreaKm2": 6750.367625981081,
+      "coveredAreaKm2": 6743.404273210544,
+      "bytes": 55135,
+      "decodedBytes": 193929
+    },
+    {
+      "id": "SE-M-2282",
+      "count": 13,
+      "parentAreaKm2": 1788.1173693535186,
+      "coveredAreaKm2": 1777.6772268926632,
+      "bytes": 24202,
+      "decodedBytes": 93799
+    },
+    {
+      "id": "SE-M-2283",
+      "count": 7,
+      "parentAreaKm2": 5771.183098696145,
+      "coveredAreaKm2": 5752.7904258202725,
+      "bytes": 13451,
+      "decodedBytes": 64535
+    },
+    {
+      "id": "SE-M-2303",
+      "count": 4,
+      "parentAreaKm2": 2638.209639274613,
+      "coveredAreaKm2": 2630.333312308793,
+      "bytes": 7550,
+      "decodedBytes": 37097
+    },
+    {
+      "id": "SE-M-2305",
+      "count": 5,
+      "parentAreaKm2": 3644.2205849185366,
+      "coveredAreaKm2": 3635.52435438248,
+      "bytes": 12276,
+      "decodedBytes": 57475
+    },
+    {
+      "id": "SE-M-2309",
+      "count": 10,
+      "parentAreaKm2": 6574.947587090123,
+      "coveredAreaKm2": 6574.443330679539,
+      "bytes": 65649,
+      "decodedBytes": 218691
+    },
+    {
+      "id": "SE-M-2313",
+      "count": 4,
+      "parentAreaKm2": 11207.674695034737,
+      "coveredAreaKm2": 11135.56659771307,
+      "bytes": 18756,
+      "decodedBytes": 64149
+    },
+    {
+      "id": "SE-M-2321",
+      "count": 7,
+      "parentAreaKm2": 7935.025199870784,
+      "coveredAreaKm2": 7919.943006039757,
+      "bytes": 44466,
+      "decodedBytes": 150790
+    },
+    {
+      "id": "SE-M-2326",
+      "count": 6,
+      "parentAreaKm2": 6000.768045650497,
+      "coveredAreaKm2": 5975.985871675486,
+      "bytes": 50558,
+      "decodedBytes": 170378
+    },
+    {
+      "id": "SE-M-2361",
+      "count": 7,
+      "parentAreaKm2": 11878.245139624423,
+      "coveredAreaKm2": 11855.264128450537,
+      "bytes": 21350,
+      "decodedBytes": 83671
+    },
+    {
+      "id": "SE-M-2380",
+      "count": 22,
+      "parentAreaKm2": 2307.3849637231656,
+      "coveredAreaKm2": 2300.899329277906,
+      "bytes": 70767,
+      "decodedBytes": 246330
+    },
+    {
+      "id": "SE-M-2401",
+      "count": 5,
+      "parentAreaKm2": 1278.771572022202,
+      "coveredAreaKm2": 1273.0165239995322,
+      "bytes": 12197,
+      "decodedBytes": 51543
+    },
+    {
+      "id": "SE-M-2403",
+      "count": 2,
+      "parentAreaKm2": 1370.2571478414122,
+      "coveredAreaKm2": 1363.9652820193294,
+      "bytes": 4905,
+      "decodedBytes": 19476
+    },
+    {
+      "id": "SE-M-2404",
+      "count": 3,
+      "parentAreaKm2": 2851.021676159518,
+      "coveredAreaKm2": 2844.7822034212213,
+      "bytes": 5202,
+      "decodedBytes": 24088
+    },
+    {
+      "id": "SE-M-2409",
+      "count": 4,
+      "parentAreaKm2": 1317.9523461276658,
+      "coveredAreaKm2": 1311.8489810289639,
+      "bytes": 5208,
+      "decodedBytes": 22858
+    },
+    {
+      "id": "SE-M-2417",
+      "count": 2,
+      "parentAreaKm2": 1927.9519898849503,
+      "coveredAreaKm2": 1921.9579434505029,
+      "bytes": 2977,
+      "decodedBytes": 14086
+    },
+    {
+      "id": "SE-M-2418",
+      "count": 3,
+      "parentAreaKm2": 1735.2620234168194,
+      "coveredAreaKm2": 1728.828896826392,
+      "bytes": 4523,
+      "decodedBytes": 20255
+    },
+    {
+      "id": "SE-M-2421",
+      "count": 4,
+      "parentAreaKm2": 8024.732090779822,
+      "coveredAreaKm2": 8008.478591672537,
+      "bytes": 5882,
+      "decodedBytes": 24936
+    },
+    {
+      "id": "SE-M-2422",
+      "count": 2,
+      "parentAreaKm2": 7968.89797068108,
+      "coveredAreaKm2": 7963.581006528466,
+      "bytes": 2934,
+      "decodedBytes": 13617
+    },
+    {
+      "id": "SE-M-2425",
+      "count": 2,
+      "parentAreaKm2": 2953.375892132618,
+      "coveredAreaKm2": 2935.2516854019996,
+      "bytes": 5507,
+      "decodedBytes": 22021
+    },
+    {
+      "id": "SE-M-2460",
+      "count": 3,
+      "parentAreaKm2": 553.7559558033779,
+      "coveredAreaKm2": 551.0610568733578,
+      "bytes": 4829,
+      "decodedBytes": 24832
+    },
+    {
+      "id": "SE-M-2462",
+      "count": 5,
+      "parentAreaKm2": 8463.312429872582,
+      "coveredAreaKm2": 8458.00501115429,
+      "bytes": 7182,
+      "decodedBytes": 31223
+    },
+    {
+      "id": "SE-M-2463",
+      "count": 2,
+      "parentAreaKm2": 4558.537371409679,
+      "coveredAreaKm2": 4547.484526985563,
+      "bytes": 2736,
+      "decodedBytes": 12077
+    },
+    {
+      "id": "SE-M-2480",
+      "count": 42,
+      "parentAreaKm2": 2407.223108768305,
+      "coveredAreaKm2": 2400.8269022555937,
+      "bytes": 47911,
+      "decodedBytes": 183702
+    },
+    {
+      "id": "SE-M-2481",
+      "count": 6,
+      "parentAreaKm2": 5897.9540133301925,
+      "coveredAreaKm2": 5890.128499715553,
+      "bytes": 6637,
+      "decodedBytes": 35105
+    },
+    {
+      "id": "SE-M-2482",
+      "count": 25,
+      "parentAreaKm2": 7200.31981540367,
+      "coveredAreaKm2": 7177.610881415181,
+      "bytes": 53600,
+      "decodedBytes": 196125
+    },
+    {
+      "id": "SE-M-2505",
+      "count": 4,
+      "parentAreaKm2": 6108.230604002327,
+      "coveredAreaKm2": 6099.984423623117,
+      "bytes": 8983,
+      "decodedBytes": 35470
+    },
+    {
+      "id": "SE-M-2506",
+      "count": 2,
+      "parentAreaKm2": 13591.674137918017,
+      "coveredAreaKm2": 13581.910087207478,
+      "bytes": 4731,
+      "decodedBytes": 14529
+    },
+    {
+      "id": "SE-M-2510",
+      "count": 4,
+      "parentAreaKm2": 18471.655240508044,
+      "coveredAreaKm2": 18457.497723519493,
+      "bytes": 11472,
+      "decodedBytes": 39201
+    },
+    {
+      "id": "SE-M-2513",
+      "count": 2,
+      "parentAreaKm2": 2925.366701390261,
+      "coveredAreaKm2": 2915.2157137925888,
+      "bytes": 4646,
+      "decodedBytes": 19837
+    },
+    {
+      "id": "SE-M-2514",
+      "count": 7,
+      "parentAreaKm2": 1922.4093865728319,
+      "coveredAreaKm2": 1915.458833135099,
+      "bytes": 18313,
+      "decodedBytes": 68158
+    },
+    {
+      "id": "SE-M-2523",
+      "count": 11,
+      "parentAreaKm2": 16618.119074920276,
+      "coveredAreaKm2": 16603.623799930174,
+      "bytes": 30515,
+      "decodedBytes": 109595
+    },
+    {
+      "id": "SE-M-2518",
+      "count": 4,
+      "parentAreaKm2": 2483.348386073127,
+      "coveredAreaKm2": 2477.882949733731,
+      "bytes": 8759,
+      "decodedBytes": 33736
+    },
+    {
+      "id": "SE-M-2580",
+      "count": 29,
+      "parentAreaKm2": 2261.890711737685,
+      "coveredAreaKm2": 2246.8870750337046,
+      "bytes": 39677,
+      "decodedBytes": 146951
+    },
+    {
+      "id": "SE-M-2521",
+      "count": 2,
+      "parentAreaKm2": 8077.232492134611,
+      "coveredAreaKm2": 8057.202021444275,
+      "bytes": 13363,
+      "decodedBytes": 41189
+    },
+    {
+      "id": "SE-M-2560",
+      "count": 4,
+      "parentAreaKm2": 1800.7758255970737,
+      "coveredAreaKm2": 1796.0388584931245,
+      "bytes": 5698,
+      "decodedBytes": 30221
+    },
+    {
+      "id": "SE-M-2582",
+      "count": 13,
+      "parentAreaKm2": 4294.931679074643,
+      "coveredAreaKm2": 4282.439465239566,
+      "bytes": 15460,
+      "decodedBytes": 69616
+    },
+    {
+      "id": "SE-M-2584",
+      "count": 14,
+      "parentAreaKm2": 20118.03266966088,
+      "coveredAreaKm2": 20101.211814644026,
+      "bytes": 29078,
+      "decodedBytes": 106185
+    },
+    {
+      "id": "SE-M-2581",
+      "count": 13,
+      "parentAreaKm2": 3248.3192858080743,
+      "coveredAreaKm2": 3240.4635369949,
+      "bytes": 30798,
+      "decodedBytes": 112203
+    },
+    {
+      "id": "SE-M-2583",
+      "count": 5,
+      "parentAreaKm2": 967.6635637895391,
+      "coveredAreaKm2": 965.1006810561128,
+      "bytes": 10922,
+      "decodedBytes": 46101
+    },
+    {
+      "id": "SE-M-0114",
+      "count": 12,
+      "parentAreaKm2": 78.96088351059106,
+      "coveredAreaKm2": 78.3675495421237,
+      "bytes": 14892,
+      "decodedBytes": 62353
+    },
+    {
+      "id": "SE-M-0117",
+      "count": 15,
+      "parentAreaKm2": 337.8013382265667,
+      "coveredAreaKm2": 336.25119330165893,
+      "bytes": 15110,
+      "decodedBytes": 69277
+    },
+    {
+      "id": "SE-M-0120",
+      "count": 19,
+      "parentAreaKm2": 502.26778965180637,
+      "coveredAreaKm2": 501.8323865293801,
+      "bytes": 27999,
+      "decodedBytes": 105385
+    },
+    {
+      "id": "SE-M-1272",
+      "count": 7,
+      "parentAreaKm2": 186.71444308495563,
+      "coveredAreaKm2": 184.71703794626518,
+      "bytes": 9156,
+      "decodedBytes": 47443
+    },
+    {
+      "id": "SE-M-0123",
+      "count": 25,
+      "parentAreaKm2": 57.97422047837048,
+      "coveredAreaKm2": 54.34787183294565,
+      "bytes": 13956,
+      "decodedBytes": 65759
+    },
+    {
+      "id": "SE-M-0127",
+      "count": 20,
+      "parentAreaKm2": 202.87832570507075,
+      "coveredAreaKm2": 203.5564425771463,
+      "bytes": 15928,
+      "decodedBytes": 76007
+    },
+    {
+      "id": "SE-M-0115",
+      "count": 7,
+      "parentAreaKm2": 369.37172047294183,
+      "coveredAreaKm2": 366.0033787077195,
+      "bytes": 10316,
+      "decodedBytes": 53560
+    },
+    {
+      "id": "SE-M-0180",
+      "count": 127,
+      "parentAreaKm2": 173.38026740291366,
+      "coveredAreaKm2": 191.0273868914098,
+      "bytes": 80543,
+      "decodedBytes": 321565
+    },
+    {
+      "id": "SE-M-0163",
+      "count": 20,
+      "parentAreaKm2": 58.1867556164777,
+      "coveredAreaKm2": 55.52427265255421,
+      "bytes": 5768,
+      "decodedBytes": 39016
+    },
+    {
+      "id": "SE-M-1470",
+      "count": 10,
+      "parentAreaKm2": 699.5676808895886,
+      "coveredAreaKm2": 695.3193684334881,
+      "bytes": 35083,
+      "decodedBytes": 125520
+    },
+    {
+      "id": "SE-M-0125",
+      "count": 11,
+      "parentAreaKm2": 11.678758055015559,
+      "coveredAreaKm2": 220.01848478488114,
+      "bytes": 99530,
+      "decodedBytes": 349939
+    },
+    {
+      "id": "SE-M-0187",
+      "count": 7,
+      "parentAreaKm2": 61.7885966097468,
+      "coveredAreaKm2": 61.67375206539163,
+      "bytes": 2249,
+      "decodedBytes": 11821
+    },
+    {
+      "id": "SE-M-0181",
+      "count": 31,
+      "parentAreaKm2": 565.4399126709266,
+      "coveredAreaKm2": 554.6200478405904,
+      "bytes": 49783,
+      "decodedBytes": 181965
+    },
+    {
+      "id": "SE-M-0126",
+      "count": 22,
+      "parentAreaKm2": 134.3124334363625,
+      "coveredAreaKm2": 137.53914065017833,
+      "bytes": 14580,
+      "decodedBytes": 70385
+    },
+    {
+      "id": "SE-M-0380",
+      "count": 61,
+      "parentAreaKm2": 2206.6366592083514,
+      "coveredAreaKm2": 2219.176194584732,
+      "bytes": 89374,
+      "decodedBytes": 317930
+    },
+    {
+      "id": "SE-M-0483",
+      "count": 11,
+      "parentAreaKm2": 1121.2990006861578,
+      "coveredAreaKm2": 1114.6051006263415,
+      "bytes": 12640,
+      "decodedBytes": 57912
+    },
+    {
+      "id": "SE-M-0581",
+      "count": 40,
+      "parentAreaKm2": 1547.2902274508117,
+      "coveredAreaKm2": 1540.1883824130016,
+      "bytes": 49632,
+      "decodedBytes": 185719
+    },
+    {
+      "id": "SE-M-0136",
+      "count": 28,
+      "parentAreaKm2": 481.0991492723008,
+      "coveredAreaKm2": 479.80874287680274,
+      "bytes": 31411,
+      "decodedBytes": 123724
+    },
+    {
+      "id": "SE-M-0128",
+      "count": 4,
+      "parentAreaKm2": 61.809763743613786,
+      "coveredAreaKm2": 60.28629414267526,
+      "bytes": 6711,
+      "decodedBytes": 28977
+    },
+    {
+      "id": "SE-M-0188",
+      "count": 21,
+      "parentAreaKm2": 2169.0283738297157,
+      "coveredAreaKm2": 2165.4254978117783,
+      "bytes": 63208,
+      "decodedBytes": 215543
+    },
+    {
+      "id": "SE-M-0182",
+      "count": 16,
+      "parentAreaKm2": 102.63882380789158,
+      "coveredAreaKm2": 101.87673835180311,
+      "bytes": 6451,
+      "decodedBytes": 41822
+    },
+    {
+      "id": "SE-M-0484",
+      "count": 30,
+      "parentAreaKm2": 1098.9045127236095,
+      "coveredAreaKm2": 1088.3935379236639,
+      "bytes": 83253,
+      "decodedBytes": 299728
+    },
+    {
+      "id": "SE-M-0138",
+      "count": 14,
+      "parentAreaKm2": 74.9439340855951,
+      "coveredAreaKm2": 74.47508896059855,
+      "bytes": 5206,
+      "decodedBytes": 34083
+    },
+    {
+      "id": "SE-M-0160",
+      "count": 27,
+      "parentAreaKm2": 67.12295114303107,
+      "coveredAreaKm2": 65.76866725598472,
+      "bytes": 13717,
+      "decodedBytes": 71943
+    },
+    {
+      "id": "SE-M-0139",
+      "count": 10,
+      "parentAreaKm2": 193.29375814317046,
+      "coveredAreaKm2": 240.43601960822946,
+      "bytes": 59948,
+      "decodedBytes": 213263
+    },
+    {
+      "id": "SE-M-0140",
+      "count": 3,
+      "parentAreaKm2": 172.71217672184028,
+      "coveredAreaKm2": 167.494005807927,
+      "bytes": 8439,
+      "decodedBytes": 35952
+    },
+    {
+      "id": "SE-M-0162",
+      "count": 7,
+      "parentAreaKm2": 26.808542153450993,
+      "coveredAreaKm2": 26.630105369172316,
+      "bytes": 2675,
+      "decodedBytes": 16932
+    },
+    {
+      "id": "SE-M-0680",
+      "count": 35,
+      "parentAreaKm2": 1555.6120250125116,
+      "coveredAreaKm2": 1548.4683284841442,
+      "bytes": 91175,
+      "decodedBytes": 315578
+    },
+    {
+      "id": "SE-M-1280",
+      "count": 91,
+      "parentAreaKm2": 159.47373564408974,
+      "coveredAreaKm2": 158.64855375863652,
+      "bytes": 26605,
+      "decodedBytes": 139749
+    },
+    {
+      "id": "SE-M-1281",
+      "count": 36,
+      "parentAreaKm2": 441.7898182260124,
+      "coveredAreaKm2": 436.63871367601524,
+      "bytes": 32224,
+      "decodedBytes": 130883
+    },
+    {
+      "id": "SE-M-0183",
+      "count": 11,
+      "parentAreaKm2": 7.612149825196123,
+      "coveredAreaKm2": 7.125698047491506,
+      "bytes": 2193,
+      "decodedBytes": 14901
+    },
+    {
+      "id": "SE-M-0184",
+      "count": 22,
+      "parentAreaKm2": 17.33678970293143,
+      "coveredAreaKm2": 19.563461997806233,
+      "bytes": 7096,
+      "decodedBytes": 45577
+    },
+    {
+      "id": "SE-M-1402",
+      "count": 15,
+      "parentAreaKm2": 58.26900822994173,
+      "coveredAreaKm2": 57.72191057128485,
+      "bytes": 4371,
+      "decodedBytes": 30956
+    },
+    {
+      "id": "SE-M-1407",
+      "count": 5,
+      "parentAreaKm2": 28.732605587585077,
+      "coveredAreaKm2": 28.711344919888102,
+      "bytes": 2258,
+      "decodedBytes": 9549
+    },
+    {
+      "id": "SE-M-0186",
+      "count": 13,
+      "parentAreaKm2": 32.511567605736914,
+      "coveredAreaKm2": 32.51156035132772,
+      "bytes": 4081,
+      "decodedBytes": 28179
+    },
+    {
+      "id": "SE-M-1480",
+      "count": 147,
+      "parentAreaKm2": 466.60516707872085,
+      "coveredAreaKm2": 464.26982307564106,
+      "bytes": 115023,
+      "decodedBytes": 461941
+    },
+    {
+      "id": "SE-M-0191",
+      "count": 24,
+      "parentAreaKm2": 309.4809827379287,
+      "coveredAreaKm2": 331.8304358626614,
+      "bytes": 30127,
+      "decodedBytes": 117899
+    },
+    {
+      "id": "SE-M-1780",
+      "count": 31,
+      "parentAreaKm2": 1197.105851997593,
+      "coveredAreaKm2": 1240.5373222535961,
+      "bytes": 114044,
+      "decodedBytes": 404110
+    },
+    {
+      "id": "SE-M-0192",
+      "count": 8,
+      "parentAreaKm2": 369.7848886007433,
+      "coveredAreaKm2": 368.70709250080046,
+      "bytes": 8211,
+      "decodedBytes": 39347
+    },
+    {
+      "id": "SE-M-0305",
+      "count": 10,
+      "parentAreaKm2": 119.59345619086383,
+      "coveredAreaKm2": 143.69858903159508,
+      "bytes": 29320,
+      "decodedBytes": 110015
+    },
+    {
+      "id": "SE-M-0319",
+      "count": 5,
+      "parentAreaKm2": 216.47773833455207,
+      "coveredAreaKm2": 215.65681022423882,
+      "bytes": 5717,
+      "decodedBytes": 32529
+    },
+    {
+      "id": "SE-M-0330",
+      "count": 8,
+      "parentAreaKm2": 280.0348845450349,
+      "coveredAreaKm2": 285.2483625437959,
+      "bytes": 15726,
+      "decodedBytes": 59698
+    },
+    {
+      "id": "SE-M-0331",
+      "count": 9,
+      "parentAreaKm2": 1194.8545089852255,
+      "coveredAreaKm2": 1190.9332371994199,
+      "bytes": 21339,
+      "decodedBytes": 90161
+    },
+    {
+      "id": "SE-M-0360",
+      "count": 9,
+      "parentAreaKm2": 1549.1790320182567,
+      "coveredAreaKm2": 1536.5441684787427,
+      "bytes": 23518,
+      "decodedBytes": 88770
+    },
+    {
+      "id": "SE-M-0381",
+      "count": 11,
+      "parentAreaKm2": 1080.8611468567938,
+      "coveredAreaKm2": 1182.8904744002502,
+      "bytes": 97929,
+      "decodedBytes": 336495
+    },
+    {
+      "id": "SE-M-0382",
+      "count": 10,
+      "parentAreaKm2": 1515.9063186381943,
+      "coveredAreaKm2": 1507.7680469390239,
+      "bytes": 31641,
+      "decodedBytes": 114556
+    },
+    {
+      "id": "SE-M-0428",
+      "count": 6,
+      "parentAreaKm2": 421.5275785421939,
+      "coveredAreaKm2": 418.2850135633096,
+      "bytes": 8893,
+      "decodedBytes": 45457
+    },
+    {
+      "id": "SE-M-0461",
+      "count": 5,
+      "parentAreaKm2": 537.8093363920422,
+      "coveredAreaKm2": 534.7589384557417,
+      "bytes": 6243,
+      "decodedBytes": 31451
+    },
+    {
+      "id": "SE-M-0480",
+      "count": 20,
+      "parentAreaKm2": 1564.5525129271414,
+      "coveredAreaKm2": 1559.1438652177883,
+      "bytes": 32768,
+      "decodedBytes": 123385
+    },
+    {
+      "id": "SE-M-0481",
+      "count": 5,
+      "parentAreaKm2": 38.64750420084188,
+      "coveredAreaKm2": 38.439166581778,
+      "bytes": 3367,
+      "decodedBytes": 17072
+    },
+    {
+      "id": "SE-M-0482",
+      "count": 10,
+      "parentAreaKm2": 827.9564313815399,
+      "coveredAreaKm2": 821.2951965707451,
+      "bytes": 14945,
+      "decodedBytes": 65358
+    },
+    {
+      "id": "SE-M-0486",
+      "count": 12,
+      "parentAreaKm2": 580.1483516052577,
+      "coveredAreaKm2": 754.4916486751755,
+      "bytes": 132955,
+      "decodedBytes": 462295
+    },
+    {
+      "id": "SE-M-0562",
+      "count": 9,
+      "parentAreaKm2": 1189.67937795806,
+      "coveredAreaKm2": 1183.719538413203,
+      "bytes": 11178,
+      "decodedBytes": 55234
+    },
+    {
+      "id": "SE-M-0580",
+      "count": 32,
+      "parentAreaKm2": 1488.2162489603063,
+      "coveredAreaKm2": 1478.0979601169156,
+      "bytes": 54534,
+      "decodedBytes": 196806
+    },
+    {
+      "id": "SE-M-0488",
+      "count": 6,
+      "parentAreaKm2": 219.0941391783712,
+      "coveredAreaKm2": 217.92274948203004,
+      "bytes": 7737,
+      "decodedBytes": 38373
+    },
+    {
+      "id": "SE-M-0509",
+      "count": 2,
+      "parentAreaKm2": 473.9377497845774,
+      "coveredAreaKm2": 449.274769921851,
+      "bytes": 12752,
+      "decodedBytes": 46672
+    },
+    {
+      "id": "SE-M-0512",
+      "count": 3,
+      "parentAreaKm2": 689.8324692748187,
+      "coveredAreaKm2": 686.2922251193462,
+      "bytes": 10331,
+      "decodedBytes": 46208
+    },
+    {
+      "id": "SE-M-0513",
+      "count": 6,
+      "parentAreaKm2": 1241.860405832709,
+      "coveredAreaKm2": 1235.6724109546064,
+      "bytes": 16442,
+      "decodedBytes": 68879
+    },
+    {
+      "id": "SE-M-0560",
+      "count": 3,
+      "parentAreaKm2": 530.3843525195563,
+      "coveredAreaKm2": 526.1961471649889,
+      "bytes": 7614,
+      "decodedBytes": 32097
+    },
+    {
+      "id": "SE-M-0561",
+      "count": 4,
+      "parentAreaKm2": 785.1220473051413,
+      "coveredAreaKm2": 778.2323899773277,
+      "bytes": 7793,
+      "decodedBytes": 39133
+    },
+    {
+      "id": "SE-M-0563",
+      "count": 3,
+      "parentAreaKm2": 790.6645328786346,
+      "coveredAreaKm2": 787.381174148828,
+      "bytes": 12433,
+      "decodedBytes": 46833
+    },
+    {
+      "id": "SE-M-0582",
+      "count": 7,
+      "parentAreaKm2": 707.1613554701455,
+      "coveredAreaKm2": 703.7391297207346,
+      "bytes": 23226,
+      "decodedBytes": 89282
+    },
+    {
+      "id": "SE-M-0583",
+      "count": 9,
+      "parentAreaKm2": 1038.9630305103965,
+      "coveredAreaKm2": 1009.6122620677542,
+      "bytes": 36177,
+      "decodedBytes": 126691
+    },
+    {
+      "id": "SE-M-0584",
+      "count": 5,
+      "parentAreaKm2": 234.80743935593992,
+      "coveredAreaKm2": 206.73748911329986,
+      "bytes": 9629,
+      "decodedBytes": 37532
+    },
+    {
+      "id": "SE-M-0586",
+      "count": 16,
+      "parentAreaKm2": 556.603503265692,
+      "coveredAreaKm2": 551.2722554917632,
+      "bytes": 37351,
+      "decodedBytes": 138128
+    },
+    {
+      "id": "SE-M-0604",
+      "count": 4,
+      "parentAreaKm2": 555.1535894174435,
+      "coveredAreaKm2": 550.0216136525928,
+      "bytes": 13402,
+      "decodedBytes": 51824
+    },
+    {
+      "id": "SE-M-0683",
+      "count": 13,
+      "parentAreaKm2": 1368.1057176333484,
+      "coveredAreaKm2": 1362.3603867021013,
+      "bytes": 36352,
+      "decodedBytes": 129088
+    },
+    {
+      "id": "SE-M-0617",
+      "count": 3,
+      "parentAreaKm2": 450.7113512195135,
+      "coveredAreaKm2": 447.2397466058636,
+      "bytes": 11621,
+      "decodedBytes": 50924
+    },
+    {
+      "id": "SE-M-0642",
+      "count": 4,
+      "parentAreaKm2": 211.89696643882888,
+      "coveredAreaKm2": 208.20209829711405,
+      "bytes": 5886,
+      "decodedBytes": 23896
+    },
+    {
+      "id": "SE-M-1283",
+      "count": 31,
+      "parentAreaKm2": 346.8809774539797,
+      "coveredAreaKm2": 341.95094042090926,
+      "bytes": 25066,
+      "decodedBytes": 107235
+    },
+    {
+      "id": "SE-M-0643",
+      "count": 7,
+      "parentAreaKm2": 302.3588993309519,
+      "coveredAreaKm2": 333.473403292431,
+      "bytes": 16192,
+      "decodedBytes": 64612
+    },
+    {
+      "id": "SE-M-0662",
+      "count": 13,
+      "parentAreaKm2": 1196.6174331948519,
+      "coveredAreaKm2": 1185.3648888167916,
+      "bytes": 48841,
+      "decodedBytes": 172227
+    },
+    {
+      "id": "SE-M-1490",
+      "count": 47,
+      "parentAreaKm2": 970.2956206514658,
+      "coveredAreaKm2": 964.4251257808223,
+      "bytes": 74872,
+      "decodedBytes": 276210
+    },
+    {
+      "id": "SE-M-1880",
+      "count": 36,
+      "parentAreaKm2": 1413.8133168020668,
+      "coveredAreaKm2": 1406.0474894764534,
+      "bytes": 37456,
+      "decodedBytes": 146080
+    },
+    {
+      "id": "SE-M-0665",
+      "count": 8,
+      "parentAreaKm2": 858.5691912138886,
+      "coveredAreaKm2": 853.69840290254,
+      "bytes": 24890,
+      "decodedBytes": 93577
+    },
+    {
+      "id": "SE-M-0682",
+      "count": 13,
+      "parentAreaKm2": 990.8841056875084,
+      "coveredAreaKm2": 984.4549748946628,
+      "bytes": 38523,
+      "decodedBytes": 136248
+    },
+    {
+      "id": "SE-M-0685",
+      "count": 11,
+      "parentAreaKm2": 1602.1691411453742,
+      "coveredAreaKm2": 1595.1976861750923,
+      "bytes": 37917,
+      "decodedBytes": 137819
+    },
+    {
+      "id": "SE-M-0761",
+      "count": 4,
+      "parentAreaKm2": 456.44338559314633,
+      "coveredAreaKm2": 452.4245013076265,
+      "bytes": 7951,
+      "decodedBytes": 39257
+    },
+    {
+      "id": "SE-M-0763",
+      "count": 7,
+      "parentAreaKm2": 1130.3216059895944,
+      "coveredAreaKm2": 1125.466294924031,
+      "bytes": 38831,
+      "decodedBytes": 143263
+    },
+    {
+      "id": "SE-M-0684",
+      "count": 7,
+      "parentAreaKm2": 731.1898729439298,
+      "coveredAreaKm2": 726.7552717796685,
+      "bytes": 20269,
+      "decodedBytes": 82627
+    },
+    {
+      "id": "SE-M-0686",
+      "count": 7,
+      "parentAreaKm2": 875.025691254215,
+      "coveredAreaKm2": 870.1939694741378,
+      "bytes": 22232,
+      "decodedBytes": 85527
+    },
+    {
+      "id": "SE-M-0687",
+      "count": 5,
+      "parentAreaKm2": 430.5439587287194,
+      "coveredAreaKm2": 426.7848782857632,
+      "bytes": 14521,
+      "decodedBytes": 63293
+    },
+    {
+      "id": "SE-M-0760",
+      "count": 4,
+      "parentAreaKm2": 1230.768104914075,
+      "coveredAreaKm2": 1224.4470755166458,
+      "bytes": 17079,
+      "decodedBytes": 62831
+    },
+    {
+      "id": "SE-M-0764",
+      "count": 12,
+      "parentAreaKm2": 1045.224671237007,
+      "coveredAreaKm2": 1038.4391694720034,
+      "bytes": 35620,
+      "decodedBytes": 127959
+    },
+    {
+      "id": "SE-M-0765",
+      "count": 6,
+      "parentAreaKm2": 979.0349529871017,
+      "coveredAreaKm2": 972.8713346089064,
+      "bytes": 16992,
+      "decodedBytes": 62247
+    },
+    {
+      "id": "SE-M-0767",
+      "count": 3,
+      "parentAreaKm2": 534.1866568382013,
+      "coveredAreaKm2": 531.3832373335839,
+      "bytes": 9855,
+      "decodedBytes": 48634
+    },
+    {
+      "id": "SE-M-0780",
+      "count": 23,
+      "parentAreaKm2": 1871.831024261793,
+      "coveredAreaKm2": 1863.699175548827,
+      "bytes": 55119,
+      "decodedBytes": 196875
+    },
+    {
+      "id": "SE-M-0781",
+      "count": 14,
+      "parentAreaKm2": 1838.1757595047634,
+      "coveredAreaKm2": 1831.9055148259802,
+      "bytes": 37749,
+      "decodedBytes": 132416
+    },
+    {
+      "id": "SE-M-0821",
+      "count": 4,
+      "parentAreaKm2": 800.3870741443753,
+      "coveredAreaKm2": 792.2860730938634,
+      "bytes": 15386,
+      "decodedBytes": 61741
+    },
+    {
+      "id": "SE-M-0834",
+      "count": 5,
+      "parentAreaKm2": 471.91637972945875,
+      "coveredAreaKm2": 469.6267162657414,
+      "bytes": 14497,
+      "decodedBytes": 65758
+    },
+    {
+      "id": "SE-M-0840",
+      "count": 7,
+      "parentAreaKm2": 669.3075630471989,
+      "coveredAreaKm2": 668.7365301089873,
+      "bytes": 7920,
+      "decodedBytes": 45244
+    },
+    {
+      "id": "SE-M-0860",
+      "count": 9,
+      "parentAreaKm2": 1191.6456656354612,
+      "coveredAreaKm2": 1182.8513673114287,
+      "bytes": 26996,
+      "decodedBytes": 100057
+    },
+    {
+      "id": "SE-M-0861",
+      "count": 10,
+      "parentAreaKm2": 611.9405118806783,
+      "coveredAreaKm2": 607.2653762438837,
+      "bytes": 22038,
+      "decodedBytes": 87708
+    },
+    {
+      "id": "SE-M-0862",
+      "count": 6,
+      "parentAreaKm2": 720.838294064868,
+      "coveredAreaKm2": 715.1079255472607,
+      "bytes": 17374,
+      "decodedBytes": 69521
+    },
+    {
+      "id": "SE-M-0880",
+      "count": 17,
+      "parentAreaKm2": 967.1723323808221,
+      "coveredAreaKm2": 962.0285585551608,
+      "bytes": 34334,
+      "decodedBytes": 124197
+    },
+    {
+      "id": "SE-M-0883",
+      "count": 16,
+      "parentAreaKm2": 2037.4559277971778,
+      "coveredAreaKm2": 2031.0573658058652,
+      "bytes": 32845,
+      "decodedBytes": 120095
+    },
+    {
+      "id": "SE-M-0881",
+      "count": 9,
+      "parentAreaKm2": 1205.803802142521,
+      "coveredAreaKm2": 1196.6942659694846,
+      "bytes": 26636,
+      "decodedBytes": 98479
+    },
+    {
+      "id": "SE-M-0882",
+      "count": 8,
+      "parentAreaKm2": 1103.741477463469,
+      "coveredAreaKm2": 1098.422115608302,
+      "bytes": 23988,
+      "decodedBytes": 91635
+    },
+    {
+      "id": "SE-M-0884",
+      "count": 10,
+      "parentAreaKm2": 1220.3560261294424,
+      "coveredAreaKm2": 1215.6446850434982,
+      "bytes": 23978,
+      "decodedBytes": 92172
+    },
+    {
+      "id": "SE-M-0980",
+      "count": 12,
+      "parentAreaKm2": 3178.2966019616742,
+      "coveredAreaKm2": 3178.2996520151687,
+      "bytes": 38262,
+      "decodedBytes": 134449
+    },
+    {
+      "id": "SE-M-1081",
+      "count": 9,
+      "parentAreaKm2": 867.7026456406859,
+      "coveredAreaKm2": 855.9269596708483,
+      "bytes": 39185,
+      "decodedBytes": 137962
+    },
+    {
+      "id": "SE-M-0885",
+      "count": 3,
+      "parentAreaKm2": 683.5548027050237,
+      "coveredAreaKm2": 682.23513606747,
+      "bytes": 5772,
+      "decodedBytes": 29391
+    },
+    {
+      "id": "SE-M-1060",
+      "count": 8,
+      "parentAreaKm2": 412.6819728766999,
+      "coveredAreaKm2": 410.8503811604277,
+      "bytes": 18998,
+      "decodedBytes": 79190
+    },
+    {
+      "id": "SE-M-1080",
+      "count": 28,
+      "parentAreaKm2": 1073.394345302167,
+      "coveredAreaKm2": 1068.7201021105848,
+      "bytes": 44065,
+      "decodedBytes": 162314
+    },
+    {
+      "id": "SE-M-1082",
+      "count": 14,
+      "parentAreaKm2": 511.5819655909332,
+      "coveredAreaKm2": 509.65802253231107,
+      "bytes": 35598,
+      "decodedBytes": 130965
+    },
+    {
+      "id": "SE-M-1083",
+      "count": 8,
+      "parentAreaKm2": 189.22809145181637,
+      "coveredAreaKm2": 188.25317726260027,
+      "bytes": 12717,
+      "decodedBytes": 63625
+    },
+    {
+      "id": "SE-M-1214",
+      "count": 4,
+      "parentAreaKm2": 389.1171372037091,
+      "coveredAreaKm2": 383.69878747442186,
+      "bytes": 8372,
+      "decodedBytes": 37945
+    },
+    {
+      "id": "SE-M-1233",
+      "count": 14,
+      "parentAreaKm2": 146.4404236391899,
+      "coveredAreaKm2": 144.34861008698047,
+      "bytes": 10266,
+      "decodedBytes": 54386
+    },
+    {
+      "id": "SE-M-1230",
+      "count": 12,
+      "parentAreaKm2": 106.83874752764335,
+      "coveredAreaKm2": 105.05695750795067,
+      "bytes": 9476,
+      "decodedBytes": 50531
+    },
+    {
+      "id": "SE-M-1231",
+      "count": 6,
+      "parentAreaKm2": 20.03517703522945,
+      "coveredAreaKm2": 18.257004564139944,
+      "bytes": 2131,
+      "decodedBytes": 10309
+    },
+    {
+      "id": "SE-M-1260",
+      "count": 8,
+      "parentAreaKm2": 115.24816554561588,
+      "coveredAreaKm2": 113.21415443727781,
+      "bytes": 7220,
+      "decodedBytes": 40851
+    },
+    {
+      "id": "SE-M-1257",
+      "count": 4,
+      "parentAreaKm2": 332.2991453716436,
+      "coveredAreaKm2": 328.31925188680657,
+      "bytes": 7348,
+      "decodedBytes": 36986
+    },
+    {
+      "id": "SE-M-1256",
+      "count": 8,
+      "parentAreaKm2": 452.3767375522758,
+      "coveredAreaKm2": 448.03044167374924,
+      "bytes": 20703,
+      "decodedBytes": 76480
+    },
+    {
+      "id": "SE-M-1261",
+      "count": 10,
+      "parentAreaKm2": 154.95768702375722,
+      "coveredAreaKm2": 153.37113986900553,
+      "bytes": 14591,
+      "decodedBytes": 68530
+    },
+    {
+      "id": "SE-M-1262",
+      "count": 6,
+      "parentAreaKm2": 56.392902316065644,
+      "coveredAreaKm2": 55.30984576559497,
+      "bytes": 3747,
+      "decodedBytes": 20796
+    },
+    {
+      "id": "SE-M-1263",
+      "count": 7,
+      "parentAreaKm2": 227.3647506863513,
+      "coveredAreaKm2": 224.1976451146523,
+      "bytes": 13586,
+      "decodedBytes": 63789
+    },
+    {
+      "id": "SE-M-1264",
+      "count": 8,
+      "parentAreaKm2": 195.6667975203526,
+      "coveredAreaKm2": 193.130404326195,
+      "bytes": 12064,
+      "decodedBytes": 60244
+    },
+    {
+      "id": "SE-M-1265",
+      "count": 12,
+      "parentAreaKm2": 507.82373006328345,
+      "coveredAreaKm2": 503.57259527610097,
+      "bytes": 29771,
+      "decodedBytes": 114295
+    },
+    {
+      "id": "SE-M-1266",
+      "count": 6,
+      "parentAreaKm2": 432.9722433187636,
+      "coveredAreaKm2": 429.6573632110552,
+      "bytes": 7603,
+      "decodedBytes": 37459
+    },
+    {
+      "id": "SE-M-1270",
+      "count": 6,
+      "parentAreaKm2": 396.4299816974738,
+      "coveredAreaKm2": 390.21595568383765,
+      "bytes": 11248,
+      "decodedBytes": 50956
+    },
+    {
+      "id": "SE-M-1273",
+      "count": 6,
+      "parentAreaKm2": 600.1578046520287,
+      "coveredAreaKm2": 593.9196226451079,
+      "bytes": 24419,
+      "decodedBytes": 95451
+    },
+    {
+      "id": "SE-M-1267",
+      "count": 5,
+      "parentAreaKm2": 321.062442741315,
+      "coveredAreaKm2": 317.10459832751184,
+      "bytes": 13745,
+      "decodedBytes": 61752
+    },
+    {
+      "id": "SE-M-1275",
+      "count": 5,
+      "parentAreaKm2": 161.7011116467652,
+      "coveredAreaKm2": 160.2106457985429,
+      "bytes": 4388,
+      "decodedBytes": 23761
+    },
+    {
+      "id": "SE-M-1276",
+      "count": 7,
+      "parentAreaKm2": 379.56885335434043,
+      "coveredAreaKm2": 376.38117480611544,
+      "bytes": 14585,
+      "decodedBytes": 61241
+    },
+    {
+      "id": "SE-M-1277",
+      "count": 10,
+      "parentAreaKm2": 93.11024929095358,
+      "coveredAreaKm2": 90.87013205103169,
+      "bytes": 7398,
+      "decodedBytes": 38691
+    },
+    {
+      "id": "SE-M-1278",
+      "count": 9,
+      "parentAreaKm2": 218.7977129750133,
+      "coveredAreaKm2": 217.4132145839041,
+      "bytes": 11964,
+      "decodedBytes": 59836
+    },
+    {
+      "id": "SE-M-1284",
+      "count": 9,
+      "parentAreaKm2": 144.3110707500127,
+      "coveredAreaKm2": 143.43520034798107,
+      "bytes": 6071,
+      "decodedBytes": 38301
+    },
+    {
+      "id": "SE-M-1282",
+      "count": 18,
+      "parentAreaKm2": 144.07026896992068,
+      "coveredAreaKm2": 140.41426637440236,
+      "bytes": 11245,
+      "decodedBytes": 55218
+    },
+    {
+      "id": "SE-M-1285",
+      "count": 11,
+      "parentAreaKm2": 425.1548404161963,
+      "coveredAreaKm2": 419.3140032450139,
+      "bytes": 13033,
+      "decodedBytes": 56225
+    },
+    {
+      "id": "SE-M-1286",
+      "count": 10,
+      "parentAreaKm2": 358.1037816445748,
+      "coveredAreaKm2": 353.6643910959265,
+      "bytes": 14714,
+      "decodedBytes": 67131
+    },
+    {
+      "id": "SE-M-1287",
+      "count": 14,
+      "parentAreaKm2": 342.51412994222875,
+      "coveredAreaKm2": 340.3952131959876,
+      "bytes": 17274,
+      "decodedBytes": 78654
+    },
+    {
+      "id": "SE-M-1290",
+      "count": 24,
+      "parentAreaKm2": 1346.118539249298,
+      "coveredAreaKm2": 1339.7466218394418,
+      "bytes": 58825,
+      "decodedBytes": 207388
+    },
+    {
+      "id": "SE-M-1291",
+      "count": 12,
+      "parentAreaKm2": 395.6676010098827,
+      "coveredAreaKm2": 391.5010651185072,
+      "bytes": 23509,
+      "decodedBytes": 92546
+    },
+    {
+      "id": "SE-M-1293",
+      "count": 33,
+      "parentAreaKm2": 1311.178352150638,
+      "coveredAreaKm2": 1304.0927270336867,
+      "bytes": 63925,
+      "decodedBytes": 230423
+    },
+    {
+      "id": "SE-M-1292",
+      "count": 16,
+      "parentAreaKm2": 430.77081317519145,
+      "coveredAreaKm2": 427.9724390024893,
+      "bytes": 28391,
+      "decodedBytes": 106291
+    },
+    {
+      "id": "SE-M-1380",
+      "count": 28,
+      "parentAreaKm2": 1030.2795802165056,
+      "coveredAreaKm2": 1026.393410535686,
+      "bytes": 45416,
+      "decodedBytes": 167557
+    },
+    {
+      "id": "SE-M-1315",
+      "count": 7,
+      "parentAreaKm2": 1019.4275697219459,
+      "coveredAreaKm2": 1010.6494158894645,
+      "bytes": 34535,
+      "decodedBytes": 127285
+    },
+    {
+      "id": "SE-M-1381",
+      "count": 11,
+      "parentAreaKm2": 905.1204375792506,
+      "coveredAreaKm2": 901.9332836437155,
+      "bytes": 41355,
+      "decodedBytes": 149553
+    },
+    {
+      "id": "SE-M-1382",
+      "count": 14,
+      "parentAreaKm2": 1161.8890450444862,
+      "coveredAreaKm2": 1152.683304529338,
+      "bytes": 35096,
+      "decodedBytes": 131533
+    },
+    {
+      "id": "SE-M-1383",
+      "count": 17,
+      "parentAreaKm2": 915.3653966048507,
+      "coveredAreaKm2": 910.849902614849,
+      "bytes": 39128,
+      "decodedBytes": 145344
+    },
+    {
+      "id": "SE-M-1384",
+      "count": 18,
+      "parentAreaKm2": 648.5525235601519,
+      "coveredAreaKm2": 646.8039290838288,
+      "bytes": 43515,
+      "decodedBytes": 165766
+    },
+    {
+      "id": "SE-M-1401",
+      "count": 9,
+      "parentAreaKm2": 293.8371154824535,
+      "coveredAreaKm2": 289.7953503655379,
+      "bytes": 18368,
+      "decodedBytes": 77102
+    },
+    {
+      "id": "SE-M-1415",
+      "count": 10,
+      "parentAreaKm2": 267.0191480218563,
+      "coveredAreaKm2": 266.11198923873116,
+      "bytes": 13385,
+      "decodedBytes": 65298
+    },
+    {
+      "id": "SE-M-1419",
+      "count": 5,
+      "parentAreaKm2": 171.1461576730095,
+      "coveredAreaKm2": 171.12258799376139,
+      "bytes": 8043,
+      "decodedBytes": 43855
+    },
+    {
+      "id": "SE-M-1438",
+      "count": 3,
+      "parentAreaKm2": 743.508138999105,
+      "coveredAreaKm2": 738.1635962125432,
+      "bytes": 14520,
+      "decodedBytes": 48907
+    },
+    {
+      "id": "SE-M-1439",
+      "count": 2,
+      "parentAreaKm2": 618.8821016345422,
+      "coveredAreaKm2": 615.6985672350193,
+      "bytes": 7069,
+      "decodedBytes": 26333
+    },
+    {
+      "id": "SE-M-1421",
+      "count": 7,
+      "parentAreaKm2": 396.869400013375,
+      "coveredAreaKm2": 396.85989838383074,
+      "bytes": 18795,
+      "decodedBytes": 76375
+    },
+    {
+      "id": "SE-M-1427",
+      "count": 3,
+      "parentAreaKm2": 141.50510804587185,
+      "coveredAreaKm2": 141.2068089818969,
+      "bytes": 5144,
+      "decodedBytes": 25385
+    },
+    {
+      "id": "SE-M-1430",
+      "count": 3,
+      "parentAreaKm2": 668.4709443089823,
+      "coveredAreaKm2": 663.5208781297088,
+      "bytes": 16832,
+      "decodedBytes": 65726
+    },
+    {
+      "id": "SE-M-1435",
+      "count": 4,
+      "parentAreaKm2": 970.8237347452003,
+      "coveredAreaKm2": 966.8175476008539,
+      "bytes": 19876,
+      "decodedBytes": 73002
+    },
+    {
+      "id": "SE-M-1440",
+      "count": 13,
+      "parentAreaKm2": 332.0269841798132,
+      "coveredAreaKm2": 329.1933825919827,
+      "bytes": 9124,
+      "decodedBytes": 51520
+    },
+    {
+      "id": "SE-M-1441",
+      "count": 14,
+      "parentAreaKm2": 313.19973427972985,
+      "coveredAreaKm2": 306.66060406849306,
+      "bytes": 24788,
+      "decodedBytes": 100906
+    },
+    {
+      "id": "SE-M-1444",
+      "count": 2,
+      "parentAreaKm2": 266.1225750379111,
+      "coveredAreaKm2": 263.97546062887085,
+      "bytes": 6644,
+      "decodedBytes": 25654
+    },
+    {
+      "id": "SE-M-1442",
+      "count": 7,
+      "parentAreaKm2": 443.56537361986256,
+      "coveredAreaKm2": 438.5257152899684,
+      "bytes": 14117,
+      "decodedBytes": 67622
+    },
+    {
+      "id": "SE-M-1443",
+      "count": 5,
+      "parentAreaKm2": 284.2493351631139,
+      "coveredAreaKm2": 280.9763616132555,
+      "bytes": 9501,
+      "decodedBytes": 47261
+    },
+    {
+      "id": "SE-M-1452",
+      "count": 9,
+      "parentAreaKm2": 781.740933665512,
+      "coveredAreaKm2": 776.1922154027741,
+      "bytes": 22621,
+      "decodedBytes": 87648
+    },
+    {
+      "id": "SE-M-1445",
+      "count": 3,
+      "parentAreaKm2": 235.6406769419801,
+      "coveredAreaKm2": 229.89664506257245,
+      "bytes": 6566,
+      "decodedBytes": 26615
+    },
+    {
+      "id": "SE-M-1446",
+      "count": 5,
+      "parentAreaKm2": 388.4379231268542,
+      "coveredAreaKm2": 431.5178107516015,
+      "bytes": 52588,
+      "decodedBytes": 205841
+    },
+    {
+      "id": "SE-M-1447",
+      "count": 4,
+      "parentAreaKm2": 351.45050945889545,
+      "coveredAreaKm2": 332.3138861087841,
+      "bytes": 41757,
+      "decodedBytes": 154620
+    },
+    {
+      "id": "SE-M-1460",
+      "count": 6,
+      "parentAreaKm2": 1008.2031020702673,
+      "coveredAreaKm2": 1002.7706150590817,
+      "bytes": 17982,
+      "decodedBytes": 74204
+    },
+    {
+      "id": "SE-M-1461",
+      "count": 5,
+      "parentAreaKm2": 502.98308161307136,
+      "coveredAreaKm2": 561.0542004199816,
+      "bytes": 79856,
+      "decodedBytes": 294203
+    },
+    {
+      "id": "SE-M-1462",
+      "count": 8,
+      "parentAreaKm2": 341.6584979571285,
+      "coveredAreaKm2": 335.9532525528409,
+      "bytes": 10494,
+      "decodedBytes": 48932
+    },
+    {
+      "id": "SE-M-1463",
+      "count": 16,
+      "parentAreaKm2": 1014.1289562932237,
+      "coveredAreaKm2": 1009.7692698147691,
+      "bytes": 40317,
+      "decodedBytes": 145853
+    },
+    {
+      "id": "SE-M-1465",
+      "count": 6,
+      "parentAreaKm2": 988.4496986713843,
+      "coveredAreaKm2": 983.8314728914602,
+      "bytes": 29584,
+      "decodedBytes": 112083
+    },
+    {
+      "id": "SE-M-1466",
+      "count": 5,
+      "parentAreaKm2": 509.84331769122605,
+      "coveredAreaKm2": 504.85308196125055,
+      "bytes": 8880,
+      "decodedBytes": 46360
+    },
+    {
+      "id": "SE-M-1471",
+      "count": 7,
+      "parentAreaKm2": 434.4486228970269,
+      "coveredAreaKm2": 404.8842991379423,
+      "bytes": 70625,
+      "decodedBytes": 259205
+    },
+    {
+      "id": "SE-M-1472",
+      "count": 6,
+      "parentAreaKm2": 234.92439957967372,
+      "coveredAreaKm2": 232.0133009218267,
+      "bytes": 6070,
+      "decodedBytes": 33019
+    },
+    {
+      "id": "SE-M-1473",
+      "count": 6,
+      "parentAreaKm2": 565.5369197472772,
+      "coveredAreaKm2": 560.734489234919,
+      "bytes": 10967,
+      "decodedBytes": 49724
+    },
+    {
+      "id": "SE-M-1481",
+      "count": 22,
+      "parentAreaKm2": 153.200038657746,
+      "coveredAreaKm2": 150.54592304228373,
+      "bytes": 11370,
+      "decodedBytes": 58542
+    },
+    {
+      "id": "SE-M-1482",
+      "count": 11,
+      "parentAreaKm2": 379.0661136715004,
+      "coveredAreaKm2": 377.7604845956623,
+      "bytes": 27456,
+      "decodedBytes": 107091
+    },
+    {
+      "id": "SE-M-1484",
+      "count": 5,
+      "parentAreaKm2": 212.9898886805765,
+      "coveredAreaKm2": 212.6648731733863,
+      "bytes": 4952,
+      "decodedBytes": 22548
+    },
+    {
+      "id": "SE-M-1485",
+      "count": 18,
+      "parentAreaKm2": 656.1298923985624,
+      "coveredAreaKm2": 653.741841180756,
+      "bytes": 29869,
+      "decodedBytes": 116464
+    },
+    {
+      "id": "SE-M-1487",
+      "count": 15,
+      "parentAreaKm2": 641.5330232961885,
+      "coveredAreaKm2": 664.0487576818556,
+      "bytes": 126995,
+      "decodedBytes": 491531
+    },
+    {
+      "id": "SE-M-1486",
+      "count": 3,
+      "parentAreaKm2": 484.88652595531954,
+      "coveredAreaKm2": 483.2237702696547,
+      "bytes": 7182,
+      "decodedBytes": 31864
+    },
+    {
+      "id": "SE-M-1488",
+      "count": 16,
+      "parentAreaKm2": 429.7441861894432,
+      "coveredAreaKm2": 425.27581677592786,
+      "bytes": 25708,
+      "decodedBytes": 99015
+    },
+    {
+      "id": "SE-M-1489",
+      "count": 23,
+      "parentAreaKm2": 551.7139866475294,
+      "coveredAreaKm2": 547.0863645891055,
+      "bytes": 26925,
+      "decodedBytes": 111333
+    },
+    {
+      "id": "SE-M-1491",
+      "count": 9,
+      "parentAreaKm2": 1118.832609639468,
+      "coveredAreaKm2": 1113.3278921364495,
+      "bytes": 20217,
+      "decodedBytes": 84348
+    },
+    {
+      "id": "SE-M-1492",
+      "count": 7,
+      "parentAreaKm2": 472.4905601021276,
+      "coveredAreaKm2": 533.3079727565266,
+      "bytes": 128353,
+      "decodedBytes": 485576
+    },
+    {
+      "id": "SE-M-1493",
+      "count": 15,
+      "parentAreaKm2": 594.1924870942717,
+      "coveredAreaKm2": 610.6202481733287,
+      "bytes": 182650,
+      "decodedBytes": 677556
+    },
+    {
+      "id": "SE-M-1494",
+      "count": 12,
+      "parentAreaKm2": 669.3014764327745,
+      "coveredAreaKm2": 695.6773966574104,
+      "bytes": 206277,
+      "decodedBytes": 758661
+    },
+    {
+      "id": "SE-M-1495",
+      "count": 11,
+      "parentAreaKm2": 450.65976633352966,
+      "coveredAreaKm2": 443.35714022429346,
+      "bytes": 19467,
+      "decodedBytes": 80435
+    },
+    {
+      "id": "SE-M-1496",
+      "count": 18,
+      "parentAreaKm2": 684.957553819454,
+      "coveredAreaKm2": 675.0178947034437,
+      "bytes": 32548,
+      "decodedBytes": 123066
+    },
+    {
+      "id": "SE-M-1497",
+      "count": 3,
+      "parentAreaKm2": 270.7182913984755,
+      "coveredAreaKm2": 299.5618281191113,
+      "bytes": 9902,
+      "decodedBytes": 38335
+    },
+    {
+      "id": "SE-M-1498",
+      "count": 5,
+      "parentAreaKm2": 524.1850632429673,
+      "coveredAreaKm2": 520.2815039639186,
+      "bytes": 10259,
+      "decodedBytes": 48221
+    },
+    {
+      "id": "SE-M-1499",
+      "count": 11,
+      "parentAreaKm2": 1067.9940855761697,
+      "coveredAreaKm2": 1053.0666597125949,
+      "bytes": 35441,
+      "decodedBytes": 128931
+    },
+    {
+      "id": "SE-M-1760",
+      "count": 2,
+      "parentAreaKm2": 473.329913441559,
+      "coveredAreaKm2": 470.2482907486049,
+      "bytes": 4603,
+      "decodedBytes": 18169
+    },
+    {
+      "id": "SE-M-1761",
+      "count": 7,
+      "parentAreaKm2": 32.39697157025905,
+      "coveredAreaKm2": 61.497414187131376,
+      "bytes": 54982,
+      "decodedBytes": 203867
+    },
+    {
+      "id": "SE-M-1715",
+      "count": 4,
+      "parentAreaKm2": 407.7214217482145,
+      "coveredAreaKm2": 404.505285945299,
+      "bytes": 8236,
+      "decodedBytes": 35990
+    },
+    {
+      "id": "SE-M-1730",
+      "count": 5,
+      "parentAreaKm2": 895.7166932717649,
+      "coveredAreaKm2": 891.6623409412974,
+      "bytes": 13288,
+      "decodedBytes": 53466
+    },
+    {
+      "id": "SE-M-1764",
+      "count": 6,
+      "parentAreaKm2": 445.02058310775425,
+      "coveredAreaKm2": 453.14792139995876,
+      "bytes": 28978,
+      "decodedBytes": 106239
+    },
+    {
+      "id": "SE-M-1765",
+      "count": 4,
+      "parentAreaKm2": 1548.8934359864775,
+      "coveredAreaKm2": 1543.7922047974498,
+      "bytes": 15608,
+      "decodedBytes": 65470
+    },
+    {
+      "id": "SE-M-1737",
+      "count": 8,
+      "parentAreaKm2": 4337.874765163356,
+      "coveredAreaKm2": 4332.72941701068,
+      "bytes": 26445,
+      "decodedBytes": 102889
+    },
+    {
+      "id": "SE-M-1762",
+      "count": 3,
+      "parentAreaKm2": 147.5461685158641,
+      "coveredAreaKm2": 145.52352719258147,
+      "bytes": 4183,
+      "decodedBytes": 21300
+    },
+    {
+      "id": "SE-M-1763",
+      "count": 3,
+      "parentAreaKm2": 397.8356213521863,
+      "coveredAreaKm2": 394.62360408890123,
+      "bytes": 6887,
+      "decodedBytes": 31392
+    },
+    {
+      "id": "SE-M-1766",
+      "count": 7,
+      "parentAreaKm2": 1454.1093970374234,
+      "coveredAreaKm2": 1448.032235299743,
+      "bytes": 17266,
+      "decodedBytes": 70791
+    },
+    {
+      "id": "SE-M-1781",
+      "count": 10,
+      "parentAreaKm2": 764.9705559814398,
+      "coveredAreaKm2": 773.3467092883699,
+      "bytes": 138704,
+      "decodedBytes": 515035
+    },
+    {
+      "id": "SE-M-1782",
+      "count": 7,
+      "parentAreaKm2": 1717.1876182449455,
+      "coveredAreaKm2": 1710.8594165930858,
+      "bytes": 14518,
+      "decodedBytes": 61703
+    },
+    {
+      "id": "SE-M-1784",
+      "count": 11,
+      "parentAreaKm2": 1961.3041807185098,
+      "coveredAreaKm2": 1954.4625883181225,
+      "bytes": 31629,
+      "decodedBytes": 118113
+    },
+    {
+      "id": "SE-M-1783",
+      "count": 7,
+      "parentAreaKm2": 2006.8044727022698,
+      "coveredAreaKm2": 2000.5613789258311,
+      "bytes": 29074,
+      "decodedBytes": 111798
+    },
+    {
+      "id": "SE-M-1785",
+      "count": 10,
+      "parentAreaKm2": 1265.7919130155503,
+      "coveredAreaKm2": 1318.052656602069,
+      "bytes": 272945,
+      "decodedBytes": 1010911
+    },
+    {
+      "id": "SE-M-1814",
+      "count": 6,
+      "parentAreaKm2": 481.2844293468927,
+      "coveredAreaKm2": 477.96118329747435,
+      "bytes": 13896,
+      "decodedBytes": 60934
+    },
+    {
+      "id": "SE-M-1860",
+      "count": 4,
+      "parentAreaKm2": 716.9969705156278,
+      "coveredAreaKm2": 710.2794885734083,
+      "bytes": 8181,
+      "decodedBytes": 39777
+    },
+    {
+      "id": "SE-M-1861",
+      "count": 10,
+      "parentAreaKm2": 670.374521642084,
+      "coveredAreaKm2": 663.7705744066254,
+      "bytes": 14316,
+      "decodedBytes": 60335
+    },
+    {
+      "id": "SE-M-1862",
+      "count": 4,
+      "parentAreaKm2": 412.9395703106376,
+      "coveredAreaKm2": 409.0336472731832,
+      "bytes": 7405,
+      "decodedBytes": 37848
+    },
+    {
+      "id": "SE-M-1863",
+      "count": 4,
+      "parentAreaKm2": 1154.3418181515026,
+      "coveredAreaKm2": 1149.9479355309702,
+      "bytes": 6357,
+      "decodedBytes": 27981
+    },
+    {
+      "id": "SE-M-1864",
+      "count": 3,
+      "parentAreaKm2": 629.9018261285785,
+      "coveredAreaKm2": 628.5844547021893,
+      "bytes": 6817,
+      "decodedBytes": 35637
+    },
+    {
+      "id": "SE-M-1884",
+      "count": 7,
+      "parentAreaKm2": 691.4505671746466,
+      "coveredAreaKm2": 687.736792405725,
+      "bytes": 9350,
+      "decodedBytes": 43129
+    },
+    {
+      "id": "SE-M-1881",
+      "count": 5,
+      "parentAreaKm2": 207.5408375326885,
+      "coveredAreaKm2": 202.31240356555804,
+      "bytes": 7609,
+      "decodedBytes": 36680
+    },
+    {
+      "id": "SE-M-1882",
+      "count": 6,
+      "parentAreaKm2": 850.5380221940455,
+      "coveredAreaKm2": 880.0033736885448,
+      "bytes": 83038,
+      "decodedBytes": 291071
+    },
+    {
+      "id": "SE-M-1883",
+      "count": 4,
+      "parentAreaKm2": 513.3048337799313,
+      "coveredAreaKm2": 509.1561821430994,
+      "bytes": 9988,
+      "decodedBytes": 45303
+    },
+    {
+      "id": "SE-M-1885",
+      "count": 12,
+      "parentAreaKm2": 1485.3924909429559,
+      "coveredAreaKm2": 1478.280362571233,
+      "bytes": 33993,
+      "decodedBytes": 122419
+    },
+    {
+      "id": "SE-M-1960",
+      "count": 5,
+      "parentAreaKm2": 214.9722807928176,
+      "coveredAreaKm2": 202.1044122319753,
+      "bytes": 13381,
+      "decodedBytes": 52267
+    },
+    {
+      "id": "SE-M-1904",
+      "count": 2,
+      "parentAreaKm2": 719.8999082889426,
+      "coveredAreaKm2": 715.7416232629804,
+      "bytes": 4750,
+      "decodedBytes": 18278
+    },
+    {
+      "id": "SE-M-1907",
+      "count": 7,
+      "parentAreaKm2": 369.44186009535343,
+      "coveredAreaKm2": 367.6950901106515,
+      "bytes": 5074,
+      "decodedBytes": 28817
+    }
+  ],
+  "omitted": []
+}

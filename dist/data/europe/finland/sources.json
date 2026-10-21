@@ -3,7 +3,8 @@
   "coverage": "19 regions and all 308 municipalities, including autonomous, demilitarised Swedish-speaking Åland and its 16 municipalities. Eurostat GISCO 2024 land geometry reconciled to current 2026 Statistics Finland municipality codes by dissolving Pertunmaa into Mäntyharju, the current official municipality-to-region crosswalk, 2025 year-end population, and National Land Survey 2026 land area. English, Finnish and Swedish names are retained. Åland is part of Finland, not a separate sovereign country or overseas dependency. Parent region geometry is dissolved from the same municipality polygons. Major Natural Earth lake water is removed at all levels.",
   "counts": {
     "1": 19,
-    "2": 308
+    "2": 308,
+    "3": 115
   },
   "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
   "sources": {
@@ -189,6 +190,52 @@
       "license": "Public domain",
       "bytes": 2284669,
       "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a"
+    }
+  },
+  "localAreas": {
+    "type": "Helsinki & Espoo districts",
+    "coverage": "Official city district. Local coverage in this release is Helsinki and Espoo; other Finnish municipalities retain their existing municipality-level map.",
+    "municipalities": [
+      "FI-M-091",
+      "FI-M-049"
+    ],
+    "sourceUnits": 116,
+    "mappedUnits": 115,
+    "retrieved": "2026-10-21",
+    "processing": "Official named areas retained. Danish parishes that cross municipal boundaries keep one identity and the same complete land geometry in each overlapping municipality; the largest overlap is used for primary navigation. Swedish local areas use the original GISCO municipality outline with detailed OpenStreetMap masks for Mälaren and Storsjön, restoring land removed by the coarse overview lake mask. Other areas are clipped to their existing municipality. Shared local topology simplified by 0.00003 degrees (about 3 m north–south), then clipped to the existing municipality land mask. Existing regional and municipal geometry is unchanged. Uncovered coastal slivers keep the municipality backdrop; no local administrative units or population estimates are invented.",
+    "sources": {
+      "helsinki-districts.geojson": {
+        "file": "helsinki-districts.geojson",
+        "url": "https://kartta.hel.fi/ws/geoserver/avoindata/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=avoindata:Kaupunginosajako&outputFormat=application/json&srsName=EPSG:4326",
+        "sha256": "50147473ddf2b0abb60396d1ddfba507e2eec950200c3c64aaab45ffb256776c",
+        "bytes": 299848,
+        "license": "CC-BY-4.0",
+        "metadata": "https://hri.fi/data/dataset/helsingin-piirijako",
+        "vintage": "Updated to service 2026-10-20",
+        "retrievedAt": "2026-10-21T06:27:42.204716+00:00",
+        "count": 60,
+        "country": "finland",
+        "format": "geojson",
+        "archive": false,
+        "upstreamSha256": "c17ec0a0e6f73075ae765184cfc3b5712007376641226a4c3dbde3b40e55fb60",
+        "normalization": "Retain FeatureCollection geometry and properties; omit request timestamp/transport metadata"
+      },
+      "espoo-districts.gml": {
+        "file": "espoo-districts.gml",
+        "url": "https://kartat.espoo.fi/teklaogcweb/wfs.ashx?service=WFS&version=1.1.0&request=GetFeature&typeName=GIS:Kaupunginosat&outputFormat=GML2&srsName=EPSG:4326",
+        "sha256": "be93a7d5d802fceebfbfd802a617d88bda3fa80b82de5aa862aa721c7a21c0b1",
+        "bytes": 381222,
+        "license": "CC-BY-4.0",
+        "metadata": "https://hri.fi/data/fi/dataset/espoon-aluejaot",
+        "vintage": "Live dataset, retrieved 2026-10-21",
+        "retrievedAt": "2026-10-21T06:27:40.644373+00:00",
+        "count": 56,
+        "country": "finland",
+        "format": "gml",
+        "archive": false,
+        "upstreamSha256": "446c248efe967c9efd16b662d1207170fb2fb5c4930757760ce5c38efc0666b0",
+        "normalization": "Omit FeatureCollection request timeStamp attribute; retain geometry and properties"
+      }
     }
   }
 }

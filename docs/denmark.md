@@ -32,3 +32,7 @@ The former border builder grouped Natural Earth land and water segments together
 BKG VG25 is credited under CC BY 4.0. Its WFS response, query URL and SHA-256 pin are retained in `scripts/boundary-sources/germany-denmark/`; official documentation is at [BKG’s VG25 service](https://gdz.bkg.bund.de/index.php/default/wfs-verwaltungsgebiete-1-25-000-stand-31-12-wfs-vg25.html). This remains a generalised atlas, not a cadastral map.
 
 Ordinary German country rebuilds preserve this correction. `npm run build:germany-denmark-border` reapplies only the border and refreshes its compact browser copy. `npm run test:germany-denmark-border` verifies every administrative level, a continuous shoreline join, the official reference and a 20-metre sampling check that the line never crosses Flensburg’s interior. `npm run test:browser:germany-denmark-border` checks the visible stroke from Germany, Denmark and another country, on desktop and phone.
+
+## Parish detail
+
+See [Nordic local subdivisions](nordic-local-areas.md) for the DAGI parish layer, cross-municipal navigation, source coverage and two-button drill-down.

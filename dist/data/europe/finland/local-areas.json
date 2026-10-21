@@ -1,0 +1,50 @@
+{
+  "country": "finland",
+  "retrieved": "2026-10-21",
+  "type": "Helsinki & Espoo districts",
+  "sourceUnits": 116,
+  "baseFiles": {
+    "first.bin": "0a0ea492933686983675b05f884d3398f033fe95313ecaf54c49cc869592788d",
+    "second/FI-17.bin": "6c329d5b8f485b3f935de6c9cbc9f219027d47a9dfb898d6b7b1eef59f8cc1f1",
+    "second/FI-06.bin": "284da531ecf2865bcaaef136785480db887686ec23fff5df3eb5a412221f8c08",
+    "second/FI-10.bin": "11bdbfd51b8e371ad1bcd11d06b05150f5a4bf2eacc20bd3a636d6c13cfe38a7",
+    "second/FI-04.bin": "fcff44da5645aad85bee32100c4b4b10675d01f86c25e346485d01e67d0fdc2e",
+    "second/FI-13.bin": "ae482110828f18067196b6c45e8b06c33b992d981937fe111a67c397ef2e7208",
+    "second/FI-14.bin": "0b90038d48295b1e4c2e530f8b39e10769332184f25047dc0a4ddc19afd14a3b",
+    "second/FI-07.bin": "09725896fe21aa6a67d59c7212ea9ea7fc3e8d2c5f83ca90c62ee588ba3b5718",
+    "second/FI-01.bin": "9849390ff88cc8c95caf4ffdcbb075bff1f1bbd81ca05f7633e462ad6ba20af3",
+    "second/FI-02.bin": "0ebec87c1dc6c180a7c3f151b1c15f322089d6b01216e0125936c15e2744c11d",
+    "second/FI-21.bin": "ee05c7721bfe0ed752ce0fca8fd823e00611021ea262a6737f4743f67622634b",
+    "second/FI-19.bin": "04909cdb5b8b421069c5fe324374853e8f1303a8ab5ba468380241d0e5d7b81b",
+    "second/FI-05.bin": "7ebd6aa9b4422003c11883ce724e7876bc2a5890c1429e5b1da0d68eb62ebed9",
+    "second/FI-16.bin": "4a9e55e49f90fabc1aa66bb1396a00b2e349440219c7fa48776946f8be5c171d",
+    "second/FI-08.bin": "aace1a784b4a8e0eafdf83c0246bfd078020d99fbf895fa2561e61e597cffba1",
+    "second/FI-12.bin": "d1cf6186d318b6c11671bf381d32c8985c3bf387846781dfbd9af855487c558b",
+    "second/FI-18.bin": "510b99ca5fb1a299aaac1ce7e511427fb7da84809237a7782ae13e2d3cdf3b00",
+    "second/FI-11.bin": "eadc6b538ade7c99192dea60a0de352b21a90d0c04341181f21abb0cb2214457",
+    "second/FI-09.bin": "b53ac1c2bc1ba555e26180faa6db92fc3e8a0ce7b210d191d687ea4b124a798e",
+    "second/FI-15.bin": "6c9e9f402b407bc8337ef36a56ec4d0c06f0edadb15d7a3f67089975444e7fbd"
+  },
+  "originalFacts": "f82bb14e07471b5631107e01db2a15b1d45df54bcd3ef6a6c050423c2bb45d91",
+  "parents": [
+    {
+      "id": "FI-M-091",
+      "count": 59,
+      "parentAreaKm2": 221.04979197651647,
+      "coveredAreaKm2": 219.96099740305124,
+      "bytes": 34421,
+      "decodedBytes": 142669
+    },
+    {
+      "id": "FI-M-049",
+      "count": 56,
+      "parentAreaKm2": 332.3273124541438,
+      "coveredAreaKm2": 331.5072292747801,
+      "bytes": 84909,
+      "decodedBytes": 327956
+    }
+  ],
+  "omitted": [
+    "FI-HKI-Aluemeri"
+  ]
+}

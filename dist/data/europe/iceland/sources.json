@@ -2,7 +2,8 @@
   "retrieved": "2026-10-16",
   "counts": {
     "1": 8,
-    "2": 61
+    "2": 61,
+    "3": 10
   },
   "coverage": "The eight regions (landshlutar) and 61 municipalities (sveitarfélög), from the IS 50V municipal boundaries of the Icelandic Institute of Natural History (formerly the National Land Survey), land only. Regions group the municipalities by their municipal number, as Statistics Iceland does, and are dissolved from them.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
@@ -419,5 +420,36 @@
       "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
       "bytes": 565922
     }
-  ]
+  ],
+  "localAreas": {
+    "type": "Reykjavík districts",
+    "coverage": "Official Reykjavík city district. Other Icelandic municipalities retain their existing municipality-level map. Source: Reykjavík open geodata service; the city permits reuse with attribution and respect for moral rights.",
+    "municipalities": [
+      "IS-M-0000"
+    ],
+    "sourceUnits": 10,
+    "mappedUnits": 10,
+    "retrieved": "2026-10-21",
+    "processing": "Official named areas retained. Danish parishes that cross municipal boundaries keep one identity and the same complete land geometry in each overlapping municipality; the largest overlap is used for primary navigation. Other areas are clipped to their own municipality. Shared local topology simplified by 0.00003 degrees (about 3 m north–south), then clipped to the existing municipality land mask. Existing regional and municipal geometry is unchanged. Uncovered coastal slivers keep the municipality backdrop; no local administrative units or population estimates are invented.",
+    "sources": {
+      "reykjavik-districts.geojson": {
+        "file": "reykjavik-districts.geojson",
+        "url": "https://lukrgatt.reykjavik.is/server/rest/services/OpinGognMorkSkiptingar/Stjornsysluskipting/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=geojson",
+        "sha256": "183e83d6ec5fb27e87b91ddbcf4a654fc77ea9ef8cad78280a293437f87aa424",
+        "bytes": 2612126,
+        "license": "Reykjavik/LUKR open data: no restrictions on use respecting moral rights; users responsible for following changes.",
+        "metadata": "https://gagnagatt.reykjavik.is/dataset/hverfi-gagnagatt",
+        "vintage": "CKAN metadata last updated 2026-09-01",
+        "retrievedAt": "2026-10-21T06:27:56.182294+00:00",
+        "count": 10,
+        "licenseUrl": "https://lukrgatt.reykjavik.is/server/rest/services/OpinGognMorkSkiptingar/Stjornsysluskipting/FeatureServer/info/iteminfo?f=pjson",
+        "licenseText": "<div>©Reykjavíkurborg - LUKR</div><div>Engar takmarkanir á notkun þegar tekið hefur verið tillit til sæmdarréttar. Notendur bera sjálfir ábyrð á því að fylgjast með breytingum á gögnum.</div>",
+        "country": "iceland",
+        "format": "geojson",
+        "archive": false,
+        "upstreamSha256": "2ade3ccb3fb58ff69eff4344454880e55ca2289c8052a3d373e2de90876a9dd1",
+        "normalization": "Retain FeatureCollection geometry and properties; omit request timestamp/transport metadata"
+      }
+    }
+  }
 }

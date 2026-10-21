@@ -33,9 +33,10 @@ const supplements={
   }return out;
  }
 };
-export function prepareRegionColors(){
+export function prepareRegionColors(countries=[]){
  const outputs={};
  for(const [country,c]of Object.entries(countryColorData)){
+  if(countries.length&&!countries.includes(country))continue;
   if(process.env.ONLY&&!process.env.ONLY.split(",").includes(country))continue;
   const d=read('dist/'+c.statistics),catalogue=c.catalogue?read('dist/'+c.catalogue):null;
   const geography=[...(catalogue?.records||['first','second','third'].flatMap(k=>catalogue?.[k]?.features.map(f=>f.properties)||[])),...(c.extraCatalogue?read('dist/'+c.extraCatalogue).records:[])];
@@ -65,4 +66,4 @@ export function prepareRegionColors(){
   console.log(country,Object.fromEntries([1,2,3].map(level=>[level,{regions:records.filter(r=>r.level===level).length,...Object.fromEntries(['population','populationDensity','gdp','gdpPerCapita'].map(k=>[k,records.filter(r=>r.level===level&&r.metrics[k]).length]))}])));
  }return outputs;
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)prepareRegionColors();
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)prepareRegionColors(process.argv.slice(2));
