@@ -7,7 +7,7 @@ try{
  await p.send('Page.addScriptToEvaluateOnNewDocument',{source:"localStorage.setItem('boundary-atlas-rendering-v1',JSON.stringify({quality:'performance',diagnostics:true}));localStorage.setItem('boundary-atlas-globe-v1','true');"});
  await p.open(server.url,'#china');await p.settle();
  await p.evaluate('void map.jumpTo({center:[105,36],zoom:3.3});');await p.settle();
- const style=JSON.parse(await p.evaluate('JSON.stringify({layers:map.getStyle().layers.map(l=>mapScene.baseLayer(l)),sources:Object.fromEntries(Object.entries(map.getStyle().sources).map(([k,v])=>[k,{type:v.type,tolerance:v.tolerance}]))})')); 
+ const style=JSON.parse(await p.evaluate('JSON.stringify({layers:map.getStyle().layers.map(l=>mapScene.baseLayer(l)),sources:Object.fromEntries(Object.entries(map.getStyle().sources).map(([k,v])=>[k,{type:v.type,tolerance:v.tolerance}]))})'));
  fs.mkdirSync('artifacts/tablet-performance',{recursive:true});
  fs.writeFileSync('artifacts/tablet-performance/china-style.json',JSON.stringify(style,null,2));
  for(const test of ['unculled','complete','unculled','complete']){

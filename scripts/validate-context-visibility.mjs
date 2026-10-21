@@ -40,4 +40,3 @@ assert.equal(map.getLayoutProperty('canada-land','visibility'),'none','Disabling
 scene.setSnapshot(null);
 assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible');
 console.log('Context culling preserves intended visibility, country re-entry and historical snapshots.');
-
