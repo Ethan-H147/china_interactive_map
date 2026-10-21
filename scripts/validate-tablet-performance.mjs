@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {defaults,targetRatio,validate,summarize} from '../dist/map-performance.mjs';
+import {createPreview,privateIPv4,lanAddresses} from './serve.mjs';
+assert.equal(defaults.quality,'balanced','Balanced remains the permanent default');
+assert.equal(validate(null).quality,'balanced','Existing visitors without rendering preferences get Balanced');
+for(const [device,quality,moving,result]of [[2,'balanced',true,1.5],[2,'balanced',false,2],[2,'performance',true,1],[1,'balanced',true,1],[3,'full',true,3],[3,'performance',false,3],[NaN,'full',false,1]])assert.equal(targetRatio(device,quality,moving),result);
+assert.equal(validate({quality:'bad',antialias:'false'}).antialias,true);assert.equal(validate({quality:'bad'}).quality,'balanced');
+assert.deepEqual(summarize([10,20,30,NaN],1000,40),{drawFps:40,p95:30,samples:3});
+assert(privateIPv4('192.168.1.10'));assert(privateIPv4('172.31.0.1'));assert(!privateIPv4('172.32.0.1'));assert(!privateIPv4('173.230.99.95'));assert(!privateIPv4('169.254.0.1'));
+const entry=address=>({address,family:'IPv4',internal:false});
+assert.deepEqual(lanAddresses({'Wi-Fi':[entry('192.168.1.3')],'Ethernet 2':[entry('10.4.1.2')]},['Wi-Fi']).map(x=>x.address),['192.168.1.3'],'Physical adapter filter excludes a generic VPN alias');
+const preview=createPreview({port:0});
+try{const [base]=await preview.start();
+ const response=await fetch(base+'/');assert.equal(response.status,200);assert((await response.text()).includes('/__preview-status.js'));
+ const health=await(await fetch(base+'/__preview-health')).json();assert.equal(health.application,'boundary-atlas');assert.equal(typeof health.revision,'number');
+ assert.equal((await(await fetch(base+'/version.json')).json()).version,null);
+ assert.equal((await fetch(base+'/package.json')).status,404);assert.equal((await fetch(base+'/%2e%2e%2fpackage.json')).status,403);assert.equal((await fetch(base+'/.git/config')).status,403);assert.equal((await fetch(base+'/',{method:'POST'})).status,405);
+ assert.equal((await fetch(base+'/map-performance.mjs')).headers.get('Content-Type'),'text/javascript');
+}finally{await preview.close();}
+console.log('Rendering policy, metric summary, device preferences, private adapter selection, preview assets and path/method restrictions passed.');

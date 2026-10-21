@@ -280,6 +280,9 @@
     "build:korean-frontiers": "node --max-old-space-size=12000 scripts/reconcile-korean-frontiers.mjs && npm run build:fills && node scripts/build-world-land.mjs && npm run build:compact",
     "test:korean-frontiers": "node scripts/validate-korean-frontiers.mjs && node scripts/validate-khanka.mjs && node scripts/browser/run.mjs korean-frontiers",
     "build:clean-frontiers": "node --max-old-space-size=12000 scripts/reconcile-poland-ukraine.mjs && node --max-old-space-size=12000 scripts/korean-river-islands.mjs && node --max-old-space-size=12000 scripts/china-russia-frontier.mjs && npm run build:fills && npm run build:compact",
-    "test:clean-frontiers": "node --max-old-space-size=10000 scripts/validate-clean-frontiers.mjs && npm run test:korean-frontiers && node scripts/browser/run.mjs clean-frontiers"
+    "test:clean-frontiers": "node --max-old-space-size=10000 scripts/validate-clean-frontiers.mjs && npm run test:korean-frontiers && node scripts/browser/run.mjs clean-frontiers",
+    "preview:ipad": "node scripts/serve.mjs --lan",
+    "test:tablet-performance": "node scripts/validate-tablet-performance.mjs && node scripts/browser/run.mjs tablet-performance",
+    "measure:tablet-performance": "node scripts/browser/measure-tablet-performance.mjs"
   }
 }

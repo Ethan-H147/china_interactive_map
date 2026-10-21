@@ -7,7 +7,8 @@ const initialCountry=window.AtlasEntry?.initial;
 const initialBackground=window.AtlasEntry?.countries[initialCountry]?.background||'#f4f0e7';
 const registry=window.AtlasCountries;
 const initialPreview=registry.countries[initialCountry]?.map||null;
-const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:!!registry.countries[initialCountry]?.worldCopies,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:{antialias:true},fadeDuration:0});
+const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:!!registry.countries[initialCountry]?.worldCopies,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:window.AtlasPerformance.contextOptions(),fadeDuration:0});
+window.AtlasPerformanceController=window.AtlasPerformance.attach(map,{refreshLabels:updateLabels});
 const mapScene=window.AtlasMapScene.createMapScene(map);
 map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();
 window.AtlasRegionColorController=window.AtlasRegionColors.createRegionColors(map,{changed:()=>saveViewSoon(),getLevel:()=>currentAtlas()?.getMode?.()||($('mode-province').getAttribute('aria-pressed')==='true'?1:2)});
@@ -400,7 +401,7 @@ function bindRegion(region,parentCode){
   const layer={feature,getBounds:()=>bounds};
   regionIndex.push({layer,parentCode,name:p.name,english:englishName(p),regional:(regionNames[p.adcode]?.regional||[]).map(n=>n.text).join(' '),type:kind(p)});regionByCode.set(p.adcode,layer);return layer;
 }
-function addLabel(p,text,small){const xy=p.centroid||p.center;if(!xy)return;const div=document.createElement('div');div.className='province-label';div.textContent=text;if(small){const el=document.createElement('small');el.textContent=small;div.append(el);}labels.push(new maplibregl.Marker({element:div,anchor:'center'}).setLngLat(xy).addTo(map));}
+function addLabel(p,text,small){if(window.AtlasPerformanceController.labelsSuppressed)return;const xy=p.centroid||p.center;if(!xy)return;const div=document.createElement('div');div.className='province-label';div.textContent=text;if(small){const el=document.createElement('small');el.textContent=small;div.append(el);}labels.push(new maplibregl.Marker({element:div,anchor:'center'}).setLngLat(xy).addTo(map));}
 function updateLabels(){
  if(labelFrame!==undefined)return;
  labelFrame=requestAnimationFrame(()=>{labelFrame=undefined;renderLabels();});
@@ -752,6 +753,7 @@ function globeFloor(){const globe=map.getProjection?.()?.type==='globe',c=map.ge
 map.on('resize',globeFloor);
 $('globe-view').onclick=()=>{const on=$('globe-view').getAttribute('aria-pressed')!=='true';$('globe-view').setAttribute('aria-pressed',String(on));try{localStorage.setItem(globeKey,String(on));}catch{}if(window.AtlasSettings.getSettings().projection!==(on?'globe':'mercator'))window.AtlasSettings.setSettings({projection:on?'globe':'mercator'});syncGlobe();};$('retry').onclick=()=>location.reload();
 window.AtlasSettings.mountSettings({refreshLabels:updateLabels,refreshStyling:updateProvinceStyling,getProjection:()=>$('globe-view').getAttribute('aria-pressed')==='true'?'globe':'mercator',setProjection:value=>{if(($('globe-view').getAttribute('aria-pressed')==='true')!==(value==='globe'))$('globe-view').click();}});
+window.AtlasPerformanceController.mountSettings();
 $('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();$('about').addEventListener('click',e=>{if(e.target!==$('about'))return;const r=$('about').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('about').close();});
 function quizPool(settings={scope:$('quiz-scope').value,includeTaiwan:$('quiz-taiwan').checked}){return AtlasQuiz.candidates([...regionByCode.values()],settings);}
 function initQuiz(){

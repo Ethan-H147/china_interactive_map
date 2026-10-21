@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+const select=async(p,id,value)=>p.evaluate(`(()=>{const e=document.getElementById(${JSON.stringify(id)});e.value=${JSON.stringify(value)};e.dispatchEvent(new Event('change',{bubbles:true}));})()`);
+export default [{name:'tablet rendering resolution, full-quality restore, labels test, diagnostics and device persistence',options:{width:1366,height:1024,mobile:true},async run(p,base){
+ await p.open(base,'#bolivia');await p.tap('#globe-view');await p.settle();
+ const start=await p.evaluate('({center:map.getCenter().toArray(),zoom:map.getZoom(),selection:currentAtlas().getSelection()})');
+ assert.equal(await p.evaluate('map.getPixelRatio()'),2);
+ await p.tap('#settings-open');assert.equal(await p.evaluate('document.getElementById("settings-rendering-quality").value'),'balanced');
+ await p.tap('#settings-rendering-diagnostics');await p.tap('#settings-close');
+ assert(await p.evaluate('!document.getElementById("map-performance").hidden'));
+ await p.evaluate('window.renderRatios=[];map.on("move",()=>renderRatios.push(map.getPixelRatio()))');
+ await p.drag('#map',{dx:200,dy:65},{steps:32,duration:600});await p.settle();
+ assert((await p.evaluate('renderRatios')).includes(1.5),'Balanced lowers only the map canvas during movement');
+ assert.equal(await p.evaluate('map.getPixelRatio()'),2,'Full sharpness restores after movement');
+ assert.notDeepEqual(await p.evaluate('map.getCenter().toArray()'),start.center,'Changing resolution must not cancel the touch drag');
+ assert.equal(await p.evaluate('currentAtlas().getSelection()'),start.selection);
+ assert.equal(await p.evaluate('map.getProjection().type'),'globe');
+ const metrics=await p.evaluate('AtlasPerformanceController.snapshot()');assert(metrics.lastGesture.samples>0);assert(metrics.lastGesture.p95>0);assert(metrics.markers>0);
+ await p.tap('[data-perf-labels]');await p.waitFor('document.querySelectorAll("#map [data-atlas-place]").length===0');
+ assert.equal(await p.evaluate('AtlasSettings.getSettings().placeNames'),true,'Label experiment does not change saved or synced settings');
+ await p.tap('[data-perf-labels]');await p.waitFor('document.querySelectorAll("#map [data-atlas-place]").length>0');
+ await p.tap('[data-perf-report]');assert((await p.evaluate('document.querySelector("#map-performance textarea").value')).includes('p95'));await p.tap('[data-perf-report]');
+ await p.tap('#settings-open');await select(p,'settings-rendering-quality','performance');await p.tap('#settings-close');
+ await p.evaluate('renderRatios=[]');await p.drag('#map',{dx:-120,dy:20},{steps:24,duration:500});await p.settle();assert((await p.evaluate('renderRatios')).includes(1));assert.equal(await p.evaluate('map.getPixelRatio()'),2);
+ await p.tap('#settings-open');await select(p,'settings-rendering-quality','full');await p.tap('#settings-close');
+ await p.evaluate('renderRatios=[]');await p.drag('#map',{dx:100,dy:10},{steps:24,duration:500});await p.settle();assert((await p.evaluate('renderRatios')).every(r=>r===2));
+ await p.tap('#settings-open');await p.tap('#settings-rendering-antialias');assert(await p.evaluate('!document.getElementById("rendering-reload").hidden'));await p.tap('#rendering-reload');await p.waitFor('window.AtlasPerformanceController?.snapshot().antialiasRequested===false');await p.settle();
+ await p.tap('#settings-open');assert.equal(await p.evaluate('document.getElementById("settings-rendering-quality").value'),'full');assert.equal(await p.evaluate('document.getElementById("settings-rendering-antialias").checked'),false,'Edge smoothing preference persists after reload');assert.equal(await p.evaluate('map.painter.context.gl.getContextAttributes().antialias'),false,'New context disables antialiasing');assert(await p.evaluate('document.getElementById("rendering-reload").hidden'),'Reload prompt clears after reload');
+ await p.evaluate('document.getElementById("settings-rendering-quality").scrollIntoView({block:"center"})');await p.screenshot('tablet-rendering-settings');
+ await p.tap('#settings-rendering-diagnostics');await p.tap('#settings-close');assert(await p.evaluate('document.getElementById("map-performance").hidden'));
+ await p.tap('#settings-open');await p.tap('#settings-reset');await p.tap('#settings-close');
+ await p.screenshot('tablet-rendering-controls');
+}},{name:'rendering readout fits compact phone and does not overlap the header',options:{width:390,height:844,mobile:true},async run(p,base){
+ await p.open(base,'#japan');await p.tap('#settings-open');await p.tap('#settings-rendering-diagnostics');await p.tap('#settings-close');
+ assert(await p.evaluate('(()=>{const r=document.getElementById("map-performance").getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.top>=80&&r.bottom<=innerHeight;})()'));
+ await p.screenshot('phone-rendering-readout');await p.tap('[data-perf-close]');assert(await p.evaluate('document.getElementById("map-performance").hidden'));
+}}];

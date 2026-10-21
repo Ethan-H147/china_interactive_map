@@ -22,6 +22,7 @@ function textWidth(font,text){const key=font+'|'+text;let width=widths.get(key);
 export function getLanguage(){return language;}
 export function setLanguage(value){language=['en','local','both'].includes(value)?value:'both';document.querySelectorAll('[data-label-language]').forEach(el=>el.value=language);}
 export function render(map,candidates,className){
+ if(globalThis.AtlasPerformanceController?.labelsSuppressed)return [];
  const settings=getSettings(),large=settings.labelSize==='large';candidates=candidates.filter(item=>item.countryLabel?settings.countryNames:settings.placeNames);
  measure??=document.createElement('canvas').getContext('2d');
  // On the globe, places on the far side, or near its edge where they project poorly, are left out.
