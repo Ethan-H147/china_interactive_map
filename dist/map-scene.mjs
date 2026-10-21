@@ -1,3 +1,4 @@
+import {sourceFile,outsideView,paddedView} from './context-visibility.mjs';
 // One scene owns drawing order and satellite paint for every country.
 // Country modules supply normal paint; exceptional layers declare atlas metadata.
 const scenes=new WeakMap();
@@ -36,12 +37,13 @@ export const getMapScene=map=>scenes.get(map);
 export function createMapScene(map){
  if(scenes.has(map))return scenes.get(map);
  const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty','setLayoutProperty'].map(key=>[key,map[key].bind(map)]));
- const entries=new Map();let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[];
+ const entries=new Map();const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,view=getView();let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[];
  const layers=()=>map.getStyle()?.layers||[];
  const describe=layer=>{
   const atlas=layer.metadata?.atlas||{},role=atlas.role||defaults[layer.type];
   if(!(role in layerBands))throw Error('Declare an atlas layer role for '+layer.id);
-  return {type:layer.type,role,contextCountry:atlas.contextCountry,paint:clone(layer.paint||{}),satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
+  const file=sourceFile(map,layer.source),context=['context','land'].includes(role)||layer.metadata?.atlasInternationalBorder;
+  return {file:context?file:null,culled:!!(culling&&context&&outsideView(file,view)),type:layer.type,role,contextCountry:atlas.contextCountry,paint:clone(layer.paint||{}),satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
  };
  const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
  function anchor(id,role,before){
@@ -65,7 +67,7 @@ export function createMapScene(map){
   }
   return out;
  }
- const visibility=(id,entry)=>snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
+ const visibility=(id,entry)=>entry.culled?'none':snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
  function render(id,entry){
   for(const [key,value] of Object.entries(paint(entry)))if(!same(entry.rendered[key],value)){native.setPaintProperty(id,key,value);entry.rendered[key]=clone(value);}
  }
@@ -88,6 +90,8 @@ export function createMapScene(map){
  };
  map.setLayoutProperty=function(id,key,value,...options){const entry=entries.get(id);if(key==='visibility'&&entry){entry.visibility=value||'visible';return native.setLayoutProperty(id,key,visibility(id,entry),...options);}return native.setLayoutProperty(id,key,value,...options);};
  const scene={
+  setCulling(value){culling=!!value;updateView();},
+  cullingStats(){let culledLayers=0,contextLayers=0;for(const entry of entries.values()){if(entry.culled)culledLayers++;if(entry.file)contextLayers++;}return {enabled:culling,culledLayers,contextLayers};},
   setSnapshot(id,{replaceContexts=[]}={}){if(snapshot===id&&same(snapshotContexts,replaceContexts))return;snapshot=id;snapshotContexts=[...replaceContexts];for(const [key,entry]of entries)native.setLayoutProperty(key,'visibility',visibility(key,entry));},
   setSatellite(visible,opacity=1){
    const next={visible:!!visible,opacity:Math.max(0,Math.min(1,opacity))};
@@ -96,9 +100,14 @@ export function createMapScene(map){
   },
   get satellite(){return {...satellite};},
   basePaint(id,key){const entry=entries.get(id);return clone(entry?(entry.paint[key]??(key==='fill-opacity'?1:key==='line-color'?'#000000':undefined)):map.getPaintProperty(id,key));},
-  baseLayer(layer){return {...layer,paint:clone(entries.get(layer.id)?.paint||layer.paint)};},
+  baseLayer(layer){return {...layer,layout:{...layer.layout,visibility:entries.get(layer.id)?.visibility||layer.layout?.visibility||'visible'},paint:clone(entries.get(layer.id)?.paint||layer.paint)};},
   role(id){return entries.get(id)?.role;},
   assertOrder(){let previous=-Infinity;for(const layer of layers()){const current=rank(layer);if(current<previous)throw Error('Layer outside its band: '+layer.id);previous=current;}return true;}
  };
+ function updateView(){
+  view=getView();
+  for(const [id,entry]of entries){const hidden=culling&&outsideView(entry.file,view);if(entry.culled===hidden)continue;entry.culled=hidden;native.setLayoutProperty(id,'visibility',visibility(id,entry));}
+ }
+ map.on?.('move',updateView);map.on?.('resize',updateView);map.on?.('projectiontransition',updateView);
  scenes.set(map,scene);return scene;
 }

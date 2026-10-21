@@ -284,6 +284,9 @@
     "preview:ipad": "node scripts/serve.mjs --lan",
     "test:tablet-performance": "node scripts/validate-tablet-performance.mjs && node scripts/browser/run.mjs tablet-performance",
     "measure:tablet-performance": "node scripts/browser/measure-tablet-performance.mjs",
-    "test:trackpad-controls": "node scripts/validate-trackpad-controls.mjs && node scripts/browser/run.mjs trackpad-controls"
+    "test:trackpad-controls": "node scripts/validate-trackpad-controls.mjs && node scripts/browser/run.mjs trackpad-controls",
+    "build:context-coverage": "node scripts/build-context-coverage.mjs",
+    "test:context-visibility": "node scripts/validate-context-visibility.mjs && node scripts/browser/run.mjs context-visibility",
+    "measure:map-workload": "node scripts/browser/profile-map-workload.mjs"
   }
 }

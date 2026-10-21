@@ -24,6 +24,7 @@ if(import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
  const present=compactSources.filter(f=>fs.existsSync('dist/data/'+f));
  // Keep the previous compact files available to open previews until each replacement is ready.
  let before=0,after=0;const empty=[];
+ await (await import('./build-context-coverage.mjs')).build();
  for(const file of present){
   const source=fs.readFileSync('dist/data/'+file),text=gunzipSync(source).toString('utf8');
   const data=JSON.parse(text);if(data.type==='FeatureCollection'&&!data.features.length)empty.push(file);
