@@ -292,6 +292,8 @@
     "measure:render-work": "node scripts/browser/measure-render-work.mjs",
     "fetch:nordic-local": "node scripts/fetch-nordic-local.mjs",
     "build:nordic-local": "node --max-old-space-size=7000 scripts/build-nordic-local.mjs && node scripts/prepare-region-colors.mjs norway sweden finland iceland",
-    "test:nordic-local": "node scripts/validate-nordic-local.mjs && node scripts/browser/run.mjs nordic-local"
+    "test:nordic-local": "node scripts/validate-nordic-local.mjs && node scripts/browser/run.mjs nordic-local",
+    "test:globe-renderer": "node --check dist/globe-renderer.mjs && node scripts/validate-globe-renderer.mjs && node scripts/validate-frame-timing.mjs && node scripts/browser/run.mjs globe-renderer",
+    "measure:globe-renderer": "node scripts/browser/measure-globe-renderer.mjs"
   }
 }

@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-21",
+  "renderer": "MapLibre GL JS 6.11.2",
+  "environment": "Windows Chrome, CSS1366x1024, moving pixel ratio1. Counts and CPU submission only; not iPad presented FPS.",
+  "gesture": "2.4-second 170px horizontal, 20px vertical camera pan at zoom3.3, each mode repeated twice, sequential headless Chrome runs",
+  "limitation": "Instrumented main-thread rendering and submitted work. Excludes actual GPU completion and presentation; does not establish iPad frame rates.",
+  "summary": [
+    {
+      "country": "china",
+      "modes": {
+        "native": {
+          "runs": 2,
+          "callsPerFrame": 6645.41,
+          "vertexReferencesPerFrame": 14469028.52,
+          "renderCpuMeanMs": 13.76,
+          "sourceCpuMeanMs": 3.5,
+          "painterCpuMeanMs": 8.48,
+          "renderCpuP95Ms": [
+            20,
+            18.7
+          ]
+        },
+        "stencil": {
+          "runs": 2,
+          "callsPerFrame": 354.96,
+          "vertexReferencesPerFrame": 3544524.92,
+          "renderCpuMeanMs": 9.02,
+          "sourceCpuMeanMs": 3.88,
+          "painterCpuMeanMs": 3.44,
+          "renderCpuP95Ms": [
+            13.9,
+            11.4
+          ]
+        },
+        "complete": {
+          "runs": 2,
+          "callsPerFrame": 356.52,
+          "vertexReferencesPerFrame": 3545565.02,
+          "renderCpuMeanMs": 6.83,
+          "sourceCpuMeanMs": 1.94,
+          "painterCpuMeanMs": 3.29,
+          "renderCpuP95Ms": [
+            12,
+            7.6
+          ]
+        }
+      }
+    },
+    {
+      "country": "bolivia",
+      "modes": {
+        "native": {
+          "runs": 2,
+          "callsPerFrame": 2708.49,
+          "vertexReferencesPerFrame": 6294873.36,
+          "renderCpuMeanMs": 7.34,
+          "sourceCpuMeanMs": 1.79,
+          "painterCpuMeanMs": 4.26,
+          "renderCpuP95Ms": [
+            9.1,
+            10.8
+          ]
+        },
+        "stencil": {
+          "runs": 2,
+          "callsPerFrame": 204.38,
+          "vertexReferencesPerFrame": 1947296.89,
+          "renderCpuMeanMs": 5.26,
+          "sourceCpuMeanMs": 1.98,
+          "painterCpuMeanMs": 1.9,
+          "renderCpuP95Ms": [
+            6.6,
+            7.1
+          ]
+        },
+        "complete": {
+          "runs": 2,
+          "callsPerFrame": 204.12,
+          "vertexReferencesPerFrame": 1947697.7,
+          "renderCpuMeanMs": 4.45,
+          "sourceCpuMeanMs": 1.14,
+          "painterCpuMeanMs": 1.94,
+          "renderCpuP95Ms": [
+            6.1,
+            5.7
+          ]
+        }
+      }
+    },
+    {
+      "country": "sweden",
+      "modes": {
+        "native": {
+          "runs": 2,
+          "callsPerFrame": 4689.62,
+          "vertexReferencesPerFrame": 10331859.99,
+          "renderCpuMeanMs": 12.48,
+          "sourceCpuMeanMs": 3.16,
+          "painterCpuMeanMs": 7.74,
+          "renderCpuP95Ms": [
+            15.2,
+            14.9
+          ]
+        },
+        "stencil": {
+          "runs": 2,
+          "callsPerFrame": 259.14,
+          "vertexReferencesPerFrame": 2605824.96,
+          "renderCpuMeanMs": 7.41,
+          "sourceCpuMeanMs": 3.09,
+          "painterCpuMeanMs": 2.82,
+          "renderCpuP95Ms": [
+            9.6,
+            9.3
+          ]
+        },
+        "complete": {
+          "runs": 2,
+          "callsPerFrame": 258.97,
+          "vertexReferencesPerFrame": 2604884.68,
+          "renderCpuMeanMs": 5.18,
+          "sourceCpuMeanMs": 1.46,
+          "painterCpuMeanMs": 2.42,
+          "renderCpuP95Ms": [
+            7.7,
+            6.5
+          ]
+        }
+      }
+    }
+  ]
+}

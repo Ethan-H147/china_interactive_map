@@ -40,3 +40,8 @@ assert.equal(map.getLayoutProperty('canada-land','visibility'),'none','Disabling
 scene.setSnapshot(null);
 assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible');
 console.log('Context culling preserves intended visibility, country re-entry and historical snapshots.');
+
+scene.setCulling(true);map.style={_loaded:false};camera=[[100,20],[110,40]];map.emit('resize');assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible','A restoring style cannot receive layout mutations');
+map.style=null;map.emit('move');assert.equal(map.getLayoutProperty('canada-land','visibility'),'visible','Context loss cannot initialize another empty style');
+map.style={_loaded:true};map.emit('style.load');assert.equal(map.getLayoutProperty('canada-land','visibility'),'none','Culling resumes after the restored style has loaded');
+console.log('Context loss and asynchronous style restoration defer culling mutations and resynchronize after style.load.');

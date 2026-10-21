@@ -8,6 +8,7 @@ const initialBackground=window.AtlasEntry?.countries[initialCountry]?.background
 const registry=window.AtlasCountries;
 const initialPreview=registry.countries[initialCountry]?.map||null;
 const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:!!registry.countries[initialCountry]?.worldCopies,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:window.AtlasPerformance.contextOptions(),fadeDuration:0});
+window.AtlasGlobeRendererController=window.AtlasGlobeRenderer.attachGlobeRenderer(map);
 window.AtlasPerformanceController=window.AtlasPerformance.attach(map,{refreshLabels:updateLabels});
 const mapScene=window.AtlasMapScene.createMapScene(map);
 map.touchZoomRotate.disableRotation();map.keyboard.disableRotation();

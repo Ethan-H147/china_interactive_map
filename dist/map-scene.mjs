@@ -117,9 +117,11 @@ export function createMapScene(map){
   assertOrder(){let previous=-Infinity;for(const layer of layers()){const current=rank(layer);if(current<previous)throw Error('Layer outside its band: '+layer.id);previous=current;}return true;}
  };
  function updateView(){
+  // Context restoration resizes before its asynchronously restored style loads.
+  if(map.style===null||map.style?._loaded===false)return;
   view=getView();globe=globeView();
   for(const [id,entry]of entries){const hidden=culling&&offscreen(entry.file);if(entry.culled===hidden)continue;entry.culled=hidden;native.setLayoutProperty(id,'visibility',visibility(id,entry));}
  }
- map.on?.('move',updateView);map.on?.('resize',updateView);map.on?.('projectiontransition',updateView);
+ map.on?.('move',updateView);map.on?.('resize',updateView);map.on?.('projectiontransition',updateView);map.on?.('style.load',updateView);
  scenes.set(map,scene);return scene;
 }

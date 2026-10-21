@@ -1,3 +1,4 @@
+import {summarizeCadence} from './frame-timing.mjs';
 // Rendering choices belong to this device, independently of account preferences.
 const key='boundary-atlas-rendering-v1';
 export const defaults=Object.freeze({quality:'balanced',antialias:true,diagnostics:false});
@@ -42,14 +43,14 @@ export function attach(map,{refreshLabels=()=>{}}={}){
   frame=requestAnimationFrame(sample);
  }
  const sceneStats=()=>globalThis.AtlasMapScene?.getMapScene(map)?.cullingStats()||null;
- function gestureStats(now){return {...summarize(intervals,now-start,draws),durationMs:Math.round(now-start),pixelRatioMin:gestureRatios.length?Math.min(...gestureRatios):null,pixelRatioMax:gestureRatios.length?Math.max(...gestureRatios):null,canvasAtStart:gestureCanvas,renderGapP95:summarize(drawIntervals,0,0).p95,contextLayersCulledMax:cullMaximum};}
+ function gestureStats(now){return {...summarize(intervals,now-start,draws),callbackFps:summarizeCadence(intervals).callbackFps,durationMs:Math.round(now-start),pixelRatioMin:gestureRatios.length?Math.min(...gestureRatios):null,pixelRatioMax:gestureRatios.length?Math.max(...gestureRatios):null,canvasAtStart:gestureCanvas,renderGapP95:summarize(drawIntervals,0,0).p95,contextLayersCulledMax:cullMaximum};}
  const currentStats=now=>moving?gestureStats(now):last;
  function snapshot(){
   const canvas=map.getCanvas(),container=map.getContainer(),style=map.getStyle();
   return {country:globalThis.AtlasEntry?.current,projection:map.getProjection()?.type,quality:preferences.quality,
    antialiasRequested:bootAntialias,antialiasActual:map.painter?.context?.gl?.getContextAttributes()?.antialias??null,
    devicePixelRatio:globalThis.devicePixelRatio,pixelRatio:map.getPixelRatio(),canvas:[canvas.width,canvas.height],viewport:[container.clientWidth,container.clientHeight],
-   moving,labelsSuppressed,contextCulling:sceneStats(),markers:container.querySelectorAll('.maplibregl-marker').length,
+   moving,labelsSuppressed,globeRenderer:globalThis.AtlasGlobeRendererController?.snapshot()||null,contextCulling:sceneStats(),markers:container.querySelectorAll('.maplibregl-marker').length,
    sources:Object.keys(style?.sources||{}).length,visibleLayers:style?.layers?.filter(l=>l.layout?.visibility!=='none').length,
    lastGesture:currentStats(performance.now()),userAgent:navigator.userAgent};
  }
@@ -121,6 +122,7 @@ export function attach(map,{refreshLabels=()=>{}}={}){
    <label class="settings-field" for="settings-rendering-quality">Rendering quality<select id="settings-rendering-quality"><option value="balanced">Balanced (default)</option><option value="performance">Performance</option><option value="full">Full resolution</option></select><small>Balanced and Performance reduce map resolution while moving. Full sharpness returns after you stop.</small></label>
    <label class="settings-row" for="settings-rendering-antialias"><span><strong>Edge smoothing</strong><small>Turn off to compare graphics performance</small></span><input id="settings-rendering-antialias" type="checkbox" role="switch"></label>
    <button id="rendering-reload" type="button" hidden>Apply edge smoothing &amp; reload</button>
+   <a href="frame-rate.html" target="_blank" rel="noopener" class="settings-field">Check browser display timing ↗</a>
    <label class="settings-row" for="settings-rendering-diagnostics"><span><strong>Performance readout</strong><small>Measure panning and compare with labels off</small></span><input id="settings-rendering-diagnostics" type="checkbox" role="switch"></label>`;
   content.append(section);
   document.getElementById('settings-rendering-quality').onchange=event=>setPreferences({quality:event.target.value});
