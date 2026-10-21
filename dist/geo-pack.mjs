@@ -119,6 +119,6 @@ export async function addWorkerSource(map,id,url,options,transform,{skipEmpty=fa
  const file=/(?:^|\/)data\/(?:compact\/)?([^?#]+)/.exec(String(url))?.[1];
  if(skipEmpty&&emptyGeometry.has(file))return false;
  const blob=URL.createObjectURL(new Blob([await fetchBytes(compactUrl(url))]));
- try{map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(transform?'&transform='+transform:'')});}catch(error){URL.revokeObjectURL(blob);throw error;}
+ try{map.addSource(id,{...options,data:'atlas-data://'+id+'?url='+encodeURIComponent(blob)+(file?'&file='+encodeURIComponent(file):'')+(transform?'&transform='+transform:'')});}catch(error){URL.revokeObjectURL(blob);throw error;}
  return true;
 }

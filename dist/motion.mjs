@@ -128,7 +128,7 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
   }
   install();active=true;
   for(const [original,entry] of layers){
-   entry.visibility=map.getLayoutProperty(original,'visibility')||'visible';
+   entry.visibility=getMapScene(map)?.baseVisibility(original)||map.getLayoutProperty(original,'visibility')||'visible';
   }
   if(!await holdFrame()){active=false;return false;}
   if(token!==generation)return false;
