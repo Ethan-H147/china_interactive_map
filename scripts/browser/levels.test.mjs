@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 // The level toggle: all levels side by side on desktop; on a phone, three or more levels
 // collapse to the current one and open as a vertical list.
 const phone={width:390,height:844,mobile:true};
+async function openCountry(page,base,country){await page.open(base,'#'+country);await page.waitFor('AtlasEntry.current==='+JSON.stringify(country),{label:country+' route active'});await page.settle();}
 const shown=page=>page.evaluate(`[...document.querySelectorAll('.map-mode button')].filter(b=>b.id!=='mode-lock'&&b.getClientRects().length).map(b=>b.textContent.trim())`);
 const pressed=page=>page.evaluate(`document.querySelector('.map-mode button[aria-pressed=true]:not(#mode-lock)')?.textContent.trim()`);
 const button=(page,label)=>page.evaluate(`(()=>{const b=[...document.querySelectorAll('.map-mode button')].find(b=>b.textContent.trim()===${JSON.stringify(label)}&&b.getClientRects().length);const r=b.getBoundingClientRect();return [r.x+r.width/2,r.y+r.height/2];})()`);
@@ -21,11 +22,11 @@ export default [
   assert.deepEqual(await shown(page),['Municipalities'],'Tapping the map closes an open list');
  }},
  {name:'phone: two levels stay side by side',options:phone,async run(page,base){
-  await page.open(base,'#china');
+  await openCountry(page,base,'china');
   assert.equal((await shown(page)).length,2);
-  await page.open(base,'#mongolia');
+  await openCountry(page,base,'mongolia');
   assert.equal((await shown(page)).length,2,'Switching countries resets the toggle');
-  await page.open(base,'#japan');
+  await openCountry(page,base,'japan');
   assert.deepEqual(await shown(page),['Prefectures'],'The area-code view picker uses the compact level menu');
   await page.tap(await button(page,'Prefectures'));
   assert.deepEqual(await shown(page),['Prefectures','Municipalities']);
