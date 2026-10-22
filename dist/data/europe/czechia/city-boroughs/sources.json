@@ -10,7 +10,14 @@
     {
       "title": "Czech Statistical Office · territorial units and methodology",
       "url": "https://csu.gov.cz/territorial-units-methodology"
+    },
+    {
+      "title": "GUGiK · National Register of Boundaries (PRG), 20 October 2026",
+      "url": "https://www.geoportal.gov.pl/en/data/national-register-of-boundaries/",
+      "license": "Free reuse, source attribution",
+      "service": "https://ogcapi.geoportal.gov.pl/res/ims/maps/PRG/apiFeatures/collections?f=json",
+      "scope": "Shared Polish frontier geometry and survey tripoints"
     }
   ],
-  "processing": "City boroughs cleaned together and clipped to their own reconciled municipal land. No separately generalized national boundary is retained."
+  "processing": "City boroughs cleaned together and clipped to their own reconciled municipal land. No separately generalized national boundary is retained. The local mesh is simplified together at two metres; district and region outlines are dissolved from it. Complete national arcs are anchored at verified survey tripoints; original surveys and independent junction evidence are retained."
 }

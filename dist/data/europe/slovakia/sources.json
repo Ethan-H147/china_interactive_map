@@ -6,7 +6,7 @@
     "2": 79,
     "3": 2927
   },
-  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds. The local mesh is simplified together at two metres; district and region outlines are dissolved from it. Complete national arcs are anchored at verified survey tripoints; original surveys and independent junction evidence are retained.",
   "sources": [
     {
       "title": "GKÚ Bratislava · ZBGIS administrative boundaries, 30 June 2026 release",
@@ -16,6 +16,13 @@
     {
       "title": "Slovak Geodesy Authority · administrative division",
       "url": "https://www.skgeodesy.sk/files/sk/slovensky/ugkk/geodezia-kartografia/standardizacia-geografickeho-nazvoslovia/dokumenty-k-cinnosti/TNdotlaAe.pdf"
+    },
+    {
+      "title": "GUGiK · National Register of Boundaries (PRG), 20 October 2026",
+      "url": "https://www.geoportal.gov.pl/en/data/national-register-of-boundaries/",
+      "license": "Free reuse, source attribution",
+      "service": "https://ogcapi.geoportal.gov.pl/res/ims/maps/PRG/apiFeatures/collections?f=json",
+      "scope": "Shared Polish frontier geometry and survey tripoints"
     }
   ]
 }

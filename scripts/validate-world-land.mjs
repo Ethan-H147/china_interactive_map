@@ -8,8 +8,12 @@ import {assertNearGeo} from './geo-compare.mjs';
 
 const bytes=fs.readFileSync('dist/data/world-land.bin');
 const data=JSON.parse(gunzipSync(bytes));
-assert.ok(bytes.length<4_000_000,'Worldwide 1:10m land plus temporary country previews stay under 4 MB compressed');
-assert.ok(gunzipSync(bytes).length<12_000_000,'Worldwide polygon decoding stays under 12 MB');
+assert.ok(bytes.length<5_000_000,'Retained world reference and aligned previews stay under 5 MB compressed');
+assert.ok(gunzipSync(bytes).length<15_000_000,'Retained world reference stays under 15 MB decoded');
+// The browser downloads and workers decode the compact structure, not the retained JSON.
+const compactWorld=fs.readFileSync('dist/data/compact/world-land.bin');
+assert(compactWorld.length<2_200_000,'Actual world download stays under 2.2 MB');
+assert(gunzipSync(compactWorld).length<4_500_000,'Actual world structure stays under 4.5 MB decoded');
 const inRing=(p,r)=>{let inside=false;for(let i=0,j=r.length-1;i<r.length;j=i++){const a=r[i],b=r[j];if((a[1]>p[1])!==(b[1]>p[1])&&p[0]<(b[0]-a[0])*(p[1]-a[1])/(b[1]-a[1])+a[0])inside=!inside;}return inside;};
 const contains=p=>data.features.some(f=>(f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates).some(r=>inRing(p,r[0])&&!r.slice(1).some(h=>inRing(p,h))));
 for(const p of [[-100,40],[-60,-10],[20,0],[20,50],[68,48],[135,-25],[0,-80],[25,64],[-150,65]])assert.ok(contains(p),'Missing continental or neighboring land '+p);

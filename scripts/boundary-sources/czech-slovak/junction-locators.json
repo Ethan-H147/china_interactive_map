@@ -1,0 +1,215 @@
+{
+  "retrieved": "2026-10-22",
+  "purpose": "Topology evidence identifying complete border-pair junctions; official survey geometry remains authoritative for atlas coordinates.",
+  "license": {
+    "osm": "© OpenStreetMap contributors, ODbL 1.0",
+    "official": "See manifest.json and sk-official-sources.json for official ČÚZK, GKÚ and Polish PRG provenance."
+  },
+  "relations": {
+    "slovakia": {
+      "id": 14296,
+      "url": "https://www.openstreetmap.org/relation/14296"
+    },
+    "hungary": {
+      "id": 21335,
+      "url": "https://www.openstreetmap.org/relation/21335"
+    },
+    "austria": {
+      "id": 16239,
+      "url": "https://www.openstreetmap.org/relation/16239"
+    },
+    "ukraine": {
+      "id": 60199,
+      "url": "https://www.openstreetmap.org/relation/60199"
+    }
+  },
+  "junctions": [
+    {
+      "id": "CZ-PL-SK",
+      "anchor": [
+        18.850907,
+        49.517148
+      ],
+      "primarySource": "scripts/boundary-sources/poland/political.bin",
+      "matchedVertices": {
+        "poland": [
+          18.850907,
+          49.517148
+        ],
+        "czechia": [
+          18.8509,
+          49.517143
+        ],
+        "slovakia": [
+          18.85090996086873,
+          49.51714862695599
+        ]
+      },
+      "note": "Common end of the Polish–Czech and Polish–Slovak survey runs. Czech and Slovak original boundary turns coincide within a metre. Approximate locator [18.8512,49.5177] lies north of the true junction and must not choose the partition."
+    },
+    {
+      "id": "PL-SK-UA",
+      "anchor": [
+        22.565709,
+        49.087994
+      ],
+      "primarySource": "scripts/boundary-sources/poland/political.bin",
+      "matchedVertices": {
+        "poland": [
+          22.565709,
+          49.087994
+        ],
+        "slovakia": [
+          22.565696877566356,
+          49.08798974648988
+        ]
+      },
+      "note": "Eastern end of the official Polish–Slovak shared run; Polish and Slovak survey turns agree within about one metre."
+    },
+    {
+      "id": "AT-CZ-SK",
+      "anchor": [
+        16.940194,
+        48.616539
+      ],
+      "primarySource": "cz-municipalities.json.gz",
+      "matchedVertices": {
+        "czechia": [
+          16.940194,
+          48.616539
+        ],
+        "slovakia": [
+          16.940206749433806,
+          48.616532867759695
+        ]
+      },
+      "note": "Raw Czech and Slovak national outlines share their northeastern run at roughly 1.16 m survey offset, ending at these vertices. Beyond the turn, the Czech outline heads northwest and the Slovak outline heads south, so this is an independently identified common-edge endpoint, not an arbitrary nearest bend."
+    },
+    {
+      "id": "AT-SK-HU",
+      "official": [
+        17.160799049165604,
+        48.00665663874404
+      ],
+      "anchor": [
+        17.160799,
+        48.006657
+      ],
+      "ways": [
+        {
+          "id": 123800430,
+          "countries": [
+            "slovakia",
+            "hungary"
+          ],
+          "url": "https://www.openstreetmap.org/way/123800430",
+          "endpointNodeIds": [
+            32439217,
+            7250107724
+          ],
+          "relationMembershipVerified": true
+        },
+        {
+          "id": 49845917,
+          "countries": [
+            "slovakia",
+            "austria"
+          ],
+          "url": "https://www.openstreetmap.org/way/49845917",
+          "endpointNodeIds": [
+            7250107724,
+            615843675
+          ],
+          "relationMembershipVerified": true
+        },
+        {
+          "id": 43164084,
+          "countries": [
+            "austria",
+            "hungary"
+          ],
+          "url": "https://www.openstreetmap.org/way/43164084",
+          "endpointNodeIds": [
+            38351909,
+            7250107724
+          ],
+          "relationMembershipVerified": true
+        }
+      ],
+      "osmNode": {
+        "id": 7250107724,
+        "coordinate": [
+          17.160776,
+          48.006657
+        ],
+        "url": "https://www.openstreetmap.org/node/7250107724",
+        "api": "https://www.openstreetmap.org/api/0.6/node/7250107724.json"
+      },
+      "officialSource": "sk-official-state.json.gz",
+      "note": "OSM three-country way membership identifies the country-pair partition. The atlas coordinate is the corresponding original official Slovak survey vertex, rounded to six decimals; no nearest arbitrary river bend is used."
+    },
+    {
+      "id": "SK-HU-UA",
+      "official": [
+        22.15524226358682,
+        48.40338251015599
+      ],
+      "anchor": [
+        22.155242,
+        48.403383
+      ],
+      "ways": [
+        {
+          "id": 178754326,
+          "countries": [
+            "slovakia",
+            "ukraine"
+          ],
+          "url": "https://www.openstreetmap.org/way/178754326",
+          "endpointNodeIds": [
+            1143254192,
+            615493420
+          ],
+          "relationMembershipVerified": true
+        },
+        {
+          "id": 49181465,
+          "countries": [
+            "slovakia",
+            "hungary"
+          ],
+          "url": "https://www.openstreetmap.org/way/49181465",
+          "endpointNodeIds": [
+            615493420,
+            124401191
+          ],
+          "relationMembershipVerified": true
+        },
+        {
+          "id": 5363193,
+          "countries": [
+            "hungary",
+            "ukraine"
+          ],
+          "url": "https://www.openstreetmap.org/way/5363193",
+          "endpointNodeIds": [
+            8409513153,
+            615493420
+          ],
+          "relationMembershipVerified": true
+        }
+      ],
+      "osmNode": {
+        "id": 615493420,
+        "coordinate": [
+          22.155256,
+          48.403388
+        ],
+        "url": "https://www.openstreetmap.org/node/615493420",
+        "api": "https://www.openstreetmap.org/api/0.6/node/615493420.json"
+      },
+      "officialSource": "sk-official-state.json.gz",
+      "note": "OSM three-country way membership identifies the country-pair partition. The atlas coordinate is the corresponding original official Slovak survey vertex, rounded to six decimals; no nearest arbitrary river bend is used."
+    }
+  ]
+}

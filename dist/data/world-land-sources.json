@@ -365,10 +365,10 @@
       "SER",
       "SCR"
     ],
-    "outlineGroups": 6025,
+    "outlineGroups": 2142,
     "simplificationMetres": 100,
     "frontierCorridorMetres": 8000,
-    "reconciledSliverKm2": 32089.019343304328,
+    "reconciledSliverKm2": 32089.012419494888,
     "policy": "Atlas display outlines are fixed references; foreign survey overlaps are clipped, and uncovered old-reference land within an 8 km land-frontier corridor is assigned to the nearest foreign edge. Source lake polygons are excluded. This reconciles display geometry and does not redefine sovereignty or claims.",
     "delegatedAreas": {
       "KAB": "The Baykonur Cosmodrome source area is already inside the Kazakhstan atlas silhouette.",
@@ -377,9 +377,9 @@
     },
     "finalWaterAlignment": true
   },
-  "bytes": 4004364,
+  "bytes": 4674567,
   "fallbackSimplificationDegrees": 0.018,
-  "outlineBytes": 790400,
+  "outlineBytes": 672785,
   "titicacaShoreline": {
     "relations": [
       3000330,

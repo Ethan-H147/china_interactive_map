@@ -1,0 +1,96 @@
+{
+  "retrieved": "2026-10-22",
+  "method": "Polish junctions use exact PRG canonical endpoints. Other junction locators are snapped to vertices of the retained official Czech or Slovak national outline. Locators select the division between neighboring-country arcs; they never replace the intervening survey geometry. Natural Earth is used only to choose the direction around the ring, never to truncate endpoints.",
+  "points": {
+    "germanPolishCzech": [
+      14.8232,
+      50.870629
+    ],
+    "polishCzechSlovak": [
+      18.850907,
+      49.517148
+    ],
+    "polishSlovakUkrainian": [
+      22.565709,
+      49.087994
+    ],
+    "germanAustrianCzech": [
+      13.839557,
+      48.771618
+    ],
+    "czechAustrianSlovak": [
+      16.940194,
+      48.616539
+    ],
+    "austrianSlovakHungarian": [
+      17.160799,
+      48.006657
+    ],
+    "slovakHungarianUkrainian": [
+      22.155242,
+      48.403383
+    ]
+  },
+  "pairs": {
+    "CZE-DEU": [
+      [
+        13.839557,
+        48.771618
+      ],
+      [
+        14.8232,
+        50.870629
+      ]
+    ],
+    "CZE-AUT": [
+      [
+        13.839557,
+        48.771618
+      ],
+      [
+        16.940194,
+        48.616539
+      ]
+    ],
+    "CZE-SVK": [
+      [
+        16.940194,
+        48.616539
+      ],
+      [
+        18.850907,
+        49.517148
+      ]
+    ],
+    "SVK-AUT": [
+      [
+        17.160799,
+        48.006657
+      ],
+      [
+        16.940194,
+        48.616539
+      ]
+    ],
+    "SVK-HUN": [
+      [
+        17.160799,
+        48.006657
+      ],
+      [
+        22.155242,
+        48.403383
+      ]
+    ],
+    "SVK-UKR": [
+      [
+        22.155242,
+        48.403383
+      ],
+      [
+        22.565709,
+        49.087994
+      ]
+    ]
+  }
+}

@@ -6,7 +6,7 @@
     "2": 77,
     "3": 6258
   },
-  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds. The local mesh is simplified together at two metres; district and region outlines are dissolved from it. Complete national arcs are anchored at verified survey tripoints; original surveys and independent junction evidence are retained.",
   "sources": [
     {
       "title": "ČÚZK · current RÚIAN territorial register, retrieved 22 October 2026",
@@ -16,6 +16,13 @@
     {
       "title": "Czech Statistical Office · territorial units and methodology",
       "url": "https://csu.gov.cz/territorial-units-methodology"
+    },
+    {
+      "title": "GUGiK · National Register of Boundaries (PRG), 20 October 2026",
+      "url": "https://www.geoportal.gov.pl/en/data/national-register-of-boundaries/",
+      "license": "Free reuse, source attribution",
+      "service": "https://ogcapi.geoportal.gov.pl/res/ims/maps/PRG/apiFeatures/collections?f=json",
+      "scope": "Shared Polish frontier geometry and survey tripoints"
     }
   ]
 }

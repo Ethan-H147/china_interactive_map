@@ -1,6 +1,6 @@
 {
   "retrieved": "2026-10-22",
-  "coverage": "Whole Bratislava and Košice city municipalities, dissolved from 17 and 22 boroughs. Separate optional view.",
+  "coverage": "The whole Bratislava and Košice city municipalities, dissolved from their 17 and 22 boroughs respectively. This optional reference does not add duplicate polygons to the district hierarchy.",
   "sources": [
     {
       "title": "GKÚ Bratislava · ZBGIS administrative boundaries, 30 June 2026 release",
@@ -10,6 +10,14 @@
     {
       "title": "Slovak Geodesy Authority · administrative division",
       "url": "https://www.skgeodesy.sk/files/sk/slovensky/ugkk/geodezia-kartografia/standardizacia-geografickeho-nazvoslovia/dokumenty-k-cinnosti/TNdotlaAe.pdf"
+    },
+    {
+      "title": "GUGiK · National Register of Boundaries (PRG), 20 October 2026",
+      "url": "https://www.geoportal.gov.pl/en/data/national-register-of-boundaries/",
+      "license": "Free reuse, source attribution",
+      "service": "https://ogcapi.geoportal.gov.pl/res/ims/maps/PRG/apiFeatures/collections?f=json",
+      "scope": "Shared Polish frontier geometry and survey tripoints"
     }
-  ]
+  ],
+  "processing": " The local mesh is simplified together at two metres; district and region outlines are dissolved from it. Complete national arcs are anchored at verified survey tripoints; original surveys and independent junction evidence are retained."
 }
