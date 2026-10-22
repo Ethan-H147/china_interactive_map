@@ -1,0 +1,36 @@
+{
+  "retrieved": "2026-10-21",
+  "geometry": {
+    "url": "https://ftp.sdfe.dk/main.html?download&weblink=a21c146073ae7810022a6037a75a5732&realfilename=Bebyggelser%5F2024%2Ezip",
+    "file": "Bebyggelser_2024.zip",
+    "sha256": "a56addf371a081c75f88e567040d4935ef5f1185ddf2d3d167289d32ee0bd16c",
+    "method": "Dissolve polygons by kode, project to WGS84 and choose an interior point. Include summerhouse areas meeting the 2026 urban population threshold.",
+    "codeCrosswalk": {
+      "18767": {
+        "placeCode": "18980",
+        "name": "Ølstykke, part of Ølstykke-Stenløse"
+      },
+      "01100": {
+        "placeCode": "18368",
+        "name": "København"
+      }
+    }
+  },
+  "population": {
+    "file": "../../statistics-sources/denmark/denmark-settlements.json",
+    "url": "https://www.statbank.dk/BY1",
+    "releaseCheck": "https://www.dst.dk/da/Statistik/udgivelser/NytHtml?cid=54337",
+    "year": 2026,
+    "areas": 1384,
+    "residents": 5342281,
+    "minimumPopulation": 200
+  },
+  "fallback": {
+    "code": "18995",
+    "name": "Nørre Jernløse",
+    "file": "norre-jernlose.json",
+    "url": "https://www.wikidata.org/wiki/Q83531097",
+    "license": "CC0"
+  },
+  "scope": "All 2026 Danish statistical urban areas, separate from the administrative hierarchy. The official release uses existing urban extents because updates to the place-name register ceased. Smaller rural hamlets are excluded."
+}

@@ -12,9 +12,9 @@ const domestic=[...units.values()].filter(r=>r.level===1&&!r.overseas);assert.eq
 assert.equal(Object.values(statistics.regions).filter(r=>r.gdp&&r.gdpPerCapita).length,7);assert.equal(Object.values(statistics.regions).filter(r=>r.level===2&&r.gdp).length,0,'Municipal GDP is not invented');
 for(const r of Object.values(statistics.regions).filter(r=>r.gdp)){for(const key of ['gdp','gdpPerCapita']){assert.equal(r[key].currency,'DKK');assert.equal(r[key].year,r[key].exchangeYear);assert(r[key].usd>0&&statistics.sources[r[key].source]?.url);}}
 assert.equal(read('international.bin').features.length,0,'Germany retains the shared international frontier');
-const towns=read('settlements.json').records;assert.equal(towns.length,17);assert.equal(towns.find(r=>r.en==='Nuuk').population.value,20384);assert(towns.every(r=>units.has(r.parentId)&&r.population.year===2026));
+const towns=read('settlements.json').records;assert.equal(towns.length,1401);assert.equal(towns.filter(r=>r.provinceId==='DK-GL').length,17);assert.equal(towns.find(r=>r.en==='Nuuk').population.value,20384);assert(towns.every(r=>units.has(r.parentId)&&r.population.year===2026));
 const pins=load('scripts/country-expansion-sources.json'),raw=gunzipSync(fs.readFileSync('scripts/boundary-sources/denmark/faroe-municipalities.geojson.gz'));assert.equal(createHash('sha256').update(raw).digest('hex'),pins.files['faroe-municipalities.geojson'].sha256);
 assert.equal(AtlasCountries.countries.denmark.release,undefined);assert.deepEqual(AtlasCountries.countries.denmark.naturalEarth,['DNK','GRL','FRO']);
-console.log('Denmark: five regions, 98 municipalities, separate Christiansø, Greenland/Faroe focused entry, 35 territory subdivisions, 17 towns, official population, 7 GDP pairs, flags and coast-free borders passed.');
+console.log('Denmark: five regions, 98 municipalities, separate Christiansø, Greenland/Faroe focused entry, 35 territory subdivisions, 1,384 Danish urban areas and 17 Greenland towns, official population, 7 GDP pairs, flags and coast-free borders passed.');
 
 assert(catalogue.records.every(r=>r.level<3),'Denmark retains its pre-parish two-level hierarchy');assert(Object.values(catalogue.chunks).every(c=>c.level<3),'No Danish parish geometry is exposed');assert.equal(AtlasCountries.countries.denmark.map.thirdLabel,undefined);
