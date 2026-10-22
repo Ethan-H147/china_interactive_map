@@ -12,7 +12,10 @@ export default [{name:'iPad trackpad scroll pans on both axes, pinch zooms, and 
   const before=await camera(p);await p.evaluate('window.trackpadEnds=0;window.endListener=()=>trackpadEnds++;void map.on("moveend",endListener)');
   for(let i=0;i<8;i++){await wheel(p,0,10);await sleep(16);}await p.settle();
   const after=await camera(p);assert(Math.abs(after.apparentZoom-before.apparentZoom)<1e-6,'Vertical scrolling pans without zooming in '+projection+': '+JSON.stringify({before,after}));assert.notDeepEqual(after.center,before.center);assert(after.center[1]<before.center[1],'Natural scrolling moves the camera down for a positive scroll delta');
-  assert((await p.evaluate('trackpadEnds'))<8,'A wheel gesture avoids rebuilding labels for every wheel event');await p.evaluate('void map.off("moveend",endListener)');
+  // DevTools round trips can outlast the gesture on a software renderer.
+  // Keep native wheel coverage above; measure batching with one controlled burst.
+  await p.evaluate('(()=>{trackpadEnds=0;const el=map.getCanvas(),r=el.getBoundingClientRect();for(let i=0;i<8;i++)el.dispatchEvent(new WheelEvent("wheel",{deltaY:10,clientX:r.x+r.width/2,clientY:r.y+r.height/2,bubbles:true,cancelable:true}));})()');await p.settle();
+  assert.equal(await p.evaluate('trackpadEnds'),1,'A wheel burst rebuilds labels once');await p.evaluate('void map.off("moveend",endListener)');
   const horizontal=await camera(p);for(let i=0;i<6;i++){await wheel(p,12,0);await sleep(16);}await p.settle();assert.notEqual((await camera(p)).center[0],horizontal.center[0]);assert(Math.abs((await camera(p)).apparentZoom-horizontal.apparentZoom)<1e-6);
   const zoom=await p.evaluate('map.getZoom()');await wheel(p,0,-80,2);await p.settle();assert((await p.evaluate('map.getZoom()'))>zoom,'Ctrl-wheel pinch remains native map zoom');assert.equal(await p.evaluate('visualViewport.scale'),1,'Pinch does not zoom the web page');
  }
