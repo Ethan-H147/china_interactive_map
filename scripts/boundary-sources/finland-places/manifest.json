@@ -1,0 +1,30 @@
+{
+  "publisher": "National Land Survey of Finland",
+  "dataset": "Geographical Names · simplified place names",
+  "snapshot": "September 2026",
+  "retrieved": "2026-10-22",
+  "source": "https://kartat.kapsi.fi/files/nimisto_oapif/placenames_simple/etrs89/gml/placenames_simple_2026_09.zip",
+  "product": "https://www.maanmittauslaitos.fi/en/maps-and-spatial-data/datasets-and-interfaces/product-descriptions/geographic-names",
+  "classification": "https://www.maanmittauslaitos.fi/sites/maanmittauslaitos.fi/files/attachments/2023/09/Paikannimirekisterin_paikkaluokitus.pdf",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "credit": "Contains National Land Survey of Finland Geographical Names data, September 2026. Coordinates transformed from ETRS-TM35FIN to longitude/latitude.",
+  "archive": {
+    "file": "placenames_simple_2026_09.zip",
+    "bytes": 52476497,
+    "sha256": "888c3b3d8479eb8e03309c61a92306022daf0a3567e326f3edadf652443c721e"
+  },
+  "extract": {
+    "file": "settlement-places.json.gz",
+    "sha256": "1bcaa3f883d648e7bfbac1d257c5a6f3f51052ddcc0963f806d84aef4f80d46e",
+    "places": 18932,
+    "names": 19444,
+    "sourceNameRecords": 820367
+  },
+  "policy": "All undeleted named places in NLS classes 3010105 (urban area/settlement) and 3010110 (village/hamlet), without a population threshold. Neighbourhood-only records, individual houses/farmsteads, ambiguous other residential features, vanished places and administrative municipality records are excluded. Multilingual names share one stable placeId.",
+  "urbanBaseline": {
+    "file": "statistical-urban-base.json.gz",
+    "runtimeCommit": "da6cf8305b4e04ae846e3d2386c1c200baa7aee5",
+    "sha256": "e48b1f99d11976d70f8280e08b01e481c8733eb28dee766390397bc27e6d3eb7"
+  }
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:wfs="http://www.opengis.net/wfs" 
+	xmlns:gml="http://www.opengis.net/gml" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:gn="http://xml.nls.fi/geographic-names/2019/02"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"  
+	targetNamespace="http://xml.nls.fi/geographic-names/2019/02">
+ 
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/feature.xsd"/>
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/geometryAggregates.xsd"/>
+	
+	<!-- xs:import namespace="http://xml.nls.fi/geographic-names/2019/02"/-->
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/placetype/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/placetypedescription/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/placetypecategory/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/placetypegroup/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/placetypesubgroup/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/municipality/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/subregion/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/region/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/scalerelevance/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/language/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/languageofficiality/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/languagedominance/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/placenamesource/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/placenamestatus/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/mapproduct/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/scaleclass/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/textcase/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/textfont/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/textcolour/schema.xsd"/>
+	<xs:include schemaLocation="https://beta-paikkatieto.maanmittauslaitos.fi/catalogue/v1/codelistgroups/geographic-names/codelists/textspacing/schema.xsd"/>
+
+	<xs:element name="PlaceNameSimple" type="gn:PlaceNameSimpleType"  substitutionGroup="gml:_Feature" />
+	
+	<xs:complexType name="PlaceNameSimpleType">
+		<xs:complexContent>
+			<xs:extension base="gml:AbstractFeatureType">
+				<xs:sequence>
+				
+					<xs:element minOccurs="0" name="placeNameId" type="xs:integer"/>
+					<xs:element minOccurs="0" name="placeNameVersionId" type="xs:integer"/>
+					<xs:element minOccurs="0" name="spelling" type="xs:string"/>
+					<xs:element minOccurs="0" name="language" type="xs:language"/>
+					<xs:element minOccurs="0" name="languageOfficiality" type="gn:languageofficiality"/>
+					<xs:element minOccurs="0" name="languageDominance" type="gn:languagedominance"/>
+					<xs:element minOccurs="0" name="placeNameSource" type="gn:placenamesource"/>
+					<xs:element minOccurs="0" name="placeNameStatus" type="gn:placenamestatus"/>
+					<xs:element minOccurs="0" name="placeNameCreationTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="placeNameModificationTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="placeNameDeletionTime" type="xs:dateTime" nillable="true"/>
+					<xs:element minOccurs="0" name="placeId" type="xs:integer"/>
+					<xs:element minOccurs="0" name="placeVersionId" type="xs:integer"/>
+					<xs:element minOccurs="0" name="placeType" type="gn:placetype"/>
+					<xs:element minOccurs="0" name="placeTypeDescription" type="gn:placetypedescription"/>
+					<xs:element minOccurs="0" name="placeTypeCategory" type="gn:placetypecategory"/>
+					<xs:element minOccurs="0" name="placeTypeGroup" type="gn:placetypegroup"/>
+					<xs:element minOccurs="0" name="placeTypeSubgroup" type="gn:placetypesubgroup"/>
+					<xs:element minOccurs="0" name="placeLocation" type="gml:GeometryPropertyType"/>
+					<xs:element minOccurs="0" name="placeElevation" type="xs:integer"/>
+					<xs:element minOccurs="0" name="tm35MapSheet" type="xs:string"/>
+					<xs:element minOccurs="0" name="gslsMapSheet" type="xs:string"/>
+					<xs:element minOccurs="0" name="rescueGridSquare" type="xs:string"/>
+					<xs:element minOccurs="0" name="municipality" type="gn:municipality"/>
+					<xs:element minOccurs="0" name="subregion" type="gn:subregion"/>
+					<xs:element minOccurs="0" name="region" type="gn:region"/>
+					<xs:element minOccurs="0" name="scaleRelevance" type="gn:scalerelevance"/>
+					<xs:element minOccurs="0" name="placeCreationTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="placeModificationTime" type="xs:dateTime"/>
+					<xs:element minOccurs="0" name="placeDeletionTime" type ="xs:dateTime" nillable="true"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

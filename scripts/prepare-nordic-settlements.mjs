@@ -41,3 +41,6 @@ for(const [country,config]of Object.entries(definitions)){
  const output={country,records,sources:[{title:config.title,url:config.source,license:config.license,credit:config.credit},{title:'Official settlement polygons; point locations derived',url:sources.files[config.file].url,license:config.license}],selection:'All '+config.expected+' official '+config.year+' statistical urban settlements with at least 200 residents. Rural hamlets below the national urban-settlement threshold are excluded. These points are independent of administrative subdivisions.'};
  fs.writeFileSync(dir+'/settlements.json',JSON.stringify(output)+'\n');if(!fs.existsSync(dir+'/place-names-flags.json'))fs.writeFileSync(dir+'/place-names-flags.json',JSON.stringify({places:{},sources:[]})+'\n');console.log(country,records.length,'settlements;',config.total,'residents');
 }
+
+// Supplement statistical urban areas with the nationwide named village register.
+(await import('./prepare-finland-places.mjs')).prepareFinlandPlaces();

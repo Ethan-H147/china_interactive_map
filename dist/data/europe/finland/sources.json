@@ -190,6 +190,14 @@
       "license": "Public domain",
       "bytes": 2284669,
       "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a"
+    },
+    "national-geographic-names-2026-09": {
+      "url": "https://www.maanmittauslaitos.fi/en/maps-and-spatial-data/datasets-and-interfaces/product-descriptions/geographic-names",
+      "download": "https://kartat.kapsi.fi/files/nimisto_oapif/placenames_simple/etrs89/gml/placenames_simple_2026_09.zip",
+      "credit": "Contains National Land Survey of Finland Geographical Names data, September 2026. Coordinates transformed from ETRS-TM35FIN to longitude/latitude.",
+      "license": "CC BY 4.0",
+      "retrieved": "2026-10-22",
+      "scope": "All named urban settlements and villages/hamlets (3010105,3010110), without a population cutoff"
     }
   },
   "localAreas": {
@@ -237,5 +245,6 @@
         "normalization": "Omit FeatureCollection request timeStamp attribute; retain geometry and properties"
       }
     }
-  }
+  },
+  "settlementCoverage": "All 708 official 2025 Syke/YKR statistical urban areas, plus every undeleted National Land Survey named urban settlement, village and hamlet in classes 3010105 and 3010110 from the September 2026 nationwide gazetteer. No population cutoff for gazetteer places. Individual houses/farmsteads, neighbourhood-only names, ambiguous residential features, vanished settlements and municipality-only records are excluded. Named centres matching a statistical area by name, municipality and polygon membership share its existing ID; separately named places inside larger urban areas remain included. Gazetteer places have no population statistic."
 }

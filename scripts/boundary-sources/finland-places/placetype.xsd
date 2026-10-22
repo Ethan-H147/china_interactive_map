@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- freemarker template -->
+<xs:simpleType name="placetype">
+<xs:restriction base="xs:string">
+<xs:enumeration value="0">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Odefinierat objekt</xs:documentation>
+<xs:documentation xml:lang="fin">Määrittelemätön kohde</xs:documentation>
+<xs:documentation xml:lang="eng">Undefined object</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Grupp av öar eller skär</xs:documentation>
+<xs:documentation xml:lang="fin">Saari- tai luotoryhmä</xs:documentation>
+<xs:documentation xml:lang="eng">Group of islands or islets</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Ö eller skär</xs:documentation>
+<xs:documentation xml:lang="fin">Saari tai luoto</xs:documentation>
+<xs:documentation xml:lang="eng">Island or islet</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Sten eller stenar i vatten</xs:documentation>
+<xs:documentation xml:lang="fin">Vesikivi tai -kivikko</xs:documentation>
+<xs:documentation xml:lang="eng">Boulder in water or boulders in water</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010120">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Udde</xs:documentation>
+<xs:documentation xml:lang="fin">Niemi</xs:documentation>
+<xs:documentation xml:lang="eng">Cape</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010125">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Näs</xs:documentation>
+<xs:documentation xml:lang="fin">Kannas</xs:documentation>
+<xs:documentation xml:lang="eng">Isthmus</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010130">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Strandområde</xs:documentation>
+<xs:documentation xml:lang="fin">Ranta-alue</xs:documentation>
+<xs:documentation xml:lang="eng">Shore or waterside</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010205">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Grupp av höjningar</xs:documentation>
+<xs:documentation xml:lang="fin">Kohoumaryhmä</xs:documentation>
+<xs:documentation xml:lang="eng">Group of elevations</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010210">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Höjning</xs:documentation>
+<xs:documentation xml:lang="fin">Kohouma</xs:documentation>
+<xs:documentation xml:lang="eng">Elevation</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010305">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Sänka</xs:documentation>
+<xs:documentation xml:lang="fin">Painanne</xs:documentation>
+<xs:documentation xml:lang="eng">Depression</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010405">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Grund</xs:documentation>
+<xs:documentation xml:lang="fin">Matalikko</xs:documentation>
+<xs:documentation xml:lang="eng">Shallows</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1010410">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Djup</xs:documentation>
+<xs:documentation xml:lang="fin">Syvänne</xs:documentation>
+<xs:documentation xml:lang="eng">Deep</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1020105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Skogsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Metsäalue</xs:documentation>
+<xs:documentation xml:lang="eng">Forested area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1020205">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Myr eller våtmark</xs:documentation>
+<xs:documentation xml:lang="fin">Suo tai soistuma</xs:documentation>
+<xs:documentation xml:lang="eng">Marsh or paludified area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1020305">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Åker</xs:documentation>
+<xs:documentation xml:lang="fin">Pelto</xs:documentation>
+<xs:documentation xml:lang="eng">Field</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1020405">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Äng eller betesmark</xs:documentation>
+<xs:documentation xml:lang="fin">Niitty tai laidun</xs:documentation>
+<xs:documentation xml:lang="eng">Meadow or pasture</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1020410">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Buskage eller rismark</xs:documentation>
+<xs:documentation xml:lang="fin">Pensaikko tai varvikko</xs:documentation>
+<xs:documentation xml:lang="eng">Bushland</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1020505">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Blockfält eller stenfält</xs:documentation>
+<xs:documentation xml:lang="fin">Louhikko tai kivikko</xs:documentation>
+<xs:documentation xml:lang="eng">Blockfield or rocky area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1030105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Sten</xs:documentation>
+<xs:documentation xml:lang="fin">Kivi</xs:documentation>
+<xs:documentation xml:lang="eng">Boulder</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1030110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Träd</xs:documentation>
+<xs:documentation xml:lang="fin">Puu</xs:documentation>
+<xs:documentation xml:lang="eng">Tree</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1999905">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Försvunnen boplats</xs:documentation>
+<xs:documentation xml:lang="fin">Hävinnyt asuinpaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Former dwelling place</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="1999999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan plats i terrängen</xs:documentation>
+<xs:documentation xml:lang="fin">Muu maastopaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other terrain feature</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Östersjön och dess huvuddelområden</xs:documentation>
+<xs:documentation xml:lang="fin">Itämeri ja sen pääosa-alueet</xs:documentation>
+<xs:documentation xml:lang="eng">Baltic sea and its main parts</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Del av havsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Merialueen osa</xs:documentation>
+<xs:documentation xml:lang="eng">Part of sea</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010205">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Grupp av sjöar eller tjärnar</xs:documentation>
+<xs:documentation xml:lang="fin">Järvi- tai lampiryhmä</xs:documentation>
+<xs:documentation xml:lang="eng">Group of lakes or ponds</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010210">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Sjö eller tjärn</xs:documentation>
+<xs:documentation xml:lang="fin">Järvi tai lampi</xs:documentation>
+<xs:documentation xml:lang="eng">Lake or pond</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010215">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Del av sjö</xs:documentation>
+<xs:documentation xml:lang="fin">Järven osa</xs:documentation>
+<xs:documentation xml:lang="eng">Part of lake</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010220">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Konstgjord sjö eller damm</xs:documentation>
+<xs:documentation xml:lang="fin">Tekojärvi tai -lampi</xs:documentation>
+<xs:documentation xml:lang="eng">Reservoir</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010225">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Del av konstgjord sjö</xs:documentation>
+<xs:documentation xml:lang="fin">Tekojärven osa</xs:documentation>
+<xs:documentation xml:lang="eng">Part of reservoir</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2010230">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Kanal</xs:documentation>
+<xs:documentation xml:lang="fin">Kanava</xs:documentation>
+<xs:documentation xml:lang="eng">Canal</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2020105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Strömvatten</xs:documentation>
+<xs:documentation xml:lang="fin">Virtavesi</xs:documentation>
+<xs:documentation xml:lang="eng">Watercourse</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2020110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Del av strömvatten</xs:documentation>
+<xs:documentation xml:lang="fin">Virtaveden osa</xs:documentation>
+<xs:documentation xml:lang="eng">Part of watercourse</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2020115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Fors</xs:documentation>
+<xs:documentation xml:lang="fin">Koski</xs:documentation>
+<xs:documentation xml:lang="eng">Rapids</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2030105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Källa</xs:documentation>
+<xs:documentation xml:lang="fin">Lähde</xs:documentation>
+<xs:documentation xml:lang="eng">Spring</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2030110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Vattengrop</xs:documentation>
+<xs:documentation xml:lang="fin">Vesikuoppa</xs:documentation>
+<xs:documentation xml:lang="eng">Water pit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="2999999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan vattenplats</xs:documentation>
+<xs:documentation xml:lang="fin">Muu vesipaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other water feature</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="3010105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Stadsområde eller tätort</xs:documentation>
+<xs:documentation xml:lang="fin">Kaupunkialue tai taajama</xs:documentation>
+<xs:documentation xml:lang="eng">City or town or population centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="3010110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">By eller trakt</xs:documentation>
+<xs:documentation xml:lang="fin">Kylä tai kulmakunta</xs:documentation>
+<xs:documentation xml:lang="eng">Village or neighbourhood</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="3020105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Del av stadsområde eller tätort</xs:documentation>
+<xs:documentation xml:lang="fin">Kaupunkialueen tai taajaman osa</xs:documentation>
+<xs:documentation xml:lang="eng">Part of city or town or population centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="3020110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Park</xs:documentation>
+<xs:documentation xml:lang="fin">Puisto</xs:documentation>
+<xs:documentation xml:lang="eng">Park</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="3020115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Torg eller öppen plats</xs:documentation>
+<xs:documentation xml:lang="fin">Tori tai aukio</xs:documentation>
+<xs:documentation xml:lang="eng">Market place or square</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="3030105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Hus</xs:documentation>
+<xs:documentation xml:lang="fin">Talo</xs:documentation>
+<xs:documentation xml:lang="eng">House</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="3999999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annat bosättningsobjekt</xs:documentation>
+<xs:documentation xml:lang="fin">Muu asutuskohde</xs:documentation>
+<xs:documentation xml:lang="eng">Other populated place</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4010105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Staten</xs:documentation>
+<xs:documentation xml:lang="fin">Valtio</xs:documentation>
+<xs:documentation xml:lang="eng">State</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4010110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Regionalförvaltningsverkets verksamhetsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Aluehallintoviraston toimialue</xs:documentation>
+<xs:documentation xml:lang="eng">Area of operation of the Regional State Administrative Agency</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4010115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">NTM-centralens verksamhetsområde</xs:documentation>
+<xs:documentation xml:lang="fin">ELY-keskuksen toimialue</xs:documentation>
+<xs:documentation xml:lang="eng">Area of operation of the Centre for Economic Development, Transport and the Environment</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4010120">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Landskap</xs:documentation>
+<xs:documentation xml:lang="fin">Maakunta</xs:documentation>
+<xs:documentation xml:lang="eng">Region</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4010125">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Kommun</xs:documentation>
+<xs:documentation xml:lang="fin">Kunta</xs:documentation>
+<xs:documentation xml:lang="eng">Municipality</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4010205">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Råröse</xs:documentation>
+<xs:documentation xml:lang="fin">Rajapyykki</xs:documentation>
+<xs:documentation xml:lang="eng">Boundary marker</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4020105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Regionförvaltningsverkets huvudsakliga verksamhetsställe</xs:documentation>
+<xs:documentation xml:lang="fin">Aluehallintoviraston päätoimipaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Main office of the Regional State Administrative Agency</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4020110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">NTM-centralens huvudsakliga verksamhetsställe</xs:documentation>
+<xs:documentation xml:lang="fin">ELY-keskuksen päätoimipaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Main office of the Centre for Economic Development, Transport and the Environment</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4020115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Landskapsförbundets kontor</xs:documentation>
+<xs:documentation xml:lang="fin">Maakunnan liiton toimisto</xs:documentation>
+<xs:documentation xml:lang="eng">Office of the Regional Council</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4020120">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Kommunkansli</xs:documentation>
+<xs:documentation xml:lang="fin">Kunnanvirasto</xs:documentation>
+<xs:documentation xml:lang="eng">Municipal hall</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4020199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan administrativ byggnad eller verksamhetsställe</xs:documentation>
+<xs:documentation xml:lang="fin">Muu hallinnollinen rakennus tai toimipaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other administrative building or office</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4030105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Kyrka</xs:documentation>
+<xs:documentation xml:lang="fin">Kirkko</xs:documentation>
+<xs:documentation xml:lang="eng">Church</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4030110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan helig byggnad</xs:documentation>
+<xs:documentation xml:lang="fin">Muu pyhä rakennus</xs:documentation>
+<xs:documentation xml:lang="eng">Other holy building</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4030199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan religiös byggnad</xs:documentation>
+<xs:documentation xml:lang="fin">Muu uskonnollinen rakennus</xs:documentation>
+<xs:documentation xml:lang="eng">Other religious building</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4040105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Begravningsplats</xs:documentation>
+<xs:documentation xml:lang="fin">Hautausmaa</xs:documentation>
+<xs:documentation xml:lang="eng">Cemetery</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4040199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom begravningsverksamhet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu hautaustoimen yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other burial service</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4050105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Sjukhus</xs:documentation>
+<xs:documentation xml:lang="fin">Sairaala</xs:documentation>
+<xs:documentation xml:lang="eng">Hospital</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4050199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom hälsovård</xs:documentation>
+<xs:documentation xml:lang="fin">Muu terveydenhuollon yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other health service</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4050299">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Enhet inom socialvård</xs:documentation>
+<xs:documentation xml:lang="fin">Sosiaalihuollon yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Social care unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4059999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom social- eller hälsovård</xs:documentation>
+<xs:documentation xml:lang="fin">Muu sosiaali- tai terveydenhuollon yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other social or health service</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Räddnings- eller brandstation</xs:documentation>
+<xs:documentation xml:lang="fin">Pelastus- tai paloasema</xs:documentation>
+<xs:documentation xml:lang="eng">Fire station</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Enhet för frivillig brandkår eller avtalsbrandkår</xs:documentation>
+<xs:documentation xml:lang="fin">Vapaaehtoisen tai sopimuspalokunnan yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Volunteer fire station</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom räddningsväsendet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu pelastustoimen yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other rescue service</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060205">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Polisstation</xs:documentation>
+<xs:documentation xml:lang="fin">Poliisiasema</xs:documentation>
+<xs:documentation xml:lang="eng">Police station</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060299">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom polisväsendet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu poliisitoimen yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other police unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060305">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Fängelse</xs:documentation>
+<xs:documentation xml:lang="fin">Vankila</xs:documentation>
+<xs:documentation xml:lang="eng">Prison</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060399">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom brottspåföljdsväsendet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu rikosseuraamuslaitoksen yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other criminal sanctions unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060405">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Tullstation</xs:documentation>
+<xs:documentation xml:lang="fin">Tulliasema</xs:documentation>
+<xs:documentation xml:lang="eng">Customs office</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060499">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom Tullen</xs:documentation>
+<xs:documentation xml:lang="fin">Muu tullin yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other customs unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060505">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Militärområde</xs:documentation>
+<xs:documentation xml:lang="fin">Sotilasalue</xs:documentation>
+<xs:documentation xml:lang="eng">Military area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060599">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom Försvarsmakten</xs:documentation>
+<xs:documentation xml:lang="fin">Muu puolustusvoimien yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other defence forces unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060605">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Gränsövergångsställe</xs:documentation>
+<xs:documentation xml:lang="fin">Rajanylityspaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Border crossing point</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4060699">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom Gränsbevakningsväsendet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu rajavartiolaitoksen yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other border guard unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4069999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom säkerhets- eller försvarsbranschen</xs:documentation>
+<xs:documentation xml:lang="fin">Muu turvallisuus- tai puolustusalan yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other security or defence unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4070105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Universitet eller högskola</xs:documentation>
+<xs:documentation xml:lang="fin">Yliopisto tai korkeakoulu</xs:documentation>
+<xs:documentation xml:lang="eng">University</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4070199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan utbildningsenhet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu koulutusyksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other educational unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4070205">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Forskningsinstitut</xs:documentation>
+<xs:documentation xml:lang="fin">Tutkimuslaitos</xs:documentation>
+<xs:documentation xml:lang="eng">Research institute</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4070299">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan forskningsenhet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu tutkimusyksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other research unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4080105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Avfallsbehandlingsanläggning</xs:documentation>
+<xs:documentation xml:lang="fin">Jätteenkäsittelylaitos</xs:documentation>
+<xs:documentation xml:lang="eng">Waste processing plant</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4080199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom avfallshantering</xs:documentation>
+<xs:documentation xml:lang="fin">Muu jätehuollon yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other waste management unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="4999999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom förvaltning eller offentlig tjänst</xs:documentation>
+<xs:documentation xml:lang="fin">Muu hallinnon yksikkö tai julkinen palvelu</xs:documentation>
+<xs:documentation xml:lang="eng">Other administrative unit or public service</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5010105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Nationalpark</xs:documentation>
+<xs:documentation xml:lang="fin">Kansallispuisto</xs:documentation>
+<xs:documentation xml:lang="eng">National park</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5010110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Naturpark</xs:documentation>
+<xs:documentation xml:lang="fin">Luonnonpuisto</xs:documentation>
+<xs:documentation xml:lang="eng">Strict nature reserve</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5010115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annat naturskyddsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Muu luonnonsuojelualue</xs:documentation>
+<xs:documentation xml:lang="eng">Other nature reserve</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5999905">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Ödemarksområde</xs:documentation>
+<xs:documentation xml:lang="fin">Erämaa-alue</xs:documentation>
+<xs:documentation xml:lang="eng">Wilderness area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5999910">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Statens strövområde</xs:documentation>
+<xs:documentation xml:lang="fin">Valtion retkeilyalue</xs:documentation>
+<xs:documentation xml:lang="eng">National hiking area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5999915">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Världsarvsobjekt</xs:documentation>
+<xs:documentation xml:lang="fin">Maailmanperintökohde</xs:documentation>
+<xs:documentation xml:lang="eng">World heritage site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5999920">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Naturminnesmärke</xs:documentation>
+<xs:documentation xml:lang="fin">Luonnonmuistomerkki</xs:documentation>
+<xs:documentation xml:lang="eng">Natural monument</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5999925">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Fornlämning</xs:documentation>
+<xs:documentation xml:lang="fin">Muinaisjäännös</xs:documentation>
+<xs:documentation xml:lang="eng">Ancient relic</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="5999999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annat skyddat objekt</xs:documentation>
+<xs:documentation xml:lang="fin">Muu suojeltu kohde</xs:documentation>
+<xs:documentation xml:lang="eng">Other protected site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Busstation</xs:documentation>
+<xs:documentation xml:lang="fin">Linja-autoasema</xs:documentation>
+<xs:documentation xml:lang="eng">Bus station</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Färja eller kabelfärja</xs:documentation>
+<xs:documentation xml:lang="fin">Lautta tai lossi</xs:documentation>
+<xs:documentation xml:lang="eng">Ferry or cable ferry</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan vägtrafikplats</xs:documentation>
+<xs:documentation xml:lang="fin">Muu tieliikennepaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other road transport site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010205">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Järnvägsstation eller hållplats</xs:documentation>
+<xs:documentation xml:lang="fin">Rautatieasema tai seisake</xs:documentation>
+<xs:documentation xml:lang="eng">Railway station or stop</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010210">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Metrostation</xs:documentation>
+<xs:documentation xml:lang="fin">Metroasema</xs:documentation>
+<xs:documentation xml:lang="eng">Metro station</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010299">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan trafikplats för spårbunden trafik</xs:documentation>
+<xs:documentation xml:lang="fin">Muu raideliikennepaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other rail transport site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010305">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Hamn</xs:documentation>
+<xs:documentation xml:lang="fin">Satama</xs:documentation>
+<xs:documentation xml:lang="eng">Harbour, port or haven</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010310">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Fyr eller säkerhetsanordning</xs:documentation>
+<xs:documentation xml:lang="fin">Majakka tai turvalaite</xs:documentation>
+<xs:documentation xml:lang="eng">Lighthouse or aid to navigation</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010399">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan sjötrafikplats</xs:documentation>
+<xs:documentation xml:lang="fin">Muu vesiliikennepaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other water transport site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010405">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Flygplats eller flygfält</xs:documentation>
+<xs:documentation xml:lang="fin">Lentoasema tai lentokenttä</xs:documentation>
+<xs:documentation xml:lang="eng">Airport or airfield</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010499">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan lufttrafikplats</xs:documentation>
+<xs:documentation xml:lang="fin">Muu ilmaliikennepaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other air transport site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010505">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Datacentral</xs:documentation>
+<xs:documentation xml:lang="fin">Datakeskus</xs:documentation>
+<xs:documentation xml:lang="eng">Data centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6010599">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan telekommunikationsplats</xs:documentation>
+<xs:documentation xml:lang="fin">Muu tietoliikennepaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other telecommunication site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6019905">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Bro</xs:documentation>
+<xs:documentation xml:lang="fin">Silta</xs:documentation>
+<xs:documentation xml:lang="eng">Bridge</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6019910">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Tunnel</xs:documentation>
+<xs:documentation xml:lang="fin">Tunneli</xs:documentation>
+<xs:documentation xml:lang="eng">Tunnel</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6019915">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Trafikterminal</xs:documentation>
+<xs:documentation xml:lang="fin">Liikenneterminaali</xs:documentation>
+<xs:documentation xml:lang="eng">Transport terminal</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="6019999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan trafikplats</xs:documentation>
+<xs:documentation xml:lang="fin">Muu liikennepaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Production, industry and commerce</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Enhet inom jordbruk</xs:documentation>
+<xs:documentation xml:lang="fin">Maatalouden yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Agricultural unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010299">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Enhet inom vilt- eller fiskerihushållning</xs:documentation>
+<xs:documentation xml:lang="fin">Riista- tai kalatalouden yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Game and fisheries unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010305">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Gruva eller stenbrott</xs:documentation>
+<xs:documentation xml:lang="fin">Kaivos tai louhos</xs:documentation>
+<xs:documentation xml:lang="eng">Mine or quarry</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010310">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Grus- eller sandtäktsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Soran- tai hiekanottoalue</xs:documentation>
+<xs:documentation xml:lang="eng">Gravel or sand extraction area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010315">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Torvutvinningsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Turvetuotantoalue</xs:documentation>
+<xs:documentation xml:lang="eng">Peat production area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010399">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annat marktäktsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Muu maa-aineksenottoalue</xs:documentation>
+<xs:documentation xml:lang="eng">Other mineral resources extraction area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010405">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Industri- eller företagsområde</xs:documentation>
+<xs:documentation xml:lang="fin">Teollisuus- tai yritysalue</xs:documentation>
+<xs:documentation xml:lang="eng">Industrial or business area</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010410">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Fabrik</xs:documentation>
+<xs:documentation xml:lang="fin">Tehdas</xs:documentation>
+<xs:documentation xml:lang="eng">Factory</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010415">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Varv</xs:documentation>
+<xs:documentation xml:lang="fin">Telakka</xs:documentation>
+<xs:documentation xml:lang="eng">Dock</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010499">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom industri eller företagsverksamhet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu teollisuuden tai yritystoiminnan yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other industrial or business unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010505">
+<xs:annotation>
+<xs:documentation xml:lang="swe">El- eller värmeproduktionsanläggning</xs:documentation>
+<xs:documentation xml:lang="fin">Sähkön- tai lämmöntuotantolaitos</xs:documentation>
+<xs:documentation xml:lang="eng">Power or heat plant</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7010599">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom energiproduktion</xs:documentation>
+<xs:documentation xml:lang="fin">Muu energiatuotannon yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other energy production unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7019999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom produktion, industri eller företagsverksamhet</xs:documentation>
+<xs:documentation xml:lang="fin">Muu tuotannon, teollisuuden tai yritystoiminnan yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other production, industrial or business unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7020105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Affärscentrum</xs:documentation>
+<xs:documentation xml:lang="fin">Kauppakeskus</xs:documentation>
+<xs:documentation xml:lang="eng">Shopping centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7020199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan handelskoncentration</xs:documentation>
+<xs:documentation xml:lang="fin">Muu kauppakeskittymä</xs:documentation>
+<xs:documentation xml:lang="eng">Other commercial centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="7029999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan enhet inom handel</xs:documentation>
+<xs:documentation xml:lang="fin">Muu kaupan yksikkö</xs:documentation>
+<xs:documentation xml:lang="eng">Other commercial unit</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8010105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Kultur- eller mässcentrum</xs:documentation>
+<xs:documentation xml:lang="fin">Kulttuuri- tai messukeskus</xs:documentation>
+<xs:documentation xml:lang="eng">Cultural or fair centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8010110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Museum</xs:documentation>
+<xs:documentation xml:lang="fin">Museo</xs:documentation>
+<xs:documentation xml:lang="eng">Museum</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8010115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Teater</xs:documentation>
+<xs:documentation xml:lang="fin">Teatteri</xs:documentation>
+<xs:documentation xml:lang="eng">Theatre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8010120">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Minnesmärke</xs:documentation>
+<xs:documentation xml:lang="fin">Muistomerkki</xs:documentation>
+<xs:documentation xml:lang="eng">Monument or work of art</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8010199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan kulturtjänst</xs:documentation>
+<xs:documentation xml:lang="fin">Muu kulttuuripalvelu</xs:documentation>
+<xs:documentation xml:lang="eng">Other cultural service</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Idrottspark</xs:documentation>
+<xs:documentation xml:lang="fin">Urheilupuisto</xs:documentation>
+<xs:documentation xml:lang="eng">Sports park</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Idrottsplan</xs:documentation>
+<xs:documentation xml:lang="fin">Urheilukenttä</xs:documentation>
+<xs:documentation xml:lang="eng">Sports field</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Idrottshall</xs:documentation>
+<xs:documentation xml:lang="fin">Urheiluhalli</xs:documentation>
+<xs:documentation xml:lang="eng">Sports hall</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020120">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Simhall</xs:documentation>
+<xs:documentation xml:lang="fin">Uimahalli</xs:documentation>
+<xs:documentation xml:lang="eng">Swimming pool</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020125">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Golfbana</xs:documentation>
+<xs:documentation xml:lang="fin">Golfkenttä</xs:documentation>
+<xs:documentation xml:lang="eng">Golf course</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020130">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Skid- eller slalomcentrum</xs:documentation>
+<xs:documentation xml:lang="fin">Hiihto- tai laskettelukeskus</xs:documentation>
+<xs:documentation xml:lang="eng">Skiing centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020135">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Skjutbana</xs:documentation>
+<xs:documentation xml:lang="fin">Ampumarata</xs:documentation>
+<xs:documentation xml:lang="eng">Shooting range</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020140">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Motorbana</xs:documentation>
+<xs:documentation xml:lang="fin">Moottorirata</xs:documentation>
+<xs:documentation xml:lang="eng">Motor racing track</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020145">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Travbana</xs:documentation>
+<xs:documentation xml:lang="fin">Ravirata</xs:documentation>
+<xs:documentation xml:lang="eng">Trotting track</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8020199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan idrotts- eller motionsplats</xs:documentation>
+<xs:documentation xml:lang="fin">Muu urheilu- tai liikuntapaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Other sports or exercise site</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030105">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Nöjesfält</xs:documentation>
+<xs:documentation xml:lang="fin">Huvipuisto</xs:documentation>
+<xs:documentation xml:lang="eng">Amusement park</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030110">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Djurpark</xs:documentation>
+<xs:documentation xml:lang="fin">Eläintarha</xs:documentation>
+<xs:documentation xml:lang="eng">Zoo</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030115">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Simstrand eller simplats</xs:documentation>
+<xs:documentation xml:lang="fin">Uimaranta tai uimapaikka</xs:documentation>
+<xs:documentation xml:lang="eng">Swimming beach or swimming place</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030120">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Naturcentrum</xs:documentation>
+<xs:documentation xml:lang="fin">Luontokeskus</xs:documentation>
+<xs:documentation xml:lang="eng">Nature centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030125">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Lägercentrum</xs:documentation>
+<xs:documentation xml:lang="fin">Leirikeskus</xs:documentation>
+<xs:documentation xml:lang="eng">Camp centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030130">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Turist-, frilufts- eller semestercentrum</xs:documentation>
+<xs:documentation xml:lang="fin">Matkailu-, retkeily- tai lomakeskus</xs:documentation>
+<xs:documentation xml:lang="eng">Travel, hiking or holiday centre</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030135">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Campingplats</xs:documentation>
+<xs:documentation xml:lang="fin">Leirintäalue</xs:documentation>
+<xs:documentation xml:lang="eng">Campsite</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030140">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Koloniträdgård</xs:documentation>
+<xs:documentation xml:lang="fin">Siirtolapuutarha</xs:documentation>
+<xs:documentation xml:lang="eng">Allotment garden</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030145">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Strövled</xs:documentation>
+<xs:documentation xml:lang="fin">Retkeilyreitti</xs:documentation>
+<xs:documentation xml:lang="eng">Hiking route</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030150">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Öde-, rast-, reserverings- eller hyresstuga</xs:documentation>
+<xs:documentation xml:lang="fin">Autio-, päivä-, varaus- tai vuokratupa</xs:documentation>
+<xs:documentation xml:lang="eng">Wilderness hut or daytrip hut or booked or rented hut</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="8030199">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annan rekreations- eller fritidstjänst</xs:documentation>
+<xs:documentation xml:lang="fin">Muu virkistys- tai vapaa-ajan palvelu</xs:documentation>
+<xs:documentation xml:lang="eng">Other recreational service</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="9999905">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Betydande byggnad</xs:documentation>
+<xs:documentation xml:lang="fin">Merkittävä rakennus</xs:documentation>
+<xs:documentation xml:lang="eng">Significant building</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="9999999">
+<xs:annotation>
+<xs:documentation xml:lang="swe">Annat kulturobjekt</xs:documentation>
+<xs:documentation xml:lang="fin">Muu kulttuurikohde</xs:documentation>
+<xs:documentation xml:lang="eng">Other cultural object</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>
