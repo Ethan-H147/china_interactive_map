@@ -922,6 +922,24 @@
           "dist/data/europe/poland/sources.json"
         ]
       }
+    },
+    {
+      "country": "czechia",
+      "name": "Czechia",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Regions, districts, local areas and reconciled borders implemented on 22 October 2026."
+      }
+    },
+    {
+      "country": "slovakia",
+      "name": "Slovakia",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Regions, districts, local areas and reconciled borders implemented on 22 October 2026."
+      }
     }
   ]
 }

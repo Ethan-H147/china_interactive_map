@@ -67,6 +67,8 @@
       "sweden": "data/europe/sweden/context.bin",
       "finland": "data/europe/finland/context.bin",
       "denmark": "data/europe/denmark/context.bin",
+      "czechia": "data/europe/czechia/context.bin",
+      "slovakia": "data/europe/slovakia/context.bin",
       "poland": "data/europe/poland/context.bin",
       "germany": "data/europe/germany/context.bin",
       "belgium": "data/europe/belgium/context.bin",
@@ -100,7 +102,7 @@
   },
   "topology": {
     "referenceCountries": 258,
-    "backgroundCountries": 134,
+    "backgroundCountries": 132,
     "atlasCodes": [
       "IDN",
       "MYS",
@@ -131,6 +133,7 @@
       "URY",
       "MNG",
       "RUS",
+      "CZE",
       "DEU",
       "EST",
       "LVA",
@@ -146,6 +149,7 @@
       "LAO",
       "KGZ",
       "DNK",
+      "SVK",
       "POL",
       "IRL",
       "GBR",
@@ -247,7 +251,6 @@
       "OMN",
       "UZB",
       "TJK",
-      "CZE",
       "ARE",
       "GEO",
       "MKD",
@@ -259,7 +262,6 @@
       "TUN",
       "ROU",
       "HUN",
-      "SVK",
       "ZMB",
       "SLE",
       "GIN",
@@ -363,10 +365,10 @@
       "SER",
       "SCR"
     ],
-    "outlineGroups": 6486,
+    "outlineGroups": 6025,
     "simplificationMetres": 100,
     "frontierCorridorMetres": 8000,
-    "reconciledSliverKm2": 32937.48016420519,
+    "reconciledSliverKm2": 32089.019343304328,
     "policy": "Atlas display outlines are fixed references; foreign survey overlaps are clipped, and uncovered old-reference land within an 8 km land-frontier corridor is assigned to the nearest foreign edge. Source lake polygons are excluded. This reconciles display geometry and does not redefine sovereignty or claims.",
     "delegatedAreas": {
       "KAB": "The Baykonur Cosmodrome source area is already inside the Kazakhstan atlas silhouette.",
@@ -375,9 +377,9 @@
     },
     "finalWaterAlignment": true
   },
-  "bytes": 3933073,
+  "bytes": 4004364,
   "fallbackSimplificationDegrees": 0.018,
-  "outlineBytes": 806927,
+  "outlineBytes": 790400,
   "titicacaShoreline": {
     "relations": [
       3000330,

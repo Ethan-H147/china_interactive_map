@@ -1,0 +1,68 @@
+{
+  "retrieved": "2026-10-22",
+  "files": {
+    "cz-regions": {
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer/17",
+      "layer": "VyssiUzemneSamospravnyCelek",
+      "features": 14,
+      "sha256": "d76e766bffaa32452dbad432ab23e9b0b1af949cfb74642439c14e0bf5120920",
+      "bytes": 8591821,
+      "copyright": "",
+      "retrieved": "2026-10-22"
+    },
+    "cz-districts": {
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer/15",
+      "layer": "Okres",
+      "features": 76,
+      "sha256": "ef1d42b71bb5bc615399ca0285237415d5bfe17b176e27232739c3ffad6c2bdb",
+      "bytes": 17948566,
+      "copyright": "",
+      "retrieved": "2026-10-22"
+    },
+    "cz-municipalities": {
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer/12",
+      "layer": "Obec",
+      "features": 6258,
+      "sha256": "100f0c728f137e5046d17f87f9c0910a31853d463b9e776e5930d0242f309bcf",
+      "bytes": 116206513,
+      "copyright": "",
+      "retrieved": "2026-10-22"
+    },
+    "cz-boroughs": {
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer/8",
+      "layer": "MestskyObvodMestskaCastVeStatutarnimMesteAHlavnimMestePraze",
+      "features": 142,
+      "sha256": "34f760154e88dbf6dd6f629c6fe97c70ce72f2fcb99ac141911864f024f411f0",
+      "bytes": 2677080,
+      "copyright": "",
+      "retrieved": "2026-10-22"
+    },
+    "cz-orp": {
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer/14",
+      "layer": "ObecSRozsirenouPusobnosti",
+      "features": 206,
+      "sha256": "663a9389b64ea2662a907217eeadd43b0001f6c05a0d65780b36d30514d1ce95",
+      "bytes": 26878694,
+      "copyright": "",
+      "retrieved": "2026-10-22"
+    },
+    "cz-prague-administration": {
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer/10",
+      "layer": "SpravniObvodVHlavnimMestePraze",
+      "features": 22,
+      "sha256": "538f8f211c1fc756ae51032c456b79acf7112d81e71e768628d2c272d2c56f6a",
+      "bytes": 571027,
+      "copyright": "",
+      "retrieved": "2026-10-22"
+    },
+    "cz-pou": {
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer/13",
+      "layer": "ObecSPoverenymObecnimUradem",
+      "features": 393,
+      "sha256": "408e228e37fb194af218a5fcc9ae643c876826d2fbf9d213420ca8cf94edeed9",
+      "bytes": 137594,
+      "copyright": "",
+      "retrieved": "2026-10-22"
+    }
+  }
+}

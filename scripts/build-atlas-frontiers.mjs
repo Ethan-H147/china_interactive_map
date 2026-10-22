@@ -164,3 +164,5 @@ if(fs.existsSync('scripts/boundary-sources/china-russia/resolved.bin'))(await im
 // Reapply retained complete arcs after every global rebuild.
 await import('./reconcile-frontier-arcs.mjs');
 (await import('./preserve-china-southern-frontiers.mjs')).preserveChinaSouthernFrontiers();
+
+(await import('./reconcile-czech-slovak.mjs')).preserveCzechSlovakFrontiers();

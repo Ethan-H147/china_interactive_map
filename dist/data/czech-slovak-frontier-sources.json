@@ -1,0 +1,46 @@
+{
+  "retrieved": "2026-10-22",
+  "policy": "Shared national arcs replace the adjoining country polygon edge at every available level. Poland retains ownership of its Czech and Slovak borders; Czechia owns its Slovak/German/Austrian arcs; Slovakia owns its remaining arcs. Source endpoints and complete river bends are retained. No separately simplified parent outlines.",
+  "pairs": [
+    {
+      "pair": "POL-CZE",
+      "owner": "poland",
+      "vertices": 15655
+    },
+    {
+      "pair": "POL-SVK",
+      "owner": "poland",
+      "vertices": 8444
+    },
+    {
+      "pair": "CZE-SVK",
+      "owner": "czechia",
+      "vertices": 3777
+    },
+    {
+      "pair": "CZE-DEU",
+      "owner": "czechia",
+      "vertices": 23356
+    },
+    {
+      "pair": "CZE-AUT",
+      "owner": "czechia",
+      "vertices": 10469
+    },
+    {
+      "pair": "SVK-AUT",
+      "owner": "slovakia",
+      "vertices": 1113
+    },
+    {
+      "pair": "SVK-HUN",
+      "owner": "slovakia",
+      "vertices": 8932
+    },
+    {
+      "pair": "SVK-UKR",
+      "owner": "slovakia",
+      "vertices": 301
+    }
+  ]
+}

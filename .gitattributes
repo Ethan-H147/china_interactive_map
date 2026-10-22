@@ -49,3 +49,7 @@ dist/vendor/flag-va.svg -text
 scripts/flag-renderings/*.svg -text
 
 dist/vendor/flag-dk.svg -text
+
+dist/vendor/flag-cz.svg -text
+
+dist/vendor/flag-sk.svg -text

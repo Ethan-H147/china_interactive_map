@@ -1,0 +1,107 @@
+{
+  "retrieved": "2026-10-22",
+  "publisher": "Geodetický a kartografický ústav Bratislava",
+  "license": "CC-BY-4.0",
+  "sourcePage": "https://www.skgeodesy.sk/geoportal/zbgis/na-stiahnutie/",
+  "sourceCRS": "EPSG:5514",
+  "targetCRS": "EPSG:4326",
+  "transformation": {
+    "operation": "EPSG:4836 S-JTSK to WGS 84 (4)",
+    "proj": "+proj=krovak +lat_0=49.5 +lon_0=24.8333333333333 +alpha=30.2881397527778 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +towgs84=485,169.5,483.8,7.786,4.398,4.103,0 +units=m +no_defs",
+    "accuracyMetres": 1
+  },
+  "validity": "2026-06-30, except Nitra, Dunajská Streda, Topoľčany, Čadca, Liptovský Mikuláš, Veľký Krtíš, Michalovce and Trebišov at 2024-12-31",
+  "files": {
+    "sk-official-ah_shp_0.zip": {
+      "url": "https://opendata.skgeodesy.sk/static/ZBGIS/usj/ah_shp_0.zip",
+      "bytes": 55055943,
+      "sha256": "71c4e9b477acc5dfae66168effb83b4afcf41086b5763dd17c065f66c912def2"
+    },
+    "sk-official-ah_csv.zip": {
+      "url": "https://opendata.skgeodesy.sk/static/ZBGIS/usj/ah_csv.zip",
+      "bytes": 187623,
+      "sha256": "ec5bfe2a56a3e9a6bdd8ef1da5294558d75140c69c45b6379b49e4e487b77ecc"
+    },
+    "sk-official-state.json.gz": {
+      "sourceLayer": "sr_0",
+      "features": 1,
+      "sourceCRS": "EPSG:5514",
+      "targetCRS": "EPSG:4326",
+      "bytes": 715706,
+      "sha256": "8c486626a6f3ee69706756a9fa6e5bcdcf25e048b36493f468a2070a6d64fa71",
+      "uncompressedSha256": "4a70205c889f07e124df316a6d0b8efd7ff17d2d61ff78c54f64ee04158eb051",
+      "coordinates": 46993
+    },
+    "sk-official-regions.json.gz": {
+      "sourceLayer": "kraj_0",
+      "features": 8,
+      "sourceCRS": "EPSG:5514",
+      "targetCRS": "EPSG:4326",
+      "bytes": 2179848,
+      "sha256": "b8f73b93668f55991fac76dc41cd35f34410fa94189cfe7b2dc89d7898222104",
+      "uncompressedSha256": "a6b2cb477c0dd7ea051bc43d044eefef3e7a2555094cfcca66ab451e37a09f77",
+      "coordinates": 143580
+    },
+    "sk-official-districts.json.gz": {
+      "sourceLayer": "okres_0",
+      "features": 79,
+      "sourceCRS": "EPSG:5514",
+      "targetCRS": "EPSG:4326",
+      "bytes": 5911605,
+      "sha256": "55ce1d29cfe4b0415568752efd704c80bc911d041ddc1897cc5a80525dca6944",
+      "uncompressedSha256": "ac38a00aa27331779e7dbffb1a3c0c9c712f3365af898ebd0113804b29228bb0",
+      "coordinates": 386918
+    },
+    "sk-official-local.json.gz": {
+      "sourceLayer": "obec_0",
+      "features": 2927,
+      "sourceCRS": "EPSG:5514",
+      "targetCRS": "EPSG:4326",
+      "bytes": 33102377,
+      "sha256": "d4953da0998b733b1a0d2d80903b4b0cde44e6125444f1aaa18e17e8096c5e0f",
+      "uncompressedSha256": "db68834fcfe7a686d469b5bbdebdc56f354044a56b268371ff25a3ab3803c8c0",
+      "coordinates": 2162562
+    }
+  },
+  "localUnits": {
+    "total": 2927,
+    "ordinaryMunicipalities": 2885,
+    "boroughs": {
+      "Bratislava": 17,
+      "Košice": 22
+    },
+    "militaryAreas": [
+      {
+        "code": 500267,
+        "name": "Záhorie (vojenský obvod)",
+        "districtCode": 106,
+        "regionCode": 1
+      },
+      {
+        "code": 518581,
+        "name": "Lešť (vojenský obvod)",
+        "districtCode": 611,
+        "regionCode": 6
+      },
+      {
+        "code": 518638,
+        "name": "Valaškovce (vojenský obvod)",
+        "districtCode": 702,
+        "regionCode": 7
+      }
+    ],
+    "note": "National local polygon coverage substitutes the 17 Bratislava and 22 Košice boroughs for the two complete city municipalities, and includes three military areas. Thus 2,927 source polygons correspond to 2,887 municipality governments plus three military areas when the boroughs are aggregated to their two city municipalities."
+  },
+  "validation": {
+    "uniqueLocalCodes": 2927,
+    "allParentCodesExist": true,
+    "finiteCoordinates": true,
+    "bounds": [
+      16.83320120337661,
+      47.73118975144413,
+      22.565696877566356,
+      49.61379821233764
+    ],
+    "localCoordinates": 2162562
+  }
+}

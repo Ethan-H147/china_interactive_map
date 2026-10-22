@@ -1,0 +1,16 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "205 municipalities-with-extended-powers administrative areas (ORP), plus Prague’s 22 administrative districts. These are alternative service areas, not another tier of the region–district–municipality hierarchy.",
+  "sources": [
+    {
+      "title": "ČÚZK · current RÚIAN territorial register, retrieved 22 October 2026",
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer",
+      "license": "CC BY 4.0"
+    },
+    {
+      "title": "Czech Statistical Office · territorial units and methodology",
+      "url": "https://csu.gov.cz/territorial-units-methodology"
+    }
+  ],
+  "processing": "ORP polygons dissolved from the reconciled municipal mesh using official RÚIAN municipality → POU → ORP links. Prague administrative districts dissolved from their officially assigned boroughs. Military areas remain outside ORP service areas."
+}

@@ -181,7 +181,7 @@
     "measure:stability": "node scripts/browser/measure-stability.mjs",
     "test:preview": "node scripts/test-preview.mjs",
     "test:spatial-audit": "node --max-old-space-size=10000 scripts/audit-spatial.mjs",
-    "test:stability-data": "node scripts/validate-browser-shards.mjs && node scripts/validate-render-budget.mjs && node scripts/validate-canonical-neighbour-fingerprint.mjs && node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz && node scripts/validate-swiss-alignment.mjs && node scripts/validate-bolivia.mjs && npm run test:titicaca && npm run test:brunei",
+    "test:stability-data": "node --max-old-space-size=8000 scripts/validate-czech-slovak.mjs && node scripts/validate-browser-shards.mjs && node scripts/validate-render-budget.mjs && node scripts/validate-canonical-neighbour-fingerprint.mjs && node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz && node scripts/validate-swiss-alignment.mjs && node scripts/validate-bolivia.mjs && npm run test:titicaca && npm run test:brunei",
     "test:map-view-picker": "node scripts/validate-map-view-picker.mjs && node scripts/browser/run.mjs map-view-dropdown",
     "test:swiss-alignment": "node scripts/validate-swiss-alignment.mjs && node scripts/browser/run.mjs swiss-alignment",
     "fetch:bolivia": "node scripts/fetch-bolivia.mjs",
@@ -298,6 +298,9 @@
     "test:denmark-settlements": "node scripts/validate-denmark-settlements.mjs && node scripts/browser/run.mjs denmark-settlements",
     "build:nordic-settlements": "node scripts/fetch-nordic-settlements.mjs && node --max-old-space-size=6000 scripts/prepare-nordic-settlements.mjs",
     "test:nordic-settlements": "node scripts/validate-nordic-settlements.mjs && node scripts/browser/run.mjs nordic-settlements",
-    "build:pages": "node --max-old-space-size=8000 scripts/build-pages-package.mjs"
+    "build:pages": "node --max-old-space-size=8000 scripts/build-pages-package.mjs",
+    "fetch:czech-slovak": "node scripts/fetch-czech-slovak.mjs",
+    "build:czech-slovak": "node --max-old-space-size=12000 scripts/build-czech-slovak.mjs && node --max-old-space-size=12000 scripts/reconcile-czech-slovak.mjs && node scripts/build-world-land.mjs && node scripts/build-atlas-frontiers.mjs && node scripts/prepare-region-colors.mjs && node scripts/prepare-flag-images.mjs && node scripts/build-compact.mjs",
+    "test:czech-slovak": "node scripts/validate-czech-slovak.mjs && node scripts/browser/run.mjs czech-slovak"
   }
 }

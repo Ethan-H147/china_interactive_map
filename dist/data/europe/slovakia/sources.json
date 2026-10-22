@@ -1,0 +1,21 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "8 regions; 79 districts; all 2,927 ZBGIS local areas, including 17 Bratislava boroughs, 22 Košice boroughs and three military territories. Boroughs are local-level equivalents, not independent cities. The 2026 download includes eight district areas valid at 31 December 2024; see retained source metadata.",
+  "counts": {
+    "1": 8,
+    "2": 79,
+    "3": 2927
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": [
+    {
+      "title": "GKÚ Bratislava · ZBGIS administrative boundaries, 30 June 2026 release",
+      "url": "https://www.skgeodesy.sk/geoportal/zbgis/na-stiahnutie/",
+      "license": "CC BY 4.0"
+    },
+    {
+      "title": "Slovak Geodesy Authority · administrative division",
+      "url": "https://www.skgeodesy.sk/files/sk/slovensky/ugkk/geodezia-kartografia/standardizacia-geografickeho-nazvoslovia/dokumenty-k-cinnosti/TNdotlaAe.pdf"
+    }
+  ]
+}

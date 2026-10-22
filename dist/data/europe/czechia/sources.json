@@ -1,0 +1,21 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "14 regions; 76 districts plus Prague as a special district-level equivalent; all 6,258 RÚIAN local polygons including four military areas. The municipal source count is a register snapshot, not a claim about census municipal totals. ORP and city boroughs are separate optional views.",
+  "counts": {
+    "1": 14,
+    "2": 77,
+    "3": 6258
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": [
+    {
+      "title": "ČÚZK · current RÚIAN territorial register, retrieved 22 October 2026",
+      "url": "https://ags.cuzk.gov.cz/arcgis/rest/services/RUIAN/MapServer",
+      "license": "CC BY 4.0"
+    },
+    {
+      "title": "Czech Statistical Office · territorial units and methodology",
+      "url": "https://csu.gov.cz/territorial-units-methodology"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "Whole Bratislava and Košice city municipalities, dissolved from 17 and 22 boroughs. Separate optional view.",
+  "sources": [
+    {
+      "title": "GKÚ Bratislava · ZBGIS administrative boundaries, 30 June 2026 release",
+      "url": "https://www.skgeodesy.sk/geoportal/zbgis/na-stiahnutie/",
+      "license": "CC BY 4.0"
+    },
+    {
+      "title": "Slovak Geodesy Authority · administrative division",
+      "url": "https://www.skgeodesy.sk/files/sk/slovensky/ugkk/geodezia-kartografia/standardizacia-geografickeho-nazvoslovia/dokumenty-k-cinnosti/TNdotlaAe.pdf"
+    }
+  ]
+}

@@ -667,6 +667,28 @@
       "width": 640,
       "height": 400,
       "sha256": "c6a5131abfd6eede2c632b5b042e658266676fd072295acd4eaa6debd53755af"
+    },
+    "cz": {
+      "file": "vendor/flag-cz.svg",
+      "full": "vendor/flag-originals/national-cz.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "b68e2109de7e1ead469214b96e3c9ee8b69a7e6e4e6ac1096998500ab7b02d1c"
+    },
+    "sk": {
+      "file": "vendor/flag-sk.svg",
+      "full": "vendor/flag-originals/national-sk.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Slovakia.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "width": 900,
+      "height": 600,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sha256": "de60b8f1ba41a4985756b81d42f52d0b52bf61a54f2260b674412f3d2f358577"
     }
   }
 }

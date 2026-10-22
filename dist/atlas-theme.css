@@ -81,3 +81,7 @@ body[data-atlas=brunei]{--red:#8f6e18;--red-dark:#6c510d;--ink:#302c20;--muted:#
 :root[data-atlas=ukraine],body[data-atlas=ukraine],.country-option[data-atlas=ukraine]{--red:#3b6795;--red-dark:#294b72;--ink:#2e4052;--muted:#768b9e;--gold:#b3983d;--line:#d9e3ed;--paper:#fcfdff;--map:#eff4f9;--surface-soft:#eaf1f8;--accent-soft:#d0dfed;--header-stripe:linear-gradient(90deg,#3b6795 0 50%,#d1b451 50%)}
 
 :root[data-atlas=poland],body[data-atlas=poland],.country-option[data-atlas=poland]{--red:#a74b58;--red-dark:#813744;--ink:#432f34;--muted:#90747b;--gold:#b18b4f;--line:#e9dfe1;--paper:#fffdfb;--map:#f6eeee;--surface-soft:#f4e9ec;--accent-soft:#ead0d7;--header-stripe:linear-gradient(90deg,#f7f5f1 0 50%,#dc143c 50%)}
+
+:root[data-atlas=czechia],body[data-atlas=czechia],.country-option[data-atlas=czechia]{--red:#46669a;--red-dark:#304d7b;--ink:#303e52;--muted:#77869c;--gold:#ad4949;--line:#d9e2ef;--paper:#fcfdff;--map:#f1f0f6;--surface-soft:#e9eff8;--accent-soft:#ceddef;--header-stripe:linear-gradient(90deg,#f7f5f1 0 33%,#46669a 33% 66%,#b44a50 66%)}
+
+:root[data-atlas=slovakia],body[data-atlas=slovakia],.country-option[data-atlas=slovakia]{--red:#46669a;--red-dark:#304d7b;--ink:#303e52;--muted:#77869c;--gold:#ad4949;--line:#d9e2ef;--paper:#fcfdff;--map:#f1f0f6;--surface-soft:#e9eff8;--accent-soft:#ceddef;--header-stripe:linear-gradient(90deg,#f7f5f1 0 33%,#46669a 33% 66%,#b44a50 66%)}
