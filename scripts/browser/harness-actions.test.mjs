@@ -1,0 +1,8 @@
+import assert from 'node:assert/strict';
+export default [1280,390].map(width=>({name:'native taps wait for moving and covered controls '+width,options:{width,height:820,mobile:width===390},async run(p){
+ const html='<meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0}#panel{position:fixed;bottom:0;width:100%;height:60px;overflow:auto;transition:height .35s linear}#panel.open{height:260px}#content{height:600px;padding-top:400px;box-sizing:border-box}button{width:180px;height:60px}#cover{position:fixed;inset:0;background:rgba(255,255,255,.2);z-index:10}</style><div id="panel"><div id="content"><button id="target">Target</button></div></div><script>window.clicks=0;target.onclick=()=>clicks++;</script>';
+ await p.send('Page.navigate',{url:'data:text/html,'+encodeURIComponent(html)});await p.waitFor('document.querySelector("#target")&&typeof clicks==="number"');
+ await p.evaluate('document.getElementById("panel").classList.add("open")');await p.tap('#target');assert.equal(await p.evaluate('clicks'),1,'A tap reaches the button after its panel moves');
+ await p.evaluate('(()=>{const cover=document.createElement("div");cover.id="cover";document.body.append(cover);setTimeout(()=>cover.remove(),350)})()');await p.tap('#target');assert.equal(await p.evaluate('clicks'),2,'A tap waits until the overlay stops intercepting it');
+ await p.evaluate('document.getElementById("target").disabled=true;document.getElementById("target").style.pointerEvents="none"');await p.tap('#target');assert.equal(await p.evaluate('clicks'),2,'The driver preserves native disabled-control behavior');
+}}));
