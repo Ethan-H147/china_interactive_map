@@ -16,14 +16,16 @@ const contains=(g,p)=>polygons(g).some(poly=>inRing(p,poly[0])&&!poly.slice(1).s
 const metres=(a,b)=>Math.hypot((a[0]-b[0])*Math.cos((a[1]+b[1])*Math.PI/360),a[1]-b[1])*111195;
 const outline={},lines={};
 // Land frontier lengths, excluding the France–Spain and France–Italy seams France holds.
-const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450],iceland:[0,0],india:[13300,13500],chile:[1350,1600],paraguay:[740,800],peru:[3900,4150],turkey:[2800,3000]};
+const frontierKm={'united-kingdom':[620,670],spain:[1300,1400],france:[4100,4250],italy:[1380,1450],iceland:[0,0],india:[5900,6050],chile:[1350,1600],paraguay:[740,800],peru:[4150,4250],turkey:[2800,3000]};
+// India now holds its China claim strokes and regular Pakistan arc; Bangladesh,
+// Nepal, Bhutan and Myanmar own their complete shared frontiers separately.
 // Pieces: Ireland and Cyprus (Akrotiri, Dhekelia in four pieces, its two Cypriot enclaves);
 // Portugal, Andorra, Ceuta, Melilla, Gibraltar; Pyrenees, Monaco, Alps, Geneva to the North Sea,
 // Llívia, French Guiana (Suriname, Brazil, and five short pieces at the Brazilian tripoint),
 // Saint-Martin; Slovenia to Mont Dolent, San Marino, Vatican, Campione.
 // Turkey: Greece and Bulgaria from the Aegean to the Black Sea; Georgia to Syria from the Black
 // Sea to the Mediterranean. Iceland has no land frontier.
-const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:53,chile:17,paraguay:3,peru:56,turkey:2};
+const pieces={'united-kingdom':8,spain:5,france:13,italy:4,iceland:0,india:20,chile:17,paraguay:3,peru:56,turkey:2};
 // The six Meuse villages destroyed at Verdun in 1916 remain communes with no inhabitants.
 const zeroPopulation=new Set(['FR-C-55039','FR-C-55050','FR-C-55139','FR-C-55189','FR-C-55239','FR-C-55307']);
 // Subdivided countries: levels, unit counts, and which levels arrive together in all.bin.
@@ -36,7 +38,7 @@ for(const country of countries){
  assert(!context.features[0].properties.region,country+' portal starts with the home territory');
  // India's portal adds the land both India and China claim, hidden while China's map is open.
  const territories=context.features.slice(1).filter(()=>!claimsAgainst[country]);
- if(claimsAgainst[country])assert(context.features.slice(1).every(f=>claimsAgainst[country].includes(f.properties.claimedBy)),country+' portal: home, then the claims its references hold');
+ if(claimsAgainst[country]){const home=context.features.filter(f=>!f.properties.claimedBy);assert(home.length>0,country+' portal has home geometry');assert(context.features.filter(f=>f.properties.claimedBy).every(f=>claimsAgainst[country].includes(f.properties.claimedBy)),country+' portal: only claims its references hold');}
  if(country==='india'||country==='chile')assert(context.features.length>1,country+' has claims shared with '+claimsAgainst[country]);
  for(const t of territories){const r=catalogue.records.find(r=>r.id===t.properties.region);assert(r?.overseas&&r.level===1,t.properties.region+' is an overseas territory');assert.deepEqual(t.properties.bounds,[...r.bounds[0],...r.bounds[1]],r.id+' portal bounds');}
  assert.equal(territories.length,catalogue.records.filter(r=>r.overseas).length,country+' every overseas territory has its own portal shape');
@@ -167,15 +169,16 @@ for(const [country,p,place] of [['italy',[13.7228,45.5947],'Lazzaretto'],['franc
  const towns=JSON.parse(fs.readFileSync(root+'/turkey/settlements.json')).records;assert(towns.length>=80&&towns.every(t=>t.kind.startsWith('City')),'Turkish cities: the province centres only');}
 // India: its own claims on its map; China's outline everywhere else; the 2011 census.
 assert.equal(Object.values(JSON.parse(fs.readFileSync(root+'/india/statistics.json')).regions).reduce((t,r)=>t+r.population.value,0),1210854977,'India 2011 census total');
-{const states=read('india','first.bin').regions.features,context=read('india','context.bin').features,home=context[0].geometry,claims=context.slice(1);
+{const states=read('india','first.bin').regions.features,context=read('india','context.bin').features,home={type:'MultiPolygon',coordinates:context.filter(f=>!f.properties.claimedBy).flatMap(f=>polygons(f.geometry))},claims=context.filter(f=>f.properties.claimedBy);
  const inState=(id,p)=>contains(states.find(f=>f.properties.id===id).geometry,p);
  for(const [id,p,place] of [['IN-AR',[91.86,27.59],'Tawang'],['IN-LA',[79.5,35.2],'Aksai Chin'],['IN-LA',[74.3,35.9],'Gilgit'],['IN-JK',[73.47,34.37],'Muzaffarabad'],['IN-SK',[88.61,27.33],'Gangtok']])assert(inState(id,p),place+' is in '+id+' on India’s map');
  for(const [p,place] of [[[91.86,27.59],'Tawang'],[[79.5,35.2],'Aksai Chin']])assert(!contains(home,p)&&claims.some(f=>contains(f.geometry,p)),place+' is a claim China holds, apart from India’s portal');
  assert(!contains(home,[74.3,35.9])&&!claims.some(f=>contains(f.geometry,[74.3,35.9])),'Pakistan-administered Kashmir is outside India’s portal');
  assert(contains(home,[88.61,27.33])&&contains(home,[77.2,28.6]),'India’s portal holds Sikkim and Delhi');
- assert.deepEqual(read('india','neighbours.bin').features.map(f=>f.properties.country).sort(),['afghanistan','bangladesh','bhutan','myanmar','nepal'],'Pakistan now uses its full country portal');
- for(const [p,place] of [[[85.32,27.7],'Kathmandu'],[[89.64,27.47],'Thimphu'],[[90.4,23.8],'Dhaka']])assert(read('india','neighbours.bin').features.some(f=>contains(f.geometry,p)),place+' is drawn beneath India');
+ assert.deepEqual(read('india','neighbours.bin').features.map(f=>f.properties.country).sort(),['afghanistan','myanmar'],'Interactive Bangladesh, Bhutan, Nepal and Pakistan use their own full portals');
+ for(const [country,p,place] of [['nepal',[85.32,27.7],'Kathmandu'],['bhutan',[89.64,27.47],'Thimphu'],['bangladesh',[90.4,23.8],'Dhaka']])assert(read(country,'context.bin').features.some(f=>contains(f.geometry,p)),place+' is drawn by its full country portal');
  // The former Indian enclaves in Bangladesh, exchanged in 2015, are gone.
  assert(!polygons(states.find(f=>f.properties.id==='IN-WB').geometry).some(p=>p[0].every(q=>q[0]>88.5&&q[0]<89.9&&q[1]>25.8&&q[1]<26.6)),'West Bengal keeps no enclaves in Bangladesh');
+ for(const [country,tag,min,max] of [['bangladesh','BGD-IND',3700,3800],['nepal','NPL-IND',1800,1900],['bhutan','BTN-IND',630,700]]){const paths=read(country,'international.bin').features.filter(f=>f.properties.resolvedFrontier===tag).flatMap(f=>f.geometry.type==='LineString'?[f.geometry.coordinates]:f.geometry.coordinates),length=paths.reduce((n,p)=>n+p.slice(1).reduce((a,b,i)=>a+metres(p[i],b),0),0)/1000;assert(length>min&&length<max,'Complete separately owned '+tag+' frontier');}
  const lines=read('india','international.bin').features;assert(lines.some(f=>f.properties.claimedBy==='china')&&lines.some(f=>!f.properties.claimedBy),'India’s claim lines inside China are tagged');}
 console.log('Europe (seven countries): outlines and subdivision hierarchies, chunked levels, statistics for every unit, enclaves and microstates, shared France seams drawn once, land frontiers without coastline.');

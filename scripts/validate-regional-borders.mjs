@@ -71,7 +71,11 @@ assert(filtered.coordinates.length>0,'Ordinary provincial boundaries remain');
 // those drew twice and alternated thick and thin along the frontier.
 let stacked=0;for(const p of filtered.coordinates)for(let i=1;i<p.length;i++)if(liesOnBorder(index,p[i-1],p[i]))stacked++;
 assert.equal(stacked,0,'No China subdivision stroke lies on an international line');
-for(const [a,b] of [[[124.2832,39.9491],[124.2831,39.9605]]]){const near=filtered.coordinates.some(p=>p.some(([x,y])=>Math.abs(x-a[0])<.001&&Math.abs(y-a[1])<.001));assert(near,'Outlines that leave the frontier (Yalu islands) stay drawn');}
+// Yalu island enclaves are suppressed by the current display policy.
+// A subdivision branch must still survive removal of a shared international edge.
+const branch={type:'MultiLineString',coordinates:[[[0,0],[1,0],[1,1]]]};
+const branchIndex=borderIndex({features:[{geometry:{type:'LineString',coordinates:[[0,0],[1,0]]}}]});
+assert.deepEqual(omitBorderSegments(branch,branchIndex).coordinates,[[[1,0],[1,1]]],'A subdivision departure remains after its shared international segment');
 console.log('China province strokes: none lie on an international line; departures from the frontier remain.');
 const layers=[],map={addLayer(l,before){const i=layers.findIndex(l=>l.id===before);layers.splice(i<0?layers.length:i,0,l);},getLayer:id=>layers.find(l=>l.id===id),getStyle:()=>({layers}),getPaintProperty:(id,key)=>layers.find(l=>l.id===id)?.paint?.[key],setPaintProperty(){},setLayoutProperty(){},removeLayer(id){layers.splice(layers.findIndex(l=>l.id===id),1);},moveLayer(){}};
 createMapScene(map);

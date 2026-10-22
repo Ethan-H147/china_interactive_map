@@ -3,7 +3,7 @@
     "owner": "brazil",
     "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
     "canonicalSource": "dist/data/flight-context.bin",
-    "canonicalSha256": "98d307338f23fe57955b3dfd3b13de1d3df6b531db884da2f0533ffe67984819",
+    "canonicalSha256": "8b3852618869ea12a1738ac22add2b48d78c4193df6d1a40343176f44ce53dd9",
     "changedEdges": 21300,
     "maxDisplacementMetres": 2376.0321354295766,
     "changedRegions": [
@@ -24,13 +24,16 @@
       "BO-M-090402",
       "BO-M-090501",
       "BO-M-090503"
-    ]
+    ],
+    "canonicalScope": "country-geometries-v1",
+    "canonicalCountry": "brazil",
+    "canonicalGeometryCount": 1
   },
   {
     "owner": "argentina",
     "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
     "canonicalSource": "dist/data/flight-context.bin",
-    "canonicalSha256": "98d307338f23fe57955b3dfd3b13de1d3df6b531db884da2f0533ffe67984819",
+    "canonicalSha256": "71ee9c976f1ec6d03c8751629f4016bc99d72c1b5a6280ee33440a54d2a5d72a",
     "changedEdges": 4716,
     "maxDisplacementMetres": 1778.6244283069611,
     "changedRegions": [
@@ -45,7 +48,10 @@
       "BO-M-060302",
       "BO-M-060303",
       "BO-M-060402"
-    ]
+    ],
+    "canonicalScope": "country-geometries-v1",
+    "canonicalCountry": "argentina",
+    "canonicalGeometryCount": 1
   },
   {
     "owner": "paraguay",

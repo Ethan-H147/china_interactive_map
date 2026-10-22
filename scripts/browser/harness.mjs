@@ -8,7 +8,7 @@ import path from 'node:path';
 import {spawn,execSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
-const root=fileURLToPath(new URL('../../dist/',import.meta.url));
+const root=process.env.ATLAS_BROWSER_ROOT?path.resolve(process.env.ATLAS_BROWSER_ROOT):fileURLToPath(new URL('../../dist/',import.meta.url));
 export const output=fileURLToPath(new URL('../../artifacts/browser-tests/',import.meta.url));
 export const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp','.jpg':'image/jpeg','.woff2':'font/woff2'};

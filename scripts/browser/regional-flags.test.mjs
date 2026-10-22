@@ -20,8 +20,9 @@ export default [
    await page.waitFor('document.getElementById("flag-viewer").open&&document.getElementById("flag-viewer-image").getAttribute("src")==='+JSON.stringify(last.full),{label:'full original opens'});
    await page.key('Escape');
    assert.equal(await page.evaluate('document.getElementById("flag-viewer").open'),false);
+   await page.waitFor('document.activeElement===document.getElementById('+JSON.stringify(prefix+'-flag-source')+')',{label:'focus restored to flag trigger'});
    await page.key('Enter');
-   await page.waitFor('document.getElementById("flag-viewer").open');
+   await page.waitFor('document.getElementById("flag-viewer").open&&document.getElementById("flag-viewer-image").getAttribute("src")==='+JSON.stringify(last.full)+'&&document.getElementById("flag-viewer-image").naturalWidth>0');
    assert.equal(await page.evaluate('document.getElementById("flag-viewer-image").getAttribute("src")'),last.full);
    await page.key('Escape');await page.screenshot('flags-'+country);
   }

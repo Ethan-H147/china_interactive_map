@@ -9,7 +9,7 @@ import {lineData} from '../dist/adaptive-lines.mjs';
 import {withoutRetraced} from './channel-lines.mjs';
 import {encodeGeo} from '../dist/geo-pack.mjs';
 
-const root='dist/data/',reference=load('artifacts/frontier-source/ne-10m-land-boundaries.geojson');
+const root='dist/data/',reference=load('scripts/boundary-sources/nordics/ne-borders.json.gz');
 const flight=load(root+'flight-context.bin'),atlas=load(root+'atlas-frontiers.bin');
 const definitions=[
  {owner:'brazil',other:'paraguay',iso:['BRA','PRY'],outline:'flight-context.bin'},
@@ -39,7 +39,8 @@ for(const members of nodes.values()){
 }
 const countryFiles=['europe/paraguay/international.bin','europe/peru/international.bin'];
 const canonical=arcs.map(arc=>({type:'Feature',properties:{countries:[arc.owner,...(['paraguay'].includes(arc.other)?[arc.other]:[])].join(' '),resolvedFrontier:arc.iso.join('-'),referenceOwner:arc.owner},geometry:{type:'LineString',coordinates:arc.path}}));
-let remaining=removeArcSegments({...atlas,features:atlas.features.filter(f=>!f.properties.resolvedFrontier)},keys);
+const ownedTags=new Set(definitions.map(d=>d.iso.join('-')));
+let remaining=removeArcSegments({...atlas,features:atlas.features.filter(f=>!ownedTags.has(f.properties.resolvedFrontier))},keys);
 // Tiny claim-tagged runs from overlapping surveys must not redraw the resolved reference edge.
 remaining.features=remaining.features.filter(f=>!arcs.some(arc=>{
  const countries=String(f.properties.countries).split(' ');
@@ -70,8 +71,8 @@ fs.writeFileSync(root+'frontier-continuity.json',JSON.stringify({method:'One con
 for(const country of ['paraguay','peru']){
  const file=root+'europe/'+country+'/sources.json',info=load(file);
  const own=linesOf(load(root+'europe/'+country+'/international.bin'));
- info.frontierKm=Math.round(own.reduce((s,p)=>s+p.slice(1).reduce((n,q,i)=>n+metres(p[i],q),0),0)/1000+report.filter(a=>a.owner===country).reduce((s,a)=>s+a.km,0));
- info.sharedFrontiers=report.filter(a=>a.owner===country||a.pair.includes(country==='paraguay'?'PRY':'PER')).map(a=>({pair:a.pair,owner:a.owner,source:'atlas-frontiers.bin'}));
+ info.frontierKm=Math.round(own.reduce((s,p)=>s+p.slice(1).reduce((n,q,i)=>n+metres(p[i],q),0),0)/1000+arcs.filter(a=>a.owner===country).reduce((s,a)=>s+a.path.slice(1).reduce((n,q,i)=>n+metres(a.path[i],q),0)/1000,0));
+ info.sharedFrontiers=[...(info.sharedFrontiers||[]).filter(a=>!ownedTags.has(a.pair)),...report.filter(a=>a.owner===country||a.pair.includes(country==='paraguay'?'PRY':'PER')).map(a=>({pair:a.pair,owner:a.owner,source:'atlas-frontiers.bin'}))];
  fs.writeFileSync(file,JSON.stringify(info,null,2)+'\n');
 }
 const sourceFile=root+'atlas-frontiers-sources.json',sourceInfo=load(sourceFile),built=load(root+'atlas-frontiers.bin');

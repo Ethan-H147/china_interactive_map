@@ -7,7 +7,7 @@
   },
   "coverage": "Peru's 24 departments and the Constitutional Province of Callao, 196 provinces and 1,873 districts, from the National Geographic Institute (IGN) boundaries published by OCHA (July 2020; 19 districts created since are within their former districts). Spanish names follow OpenStreetMap for the same UBIGEO codes. Edges within 3 km of Brazil's and Chile's outlines are moved onto them.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
-  "frontierKm": 4202,
+  "frontierKm": 4203,
   "seamReports": {
     "peru-brazil": {
       "changedEdges": 7055,
@@ -545,6 +545,11 @@
   ],
   "sharedFrontiers": [
     {
+      "pair": "PER-BOL",
+      "owner": "peru",
+      "source": "europe/peru/international.bin"
+    },
+    {
       "pair": "PER-ECU",
       "owner": "peru",
       "source": "atlas-frontiers.bin"
@@ -553,11 +558,6 @@
       "pair": "PER-COL",
       "owner": "peru",
       "source": "atlas-frontiers.bin"
-    },
-    {
-      "pair": "PER-BOL",
-      "owner": "peru",
-      "source": "europe/peru/international.bin"
     }
   ],
   "titicacaShoreline": {

@@ -114,7 +114,7 @@
     "test:compact": "node --check dist/geo-pack.mjs && node scripts/validate-compact.mjs",
     "test:borders": "node --check dist/edge-runs.mjs && node --check scripts/channel-lines.mjs && node scripts/validate-borders.mjs && npm run test:frontier-continuity && npm run test:bolivia-peru-frontier",
     "test:runtime": "node --check dist/map-scene.mjs && node --check dist/country-loader.mjs && node scripts/validate-background-order.mjs && node scripts/validate-country-loader.mjs && node scripts/validate-satellite.mjs && node scripts/validate-country-memory.mjs",
-    "test:frontier-continuity": "node scripts/validate-frontier-arcs.mjs && node scripts/validate-pilcomayo-junction.mjs",
+    "test:frontier-continuity": "node scripts/validate-frontier-arcs.mjs && node scripts/validate-pilcomayo-junction.mjs && node scripts/validate-china-southern-frontiers.mjs",
     "build:country-expansion": "node --max-old-space-size=8000 scripts/build-country-expansion.mjs && node --max-old-space-size=7000 scripts/build-us-area-codes.mjs && npm run build:us-local && node scripts/prepare-denmark-towns.mjs && npm run build:mexico-water && node scripts/fetch-europe-flags.mjs && node scripts/fetch-north-america-flags.mjs && node scripts/render-municipal-flags.mjs && node scripts/fetch-europe-expansion-flags.mjs && node scripts/prepare-flag-images.mjs && node --max-old-space-size=6000 scripts/prepare-expansion-economy.mjs && node scripts/prepare-region-colors.mjs && node scripts/build-world-land.mjs && npm run build:compact",
     "test:country-expansion": "node scripts/validate-country-expansion.mjs && npm run test:north-america-flags && npm run test:mexico-water && npm run test:expansion-economy && npm run test:us-territories && npm run test:denmark && npm run test:us-details",
     "fetch:north-america-flags": "node scripts/fetch-north-america-flags.mjs && npm run build:flag-images",
@@ -181,7 +181,7 @@
     "measure:stability": "node scripts/browser/measure-stability.mjs",
     "test:preview": "node scripts/test-preview.mjs",
     "test:spatial-audit": "node --max-old-space-size=10000 scripts/audit-spatial.mjs",
-    "test:stability-data": "node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz && node scripts/validate-swiss-alignment.mjs && node scripts/validate-bolivia.mjs && npm run test:titicaca && npm run test:brunei",
+    "test:stability-data": "node scripts/validate-render-budget.mjs && node scripts/validate-canonical-neighbour-fingerprint.mjs && node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz && node scripts/validate-swiss-alignment.mjs && node scripts/validate-bolivia.mjs && npm run test:titicaca && npm run test:brunei",
     "test:map-view-picker": "node scripts/validate-map-view-picker.mjs && node scripts/browser/run.mjs map-view-dropdown",
     "test:swiss-alignment": "node scripts/validate-swiss-alignment.mjs && node scripts/browser/run.mjs swiss-alignment",
     "fetch:bolivia": "node scripts/fetch-bolivia.mjs",
@@ -270,12 +270,12 @@
     "test:china-1949": "node scripts/validate-china-1949.mjs && node scripts/browser/run.mjs china-1949",
     "build:soviet-snapshot": "node scripts/build-soviet-snapshot.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs && npm run build:compact",
     "test:soviet-snapshot": "node --check dist/soviet-flags.mjs && node scripts/validate-soviet-snapshot.mjs",
-    "build:baltics": "node scripts/fetch-baltics.mjs && node --max-old-space-size=10000 scripts/build-baltics.mjs && node scripts/prepare-baltic-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs && node --max-old-space-size=6000 scripts/build-atlas-frontiers.mjs && node --max-old-space-size=10000 scripts/build-world-land.mjs && node scripts/build-compact.mjs",
+    "build:baltics": "node scripts/fetch-baltics.mjs && node --max-old-space-size=10000 scripts/build-baltics.mjs && node scripts/prepare-baltic-flags.mjs && node scripts/prepare-flag-images.mjs && node scripts/prepare-region-colors.mjs && node --max-old-space-size=6000 scripts/build-atlas-frontiers.mjs && node --max-old-space-size=10000 scripts/build-world-land.mjs && npm run build:china-pack && node scripts/build-compact.mjs",
     "test:baltics": "node --check dist/baltic-flags.mjs && node scripts/validate-baltics.mjs",
     "test:baltic-frontiers": "node scripts/validate-baltic-frontiers.mjs && node scripts/browser/run.mjs baltic-frontiers",
     "build:khanka": "npm run build:china-pack && node scripts/prepare-motion.mjs && node scripts/prepare-context.mjs && npm run build:compact",
     "test:khanka": "node --check scripts/khanka-water.mjs && node scripts/validate-khanka.mjs",
-    "build:poland": "node scripts/build-poland.mjs && node scripts/reconcile-poland.mjs && node scripts/prepare-poland-capitals.mjs && node scripts/prepare-poland-flags.mjs && node scripts/prepare-region-colors.mjs && node scripts/prepare-flag-images.mjs && node scripts/build-world-land.mjs && node scripts/build-atlas-frontiers.mjs && node scripts/build-compact.mjs",
+    "build:poland": "node scripts/build-poland.mjs && node scripts/reconcile-poland.mjs && node scripts/prepare-poland-capitals.mjs && node scripts/prepare-poland-flags.mjs && node scripts/prepare-region-colors.mjs && node scripts/prepare-flag-images.mjs && node scripts/build-world-land.mjs && node scripts/build-atlas-frontiers.mjs && npm run build:china-pack && node scripts/build-compact.mjs",
     "test:poland": "node scripts/validate-poland.mjs",
     "build:korean-frontiers": "node --max-old-space-size=12000 scripts/reconcile-korean-frontiers.mjs && npm run build:fills && node scripts/build-world-land.mjs && npm run build:compact",
     "test:korean-frontiers": "node scripts/validate-korean-frontiers.mjs && node scripts/validate-khanka.mjs && node scripts/browser/run.mjs korean-frontiers",
@@ -297,6 +297,7 @@
     "measure:globe-renderer": "node scripts/browser/measure-globe-renderer.mjs",
     "test:denmark-settlements": "node scripts/validate-denmark-settlements.mjs && node scripts/browser/run.mjs denmark-settlements",
     "build:nordic-settlements": "node scripts/fetch-nordic-settlements.mjs && node --max-old-space-size=6000 scripts/prepare-nordic-settlements.mjs",
-    "test:nordic-settlements": "node scripts/validate-nordic-settlements.mjs && node scripts/browser/run.mjs nordic-settlements"
+    "test:nordic-settlements": "node scripts/validate-nordic-settlements.mjs && node scripts/browser/run.mjs nordic-settlements",
+    "build:pages": "node --max-old-space-size=8000 scripts/build-pages-package.mjs"
   }
 }

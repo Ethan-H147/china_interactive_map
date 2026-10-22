@@ -1,3 +1,4 @@
+import {countyBoundaries} from './china-county-boundaries.mjs';
 import fs from 'node:fs';import {load,linesOf,lineIndex} from './geo-index.mjs';import {readData} from './read-data.mjs';import {command,fc,sharedBorders,geographicBounds} from './build-regional-dataset.mjs';import {selectFrontierArc,joinReferencePaths} from './frontier-arcs.mjs';import {alignArc,koreanFrontiers,save,preserveKoreanFrontiers} from './korean-frontiers.mjs';import {topology} from 'topojson-server';import {mesh} from 'topojson-client';import {khankaWater} from './khanka-water.mjs';import {saveDisplay} from './korean-river-islands.mjs';import {lineData} from '../dist/adaptive-lines.mjs';
 export const chinaRussiaRoot='scripts/boundary-sources/china-russia/';
 export function chinaRussiaLines(){return load(chinaRussiaRoot+'resolved.bin');}
@@ -15,7 +16,7 @@ export async function reconcileChinaRussia(){
  for(const key of ['provinces','subdivisions'])china[key]=await alignChinaRussiaContext(china[key]);
  const near=lineIndex(linesOf(fc(features))),top=topology({regions:china.provinces}),inside=mesh(top,top.objects.regions,(a,b)=>a!==b),crop=(g,takeNear)=>{const paths=[];for(const p of linesOf(fc([{geometry:g}]))){let run;for(let i=1;i<p.length;i++){const a=p[i-1],b=p[i],m=[(a[0]+b[0])/2,(a[1]+b[1])/2];if((near(m)<10000)!==takeNear){run=null;continue;}if(!run)paths.push(run=[a]);run.push(b);}}return paths;};
  china.boundaries.province={type:'MultiLineString',coordinates:[...crop(china.boundaries.province,false),...crop(inside,true)]};saveDisplay(china);
- const counties=load('dist/data/china-counties.bin');counties.regions=await alignChinaRussiaContext(counties.regions);const ct=topology({regions:counties.regions});counties.boundaries=mesh(ct,ct.objects.regions,(a,b)=>a!==b&&a.properties.parentCity===b.properties.parentCity);save('dist/data/china-counties.bin',counties);
+ const counties=load('dist/data/china-counties.bin');counties.regions=await alignChinaRussiaContext(counties.regions);counties.boundaries=countyBoundaries(counties.regions);save('dist/data/china-counties.bin',counties);
  }
  const base='dist/data/russia/',first=load(base+'first.bin'),cat=load(base+'catalogue.bin');for(const file of ['first.bin','catalogue.bin','context.bin','international.bin'])if(!fs.existsSync(chinaRussiaRoot+file))fs.copyFileSync(base+file,chinaRussiaRoot+file);
  for(const line of features){

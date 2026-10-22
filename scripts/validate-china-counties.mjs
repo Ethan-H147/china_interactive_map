@@ -21,6 +21,9 @@ const area=g=>polygons(g).reduce((s,p)=>s+ringArea(p[0])-p.slice(1).reduce((t,h)
 assert.equal(regions.length,2728,'County-level divisions of the prefectures');
 assert.equal(new Set(regions.map(f=>f.properties.adcode)).size,regions.length,'Unique codes');
 const cities=new Set(regions.map(f=>f.properties.parentCity));
+assert.equal(counties.boundaries.type,'FeatureCollection','County lines retain their selectable parent');
+assert.deepEqual(new Set(counties.boundaries.features.map(f=>f.properties.parentCity)),cities,'Every county parent has its boundary feature');
+assert(counties.boundaries.features.every(f=>f.geometry.type==='MultiLineString'&&(f.geometry.coordinates.length||f.properties.parentCity===460300)),'Every adjacent county parent has drawable borders; Sansha island districts have no shared edge');
 assert.equal(cities.size,329,'Every prefecture-level area except Dongguan, Zhongshan, Jiayuguan and Danzhou');
 for(const code of [441900,442000,620200,460400])assert(!cities.has(code),code+' has no county-level divisions');
 assert(!regions.some(f=>f.properties.adcode===350527),'Kinmen is Taiwan\'s');

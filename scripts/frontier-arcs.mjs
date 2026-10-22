@@ -45,11 +45,11 @@ export function selectFrontierArc(outline,reference,{maximumScoreMetres=15000}={
 export function removeArcSegments(collection,keys,skip=()=>false){
  return {...collection,features:collection.features.flatMap(feature=>{
   if(skip(feature))return [feature];
-  const paths=feature.geometry.type==='LineString'?[feature.geometry.coordinates]:feature.geometry.coordinates,kept=[];
+  const paths=feature.geometry.type==='LineString'?[feature.geometry.coordinates]:feature.geometry.coordinates,kept=[];let changed=false;
   for(const path of paths){let run;for(let i=1;i<path.length;i++){
-   if(keys.has(segmentKey(path[i-1],path[i]))){run=null;continue;}
+   if(keys.has(segmentKey(path[i-1],path[i]))){changed=true;run=null;continue;}
    if(!run)kept.push(run=[path[i-1]]);run.push(path[i]);
   }}
-  return kept.length?[{...feature,geometry:{type:'MultiLineString',coordinates:kept}}]:[];
+  return !changed?[feature]:kept.length?[{...feature,geometry:{type:'MultiLineString',coordinates:kept}}]:[];
  })};
 }

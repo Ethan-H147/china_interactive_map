@@ -40,8 +40,10 @@ export function createFlagViewer(){
   const original=new Image();original.src=full;
   try{await original.decode();if(token!==epoch||!dialog.open)return;dimensions=[original.naturalWidth,original.naturalHeight];image.src=full;resize();}catch{/* Retain the locally cached official artwork if its original is unavailable. */}
  }
- function close(){if(dialog.open)dialog.close();}
- dialog.addEventListener('close',()=>{epoch++;image.removeAttribute('src');trigger?.focus({preventScroll:true});trigger=null;});
+ function cleanup(){epoch++;image.removeAttribute('src');const previous=trigger;trigger=null;previous?.focus({preventScroll:true});}
+ function close(){if(!dialog.open)return;dialog.close();cleanup();}
+ // A queued native close event must not clear a flag that was reopened meanwhile.
+ dialog.addEventListener('close',()=>{if(!dialog.open&&trigger)cleanup();});
  dialog.addEventListener('cancel',event=>{event.preventDefault();close();});
  closeButton.addEventListener('click',close);
  dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)close();}});

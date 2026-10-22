@@ -21,7 +21,7 @@ import {gzipSync} from 'node:zlib';
 import {load,polygons,landIndex,lineIndex,linesOf} from './geo-index.mjs';
 import {channelLines,channelLength,withoutRetraced} from './channel-lines.mjs';
 
-const data='dist/data/',only=process.argv[2],run=family=>!only||only===family;
+const data='dist/data/',only=process.argv[2],run=family=>!only||only===family,selected=country=>!process.env.ONLY||process.env.ONLY.split(',').includes(country);
 const write=(file,value)=>{const json=JSON.stringify(value),bytes=gzipSync(json,{level:9});fs.writeFileSync(data+file,bytes);return {bytes:bytes.length,decodedBytes:Buffer.byteLength(json)};};
 const fc=features=>({type:'FeatureCollection',features});
 const report=[];
@@ -47,26 +47,26 @@ if(run('regional'))for(const base of ['europe/united-kingdom','europe/spain','eu
 
 // Edge-run collections: channels of a level go to each collection holding an owner.
 function attachChannels(name,collections,tolerance,land=null){const c=fc(withoutRetraced(channels(name,collections.flatMap(x=>x.features),tolerance,land).features));for(const x of collections)x.channels=fc(c.features.filter(f=>has(x,f.properties.owners)));}
-if(run('asia'))for(const country of ['philippines','indonesia']){
+if(run('asia'))for(const country of ['philippines','indonesia'].filter(selected)){
  const catalogue=load(data+'archipelago/'+country+'-catalogue.bin'),overview=load(data+'archipelago/'+country+'-overview.bin'),chunks=Object.values(catalogue.chunks).map(e=>({e,payload:load(data+'archipelago/'+e.file)}));
  const overviewLand=landOf(overview.first.features),chunkLand=landOf(chunks.flatMap(c=>c.payload.first.features));
  for(const [level,tolerance] of [['first',600],['second',1000]]){const lower=level==='second';attachChannels(country+' overview '+level,[overview[level]],tolerance,lower?overviewLand:null);attachChannels(country+' '+level,chunks.map(c=>c.payload[level]),60,lower?chunkLand:null);}
  write('archipelago/'+country+'-overview.bin',overview);for(const c of chunks)Object.assign(c.e,write('archipelago/'+c.e.file,c.payload));write('archipelago/'+country+'-catalogue.bin',catalogue);
 }
-if(run('asia')){
+if(run('asia')&&selected('japan')){
  const catalogue=load(data+'japan-local/catalogue.bin'),chunks=Object.values(catalogue.chunks).map(e=>({e,payload:load(data+'japan-local/'+e.file)}));
  const land=landOf(chunks.flatMap(c=>c.payload.first.features));
  for(const level of new Set(chunks.flatMap(c=>Object.keys(c.payload))))attachChannels('japan '+level,chunks.filter(c=>c.payload[level]).map(c=>c.payload[level]),60,level==='first'?null:land);
  for(const c of chunks)Object.assign(c.e,write('japan-local/'+c.e.file,c.payload));write('japan-local/catalogue.bin',catalogue);
 }
-if(run('asia')){
+if(run('asia')&&selected('malaysia')){
  const catalogue=load(data+'southeast-asia/malaysia-catalogue.bin'),first=load(data+'southeast-asia/malaysia-first.bin'),chunks=Object.values(catalogue.chunks).map(e=>({e,payload:load(data+'southeast-asia/'+e.file)}));
  attachChannels('malaysia 1',[first],300);attachChannels('malaysia 2',chunks.map(c=>c.payload),60,landOf(first.features));
  write('southeast-asia/malaysia-first.bin',first);for(const c of chunks)Object.assign(c.e,write('southeast-asia/'+c.e.file,c.payload));write('southeast-asia/malaysia-catalogue.bin',catalogue);
 }
 
 // Japan's prefecture overview, Korea and Mongolia.
-if(run('asia')){
+if(run('asia')&&!process.env.ONLY){
  const japan=load(data+'japan-boundaries.bin');japan.boundaries=fc(withoutRetraced([...unmarked(japan.boundaries),...marked(channels('japan overview',japan.first.features,300))]));write('japan-boundaries.bin',japan);
  for(const name of ['korea','mongolia']){
   const d=load(data+name+'-boundaries.bin');

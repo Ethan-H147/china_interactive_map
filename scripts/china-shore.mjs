@@ -6,6 +6,7 @@
 // both ends are coast passing near a neighbour, and are hidden too. The pack and its validator
 // share this rule. Returns hide(path): the indices of a line path's segments to leave unstroked.
 import {load,polygons,metres,landIndex,lineIndex,linesOf} from './geo-index.mjs';
+import {borderIndex,liesOnBorder} from '../dist/adaptive-lines.mjs';
 import {outlineIndex} from './channel-lines.mjs';
 
 export const shoreFrontierFiles=['shared-context-borders.bin','russia/international.bin','atlas-frontiers.bin'];
@@ -14,7 +15,7 @@ export function chinaShore(display){
  const segmentOwners=new Map();for(const f of display.provinces.features)for(const polygon of polygons(f.geometry))for(const ring of polygon)for(let i=1;i<ring.length;i++){const key=segmentKey(ring[i-1],ring[i]);if(!segmentOwners.has(key))segmentOwners.set(key,new Set());segmentOwners.get(key).add(f.properties.adcode);}
  const shared=new Set([...segmentOwners].filter(([,owners])=>owners.size>1).map(([key])=>key));
  const provinces=new Map(display.provinces.features.map(f=>[String(f.properties.adcode),f])),neighbour=outlineIndex(provinces,1500);
- const boxes=[...provinces].map(([id,f])=>{const rings=polygons(f.geometry).flat(),b=[Infinity,Infinity,-Infinity,-Infinity];for(const r of rings)for(const p of r){b[0]=Math.min(b[0],p[0]);b[1]=Math.min(b[1],p[1]);b[2]=Math.max(b[2],p[0]);b[3]=Math.max(b[3],p[1]);}return {id,rings,b,index:null};});
+ const boxes=[...provinces].map(([id,f])=>{const rings=polygons(f.geometry).flat(),b=[Infinity,Infinity,-Infinity,-Infinity];for(const r of rings)for(const p of r){b[0]=Math.min(b[0],p[0]);b[1]=Math.min(b[1],p[1]);b[2]=Math.max(b[2],p[0]);b[3]=Math.max(b[3],p[1]);}return {id,rings,b,index:null,outline:null};});
  const provinceAt=p=>{for(const u of boxes){if(p[0]<u.b[0]||p[0]>u.b[2]||p[1]<u.b[1]||p[1]>u.b[3])continue;u.index??=landIndex(u.rings);if(u.index(p))return u.id;}return null;};
  const frontier=lineIndex(shoreFrontierFiles.flatMap(file=>{const c=load('dist/data/'+file);return linesOf(file==='atlas-frontiers.bin'?{features:c.features.filter(f=>(' '+f.properties.countries+' ').includes(' china '))}:c);}));
  // 0: two provinces on its sides; 1: outer edge that stays; 2: shore (the same province on both
@@ -22,6 +23,10 @@ export function chinaShore(display){
  const kind=(a,b)=>{
   // Exact shared topology outranks probes that can cross a nearby bend.
   if(shared.has(segmentKey(a,b))||!metres(a,b))return 0;
+  // Topology may split a polygon edge into several mesh segments. Match the full
+  // segment geometrically before normal probes can cross an adjacent bend.
+  let owners=0;
+  for(const u of boxes){if(Math.max(a[0],b[0])<u.b[0]-.000002||Math.min(a[0],b[0])>u.b[2]+.000002||Math.max(a[1],b[1])<u.b[1]-.000002||Math.min(a[1],b[1])>u.b[3]+.000002)continue;u.outline??=borderIndex({features:u.rings.map(coordinates=>({geometry:{type:'LineString',coordinates}}))},.1);if(liesOnBorder(u.outline,a,b)&&++owners===2)return 0;}
   const m=[(a[0]+b[0])/2,(a[1]+b[1])/2],c=Math.cos(m[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],n=Math.hypot(dx,dy),step=30/111195;
   const [left,right]=[1,-1].map(s=>provinceAt([m[0]-dy/n*step*s/c,m[1]+dx/n*step*s]));if(left&&right)return left===right?2:0;
   // A narrow island can put both 30 m probes in water. With no owner, the

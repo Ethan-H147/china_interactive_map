@@ -31,3 +31,7 @@ const north=resolved.filter(f=>f.properties.referenceOwner==='peru'),ends=linesO
 assert(ends.some(p=>p[0]<-80&&p[1]>-4),'Peru north reaches the Pacific end');
 assert(ends.some(p=>p[0]>-70&&p[1]<-4),'Peru north reaches the Brazil tripoint');
 console.log('Five continuous frontier routes: complete lengths, connected pieces/tripoints, unique edges, no source redraw and full-opacity strokes passed.');
+
+// An unrelated political stroke must keep its original representation and pin.
+const untouched={type:'FeatureCollection',features:[{type:'Feature',properties:{resolvedFrontier:'OTHER'},geometry:{type:'LineString',coordinates:[[0,0],[1,0]]}}]};
+assert.deepEqual((await import('./frontier-arcs.mjs')).removeArcSegments(untouched,new Set()),untouched,'Unchanged frontiers retain their exact structure');

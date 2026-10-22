@@ -1,3 +1,4 @@
+import {spawnSync} from 'node:child_process';
 import {geographicAreaKm2} from './geographic-area.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -48,6 +49,8 @@ export async function reconcileBruneiFrontier(){
  atlas.features=atlas.features.filter(f=>f.properties.canonicalBorder!=='MYS-BRN'&&!String(f.properties.countries).split(' ').includes('brunei')&&!(String(f.properties.countries).split(' ').includes('malaysia')&&linesOf(fc([f])).some(p=>p.some(inside))));
  atlas.features.push(...lineData(fc(paths.map(path=>({type:'Feature',properties:{countries:'malaysia brunei',canonicalBorder:'MYS-BRN',referenceOwner:'brunei'},geometry:{type:'LineString',coordinates:path}})))).features);write(atlasFile,atlas);
  const infoFile='dist/data/atlas-frontiers-sources.json',info=load(infoFile);info.brunei={source:'europe/brunei/frontier-reference.json',method:'Nadi.BN land frontier reconciled with Sarawak districts, state overview and context. Complete common border retained as one shared stroke.'};info.pieces=atlas.features.length;info.frontierKm=Math.round(linesOf(atlas).reduce((n,p)=>n+p.slice(1).reduce((s,b,i)=>s+metres(p[i],b),0),0)/1000);fs.writeFileSync(infoFile,JSON.stringify(info,null,2)+'\n');
+ // The reconciled polygons replace the collection; regenerate its derived edge data.
+ for(const args of [['scripts/build-unit-edges.mjs'],['scripts/build-channel-borders.mjs','asia']]){const result=spawnSync(process.execPath,args,{env:{...process.env,ONLY:'malaysia'},stdio:'inherit'});assert.equal(result.status,0,'Malaysia derived border rebuild');}
  fs.writeFileSync(base+'malaysia-alignment-report.json',JSON.stringify({owner:'brunei',reports},null,2)+'\n');console.log('Malaysia–Brunei frontier reconciled',reports);
 }
 if(process.argv[1]?.replaceAll('\\','/').endsWith('/reconcile-brunei-frontier.mjs'))await reconcileBruneiFrontier();

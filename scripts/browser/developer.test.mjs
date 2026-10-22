@@ -51,7 +51,7 @@ export default [
    await page.waitFor(`(()=>{const c=document.getElementById('breadcrumb-region');return c&&!c.hidden&&c.textContent.includes(${JSON.stringify(pick)});})()`,{label:'the breadcrumb to show '+pick,timeout:20000});
    const after=await page.evaluate('({mode:currentAtlas().getMode(),selection:currentAtlas().getSelection(),language:currentAtlas().getLanguage?.(),third:document.getElementById("mode-third")?.getAttribute("aria-pressed")})');
    assert.equal(after.selection,before.selection,'The same place is selected');
-   assert.equal(after.mode,3,'The third level is restored');assert.equal(after.third,'true','The third-level button shows as chosen');
+   assert.equal(after.mode,3,'The third level is restored');if(country==='spain'){assert(await page.evaluate('document.getElementById("mode-third").hidden'));assert.equal(await page.evaluate('document.getElementById("mode-prefecture").getAttribute("aria-pressed")'),'true','Municipal detail remains under the two-level subdivision toggle');}else assert.equal(after.third,'true','The third-level button shows as chosen');
    if(language)assert.equal(after.language,language,'The label language is restored');
   }})),
  // Flags stack downward: national, region or community, then department or province. A commune
