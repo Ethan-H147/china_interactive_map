@@ -7,5 +7,5 @@ export default [1280,390].map(width=>({name:'Settlement density follows every fa
  await p.settle();await p.evaluate('void map.easeTo({zoom:16,duration:240})');await p.settle();await p.evaluate('void map.easeTo({zoom:5,duration:180})');await p.settle();
  const frames=await p.evaluate('densityFrames');assert(frames.length>6);assert(frames.some(f=>f.z>14&&f.villages>0));assert(frames.filter(f=>f.z<14).every(f=>f.villages===0));assert.equal(await p.evaluate('densityFilterChanges'),0);
  assert.equal(await p.evaluate('map.getLayer("finland-settlements").type'),'circle');assert(await p.evaluate(`map.getStyle().layers.filter(l=>l.id.startsWith('finland-settlements-density-')).every(l=>l.minzoom===l.filter[2]-.25&&l.paint['circle-opacity'][0]==='interpolate'&&l.paint['circle-stroke-opacity'][0]==='interpolate'&&!JSON.stringify(l.paint).includes('get'))`),'Every density tier uses tile-independent camera opacity and frame zoom limits');
- await p.evaluate('map.off("render",densityCapture)');await p.screenshot('settlement-density-'+width);
+ await p.evaluate('void map.off("render",densityCapture)');await p.screenshot('settlement-density-'+width);
 }}));
