@@ -1,0 +1,9 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {pathToFileURL} from 'node:url';import path from 'node:path';
+import {shardScenarios} from './browser/shard-scenarios.mjs';
+const example=Array.from({length:16},(_,i)=>({label:String(i)})),times=Object.fromEntries(example.map((s,i)=>[s.label,i%4===0?90:1])),snapshot=JSON.stringify(example);
+const plan=shardScenarios(example,4,times);assert.deepEqual(plan.map(b=>b.milliseconds),[93,93,93,93]);assert.equal(new Set(plan.flatMap(b=>b.entries)).size,16);assert.equal(JSON.stringify(example),snapshot);assert.deepEqual(shardScenarios(example,4,times),plan);
+assert.deepEqual(shardScenarios(example,1,times)[0].entries,example);assert.throws(()=>shardScenarios(example,0));
+const unknown={label:'new unmeasured scenario'};assert(shardScenarios([...example,unknown],4,times).some(b=>b.entries.includes(unknown)),'A new scenario is retained without a timing record');
+const scenarios=[];for(const file of fs.readdirSync('scripts/browser').filter(f=>f.endsWith('.test.mjs')).sort())for(const scenario of (await import(pathToFileURL(path.resolve('scripts/browser',file)))).default)scenarios.push({label:file.replace('.test.mjs','')+' › '+scenario.name,scenario});
+const estimates=JSON.parse(fs.readFileSync('scripts/browser/scenario-durations.json')).milliseconds,real=shardScenarios(scenarios,20,estimates),assigned=real.flatMap(b=>b.entries);assert.equal(assigned.length,scenarios.length);assert.equal(new Set(assigned).size,scenarios.length);assert(scenarios.every(s=>assigned.includes(s)));
+console.log('Browser shards:',scenarios.length,'scenarios assigned exactly once; deterministic planning, single-shard order, unknown-case retention and balanced heavy cases passed. Estimated longest shard:',Math.round(Math.max(...real.map(b=>b.milliseconds))/60000*10)/10,'minutes.');
