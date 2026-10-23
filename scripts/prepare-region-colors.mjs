@@ -41,7 +41,7 @@ export function prepareRegionColors(countries=[]){
   const d=read('dist/'+c.statistics),catalogue=c.catalogue?read('dist/'+c.catalogue):null;
   const geography=[...(catalogue?.records||['first','second','third'].flatMap(k=>catalogue?.[k]?.features.map(f=>f.properties)||[])),...(c.extraCatalogue?read('dist/'+c.extraCatalogue).records:[])];
   const first=geography.filter(r=>r.level===1),extra=c.population?supplements[c.population](first):{};
-  const ids=new Set([...geography.filter(r=>r.level>0).map(r=>String(r.id)),...Object.entries(d.regions).filter(([key,r])=>key.startsWith(country+':')&&r.level>0).map(([key])=>key.split(':')[1])]);
+  const ids=new Set([...geography.filter(r=>r.level>0).map(r=>String(r.id)),...Object.entries(d.regions).filter(([key,r])=>key.startsWith(country+':')&&r.level>0&&!r.thematic).map(([key])=>key.split(':')[1])]);
   const geographicIndex=new Map(geography.map(r=>[String(r.id),r]));
   const records=[...ids].map(id=>{const r={...d.regions[country+':'+id],...extra[id]},geo=geographicIndex.get(id),metrics={};
    for(const key of ['population','populationDensity','gdp','gdpPerCapita']){

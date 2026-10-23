@@ -55,3 +55,5 @@ dist/vendor/flag-cz.svg -text
 dist/vendor/flag-sk.svg -text
 
 dist/vendor/flag-ec.svg -text
+
+scripts/statistics-sources/cz-sk-ua/* -text

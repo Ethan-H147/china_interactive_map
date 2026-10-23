@@ -1,0 +1,54 @@
+{
+  "retrieved": "2026-10-23",
+  "files": {
+    "cz-population-regions-2025.xlsx": {
+      "url": "https://csu.gov.cz/docs/107508/be37aec7-3bbb-fe8e-0bcc-4816146d0636/1300722501.xlsx?version=1.1",
+      "sha256": "13faaae831fa2d5b8abc18ab46596a866e8a2ed1c457e35e88309e310bc16ebb",
+      "bytes": 29185
+    },
+    "cz-population-local-2025.xlsx": {
+      "url": "https://csu.gov.cz/docs/107508/ebed5ef3-dca1-baf2-c0d3-824b0893086f/1300722503.xlsx?version=1.0",
+      "sha256": "4477242e041497e58902e5761706de1ba61a3ccf74dc8d01609ac334fc8b414c",
+      "bytes": 586354
+    },
+    "cz-population-orp-2025.xlsx": {
+      "url": "https://csu.gov.cz/docs/107508/a7d223e6-9274-1e8d-42d6-1a157b1c1cb2/1300722502.xlsx?version=1.0",
+      "sha256": "a50a1069b13bade26b3448fa01254441331e7c6e9fb2b6eaff50a78bd0a4a6d6",
+      "bytes": 38635
+    },
+    "ua-regional-gdp-2004-2021.zip": {
+      "url": "https://stat.gov.ua/sites/default/files/2023-10/%D0%92%D0%B0%D0%BB%D0%BE%D0%B2%D0%B8%D0%B9%20%D1%80%D0%B5%D0%B3%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%20(2004-2021).zip",
+      "sha256": "7c0eb60111471a1f183fe1dc48b32270e51ed5cd34eaef12806507027566a771",
+      "bytes": 37982
+    },
+    "eurostat-gdp.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=CZ010&geo=CZ020&geo=CZ031&geo=CZ032&geo=CZ041&geo=CZ042&geo=CZ051&geo=CZ052&geo=CZ053&geo=CZ063&geo=CZ064&geo=CZ071&geo=CZ072&geo=CZ080&geo=SK010&geo=SK021&geo=SK022&geo=SK023&geo=SK031&geo=SK032&geo=SK041&geo=SK042",
+      "sha256": "52a075805ebb5be52b59d0aaa2a6f537616fdc80bc5b9593cb39069ba27ed19e",
+      "bytes": 5223
+    },
+    "eurostat-exchange.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?currency=USD&currency=CZK&statinfo=AVG&sinceTimePeriod=2021",
+      "sha256": "e1cd16e4a7f17475eee25722b13bb82bba1bf76fbeb6901afd9a705d684478e0",
+      "bytes": 2781
+    },
+    "ukraine-exchange-2021.json": {
+      "url": "https://api.worldbank.org/v2/country/UKR/indicator/PA.NUS.FCRF?date=2021&format=json",
+      "sha256": "d0f31e87d6cf2720d41ce0f3645d3c1eb6848db9ef9c2dea508c8fdd1ff802b9",
+      "bytes": 329
+    },
+    "sk-population-2024.json": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "sha256": "d7df0fd68af04938e9d32b03b396a93783bdf06b950115c94b7eb110f2b74d75",
+      "bytes": 427010,
+      "processing": "Slovak country properties only from the SHA-256-pinned GISCO release.",
+      "originalSha256": "ae07901e0a11cb7891d1a6d6a31cfd833e25672ca318908856b0e34a1acca594",
+      "license": "Eurostat GISCO / EuroGeographics terms"
+    },
+    "ua-gdp-rows.json": {
+      "url": "https://stat.gov.ua/sites/default/files/2023-10/%D0%92%D0%B0%D0%BB%D0%BE%D0%B2%D0%B8%D0%B9%20%D1%80%D0%B5%D0%B3%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9%20%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%20(2004-2021).zip",
+      "sha256": "b9e13a2d2b95b289ebe0a6a23f8d4119e9c33d316ad9a71c240187ca728f64ba",
+      "bytes": 27231,
+      "processing": "All cells extracted from the 2004–2021 revised workbook with xlrd 2.0.2; source ZIP retained. See scripts/extract-ukraine-regional-gdp.py."
+    }
+  }
+}

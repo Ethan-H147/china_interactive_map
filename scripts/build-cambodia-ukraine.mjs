@@ -26,3 +26,5 @@ await finish('ukraine','UKR',uaUnits,ua,second,uaReports,'27 first-level divisio
 const flags=load('dist/data/europe/flag-sources.json');for(const [country,code,w,h]of [['cambodia','kh',1000,640],['ukraine','ua',1200,800]]){const name='flag-'+code+'.svg',b=source(name),svg=b.toString();fs.writeFileSync('dist/vendor/'+name,b);flags.flags[country]={file:'vendor/'+name,full:'vendor/'+name,name:country+' national flag',width:w,height:h,source:manifest.files[name].url,page:'https://commons.wikimedia.org/wiki/File:Flag_of_'+(country==='ukraine'?'Ukraine':'Cambodia')+'.svg',credit:manifest.files[name].credit,license:'Public domain',sha256:manifest.files[name].sha256};}fs.writeFileSync('dist/data/europe/flag-sources.json',JSON.stringify(flags,null,2)+'\n');
 
 if(fs.existsSync('scripts/boundary-sources/poland/frontiers.bin'))await (await import('./reconcile-poland-ukraine.mjs')).reconcilePolandUkraine();
+
+await (await import('./prepare-cz-sk-ua-statistics.mjs')).prepareCzSkUaStatistics(["ukraine"]);
