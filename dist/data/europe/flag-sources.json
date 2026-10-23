@@ -733,6 +733,39 @@
       "credit": "Wikimedia Commons · national flag artwork",
       "license": "Public domain",
       "sha256": "aa4fda18694f1e60c937933eebd752cc3ed0701652f0dfca84677c3267b26db9"
+    },
+    "ecuador": {
+      "file": "vendor/flag-ec.svg",
+      "full": "vendor/flag-ec.svg",
+      "width": 1440,
+      "height": 960,
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ecuador.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "sha256": "b6579b12e0f49555d608ee7a59e82aa932d4481af439f936bf1009e115f2d20e"
+    },
+    "venezuela": {
+      "file": "vendor/flag-ve.svg",
+      "full": "vendor/flag-ve.svg",
+      "width": 180,
+      "height": 120,
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Venezuela.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "sha256": "facdf9d3992996b00daa7cd1749d2f583528f7bcc9c4b4c88bc7b9cd16f2712c"
+    },
+    "colombia": {
+      "file": "vendor/flag-co.svg",
+      "full": "vendor/flag-co.svg",
+      "width": 900,
+      "height": 600,
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Colombia.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "sha256": "85fd47e9d0c91d088b196609e0cb49424950d30084f31c80a44fbac18b7a377b"
     }
   }
 }

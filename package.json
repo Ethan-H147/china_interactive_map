@@ -318,6 +318,9 @@
     "test:nigeria": "node scripts/validate-nigeria.mjs && node scripts/browser/run.mjs nigeria",
     "fetch:central-europe": "node scripts/fetch-central-europe.mjs",
     "build:central-europe": "npm run fetch:central-europe && node --max-old-space-size=12000 scripts/build-central-europe.mjs && node scripts/fetch-central-europe-flags.mjs && node scripts/prepare-region-colors.mjs austria hungary slovenia && node --max-old-space-size=10000 scripts/build-world-land.mjs && node scripts/build-compact.mjs",
-    "test:central-europe": "node scripts/validate-central-europe.mjs && node scripts/browser/run.mjs central-europe"
+    "test:central-europe": "node scripts/validate-central-europe.mjs && node scripts/browser/run.mjs central-europe",
+    "fetch:north-andes": "node scripts/fetch-north-andes.mjs && node --max-old-space-size=12000 scripts/prepare-north-andes-sources.mjs",
+    "build:north-andes": "node --max-old-space-size=12000 scripts/build-north-andes.mjs && node scripts/prepare-region-colors.mjs ecuador venezuela colombia",
+    "test:north-andes": "node scripts/validate-north-andes.mjs"
   }
 }

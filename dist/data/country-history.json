@@ -976,6 +976,33 @@
       "evidence": {
         "note": "Official local subdivisions, dated resident population, regional GDP, local names, flags and reconciled shared borders."
       }
+    },
+    {
+      "country": "ecuador",
+      "name": "Ecuador",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added OCHA/national detailed administrative geometry, dated population, original national flag, search and first-level quizzes."
+      }
+    },
+    {
+      "country": "venezuela",
+      "name": "Venezuela",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added OCHA/national detailed administrative geometry, dated population, original national flag, search and first-level quizzes."
+      }
+    },
+    {
+      "country": "colombia",
+      "name": "Colombia",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added OCHA/national detailed administrative geometry, dated population, original national flag, search and first-level quizzes."
+      }
     }
   ]
 }

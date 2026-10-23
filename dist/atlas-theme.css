@@ -93,3 +93,9 @@ body[data-atlas=brunei]{--red:#8f6e18;--red-dark:#6c510d;--ink:#302c20;--muted:#
 :root[data-atlas=hungary],body[data-atlas=hungary],.country-option[data-atlas=hungary]{--red:#54733d;--red-dark:#3a5429;--ink:#35422e;--muted:#7d8d71;--gold:#ad4d48;--line:#dce5d4;--paper:#fdfefb;--map:#f3f4ed;--surface-soft:#eaf0e2;--accent-soft:#c6d6b4;--header-stripe:linear-gradient(90deg,#b34c4b 0 33.333%,#fff 33.333% 66.667%,#54733d 66.667%)}
 
 :root[data-atlas=slovenia],body[data-atlas=slovenia],.country-option[data-atlas=slovenia]{--red:#356b8c;--red-dark:#254d69;--ink:#2d4051;--muted:#748ca1;--gold:#ae4d49;--line:#d7e2ee;--paper:#fcfdff;--map:#eef3f8;--surface-soft:#e8f0f7;--accent-soft:#b8d1e3;--header-stripe:linear-gradient(90deg,#fff 0 33.333%,#356b8c 33.333% 66.667%,#b34b4d 66.667%)}
+
+:root[data-atlas=ecuador],body[data-atlas=ecuador],.country-option[data-atlas=ecuador]{--red:#92732e;--red-dark:#92732e;--ink:#34414c;--muted:#7b8994;--gold:#ad9348;--line:#dbe3e9;--paper:#fdfefe;--map:#f6f2e7;--surface-soft:#eee4c6;--accent-soft:#ddc48e;--header-stripe:linear-gradient(90deg,#d4b246 0 50%,#3d6196 50% 75%,#ac4948 75%)}
+
+:root[data-atlas=venezuela],body[data-atlas=venezuela],.country-option[data-atlas=venezuela]{--red:#a24b49;--red-dark:#a24b49;--ink:#34414c;--muted:#7b8994;--gold:#ad9348;--line:#dbe3e9;--paper:#fdfefe;--map:#f6eeee;--surface-soft:#f0dfdd;--accent-soft:#dfb9b4;--header-stripe:linear-gradient(90deg,#d4b246 0 50%,#3d6196 50% 75%,#ac4948 75%)}
+
+:root[data-atlas=colombia],body[data-atlas=colombia],.country-option[data-atlas=colombia]{--red:#3d6b98;--red-dark:#3d6b98;--ink:#34414c;--muted:#7b8994;--gold:#ad9348;--line:#dbe3e9;--paper:#fdfefe;--map:#eef3f7;--surface-soft:#dfe9f2;--accent-soft:#b8cfe4;--header-stripe:linear-gradient(90deg,#d4b246 0 50%,#3d6196 50% 75%,#ac4948 75%)}

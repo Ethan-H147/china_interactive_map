@@ -44,6 +44,9 @@
       "soviet-union-1988": "data/europe/soviet-union-1988/context.bin",
       "timor-leste": "data/europe/timor-leste/context.bin",
       "brunei": "data/europe/brunei/context.bin",
+      "ecuador": "data/europe/ecuador/context.bin",
+      "venezuela": "data/europe/venezuela/context.bin",
+      "colombia": "data/europe/colombia/context.bin",
       "cambodia": "data/europe/cambodia/context.bin",
       "ukraine": "data/europe/ukraine/context.bin",
       "austria": "data/europe/austria/context.bin",
@@ -106,7 +109,7 @@
   },
   "topology": {
     "referenceCountries": 258,
-    "backgroundCountries": 128,
+    "backgroundCountries": 125,
     "atlasCodes": [
       "IDN",
       "MYS",
@@ -177,6 +180,8 @@
       "MMR",
       "BGD",
       "AFG",
+      "ECU",
+      "COL",
       "PRY",
       "BRI",
       "PRT",
@@ -186,6 +191,7 @@
       "USA",
       "CAN",
       "MEX",
+      "VEN",
       "HKG",
       "VAT",
       "CYN",
@@ -307,8 +313,6 @@
       "USG",
       "CUB",
       "HND",
-      "ECU",
-      "COL",
       "MDA",
       "TKM",
       "JOR",
@@ -321,7 +325,6 @@
       "GNB",
       "BLZ",
       "PAN",
-      "VEN",
       "PNG",
       "EGY",
       "YEM",
@@ -369,10 +372,10 @@
       "SER",
       "SCR"
     ],
-    "outlineGroups": 2138,
+    "outlineGroups": 2028,
     "simplificationMetres": 100,
     "frontierCorridorMetres": 8000,
-    "reconciledSliverKm2": 34577.81655457706,
+    "reconciledSliverKm2": 29071.948299871223,
     "policy": "Atlas display outlines are fixed references; foreign survey overlaps are clipped, and uncovered old-reference land within an 8 km land-frontier corridor is assigned to the nearest foreign edge. Source lake polygons are excluded. This reconciles display geometry and does not redefine sovereignty or claims.",
     "delegatedOutlineCodes": {
       "KAS": "Existing India/Pakistan/China atlas outlines cover this inland disputed source entity; its residual background fill is retained without false coastline strokes.",
@@ -385,9 +388,9 @@
     },
     "finalWaterAlignment": true
   },
-  "bytes": 4566740,
+  "bytes": 4555451,
   "fallbackSimplificationDegrees": 0.018,
-  "outlineBytes": 653075,
+  "outlineBytes": 609651,
   "titicacaShoreline": {
     "relations": [
       3000330,
@@ -446,13 +449,5 @@
   "polandWater": {
     "source": "data/europe/poland/sources.json",
     "method": "Mapped cross-border lagoons and official PRG Gulf of Gdańsk / Puck Bay water are excluded from land fills."
-  },
-  "alpineWater": {
-    "source": "data/alpine-lakes-sources.json",
-    "method": "Lac Léman and the complete Lake Constance surface are permanent land exclusions, without shoreline strokes."
-  },
-  "centralEuropeWater": {
-    "source": "data/central-europe-frontiers.json",
-    "method": "Current reconciled Austrian, German and Swiss country outlines supply their fallback land; only the detailed Alpine lake geometry is used for Lac Léman and Lake Constance."
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "source": "Existing reconciled atlas land, claims and international frontiers; no external basemap.",
-  "landBytes": 4500912,
-  "borderBytes": 892850,
+  "landBytes": 4510989,
+  "borderBytes": 851692,
   "countries": [
     "afghanistan",
     "angola",
@@ -20,10 +20,12 @@
     "canada",
     "chile",
     "china",
+    "colombia",
     "congo",
     "cyprus",
     "czechia",
     "denmark",
+    "ecuador",
     "estonia",
     "eswatini",
     "finland",
@@ -80,6 +82,7 @@
     "united-states",
     "uruguay",
     "vatican-city",
+    "venezuela",
     "vietnam"
   ],
   "simplificationDegrees": 0.006,

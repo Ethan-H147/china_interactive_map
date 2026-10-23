@@ -169,3 +169,5 @@ await (await import('./reconcile-aksai-outlines.mjs')).reconcileAksaiOutlines();
 (await import('./reconcile-czech-slovak.mjs')).preserveCzechSlovakFrontiers();
 
 await (await import('./central-europe-frontiers.mjs')).preserveCentralEuropeanFrontiers();
+
+if(fs.existsSync('scripts/boundary-sources/north-andes/resolved.bin'))(await import('./north-andes-frontiers.mjs')).writeNorthAndesBorders(load('scripts/boundary-sources/north-andes/resolved.bin').features);

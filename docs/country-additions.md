@@ -113,3 +113,5 @@ Baltic details, dates, source licenses and known coverage limits: [Baltic countr
 | 2026-10-22 | Slovenia | Local only | 12 statistical regions, 212 municipalities and 6,035 settlement areas; 2026 population and regional GDP. |
 
 Sources, special administrative cases and shared-border reconciliation: [Austria, Hungary and Slovenia](central-europe.md).
+
+Ecuador, Venezuela and Colombia were added on 2026-10-22 with detailed administrative maps, dated population, original flags, search and first-level quizzes. See [north-andes.md](north-andes.md) for source dates and coverage.

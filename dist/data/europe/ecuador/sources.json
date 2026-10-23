@@ -1,0 +1,199 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "24 provinces, 221 cantons and 1,042 parish reference areas from the retained 2024 OCHA/INEC administrative geography, including Galápagos. Census population is INEC 2022; later administrative changes are not backdated into census counts.",
+  "counts": {
+    "1": 24,
+    "2": 221,
+    "3": 1042
+  },
+  "processing": "Source polygons cleaned jointly and simplified at 2 metre tolerance; parent shapes dissolved from the same local topology. Complete shared border arcs use one canonical displayed path, including existing Peru and Brazil edges. Lake surfaces and shorelines have no outline. Local geometry loads by selected parent; remote island destinations are retained.",
+  "sources": {
+    "ecu-boundary-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ecu",
+      "sha256": "a10670369f5c33c2e6656c7639b79228ad4bcbc835a6dc99ea8800664240d385",
+      "bytes": 19339
+    },
+    "ven-boundary-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ven",
+      "sha256": "345592a785f141575bb812a790dad342da2b0c7c373595c1b08184a70331953f",
+      "bytes": 18512
+    },
+    "col-boundary-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-col",
+      "sha256": "58ddf1693f4a8942f7f2f7fbd4228234d5524d00e83256ce460251e8795acd63",
+      "bytes": 31400
+    },
+    "ven-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ven",
+      "sha256": "ba3d9930367a330757e166707255163f4f739d99854d86a3e5dc8385f1c4a779",
+      "bytes": 13333
+    },
+    "ven-population-all.xlsx": {
+      "url": "https://data.humdata.org/dataset/5c74e336-3162-44da-8c52-d4818c31c37b/resource/88fdaeaf-61e8-465a-8830-1751f6d06b86/download/ven_admpop_2011_v2.xlsx",
+      "provider": "INE Venezuela / UNFPA / OCHA · 2011 census",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-ven",
+      "sha256": "2a3f293dae98d84cf1a42a188b125ccdb9d1cf98ee969d53519038d43360eeea",
+      "bytes": 128169
+    },
+    "ven-population-0.csv": {
+      "url": "https://data.humdata.org/dataset/5c74e336-3162-44da-8c52-d4818c31c37b/resource/7e16d845-40dc-418d-87a2-4a5cce9b32c7/download/ven_admpop_adm0_2011_v2.csv",
+      "provider": "INE Venezuela / UNFPA / OCHA · 2011 census",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-ven",
+      "sha256": "49a3e51242587ef1012f261ba9ac41f564f89576aaf73b735b505c2753b1b016",
+      "bytes": 767
+    },
+    "ven-population-1.csv": {
+      "url": "https://data.humdata.org/dataset/5c74e336-3162-44da-8c52-d4818c31c37b/resource/4b1de050-b5a5-48d9-aa54-5bc8ca96ef4b/download/ven_admpop_adm1_2011_v2.csv",
+      "provider": "INE Venezuela / UNFPA / OCHA · 2011 census",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-ven",
+      "sha256": "acaadb256198af8560a91f8ceca8730a5e0766f06835dfd47b8266f1a7f4326d",
+      "bytes": 8337
+    },
+    "ven-population-2.csv": {
+      "url": "https://data.humdata.org/dataset/5c74e336-3162-44da-8c52-d4818c31c37b/resource/08faf516-e8cd-4834-8ac5-5a5ec081d0c3/download/ven_admpop_adm2_2011_v3.csv",
+      "provider": "INE Venezuela / UNFPA / OCHA · 2011 census",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-ven",
+      "sha256": "d44b4faf4407765c9eed46998ba483471dba3b378763c6c319bec96ceb37f530",
+      "bytes": 104545
+    },
+    "col-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-col",
+      "sha256": "abeaceb69213ade50d6250e7103d71c763d1d0de18b6e1853e5ad598e0783bb0",
+      "bytes": 54974
+    },
+    "col-population-2.csv": {
+      "url": "https://data.humdata.org/dataset/8520e386-9263-48c9-b1bf-b2349e019fbb/resource/56f0ef9b-b1df-4d7f-b2e1-6cb27aaecdb4/download/copy-of-col_admpop_adm2_2025.csv",
+      "provider": "DANE / OCHA · 2025 population projection",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-col",
+      "sha256": "d3187d66ce73228f05dcea31a47175a93f869871acefd9e3fcdef3a7ed37930f",
+      "bytes": 372853
+    },
+    "col-population-1.csv": {
+      "url": "https://data.humdata.org/dataset/8520e386-9263-48c9-b1bf-b2349e019fbb/resource/d1ef58d9-677d-4e8f-ad54-b439a014be1e/download/copy-of-col_admpop_adm1_2025.csv",
+      "provider": "DANE / OCHA · 2025 population projection",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-col",
+      "sha256": "cdd6125f62295760ee089d0960e4bd31f2d00f55497de0d38302f0bb8f9c42a6",
+      "bytes": 14583
+    },
+    "col-population-0.csv": {
+      "url": "https://data.humdata.org/dataset/8520e386-9263-48c9-b1bf-b2349e019fbb/resource/a06fea3b-17ee-4862-9c2e-448e0e0a310e/download/copy-of-col_admpop_adm0_2025.csv",
+      "provider": "DANE / OCHA · 2025 population projection",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-col",
+      "sha256": "bb0d531981dca4cb4a6a935d790b7d04fce491982a561cbc975c2877be3e9561",
+      "bytes": 1223
+    },
+    "flag-co.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg",
+      "provider": "Wikimedia Commons · original national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Colombia.svg",
+      "sha256": "85fd47e9d0c91d088b196609e0cb49424950d30084f31c80a44fbac18b7a377b",
+      "bytes": 255
+    },
+    "flag-ve.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Venezuela.svg",
+      "provider": "Wikimedia Commons · original national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela.svg",
+      "sha256": "facdf9d3992996b00daa7cd1749d2f583528f7bcc9c4b4c88bc7b9cd16f2712c",
+      "bytes": 1886
+    },
+    "flag-ec.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Flag_of_Ecuador.svg",
+      "provider": "Wikimedia Commons · original national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Ecuador.svg",
+      "sha256": "b6579b12e0f49555d608ee7a59e82aa932d4481af439f936bf1009e115f2d20e",
+      "bytes": 279145
+    },
+    "col-gdp-2025.xlsx": {
+      "url": "https://www.dane.gov.co/files/operaciones/PIB/anex-PIBDep-TotalDep-2025pr.xlsx",
+      "provider": "DANE · 2025 preliminary departmental GDP, current prices",
+      "page": "https://www.dane.gov.co/index.php/estadisticas-por-tema/cuentas-nacionales/cuentas-nacionales-departamentales",
+      "sha256": "4c77d0bcc287355d50686c8133f2da1d4fdea3a39e5f20f28d0f22fece1f5ec9",
+      "bytes": 150809
+    },
+    "col-population-2026.xlsx": {
+      "url": "https://www.dane.gov.co/files/censo2018/proyecciones-de-poblacion/Departamental/PPED-AreaDep-2018-2050_VP.xlsx",
+      "provider": "DANE · departmental population projections updated August 2025; midyear 2026 reference",
+      "sha256": "afd5befe9dfc49fd83c5f7b592fbd8eee9e4519736a82129db876a052e9b91bf",
+      "bytes": 1034528
+    },
+    "ecu-population-2022.zip": {
+      "url": "https://raw.githubusercontent.com/Yachssiton/Econometria_CensoEcu2022/main/01_2022_CPV_Estructura_poblacional_CSV.zip",
+      "provider": "INEC · official 2022 census population tables; retained public mirror of original download",
+      "page": "https://www.censoecuador.gob.ec/resultados-censo/",
+      "mirror": "https://github.com/Yachssiton/Econometria_CensoEcu2022",
+      "license": "INEC statistical tables; attribution retained in original table headers",
+      "sha256": "32db98765bb73d8a699c76e9a607b9a7a3c4e2f2932795ba706a0f5a8c39053d",
+      "bytes": 372527
+    },
+    "col-fx-2025.json": {
+      "url": "https://api.worldbank.org/v2/country/COL/indicator/PA.NUS.FCRF?date=2025&format=json",
+      "provider": "World Bank / IMF IFS annual average COP per USD",
+      "sha256": "bea604d410fb43990e97564afd55c35a3420594a7cc165cf9a32a70c873ad9ed",
+      "bytes": 330
+    },
+    "ecu-adm3.json": {
+      "url": "https://data.humdata.org/dataset/ab3c7592-3b0c-41cd-999a-2919a6b243f2/resource/d00145f6-141c-4bf2-a881-c32341ddec75/download/ecu_adm_2024.zip",
+      "provider": "OCHA COD / national mapping authority",
+      "license": "CC BY 3.0 IGO",
+      "processing": "Original polygons cleaned jointly and simplified at 2 metre tolerance; coordinates rounded to six decimals.",
+      "referenceYear": 2024,
+      "sha256": "05813f486c1e16f1bd5b074cb7f5f334a17ba14045617d5819385f1c43fdc6f0",
+      "bytes": 46632077
+    },
+    "ven-adm1.json": {
+      "url": "https://data.humdata.org/dataset/5b141d29-534f-4f01-a0bc-41e2f375d925/resource/93b05eca-adbd-4ce3-bae3-b4d6d64fac8b/download/ven_admin_boundaries.geojson.zip",
+      "provider": "OCHA COD / national mapping authority",
+      "license": "CC BY 3.0 IGO",
+      "processing": "Original polygons cleaned jointly and simplified at 2 metre tolerance; coordinates rounded to six decimals.",
+      "referenceYear": 2021,
+      "sha256": "1410d062320fb9307aa19d750b3156e2109ca11b6c67b55d35c9135174562637",
+      "bytes": 2680661
+    },
+    "ven-adm2.json": {
+      "url": "https://data.humdata.org/dataset/5b141d29-534f-4f01-a0bc-41e2f375d925/resource/93b05eca-adbd-4ce3-bae3-b4d6d64fac8b/download/ven_admin_boundaries.geojson.zip",
+      "provider": "OCHA COD / national mapping authority",
+      "license": "CC BY 3.0 IGO",
+      "processing": "Original polygons cleaned jointly and simplified at 2 metre tolerance; coordinates rounded to six decimals.",
+      "referenceYear": 2021,
+      "sha256": "ca6e34d9cf684674aab16fa8f50d3130536e2bf915edf6e1df8f27fcd8c1c8e9",
+      "bytes": 6740345
+    },
+    "ven-adm3.json": {
+      "url": "https://data.humdata.org/dataset/5b141d29-534f-4f01-a0bc-41e2f375d925/resource/93b05eca-adbd-4ce3-bae3-b4d6d64fac8b/download/ven_admin_boundaries.geojson.zip",
+      "provider": "OCHA COD / national mapping authority",
+      "license": "CC BY 3.0 IGO",
+      "processing": "Original polygons cleaned jointly and simplified at 2 metre tolerance; coordinates rounded to six decimals.",
+      "referenceYear": 2021,
+      "sha256": "82e61f69952ecc8abd84129bf0dd61e3bb6b6ad21def229ff64bbc650b19adcb",
+      "bytes": 11004294
+    },
+    "col-adm1.json": {
+      "url": "https://data.humdata.org/dataset/50ea7fee-f9af-45a7-8a52-abb9c790a0b6/resource/32fba556-0109-4d1c-84cb-c8abddf7775b/download/col-administrative-divisions-shapefiles.zip",
+      "provider": "OCHA COD / national mapping authority",
+      "license": "CC BY 3.0 IGO",
+      "processing": "Original polygons cleaned jointly and simplified at 2 metre tolerance; coordinates rounded to six decimals.",
+      "referenceYear": 2020,
+      "sha256": "5d5f4cd09895e881fed4e16c16ae86bd4b30f6274563c05f6f1f45efe5c8d5ed",
+      "bytes": 10182819
+    },
+    "col-adm2.json": {
+      "url": "https://data.humdata.org/dataset/50ea7fee-f9af-45a7-8a52-abb9c790a0b6/resource/32fba556-0109-4d1c-84cb-c8abddf7775b/download/col-administrative-divisions-shapefiles.zip",
+      "provider": "OCHA COD / national mapping authority",
+      "license": "CC BY 3.0 IGO",
+      "processing": "Original polygons cleaned jointly and simplified at 2 metre tolerance; coordinates rounded to six decimals.",
+      "referenceYear": 2020,
+      "sha256": "0e2c494f9ff3b9d5830c565e1732c1f423097cb5f85bbbe083e1cff8ca4d6d38",
+      "bytes": 55508606
+    }
+  }
+}
