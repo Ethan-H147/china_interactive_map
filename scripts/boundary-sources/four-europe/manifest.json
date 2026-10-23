@@ -1,0 +1,152 @@
+{
+  "retrieved": "2026-10-23",
+  "files": {
+    "lau2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat GISCO 2024",
+      "license": "GISCO distribution terms",
+      "originalSha256": "ae07901e0a11cb7891d1a6d6a31cfd833e25672ca318908856b0e34a1acca594",
+      "extraction": "Croatia, Romania and Bosnia and Herzegovina only",
+      "sha256": "64bc63f25b48d8d9d49490043cb337b12d2f1c8869137e9dfd55e0a0d5b3b0e8",
+      "bytes": 5971302
+    },
+    "nuts2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat GISCO 2024",
+      "license": "GISCO distribution terms",
+      "originalSha256": "b013441a23f5a29cd394c88f9f2621dea4e0fd5b18f0458dc708e48defd6aabb",
+      "extraction": "Croatia, Romania and Bosnia and Herzegovina only",
+      "sha256": "2c83ffed5c7bc79a1aaf725f586bb21e09ed825e5de8b5e5440fc96ffb1b3378",
+      "bytes": 3370768
+    },
+    "bih-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BIH/ADM1/",
+      "sha256": "399ab4b9e442c11537d150d8dfb985721463d95c10591bcf8872d7e8ab6b5798",
+      "bytes": 1713
+    },
+    "bih-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/90a1d52/releaseData/gbOpen/BIH/ADM1/geoBoundaries-BIH-ADM1.geojson",
+      "credit": "Wikimedia Commons",
+      "license": "Public Domain",
+      "year": "2013",
+      "sha256": "39008bc48f8a8bad48f816a8d6a474d5a3fa8d8ae37d2431ac904deeb20f6f48",
+      "bytes": 205450
+    },
+    "bih-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BIH/ADM2/",
+      "sha256": "5f17128764b66a87d3c13797a22de14d15a601034d57c6a9e268acb10f1c013a",
+      "bytes": 1720
+    },
+    "bih-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/f549eab/releaseData/gbOpen/BIH/ADM2/geoBoundaries-BIH-ADM2.geojson",
+      "credit": "Wikimedia Commons",
+      "license": "Public Domain",
+      "year": "2013",
+      "sha256": "fb45eb54f29beb7c4d79813d8120809bf1ca843d433ef822befbc95f4f261347",
+      "bytes": 299723
+    },
+    "bih-adm3-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BIH/ADM3/",
+      "sha256": "fa56c9960401976a4649d23bca0e94ef12bf2d0b1aab661ff8e7e4f32ef6fa4d",
+      "bytes": 1709
+    },
+    "bih-adm3.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/f549eab/releaseData/gbOpen/BIH/ADM3/geoBoundaries-BIH-ADM3.geojson",
+      "credit": "Wikimedia Commons",
+      "license": "Public Domain",
+      "year": "2013",
+      "sha256": "d0196a097d9d517f7db6a8013889892c0ab5aab3d7dfd2e74fd5b22152ff8857",
+      "bytes": 971578
+    },
+    "blr-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-blr",
+      "sha256": "f8c3147abf7ebfabde11d383cbca620f0b52252814cff969523b4307349ece15",
+      "bytes": 20129
+    },
+    "blr-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/d64db592-f54c-4ae4-9b68-2fd81d7a4175/resource/3e856f08-2a4a-41db-a586-716dedb7753a/download/blr_admin_boundaries.geojson.zip",
+      "credit": "UNICEF",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "notes": "Belarus administrative level 0-2 boundaries (COD-AB) dataset version 01.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 7   \n- Admin 2: 119   \n  \n  \nDates associated with this dataset:  \n- 21 November 2024: dataset reviewed for accuracy and completeness  \n- 27 July 2022: valid for use by the humanitarian community  \n- 30 July 2019: last edit to the dataset before publishing  \n- 30 July 2019: boundaries created by the source  \n  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "1f17ef1077914264533df303336bcbbf57c2edf2530118d267b0235e7b22a082",
+      "bytes": 1236282
+    },
+    "gdp.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2022&geo=HR028&geo=HR033&geo=HR031&geo=HR034&geo=HR032&geo=HR035&geo=HR036&geo=HR037&geo=HR050&geo=HR061&geo=HR062&geo=HR063&geo=HR064&geo=HR021&geo=HR065&geo=HR022&geo=HR023&geo=HR024&geo=HR025&geo=HR026&geo=HR027&geo=RO311&geo=RO317&geo=RO312&geo=RO111&geo=RO321&geo=RO322&geo=RO313&geo=RO112&geo=RO411&geo=RO113&geo=RO412&geo=RO314&geo=RO315&geo=RO114&geo=RO413&geo=RO316&geo=RO115&geo=RO414&geo=RO116&geo=RO415&geo=RO213&geo=RO214&geo=RO121&geo=RO421&geo=RO215&geo=RO122&geo=RO422&geo=RO216&geo=RO123&geo=RO423&geo=RO221&geo=RO124&geo=RO424&geo=RO222&geo=RO125&geo=RO223&geo=RO126&geo=RO224&geo=RO211&geo=RO225&geo=RO212&geo=RO226",
+      "credit": "Eurostat regional GDP, current prices",
+      "license": "CC BY 4.0",
+      "sha256": "0f970469a1435cd25fb5eef5c3431cd7c7caeba7dcd18f233d4aed583e00a56a",
+      "bytes": 10784
+    },
+    "exchange.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?currency=USD&statinfo=AVG&sinceTimePeriod=2022",
+      "credit": "Eurostat annual average USD per EUR",
+      "license": "CC BY 4.0",
+      "sha256": "26ffedd1e2f3420d00bae478b08639db6a00efde9956ae08aa31f5eceb3dd001",
+      "bytes": 2663
+    },
+    "worldbank-BIH.json": {
+      "url": "https://api.worldbank.org/v2/country/BIH/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "d92458d9d370e11fe7b206949e1ef74c2e72cd69fc42a9ea4f5bc1333cd4cdc4",
+      "bytes": 2087
+    },
+    "worldbank-HRV.json": {
+      "url": "https://api.worldbank.org/v2/country/HRV/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "3ff4dac97798b27b33615aaa456d3d885787e547c7426b9e09155ceecc8d6126",
+      "bytes": 1952
+    },
+    "worldbank-ROU.json": {
+      "url": "https://api.worldbank.org/v2/country/ROU/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "8187c341889530f1f5e917ef6454565a448c0bdd27648d7157aba96726e0074c",
+      "bytes": 1955
+    },
+    "worldbank-BLR.json": {
+      "url": "https://api.worldbank.org/v2/country/BLR/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "66f3e14f06d8df1ae9a79348beae917b53f59cf7c417fac21c27afe943b2e90e",
+      "bytes": 1951
+    },
+    "flag-ba.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "2b379399e315c3df92a104a08b9e14d1f66169dfee0fc2213794baa1c233b75c",
+      "bytes": 512
+    },
+    "flag-hr.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "220af373c5701c4f4c09a6e1765305f571442940a3c921bd2daac483761b2a8f",
+      "bytes": 68547
+    },
+    "flag-ro.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "57e1c4d27feec8e7a459e2dc522b9e6ec3eec996d9504733a9a17d9b4fce3026",
+      "bytes": 297
+    },
+    "flag-by.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "d4bf35a695071ec004a06a29c3d012d672030bf9257c7e79c511a4c2b3d7e6c4",
+      "bytes": 2040
+    },
+    "bih-census-2013.pdf": {
+      "url": "https://www.popis.gov.ba/popis2013/doc/RezultatiPopisa_BS.pdf",
+      "credit": "Agency for Statistics of Bosnia and Herzegovina, final 2013 census",
+      "license": "Official published statistical facts with attribution",
+      "sha256": "d797381149a5020c82a8dfd0b7b5a38078d05029139a0ed70345c1e957a978aa",
+      "bytes": 12462115
+    }
+  }
+}

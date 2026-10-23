@@ -1,0 +1,33 @@
+{
+  "retrieved": "2026-10-23",
+  "coverage": "Six regions and the separate city of Minsk. The retained OCHA reference contains 118 district polygons and a Minsk city equivalent; the city is shown only once, at the first level. Boundaries were created in 2019, valid for humanitarian use in 2022 and reviewed in November 2024. National population and GDP are separately dated World Bank estimates; municipal population and economic values are not inferred.",
+  "counts": {
+    "1": 7,
+    "2": 118
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "nuts2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat GISCO 2024",
+      "license": "GISCO distribution terms",
+      "originalSha256": "b013441a23f5a29cd394c88f9f2621dea4e0fd5b18f0458dc708e48defd6aabb",
+      "extraction": "Croatia, Romania and Bosnia and Herzegovina only",
+      "sha256": "2c83ffed5c7bc79a1aaf725f586bb21e09ed825e5de8b5e5440fc96ffb1b3378",
+      "bytes": 3370768
+    },
+    "blr-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-blr",
+      "sha256": "f8c3147abf7ebfabde11d383cbca620f0b52252814cff969523b4307349ece15",
+      "bytes": 20129
+    },
+    "blr-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/d64db592-f54c-4ae4-9b68-2fd81d7a4175/resource/3e856f08-2a4a-41db-a586-716dedb7753a/download/blr_admin_boundaries.geojson.zip",
+      "credit": "UNICEF",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "notes": "Belarus administrative level 0-2 boundaries (COD-AB) dataset version 01.  \n  \nThis dataset is structured into 2 levels:  \n- Admin 1: 7   \n- Admin 2: 119   \n  \n  \nDates associated with this dataset:  \n- 21 November 2024: dataset reviewed for accuracy and completeness  \n- 27 July 2022: valid for use by the humanitarian community  \n- 30 July 2019: last edit to the dataset before publishing  \n- 30 July 2019: boundaries created by the source  \n  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+      "sha256": "1f17ef1077914264533df303336bcbbf57c2edf2530118d267b0235e7b22a082",
+      "bytes": 1236282
+    }
+  }
+}

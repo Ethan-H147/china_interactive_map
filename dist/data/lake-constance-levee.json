@@ -1,0 +1,9 @@
+{
+  "corrected": "2026-10-23",
+  "land": "Rhine river-mouth levee extension (Rheinvorstreckung), Hard, Vorarlberg, Austria",
+  "geometry": "scripts/boundary-sources/alpine-lakes/rhine-levee-land.json.gz",
+  "geometrySha256": "bde4363a3a95e62823a1a53911873427fc94db06f8f3e59e1e97b6cff8c93ec0",
+  "source": "https://www.ris.bka.gv.at/eli/lgbl/VO/1992/57/P2/LVB40006599",
+  "evidence": "Vorarlberg Rheindelta reserve boundary explicitly includes both river-mouth mole heads and the right Rhine embankment. The previous German lake-sector geometry incorrectly captured the exposed levee tips.",
+  "policy": "Correct exposed land only. Keep open lake water unfilled and unstroked; infer no international boundary through the lake."
+}

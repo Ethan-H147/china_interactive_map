@@ -1,0 +1,158 @@
+{
+  "retrieved": "2026-10-23",
+  "files": {
+    "lau2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat GISCO 2024",
+      "license": "GISCO distribution terms",
+      "originalSha256": "ae07901e0a11cb7891d1a6d6a31cfd833e25672ca318908856b0e34a1acca594",
+      "extraction": "Albania, Montenegro, North Macedonia, Serbia, Kosovo and Bulgaria only",
+      "sha256": "a963a6916fdf776ccb010c3146b4c2049dfef0bfa1819e1ae0cb24c513c980d9",
+      "bytes": 1934354
+    },
+    "nuts2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat GISCO 2024",
+      "license": "GISCO distribution terms",
+      "originalSha256": "b013441a23f5a29cd394c88f9f2621dea4e0fd5b18f0458dc708e48defd6aabb",
+      "extraction": "Albania, Montenegro, North Macedonia, Serbia, Kosovo and Bulgaria only",
+      "sha256": "0ac142c2a1bb58cf955bf3851248d7b917cb782e3d266063d3d43afe3bceedb1",
+      "bytes": 2528170
+    },
+    "montenegro-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "[out:json][timeout:180];area[\"ISO3166-1\"=\"ME\"][\"admin_level\"=\"2\"]->.a;relation(area.a)[\"boundary\"=\"administrative\"][\"admin_level\"=\"6\"];out geom;",
+      "scope": "Montenegro administrative level 6 municipalities, retrieved 23 October 2026",
+      "sha256": "3bc19722aefb00e6183c8290763b418ea4e8c639a386ac08d0b80a2f88265abb",
+      "bytes": 3796165
+    },
+    "kosovo-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/XKX/ADM2/",
+      "sha256": "cc64f2198d3ee8e6460c5b834b6577ae902dd90471351a4e873464f546161bf2",
+      "bytes": 1689
+    },
+    "kosovo-municipalities.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/XKX/ADM2/geoBoundaries-XKX-ADM2.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "© OpenStreetMap contributors · ODbL 1.0; retained provider metadata also records legacy CC BY-SA attribution",
+      "year": "2017",
+      "sha256": "f04b49acd0fee5fa14db1377afa8f1d30b1530643d4aa063133a7b69b04c4b90",
+      "bytes": 2922402
+    },
+    "gdp.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2021&geo=AL011&geo=AL012&geo=AL013&geo=AL031&geo=AL032&geo=AL033&geo=AL034&geo=AL014&geo=AL015&geo=AL021&geo=AL022&geo=AL035&geo=BG311&geo=BG312&geo=BG313&geo=BG314&geo=BG325&geo=BG331&geo=BG332&geo=BG315&geo=BG321&geo=BG322&geo=BG323&geo=BG324&geo=BG342&geo=BG343&geo=BG344&geo=BG411&geo=BG333&geo=BG334&geo=BG341&geo=BG423&geo=BG424&geo=BG425&geo=BG412&geo=BG413&geo=BG414&geo=BG415&geo=BG421&geo=BG422&geo=MK003&geo=MK004&geo=MK001&geo=MK002&geo=MK005&geo=MK006&geo=MK007&geo=MK008&geo=RS127&geo=RS211&geo=RS212&geo=RS213&geo=RS214&geo=RS215&geo=RS218&geo=RS221&geo=RS216&geo=RS217&geo=RS110&geo=RS121&geo=RS122&geo=RS123&geo=RS124&geo=RS125&geo=RS126&geo=RS222&geo=RS223&geo=RS224&geo=RS225&geo=RS226&geo=RS227&geo=RS228&geo=RS229",
+      "credit": "Eurostat regional GDP, current prices",
+      "license": "CC BY 4.0",
+      "sha256": "814c9fcd6ed6d60263659582c1a4f0b3916b2ee66119b23dbbbc8a22718cff65",
+      "bytes": 11973
+    },
+    "population.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/demo_r_pjanaggr3?sex=T&age=TOTAL&unit=NR&sinceTimePeriod=2022&geo=AL011&geo=AL012&geo=AL013&geo=AL031&geo=AL032&geo=AL033&geo=AL034&geo=AL014&geo=AL015&geo=AL021&geo=AL022&geo=AL035&geo=BG311&geo=BG312&geo=BG313&geo=BG314&geo=BG325&geo=BG331&geo=BG332&geo=BG315&geo=BG321&geo=BG322&geo=BG323&geo=BG324&geo=BG342&geo=BG343&geo=BG344&geo=BG411&geo=BG333&geo=BG334&geo=BG341&geo=BG423&geo=BG424&geo=BG425&geo=BG412&geo=BG413&geo=BG414&geo=BG415&geo=BG421&geo=BG422&geo=MK003&geo=MK004&geo=MK001&geo=MK002&geo=MK005&geo=MK006&geo=MK007&geo=MK008&geo=RS127&geo=RS211&geo=RS212&geo=RS213&geo=RS214&geo=RS215&geo=RS218&geo=RS221&geo=RS216&geo=RS217&geo=RS110&geo=RS121&geo=RS122&geo=RS123&geo=RS124&geo=RS125&geo=RS126&geo=RS222&geo=RS223&geo=RS224&geo=RS225&geo=RS226&geo=RS227&geo=RS228&geo=RS229",
+      "credit": "Eurostat population on 1 January by NUTS3 region",
+      "license": "CC BY 4.0",
+      "sha256": "6ba4b9d42c30623557a6c2d70e88d6396c7f77b68e0e99b33b36ece0ca773a77",
+      "bytes": 8976
+    },
+    "exchange.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?currency=USD&statinfo=AVG&sinceTimePeriod=2021",
+      "credit": "Eurostat annual average USD per EUR",
+      "license": "CC BY 4.0",
+      "sha256": "c58db4855d6ed9f483e91d17cef5fc9bae8f041a35e3544a2a540135e0b5c2b8",
+      "bytes": 2697
+    },
+    "worldbank-ALB.json": {
+      "url": "https://api.worldbank.org/v2/country/ALB/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "bd5a8d62a0bf39b6c1d79e59f3d746077a640b07975275044fc8a4b5fbbbb6b7",
+      "bytes": 1950
+    },
+    "worldbank-MNE.json": {
+      "url": "https://api.worldbank.org/v2/country/MNE/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "0868dc027a7554cf4cee2cea7e2412ac207c170a918dce44b192b3524435cd78",
+      "bytes": 1976
+    },
+    "worldbank-XKX.json": {
+      "url": "https://api.worldbank.org/v2/country/XKX/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "e927c34b6cb98d1f0a870d8afae13863a9bc77b547369c51d680f4278f463e4a",
+      "bytes": 1942
+    },
+    "worldbank-SRB.json": {
+      "url": "https://api.worldbank.org/v2/country/SRB/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "598241f5e647281dfffd94f233dede35d2494ce3955c9754cdbd54b3ce96cde2",
+      "bytes": 1942
+    },
+    "worldbank-MKD.json": {
+      "url": "https://api.worldbank.org/v2/country/MKD/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "d4c9bbed520156e01fdd4febb1ae22a53ccac70c6317b9ec9dee432fcd10b405",
+      "bytes": 2023
+    },
+    "worldbank-BGR.json": {
+      "url": "https://api.worldbank.org/v2/country/BGR/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2023:2025&format=json&per_page=100",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "ba5b21d5fe9c9b584cf40069baf049f32eece6499c7afc987202da0729d0cae0",
+      "bytes": 1961
+    },
+    "flag-al.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "3f241fb4f5393daf4a9098fd1486c8e801216ffe698ff8f7601f33968761100d",
+      "bytes": 12534
+    },
+    "flag-me.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "53761b966181c55a3c3853292cb55705ff4d9879f9b59f06601bd29d846a3bf6",
+      "bytes": 123773
+    },
+    "flag-xk.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Kosovo.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "9c6ee498a2f96888ef3ac9cdbecc9a953802e0c3401ac56b3763f41b8fe8377b",
+      "bytes": 8464
+    },
+    "flag-rs.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "e0a8bff6ee5445d6676a788c3761b412275688196abdd4bd149d74d6c723040c",
+      "bytes": 37943
+    },
+    "flag-mk.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_North_Macedonia.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "f9a526edefb4278f21377c34e090de0f7c790800c9f4b1007007bf64d0064a1d",
+      "bytes": 379
+    },
+    "flag-bg.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "9c023198075538da242eeb7c16192d6aed8757e4e954ed974822c24637e4cc7f",
+      "bytes": 288
+    },
+    "croatia-country-members.json": {
+      "url": "https://overpass-api.de/api/interpreter",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "query": "[out:json][timeout:120];relation[\"ISO3166-1\"=\"HR\"][\"admin_level\"=\"2\"];out body;",
+      "sha256": "ab29d334eb121bfcad4017cc0ac87d9f532fe0497d23956a21c1a041dbdfd532",
+      "bytes": 87640
+    }
+  }
+}

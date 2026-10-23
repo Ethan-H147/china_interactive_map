@@ -198,5 +198,9 @@
       "sha256": "c58db4855d6ed9f483e91d17cef5fc9bae8f041a35e3544a2a540135e0b5c2b8",
       "bytes": 2697
     }
+  },
+  "rhineLevee": {
+    "source": "data/lake-constance-levee.json",
+    "policy": "The two Rhine river-mouth levee fragments belong to the Austrian land display (Hard, Bregenz, Vorarlberg), not German Nonnenhorn. Retain the existing lake shoreline geometry; do not draw a sovereign boundary across open Lake Constance."
   }
 }

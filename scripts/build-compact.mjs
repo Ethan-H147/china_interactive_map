@@ -27,6 +27,7 @@ if(import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
  // Keep permanent shared lakes and the Swiss survey frontier in every rebuild.
  await (await import('./alpine-lakes.mjs')).reconcileAlpineLakes();
  if(fs.existsSync('scripts/boundary-sources/central-europe/resolved.bin'))await (await import('./repair-central-enclaves.mjs')).repairCentralEnclaves();
+ await (await import('./repair-rhine-levee.mjs')).repairRhineLevee();
  await (await import('./central-europe-frontiers.mjs')).preserveCentralEuropeanFrontiers();
  await (await import('./refresh-central-world.mjs')).refreshCentralWorld();
  await (await import('./finalize-central-water.mjs')).refreshCentralSelectionOutlines();

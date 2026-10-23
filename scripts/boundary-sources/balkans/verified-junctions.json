@@ -1,0 +1,41 @@
+{
+  "method": "Exact shared source vertices replace approximate Natural Earth junction locators. No geographic coordinates are invented.",
+  "junctions": [
+    {
+      "sides": [
+        "ALB",
+        "MKD",
+        "KOS"
+      ],
+      "point": [
+        20.594286,
+        41.877327
+      ],
+      "evidence": "Vertex present in all three retained GISCO country/local geometries"
+    },
+    {
+      "sides": [
+        "BGR",
+        "MKD",
+        "SRB"
+      ],
+      "point": [
+        22.360207,
+        42.311157
+      ],
+      "evidence": "Vertex present in all three retained GISCO country/local geometries"
+    },
+    {
+      "sides": [
+        "ROU",
+        "SRB",
+        "BGR"
+      ],
+      "point": [
+        22.675162,
+        44.215663
+      ],
+      "evidence": "Vertex present in the retained Romanian regional outline and both Serbian and Bulgarian local sources"
+    }
+  ]
+}

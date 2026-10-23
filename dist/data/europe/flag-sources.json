@@ -766,6 +766,106 @@
       "credit": "Wikimedia Commons · national flag artwork",
       "license": "Public domain",
       "sha256": "85fd47e9d0c91d088b196609e0cb49424950d30084f31c80a44fbac18b7a377b"
+    },
+    "bosnia-herzegovina": {
+      "file": "vendor/flag-ba.svg",
+      "full": "vendor/flag-ba.svg",
+      "name": "Bosnia and Herzegovina national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bosnia_and_Herzegovina.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "2b379399e315c3df92a104a08b9e14d1f66169dfee0fc2213794baa1c233b75c"
+    },
+    "croatia": {
+      "file": "vendor/flag-hr.svg",
+      "full": "vendor/flag-hr.svg",
+      "name": "Croatia national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Croatia.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "220af373c5701c4f4c09a6e1765305f571442940a3c921bd2daac483761b2a8f"
+    },
+    "romania": {
+      "file": "vendor/flag-ro.svg",
+      "full": "vendor/flag-ro.svg",
+      "name": "Romania national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Romania.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "57e1c4d27feec8e7a459e2dc522b9e6ec3eec996d9504733a9a17d9b4fce3026"
+    },
+    "belarus": {
+      "file": "vendor/flag-by.svg",
+      "full": "vendor/flag-by.svg",
+      "name": "Belarus national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Belarus.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "d4bf35a695071ec004a06a29c3d012d672030bf9257c7e79c511a4c2b3d7e6c4"
+    },
+    "albania": {
+      "file": "vendor/flag-al.svg",
+      "full": "vendor/flag-al.svg",
+      "name": "Albania national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Albania.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "3f241fb4f5393daf4a9098fd1486c8e801216ffe698ff8f7601f33968761100d"
+    },
+    "montenegro": {
+      "file": "vendor/flag-me.svg",
+      "full": "vendor/flag-me.svg",
+      "name": "Montenegro national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Montenegro.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "53761b966181c55a3c3853292cb55705ff4d9879f9b59f06601bd29d846a3bf6"
+    },
+    "kosovo": {
+      "file": "vendor/flag-xk.svg",
+      "full": "vendor/flag-xk.svg",
+      "name": "Kosovo national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Kosovo.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kosovo.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "9c6ee498a2f96888ef3ac9cdbecc9a953802e0c3401ac56b3763f41b8fe8377b"
+    },
+    "serbia": {
+      "file": "vendor/flag-rs.svg",
+      "full": "vendor/flag-rs.svg",
+      "name": "Serbia national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Serbia.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "e0a8bff6ee5445d6676a788c3761b412275688196abdd4bd149d74d6c723040c"
+    },
+    "north-macedonia": {
+      "file": "vendor/flag-mk.svg",
+      "full": "vendor/flag-mk.svg",
+      "name": "North Macedonia national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_North_Macedonia.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Macedonia.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "f9a526edefb4278f21377c34e090de0f7c790800c9f4b1007007bf64d0064a1d"
+    },
+    "bulgaria": {
+      "file": "vendor/flag-bg.svg",
+      "full": "vendor/flag-bg.svg",
+      "name": "Bulgaria national flag",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bulgaria.svg",
+      "credit": "Wikimedia Commons",
+      "license": "Public domain",
+      "sha256": "9c023198075538da242eeb7c16192d6aed8757e4e954ed974822c24637e4cc7f"
     }
   }
 }

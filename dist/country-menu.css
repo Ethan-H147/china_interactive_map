@@ -42,7 +42,3 @@ body[data-atlas=china-1949]{--ink:#302c27;--muted:#787166;--red:#a7382b;--red-da
 
 body[data-atlas=soviet-union-1988]{--header-stripe:linear-gradient(90deg,#cc0000,#cc0000);--ink:#352d28;--muted:#827269;--red:#a13b32;--red-dark:#802b24;--gold:#b28a48;--line:#e6dbd1;--paper:#fffdf9;--map:#f6efea}
 @media(max-width:760px){body[data-atlas=soviet-union-1988] .site-header h1 .title-english{font-size:21px}}
-
-body[data-atlas=estonia]{--ink:#27343d;--muted:#72818b;--red:#346a88;--red-dark:#254f67;--gold:#b28a48;--line:#dce5ea;--paper:#fffefd;--map:#eef3f7}
-body[data-atlas=latvia]{--ink:#382b2d;--muted:#897378;--red:#933947;--red-dark:#742b37;--gold:#b28a48;--line:#e9dfe1;--paper:#fffdfb;--map:#f6eeed}
-body[data-atlas=lithuania]{--ink:#30372b;--muted:#7b846f;--red:#627d30;--red-dark:#465d20;--gold:#b28a48;--line:#e2e7d8;--paper:#fffefa;--map:#f1f3e8}

@@ -1,0 +1,29 @@
+{
+  "retrieved": "2026-10-23",
+  "coverage": "Forty-one counties and Bucharest; all 3,181 local reference areas in the 2024 GISCO release, including Bucharest’s six sectors. These are local administrative areas, not individual villages. Population is the 1 January 2024 LAU reference; county GDP is from Eurostat regional accounts.",
+  "counts": {
+    "1": 42,
+    "2": 3181
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "lau2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat GISCO 2024",
+      "license": "GISCO distribution terms",
+      "originalSha256": "ae07901e0a11cb7891d1a6d6a31cfd833e25672ca318908856b0e34a1acca594",
+      "extraction": "Croatia, Romania and Bosnia and Herzegovina only",
+      "sha256": "64bc63f25b48d8d9d49490043cb337b12d2f1c8869137e9dfd55e0a0d5b3b0e8",
+      "bytes": 5971302
+    },
+    "nuts2024.geojson": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/nuts/geojson/NUTS_RG_01M_2024_4326.geojson",
+      "credit": "Eurostat GISCO 2024",
+      "license": "GISCO distribution terms",
+      "originalSha256": "b013441a23f5a29cd394c88f9f2621dea4e0fd5b18f0458dc708e48defd6aabb",
+      "extraction": "Croatia, Romania and Bosnia and Herzegovina only",
+      "sha256": "2c83ffed5c7bc79a1aaf725f586bb21e09ed825e5de8b5e5440fc96ffb1b3378",
+      "bytes": 3370768
+    }
+  }
+}

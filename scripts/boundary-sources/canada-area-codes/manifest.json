@@ -1,0 +1,29 @@
+{
+  "retrieved": "2026-10-23",
+  "files": {
+    "nanpa.csv": {
+      "url": "https://reports.nanpa.com/public/npa_report.csv",
+      "provider": "NANPA · area-code assignments and overlay complexes",
+      "license": "Public numbering assignments",
+      "sha256": "a915c69fbce37a01bd8f5b1626ad3e2325e3d8e4213e98d76e23ef4809958bf6",
+      "bytes": 117383
+    },
+    "area-codes.geojson": {
+      "url": "https://raw.githubusercontent.com/1ec5/nanp-boundaries/4f7e2bd24443160d71420b8885dc6af04a5fe0a8/area-codes.geojson",
+      "provider": "UCLA Geoportal · 2015 North American telephone area-code reference preserved by 1ec5",
+      "license": "Public domain",
+      "licenseUrl": "https://github.com/1ec5/nanp-boundaries/blob/4f7e2bd24443160d71420b8885dc6af04a5fe0a8/LICENSE.md",
+      "upstreamSha256": "9fbf78dccf4b4199a6d84ddc63820ea7dc3cf1619f5637b2af81b920e17fd672",
+      "extraction": "Only features whose COUNTRY contains CANADA, including the shared Nova Scotia/PEI feature; geometry and source properties unchanged.",
+      "sha256": "2e3d9ca7870d0895b10181a64059b50436eac4a8ab8a915b960503adbd5f77e3",
+      "bytes": 3393111
+    },
+    "cna-maps.html": {
+      "url": "https://cnac.ca/area_code_maps/canadian_area_codes.htm",
+      "provider": "Canadian Numbering Administrator · current official area-code map index",
+      "license": "© Canadian Numbering Administration Consortium; retained for source verification",
+      "sha256": "0f133431d4a28d0afaeb0587a5d03bf3cb798adc68bf21a7d22c349b3438e48e",
+      "bytes": 5691
+    }
+  }
+}

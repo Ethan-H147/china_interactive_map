@@ -1,0 +1,23 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import {load,polygons,landIndex,linesOf,lineIndex} from './geo-index.mjs';
+import {csv} from './us-geography.mjs';
+import {createPlaceSearch} from '../dist/place-search.mjs';
+import '../dist/countries.js';
+const base='dist/data/europe/canada/',area=load(base+'area-codes/catalogue.bin'),rows=csv(gunzipSync(fs.readFileSync('scripts/boundary-sources/canada-area-codes/nanpa.csv.gz')).toString().split('\n').slice(1).join('\n')),active=rows.filter(r=>r.COUNTRY==='CANADA'&&r.IN_SERVICE==='Y'&&r.USE==='G'),byCode=new Map(area.records.map(r=>[r.code,r]));
+assert.deepEqual(area.records.filter(r=>!r.nonGeographic).map(r=>r.code).sort(),active.map(r=>r.NPA_ID).sort());assert.deepEqual(area.counts,{geographic:55,nonGeographic:3,planned:3});assert.equal(new Set(area.records.map(r=>r.id)).size,58);assert.equal(Object.keys(area.chunks).length,13);
+const shapes=new Map();for(const [parent,ch]of Object.entries(area.chunks)){const bytes=fs.readFileSync(base+ch.file),d=load(base+ch.file);assert.equal(bytes.length,ch.bytes);assert.equal(gunzipSync(bytes).length,ch.decodedBytes);assert.equal(d.regions.features.length,ch.count);for(const f of d.regions.features){const r=byCode.get(f.properties.id.slice(7));assert((r.parents||[r.parent]).includes(parent));shapes.set(r.code,f);assert(landIndex(polygons(f.geometry).flat())(r.center),'Area center inside '+r.code);}}
+const probes=[['Toronto',[-79.3832,43.6532],['416','437','647','942'],['905']],['Montréal',[-73.5673,45.5019],['263','438','514'],['450']],['Ottawa',[-75.6972,45.4215],['343','613','753'],['819']],['Vancouver',[-123.1207,49.2827],['604','236','257','672','778'],['250']],['Victoria',[-123.3656,48.4284],['250','236','257','672','778'],['604']],['Calgary',[-114.0719,51.0447],['403','368','587','825'],['780']],['Edmonton',[-113.4909,53.5444],['780','368','587','825'],['403']],['Charlottetown',[-63.1311,46.2382],['782','902'],[]],['Halifax',[-63.5752,44.6488],['782','902'],[]],['Whitehorse',[-135.0568,60.7212],['867'],[]],['Yellowknife',[-114.3718,62.454],['867'],[]],['Iqaluit',[-68.5167,63.7467],['867'],[]]];
+for(const [name,p,include,exclude]of probes){for(const code of include)assert(landIndex(polygons(shapes.get(code).geometry).flat())(p),name+' covered by '+code);for(const code of exclude)assert(!landIndex(polygons(shapes.get(code).geometry).flat())(p),name+' outside '+code);}
+for(const code of ['600','622','633'])assert(byCode.get(code).nonGeographic&&!byCode.get(code).bounds&&!shapes.has(code));for(const code of ['273','568','851'])assert(area.planned.some(r=>r.code===code)&&!byCode.has(code),'Future code stays separate '+code);
+assert.deepEqual(byCode.get('867').parents,['CA-NT','CA-YT','CA-NU']);assert.deepEqual(byCode.get('902').parents,['CA-NS','CA-PE']);
+for(const code of ['416','437','647'])assert(byCode.get(code).overlays.includes('942'),'942 appears in every Toronto overlay list');
+const search=createPlaceSearch(area.records);for(const r of area.records)for(const q of [r.code,'+1 '+r.code])assert(search(q).some(hit=>hit.id===r.id),q+' searchable');
+const pins=load('scripts/boundary-sources/canada-area-codes/manifest.json');for(const [file,meta]of Object.entries(pins.files))assert.equal(createHash('sha256').update(gunzipSync(fs.readFileSync('scripts/boundary-sources/canada-area-codes/'+file+'.gz'))).digest('hex'),meta.sha256);
+const provinceLand=load(base+'first.bin').regions.features;
+for(const province of ['AB','BC','ON','QB']){const paths=linesOf(load(base+'area-codes/CA-'+province+'.bin').boundaries),coast=lineIndex(polygons(provinceLand.find(f=>f.properties.id==='CA-'+province).geometry).flat());if(province==='AB'||province==='BC')assert.equal(paths.length,1,province+' has one continuous regional divider, without perimeter fragments');for(let i=0;i<paths.length;i++){const other=lineIndex(paths.filter((_,j)=>j!==i));for(const p of [paths[i][0],paths[i].at(-1)])assert(Math.min(coast(p),other(p))<2,province+' line ends at a coast, provincial edge or shared junction: '+p);}}
+for(const [province,p]of [['AB',[-115.377915,52.240193]],['ON',[-77.861599,44.7104015]],['QB',[-74.245342,45.629209]]])assert(lineIndex(linesOf(load(base+'area-codes/CA-'+province+'.bin').boundaries))(p)<2,'Previously missing area-code border in '+province);
+assert(globalThis.AtlasCountries.countries.canada.map.areaCodes);assert(globalThis.AtlasCountries.countries.canada.view.scopes.includes('area-codes'));
+console.log('Canada: 55 active geographic codes, 3 services and 3 planned codes; all provinces/territories, current overlays, city probes, search aliases, source hashes and lazy chunks passed.');

@@ -1003,6 +1003,96 @@
       "evidence": {
         "note": "Added OCHA/national detailed administrative geometry, dated population, original national flag, search and first-level quizzes."
       }
+    },
+    {
+      "country": "bosnia-herzegovina",
+      "name": "Bosnia and Herzegovina",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "croatia",
+      "name": "Croatia",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "romania",
+      "name": "Romania",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "belarus",
+      "name": "Belarus",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "albania",
+      "name": "Albania",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "montenegro",
+      "name": "Montenegro",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "kosovo",
+      "name": "Kosovo",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "serbia",
+      "name": "Serbia",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "north-macedonia",
+      "name": "North Macedonia",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "bulgaria",
+      "name": "Bulgaria",
+      "addedOn": "2026-10-23",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
     }
   ]
 }

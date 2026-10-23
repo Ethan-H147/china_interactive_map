@@ -1,0 +1,40 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gunzipSync} from 'node:zlib';
+import {fetchCanadaAreaCodes,root as sourceRoot} from './fetch-canada-area-codes.mjs';
+import {command,fc,csv,write,load,polygons,bounds} from './us-geography.mjs';
+import {sharedCodeReferences,areaCodeBorders} from './canada-area-code-topology.mjs';
+const root='dist/data/europe/canada/',pins=await fetchCanadaAreaCodes(),catalogue=load(root+'catalogue.bin'),provinces=new Map(catalogue.records.filter(r=>r.level===1).map(r=>[r.id,r])),land=new Map(load(root+'first.bin').regions.features.map(f=>[f.properties.id,f]));
+const rows=csv(gunzipSync(fs.readFileSync(sourceRoot+'nanpa.csv.gz')).toString().split('\n').slice(1).join('\n')).filter(r=>r.COUNTRY==='CANADA'),active=rows.filter(r=>r.USE==='G'&&r.IN_SERVICE==='Y'),byCode=new Map(active.map(r=>[r.NPA_ID,r]));
+const reference=load(sourceRoot+'area-codes.geojson.gz'),seeds=new Map(reference.features.filter(f=>/CANADA/.test(f.properties.COUNTRY)).map(f=>[f.properties.NPA,f]));
+// Whole-province overlays must not inherit a partial legacy footprint. In
+// particular, the old 778 reference covers only part of the Lower Mainland.
+const groups=[
+ {parents:['CA-BC'],seed:'604',codes:['604']},{parents:['CA-BC'],seed:'250',codes:['250']},{parents:['CA-BC'],codes:['236','257','672','778']},
+ {parents:['CA-AB'],seed:'403',codes:['403']},{parents:['CA-AB'],seed:'780',codes:['780']},{parents:['CA-AB'],codes:['368','587','825']},
+ {parents:['CA-MB'],codes:['204','431','584']},{parents:['CA-SK'],codes:['306','474','639']},
+ {parents:['CA-NB'],codes:['428','506']},{parents:['CA-NL'],codes:['709','879']},
+ {parents:['CA-NS','CA-PE'],codes:['782','902']},{parents:['CA-NT','CA-YT','CA-NU'],codes:['867']},
+ ...[['416',['416','437','647','942']],['519',['226','382','519','548']],['613',['343','613','753']],['705',['249','683','705']],['807',['807']],['905',['289','365','742','905']]].map(([seed,codes])=>({parents:['CA-ON'],seed,codes})),
+ ...[['514',['263','438','514']],['450',['354','450','579']],['418',['367','418','581']],['819',['468','819','873']]].map(([seed,codes])=>({parents:['CA-QB'],seed,codes}))
+];
+assert.deepEqual(groups.flatMap(g=>g.codes).sort(),active.map(r=>r.NPA_ID).sort(),'Every active Canadian geographic code has exactly one reviewed footprint');
+const sharedReferences=new Map((await sharedCodeReferences(seeds,groups.filter(g=>g.seed).map(g=>g.seed))).features.map(f=>[f.properties.id,f]));
+const records=[],labels=[],regions=[];
+const clip=async(shape,mask)=>commandWithFiles(shape,mask,'-clip mask.json');
+async function commandWithFiles(shape,mask,args){const mapshaper=(await import('mapshaper')).default,out=JSON.parse((await mapshaper.applyCommands('-i in.json '+args+' -o out.json format=geojson precision=.000001',{'in.json':JSON.stringify(shape),'mask.json':JSON.stringify(mask)}))['out.json']);return out.type==='FeatureCollection'?out:out.type==='Feature'?fc([out]):fc((out.type==='GeometryCollection'?out.geometries:[out]).map(geometry=>({type:'Feature',properties:{},geometry})));}
+for(const g of groups){
+ const key=(g.seed||g.parents.join('-'))+'-'+g.codes.join('-'),parent=g.parents[0],provinceLand=await command(fc(g.parents.map(id=>land.get(id))),'-dissolve');let shape=provinceLand;
+ if(g.seed){assert(sharedReferences.has(g.seed),'Retained footprint '+g.seed);shape=await clip(fc([sharedReferences.get(g.seed)]),provinceLand);}
+ assert(shape.features.length,'Nonempty footprint '+key);const geometry={type:'MultiPolygon',coordinates:shape.features.flatMap(f=>polygons(f.geometry))},b=bounds(geometry),center=(await command(fc([{type:'Feature',properties:{},geometry}]),'-points inner')).features[0].geometry.coordinates;
+ const parentName=g.parents.map(id=>provinces.get(id).en).join(' · ');
+ for(const p of g.parents){const local=g.parents.length>1?await clip(shape,fc([land.get(p)])):shape,localGeometry={type:'MultiPolygon',coordinates:local.features.flatMap(f=>polygons(f.geometry))},point=(await command(local,'-points inner')).features[0].geometry.coordinates;labels.push({id:'CA-AREA-'+key+'-'+p,parent:p,level:2,en:g.codes.join(' / '),center:point,bounds:bounds(localGeometry),codes:g.codes,footprint:key,primary:'CA-NPA-'+g.codes[0]});}
+ for(const code of g.codes){const r=byCode.get(code),overlays=active.filter(other=>other.NPA_ID!==code&&((r.OVERLAY_COMPLEX||'').includes(other.NPA_ID)||(other.OVERLAY_COMPLEX||'').includes(code))).map(r=>r.NPA_ID).sort();records.push({id:'CA-NPA-'+code,parent,...(g.parents.length>1?{parents:g.parents}:{}),parentName,level:2,thematic:'area-codes',en:'Area code '+code,local:'',kind:'Telephone area',code,aliases:[code,'+1 '+code,'1-'+code,'Canadian area code '+code],center,bounds:b,footprint:key,inService:r.IN_SERVICE_DT,overlays,source:'https://cnac.ca/area_code_maps/canadian_area_codes.htm',sourceLabel:'Canadian Numbering Administrator'});regions.push({type:'Feature',properties:{id:'CA-NPA-'+code,parents:g.parents},geometry});}
+ console.log('Prepared Canadian coverage:',g.codes.join('/'));
+}
+const chunks={};for(const [parent]of provinces){const subset=regions.filter(f=>f.properties.parents.includes(parent)),unique=groups.filter(g=>g.parents.includes(parent)&&g.seed).map(g=>sharedReferences.get(g.seed)),payload={regions:fc(subset.map(f=>({...f,properties:{id:f.properties.id}}))),boundaries:await areaCodeBorders(unique,fc([land.get(parent)]))},file='area-codes/'+parent+'.bin';assert(subset.length,parent+' has area-code coverage');chunks[parent]={file,count:subset.length,...write(root+file,payload)};}
+const services=rows.filter(r=>r.USE==='N'&&r.IN_SERVICE==='Y').map(r=>({id:'CA-NPA-'+r.NPA_ID,parent:null,level:2,thematic:'area-codes',nonGeographic:true,en:'Area code '+r.NPA_ID,kind:'Non-geographic service',code:r.NPA_ID,service:(r.SERVICE||r.NOTES).trim(),aliases:[r.NPA_ID,'+1 '+r.NPA_ID],inService:r.IN_SERVICE_DT,source:'https://cnac.ca/npa_codes/npa_codes.htm',sourceLabel:'Canadian Numbering Administrator'}));
+const planned=rows.filter(r=>r.USE==='G'&&r.ASSIGNED==='Yes'&&r.IN_SERVICE!=='Y').map(r=>({code:r.NPA_ID,area:r.LOCATION,date:r.IN_SERVICE_DT,parent:r.PARENT_NPA_ID}));
+write(root+'area-codes/catalogue.bin',{records:[...records,...services],labels,chunks,planned,asOf:pins.retrieved,counts:{geographic:records.length,nonGeographic:services.length,planned:planned.length}});
+write(root+'area-codes/sources.json',{retrieved:pins.retrieved,sources:Object.entries(pins.files).map(([file,v])=>({file,...v})),coverage:'Every in-service Canadian geographic area code; shared 867 coverage across Yukon, Northwest Territories and Nunavut, and 782/902 across Nova Scotia and Prince Edward Island. Canadian non-geographic services are listed without polygons; assigned future codes are listed separately.',geometry:'Generalized public-domain UCLA 2015 reference footprints, clipped to the atlas Canadian province land. Whole-province and multi-province codes use the current atlas land directly. Regional reference polygons are simplified together to retain shared edges, including both Alberta regions and British Columbia regions. Dividing strokes come from those shared reference edges, are clipped to current provincial land, and omit province-wide overlays and obsolete reference perimeter fragments. Current overlays use their documented coverage, including province-wide BC and Alberta overlays and Toronto 942. These are reference areas, not address-level telephone-service guarantees; small later exchange boundary adjustments may not be reflected.',verification:[{url:'https://cnac.ca/area_code_maps/canadian_area_codes.htm',note:'Official CNA maps for current complexes and subprovincial coverage'},{url:'https://crtc.gc.ca/eng/archive/2023/2023-135.htm',note:'Toronto 942 and province-wide BC 257 effective in 2025'}]});
+console.log('Canada area codes:',records.length,'geographic,',services.length,'non-geographic,',planned.length,'planned;',groups.length,'coverage footprints;',Object.keys(chunks).length,'lazy provincial chunks.');

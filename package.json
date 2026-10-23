@@ -321,6 +321,9 @@
     "test:central-europe": "node scripts/validate-central-europe.mjs && node scripts/browser/run.mjs central-europe",
     "fetch:north-andes": "node scripts/fetch-north-andes.mjs && node --max-old-space-size=12000 scripts/prepare-north-andes-sources.mjs",
     "build:north-andes": "node --max-old-space-size=12000 scripts/build-north-andes.mjs && node scripts/prepare-region-colors.mjs ecuador venezuela colombia",
-    "test:north-andes": "node scripts/validate-north-andes.mjs"
+    "test:north-andes": "node scripts/validate-north-andes.mjs",
+    "build:canada-area-codes": "node --max-old-space-size=6500 scripts/build-canada-area-codes.mjs",
+    "test:canada-area-codes": "node --check dist/area-code-card.mjs && node --check dist/regional-country.mjs && node scripts/validate-canada-area-codes.mjs",
+    "test:canada-area-codes-browser": "node scripts/browser/run.mjs canada-area-codes"
   }
 }

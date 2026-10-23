@@ -173,5 +173,9 @@
   },
   "swissGermanLand": {
     "policy": "German administrative land and both country portals share the retained Swiss survey frontier, including Büsingen; lake water remains a separate exclusion."
+  },
+  "rhineLevee": {
+    "source": "data/lake-constance-levee.json",
+    "policy": "The two Rhine river-mouth levee fragments belong to the Austrian land display (Hard, Bregenz, Vorarlberg), not German Nonnenhorn. Retain the existing lake shoreline geometry; do not draw a sovereign boundary across open Lake Constance."
   }
 }
