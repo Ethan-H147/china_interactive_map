@@ -35,6 +35,8 @@ export async function resolveNorthAndes(prepared){
  return canonical;
 }
 export function writeNorthAndesBorders(canonical){for(const country of ['ecuador','colombia','venezuela'])save('dist/data/europe/'+country+'/international.bin',lineData(waterFreeLines(fc(canonical.filter(f=>f.properties.countries===country)))));
+ // Their complete, reconciled portals replace Peru's older gray neighbours.
+ const neighbours='dist/data/europe/peru/neighbours.bin';if(fs.existsSync(neighbours)){const previous=load(neighbours),next=previous.features.filter(f=>!['ecuador','colombia','venezuela'].includes(f.properties.country));if(next.length!==previous.features.length)save(neighbours,fc(next));}
  const brazil=canonical.filter(f=>f.properties.countries==='brazil'),keys=new Set(brazil.flatMap(f=>f.geometry.coordinates.slice(1).map((p,i)=>segmentKey(f.geometry.coordinates[i],p)))),atlas=load('dist/data/atlas-frontiers.bin');
  const clean=removeArcSegments(fc(atlas.features.filter(f=>!['BRA-COL','BRA-VEN'].includes(f.properties.resolvedFrontier))),keys,f=>f.properties.countries!=='brazil');
  save('dist/data/atlas-frontiers.bin',lineData(fc([...clean.features,...waterFreeLines(fc(brazil)).features.map(f=>({...f,properties:{...f.properties,resolvedFrontier:f.properties.pair,referenceOwner:'brazil'}}))])));

@@ -32,3 +32,5 @@ node scripts/browser/run.mjs north-andes
 ```
 
 The build can resume from a locally cached aligned geometry with `node scripts/build-north-andes.mjs --resume`. Runtime asset compression refreshes preserve authoritative geometry; they do not rerun unrelated country repairs.
+
+Peru's older gray Ecuador and Colombia neighbour fills are removed when these full country maps are built. Regional neighbour layers also exclude the active country and territories replaced by an active historical snapshot, so stale supplemental geometry cannot draw beneath that country's own map.

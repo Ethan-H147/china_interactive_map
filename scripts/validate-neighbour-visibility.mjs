@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const app=fs.readFileSync('dist/app.js','utf8'),declaration=app.split('\n').find(s=>s.startsWith('const activeNeighbourLandFilter=')),sync=app.split('\n').find(s=>s.startsWith('function syncPortals('));assert(declaration&&sync);
+const registry={ids:['ecuador','colombia','peru','history'],countries:{ecuador:{portal:{layer:'ecuador-portal-fill',fill:'#eee4c6'}},colombia:{portal:{layer:'colombia-portal-fill',fill:'#dfe9f2'}},peru:{},history:{snapshot:{replaces:['ecuador','colombia']}}}},filters=new Map(),map={getLayer:id=>['world-land','ecuador-portal-fill','colombia-portal-fill','peru-neighbours'].includes(id),setFilter:(id,value)=>filters.set(id,value),setPaintProperty(){}};
+const apply=new Function('map','registry','window','unclaimed','neighbourLandFilter',declaration+'\n'+sync+'\nreturn syncPortals;')(map,registry,{},()=>null,()=>null);
+const evaluate=(value,country)=>{if(!Array.isArray(value))return value;const[op,...args]=value;if(op==='get')return country;if(op==='literal')return args[0];if(op==='in')return evaluate(args[1],country).includes(evaluate(args[0],country));if(op==='!')return!evaluate(args[0],country);throw Error('Unexpected map expression '+op);};
+for(const open of ['ecuador','colombia','history']){apply(open);const filter=filters.get('peru-neighbours');assert(filter,'Regional neighbour fills receive the active-country filter');for(const country of ['ecuador','colombia'])assert.equal(evaluate(filter,country),open==='history'?false:country!==open,'Hide only the active country and any replaced historical areas');}
+console.log('Old regional neighbour fills yield to the selected map, including historical replacements.');
