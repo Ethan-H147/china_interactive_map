@@ -46,6 +46,10 @@
       "brunei": "data/europe/brunei/context.bin",
       "cambodia": "data/europe/cambodia/context.bin",
       "ukraine": "data/europe/ukraine/context.bin",
+      "austria": "data/europe/austria/context.bin",
+      "hungary": "data/europe/hungary/context.bin",
+      "slovenia": "data/europe/slovenia/context.bin",
+      "nigeria": "data/europe/nigeria/context.bin",
       "angola": "data/europe/angola/context.bin",
       "congo": "data/europe/congo/context.bin",
       "united-kingdom": "data/europe/united-kingdom/context.bin",
@@ -102,7 +106,7 @@
   },
   "topology": {
     "referenceCountries": 258,
-    "backgroundCountries": 132,
+    "backgroundCountries": 128,
     "atlasCodes": [
       "IDN",
       "MYS",
@@ -149,15 +153,19 @@
       "LAO",
       "KGZ",
       "DNK",
+      "HUN",
       "SVK",
       "POL",
       "IRL",
       "GBR",
       "GRC",
+      "AUT",
       "ITA",
       "CHE",
       "NLD",
+      "NGA",
       "AGO",
+      "SVN",
       "BWA",
       "PAK",
       "THA",
@@ -261,7 +269,6 @@
       "LBY",
       "TUN",
       "ROU",
-      "HUN",
       "ZMB",
       "SLE",
       "GIN",
@@ -270,7 +277,6 @@
       "SDN",
       "DJI",
       "ERI",
-      "AUT",
       "IRQ",
       "IRN",
       "LIE",
@@ -278,10 +284,8 @@
       "SRB",
       "MLI",
       "SEN",
-      "NGA",
       "BEN",
       "HRV",
-      "SVN",
       "QAT",
       "SAU",
       "ZWE",
@@ -365,11 +369,15 @@
       "SER",
       "SCR"
     ],
-    "outlineGroups": 2142,
+    "outlineGroups": 2138,
     "simplificationMetres": 100,
     "frontierCorridorMetres": 8000,
-    "reconciledSliverKm2": 32089.012419494888,
+    "reconciledSliverKm2": 34577.81655457706,
     "policy": "Atlas display outlines are fixed references; foreign survey overlaps are clipped, and uncovered old-reference land within an 8 km land-frontier corridor is assigned to the nearest foreign edge. Source lake polygons are excluded. This reconciles display geometry and does not redefine sovereignty or claims.",
+    "delegatedOutlineCodes": {
+      "KAS": "Existing India/Pakistan/China atlas outlines cover this inland disputed source entity; its residual background fill is retained without false coastline strokes.",
+      "LIE": "Landlocked Liechtenstein is fully surrounded by the Austrian and Swiss atlas frontiers. Its gray land remains; those shared atlas edges supply the complete outline."
+    },
     "delegatedAreas": {
       "KAB": "The Baykonur Cosmodrome source area is already inside the Kazakhstan atlas silhouette.",
       "BRI": "The Brazilian Island source area is already covered by the Brazil/Uruguay display and its existing claim handling.",
@@ -377,9 +385,9 @@
     },
     "finalWaterAlignment": true
   },
-  "bytes": 4674567,
+  "bytes": 4566740,
   "fallbackSimplificationDegrees": 0.018,
-  "outlineBytes": 672785,
+  "outlineBytes": 653075,
   "titicacaShoreline": {
     "relations": [
       3000330,
@@ -438,5 +446,13 @@
   "polandWater": {
     "source": "data/europe/poland/sources.json",
     "method": "Mapped cross-border lagoons and official PRG Gulf of Gdańsk / Puck Bay water are excluded from land fills."
+  },
+  "alpineWater": {
+    "source": "data/alpine-lakes-sources.json",
+    "method": "Lac Léman and the complete Lake Constance surface are permanent land exclusions, without shoreline strokes."
+  },
+  "centralEuropeWater": {
+    "source": "data/central-europe-frontiers.json",
+    "method": "Current reconciled Austrian, German and Swiss country outlines supply their fallback land; only the detailed Alpine lake geometry is used for Lac Léman and Lake Constance."
   }
 }

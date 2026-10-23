@@ -315,7 +315,7 @@ function syncFrontiers(open){if(map.getLayer('atlas-frontiers'))map.setFilter('a
 // China's displayed land in the neighbour band (world-land.mjs) sits beneath its simplified portal on
 // other maps; on China's own map it would show through a selected or hovered province's fill.
 const neighbourLandFilter=open=>['all',...(open==='china'?[['!=',['get','country'],'china']]:registry.countries[open]?.snapshot?.replaces?.length?[['!',['in',['get','country'],['literal',registry.countries[open].snapshot.replaces]]]]:[]),['!',['in',['get','country'],['literal',registry.ids.filter(id=>id!=='china'&&(window.AtlasDev?.allows(id)??registry.countries[id].release!=='developer')&&registry.countries[id].portal&&map.getLayer(registry.countries[id].portal.layer))]]]];
-function syncPortals(open){if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',registry.ids.filter(id=>(window.AtlasDev?.allows(id)??registry.countries[id].release!=='developer')&&(id===open||registry.countries[open]?.snapshot?.replaces?.includes(id)||registry.countries[id].portal&&map.getLayer(registry.countries[id].portal.layer)))]]]);if(map.getLayer('china-neighbour-land'))map.setFilter('china-neighbour-land',neighbourLandFilter(open));for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,unclaimed(open));}if(map.getLayer(country+'-international'))map.setFilter(country+'-international',unclaimed(open));}}
+function syncPortals(open){window.AtlasGlobeOverviewController?.setCountry(open);if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',registry.ids.filter(id=>(window.AtlasDev?.allows(id)??registry.countries[id].release!=='developer')&&(id===open||registry.countries[open]?.snapshot?.replaces?.includes(id)||registry.countries[id].portal&&map.getLayer(registry.countries[id].portal.layer)))]]]);if(map.getLayer('china-neighbour-land'))map.setFilter('china-neighbour-land',neighbourLandFilter(open));for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,unclaimed(open));}if(map.getLayer(country+'-international'))map.setFilter(country+'-international',unclaimed(open));}}
 function atlasFor(country){return atlases[country]||{'southern-africa':southernAfrica,europe,'south-america':southAmerica}[registry.countries[country]?.adapter]?.portals[country]||null;}
 function currentAtlas(){return atlasFor(atlasMode);}
 const countryMemory=window.AtlasCountryLoader.createCountryResidency({limit:3,async dispose(id){
@@ -403,6 +403,9 @@ function bindRegion(region,parentCode){
   regionIndex.push({layer,parentCode,name:p.name,english:englishName(p),regional:(regionNames[p.adcode]?.regional||[]).map(n=>n.text).join(' '),type:kind(p)});regionByCode.set(p.adcode,layer);return layer;
 }
 function addLabel(p,text,small){if(window.AtlasPerformanceController.labelsSuppressed)return;const xy=p.centroid||p.center;if(!xy)return;const div=document.createElement('div');div.className='province-label';div.textContent=text;if(small){const el=document.createElement('small');el.textContent=small;div.append(el);}labels.push(new maplibregl.Marker({element:div,anchor:'center'}).setLngLat(xy).addTo(map));}
+function pauseMapLabels(){
+ countryLabels.clear();labels.forEach(label=>label.remove());labels.length=0;currentAtlas()?.pauseLabels();
+}
 function updateLabels(){
  if(labelFrame!==undefined)return;
  labelFrame=requestAnimationFrame(()=>{labelFrame=undefined;renderLabels();});
@@ -411,6 +414,7 @@ function renderLabels(){
   capitalDisplay?.sync();
   waterDisplay?.sync();
   satelliteDisplay?.sync();
+  if(map.isMoving()){pauseMapLabels();return;}
   if(cameraBusy||countrySwitching)return;
   countryLabels.sync(atlasMode);
   if(atlasMode!=='china'){labels.forEach(label=>label.remove());labels.length=0;currentAtlas()?.updateLabels();return;}
@@ -477,6 +481,7 @@ function pickedRegion(point){
 function countryAt(point){
  const countries=Object.fromEntries(registry.ids.flatMap(id=>registry.countries[id].hitLayers.map(layer=>[layer,id])));
  const hits=window.AtlasMotion.queryRegions(map,point,{layers:Object.keys(countries)}).map(f=>({country:countries[f.layer.id],region:f.properties.region,bounds:f.properties.bounds}));
+ if(mapScene.overview&&map.getLayer('globe-overview-land'))for(const f of map.queryRenderedFeatures(point,{layers:['globe-overview-land']})){const id=f.properties.country;if(id&&registry.countries[id]&&window.AtlasDev.allows(id))hits.push({country:id,region:f.properties.region,bounds:f.properties.bounds});}
  for(const id of ['south-america-fill','south-america-portal-fill'])if(map.getLayer(id))for(const f of map.queryRenderedFeatures(point,{layers:[id]}))hits.push({country:f.properties.country});
  return hits.find(h=>h.country===atlasMode)||hits.find(h=>h.country&&h.region)||hits.find(h=>h.country);
 }
@@ -711,7 +716,7 @@ for(const id of ['province-layer','prefecture-layer','other-layer'])$(id).addEve
   }
   updateLabels();refreshStatus();
 });
-$('label-layer').addEventListener('change',updateLabels);map.on('moveend',updateLabels);
+$('label-layer').addEventListener('change',updateLabels);map.on('movestart',pauseMapLabels);map.on('moveend',updateLabels);
 $('mode-province').onclick=()=>{if(atlasMode!=='china')return currentAtlas().setMode(1);if(!countrySwitching){clearHover();setMode('province');syncLayers();updateLabels();}};
 $('mode-prefecture').onclick=()=>{if(atlasMode!=='china')return currentAtlas().setMode(2);if(!countrySwitching){clearHover();setMode('prefecture');$('prefecture-layer').checked=true;syncLayers();refreshStatus();}};
 $('mode-lock').onclick=()=>{const locked=$('mode-lock').getAttribute('aria-pressed')!=='true';$('mode-lock').setAttribute('aria-pressed',String(locked));$('mode-lock').title=locked?'Unlock selection level':'Lock selection level';currentAtlas()?.setLevelLocked?.(locked);};

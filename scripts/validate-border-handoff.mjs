@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+import {attachBorderHandoff} from '../dist/border-handoff.mjs';
+const events=new Map();let prefer=true,enabled=true,fail=false;
+const layer=(id,source,overview=false)=>({id,source,type:'line',metadata:{atlasInternationalBorder:id!=='admin',atlas:{overview}},isHidden(){return false;}});
+const layers=[layer('root','root',true),layer('a','a'),layer('b','b'),layer('admin','admin')];
+const managers=Object.fromEntries(['root','a','b'].map(id=>[id,{used:true,complete:true,loaded(){return this.complete;},getRenderableIds:()=>['tile']}]));
+const style={_order:layers.map(l=>l.id),_layers:Object.fromEntries(layers.map(l=>[l.id,l])),tileManagers:managers};
+const painter=()=>({transform:{zoom:6},render(s){const drawn=s._order.filter(id=>!s._layers[id].isHidden(6));if(fail)throw Error('interrupted');return drawn;}});
+const map={painter:painter(),on(name,fn){events.set(name,fn);},off(name){events.delete(name);}};
+const originals=layers.map(l=>l.isHidden),native=map.painter.render;
+const handoff=attachBorderHandoff(map,{rootLayer:'root',enabled:()=>enabled,preferCoarse:()=>prefer,version:'6.11.2'});
+assert.deepEqual(map.painter.render(style),['root','admin'],'Global view draws only the resident border');
+prefer=false;managers.b.complete=false;
+assert.deepEqual(map.painter.render(style),['root','admin'],'Pending replacement data keeps the coarse border');
+assert.deepEqual(handoff.snapshot().pending,['b']);
+assert(layers.every(l=>!l.isHidden()),'Preparation sees normal visibility outside the draw pass');
+managers.b.complete=true;
+assert.deepEqual(map.painter.render(style),['a','b','admin'],'All fine borders replace coarse in one frame');
+assert.equal(handoff.snapshot().coarse,false);
+managers.a.complete=false;assert.deepEqual(map.painter.render(style),['a','b','admin'],'Close-up navigation retains native detail fallback after committing');managers.a.complete=true;
+for(const flag of ['_paused','_sourceErrored']){prefer=true;map.painter.render(style);prefer=false;managers.a[flag]=true;assert.deepEqual(map.painter.render(style),['root','admin']);managers.a[flag]=false;}
+managers.a.used=false;assert.deepEqual(map.painter.render(style),['root','admin'],'A source must participate in the current native update');managers.a.used=true;
+fail=true;assert.throws(()=>map.painter.render(style),/interrupted/);assert.deepEqual(layers.map(l=>l.isHidden),originals,'Interrupted draws restore all visibility methods');fail=false;
+const old=map.painter;map.painter=painter();events.get('webglcontextrestored')();assert.equal(old.render,native,'Replaced graphics context releases its hook');assert.deepEqual(map.painter.render(style),['a','b','admin'],'Restored painter keeps the handoff');
+handoff.destroy();assert.deepEqual(map.painter.render(style),['root','a','b','admin']);assert.equal(events.size,0);
+const unsupported=attachBorderHandoff(map,{version:'future'});assert.equal(unsupported.snapshot().supported,false);unsupported.destroy();
+console.log('Border handoff: preparation, pending tiles, atomic draw selection, pause/error guards, native visibility, interrupted draws, context recovery and cleanup passed.');

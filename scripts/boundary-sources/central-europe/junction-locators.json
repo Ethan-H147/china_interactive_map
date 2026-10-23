@@ -1,0 +1,84 @@
+{
+  "policy": "Locators choose the correct survey junction vertex; they never replace the intervening national boundary. Czech/Slovak junctions remain the existing exact retained endpoints.",
+  "sources": [
+    "https://www.bundeskanzleramt.gv.at/dam/jcr%3Ac2333ebf-fcb3-4dcd-9b4e-876f47a84347/107a_15_bei1_nb.pdf",
+    "https://www.statistik.at/gs-open/GEODATA/ows",
+    "https://ipi.eprostor.gov.si/wfs-si-gurs-rpe/wfs",
+    "https://www.wikidata.org/wiki/Q20479937",
+    "https://mojaslovenija.si/WWI/Tromeja/uvod_ENG.html"
+  ],
+  "locators": [
+    {
+      "sides": [
+        "AUT",
+        "CHE",
+        "LIE"
+      ],
+      "point": [
+        9.60715,
+        47.0607
+      ],
+      "survey": "AUT"
+    },
+    {
+      "sides": [
+        "AUT",
+        "CHE",
+        "LIE"
+      ],
+      "point": [
+        9.53083,
+        47.27111
+      ],
+      "survey": "AUT"
+    },
+    {
+      "sides": [
+        "AUT",
+        "CHE",
+        "ITA"
+      ],
+      "point": [
+        10.46969,
+        46.8549
+      ],
+      "survey": "AUT"
+    },
+    {
+      "sides": [
+        "AUT",
+        "ITA",
+        "SVN"
+      ],
+      "point": [
+        13.714115,
+        46.522925
+      ],
+      "survey": "AUT"
+    },
+    {
+      "sides": [
+        "AUT",
+        "HUN",
+        "SVN"
+      ],
+      "point": [
+        16.11389,
+        46.869167
+      ],
+      "survey": "AUT"
+    },
+    {
+      "sides": [
+        "HRV",
+        "HUN",
+        "SVN"
+      ],
+      "point": [
+        16.61028,
+        46.46917
+      ],
+      "survey": "SVN"
+    }
+  ]
+}

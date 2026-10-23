@@ -940,6 +940,42 @@
       "evidence": {
         "note": "Regions, districts, local areas and reconciled borders implemented on 22 October 2026."
       }
+    },
+    {
+      "country": "nigeria",
+      "name": "Nigeria",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "36 states, Federal Capital Territory, 768 LGAs and six FCT area councils; local implementation."
+      }
+    },
+    {
+      "country": "austria",
+      "name": "Austria",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Official local subdivisions, dated resident population, regional GDP, local names, flags and reconciled shared borders."
+      }
+    },
+    {
+      "country": "hungary",
+      "name": "Hungary",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Official local subdivisions, dated resident population, regional GDP, local names, flags and reconciled shared borders."
+      }
+    },
+    {
+      "country": "slovenia",
+      "name": "Slovenia",
+      "addedOn": "2026-10-22",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Official local subdivisions, dated resident population, regional GDP, local names, flags and reconciled shared borders."
+      }
     }
   ]
 }

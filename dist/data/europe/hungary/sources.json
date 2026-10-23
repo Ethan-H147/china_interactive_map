@@ -1,0 +1,202 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "19 counties and Budapest, 174 ordinary districts plus the whole-capital equivalent used in the official KSH TIMEA geometry, and all 3,155 municipalities. County status and Hungarian names are retained. Population uses the validated Eurostat GISCO 1 January 2024 LAU reference, independently of the date on which current KSH geometry was retrieved. Budapest boroughs are not counted as separate municipalities.",
+  "counts": {
+    "1": 20,
+    "2": 175,
+    "3": 3155
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "austria-population.ods": {
+      "url": "https://www.statistik.at/fileadmin/pages/453/RegUnitsPopulation.ods",
+      "provider": "Statistics Austria · Population on 1 January 2026",
+      "license": "CC BY 4.0",
+      "sha256": "f0462a7f4df643707e76db77a69775e4da5c984a2a7ac69c8f248b89dfed8835",
+      "bytes": 348800
+    },
+    "austria-districts.geojson": {
+      "url": "https://www.statistik.at/gs-open/GEODATA/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=GEODATA%3ASTATISTIK_AUSTRIA_POLBEZ_20260101&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=20000",
+      "provider": "Statistics Austria · political districts, including separate Vienna borough reference areas, 1 January 2026",
+      "license": "CC BY 4.0",
+      "sha256": "b4ede9bb7af004438fc5722906ca9b8d0d5f68df4a8ced9ff4dc1927a8afc598",
+      "bytes": 21588222
+    },
+    "austria-local.geojson": {
+      "url": "https://www.statistik.at/gs-open/GEODATA/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=GEODATA%3ASTATISTIK_AUSTRIA_GEM_20260101&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=20000",
+      "provider": "Statistics Austria · municipalities and Vienna municipal districts, 1 January 2026",
+      "license": "CC BY 4.0",
+      "sha256": "2b21113d4c4ecec09f9fc6fa58d670cbc633a8c4d7a571b5ec9fcccbc1a77f24",
+      "bytes": 68251257
+    },
+    "slovenia-regions.geojson": {
+      "url": "https://ipi.eprostor.gov.si/wfs-si-gurs-rpe/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=SI.GURS.RPE%3ASTATISTICNE_REGIJE&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=20000",
+      "provider": "Geodetska uprava Republike Slovenije · current Register of Spatial Units, retrieved 22 October 2026",
+      "license": "CC BY 4.0 · GURS",
+      "type": "STATISTICNE_REGIJE",
+      "sha256": "d07743146cf4086d0db371c73c38a2b6247d0e327a7eea480ff626a772b602ad",
+      "bytes": 4008611
+    },
+    "slovenia-municipalities.geojson": {
+      "url": "https://ipi.eprostor.gov.si/wfs-si-gurs-rpe/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=SI.GURS.RPE%3AOBCINE&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=20000",
+      "provider": "Geodetska uprava Republike Slovenije · current Register of Spatial Units, retrieved 22 October 2026",
+      "license": "CC BY 4.0 · GURS",
+      "type": "OBCINE",
+      "sha256": "b06ecbb5aeaa683783ea29fe2dea7c028bc0a0fe96f2b3bd51c13f065846ca78",
+      "bytes": 13047485
+    },
+    "slovenia-settlements.geojson": {
+      "url": "https://ipi.eprostor.gov.si/wfs-si-gurs-rpe/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=SI.GURS.RPE%3ANASELJA&outputFormat=application%2Fjson&srsName=EPSG%3A4326&count=20000",
+      "provider": "Geodetska uprava Republike Slovenije · current Register of Spatial Units, retrieved 22 October 2026",
+      "license": "CC BY 4.0 · GURS",
+      "type": "NASELJA",
+      "sha256": "d3b43c807d4728d6d112d743fd2c5a6ef7f366f70d94828b9873a0c54f10410e",
+      "bytes": 45379571
+    },
+    "slovenia-population-metadata.json": {
+      "url": "https://pxweb.stat.si/SiStatData/api/v1/en/Data/05C5003S.px",
+      "provider": "SURS · population by municipality and settlement, 1 January",
+      "sha256": "92d0edd52583b363c54e6ba571c9cf46a6d88eff1ee110ec10ab3fe14aee9c4d",
+      "bytes": 183460
+    },
+    "slovenia-population.json": {
+      "url": "https://pxweb.stat.si/SiStatData/api/v1/en/Data/05C5003S.px",
+      "provider": "SURS · resident population on 1 January 2026",
+      "license": "CC BY 4.0",
+      "query": {
+        "query": [
+          {
+            "code": "OBČINA/NASELJE",
+            "selection": {
+              "filter": "all",
+              "values": [
+                "*"
+              ]
+            }
+          },
+          {
+            "code": "LETO",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "2026"
+              ]
+            }
+          },
+          {
+            "code": "MERITVE",
+            "selection": {
+              "filter": "item",
+              "values": [
+                "0"
+              ]
+            }
+          }
+        ],
+        "response": {
+          "format": "json-stat2"
+        }
+      },
+      "sha256": "189ebbb41d934de0fc47e05c5b26a94544f1cd05d7913f5a432e4079a6852508",
+      "bytes": 291287
+    },
+    "flag-at.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
+      "provider": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "82b0a6991dc9716e9aaae39f1237cceccff16278ebde18cc9b681c2b63d72fef",
+      "bytes": 218
+    },
+    "flag-hu.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg",
+      "provider": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "2e52f26ef457b26f2b9c7716ba3e0b86ddbcd952052e04da38123a2c2ffbd870",
+      "bytes": 197
+    },
+    "flag-si.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg",
+      "provider": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "sha256": "aa4fda18694f1e60c937933eebd752cc3ed0701652f0dfca84677c3267b26db9",
+      "bytes": 1617
+    },
+    "hungary-layer-7.json": {
+      "url": "https://map.ksh.hu/arcgis/rest/services/ksh_vazterkep/MapServer/7?f=json",
+      "provider": "Hungarian Central Statistical Office · TIMEA public administrative geometry",
+      "license": "KSH published geographical information with attribution",
+      "sha256": "54d4af60b4cdacc04e57219b842b68aa9533b715ea39165da950b30f0bff957a",
+      "bytes": 2970
+    },
+    "hungary-municipalities.geojson": {
+      "url": "https://map.ksh.hu/arcgis/rest/services/ksh_vazterkep/MapServer/7",
+      "provider": "Hungarian Central Statistical Office · TIMEA administrative boundaries, retrieved 22 October 2026",
+      "license": "KSH published geographical information with attribution",
+      "features": 3155,
+      "query": "Object IDs enumerated once, downloaded in batches of 150; WGS84, six decimal places.",
+      "sha256": "8e924c74f6749fd2b2e56f0209d82c41d957da871c4f7a15e88195234c3478c9",
+      "bytes": 11850856
+    },
+    "hungary-layer-5.json": {
+      "url": "https://map.ksh.hu/arcgis/rest/services/ksh_vazterkep/MapServer/5?f=json",
+      "provider": "Hungarian Central Statistical Office · TIMEA public administrative geometry",
+      "license": "KSH published geographical information with attribution",
+      "sha256": "ca411be7efa8a5b62238c312008b0db70931148331cad871d4f62232830e45ef",
+      "bytes": 2678
+    },
+    "hungary-districts.geojson": {
+      "url": "https://map.ksh.hu/arcgis/rest/services/ksh_vazterkep/MapServer/5",
+      "provider": "Hungarian Central Statistical Office · TIMEA administrative boundaries, retrieved 22 October 2026",
+      "license": "KSH published geographical information with attribution",
+      "features": 175,
+      "query": "Object IDs enumerated once, downloaded in batches of 150; WGS84, six decimal places.",
+      "sha256": "80e0dcf5a11fa22ffbaf746a41761ad76b41f7f6a036127e3e25ec4a47964905",
+      "bytes": 3124109
+    },
+    "hungary-layer-3.json": {
+      "url": "https://map.ksh.hu/arcgis/rest/services/ksh_vazterkep/MapServer/3?f=json",
+      "provider": "Hungarian Central Statistical Office · TIMEA public administrative geometry",
+      "license": "KSH published geographical information with attribution",
+      "sha256": "0f83d32577ff62051e736404205295fe06bcab466210f742f3cb43b5822eec8a",
+      "bytes": 2579
+    },
+    "hungary-counties.geojson": {
+      "url": "https://map.ksh.hu/arcgis/rest/services/ksh_vazterkep/MapServer/3",
+      "provider": "Hungarian Central Statistical Office · TIMEA administrative boundaries, retrieved 22 October 2026",
+      "license": "KSH published geographical information with attribution",
+      "features": 20,
+      "query": "Object IDs enumerated once, downloaded in batches of 150; WGS84, six decimal places.",
+      "sha256": "ccdd7ca870c488262f9656dfa468bc132acc94550378b7d47ea8a39d0af98e28",
+      "bytes": 1196563
+    },
+    "hungary-population-2024.json": {
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/lau/geojson/LAU_RG_01M_2024_4326.geojson",
+      "provider": "Eurostat GISCO · validated 2024 LAU reference population, Hungarian country extract",
+      "license": "Eurostat / EuroGeographics GISCO terms",
+      "extraction": "Hungarian LAU properties only, from the retained and pinned whole-Europe 2024 source",
+      "sha256": "57ed9ea0ff927883963e8b93a47569191adb8409f7e28e2dedeb25dd46e02b89",
+      "bytes": 450194
+    },
+    "nama_10r_2gdp.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_2gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2021&geo=AT11&geo=AT12&geo=AT13&geo=AT21&geo=AT22&geo=AT31&geo=AT32&geo=AT33&geo=AT34",
+      "provider": "Eurostat · GDP at current market prices, official NUTS geography",
+      "license": "CC BY 4.0",
+      "sha256": "09c366e2ad6eea48a2fa3f0935cb0c699be034c530c360af68eac27ac4c4b71c",
+      "bytes": 3690
+    },
+    "nama_10r_3gdp.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10r_3gdp?format=JSON&unit=MIO_EUR&unit=EUR_HAB&sinceTimePeriod=2021&geo=HU110&geo=HU120&geo=HU211&geo=HU212&geo=HU213&geo=HU221&geo=HU222&geo=HU223&geo=HU231&geo=HU232&geo=HU233&geo=HU311&geo=HU312&geo=HU313&geo=HU321&geo=HU322&geo=HU323&geo=HU331&geo=HU332&geo=HU333&geo=SI031&geo=SI032&geo=SI033&geo=SI034&geo=SI035&geo=SI036&geo=SI037&geo=SI038&geo=SI041&geo=SI042&geo=SI043&geo=SI044",
+      "provider": "Eurostat · GDP at current market prices, official NUTS geography",
+      "license": "CC BY 4.0",
+      "sha256": "77218de7672ffca3ebe388fc7f0097233cd26989388703d914e0b3a885f17fcc",
+      "bytes": 7233
+    },
+    "eurostat-exchange.json": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_a?format=JSON&currency=USD&statinfo=AVG&sinceTimePeriod=2021",
+      "provider": "Eurostat · annual average USD per EUR",
+      "license": "CC BY 4.0",
+      "sha256": "c58db4855d6ed9f483e91d17cef5fc9bae8f041a35e3544a2a540135e0b5c2b8",
+      "bytes": 2697
+    }
+  }
+}

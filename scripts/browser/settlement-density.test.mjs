@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+export default [1280,390].map(width=>({name:'Settlement density follows every fast zoom frame '+width,options:{width,height:909,mobile:width===390},async run(p,base){
+ await p.open(base,'#finland');await p.waitFor('!!map.getLayer("finland-settlements")');
+ await p.evaluate(`(async()=>{window.densityFrames=[];window.densityModule=await import('/settlement-layer.mjs');window.densityRecords=await fetch('/data/europe/finland/settlements.json').then(r=>r.json()).then(d=>d.records);window.densityFeatures=densityModule.settlementFeatures(densityRecords).features;window.densityVillageIds=new Set(densityRecords.filter(r=>r.kind==='Village / hamlet').map(r=>r.id));window.densityFilterChanges=0;const setFilter=map.setFilter;map.setFilter=function(id,...args){if(id==='finland-settlements')densityFilterChanges++;return setFilter.call(this,id,...args);};})()`);
+ await p.evaluate('void map.jumpTo({center:[27.126934,68.107676],zoom:16})');await p.settle();
+ await p.evaluate(`window.densityCapture=()=>{const z=map.getZoom(),shown=densityFeatures.filter(f=>densityModule.settlementDotVisible(f,z));densityFrames.push({z,villages:shown.filter(f=>densityVillageIds.has(f.properties.id)).length});};map.on('render',densityCapture);void map.easeTo({zoom:4,duration:240});`);
+ await p.settle();await p.evaluate('void map.easeTo({zoom:16,duration:240})');await p.settle();await p.evaluate('void map.easeTo({zoom:5,duration:180})');await p.settle();
+ const frames=await p.evaluate('densityFrames');assert(frames.length>6);assert(frames.some(f=>f.z>14&&f.villages>0));assert(frames.filter(f=>f.z<14).every(f=>f.villages===0));assert.equal(await p.evaluate('densityFilterChanges'),0);
+ assert.equal(await p.evaluate('map.getLayer("finland-settlements").type'),'circle');assert(await p.evaluate(`map.getStyle().layers.filter(l=>l.id.startsWith('finland-settlements-density-')).every(l=>l.minzoom===l.filter[2]-.25&&l.paint['circle-opacity'][0]==='interpolate'&&l.paint['circle-stroke-opacity'][0]==='interpolate'&&!JSON.stringify(l.paint).includes('get'))`),'Every density tier uses tile-independent camera opacity and frame zoom limits');
+ await p.evaluate('void map.off("render",densityCapture)');await p.screenshot('settlement-density-'+width);
+}}));

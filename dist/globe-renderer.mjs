@@ -10,6 +10,9 @@ export function runSourceUpdate(transform,update){
  try{return update();}finally{if(previous)sourceUpdates.set(transform,previous);else sourceUpdates.delete(transform);}
 }
 export function coveringTiles(native,transform,options){
+ // One prepared world tile has no distinct globe copies. Keep its identity
+ // stable even at exactly +/-180 degrees or after multiple full rotations.
+ if(options.maxzoom===0&&options.reparseOverscaled===false&&transform.getClippingPlane())return native(transform,options).map(tile=>tile.wrapped());
  const batch=sourceUpdates.get(transform);
  if(!batch||options.terrain||options.calculateTileZoom)return native(transform,options);
  const plane=transform.getClippingPlane();

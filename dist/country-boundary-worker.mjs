@@ -23,16 +23,16 @@ function indexedRegions(regions){
 self.onmessage=async({data})=>{
  try{
   const prepare=part=>{
-   const regions=polygonParts(part.regions),indexed=data.deferOutlines?indexedRegions(regions):null;
+   const regions=polygonParts(part.regions),outlineRegions=part.selectionOutlines||regions,indexed=data.deferOutlines?indexedRegions(outlineRegions):null;
    return {
     ...(part.towns?{towns:prepare(part.towns)}:{}),
-    blob:indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
+    blob:!part.selectionOutlines&&indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
     borders:new Blob([JSON.stringify(lineData(part.boundaries))],{type:'application/json'}),
     hasBorders:part.boundaries.features.length>0,
-    // The selection reads byte slices from the same polygon blob. No second full
-    // outline geometry is copied or tiled; duplicate IDs retain all island parts.
+    // Reuse polygon slices unless the build supplies selection lines that omit
+    // permanent water shores. Duplicate IDs retain every island or line part.
     ...(indexed?{outlines:new Blob([empty],{type:'application/json'}),outlineData:indexed.blob,outlineIndex:indexed.outlineIndex}:{
-     outlines:new Blob([JSON.stringify(selectionLineData(part.regions))],{type:'application/json'})
+     outlines:new Blob([JSON.stringify(selectionLineData(part.selectionOutlines||part.regions))],{type:'application/json'})
     })
    };
   };

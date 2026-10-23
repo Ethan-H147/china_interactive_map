@@ -105,3 +105,11 @@ ROC snapshot follow-up — local: suppressed modern China/Mongolia preview and c
 | 2026-10-19 | Lithuania | Local only | 10 counties, 60 municipalities and 533 eldership polygons; official 2026 population, registry area and 2024 county economy. |
 
 Baltic details, dates, source licenses and known coverage limits: [Baltic countries](baltics.md).
+
+| 2026-10-22 | Nigeria | Local only | 36 states, Federal Capital Territory, 768 local government areas and six FCT area councils; state quiz and on-demand local boundaries. |
+
+| 2026-10-22 | Austria | Local only | 9 federal states, 94 districts/statutory cities, 2,092 municipalities and a separate Vienna borough view; 2026 population and regional GDP. |
+| 2026-10-22 | Hungary | Local only | 19 counties and Budapest, 174 districts plus the capital equivalent and 3,155 municipalities; dated official population and regional GDP. |
+| 2026-10-22 | Slovenia | Local only | 12 statistical regions, 212 municipalities and 6,035 settlement areas; 2026 population and regional GDP. |
+
+Sources, special administrative cases and shared-border reconciliation: [Austria, Hungary and Slovenia](central-europe.md).

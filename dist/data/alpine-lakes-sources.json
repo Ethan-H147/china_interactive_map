@@ -1,0 +1,21 @@
+{
+  "retrieved": "2026-10-22",
+  "license": "© OpenStreetMap contributors · ODbL 1.0; Swiss survey © swisstopo",
+  "files": {
+    "leman": {
+      "url": "https://www.openstreetmap.org/relation/332617",
+      "download": "https://nominatim.openstreetmap.org/lookup?osm_ids=R332617&format=jsonv2&polygon_geojson=1",
+      "sha256": "986892a0631792f20c783411dba778030325684535112023eae670f7dd09a6a3"
+    },
+    "constance": {
+      "url": "https://www.openstreetmap.org/relation/1156846",
+      "download": "https://nominatim.openstreetmap.org/lookup?osm_ids=R1156846&format=jsonv2&polygon_geojson=1",
+      "sha256": "d3eaa877b8647f495d479e0dfa8a3bee055fbf4e005447e7ad8b56122d33a39a"
+    }
+  },
+  "border": {
+    "source": "https://www.swisstopo.admin.ch/en/landscape-model-swissboundaries3d",
+    "reference": "scripts/boundary-sources/alpine-lakes/atlas-reference/swiss-first.bin",
+    "policy": "Use the complete retained Swiss survey edge for CHE-DEU, including Büsingen. Do not infer a sovereign boundary across Lake Constance."
+  }
+}

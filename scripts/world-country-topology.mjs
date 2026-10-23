@@ -3,6 +3,9 @@ import {fc} from './build-regional-dataset.mjs';
 import {lineIndex,polygons,linesOf} from './geo-index.mjs';
 const require=createRequire(import.meta.url),{topology}=require('topojson-server'),{mesh}=require('topojson-client');
 export function worldOutlines(clipped,mask){
+ // KAS is an inland disputed source entity already drawn by the atlas's
+ // India/Pakistan/China frontiers. Residual fill slivers are not coastlines.
+ clipped=fc(clipped.features.filter(f=>f.properties.id!=='KAS'));
 // Exact overlay arcs share the updated atlas edge. Those edges are already drawn by atlas frontiers.
 const t=topology({countries:clipped}),owners=new Map();for(const g of t.objects.countries.geometries)for(const arc of new Set(g.arcs.flat(Infinity).map(a=>a<0?~a:a))){let list=owners.get(arc);if(!list)owners.set(arc,list=[]);list.push(g.properties.id);}
 const atlasEdge=lineIndex(mask.features.flatMap(f=>polygons(f.geometry).flat())),groups=new Map(),coasts=[];

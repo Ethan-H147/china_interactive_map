@@ -49,12 +49,6 @@
       "method": "continuous outline arc"
     },
     {
-      "pair": "CHE-DEU",
-      "vertices": 337,
-      "endpointErrorMetres": 6331,
-      "method": "continuous outline arc"
-    },
-    {
       "pair": "DEU-DNK",
       "vertices": 47,
       "endpointErrorMetres": 0,
@@ -74,6 +68,24 @@
       "endpointErrorMetres": 0,
       "method": "Shared municipality-derived land frontier, separate BKG VG25 sea boundaries; sea endpoints join the displayed GISCO shoreline.",
       "boundaryType": "water"
+    },
+    {
+      "pair": "CHE-DEU",
+      "vertices": 901,
+      "endpointErrorMetres": 0,
+      "method": "Complete Swiss survey outline, including Büsingen; mapped lake surfaces and shores excluded."
+    },
+    {
+      "pair": "CHE-DEU",
+      "vertices": 11,
+      "endpointErrorMetres": 0,
+      "method": "Complete Swiss survey outline, including Büsingen; mapped lake surfaces and shores excluded."
+    },
+    {
+      "pair": "CHE-DEU",
+      "vertices": 55,
+      "endpointErrorMetres": 0,
+      "method": "Complete Swiss survey outline, including Büsingen; mapped lake surfaces and shores excluded."
     }
   ],
   "kinds": {
@@ -154,5 +166,12 @@
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "documentation": "https://sgx.geodatenzentrum.de/web_public/gdz/dokumentation/deu/vg25.pdf"
     }
+  },
+  "alpineLakes": {
+    "source": "data/alpine-lakes-sources.json",
+    "policy": "Mapped lake surfaces are excluded from land at every administrative level. No lake shoreline stroke is added; survey identities and statistics are retained."
+  },
+  "swissGermanLand": {
+    "policy": "German administrative land and both country portals share the retained Swiss survey frontier, including Büsingen; lake water remains a separate exclusion."
   }
 }

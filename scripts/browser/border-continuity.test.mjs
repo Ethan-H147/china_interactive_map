@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {load} from '../geo-index.mjs';
+const line=load('dist/data/shared-context-borders.bin').features.find(f=>f.properties.neighbor==='mongolia').geometry.coordinates;
+const points=line.filter(([x,y])=>x>111&&x<117&&y>42&&y<47).filter((_,i)=>i%3===0);
+export default [1280,390].map(width=>({name:'Country borders remain drawn on every frame while detail is delayed '+width,options:{width,height:960,mobile:width===390},async run(p,base){
+ await p.send('Page.addScriptToEvaluateOnNewDocument',{source:"localStorage.setItem('boundary-atlas-globe-v1','true');"});await p.open(base,'#finland');await p.waitFor('AtlasGlobeOverviewController.snapshot().ready');
+ await p.evaluate('void map.jumpTo({center:[114,44.5],zoom:4.7})');await p.settle();
+ await p.evaluate(`window.borderFrames=[];window.delayedBorders=0;for(const id of new Set(map.getStyle().layers.filter(l=>l.metadata?.atlasInternationalBorder&&!l.metadata?.atlas?.overview).map(l=>l.source))){const manager=map.style.tileManagers[id],source=manager.getSource(),load=source.loadTile.bind(source);source.loadTile=async(...args)=>{delayedBorders++;await new Promise(r=>setTimeout(r,900));return load(...args);};manager.clearTiles();}map._update(true);
+ window.inspectBorders=()=>{if(map.getZoom()<5.25||map.getZoom()>6.7)return;const canvas=map.getCanvas(),gl=canvas.getContext('webgl2'),scale=canvas.width/canvas.clientWidth,bytes=new Uint8Array(canvas.width*canvas.height*4);gl.readPixels(0,0,canvas.width,canvas.height,gl.RGBA,gl.UNSIGNED_BYTE,bytes);let tested=0,missing=0;for(const point of ${JSON.stringify(points)}){const q=map.project(point);if(q.x<12||q.y<12||q.x>canvas.clientWidth-12||q.y>canvas.clientHeight-12)continue;tested++;const x=Math.round(q.x*scale),y=canvas.height-1-Math.round(q.y*scale),radius=Math.ceil(8*scale);let ink=false;for(let dx=-radius;dx<=radius&&!ink;dx++)for(let dy=-radius;dy<=radius;dy++){const i=((y+dy)*canvas.width+x+dx)*4;if((bytes[i]+bytes[i+1]+bytes[i+2])/3<209){ink=true;break;}}if(!ink)missing++;}borderFrames.push({zoom:map.getZoom(),tested,missing,handoff:AtlasGlobeOverviewController.snapshot().borders});};map.on('render',inspectBorders);void 0`);
+ await p.send('Emulation.setCPUThrottlingRate',{rate:3});
+ await p.evaluate('void map.easeTo({zoom:6.4,duration:550})');await p.settle();
+ await p.evaluate('void map.easeTo({zoom:4.8,duration:180})');await p.settle();
+ await p.evaluate('void map.easeTo({zoom:6.3,duration:180})');await p.settle();
+ await p.send('Emulation.setCPUThrottlingRate',{rate:1});
+ const report=await p.evaluate('({frames:borderFrames,delayed:delayedBorders})');
+ assert(report.delayed>0);assert(report.frames.length>5);assert(report.frames.some(f=>f.tested>3));
+ assert(report.frames.every(f=>!f.missing),'No frame loses border strokes: '+JSON.stringify(report.frames.filter(f=>f.missing)));
+ assert(report.frames.some(f=>f.zoom>5.75&&f.handoff?.coarse),'Coarse border stays while fine tiles are pending');
+ assert.equal(report.frames.at(-1).handoff.coarse,false,'Detailed border takes over after loading');
+ await p.evaluate('void map.off("render",inspectBorders)');await p.screenshot('continuous-border-handoff-'+width);
+}}));

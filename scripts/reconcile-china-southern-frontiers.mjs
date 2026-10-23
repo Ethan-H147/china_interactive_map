@@ -28,3 +28,4 @@ const neighbourFile='dist/data/china-neighbours.bin';save('china-neighbours.bin'
 // Rebuild the neighboring Afghanistan seam against the repaired Pakistan edge.
 if(fs.existsSync('dist/data/europe/afghanistan/catalogue.bin')){const child=spawnSync(process.execPath,['scripts/build-afghanistan-kyrgyzstan.mjs'],{env:{...process.env,ONLY:'afghanistan'},stdio:'inherit'});assert.equal(child.status,0,'Afghanistan shared-edge rebuild');}
 const colors=spawnSync(process.execPath,['scripts/prepare-region-colors.mjs'],{env:{...process.env,ONLY:'pakistan,afghanistan'},stdio:'inherit'});assert.equal(colors.status,0,'Updated mapped-area comparison values');
+await (await import('./reconcile-aksai-outlines.mjs')).reconcileAksaiOutlines();

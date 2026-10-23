@@ -181,7 +181,7 @@
     "measure:stability": "node scripts/browser/measure-stability.mjs",
     "test:preview": "node scripts/test-preview.mjs",
     "test:spatial-audit": "node --max-old-space-size=10000 scripts/audit-spatial.mjs",
-    "test:stability-data": "node scripts/validate-finland-places.mjs && node --max-old-space-size=8000 scripts/validate-czech-slovak.mjs && node scripts/validate-browser-shards.mjs && node scripts/validate-render-budget.mjs && node scripts/validate-canonical-neighbour-fingerprint.mjs && node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz && node scripts/validate-swiss-alignment.mjs && node scripts/validate-bolivia.mjs && npm run test:titicaca && npm run test:brunei",
+    "test:stability-data": "node scripts/validate-selection-style.mjs && node scripts/validate-border-handoff.mjs && node scripts/validate-globe-overview.mjs && node scripts/validate-finland-places.mjs && node scripts/validate-aksai-outlines.mjs && node scripts/validate-settlement-density.mjs && node --max-old-space-size=8000 scripts/validate-czech-slovak.mjs && node scripts/validate-browser-shards.mjs && node scripts/validate-render-budget.mjs && node scripts/validate-canonical-neighbour-fingerprint.mjs && node scripts/test-data-audit.mjs && node --max-old-space-size=10000 scripts/audit-atlas-data.mjs && npm run test:morocco && npm run test:spatial-audit && npm run test:first-level-quiz && node scripts/validate-swiss-alignment.mjs && node scripts/validate-bolivia.mjs && npm run test:titicaca && npm run test:brunei",
     "test:map-view-picker": "node scripts/validate-map-view-picker.mjs && node scripts/browser/run.mjs map-view-dropdown",
     "test:swiss-alignment": "node scripts/validate-swiss-alignment.mjs && node scripts/browser/run.mjs swiss-alignment",
     "fetch:bolivia": "node scripts/fetch-bolivia.mjs",
@@ -303,6 +303,21 @@
     "build:czech-slovak": "node --max-old-space-size=12000 scripts/build-czech-slovak.mjs && node --max-old-space-size=12000 scripts/reconcile-czech-slovak.mjs && node scripts/build-world-land.mjs && node scripts/build-atlas-frontiers.mjs && node scripts/prepare-region-colors.mjs && node scripts/prepare-flag-images.mjs && node scripts/build-compact.mjs",
     "test:czech-slovak": "node scripts/validate-czech-slovak.mjs && node scripts/browser/run.mjs czech-slovak",
     "build:finland-places": "node --max-old-space-size=6000 scripts/fetch-finland-places.mjs && node scripts/prepare-finland-places.mjs",
-    "test:finland-places": "node scripts/validate-finland-places.mjs && node scripts/browser/run.mjs finland-villages"
+    "test:finland-places": "node scripts/validate-finland-places.mjs && node scripts/browser/run.mjs finland-villages",
+    "test:settlement-density": "node scripts/validate-settlement-density.mjs && node scripts/browser/run.mjs settlement-density settlement-rendered",
+    "test:aksai-outlines": "node scripts/validate-aksai-outlines.mjs && node scripts/browser/run.mjs aksai-outlines",
+    "build:globe-overview": "node scripts/build-globe-overview.mjs",
+    "test:globe-overview": "node scripts/validate-globe-overview.mjs && node scripts/validate-border-handoff.mjs && node scripts/browser/run.mjs globe-overview globe-border-handoff border-continuity",
+    "test:selection-style": "node scripts/validate-selection-style.mjs && node scripts/browser/run.mjs selection-style",
+    "test:hawaii-communities": "node --check dist/regional-country.mjs && node scripts/browser/run.mjs hawaii-communities",
+    "build:alpine-lakes": "node scripts/alpine-lakes.mjs && node scripts/build-context-coverage.mjs && node scripts/build-globe-overview.mjs",
+    "test:alpine-lakes": "node scripts/validate-alpine-lakes.mjs && node scripts/validate-swiss-german-land.mjs && node scripts/browser/run.mjs alpine-lakes swiss-german-land",
+    "test:swiss-german-land": "node scripts/validate-swiss-german-land.mjs && node scripts/browser/run.mjs swiss-german-land",
+    "fetch:nigeria": "node scripts/fetch-nigeria.mjs",
+    "build:nigeria": "npm run fetch:nigeria && node scripts/build-nigeria.mjs && node --max-old-space-size=10000 scripts/build-world-land.mjs && node scripts/prepare-region-colors.mjs nigeria && node scripts/build-compact.mjs",
+    "test:nigeria": "node scripts/validate-nigeria.mjs && node scripts/browser/run.mjs nigeria",
+    "fetch:central-europe": "node scripts/fetch-central-europe.mjs",
+    "build:central-europe": "npm run fetch:central-europe && node --max-old-space-size=12000 scripts/build-central-europe.mjs && node scripts/fetch-central-europe-flags.mjs && node scripts/prepare-region-colors.mjs austria hungary slovenia && node --max-old-space-size=10000 scripts/build-world-land.mjs && node scripts/build-compact.mjs",
+    "test:central-europe": "node scripts/validate-central-europe.mjs && node scripts/browser/run.mjs central-europe"
   }
 }

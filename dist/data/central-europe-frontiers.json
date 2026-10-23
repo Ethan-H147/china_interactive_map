@@ -1,0 +1,114 @@
+{
+  "retrieved": "2026-10-22",
+  "policy": "One complete canonical survey arc per shared frontier, snapped to common survey junctions. The same path replaces every adjacent administrative level and country portal. Existing Czech/Slovak complete frontiers retain their source geometry. Lake surfaces and shorelines are excluded from strokes.",
+  "pairs": [
+    {
+      "pair": "HUN-ROU",
+      "owner": "hungary",
+      "vertices": 1885,
+      "source": "hungary national administrative outline"
+    },
+    {
+      "pair": "AUT-CZE",
+      "owner": "czechia",
+      "vertices": 10461,
+      "source": "Retained complete Czech/Slovak survey frontier"
+    },
+    {
+      "pair": "AUT-HUN",
+      "owner": "austria",
+      "vertices": 9069,
+      "source": "austria national administrative outline"
+    },
+    {
+      "pair": "AUT-CHE",
+      "owner": "austria",
+      "vertices": 1135,
+      "source": "austria national administrative outline"
+    },
+    {
+      "pair": "AUT-CHE",
+      "owner": "austria",
+      "vertices": 5291,
+      "source": "austria national administrative outline"
+    },
+    {
+      "pair": "AUT-LIE",
+      "owner": "austria",
+      "vertices": 1643,
+      "source": "austria national administrative outline"
+    },
+    {
+      "pair": "HUN-SRB",
+      "owner": "hungary",
+      "vertices": 338,
+      "source": "hungary national administrative outline"
+    },
+    {
+      "pair": "HRV-HUN",
+      "owner": "hungary",
+      "vertices": 2427,
+      "source": "hungary national administrative outline"
+    },
+    {
+      "pair": "HRV-SVN",
+      "owner": "slovenia",
+      "vertices": 12805,
+      "source": "slovenia national administrative outline"
+    },
+    {
+      "pair": "HUN-SVN",
+      "owner": "slovenia",
+      "vertices": 1810,
+      "source": "slovenia national administrative outline"
+    },
+    {
+      "pair": "AUT-ITA",
+      "owner": "austria",
+      "vertices": 19504,
+      "source": "austria national administrative outline"
+    },
+    {
+      "pair": "ITA-SVN",
+      "owner": "slovenia",
+      "vertices": 4383,
+      "source": "slovenia national administrative outline"
+    },
+    {
+      "pair": "AUT-DEU",
+      "owner": "austria",
+      "vertices": 31296,
+      "source": "austria national administrative outline"
+    },
+    {
+      "pair": "AUT-SVN",
+      "owner": "austria",
+      "vertices": 10793,
+      "source": "austria national administrative outline"
+    },
+    {
+      "pair": "AUT-SVK",
+      "owner": "slovakia",
+      "vertices": 1131,
+      "source": "Retained complete Czech/Slovak survey frontier"
+    },
+    {
+      "pair": "HUN-SVK",
+      "owner": "slovakia",
+      "vertices": 8923,
+      "source": "Retained complete Czech/Slovak survey frontier"
+    },
+    {
+      "pair": "HUN-UKR",
+      "owner": "ukraine",
+      "vertices": 2071,
+      "source": "ukraine national administrative outline"
+    },
+    {
+      "pair": "AUT-DEU",
+      "owner": "austria",
+      "vertices": 736,
+      "source": "Statistics Austria municipal polygon, including the point contact at Sorgschrofen"
+    }
+  ]
+}

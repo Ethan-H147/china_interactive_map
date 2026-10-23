@@ -1613,5 +1613,9 @@
       "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
       "bytes": 565922
     }
-  ]
+  ],
+  "alpineLakes": {
+    "source": "data/alpine-lakes-sources.json",
+    "policy": "Mapped lake surfaces are excluded from land at every administrative level. No lake shoreline stroke is added; survey identities and statistics are retained."
+  }
 }

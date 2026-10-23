@@ -38,7 +38,8 @@ export function attach(map,{refreshLabels=()=>{}}={}){
   if(context!==budgetContext||performance.now()-budgetLearnedAt>60000){budgetContext=context;budgetLearnedAt=performance.now();budget.reset();}
  }
  function applyRatio(){
-  const ratio=reduced?budget.ratio():targetRatio(globalThis.devicePixelRatio,preferences.quality,false);
+  const overview=globalThis.AtlasGlobeOverviewController?.snapshot();
+  const ratio=reduced&&!(overview?.ready&&map.getZoom()<6)?budget.ratio():targetRatio(globalThis.devicePixelRatio,preferences.quality,false);
   if(Math.abs(map.getPixelRatio()-ratio)>.001){settingRatio=true;try{if(!resizeDuringMotion(map,ratio)){if(map.isMoving())return;map.setPixelRatio(ratio);}}finally{settingRatio=false;}}
  }
  function stopSampling(){if(frame)cancelAnimationFrame(frame);frame=0;lastFrame=undefined;}
@@ -126,6 +127,7 @@ export function attach(map,{refreshLabels=()=>{}}={}){
  function resize(){const ratio=globalThis.devicePixelRatio||1;if(ratio!==observedRatio){observedRatio=ratio;budget.configure({deviceRatio:ratio});if(!map.isMoving())applyRatio();}}
  function visibility(){if(document.hidden){cancelProbe();end();stopSampling();clearTimeout(restoreTimer);inputActive=false;reduced=false;applyRatio();}else if(map.isMoving()){begin();}else{inputActive=false;reduced=false;applyRatio();scheduleProbe();}}
  map.on('movestart',begin);map.on('moveend',end);map.on('render',render);
+ const overviewSharpness=()=>{if(reduced&&globalThis.AtlasGlobeOverviewController?.snapshot().ready&&map.getZoom()<6)applyRatio();};map.on('zoom',overviewSharpness);
  globalThis.addEventListener('atlas-rendering-change',sync);globalThis.addEventListener('resize',resize);document.addEventListener('visibilitychange',visibility);
  function mountSettings(){
   const content=document.querySelector('#atlas-settings .settings-content');if(!content||document.getElementById('settings-rendering-quality'))return;
@@ -160,5 +162,5 @@ export function attach(map,{refreshLabels=()=>{}}={}){
  const resetBudget=()=>{budget.reset();if(reduced)applyRatio();scheduleProbe();};
  map.on('idle',scheduleProbe);map.on('webglcontextrestored',resetBudget);map.on('projectiontransition',resetBudget);
  sync();scheduleProbe();
- return {mountSettings,snapshot,prepareInput,get labelsSuppressed(){return labelsSuppressed;},destroy(){cancelProbe();budget.stop();map.off('idle',scheduleProbe);map.off('webglcontextrestored',resetBudget);map.off('projectiontransition',resetBudget);clearTimeout(restoreTimer);stopSampling();map.off('movestart',begin);map.off('moveend',end);map.off('render',render);for(const type of inputTypes)canvas.removeEventListener(type,prepareInput,true);for(const type of releaseTypes)globalThis.removeEventListener(type,releaseInput,true);globalThis.removeEventListener('atlas-rendering-change',sync);globalThis.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);panel?.remove();moving=false;reduced=false;applyRatio();}};
+ return {mountSettings,snapshot,prepareInput,get labelsSuppressed(){return labelsSuppressed;},destroy(){cancelProbe();budget.stop();map.off('idle',scheduleProbe);map.off('webglcontextrestored',resetBudget);map.off('projectiontransition',resetBudget);clearTimeout(restoreTimer);stopSampling();map.off('zoom',overviewSharpness);map.off('movestart',begin);map.off('moveend',end);map.off('render',render);for(const type of inputTypes)canvas.removeEventListener(type,prepareInput,true);for(const type of releaseTypes)globalThis.removeEventListener(type,releaseInput,true);globalThis.removeEventListener('atlas-rendering-change',sync);globalThis.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);panel?.remove();moving=false;reduced=false;applyRatio();}};
 }

@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 const read=file=>JSON.parse(fs.readFileSync(file)),images={},out='dist/vendor/flag-originals';
 fs.mkdirSync(out,{recursive:true});
 function add(flag){
@@ -36,8 +37,14 @@ const baltic='dist/data/baltic-flag-sources.json';
 if(fs.existsSync(baltic))Object.values(read(baltic).flags).forEach(add);
 const soviet='dist/data/soviet-flag-sources.json';
 if(fs.existsSync(soviet))Object.values(read(soviet).flags).forEach(add);
+const centralEurope='dist/data/central-europe-flag-sources.json';
+if(fs.existsSync(centralEurope))Object.values(read(centralEurope).flags).forEach(add);
 const expansion='dist/data/europe-expansion-flag-sources.json';
 if(fs.existsSync(expansion))Object.values(read(expansion).flags).forEach(add);
+// The UK thumbnail uses separate 3:5 artwork; the viewer keeps its 1:2 original.
+national['vendor/flag-gb-3x5.svg']={...national['vendor/flag-gb.svg'],file:'vendor/flag-gb-3x5.svg',thumbnail:{width:1000,height:600,source:'https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg',license:'Public domain',sha256:createHash('sha256').update(fs.readFileSync('dist/vendor/flag-gb-3x5.svg')).digest('hex')}};
+// Custom Irish thumbnail uses equal stripes at 2:3; the viewer keeps the original.
+national['vendor/flag-ie-2x3.svg']={...national['vendor/flag-ie.svg'],file:'vendor/flag-ie-2x3.svg',thumbnail:{width:900,height:600,source:national['vendor/flag-ie.svg'].page,method:'Custom 2:3 artwork with equal stripes and original colors',license:'Public domain',sha256:createHash('sha256').update(fs.readFileSync('dist/vendor/flag-ie-2x3.svg')).digest('hex')}};
 // Retained SVG and WebP thumbnail variants share the same sourced original artwork.
 for(const name of fs.readdirSync('dist/vendor').filter(n=>/^flag-.*\.(svg|webp)$/.test(n))){const file='vendor/'+name;if(!national[file]){const peer=file.replace(/\.(svg|webp)$/,(_,ext)=>ext==='svg'?'.webp':'.svg');if(national[peer])national[file]=national[peer];}}
 Object.assign(images,national);

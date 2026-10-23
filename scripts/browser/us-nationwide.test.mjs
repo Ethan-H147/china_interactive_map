@@ -34,9 +34,9 @@ export default [
  }},
  {name:'Hawaii communities and Alaska dateline municipalities remain usable',options:{width:390,height:844,mobile:true},async run(page,base){
   await page.open(base,'#united-states');await choose(page,'Hawaii','Hawaii','State');await page.tap('.map-mode button[aria-pressed=true]:not(#mode-lock)');await page.tap('#mode-third');await ready(page);
-  assert(await page.evaluate('!document.getElementById("us-detail-hint").hidden&&document.getElementById("us-detail-hint").textContent.includes("No incorporated")'));
+  assert(await page.evaluate('!document.getElementById("us-detail-hint").hidden&&document.getElementById("us-detail-hint").textContent.includes("Census-designated")'));
   await choose(page,'Hilo HI','Hilo','Census-designated place');
-  assert(await page.evaluate('document.getElementById("us-census-places").checked'));
+  assert(!await page.evaluate('document.getElementById("us-census-places").checked'),'Hawaii communities do not enable optional places in other states');
   await choose(page,'Unalaska AK','Unalaska','City');
   assert.equal(await page.evaluate('currentAtlas().getSelection()'),'US-PLACE-0280770');
   assert((await page.evaluate('map.getBounds().getEast()-map.getBounds().getWest()'))<20,'Dateline geometry never fits the whole globe');

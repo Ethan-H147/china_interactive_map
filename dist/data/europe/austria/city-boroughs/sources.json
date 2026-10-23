@@ -1,0 +1,11 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "All 23 Vienna municipal boroughs from Statistics Austria, 1 January 2026; separate from the single city municipality.",
+  "sources": [
+    {
+      "title": "Statistics Austria · current municipal and borough geometry",
+      "url": "https://data.statistik.gv.at/web/meta.jsp?dataset=OGDEXT_GEM_1",
+      "license": "CC BY 4.0"
+    }
+  ]
+}

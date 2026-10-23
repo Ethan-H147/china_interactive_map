@@ -3,7 +3,7 @@ export {createHoverOverview} from './hover-overview.mjs';
 export function labelLines(english,local,language='both',district=false){
  if(district&&!/\b(?:District|Dist\.)$/i.test(english))english+=' District';
  english=english.replace(/\bAutonomous Prefecture\b/gi,'A.P.').replace(/\bDistrict\b/gi,'Dist.');
- const compact=value=>String(value||'').replace(/^Bangsamoro(?: Autonomous Region in Muslim Mindanao)?(?:\s*·\s*BARMM)?$/i,'BARMM').replace(/\bKabupaten\b/gi,'Kab.');
+ const compact=value=>String(value||'').replace(/,\s*(?:Kreisfreie Stadt|Landkreis|Stadtkreis)$/i,'').replace(/^Bangsamoro(?: Autonomous Region in Muslim Mindanao)?(?:\s*·\s*BARMM)?$/i,'BARMM').replace(/\bKabupaten\b/gi,'Kab.');
  english=compact(english);local=compact(local);
  return language==='en'?[english]:language==='local'?[local||english]:[english,local].filter((s,i,a)=>s&&a.indexOf(s)===i);
 }

@@ -1,0 +1,32 @@
+{
+  "retrieved": "2026-10-22",
+  "coverage": "All 36 states and the Federal Capital Territory, with 768 local government areas and six FCT area councils (774 local units in total). OCHA COD-AB version 01, valid 17 April 2019 and reviewed 30 October 2025, from OSGOF, eHealth and UNCS. State outlines are dissolved from the same local-area geometry to keep every shared edge consistent. Inland lake water is excluded and has no shoreline stroke. The partial 714-ward layer is not offered as national coverage. Area cards are calculated from mapped land; population and economic figures are not inferred.",
+  "counts": {
+    "1": 37,
+    "2": 774
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-nga",
+      "sha256": "beb15c4656112646bd2069ddc105a6f0a7f7e358a80d3d0f4f197d9229914127",
+      "bytes": 65593
+    },
+    "boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/81ac1d38-f603-4a98-804d-325c658599a3/resource/7e30ec96-7f29-4ee8-9f4c-77633b353cbb/download/nga_admin_boundaries.geojson.zip",
+      "credit": "Office of the Surveyor General of the Federation, eHealth Africa, UNCS; OCHA Nigeria / HDX COD-AB",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ab-nga",
+      "sha256": "40180271a90a545153f97eee044db1c46ec67cba51788529df9a25918abd1d92",
+      "bytes": 11395117
+    },
+    "flag-ng.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Nigeria.svg",
+      "sha256": "29a8a7fff1ca574873f953e086753bb2f90be55c3efac5c91f829b1a1c6c01be",
+      "bytes": 201
+    }
+  }
+}

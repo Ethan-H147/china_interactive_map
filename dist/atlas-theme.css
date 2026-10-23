@@ -85,3 +85,11 @@ body[data-atlas=brunei]{--red:#8f6e18;--red-dark:#6c510d;--ink:#302c20;--muted:#
 :root[data-atlas=czechia],body[data-atlas=czechia],.country-option[data-atlas=czechia]{--red:#46669a;--red-dark:#304d7b;--ink:#303e52;--muted:#77869c;--gold:#ad4949;--line:#d9e2ef;--paper:#fcfdff;--map:#f1f0f6;--surface-soft:#e9eff8;--accent-soft:#ceddef;--header-stripe:linear-gradient(90deg,#f7f5f1 0 33%,#46669a 33% 66%,#b44a50 66%)}
 
 :root[data-atlas=slovakia],body[data-atlas=slovakia],.country-option[data-atlas=slovakia]{--red:#46669a;--red-dark:#304d7b;--ink:#303e52;--muted:#77869c;--gold:#ad4949;--line:#d9e2ef;--paper:#fcfdff;--map:#f1f0f6;--surface-soft:#e9eff8;--accent-soft:#ceddef;--header-stripe:linear-gradient(90deg,#f7f5f1 0 33%,#46669a 33% 66%,#b44a50 66%)}
+
+:root[data-atlas=nigeria],body[data-atlas=nigeria],.country-option[data-atlas=nigeria]{--red:#28734b;--red-dark:#195234;--ink:#293f31;--muted:#6b8974;--gold:#a88b39;--line:#d7e5d9;--paper:#fcfefb;--map:#edf4ee;--surface-soft:#e9f2e9;--accent-soft:#bed9c4;--header-stripe:linear-gradient(90deg,#008751 0 33.333%,#fff 33.333% 66.667%,#008751 66.667%)}
+
+:root[data-atlas=austria],body[data-atlas=austria],.country-option[data-atlas=austria]{--red:#9d4545;--red-dark:#753131;--ink:#493231;--muted:#987675;--gold:#ab8447;--line:#e8d7d1;--paper:#fffdfb;--map:#f7efee;--surface-soft:#f4e8e3;--accent-soft:#e1bbb2;--header-stripe:linear-gradient(90deg,#b64545 0 33.333%,#fff 33.333% 66.667%,#b64545 66.667%)}
+
+:root[data-atlas=hungary],body[data-atlas=hungary],.country-option[data-atlas=hungary]{--red:#54733d;--red-dark:#3a5429;--ink:#35422e;--muted:#7d8d71;--gold:#ad4d48;--line:#dce5d4;--paper:#fdfefb;--map:#f3f4ed;--surface-soft:#eaf0e2;--accent-soft:#c6d6b4;--header-stripe:linear-gradient(90deg,#b34c4b 0 33.333%,#fff 33.333% 66.667%,#54733d 66.667%)}
+
+:root[data-atlas=slovenia],body[data-atlas=slovenia],.country-option[data-atlas=slovenia]{--red:#356b8c;--red-dark:#254d69;--ink:#2d4051;--muted:#748ca1;--gold:#ae4d49;--line:#d7e2ee;--paper:#fcfdff;--map:#eef3f8;--surface-soft:#e8f0f7;--accent-soft:#b8d1e3;--header-stripe:linear-gradient(90deg,#fff 0 33.333%,#356b8c 33.333% 66.667%,#b34b4d 66.667%)}

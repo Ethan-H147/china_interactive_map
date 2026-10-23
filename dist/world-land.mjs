@@ -1,8 +1,10 @@
+import {addGlobeOverview} from './globe-overview.mjs';
 import {backgroundLandColor,syncBackgroundLand} from './map-palette.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
 import {internationalLineSourceOptions,internationalBorderPaint} from './adaptive-lines.mjs';
 
 export async function addWorldLand(map){
+ const overview=addGlobeOverview(map).catch(error=>{console.warn('Globe overview unavailable',error);return null;});
  const outlines=addWorkerSource(map,'world-country-outlines','data/world-country-outlines.bin',{...internationalLineSourceOptions,attribution:'Country outlines: <a href="https://www.naturalearthdata.com/">Natural Earth</a> · reconciled atlas display edges'}).then(()=>true,error=>{console.warn('World country outlines',error);return false;});
  await addWorkerSource(map,'world-land','data/world-land.bin',{
   type:'geojson',tolerance:0,buffer:64,maxzoom:8,
@@ -13,6 +15,7 @@ export async function addWorldLand(map){
  map.addLayer({id:'world-land',metadata:{atlas:{role:'land',landPalette:true}},type:'fill',source:'world-land',paint:{
   'fill-color':backgroundLandColor(),'fill-antialias':false
  }});
+ await overview;
  if(await outlines)map.addLayer({id:'world-country-outlines',type:'line',source:'world-country-outlines',metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  globalThis.addEventListener?.('atlas-developer-change',()=>syncBackgroundLand(map));
  // China's non-atlas land neighbours at the precision of China's outline, in a band along it

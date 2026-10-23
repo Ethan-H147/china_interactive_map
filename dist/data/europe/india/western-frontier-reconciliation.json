@@ -1,0 +1,18 @@
+{
+  "policy": "Existing country fills and claim geometry are unchanged. India draws its complete detailed western China claim arc only in its own view; other views retain the canonical displayed China edge. KAS residual background fill has no coastline.",
+  "vertices": 4202,
+  "endpoints": [
+    [
+      74.585085,
+      37.037568
+    ],
+    [
+      81.03608,
+      30.20802
+    ]
+  ],
+  "referenceEndpointDisplacementMetres": 1805.9039534722424,
+  "suppressedBackgroundOutlineCodes": [
+    "KAS"
+  ]
+}

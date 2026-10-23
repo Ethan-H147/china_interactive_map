@@ -1,6 +1,7 @@
 import {createSelectionVisibility} from './selection-visibility.mjs';
 export {selectionStates} from './selection-visibility.mjs';
 import {sourceFile,outsideView,paddedView,behindGlobe} from './context-visibility.mjs';
+import {regionalLineWidth} from './adaptive-lines.mjs';
 // One scene owns drawing order and satellite paint for every country.
 // Country modules supply normal paint; exceptional layers declare atlas metadata.
 const scenes=new WeakMap();
@@ -39,7 +40,7 @@ export const getMapScene=map=>scenes.get(map);
 export function createMapScene(map){
  if(scenes.has(map))return scenes.get(map);
  const native=Object.fromEntries(['addLayer','moveLayer','removeLayer','setPaintProperty','setLayoutProperty'].map(key=>[key,map[key].bind(map)]));
- const entries=new Map();const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,horizonCulling=true,selectionCulling=true,view=getView();let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[];
+ const entries=new Map();const getView=()=>{const bounds=map.getBounds?.()?.toArray?.();return bounds?paddedView(bounds.flat()):[-180,-90,180,90];};let culling=true,horizonCulling=true,selectionCulling=true,view=getView();let overview=false,borderPreparation=false;let satellite={visible:false,opacity:1},snapshot=null,snapshotContexts=[];
  // The pinned renderer exposes altitude on its transform. Missing or invalid
  // altitude falls back to the conservative back hemisphere, never tighter culling.
  const globeView=()=>{if(!map.style)return null;if(map.getProjection?.()?.type!=='globe'||!(map.getZoom?.()<5)||map.getPitch?.()>0)return null;const transform=map.transform||map._camera?.transform,altitude=transform?.getCameraAltitude?.();return {center:map.getCenter(),minimumFacing:Number.isFinite(altitude)&&altitude>6371008.8*.05?6371008.8/(6371008.8+altitude):0};};
@@ -50,8 +51,12 @@ export function createMapScene(map){
  const describe=layer=>{
   const atlas=layer.metadata?.atlas||{},role=atlas.role||defaults[layer.type];
   if(!(role in layerBands))throw Error('Declare an atlas layer role for '+layer.id);
+  // One selected-outline profile applies to every adapter, administrative
+  // level and motion copy, including older fixed-width country definitions.
+  const basePaint=clone(layer.paint||{});
+  if(layer.type==='line'&&role==='selection')basePaint['line-width']=regionalLineWidth(1,true);
   const file=sourceFile(map,layer.source),context=['context','land'].includes(role)||layer.metadata?.atlasInternationalBorder;
-  return {source:layer.source,visibleStates:atlas.visibleStates||null,file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,contextCountry:atlas.contextCountry,paint:clone(layer.paint||{}),satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
+  return {detailedBorder:!atlas.overview&&!!layer.metadata?.atlasInternationalBorder,replaceInOverview:!atlas.overview&&(['land','context'].includes(role)||!!layer.metadata?.atlasInternationalBorder),source:layer.source,visibleStates:atlas.visibleStates||null,file:context?file:null,culled:!!(culling&&context&&offscreen(file)),type:layer.type,role,contextCountry:atlas.contextCountry,paint:basePaint,satellite:atlas.satellite??{},rendered:{},visibility:layer.layout?.visibility||'visible'};
  };
  const rank=layer=>layerBands[entries.get(layer.id)?.role||layer.metadata?.atlas?.role||defaults[layer.type]];
  function anchor(id,role,before){
@@ -76,7 +81,7 @@ export function createMapScene(map){
   return out;
  }
  const emptySelection=entry=>selectionCulling&&entry.visibleStates&&!selectionVisibility.active(entry.source,entry.visibleStates);
- const visibility=(id,entry)=>entry.culled||emptySelection(entry)?'none':snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
+ const visibility=(id,entry)=>entry.culled||emptySelection(entry)||overview&&entry.replaceInOverview&&!(borderPreparation&&entry.detailedBorder)?'none':snapshot&&!id.startsWith(snapshot+'-')&&(['line','circle','symbol'].includes(entry.type)||['water','selection'].includes(entry.role)||snapshotContexts.includes(entry.contextCountry))?'none':entry.visibility;
  function render(id,entry){
   for(const [key,value] of Object.entries(paint(entry)))if(!same(entry.rendered[key],value)){native.setPaintProperty(id,key,value);entry.rendered[key]=clone(value);}
  }
@@ -93,12 +98,16 @@ export function createMapScene(map){
  map.removeLayer=function(id){const result=native.removeLayer(id);entries.delete(id);return result;};
  map.setPaintProperty=function(id,key,value,...options){
   const entry=entries.get(id);if(!entry)return native.setPaintProperty(id,key,value,...options);
+  if(entry.type==='line'&&entry.role==='selection'&&key==='line-width')value=regionalLineWidth(1,true);
   if(value==null){delete entry.paint[key];native.setPaintProperty(id,key,value,...options);delete entry.rendered[key];}
   else entry.paint[key]=clone(value);
   render(id,entry);return map;
  };
  map.setLayoutProperty=function(id,key,value,...options){const entry=entries.get(id);if(key==='visibility'&&entry){entry.visibility=value||'visible';return native.setLayoutProperty(id,key,visibility(id,entry),...options);}return native.setLayoutProperty(id,key,value,...options);};
  const scene={
+  setOverview(value){value=!!value;if(overview===value)return;overview=value;for(const [id,entry]of entries)if(entry.replaceInOverview)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
+  get overview(){return overview;},
+  setBorderPreparation(value){value=!!value;if(borderPreparation===value)return;borderPreparation=value;for(const [id,entry]of entries)if(entry.detailedBorder)native.setLayoutProperty(id,'visibility',visibility(id,entry));},
   setCulling(value){culling=!!value;updateView();},
   setHorizonCulling(value){horizonCulling=!!value;updateView();},
   setSelectionCulling(value){selectionCulling=!!value;for(const [id,entry]of entries)if(entry.visibleStates)native.setLayoutProperty(id,'visibility',visibility(id,entry));},

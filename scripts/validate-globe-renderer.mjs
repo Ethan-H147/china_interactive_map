@@ -46,6 +46,12 @@ for(const name of ['terrain','callback','flat']){
 }
 console.log('Source coverage reuse: independent mutable tile IDs, option keys, camera changes, scope cleanup, reentrancy, disabled and native fallbacks passed.');
 
+{
+ const f=coverageFixture(),root={key:'world',wrapped(){return this;}},native=()=>[{wrapped:()=>root}];
+ assert.deepEqual(coveringTiles(native,f.transform,{maxzoom:0,reparseOverscaled:false}),[root],'Resident globe root keeps one identity across world copies');
+ f.flat();assert.notEqual(coveringTiles(native,f.transform,{maxzoom:0,reparseOverscaled:false})[0],root,'Flat maps retain native world copies');
+}
+
 // Symbol tiles have different fading and bearing order. Only skip their list
 // when no visible symbol layer uses that source; do not substitute fill order.
 {

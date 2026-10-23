@@ -62,5 +62,12 @@
       "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
       "bytes": 2284669
     }
-  ]
+  ],
+  "alpineLakes": {
+    "source": "data/alpine-lakes-sources.json",
+    "policy": "Mapped lake surfaces are excluded from land at every administrative level. No lake shoreline stroke is added; survey identities and statistics are retained."
+  },
+  "swissGermanLand": {
+    "policy": "German administrative land and both country portals share the retained Swiss survey frontier, including Büsingen; lake water remains a separate exclusion."
+  }
 }

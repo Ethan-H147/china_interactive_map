@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 const select=async(p,quality)=>{await p.tap('#settings-open');await p.evaluate(`(()=>{const e=document.getElementById('settings-rendering-quality');e.value=${JSON.stringify(quality)};e.dispatchEvent(new Event('change',{bubbles:true}));})()`);await p.tap('#settings-close');};
 export default [{name:'motion uses bounded quality resolution without interrupting touch and restores native sharpness',options:{width:1024,height:909,mobile:true},async run(p,base){
- await p.open(base,'#china');if(await p.evaluate('map.getProjection().type')!=='globe')await p.tap('#globe-view');await p.settle();
+ await p.open(base,'#china');if(await p.evaluate('map.getProjection().type')!=='globe')await p.tap('#globe-view');await p.evaluate('void map.jumpTo({zoom:8})');await p.settle();
  await p.evaluate(`(()=>{window.budgetTest={ratios:[],starts:0,ends:0};map.on('render',()=>{if(map.isMoving())budgetTest.ratios.push(map.getPixelRatio())});map.on('movestart',()=>budgetTest.starts++);map.on('moveend',()=>budgetTest.ends++);})()`);
  for(const [quality,expected]of [['balanced',[1.5,1.25,1]],['performance',[1,.875,.75]]]){
   await select(p,quality);await p.settle();await p.evaluate('budgetTest.ratios=[];budgetTest.starts=0;budgetTest.ends=0;void 0');
