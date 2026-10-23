@@ -24,3 +24,4 @@ const world=load('dist/data/world-land-sources.json');for(const iso of ['ECU','V
 assert(!load('dist/data/europe/peru/neighbours.bin').features.some(f=>Object.hasOwn(expected,f.properties.country)),'No obsolete gray Peru-neighbour fills remain for the new atlas countries');
 for(const country of Object.keys(expected))assert(load('dist/data/globe-overview.json').countries.includes(country));
 for(const code of ['ec','ve','co']){const bytes=fs.readFileSync('dist/vendor/flag-'+code+'.svg');assert.equal(createHash('sha256').update(bytes).digest('hex'),load(root+'manifest.json').files['flag-'+code+'.svg'].sha256);}
+await import('./validate-ecuador-land.mjs');

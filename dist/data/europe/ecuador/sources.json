@@ -6,7 +6,7 @@
     "2": 221,
     "3": 1042
   },
-  "processing": "Source polygons cleaned jointly and simplified at 2 metre tolerance; parent shapes dissolved from the same local topology. Complete shared border arcs use one canonical displayed path, including existing Peru and Brazil edges. Lake surfaces and shorelines have no outline. Local geometry loads by selected parent; remote island destinations are retained.",
+  "processing": "Source polygons cleaned jointly and simplified at 2 metre tolerance; parent shapes dissolved from the same local topology. Complete shared border arcs use one canonical displayed path, including existing Peru and Brazil edges. Lake surfaces and shorelines have no outline. Local geometry loads by selected parent; remote island destinations are retained. The 132.903 km² inland omission in Julcuy is restored using the exact surrounding source edges and the parish government map; parent areas and outlines are rebuilt from the corrected parish.",
   "sources": {
     "ecu-boundary-metadata.json": {
       "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ecu",
@@ -195,5 +195,14 @@
       "sha256": "0e2c494f9ff3b9d5830c565e1732c1f423097cb5f85bbbe083e1cff8ca4d6d38",
       "bytes": 55508606
     }
+  },
+  "coverageCorrection": {
+    "title": "GAD Parroquial Rural Julcuy · PDOT 2023–2027",
+    "url": "https://gadpuertocayo.gob.ec/media/gadparroquiajulcuy/pdot_archivos/PDOT_PARROQUIA_JULCUY_2023-2027_compressed.pdf",
+    "pages": [
+      38,
+      79
+    ],
+    "note": "The parish map shows continuous Julcuy land through the inland omission in the OCHA/INEC polygons. The repair reuses the exact surrounding source edges; no coastline or international border is changed."
   }
 }
