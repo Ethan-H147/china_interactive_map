@@ -10,6 +10,8 @@ NANPA supplies assignments, dates and overlay complexes. CNA maps and CRTC decis
 
 Regional footprints share one simplification topology. Dividing lines use the regional reference mesh, excluding province-wide overlays and obsolete perimeter fragments. Continuous paths remain joined for zoom fades, and terminal ends meet the current province land boundary. The tests check the repaired Alberta, Ontario and Quebec segments and reject floating endpoints in all four provinces with regional codes.
 
+Coastal fills are rebuilt from those shared dividers and the current province land rings. The old survey's outer envelopes are discarded: several stop inland in large steps, particularly along eastern Quebec. Closed land partitions keep the current coastline and islands; islands absent from the survey inherit the nearest reference area. Province-wide grid checks require exactly one base-code footprint on land, and coastline screenshot checks use the independent province geometry as their reference.
+
 Canada and the US draw a selected phone area in a separate fill layer above the neutral code footprints. This keeps overlapping codes from painting over its highlight in tile-shaped patches. Screenshot tests sample interior and exterior pixels at multiple zooms on desktop and phone layouts.
 
 Rebuild with `npm run build:canada-area-codes`; verify with `npm run test:canada-area-codes` and `npm run test:canada-area-codes-browser`. Refreshing mutable snapshots requires reviewing and updating the retained source pins. The US snapshot and datasets remain independent.

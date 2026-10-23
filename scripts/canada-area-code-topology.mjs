@@ -1,6 +1,6 @@
 import {command,fc,polygons} from './us-geography.mjs';
 import {lineData} from '../dist/adaptive-lines.mjs';
-import {linesOf,metres,lineIndex} from './geo-index.mjs';
+import {linesOf,metres,lineIndex,landIndex} from './geo-index.mjs';
 import {joinReferencePaths} from './frontier-arcs.mjs';
 
 // Import adjacent footprints together so simplification retains one shared arc.
@@ -30,4 +30,43 @@ export async function areaCodeBorders(features,provinceLand){
  // Rejoin adjacent survey arcs before applying zoom fades; tiny independent
  // pieces otherwise fade at different zooms and make a continuous border blink.
  return lineData(fc(joinReferencePaths(linesOf(inner)).map(coordinates=>({type:'Feature',properties:{},geometry:{type:'LineString',coordinates}}))));
+}
+
+// The survey's outside edges include coarse inland staircases. Rebuild the
+// partition using only its shared dividers and the atlas's current land rings.
+// This keeps real code boundaries while covering the complete coast and islands.
+export async function coastalCodePartitions(features,provinceLand,boundaries){
+ if(!features.length)return new Map();
+ const rings=provinceLand.features.flatMap(f=>polygons(f.geometry).flat()),inside=landIndex(rings),coast=lineIndex(rings),dividers=linesOf(boundaries).map(path=>path.map(p=>[...p]));
+ // Rounded exported endpoints can stop a fraction of a metre short of a coast
+ // segment. Cross that segment during polygonization so it actually cuts land.
+ for(const path of dividers)for(const side of [0,1]){const at=side?path.length-1:0,p=path[at],q=path[side?at-1:1];if(coast(p)<3){const d=metres(p,q);if(d>0){const end=[p[0]+(p[0]-q[0])*100/d,p[1]+(p[1]-q[1])*100/d];if(side)path.push(end);else path.unshift(end);}}}
+ const lines=fc([...rings.map(coordinates=>({type:'Feature',properties:{},geometry:{type:'LineString',coordinates}})),...dividers.map(coordinates=>({type:'Feature',properties:{},geometry:{type:'LineString',coordinates}}))]);
+ const cells=await command(lines,'-snap interval=.00002 -polygons gap-tolerance=.00002'),points=await command(cells,'-points inner');
+ const seeds=features.map(f=>({id:f.properties.id,inside:landIndex(polygons(f.geometry).flat())}));
+ // Islands missing from the old envelope inherit the nearest reference area.
+ // A segment tree bounds that search without scanning every coastal vertex.
+ const segments=features.flatMap(f=>polygons(f.geometry).flat().flatMap(r=>r.slice(1).map((b,i)=>({id:f.properties.id,a:r[i],b,box:[Math.min(r[i][0],b[0]),Math.min(r[i][1],b[1]),Math.max(r[i][0],b[0]),Math.max(r[i][1],b[1])]}))));
+ const tree=items=>{
+  const box=items.reduce((b,s)=>[Math.min(b[0],s.box[0]),Math.min(b[1],s.box[1]),Math.max(b[2],s.box[2]),Math.max(b[3],s.box[3])],[Infinity,Infinity,-Infinity,-Infinity]);
+  if(items.length<=16)return {box,items};
+  const axis=box[2]-box[0]>box[3]-box[1]?0:1;
+  items.sort((a,b)=>a.box[axis]+a.box[axis+2]-b.box[axis]-b.box[axis+2]);
+  const middle=items.length>>1;return {box,children:[tree(items.slice(0,middle)),tree(items.slice(middle))]};
+ },root=tree(segments);
+ const nearest=p=>{
+  const c=Math.cos(p[1]*Math.PI/180);let best=Infinity,id;
+  const distance=box=>Math.hypot(Math.max(box[0]-p[0],0,p[0]-box[2])*c,Math.max(box[1]-p[1],0,p[1]-box[3]));
+  const visit=node=>{
+   if(distance(node.box)>best)return;
+   if(node.items)for(const s of node.items){
+    const dx=(s.b[0]-s.a[0])*c,dy=s.b[1]-s.a[1],t=Math.max(0,Math.min(1,((p[0]-s.a[0])*c*dx+(p[1]-s.a[1])*dy)/(dx*dx+dy*dy||1))),d=Math.hypot((p[0]-s.a[0]-t*(s.b[0]-s.a[0]))*c,p[1]-s.a[1]-t*dy);
+    if(d<best){best=d;id=s.id;}
+   }else for(const child of node.children.toSorted((a,b)=>distance(a.box)-distance(b.box)))visit(child);
+  };
+  visit(root);return id;
+ };
+ const grouped=new Map(features.map(f=>[f.properties.id,[]]));
+ for(let i=0;i<cells.features.length;i++){const p=points.features[i].geometry.coordinates;if(!inside(p))continue;const id=seeds.find(s=>s.inside(p))?.id||nearest(p);grouped.get(id).push(...polygons(cells.features[i].geometry));}
+ return new Map([...grouped].map(([id,coordinates])=>[id,fc([{type:'Feature',properties:{id},geometry:{type:'MultiPolygon',coordinates}}])]));
 }
