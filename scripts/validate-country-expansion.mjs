@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {load,polygons,landIndex,metres,linesOf} from './geo-index.mjs';
 import '../dist/countries.js';
-const expected={germany:{1:16,2:400,3:10978},belgium:{1:3,2:11,3:581},netherlands:{1:18,2:342},switzerland:{1:26,2:273,3:1985},'united-states':{1:65,2:3235,3:50130},canada:{1:13,2:293,3:5161},mexico:{1:32}};
+const expected={germany:{1:16,2:400,3:10978},belgium:{1:3,2:11,3:581},netherlands:{1:18,2:342},switzerland:{1:26,2:273,3:1985},'united-states':{1:65,2:3235,3:50130},canada:{1:13,2:293,3:5161},mexico:{1:32,2:2478}};
 const pins=JSON.parse(fs.readFileSync('scripts/country-expansion-sources.json'));
 const additionalPins={'bkg-vg25-lines.geojson.gz':load('scripts/boundary-sources/germany-denmark/sources.json')};
 for(const [country,counts]of Object.entries(expected)){
@@ -17,6 +17,7 @@ for(const [country,counts]of Object.entries(expected)){
   if(r.populationStatus)assert(!s.population&&s.note.includes('No permanent population'),r.id+' has no invented resident count');
   else if(country==='united-states'&&r.level===2&&!s.population){assert(+r.code.slice(0,2)>=60&&s.note,'Territorial equivalents retain explicitly unavailable population');}
   else if(country==='canada'&&!s.population)assert(s.note?.includes('source does not publish'),'Unpublished estimate remains unavailable');
+  else if(country==='mexico'&&r.level===2&&!s.population)assert(s.note?.includes('does not publish a 2020 census population'),'New Mexican municipalities have no invented census count');
   else {assert(s.population?.value>=0,r.id+' population');assert(stats.sources[s.population.source]?.url,r.id+' recorded population source');}
  }
  for(const [parent,chunk]of Object.entries(data.chunks)){

@@ -7,7 +7,7 @@ const places=[
  ['switzerland','Zurich','Zurich','Municipality',3],
  ['united-states','San Diego CA','San Diego','City',3],
  ['canada','Toronto ON','Toronto','City',3],
- ['mexico','Mexico City','Mexico City','Federal entity',1]
+ ['mexico','Guadalajara','Guadalajara','Municipality',2]
 ];
 export default [
  ...[['germany','Munich','DE_09162000'],['belgium','Brussels','BE_21004'],['netherlands','The Hague','NL_GM0518']].map(([country,query,id])=>({name:country+' finds English municipality names',options:{width:1280,height:820},async run(page,base){await page.open(base,'#'+country);await searchAndSelect(page,query,query,'Municipality');assert.equal(await page.evaluate('currentAtlas().getSelection()'),id);}})),

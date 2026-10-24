@@ -5,6 +5,7 @@ import {prepareCanadaStatisticsSources} from './prepare-canada-statistics.mjs';
 import {fetchCanadaLocal} from './fetch-canada-local.mjs';
 import fs from 'node:fs';
 import {buildUSCounties} from './build-us-counties.mjs';
+import {buildMexicoMunicipalities} from './build-mexico-municipalities.mjs';
 import {extendDenmark} from './denmark.mjs';
 import {germanyDenmarkFrontier} from './germany-denmark-frontier.mjs';
 import {fetchGermanyDenmarkFrontier} from './fetch-germany-denmark-frontier.mjs';
@@ -175,6 +176,7 @@ for(const [country,d]of Object.entries(datasets)){
  if(country==='germany'){const source=JSON.parse(fs.readFileSync('scripts/boundary-sources/germany-denmark/sources.json')),file=dir+'/sources.json',info=JSON.parse(fs.readFileSync(file));info.sources.push({file:'bkg-vg25-lines.geojson.gz',...source});fs.writeFileSync(file,JSON.stringify(info,null,2)+'\n');}
  if(country==='denmark')applyDenmarkStatistics(dir);
  if(country==='united-states')await buildUSCounties(dir+'/');
+ if(country==='mexico')await buildMexicoMunicipalities(dir+'/');
  if(country==='canada'){await fetchCanadaLocal();await prepareCanadaStatisticsSources();await buildCanadaLocal(dir+'/');prepareCanadaMunicipalFacts(dir+'/');}
  console.log('Built',country,counts,'chunks',Object.keys(chunks).length);
 }

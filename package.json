@@ -324,6 +324,10 @@
     "test:north-andes": "node scripts/validate-north-andes.mjs",
     "build:canada-area-codes": "node --max-old-space-size=6500 scripts/build-canada-area-codes.mjs",
     "test:canada-area-codes": "node --check dist/area-code-card.mjs && node --check dist/regional-country.mjs && node scripts/validate-canada-area-codes.mjs",
-    "test:canada-area-codes-browser": "node scripts/browser/run.mjs canada-area-codes"
+    "test:canada-area-codes-browser": "node scripts/browser/run.mjs canada-area-codes",
+    "build:mexico-municipalities": "node --max-old-space-size=6500 scripts/build-mexico-municipalities.mjs",
+    "test:mexico-municipalities": "node --check scripts/build-mexico-municipalities.mjs && node scripts/validate-mexico-municipalities.mjs",
+    "test:mexico-municipalities-browser": "node scripts/browser/run.mjs mexico-municipalities",
+    "test:deployment": "node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact"
   }
 }

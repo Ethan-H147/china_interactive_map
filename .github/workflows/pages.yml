@@ -27,112 +27,35 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: '22'
       - run: npm ci --ignore-scripts
+      - name: Check routes, runtime and published source integrity
+        run: npm run test:deployment
       - name: Stamp and build the verified Pages package
         run: |
           node -e 'require("fs").writeFileSync("dist/version.json",JSON.stringify({version:process.env.GITHUB_SHA}))'
           node --max-old-space-size=8000 scripts/build-pages-package.mjs
-      - uses: actions/upload-artifact@v4
-        with:
-          name: pages-content
-          path: artifacts/pages/
-          include-hidden-files: true
-          compression-level: 6
-          retention-days: 1
-      - uses: actions/upload-artifact@v4
-        with:
-          name: pages-package-audit
-          path: artifacts/pages-package-report.json
-  browser-tests:
-    needs: prepare-site
-    # Real headless Chrome: phone sheet gestures and keyboard, level toggles, every
-    # country's search and selection, country switching and developer-mode gating.
-    # Twenty shards keep all scenarios within the software-renderer job budget.
-    # A commit whose message contains [skip tests] (changes the owner says need no test) deploys without it.
-    if: ${{ !contains(github.event.head_commit.message, '[skip tests]') }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-    steps:
-      - name: Check out website
-        uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install browser test dependencies
-        run: npm ci --ignore-scripts
-      - uses: actions/download-artifact@v4
-        with:
-          name: pages-content
-          path: artifacts/pages
-      - name: Run browser scenarios against the publication package
-        env:
-          ATLAS_BROWSER_ROOT: artifacts/pages
-        run: node scripts/browser/run.mjs --shard=${{ matrix.shard }}/20
-      - name: Keep audit reports and failure screenshots
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: browser-test-screenshots-${{ matrix.shard }}
-          path: |
-            artifacts/browser-tests/
-            artifacts/stability/
-  stability-data:
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - run: npm ci --ignore-scripts
-      - name: Audit identities, hierarchy, geometry, coverage, overlaps and quiz pools
-        run: npm run test:stability-data
-      - name: Save data audit reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: atlas-data-audit
-          path: artifacts/stability/
-  deploy:
-    needs: [prepare-site, browser-tests, stability-data]
-    if: ${{ !cancelled() && needs.prepare-site.result == 'success' && (needs.browser-tests.result == 'success' || needs.browser-tests.result == 'skipped') && needs.stability-data.result == 'success' }}
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out website
-        uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: npm
-      - name: Install validation dependencies
-        run: npm ci --ignore-scripts
-      - name: Check country data and international borders
-        run: npm run test:botswana-namibia
-      - name: Check satellite transparency and polygon rendering
-        run: npm run test:runtime && npm run test:frontier-continuity && npm run test:europe && npm run test:compact
-      - uses: actions/download-artifact@v4
-        with:
-          name: pages-content
-          path: artifacts/pages
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:
           path: artifacts/pages
+      - name: Keep package audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: pages-package-audit
+          path: artifacts/pages-package-report.json
+
+  deploy:
+    needs: prepare-site
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy website
         id: deployment
         uses: actions/deploy-pages@v5
         with:
-          # Allow time for Pages to process the verified publication package.
           timeout: 1800000

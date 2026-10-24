@@ -1,0 +1,88 @@
+name: Run full atlas regression audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: atlas-regression
+  cancel-in-progress: false
+
+jobs:
+  prepare-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci --ignore-scripts
+      - name: Stamp and build the verified Pages package
+        run: |
+          node -e 'require("fs").writeFileSync("dist/version.json",JSON.stringify({version:process.env.GITHUB_SHA}))'
+          node --max-old-space-size=8000 scripts/build-pages-package.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pages-content
+          path: artifacts/pages/
+          include-hidden-files: true
+          compression-level: 6
+          retention-days: 1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pages-package-audit
+          path: artifacts/pages-package-report.json
+  browser-tests:
+    needs: prepare-site
+    # Full browser and data audits remain available independently of publication.
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependencies
+        run: npm ci --ignore-scripts
+      - uses: actions/download-artifact@v4
+        with:
+          name: pages-content
+          path: artifacts/pages
+      - name: Run browser scenarios against the publication package
+        env:
+          ATLAS_BROWSER_ROOT: artifacts/pages
+        run: node scripts/browser/run.mjs --shard=${{ matrix.shard }}/20
+      - name: Keep audit reports and failure screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-test-screenshots-${{ matrix.shard }}
+          path: |
+            artifacts/browser-tests/
+            artifacts/stability/
+  stability-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci --ignore-scripts
+      - name: Audit identities, hierarchy, geometry, coverage, overlaps and quiz pools
+        run: npm run test:stability-data
+      - name: Save data audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-data-audit
+          path: artifacts/stability/

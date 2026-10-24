@@ -16,7 +16,7 @@ for(const [country,[firstCount,allCount]]of Object.entries(counts)){
   if(country==='netherlands'&&record.overseas)continue;
   const r=stats.regions[country+':'+record.id],s=source.rows[record.id];
   if(country==='united-states'&&record.level===3){assert(!r?.gdp&&!r?.gdpPerCapita&&!s,'Municipalities never inherit state GDP');continue;}
-  assert(r.area&&(r.population||country==='canada'&&r.note?.includes('source does not publish')||record.populationStatus==='no-permanent-population'||country==='united-states'&&record.level===2&&+record.code.slice(0,2)>=60&&r.note),'Area and available resident population remain available');
+  assert(r.area&&(r.population||country==='canada'&&r.note?.includes('source does not publish')||country==='mexico'&&record.level===2&&r.note?.includes('does not publish a 2020 census population')||record.populationStatus==='no-permanent-population'||country==='united-states'&&record.level===2&&+record.code.slice(0,2)>=60&&r.note),'Area and available resident population remain available');
   if(!s){assert(!r.gdp&&!r.gdpPerCapita,record.id+' does not inherit a larger region’s GDP');continue;}
   for(const field of ['gdp','gdpPerCapita']){
    const m=r[field];assert.equal(m.value,s[field]);assert.equal(m.year,s.year);assert.equal(m.currency,source.currency);assert.equal(m.priceBasis,'current');assert(stats.sources[m.source]?.url);
