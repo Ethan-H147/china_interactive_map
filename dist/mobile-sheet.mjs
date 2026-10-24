@@ -153,6 +153,7 @@ if (query.matches) apply('peek');
 
 // Camera flights keep the selected region above the half-open sheet.
 export function navigationInset() { return query.matches ? heights().half + 16 : 0; }
+export function expand(){if(query.matches)apply('half');}
 
 // A map quiz can make room for its inset maps while its question stays over the map.
 export async function collapse(){

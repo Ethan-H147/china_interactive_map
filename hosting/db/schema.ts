@@ -1,0 +1,4 @@
+import {sqliteTable,text,integer,index,primaryKey} from 'drizzle-orm/sqlite-core';
+export const quizAttempts=sqliteTable('quiz_attempts',{
+ userId:text('user_id').notNull(),id:text('id').notNull(),country:text('country').notNull(),level:integer('level').notNull(),mode:text('mode').notNull(),scope:text('scope').notNull(),scopeLabel:text('scope_label').notNull(),poolHash:text('pool_hash').notNull(),total:integer('total').notNull(),correct:integer('correct').notNull(),hints:integer('hints').notNull(),reveals:integer('reveals').notNull(),elapsedMs:integer('elapsed_ms').notNull(),completed:integer('completed').notNull(),fullRound:integer('full_round').notNull(),finishedAt:text('finished_at').notNull()
+},table=>[primaryKey({columns:[table.userId,table.id]}),index('quiz_attempts_user_history').on(table.userId,table.finishedAt,table.id),index('quiz_attempts_user_challenge').on(table.userId,table.country,table.level,table.mode)]);

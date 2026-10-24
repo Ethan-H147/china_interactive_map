@@ -18,3 +18,6 @@
 @media(max-width:760px){.quiz-insets:has(>.quiz-inset:nth-child(3)){height:184px}}
 
 .quiz-inset[data-status=target] path{fill:#d4ad55;stroke:#926b16;stroke-width:2}.quiz-color-toggle{margin-top:20px}.quiz-level-choice{margin-bottom:22px}.quiz-level-choice select{width:100%}
+/* Ordinary place labels stay hidden while a standalone subdivision quiz is active. */
+#map-shell[data-quiz-overlay=true] .maplibregl-marker:not(.quiz-answer-label){visibility:hidden}
+.quiz-geography-spinner{display:grid;place-items:center;min-height:36px;margin-top:12px}.quiz-geography-spinner .country-symbol{width:24px;height:24px}.quiz-timer{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}

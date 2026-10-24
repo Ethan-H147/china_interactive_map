@@ -1,26 +1,29 @@
+import {quizRecords} from './quiz-records.mjs';
+import {quizPoolHash,quizTime} from './quiz-records-core.mjs';
 import {createNameRound,submitName,nameHint,nameScore,serializeNameRound,shortEnglish} from './name-quiz-engine.mjs';
-const $=id=>document.getElementById(id),key='china-atlas-name-quiz-v1';
-const read=()=>{try{const value=JSON.parse(localStorage.getItem(key));return value&&typeof value==='object'?value:{};}catch{return{};}};
-const write=value=>{try{localStorage.setItem(key,JSON.stringify(value));return true;}catch{return false;}};
+const $=id=>document.getElementById(id),key=owner=>'china-atlas-name-quiz-v2:'+(owner||'guest');
+const read=(owner=quizRecords.accountId)=>{try{const value=JSON.parse(localStorage.getItem(key(owner)));return value&&typeof value==='object'?value:{};}catch{return{};}};
+const write=(value,owner=quizRecords.accountId)=>{try{localStorage.setItem(key(owner),JSON.stringify(value));return true;}catch{return false;}};
 const time=ms=>`${Math.floor(ms/60000)}:${String(Math.floor(ms/1000)%60).padStart(2,'0')}`;
 export function createNameQuiz(host){
+  let tracker,storageOwner;
   let round,scope,scopeName,started=0,ticker,ticks=0,paused=true,practice=false,revealed=false;
-  function elapsed(){return round.elapsed+(paused?0:Date.now()-started);}
+  function elapsed(){return round.elapsed+(paused?0:Math.max(0,performance.now()-started));}
   function stop(){if(!round||paused)return;round.elapsed=elapsed();paused=true;clearInterval(ticker);}
   function save(){
     if(!round||practice)return;
-    const data=read();data.drafts||={};
+    const data=read(storageOwner);data.drafts||={};
     if(round.complete||revealed)delete data.drafts[scope];
     else data.drafts[scope]={...serializeNameRound(round),elapsed:elapsed()};
-    const saved=write(data);
+    const saved=write(data,storageOwner);
     if(!saved)$('name-save-note').textContent='Browser storage is unavailable. Keep this tab open to retain progress.';
     return saved;
   }
   function updateBest(){
     if(practice||!round.complete)return;
-    const data=read(),score=nameScore(round);data.best||={};const old=data.best[scope];
+    const data=read(storageOwner),score=nameScore(round);data.best||={};const old=data.best[scope];
     if(!old||score.unassisted>old.unassisted||(score.unassisted===old.unassisted&&round.elapsed<old.elapsed))data.best[scope]={unassisted:score.unassisted,total:score.total,elapsed:round.elapsed};
-    write(data);
+    write(data,storageOwner);
   }
   function render(){
     const score=nameScore(round),done=round.complete||revealed;
@@ -46,13 +49,15 @@ export function createNameQuiz(host){
   }
   function finish(showRemaining=false){
     revealed=showRemaining;stop();save();updateBest();
+    if(!practice){const score=nameScore(round);tracker?.finish({correct:score.found,hints:score.hints,reveals:showRemaining?score.total-score.found:0,completed:round.complete,elapsedMs:Math.round(round.elapsed)});}
     if(showRemaining)for(const p of round.places)if(!round.found.has(p.code))host.mark(p.code,false);
     render();$('name-result-title').focus({preventScroll:true});
   }
   function begin(places,newScope,newScopeName,resume=false,isPractice=false){
     stop();scope=newScope;scopeName=newScopeName;practice=isPractice;revealed=false;
-    round=createNameRound(places,resume?read().drafts?.[scope]:undefined);
-    started=Date.now();paused=false;
+    storageOwner=quizRecords.accountId;round=createNameRound(places,resume?read(storageOwner).drafts?.[scope]:undefined);
+    tracker=!practice?quizRecords.begin({country:'china',level:2,mode:'name',scope:String(scope||''),scopeLabel:scopeName||'',poolHash:quizPoolHash(places.map(p=>p.code)),total:places.length,fullRound:true},round.elapsed):null;
+    started=performance.now();paused=false;
     for(const p of round.places)if(round.found.has(p.code))host.mark(p.code,true);
     $('name-feedback').textContent='';$('name-answer').value='';
     $('name-pause').textContent=practice?'Exit practice':'Save & exit';
@@ -83,7 +88,7 @@ export function createNameQuiz(host){
     release(){stop();round=null;scope=null;scopeName=null;},
     labels(){return round?round.places.filter(p=>round.found.has(p.code)||revealed):[];},
     draft(scope){const draft=read().drafts?.[scope];return draft&&Array.isArray(draft.found)&&draft.found.length?draft:null;},
-    best(scope){const best=read().best?.[scope];return best?`Personal best: ${best.unassisted} / ${best.total} without hints · ${time(best.elapsed)}`:'';},
+    best(scope){const saved=quizRecords.data.bests.filter(a=>a.country==='china'&&a.level===2&&a.mode==='name'&&a.scope===String(scope)&&a.fullRound).sort((a,b)=>(b.lastPlayed||b.finishedAt||'').localeCompare(a.lastPlayed||a.finishedAt||''))[0];if(saved)return 'Personal best · '+saved.bestCorrect+' / '+saved.total+(saved.fastestMs!==null?' · fastest perfect '+quizTime(saved.fastestMs):'');const best=read().best?.[scope];return best?`Personal best: ${best.unassisted} / ${best.total} without hints · ${time(best.elapsed)}`:'';},
     focus(){if(round&&!round.complete&&!revealed)$('name-answer').focus({preventScroll:true});}
   };
 }

@@ -1,0 +1,33 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {gunzipSync} from 'node:zlib';
+import {fixture,login,launch} from './quiz-dashboard.test.mjs';
+const owner='11111111-1111-4111-8111-111111111111';
+const names=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/san-marino/catalogue.bin'))).records.filter(r=>r.level===1).map(r=>r.en);
+export default [
+ {name:'Offline completed round survives reload, retries once, and restores from cloud without local cache',options:{width:1280,height:960},async run(p,base){
+  await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.open(base,'#san-marino');await p.evaluate(`AtlasSettings.setSettings({motion:'reduce'})`);await login(p);const panel=await launch(p,'san-marino');await p.evaluate('window.quizApiOffline=true');
+  for(const name of names)await p.evaluate(`document.querySelector('#${panel} [data-q=form] input').value=${JSON.stringify(name)};document.querySelector('#${panel} [data-q=form]').requestSubmit()`);
+  await p.waitFor(`AtlasQuizRecords.quizRecords.status==='offline'`);assert.equal(await p.evaluate('AtlasQuizRecords.quizRecords.data.summary.rounds'),1);assert.equal(await p.evaluate(`Object.keys(JSON.parse(localStorage.getItem('quiz-test-cloud')||'{}')).length`),0);
+  await p.send('Page.addScriptToEvaluateOnNewDocument',{source:'window.quizApiOffline=true'});await p.send('Page.reload');await p.settle();await p.tap('#account-open');await p.waitFor(`document.querySelectorAll('.quiz-history-row').length===1`);assert.match(await p.evaluate(`document.querySelector('[data-record-status]').textContent`),/sync will retry/);
+  await p.evaluate(`window.quizApiOffline=false;dispatchEvent(new Event('online'))`);await p.waitFor(`AtlasQuizRecords.quizRecords.status==='synced'`);await p.evaluate(`dispatchEvent(new Event('online'));dispatchEvent(new Event('focus'))`);assert.equal(await p.evaluate(`JSON.parse(localStorage.getItem('quiz-test-cloud'))[${JSON.stringify(owner)}].length`),1);
+  await p.evaluate(`for(const key of Object.keys(localStorage))if(key.startsWith('boundary-atlas-quiz-'))localStorage.removeItem(key)`);await p.send('Page.reload');await p.settle();await p.evaluate(`window.quizApiOffline=false;dispatchEvent(new Event('online'))`);await p.tap('#account-open');await p.waitFor(`AtlasQuizRecords.quizRecords.status==='synced'&&document.querySelectorAll('.quiz-history-row').length===1`);assert.equal(await p.evaluate('AtlasQuizRecords.quizRecords.data.summary.rounds'),1);await p.screenshot('quiz-account-cloud-restore');
+ }},
+ {name:'China prefecture naming and highlighted rounds save separately from provinces',options:{width:1280,height:960},async run(p,base){
+  await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.open(base,'#china');await p.evaluate(`AtlasSettings.setSettings({motion:'reduce'})`);await login(p);
+  await p.evaluate(`const c=document.querySelector('[data-quiz-country]');c.value='china';c.dispatchEvent(new Event('change'));const l=document.querySelector('[data-quiz-level]');l.value='2';l.dispatchEvent(new Event('change'))`);await p.waitFor(`document.querySelector('[data-quiz-scope] option[value="350000"]')!==null`);await p.evaluate(`document.querySelector('[data-quiz-scope]').value='350000'`);await p.tap('[data-play-quiz]');await p.settle();await p.tap('#quiz-start');await p.settle();
+  const answers=await p.evaluate(`quiz.pool.map(l=>englishName(l.feature.properties))`);assert.equal(answers.length,9);
+  for(const name of answers)await p.evaluate(`document.getElementById('name-answer').value=${JSON.stringify(name)};document.getElementById('name-form').requestSubmit()`);
+  await p.waitFor(`AtlasQuizRecords.quizRecords.data.recent.length===1`);const named=await p.evaluate('AtlasQuizRecords.quizRecords.data.recent[0]');assert.equal(named.level,2);assert.equal(named.mode,'name');assert.equal(named.correct,9);assert.equal(named.scope,'350000');assert(named.elapsedMs>0);
+  await p.tap('#home');await p.settle();await p.tap('#tab-quiz');await p.evaluate(`document.getElementById('quiz-type').value='identify';document.getElementById('quiz-type').dispatchEvent(new Event('change'));document.getElementById('quiz-length').value='5'`);await p.tap('#quiz-start');await p.settle();
+  for(let i=0;i<5;i++){await p.evaluate(`document.getElementById('quiz-identify-answer').value=englishName(quiz.round.questions[quiz.round.index].feature.properties);document.getElementById('quiz-identify-form').requestSubmit()`);if(i<4){await p.tap('#quiz-next');await p.settle();}}
+  await p.waitFor(`AtlasQuizRecords.quizRecords.data.recent.length===2`);const identified=await p.evaluate(`AtlasQuizRecords.quizRecords.data.recent.find(a=>a.mode==='identify')`);assert.equal(identified.correct,5);assert.equal(identified.fullRound,false);assert.equal(identified.level,2);await p.screenshot('china-prefecture-quiz-recorded');
+ }},
+ {name:'New overlay subdivision levels and sovereign scopes use the correct pools',options:{width:1280,height:960},async run(p,base){
+  await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.open(base,'#mongolia');await p.evaluate(`AtlasSettings.setSettings({motion:'reduce'})`);await login(p);
+  for(const [country,count,level]of [['mongolia',22,1],['brazil',27,1],['indonesia',38,1],['ireland',31,2],['belgium',11,2],['turkey',81,2]]){
+   const panel=await launch(p,country,level);assert.match(await p.evaluate(`document.querySelector('#${panel} [data-q=progress]').textContent`),new RegExp('/ '+count+' named'));assert(await p.evaluate(`!!map.getLayer('quiz-overlay-${country}-fill')`));await p.tap('#'+panel+' [data-q=end]');await p.settle();assert(!await p.evaluate(`!!map.getLayer('quiz-overlay-${country}-fill')`));await p.tap('#account-open');
+  }
+  await p.evaluate(`const c=document.querySelector('[data-quiz-country]');c.value='congo';c.dispatchEvent(new Event('change'))`);assert.equal(await p.evaluate(`document.querySelectorAll('[data-quiz-scope] option').length`),2);await p.evaluate(`document.querySelector('[data-quiz-scope]').value='CG'`);await p.tap('[data-play-quiz]');await p.settle();const panel=await p.evaluate('currentAtlas().quiz.panel.id');await p.waitFor(`!document.querySelector('#${panel} [data-q=start]').disabled`);await p.tap('#'+panel+' [data-q=start]');await p.settle();assert.match(await p.evaluate(`document.querySelector('#${panel} [data-q=progress]').textContent`),/\/ 15 named/);await p.screenshot('congo-department-quiz');await p.tap('#account-open');await launch(p,'japan');assert(!await p.evaluate("!!map.getLayer('quiz-overlay-congo-fill')"),'Dashboard can replace an active quiz and cleans up its layers');
+ }}
+];

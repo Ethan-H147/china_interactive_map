@@ -27,8 +27,58 @@ synced or waiting for a connection. Per-account local queues retain offline edit
 and retry when the connection returns or the app regains focus. Signing out
 restores the guest's settings. Reset settings also syncs to the account. Synced
 preferences include place/country labels, country-label language, label size,
-heading size, legacy styling, motion and flat/globe projection. Quiz progress is
-still browser-local. User metadata is never used for authorization decisions.
+heading size, legacy styling, motion and flat/globe projection. Completed quiz
+records use the account-owned database described below. Unfinished rounds remain
+on this device, separately for each account. User metadata is never used for
+authorization decisions.
+
+## Quiz dashboard and records
+
+The signed-in account dialog opens to Quiz dashboard; Profile retains account
+details and sign-out. The dashboard shows round totals, accuracy, perfect rounds,
+countries played, recent scores and times, and personal bests. Its launcher offers
+the mapped state/province equivalent for 88 modern atlas views and a separate
+China prefecture level. Monaco and Vatican City have no mapped subdivisions;
+historical snapshots are excluded. Korea and the Congo view offer country scopes.
+China prefecture naming requires a province scope.
+
+Results include a stable UUID, country, division level, quiz type, scope, exact
+place-pool hash, question count, score, hints, reveals, elapsed time and completion
+date. Fastest records require a completed perfect round without hints or revealed
+answers. Full rounds and shorter question sets have separate records, as do
+different pools, scopes and quiz types. The dashboard's fastest display selects
+full rounds. Timers stop on the final answer. Practice does not replace a record.
+
+Both published frontends call the Site's /api/quiz-records endpoint. Its Worker
+verifies the user's bearer token against Supabase Auth and derives ownership from
+the verified response. Every database query binds that user ID; client-supplied
+ownership is ignored. Records live in the Site's D1 DB binding, not in Supabase
+metadata or JWT claims. No Supabase service-role key is used. CORS admits the two
+published origins and local development origins; authenticated responses are
+private and uncached.
+
+Pending results have individual per-account local keys and immutable UUIDs.
+Retries insert idempotently, and only remove queued results after refreshing the
+server snapshot. Reload, focus and connectivity recovery retry uploads. An account
+switch clears the displayed snapshot before loading the next account; an in-flight
+round retains its original owner. Guest results remain on the device and are not
+automatically assigned to a new account. Clearing device storage before an offline
+upload removes that pending result; synced records remain in the database.
+
+Schema source is hosting/db/schema.ts. Run npm run db:generate after schema edits;
+review and commit the generated hosting/drizzle SQL, snapshot and journal. Never
+rewrite migrations after publication. hosting/build-site-worker.mjs assembles a
+self-contained static/API Worker from an exact committed atlas revision, sets the
+DB binding, and copies these migrations to the hosting repository's root drizzle
+folder. The Sites packager includes them; publication applies migrations before
+uploading the Worker. Requests never create tables.
+
+Run npm run build:quiz-geography to regenerate lightweight quiz-only geometries
+from retained atlas data. Ordinary exploration geography is unchanged. Run
+npm run test:quiz-records and npm run test:first-level-quiz for schema, ownership,
+timing, scoring and coverage checks. Run node scripts/browser/run.mjs
+quiz-dashboard quiz-record-recovery account settings-sync for real browser flows
+against deterministic Auth/API fixtures, without creating real accounts.
 
 Dashboard setup:
 
@@ -46,9 +96,9 @@ Dashboard setup:
    retain the local root under additional Redirect URLs for development.
 
 Supabase creates and manages auth.users. Do not create a public passwords table.
-Future profile/progress tables must have row-level security so each signed-in
-user can access only their own records. No public tables were added for this
-feature.
+Any future Supabase profile/progress tables must have row-level security. The D1
+quiz table is accessed only through the authenticated Worker, which enforces
+ownership for every read and write.
 
 Rebuild the pinned, same-origin SDK with npm run build:account-vendor.
 Run node scripts/validate-settings-sync.mjs for sync state/queue checks.

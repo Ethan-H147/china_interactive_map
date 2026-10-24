@@ -1,0 +1,15 @@
+export const quizModeLabels={find:'Find on map',name:'Name every place',identify:'Name highlighted place'};
+export function quizTime(ms){if(!Number.isFinite(ms)||ms<0)return '—';const seconds=Math.floor(ms/1000);return Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0')+(ms<60000?'.'+Math.floor(ms%1000/100):'');}
+export function quizPoolHash(ids){let hash=2166136261;for(const c of [...ids].map(String).sort().join('|')){hash^=c.charCodeAt(0);hash=Math.imul(hash,16777619);}return(hash>>>0).toString(16);}
+export const quizChallengeKey=a=>[a.country,a.level,a.mode,a.scope||'',a.poolHash,a.total,a.fullRound?1:0].join(':');
+export function quizPerfect(a){return a.completed&&a.correct===a.total&&!a.hints&&!a.reveals&&a.elapsedMs>0;}
+export function summarizeQuizAttempts(attempts){const summary={rounds:0,correct:0,total:0,perfect:0,countries:0},countries=new Set(),bests=new Map();
+ for(const a of attempts){summary.rounds++;summary.correct+=a.correct;summary.total+=a.total;if(quizPerfect(a))summary.perfect++;countries.add(a.country);const key=quizChallengeKey(a),old=bests.get(key)||{...a,bestCorrect:0,fastestMs:null,rounds:0};old.lastPlayed=old.lastPlayed&&old.lastPlayed>a.finishedAt?old.lastPlayed:a.finishedAt;old.bestCorrect=Math.max(old.bestCorrect,a.correct);old.rounds++;if(quizPerfect(a))old.fastestMs=old.fastestMs===null?a.elapsedMs:Math.min(old.fastestMs,a.elapsedMs);bests.set(key,old);}summary.countries=countries.size;return{summary,bests:[...bests.values()]};
+}
+export function mergeQuizSnapshot(snapshot,pending){
+ const seen=new Set((snapshot?.recent||[]).map(a=>a.id)),extra=pending.filter(a=>!seen.has(a.id)),local=summarizeQuizAttempts(extra),remote=snapshot?.summary||{rounds:0,correct:0,total:0,perfect:0,countries:0};
+ const bests=new Map((snapshot?.bests||[]).map(a=>[quizChallengeKey(a),{...a}]));for(const a of local.bests){const key=quizChallengeKey(a),old=bests.get(key);bests.set(key,old?{...old,lastPlayed:old.lastPlayed&&old.lastPlayed>a.lastPlayed?old.lastPlayed:a.lastPlayed,rounds:old.rounds+a.rounds,bestCorrect:Math.max(old.bestCorrect,a.bestCorrect),fastestMs:old.fastestMs===null?a.fastestMs:a.fastestMs===null?old.fastestMs:Math.min(old.fastestMs,a.fastestMs)}:a);}
+ const recent=[...(snapshot?.recent||[]),...extra].sort((a,b)=>b.finishedAt.localeCompare(a.finishedAt)||b.id.localeCompare(a.id));
+ const countries=new Set([...bests.values()].map(a=>a.country));return{summary:{rounds:remote.rounds+local.summary.rounds,correct:remote.correct+local.summary.correct,total:remote.total+local.summary.total,perfect:remote.perfect+local.summary.perfect,countries:Math.max(remote.countries,countries.size)},bests:[...bests.values()],recent,nextCursor:snapshot?.nextCursor||null};
+}
+export function createQuizTimer(now=()=>performance.now(),initial=0){let elapsed=Math.max(0,initial),started=null;return{start(){if(started===null)started=now();},stop(){if(started!==null){elapsed+=Math.max(0,now()-started);started=null;}return Math.round(elapsed);},get elapsed(){return Math.round(elapsed+(started===null?0:Math.max(0,now()-started)));}};}

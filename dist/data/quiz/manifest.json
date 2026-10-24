@@ -1,0 +1,146 @@
+{
+  "simplification": "Shared topology, weighted 3%, preserving each subdivision; quiz-only rendering. Original detailed map data is retained.",
+  "countries": [
+    {
+      "country": "korea",
+      "level": 1,
+      "places": 29,
+      "file": "data/quiz/korea.bin",
+      "bytes": 152206,
+      "decodedBytes": 462276,
+      "sources": [
+        "data/korea-boundaries.bin"
+      ]
+    },
+    {
+      "country": "mongolia",
+      "level": 1,
+      "places": 22,
+      "file": "data/quiz/mongolia.bin",
+      "bytes": 17805,
+      "decodedBytes": 68214,
+      "sources": [
+        "data/mongolia-boundaries.bin"
+      ]
+    },
+    {
+      "country": "japan",
+      "level": 1,
+      "places": 47,
+      "file": "data/quiz/japan.bin",
+      "bytes": 149634,
+      "decodedBytes": 509537,
+      "sources": [
+        "data/japan-boundaries.bin"
+      ]
+    },
+    {
+      "country": "philippines",
+      "level": 2,
+      "places": 82,
+      "file": "data/quiz/philippines.bin",
+      "bytes": 12275,
+      "decodedBytes": 61625,
+      "sources": [
+        "data/archipelago/philippines-overview.bin",
+        "data/archipelago/philippines-catalogue.bin"
+      ]
+    },
+    {
+      "country": "indonesia",
+      "level": 1,
+      "places": 38,
+      "file": "data/quiz/indonesia.bin",
+      "bytes": 30143,
+      "decodedBytes": 91523,
+      "sources": [
+        "data/archipelago/indonesia-overview.bin",
+        "data/archipelago/indonesia-catalogue.bin"
+      ]
+    },
+    {
+      "country": "brazil",
+      "level": 1,
+      "places": 27,
+      "file": "data/quiz/brazil.bin",
+      "bytes": 50255,
+      "decodedBytes": 149396,
+      "sources": [
+        "data/south-america/brazil-first.bin"
+      ]
+    },
+    {
+      "country": "uruguay",
+      "level": 1,
+      "places": 19,
+      "file": "data/quiz/uruguay.bin",
+      "bytes": 18487,
+      "decodedBytes": 62314,
+      "sources": [
+        "data/south-america/uruguay-first.bin"
+      ]
+    },
+    {
+      "country": "argentina",
+      "level": 1,
+      "places": 24,
+      "file": "data/quiz/argentina.bin",
+      "bytes": 18634,
+      "decodedBytes": 68043,
+      "sources": [
+        "data/south-america/argentina-first.bin"
+      ]
+    },
+    {
+      "country": "congo",
+      "level": 2,
+      "places": 41,
+      "file": "data/quiz/congo.bin",
+      "bytes": 20553,
+      "decodedBytes": 84481,
+      "sources": [
+        "data/europe/congo/catalogue.bin",
+        "data/europe/congo/second/CG.bin",
+        "data/europe/congo/second/CD.bin"
+      ]
+    },
+    {
+      "country": "ireland",
+      "level": 2,
+      "places": 31,
+      "file": "data/quiz/ireland.bin",
+      "bytes": 560580,
+      "decodedBytes": 1712630,
+      "sources": [
+        "data/europe/ireland/catalogue.bin",
+        "data/europe/ireland/second/IE04.bin",
+        "data/europe/ireland/second/IE05.bin",
+        "data/europe/ireland/second/IE06.bin"
+      ]
+    },
+    {
+      "country": "belgium",
+      "level": 2,
+      "places": 11,
+      "file": "data/quiz/belgium.bin",
+      "bytes": 2150,
+      "decodedBytes": 8558,
+      "sources": [
+        "data/europe/belgium/catalogue.bin",
+        "data/europe/belgium/all.bin"
+      ]
+    },
+    {
+      "country": "turkey",
+      "level": 2,
+      "places": 81,
+      "file": "data/quiz/turkey.bin",
+      "bytes": 43971,
+      "decodedBytes": 172503,
+      "sources": [
+        "data/europe/turkey/catalogue.bin",
+        "data/europe/turkey/all.bin"
+      ]
+    }
+  ]
+}

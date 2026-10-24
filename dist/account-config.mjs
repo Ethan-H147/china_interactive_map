@@ -2,3 +2,4 @@
 export const supabaseUrl='https://odenagmobrswlzkljayf.supabase.co';
 export const supabasePublishableKey='sb_publishable_P6e6nDasSVNyzSP2BgYcaw_BxX_Atsk';
 export const sessionKey='boundary-atlas-auth-v1';
+export const quizRecordsUrl='https://china-boundary-atlas.hys0423.chatgpt.site/api/quiz-records';
