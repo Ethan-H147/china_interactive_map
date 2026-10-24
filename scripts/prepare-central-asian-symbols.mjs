@@ -11,7 +11,9 @@ if(disk.tagName!=='circle'||disk.getAttribute('r')!=='134.55'||children(eagle).f
 const eagleCopy=eagle.cloneNode(true);
 for(const node of children(eagleCopy))if(node.getAttribute('id')==='D'||node.tagName==='use')eagleCopy.removeChild(node);
 // Preserve the flag's sun placement and eagle paths, omitting its hoist ornament.
-let kazakh='<svg class="country-symbol kazakh-emblem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="340 85 400 320" aria-hidden="true"><g fill="'+gold.getAttribute('fill')+'"><g transform="'+sun.getAttribute('transform')+'">'+xml(disk)+'<g class="symbol-rotor" data-emblem-part="rays">'+rays.map(xml).join('')+'</g></g><g data-emblem-part="eagle">'+xml(eagleCopy)+'</g></g></svg>';
+// A warm accent on one side of the rays makes their turn readable at icon sizes.
+const rayGold='<defs><g id="__atlas_symbol__rays">'+rays.map(xml).join('')+'</g><linearGradient id="__atlas_symbol__ray-gold" gradientUnits="userSpaceOnUse" x1="-210" y1="0" x2="210" y2="0"><stop offset="0" stop-color="black"/><stop offset=".65" stop-color="black"/><stop offset="1" stop-color="white"/></linearGradient><mask id="__atlas_symbol__ray-shading" maskUnits="userSpaceOnUse" x="-211" y="-211" width="422" height="422"><rect x="-211" y="-211" width="422" height="422" fill="url(#__atlas_symbol__ray-gold)"/></mask></defs>';
+let kazakh='<svg class="country-symbol kazakh-emblem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="340 85 400 320" aria-hidden="true">'+rayGold+'<g fill="'+gold.getAttribute('fill')+'"><g transform="'+sun.getAttribute('transform')+'">'+xml(disk)+'<g class="symbol-rotor" data-emblem-part="rays"><use href="#__atlas_symbol__rays"/><g fill="#bd8611" mask="url(#__atlas_symbol__ray-shading)"><use href="#__atlas_symbol__rays"/></g></g></g><g data-emblem-part="eagle">'+xml(eagleCopy)+'</g></g></svg>';
 kazakh=kazakh.replace(/id="([ABC])"/g,'id="__atlas_symbol__$1"').replace(/href="#([ABC])"/g,'href="#__atlas_symbol__$1"');
 
 const kg=read('kg'),design=children(kg)[1],d=design.getAttribute('d');

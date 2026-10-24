@@ -7,7 +7,7 @@ const {ids,countries,fallback,route,viewRoute,byAdapter}=globalThis.AtlasCountri
 const exists=file=>fs.existsSync('dist/'+file);
 const css=fs.readdirSync('dist').filter(f=>f.endsWith('.css')).map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
 const adapters=['china','korea','mongolia','japan','archipelago','southeast-asia','south-america','russia','southern-africa','europe'];
-const symbols=['ring','matryoshka','philippine-sun','compass','taiji','taegeuk','soyombo','kazakh-sun-eagle','kyrgyz-tunduk'];
+const symbols=['ring','matryoshka','philippine-sun','compass','taiji','taegeuk','soyombo','kazakh-sun-eagle','kyrgyz-tunduk','us-seal'];
 assert(countries[fallback]&&!countries[fallback].release,'The fallback country is public');
 for(const id of ids){
  const c=countries[id];

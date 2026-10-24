@@ -4,7 +4,9 @@
 
 `us-great-seal.svg` retains the public-domain US Government artwork from [Great Seal of the United States (obverse).svg](https://commons.wikimedia.org/wiki/File:Great_Seal_of_the_United_States_(obverse).svg), downloaded 23 October 2026. Commons identifies the original source as the US Government publication *Our Flag*. This is the drawing in the user's reference.
 
-Run `node scripts/prepare-us-crest.mjs` to extract group `g308` and its referenced gradient and clipping definitions into `dist/vendor/us-crest.svg`. The output contains only the thirteen stars, gold rays and surrounding clouds. It excludes the eagle, ribbon, shield and outer seal. Original paths and colors are preserved; the square viewport adds clearance for rotation. The existing image-emblem animation rotates the isolated crest and stops under reduced motion.
+Run `node scripts/prepare-us-crest.mjs` to extract group `g308` and its referenced gradient and clipping definitions into `dist/vendor/us-crest.svg`. Original paths and colors are preserved; the square viewport adds clearance for rotation.
+
+Run `node scripts/prepare-us-seal.mjs` to generate `dist/vendor/us-seal-base.svg`, the complete original seal with group `g308` removed. The loader overlays the crest at its original position above the eagle. Only that image rotates; the eagle, ribbon, shield and outer seal remain still. Keeping the two images separate lets the browser rotate the crest without redrawing the seal. The crest placement includes the original group transforms, and the shared CSS stops it under reduced motion.
 
 ## Philippine sun geometry
 
@@ -16,6 +18,6 @@ The Philippine flag and loading sun use the vector geometry from [Flag of the Ph
 
 Run `node scripts/prepare-central-asian-symbols.mjs` to regenerate the inline artwork in `dist/country-symbols.js` from the existing `dist/vendor/flag-kz.svg` and `flag-kg.svg` drawings, covered by `dist/vendor/flags-LICENSE.txt`.
 
-Kazakhstan preserves the original sun and eagle geometry and colors. Only the rays rotate; the sun disk and eagle stay still. The hoist ornament and flag background are omitted.
+Kazakhstan preserves the original sun and eagle geometry. Only the rays rotate; the sun disk and eagle stay still. The hoist ornament and flag background are omitted. The larger loader uses a 3.2-second turn and subtle warm-gold shading on one side of the rays to make movement visible despite their rotational symmetry. The flag artwork is unchanged.
 
 Kyrgyzstan preserves the current flag's straight rays, sun ring and central tunduk geometry. Complementary masks separate the stationary sun from the rotating center. The red interior disk retains the flag's contrast while the exterior remains transparent. Every instance receives separate SVG IDs so the startup and movement indicators can coexist. Both use the shared rotation and reduced-motion rules.
