@@ -5,7 +5,7 @@ const focused='document.activeElement.dataset.atlas';
 
 // The header's country name opens a menu of every country the visitor can open, each written as
 // its own header writes it; choosing one opens that country.
-export default [[1280,820,false],[1024,768,true],[820,1180,true],[390,844,true]].map(([width,height,mobile])=>({name:'the country name opens a menu of countries'+(' at '+width+'×'+height),options:{width,height,mobile},async run(page,base){
+export default [[1280,820,false],[1024,768,true],[820,1180,true],[390,844,true],[320,740,true]].map(([width,height,mobile])=>({name:'the country name opens a menu of countries'+(' at '+width+'×'+height),options:{width,height,mobile},async run(page,base){
  await page.open(base,'#japan');
  await page.tap('#country-switch');
  await page.waitFor(menuOpen,{label:'the country menu'});
@@ -21,7 +21,8 @@ export default [[1280,820,false],[1024,768,true],[820,1180,true],[390,844,true]]
   const names=group.countries.map(c=>c.en);assert.deepEqual(names,[...names].sort((a,b)=>a.localeCompare(b,'en')),'Country names are alphabetical');
  }
  const layout=await page.evaluate("[...document.querySelectorAll('.country-option')].map(o=>{const t=o.querySelector('.title-english'),r=o.getBoundingClientRect();return {id:o.dataset.atlas,size:parseFloat(getComputedStyle(t).fontSize),height:r.height,overflow:o.scrollWidth>o.clientWidth+1||[...o.querySelectorAll('.country-option-title, .country-option-title>span')].some(e=>e.scrollWidth>e.clientWidth+1)};})");
- for(const item of layout){assert(item.size>=16&&item.size<=18,item.id+' has a readable menu font');assert(item.height>=44,item.id+' has a touch target');assert(!item.overflow,item.id+' text fits without clipping');}
+ for(const item of layout){assert(item.size>=(width<=760?14:16)&&item.size<=18,item.id+' has a readable menu font');assert(item.height>=44,item.id+' has a touch target');assert(!item.overflow,item.id+' text fits without clipping');}
+ if(width<=760)assert(await page.evaluate("[...document.querySelectorAll('.country-group-options')].every(g=>getComputedStyle(g).gridTemplateColumns.split(' ').length===3)"),'Phone menus show three countries per row');
  assert(await page.evaluate('(()=>{const r=document.getElementById("country-menu").getBoundingClientRect();return r.left>=0&&r.right<=innerWidth&&r.bottom<=innerHeight;})()'),'Menu stays within the viewport');
  await page.screenshot('country-menu-'+width+'x'+height);
  const stripes=await page.evaluate("[...document.querySelectorAll('.country-option')].map(e=>({country:e.dataset.atlas,image:getComputedStyle(e).backgroundImage}))");

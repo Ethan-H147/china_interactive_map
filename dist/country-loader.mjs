@@ -33,8 +33,10 @@ export function createMapResources(map){
 
 // Reserve before loading, retain the active country, and release the oldest inactive
 // country before admitting another. Loading reservations count toward the limit.
+// A one-country mobile budget releases even the previous active country; a failed
+// switch reloads it through the normal country-switch recovery path.
 export function createCountryResidency({limit=3,dispose=async()=>{}}={}){
- if(!Number.isInteger(limit)||limit<2)throw Error('Country limit must be at least two');
+ if(!Number.isInteger(limit)||limit<1)throw Error('Country limit must be at least one');
  const records=new Map(),pending=new Map();let active,clock=0,queue=Promise.resolve();
  function ensure(id,load){
   if(pending.has(id))return pending.get(id);
@@ -42,7 +44,7 @@ export function createCountryResidency({limit=3,dispose=async()=>{}}={}){
    let record=records.get(id);
    if(!record){
     if(records.size>=limit){
-     const victim=[...records.values()].filter(r=>r.id!==active).sort((a,b)=>a.used-b.used)[0];
+     const victim=[...records.values()].filter(r=>limit===1||r.id!==active).sort((a,b)=>a.used-b.used)[0];
      if(!victim)throw Error('No inactive country can be released');
      await victim.done?.catch(()=>{});await dispose(victim.id);records.delete(victim.id);
     }

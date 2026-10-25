@@ -33,7 +33,7 @@ export function mountChinaPage(){
  extraTabs:`<button id="tab-quiz" aria-pressed="false">Quiz</button>`,
  extraPanels:`<section id="quiz-panel" hidden aria-labelledby="quiz-title">
         <div id="quiz-setup">
-          <span class="eyebrow">MAP QUIZ</span><h2 id="quiz-title">Find the prefecture</h2>
+          <h2 id="quiz-title">Find the prefecture</h2>
           <label class="field-label" for="quiz-type">Quiz type</label><select id="quiz-type" data-quiz-nav disabled><option value="find">Click the named prefecture</option><option value="name">Type every prefecture name</option><option value="identify">Name the highlighted prefecture</option></select><p id="quiz-description">Click the named place on the map.</p>
           <label class="field-label" for="quiz-scope">Scope</label><select id="quiz-scope" data-quiz-nav disabled><option value="">All China</option></select>
           <label class="quiz-toggle" id="quiz-taiwan-option"><span>Include Taiwan</span><input id="quiz-taiwan" type="checkbox" checked data-quiz-nav disabled></label>
@@ -59,7 +59,7 @@ export function mountChinaPage(){
           <div class="quiz-round-actions"><button id="quiz-reveal" class="quiet-button" data-quiz-nav>Show answer</button><button id="quiz-view" class="quiet-button" data-quiz-nav hidden>View answer</button><button id="quiz-next" class="quiz-primary" data-quiz-nav hidden>Next question</button></div>
         </section>
         <section id="quiz-results" hidden aria-labelledby="quiz-results-title">
-          <span class="eyebrow">QUIZ COMPLETE</span><h2 id="quiz-results-title" tabindex="-1">Results</h2><p id="quiz-result-score" class="quiz-result-score"></p><p id="quiz-result-detail"></p>
+          <h2 id="quiz-results-title" tabindex="-1">Results</h2><p id="quiz-result-score" class="quiz-result-score"></p><p id="quiz-result-detail"></p>
           <div id="quiz-review" class="quiz-review"></div>
           <button id="quiz-again" class="quiz-primary" data-quiz-nav>Play again</button><button id="quiz-configure" class="quiz-text-button" data-quiz-nav>Change scope</button>
         </section>

@@ -39,7 +39,7 @@
     "test": "node --check dist/app.js && node scripts/validate.mjs && node scripts/validate-boundaries.mjs && npm run test:taiwan && node scripts/validate-jiamusi.mjs && node scripts/validate-selection.mjs && node scripts/validate-names.mjs && node scripts/validate-additions.mjs && node scripts/validate-sar.mjs && node scripts/validate-alignment.mjs && node scripts/validate-population.mjs && node scripts/validate-chongming.mjs && node scripts/validate-quiz.mjs && npm run test:capitals && npm run test:korea && npm run test:explore && npm run test:water && npm run test:names-quiz && npm run test:satellite && npm run test:shenzhen && npm run test:pearl-coast && npm run test:province-population && npm run test:mongolia && npm run test:fills && npm run test:motion && npm run test:china-pack && npm run test:single-strokes",
     "start": "node scripts/serve.mjs",
     "build:korea": "node scripts/fetch-korea.mjs && node scripts/build-korea-coast.mjs && node scripts/build-korea.mjs && node scripts/reconcile-international.mjs && npm run build:fills && npm run build:borders",
-    "test:korea": "node --check dist/korea.js && node scripts/validate-korea.mjs && node scripts/validate-korea-rendering.mjs && node scripts/validate-international.mjs",
+    "test:korea": "node --check dist/korea.js && node scripts/validate-korean-names.mjs && node scripts/validate-korea-info.mjs && node scripts/validate-korea.mjs && node scripts/validate-korea-rendering.mjs && node scripts/validate-international.mjs",
     "test:capitals": "node --check dist/capitals.mjs && node scripts/validate-capitals.mjs",
     "test:explore": "node --check dist/explore.mjs && node scripts/validate-explore.mjs",
     "test:china-counties": "node --max-old-space-size=7000 scripts/validate-china-counties.mjs",
@@ -337,6 +337,8 @@
     "build:us-county-quizzes": "node scripts/build-us-county-quizzes.mjs",
     "test:us-county-quizzes": "node scripts/validate-us-county-quizzes.mjs && node scripts/browser/run.mjs us-county-quiz",
     "build:quiz-trophies": "node scripts/build-quiz-trophies.mjs && node scripts/render-trophy-posters.mjs",
-    "test:quiz-trophies": "node scripts/validate-quiz-trophies.mjs && node scripts/browser/run.mjs quiz-trophies"
+    "test:quiz-trophies": "node scripts/validate-quiz-trophies.mjs && node scripts/browser/run.mjs quiz-trophies collection-expansion",
+    "build:china-mobile": "node --max-old-space-size=6000 scripts/build-china-mobile.mjs",
+    "test:china-mobile": "node scripts/validate-china-mobile.mjs && node scripts/browser/run.mjs china-mobile"
   }
 }

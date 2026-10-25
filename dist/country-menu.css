@@ -30,7 +30,13 @@ body[data-atlas=singapore] .country-switch-chevron{grid-column:3;grid-row:1/span
 .country-option .title-local:empty{display:none}
 
 @media(max-width:900px){.country-group-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.country-menu{left:12px;right:12px;width:auto}.country-group-options{grid-template-columns:1fr}.country-option{min-height:52px}}
+@media(max-width:760px){
+ .country-group-options{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .country-option{min-height:64px;padding:9px 6px 7px}
+ .country-menu .country-option .country-option-title>span{font-size:12px}
+ .country-menu .country-option .country-option-title>.title-english{font-size:14px}
+}
+@media(max-width:560px){.country-menu{left:12px;right:12px;width:auto}}
 
 /* A dated map is a separate view, loaded only when opened. */
 body[data-atlas=china-1949]{--ink:#302c27;--muted:#787166;--red:#a7382b;--red-dark:#87291f;--gold:#b18a46;--line:#e7dfd1;--paper:#fffdf8;--map:#f4f0e7}

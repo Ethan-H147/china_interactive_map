@@ -1,3 +1,5 @@
+import {wireKoreaInfo} from './korea-info.mjs';
+import {matchesKoreanSearch} from './korean-names.mjs';
 import {onMapHover} from './pointer-performance.mjs';
 import {setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
 import {koreaComparisonProfile} from './compare.mjs';
@@ -6,8 +8,9 @@ import {adaptiveOpacity,lineSourceOptions,internationalLineSourceOptions,addInte
 export function createKoreaAtlas(map,host){
  const maplibre=window.maplibregl,home=[[124,33],[131.9,43.1]],countryNames={KP:'North Korea',KR:'South Korea'};
  const template=document.createElement('template');template.innerHTML=koreaPanel;
- const sidebar=template.content.querySelector('aside'),dialog=template.content.querySelector('dialog');
- document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));document.body.append(dialog);
+ const sidebar=template.content.querySelector('aside'),dialogs=template.content.querySelectorAll('dialog');
+ document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));document.body.append(...dialogs);
+ const info=wireKoreaInfo();
  const $=id=>document.getElementById('k-'+id)||document.getElementById(id);
 let data,ready=false,active=false,loading=null,selected=null,hovered=null,mode=1,scope='',labels=[];
 const index=new Map();
@@ -20,7 +23,7 @@ function clearHover(){state(hovered,{hover:false});hovered=null;map.getCanvas().
 function fit(bounds=home,maxZoom=11,camera={}){return host.fit(bounds,maxZoom,camera);}
 function scopeBounds(){if(!scope)return home;return boundsOf(data.first.features.filter(f=>f.properties.country===scope));}
 function boundsOf(features){const b=new maplibre.LngLatBounds();features.forEach(f=>{b.extend(f.properties.bounds[0]);b.extend(f.properties.bounds[1]);});return b;}
-function panel(name){for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}}
+function panel(name){const target=$(name+'-panel');for(const section of sidebar.querySelectorAll('.sidebar-scroll > section'))section.hidden=section!==target;for(const tab of sidebar.querySelectorAll('.panel-tabs button'))tab.setAttribute('aria-pressed',String(tab.getAttribute('aria-controls')===target.id));}
 function setMode(value,automatic=false){if(automatic&&$('mode-lock')?.getAttribute?.('aria-pressed')==='true')value=$('mode-province').getAttribute('aria-pressed')==='true'?1:2;mode=value;$('mode-province').setAttribute('aria-pressed',String(value===1));$('mode-prefecture').setAttribute('aria-pressed',String(value===2));$('map-hint').textContent=value===1?'Select a province or city':'Select a city, county or district';clearHover();updateLabels();}
 function reset(camera={}){if(host.isBusy()||!ready)return;state(selected,{selected:false});selected=null;$('tab-explore').hidden=true;panel('layers');$('breadcrumb-region').hidden=!scope;$('breadcrumb-region').textContent=scope?countryNames[scope]:'';$('province').value='';clearSearch();setMode(1,true);return fit(scopeBounds(),8,camera);}
 function viewParent(camera={}){
@@ -67,13 +70,13 @@ function picked(point){const layers=mode===2&&$('prefecture-layer').checked?['ko
 map.on('click',event=>{if(!active||!ready||host.isBusy())return;const f=picked(event.point);if(f)select(f);});
 onMapHover(map,event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';});
 map.on('movestart',clearHover);map.on('moveend',updateLabels);map.on('resize',updateLabels);map.getCanvas().addEventListener('mouseleave',clearHover);
-$('search').addEventListener('input',()=>{const q=$('search').value.trim().toLowerCase(),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/[^\p{L}\p{N}]/gu,'').toLowerCase();const matches=[...index.values()].filter(f=>(f.properties.en+' '+nativeName(f.properties)).toLowerCase().includes(q)||normalize(f.properties.en).includes(normalize(q))).slice(0,15);for(const f of matches){const b=document.createElement('button');b.className='search-result';b.dataset.nav='';const strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=f.properties.en+' · '+nativeName(f.properties);small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||countryNames[f.properties.country]);b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length){const p=document.createElement('p');p.textContent='No matching places.';box.append(p);}});
+$('search').addEventListener('input',()=>{const q=$('search').value.trim().toLowerCase(),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const matches=[...index.values()].filter(f=>matchesKoreanSearch(f.properties,q)).slice(0,15);for(const f of matches){const b=document.createElement('button');b.className='search-result';b.dataset.nav='';const strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=f.properties.en+' · '+nativeName(f.properties);small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||countryNames[f.properties.country]);b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length){const p=document.createElement('p');p.textContent='No matching places.';box.append(p);}});
 $('search').onkeydown=event=>{if(event.isComposing)return;const box=$('search-results');if(event.key==='Enter'&&!box.hidden){event.preventDefault();box.querySelector('button')?.click();}if(event.key==='Escape')box.hidden=true;};
 $('country').onchange=()=>{scope=$('country').value;listRegions();reset();};$('province').onchange=()=>{$('province').value?select(index.get($('province').value)):reset();};
 for(const id of ['province-layer','prefecture-layer','label-layer'])$(id).onchange=syncLayers;
 $('compare-open').onclick=()=>host.comparison?.open(undefined,'korea');$('compare-place').onclick=()=>host.comparison?.open(selected?.properties.id,'korea');
 $('selection-reset').onclick=()=>{scope='';$('country').value='';listRegions();reset();};
-$('tab-explore').onclick=()=>panel('explore');$('tab-layers').onclick=()=>panel('layers');$('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();
+$('tab-explore').onclick=()=>panel('explore');$('tab-layers').onclick=()=>panel('layers');$('tab-extra').onclick=()=>{panel('extra');clearSearch();window.AtlasSheet?.expand?.();};$('about-open').onclick=()=>$('about').showModal();$('about-close').onclick=()=>$('about').close();
 
 let preparedPromise;
  function preload(){
@@ -101,7 +104,7 @@ async function ensureData(){
  })().catch(error=>{for(const id of layerIds)if(map.getLayer(id))map.removeLayer(id);for(const id of ['korea-first','korea-second','korea-first-selection-edges','korea-second-selection-edges','korea-first-edges','korea-second-edges','korea-countries-edges'])if(map.getSource(id))map.removeSource(id);sourceUrls.splice(0).forEach(url=>URL.revokeObjectURL(url));index.clear();loading=null;throw error;});return loading;
 }
 const layerIds=['korea-first-fill','korea-second-fill','korea-second-lines','korea-first-lines','korea-countries-lines','korea-first-selected','korea-second-selected'];
-function leave(){active=false;sidebar.hidden=true;labels.forEach(m=>m.remove());labels=[];clearHover();for(const id of layerIds)showLayer(id,false);}
+function leave(){info.close();active=false;sidebar.hidden=true;labels.forEach(m=>m.remove());labels=[];clearHover();for(const id of layerIds)showLayer(id,false);}
 async function enter(shouldFit=true){
  if(host.isBusy())return;active=true;sidebar.hidden=false;scope='';state(selected,{selected:false});selected=null;mode=1;panel('layers');$('country').value='';$('tab-explore').hidden=true;
  $('home').textContent='Korea';$('mode-province').textContent='First level';$('mode-prefecture').textContent='Second level';$('breadcrumb-region').hidden=true;setMode(1,true);
@@ -110,5 +113,5 @@ async function enter(shouldFit=true){
  catch(error){console.error(error);if(host.isBusy())await new Promise(resolve=>map.once('moveend',resolve));host.returnToChina();}
 }
 window.addEventListener('pagehide',event=>{if(!event.persisted)sourceUrls.forEach(url=>URL.revokeObjectURL(url));});
-return {unload(){for(const id of layerIds)if(map.getLayer(id))map.removeLayer(id);for(const id of ['korea-first','korea-second','korea-first-selection-edges','korea-second-selection-edges','korea-first-edges','korea-second-edges','korea-countries-edges'])if(map.getSource(id))map.removeSource(id);sourceUrls.splice(0).forEach(url=>URL.revokeObjectURL(url));index.clear();data=undefined;preparedPromise=loading=null;ready=false;selected=hovered=null;$('province').replaceChildren(new Option('All Korea',''));$('search-results').replaceChildren();},hoverAt(point,id){if(!active||!ready||host.isBusy())return;const r=id?index.get(id):picked(point);return r?{...r.properties,local:nativeName(r.properties)}:null;},getSelection:()=>selected?.properties.id||null,getScope:()=>scope,async restore(id,savedScope){scope=['KP','KR'].includes(savedScope)?savedScope:'';$('country').value=scope;listRegions();const f=index.get(id);if(f)await select(f,false);syncLayers();},sync:syncLayers,enter,leave,updateLabels,pauseLabels(){labels.forEach(label=>label.remove());labels=[];},preload,warm:ensureData,get active(){return active;},get ready(){return ready;},select,viewParent,home(){scope='';$('country').value='';listRegions();reset();},fit(){return fit(selected?.properties.bounds||scopeBounds());},setMode,random(){if(!ready||host.isBusy())return;const places=data.second.features.filter(f=>!scope||f.properties.country===scope);select(places[Math.floor(Math.random()*places.length)]);}};
+return {unload(){info.close();for(const id of layerIds)if(map.getLayer(id))map.removeLayer(id);for(const id of ['korea-first','korea-second','korea-first-selection-edges','korea-second-selection-edges','korea-first-edges','korea-second-edges','korea-countries-edges'])if(map.getSource(id))map.removeSource(id);sourceUrls.splice(0).forEach(url=>URL.revokeObjectURL(url));index.clear();data=undefined;preparedPromise=loading=null;ready=false;selected=hovered=null;$('province').replaceChildren(new Option('All Korea',''));$('search-results').replaceChildren();},hoverAt(point,id){if(!active||!ready||host.isBusy())return;const r=id?index.get(id):picked(point);return r?{...r.properties,local:nativeName(r.properties)}:null;},getSelection:()=>selected?.properties.id||null,getScope:()=>scope,async restore(id,savedScope){scope=['KP','KR'].includes(savedScope)?savedScope:'';$('country').value=scope;listRegions();const f=index.get(id);if(f)await select(f,false);syncLayers();},sync:syncLayers,enter,leave,updateLabels,pauseLabels(){labels.forEach(label=>label.remove());labels=[];},preload,warm:ensureData,get active(){return active;},get ready(){return ready;},select,viewParent,home(){scope='';$('country').value='';listRegions();reset();},fit(){return fit(selected?.properties.bounds||scopeBounds());},setMode,random(){if(!ready||host.isBusy())return;const places=data.second.features.filter(f=>!scope||f.properties.country===scope);select(places[Math.floor(Math.random()*places.length)]);}};
 }

@@ -60,3 +60,6 @@ if(fs.existsSync('dist/data/china-counties.bin')){
  for(const old of ['china-boundaries-dev.pack.bin','china-regions-dev.json'])fs.rmSync('dist/data/'+old,{force:true});
  console.log(`County pack with ${counties.regions.features.length} counties: ${(countyPack.length/1048576).toFixed(2)} MB; index ${(fs.statSync('dist/data/china-counties-regions.json').size/1024).toFixed(0)} KB.`);
 }
+
+// Regenerate exact source shards whenever the canonical boundaries change.
+(await import('./build-china-mobile.mjs')).buildChinaMobile();

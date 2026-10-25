@@ -11,17 +11,18 @@ export function createRound(pool,count=10,random=Math.random){
   const questions=[...pool];
   for(let i=questions.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[questions[i],questions[j]]=[questions[j],questions[i]];}
   const limit=count==='all'?pool.length:Math.min(pool.length,Math.max(1,Number(count)||10));
-  return {questions:questions.slice(0,limit),eligible:new Set(pool.map(l=>l.feature.properties.adcode)),index:0,results:[],complete:false};
+  return {questions:questions.slice(0,limit),eligible:new Set(pool.map(l=>l.feature.properties.adcode)),index:0,results:[],complete:false,spellingWarnings:0};
 }
 export function answer(round,code=null){
   if(round.complete||round.results[round.index])return null;
-  if(code!==null&&!round.eligible.has(code))return null;
+  if(code!==null&&(!round.eligible.has(code)||round.results.some(result=>result.status==='correct'&&result.expected===code)))return null;
   const expected=round.questions[round.index].feature.properties.adcode;
   const result={expected,chosen:code,status:code===null?'skipped':code===expected?'correct':'incorrect'};
   round.results.push(result);return result;
 }
 export function advance(round){
   if(round.complete||!round.results[round.index])return false;
+  round.spellingWarnings=0;
   if(round.index+1===round.questions.length)round.complete=true;else round.index++;
   return true;
 }

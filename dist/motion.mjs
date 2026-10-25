@@ -49,7 +49,7 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
  function sourceUrl(source,data){const url=URL.createObjectURL(data),previous=urls.get(source);urls.set(source,url);return{url,previous};}
  const countryLoads=new Map(),countrySources=new Map(),workers=new Map();
  function loadCountry(country){
-  nativeCountry=!!countries[country]&&!countries[country].motionLayers;
+  nativeCountry=country==='china'||globalThis.AtlasEntry?.lowMemory||!!countries[country]&&!countries[country].motionLayers;
   if(nativeCountry)return Promise.resolve(false);
   if(countryLoads.has(country))return countryLoads.get(country);
   const promise=new Promise(resolve=>{

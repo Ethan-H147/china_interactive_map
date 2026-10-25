@@ -1,11 +1,13 @@
 # Atlas publishing preference
 
-For completed changes to Boundary Atlas (this folder), the user has authorized publishing to both destinations every time:
+Keep all Boundary Atlas changes local until the user explicitly requests committing, pushing, or publishing. Do not commit, push to GitHub, synchronize the Sites source, or deploy either site automatically. Run the appropriate local checks and report the local result.
 
-- GitHub: `Ethan-H147/china_interactive_map`, branch `main`.
-- ChatGPT Site: use the existing project ID in `.openai/hosting.json` and preserve its current audience.
+Existing publication destinations, for use only when explicitly authorized:
 
-Run the checks appropriate to the change, push to GitHub, publish the Site using the Sites hosting workflow, and verify both results before reporting completion. Do not ask for deployment approval again. Preserve remote changes and never force-push to resolve a conflict.
+- GitHub: Ethan-H147/china_interactive_map, branch main.
+- ChatGPT Site: retain the project ID in .openai/hosting.json and its current audience.
+
+Preserve remote changes and never force-push to resolve a conflict.
 
 # Atlas interface copy preference
 

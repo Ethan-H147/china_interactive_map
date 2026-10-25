@@ -3,8 +3,7 @@ import {quizRecords} from './quiz-records.mjs';
 import {quizTime,quizModeLabels} from './quiz-records-core.mjs';
 const make=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
 const fold=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase().trim();
-const icons={find:'<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/>',name:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 9h.01M11 9h.01M15 9h.01M7 12h.01M11 12h.01M15 12h.01M8 15h8"/>',identify:'<path d="m12 3 8 5v8l-8 5-8-5V8zM12 8v5m0 3h.01"/>'};
-const descriptions={find:'Find each named place on the map.',name:'Name as many places as you can.',identify:'Name the place highlighted on the map.'};
+const icons={find:'<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/>',name:'<rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="7" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="12" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="17" cy="9" r=".7" fill="currentColor" stroke="none"/><circle cx="7" cy="12" r=".7" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r=".7" fill="currentColor" stroke="none"/><circle cx="17" cy="12" r=".7" fill="currentColor" stroke="none"/><path d="M8 15h8"/>',identify:'<path d="M3 5h13l5 7-5 7H3z"/><circle cx="17" cy="12" r="1"/>'};
 export function mountQuizDashboard(container,{play}){
  container.className='quiz-dashboard';
  container.innerHTML=`<div class="quiz-dashboard-heading"><h3>Your quiz record</h3><span data-record-status role="status"></span></div><div class="quiz-stat-grid" aria-label="Quiz totals"></div>
@@ -31,7 +30,7 @@ export function mountQuizDashboard(container,{play}){
  }
  for(const [id,label]of Object.entries(quizModeLabels)){
   const choice=make('label',undefined,'quiz-mode-choice'),radio=make('input');radio.type='radio';radio.name='account-quiz-mode';radio.value=id;radio.dataset.quizMode=id;
-  const surface=make('span',undefined,'quiz-mode-surface'),icon=make('span',undefined,'quiz-mode-icon');icon.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+icons[id]+'</svg>';surface.append(icon,make('strong',label),make('span',descriptions[id],'quiz-mode-description'));choice.append(radio,surface);radio.onchange=()=>{if(radio.checked){mode=id;render();}};$('.quiz-mode-grid').append(choice);modeControls.set(id,radio);
+  const surface=make('span',undefined,'quiz-mode-surface'),icon=make('span',undefined,'quiz-mode-icon');icon.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true">'+icons[id]+'</svg>';surface.append(icon,make('strong',label));choice.append(radio,surface);radio.onchange=()=>{if(radio.checked){mode=id;render();}};$('.quiz-mode-grid').append(choice);modeControls.set(id,radio);
  }
  function render(){
   const data=quizRecords.data,s=data.summary,definition=definitions[country],division=(country==='china'||definition?.quiz?.counties)?Number(level.value):definition?.quiz?.level||1;

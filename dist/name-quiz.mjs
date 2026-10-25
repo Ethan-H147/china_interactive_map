@@ -1,6 +1,6 @@
 import {quizRecords} from './quiz-records.mjs';
 import {quizPoolHash,quizTime} from './quiz-records-core.mjs';
-import {createNameRound,submitName,nameHint,nameScore,serializeNameRound,shortEnglish} from './name-quiz-engine.mjs';
+import {createNameRound,submitName,nameHint,nameScore,serializeNameRound,shortEnglish,spellingWarning} from './name-quiz-engine.mjs';
 const $=id=>document.getElementById(id),key=owner=>'china-atlas-name-quiz-v2:'+(owner||'guest');
 const read=(owner=quizRecords.accountId)=>{try{const value=JSON.parse(localStorage.getItem(key(owner)));return value&&typeof value==='object'?value:{};}catch{return{};}};
 const write=(value,owner=quizRecords.accountId)=>{try{localStorage.setItem(key(owner),JSON.stringify(value));return true;}catch{return false;}};
@@ -71,7 +71,7 @@ export function createNameQuiz(host){
     if(result.status==='correct'){
       host.mark(result.place.code,true);feedback.textContent=`${shortEnglish(result.place.en)} · ${result.place.zh} — correct`;
       $('name-answer').value='';save();render();if(round.complete)finish();
-    }else feedback.textContent=result.status==='duplicate'?`${shortEnglish(result.place.en)} is already named.`:result.status==='ambiguous'?'Use the full place name.':result.status==='empty'?'Enter a place name.':'No match in this province. Check the spelling or try its Chinese name.';
+    }else{if(result.status==='spelling')save();feedback.textContent=result.status==='spelling'?spellingWarning(result.warnings):result.status==='incorrect'?'Incorrect spelling. Try again.':result.status==='duplicate'?`${shortEnglish(result.place.en)} is already named.`:result.status==='ambiguous'?'Use the full place name.':result.status==='empty'?'Enter a place name.':'No match in this province. Check the spelling or try its Chinese name.';}
     if(!round.complete)$('name-answer').focus({preventScroll:true});
   });
   $('name-answer').addEventListener('keydown',event=>{if(event.key==='Enter'&&event.isComposing)event.preventDefault();});

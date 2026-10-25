@@ -161,3 +161,24 @@ export async function collapse(){
  apply('peek');
  if(!(globalThis.AtlasSettings?.prefersReducedMotion?.()??matchMedia('(prefers-reduced-motion: reduce)').matches))await new Promise(resolve=>setTimeout(resolve,300));
 }
+
+// Keep multi-touch outside the map from scaling the browser viewport.
+// Touch.target keeps the gesture's starting surface even if a finger moves elsewhere.
+const mapCanvasTouch = target => !!target?.closest?.('#map canvas.maplibregl-canvas');
+let screenTouches = 0, uiPinch = false;
+function guardPagePinch(event) {
+  screenTouches = event.touches.length;
+  if (screenTouches < 2) { uiPinch = false; return; }
+  uiPinch = ![...event.touches].every(touch => mapCanvasTouch(touch.target));
+  if (uiPinch && event.cancelable) event.preventDefault();
+}
+for (const type of ['touchstart', 'touchmove', 'touchend', 'touchcancel']) {
+  document.addEventListener(type, guardPagePinch, {capture: true, passive: false});
+}
+// Safari also emits GestureEvents. Desktop trackpad gestures keep their existing behavior.
+for (const type of ['gesturestart', 'gesturechange']) {
+  document.addEventListener(type, event => {
+    if (!matchMedia('(any-pointer: coarse)').matches && !screenTouches) return;
+    if ((uiPinch || !mapCanvasTouch(event.target)) && event.cancelable) event.preventDefault();
+  }, {capture: true, passive: false});
+}

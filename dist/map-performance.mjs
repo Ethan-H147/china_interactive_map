@@ -40,7 +40,8 @@ export function attach(map,{refreshLabels=()=>{}}={}){
  function applyRatio(){
   const overview=globalThis.AtlasGlobeOverviewController?.snapshot();
   const ratio=reduced&&!(overview?.ready&&map.getZoom()<6)?budget.ratio():targetRatio(globalThis.devicePixelRatio,preferences.quality,false);
-  if(Math.abs(map.getPixelRatio()-ratio)>.001){settingRatio=true;try{if(!resizeDuringMotion(map,ratio)){if(map.isMoving())return;map.setPixelRatio(ratio);}}finally{settingRatio=false;}}
+  const boundedRatio=globalThis.AtlasEntry?.lowMemory?Math.min(ratio,2):ratio;
+  if(Math.abs(map.getPixelRatio()-boundedRatio)>.001){settingRatio=true;try{if(!resizeDuringMotion(map,boundedRatio)){if(map.isMoving())return;map.setPixelRatio(boundedRatio);}}finally{settingRatio=false;}}
  }
  function stopSampling(){if(frame)cancelAnimationFrame(frame);frame=0;lastFrame=undefined;}
  function sample(now){

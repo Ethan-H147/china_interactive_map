@@ -18,7 +18,7 @@ assert.equal(round.results.length,0);
 const first=round.questions[0].feature.properties.adcode;
 assert.equal(answer(round,first).status,'correct');assert.equal(answer(round,first),null,'Repeated click was scored twice');
 assert.equal(advance(round),true);
-assert.equal(answer(round,first).status,'incorrect');advance(round);
+assert.equal(answer(round,first),null,'Solved regions cannot consume the next question');assert.equal(round.results.length,1);assert.equal(answer(round,round.questions[2].feature.properties.adcode).status,'incorrect');advance(round);
 assert.equal(answer(round).status,'skipped');advance(round);
 while(!round.complete){answer(round,round.questions[round.index].feature.properties.adcode);advance(round);}
 assert.deepEqual(score(round),{correct:11,incorrect:1,skipped:1,total:13,answered:13});
@@ -40,7 +40,7 @@ runInNewContext(extract('function clearQuizHighlights(', 'function syncQuizStyle
 const mark=(layer,correct=true)=>{quiz.highlighted.push(layer);states.set(layer.feature.properties.adcode,{quizCorrect:correct,quizWrong:!correct});};
 const a=mapRound.questions[0],b=mapRound.questions[1],c=mapRound.questions[2],d=mapRound.questions[3],code=l=>l.feature.properties.adcode;
 answer(mapRound,code(a));mark(a);await context.nextQuizQuestion();assert(states.get(code(a)).quizCorrect,'Correct answer lost after Next');
-answer(mapRound,code(a));mark(b);mark(a,false);await context.nextQuizQuestion();
+assert.equal(answer(mapRound,code(a)),null,'A solved region ignores later clicks');answer(mapRound,code(c));mark(b);mark(c,false);await context.nextQuizQuestion();
 assert(states.get(code(a)).quizCorrect&&!states.get(code(a)).quizWrong,'An earlier correct answer lost its green state after a wrong click');
 assert(!states.get(code(b)).quizCorrect,'Incorrect answer persisted as a successful answer');
 answer(mapRound);mark(c);await context.nextQuizQuestion();assert(!states.get(code(c)).quizCorrect,'Revealed answer persisted');

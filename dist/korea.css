@@ -8,3 +8,47 @@
 @media(max-width:760px){.korea-english{font-size:32px}.korea-sidebar #k-selection-name{font-size:34px}}
 
 .korea-sidebar #k-selection-chinese.has-hanja{margin-bottom:6px}.korea-sidebar .hanja-name{display:flex;align-items:baseline;gap:10px;margin:0 0 18px;line-height:1.5;flex-wrap:wrap}.korea-sidebar .hanja-name[hidden]{display:none}.hanja-caption{font:12px "Segoe UI",sans-serif;color:var(--muted)}.korea-sidebar #k-selection-hanja-name{font:22px/1.5 "Noto Serif CJK KR",Batang,"Songti SC",serif;letter-spacing:0;overflow-wrap:anywhere}.korea-sidebar #k-parent-hanja{color:var(--muted)}.korea-marker small[lang="ko-Hani"]{font-size:11px}
+
+/* Korea's article reader uses the current theme without changing shared country styling. */
+.korea-sidebar .panel-tabs{flex-wrap:wrap;column-gap:18px;row-gap:10px}
+.korea-sidebar #k-tab-extra{order:2;white-space:nowrap}
+.korean-article-link{display:grid;gap:10px;width:100%;padding:18px;text-align:left;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:6px}
+.korean-article-link strong{font-size:19px;font-weight:600}
+.korean-article-link span{font-size:14px;line-height:1.65;color:var(--muted)}
+.korean-article-link:hover{border-color:var(--red)}
+.korean-reader{max-width:900px;width:calc(100% - 40px);max-height:90dvh;padding:0;overflow:hidden}
+.korean-reader[open]{display:flex;flex-direction:column}
+.korean-reader-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 28px;border-bottom:1px solid var(--line);flex:none}
+.korean-reader-header h2{font-family:inherit;font-weight:600;font-size:21px;line-height:1.35;margin:0}
+.korean-reader-header button{display:grid;place-items:center;background:transparent;color:var(--ink);font-size:28px;line-height:1;width:40px;height:40px;padding:0;flex:none}
+.korean-reader-body{padding:22px 36px 36px;overflow-y:auto;overscroll-behavior:contain;min-height:0;max-width:100%;scrollbar-gutter:stable}
+.korean-reader-body p,.korean-reader-body li{font-size:15px;line-height:1.85;overflow-wrap:anywhere}
+.korean-reader-body p{margin:15px 0}
+.korean-reader-body .korean-article-lead{font-size:19px;line-height:1.65;margin:0 0 22px}
+.korean-reader-body h3{font-size:23px;line-height:1.4;font-weight:600;margin:32px 0 14px;scroll-margin-top:20px}
+.korean-reader-body section{scroll-margin-top:20px}
+.korean-reader-body ul{padding-left:22px}
+.korean-reader-body li{margin:10px 0}
+.korean-article-contents{display:flex;flex-wrap:wrap;gap:10px 20px;padding:16px 0 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.korean-article-contents button{font:inherit;font-size:14px;text-align:left;padding:0;background:transparent;color:var(--red);text-decoration:underline;text-underline-offset:4px}
+.korean-table-wrap{max-width:100%;overflow-x:auto;margin:20px 0 16px;border:1px solid var(--line);border-radius:5px;overscroll-behavior-x:contain}
+.korean-table-wrap table{width:100%;min-width:520px;border-collapse:collapse;font-size:14px;line-height:1.6}
+.korean-table-wrap caption{text-align:left;padding:12px 14px;font-weight:600;color:var(--ink);background:color-mix(in srgb,var(--line) 25%,var(--paper))}
+.korean-table-wrap th,.korean-table-wrap td{padding:10px 14px;text-align:left;vertical-align:top;border-top:1px solid var(--line)}
+.korean-table-wrap thead th{font-size:12px;font-weight:600;color:var(--muted);white-space:nowrap}
+.korean-table-wrap tbody th{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;font-size:21px;font-weight:400;white-space:nowrap}
+.korean-table-wrap tbody tr:nth-child(even){background:color-mix(in srgb,var(--line) 12%,var(--paper))}
+.korean-table-wrap td:nth-child(2),.korean-table-wrap td:nth-child(3){white-space:nowrap}
+.korean-table-wrap td:last-child{min-width:160px;white-space:normal}
+#korean-consonant-table td:last-child,#korean-cluster-table td:last-child{min-width:220px}
+.korean-reader :focus-visible,.korean-article-link:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+@media(max-width:600px){
+ .korean-reader{width:calc(100% - 16px);max-height:calc(100dvh - 24px);border-radius:8px}
+ .korean-reader-header{padding:12px 16px;gap:12px}
+ .korean-reader-header h2{font-size:19px}
+ .korean-reader-body{padding:20px 18px 28px;scrollbar-gutter:auto}
+ .korean-reader-body .korean-article-lead{font-size:18px}
+ .korean-reader-body h3{font-size:21px}
+ .korean-reader-body p,.korean-reader-body li{font-size:14px;line-height:1.8}
+ .korean-table-wrap th,.korean-table-wrap td{padding:9px 11px}
+}

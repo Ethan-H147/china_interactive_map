@@ -90,3 +90,8 @@
 @media (max-width: 760px) and (prefers-reduced-motion: reduce) {
   .sidebar:not([hidden]), .map-shell { transition: none; }
 }
+
+/* Native page scaling stays off on touch screens; the map handles its own pinch gesture. */
+@media (any-pointer: coarse) {
+  html, body { touch-action: pan-x pan-y; }
+}

@@ -14,7 +14,7 @@ body[data-atlas=mongolia],.country-option[data-atlas=mongolia]{--ink:#253747;--m
 @media(max-width:420px){.site-header .china-english,.site-header .korea-english{font-size:31px}}
 @media(prefers-reduced-motion:reduce){.loading-wheel{animation:none}}
 body[data-atlas=korea] .map-mode,body[data-atlas=mongolia] .map-mode{background:var(--paper);border-color:var(--line)}
-body[data-atlas=korea] .map-breadcrumb button,body[data-atlas=mongolia] .map-breadcrumb button,body[data-atlas=korea] .map-actions,body[data-atlas=mongolia] .map-actions{background:var(--paper);border-color:var(--line)}
+body[data-atlas=korea] .map-breadcrumb > button,body[data-atlas=mongolia] .map-breadcrumb button,body[data-atlas=korea] .map-actions,body[data-atlas=mongolia] .map-actions{background:var(--paper);border-color:var(--line)}
 body[data-atlas=korea] .map-mode button,body[data-atlas=mongolia] .map-mode button{color:var(--muted)}
 body[data-atlas=korea] .map-mode button[aria-pressed=true],body[data-atlas=mongolia] .map-mode button[aria-pressed=true]{background:var(--red);color:#fff}
 .map-mode #mode-lock[aria-pressed=true]{background:var(--accent-soft);color:var(--red)}

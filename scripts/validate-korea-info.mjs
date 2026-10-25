@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {koreanVowels,koreanConsonants,koreanFinals,koreanClusters,koreaInfoPanel,koreaRomanizationDialog} from '../dist/korea-info.mjs';
+const expectedVowels=[...'ㅏㅐㅑㅒㅓㅔㅕㅖㅗㅘㅙㅚㅛㅜㅝㅞㅟㅠㅡㅢㅣ'];
+const expectedConsonants=[...'ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ'];
+assert.deepEqual(koreanVowels.map(r=>r[0]),expectedVowels);assert.deepEqual(koreanConsonants.map(r=>r[0]),expectedConsonants);
+const singles=koreanFinals.flatMap(r=>r[0].split(' '));assert.equal(singles.length,16);assert.equal(new Set(singles).size,16);
+const clusters=koreanClusters.map(r=>r[0]);assert.equal(clusters.length,11);assert.equal(new Set(clusters).size,11);
+assert.deepEqual(new Set([...singles,...clusters]),new Set([...'ㄱㄲㄳㄴㄵㄶㄷㄹㄺㄻㄼㄽㄾㄿㅀㅁㅂㅄㅅㅆㅇㅈㅊㅋㅌㅍㅎ']));
+const ids=[...koreaRomanizationDialog.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size);
+for(const [,target]of koreaRomanizationDialog.matchAll(/data-korean-section="([^"]+)"/g))assert(ids.includes('korean-'+target));
+assert(koreaInfoPanel.includes('aria-controls="k-romanization"'));assert(koreaRomanizationDialog.includes('aria-labelledby="k-romanization-title"'));
+for(const table of ['vowel','consonant','final','cluster','place'])assert(koreaRomanizationDialog.includes('id="korean-'+table+'-table"'));
+assert(koreaRomanizationDialog.includes('North Korea’s national convention'));assert(koreaRomanizationDialog.includes('initial-sound'));
+for(const [,url]of koreaRomanizationDialog.matchAll(/href="([^"]+)"/g))assert(url.startsWith('https://'),'Reference links must not alter the atlas country hash');
+console.log('Korea article: complete 21-vowel, 19-consonant and 27-final inventories; table semantics, unique navigation targets and source links validated.');

@@ -4,10 +4,12 @@ const reducedMotion={get matches(){return window.AtlasSettings.prefersReducedMot
 let atlasStarting=true,restoringView=false;
 let zoomLock;
 const initialCountry=window.AtlasEntry?.initial;
+const lowMemory=!!window.AtlasEntry?.lowMemory;
+let chinaCountyScope;
 const initialBackground=window.AtlasEntry?.countries[initialCountry]?.background||'#f4f0e7';
 const registry=window.AtlasCountries;
 const initialPreview=registry.countries[initialCountry]?.map||null;
-const map=new maplibregl.Map({container:'map',style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:!!registry.countries[initialCountry]?.worldCopies,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:window.AtlasPerformance.contextOptions(),fadeDuration:0});
+const map=new maplibregl.Map({container:'map',...(lowMemory?{maxTileCacheSize:12,maxTileCacheZoomLevels:2,pixelRatio:Math.min(devicePixelRatio||1,2)}:{}),style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:!!registry.countries[initialCountry]?.worldCopies,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:window.AtlasPerformance.contextOptions(),fadeDuration:0});
 window.AtlasGlobeRendererController=window.AtlasGlobeRenderer.attachGlobeRenderer(map);
 window.AtlasPerformanceController=window.AtlasPerformance.attach(map,{refreshLabels:updateLabels});
 const mapScene=window.AtlasMapScene.createMapScene(map);
@@ -26,7 +28,7 @@ const countryLabels=window.AtlasLabels.createCountryLabels(map,{allows:country=>
 let labelFrame;
 const sourceFor=r=>r.feature.properties.parentCity?'city-districts':r.feature.properties.level==='province'?'provinces':isPrefectureLevel(r.feature.properties)?'prefectures':'others';
 function setRegionState(region,state){if(region.feature.geometry){const source=sourceFor(region);for(const id of [source,source+'-selection-edges'])window.AtlasMotion.setFeatureState(map,{source:id,id:region.feature.properties.adcode},state);}}
-function layerVisible(id,visible){window.AtlasLines.setLayerVisible(map,id,visible);}
+function layerVisible(id,visible){window.AtlasLines.setLayerVisible(map,id,visible);if(map.getLayer(id+'-repaired'))window.AtlasLines.setLayerVisible(map,id+'-repaired',visible);}
 function syncCountryFills(){
   for(const id of ['province-fill','province-fragment-fill'])layerVisible(id,atlasMode==='china'&&chinaReady&&!countrySwitching);
   layerVisible('china-context',atlasMode!=='china'||!chinaReady||countrySwitching);
@@ -51,34 +53,20 @@ let districtCities=new Set();
 function districtScope(){const p=selected?.layer.feature.properties;return p?.parentCity||(districtCities.has(p?.adcode)?p.adcode:null);}
 function districtsVisible(){return atlasMode==='china'&&!quiz.active&&!!districtScope()&&$('other-layer').checked&&$('map-shell').dataset.level==='prefecture';}
 function syncDistrictLayers(){
-  const visible=districtsVisible(),filter=['==',['get','parentCity'],districtScope()||0];
+  const scope=districtsVisible()?districtScope():null;
+  if(chinaCountyScope)chinaCountyScope.ensure(scope).catch(error=>console.warn('China county area',error));
+  const visible=districtsVisible()&&chinaCountyScope?.loaded===scope,filter=['==',['get','parentCity'],districtScope()||0];
   for(const id of ['city-district-fill','city-district-lines','city-district-selection'])if(map.getLayer(id)){map.setFilter(id,filter);layerVisible(id,visible);}
 }
 let provinceFeatures=[],manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
 let chinaFirstQuiz;
 const quiz={active:false,round:null,pool:[],saved:null,highlighted:[],reviewLayer:null};
 let failedCountry=null,recoveringCountry=false,chinaReady=false,chinaLoading,countrySwitching=false,countryEpoch=0,requestedCountry,countryPreparation,countryLoadFailed=false;
-// China's packed geometry downloads from the first moment a China visit is known,
-// overlapping style, module and context loading. MapLibre's workers unpack it
-// (see maplibre-worker-protocols.mjs); the page only hands them a blob URL.
-// The first view draws from the overview pack (china-sources.mjs) and then switches to the full pack.
-const packBlobUrl=(key,url)=>(window.AtlasEntry.takeEarly(key)||fetch(url)).then(r=>{if(!r.ok)throw new Error(`China boundaries: ${r.status}`);return r.blob();}).then(blob=>{const url=URL.createObjectURL(blob);chinaPackUrls.add(url);return url;});
-let chinaPack,chinaOverview,chinaGeneration=0;
-const chinaPackUrls=new Set(),chinaPackListeners=new Set();
-function chinaPackUrl(){
- return chinaPack??=packBlobUrl('chinaPack','data/china-boundaries.pack.bin').catch(error=>{chinaPack=null;throw error;});
-}
-// The overview is within a quarter of a device pixel up to OVERVIEW_MAX_ZOOM (china-sources.mjs).
-function overviewFirst(){return atlasStarting&&map.getZoom()<=window.AtlasChinaSources.OVERVIEW_MAX_ZOOM;}
-function chinaOverviewUrl(){
- return chinaOverview??=packBlobUrl('chinaOverview','data/china-overview.pack.bin').catch(error=>{chinaOverview=null;throw error;});
-}
-if(initialCountry==='china'&&!overviewFirst())chinaPackUrl().catch(()=>{});
-// County boundaries and their search index load after the first China view for everyone.
+// Keep all county search records; load boundary geometry for the selected area.
 let chinaCounties=false,chinaCountiesLoading=null,chinaArticles;
 function loadChinaCounties(){
  return chinaCountiesLoading??=(async()=>{
-  const [pack,regions,names]=await Promise.all([fetch('data/china-counties.pack.bin').then(r=>{if(!r.ok)throw Error('China counties: '+r.status);return r.blob();}),json('data/china-counties-regions.json'),json('data/china-county-names.json')]);
+  const [regions,names]=await Promise.all([json('data/china-counties-regions.json'),json('data/china-county-names.json')]);
   Object.assign(regionNames,names.regions);Object.assign(chinaArticles.regions,names.articles);
   // The five-city districts leave the index; the counties (the five cities' refined ones among them) take their place.
   const selectedCode=selected?.layer.feature.properties.parentCity?selected.layer.feature.properties.adcode:null;
@@ -86,9 +74,6 @@ function loadChinaCounties(){
   for(const code of districtCities){const list=detailLayers.get(code);if(list)detailLayers.set(code,list.filter(l=>!l.feature.properties.parentCity));}
   districtCities=new Set(regions.districts.map(f=>f.properties.parentCity));
   for(const f of regions.districts){const code=f.properties.parentCity;if(!detailLayers.has(code))detailLayers.set(code,[]);detailLayers.get(code).push(bindRegion(f,f.properties.provinceCode));}
-  const url=URL.createObjectURL(pack);chinaPackUrls.add(url);
-  await Promise.all(['city-districts','city-district-boundaries','city-districts-selection-edges'].map(id=>map.getSource(id)?.setData('china-pack://'+id+'?pack='+encodeURIComponent(url))));
-  map.once('idle',()=>setTimeout(()=>{URL.revokeObjectURL(url);chinaPackUrls.delete(url);},15000));
   if(selectedCode&&regionByCode.get(selectedCode))selected.layer=regionByCode.get(selectedCode);
   comparison.register('china',{regions:[...provinceLayers.values(),...regionByCode.values()].filter((l,i,a)=>a.findIndex(x=>x.feature.properties.adcode===l.feature.properties.adcode)===i),name:englishName,kind,provincePopulation,regionPopulation});
   chinaCounties=true;syncLayers();
@@ -327,7 +312,7 @@ const activeNeighbourLandFilter=open=>['!',['in',['get','country'],['literal',[o
 function syncPortals(open){window.AtlasGlobeOverviewController?.setCountry(open);if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',registry.ids.filter(id=>(window.AtlasDev?.allows(id)??registry.countries[id].release!=='developer')&&(id===open||registry.countries[open]?.snapshot?.replaces?.includes(id)||registry.countries[id].portal&&map.getLayer(registry.countries[id].portal.layer)))]]]);if(map.getLayer('china-neighbour-land'))map.setFilter('china-neighbour-land',neighbourLandFilter(open));for(const country of registry.ids){const portal=registry.countries[country].portal;if(portal&&map.getLayer(portal.layer)){map.setPaintProperty(portal.layer,'fill-color',country===open?portal.fill:'#d7d7d3');map.setFilter(portal.layer,unclaimed(open));}if(map.getLayer(country+'-international'))map.setFilter(country+'-international',unclaimed(open));if(map.getLayer(country+'-neighbours'))map.setFilter(country+'-neighbours',activeNeighbourLandFilter(open));}}
 function atlasFor(country){return atlases[country]||{'southern-africa':southernAfrica,europe,'south-america':southAmerica}[registry.countries[country]?.adapter]?.portals[country]||null;}
 function currentAtlas(){return atlasFor(atlasMode);}
-const countryMemory=window.AtlasCountryLoader.createCountryResidency({limit:3,async dispose(id){
+const countryMemory=window.AtlasCountryLoader.createCountryResidency({limit:lowMemory?1:3,async dispose(id){
  await motionRenderer.end();motionRenderer.unloadCountry(id);
  if(id==='china')await unloadChina();else{const atlas=atlasFor(id);if(!atlas?.unload)throw Error('Missing country cleanup: '+id);await atlas.unload();}
  window.AtlasRegionColorController.releaseCountry(id);
@@ -336,14 +321,12 @@ const countryMemory=window.AtlasCountryLoader.createCountryResidency({limit:3,as
 }});
 window.AtlasCountryMemory={snapshot:countryMemory.snapshot};
 async function unloadChina(){
- await chinaCountiesLoading?.catch(()=>{});chinaGeneration++;
+ await chinaCountiesLoading?.catch(()=>{});await chinaCountyScope?.dispose();chinaCountyScope=null;
  waterDisplay?.dispose();waterDisplay=null;explorer?.dispose();explorer=null;
- for(const listener of chinaPackListeners)map.off('sourcedata',listener);chinaPackListeners.clear();
  const owns=id=>/^(provinces?|prefectures?|others?|city-districts?)(-|$)/.test(id);
  for(const layer of [...map.getStyle().layers].reverse())if(owns(layer.source||''))map.removeLayer(layer.id);
  for(const id of Object.keys(map.getStyle().sources))if(owns(id))map.removeSource(id);
- for(const url of chinaPackUrls)URL.revokeObjectURL(url);chinaPackUrls.clear();
- chinaPack=chinaOverview=chinaLoading=chinaCountiesLoading=null;chinaReady=chinaCounties=false;
+ chinaLoading=chinaCountiesLoading=null;chinaReady=chinaCounties=false;
  namingQuiz?.release();quiz.pool=[];quiz.round=quiz.saved=quiz.reviewLayer=null;quiz.highlighted=[];
  provinceLayers.clear();detailLayers.clear();regionByCode.clear();regionIndex.length=0;provinceFeatures=[];districtCities.clear();
  regionNames={};regionPopulation=chinaArticles=xinjiangAdministration=undefined;manifest=null;
@@ -475,7 +458,14 @@ function updateProvinceStyling(){
 }
 function satelliteAppearance(visible,opacity){$('map-shell').dataset.satellite=String(visible&&opacity>=.5);}
 function addLine(id,source,color,width,opacity=1,dash,role='border'){const paint={'line-color':color,'line-width':width,'line-opacity':opacity};if(dash)paint['line-dasharray']=dash;map.addLayer({id,metadata:{atlas:{role,...(role==='selection'?{visibleStates:window.AtlasMapScene.selectionStates}:{}),...(source.startsWith('city-district')?{motion:'live'}:{})}},type:'line',source,layout:{'line-cap':'round','line-join':'round'},paint});}
-function addSelection(id,source){addLine(id,source+'-selection-edges',['case',['boolean',['feature-state','quizTarget'],false],'#926b16',['boolean',['feature-state','quizCorrect'],false],'#38684a','#a43829'],1.7,window.AtlasLines.adaptiveOpacity(['case',['any',['boolean',['feature-state','selected'],false],['boolean',['feature-state','quizTarget'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],1,0]),undefined,'selection');}
+function addSelection(id,source){
+ const color=['case',['boolean',['feature-state','quizTarget'],false],'#926b16',['boolean',['feature-state','quizCorrect'],false],'#38684a','#a43829'];
+ const opacity=['case',['any',['boolean',['feature-state','selected'],false],['boolean',['feature-state','quizTarget'],false],['boolean',['feature-state','quizCorrect'],false],['boolean',['feature-state','quizWrong'],false]],1,0];
+ if(source!=='city-districts'){
+  addLine(id,source,color,1.7,opacity,undefined,'selection');
+  addLine(id+'-repaired',source+'-selection-edges',color,1.7,window.AtlasLines.adaptiveOpacity(opacity),undefined,'selection');
+ }else addLine(id,source+'-selection-edges',color,1.7,window.AtlasLines.adaptiveOpacity(opacity),undefined,'selection');
+}
 function pickedRegion(point){
   if(quiz.active&&quiz.type==='name')return;
   if(quiz.active){const hit=window.AtlasMotion.queryRegions(map,point,{layers:['prefecture-fill','prefecture-fragment-fill']})[0];return hit&&quiz.round.eligible.has(hit.properties.adcode)?regionByCode.get(hit.properties.adcode):undefined;}
@@ -491,6 +481,8 @@ function countryAt(point){
  const countries=Object.fromEntries(registry.ids.flatMap(id=>registry.countries[id].hitLayers.map(layer=>[layer,id])));
  const hits=window.AtlasMotion.queryRegions(map,point,{layers:Object.keys(countries)}).map(f=>({country:countries[f.layer.id],region:f.properties.region,bounds:f.properties.bounds}));
  if(mapScene.overview&&map.getLayer('globe-overview-land'))for(const f of map.queryRenderedFeatures(point,{layers:['globe-overview-land']})){const id=f.properties.country;if(id&&registry.countries[id]&&window.AtlasDev.allows(id))hits.push({country:id,region:f.properties.region,bounds:f.properties.bounds});}
+ // On phones the shared land layer is the hit target until a country is opened.
+ if(lowMemory&&map.getLayer('world-land'))for(const f of map.queryRenderedFeatures(point,{layers:['world-land']})){const id=f.properties.country;if(id&&registry.countries[id]&&window.AtlasDev.allows(id))hits.push({country:id,region:f.properties.region,bounds:f.properties.bounds});}
  for(const id of ['south-america-fill','south-america-portal-fill'])if(map.getLayer(id))for(const f of map.queryRenderedFeatures(point,{layers:[id]}))hits.push({country:f.properties.country});
  return hits.find(h=>h.country===atlasMode)||hits.find(h=>h.country&&h.region)||hits.find(h=>h.country);
 }
@@ -510,39 +502,33 @@ window.AtlasPointer.onMapHover(map,event=>{
 map.getCanvas().addEventListener('mouseleave',clearHover);
 async function loadChina(){
  if(chinaReady)return;if(chinaLoading)return chinaLoading;
- const generation=chinaGeneration;
  chinaLoading=(async()=>{
-  // Far enough out, the first view draws from the overview pack; once that view is shown,
-  // every China source switches to the full pack.
-  const overview=overviewFirst();
-  const [packUrl,china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([overview?chinaOverviewUrl():chinaPackUrl(),(window.AtlasEntry.takeEarly('chinaRegions')||fetch('data/china-regions.json')).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};chinaArticles=articles;xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
+  // Index exact sources once on every device; county geometry loads by selected area.
+  const [china,m,names,administration,population,districtNames,articles,landmarks,provincePop]=await Promise.all([(window.AtlasEntry.takeEarly('chinaRegions')||fetch('data/china-regions.json')).then(r=>{if(!r.ok)throw new Error(`China regions: ${r.status}`);return r.json();}),json('data/manifest.json'),json('data/region-names.json'),json('data/xinjiang-administration.json'),json('data/region-population.json'),json('data/city-district-names.json'),json('data/region-articles.json'),json('data/landmarks.json'),json('data/province-population.json'),styleReady]);manifest=m;regionNames={...names.regions,...districtNames.regions};chinaArticles=articles;xinjiangAdministration=administration;regionPopulation=population;provincePopulation=provincePop;explorer=window.AtlasExplore.createExplorer(articles,landmarks);
   $('retrieved').textContent=new Date(m.retrieved).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
   provinceFeatures=china.provinces;
-  // Each MapLibre worker unpacks the boundaries once and builds its own sources.
-  // A pack's blob URL is released when every China source has loaded from it.
-  const ids=[];
-  const chinaSource=(id,options)=>{ids.push(id);addSource(id,'china-pack://'+id+'?pack='+encodeURIComponent(packUrl),options);};
+  const chinaSource=async(id,options)=>{
+   addSource(id,window.AtlasChinaMobile.emptyCollection(),options);
+   // Index one exact source at a time, without a decoded country-wide pack.
+   if(!id.startsWith('city-district'))await window.AtlasChinaMobile.setSourceData(map,id,window.AtlasChinaMobile.mobileChinaUrl(id));
+  };
   // The two repaired fills use unsimplified triangles. Other regions use
   // subpixel tile simplification, retaining every original source coordinate.
-  chinaSource('provinces');chinaSource('prefectures');chinaSource('others');
-  chinaSource('provinces-fragments',fillSourceOptions);chinaSource('prefectures-fragments',fillSourceOptions);
+  await chinaSource('provinces');await chinaSource('prefectures');await chinaSource('others');
+  await chinaSource('provinces-fragments',fillSourceOptions);await chinaSource('prefectures-fragments',fillSourceOptions);
   // Simplify line tiles within 0.65 screen pixels and fade subpixel islands.
   // The stored geometry and selectable polygons retain full detail. Outlines skip
   // segments drawn by the international border layer or already drawn once.
-  for(const name of china.boundaries)chinaSource(name+'-boundaries',window.AtlasLines.lineSourceOptions);
-  for(const name of ['provinces','prefectures','others'])chinaSource(name+'-selection-edges',window.AtlasLines.lineSourceOptions);
+  for(const name of china.boundaries)await chinaSource(name+'-boundaries',window.AtlasLines.lineSourceOptions);
+  for(const name of ['provinces','prefectures','others'])await chinaSource(name+'-selection-edges',window.AtlasLines.lineSourceOptions);
   const colors=['match',['get','adcode']];for(const f of provinceFeatures)colors.push(f.properties.adcode,fillColors[Number(f.properties.adcode)/10000%fillColors.length|0]);colors.push(fillColors[0]);normalProvinceColors=colors;
   addFill('province-fill','provinces',provinceColor(),1);addFill('province-fragment-fill','provinces-fragments',provinceColor(),1);addFill('prefecture-fill','prefectures','#d6b974',.025);addFill('prefecture-fragment-fill','prefectures-fragments','#d6b974',.025);addFill('other-fill','others','#dbc886',.1);
   addLine('prefecture-lines','prefecture-boundaries','#b39a77',.7,window.AtlasLines.adaptiveOpacity(.85));addLine('other-lines','other-boundaries','#9f874e',.7,window.AtlasLines.adaptiveOpacity(.85),[3,3]);
   addSelection('province-selection','provinces');addSelection('prefecture-selection','prefectures');addSelection('other-selection','others');
   addLine('province-lines','province-boundaries','#987343',['interpolate',['linear'],['zoom'],3,.65,8,1.2],window.AtlasLines.adaptiveOpacity(.95));
-  chinaSource('city-districts');
-  chinaSource('city-district-boundaries',window.AtlasLines.lineSourceOptions);
-  chinaSource('city-districts-selection-edges',window.AtlasLines.lineSourceOptions);
-  const releaseWhenLoaded=(url,done)=>{const pending=new Set(ids);const release=event=>{if(pending.has(event.sourceId)&&event.isSourceLoaded)pending.delete(event.sourceId);if(!pending.size){map.off('sourcedata',release);URL.revokeObjectURL(url);chinaPackUrls.delete(url);chinaPackListeners.delete(release);done();}};chinaPackListeners.add(release);map.on('sourcedata',release);};
-  releaseWhenLoaded(packUrl,()=>{if(overview)chinaOverview=null;else chinaPack=null;});
-  // Sources already given other data (developer mode's counties) keep it.
-  if(overview)startupFinished.then(chinaPackUrl).then(full=>{if(generation!==chinaGeneration){URL.revokeObjectURL(full);chinaPackUrls.delete(full);return;}for(const id of ids){const source=map.getSource(id);if(String(source?.serialize().data).endsWith(encodeURIComponent(packUrl)))source.setData('china-pack://'+id+'?pack='+encodeURIComponent(full));}releaseWhenLoaded(full,()=>{chinaPack=null;});}).catch(error=>console.warn('China boundaries',error));
+  await chinaSource('city-districts');
+  await chinaSource('city-district-boundaries',window.AtlasLines.lineSourceOptions);
+  await chinaSource('city-districts-selection-edges',window.AtlasLines.lineSourceOptions);
   addFill('city-district-fill','city-districts','#dbc886',.02);
   addLine('city-district-lines','city-district-boundaries','#9f874e',.75,window.AtlasLines.adaptiveOpacity(.9));
   addSelection('city-district-selection','city-districts');
@@ -560,8 +546,9 @@ async function loadChina(){
   for(const id of ['water-layer'])if($(id).checked)$(id).dispatchEvent(new Event('change'));
   comparison.register('china',{regions:[...provinceLayers.values(),...regionByCode.values()].filter((l,i,a)=>a.findIndex(x=>x.feature.properties.adcode===l.feature.properties.adcode)===i),name:englishName,kind,provincePopulation,regionPopulation});
   $('compare-open').onclick=()=>comparison.open();$('compare-place').onclick=()=>comparison.open(selected?.layer.feature.properties.adcode);
+  chinaCountyScope=window.AtlasChinaMobile.createCountyScope(map,{changed:()=>{syncDistrictLayers();updateLabels();}});
   chinaReady=true;initQuiz();syncLayers();
-  loadChinaCounties().catch(error=>console.warn('China counties',error));
+  await loadChinaCounties();
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:atlasMode!=='china'});
   syncCountryFills();syncLayers();
  })().catch(error=>{chinaLoading=null;throw error;});return chinaLoading;
@@ -596,14 +583,16 @@ async function init(){try{
   else{preloadLater();await addRegions(capitals);await showFirstView();}
   // South America's detailed shapes and borders load once the first view is ready, so those
   // countries never sit as coarse previews before someone opens one.
-  southAmerica.warmContext().catch(e=>console.warn(e));
-  europe.ensure().then(()=>{europe.syncDeveloper();southAmerica.syncDeveloper();syncPortals(atlasMode);}).catch(e=>console.warn(e));
+  if(!lowMemory){
+   southAmerica.warmContext().catch(e=>console.warn(e));
+   europe.ensure().then(()=>{europe.syncDeveloper();southAmerica.syncDeveloper();syncPortals(atlasMode);}).catch(e=>console.warn(e));
+  }
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;finishAtlases();}}
 // Startup preloads in index.html cover China's first view; southern Africa's outline files are
 // listed there too and requested here, after that view or straight away.
 let preloadedLater=false;
 function preloadLater(){
- if(preloadedLater)return;preloadedLater=true;
+ if(preloadedLater)return;preloadedLater=true;if(lowMemory)return;
  for(const href of JSON.parse($('later-preloads').textContent)){const link=document.createElement('link');link.rel='preload';link.as='fetch';link.crossOrigin='anonymous';link.href=href;document.head.append(link);}
 }
 async function showFirstView(){
@@ -653,7 +642,7 @@ async function addRegions(capitals){
   await step('Capitals',async()=>{capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitals);});
   southAmerica=window.AtlasSouthAmerica.createSouthAmerica(map,{syncAppearance:()=>satelliteDisplay?.sync(),country:()=>atlasMode,isBusy:()=>quiz.active||countrySwitching,switchAtlas:changeAtlas,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{manual:camera.manual===true})});
   window.AtlasDev.mount({eligible:()=>atlasMode==='china'&&!quiz.active&&!countrySwitching&&selected?.layer.feature.properties.adcode===310105});
-  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();southernAfrica?.syncDeveloper();await europe.ensure();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
+  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();southernAfrica?.syncDeveloper();if(!lowMemory)await europe.ensure();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
   atlasesReady=true;finishAtlases();
 }
 let viewSaveTimer,viewControlsReady=false;
@@ -826,7 +815,7 @@ function syncQuizStyle(){
   const paint=fillPaint(quiz.active?'#e6cda1':'#d6b974',quiz.active ? .65 : .025);
   for(const [property,value] of Object.entries(paint))for(const id of ['prefecture-fill','prefecture-fragment-fill'])map.setPaintProperty(id,property,value);
   const filter=quiz.active?['in',['to-string',['get','adcode']],['literal',quiz.pool.map(l=>String(l.feature.properties.adcode))]]:null;
-  for(const id of ['prefecture-fill','prefecture-fragment-fill','prefecture-selection'])map.setFilter(id,filter);
+  for(const id of ['prefecture-fill','prefecture-fragment-fill','prefecture-selection','prefecture-selection-repaired'])map.setFilter(id,filter);
   syncLayers();
   $('map-shell').dataset.quiz=String(quiz.active);$('quiz-map-prompt').hidden=!quiz.active||quiz.type==='name';$('name-map-prompt').hidden=!quiz.active||quiz.type!=='name';$('quiz-crosshair').hidden=true;
   $('home').textContent=quiz.active?'End quiz':'China';
@@ -879,7 +868,8 @@ function answerQuiz(code=null,typed=null){
   if(chinaFirstQuiz?.active)return;
   if(!quiz.active||quiz.type==='name'||quiz.type==='identify'&&code!==null||cameraBusy||!allReady)return;
   const place=quiz.type==='identify'?quiz.round.questions[quiz.round.index].feature.properties:null;
-  const result=typed===null?AtlasQuiz.answer(quiz.round,code):window.AtlasQuizModes.answerSpecified(quiz.round,typed,{code:place.adcode,en:englishName(place),zh:place.name,aliases:(place.searchAliases||'').split(/[;,|]/).filter(Boolean)});if(!result)return;
+  const result=typed===null?AtlasQuiz.answer(quiz.round,code):window.AtlasQuizModes.answerSpecified(quiz.round,typed,{code:place.adcode,en:englishName(place),zh:place.name,aliases:(place.searchAliases||'').split(/[;,|]/).filter(Boolean)},quiz.pool.map(layer=>{const p=layer.feature.properties;return{code:p.adcode,en:englishName(p),zh:p.name,aliases:(p.searchAliases||'').split(/[;,|]/).filter(Boolean)};}));if(!result)return;
+  if(result.status==='spelling'){$('quiz-feedback').hidden=false;$('quiz-feedback').dataset.status='spelling';$('quiz-feedback-title').textContent='Close spelling';$('quiz-feedback-detail').textContent='Try again ('+result.warnings+'/2).';$('quiz-map-feedback').hidden=false;$('quiz-map-feedback').textContent='Close spelling. Try again ('+result.warnings+'/2).';$('quiz-identify-answer').focus({preventScroll:true});return;}
   if(quiz.round.results.length===quiz.round.questions.length){const score=AtlasQuiz.score(quiz.round);prefectureAttempt?.finish({correct:score.correct,hints:0,reveals:score.skipped,completed:true});clearInterval(prefectureTick);refreshPrefectureTimer();}
   clearHover();const target=regionByCode.get(result.expected);setRegionState(target,{quizCorrect:quiz.type!=='identify'||result.status!=='incorrect',quizWrong:quiz.type==='identify'&&result.status==='incorrect',quizTarget:false});quiz.highlighted.push(target);quiz.reviewLayer=target;
   if(result.status==='incorrect'&&result.chosen!==null){const wrong=regionByCode.get(result.chosen);setRegionState(wrong,{quizWrong:true});quiz.highlighted.push(wrong);}

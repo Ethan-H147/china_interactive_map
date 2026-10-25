@@ -32,9 +32,10 @@ try{
   modules.AtlasPointer='pointer-performance.mjs';
   modules.AtlasGeoPack='geo-pack.mjs';
   modules.AtlasChinaSources='china-sources.mjs';
+  modules.AtlasChinaMobile='china-mobile.mjs';
   const rendererPromise=import('./vendor/maplibre-gl.mjs');
   await Promise.all(Object.entries(modules).map(async([name,file])=>{window[name]=await import('./'+file);}));
-  const renderer=await rendererPromise;window.maplibregl=renderer;renderer.setWorkerCount(2);
+  const renderer=await rendererPromise;window.maplibregl=renderer;renderer.setWorkerCount(window.AtlasEntry.lowMemory?1:2);
   await renderer.importScriptInWorkers(new URL('maplibre-worker-protocols.mjs',location.href).href);
   window.AtlasChinaPage.mountChinaPage();
   window.AtlasFlagViewer.createFlagViewer();

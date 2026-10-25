@@ -4,12 +4,12 @@ import assert from 'node:assert/strict';
 const source=fs.readFileSync('dist/atlas-entry.js','utf8'),registrySource=fs.readFileSync('dist/countries.js','utf8');
 // The registry runs first in the page; each sandbox gets its own copy.
 const withRegistry=context=>{vm.createContext(context);vm.runInContext(registrySource,context);context.window.AtlasCountries=context.AtlasCountries;return context;};
-function boot(hash='',saved,{blocked=false,developer=false,unreleased=[]}={}){
+function boot(hash='',saved,{blocked=false,developer=false,unreleased=[],mobile=false,touch=false,memory=8}={}){
  const stored=new Map(saved?[['boundary-atlas-country-v1',saved]]:[]);
  const elements=new Map(['atlas-title-english','atlas-title-local','atlas-title-malay','atlas-title-tamil','loading-label','home'].map(id=>[id,{}]));
  const symbols=[{}],location={hash,pathname:'/',search:''};
  const listeners={},fetched=[];
- const context={fetch:url=>{fetched.push(url);return Promise.resolve({ok:true});},window:{AtlasDev:{enabled:developer,allows:country=>!unreleased.includes(country)||developer},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
+ const context={matchMedia:query=>({matches:query.includes('max-width')?mobile:touch}),navigator:{deviceMemory:memory},fetch:url=>{fetched.push(url);return Promise.resolve({ok:true});},window:{AtlasDev:{enabled:developer,allows:country=>!unreleased.includes(country)||developer},addEventListener:(event,fn)=>listeners[event]=fn},document:{documentElement:{dataset:{}},body:{dataset:{}},getElementById:id=>elements.get(id),querySelectorAll:selector=>selector==='[data-country-symbol]'?symbols:[]},location,
   history:{replaceState(a,b,url){location.hash=new URL(url,'https://example.test').hash;}},
   localStorage:{getItem(key){if(blocked)throw Error('Storage blocked');return stored.get(key);},setItem(key,value){if(blocked)throw Error('Storage blocked');stored.set(key,value);}},AtlasSymbols:{markup:country=>'<svg>'+country+'</svg>'}};
  vm.runInContext(source,withRegistry(context));const entry=context.window.AtlasEntry;entry.mount();return{entry,context,stored,elements,symbols,location,listeners,fetched};
@@ -26,6 +26,8 @@ for(const country of ['china','korea','mongolia','japan','philippines','indonesi
  restored.entry.ready();assert(!restored.context.document.documentElement.dataset.starting);
 }
 const fresh=boot();assert.equal(fresh.entry.initial,'china');assert.equal(fresh.location.hash,'#china');assert.equal(fresh.context.document.documentElement.dataset.atlas,'china');
+for(const profile of [{mobile:true},{touch:true},{memory:2}]){const phone=boot('#china',undefined,profile);assert(phone.entry.lowMemory);assert(!phone.fetched.some(url=>url.includes('.pack.bin')),'Low-memory devices skip the full-country preload');}
+assert.equal(boot('#china',undefined,{memory:undefined}).entry.lowMemory,false);
 for(const country of ['south-africa','botswana','namibia','eswatini','lesotho'])assert.equal(boot('#'+country,'china').entry.initial,country,'Released southern African countries open publicly');
 // Countries withheld from release open only in developer mode.
 for(const country of ['united-kingdom','spain','france','italy']){const unreleased=['united-kingdom','spain','france','italy'];assert.equal(boot('#'+country,country,{unreleased}).entry.initial,'china','Development routes cannot open publicly');const dev=boot('#'+country,'china',{developer:true,unreleased});assert.equal(dev.entry.initial,country);assert.equal(dev.entry.fromHash('#'+country),country);assert.equal(dev.elements.get('home').textContent,dev.entry.countries[country].en);}
@@ -81,9 +83,9 @@ const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));a
   assert(code.includes(file)||(code.includes(name)||code.includes(stem))&&(!file.includes('/')||code.includes(dir+'/')),'Preloaded file is requested by the page: '+file);
  }
  const entry=fs.readFileSync('dist/atlas-entry.js','utf8'),app=fs.readFileSync('dist/app.js','utf8');
- assert.deepEqual(boot('#china').fetched,['data/china-overview.pack.bin','data/china-regions.json'],'China visits start the overview boundaries immediately');
+ assert.deepEqual(boot('#china').fetched,['data/china-regions.json'],'China visits preload only the search index on every device');
  assert.deepEqual(boot('#japan').fetched,[],'Other countries do not download China');
- const early=boot('#china').entry;assert(early.takeEarly('chinaOverview'));assert.equal(early.takeEarly('chinaOverview'),undefined,'An early response is handed over once');
- for(const key of ['chinaOverview','chinaRegions'])assert(entry.includes(`['${key}',`)&&(app.includes(`takeEarly('${key}')`)||app.includes(`packBlobUrl('${key}',`)&&app.includes('takeEarly(key)')),'Early China response is consumed: '+key);
+ const early=boot('#china').entry;assert(early.takeEarly('chinaRegions'));assert.equal(early.takeEarly('chinaRegions'),undefined,'An early response is handed over once');
+ for(const key of ['chinaRegions'])assert(entry.includes(`['${key}',`)&&(app.includes(`takeEarly('${key}')`)||app.includes(`packBlobUrl('${key}',`)&&app.includes('takeEarly(key)')),'Early China response is consumed: '+key);
  console.log(`Startup preloads: ${first.length} first-view and ${later.length} later files exist and are requested; early China downloads are consumed.`);
 }

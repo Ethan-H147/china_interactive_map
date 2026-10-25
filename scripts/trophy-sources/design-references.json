@@ -1,0 +1,21 @@
+{
+  "note": "Original geometry and original SVG-painted decoration. These sources informed shapes and proportions; no museum images or third-party mesh assets were copied for the three new models.",
+  "models": {
+    "korea": [
+      "https://www.museum.go.kr/ENG/contents/E0201080200.do?relicId=27163&schM=view&showHallId=757",
+      "https://www.metmuseum.org/art/collection/search/42301"
+    ],
+    "russia": [
+      "https://tmora.org/2024/08/27/a-thousand-nesting-dolls/"
+    ],
+    "germany": [
+      "https://www.visitberlin.de/en/brandenburg-gate"
+    ]
+  },
+  "repairs": {
+    "china": "Posts shortened; conforming saddles stay outside the disc radius; face ornaments clear the jade surface.",
+    "japan": "Hollow collars replace solid blocks around posts; hanging papers attach to a curved rope; front plaque layers meet without crossing.",
+    "united-states": "Hollow bell shell and integrated casting bands; support tops meet yoke underside; fracture decoration follows the shell surface.",
+    "france": "Imported footing rests on the circular base surface; source lattice and platform joins retained."
+  }
+}

@@ -4,39 +4,77 @@
   "models": [
     {
       "country": "china",
+      "addedAt": "2026-10-25T01:19:02Z",
+      "addedOrder": 1,
       "title": "Jade disc",
       "file": "data/trophies/china.glb",
-      "triangles": 11340,
-      "bytes": 818832,
+      "triangles": 11796,
+      "bytes": 852340,
       "source": "Boundary Atlas original"
     },
     {
       "country": "japan",
+      "addedAt": "2026-10-25T01:19:02Z",
+      "addedOrder": 2,
       "title": "Vermilion torii",
       "file": "data/trophies/japan.glb",
-      "triangles": 3424,
-      "bytes": 250208,
+      "triangles": 4128,
+      "bytes": 300904,
       "source": "Boundary Atlas original"
     },
     {
       "country": "united-states",
+      "addedAt": "2026-10-25T01:19:02Z",
+      "addedOrder": 3,
       "title": "Liberty bell",
       "file": "data/trophies/united-states.glb",
-      "triangles": 12476,
-      "bytes": 901968,
+      "triangles": 9208,
+      "bytes": 668048,
       "source": "Boundary Atlas original"
     },
     {
       "country": "france",
+      "addedAt": "2026-10-25T01:19:02Z",
+      "addedOrder": 4,
       "title": "Eiffel Tower",
       "file": "data/trophies/france.glb",
-      "triangles": 88534,
-      "bytes": 7423360,
+      "triangles": 88686,
+      "bytes": 7434284,
       "source": {
         "author": "ingoenius",
         "license": "CC0-1.0",
         "url": "https://3dmr.eu/model/4/3"
       }
+    },
+    {
+      "country": "korea",
+      "addedAt": "2026-10-25T06:08:53.314Z",
+      "addedOrder": 5,
+      "title": "Cloud-and-crane celadon",
+      "file": "data/trophies/korea.glb",
+      "triangles": 19108,
+      "bytes": 1691428,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "russia",
+      "addedAt": "2026-10-25T06:08:53.352Z",
+      "addedOrder": 6,
+      "title": "Floral matryoshka",
+      "file": "data/trophies/russia.glb",
+      "triangles": 16804,
+      "bytes": 1709264,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "germany",
+      "addedAt": "2026-10-25T06:08:53.415Z",
+      "addedOrder": 7,
+      "title": "Brandenburg colonnade",
+      "file": "data/trophies/germany.glb",
+      "triangles": 37764,
+      "bytes": 2722732,
+      "source": "Boundary Atlas original"
     }
   ]
 }

@@ -42,3 +42,16 @@ for(const scope of provinceCodes){
 const html=fs.readFileSync(new URL('../dist/index.html',import.meta.url),'utf8')+fs.readFileSync(new URL('../dist/china-page.mjs',import.meta.url),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(ids.length,new Set(ids).size,'Duplicate UI IDs');
 console.log(`Name quiz: ${total} places accept their full English and Chinese names; accents, short names, duplicate answers, hints, scope, completion and resume validated.`);
+
+const spellingPlaces=[{code:'CA',en:'California',zh:''},{code:'TX',en:'Texas',zh:''}],spellingRound=createNameRound(spellingPlaces);assert.equal(submitName(spellingRound,'Californa').warnings,1);assert.equal(nameScore(spellingRound).found,0);assert.equal(nameScore(spellingRound).hints,0);const savedSpelling=createNameRound(spellingPlaces,serializeNameRound(spellingRound));assert.equal(submitName(savedSpelling,'Califorina').warnings,2);assert.equal(submitName(savedSpelling,'Californi').status,'incorrect');assert.equal(savedSpelling.found.size,0);assert.equal(submitName(savedSpelling,'California').status,'correct');assert.equal(nameScore(savedSpelling).unassisted,1);assert.equal(submitName(savedSpelling,'Texa').warnings,1);assert.equal(submitName(createNameRound([{code:1,en:'Maine',zh:''},{code:2,en:'Maize',zh:''}]),'Maie').status,'unknown','Ambiguous near-spellings do not reveal a candidate');
+for(const code of [820000,'820000'])for(const en of ['Macao','Macau'])for(const value of ['Macao','Macau'])assert.equal(submitName(createNameRound([{code,en,zh:'澳门'}]),value).status,'correct');
+console.log('Naming grace: saved per-place warnings, no automatic answers or hint penalty, ambiguous matches and both Macau spellings passed.');
+
+// The Korean province accepts both English names without spelling warnings.
+for(const en of ['Jeonbuk','North Jeolla'])for(const value of ['Jeonbuk','North Jeolla','north jeolla']){
+ const province={code:'KR-52',en,zh:'전북특별자치도'},q=createNameRound([province,{code:'KR-26',en:'Busan',zh:''}]);
+ assert.equal(submitName(q,value).status,'correct');assert.equal(q.spellingWarnings.size,0);
+ assert.equal(submitName(q,value==='Jeonbuk'?'North Jeolla':'Jeonbuk').status,'duplicate');
+ assert.equal(nameScore(q).unassisted,1);
+}
+console.log('Jeonbuk / North Jeolla: interchangeable exact naming answers and duplicate detection passed.');

@@ -75,6 +75,7 @@ const overview=decodePack(gunzipSync(fs.readFileSync('dist/data/china-overview.p
 assert.deepEqual(overview.sources,packed.sources,'china-overview.pack.bin is stale; run node scripts/pack-china-boundaries.mjs');
 assert.deepEqual(overview.lineOmissions,packed.lineOmissions);
 for(const key of Object.keys(texts))assertNearGeo(overview[key],canonical[key],'Overview '+key,0.5/OVERVIEW_SCALE*(1+1e-9));
-assert(app.includes("chinaOverviewUrl()")&&app.includes('OVERVIEW_MAX_ZOOM'),'The first view draws from the overview pack');
+assert(!app.includes('china-pack://')&&!app.includes('chinaPackUrl()'),'Runtime loads individual sources instead of country-wide packs');
+assert(app.includes('createCountyScope(map'),'County geometry loads only for the selected area');
 assert(!app.includes('display-boundaries.parts.json'),'Visitors load the packed boundaries, not the build inputs');
 console.log(`Packed China boundaries match the display, district and fill-fragment JSON with every coordinate within ${(worst*111320*1000).toFixed(1)} mm; worker-built sources match the main-thread build.`);
