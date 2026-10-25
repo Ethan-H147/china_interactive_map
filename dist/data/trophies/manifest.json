@@ -1,34 +1,42 @@
 {
   "format": "glTF 2.0 binary",
-  "originalModels": true,
+  "originalModels": false,
   "models": [
     {
       "country": "china",
       "title": "Jade disc",
       "file": "data/trophies/china.glb",
       "triangles": 11340,
-      "bytes": 818832
+      "bytes": 818832,
+      "source": "Boundary Atlas original"
     },
     {
       "country": "japan",
       "title": "Vermilion torii",
       "file": "data/trophies/japan.glb",
       "triangles": 3424,
-      "bytes": 250208
+      "bytes": 250208,
+      "source": "Boundary Atlas original"
     },
     {
       "country": "united-states",
       "title": "Liberty bell",
       "file": "data/trophies/united-states.glb",
       "triangles": 12476,
-      "bytes": 901968
+      "bytes": 901968,
+      "source": "Boundary Atlas original"
     },
     {
       "country": "france",
-      "title": "Brass tower",
+      "title": "Eiffel Tower",
       "file": "data/trophies/france.glb",
-      "triangles": 6380,
-      "bytes": 461712
+      "triangles": 88534,
+      "bytes": 7423360,
+      "source": {
+        "author": "ingoenius",
+        "license": "CC0-1.0",
+        "url": "https://3dmr.eu/model/4/3"
+      }
     }
   ]
 }

@@ -1,0 +1,11 @@
+{
+  "title": "Eiffel Tower LOW POLY cycles",
+  "author": "ingoenius",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "https://3dmr.eu/model/4/3",
+  "originalSource": "https://www.blendswap.com/blends/view/67944",
+  "download": "https://3dmr.eu/api/model/4/3",
+  "modifications": "Preserved source geometry and lattice cutout UVs; extracted alpha masks at up to 1024px, uniformly scaled and centered, replaced surface colors with brass, added an original Boundary Atlas pedestal.",
+  "sha256": "6cbbb7cbbfe55c1d32d32df40c6d99b89db24b2eaa83960d686a779b3d75826f"
+}
