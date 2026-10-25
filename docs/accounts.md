@@ -36,7 +36,9 @@ authorization decisions.
 
 The signed-in account dialog opens to Quiz dashboard; Profile retains account
 details and sign-out. The dashboard shows round totals, accuracy, perfect rounds,
-countries played, recent scores and times, and personal bests. Its launcher offers
+countries played, recent scores and times, and personal bests. The Countries view shows searchable flag cards; selecting one opens its quiz
+modes, division choices and personal bests. Recent rounds has a separate view,
+with flags alongside the saved scores and times. The launcher offers
 the mapped state/province equivalent for 88 modern atlas views and a separate
 China prefecture level. Monaco and Vatican City have no mapped subdivisions;
 historical snapshots are excluded. Korea and the Congo view offer country scopes.

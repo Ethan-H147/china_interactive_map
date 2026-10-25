@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
-import {fixture,login,launch} from './quiz-dashboard.test.mjs';
+import {fixture,login,launch,chooseCountry} from './quiz-dashboard.test.mjs';
 const owner='11111111-1111-4111-8111-111111111111';
 const names=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/san-marino/catalogue.bin'))).records.filter(r=>r.level===1).map(r=>r.en);
 export default [
@@ -15,7 +15,7 @@ export default [
  }},
  {name:'China prefecture naming and highlighted rounds save separately from provinces',options:{width:1280,height:960},async run(p,base){
   await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.open(base,'#china');await p.evaluate(`AtlasSettings.setSettings({motion:'reduce'})`);await login(p);
-  await p.evaluate(`const c=document.querySelector('[data-quiz-country]');c.value='china';c.dispatchEvent(new Event('change'));const l=document.querySelector('[data-quiz-level]');l.value='2';l.dispatchEvent(new Event('change'))`);await p.waitFor(`document.querySelector('[data-quiz-scope] option[value="350000"]')!==null`);await p.evaluate(`document.querySelector('[data-quiz-scope]').value='350000'`);await p.tap('[data-play-quiz]');await p.settle();await p.tap('#quiz-start');await p.settle();
+  await chooseCountry(p,'china');await p.evaluate(`const l=document.querySelector('[data-quiz-level]');l.value='2';l.dispatchEvent(new Event('change'))`);await p.waitFor(`document.querySelector('[data-quiz-scope] option[value="350000"]')!==null`);await p.evaluate(`document.querySelector('[data-quiz-scope]').value='350000'`);await p.tap('[data-play-quiz]');await p.settle();await p.tap('#quiz-start');await p.settle();
   const answers=await p.evaluate(`quiz.pool.map(l=>englishName(l.feature.properties))`);assert.equal(answers.length,9);
   for(const name of answers)await p.evaluate(`document.getElementById('name-answer').value=${JSON.stringify(name)};document.getElementById('name-form').requestSubmit()`);
   await p.waitFor(`AtlasQuizRecords.quizRecords.data.recent.length===1`);const named=await p.evaluate('AtlasQuizRecords.quizRecords.data.recent[0]');assert.equal(named.level,2);assert.equal(named.mode,'name');assert.equal(named.correct,9);assert.equal(named.scope,'350000');assert(named.elapsedMs>0);
@@ -28,6 +28,6 @@ export default [
   for(const [country,count,level]of [['mongolia',22,1],['brazil',27,1],['indonesia',38,1],['ireland',31,2],['belgium',11,2],['turkey',81,2]]){
    const panel=await launch(p,country,level);assert.match(await p.evaluate(`document.querySelector('#${panel} [data-q=progress]').textContent`),new RegExp('/ '+count+' named'));assert(await p.evaluate(`!!map.getLayer('quiz-overlay-${country}-fill')`));await p.tap('#'+panel+' [data-q=end]');await p.settle();assert(!await p.evaluate(`!!map.getLayer('quiz-overlay-${country}-fill')`));await p.tap('#account-open');
   }
-  await p.evaluate(`const c=document.querySelector('[data-quiz-country]');c.value='congo';c.dispatchEvent(new Event('change'))`);assert.equal(await p.evaluate(`document.querySelectorAll('[data-quiz-scope] option').length`),2);await p.evaluate(`document.querySelector('[data-quiz-scope]').value='CG'`);await p.tap('[data-play-quiz]');await p.settle();const panel=await p.evaluate('currentAtlas().quiz.panel.id');await p.waitFor(`!document.querySelector('#${panel} [data-q=start]').disabled`);await p.tap('#'+panel+' [data-q=start]');await p.settle();assert.match(await p.evaluate(`document.querySelector('#${panel} [data-q=progress]').textContent`),/\/ 15 named/);await p.screenshot('congo-department-quiz');await p.tap('#account-open');await launch(p,'japan');assert(!await p.evaluate("!!map.getLayer('quiz-overlay-congo-fill')"),'Dashboard can replace an active quiz and cleans up its layers');
+  await chooseCountry(p,'congo');assert.equal(await p.evaluate(`document.querySelectorAll('[data-quiz-scope] option').length`),2);await p.evaluate(`document.querySelector('[data-quiz-scope]').value='CG'`);await p.tap('[data-play-quiz]');await p.settle();const panel=await p.evaluate('currentAtlas().quiz.panel.id');await p.waitFor(`!document.querySelector('#${panel} [data-q=start]').disabled`);await p.tap('#'+panel+' [data-q=start]');await p.settle();assert.match(await p.evaluate(`document.querySelector('#${panel} [data-q=progress]').textContent`),/\/ 15 named/);await p.screenshot('congo-department-quiz');await p.tap('#account-open');await launch(p,'japan');assert(!await p.evaluate("!!map.getLayer('quiz-overlay-congo-fill')"),'Dashboard can replace an active quiz and cleans up its layers');
  }}
 ];
