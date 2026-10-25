@@ -292,6 +292,7 @@
   c.labelPoints??=[{id,en:c.en,local:c.local,center:c.labelCenter||c.map?.center}];
   if(['czechia','slovakia','poland','estonia','latvia','lithuania','cambodia','ukraine','angola','luxembourg','san-marino','china','mexico','united-states','canada','spain','france','germany','italy','malaysia','india','morocco','bolivia','timor-leste','brunei','pakistan','kazakhstan','greece','cyprus','afghanistan','kyrgyzstan','myanmar','laos','norway','sweden','finland','nepal','bhutan','bangladesh'].includes(id))c.quiz={level:1,...(id==='spain'?{exclude:['ES-A-20'],bounds:c.map.bounds,insets:['ES-A-05']}: {}),...(id==='united-states'?{bounds:c.map.bounds,insets:['US-AK','US-HI']}: {}),...(id==='norway'?{bounds:c.map.bounds,insets:['NO-SJ','NO-JM','NO-BV','NO-PI']}: {})};
   if(!c.snapshot&&!['monaco','vatican-city'].includes(id))c.quiz={level:1,...c.quiz,...quizOverrides[id]};
+  if(id==='united-states')c.quiz.counties={index:'data/quiz/us-counties/index.json',plural:'Counties & equivalents'};
   if(c.quiz)c.quiz.flags=(quizFlags[id]||[c.map?.flag||c.prefix]).map(code=>'vendor/flag-'+code+(['my','sg'].includes(code)?'.webp':'.svg'));
   if(c.quiz)c.quiz.overlay=c.quiz.level>1||['korea','mongolia','japan','archipelago','south-america'].includes(c.adapter);
   if(c.quiz){

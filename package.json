@@ -332,7 +332,9 @@
     "test:mexico-municipalities-browser": "node scripts/browser/run.mjs mexico-municipalities",
     "test:deployment": "node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact && npm run test:quiz-records",
     "db:generate": "drizzle-kit generate --config hosting/drizzle.config.ts",
-    "build:quiz-geography": "node --max-old-space-size=8000 scripts/build-quiz-geography.mjs",
-    "test:quiz-records": "node scripts/validate-quiz-records.mjs"
+    "build:quiz-geography": "node --max-old-space-size=8000 scripts/build-quiz-geography.mjs && node scripts/build-us-county-quizzes.mjs",
+    "test:quiz-records": "node scripts/validate-quiz-records.mjs",
+    "build:us-county-quizzes": "node scripts/build-us-county-quizzes.mjs",
+    "test:us-county-quizzes": "node scripts/validate-us-county-quizzes.mjs && node scripts/browser/run.mjs us-county-quiz"
   }
 }

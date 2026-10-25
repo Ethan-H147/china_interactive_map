@@ -42,7 +42,12 @@ with flags alongside the saved scores and times. The launcher offers
 the mapped state/province equivalent for 88 modern atlas views and a separate
 China prefecture level. Monaco and Vatican City have no mapped subdivisions;
 historical snapshots are excluded. Korea and the Congo view offer country scopes.
-China prefecture naming requires a province scope.
+China prefecture naming requires a province scope. US county quizzes offer all
+50 states as separate scopes, using the retained Census 2025 county/equivalent
+geography (3,143 units). This includes parishes, boroughs, census areas, independent
+cities and Connecticut planning regions. County records use level 2 plus the state
+ID; state quiz records remain level 1. Unfinished county rounds are stored
+separately for each state and account. The map also has a County quiz tab.
 
 Results include a stable UUID, country, division level, quiz type, scope, exact
 place-pool hash, question count, score, hints, reveals, elapsed time and completion
@@ -74,6 +79,11 @@ self-contained static/API Worker from an exact committed atlas revision, sets th
 DB binding, and copies these migrations to the hosting repository's root drizzle
 folder. The Sites packager includes them; publication applies migrations before
 uploading the Worker. Requests never create tables.
+
+Run npm run build:us-county-quizzes to regenerate the county quiz files and
+state index. Run npm run test:us-county-quizzes for all-state coverage and browser
+checks. The county quiz loads only the selected state and ignores stale geometry
+responses after a scope change.
 
 Run npm run build:quiz-geography to regenerate lightweight quiz-only geometries
 from retained atlas data. Ordinary exploration geography is unchanged. Run
