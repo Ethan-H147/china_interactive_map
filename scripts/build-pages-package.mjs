@@ -9,9 +9,13 @@ for(const [id,c] of Object.entries(configurations)){
  const base='data/europe/'+id+'/',levels=[c.firstLabel,c.secondLabel,c.thirdLabel].filter(Boolean).length,bundled=c.loadAllSubdivisions?levels:Math.min(levels,c.bundledLevels||1),cat=load('dist/'+base+'catalogue.bin');
  if(bundled>1){omitted.add(base+'first.bin');for(const [parent,ch] of Object.entries(cat.chunks)){const level=ch.level??cat.records.find(r=>r.id===parent)?.level+1;if(level<=bundled)omitted.add(base+ch.file);}}else omitted.add(base+'all.bin');
 }
+// These retained inputs have been replaced by per-source/per-parent runtime files.
+// Keep the original data in GitHub for rebuilds; publish only the data the app uses.
+const buildOnly=new Set(['data/china-counties.bin','data/china-boundaries.pack.bin','data/china-overview.pack.bin','data/china-counties.pack.bin','data/china-motion.bin','data/korea-motion.bin','data/mongolia-motion.bin']);
+for(const file of buildOnly)omitted.add(file);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const source=path.join(dir,e.name);if(e.isDirectory()){walk(source);continue;}const rel=path.relative(root,source).replaceAll('\\','/'),bytes=fs.readFileSync(source);report.sourceBytes+=bytes.length;
- if(omitted.has(rel)){report.omitted.push({file:rel,bytes:bytes.length,reason:rel.endsWith('/all.bin')?'Configuration loads first.bin and per-parent chunks instead':'Configuration loads this level from all.bin instead'});continue;}
+ if(omitted.has(rel)){report.omitted.push({file:rel,bytes:bytes.length,reason:buildOnly.has(rel)?'Retained build input; runtime uses scoped sources':rel.endsWith('/all.bin')?'Configuration loads first.bin and per-parent chunks instead':'Configuration loads this level from all.bin instead'});continue;}
  let payload=bytes;
  if(rel.startsWith('data/europe/')&&rel.endsWith('.bin')){const raw=gunzipSync(bytes);if(raw[0]===123){const value=JSON.parse(raw),packed=encodeGeo(value),compressed=gzipSync(packed,{level:9});if(compressed.length<bytes.length){assertNearGeo(decodeGeo(packed),value,rel);payload=compressed;report.packed.push({file:rel,sourceSha256:sha(bytes),publishedSha256:sha(payload),sourceBytes:bytes.length,publishedBytes:payload.length});}}}
  const target=path.join(out,rel);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,payload);report.files++;report.publishedBytes+=payload.length;

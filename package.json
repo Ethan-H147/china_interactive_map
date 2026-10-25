@@ -330,7 +330,7 @@
     "build:mexico-municipalities": "node --max-old-space-size=6500 scripts/build-mexico-municipalities.mjs",
     "test:mexico-municipalities": "node --check scripts/build-mexico-municipalities.mjs && node scripts/validate-mexico-municipalities.mjs",
     "test:mexico-municipalities-browser": "node scripts/browser/run.mjs mexico-municipalities",
-    "test:deployment": "node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact && npm run test:quiz-records && node scripts/validate-quiz-trophies.mjs",
+    "test:deployment": "node --check dist/app.js && npm run test:entry && npm run test:runtime && npm run test:compact && npm run test:quiz-records && node scripts/validate-quiz-trophies.mjs && npm run test:scoped-countries",
     "db:generate": "drizzle-kit generate --config hosting/drizzle.config.ts",
     "build:quiz-geography": "node --max-old-space-size=8000 scripts/build-quiz-geography.mjs && node scripts/build-us-county-quizzes.mjs",
     "test:quiz-records": "node scripts/validate-quiz-records.mjs",
@@ -339,6 +339,8 @@
     "build:quiz-trophies": "node scripts/build-quiz-trophies.mjs && node scripts/render-trophy-posters.mjs",
     "test:quiz-trophies": "node scripts/validate-quiz-trophies.mjs && node scripts/browser/run.mjs quiz-trophies collection-expansion",
     "build:china-mobile": "node --max-old-space-size=6000 scripts/build-china-mobile.mjs",
-    "test:china-mobile": "node scripts/validate-china-mobile.mjs && node scripts/browser/run.mjs china-mobile"
+    "test:china-mobile": "node scripts/validate-china-mobile.mjs && node scripts/browser/run.mjs china-mobile",
+    "build:scoped-countries": "node --max-old-space-size=8000 scripts/build-scoped-countries.mjs",
+    "test:scoped-countries": "node scripts/validate-scoped-countries.mjs"
   }
 }

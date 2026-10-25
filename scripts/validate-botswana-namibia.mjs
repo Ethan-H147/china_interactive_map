@@ -14,7 +14,7 @@ const expected={botswana:{counts:[10,28,519],population:2359609,cities:66},namib
 for(const [country,wanted]of Object.entries(expected)){
  const catalogue=read(country,'catalogue.bin'),bundle=read(country,'all.bin'),ids=new Map(catalogue.records.map(r=>[r.id,r]));
  assert.equal(ids.size,catalogue.records.length);assert.deepEqual([1,2,3].map(l=>catalogue.records.filter(r=>r.level===l).length),wanted.counts);
- assert(configurations[country].loadAllSubdivisions&&configurations[country].settlements,'Shared country bundle and independent settlements');
+ assert(!configurations[country].loadAllSubdivisions&&configurations[country].settlements,'Scoped subdivisions and independent settlements');
  for(const r of catalogue.records){assert(r.areaKm2>0&&r.center.every(Number.isFinite)&&r.en&&r.local);if(r.parent){assert.equal(ids.get(r.parent)?.level,r.level-1);}}
  for(const part of bundle.levels){assert.equal(part.regions.features.length,wanted.counts[part.level-1]);for(const f of part.regions.features){assert(ids.has(f.properties.id));assert(contains(ids.get(f.properties.id).center,f.geometry),'Interior label anchors');}for(const f of part.boundaries.features){assert(f.properties.owners.length>=2,'No exterior/coastline strokes');assert(f.properties.owners.every(id=>ids.has(id)));}}
  const stats=JSON.parse(fs.readFileSync(base+country+'/statistics.json'));assert.equal(Object.keys(stats.regions).length,catalogue.records.length);

@@ -43,7 +43,7 @@ body[data-atlas=china-1949]{--ink:#302c27;--muted:#787166;--red:#a7382b;--red-da
 .historical-snapshot{flex-shrink:0;padding:10px 12px;border:1px solid var(--line);border-radius:6px;color:var(--red);background:var(--paper);font-size:13px;line-height:1.3}
 .historical-snapshot:hover{border-color:var(--red)}
 .historical-note{margin:12px 0 16px;font-size:12px;line-height:1.6}
-@media(max-width:760px){.historical-snapshot{position:absolute;top:56px;left:0;padding:7px 12px;border-radius:18px;box-shadow:0 3px 10px #1720191a;font-size:11px;text-align:left}body[data-atlas=china-1949] .site-header h1 .title-english{font-size:21px}}
+@media(max-width:760px){.site-header>.historical-snapshot{display:none}.sidebar .historical-snapshot{position:static;width:100%;margin:0 0 18px;padding:12px 14px;border-radius:10px;font-size:14px;text-align:left}body[data-atlas=china-1949] .site-header h1 .title-english{font-size:21px}}
 
 
 body[data-atlas=soviet-union-1988]{--header-stripe:linear-gradient(90deg,#cc0000,#cc0000);--ink:#352d28;--muted:#827269;--red:#a13b32;--red-dark:#802b24;--gold:#b28a48;--line:#e6dbd1;--paper:#fffdf9;--map:#f6efea}

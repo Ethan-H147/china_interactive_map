@@ -23,6 +23,7 @@ function ensureHandle(aside) {
 function apply(next, px) {
   if (!query.matches) return;
   state = next;
+  placeHistoricalControl();
   document.querySelectorAll('aside.sidebar').forEach(ensureHandle);
   root.dataset.sheet = next;
   root.style.setProperty('--sheet-height', (px ?? heights()[next]) + 'px');
@@ -115,6 +116,28 @@ addEventListener('pointermove', event => {
   mapTouch = null; apply('peek');
 });
 
+function placeHistoricalControl() {
+  const button = document.getElementById('historical-snapshot');
+  if (!button) return;
+  for (const aside of document.querySelectorAll('aside.sidebar')) {
+    const tab = aside.querySelector('.panel-tabs button[id$="tab-layers"]');
+    const panel = tab && document.getElementById(tab.getAttribute('aria-controls'));
+    const tools = aside.querySelector('.sidebar-tools');
+    for (const extra of aside.querySelectorAll('.historical-note, .country-parent-link')) {
+      const target = query.matches ? panel : tools;
+      if (target && extra.parentElement !== target) target.append(extra);
+    }
+  }
+  if (!query.matches) {
+    const title = document.querySelector('.site-header h1');
+    if (title && button.previousElementSibling !== title) title.after(button);
+    return;
+  }
+  const aside = visibleSidebar(), tab = aside?.querySelector('.panel-tabs button[id$="tab-layers"]');
+  const panel = tab && document.getElementById(tab.getAttribute('aria-controls'));
+  if (panel && button.parentElement !== panel) panel.prepend(button);
+}
+
 // The breadcrumb row sits below the header pill, however tall the pill and the
 // status bar make it on a given phone.
 function placeBelowHeader() {
@@ -147,12 +170,22 @@ syncLevels();
 addEventListener('resize', () => { placeBelowHeader(); apply(state); });
 query.addEventListener('change', () => {
   if (query.matches) apply(state);
-  else { delete root.dataset.sheet; root.style.removeProperty('--sheet-height'); }
+  else { delete root.dataset.sheet; root.style.removeProperty('--sheet-height'); placeHistoricalControl(); }
 });
 if (query.matches) apply('peek');
 
 // Camera flights keep the selected region above the half-open sheet.
 export function navigationInset() { return query.matches ? heights().half + 16 : 0; }
+// Fit the available map, with the panel height the navigation will reveal.
+export function navigationPadding({selection=false}={}) {
+  if (!query.matches) return null;
+  const map = document.getElementById('map').getBoundingClientRect();
+  const header = document.querySelector('.site-header').getBoundingClientRect();
+  const controls = document.querySelector('.map-top')?.getBoundingClientRect();
+  const top = Math.max(header.bottom, controls?.bottom || 0) - map.top + 18;
+  const bottom = heights()[selection ? 'half' : 'peek'] + 22;
+  return {left:18, right:18, top:Math.min(top,map.height-bottom-40), bottom:Math.min(bottom,map.height*.6)};
+}
 export function expand(){if(query.matches)apply('half');}
 
 // A map quiz can make room for its inset maps while its question stays over the map.

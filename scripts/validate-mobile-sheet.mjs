@@ -13,7 +13,7 @@ const links=[...page.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map(m=
 assert.equal(links.at(-1),'mobile-sheet.css','The sheet stylesheet loads last');
 assert(loader.includes("modules.AtlasSheet='mobile-sheet.mjs'"),'The sheet module loads with the other modules');
 // Camera flights keep the selected region above the half-open sheet.
-assert(app.includes('window.AtlasSheet?.navigationInset()'),'Navigation padding includes the sheet');
+assert(app.includes('window.AtlasSheet?.navigationPadding('),'Navigation padding measures mobile controls and the sheet');
 assert(sheet.includes("query.matches ? heights().half + 16 : 0"),'No extra padding on desktop');
 // Every country's sidebar comes from country-page.mjs: tools, then scrolling content.
 for(const file of ['dist/country-page.mjs'])for(const part of ['sidebar-tools','sidebar-scroll','sidebar-footer'])assert(fs.readFileSync(file,'utf8').includes(part),file+' has '+part);
