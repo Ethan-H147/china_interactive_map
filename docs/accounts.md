@@ -133,15 +133,18 @@ Japan's vermilion torii, the US Liberty Bell and France's brass tower. Select a
 model to inspect it by dragging or using arrow keys. Home or Reset view restores
 the pose. Locked models can be previewed; collected models can be downloaded.
 
-A collectible requires a full, perfect first-level quiz without hints or revealed
-answers, in any of the three modes. Qualifying full pools have at least 34 China
+A collectible requires 100% in all three distinct quiz modes: name every place,
+name the highlighted place, and click the named place. Each must be a full
+first-level round without hints or revealed answers. Qualifying full pools have at least 34 China
 provincial divisions, 47 Japanese prefectures, 51 US states/DC divisions or 13
 French regions. Larger full pools also qualify. Short quizzes, practice, scoped
 rounds and deeper-level county/prefecture quizzes do not satisfy this first set.
 
-Eligibility is derived from the current account's persisted best records and
-positive fastest-perfect time, so earlier qualifying results count and collection
-status follows the account across devices. No device-only unlock flag or new
+Each mode's completion is derived from the current account's persisted best
+records and positive fastest-perfect time, so earlier qualifying results count and collection
+status follows the account across devices. The detail view lists each mode and
+its score or fastest perfect time; the play button chooses the next unfinished
+mode. Duplicate wins in one mode cannot satisfy another. No device-only unlock flag or new
 database table is used. Pending offline results participate in the current
 account's snapshot and sync through the existing queue.
 
