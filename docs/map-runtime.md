@@ -46,4 +46,6 @@ Geometry remains a separate contract. Run test:polygon-parts, test:europe and te
 
 International lines use one shared opaque stroke; they must never fade according to an individual fragment’s footprint. Subdivision/island outline fading remains independent.
 
+`country-border-previews.bin` keeps detailed national edges available while country adapters and their subdivisions load on demand. The shared layer preserves claim filters and yields each edge to its adapter when that adapter's international layer is visible. Rebuild it with `npm run build:border-previews` after changing regional or South American border data; the border and globe-overview builds also refresh it. `npm run test:zoom-borders` checks close-up border pixels in both projections on desktop and mobile, plus the flat map's minimum zoom.
+
 The border build finishes with reconcile-frontier-arcs.mjs. It joins reference topology before selecting the continuous detailed national-outline arc, joins shared tripoints, removes previous copies, and stores the resolved route once in atlas-frontiers.bin. Country fills are preserved. Run test:frontier-continuity and the frontier-continuity browser scenarios after changes.

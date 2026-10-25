@@ -111,11 +111,11 @@
     "test:polygon-parts": "node scripts/validate-polygon-parts.mjs",
     "test:europe": "node scripts/validate-polygon-parts.mjs && node --check dist/europe.mjs && node scripts/validate-europe-data.mjs && node scripts/validate-regional-loading.mjs && npm run test:entry && node scripts/validate-developer-mode.mjs && npm run test:country-expansion",
     "test:browser": "node scripts/browser/run.mjs",
-    "build:borders": "node --max-old-space-size=6000 scripts/build-atlas-frontiers.mjs && node --max-old-space-size=6000 scripts/build-unit-edges.mjs && node --max-old-space-size=7000 scripts/build-channel-borders.mjs && node scripts/reconcile-frontier-arcs.mjs && node scripts/reconcile-china-southern-frontiers.mjs && node scripts/reconcile-myanmar-laos.mjs && node --max-old-space-size=8000 scripts/reconcile-bolivia-peru.mjs && node scripts/reconcile-bangladesh-myanmar-junction.mjs && node scripts/reconcile-himalaya-frontiers.mjs && npm run build:china-pack && node scripts/prepare-motion.mjs && npm run build:compact",
+    "build:borders": "node --max-old-space-size=6000 scripts/build-atlas-frontiers.mjs && node --max-old-space-size=6000 scripts/build-unit-edges.mjs && node --max-old-space-size=7000 scripts/build-channel-borders.mjs && node scripts/reconcile-frontier-arcs.mjs && node scripts/reconcile-china-southern-frontiers.mjs && node scripts/reconcile-myanmar-laos.mjs && node --max-old-space-size=8000 scripts/reconcile-bolivia-peru.mjs && node scripts/reconcile-bangladesh-myanmar-junction.mjs && node scripts/reconcile-himalaya-frontiers.mjs && npm run build:china-pack && node scripts/prepare-motion.mjs && npm run build:compact && npm run build:border-previews",
     "build:compact": "node scripts/build-compact.mjs",
     "test:compact": "node --check dist/geo-pack.mjs && node scripts/validate-compact.mjs",
     "test:borders": "node --check dist/edge-runs.mjs && node --check scripts/channel-lines.mjs && node scripts/validate-borders.mjs && npm run test:frontier-continuity && npm run test:bolivia-peru-frontier",
-    "test:runtime": "node --check dist/map-scene.mjs && node --check dist/country-loader.mjs && node scripts/validate-background-order.mjs && node scripts/validate-country-loader.mjs && node scripts/validate-satellite.mjs && node scripts/validate-country-memory.mjs",
+    "test:runtime": "node --check dist/map-scene.mjs && node --check dist/country-loader.mjs && node scripts/validate-background-order.mjs && node scripts/validate-country-loader.mjs && node scripts/validate-satellite.mjs && node scripts/validate-country-memory.mjs && node scripts/validate-border-previews.mjs",
     "test:frontier-continuity": "node scripts/validate-frontier-arcs.mjs && node scripts/validate-pilcomayo-junction.mjs && node scripts/validate-china-southern-frontiers.mjs",
     "build:country-expansion": "node --max-old-space-size=8000 scripts/build-country-expansion.mjs && node --max-old-space-size=7000 scripts/build-us-area-codes.mjs && npm run build:us-local && node scripts/prepare-denmark-towns.mjs && npm run build:mexico-water && node scripts/fetch-europe-flags.mjs && node scripts/fetch-north-america-flags.mjs && node scripts/render-municipal-flags.mjs && node scripts/fetch-europe-expansion-flags.mjs && node scripts/prepare-flag-images.mjs && node --max-old-space-size=6000 scripts/prepare-expansion-economy.mjs && node scripts/prepare-region-colors.mjs && node scripts/build-world-land.mjs && npm run build:compact",
     "test:country-expansion": "node scripts/validate-country-expansion.mjs && npm run test:north-america-flags && npm run test:mexico-water && npm run test:expansion-economy && npm run test:us-territories && npm run test:denmark && npm run test:us-details",
@@ -308,7 +308,7 @@
     "test:finland-places": "node scripts/validate-finland-places.mjs && node scripts/browser/run.mjs finland-villages",
     "test:settlement-density": "node scripts/validate-settlement-density.mjs && node scripts/browser/run.mjs settlement-density settlement-rendered",
     "test:aksai-outlines": "node scripts/validate-aksai-outlines.mjs && node scripts/browser/run.mjs aksai-outlines",
-    "build:globe-overview": "node scripts/build-globe-overview.mjs",
+    "build:globe-overview": "node scripts/build-globe-overview.mjs && npm run build:border-previews",
     "test:globe-overview": "node scripts/validate-globe-overview.mjs && node scripts/validate-border-handoff.mjs && node scripts/browser/run.mjs globe-overview globe-border-handoff border-continuity",
     "test:selection-style": "node scripts/validate-selection-style.mjs && node scripts/browser/run.mjs selection-style",
     "test:hawaii-communities": "node --check dist/regional-country.mjs && node scripts/browser/run.mjs hawaii-communities",
@@ -341,6 +341,8 @@
     "build:china-mobile": "node --max-old-space-size=6000 scripts/build-china-mobile.mjs",
     "test:china-mobile": "node scripts/validate-china-mobile.mjs && node scripts/browser/run.mjs china-mobile",
     "build:scoped-countries": "node --max-old-space-size=8000 scripts/build-scoped-countries.mjs",
-    "test:scoped-countries": "node scripts/validate-scoped-countries.mjs"
+    "test:scoped-countries": "node scripts/validate-scoped-countries.mjs",
+    "build:border-previews": "node scripts/build-border-previews.mjs",
+    "test:zoom-borders": "node scripts/validate-border-previews.mjs && node scripts/browser/run.mjs zoom-borders"
   }
 }

@@ -1,3 +1,4 @@
+import {addBorderPreviews} from './border-previews.mjs';
 import {addGlobeOverview} from './globe-overview.mjs';
 import {backgroundLandColor,syncBackgroundLand} from './map-palette.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
@@ -15,6 +16,7 @@ export async function addWorldLand(map){
  map.addLayer({id:'world-land',metadata:{atlas:{role:'land',landPalette:true}},type:'fill',source:'world-land',paint:{
   'fill-color':backgroundLandColor(),'fill-antialias':false
  }});
+ await addBorderPreviews(map);
  await overview;
  if(await outlines)map.addLayer({id:'world-country-outlines',type:'line',source:'world-country-outlines',metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  globalThis.addEventListener?.('atlas-developer-change',()=>syncBackgroundLand(map));
