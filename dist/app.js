@@ -591,8 +591,13 @@ async function init(){try{
   else{preloadLater();await addRegions(capitals);await showFirstView();}
   // South America's detailed shapes and borders load once the first view is ready, so those
   // countries never sit as coarse previews before someone opens one.
-  // The shared world layer supplies unopened-country silhouettes and hit targets.
-  // Detailed country previews load when that country is opened.
+  // Desktop's shared frontier previews also carry borders owned by neighbouring
+  // countries (including the Spanish enclaves beside Morocco). Subdivision
+  // geometry remains scoped to the active parent.
+  if(!lowMemory){
+   southAmerica.warmContext().catch(e=>console.warn(e));
+   europe.ensure().then(()=>{europe.syncDeveloper();southAmerica.syncDeveloper();syncPortals(atlasMode);}).catch(e=>console.warn(e));
+  }
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;finishAtlases();}}
 // Startup preloads in index.html cover China's first view; southern Africa's outline files are
 // listed there too and requested here, after that view or straight away.
@@ -651,7 +656,7 @@ async function addRegions(capitals){
   await step('Capitals',async()=>{capitalDisplay=window.AtlasCapitals.createCapitalDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active},await capitals);});
   southAmerica=window.AtlasSouthAmerica.createSouthAmerica(map,{syncAppearance:()=>satelliteDisplay?.sync(),country:()=>atlasMode,isBusy:()=>quiz.active||countrySwitching,switchAtlas:changeAtlas,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{manual:camera.manual===true})});
   window.AtlasDev.mount({eligible:()=>atlasMode==='china'&&!quiz.active&&!countrySwitching&&selected?.layer.feature.properties.adcode===310105});
-  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();southernAfrica?.syncDeveloper();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
+  window.addEventListener('atlas-developer-change',async()=>{southAmerica.syncDeveloper();southernAfrica?.syncDeveloper();if(!lowMemory)await europe.ensure();europe.syncDeveloper();syncPortals(atlasMode);for(const atlas of Object.values(atlases))atlas.syncDeveloper?.();if(!window.AtlasDev.allows(atlasMode))await changeAtlas(registry.fallback,false);});
   atlasesReady=true;finishAtlases();
 }
 let viewSaveTimer,viewControlsReady=false;

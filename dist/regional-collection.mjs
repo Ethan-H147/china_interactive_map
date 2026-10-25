@@ -10,7 +10,10 @@ export function createRegionalCollection(map,host,configurations,{prepare=async(
  });
  return {portals,handles:country=>country in configurations,status:loader.status,
   ensure(country){
-   if(country)return loader.ensure(country);
+   if(country){
+    const dependencies=configurations[country]?.previewCountries||[];
+    return dependencies.length?Promise.all([loader.ensure(country),...dependencies.map(id=>loader.ensure(id))]).then(([portal])=>portal):loader.ensure(country);
+   }
    const background=Object.keys(configurations).filter(id=>!configurations[id].snapshot);
    return loader.ensureAll(background).then(results=>{
     results.forEach((result,i)=>{if(result.status==='rejected')console.warn(background[i]+' outline could not load',result.reason);});

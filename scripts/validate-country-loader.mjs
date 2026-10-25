@@ -22,3 +22,18 @@ await assert.rejects(collection.ensure('future'));assert.equal(collection.status
 assert.equal((await collection.ensure('other')).country,'other');
 assert.equal((await collection.ensure('future')).country,'future');assert.equal(Object.keys(collection.portals).length,2);
 console.log('Country lifecycle: concurrent deduplication, isolated failures, immediate healthy-country readiness, retries, caching and owned-resource cleanup passed.');
+
+// A country can depend on a neighbour's canonical border preview without loading
+// that neighbour's subdivisions or every country's preview.
+{
+ let release,finished=false;const calls=[];
+ const blocked=new Promise(resolve=>release=resolve);
+ const configs={target:{id:'target',previewCountries:['border']},border:{id:'border'},other:{id:'other'}};
+ const collection=createRegionalCollection(null,null,configs,{load:async(_map,_host,c)=>{calls.push(c.id);if(c.id==='border')await blocked;return c;}});
+ const opening=collection.ensure('target').then(value=>{finished=true;return value;});
+ await new Promise(resolve=>setImmediate(resolve));assert(!finished,'Opening waits for the canonical neighbouring border');
+ assert.deepEqual(calls.sort(),['border','target'],'Only the requested country and declared preview are prepared');
+ release();assert.equal((await opening).id,'target');await collection.ensure('target');
+ assert.equal(calls.length,2,'Repeated country selection reuses the same preview');
+ console.log('Country preview dependencies: canonical neighbouring borders, awaited readiness, deduplication, and no unrelated previews passed.');
+}
