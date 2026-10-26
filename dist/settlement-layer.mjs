@@ -9,8 +9,14 @@ export function settlementStatistics(record,key){
  }
  return {regions:{[key]:metrics},sources};
 }
+// Shared source fields stay out of each downloaded locality record.
+export function expandSettlementRecords(data){
+ if(!data.recordDefaults&&!data.metricDefaults)return data.records;
+ return data.records.map(record=>({...data.recordDefaults,...record,...Object.fromEntries(Object.entries(data.metricDefaults||{}).filter(([metric])=>record[metric]).map(([metric,defaults])=>[metric,{...defaults,...record[metric]}]))}));
+}
 export function enrichPlaces(records,supplement={}){
  const entries=new Map(Object.entries(supplement.places||{}));
+ if(!entries.size)return records;
  for(const entry of Object.values(supplement.places||{}))for(const alias of entry.aliases||[])if(!entries.has(nameKey(alias)))entries.set(nameKey(alias),entry);
  for(const record of records){const entry=[record.en,...(record.aliases||[])].map(nameKey).map(key=>entries.get(key)).find(Boolean);if(!entry)continue;const former=record.en;if(entry.renameSource&&entry.name)record.en=entry.name;record.names=entry.names;record.flag=entry.flag;record.aliases=[...new Set([former,...(record.aliases||[]),...(entry.aliases||[]),...Object.values(entry.names||{}).map(v=>typeof v==='string'?v:v.name)].filter(Boolean))];}
  return records;
@@ -28,7 +34,7 @@ export function settlementZoom(record){
  if(record.id?.startsWith('FI-NLS-')&&(record.kind==='Village / hamlet'||record.provenance?.gazetteer?.placeType==='3010110'))return 14+Math.max(0,Math.min(3,(record.minzoom||10)-7))/3;
  if(Number.isFinite(record.minzoom))return record.minzoom;const population=Math.max(1,record.population?.value||0);return Math.max(4,Math.min(9.5,5.8+2.4*Math.log10(100000/population)));
 }
-export function visibleSettlements(records,zoom,bounds,selected){return records.filter(r=>(r.id===selected||zoom>=settlementZoom(r))&&r.center[0]>=bounds.getWest()&&r.center[0]<=bounds.getEast()&&r.center[1]>=bounds.getSouth()&&r.center[1]<=bounds.getNorth()).sort((a,b)=>(b.population?.value||0)-(a.population?.value||0));}
+export function visibleSettlements(records,zoom,bounds,selected){return records.filter(r=>(r.id===selected||zoom>=(r.dotzoom??settlementZoom(r)))&&r.center[0]>=bounds.getWest()&&r.center[0]<=bounds.getEast()&&r.center[1]>=bounds.getSouth()&&r.center[1]<=bounds.getNorth()).sort((a,b)=>(b.population?.value||0)-(a.population?.value||0));}
 // A stable geographic hierarchy gives each point room on screen. Previously admitted
 // points keep priority as the map zooms in; panning cannot reshuffle the visible dots.
 // Compute once per country, never while handling a gesture or waiting for worker tiles.
@@ -50,7 +56,7 @@ export function settlementDotZooms(records,spacing=36){
  // Coincident points stay searchable and selectable without stacking their dots.
  for(const p of pending)zooms.set(p.id,25);return zooms;
 }
-export function settlementFeatures(records){const zooms=settlementDotZooms(records);return {type:'FeatureCollection',features:records.map(r=>({type:'Feature',properties:{id:r.id,minzoom:settlementZoom(r),dotzoom:zooms.get(r.id)},geometry:{type:'Point',coordinates:r.center}}))};}
+export function settlementFeatures(records){const zooms=records.every(r=>Number.isFinite(r.dotzoom))?null:settlementDotZooms(records);return {type:'FeatureCollection',features:records.map(r=>({type:'Feature',properties:{id:r.id,minzoom:settlementZoom(r),dotzoom:r.dotzoom??zooms.get(r.id)},geometry:{type:'Point',coordinates:r.center}}))};}
 // Use camera-only paint on separate admission tiers. Composite feature/zoom paint
 // is baked at a tile's zoom and can leave old close-up tiles opaque during zoom-out.
 // Layer minzoom and camera opacity both use the current frame, even for stale tiles.

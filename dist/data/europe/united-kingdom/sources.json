@@ -422,5 +422,33 @@
       "sha256": "90c303f8cb19e8f296056079d7be074f3fb3d1579feda29d6ac1c0485968f289",
       "bytes": 565922
     }
+  ],
+  "settlementCoverage": "All Ordnance Survey Open Names cities, towns, villages, hamlets and other settlements in Great Britain, supplemented by OSNI towns/villages and GeoNames populated places in Northern Ireland. No population cutoff for named places; suburban-area-only names, historical/deserted places and individual properties are excluded. Census populations remain attached to their whole statistical areas; newly added named places have no inferred population.",
+  "settlementSources": [
+    {
+      "id": "os-open-names",
+      "title": "Ordnance Survey Open Names · populated places, October 2026",
+      "url": "https://osdatahub.os.uk/downloads/open/OpenNames",
+      "download": "https://api.os.uk/downloads/v1/products/OpenNames/downloads?area=GB&format=CSV&redirect",
+      "license": "Open Government Licence v3.0",
+      "licenseURL": "https://www.ordnancesurvey.co.uk/documents/licensing/os-opendata-licence.pdf",
+      "credit": "Contains OS data © Crown copyright and database right 2026. Contains Royal Mail data © Royal Mail copyright and database right 2026. Contains National Statistics data © Crown copyright and database right 2026.",
+      "archiveMD5": "bba5aa44ba375d39de60584099e335cd"
+    },
+    {
+      "id": "osni-places",
+      "title": "OSNI Open Data · Gazetteer, Place Names",
+      "url": "https://www.opendatani.gov.uk/dataset/osni-open-data-gazetteer-place-names",
+      "download": "https://admin.opendatani.gov.uk/dataset/d27903f1-15e6-4c07-8564-ddc655e9c549/resource/cd65c0eb-0b85-448a-be85-1725dd2aeb48/download/osni_open_data_-_gazetteer_-_place_names.geojson",
+      "license": "Open Government Licence v3.0",
+      "credit": "Contains Land & Property Services information licensed under the Open Government Licence v3.0. The published place-name collection derives from the 1:250,000 map and is not an exhaustive village inventory."
+    },
+    {
+      "id": "geonames-ni-places",
+      "title": "GeoNames · Northern Ireland populated places",
+      "url": "https://download.geonames.org/export/dump/GB.zip",
+      "license": "CC BY 4.0",
+      "credit": "GeoNames geographical database. No population values imported."
+    }
   ]
 }

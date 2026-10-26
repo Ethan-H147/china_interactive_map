@@ -1,0 +1,15 @@
+# Mexican state flags
+
+Fourteen states have flag artwork in the state-card header: Baja California Sur, Coahuila, Colima, Durango, Guanajuato, Guerrero, Jalisco, Oaxaca, Querétaro, Quintana Roo, Tabasco, Tamaulipas and Tlaxcala, plus Yucatán. A selected municipality or census locality inherits its state's flag; it is not described as the city's own flag. The remaining federal entities receive no invented flag.
+
+The flag module loads when Mexico opens. Header images use small lossless WebP thumbnails; clicking one opens the retained full-size artwork through the shared viewer. The source catalogue preserves original bytes and checksums, artwork credits, licensing and legal citations separately. National flags retain their existing artwork.
+
+Coahuila, Colima, Tabasco and Tamaulipas are labeled “Statutory coat-of-arms flag” because their statutes regulate a coat of arms used in flag form. Oaxaca is labeled only “Coat-of-arms flag”: the cited Congress law URL returns 404, the claimed Article 21 could not be independently confirmed, and the source record explicitly marks its legal citation as unverified. Its unavailable citation is not presented as a verified legal-source link. The fourteen-state discovery roster is https://en.wikipedia.org/wiki/State_flags_of_Mexico; individual source records distinguish direct verification from that roster.
+
+Guanajuato uses the gold-framed 2023 design. Yucatán retains the legally permitted 1:2 proportions and statutory colors #006847 / #FFFFFF / #CE1126 (Article 9, current 2024 law). Tlaxcala's citation points to the Congress's historical description under Decree 305, rather than treating the 2025 proposed symbols law as enacted legislation.
+
+Tamaulipas uses the December 2024 arms, including the 1824–2024 inscription and updated imagery. The unmodified arms image is extracted from page 14 of the current official law PDF, retained beside that PDF, and embedded in an SVG with a centered white 4:7 field under Articles 2–3. The law does not prescribe the size of the arms; this display uses three quarters of the flag height. Both the source PDF and extracted arms bytes are pinned in the manifest. The earlier Commons flag is not used.
+
+Definitions: scripts/mexico-state-flag-definitions.json. Generated artwork and provenance: dist/vendor/mexico-state-flags/ and dist/data/mexico-state-flag-sources.json. Retained laws: scripts/flag-sources/mexico-laws/. Regenerate using npm run fetch:mexico-state-flags; existing originals are reused after checksum verification. No live third-party image requests are needed at runtime.
+
+Run npm run test:mexico-state-flags and npm run test:flag-viewer. The flag checks cover the exact roster, original hashes, current Tamaulipas source bytes, thumbnail proportions, catalogue mappings and Oaxaca's qualified status. Desktop and 390px phone browser checks cover all fourteen state selections, legal-source links, full-size viewing, Cancún's inherited Quintana Roo flag, and clearing flags for Chihuahua. Earlier source manifests with missing national-flag dimensions are completed from their retained originals during catalogue generation.

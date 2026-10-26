@@ -1,0 +1,117 @@
+{
+  "MX-BCS": {
+    "name": "Baja California Sur",
+    "commonsFile": "Flag of Baja California Sur.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley de Símbolos y Protocolos Oficiales del Estado de Baja California Sur",
+    "articles": "Articles 2 and 9",
+    "lawUrl": "https://itaibcs.org.mx/ifile/leyes/2020/LSimbProtoOfiBCS.pdf"
+  },
+  "MX-COA": {
+    "name": "Coahuila",
+    "commonsFile": "Flag of Coahuila.svg",
+    "classification": "statutory-armorial-flag",
+    "lawTitle": "Ley sobre el Escudo del Estado de Coahuila y el Himno Coahuilense",
+    "articles": "Article 7",
+    "lawUrl": "https://www.coahuilatransparente.gob.mx/leyes/documentos_leyes/LEY%20SOBRE%20EL%20ESCUDO%20DEL%20ESTADO%20DE%20COAHUILA%20%20Y%20EL%20HIMNO%20COAHUILENSE.pdf"
+  },
+  "MX-COL": {
+    "name": "Colima",
+    "commonsFile": "Flag of Colima.svg",
+    "classification": "statutory-armorial-flag",
+    "lawTitle": "Decreto 122, reformado por Decreto 459",
+    "articles": "Eighth provision",
+    "lawUrl": "https://congresocol.gob.mx/web/Sistema/uploads/Decretos/DECRETO%20122_58%20REFORMADO.pdf"
+  },
+  "MX-DUR": {
+    "name": "Durango",
+    "commonsFile": "Flag of Durango.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley sobre el Escudo, la Bandera y el Himno del Estado de Durango",
+    "articles": "Article 10",
+    "lawUrl": "https://congresodurango.gob.mx/Archivos/legislacion/LEY%20SOBRE%20EL%20ESCUDO%2C%20LA%20BANDERA%20Y%20EL%20HIMNO.pdf"
+  },
+  "MX-GUA": {
+    "name": "Guanajuato",
+    "commonsFile": "Flag of Guanajuato.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley del Escudo, la Bandera y el Himno del Estado de Guanajuato",
+    "articles": "Article 10",
+    "lawUrl": "https://congreso-gto.s3.amazonaws.com/uploads/reforma/pdf/3529/LEBHEG_NVA_24Nov2023.pdf"
+  },
+  "MX-GRO": {
+    "name": "Guerrero",
+    "commonsFile": "Flag of Guerrero.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley Número 761 sobre Símbolos de Identidad y Pertenencia del Estado de Guerrero",
+    "articles": "Article 10",
+    "lawUrl": "https://congresogro.gob.mx/legislacion/ordinarias/ARCHI/LEY-SOBRE-SIMBOLOS-DE-IDENTIDAD-Y-PERTENENCIA-DEL-ESTADO-DE-GUERRERO-761-2021-03-10.pdf"
+  },
+  "MX-JAL": {
+    "name": "Jalisco",
+    "commonsFile": "Flag of Jalisco.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley de los Símbolos Oficiales del Estado de Jalisco",
+    "articles": "Article 10",
+    "lawUrl": "https://congresoweb.congresojal.gob.mx/bibliotecavirtual/legislacion/Leyes/Documentos_PDF-Leyes/Ley%20de%20los%20S%C3%ADmbolos%20Oficiales%20del%20Estado%20de%20Jalisco-011225.pdf"
+  },
+  "MX-OAX": {
+    "name": "Oaxaca",
+    "commonsFile": "Flag of Oaxaca.svg",
+    "classification": "armorial-flag",
+    "lawTitle": "Ley sobre el Escudo del Estado de Oaxaca",
+    "articles": "Article 21",
+    "lawUrl": "https://docs64.congresooaxaca.gob.mx/transparencia/art70/2019/FXXXVII/23.pdf",
+    "legalSourceNote": "The cited Congress PDF is no longer available (HTTP 404). Its attribution and Article 21 could not be independently confirmed; the artwork is shown as a coat-of-arms flag without a verified statutory classification."
+  },
+  "MX-QUE": {
+    "name": "Querétaro",
+    "commonsFile": "Flag of Queretaro.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley del Escudo, la Bandera y el Himno del Estado de Querétaro",
+    "articles": "Article 14",
+    "lawUrl": "https://www.sanjoaquin.gob.mx/wp-content/uploads/2023/10/LEY-SOBRE-EL-ESCUDO-LA-BANDERA-Y-EL-HIMNO-DEL-ESTADO-DE-QUERETARO.pdf"
+  },
+  "MX-ROO": {
+    "name": "Quintana Roo",
+    "commonsFile": "Flag of Quintana Roo.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley sobre la Bandera del Estado de Quintana Roo",
+    "articles": "Article 3",
+    "lawUrl": "https://documentos.congresoqroo.gob.mx/leyes/L71-XVI-20130906-L1320130906315.pdf"
+  },
+  "MX-TAB": {
+    "name": "Tabasco",
+    "commonsFile": "Flag of Tabasco.svg",
+    "classification": "statutory-armorial-flag",
+    "lawTitle": "Ley sobre las Características y Uso del Escudo del Estado de Tabasco",
+    "articles": "Articles 8, 9(VII) and 11–12",
+    "lawUrl": "https://congresotabasco.gob.mx/wp/wp-content/uploads/2020/03/Ley-sobre-las-Caracteristicas-y-Uso-del-Escudo-de-Tabasco.pdf"
+  },
+  "MX-TAM": {
+    "name": "Tamaulipas",
+    "commonsFile": null,
+    "classification": "statutory-armorial-flag",
+    "lawTitle": "Ley sobre el Escudo y el Himno de Tamaulipas",
+    "articles": "Articles 2–3; official coat-of-arms model on PDF page 14",
+    "lawUrl": "https://po.tamaulipas.gob.mx/wp-content/uploads/2024/12/Ley_Escudo.pdf",
+    "armsFile": "scripts/flag-sources/mexico-laws/tamaulipas-2024-arms.png",
+    "armsPdf": "scripts/flag-sources/mexico-laws/MX-TAM.pdf"
+  },
+  "MX-TLA": {
+    "name": "Tlaxcala",
+    "commonsFile": "Flag of Tlaxcala.svg",
+    "classification": "state-flag",
+    "lawTitle": "Decreto 305, fomento de la Cultura Patriótica en el Estado de Tlaxcala",
+    "articles": "Historical description, 20 April 2017; Decree 305, Article 10",
+    "lawUrl": "https://congresodetlaxcala.gob.mx/archivo/62/dictamenes/2017/D.CUMPLIMIENTO%20DECRETO%20305.RESE%C3%91A%20HISTORICA%20BANDERA%20TLAX.200417.pdf"
+  },
+  "MX-YUC": {
+    "name": "Yucatán",
+    "commonsFile": "Flag of the Republic of Yucatan.svg",
+    "classification": "state-flag",
+    "lawTitle": "Ley del Escudo, la Bandera y el Himno del Estado de Yucatán",
+    "articles": "Article 9",
+    "lawUrl": "https://www.congresoyucatan.gob.mx/storage/legislacion/leyes/33080fa7d0b3970d2b74618776532f4e_2024-09-05.pdf"
+  }
+}

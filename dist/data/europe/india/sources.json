@@ -1,7 +1,8 @@
 {
   "retrieved": "2026-10-16",
   "counts": {
-    "1": 36
+    "1": 36,
+    "2": 785
   },
   "coverage": "India's 28 states and 8 union territories, from geoBoundaries' copy of the DataMeet map (after the Election Commission of India), with India's official boundaries. Where they meet China's outline, India's edges are moved onto it, and land between the two goes to India; the areas both countries claim are drawn by whichever country's map is open.",
   "processing": "Polygons are simplified to about 33 m north-south, with neighbouring units sharing edges; parent units are dissolved from the most detailed level. Spanish and Italian frontier edges within 3 km of the French outline are moved onto it and overlap is erased, so shared frontiers coincide. An outline edge is a land frontier when a point 100, 300 or 600 m beyond it lies inside a neighbouring country and a Natural Earth 1:10m land boundary line passes within 4 km. The Moroccan, Monégasque and Slovenian outlines include territorial waters, so edges facing them must also lie within 200 m of an OpenStreetMap land border way. Gaps of up to 3 km between frontier edges are closed unless they face open sea, and open pieces under 1 km are dropped. Neighbouring outlines (geoBoundaries) and the OpenStreetMap ways are used only for this test; none of their geometry is published. Each shared frontier is stored once (France holds its frontiers with Spain and Italy). Coastlines are not outlined. Mapped areas are spherical polygon areas.",
@@ -542,5 +543,34 @@
   "chinaFrontierReconciliation": {
     "reference": "data/europe/pakistan/china-frontier-reconciliation.json",
     "policy": "Continuous displayed China outline shared by Pakistan land and the western India background. Existing detailed India claim geometry and source population figures remain intact. Disputed-area strokes keep their claim metadata and India-view alternatives. Pakistan source Siachen diagonal extent is retained and meets one common projected China junction."
+  },
+  "districts": {
+    "snapshot": "2024",
+    "count": 785,
+    "sourceFeatures": 785,
+    "excluded": [],
+    "coverage": "Districts in the LGD 2024 boundary snapshot. Loaded by state or union territory. Later reorganisations are outside this dated snapshot. Existing state and international land outlines are preserved.",
+    "source": {
+      "snapshot": "2024",
+      "retrieved": "2026-10-25",
+      "title": "Local Government Directory districts (2024), republished by bharatlas",
+      "url": "https://bharatlas.com/view/lgd_districts",
+      "download": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson",
+      "upstream": "https://lgdirectory.gov.in/",
+      "license": "CC0-1.0 / CC-BY-4.0",
+      "credit": "Local Government Directory, Government of India; bharatlas / urbanmorph",
+      "sourceSHA256": "95829298abdd0e80fc514b8c70787bdeef9aaf0e63b348177493045e8b22bab5",
+      "retainedSHA256": "9a05bd16e7209e8f5266f65acf830e08091e8f40c5a5608ede8cf44b710d58e1",
+      "count": 785,
+      "note": "A dated 2024 boundary snapshot, not a claim to reflect subsequent district reorganisations. Two source features (Mirpur and Muzaffarabad) have no LGD code and retain name-based identities.",
+      "preservedStateAssets": {
+        "first.bin": "1c8eda8b4cdda16d1ed05ebde9df4b50c65621cc7b542da76d39024fd247cda6",
+        "context.bin": "0dd870e915b91dd450da68a63a73c213442305ce6ba779888f4c95239dbc0992",
+        "international.bin": "73a9504c75512adff79203bffd7d40a1891ee1cdbe5d70862ad1d896d73de60b",
+        "neighbours.bin": "62e308eda721380df241012afa1cbd6ef224168fae124bdecb65af1d8665105b"
+      },
+      "processing": "District polygons clipped to existing state land masks and cleaned together; smaller source districts take precedence over overlapping older district polygons. State, context and international assets are unchanged."
+    },
+    "processing": "District polygons clipped to existing state land masks and cleaned together; smaller source districts take precedence over overlapping older district polygons. State, context and international assets are unchanged."
   }
 }

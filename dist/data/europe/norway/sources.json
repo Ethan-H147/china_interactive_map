@@ -190,6 +190,12 @@
       "license": "Public domain",
       "bytes": 2284669,
       "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a"
+    },
+    "kartverketSettlements": {
+      "url": "https://www.kartverket.no/api-og-data/stedsnavndata",
+      "api": "https://ws.geonorge.no/stedsnavn/v1/",
+      "license": "CC BY 4.0",
+      "retrieved": "2026-10-26T21:05:39.029Z"
     }
   },
   "localAreas": {
@@ -609,5 +615,6 @@
         "upstreamSha256": "fd726e8e100ded70210b09e576792eb164b358a32bddc8e08a6cf26fe2c902fa"
       }
     }
-  }
+  },
+  "settlementCoverage": "All 1,000 SSB statistical urban areas plus every active Kartverket SSR city, town, built-up settlement, village and hamlet associated with Norway’s current counties and Svalbard. No population cutoff for named places. Farms, individual houses, neighbourhoods and historic settlements are excluded. Matching named centres within an SSB urban polygon share its existing page; other named places remain distinct. Population applies only to whole SSB urban areas."
 }

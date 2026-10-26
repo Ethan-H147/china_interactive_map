@@ -114,12 +114,18 @@
       "peru": "data/europe/peru/context.bin",
       "greece": "data/europe/greece/context.bin",
       "cyprus": "data/europe/cyprus/context.bin",
-      "turkey": "data/europe/turkey/context.bin"
+      "turkey": "data/europe/turkey/context.bin",
+      "costa-rica": "data/europe/costa-rica/context.bin",
+      "panama": "data/europe/panama/context.bin",
+      "zimbabwe": "data/europe/zimbabwe/context.bin",
+      "zambia": "data/europe/zambia/context.bin",
+      "tanzania": "data/europe/tanzania/context.bin",
+      "kenya": "data/europe/kenya/context.bin"
     }
   },
   "topology": {
     "referenceCountries": 258,
-    "backgroundCountries": 115,
+    "backgroundCountries": 109,
     "atlasCodes": [
       "IDN",
       "MYS",
@@ -263,7 +269,13 @@
       "MNP",
       "CLP",
       "MAC",
-      "ATC"
+      "ATC",
+      "CRI",
+      "PAN",
+      "ZWE",
+      "ZMB",
+      "TZA",
+      "KEN"
     ],
     "backgroundCodes": [
       "ISR",
@@ -272,14 +284,11 @@
       "ETH",
       "SDS",
       "SOM",
-      "KEN",
       "MWI",
-      "TZA",
       "SYR",
       "SOL",
       "SUR",
       "GUY",
-      "CRI",
       "NIC",
       "OMN",
       "UZB",
@@ -290,7 +299,6 @@
       "ARM",
       "LBY",
       "TUN",
-      "ZMB",
       "SLE",
       "GIN",
       "LBR",
@@ -307,7 +315,6 @@
       "BEN",
       "QAT",
       "SAU",
-      "ZWE",
       "HTI",
       "DOM",
       "TCD",
@@ -334,7 +341,6 @@
       "GHA",
       "GNB",
       "BLZ",
-      "PAN",
       "PNG",
       "EGY",
       "YEM",
@@ -382,7 +388,7 @@
       "SER",
       "SCR"
     ],
-    "outlineGroups": 1834,
+    "outlineGroups": 2180,
     "simplificationMetres": 100,
     "frontierCorridorMetres": 8000,
     "reconciledSliverKm2": 25922.368854223627,
@@ -401,9 +407,9 @@
     "balkans": "Detailed Balkan land frontiers supersede residual generalized shoreline segments within 200 metres. Existing atlas borders are retained; Croatia–Montenegro stops at the verified shared-way coastal endpoint.",
     "balkanFallbackRefresh": "Country fallback land refreshed from the six final reconciled contexts, preserving all other atlas and foreign geometry."
   },
-  "bytes": 3611193,
+  "bytes": 3778481,
   "fallbackSimplificationDegrees": 0.018,
-  "outlineBytes": 575606,
+  "outlineBytes": 572775,
   "titicacaShoreline": {
     "relations": [
       3000330,
@@ -462,5 +468,308 @@
   "polandWater": {
     "source": "data/europe/poland/sources.json",
     "method": "Mapped cross-border lagoons and official PRG Gulf of Gdańsk / Puck Bay water are excluded from land fills."
+  },
+  "northernFrontierReconciliation": {
+    "source": "data/northern-frontiers.json",
+    "pairs": [
+      "RUS-KAZ",
+      "USA-CAN-ALASKA"
+    ]
+  },
+  "usMexicoReconciliation": {
+    "source": "data/us-mexico-frontier.json",
+    "method": "One complete US county-derived exterior is the shared display edge. Mexican border municipalities follow it, and their parent states are dissolved from those same leaves. The US-owned stroke, both fallback silhouettes and country previews use that edge. All other international frontiers and inland subdivision edges are retained; coastal endpoint adjustments are limited to one kilometre."
+  },
+  "centralAmericaIntegration": {
+    "source": "scripts/boundary-sources/costa-rica-panama/manifest.json",
+    "method": "Replace only the former Costa Rica and Panama gray silhouettes; align the adjacent Nicaraguan edge to Costa Rica. Existing interactive country fallbacks retain their exact geometry.",
+    "preservedInteractiveHashes": {
+      "belarus": "629e7e2ea56669389dacb349c6c9ec53ed2d5d542ffbacd2e40197183c69abf0",
+      "romania": "33314a4ab108c2bf343ff16620564b5fadb729533de06762f68b9ccecd2c4f86",
+      "croatia": "d0d98481d19fe7cbee2888234dc0b15371af90e6f21dfc7f9b184a30180ce0b6",
+      "bosnia-herzegovina": "02756ddc9e51cb579b2cac219048eb2f27f7e464a6033995c07139b9ff8c5438",
+      "timor-leste": "cabd72f1aa225f668655418f6263b8d55a899a48401d6171e86da5e7dca39bfb",
+      "brunei": "0cd8e1b22031a9f450f54de416d5846693587e73675355182f1398969c59dac9",
+      "malaysia": "bb5531529c44c583eea76aaa0918ceefed8bb4df0d1c02dac076e30147511dd8",
+      "singapore": "8b1150933cd02d4d08f3df287ae1229fdf10bb8798cdb44843fd03c6c7375fd7",
+      "ecuador": "cdb02c508865c09acf7938821635c33c8b1fd94eb7372ab861ffd67c46e468d0",
+      "venezuela": "d0be7992f097bdc5ffa272ecf0179c7a2954f136e93bc2af727cdf0d95475f0b",
+      "colombia": "48e94090334ce90248451f75e2b5f66d0611aa74630567a20e01d809e5dea969",
+      "brazil": "90e0edf1e8f9c57f20c444628a859f3bee1afbe61bd6097fc27ecc8bef39b34d",
+      "uruguay": "36cf94cf098f77b591f50b811c9bc02be7102209060acf79666b0261ce9ba298",
+      "argentina": "a32c29367199a91a82fce044c9d192fc51d6184610286a3f5541caea0d0520d1",
+      "south-africa": "b49d0e05c6da2899ac005388d6c02a8f153417dbebe3b1f582e7c004dda42f98",
+      "cambodia": "8f1981c0adf5759106fe899137d0f70da387dea781f04beacc2b7ae618bb7691",
+      "ukraine": "ffa58bb9fa73f3aafceac723531d86cee487f93a803fac32cac1ddea745d6b30",
+      "austria": "2d969914b0be626384a1a8bf3c52c31fe4e5a29bb7b8fb52ff5690ab25c788c0",
+      "hungary": "b0ac1ff7168075c043f3593599a53238bfca0f8970a6399389118d0c38411f68",
+      "slovenia": "1b629337226ed1354c1440aef43028bea39174ed9ddc55fe982c0bb4a8533546",
+      "nigeria": "78968531d31b29e6db67f89f10460d1396c833802af3e1159fbf856a7bd6fef8",
+      "angola": "50ac9ccbfd9cebd3e8fd5477e3960bcdab7d4ab3208d5c93f093d74b9c7925b5",
+      "congo": "44b9b2b890341590c9ba6fff248fc67663ce7c0a0ed4e13539cea62ccc2a54b0",
+      "botswana": "727e2bd5afd62dce331dc434a006fc51cb22ee1f9d09517c7134fde66e0c0fe9",
+      "namibia": "986eba0a187e49903d7e6f208ca873d53cff3b49232e81ce47ed1c8597b7bb28",
+      "eswatini": "a33d4eb06c04dce8bdc7599a03a7e8685c215441f9ab6e3d4832840485810e33",
+      "lesotho": "171bee3fb87e4816da38d4d248202f9eb85bac7c4552e674e2c87b6156dc5fe6",
+      "united-kingdom": "0301ab2e73b8b52f5436bfb1067c44cae87d12f2c72c8a950e2368416174a870",
+      "spain": "326f531cc44057393cd2423a9c257d4237017506441482b2240f0570f0b1e748",
+      "france": "2439abb964421c8ef2f1b59cfa590912b3c3c4255e5f66e9880ec8e617f4fd88",
+      "luxembourg": "dcd241dfa541721c3d5474e91d744d0cee3325f68a04d450aac10539fad75d9b",
+      "italy": "349767ea0a03b152947f0d1180cf7556ca77d5741737504e7ba16c34ee358eef",
+      "ireland": "f531883a90987bbd736d85c3164a62fbccf747d1303f80590e20eed25eddbd14",
+      "portugal": "a5a7907acc4eb99b676156a7a354859da8870ef3a03cf14c0d3723466b4838d2",
+      "australia": "5dc9d39962f0f3f9f7af227bb731f7eb70f627422205459636150b46d07875c5",
+      "new-zealand": "84cb5c5f1e5be4ecb603f5353b8c76ebe0d5a9ce8d5803017082ad279a005e25",
+      "norway": "54a2142cc9d6f75e525ea7868d761bcde8a643d512d9390126df75b35b0cccd4",
+      "estonia": "1fb5341ce9f87ed0970d9e9cab56d03c83b00d481bd78f8906f3f2afaa5770e9",
+      "latvia": "0603e95b690fb97f290fcb6edfa1148f5f0d2b7b823652a49262cf8070269c6d",
+      "lithuania": "055b928e267a7a7d82b4cce4bc52db7517fed7c3b82c9cfaae36070cbf8563e7",
+      "sweden": "aa3108f9fb662968bf0e5677aeedf8c8dd8ecafa3ce38749fdc438dccd13c107",
+      "finland": "f08d62d8bf39f3661e3e62936458fb35e0351265fd29739977b8ed5c1582537a",
+      "denmark": "158bcea9d1e040092e9df374200ba18aef8d5d7834b909af207163309ccd03cd",
+      "czechia": "474a62d5c4b1f7ffd4e4872db9eec76575501bf48e8d406d90d523d936557adf",
+      "slovakia": "2c062968a9b7dd0941bafa30f8ae60675d57fc606af034a3ca852bd372abaf91",
+      "poland": "c4635ff9a02245ed020104be757a5bc8384019b769603924f72ea5655f60836c",
+      "germany": "6bf8e24cc93d50aa0acc68a454c1d851140b2b503927720eb58e87c0e68508fb",
+      "belgium": "bddff5cff4abfcff4923f33d5c6705b1f7df89c8abaaa74c9dbeb3569d49ab7b",
+      "switzerland": "86e46d10ac70033e5512395d15f1d3cf7c1b888a39bd4f301f750e0e36fc5c53",
+      "netherlands": "f6c82465e3dfd38e2bea77eff212af2e6874b0eacd2bb2f1a08012edf96fcf2b",
+      "united-states": "0f05dd15d1ec6fa9b61edc49ee5fec9206131659d254d4554a4a8cf05e7ab695",
+      "canada": "2c6d2384e641f5a6cb23678bf23e23693d2a52663c231d7e3f945c0ba60d06f7",
+      "mexico": "408a3f495555dd58c54476bb0bda0bbd2aa6b9db0a3e27fa9f8ece3180787d6d",
+      "iceland": "0fc4511f349381700b884b45b0cbc38a685932646658880ac170309951c866d5",
+      "morocco": "52a9bd572a34fbcdd1d419bf7bfccad26abe6944502caed32ddd940c00e6201b",
+      "thailand": "da42998624e132cccfd3a6605f1679c0f1569270b387914b47dd976853738a86",
+      "vietnam": "d9d3bc2a827db26918d2b5b921a5a1005cf4d06e43fd54792cffa4693c720748",
+      "myanmar": "d83e9f99cbf8022b8cb43f44a862019b9b3c34cffb8a9d1b389cbd335fcf23f7",
+      "laos": "221272745ebde99fc26ef87f9203d29bb313a568a36ff093a5c87620d043ffb0",
+      "afghanistan": "7bb6d8a606f91dbf6fd370680a215b4af23cdceed10b1c947c61703263ae74e0",
+      "kyrgyzstan": "e36a7ba06eb31a8816a8ff2aa495b38759a9e2efef9830f647e0284f415f287c",
+      "pakistan": "85dcfd4d028233083dc649c472ef1df1d9a5d46dadeae2d6f51f12a8f935f13b",
+      "kazakhstan": "9ea9020d60deb8ccb5d32b8b33b4a815b410334e747ce98b6c97278012c41bb0",
+      "india": "7f608e2d2b6ba86300d16bdbcaa16bd8913b50668854e1a54e77d3c5d97857af",
+      "chile": "128027c92019402973f7e4533d1699b8cb4b0995df957175b459d1ed4086b138",
+      "bolivia": "120d64456293839d1da989913f8d68816f1e15aac86d377e9c20cf4e3506cafd",
+      "paraguay": "7c10ee7d74a84d0b4ac56d026f8b1189d1710fbdf1fdb486a7e56c55e32c7463",
+      "peru": "035f9e4c256de75d17692d9f809d95a509775ca4e838254bf4fd995a2720d951",
+      "greece": "a03540d86d7e530a9eb01993a9de21b2f18d29ec672c548dcbe6e6125b8b9f6a",
+      "cyprus": "a02c27f52f4301f285b7ed5dae1cdf838404600df8cd9ba07a5dbf78058b76bf",
+      "turkey": "95b619b133c26a6f8d465c812e7aa4a4aaa430c5e45dd8e64d14fa7bdddbdcc1",
+      "albania": "da6bed580e612c23695cbfba354d784468698c9bb0c1f70ff43d86fa55084e41",
+      "montenegro": "60923c90c7f32ea6d8b1b7cb2b670cdc573f5123a3fa6dd6b1bd4835df25a76a",
+      "kosovo": "2c457b8f40fd4f92e223be240acb2fce2b46de9e0c852cc6b92b4c258ea4999d",
+      "serbia": "0964d793e65dc24fb651ae483a9f029e359fcb181a51458cf8ae2470e2b456eb",
+      "north-macedonia": "19518d88c831b94617895dcba0ddcb110375d21e4219be7d1a0a84b73b057feb",
+      "bulgaria": "43684e784c764143984b110850d1616d2962c0c2237f696937bd0589a117175b"
+    }
+  },
+  "eastSouthAfricaIntegration": {
+    "source": "scripts/boundary-sources/east-south-africa/manifest.json",
+    "countries": [
+      "zimbabwe",
+      "zambia",
+      "tanzania",
+      "kenya"
+    ],
+    "updatedGrayNeighbours": [
+      "MOZ",
+      "MWI",
+      "RWA",
+      "UGA",
+      "BDI",
+      "SDS",
+      "ETH",
+      "SOM"
+    ],
+    "joins": [
+      {
+        "pair": "MOZ-ZWE",
+        "vertices": 2686,
+        "maxEndpointDisplacementMetres": 3079.7380329291286,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "MWI-ZMB",
+        "vertices": 2140,
+        "maxEndpointDisplacementMetres": 1489.5913757817916,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "MOZ-ZMB",
+        "vertices": 228,
+        "maxEndpointDisplacementMetres": 1355.6756391220918,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 87,
+        "maxEndpointDisplacementMetres": 13387.47759084418,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 48,
+        "maxEndpointDisplacementMetres": 0,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 25,
+        "maxEndpointDisplacementMetres": 0,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "MWI-TZA",
+        "method": "direct polygon overlay at a lake-separated or differently defined source endpoint",
+        "sourceDifference": "Reference endpoints do not meet the country outline"
+      },
+      {
+        "pair": "MWI-TZA",
+        "method": "direct polygon overlay at a lake-separated or differently defined source endpoint",
+        "sourceDifference": "Reference endpoints do not meet the country outline"
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 900,
+        "maxEndpointDisplacementMetres": 100.7370838749126,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "RWA-TZA",
+        "vertices": 805,
+        "maxEndpointDisplacementMetres": 0,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "TZA-UGA",
+        "vertices": 14,
+        "maxEndpointDisplacementMetres": 289.8980656938945,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "TZA-UGA",
+        "vertices": 113,
+        "maxEndpointDisplacementMetres": 743.4462526225207,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "BDI-TZA",
+        "vertices": 1957,
+        "maxEndpointDisplacementMetres": 466.49320997838856,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "MOZ-TZA",
+        "vertices": 1285,
+        "maxEndpointDisplacementMetres": 0,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "ETH-KEN",
+        "vertices": 11,
+        "maxEndpointDisplacementMetres": 3651.958912943951,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "ETH-KEN",
+        "vertices": 869,
+        "maxEndpointDisplacementMetres": 0,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "KEN-SOM",
+        "vertices": 86,
+        "maxEndpointDisplacementMetres": 0,
+        "method": "continuous outline alignment"
+      },
+      {
+        "pair": "KEN-UGA",
+        "vertices": 976,
+        "maxEndpointDisplacementMetres": 0,
+        "method": "continuous outline alignment"
+      }
+    ],
+    "preservedInteractiveHashes": {
+      "belarus": "629e7e2ea56669389dacb349c6c9ec53ed2d5d542ffbacd2e40197183c69abf0",
+      "romania": "33314a4ab108c2bf343ff16620564b5fadb729533de06762f68b9ccecd2c4f86",
+      "croatia": "d0d98481d19fe7cbee2888234dc0b15371af90e6f21dfc7f9b184a30180ce0b6",
+      "bosnia-herzegovina": "02756ddc9e51cb579b2cac219048eb2f27f7e464a6033995c07139b9ff8c5438",
+      "timor-leste": "cabd72f1aa225f668655418f6263b8d55a899a48401d6171e86da5e7dca39bfb",
+      "brunei": "0cd8e1b22031a9f450f54de416d5846693587e73675355182f1398969c59dac9",
+      "malaysia": "bb5531529c44c583eea76aaa0918ceefed8bb4df0d1c02dac076e30147511dd8",
+      "singapore": "8b1150933cd02d4d08f3df287ae1229fdf10bb8798cdb44843fd03c6c7375fd7",
+      "ecuador": "cdb02c508865c09acf7938821635c33c8b1fd94eb7372ab861ffd67c46e468d0",
+      "venezuela": "d0be7992f097bdc5ffa272ecf0179c7a2954f136e93bc2af727cdf0d95475f0b",
+      "colombia": "48e94090334ce90248451f75e2b5f66d0611aa74630567a20e01d809e5dea969",
+      "brazil": "90e0edf1e8f9c57f20c444628a859f3bee1afbe61bd6097fc27ecc8bef39b34d",
+      "uruguay": "36cf94cf098f77b591f50b811c9bc02be7102209060acf79666b0261ce9ba298",
+      "argentina": "a32c29367199a91a82fce044c9d192fc51d6184610286a3f5541caea0d0520d1",
+      "south-africa": "b49d0e05c6da2899ac005388d6c02a8f153417dbebe3b1f582e7c004dda42f98",
+      "cambodia": "8f1981c0adf5759106fe899137d0f70da387dea781f04beacc2b7ae618bb7691",
+      "ukraine": "ffa58bb9fa73f3aafceac723531d86cee487f93a803fac32cac1ddea745d6b30",
+      "austria": "2d969914b0be626384a1a8bf3c52c31fe4e5a29bb7b8fb52ff5690ab25c788c0",
+      "hungary": "b0ac1ff7168075c043f3593599a53238bfca0f8970a6399389118d0c38411f68",
+      "slovenia": "1b629337226ed1354c1440aef43028bea39174ed9ddc55fe982c0bb4a8533546",
+      "nigeria": "78968531d31b29e6db67f89f10460d1396c833802af3e1159fbf856a7bd6fef8",
+      "angola": "50ac9ccbfd9cebd3e8fd5477e3960bcdab7d4ab3208d5c93f093d74b9c7925b5",
+      "congo": "44b9b2b890341590c9ba6fff248fc67663ce7c0a0ed4e13539cea62ccc2a54b0",
+      "botswana": "727e2bd5afd62dce331dc434a006fc51cb22ee1f9d09517c7134fde66e0c0fe9",
+      "namibia": "986eba0a187e49903d7e6f208ca873d53cff3b49232e81ce47ed1c8597b7bb28",
+      "eswatini": "a33d4eb06c04dce8bdc7599a03a7e8685c215441f9ab6e3d4832840485810e33",
+      "lesotho": "171bee3fb87e4816da38d4d248202f9eb85bac7c4552e674e2c87b6156dc5fe6",
+      "united-kingdom": "0301ab2e73b8b52f5436bfb1067c44cae87d12f2c72c8a950e2368416174a870",
+      "spain": "326f531cc44057393cd2423a9c257d4237017506441482b2240f0570f0b1e748",
+      "france": "2439abb964421c8ef2f1b59cfa590912b3c3c4255e5f66e9880ec8e617f4fd88",
+      "luxembourg": "dcd241dfa541721c3d5474e91d744d0cee3325f68a04d450aac10539fad75d9b",
+      "italy": "349767ea0a03b152947f0d1180cf7556ca77d5741737504e7ba16c34ee358eef",
+      "ireland": "f531883a90987bbd736d85c3164a62fbccf747d1303f80590e20eed25eddbd14",
+      "portugal": "a5a7907acc4eb99b676156a7a354859da8870ef3a03cf14c0d3723466b4838d2",
+      "australia": "5dc9d39962f0f3f9f7af227bb731f7eb70f627422205459636150b46d07875c5",
+      "new-zealand": "84cb5c5f1e5be4ecb603f5353b8c76ebe0d5a9ce8d5803017082ad279a005e25",
+      "norway": "54a2142cc9d6f75e525ea7868d761bcde8a643d512d9390126df75b35b0cccd4",
+      "estonia": "1fb5341ce9f87ed0970d9e9cab56d03c83b00d481bd78f8906f3f2afaa5770e9",
+      "latvia": "0603e95b690fb97f290fcb6edfa1148f5f0d2b7b823652a49262cf8070269c6d",
+      "lithuania": "055b928e267a7a7d82b4cce4bc52db7517fed7c3b82c9cfaae36070cbf8563e7",
+      "sweden": "aa3108f9fb662968bf0e5677aeedf8c8dd8ecafa3ce38749fdc438dccd13c107",
+      "finland": "f08d62d8bf39f3661e3e62936458fb35e0351265fd29739977b8ed5c1582537a",
+      "denmark": "158bcea9d1e040092e9df374200ba18aef8d5d7834b909af207163309ccd03cd",
+      "czechia": "474a62d5c4b1f7ffd4e4872db9eec76575501bf48e8d406d90d523d936557adf",
+      "slovakia": "2c062968a9b7dd0941bafa30f8ae60675d57fc606af034a3ca852bd372abaf91",
+      "poland": "c4635ff9a02245ed020104be757a5bc8384019b769603924f72ea5655f60836c",
+      "germany": "6bf8e24cc93d50aa0acc68a454c1d851140b2b503927720eb58e87c0e68508fb",
+      "belgium": "bddff5cff4abfcff4923f33d5c6705b1f7df89c8abaaa74c9dbeb3569d49ab7b",
+      "switzerland": "86e46d10ac70033e5512395d15f1d3cf7c1b888a39bd4f301f750e0e36fc5c53",
+      "netherlands": "f6c82465e3dfd38e2bea77eff212af2e6874b0eacd2bb2f1a08012edf96fcf2b",
+      "united-states": "0f05dd15d1ec6fa9b61edc49ee5fec9206131659d254d4554a4a8cf05e7ab695",
+      "canada": "2c6d2384e641f5a6cb23678bf23e23693d2a52663c231d7e3f945c0ba60d06f7",
+      "mexico": "408a3f495555dd58c54476bb0bda0bbd2aa6b9db0a3e27fa9f8ece3180787d6d",
+      "iceland": "0fc4511f349381700b884b45b0cbc38a685932646658880ac170309951c866d5",
+      "morocco": "52a9bd572a34fbcdd1d419bf7bfccad26abe6944502caed32ddd940c00e6201b",
+      "thailand": "da42998624e132cccfd3a6605f1679c0f1569270b387914b47dd976853738a86",
+      "vietnam": "d9d3bc2a827db26918d2b5b921a5a1005cf4d06e43fd54792cffa4693c720748",
+      "myanmar": "d83e9f99cbf8022b8cb43f44a862019b9b3c34cffb8a9d1b389cbd335fcf23f7",
+      "laos": "221272745ebde99fc26ef87f9203d29bb313a568a36ff093a5c87620d043ffb0",
+      "afghanistan": "7bb6d8a606f91dbf6fd370680a215b4af23cdceed10b1c947c61703263ae74e0",
+      "kyrgyzstan": "e36a7ba06eb31a8816a8ff2aa495b38759a9e2efef9830f647e0284f415f287c",
+      "pakistan": "85dcfd4d028233083dc649c472ef1df1d9a5d46dadeae2d6f51f12a8f935f13b",
+      "kazakhstan": "9ea9020d60deb8ccb5d32b8b33b4a815b410334e747ce98b6c97278012c41bb0",
+      "india": "7f608e2d2b6ba86300d16bdbcaa16bd8913b50668854e1a54e77d3c5d97857af",
+      "chile": "128027c92019402973f7e4533d1699b8cb4b0995df957175b459d1ed4086b138",
+      "bolivia": "120d64456293839d1da989913f8d68816f1e15aac86d377e9c20cf4e3506cafd",
+      "paraguay": "7c10ee7d74a84d0b4ac56d026f8b1189d1710fbdf1fdb486a7e56c55e32c7463",
+      "peru": "035f9e4c256de75d17692d9f809d95a509775ca4e838254bf4fd995a2720d951",
+      "greece": "a03540d86d7e530a9eb01993a9de21b2f18d29ec672c548dcbe6e6125b8b9f6a",
+      "cyprus": "a02c27f52f4301f285b7ed5dae1cdf838404600df8cd9ba07a5dbf78058b76bf",
+      "turkey": "95b619b133c26a6f8d465c812e7aa4a4aaa430c5e45dd8e64d14fa7bdddbdcc1",
+      "albania": "da6bed580e612c23695cbfba354d784468698c9bb0c1f70ff43d86fa55084e41",
+      "montenegro": "60923c90c7f32ea6d8b1b7cb2b670cdc573f5123a3fa6dd6b1bd4835df25a76a",
+      "kosovo": "2c457b8f40fd4f92e223be240acb2fce2b46de9e0c852cc6b92b4c258ea4999d",
+      "serbia": "0964d793e65dc24fb651ae483a9f029e359fcb181a51458cf8ae2470e2b456eb",
+      "north-macedonia": "19518d88c831b94617895dcba0ddcb110375d21e4219be7d1a0a84b73b057feb",
+      "bulgaria": "43684e784c764143984b110850d1616d2962c0c2237f696937bd0589a117175b",
+      "costa-rica": "593459fced237ed8fae73dbdd2d3bfdb4c537b7a4da4803b9be3cf757803fe08",
+      "panama": "a9a396b2a324dcab165b8a1ad8bed8810ff9417262390d16bba1da9adaf15af8"
+    },
+    "method": "Replace the four former gray silhouettes; join adjacent foreign land to the new country frontiers, remove lake surfaces, and derive shared background strokes from the resulting geometry."
   }
 }

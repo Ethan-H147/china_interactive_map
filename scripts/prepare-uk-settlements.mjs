@@ -1,8 +1,10 @@
+import {combineLondonSettlements} from './london-settlement.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-import {gunzipSync} from 'node:zlib';
+import {gunzipSync,gzipSync} from 'node:zlib';
+import {prepareUKPlaces} from './prepare-uk-places.mjs';
 import {readXlsx} from './read-xlsx.mjs';
 // United Kingdom cities and towns as points, independent of local authorities (like
 // South Africa). Each nation's own statistical settlements and census counts:
@@ -120,7 +122,11 @@ const sources=[
  {id:'osm-nominatim',title:'OpenStreetMap Nominatim coordinates for Northern Irish villages absent from GeoNames',url:'https://nominatim.openstreetmap.org/',license:'ODbL 1.0',licenseURL:'https://www.openstreetmap.org/copyright',description:'Coordinates only.'},
  {id:'geonames-GB',title:'GeoNames United Kingdom gazetteer coordinates (Northern Ireland only)',url:northernIreland.coordinates,license:'CC BY 4.0',licenseURL:'https://creativecommons.org/licenses/by/4.0/',description:'Coordinates only; gazetteer population values are not used.'}
 ];
-fs.writeFileSync(path.join(out,'settlements.json'),JSON.stringify({country:'united-kingdom',records:settlements,sources,selection:`Every built-up area or settlement with at least ${minimum.toLocaleString('en-US')} residents in its census: England and Wales 2021, Scotland 2022, Northern Ireland 2021.${unlocated.length?' Not located in GeoNames: '+unlocated.join(', ')+'.':''}`})+'\n');
+fs.writeFileSync(path.join(out,'settlements.json'),JSON.stringify(combineLondonSettlements({country:'united-kingdom',records:settlements,sources,selection:`Every built-up area or settlement with at least ${minimum.toLocaleString('en-US')} residents in its census: England and Wales 2021, Scotland 2022, Northern Ireland 2021.${unlocated.length?' Not located in GeoNames: '+unlocated.join(', ')+'.':''}`},catalogue,JSON.parse(fs.readFileSync(path.join(out,'statistics.json')))))+'\n');
 fs.writeFileSync(path.join(out,'place-names-flags.json'),JSON.stringify({retrieved:today,languages:{cy:'Welsh'},places:{},sources:[]})+'\n');
 const by=prefix=>settlements.filter(s=>s.id.startsWith('GB-S-'+prefix)).length;
 console.log('UK settlements:',settlements.length,'— England',by('E'),'Wales',by('W'),'Scotland',by('S'),'Northern Ireland',by('N'),unlocated.length?'; unlocated '+unlocated.join(', '):'');
+
+// Refresh the census base before restoring all gazetteer places.
+const gazetteerBase='scripts/boundary-sources/uk-places/';
+if(fs.existsSync(gazetteerBase+'manifest.json')){fs.writeFileSync(gazetteerBase+'statistical-base.json.gz',gzipSync(fs.readFileSync(path.join(out,'settlements.json')),{level:9}));prepareUKPlaces();}

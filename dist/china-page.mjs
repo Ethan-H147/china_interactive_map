@@ -1,4 +1,10 @@
 import {createCountryPage} from './country-page.mjs';
+import {chinaInfoPanel,chinaRomanizationDialog,wireChinaInfo} from './china-info.mjs';
+export {applyChinaSearchAliases,normalizeChinaSearch} from './china-search-aliases.mjs';
+import {crossStraitLink,crossStraitDialog,wireCrossStraitInfo} from './cross-strait-info.mjs';
+let crossStraitReader;
+let infoReader;
+export function closeChinaInfo(){infoReader?.close();crossStraitReader?.close();}
 export function mountChinaPage(){
  const page=createCountryPage({
  prefix:``,
@@ -30,7 +36,7 @@ export function mountChinaPage(){
  subdivisions:`<details id="subdivisions"><summary id="subdivisions-title">Subdivisions</summary><div id="region-list"></div></details>`,
  actions:`<div class="place-actions"><button id="save-place" class="quiet-button" data-nav aria-pressed="false">Save place</button><button id="compare-place" class="quiet-button" data-nav hidden>Compare</button><button id="copy-place" class="quiet-button" data-nav>Copy link</button></div><p id="place-action-status" class="quiz-note" role="status" hidden></p><input id="place-share-link" aria-label="Place link" readonly hidden><nav id="region-articles" class="region-articles" aria-label="Wikipedia articles" hidden></nav><section id="landmark-gallery" class="landmark-gallery" aria-label="Landmark photos" hidden></section>`,
  footer:`<button id="compare-open" data-nav disabled>Compare regions</button><button id="about-open">Sources & coverage</button><span class="creator-credit">Created by Ethan Hu</span>`,
- extraTabs:`<button id="tab-quiz" aria-pressed="false">Quiz</button>`,
+ extraTabs:`<button id="tab-quiz" aria-pressed="false">Quiz</button><button id="tab-extra" aria-pressed="false">Extra info</button>`,
  extraPanels:`<section id="quiz-panel" hidden aria-labelledby="quiz-title">
         <div id="quiz-setup">
           <h2 id="quiz-title">Find the prefecture</h2>
@@ -64,7 +70,7 @@ export function mountChinaPage(){
           <button id="quiz-again" class="quiz-primary" data-quiz-nav>Play again</button><button id="quiz-configure" class="quiz-text-button" data-quiz-nav>Change scope</button>
         </section>
       </section>`,
- afterPanels:``,
+ afterPanels:chinaInfoPanel.replace('</section>',crossStraitLink+'</section>'),
  selectionId:`selection`,
  selectionHidden:true,
  beforeSelection:`<div id="welcome" hidden><h2>Featured regions</h2><div id="discovery-cards" class="discovery-cards"></div></div>`,
@@ -72,5 +78,6 @@ export function mountChinaPage(){
  label:`Explore China`,
  hidden:false
 });
- document.querySelector('.workspace').insertBefore(page,document.getElementById('map-shell'));return page;
+ document.querySelector('.workspace').insertBefore(page,document.getElementById('map-shell'));
+ document.body.insertAdjacentHTML('beforeend',chinaRomanizationDialog+crossStraitDialog);infoReader=wireChinaInfo();crossStraitReader=wireCrossStraitInfo();return page;
 }

@@ -77,10 +77,11 @@ for(const country of countries){
    for(const id of ['GB-O-IO','GB-O-GS','GB-O-SBA'])assert(!stats['united-kingdom:'+id].population&&stats['united-kingdom:'+id].note,id+' explains its missing population');
    // Cities and towns: points independent of councils, each inside the authority it names.
    const places=JSON.parse(fs.readFileSync(root+'/united-kingdom/settlements.json')).records;
-   assert(places.length>4000,'A large list of cities and towns');assert(places.every(p=>p.population.value>=1000&&ids.get(p.parentId)&&ids.get(p.provinceId)?.level===1),'Settlements have population and parents');
-   for(const [name,nation] of [['Birmingham','E'],['Greater Glasgow','S'],['Edinburgh','S'],['Cardiff','W'],['Belfast','N'],['Croydon','E']])assert(places.some(p=>p.en===name&&p.id.startsWith('GB-S-'+nation)),name+' is a settlement');
+   assert(places.length>4000,'A large list of cities and towns');assert(places.every(p=>(!p.population||p.population.value>=1000)&&ids.get(p.parentId)&&ids.get(p.provinceId)?.level===1),'Settlements have population and parents');
+   for(const [name,nation] of [['Birmingham','E'],['Greater Glasgow','S'],['Edinburgh','S'],['Cardiff','W'],['Belfast','N']])assert(places.some(p=>p.en===name&&p.id.startsWith('GB-S-'+nation)),name+' is a settlement');
+   assert.equal(places.filter(p=>p.provinceId==='GB-R-TLI').length,1,'London has one city marker');assert(places.some(p=>p.id==='GB-S-LONDON'));assert(ids.has('GB-C-E09000008'),'Croydon remains a borough selection');
    assert.equal(places.find(p=>p.en==='Cardiff').names.cy.name,'Caerdydd');
-   assert.equal(new Set(places.map(p=>p.center.join())).size,places.length,'No two dots share a location');
+   assert.equal(new Set(places.filter(p=>p.population).map(p=>p.center.join())).size,places.filter(p=>p.population).length,'No two dots share a location');
   }
   if(country==='france'){
    assert.equal(stats['france:FR-C-75056'].population.value,stats['france:FR-D-75'].population.value,'Paris is one commune and one department');

@@ -397,7 +397,7 @@ The 13 regions of metropolitan France (Corsica is a territorial collectivity), 9
 - Population and area: ONS mid-2024 estimates and areas (MYE5); every county equals the sum of its districts.
 - GDP and GDP per capita: ONS regional GDP, current market prices, 2024 (provisional) — regions from the ITL1 tables, counties and authorities summed from the local-authority tables, per capita from the matching ONS population. ONS's September 2026 release suppresses local-authority GDP in eight ITL2 subregions (West of England; North Somerset, Somerset and Dorset; Gloucestershire and Wiltshire; North, Mid and South West, and South East Wales; Highlands and Islands; West Central Scotland) pending a corrected release, so those 51 authorities and Gloucestershire have none. USD uses Eurostat's euro reference rates (dollar–pound cross rate).
 
-Cities and towns, like South Africa, are points independent of councils (`scripts/prepare-uk-settlements.mjs`): every built-up area or settlement with at least 1,000 residents — 4,258 places. England and Wales use ONS 2022 built-up areas with Census 2021 usual residents (London's built-up areas, omitted from ONS's towns tables, are summed from Census output areas as ONS does); Scotland uses NRS Census 2022 settlements; Northern Ireland uses NISRA 2015 settlements with Census 2021 counts (CT0100), located by GeoNames and, for villages absent there, OpenStreetMap. Welsh names are a label language.
+Cities and towns, like South Africa, are points independent of councils (`scripts/prepare-uk-settlements.mjs`): built-up areas and settlements with at least 1,000 residents, with one combined marker for Greater London. England and Wales use ONS 2022 built-up areas with Census 2021 usual residents (outside Greater London); Scotland uses NRS Census 2022 settlements; Northern Ireland uses NISRA 2015 settlements with Census 2021 counts (CT0100), located by GeoNames and, for villages absent there, OpenStreetMap. Welsh names are a label language. Greater London’s 33 borough-level settlement markers are replaced by one London marker. Its page compares Greater London with the City of London using their separate mid-2024 population and area figures; boroughs remain administrative selections. Rebuild the display after UK statistics updates with `npm run build:london`, and verify it with `npm run test:london`.
 
 ### Iceland
 
@@ -585,3 +585,11 @@ Use npm run build:bolivia, npm run test:bolivia and npm run test:bolivia-browser
 Angola and both Congos are available locally: 21 Angolan provinces and 326 municipalities; a shared Congo page with two sovereign country selections, separate flags and statistics, 26 DRC provinces and 15 Republic of the Congo departments. [Sources, coverage limits and checks](docs/angola-congos.md).
 
 Cambodia and Ukraine data coverage: [sources and limitations](docs/cambodia-ukraine.md).
+
+UK place-name coverage, India district boundaries and scoped Turkish levels: [sources, dated snapshots, rebuilds and checks](docs/expanded-coverage.md).
+
+The US–Mexico display frontier follows one complete US county-derived edge, including the Rio Grande meanders. Mexican border municipalities, their parent states, country previews and fallback land share that edge. [Repair method and checks](docs/us-mexico-frontier.md).
+
+Costa Rica and Panama are available with retained official subdivision snapshots, native Spanish names, national flags, focused Cocos Island entry and scoped loading. The Brazil–French Guiana frontier has one shared stroke owner. [Sources, limits and checks](docs/costa-rica-panama-guiana.md).
+
+Zimbabwe, Zambia, Tanzania and Kenya now have dated administrative maps, first-level census statistics and retained national economic data. Costa Rica also includes all 84 canton GDP accounts and provincial aggregates; Panama’s combined province/comarca economic regions are labeled separately. See docs/east-south-africa.md and docs/costa-rica-panama-guiana.md. Historical snapshots suppress modern gray silhouettes at overview zooms. Changes are local until publication is requested.

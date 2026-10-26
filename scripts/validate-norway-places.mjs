@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {load} from './geo-index.mjs';import {createPlaceSearch} from '../dist/place-search.mjs';import {visibleSettlements,settlementDotZooms} from '../dist/settlement-layer.mjs';import {colorLayerProfile} from '../dist/region-color-data.mjs';
+const base='dist/data/europe/norway/',data=load(base+'settlements.bin'),plain=load(base+'settlements.json'),audit=load('scripts/boundary-sources/norway-places/display-mapping.json'),source=load('scripts/boundary-sources/norway-places/places.json.gz'),units=new Map(load(base+'catalogue.bin').records.map(r=>[r.id,r])),records=new Map(data.records.map(r=>[r.id,r]));
+assert.deepEqual(data,plain);assert.equal(records.size,data.records.length);assert.equal(audit.mapping.length+audit.excluded.length,source.places.length);
+for(const m of audit.mapping)assert(records.has(m.recordId));
+for(const r of records.values()){assert(units.has(r.parentId));assert(r.parents.every(id=>units.has(id)));assert(r.center.every(Number.isFinite));if(r.id.startsWith('NO-SSR-'))assert(!r.population);}
+assert.equal(data.records.filter(r=>r.population).length,1000);assert.equal(data.records.reduce((n,r)=>n+(r.population?.value||0),0),4696257);
+const arstein=records.get('NO-SSR-138567');assert.equal(arstein.en,'Årstein');assert.equal(arstein.parentId,'NO-M-5516');const search=createPlaceSearch(data.records);assert(search('Arstein').some(r=>r.id===arstein.id));assert(search('Árjogeargi').some(r=>r.id===arstein.id));
+assert(fs.statSync(base+'settlements.bin').size<500000);const zooms=settlementDotZooms(data.records);assert.equal(zooms.size,records.size);const local={getWest:()=>17.4,getEast:()=>18.1,getSouth:()=>68.5,getNorth:()=>68.8};assert(visibleSettlements(data.records,10,local).length<100);
+assert.equal(colorLayerProfile({id:'norway-first-selection-fill',type:'fill'},'norway').level,1);
+console.log(data.records.length+' Norwegian settlement pages; all source identities accounted for, unchanged urban populations, Årstein search, compact download and viewport limits passed.');

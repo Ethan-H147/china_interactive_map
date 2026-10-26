@@ -1,0 +1,13 @@
+# US–Mexico display frontier
+
+The border uses one complete exterior from the atlas's existing US Census county-derived outline. Its 4,440 vertices retain the river meanders from the Gulf to the Pacific. Previously, independently generalised Mexican municipal boundaries could sit hundreds of metres away, leaving background slits or overlapping fills; the largest sampled separation was about 900 metres.
+
+The repair aligns the Mexican municipal leaves first, then dissolves the six border states from those same geometries: Baja California, Sonora, Chihuahua, Coahuila, Nuevo León and Tamaulipas. All 2,478 municipal identities and their published census figures remain intact. Bounds, mapped areas and chunk sizes update for the affected geometries. State and municipal perimeters match exactly. Existing US state/county geometry, Mexico's Guatemala/Belize frontiers, and the optional water overlay retain their original bytes.
+
+The US owns the single shared border stroke. Its full river path replaces the old US–Mexico stroke without changing the Canadian or Alaskan reaches. Mexico's country context, both countries' world fallback silhouettes, compressed copies, border previews and globe overview are refreshed together. Existing coastal geometry outside the frontier remains in place; the endpoint validation allowance is limited to one kilometre around the two coast junctions.
+
+`npm run build:us-mexico-frontier` reapplies the repair and refreshes only its derived assets. The Mexico municipality, US detail and ordinary country-expansion commands finish with this step so rebuilding their source geometry cannot silently reopen the seam. A report at `dist/data/us-mexico-frontier.json` retains the shared path, affected identities, twelve measured former gaps and hashes of preserved source assets. Matching source/output fingerprints let repeated builds retain the already validated geometry.
+
+`npm run test:us-mexico-frontier` checks every shared bend, 4,437 non-coastal segments on both sides, all six municipal/state hierarchies, fallback land and the complete stroke. The existing municipal validator checks all 32 exact parent/child perimeters and all population records. Browser checks cover the eastern meanders and western gap on desktop and phone, in flat and globe views, with states, municipalities, and unopened-country previews.
+
+Turkey's temporary nationwide district bundle was rolled back separately. Its original scoped loading, initial region view, province chunks and district chunks are restored; all 973 districts and their names remain available through selection and search. The UK settlement and Indian district additions remain in place.

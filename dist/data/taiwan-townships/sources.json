@@ -1,0 +1,147 @@
+{
+  "provider": "National Land Surveying and Mapping Center, Ministry of the Interior",
+  "url": "https://data.gov.tw/dataset/7441",
+  "download": "https://maps.nlsc.gov.tw/download/鄉鎮市區界線(TWD97經緯度).zip",
+  "sourceFile": "TOWN_MOI_1120317.shp",
+  "boundaryDate": "2023-03-17",
+  "supplement": "Town_Majia_Sanhe.shp (unioned into Majia Township)",
+  "license": "Taiwan Open Government Data License 1.0",
+  "licenseURL": "https://data.gov.tw/license",
+  "sha256": "e028e5a750eee48cf7913330655e5e5c5bb1f176868fbd0afdfc661fca60557c",
+  "processing": "Converted to WGS84, jointly simplified to 30 m, clipped to displayed county boundaries; uncovered parent pieces assigned by longest shared edge, or nearest township for detached islands. Fills use projection-repaired triangles; outlines retain the original rings.",
+  "divisions": 368,
+  "parents": [
+    {
+      "parent": "TW-09007",
+      "divisions": 4,
+      "bytes": 262451,
+      "coastlinePieces": 1144
+    },
+    {
+      "parent": "TW-10002",
+      "divisions": 12,
+      "bytes": 458997,
+      "coastlinePieces": 1396
+    },
+    {
+      "parent": "TW-10007",
+      "divisions": 26,
+      "bytes": 144698,
+      "coastlinePieces": 557
+    },
+    {
+      "parent": "TW-10008",
+      "divisions": 13,
+      "bytes": 311513,
+      "coastlinePieces": 1514
+    },
+    {
+      "parent": "TW-10009",
+      "divisions": 20,
+      "bytes": 196186,
+      "coastlinePieces": 992
+    },
+    {
+      "parent": "TW-10017",
+      "divisions": 7,
+      "bytes": 106718,
+      "coastlinePieces": 427
+    },
+    {
+      "parent": "TW-63000",
+      "divisions": 12,
+      "bytes": 132351,
+      "coastlinePieces": 459
+    },
+    {
+      "parent": "TW-65000",
+      "divisions": 29,
+      "bytes": 508161,
+      "coastlinePieces": 2243
+    },
+    {
+      "parent": "TW-66000",
+      "divisions": 29,
+      "bytes": 212621,
+      "coastlinePieces": 906
+    },
+    {
+      "parent": "TW-67000",
+      "divisions": 37,
+      "bytes": 233145,
+      "coastlinePieces": 893
+    },
+    {
+      "parent": "TW-68000",
+      "divisions": 13,
+      "bytes": 252545,
+      "coastlinePieces": 1051
+    },
+    {
+      "parent": "TW-10005",
+      "divisions": 18,
+      "bytes": 174558,
+      "coastlinePieces": 680
+    },
+    {
+      "parent": "TW-10020",
+      "divisions": 2,
+      "bytes": 34927,
+      "coastlinePieces": 178
+    },
+    {
+      "parent": "TW-10010",
+      "divisions": 18,
+      "bytes": 272835,
+      "coastlinePieces": 1402
+    },
+    {
+      "parent": "TW-09020",
+      "divisions": 6,
+      "bytes": 103714,
+      "coastlinePieces": 583
+    },
+    {
+      "parent": "TW-64000",
+      "divisions": 38,
+      "bytes": 300939,
+      "coastlinePieces": 1348
+    },
+    {
+      "parent": "TW-10014",
+      "divisions": 16,
+      "bytes": 310339,
+      "coastlinePieces": 1616
+    },
+    {
+      "parent": "TW-10015",
+      "divisions": 13,
+      "bytes": 321640,
+      "coastlinePieces": 1420
+    },
+    {
+      "parent": "TW-10016",
+      "divisions": 6,
+      "bytes": 615948,
+      "coastlinePieces": 4093
+    },
+    {
+      "parent": "TW-10018",
+      "divisions": 3,
+      "bytes": 63303,
+      "coastlinePieces": 249
+    },
+    {
+      "parent": "TW-10004",
+      "divisions": 13,
+      "bytes": 243807,
+      "coastlinePieces": 953
+    },
+    {
+      "parent": "TW-10013",
+      "divisions": 33,
+      "bytes": 226309,
+      "coastlinePieces": 976
+    }
+  ]
+}

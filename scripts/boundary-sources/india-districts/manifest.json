@@ -1,0 +1,21 @@
+{
+  "snapshot": "2024",
+  "retrieved": "2026-10-25",
+  "title": "Local Government Directory districts (2024), republished by bharatlas",
+  "url": "https://bharatlas.com/view/lgd_districts",
+  "download": "https://pub-0429b8e3b5a946e69ea007df844a6f1c.r2.dev/admin/districts/LGD_Districts.geojson",
+  "upstream": "https://lgdirectory.gov.in/",
+  "license": "CC0-1.0 / CC-BY-4.0",
+  "credit": "Local Government Directory, Government of India; bharatlas / urbanmorph",
+  "sourceSHA256": "95829298abdd0e80fc514b8c70787bdeef9aaf0e63b348177493045e8b22bab5",
+  "retainedSHA256": "9a05bd16e7209e8f5266f65acf830e08091e8f40c5a5608ede8cf44b710d58e1",
+  "count": 785,
+  "note": "A dated 2024 boundary snapshot, not a claim to reflect subsequent district reorganisations. Two source features (Mirpur and Muzaffarabad) have no LGD code and retain name-based identities.",
+  "preservedStateAssets": {
+    "first.bin": "1c8eda8b4cdda16d1ed05ebde9df4b50c65621cc7b542da76d39024fd247cda6",
+    "context.bin": "0dd870e915b91dd450da68a63a73c213442305ce6ba779888f4c95239dbc0992",
+    "international.bin": "73a9504c75512adff79203bffd7d40a1891ee1cdbe5d70862ad1d896d73de60b",
+    "neighbours.bin": "62e308eda721380df241012afa1cbd6ef224168fae124bdecb65af1d8665105b"
+  },
+  "processing": "District polygons clipped to existing state land masks and cleaned together; smaller source districts take precedence over overlapping older district polygons. State, context and international assets are unchanged."
+}

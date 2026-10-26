@@ -154,5 +154,21 @@
       "license": "Public domain",
       "credit": "Natural Earth v5.1.2"
     }
+  },
+  "northernFrontierReconciliation": {
+    "pair": "RUS-KAZ",
+    "referenceOwner": "russia",
+    "source": "data/northern-frontiers.json",
+    "method": "Complete shared display arcs replace mismatched exterior runs; Canadian municipal leaves and dissolved parents inherit the same edge. Existing coastline and water outside the explicitly inland Alaska reach stay intact.",
+    "affected": [
+      "KZ-10",
+      "KZ-15",
+      "KZ-23",
+      "KZ-27",
+      "KZ-39",
+      "KZ-55",
+      "KZ-59",
+      "KZ-63"
+    ]
   }
 }

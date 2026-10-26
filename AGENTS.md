@@ -16,3 +16,7 @@ Avoid redundant or unnecessary text. When a spinning icon already communicates l
 # Hosted source transport
 
 The full static atlas and retained source caches stay on GitHub. The current Site uses the small same-origin hosting adapter in `hosting/` because the full static package exceeds the native upload and remote build disk limits. Its source checkout is `artifacts/site-worker`; use the Sites source helper there, preserving its history, project ID and public audience. The primary GitHub checkout and hosting checkout intentionally have different source histories; never merge or force-push them together. See `hosting/README.md` for pinning, tests and publication. Keep all map/data asset bytes tied to a tested immutable GitHub commit.
+
+# Country overview visibility
+
+Keep country overview pages and Country tabs hidden. Maps should open and reset to Map settings. Retain national statistics and their page code, and keep subdivision statistics visible. Do not reintroduce country overview pages when adding countries or statistics.

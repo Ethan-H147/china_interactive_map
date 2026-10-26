@@ -1,0 +1,5145 @@
+{
+  "snapshot": 2020,
+  "sourceLocalities": 189432,
+  "geographicMatches": 189428,
+  "changedMunicipality": [
+    {
+      "code": "010050058",
+      "name": "Los Muñoz",
+      "censusMunicipality": "MX-MUN-01005",
+      "mappedMunicipality": "MX-MUN-01003"
+    },
+    {
+      "code": "010070391",
+      "name": "Las Amazonas [Rancho]",
+      "censusMunicipality": "MX-MUN-01007",
+      "mappedMunicipality": "MX-MUN-01008"
+    },
+    {
+      "code": "010110069",
+      "name": "San Pedro Victoria de Arriba",
+      "censusMunicipality": "MX-MUN-01011",
+      "mappedMunicipality": "MX-MUN-01006"
+    },
+    {
+      "code": "020010278",
+      "name": "Agua Caliente",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010280",
+      "name": "Alfonsinas",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010408",
+      "name": "El Coloradito [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010512",
+      "name": "El Huerfanito [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010544",
+      "name": "Rancho Percebú",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010561",
+      "name": "Morelia",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010611",
+      "name": "Punta Final (Villa Mar y Sol)",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010684",
+      "name": "Campo la Roca",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010848",
+      "name": "Campo Zaguaro",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010892",
+      "name": "Puertecitos",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020010994",
+      "name": "Punta Bufeo [Campo Turístico]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011048",
+      "name": "Playa México [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011079",
+      "name": "San Juan del Mar [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011080",
+      "name": "Papá Fernández [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011110",
+      "name": "Playa Adriana [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011183",
+      "name": "Bahía Santa María [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011203",
+      "name": "Nuevo Mazatlán [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011238",
+      "name": "Serena [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011280",
+      "name": "Cimarrón [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011282",
+      "name": "Cinco Islas [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011298",
+      "name": "La Costilla [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011303",
+      "name": "Cristina [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011304",
+      "name": "Cristina [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011325",
+      "name": "Octavios [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011333",
+      "name": "Los Delfines [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011334",
+      "name": "Delicias [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011341",
+      "name": "Diamante [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011345",
+      "name": "Gutiérrez Polanco (Rancho Panchos)",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011357",
+      "name": "Las Encantadas [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011373",
+      "name": "La Esmeralda [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011407",
+      "name": "Campo García",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011440",
+      "name": "Campo Jiménez",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011447",
+      "name": "La Joya [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011463",
+      "name": "Campo Lupita",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011477",
+      "name": "Mar y Sol [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011509",
+      "name": "Los Morritos [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011538",
+      "name": "Los Olivos [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011597",
+      "name": "Playa Agua Azul de Acapulco [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011598",
+      "name": "Campo Cadena",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011602",
+      "name": "Violeta (Playa Corrales)",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011603",
+      "name": "Playa Curvina (Campo Speedys)",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011610",
+      "name": "Playa Hermosa [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011616",
+      "name": "Playa Punta Loma [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011663",
+      "name": "Los Pulpos [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011809",
+      "name": "San Martín [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011825",
+      "name": "San Pedro [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011957",
+      "name": "El Vergel [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020011961",
+      "name": "Villa del Mar [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013300",
+      "name": "Campo Badilla",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013302",
+      "name": "Campo César",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013303",
+      "name": "Cielito Lindo [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013308",
+      "name": "El Marlín (Lote Tres y Cuatro) [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013313",
+      "name": "La Misión [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013314",
+      "name": "La Montaña [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013316",
+      "name": "Los Amigos [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013333",
+      "name": "Playa Linda [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013335",
+      "name": "Brisamar [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013338",
+      "name": "San Carlos [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013339",
+      "name": "San Francisco [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013340",
+      "name": "San José [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013341",
+      "name": "Santa Fe [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013346",
+      "name": "Playa el Sueño (Vallarta) [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013365",
+      "name": "Cocos Corner Camping",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013555",
+      "name": "San Antonio",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013628",
+      "name": "El Conquistador [Kilómetro Sesenta y Seis]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013828",
+      "name": "Ejido Delicias",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020013963",
+      "name": "Villas Mar de Cortez (Rancho Grande)",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020014334",
+      "name": "Conejo Feliz [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020014338",
+      "name": "Bello Horizonte [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020014390",
+      "name": "Playa el Porvenir",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020014431",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020014497",
+      "name": "Lidias [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020014897",
+      "name": "Campo Beluga",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020014898",
+      "name": "La Poma [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015081",
+      "name": "Campo Sacrificio",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015086",
+      "name": "Costa Verde",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015087",
+      "name": "Arena y Mar",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015142",
+      "name": "Chihuahua [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015143",
+      "name": "Tanos [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015144",
+      "name": "El Pozo de Rancho Grande",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015260",
+      "name": "Santa Teresa (Piedra de Oro)",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015897",
+      "name": "Anita [Rancho]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020015937",
+      "name": "Los Gorditos [Campo]",
+      "censusMunicipality": "MX-MUN-02001",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020284",
+      "name": "San Felipe",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020412",
+      "name": "Ejido Plan Nacional Agrario",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020414",
+      "name": "Playa del Sol",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020417",
+      "name": "Petes Camp El Paraíso",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020570",
+      "name": "El Faro Beach",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020595",
+      "name": "El Michoacán (Ejido Plan Nacional Agrario) [Restaurante]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020598",
+      "name": "Los Amigos",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020599",
+      "name": "Playa Grande",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020020604",
+      "name": "Alianza para la Producción (La Choyera)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021009",
+      "name": "Rancho Chinalito (Ejido Plan Nacional Agrario)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021082",
+      "name": "Arroyo Grande (Ejido 16 de Septiembre)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021114",
+      "name": "El Cincuenta y Dos (Colonia San Pedro Mártir)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021216",
+      "name": "Don Abel",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021222",
+      "name": "Jalisco [Campo]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021223",
+      "name": "Hacienda Beach",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021336",
+      "name": "Aquamarina [Hotel]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021343",
+      "name": "La Hacienda",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021350",
+      "name": "Ventana del Mar",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021365",
+      "name": "Poblado las Minitas",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021406",
+      "name": "Crucero Valle de la Trinidad (El Oasis)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021408",
+      "name": "Santa Clara (Colonia San Pedro Mártir)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021411",
+      "name": "Los Compadres",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021413",
+      "name": "Vista del Mar",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021414",
+      "name": "Campo Pops",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021415",
+      "name": "Campo Pai-Pai",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021419",
+      "name": "El Pescador",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021420",
+      "name": "Colonia Francisco Villa",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021614",
+      "name": "Cantú Cove (Colonia Francisco Villa)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021620",
+      "name": "Campo Ocotillos",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021623",
+      "name": "Perlas [Campo]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021627",
+      "name": "Campo Sinaí (Colonia Francisco Villa) [Recreativo]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021646",
+      "name": "Burócratas [Centro Vacacional]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021659",
+      "name": "Colonia Carlos Salinas de Gortari",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021694",
+      "name": "El Dorado (Ejido Plan Nacional Agrario)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021698",
+      "name": "San Fernando",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020021824",
+      "name": "Kilómetro Ciento Ochenta y Seis",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022089",
+      "name": "Vista Hermosa",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022224",
+      "name": "Campo Lobo",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022269",
+      "name": "Familia Leyva (Colonia Francisco Villa)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022297",
+      "name": "San José Número Cuarenta y Ocho [Rancho Solís]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022454",
+      "name": "Margarita [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022854",
+      "name": "Familia Zúñiga (Colonia Francisco Villa)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022872",
+      "name": "Litorales Vivos [Rancho Acuícola]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022874",
+      "name": "Sterling (Colonia Francisco Villa) [Granja]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022940",
+      "name": "Los Médanos (Ejido Plan Nacional Agrario)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020022966",
+      "name": "Palos Verdes Norte y Sur",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023028",
+      "name": "Playa Blanca",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023029",
+      "name": "Playa de Oro",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023035",
+      "name": "Pozos Saldaña (Ejido Plan Nacional Agrario)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023041",
+      "name": "Quinta de las Rosas",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023103",
+      "name": "Rancho del Sol (El Dorado)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023112",
+      "name": "Ocotillo [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023127",
+      "name": "Rancho Escolane",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023155",
+      "name": "La Esparza (Colonia San Pedro Mártir)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023418",
+      "name": "El Cazador del Mar [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023450",
+      "name": "Los Viajeros (Ejido Plan Nacional Agrario)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023459",
+      "name": "Familia Cárdenas",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023484",
+      "name": "Vista Bella",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023568",
+      "name": "Villas de Cortez",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023579",
+      "name": "Tortugas Bay",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023601",
+      "name": "Casa de la Hermana",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023613",
+      "name": "Los Cochis [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020023623",
+      "name": "Familia Davis",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024681",
+      "name": "Familia Andrade",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024683",
+      "name": "Villa del Sol",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024803",
+      "name": "Misión los Sahuaros",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024892",
+      "name": "La Ponderosa",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024893",
+      "name": "Familia Reynoso",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024906",
+      "name": "Beach Front",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024909",
+      "name": "Perla del Mar",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024912",
+      "name": "Diamante",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024930",
+      "name": "El Copal",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024931",
+      "name": "De un Rancho a Otro",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024940",
+      "name": "Gabaca [Granja Acuícola]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024942",
+      "name": "Las Malvinas [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024943",
+      "name": "Los Faisanes",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024945",
+      "name": "Bugambilias [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024950",
+      "name": "La Lomita",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024952",
+      "name": "Villas San Francisco [Fraccionamiento]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024961",
+      "name": "Santa Catalina [Fraccionamiento]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024966",
+      "name": "Los Tres Rhinos (Colonia San Pedro Mártir)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024971",
+      "name": "Punta Estrella [Campo]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024975",
+      "name": "Dos Potrillos [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024982",
+      "name": "Punta Estrella [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020024985",
+      "name": "Valle de los Sahuaros",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025027",
+      "name": "Campo Indio",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025420",
+      "name": "Familia Martínez",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025421",
+      "name": "Manzana Catorce",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025422",
+      "name": "La Gloria",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025423",
+      "name": "Colonia Francisco Villa",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025427",
+      "name": "Carrera [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025429",
+      "name": "Don Fili",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025430",
+      "name": "El Tepeyac [Rancho]",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025431",
+      "name": "Familia Rodríguez",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025433",
+      "name": "Familia Torres (Colonia Francisco Villa)",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025435",
+      "name": "Colonia Montaña y Mar",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025437",
+      "name": "Colegio San Felipe de Jesús",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025438",
+      "name": "Artesanías Valeria",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "020025440",
+      "name": "Grúas Quiroz",
+      "censusMunicipality": "MX-MUN-02002",
+      "mappedMunicipality": "MX-MUN-02007"
+    },
+    {
+      "code": "030012099",
+      "name": "El Mezquite",
+      "censusMunicipality": "MX-MUN-03001",
+      "mappedMunicipality": "MX-MUN-03002"
+    },
+    {
+      "code": "030020674",
+      "name": "Las Lagunetas",
+      "censusMunicipality": "MX-MUN-03002",
+      "mappedMunicipality": "MX-MUN-03001"
+    },
+    {
+      "code": "030032735",
+      "name": "Ángel de la Guarda",
+      "censusMunicipality": "MX-MUN-03003",
+      "mappedMunicipality": "MX-MUN-03008"
+    },
+    {
+      "code": "030032776",
+      "name": "Brisas del Desierto [Restaurante]",
+      "censusMunicipality": "MX-MUN-03003",
+      "mappedMunicipality": "MX-MUN-03001"
+    },
+    {
+      "code": "030033292",
+      "name": "San Antonio",
+      "censusMunicipality": "MX-MUN-03003",
+      "mappedMunicipality": "MX-MUN-03008"
+    },
+    {
+      "code": "030080080",
+      "name": "La Cieneguita",
+      "censusMunicipality": "MX-MUN-03008",
+      "mappedMunicipality": "MX-MUN-03003"
+    },
+    {
+      "code": "030080281",
+      "name": "San Venancio",
+      "censusMunicipality": "MX-MUN-03008",
+      "mappedMunicipality": "MX-MUN-03003"
+    },
+    {
+      "code": "030080568",
+      "name": "Sestiadero de la Trinidad",
+      "censusMunicipality": "MX-MUN-03008",
+      "mappedMunicipality": "MX-MUN-03003"
+    },
+    {
+      "code": "030081027",
+      "name": "San Bernardo",
+      "censusMunicipality": "MX-MUN-03008",
+      "mappedMunicipality": "MX-MUN-03003"
+    },
+    {
+      "code": "030081106",
+      "name": "Espíritu Santo",
+      "censusMunicipality": "MX-MUN-03008",
+      "mappedMunicipality": "MX-MUN-03003"
+    },
+    {
+      "code": "030081244",
+      "name": "El Potrerito",
+      "censusMunicipality": "MX-MUN-03008",
+      "mappedMunicipality": "MX-MUN-03003"
+    },
+    {
+      "code": "030081543",
+      "name": "La Tinaja",
+      "censusMunicipality": "MX-MUN-03008",
+      "mappedMunicipality": "MX-MUN-03003"
+    },
+    {
+      "code": "030090071",
+      "name": "San Nicolás",
+      "censusMunicipality": "MX-MUN-03009",
+      "mappedMunicipality": "MX-MUN-03002"
+    },
+    {
+      "code": "030090076",
+      "name": "El Saucito",
+      "censusMunicipality": "MX-MUN-03009",
+      "mappedMunicipality": "MX-MUN-03002"
+    },
+    {
+      "code": "030090255",
+      "name": "Jacobo",
+      "censusMunicipality": "MX-MUN-03009",
+      "mappedMunicipality": "MX-MUN-03002"
+    },
+    {
+      "code": "040010003",
+      "name": "Bacabchén",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010007",
+      "name": "Dzitbalché",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010026",
+      "name": "Frente Chuc Say",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010073",
+      "name": "San Mateo",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010112",
+      "name": "El Remolino (Noventa y Medio)",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010120",
+      "name": "San Carlos",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010126",
+      "name": "El Buen Pastor",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010134",
+      "name": "San Juan",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010150",
+      "name": "Anexo San Mateo",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010155",
+      "name": "Colonia Coca-Cola",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010174",
+      "name": "La Huerta [Paradero Turístico]",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010198",
+      "name": "K'an Peepen",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010201",
+      "name": "La Fátima (Cocbilín)",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010204",
+      "name": "San Miguel Dos",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010208",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010225",
+      "name": "San Martín",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010227",
+      "name": "San Miguelito",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010229",
+      "name": "Xbilincoc",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010233",
+      "name": "Yaxhaltún",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010300",
+      "name": "Los Limonares",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010302",
+      "name": "Niño de Atocha",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010312",
+      "name": "El Puente [Motel]",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010314",
+      "name": "Los Abuelos",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010319",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010320",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010331",
+      "name": "Los Flamboyanes",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010334",
+      "name": "San José",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040010339",
+      "name": "Ninguno [Rancho]",
+      "censusMunicipality": "MX-MUN-04001",
+      "mappedMunicipality": "MX-MUN-04013"
+    },
+    {
+      "code": "040120019",
+      "name": "La Soledad",
+      "censusMunicipality": "MX-MUN-04012",
+      "mappedMunicipality": "MX-MUN-04002"
+    },
+    {
+      "code": "040120039",
+      "name": "Quinta del Sol",
+      "censusMunicipality": "MX-MUN-04012",
+      "mappedMunicipality": "MX-MUN-04004"
+    },
+    {
+      "code": "060030010",
+      "name": "Ex-Hacienda la Cañada",
+      "censusMunicipality": "MX-MUN-06003",
+      "mappedMunicipality": "MX-MUN-06010"
+    },
+    {
+      "code": "060030030",
+      "name": "El Pedregal",
+      "censusMunicipality": "MX-MUN-06003",
+      "mappedMunicipality": "MX-MUN-06010"
+    },
+    {
+      "code": "060030171",
+      "name": "Cribados y Derivados",
+      "censusMunicipality": "MX-MUN-06003",
+      "mappedMunicipality": "MX-MUN-06010"
+    },
+    {
+      "code": "060030230",
+      "name": "La Tescalama",
+      "censusMunicipality": "MX-MUN-06003",
+      "mappedMunicipality": "MX-MUN-06010"
+    },
+    {
+      "code": "060030358",
+      "name": "El Pedregal (La Parota)",
+      "censusMunicipality": "MX-MUN-06003",
+      "mappedMunicipality": "MX-MUN-06010"
+    },
+    {
+      "code": "060030508",
+      "name": "Ninguno [Grupo Lizama]",
+      "censusMunicipality": "MX-MUN-06003",
+      "mappedMunicipality": "MX-MUN-06010"
+    },
+    {
+      "code": "060100116",
+      "name": "El Fresnal",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "060100190",
+      "name": "Carrizalillo [Centro Turístico Ejidal]",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "060100220",
+      "name": "Rancho de Marchantillo",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "060100235",
+      "name": "Jaboncillo",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "060100301",
+      "name": "Residencial Campestre Buenos Aires [Fraccionamiento]",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "060100302",
+      "name": "Puente de Ladrillo",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "060100323",
+      "name": "Los Portales [Motel]",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "060100370",
+      "name": "El Fresnal el Alto",
+      "censusMunicipality": "MX-MUN-06010",
+      "mappedMunicipality": "MX-MUN-06003"
+    },
+    {
+      "code": "070130007",
+      "name": "Allende Esquipulas",
+      "censusMunicipality": "MX-MUN-07013",
+      "mappedMunicipality": "MX-MUN-07047"
+    },
+    {
+      "code": "070130124",
+      "name": "San José Mujular",
+      "censusMunicipality": "MX-MUN-07013",
+      "mappedMunicipality": "MX-MUN-07073"
+    },
+    {
+      "code": "070160299",
+      "name": "Cuauhtemoc Quemado",
+      "censusMunicipality": "MX-MUN-07016",
+      "mappedMunicipality": "MX-MUN-07065"
+    },
+    {
+      "code": "070220032",
+      "name": "Tzomoltón",
+      "censusMunicipality": "MX-MUN-07022",
+      "mappedMunicipality": "MX-MUN-07026"
+    },
+    {
+      "code": "070230012",
+      "name": "Callejón",
+      "censusMunicipality": "MX-MUN-07023",
+      "mappedMunicipality": "MX-MUN-07049"
+    },
+    {
+      "code": "070230100",
+      "name": "Jomtealhó",
+      "censusMunicipality": "MX-MUN-07023",
+      "mappedMunicipality": "MX-MUN-07056"
+    },
+    {
+      "code": "070230112",
+      "name": "Rasién",
+      "censusMunicipality": "MX-MUN-07023",
+      "mappedMunicipality": "MX-MUN-07078"
+    },
+    {
+      "code": "070230113",
+      "name": "Tichen",
+      "censusMunicipality": "MX-MUN-07023",
+      "mappedMunicipality": "MX-MUN-07026"
+    },
+    {
+      "code": "070230127",
+      "name": "Bashequen",
+      "censusMunicipality": "MX-MUN-07023",
+      "mappedMunicipality": "MX-MUN-07026"
+    },
+    {
+      "code": "070330004",
+      "name": "Azapac Amatal",
+      "censusMunicipality": "MX-MUN-07033",
+      "mappedMunicipality": "MX-MUN-07092"
+    },
+    {
+      "code": "070330029",
+      "name": "Paraíso",
+      "censusMunicipality": "MX-MUN-07033",
+      "mappedMunicipality": "MX-MUN-07092"
+    },
+    {
+      "code": "070390048",
+      "name": "El Ocotal",
+      "censusMunicipality": "MX-MUN-07039",
+      "mappedMunicipality": "MX-MUN-07081"
+    },
+    {
+      "code": "070410566",
+      "name": "El Porvenir",
+      "censusMunicipality": "MX-MUN-07041",
+      "mappedMunicipality": "MX-MUN-07052"
+    },
+    {
+      "code": "070410572",
+      "name": "Santa Martha",
+      "censusMunicipality": "MX-MUN-07041",
+      "mappedMunicipality": "MX-MUN-07099"
+    },
+    {
+      "code": "070520312",
+      "name": "Santa Margarita Agua Azul",
+      "censusMunicipality": "MX-MUN-07052",
+      "mappedMunicipality": "MX-MUN-07115"
+    },
+    {
+      "code": "070520335",
+      "name": "San Mateo Zapotal",
+      "censusMunicipality": "MX-MUN-07052",
+      "mappedMunicipality": "MX-MUN-07115"
+    },
+    {
+      "code": "070520464",
+      "name": "San Rafael",
+      "censusMunicipality": "MX-MUN-07052",
+      "mappedMunicipality": "MX-MUN-07041"
+    },
+    {
+      "code": "070520869",
+      "name": "La Esmeralda de los Cipreses",
+      "censusMunicipality": "MX-MUN-07052",
+      "mappedMunicipality": "MX-MUN-07041"
+    },
+    {
+      "code": "070520902",
+      "name": "Victórico R. Grajales",
+      "censusMunicipality": "MX-MUN-07052",
+      "mappedMunicipality": "MX-MUN-07004"
+    },
+    {
+      "code": "070550005",
+      "name": "Los Hules",
+      "censusMunicipality": "MX-MUN-07055",
+      "mappedMunicipality": "MX-MUN-07102"
+    },
+    {
+      "code": "070570575",
+      "name": "La Ceiba",
+      "censusMunicipality": "MX-MUN-07057",
+      "mappedMunicipality": "MX-MUN-07103"
+    },
+    {
+      "code": "070592054",
+      "name": "Emiliano Zapata",
+      "censusMunicipality": "MX-MUN-07059",
+      "mappedMunicipality": "MX-MUN-07052"
+    },
+    {
+      "code": "070592981",
+      "name": "La Flor de Getzemaní",
+      "censusMunicipality": "MX-MUN-07059",
+      "mappedMunicipality": "MX-MUN-07031"
+    },
+    {
+      "code": "070750036",
+      "name": "San Mateo",
+      "censusMunicipality": "MX-MUN-07075",
+      "mappedMunicipality": "MX-MUN-07019"
+    },
+    {
+      "code": "070760127",
+      "name": "San Juan el Mirador",
+      "censusMunicipality": "MX-MUN-07076",
+      "mappedMunicipality": "MX-MUN-07039"
+    },
+    {
+      "code": "070810271",
+      "name": "Jotolchén Dos (Planada Naranjal)",
+      "censusMunicipality": "MX-MUN-07081",
+      "mappedMunicipality": "MX-MUN-07118"
+    },
+    {
+      "code": "070810301",
+      "name": "Río Blanco",
+      "censusMunicipality": "MX-MUN-07081",
+      "mappedMunicipality": "MX-MUN-07066"
+    },
+    {
+      "code": "070810309",
+      "name": "El Sabinal",
+      "censusMunicipality": "MX-MUN-07081",
+      "mappedMunicipality": "MX-MUN-07014"
+    },
+    {
+      "code": "070810311",
+      "name": "Tepeyac",
+      "censusMunicipality": "MX-MUN-07081",
+      "mappedMunicipality": "MX-MUN-07066"
+    },
+    {
+      "code": "070810364",
+      "name": "Guadalupe Victoria I",
+      "censusMunicipality": "MX-MUN-07081",
+      "mappedMunicipality": "MX-MUN-07014"
+    },
+    {
+      "code": "070830197",
+      "name": "Tierra y Libertad",
+      "censusMunicipality": "MX-MUN-07083",
+      "mappedMunicipality": "MX-MUN-07104"
+    },
+    {
+      "code": "070830210",
+      "name": "San Pedro Pedernal",
+      "censusMunicipality": "MX-MUN-07083",
+      "mappedMunicipality": "MX-MUN-07104"
+    },
+    {
+      "code": "070891018",
+      "name": "Dorados de Villa",
+      "censusMunicipality": "MX-MUN-07089",
+      "mappedMunicipality": "MX-MUN-07054"
+    },
+    {
+      "code": "070910034",
+      "name": "Crisol",
+      "censusMunicipality": "MX-MUN-07091",
+      "mappedMunicipality": "MX-MUN-07042"
+    },
+    {
+      "code": "071000063",
+      "name": "Arroyo Agua Azul",
+      "censusMunicipality": "MX-MUN-07100",
+      "mappedMunicipality": "MX-MUN-07031"
+    },
+    {
+      "code": "071030215",
+      "name": "Villa Hidalgo",
+      "censusMunicipality": "MX-MUN-07103",
+      "mappedMunicipality": "MX-MUN-07089"
+    },
+    {
+      "code": "071120034",
+      "name": "San Juan Bawitz",
+      "censusMunicipality": "MX-MUN-07112",
+      "mappedMunicipality": "MX-MUN-07031"
+    },
+    {
+      "code": "071180003",
+      "name": "Jotolchén",
+      "censusMunicipality": "MX-MUN-07118",
+      "mappedMunicipality": "MX-MUN-07081"
+    },
+    {
+      "code": "080600158",
+      "name": "Ex-Hacienda de Santiago",
+      "censusMunicipality": "MX-MUN-08060",
+      "mappedMunicipality": "MX-MUN-08059"
+    },
+    {
+      "code": "080610297",
+      "name": "Calderones [Colonia Agrícola]",
+      "censusMunicipality": "MX-MUN-08061",
+      "mappedMunicipality": "MX-MUN-08022"
+    },
+    {
+      "code": "110110088",
+      "name": "El Tecolote (Cerrito de Hierbas)",
+      "censusMunicipality": "MX-MUN-11011",
+      "mappedMunicipality": "MX-MUN-11044"
+    },
+    {
+      "code": "120010242",
+      "name": "Bella Vista Papagayo",
+      "censusMunicipality": "MX-MUN-12001",
+      "mappedMunicipality": "MX-MUN-12053"
+    },
+    {
+      "code": "120010493",
+      "name": "La Arena",
+      "censusMunicipality": "MX-MUN-12001",
+      "mappedMunicipality": "MX-MUN-12053"
+    },
+    {
+      "code": "120010680",
+      "name": "Rancho Alfonso Catalán",
+      "censusMunicipality": "MX-MUN-12001",
+      "mappedMunicipality": "MX-MUN-12021"
+    },
+    {
+      "code": "120010694",
+      "name": "Rancho el Tamarindillo",
+      "censusMunicipality": "MX-MUN-12001",
+      "mappedMunicipality": "MX-MUN-12053"
+    },
+    {
+      "code": "120020157",
+      "name": "La Lobera",
+      "censusMunicipality": "MX-MUN-12002",
+      "mappedMunicipality": "MX-MUN-12045"
+    },
+    {
+      "code": "120020182",
+      "name": "Naranjastitlán",
+      "censusMunicipality": "MX-MUN-12002",
+      "mappedMunicipality": "MX-MUN-12045"
+    },
+    {
+      "code": "120030160",
+      "name": "El Zapotal",
+      "censusMunicipality": "MX-MUN-12003",
+      "mappedMunicipality": "MX-MUN-12054"
+    },
+    {
+      "code": "120030198",
+      "name": "San Marcos Oriente",
+      "censusMunicipality": "MX-MUN-12003",
+      "mappedMunicipality": "MX-MUN-12054"
+    },
+    {
+      "code": "120030255",
+      "name": "La Sanguinaria",
+      "censusMunicipality": "MX-MUN-12003",
+      "mappedMunicipality": "MX-MUN-12057"
+    },
+    {
+      "code": "120040003",
+      "name": "Ahuejutla",
+      "censusMunicipality": "MX-MUN-12004",
+      "mappedMunicipality": "MX-MUN-12069"
+    },
+    {
+      "code": "120040014",
+      "name": "Petlacalancingo",
+      "censusMunicipality": "MX-MUN-12004",
+      "mappedMunicipality": "MX-MUN-12069"
+    },
+    {
+      "code": "120040041",
+      "name": "San Miguelito",
+      "censusMunicipality": "MX-MUN-12004",
+      "mappedMunicipality": "MX-MUN-12043"
+    },
+    {
+      "code": "120060070",
+      "name": "Pueblo Nuevo Santa María",
+      "censusMunicipality": "MX-MUN-12006",
+      "mappedMunicipality": "MX-MUN-12026"
+    },
+    {
+      "code": "120060082",
+      "name": "Las Garzas",
+      "censusMunicipality": "MX-MUN-12006",
+      "mappedMunicipality": "MX-MUN-12032"
+    },
+    {
+      "code": "120060085",
+      "name": "Pata de Burro",
+      "censusMunicipality": "MX-MUN-12006",
+      "mappedMunicipality": "MX-MUN-12058"
+    },
+    {
+      "code": "120080039",
+      "name": "Agua Salada",
+      "censusMunicipality": "MX-MUN-12008",
+      "mappedMunicipality": "MX-MUN-12034"
+    },
+    {
+      "code": "120080040",
+      "name": "Las Joyas",
+      "censusMunicipality": "MX-MUN-12008",
+      "mappedMunicipality": "MX-MUN-12034"
+    },
+    {
+      "code": "120080041",
+      "name": "San Juan Teocalcingo",
+      "censusMunicipality": "MX-MUN-12008",
+      "mappedMunicipality": "MX-MUN-12034"
+    },
+    {
+      "code": "120090004",
+      "name": "Cuautipan",
+      "censusMunicipality": "MX-MUN-12009",
+      "mappedMunicipality": "MX-MUN-12069"
+    },
+    {
+      "code": "120100103",
+      "name": "Vista Hermosa",
+      "censusMunicipality": "MX-MUN-12010",
+      "mappedMunicipality": "MX-MUN-12066"
+    },
+    {
+      "code": "120100105",
+      "name": "Luis Donaldo Colosio Murrieta",
+      "censusMunicipality": "MX-MUN-12010",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120100108",
+      "name": "Vicente Guerrero",
+      "censusMunicipality": "MX-MUN-12010",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120110171",
+      "name": "Colonia Piedra Parada",
+      "censusMunicipality": "MX-MUN-12011",
+      "mappedMunicipality": "MX-MUN-12057"
+    },
+    {
+      "code": "120110238",
+      "name": "Ejido el Tambor",
+      "censusMunicipality": "MX-MUN-12011",
+      "mappedMunicipality": "MX-MUN-12032"
+    },
+    {
+      "code": "120110342",
+      "name": "Cerro Azul (Puerto los Pinos)",
+      "censusMunicipality": "MX-MUN-12011",
+      "mappedMunicipality": "MX-MUN-12021"
+    },
+    {
+      "code": "120120003",
+      "name": "Ahuacachahue (Ndog'yo Itún Tichi)",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120004",
+      "name": "Ahuexutla",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120005",
+      "name": "La Angostura",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120013",
+      "name": "Coapinola",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120015",
+      "name": "La Concordia",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120020",
+      "name": "Chacalapa",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120022",
+      "name": "El Charco",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120027",
+      "name": "Mesón Zapote",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120028",
+      "name": "Ocotlán",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120029",
+      "name": "El Paraíso",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120032",
+      "name": "Quiahuitepec",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120045",
+      "name": "El Tepuente",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120046",
+      "name": "Tierra Blanca",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120060",
+      "name": "Ojo de Agua (Xa'a Kava Yaa)",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120068",
+      "name": "San Antonio Abad",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120070",
+      "name": "San Felipe",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120073",
+      "name": "El Piñal",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120075",
+      "name": "El Platanar (San Antonio)",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120076",
+      "name": "Rancho Ocoapa",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120081",
+      "name": "La Palma (Colonia Paraíso)",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120082",
+      "name": "El Potrero",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120084",
+      "name": "El Coquillo",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120087",
+      "name": "Coxcatlán San Pedro",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120088",
+      "name": "La Cortina",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120089",
+      "name": "El Coyul",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120091",
+      "name": "Ocote Amarillo",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120092",
+      "name": "Plan de Gatica",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12076"
+    },
+    {
+      "code": "120120093",
+      "name": "Roca Colorada",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120094",
+      "name": "La Fátima",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120111",
+      "name": "El Mesoncillo",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120120",
+      "name": "Río Velero",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12076"
+    },
+    {
+      "code": "120120121",
+      "name": "Vista Hermosa",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120145",
+      "name": "Cumbres de Cotzalzin",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120151",
+      "name": "Los Amates",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12076"
+    },
+    {
+      "code": "120120156",
+      "name": "Arroyo Ocotlán",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120163",
+      "name": "Ciénega del Sauce",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12076"
+    },
+    {
+      "code": "120120164",
+      "name": "El Charquito",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120165",
+      "name": "Nueva Jerusalén",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12076"
+    },
+    {
+      "code": "120120166",
+      "name": "El Parotillo",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12076"
+    },
+    {
+      "code": "120120169",
+      "name": "Plan del Potrero",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120172",
+      "name": "Pie del Cerro",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120174",
+      "name": "Cumbres de Yolotepec",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120175",
+      "name": "Vista Alegre",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120176",
+      "name": "Juquila",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120179",
+      "name": "Crucero Ojo de Agua (Rancho los Patriarca)",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120182",
+      "name": "Plan de Paraíso",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120120184",
+      "name": "La Palma Nuevo Paraíso",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12076"
+    },
+    {
+      "code": "120120190",
+      "name": "El Cerro Pelón",
+      "censusMunicipality": "MX-MUN-12012",
+      "mappedMunicipality": "MX-MUN-12083"
+    },
+    {
+      "code": "120150046",
+      "name": "Las Enramadas",
+      "censusMunicipality": "MX-MUN-12015",
+      "mappedMunicipality": "MX-MUN-12034"
+    },
+    {
+      "code": "120190022",
+      "name": "Ciruelo Amarillo",
+      "censusMunicipality": "MX-MUN-12019",
+      "mappedMunicipality": "MX-MUN-12045"
+    },
+    {
+      "code": "120190054",
+      "name": "Tepetitlán",
+      "censusMunicipality": "MX-MUN-12019",
+      "mappedMunicipality": "MX-MUN-12045"
+    },
+    {
+      "code": "120190057",
+      "name": "Zacualpa",
+      "censusMunicipality": "MX-MUN-12019",
+      "mappedMunicipality": "MX-MUN-12045"
+    },
+    {
+      "code": "120190074",
+      "name": "El Establo",
+      "censusMunicipality": "MX-MUN-12019",
+      "mappedMunicipality": "MX-MUN-12008"
+    },
+    {
+      "code": "120190080",
+      "name": "El Guaje (El Portezuelo)",
+      "censusMunicipality": "MX-MUN-12019",
+      "mappedMunicipality": "MX-MUN-12002"
+    },
+    {
+      "code": "120200058",
+      "name": "Crucero de Santa Cruz",
+      "censusMunicipality": "MX-MUN-12020",
+      "mappedMunicipality": "MX-MUN-12069"
+    },
+    {
+      "code": "120210244",
+      "name": "La Carbonera",
+      "censusMunicipality": "MX-MUN-12021",
+      "mappedMunicipality": "MX-MUN-12001"
+    },
+    {
+      "code": "120210255",
+      "name": "Santa Cruz de Mitla",
+      "censusMunicipality": "MX-MUN-12021",
+      "mappedMunicipality": "MX-MUN-12014"
+    },
+    {
+      "code": "120220473",
+      "name": "Los Bayados",
+      "censusMunicipality": "MX-MUN-12022",
+      "mappedMunicipality": "MX-MUN-12003"
+    },
+    {
+      "code": "120220602",
+      "name": "Santa Clara (Santa Clara del Cobre)",
+      "censusMunicipality": "MX-MUN-12022",
+      "mappedMunicipality": "MX-MUN-12003"
+    },
+    {
+      "code": "120220707",
+      "name": "El Zarzal",
+      "censusMunicipality": "MX-MUN-12022",
+      "mappedMunicipality": "MX-MUN-12038"
+    },
+    {
+      "code": "120230004",
+      "name": "La Bocana",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230006",
+      "name": "El Cacalote",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230017",
+      "name": "Jícaro Abajo",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230022",
+      "name": "Punta Maldonado (El Faro)",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230026",
+      "name": "San Nicolás",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230028",
+      "name": "El Tamale",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230029",
+      "name": "Tejas Crudas",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230035",
+      "name": "La Petaca (Hacienda la Petaca)",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230036",
+      "name": "El Pitahayo",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230055",
+      "name": "Rancho de Fausto Mendoza (Faustino Mendoza)",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230097",
+      "name": "El Carrizo (Rancho de Fausto Mendoza)",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230098",
+      "name": "Rancho Casa Blanca",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230157",
+      "name": "El Cusuco (El Bajo)",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230192",
+      "name": "Rancho de Santiago Pineda",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230212",
+      "name": "Rancho las Ases",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230220",
+      "name": "Rancho Mario Navarrete",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12013"
+    },
+    {
+      "code": "120230249",
+      "name": "Domingo Vázquez",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230277",
+      "name": "Rancho Eurípides Navarrete",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120230297",
+      "name": "Vicente Cortez Dos [Rancho]",
+      "censusMunicipality": "MX-MUN-12023",
+      "mappedMunicipality": "MX-MUN-12085"
+    },
+    {
+      "code": "120250031",
+      "name": "Estero del Marquez (Cachumbo)",
+      "censusMunicipality": "MX-MUN-12025",
+      "mappedMunicipality": "MX-MUN-12030"
+    },
+    {
+      "code": "120250039",
+      "name": "La Ceiba",
+      "censusMunicipality": "MX-MUN-12025",
+      "mappedMunicipality": "MX-MUN-12018"
+    },
+    {
+      "code": "120250051",
+      "name": "La Soledad",
+      "censusMunicipality": "MX-MUN-12025",
+      "mappedMunicipality": "MX-MUN-12030"
+    },
+    {
+      "code": "120280208",
+      "name": "Buena Vista de las Pilas",
+      "censusMunicipality": "MX-MUN-12028",
+      "mappedMunicipality": "MX-MUN-12079"
+    },
+    {
+      "code": "120290030",
+      "name": "Carrizal de la Vía",
+      "censusMunicipality": "MX-MUN-12029",
+      "mappedMunicipality": "MX-MUN-12039"
+    },
+    {
+      "code": "120290097",
+      "name": "Colonia General Heliodoro Castillo (Chicahuales)",
+      "censusMunicipality": "MX-MUN-12029",
+      "mappedMunicipality": "MX-MUN-12032"
+    },
+    {
+      "code": "120290421",
+      "name": "Zeutla",
+      "censusMunicipality": "MX-MUN-12029",
+      "mappedMunicipality": "MX-MUN-12021"
+    },
+    {
+      "code": "120320315",
+      "name": "Corralitos (El Banco de Grava)",
+      "censusMunicipality": "MX-MUN-12032",
+      "mappedMunicipality": "MX-MUN-12054"
+    },
+    {
+      "code": "120350005",
+      "name": "Colonia el Carmen",
+      "censusMunicipality": "MX-MUN-12035",
+      "mappedMunicipality": "MX-MUN-12055"
+    },
+    {
+      "code": "120350037",
+      "name": "El Tercer Mundo",
+      "censusMunicipality": "MX-MUN-12035",
+      "mappedMunicipality": "MX-MUN-12059"
+    },
+    {
+      "code": "120350197",
+      "name": "Colonia Ernesto Che Guevara (La Che Guevara)",
+      "censusMunicipality": "MX-MUN-12035",
+      "mappedMunicipality": "MX-MUN-12058"
+    },
+    {
+      "code": "120360008",
+      "name": "La Reforma",
+      "censusMunicipality": "MX-MUN-12036",
+      "mappedMunicipality": "MX-MUN-12013"
+    },
+    {
+      "code": "120360024",
+      "name": "Chimalapa",
+      "censusMunicipality": "MX-MUN-12036",
+      "mappedMunicipality": "MX-MUN-12043"
+    },
+    {
+      "code": "120360031",
+      "name": "El Mango",
+      "censusMunicipality": "MX-MUN-12036",
+      "mappedMunicipality": "MX-MUN-12013"
+    },
+    {
+      "code": "120390044",
+      "name": "San Juan del Reparo Norte (San Juan del Reparo)",
+      "censusMunicipality": "MX-MUN-12039",
+      "mappedMunicipality": "MX-MUN-12053"
+    },
+    {
+      "code": "120390045",
+      "name": "San Juan del Reparo Sur (San Juan del Reparo)",
+      "censusMunicipality": "MX-MUN-12039",
+      "mappedMunicipality": "MX-MUN-12053"
+    },
+    {
+      "code": "120390056",
+      "name": "Chacalapa de Bravos",
+      "censusMunicipality": "MX-MUN-12039",
+      "mappedMunicipality": "MX-MUN-12053"
+    },
+    {
+      "code": "120400328",
+      "name": "Los Paredones",
+      "censusMunicipality": "MX-MUN-12040",
+      "mappedMunicipality": "MX-MUN-12075"
+    },
+    {
+      "code": "120410016",
+      "name": "El Potrerillo (Potrerillo del Rincón)",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410017",
+      "name": "Rancho Viejo",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410018",
+      "name": "El Rincón (Santa Cruz del Rincón)",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410025",
+      "name": "Tierra Colorada",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410039",
+      "name": "El Cocoyul",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410073",
+      "name": "La Parota",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410075",
+      "name": "Xkua Xtuti",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12020"
+    },
+    {
+      "code": "120410101",
+      "name": "Colonia Jardín de Cafetales",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410113",
+      "name": "Cerro el Timbre (Portezuelo la Ciénega)",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120410123",
+      "name": "El Paraíso",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410124",
+      "name": "San Juan de las Nieves",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12020"
+    },
+    {
+      "code": "120410131",
+      "name": "Colonia San Vicente",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410148",
+      "name": "Pie de la Cuesta",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410149",
+      "name": "Piedra Pintada",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410154",
+      "name": "Cerro Tlalixtatepec",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12020"
+    },
+    {
+      "code": "120410156",
+      "name": "Filo del Gavilán (Barranca de los Muertos)",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12020"
+    },
+    {
+      "code": "120410173",
+      "name": "Colonia Hidalgo",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410188",
+      "name": "San Marcos",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410200",
+      "name": "San Miguel el Rincón",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410209",
+      "name": "Colonia Genaro Vázquez",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120410215",
+      "name": "Aguazarca",
+      "censusMunicipality": "MX-MUN-12041",
+      "mappedMunicipality": "MX-MUN-12084"
+    },
+    {
+      "code": "120430131",
+      "name": "Río San Martín",
+      "censusMunicipality": "MX-MUN-12043",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120440053",
+      "name": "La Villita",
+      "censusMunicipality": "MX-MUN-12044",
+      "mappedMunicipality": "MX-MUN-12061"
+    },
+    {
+      "code": "120450114",
+      "name": "El Crucero Tecosajca",
+      "censusMunicipality": "MX-MUN-12045",
+      "mappedMunicipality": "MX-MUN-12002"
+    },
+    {
+      "code": "120450137",
+      "name": "Rancho Ismael Patrón",
+      "censusMunicipality": "MX-MUN-12045",
+      "mappedMunicipality": "MX-MUN-12024"
+    },
+    {
+      "code": "120450205",
+      "name": "Las Anonas",
+      "censusMunicipality": "MX-MUN-12045",
+      "mappedMunicipality": "MX-MUN-12002"
+    },
+    {
+      "code": "120450234",
+      "name": "Rancho Antonino García",
+      "censusMunicipality": "MX-MUN-12045",
+      "mappedMunicipality": "MX-MUN-12002"
+    },
+    {
+      "code": "120470003",
+      "name": "Agua Colorada",
+      "censusMunicipality": "MX-MUN-12047",
+      "mappedMunicipality": "MX-MUN-12058"
+    },
+    {
+      "code": "120480661",
+      "name": "La Colorada (El Callejón de la Colorada)",
+      "censusMunicipality": "MX-MUN-12048",
+      "mappedMunicipality": "MX-MUN-12038"
+    },
+    {
+      "code": "120480719",
+      "name": "El Aguacate",
+      "censusMunicipality": "MX-MUN-12048",
+      "mappedMunicipality": "MX-MUN-12057"
+    },
+    {
+      "code": "120480722",
+      "name": "Los Renovales",
+      "censusMunicipality": "MX-MUN-12048",
+      "mappedMunicipality": "MX-MUN-12038"
+    },
+    {
+      "code": "120480726",
+      "name": "Los Lirios",
+      "censusMunicipality": "MX-MUN-12048",
+      "mappedMunicipality": "MX-MUN-12022"
+    },
+    {
+      "code": "120490048",
+      "name": "La Poza (El Puente)",
+      "censusMunicipality": "MX-MUN-12049",
+      "mappedMunicipality": "MX-MUN-12055"
+    },
+    {
+      "code": "120500011",
+      "name": "Placeritos",
+      "censusMunicipality": "MX-MUN-12050",
+      "mappedMunicipality": "MX-MUN-12027"
+    },
+    {
+      "code": "120520095",
+      "name": "El Manguito",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520096",
+      "name": "Mixtecapa",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520106",
+      "name": "Barrio de Guadalupe",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520107",
+      "name": "Cruz Alta",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520108",
+      "name": "Llano de Maguey",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520115",
+      "name": "Tierra Colorada",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520117",
+      "name": "Pie de Tierra Blanca (Tierra Blanca)",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520134",
+      "name": "Altepec",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120520156",
+      "name": "El Mirasol",
+      "censusMunicipality": "MX-MUN-12052",
+      "mappedMunicipality": "MX-MUN-12009"
+    },
+    {
+      "code": "120530003",
+      "name": "Altamira (El Frijolar)",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530004",
+      "name": "Alto de Ventura",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530008",
+      "name": "Arroyo de Limón",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530010",
+      "name": "Barranca Prieta",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530014",
+      "name": "Buena Vista del Sur",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530026",
+      "name": "Estero Verde",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530027",
+      "name": "La Granja (Las Piedritas)",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530030",
+      "name": "Las Lechugas",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530033",
+      "name": "Las Lomitas de Nexpa (Las Lomitas)",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530045",
+      "name": "Palomar de las Flores",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530054",
+      "name": "San José la Pala",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530067",
+      "name": "Las Vigas",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530070",
+      "name": "La Unión (Arroyo de la Unión)",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530096",
+      "name": "Espinalillo del Tenante (Espinalillo)",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530099",
+      "name": "Vista Alegre",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530100",
+      "name": "El Pacífico",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530104",
+      "name": "Las Pozas",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530105",
+      "name": "Las Ramaditas",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530117",
+      "name": "Sepudo",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530122",
+      "name": "El Linar",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530126",
+      "name": "El Papayo",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530129",
+      "name": "Rancho del Capitán",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530131",
+      "name": "Rancho Julio Estrada",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530157",
+      "name": "El Agostadero",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530161",
+      "name": "El Carrizo",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530169",
+      "name": "La Troja",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530173",
+      "name": "La Puerta del Charco",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530176",
+      "name": "El Arenal (Huerta los Ramírez)",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530179",
+      "name": "Tierra y Libertad",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530182",
+      "name": "Buenos Aires",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530188",
+      "name": "Rancho Marcelino Vázquez",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120530206",
+      "name": "Los Tabachines",
+      "censusMunicipality": "MX-MUN-12053",
+      "mappedMunicipality": "MX-MUN-12082"
+    },
+    {
+      "code": "120540340",
+      "name": "Las Trancas",
+      "censusMunicipality": "MX-MUN-12054",
+      "mappedMunicipality": "MX-MUN-12032"
+    },
+    {
+      "code": "120540372",
+      "name": "La Monera",
+      "censusMunicipality": "MX-MUN-12054",
+      "mappedMunicipality": "MX-MUN-12007"
+    },
+    {
+      "code": "120550135",
+      "name": "El Ancón",
+      "censusMunicipality": "MX-MUN-12055",
+      "mappedMunicipality": "MX-MUN-12037"
+    },
+    {
+      "code": "120550147",
+      "name": "La Güera",
+      "censusMunicipality": "MX-MUN-12055",
+      "mappedMunicipality": "MX-MUN-12015"
+    },
+    {
+      "code": "120550203",
+      "name": "San Francisco",
+      "censusMunicipality": "MX-MUN-12055",
+      "mappedMunicipality": "MX-MUN-12060"
+    },
+    {
+      "code": "120560052",
+      "name": "El Zanate",
+      "censusMunicipality": "MX-MUN-12056",
+      "mappedMunicipality": "MX-MUN-12012"
+    },
+    {
+      "code": "120570530",
+      "name": "San Isidro el Venado",
+      "censusMunicipality": "MX-MUN-12057",
+      "mappedMunicipality": "MX-MUN-12048"
+    },
+    {
+      "code": "120580142",
+      "name": "Puerto del Ocote",
+      "censusMunicipality": "MX-MUN-12058",
+      "mappedMunicipality": "MX-MUN-12031"
+    },
+    {
+      "code": "120580237",
+      "name": "Puerto del Timón",
+      "censusMunicipality": "MX-MUN-12058",
+      "mappedMunicipality": "MX-MUN-12007"
+    },
+    {
+      "code": "120580264",
+      "name": "Primera Cerca",
+      "censusMunicipality": "MX-MUN-12058",
+      "mappedMunicipality": "MX-MUN-12031"
+    },
+    {
+      "code": "120580297",
+      "name": "Miahuatepec",
+      "censusMunicipality": "MX-MUN-12058",
+      "mappedMunicipality": "MX-MUN-12007"
+    },
+    {
+      "code": "120580324",
+      "name": "Nueva Esperanza",
+      "censusMunicipality": "MX-MUN-12058",
+      "mappedMunicipality": "MX-MUN-12031"
+    },
+    {
+      "code": "120600034",
+      "name": "Bordo Mora",
+      "censusMunicipality": "MX-MUN-12060",
+      "mappedMunicipality": "MX-MUN-12049"
+    },
+    {
+      "code": "120610040",
+      "name": "Chalico (Rancho Chalico)",
+      "censusMunicipality": "MX-MUN-12061",
+      "mappedMunicipality": "MX-MUN-12029"
+    },
+    {
+      "code": "120620064",
+      "name": "El Aguacate (Camino a Xochistlahuaca)",
+      "censusMunicipality": "MX-MUN-12062",
+      "mappedMunicipality": "MX-MUN-12046"
+    },
+    {
+      "code": "120620080",
+      "name": "Barrio de Hoja Dura (Arroyo Chimalapa)",
+      "censusMunicipality": "MX-MUN-12062",
+      "mappedMunicipality": "MX-MUN-12043"
+    },
+    {
+      "code": "120630050",
+      "name": "La Magueyera",
+      "censusMunicipality": "MX-MUN-12063",
+      "mappedMunicipality": "MX-MUN-12041"
+    },
+    {
+      "code": "120660098",
+      "name": "San Miguelito",
+      "censusMunicipality": "MX-MUN-12066",
+      "mappedMunicipality": "MX-MUN-12069"
+    },
+    {
+      "code": "120680158",
+      "name": "El Ampotal",
+      "censusMunicipality": "MX-MUN-12068",
+      "mappedMunicipality": "MX-MUN-12016"
+    },
+    {
+      "code": "120680317",
+      "name": "El Capire",
+      "censusMunicipality": "MX-MUN-12068",
+      "mappedMunicipality": "MX-MUN-12016"
+    },
+    {
+      "code": "120690021",
+      "name": "El Mezquite",
+      "censusMunicipality": "MX-MUN-12069",
+      "mappedMunicipality": "MX-MUN-12066"
+    },
+    {
+      "code": "120710125",
+      "name": "Rancho las Tortolitas",
+      "censusMunicipality": "MX-MUN-12071",
+      "mappedMunicipality": "MX-MUN-12046"
+    },
+    {
+      "code": "120720064",
+      "name": "Llano Pericón",
+      "censusMunicipality": "MX-MUN-12072",
+      "mappedMunicipality": "MX-MUN-12010"
+    },
+    {
+      "code": "120720121",
+      "name": "El Rincón",
+      "censusMunicipality": "MX-MUN-12072",
+      "mappedMunicipality": "MX-MUN-12010"
+    },
+    {
+      "code": "120730651",
+      "name": "El Billete",
+      "censusMunicipality": "MX-MUN-12073",
+      "mappedMunicipality": "MX-MUN-12022"
+    },
+    {
+      "code": "120740034",
+      "name": "Totola",
+      "censusMunicipality": "MX-MUN-12074",
+      "mappedMunicipality": "MX-MUN-12028"
+    },
+    {
+      "code": "120750105",
+      "name": "Azteca",
+      "censusMunicipality": "MX-MUN-12075",
+      "mappedMunicipality": "MX-MUN-12029"
+    },
+    {
+      "code": "120760048",
+      "name": "El Capulín",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760052",
+      "name": "Loma Maguey",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760056",
+      "name": "Zilacayota",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760059",
+      "name": "Barranca Lima",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760060",
+      "name": "Barranca Mina",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760063",
+      "name": "Flor de Pascua",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760065",
+      "name": "Lázaro Cárdenas",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760069",
+      "name": "El Mirador",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760070",
+      "name": "Puerto Buenavista",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760072",
+      "name": "Tierra Colorada",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760078",
+      "name": "El Tejocote",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760081",
+      "name": "Lomadad",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760089",
+      "name": "Barranca Xoco",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760091",
+      "name": "Cerro el Maguey",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760096",
+      "name": "Colonia Ocote Capulín",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760103",
+      "name": "Laguna Potrero",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760106",
+      "name": "Llano Maizal",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760107",
+      "name": "Ojo de Agua",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760110",
+      "name": "San Marcos Yerba Santa",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760111",
+      "name": "Santa Rosa",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760113",
+      "name": "Yerba Santa",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760114",
+      "name": "Filo de Arena",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760116",
+      "name": "Loma del Ocote Dos",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760117",
+      "name": "Colonia Plan Verde",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760118",
+      "name": "Plan del Guayabo",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760119",
+      "name": "Rancho Porfirio de la Cruz",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760120",
+      "name": "Barranca Honda",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120760123",
+      "name": "Huixtlazala",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760131",
+      "name": "Río del Sauce",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760138",
+      "name": "Colonia Piedra Conejo",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12072"
+    },
+    {
+      "code": "120760139",
+      "name": "Laguna Seca",
+      "censusMunicipality": "MX-MUN-12076",
+      "mappedMunicipality": "MX-MUN-12063"
+    },
+    {
+      "code": "120790065",
+      "name": "Tonalteme",
+      "censusMunicipality": "MX-MUN-12079",
+      "mappedMunicipality": "MX-MUN-12028"
+    },
+    {
+      "code": "140190387",
+      "name": "El Potrero",
+      "censusMunicipality": "MX-MUN-14019",
+      "mappedMunicipality": "MX-MUN-14031"
+    },
+    {
+      "code": "140310206",
+      "name": "La Playa",
+      "censusMunicipality": "MX-MUN-14031",
+      "mappedMunicipality": "MX-MUN-14019"
+    },
+    {
+      "code": "140850128",
+      "name": "La Puerta Quemada",
+      "censusMunicipality": "MX-MUN-14085",
+      "mappedMunicipality": "MX-MUN-14112"
+    },
+    {
+      "code": "150740126",
+      "name": "Ejido del Tunal Nenaxi",
+      "censusMunicipality": "MX-MUN-15074",
+      "mappedMunicipality": "MX-MUN-15048"
+    },
+    {
+      "code": "150780042",
+      "name": "Frontón Vivero",
+      "censusMunicipality": "MX-MUN-15078",
+      "mappedMunicipality": "MX-MUN-15110"
+    },
+    {
+      "code": "150860082",
+      "name": "El Capulín",
+      "censusMunicipality": "MX-MUN-15086",
+      "mappedMunicipality": "MX-MUN-15118"
+    },
+    {
+      "code": "150870040",
+      "name": "Llano de la Y",
+      "censusMunicipality": "MX-MUN-15087",
+      "mappedMunicipality": "MX-MUN-15067"
+    },
+    {
+      "code": "150970051",
+      "name": "Las Lágrimas",
+      "censusMunicipality": "MX-MUN-15097",
+      "mappedMunicipality": "MX-MUN-15086"
+    },
+    {
+      "code": "170150060",
+      "name": "Colonia la Trilla",
+      "censusMunicipality": "MX-MUN-17015",
+      "mappedMunicipality": "MX-MUN-17014"
+    },
+    {
+      "code": "170260008",
+      "name": "Las Vivianas",
+      "censusMunicipality": "MX-MUN-17026",
+      "mappedMunicipality": "MX-MUN-17029"
+    },
+    {
+      "code": "170260059",
+      "name": "Colonia el Partidor (El Capulín)",
+      "censusMunicipality": "MX-MUN-17026",
+      "mappedMunicipality": "MX-MUN-17029"
+    },
+    {
+      "code": "170270020",
+      "name": "Zacatepec",
+      "censusMunicipality": "MX-MUN-17027",
+      "mappedMunicipality": "MX-MUN-17026"
+    },
+    {
+      "code": "170310018",
+      "name": "José Manuel Estrada [Casa Hogar]",
+      "censusMunicipality": "MX-MUN-17031",
+      "mappedMunicipality": "MX-MUN-17035"
+    },
+    {
+      "code": "200090012",
+      "name": "Plan Juan Martínez",
+      "censusMunicipality": "MX-MUN-20009",
+      "mappedMunicipality": "MX-MUN-20417"
+    },
+    {
+      "code": "200090013",
+      "name": "San José Mano Marqués",
+      "censusMunicipality": "MX-MUN-20009",
+      "mappedMunicipality": "MX-MUN-20417"
+    },
+    {
+      "code": "200260026",
+      "name": "Linda Vista",
+      "censusMunicipality": "MX-MUN-20026",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "200260027",
+      "name": "Unión y Progreso",
+      "censusMunicipality": "MX-MUN-20026",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "200280042",
+      "name": "La Escalera",
+      "censusMunicipality": "MX-MUN-20028",
+      "mappedMunicipality": "MX-MUN-20015"
+    },
+    {
+      "code": "200370044",
+      "name": "Santa Rosa Hidalgo",
+      "censusMunicipality": "MX-MUN-20037",
+      "mappedMunicipality": "MX-MUN-20073"
+    },
+    {
+      "code": "200390055",
+      "name": "San Sebastián Progreso",
+      "censusMunicipality": "MX-MUN-20039",
+      "mappedMunicipality": "MX-MUN-20462"
+    },
+    {
+      "code": "200390064",
+      "name": "San Francisco Yosocuta",
+      "censusMunicipality": "MX-MUN-20039",
+      "mappedMunicipality": "MX-MUN-20237"
+    },
+    {
+      "code": "200390065",
+      "name": "Saucitlán de Morelos",
+      "censusMunicipality": "MX-MUN-20039",
+      "mappedMunicipality": "MX-MUN-20160"
+    },
+    {
+      "code": "200410124",
+      "name": "Santa Catarina Buenavista",
+      "censusMunicipality": "MX-MUN-20041",
+      "mappedMunicipality": "MX-MUN-20040"
+    },
+    {
+      "code": "200430152",
+      "name": "Colonia San Isidro",
+      "censusMunicipality": "MX-MUN-20043",
+      "mappedMunicipality": "MX-MUN-20441"
+    },
+    {
+      "code": "200430153",
+      "name": "Colonia San Vicente",
+      "censusMunicipality": "MX-MUN-20043",
+      "mappedMunicipality": "MX-MUN-20441"
+    },
+    {
+      "code": "200590114",
+      "name": "Santa María el Palmar",
+      "censusMunicipality": "MX-MUN-20059",
+      "mappedMunicipality": "MX-MUN-20154"
+    },
+    {
+      "code": "200590115",
+      "name": "Sitio de Lachidoblas",
+      "censusMunicipality": "MX-MUN-20059",
+      "mappedMunicipality": "MX-MUN-20347"
+    },
+    {
+      "code": "200610002",
+      "name": "Santa María Velató",
+      "censusMunicipality": "MX-MUN-20061",
+      "mappedMunicipality": "MX-MUN-20015"
+    },
+    {
+      "code": "200730116",
+      "name": "El Carrizal de Galeana",
+      "censusMunicipality": "MX-MUN-20073",
+      "mappedMunicipality": "MX-MUN-20088"
+    },
+    {
+      "code": "200730119",
+      "name": "San Jorge Río Frijol",
+      "censusMunicipality": "MX-MUN-20073",
+      "mappedMunicipality": "MX-MUN-20469"
+    },
+    {
+      "code": "200730120",
+      "name": "San Miguel Copala",
+      "censusMunicipality": "MX-MUN-20073",
+      "mappedMunicipality": "MX-MUN-20469"
+    },
+    {
+      "code": "200730123",
+      "name": "Joya del Mamey Copala",
+      "censusMunicipality": "MX-MUN-20073",
+      "mappedMunicipality": "MX-MUN-20469"
+    },
+    {
+      "code": "200730124",
+      "name": "Llano de Aguacate",
+      "censusMunicipality": "MX-MUN-20073",
+      "mappedMunicipality": "MX-MUN-20469"
+    },
+    {
+      "code": "200880018",
+      "name": "El Limón",
+      "censusMunicipality": "MX-MUN-20088",
+      "mappedMunicipality": "MX-MUN-20447"
+    },
+    {
+      "code": "200980021",
+      "name": "Piedra Colorada",
+      "censusMunicipality": "MX-MUN-20098",
+      "mappedMunicipality": "MX-MUN-20330"
+    },
+    {
+      "code": "201100006",
+      "name": "Yosocahua",
+      "censusMunicipality": "MX-MUN-20110",
+      "mappedMunicipality": "MX-MUN-20397"
+    },
+    {
+      "code": "201230003",
+      "name": "San Jerónimo Tititlán",
+      "censusMunicipality": "MX-MUN-20123",
+      "mappedMunicipality": "MX-MUN-20570"
+    },
+    {
+      "code": "201410085",
+      "name": "Colonia Villanueva",
+      "censusMunicipality": "MX-MUN-20141",
+      "mappedMunicipality": "MX-MUN-20143"
+    },
+    {
+      "code": "201410099",
+      "name": "Santa Rita",
+      "censusMunicipality": "MX-MUN-20141",
+      "mappedMunicipality": "MX-MUN-20143"
+    },
+    {
+      "code": "201410100",
+      "name": "El Vergel del Maíz",
+      "censusMunicipality": "MX-MUN-20141",
+      "mappedMunicipality": "MX-MUN-20143"
+    },
+    {
+      "code": "201410106",
+      "name": "Puerto Grande",
+      "censusMunicipality": "MX-MUN-20141",
+      "mappedMunicipality": "MX-MUN-20143"
+    },
+    {
+      "code": "201430063",
+      "name": "Cachimbo",
+      "censusMunicipality": "MX-MUN-20143",
+      "mappedMunicipality": "MX-MUN-20141"
+    },
+    {
+      "code": "201540003",
+      "name": "La Reforma",
+      "censusMunicipality": "MX-MUN-20154",
+      "mappedMunicipality": "MX-MUN-20347"
+    },
+    {
+      "code": "201540005",
+      "name": "El Extebe",
+      "censusMunicipality": "MX-MUN-20154",
+      "mappedMunicipality": "MX-MUN-20347"
+    },
+    {
+      "code": "201560009",
+      "name": "Analco (Barrio de Villa Alta)",
+      "censusMunicipality": "MX-MUN-20156",
+      "mappedMunicipality": "MX-MUN-20128"
+    },
+    {
+      "code": "201660068",
+      "name": "Roberto Olivares Arellano",
+      "censusMunicipality": "MX-MUN-20166",
+      "mappedMunicipality": "MX-MUN-20417"
+    },
+    {
+      "code": "201880020",
+      "name": "La Soledad",
+      "censusMunicipality": "MX-MUN-20188",
+      "mappedMunicipality": "MX-MUN-20082"
+    },
+    {
+      "code": "201890004",
+      "name": "San Isidro Tres Arroyos",
+      "censusMunicipality": "MX-MUN-20189",
+      "mappedMunicipality": "MX-MUN-20460"
+    },
+    {
+      "code": "201900168",
+      "name": "Arroyo Venado",
+      "censusMunicipality": "MX-MUN-20190",
+      "mappedMunicipality": "MX-MUN-20205"
+    },
+    {
+      "code": "201980025",
+      "name": "Brena Torres",
+      "censusMunicipality": "MX-MUN-20198",
+      "mappedMunicipality": "MX-MUN-20207"
+    },
+    {
+      "code": "201980110",
+      "name": "Arroyo Lirio",
+      "censusMunicipality": "MX-MUN-20198",
+      "mappedMunicipality": "MX-MUN-20207"
+    },
+    {
+      "code": "201980112",
+      "name": "Nuevo Brena Torres",
+      "censusMunicipality": "MX-MUN-20198",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "201980113",
+      "name": "Colonia Istmeña el Zapote",
+      "censusMunicipality": "MX-MUN-20198",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "201980117",
+      "name": "Plan de San Luis",
+      "censusMunicipality": "MX-MUN-20198",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "202010002",
+      "name": "Las Delicias",
+      "censusMunicipality": "MX-MUN-20201",
+      "mappedMunicipality": "MX-MUN-20280"
+    },
+    {
+      "code": "202050085",
+      "name": "Arroyo Yolan",
+      "censusMunicipality": "MX-MUN-20205",
+      "mappedMunicipality": "MX-MUN-20498"
+    },
+    {
+      "code": "202070024",
+      "name": "12 de Julio",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "202070030",
+      "name": "La Esperanza",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "202070049",
+      "name": "Tierra Nueva",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "202070050",
+      "name": "Lázaro Cárdenas",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "202070079",
+      "name": "La Palestina",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "202070081",
+      "name": "Los Raudales",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20190"
+    },
+    {
+      "code": "202070088",
+      "name": "La Soledad",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20057"
+    },
+    {
+      "code": "202070089",
+      "name": "Los Valles",
+      "censusMunicipality": "MX-MUN-20207",
+      "mappedMunicipality": "MX-MUN-20412"
+    },
+    {
+      "code": "202140012",
+      "name": "Santiago Cuasimulco",
+      "censusMunicipality": "MX-MUN-20214",
+      "mappedMunicipality": "MX-MUN-20336"
+    },
+    {
+      "code": "202440013",
+      "name": "Inspectoría Independencia Guadalupe",
+      "censusMunicipality": "MX-MUN-20244",
+      "mappedMunicipality": "MX-MUN-20109"
+    },
+    {
+      "code": "202610022",
+      "name": "Guadalupe Villahermosa",
+      "censusMunicipality": "MX-MUN-20261",
+      "mappedMunicipality": "MX-MUN-20529"
+    },
+    {
+      "code": "202650069",
+      "name": "Los Ocotones",
+      "censusMunicipality": "MX-MUN-20265",
+      "mappedMunicipality": "MX-MUN-20407"
+    },
+    {
+      "code": "202660121",
+      "name": "Santa Catarina Jamixtepec",
+      "censusMunicipality": "MX-MUN-20266",
+      "mappedMunicipality": "MX-MUN-20125"
+    },
+    {
+      "code": "202730014",
+      "name": "El Tecolote",
+      "censusMunicipality": "MX-MUN-20273",
+      "mappedMunicipality": "MX-MUN-20108"
+    },
+    {
+      "code": "202750025",
+      "name": "Margarita Huitepec",
+      "censusMunicipality": "MX-MUN-20275",
+      "mappedMunicipality": "MX-MUN-20231"
+    },
+    {
+      "code": "202900006",
+      "name": "San Pedro Salinas",
+      "censusMunicipality": "MX-MUN-20290",
+      "mappedMunicipality": "MX-MUN-20034"
+    },
+    {
+      "code": "202910007",
+      "name": "Tamarindo",
+      "censusMunicipality": "MX-MUN-20291",
+      "mappedMunicipality": "MX-MUN-20344"
+    },
+    {
+      "code": "202980008",
+      "name": "Don Pedrillo",
+      "censusMunicipality": "MX-MUN-20298",
+      "mappedMunicipality": "MX-MUN-20551"
+    },
+    {
+      "code": "203240235",
+      "name": "Los Naranjos Esquipulas",
+      "censusMunicipality": "MX-MUN-20324",
+      "mappedMunicipality": "MX-MUN-20306"
+    },
+    {
+      "code": "203240237",
+      "name": "San Pedro Cafetitlán",
+      "censusMunicipality": "MX-MUN-20324",
+      "mappedMunicipality": "MX-MUN-20253"
+    },
+    {
+      "code": "203240238",
+      "name": "Unión de Guerrero",
+      "censusMunicipality": "MX-MUN-20324",
+      "mappedMunicipality": "MX-MUN-20253"
+    },
+    {
+      "code": "203300010",
+      "name": "San José Despoblado",
+      "censusMunicipality": "MX-MUN-20330",
+      "mappedMunicipality": "MX-MUN-20098"
+    },
+    {
+      "code": "203360021",
+      "name": "El Carrizal",
+      "censusMunicipality": "MX-MUN-20336",
+      "mappedMunicipality": "MX-MUN-20001"
+    },
+    {
+      "code": "203390027",
+      "name": "Santo Domingo Tlachitongo",
+      "censusMunicipality": "MX-MUN-20339",
+      "mappedMunicipality": "MX-MUN-20140"
+    },
+    {
+      "code": "203640109",
+      "name": "San Lucas el Vidrio",
+      "censusMunicipality": "MX-MUN-20364",
+      "mappedMunicipality": "MX-MUN-20202"
+    },
+    {
+      "code": "203850095",
+      "name": "San Juan [Colonia]",
+      "censusMunicipality": "MX-MUN-20385",
+      "mappedMunicipality": "MX-MUN-20310"
+    },
+    {
+      "code": "203850096",
+      "name": "El Nanche",
+      "censusMunicipality": "MX-MUN-20385",
+      "mappedMunicipality": "MX-MUN-20310"
+    },
+    {
+      "code": "203850099",
+      "name": "Miguel Cruz José [Colonia]",
+      "censusMunicipality": "MX-MUN-20385",
+      "mappedMunicipality": "MX-MUN-20310"
+    },
+    {
+      "code": "203850100",
+      "name": "El Bosque",
+      "censusMunicipality": "MX-MUN-20385",
+      "mappedMunicipality": "MX-MUN-20310"
+    },
+    {
+      "code": "203920043",
+      "name": "El Paraíso Nopalera",
+      "censusMunicipality": "MX-MUN-20392",
+      "mappedMunicipality": "MX-MUN-20481"
+    },
+    {
+      "code": "203970105",
+      "name": "Mexicalcingo de los Granados",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20532"
+    },
+    {
+      "code": "203970108",
+      "name": "San Felipe Tindaco",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "203970109",
+      "name": "San Pedro Yosotatu",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20481"
+    },
+    {
+      "code": "203970110",
+      "name": "Santo Domingo Huendío",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20050"
+    },
+    {
+      "code": "203970114",
+      "name": "San José (Llano de Plaza)",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "203970116",
+      "name": "Loma Snuviji",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "203970118",
+      "name": "Nuñuma",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "203970120",
+      "name": "Yucahua",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "203970122",
+      "name": "Yutendoo",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "203970136",
+      "name": "San José Patriarca",
+      "censusMunicipality": "MX-MUN-20397",
+      "mappedMunicipality": "MX-MUN-20297"
+    },
+    {
+      "code": "204030011",
+      "name": "El Higo Montes [Paraje]",
+      "censusMunicipality": "MX-MUN-20403",
+      "mappedMunicipality": "MX-MUN-20083"
+    },
+    {
+      "code": "204060038",
+      "name": "Zongolica",
+      "censusMunicipality": "MX-MUN-20406",
+      "mappedMunicipality": "MX-MUN-20041"
+    },
+    {
+      "code": "204060090",
+      "name": "La Raya",
+      "censusMunicipality": "MX-MUN-20406",
+      "mappedMunicipality": "MX-MUN-20041"
+    },
+    {
+      "code": "204170063",
+      "name": "El Manantial",
+      "censusMunicipality": "MX-MUN-20417",
+      "mappedMunicipality": "MX-MUN-20184"
+    },
+    {
+      "code": "204200009",
+      "name": "Rincón Hacienda Vieja",
+      "censusMunicipality": "MX-MUN-20420",
+      "mappedMunicipality": "MX-MUN-20535"
+    },
+    {
+      "code": "204200010",
+      "name": "Loma Larga",
+      "censusMunicipality": "MX-MUN-20420",
+      "mappedMunicipality": "MX-MUN-20535"
+    },
+    {
+      "code": "204260016",
+      "name": "El Manzanito",
+      "censusMunicipality": "MX-MUN-20426",
+      "mappedMunicipality": "MX-MUN-20273"
+    },
+    {
+      "code": "204530011",
+      "name": "Barra de la Cruz",
+      "censusMunicipality": "MX-MUN-20453",
+      "mappedMunicipality": "MX-MUN-20307"
+    },
+    {
+      "code": "204530012",
+      "name": "Zimatán",
+      "censusMunicipality": "MX-MUN-20453",
+      "mappedMunicipality": "MX-MUN-20307"
+    },
+    {
+      "code": "204690116",
+      "name": "Santo Domingo del Progreso",
+      "censusMunicipality": "MX-MUN-20469",
+      "mappedMunicipality": "MX-MUN-20208"
+    },
+    {
+      "code": "204920024",
+      "name": "Guadalupe Llano de las Avispas",
+      "censusMunicipality": "MX-MUN-20492",
+      "mappedMunicipality": "MX-MUN-20046"
+    },
+    {
+      "code": "204940066",
+      "name": "Santiago Huaxolotipac",
+      "censusMunicipality": "MX-MUN-20494",
+      "mappedMunicipality": "MX-MUN-20108"
+    },
+    {
+      "code": "205150114",
+      "name": "Santa María Nativitas Coatlán",
+      "censusMunicipality": "MX-MUN-20515",
+      "mappedMunicipality": "MX-MUN-20470"
+    },
+    {
+      "code": "205170009",
+      "name": "Loma Larga",
+      "censusMunicipality": "MX-MUN-20517",
+      "mappedMunicipality": "MX-MUN-20337"
+    },
+    {
+      "code": "205170010",
+      "name": "Loma Linda",
+      "censusMunicipality": "MX-MUN-20517",
+      "mappedMunicipality": "MX-MUN-20325"
+    },
+    {
+      "code": "205260101",
+      "name": "San Isidro Campechero",
+      "censusMunicipality": "MX-MUN-20526",
+      "mappedMunicipality": "MX-MUN-20334"
+    },
+    {
+      "code": "205530024",
+      "name": "Santa Catalina de Sena",
+      "censusMunicipality": "MX-MUN-20553",
+      "mappedMunicipality": "MX-MUN-20519"
+    },
+    {
+      "code": "205700020",
+      "name": "La Cumbre Clavellinas",
+      "censusMunicipality": "MX-MUN-20570",
+      "mappedMunicipality": "MX-MUN-20292"
+    },
+    {
+      "code": "205700096",
+      "name": "San José Guelatová de Díaz",
+      "censusMunicipality": "MX-MUN-20570",
+      "mappedMunicipality": "MX-MUN-20387"
+    },
+    {
+      "code": "240280229",
+      "name": "Bosques la Florida",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280232",
+      "name": "Los Gómez",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280237",
+      "name": "San Nicolás de los Jassos",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280239",
+      "name": "Laguna de Santa Rita",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280260",
+      "name": "Panalillo",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280345",
+      "name": "La Presilla",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280346",
+      "name": "Rancho las Maravillas",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280349",
+      "name": "El Guerrero",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280351",
+      "name": "Tanque el Jagüey",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280520",
+      "name": "La Pasadita",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280546",
+      "name": "Los Blancos (Enrique Tapia)",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280582",
+      "name": "Los Olivos",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280617",
+      "name": "Bosque de las Flores",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280626",
+      "name": "El Lindero (Santiago Gutiérrez Alvizu)",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280630",
+      "name": "San Antonio (El Castañon)",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280638",
+      "name": "La Libertad (Pozos)",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280656",
+      "name": "Barrio Casanova",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280660",
+      "name": "Antonio Maya",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280674",
+      "name": "Monterreal",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280684",
+      "name": "Coyonostal",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280691",
+      "name": "El Montecillo",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "240280692",
+      "name": "El Palmarito",
+      "censusMunicipality": "MX-MUN-24028",
+      "mappedMunicipality": "MX-MUN-24059"
+    },
+    {
+      "code": "250010136",
+      "name": "El Estero (Juan José Ríos)",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010259",
+      "name": "Arrocera Mochis",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010447",
+      "name": "Ejido Bachoco Número Dos (Macochín)",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010448",
+      "name": "Lázaro Cárdenas (Muellecito)",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010489",
+      "name": "El Sifón (Agiamove)",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010500",
+      "name": "Cerro Batequis",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010514",
+      "name": "Carrizo Grande",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010532",
+      "name": "Ejido Cerro Cabezón (El Chorrito)",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010560",
+      "name": "Loma Escondida",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010591",
+      "name": "El Pujido",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010604",
+      "name": "San Ignacio [Club Náutico]",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010631",
+      "name": "El Tubo",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010632",
+      "name": "Las Vacas Viejas",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010720",
+      "name": "Luis Tachna Weiner [Empaque]",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010834",
+      "name": "Las Presitas",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010897",
+      "name": "Campo el Tranquilo",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010905",
+      "name": "El Gallo [Empaque Agrícola]",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010923",
+      "name": "El Columpio",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250010947",
+      "name": "Pueblo Nuevo Luis Echeverría",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250011033",
+      "name": "La Doscientos [Pista Aérea]",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250011046",
+      "name": "El Capuli",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250011182",
+      "name": "Campo del Doctor",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250011184",
+      "name": "Campo Romo",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250011350",
+      "name": "Acuícola San Ricardo",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250011373",
+      "name": "Parque Acuícola [Josefina Navarro]",
+      "censusMunicipality": "MX-MUN-25001",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250060004",
+      "name": "Callejón de Hacienda Redo",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060133",
+      "name": "Las Arenitas",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060305",
+      "name": "El Conchal",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060315",
+      "name": "La Cruz de Eldorado (Cruz de Navito)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060318",
+      "name": "El Cuervo",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060341",
+      "name": "Eldorado",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060360",
+      "name": "Ejido la Flor",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060391",
+      "name": "El Higueral",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060438",
+      "name": "Leopoldo Sánchez Celis",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060468",
+      "name": "El Manguito",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060505",
+      "name": "Navito",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060506",
+      "name": "Navolatillo",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060551",
+      "name": "Las Piedritas",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060569",
+      "name": "Portaceli",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060614",
+      "name": "El Rosarito",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060616",
+      "name": "Campo Rosita",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060638",
+      "name": "San Diego",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060647",
+      "name": "Ejido San Joaquín",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060657",
+      "name": "San Manuel",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060724",
+      "name": "Las Tres Gotas de Agua",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060903",
+      "name": "San Miguel",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060993",
+      "name": "La Mojonera",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250060997",
+      "name": "Soyatita (Cruz Segunda)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061044",
+      "name": "El Robalar",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061095",
+      "name": "Ejido la Arrocera",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061096",
+      "name": "Granja Bachoco Pollo 15",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061168",
+      "name": "Nuevo Higueral",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061221",
+      "name": "Campo Sarita",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061298",
+      "name": "El Cangrejo (Plutarco Elías Calles)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061364",
+      "name": "Campo Agrícola las Flores",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061384",
+      "name": "Guadalupe Victoria (El Atorón)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061439",
+      "name": "El Mango",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061442",
+      "name": "Campo Masomenos",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061453",
+      "name": "Miramar",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061472",
+      "name": "Las Palmas",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061480",
+      "name": "Campo el Paraíso",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061488",
+      "name": "El Perical (Los Babaquis)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061521",
+      "name": "Ejido Rebeca Dos (Metesaca)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061556",
+      "name": "Campo San Martín",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061574",
+      "name": "Santa Rita (Tableta)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061582",
+      "name": "Santo Niño",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061590",
+      "name": "Sibirijoa",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061621",
+      "name": "Campo Santa Teresa (El Trece)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250061695",
+      "name": "Soyatita",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062072",
+      "name": "Caballo Blanco",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062127",
+      "name": "El Saucito Nuevo",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062221",
+      "name": "La Compuerta",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062262",
+      "name": "Ponce",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062383",
+      "name": "El Nuevo Trece",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062385",
+      "name": "Ninguno [La Envasadora]",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062404",
+      "name": "Casa de Bombeo",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062450",
+      "name": "La Flor (Metesaca)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062777",
+      "name": "Campo Rebeca",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062800",
+      "name": "Hacienda Redo",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250062812",
+      "name": "Camino a San Manuel",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063182",
+      "name": "Agua Buena",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063183",
+      "name": "Santa Martha (Los Coquitos)",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063221",
+      "name": "Campo Chapo II",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063240",
+      "name": "Marien [Acuícola]",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063241",
+      "name": "El Abuelo [Agrícola]",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063261",
+      "name": "La Bomba",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063269",
+      "name": "Las Isabeles",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063297",
+      "name": "Los Solares",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063300",
+      "name": "Poblado el Vigía",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063356",
+      "name": "El Chino [Rancho]",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063407",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063448",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063538",
+      "name": "Rancho Villegas",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250063539",
+      "name": "Santa Paula",
+      "censusMunicipality": "MX-MUN-25006",
+      "mappedMunicipality": "MX-MUN-25019"
+    },
+    {
+      "code": "250100005",
+      "name": "Agua de las Arenas",
+      "censusMunicipality": "MX-MUN-25010",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250100207",
+      "name": "Tres Garantías",
+      "censusMunicipality": "MX-MUN-25010",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250101326",
+      "name": "Las Bombitas",
+      "censusMunicipality": "MX-MUN-25010",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250101397",
+      "name": "Santa Cecilia",
+      "censusMunicipality": "MX-MUN-25010",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250101456",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-25010",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110049",
+      "name": "Bachoco",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110065",
+      "name": "El Cerro Cabezón",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110074",
+      "name": "Ejido Treinta y Ochito",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110138",
+      "name": "Juan José Ríos",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110152",
+      "name": "Los Juncos",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110299",
+      "name": "Héroes Mexicanos",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110332",
+      "name": "Babujaqui",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110430",
+      "name": "Guayparime",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110666",
+      "name": "Santa Veneranda",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110715",
+      "name": "Ninguno [Los González]",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110778",
+      "name": "Campo las Margaritas",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110807",
+      "name": "Campo el Porvenir",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110822",
+      "name": "El Rocío",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110829",
+      "name": "Agroproductores Cadena",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110873",
+      "name": "Campo Cadena",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250110973",
+      "name": "La Huerta (Los Juncos)",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111032",
+      "name": "Campo Treinta y Ocho",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111066",
+      "name": "Sergio León [Campo]",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111105",
+      "name": "La Trescientos",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111115",
+      "name": "Campo Murrieta",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111134",
+      "name": "Las Margaritas Dos",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111144",
+      "name": "Campo las Palmas",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111149",
+      "name": "Rufino Félix [Campo]",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111157",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111160",
+      "name": "Kilómetro 45",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111167",
+      "name": "Ninguno [Agrícola]",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111192",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111194",
+      "name": "Cota y Cota",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111273",
+      "name": "El Paraíso (La Chirimilla)",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111300",
+      "name": "El Aparecido",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111352",
+      "name": "Bugambilias",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111353",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111360",
+      "name": "San Judas",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111409",
+      "name": "Ninguno [Epitacio Vences Guzmán]",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250111411",
+      "name": "Ninguno",
+      "censusMunicipality": "MX-MUN-25011",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250171522",
+      "name": "El Amapal",
+      "censusMunicipality": "MX-MUN-25017",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "250171811",
+      "name": "Los Tres Álamos",
+      "censusMunicipality": "MX-MUN-25017",
+      "mappedMunicipality": "MX-MUN-25020"
+    },
+    {
+      "code": "290200055",
+      "name": "NCP Álvaro Obregón",
+      "censusMunicipality": "MX-MUN-29020",
+      "mappedMunicipality": "MX-MUN-29045"
+    },
+    {
+      "code": "290520017",
+      "name": "El Santuario",
+      "censusMunicipality": "MX-MUN-29052",
+      "mappedMunicipality": "MX-MUN-29010"
+    },
+    {
+      "code": "300090238",
+      "name": "Arroyo Agrio",
+      "censusMunicipality": "MX-MUN-30009",
+      "mappedMunicipality": "MX-MUN-30004"
+    },
+    {
+      "code": "300100047",
+      "name": "Colonia Ejidal Guadalupe Victoria",
+      "censusMunicipality": "MX-MUN-30010",
+      "mappedMunicipality": "MX-MUN-30163"
+    },
+    {
+      "code": "300560043",
+      "name": "La Coronilla",
+      "censusMunicipality": "MX-MUN-30056",
+      "mappedMunicipality": "MX-MUN-30129"
+    },
+    {
+      "code": "300580339",
+      "name": "Lindero Achupil",
+      "censusMunicipality": "MX-MUN-30058",
+      "mappedMunicipality": "MX-MUN-30027"
+    },
+    {
+      "code": "300590216",
+      "name": "El Porvenir",
+      "censusMunicipality": "MX-MUN-30059",
+      "mappedMunicipality": "MX-MUN-30120"
+    },
+    {
+      "code": "300590218",
+      "name": "Las Adelfas",
+      "censusMunicipality": "MX-MUN-30059",
+      "mappedMunicipality": "MX-MUN-30120"
+    },
+    {
+      "code": "300590220",
+      "name": "Oteapan [Gasolinera]",
+      "censusMunicipality": "MX-MUN-30059",
+      "mappedMunicipality": "MX-MUN-30120"
+    },
+    {
+      "code": "300590221",
+      "name": "Predio Viveros",
+      "censusMunicipality": "MX-MUN-30059",
+      "mappedMunicipality": "MX-MUN-30120"
+    },
+    {
+      "code": "300611269",
+      "name": "Cuauhtémoc Km. 17",
+      "censusMunicipality": "MX-MUN-30061",
+      "mappedMunicipality": "MX-MUN-30111"
+    },
+    {
+      "code": "300630048",
+      "name": "Tamalcuatitla",
+      "censusMunicipality": "MX-MUN-30063",
+      "mappedMunicipality": "MX-MUN-30078"
+    },
+    {
+      "code": "300690019",
+      "name": "Paguas de Coronado",
+      "censusMunicipality": "MX-MUN-30069",
+      "mappedMunicipality": "MX-MUN-30124"
+    },
+    {
+      "code": "300950094",
+      "name": "El Recuerdo",
+      "censusMunicipality": "MX-MUN-30095",
+      "mappedMunicipality": "MX-MUN-30009"
+    },
+    {
+      "code": "301410174",
+      "name": "Vista Hermosa II",
+      "censusMunicipality": "MX-MUN-30141",
+      "mappedMunicipality": "MX-MUN-30073"
+    },
+    {
+      "code": "301710004",
+      "name": "Atzingo",
+      "censusMunicipality": "MX-MUN-30171",
+      "mappedMunicipality": "MX-MUN-30110"
+    },
+    {
+      "code": "302010155",
+      "name": "Almolonga",
+      "censusMunicipality": "MX-MUN-30201",
+      "mappedMunicipality": "MX-MUN-30173"
+    },
+    {
+      "code": "302100121",
+      "name": "Rafael Murillo Vidal",
+      "censusMunicipality": "MX-MUN-30210",
+      "mappedMunicipality": "MX-MUN-30108"
+    },
+    {
+      "code": "310090003",
+      "name": "San Antonio Xiat",
+      "censusMunicipality": "MX-MUN-31009",
+      "mappedMunicipality": "MX-MUN-31072"
+    },
+    {
+      "code": "310140040",
+      "name": "X-Akabchén",
+      "censusMunicipality": "MX-MUN-31014",
+      "mappedMunicipality": "MX-MUN-31017"
+    },
+    {
+      "code": "310170014",
+      "name": "X-Bohom",
+      "censusMunicipality": "MX-MUN-31017",
+      "mappedMunicipality": "MX-MUN-31043"
+    },
+    {
+      "code": "310170083",
+      "name": "Muchucuxcáh",
+      "censusMunicipality": "MX-MUN-31017",
+      "mappedMunicipality": "MX-MUN-31081"
+    },
+    {
+      "code": "310300076",
+      "name": "Yaxché",
+      "censusMunicipality": "MX-MUN-31030",
+      "mappedMunicipality": "MX-MUN-31091"
+    },
+    {
+      "code": "310480010",
+      "name": "Kanachén",
+      "censusMunicipality": "MX-MUN-31048",
+      "mappedMunicipality": "MX-MUN-31045"
+    },
+    {
+      "code": "310480018",
+      "name": "Santa Cruz",
+      "censusMunicipality": "MX-MUN-31048",
+      "mappedMunicipality": "MX-MUN-31055"
+    },
+    {
+      "code": "310560149",
+      "name": "Huntochac",
+      "censusMunicipality": "MX-MUN-31056",
+      "mappedMunicipality": "MX-MUN-31079"
+    },
+    {
+      "code": "310670046",
+      "name": "Holactún",
+      "censusMunicipality": "MX-MUN-31067",
+      "mappedMunicipality": "MX-MUN-31074"
+    },
+    {
+      "code": "310760011",
+      "name": "Sotuta de Peón",
+      "censusMunicipality": "MX-MUN-31076",
+      "mappedMunicipality": "MX-MUN-31050"
+    },
+    {
+      "code": "310810011",
+      "name": "X-Cocmil",
+      "censusMunicipality": "MX-MUN-31081",
+      "mappedMunicipality": "MX-MUN-31022"
+    },
+    {
+      "code": "310920004",
+      "name": "Ekpedz",
+      "censusMunicipality": "MX-MUN-31092",
+      "mappedMunicipality": "MX-MUN-31022"
+    },
+    {
+      "code": "310940005",
+      "name": "Chicán",
+      "censusMunicipality": "MX-MUN-31094",
+      "mappedMunicipality": "MX-MUN-31075"
+    },
+    {
+      "code": "310980039",
+      "name": "Xcobiakal (Xcobilakal)",
+      "censusMunicipality": "MX-MUN-31098",
+      "mappedMunicipality": "MX-MUN-31058"
+    },
+    {
+      "code": "311010013",
+      "name": "San Antonio Mulix",
+      "censusMunicipality": "MX-MUN-31101",
+      "mappedMunicipality": "MX-MUN-31023"
+    },
+    {
+      "code": "311020149",
+      "name": "X-Cohuó",
+      "censusMunicipality": "MX-MUN-31102",
+      "mappedMunicipality": "MX-MUN-31019"
+    },
+    {
+      "code": "311020631",
+      "name": "Bolmay",
+      "censusMunicipality": "MX-MUN-31102",
+      "mappedMunicipality": "MX-MUN-31019"
+    },
+    {
+      "code": "311020655",
+      "name": "Santa Eleuteria",
+      "censusMunicipality": "MX-MUN-31102",
+      "mappedMunicipality": "MX-MUN-31014"
+    },
+    {
+      "code": "320170319",
+      "name": "Huertas del Bordo",
+      "censusMunicipality": "MX-MUN-32017",
+      "mappedMunicipality": "MX-MUN-32050"
+    }
+  ],
+  "outsideMappedLand": [
+    {
+      "code": "020021327",
+      "name": "Eligio Esquivel",
+      "parentId": "MX-MUN-02002",
+      "distanceMetres": 18,
+      "method": "Retained official 2020 census municipality link; reference coordinates unchanged"
+    },
+    {
+      "code": "070680102",
+      "name": "Platanar Abajo 2da. Sección (Unidad Chiapaneca)",
+      "parentId": "MX-MUN-07068",
+      "distanceMetres": 226,
+      "method": "Retained official 2020 census municipality link; reference coordinates unchanged"
+    },
+    {
+      "code": "130070055",
+      "name": "Las Vigas",
+      "parentId": "MX-MUN-13007",
+      "distanceMetres": 1,
+      "method": "Retained official 2020 census municipality link; reference coordinates unchanged"
+    },
+    {
+      "code": "210760057",
+      "name": "El Mohón",
+      "parentId": "MX-MUN-21076",
+      "distanceMetres": 3,
+      "method": "Retained official 2020 census municipality link; reference coordinates unchanged"
+    }
+  ],
+  "excluded": [],
+  "populationTotal": 126014024
+}

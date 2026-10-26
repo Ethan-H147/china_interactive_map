@@ -1,0 +1,26 @@
+{
+  "retrieved": "2026-10-26",
+  "snapshot": 2020,
+  "title": "INEGI · Censo de Población y Vivienda 2020, Principales resultados por localidad (ITER)",
+  "url": "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip",
+  "documentation": "https://www.inegi.org.mx/programas/ccpv/2020/#datos_abiertos",
+  "license": "INEGI free use with attribution",
+  "archiveSha256": "9342fdbd45bda5897f2b827a12904843b6f8fb85d4e72da299e09e4d2422ab60",
+  "archiveBytes": 36615814,
+  "member": "iter_00_cpv2020/conjunto_de_datos/conjunto_de_datos_iter_00CSV20.csv",
+  "fields": [
+    "ENTIDAD",
+    "NOM_ENT",
+    "MUN",
+    "NOM_MUN",
+    "LOC",
+    "NOM_LOC",
+    "LONGITUD",
+    "LATITUD",
+    "ALTITUD",
+    "POBTOT"
+  ],
+  "records": 189432,
+  "retainedSha256": "c225a2ea36c5765f895cbc13639ed85d5c73ce88aa8496b2d0544c8dcdb5bcd4",
+  "processing": "All 189,432 named census locality rows. Excludes national/state/municipal totals and aggregate codes 0000, 9998 and 9999. Retains published names, 2020 municipality codes, DMS reference coordinates and total population. No population cutoff."
+}

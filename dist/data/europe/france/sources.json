@@ -1617,5 +1617,10 @@
   "alpineLakes": {
     "source": "data/alpine-lakes-sources.json",
     "policy": "Mapped lake surfaces are excluded from land at every administrative level. No lake shoreline stroke is added; survey identities and statistics are retained."
+  },
+  "guianaFrontierReconciliation": {
+    "source": "data/guiana-frontier.json",
+    "referenceOwner": "france",
+    "method": "One complete French Guiana outline arc replaces fragmented French strokes and the separate Brazil-owned copy. The nearby rainforest tripoint joins the surviving Brazil–Suriname stroke. Administrative land geometry is unchanged."
   }
 }

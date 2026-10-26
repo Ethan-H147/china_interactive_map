@@ -1,0 +1,1518 @@
+{
+  "retrieved": "2026-10-26T21:05:39.029Z",
+  "source": "https://ws.geonorge.no/stedsnavn/v1/",
+  "product": "https://www.kartverket.no/api-og-data/stedsnavndata",
+  "license": "CC BY 4.0",
+  "credit": "Kartverket · Sentralt stedsnavnregister",
+  "types": [
+    "by",
+    "tettsted",
+    "tettbebyggelse",
+    "grend",
+    "bygdelagBygd"
+  ],
+  "counts": {
+    "by": 110,
+    "grend": 2955,
+    "tettsted": 789,
+    "tettbebyggelse": 944,
+    "bygdelagBygd": 1864
+  },
+  "total": 6662,
+  "requests": [
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=11&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 261,
+      "returned": 261,
+      "file": "complete-fnr-11-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=40&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 317,
+      "returned": 317,
+      "file": "complete-fnr-40-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=31&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 132,
+      "returned": 132,
+      "file": "complete-fnr-31-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=42&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1032,
+      "returned": 500,
+      "file": "complete-fnr-42-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4201&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-4201-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4202&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-4202-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=33&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 222,
+      "returned": 222,
+      "file": "complete-fnr-33-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4213&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-4213-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4214&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-4214-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4215&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-4215-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=18&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1040,
+      "returned": 500,
+      "file": "complete-fnr-18-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=15&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 418,
+      "returned": 418,
+      "file": "complete-fnr-15-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4216&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-4216-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1871&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-1871-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4217&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-4217-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1874&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-1874-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4218&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 3,
+      "returned": 3,
+      "file": "complete-knr-4218-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1875&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 31,
+      "returned": 31,
+      "file": "complete-knr-1875-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=32&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 358,
+      "returned": 358,
+      "file": "complete-fnr-32-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4219&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-4219-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1804&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 35,
+      "returned": 35,
+      "file": "complete-knr-1804-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4220&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 20,
+      "returned": 20,
+      "file": "complete-knr-4220-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1806&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 49,
+      "returned": 49,
+      "file": "complete-knr-1806-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4221&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-4221-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1811&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-1811-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4222&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 19,
+      "returned": 19,
+      "file": "complete-knr-4222-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1812&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-1812-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4223&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 26,
+      "returned": 26,
+      "file": "complete-knr-4223-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=34&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1120,
+      "returned": 500,
+      "file": "complete-fnr-34-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1813&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-1813-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4224&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-4224-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3401&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 25,
+      "returned": 25,
+      "file": "complete-knr-3401-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1815&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 2,
+      "returned": 2,
+      "file": "complete-knr-1815-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4225&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 36,
+      "returned": 36,
+      "file": "complete-knr-4225-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3403&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-3403-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1816&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 4,
+      "returned": 4,
+      "file": "complete-knr-1816-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4226&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-4226-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1818&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-1818-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3405&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 23,
+      "returned": 23,
+      "file": "complete-knr-3405-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4227&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 25,
+      "returned": 25,
+      "file": "complete-knr-4227-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1820&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-1820-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3407&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-3407-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4228&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-4228-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1822&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-1822-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3411&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 23,
+      "returned": 23,
+      "file": "complete-knr-3411-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4203&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 46,
+      "returned": 46,
+      "file": "complete-knr-4203-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1824&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 29,
+      "returned": 29,
+      "file": "complete-knr-1824-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3412&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 17,
+      "returned": 17,
+      "file": "complete-knr-3412-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4204&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 93,
+      "returned": 93,
+      "file": "complete-knr-4204-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1825&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-1825-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3413&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-3413-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1826&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 3,
+      "returned": 3,
+      "file": "complete-knr-1826-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3414&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-3414-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4205&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 88,
+      "returned": 88,
+      "file": "complete-knr-4205-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1827&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-1827-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3415&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-3415-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4206&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 39,
+      "returned": 39,
+      "file": "complete-knr-4206-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1828&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-1828-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3416&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-3416-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4207&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 50,
+      "returned": 50,
+      "file": "complete-knr-4207-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1832&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-1832-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3417&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-3417-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4211&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-4211-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1833&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 44,
+      "returned": 44,
+      "file": "complete-knr-1833-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3418&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 42,
+      "returned": 42,
+      "file": "complete-knr-3418-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4212&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 2,
+      "returned": 2,
+      "file": "complete-knr-4212-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1834&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-1834-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3419&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 19,
+      "returned": 19,
+      "file": "complete-knr-3419-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=39&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 110,
+      "returned": 110,
+      "file": "complete-fnr-39-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1835&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 3,
+      "returned": 3,
+      "file": "complete-knr-1835-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3420&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 26,
+      "returned": 26,
+      "file": "complete-knr-3420-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=03&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 102,
+      "returned": 102,
+      "file": "complete-fnr-03-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1836&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-1836-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3421&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 40,
+      "returned": 40,
+      "file": "complete-knr-3421-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1837&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 19,
+      "returned": 19,
+      "file": "complete-knr-1837-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3422&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 17,
+      "returned": 17,
+      "file": "complete-knr-3422-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1838&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-1838-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3423&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 20,
+      "returned": 20,
+      "file": "complete-knr-3423-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1839&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 3,
+      "returned": 3,
+      "file": "complete-knr-1839-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3424&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 18,
+      "returned": 18,
+      "file": "complete-knr-3424-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=55&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 592,
+      "returned": 500,
+      "file": "complete-fnr-55-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1840&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-1840-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3425&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-3425-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5510&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-5510-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1841&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-1841-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3426&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 18,
+      "returned": 18,
+      "file": "complete-knr-3426-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5512&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 46,
+      "returned": 46,
+      "file": "complete-knr-5512-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1845&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 24,
+      "returned": 24,
+      "file": "complete-knr-1845-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3427&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 20,
+      "returned": 20,
+      "file": "complete-knr-3427-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1848&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 20,
+      "returned": 20,
+      "file": "complete-knr-1848-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5514&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 20,
+      "returned": 20,
+      "file": "complete-knr-5514-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3428&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-3428-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1851&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-1851-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5516&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 18,
+      "returned": 18,
+      "file": "complete-knr-5516-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3429&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-3429-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5518&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-5518-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1853&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-1853-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3430&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-3430-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5520&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 4,
+      "returned": 4,
+      "file": "complete-knr-5520-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1856&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1,
+      "returned": 1,
+      "file": "complete-knr-1856-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3431&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-3431-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1857&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 3,
+      "returned": 3,
+      "file": "complete-knr-1857-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5522&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 18,
+      "returned": 18,
+      "file": "complete-knr-5522-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3432&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-3432-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1859&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-1859-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5524&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 28,
+      "returned": 28,
+      "file": "complete-knr-5524-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3433&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-3433-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5526&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-5526-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3434&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-3434-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1860&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 48,
+      "returned": 48,
+      "file": "complete-knr-1860-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5528&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-5528-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3435&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-3435-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1865&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 20,
+      "returned": 20,
+      "file": "complete-knr-1865-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3436&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-3436-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1866&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-1866-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5530&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 76,
+      "returned": 76,
+      "file": "complete-knr-5530-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3437&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-3437-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1867&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 23,
+      "returned": 23,
+      "file": "complete-knr-1867-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5532&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 33,
+      "returned": 33,
+      "file": "complete-knr-5532-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3438&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-3438-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1868&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-1868-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5534&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-5534-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3439&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-3439-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=1870&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 25,
+      "returned": 25,
+      "file": "complete-knr-1870-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5536&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 30,
+      "returned": 30,
+      "file": "complete-knr-5536-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3440&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 14,
+      "returned": 14,
+      "file": "complete-knr-3440-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5538&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 18,
+      "returned": 18,
+      "file": "complete-knr-5538-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3441&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-3441-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5540&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 43,
+      "returned": 43,
+      "file": "complete-knr-5540-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3442&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-3442-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5542&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-5542-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3443&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-3443-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=46&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1193,
+      "returned": 500,
+      "file": "complete-fnr-46-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5544&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-5544-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3446&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-3446-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4601&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 79,
+      "returned": 79,
+      "file": "complete-knr-4601-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3447&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-3447-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5546&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 29,
+      "returned": 29,
+      "file": "complete-knr-5546-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4602&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-4602-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3448&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 29,
+      "returned": 29,
+      "file": "complete-knr-3448-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5501&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 75,
+      "returned": 75,
+      "file": "complete-knr-5501-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4611&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-4611-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3449&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-3449-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5503&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 34,
+      "returned": 34,
+      "file": "complete-knr-5503-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4612&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-4612-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3450&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-3450-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4613&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 34,
+      "returned": 34,
+      "file": "complete-knr-4613-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3451&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-3451-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4614&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 5,
+      "returned": 5,
+      "file": "complete-knr-4614-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3452&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-3452-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4615&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 2,
+      "returned": 2,
+      "file": "complete-knr-4615-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3453&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-3453-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4616&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 24,
+      "returned": 24,
+      "file": "complete-knr-4616-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=56&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 501,
+      "returned": 500,
+      "file": "complete-fnr-56-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=3454&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-3454-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4617&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 24,
+      "returned": 24,
+      "file": "complete-knr-4617-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5601&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 84,
+      "returned": 84,
+      "file": "complete-knr-5601-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4618&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 18,
+      "returned": 18,
+      "file": "complete-knr-4618-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4619&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 2,
+      "returned": 2,
+      "file": "complete-knr-4619-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5603&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 75,
+      "returned": 75,
+      "file": "complete-knr-5603-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4620&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 4,
+      "returned": 4,
+      "file": "complete-knr-4620-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5605&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 55,
+      "returned": 55,
+      "file": "complete-knr-5605-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4621&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 26,
+      "returned": 26,
+      "file": "complete-knr-4621-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5607&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 31,
+      "returned": 31,
+      "file": "complete-knr-5607-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4622&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-4622-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5610&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 46,
+      "returned": 46,
+      "file": "complete-knr-5610-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4623&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-4623-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5612&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-5612-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4624&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-4624-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5614&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 17,
+      "returned": 17,
+      "file": "complete-knr-5614-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4625&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-4625-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5616&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-5616-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4626&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 46,
+      "returned": 46,
+      "file": "complete-knr-4626-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=50&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1320,
+      "returned": 500,
+      "file": "complete-fnr-50-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5618&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-5618-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4627&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 24,
+      "returned": 24,
+      "file": "complete-knr-4627-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5001&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 59,
+      "returned": 59,
+      "file": "complete-knr-5001-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5620&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-5620-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4628&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 18,
+      "returned": 18,
+      "file": "complete-knr-4628-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5006&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 38,
+      "returned": 38,
+      "file": "complete-knr-5006-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5622&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 40,
+      "returned": 40,
+      "file": "complete-knr-5622-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4629&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1,
+      "returned": 1,
+      "file": "complete-knr-4629-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5007&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 23,
+      "returned": 23,
+      "file": "complete-knr-5007-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5624&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 24,
+      "returned": 24,
+      "file": "complete-knr-5624-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4630&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-4630-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5014&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 44,
+      "returned": 44,
+      "file": "complete-knr-5014-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5626&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-5626-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4631&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 81,
+      "returned": 81,
+      "file": "complete-knr-4631-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5020&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-5020-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5628&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 79,
+      "returned": 79,
+      "file": "complete-knr-5628-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4632&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-4632-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5021&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 34,
+      "returned": 34,
+      "file": "complete-knr-5021-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4633&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 1,
+      "returned": 1,
+      "file": "complete-knr-4633-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5630&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-5630-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5022&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-5022-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5632&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 4,
+      "returned": 4,
+      "file": "complete-knr-5632-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4634&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 5,
+      "returned": 5,
+      "file": "complete-knr-4634-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5025&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-5025-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5634&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-5634-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4635&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-4635-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5026&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-5026-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5636&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-5636-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5027&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 27,
+      "returned": 27,
+      "file": "complete-knr-5027-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=21&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 5,
+      "returned": 5,
+      "file": "complete-fnr-21-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4636&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-4636-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5028&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 25,
+      "returned": 25,
+      "file": "complete-knr-5028-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?fnr=22&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 0,
+      "returned": 0,
+      "file": "complete-fnr-22-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4637&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 5,
+      "returned": 5,
+      "file": "complete-knr-4637-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5029&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-5029-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4638&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-4638-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5031&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-5031-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4639&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-4639-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5032&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-5032-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4640&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 25,
+      "returned": 25,
+      "file": "complete-knr-4640-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5033&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 5,
+      "returned": 5,
+      "file": "complete-knr-5033-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4641&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-4641-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5034&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-5034-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4642&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-4642-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5035&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 38,
+      "returned": 38,
+      "file": "complete-knr-5035-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4643&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-4643-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5036&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 2,
+      "returned": 2,
+      "file": "complete-knr-5036-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4644&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-4644-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5037&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 12,
+      "returned": 12,
+      "file": "complete-knr-5037-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4645&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-4645-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5038&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 19,
+      "returned": 19,
+      "file": "complete-knr-5038-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4646&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 6,
+      "returned": 6,
+      "file": "complete-knr-4646-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5041&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 13,
+      "returned": 13,
+      "file": "complete-knr-5041-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4647&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 26,
+      "returned": 26,
+      "file": "complete-knr-4647-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5042&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 22,
+      "returned": 22,
+      "file": "complete-knr-5042-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4648&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 17,
+      "returned": 17,
+      "file": "complete-knr-4648-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5043&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 4,
+      "returned": 4,
+      "file": "complete-knr-5043-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4649&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 20,
+      "returned": 20,
+      "file": "complete-knr-4649-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5044&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 10,
+      "returned": 10,
+      "file": "complete-knr-5044-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4650&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-4650-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5045&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 16,
+      "returned": 16,
+      "file": "complete-knr-5045-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=4651&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 21,
+      "returned": 21,
+      "file": "complete-knr-4651-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5046&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 8,
+      "returned": 8,
+      "file": "complete-knr-5046-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5047&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 9,
+      "returned": 9,
+      "file": "complete-knr-5047-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5049&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 11,
+      "returned": 11,
+      "file": "complete-knr-5049-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5052&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 3,
+      "returned": 3,
+      "file": "complete-knr-5052-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5053&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 15,
+      "returned": 15,
+      "file": "complete-knr-5053-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5054&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 53,
+      "returned": 53,
+      "file": "complete-knr-5054-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5055&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 31,
+      "returned": 31,
+      "file": "complete-knr-5055-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5056&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 34,
+      "returned": 34,
+      "file": "complete-knr-5056-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5057&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 51,
+      "returned": 51,
+      "file": "complete-knr-5057-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5058&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 41,
+      "returned": 41,
+      "file": "complete-knr-5058-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5059&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 73,
+      "returned": 73,
+      "file": "complete-knr-5059-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5060&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 40,
+      "returned": 40,
+      "file": "complete-knr-5060-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    },
+    {
+      "url": "https://ws.geonorge.no/stedsnavn/v1/sted?knr=5061&treffPerSide=500&utkoordsys=4326&navneobjekttype=by&navneobjekttype=tettsted&navneobjekttype=tettbebyggelse&navneobjekttype=grend&navneobjekttype=bygdelagBygd",
+      "total": 7,
+      "returned": 7,
+      "file": "complete-knr-5061-by_tettsted_tettbebyggelse_grend_bygdelagBygd.json.gz"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "retrieved": "2026-10-26",
+  "countries": {
+    "costa-rica": {
+      "population": {
+        "1": 7,
+        "2": 84,
+        "3": 471
+      },
+      "gdp": [
+        "CR-P-7",
+        "CR-P-4",
+        "CR-P-2",
+        "CR-P-5",
+        "CR-P-6",
+        "CR-P-1",
+        "CR-P-3",
+        "CR-C-702",
+        "CR-C-410",
+        "CR-C-210",
+        "CR-C-213",
+        "CR-C-214",
+        "CR-C-510",
+        "CR-C-601",
+        "CR-C-507",
+        "CR-C-509",
+        "CR-C-502",
+        "CR-C-511",
+        "CR-C-503",
+        "CR-C-506",
+        "CR-C-508",
+        "CR-C-505",
+        "CR-C-504",
+        "CR-C-501",
+        "CR-C-215",
+        "CR-C-119",
+        "CR-C-606",
+        "CR-C-609",
+        "CR-C-105",
+        "CR-C-117",
+        "CR-C-611",
+        "CR-C-120",
+        "CR-C-104",
+        "CR-C-106",
+        "CR-C-103",
+        "CR-C-112",
+        "CR-C-116",
+        "CR-C-308",
+        "CR-C-301",
+        "CR-C-302",
+        "CR-C-610",
+        "CR-C-607",
+        "CR-C-608",
+        "CR-C-605",
+        "CR-C-603",
+        "CR-C-704",
+        "CR-C-303",
+        "CR-C-110",
+        "CR-C-118",
+        "CR-C-307",
+        "CR-C-101",
+        "CR-C-107",
+        "CR-C-306",
+        "CR-C-102",
+        "CR-C-209",
+        "CR-C-109",
+        "CR-C-115",
+        "CR-C-108",
+        "CR-C-113",
+        "CR-C-305",
+        "CR-C-204",
+        "CR-C-205",
+        "CR-C-201",
+        "CR-C-114",
+        "CR-C-111",
+        "CR-C-403",
+        "CR-C-407",
+        "CR-C-401",
+        "CR-C-409",
+        "CR-C-202",
+        "CR-C-602",
+        "CR-C-408",
+        "CR-C-405",
+        "CR-C-402",
+        "CR-C-406",
+        "CR-C-404",
+        "CR-C-207",
+        "CR-C-208",
+        "CR-C-203",
+        "CR-C-206",
+        "CR-C-604",
+        "CR-C-212",
+        "CR-C-211",
+        "CR-C-216",
+        "CR-C-701",
+        "CR-C-705",
+        "CR-C-703",
+        "CR-C-612",
+        "CR-C-304",
+        "CR-C-706",
+        "CR-C-613"
+      ],
+      "missingPopulation": [
+        {
+          "id": "CR-D-61101",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30205",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30201",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-61102",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-40204",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-40201",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-40205",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-40207",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-40203",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-40206",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30203",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30403",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30402",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30204",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30202",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30401",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30206",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-61103",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-30404",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-40202",
+          "reason": "The 2022 estimate table uses an older district division in this canton. Population is shown at canton level until a matching district series is verified."
+        },
+        {
+          "id": "CR-D-60110",
+          "reason": "No matching population row in the 2022 estimate table."
+        }
+      ]
+    },
+    "panama": {
+      "population": {
+        "1": 13,
+        "2": 84,
+        "3": 690
+      },
+      "gdp": [
+        "PA-P-02",
+        "PA-P-06",
+        "PA-P-08",
+        "PA-P-07",
+        "PA-P-13"
+      ],
+      "missingPopulation": [
+        {
+          "id": "PA-D-0102",
+          "reason": "The census geography and retained boundary snapshot differ here. Population is withheld until matching territorial coverage is verified."
+        },
+        {
+          "id": "PA-D-0105",
+          "reason": "The 2023 census table does not separately enumerate this later mapped comarca. Its count is not inferred from the older El Teribe corregimiento."
+        },
+        {
+          "id": "PA-C-010407",
+          "reason": "The census geography and retained boundary snapshot differ here. Population is withheld until matching territorial coverage is verified."
+        },
+        {
+          "id": "PA-C-091002",
+          "reason": "The census geography and retained boundary snapshot differ here. Population is withheld until matching territorial coverage is verified."
+        },
+        {
+          "id": "PA-C-010210",
+          "reason": "The census geography and retained boundary snapshot differ here. Population is withheld until matching territorial coverage is verified."
+        },
+        {
+          "id": "PA-C-050317",
+          "reason": "The census geography and retained boundary snapshot differ here. Population is withheld until matching territorial coverage is verified."
+        }
+      ]
+    }
+  }
+}

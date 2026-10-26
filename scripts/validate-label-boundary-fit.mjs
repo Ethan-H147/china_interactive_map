@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {labelFitsBoundary} from '../dist/label-boundary-fit.mjs';
+const ring=[[0,0],[200,0],[200,100],[0,100],[0,0]];
+let features=[{properties:{id:'county'},geometry:{type:'Polygon',coordinates:[ring]}}],queries=0;
+const map={getLayer:()=>true,project:p=>({x:p[0],y:p[1]}),unproject:p=>({lng:p[0],lat:p[1]}),queryRenderedFeatures:()=>{queries++;return features;}};
+const item={id:'county',labelBoundaryLayer:'fill',bounds:[[0,0],[200,100]]},center={x:100,y:50};
+assert(labelFitsBoundary(map,item,center,120,20));
+assert(!labelFitsBoundary(map,item,{x:30,y:50},120,20),'Near-boundary text stays short');
+const previous=queries;assert(!labelFitsBoundary(map,item,center,210,20));assert.equal(queries,previous,'Tiny regions avoid geometry queries');
+features.push({properties:{id:'neighbor'},geometry:{type:'Polygon',coordinates:[ring]}});
+assert(!labelFitsBoundary(map,item,center,120,20),'Neighbor intersection keeps the short label');
+features=features.slice(0,1);features[0].geometry.coordinates.push([[90,40],[110,40],[110,60],[90,60],[90,40]]);
+assert(!labelFitsBoundary(map,item,center,120,20),'A hole beneath the label prevents expansion');
+features=[];assert(!labelFitsBoundary(map,item,center,120,20),'Missing rendered geometry stays short');
+console.log('Label fit: interior, edges, neighboring boundaries, holes, missing geometry and cheap size rejection passed.');

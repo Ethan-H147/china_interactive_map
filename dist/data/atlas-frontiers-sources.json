@@ -130,5 +130,10 @@
       "endpointErrorMetres": 4863,
       "km": 1484
     }
-  ]
+  ],
+  "guianaFrontierReconciliation": {
+    "source": "data/guiana-frontier.json",
+    "referenceOwner": "france",
+    "method": "One complete French Guiana outline arc replaces fragmented French strokes and the separate Brazil-owned copy. The nearby rainforest tripoint joins the surviving Brazil–Suriname stroke. Administrative land geometry is unchanged."
+  }
 }

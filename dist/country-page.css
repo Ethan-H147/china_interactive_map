@@ -18,3 +18,17 @@
 .breadcrumb-current{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 
 @media(max-width:760px){.map-top{flex-wrap:wrap;align-items:flex-start}.map-breadcrumb{max-width:100%}}
+.place-overview-card>p{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 16px}.place-overview-card>a{font-size:12px;text-underline-offset:3px}.place-overview-card .statistics-values small{display:block;font-size:12px;line-height:1.5;color:var(--muted);margin-top:4px}
+@media(min-width:761px){.details-expanded .place-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}.details-expanded .place-overview>.country-note{grid-column:1/-1}}
+
+/* Flag stacks share the heading's right edge without enlarging its navigation row. */
+.country-selection-heading:has(.division-flags){position:relative;padding-inline-end:60px;min-block-size:106px}
+.country-selection-heading:has(.division-flags) .selection-top{display:block;min-height:0;margin-bottom:18px}
+.country-selection-heading:has(.division-flags) .selection-top .back-button{padding:0;max-width:100%;width:fit-content;text-align:start}
+.country-selection-heading .division-flags{position:absolute;inset-block-start:0;inset-inline-end:0}
+.country-selection-heading:has(.division-flags)>:is(h2,[id$=selection-kind],[id$=selection-local]){padding-inline-end:0}
+
+.place-status-info{display:inline-grid;place-items:center;width:11px;height:11px;padding:0;margin-inline-start:6px;border:1px solid currentColor;border-radius:50%;background:transparent;color:var(--muted,#687582);font-family:inherit;font-size:9px;font-weight:650;font-style:normal;line-height:1;letter-spacing:0;vertical-align:1px;cursor:pointer}
+.place-status-info[hidden]{display:none}
+.place-status-info:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.place-status-popover{position:fixed;inset:auto;margin:0;padding:14px;width:280px;max-width:calc(100vw - 24px);box-sizing:border-box;border:1px solid #aeb7be;border-radius:8px;background:var(--paper,#fff);color:var(--ink,#25313a);box-shadow:0 4px 20px #0002;font-size:13px;line-height:1.5;z-index:1000}

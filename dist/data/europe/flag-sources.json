@@ -866,6 +866,72 @@
       "credit": "Wikimedia Commons",
       "license": "Public domain",
       "sha256": "9c023198075538da242eeb7c16192d6aed8757e4e954ed974822c24637e4cc7f"
+    },
+    "costa-rica": {
+      "file": "vendor/flag-cr.svg",
+      "full": "vendor/flag-cr.svg",
+      "width": 10,
+      "height": 6,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
+      "page": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "sha256": "fe4927d79e735bd7765cba91830b28c7e2aacc316365f5d8d2cea3f1e75167ac"
+    },
+    "panama": {
+      "file": "vendor/flag-pa.svg",
+      "full": "vendor/flag-pa.svg",
+      "width": 12,
+      "height": 8,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
+      "page": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "sha256": "464fc8f974b506c5a8353899dba96d68154f2f991a5a9319f68184be86c31556"
+    },
+    "zimbabwe": {
+      "file": "vendor/flag-zw.svg",
+      "full": "vendor/flag-zw.svg",
+      "width": 25200,
+      "height": 12600,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Zimbabwe.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zimbabwe.svg",
+      "license": "Public domain",
+      "credit": "Wikimedia Commons national flag artwork",
+      "sha256": "81548edd2e9340b07f67219b2185ececb93466e4e4da96cbea3e61f0dca65067"
+    },
+    "zambia": {
+      "file": "vendor/flag-zm.svg",
+      "full": "vendor/flag-zm.svg",
+      "width": 83328,
+      "height": 55552,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Zambia.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zambia.svg",
+      "license": "Public domain",
+      "credit": "Wikimedia Commons national flag artwork",
+      "sha256": "5a49c51dc87ec82838e3aadd45ac525cb4e0e7b85c4006c221e389a4125e6d56"
+    },
+    "tanzania": {
+      "file": "vendor/flag-tz.svg",
+      "full": "vendor/flag-tz.svg",
+      "width": 72,
+      "height": 48,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tanzania.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tanzania.svg",
+      "license": "Public domain",
+      "credit": "Wikimedia Commons national flag artwork",
+      "sha256": "88760e4ce561a916b6cb71688301e6bb07844843833ce63b18974916d2a6d0c1"
+    },
+    "kenya": {
+      "file": "vendor/flag-ke.svg",
+      "full": "vendor/flag-ke.svg",
+      "width": 240,
+      "height": 160,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kenya.svg",
+      "license": "Public domain",
+      "credit": "Wikimedia Commons national flag artwork",
+      "sha256": "4e750d2b4aba128580e40052630883aee27419dcbd87ea44a4ede609e7c42a1b"
     }
   }
 }

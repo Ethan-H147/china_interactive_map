@@ -1,0 +1,351 @@
+{
+  "zimbabwe": {
+    "aligned": [
+      {
+        "pair": "BWA-ZWE",
+        "vertices": 1172,
+        "owner": "southern-africa/botswana",
+        "maxEndpointDisplacementMetres": 5708.90065169501,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 7000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      },
+      {
+        "pair": "ZAF-ZWE",
+        "vertices": 246,
+        "owner": "southern-africa/south-africa",
+        "maxEndpointDisplacementMetres": 1168.9617173258139,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 7000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      }
+    ],
+    "owned": [
+      {
+        "pair": "ZMB-ZWE",
+        "vertices": 506,
+        "water": false
+      },
+      {
+        "pair": "ZMB-ZWE",
+        "vertices": 504,
+        "water": false
+      },
+      {
+        "pair": "ZMB-ZWE",
+        "vertices": 29,
+        "water": true
+      },
+      {
+        "pair": "MOZ-ZWE",
+        "vertices": 2686,
+        "water": false
+      }
+    ],
+    "delegatedToExisting": [
+      "BWA-ZWE",
+      "ZAF-ZWE"
+    ]
+  },
+  "zambia": {
+    "aligned": [
+      {
+        "pair": "ZMB-ZWE",
+        "vertices": 506,
+        "owner": "zimbabwe",
+        "maxEndpointDisplacementMetres": 876.2175743103046,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 20000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      },
+      {
+        "pair": "ZMB-ZWE",
+        "vertices": 504,
+        "owner": "zimbabwe",
+        "maxEndpointDisplacementMetres": 709.1929374252777,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 20000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      },
+      {
+        "pair": "AGO-ZMB",
+        "vertices": 2118,
+        "owner": "europe/angola",
+        "maxEndpointDisplacementMetres": 3710.525519334575,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 7000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      },
+      {
+        "pair": "NAM-ZMB",
+        "vertices": 268,
+        "owner": "southern-africa/namibia",
+        "maxEndpointDisplacementMetres": 8460.46253247129,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 7000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      },
+      {
+        "pair": "COD-ZMB",
+        "vertices": 1036,
+        "owner": "europe/congo",
+        "maxEndpointDisplacementMetres": 2194.9961655423676,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 20000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      },
+      {
+        "pair": "COD-ZMB",
+        "vertices": 20,
+        "owner": "europe/congo",
+        "maxEndpointDisplacementMetres": 9195.21362018953,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 20000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      }
+    ],
+    "owned": [
+      {
+        "pair": "MWI-ZMB",
+        "vertices": 2140,
+        "water": false
+      },
+      {
+        "pair": "TZA-ZMB",
+        "vertices": 1159,
+        "water": false
+      },
+      {
+        "pair": "TZA-ZMB",
+        "vertices": 12,
+        "water": true
+      },
+      {
+        "pair": "MOZ-ZMB",
+        "vertices": 228,
+        "water": false
+      }
+    ],
+    "delegatedToExisting": [
+      "ZMB-ZWE",
+      "ZMB-ZWE",
+      "ZMB-ZWE",
+      "AGO-ZMB",
+      "NAM-ZMB",
+      "COD-ZMB",
+      "COD-ZMB",
+      "COD-ZMB",
+      "COD-ZMB"
+    ]
+  },
+  "tanzania": {
+    "aligned": [
+      {
+        "pair": "TZA-ZMB",
+        "vertices": 1159,
+        "owner": "zambia",
+        "maxEndpointDisplacementMetres": 381.1434484637385,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 20000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      }
+    ],
+    "owned": [
+      {
+        "pair": "MWI-TZA",
+        "vertices": 87,
+        "water": false
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 48,
+        "water": false
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 25,
+        "water": false
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 18,
+        "water": false
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 39,
+        "water": false
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 1,
+        "water": false
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 900,
+        "water": false
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 17,
+        "water": true
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 15,
+        "water": true
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 21,
+        "water": true
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 33,
+        "water": true
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 6,
+        "water": true
+      },
+      {
+        "pair": "MWI-TZA",
+        "vertices": 16,
+        "water": true
+      },
+      {
+        "pair": "RWA-TZA",
+        "vertices": 805,
+        "water": false
+      },
+      {
+        "pair": "TZA-UGA",
+        "vertices": 14,
+        "water": false
+      },
+      {
+        "pair": "TZA-UGA",
+        "vertices": 113,
+        "water": false
+      },
+      {
+        "pair": "TZA-UGA",
+        "vertices": 18,
+        "water": true
+      },
+      {
+        "pair": "TZA-UGA",
+        "vertices": 3,
+        "water": true
+      },
+      {
+        "pair": "BDI-TZA",
+        "vertices": 1957,
+        "water": false
+      },
+      {
+        "pair": "BDI-TZA",
+        "vertices": 3,
+        "water": true
+      },
+      {
+        "pair": "MOZ-TZA",
+        "vertices": 1285,
+        "water": false
+      },
+      {
+        "pair": "KEN-TZA",
+        "vertices": 223,
+        "water": false
+      },
+      {
+        "pair": "KEN-TZA",
+        "vertices": 74,
+        "water": false
+      },
+      {
+        "pair": "KEN-TZA",
+        "vertices": 3,
+        "water": true
+      },
+      {
+        "pair": "KEN-TZA",
+        "vertices": 8,
+        "water": true
+      }
+    ],
+    "delegatedToExisting": [
+      "COD-TZA",
+      "TZA-ZMB",
+      "TZA-ZMB"
+    ]
+  },
+  "kenya": {
+    "aligned": [
+      {
+        "pair": "KEN-TZA",
+        "vertices": 223,
+        "owner": "tanzania",
+        "maxEndpointDisplacementMetres": 7594.113852186999,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 20000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      },
+      {
+        "pair": "KEN-TZA",
+        "vertices": 74,
+        "owner": "tanzania",
+        "maxEndpointDisplacementMetres": 3671.524745385022,
+        "validationToleranceMetres": 2500,
+        "coastalTrimMetres": 20000,
+        "method": "New districts follow the existing neighbour outline; river-island survey differences and lake-separated endpoint allowances are recorded explicitly"
+      }
+    ],
+    "owned": [
+      {
+        "pair": "KEN-SDS",
+        "vertices": 246,
+        "water": false
+      },
+      {
+        "pair": "ETH-KEN",
+        "vertices": 11,
+        "water": false
+      },
+      {
+        "pair": "ETH-KEN",
+        "vertices": 869,
+        "water": false
+      },
+      {
+        "pair": "ETH-KEN",
+        "vertices": 9,
+        "water": true
+      },
+      {
+        "pair": "KEN-SOM",
+        "vertices": 86,
+        "water": false
+      },
+      {
+        "pair": "KEN-UGA",
+        "vertices": 976,
+        "water": false
+      },
+      {
+        "pair": "KEN-UGA",
+        "vertices": 13,
+        "water": true
+      }
+    ],
+    "delegatedToExisting": [
+      "KEN-TZA",
+      "KEN-TZA",
+      "KEN-TZA",
+      "KEN-TZA"
+    ]
+  }
+}

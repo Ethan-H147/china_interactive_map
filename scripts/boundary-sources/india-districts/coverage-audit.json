@@ -1,0 +1,222 @@
+{
+  "snapshot": "2024",
+  "audit": [
+    {
+      "parent": "IN-JK",
+      "state": "Jammu and Kashmir",
+      "source": 22,
+      "displayed": 22
+    },
+    {
+      "parent": "IN-HP",
+      "state": "Himachal Pradesh",
+      "source": 12,
+      "displayed": 12
+    },
+    {
+      "parent": "IN-PB",
+      "state": "Punjab",
+      "source": 23,
+      "displayed": 23
+    },
+    {
+      "parent": "IN-CH",
+      "state": "Chandigarh",
+      "source": 1,
+      "displayed": 1
+    },
+    {
+      "parent": "IN-UK",
+      "state": "Uttarakhand",
+      "source": 13,
+      "displayed": 13
+    },
+    {
+      "parent": "IN-HR",
+      "state": "Haryana",
+      "source": 22,
+      "displayed": 22
+    },
+    {
+      "parent": "IN-DL",
+      "state": "Delhi",
+      "source": 11,
+      "displayed": 11
+    },
+    {
+      "parent": "IN-RJ",
+      "state": "Rajasthan",
+      "source": 50,
+      "displayed": 50
+    },
+    {
+      "parent": "IN-UP",
+      "state": "Uttar Pradesh",
+      "source": 75,
+      "displayed": 75
+    },
+    {
+      "parent": "IN-BR",
+      "state": "Bihar",
+      "source": 38,
+      "displayed": 38
+    },
+    {
+      "parent": "IN-SK",
+      "state": "Sikkim",
+      "source": 6,
+      "displayed": 6
+    },
+    {
+      "parent": "IN-AR",
+      "state": "Arunachal Pradesh",
+      "source": 26,
+      "displayed": 26
+    },
+    {
+      "parent": "IN-NL",
+      "state": "Nagaland",
+      "source": 16,
+      "displayed": 16
+    },
+    {
+      "parent": "IN-MN",
+      "state": "Manipur",
+      "source": 16,
+      "displayed": 16
+    },
+    {
+      "parent": "IN-MZ",
+      "state": "Mizoram",
+      "source": 11,
+      "displayed": 11
+    },
+    {
+      "parent": "IN-TR",
+      "state": "Tripura",
+      "source": 8,
+      "displayed": 8
+    },
+    {
+      "parent": "IN-ML",
+      "state": "Meghalaya",
+      "source": 12,
+      "displayed": 12
+    },
+    {
+      "parent": "IN-AS",
+      "state": "Assam",
+      "source": 35,
+      "displayed": 35
+    },
+    {
+      "parent": "IN-WB",
+      "state": "West Bengal",
+      "source": 23,
+      "displayed": 23
+    },
+    {
+      "parent": "IN-JH",
+      "state": "Jharkhand",
+      "source": 24,
+      "displayed": 24
+    },
+    {
+      "parent": "IN-OD",
+      "state": "Odisha",
+      "source": 30,
+      "displayed": 30
+    },
+    {
+      "parent": "IN-CG",
+      "state": "Chhattisgarh",
+      "source": 33,
+      "displayed": 33
+    },
+    {
+      "parent": "IN-MP",
+      "state": "Madhya Pradesh",
+      "source": 52,
+      "displayed": 52
+    },
+    {
+      "parent": "IN-GJ",
+      "state": "Gujarat",
+      "source": 33,
+      "displayed": 33
+    },
+    {
+      "parent": "IN-MH",
+      "state": "Maharashtra",
+      "source": 36,
+      "displayed": 36
+    },
+    {
+      "parent": "IN-AP",
+      "state": "Andhra Pradesh",
+      "source": 26,
+      "displayed": 26
+    },
+    {
+      "parent": "IN-KA",
+      "state": "Karnataka",
+      "source": 31,
+      "displayed": 31
+    },
+    {
+      "parent": "IN-GA",
+      "state": "Goa",
+      "source": 2,
+      "displayed": 2
+    },
+    {
+      "parent": "IN-LD",
+      "state": "Lakshadweep",
+      "source": 1,
+      "displayed": 1
+    },
+    {
+      "parent": "IN-KL",
+      "state": "Kerala",
+      "source": 14,
+      "displayed": 14
+    },
+    {
+      "parent": "IN-TN",
+      "state": "Tamil Nadu",
+      "source": 38,
+      "displayed": 38
+    },
+    {
+      "parent": "IN-PY",
+      "state": "Puducherry",
+      "source": 4,
+      "displayed": 4
+    },
+    {
+      "parent": "IN-AN",
+      "state": "Andaman and Nicobar Islands",
+      "source": 3,
+      "displayed": 3
+    },
+    {
+      "parent": "IN-TS",
+      "state": "Telangana",
+      "source": 33,
+      "displayed": 33
+    },
+    {
+      "parent": "IN-LA",
+      "state": "Ladakh",
+      "source": 2,
+      "displayed": 2
+    },
+    {
+      "parent": "IN-DH",
+      "state": "Dadra and Nagar Haveli and Daman and Diu",
+      "source": 3,
+      "displayed": 3
+    }
+  ],
+  "excluded": []
+}

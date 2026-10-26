@@ -1,0 +1,491 @@
+[
+  {
+    "page": "Per cápita",
+    "pageFilters": []
+  },
+  {
+    "page": "Per cápita",
+    "slicer": "682fcc812185c16839f2",
+    "state": {
+      "filters": [],
+      "targets": [
+        {
+          "table": "Población",
+          "column": "Cantón "
+        }
+      ]
+    }
+  },
+  {
+    "page": "Per cápita",
+    "slicer": "fb740b9c2220688fe385",
+    "state": {
+      "filters": [],
+      "targets": [
+        {
+          "table": "Población",
+          "column": "Provincia"
+        }
+      ]
+    }
+  },
+  {
+    "page": "Per cápita",
+    "slicer": "6a106106d36327a41a9d",
+    "state": {
+      "filters": [
+        {
+          "$schema": "http://powerbi.com/product/schema#basic",
+          "target": {
+            "table": "Población",
+            "column": "Año"
+          },
+          "filterType": 1,
+          "operator": "In",
+          "values": [
+            2022
+          ],
+          "requireSingleSelection": false
+        }
+      ],
+      "targets": [
+        {
+          "table": "Población",
+          "column": "Año"
+        }
+      ]
+    }
+  },
+  {
+    "page": "Per cápita",
+    "name": "bce0e51ea8d805d44cde",
+    "type": "pivotTable",
+    "title": "Matrix",
+    "data": "Cantón ,PIB per cápita*\r\nBelén,84.39346597739895\r\nSanta Ana,34.873664085374934\r\nEscazú,27.892266546434463\r\nMontes de Oca,25.070175760526368\r\nFlores,23.403337058031923\r\nSan José,22.878458187680803\r\nHeredia,19.643768619013642\r\nSanto Domingo,14.24620835076031\r\nAlajuela,14.027673753969278\r\nCurridabat,13.507245727195864\r\nLiberia,12.548975523324723\r\nCartago,11.13241853079551\r\nTilarán,8.98999573368158\r\nTibás,8.186363452015271\r\nGoicoechea,8.155306165865523\r\nGarabito,7.512432504308533\r\nSan Pablo,7.4575200447948475\r\nZarcero,7.397431842563706\r\nSan Rafael,7.210326457124711\r\nSiquirres,7.172706373288207\r\nBagaces,7.055344115912742\r\nMora,7.029837863366126\r\nQuepos,6.719226697186507\r\nMoravia,6.667045678530402\r\nGrecia,6.665302882310135\r\nLeón Cortés Castro,6.521551031555264\r\nLa Unión,6.373292026280743\r\nCarrillo,6.2276717813357525\r\nJiménez,6.1961130243841716\r\nSan Carlos,6.089976692964882\r\nSan Isidro,5.997565504006089\r\nPuntarenas,5.910539633395402\r\nGolfito,5.763254017350934\r\nTarrazú,5.694969027192717\r\nSanta Cruz,5.667369027165298\r\nBarva,5.558901787602404\r\nPococí,5.3931935912157325\r\nPalmares,5.317552106011038\r\nAbangares,5.298235354667057\r\nAlvarado,5.293848879162161\r\nSarchí,5.161433171384055\r\nMonteverde,5.160417413265096\r\nCañas,5.072580302686704\r\nParrita,5.0512763040424495\r\nMontes de Oro,4.935290340252465\r\nOsa,4.865002673400855\r\nVázquez de Coronado,4.834678828160413\r\nEl Guarco,4.680245261606771\r\nPoás,4.607532054033366\r\nGuácimo,4.503293978401175\r\nPérez Zeledón,4.410733452727464\r\nParaíso,4.401947298561858\r\nSarapiquí,4.39307885449248\r\nTurrialba,4.324475103291802\r\nDesamparados,4.30856009822213\r\nNicoya,4.269098008506303\r\nSan Ramón,4.19011161782353\r\nAtenas,4.183411555647808\r\nOrotina,4.179386090148006\r\nMatina,4.080909696697143\r\nDota,4.0457597932092035\r\nCorredores,4.020599539191671\r\nLimón,4.007095050551128\r\nRío Cuarto,3.9231698707166816\r\nEsparza,3.8641684581149525\r\nHojancha,3.7149955694235204\r\nNaranjo,3.7037760831911393\r\nSanta Bárbara,3.613784315637944\r\nCoto Brus,3.461167523178655\r\nTalamanca,3.4569729096210113\r\nNandayure,3.442568328832883\r\nPuriscal,3.410128470763767\r\nAcosta,3.352884544863778\r\nLa Cruz,3.320078962605355\r\nLos Chiles,3.163942105047383\r\nOreamuno,3.0656504867518812\r\nUpala,3.0553385918836846\r\nSan Mateo,2.997402894387661\r\nTurrubares,2.858878855670446\r\nBuenos Aires,2.779874531409985\r\nGuatuso,2.5838336155139694\r\nAserrí,2.4593855530757303\r\nAlajuelita,2.4517184154817677\r\nPuerto Jiménez,2.2878959010532216\r\n",
+    "filters": [
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "AE",
+          "measure": "PIB per capita"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#basic",
+        "target": {
+          "table": "Población",
+          "column": "Cantón "
+        },
+        "filterType": 1,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "operator": "All",
+        "values": [],
+        "requireSingleSelection": false
+      }
+    ]
+  },
+  {
+    "page": "Per cápita",
+    "slicer": "dee4cebeebe9f12e420c",
+    "state": {
+      "filters": [],
+      "targets": [
+        {
+          "table": "Población",
+          "column": "Región"
+        }
+      ]
+    }
+  },
+  {
+    "page": "PIB por año",
+    "pageFilters": []
+  },
+  {
+    "page": "PIB por año",
+    "name": "f3edc2e11e24003609ec",
+    "type": "clusteredColumnChart",
+    "title": "PIB by Año",
+    "data": "Año,PIB\r\n2019,37832149.78588679\r\n2020,36495246.07238849\r\n2021,40326625.9318355\r\n2022,45947436.696254455\r\n",
+    "filters": [
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Base_PIB_regional (2)",
+          "hierarchy": "Jerarquía de fechas",
+          "hierarchyLevel": "Año"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Base_PIB_regional (2)",
+          "column": "PIB",
+          "aggregationFunction": "Sum"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "page": "PIB por año",
+    "slicer": "67752a8a8372eb0a69b4",
+    "state": {
+      "filters": [],
+      "targets": [
+        {
+          "table": "Base_PIB_regional (2)",
+          "column": "Cantón"
+        }
+      ]
+    }
+  },
+  {
+    "page": "PIB por año",
+    "slicer": "1e8a4bc5ce2ab59a6286",
+    "state": {
+      "filters": [],
+      "targets": [
+        {
+          "table": "Base_PIB_regional (2)",
+          "column": "Región"
+        }
+      ]
+    }
+  },
+  {
+    "page": "Comparación por año",
+    "pageFilters": []
+  },
+  {
+    "page": "Clasificación_cantón",
+    "pageFilters": []
+  },
+  {
+    "page": "Clasificación_cantón",
+    "name": "eb4b961c0c57bc1a75d8",
+    "type": "clusteredColumnChart",
+    "title": "Valor agregado",
+    "data": "Cantón,Sum of  Valor Agregado,VA_Orden\r\nSan José,7305652.29,7305652.29\r\nAlajuela,4105841.50,4105841.5\r\nHeredia,2447462.37,2447462.37\r\nSanta Ana,1927745.71,1927745.71\r\nBelén,1882738.94,1882738.94\r\nEscazú,1852110.43,1852110.43\r\nCartago,1639363.96,1639363.96\r\nMontes de Oca,1327291.49,1327291.49\r\nSan Carlos,1132768.36,1132768.36\r\nGoicoechea,976245.29,976245.29\r\nLiberia,961419.95,961419.95\r\nCurridabat,883223.56,883223.56\r\nDesamparados,883084.24,883084.24\r\nPuntarenas,769734.43,769734.43\r\nPococí,730340.71,730340.71\r\nPérez Zeledón,651154.82,651154.82\r\nSanto Domingo,588110.20,588110.2\r\nTibás,559946.46,559946.46\r\nLa Unión,555057.80,555057.8\r\nGrecia,452125.46,452125.46\r\nLimón,443697.77,443697.77\r\nSiquirres,429074.11,429074.11\r\nSanta Cruz,404232.50,404232.5\r\nSan Ramón,368373.49,368373.49\r\nFlores,353643.14,353643.14\r\nSan Rafael,338692.37,338692.37\r\nTurrialba,321332.59,321332.59\r\nMoravia,311223.34,311223.34\r\nVázquez de Coronado,303359.73,303359.73\r\nSarapiquí,281602.39,281602.39\r\nCarrillo,277433.45,277433.45\r\nParaíso,271287.14,271287.14\r\nNicoya,267394.41,267394.41\r\nBarva,250253.47,250253.47\r\nMora,215740.85,215740.85\r\nGuácimo,214195.81,214195.81\r\nEl Guarco,203515.94,203515.94\r\nSan Pablo,202937.12,202937.12\r\nQuepos,202339.60,202339.6\r\nCorredores,197613.97,197613.97\r\nPalmares,188583.18,188583.18\r\nGarabito,183662.54,183662.54\r\nAlajuelita,183012.48,183012.48\r\nTilarán,180596.48,180596.48\r\nMatina,180175.20,180175.2\r\nGolfito,175734.43,175734.43\r\nUpala,167199.85,167199.85\r\nOsa,163681.55,163681.55\r\nTalamanca,158210.84,158210.84\r\nNaranjo,157281.45,157281.45\r\nPoás,155287.34,155287.34\r\nBagaces,154880.35,154880.35\r\nCoto Brus,152456.61,152456.61\r\nCañas,149085.10,149085.1\r\nOreamuno,141133.04,141133.04\r\nAserrí,137353.08,137353.08\r\nBuenos Aires,135609.77,135609.77\r\nSanta Bárbara,133836.28,133836.28\r\nSan Isidro,128689.27,128689.27\r\nEsparza,121719.62,121719.62\r\nAtenas,119524.52,119524.52\r\nPuriscal,118709.85,118709.85\r\nJiménez,109763.82,109763.82\r\nZarcero,106431.28,106431.28\r\nLos Chiles,106230.87,106230.87\r\nAbangares,105327.01,105327.01\r\nSarchí,97595.37,97595.37\r\nTarrazú,96990.95,96990.95\r\nParrita,95921.56,95921.56\r\nOrotina,93794.95,93794.95\r\nAlvarado,85971.66,85971.66\r\nLeón Cortés Castro,84103.97,84103.97\r\nLa Cruz,82349.34,82349.34\r\nMontes de Oro,74838.64,74838.64\r\nAcosta,71716.81,71716.81\r\nRío Cuarto,53378.52,53378.52\r\nGuatuso,45016.13,45016.13\r\nNandayure,38333.01,38333.01\r\nDota,35873.83,35873.83\r\nHojancha,28852.35,28852.35\r\nMonteverde,25381.58,25381.58\r\nPuerto Jiménez,22896.75,22896.75\r\nSan Mateo,19890.14,19890.14\r\nTurrubares,17119.38,17119.38\r\n",
+    "filters": [
+      {
+        "$schema": "http://powerbi.com/product/schema#basic",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Cantón"
+        },
+        "filterType": 1,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "operator": "All",
+        "values": [],
+        "requireSingleSelection": false
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Tasas de variación",
+          "column": " Valor Agregado",
+          "aggregationFunction": "Sum"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Ordenamiento",
+          "measure": "VA_Orden"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "page": "Clasificación_cantón",
+    "slicer": "9be5a1aec8a4367cc7d3",
+    "state": {
+      "filters": [
+        {
+          "$schema": "http://powerbi.com/product/schema#basic",
+          "target": {
+            "table": "LocalDateTable_f6a343a7-89c3-46a1-b1b7-33fc4a8595c0",
+            "column": "Año"
+          },
+          "filterType": 1,
+          "operator": "In",
+          "values": [
+            2022
+          ],
+          "requireSingleSelection": false
+        }
+      ],
+      "targets": [
+        {
+          "table": "LocalDateTable_f6a343a7-89c3-46a1-b1b7-33fc4a8595c0",
+          "column": "Año"
+        }
+      ]
+    }
+  },
+  {
+    "page": "Clasificación_cantón",
+    "name": "8865b207b06d357c00a4",
+    "type": "clusteredColumnChart",
+    "title": "Impuestos a los productos",
+    "data": "Cantón,Impuestos a los producto,IMPuestos_Orden\r\nSan José,759199.28,759199.28\r\nAlajuela,417864.33,417864.33\r\nCartago,201805.94,201805.94\r\nFlores,148985.36,148985.36\r\nHeredia,145908.48,145908.48\r\nEscazú,130671.8,130671.8\r\nBelén,116691.76,116691.76\r\nGoicoechea,100331.44,100331.44\r\nSanta Ana,88729.8,88729.8\r\nLa Unión,79325.49,79325.49\r\nDesamparados,78278.02,78278.02\r\nSan Carlos,75244.03,75244.03\r\nLiberia,69555.47,69555.47\r\nCurridabat,67490.58,67490.58\r\nMontes de Oca,61912.89,61912.89\r\nSanto Domingo,61666.29,61666.29\r\nPuntarenas,60479.28,60479.28\r\nPococí,58611.46,58611.46\r\nGrecia,55911.07,55911.07\r\nTibás,50809.38,50809.38\r\nPérez Zeledón,40783.74,40783.74\r\nTurrialba,33518.69,33518.69\r\nSanta Cruz,32317.26,32317.26\r\nSiquirres,28229.42,28229.42\r\nMoravia,26057.64,26057.64\r\nLimón,22875.2,22875.2\r\nSan Ramón,22262.55,22262.55\r\nVázquez de Coronado,20871.18,20871.18\r\nParaíso,20259.53,20259.53\r\nCarrillo,20145.7,20145.7\r\nSan Pablo,19707.33,19707.33\r\nPalmares,19532.53,19532.53\r\nEl Guarco,18148.48,18148.48\r\nGolfito,16987.48,16987.48\r\nGarabito,15675.2,15675.2\r\nNicoya,15460.8,15460.8\r\nNaranjo,15450.62,15450.62\r\nAlajuelita,15431.04,15431.04\r\nQuepos,15422.56,15422.56\r\nBarva,14867.53,14867.53\r\nSan Rafael,13451.67,13451.67\r\nSarapiquí,13364.78,13364.78\r\nPuriscal,12626.67,12626.67\r\nEsparza,12575.92,12575.92\r\nBagaces,12377.18,12377.18\r\nAbangares,12344.37,12344.37\r\nOsa,11954.33,11954.33\r\nCañas,11897.31,11897.31\r\nMora,11633.49,11633.49\r\nPoás,11514.37,11514.37\r\nTalamanca,10823.04,10823.04\r\nTilarán,10281.81,10281.81\r\nGuácimo,9145.97,9145.97\r\nAserrí,9097.87,9097.87\r\nOreamuno,8748.69,8748.69\r\nSan Isidro,8073.55,8073.55\r\nUpala,8033.46,8033.46\r\nZarcero,7936.01,7936.01\r\nCoto Brus,7924.92,7924.92\r\nAtenas,7664.99,7664.99\r\nSanta Bárbara,7555.59,7555.59\r\nCorredores,7509.92,7509.92\r\nOrotina,7394.6,7394.6\r\nLa Cruz,6708.61,6708.61\r\nMontes de Oro,6056.83,6056.83\r\nJiménez,5977.01,5977.01\r\nParrita,5416.52,5416.52\r\nSarchí,4980.82,4980.82\r\nMatina,4780.47,4780.47\r\nBuenos Aires,4770.35,4770.35\r\nAlvarado,4720.58,4720.58\r\nTarrazú,4426.07,4426.07\r\nLeón Cortés Castro,4276.34,4276.34\r\nAcosta,3841.69,3841.69\r\nLos Chiles,3430.84,3430.84\r\nRío Cuarto,3185.75,3185.75\r\nNandayure,2539.45,2539.45\r\nMonteverde,2369.24,2369.24\r\nGuatuso,2367.56,2367.56\r\nDota,2002.69,2002.69\r\nHojancha,1694.46,1694.46\r\nPuerto Jiménez,1448.84,1448.84\r\nSan Mateo,946.35,946.35\r\nTurrubares,524.88,524.88\r\n",
+    "filters": [
+      {
+        "$schema": "http://powerbi.com/product/schema#basic",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Cantón"
+        },
+        "filterType": 1,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "operator": "All",
+        "values": [],
+        "requireSingleSelection": false
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Impuestos a los producto",
+          "aggregationFunction": "Sum"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Ordenamiento",
+          "measure": "IMPuestos_Orden"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "page": "Clasificación_cantón",
+    "name": "9773b79c2790172df397",
+    "type": "clusteredColumnChart",
+    "title": "PIB",
+    "data": "Cantón,Sum of PIB,PIB_Orden\r\nSan José,8064851.58,8064851.58\r\nAlajuela,4523705.83,4523705.83\r\nHeredia,2593370.85,2593370.85\r\nSanta Ana,2016475.51,2016475.51\r\nBelén,1999430.7,1999430.7\r\nEscazú,1982782.24,1982782.24\r\nCartago,1841169.89,1841169.89\r\nMontes de Oca,1389204.39,1389204.39\r\nSan Carlos,1208012.38,1208012.38\r\nGoicoechea,1076576.72,1076576.72\r\nLiberia,1030975.42,1030975.42\r\nDesamparados,961362.26,961362.26\r\nCurridabat,950714.14,950714.14\r\nPuntarenas,830213.7,830213.7\r\nPococí,788952.17,788952.17\r\nPérez Zeledón,691938.55,691938.55\r\nSanto Domingo,649776.49,649776.49\r\nLa Unión,634383.3,634383.3\r\nTibás,610755.84,610755.84\r\nGrecia,508036.54,508036.54\r\nFlores,502628.5,502628.5\r\nLimón,466572.97,466572.97\r\nSiquirres,457303.53,457303.53\r\nSanta Cruz,436549.76,436549.76\r\nSan Ramón,390636.04,390636.04\r\nTurrialba,354851.29,354851.29\r\nSan Rafael,352144.04,352144.04\r\nMoravia,337280.98,337280.98\r\nVázquez de Coronado,324230.91,324230.91\r\nCarrillo,297579.15,297579.15\r\nSarapiquí,294967.17,294967.17\r\nParaíso,291546.67,291546.67\r\nNicoya,282855.21,282855.21\r\nBarva,265121,265121\r\nMora,227374.34,227374.34\r\nGuácimo,223341.79,223341.79\r\nSan Pablo,222644.45,222644.45\r\nEl Guarco,221664.42,221664.42\r\nQuepos,217762.15,217762.15\r\nPalmares,208115.71,208115.71\r\nCorredores,205123.89,205123.89\r\nGarabito,199337.74,199337.74\r\nAlajuelita,198443.52,198443.52\r\nGolfito,192721.91,192721.91\r\nTilarán,190878.29,190878.29\r\nMatina,184955.67,184955.67\r\nOsa,175635.88,175635.88\r\nUpala,175233.31,175233.31\r\nNaranjo,172732.06,172732.06\r\nTalamanca,169033.88,169033.88\r\nBagaces,167257.53,167257.53\r\nPoás,166801.71,166801.71\r\nCañas,160982.41,160982.41\r\nCoto Brus,160381.52,160381.52\r\nOreamuno,149881.73,149881.73\r\nAserrí,146450.95,146450.95\r\nSanta Bárbara,141391.87,141391.87\r\nBuenos Aires,140380.12,140380.12\r\nSan Isidro,136762.82,136762.82\r\nEsparza,134295.55,134295.55\r\nPuriscal,131336.53,131336.53\r\nAtenas,127189.51,127189.51\r\nAbangares,117671.37,117671.37\r\nJiménez,115740.82,115740.82\r\nZarcero,114367.29,114367.29\r\nLos Chiles,109661.71,109661.71\r\nSarchí,102576.19,102576.19\r\nTarrazú,101417.02,101417.02\r\nParrita,101338.08,101338.08\r\nOrotina,101189.55,101189.55\r\nAlvarado,90692.24,90692.24\r\nLa Cruz,89057.95,89057.95\r\nLeón Cortés Castro,88380.3,88380.3\r\nMontes de Oro,80895.46,80895.46\r\nAcosta,75558.5,75558.5\r\nRío Cuarto,56564.26,56564.26\r\nGuatuso,47383.69,47383.69\r\nNandayure,40872.46,40872.46\r\nDota,37876.52,37876.52\r\nHojancha,30546.8,30546.8\r\nMonteverde,27750.82,27750.82\r\nPuerto Jiménez,24345.59,24345.59\r\nSan Mateo,20836.5,20836.5\r\nTurrubares,17644.26,17644.26\r\n",
+    "filters": [
+      {
+        "$schema": "http://powerbi.com/product/schema#basic",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Cantón"
+        },
+        "filterType": 1,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "operator": "All",
+        "values": [],
+        "requireSingleSelection": false
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "PIB",
+          "aggregationFunction": "Sum"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Ordenamiento",
+          "measure": "PIB_Orden"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "page": "Clasificación_cantón",
+    "name": "3bfc45cba9e1307c1792",
+    "type": "clusteredColumnChart",
+    "title": "Exportaciones",
+    "data": "Cantón,Exportaciones,EXP_Orden\r\nAlajuela,3732599.37,3732599.37\r\nSan José,1229599.81,1229599.81\r\nCartago,1136139.31,1136139.31\r\nHeredia,774946.11,774946.11\r\nPococí,530020.74,530020.74\r\nSan Carlos,444837.21,444837.21\r\nBelén,257337.63,257337.63\r\nCorredores,219908.89,219908.89\r\nPuntarenas,190247.03,190247.03\r\nSarapiquí,150359.92,150359.92\r\nGrecia,114173.49,114173.49\r\nLimón,106134.27,106134.27\r\nSanto Domingo,101385.33,101385.33\r\nGuácimo,81578.14,81578.14\r\nSiquirres,74828.72,74828.72\r\nEsparza,69509.19,69509.19\r\nEscazú,57375.48,57375.48\r\nLa Unión,52717.98,52717.98\r\nEl Guarco,45738.35,45738.35\r\nDesamparados,45437.85,45437.85\r\nCañas,42571.72,42571.72\r\nLos Chiles,38123.36,38123.36\r\nLa Cruz,37186.68,37186.68\r\nTarrazú,35897.34,35897.34\r\nRío Cuarto,35603.21,35603.21\r\nParaíso,34993.01,34993.01\r\nTurrialba,30180.71,30180.71\r\nMoravia,29581.96,29581.96\r\nTibás,27682.58,27682.58\r\nAbangares,24474.47,24474.47\r\nQuepos,24329.68,24329.68\r\nSan Ramón,23743.29,23743.29\r\nSanta Ana,22973.67,22973.67\r\nUpala,21823.33,21823.33\r\nMatina,20895.5,20895.5\r\nMontes de Oca,20311,20311\r\nOreamuno,19969.77,19969.77\r\nGoicoechea,19359.22,19359.22\r\nSarchí,17523.68,17523.68\r\nAcosta,17308.79,17308.79\r\nPérez Zeledón,16693.34,16693.34\r\nPalmares,15125.18,15125.18\r\nCurridabat,11085.14,11085.14\r\nParrita,10545.51,10545.51\r\nNicoya,10014.77,10014.77\r\nMora,9281.52,9281.52\r\nBarva,8594.54,8594.54\r\nOrotina,8578.18,8578.18\r\nLiberia,8456.8,8456.8\r\nFlores,7825.72,7825.72\r\nSan Pablo,6720.96,6720.96\r\nAserrí,5484.14,5484.14\r\nNaranjo,5425.3,5425.3\r\nDota,4571.78,4571.78\r\nSanta Bárbara,4128.17,4128.17\r\nCarrillo,3907.08,3907.08\r\nZarcero,3575.43,3575.43\r\nPoás,3401.11,3401.11\r\nNandayure,2562.52,2562.52\r\nJiménez,2241.72,2241.72\r\nGarabito,2042.12,2042.12\r\nSan Isidro,1458.02,1458.02\r\nPuriscal,1432.01,1432.01\r\nAtenas,1336.69,1336.69\r\nVázquez de Coronado,1266.33,1266.33\r\nTalamanca,1257.38,1257.38\r\nCoto Brus,1038.85,1038.85\r\nAlajuelita,914.17,914.17\r\nSanta Cruz,700.59,700.59\r\nBagaces,443.06,443.06\r\nMontes de Oro,243.13,243.13\r\nSan Mateo,229.82,229.82\r\nGuatuso,200.9,200.9\r\nBuenos Aires,183.22,183.22\r\nHojancha,116.21,116.21\r\nTilarán,80.04,80.04\r\nSan Rafael,60,60\r\nAlvarado,59.67,59.67\r\nGolfito,12.18,12.18\r\nTurrubares,3.49,3.49\r\nOsa,0.68,0.68\r\n",
+    "filters": [
+      {
+        "$schema": "http://powerbi.com/product/schema#basic",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Cantón"
+        },
+        "filterType": 1,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "operator": "All",
+        "values": [],
+        "requireSingleSelection": false
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Exportaciones",
+          "aggregationFunction": "Sum"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Ordenamiento",
+          "measure": "EXP_Orden"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "page": "Clasificación_cantón",
+    "name": "c685509634cbc3e5255e",
+    "type": "clusteredColumnChart",
+    "title": "Importaciones",
+    "data": "Cantón,Importaciones,IMP_Orden\r\nSan José,3812299.42,3812299.42\r\nAlajuela,2386526.64,2386526.64\r\nLimón,1755326.6,1755326.6\r\nHeredia,736138.7,736138.7\r\nCartago,728890.14,728890.14\r\nBelén,385322.59,385322.59\r\nPuntarenas,352865.41,352865.41\r\nPococí,312992.15,312992.15\r\nDesamparados,256448.29,256448.29\r\nSanta Ana,171383.75,171383.75\r\nGoicoechea,164223.57,164223.57\r\nEscazú,140847.63,140847.63\r\nEsparza,134845.95,134845.95\r\nCurridabat,132445.16,132445.16\r\nSanto Domingo,105250.97,105250.97\r\nSiquirres,101957.39,101957.39\r\nGrecia,76545.61,76545.61\r\nLa Unión,73928.13,73928.13\r\nTibás,67344.95,67344.95\r\nSan Carlos,64387.69,64387.69\r\nEl Guarco,48648.34,48648.34\r\nMoravia,48529.34,48529.34\r\nPalmares,37845.67,37845.67\r\nMontes de Oca,31434.41,31434.41\r\nLiberia,30909.05,30909.05\r\nGuácimo,25240.94,25240.94\r\nSan Ramón,23188.57,23188.57\r\nVázquez de Coronado,22825.15,22825.15\r\nOreamuno,22176.32,22176.32\r\nFlores,22094.78,22094.78\r\nGolfito,21064.72,21064.72\r\nBarva,20293.85,20293.85\r\nAbangares,19670.35,19670.35\r\nAlajuelita,19508.64,19508.64\r\nOrotina,18840.51,18840.51\r\nNaranjo,18542.34,18542.34\r\nTurrialba,10747.03,10747.03\r\nCañas,10325.2,10325.2\r\nPérez Zeledón,9918.3,9918.3\r\nParaíso,9432.93,9432.93\r\nSanta Bárbara,8920.32,8920.32\r\nSan Pablo,8562.55,8562.55\r\nMora,8460.49,8460.49\r\nSan Rafael,8396.64,8396.64\r\nAserrí,8363.03,8363.03\r\nPuriscal,7831.85,7831.85\r\nCarrillo,7620.71,7620.71\r\nSarapiquí,7549.24,7549.24\r\nCorredores,7391.31,7391.31\r\nAtenas,6899.89,6899.89\r\nSanta Cruz,6772.88,6772.88\r\nPoás,6305.89,6305.89\r\nRío Cuarto,6179.37,6179.37\r\nParrita,6165.49,6165.49\r\nBagaces,5351.23,5351.23\r\nGarabito,4325.54,4325.54\r\nAcosta,3962.87,3962.87\r\nQuepos,3950.67,3950.67\r\nSan Isidro,2711.92,2711.92\r\nLa Cruz,2437.08,2437.08\r\nNicoya,2426.91,2426.91\r\nSarchí,2362.67,2362.67\r\nTilarán,2151.58,2151.58\r\nZarcero,1589.91,1589.91\r\nAlvarado,1501.7,1501.7\r\nMatina,1358.91,1358.91\r\nTarrazú,1227.08,1227.08\r\nGuatuso,970.11,970.11\r\nJiménez,730.04,730.04\r\nOsa,560.09,560.09\r\nMontes de Oro,556.15,556.15\r\nCoto Brus,526.87,526.87\r\nNandayure,340.07,340.07\r\nLeón Cortés Castro,182.11,182.11\r\nBuenos Aires,163.86,163.86\r\nTalamanca,161.84,161.84\r\nTurrubares,158.17,158.17\r\nSan Mateo,88.45,88.45\r\nUpala,52.33,52.33\r\nDota,32.64,32.64\r\nLos Chiles,10.81,10.81\r\n",
+    "filters": [
+      {
+        "$schema": "http://powerbi.com/product/schema#basic",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Cantón"
+        },
+        "filterType": 1,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "operator": "All",
+        "values": [],
+        "requireSingleSelection": false
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Tasas de variación",
+          "column": "Importaciones",
+          "aggregationFunction": "Sum"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      },
+      {
+        "$schema": "http://powerbi.com/product/schema#advanced",
+        "target": {
+          "table": "Ordenamiento",
+          "measure": "IMP_Orden"
+        },
+        "filterType": 0,
+        "displaySettings": {
+          "isHiddenInViewMode": false
+        },
+        "logicalOperator": "And",
+        "conditions": []
+      }
+    ]
+  },
+  {
+    "page": "Clasificación_cantón",
+    "slicer": "8b9862389ca70a064288",
+    "state": {
+      "filters": [
+        {
+          "$schema": "http://powerbi.com/product/schema#basic",
+          "target": {
+            "table": "Ordenamiento",
+            "column": "Orden"
+          },
+          "filterType": 1,
+          "operator": "In",
+          "values": [
+            "Ascendente"
+          ],
+          "requireSingleSelection": false
+        }
+      ],
+      "targets": [
+        {
+          "table": "Ordenamiento",
+          "column": "Orden"
+        }
+      ]
+    }
+  },
+  {
+    "page": "Descargas",
+    "pageFilters": []
+  }
+]

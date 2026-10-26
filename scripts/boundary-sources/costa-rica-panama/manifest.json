@@ -1,0 +1,47 @@
+{
+  "retrieved": "2026-10-25",
+  "files": {
+    "cri-districts.geojson": {
+      "url": "https://mapas.aresep.go.cr/server/rest/services/Limites/L%C3%ADmites_administrativos/MapServer/7/query?f=geojson&where=1%3D1&outFields=cod_prov,nom_prov,nom_cant,cod_canton,cod_distr,nom_distr&outSR=4326&geometryPrecision=6&returnGeometry=true",
+      "provider": "ARESEP Costa Rica · IGN administrative district boundaries",
+      "boundaryYear": 2024,
+      "license": "Publicly accessible official mapping service; attribution retained",
+      "coverage": "7 provinces, 84 cantons, 492 districts. Dated geometry snapshot; the IGN 2026 register lists 494 districts.",
+      "sha256": "5d1952951c3603dc7e3bd49b032d960df78bbf7cf9132413dd9815653dd6c40f",
+      "bytes": 52132697
+    },
+    "pan-correctimientos.geojson": {
+      "url": "https://sigigntg.anati.gob.pa/arcgisserver/rest/services/Hosted/CORREGIMIENTOS/FeatureServer/0/query?f=geojson&where=1%3D1&outFields=*&outSR=4326&geometryPrecision=6&returnGeometry=true",
+      "provider": "ANATI / Instituto Geográfico Nacional Tommy Guardia",
+      "boundaryYear": 2024,
+      "license": "Official public geospatial open-data publication; attribution retained",
+      "coverage": "2025 edition, 2024 boundary reference. 699 land areas plus 31 water features; source metadata distinguishes the cartographic Kuna Yala district placeholder and unsurveyed Naso internal divisions.",
+      "sha256": "af5d154ce73ed553b3e136a453e3e3a5fe301d4291d6b96bdb9fa9bbb8a47fd5",
+      "bytes": 62342003
+    },
+    "pan-metadata.json": {
+      "url": "https://sigigntg.anati.gob.pa/arcgisserver/rest/services/Mapa_Web_Divisi%C3%B3n_Pol%C3%ADtica_Administrativa_2025a_MIL1/MapServer/8?f=pjson",
+      "sha256": "3d6e6e858a986d9d47ac5eb20ee43bf2af65b5aed591959319fa44bd6ad0b6c2",
+      "bytes": 613625
+    },
+    "cri-metadata.json": {
+      "url": "https://mapas.aresep.go.cr/server/rest/services/Limites/L%C3%ADmites_administrativos/MapServer/7?f=pjson",
+      "sha256": "4c52bbe3132ae90a0f4d72f238bb841aee34a736762f228c8b0e947f28a85ebb",
+      "bytes": 6756
+    },
+    "flag-cr.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg",
+      "provider": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "sha256": "fe4927d79e735bd7765cba91830b28c7e2aacc316365f5d8d2cea3f1e75167ac",
+      "bytes": 266
+    },
+    "flag-pa.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg",
+      "provider": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "sha256": "464fc8f974b506c5a8353899dba96d68154f2f991a5a9319f68184be86c31556",
+      "bytes": 331
+    }
+  }
+}

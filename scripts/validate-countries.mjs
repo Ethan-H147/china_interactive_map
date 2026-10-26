@@ -55,3 +55,5 @@ assert.deepEqual(history.entries.map(e=>e.country).sort(),[...ids].sort(),'Every
 for(const e of history.entries){assert.equal(e.name,countries[e.country].en);assert(/^\d{4}-\d{2}-\d{2}$/.test(e.addedOn)&&Number.isFinite(Date.parse(e.addedOn)),e.country+' addition date');assert(['first-tracked-implementation','local-implementation'].includes(e.basis));assert(e.basis==='first-tracked-implementation'?/^[a-f0-9]{40}$/.test(e.evidence.commit):!!e.evidence.note,e.country+' date evidence');}
 
 for(const id of AtlasCountries.ids)assert(['Africa','Asia','Europe','North America','Oceania','South America'].includes(AtlasCountries.countries[id].continent),id+' has a menu continent');
+
+for(const id of ids)if(countries[id].map?.countryStatistics)assert.equal(countries[id].map.countryProfile,false,id+' country overview stays hidden');

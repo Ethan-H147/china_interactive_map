@@ -1,0 +1,98 @@
+[
+  {
+    "county": "US-COUNTY-21067",
+    "municipality": "US-PLACE-2146027"
+  },
+  {
+    "county": "US-COUNTY-08031",
+    "municipality": "US-PLACE-0820000"
+  },
+  {
+    "county": "US-COUNTY-30023",
+    "municipality": "US-PLACE-3001675"
+  },
+  {
+    "county": "US-COUNTY-02020",
+    "municipality": "US-PLACE-0203000"
+  },
+  {
+    "county": "US-COUNTY-42101",
+    "municipality": "US-PLACE-4260000"
+  },
+  {
+    "county": "US-COUNTY-13215",
+    "municipality": "US-PLACE-1319000"
+  },
+  {
+    "county": "US-COUNTY-22071",
+    "municipality": "US-PLACE-2255000"
+  },
+  {
+    "county": "US-COUNTY-02275",
+    "municipality": "US-PLACE-0286380"
+  },
+  {
+    "county": "US-COUNTY-13021",
+    "municipality": "US-PLACE-1349008"
+  },
+  {
+    "county": "US-COUNTY-47037",
+    "municipality": "US-CONCITY-4752004"
+  },
+  {
+    "county": "US-COUNTY-13245",
+    "municipality": "US-CONCITY-1304200"
+  },
+  {
+    "county": "US-COUNTY-30093",
+    "municipality": "US-CONCITY-3011390"
+  },
+  {
+    "county": "US-COUNTY-47127",
+    "municipality": "US-PLACE-4744382"
+  },
+  {
+    "county": "US-COUNTY-21111",
+    "municipality": "US-CONCITY-2148003"
+  },
+  {
+    "county": "US-COUNTY-13053",
+    "municipality": "US-PLACE-1321017"
+  },
+  {
+    "county": "US-COUNTY-47169",
+    "municipality": "US-PLACE-4732742"
+  },
+  {
+    "county": "US-COUNTY-08014",
+    "municipality": "US-PLACE-0809280"
+  },
+  {
+    "county": "US-COUNTY-02220",
+    "municipality": "US-PLACE-0270540"
+  },
+  {
+    "county": "US-COUNTY-13307",
+    "municipality": "US-PLACE-1381128"
+  },
+  {
+    "county": "US-COUNTY-13239",
+    "municipality": "US-PLACE-1332528"
+  },
+  {
+    "county": "US-COUNTY-13059",
+    "municipality": "US-CONCITY-1303436"
+  },
+  {
+    "county": "US-COUNTY-02110",
+    "municipality": "US-PLACE-0236400"
+  },
+  {
+    "county": "US-COUNTY-13101",
+    "municipality": "US-PLACE-1326156"
+  },
+  {
+    "county": "US-COUNTY-25019",
+    "municipality": "US-MCD-2501943790"
+  }
+]

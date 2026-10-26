@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import {gunzipSync} from 'node:zlib';import {createHash} from 'node:crypto';
 import {prepareIndiaNames} from './prepare-india-names.mjs';import {profiles,languageLabels} from './india-language-profiles.mjs';import {createPlaceSearch} from '../dist/place-search.mjs';
 const root='dist/data/europe/india/',data=JSON.parse(fs.readFileSync(root+'regional-names.json')),catalogue=JSON.parse(gunzipSync(fs.readFileSync(root+'catalogue.bin'))),source=JSON.parse(fs.readFileSync('scripts/name-sources/india/wikidata.json'));
-assert.equal(Object.keys(data.records).length,36);assert.equal(Object.keys(profiles).length,36);assert.equal(catalogue.records.length,36);let names=0,languages=0;
-for(const r of catalogue.records){
+assert.equal(Object.keys(data.records).length,36);assert.equal(Object.keys(profiles).length,36);assert.equal(catalogue.records.filter(r=>r.level===1).length,36);let names=0,languages=0;
+for(const r of catalogue.records.filter(r=>r.level===1)){
  const profile=data.records[r.id],codes=[...new Set([profiles[r.code][0],...profiles[r.code][1].split(' ')])];assert(profile);assert(source.entities[profile.wikidata]);assert(profile.primary.text);assert.equal(r.local,profile.primary.text);assert.equal(r.localLang,profile.primary.lang);assert.equal(r.localDir,profile.primary.dir);
  assert.deepEqual([...profile.names.map(n=>n.code),...profile.otherLanguages.map(n=>n.code)].sort(),codes.sort(),'Coverage is independent of name availability: '+r.id);
  for(const n of profile.names){assert(n.text&&n.language&&n.lang&&n.source.startsWith('https://'));assert(languageLabels[n.code]);assert(['ltr','rtl'].includes(n.dir));if(n.romanized)assert(n.lang.endsWith('-Latn'));assert(r.aliases.includes(n.text));names++;}

@@ -1,0 +1,27 @@
+import assert from 'node:assert/strict';
+export default [false,true].map(mobile=>({name:(mobile?'phone':'desktop')+' Taiwan townships search, selection, parent navigation and scoped boundaries',options:{width:mobile?390:1280,height:844,mobile},async run(p,base){
+ await p.open(base,'#china');
+ assert.equal(await p.evaluate('regionIndex.filter(r=>String(r.layer.feature.properties.adcode).startsWith("TW-T-")).length'),368);
+ assert(!p.requests.some(url=>/taiwan-townships\/TW-/.test(url)),'No township geometry downloaded at startup');
+ await p.evaluate('selectRegion(regionByCode.get("TW-63000"),710000,true)');
+ await p.waitFor('chinaCountyScope.loaded==="TW-63000"');await p.settle();
+ assert.equal(await p.evaluate('document.querySelectorAll("#region-list button").length'),12);
+ assert(await p.evaluate('map.querySourceFeatures("city-districts").length>0'));
+ assert(await p.evaluate('map.querySourceFeatures("city-districts").every(f=>f.properties.parentCity==="TW-63000")'));
+ await p.evaluate('document.getElementById("search").value="Zhongzheng";document.getElementById("search").dispatchEvent(new Event("input"));');
+ const results=await p.evaluate('document.getElementById("search-results").textContent');assert(results.includes('Taipei City'));assert(results.includes('Keelung City'));
+ if(mobile)await p.evaluate('AtlasSheet.expand()');
+ await p.evaluate('document.querySelectorAll("#search-results button").forEach(b=>{if(b.textContent.includes("Taipei City"))b.click()})');await p.settle();
+ assert.equal(await p.evaluate('selected.layer.feature.properties.parentCity'),'TW-63000');
+ assert.equal(await p.evaluate('document.getElementById("selection-name").textContent'),'Zhongzheng District');
+ assert(await p.evaluate('map.getFeatureState({source:"city-districts",id:selected.layer.feature.properties.adcode}).selected'));
+ await p.screenshot('taiwan-townships-'+(mobile?'phone':'desktop'));
+ await p.evaluate('selectRegion(regionByCode.get("TW-09020"),710000,true)');await p.waitFor('chinaCountyScope.loaded==="TW-09020"');await p.settle();
+ assert.equal(await p.evaluate('document.querySelectorAll("#region-list button").length'),6);
+ await p.evaluate('selectRegion(regionByCode.get("TW-10020"),710000,true)');await p.waitFor('chinaCountyScope.loaded==="TW-10020"');await p.settle();
+ assert.equal(await p.evaluate('document.querySelectorAll("#region-list button").length'),2);
+ await p.evaluate('selectRegion(provinceLayers.get(710000),710000,false)');await p.waitFor('chinaCountyScope.loaded===null');
+ assert.equal(await p.evaluate('document.querySelectorAll("#region-list button").length'),22);
+ await p.evaluate('location.hash="#china/place=TW-T-63000050"');await p.waitFor('selected?.layer.feature.properties.adcode==="TW-T-63000050"&&chinaCountyScope.loaded==="TW-63000"');await p.settle();
+ assert.equal(await p.evaluate('selected.layer.feature.properties.name'),'中正區');
+}}));

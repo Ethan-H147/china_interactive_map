@@ -178,6 +178,7 @@ for(const [country,d]of Object.entries(datasets)){
  if(country==='united-states')await buildUSCounties(dir+'/');
  if(country==='mexico')await buildMexicoMunicipalities(dir+'/');
  if(country==='canada'){await fetchCanadaLocal();await prepareCanadaStatisticsSources();await buildCanadaLocal(dir+'/');prepareCanadaMunicipalFacts(dir+'/');}
+ if(country==='india'){await import('./build-india-districts.mjs');(await import('./prepare-india-names.mjs')).prepareIndiaNames();}
  console.log('Built',country,counts,'chunks',Object.keys(chunks).length);
 }
 

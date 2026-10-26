@@ -1,0 +1,46 @@
+{
+  "retrieved": "2026-10-25",
+  "snapshot": "OS Open Names October 2026; OSNI current published gazetteer; retained GeoNames GB extract",
+  "sources": [
+    {
+      "id": "os-open-names",
+      "title": "Ordnance Survey Open Names · populated places, October 2026",
+      "url": "https://osdatahub.os.uk/downloads/open/OpenNames",
+      "download": "https://api.os.uk/downloads/v1/products/OpenNames/downloads?area=GB&format=CSV&redirect",
+      "license": "Open Government Licence v3.0",
+      "licenseURL": "https://www.ordnancesurvey.co.uk/documents/licensing/os-opendata-licence.pdf",
+      "credit": "Contains OS data © Crown copyright and database right 2026. Contains Royal Mail data © Royal Mail copyright and database right 2026. Contains National Statistics data © Crown copyright and database right 2026.",
+      "archiveMD5": "bba5aa44ba375d39de60584099e335cd"
+    },
+    {
+      "id": "osni-places",
+      "title": "OSNI Open Data · Gazetteer, Place Names",
+      "url": "https://www.opendatani.gov.uk/dataset/osni-open-data-gazetteer-place-names",
+      "download": "https://admin.opendatani.gov.uk/dataset/d27903f1-15e6-4c07-8564-ddc655e9c549/resource/cd65c0eb-0b85-448a-be85-1725dd2aeb48/download/osni_open_data_-_gazetteer_-_place_names.geojson",
+      "license": "Open Government Licence v3.0",
+      "credit": "Contains Land & Property Services information licensed under the Open Government Licence v3.0. The published place-name collection derives from the 1:250,000 map and is not an exhaustive village inventory."
+    },
+    {
+      "id": "geonames-ni-places",
+      "title": "GeoNames · Northern Ireland populated places",
+      "url": "https://download.geonames.org/export/dump/GB.zip",
+      "license": "CC BY 4.0",
+      "credit": "GeoNames geographical database. No population values imported."
+    }
+  ],
+  "files": {
+    "os-places.json.gz": {
+      "sha256": "d2ed69ba74d3e83c3c82e206dd79582cc52860b73ef8ec053f862ffbea95295f"
+    },
+    "osni-places.geojson": {
+      "sha256": "d110c4fa78e45b5e4d41f07b6fb9ff2cd1d1ef27904ee8a44abdcc3755da1cb7"
+    },
+    "geonames-ni.json.gz": {
+      "sha256": "bcd181c48de30f4d1f9199d8e0d8972dad7fcca7ce17f54ae7c27e56538bce8c"
+    },
+    "statistical-base.json.gz": {
+      "sha256": "475ebc22b08115620038a96648f88527fc50354919a2d6c6ee50346ce8ce3672"
+    }
+  },
+  "coordinateTransform": "OSGB36 British National Grid to WGS84 using the standard seven-parameter Helmert transform. Gazetteer dot positions are approximate to a few metres; they are not survey control."
+}

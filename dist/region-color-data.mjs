@@ -8,7 +8,7 @@ export const colorLabels = {none:'None',population:'Population',populationDensit
 export const subdivisionColorLabels=Object.fromEntries(ids.filter(id=>countries[id].levelNames).map(id=>[id,countries[id].levelNames]));
 export function colorLayerProfile(layer,country){
  const c=countryColorData[country];if(!c||layer.type!=='fill'||layer.metadata?.atlas?.thematic)return null;
- const id=layer.id.replace(/-motion$/,'');
+ const id=layer.id.replace(/-motion$/,'').replace(/-selection-fill$/,'-fill');
  const layers=c.layers||new RegExp('^'+country+'-(?!portal|international).*-fill$');
  if(!layers.test(id)||/(?:city|settlement)-(?:hit|fill)$/.test(id))return null;
  const primary=(c.primary||new RegExp('^'+country+'-(?:.*-)?first(?:-coastal)?-fill$')).test(id);

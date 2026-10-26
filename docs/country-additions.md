@@ -1,6 +1,6 @@
 # Country addition log
 
-All 54 registered country maps are included. Historical addition dates are preserved; Morocco and Bolivia were first implemented on 18 October 2026.
+The log records first implementation dates for the registered country maps. Historical addition dates are preserved; Morocco and Bolivia were first implemented on 18 October 2026.
 
 Dates use America/Chicago. "Added" means the first implementation in the atlas, including an initial outline or developer-only version. It does not mean the date of public deployment, a dataset year, or a source retrieval date. Entries describe the first implementation. The earlier local additions through Morocco were subsequently committed and published on 18 October 2026; their original addition dates are unchanged.
 
@@ -115,3 +115,15 @@ Baltic details, dates, source licenses and known coverage limits: [Baltic countr
 Sources, special administrative cases and shared-border reconciliation: [Austria, Hungary and Slovenia](central-europe.md).
 
 Ecuador, Venezuela and Colombia were added on 2026-10-22 with detailed administrative maps, dated population, original flags, search and first-level quizzes. See [north-andes.md](north-andes.md) for source dates and coverage.
+
+| Added | Country | Commit | Commit description / status |
+| --- | --- | --- | --- |
+| 2026-10-25 | Costa Rica | Local implementation | Seven provinces, 84 cantons and 492 districts from a dated official geometry snapshot; scoped loading and Cocos Island entry. |
+| 2026-10-25 | Panama | Local implementation | Official ANATI 2025 edition (2024 boundaries), including comarcas; cartographic placeholders and unresolved Naso internal boundaries are not invented. |
+
+| 2026-10-26 | Zimbabwe | Local implementation | 10 provinces/cities and 91 districts; final 2022 census province statistics and 2025 national economy. |
+| 2026-10-26 | Zambia | Local implementation | 10 provinces and 116 districts; labeled preliminary 2022 census and 2025 national economy. |
+| 2026-10-26 | Tanzania | Local implementation | 31 regions including Zanzibar, 170 dated districts; 2022 census and combined 2025 national accounts. |
+| 2026-10-26 | Kenya | Local implementation | 47 counties and 290 dated sub-counties; complete 2019 county census totals and 2025 national economy. |
+
+See [Eastern and southern Africa](east-south-africa.md) for source dates, census scope and national-account definitions.

@@ -1,1 +1,901 @@
-{"retrieved":"2026-10-23","counts":{"1":32,"2":2478},"frontiers":[{"pair":"BLZ-MEX","vertices":93,"endpointErrorMetres":0,"method":"reference through water"},{"pair":"BLZ-MEX","vertices":2,"endpointErrorMetres":0,"method":"reference through water"},{"pair":"GTM-MEX","vertices":870,"endpointErrorMetres":1240,"method":"continuous outline arc"}],"kinds":{"State":31,"Federal entity":1,"Municipality":2462,"Borough":16},"coverage":"All 31 states and Mexico City, with all 2,478 INEGI municipal areas: 2,462 municipalities and Mexico City’s 16 boroughs (alcaldías). December 2025 boundary snapshot, checked against the municipal catalogue retrieved 23 October 2026. 2020 census populations are shown only where INEGI publishes them. Inland water remains a separate optional overlay.","processing":"All municipalities are cleaned and simplified together at .0001 degree tolerance (about 11 m north-south), with parent states dissolved from that same topology. Shared internal edges are stored once. Municipal geometry loads only for the selected federal entity. State statistics and economic sources are retained; no local GDP is inferred.","sources":[{"file":"mexico-inegi-states.geojson","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee","provider":"INEGI · Marco Geoestadístico, December 2025; water-inclusive state envelopes","license":"INEGI free use with attribution","licenseUrl":"https://www.inegi.org.mx/inegi/terminos.html","sha256":"170c3ea5ff472f08ece97970dc90ad4ba8c6f503e33859655f315091c105cc91","bytes":28836523},{"file":"mexico-population.zip","url":"https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip","provider":"INEGI · 2020 Population and Housing Census, ITER national extract","license":"INEGI free use with attribution","sha256":"9342fdbd45bda5897f2b827a12904843b6f8fb85d4e72da299e09e4d2422ab60","bytes":36615814},{"file":"ne-10m-land-boundaries.geojson","url":"https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson","provider":"Natural Earth v5.1.2 · international boundary reference topology","license":"Public domain","sha256":"74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a","bytes":2284669}],"municipalSources":[{"file":"catalogue-02.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/02","sha256":"31e633c6ea1b3704bcdc175d75a535a56a35629962789d6acd1a1cd9ca350e65","bytes":1416,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-01.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/01","sha256":"3143fa70bf5200f619607e444072264a37210244df7826ae28bfee5c645a82d1","bytes":2287,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-03.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/03","sha256":"243080b6c4571587e2f2d3b3b0823ea6d0fb78fff1fbe5adf195c8a7ce807189","bytes":1065,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-01.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/01","sha256":"bb522a1b1566b1acd1aa6aeede0675bc231fd5eb1eb73ac33df82d3242a07e2b","bytes":412213,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-04.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/04","sha256":"8cc5f12b823ac594dc72eda819f72fb9786589e5031f05816594951dafb106e5","bytes":2514,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-05.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/05","sha256":"903951f53a1b3b19f7e75bb0682981c89677b90e8d64cb565be3c94b5e04913d","bytes":983945,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-02.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/02","sha256":"ba0656b05c353c6aed84cde6d534a0b2b5d4f82377be69fc3e4300158636889f","bytes":2857070,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-05.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/05","sha256":"25a91ad8e4bf84037a22d49eace530033523c822958a0fe9737b96a1cf23d04a","bytes":7305,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-06.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/06","sha256":"d3915837448bdf7004688bcefc2b542aef6f6285af5705566a1be4f42c99ecf9","bytes":2030,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-06.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/06","sha256":"a345fd583e0b9c35ecc84c1494c40b5999338c8a33b134c9ad28e4e1d2635571","bytes":517085,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-07.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/07","sha256":"8bf119b5cc25a0421ee7c86f5d52948aae50377a8c4820b2e2bfec9b8ea43145","bytes":24090,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-04.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/04","sha256":"c341fd88bf62cad4bc3207a2d168ddfcf1ac83bb35923fc17c8b1485d9503769","bytes":1727901,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-08.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/08","sha256":"a60a4234c34c2c7b893f15cea664ae70f3bb8d27e4025fc23972788040d51900","bytes":12879,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-09.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/09","sha256":"44de7357f6ac7eea5f1d351aaaaf20c726f7c0096e14f8f7b9ced24e417b915c","bytes":485219,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-07.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/07","sha256":"3786b09fa76ea3a0c6c6a00d8fdb2f75f0d1084f11e37ed6d15c3f0652b821bd","bytes":4267841,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-09.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/09","sha256":"b11a202fd0ed19956b098f1f2f3e8a4d9edcca6c7ea5408534da1ef0b02510e2","bytes":3298,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-10.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/10","sha256":"0dad1522e9c14b269ac2a5976810cdae6c638e9b2cff1bebcf8a87fbebabfccd","bytes":7561,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-03.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/03","sha256":"d8af27291273e011c839dc5db5474ffc7035700819bfee706c360906d82f14b0","bytes":5174822,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-11.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/11","sha256":"ad8a28c7d7bdbbe993cea70a6ed7bdc66c25d545e3759aadf3990429add63f88","bytes":9116,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-11.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/11","sha256":"b21890585b5c332b20f17eb3b961faa9725d3456c8f01cf1079439a779f8879b","bytes":2601217,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-10.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/10","sha256":"e24843998920bfc2ce9ad3d71ae5c00d3e1bbdcb1ae63ebbf684ab4bd89a37b7","bytes":2323849,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-12.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/12","sha256":"0fe0da20b587e90d1e304cebaa7cad21948be1d50a2ce8992f0a25f059c5ed7e","bytes":16492,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-13.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/13","sha256":"d44e31190fdb6142f776023d55fe4e6cac332b5238456433b29e867848e03b84","bytes":16415,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-08.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/08","sha256":"c50b7eb61528cf5c5c380424752bb41d06eff43035f61f4a76a2a491a2f01581","bytes":4531266,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-14.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/14","sha256":"e5e35a99b9dac7d33128403adc8400bfeabee28334333c04a269c88c95ee1a38","bytes":24311,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-13.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/13","sha256":"979a842b8d15e21dde93efabbf259c635bb0c33ff6e014e9af8d361fae369a9e","bytes":4674224,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-12.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/12","sha256":"b9fe4c80f723c1bfaf732e1c25bb53feeebcdfdc54c3c33c20467f99d71acc94","bytes":4232674,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-15.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/15","sha256":"cf14d09d1db9e158ac8a1fa7483225bc447388ef5ffc00fa61517dd2614f3a62","bytes":24306,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-16.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/16","sha256":"dd3370193086485db54a865a49fae64fec07101bc92aa4ccb27f0811acde5514","bytes":21619,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-17.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/17","sha256":"4f5a20a03b28613a28b79488ef4bf9b8a6b02da2e7544eea1758e6fc1ea1c5d6","bytes":1181996,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-17.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/17","sha256":"eae31f8203faa218efa7d94b4f1dcd7270e88a020d7f15bf0900490a7ca3eb2a","bytes":7064,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-15.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/15","sha256":"06a6a751d37633af87490b316f149582c94a89b17584a03d9a09345351c8ed42","bytes":4788888,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-18.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/18","sha256":"9b06caef35c52234532858ea72ba68efcd6b5aceb050ab3d6faa50f22945da37","bytes":3971,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-18.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/18","sha256":"2057605607b94375dc692651c7c4eeb0c63fe4a220cd1764d4160ae71039a1c4","bytes":1843529,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-19.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/19","sha256":"31f5a3912494ba652d25964af7871190d9e83c258a2b6fbed9e31f5d33fbf19e","bytes":9866,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-14.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/14","sha256":"cd824b39b99a92cd337dccf6cfdb2764fb605fd6bee1870b4005b35009c65a93","bytes":8998897,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-19.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/19","sha256":"49de26e98b9d224506f0797f2105ff54715026861ba716a0ef3df45e8c287701","bytes":2289819,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-20.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/20","sha256":"39c2b503a15eddf5c3bef56b16892ff896a5aa7ba57ae151dadc0f3c7db72fdc","bytes":112770,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-21.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/21","sha256":"054a9fb30faf071eee7c915c63a352cee67e5215bd1a367512818c463dffc8f2","bytes":41995,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-16.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/16","sha256":"d7ab95be42e18188a28c2ba0fb7e2e6268a720d2853b86a97bd97f2caafa76ae","bytes":5976624,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-22.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/22","sha256":"908a3670d52bc6cdae09d3279755cc605eae9a4e052fd43891901d01f4ac51a4","bytes":752316,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-22.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/22","sha256":"5bc7b1678d062666c32423b7dc9cae9b9e80cda7e23caf22ed79edd56159b935","bytes":3621,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-23.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/23","sha256":"ea31ed8bfb6df4fbbb79788f7e8344d163bae1d4e4754290c0bc3d1b67b86440","bytes":2332,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-24.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/24","sha256":"1631aeb1303795231c03a1dd98e7cde3a908eb605d43551edd1fcc7146072ce3","bytes":1532760,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-24.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/24","sha256":"795baf09719d8c8462a93d843b5efaaf3ca333e2688d6ae63e4bac0358ba334c","bytes":11436,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-23.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/23","sha256":"905936eff6a2ae1c7a81c45a893f9214564d671f45e033c9e4e42360930fcfcd","bytes":1312084,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-25.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/25","sha256":"823d6637b08395c702c753dd2f5b1d1f45ced39271b79bb55f1fe8cd9afb4444","bytes":3785,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-20.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/20","sha256":"a8600aa50f4ad88147756cf1e4cdf4b0399a964623a2c27e479ddc353dd64618","bytes":8191917,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-26.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/26","sha256":"ab63badd30cff561c658040c3c81eba8141ddaa4b7e2c206c22b681d310277be","bytes":13614,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-26.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/26","sha256":"0ec391de785dbc4c9621c48b2c73e8315b4c99add1e6ce97047a3395476d8150","bytes":2828295,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-25.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/25","sha256":"e3946e339a299a3bc6d0d713c6fae3399a99ae0048bee72c690386f98149bced","bytes":2103812,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-27.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/27","sha256":"21d2fee2a258f0ba229d3765b8227b31a42279813f7888e85384070305108b90","bytes":3376,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-28.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/28","sha256":"7c2a43bb4b067fb043f417cc6e1c2a5f16c74afe68d7fc8492cb45a480151369","bytes":8252,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-27.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/27","sha256":"39b3c51a19c12f42269705dcc1898d5e9bbb8b7fd9df56f3e71f8feea7a301bd","bytes":1781097,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-29.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/29","sha256":"fa32c92c55beb6b3adb006d96009b26a3c92d95225d248884530d8171ca700e1","bytes":11901,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-21.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/21","sha256":"1bff711bc36c7cfb99b3872ca8df7bf26d9b37b9be8c52de9176e58bd471a1a8","bytes":9769691,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-28.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/28","sha256":"adb820abec1ea2d09a1d909394b02560899a25c29a054497b45f492557cac807","bytes":1800935,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-29.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/29","sha256":"4b94279048bfd60701681a1c5659d83d938226b1b9a614b009393783da4cdb59","bytes":1908438,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-30.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/30","sha256":"661c235fa4cc60a23f2632d44dc61dce4c714b4567f52a9b2271a346399c91c3","bytes":40815,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-31.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/31","sha256":"8f93f889d64f90eaf8dcfe10ae666b61e43c9dfbccb11bee496dfac40b30d0b1","bytes":19873,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"catalogue-32.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/mgem/32","sha256":"067fb84e1526a1a390658cf5d98dd0c7b159c58a277cb28cd7137332bce05f50","bytes":11286,"metadata":{"Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-31.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/31","sha256":"fdcde1343e5bb058ca096546cadbc545db4f8ee144f4a6621a23e7893a9eeeb5","bytes":1862704,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-32.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/32","sha256":"6d958ac445f8843551a421c2fc1e577f6bf73212d7c706eba41d3951efbbb1dd","bytes":3178477,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"geo-30.json","url":"https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/30","sha256":"1c9ea8cdc7dc883f77cbc2ddd9e5c388492921d9faac51feb3672739b1d04942","bytes":10203079,"metadata":{"Fuente_informacion_vectorial":"INEGI. Marco Geoestadístico, diciembre de 2025","Fuente_informacion_estadistica":"INEGI. Censo de Población y Vivienda, 2020"},"provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"},{"file":"census-seats.json","url":"https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip","sha256":"921661d50d90a32ff743266550472aaacc1e3b6a8a12eb1633e0e971636cddea","bytes":112508,"upstreamSha256":"9342fdbd45bda5897f2b827a12904843b6f8fb85d4e72da299e09e4d2422ab60","extraction":"Only locality codes and names matching municipal-seat codes in the retained INEGI municipal vector records; 2020 census ITER source.","provider":"INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas","license":"INEGI free use with attribution"}]}
+{
+  "retrieved": "2026-10-23",
+  "counts": {
+    "1": 32,
+    "2": 2478
+  },
+  "frontiers": [
+    {
+      "pair": "BLZ-MEX",
+      "vertices": 93,
+      "endpointErrorMetres": 0,
+      "method": "reference through water"
+    },
+    {
+      "pair": "BLZ-MEX",
+      "vertices": 2,
+      "endpointErrorMetres": 0,
+      "method": "reference through water"
+    },
+    {
+      "pair": "GTM-MEX",
+      "vertices": 870,
+      "endpointErrorMetres": 1240,
+      "method": "continuous outline arc"
+    }
+  ],
+  "kinds": {
+    "State": 31,
+    "Federal entity": 1,
+    "Municipality": 2462,
+    "Borough": 16
+  },
+  "coverage": "All 31 states and Mexico City, with all 2,478 INEGI municipal areas: 2,462 municipalities and Mexico City’s 16 boroughs (alcaldías). December 2025 boundary snapshot, checked against the municipal catalogue retrieved 23 October 2026. 2020 census populations are shown only where INEGI publishes them. Inland water remains a separate optional overlay.",
+  "processing": "All municipalities are cleaned and simplified together at .0001 degree tolerance (about 11 m north-south), with parent states dissolved from that same topology. Shared internal edges are stored once. Municipal geometry loads only for the selected federal entity. State statistics and economic sources are retained; no local GDP is inferred.",
+  "sources": [
+    {
+      "file": "mexico-inegi-states.geojson",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgee",
+      "provider": "INEGI · Marco Geoestadístico, December 2025; water-inclusive state envelopes",
+      "license": "INEGI free use with attribution",
+      "licenseUrl": "https://www.inegi.org.mx/inegi/terminos.html",
+      "sha256": "170c3ea5ff472f08ece97970dc90ad4ba8c6f503e33859655f315091c105cc91",
+      "bytes": 28836523
+    },
+    {
+      "file": "mexico-population.zip",
+      "url": "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip",
+      "provider": "INEGI · 2020 Population and Housing Census, ITER national extract",
+      "license": "INEGI free use with attribution",
+      "sha256": "9342fdbd45bda5897f2b827a12904843b6f8fb85d4e72da299e09e4d2422ab60",
+      "bytes": 36615814
+    },
+    {
+      "file": "ne-10m-land-boundaries.geojson",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_boundary_lines_land.geojson",
+      "provider": "Natural Earth v5.1.2 · international boundary reference topology",
+      "license": "Public domain",
+      "sha256": "74d9c16229c095fde65943a9919e337682f044bcebccb120764f38edf3b70f4a",
+      "bytes": 2284669
+    }
+  ],
+  "municipalSources": [
+    {
+      "file": "catalogue-02.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/02",
+      "sha256": "31e633c6ea1b3704bcdc175d75a535a56a35629962789d6acd1a1cd9ca350e65",
+      "bytes": 1416,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-01.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/01",
+      "sha256": "3143fa70bf5200f619607e444072264a37210244df7826ae28bfee5c645a82d1",
+      "bytes": 2287,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-03.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/03",
+      "sha256": "243080b6c4571587e2f2d3b3b0823ea6d0fb78fff1fbe5adf195c8a7ce807189",
+      "bytes": 1065,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-01.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/01",
+      "sha256": "bb522a1b1566b1acd1aa6aeede0675bc231fd5eb1eb73ac33df82d3242a07e2b",
+      "bytes": 412213,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-04.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/04",
+      "sha256": "8cc5f12b823ac594dc72eda819f72fb9786589e5031f05816594951dafb106e5",
+      "bytes": 2514,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-05.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/05",
+      "sha256": "903951f53a1b3b19f7e75bb0682981c89677b90e8d64cb565be3c94b5e04913d",
+      "bytes": 983945,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-02.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/02",
+      "sha256": "ba0656b05c353c6aed84cde6d534a0b2b5d4f82377be69fc3e4300158636889f",
+      "bytes": 2857070,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-05.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/05",
+      "sha256": "25a91ad8e4bf84037a22d49eace530033523c822958a0fe9737b96a1cf23d04a",
+      "bytes": 7305,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-06.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/06",
+      "sha256": "d3915837448bdf7004688bcefc2b542aef6f6285af5705566a1be4f42c99ecf9",
+      "bytes": 2030,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-06.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/06",
+      "sha256": "a345fd583e0b9c35ecc84c1494c40b5999338c8a33b134c9ad28e4e1d2635571",
+      "bytes": 517085,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-07.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/07",
+      "sha256": "8bf119b5cc25a0421ee7c86f5d52948aae50377a8c4820b2e2bfec9b8ea43145",
+      "bytes": 24090,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-04.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/04",
+      "sha256": "c341fd88bf62cad4bc3207a2d168ddfcf1ac83bb35923fc17c8b1485d9503769",
+      "bytes": 1727901,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-08.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/08",
+      "sha256": "a60a4234c34c2c7b893f15cea664ae70f3bb8d27e4025fc23972788040d51900",
+      "bytes": 12879,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-09.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/09",
+      "sha256": "44de7357f6ac7eea5f1d351aaaaf20c726f7c0096e14f8f7b9ced24e417b915c",
+      "bytes": 485219,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-07.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/07",
+      "sha256": "3786b09fa76ea3a0c6c6a00d8fdb2f75f0d1084f11e37ed6d15c3f0652b821bd",
+      "bytes": 4267841,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-09.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/09",
+      "sha256": "b11a202fd0ed19956b098f1f2f3e8a4d9edcca6c7ea5408534da1ef0b02510e2",
+      "bytes": 3298,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-10.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/10",
+      "sha256": "0dad1522e9c14b269ac2a5976810cdae6c638e9b2cff1bebcf8a87fbebabfccd",
+      "bytes": 7561,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-03.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/03",
+      "sha256": "d8af27291273e011c839dc5db5474ffc7035700819bfee706c360906d82f14b0",
+      "bytes": 5174822,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-11.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/11",
+      "sha256": "ad8a28c7d7bdbbe993cea70a6ed7bdc66c25d545e3759aadf3990429add63f88",
+      "bytes": 9116,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-11.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/11",
+      "sha256": "b21890585b5c332b20f17eb3b961faa9725d3456c8f01cf1079439a779f8879b",
+      "bytes": 2601217,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-10.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/10",
+      "sha256": "e24843998920bfc2ce9ad3d71ae5c00d3e1bbdcb1ae63ebbf684ab4bd89a37b7",
+      "bytes": 2323849,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-12.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/12",
+      "sha256": "0fe0da20b587e90d1e304cebaa7cad21948be1d50a2ce8992f0a25f059c5ed7e",
+      "bytes": 16492,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-13.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/13",
+      "sha256": "d44e31190fdb6142f776023d55fe4e6cac332b5238456433b29e867848e03b84",
+      "bytes": 16415,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-08.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/08",
+      "sha256": "c50b7eb61528cf5c5c380424752bb41d06eff43035f61f4a76a2a491a2f01581",
+      "bytes": 4531266,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-14.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/14",
+      "sha256": "e5e35a99b9dac7d33128403adc8400bfeabee28334333c04a269c88c95ee1a38",
+      "bytes": 24311,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-13.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/13",
+      "sha256": "979a842b8d15e21dde93efabbf259c635bb0c33ff6e014e9af8d361fae369a9e",
+      "bytes": 4674224,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-12.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/12",
+      "sha256": "b9fe4c80f723c1bfaf732e1c25bb53feeebcdfdc54c3c33c20467f99d71acc94",
+      "bytes": 4232674,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-15.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/15",
+      "sha256": "cf14d09d1db9e158ac8a1fa7483225bc447388ef5ffc00fa61517dd2614f3a62",
+      "bytes": 24306,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-16.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/16",
+      "sha256": "dd3370193086485db54a865a49fae64fec07101bc92aa4ccb27f0811acde5514",
+      "bytes": 21619,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-17.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/17",
+      "sha256": "4f5a20a03b28613a28b79488ef4bf9b8a6b02da2e7544eea1758e6fc1ea1c5d6",
+      "bytes": 1181996,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-17.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/17",
+      "sha256": "eae31f8203faa218efa7d94b4f1dcd7270e88a020d7f15bf0900490a7ca3eb2a",
+      "bytes": 7064,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-15.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/15",
+      "sha256": "06a6a751d37633af87490b316f149582c94a89b17584a03d9a09345351c8ed42",
+      "bytes": 4788888,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-18.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/18",
+      "sha256": "9b06caef35c52234532858ea72ba68efcd6b5aceb050ab3d6faa50f22945da37",
+      "bytes": 3971,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-18.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/18",
+      "sha256": "2057605607b94375dc692651c7c4eeb0c63fe4a220cd1764d4160ae71039a1c4",
+      "bytes": 1843529,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-19.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/19",
+      "sha256": "31f5a3912494ba652d25964af7871190d9e83c258a2b6fbed9e31f5d33fbf19e",
+      "bytes": 9866,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-14.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/14",
+      "sha256": "cd824b39b99a92cd337dccf6cfdb2764fb605fd6bee1870b4005b35009c65a93",
+      "bytes": 8998897,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-19.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/19",
+      "sha256": "49de26e98b9d224506f0797f2105ff54715026861ba716a0ef3df45e8c287701",
+      "bytes": 2289819,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-20.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/20",
+      "sha256": "39c2b503a15eddf5c3bef56b16892ff896a5aa7ba57ae151dadc0f3c7db72fdc",
+      "bytes": 112770,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-21.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/21",
+      "sha256": "054a9fb30faf071eee7c915c63a352cee67e5215bd1a367512818c463dffc8f2",
+      "bytes": 41995,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-16.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/16",
+      "sha256": "d7ab95be42e18188a28c2ba0fb7e2e6268a720d2853b86a97bd97f2caafa76ae",
+      "bytes": 5976624,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-22.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/22",
+      "sha256": "908a3670d52bc6cdae09d3279755cc605eae9a4e052fd43891901d01f4ac51a4",
+      "bytes": 752316,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-22.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/22",
+      "sha256": "5bc7b1678d062666c32423b7dc9cae9b9e80cda7e23caf22ed79edd56159b935",
+      "bytes": 3621,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-23.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/23",
+      "sha256": "ea31ed8bfb6df4fbbb79788f7e8344d163bae1d4e4754290c0bc3d1b67b86440",
+      "bytes": 2332,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-24.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/24",
+      "sha256": "1631aeb1303795231c03a1dd98e7cde3a908eb605d43551edd1fcc7146072ce3",
+      "bytes": 1532760,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-24.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/24",
+      "sha256": "795baf09719d8c8462a93d843b5efaaf3ca333e2688d6ae63e4bac0358ba334c",
+      "bytes": 11436,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-23.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/23",
+      "sha256": "905936eff6a2ae1c7a81c45a893f9214564d671f45e033c9e4e42360930fcfcd",
+      "bytes": 1312084,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-25.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/25",
+      "sha256": "823d6637b08395c702c753dd2f5b1d1f45ced39271b79bb55f1fe8cd9afb4444",
+      "bytes": 3785,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-20.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/20",
+      "sha256": "a8600aa50f4ad88147756cf1e4cdf4b0399a964623a2c27e479ddc353dd64618",
+      "bytes": 8191917,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-26.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/26",
+      "sha256": "ab63badd30cff561c658040c3c81eba8141ddaa4b7e2c206c22b681d310277be",
+      "bytes": 13614,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-26.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/26",
+      "sha256": "0ec391de785dbc4c9621c48b2c73e8315b4c99add1e6ce97047a3395476d8150",
+      "bytes": 2828295,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-25.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/25",
+      "sha256": "e3946e339a299a3bc6d0d713c6fae3399a99ae0048bee72c690386f98149bced",
+      "bytes": 2103812,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-27.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/27",
+      "sha256": "21d2fee2a258f0ba229d3765b8227b31a42279813f7888e85384070305108b90",
+      "bytes": 3376,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-28.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/28",
+      "sha256": "7c2a43bb4b067fb043f417cc6e1c2a5f16c74afe68d7fc8492cb45a480151369",
+      "bytes": 8252,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-27.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/27",
+      "sha256": "39b3c51a19c12f42269705dcc1898d5e9bbb8b7fd9df56f3e71f8feea7a301bd",
+      "bytes": 1781097,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-29.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/29",
+      "sha256": "fa32c92c55beb6b3adb006d96009b26a3c92d95225d248884530d8171ca700e1",
+      "bytes": 11901,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-21.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/21",
+      "sha256": "1bff711bc36c7cfb99b3872ca8df7bf26d9b37b9be8c52de9176e58bd471a1a8",
+      "bytes": 9769691,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-28.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/28",
+      "sha256": "adb820abec1ea2d09a1d909394b02560899a25c29a054497b45f492557cac807",
+      "bytes": 1800935,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-29.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/29",
+      "sha256": "4b94279048bfd60701681a1c5659d83d938226b1b9a614b009393783da4cdb59",
+      "bytes": 1908438,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-30.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/30",
+      "sha256": "661c235fa4cc60a23f2632d44dc61dce4c714b4567f52a9b2271a346399c91c3",
+      "bytes": 40815,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-31.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/31",
+      "sha256": "8f93f889d64f90eaf8dcfe10ae666b61e43c9dfbccb11bee496dfac40b30d0b1",
+      "bytes": 19873,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "catalogue-32.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/mgem/32",
+      "sha256": "067fb84e1526a1a390658cf5d98dd0c7b159c58a277cb28cd7137332bce05f50",
+      "bytes": 11286,
+      "metadata": {
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-31.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/31",
+      "sha256": "fdcde1343e5bb058ca096546cadbc545db4f8ee144f4a6621a23e7893a9eeeb5",
+      "bytes": 1862704,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-32.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/32",
+      "sha256": "6d958ac445f8843551a421c2fc1e577f6bf73212d7c706eba41d3951efbbb1dd",
+      "bytes": 3178477,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "geo-30.json",
+      "url": "https://gaia.inegi.org.mx/wscatgeo/v2/geo/mgem/30",
+      "sha256": "1c9ea8cdc7dc883f77cbc2ddd9e5c388492921d9faac51feb3672739b1d04942",
+      "bytes": 10203079,
+      "metadata": {
+        "Fuente_informacion_vectorial": "INEGI. Marco Geoestadístico, diciembre de 2025",
+        "Fuente_informacion_estadistica": "INEGI. Censo de Población y Vivienda, 2020"
+      },
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    },
+    {
+      "file": "census-seats.json",
+      "url": "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip",
+      "sha256": "921661d50d90a32ff743266550472aaacc1e3b6a8a12eb1633e0e971636cddea",
+      "bytes": 112508,
+      "upstreamSha256": "9342fdbd45bda5897f2b827a12904843b6f8fb85d4e72da299e09e4d2422ab60",
+      "extraction": "Only locality codes and names matching municipal-seat codes in the retained INEGI municipal vector records; 2020 census ITER source.",
+      "provider": "INEGI · Marco Geoestadístico and Catálogo Único de Claves Geoestadísticas",
+      "license": "INEGI free use with attribution"
+    }
+  ],
+  "usMexicoReconciliation": {
+    "source": "data/us-mexico-frontier.json",
+    "method": "One complete US county-derived exterior is the shared display edge. Mexican border municipalities follow it, and their parent states are dissolved from those same leaves. The US-owned stroke, both fallback silhouettes and country previews use that edge. All other international frontiers and inland subdivision edges are retained; coastal endpoint adjustments are limited to one kilometre.",
+    "referenceOwner": "united-states",
+    "affected": [
+      "MX-MUN-02003",
+      "MX-MUN-02004",
+      "MX-MUN-02002",
+      "MX-MUN-26004",
+      "MX-MUN-26040",
+      "MX-MUN-26033",
+      "MX-MUN-26043",
+      "MX-MUN-26069",
+      "MX-MUN-26039",
+      "MX-MUN-26055",
+      "MX-MUN-26048",
+      "MX-MUN-26070",
+      "MX-MUN-26017",
+      "MX-MUN-26015",
+      "MX-MUN-26059",
+      "MX-MUN-26060",
+      "MX-MUN-26031",
+      "MX-MUN-26052",
+      "MX-MUN-26051",
+      "MX-MUN-26010",
+      "MX-MUN-26049",
+      "MX-MUN-26002",
+      "MX-MUN-08037",
+      "MX-MUN-08052",
+      "MX-MUN-08020",
+      "MX-MUN-08063",
+      "MX-MUN-08066",
+      "MX-MUN-08011",
+      "MX-MUN-08013",
+      "MX-MUN-08053",
+      "MX-MUN-08047",
+      "MX-MUN-08028",
+      "MX-MUN-08035",
+      "MX-MUN-08040",
+      "MX-MUN-08042",
+      "MX-MUN-08005",
+      "MX-MUN-05002",
+      "MX-MUN-05023",
+      "MX-MUN-05012",
+      "MX-MUN-05014",
+      "MX-MUN-05025",
+      "MX-MUN-05013",
+      "MX-MUN-05022",
+      "MX-MUN-05034",
+      "MX-MUN-19005",
+      "MX-MUN-28027",
+      "MX-MUN-28007",
+      "MX-MUN-28022",
+      "MX-MUN-28021",
+      "MX-MUN-28014",
+      "MX-MUN-28040",
+      "MX-MUN-28015",
+      "MX-MUN-28039",
+      "MX-MUN-28025",
+      "MX-MUN-28004",
+      "MX-MUN-28033",
+      "MX-MUN-28032",
+      "MX-MUN-28029",
+      "MX-MUN-28024",
+      "MX-BCN",
+      "MX-SON",
+      "MX-CHH",
+      "MX-COA",
+      "MX-NLE",
+      "MX-TAM"
+    ]
+  },
+  "settlementCoverage": "All inhabited localities in INEGI’s 2020 national ITER census extract, without a population cutoff. These are census localities, not metropolitan areas. Coordinates and population retain their 2020 scope; municipal navigation uses current mapped boundaries where available.",
+  "settlementSources": [
+    {
+      "title": "INEGI · Censo de Población y Vivienda 2020, Principales resultados por localidad (ITER)",
+      "url": "https://www.inegi.org.mx/contenidos/programas/ccpv/2020/datosabiertos/iter/iter_00_cpv2020_csv.zip",
+      "license": "INEGI free use with attribution"
+    }
+  ],
+  "settlementCounts": {
+    "localities": 189432,
+    "excluded": 0,
+    "sourceLocalities": 189432,
+    "populationTotal": 126014024
+  },
+  "flags": {
+    "manifest": "data/mexico-state-flag-sources.json",
+    "count": 14,
+    "description": "State and statutory armorial flags, with original artwork, licensing and legal citations. Oaxaca’s cited legal text is unavailable and its statutory classification is not asserted."
+  }
+}

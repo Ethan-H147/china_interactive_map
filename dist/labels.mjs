@@ -1,3 +1,4 @@
+import {labelFitsBoundary} from './label-boundary-fit.mjs';
 import {getSettings} from './settings.mjs';
 export {createHoverOverview} from './hover-overview.mjs';
 export function labelLines(english,local,language='both',district=false){
@@ -28,8 +29,16 @@ export function render(map,candidates,className){
  // On the globe, places on the far side, or near its edge where they project poorly, are left out.
  if(map.getProjection?.()?.type==='globe'){const c=map.getCenter(),r=Math.PI/180;candidates=candidates.filter(({center:[x,y]})=>Math.sin(y*r)*Math.sin(c.lat*r)+Math.cos(y*r)*Math.cos(c.lat*r)*Math.cos((x-c.lng)*r)>Math.cos(65*r));}
  const items=candidates.map(item=>{
-  const lines=item.lines||labelLines(item.en,item.local,item.countryLabel?settings.countryLanguage:language,item.district),point=map.project(item.center);
-  const w=Math.max(...lines.map((line,i)=>textWidth((item.selected?'600 ':'')+(large?(i?'16px Arial':'18px Arial'):(i?'14px Arial':'16px Arial')),line)));
+  const point=map.project(item.center),font=i=>(item.selected?'600 ':'')+(large?(i?'16px Arial':'18px Arial'):(i?'14px Arial':'16px Arial'));
+  let lines=item.lines||labelLines(item.en,item.local,item.countryLabel?settings.countryLanguage:language,item.district);
+  let w=Math.max(...lines.map((line,i)=>textWidth(font(i),line)));
+  if(item.shortMapLabel&&item.shortMapLabel!==item.en){
+   const container=map.getContainer(),height=lines.length*(large?24:21);
+   const onScreen=point.x-w/2>=12&&point.x+w/2<=container.clientWidth-12&&point.y-height/2>=72&&point.y+height/2<=container.clientHeight-44;
+   if(!onScreen||!labelFitsBoundary(map,item,point,w,height)){
+    lines=[item.shortMapLabel];w=textWidth(font(0),item.shortMapLabel);
+   }
+  }
   return {...item,lines,x:point.x,y:point.y,w:w+4,h:lines.length*(large?24:21)};
  });
  return placeLabels(items,map.getContainer().clientWidth,map.getContainer().clientHeight).map(item=>{

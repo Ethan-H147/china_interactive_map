@@ -171,3 +171,6 @@ await (await import('./reconcile-aksai-outlines.mjs')).reconcileAksaiOutlines();
 await (await import('./central-europe-frontiers.mjs')).preserveCentralEuropeanFrontiers();
 
 if(fs.existsSync('scripts/boundary-sources/north-andes/resolved.bin'))(await import('./north-andes-frontiers.mjs')).writeNorthAndesBorders(load('scripts/boundary-sources/north-andes/resolved.bin').features);
+
+// French Guiana owns this reconciled frontier; do not restore Brazil's old copy.
+if(fs.existsSync('dist/data/guiana-frontier.json'))await import('./reconcile-guiana-frontier.mjs');

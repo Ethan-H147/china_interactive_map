@@ -1,0 +1,58 @@
+{
+  "MX-BCS": {
+    "url": "https://itaibcs.org.mx/ifile/leyes/2020/LSimbProtoOfiBCS.pdf",
+    "error": "fetch failed"
+  },
+  "MX-GUA": {
+    "url": "https://congreso-gto.s3.amazonaws.com/uploads/reforma/pdf/3529/LEBHEG_NVA_24Nov2023.pdf",
+    "bytes": 413009
+  },
+  "MX-COL": {
+    "url": "https://congresocol.gob.mx/web/Sistema/uploads/Decretos/DECRETO%20122_58%20REFORMADO.pdf",
+    "bytes": 1852365
+  },
+  "MX-COA": {
+    "url": "https://www.coahuilatransparente.gob.mx/leyes/documentos_leyes/LEY%20SOBRE%20EL%20ESCUDO%20DEL%20ESTADO%20DE%20COAHUILA%20%20Y%20EL%20HIMNO%20COAHUILENSE.pdf",
+    "bytes": 726488
+  },
+  "MX-GRO": {
+    "url": "https://congresogro.gob.mx/legislacion/ordinarias/ARCHI/LEY-SOBRE-SIMBOLOS-DE-IDENTIDAD-Y-PERTENENCIA-DEL-ESTADO-DE-GUERRERO-761-2021-03-10.pdf",
+    "bytes": 1047710
+  },
+  "MX-DUR": {
+    "url": "https://congresodurango.gob.mx/Archivos/legislacion/LEY%20SOBRE%20EL%20ESCUDO%2C%20LA%20BANDERA%20Y%20EL%20HIMNO.pdf",
+    "bytes": 256061
+  },
+  "MX-OAX": {
+    "url": "https://docs64.congresooaxaca.gob.mx/transparencia/art70/2019/FXXXVII/23.pdf",
+    "error": "404 <?xml version=\"1.0\" encoding=\""
+  },
+  "MX-TAB": {
+    "url": "https://congresotabasco.gob.mx/wp/wp-content/uploads/2020/03/Ley-sobre-las-Caracteristicas-y-Uso-del-Escudo-de-Tabasco.pdf",
+    "bytes": 53429
+  },
+  "MX-QUE": {
+    "url": "https://www.sanjoaquin.gob.mx/wp-content/uploads/2023/10/LEY-SOBRE-EL-ESCUDO-LA-BANDERA-Y-EL-HIMNO-DEL-ESTADO-DE-QUERETARO.pdf",
+    "bytes": 201780
+  },
+  "MX-ROO": {
+    "url": "https://documentos.congresoqroo.gob.mx/leyes/L71-XVI-20130906-L1320130906315.pdf",
+    "bytes": 104842
+  },
+  "MX-JAL": {
+    "url": "https://congresoweb.congresojal.gob.mx/bibliotecavirtual/legislacion/Leyes/Documentos_PDF-Leyes/Ley%20de%20los%20S%C3%ADmbolos%20Oficiales%20del%20Estado%20de%20Jalisco-011225.pdf",
+    "bytes": 552670
+  },
+  "MX-YUC": {
+    "url": "https://www.congresoyucatan.gob.mx/storage/legislacion/leyes/33080fa7d0b3970d2b74618776532f4e_2024-09-05.pdf",
+    "bytes": 1984998
+  },
+  "MX-TLA": {
+    "url": "https://congresodetlaxcala.gob.mx/archivo/62/dictamenes/2017/D.CUMPLIMIENTO%20DECRETO%20305.RESE%C3%91A%20HISTORICA%20BANDERA%20TLAX.200417.pdf",
+    "bytes": 541291
+  },
+  "MX-TAM": {
+    "url": "https://po.tamaulipas.gob.mx/wp-content/uploads/2024/12/Ley_Escudo.pdf",
+    "bytes": 1983579
+  }
+}

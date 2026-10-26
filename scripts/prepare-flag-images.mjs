@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import sharp from 'sharp';
 import {createHash} from 'node:crypto';
 const read=file=>JSON.parse(fs.readFileSync(file)),images={},out='dist/vendor/flag-originals';
 fs.mkdirSync(out,{recursive:true});
@@ -26,6 +27,8 @@ const atlantic='dist/data/atlantic-flag-sources.json';
 if(fs.existsSync(atlantic))Object.values(read(atlantic).flags).forEach(add);
 const oceania='dist/data/oceania-flag-sources.json';
 if(fs.existsSync(oceania))Object.values(read(oceania).flags).forEach(add);
+const mexicoStates='dist/data/mexico-state-flag-sources.json';
+if(fs.existsSync(mexicoStates))Object.values(read(mexicoStates).flags).forEach(add);
 const northAmerica='dist/data/north-america-flag-sources.json';
 if(fs.existsSync(northAmerica))Object.values(read(northAmerica).flags).forEach(add);
 for(const source of ['dist/data/canada-municipal-flag-sources.json','dist/data/canada-municipal-fotw-flag-sources.json'])if(fs.existsSync(source))Object.values(read(source).flags).forEach(add);
@@ -47,6 +50,8 @@ national['vendor/flag-gb-3x5.svg']={...national['vendor/flag-gb.svg'],file:'vend
 national['vendor/flag-ie-2x3.svg']={...national['vendor/flag-ie.svg'],file:'vendor/flag-ie-2x3.svg',thumbnail:{width:900,height:600,source:national['vendor/flag-ie.svg'].page,method:'Custom 2:3 artwork with equal stripes and original colors',license:'Public domain',sha256:createHash('sha256').update(fs.readFileSync('dist/vendor/flag-ie-2x3.svg')).digest('hex')}};
 // Retained SVG and WebP thumbnail variants share the same sourced original artwork.
 for(const name of fs.readdirSync('dist/vendor').filter(n=>/^flag-.*\.(svg|webp)$/.test(n))){const file='vendor/'+name;if(!national[file]){const peer=file.replace(/\.(svg|webp)$/,(_,ext)=>ext==='svg'?'.webp':'.svg');if(national[peer])national[file]=national[peer];}}
+// Older source manifests omit dimensions; read the retained original without altering it.
+for(const flag of Object.values(national))if(!flag.width||!flag.height){const size=await sharp('dist/'+flag.full).metadata();flag.width=size.width;flag.height=size.height;}
 Object.assign(images,national);
 const cityNamesFile='dist/data/southern-africa/south-africa/place-names-flags.json';
 if(fs.existsSync(cityNamesFile))Object.values(read(cityNamesFile).places).forEach(place=>add(place.flag));

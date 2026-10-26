@@ -2,7 +2,8 @@
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';
 import {gzipSync,gunzipSync} from 'node:zlib';import {createHash} from 'node:crypto';
 import {encodeGeo,decodeGeo} from '../dist/geo-pack.mjs';import {assertNearGeo} from './geo-compare.mjs';
-import {configurations} from '../dist/europe.mjs';import {load} from './geo-index.mjs';
+import {configurations} from '../dist/europe.mjs';
+import {compactFiles} from '../dist/compact-files.mjs';import {load} from './geo-index.mjs';
 const root=path.resolve('dist'),out=path.resolve('artifacts/pages'),omitted=new Set(),report={files:0,sourceBytes:0,publishedBytes:0,packed:[],omitted:[]};
 assert(out.startsWith(path.resolve('artifacts')+path.sep)&&out!==root);
 for(const [id,c] of Object.entries(configurations)){
@@ -12,6 +13,13 @@ for(const [id,c] of Object.entries(configurations)){
 // These retained inputs have been replaced by per-source/per-parent runtime files.
 // Keep the original data in GitHub for rebuilds; publish only the data the app uses.
 const buildOnly=new Set(['data/china-counties.bin','data/china-boundaries.pack.bin','data/china-overview.pack.bin','data/china-counties.pack.bin','data/china-motion.bin','data/korea-motion.bin','data/mongolia-motion.bin']);
+// Runtime requests for these originals are redirected to verified compact copies.
+for(const file of compactFiles)buildOnly.add('data/'+file);
+// Settlement builders retain readable/full inputs alongside the runtime files.
+for(const [id,c] of Object.entries(configurations)){
+ if(c.settlementFile)buildOnly.add('data/europe/'+id+'/settlements.json');
+ if(c.settlementManifest){buildOnly.add('data/europe/'+id+'/settlements.json');buildOnly.add('data/europe/'+id+'/settlements.bin');}
+}
 for(const file of buildOnly)omitted.add(file);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const source=path.join(dir,e.name);if(e.isDirectory()){walk(source);continue;}const rel=path.relative(root,source).replaceAll('\\','/'),bytes=fs.readFileSync(source);report.sourceBytes+=bytes.length;

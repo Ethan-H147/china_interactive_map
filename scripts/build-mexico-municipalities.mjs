@@ -54,6 +54,7 @@ export async function buildMexicoMunicipalities(root='dist/data/europe/mexico/')
   const context=fs.readFileSync(root+'context.bin'),{gunzipSync}=await import('node:zlib'),text=gunzipSync(context).toString(),target='dist/data/compact/europe/mexico/context.bin';fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,gzipSync(encodeGeo(JSON.parse(text),{source:createHash('sha256').update(text).digest('hex')}),{level:9}));
   (await import('./prepare-region-colors.mjs')).prepareRegionColors(['mexico']);
  }
+ if(path.resolve(root)===path.resolve('dist/data/europe/mexico')&&fs.existsSync('scripts/boundary-sources/mexico-localities/localities-2020.json.gz'))await (await import('./prepare-mexico-localities.mjs')).prepareMexicoLocalities();
  console.log('Mexico: 32 federal entities, 2,462 municipalities, 16 boroughs; 32 lazy chunks. Existing state statistics retained.');
 }
 if(process.argv[1]&&pathToFileURL(path.resolve(process.argv[1])).href===import.meta.url)await buildMexicoMunicipalities();

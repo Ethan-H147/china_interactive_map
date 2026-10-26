@@ -1093,6 +1093,84 @@
       "evidence": {
         "note": "Added locally at the user’s request; no commit or deployment performed."
       }
+    },
+    {
+      "country": "costa-rica",
+      "name": "Costa Rica",
+      "addedOn": "2026-10-25",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "panama",
+      "name": "Panama",
+      "addedOn": "2026-10-25",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added locally at the user’s request; no commit or deployment performed."
+      }
+    },
+    {
+      "country": "zimbabwe",
+      "name": "Zimbabwe",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Dated OCHA subdivisions, census first-level population and national GDP.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/zimbabwe/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request; dated OCHA subdivisions, national census statistics and national economic figures. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "zambia",
+      "name": "Zambia",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Dated OCHA subdivisions, census first-level population and national GDP.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/zambia/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request; dated OCHA subdivisions, national census statistics and national economic figures. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "tanzania",
+      "name": "Tanzania",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Dated OCHA subdivisions, census first-level population and national GDP.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/tanzania/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request; dated OCHA subdivisions, national census statistics and national economic figures. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "kenya",
+      "name": "Kenya",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Dated OCHA subdivisions, census first-level population and national GDP.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/kenya/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request; dated OCHA subdivisions, national census statistics and national economic figures. No commit or deployment performed."
+      }
     }
   ]
 }

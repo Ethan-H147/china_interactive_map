@@ -1,6 +1,6 @@
 export const countySources=['city-districts','city-district-boundaries','city-districts-selection-edges'];
 export const emptyCollection=()=>({type:'FeatureCollection',features:[]});
-export const mobileChinaUrl=(id,scope)=>'atlas-data://'+id+'?url='+encodeURIComponent(new URL('data/china-mobile/'+(scope?'counties/'+scope+'/':'')+id+(!scope&&id.endsWith('-selection-edges')?'-repaired':'')+'.bin',globalThis.location.href).href);
+export const mobileChinaUrl=(id,scope)=>'atlas-data://'+id+'?url='+encodeURIComponent(new URL((String(scope).startsWith('TW-')?'data/taiwan-townships/'+scope+'/':'data/china-mobile/'+(scope?'counties/'+scope+'/':''))+id+(!scope&&id.endsWith('-selection-edges')?'-repaired':'')+'.bin',globalThis.location.href).href);
 export function setSourceData(map,id,data){
  return new Promise((resolve,reject)=>{
   const failed=event=>{if(event.sourceId===id)reject(event.error||Error('China source failed: '+id));};

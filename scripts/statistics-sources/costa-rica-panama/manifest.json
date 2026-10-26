@@ -1,0 +1,65 @@
+{
+  "retrieved": "2026-10-26",
+  "files": {
+    "cr-population.xlsx": {
+      "sha256": "4b0f322a473fb31bf775cbd2d7a74c773691d2771bd50c749f0394608f4eb453",
+      "bytes": 139792,
+      "url": "https://admin.inec.cr/sites/default/files/2023-11/reResultadosEstimacionPoblacionVivienda2022_3.xlsx"
+    },
+    "cr-population-normalized.json": {
+      "sha256": "2adc89dd67d5eed140e4d7590dddc4bd2bae395779212709fe6e674dcbb65eaf",
+      "bytes": 38972,
+      "derivedFrom": "cr-population.xlsx",
+      "extractor": "scripts/statistics-sources-extract.py"
+    },
+    "pa-population.xls": {
+      "sha256": "47ce0639dddc049890826e607ce388c1d53ae9fb1d45138897eddb49ec5d049f",
+      "bytes": 219136,
+      "url": "https://www.inec.gob.pa/archivos/P0705547520231109105354CUADRO%2010.xls"
+    },
+    "pa-population-rows.json": {
+      "sha256": "ccb1faa4e6201a4d89263b06f53d537d82f01246230cf7141581a7b0324965f8",
+      "bytes": 118604,
+      "derivedFrom": "pa-population.xls",
+      "extractor": "scripts/statistics-sources-extract.py"
+    },
+    "pa-gdp.xlsx": {
+      "sha256": "5c6e8f42ca7bc4cbd937fcccecb1bff6aab0d0898202c8cdf864c13e21d5c95a",
+      "bytes": 2311135,
+      "url": "https://www.inec.gob.pa/archivos/P0705547520251118151630PROV_2024.xlsx"
+    },
+    "pa-gdp-rows.json": {
+      "sha256": "3260deb1de80cc7c9d02a3b86b875e787290dd4fd1d7cca7c0c4aea39a870a3a",
+      "bytes": 462064,
+      "derivedFrom": "pa-gdp.xlsx",
+      "extractor": "scripts/statistics-sources-extract.py"
+    },
+    "worldbank.json": {
+      "sha256": "684104b8e11ab8a1e69cbb7cd50932d2a749f7d4d3f36e24336840ede653a3db",
+      "bytes": 10328,
+      "url": "https://api.worldbank.org/v2/country/CRI;PAN/indicator/NY.GDP.MKTP.CD;NY.GDP.PCAP.CD;SP.POP.TOTL;PA.NUS.FCRF?source=2&format=json&date=2020:2025&per_page=1000"
+    },
+    "cr-cantonal-gdp.csv": {
+      "url": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Reporte/1193",
+      "sha256": "dffb6ce6b2362468033ffacfde2c17cc96744e7b17ef13b6bd21d66e6d456ceb",
+      "bytes": 2571,
+      "credit": "Banco Central de Costa Rica, PIB Cantonal, public visual export",
+      "year": 2022,
+      "unit": "Millions of Costa Rican colones",
+      "reportId": "b135fc6e-c84b-4017-9b7d-4e97b056ff78",
+      "page": "Clasificación_cantón",
+      "exportMethod": "Power BI public report, summarized visual data; retained slicer state selects 2022"
+    },
+    "cr-gdp-public-exports.json": {
+      "url": "https://sdd.bccr.fi.cr/es/IndicadoresEconomicos/Inicio/Reporte/1193",
+      "sha256": "56708a515e16d712791f09a84c3f567bff3854e97e475de557a3a76d7db09143",
+      "bytes": 27180,
+      "credit": "Banco Central de Costa Rica, PIB Cantonal, public visual export",
+      "year": 2022,
+      "unit": "Millions of Costa Rican colones",
+      "reportId": "b135fc6e-c84b-4017-9b7d-4e97b056ff78",
+      "page": "Clasificación_cantón",
+      "exportMethod": "Power BI public report, summarized visual data; retained slicer state selects 2022"
+    }
+  }
+}

@@ -52,3 +52,13 @@
  .korean-reader-body p,.korean-reader-body li{font-size:14px;line-height:1.8}
  .korean-table-wrap th,.korean-table-wrap td{padding:9px 11px}
 }
+
+#china-sidebar .panel-tabs{flex-wrap:wrap;column-gap:18px;row-gap:10px}
+#tab-extra{white-space:nowrap}
+#chinese-romanization table{font-family:inherit}
+
+#chinese-romanization .korean-table-wrap table{table-layout:fixed}
+#chinese-romanization .korean-table-wrap td{white-space:normal;overflow-wrap:break-word}
+#chinese-initial-table th:first-child,#chinese-final-table th:first-child,#chinese-spelling-table th:first-child{width:22%}
+
+#extra-panel .korean-article-link + .korean-article-link{margin-top:14px}

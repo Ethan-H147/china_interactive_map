@@ -36,7 +36,7 @@ export async function addGlobeOverview(map){
   if(map.getLayer(ids[0])){
    const color=country==='china'?'#e9dfc9':definition?.map?.fill||definition?.portal?.fill||'#d7d7d3';
    map.setPaintProperty(ids[0],'fill-color',['case',['==',['get','country'],country],color,backgroundLandColor()]);
-   map.setFilter(ids[0],unclaimed(country));
+   map.setFilter(ids[0],['all',unclaimed(country),...(definition?.snapshot?.replaces?.length?[['!',['in',['get','country'],['literal',definition.snapshot.replaces]]]]:[])]);
   }
   if(map.getLayer(ids[1]))map.setFilter(ids[1],['all',unclaimed(country),...(definition?.ownFrontier?[['any',['!=',['get','overviewOwner'],'atlas-frontiers'],['!',['in',' '+country+' ',['concat',' ',['get','countries'],' ']]]]]:[])]);
   sync();

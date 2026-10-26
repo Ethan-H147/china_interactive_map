@@ -6,12 +6,13 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {createPlaceSearch} from '../dist/place-search.mjs';
-import {enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementDotLayers,settlementDotVisible,settlementStatistics} from '../dist/settlement-layer.mjs';
+import {applySharedPlacePages,sharedPlacePage,sharedPlaceGeometry,uniquePlacePages} from '../dist/shared-place-pages.mjs';
+import {expandSettlementRecords,enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementDotLayers,settlementDotVisible,settlementStatistics} from '../dist/settlement-layer.mjs';
 import {selectionLineSourceOptions} from '../dist/outline-detail.mjs';
 import {regionalLineWidth} from '../dist/adaptive-lines.mjs';
 const elements=new Map(),sources=new Map(),layers=new Map(),handlers=new Map(),jobs=[],revoked=[],fits=[],statistics=[];
 const element=id=>{
- if(!elements.has(id))elements.set(id,{id,parentElement:{hidden:false},dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},classList:{toggle(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){},querySelectorAll(){return [];},removeAttribute(k){delete this.attributes[k];},remove(){}});
+ if(!elements.has(id))elements.set(id,{id,parentElement:{hidden:false},dataset:{},hidden:false,checked:true,value:'',textContent:'',children:[],get childNodes(){return this.children;},attributes:{},matches(){return false;},classList:{toggle(){},remove(){},add(){}},setAttribute(k,v){this.attributes[k]=v;},getAttribute(k){return this.attributes[k];},append(...nodes){this.children.push(...nodes);},replaceChildren(...nodes){this.children=nodes;},querySelector(){return element(id+'-scroll');},addEventListener(){},querySelectorAll(){return [];},removeAttribute(k){delete this.attributes[k];},remove(){}});
  return elements.get(id);
 };
 element('mode-lock').attributes['aria-pressed']='false';element('satellite-layer').checked=false;element('satellite-opacity').value='60';
@@ -21,7 +22,7 @@ let hit;const layerOrder=[];
 const states=new Map();
 const map={setFeatureState({source,id},state){states.set(source+'|'+id,state);},removeFeatureState({source,id}){states.delete(source+'|'+id);},addSource(id,options){sources.set(id,{...options,loaded:true});},getSource:id=>sources.get(id),removeSource:id=>sources.delete(id),addLayer(l,before){layers.set(l.id,l);const index=layerOrder.indexOf(before);if(index<0)layerOrder.push(l.id);else layerOrder.splice(index,0,l.id);},getLayer:id=>layers.get(id),removeLayer(id){layers.delete(id);layerOrder.splice(layerOrder.indexOf(id),1);},moveLayer(id){layerOrder.splice(layerOrder.indexOf(id),1);layerOrder.push(id);},setPaintProperty(id,key,value){(layers.get(id).paint??={})[key]=value;},setFilter(){},setLayoutProperty(id,key,value){(layers.get(id).layout??={})[key]=value;},getLayoutProperty(id,key){return layers.get(id).layout?.[key];},queryRenderedFeatures:()=>hit?[hit]:[],isSourceLoaded:id=>sources.get(id)?.loaded,on(type,fn){if(!handlers.has(type))handlers.set(type,new Set());handlers.get(type).add(fn);},off(type,fn){handlers.get(type)?.delete(fn);},getBounds:()=>({getWest:()=>-180,getEast:()=>200,getSouth:()=>-65,getNorth:()=>80}),isMoving:()=>false};
 let nextURL=0,labelRecords=[];
-const context=vm.createContext({createFirstLevelQuiz:()=>undefined,backgroundLandColor,createMapResources,selectionLineSourceOptions,console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
+const context=vm.createContext({applySharedPlacePages,sharedPlacePage,sharedPlaceGeometry,uniquePlacePages,createFirstLevelQuiz:()=>undefined,backgroundLandColor,createMapResources,selectionLineSourceOptions,console,setTimeout,clearTimeout,DOMException,Option:class{constructor(text,value){this.text=text;this.value=value;}},Image:class{decode(){return Promise.resolve();}},URL:{createObjectURL:()=>String(++nextURL),revokeObjectURL:url=>revoked.push(url)},
  Worker:class{constructor(){jobs.push(this);}postMessage(data){this.request=data;}terminate(){this.terminated=true;}},
  document:{createDocumentFragment:()=>element('fragment-'+Math.random()),getElementById:element,createElement:tag=>element('new-'+tag+'-'+Math.random()),querySelector:()=>({insertBefore(){}})},
  window:{AtlasCountries:{ids:['brazil','france']},AtlasSymbols:{markup:()=>'<svg/>'},AtlasLabels:{render:(_map,records)=>{labelRecords=records;return [];}}},
@@ -29,7 +30,7 @@ const context=vm.createContext({createFirstLevelQuiz:()=>undefined,backgroundLan
  loadCompressed:async file=>file.endsWith('catalogue.bin')?catalogue:{type:'FeatureCollection',features:[]},createPlaceSearch,polygonParts,
  // Outlines are decoded in MapLibre's workers (geo-pack.mjs addWorkerSource); the source names its file.
  addWorkerSource:async(map,id,url,options,transform)=>{map.addSource(id,{...options,data:url,transform});return true;},
- addInternationalBorder(map,id,source){map.addLayer({id,type:'line',source,paint:{}});},setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineWidth:regionalLineWidth,lineSourceOptions:{type:'geojson'},internationalLineSourceOptions:{type:'geojson',tolerance:.125},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){}});
+ addInternationalBorder(map,id,source){map.addLayer({id,type:'line',source,paint:{}});},setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineWidth:regionalLineWidth,lineSourceOptions:{type:'geojson'},internationalLineSourceOptions:{type:'geojson',tolerance:.125},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){},renderPlaceOverview(anchor,record){anchor.hidden=!record?.overview;}});
 const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replace("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
 const breadcrumbSource=fs.readFileSync('dist/country-page.mjs','utf8');
 vm.runInContext(breadcrumbSource.slice(breadcrumbSource.indexOf('export function setMapBreadcrumb')).replaceAll('export function','function'),context);
@@ -112,7 +113,7 @@ assert(!whole.ready&&!sources.has('whole-third'),'Cancelled country-wide prepara
 task=whole.enter(false);await flush();const failed=assert.rejects(task,/Unavailable/);jobs.at(-1).onmessage({data:{error:'Unavailable'}});await failed;assert(!whole.ready&&!sources.has('whole-first'));
 task=whole.enter(false);await flush();jobs.at(-1).onmessage({data:allPayload});await task;assert(whole.ready,'Whole-country loading can retry after failure');whole.leave();
 console.log('Whole-country adapter: one entry bundle, all levels available globally, no selection requests, retained hidden geometry, cancellation, retry and complete release passed.');
-Object.assign(context,{enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementDotLayers,settlementDotVisible,settlementStatistics});
+Object.assign(context,{expandSettlementRecords,enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementDotLayers,settlementDotVisible,settlementStatistics});
 const cityLoads=[],citySelections=[];let cleared=0;
 context.createSettlementBoundaries=()=>({async setProvince(province,id){cityLoads.push({province,id});},select:id=>citySelections.push(id),clear:()=>cleared++,enter(){},leave(){},appearance(){},pick:()=>null});
 context.createCountryPage=options=>{assert(!options.settings.includes('City outlines'),'No redundant city-outline checkbox');return element(options.id);};

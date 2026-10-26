@@ -1,0 +1,19 @@
+{
+  "parent": "IN-LA",
+  "policy": "District coverage follows the existing Ladakh mask. Uncovered strips join the district sharing the longest boundary; isolated mask islands join the nearest district. State geometry and international claims remain unchanged.",
+  "gapParts": 671,
+  "restoredAreaKm2": 974.8998951935476,
+  "assignments": [
+    {
+      "id": "IN-D-6",
+      "parts": 280,
+      "areaKm2": 9.176697641212932
+    },
+    {
+      "id": "IN-D-9",
+      "parts": 391,
+      "areaKm2": 965.7231975523347
+    }
+  ],
+  "parentSha256": "1c8eda8b4cdda16d1ed05ebde9df4b50c65621cc7b542da76d39024fd247cda6"
+}

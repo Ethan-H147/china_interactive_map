@@ -44,3 +44,5 @@ for(const [country,config]of Object.entries(definitions)){
 
 // Supplement statistical urban areas with the nationwide named village register.
 (await import('./prepare-finland-places.mjs')).prepareFinlandPlaces();
+
+(await import('./prepare-norway-places.mjs')).prepareNorwayPlaces();

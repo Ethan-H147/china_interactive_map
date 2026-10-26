@@ -1,0 +1,259 @@
+{
+  "retrieved": "2026-10-26",
+  "coverage": "Retained OCHA COD-AB 2018 boundary reference: 47 counties and 290 sub-counties. This is a dated source, not a claim that every later administrative reform is included. The source’s 290 sub-county reference is retained and is distinct from the census sub-county division. Its northern outline follows the retained source around the disputed Ilemi Triangle; it is not a sovereignty determination. First-level population uses the separately dated national census source. Inland lake surfaces are excluded from mapped land. National GDP is not allocated to subdivisions.",
+  "counts": {
+    "1": 47,
+    "2": 290
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "zwe-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-zwe",
+      "sha256": "94457774ae1d322b1ea3223ab0ba65fbaf65082b6ae0cf4ff61b293036a1212b",
+      "bytes": 33494
+    },
+    "zwe-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/f5c4f4e4-a3c8-4d12-891f-d28d74ce04d5/resource/8e6f53f6-1969-450f-8767-16b940a2c233/download/zwe_admin_boundaries.geojson.zip",
+      "credit": "Zimbabwe National Statistics Agency (ZIMSTAT www.zimstat.co.zw) Central Statistics Office",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ab-zwe",
+      "sha256": "7fbb8d2ce388778229561f469d004dfb1bf01bcc348ebc7ee5ead888356454a3",
+      "bytes": 43041301
+    },
+    "zwe-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-zwe",
+      "sha256": "5856d27f43ccc545a6595492dd572855e1b219b5a0c2bbfe5052cf9188319fe9",
+      "bytes": 23671
+    },
+    "zwe-zwe_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/4acece15-fd70-455f-b1b7-c63cf0793352/resource/58ea973d-4ab3-4aee-8e3e-6347be70e892/download/zwe_admpop_adm0_2023.csv",
+      "credit": "UNFPA and Zimbabwe 2012 Census",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-zwe",
+      "sha256": "25dc330b8ddf370759a8ecef1f0c51d304a455ea59c8e8de05da7445cae9868c",
+      "bytes": 825
+    },
+    "zwe-zwe_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/4acece15-fd70-455f-b1b7-c63cf0793352/resource/65bb7e44-aa18-4a5c-9da8-b145530478c2/download/zwe_admpop_adm1_2023.csv",
+      "credit": "UNFPA and Zimbabwe 2012 Census",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-zwe",
+      "sha256": "9fc8c3bb0d09aed718c2c5818362c883edfc839607d953f7558fc3044a40eca7",
+      "bytes": 4236
+    },
+    "zwe-zwe_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/4acece15-fd70-455f-b1b7-c63cf0793352/resource/9ac14133-8f69-4edf-820f-042d0f93af25/download/zwe_admpop_adm2_2023.csv",
+      "credit": "UNFPA and Zimbabwe 2012 Census",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-zwe",
+      "sha256": "b46fd72d8c5ca924e0baf69cbcce2fc0666c670355228ed818407fca651c9801",
+      "bytes": 30819
+    },
+    "zwe-population2022.xlsx": {
+      "url": "https://data.humdata.org/dataset/4acece15-fd70-455f-b1b7-c63cf0793352/resource/5fe26eb2-8842-4f4d-b425-14ad3abc1b12/download/zwe_admpop_2022.xlsx",
+      "credit": "ZIMSTAT 2022 census, OCHA COD-PS retained table",
+      "license": "CC BY 3.0 IGO",
+      "sha256": "4f7b2d9774e87c1403e6ec69b9324ed28e91e6cc9d1299acbd8d29ab72af13fe",
+      "bytes": 661495
+    },
+    "zmb-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-zmb",
+      "sha256": "2475f1b8e12d137f1de35dca86230887dd021b727f0c112f3ee1ef7c477c1b44",
+      "bytes": 35749
+    },
+    "zmb-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-zmb",
+      "sha256": "19f6cd29da9eab80edcd831c490bb2fb3992d6b88cb98a98ec56434e08cc3062",
+      "bytes": 10405
+    },
+    "zmb-zmb_admpop_adm0_2020_v2.csv": {
+      "url": "https://data.humdata.org/dataset/eade6bae-9be6-43f4-bbf0-75c49ccecb2e/resource/5061a588-fee0-444d-8a23-9927b9e83868/download/zmb_admpop_adm0_2020_v2.csv",
+      "credit": "UNFPA",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-zmb",
+      "sha256": "3b1fa84253385f3373777a0e42ea87f67c9b3ceb1b2e8d9c8cf4a552c5c97150",
+      "bytes": 806
+    },
+    "zmb-zmb_admpop_adm1_2020_v2.csv": {
+      "url": "https://data.humdata.org/dataset/eade6bae-9be6-43f4-bbf0-75c49ccecb2e/resource/ed9e753b-5dc6-4d96-9e9d-a44764d60280/download/zmb_admpop_adm1_2020_v2.csv",
+      "credit": "UNFPA",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-zmb",
+      "sha256": "e2b1e77992fbc7db7d76ab4580e1b68ecc1da5c47a5fc5a7cdd0a35a37f18fc2",
+      "bytes": 4014
+    },
+    "tza-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-tza",
+      "sha256": "569a632e038ddde331bfb515ca08d4b8cd6df2d5918d7b1c96847feff9d4fe9e",
+      "bytes": 27290
+    },
+    "tza-1.zip": {
+      "url": "https://data.humdata.org/dataset/451bdd28-d06d-46ea-91c0-2e081f884395/resource/55e9e1d3-6585-4e38-ae35-726875c1e8ed/download/tza_admbnda_adm1_20181019.zip",
+      "credit": "Tanzania National Bureau of Statistics / UN OCHA ROSA",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ab-tza",
+      "sha256": "929b9ffaf2d2b8a925bb0f1accfbbc2adae93b17b316e20712a0e9d61ec5f440",
+      "bytes": 3561814
+    },
+    "tza-2.zip": {
+      "url": "https://data.humdata.org/dataset/451bdd28-d06d-46ea-91c0-2e081f884395/resource/50fec0b7-ba83-43fb-bb1c-941e2dbc7a95/download/tza_admbnda_adm2_20181019.zip",
+      "credit": "Tanzania National Bureau of Statistics / UN OCHA ROSA",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ab-tza",
+      "sha256": "cf354d741e337e9c22dbb97b699980a5c4449cedcab2263a7773df3b75ca7799",
+      "bytes": 5523250
+    },
+    "tza-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-tza",
+      "sha256": "8252bd8ca46ed5405f96458b035322c71ec4d092c752590732e4c7e0062d5cf6",
+      "bytes": 10774
+    },
+    "ken-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-ken",
+      "sha256": "f541544318758e39a31d6e465754d5ddad81a9c1fba6892a6ba6e390a35e830d",
+      "bytes": 16877
+    },
+    "ken-boundaries.zip": {
+      "url": "https://data.humdata.org/dataset/2c0b7571-4bef-4347-9b81-b2174c13f9ef/resource/674ea496-5451-4312-bcab-8aa95fa3f36c/download/ken_admin_boundaries.geojson.zip",
+      "credit": "IEBC",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ab-ken",
+      "sha256": "ee7c9f02eb91f902ac53aa3be63d9cd195fbfc60eb56a6cc9c240b4a39767d18",
+      "bytes": 6957132
+    },
+    "ken-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-ken",
+      "sha256": "c1b65b8c6fbcdbf2237ac75f21437736d8e8b397037e98f8d2034d5b6ca59ef1",
+      "bytes": 10415
+    },
+    "ken-ken_admpop_adm0_2019.csv": {
+      "url": "https://data.humdata.org/dataset/26801642-7088-4149-9605-6ae282897937/resource/ce9a60f1-f0df-42bc-910c-5761e6c0ba81/download/ken_admpop_adm0_2019.csv",
+      "credit": "Kenya National Bureau of Statistics: http://www.knbs.or.ke",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-ken",
+      "sha256": "cbb5bdf3755284b223c443ef9ec5ddaa045d90b46515ad4ae9ccc4dca74eff07",
+      "bytes": 29073
+    },
+    "ken-ken_admpop_adm1_2019.csv": {
+      "url": "https://data.humdata.org/dataset/26801642-7088-4149-9605-6ae282897937/resource/d4fed43d-8abe-48d2-987a-35c101292af3/download/ken_admpop_adm1_2019.csv",
+      "credit": "Kenya National Bureau of Statistics: http://www.knbs.or.ke",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ps-ken",
+      "sha256": "2226922756363ed392b7f4df0dc72a59e13241c9934c3017601de23f56c21867",
+      "bytes": 49588
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/ZWE;ZMB;TZA;KEN/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2024:2025&format=json&per_page=200",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "b1123b761f151f3fe83c9cea5648cc62c65c20f90d2834b228cedb9668b75720",
+      "bytes": 5055
+    },
+    "flag-zw.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Zimbabwe.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zimbabwe.svg",
+      "sha256": "81548edd2e9340b07f67219b2185ececb93466e4e4da96cbea3e61f0dca65067",
+      "bytes": 1801
+    },
+    "flag-zm.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Zambia.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Zambia.svg",
+      "sha256": "5a49c51dc87ec82838e3aadd45ac525cb4e0e7b85c4006c221e389a4125e6d56",
+      "bytes": 5235
+    },
+    "flag-tz.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tanzania.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Tanzania.svg",
+      "sha256": "88760e4ce561a916b6cb71688301e6bb07844843833ce63b18974916d2a6d0c1",
+      "bytes": 320
+    },
+    "flag-ke.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg",
+      "credit": "Wikimedia Commons national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Kenya.svg",
+      "sha256": "4e750d2b4aba128580e40052630883aee27419dcbd87ea44a4ede609e7c42a1b",
+      "bytes": 1033
+    },
+    "zwe-census2022.pdf": {
+      "url": "https://www.zimstat.co.zw/wp-content/uploads/Census/2022_PHC_Report_27012023_Final.pdf",
+      "credit": "National statistical office; Table 2.2, printed page 109",
+      "license": "Published statistical facts with attribution",
+      "sha256": "bdebd23be87e1aa5c1ec73874eff733a524a93bad6fccf7da7e9c854666bb1ed",
+      "bytes": 11832961
+    },
+    "zmb-census2022.pdf": {
+      "url": "https://www.zamstats.gov.zm/wp-content/uploads/2023/12/2022-Census-of-Population-and-Housing-Preliminary.pdf",
+      "credit": "National statistical office; Figure 3.3a, printed page 8",
+      "license": "Published statistical facts with attribution",
+      "sha256": "fa43febbfbde94884d6bdbe82765a43f2e6e882fc90bb3a35cc6eab45fd18dfd",
+      "bytes": 2732300
+    },
+    "tza-census2022.pdf": {
+      "url": "https://www.nbs.go.tz/nbs/takwimu/Census2022/Administrative_units_Population_Distribution_Report_Tanzania_volume1a.pdf",
+      "credit": "National statistical office; Table 3, printed page 15",
+      "license": "Published statistical facts with attribution",
+      "sha256": "6f41eee70eefd764efaea876e0b13546666a69c5b91c1f50e5d9b38c3f78d1b9",
+      "bytes": 15016674
+    },
+    "ken-census2019.xlsx": {
+      "url": "https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Population-households-density-by-county.xlsx",
+      "credit": "National statistical office; Pop by Sex and County; total includes intersex respondents",
+      "license": "Published statistical facts with attribution",
+      "sha256": "e0fd5c774eca5a530c89a2c9a09bb45c7163af5c995ea7d8d350e70c255fdeb2",
+      "bytes": 15203
+    },
+    "census-normalized.json": {
+      "urls": [
+        "https://www.zimstat.co.zw/wp-content/uploads/Census/2022_PHC_Report_27012023_Final.pdf",
+        "https://www.zamstats.gov.zm/wp-content/uploads/2023/12/2022-Census-of-Population-and-Housing-Preliminary.pdf",
+        "https://www.nbs.go.tz/nbs/takwimu/Census2022/Administrative_units_Population_Distribution_Report_Tanzania_volume1a.pdf",
+        "https://www.knbs.or.ke/wp-content/uploads/2023/09/2019-Kenya-population-and-Housing-Census-Population-households-density-by-county.xlsx"
+      ],
+      "credit": "National statistical offices; normalized census tables from retained original workbooks and reports",
+      "method": "scripts/extract-east-south-africa-census.py",
+      "sha256": "0053ab41700768009d3c1f1eae6040b3bacf0c2db4b508dfe7b0149d0c330f54",
+      "bytes": 8645
+    },
+    "zmb-admin1.geojson": {
+      "url": "https://data.humdata.org/dataset/01c71cfd-32ff-4a32-a1dd-5909702c12db/resource/bc27b2bb-34e1-42cf-95da-21d90abb0d11/download/zmb_admin_boundaries.geojson.zip",
+      "credit": "Disaster Management and Mitigation Unit (DMMU) Zambia",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ab-zmb",
+      "sha256": "35b5d537e8ebe8eadd0bda5951d9bcb73b45aa203fe97dc1289f83aa9e41b822",
+      "bytes": 10450749,
+      "archive": "zmb-boundaries.zip",
+      "archiveMember": "zmb_admin1.geojson"
+    },
+    "zmb-admin2.geojson": {
+      "url": "https://data.humdata.org/dataset/01c71cfd-32ff-4a32-a1dd-5909702c12db/resource/bc27b2bb-34e1-42cf-95da-21d90abb0d11/download/zmb_admin_boundaries.geojson.zip",
+      "credit": "Disaster Management and Mitigation Unit (DMMU) Zambia",
+      "license": "CC BY 3.0 IGO",
+      "page": "https://data.humdata.org/dataset/cod-ab-zmb",
+      "sha256": "d88a3ff7d7c9809e627a2550cdc92fb579a7af08452bb6b351cd5505663f6bef",
+      "bytes": 36315621,
+      "archive": "zmb-boundaries.zip",
+      "archiveMember": "zmb_admin2.geojson"
+    },
+    "tza-national-accounts2025.pdf": {
+      "url": "https://www.nbs.go.tz/uploads/statistics/documents/en-1791955365-Nationa%20Accounts%20of%20Mainland%20Tanzania%202019%20-%202025.pdf",
+      "sha256": "c343f2c8c1d38d49aad85a8d9bb490ef6d9fb211702a1c4617bfcd0f02b9e4cf",
+      "bytes": 6745766,
+      "credit": "NBS / OCGS; 2025 national accounts, whole United Republic of Tanzania",
+      "license": "Published statistical facts with attribution"
+    },
+    "tza-national-economy.json": {
+      "url": "https://www.nbs.go.tz/uploads/statistics/documents/en-1791955365-Nationa%20Accounts%20of%20Mainland%20Tanzania%202019%20-%202025.pdf",
+      "sha256": "b61ecad442fef934d6eb4c04bc3b07e961f12ca975b73d2580616a7aa8445888",
+      "bytes": 722,
+      "credit": "NBS / OCGS; 2025 national accounts, whole United Republic of Tanzania",
+      "license": "Published statistical facts with attribution"
+    }
+  }
+}
