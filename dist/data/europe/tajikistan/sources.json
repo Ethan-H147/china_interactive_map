@@ -1,0 +1,80 @@
+{
+  "retrieved": "2026-10-26",
+  "coverage": "Current mapped five regions/equivalents; lower-level geometry is not offered because the available national layer is dated 2017 and lacks current city divisions. OpenStreetMap relation snapshots retrieved 26 October 2026. Boundaries are an administrative map reference. Shared international edges follow existing atlas neighbours; population is separately dated. Inland lake surfaces are excluded. National GDP is retained separately and never assigned to regions.",
+  "counts": {
+    "1": 5
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "tj-relation-3279615.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3279615/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3279615",
+      "relation": 3279615,
+      "sha256": "9fd7be9bc0b33f6fe210e5a49520e88bae85a7ae0afe8a9bb5408db7781e6497",
+      "bytes": 1073053
+    },
+    "tj-relation-3279374.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3279374/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3279374",
+      "relation": 3279374,
+      "sha256": "82b3616be29d1fcd3182d60f68f7953d99dc49189ceae973c595bf7255f5b676",
+      "bytes": 1394223
+    },
+    "tj-relation-3279616.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3279616/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3279616",
+      "relation": 3279616,
+      "sha256": "6febd9b546bb696f7f4bbff43a91ec5e251cae94183b5b035bb82b1ee0d77449",
+      "bytes": 1017786
+    },
+    "tj-relation-3279614.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3279614/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3279614",
+      "relation": 3279614,
+      "sha256": "bef11482dcf097c828d72b6b9f762ee9b7dc3074c4e2e404addc64b2238fbe09",
+      "bytes": 1974008
+    },
+    "tj-relation-7328360.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/7328360/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/7328360",
+      "relation": 7328360,
+      "sha256": "b4bb8cd20abb00c18347fa90c1802006763edd1eecb2c58cf32fd9945e6484b9",
+      "bytes": 144549
+    },
+    "tjk-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/TJK/ADM2/",
+      "sha256": "7dc7781d69c9ec5cfe0675da15c5942eb279f93f2db109638c22e4952ec4bbe6",
+      "bytes": 1731
+    },
+    "tjk-adm2.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/TJK/ADM2/geoBoundaries-TJK-ADM2.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "page": "https://www.geoboundaries.org/api/current/gbOpen/TJK/ADM2/",
+      "sha256": "86fd6d7ec19f607e6d29adabba3ab9bde7a947950d8348504a934e911fb74e2d",
+      "bytes": 636686
+    },
+    "tajikistan-population.html": {
+      "url": "https://www.stat.tj/en/population-growth-and-demographic-changes-in-the-country/",
+      "credit": "National statistical authority",
+      "license": "Official statistics; attribution",
+      "sha256": "d7d0aa3f22a38ba0ee36631f5fb1423a33216141df4696ae5ce6f5036dbb093b",
+      "bytes": 91035
+    }
+  },
+  "centralAsianFrontiers": {
+    "source": "data/central-asian-frontiers-sources.json",
+    "method": "The five Central Asian countries share one retained OpenStreetMap national partition, including all enclaves. Existing external land frontiers and lake shorelines are retained; Caspian territorial water is excluded. Subdivision fills conform to their country and parent; country contexts and international strokes use the same boundaries."
+  }
+}

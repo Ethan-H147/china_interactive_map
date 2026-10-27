@@ -1,6 +1,6 @@
 import {withTelephoneAreas} from './telephone-areas.mjs';
 import {onMapHover} from './pointer-performance.mjs';
-import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
+import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb,showCountryPanel} from './country-page.mjs';
 import {loadJapanLocalFacts,releaseJapanLocalFacts,japanPopulation,japanLocalStatistics} from './japan-local-facts.mjs';
 import {japanComparisonProfile} from './compare.mjs';
 import {loadCompressed} from './korea-data.mjs';
@@ -45,7 +45,7 @@ export async function addJapanPortal(map,host){
  const clearLabels=()=>{labels.forEach(m=>m.remove());labels=[];};
  function state(record,value){if(!record)return;const sources=record.level===1?['japan-first','japan-first-selection-edges','japan-local-first','japan-local-first-outlines']:record.level===2?['japan-local-second','japan-local-second-outlines']:['japan-local-wards','japan-local-wards-outlines'];for(const source of sources)if(map.getSource(source))window.AtlasMotion.setFeatureState(map,{source,id:record.id},value);}
  const clearHover=()=>{state(hovered,{hover:false});hovered=null;};
- const panel=name=>{for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}};
+ const panel=name=>showCountryPanel(sidebar,$(name+'-panel'));
  const detailMessage=(text,retry=false)=>{$('detail-status').textContent=text;$('detail-status').hidden=!text;$('retry').hidden=!retry;};
  const wardScope=()=>selected?.level===3?selected.parent:selected?.kind==='Designated city'?selected.id:null;
  function updateLabels(){

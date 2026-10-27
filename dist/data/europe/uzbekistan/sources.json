@@ -1,0 +1,43 @@
+{
+  "retrieved": "2026-10-26",
+  "coverage": "14 top-level units and 199 district/city units from the retained OCHA 2018 reference, reviewed January 2024. The administrative roster is dated and does not claim later district reforms. Native Uzbek and Russian names come from the same source. The corrected display contains 198 district/city polygons; Shirin remains searchable as a settlement point because its retained administrative polygon lies across the national border.",
+  "counts": {
+    "1": 14,
+    "2": 198
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "uzb-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-uzb",
+      "sha256": "2a62ae963bbd2da89fad49ef676f32496c7d75569fcf6b4d54855a2daef2f32d",
+      "bytes": 29367
+    },
+    "uzb-adm1.zip": {
+      "url": "https://data.humdata.org/dataset/66f56d39-3f19-4798-a0df-a0ed9a4836ea/resource/6a44247a-f4f5-421d-803a-893ecaf201e2/download/uzb_admbnda_adm1_2018b.zip",
+      "credit": "OCHA Middle East and North Africa (ROMENA) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-uzb",
+      "sha256": "3fd9649d633e7c4453c2cdd699e46ebbe2e736335e1afde65f15c8b79111126c",
+      "bytes": 75939
+    },
+    "uzb-adm2.zip": {
+      "url": "https://data.humdata.org/dataset/66f56d39-3f19-4798-a0df-a0ed9a4836ea/resource/b9d8c3e7-b261-46a0-8ffc-b1c822c984c3/download/uzb_admbnda_adm2_2018b.zip",
+      "credit": "OCHA Middle East and North Africa (ROMENA) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-uzb",
+      "sha256": "f65b5b57d03dc4f784a8504aded331fff9d1ef818f3eeeac073dc50fb757f263",
+      "bytes": 204456
+    },
+    "uzbekistan-population.html": {
+      "url": "https://stat.uz/en/press-center/news-of-committee/62565-hududlar-kesimida-doimiy-aholi-soni-pp-3",
+      "credit": "National statistical authority",
+      "license": "Official statistics; attribution",
+      "sha256": "d94cdb53c8dc45f10d24502974bb65b68bd867408412151fbbfe75d5896c55cf",
+      "bytes": 87522
+    }
+  },
+  "centralAsianFrontiers": {
+    "source": "data/central-asian-frontiers-sources.json",
+    "method": "The five Central Asian countries share one retained OpenStreetMap national partition, including all enclaves. Existing external land frontiers and lake shorelines are retained; Caspian territorial water is excluded. Subdivision fills conform to their country and parent; country contexts and international strokes use the same boundaries."
+  }
+}

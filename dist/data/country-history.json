@@ -1171,6 +1171,156 @@
         ],
         "note": "Added locally at the user’s request; dated OCHA subdivisions, national census statistics and national economic figures. No commit or deployment performed."
       }
+    },
+    {
+      "country": "moldova",
+      "name": "Moldova",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, dated population and retained national economics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/moldova/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request. Source dates and administrative coverage are recorded in docs/moldova-central-asia.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "uzbekistan",
+      "name": "Uzbekistan",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, dated population and retained national economics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/uzbekistan/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request. Source dates and administrative coverage are recorded in docs/moldova-central-asia.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "tajikistan",
+      "name": "Tajikistan",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, dated population and retained national economics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/tajikistan/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request. Source dates and administrative coverage are recorded in docs/moldova-central-asia.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "turkmenistan",
+      "name": "Turkmenistan",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, dated population and retained national economics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/turkmenistan/catalogue.bin"
+        ],
+        "note": "Added locally at the user’s request. Source dates and administrative coverage are recorded in docs/moldova-central-asia.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "armenia",
+      "name": "Armenia",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, source-linked regional population and national statistics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/armenia/catalogue.bin"
+        ],
+        "note": "Local implementation requested by the user. Source dates and administrative coverage are recorded in docs/caucasus-gulf.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "georgia",
+      "name": "Georgia",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, source-linked regional population and national statistics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/georgia/catalogue.bin"
+        ],
+        "note": "Local implementation requested by the user. Source dates and administrative coverage are recorded in docs/caucasus-gulf.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "azerbaijan",
+      "name": "Azerbaijan",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, source-linked regional population and national statistics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/azerbaijan/catalogue.bin"
+        ],
+        "note": "Local implementation requested by the user. Source dates and administrative coverage are recorded in docs/caucasus-gulf.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "qatar",
+      "name": "Qatar",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, source-linked regional population and national statistics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/qatar/catalogue.bin"
+        ],
+        "note": "Local implementation requested by the user. Source dates and administrative coverage are recorded in docs/caucasus-gulf.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "bahrain",
+      "name": "Bahrain",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, source-linked regional population and national statistics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/bahrain/catalogue.bin"
+        ],
+        "note": "Local implementation requested by the user. Source dates and administrative coverage are recorded in docs/caucasus-gulf.md. No commit or deployment performed."
+      }
+    },
+    {
+      "country": "united-arab-emirates",
+      "name": "United Arab Emirates",
+      "addedOn": "2026-10-26",
+      "basis": "local-implementation",
+      "evidence": {
+        "status": "local",
+        "subject": "Administrative map, native names, source-linked regional population and national statistics.",
+        "paths": [
+          "dist/countries.js",
+          "dist/data/europe/united-arab-emirates/catalogue.bin"
+        ],
+        "note": "Local implementation requested by the user. Source dates and administrative coverage are recorded in docs/caucasus-gulf.md. No commit or deployment performed."
+      }
     }
   ]
 }

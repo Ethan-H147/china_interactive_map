@@ -1,0 +1,80 @@
+{
+  "datum": {
+    "from": "QND95 geographic coordinates (EPSG:4614)",
+    "to": "WGS 84 (EPSG:4326)",
+    "operation": "EPSG:1840, Qatar Centre for GIS seven-parameter position-vector transformation",
+    "parameters": [
+      -119.4248,
+      -303.65872,
+      -11.00061,
+      1.164298,
+      0.174458,
+      1.096259,
+      3.657065
+    ],
+    "url": "https://epsg.io/1840"
+  },
+  "controls": [
+    {
+      "name": "West Bay",
+      "bounds": [
+        51.525,
+        25.311,
+        51.544,
+        25.327
+      ],
+      "vertices": 556,
+      "source": {
+        "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=51.523,25.309,51.546,25.329",
+        "credit": "OpenStreetMap contributors",
+        "license": "ODbL 1.0",
+        "purpose": "Independent West Bay shore control for datum validation",
+        "sha256": "7377d70124149273e257a91a02fc2dd2314e1639b84dc782f779a4c2fef2490c",
+        "bytes": 3022817
+      },
+      "beforeMetres": {
+        "median": 93.45739242095394,
+        "p90": 101.02124105616852
+      },
+      "afterMetres": {
+        "median": 2.674580599710571,
+        "p90": 12.960087086557731
+      }
+    },
+    {
+      "name": "Ras Laffan",
+      "bounds": [
+        51.583,
+        25.883,
+        51.637,
+        25.967
+      ],
+      "vertices": 2504,
+      "source": {
+        "url": "https://www.openstreetmap.org/api/0.6/map.json?bbox=51.58,25.88,51.64,25.97",
+        "credit": "OpenStreetMap contributors",
+        "license": "ODbL 1.0",
+        "purpose": "Independent Ras Laffan shoreline control for datum validation",
+        "sha256": "26702daa096b83203572a126eb8ef5d387a4229f9f0a6aa584e6beb0aa731067",
+        "bytes": 1468821
+      },
+      "beforeMetres": {
+        "median": 59.77837068072616,
+        "p90": 121.45367461470586
+      },
+      "afterMetres": {
+        "median": 15.503259293541143,
+        "p90": 32.45775299005642
+      }
+    }
+  ],
+  "counts": {
+    "1": 8,
+    "2": 90,
+    "3": 781
+  },
+  "excluded": {
+    "id": "QAT004099",
+    "reason": "Three equal-sized artificial offshore circles with no district children; source/cartographic placeholder, excluded from administrative zones and land."
+  }
+}

@@ -1,0 +1,2265 @@
+{
+  "retrieved": "2026-10-26",
+  "coverage": "Four land-only governorates from the 2017 OpenStreetMap/geoBoundaries release, after the 2014 abolition of Central Governorate. Territorial sea is excluded. Later reclamation is outside this dated coastal snapshot. Population sums all nationality and sex categories in the 2020 census. Shared country frontiers follow established atlas neighbours; inland lake surfaces are excluded. National statistics are retained while country overview pages remain hidden.",
+  "counts": {
+    "1": 4
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "wikidata-Q399.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q399.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f51aacad3017a876e464bec9234b6321ddb6da2e5e2895abd02f6adfd590cdd5",
+      "bytes": 688720
+    },
+    "wikidata-Q17915.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q17915.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "99288745b56a290da20d8e6bed51c8807573a18536e026001b46721361d648ad",
+      "bytes": 137992
+    },
+    "relation-3917110.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3917110/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3917110",
+      "relation": 3917110,
+      "country": "armenia",
+      "sha256": "8e45f1c2f28ed348031abb45c95a9514dc94ca3a10a7b712ea1dc3c7533481e9",
+      "bytes": 162246
+    },
+    "wikidata-Q199880.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q199880.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "aef385f84a78e2f77cd144ba436f99bc9f8b6764c2339e941bc493785b395bea",
+      "bytes": 125842
+    },
+    "relation-364083.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364083/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364083",
+      "relation": 364083,
+      "country": "armenia",
+      "sha256": "9f1d9e4aefaf2b6e834f5c7298efbf661e0bfc1c0a2f21adfb39d671818cc1d2",
+      "bytes": 821744
+    },
+    "wikidata-Q201147.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q201147.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "6f12cb741ea18ae2955b7feca11c9ad164b1205cb29b9daae795a6c70657fdc7",
+      "bytes": 124662
+    },
+    "relation-364086.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364086/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364086",
+      "relation": 364086,
+      "country": "armenia",
+      "sha256": "d6ae5e80f43752ddfecf73dd89357c21fb1a71e1c61f1c6946ac59ca174f5241",
+      "bytes": 1122043
+    },
+    "wikidata-Q199905.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q199905.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "ff9bc51ee13a6ea8d25a075386a7c8e7ba1f6bbdfac1a56ee9fed30f945bd86d",
+      "bytes": 126596
+    },
+    "relation-364080.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364080/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364080",
+      "relation": 364080,
+      "country": "armenia",
+      "sha256": "07fdcf6f963de506b6ef68f2c2cdecf5103ff5ed2e48d43dc7d92fec47c9ef82",
+      "bytes": 204518
+    },
+    "wikidata-Q4511.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q4511.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "8b2e5d86e5e9c37e7351ca58aae610cc12194f973f8cb329eed553c1ae690688",
+      "bytes": 105951
+    },
+    "relation-364084.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364084/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364084",
+      "relation": 364084,
+      "country": "armenia",
+      "sha256": "22a6a67b042da8a8f13b28afd1630f90bf45e95cf9e63b5ca7f65540d1dde084",
+      "bytes": 193885
+    },
+    "wikidata-Q200350.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q200350.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "4fc4b7c593db2c798a7c971dc5e58548d24953621822a029c800f591ba52cdd1",
+      "bytes": 140843
+    },
+    "geocode-Q200350.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Lori+Province%2C+Armenia&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "0b46b93aec3524eefa3a9fa8a9288087d1047adb123a7e58b13fa3409bce6cd6",
+      "bytes": 447
+    },
+    "relation-364078.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364078/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364078",
+      "relation": 364078,
+      "country": "armenia",
+      "sha256": "a828580594f013c0a46609038dbffd75997a2421c056fe6f0f80bfd56bc778a5",
+      "bytes": 418679
+    },
+    "wikidata-Q201063.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q201063.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "2e27b4a86f170e9bcb6b6d7edd116fd85a2a0a55749299258c4a884f394c462d",
+      "bytes": 140147
+    },
+    "relation-364077.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364077/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364077",
+      "relation": 364077,
+      "country": "armenia",
+      "sha256": "acc2de2aef371a0cb070b0079b995cf7f2929765139d1dd331f8b66def1d3755",
+      "bytes": 522636
+    },
+    "wikidata-Q2523428.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2523428.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "09e7aa001bb7c7707b93519344891f7115b03404d0bbdfbf401a4dafe854a8f8",
+      "bytes": 136288
+    },
+    "relation-364082.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364082/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364082",
+      "relation": 364082,
+      "country": "armenia",
+      "sha256": "d4975d5d77abf6e0034878c083ea98c28de89d4429bd1062b3ceb0bbf3ac7142",
+      "bytes": 391467
+    },
+    "wikidata-Q201140.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q201140.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "fb1dc27b361bcf8a022bbfb7dc1dc5c7473630dc0fe207ee977b406077232dc9",
+      "bytes": 101915
+    },
+    "relation-364079.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364079/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364079",
+      "relation": 364079,
+      "country": "armenia",
+      "sha256": "b7be98e7298541e974b988aec4fc4e5cc1f60c9b523ff49aff141239d164c6f5",
+      "bytes": 589429
+    },
+    "wikidata-Q200124.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q200124.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "e130d0e91448ecb21c6398df576c44ee3652755fdd99a92c075520f07357385b",
+      "bytes": 104169
+    },
+    "relation-364081.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364081/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364081",
+      "relation": 364081,
+      "country": "armenia",
+      "sha256": "3e02307ee53fff1aa0c888c565dbdf2729e6d11aca92140c019f610f8a991e3e",
+      "bytes": 98280
+    },
+    "wikidata-Q1953.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q1953.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "81504ccec4834b621c722387666e918e42b5a0aa0f477bb65345b081483c41b7",
+      "bytes": 208392
+    },
+    "relation-364087.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/364087/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364087",
+      "relation": 364087,
+      "country": "armenia",
+      "sha256": "4433c2d37bf8c27eb585caabb974947164171980023491775fe70f169889f410",
+      "bytes": 248751
+    },
+    "wikidata-Q230.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q230.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f5e42e0e67debd33ddd490e539f3a2b798cac729110ce913539f1d19d5915bf4",
+      "bytes": 695965
+    },
+    "wikidata-Q2914461.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2914461.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "2a8f1c67924be13d7ed6da37478803bb6970c18ebf1d248187762d21c5f7d7ed",
+      "bytes": 53188
+    },
+    "relation-3572912.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3572912/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3572912",
+      "relation": 3572912,
+      "country": "georgia",
+      "sha256": "2c6eb5e15a46b4720c44b7dd32d62b7b5519fd0c7fb170b12a8aa11e9c16bd62",
+      "bytes": 1478967
+    },
+    "wikidata-Q200309.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q200309.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "1bdf6f0aec00d906a18a408084e9063235745ef077f6a608bef2a255ea8da60e",
+      "bytes": 62276
+    },
+    "relation-1996076.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1996076/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1996076",
+      "relation": 1996076,
+      "country": "georgia",
+      "sha256": "945581cd86a0e88aa2c7339409a8778f8370b3bc8359acabc87c971cc212cb84",
+      "bytes": 1002313
+    },
+    "wikidata-Q200045.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q200045.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "84e6dc1a84bc04278a35cf7c0f772d670a7365a2bac91a27f09dacfc33db5f0d",
+      "bytes": 57493
+    },
+    "relation-1997289.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1997289/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1997289",
+      "relation": 1997289,
+      "country": "georgia",
+      "sha256": "c6c323acd95e587aa5e507713133f866eedf4b8410ce5734f3cae3fc1c6c2b22",
+      "bytes": 327101
+    },
+    "wikidata-Q169674.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q169674.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "e104bf2b8ca8dcd852cd1a91909d7b4e92517bfedaabc8e1997398883c269ed9",
+      "bytes": 67173
+    },
+    "relation-2000091.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2000091/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2000091",
+      "relation": 2000091,
+      "country": "georgia",
+      "sha256": "5d0be85333959bcd443fb38f8f7c376eec02429ba23d7a536eb868c2a120c4c1",
+      "bytes": 783981
+    },
+    "wikidata-Q19039.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q19039.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "5e393bf3cb07b47af353540e5d80794ab4700fa7a2076b6986865d73e12fedce",
+      "bytes": 56055
+    },
+    "relation-1996031.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1996031/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1996031",
+      "relation": 1996031,
+      "country": "georgia",
+      "sha256": "1156be3494103e5ab7dbfcbe261d234aed095886b568d1d2324e9e3ba1201e16",
+      "bytes": 289392
+    },
+    "wikidata-Q200047.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q200047.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "7d2ef52dab0cc07e7ee9ab5ede93431c53e3feb298fccd46e3a10e26702552ed",
+      "bytes": 50370
+    },
+    "relation-2000040.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2000040/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2000040",
+      "relation": 2000040,
+      "country": "georgia",
+      "sha256": "3393f6f8f7247c542f7593ded050e311b0887c29e2c52399a6bd0fe3078ebf44",
+      "bytes": 364769
+    },
+    "wikidata-Q200048.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q200048.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "7b64b66447ac0e78945b4017a508902a6e60186182b42f4ba8ad48d15536c255",
+      "bytes": 46166
+    },
+    "relation-2000092.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2000092/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2000092",
+      "relation": 2000092,
+      "country": "georgia",
+      "sha256": "9f91bdbff07836cf2158870e13ab412a373970404a957b4edc798f27b3b3ff90",
+      "bytes": 752304
+    },
+    "wikidata-Q45693.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q45693.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "33543f536f3af4d2640eb8235a2899bf646d8bdd95291ad86dc0f473127f28cc",
+      "bytes": 89548
+    },
+    "relation-1995970.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1995970/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1995970",
+      "relation": 1995970,
+      "country": "georgia",
+      "sha256": "02ddff6c2a61d9d073d3520d4f2cef1434b3acf019d3f3faf558c2f23daa5a0b",
+      "bytes": 728291
+    },
+    "wikidata-Q19038.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q19038.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "0704c3f0352af8d2e770cccba570e0385b592c5f2cfa31dcaaca7eba37674153",
+      "bytes": 50373
+    },
+    "relation-1995971.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1995971/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1995971",
+      "relation": 1995971,
+      "country": "georgia",
+      "sha256": "73ccf4bbf452c045d482cc7bcc00dc6b7b7fcb81bb4e422c43bfb44721e80859",
+      "bytes": 659030
+    },
+    "wikidata-Q203339.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q203339.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "984f34f8687f98f606a45f8eab5b997ecfa96f180a967ba7b7f9ac951037b11d",
+      "bytes": 50393
+    },
+    "relation-2000090.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2000090/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2000090",
+      "relation": 2000090,
+      "country": "georgia",
+      "sha256": "64f7de2bcc0ca86ab63452baf9294b864800c3fd4fa8b31760733b30a32b2fe1",
+      "bytes": 782012
+    },
+    "wikidata-Q38893.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q38893.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "2e7e71edc859d0d15a513b557bb4c68feb2f5048a466a8a7b4a279bf56c19128",
+      "bytes": 59447
+    },
+    "relation-1997284.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1997284/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1997284",
+      "relation": 1997284,
+      "country": "georgia",
+      "sha256": "f3f6070c90fd5d4d37eae73b7c71e2fcb3897cc1bd2f508bd8fc73e19890c558",
+      "bytes": 327172
+    },
+    "wikidata-Q994.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q994.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "7deaae46591f051a78d70a4265ed69fc38397308ecf4e0cb5a5a6d43a457dbdc",
+      "bytes": 409829
+    },
+    "relation-1996871.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1996871/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1996871",
+      "relation": 1996871,
+      "country": "georgia",
+      "sha256": "a1a564335ef107e52a47d0c55afb7b7735d6d6580719031521b31aeb7da5c74d",
+      "bytes": 537224
+    },
+    "wikidata-Q227.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q227.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "4f9fb8a8cce8ce6d36e96466798b02030956ee9b48f33e679141e60b8b11e566",
+      "bytes": 678430
+    },
+    "wikidata-Q179538.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q179538.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "2e4b8f085070379788a7d33e5eb14c46a7556b05adf38942c97394c59b03049b",
+      "bytes": 56441
+    },
+    "relation-3764533.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764533/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764533",
+      "relation": 3764533,
+      "country": "azerbaijan",
+      "sha256": "019745abc98c2a3a0e523d84c8c7dad1b6e8a703979f383d73bb7128820642db",
+      "bytes": 117823
+    },
+    "wikidata-Q330818.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330818.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "7236ccaf64ae4a7d20de090a0f5f14b645ee8a50a0cbbfd22b895ca31a7018b4",
+      "bytes": 49601
+    },
+    "relation-3764536.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764536/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764536",
+      "relation": 3764536,
+      "country": "azerbaijan",
+      "sha256": "96d80b3ae7c9230dfd0c8e65829738953c1b4c79df37029ec06ccbc89c7f7580",
+      "bytes": 171280
+    },
+    "wikidata-Q201647.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q201647.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "5bfb27b6d20c5cd326d481b65bafaa191b9eb55748cbc2950166aab16e523bc0",
+      "bytes": 58326
+    },
+    "relation-3795445.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3795445/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3795445",
+      "relation": 3795445,
+      "country": "azerbaijan",
+      "sha256": "3c2436709e8364bfd482daf77b64b0a03c07ed470e16dba6e15370ee75ab8048",
+      "bytes": 133036
+    },
+    "wikidata-Q275784.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q275784.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f16f4179265088a7605f3494cccf2b5a5e1b5de60bea8243c29bd70a2b60fe8d",
+      "bytes": 53235
+    },
+    "relation-3764538.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764538/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764538",
+      "relation": 3764538,
+      "country": "azerbaijan",
+      "sha256": "fc8290a64d2359e27b608665225bf77876020f6e900fc3a896a9baab7b311054",
+      "bytes": 102691
+    },
+    "wikidata-Q275744.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q275744.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "020f7179bb926fb433ede9e6d4eded22955f4b19243c2126142ff9df293e8333",
+      "bytes": 59321
+    },
+    "relation-3764539.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764539/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764539",
+      "relation": 3764539,
+      "country": "azerbaijan",
+      "sha256": "4b117be86397ee08ef79e437091d4e770ff0ee4740815df8e61208cd47873eb2",
+      "bytes": 141523
+    },
+    "wikidata-Q330800.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330800.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "993f3088e9ee7afaee5ff7ce3cda8ca0a1b8a18bd5c1ceb3b844efb47d3b59ab",
+      "bytes": 52279
+    },
+    "relation-3764540.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764540/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764540",
+      "relation": 3764540,
+      "country": "azerbaijan",
+      "sha256": "d5d578c44630adca0f6e511a90295a8b3fea865e62d3aed12c44be8107a8bcff",
+      "bytes": 25240
+    },
+    "wikidata-Q241116.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q241116.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "2592482aabaeeac2b07ceff7a9d4198d006216705b175e4fb1cc126c893df8da",
+      "bytes": 66182
+    },
+    "relation-3764594.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764594/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764594",
+      "relation": 3764594,
+      "country": "azerbaijan",
+      "sha256": "29eafdbc061d00fc09e692b2f20291d93b48b61b4c8f46399a60241dd4c20f60",
+      "bytes": 21809
+    },
+    "wikidata-Q269680.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q269680.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "782732ff19923637e4dee99e728969defede28ae9c9f8500d7d6f2bdb180f299",
+      "bytes": 57865
+    },
+    "relation-3764535.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764535/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764535",
+      "relation": 3764535,
+      "country": "azerbaijan",
+      "sha256": "54e21783d16d61a25d15a41b4096010f213e95b91a689c214b6905a31fc3b6d8",
+      "bytes": 260876
+    },
+    "wikidata-Q9248.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q9248.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "85aec8e00397b2243637dfbe9aca903e85bc8de723d611a9a3c90c7a739acc8c",
+      "bytes": 186785
+    },
+    "geocode-current-Q9248.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Baku%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "b13d77dbbf99e115ee651fb83e7cf9b0afa4722f8679f7e427f567e697a0fc7d",
+      "bytes": 415
+    },
+    "relation-2415335.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2415335/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2415335",
+      "relation": 2415335,
+      "country": "azerbaijan",
+      "sha256": "4979aef2019da4d336dd2a2accb05bb56dbaaf5c3a9a566e1a5d9dbb6c040d52",
+      "bytes": 187090
+    },
+    "wikidata-Q330850.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330850.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "fecba17ea96363c3135e43650c15119e5d6d246ab281c28862467999b2d9d5a5",
+      "bytes": 56537
+    },
+    "relation-3764542.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764542/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764542",
+      "relation": 3764542,
+      "country": "azerbaijan",
+      "sha256": "479dab68d6eab1342f5b5ddb57c72bd12a6d4a3dd63b6671c3155da6a2a12b50",
+      "bytes": 176989
+    },
+    "wikidata-Q330857.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330857.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f95e328c360f40e6af74e9a2460bd36f46c36fbdbf80c381c5d777668142aaff",
+      "bytes": 52691
+    },
+    "relation-3764546.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764546/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764546",
+      "relation": 3764546,
+      "country": "azerbaijan",
+      "sha256": "558c10d14b302756649efc1e767f92d1580608ddec3dd4d7f08be7e569881931",
+      "bytes": 259997
+    },
+    "wikidata-Q330807.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330807.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "ebf744f0eee3360734b6a2f88d9c0b4d4bd3153e9e30eda3cc5e1791f1d42eb0",
+      "bytes": 54411
+    },
+    "relation-3764543.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764543/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764543",
+      "relation": 3764543,
+      "country": "azerbaijan",
+      "sha256": "ff66fb462150bcc88098d5b1ce44c60bfc41193acea4f354c15ca596dd2da495",
+      "bytes": 40076
+    },
+    "wikidata-Q330834.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330834.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "dcdb6f4d30f45fdd0bb859ccfb3b8bec17d33fc295da0dc2579b8b36da1b7a88",
+      "bytes": 60125
+    },
+    "relation-3764545.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764545/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764545",
+      "relation": 3764545,
+      "country": "azerbaijan",
+      "sha256": "863ce279f801d27ddda775ef654f5110c758d0182cc475b8f6465df94a3442e2",
+      "bytes": 42561
+    },
+    "wikidata-Q457491.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q457491.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "e5d51bdaf73ddc4095605398731e6635e187bb1e6da3f228fd5c52d620756ed5",
+      "bytes": 45556
+    },
+    "relation-7861847.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/7861847/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/7861847",
+      "relation": 7861847,
+      "country": "azerbaijan",
+      "sha256": "fa91ab3883af5e188680c5abf2655c84f79a2c8d86ce77e1f6826bf687d8a76a",
+      "bytes": 108219
+    },
+    "wikidata-Q372795.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q372795.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "6ac187aa44d39c6b3e036265e88d5eb0ce25d14f86e9f034977bb89ec6807e07",
+      "bytes": 57073
+    },
+    "relation-3764547.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764547/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764547",
+      "relation": 3764547,
+      "country": "azerbaijan",
+      "sha256": "99b4a314f0c38db25f3c594fae3bb3ad34e06fbfc82797cf2794559b9a958dca",
+      "bytes": 139805
+    },
+    "wikidata-Q457494.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q457494.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "51b2e0ff06667faf828216ed2978069266e8369bda17ad50dbdd0eeaa4cb3bb9",
+      "bytes": 53730
+    },
+    "relation-3795448.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3795448/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3795448",
+      "relation": 3795448,
+      "country": "azerbaijan",
+      "sha256": "cc2fe8a3c230bdb3438bc6287b3b61458955efa84df03b6d5ee4417bffe356c4",
+      "bytes": 30620
+    },
+    "wikidata-Q387994.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q387994.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "1aa2aa1651474984e2fda6280a60758e79cd06db2d2bb3e5db00a5e1eab8fab8",
+      "bytes": 57443
+    },
+    "relation-3764592.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764592/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764592",
+      "relation": 3764592,
+      "country": "azerbaijan",
+      "sha256": "7c04ddb8909ad9c86f31630caade01533daef82abf54a54da4987457ef05e8bc",
+      "bytes": 48963
+    },
+    "wikidata-Q331687.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q331687.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "c46e803662afe804f7bd9a89c44a4f7869a963a4b40eee26dc96951acfc908e3",
+      "bytes": 45739
+    },
+    "relation-3795450.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3795450/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3795450",
+      "relation": 3795450,
+      "country": "azerbaijan",
+      "sha256": "b01eeb664514d96ba842792645ae79a2703432d1042e3683321b8a475be2bb0a",
+      "bytes": 65105
+    },
+    "wikidata-Q330749.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330749.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "16852a8dba12d58729f064c01c3e7fb5fb97aa9a01730d4100347573aa5a4ee6",
+      "bytes": 58224
+    },
+    "relation-3764555.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764555/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764555",
+      "relation": 3764555,
+      "country": "azerbaijan",
+      "sha256": "907beb9ffd5f5e87f33d48eb447da2b4f36819c11daf6ff58b4c524111d63721",
+      "bytes": 109967
+    },
+    "wikidata-Q131290.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q131290.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f1e3183812610e4f9575224c9c69d0a08a50d360ad675a721a5e681690037539",
+      "bytes": 141102
+    },
+    "geocode-Q131290.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Ganja%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "10deb091f778ad313c24cf3e6b2ec10bb836831ed8add365022c016092ef275d",
+      "bytes": 859
+    },
+    "relation-3764556.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764556/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764556",
+      "relation": 3764556,
+      "country": "azerbaijan",
+      "sha256": "9a5ee8eb0f9d05324ffc5f012aaa055f2c2a0cfc08cdd84cc87d64d581c1d831",
+      "bytes": 28890
+    },
+    "wikidata-Q330843.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330843.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "06223031ab7b427670332c0d4140bd87881ad534a6913389efd5990a5cf009ef",
+      "bytes": 63283
+    },
+    "relation-3795446.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3795446/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3795446",
+      "relation": 3795446,
+      "country": "azerbaijan",
+      "sha256": "983c1dc1defe8dcbf2da696d11ebccf8abb11bd7be0d1c6b783ec36342f98234",
+      "bytes": 43962
+    },
+    "wikidata-Q477163.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q477163.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "1ffbff03ef3391463555d6442cc54e725cf0cceecf8eae0304c8823381fb5d95",
+      "bytes": 53841
+    },
+    "relation-3764553.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764553/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764553",
+      "relation": 3764553,
+      "country": "azerbaijan",
+      "sha256": "72c0ac6a3b667ca869977fe3e923b2ab495df8937d14dd67f581237410ed2540",
+      "bytes": 13672
+    },
+    "wikidata-Q476690.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q476690.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "984a71250efed35845ecbce3c8036b3fff3159adc8ab264a2a82b1508c838ab9",
+      "bytes": 56370
+    },
+    "relation-3764557.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764557/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764557",
+      "relation": 3764557,
+      "country": "azerbaijan",
+      "sha256": "bd10172e22619461d7a74aa861d9bc6da74256e32fe1237fdd9a0e4860755114",
+      "bytes": 47140
+    },
+    "wikidata-Q343908.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q343908.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "68c9f8e27862237572a19d18512be88850dea30d0334729d5175cb7eb7ce0d48",
+      "bytes": 53983
+    },
+    "relation-3764590.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764590/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764590",
+      "relation": 3764590,
+      "country": "azerbaijan",
+      "sha256": "e9d8e0d63ecedf29f8a38790df220495f16ac10c7bf93e27f22ecc8d721b0ff1",
+      "bytes": 131888
+    },
+    "wikidata-Q344252.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q344252.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "9560fb2c98f70e84675b2e171f02a429ac0e7094fa1988080b0db8fb86f5e37e",
+      "bytes": 62701
+    },
+    "relation-3764591.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764591/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764591",
+      "relation": 3764591,
+      "country": "azerbaijan",
+      "sha256": "33604e91a8bd626f54a016deb36cafd2abe0c43ec07281adc296d72d7ad7926d",
+      "bytes": 24486
+    },
+    "wikidata-Q457513.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q457513.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f103c7de6536a4d8a162a5287fd4bbf051ffa663021bb40bca5a589062946a94",
+      "bytes": 42600
+    },
+    "relation-11821490.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11821490/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11821490",
+      "relation": 11821490,
+      "country": "azerbaijan",
+      "sha256": "b9ca06e06605a85da8c45a095be2eda0a22b6332f12706480193f2b7e40f0f9e",
+      "bytes": 117044
+    },
+    "wikidata-Q688589.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q688589.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "43e0eddf8e9af269c595487e331d4fd16745799109579339fb3f3e91d9eee455",
+      "bytes": 48266
+    },
+    "relation-3764559.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764559/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764559",
+      "relation": 3764559,
+      "country": "azerbaijan",
+      "sha256": "8039ef20c071453b135c2a8ae0de653d664d8ce8ed8b0228c3e5bb35943d5e1c",
+      "bytes": 95995
+    },
+    "wikidata-Q301832.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q301832.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "8af9d17be400d89b776d091870208aa3cba0439a70761aa69051e4c43e4d8d00",
+      "bytes": 39030
+    },
+    "relation-11871224.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11871224/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11871224",
+      "relation": 11871224,
+      "country": "azerbaijan",
+      "sha256": "b420ff6aaba4cbc4da724493b81f8850739605586631554e34f1cc94d35eee3d",
+      "bytes": 100876
+    },
+    "wikidata-Q269986.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q269986.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "eea72344f761296b68cb552666c99ea3de7340d2939466f240f4bf6bd3412cbe",
+      "bytes": 55030
+    },
+    "relation-3772758.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3772758/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3772758",
+      "relation": 3772758,
+      "country": "azerbaijan",
+      "sha256": "0581bd4376a577427ceabae22d433ff295c267b1a70593c3d83287b7885943bd",
+      "bytes": 54846
+    },
+    "wikidata-Q228811.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q228811.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "d22a93703dc3e7db224c09f3ece97420ec543025871252c23d83161557378345",
+      "bytes": 69772
+    },
+    "geocode-Q228811.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Lankaran%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7ffbc30080b7f7b24e34a33b98afbc9dc4755b52de45a4694b53ac737e3f31c6",
+      "bytes": 1323
+    },
+    "relation-3812604.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3812604/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3812604",
+      "relation": 3812604,
+      "country": "azerbaijan",
+      "sha256": "541e9de545474c0062bbc865ba66a6d840308758b790aabbd6a1f55fb650764e",
+      "bytes": 11157
+    },
+    "wikidata-Q688626.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q688626.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "c762bc9a404ea822fcd7e057c06d92f98b760faaa1b6369974c2420f22424bf6",
+      "bytes": 50978
+    },
+    "relation-3764560.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764560/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764560",
+      "relation": 3764560,
+      "country": "azerbaijan",
+      "sha256": "f4220957e224b9dd27b05715528a3dcbdff7a1a4d732f2779601ae12c578be0d",
+      "bytes": 37977
+    },
+    "wikidata-Q476695.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q476695.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "eef84a1dabc17090134a2c913ae44c785e31a7c393d851054028bdf380dbf872",
+      "bytes": 52222
+    },
+    "relation-3764562.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764562/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764562",
+      "relation": 3764562,
+      "country": "azerbaijan",
+      "sha256": "9bc6a8150d6b485633202def6912abe14d94619530a99dc5bdc175ac5ed72215",
+      "bytes": 21784
+    },
+    "wikidata-Q230932.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q230932.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f36ecac208674f4f6cbaacd432f006b1a64a725290f73d7185f6c44adcb00186",
+      "bytes": 66336
+    },
+    "relation-3812581.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3812581/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3812581",
+      "relation": 3812581,
+      "country": "azerbaijan",
+      "sha256": "cf1620b2a7790b71cf1da30cc51d602f4b02186a6b86605c387108980035c627",
+      "bytes": 7574
+    },
+    "wikidata-Q152825.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q152825.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "5edd9a4116c786f1f72566c4ab1ec8aec7bd10a39b7389ccce6f250bbaa25c90",
+      "bytes": 47361
+    },
+    "relation-3812595.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3812595/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3812595",
+      "relation": 3812595,
+      "country": "azerbaijan",
+      "sha256": "ba6cdd36251ff6019cbeec9397def4c6c06cfba4614d4f84ef0398e1f54df36f",
+      "bytes": 3560
+    },
+    "wikidata-Q688633.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q688633.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "9262b2bb96c03f7929ace27f8441953fccb561c8704599d8650b34f9ab272551",
+      "bytes": 54724
+    },
+    "relation-3772759.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3772759/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3772759",
+      "relation": 3772759,
+      "country": "azerbaijan",
+      "sha256": "6cd3d958b805d78643b9d2ce017392675bc9e8a8a2539f2f32e99488c1dfb191",
+      "bytes": 82533
+    },
+    "wikidata-Q643989.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q643989.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "5ac88470ad6c08b3fb7141f4126b0ec4f1ac6006c00fc20f6bbe0826097aab54",
+      "bytes": 56673
+    },
+    "relation-3764564.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764564/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764564",
+      "relation": 3764564,
+      "country": "azerbaijan",
+      "sha256": "39103da426798748bc240627f42933d342e09d75160977ca9c83dd7e24e2ba65",
+      "bytes": 129639
+    },
+    "wikidata-Q593872.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q593872.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "69bcda6d9312934d2ec8aee3f6153ffc6053d82b913d89477a6e2ed56c5cc39d",
+      "bytes": 54657
+    },
+    "relation-3764572.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764572/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764572",
+      "relation": 3764572,
+      "country": "azerbaijan",
+      "sha256": "76f9694f793261d38adbcfff2e958a021515b84209b5aa491facc20b4bb8c985",
+      "bytes": 88902
+    },
+    "wikidata-Q330796.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330796.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "c3844c992336f2cd910f3d4e82b0b8de9866bcca5b96d40ef710c6e70028de64",
+      "bytes": 51083
+    },
+    "relation-3764566.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764566/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764566",
+      "relation": 3764566,
+      "country": "azerbaijan",
+      "sha256": "e7815931e934b23642d3100c79d909e7475a8a5f4a0043886fc6ca74c016cbce",
+      "bytes": 113618
+    },
+    "wikidata-Q389381.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q389381.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "42d8671e678b0b52193b1c79a8b5ff0780b44b301c7f164337522eddfe8597cd",
+      "bytes": 52673
+    },
+    "relation-3963560.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3963560/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3963560",
+      "relation": 3963560,
+      "country": "azerbaijan",
+      "sha256": "bb0f1baba7f29b6246b35425516973a19836533289576ca12d224c75fed75897",
+      "bytes": 337566
+    },
+    "wikidata-Q457508.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q457508.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "a36d988d560e2da87e2546865a55bb55b5d9b23a91401ae1c0b00e2446858dbb",
+      "bytes": 62244
+    },
+    "relation-3764568.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764568/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764568",
+      "relation": 3764568,
+      "country": "azerbaijan",
+      "sha256": "1f56bef24367af00401b0776724aa4d3f9ccb0cebaeda8dfa18d4c270dbd19c1",
+      "bytes": 16167
+    },
+    "wikidata-Q457499.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q457499.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "782441d44c2ef630d220bca304f6a347e3d7e33726d2d07021d83eedf3fa2e23",
+      "bytes": 54792
+    },
+    "relation-3764570.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764570/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764570",
+      "relation": 3764570,
+      "country": "azerbaijan",
+      "sha256": "ddfb4627fe6e99e93e1034a90d3e555971883b957c3df11f3133e074eeba3a78",
+      "bytes": 48726
+    },
+    "wikidata-Q644048.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q644048.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "1de947ab3472db842a1adb39d1ba39eb4e17e9512d777071056090a5df1d2ae7",
+      "bytes": 40743
+    },
+    "relation-11871223.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11871223/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11871223",
+      "relation": 11871223,
+      "country": "azerbaijan",
+      "sha256": "d0e55778d102d7aa18db03650b1ec434c4be6b695470ab1f26f221289be736e0",
+      "bytes": 169929
+    },
+    "wikidata-Q386506.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q386506.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "6b598f44090c3768a4fffd3c48387fc2e2fef292f197c3845f119bcffab489f7",
+      "bytes": 59190
+    },
+    "relation-3764571.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764571/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764571",
+      "relation": 3764571,
+      "country": "azerbaijan",
+      "sha256": "255348b536668867654f5861a7ca907edd7cdfc6be32c0737a675699891f5eff",
+      "bytes": 80825
+    },
+    "wikidata-Q601105.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q601105.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "66cfbc60e95148b73d5bb4762462993e76e9dda1d23bb4d65a1abf155ece59d1",
+      "bytes": 49399
+    },
+    "relation-3764573.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764573/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764573",
+      "relation": 3764573,
+      "country": "azerbaijan",
+      "sha256": "b3320b42b7388ae464341a4ddca1126781a5e7dd208c9e97e6d6a9a340f21983",
+      "bytes": 23155
+    },
+    "wikidata-Q382132.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q382132.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "36ab6688558f0e5ee03765738f7504cdfccb2196030e854d6f0ee9fc1a21e1ad",
+      "bytes": 57761
+    },
+    "relation-3764574.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764574/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764574",
+      "relation": 3764574,
+      "country": "azerbaijan",
+      "sha256": "6e1c8216d858e5d7593a91ec104a056ef90972a1f566197430454ffdcea911e4",
+      "bytes": 116182
+    },
+    "wikidata-Q330864.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330864.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "54047da8f1515539d9cd0868d51c0cff8d0321fad3c2285c23b536b916699021",
+      "bytes": 58675
+    },
+    "relation-3912205.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3912205/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3912205",
+      "relation": 3912205,
+      "country": "azerbaijan",
+      "sha256": "c42a44b42fdb39f4d2311b823bb367ed81e3bb36d30a95717ba4bdd6e34b4a9d",
+      "bytes": 73451
+    },
+    "wikidata-Q234783.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q234783.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "5579d09c8a5e3f8523ab0e40e03c3e4b8f47b6f706daa0c144bfc1673047f31e",
+      "bytes": 81175
+    },
+    "geocode-Q234783.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Shaki%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "e5907beb904c29884ceacce87690d934238209fb73aeeefdb5453a42480a6868",
+      "bytes": 887
+    },
+    "relation-3912204.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3912204/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3912204",
+      "relation": 3912204,
+      "country": "azerbaijan",
+      "sha256": "b7757a57bbf02887bf1c9dff92c1e05b0d1149a9601cb237fabfac03ec4171d4",
+      "bytes": 6595
+    },
+    "wikidata-Q457485.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q457485.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "694aa8849a81ebd2f20e9a862c9862b4ee5bacb653aa79c43159e2f2fd2ba8d7",
+      "bytes": 59166
+    },
+    "relation-3764575.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764575/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764575",
+      "relation": 3764575,
+      "country": "azerbaijan",
+      "sha256": "0a2704e920b89a25a679eeca7d1735d9f805c56a5d3f755244d70f562361350c",
+      "bytes": 89588
+    },
+    "wikidata-Q330839.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330839.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "483108e66249e8414640b959372b0fecf9b2aa63baf2705c4e8f188933d85b9a",
+      "bytes": 48429
+    },
+    "relation-3764593.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764593/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764593",
+      "relation": 3764593,
+      "country": "azerbaijan",
+      "sha256": "bc3e960575709968014d11fccd515cdef91a90c239c2078344772fb546adfb32",
+      "bytes": 30100
+    },
+    "wikidata-Q467491.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q467491.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "8ce344e107e67762fcd12eb88438696d9ec1c2e3af818dc43484fd28da747292",
+      "bytes": 58605
+    },
+    "relation-3764597.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764597/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764597",
+      "relation": 3764597,
+      "country": "azerbaijan",
+      "sha256": "d7bce5be46a14ad7c3721cd0fa92f97859586f4fb740db378d45124cd9ddc350",
+      "bytes": 27290
+    },
+    "wikidata-Q498437.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q498437.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "7b72ee0da5bb34f1ef75209a4d05f025370c2095ae6d53c170496ba4b3feeda8",
+      "bytes": 47669
+    },
+    "relation-3764577.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764577/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764577",
+      "relation": 3764577,
+      "country": "azerbaijan",
+      "sha256": "2d68806127c875e0f40d6b7f08b332ba0ecad4316c341fb980c1ddd3ad9eec47",
+      "bytes": 63102
+    },
+    "wikidata-Q820940.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q820940.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "a45f3da24536736b26b410501d14f358d711a2de4fb5e291d51bcd77313b2afe",
+      "bytes": 48777
+    },
+    "relation-3764578.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764578/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764578",
+      "relation": 3764578,
+      "country": "azerbaijan",
+      "sha256": "2e8cc98962602318ad9ef2b565ade1027965897da4821adedcedfa883e62bc4c",
+      "bytes": 38017
+    },
+    "wikidata-Q179833.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q179833.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "85d22ecb9c31daf3eae5e0277b4d99cfa9bc433ca96bf3fea3d7bb4a0f498d06",
+      "bytes": 85253
+    },
+    "geocode-Q179833.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Sumgait%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "d9ef07cb55bd8dc52d02093c6caba1ff1321d48e09472d6da30c2f01a4926d2a",
+      "bytes": 423
+    },
+    "relation-3912206.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3912206/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3912206",
+      "relation": 3912206,
+      "country": "azerbaijan",
+      "sha256": "0e1d0ef03be23327bc38c025fabbe6d402a5b1340e883dee38e5d8b7e4e01757",
+      "bytes": 50319
+    },
+    "wikidata-Q388960.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q388960.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "ddef646b4ca8f48aab10d042bb4afda591191693487743dc71e7e472ac8ab5bc",
+      "bytes": 43471
+    },
+    "geocode-current-Q388960.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Shusha+District%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "9107f58c2467e4287bd0de5441cbd806dbba5bfcddfe70b25ffd3258662ee112",
+      "bytes": 434
+    },
+    "relation-11905590.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11905590/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11905590",
+      "relation": 11905590,
+      "country": "azerbaijan",
+      "sha256": "68c9509beefaad6de03ceddd41df9c536df99ad07b8d7df9e9dd59180bab6577",
+      "bytes": 26075
+    },
+    "wikidata-Q158903.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q158903.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "b06a3ea48296338bc09b4cae1d4f8b13322a8562c76f8e05d26749d46ffc03ce",
+      "bytes": 75412
+    },
+    "geocode-Q158903.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Shusha%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "3333bfd83ff0f8a87e7515956293a97c86515e31f9a2f32c1506c44d0b166a44",
+      "bytes": 416
+    },
+    "wikidata-Q477168.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q477168.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "3ebda0a16274d812cb3cf4917da5cc556466e19d52fb9664e2a9888fdc64090f",
+      "bytes": 52150
+    },
+    "relation-11822485.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11822485/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11822485",
+      "relation": 11822485,
+      "country": "azerbaijan",
+      "sha256": "7457daf3194edf25e016cf5cc5023ad5b19175df2c95113d5dfddf1698e120a6",
+      "bytes": 40412
+    },
+    "wikidata-Q388980.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q388980.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "bff9eb25e0d3d712d8d834ed7ca2090ccc990242e1ddd7e8d1138b6a0a134398",
+      "bytes": 54751
+    },
+    "relation-3764580.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764580/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764580",
+      "relation": 3764580,
+      "country": "azerbaijan",
+      "sha256": "9946358d756f6392aa14dcceb16bffb4ce1795a8597aef80a897145784d25c9f",
+      "bytes": 125781
+    },
+    "wikidata-Q476703.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q476703.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "0ee010fe3b9104bbd867cefddaebadae1a0aecc801a3218fdecdb598456425de",
+      "bytes": 52319
+    },
+    "relation-3764582.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764582/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764582",
+      "relation": 3764582,
+      "country": "azerbaijan",
+      "sha256": "b9e51adf319adf033eca185727be8168022fed52dad992b12ad942cc21cc4c66",
+      "bytes": 31439
+    },
+    "wikidata-Q6398826.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q6398826.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "0d4b87eeaa0c0e02e914f93e080f0a24a1545cfe35b6d5a389e9ca26a2adbde2",
+      "bytes": 55550
+    },
+    "relation-3764583.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764583/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764583",
+      "relation": 3764583,
+      "country": "azerbaijan",
+      "sha256": "88e92f726b67371aca035c902e998b5f117db61bf6235651c3548c8d3d0e3873",
+      "bytes": 59885
+    },
+    "wikidata-Q129352.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q129352.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "c9011dc7b159b77ab8fbdf3904bc70c8755b40793b7e900f7e7582e690c8797e",
+      "bytes": 91572
+    },
+    "relation-12894949.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/12894949/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/12894949",
+      "relation": 12894949,
+      "country": "azerbaijan",
+      "sha256": "8b825e926b559ae0a6d191f745f5c741bb7603739755eab53231b4100ccf367c",
+      "bytes": 30588
+    },
+    "wikidata-Q388087.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q388087.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "1fda8d35337134e1590004c0e9a995f1aefc77ae49176c247615315f9cacddf5",
+      "bytes": 53753
+    },
+    "relation-3795447.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3795447/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3795447",
+      "relation": 3795447,
+      "country": "azerbaijan",
+      "sha256": "9dbc0060012387d91de2b8190f91dc53c846763cfe5879e843e88cff202342c6",
+      "bytes": 57133
+    },
+    "wikidata-Q476708.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q476708.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "f0eb79d4060ae47aa2172937dec50af854795d862d3f853f18ed3260700524de",
+      "bytes": 50497
+    },
+    "relation-3764585.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764585/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764585",
+      "relation": 3764585,
+      "country": "azerbaijan",
+      "sha256": "2a748f3dd4e24aab877f80fd6fceb2fdee7c88d02846af7676c2255847ba4170",
+      "bytes": 31182
+    },
+    "wikidata-Q330790.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330790.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "2a89750e1a8a0b10fde5b536103cc527182c25b2b3a9fc3ed6b665eea28fc3d3",
+      "bytes": 40474
+    },
+    "geocode-current-Q330790.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Khojaly+District%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "db787b4568a8d67e410807944c9299d1a3432d2c0bc9ecb3c005816e6933dcd9",
+      "bytes": 436
+    },
+    "relation-11905734.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11905734/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11905734",
+      "relation": 11905734,
+      "country": "azerbaijan",
+      "sha256": "ecee56c508d8f6e749eb01cf48cbb96555957a9cb34290d5ffe58a1fcd4fc944",
+      "bytes": 99749
+    },
+    "wikidata-Q330813.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q330813.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "731728b3cf132685971e14c2b8b01d3035bd2e1800d564942a9cb6a780a91412",
+      "bytes": 45713
+    },
+    "relation-11822487.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11822487/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11822487",
+      "relation": 11822487,
+      "country": "azerbaijan",
+      "sha256": "d6d1b48c5d241c025a249423fac8615a2bb92d544c4c04db135df72113986789",
+      "bytes": 102637
+    },
+    "wikidata-Q127255.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q127255.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "936fab031c2bbea604ce5ec162cf99571a0d998ea4076d630830c844c981e73b",
+      "bytes": 54686
+    },
+    "relation-3764586.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764586/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764586",
+      "relation": 3764586,
+      "country": "azerbaijan",
+      "sha256": "d740f3df2946a1ace86f85f005be0cbc2f37ea99d898d982f63617d4bc2094fb",
+      "bytes": 41605
+    },
+    "wikidata-Q458524.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q458524.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "e102815b2e253b4108b74b94d372266ac5549e1ee5a8b0e0b832cdf94d577459",
+      "bytes": 54060
+    },
+    "relation-3764587.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764587/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764587",
+      "relation": 3764587,
+      "country": "azerbaijan",
+      "sha256": "ec4304c9d4f988f6b3c79e2b2e79deaa5aa81a92f7f819c760b27efa73356003",
+      "bytes": 34244
+    },
+    "wikidata-Q175459.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q175459.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "2e382c66c921beb9d9be3a7981d2cc0f3f524508db3b1c70b209a0549a0bd55f",
+      "bytes": 48207
+    },
+    "relation-3912202.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3912202/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3912202",
+      "relation": 3912202,
+      "country": "azerbaijan",
+      "sha256": "894a1931b5ad27e24030e60edc1582e23750a60d1832a1c8ca565c8f4a212955",
+      "bytes": 7434
+    },
+    "wikidata-Q249252.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q249252.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "ef81861051c96f0be7742d0e91db5857429738270005fd9ad7b0640082529e25",
+      "bytes": 42997
+    },
+    "relation-11871222.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11871222/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/11871222",
+      "relation": 11871222,
+      "country": "azerbaijan",
+      "sha256": "fe37f6a46be20a36753ece753bfe693b4433f64d35577337d456b8ac152a60dd",
+      "bytes": 152883
+    },
+    "wikidata-Q147553.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q147553.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "116f04f57ec2b8b8243e222dd3dfc0cdcaf88087faf60665cd63281e6b61917d",
+      "bytes": 53423
+    },
+    "relation-3764588.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764588/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764588",
+      "relation": 3764588,
+      "country": "azerbaijan",
+      "sha256": "1343dda7e3c0155b744ab82c52c7b92c5e94aa6a91c03aa4fbccff2f7e59f38c",
+      "bytes": 187422
+    },
+    "wikidata-Q249293.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q249293.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "cba7da474609a3dedd90ab2fa1e82bb8a8f57c550126efb47a5034b6d52fe048",
+      "bytes": 44700
+    },
+    "relation-3764589.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3764589/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3764589",
+      "relation": 3764589,
+      "country": "azerbaijan",
+      "sha256": "171bff87904d174b86d5c6b7367a0392df011e90df2aa41ac78cd29f04e8efa8",
+      "bytes": 156484
+    },
+    "wikidata-Q2025789.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q2025789.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "16fd59b17e253251514a659302296cb263bf5bf99e7ca5694f33a1122c84d51e",
+      "bytes": 31725
+    },
+    "relation-17092684.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/17092684/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/17092684",
+      "relation": 17092684,
+      "country": "azerbaijan",
+      "sha256": "f40b90d68f7f68cb60cc09971dd76aa0bd90c601b272265ae251fe93d55f385a",
+      "bytes": 101938
+    },
+    "wikidata-Q136386175.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q136386175.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "ab32937d890b30115640b398f4b114765a957606048808db45d5bedc34477dba",
+      "bytes": 677
+    },
+    "geocode-Q136386175.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Aghdara+District%2C+Azerbaijan&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "d6c42383b08df67570c8e36079774b093017e1577520fdd6dba516eb1c4e91b0",
+      "bytes": 427
+    },
+    "wikidata-Q398.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q398.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "0d1fec73a4e4ed6d62d241322b959c067f65ae7d36b405a1db36db066700a2b4",
+      "bytes": 515224
+    },
+    "wikidata-Q528953.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q528953.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "53870ab09e9fe3f13ed0cc78ddf3cc040927978adee71bb5648c7594f62c250d",
+      "bytes": 29925
+    },
+    "relation-3028094.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3028094/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3028094",
+      "relation": 3028094,
+      "country": "bahrain",
+      "sha256": "a578f177160f829bc204882aa7717a1b393b3efd85fa0856d69b4f0a86bb1f7e",
+      "bytes": 48415
+    },
+    "wikidata-Q375630.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q375630.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "a024cea88c1f993e28d5d956365ad31ff1ab40b4d4d69ee48fba007f5b5e9471",
+      "bytes": 28503
+    },
+    "relation-3028095.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3028095/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3028095",
+      "relation": 3028095,
+      "country": "bahrain",
+      "sha256": "f621fb7933f14d01907b17dffc37a09ca4e10e34e46caa9e102b8bbd87ef0e0e",
+      "bytes": 16861
+    },
+    "wikidata-Q840445.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q840445.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "3ae973c3661c23ad1bf2788764afd0767abec8bd65c3cb56356315f37fe143fb",
+      "bytes": 26215
+    },
+    "relation-2522303.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2522303/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2522303",
+      "relation": 2522303,
+      "country": "bahrain",
+      "sha256": "16f80234172e6d99c872569b988b446b58e95b2acd56b1f7a31ed43ff7c1adb7",
+      "bytes": 52587
+    },
+    "wikidata-Q838532.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q838532.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "8b8c6cfb98f24ef7b6b50f7a1195f96842358cbfca5046504c004391abe961e7",
+      "bytes": 31128
+    },
+    "relation-2522430.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2522430/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2522430",
+      "relation": 2522430,
+      "country": "bahrain",
+      "sha256": "9e845bb16dbab30b91482b7d30d822ea8fb577cc9f8799601d5d181491ce61f5",
+      "bytes": 65783
+    },
+    "wikidata-Q23427.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q23427.json",
+      "credit": "Wikidata",
+      "license": "CC0",
+      "sha256": "28d85466916ee7edb511e74f6b0a639c07e7c0f05f191a06839b3d372c192470",
+      "bytes": 134332
+    },
+    "geocode-ossetia.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=South%20Ossetia&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "6237e1f1a5f629aabba4e128fd0093b3c8bb164fa9fa320e08def98a2dd3ee4f",
+      "bytes": 531
+    },
+    "relation-1152717.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/1152717/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/1152717",
+      "relation": 1152717,
+      "country": "georgia",
+      "sha256": "024dfc43c5e93606c9cce58721b3bf833176056bbd27d324b563f740a3bcf20b",
+      "bytes": 576320
+    },
+    "qat-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-qat",
+      "sha256": "2961f2c93b28948c7fd5602d09012e37ab836a579b19ad82050f2da9b949c12c",
+      "bytes": 20221
+    },
+    "qat.zip": {
+      "url": "https://data.humdata.org/dataset/6a84f3b8-41cd-4769-a61f-6dbd5f61bd05/resource/1955adf8-4e4a-4a87-b3f0-0fbe6e761ca9/download/qat_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-qat",
+      "sha256": "62accf5cd95ea4276b59e3b216a25387c3a72f346c99972fe03d8e7e2a9e0d37",
+      "bytes": 27047015
+    },
+    "are-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-are",
+      "sha256": "3730f8977aa40a0d8093e0a220202e2daf7f451144b3ceb87e8cbd646d83b633",
+      "bytes": 40243
+    },
+    "are.zip": {
+      "url": "https://data.humdata.org/dataset/23d41c1f-41ef-4957-a47e-b8c08c984d83/resource/29e34577-9c64-4792-bcd0-1dbe1121e7f5/download/are_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-are",
+      "sha256": "b8e081b6b94948a9c22a1103a817ef295854711a6c55830168362ddd48dcc4ce",
+      "bytes": 3218854
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/ARM;AZE;GEO;QAT;BHR;ARE/indicator/NY.GDP.MKTP.CD;NY.GDP.PCAP.CD;SP.POP.TOTL?source=2&date=2023:2025&format=json&per_page=1000",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "3bc437932b732941e057a5f03509d90be8d33f15a7ddc7e15b009217c84f275b",
+      "bytes": 11377
+    },
+    "bahrain-population.json": {
+      "url": "https://www.data.gov.bh/api/explore/v2.1/catalog/datasets/population-by-governorate-nationality-and-sex-census-2020/records?limit=100",
+      "credit": "Bahrain Information & eGovernment Authority: 2020 census",
+      "license": "Bahrain Open Data Licence",
+      "sha256": "89d200173b07268e498a96e8aef9a5914cdac124b42909941ad200a442468bbf",
+      "bytes": 3920
+    },
+    "qatar-population.json": {
+      "url": "https://www.data.gov.qa/api/explore/v2.1/catalog/datasets/total-population-and-population-density-by-municipality-in-census-2010-2020/records?limit=100",
+      "credit": "Qatar National Planning Council: 2020 census",
+      "license": "Qatar Open Data Licence",
+      "sha256": "63efc52f77018d46c9f6995179003dfaf68af79b29b7cc99cd80215f9bbc7c3a",
+      "bytes": 3778
+    },
+    "geocode-nakhchivan.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Nakhchivan%20Autonomous%20Republic&format=json&limit=3",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "9f14734b31d587009011bb3bbeb8869fb1e4edb788e5d61ce9b50c2ee6bdf18a",
+      "bytes": 466
+    },
+    "relation-186430.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/186430/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 186430,
+      "country": "azerbaijan",
+      "sha256": "681fbcfad046be50503bb0372659867661ff4d71eaf8aca6aa1f79a6941a2860",
+      "bytes": 331080
+    },
+    "baku-Binagadi.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Binagadi+district%2C+Baku%2C+Azerbaijan&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "8b77c0424b8494b9f7dc821b23e1c9aea79b8331e0ac5c046a4db62735804819",
+      "bytes": 1257
+    },
+    "baku-regional-Binagadi.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Bin%C9%99q%C9%99di+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "c9343abc260f9ae415ac7ab8d2d7a081c2ab39c85cf361434d85b6a27cce220d",
+      "bytes": 449
+    },
+    "relation-11825936.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11825936/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11825936,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Binagadi",
+      "sha256": "d2693a902d5d23005c6b2f8daf8bec0a45536d634c550198e0cb583ad3f7a84c",
+      "bytes": 72342
+    },
+    "baku-regional-Khazar.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=X%C9%99z%C9%99r+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7d60bb05aeb9a3212ba2692780770cd9a26509355fdf4b3325e18e0ba7b59971",
+      "bytes": 434
+    },
+    "relation-11827332.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11827332/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11827332,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Khazar",
+      "sha256": "ae5e63a96de7fdb6d6ee834c29e19dc7b0e20687bdee446880b9a0a5f7ab6841",
+      "bytes": 45442
+    },
+    "baku-regional-Khatai.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=X%C9%99tai+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "51ef0105b3035b5e736449d4f8f71532d3210eb53fca8a7d4e7c3260289f12e3",
+      "bytes": 433
+    },
+    "relation-11827202.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11827202/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11827202,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Khatai",
+      "sha256": "84f694a270f166276b648506c81e08084f2ecce3d68a25569a0c71f6bac51ba0",
+      "bytes": 30907
+    },
+    "baku-regional-Garadagh.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Qarada%C4%9F+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "7c7fa63c53566b81286737899c185738396990a5ee2ace44ee21b6e16dbb0b5a",
+      "bytes": 439
+    },
+    "relation-11825937.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11825937/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11825937,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Garadagh",
+      "sha256": "1e7d1acd6c1c70e0ef137f18735981923d297519a5d85f741d22f3d4a63ce3e4",
+      "bytes": 77278
+    },
+    "baku-regional-Narimanov.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=N%C9%99rimanov+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "dab7e559cef259cfe63470b382df82f5bd116387cd868575d9f3ba034bd74eed",
+      "bytes": 457
+    },
+    "relation-11827003.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11827003/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11827003,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Narimanov",
+      "sha256": "727ccefadcaea0fb9ce360dc38f97e5b207db3e8b36e5ba56a56a6c30781b462",
+      "bytes": 18902
+    },
+    "baku-regional-Nasimi.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=N%C9%99simi+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "771e622e59934b6787ad3d1d8078615ccf89d153d547e0d49b7d59e1b75bdbb2",
+      "bytes": 451
+    },
+    "relation-11826962.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11826962/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11826962,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Nasimi",
+      "sha256": "b400324a0846d6ade6c33b4c65fad56c1d3e9314ef0022873dde6d328886c562",
+      "bytes": 21074
+    },
+    "baku-regional-Nizami.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Nizami+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "88f9f5fd561b890537a77c7538ce6fa15284cfdc03208588e4bde929cf70403c",
+      "bytes": 448
+    },
+    "relation-11827201.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11827201/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11827201,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Nizami",
+      "sha256": "02c832f227d1c26d3773717d010a51dc913fc7a7b689a29fcd921fac51b3f98f",
+      "bytes": 24606
+    },
+    "baku-regional-Sabunchu.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Sabun%C3%A7u+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "d795768e3ad23bf4bf2c67f8ad93d8df664c5680e53c21e866f6e739abf14ae3",
+      "bytes": 436
+    },
+    "relation-11827203.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11827203/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11827203,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Sabunchu",
+      "sha256": "85798b79eb8aa4605d4dcb0ad377e2b9db191ed2d603daf507b8d8e1409c352d",
+      "bytes": 87299
+    },
+    "baku-regional-Sabail.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=S%C9%99bail+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "44548612e73939da297282513f78db10d557d3c487cd0d237a064bb45acc5c6f",
+      "bytes": 435
+    },
+    "relation-11826940.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11826940/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11826940,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Sabail",
+      "sha256": "958e59724b5734127e39700a970e82abd17181ae75f9ae28edffacd623211226",
+      "bytes": 31124
+    },
+    "baku-regional-Surakhani.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Suraxan%C4%B1+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "55a22c2aae0e36738b6a513a9b95c17d4272d8f0de0a7e6380e6b383c1caef5d",
+      "bytes": 439
+    },
+    "relation-11827250.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11827250/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11827250,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Surakhani",
+      "sha256": "98a0b76eb22b1f86588657e449b970c3740356afca1db289d16f1990b2ba04b6",
+      "bytes": 48570
+    },
+    "baku-regional-Yasamal.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Yasamal+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "3dd9a2066fd834ecab2aedbba166617d33db20d371dd693be71c417d4cafed8c",
+      "bytes": 451
+    },
+    "relation-11826939.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11826939/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11826939,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Yasamal",
+      "sha256": "f4293ec69003b397fc445d40d86cdaa5927d22edeab915763a606e68a9f658ef",
+      "bytes": 28435
+    },
+    "baku-regional-Pirallahi.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Pirallah%C4%B1+rayonu&countrycodes=az&viewbox=49%2C41%2C51%2C39&bounded=1&format=json&limit=5",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "c15c4bd63d75954ae30b1c85c99ad6c1bc5035cb7d59c3f0735dcd1f00ad667e",
+      "bytes": 441
+    },
+    "relation-11827333.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/11827333/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 11827333,
+      "country": "azerbaijan",
+      "parent": "AZ-BA",
+      "en": "Pirallahi",
+      "sha256": "8bc0339bd41a84b8e964b8cb7a4546c988d960c1ffb2b24417fb7f2bcdc6384d",
+      "bytes": 94566
+    },
+    "bhr-boundary-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BHR/ADM1/",
+      "sha256": "df8fb367922f48cd09b6f15c83a3b80d15ddd08bf983017445a9e3ddd2042f9a",
+      "bytes": 1736
+    },
+    "bhr-land.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/BHR/ADM1/geoBoundaries-BHR-ADM1.geojson",
+      "credit": "OpenStreetMap, Wambacher",
+      "license": "Open Data Commons Open Database License 1.0",
+      "year": "2017",
+      "page": "https://www.geoboundaries.org/api/current/gbOpen/BHR/ADM1/",
+      "sha256": "87f7915985d992e2b66628e50a78f8c3a728bf95aa9eb01852f4b867586a32ff",
+      "bytes": 309715
+    },
+    "azerbaijan-population.xls": {
+      "url": "https://www.stat.gov.az/source/demoqraphy/en/001_15en.xls",
+      "credit": "State Statistical Committee of Azerbaijan: area, population and population density by territorial unit",
+      "license": "Official statistics; attribution",
+      "sha256": "de9bc5a8caa091383712cfacfbc591836e5dad28f8023c5b4b276f063e25b56c",
+      "bytes": 44032
+    },
+    "armenia-population.pdf": {
+      "url": "https://www.armstat.am/file/article/population_01_01_25.pdf",
+      "credit": "National statistical authority",
+      "license": "Official statistics; attribution",
+      "sha256": "1c3406826d369dbffb5b9a4e1e87d78ce6da190ecdfa0273ad982fd09771a1f3",
+      "bytes": 698101
+    },
+    "georgia-population.pdf": {
+      "url": "https://www.geostat.ge/media/78328/Number-of-Population-as-of-January-1%2C-2026.pdf",
+      "credit": "National statistical authority",
+      "license": "Official statistics; attribution",
+      "sha256": "3f452743e280293f0b907f439b26a2481f89ce0b34a9f2161f58e210df9bc315",
+      "bytes": 1223471
+    },
+    "uae-abu-dhabi.html": {
+      "url": "https://www.statad.gov.ae/en/w/abu-dhabi-population-in-2024-grows-7-5-to-reach-4-14m",
+      "credit": "UAE federal or emirate government",
+      "license": "Official statistics; attribution",
+      "sha256": "df08b3129795d28385d600f41b7ce5a280f4b64ef86a98168e3277120ed93e05",
+      "bytes": 233707
+    },
+    "uae-sharjah.html": {
+      "url": "https://u.ae/en/about-the-uae/the-seven-emirates/Sharjah",
+      "credit": "UAE federal or emirate government",
+      "license": "Official statistics; attribution",
+      "sha256": "e304318508fb811b31685589b641ef91e6d23fe28f288aaa7b0b58b4d8f6f926",
+      "bytes": 68035
+    },
+    "flag-am.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Armenia.svg",
+      "sha256": "1eb2190d967efac59bb4f18f699b465f76dc3128593011e59243450cd593f846",
+      "bytes": 201
+    },
+    "flag-az.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Azerbaijan.svg",
+      "sha256": "f16a9688b22090aaeac332332410a67ce073b9556bc9192771231ad713d5dacd",
+      "bytes": 588
+    },
+    "flag-ge.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Georgia.svg",
+      "sha256": "0be14c9858af6deb6b913b42a091ee99b01405accc89acce3b88446422b2c951",
+      "bytes": 545
+    },
+    "flag-qa.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Qatar.svg",
+      "sha256": "92a082037fa252496f22e40bd52909678dec793fb31fcb8e9c4abd73b154f613",
+      "bytes": 310
+    },
+    "flag-bh.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Bahrain.svg",
+      "sha256": "bfa65642e5dc9b67c3c5570dc48711f83a02dd865a251514a7243df7a5d73b24",
+      "bytes": 298
+    },
+    "flag-ae.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg",
+      "credit": "Wikimedia Commons · national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Arab_Emirates.svg",
+      "sha256": "2eb3d53df8f3f845dfafff448fb165647c8e3ed2b2f08296af1080fece92ad35",
+      "bytes": 323
+    },
+    "relation-3789855.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3789855/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 3789855,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "1e8c5c68817692628c2382ada006ffce0506b12f6d7b992cedb136c11ee16225",
+      "bytes": 64290
+    },
+    "relation-2379566.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2379566/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 2379566,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "474fd0ead0a0766a72fbef039d50966884a92563b1adf4a060a6cb07ee57f94c",
+      "bytes": 26202
+    },
+    "relation-3789856.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3789856/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 3789856,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "ffbbf4b7d7302cc501221404c37d9b8819c8da39f4640ee66ed67389e659aebf",
+      "bytes": 44200
+    },
+    "relation-3789860.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3789860/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 3789860,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "51c810c2a82301029027d23a463130c42c44ee7ff8094d33c860b40c01459cc2",
+      "bytes": 37437
+    },
+    "relation-3789858.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3789858/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 3789858,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "723f23bbc852baccbbe7cbf4c5b8e52961504fdac09a89b136af976f93b99b6e",
+      "bytes": 82091
+    },
+    "relation-3789859.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3789859/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 3789859,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "f0a94f65c53949c51df44d7438560787a8be1c01e458a3eaf976b425ee3c2a55",
+      "bytes": 26852
+    },
+    "relation-3789857.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3789857/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 3789857,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "c0a9473eba27ba71534700db7cbae5383a33b3df4dd08a6c4df5ffc38ff2f16d",
+      "bytes": 76761
+    },
+    "relation-2379535.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/2379535/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "relation": 2379535,
+      "country": "azerbaijan",
+      "parent": "AZ-NX",
+      "sha256": "30e8bafff5db0183685a8ff7320a38a968cdf1dd6677c1cc197b035a901dd333",
+      "bytes": 47101
+    },
+    "uae-dubai-population.html": {
+      "url": "https://www.digitaldubai.ae/initiatives/paperless/dubai-digital-dubai%27s-population-tops-4.580-million-by-the-end-of-2025-recording-7.5-growth",
+      "credit": "Digital Dubai / Dubai Data and Statistics Establishment: resident population, 2025",
+      "license": "Official statistics; attribution",
+      "sha256": "e9b66b6cb33fbdadb63ee46225e4bec2c874935bc4d7aed18fce78312995fd82",
+      "bytes": 61513
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "captured": "2026-10-26",
+  "description": "Existing local atlas geometry and independently sourced statistics before the shared Central Asian partition repair.",
+  "files": {
+    "kazakhstan/first.bin": {
+      "sha256": "937aa036a4d9a180adedd6c7b960cc12e3f9e2ba3cf428588b5fa1d9b2a06211",
+      "bytes": 274742
+    },
+    "kazakhstan/catalogue.bin": {
+      "sha256": "a5980b5db1bed4ae40bbd08cba41647c460df5dda6a77e4100a671ed95baa633",
+      "bytes": 2870
+    },
+    "kazakhstan/statistics.json": {
+      "sha256": "0146b8c5410c521f05d15894096ac19b87c3a4dcac05a61dd60141a4a7a8fc58",
+      "bytes": 10826
+    },
+    "kazakhstan/context.bin": {
+      "sha256": "9c1f4240f294d1201be9fe21e47673768e2322e06aa93f8b5b27f22d93d31692",
+      "bytes": 148150
+    },
+    "kazakhstan/international.bin": {
+      "sha256": "b94ad514e921cb4b9e02a9bb9634bbe70021fe2e7497bf1d0b5d132803ad7758",
+      "bytes": 33978
+    },
+    "kyrgyzstan/first.bin": {
+      "sha256": "598e37b4987d35625521a24bc6962af11a51bad9fc5147ee0c1bb376db2b0e04",
+      "bytes": 459025
+    },
+    "kyrgyzstan/catalogue.bin": {
+      "sha256": "726cf7b8ecbd7917828a41f9c692fedb545a18ab2fa1510bffaa2192c5ce6a51",
+      "bytes": 1777
+    },
+    "kyrgyzstan/statistics.json": {
+      "sha256": "31a3f4ac111a29ff325d165571e545b2a304ef8dd6579f266e786992fc832b11",
+      "bytes": 8619
+    },
+    "kyrgyzstan/context.bin": {
+      "sha256": "0aaa03aa3f8f69fdd0e5bb6ffde303f165583a6d5b58083bca3ee2d9e0527693",
+      "bytes": 143888
+    },
+    "kyrgyzstan/international.bin": {
+      "sha256": "675bdb1fb789265a612e8a16563c5fa053eb3ba511c97aca105cda2892d101cf",
+      "bytes": 83429
+    },
+    "uzbekistan/first.bin": {
+      "sha256": "93513260cbeb9e030f2f88c59cd9f1104c72dc34c93d67b8acc97e1bb056420c",
+      "bytes": 110020
+    },
+    "uzbekistan/catalogue.bin": {
+      "sha256": "7985db162122173db358864a3841c96fdda26c22ac93a4e3d587d02c4db11f44",
+      "bytes": 19496
+    },
+    "uzbekistan/statistics.json": {
+      "sha256": "021204af100f3ca5221297718976e06ebcca15c9e7702e2f07d91fcfc73f1a82",
+      "bytes": 45571
+    },
+    "uzbekistan/context.bin": {
+      "sha256": "5b393853757840d8b8df0a5c8a87d3bcc57637c9a1cc9fbc03705e1ca722d8c0",
+      "bytes": 19874
+    },
+    "uzbekistan/international.bin": {
+      "sha256": "826c12710dd2abb59ae98bf02a245fbd0fd154cbac69ba19a3f21689240c3c23",
+      "bytes": 12599
+    },
+    "uzbekistan/second/UZ22.bin": {
+      "sha256": "a2b01f127b3d547aaa0c769fd36342b78bcc2809395eaf31894b01b6281ba646",
+      "bytes": 13016
+    },
+    "uzbekistan/second/UZ12.bin": {
+      "sha256": "254ca7651d58cbaa4b7a12e55ce3c0c63398211f7bacdd5b214ee2a2fa0758fc",
+      "bytes": 9240
+    },
+    "uzbekistan/second/UZ06.bin": {
+      "sha256": "5eeb6bdea7c084f0f3851e1a11c3a96c1910eb559a7a2eede041504f68d0e245",
+      "bytes": 6238
+    },
+    "uzbekistan/second/UZ10.bin": {
+      "sha256": "389f17ff736fd5116bbc610e8e506c3b016dcfd330b0338903b19d3ed681a19a",
+      "bytes": 20738
+    },
+    "uzbekistan/second/UZ18.bin": {
+      "sha256": "fc3a8d5ba1dcc0811037b64c931aed074b05390fc50692b140fd8ecce1aef062",
+      "bytes": 16380
+    },
+    "uzbekistan/second/UZ08.bin": {
+      "sha256": "47fecdffd623515a64e532ca226f10f7e733e26fdb13b17cd8a17e9d6f42f8c5",
+      "bytes": 8786
+    },
+    "uzbekistan/second/UZ33.bin": {
+      "sha256": "dc7891ca1f8419df0b1cc5486ad6c1a010c007a826c46f8c854e8e6bd083fb40",
+      "bytes": 5242
+    },
+    "uzbekistan/second/UZ35.bin": {
+      "sha256": "c613cd0be3b04217a93ffa512af542aef776c9dbf2140f87bc4585005b770f87",
+      "bytes": 15482
+    },
+    "uzbekistan/second/UZ30.bin": {
+      "sha256": "6cb907b6fa90fd749e19a1411b5f7b7ae90ba0d553e0f58171db6bd31a4be007",
+      "bytes": 24791
+    },
+    "uzbekistan/second/UZ24.bin": {
+      "sha256": "6bd4c4305868cc0d7e52a80199e5dfc2199a45015a4cdb0f286e87f0553d4ed0",
+      "bytes": 4734
+    },
+    "uzbekistan/second/UZ27.bin": {
+      "sha256": "d3fd2cc0a25a0cc9f525181716ed8bd83a6da9969009a0b9f9593b3ffc7e0a40",
+      "bytes": 33495
+    },
+    "uzbekistan/second/UZ14.bin": {
+      "sha256": "fe9a9cbccf79c719c634f3d42dbbe253649fdf971b8bc4fd8c3e6cf3e10c40a5",
+      "bytes": 18189
+    },
+    "uzbekistan/second/UZ26.bin": {
+      "sha256": "6cf847e3207ab5d0a46d4a48dd17dd1ed5f52a3290ea4d6a1d28e09e25504269",
+      "bytes": 5055
+    },
+    "uzbekistan/second/UZ03.bin": {
+      "sha256": "71d6b7207a7b74503f60443c04c0a1b55dc1ba892db067241f2aec3afcb80a73",
+      "bytes": 23733
+    },
+    "tajikistan/first.bin": {
+      "sha256": "ac314bfa62fb466fa77c034c89692db99300d1e5fef9be83e47d7e941d575a4c",
+      "bytes": 191876
+    },
+    "tajikistan/catalogue.bin": {
+      "sha256": "3a396fdcaa3a8ce988922d99258bb172eb998a54ed787ec8a4152c04c50f1efd",
+      "bytes": 1004
+    },
+    "tajikistan/statistics.json": {
+      "sha256": "0b983c71c7618ef0f528a1a3afcfe2947b265385a189e2e76e4d875cb79bc75c",
+      "bytes": 3076
+    },
+    "tajikistan/context.bin": {
+      "sha256": "d93261fe7aafcf855cb68ac3ebb92fe32e68e3d3da5f413d43af1daff21d032a",
+      "bytes": 16989
+    },
+    "tajikistan/international.bin": {
+      "sha256": "86c964552e977ccbddd958b005107159749b3f4aa8d499bee01bf3feccde9885",
+      "bytes": 58
+    },
+    "turkmenistan/first.bin": {
+      "sha256": "7bf23740aaab4d98228da6bce6b057a73d3a9ad5c4ab0de5ec14ea867da8a715",
+      "bytes": 123133
+    },
+    "turkmenistan/catalogue.bin": {
+      "sha256": "99976426f72cbd09ddde4770df3566b8ac9e1f03df523256bf6e3dc652f21271",
+      "bytes": 6321
+    },
+    "turkmenistan/statistics.json": {
+      "sha256": "aa210bf7c258790506dc7c4b0cf023cd05e092421dacf672a1d4498fbf7c2151",
+      "bytes": 14048
+    },
+    "turkmenistan/context.bin": {
+      "sha256": "623c82e30b72d102ffe581fbde3fcf1927144045a34e71f46c6e4b5be596fdb6",
+      "bytes": 14017
+    },
+    "turkmenistan/international.bin": {
+      "sha256": "fff93ddf53eb420a71304f15ff200835f40baeacfa338d91675e147e773dbdfa",
+      "bytes": 56003
+    },
+    "turkmenistan/second/TM-A.bin": {
+      "sha256": "45e2d5272b88a94646d10939f13a353c3e36e481e39aafaa0b4f86842afe320d",
+      "bytes": 60375
+    },
+    "turkmenistan/second/TM-B.bin": {
+      "sha256": "111dfde8ad83da27889176b7300a6dbc3e25306f5d2e14b3a6e6758c88685350",
+      "bytes": 89824
+    },
+    "turkmenistan/second/TM-D.bin": {
+      "sha256": "61feb80bb11409d5fcb5d3954ec1ddf00499fd613d4255d825cd52c9bc6b0a4b",
+      "bytes": 39027
+    },
+    "turkmenistan/second/TM-L.bin": {
+      "sha256": "fd9ffb18cc042585c538302b915d57e273aa3292566c56db349d5324826e275c",
+      "bytes": 55111
+    },
+    "turkmenistan/second/TM-M.bin": {
+      "sha256": "a84fd6a8f9bcf4a309cddfb85fe25e7acc0638a3a9ae2324c2841c74e1102021",
+      "bytes": 113380
+    },
+    "turkmenistan/second/TM-S.bin": {
+      "sha256": "ef054f40416171233c14a3e3b06e44800bfe0eeada9e7116313ed0222e132fca",
+      "bytes": 6978
+    },
+    "turkmenistan/second/TM-ARK.bin": {
+      "sha256": "29258f0af4ef06c0d1225a98b5f93cbae1dfd63faa03035d9dab2a56d85f5adc",
+      "bytes": 1026
+    }
+  }
+}

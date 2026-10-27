@@ -1,0 +1,37 @@
+{
+  "retrieved": "2026-10-26",
+  "coverage": "37 source units: 32 districts, three municipalities, Gagauzia and the left-bank territorial unit. The eastern territory remains within Moldova. 2022 OCHA/UNHCR geometry. Census coverage excludes Transnistrian-administered places; partial district totals are not applied to full polygons.",
+  "counts": {
+    "1": 37
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "mda-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mda",
+      "sha256": "74a39508c0670f62c4898cc7d4818957e01cf14d00b2c95fdbb6c7042ed8be24",
+      "bytes": 34845
+    },
+    "mda.zip": {
+      "url": "https://data.humdata.org/dataset/3cd53554-3ad7-4aae-b862-9bbbc6fa3bfc/resource/04240ad4-6600-4d0d-b686-42cd6c8f624c/download/mda_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mda",
+      "sha256": "05446de3db181ebf39b07114aa5cd5c01ad34eaafe8270f3ccae8642998a63fc",
+      "bytes": 732699
+    },
+    "moldova-population.html": {
+      "url": "https://statistica.gov.md/en/final-results-of-the-2024-population-and-housing-census-geographical-10121_61877.html",
+      "credit": "National statistical authority",
+      "license": "Official statistics; attribution",
+      "sha256": "27380e9b4828da76bfadca9a6e5b3511c471e206aa6afb058e262a249fee0b50",
+      "bytes": 75262
+    },
+    "moldova-census.xlsx": {
+      "url": "https://statistica.gov.md/files/files/serii_de_timp/recensamant_2024/date_finale/Anexa_Caracteristici_Geografice_RPL2024_en.xlsx",
+      "credit": "National Bureau of Statistics of Moldova",
+      "license": "Official statistics; attribution",
+      "sha256": "d71172de01ee3cd5aef7e12495c72badcab70135a5340d7bb8d4e0be6a026369",
+      "bytes": 899393
+    }
+  }
+}

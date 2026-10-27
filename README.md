@@ -593,3 +593,9 @@ The US–Mexico display frontier follows one complete US county-derived edge, in
 Costa Rica and Panama are available with retained official subdivision snapshots, native Spanish names, national flags, focused Cocos Island entry and scoped loading. The Brazil–French Guiana frontier has one shared stroke owner. [Sources, limits and checks](docs/costa-rica-panama-guiana.md).
 
 Zimbabwe, Zambia, Tanzania and Kenya now have dated administrative maps, first-level census statistics and retained national economic data. Costa Rica also includes all 84 canton GDP accounts and provincial aggregates; Panama’s combined province/comarca economic regions are labeled separately. See docs/east-south-africa.md and docs/costa-rica-panama-guiana.md. Historical snapshots suppress modern gray silhouettes at overview zooms. Changes are local until publication is requested.
+
+Moldova, Uzbekistan, Tajikistan and Turkmenistan are available locally with administrative maps, native-name search, flags and dated population. Kazakhstan and Kyrgyzstan remain available. [Coverage and sources](docs/moldova-central-asia.md).
+
+Armenia, Azerbaijan, Georgia, Qatar, Bahrain and the United Arab Emirates are available locally with administrative maps, native-name search, flags and source-linked population. [Coverage and sources](docs/caucasus-gulf.md).
+
+The five Central Asian maps use a shared country partition for matching fills, enclave loops and border strokes. [Boundary repair and coverage](docs/central-asian-frontiers.md).

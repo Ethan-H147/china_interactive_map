@@ -1,0 +1,6 @@
+{
+  "qatarZipSha256": "62accf5cd95ea4276b59e3b216a25387c3a72f346c99972fe03d8e7e2a9e0d37",
+  "bahrainFirstSha256": "384260828acf77dec8cc793653b3add9090583aa9d8eb2f7d448ee05b439632e",
+  "explanation": "Independent OpenStreetMap coastal controls at West Bay and Ras Laffan validate the Qatar-specific correction. The datum operation is EPSG:1840. The official Qatar atlas numbers zones through 98 and documents reserved codes.",
+  "zoneNumberingSource": "https://www.psa.gov.qa/en/statistics/Documents/Qatlas-Part-1.pdf"
+}

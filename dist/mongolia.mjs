@@ -1,6 +1,6 @@
 import {createSubdivisionScope} from './scoped-country.mjs';
 import {onMapHover} from './pointer-performance.mjs';
-import {setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
+import {setSubdivisionHeading,setRegionBreadcrumb,showCountryPanel} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
 import {mongoliaPanel} from './mongolia-panel.mjs';
@@ -20,7 +20,7 @@ export async function addMongoliaPortal(map,host){
  function state(f,value){if(!f)return;const source='mongolia-'+(f.properties.level===1?'first':'second');for(const id of [source,source+'-selection-edges'])window.AtlasMotion.setFeatureState(map,{source:id,id:f.properties.id},value);}
  function clearHover(){state(hovered,{hover:false});hovered=null;map.getCanvas().style.cursor='';}
  function clearLabels(){labels.forEach(label=>label.remove());labels=[];}
- function panel(key){for(const p of ['layers','explore']){$(p+'-panel').hidden=p!==key;$('tab-'+p).setAttribute('aria-pressed',String(p===key));}}
+ function panel(key){showCountryPanel(sidebar,$(key+'-panel'));}
  function setMode(value,automatic=false){if(automatic&&document.getElementById('mode-lock')?.getAttribute?.('aria-pressed')==='true')value=document.getElementById('mode-province').getAttribute('aria-pressed')==='true'?1:2;mode=value;document.getElementById('mode-province').setAttribute('aria-pressed',String(mode===1));document.getElementById('mode-prefecture').setAttribute('aria-pressed',String(mode===2));document.getElementById('map-hint').textContent=mode===1?'Select a province or the capital':'Select a district';clearHover();sync();}
  function clearSearch(){$('search').value='';$('search-results').hidden=true;$('search-results').replaceChildren();}
  function sync(){

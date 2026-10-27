@@ -206,7 +206,7 @@
     "test:telephone-areas-browser": "node scripts/browser/run.mjs telephone-areas",
     "test:settings-browser": "node scripts/browser/run.mjs settings heading-size",
     "fetch:pakistan-kazakhstan": "node scripts/fetch-pakistan-kazakhstan.mjs",
-    "build:pakistan-kazakhstan": "npm run fetch:pakistan-kazakhstan && node --max-old-space-size=6500 scripts/build-pakistan-kazakhstan.mjs && node scripts/reconcile-pakistan-kazakhstan.mjs && node scripts/reconcile-china-southern-frontiers.mjs && node scripts/build-world-land.mjs && npm run build:compact && npm run build:region-colors && npm run build:flag-images",
+    "build:pakistan-kazakhstan": "npm run fetch:pakistan-kazakhstan && node --max-old-space-size=6500 scripts/build-pakistan-kazakhstan.mjs && node scripts/reconcile-pakistan-kazakhstan.mjs && node scripts/reconcile-china-southern-frontiers.mjs && node --max-old-space-size=10000 scripts/reconcile-central-asian-frontiers.mjs && node scripts/build-world-land.mjs && npm run build:compact && npm run build:region-colors && npm run build:flag-images",
     "test:pakistan-kazakhstan": "node scripts/validate-pakistan-kazakhstan.mjs && node scripts/validate-pakistan-india.mjs && node scripts/validate-kashmir-frontier.mjs",
     "test:pakistan-kazakhstan-browser": "node scripts/browser/run.mjs pakistan-kazakhstan baikonur pakistan-india kashmir-frontier",
     "fetch:greece-cyprus": "node scripts/fetch-greece-cyprus.mjs && node scripts/fetch-greece-cyprus-details.mjs && node scripts/cyprus-detail-sources.mjs",
@@ -214,7 +214,7 @@
     "test:greece-cyprus": "node scripts/validate-greece-cyprus.mjs && node scripts/validate-greece-cyprus-details.mjs",
     "test:greece-cyprus-browser": "node scripts/browser/run.mjs greece-cyprus",
     "fetch:afghanistan-kyrgyzstan": "node scripts/fetch-afghanistan-kyrgyzstan.mjs",
-    "build:afghanistan-kyrgyzstan": "node scripts/build-afghanistan-kyrgyzstan.mjs",
+    "build:afghanistan-kyrgyzstan": "node scripts/build-afghanistan-kyrgyzstan.mjs && npm run build:central-asian-frontiers",
     "test:afghanistan-kyrgyzstan": "node scripts/validate-afghanistan-kyrgyzstan.mjs",
     "test:browser:afghanistan-kyrgyzstan": "node scripts/browser/run.mjs afghanistan-kyrgyzstan",
     "build:china-southern-frontiers": "node scripts/reconcile-china-southern-frontiers.mjs && node scripts/build-compact.mjs",
@@ -375,6 +375,18 @@
     "build:norway-places": "node scripts/fetch-norway-places.mjs && node scripts/prepare-norway-places.mjs",
     "test:norway-places": "node scripts/validate-norway-places.mjs && node scripts/browser/run.mjs norway-leak",
     "build:taiwan-townships": "node scripts/build-taiwan-townships.mjs",
-    "test:taiwan-townships": "node scripts/validate-taiwan-townships.mjs && node scripts/browser/run.mjs taiwan-townships"
+    "test:taiwan-townships": "node scripts/validate-taiwan-townships.mjs && node scripts/browser/run.mjs taiwan-townships",
+    "fetch:moldova-central-asia": "node scripts/fetch-moldova-central-asia.mjs",
+    "build:moldova-central-asia": "node --max-old-space-size=10000 scripts/build-moldova-central-asia.mjs && node --max-old-space-size=10000 scripts/reconcile-central-asian-frontiers.mjs && node scripts/prepare-region-colors.mjs moldova uzbekistan tajikistan turkmenistan && node --max-old-space-size=10000 scripts/build-moldova-central-asia-assets.mjs",
+    "test:moldova-central-asia": "node scripts/validate-moldova-central-asia.mjs && node scripts/browser/run.mjs moldova-central-asia",
+    "fetch:caucasus-gulf": "node scripts/fetch-caucasus-gulf.mjs",
+    "build:caucasus-gulf": "node --max-old-space-size=10000 scripts/build-caucasus-gulf.mjs && node scripts/prepare-region-colors.mjs armenia azerbaijan georgia qatar bahrain united-arab-emirates && node --max-old-space-size=10000 scripts/build-caucasus-gulf-assets.mjs",
+    "test:caucasus-gulf": "node scripts/validate-caucasus-gulf.mjs && node scripts/browser/run.mjs caucasus-gulf",
+    "fetch:central-asian-frontiers": "node scripts/fetch-central-asian-frontiers.mjs",
+    "build:central-asian-frontiers": "node --max-old-space-size=10000 scripts/reconcile-central-asian-frontiers.mjs && node scripts/prepare-region-colors.mjs kazakhstan kyrgyzstan uzbekistan tajikistan turkmenistan && node --max-old-space-size=10000 scripts/build-central-asian-frontier-assets.mjs",
+    "test:central-asian-frontiers": "node scripts/validate-central-asian-frontiers.mjs && node scripts/browser/run.mjs central-asian-frontiers",
+    "test:qatar-reference": "node scripts/validate-qatar-reference.mjs && node scripts/browser/run.mjs qatar-reference",
+    "build:qatar-reference": "node --max-old-space-size=10000 scripts/build-caucasus-gulf.mjs --country=qatar && node scripts/prepare-region-colors.mjs qatar && node --max-old-space-size=10000 scripts/build-caucasus-gulf-assets.mjs --country=qatar",
+    "fetch:qatar-reference": "node scripts/fetch-qatar-reference.mjs"
   }
 }

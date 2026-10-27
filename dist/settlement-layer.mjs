@@ -25,7 +25,8 @@ export function placeLines(record,language='both'){
  const variants=Object.entries(record.names||{}).filter(([,value])=>value.type!=='historical language label').map(([code,value])=>[code,typeof value==='string'?value:value.name]).filter(([,name])=>name);
  if(language==='en')return [record.en];
  if(language!=='both')return [variants.find(([code])=>code===language)?.[1]||record.en];
- return [...new Set([record.en,...variants.filter(([,name])=>name!==record.en).slice(0,1).map(([,name])=>name)])];
+ const local=record.localLang?variants.filter(([code])=>code===record.localLang):variants.filter(([,name])=>name!==record.en);
+ return [...new Set([record.en,...local.slice(0,1).map(([,name])=>name)])];
 }
 // A tenfold population decrease needs 2.4 more zoom levels, without abrupt batches. A record
 // without a population can give its own minzoom (Turkey's towns, by rank).

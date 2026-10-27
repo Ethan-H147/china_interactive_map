@@ -1,5 +1,5 @@
 import {createFirstLevelQuiz} from './first-level-quiz.mjs';
-import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
+import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb,showCountryPanel} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
 import {createPlaceSearch} from './place-search.mjs';
@@ -57,7 +57,7 @@ export async function addCountryPortal(map,host,country){
  }
  function populateRegions(){const value=$('province').value;$('province').replaceChildren(new Option('All '+c.name,''));for(const r of catalogue.records.filter(r=>r.level===1).sort((a,b)=>name(a).localeCompare(name(b))))$('province').append(new Option(name(r),r.id));$('province').value=value;}
  const visible=(id,value)=>{if(map.getLayer(id))setLayerVisible(map,id,value);};
- const panel=name=>{for(const key of ['layers','explore']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}};
+ const panel=name=>showCountryPanel(sidebar,$(name+'-panel'));
  function clearLabels(){labels.forEach(label=>label.remove());labels=[];}
  function remove(key){const entry=installed.get(key);if(!entry)return;entry.layers.forEach(id=>{if(map.getLayer(id))map.removeLayer(id);});for(const id of entry.sources)if(map.getSource(id))map.removeSource(id);entry.urls.forEach(URL.revokeObjectURL);installed.delete(key);}
  function cancel(){cancelIndex?.();if(pending){const p=pending;pending=null;p.worker.terminate();p.reject(new DOMException('Selection changed','AbortError'));}}

@@ -127,3 +127,21 @@ Ecuador, Venezuela and Colombia were added on 2026-10-22 with detailed administr
 | 2026-10-26 | Kenya | Local implementation | 47 counties and 290 dated sub-counties; complete 2019 county census totals and 2025 national economy. |
 
 See [Eastern and southern Africa](east-south-africa.md) for source dates, census scope and national-account definitions.
+
+| 2026-10-26 | Moldova | Local implementation | 37 districts, municipalities and territorial units; 2024 census population for matching complete areas. |
+| 2026-10-26 | Uzbekistan | Local implementation | 14 regions/equivalents and 199 dated districts/cities; Uzbek and Russian names, 2025 regional population. |
+| 2026-10-26 | Tajikistan | Local implementation | Five current mapped regions/equivalents, Tajik and Russian names, July 2026 preliminary regional population. |
+| 2026-10-26 | Turkmenistan | Local implementation | Five provinces, Ashgabat and Arkadag; 51 mapped district/city units, Turkmen and Russian names, matching 2022 census counts. |
+
+See [Moldova and Central Asia](moldova-central-asia.md) for boundary dates, statistical coverage and source limitations.
+
+| Added | Country | Status | Coverage |
+| --- | --- | --- | --- |
+| 2026-10-26 | Armenia | Local implementation | Ten provinces and Yerevan; 2025 population. |
+| 2026-10-26 | Azerbaijan | Local implementation | 71 top-level entries; Baku and Nakhchivan detail; 2026 population. |
+| 2026-10-26 | Georgia | Local implementation | Regional map including de facto-administered territories; scoped 2026 population. |
+| 2026-10-26 | Qatar | Local implementation | Eight municipalities, 90 mapped zones, 781 districts; municipal 2020 census. |
+| 2026-10-26 | Bahrain | Local implementation | Four land-only governorates; 2020 census. |
+| 2026-10-26 | United Arab Emirates | Local implementation | Seven emirates; dated available emirate population. |
+
+See [Caucasus and Gulf countries](caucasus-gulf.md) for sources, boundary dates and statistical coverage.

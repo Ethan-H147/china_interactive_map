@@ -1,0 +1,92 @@
+{
+  "retrieved": "2026-10-26",
+  "files": {
+    "kazakhstan-wikidata.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q232.json",
+      "sha256": "faadbbc5fcb1c2d1003da64a0be93d4e053770bdea02652b798f5b4957bc9160",
+      "bytes": 542821,
+      "license": "CC0"
+    },
+    "kazakhstan.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/214665/full.json",
+      "sha256": "8fe5caa44f808fc7399cc7d89eba4ae28ef1e325c51f5f66cf4599782db98eeb",
+      "bytes": 13696834,
+      "relation": 214665,
+      "country": "kazakhstan",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors",
+      "page": "https://www.openstreetmap.org/relation/214665"
+    },
+    "kyrgyzstan-wikidata.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q813.json",
+      "sha256": "6a5524fa96f5b8e67ace231fc8f9df47f6a3c351580f00a5f5272453376d744c",
+      "bytes": 489495,
+      "license": "CC0"
+    },
+    "kyrgyzstan.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/178009/full.json",
+      "sha256": "4b5db4c3606d0bddd23a49136c099d7e7034c370820feea4c5171401b2bfa98d",
+      "bytes": 6626779,
+      "relation": 178009,
+      "country": "kyrgyzstan",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors",
+      "page": "https://www.openstreetmap.org/relation/178009"
+    },
+    "uzbekistan-wikidata.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q265.json",
+      "sha256": "fc4d5bef2eb33020c0136589c8656859e6a9dfe5e8a1518fb578a5a58c9977d7",
+      "bytes": 465145,
+      "license": "CC0"
+    },
+    "uzbekistan.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/196240/full.json",
+      "sha256": "6926df707a4018afe65b8683519e3b7a056f255e6b98eee3bce67adec954e0ae",
+      "bytes": 5068438,
+      "relation": 196240,
+      "country": "uzbekistan",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors",
+      "page": "https://www.openstreetmap.org/relation/196240"
+    },
+    "tajikistan-wikidata.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q863.json",
+      "sha256": "44c9bb9e19c6c3fee3c93b27e66d7e9d377a67053348ab2fb7faa601a082ee10",
+      "bytes": 468583,
+      "license": "CC0"
+    },
+    "tajikistan.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/214626/full.json",
+      "sha256": "8304c38a2d4107288543395c8e8a49a55bd6b26eb5f153574b62dab04e64740e",
+      "bytes": 3942855,
+      "relation": 214626,
+      "country": "tajikistan",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors",
+      "page": "https://www.openstreetmap.org/relation/214626"
+    },
+    "turkmenistan-wikidata.json": {
+      "url": "https://www.wikidata.org/wiki/Special:EntityData/Q874.json",
+      "sha256": "27cec0f11f83a00baecd2c0d0517913d09efefd3ece6b4d5497ea8224e893f44",
+      "bytes": 427717,
+      "license": "CC0"
+    },
+    "turkmenistan.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/223026/full.json",
+      "sha256": "03a3518cc4db89cf2f7d86aa9582814a69faecefca3a2c2ea202e6d217a0e396",
+      "bytes": 3632550,
+      "relation": 223026,
+      "country": "turkmenistan",
+      "license": "ODbL 1.0",
+      "credit": "© OpenStreetMap contributors",
+      "page": "https://www.openstreetmap.org/relation/223026"
+    },
+    "shirin-geocode.json": {
+      "url": "https://nominatim.openstreetmap.org/search?q=Shirin%2C%20Uzbekistan&format=json&limit=5",
+      "sha256": "9336727c08f8181a5629314b68e3e96b9290eb8155eae9813c5e25e2df80ac4c",
+      "bytes": 2265,
+      "license": "ODbL 1.0",
+      "credit": "OpenStreetMap contributors"
+    }
+  }
+}

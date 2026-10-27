@@ -1,0 +1,135 @@
+{
+  "moldova": {
+    "aligned": [
+      {
+        "pair": "MDA-UKR",
+        "vertices": 5967,
+        "owner": "UKR",
+        "maxEndpointDisplacementMetres": 563.3914770666717
+      }
+    ],
+    "owned": [
+      {
+        "pair": "MDA-ROU",
+        "vertices": 2900
+      }
+    ]
+  },
+  "uzbekistan": {
+    "aligned": [
+      {
+        "pair": "KGZ-UZB",
+        "vertices": 657,
+        "owner": "KGZ",
+        "maxEndpointDisplacementMetres": 0
+      },
+      {
+        "pair": "KGZ-UZB",
+        "vertices": 6518,
+        "owner": "KGZ",
+        "maxEndpointDisplacementMetres": 873.0692483071774
+      },
+      {
+        "pair": "KGZ-UZB",
+        "vertices": 256,
+        "owner": "KGZ",
+        "maxEndpointDisplacementMetres": 0
+      },
+      {
+        "pair": "AFG-UZB",
+        "vertices": 660,
+        "owner": "AFG",
+        "maxEndpointDisplacementMetres": 1562.8236647356928
+      },
+      {
+        "pair": "KAZ-UZB",
+        "vertices": 1568,
+        "owner": "KAZ",
+        "maxEndpointDisplacementMetres": 1366.6402469695352
+      }
+    ],
+    "owned": [
+      {
+        "pair": "TJK-UZB",
+        "vertices": 650
+      },
+      {
+        "pair": "TJK-UZB",
+        "vertices": 33
+      },
+      {
+        "pair": "TKM-UZB",
+        "vertices": 840
+      }
+    ]
+  },
+  "tajikistan": {
+    "aligned": [
+      {
+        "pair": "TJK-UZB",
+        "vertices": 650,
+        "owner": "UZB",
+        "maxEndpointDisplacementMetres": 863.5455162579279
+      },
+      {
+        "pair": "TJK-UZB",
+        "vertices": 33,
+        "owner": "UZB",
+        "maxEndpointDisplacementMetres": 0
+      },
+      {
+        "pair": "KGZ-TJK",
+        "vertices": 210,
+        "owner": "KGZ",
+        "maxEndpointDisplacementMetres": 0
+      },
+      {
+        "pair": "KGZ-TJK",
+        "vertices": 3925,
+        "owner": "KGZ",
+        "maxEndpointDisplacementMetres": 1579.0985322024856
+      },
+      {
+        "pair": "CHN-TJK",
+        "vertices": 75,
+        "owner": "CHN",
+        "maxEndpointDisplacementMetres": 665.1293385324599
+      },
+      {
+        "pair": "AFG-TJK",
+        "vertices": 8973,
+        "owner": "AFG",
+        "maxEndpointDisplacementMetres": 32.87488723294347
+      }
+    ],
+    "owned": []
+  },
+  "turkmenistan": {
+    "aligned": [
+      {
+        "pair": "AFG-TKM",
+        "vertices": 3701,
+        "owner": "AFG",
+        "maxEndpointDisplacementMetres": 1695.612687001832
+      },
+      {
+        "pair": "KAZ-TKM",
+        "vertices": 335,
+        "owner": "KAZ",
+        "maxEndpointDisplacementMetres": 853.0423650841875
+      },
+      {
+        "pair": "TKM-UZB",
+        "vertices": 840,
+        "owner": "UZB",
+        "maxEndpointDisplacementMetres": 875.7159513769751
+      }
+    ],
+    "owned": [
+      {
+        "pair": "IRN-TKM",
+        "vertices": 8363
+      }
+    ]
+  }
+}

@@ -126,3 +126,23 @@ body[data-atlas=brunei]{--red:#8f6e18;--red-dark:#6c510d;--ink:#302c20;--muted:#
 :root[data-atlas=tanzania],body[data-atlas=tanzania],.country-option[data-atlas=tanzania]{--red:#347d83;--red-dark:#347d83;--ink:#29352b;--muted:#6f8074;--gold:#aa883f;--line:#d7e1d8;--paper:#fcfdfb;--map:#ecf3f5;--surface-soft:#d8e9e8;--accent-soft:#d8e9e8;--header-stripe:linear-gradient(90deg,#347d83 0 34%,#f6f2dd 34% 67%,#344d36 67%);}
 
 :root[data-atlas=kenya],body[data-atlas=kenya],.country-option[data-atlas=kenya]{--red:#994c41;--red-dark:#994c41;--ink:#29352b;--muted:#6f8074;--gold:#aa883f;--line:#d7e1d8;--paper:#fcfdfb;--map:#f3ece9;--surface-soft:#ead8d2;--accent-soft:#ead8d2;--header-stripe:linear-gradient(90deg,#994c41 0 34%,#f6f2dd 34% 67%,#344d36 67%);}
+
+:root[data-atlas=moldova],body[data-atlas=moldova],.country-option[data-atlas=moldova]{--red:#375b91;--red-dark:#375b91;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f1f3f8;--surface-soft:#e0e6f2;--accent-soft:#bacbe7;--header-stripe:linear-gradient(90deg,#0046ae 0 33.333%,#ffd200 33.333% 66.667%,#cc092f 66.667%)}
+
+:root[data-atlas=uzbekistan],body[data-atlas=uzbekistan],.country-option[data-atlas=uzbekistan]{--red:#277d71;--red-dark:#277d71;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#edf6f4;--surface-soft:#d9ece8;--accent-soft:#acd7cb;--header-stripe:linear-gradient(90deg,#0099b5 0 32%,#ce1126 32% 34%,#fff 34% 66%,#ce1126 66% 68%,#1eb53a 68%)}
+
+:root[data-atlas=tajikistan],body[data-atlas=tajikistan],.country-option[data-atlas=tajikistan]{--red:#9b493e;--red-dark:#9b493e;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f7eeee;--surface-soft:#eeddda;--accent-soft:#dcb6af;--header-stripe:linear-gradient(90deg,#cc0000 0 29%,#fff 29% 71%,#006600 71%)}
+
+:root[data-atlas=turkmenistan],body[data-atlas=turkmenistan],.country-option[data-atlas=turkmenistan]{--red:#35714e;--red-dark:#35714e;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#edf4ed;--surface-soft:#deebde;--accent-soft:#b6d2b5;--header-stripe:linear-gradient(90deg,#00843d 0 22%,#b32337 22% 30%,#00843d 30%)}
+
+:root[data-atlas=armenia],body[data-atlas=armenia],.country-option[data-atlas=armenia]{--red:#9c5734;--red-dark:#9c5734;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f8f1eb;--surface-soft:#f0e1d3;--accent-soft:#e0c1a5;--header-stripe:linear-gradient(90deg,#d90012 0 33.333%,#0033a0 33.333% 66.667%,#f2a800 66.667%)}
+
+:root[data-atlas=georgia],body[data-atlas=georgia],.country-option[data-atlas=georgia]{--red:#a94b49;--red-dark:#a94b49;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f8eeee;--surface-soft:#f0dfdf;--accent-soft:#ddb9b8;--header-stripe:linear-gradient(90deg,#fff 0 40%,#d7141a 40% 60%,#fff 60%)}
+
+:root[data-atlas=azerbaijan],body[data-atlas=azerbaijan],.country-option[data-atlas=azerbaijan]{--red:#317b78;--red-dark:#317b78;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#eef6f5;--surface-soft:#dceceb;--accent-soft:#b1d5d0;--header-stripe:linear-gradient(90deg,#00b5e2 0 33.333%,#ef3340 33.333% 66.667%,#509e2f 66.667%)}
+
+:root[data-atlas=qatar],body[data-atlas=qatar],.country-option[data-atlas=qatar]{--red:#873d57;--red-dark:#873d57;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f7f0f2;--surface-soft:#ecdce2;--accent-soft:#d8b4c0;--header-stripe:linear-gradient(90deg,#fff 0 28%,#8a1538 28%)}
+
+:root[data-atlas=bahrain],body[data-atlas=bahrain],.country-option[data-atlas=bahrain]{--red:#a64c42;--red-dark:#a64c42;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f7f0ee;--surface-soft:#efdfd9;--accent-soft:#deb9ad;--header-stripe:linear-gradient(90deg,#fff 0 32%,#ce1126 32%)}
+
+:root[data-atlas=united-arab-emirates],body[data-atlas=united-arab-emirates],.country-option[data-atlas=united-arab-emirates]{--red:#3c7a5a;--red-dark:#3c7a5a;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#eef4f0;--surface-soft:#dfebe4;--accent-soft:#b6d2c1;--header-stripe:linear-gradient(90deg,#ff0000 0 22%,#009a49 22% 48%,#fff 48% 74%,#000 74%)}

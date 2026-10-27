@@ -12,7 +12,7 @@ import {createMapResources} from './country-loader.mjs';
 import {createSettlementBoundaries} from './settlement-boundaries.mjs';
 import {renderPhoneCard} from './place-contact-card.mjs';
 import {expandSettlementRecords,enrichPlaces,placeLines,visibleSettlements,settlementFeatures,settlementDotLayers,settlementDotVisible,settlementStatistics} from './settlement-layer.mjs';
-import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
+import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb,showCountryPanel} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
 import {createPlaceSearch} from './place-search.mjs';
@@ -79,7 +79,7 @@ export async function addRegionalCountry(map,host,c){
  if(c.controlBoundary){await addWorkerSource(map,country+'-control',base+c.controlBoundary,{...internationalLineSourceOptions,attribution:c.attribution});addInternationalBorder(map,country+'-control',country+'-control');map.setPaintProperty(country+'-control','line-dasharray',[3,3]);}
 
  if(c.thirdLabel&&!document.getElementById('mode-third')){const button=document.createElement('button');button.id='mode-third';button.type='button';button.hidden=true;button.setAttribute('data-nav','');button.setAttribute('aria-pressed','false');document.getElementById('mode-lock').before(button);}
- function panel(name){for(const key of ['layers','explore',...(hasCountryProfile?['country']:[])]){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}}
+ function panel(name){showCountryPanel(sidebar,$(name+'-panel'));}
  function showCountryProfile(){panel('country');return renderStatistics($('country-statistics'),country+':'+c.countryStatistics);}
  function allRecords(){return [...catalogue.records,...(controlOverview?.records||[]),...(c.settlementManifest?[]:settlements),...(areaData?.records||[]),...[...viewData.values()].flatMap(d=>d.records)];}
  function themedData(){return theme==='area-codes'?areaData:viewData.get(theme);}
@@ -241,7 +241,7 @@ export async function addRegionalCountry(map,host,c){
   const pageRecord=sharedPlacePage(record,index);
   const display=names(pageRecord);
   $('search').value='';$('search-results').hidden=true;$('province').value=scope;$('kind').textContent=display.kind.toUpperCase()+(display.kindLocal?' · '+display.kindLocal.toLocaleUpperCase(pageRecord.localLang||c.lang):'');$('name').textContent=display.en;$('name').classList.toggle('long-name',display.en.length>28);$('local').textContent=display.local||'';$('local').hidden=!display.local||display.local===display.en;$('local').lang=pageRecord.localLang||c.lang;$('local').dir=pageRecord.localDir||'auto';$('local').title=pageRecord.localLanguage||'';if(c.nameVariants){$('local-language').textContent=pageRecord.localLanguage||'';$('local-language').hidden=$('local').hidden||!pageRecord.localLanguage;}
-  $('names').replaceChildren();if(c.nameVariants)renderRegionalNames($('names'),pageRecord,{collapseAfter:c.nameVariants.collapseAfter??3});else if(c.labelLanguages)for(const [code,value] of Object.entries(pageRecord.names||{})){const name=typeof value==='string'?value:value.name;if(!name||name===display.en||value.type==='historical language label')continue;const row=document.createElement('p');row.lang=code;row.textContent=name+' · '+(c.labelLanguages.find(([id])=>id===code)?.[1]||code);$('names').append(row);}
+  $('names').replaceChildren();if(c.nameVariants)renderRegionalNames($('names'),pageRecord,{collapseAfter:c.nameVariants.collapseAfter??3});else if(c.labelLanguages)for(const [code,value] of Object.entries(pageRecord.names||{})){const name=typeof value==='string'?value:value.name;if(!name||name===display.en||name===display.local||value.type==='historical language label')continue;const row=document.createElement('p');row.lang=code;row.textContent=name+' · '+(c.labelLanguages.find(([id])=>id===code)?.[1]||code);$('names').append(row);}
   renderStatus(pageRecord);
   const governmentEn=display.relatedGovernmentEn||display.administrativeEn,governmentLocal=display.relatedGovernmentLocal||display.administrativeLocal;$('administrative').hidden=!governmentEn;$('administrative').textContent=[governmentEn,governmentLocal].filter(Boolean).join(' · ');
   if(c.phoneCodes)renderPhoneCard($('phone-card'),pageRecord.phone);

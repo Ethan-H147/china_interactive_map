@@ -174,3 +174,5 @@ if(fs.existsSync('scripts/boundary-sources/north-andes/resolved.bin'))(await imp
 
 // French Guiana owns this reconciled frontier; do not restore Brazil's old copy.
 if(fs.existsSync('dist/data/guiana-frontier.json'))await import('./reconcile-guiana-frontier.mjs');
+
+(await import('./central-asian-frontiers.mjs')).preserveCentralAsianFrontiers();

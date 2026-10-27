@@ -22,7 +22,7 @@ export function mountQuizDashboard(container,{play}){
   if(definition.quiz.flags.length>1)holder.classList.add('quiz-flags-pair');return holder;
  }
  function top(){const dialog=container.closest('dialog');if(dialog)dialog.scrollTop=0;}
- function openCountry(id){if(!definitions[id]?.quiz)return;libraryScroll=container.closest('dialog')?.scrollTop||0;country=id;level.replaceChildren(...(id==='china'?[new Option('Provincial divisions','1'),new Option('Prefectures','2')]:definitions[id].quiz.counties?[new Option('States & territories','1'),new Option('Counties & equivalents','2')]:[new Option(definitions[id].quiz.plural,'1')]));level.value='1';scopeSignature='';detail=true;view='countries';render();top();$('#quiz-country-title').focus({preventScroll:true});}
+ function openCountry(id){if(!definitions[id]?.quiz)return;libraryScroll=container.closest('dialog')?.scrollTop||0;country=id;level.replaceChildren(...(id==='china'?[new Option('Provincial divisions','1'),new Option('Prefectures','2')]:definitions[id].quiz.counties?[new Option('States','1'),new Option('Counties & equivalents','2')]:[new Option(definitions[id].quiz.plural,'1')]));level.value='1';scopeSignature='';detail=true;view='countries';render();top();$('#quiz-country-title').focus({preventScroll:true});}
  for(const definition of available){
   const card=make('button',undefined,'quiz-country-card');card.type='button';card.dataset.quizCard=definition.id;card.setAttribute('aria-label',definition.en+' quizzes');card.style.setProperty('--quiz-country-tint',definition.background);
   const art=make('span',undefined,'quiz-card-art');art.append(flags(definition));

@@ -1,0 +1,1260 @@
+{
+  "armenia": [
+    {
+      "id": "Q17915",
+      "relation": 3917110,
+      "en": "Aragatsotn Province",
+      "iso": "AM-AG",
+      "labels": {
+        "en": "Aragatsotn Province",
+        "ar": "محافظة آراغاتسوتن",
+        "az": "Araqatsotn mərzi",
+        "hy": "Արագածոտնի մարզ",
+        "ka": "არაგაწოტნის პროვინცია"
+      }
+    },
+    {
+      "id": "Q199880",
+      "relation": 364083,
+      "en": "Ararat Province",
+      "iso": "AM-AR",
+      "labels": {
+        "en": "Ararat Province",
+        "ar": "محافظة أرارات",
+        "hy": "Արարատի մարզ",
+        "ka": "არარატის პროვინცია",
+        "az": "Ararat mərzi"
+      }
+    },
+    {
+      "id": "Q201147",
+      "relation": 364086,
+      "en": "Armavir Province",
+      "iso": "AM-AV",
+      "labels": {
+        "en": "Armavir Province",
+        "hy": "Արմավիրի մարզ",
+        "ka": "არმავირის პროვინცია",
+        "az": "Armavir mərzi",
+        "ar": "محافظة آرماوير"
+      }
+    },
+    {
+      "id": "Q199905",
+      "relation": 364080,
+      "en": "Gegharkunik Province",
+      "iso": "AM-GR",
+      "labels": {
+        "en": "Gegharkunik Province",
+        "hy": "Գեղարքունիքի մարզ",
+        "ka": "გეღარქუნიქის პროვინცია",
+        "az": "Geğarkunik mərzi",
+        "ar": "محافظة كغاركونيك"
+      }
+    },
+    {
+      "id": "Q4511",
+      "relation": 364084,
+      "en": "Kotayk Province",
+      "iso": "AM-KT",
+      "labels": {
+        "en": "Kotayk Province",
+        "hy": "Կոտայքի մարզ",
+        "ka": "კოტაიქის პროვინცია",
+        "az": "Kotayk mərzi",
+        "ar": "محافظة كوتايك"
+      }
+    },
+    {
+      "id": "Q200350",
+      "relation": 364078,
+      "en": "Lori Province",
+      "iso": "AM-LO",
+      "labels": {
+        "en": "Lori Province",
+        "hy": "Լոռի",
+        "ka": "ლორეს პროვინცია",
+        "az": "Loru mərzi",
+        "ar": "محافظة لوري"
+      }
+    },
+    {
+      "id": "Q201063",
+      "relation": 364077,
+      "en": "Shirak Province",
+      "iso": "AM-SH",
+      "labels": {
+        "en": "Shirak Province",
+        "hy": "Շիրակի մարզ",
+        "ka": "შირაკის პროვინცია",
+        "az": "Şirak mərzi",
+        "ar": "محافظة شيراك"
+      }
+    },
+    {
+      "id": "Q2523428",
+      "relation": 364082,
+      "en": "Syunik Province",
+      "iso": "AM-SU",
+      "labels": {
+        "az": "Sünik mərzi",
+        "en": "Syunik Province",
+        "hy": "Սյունիքի մարզ",
+        "ka": "სიუნიქის პროვინცია",
+        "ar": "محافظة سيونيك"
+      }
+    },
+    {
+      "id": "Q201140",
+      "relation": 364079,
+      "en": "Tavush Province",
+      "iso": "AM-TV",
+      "labels": {
+        "en": "Tavush Province",
+        "hy": "Տավուշի մարզ",
+        "ka": "ტავუშის პროვინცია",
+        "az": "Tavuş mərzi",
+        "ar": "محافظة تاووش"
+      }
+    },
+    {
+      "id": "Q200124",
+      "relation": 364081,
+      "en": "Vayots Dzor Province",
+      "iso": "AM-VD",
+      "labels": {
+        "en": "Vayots Dzor Province",
+        "hy": "Վայոց ձորի մարզ",
+        "ka": "ვაიოცძორის პროვინცია",
+        "az": "Vayots dzor mərzi",
+        "ar": "محافظة وايوتس تسور"
+      }
+    },
+    {
+      "id": "Q1953",
+      "relation": 364087,
+      "en": "Yerevan",
+      "iso": "AM-ER",
+      "labels": {
+        "en": "Yerevan",
+        "ar": "يريفان",
+        "az": "İrəvan",
+        "hy": "Երևան",
+        "ka": "ერევანი"
+      }
+    }
+  ],
+  "georgia": [
+    {
+      "id": "Q2914461",
+      "relation": 3572912,
+      "en": "Autonomous Republic of Abkhazia",
+      "iso": "GE-AB",
+      "labels": {
+        "ka": "აფხაზეთის ავტონომიური რესპუბლიკა",
+        "hy": "Աբխազիայի Ինքնավար Հանրապետություն",
+        "en": "Autonomous Republic of Abkhazia",
+        "az": "Abxaziya Muxtar Respublikası",
+        "ar": "حكومة جمهورية أبخازيا المتمتعة بالحكم الذاتي"
+      }
+    },
+    {
+      "id": "Q200309",
+      "relation": 1996076,
+      "en": "Samegrelo-Zemo Svaneti",
+      "iso": "GE-SZ",
+      "labels": {
+        "hy": "Սամեգրելո-Զեմո Սվանեթ",
+        "en": "Samegrelo-Zemo Svaneti",
+        "ka": "სამეგრელო-ზემო სვანეთის მხარე",
+        "az": "Sameqrelo-Yuxarı Svaneti diyarı",
+        "ar": "سامغريلو زيمو سفانيتي"
+      }
+    },
+    {
+      "id": "Q200045",
+      "relation": 1997289,
+      "en": "Imereti",
+      "iso": "GE-IM",
+      "labels": {
+        "hy": "Իմերեթի մարզ",
+        "en": "Imereti",
+        "ka": "იმერეთის მხარე",
+        "az": "İmereti",
+        "ar": "إيميريتي"
+      }
+    },
+    {
+      "id": "Q169674",
+      "relation": 2000091,
+      "en": "Kakheti",
+      "iso": "GE-KA",
+      "labels": {
+        "hy": "Կախեթի մարզ",
+        "en": "Kakheti",
+        "ka": "კახეთის მხარე",
+        "az": "Kaxetiya",
+        "ar": "منطقة كاخيتي"
+      }
+    },
+    {
+      "id": "Q19039",
+      "relation": 1996031,
+      "en": "Samtskhe–Javakheti",
+      "iso": "GE-SJ",
+      "labels": {
+        "hy": "Սամցխե-Ջավախեթի մարզ",
+        "en": "Samtskhe–Javakheti",
+        "ka": "სამცხე-ჯავახეთის მხარე",
+        "az": "Samtsxe-Cavaxeti",
+        "ar": "سامتسخه-جافاخيتي"
+      }
+    },
+    {
+      "id": "Q200047",
+      "relation": 2000040,
+      "en": "Shida Kartli",
+      "iso": "GE-SK",
+      "labels": {
+        "hy": "Շիդա Քարթլիի մարզ",
+        "en": "Shida Kartli",
+        "ka": "შიდა ქართლის მხარე",
+        "az": "Şida Kartli",
+        "ar": "شيدا كارتلي"
+      }
+    },
+    {
+      "id": "Q200048",
+      "relation": 2000092,
+      "en": "Kvemo Kartli",
+      "iso": "GE-KK",
+      "labels": {
+        "hy": "Քվեմո Քարթլիի մարզ",
+        "en": "Kvemo Kartli",
+        "ka": "ქვემო ქართლის მხარე",
+        "az": "Aşağı Kartli",
+        "ar": "كفيمو كارتلي"
+      }
+    },
+    {
+      "id": "Q45693",
+      "relation": 1995970,
+      "en": "Adjara",
+      "iso": "GE-AJ",
+      "labels": {
+        "ar": "أجاريا",
+        "az": "Acarıstan Muxtar Respublikası",
+        "hy": "Աջարիա",
+        "en": "Adjara",
+        "ka": "აჭარის ავტონომიური რესპუბლიკა"
+      }
+    },
+    {
+      "id": "Q19038",
+      "relation": 1995971,
+      "en": "Guria",
+      "iso": "GE-GU",
+      "labels": {
+        "hy": "Գուրիայի մարզ",
+        "en": "Guria",
+        "ka": "გურიის მხარე",
+        "az": "Quriya",
+        "ar": "غوريا"
+      }
+    },
+    {
+      "id": "Q203339",
+      "relation": 2000090,
+      "en": "Mtskheta-Mtianeti",
+      "iso": "GE-MM",
+      "labels": {
+        "hy": "Մցխեթ-Մթիանեթ",
+        "en": "Mtskheta-Mtianeti",
+        "ka": "მცხეთა-მთიანეთის მხარე",
+        "az": "Mtsxeta-Mtianeti",
+        "ar": "متسخيتا-متيانيتي"
+      }
+    },
+    {
+      "id": "Q38893",
+      "relation": 1997284,
+      "en": "Racha-Lechkhumi and Kvemo Svaneti",
+      "iso": "GE-RL",
+      "labels": {
+        "hy": "Ռաճա-Լեչխում և Քվեմո Սվանեթ",
+        "en": "Racha-Lechkhumi and Kvemo Svaneti",
+        "ka": "რაჭა-ლეჩხუმისა და ქვემო სვანეთის მხარე",
+        "az": "Raça-Leçxumi və Aşağı Svaneti diyarı",
+        "ar": "راتشا-ليخخومي وكفيمو سفانيتي"
+      }
+    },
+    {
+      "id": "Q994",
+      "relation": 1996871,
+      "en": "Tbilisi",
+      "iso": "GE-TB",
+      "labels": {
+        "en": "Tbilisi",
+        "ar": "تبليسي",
+        "az": "Tbilisi",
+        "hy": "Թբիլիսի",
+        "ka": "თბილისი"
+      }
+    },
+    {
+      "id": "Q23427",
+      "relation": 1152717,
+      "en": "South Ossetia",
+      "iso": "GE-SO",
+      "special": true,
+      "labels": {
+        "ka": "სამხრეთ ოსეთი"
+      }
+    }
+  ],
+  "azerbaijan": [
+    {
+      "id": "Q179538",
+      "relation": 3764533,
+      "en": "Absheron District",
+      "iso": "AZ-ABS",
+      "labels": {
+        "az": "Abşeron rayonu",
+        "en": "Absheron District",
+        "hy": "Ապշերոնի շրջան",
+        "ar": "مقاطعة آبشوران",
+        "ka": "აფშერონის რაიონი"
+      }
+    },
+    {
+      "id": "Q330818",
+      "relation": 3764536,
+      "en": "Aghjabadi District",
+      "iso": "AZ-AGC",
+      "labels": {
+        "en": "Aghjabadi District",
+        "hy": "Աղջաբեդի շրջան",
+        "az": "Ağcabədi rayonu",
+        "ar": "مقاطعة آقجبدي",
+        "ka": "აღჯაბადის რაიონი"
+      }
+    },
+    {
+      "id": "Q201647",
+      "relation": 3795445,
+      "en": "Aghdam",
+      "iso": "AZ-AGM",
+      "labels": {
+        "az": "Ağdam rayonu",
+        "en": "Aghdam",
+        "hy": "Աղդամի շրջան",
+        "ar": "مقاطعة آغدام",
+        "ka": "აღდამის რაიონი"
+      }
+    },
+    {
+      "id": "Q275784",
+      "relation": 3764538,
+      "en": "Aghdash District",
+      "iso": "AZ-AGS",
+      "labels": {
+        "en": "Aghdash District",
+        "hy": "Աղդաշի շրջան",
+        "az": "Ağdaş rayonu",
+        "ar": "مقاطعة آقداش",
+        "ka": "აღდაშის რაიონი"
+      }
+    },
+    {
+      "id": "Q275744",
+      "relation": 3764539,
+      "en": "Aghstafa District",
+      "iso": "AZ-AGA",
+      "labels": {
+        "en": "Aghstafa District",
+        "hy": "Աղստևի շրջան",
+        "az": "Ağstafa rayonu",
+        "ar": "مقاطعة آقستافا",
+        "ka": "აღსთაფის რაიონი"
+      }
+    },
+    {
+      "id": "Q330800",
+      "relation": 3764540,
+      "en": "Agsu District",
+      "iso": "AZ-AGU",
+      "labels": {
+        "en": "Agsu District",
+        "az": "Ağsu rayonu",
+        "ar": "مقاطعة أقسو",
+        "hy": "Աղսուի շրջան",
+        "ka": "აღსუს რაიონი"
+      }
+    },
+    {
+      "id": "Q241116",
+      "relation": 3764594,
+      "en": "Shirvan",
+      "iso": "AZ-SR",
+      "labels": {
+        "en": "Shirvan",
+        "hy": "Շիրվան",
+        "ka": "შირვანი",
+        "az": "Şirvan",
+        "ar": "شيروان"
+      }
+    },
+    {
+      "id": "Q269680",
+      "relation": 3764535,
+      "en": "Astara District",
+      "iso": "AZ-AST",
+      "labels": {
+        "en": "Astara District",
+        "az": "Astara rayonu",
+        "ar": "مقاطعة آستارا",
+        "hy": "Աստարայի շրջան",
+        "ka": "ასტარის რაიონი"
+      }
+    },
+    {
+      "id": "Q9248",
+      "relation": 2415335,
+      "en": "Baku",
+      "iso": "AZ-BA",
+      "labels": {
+        "en": "Baku",
+        "ar": "باكو",
+        "az": "Bakı",
+        "hy": "Բաքու",
+        "ka": "ბაქო"
+      }
+    },
+    {
+      "id": "Q330850",
+      "relation": 3764542,
+      "en": "Balakan District",
+      "iso": "AZ-BAL",
+      "labels": {
+        "en": "Balakan District",
+        "ka": "ბელაქანის რაიონი",
+        "az": "Balakən rayonu",
+        "ar": "مقاطعة بالاكن",
+        "hy": "Բալաքյանի շրջան"
+      }
+    },
+    {
+      "id": "Q330857",
+      "relation": 3764546,
+      "en": "Barda District",
+      "iso": "AZ-BAR",
+      "labels": {
+        "en": "Barda District",
+        "az": "Bərdə rayonu",
+        "ar": "مقاطعة بردعة",
+        "ka": "ბარდის რაიონი"
+      }
+    },
+    {
+      "id": "Q330807",
+      "relation": 3764543,
+      "en": "Beylagan District",
+      "iso": "AZ-BEY",
+      "labels": {
+        "en": "Beylagan District",
+        "az": "Beyləqan rayonu",
+        "ar": "مقاطعة بيلقان",
+        "ka": "ბეილაგანის რაიონი",
+        "hy": "Բայլականի շրջան"
+      }
+    },
+    {
+      "id": "Q330834",
+      "relation": 3764545,
+      "en": "Bilasuvar District",
+      "iso": "AZ-BIL",
+      "labels": {
+        "en": "Bilasuvar District",
+        "az": "Biləsuvar rayonu",
+        "ar": "مقاطعة بيلاسوار",
+        "ka": "ბილიასუვარის რაიონი"
+      }
+    },
+    {
+      "id": "Q457491",
+      "relation": 7861847,
+      "en": "Jabrayil District",
+      "iso": "AZ-CAB",
+      "labels": {
+        "en": "Jabrayil District",
+        "az": "Cəbrayıl rayonu",
+        "hy": "Ջեբրաիլի շրջան (Ադրբեջանական ԽՍՀ)",
+        "ar": "مقاطعة جبرائيل",
+        "ka": "ჯაბრაილის რაიონი"
+      }
+    },
+    {
+      "id": "Q372795",
+      "relation": 3764547,
+      "en": "Jalilabad District",
+      "iso": "AZ-CAL",
+      "labels": {
+        "az": "Cəlilabad rayonu",
+        "en": "Jalilabad District",
+        "ar": "مقاطعة جليل آباد",
+        "ka": "ჯალილაბადის რაიონი",
+        "hy": "Ջալիլաբադի շրջան"
+      }
+    },
+    {
+      "id": "Q457494",
+      "relation": 3795448,
+      "en": "Dashkasan District",
+      "iso": "AZ-DAS",
+      "labels": {
+        "en": "Dashkasan District",
+        "hy": "Դաշկեսանի շրջան",
+        "az": "Daşkəsən rayonu",
+        "ar": "مقاطعة داشكسن",
+        "ka": "დაშქესანის რაიონი"
+      }
+    },
+    {
+      "id": "Q387994",
+      "relation": 3764592,
+      "en": "Shabran District",
+      "iso": "AZ-SBN",
+      "labels": {
+        "en": "Shabran District",
+        "az": "Şabran rayonu",
+        "ar": "مقاطعة شابران",
+        "ka": "შაბრანის რაიონი",
+        "hy": "Շաբրանի շրջան"
+      }
+    },
+    {
+      "id": "Q331687",
+      "relation": 3795450,
+      "en": "Fuzuli District",
+      "iso": "AZ-FUZ",
+      "labels": {
+        "en": "Fuzuli District",
+        "hy": "Ֆիզուլիի շրջան",
+        "az": "Füzuli rayonu",
+        "ar": "مقاطعة فضولي",
+        "ka": "ფუზულის რაიონი"
+      }
+    },
+    {
+      "id": "Q330749",
+      "relation": 3764555,
+      "en": "Gadabay District",
+      "iso": "AZ-GAD",
+      "labels": {
+        "en": "Gadabay District",
+        "hy": "Գետաբեկի շրջան",
+        "az": "Gədəbəy rayonu",
+        "ar": "مقاطعة غدابيغ",
+        "ka": "გადაბეის რაიონი"
+      }
+    },
+    {
+      "id": "Q131290",
+      "relation": 3764556,
+      "en": "Ganja",
+      "iso": "AZ-GA",
+      "labels": {
+        "ar": "كنجه",
+        "az": "Gəncə",
+        "en": "Ganja",
+        "hy": "Գանձակ",
+        "ka": "განჯა"
+      }
+    },
+    {
+      "id": "Q330843",
+      "relation": 3795446,
+      "en": "Goranboy District",
+      "iso": "AZ-GOR",
+      "labels": {
+        "en": "Goranboy District",
+        "az": "Goranboy rayonu",
+        "ar": "مقاطعة غورانبوي",
+        "hy": "Գերանբոյի շրջան",
+        "ka": "გორანბოის რაიონი"
+      }
+    },
+    {
+      "id": "Q477163",
+      "relation": 3764553,
+      "en": "Goychay District",
+      "iso": "AZ-GOY",
+      "labels": {
+        "en": "Goychay District",
+        "az": "Göyçay rayonu",
+        "ar": "مقاطعة غويتشاي",
+        "ka": "გოქჩაის რაიონი",
+        "hy": "Գյոկչայի շրջան"
+      }
+    },
+    {
+      "id": "Q476690",
+      "relation": 3764557,
+      "en": "Hajigabul District",
+      "iso": "AZ-HAC",
+      "labels": {
+        "en": "Hajigabul District",
+        "hy": "Հաջիգաբուլի շրջան",
+        "az": "Hacıqabul rayonu",
+        "ar": "مقاطعة حاجي قبول",
+        "ka": "ჰაჯიყაბულის რაიონი"
+      }
+    },
+    {
+      "id": "Q343908",
+      "relation": 3764590,
+      "en": "Imishli District",
+      "iso": "AZ-IMI",
+      "labels": {
+        "en": "Imishli District",
+        "az": "İmişli rayonu",
+        "ar": "مقاطعة إيميشلي",
+        "ka": "იმიშლის რაიონი"
+      }
+    },
+    {
+      "id": "Q344252",
+      "relation": 3764591,
+      "en": "Ismayilli District",
+      "iso": "AZ-ISM",
+      "labels": {
+        "en": "Ismayilli District",
+        "az": "İsmayıllı rayonu",
+        "ar": "مقاطعة إسماعيلي",
+        "ka": "ისმაილის რაიონი"
+      }
+    },
+    {
+      "id": "Q457513",
+      "relation": 11821490,
+      "en": "Kalbajar District",
+      "iso": "AZ-KAL",
+      "labels": {
+        "en": "Kalbajar District",
+        "az": "Kəlbəcər rayonu",
+        "hy": "Քելբաջարի շրջան",
+        "ar": "مقاطعة كلبجر",
+        "ka": "ქალბაჯარის რაიონი"
+      }
+    },
+    {
+      "id": "Q688589",
+      "relation": 3764559,
+      "en": "Kurdamir District",
+      "iso": "AZ-KUR",
+      "labels": {
+        "en": "Kurdamir District",
+        "az": "Kürdəmir rayonu",
+        "ar": "مقاطعة كردامير",
+        "ka": "ქურდამირის რაიონი"
+      }
+    },
+    {
+      "id": "Q301832",
+      "relation": 11871224,
+      "en": "Lachin District",
+      "iso": "AZ-LAC",
+      "labels": {
+        "az": "Laçın rayonu",
+        "en": "Lachin District",
+        "hy": "Լաչինի շրջան (Ադրբեջանական ԽՍՀ)",
+        "ar": "مقاطعة لاجين",
+        "ka": "ლაჩინის რაიონი"
+      }
+    },
+    {
+      "id": "Q269986",
+      "relation": 3772758,
+      "en": "Lankaran District",
+      "iso": "AZ-LAN",
+      "labels": {
+        "en": "Lankaran District",
+        "az": "Lənkəran rayonu",
+        "ar": "مقاطعة لنكران",
+        "ka": "ლენქორანის რაიონი",
+        "hy": "Լենքորանի շրջան"
+      }
+    },
+    {
+      "id": "Q228811",
+      "relation": 3812604,
+      "en": "Lankaran",
+      "iso": "AZ-LA",
+      "labels": {
+        "en": "Lankaran",
+        "ar": "لنكران",
+        "hy": "Լենքորան",
+        "ka": "ლენქორანი",
+        "az": "Lənkəran"
+      }
+    },
+    {
+      "id": "Q688626",
+      "relation": 3764560,
+      "en": "Lerik District",
+      "iso": "AZ-LER",
+      "labels": {
+        "en": "Lerik District",
+        "az": "Lerik rayonu",
+        "ar": "مقاطعة ليريك",
+        "ka": "ლერიქის რაიონი"
+      }
+    },
+    {
+      "id": "Q476695",
+      "relation": 3764562,
+      "en": "Masally District",
+      "iso": "AZ-MAS",
+      "labels": {
+        "en": "Masally District",
+        "az": "Masallı rayonu",
+        "ar": "مقاطعة ماساللي",
+        "ka": "მასალის რაიონი"
+      }
+    },
+    {
+      "id": "Q230932",
+      "relation": 3812581,
+      "en": "Mingachevir",
+      "iso": "AZ-MI",
+      "labels": {
+        "en": "Mingachevir",
+        "hy": "Մինգեչաուր",
+        "az": "Mingəçevir",
+        "ka": "მინგეჩაური",
+        "ar": "مينجا تشيفير"
+      }
+    },
+    {
+      "id": "Q152825",
+      "relation": 3812595,
+      "en": "Naftalan",
+      "labels": {
+        "en": "Naftalan",
+        "hy": "Նաֆթալան",
+        "az": "Naftalan",
+        "ka": "ნაფთალანი",
+        "ar": "مدينة نفتالان"
+      }
+    },
+    {
+      "id": "Q688633",
+      "relation": 3772759,
+      "en": "Neftchala District",
+      "iso": "AZ-NEF",
+      "labels": {
+        "en": "Neftchala District",
+        "az": "Neftçala rayonu",
+        "ar": "مقاطعة نيفتشالا",
+        "ka": "ნეფთჩალის რაიონი"
+      }
+    },
+    {
+      "id": "Q643989",
+      "relation": 3764564,
+      "en": "Oghuz District",
+      "iso": "AZ-OGU",
+      "labels": {
+        "en": "Oghuz District",
+        "az": "Oğuz rayonu",
+        "hy": "Վարդաշենի շրջան",
+        "ar": "مقاطعة أغوز",
+        "ka": "ოღუზის რაიონი"
+      }
+    },
+    {
+      "id": "Q593872",
+      "relation": 3764572,
+      "en": "Qabala District",
+      "iso": "AZ-QAB",
+      "labels": {
+        "az": "Qəbələ rayonu",
+        "en": "Qabala District",
+        "ar": "مقاطعة قبلة",
+        "ka": "გაბალის რაიონი",
+        "hy": "Գաբալայի շրջան"
+      }
+    },
+    {
+      "id": "Q330796",
+      "relation": 3764566,
+      "en": "Qakh District",
+      "iso": "AZ-QAX",
+      "labels": {
+        "en": "Qakh District",
+        "ka": "კახის რაიონი",
+        "az": "Qax rayonu",
+        "ar": "مقاطعة قاخ"
+      }
+    },
+    {
+      "id": "Q389381",
+      "relation": 3963560,
+      "en": "Gazakh District",
+      "iso": "AZ-QAZ",
+      "labels": {
+        "en": "Gazakh District",
+        "hy": "Ղազախի շրջան",
+        "az": "Qazax rayonu",
+        "ar": "مقاطعة قازاخ",
+        "ka": "ყაზახის რაიონი"
+      }
+    },
+    {
+      "id": "Q457508",
+      "relation": 3764568,
+      "en": "Gobustan District",
+      "iso": "AZ-QOB",
+      "labels": {
+        "en": "Gobustan District",
+        "az": "Qobustan rayonu",
+        "ka": "გობუსტანის რაიონი",
+        "ar": "مقاطعة غوبوستان",
+        "hy": "Գոբուստանի շրջան"
+      }
+    },
+    {
+      "id": "Q457499",
+      "relation": 3764570,
+      "en": "Guba District",
+      "iso": "AZ-QBA",
+      "labels": {
+        "en": "Guba District",
+        "ar": "مقاطعة قوبا",
+        "az": "Quba rayonu",
+        "ka": "ყუბის რაიონი",
+        "hy": "Գուբինսկի շրջան"
+      }
+    },
+    {
+      "id": "Q644048",
+      "relation": 11871223,
+      "en": "Gubadly District",
+      "iso": "AZ-QBI",
+      "labels": {
+        "en": "Gubadly District",
+        "az": "Qubadlı rayonu",
+        "hy": "Կուբաթլուի շրջան",
+        "ar": "مقاطعة قبادلي",
+        "ka": "გუბადლის რაიონი"
+      }
+    },
+    {
+      "id": "Q386506",
+      "relation": 3764571,
+      "en": "Qusar District",
+      "iso": "AZ-QUS",
+      "labels": {
+        "en": "Qusar District",
+        "az": "Qusar rayonu",
+        "ar": "مقاطعة قوسار",
+        "ka": "გუსარის რაიონი"
+      }
+    },
+    {
+      "id": "Q601105",
+      "relation": 3764573,
+      "en": "Saatly District",
+      "iso": "AZ-SAT",
+      "labels": {
+        "az": "Saatlı rayonu",
+        "en": "Saatly District",
+        "ar": "مقاطعة ساتلي",
+        "ka": "საათლის რაიონი"
+      }
+    },
+    {
+      "id": "Q382132",
+      "relation": 3764574,
+      "en": "Sabirabad District",
+      "iso": "AZ-SAB",
+      "labels": {
+        "en": "Sabirabad District",
+        "az": "Sabirabad rayonu",
+        "ar": "مقاطعة صابر آباد",
+        "ka": "საბირაბადის რაიონი"
+      }
+    },
+    {
+      "id": "Q330864",
+      "relation": 3912205,
+      "en": "Shaki District",
+      "iso": "AZ-SAK",
+      "labels": {
+        "en": "Shaki District",
+        "az": "Şəki rayonu",
+        "hy": "Շաքիի շրջան",
+        "ar": "مقاطعة شكي",
+        "ka": "შაქის რაიონი"
+      }
+    },
+    {
+      "id": "Q234783",
+      "relation": 3912204,
+      "en": "Shaki",
+      "iso": "AZ-SA",
+      "labels": {
+        "en": "Shaki",
+        "ar": "شكي",
+        "hy": "Շաքի",
+        "az": "Şəki",
+        "ka": "შაქი"
+      }
+    },
+    {
+      "id": "Q457485",
+      "relation": 3764575,
+      "en": "Salyan District",
+      "iso": "AZ-SAL",
+      "labels": {
+        "en": "Salyan District",
+        "az": "Salyan rayonu",
+        "ar": "مقاطعة ساليان",
+        "ka": "სალიანის რაიონი",
+        "hy": "Սալյանի շրջան"
+      }
+    },
+    {
+      "id": "Q330839",
+      "relation": 3764593,
+      "en": "Shamakhi District",
+      "iso": "AZ-SMI",
+      "labels": {
+        "en": "Shamakhi District",
+        "az": "Şamaxı rayonu",
+        "ar": "مقاطعة شاماخي",
+        "ka": "შემახის რაიონი",
+        "hy": "Շամախիի շրջան"
+      }
+    },
+    {
+      "id": "Q467491",
+      "relation": 3764597,
+      "en": "Shamkir District",
+      "iso": "AZ-SKR",
+      "labels": {
+        "en": "Shamkir District",
+        "az": "Şəmkir rayonu",
+        "ar": "مقاطعة شمكير",
+        "ka": "შამქორის რაიონი",
+        "hy": "Շամքորի շրջան"
+      }
+    },
+    {
+      "id": "Q498437",
+      "relation": 3764577,
+      "en": "Samukh District",
+      "iso": "AZ-SMX",
+      "labels": {
+        "en": "Samukh District",
+        "az": "Samux rayonu",
+        "ar": "مقاطعة ساموخ",
+        "ka": "სამუხის რაიონი"
+      }
+    },
+    {
+      "id": "Q820940",
+      "relation": 3764578,
+      "en": "Siyazan District",
+      "iso": "AZ-SIY",
+      "labels": {
+        "en": "Siyazan District",
+        "az": "Siyəzən rayonu",
+        "ar": "مقاطعة سيازن",
+        "ka": "სიაზანის რაიონი",
+        "hy": "Սիազանի շրջան"
+      }
+    },
+    {
+      "id": "Q179833",
+      "relation": 3912206,
+      "en": "Sumgait",
+      "iso": "AZ-SM",
+      "labels": {
+        "en": "Sumgait",
+        "ar": "سومقاييت",
+        "hy": "Սումգայիթ",
+        "az": "Sumqayıt",
+        "ka": "სუმგაითი"
+      }
+    },
+    {
+      "id": "Q388960",
+      "relation": 11905590,
+      "en": "Shusha District",
+      "iso": "AZ-SUS",
+      "labels": {
+        "en": "Shusha District",
+        "hy": "Շուշիի շրջան",
+        "az": "Şuşa rayonu",
+        "ar": "مقاطعة شوشا",
+        "ka": "შუშის რაიონი"
+      }
+    },
+    {
+      "id": "Q477168",
+      "relation": 11822485,
+      "en": "Tartar District",
+      "iso": "AZ-TAR",
+      "labels": {
+        "en": "Tartar District",
+        "az": "Tərtər rayonu",
+        "ar": "مقاطعة ترتر",
+        "hy": "Թարթառի շրջան",
+        "ka": "ტერტერის რაიონი"
+      }
+    },
+    {
+      "id": "Q388980",
+      "relation": 3764580,
+      "en": "Tovuz District",
+      "iso": "AZ-TOV",
+      "labels": {
+        "en": "Tovuz District",
+        "hy": "Թովուզի շրջան",
+        "az": "Tovuz rayonu",
+        "ar": "مقاطعة تووز",
+        "ka": "თოუზი"
+      }
+    },
+    {
+      "id": "Q476703",
+      "relation": 3764582,
+      "en": "Ujar District",
+      "iso": "AZ-UCA",
+      "labels": {
+        "en": "Ujar District",
+        "az": "Ucar rayonu",
+        "ar": "مقاطعة أوجار",
+        "ka": "უჯარის რაიონი"
+      }
+    },
+    {
+      "id": "Q6398826",
+      "relation": 3764583,
+      "en": "Khachmaz District",
+      "iso": "AZ-XAC",
+      "labels": {
+        "en": "Khachmaz District",
+        "az": "Xaçmaz rayonu",
+        "ar": "مقاطعة خاتشماز",
+        "ka": "ხაჩმაზის რაიონი"
+      }
+    },
+    {
+      "id": "Q129352",
+      "relation": 12894949,
+      "en": "Khankendi",
+      "iso": "AZ-XA",
+      "labels": {
+        "ar": "خانكندي",
+        "az": "Xankəndi",
+        "en": "Khankendi",
+        "hy": "Ստեփանակերտ",
+        "ka": "ხანქენდი"
+      }
+    },
+    {
+      "id": "Q388087",
+      "relation": 3795447,
+      "en": "Goygol District",
+      "iso": "AZ-GYG",
+      "labels": {
+        "en": "Goygol District",
+        "az": "Göygöl rayonu",
+        "hy": "Գյոյգյոլի շրջան",
+        "ar": "مقاطعة كويكول",
+        "ka": "გოიგოლის რაიონი"
+      }
+    },
+    {
+      "id": "Q476708",
+      "relation": 3764585,
+      "en": "Khizi District",
+      "iso": "AZ-XIZ",
+      "labels": {
+        "en": "Khizi District",
+        "az": "Xızı rayonu",
+        "ar": "مقاطعة خيزي",
+        "ka": "ხიზის რაიონი",
+        "hy": "Խըզիի շրջան"
+      }
+    },
+    {
+      "id": "Q330790",
+      "relation": 11905734,
+      "en": "Khojaly District",
+      "iso": "AZ-XCI",
+      "labels": {
+        "en": "Khojaly District",
+        "az": "Xocalı rayonu",
+        "ar": "مقاطعة خوجالي",
+        "hy": "Խոջալուի շրջան",
+        "ka": "ხოჯალის რაიონი"
+      }
+    },
+    {
+      "id": "Q330813",
+      "relation": 11822487,
+      "en": "Khojavend District",
+      "iso": "AZ-XVD",
+      "labels": {
+        "en": "Khojavend District",
+        "az": "Xocavənd rayonu",
+        "ka": "ხოჯავენდის რაიონი",
+        "hy": "Մարտունու շրջան",
+        "ar": "مقاطعة خوجاوند"
+      }
+    },
+    {
+      "id": "Q127255",
+      "relation": 3764586,
+      "en": "Yardimli District",
+      "iso": "AZ-YAR",
+      "labels": {
+        "az": "Yardımlı rayonu",
+        "en": "Yardimli District",
+        "ar": "مقاطعة يارديملي",
+        "ka": "იარდიმლის რაიონი"
+      }
+    },
+    {
+      "id": "Q458524",
+      "relation": 3764587,
+      "en": "Yevlakh District",
+      "iso": "AZ-YEV",
+      "labels": {
+        "en": "Yevlakh District",
+        "az": "Yevlax rayonu",
+        "ar": "مقاطعة يفلاخ",
+        "ka": "ევლახის რაიონი",
+        "hy": "Եվլախի շրջան"
+      }
+    },
+    {
+      "id": "Q175459",
+      "relation": 3912202,
+      "en": "Yevlakh",
+      "iso": "AZ-YE",
+      "labels": {
+        "az": "Yevlax",
+        "en": "Yevlakh",
+        "hy": "Եվլախ",
+        "ka": "ევლახ",
+        "ar": "يفلاكس"
+      }
+    },
+    {
+      "id": "Q249252",
+      "relation": 11871222,
+      "en": "Zangilan District",
+      "iso": "AZ-ZAN",
+      "labels": {
+        "en": "Zangilan District",
+        "hy": "Զանգելանի շրջան (Ադրբեջանական ԽՍՀ)",
+        "az": "Zəngilan rayonu",
+        "ar": "مقاطعة زنغلان",
+        "ka": "ზანგილანის რაიონი"
+      }
+    },
+    {
+      "id": "Q147553",
+      "relation": 3764588,
+      "en": "Zaqatala District",
+      "iso": "AZ-ZAQ",
+      "labels": {
+        "en": "Zaqatala District",
+        "hy": "Զաքաթալայի շրջան",
+        "az": "Zaqatala rayonu",
+        "ka": "ზაქათალის რაიონი",
+        "ar": "مقاطعة زقاتالا"
+      }
+    },
+    {
+      "id": "Q249293",
+      "relation": 3764589,
+      "en": "Zardab District",
+      "iso": "AZ-ZAR",
+      "labels": {
+        "en": "Zardab District",
+        "az": "Zərdab rayonu",
+        "ar": "مقاطعة زارداب",
+        "ka": "ზარდაბის რაიონი"
+      }
+    },
+    {
+      "id": "Q2025789",
+      "relation": 17092684,
+      "en": "Aghdara District",
+      "labels": {
+        "en": "Aghdara District",
+        "az": "Ağdərə rayonu",
+        "hy": "Մարտակերտի շրջան",
+        "ka": "აღდარის რაიონი"
+      }
+    },
+    {
+      "relation": 186430,
+      "en": "Nakhchivan",
+      "iso": "AZ-NX",
+      "labels": {
+        "az": "Naxçıvan Muxtar Respublikası"
+      },
+      "autonomous": true
+    }
+  ],
+  "bahrain": [
+    {
+      "id": "Q528953",
+      "relation": 3028094,
+      "en": "Capital Governorate",
+      "iso": "BH-13",
+      "labels": {
+        "ar": "محافظة العاصمة",
+        "en": "Capital Governorate"
+      }
+    },
+    {
+      "id": "Q375630",
+      "relation": 3028095,
+      "en": "Muharraq Governorate",
+      "iso": "BH-15",
+      "labels": {
+        "ar": "محافظة المحرق",
+        "en": "Muharraq Governorate"
+      }
+    },
+    {
+      "id": "Q840445",
+      "relation": 2522303,
+      "en": "Northern Governorate",
+      "iso": "BH-17",
+      "labels": {
+        "en": "Northern Governorate",
+        "ar": "المحافظة الشمالية"
+      }
+    },
+    {
+      "id": "Q838532",
+      "relation": 2522430,
+      "en": "Southern Governorate",
+      "iso": "BH-14",
+      "labels": {
+        "en": "Southern Governorate",
+        "ar": "المحافظة الجنوبية",
+        "hy": "Հարավային մուհաֆազա",
+        "az": "Cənub qubernatorluğu"
+      }
+    }
+  ]
+}

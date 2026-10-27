@@ -170,5 +170,9 @@
       "KZ-59",
       "KZ-63"
     ]
+  },
+  "centralAsianFrontiers": {
+    "source": "data/central-asian-frontiers-sources.json",
+    "method": "The five Central Asian countries share one retained OpenStreetMap national partition, including all enclaves. Existing external land frontiers and lake shorelines are retained; Caspian territorial water is excluded. Subdivision fills conform to their country and parent; country contexts and international strokes use the same boundaries."
   }
 }

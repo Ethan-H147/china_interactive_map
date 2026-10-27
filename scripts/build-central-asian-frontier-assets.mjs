@@ -1,0 +1,27 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {gzipSync,gunzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+import '../dist/countries.js';
+import {root,countries} from './fetch-central-asian-frontiers.mjs';
+import {load} from './geo-index.mjs';
+import {fc} from './build-regional-dataset.mjs';
+import {encodeGeo} from '../dist/geo-pack.mjs';
+import {compactSources} from './build-compact.mjs';
+import {preserveCentralAsianFrontiers} from './central-asian-frontiers.mjs';
+const names=Object.keys(countries),hash=d=>createHash('sha256').update(JSON.stringify(d)).digest('hex'),world=load('dist/data/world-land.bin'),meta=load('dist/data/world-land-sources.json');
+const preserved=Object.fromEntries([...new Set(world.features.map(f=>f.properties.country).filter(c=>c&&!names.includes(c)))].map(c=>[c,hash(world.features.filter(f=>f.properties.country===c))]));
+const features=[...world.features.filter(f=>!names.includes(f.properties.country)),...names.flatMap(c=>load('dist/data/europe/'+c+'/context.bin').features.map(f=>({...f,properties:{country:c}})))];
+for(const[c,h]of Object.entries(preserved))assert.equal(hash(features.filter(f=>f.properties.country===c)),h,'Unrelated world silhouette '+c);
+fs.writeFileSync('dist/data/world-land.bin',gzipSync(JSON.stringify(fc(features)),{level:9}));
+meta.centralAsianReconciliation={source:'data/central-asian-frontiers-sources.json',countries:names,preservedInteractiveHashes:preserved};
+for(const integration of ['moldovaCentralAsiaIntegration','caucasusGulfIntegration'])for(const c of names)if(meta[integration]?.preservedInteractiveHashes[c])meta[integration].preservedInteractiveHashes[c]=hash(features.filter(f=>f.properties.country===c));
+meta.bytes=fs.statSync('dist/data/world-land.bin').size;fs.writeFileSync('dist/data/world-land-sources.json',JSON.stringify(meta,null,2)+'\n');
+preserveCentralAsianFrontiers();
+const retained=globalThis.AtlasCountries.byAdapter('europe').filter(c=>!names.includes(c)).map(c=>{const file='dist/data/europe/'+c+'/international.bin';return[file,fs.readFileSync(file)];});
+if(!process.argv.includes('--reuse-global'))await import('./build-atlas-frontiers.mjs');
+for(const[file,bytes]of retained)if(!fs.readFileSync(file).equals(bytes))fs.writeFileSync(file,bytes);preserveCentralAsianFrontiers();
+for(const file of ['world-land.bin','atlas-frontiers.bin',...names.flatMap(c=>['europe/'+c+'/context.bin','europe/'+c+'/international.bin'])]){const text=gunzipSync(fs.readFileSync('dist/data/'+file)).toString();fs.writeFileSync('dist/data/compact/'+file,gzipSync(encodeGeo(JSON.parse(text),{source:createHash('sha256').update(text).digest('hex')}),{level:9}));}
+const compact='dist/compact-files.mjs',text=fs.readFileSync(compact,'utf8'),empty=compactSources.filter(f=>fs.existsSync('dist/data/'+f)).filter(f=>{const d=load('dist/data/'+f);return d.type==='FeatureCollection'&&!d.features.length;});fs.writeFileSync(compact,text.replace(/export const emptyGeometryFiles=\[[^\n]+\];/,'export const emptyGeometryFiles='+JSON.stringify(empty)+';'));
+await(await import('./build-context-coverage.mjs')).build();await import('./build-globe-overview.mjs');await import('./build-border-previews.mjs');
+console.log('Central Asian country contexts, shared-border ownership, compact files, overview and previews refreshed.');

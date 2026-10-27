@@ -1,0 +1,565 @@
+{
+  "armenia": {
+    "year": 2025,
+    "date": "2025-01-01",
+    "sourceSha256": "1c3406826d369dbffb5b9a4e1e87d78ce6da190ecdfa0273ad982fd09771a1f3",
+    "rows": [
+      {
+        "name": "Yerevan",
+        "population": 1141100
+      },
+      {
+        "name": "Aragatsotn",
+        "population": 135500
+      },
+      {
+        "name": "Ararat",
+        "population": 267600
+      },
+      {
+        "name": "Armavir",
+        "population": 267900
+      },
+      {
+        "name": "Gegharkunik",
+        "population": 215700
+      },
+      {
+        "name": "Lori",
+        "population": 229200
+      },
+      {
+        "name": "Kotayk",
+        "population": 293300
+      },
+      {
+        "name": "Shirak",
+        "population": 242400
+      },
+      {
+        "name": "Syunik",
+        "population": 116700
+      },
+      {
+        "name": "Vayots Dzor",
+        "population": 49100
+      },
+      {
+        "name": "Tavush",
+        "population": 117700
+      }
+    ]
+  },
+  "azerbaijan": {
+    "year": 2026,
+    "date": "2026-01-01",
+    "sourceSha256": "de9bc5a8caa091383712cfacfbc591836e5dad28f8023c5b4b276f063e25b56c",
+    "rows": [
+      {
+        "name": "Republic of Azerbaijan",
+        "population": 10262400,
+        "areaKm2": 86600.0
+      },
+      {
+        "name": "Baku city - total",
+        "population": 2356200,
+        "areaKm2": 2100.0
+      },
+      {
+        "name": "Binagadi district",
+        "population": 309200,
+        "areaKm2": 130.0
+      },
+      {
+        "name": "Khatai district",
+        "population": 277800,
+        "areaKm2": 30.0
+      },
+      {
+        "name": "Khazar district",
+        "population": 206600,
+        "areaKm2": 370.0
+      },
+      {
+        "name": "Garadagh district",
+        "population": 118400,
+        "areaKm2": 1080.0
+      },
+      {
+        "name": "Narimanov district",
+        "population": 181500,
+        "areaKm2": 20.0
+      },
+      {
+        "name": "Nasimi district",
+        "population": 219700,
+        "areaKm2": 10.0
+      },
+      {
+        "name": "Nizami district",
+        "population": 186200,
+        "areaKm2": 20.0
+      },
+      {
+        "name": "Pirallahi district",
+        "population": 18800,
+        "areaKm2": 30.0
+      },
+      {
+        "name": "Sabunchu district",
+        "population": 331800,
+        "areaKm2": 240.0
+      },
+      {
+        "name": "Sabail district",
+        "population": 102100,
+        "areaKm2": 30.0
+      },
+      {
+        "name": "Surakhani district",
+        "population": 209400,
+        "areaKm2": 120.0
+      },
+      {
+        "name": "Yasamal district",
+        "population": 194700,
+        "areaKm2": 20.0
+      },
+      {
+        "name": "Nakhchivan economic region - total",
+        "population": 472400,
+        "areaKm2": 5500.0
+      },
+      {
+        "name": "Nakhchivan city",
+        "population": 98100,
+        "areaKm2": 190.0
+      },
+      {
+        "name": "Babak district",
+        "population": 78400,
+        "areaKm2": 830.0
+      },
+      {
+        "name": "Julfa district",
+        "population": 48300,
+        "areaKm2": 930.0
+      },
+      {
+        "name": "Kangarli district",
+        "population": 34000,
+        "areaKm2": 700.0
+      },
+      {
+        "name": "Ordubad district",
+        "population": 50900,
+        "areaKm2": 980.0
+      },
+      {
+        "name": "Sadarak district",
+        "population": 23400,
+        "areaKm2": 220.0
+      },
+      {
+        "name": "Shahbuz district",
+        "population": 25300,
+        "areaKm2": 840.0
+      },
+      {
+        "name": "Sharur district",
+        "population": 114000,
+        "areaKm2": 810.0
+      },
+      {
+        "name": "Absheron-Khizi economic region - total",
+        "population": 880200,
+        "areaKm2": 3900.0
+      },
+      {
+        "name": "Sumgayit city",
+        "population": 428200,
+        "areaKm2": 120.0
+      },
+      {
+        "name": "Absheron district",
+        "population": 435200,
+        "areaKm2": 2110.0
+      },
+      {
+        "name": "Khizi district",
+        "population": 16800,
+        "areaKm2": 1670.0
+      },
+      {
+        "name": "Daghlig Shirvan economic region - total",
+        "population": 324500,
+        "areaKm2": 6130.0
+      },
+      {
+        "name": "Aghsu district",
+        "population": 81500,
+        "areaKm2": 1020.0
+      },
+      {
+        "name": "Ismayilli district",
+        "population": 87900,
+        "areaKm2": 2070.0
+      },
+      {
+        "name": "Gobustan district",
+        "population": 47900,
+        "areaKm2": 1370.0
+      },
+      {
+        "name": "Shamakhi district",
+        "population": 107200,
+        "areaKm2": 1670.0
+      },
+      {
+        "name": "Ganja-Dashkasan economic region - total",
+        "population": 600400,
+        "areaKm2": 5270.0
+      },
+      {
+        "name": "Ganja city",
+        "population": 331100,
+        "areaKm2": 110.0
+      },
+      {
+        "name": "Naftalan city",
+        "population": 8600,
+        "areaKm2": 40.0
+      },
+      {
+        "name": "Dashkasan district",
+        "population": 33400,
+        "areaKm2": 1050.0
+      },
+      {
+        "name": "Goranboy district",
+        "population": 102800,
+        "areaKm2": 1700.0
+      },
+      {
+        "name": "Goygol district",
+        "population": 65400,
+        "areaKm2": 920.0
+      },
+      {
+        "name": "Samukh district",
+        "population": 59100,
+        "areaKm2": 1450.0
+      },
+      {
+        "name": "Garabagh economic region - total",
+        "population": 751100,
+        "areaKm2": 9990.0
+      },
+      {
+        "name": "Khankendi city",
+        "population": 4400,
+        "areaKm2": 10.0
+      },
+      {
+        "name": "Aghjabadi district",
+        "population": 137600,
+        "areaKm2": 1760.0
+      },
+      {
+        "name": "Aghdam district",
+        "population": 176400,
+        "areaKm2": 1090.0
+      },
+      {
+        "name": "Aghdara district",
+        "population": 12200,
+        "areaKm2": 1660.0
+      },
+      {
+        "name": "Barda district",
+        "population": 158600,
+        "areaKm2": 950.0
+      },
+      {
+        "name": "Fuzuli district",
+        "population": 132200,
+        "areaKm2": 1380.0
+      },
+      {
+        "name": "Khojaly district",
+        "population": 15700,
+        "areaKm2": 930.0
+      },
+      {
+        "name": "Khojavend district",
+        "population": 12500,
+        "areaKm2": 1510.0
+      },
+      {
+        "name": "Shusha district",
+        "population": 25300,
+        "areaKm2": 290.0
+      },
+      {
+        "name": "Tartar district",
+        "population": 76200,
+        "areaKm2": 410.0
+      },
+      {
+        "name": "Gazakh-Tovuz economic region - total",
+        "population": 683000,
+        "areaKm2": 7030.0
+      },
+      {
+        "name": "Aghstafa district",
+        "population": 87000,
+        "areaKm2": 1500.0
+      },
+      {
+        "name": "Gadabay district",
+        "population": 101400,
+        "areaKm2": 1230.0
+      },
+      {
+        "name": "Gazakh district",
+        "population": 96700,
+        "areaKm2": 700.0
+      },
+      {
+        "name": "Shamkir district",
+        "population": 219100,
+        "areaKm2": 1660.0
+      },
+      {
+        "name": "Tovuz district",
+        "population": 178800,
+        "areaKm2": 1940.0
+      },
+      {
+        "name": "Guba-Khachmaz economic region - total",
+        "population": 552800,
+        "areaKm2": 6960.0
+      },
+      {
+        "name": "Khachmaz district",
+        "population": 176100,
+        "areaKm2": 1060.0
+      },
+      {
+        "name": "Guba district",
+        "population": 172200,
+        "areaKm2": 2610.0
+      },
+      {
+        "name": "Gusar district",
+        "population": 103200,
+        "areaKm2": 1500.0
+      },
+      {
+        "name": "Siyazan district",
+        "population": 42200,
+        "areaKm2": 700.0
+      },
+      {
+        "name": "Shabran district",
+        "population": 59100,
+        "areaKm2": 1090.0
+      },
+      {
+        "name": "Lankaran-Astara economic region - total",
+        "population": 949300,
+        "areaKm2": 6070.0
+      },
+      {
+        "name": "Astara district",
+        "population": 113600,
+        "areaKm2": 620.0
+      },
+      {
+        "name": "Jalilabad district",
+        "population": 221100,
+        "areaKm2": 1440.0
+      },
+      {
+        "name": "Lerik district",
+        "population": 87400,
+        "areaKm2": 1080.0
+      },
+      {
+        "name": "Lankaran district",
+        "population": 228600,
+        "areaKm2": 1540.0
+      },
+      {
+        "name": "Masalli district",
+        "population": 228700,
+        "areaKm2": 720.0
+      },
+      {
+        "name": "Yardimli district",
+        "population": 69900,
+        "areaKm2": 670.0
+      },
+      {
+        "name": "Central Aran economic region - total",
+        "population": 727600,
+        "areaKm2": 6690.0
+      },
+      {
+        "name": "Mingachevir city",
+        "population": 103300,
+        "areaKm2": 140.0
+      },
+      {
+        "name": "Aghdash district",
+        "population": 108100,
+        "areaKm2": 1020.0
+      },
+      {
+        "name": "Goychay district",
+        "population": 119700,
+        "areaKm2": 740.0
+      },
+      {
+        "name": "Kurdamir district",
+        "population": 119900,
+        "areaKm2": 1630.0
+      },
+      {
+        "name": "Ujar district",
+        "population": 85900,
+        "areaKm2": 830.0
+      },
+      {
+        "name": "Yevlakh district",
+        "population": 130600,
+        "areaKm2": 1470.0
+      },
+      {
+        "name": "Zardab district",
+        "population": 60100,
+        "areaKm2": 860.0
+      },
+      {
+        "name": "Mil-Mughan economic region - total",
+        "population": 530500,
+        "areaKm2": 5669.999999999999
+      },
+      {
+        "name": "Beylagan district",
+        "population": 102600,
+        "areaKm2": 1130.0
+      },
+      {
+        "name": "Imishli district",
+        "population": 133000,
+        "areaKm2": 1890.0
+      },
+      {
+        "name": "Saatli district",
+        "population": 111800,
+        "areaKm2": 1180.0
+      },
+      {
+        "name": "Sabirabad district",
+        "population": 183100,
+        "areaKm2": 1470.0
+      },
+      {
+        "name": "Shaki-Zagatala economic region - total",
+        "population": 630900,
+        "areaKm2": 8840.000000000002
+      },
+      {
+        "name": "Balakan district",
+        "population": 101300,
+        "areaKm2": 940.0
+      },
+      {
+        "name": "Gakh district",
+        "population": 58500,
+        "areaKm2": 1490.0
+      },
+      {
+        "name": "Gabala district",
+        "population": 110100,
+        "areaKm2": 1550.0
+      },
+      {
+        "name": "Oghuz district",
+        "population": 44900,
+        "areaKm2": 1080.0
+      },
+      {
+        "name": "Shaki district",
+        "population": 185200,
+        "areaKm2": 2430.0
+      },
+      {
+        "name": "Zagatala district",
+        "population": 130900,
+        "areaKm2": 1350.0
+      },
+      {
+        "name": "East Zangezur economic region - total",
+        "population": 303700,
+        "areaKm2": 6340.0
+      },
+      {
+        "name": "Jabrayil district",
+        "population": 73800,
+        "areaKm2": 1040.0
+      },
+      {
+        "name": "Kalbajar district",
+        "population": 72800,
+        "areaKm2": 1970.0
+      },
+      {
+        "name": "Gubadli district",
+        "population": 37400,
+        "areaKm2": 800.0
+      },
+      {
+        "name": "Lachin district",
+        "population": 76700,
+        "areaKm2": 1830.0
+      },
+      {
+        "name": "Zangilan district",
+        "population": 43000,
+        "areaKm2": 700.0
+      },
+      {
+        "name": "Shirvan-Salyan economic region - total",
+        "population": 499800,
+        "areaKm2": 6080.0
+      },
+      {
+        "name": "Shirvan city",
+        "population": 86000,
+        "areaKm2": 70.0
+      },
+      {
+        "name": "Bilasuvar district",
+        "population": 108200,
+        "areaKm2": 1360.0
+      },
+      {
+        "name": "Hajigabul district",
+        "population": 76800,
+        "areaKm2": 1600.0
+      },
+      {
+        "name": "Neftchala district",
+        "population": 87900,
+        "areaKm2": 1450.0
+      },
+      {
+        "name": "Salyan district",
+        "population": 140900,
+        "areaKm2": 1600.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "armenia": {
+    "aligned": [
+      {
+        "pair": "ARM-TUR",
+        "owner": "TUR",
+        "vertices": 1027
+      }
+    ],
+    "owned": [
+      {
+        "pair": "ARM-AZE",
+        "vertices": 131
+      },
+      {
+        "pair": "ARM-AZE",
+        "vertices": 45
+      },
+      {
+        "pair": "ARM-AZE",
+        "vertices": 707
+      },
+      {
+        "pair": "ARM-AZE",
+        "vertices": 3938
+      },
+      {
+        "pair": "ARM-AZE",
+        "vertices": 85
+      },
+      {
+        "pair": "ARM-GEO",
+        "vertices": 1697
+      },
+      {
+        "pair": "ARM-IRN",
+        "vertices": 243
+      }
+    ]
+  },
+  "georgia": {
+    "aligned": [
+      {
+        "pair": "GEO-RUS",
+        "owner": "RUS",
+        "vertices": 1592
+      },
+      {
+        "pair": "GEO-TUR",
+        "owner": "TUR",
+        "vertices": 739
+      },
+      {
+        "pair": "ARM-GEO",
+        "owner": "ARM",
+        "vertices": 1697
+      }
+    ],
+    "owned": [
+      {
+        "pair": "AZE-GEO",
+        "vertices": 1961
+      }
+    ]
+  },
+  "azerbaijan": {
+    "aligned": [
+      {
+        "pair": "ARM-AZE",
+        "owner": "ARM",
+        "vertices": 131
+      },
+      {
+        "pair": "ARM-AZE",
+        "owner": "ARM",
+        "vertices": 45
+      },
+      {
+        "pair": "ARM-AZE",
+        "owner": "ARM",
+        "vertices": 707
+      },
+      {
+        "pair": "ARM-AZE",
+        "owner": "ARM",
+        "vertices": 3938
+      },
+      {
+        "pair": "ARM-AZE",
+        "owner": "ARM",
+        "vertices": 85
+      },
+      {
+        "pair": "AZE-RUS",
+        "owner": "RUS",
+        "vertices": 466
+      },
+      {
+        "pair": "AZE-GEO",
+        "owner": "GEO",
+        "vertices": 1961
+      },
+      {
+        "pair": "AZE-TUR",
+        "owner": "TUR",
+        "vertices": 40
+      }
+    ],
+    "owned": [
+      {
+        "pair": "AZE-IRN",
+        "vertices": 2790
+      },
+      {
+        "pair": "AZE-IRN",
+        "vertices": 786
+      }
+    ]
+  },
+  "qatar": {
+    "aligned": [],
+    "owned": [
+      {
+        "pair": "QAT-SAU",
+        "vertices": 8147
+      }
+    ]
+  },
+  "bahrain": {
+    "aligned": [],
+    "owned": []
+  },
+  "united-arab-emirates": {
+    "aligned": [],
+    "owned": [
+      {
+        "pair": "ARE-OMN",
+        "vertices": 43
+      },
+      {
+        "pair": "ARE-OMN",
+        "vertices": 1414
+      },
+      {
+        "pair": "ARE-OMN",
+        "vertices": 165
+      },
+      {
+        "pair": "ARE-OMN",
+        "vertices": 120
+      },
+      {
+        "pair": "ARE-SAU",
+        "vertices": 231
+      }
+    ]
+  }
+}

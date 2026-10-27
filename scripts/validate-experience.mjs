@@ -72,3 +72,6 @@ console.log('The bottom parent/overview control requests explicit navigation in 
 assert(validate({...view,country:'canada',center:[-75,83]}),'Arctic views can be saved');
 assert(validate({...view,country:'united-states',center:[-187,52]}),'Aleutian views can be saved');
 assert.equal(validate({...view,country:'canada',center:[-75,86]}),null,'Mercator latitude is bounded');
+
+for(const language of ['en','local','both'])assert.deepEqual(labelLines('District of Columbia','District of Columbia',language),['District of Columbia'],'DC displays one full name');
+assert.deepEqual(labelLines('Nangang District','南港區','both'),['Nangang Dist.','南港區'],'District suffixes still abbreviate');

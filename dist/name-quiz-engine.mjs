@@ -2,7 +2,7 @@ import {koreanNameAliases} from './korean-names.mjs';
 export const normalizeName=value=>String(value||'').normalize('NFKD').replace(/\p{M}/gu,'').toLowerCase().replace(/[\s\p{P}\p{S}]/gu,'');
 export const shortEnglish=value=>value.replace(/\s+(?:(?:Tibetan|Mongol|Kazakh|Kyrgyz|Korean|Hui|Tujia|Miao|Dai|Jingpo|Lisu|Yi|Hani|Bai|Bouyei|Buyi|Zhuang|Dong|Qiang|Tu)\b.*)?(?:Autonomous Prefecture|Prefecture|League|City|County)$/i,'');
 export const shortChinese=value=>value.replace(/(?:土家族|布依族|蒙古族|蒙古|哈萨克|柯尔克孜|朝鲜族|藏族|羌族|回族|土族|苗族|侗族|壮族|傣族|彝族|白族|哈尼族|傈僳族|景颇族).*自治州$/u,'').replace(/(?:自治州|地区|地區|市|县|縣|盟)$/u,'');
-const commonAliases={820000:['Macao','Macau'],540100:['Lasa'],540200:['Rikaze','Shigatse'],540300:['Changdu'],540400:['Linzhi'],540500:['Shannan'],540600:['Naqu'],542500:['Ali'],652800:['Bayinguoleng'],653000:['Kezilesu','Kizilsu'],653100:['Kashi'],653200:['Hetian'],654000:['Yili'],654200:['Tacheng'],654300:['Aletai'],632800:['Haixi'],222400:['Yanbian']};
+const commonAliases={'US-DC':['Washington DC','DC','Washington, District of Columbia'],820000:['Macao','Macau'],540100:['Lasa'],540200:['Rikaze','Shigatse'],540300:['Changdu'],540400:['Linzhi'],540500:['Shannan'],540600:['Naqu'],542500:['Ali'],652800:['Bayinguoleng'],653000:['Kezilesu','Kizilsu'],653100:['Kashi'],653200:['Hetian'],654000:['Yili'],654200:['Tacheng'],654300:['Aletai'],632800:['Haixi'],222400:['Yanbian']};
 export function aliases(place){return new Set([place.en,place.zh,shortEnglish(place.en),shortChinese(place.zh),...(place.aliases||[]),...koreanNameAliases(place),...(commonAliases[place.code]||[])].map(normalizeName).filter(Boolean));}
 
 // Adjacent swaps, missing letters and extra letters count as small spelling edits.

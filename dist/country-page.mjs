@@ -62,3 +62,10 @@ export function setRegionBreadcrumb(record,parentOf,labelOf,select){
  while(item&&!seen.has(item)){seen.add(item);path.unshift(item);item=parentOf(item);}
  setMapBreadcrumb(path.map(item=>({label:labelOf(item),...(item!==record?{select:()=>select(item)}:{})})));
 }
+
+// Tab state includes panels added later, such as the shared quiz setup.
+export function showCountryPanel(sidebar,target){
+ if(!target)return;
+ for(const panel of sidebar.querySelectorAll('.sidebar-scroll > section'))panel.hidden=panel!==target;
+ for(const tab of sidebar.querySelectorAll('.panel-tabs button'))tab.setAttribute('aria-pressed',String(tab.getAttribute('aria-controls')===target.id));
+}

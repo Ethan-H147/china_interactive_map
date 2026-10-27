@@ -1,5 +1,5 @@
 import {configureMapViewPicker,clearMapViewPicker} from './map-view-picker.mjs';
-import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb} from './country-page.mjs';
+import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb,showCountryPanel} from './country-page.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {createCityDots} from './argentina-city-dots.mjs';
@@ -72,7 +72,7 @@ export function createSouthAmerica(map,host){
 });
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>sidebar.querySelector('#south-'+id);
- const panel=name=>{for(const key of ['explore','layers']){$(key+'-panel').hidden=key!==name;$('tab-'+key).setAttribute('aria-pressed',String(key===name));}sidebar.querySelector('.sidebar-scroll').scrollTop=0;};
+ const panel=name=>{showCountryPanel(sidebar,$(name+'-panel'));sidebar.querySelector('.sidebar-scroll').scrollTop=0;};
  $('tab-explore').onclick=()=>panel('explore');$('tab-layers').onclick=()=>panel('layers');
  const provinceFlagImages=new Map(),flagJobs=new Map();
  function preloadProvinceFlags(country=active){

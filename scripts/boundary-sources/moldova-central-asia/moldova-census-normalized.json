@@ -1,0 +1,164 @@
+{
+  "sourceSha256": "d71172de01ee3cd5aef7e12495c72badcab70135a5340d7bb8d4e0be6a026369",
+  "year": 2024,
+  "date": "2024-04-08",
+  "table": "T5",
+  "rows": [
+    {
+      "name": "Total",
+      "population": 2409207
+    },
+    {
+      "name": "Chișinău mun.",
+      "population": 720128
+    },
+    {
+      "name": "North",
+      "population": 608651
+    },
+    {
+      "name": "Bălţi mun.",
+      "population": 94546
+    },
+    {
+      "name": "Briceni",
+      "population": 46894
+    },
+    {
+      "name": "Donduşeni",
+      "population": 28108
+    },
+    {
+      "name": "Drochia",
+      "population": 53738
+    },
+    {
+      "name": "Edineţ",
+      "population": 50429
+    },
+    {
+      "name": "Făleşti",
+      "population": 56039
+    },
+    {
+      "name": "Floreşti",
+      "population": 53264
+    },
+    {
+      "name": "Glodeni",
+      "population": 35829
+    },
+    {
+      "name": "Ocniţa",
+      "population": 31610
+    },
+    {
+      "name": "Rîşcani",
+      "population": 43652
+    },
+    {
+      "name": "Sîngerei",
+      "population": 55933
+    },
+    {
+      "name": "Soroca",
+      "population": 58609
+    },
+    {
+      "name": "Center",
+      "population": 670088
+    },
+    {
+      "name": "Anenii Noi",
+      "population": 57687
+    },
+    {
+      "name": "Călăraşi",
+      "population": 43864
+    },
+    {
+      "name": "Criuleni",
+      "population": 52926
+    },
+    {
+      "name": "Dubăsari",
+      "population": 21781
+    },
+    {
+      "name": "Hînceşti",
+      "population": 69462
+    },
+    {
+      "name": "Ialoveni",
+      "population": 74458
+    },
+    {
+      "name": "Nisporeni",
+      "population": 36413
+    },
+    {
+      "name": "Orhei",
+      "population": 79242
+    },
+    {
+      "name": "Rezina",
+      "population": 30243
+    },
+    {
+      "name": "Străşeni",
+      "population": 61362
+    },
+    {
+      "name": "Şoldăneşti",
+      "population": 25394
+    },
+    {
+      "name": "Teleneşti",
+      "population": 41452
+    },
+    {
+      "name": "Ungheni",
+      "population": 75804
+    },
+    {
+      "name": "South",
+      "population": 306672
+    },
+    {
+      "name": "Basarabeasca",
+      "population": 14914
+    },
+    {
+      "name": "Cahul",
+      "population": 72775
+    },
+    {
+      "name": "Cantemir",
+      "population": 33181
+    },
+    {
+      "name": "Căuşeni",
+      "population": 57261
+    },
+    {
+      "name": "Cimişlia",
+      "population": 30986
+    },
+    {
+      "name": "Leova",
+      "population": 28835
+    },
+    {
+      "name": "Ştefan Vodă",
+      "population": 42285
+    },
+    {
+      "name": "Taraclia",
+      "population": 26435
+    },
+    {
+      "name": "Găgăuzia ATU",
+      "population": 103668
+    }
+  ]
+}
