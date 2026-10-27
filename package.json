@@ -387,6 +387,10 @@
     "test:central-asian-frontiers": "node scripts/validate-central-asian-frontiers.mjs && node scripts/browser/run.mjs central-asian-frontiers",
     "test:qatar-reference": "node scripts/validate-qatar-reference.mjs && node scripts/browser/run.mjs qatar-reference",
     "build:qatar-reference": "node --max-old-space-size=10000 scripts/build-caucasus-gulf.mjs --country=qatar && node scripts/prepare-region-colors.mjs qatar && node --max-old-space-size=10000 scripts/build-caucasus-gulf-assets.mjs --country=qatar",
-    "fetch:qatar-reference": "node scripts/fetch-qatar-reference.mjs"
+    "fetch:qatar-reference": "node scripts/fetch-qatar-reference.mjs",
+    "fetch:antarctic-flags": "node scripts/fetch-antarctic-flags.mjs && npm run build:flag-images",
+    "fetch:antarctica": "node scripts/fetch-antarctica.mjs",
+    "build:antarctica": "node scripts/build-antarctica.mjs && node scripts/build-antarctica-assets.mjs",
+    "test:antarctica": "node --check dist/antarctica.mjs && node scripts/validate-antarctica.mjs"
   }
 }

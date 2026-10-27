@@ -27,6 +27,8 @@ const atlantic='dist/data/atlantic-flag-sources.json';
 if(fs.existsSync(atlantic))Object.values(read(atlantic).flags).forEach(add);
 const oceania='dist/data/oceania-flag-sources.json';
 if(fs.existsSync(oceania))Object.values(read(oceania).flags).forEach(add);
+const antarctic='dist/data/antarctica/flag-sources.json';
+if(fs.existsSync(antarctic))Object.values(read(antarctic).flags).forEach(add);
 const mexicoStates='dist/data/mexico-state-flag-sources.json';
 if(fs.existsSync(mexicoStates))Object.values(read(mexicoStates).flags).forEach(add);
 const northAmerica='dist/data/north-america-flag-sources.json';

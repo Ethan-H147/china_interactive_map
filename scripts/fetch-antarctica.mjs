@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {gzipSync} from 'node:zlib';
+import {createHash} from 'node:crypto';
+const root='scripts/boundary-sources/antarctica/';
+fs.mkdirSync(root,{recursive:true});
+const url='https://www.comnap.aq/s/Facilities_Nov2024.csv',response=await fetch(url);
+if(!response.ok)throw Error('COMNAP '+response.status);
+const bytes=Buffer.from(await response.arrayBuffer());
+fs.writeFileSync(root+'facilities-nov2024.csv.gz',gzipSync(bytes,{level:9}));
+fs.writeFileSync(root+'manifest.json',JSON.stringify({retrieved:'2026-10-27',edition:'November 2024',files:{'facilities-nov2024.csv':{url,sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length,encoding:'windows-1252',credit:'COMNAP; information supplied by national Antarctic programs',license:'Educational and non-commercial use; https://www.comnap.aq/antarctic-facilities-information'}}},null,2)+'\n');
+console.log('Retained COMNAP November 2024 facility list:',bytes.length,'bytes.');

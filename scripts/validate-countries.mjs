@@ -6,7 +6,7 @@ import '../dist/countries.js';
 const {ids,countries,fallback,route,viewRoute,byAdapter}=globalThis.AtlasCountries;
 const exists=file=>fs.existsSync('dist/'+file);
 const css=fs.readdirSync('dist').filter(f=>f.endsWith('.css')).map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
-const adapters=['china','korea','mongolia','japan','archipelago','southeast-asia','south-america','russia','southern-africa','europe'];
+const adapters=['antarctica','china','korea','mongolia','japan','archipelago','southeast-asia','south-america','russia','southern-africa','europe'];
 const symbols=['ring','matryoshka','philippine-sun','compass','taiji','taegeuk','soyombo','kazakh-sun-eagle','kyrgyz-tunduk','us-seal'];
 assert(countries[fallback]&&!countries[fallback].release,'The fallback country is public');
 for(const id of ids){
@@ -54,6 +54,6 @@ assert.equal(history.timeZone,'America/Chicago');
 assert.deepEqual(history.entries.map(e=>e.country).sort(),[...ids].sort(),'Every country records its addition date exactly once');
 for(const e of history.entries){assert.equal(e.name,countries[e.country].en);assert(/^\d{4}-\d{2}-\d{2}$/.test(e.addedOn)&&Number.isFinite(Date.parse(e.addedOn)),e.country+' addition date');assert(['first-tracked-implementation','local-implementation'].includes(e.basis));assert(e.basis==='first-tracked-implementation'?/^[a-f0-9]{40}$/.test(e.evidence.commit):!!e.evidence.note,e.country+' date evidence');}
 
-for(const id of AtlasCountries.ids)assert(['Africa','Asia','Europe','North America','Oceania','South America'].includes(AtlasCountries.countries[id].continent),id+' has a menu continent');
+for(const id of AtlasCountries.ids)assert(['Africa','Asia','Europe','North America','Oceania','South America','Antarctica'].includes(AtlasCountries.countries[id].continent),id+' has a menu continent');
 
 for(const id of ids)if(countries[id].map?.countryStatistics)assert.equal(countries[id].map.countryProfile,false,id+' country overview stays hidden');

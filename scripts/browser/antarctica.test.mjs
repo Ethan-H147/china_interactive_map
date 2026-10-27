@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {searchAndSelect} from './countries.test.mjs';
+const records=JSON.parse(fs.readFileSync('dist/data/antarctica/facilities.json')).records;
+const southPole=records.find(r=>r.en.includes('Amundsen')),mcmurdo=records.find(r=>r.en.includes('McMurdo'));
+export default [1280,390].map(width=>({name:'Antarctica station map, pole, search, saved view and country switch '+width,options:{width,height:900,mobile:width===390},async run(p,base){
+ await p.open(base,'#antarctica');await p.waitFor('AtlasEntry.current==="antarctica"&&currentAtlas()?.ready');await p.settle();
+ assert.equal(await p.evaluate('map.getProjection().type'),'globe');
+ assert(await p.evaluate('map.getCenter().lat<-84'),'Home view shows the polar region');
+ assert.equal(await p.evaluate('document.querySelectorAll(".antarctic-station-dot").length'),records.length);
+ assert.equal(await p.evaluate('document.querySelector("#antarctica-sidebar [id$=tab-quiz]")'),null);
+ await p.screenshot('antarctica-overview-'+width);
+ await p.tap('.antarctic-station-dot[data-atlas-place="'+southPole.id+'"]');await p.settle();
+ assert.equal(await p.evaluate('currentAtlas().getSelection()'),southPole.id);
+ assert.equal(await p.evaluate('document.getElementById("aq-name").textContent'),southPole.en);
+ await p.screenshot('antarctica-south-pole-'+width);
+ await searchAndSelect(p,'McMurdo',mcmurdo.en,'Station');assert.equal(await p.evaluate('currentAtlas().getSelection()'),mcmurdo.id);
+ assert((await p.evaluate('document.getElementById("aq-facts").textContent')).includes('United States'));
+ const hash=await p.evaluate('AtlasView.hashFor(captureView())');assert(hash?.startsWith('#antarctica/view='));
+ await p.open(base,hash);await p.waitFor('currentAtlas()?.getSelection()==='+JSON.stringify(mcmurdo.id));
+ await p.screenshot('antarctica-mcmurdo-'+width);
+ await p.evaluate('changeAtlas("australia",false)');await p.settle();assert.equal(await p.evaluate('AtlasEntry.current'),'australia');
+ assert.equal(await p.evaluate('map.getProjection().type'),'mercator','The previous flat-map preference returns');
+ assert.equal(await p.evaluate('document.querySelectorAll(".antarctic-station-dot").length'),0);
+ await p.evaluate('changeAtlas("antarctica",false)');await p.settle();assert.equal(await p.evaluate('map.getProjection().type'),'globe');
+ assert(await p.evaluate('map.getCenter().lat<-84'));assert.equal(await p.evaluate('document.querySelectorAll(".antarctic-station-dot").length'),records.length);
+ assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));
+}}));

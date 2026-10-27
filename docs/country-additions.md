@@ -145,3 +145,7 @@ See [Moldova and Central Asia](moldova-central-asia.md) for boundary dates, stat
 | 2026-10-26 | United Arab Emirates | Local implementation | Seven emirates; dated available emirate population. |
 
 See [Caucasus and Gulf countries](caucasus-gulf.md) for sources, boundary dates and statistical coverage.
+
+| 2026-10-27 | Antarctica | Local implementation | One continental map with 112 COMNAP research facilities south of 60°S, station search, dated operator/season/status details and real-coordinate station dots. Existing claim wedges appear only in their claimant country maps. |
+
+See [Antarctica](antarctica.md) for source dates and projection limits.

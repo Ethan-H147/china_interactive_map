@@ -417,9 +417,9 @@
     "balkans": "Detailed Balkan land frontiers supersede residual generalized shoreline segments within 200 metres. Existing atlas borders are retained; Croatia–Montenegro stops at the verified shared-way coastal endpoint.",
     "balkanFallbackRefresh": "Country fallback land refreshed from the six final reconciled contexts, preserving all other atlas and foreign geometry."
   },
-  "bytes": 5687820,
+  "bytes": 5739030,
   "fallbackSimplificationDegrees": 0.018,
-  "outlineBytes": 688042,
+  "outlineBytes": 577535,
   "titicacaShoreline": {
     "relations": [
       3000330,
@@ -443,10 +443,6 @@
     "source": "data/europe/myanmar/sources.json; data/europe/laos/sources.json",
     "license": "Natural Earth public domain; © OpenStreetMap contributors ODbL 1.0",
     "method": "Lake water excluded from detailed country land is also cut from fallback world land."
-  },
-  "norwegianAntarcticCoast": {
-    "source": "data/europe/norway/sources.json",
-    "method": "The coarse Antarctic land in the displayed Queen Maud Land sector is replaced by a lightweight preview of the Natural Earth 1:10m coastline used in the explicitly labelled Norwegian claim. Its country palette follows the Norwegian context, keeping coarse land out of the water."
   },
   "himalayaCountryShapes": {
     "countries": [
@@ -1122,5 +1118,9 @@
       "bahrain": "1eeb7445cdd622debd0c93af0ed85d5583d3b83dff6746e788f9ac276f3dbcb0",
       "united-arab-emirates": "c06c20d7cc957bb9ff37d8d833fb01845bf06837bb6ff5f9a00fe3e58f4a9bfc"
     }
+  },
+  "antarctica": {
+    "source": "data/antarctica/sources.json",
+    "policy": "One continent in shared backgrounds; territorial sectors are visible only when their claimant country is open."
   }
 }

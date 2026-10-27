@@ -10,6 +10,7 @@ try{
   modules.AtlasSettings='settings.mjs';
   modules.AtlasPerformance='map-performance.mjs';
   modules.AtlasGlobeRenderer='globe-renderer.mjs';
+  modules.AtlasGlobeNavigation='globe-navigation.mjs';
   modules.AtlasInput='map-interaction.mjs';
   modules.AtlasFirstLevelQuiz='first-level-quiz.mjs';
   modules.AtlasQuizOverlay='quiz-overlay.mjs';modules.AtlasUsCountyQuiz='us-county-quiz.mjs';

@@ -1,0 +1,109 @@
+{
+  "retrieved": "2026-10-27",
+  "policy": [
+    "Use the COMNAP operator countries, not territorial claimants. Joint operators retain all distinct national flags.",
+    "USAP flags are shared program designs associated with the three stations; no exclusive or statutory status is asserted.",
+    "The Artigas image linked in the Antarctic flags table resolves to the historical Artigas flag rather than the described station design. Exclude that image until station artwork can be verified.",
+    "Gabriel de Castilla retains the photographed vertical design; exclude the inferred horizontal reconstruction."
+  ],
+  "flags": {
+    "AQ-COMNAP-1": {
+      "name": "McMurdo",
+      "commonsFile": "United States Antarctic Program Flag (Light blue Variant).svg",
+      "classification": "Station-associated USAP flag",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/List_of_Antarctic_flags#Antarctic_base_flags",
+        "https://www.crwflags.com/fotw/flags/us_nsfap.html"
+      ],
+      "file": "vendor/antarctic-flags/AQ-COMNAP-1.webp",
+      "full": "vendor/antarctic-flags/AQ-COMNAP-1.svg",
+      "width": 512,
+      "height": 341,
+      "page": "https://commons.wikimedia.org/wiki/File:United_States_Antarctic_Program_Flag_(Light_blue_Variant).svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9c/United_States_Antarctic_Program_Flag_%28Light_blue_Variant%29.svg",
+      "credit": "Ryderpedia",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sha256": "41d148cebbb699d114c62ad4b234cd59c5f5348e582d6d848dad9c8e6828c14f",
+      "commonsSha1": "294a139574bd748869fc3269c0b16d314c6bca69"
+    },
+    "AQ-COMNAP-2": {
+      "name": "Amundsen–Scott South Pole",
+      "commonsFile": "United States Antarctic Program Flag (White Variant).svg",
+      "classification": "Station-associated USAP flag",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/List_of_Antarctic_flags#Antarctic_base_flags",
+        "https://www.crwflags.com/fotw/flags/us_nsfap.html"
+      ],
+      "file": "vendor/antarctic-flags/AQ-COMNAP-2.webp",
+      "full": "vendor/antarctic-flags/AQ-COMNAP-2.svg",
+      "width": 512,
+      "height": 341,
+      "page": "https://commons.wikimedia.org/wiki/File:United_States_Antarctic_Program_Flag_(White_Variant).svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/1/1d/United_States_Antarctic_Program_Flag_%28White_Variant%29.svg",
+      "credit": "Ryderpedia",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sha256": "fc6c8c268ca59f9d4dd5d54b6a36841f9f061ab33d661460b262df71f12a604e",
+      "commonsSha1": "8dc2d9d563e75ec6d96f9241da33dd3f0f39f211"
+    },
+    "AQ-COMNAP-3": {
+      "name": "Palmer",
+      "commonsFile": "United States Antarctic Program Flag.svg",
+      "classification": "Station-associated USAP flag",
+      "evidence": [
+        "https://en.wikipedia.org/wiki/List_of_Antarctic_flags#Antarctic_base_flags",
+        "https://www.crwflags.com/fotw/flags/us_nsfap.html"
+      ],
+      "file": "vendor/antarctic-flags/AQ-COMNAP-3.webp",
+      "full": "vendor/antarctic-flags/AQ-COMNAP-3.svg",
+      "width": 512,
+      "height": 341,
+      "page": "https://commons.wikimedia.org/wiki/File:United_States_Antarctic_Program_Flag.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/53/United_States_Antarctic_Program_Flag.svg",
+      "credit": "Ryderpedia",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "sha256": "92d6b4d8504efb097319b69cbbcf7bf41e5a40d136069a4a1a3b59edd92bc773",
+      "commonsSha1": "9dd96449dac7a6a5b6c2241fadd1423c201c1876"
+    },
+    "AQ-COMNAP-28": {
+      "name": "Arturo Prat Antarctic Naval Base",
+      "commonsFile": "Bandera de la Base Naval Capitán Arturo Prat.svg",
+      "classification": "Station flag",
+      "evidence": [
+        "https://commons.wikimedia.org/wiki/File:Bandera_de_la_Base_Naval_Capit%C3%A1n_Arturo_Prat.svg"
+      ],
+      "file": "vendor/antarctic-flags/AQ-COMNAP-28.webp",
+      "full": "vendor/antarctic-flags/AQ-COMNAP-28.svg",
+      "width": 512,
+      "height": 341,
+      "page": "https://commons.wikimedia.org/wiki/File:Bandera_de_la_Base_Naval_Capit%C3%A1n_Arturo_Prat.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bandera_de_la_Base_Naval_Capit%C3%A1n_Arturo_Prat.svg",
+      "credit": "Germenfer",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "sha256": "41849721f504a0a5c8f80b475b76f1a83752a774a5a6c09571e15cd12e322122",
+      "commonsSha1": "25250b7502407205b066dd25a98e5d4e722d2b9f"
+    },
+    "AQ-COMNAP-82": {
+      "name": "Gabriel de Castilla",
+      "commonsFile": "Gabriel de Castilla Spanish Antarctic Base.svg",
+      "classification": "Station flag",
+      "evidence": [
+        "https://commons.wikimedia.org/wiki/File:Gabriel_de_Castilla_Spanish_Antarctic_Base.svg"
+      ],
+      "file": "vendor/antarctic-flags/AQ-COMNAP-82.webp",
+      "full": "vendor/antarctic-flags/AQ-COMNAP-82.svg",
+      "width": 600,
+      "height": 900,
+      "page": "https://commons.wikimedia.org/wiki/File:Gabriel_de_Castilla_Spanish_Antarctic_Base.svg",
+      "source": "https://upload.wikimedia.org/wikipedia/commons/5/59/Gabriel_de_Castilla_Spanish_Antarctic_Base.svg",
+      "credit": "Germenfer",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "sha256": "9608b31683d7c13e1b876b36792da78801d823a335dabd5b610969c2c3783cdb",
+      "commonsSha1": "639bbebcb22f8e6c579e2c85a6901abd523a5143"
+    }
+  }
+}

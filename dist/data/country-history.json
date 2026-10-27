@@ -1321,6 +1321,15 @@
         ],
         "note": "Local implementation requested by the user. Source dates and administrative coverage are recorded in docs/caucasus-gulf.md. No commit or deployment performed."
       }
+    },
+    {
+      "country": "antarctica",
+      "name": "Antarctica",
+      "addedOn": "2026-10-27",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Station-centered continental map with COMNAP November 2024 facilities; territorial claim sectors remain claimant-map-only."
+      }
     }
   ]
 }

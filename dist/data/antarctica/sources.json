@@ -1,0 +1,30 @@
+{
+  "facilities": {
+    "retrieved": "2026-10-27",
+    "edition": "November 2024",
+    "files": {
+      "facilities-nov2024.csv": {
+        "url": "https://www.comnap.aq/s/Facilities_Nov2024.csv",
+        "sha256": "359a599885da91844970fa3beeb461ce2339a27c2805ffc0b9eeed06f4b97f60",
+        "bytes": 27835,
+        "encoding": "windows-1252",
+        "credit": "COMNAP; information supplied by national Antarctic programs",
+        "license": "Educational and non-commercial use; https://www.comnap.aq/antarctic-facilities-information"
+      }
+    }
+  },
+  "coast": {
+    "source": "Natural Earth 1:10m, retained nordics/ne-countries.json.gz",
+    "license": "Public domain",
+    "description": "One continental outline; no territorial sectors."
+  },
+  "treaty": {
+    "url": "https://www.ats.aq/e/antarctictreaty.html",
+    "note": "Article IV preserves positions on territorial claims without resolving sovereignty."
+  },
+  "coverage": {
+    "facilities": 112,
+    "edition": "November 2024",
+    "policy": "All listed facilities south of 60°S, including stations, camps and support sites. Subantarctic sites north of the Treaty area are excluded. Statuses refer to this edition, not a live operating report. Coordinates retain the source precision; moving ice-shelf stations can move."
+  }
+}

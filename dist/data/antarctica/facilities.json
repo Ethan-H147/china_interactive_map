@@ -1,0 +1,2700 @@
+{
+  "edition": "November 2024",
+  "source": "https://www.comnap.aq/s/Facilities_Nov2024.csv",
+  "records": [
+    {
+      "id": "AQ-COMNAP-39",
+      "en": "Aboa",
+      "local": "Aboa Station",
+      "center": [
+        -13.40735764,
+        -73.04228194
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Finland"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1988,
+      "elevation": 400,
+      "peakPopulation": 15,
+      "aliases": [
+        "Aboa Station",
+        "Aboa"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-2",
+      "en": "Amundsen-Scott South Pole",
+      "local": "Amundsen-Scott South Pole Station",
+      "center": [
+        142.266667,
+        -89.983333
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "United States"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1957,
+      "elevation": null,
+      "peakPopulation": 153,
+      "aliases": [
+        "Amundsen-Scott South Pole Station",
+        "Amundsen-Scott South Pole",
+        "South Pole",
+        "Amundsen Scott",
+        "Amundsen-Scott South Pole Station"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-93",
+      "en": "Artigas",
+      "local": "Artigas Station",
+      "center": [
+        -58.902442,
+        -62.184551
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Uruguay"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1984,
+      "elevation": 17,
+      "peakPopulation": 50,
+      "aliases": [
+        "Artigas Station",
+        "Artigas"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-28",
+      "en": "Arturo Prat Antarctic Naval Base",
+      "local": "Base Naval Antártica Arturo Prat",
+      "center": [
+        -59.663603,
+        -62.478717
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1947,
+      "elevation": 3,
+      "peakPopulation": 32,
+      "aliases": [
+        "Base Naval Antártica Arturo Prat",
+        "Arturo Prat Antarctic Naval Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-57",
+      "en": "Asuka",
+      "local": "Asuka Station",
+      "center": [
+        24.11251621,
+        -71.52627263
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Japan"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1985,
+      "elevation": 980.3,
+      "peakPopulation": null,
+      "aliases": [
+        "Asuka Station",
+        "Asuka"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-229",
+      "en": "Bahía Fildes Maritime Station",
+      "local": "Estación Marítima Bahía Fildes",
+      "center": [
+        -58.96115,
+        -62.201522
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Estación Marítima Bahía Fildes",
+        "Bahía Fildes Maritime Station"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-4",
+      "en": "Belgrano II Antarctic Base",
+      "local": "Base Antártica Belgrano II",
+      "center": [
+        -34.627778,
+        -77.873889
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1979,
+      "elevation": 256.5,
+      "peakPopulation": null,
+      "aliases": [
+        "Base Antártica Belgrano II",
+        "Belgrano II Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-68",
+      "en": "Bellingshausen",
+      "local": "Bellingshausen",
+      "center": [
+        -58.960609,
+        -62.198184
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1968,
+      "elevation": 16,
+      "peakPopulation": 40,
+      "aliases": [
+        "Bellingshausen",
+        "Bellingshausen"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-48",
+      "en": "Bharati",
+      "local": "Bharati Station",
+      "center": [
+        76.19525,
+        -69.4068
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "India"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 2012,
+      "elevation": 35,
+      "peakPopulation": 47,
+      "aliases": [
+        "Bharati Station",
+        "Bharati"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-5",
+      "en": "Brown Antarctic Base",
+      "local": "Base Antártica Brown",
+      "center": [
+        -62.870452,
+        -64.89537
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1951,
+      "elevation": 22,
+      "peakPopulation": 12,
+      "aliases": [
+        "Base Antártica Brown",
+        "Brown Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-51",
+      "en": "Browning Pass",
+      "local": "Browning Pass",
+      "center": [
+        163.915171,
+        -74.622906
+      ],
+      "level": 1,
+      "kind": "Airfield Camp",
+      "operators": [
+        "Italy"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1997,
+      "elevation": 63,
+      "peakPopulation": 2,
+      "aliases": [
+        "Browning Pass",
+        "Browning Pass"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-108",
+      "en": "Bunger Oasis",
+      "local": "Bunger Oasis",
+      "center": [
+        100.733333,
+        -66.266667
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": 29,
+      "peakPopulation": 15,
+      "aliases": [
+        "Bunger Oasis",
+        "Bunger Oasis"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-99",
+      "en": "Byrd Surface",
+      "local": "Byrd Surface Camp",
+      "center": [
+        -119.561353,
+        -80.013894
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "United States"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Byrd Surface Camp",
+        "Byrd Surface"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-6",
+      "en": "Cámara Antarctic Base",
+      "local": "Base Antártica Cámara",
+      "center": [
+        -59.919344,
+        -62.593858
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1953,
+      "elevation": 22,
+      "peakPopulation": 22,
+      "aliases": [
+        "Base Antártica Cámara",
+        "Cámara Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-9",
+      "en": "Carlini Antarctic Base",
+      "local": "Base Antártica Carlini",
+      "center": [
+        -58.666842,
+        -62.2379
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1953,
+      "elevation": 10,
+      "peakPopulation": 80,
+      "aliases": [
+        "Base Antártica Carlini",
+        "Carlini Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-102",
+      "en": "Carvajal",
+      "local": "Lieutenant Luis Carvajal Villarroel (SCTJ)",
+      "center": [
+        -68.914815,
+        -67.761322
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1985,
+      "elevation": 92,
+      "peakPopulation": 46,
+      "aliases": [
+        "Lieutenant Luis Carvajal Villarroel (SCTJ)",
+        "Carvajal"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-19",
+      "en": "Casey",
+      "local": "Casey Station",
+      "center": [
+        110.526792,
+        -66.282343
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Australia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1969,
+      "elevation": 32,
+      "peakPopulation": 120,
+      "aliases": [
+        "Casey Station",
+        "Casey"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-24",
+      "en": "Comandante Ferraz",
+      "local": "Estacao Antartica Comandante Ferraz",
+      "center": [
+        -58.398722,
+        -62.085472
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Brazil"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1984,
+      "elevation": 3,
+      "peakPopulation": 64,
+      "aliases": [
+        "Estacao Antartica Comandante Ferraz",
+        "Comandante Ferraz"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-42",
+      "en": "Concordia",
+      "local": "Concordia Station",
+      "center": [
+        123.332605,
+        -75.099975
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Italy",
+        "France"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1997,
+      "elevation": null,
+      "peakPopulation": 80,
+      "aliases": [
+        "Concordia Station",
+        "Concordia"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-238",
+      "en": "Criosfera 1",
+      "local": "Criosfera 1",
+      "center": [
+        -79.5,
+        -84
+      ],
+      "level": 1,
+      "kind": "Laboratory",
+      "operators": [
+        "Brazil"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2012,
+      "elevation": null,
+      "peakPopulation": 8,
+      "aliases": [
+        "Criosfera 1",
+        "Criosfera 1"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-243",
+      "en": "Criosfera 2",
+      "local": "Criosfera 2 (SkyBRA)",
+      "center": [
+        78.676667,
+        -79.696667
+      ],
+      "level": 1,
+      "kind": "Laboratory",
+      "operators": [
+        "Brazil"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Criosfera 2 (SkyBRA)",
+        "Criosfera 2"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-240",
+      "en": "Cruls",
+      "local": "Astrônomo Cruls",
+      "center": [
+        -58.98,
+        -62.25
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Brazil"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Astrônomo Cruls",
+        "Cruls"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-236",
+      "en": "CZ*ECO Nelson",
+      "local": "CZ*ECO Nelson",
+      "center": [
+        -58.983333,
+        -62.25
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Czech Republic"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1989,
+      "elevation": null,
+      "peakPopulation": 8,
+      "aliases": [
+        "CZ*ECO Nelson",
+        "CZ*ECO Nelson"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-117",
+      "en": "D85 Skiway camp",
+      "local": "D85 Skiway camp",
+      "center": [
+        134.145833,
+        -70.425
+      ],
+      "level": 1,
+      "kind": "Airfield Camp",
+      "operators": [
+        "France"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "D85 Skiway camp",
+        "D85 Skiway camp"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-20",
+      "en": "Davis",
+      "local": "Davis Station",
+      "center": [
+        77.969516,
+        -68.575938
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Australia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1957,
+      "elevation": 27,
+      "peakPopulation": 91,
+      "aliases": [
+        "Davis Station",
+        "Davis"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-7",
+      "en": "Decepcion Antarctic Base",
+      "local": "Base Antártica Decepción",
+      "center": [
+        -60.700695,
+        -62.97676
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1948,
+      "elevation": 7,
+      "peakPopulation": 36,
+      "aliases": [
+        "Base Antártica Decepción",
+        "Decepcion Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-107",
+      "en": "Dirck Gerritsz Laboratory",
+      "local": "Dirck Gerritsz Laboratory",
+      "center": [
+        -68.124377,
+        -67.568636
+      ],
+      "level": 1,
+      "kind": "Laboratory",
+      "operators": [
+        "Netherlands",
+        "United Kingdom"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2012,
+      "elevation": 16,
+      "peakPopulation": 10,
+      "aliases": [
+        "Dirck Gerritsz Laboratory",
+        "Dirck Gerritsz Laboratory"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-58",
+      "en": "Dome Fuji",
+      "local": "Dome Fuji Station",
+      "center": [
+        39.69877019,
+        -77.31707524
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Japan"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1995,
+      "elevation": null,
+      "peakPopulation": 15,
+      "aliases": [
+        "Dome Fuji Station",
+        "Dome Fuji"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-32",
+      "en": "Dr. Guillermo Mann",
+      "local": "Base Dr. Guillermo Mann",
+      "center": [
+        -60.771178,
+        -62.47015
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1991,
+      "elevation": 15,
+      "peakPopulation": 6,
+      "aliases": [
+        "Base Dr. Guillermo Mann",
+        "Dr. Guillermo Mann"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-69",
+      "en": "Druzhnaya IV",
+      "local": "Druzhnaya IV",
+      "center": [
+        73.709214,
+        -69.747827
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": 20,
+      "peakPopulation": 50,
+      "aliases": [
+        "Druzhnaya IV",
+        "Druzhnaya IV"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-41",
+      "en": "Dumont d'Urville",
+      "local": "Dumont d'Urville Station",
+      "center": [
+        140.001333,
+        -66.662833
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "France"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1956,
+      "elevation": 42,
+      "peakPopulation": 90,
+      "aliases": [
+        "Dumont d'Urville Station",
+        "Dumont d'Urville"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-17",
+      "en": "Edgeworth David",
+      "local": "Edgeworth David Camp",
+      "center": [
+        100.604213,
+        -66.249935
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "Australia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": 15,
+      "peakPopulation": null,
+      "aliases": [
+        "Edgeworth David Camp",
+        "Edgeworth David"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-52",
+      "en": "Enigma Lake",
+      "local": "Enigma Lake",
+      "center": [
+        164.027711,
+        -74.719164
+      ],
+      "level": 1,
+      "kind": "Airfield Camp",
+      "operators": [
+        "Italy"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2005,
+      "elevation": 250,
+      "peakPopulation": null,
+      "aliases": [
+        "Enigma Lake",
+        "Enigma Lake"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-8",
+      "en": "Esperanza Antarctic Base",
+      "local": "Base Antártica Esperanza",
+      "center": [
+        -56.998054,
+        -63.396959
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1952,
+      "elevation": 25,
+      "peakPopulation": 90,
+      "aliases": [
+        "Base Antártica Esperanza",
+        "Esperanza Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-225",
+      "en": "Estacion Polar Cientifica Conjunta Glaciar Union",
+      "local": "Estación Polar Científica Conjunta Glaciar Unión (EPCCGU)",
+      "center": [
+        -82.916667,
+        -79.766667
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": 680,
+      "peakPopulation": null,
+      "aliases": [
+        "Estación Polar Científica Conjunta Glaciar Unión (EPCCGU)",
+        "Estacion Polar Cientifica Conjunta Glaciar Union"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-87",
+      "en": "Fossil Bluff",
+      "local": "Fossil Bluff",
+      "center": [
+        -68.289064,
+        -71.323412
+      ],
+      "level": 1,
+      "kind": "Depot",
+      "operators": [
+        "United Kingdom"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1961,
+      "elevation": 92,
+      "peakPopulation": 6,
+      "aliases": [
+        "Fossil Bluff",
+        "Fossil Bluff"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-82",
+      "en": "Gabriel de Castilla Station",
+      "local": "Gabriel de Castilla Station",
+      "center": [
+        -60.67574545,
+        -62.97719656
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Spain"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1990,
+      "elevation": 15,
+      "peakPopulation": 36,
+      "aliases": [
+        "Gabriel de Castilla Station",
+        "Gabriel de Castilla Station"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-34",
+      "en": "Gabriel Gonzalez Videla",
+      "local": "Base Antártica Presidente Gabriel González Videla",
+      "center": [
+        -62.857499,
+        -64.823862
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1951,
+      "elevation": 6,
+      "peakPopulation": 15,
+      "aliases": [
+        "Base Antártica Presidente Gabriel González Videla",
+        "Gabriel Gonzalez Videla"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-44",
+      "en": "German Antarctic Receiving Station (GARS)",
+      "local": "German Antarctic Receiving Station (GARS)",
+      "center": [
+        -57.90094,
+        -63.321092
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Germany"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1991,
+      "elevation": 17,
+      "peakPopulation": 10,
+      "aliases": [
+        "German Antarctic Receiving Station (GARS)",
+        "German Antarctic Receiving Station (GARS)"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-242",
+      "en": "Goeldi",
+      "local": "Emilio Goeldi",
+      "center": [
+        -55.35,
+        -61.133333
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Brazil"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1988,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Emilio Goeldi",
+        "Goeldi"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-45",
+      "en": "Gondwana",
+      "local": "Gondwana Station",
+      "center": [
+        164.221215,
+        -74.635501
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Germany"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1983,
+      "elevation": 20,
+      "peakPopulation": 20,
+      "aliases": [
+        "Gondwana Station",
+        "Gondwana"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-73",
+      "en": "Great Wall",
+      "local": "Great Wall Station",
+      "center": [
+        -58.961992,
+        -62.217519
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "China"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1985,
+      "elevation": 10,
+      "peakPopulation": 60,
+      "aliases": [
+        "Great Wall Station",
+        "Great Wall"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-90",
+      "en": "Halley VI",
+      "local": "Halley VI",
+      "center": [
+        -25.473889,
+        -75.571111
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "United Kingdom"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1956,
+      "elevation": 37,
+      "peakPopulation": null,
+      "aliases": [
+        "Halley VI",
+        "Halley VI"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-65",
+      "en": "Henryk Arctowski",
+      "local": "Henryk Arctowski Polish Antarctic Station",
+      "center": [
+        -58.473322,
+        -62.159773
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Poland"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1977,
+      "elevation": 2,
+      "peakPopulation": 40,
+      "aliases": [
+        "Henryk Arctowski Polish Antarctic Station",
+        "Henryk Arctowski"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-110",
+      "en": "International Field Camp Peninsula Byers",
+      "local": "International Field Camp Peninsula Byers",
+      "center": [
+        -61.099436,
+        -62.663772
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "Spain"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2001,
+      "elevation": 10,
+      "peakPopulation": 12,
+      "aliases": [
+        "International Field Camp Peninsula Byers",
+        "International Field Camp Peninsula Byers"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-106",
+      "en": "Jang Bogo",
+      "local": "Jang Bogo",
+      "center": [
+        164.2,
+        -74.623333
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Republic of Korea"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 2014,
+      "elevation": 36.6,
+      "peakPopulation": 80,
+      "aliases": [
+        "Jang Bogo",
+        "Jang Bogo"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-36",
+      "en": "Johann Gregor Mendel Czech Antarctic Station",
+      "local": "Ceska vedecka stanice Johanna Gregora Mendela",
+      "center": [
+        -57.882592,
+        -63.800625
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Czech Republic"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2006,
+      "elevation": 10,
+      "peakPopulation": 20,
+      "aliases": [
+        "Ceska vedecka stanice Johanna Gregora Mendela",
+        "Johann Gregor Mendel Czech Antarctic Station"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-83",
+      "en": "Juan Carlos I",
+      "local": "Juan Carlos I Station",
+      "center": [
+        -60.38814603,
+        -62.66340863
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Spain"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1988,
+      "elevation": 12,
+      "peakPopulation": 50,
+      "aliases": [
+        "Juan Carlos I Station",
+        "Juan Carlos I"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-105",
+      "en": "King Sejong",
+      "local": "King Sejong",
+      "center": [
+        -58.783333,
+        -62.216667
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Republic of Korea"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1988,
+      "elevation": 10,
+      "peakPopulation": 78,
+      "aliases": [
+        "King Sejong",
+        "King Sejong"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-46",
+      "en": "Kohnen",
+      "local": "Kohnen Station",
+      "center": [
+        0.066336,
+        -75.001909
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Germany"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 2000,
+      "elevation": null,
+      "peakPopulation": 28,
+      "aliases": [
+        "Kohnen Station",
+        "Kohnen"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-74",
+      "en": "Kunlun",
+      "local": "Kunlun Station",
+      "center": [
+        77.1159973,
+        -80.41718972
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "China"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2009,
+      "elevation": null,
+      "peakPopulation": 26,
+      "aliases": [
+        "Kunlun Station",
+        "Kunlun"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-22",
+      "en": "Law",
+      "local": "Law Station",
+      "center": [
+        76.380696,
+        -69.388296
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Australia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": 13,
+      "aliases": [
+        "Law Station",
+        "Law"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-70",
+      "en": "Leningradskaya",
+      "local": "Leningradskaya",
+      "center": [
+        159.391148,
+        -69.501496
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1971,
+      "elevation": 300,
+      "peakPopulation": 10,
+      "aliases": [
+        "Leningradskaya",
+        "Leningradskaya"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-27",
+      "en": "Lieutenant Rodolfo Marsh Martin Aerodrome",
+      "local": "Aerodromo Teniente Rodolfo Marsh Martin",
+      "center": [
+        -58.980605,
+        -62.193794
+      ],
+      "level": 1,
+      "kind": "Airfield Camp",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1980,
+      "elevation": 46,
+      "peakPopulation": 15,
+      "aliases": [
+        "Aerodromo Teniente Rodolfo Marsh Martin",
+        "Lieutenant Rodolfo Marsh Martin Aerodrome"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-64",
+      "en": "Machu Picchu",
+      "local": "Machu Picchu Station",
+      "center": [
+        -58.47055896,
+        -62.09159252
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Peru"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1989,
+      "elevation": 3.5,
+      "peakPopulation": 30,
+      "aliases": [
+        "Machu Picchu Station",
+        "Machu Picchu"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-50",
+      "en": "Maitri",
+      "local": "Maitri Station",
+      "center": [
+        11.730783,
+        -70.766834
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "India"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1989,
+      "elevation": 117,
+      "peakPopulation": 65,
+      "aliases": [
+        "Maitri Station",
+        "Maitri"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-10",
+      "en": "Marambio Antarctic Base",
+      "local": "Base Antártica Marambio",
+      "center": [
+        -56.623225,
+        -64.241769
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1969,
+      "elevation": 209.5,
+      "peakPopulation": 165,
+      "aliases": [
+        "Base Antártica Marambio",
+        "Marambio Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-95",
+      "en": "Marble Point Refueling Facility",
+      "local": "Marble Point Refueling Facility",
+      "center": [
+        163.83333,
+        -77.433332
+      ],
+      "level": 1,
+      "kind": "Depot",
+      "operators": [
+        "United States"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Marble Point Refueling Facility",
+        "Marble Point Refueling Facility"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-55",
+      "en": "Mario Zucchelli",
+      "local": "Stazione Mario Zucchelli",
+      "center": [
+        164.113268,
+        -74.694807
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Italy"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1986,
+      "elevation": 15,
+      "peakPopulation": 112,
+      "aliases": [
+        "Stazione Mario Zucchelli",
+        "Mario Zucchelli"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-11",
+      "en": "Matienzo Antarctic Base",
+      "local": "Base Antártica Matienzo",
+      "center": [
+        -60.070948,
+        -64.975865
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1961,
+      "elevation": 32,
+      "peakPopulation": 12,
+      "aliases": [
+        "Base Antártica Matienzo",
+        "Matienzo Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-21",
+      "en": "Mawson",
+      "local": "Mawson Station",
+      "center": [
+        62.873028,
+        -67.602644
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Australia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1954,
+      "elevation": 15,
+      "peakPopulation": 53,
+      "aliases": [
+        "Mawson Station",
+        "Mawson"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-1",
+      "en": "McMurdo",
+      "local": "McMurdo Station",
+      "center": [
+        166.666667,
+        -77.85
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "United States"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1956,
+      "elevation": 10,
+      "peakPopulation": null,
+      "aliases": [
+        "McMurdo Station",
+        "McMurdo"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-12",
+      "en": "Melchior Antarctic Base",
+      "local": "Base Antártica Melchior",
+      "center": [
+        -62.976329,
+        -64.325705
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1947,
+      "elevation": 4,
+      "peakPopulation": 15,
+      "aliases": [
+        "Base Antártica Melchior",
+        "Melchior Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-71",
+      "en": "Mirny",
+      "local": "Mirny",
+      "center": [
+        93.009559,
+        -66.553181
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1956,
+      "elevation": 35,
+      "peakPopulation": 50,
+      "aliases": [
+        "Mirny",
+        "Mirny"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-59",
+      "en": "Mizuho",
+      "local": "Mizuho Station",
+      "center": [
+        44.27781168,
+        -70.6990456
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Japan"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1970,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Mizuho Station",
+        "Mizuho"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-72",
+      "en": "Molodezhnaya",
+      "local": "Molodezhnaya",
+      "center": [
+        45.842038,
+        -67.665443
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1963,
+      "elevation": 40,
+      "peakPopulation": 15,
+      "aliases": [
+        "Molodezhnaya",
+        "Molodezhnaya"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-101",
+      "en": "Mountain Evening",
+      "local": "Mountain Vechernyaya",
+      "center": [
+        46.153333,
+        -67.658333
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Republic of Belarus"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2006,
+      "elevation": 95,
+      "peakPopulation": 12,
+      "aliases": [
+        "Mountain Vechernyaya",
+        "Mountain Evening"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-47",
+      "en": "Neumayer III",
+      "local": "Neumayer-Station III",
+      "center": [
+        -8.284148,
+        -70.660516
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Germany"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 2009,
+      "elevation": 42,
+      "peakPopulation": 60,
+      "aliases": [
+        "Neumayer-Station III",
+        "Neumayer III"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-76",
+      "en": "Novolazarevskaya",
+      "local": "Novolazarevskaya",
+      "center": [
+        11.832151,
+        -70.775796
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1961,
+      "elevation": 102,
+      "peakPopulation": 70,
+      "aliases": [
+        "Novolazarevskaya",
+        "Novolazarevskaya"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-31",
+      "en": "O'Higgins Base",
+      "local": "General Bernardo O'Higgins Riquelme",
+      "center": [
+        -57.899781,
+        -63.320951
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1948,
+      "elevation": 12,
+      "peakPopulation": 70,
+      "aliases": [
+        "General Bernardo O'Higgins Riquelme",
+        "O'Higgins Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-13",
+      "en": "Orcadas Antarctic Base",
+      "local": "Base Orcadas",
+      "center": [
+        -44.737387,
+        -60.737592
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1904,
+      "elevation": 8,
+      "peakPopulation": 65,
+      "aliases": [
+        "Base Orcadas",
+        "Orcadas Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-3",
+      "en": "Palmer",
+      "local": "Palmer Station",
+      "center": [
+        -64.053056,
+        -64.774167
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "United States"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1965,
+      "elevation": 10,
+      "peakPopulation": 46,
+      "aliases": [
+        "Palmer Station",
+        "Palmer"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-38",
+      "en": "Pedro Vicente Maldonado",
+      "local": "Pedro Vicente Maldonado Station",
+      "center": [
+        -59.74096859,
+        -62.44932928
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Ecuador"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1990,
+      "elevation": 10,
+      "peakPopulation": 34,
+      "aliases": [
+        "Pedro Vicente Maldonado Station",
+        "Pedro Vicente Maldonado"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-14",
+      "en": "Petrel Antarctic Base",
+      "local": "Base Antártica Petrel",
+      "center": [
+        -56.230993,
+        -63.478303
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1952,
+      "elevation": 18,
+      "peakPopulation": 45,
+      "aliases": [
+        "Base Antártica Petrel",
+        "Petrel Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-30",
+      "en": "President Eduardo Frei Antarctic Base",
+      "local": "Base Aérea Antártica Presidente Eduardo Frei Montalva",
+      "center": [
+        -58.962627,
+        -62.200232
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1969,
+      "elevation": 48,
+      "peakPopulation": 150,
+      "aliases": [
+        "Base Aérea Antártica Presidente Eduardo Frei Montalva",
+        "President Eduardo Frei Antarctic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-15",
+      "en": "Primavera Antarctic Base",
+      "local": "Base Antártica Primavera",
+      "center": [
+        -60.954256,
+        -64.155854
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1977,
+      "elevation": 50,
+      "peakPopulation": 18,
+      "aliases": [
+        "Base Antártica Primavera",
+        "Primavera Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-23",
+      "en": "Princess Elisabeth Antarctica",
+      "local": "Princess Elisabeth Antarctica",
+      "center": [
+        23.346891,
+        -71.949858
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Belgium"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2008,
+      "elevation": null,
+      "peakPopulation": 50,
+      "aliases": [
+        "Princess Elisabeth Antarctica",
+        "Princess Elisabeth Antarctica"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-29",
+      "en": "Professor Julio Escudero",
+      "local": "Profesor Julio Escudero Base",
+      "center": [
+        -58.962676,
+        -62.201373
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1995,
+      "elevation": 10,
+      "peakPopulation": 60,
+      "aliases": [
+        "Profesor Julio Escudero Base",
+        "Professor Julio Escudero"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-77",
+      "en": "Progress",
+      "local": "Progress",
+      "center": [
+        76.388247,
+        -69.37795
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1989,
+      "elevation": 15,
+      "peakPopulation": 50,
+      "aliases": [
+        "Progress",
+        "Progress"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-245",
+      "en": "QinLing",
+      "local": "QinLing",
+      "center": [
+        163.713006,
+        -74.934071
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "China"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 2024,
+      "elevation": null,
+      "peakPopulation": 120,
+      "aliases": [
+        "QinLing",
+        "QinLing"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-104",
+      "en": "Rada Covadonga",
+      "local": "Rada Covadonga",
+      "center": [
+        -57.898224,
+        -63.320658
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Rada Covadonga",
+        "Rada Covadonga"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-37",
+      "en": "Republica del Ecuador",
+      "local": "Refugio República del Ecuador",
+      "center": [
+        -58.3951612,
+        -62.12099018
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Ecuador"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1990,
+      "elevation": 10,
+      "peakPopulation": 4,
+      "aliases": [
+        "Refugio República del Ecuador",
+        "Republica del Ecuador"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-103",
+      "en": "Ripamonti",
+      "local": "Ripamonti",
+      "center": [
+        -58.93474,
+        -62.210151
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": 50,
+      "peakPopulation": null,
+      "aliases": [
+        "Ripamonti",
+        "Ripamonti"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-33",
+      "en": "Risopatron",
+      "local": "Luis Risopatrón",
+      "center": [
+        -59.700724,
+        -62.378533
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1949,
+      "elevation": 15,
+      "peakPopulation": 6,
+      "aliases": [
+        "Luis Risopatrón",
+        "Risopatron"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-40",
+      "en": "Robert Guillard",
+      "local": "Robert Guillard",
+      "center": [
+        139.90717,
+        -66.687608
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "France",
+        "Italy"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1994,
+      "elevation": 10,
+      "peakPopulation": 20,
+      "aliases": [
+        "Robert Guillard",
+        "Robert Guillard"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-91",
+      "en": "Rothera",
+      "local": "Rothera Research Station",
+      "center": [
+        -68.124888,
+        -67.569529
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "United Kingdom"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1975,
+      "elevation": 16,
+      "peakPopulation": 136,
+      "aliases": [
+        "Rothera Research Station",
+        "Rothera"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-94",
+      "en": "Ruperto Elichiribehety",
+      "local": "Ruperto Elichiribehety Station",
+      "center": [
+        -56.990907,
+        -63.402372
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Uruguay"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1997,
+      "elevation": 28,
+      "peakPopulation": 8,
+      "aliases": [
+        "Ruperto Elichiribehety Station",
+        "Ruperto Elichiribehety"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-78",
+      "en": "Russkaya",
+      "local": "Russkaya",
+      "center": [
+        -136.800072,
+        -74.765726
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1980,
+      "elevation": 126,
+      "peakPopulation": 10,
+      "aliases": [
+        "Russkaya",
+        "Russkaya"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-56",
+      "en": "S17 Camp",
+      "local": "S17 Camp",
+      "center": [
+        40.092449,
+        -69.028076
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "Japan"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": 620,
+      "peakPopulation": null,
+      "aliases": [
+        "S17 Camp",
+        "S17 Camp"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-16",
+      "en": "San Martin Antarctic Base",
+      "local": "Base Antártica San Martín",
+      "center": [
+        -67.102931,
+        -68.1303
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Argentina"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1951,
+      "elevation": 5,
+      "peakPopulation": 21,
+      "aliases": [
+        "Base Antártica San Martín",
+        "San Martin Antartic Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-81",
+      "en": "SANAE IV",
+      "local": "SANAE IV",
+      "center": [
+        -2.840324,
+        -71.672873
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "South Africa"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1962,
+      "elevation": 850,
+      "peakPopulation": 80,
+      "aliases": [
+        "SANAE IV",
+        "SANAE IV"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-232",
+      "en": "SANAP Summer Station",
+      "local": "SANAP Summer Station",
+      "center": [
+        -8.249999,
+        -70.6499974
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "South Africa"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2010,
+      "elevation": null,
+      "peakPopulation": 20,
+      "aliases": [
+        "SANAP Summer Station",
+        "SANAP Summer Station"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-61",
+      "en": "Scott Base",
+      "local": "Scott Base Station",
+      "center": [
+        166.767281,
+        -77.849437
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "New Zealand"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1957,
+      "elevation": 10,
+      "peakPopulation": 86,
+      "aliases": [
+        "Scott Base Station",
+        "Scott Base"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-92",
+      "en": "Signy",
+      "local": "Signy Station",
+      "center": [
+        -45.59538916,
+        -60.70828739
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "United Kingdom"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1947,
+      "elevation": 5,
+      "peakPopulation": 8,
+      "aliases": [
+        "Signy Station",
+        "Signy"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-111",
+      "en": "Siple Dome",
+      "local": "Siple Dome",
+      "center": [
+        -149.016667,
+        -81.666667
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "United States"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1973,
+      "elevation": null,
+      "peakPopulation": 10,
+      "aliases": [
+        "Siple Dome",
+        "Siple Dome"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-89",
+      "en": "Sky Blu",
+      "local": "Sky Blu",
+      "center": [
+        -71.5852,
+        -74.856351
+      ],
+      "level": 1,
+      "kind": "Depot",
+      "operators": [
+        "United Kingdom"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": 6,
+      "aliases": [
+        "Sky Blu",
+        "Sky Blu"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-79",
+      "en": "Soyuz",
+      "local": "Soyuz",
+      "center": [
+        68.794937,
+        -70.576577
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": 1982,
+      "elevation": 336,
+      "peakPopulation": 30,
+      "aliases": [
+        "Soyuz",
+        "Soyuz"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-25",
+      "en": "St. Kliment Ohridski",
+      "local": "St. Kliment Ohridski Base",
+      "center": [
+        -60.36523384,
+        -62.64072307
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Bulgaria"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1988,
+      "elevation": 15,
+      "peakPopulation": 22,
+      "aliases": [
+        "St. Kliment Ohridski Base",
+        "St. Kliment Ohridski"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-84",
+      "en": "Svea",
+      "local": "Svea",
+      "center": [
+        -11.224872,
+        -74.576061
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Sweden"
+      ],
+      "season": "Seasonal",
+      "status": "Temporarily Closed",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Svea",
+        "Svea"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-60",
+      "en": "Syowa",
+      "local": "Syowa Station",
+      "center": [
+        39.581836,
+        -69.004122
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Japan"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1957,
+      "elevation": 29,
+      "peakPopulation": 170,
+      "aliases": [
+        "Syowa Station",
+        "Syowa"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-96",
+      "en": "Taishan",
+      "local": "Taishan",
+      "center": [
+        76.966667,
+        -73.85
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "China"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2014,
+      "elevation": null,
+      "peakPopulation": 20,
+      "aliases": [
+        "Taishan",
+        "Taishan"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-112",
+      "en": "Talos Dome",
+      "local": "Talos Dome",
+      "center": [
+        159.200432,
+        -72.830215
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "Italy"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": null,
+      "elevation": null,
+      "peakPopulation": null,
+      "aliases": [
+        "Talos Dome",
+        "Talos Dome"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-62",
+      "en": "Tor",
+      "local": "Tor",
+      "center": [
+        5.159893,
+        -71.889515
+      ],
+      "level": 1,
+      "kind": "Refuge",
+      "operators": [
+        "Norway"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1993,
+      "elevation": null,
+      "peakPopulation": 6,
+      "aliases": [
+        "Tor",
+        "Tor"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-63",
+      "en": "Troll Station",
+      "local": "Troll Forskningsstasjon",
+      "center": [
+        2.53307,
+        -72.011946
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Norway"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1990,
+      "elevation": null,
+      "peakPopulation": 80,
+      "aliases": [
+        "Troll Forskningsstasjon",
+        "Troll Station"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-237",
+      "en": "Turkish Scientific Research Camp",
+      "local": "Turkish Scientific Research Camp",
+      "center": [
+        -67.237747,
+        -67.82965
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "Türkiye"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2019,
+      "elevation": 4,
+      "peakPopulation": 20,
+      "aliases": [
+        "Turkish Scientific Research Camp",
+        "Turkish Scientific Research Camp"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-86",
+      "en": "Vernadsky",
+      "local": "Vernadsky",
+      "center": [
+        -64.25748123,
+        -65.24574295
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Ukraine"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1996,
+      "elevation": 7,
+      "peakPopulation": 24,
+      "aliases": [
+        "Vernadsky",
+        "Vernadsky"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-80",
+      "en": "Vostok",
+      "local": "Vostok",
+      "center": [
+        106.836882,
+        -78.464182
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Russia"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1957,
+      "elevation": null,
+      "peakPopulation": 30,
+      "aliases": [
+        "Vostok",
+        "Vostok"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-114",
+      "en": "WAIS Divide",
+      "local": "WAIS Divide Camp",
+      "center": [
+        -112.083333,
+        -79.483333
+      ],
+      "level": 1,
+      "kind": "Camp",
+      "operators": [
+        "United States"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2005,
+      "elevation": null,
+      "peakPopulation": 40,
+      "aliases": [
+        "WAIS Divide Camp",
+        "WAIS Divide"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-85",
+      "en": "Wasa",
+      "local": "Wasa",
+      "center": [
+        -13.41291,
+        -73.042799
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Sweden"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1989,
+      "elevation": 440,
+      "peakPopulation": 10,
+      "aliases": [
+        "Wasa",
+        "Wasa"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-18",
+      "en": "Wilkins Aerodrome",
+      "local": "Wilkins Aerodrome",
+      "center": [
+        111.48715,
+        -66.687416
+      ],
+      "level": 1,
+      "kind": "Airfield Camp",
+      "operators": [
+        "Australia"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 2007,
+      "elevation": 734.7,
+      "peakPopulation": 12,
+      "aliases": [
+        "Wilkins Aerodrome",
+        "Wilkins Aerodrome"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-35",
+      "en": "Yelcho",
+      "local": "Base Yelcho",
+      "center": [
+        -63.583806,
+        -64.875858
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "Chile"
+      ],
+      "season": "Seasonal",
+      "status": "Open",
+      "established": 1962,
+      "elevation": 10,
+      "peakPopulation": 28,
+      "aliases": [
+        "Base Yelcho",
+        "Yelcho"
+      ],
+      "sourceEdition": "November 2024"
+    },
+    {
+      "id": "AQ-COMNAP-75",
+      "en": "Zhongshan",
+      "local": "Zhongshan Station",
+      "center": [
+        76.371871,
+        -69.373206
+      ],
+      "level": 1,
+      "kind": "Station",
+      "operators": [
+        "China"
+      ],
+      "season": "Year-Round",
+      "status": "Open",
+      "established": 1989,
+      "elevation": 11,
+      "peakPopulation": 60,
+      "aliases": [
+        "Zhongshan Station",
+        "Zhongshan"
+      ],
+      "sourceEdition": "November 2024"
+    }
+  ]
+}

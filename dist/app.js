@@ -12,8 +12,8 @@ const initialPreview=registry.countries[initialCountry]?.map||null;
 const map=new maplibregl.Map({container:'map',...(lowMemory?{maxTileCacheSize:12,maxTileCacheZoomLevels:2,pixelRatio:Math.min(devicePixelRatio||1,2)}:{}),style:{version:8,sources:{},layers:[{id:'background',type:'background',paint:{'background-color':initialBackground}}],transition:{duration:0,delay:0}},center:initialPreview?.center||[105,36],zoom:initialPreview?.zoom||(initialPreview?2:3),minZoom:.5,maxZoom:16,renderWorldCopies:!!registry.countries[initialCountry]?.worldCopies,dragRotate:false,pitchWithRotate:false,touchPitch:false,maxPitch:0,attributionControl:false,canvasContextAttributes:window.AtlasPerformance.contextOptions(),fadeDuration:0});
 // A tall phone viewport must not force a wide country back toward the equator.
 const phoneCameraQuery=matchMedia('(max-width:760px)');
-function constrainPhoneCamera(center,zoom){return {center:new maplibregl.LngLat(center.lng,Math.max(-85.051129,Math.min(85.051129,center.lat))),zoom:Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),zoom))};}
-function syncPhoneCamera(){map.setTransformConstrain(phoneCameraQuery.matches?constrainPhoneCamera:null);}
+function constrainPhoneCamera(center,zoom){const camera=window.AtlasGlobeNavigation.constrainCamera(center,zoom,{free:!!registry.countries[document.documentElement.dataset.atlas]?.freeGlobePan&&map.getProjection?.()?.type==='globe',minZoom:map.getMinZoom(),maxZoom:map.getMaxZoom()});return {...camera,center:new maplibregl.LngLat(camera.center.lng,camera.center.lat)};}
+function syncPhoneCamera(){map.setTransformConstrain(phoneCameraQuery.matches||registry.countries[document.documentElement.dataset.atlas]?.polar?constrainPhoneCamera:null);}
 phoneCameraQuery.addEventListener('change',syncPhoneCamera);syncPhoneCamera();
 window.AtlasGlobeRendererController=window.AtlasGlobeRenderer.attachGlobeRenderer(map);
 window.AtlasPerformanceController=window.AtlasPerformance.attach(map,{refreshLabels:updateLabels});
@@ -193,6 +193,7 @@ let navigationEpoch=0,navigationCleanup,previewStart;
 function cancelNavigation(){navigationEpoch++;navigationCleanup?.(false);navigationCleanup=null;finishNavigation=null;map.stop();}
 async function navigateBounds(bounds,options={},animate=true){
  if(zoomLock&&!zoomLock.allows({manual:options.manual,initial:atlasStarting,restoring:restoringView})){updateLabels();saveViewSoon();return true;}
+ if(registry.countries[atlasMode]?.polar&&options.overview&&!options.camera)options={...options,camera:currentAtlas()?.homeCamera()};
  cancelNavigation();const epoch=navigationEpoch,cameraOptions=navigationOptions(options);
  if(!animate||reducedMotion.matches||atlasStarting||restoringView){await motionRenderer.end();const target=options.camera||window.AtlasCameraFit.cameraForBounds(map,bounds,cameraOptions);if(target)map.jumpTo(target);unlockCamera();return !!target;}
  lockCamera();
@@ -310,7 +311,7 @@ function waitForCountrySources(ids,signal){
 // (China's and India's), a frontier inside the land the open country claims is hidden too, and a
 // claim line that is not the line of actual control (claimants) shows only on its claimants' maps.
 const unclaimed=open=>['all',['!=',['coalesce',['get','claimedBy'],''],open],['any',['!',['has','claimants']],['in',open||'-',['get','claimants']]]];
-function syncFrontiers(open){if(map.getLayer('atlas-frontiers'))map.setFilter('atlas-frontiers',registry.countries[open]?.ownFrontier?['all',['!',['in',' '+open+' ',['concat',' ',['get','countries'],' ']]],unclaimed(open)]:unclaimed(open));}
+function syncFrontiers(open){if(map.getLayer('shared-context-borders'))map.setFilter('shared-context-borders',unclaimed(open));if(map.getLayer('atlas-frontiers'))map.setFilter('atlas-frontiers',registry.countries[open]?.ownFrontier?['all',['!',['in',' '+open+' ',['concat',' ',['get','countries'],' ']]],unclaimed(open)]:unclaimed(open));}
 // China's displayed land in the neighbour band (world-land.mjs) sits beneath its simplified portal on
 // other maps; on China's own map it would show through a selected or hovered province's fill.
 const neighbourLandFilter=open=>['all',...(open==='china'?[['!=',['get','country'],'china']]:registry.countries[open]?.snapshot?.replaces?.length?[['!',['in',['get','country'],['literal',registry.countries[open].snapshot.replaces]]]]:[]),['!',['in',['get','country'],['literal',registry.ids.filter(id=>id!=='china'&&(window.AtlasDev?.allows(id)??registry.countries[id].release!=='developer')&&registry.countries[id].portal&&map.getLayer(registry.countries[id].portal.layer))]]]];
@@ -361,7 +362,7 @@ async function changeAtlas(next,animate=true,flight=false,focus=null){
   if(epoch!==countryEpoch)return false;
   targetAtlas=atlasFor(next);if(next!=='china'&&!targetAtlas)throw Error('Country outline unavailable');
   await motionRenderer.end();if(epoch!==countryEpoch)return false;
-  window.AtlasChinaPage.closeChinaInfo();currentAtlas()?.leave();clearHover();clearSelection();clearSearch();activeCode=null;atlasMode=next;mapScene.setSnapshot(registry.countries[next].snapshot?next:null,{replaceContexts:registry.countries[next].snapshot?.replaces||[]});
+  window.AtlasChinaPage.closeChinaInfo();currentAtlas()?.leave();clearHover();clearSelection();clearSearch();activeCode=null;atlasMode=next;if(!registry.countries[next].freeGlobePan&&map.getBearing())map.jumpTo({bearing:0});syncGlobe(false);mapScene.setSnapshot(registry.countries[next].snapshot?next:null,{replaceContexts:registry.countries[next].snapshot?.replaces||[]});
   labels.forEach(label=>label.remove());labels.length=0;
   $('china-sidebar').hidden=next!=='china';if($('mode-third'))$('mode-third').hidden=true;$('mode-province').hidden=false;$('mode-prefecture').hidden=false;$('breadcrumb-region').hidden=true;$('map-shell').dataset.selected='false';
   for(const f of provinceFeatures)setRegionState(provinceLayers.get(f.properties.adcode),{inactive:next!=='china'});
@@ -374,7 +375,7 @@ async function changeAtlas(next,animate=true,flight=false,focus=null){
   // Source registration precedes worker indexing. Finish both before the first flight.
   const pendingSources=Object.keys(map.getStyle().sources).filter(id=>!id.endsWith('-motion')&&(next==='china'?/^(provinces?|prefectures?|others?|city-districts?)(-|$)/.test(id):id.startsWith(next+'-')||id.startsWith('south-'+next+'-')));
   if(!await waitForCountrySources(pendingSources,preparation.signal)||epoch!==countryEpoch)return false;
-  await (flight&&!lowMemory&&!zoomLock?.locked&&!reducedMotion.matches?southAmerica.fly(bounds):navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:focus?14:registry.countries[next].home.maxZoom||8,overview:!focus},animate));
+  await (flight&&!registry.countries[next].polar&&!lowMemory&&!zoomLock?.locked&&!reducedMotion.matches?southAmerica.fly(bounds):navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:focus?14:registry.countries[next].home.maxZoom||8,overview:!focus},animate));
   if(epoch!==countryEpoch)return false;
   await motionRenderer.end();if(epoch!==countryEpoch)return false;
   countrySwitching=false;syncCountryFills();syncLayers();delete document.documentElement.dataset.switching;
@@ -493,6 +494,7 @@ function countryAt(point){
  // On phones the shared land layer is the hit target until a country is opened.
  if(map.getLayer('world-land'))for(const f of map.queryRenderedFeatures(point,{layers:['world-land']})){const id=f.properties.country;if(id&&registry.countries[id]&&window.AtlasDev.allows(id))hits.push({country:id,region:f.properties.region,bounds:f.properties.bounds});}
  for(const id of ['south-america-fill','south-america-portal-fill'])if(map.getLayer(id))for(const f of map.queryRenderedFeatures(point,{layers:[id]}))hits.push({country:f.properties.country});
+ const polar=window.AtlasAntarcticCap?.hit(point);if(polar)hits.push(polar);
  return hits.find(h=>h.country===atlasMode)||hits.find(h=>h.country&&h.region)||hits.find(h=>h.country);
 }
 map.on('click',event=>{
@@ -630,9 +632,9 @@ function storeForRepeatVisits(){
 }
 let archipelagoHost,portalLoader;
 async function addPortals(){
-  archipelagoHost={async stopCamera(){cancelNavigation();await motionRenderer.end();unlockCamera();},setQuizActive(value){quiz.active=value;quiz.type=value?'regional':undefined;window.AtlasRegionColorController?.suspend(value);$('map-shell').dataset.quiz=String(value);satelliteDisplay?.sync();controls();},isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{paddingTopLeft:camera.paddingTopLeft||[35,76],paddingBottomRight:camera.paddingBottomRight||[55,55],maxZoom:maxZoom+1,manual:camera.manual===true,maxDuration:camera.maxDuration}),syncAppearance:()=>satelliteDisplay?.sync()};
+  archipelagoHost={async stopCamera(){cancelNavigation();await motionRenderer.end();unlockCamera();},setQuizActive(value){quiz.active=value;quiz.type=value?'regional':undefined;window.AtlasRegionColorController?.suspend(value);$('map-shell').dataset.quiz=String(value);satelliteDisplay?.sync();controls();},isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{...camera,paddingTopLeft:camera.paddingTopLeft||[35,76],paddingBottomRight:camera.paddingBottomRight||[55,55],maxZoom:maxZoom+1,manual:camera.manual===true,maxDuration:camera.maxDuration}),syncAppearance:()=>satelliteDisplay?.sync()};
   // Adapters by name (countries.js gives each country's); loaded independently from the registry.
-  const adapters={korea:(_id,map)=>window.AtlasKorea.addKoreaPortal(map,{comparison,isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1,manual:camera.manual===true}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')}),
+  const adapters={antarctica:async(_id,map)=>(await import('./antarctica.mjs')).addAntarctica(map,archipelagoHost),korea:(_id,map)=>window.AtlasKorea.addKoreaPortal(map,{comparison,isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1,manual:camera.manual===true}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china')}),
   mongolia:(_id,map)=>window.AtlasMongolia.addMongoliaPortal(map,{isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:maxZoom+1,manual:camera.manual===true}),switchAtlas:changeAtlas,returnToChina:()=>changeAtlas('china'),population:p=>provincePopulation.mongolia[p.iso]||provincePopulation.mongolia[provincePopulation.mongoliaAliases[(p.en||'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase().replace(/[^a-z0-9]/g,'')]]}),
   japan:(_id,map)=>window.AtlasJapan.addJapanPortal(map,{comparison,isBusy:()=>quiz.active||countrySwitching,isMoving:()=>cameraBusy,controls,fit:(bounds,maxZoom,camera={})=>navigateBounds(bounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom,manual:camera.manual===true}),switchAtlas:changeAtlas}),
   archipelago:(id,map)=>window.AtlasArchipelago.addArchipelagoPortal(map,archipelagoHost,id),'southeast-asia':(id,map)=>window.AtlasSoutheastAsia.addCountryPortal(map,archipelagoHost,id),russia:(_id,map)=>window.AtlasRussia.addRussiaPortal(map,archipelagoHost)};
@@ -661,7 +663,7 @@ async function addRegions(capitals){
   atlasesReady=true;finishAtlases();
 }
 let viewSaveTimer,viewControlsReady=false;
-function captureView(){const center=map.getCenter();return {v:1,country:atlasMode,center:[+center.lng.toFixed(6),+center.lat.toFixed(6)],zoom:+map.getZoom().toFixed(4),selection:atlasMode==='china'?selected?.layer.feature.properties.adcode:currentAtlas()?.getSelection(),scope:currentAtlas()?.getScope?.(),mode:currentAtlas()?.getMode?.()||($('mode-province').getAttribute('aria-pressed')==='true'?1:2),locked:$('mode-lock').getAttribute('aria-pressed')==='true',language:currentAtlas()?.getLanguage?.()||window.AtlasLabels.getLanguage(),colorBy:window.AtlasRegionColorController?.getMetric()||'none',layers:Object.fromEntries(window.AtlasView.controls.filter(id=>$(id)).map(id=>[id,id==='satellite-opacity'?$(id).value:$(id).checked]))};}
+function captureView(){const center=map.getCenter();return {v:1,country:atlasMode,center:[+center.lng.toFixed(6),+center.lat.toFixed(6)],zoom:+map.getZoom().toFixed(4),...(Math.abs(map.getBearing())>.0001?{bearing:+map.getBearing().toFixed(4)}:{}),selection:atlasMode==='china'?selected?.layer.feature.properties.adcode:currentAtlas()?.getSelection(),scope:currentAtlas()?.getScope?.(),mode:currentAtlas()?.getMode?.()||($('mode-province').getAttribute('aria-pressed')==='true'?1:2),locked:$('mode-lock').getAttribute('aria-pressed')==='true',language:currentAtlas()?.getLanguage?.()||window.AtlasLabels.getLanguage(),colorBy:window.AtlasRegionColorController?.getMetric()||'none',layers:Object.fromEntries(window.AtlasView.controls.filter(id=>$(id)).map(id=>[id,id==='satellite-opacity'?$(id).value:$(id).checked]))};}
 function saveView(force=false){if(!viewControlsReady||atlasStarting||restoringView||quiz.active||(!force&&cameraBusy)||countrySwitching)return;const view=captureView();try{window.AtlasView.write(view,localStorage);}catch{}if(location.hash.includes('/view='))history.replaceState(null,'',location.pathname+location.search+window.AtlasView.hashFor(view));}
 function saveViewSoon(){clearTimeout(viewSaveTimer);viewSaveTimer=setTimeout(saveView,180);}
 function readSavedView(){try{return window.AtlasView.read(atlasMode,localStorage);}catch{return null;}}
@@ -678,7 +680,7 @@ async function restoreView(){
   for(const [id,value] of Object.entries(saved.layers)){const el=$(id);if(!el)continue;if(id==='satellite-opacity'){el.value=value;el.dispatchEvent(new Event('input'));}else{el.checked=value;el.dispatchEvent(new Event('change'));}}
   $('mode-lock').setAttribute('aria-pressed',String(saved.locked));
   if(atlasMode==='china'){setMode(saved.mode===1?'province':'prefecture');syncLayers();}else currentAtlas().setMode(saved.mode,false,true);
-  if(saved.camera!==false)map.jumpTo({center:saved.center,zoom:saved.zoom});updateLabels();
+  if(saved.camera!==false&&(!registry.countries[atlasMode].view.frame||saved.scope===registry.countries[atlasMode].view.frame))map.jumpTo({center:saved.center,zoom:saved.zoom,bearing:saved.bearing||0});updateLabels();
  }finally{restoringView=false;}
  return true;
 }
@@ -747,7 +749,7 @@ $('surprise').onclick=()=>atlasMode!=='china'?currentAtlas().random():randomPlac
 $('home').onclick=()=>atlasMode!=='china'?currentAtlas().home():quiz.active?configureQuiz():reset();$('selection-reset').onclick=reset;$('fit-map').onclick=viewParent;
 function zoomBy(amount){
  if(!allReady||countrySwitching)return;
- const zoom=Math.max(map.getMinZoom(),Math.min(map.getMaxZoom(),map.getZoom()+amount));
+ const minimum=registry.countries[atlasMode]?.freeGlobePan ? .5+Math.log2(Math.cos(map.getCenter().lat*Math.PI/180)):map.getMinZoom(),zoom=Math.max(minimum,Math.min(map.getMaxZoom(),map.getZoom()+amount));
  if(zoom===map.getZoom())return;
  return navigateBounds(homeBounds,{camera:{center:map.getCenter(),zoom},padding:[0,0],manual:true});
 }
@@ -766,10 +768,10 @@ function viewParent(){
 $('zoom-in').onclick=()=>zoomBy(1);$('zoom-out').onclick=()=>zoomBy(-1);
 // The map projection is part of the saved account/device settings.
 const globeKey='boundary-atlas-globe-v1';try{if(window.AtlasSettings.getSettings().projection==='globe')$('globe-view').setAttribute('aria-pressed','true');}catch{}
-function syncGlobe(refit=true){const button=$('globe-view'),type=button.getAttribute('aria-pressed')==='true'?'globe':'mercator',changed=map.getProjection?.()?.type!==type;if(changed){map.setProjection({type});updateLabels();}globeFloor();if(changed&&refit&&!atlasStarting&&!countrySwitching&&!quiz.active&&!(atlasMode==='china'?selected:currentAtlas()?.getSelection()))navigateBounds(currentAtlas()?.bounds||homeBounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:registry.countries[atlasMode]?.home.maxZoom||8,manual:true},false);}
+function syncGlobe(refit=true){const button=$('globe-view'),polar=!!registry.countries[atlasMode]?.polar,type=polar?'globe':window.AtlasSettings.getSettings().projection,changed=map.getProjection?.()?.type!==type;button.disabled=polar;document.getElementById("settings-projection")?.toggleAttribute("disabled",polar);button.setAttribute('aria-pressed',String(type==='globe'));button.title=polar?'Antarctica globe view':'Globe view';if(changed){map.setProjection({type});updateLabels();}syncPhoneCamera();globeFloor();if(changed&&refit&&!atlasStarting&&!countrySwitching&&!quiz.active&&!(atlasMode==='china'?selected:currentAtlas()?.getSelection()))navigateBounds(currentAtlas()?.bounds||homeBounds,{paddingTopLeft:[35,76],paddingBottomRight:[55,55],maxZoom:registry.countries[atlasMode]?.home.maxZoom||8,manual:true},false);}
 // The globe's smallest size nearly fills the map (about 95% of its shorter side, calibrated by eye: MapLibre draws it
 // smaller than the 512·2^zoom/π px diameter suggests); the flat map keeps zoom 0.5 on every device.
-function globeFloor(){const globe=map.getProjection?.()?.type==='globe',c=map.getContainer(),padding=window.AtlasSheet?.navigationPadding();map.setMinZoom(globe?(padding?Math.max(-2,Math.min(.5,Math.log2(.9*Math.min(c.clientWidth-padding.left-padding.right,c.clientHeight-padding.top-padding.bottom)*Math.PI/512))):Math.max(.5,Math.log2(1.33*Math.min(c.clientWidth,c.clientHeight)*Math.PI/512))):.5);}
+function globeFloor(){if(registry.countries[atlasMode]?.freeGlobePan){map.setMinZoom(.5);return;}const globe=map.getProjection?.()?.type==='globe',c=map.getContainer(),padding=window.AtlasSheet?.navigationPadding();map.setMinZoom(globe?(padding?Math.max(-2,Math.min(.5,Math.log2(.9*Math.min(c.clientWidth-padding.left-padding.right,c.clientHeight-padding.top-padding.bottom)*Math.PI/512))):Math.max(.5,Math.log2(1.33*Math.min(c.clientWidth,c.clientHeight)*Math.PI/512))):.5);}
 map.on('resize',globeFloor);
 $('globe-view').onclick=()=>{const on=$('globe-view').getAttribute('aria-pressed')!=='true';$('globe-view').setAttribute('aria-pressed',String(on));try{localStorage.setItem(globeKey,String(on));}catch{}if(window.AtlasSettings.getSettings().projection!==(on?'globe':'mercator'))window.AtlasSettings.setSettings({projection:on?'globe':'mercator'});syncGlobe();};$('retry').onclick=()=>location.reload();
 window.AtlasSettings.mountSettings({refreshLabels:updateLabels,refreshStyling:updateProvinceStyling,getProjection:()=>$('globe-view').getAttribute('aria-pressed')==='true'?'globe':'mercator',setProjection:value=>{if(($('globe-view').getAttribute('aria-pressed')==='true')!==(value==='globe'))$('globe-view').click();}});

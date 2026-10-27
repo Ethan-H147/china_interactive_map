@@ -50,7 +50,7 @@ export async function addGlobeOverview(map){
  await Promise.all(ids.map(id=>addWorkerSource(map,id,'data/'+id+'.bin',{type:'geojson',maxzoom:0,tolerance:0,buffer:64})));
  pinSources();
  const opacity=['interpolate',['linear'],['zoom'],6.5,1,7,0];
- map.addLayer({id:ids[0],source:ids[0],type:'fill',metadata:{atlas:{role:'land',overview:true}},paint:{'fill-color':backgroundLandColor(),'fill-opacity':opacity,'fill-antialias':true}});
+ map.addLayer({id:ids[0],source:ids[0],type:'fill',metadata:{atlas:{role:'land',overview:true}},paint:{'fill-color':backgroundLandColor(),'fill-opacity':opacity,'fill-antialias':false}});
  map.addLayer({id:ids[1],source:ids[1],type:'line',metadata:{atlasInternationalBorder:true,atlas:{role:'border',overview:true}},layout:{'line-join':'round','line-cap':'round'},paint:{...internationalBorderPaint(),'line-opacity':0,'line-opacity-transition':{duration:0,delay:0}}});
  handoff=attachBorderHandoff(map,{rootLayer:ids[1],enabled:()=>ready,preferCoarse:()=>!!getMapScene(map)?.overview});
  map.on('render',sync);map.on('move',sync);map.on('style.load',pinSources);map.on('webglcontextrestored',pinSources);

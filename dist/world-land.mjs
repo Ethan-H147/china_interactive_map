@@ -1,5 +1,6 @@
 import {addBorderPreviews} from './border-previews.mjs';
 import {addGlobeOverview} from './globe-overview.mjs';
+import {addAntarcticCap} from './antarctic-cap.mjs';
 import {backgroundLandColor,syncBackgroundLand} from './map-palette.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
 import {internationalLineSourceOptions,internationalBorderPaint} from './adaptive-lines.mjs';
@@ -18,6 +19,7 @@ export async function addWorldLand(map){
  }});
  await addBorderPreviews(map);
  await overview;
+ await addAntarcticCap(map);
  if(await outlines)map.addLayer({id:'world-country-outlines',type:'line',source:'world-country-outlines',metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  globalThis.addEventListener?.('atlas-developer-change',()=>syncBackgroundLand(map));
  // China's non-atlas land neighbours at the precision of China's outline, in a band along it

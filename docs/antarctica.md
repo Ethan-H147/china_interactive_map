@@ -1,0 +1,26 @@
+# Antarctica
+
+Antarctica opens as a continental research-facility map. It has no national overview, administrative subdivision selector, flag or subdivision quiz. The Facilities filter separates stations from camps and support sites. Dots open the facility details; names and operators are searchable. Dot colors distinguish year-round and seasonal facilities, and hollow dots identify facilities listed as temporarily closed.
+
+The retained COMNAP list is the November 2024 edition, downloaded on 27 October 2026. It contains 112 facilities south of 60°S. Three subantarctic facilities north of the Treaty area are excluded. The map includes all 112 records, rather than defining an arbitrary major-station cutoff. Operators, season, status and establishment years refer to this edition. They are not a live operating report. Coordinates retain source precision, including the reported Amundsen–Scott station position near the geographic South Pole. Moving ice-shelf stations can move. Search also accepts South Pole for Amundsen–Scott.
+
+COMNAP allows educational and non-commercial use. The compressed original CSV, source URL, encoding, SHA-256 and retrieval date are retained under scripts/boundary-sources/antarctica. Names are decoded as Windows-1252, trimmed, and the source spelling Antartic is corrected to Antarctic for display while the original remains an alias. The coastline uses the retained Natural Earth 1:10m Antarctica geometry (public domain).
+
+The Antarctic Treaty preserves positions on territorial claims without settling sovereignty. The shared world and Antarctica maps route the whole continent to Antarctica. Existing claim sectors, including Norway's Queen Maud Land and Peter I Island, the Australian Antarctic Territory and the Ross Dependency, remain selectable on their existing country maps. Their context features carry a claimant gate, so they cannot draw or intercept clicks on other maps. The continent outline replaces old claim-shaped background fragments. The globe overview preserves the same gates.
+
+Antarctica uses the geographic globe. Its drag handler uses the renderer's full quaternion rotation, allowing bearing to drift while the grabbed location follows the cursor. The camera can cross the pole; the Mercator latitude limit applies to source tiles, not to globe orientation. Zoom scale is bounded near the pole to keep the camera finite. Mouse and touch drags stop at release without the renderer's fixed-bearing inertia or north snap. Two-finger trackpad scrolling applies the same free rotation through its separate panBy path. Other maps retain their existing north-up behavior. Latitude-aware zoom limits let users zoom out to the globe and pan to other continents; visible countries remain clickable. The saved flat/globe preference returns on leaving Antarctica.
+
+Native globe tiles stop at 85.051129°S. Their pole fan extends a real Ross Sea water gap at that latitude to the geographic pole, producing a false wedge. A small spherical land mesh south of 84°S now draws the actual Natural Earth coastline beyond that tile limit. It retains the Ross Sea opening, uses the globe's camera and horizon clipping, and covers both selected and background Antarctica. Claimant meshes retain their country gates. The compressed mesh is about 160 KB. Shared globe land also uses opaque, unsmoothed fills to avoid antialias seams at the artificial geographic closure. Antarctica has no coastline stroke. Research facilities retain their original geographic coordinates. Markers behind the globe are invisible and cannot intercept country clicks.
+
+Saved views identify the geographic frame as antarctic-globe-v2. Links made during the temporary flat-view implementation retain their station selection and are refitted geographically instead of treating projected coordinates as longitude/latitude.
+
+Build: npm run fetch:antarctica, then npm run build:antarctica. Validate: npm run test:antarctica and the browser antarctica scenarios. The world and compact builders preserve the neutral continent and claimant-only contexts on subsequent rebuilds. The generic scene audit accepts rendered land for this station map rather than requiring invented administrative fills.
+
+Facility pages show each distinct COMNAP operator country's national flag. Joint facilities retain both flags in source order. Reviewed station flags appear below the national flags: McMurdo, Amundsen–Scott, Palmer, Arturo Prat and Gabriel de Castilla. The three U.S. designs are identified as station-associated USAP flags rather than exclusive municipal flags. Reused flag artwork, licenses, dimensions and checksums are retained in data/antarctica/flag-sources.json; the shared viewer opens local originals. The photographed vertical Gabriel de Castilla design is retained. An unrelated historical Artigas flag linked by a general list is excluded. Run npm run fetch:antarctic-flags to refresh artwork; ordinary Antarctica builds use retained files.
+
+Sources:
+
+- [COMNAP Antarctic facilities](https://www.comnap.aq/antarctic-facilities-information)
+- [COMNAP November 2024 CSV](https://www.comnap.aq/s/Facilities_Nov2024.csv)
+- [Antarctic Treaty Secretariat: the Treaty and Article IV](https://www.ats.aq/e/antarctictreaty.html)
+- [Natural Earth](https://www.naturalearthdata.com/)

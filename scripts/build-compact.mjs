@@ -10,6 +10,7 @@ import '../dist/countries.js';
 // script reads; the page requests the copy under dist/data/compact/ instead, through
 // compactUrl(). Each copy records the SHA-256 of its source so test:compact catches a stale one.
 export const compactSources=[
+ ...globalThis.AtlasCountries.ids.flatMap(id=>globalThis.AtlasCountries.countries[id].contextFile||[]),
  'world-land.bin','world-country-outlines.bin','china-context.bin','china-neighbours.bin','shared-context-borders.bin','atlas-frontiers.bin','flight-context.bin',
  'korea-context.bin','mongolia-context.bin','japan-context.bin',
  'archipelago/philippines-context.bin','archipelago/indonesia-context.bin',
@@ -31,6 +32,7 @@ if(import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
  await (await import('./central-europe-frontiers.mjs')).preserveCentralEuropeanFrontiers();
  await (await import('./refresh-central-world.mjs')).refreshCentralWorld();
  await (await import('./finalize-central-water.mjs')).refreshCentralSelectionOutlines();
+ await (await import('./antarctic-claims.mjs')).preserveAntarctica();
  await (await import('./build-context-coverage.mjs')).build();
  for(const file of present){
   const source=fs.readFileSync('dist/data/'+file),text=gunzipSync(source).toString('utf8');
