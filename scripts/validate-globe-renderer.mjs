@@ -70,3 +70,10 @@ console.log('Source coverage reuse: independent mutable tile IDs, option keys, c
  assert.equal(visibleCoordinates(manager,true,null,'anything')[0].key,'symbol-fade-tile');
 }
 console.log('Tile draw lists: visible symbols, hidden symbols, unused and terrain sources, native fallbacks and diagnostic toggle passed.');
+
+{
+ const {statePaintExpression}=await import('../dist/globe-renderer.mjs');
+ for(const value of [0,.45,{r:1,g:.5,b:0,a:1}]){const expression=statePaintExpression({kind:'constant',value});assert.equal(expression.evaluate({}, {}, {selected:true}),value);assert(expression.isStateDependent,'All pending changed features retain the constant evaluator until tile replacement');}
+ const native={kind:'source',isStateDependent:true,evaluate:()=>.7};assert.equal(statePaintExpression(native),native,'Source and composite expressions keep their native evaluator');
+ console.log('Pending feature-state updates tolerate paint expressions becoming constant before old tiles reload.');
+}

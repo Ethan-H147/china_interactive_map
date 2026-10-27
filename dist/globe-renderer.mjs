@@ -93,3 +93,9 @@ export function visibleCoordinates(manager,symbol,batch,id){
  }
  return manager.getVisibleCoordinates(symbol);
 }
+
+// A pending feature-state update can reach an old tile after a source paint
+// expression becomes constant. Keep its attribute evaluator valid until reload.
+export function statePaintExpression(value){
+ return value.kind==='constant'?{kind:'source',isStateDependent:true,evaluate:()=>value.value}:value;
+}

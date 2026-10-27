@@ -30,6 +30,11 @@ const tileDraws='a={},o={},s={};for(let e in i){let t=i[e];t.used&&t.prepare(thi
 assert.equal(main.split(tileDraws).length,2,'MapLibre changed; review tile draw-list pruning');
 main=main.replace(tileDraws,'a={},o={},s={};const atlasTileDraws=atlasPrepareTileDraws(this);for(let e in i){let t=i[e];t.used&&t.prepare(this.context),a[e]=atlasVisibleCoordinates(t,!1,atlasTileDraws,e),o[e]=a[e].slice().reverse(),s[e]=atlasVisibleCoordinates(t,!0,atlasTileDraws,e).reverse()}');
 
+const shared=new URL('maplibre-gl-shared.mjs',output),sharedCode=fs.readFileSync(shared,'utf8');
+const statePaint='s.expression=r.paint.get(n).value,s.updatePaintArray';
+assert.equal(sharedCode.split(statePaint).length,2,'MapLibre changed; review pending feature-state paint updates');
+fs.writeFileSync(shared,"import {statePaintExpression as atlasStatePaintExpression} from '../globe-renderer.mjs';\n"+sharedCode.replace(statePaint,'s.expression=atlasStatePaintExpression(r.paint.get(n).value),s.updatePaintArray'));
+
 const globePan='handleMapControlsPan(e,t,n){e.panDelta&&el(t,n,t.isPointOnMapSurface(e.around)?e.around:t.centerPoint,e.panDelta)}';
 assert.equal(main.split(globePan).length,2,'MapLibre changed; review free Antarctic globe dragging');
 main=main.replace(globePan,globePan.replace('e.panDelta)}','e.panDelta,!globalThis.AtlasCountries?.countries[globalThis.AtlasEntry?.current]?.freeGlobePan)}'));
