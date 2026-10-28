@@ -5,8 +5,20 @@ import {backgroundLandColor,syncBackgroundLand} from './map-palette.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
 import {internationalLineSourceOptions,internationalBorderPaint} from './adaptive-lines.mjs';
 
-export async function addWorldLand(map){
- const overview=addGlobeOverview(map).catch(error=>{console.warn('Globe overview unavailable',error);return null;});
+export {addBorderPreviews};
+const overviews=new WeakMap(),caps=new WeakMap();
+// The globe overview's land and borders and the pole cap are all a map that opens on the
+// overview (Antarctica) draws besides its own country, so app.js adds them before that view
+// and the rest of world land after it. Each is added once per map.
+export function addOverview(map){
+ if(!overviews.has(map))overviews.set(map,addGlobeOverview(map).catch(error=>{console.warn('Globe overview unavailable',error);return null;}));
+ return overviews.get(map);
+}
+export function addPoleCap(map){if(!caps.has(map))caps.set(map,addAntarcticCap(map));return caps.get(map);}
+// deferBorderPreviews: a map that opens on the globe overview draws no detailed borders in its
+// first view, so their 2 MB file is requested after it (app.js).
+export async function addWorldLand(map,{deferBorderPreviews=false}={}){
+ const overview=addOverview(map);
  const outlines=addWorkerSource(map,'world-country-outlines','data/world-country-outlines.bin',{...internationalLineSourceOptions,attribution:'Country outlines: <a href="https://www.naturalearthdata.com/">Natural Earth</a> · reconciled atlas display edges'}).then(()=>true,error=>{console.warn('World country outlines',error);return false;});
  await addWorkerSource(map,'world-land','data/world-land.bin',{
   type:'geojson',tolerance:0,buffer:64,maxzoom:8,
@@ -14,12 +26,13 @@ export async function addWorldLand(map){
  });
  // Background land and country outlines come from one shared topology.
  // These features never enter country routing or acquire a clickable-country palette.
+ // Beneath the overview's land, which may have been added first.
  map.addLayer({id:'world-land',metadata:{atlas:{role:'land',landPalette:true}},type:'fill',source:'world-land',paint:{
   'fill-color':backgroundLandColor(),'fill-antialias':false
- }});
- await addBorderPreviews(map);
+ }},map.getLayer('globe-overview-land')?'globe-overview-land':undefined);
+ if(!deferBorderPreviews)await addBorderPreviews(map);
  await overview;
- await addAntarcticCap(map);
+ await addPoleCap(map);
  if(await outlines)map.addLayer({id:'world-country-outlines',type:'line',source:'world-country-outlines',metadata:{atlasInternationalBorder:true,atlas:{role:'border'}},layout:{'line-join':'round','line-cap':'round'},paint:internationalBorderPaint()});
  globalThis.addEventListener?.('atlas-developer-change',()=>syncBackgroundLand(map));
  // China's non-atlas land neighbours at the precision of China's outline, in a band along it

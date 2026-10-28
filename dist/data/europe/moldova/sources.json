@@ -33,5 +33,12 @@
       "sha256": "d71172de01ee3cd5aef7e12495c72badcab70135a5340d7bb8d4e0be6a026369",
       "bytes": 899393
     }
+  },
+  "moldovaRomaniaReconciliation": {
+    "pair": "MDA-ROU",
+    "owner": "romania",
+    "canonicalSource": "scripts/boundary-sources/four-europe/resolved.bin",
+    "canonicalSha256": "626b2d53c35cdae0c02ef7d446efaa6191f286742363d3caee506926a27729e9",
+    "method": "Moldovan district exteriors and context share the complete Romania-owned Prut arc; Romania supplies the single border stroke. Lake surfaces remain excluded."
   }
 }

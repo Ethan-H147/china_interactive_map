@@ -4,6 +4,7 @@ import '../dist/countries.js';
 import {load,polygons} from './geo-index.mjs';
 import {command,fc} from './build-regional-dataset.mjs';
 import earcut from 'earcut';
+// The neutral cap uses the shared continent outline (build-antarctica.mjs).
 // Triangulate in a polar plane, then store true unit-sphere positions. The
 // renderer's Mercator tile boundary cannot represent this coast near the pole.
 const radians=Math.PI/180;
@@ -48,7 +49,7 @@ async function mesh(data,whole){
  return {positions:positions.map(v=>Math.round(v*1e9)/1e9),outlines};
 }
 export async function buildAntarcticCap(){
- const raw=load('scripts/boundary-sources/nordics/ne-countries.json.gz'),land=fc(raw.features.filter(f=>f.properties.ADM0_A3==='ATA'));
+ const land=load('dist/data/antarctica/context.bin');
  const neutral=await mesh(land,true),claims=[];
  for(const country of globalThis.AtlasCountries.byAdapter('europe')){
   const file='dist/data/europe/'+country+'/context.bin';if(!fs.existsSync(file))continue;

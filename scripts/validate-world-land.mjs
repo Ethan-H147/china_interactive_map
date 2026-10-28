@@ -27,7 +27,7 @@ const neighbourBytes=fs.readFileSync('dist/data/china-neighbours.bin');
 assert.ok(neighbourBytes.length<400_000,'China neighbour band stays small (it loads after the world map)');
 // The page requests the compact copies and MapLibre's workers decode them (geo-pack.mjs, atlas-data.mjs).
 const page=globalThis.fetch;globalThis.fetch=async url=>{if(String(url).startsWith('blob:'))return page(url);assert.ok(['data/compact/world-land.bin','data/compact/world-country-outlines.bin','data/compact/china-neighbours.bin'].includes(url),url);return new Response(fs.readFileSync('dist/'+url));};
-await addWorldLand({addSource:(id,s)=>sources.set(id,s),addLayer:l=>layers.push(l),getStyle:()=>({layers}),on(){},off(){}});
+await addWorldLand({addSource:(id,s)=>sources.set(id,s),addLayer:l=>layers.push(l),getLayer:id=>layers.find(l=>l.id===id),getStyle:()=>({layers}),on(){},off(){}});
 await new Promise(r=>setTimeout(r,50));
 for(const [id,source] of sources)sources.set(id,{...source,data:await loadAtlasData(source.data)});
 assertNearGeo(sources.get('world-land').data,data,'World land as drawn');

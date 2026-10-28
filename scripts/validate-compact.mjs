@@ -31,6 +31,6 @@ assert.equal(String(compactUrl(new URL('https://example.test/site/data/korea-con
 for(const other of ['data/korea-boundaries.bin','data/china-boundaries.pack.bin','data/europe/iceland/sources.json','vendor/metadata/china-context.bin'])assert.equal(compactUrl(other),other);
 // Preloads name the file the page actually requests, so nothing downloads twice.
 const page=fs.readFileSync('dist/index.html','utf8');
-const preloads=[...page.matchAll(/<link rel="preload" as="fetch" crossorigin href="(data\/[^"]+)">/g)].map(m=>m[1]),later=JSON.parse(page.match(/<script type="application\/json" id="later-preloads">([^<]+)<\/script>/)[1]);
+const preloads=Object.values(JSON.parse(page.match(/<script type="application\/json" id="first-preloads">([^<]+)<\/script>/)[1])).flat(),later=JSON.parse(page.match(/<script type="application\/json" id="later-preloads">([^<]+)<\/script>/)[1]);
 for(const href of [...preloads,...later]){assert.equal(compactUrl(href),href,'Preload the compact copy, not its source: '+href);assert(fs.existsSync('dist/'+href),'Preloaded file exists: '+href);}
 console.log(`Compact copies: ${present.length} files, ${(before/1048576).toFixed(2)} MB -> ${(after/1048576).toFixed(2)} MB, current with their sources, every coordinate within ${(worst*111320*1000).toFixed(1)} mm; preloads request the copies.`);

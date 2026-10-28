@@ -1,0 +1,24 @@
+{
+  "title": "Christ the Redeemer",
+  "author": "JuanG3D",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://sketchfab.com/3d-models/christ-the-redeemer-d143e5357efd42529777438d0f72c79c",
+  "download": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-148/d143e5357efd42529777438d0f72c79c.glb",
+  "originalSha256": "199a59b4a07e984c10823b67af78b91192d84b07807eee97702fea224e52fb84",
+  "preparedSha256": "49e740abe1c5cc0dbab7ff91e7e28c343f1c8fecb00e5920120014f7313540a9",
+  "triangles": 26752,
+  "bounds": [
+    [
+      -1.0813236080008868,
+      -0.42250000000000204,
+      -0.22401316175326494
+    ],
+    [
+      1.0813236080008868,
+      1.7775000000000003,
+      0.22401316175326494
+    ]
+  ],
+  "modifications": "Baked source scene transforms, removed duplicate and degenerate faces, removed the oversized signed print plinth below Y=-4.115, capped the cut, uniformly scaled the sculpture to 2.2 atlas units and positioned it on an original proportional octagonal pedestal. Source material replaced with a pale soapstone finish."
+}

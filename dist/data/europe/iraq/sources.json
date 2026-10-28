@@ -1,0 +1,162 @@
+{
+  "retrieved": "2026-10-27",
+  "coverage": "19 governorates: the OCHA 2019 administrative reference, reviewed December 2024, with the OSM Halabja split clipped to its original Sulaymaniyah parent. This retains administrative boundaries rather than substituting lines of de facto control. Population uses the raw resident column of the official 2024 census workbook, not the cabinet-adjusted allocation to origin governorates. Combined Sulaymaniyah–Halabja population is withheld from the two split polygons. Shared land frontiers follow existing atlas neighbours. Inland lake surfaces are excluded. Country overview pages stay hidden. Districts and subdistricts are dated 2019 references. Units cut by the newer Halabja governorate are shown as reference portions with their original source codes, not as current statutory districts.",
+  "counts": {
+    "1": 19,
+    "2": 104,
+    "3": 300
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "irq-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-irq",
+      "sha256": "b5a97f949772f051ae77264b8036b88e60926fa2dbd1b6566ef0a9c844920774",
+      "bytes": 37751
+    },
+    "irq.zip": {
+      "url": "https://data.humdata.org/dataset/488bb3cd-3ce9-49d3-862a-3ce7975c63e1/resource/a9ed4d00-1182-4fdc-a0e4-82bbd20786db/download/irq_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) Ã‚Â· HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-irq",
+      "sha256": "1477e728e4bd2dc0afd9bb8fbffaa25847d92a480364bf7022baa7e2adbb02f0",
+      "bytes": 1423567
+    },
+    "halabja-relation.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3826029/full.json",
+      "sha256": "6c9c2150819052dba05c8f6cf3abc5bc89b0689dd0a3cd660aea522e2ef10e70",
+      "bytes": 473761,
+      "credit": "Â© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3826029",
+      "relation": 3826029,
+      "en": "Halabja Governorate",
+      "adminLevel": 4
+    }
+  },
+  "depth": {
+    "sourceCounts": {
+      "2": 101,
+      "3": 294
+    },
+    "displayedCounts": {
+      "1": 19,
+      "2": 104,
+      "3": 300
+    },
+    "referencePortions": [
+      {
+        "id": "IQG06Q03",
+        "sourceId": "IQG06Q03",
+        "level": 2,
+        "parent": "IQG06"
+      },
+      {
+        "id": "IQG06Q03-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q03",
+        "level": 2,
+        "parent": "IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q05",
+        "sourceId": "IQG06Q05",
+        "level": 2,
+        "parent": "IQG06"
+      },
+      {
+        "id": "IQG06Q05-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q05",
+        "level": 2,
+        "parent": "IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q07",
+        "sourceId": "IQG06Q07",
+        "level": 2,
+        "parent": "IQG06"
+      },
+      {
+        "id": "IQG06Q07-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q07",
+        "level": 2,
+        "parent": "IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q03N01",
+        "sourceId": "IQG06Q03N01",
+        "level": 3,
+        "parent": "IQG06Q03"
+      },
+      {
+        "id": "IQG06Q03N01-IN-IQG06Q03-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q03N01",
+        "level": 3,
+        "parent": "IQG06Q03-IN-IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q05N01",
+        "sourceId": "IQG06Q05N01",
+        "level": 3,
+        "parent": "IQG06Q05"
+      },
+      {
+        "id": "IQG06Q05N01-IN-IQG06Q05-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q05N01",
+        "level": 3,
+        "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q05N02",
+        "sourceId": "IQG06Q05N02",
+        "level": 3,
+        "parent": "IQG06Q05"
+      },
+      {
+        "id": "IQG06Q05N02-IN-IQG06Q05-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q05N02",
+        "level": 3,
+        "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q05N03",
+        "sourceId": "IQG06Q05N03",
+        "level": 3,
+        "parent": "IQG06Q05"
+      },
+      {
+        "id": "IQG06Q05N03-IN-IQG06Q05-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q05N03",
+        "level": 3,
+        "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q05N04",
+        "sourceId": "IQG06Q05N04",
+        "level": 3,
+        "parent": "IQG06Q05"
+      },
+      {
+        "id": "IQG06Q05N04-IN-IQG06Q05-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q05N04",
+        "level": 3,
+        "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+      },
+      {
+        "id": "IQG06Q07N02",
+        "sourceId": "IQG06Q07N02",
+        "level": 3,
+        "parent": "IQG06Q07"
+      },
+      {
+        "id": "IQG06Q07N02-IN-IQG06Q07-IN-IQ-OSM-3826029",
+        "sourceId": "IQG06Q07N02",
+        "level": 3,
+        "parent": "IQG06Q07-IN-IQ-OSM-3826029"
+      }
+    ],
+    "sourceYears": {
+      "2": 2019,
+      "3": 2019
+    },
+    "method": "Deeper polygons load by selected parent, are clipped to its retained land geometry, and cover the same parent without changing country or first-level borders. Source identities and parent links are retained. Split historical Iraqi references are explicitly named as portions."
+  }
+}

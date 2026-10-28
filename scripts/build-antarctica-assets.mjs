@@ -5,7 +5,7 @@ import {preserveAntarctica} from './antarctic-claims.mjs';
 import {encodeGeo} from '../dist/geo-pack.mjs';
 import {compactSources} from './build-compact.mjs';
 import {build as buildCoverage} from './build-context-coverage.mjs';
-preserveAntarctica();
+await preserveAntarctica();
 const present=compactSources.filter(f=>fs.existsSync('dist/data/'+f)),empty=[];
 for(const file of present){
  const text=gunzipSync(fs.readFileSync('dist/data/'+file)).toString(),data=JSON.parse(text),hash=createHash('sha256').update(text).digest('hex'),target='dist/data/compact/'+file;

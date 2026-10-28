@@ -35,8 +35,7 @@ console.log('Geographic globe, free drag and framed saved views passed.');
 
 assert.equal(validateView({v:1,country:'antarctica',center:[0,-85],zoom:-1,scope:'antarctic-globe-v2',bearing:35}).bearing,35,'Saved globe views retain free-drag orientation');
 
-// Validate the actual spherical triangles, including the Ross Sea gap that a
-// Mercator tile cannot carry past 85.051129°S.
+// Validate the actual spherical triangles south of the Mercator tile limit (85.051129°S).
 const cap=load('dist/data/antarctica/pole-mesh.bin');
 assert.equal(cap.southOf,-84);assert(fs.statSync('dist/data/antarctica/pole-mesh.bin').size<200_000);
 assert.deepEqual(cap.claims.map(c=>c.country).sort(),['australia','new-zealand','norway']);
@@ -48,9 +47,29 @@ const vector=([lng,lat])=>{const a=lng*Math.PI/180,b=lat*Math.PI/180;return [Mat
 const side=(a,b,p)=>(a[1]*b[2]-a[2]*b[1])*p[0]+(a[2]*b[0]-a[0]*b[2])*p[1]+(a[0]*b[1]-a[1]*b[0])*p[2];
 function covers(mesh,point){const p=vector(point),v=mesh.positions;for(let i=0;i<v.length;i+=9){const a=v.slice(i,i+3),b=v.slice(i+3,i+6),c=v.slice(i+6,i+9),s=[side(a,b,p),side(b,c,p),side(c,a,p)];if(s.every(n=>n>=-1e-12)||s.every(n=>n<=1e-12))return true;}return false;}
 for(let lng=-180;lng<180;lng+=5)for(const lat of [-86,-87,-88,-89,-89.9])assert(covers(cap.neutral,[lng,lat]),'Continuous land across every polar longitude: '+lng+','+lat);
-assert(!covers(cap.neutral,[-160,-85]),'The real Ross Sea opening remains water');
+assert(covers(cap.neutral,[-160,-85]),'The Ross Ice Shelf belongs to the continent, as the ADD coastline and satellite imagery show it');
 for(const [country,lng]of [['australia',80],['new-zealand',170],['norway',14]])assert(covers(cap.claims.find(c=>c.country===country),[lng,-88]),'The selected claimant keeps its polar sector');
-console.log('Spherical cap: bounded size, true unit-sphere coordinates, complete polar coverage, real Ross Sea water and claimant sectors passed.');
+console.log('Spherical cap: bounded size, true unit-sphere coordinates, complete polar coverage, the Ross Ice Shelf and claimant sectors passed.');
+
+// SCAR ADD coastline (CC BY 4.0): ice shelves included; stations sit on it as on satellite imagery.
+const coastManifest=load('scripts/boundary-sources/antarctica/coast-manifest.json');
+assert.equal(coastManifest.version,'7.7');assert(coastManifest.license.startsWith('CC BY 4.0'));assert(fs.existsSync('scripts/boundary-sources/antarctica/'+coastManifest.retained.file));
+assert(load('dist/data/antarctica/sources.json').coast.license.startsWith('CC BY 4.0'));
+const outline=load('dist/data/antarctica/context.bin'),detail=load('dist/data/antarctica/coast.bin');
+const vertices=data=>data.features.reduce((n,f)=>n+polygons(f.geometry).flat().reduce((m,r)=>m+r.length,0),0);
+assert(vertices(outline)<24000,'The shared startup outline stays smaller than Natural Earth 1:10m');assert(vertices(detail)>vertices(outline)*4);
+const onLand=(point,data)=>data.features.some(f=>polygons(f.geometry).some(poly=>poly.filter(ring=>{let c=false;for(let i=0,j=ring.length-1;i<ring.length;j=i++){const [xi,yi]=ring[i],[xj,yj]=ring[j];if((yi>point[1])!==(yj>point[1])&&point[0]<(xj-xi)*(point[1]-yi)/(yj-yi)+xi)c=!c;}return c;}).length%2===1));
+const offshore=facilities.records.filter(r=>!onLand(r.center,detail));
+assert(offshore.length<=8,'Stations off the detailed coast: '+offshore.map(r=>r.en).join(', '));
+for(const name of ['Davis','Law','Zhongshan','Progress','Mawson','Bharati','Casey','Neumayer III','Halley VI','Syowa','McMurdo'])assert(onLand(facilities.records.find(r=>r.en===name||r.en.startsWith(name+' ')).center,detail),name+' stands on the detailed coast');
+for(const [country,region,lng]of [['australia','AU-AAT',100],['new-zealand','NZ-ROS',175],['norway','NO-QM',10]]){
+ const sector=load('dist/data/europe/'+country+'/context.bin').features.find(f=>f.properties.region===region);
+ assert(onLand([lng,-80],{features:[sector]})&&onLand([lng,-80],outline),region+' follows the shared coast');
+ const own=load('dist/data/europe/'+country+'/first.bin'),unit=own.regions.features.find(f=>f.properties.id===region),line=own.selectionOutlineOverrides?.features.find(f=>f.properties.id===region);
+ assert(onLand([lng,-80],{features:[unit]})&&onLand([lng+.1,-66.9],{features:[unit]})===onLand([lng+.1,-66.9],outline),region+' uses the shared coast in its own map');
+ assert(line&&line.geometry.coordinates.every(l=>l.slice(1).every((p,i)=>!(p[1]<=-84.9999&&l[i][1]<=-84.9999))),region+' selected outline omits the 85°S map limit');
+}
+console.log('Coast: ADD 7.7 source, ice shelves, '+vertices(outline)+'-vertex shared outline, '+vertices(detail)+'-vertex detail, '+(facilities.records.length-offshore.length)+'/'+facilities.records.length+' stations on land and re-cut claim sectors passed.');
 
 const navigation=await import('../dist/globe-navigation.mjs');
 for(const lat of [-90,-89.9,-85.051129,0,85.051129,89.9,90]){

@@ -1,0 +1,53 @@
+{
+  "name": "Christ the Redeemer",
+  "description": "Christ the Redeemer, for 3D print.",
+  "license": {
+    "uri": "https://api.sketchfab.com/v3/licenses/322a749bcfa841b29dff1e8a1bb74b0b",
+    "label": "CC Attribution",
+    "fullName": "Creative Commons Attribution",
+    "requirements": "Author must be credited. Commercial use is allowed.",
+    "url": "http://creativecommons.org/licenses/by/4.0/",
+    "slug": "by"
+  },
+  "author": "JuanG3D",
+  "isDownloadable": true,
+  "thumbnails": {
+    "images": [
+      {
+        "uid": "84752be3b53840c28e650eff613e2667",
+        "width": 1920,
+        "height": 1080,
+        "size": 95746,
+        "url": "https://media.sketchfab.com/models/d143e5357efd42529777438d0f72c79c/thumbnails/e0c80d6ca8af4e779eaf6493b1f942b5/d8ff277f29304356af25268cf85a8aab.jpeg"
+      },
+      {
+        "uid": "6948415dd3864a23ae0960d9c6070163",
+        "width": 1024,
+        "height": 576,
+        "size": 21246,
+        "url": "https://media.sketchfab.com/models/d143e5357efd42529777438d0f72c79c/thumbnails/e0c80d6ca8af4e779eaf6493b1f942b5/55a707fe0d494bb2b0ac40123cf31ebd.jpeg"
+      },
+      {
+        "uid": "f6e5d29929ed440bb733e06debd8c234",
+        "width": 720,
+        "height": 405,
+        "size": 12163,
+        "url": "https://media.sketchfab.com/models/d143e5357efd42529777438d0f72c79c/thumbnails/e0c80d6ca8af4e779eaf6493b1f942b5/70a15f568ed94f8d914b72c5380f1a0d.jpeg"
+      },
+      {
+        "uid": "1de8e2a999484ed3aea52b6ae1aca366",
+        "width": 256,
+        "height": 144,
+        "size": 2900,
+        "url": "https://media.sketchfab.com/models/d143e5357efd42529777438d0f72c79c/thumbnails/e0c80d6ca8af4e779eaf6493b1f942b5/a8cb6c2bd8dd4e85a2b2b404ff02de6a.jpeg"
+      },
+      {
+        "uid": "149f8d9980a04893b5e029cda8b85d3f",
+        "width": 64,
+        "height": 36,
+        "size": 712,
+        "url": "https://media.sketchfab.com/models/d143e5357efd42529777438d0f72c79c/thumbnails/e0c80d6ca8af4e779eaf6493b1f942b5/337d97432a6a4868aa8a8098908ee9f6.jpeg"
+      }
+    ]
+  }
+}

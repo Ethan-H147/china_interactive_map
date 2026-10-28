@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "retrieved": "2026-10-27",
+  "countries": {
+    "iran": {
+      "sourceCounts": {
+        "2": 429
+      },
+      "displayedCounts": {
+        "1": 31,
+        "2": 429
+      },
+      "referencePortions": [],
+      "sourceYears": {
+        "2": 2019
+      },
+      "method": "Deeper polygons load by selected parent, are clipped to its retained land geometry, and cover the same parent without changing country or first-level borders. Source identities and parent links are retained. Split historical Iraqi references are explicitly named as portions.",
+      "preservedAssets": {
+        "first.bin": "ae0455d3e99b2d75000345819e1ea185f6909cedad18c0477ae7ae3e7c599015",
+        "context.bin": "5fef09a99444b178a3ae7f7ed7160d0f3db52501ae0790f63d20329aceb26ee9",
+        "international.bin": "07333fe560e9984d1f64e853d77c930f9598ae6dc746aafb41969154224d4a10",
+        "political.bin": "180b84fb6e9095e2bcbe44ccc392068e6c0a67291291006627a875d015f7c6ba"
+      },
+      "preservedStatistics": {
+        "iran:IR001": "dcdbe9573f1b3c73aa30dea9d2b4def7b832c4ca08354eb728911defa6493327",
+        "iran:IR002": "c3cda3ecc3afca08e5fe1146d1d4126837452e1927242587cbcad8a84384db9c",
+        "iran:IR003": "f9b27e721abbf2e9b4c56389756534f96aee4ee6b3cdfa95e0582b85226786ed",
+        "iran:IR004": "240ca28f9f26379649835e6b5a3d4e33424cb834a9efd3ba828c851eec9f8270",
+        "iran:IR005": "862969d522aff183795c2c0ba0e2478460bb0563363a3a14c94e272afdfbdfb2",
+        "iran:IR006": "fa6d1fddb46ece9b78efc14cd21d5268b1876d52fa1e0b1732fa8699ace41ffc",
+        "iran:IR007": "58119a025a73f28a636b6f9d7b0405cb71fde0781cca567b20370e5e5005947d",
+        "iran:IR008": "2ece7ee5f913792c8b04a2599fa3296a5e177b5fa417eead01e9ed35a6b1711f",
+        "iran:IR009": "482b5686e80cf0ef5c005e567984d1a394e87ad502d6fc9d5a3237ce9bcbfcaf",
+        "iran:IR010": "91a0639557ea91940d531eca11ee8e54cff37e08679991b1587a8e0258ba6d46",
+        "iran:IR011": "b1dd8bc3f2897fee3ed932cc646ae82038eb0ea61a763c485e9829101744da42",
+        "iran:IR012": "e0b4eac362f29e67ab1c82c5d0ceb9333ce31876dd1f501b3b60bd7bc5095432",
+        "iran:IR013": "0d58f107e512a7feeee8c7bc012ed3f1da2e10a1de955b47ff0c71dd113c85f4",
+        "iran:IR014": "a288f0d298be1d9b5f9851e786d25e3d55246ea8b605dce85e2871f194367a56",
+        "iran:IR015": "d17e677eafc90089508b9cfd824838d360682e4b72aca335a3b3d50fd6513510",
+        "iran:IR016": "02128843c06fd1cf101569463d12eb6fa02e370d7dcb94194a53198d44bcd42c",
+        "iran:IR017": "70b7706c55735f9585b6ba11e01474851843b2bb370242ba4b7596656863acff",
+        "iran:IR018": "bdbb8f9f794d2e6870a01c6b6fe82c268ed465f432677d1eeaf87fa72fb7a7a0",
+        "iran:IR019": "25f38ee9ec6b12a3eb578ed09cdb6e50453c25af33487d9851952d3434f86214",
+        "iran:IR020": "db7db5f9e41dfbf80b491ae3fc8cc10ad5d51272321b67c766969c78b0adfb9c",
+        "iran:IR021": "dfd03dcc74152c4bdf938daf64d6056bc3c2b59f3d2a87e11aec16e13512e50c",
+        "iran:IR022": "185f7c005680217e2383b55186cd8d19a3d623372d1973e3ddab6ffda9d502b3",
+        "iran:IR023": "05a7f3f384f8f70b5908d933228567e58b56649e993e315051624819cc1c6b96",
+        "iran:IR024": "ea1f20b78303e65a2ab4e7d3b20648d66094d3dc98bb41a3d963e8ca2698a17c",
+        "iran:IR025": "9cf1b5be2de0d8f1eeb2d6d1cf161df6827973b26ce22f67b9a23022a3617fcb",
+        "iran:IR026": "5912f18331267af399e88821096425fa6997e8ef5b809cb6027a1692feffeef4",
+        "iran:IR027": "d21136b86878ca426655376e55f93e3fb284bcb9ad5f2729e2ead2087fb65c2f",
+        "iran:IR028": "14af1196a7f86cb7e3b4f5c06c2b0233eefdca7a293b78f4f2f152f2d89948c1",
+        "iran:IR029": "bf8c336c832e916dcc54802ccd445e418d81dac699e16051cb35ff6c013057c5",
+        "iran:IR030": "25be655a2baf30e1ca1d67f62364547dc6c1ef577242dda96519f3e13f858fa8",
+        "iran:IR031": "b3e2f7fb2f68c3f3ccab0297f9d446a891d60923d234182cf22c674cafeb7d34",
+        "iran:IRN": "fb2c698cee191860e2b2f562c054e0558cc2215689c8604e02ac8696f397de42"
+      },
+      "preservedPopulation": {
+        "iran:IR001": "0233ebbd028acb04189db9b8577f754666dfdeb09d80362b73ada572dffe9354",
+        "iran:IR002": "2bff6bf41abf9481d181758b01c5ce5e3e66e5dee45581c26c62a38b4957ab30",
+        "iran:IR003": "c7a20ba003f3a6ff780bea6aff601e27b60e306cb374ecee350f8072fca72999",
+        "iran:IR004": "b629821ab8ea938346d0c5bf166bdc37d6631d305d977a61a53c9147de5aa30a",
+        "iran:IR005": "6438e45b43804270aaeedb3a381bc357c2a35c16b0645d120ba32cf9c907914c",
+        "iran:IR006": "aca1c1e4071c80143ec58844ac2f78b178165ce2aea9373a87efe2f357a0eba9",
+        "iran:IR007": "c69410853a199e802e58bd0e3ef1a4e4c1ca76fa81ea96b0d7087d107b9bc35d",
+        "iran:IR008": "c937d8bbaa85c3848d32b6cc1a4cabafbba6a50b03ca638fc941adecf1f5b976",
+        "iran:IR009": "08e2cf1bc2b0a373ad2ae0c1e31c49a6cb4a35000ed3a5be28df41f58a063603",
+        "iran:IR010": "a144921cc184d1dbbdee2a9a412b34796b408550b6bdcabada8eacae07311225",
+        "iran:IR011": "6602072b9790b73ac7e91287f5f2512615285a7b0068171750306281c8b0a206",
+        "iran:IR012": "a9d3d2f9c4f2b1f0fed2005b6eea328532e9a8bac29e3ab851c35402cd5ef509",
+        "iran:IR013": "f4988a568a3133b80eafe53f677dacfbc69e68d4161ce00f2a5e12d8dd52980d",
+        "iran:IR014": "97b1f3d85ca8d713ebfa07e952e79a90e4461c50c9fdef5af571ba1598844696",
+        "iran:IR015": "7d3023153c032af6c6dfe8f71be486c75069909a273e6161f017f4b6bebd4455",
+        "iran:IR016": "2e1d0f765a6d5b54a8ad4481322f72f352fff965fd09b71d12521db59b3e9cbe",
+        "iran:IR017": "eb46572a03bc36629a11f17ad10cc937a058252054f3d2cbb39c2d0ae9c24f43",
+        "iran:IR018": "f52d88044775845a15b3ea9baadaa0f6a8b065e193f88a729bd6f2c3e6053325",
+        "iran:IR019": "2f2808125af8db8640f5aa0535f431d1dfb28a300aab8ac90a2d2d521574ad21",
+        "iran:IR020": "94d818fb4e9c3a84a1ab17a9bc4d247acbdd16b1f5cdbee1b07632b310da124c",
+        "iran:IR021": "0a76531172f02977892739a79bc0f77b80aba4251af5d6524e069e510f6c2453",
+        "iran:IR022": "0752e0accad5a96731654350b5d22b4eeaf62e74e62fd3b9e2cb556a572dd3b3",
+        "iran:IR023": "6c787435478f48b9b1028a49030badf908d5780358655635d17f0483cf394ec9",
+        "iran:IR024": "72cc40d4cd099e7eb98e1d558ca446b252f87bbc2443fb568294bcb1267ae7aa",
+        "iran:IR025": "95c447b74a0d13b17d8e448926b4f72b3bccc6ccf200cd422f3d5c1be2990ad5",
+        "iran:IR026": "a42e9c8c0647473d4c6db5b12ca44ab61575e8224f078634386399b69581ec1a",
+        "iran:IR027": "aaabb383a1846764bd083a1f55b9845b13075dff935c9858578ae30d8d73f0cc",
+        "iran:IR028": "5420ef576f4098a8b8fe783b1ef0ea87a3a21e4f27239f469adce9b93101d106",
+        "iran:IR029": "12caa145cae21bc1648d32d6718ff44250c813912cc66f587ad0bbcbd7cc27e3",
+        "iran:IR030": "d3717c5ef8c4115238dee98c7e15afbe249085129c86ea21d1ecd928117a1f47",
+        "iran:IR031": "9a697e82b17d6e5c8f3a60b94717dcee95e3f97712c47dca3c0fffdc407465e7"
+      }
+    },
+    "iraq": {
+      "sourceCounts": {
+        "2": 101,
+        "3": 294
+      },
+      "displayedCounts": {
+        "1": 19,
+        "2": 104,
+        "3": 300
+      },
+      "referencePortions": [
+        {
+          "id": "IQG06Q03",
+          "sourceId": "IQG06Q03",
+          "level": 2,
+          "parent": "IQG06"
+        },
+        {
+          "id": "IQG06Q03-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q03",
+          "level": 2,
+          "parent": "IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q05",
+          "sourceId": "IQG06Q05",
+          "level": 2,
+          "parent": "IQG06"
+        },
+        {
+          "id": "IQG06Q05-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q05",
+          "level": 2,
+          "parent": "IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q07",
+          "sourceId": "IQG06Q07",
+          "level": 2,
+          "parent": "IQG06"
+        },
+        {
+          "id": "IQG06Q07-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q07",
+          "level": 2,
+          "parent": "IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q03N01",
+          "sourceId": "IQG06Q03N01",
+          "level": 3,
+          "parent": "IQG06Q03"
+        },
+        {
+          "id": "IQG06Q03N01-IN-IQG06Q03-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q03N01",
+          "level": 3,
+          "parent": "IQG06Q03-IN-IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q05N01",
+          "sourceId": "IQG06Q05N01",
+          "level": 3,
+          "parent": "IQG06Q05"
+        },
+        {
+          "id": "IQG06Q05N01-IN-IQG06Q05-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q05N01",
+          "level": 3,
+          "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q05N02",
+          "sourceId": "IQG06Q05N02",
+          "level": 3,
+          "parent": "IQG06Q05"
+        },
+        {
+          "id": "IQG06Q05N02-IN-IQG06Q05-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q05N02",
+          "level": 3,
+          "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q05N03",
+          "sourceId": "IQG06Q05N03",
+          "level": 3,
+          "parent": "IQG06Q05"
+        },
+        {
+          "id": "IQG06Q05N03-IN-IQG06Q05-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q05N03",
+          "level": 3,
+          "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q05N04",
+          "sourceId": "IQG06Q05N04",
+          "level": 3,
+          "parent": "IQG06Q05"
+        },
+        {
+          "id": "IQG06Q05N04-IN-IQG06Q05-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q05N04",
+          "level": 3,
+          "parent": "IQG06Q05-IN-IQ-OSM-3826029"
+        },
+        {
+          "id": "IQG06Q07N02",
+          "sourceId": "IQG06Q07N02",
+          "level": 3,
+          "parent": "IQG06Q07"
+        },
+        {
+          "id": "IQG06Q07N02-IN-IQG06Q07-IN-IQ-OSM-3826029",
+          "sourceId": "IQG06Q07N02",
+          "level": 3,
+          "parent": "IQG06Q07-IN-IQ-OSM-3826029"
+        }
+      ],
+      "sourceYears": {
+        "2": 2019,
+        "3": 2019
+      },
+      "method": "Deeper polygons load by selected parent, are clipped to its retained land geometry, and cover the same parent without changing country or first-level borders. Source identities and parent links are retained. Split historical Iraqi references are explicitly named as portions.",
+      "preservedAssets": {
+        "first.bin": "899d58cb555f2b8f85c912e8b38aab8d3d27444a5381722bbe5adf49ff596782",
+        "context.bin": "12ebb094ccb10f2f2979164de499b7c4532cf9605440830193a9a0e21ea5b6ec",
+        "international.bin": "ff83cba27cc3725c9d5588d703128f4d1745840367b85eacefa26ffff415ae23",
+        "political.bin": "4c9a484c88ef76fb3942629f09faabb6b66d6e798a3d4af330d6b734cbe4e0a7"
+      },
+      "preservedStatistics": {
+        "iraq:IQG01": "446afc6bf7c75fa6340fa0d75902fe8b885227b47b28201a0cc04319a398a271",
+        "iraq:IQG02": "1263f343a1b0596ecc571a9c91d692cc94ab33c7a4bb67fc55268037ca74045b",
+        "iraq:IQG03": "6d221b5cb7b3d9206041a7debe5998403a48426f064a8dfd961683f288adf274",
+        "iraq:IQG04": "7ce771b2ec869d227103ebc72a52780c0230a3928e52a5ea21fcb6dfa8394b4c",
+        "iraq:IQG05": "5f0ffe0ebef826cea7b7064bfe51f8882d4c906d53974343848100a54a6a0dc0",
+        "iraq:IQG07": "4f824eae537678f907682e5e9b14255e6c4b2b6bcf6bd6412c7959d380fe5b12",
+        "iraq:IQG08": "19e52bb42e6aaae94540aa20eeb05f0ab55bed7600b80a83749b18ab75ecf75d",
+        "iraq:IQG10": "3b0fc3b1baf313d58336ceaf2d1627ee918975997a11ed9bdca1dca00f94d5f6",
+        "iraq:IQG09": "cefa854a37bf053e1030899a8de3a35ffcf5b30d7d3e72ae43c1c3b315058dcc",
+        "iraq:IQG11": "1f3072d245a751e098c09bf5b4b01f8f2feb6c61be1f55d62f3f218b7360fcbb",
+        "iraq:IQG12": "8ed0e8c15d75616af29c5113119f15d2760bf05a466a27b5a433f6dcbf2cf7c4",
+        "iraq:IQG13": "5119797a85900c6492f485cb7130b1fcf15a3d9a6b13faa7013c121bb8818424",
+        "iraq:IQG14": "275da33da2c19f9f71882267c91c1096bca7bfe6f7bab5b8351d2a366a1da972",
+        "iraq:IQG15": "9dff39f2628dccda1000c8de8bbc3ae2e7eb0a7a32b4f6ef853ed36d5f859404",
+        "iraq:IQG16": "ad3825b5f86b01222c2bf435b335a4ac6829d1f62ec087968e25873947d3f2af",
+        "iraq:IQG17": "866df0cb2b0b830967752af28149740c5c84374087e1d31f166062946bd6c34f",
+        "iraq:IQG18": "aae402fcb10231320928758f3990c081ead4737c7b29e759f42c7bc2e6475597",
+        "iraq:IQG06": "ea7fd37041acf81e8d5fd5d48b2b00e6d175b26c886bc99c4b1c8a0d94edca3e",
+        "iraq:IQ-OSM-3826029": "781c39c701f45f97d67e8ce2789e26b6f90946fc1f88f8ba35a3d7bf5439ab06",
+        "iraq:IRQ": "3ea6ab0a8c2d0758e45b5f1a081d5d7697e0a634c81083412453f6917ba1851c"
+      },
+      "preservedPopulation": {
+        "iraq:IQG01": "2379f8bb4d65df190a4e9a1ed3361ba9738b5144f29e2352e929dd873a3ac7e6",
+        "iraq:IQG02": "2404589f1ddd333709f40732009acb3978ddf4e31097cf67805de1240b0f2a13",
+        "iraq:IQG03": "57f3fba07ae4dc7fd2ee2bbc02882014cb154f66269351aeb530dd70745174c0",
+        "iraq:IQG04": "455a01184a42a9119b23bd2c04e2f939827572f02ebb89288148053920a2edbb",
+        "iraq:IQG05": "7966b2da602c1fb8fa3ab2fb2e07dfdacc85222f22f1fad491ee7370092a1806",
+        "iraq:IQG07": "85df9ab4b4e59b7571bd98af465173ec1f3a7a9ad66282bbc604b157541c185c",
+        "iraq:IQG08": "1adfb5821fe46ce635e3c3759af0c960d00dd3d9c951fc8aeb109efc7568ab81",
+        "iraq:IQG10": "822f7ceb172528c0cd6dbefcf2630fe9bfc6c6fd901285f0591096bde43adfef",
+        "iraq:IQG09": "bed00ad144f3c91536a306cae247a5e046b6e81587bc908b1abebd8bb8b9ff4a",
+        "iraq:IQG11": "095e1814d21ae9b8a2d6f427ccff29a50b1f808af1905576263f96163560cabf",
+        "iraq:IQG12": "7d4e8aa46f91421f5c50cd8e3fb9e7d26bdf5cb77a705f3e8348e43e205f0f80",
+        "iraq:IQG13": "28a1fa00caa008dfa41840aac53ebced84c2ebcb24e573f433da49875ffde7a3",
+        "iraq:IQG14": "91be61c27cbec6cbceac91060a9fa805369e8395cf8a4d8ee380e5e1924dc753",
+        "iraq:IQG15": "8692b492a31b8ab2d2d5e7c9baf43274e26e610da9f2ad3615be004f280fb40d",
+        "iraq:IQG16": "d85f6cfcff9683bfd026ef45b8b04a24ce5a3b9ecdef88c5d17c6ff15ac1a0f1",
+        "iraq:IQG17": "4a5b1ca2203c8438d076516e12713bc295495ebd6f92194a250b50e78b3672a0",
+        "iraq:IQG18": "88dc325bfc2bfe496f67036444166ae004740a82434b6294cb95fbc4982627ba"
+      }
+    },
+    "saudi-arabia": {
+      "sourceCounts": {
+        "2": 147
+      },
+      "displayedCounts": {
+        "1": 13,
+        "2": 147
+      },
+      "referencePortions": [],
+      "sourceYears": {
+        "2": 2021
+      },
+      "method": "Regional polygons are dissolved from the same 147 governorates using official Taadeen emirate assignments, so all local areas nest consistently. The retained national land mask, context and international strokes remain unchanged. Deeper geometry loads by selected region.",
+      "preservedAssets": {
+        "context.bin": "6d57b1a9e72d35de7c12b2908938b7532de20a0723252bb1a19489da52a1916d",
+        "international.bin": "ddb92611ef7652eeec6db73baabac0669e041d8a87a66aff682318520f53e9d5"
+      },
+      "preservedStatistics": {
+        "saudi-arabia:SAU": "225d2d2660a0929f97714f30f9ccc1f8f82370d73f3de55380d2fe79e5ef9401"
+      },
+      "preservedPopulation": {
+        "saudi-arabia:SA04": "078d69c36f39bf4ee6166b36ceb20cce6c3384670a2a9f5b819c81d20c498d43",
+        "saudi-arabia:SA05": "b86ab7080604cbaa24972a8f8c79f8cb5786357d361404396faedc7707df99fe",
+        "saudi-arabia:SA06": "bea04668ceb8c6b33ab9cd2914562932196ea431bfd5a2359c1b82c389438a13",
+        "saudi-arabia:SA08": "8935f6f325c1c39c8f5402c2f1c466ba994f37942d7d3cf46985b40c8cc8c8e6",
+        "saudi-arabia:SA12": "42a5fdba786759f961b31049c30009e214e3b6d83392121b9864a0dcfa1930ac",
+        "saudi-arabia:SA07": "22d5f4e43ce48b846928f131bbc91a964cac8eb492f3b5017800f98df667bcf9",
+        "saudi-arabia:SA01": "3240f8467072ddc31f26ce6d45b7992feebff99a12aaf4670a1ca49d3ebc4afc",
+        "saudi-arabia:SA10": "476c3c3c2e64ee6d083c50fc2295bd508a7034ee8b4231a9f1f7b424a461ee98",
+        "saudi-arabia:SA03": "a6849559f6a8c003c5e57bb142e4f565ccf63cacf61be5a193e6e6ccf9d5cda7",
+        "saudi-arabia:SA02": "d91b7ed3bb6003ef5f4a184a5f10912b73e61aab27aeb47b1577e8ac70f61741",
+        "saudi-arabia:SA11": "b0bf5d402b17c4fe002181a42c789ba5f827da313851d8b846e1c051014ea736",
+        "saudi-arabia:SA09": "cb9d7d83783389b193cb040a8a35654e5b9cf7afe11395586e161dfa09319bb1",
+        "saudi-arabia:SA14": "3cab1bcdeded1db13023c0e1f9d885a6e00a7b875725852a89420190bb12a7ec"
+      }
+    }
+  }
+}

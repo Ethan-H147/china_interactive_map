@@ -1,0 +1,166 @@
+{
+  "title": "GASTAT 2022 census, reproduced by Saudi Ministry of Health, Statistical Yearbook 2022, Table 1-12 (page 51)",
+  "url": "https://www.moh.gov.sa/Ministry/Statistics/book/Documents/Statistical-Yearbook-2022.pdf",
+  "sourceFile": "saudi-population.pdf",
+  "sourceSha256": "ad90d515309ac5b87a3864e863d0c41989b1412a1e923b86377c64f7c5a4f4c8",
+  "nationalTotal": 32175224,
+  "year": 2022,
+  "rows": [
+    {
+      "id": "SA01",
+      "en": "Riyadh",
+      "local": "الرياض",
+      "population": 8591748,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Riyadh"
+      ]
+    },
+    {
+      "id": "SA02",
+      "en": "Makkah",
+      "local": "مكة المكرمة",
+      "population": 8021463,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Makkah"
+      ]
+    },
+    {
+      "id": "SA03",
+      "en": "Madinah",
+      "local": "المدينة المنورة",
+      "population": 2137983,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Medinah"
+      ]
+    },
+    {
+      "id": "SA04",
+      "en": "Eastern Province",
+      "local": "المنطقة الشرقية",
+      "population": 5125254,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Eastern"
+      ]
+    },
+    {
+      "id": "SA05",
+      "en": "Al Qassim",
+      "local": "القصيم",
+      "population": 1336179,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Qaseem"
+      ]
+    },
+    {
+      "id": "SA06",
+      "en": "Hail",
+      "local": "حائل",
+      "population": 746406,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Ha`il"
+      ]
+    },
+    {
+      "id": "SA07",
+      "en": "Tabuk",
+      "local": "تبوك",
+      "population": 886036,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Tabouk"
+      ]
+    },
+    {
+      "id": "SA08",
+      "en": "Northern Borders",
+      "local": "الحدود الشمالية",
+      "population": 373577,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Northern"
+      ]
+    },
+    {
+      "id": "SA09",
+      "en": "Jazan",
+      "local": "جازان",
+      "population": 1404997,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Jazan"
+      ]
+    },
+    {
+      "id": "SA10",
+      "en": "Najran",
+      "local": "نجران",
+      "population": 592300,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Najran"
+      ]
+    },
+    {
+      "id": "SA11",
+      "en": "Al Bahah",
+      "local": "الباحة",
+      "population": 339174,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Al-Bahah"
+      ]
+    },
+    {
+      "id": "SA12",
+      "en": "Al Jawf",
+      "local": "الجوف",
+      "population": 595822,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Al-Jouf"
+      ]
+    },
+    {
+      "id": "SA14",
+      "en": "Asir",
+      "local": "عسير",
+      "population": 2024285,
+      "year": 2022,
+      "method": "census",
+      "periodLabel": "2022 census",
+      "aliases": [
+        "Aseer"
+      ]
+    }
+  ]
+}

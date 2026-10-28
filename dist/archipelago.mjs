@@ -1,4 +1,5 @@
 import {onMapHover} from './pointer-performance.mjs';
+import {legacyStylingActive} from './settings.mjs';
 import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb,showCountryPanel} from './country-page.mjs';
 import {coastalDetailZoom,coastalDetailIds,coastalPartId} from './coastal-detail.mjs';
 import {loadCompressed} from './korea-data.mjs';
@@ -6,7 +7,7 @@ import {addWorkerSource} from './geo-pack.mjs';
 import {setLayerVisible} from './adaptive-lines.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {BoundaryBudget,chooseChunks} from './boundary-budget.mjs';
-const configuration={philippines:{name:'Philippines',prefix:'ph',first:'Regions',second:'Provinces',home:[[116,4.3],[127.2,21.5]],fill:'#e7edf6',selected:'#c5d7ee',line:'#366393'},indonesia:{name:'Indonesia',prefix:'id',first:'Provinces',second:'Regencies & cities',home:[[94.5,-11.3],[141.2,6.3]],fill:'#fff5f3',selected:'#f2ccc8',line:'#b55a52'}};
+const configuration={philippines:{name:'Philippines',prefix:'ph',first:'Regions',second:'Provinces',home:[[116,4.3],[127.2,21.5]],fill:'#e7edf6',selected:'#c5d7ee',line:'#366393'},indonesia:{name:'Indonesia',prefix:'id',first:'Provinces',second:'Regencies & cities',home:[[94.5,-11.3],[141.2,6.3]],fill:'#efd6d1',selected:'#e2b3ab',line:'#b55a52',legacy:{fill:'#fff5f3',selected:'#f2ccc8'}}};
 export async function addArchipelagoPortal(map,host,country){
  const config=configuration[country],{name,prefix,home}=config;
  await addWorkerSource(map,country+'-portal','data/archipelago/'+country+'-context.bin',{type:'geojson',tolerance:0},country==='indonesia'?'coastal':'');
@@ -53,11 +54,14 @@ export async function addArchipelagoPortal(map,host,country){
  function settled(token,opening=false){if(!host.isMoving?.()&&!map.isMoving())return Promise.resolve(true);return new Promise(resolve=>{const started=Date.now();const check=()=>{if(token!==generation||(!active&&!opening)||Date.now()-started>5000)return resolve(false);if(host.isMoving?.()||map.isMoving())return setTimeout(check,50);setTimeout(()=>{if(host.isMoving?.()||map.isMoving())check();else resolve(token===generation&&(active||opening));},210);};check();});}
  // Unit lines come from the shared edges (no coasts) when the data has them; the selected
  // outline keeps the whole polygon.
+ // Legacy styling (developer mode) restores a country's earlier, lighter fill.
+ function fillColor(){const c=config.legacy&&legacyStylingActive()?config.legacy:config;return ['case',['boolean',['feature-state','selected'],false],c.selected,['boolean',['feature-state','hover'],false],c.selected,c.fill];}
+ if(config.legacy)globalThis.addEventListener?.('atlas-styling-change',()=>{for(const entry of installed.values())for(const id of [entry.layers[0],entry.detailLayers[0]])if(id&&map.getLayer(id))map.setPaintProperty(id,'fill-color',fillColor());window.AtlasRegionColorController?.sync();});
  function install(key,blob,level,{overview=false,edges,outlines}={}){
   const url=URL.createObjectURL(blob),edgeUrl=edges&&URL.createObjectURL(edges),outlineUrl=outlines&&URL.createObjectURL(outlines);map.addSource(key,{type:'geojson',data:url,promoteId:'id',tolerance:0.25,maxzoom:16,buffer:64,attribution:`${name}: <a href="https://data.humdata.org/dataset/cod-ab-${country==='philippines'?'phl':'idn'}">OCHA / ${country==='philippines'?'NAMRIA, PSA':'BPS'}</a> · Islands: <a href="https://www.geonames.org/">GeoNames</a>`});
   const definitions={},addLayer=definition=>{definitions[definition.id]=definition;map.addLayer(definition);};
   const fill=key+'-fill',lines=key+'-lines',selection=key+'-selected',layers=[fill,lines,selection];
-  addLayer({id:fill,type:'fill',source:key,filter:['!=',['get','coastalDetail'],true],layout:{visibility:'none'},paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],config.selected,['boolean',['feature-state','hover'],false],config.selected,config.fill],'fill-antialias':false}});
+  addLayer({id:fill,type:'fill',source:key,filter:['!=',['get','coastalDetail'],true],layout:{visibility:'none'},paint:{'fill-color':fillColor(),'fill-antialias':false}});
   if(outlineUrl)map.addSource(key+'-outlines',{type:'geojson',data:outlineUrl,promoteId:'id',tolerance:0.25,maxzoom:16,buffer:64});
   if(edgeUrl)map.addSource(key+'-edges',{type:'geojson',data:edgeUrl,tolerance:0.25,maxzoom:16,buffer:64});
   addLayer({id:lines,type:'line',source:edgeUrl?key+'-edges':key,filter:['all',['!=',['get','special'],true],['!=',['get','coastalDetail'],true]],layout:{visibility:'none','line-join':'round'},paint:{'line-color':config.line,'line-width':level===1?.85:.55,'line-opacity':['interpolate',['linear'],['zoom'],3,.45,7,level===1?.85:.65]}});

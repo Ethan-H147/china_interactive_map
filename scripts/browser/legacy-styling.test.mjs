@@ -10,7 +10,7 @@ async function imagery(p){
  });
 }
 async function toggle(p){await p.tap('#settings-open');await p.tap('#settings-legacy-styling');await p.tap('#settings-close');await p.settle();}
-export default [1280,390].map(width=>({name:'China uniform and legacy province fills, saved preference, metric and quiz colors '+width,options:{width,height:900,mobile:width===390},async run(p,base){
+const scenarios=[1280,390].map(width=>({name:'China uniform and legacy province fills, saved preference, metric and quiz colors '+width,options:{width,height:900,mobile:width===390,developer:true},async run(p,base){
  await imagery(p);await p.open(base,'#china');await p.tap('#mode-province');await p.tap('#mode-lock');await p.evaluate('window.AtlasSheet?.collapse()');
  assert.equal(await p.evaluate('AtlasSettings.getSettings().legacyStyling'),false,'Shared fill is the default');
  const uniform=await colors(p);assert.equal(distinct(uniform),1,'All sampled provinces render the same color');assert.deepEqual(await colors(p,'province-fragment-fill'),uniform,'Jilin fragment fill matches the province fill');await p.screenshot('china-uniform-styling-'+width);
@@ -25,3 +25,19 @@ export default [1280,390].map(width=>({name:'China uniform and legacy province f
  await p.evaluate('void changeAtlas("south-africa")');await p.settle();const other=await p.evaluate('mapScene.basePaint("south-africa-first-fill","fill-color")');await toggle(p);assert.deepEqual(await p.evaluate('mapScene.basePaint("south-africa-first-fill","fill-color")'),other,'Other countries keep their own themes');
  await p.evaluate('void changeAtlas("china")');await p.settle();assert.deepEqual(await colors(p),legacy,'Preference follows a country switch');await p.tap('#settings-open');await p.screenshot('settings-legacy-styling-'+width);await p.tap('#settings-reset');await p.tap('#settings-close');await p.settle();assert.deepEqual(await colors(p),uniform,'Reset restores shared colors');assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));
 }}));
+
+// Legacy styling lives in developer mode: hidden and inactive otherwise. Indonesia's earlier pale fill is its legacy colour.
+const indonesiaFill=p=>p.evaluate('(()=>{const id="indonesia-first-fill";return map.style.getLayer(id).paint.get("fill-color").evaluate({properties:{}},{})})()');
+const rgb=c=>[c.r,c.g,c.b].map(v=>Math.round(v*255));
+const saveLegacy=async(p,base)=>{await p.open(base,'#indonesia');await p.evaluate('AtlasSettings.setSettings({legacyStyling:true})');await p.open(base,'?reload#indonesia');};
+scenarios.push({name:'Indonesia contrast fill; saved legacy styling hidden and inactive outside developer mode',options:{width:1280,height:900},async run(p,base){
+ await saveLegacy(p,base);assert.equal(await p.evaluate('AtlasSettings.getSettings().legacyStyling'),true);
+ assert.deepEqual(rgb(await indonesiaFill(p)),[239,214,209],'A saved legacy preference is inactive outside developer mode');
+ await p.tap('#settings-open');assert(await p.evaluate('document.querySelector("[for=settings-legacy-styling]").hidden'),'Legacy styling is hidden outside developer mode');await p.tap('#settings-close');
+ await p.screenshot('indonesia-contrast-fill');
+}},{name:'Indonesia legacy fill in developer mode',options:{width:1280,height:900,developer:true},async run(p,base){
+ await saveLegacy(p,base);assert.deepEqual(rgb(await indonesiaFill(p)),[255,245,243],'Developer legacy styling restores the earlier fill');
+ await p.tap('#settings-open');assert(!await p.evaluate('document.querySelector("[for=settings-legacy-styling]").hidden'));await p.tap('#settings-close');
+ await toggle(p);assert.deepEqual(rgb(await indonesiaFill(p)),[239,214,209],'Turning legacy off applies the contrast fill without reload');
+}});
+export default scenarios;

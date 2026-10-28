@@ -38,8 +38,10 @@ async function conform(children,parent){
  for(const f of merged.features)f.geometry={type:'MultiPolygon',coordinates:polygonClipping.intersection(polygons(f.geometry),mask)};
  return merged;
 }
-const old={UKR:'europe/ukraine',KAZ:'europe/kazakhstan',KGZ:'europe/kyrgyzstan',AFG:'europe/afghanistan'},processed=new Map(),frontiers={};
-for(const country of ['moldova','uzbekistan','tajikistan','turkmenistan']){
+const old={ROU:'europe/romania',UKR:'europe/ukraine',KAZ:'europe/kazakhstan',KGZ:'europe/kyrgyzstan',AFG:'europe/afghanistan'},processed=new Map(),frontiers=fs.existsSync(root+'frontiers.json')?load(root+'frontiers.json'):{};
+const selectedCountry=process.argv.find(a=>a.startsWith('--country='))?.split('=')[1];
+if(selectedCountry)assert(definitions.some(d=>d.country===selectedCountry),'Known country');
+for(const country of ['moldova','uzbekistan','tajikistan','turkmenistan'].filter(c=>!selectedCountry||c===selectedCountry)){
  const d=definitions.find(d=>d.country===country),units=new Map();let first,bottom;
  const put=(f,u)=>{assert(!units.has(u.id));units.set(u.id,u);f.properties={id:u.id,...(u.parent?{parent:u.parent}:{})};return f;};
  if(country==='moldova'){
@@ -71,7 +73,11 @@ for(const country of ['moldova','uzbekistan','tajikistan','turkmenistan']){
  const groups=new Map();for(const f of refs.features){const sides=[f.properties.ADM0_A3_L,f.properties.ADM0_A3_R];if(!sides.includes(d.iso))continue;const other=sides.find(x=>x!==d.iso);if(!groups.has(other))groups.set(other,[]);groups.get(other).push(...linesOf(fc([f])));}
  const reports=[];
  for(const [other,paths]of groups){let target=processed.get(other);if(!target&&old[other]){const data=load('dist/data/'+old[other]+'/first.bin');target=data.regions||data;}if(other==='CHN')target=readData('display-boundaries.json').provinces;if(!target)continue;const outline=await command(target,'-dissolve2');
-  for(const guide of joinReferencePaths(paths)){console.log('Align',d.iso,other,closed(guide)?'enclave':'frontier');const canonical=frontier(outline,guide);let displacement=0;if(closed(guide)){const match=nearestRing(first,guide);match.polygon[match.polygon.indexOf(match.ring)]=structuredClone(canonical);first=await command(first,'-clean gap-fill-area=0');}else{const result=await alignArc(first,canonical,{maxDistance:40000,maxSelectionMetres:40000,maxDeviationMetres:5000,coastalTrimMetres:5000});first=result.regions;displacement=result.maxEndpointDisplacementMetres;}reports.push({pair:[d.iso,other].sort().join('-'),vertices:canonical.length,owner:other,maxEndpointDisplacementMetres:displacement});}
+  for(const guide of joinReferencePaths(paths)){console.log('Align',d.iso,other,closed(guide)?'enclave':'frontier');
+   // Romania already owns the complete Prut frontier, including its lake
+   // crossing and tripoints. Reuse that arc rather than a second survey.
+   const romanian=country==='moldova'&&other==='ROU'?load('scripts/boundary-sources/four-europe/resolved.bin').features.find(f=>f.properties.pair==='MDA-ROU'):null;
+   const canonical=romanian?romanian.geometry.coordinates:frontier(outline,guide);let displacement=0;if(closed(guide)){const match=nearestRing(first,guide);match.polygon[match.polygon.indexOf(match.ring)]=structuredClone(canonical);first=await command(first,'-clean gap-fill-area=0');}else{const result=await alignArc(first,canonical,{maxDistance:40000,maxSelectionMetres:40000,maxDeviationMetres:romanian?5:5000,coastalTrimMetres:romanian?0:5000});first=result.regions;displacement=result.maxEndpointDisplacementMetres;}reports.push({pair:[d.iso,other].sort().join('-'),vertices:canonical.length,owner:other,maxEndpointDisplacementMetres:displacement});}
  }
  const legal=structuredClone(first);first=await command({'first.json':first,'lakes.json':lakes},'-erase lakes.json -clean gap-fill-area=0');
  if(bottom){const aligned=[];for(const p of first.features){const children=fc(bottom.features.filter(f=>units.get(f.properties.id).parent===p.properties.id));if(children.features.length)aligned.push(...(await conform(children,p)).features);}bottom=fc(aligned);}
@@ -81,6 +87,12 @@ for(const country of ['moldova','uzbekistan','tajikistan','turkmenistan']){
  for(const unit of units.values())unit.localLang=d.lang;
  await buildRegionalDataset({country,units,byLevel:{1:first,...(bottom?{2:bottom}:{})},year:['moldova','uzbekistan'].includes(country)?country==='moldova'?2022:2018:2026,retrieved:manifest.retrieved,levels:d.levels,sources:Object.fromEntries(Object.entries(manifest.files).filter(([name])=>name.startsWith(d.prefix+'-')||name.startsWith(d.iso.toLowerCase())||name.startsWith(country))),coverage,statisticsSources:{population:populationSource,worldbank:{title:'World Bank World Development Indicators: national current-price GDP, GDP per capita and population',url:manifest.files['worldbank.json'].url,license:'CC BY 4.0'}}});
  const dir='dist/data/europe/'+country+'/',write=(file,value)=>fs.writeFileSync(dir+file,gzipSync(JSON.stringify(value),{level:9}));write('political.bin',first);
+ if(country==='moldova'){
+  const canonical=load('scripts/boundary-sources/four-europe/resolved.bin').features.find(f=>f.properties.pair==='MDA-ROU').geometry.coordinates;
+  // Context simplification must retain the same shared edge as Romania.
+  const context=await alignArc(load(dir+'context.bin'),canonical,{maxDistance:1000,maxSelectionMetres:1000,maxDeviationMetres:5});
+  write('context.bin',context.regions);
+ }
  const own=[],outline=await command(legal,'-dissolve2');for(const [other,paths]of groups){if(old[other]||other==='CHN'||processed.has(other))continue;for(const guide of joinReferencePaths(paths)){const path=frontier(outline,guide);own.push({type:'Feature',properties:{countries:[country],pair:[d.iso,other].sort().join('-'),boundaryType:'land frontier'},geometry:{type:'LineString',coordinates:path}});}}
  write('international.bin',lineData(fc(own)));processed.set(d.iso,legal);frontiers[country]={aligned:reports,owned:own.map(f=>({pair:f.properties.pair,vertices:f.geometry.coordinates.length}))};
  const stats=load(dir+'statistics.json'),cat=load(dir+'catalogue.bin'),rows=wb.filter(r=>r.countryiso3code===d.iso),year=[2025,2024,2023].find(y=>['NY.GDP.MKTP.CD','NY.GDP.PCAP.CD','SP.POP.TOTL'].every(code=>rows.some(r=>r.indicator.id===code&&+r.date===y&&r.value>0)));assert(year,'National economics '+country);const value=code=>rows.find(r=>r.indicator.id===code&&+r.date===year).value;
@@ -89,6 +101,8 @@ for(const country of ['moldova','uzbekistan','tajikistan','turkmenistan']){
  console.log('Finished',country,cat.counts,'population cards',Object.values(stats.regions).filter(r=>r.level===1&&r.population).length);
 }
 fs.writeFileSync(root+'frontiers.json',JSON.stringify(frontiers,null,2)+'\n');
+if(!selectedCountry){
 const flags=load('dist/data/europe/flag-sources.json'),images=load('dist/data/flag-images.json'),prefix='export const nationalFlagImages=',text=fs.readFileSync('dist/national-flags.mjs','utf8'),national=JSON.parse(text.slice(text.indexOf(prefix)+prefix.length).trim().replace(/;$/,''));
 for(const d of definitions){const sourceRecord=manifest.files['flag-'+d.prefix+'.svg'],svg=source('flag-'+d.prefix+'.svg').toString(),tag=svg.match(/<svg\b[^>]*>/)[0],view=tag.match(/viewBox="([^"]+)"/)?.[1].split(/[ ,]+/).map(Number),width=view?.[2]||Number(tag.match(/\bwidth="([\d.]+)/)?.[1]),height=view?.[3]||Number(tag.match(/\bheight="([\d.]+)/)?.[1]);assert(width>0&&height>0);const f={file:'vendor/flag-'+d.prefix+'.svg',full:'vendor/flag-'+d.prefix+'.svg',width,height,...sourceRecord,source:sourceRecord.url};flags.flags[d.country]=f;images[f.file]=f;national[f.file]=f;}
 fs.writeFileSync('dist/data/europe/flag-sources.json',JSON.stringify(flags,null,2)+'\n');fs.writeFileSync('dist/data/flag-images.json',JSON.stringify(images));fs.writeFileSync('dist/national-flags.mjs','// Original national artwork and dimensions.\n'+prefix+JSON.stringify(national)+';\n');
+}

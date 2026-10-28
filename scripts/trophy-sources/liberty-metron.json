@@ -1,0 +1,39 @@
+{
+  "title": "Statue of Liberty 3D Scan",
+  "author": "Metron3D",
+  "license": "CC-BY-4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "source": "https://sketchfab.com/3d-models/statue-of-liberty-3d-scan-8e808365b5a6453497826b114b02f155",
+  "download": "https://zenodo.org/records/10355435/files/8e808365b5a6453497826b114b02f155.glb?download=1",
+  "originalSha256": "1aa3bf4b8acd467f94dae4bbdaf76adf2dcc4f63072c2c88f528cd705f869115",
+  "preparedSha256": "71b23214c488e0522bd42dc1b3aec8f0768f560f3e2850b1902f0be865ebe4c1",
+  "modifications": "Welded duplicate mesh seams and reduced from 1,035,539 to 90,000 triangles. Oriented and normalized, then leveled the scanned pedestal by its measured base plane; flattened only the bottom contact strip. Original textures removed; atlas patina, stone, gold and display base added.",
+  "levelCorrection": {
+    "method": "Area-weighted normal of the bottom pedestal surface; minimal rigid rotation to world up, with the lowest 0.01-unit contact strip flattened onto the display base.",
+    "sourceBaseNormal": [
+      0.014025186062374594,
+      0.9972529108359469,
+      0.072731877365752
+    ],
+    "rotation": [
+      [
+        0.9999015118000244,
+        -0.014025186062374594,
+        -0.0005107405813185327
+      ],
+      [
+        0.014025186062374594,
+        0.9972529108359469,
+        0.072731877365752
+      ],
+      [
+        -0.0005107405813185327,
+        -0.072731877365752,
+        0.9973513990359224
+      ]
+    ],
+    "degrees": 4.2478921192134,
+    "contactY": -0.9925,
+    "contactStrip": 0.01
+  }
+}

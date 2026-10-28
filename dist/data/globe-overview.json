@@ -1,8 +1,8 @@
 {
   "version": 1,
   "source": "Existing reconciled atlas land, claims and international frontiers; no external basemap.",
-  "landBytes": 4598626,
-  "borderBytes": 796074,
+  "landBytes": 4595811,
+  "borderBytes": 777346,
   "countries": [
     "afghanistan",
     "albania",
@@ -47,6 +47,8 @@
     "iceland",
     "india",
     "indonesia",
+    "iran",
+    "iraq",
     "ireland",
     "italy",
     "japan",
@@ -86,6 +88,7 @@
     "romania",
     "russia",
     "san-marino",
+    "saudi-arabia",
     "serbia",
     "singapore",
     "slovakia",

@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import {gunzipSync,gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {load} from './geo-index.mjs';
+import {addCoastOutline} from './antarctic-coast.mjs';
+import {preserveAntarctica} from './antarctic-claims.mjs';
 const root='dist/data/antarctica/',source='scripts/boundary-sources/antarctica/';
 fs.mkdirSync(root,{recursive:true});
 const manifest=load(source+'manifest.json'),bytes=gunzipSync(fs.readFileSync(source+'facilities-nov2024.csv.gz'));
@@ -13,13 +15,19 @@ const facilities=csv(new TextDecoder('windows-1252').decode(bytes)).filter(r=>Nu
  const en=r['English Name'].trim().replace(/\bAntartic\b/gi,'Antarctic'),local=r['Official Name'].trim();
  return {id:'AQ-COMNAP-'+r['Record ID#'],en,local,center,level:1,kind:r.Type||'Research facility',operators:[...new Set([r['Operator (primary)'],r['Operator (additional)']].filter(Boolean))],season:r.Seasonality,status:r.Status,established:Number(r['Year Established'])||null,elevation:r['Elevation (meters)']?Number(r['Elevation (meters)']):null,peakPopulation:Number(r['Peak Population'])||null,aliases:[local,r['English Name'].trim(),...(en.includes('Amundsen')?['South Pole','Amundsen Scott','Amundsen-Scott South Pole Station']:[])].filter(Boolean),sourceEdition:manifest.edition};
 }).sort((a,b)=>a.en.localeCompare(b.en));
-const antarctica=load('scripts/boundary-sources/nordics/ne-countries.json.gz').features.filter(f=>f.properties.ADM0_A3==='ATA').map(f=>({...f,properties:{country:'antarctica'}}));
-if(!antarctica.length)throw Error('Natural Earth Antarctica missing');
-fs.writeFileSync(root+'context.bin',gzipSync(JSON.stringify({type:'FeatureCollection',features:antarctica}),{level:9}));
+// SCAR ADD coastline, ice shelves included as satellite imagery shows them. Shared maps load the
+// 500 m outline at startup (fewer vertices than Natural Earth 1:10m); the Antarctica map adds the
+// unsimplified medium-resolution coast once it opens.
+const coastManifest=load(source+'coast-manifest.json'),coast=load(source+coastManifest.retained.file);
+const outline=await addCoastOutline(coast,{interval:500}),detail=await addCoastOutline(coast);
+fs.writeFileSync(root+'context.bin',gzipSync(JSON.stringify(outline),{level:9}));
+fs.writeFileSync(root+'coast.bin',gzipSync(JSON.stringify(detail),{level:9}));
 fs.writeFileSync(root+'facilities.json',JSON.stringify({edition:manifest.edition,source:manifest.files['facilities-nov2024.csv'].url,records:facilities},null,2)+'\n');
 fs.writeFileSync(root+'statistics.json',JSON.stringify({regions:{},sources:{}})+'\n');
 fs.writeFileSync('dist/data/region-colors/antarctica.json',JSON.stringify({version:2,country:'antarctica',level:'Research facilities',records:[]})+'\n');
-fs.writeFileSync(root+'sources.json',JSON.stringify({facilities:manifest,coast:{source:'Natural Earth 1:10m, retained nordics/ne-countries.json.gz',license:'Public domain',description:'One continental outline; no territorial sectors.'},treaty:{url:'https://www.ats.aq/e/antarctictreaty.html',note:'Article IV preserves positions on territorial claims without resolving sovereignty.'},coverage:{facilities:facilities.length,edition:manifest.edition,policy:'All listed facilities south of 60°S, including stations, camps and support sites. Subantarctic sites north of the Treaty area are excluded. Statuses refer to this edition, not a live operating report. Coordinates retain the source precision; moving ice-shelf stations can move.'}},null,2)+'\n');
+fs.writeFileSync(root+'sources.json',JSON.stringify({facilities:manifest,coast:{source:coastManifest.dataset+' '+coastManifest.version,url:coastManifest.page,doi:coastManifest.doi,credit:coastManifest.credit,license:coastManifest.license,description:'One continental outline including ice shelves, ice tongues and ice rises; no territorial sectors. Shared maps use a 500 m simplification; the Antarctica map uses the full medium-resolution coast.'},treaty:{url:'https://www.ats.aq/e/antarctictreaty.html',note:'Article IV preserves positions on territorial claims without resolving sovereignty.'},coverage:{facilities:facilities.length,edition:manifest.edition,policy:'All listed facilities south of 60°S, including stations, camps and support sites. Subantarctic sites north of the Treaty area are excluded. Statuses refer to this edition, not a live operating report. Coordinates retain the source precision; moving ice-shelf stations can move.'}},null,2)+'\n');
+// Claim sectors follow the new coast before the polar cap meshes them.
+await preserveAntarctica();
 await (await import('./build-antarctic-cap.mjs')).buildAntarcticCap();
 (await import('./build-antarctic-flags.mjs')).buildAntarcticFlags();
 console.log(facilities.length,'COMNAP Antarctic facilities built; types:',[...new Set(facilities.map(r=>r.kind))].join(', '));

@@ -14,9 +14,12 @@
     }
   },
   "coast": {
-    "source": "Natural Earth 1:10m, retained nordics/ne-countries.json.gz",
-    "license": "Public domain",
-    "description": "One continental outline; no territorial sectors."
+    "source": "Medium resolution vector polygons of the Antarctic coastline 7.7",
+    "url": "https://data.bas.ac.uk/items/cc111b81-5066-42dd-be60-9f05abcb5873",
+    "doi": "https://doi.org/10.5285/cc111b81-5066-42dd-be60-9f05abcb5873",
+    "credit": "SCAR Antarctic Digital Database; UK Polar Data Centre",
+    "license": "CC BY 4.0; https://creativecommons.org/licenses/by/4.0/",
+    "description": "One continental outline including ice shelves, ice tongues and ice rises; no territorial sectors. Shared maps use a 500 m simplification; the Antarctica map uses the full medium-resolution coast."
   },
   "treaty": {
     "url": "https://www.ats.aq/e/antarctictreaty.html",

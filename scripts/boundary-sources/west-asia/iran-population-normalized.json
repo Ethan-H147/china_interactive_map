@@ -1,0 +1,419 @@
+{
+  "title": "Statistical Centre of Iran / Statistical Research and Training Center: Population Data Sheet for Islamic Republic of Iran, 2016",
+  "url": "https://iran.unfpa.org/sites/default/files/pub-pdf/poster-12-03-2018_-v.08_1.pdf",
+  "sourceFile": "population-data-sheet-2016.pdf",
+  "sourceSha256": "336890d70c32190b3c0e507ffc6de835aaaeb284c03f8509ffa60da11824a7df",
+  "table": "Population columns, Mid-2011 and Mid-2016; population values use Mid-2016. Notes state all such indicators calculated from Census 2016.",
+  "year": 2016,
+  "nationalTotal": 79926270,
+  "rows": [
+    {
+      "id": "IR001",
+      "en": "Alborz",
+      "local": "البرز",
+      "sourceName": "Alborz",
+      "population": 2712400,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR002",
+      "en": "Ardabil",
+      "local": "اردبیل",
+      "sourceName": "Ardebil",
+      "population": 1270420,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Ardebil"
+      ]
+    },
+    {
+      "id": "IR003",
+      "en": "Bushehr",
+      "local": "بوشهر",
+      "sourceName": "Bushehr",
+      "population": 1163400,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR004",
+      "en": "Chaharmahal and Bakhtiari",
+      "local": "چهارمحال و بختیاری",
+      "sourceName": "Chaharmahal & Bakhtiyari",
+      "population": 947763,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Chaharmahal & Bakhtiyari"
+      ]
+    },
+    {
+      "id": "IR005",
+      "en": "East Azerbaijan",
+      "local": "آذربایجان شرقی",
+      "sourceName": "East Azarbayejan",
+      "population": 3909652,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "East Azarbayejan"
+      ]
+    },
+    {
+      "id": "IR006",
+      "en": "Fars",
+      "local": "فارس",
+      "sourceName": "Fars",
+      "population": 4851274,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR007",
+      "en": "Gilan",
+      "local": "گیلان",
+      "sourceName": "Gilan",
+      "population": 2530696,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR008",
+      "en": "Golestan",
+      "local": "گلستان",
+      "sourceName": "Golestan",
+      "population": 1868819,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR009",
+      "en": "Hamadan",
+      "local": "همدان",
+      "sourceName": "Hamadan",
+      "population": 1738234,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR010",
+      "en": "Hormozgan",
+      "local": "هرمزگان",
+      "sourceName": "Hormozgan",
+      "population": 1776415,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR011",
+      "en": "Ilam",
+      "local": "ایلام",
+      "sourceName": "Ilam",
+      "population": 580158,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR012",
+      "en": "Isfahan",
+      "local": "اصفهان",
+      "sourceName": "Esfahan",
+      "population": 5120850,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Esfahan"
+      ]
+    },
+    {
+      "id": "IR013",
+      "en": "Kerman",
+      "local": "کرمان",
+      "sourceName": "Kerman",
+      "population": 3164718,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR014",
+      "en": "Kermanshah",
+      "local": "کرمانشاه",
+      "sourceName": "Kermanshah",
+      "population": 1952434,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR015",
+      "en": "Khuzestan",
+      "local": "خوزستان",
+      "sourceName": "Khuzestan",
+      "population": 4710509,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR016",
+      "en": "Kohgiluyeh and Boyer-Ahmad",
+      "local": "کهگیلویه و بویراحمد",
+      "sourceName": "Kohgiluye & Boyer Ahmad",
+      "population": 713052,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Kohgiluye & Boyer Ahmad"
+      ]
+    },
+    {
+      "id": "IR017",
+      "en": "Kurdistan",
+      "local": "کردستان",
+      "sourceName": "Kordestan",
+      "population": 1603011,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Kordestan"
+      ]
+    },
+    {
+      "id": "IR018",
+      "en": "Lorestan",
+      "local": "لرستان",
+      "sourceName": "Lorestan",
+      "population": 1760649,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR019",
+      "en": "Markazi",
+      "local": "مرکزی",
+      "sourceName": "Markazi",
+      "population": 1429475,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR020",
+      "en": "Mazandaran",
+      "local": "مازندران",
+      "sourceName": "Mazandaran",
+      "population": 3283582,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR021",
+      "en": "North Khorasan",
+      "local": "خراسان شمالی",
+      "sourceName": "North Khorasan",
+      "population": 863092,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR022",
+      "en": "Qazvin",
+      "local": "قزوین",
+      "sourceName": "Ghazvin",
+      "population": 1273761,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Ghazvin"
+      ]
+    },
+    {
+      "id": "IR023",
+      "en": "Qom",
+      "local": "قم",
+      "sourceName": "Qom",
+      "population": 1292283,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR024",
+      "en": "Razavi Khorasan",
+      "local": "خراسان رضوی",
+      "sourceName": "Khorasan -e- Razavi",
+      "population": 6434501,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Khorasan -e- Razavi"
+      ]
+    },
+    {
+      "id": "IR025",
+      "en": "Semnan",
+      "local": "سمنان",
+      "sourceName": "Semnan",
+      "population": 702360,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR026",
+      "en": "Sistan and Baluchestan",
+      "local": "سیستان و بلوچستان",
+      "sourceName": "Sistan & Baluchestan",
+      "population": 2775014,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "Sistan & Baluchestan"
+      ]
+    },
+    {
+      "id": "IR027",
+      "en": "South Khorasan",
+      "local": "خراسان جنوبی",
+      "sourceName": "South Khorasan",
+      "population": 768898,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR028",
+      "en": "Tehran",
+      "local": "تهران",
+      "sourceName": "Tehran",
+      "population": 13267637,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR029",
+      "en": "West Azerbaijan",
+      "local": "آذربایجان غربی",
+      "sourceName": "West Azarbayejan",
+      "population": 3265219,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": [
+        "West Azarbayejan"
+      ]
+    },
+    {
+      "id": "IR030",
+      "en": "Yazd",
+      "local": "یزد",
+      "sourceName": "Yazd",
+      "population": 1138533,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    },
+    {
+      "id": "IR031",
+      "en": "Zanjan",
+      "local": "زنجان",
+      "sourceName": "Zanjan",
+      "population": 1057461,
+      "year": 2016,
+      "method": "census",
+      "periodLabel": "2016 census",
+      "source": "population",
+      "aliases": []
+    }
+  ],
+  "nativeNameSource": {
+    "url": "https://data.humdata.org/dataset/cod-ab-irn",
+    "file": "irn_admin_boundaries.geojson.zip",
+    "sha256": "607382b2bf5f4da942b28555219ae7ea3492d15104bdcaa4e6836eda25ec64bd",
+    "field": "irn_admin1.geojson / adm1_name1",
+    "codeField": "adm1_pcode",
+    "sourceYear": 2019,
+    "credit": "UNHCR",
+    "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)"
+  },
+  "verification": {
+    "rows": 31,
+    "uniqueIds": 31,
+    "sumMatchesNationalTotal": true,
+    "visualReview": "Rendered the original bilingual data sheet and confirmed population headers, rows and source notes."
+  }
+}

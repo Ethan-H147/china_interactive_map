@@ -1,0 +1,130 @@
+{
+  "saudi-arabia": {
+    "aligned": [
+      {
+        "pair": "QAT-SAU",
+        "owner": "qatar",
+        "vertices": 8147,
+        "maxEndpointDisplacementMetres": 15601.80232861719,
+        "coastalTrimMetres": 20000,
+        "coastalNote": "Retain the water-separated Khor Al Adaid inlet shore."
+      },
+      {
+        "pair": "IRQ-SAU",
+        "owner": "iraq",
+        "vertices": 171,
+        "maxEndpointDisplacementMetres": 9959.455919740663
+      },
+      {
+        "pair": "ARE-SAU",
+        "owner": "united-arab-emirates",
+        "vertices": 231,
+        "maxEndpointDisplacementMetres": 1812.5835170745113
+      }
+    ],
+    "owned": [
+      {
+        "pair": "JOR-SAU",
+        "vertices": 100
+      },
+      {
+        "pair": "KWT-SAU",
+        "vertices": 43
+      },
+      {
+        "pair": "OMN-SAU",
+        "vertices": 204
+      },
+      {
+        "pair": "SAU-YEM",
+        "vertices": 334
+      }
+    ]
+  },
+  "iran": {
+    "aligned": [
+      {
+        "pair": "IRN-TUR",
+        "owner": "turkey",
+        "vertices": 1759,
+        "maxEndpointDisplacementMetres": 553.323085217613
+      },
+      {
+        "pair": "ARM-IRN",
+        "owner": "armenia",
+        "vertices": 243,
+        "maxEndpointDisplacementMetres": 1640.7411198253717
+      },
+      {
+        "pair": "AZE-IRN",
+        "owner": "azerbaijan",
+        "vertices": 2790,
+        "maxEndpointDisplacementMetres": 594.3890170781648
+      },
+      {
+        "pair": "AZE-IRN",
+        "owner": "azerbaijan",
+        "vertices": 786,
+        "maxEndpointDisplacementMetres": 501.41324739993047
+      },
+      {
+        "pair": "IRN-TKM",
+        "owner": "turkmenistan",
+        "vertices": 8363,
+        "maxEndpointDisplacementMetres": 871.0543556438436
+      },
+      {
+        "pair": "AFG-IRN",
+        "owner": "afghanistan",
+        "vertices": 4024,
+        "maxEndpointDisplacementMetres": 0.045324230242491576
+      },
+      {
+        "pair": "IRN-PAK",
+        "owner": "pakistan",
+        "vertices": 295,
+        "maxEndpointDisplacementMetres": 625.6249478471767
+      }
+    ],
+    "owned": [
+      {
+        "pair": "IRN-IRQ",
+        "vertices": 21091
+      }
+    ]
+  },
+  "iraq": {
+    "aligned": [
+      {
+        "pair": "IRQ-TUR",
+        "owner": "turkey",
+        "vertices": 1297,
+        "maxEndpointDisplacementMetres": 1347.7249736133062
+      },
+      {
+        "pair": "IRN-IRQ",
+        "owner": "iran",
+        "vertices": 21091,
+        "maxEndpointDisplacementMetres": 0.056740559564694176
+      }
+    ],
+    "owned": [
+      {
+        "pair": "IRQ-KWT",
+        "vertices": 92
+      },
+      {
+        "pair": "IRQ-SAU",
+        "vertices": 171
+      },
+      {
+        "pair": "IRQ-JOR",
+        "vertices": 34
+      },
+      {
+        "pair": "IRQ-SYR",
+        "vertices": 149
+      }
+    ]
+  }
+}

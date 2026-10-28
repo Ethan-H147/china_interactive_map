@@ -1,0 +1,155 @@
+{
+  "retrieved": "2026-10-27",
+  "files": {
+    "irn-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-irn",
+      "sha256": "1a256053a9f8db28e35d1de20cef6c3760bcf730f12eb75b7ec3dc198df4b724",
+      "bytes": 17820
+    },
+    "irq-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-irq",
+      "sha256": "b5a97f949772f051ae77264b8036b88e60926fa2dbd1b6566ef0a9c844920774",
+      "bytes": 37751
+    },
+    "sau-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sau",
+      "sha256": "e11144a3a7c281e77e58d528cdfb38064fb1217c30894cbfae82797f78d296a9",
+      "bytes": 30112
+    },
+    "irn.zip": {
+      "url": "https://data.humdata.org/dataset/247b4026-79ff-4b16-95b9-0f366792d2cc/resource/6f85c07b-d29d-4b96-964c-0052b949f3b3/download/irn_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) Ã‚Â· HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-irn",
+      "sha256": "607382b2bf5f4da942b28555219ae7ea3492d15104bdcaa4e6836eda25ec64bd",
+      "bytes": 10838112
+    },
+    "irq.zip": {
+      "url": "https://data.humdata.org/dataset/488bb3cd-3ce9-49d3-862a-3ce7975c63e1/resource/a9ed4d00-1182-4fdc-a0e4-82bbd20786db/download/irq_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) Ã‚Â· HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-irq",
+      "sha256": "1477e728e4bd2dc0afd9bb8fbffaa25847d92a480364bf7022baa7e2adbb02f0",
+      "bytes": 1423567
+    },
+    "sau.zip": {
+      "url": "https://data.humdata.org/dataset/41ce9023-1d21-4549-a485-94316200aba0/resource/99111dda-821b-47ba-ac47-771c9ed5184a/download/sau_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) Ã‚Â· HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sau",
+      "sha256": "a11202d7d84361d27b7dd4fa3816865082ebd4af8d1cb69c9b56ada20c5d1971",
+      "bytes": 3482653
+    },
+    "saudi-population.pdf": {
+      "url": "https://www.moh.gov.sa/Ministry/Statistics/book/Documents/Statistical-Yearbook-2022.pdf",
+      "credit": "Saudi Ministry of Health Ã‚Â· GASTAT 2022 census, administrative regions, Table 1-12",
+      "license": "Official statistics; attribution",
+      "sha256": "ad90d515309ac5b87a3864e863d0c41989b1412a1e923b86377c64f7c5a4f4c8",
+      "bytes": 7314453
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/IRN;IRQ;SAU/indicator/NY.GDP.MKTP.CD;NY.GDP.PCAP.CD;SP.POP.TOTL?source=2&date=2023:2025&format=json&per_page=1000",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "c96d22b3b1fef673107e43fbb130a09af047ad0a2374473530f6a53e8393d520",
+      "bytes": 5793
+    },
+    "flag-ir.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg",
+      "credit": "Wikimedia Commons Ã‚Â· national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iran.svg",
+      "sha256": "c1d6eb64f7060fb362ad8efd0205cdd37c7443fa1f009b9882feede56022009c",
+      "bytes": 2218
+    },
+    "flag-iq.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg",
+      "credit": "Wikimedia Commons Ã‚Â· national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iraq.svg",
+      "sha256": "2a3ac265b9efcfb0b8761b753b8dba85b63af329deed39dc7a363e61dad70667",
+      "bytes": 1204
+    },
+    "flag-sa.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg",
+      "credit": "Wikimedia Commons Ã‚Â· national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Saudi_Arabia.svg",
+      "sha256": "b0b36326e3e5b74624ee8b5de8273ea00f7bbe9b5ba0da6250cbe7b3c637505e",
+      "bytes": 28593
+    },
+    "iran-population.pdf": {
+      "url": "https://iran.unfpa.org/sites/default/files/pub-pdf/poster-12-03-2018_-v.08_1.pdf",
+      "credit": "Statistical Centre of Iran / Statistical Research and Training Center, hosted by UNFPA",
+      "license": "Official statistics; attribution",
+      "sha256": "336890d70c32190b3c0e507ffc6de835aaaeb284c03f8509ffa60da11824a7df",
+      "bytes": 1401698
+    },
+    "iraq-population.xlsx": {
+      "url": "https://nogp.gov.iq/DatasetDetails.aspx?id=17",
+      "sha256": "2f2446396744ec8c760b797d46b2b177ec8954aa2ef8542c5c319f9b608176f9",
+      "bytes": 13294,
+      "credit": "Iraqi Ministry of Planning / Commission of Statistics and GIS, National Open Government Portal",
+      "license": "Official statistics; attribution",
+      "attachment": "ØªØ¹Ø¯Ø§Ø¯ 2024.xlsx",
+      "retrievalMethod": "Anonymous ASP.NET form POST to this dataset URL, __EVENTTARGET=ctl00$ContentPlaceHolder1$rptFiles$ctl01$lnkDownload; include hidden __VIEWSTATE and __EVENTVALIDATION fields from a fresh GET and its session cookies.",
+      "sourceUploaded": "2026-02-04 22:52",
+      "populationYear": 2024
+    },
+    "halabja-relation.json": {
+      "url": "https://www.openstreetmap.org/api/0.6/relation/3826029/full.json",
+      "sha256": "6c9c2150819052dba05c8f6cf3abc5bc89b0689dd0a3cd660aea522e2ef10e70",
+      "bytes": 473761,
+      "credit": "Â© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/3826029",
+      "relation": 3826029,
+      "en": "Halabja Governorate",
+      "adminLevel": 4
+    },
+    "saudi-governorates.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/SAU/ADM2/geoBoundaries-SAU-ADM2.geojson",
+      "sha256": "5c550ddf9954756cfdf7972a70bbbed04db0242f515255bc061b29321dea2436",
+      "bytes": 7397583,
+      "credit": "geoBoundaries / OpenStreetMap",
+      "license": "Creative Commons Attribution-ShareAlike 2.0 as stated by geoBoundaries metadata; original OSM attribution retained",
+      "year": 2021,
+      "boundaryID": "SAU-ADM2-3984122",
+      "count": 147,
+      "metadataUrl": "https://www.geoboundaries.org/api/current/gbOpen/SAU/ADM2/"
+    },
+    "saudi-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SAU/ADM2/",
+      "sha256": "b8188b4930cc83b8b8826fad0007c550f487aa317a320657fe6f20f49b72331d",
+      "bytes": 1699
+    },
+    "saudi-governorate-names.json": {
+      "sha256": "e72a1ee59ac797a19f59c48dd7b21d833c39553495d80ddff950f34d4b59bfcb",
+      "bytes": 67339,
+      "derivedFrom": [
+        "geoboundaries-adm2.geojson",
+        "taadeen-governorates.geojson"
+      ],
+      "parentSource": "dist/data/europe/saudi-arabia/first.bin (13 existing HDX-based regions)",
+      "method": "Each gbOpen polygon interior point matched exactly one current displayed parent and one official Taadeen reference polygon. English source identities retained; Arabic official names cleaned of capital-seat parentheses. Al Taif manually preserves الطائف rather than the centroid reference المويه, because the 2021 source area combines the newer Taif and Muwayh reference polygons."
+    },
+    "saudi-name-reference.geojson": {
+      "url": "https://gis.taadeen.sa/server/rest/services/Common/BaseMaps/MapServer/2/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "sha256": "0fa38873cb3194883368edbb242de8baffcb73ad7749963c13b78aeda6398b87",
+      "bytes": 15262810,
+      "credit": "Saudi Ministry of Industry and Mineral Resources / Taadeen public GIS",
+      "license": "No explicit license returned by public service; retained as factual bilingual-name reference, not chosen for app geometry",
+      "sourceField": "Governorate_المحافظات_2023",
+      "count": 149
+    },
+    "saudi-national-mask.geojson": {
+      "url": "data/europe/saudi-arabia/first.bin",
+      "credit": "Retained OCHA-based Saudi national land mask with established neighbouring frontier alignments",
+      "license": "OCHA CC BY-IGO; retained atlas alignments",
+      "derivedFromSha256": "0a2a7ec7b744b29afdcd980b7ff2fdde0f0c92095e5b6afcfa61f3e7938a9763",
+      "method": "Dissolve the approved first-level land before aligning the deeper hierarchy.",
+      "sha256": "78fd2431cd40555cf6021d4a99b0d10655834494b6e7b64a3062a37088e53359",
+      "bytes": 4150338
+    }
+  }
+}

@@ -1,15 +1,50 @@
 {
-  "note": "Original geometry and original SVG-painted decoration. These sources informed shapes and proportions; no museum images or third-party mesh assets were copied for the three new models.",
+  "note": "Original geometry except the credited Eiffel Tower, Liberty and Christ adaptations. References inform proportions and features. Source credits, licenses, checksums and adaptation notes are retained alongside imported assets.",
   "models": {
     "korea": [
-      "https://www.museum.go.kr/ENG/contents/E0201080200.do?relicId=27163&schM=view&showHallId=757",
-      "https://www.metmuseum.org/art/collection/search/42301"
+      "https://digital.khs.go.kr/heri/heriDetail.do?ctptUid=13898859666526200071",
+      "https://royal.khs.go.kr/ENG/contents/E101020000.do?bdProgramCode=storyCtg3&pageType=story&schBdcode=gbg"
     ],
     "russia": [
-      "https://tmora.org/2024/08/27/a-thousand-nesting-dolls/"
+      "https://en.shm.ru/museum/hvb/",
+      "https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700008419"
     ],
     "germany": [
       "https://www.visitberlin.de/en/brandenburg-gate"
+    ],
+    "argentina": [
+      "https://buenosaires.gob.ar/gcaba_historico/plaza-de-la-republica/historia-del-obelisco",
+      "https://www.argentina.gob.ar/pais/simbolos/bandera"
+    ],
+    "united-kingdom": [
+      "https://www.parliament.uk/about/living-heritage/building/palace/architecture/palacestructure/towers-of-parliament/",
+      "https://virtualtours-assets.parliament.uk/elizabeth-tower/index.html"
+    ],
+    "spain": [
+      "https://patrimoni.gencat.cat/en/collection/sagrada-familia",
+      "https://sagradafamilia.org/documents/20142/1693659/SF_Booklet_01_20260227_digital_AF.pdf/a44dfe77-d5af-412f-0657-e203984acd73"
+    ],
+    "italy": [
+      "https://colosseo.it/en/area/colosseo/",
+      "https://colosseo.it/en/marvels/the-cavea-of-the-colosseum-and-the-belvedere-terrace/",
+      "https://colosseo.it/en/marvels/the-underground-levels-of-the-colosseum/"
+    ],
+    "chile": [
+      "https://whc.unesco.org/en/list/715",
+      "https://www.museorapanui.gob.cl/conozca-rapa-nui"
+    ],
+    "brazil": [
+      "https://sketchfab.com/3d-models/christ-the-redeemer-d143e5357efd42529777438d0f72c79c"
+    ],
+    "united-states": [
+      "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm",
+      "https://www.nps.gov/stli/learn/statue-of-liberty-facts.htm",
+      "https://sketchfab.com/3d-models/statue-of-liberty-3d-scan-8e808365b5a6453497826b114b02f155"
+    ],
+    "china": [
+      "https://whc.unesco.org/en/list/438",
+      "https://english.scio.gov.cn/chinafacts/2017-04/13/content_40613789.htm",
+      "https://english.visitbeijing.com.cn/article/47ONSwejcZB"
     ]
   },
   "repairs": {
@@ -17,5 +52,27 @@
     "japan": "Hollow collars replace solid blocks around posts; hanging papers attach to a curved rope; front plaque layers meet without crossing.",
     "united-states": "Hollow bell shell and integrated casting bands; support tops meet yoke underside; fracture decoration follows the shell surface.",
     "france": "Imported footing rests on the circular base surface; source lattice and platform joins retained."
+  },
+  "designNotes": {
+    "argentina": "Obelisco miniature with an original ornamental Sun of May: thirty-two alternating straight and flame rays. Abbreviated original inscription arrangement, not a facsimile of all four historic inscriptions.",
+    "spain": "Artistic interpretation of the planned eighteen-tower scheme, not the current construction state.",
+    "italy": "Artistic reconstruction of surviving and ruined fabric, with partial arena decking to show the hypogeum.",
+    "korea": "Original five-by-five-bay Geunjeongjeon hall interpretation with double eaves, painted brackets and stone terraces.",
+    "united-states": "Adapted Metron3D scan of a replica, CC BY 4.0. Source pedestal leveled by its measured base plane, correcting a 4.2479-degree tilt with a rigid rotation; only the lowest contact strip flattened. Proportions and drapery retained, with a level atlas display base. Source attribution and license retained in the downloadable model.",
+    "china": "Original scenic interpretation of Ming/Mutianyu wall architecture, with a winding stepped walkway, hollow towers and supporting mountain terrain. Not a survey reconstruction.",
+    "reserved": "Jade disc, celadon vase, Liberty bell and floral matryoshka retain exact existing model and poster bytes; no future quiz assignment has been made.",
+    "russia": "Original architectural miniature with eight clustered chapels, a central tent, later low chapel and belfry. Distinct modeled spiral and diamond dome patterns. Not a survey reconstruction.",
+    "brazil": "Adapted JuanG3D authored Art Deco sculpture, CC BY 4.0. Original print plinth removed; face, hands and layered robe retained. Uniformly scaled onto an original proportional octagonal pedestal; pale stone finish. Not a scan."
+  },
+  "reservedModels": {
+    "korea-celadon": [
+      "https://www.museum.go.kr/ENG/contents/E0201080200.do?relicId=27163&schM=view&showHallId=757",
+      "https://www.metmuseum.org/art/collection/search/42301"
+    ],
+    "china-jade-disc": [],
+    "us-liberty-bell": [],
+    "russia-matryoshka": [
+      "https://tmora.org/2024/08/27/a-thousand-nesting-dolls/"
+    ]
   }
 }

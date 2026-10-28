@@ -16,6 +16,7 @@ export const compactSources=[
  'archipelago/philippines-context.bin','archipelago/indonesia-context.bin',
  'southeast-asia/malaysia-context.bin','southeast-asia/singapore-context.bin',
  'russia/context.bin','russia/international.bin',
+ 'antarctica/coast.bin',
  ...['south-africa','botswana','namibia','eswatini','lesotho'].flatMap(c=>[`southern-africa/${c}/context.bin`,`southern-africa/${c}/international.bin`]),
  ...globalThis.AtlasCountries.byAdapter('europe').flatMap(c=>['context','neighbours','international'].map(f=>`europe/${c}/${f}.bin`))
 ];

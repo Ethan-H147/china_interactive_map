@@ -2,18 +2,19 @@
   "moldova": {
     "aligned": [
       {
+        "pair": "MDA-ROU",
+        "vertices": 600,
+        "owner": "ROU",
+        "maxEndpointDisplacementMetres": 187.771510135249
+      },
+      {
         "pair": "MDA-UKR",
         "vertices": 5967,
         "owner": "UKR",
         "maxEndpointDisplacementMetres": 563.3914770666717
       }
     ],
-    "owned": [
-      {
-        "pair": "MDA-ROU",
-        "vertices": 2900
-      }
-    ]
+    "owned": []
   },
   "uzbekistan": {
     "aligned": [

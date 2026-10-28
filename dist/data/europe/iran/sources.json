@@ -1,0 +1,38 @@
+{
+  "retrieved": "2026-10-27",
+  "coverage": "31 provinces from UNHCR/OCHA May 2019 geometry, reviewed October 2024. Population is the Statistical Centre of Iran 2016 census, retained with its date; newer country totals are not assigned to provinces. Shared land frontiers follow existing atlas neighbours. Inland lake surfaces are excluded. Country overview pages stay hidden. The deeper layer contains the retained 429 counties (shahrestan), dated 2019.",
+  "counts": {
+    "1": 31,
+    "2": 429
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "irn-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-irn",
+      "sha256": "1a256053a9f8db28e35d1de20cef6c3760bcf730f12eb75b7ec3dc198df4b724",
+      "bytes": 17820
+    },
+    "irn.zip": {
+      "url": "https://data.humdata.org/dataset/247b4026-79ff-4b16-95b9-0f366792d2cc/resource/6f85c07b-d29d-4b96-964c-0052b949f3b3/download/irn_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) Ã‚Â· HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-irn",
+      "sha256": "607382b2bf5f4da942b28555219ae7ea3492d15104bdcaa4e6836eda25ec64bd",
+      "bytes": 10838112
+    }
+  },
+  "depth": {
+    "sourceCounts": {
+      "2": 429
+    },
+    "displayedCounts": {
+      "1": 31,
+      "2": 429
+    },
+    "referencePortions": [],
+    "sourceYears": {
+      "2": 2019
+    },
+    "method": "Deeper polygons load by selected parent, are clipped to its retained land geometry, and cover the same parent without changing country or first-level borders. Source identities and parent links are retained. Split historical Iraqi references are explicitly named as portions."
+  }
+}

@@ -68,24 +68,27 @@ const wheel=symbols.markup('indonesia');assert(wheel.includes('symbol-rotor'));a
  // Startup preloads must name real files that the page actually requests; a stale
  // entry would download a file twice or not at all.
  const page=fs.readFileSync('dist/index.html','utf8'),code=fs.readdirSync('dist').filter(f=>/\.(m?js)$/.test(f)).map(f=>fs.readFileSync('dist/'+f,'utf8')).join('\n');
- // The page preloads China's first-view files; app.js preloads every other country's outline after that view.
- const first=[...page.matchAll(/<link rel="preload" as="fetch" crossorigin href="data\/([^"]+)">/g)].map(m=>m[1]);
+ // The page preloads China's first-view files (the default) or Antarctica's, which opens on the globe
+ // overview; app.js preloads every other country's outline after that view.
+ const lists=JSON.parse(page.match(/<script type="application\/json" id="first-preloads">([^<]+)<\/script>/)[1]),strip=list=>list.map(u=>u.replace(/^data\//,''));
+ const first=strip(lists.default),overview=strip(lists.antarctica);
+ assert(overview.includes('globe-overview-land.bin')&&!overview.some(f=>/world-land|china-context|russia\//.test(f)),"Antarctica's first view preloads the globe overview, not China's shared land and portals");
  const later=JSON.parse(page.match(/<script type="application\/json" id="later-preloads">([^<]+)<\/script>/)[1]).map(u=>u.replace(/^data\//,''));
  const source=file=>file.replace(/^compact\//,'');
  for(const file of ['atlas-frontiers.bin','china-context.bin','korea-context.bin','mongolia-context.bin','japan-context.bin','russia/context.bin'])assert(first.map(source).includes(file),"China's first view preloads "+file);
  assert(!first.some(f=>f.includes('southern-africa/'))&&later.length>=10&&later.every(f=>f.includes('southern-africa/')),"Southern Africa's outlines are preloaded after the first view, once each");
  assert(code.includes("$('later-preloads')"),'app.js requests the later preloads');
- const preloads=[...first,...later];
+ const preloads=[...first,...overview,...later];
  for(const file of preloads){
   assert(fs.existsSync('dist/data/'+file),'Preloaded file exists: '+file);
   // Paths may be assembled at runtime, e.g. 'data/archipelago/'+country+'-context.bin'.
   const name=file.split('/').pop(),stem=name.slice(name.indexOf('-')+1),dir=file.split('/')[0];
-  assert(code.includes(file)||(code.includes(name)||code.includes(stem))&&(!file.includes('/')||code.includes(dir+'/')),'Preloaded file is requested by the page: '+file);
+  assert(code.includes(file)||code.includes("'"+name.replace(/\.bin$/,'')+"'")||(code.includes(name)||code.includes(stem))&&(!file.includes('/')||code.includes(dir+'/')),'Preloaded file is requested by the page: '+file);
  }
  const entry=fs.readFileSync('dist/atlas-entry.js','utf8'),app=fs.readFileSync('dist/app.js','utf8');
  assert.deepEqual(boot('#china').fetched,['data/china-regions.json'],'China visits preload only the search index on every device');
  assert.deepEqual(boot('#japan').fetched,[],'Other countries do not download China');
  const early=boot('#china').entry;assert(early.takeEarly('chinaRegions'));assert.equal(early.takeEarly('chinaRegions'),undefined,'An early response is handed over once');
  for(const key of ['chinaRegions'])assert(entry.includes(`['${key}',`)&&(app.includes(`takeEarly('${key}')`)||app.includes(`packBlobUrl('${key}',`)&&app.includes('takeEarly(key)')),'Early China response is consumed: '+key);
- console.log(`Startup preloads: ${first.length} first-view and ${later.length} later files exist and are requested; early China downloads are consumed.`);
+ console.log(`Startup preloads: ${first.length} first-view (${overview.length} for Antarctica) and ${later.length} later files exist and are requested; early China downloads are consumed.`);
 }

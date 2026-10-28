@@ -6,10 +6,10 @@
       "country": "china",
       "addedAt": "2026-10-25T01:19:02Z",
       "addedOrder": 1,
-      "title": "Jade disc",
-      "file": "data/trophies/china.glb",
-      "triangles": 11796,
-      "bytes": 852340,
+      "title": "Great Wall",
+      "file": "data/trophies/china-great-wall.glb",
+      "triangles": 49432,
+      "bytes": 3566168,
       "source": "Boundary Atlas original"
     },
     {
@@ -24,13 +24,18 @@
     },
     {
       "country": "united-states",
+      "source": {
+        "author": "Metron3D",
+        "license": "CC-BY-4.0",
+        "url": "https://sketchfab.com/3d-models/statue-of-liberty-3d-scan-8e808365b5a6453497826b114b02f155",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
       "addedAt": "2026-10-25T01:19:02Z",
       "addedOrder": 3,
-      "title": "Liberty bell",
-      "file": "data/trophies/united-states.glb",
-      "triangles": 9208,
-      "bytes": 668048,
-      "source": "Boundary Atlas original"
+      "title": "Statue of Liberty",
+      "file": "data/trophies/us-statue-of-liberty-v3.glb",
+      "triangles": 92596,
+      "bytes": 6671104
     },
     {
       "country": "france",
@@ -50,20 +55,20 @@
       "country": "korea",
       "addedAt": "2026-10-25T06:08:53.314Z",
       "addedOrder": 5,
-      "title": "Cloud-and-crane celadon",
-      "file": "data/trophies/korea.glb",
-      "triangles": 19108,
-      "bytes": 1691428,
+      "title": "Gyeongbokgung throne hall",
+      "file": "data/trophies/korea-gyeongbokgung.glb",
+      "triangles": 95590,
+      "bytes": 6917548,
       "source": "Boundary Atlas original"
     },
     {
       "country": "russia",
       "addedAt": "2026-10-25T06:08:53.352Z",
       "addedOrder": 6,
-      "title": "Floral matryoshka",
-      "file": "data/trophies/russia.glb",
-      "triangles": 16804,
-      "bytes": 1709264,
+      "title": "Saint Basil’s Cathedral",
+      "file": "data/trophies/russia-saint-basil.glb",
+      "triangles": 103100,
+      "bytes": 7435140,
       "source": "Boundary Atlas original"
     },
     {
@@ -74,6 +79,114 @@
       "file": "data/trophies/germany.glb",
       "triangles": 37764,
       "bytes": 2722732,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "argentina",
+      "addedAt": "2026-10-28T01:29:33Z",
+      "addedOrder": 8,
+      "title": "Obelisco medallion",
+      "file": "data/trophies/argentina.glb",
+      "triangles": 93531,
+      "bytes": 6767228,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "chile",
+      "addedAt": "2026-10-28T01:29:33Z",
+      "addedOrder": 9,
+      "title": "Moai on an ahu",
+      "file": "data/trophies/chile.glb",
+      "triangles": 47708,
+      "bytes": 3438676,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "brazil",
+      "source": {
+        "title": "Christ the Redeemer",
+        "author": "JuanG3D",
+        "license": "CC-BY-4.0",
+        "url": "https://sketchfab.com/3d-models/christ-the-redeemer-d143e5357efd42529777438d0f72c79c",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "addedAt": "2026-10-28T01:29:33Z",
+      "addedOrder": 10,
+      "title": "Christ the Redeemer",
+      "file": "data/trophies/brazil-christ-v2.glb",
+      "triangles": 29476,
+      "bytes": 2126452
+    },
+    {
+      "country": "united-kingdom",
+      "addedAt": "2026-10-28T01:29:33Z",
+      "addedOrder": 11,
+      "title": "Elizabeth Tower",
+      "file": "data/trophies/united-kingdom.glb",
+      "triangles": 43682,
+      "bytes": 3299268,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "spain",
+      "addedAt": "2026-10-28T01:29:33Z",
+      "addedOrder": 12,
+      "title": "Sagrada Família",
+      "file": "data/trophies/spain.glb",
+      "triangles": 86430,
+      "bytes": 6230068,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "italy",
+      "addedAt": "2026-10-28T01:29:33Z",
+      "addedOrder": 13,
+      "title": "Colosseum",
+      "file": "data/trophies/italy.glb",
+      "triangles": 101366,
+      "bytes": 7305440,
+      "source": "Boundary Atlas original"
+    }
+  ],
+  "reservedModels": [
+    {
+      "country": "russia",
+      "id": "russia-matryoshka",
+      "release": "developer",
+      "title": "Floral matryoshka",
+      "file": "data/trophies/reserved/russia-matryoshka.glb",
+      "triangles": 16804,
+      "bytes": 1709264,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "china",
+      "id": "china-jade-disc",
+      "release": "developer",
+      "title": "Jade disc",
+      "file": "data/trophies/reserved/china-jade-disc.glb",
+      "triangles": 11796,
+      "bytes": 852340,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "korea",
+      "id": "korea-celadon",
+      "release": "developer",
+      "title": "Cloud-and-crane celadon",
+      "file": "data/trophies/reserved/korea-celadon.glb",
+      "triangles": 19108,
+      "bytes": 1691428,
+      "source": "Boundary Atlas original"
+    },
+    {
+      "country": "united-states",
+      "id": "us-liberty-bell",
+      "release": "developer",
+      "title": "Liberty bell",
+      "file": "data/trophies/reserved/us-liberty-bell.glb",
+      "triangles": 9208,
+      "bytes": 668048,
       "source": "Boundary Atlas original"
     }
   ]

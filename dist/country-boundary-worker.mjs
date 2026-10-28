@@ -23,16 +23,20 @@ function indexedRegions(regions){
 self.onmessage=async({data})=>{
  try{
   const prepare=part=>{
-   const regions=polygonParts(part.regions),outlineRegions=part.selectionOutlines||regions,indexed=data.deferOutlines?indexedRegions(outlineRegions):null;
+   // A few units (Antarctic claims) replace only their own selected outline,
+   // leaving out an artificial cut such as the flat map's 85°S limit.
+   const regions=polygonParts(part.regions),overrides=part.selectionOutlineOverrides,replaced=new Set(overrides?.features.map(f=>f.properties.id));
+   const custom=part.selectionOutlines||(overrides&&{...regions,features:[...regions.features.filter(f=>!replaced.has(f.properties.id)),...overrides.features]});
+   const outlineRegions=custom||regions,indexed=data.deferOutlines?indexedRegions(outlineRegions):null;
    return {
     ...(part.towns?{towns:prepare(part.towns)}:{}),
-    blob:!part.selectionOutlines&&indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
+    blob:!custom&&indexed?.blob||new Blob([JSON.stringify(regions)],{type:'application/json'}),
     borders:new Blob([JSON.stringify(lineData(part.boundaries))],{type:'application/json'}),
     hasBorders:part.boundaries.features.length>0,
     // Reuse polygon slices unless the build supplies selection lines that omit
     // permanent water shores. Duplicate IDs retain every island or line part.
     ...(indexed?{outlines:new Blob([empty],{type:'application/json'}),outlineData:indexed.blob,outlineIndex:indexed.outlineIndex}:{
-     outlines:new Blob([JSON.stringify(selectionLineData(part.selectionOutlines||part.regions))],{type:'application/json'})
+     outlines:new Blob([JSON.stringify(selectionLineData(custom||part.regions))],{type:'application/json'})
     })
    };
   };

@@ -1330,6 +1330,45 @@
       "evidence": {
         "note": "Station-centered continental map with COMNAP November 2024 facilities; territorial claim sectors remain claimant-map-only."
       }
+    },
+    {
+      "country": "iran",
+      "name": "Iran",
+      "addedOn": "2026-10-27",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added regional maps and sourced subdivision statistics locally; country overview remains hidden.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-west-asia.mjs"
+        ]
+      }
+    },
+    {
+      "country": "iraq",
+      "name": "Iraq",
+      "addedOn": "2026-10-27",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added regional maps and sourced subdivision statistics locally; country overview remains hidden.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-west-asia.mjs"
+        ]
+      }
+    },
+    {
+      "country": "saudi-arabia",
+      "name": "Saudi Arabia",
+      "addedOn": "2026-10-27",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Added regional maps and sourced subdivision statistics locally; country overview remains hidden.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-west-asia.mjs"
+        ]
+      }
     }
   ]
 }

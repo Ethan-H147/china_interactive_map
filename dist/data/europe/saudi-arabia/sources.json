@@ -1,0 +1,80 @@
+{
+  "retrieved": "2026-10-27",
+  "coverage": "13 regions and 147 governorates use a consistent hierarchy from the 2021 geoBoundaries/OpenStreetMap snapshot, with official Taadeen emirate assignments and Arabic names. The existing national land mask and international border strokes are retained. GASTAT 2022 population belongs only to the 13 regions. Older combined governorate areas, including Al Taif, are not assigned newer population totals. Country overview pages remain hidden.",
+  "counts": {
+    "1": 13,
+    "2": 147
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "sau-hdx-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-sau",
+      "sha256": "e11144a3a7c281e77e58d528cdfb38064fb1217c30894cbfae82797f78d296a9",
+      "bytes": 30112
+    },
+    "sau.zip": {
+      "url": "https://data.humdata.org/dataset/41ce9023-1d21-4549-a485-94316200aba0/resource/99111dda-821b-47ba-ac47-771c9ed5184a/download/sau_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) Ã‚Â· HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-sau",
+      "sha256": "a11202d7d84361d27b7dd4fa3816865082ebd4af8d1cb69c9b56ada20c5d1971",
+      "bytes": 3482653
+    },
+    "saudi-population.pdf": {
+      "url": "https://www.moh.gov.sa/Ministry/Statistics/book/Documents/Statistical-Yearbook-2022.pdf",
+      "credit": "Saudi Ministry of Health Ã‚Â· GASTAT 2022 census, administrative regions, Table 1-12",
+      "license": "Official statistics; attribution",
+      "sha256": "ad90d515309ac5b87a3864e863d0c41989b1412a1e923b86377c64f7c5a4f4c8",
+      "bytes": 7314453
+    },
+    "saudi-governorates.geojson": {
+      "url": "https://media.githubusercontent.com/media/wmgeolab/geoBoundaries/9469f09/releaseData/gbOpen/SAU/ADM2/geoBoundaries-SAU-ADM2.geojson",
+      "sha256": "5c550ddf9954756cfdf7972a70bbbed04db0242f515255bc061b29321dea2436",
+      "bytes": 7397583,
+      "credit": "geoBoundaries / OpenStreetMap",
+      "license": "Creative Commons Attribution-ShareAlike 2.0 as stated by geoBoundaries metadata; original OSM attribution retained",
+      "year": 2021,
+      "boundaryID": "SAU-ADM2-3984122",
+      "count": 147,
+      "metadataUrl": "https://www.geoboundaries.org/api/current/gbOpen/SAU/ADM2/"
+    },
+    "saudi-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/SAU/ADM2/",
+      "sha256": "b8188b4930cc83b8b8826fad0007c550f487aa317a320657fe6f20f49b72331d",
+      "bytes": 1699
+    },
+    "saudi-governorate-names.json": {
+      "sha256": "e72a1ee59ac797a19f59c48dd7b21d833c39553495d80ddff950f34d4b59bfcb",
+      "bytes": 67339,
+      "derivedFrom": [
+        "geoboundaries-adm2.geojson",
+        "taadeen-governorates.geojson"
+      ],
+      "parentSource": "dist/data/europe/saudi-arabia/first.bin (13 existing HDX-based regions)",
+      "method": "Each gbOpen polygon interior point matched exactly one current displayed parent and one official Taadeen reference polygon. English source identities retained; Arabic official names cleaned of capital-seat parentheses. Al Taif manually preserves الطائف rather than the centroid reference المويه, because the 2021 source area combines the newer Taif and Muwayh reference polygons."
+    },
+    "saudi-name-reference.geojson": {
+      "url": "https://gis.taadeen.sa/server/rest/services/Common/BaseMaps/MapServer/2/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
+      "sha256": "0fa38873cb3194883368edbb242de8baffcb73ad7749963c13b78aeda6398b87",
+      "bytes": 15262810,
+      "credit": "Saudi Ministry of Industry and Mineral Resources / Taadeen public GIS",
+      "license": "No explicit license returned by public service; retained as factual bilingual-name reference, not chosen for app geometry",
+      "sourceField": "Governorate_المحافظات_2023",
+      "count": 149
+    }
+  },
+  "depth": {
+    "sourceCounts": {
+      "2": 147
+    },
+    "displayedCounts": {
+      "1": 13,
+      "2": 147
+    },
+    "referencePortions": [],
+    "sourceYears": {
+      "2": 2021
+    },
+    "method": "Regional polygons are dissolved from the same 147 governorates using official Taadeen emirate assignments, so all local areas nest consistently. The retained national land mask, context and international strokes remain unchanged. Deeper geometry loads by selected region."
+  }
+}

@@ -1062,6 +1062,45 @@
       "sha256": "2eb3d53df8f3f845dfafff448fb165647c8e3ed2b2f08296af1080fece92ad35",
       "bytes": 323,
       "source": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg"
+    },
+    "iran": {
+      "file": "vendor/flag-ir.svg",
+      "full": "vendor/flag-ir.svg",
+      "width": 630,
+      "height": 360,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg",
+      "credit": "Wikimedia Commons Ã‚Â· national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iran.svg",
+      "sha256": "c1d6eb64f7060fb362ad8efd0205cdd37c7443fa1f009b9882feede56022009c",
+      "bytes": 2218,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
+    },
+    "iraq": {
+      "file": "vendor/flag-iq.svg",
+      "full": "vendor/flag-iq.svg",
+      "width": 11880,
+      "height": 7920,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg",
+      "credit": "Wikimedia Commons Ã‚Â· national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Iraq.svg",
+      "sha256": "2a3ac265b9efcfb0b8761b753b8dba85b63af329deed39dc7a363e61dad70667",
+      "bytes": 1204,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg"
+    },
+    "saudi-arabia": {
+      "file": "vendor/flag-sa.svg",
+      "full": "vendor/flag-sa.svg",
+      "width": 900,
+      "height": 600,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg",
+      "credit": "Wikimedia Commons Ã‚Â· national flag artwork",
+      "license": "Public domain",
+      "page": "https://commons.wikimedia.org/wiki/File:Flag_of_Saudi_Arabia.svg",
+      "sha256": "b0b36326e3e5b74624ee8b5de8273ea00f7bbe9b5ba0da6250cbe7b3c637505e",
+      "bytes": 28593,
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
     }
   }
 }
