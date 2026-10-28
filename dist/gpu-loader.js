@@ -13,7 +13,7 @@ try{
   modules.AtlasGlobeNavigation='globe-navigation.mjs';
   modules.AtlasInput='map-interaction.mjs';
   modules.AtlasFirstLevelQuiz='first-level-quiz.mjs';
-  modules.AtlasQuizOverlay='quiz-overlay.mjs';modules.AtlasUsCountyQuiz='us-county-quiz.mjs';
+  modules.AtlasQuizOverlay='quiz-overlay.mjs';modules.AtlasUsCountyQuiz='us-county-quiz.mjs';modules.AtlasCityQuiz='city-quiz.mjs';
   modules.AtlasQuizRecords='quiz-records.mjs';
   modules.AtlasQuizRecordsCore='quiz-records-core.mjs';
   modules.AtlasQuizModes='quiz-modes.mjs';

@@ -21,3 +21,4 @@
 /* Ordinary place labels stay hidden while a standalone subdivision quiz is active. */
 #map-shell[data-quiz-overlay=true] .maplibregl-marker:not(.quiz-answer-label){visibility:hidden}
 .quiz-geography-spinner{display:grid;place-items:center;min-height:36px;margin-top:12px}.quiz-geography-spinner .country-symbol{width:24px;height:24px}.quiz-timer{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap}
+.quiz-medal{display:inline-block;flex:none;width:22px;height:22px;vertical-align:middle}.quiz-medal-note{display:flex;align-items:center;gap:8px}

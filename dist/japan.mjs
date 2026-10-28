@@ -7,7 +7,11 @@ import {loadCompressed} from './korea-data.mjs';
 import {addWorkerSource} from './geo-pack.mjs';
 import {adaptiveOpacity,setLayerVisible} from './adaptive-lines.mjs';
 import {createPlaceSearch} from './place-search.mjs';
+import {legacyStylingActive} from './settings.mjs';
 const firstSources=['japan-first','japan-first-edges','japan-first-selection-edges'];
+// A pale red after the flag; Legacy styling keeps the earlier near-white.
+const palette={fill:'#f4e6e7',hover:'#efd6da',selected:'#e8c4cb'},legacyPalette={fill:'#fffdfd',hover:'#f6e6e9',selected:'#efd2d8'};
+function japanFill(){const c=legacyStylingActive()?legacyPalette:palette;return ['case',['boolean',['feature-state','selected'],false],c.selected,['boolean',['feature-state','hover'],false],c.hover,c.fill];}
 export const searchOptions={compare:(a,b)=>['Designated city','City','Special ward','Town','Village','City ward'].indexOf(a.kind)-['Designated city','City','Special ward','Town','Village','City ward'].indexOf(b.kind)};
 export async function addJapanPortal(map,host){
  const home=[[122.8,24],[146.2,45.7]];
@@ -40,6 +44,7 @@ export async function addJapanPortal(map,host){
 });
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>document.getElementById('j-'+id),index=new Map(),layers=[],urls=[],localSources=[];
+ globalThis.addEventListener?.('atlas-styling-change',()=>{for(const id of ['japan-first',...localSources.map(e=>e.id)])if(map.getLayer(id+'-fill'))map.setPaintProperty(id+'-fill','fill-color',japanFill());});
  let active=false,ready=false,selected=null,hovered=null,scope=null,mode=1,labels=[],loading,preparedPromise,facts,localFacts,catalogue,searchPlaces,baseWorker,pendingWorker,detailPromise,detailTimer,cancelPaint,generation=0,detailEpoch=0,selectionEpoch=0,localReady=false,childRecords=[],childLimit=25;
  const visible=(id,value)=>{if(map.getLayer(id))setLayerVisible(map,id,value);};
  const clearLabels=()=>{labels.forEach(m=>m.remove());labels=[];};
@@ -102,7 +107,7 @@ export async function addJapanPortal(map,host){
  // Unit lines come from the shared edges (no coasts); the selected outline keeps the whole polygon.
  function installLocal(id,blob,level,edges,outlines){
   const url=URL.createObjectURL(blob),edgeUrl=edges&&URL.createObjectURL(edges),outlineUrl=outlines&&URL.createObjectURL(outlines);map.addSource(id,{type:'geojson',data:url,promoteId:'id',tolerance:.25,maxzoom:16,buffer:64,attribution:'Japan: <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html">MLIT / GSI · 2026</a>'});
-  map.addLayer({id:id+'-fill',type:'fill',source:id,layout:{visibility:'none'},paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],'#efd2d8',['boolean',['feature-state','hover'],false],'#f6e6e9','#fffdfd'],'fill-opacity':level===3?['case',['boolean',['feature-state','selected'],false],1,['boolean',['feature-state','hover'],false],1,0]:1,'fill-antialias':false}});
+  map.addLayer({id:id+'-fill',type:'fill',source:id,layout:{visibility:'none'},paint:{'fill-color':japanFill(),'fill-opacity':level===3?['case',['boolean',['feature-state','selected'],false],1,['boolean',['feature-state','hover'],false],1,0]:1,'fill-antialias':false}});
   if(outlineUrl)map.addSource(id+'-outlines',{type:'geojson',data:outlineUrl,promoteId:'id',tolerance:.25,maxzoom:16,buffer:64});
   if(edgeUrl)map.addSource(id+'-edges',{type:'geojson',data:edgeUrl,tolerance:.25,maxzoom:16,buffer:64});
   map.addLayer({id:id+'-lines',type:'line',source:edgeUrl?id+'-edges':id,layout:{visibility:'none','line-join':'round'},paint:{'line-color':'#bd7480','line-width':level===1?.9:.55,'line-opacity':.8}});
@@ -131,7 +136,7 @@ export async function addJapanPortal(map,host){
   const [prepared,details,local,placeFacts]=await Promise.all([preload(),facts?Promise.resolve(facts):fetch('data/japan-facts.json').then(r=>{if(!r.ok)throw Error('Japan facts unavailable');return r.json();}),catalogue?Promise.resolve(catalogue):loadCompressed('data/japan-local/catalogue.bin'),localFacts?Promise.resolve(localFacts):loadJapanLocalFacts()]);if(token!==generation)throw new DOMException('Country changed','AbortError');facts=details;catalogue=local;localFacts=placeFacts;
   for(const [id,blob]of Object.entries(prepared.sources)){const url=URL.createObjectURL(blob);urls.push(url);map.addSource(id,{type:'geojson',data:url,promoteId:'id',tolerance:.375,maxzoom:16,buffer:64,attribution:'Japan: <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html">MLIT / GSI · 2026</a>'});}
   index.clear();for(const f of prepared.metadata)index.set(f.properties.id,{...f.properties,kind:f.properties.type,local:f.properties.ja,aliases:[f.properties.en,f.properties.ja]});for(const p of local.records)index.set(p.id,p);searchPlaces=createPlaceSearch([...index.values()],searchOptions);preparedPromise=null;
-  const definitions=[{id:'japan-first-fill',type:'fill',source:'japan-first',paint:{'fill-color':['case',['boolean',['feature-state','selected'],false],'#efd2d8',['boolean',['feature-state','hover'],false],'#f6e6e9','#fffdfd'],'fill-opacity':1,'fill-antialias':false}},{id:'japan-first-lines',type:'line',source:'japan-first-edges',paint:{'line-color':'#bd7480','line-width':.8,'line-opacity':adaptiveOpacity()}},{id:'japan-first-selected',metadata:{atlas:{role:'selection'}},type:'line',source:'japan-first-selection-edges',paint:{'line-color':'#bc002d','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}}];
+  const definitions=[{id:'japan-first-fill',type:'fill',source:'japan-first',paint:{'fill-color':japanFill(),'fill-opacity':1,'fill-antialias':false}},{id:'japan-first-lines',type:'line',source:'japan-first-edges',paint:{'line-color':'#bd7480','line-width':.8,'line-opacity':adaptiveOpacity()}},{id:'japan-first-selected',metadata:{atlas:{role:'selection'}},type:'line',source:'japan-first-selection-edges',paint:{'line-color':'#bc002d','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}}];
   for(const layer of definitions){map.addLayer(layer);layers.push(layer.id);visible(layer.id,false);}$( 'province').replaceChildren(new Option('All Japan',''));for(const p of [...index.values()].filter(p=>p.level===1).sort((a,b)=>a.en.localeCompare(b.en)))$('province').append(new Option(p.en+' · '+p.ja,p.id));$('coverage').textContent='47 prefectures · '+(local.municipalities-local.claimed).toLocaleString('en-US')+' municipalities · '+local.wards+' city wards';host.comparison?.register('japan',japanComparisonProfile([...index.values()],localFacts));ready=true;
  })().catch(e=>{if(token===generation)releaseBase();throw e;}).finally(()=>{if(loading===job)loading=null;});loading=job;return job;}
  function releaseBase(){for(const id of layers.splice(0))if(map.getLayer(id))map.removeLayer(id);for(const id of firstSources)if(map.getSource(id))map.removeSource(id);urls.splice(0).forEach(URL.revokeObjectURL);preparedPromise=null;ready=false;}

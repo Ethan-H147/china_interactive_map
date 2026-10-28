@@ -12,8 +12,8 @@ let storageAvailable=true,settings;try{const saved=JSON.parse(localStorage.getIt
 export const getSettings=()=>({...settings});
 // Legacy styling is a developer-mode setting: a saved choice applies only while developer mode is on.
 export const legacyStylingActive=()=>settings.legacyStyling&&!!globalThis.AtlasDev?.enabled;
-// A country's map fill; portal.legacyFill keeps an earlier colour for Legacy styling.
-export function countryFill(definition){return legacyStylingActive()&&definition?.portal?.legacyFill||definition?.map?.fill||definition?.portal?.fill;}
+// A country's map fill; portal.legacyFill or map.legacy keeps an earlier colour for Legacy styling.
+export function countryFill(definition){const legacy=legacyStylingActive()&&(definition?.portal?.legacyFill||definition?.map?.legacy?.fill);return legacy||definition?.map?.fill||definition?.portal?.fill;}
 export const prefersReducedMotion=()=>settings.motion==='reduce'||globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches===true;
 function apply(){
  const root=globalThis.document?.documentElement;if(!root)return;

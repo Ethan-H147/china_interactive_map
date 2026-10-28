@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import '../dist/countries.js';
+// City quizzes outside the US: cumulative levels, unique names, dots inside each quiz's frame
+// (France's frame is the mainland; its overseas cities sit behind an option).
+const expected={china:[15,46,93,167,231],russia:[8,31,63,106,149],spain:[8,28,61],germany:[9,31,61],'united-kingdom':[10,29,63],france:[8,31,68],italy:[10,32,64]};
+for(const [country,counts] of Object.entries(expected)){
+ const data=JSON.parse(fs.readFileSync('dist/data/quiz/'+country+'-cities.json','utf8')),cities=globalThis.AtlasCountries.countries[country].quiz.cities,order=cities.levels.map(l=>l.id);
+ assert.deepEqual(data.levels.map(l=>l.id),order,country+' levels match the app');assert.deepEqual(data.levels.map(l=>l.count),counts,country+' levels are cumulative');
+ assert.equal(new Set(data.records.map(r=>r.id)).size,data.records.length);assert.equal(new Set(data.records.map(r=>r.wikidata)).size,data.records.length,country+' cities are distinct places');
+ for(const level of order){const pool=data.records.filter(r=>order.indexOf(r.tier)<=order.indexOf(level));assert.equal(new Set(pool.map(r=>r.en)).size,pool.length,country+' names are unique in '+level);}
+ const [[w,s],[e,n]]=cities.bounds;for(const r of data.records){assert(r.overseas&&country==='france'||r.center[0]>=w&&r.center[0]<=e&&r.center[1]>=s&&r.center[1]<=n,r.en+' lies in the quiz frame');assert(r.aliases.length,r.en+' has accepted answers');if(['china','russia'].includes(country))assert(r.local,r.en+' has a local name');}
+ console.log(country,'city quiz:',data.records.length,'cities,',data.levels.map(l=>l.label+' '+l.count).join(', '),'passed.');
+}
+const china=JSON.parse(fs.readFileSync('dist/data/quiz/china-cities.json','utf8')).records;
+assert.deepEqual(china.filter(r=>r.overseas).map(r=>r.region).filter((v,i,a)=>a.indexOf(v)===i),['710000'],'Only Taiwan sits behind the Include Taiwan option');
+assert.equal(china.filter(r=>r.overseas).length,12);assert.equal(china.find(r=>r.en==='Taipei').localLang,'zh-Hant');
+for(const [name,province] of [['Jilin','220000'],['Huangshan','340000'],['Taizhou, Zhejiang','330000'],['Taizhou, Jiangsu','320000'],['Yulin, Guangxi','450000'],['Yulin, Shaanxi','610000'],['Suzhou','320000'],['Dali','530000']])assert.equal(china.find(r=>r.en===name)?.region,province,name);
+const russia=JSON.parse(fs.readFileSync('dist/data/quiz/russia-cities.json','utf8')).records;
+for(const [name,region] of [['Mirny','Sakha'],['Rostov Veliky','Yaroslavl Oblast'],['Stavropol','Stavropol Krai'],['Tolyatti','Samara Oblast'],['Kirov','Kirov Oblast']])assert.equal(russia.find(r=>r.en===name)?.regionName,region,name);
+assert(['Irkutsk','Murmansk','Kaliningrad'].every(n=>russia.find(r=>r.en===n).tier==='medium'),'Russia Easy keeps only the most famous cities');
+const europe=c=>JSON.parse(fs.readFileSync('dist/data/quiz/'+c+'-cities.json','utf8')).records,france=europe('france'),near=(r,[x,y])=>Math.hypot(r.center[0]-x,r.center[1]-y)<.2;
+assert.deepEqual(france.filter(r=>r.overseas).map(r=>r.en).sort(),['Cayenne','Fort-de-France','Mamoudzou','Pointe-à-Pitre','Saint-Denis, Réunion'],'France overseas cities are optional');
+for(const [c,name,point] of [['spain','Las Palmas',[-15.43,28.12]],['spain','Palma',[2.65,39.57]],['germany','Halle',[11.97,51.48]],['germany','Freiburg',[7.85,47.99]],['germany','Frankfurt',[8.68,50.11]],['united-kingdom','Bangor',[-4.13,53.23]],['united-kingdom','Newport',[-3.0,51.59]],['united-kingdom','Perth',[-3.43,56.4]],['italy','Syracuse',[15.29,37.07]]])assert(near(europe(c).find(r=>r.en===name),point),c+' '+name+' is the intended city');
+assert.equal(europe('germany').find(r=>r.en==='Munich').local,'München');
+console.log('Same-name cities, Taiwan and France overseas options and Russia levels passed.');

@@ -1,6 +1,7 @@
 import {createFirstLevelQuiz} from './first-level-quiz.mjs';
 import {loadCompressed} from './korea-data.mjs';
 import {selectionLineData} from './outline-detail.mjs';
+import {createCityQuiz} from './city-quiz.mjs';
 const empty=()=>({type:'FeatureCollection',features:[]});
 export function attachUsCountyQuiz(map,host,atlas){
  if(atlas.countyQuiz)return atlas.countyQuiz;
@@ -8,10 +9,12 @@ export function attachUsCountyQuiz(map,host,atlas){
  const key='quiz-us-counties',tab=document.getElementById('us-tab-quiz');if(!tab||!atlas.quiz)return;tab.textContent='Quiz';
  const openStates=atlas.quiz.open.bind(atlas.quiz),pickers=[];let level='1',navigation=0;
  const selectLevel=value=>{level=value;for(const picker of pickers)picker.value=value;};
- function addPicker(panel,value){const label=document.createElement('label');label.className='field-label';label.textContent='Divisions';const picker=document.createElement('select');picker.id=panel.id+'-divisions';picker.dataset.usQuizLevel='';label.htmlFor=picker.id;picker.append(new Option('States','1'),new Option('Counties & equivalents','2'));picker.value=value;label.append(picker);panel.querySelector('[data-q=scope-label]').after(label);pickers.push(picker);picker.onchange=()=>{if(picker.value==='2')void controller.open();else atlas.quiz.open();};}
- atlas.quiz.open=(options={})=>{navigation++;selectLevel('1');if(quiz?.panel&&!quiz.active)quiz.panel.hidden=true;openStates(options);};addPicker(atlas.quiz.panel,'1');
- const route=()=>{if(level==='2')void controller.open();else atlas.quiz.open();};
- let quiz,index,indexJob,data,loadedScope='',warming,generation=0,countryActive=true,frame,enforcing=false;const hidden=new Map();
+ function addPicker(panel,value){const label=document.createElement('label');label.className='field-label';label.textContent='Divisions';const picker=document.createElement('select');picker.id=panel.id+'-divisions';picker.dataset.usQuizLevel='';label.htmlFor=picker.id;picker.append(new Option('States','1'),new Option('Counties & equivalents','2'),...(definition.quiz.cities?[new Option('Cities','3')]:[]));picker.value=value;label.append(picker);panel.querySelector('[data-q=scope-label]').after(label);pickers.push(picker);picker.onchange=()=>{if(picker.value==='3')void controller.open({level:3});else if(picker.value==='2')void controller.open();else atlas.quiz.open();};}
+ const hidePanels=except=>{for(const q of [quiz,cities])if(q&&q!==except&&!q.active)q.panel.hidden=true;};
+ atlas.quiz.open=(options={})=>{navigation++;selectLevel('1');hidePanels();openStates(options);};addPicker(atlas.quiz.panel,'1');
+ // With a state (or one of its counties) selected, the Quiz tab opens that state's county quiz.
+ const route=async()=>{const state=!controller.active&&!atlas.quiz.active&&atlas.getSelectionRoot?.();if(state){try{await prepare();}catch{}if(index?.scopes.some(s=>s.id===state)){void controller.open({scope:state});return;}} if(level==='3')void controller.open({level:3});else if(level==='2')void controller.open();else atlas.quiz.open();};
+ let quiz,cities,index,indexJob,data,loadedScope='',warming,generation=0,countryActive=true,frame,enforcing=false;const hidden=new Map();
  function remove(){for(const id of [key+'-selected',key+'-lines',key+'-fill'])if(map.getLayer(id))map.removeLayer(id);for(const id of [key+'-selection',key+'-borders',key])if(map.getSource(id))map.removeSource(id);}
  function enforce(){if(!quiz?.active||enforcing)return;enforcing=true;try{for(const layer of map.getStyle().layers)if(typeof layer.source==='string'&&layer.source.startsWith(country+'-')){const visibility=map.getLayoutProperty(layer.id,'visibility')||'visible';if(!hidden.has(layer.id))hidden.set(layer.id,visibility);if(visibility!=='none')map.setLayoutProperty(layer.id,'visibility','none');}}finally{enforcing=false;}}
  const spinner=document.createElement('div');spinner.className='quiz-geography-spinner';spinner.hidden=true;spinner.setAttribute('role','status');spinner.setAttribute('aria-label','Preparing county quiz');
@@ -35,9 +38,11 @@ export function attachUsCountyQuiz(map,host,atlas){
   });
   addPicker(quiz.panel,'2');quiz.panel.querySelector('[data-q=setup]').append(spinner);tab.onclick=route;
  }
- const controller={get active(){return !!quiz?.active;},get panel(){return quiz?.panel;},get scope(){return quiz?.scope;},async open(options={}){const request=++navigation;selectLevel('2');try{await prepare();if(request!==navigation||!countryActive||!atlas.ready)return;mount();quiz.open(options);tab.title='';}catch{if(request===navigation){selectLevel('1');openStates();tab.title='County list could not load. Select Counties again to retry.';}}},end:()=>quiz?.end(),fit:()=>quiz?.fit(),setCountryActive(value){countryActive=value;if(!value)navigation++;tab.hidden=!value;if(!value&&quiz)quiz.panel.hidden=true;}};
+ // Cities (level 3) share this tab, picker and controller with counties.
+ const openCities=options=>{navigation++;selectLevel('3');cities??=createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix:'us-cities',addPicker});if(!cities||!countryActive||!atlas.ready)return;hidePanels(cities);cities.open(options);};
+ const controller={get active(){return !!quiz?.active||!!cities?.active;},get panel(){return cities?.active?cities.panel:quiz?.panel;},get scope(){return cities?.active?cities.scope:quiz?.scope;},async open(options={}){if(options.level===3)return openCities(options);const request=++navigation;selectLevel('2');try{await prepare();if(request!==navigation||!countryActive||!atlas.ready)return;mount();hidePanels(quiz);quiz.open(options);tab.title='';}catch{if(request===navigation){selectLevel('1');openStates();tab.title='County list could not load. Select Counties again to retry.';}}},end:()=>cities?.active?cities.end():quiz?.end(),fit:()=>cities?.active?cities.fit():quiz?.fit(),setCountryActive(value){countryActive=value;if(!value)navigation++;tab.hidden=!value;if(!value)for(const q of [quiz,cities])if(q)q.panel.hidden=true;}};
  tab.onclick=route;sidebar.querySelector('.panel-tabs').addEventListener('click',event=>{const button=event.target.closest('button');if(button&&button!==tab)navigation++;});
- const home=atlas.home.bind(atlas),leave=atlas.leave?.bind(atlas),unload=atlas.unload?.bind(atlas);atlas.home=(...args)=>quiz?.active?quiz.end():home(...args);if(leave)atlas.leave=(...args)=>{release();return leave(...args);};if(unload)atlas.unload=(...args)=>{release();return unload(...args);};
+ const home=atlas.home.bind(atlas),leave=atlas.leave?.bind(atlas),unload=atlas.unload?.bind(atlas);atlas.home=(...args)=>controller.active?controller.end():home(...args);if(leave)atlas.leave=(...args)=>{release();cities?.release();return leave(...args);};if(unload)atlas.unload=(...args)=>{release();cities?.release();return unload(...args);};
  map.on('styledata',()=>{if(!quiz?.active||frame)return;frame=requestAnimationFrame(()=>{frame=null;enforce();});});
  atlas.countyQuiz=controller;return controller;
 }

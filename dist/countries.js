@@ -78,11 +78,11 @@
   japan:{labelCenter:[138.4,36.5],en:'Japan',local:'日本',lang:'ja',background:'#f5f5f5',adapter:'japan',prefix:'j',view:{scopes:['area-codes']},symbol:'vendor/japan-chrysanthemum.png',motionData:true,
    titleClasses:['korea-english','japanese-title'],mapLabel:'Interactive Japan prefecture and municipality map',
    statistics:'data/region-statistics.json',colors:{catalogue:'data/japan-boundaries.bin',extraCatalogue:'data/japan-local/catalogue.bin',population:'japan',levels:'Prefectures'},
-   levelNames:['Prefectures','Municipalities','Municipalities & city wards'],portal:{fill:'#fffdfd'},home:{bounds:[[122.8,24],[146.2,45.7]]},
+   levelNames:['Prefectures','Municipalities','Municipalities & city wards'],portal:{fill:'#f4e6e7',legacyFill:'#fffdfd'},home:{bounds:[[122.8,24],[146.2,45.7]]},
    controls:['j-province-layer','j-second-layer','j-label-layer']},
   philippines:{labelCenter:[122.5,11.2],en:'Philippines',local:'Pilipinas',lang:'fil',background:'#edf2f8',adapter:'archipelago',prefix:'ph',symbol:'philippine-sun',
    statistics:'data/archipelago/philippines-statistics.json',colors:{catalogue:'data/archipelago/philippines-catalogue.bin',population:'philippines',levels:'Regions'},
-   levelNames:['Regions','Provinces'],portal:{fill:'#e7edf6'},controls:['ph-province-layer','ph-second-layer','ph-label-layer']},
+   levelNames:['Regions','Provinces'],portal:{fill:'#dce5f2',legacyFill:'#e7edf6'},controls:['ph-province-layer','ph-second-layer','ph-label-layer']},
   indonesia:{labelCenter:[113.5,-1],en:'Indonesia',local:'',lang:'id',background:'#faf1ef',adapter:'archipelago',prefix:'id',symbol:'compass',ownFrontier:true,
    statistics:'data/archipelago/indonesia-statistics.json',colors:{catalogue:'data/archipelago/indonesia-catalogue.bin',levels:'Provinces'},
    levelNames:['Provinces','Regencies & cities'],portal:{fill:'#efd6d1',legacyFill:'#fff5f3'},controls:['id-province-layer','id-second-layer','id-label-layer']},
@@ -96,7 +96,7 @@
    mapLabel:'Interactive Malaysia state and district map',
    statistics:'data/southeast-asia/malaysia-statistics.json',colors:{catalogue:'data/southeast-asia/malaysia-catalogue.bin',levels:'States & federal territories'},
    levelNames:['States & federal territories','Districts'],controls:['my-province-layer','my-second-layer','my-label-layer'],naturalEarth:'MYS',
-   map:{flag:'my',center:[109,4],zoom:4,bounds:[[99.5,.8],[119.5,7.5]],fill:'#f5f0dd',selected:'#e7dca8',line:'#817244'}},
+   map:{flag:'my',center:[109,4],zoom:4,bounds:[[99.5,.8],[119.5,7.5]],fill:'#eee6c8',selected:'#e0d095',line:'#817244',legacy:{fill:'#f5f0dd',selected:'#e7dca8'}}},
   singapore:{en:'Singapore',local:'新加坡',lang:'zh',background:'#f7f2f1',adapter:'southeast-asia',prefix:'sg',symbol:'compass',
    mapLabel:'Interactive Singapore country map',extraTitles:['atlas-title-malay','atlas-title-tamil'],
    statistics:'data/southeast-asia/singapore-statistics.json',colors:{catalogue:'data/southeast-asia/singapore-catalogue.bin',levels:'Regions',economy:false},
@@ -121,7 +121,7 @@
   russia:{en:'Russia',local:'Россия',lang:'ru',background:'#edf0f6',adapter:'russia',prefix:'ru',symbol:'matryoshka',worldCopies:true,
    statistics:'data/russia/statistics.json',colors:{catalogue:'data/russia/catalogue.bin',levels:'Federal subjects'},
    levelNames:['Federal subjects','Districts & cities'],hitLayers:['russia-first-fill','russia-portal-fill'],controls:['ru-province-layer','ru-second-layer','ru-label-layer'],
-   map:{firstLabel:'Regions',secondLabel:'Districts',center:[100,61],zoom:2,bounds:[[19,41],[191,79]],fill:'#d8e2f0',selected:'#c5d2ed',line:'#5d7196'}},
+   map:{firstLabel:'Regions',secondLabel:'Districts',lite:7,center:[100,61],zoom:2,bounds:[[19,41],[191,79]],fill:'#d8e2f0',selected:'#c5d2ed',line:'#5d7196'}},
   'south-africa':{en:'South Africa',local:'',lang:'en',background:'#eef2e9',...regional('southern-africa','za',
    {settlements:true,settlementBoundaries:true,phoneCodes:true,searchLabel:'Find a region, city or town',labelLanguages:[['both','Bilingual'],['en','English'],['af','Afrikaans'],['zu','isiZulu'],['xh','isiXhosa'],['ss','siSwati'],['st','Sesotho'],['tn','Setswana'],['nso','Sepedi'],['ts','Tsonga'],['ve','Tshivenda'],['nr','isiNdebele']],firstLabel:'Provinces',secondLabel:'Districts & metros',thirdLabel:'Municipalities',lineTolerance:1.5,center:[25,-29],zoom:4,bounds:[[16.4,-35],[33.1,-22]],fill:'#e6eedc',selected:'#c7dbb2',line:'#577148'},
    {colors:{levels:'Provinces',economy:true},levelNames:['Provinces','Districts & metros','Municipalities & metros'],view:{scopes:['area-codes']},naturalEarth:'ZAF'})},
@@ -305,7 +305,9 @@
    {colors:{levels:'Statistical regions'},levelNames:['Statistical regions','Provinces','Districts'],naturalEarth:'TUR'})}
  };
  const fallback='china',defaultLanguages=['en','local','both'];
- const quizFlags={china:['prc'],korea:['kr','kp'],mongolia:['mn'],japan:['jp'],congo:['cd','cg'],'united-kingdom':['gb-3x5'],ireland:['ie-2x3']};
+ // City quizzes share five cumulative difficulties, each with its medal.
+ const cityQuizLevels=[{id:'easy',label:'Easy',medal:'Bronze'},{id:'medium',label:'Medium',medal:'Silver'},{id:'hard',label:'Hard',medal:'Gold'},{id:'expert',label:'Expert',medal:'Platinum'},{id:'master',label:'Master',medal:'Diamond'}];
+ const quizFlags={china:['prc','roc'],korea:['kr','kp'],mongolia:['mn'],japan:['jp'],congo:['cd','cg'],'united-kingdom':['gb-3x5'],ireland:['ie-2x3']};
  const quizOverrides={
   ireland:{level:2,geometry:'quiz.bin',plural:'Counties & cities',singular:'county or city'},belgium:{level:2,geometry:'quiz.bin',plural:'Provinces & Brussels',singular:'province or Brussels'},turkey:{level:2,geometry:'quiz.bin',plural:'Provinces',singular:'province'},
   congo:{level:2,geometry:'quiz.bin',plural:'Provinces & departments',singular:'province or department',scopes:[{id:'CD',label:'DR Congo'},{id:'CG',label:'Republic of the Congo'}]},
@@ -318,7 +320,14 @@
   c.labelPoints??=[{id,en:c.en,local:c.local,center:c.labelCenter||c.map?.center}];
   if(['czechia','slovakia','poland','estonia','latvia','lithuania','cambodia','ukraine','angola','luxembourg','san-marino','china','mexico','united-states','canada','spain','france','germany','italy','malaysia','india','morocco','bolivia','timor-leste','brunei','pakistan','kazakhstan','greece','cyprus','afghanistan','kyrgyzstan','myanmar','laos','norway','sweden','finland','nepal','bhutan','bangladesh'].includes(id))c.quiz={level:1,...(id==='spain'?{exclude:['ES-A-20'],bounds:c.map.bounds,insets:['ES-A-05']}: {}),...(id==='united-states'?{bounds:c.map.bounds,insets:['US-AK','US-HI']}: {}),...(id==='norway'?{bounds:c.map.bounds,insets:['NO-SJ','NO-JM','NO-BV','NO-PI']}: {})};
   if(!c.snapshot&&!c.noQuiz&&!['monaco','vatican-city'].includes(id))c.quiz={level:1,...c.quiz,...quizOverrides[id]};
-  if(id==='united-states')c.quiz.counties={index:'data/quiz/us-counties/index.json',plural:'Counties & equivalents'};
+  if(id==='united-states'){c.quiz.counties={index:'data/quiz/us-counties/index.json',plural:'Counties & equivalents'};
+   c.quiz.cities={file:'data/quiz/us-cities.json',plural:'Cities',levels:cityQuizLevels,bounds:[[-158.3,18.8],[-66.8,65]]};}
+  // City quizzes: cumulative difficulties; each mode's highest level with a perfect round earns its medal.
+  if(id==='china'){c.quiz.cities={file:'data/quiz/china-cities.json',plural:'Cities',levels:cityQuizLevels,bounds:[[73.5,18.2],[134.8,53.6]],overseasLabel:'Include Taiwan'};}
+  if(id==='russia')c.quiz.cities={file:'data/quiz/russia-cities.json',plural:'Cities',levels:cityQuizLevels,bounds:[[19.6,41.2],[179.9,74]]};
+  // Smaller countries: Easy, Medium and Hard. France opens on the mainland; its overseas cities are optional.
+  const cityFrames={spain:[[-18.3,27.6],[4.4,43.9]],germany:[[5.8,47.2],[15.1,55.1]],'united-kingdom':[[-8.2,49.9],[1.8,58.7]],france:[[-5.2,41.3],[9.6,51.1]],italy:[[6.6,36.6],[18.6,47.1]]};
+  if(cityFrames[id])c.quiz.cities={file:'data/quiz/'+id+'-cities.json',plural:'Cities',levels:cityQuizLevels.slice(0,3),bounds:cityFrames[id],...(id==='france'?{overseasLabel:'Include overseas',overseasDefault:false}:{})};
   if(c.quiz)c.quiz.flags=(quizFlags[id]||[c.map?.flag||c.prefix]).map(code=>'vendor/flag-'+code+(['my','sg'].includes(code)?'.webp':'.svg'));
   if(c.quiz)c.quiz.overlay=c.quiz.level>1||['korea','mongolia','japan','archipelago','south-america'].includes(c.adapter);
   if(c.quiz){

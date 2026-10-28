@@ -40,4 +40,13 @@ scenarios.push({name:'Indonesia contrast fill; saved legacy styling hidden and i
  await p.tap('#settings-open');assert(!await p.evaluate('document.querySelector("[for=settings-legacy-styling]").hidden'));await p.tap('#settings-close');
  await toggle(p);assert.deepEqual(rgb(await indonesiaFill(p)),[239,214,209],'Turning legacy off applies the contrast fill without reload');
 }});
+// Japan, the Philippines and Malaysia keep their earlier low-contrast fills as legacy colours too.
+const firstFill=(p,country)=>p.evaluate(`(()=>{const layer=map.style.getLayer(${JSON.stringify(country+'-first-fill')}),paint=layer.paint.get('fill-color');return paint.evaluate({properties:{id:'-'}},{})})()`);
+scenarios.push({name:'Japan, Philippines and Malaysia legacy fills in developer mode',options:{width:1280,height:900,developer:true},async run(p,base){
+ for(const [country,legacy,current] of [['japan',[255,253,253],[244,230,231]],['philippines',[231,237,246],[220,229,242]],['malaysia',[245,240,221],[238,230,200]]]){
+  await p.open(base,'#'+country);await p.evaluate('AtlasSettings.setSettings({legacyStyling:true})');await p.open(base,'?reload#'+country);await p.waitFor(`!!map.getLayer(${JSON.stringify(country+'-first-fill')})`);
+  assert.deepEqual(rgb(await firstFill(p,country)),legacy,country+' legacy fill');
+  await toggle(p);assert.deepEqual(rgb(await firstFill(p,country)),current,country+' contrast fill without reload');
+ }
+}});
 export default scenarios;

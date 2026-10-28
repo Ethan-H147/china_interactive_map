@@ -6,6 +6,7 @@ import {createPlaceSearch} from './place-search.mjs';
 import {setLayerVisible,lineSourceOptions,adaptiveOpacity} from './adaptive-lines.mjs';
 import {malaysiaFlags} from './malaysia-flags.mjs';
 import {renderStatistics,clearStatistics} from './statistics.mjs';
+import {legacyStylingActive} from './settings.mjs';
 import {singaporeLabel,readSingaporeLanguage,singaporeLanguages} from './singapore-languages.mjs';
 
 import './countries.js';
@@ -13,6 +14,8 @@ const registry=globalThis.AtlasCountries;
 export const countries=Object.fromEntries(registry.byAdapter('southeast-asia').map(id=>[id,{name:registry.countries[id].en,...registry.countries[id].map}]));
 export async function addCountryPortal(map,host,country){
  const c=countries[country],base='data/southeast-asia/',prefix=c.flag,isMalaysia=country==='malaysia';
+ // Legacy styling keeps a country's earlier palette (map.legacy).
+ const tone=()=>c.legacy&&legacyStylingActive()?c.legacy:c;
  await addWorkerSource(map,country+'-portal',base+country+'-context.bin',{type:'geojson',tolerance:0,attribution:isMalaysia?'Malaysia: <a href="https://github.com/dosm-malaysia/data-open/tree/main/datasets/geodata">DOSM</a>':'Singapore: <a href="https://data.gov.sg/datasets/d_29f066d67df3eae91df8a42f443863c8/view">SLA</a> (Singapore Open Data Licence)'});
  map.addLayer({id:country+'-portal-fill',metadata:{atlas:{role:'context'}},type:'fill',source:country+'-portal',layout:{visibility:'none'},paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
  const sidebar=createCountryPage({id:country+'-sidebar',label:'Explore '+c.name,classes:'sidebar southeast-sidebar',
@@ -42,6 +45,7 @@ export async function addCountryPortal(map,host,country){
 });
  document.querySelector('.workspace').insertBefore(sidebar,document.getElementById('map-shell'));
  const $=id=>document.getElementById(prefix+'-'+id),index=new Map(),installed=new Map();
+ if(c.legacy)globalThis.addEventListener?.('atlas-styling-change',()=>{if(installed.size)sync();});
  let active=false,ready=false,selected=null,scope=null,mode=1,labels=[],catalogue,search,warming,pending,cancelIndex,generation=0,selectionEpoch=0,detailEpoch=0,detailScope=null;
  let firstQuiz;
  let language='en';if(!isMalaysia)try{language=readSingaporeLanguage(localStorage);}catch{}
@@ -68,7 +72,7 @@ export async function addCountryPortal(map,host,country){
   const layers=[key+'-fill',key+'-lines',key+'-selected'];
   const urls=[url],sources=[key],edgeSource=borders?key+'-edges':key,outlineSource=key+'-outlines',outlineUrl=URL.createObjectURL(outlines);urls.push(outlineUrl);sources.push(outlineSource);map.addSource(outlineSource,{...lineSourceOptions,tolerance:.15,data:outlineUrl});
   if(borders){const edgeUrl=URL.createObjectURL(borders);urls.push(edgeUrl);sources.push(edgeSource);map.addSource(edgeSource,{...lineSourceOptions,data:edgeUrl});}
-  map.addLayer({id:layers[0],type:'fill',source:key,layout:{visibility:'none'},paint:{'fill-color':c.fill,'fill-antialias':false}});
+  map.addLayer({id:layers[0],type:'fill',source:key,layout:{visibility:'none'},paint:{'fill-color':tone().fill,'fill-antialias':false}});
   map.addLayer({id:layers[1],type:'line',source:edgeSource,layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':level===1?.9:.55,'line-opacity':borders?adaptiveOpacity(level===1?.8:.65):level===1?.8:.65}});
   map.addLayer({id:layers[2],metadata:{atlas:{role:'selection'}},type:'line',source:outlineSource,filter:['==',['get','id'],''],layout:{visibility:'none','line-join':'round','line-cap':'round'},paint:{'line-color':c.line,'line-width':1.8,...(borders?{'line-opacity':adaptiveOpacity()}:{})}});
   installed.set(key,{urls,sources,layers,level,borders:!!borders});
@@ -76,7 +80,7 @@ export async function addCountryPortal(map,host,country){
   for(const entry of installed.values())if(entry.level===1)for(const id of entry.layers.slice(1))map.moveLayer(id);
  }
  function sync(){
-  for(const {layers,level,borders} of installed.values()){const detail=level===2,show=active&&(!detail||mode===2&&scope===detailScope);visible(layers[0],show);visible(layers[1],show&&(detail?$('second-layer').checked:$('province-layer').checked));visible(layers[2],show);const id=selected?.level===level?selected.id:'';map.setFilter(layers[2],['==',['get','id'],id]);map.setPaintProperty(layers[0],'fill-color',['case',['==',['get','id'],selected?.id||''],c.selected,c.fill]);}
+  for(const {layers,level,borders} of installed.values()){const detail=level===2,show=active&&(!detail||mode===2&&scope===detailScope);visible(layers[0],show);visible(layers[1],show&&(detail?$('second-layer').checked:$('province-layer').checked));visible(layers[2],show);const id=selected?.level===level?selected.id:'';map.setFilter(layers[2],['==',['get','id'],id]);map.setPaintProperty(layers[0],'fill-color',['case',['==',['get','id'],selected?.id||''],tone().selected,tone().fill]);}
   visible(country+'-portal-fill',window.AtlasDev.allows(country)&&!active);host.syncAppearance?.();updateLabels();
  }
  function updateLabels(){if(firstQuiz?.active){clearLabels();firstQuiz.labels();return;}if(!active||!ready||host.isMoving?.()||map.isMoving())return;clearLabels();if(!$('label-layer').checked)return;const b=map.getBounds(),list=catalogue.records.filter(r=>(r.level===1&&!(mode===2&&r.id===scope)||mode===2&&r.parent===scope&&r.level===2)&&r.center[0]>=b.getWest()&&r.center[0]<=b.getEast()&&r.center[1]>=b.getSouth()&&r.center[1]<=b.getNorth());labels=window.AtlasLabels.render(map,list.slice(0,75).map(r=>({...r,selected:r===selected,...(!isMalaysia?{lines:[name(r)],lang:language}:{})})),'korea-marker');}

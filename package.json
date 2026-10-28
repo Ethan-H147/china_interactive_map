@@ -397,6 +397,14 @@
     "fetch:west-asia": "node scripts/fetch-west-asia.mjs",
     "build:west-asia": "node scripts/register-west-asia.mjs && node --max-old-space-size=10000 scripts/build-west-asia.mjs && node --max-old-space-size=10000 scripts/build-west-asia-depth.mjs && node scripts/prepare-region-colors.mjs iran iraq saudi-arabia && node --max-old-space-size=10000 scripts/build-west-asia-assets.mjs",
     "test:west-asia": "node scripts/validate-west-asia.mjs && node scripts/validate-west-asia-depth.mjs && node scripts/browser/run.mjs west-asia",
-    "build:west-asia-depth": "node scripts/register-west-asia.mjs && node --max-old-space-size=10000 scripts/build-west-asia-depth.mjs && node scripts/prepare-region-colors.mjs iran iraq saudi-arabia"
+    "build:west-asia-depth": "node scripts/register-west-asia.mjs && node --max-old-space-size=10000 scripts/build-west-asia-depth.mjs && node scripts/prepare-region-colors.mjs iran iraq saudi-arabia",
+    "fetch:us-city-quiz": "node scripts/fetch-us-city-quiz.mjs",
+    "build:us-city-quiz": "node scripts/build-us-city-quiz.mjs",
+    "test:us-city-quiz": "node --check dist/city-quiz.mjs && node scripts/validate-us-city-quiz.mjs && node scripts/browser/run.mjs us-city-quiz",
+    "fetch:city-quizzes": "node scripts/fetch-city-quiz.mjs china && node scripts/fetch-city-quiz.mjs russia && node scripts/fetch-city-quiz.mjs spain && node scripts/fetch-city-quiz.mjs germany && node scripts/fetch-city-quiz.mjs united-kingdom && node scripts/fetch-city-quiz.mjs france && node scripts/fetch-city-quiz.mjs italy",
+    "build:city-quizzes": "node scripts/build-city-quiz.mjs china && node scripts/build-city-quiz.mjs russia && node scripts/build-city-quiz.mjs spain && node scripts/build-city-quiz.mjs germany && node scripts/build-city-quiz.mjs united-kingdom && node scripts/build-city-quiz.mjs france && node scripts/build-city-quiz.mjs italy",
+    "test:city-quizzes": "node --check dist/city-quiz.mjs && node scripts/validate-city-quizzes.mjs && node scripts/browser/run.mjs city-quiz",
+    "build:russia-lite": "node --max-old-space-size=6000 scripts/build-russia-lite.mjs",
+    "test:russia-detail": "node scripts/browser/run.mjs russia-detail"
   }
 }

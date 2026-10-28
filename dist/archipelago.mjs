@@ -7,7 +7,7 @@ import {addWorkerSource} from './geo-pack.mjs';
 import {setLayerVisible} from './adaptive-lines.mjs';
 import {createPlaceSearch} from './place-search.mjs';
 import {BoundaryBudget,chooseChunks} from './boundary-budget.mjs';
-const configuration={philippines:{name:'Philippines',prefix:'ph',first:'Regions',second:'Provinces',home:[[116,4.3],[127.2,21.5]],fill:'#e7edf6',selected:'#c5d7ee',line:'#366393'},indonesia:{name:'Indonesia',prefix:'id',first:'Provinces',second:'Regencies & cities',home:[[94.5,-11.3],[141.2,6.3]],fill:'#efd6d1',selected:'#e2b3ab',line:'#b55a52',legacy:{fill:'#fff5f3',selected:'#f2ccc8'}}};
+const configuration={philippines:{name:'Philippines',prefix:'ph',first:'Regions',second:'Provinces',home:[[116,4.3],[127.2,21.5]],fill:'#dce5f2',selected:'#c5d7ee',line:'#366393',legacy:{fill:'#e7edf6',selected:'#c5d7ee'}},indonesia:{name:'Indonesia',prefix:'id',first:'Provinces',second:'Regencies & cities',home:[[94.5,-11.3],[141.2,6.3]],fill:'#efd6d1',selected:'#e2b3ab',line:'#b55a52',legacy:{fill:'#fff5f3',selected:'#f2ccc8'}}};
 export async function addArchipelagoPortal(map,host,country){
  const config=configuration[country],{name,prefix,home}=config;
  await addWorkerSource(map,country+'-portal','data/archipelago/'+country+'-context.bin',{type:'geojson',tolerance:0},country==='indonesia'?'coastal':'');
