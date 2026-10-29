@@ -56,7 +56,10 @@ answers. Full rounds and shorter question sets have separate records, as do
 different pools, scopes and quiz types. The dashboard's fastest display selects
 full rounds. Timers stop on the final answer. Practice does not replace a record.
 
-The Site, GitHub Pages and Cloudflare frontends call the Site's /api/quiz-records endpoint. Its Worker
+The frontend now uses Supabase's authenticated REST API for public.quiz_attempts. Apply supabase/migrations/202610290001_quiz_attempts.sql to the existing Auth project. Row-level SELECT/INSERT policies isolate each user; duplicates are ignored without UPDATE or DELETE privileges. The browser keeps a per-account migration archive and replays pending and cached full attempts with their original UUIDs. Verify uploads before clearing local data. Old D1-only records outside the cached history need a separate authenticated export.
+
+The following describes the retained legacy D1 backend, which the current frontend no longer calls:
+The previous Site, GitHub Pages and Cloudflare frontends called the Site's /api/quiz-records endpoint. Its Worker
 verifies the user's bearer token against Supabase Auth and derives ownership from
 the verified response. Every database query binds that user ID; client-supplied
 ownership is ignored. Records live in the Site's D1 DB binding, not in Supabase

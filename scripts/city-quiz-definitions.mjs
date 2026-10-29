@@ -102,3 +102,43 @@ europeAliases['Greater Sudbury']=['Sudbury','Grand Sudbury'];
 europeAliases['Bariloche']=['San Carlos de Bariloche'];
 europeAliases['San Fernando del Valle de Catamarca']=['Catamarca'];
 europeAliases['San Ramón de la Nueva Orán']=['Orán','Oran'];
+
+// Mexico and Japan use four cumulative tiers; South Africa and South Korea use three.
+europeCities.mexico={
+ e:'Mexico City,Guadalajara,Monterrey,Cancún,Tijuana,Puebla,Acapulco,Mérida',
+ m:'León,Querétaro,Oaxaca,Veracruz,Chihuahua,Ciudad Juárez,San Luis Potosí,Morelia,Guanajuato,San Miguel de Allende,Puerto Vallarta,Mazatlán,Toluca,Cuernavaca,La Paz,San Cristóbal de las Casas',
+ h:'Aguascalientes,Mexicali,Hermosillo,Culiacán,Durango,Zacatecas,Saltillo,Torreón,Tampico,Reynosa,Matamoros,Nuevo Laredo,Tuxtla Gutiérrez,Villahermosa,Campeche,Chetumal,Colima,Tepic,Tlaxcala,Pachuca,Chilpancingo,Xalapa',
+ x:'Ensenada,Los Mochis,Ciudad Obregón,Guaymas,Nogales,Ciudad Victoria,Monclova,Manzanillo,Uruapan,Zamora,Cuautla,Tehuacán,Orizaba,Córdoba,Coatzacoalcos,Tapachula,Comitán,Playa del Carmen,Cozumel,Tulum,Cabo San Lucas,San José del Cabo'};
+europeCities['south-africa']={
+ e:'Johannesburg,Cape Town,Durban,Pretoria,Bloemfontein,Gqeberha',
+ m:'East London,Kimberley,Polokwane,Mbombela,Pietermaritzburg,George,Stellenbosch,Paarl,Soweto,Rustenburg,Richards Bay,Mthatha',
+ h:'Bhisho,Mahikeng,Upington,Welkom,Klerksdorp,Potchefstroom,Vereeniging,Vanderbijlpark,Newcastle,Ladysmith,Knysna,Mossel Bay,Oudtshoorn,Worcester,Hermanus,Makhanda,Graaff-Reinet,Queenstown,Thohoyandou,Musina,Emalahleni,Secunda'};
+europeCities.korea={
+ e:'Seoul,Busan,Incheon,Daegu,Daejeon,Gwangju,Jeju City',
+ m:'Ulsan,Suwon,Sejong,Jeonju,Gyeongju,Pohang,Chuncheon,Gangneung,Sokcho,Seogwipo,Changwon,Cheongju',
+ h:'Goyang,Yongin,Seongnam,Bucheon,Ansan,Anyang,Pyeongtaek,Uijeongbu,Paju,Gimpo,Wonju,Andong,Gimcheon,Gumi,Jinju,Gimhae,Yangsan,Tongyeong,Geoje,Mokpo,Yeosu,Suncheon,Gunsan,Iksan,Chungju,Jecheon,Cheonan,Asan,Gongju,Boryeong'};
+europeCities.japan={
+ e:'Tokyo,Osaka,Kyoto,Yokohama,Hiroshima,Nagasaki,Sapporo,Nagoya,Fukuoka,Nara',
+ m:'Kobe,Sendai,Kanazawa,Naha,Hakodate,Nikko,Kamakura,Himeji,Matsumoto,Nagano,Niigata,Shizuoka,Hamamatsu,Kumamoto,Kagoshima',
+ h:'Aomori,Morioka,Akita,Yamagata,Fukushima,Mito,Utsunomiya,Maebashi,Saitama,Chiba,Kawasaki,Toyama,Fukui,Kofu,Gifu,Tsu,Otsu,Wakayama,Tottori,Matsue,Okayama,Yamaguchi,Tokushima,Takamatsu,Matsuyama,Kochi,Saga,Oita,Miyazaki,Kitakyushu',
+ x:'Asahikawa,Otaru,Kushiro,Obihiro,Hirosaki,Hachinohe,Iwaki,Koriyama,Tsukuba,Takasaki,Kawagoe,Yokosuka,Odawara,Fujisawa,Atami,Takayama,Shirakawa,Hikone,Uji,Sakai,Kurashiki,Onomichi,Kure,Shimonoseki,Beppu,Sasebo,Ishigaki,Miyakojima'};
+
+Object.assign(europeAliases,{
+ 'Mexico City':['Ciudad de México','CDMX','Mexico DF'],Puebla:['Puebla de Zaragoza'],Oaxaca:['Oaxaca de Juárez'],Toluca:['Toluca de Lerdo'],Pachuca:['Pachuca de Soto'],Chilpancingo:['Chilpancingo de los Bravo'],
+ Gqeberha:['Port Elizabeth'],Mbombela:['Nelspruit'],Makhanda:['Grahamstown'],Bhisho:['Bisho'],Mahikeng:['Mafikeng'],Polokwane:['Pietersburg'],Emalahleni:['Witbank'],Queenstown:['Komani'],
+ Busan:['Pusan'],Daegu:['Taegu'],Daejeon:['Taejon'],Gwangju:['Kwangju'],Incheon:['Inchon'],Gyeongju:['Kyongju'],'Jeju City':['Jeju','Jeju-si'],
+ Tokyo:['Tōkyō','東京','東京都'],Osaka:['Ōsaka'],Kyoto:['Kyōto'],Kochi:['Kōchi'],Oita:['Ōita']
+});
+europeRegions['south-africa']={Emalahleni:'Mpumalanga',Ladysmith:'KwaZulu-Natal',Queenstown:'Eastern Cape'};
+europeRegions.korea={Gwangju:'Jeonnam–Gwangju',Suncheon:'Jeonnam–Gwangju'};
+
+// Exact labels avoid similarly named villages and municipality-wide coordinates.
+Object.assign(searchNames,{'San Cristóbal de las Casas':'San Cristóbal de Las Casas',Emalahleni:'Witbank',Asan:'Asan-si',Tlaxcala:'Tlaxcala de Xicoténcatl'});
+europeAliases.Asan=['아산'];
+// Asan's main item has an inaccurate coordinate; the administrative item lies within the city.
+export const cityItems={korea:{Asan:'Q27288910'}};
+
+// Mexico often shares a short name among a state, municipality and several villages.
+// Pin the intended urban locality rather than selecting the exact-label namesake.
+cityItems.mexico={Acapulco:'Q81398',Puebla:'Q125293',Chihuahua:'Q61302',Oaxaca:'Q131429','Querétaro':'Q173121',Toluca:'Q209034',Aguascalientes:'Q200805',Campeche:'Q61301',Durango:'Q112813',Chilpancingo:'Q207935','Comitán':'Q1961680',Cozumel:'Q929946',Guaymas:'Q985521',Cuautla:'Q939959',Nogales:'Q990001',Tapachula:'Q988225',Uruapan:'Q399270',Zamora:'Q145865'};
+europeRegions.mexico={Acapulco:'Guerrero',Puebla:'Puebla',Chihuahua:'Chihuahua',Oaxaca:'Oaxaca','Querétaro':'Querétaro',Toluca:'México',Aguascalientes:'Aguascalientes',Campeche:'Campeche',Durango:'Durango',Chilpancingo:'Guerrero','Comitán':'Chiapas',Cozumel:'Quintana Roo',Guaymas:'Sonora',Cuautla:'Morelos',Nogales:'Sonora',Tapachula:'Chiapas',Uruapan:'Michoacán de Ocampo',Zamora:'Michoacán de Ocampo',Córdoba:'Veracruz de Ignacio de la Llave','La Paz':'Baja California Sur',Matamoros:'Tamaulipas'};

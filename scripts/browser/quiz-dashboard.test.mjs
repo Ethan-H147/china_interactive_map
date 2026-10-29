@@ -9,11 +9,13 @@ export const fixture=`(()=>{
  const owner=init=>new Headers(init.headers).get('Authorization')?.includes(B)?B:A;
  window.fetch=async(input,init={})=>{const url=typeof input==='string'?input:input.url||String(input),body=init.body?JSON.parse(init.body):{};
   if(url.startsWith('https://odenagmobrswlzkljayf.supabase.co/auth/v1/')){const path=new URL(url).pathname,id=body.email?idFor(body.email):owner(init);if(path.endsWith('/token'))return Response.json({access_token:'test-access-token-'+id,refresh_token:'test-refresh-token-'+id,token_type:'bearer',expires_in:3600,expires_at:Math.floor(Date.now()/1000)+3600,user:user(id)});if(path.endsWith('/user'))return Response.json({...user(id),user_metadata:{...user(id).user_metadata,...body.data}});return Response.json({});}
-  if(!url.startsWith('https://china-boundary-atlas.hys0423.chatgpt.site/api/quiz-records'))return real(input,init);
+  if(!url.startsWith('https://odenagmobrswlzkljayf.supabase.co/rest/v1/quiz_attempts'))return real(input,init);
   window.quizApiCalls.push({owner:owner(init),method:init.method||'GET',body});if(window.quizApiOffline)throw TypeError('Offline');
-  const id=owner(init),cloud=read(),all=cloud[id]||[];
-  if(init.method==='POST'){for(const a of body.attempts)if(!all.some(old=>old.id===a.id))all.push(a);cloud[id]=all;save(cloud);return Response.json({accepted:body.attempts.map(a=>a.id)},{status:201});}
-  const {summarizeQuizAttempts}=await import('/quiz-records-core.mjs');return Response.json({...summarizeQuizAttempts(all),recent:[...all].reverse(),nextCursor:null});
+  const id=owner(init),cloud=read(),all=cloud[id]||[],u=new URL(url),{quizRow,quizAttempt}=await import('/quiz-supabase.mjs');
+  if(init.method==='POST'){for(const row of body){if(row.user_id!==id)return Response.json({message:'RLS violation'},{status:403});const a=quizAttempt(row);if(!all.some(old=>old.id===a.id))all.push(a);}cloud[id]=all;save(cloud);return new Response(null,{status:201});}
+  if(u.searchParams.get('select')==='id'){const ids=u.searchParams.get('id').slice(4,-1).split(',');return Response.json(all.filter(a=>ids.includes(a.id)).map(a=>({id:a.id})));}
+  const offset=Number(u.searchParams.get('offset')||0),limit=Number(u.searchParams.get('limit')||500);
+  return Response.json([...all].sort((a,b)=>b.finishedAt.localeCompare(a.finishedAt)||b.id.localeCompare(a.id)).slice(offset,offset+limit).map(a=>quizRow(a,id)));
  };
 })();`;
 export async function login(p,email='atlas@example.test'){

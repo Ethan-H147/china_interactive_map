@@ -1,3 +1,4 @@
+import {requestSupabaseQuizRecords} from './quiz-supabase.mjs';
 import {supabaseUrl,supabasePublishableKey,sessionKey,quizRecordsUrl} from './account-config.mjs';
 import {mountQuizDashboard} from './quiz-dashboard.mjs';
 const trigger=document.getElementById('account-open');
@@ -118,7 +119,5 @@ export function currentAccountId(){return session?.user?.id||null;}
 export async function requestAccountQuizRecords(userId,method='GET',body=null,cursor=null){
  const {data,error}=await(await client()).auth.getSession();if(error)throw error;const current=data.session;
  if(!current||current.user.id!==userId||session?.user?.id!==userId)throw Error('Account changed');
- const url=new URL(quizRecordsUrl);if(cursor)url.searchParams.set('cursor',cursor);
- const response=await fetch(url,{method,headers:{Authorization:'Bearer '+current.access_token,...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(20000),cache:'no-store'});
- if(!response.ok){const error=Error('Quiz records could not sync');error.status=response.status;throw error;}return response.json();
+ return requestSupabaseQuizRecords({url:quizRecordsUrl,key:supabasePublishableKey,token:current.access_token,userId,method,body,cursor});
 }

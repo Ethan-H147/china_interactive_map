@@ -5,10 +5,10 @@
 import fs from 'node:fs';
 import {gzipSync} from 'node:zlib';
 import {chinaCities,russiaCities,europeCities,searchNames} from './city-quiz-definitions.mjs';
-const country=process.argv[2],countries={china:['Q148','Q865'],russia:['Q159'],spain:['Q29'],germany:['Q183'],'united-kingdom':['Q145'],france:['Q142'],italy:['Q38'],brazil:['Q155'],canada:['Q16'],argentina:['Q414']}[country];if(!countries)throw Error('Usage: fetch-city-quiz.mjs <country>');
+const country=process.argv[2],countries={china:['Q148','Q865'],russia:['Q159'],spain:['Q29'],germany:['Q183'],'united-kingdom':['Q145'],france:['Q142'],italy:['Q38'],brazil:['Q155'],canada:['Q16'],argentina:['Q414'],mexico:['Q96'],'south-africa':['Q258'],korea:['Q884'],japan:['Q17']}[country];if(!countries)throw Error('Usage: fetch-city-quiz.mjs <country>');
 const names=country==='china'?Object.values(chinaCities).flatMap(list=>list.split(',').map(e=>e.trim().replace(/ \w$/,''))):Object.values(country==='russia'?russiaCities:europeCities[country]).flatMap(list=>list.split(',').map(e=>e.trim()));
 const variants=[...new Set(names.flatMap(n=>[...(searchNames[n]?[searchNames[n]]:[]),n,n+' City',n+' District',n.normalize('NFD').replace(/[̀-ͯ]/g,'')]))];
-const languages={china:['zh-hans','zh-hant','zh'],russia:['ru'],spain:['es','ca','eu','gl'],germany:['de'],'united-kingdom':['cy','ga'],france:['fr'],italy:['it'],brazil:['pt'],canada:['fr'],argentina:['es']}[country];
+const languages={china:['zh-hans','zh-hant','zh'],russia:['ru'],spain:['es','ca','eu','gl'],germany:['de'],'united-kingdom':['cy','ga'],france:['fr'],italy:['it'],brazil:['pt'],canada:['fr'],argentina:['es'],mexico:['es'],'south-africa':['af','zu','xh'],korea:['ko'],japan:['ja']}[country];
 async function sparql(query){
  for(let attempt=0;;attempt++){
   const response=await fetch('https://query.wikidata.org/sparql',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded',Accept:'application/sparql-results+json','User-Agent':'BoundaryAtlas/1.0 (+https://github.com/Ethan-H147/china_interactive_map)'},body:'query='+encodeURIComponent(query)});

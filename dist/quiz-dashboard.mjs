@@ -64,7 +64,7 @@ export function mountQuizDashboard(container,{play}){
   let shown=0;for(const {card,query:terms}of cards.values()){card.hidden=!terms.includes(query);if(!card.hidden)shown++;}
   $('[data-country-count]').textContent=shown+' '+(shown===1?'country':'countries');$('.quiz-country-empty').hidden=shown>0;$('[data-clear-country]').hidden=!search.value;
   const grid=$('.quiz-stat-grid');grid.replaceChildren();for(const [label,value]of [['Rounds',s.rounds],['Accuracy',s.total?Math.round(s.correct/s.total*100)+'%':'—'],['Perfect rounds',s.perfect],['Countries',s.countries]]){const card=make('div',undefined,'quiz-stat');card.append(make('strong',String(value)),make('span',label));grid.append(card);}
-  const status=$('[data-record-status]');status.textContent=!user?'Saved on this device':({synced:'Synced to your account',saving:'Syncing…',offline:'Saved on this device · sync will retry',signin:'Sign in again to sync',storage:'Device storage is full'})[quizRecords.status]||'Syncing…';status.dataset.state=quizRecords.status;
+  const status=$('[data-record-status]');status.textContent=!user?'Saved on this device':({synced:'Synced to your account',saving:'Syncing…',offline:'Saved on this device · sync will retry',signin:'Sign in again to sync',storage:'Device storage is full'})[quizRecords.status]||'Syncing…';status.dataset.state=quizRecords.status;if(quizRecords.status==='offline'&&quizRecords.error)status.textContent+=' · '+quizRecords.error;
   if(detail){
    const hero=$('.quiz-country-hero');hero.style.setProperty('--quiz-country-tint',definition.background);
    if(hero.dataset.country!==country){$('[data-country-flag]').replaceChildren(flags(definition,'quiz-country-flags',true));hero.dataset.country=country;}

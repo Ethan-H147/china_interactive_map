@@ -329,6 +329,8 @@
   const cityFrames={spain:[[-18.3,27.6],[4.4,43.9]],germany:[[5.8,47.2],[15.1,55.1]],'united-kingdom':[[-8.2,49.9],[1.8,58.7]],france:[[-5.2,41.3],[9.6,51.1]],italy:[[6.6,36.6],[18.6,47.1]]};
   // Brazil keeps five levels; its frame reaches Fernando de Noronha.
   if(['canada','argentina'].includes(id))c.quiz.cities={file:'data/quiz/'+id+'-cities.json',plural:'Cities',levels:cityQuizLevels.slice(0,4),bounds:id==='canada'?[[-140,41.5],[-52,65]]:[[-73.7,-55.2],[-53.5,-21.7]]};
+  const addedCityFrames={mexico:[[-117.3,14.4],[-86.5,32.8]],'south-africa':[[16.4,-35],[33,-22]],korea:[[125.8,33],[130,38.7]],japan:[[123,24],[146,46]]};
+  if(addedCityFrames[id])c.quiz.cities={file:'data/quiz/'+id+'-cities.json',plural:id==='korea'?'South Korean cities':'Cities',levels:cityQuizLevels.slice(0,['mexico','japan'].includes(id)?4:3),bounds:addedCityFrames[id]};
   if(id==='brazil')c.quiz.cities={file:'data/quiz/brazil-cities.json',plural:'Cities',levels:cityQuizLevels,bounds:[[-74,-34],[-32.2,5.4]]};
   if(cityFrames[id])c.quiz.cities={file:'data/quiz/'+id+'-cities.json',plural:'Cities',levels:cityQuizLevels.slice(0,3),bounds:cityFrames[id],...(id==='france'?{overseasLabel:'Include overseas',overseasDefault:false}:{})};
   if(c.quiz)c.quiz.flags=(quizFlags[id]||[c.map?.flag||c.prefix]).map(code=>'vendor/flag-'+code+(['my','sg'].includes(code)?'.webp':'.svg'));

@@ -24,14 +24,16 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  }
  // Naming a highlighted city zooms toward it, just far enough that its nearest neighbour sits
  // about 32 px away (at least one step in, never past regional scale); other modes frame the country.
- function fitScope({target}={}){
-  const frame=cities.bounds,frameZoom=(definition.home?.maxZoom||8)-1;if(!target)return host.fit(frame,frameZoom,{manual:true});
+ async function fitScope({target}={}){
+  // Click rounds free the map; typing rounds keep their input in the sheet.
+  if(!target&&document.getElementById(prefix+'-quiz-type').value==='find')await window.AtlasSheet?.collapse();
+  const frame=cities.bounds,frameZoom=(definition.home?.maxZoom||8)-1;if(!target)return host.fit(frame,frameZoom,{manual:true,overview:false});
   const [lon,lat]=target.center,cos=Math.cos(lat*Math.PI/180),base=Math.min(frameZoom,map.cameraForBounds(frame,{padding:40})?.zoom??3);
   let nearest=Infinity;for(const r of records())if(r.id!==target.id)nearest=Math.min(nearest,Math.hypot((r.center[0]-lon)*cos,r.center[1]-lat));
   const needed=Number.isFinite(nearest)?Math.log2(32*360*cos/(512*nearest)):base,zoom=Math.min(7.5,Math.max(base+1,needed));
   // A box smaller than the view, so the zoom cap (not the map padding) sets the scale.
   const {clientWidth:w,clientHeight:h}=map.getContainer(),dx=w/8*360/(512*2**zoom),dy=dx*cos*h/w;
-  return host.fit([[lon-dx,lat-dy],[lon+dx,lat+dy]],zoom,{manual:true});
+  return host.fit([[lon-dx,lat-dy],[lon+dx,lat+dy]],zoom,{manual:true,overview:false});
  }
  const coverage=document.createElement('details');coverage.className='city-quiz-coverage';coverage.dataset.cityCoverage='';coverage.hidden=true;
  const coverageSummary=document.createElement('summary'),coverageList=document.createElement('div');coverageList.className='city-quiz-coverage-list';coverageList.dataset.cityCoverageList='';coverage.append(coverageSummary,coverageList);

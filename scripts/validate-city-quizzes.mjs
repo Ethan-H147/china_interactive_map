@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import '../dist/countries.js';
 // City quizzes outside the US: cumulative levels, unique names, dots inside each quiz's frame
 // (France's frame is the mainland; its overseas cities sit behind an option).
-const expected={china:[15,46,93,167,231],russia:[8,31,63,106,149],spain:[8,28,61],germany:[9,31,61],'united-kingdom':[10,29,63],france:[8,31,68],italy:[10,32,64],brazil:[10,24,49,89,138],canada:[10,25,45,65],argentina:[8,25,45,65]};
+const expected={china:[15,46,93,167,231],russia:[8,31,63,106,149],spain:[8,28,61],germany:[9,31,61],'united-kingdom':[10,29,63],france:[8,31,68],italy:[10,32,64],brazil:[10,24,49,89,138],canada:[10,25,45,65],argentina:[8,25,45,65],mexico:[8,24,46,68],'south-africa':[6,18,40],korea:[7,19,49],japan:[10,25,55,83]};
 for(const [country,counts] of Object.entries(expected)){
  const data=JSON.parse(fs.readFileSync('dist/data/quiz/'+country+'-cities.json','utf8')),cities=globalThis.AtlasCountries.countries[country].quiz.cities,order=cities.levels.map(l=>l.id);
  assert.deepEqual(data.levels.map(l=>l.id),order,country+' levels match the app');assert.deepEqual(data.levels.map(l=>l.count),counts,country+' levels are cumulative');
@@ -36,3 +36,15 @@ for(const [records,inputs]of [[canada,['Montreal','Quebec City','Sudbury',"St Jo
  for(const input of inputs)assert.equal(submitName(round,input).status,'correct',input+' is accepted');
 }
 console.log('Canada and Argentina: four tiers, all province/territory coverage, intended same-name places and typing aliases passed.');
+
+// New city packs: intended places, local typing and cumulative difficulty.
+for(const [c,name,region] of [['mexico','Córdoba','Veracruz de Ignacio de la Llave'],['mexico','La Paz','Baja California Sur'],['south-africa','Emalahleni','Mpumalanga'],['korea','Gwangju','Jeonnam–Gwangju'],['japan','Shirakawa','Fukushima']])assert.equal(europe(c).find(r=>r.en===name)?.regionName,region,name);
+for(const [c,inputs]of [['mexico',['CDMX','Cancun','San Cristobal de las Casas']],['south-africa',['Port Elizabeth','Nelspruit','Witbank']],['korea',['서울','부산','수원','Pusan']],['japan',['東京','京都','Osaka','Tōkyō']]]){
+ for(const input of inputs)assert.equal(submitName(createNameRound(europe(c).map(r=>({code:r.id,en:r.en,zh:r.local,aliases:r.aliases}))),input).status,'correct',c+' '+input);
+}
+assert(europe('korea').every(r=>r.region.startsWith('KR-')),'Korean city quiz contains South Korea only');
+assert(near(europe('korea').find(r=>r.en==='Asan'),[127,36.79]),'Asan uses its urban centre');
+assert(near(europe('south-africa').find(r=>r.en==='Emalahleni'),[29.24,-25.88]),'Emalahleni uses the city rather than the municipality');
+console.log('Mexico, South Africa, South Korea and Japan city packs passed.');
+
+for(const [name,point] of [['Acapulco',[-99.88,16.86]],['Puebla',[-98.2,19.04]],['Chihuahua',[-106.07,28.63]],['Toluca',[-99.66,19.29]],['Oaxaca',[-96.73,17.06]],['Querétaro',[-100.39,20.59]],['Cozumel',[-86.95,20.5]]])assert(near(europe('mexico').find(r=>r.en===name),point),'Intended urban locality: '+name);
