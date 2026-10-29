@@ -369,6 +369,16 @@
   const languages=c.view?.languages||c.map?.labelLanguages?.map(([code])=>code)||defaultLanguages;
   c.view={scopes:[],...c.view,languages,language:c.view?.language||(languages.includes('both')?'both':languages[0]),maxMode:c.map?.thirdLabel?3:2};
  }
+ // Football uses the same quiz storage level as cities, with season-specific scopes.
+ const football=(country,leagues,bounds,title)=>{countries[country].quiz.football={file:'data/quiz/'+country+'-football.json',plural:'Football clubs',singular:'club',title,season:'2026–27',bounds,crests:true,groupLocations:true,findInstruction:"Click the club's home stadium on the map.",nameInstruction:'Name the clubs. Short names and common abbreviations are accepted.',identifyInstruction:'Name a club that plays at the highlighted stadium.',previewInstruction:'Hover over or tap a stadium to see its clubs and location.',coverageNote:'Dots mark home stadiums, including temporary and shared grounds.',sourcesFile:'data/quiz/'+country+'-football-sources.json',levels:leagues.map((name,i)=>({id:'football-2026-27-tier'+(i+1),leagueName:name,label:i===0?name:i===1?leagues.slice(0,2).join(' + '):'All 3 leagues'}))};};
+ football('united-kingdom',['Premier League','Championship','League One'],[[-5.8,50], [2,55.9]],'English football clubs');
+ football('france',['Ligue 1','Ligue 2','Ligue 3'],[[-5.3,41.2],[9.7,51.2]],'French football clubs');
+ football('germany',['Bundesliga','2. Bundesliga','3. Liga'],[[5.7,47.2],[15.1,55.1]],'German football clubs');
+ football('spain',['LaLiga','Segunda División','Primera Federación'],[[-18.3,27.4],[4.5,43.9]],'Spanish football clubs');
+ football('italy',['Serie A','Serie B','Serie C'],[[6.5,36.5],[18.7,47.2]],'Italian football clubs');
+ football('netherlands',['Eredivisie','Eerste Divisie','Tweede Divisie'],[[3.2,50.7],[7.3,53.7]],'Dutch football clubs');
+ football('belgium',['Pro League','Challenger Pro League','Nationale 1'],[[2.5,49.4],[6.5,51.6]],'Belgian football clubs');
+ football('portugal',['Primeira Liga','Liga Portugal 2','Liga 3'],[[-28,32.3],[-6.1,42.2]],'Portuguese football clubs');
  // Menu geography is independent of the shared map adapters. Transcontinental views
  // appear once: Russia in Europe; Turkey and Kazakhstan in Asia.
  const continentMembers={

@@ -1,0 +1,873 @@
+{
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "rosterSha256": "98a847221f1eb6b33f346a9d63f0e2045568658df3256cd2176c487807ea0c53",
+  "rosterFile": "scripts/football-sources/germany/clubs.json",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Bundesliga",
+      "count": 18,
+      "sourceUrl": "https://www.bundesliga.com/en/bundesliga/clubs"
+    },
+    {
+      "tier": 2,
+      "name": "2. Bundesliga",
+      "count": 18,
+      "sourceUrl": "https://www.bundesliga.com/en/2bundesliga/clubs"
+    },
+    {
+      "tier": 3,
+      "name": "3. Liga",
+      "count": 20,
+      "sourceUrl": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "FOOTBALL-de-fc-bayern-munchen",
+      "en": "Bayern Munich",
+      "city": "München",
+      "stadium": "Allianz Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000G.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/fc-bayern-muenchen"
+    },
+    {
+      "id": "FOOTBALL-de-borussia-dortmund",
+      "en": "Borussia Dortmund",
+      "city": "Dortmund",
+      "stadium": "SIGNAL IDUNA PARK",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000007.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/borussia-dortmund"
+    },
+    {
+      "id": "FOOTBALL-de-rb-leipzig",
+      "en": "RB Leipzig",
+      "city": "Leipzig",
+      "stadium": "Red Bull Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000017.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/rb-leipzig"
+    },
+    {
+      "id": "FOOTBALL-de-vfb-stuttgart",
+      "en": "VfB Stuttgart",
+      "city": "Stuttgart",
+      "stadium": "MHPArena",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/MHPArena",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000D.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/vfb-stuttgart"
+    },
+    {
+      "id": "FOOTBALL-de-tsg-hoffenheim",
+      "en": "TSG Hoffenheim",
+      "city": "Sinsheim",
+      "stadium": "SNP Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000002.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/tsg-hoffenheim"
+    },
+    {
+      "id": "FOOTBALL-de-bayer-04-leverkusen",
+      "en": "Bayer Leverkusen",
+      "city": "Leverkusen",
+      "stadium": "BayArena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000B.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/bayer-04-leverkusen"
+    },
+    {
+      "id": "FOOTBALL-de-sport-club-freiburg",
+      "en": "SC Freiburg",
+      "city": "Freiburg",
+      "stadium": "Europa-Park Stadion",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Europa-Park%20Stadion",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000A.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sport-club-freiburg"
+    },
+    {
+      "id": "FOOTBALL-de-eintracht-frankfurt",
+      "en": "Eintracht Frankfurt",
+      "city": "Frankfurt am Main",
+      "stadium": "Deutsche Bank Park",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000F.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/eintracht-frankfurt"
+    },
+    {
+      "id": "FOOTBALL-de-fc-augsburg",
+      "en": "FC Augsburg",
+      "city": "Augsburg",
+      "stadium": "WWK ARENA",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000010.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/fc-augsburg"
+    },
+    {
+      "id": "FOOTBALL-de-1-fsv-mainz-05",
+      "en": "1. FSV Mainz 05",
+      "city": "Mainz",
+      "stadium": "MEWA ARENA",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000006.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/1-fsv-mainz-05"
+    },
+    {
+      "id": "FOOTBALL-de-1-fc-union-berlin",
+      "en": "1. FC Union Berlin",
+      "city": "Berlin",
+      "stadium": "An der Alten Försterei",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000V.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/1-fc-union-berlin"
+    },
+    {
+      "id": "FOOTBALL-de-borussia-monchengladbach",
+      "en": "Borussia Mönchengladbach",
+      "city": "Mönchengladbach",
+      "stadium": "ista-Borussia-Park",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000004.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/borussia-moenchengladbach"
+    },
+    {
+      "id": "FOOTBALL-de-hamburger-sv",
+      "en": "Hamburger SV",
+      "city": "Hamburg",
+      "stadium": "Volksparkstadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000C.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/hamburger-sv"
+    },
+    {
+      "id": "FOOTBALL-de-1-fc-koln",
+      "en": "1. FC Köln",
+      "city": "Köln",
+      "stadium": "RheinEnergieSTADION",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000008.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/1-fc-koeln"
+    },
+    {
+      "id": "FOOTBALL-de-sv-werder-bremen",
+      "en": "SV Werder Bremen",
+      "city": "Bremen",
+      "stadium": "Weserstadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000E.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sv-werder-bremen"
+    },
+    {
+      "id": "FOOTBALL-de-fc-schalke-04",
+      "en": "FC Schalke 04",
+      "city": "Gelsenkirchen",
+      "stadium": "VELTINS-Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000009.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/fc-schalke-04"
+    },
+    {
+      "id": "FOOTBALL-de-sv-elversberg",
+      "en": "SV Elversberg",
+      "city": "Spiesen-Elversberg",
+      "stadium": "URSAPHARM-Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N6L.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sv-elversberg"
+    },
+    {
+      "id": "FOOTBALL-de-sc-paderborn-07",
+      "en": "SC Paderborn 07",
+      "city": "Paderborn",
+      "stadium": "Home Deluxe Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000L.svg",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sc-paderborn-07"
+    },
+    {
+      "id": "FOOTBALL-de-vfl-wolfsburg",
+      "en": "VfL Wolfsburg",
+      "city": "Wolfsburg",
+      "stadium": "Volkswagen Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000003.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/vfl-wolfsburg"
+    },
+    {
+      "id": "FOOTBALL-de-1-fc-heidenheim-1846",
+      "en": "1. FC Heidenheim 1846",
+      "city": "Heidenheim",
+      "stadium": "Voith-Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000018.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-heidenheim-1846"
+    },
+    {
+      "id": "FOOTBALL-de-fc-st-pauli",
+      "en": "FC St. Pauli",
+      "city": "Hamburg",
+      "stadium": "Millerntor-Stadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000H.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/fc-st-pauli"
+    },
+    {
+      "id": "FOOTBALL-de-hannover-96",
+      "en": "Hannover 96",
+      "city": "Hannover",
+      "stadium": "Heinz von Heiden Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000001.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/hannover-96"
+    },
+    {
+      "id": "FOOTBALL-de-sv-darmstadt-98",
+      "en": "SV Darmstadt 98",
+      "city": "Darmstadt",
+      "stadium": "Merck-Stadion am Böllenfalltor",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000016.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/sv-darmstadt-98"
+    },
+    {
+      "id": "FOOTBALL-de-1-fc-kaiserslautern",
+      "en": "1. FC Kaiserslautern",
+      "city": "Kaiserslautern",
+      "stadium": "Fritz-Walter-Stadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000I.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-kaiserslautern"
+    },
+    {
+      "id": "FOOTBALL-de-hertha-bsc",
+      "en": "Hertha BSC",
+      "city": "Berlin",
+      "stadium": "Olympiastadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000Z.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/hertha-bsc"
+    },
+    {
+      "id": "FOOTBALL-de-1-fc-nurnberg",
+      "en": "1. FC Nürnberg",
+      "city": "Nürnberg",
+      "stadium": "Max-Morlock-Stadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000005.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-nuernberg"
+    },
+    {
+      "id": "FOOTBALL-de-vfl-bochum-1848",
+      "en": "VfL Bochum",
+      "city": "Bochum",
+      "stadium": "Ruhrstadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000S.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/vfl-bochum-1848"
+    },
+    {
+      "id": "FOOTBALL-de-karlsruher-sc",
+      "en": "Karlsruher SC",
+      "city": "Karlsruhe",
+      "stadium": "BBBank Wildpark",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000T.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/karlsruher-sc"
+    },
+    {
+      "id": "FOOTBALL-de-sg-dynamo-dresden",
+      "en": "Dynamo Dresden",
+      "city": "Dresden",
+      "stadium": "Rudolf-Harbig-Stadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000N.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/sg-dynamo-dresden"
+    },
+    {
+      "id": "FOOTBALL-de-holstein-kiel",
+      "en": "Holstein Kiel",
+      "city": "Kiel",
+      "stadium": "Holstein-Stadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5P.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/holstein-kiel"
+    },
+    {
+      "id": "FOOTBALL-de-dsc-arminia-bielefeld",
+      "en": "Arminia Bielefeld",
+      "city": "Bielefeld",
+      "stadium": "SchücoArena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000015.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/dsc-arminia-bielefeld"
+    },
+    {
+      "id": "FOOTBALL-de-1-fc-magdeburg",
+      "en": "1. FC Magdeburg",
+      "city": "Magdeburg",
+      "stadium": "Avnet Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5D.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-magdeburg"
+    },
+    {
+      "id": "FOOTBALL-de-eintracht-braunschweig",
+      "en": "Eintracht Braunschweig",
+      "city": "Braunschweig",
+      "stadium": "EINTRACHT-STADION",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000X.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/eintracht-braunschweig"
+    },
+    {
+      "id": "FOOTBALL-de-spvgg-greuther-furth",
+      "en": "SpVgg Greuther Fürth",
+      "city": "Fürth",
+      "stadium": "Sportpark Ronhof | Thomas Sommer",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000W.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/spvgg-greuther-fuerth"
+    },
+    {
+      "id": "FOOTBALL-de-fc-energie-cottbus",
+      "en": "Energie Cottbus",
+      "city": "Cottbus",
+      "stadium": "LEAG Energie Stadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000O.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/fc-energie-cottbus"
+    },
+    {
+      "id": "FOOTBALL-de-vfl-osnabruck",
+      "en": "VfL Osnabrück",
+      "city": "Osnabrück",
+      "stadium": "Stadion an der Bremer Brücke",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000014.svg",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/vfl-osnabrueck"
+    },
+    {
+      "id": "FOOTBALL-de-1-fc-saarbrucken",
+      "en": "1. FC Saarbrücken",
+      "city": "Saarbrücken",
+      "stadium": "Ludwigsparkstadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/222/original_saarbruecken.jpg?1493059538",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/1-fc-saarbruecken?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-alemannia-aachen",
+      "en": "Alemannia Aachen",
+      "city": "Aachen",
+      "stadium": "Tivoli",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/New%20Tivoli",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/106/original_aachen.jpg?1493059500",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/alemannia-aachen?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-fc-ingolstadt",
+      "en": "FC Ingolstadt 04",
+      "city": "Ingolstadt",
+      "stadium": "Audi Sportpark",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Audi%20Sportpark",
+      "crestSource": "https://assets.dfb.de/uploads/000/200/946/original_FC_Ingolstadt_Logo.jpg?1560333603",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fc-ingolstadt?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-fc-viktoria-koln",
+      "en": "Viktoria Köln",
+      "city": "Cologne",
+      "stadium": "Sportpark Höhenberg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Sportpark%20H%C3%B6henberg",
+      "crestSource": "https://assets.dfb.de/uploads/000/201/050/original_Viktoria_Koeln.jpg?1560415707",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fc-viktoria-koeln?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-fc-wurzburger-kickers",
+      "en": "Würzburger Kickers",
+      "city": "Würzburg",
+      "stadium": "AKON ARENA",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.dfb.de/uploads/000/229/379/original_54966-logo_wuerzburger_kickers_ro.jpg?1602679392",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fc-wuerzburger-kickers?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-fortuna-dusseldorf",
+      "en": "Fortuna Düsseldorf",
+      "city": "Düsseldorf",
+      "stadium": "Merkur Spielarena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/147/original_Fortuna_Duesseldorf.jpg?1493059512",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fortuna-duesseldorf?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-fortuna-koln",
+      "en": "Fortuna Köln",
+      "city": "Cologne",
+      "stadium": "Südstadion",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/S%C3%BCdstadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/321/765/original_Fortuna_Koeln.jpg?1750937579",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fortuna-koeln?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-hansa-rostock",
+      "en": "Hansa Rostock",
+      "city": "Rostock",
+      "stadium": "Ostseestadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.dfb.de/uploads/000/321/597/original_FC_Hansa_Rostock_500x500.jpg?1750666400",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/hansa-rostock?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-jahn-regensburg",
+      "en": "Jahn Regensburg",
+      "city": "Regensburg",
+      "stadium": "Jahnstadion Regensburg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Jahnstadion%20Regensburg",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/163/original_Jahn_Regensburg.jpg?1493059518",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/jahn-regensburg?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-msv-duisburg",
+      "en": "MSV Duisburg",
+      "city": "Duisburg",
+      "stadium": "SCHAUINSLAND-REISEN-ARENA",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.dfb.de/uploads/000/300/936/original_MSV_Duisburg_500x500_2024.jpg?1712667217",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/msv-duisburg?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-preussen-munster",
+      "en": "Preußen Münster",
+      "city": "Münster",
+      "stadium": "LVM-Preußenstadion",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.dfb.de/uploads/000/323/551/original_Preussen_Muenster.jpg?1756903050",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/preussen-muenster?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-rot-weiss-essen",
+      "en": "Rot-Weiss Essen",
+      "city": "Essen",
+      "stadium": "Stadion an der Hafenstraße",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Stadion%20Essen",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/110/original_Rot-Weiss-Essen.jpg?1493059502",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/rot-weiss-essen?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-sc-verl",
+      "en": "SC Verl",
+      "city": "Verl",
+      "stadium": "Sportclub Arena",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Sportclub%20Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/130/original_verl.jpg?1493059507",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sc-verl?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-sg-sonnenhof-grossaspach",
+      "en": "SG Sonnenhof Großaspach",
+      "city": "Aspach",
+      "stadium": "WIRmachenDRUCK Arena",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/WIRmachenDRUCK%20Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/201/170/original_SG_Sonnenhof_Grossaspach.jpg?1560608045",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sg-sonnenhof-grossaspach?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-sv-meppen",
+      "en": "SV Meppen",
+      "city": "Meppen",
+      "stadium": "Hänsch-Arena",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/H%C3%A4nsch-Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/335/753/original_SV_Meppen_2026.jpg?1783189254",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sv-meppen?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-sv-waldhof-mannheim",
+      "en": "SV Waldhof Mannheim",
+      "city": "Mannheim",
+      "stadium": "Carl-Benz-Stadion",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Carl-Benz-Stadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/226/162/original_Waldhof_Mannheim.jpg?1598610609",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sv-waldhof-mannheim?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-sv-wehen-wiesbaden",
+      "en": "SV Wehen Wiesbaden",
+      "city": "Wiesbaden",
+      "stadium": "BRITA Arena",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/173/original_Wehen_Wiesbaden.jpg?1493059521",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sv-wehen-wiesbaden?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-tsg-hoffenheim-ii",
+      "en": "TSG Hoffenheim II",
+      "city": "Sinsheim",
+      "stadium": "Dietmar-Hopp-Stadion",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Dietmar-Hopp-Stadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/113/632/original_1899_hoffenheim.jpg?1493132487",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/tsg-hoffenheim-ii?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-tsv-havelse",
+      "en": "TSV Havelse",
+      "city": "Hanover",
+      "stadium": "Eilenriedestadion",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Eilenriedestadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/183/original_TSV_Havelse.jpg?1493059525",
+      "note": "Garbsen club; Eilenriedestadion in Hanover approved as an additional home venue on 12 October 2026. Earlier 2026–27 home games used Heinz von Heiden Arena.",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/tsv-havelse?datacenter_name=datencenter"
+    },
+    {
+      "id": "FOOTBALL-de-vfb-stuttgart-ii",
+      "en": "VfB Stuttgart II",
+      "city": "Aspach",
+      "stadium": "WIRmachenDRUCK Arena",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/WIRmachenDRUCK%20Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/027/692/original_vfb.jpg?1493068594",
+      "note": "Stuttgart reserve side; home matches at WIRmachenDRUCK Arena in Aspach, shared with SG Sonnenhof Großaspach.",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/vfb-stuttgart-ii?datacenter_name=datencenter"
+    }
+  ],
+  "images": {
+    "vendor/football/germany/de-fc-bayern-munchen.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000G.svg",
+      "inputSha256": "fe1e059956ddc61feec68dd4aeee2eafd18a146af8473b6fa4c9a35378986504",
+      "sha256": "e586eef1a67fd02dab0644ae046cd115813aa3a6a607ef002cc3ec0c60e276f6",
+      "bytes": 3982
+    },
+    "vendor/football/germany/de-borussia-dortmund.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000007.svg",
+      "inputSha256": "29a0b1c5ffb1584cea00b76f0c80e64b4c8af2f207e88f6c21de0fb506673c31",
+      "sha256": "2b90175f9eb4ab85fe314e1930612cc7a9abeb0d426622ac100b5ade4b6816f5",
+      "bytes": 2254
+    },
+    "vendor/football/germany/de-rb-leipzig.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000017.svg",
+      "inputSha256": "23311d1bbb634fa51827ddfa719965381f8623e4f64e3ceb657037003b177033",
+      "sha256": "dac66aed34a67bf762972fdb09169b96694fa0b652d2b631f9a945fc4ac6aefd",
+      "bytes": 3270
+    },
+    "vendor/football/germany/de-vfb-stuttgart.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000D.svg",
+      "inputSha256": "9fc3aa34178ff4e1a3929d89c614091ceaff44d78c887c9dc729eb9eafd84103",
+      "sha256": "00b17a03edd7aadb01e40b3792b8b126c32d7757759a86fa7fd26a7761824536",
+      "bytes": 3770
+    },
+    "vendor/football/germany/de-tsg-hoffenheim.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000002.svg",
+      "inputSha256": "2ac7debff648995167364b5adb919ae1510c15ab0d81bc70ca64fc5ee1cb5b22",
+      "sha256": "8fa3f8a275fb423a8bd787ad0d6c22a320f6ffcf07bb7041583a329ba7d4e21f",
+      "bytes": 2396
+    },
+    "vendor/football/germany/de-bayer-04-leverkusen.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000B.svg",
+      "inputSha256": "7e1fdcff8b5cfbefac9f1503aaa028ac254b6b6433a24a213cafd13bcb5049ee",
+      "sha256": "746efd9797c14ecd2dbd0156182d942afbe33aa538e667a2edf505d6e5c7122e",
+      "bytes": 4330
+    },
+    "vendor/football/germany/de-sport-club-freiburg.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000A.svg",
+      "inputSha256": "1f6832c0d3da34d9b11482bcebfc59610d16cf9420a003c8f06cf254babb549d",
+      "sha256": "d9391eb4c255521b2c6a247788737967aab41d2ed2053e8d0b28b2bffff0d37e",
+      "bytes": 1762
+    },
+    "vendor/football/germany/de-eintracht-frankfurt.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000F.svg",
+      "inputSha256": "fbadda554b9478c540a85a269ebf7576fb881ccc2bcc4c710e4baee5241673a3",
+      "sha256": "9eff4b3053aad06c63043c3a0fc3c078e832f29bee4ad2cae99704ed701116eb",
+      "bytes": 3132
+    },
+    "vendor/football/germany/de-fc-augsburg.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000010.svg",
+      "inputSha256": "26bf36a7d96b260b1ef7b9e814391c72e30bab5f50622a0be498439a64c90283",
+      "sha256": "d66263e17ed73739b70dced52b0a261d42e9bbe98b056086ede807318eed693c",
+      "bytes": 2510
+    },
+    "vendor/football/germany/de-1-fsv-mainz-05.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000006.svg",
+      "inputSha256": "7175310c9ba3c48d082b16ca0ef0417fd6bffa007d1891df2ffda39e1ce10a0e",
+      "sha256": "5fa05a838b039bd077252b3f9c72cc040b9d7f3d20286a56f7a6e5741022b56f",
+      "bytes": 2650
+    },
+    "vendor/football/germany/de-1-fc-union-berlin.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000V.svg",
+      "inputSha256": "16eef1b104c25f5a6f27dde730fd891629059885cd376762553acf467c34e5c9",
+      "sha256": "ded8c002148937db9636f6d148f38febc96373030466704e4f1ef2f1e0114e70",
+      "bytes": 2290
+    },
+    "vendor/football/germany/de-borussia-monchengladbach.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000004.svg",
+      "inputSha256": "591635b97f81a4483258b9c0762619d9017cf71e45854561aad970df8951bccf",
+      "sha256": "a8fe9f2c4481b2d8426e3c8cc5997f3d06c53e8e68fc4674d6652e034d24295e",
+      "bytes": 1482
+    },
+    "vendor/football/germany/de-hamburger-sv.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000C.svg",
+      "inputSha256": "5738d4e7ed8ef4bce0078a55029a785c50b3701dc5b591ae65ac6b79c25c3f1d",
+      "sha256": "78bb2159a5e3e0ca8326cdb8c1de7874eb58062283cb9ddf9b95ebb2bf5e9cba",
+      "bytes": 344
+    },
+    "vendor/football/germany/de-1-fc-koln.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000008.svg",
+      "inputSha256": "62cb979efdb29fd851d0a5890264e4674b4ccd22b3b33aeb23573b7d4becf188",
+      "sha256": "27a1281b0a2cc880f446c17a991c95b287a68bd87aa8f3b6d3ca72679e5e543d",
+      "bytes": 3466
+    },
+    "vendor/football/germany/de-sv-werder-bremen.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000E.svg",
+      "inputSha256": "a10ef984868b7aec5b7b91ee93f85ed325fab22d18f0117e17b69520e3cb8ad6",
+      "sha256": "52a0a8b2948ecc21634b10ea7d474e127f278d779085e6a31215631144620d1e",
+      "bytes": 966
+    },
+    "vendor/football/germany/de-fc-schalke-04.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000009.svg",
+      "inputSha256": "1b9f37b99ea9754e5fb5aacba7326d33f0d7614dcde929fc8efe5876513ef080",
+      "sha256": "5c5f610487f3e69d6fa08838dba4c6e2fa354d1e25663376e0dc9805cd92742d",
+      "bytes": 2246
+    },
+    "vendor/football/germany/de-sv-elversberg.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N6L.svg",
+      "inputSha256": "90401b4a3afcd5dbc5c7764b8ff488fa74b0dc0abe015cbdaa3a95d9c8176578",
+      "sha256": "9f93cd3486068d9d3d98d0c14c38a72f4a61701f7da15e627fac5b3fcf0caaf6",
+      "bytes": 2712
+    },
+    "vendor/football/germany/de-sc-paderborn-07.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000L.svg",
+      "inputSha256": "b568c4b394b83b1af5149e166df46c1f5bf5572d59f16f7f738a8ce137d3a7bc",
+      "sha256": "d9acae6acfa64d2f9b03b3489615503120ce77656e679a9a868375c633da7de0",
+      "bytes": 2508
+    },
+    "vendor/football/germany/de-vfl-wolfsburg.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000003.svg",
+      "inputSha256": "b5d81518a3adf62553a7929c508d44c9028d38b733ae2ab46dffaa32a4846691",
+      "sha256": "097005fa94150e512195f50ea1925a73cad976ee929fbbd249a3b70f6c0f2aef",
+      "bytes": 1504
+    },
+    "vendor/football/germany/de-1-fc-heidenheim-1846.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000018.svg",
+      "inputSha256": "e1334b1fe122ecf0ca869317a22754cad85ae769ec155d884d4426b18eb5f37e",
+      "sha256": "09d85ece805c90e611e7c6b8694adca3d152eae30de824539636ad4319ffca51",
+      "bytes": 2588
+    },
+    "vendor/football/germany/de-fc-st-pauli.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000H.svg",
+      "inputSha256": "0c7cf4c484d5f0f5dd742836f32619fc0dc456069e1b5bc5216e5dcd992644ec",
+      "sha256": "e1be76873c413a29d43a2d3921330055217b43cbea92876a083034351ea56a31",
+      "bytes": 3468
+    },
+    "vendor/football/germany/de-hannover-96.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000001.svg",
+      "inputSha256": "5ddc34aaac21b6abf7ed48891757c3e629ed86ca98223dd82957db0cf9f08d5a",
+      "sha256": "3290eecd4279eb18b3d88d7c748035f2b6f74d9a80a9ccad06411ba6b207aa81",
+      "bytes": 2482
+    },
+    "vendor/football/germany/de-sv-darmstadt-98.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000016.svg",
+      "inputSha256": "fe3ed60da2e4247ae0fe343eb0db72f10554f1dde8605d48cbdf210079ac3b19",
+      "sha256": "a3bac0c723c67687544c3798fb1d7a39ac8f30ba7892a844b9d191f7a434a21a",
+      "bytes": 3936
+    },
+    "vendor/football/germany/de-1-fc-kaiserslautern.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000I.svg",
+      "inputSha256": "6c72308efd48473ee421f780b9f55c68c9740d136adb66a68664bb06a0e55fe0",
+      "sha256": "b549c1bd80f4423caf3e5affa73bc93dcb6caca541d0fd20493a0e7fa2977898",
+      "bytes": 1694
+    },
+    "vendor/football/germany/de-hertha-bsc.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000Z.svg",
+      "inputSha256": "d0188f0e920a2c412fcbf6e597dd22f35a66f77500a9b8cac1957ae3b62bd010",
+      "sha256": "9488b7b81bda3cc79dedbbaaf22285848dfe7167c21b99b7120f9990af7e6433",
+      "bytes": 2728
+    },
+    "vendor/football/germany/de-1-fc-nurnberg.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000005.svg",
+      "inputSha256": "d6b4ae336616f2eb7b732c9a83676fc0254584ec17c77791d132697085a1156f",
+      "sha256": "77997e0242ebafca247b4dfe05dce367ef9ac53fff94d234d08339c491d47dd4",
+      "bytes": 2330
+    },
+    "vendor/football/germany/de-vfl-bochum-1848.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000S.svg",
+      "inputSha256": "8cccba7d4b7c5b3eac5f4b1d80c82839bbbd9dfecc25c19db76560e668788d84",
+      "sha256": "9099dbd4d02a5cd1c9a4518713277bfeb196e73f7e597cdf7482b852fd09cb1f",
+      "bytes": 2612
+    },
+    "vendor/football/germany/de-karlsruher-sc.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000T.svg",
+      "inputSha256": "9a9f7c24e98b62efb10b8861616bf39d63bae2954d8cf0644781248d8a147d84",
+      "sha256": "76c5f70be8415b89de9657f1bbab8566ab3cb3201b047cac4b63f12d7a94acd9",
+      "bytes": 2248
+    },
+    "vendor/football/germany/de-sg-dynamo-dresden.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000N.svg",
+      "inputSha256": "7fe7ade04efae1987156b512606828f99ea23828e943a8a49acaf095affd1984",
+      "sha256": "b585262f44a7ddbbe7c18ba40c61a1be19d2efae507d283abf48e11bb204fc3a",
+      "bytes": 3634
+    },
+    "vendor/football/germany/de-holstein-kiel.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5P.svg",
+      "inputSha256": "ab6eab96f86b4cfbdd486f4a3ffe6c3c0852539729a43584c551a478f32aa83c",
+      "sha256": "c9bf778149139e7620f06be3df88daa8c65f2b2c0254ec7f3bd7933a07ebd3ac",
+      "bytes": 4346
+    },
+    "vendor/football/germany/de-dsc-arminia-bielefeld.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000015.svg",
+      "inputSha256": "55615ebb686e9f74e922a7e63928bf4b84da4542ea5beb1a6804395611349aca",
+      "sha256": "a3d7d96ef22800e240baa463e9acc3a1bb0081572298795b3a4e2b33fe44f0ab",
+      "bytes": 3860
+    },
+    "vendor/football/germany/de-1-fc-magdeburg.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5D.svg",
+      "inputSha256": "d09b8e81b6ab0eedcd5c721625e82bf94d7330201298433df9b8f15cf5d254e6",
+      "sha256": "79c51ca6b4df85b70afc72bb81dad9ee07d824a80df7737e11f55f3cc29574ac",
+      "bytes": 2236
+    },
+    "vendor/football/germany/de-eintracht-braunschweig.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000X.svg",
+      "inputSha256": "2405d9e113313e79aa30befe93f8c41a2ea1241621fce9eb8dd2aa7b3b396ac0",
+      "sha256": "6113bbbd033e5829b8ae2c8b2e4b69b324e1480aa249cb778b87a6455fb32f40",
+      "bytes": 6212
+    },
+    "vendor/football/germany/de-spvgg-greuther-furth.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000W.svg",
+      "inputSha256": "2d07be0477339bc48983a5198194d9e545ed4e48ad96ce1c4ed949e402b2892e",
+      "sha256": "204f7eec98294435c27eca81a71b0a488a3c4a556d8c48a1bfdc4d479ea351e2",
+      "bytes": 2838
+    },
+    "vendor/football/germany/de-fc-energie-cottbus.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000O.svg",
+      "inputSha256": "2c73cb99e29e598f416bcb643cbd284d0577db0fb26117b7039fdf25a7f57f9d",
+      "sha256": "bb7dd26af9c4fc9eedf56ac22c0d21fe48e3b59b0cc9447d19e537e438abb3f7",
+      "bytes": 3530
+    },
+    "vendor/football/germany/de-vfl-osnabruck.webp": {
+      "source": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000014.svg",
+      "inputSha256": "15d934270087b2f23db1d17a31125a7d3d1d581c545d16f2f9c48e7d9abf8095",
+      "sha256": "fbda7bca500b5bc19eeeae897982f23d427880091b7e36f89470b215bb4eda6a",
+      "bytes": 2394
+    },
+    "vendor/football/germany/de-1-fc-saarbrucken.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/222/original_saarbruecken.jpg?1493059538",
+      "inputSha256": "2b4b0a3d0ba693e667a9c3374869ad026cca3462ece4d5f3c57943e7eb1295d6",
+      "sha256": "58295d3fcc8dd1dd22e5fdc6a68644f9c1ef923eeed9cbc26a3b3a005e51bbb3",
+      "bytes": 26452
+    },
+    "vendor/football/germany/de-alemannia-aachen.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/106/original_aachen.jpg?1493059500",
+      "inputSha256": "ebee65ac18089ea40d5cfbdca9fee256f0ccec66e9f16524188e6b55d8bfc59f",
+      "sha256": "671130d1a298e2cc22eeafcc40d13c58bd9182ea32697a8eea5a76a6d2297fba",
+      "bytes": 17554
+    },
+    "vendor/football/germany/de-fc-ingolstadt.webp": {
+      "source": "https://assets.dfb.de/uploads/000/200/946/original_FC_Ingolstadt_Logo.jpg?1560333603",
+      "inputSha256": "81edc2a1d60fe7451d4d98dc3a1d09d347024480ef66a2fb720de94ca7c6e4da",
+      "sha256": "cb5ec088564c543642569cb0d927988e93821d3063c1f21105905df287474cd4",
+      "bytes": 21514
+    },
+    "vendor/football/germany/de-fc-viktoria-koln.webp": {
+      "source": "https://assets.dfb.de/uploads/000/201/050/original_Viktoria_Koeln.jpg?1560415707",
+      "inputSha256": "9a67b84c61c0410abc80d905a21bd03604597d9e049da3355c816cfe146f4f24",
+      "sha256": "b0e3e8a5ac04ad1d79e387ac5b3bea449210b64053c20bdcfbbad93129a0fb85",
+      "bytes": 18304
+    },
+    "vendor/football/germany/de-fc-wurzburger-kickers.webp": {
+      "source": "https://assets.dfb.de/uploads/000/229/379/original_54966-logo_wuerzburger_kickers_ro.jpg?1602679392",
+      "inputSha256": "bf2321c03570ac77b0d9651097f25f84eaa50e2f55c51f2562b10a895f36190c",
+      "sha256": "ee833c6106371c1ee8c1c748987d12f1b9ac3720a68ccaedb4d65afdd9f9b189",
+      "bytes": 29032
+    },
+    "vendor/football/germany/de-fortuna-dusseldorf.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/147/original_Fortuna_Duesseldorf.jpg?1493059512",
+      "inputSha256": "3e4732b2d8a6f3a5313e27bf3b26232ae688d02595ac4e0cab4dc6fae6738c8f",
+      "sha256": "cc9a43c317590dad95203e7b313d7d084c5a422cf1a7dd1b6ef0f16ffbe17117",
+      "bytes": 20640
+    },
+    "vendor/football/germany/de-fortuna-koln.webp": {
+      "source": "https://assets.dfb.de/uploads/000/321/765/original_Fortuna_Koeln.jpg?1750937579",
+      "inputSha256": "4a7aec6a61612f290e6c08864a64c6cb91b8338090736c256c0317b258dbb6eb",
+      "sha256": "34a063707eb937f6876868888906272e6a90cb13922b74d894ab9299f5cc038c",
+      "bytes": 30282
+    },
+    "vendor/football/germany/de-hansa-rostock.webp": {
+      "source": "https://assets.dfb.de/uploads/000/321/597/original_FC_Hansa_Rostock_500x500.jpg?1750666400",
+      "inputSha256": "7e6106b9851ed38a7d69254ccdf6dd79cc51e5e47debbed2dc15dc82bc0c2e7f",
+      "sha256": "2c5022419c43efedb9eff6d02b875638030da120a8deda31884dbd8e5520c6c1",
+      "bytes": 32766
+    },
+    "vendor/football/germany/de-jahn-regensburg.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/163/original_Jahn_Regensburg.jpg?1493059518",
+      "inputSha256": "257a73f1b943b6b8dd423574d328a5ff18516a399c3e3b2a2e0a04ef81939dc2",
+      "sha256": "79eb67945a891215672e687897b67aa2fd86e9c69bb615bd1c952335d8a3476f",
+      "bytes": 7168
+    },
+    "vendor/football/germany/de-msv-duisburg.webp": {
+      "source": "https://assets.dfb.de/uploads/000/300/936/original_MSV_Duisburg_500x500_2024.jpg?1712667217",
+      "inputSha256": "f504e6fe9e62a625ea7de666856e9bd4a6e9ead82f58f9e73391056166aee27f",
+      "sha256": "ad345a69eb559bbbaecab9ffab554cc067be644f42dff9285c84d3c94c5909cd",
+      "bytes": 17316
+    },
+    "vendor/football/germany/de-preussen-munster.webp": {
+      "source": "https://assets.dfb.de/uploads/000/323/551/original_Preussen_Muenster.jpg?1756903050",
+      "inputSha256": "e1bbbc1dbb0b51db001a78d2777600992a52b745fece2d7b24e8a97396a431bc",
+      "sha256": "ea7982a26dab1b9572d5aac1771fe87c3efb59a3f8912d7fe292a47b514f1ef6",
+      "bytes": 12530
+    },
+    "vendor/football/germany/de-rot-weiss-essen.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/110/original_Rot-Weiss-Essen.jpg?1493059502",
+      "inputSha256": "a34757a336d357a35144bba7e488c6b1b23356ff9543c599ff48d2a9ed7de60b",
+      "sha256": "55de6d78ee71026a7972059d898b3006f03ed7edd4fdedd3be761d39b7f5d1dc",
+      "bytes": 18874
+    },
+    "vendor/football/germany/de-sc-verl.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/130/original_verl.jpg?1493059507",
+      "inputSha256": "3cb782ee3b3fa598a91f58cee534d810e414defd3ca1c3c40356e1af3fa5f71b",
+      "sha256": "ce440d0b28aae7d966717fbea23ddef5b646039db7f3a55e03d0d92e98390c3d",
+      "bytes": 7944
+    },
+    "vendor/football/germany/de-sg-sonnenhof-grossaspach.webp": {
+      "source": "https://assets.dfb.de/uploads/000/201/170/original_SG_Sonnenhof_Grossaspach.jpg?1560608045",
+      "inputSha256": "8ac537b2f9d263c51069c5195389230d770a0c37311343b6d8411d092d4d10cf",
+      "sha256": "4d4d5da13ef4da25a11a5a5fd867e0c3b096dd001bfc5e894ddc4276a21fd505",
+      "bytes": 20158
+    },
+    "vendor/football/germany/de-sv-meppen.webp": {
+      "source": "https://assets.dfb.de/uploads/000/335/753/original_SV_Meppen_2026.jpg?1783189254",
+      "inputSha256": "083a44dfbbfef59c5e0662004625fa170e0de8d61046089f3fca25dc81cae116",
+      "sha256": "11b250323d6fcf1eb256ce049c1a39c9c9ee36a0bba497fd1c7835caaf0d4abd",
+      "bytes": 12754
+    },
+    "vendor/football/germany/de-sv-waldhof-mannheim.webp": {
+      "source": "https://assets.dfb.de/uploads/000/226/162/original_Waldhof_Mannheim.jpg?1598610609",
+      "inputSha256": "745c695bfb0de1fe404b71ea8d54718f016370a1d84f8d500167879e3cf413d6",
+      "sha256": "eddffc0122ea9ca5575481141f5952bcefbf04f5be20ed798eca279bb9976a4e",
+      "bytes": 23254
+    },
+    "vendor/football/germany/de-sv-wehen-wiesbaden.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/173/original_Wehen_Wiesbaden.jpg?1493059521",
+      "inputSha256": "d73fb6d47ff79db45ea63c53396b364605c90cfb2603f7ea076b924636a0f859",
+      "sha256": "27f68448bac6267666f49c9fa673b9f83bc92bb03d46b69e7178108115294c27",
+      "bytes": 28150
+    },
+    "vendor/football/germany/de-tsg-hoffenheim-ii.webp": {
+      "source": "https://assets.dfb.de/uploads/000/113/632/original_1899_hoffenheim.jpg?1493132487",
+      "inputSha256": "684159c8495bff7d05e62966176822d8424736ab11a3c4619feb636a3d4dd591",
+      "sha256": "d99098d199163698cba50a44ebd34f3f42e8f4fcb4a1f418d53c79940db6a48d",
+      "bytes": 20204
+    },
+    "vendor/football/germany/de-tsv-havelse.webp": {
+      "source": "https://assets.dfb.de/uploads/000/018/183/original_TSV_Havelse.jpg?1493059525",
+      "inputSha256": "e761a05b85709b4ae9f51b728a1ee028c2cdb9424baad964bdb67c6731aee1ad",
+      "sha256": "cfe39af086ebca4d39a47498f4ee84e5c85b796322d6adb2ca9961abd5927426",
+      "bytes": 21684
+    },
+    "vendor/football/germany/de-vfb-stuttgart-ii.webp": {
+      "source": "https://assets.dfb.de/uploads/000/027/692/original_vfb.jpg?1493068594",
+      "inputSha256": "9c9ade12aafcc30377499860248525ae1958034f392fa763dab3f1cf9c9e88c5",
+      "sha256": "560280c8b888df7cdacdd759d8c6d6234c2a86cc16d44c43e5578178e2aac222",
+      "bytes": 25754
+    }
+  },
+  "crestCredit": "Club crests remain the marks of their respective owners; retained source URLs identify the original artwork."
+}

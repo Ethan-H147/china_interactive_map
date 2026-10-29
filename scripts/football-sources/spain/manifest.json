@@ -1,0 +1,1229 @@
+{
+  "retrieved": "2026-10-29",
+  "season": "2026–27",
+  "credit": "LaLiga and RFEF official roster snapshots; Wikipedia/Wikidata venue references and OpenStreetMap contributors; crests remain the property of their respective clubs.",
+  "files": {
+    "snapshots/laliga.html.gz": {
+      "url": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "sha256": "709d4293791d554599603d8c380b71186b2403196709ed47d9cef59c8e4cc802",
+      "bytes": 294198,
+      "encoding": "gzip"
+    },
+    "snapshots/segunda.html.gz": {
+      "url": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "sha256": "cbb356ab33df8b2784f3a5be3f8cbebe0607841fed3c4e41a8066614325889bc",
+      "bytes": 304145,
+      "encoding": "gzip"
+    },
+    "snapshots/primera.html.gz": {
+      "url": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "sha256": "49ce048954301f8b75e9a5cb6a72ca43e7ae8113dd69f018bb28667d09ff8eea",
+      "bytes": 143157,
+      "encoding": "gzip"
+    },
+    "snapshots/primera-wiki.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primera_Federaci%C3%B3n",
+      "sha256": "649e28afff237a26d72e41bcea6fad44f0e30e62031afa7d12d915b52828a7d8",
+      "bytes": 754807,
+      "encoding": "gzip"
+    },
+    "snapshots/stadiums-wd.json.gz": {
+      "url": "https://query.wikidata.org/",
+      "sha256": "ce0de56f98369e465f20ee0d0216ec732e3c2d9e6eadeac0dfb177e19abea39f",
+      "bytes": 974913,
+      "encoding": "gzip"
+    },
+    "snapshots/clubs-wd.json.gz": {
+      "url": "https://query.wikidata.org/",
+      "sha256": "8508eb19e70cd181fd923227c1842044908bc52705594d470815946d48e9dd41",
+      "bytes": 2632119,
+      "encoding": "gzip"
+    },
+    "snapshots/third-entities.json.gz": {
+      "url": "https://query.wikidata.org/",
+      "sha256": "f65fb46c2c342b0221d69f688a93df80f13023e1367ef3284909d28a321dd521",
+      "bytes": 31382,
+      "encoding": "gzip"
+    },
+    "snapshots/third-venues.json.gz": {
+      "url": "https://query.wikidata.org/",
+      "sha256": "0d3604bf752d22bb51352bc38c8973a50a27c58f4525771d88ce5e50b3cb3366",
+      "bytes": 16105,
+      "encoding": "gzip"
+    },
+    "snapshots/third-pages.json.gz": {
+      "url": "https://en.wikipedia.org/w/api.php",
+      "sha256": "91f522fd996386631ed1a1bc32bb7d75ea4bd52b6ed51ba578d7c7434898c920",
+      "bytes": 36916,
+      "encoding": "gzip"
+    },
+    "snapshots/third-stadium-pages.json.gz": {
+      "url": "https://en.wikipedia.org/w/api.php",
+      "sha256": "bc0bd4c7a6d14fb399530f134f7d9ad1240185470dcc2e5071a28f50b0700a36",
+      "bytes": 15931,
+      "encoding": "gzip"
+    },
+    "snapshots/extra-entities.json.gz": {
+      "url": "https://www.wikidata.org/w/api.php",
+      "sha256": "74bcf9980b9d4c5c0d66a0aedbc7fe91d9a27f7fe17e027f72baed66d34420d4",
+      "bytes": 223940,
+      "encoding": "gzip"
+    },
+    "snapshots/ambiguous-stadium-entities.json.gz": {
+      "url": "https://www.wikidata.org/w/api.php",
+      "sha256": "0eff2a2970ce1df576e7b8feae7acfb67afc2cf73ab079012cdd8773277ef7cb",
+      "bytes": 223297,
+      "encoding": "gzip"
+    },
+    "snapshots/overpass-extra.json.gz": {
+      "url": "https://overpass-api.de/api/interpreter",
+      "sha256": "c7f7512f30e379150c7220da06d7252d0d6ccd2457e0d00d08d9e4b36d4d29b5",
+      "bytes": 12269,
+      "encoding": "gzip"
+    },
+    "snapshots/overpass-pitches.json.gz": {
+      "url": "https://overpass-api.de/api/interpreter",
+      "sha256": "95736332c0f13a1fcb30e946a27dec761a5b17004b40a776f38efdd4e49e5933",
+      "bytes": 5943,
+      "encoding": "gzip"
+    },
+    "snapshots/mauli-official.html.gz": {
+      "url": "https://www.deportes.antequera.es/instalaciones/complejo-el-mauli.html",
+      "sha256": "f506f91f6e336ed20fc246b43404067bc64f2c8e63c37b09287f4d5ee88227b3",
+      "bytes": 40680,
+      "encoding": "gzip"
+    },
+    "snapshots/europa-official.html.gz": {
+      "url": "https://www.ceeuropa.cat/club/installacions/",
+      "sha256": "2ee413a16f7946d846cb452175d58aaefefcdea037a711fef42c512c5b289362",
+      "bytes": 210446,
+      "encoding": "gzip"
+    },
+    "snapshots/torremolinos-official.html.gz": {
+      "url": "https://www.jtorremolinoscf.com/transparencia",
+      "sha256": "99852048e206114bb9eed4341f178b2603101c8aa4cecca17a1c0ff901765346",
+      "bytes": 466257,
+      "encoding": "gzip"
+    },
+    "original-crests/es-c-a-osasuna.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/osasuna.png",
+      "sha256": "7649390163447b02aa1f617f254c1aef9472e6336f617f5a2c4ec5e0f8128ec2",
+      "bytes": 38413,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-c-a-osasuna.png": {
+      "source": "original-crests/es-c-a-osasuna.gz",
+      "sha256": "4e38abe3645ef0759eef2cbab58cbe6205fbc80c7b3df7e8cc40aa5f41a8fcf5",
+      "bytes": 32681,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-athletic-club.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/athletic.png",
+      "sha256": "677d7944f97a78198f2b24b26f5a8967abb818c7878b7d0e98ef31610890894f",
+      "bytes": 42292,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-athletic-club.png": {
+      "source": "original-crests/es-athletic-club.gz",
+      "sha256": "ef9d597d7df6104f18c0335d3902a1e02c454c5c10a9474b60de6daa5a84630a",
+      "bytes": 30593,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-atletico-de-madrid.gz": {
+      "url": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png",
+      "sha256": "936f124e8a1ddaf9703a99798e33eeeb02b13401c5889da3e942225f789822a4",
+      "bytes": 52383,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-atletico-de-madrid.png": {
+      "source": "original-crests/es-atletico-de-madrid.gz",
+      "sha256": "fda1fd59439982e0fef3fab7eabcbbb2461f1c3ea66b38a7c0d4d2d64d2ec2b2",
+      "bytes": 40588,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-rc-celta.gz": {
+      "url": "https://assets.laliga.com/assets/2025/07/11/small/0a796827f9e758d7d750db805adde7c5.png",
+      "sha256": "8977b4b07cfbe0ad2e814f2aaee8e34a116831d5ff7f7b74d0820c28bc65d0d8",
+      "bytes": 34074,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-rc-celta.png": {
+      "source": "original-crests/es-rc-celta.gz",
+      "sha256": "072597723c9cc6e2def2c6296d15bdc543266e1aa187a6572e436761603d4f3b",
+      "bytes": 32230,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-d-alaves.gz": {
+      "url": "https://assets.laliga.com/assets/2020/09/01/small/27002754a98bf535807fe49a24cc63ea.png",
+      "sha256": "7ef5250f69eb5cf55d6de81151653dd44de15677de37cfd2995f8236200786f1",
+      "bytes": 82463,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-d-alaves.png": {
+      "source": "original-crests/es-d-alaves.gz",
+      "sha256": "75e9ba86141203214b486c7ccfc6e128e442247793d8e2c784356aa906300ba6",
+      "bytes": 59457,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-elche-c-f.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/elche.png",
+      "sha256": "f50a4eb2c6a70d59216f6538f34a4ed3e1ee44a0b59e244c1ff25b09bce3c52b",
+      "bytes": 38572,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-elche-c-f.png": {
+      "source": "original-crests/es-elche-c-f.gz",
+      "sha256": "3c8658d2049c13cffc376ccb1cef4e2e1be1d1046b13834833a76afc5c53165e",
+      "bytes": 32828,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-fc-barcelona.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/barcelona.png",
+      "sha256": "d6570cf8f784798a501813d1245306b1cb4c45b806dc1df641fad359f76370cf",
+      "bytes": 37900,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-fc-barcelona.png": {
+      "source": "original-crests/es-fc-barcelona.gz",
+      "sha256": "50833a6f2f3b06dcd765fad5dee737e60d2e775a8e53372a3b5823d3419680c4",
+      "bytes": 33272,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-getafe-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2023/05/12/small/dc59645c96bc2c9010341c16dd6d4bfa.png",
+      "sha256": "143d4bb42eb1942c9754f55570a1e930c4a8af4b55312b2ac0592476cbdae16e",
+      "bytes": 70185,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-getafe-cf.png": {
+      "source": "original-crests/es-getafe-cf.gz",
+      "sha256": "a763960146e67758f153caa65e8a4eed5df94a5e4cd1de475a08979ec918f910",
+      "bytes": 68731,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-levante-ud.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/levante.png",
+      "sha256": "6b718fc9f92d8cab82718bed4c185b99d29f0488f344eeec9482a23e0960fbe8",
+      "bytes": 49355,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-levante-ud.png": {
+      "source": "original-crests/es-levante-ud.gz",
+      "sha256": "97ca09ead3f7d0f0f12490897c7df9a2ab5d04930bc656b5314aefcb01f2096c",
+      "bytes": 39220,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-malaga-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/malaga.png",
+      "sha256": "0e478fba93c23fd9b54c9415954d09296b036353bec5fd1045842aadc4b4a200",
+      "bytes": 45540,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-malaga-cf.png": {
+      "source": "original-crests/es-malaga-cf.gz",
+      "sha256": "ded3cb41ba208141a74395347a73ee3919069bb3f9219cbce25f8ee0eb454b52",
+      "bytes": 38201,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-rc-deportivo.gz": {
+      "url": "https://assets.laliga.com/assets/2026/06/24/small/6b88661529a2c06840c8bf6bddd90970.png",
+      "sha256": "5c445fff6a4f18a16f73a5b8a11d0c228a94d54fb549927a816616c7d9f3afd0",
+      "bytes": 69621,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-rc-deportivo.png": {
+      "source": "original-crests/es-rc-deportivo.gz",
+      "sha256": "cc25b452e822673b75161f1b90307d6a4e3169fdd2f2e523dc01de223f1496e9",
+      "bytes": 56150,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-r-racing-club.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/racing.png",
+      "sha256": "2a8a68ce7d1f3a2799e729d6bb93e55e8b30be8c3afec22d9aacb4fdab1ff839",
+      "bytes": 56032,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-r-racing-club.png": {
+      "source": "original-crests/es-r-racing-club.gz",
+      "sha256": "45cc8e9808e12d382b06d0208d71b229270abf4607c995c836b9664f8b18db76",
+      "bytes": 41038,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-betis.gz": {
+      "url": "https://assets.laliga.com/assets/2022/09/15/small/e4a09419d3bd115b8f3dab73d480e146.png",
+      "sha256": "8378521a992a976818b45a9a682a25bd965776642cccf93606563cac00b2f4f6",
+      "bytes": 49193,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-betis.png": {
+      "source": "original-crests/es-real-betis.gz",
+      "sha256": "854081050558ea6eeb6de633e4590f5c0dad13abeef024a46cf035129910eabd",
+      "bytes": 48355,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-madrid.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png",
+      "sha256": "eb71e338ba90bab3ba65a4cc2b730010759b41aa7f3b47f751a756633b0c3031",
+      "bytes": 59616,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-madrid.png": {
+      "source": "original-crests/es-real-madrid.gz",
+      "sha256": "74c551cd4d4009e39cfffb909343d7fd41e101510f7ce792d9692bb0810c8740",
+      "bytes": 45924,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-sociedad.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      "sha256": "fdcd9962211e08ae44370bc74a04a3b0bd74d485f8cea4a6b381884af751f863",
+      "bytes": 62344,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-sociedad.png": {
+      "source": "original-crests/es-real-sociedad.gz",
+      "sha256": "fe5765a590c587c810e705b2e220a494c5bd038aef257b5bd5978c1da99f24ca",
+      "bytes": 47038,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-sevilla-fc.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/sevilla.png",
+      "sha256": "6e97fff5769bc5649eb28d713c7d6fbfedda08231ae26e64e2a22759c1e3e204",
+      "bytes": 42832,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-sevilla-fc.png": {
+      "source": "original-crests/es-sevilla-fc.gz",
+      "sha256": "01f9c10f3aa9912178f9206ec1c4b458581f1b764f4fbcab3d0d6402f3bd96a4",
+      "bytes": 35918,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-valencia-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/valencia.png",
+      "sha256": "2f326d6b951b36eef16b2d120b9242c9692d80a12c63f5050d87f7cafeaa9883",
+      "bytes": 42379,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-valencia-cf.png": {
+      "source": "original-crests/es-valencia-cf.gz",
+      "sha256": "b8e01c75047acbfad5b787ce64bfd7c620de97dfaa7f7ac6619ed0d5add7d87d",
+      "bytes": 32772,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-rcd-espanyol.gz": {
+      "url": "https://assets.laliga.com/assets/2025/07/02/small/e9177f6edd72c6360602adbca85e442f.png",
+      "sha256": "2f3ebddd6b02dc768fd72df1d47c9eda127e48a7559e115bb8bd34732272bc4e",
+      "bytes": 44212,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-rcd-espanyol.png": {
+      "source": "original-crests/es-rcd-espanyol.gz",
+      "sha256": "0c5c92a45417e919b0b82caae168752341ae8504f0e66c81dc32a970812ec3e6",
+      "bytes": 45121,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ad-ceuta-fc.gz": {
+      "url": "https://assets.laliga.com/assets/2019/11/18/small/dff48b7d706547a0c406464cb1ee9218.png",
+      "sha256": "cc0418aeb72efd0b1c470b29071e1874710554ed00059f923f8d85c1ce1c4036",
+      "bytes": 66968,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ad-ceuta-fc.png": {
+      "source": "original-crests/es-ad-ceuta-fc.gz",
+      "sha256": "9c3f2d452febbe62927d15e7ef5070af013adb38150032ece05d6960c0750f59",
+      "bytes": 54611,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-albacete-bp.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/albacete.png",
+      "sha256": "b8bc6475133d7d62f6dde14527386ad3de603cc979dfdd7920c0921fe31d6e02",
+      "bytes": 30614,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-albacete-bp.png": {
+      "source": "original-crests/es-albacete-bp.gz",
+      "sha256": "9049578965a3d11a63b55bb24d03ac8d48386a0d8e61f6e042f3174fef25fb24",
+      "bytes": 24522,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-burgos.gz": {
+      "url": "https://assets.laliga.com/assets/2021/06/24/small/8de24d38ab1472bbae1620d36582d7bd.png",
+      "sha256": "f9d091a666ca9b0a17077be447d60d35e784b77e63641de8d96640aaa2a30daf",
+      "bytes": 78929,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-burgos.png": {
+      "source": "original-crests/es-burgos.gz",
+      "sha256": "6aed3503e126675b57a74436961dcd79ab31b5b0828a93feef13aa727df5d107",
+      "bytes": 65498,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-rayo-vallecano.gz": {
+      "url": "https://assets.laliga.com/assets/2023/04/27/small/57d9950a8745ead226c04d37235c0786.png",
+      "sha256": "b825b9cfe58f69c12b19241513887f30a5ce58a04bd44d3670833d3de4e94a8f",
+      "bytes": 50796,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-rayo-vallecano.png": {
+      "source": "original-crests/es-rayo-vallecano.gz",
+      "sha256": "1b33da8a186ef81a8d55db3886e98519d321e9e25923fe94386b70420124609e",
+      "bytes": 47850,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-villarreal-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/villarreal.png",
+      "sha256": "d01050b4e3ea392f5552804c31e961929e05a0a9c2903680e55b96fbb9dc6847",
+      "bytes": 53163,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-villarreal-cf.png": {
+      "source": "original-crests/es-villarreal-cf.gz",
+      "sha256": "2cd36b619c5974af33c91b483217710ac92f2d169d1c7902df6717d73bac541c",
+      "bytes": 43080,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-eldense.gz": {
+      "url": "https://assets.laliga.com/assets/2023/09/28/small/58b0ce20fa615378dfe4d03ab2ce063e.png",
+      "sha256": "c4b2ec29e9e05c4014d0654ab41e4d5de2e2ee687506ec263302eecbfc506866",
+      "bytes": 57203,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-eldense.png": {
+      "source": "original-crests/es-eldense.gz",
+      "sha256": "2a2bd2d5cd96d998b81863b26de271dd6f62a7cc418eaa0ff26ca4233c3de5c6",
+      "bytes": 55409,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cadiz-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/cadiz.png",
+      "sha256": "021ac9790868eb60e21baf74a894514566f42e6d4769bdb2c424c055117569b8",
+      "bytes": 44975,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cadiz-cf.png": {
+      "source": "original-crests/es-cadiz-cf.gz",
+      "sha256": "c2b2c42af413fdebc3dcde90449d67f6934784a5906b93bf763285fd25f2aca0",
+      "bytes": 35475,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-tenerife.gz": {
+      "url": "https://assets.laliga.com/assets/2026/07/11/small/58984797cc1fe6fdb08c0338719cd0e5.png",
+      "sha256": "ad48b2c3219c4015658e60538051904198cfc74c727d941031763a1186614c97",
+      "bytes": 48118,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-tenerife.png": {
+      "source": "original-crests/es-cd-tenerife.gz",
+      "sha256": "108237a1b447b766a03bae7d1a7068e238fd61848f013ca84fe808bb92d6981c",
+      "bytes": 48647,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-leganes.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/leganes.png",
+      "sha256": "7f9545e5f6a748c01ea4581a93d6af7015103134b5c6f98e137a8ebb63ccbf32",
+      "bytes": 52953,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-leganes.png": {
+      "source": "original-crests/es-cd-leganes.gz",
+      "sha256": "ce6b826143557f243ae31d135009356f208368dd27af21ebc3315ea7a3534716",
+      "bytes": 47750,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-rc-celta-b.gz": {
+      "url": "https://assets.laliga.com/assets/2026/06/25/small/5c8f2e006573714fe5c8a7ef2a37122f.png",
+      "sha256": "8977b4b07cfbe0ad2e814f2aaee8e34a116831d5ff7f7b74d0820c28bc65d0d8",
+      "bytes": 34074,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-rc-celta-b.png": {
+      "source": "original-crests/es-rc-celta-b.gz",
+      "sha256": "072597723c9cc6e2def2c6296d15bdc543266e1aa187a6572e436761603d4f3b",
+      "bytes": 32230,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-castellon.gz": {
+      "url": "https://assets.laliga.com/assets/2019/11/18/small/0cb9fb4e471b8fe16fe9f6f193188505.png",
+      "sha256": "04f72afb8cff36304a828e0781d98ab97d417fb0bb50f1007860f05360bfa8af",
+      "bytes": 53543,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-castellon.png": {
+      "source": "original-crests/es-cd-castellon.gz",
+      "sha256": "c221f61ca694ce2b0c7266b52b7097e9fa9acead0573b7b003272ac10ded5907",
+      "bytes": 45462,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-fc-andorra.gz": {
+      "url": "https://assets.laliga.com/assets/2022/06/17/small/33215c0212bcad95cc5d67b2b5a33fb8.png",
+      "sha256": "5c8324863989dd88b2f1b01b22e73b8fc2f92c71326ca4f42d2c9b32042a6a34",
+      "bytes": 56723,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-fc-andorra.png": {
+      "source": "original-crests/es-fc-andorra.gz",
+      "sha256": "dc76152b6e39cb9d4cb58e1b9fa568dc8959c16a98d71799e4faa2ba5795a701",
+      "bytes": 49967,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-girona-fc.gz": {
+      "url": "https://assets.laliga.com/assets/2022/06/22/small/8f43addbb29e4a72f5e90b6edfe4728f.png",
+      "sha256": "a71aa463f23c3f4339a499af50d8cf7a50036674043f98b7ac93d53bfb6d1ad8",
+      "bytes": 68551,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-girona-fc.png": {
+      "source": "original-crests/es-girona-fc.gz",
+      "sha256": "630c5403aae2e160c89d22e073ad52bf5adca778be5c94a058d780ffb0f96107",
+      "bytes": 56630,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-granada-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2023/01/17/small/f5db12f3a29fdfd14a0d50337016dc95.png",
+      "sha256": "3d085e3c39d27158005e0a8e2c0b2a991cf90409ffa2beabfe301a1e8037dda7",
+      "bytes": 46093,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-granada-cf.png": {
+      "source": "original-crests/es-granada-cf.gz",
+      "sha256": "fddd3a8e855561ff3f34d6e9c465feea87cd7ce59cfb81d62daef6eafc897e21",
+      "bytes": 40867,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-r-sociedad-b.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      "sha256": "fdcd9962211e08ae44370bc74a04a3b0bd74d485f8cea4a6b381884af751f863",
+      "bytes": 62344,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-r-sociedad-b.png": {
+      "source": "original-crests/es-r-sociedad-b.gz",
+      "sha256": "fe5765a590c587c810e705b2e220a494c5bd038aef257b5bd5978c1da99f24ca",
+      "bytes": 47038,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-rcd-mallorca.gz": {
+      "url": "https://assets.laliga.com/assets/2023/03/22/small/013ae97735bc8e519dcf30f6826168ca.png",
+      "sha256": "1529ef73cf59a58d1f7c4e7d38fc802e68b3ff5d74c92e0745b4a89c40a0e34c",
+      "bytes": 62946,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-rcd-mallorca.png": {
+      "source": "original-crests/es-rcd-mallorca.gz",
+      "sha256": "a99eec769dc28e04cf18246fc3a07b269cb814488f3af834f18b957c30dce01e",
+      "bytes": 57921,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-oviedo.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/oviedo.png",
+      "sha256": "7f4241cab00dc7ff322038bcbc42cff5b891cc55441dda097d43332f0addf862",
+      "bytes": 26736,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-oviedo.png": {
+      "source": "original-crests/es-real-oviedo.gz",
+      "sha256": "9d685bc87303572b2e223324638086d7fdc6a277d7f7fb7d029cf5c645702eff",
+      "bytes": 22442,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ce-sabadell.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/sabadell.png",
+      "sha256": "38ed64251a139e03b2552fb28558ff001b4b2009c5d8836e8ccd83d185640b7e",
+      "bytes": 35344,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ce-sabadell.png": {
+      "source": "original-crests/es-ce-sabadell.gz",
+      "sha256": "2a8b5ed5c0c9fe8cff28fb76df28241d831d9173d28818ae70f4af1deb7fc470",
+      "bytes": 38994,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cordoba-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/cordoba.png",
+      "sha256": "d71a755c7e43dd86c607c3df9861c23f19731f8e77224c7acf1a31dec8ed5e5c",
+      "bytes": 34665,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cordoba-cf.png": {
+      "source": "original-crests/es-cordoba-cf.gz",
+      "sha256": "538f6b0418b5b89bd044c604b7c698743cf0e4d968e606ea867b1d2f1cd44704",
+      "bytes": 31836,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-sd-eibar.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/eibar.png",
+      "sha256": "b3d2eaff9da42a477abd7e1ca020865fa283e1a859d81f169468b184843f8882",
+      "bytes": 33854,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-sd-eibar.png": {
+      "source": "original-crests/es-sd-eibar.gz",
+      "sha256": "8e946784a1c0a764d3456fd16d5b5e7681ba163abaab8473fc10db827b5c6924",
+      "bytes": 25753,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-sporting.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/sporting.png",
+      "sha256": "2b7a9d90eb89fdfc701ba1f0017fc955a40aae6b6c95e5a9df68d91b356b21d4",
+      "bytes": 21945,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-sporting.png": {
+      "source": "original-crests/es-real-sporting.gz",
+      "sha256": "6ff4532cdbd6a5e2e0a891bfce5756bbd3d53e3b4f853c802628f841bc7993d7",
+      "bytes": 20062,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ud-las-palmas.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/las-palmas.png",
+      "sha256": "b894c37c80985467012bf3435c14913659bb2ec93187c3e5efcb52b7ea119c31",
+      "bytes": 51756,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ud-las-palmas.png": {
+      "source": "original-crests/es-ud-las-palmas.gz",
+      "sha256": "2b095ebf34b3232d283f67192343df483888d2be0c6677bf51b9f2a09caacca3",
+      "bytes": 42777,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-arenas-club-de-getxo.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/23/Arenas_Club_de_Getxo_logo.svg",
+      "sha256": "35946395aa52c9e7a92f32636d8ae8fc4aafe5b88fff8f075a96ab57b3cc227c",
+      "bytes": 11900,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-arenas-club-de-getxo.png": {
+      "source": "original-crests/es-arenas-club-de-getxo.gz",
+      "sha256": "d1b1e6444b3515d7ce8a79c8e469afbf882f5f26bcb6274cacb7008d6f79b80a",
+      "bytes": 21537,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-aviles-industrial-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/b2/Real_Avil%C3%A9s_Industrial_CF_logo.svg",
+      "sha256": "a346c07fd03aa8c79549c5fe271fc8c0da506c71cd011855e4b016227fc9113b",
+      "bytes": 30793,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-aviles-industrial-cf.png": {
+      "source": "original-crests/es-real-aviles-industrial-cf.gz",
+      "sha256": "0c5ee5e37005ad5d94200ad1b5033110596f2cea03d0e299a8d6d1907a61c68b",
+      "bytes": 15143,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-barakaldo-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/df/Barakaldo_CF_logo.svg",
+      "sha256": "2bef3efe7c50ca832e92a495ee8f9dc532f6d26923add8cb744b3cfa49066895",
+      "bytes": 67560,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-barakaldo-cf.png": {
+      "source": "original-crests/es-barakaldo-cf.gz",
+      "sha256": "6d45d266247e1a80cb65a50dc3999d8eae0aa35784a8a3e16d24d2c2f772886c",
+      "bytes": 26251,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-r-valladolid-cf.gz": {
+      "url": "https://assets.laliga.com/assets/2024/06/17/small/1467dcd5efb813a742d86f8eb39504a3.png",
+      "sha256": "8bfaff30c7d59f0f731b85bbadd71e36ece1a7a99113992b1ccb2184ad41e192",
+      "bytes": 84705,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-r-valladolid-cf.png": {
+      "source": "original-crests/es-r-valladolid-cf.gz",
+      "sha256": "40f2fedbcf54cae14d981eb6a510a967db9b4907c25c17d8ef833c524c5c9ccb",
+      "bytes": 64372,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ud-almeria.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/almeria.png",
+      "sha256": "9577fe8af9e726c011e5e0b1b3508c855ffbe32ebe90c110bfce42ccfb3fbed4",
+      "bytes": 40565,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ud-almeria.png": {
+      "source": "original-crests/es-ud-almeria.gz",
+      "sha256": "e0da7c8cf24068398984867ba8a6fe98483b245071734cfac9bcb11d667d616f",
+      "bytes": 33428,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-athletic-bilbao-b.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/98/Club_Athletic_Bilbao_logo.svg",
+      "sha256": "245c1de00384c622ef9042bab075c954d91d197a6e3081202db250971a74abef",
+      "bytes": 37375,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-athletic-bilbao-b.png": {
+      "source": "original-crests/es-athletic-bilbao-b.gz",
+      "sha256": "a60be2765fa58a94124bcb058ba51706f28ef3a18cb04616f9d8efdc07712072",
+      "bytes": 9326,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cultural-y-deportiva-leonesa.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/5c/Logo_of_Cultural_y_Deportiva_Leonesa.svg",
+      "sha256": "4870e7d5f14b3b5a0641555965ee8f54d38946d03f0dae6eb2a325010e7bf8a6",
+      "bytes": 34549,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cultural-y-deportiva-leonesa.png": {
+      "source": "original-crests/es-cultural-y-deportiva-leonesa.gz",
+      "sha256": "98716ce37baed3aef7ef45eb86d794072687b4455c765bdffb7fa6522e91990c",
+      "bytes": 8603,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-coria.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/89/CD_Coria_logo.svg",
+      "sha256": "72c9dbf75cc56e07700ab297aa830fa72e802c60ac89e50c715d2f959f44dc17",
+      "bytes": 51095,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-coria.png": {
+      "source": "original-crests/es-cd-coria.gz",
+      "sha256": "0c9351f61c05e666c9d9bd1b78d96779d07240f7c2f8b3f06b603b170b89b77e",
+      "bytes": 37508,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cp-cacereno.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c1/CP_Cacere%C3%B1o_logo.svg",
+      "sha256": "c5227d2a974d139518e80a6486266a082899e60ad628b3931dad94fecf49ff70",
+      "bytes": 42666,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cp-cacereno.png": {
+      "source": "original-crests/es-cp-cacereno.gz",
+      "sha256": "d197509b5e71bf6f39604e3c19a9f5d78301cb468dcdc77d53ac458edb3fabf4",
+      "bytes": 26892,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-deportivo-fabril.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/56/RC_Deportivo_A_Coru%C3%B1a_logo_2026.svg",
+      "sha256": "3e4db67022ad48f566042a2437e9545ff0cd56d917606e7834fe58690c5476a3",
+      "bytes": 68284,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-deportivo-fabril.png": {
+      "source": "original-crests/es-deportivo-fabril.gz",
+      "sha256": "f3b7c631a67d92ab8bb5d001276d2ba804077fa462ffbe197323c52ff5a0dfe4",
+      "bytes": 28965,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-extremadura.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/71/CD_Extremadura_logo.svg",
+      "sha256": "b0e9fa4c6e2db7cebc8dcfb1be1159080b4c99a444db48c3e6134eb00ec88414",
+      "bytes": 14132,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-extremadura.png": {
+      "source": "original-crests/es-cd-extremadura.gz",
+      "sha256": "1021fd8baea9beef0ba3d953935ccf6dd641487d11455c8a1365ea4635ea40d5",
+      "bytes": 25127,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ud-logrones.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/78/UD_Logro%C3%B1%C3%A9s_logo.svg",
+      "sha256": "78ea7ae225ac04172b7592045402451210e492ee2fd82462f7de469b4c0d9a7f",
+      "bytes": 73281,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ud-logrones.png": {
+      "source": "original-crests/es-ud-logrones.gz",
+      "sha256": "fa9a36ef4ee992776f5ab47a092835fd4f2d1c8ca63f1db7feeb68490470e943",
+      "bytes": 27406,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-lugo.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/09/CD_Lugo_logo.svg",
+      "sha256": "ab7a0125134dac0b9a0cbb4a5a9132f9ec182955f57aacb36d03a4eed4b31a6a",
+      "bytes": 15898,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-lugo.png": {
+      "source": "original-crests/es-cd-lugo.gz",
+      "sha256": "2ffb319c0927bbc8f5d6762135442dc08d8bb107ab3a9ba7e85fd51b39acf0b4",
+      "bytes": 13539,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ud-ourense.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/b8/UD_Ourense_logo.svg",
+      "sha256": "098fff44da18e25f72e68524f965d087e74bd95e8f7810ba0724b793c76fed0a",
+      "bytes": 37264,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ud-ourense.png": {
+      "source": "original-crests/es-ud-ourense.gz",
+      "sha256": "571e7f918080dcb9a047efdf9a0f4c8c422ffe4f69f7e03159c56e9f2598c890",
+      "bytes": 31259,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-merida-ad.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/8c/M%C3%A9rida_AD_logo.svg",
+      "sha256": "7ab73e8c0022836d5b8d2652261af7b6f53fb54fe52628d66df18808a7dd201f",
+      "bytes": 40175,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-merida-ad.png": {
+      "source": "original-crests/es-merida-ad.gz",
+      "sha256": "a139ad581588bf020d9603f687a2500c5808859964a05369858879115eb60ce4",
+      "bytes": 10943,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-mirandes.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/b8/CD_Mirand%C3%A9s_logo.svg",
+      "sha256": "a01267bf2e280e52f76b4f9a80fed3cc8338be0a2410039100029995cc9ecc87",
+      "bytes": 41581,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-mirandes.png": {
+      "source": "original-crests/es-cd-mirandes.gz",
+      "sha256": "8e5184d0c3cb47cfa44ac35cf39b1e702ab0238ecda30006d48aa33a0ebe186e",
+      "bytes": 18416,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-sd-ponferradina.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/38/SD_Ponferradina_emblem.svg",
+      "sha256": "ef7a77256214628a392e0cf5eb2bc32b10f1893cffe569aff51626e795966cad",
+      "bytes": 15495,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-sd-ponferradina.png": {
+      "source": "original-crests/es-sd-ponferradina.gz",
+      "sha256": "696741869187142156c739d6b4370c2dfafb6ca4888fc6d541c49e5efaf2ceda",
+      "bytes": 13578,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-racing-de-ferrol.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/1c/Racing_de_Ferrol_logo.svg",
+      "sha256": "ea94a3c275924a79866dbf2452192b296a32357c79d9adc00a3400a0916a0631",
+      "bytes": 23159,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-racing-de-ferrol.png": {
+      "source": "original-crests/es-racing-de-ferrol.gz",
+      "sha256": "903a570dfc327a91f047a6d274641a8e6bbf9870bf52d6031c5d8697524dd4a6",
+      "bytes": 10962,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-unionistas-de-salamanca-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/fa/Unionistas_de_Salamanca_CF_logo.svg",
+      "sha256": "f93047e50ec8a3ea3d88bc0f1871df920f8a1872e83faf15a82e9be98af1db2f",
+      "bytes": 70650,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-unionistas-de-salamanca-cf.png": {
+      "source": "original-crests/es-unionistas-de-salamanca-cf.gz",
+      "sha256": "02d4d17246c5e2cc1a027fafe9dfc50f90fd916bf6a6ac192e540cc8d8719db7",
+      "bytes": 25442,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-zamora-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/44/Zamora_CF_logo.svg",
+      "sha256": "cda971a1f2acad5ba6b48c15859f7a4d66119d96c0c05f738533d88f58cf3ee3",
+      "bytes": 47745,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-zamora-cf.png": {
+      "source": "original-crests/es-zamora-cf.gz",
+      "sha256": "80dc3df7270b132c94c67823c07734fac704683ef2d768caea0d23da11e49703",
+      "bytes": 30620,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ad-alcorcon.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/28/AD_Alcorc%C3%B3n_logo.svg",
+      "sha256": "815614b296789408382a86bc6b9094a0717393607f5bec7c6af2ac82691b335c",
+      "bytes": 4986,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ad-alcorcon.png": {
+      "source": "original-crests/es-ad-alcorcon.gz",
+      "sha256": "1e5d045bdfcf6bce112fd3cf4268f0dcf31e029bcce58f69fee0cfc9962413a4",
+      "bytes": 14916,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-algeciras-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d8/Algeciras_CF_logo.svg",
+      "sha256": "1db308f948c8edae35a36698e1340ce4b582290e5a73bacbf4bcd64bc3d16b3c",
+      "bytes": 17388,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-algeciras-cf.png": {
+      "source": "original-crests/es-algeciras-cf.gz",
+      "sha256": "771e60ee2f9931c0744d2f29df2581fd22329807c2beb0a8c24e44261dc8ebc7",
+      "bytes": 13653,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-aguilas-fc.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/56/%C3%81guilas_FC_logo.svg",
+      "sha256": "53cd37bbf7974a21f7ed73ffbc6575b1f3110f7a82a1ea4df2eb5ddf9d111299",
+      "bytes": 51240,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-aguilas-fc.png": {
+      "source": "original-crests/es-aguilas-fc.gz",
+      "sha256": "95d35aa4b2c410c72e87ac7279eb7ad9647c3a0e8906c322e1e0b46aace99994",
+      "bytes": 36345,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-atletico-madrileno.gz": {
+      "url": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png",
+      "sha256": "936f124e8a1ddaf9703a99798e33eeeb02b13401c5889da3e942225f789822a4",
+      "bytes": 52383,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-atletico-madrileno.png": {
+      "source": "original-crests/es-atletico-madrileno.gz",
+      "sha256": "fda1fd59439982e0fef3fab7eabcbbb2461f1c3ea66b38a7c0d4d2d64d2ec2b2",
+      "bytes": 40588,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-antequera-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/16/Antequera_CF_logo.svg",
+      "sha256": "1c07d2fa9e1c3e4a48e756459de75cea7dee554912e173274723fc20cab4eae6",
+      "bytes": 57546,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-antequera-cf.png": {
+      "source": "original-crests/es-antequera-cf.gz",
+      "sha256": "66f217681b8854619035b905f4280bf7facb13cf94e7ae18950c126e00687194",
+      "bytes": 30872,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-fc-cartagena.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/dc/FC_Cartagena_logo.svg",
+      "sha256": "12554d09398984c4d7525021fbe08b824d7d1af909ccf8c7c476eddebbade6ea",
+      "bytes": 23615,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-fc-cartagena.png": {
+      "source": "original-crests/es-fc-cartagena.gz",
+      "sha256": "707bb2cacec123f7b1da69b2d59fc63210e7f7d403ee875dc2a8593550f9d011",
+      "bytes": 17283,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ce-europa.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Club_Esportiu_Europa.svg",
+      "sha256": "293a21bf14b7fc2d5d302c191a95c5c4f09d7a5caa45152d7e64f054bf3ab70c",
+      "bytes": 37016,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ce-europa.png": {
+      "source": "original-crests/es-ce-europa.gz",
+      "sha256": "49a80c5b303bff890a042c354dbbb2e4ec5f7f151f8ea072c9e8e76ae1bd374b",
+      "bytes": 25398,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-gimnastic-de-tarragona.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/be/Gimn%C3%A0stic_de_Tarragona_logo.svg",
+      "sha256": "f2319591fc972c527b05a198832f067b189768ffdbece6a53b1c877d15f25344",
+      "bytes": 25503,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-gimnastic-de-tarragona.png": {
+      "source": "original-crests/es-gimnastic-de-tarragona.gz",
+      "sha256": "bd7e3aeddd062573667f06f60c8c721f1c3e003cf0c21ad0d6602187121efcec",
+      "bytes": 39405,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ud-ibiza.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/ce/UD_Ibiza_logo.svg",
+      "sha256": "8521730a44738f168c1530f02a11e61a1a9fc9584ee20d563befc16260cdfde9",
+      "bytes": 13908,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ud-ibiza.png": {
+      "source": "original-crests/es-ud-ibiza.gz",
+      "sha256": "3fce579ebf4f2ae35af45e9a8521ba167283bb1c9d9b59f910ae7042623179b0",
+      "bytes": 25395,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-sd-huesca.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/8a/Logo_of_SD_Huesca.svg",
+      "sha256": "a33f2647afb58ae5ae0055fd2d630a3d15a40ec2dac12b382b0bfe95450e2768",
+      "bytes": 178503,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-sd-huesca.png": {
+      "source": "original-crests/es-sd-huesca.gz",
+      "sha256": "0a71b321a8306cab759b4729ecbb50f759bddac091fc047027de4921fd950ea2",
+      "bytes": 9611,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-madrid-castilla.gz": {
+      "url": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png",
+      "sha256": "eb71e338ba90bab3ba65a4cc2b730010759b41aa7f3b47f751a756633b0c3031",
+      "bytes": 59616,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-madrid-castilla.png": {
+      "source": "original-crests/es-real-madrid-castilla.gz",
+      "sha256": "74c551cd4d4009e39cfffb909343d7fd41e101510f7ce792d9692bb0810c8740",
+      "bytes": 45924,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cf-rayo-majadahonda.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/8c/CF_Rayo_Majadahonda_logo.svg",
+      "sha256": "e3688b527961264c60d850277f19753b8b791425d580f42624750b527f8a1d61",
+      "bytes": 43862,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cf-rayo-majadahonda.png": {
+      "source": "original-crests/es-cf-rayo-majadahonda.gz",
+      "sha256": "330b2a3090483f60a0b49694d00e4453965f5053c282e2da788d4fa725f845e4",
+      "bytes": 21682,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-murcia.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/93/Real_Murcia_CF_logo.svg",
+      "sha256": "0fee5d608f8b7d89536da07e0be34ef7567989fb21f124878395f91c392b874b",
+      "bytes": 279064,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-murcia.png": {
+      "source": "original-crests/es-real-murcia.gz",
+      "sha256": "3809ea1d89ee3860b8ca163d8debcde4f9c9f92c0d6aa4103e0eeaf16e7b012e",
+      "bytes": 20513,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-ue-sant-andreu.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/34/UE_Sant_Andreu_logo.svg",
+      "sha256": "4fb613541f8a67ab9d04a29bd54b7cec4444f164908ba65d06b47ec3fb25aa0c",
+      "bytes": 48947,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-ue-sant-andreu.png": {
+      "source": "original-crests/es-ue-sant-andreu.gz",
+      "sha256": "0eaf27fd5c172bedff1a22b8093984e39d8bb6c53ad90f8ab15070aaf7c823e4",
+      "bytes": 24356,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-cd-teruel.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a9/CD_Teruel_logo.svg",
+      "sha256": "dd2af387a8822966c5d1388ec8aef9dd2c931b18b74e8be2d06fe3a54c2425c4",
+      "bytes": 50090,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-cd-teruel.png": {
+      "source": "original-crests/es-cd-teruel.gz",
+      "sha256": "8512cfb9de225dba0b96489743b64a4ba1ee09c7976da325ba080ef7c6d499e2",
+      "bytes": 25313,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-villarreal-cf-b.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/b9/Villarreal_CF_logo-en.svg",
+      "sha256": "3cdcc9f6899814178ae6a813d3e5ba0fae1d77afc02cdc24a7283fc8bef51789",
+      "bytes": 10924,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-villarreal-cf-b.png": {
+      "source": "original-crests/es-villarreal-cf-b.gz",
+      "sha256": "eaeb9e0dfc47322350f8d652a0c55e73c18c6f29fb169ad16726d6384f3d09da",
+      "bytes": 25635,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-zaragoza.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/69/Real_Zaragoza_logo.svg",
+      "sha256": "e91ba68984bbb15adbf70d1d2215a3f97e7f74405bed35aed3c6e2bb9e3e7fd0",
+      "bytes": 79881,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-zaragoza.png": {
+      "source": "original-crests/es-real-zaragoza.gz",
+      "sha256": "340e54cd615f7bbeb01c0582b82bd6b204293e7fd62a31a230115ba5fec81ed8",
+      "bytes": 18514,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-pontevedra-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/90/Pontevedra_CF_logo.svg",
+      "sha256": "21b86d945f76b36bb9d2dc29a8d9734df57f62381dab0aa63208932c8cdca2a3",
+      "bytes": 52897,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-pontevedra-cf.png": {
+      "source": "original-crests/es-pontevedra-cf.gz",
+      "sha256": "e3118832af9e810c3246d4f2634740c561404a8d5b92b8a39c0f45c9728eb5c5",
+      "bytes": 25169,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-union.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/dd/Real_Uni%C3%B3n_logo.svg",
+      "sha256": "e997645cce41694791e809ac2875902232b1a4287b2708638717fc94d8b853d4",
+      "bytes": 53686,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-union.png": {
+      "source": "original-crests/es-real-union.gz",
+      "sha256": "822f440a5c95c6187fedd0a30bea8bac9de493648e0b02a4e9567b4e086be823",
+      "bytes": 29244,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-hercules-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/84/Hercules_CF_crest.svg",
+      "sha256": "6413df8ee78ae9ef3dd0a11d0cd2bd2566f87069eaa03fa77a6bdd792edf7d97",
+      "bytes": 5879,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-hercules-cf.png": {
+      "source": "original-crests/es-hercules-cf.gz",
+      "sha256": "eb1469e1b7d41a67b1a394d034952a4692964307b543ef85c346d4b939eadc95",
+      "bytes": 16650,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-real-jaen.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/ea/Real_Ja%C3%A9n_logo_2022.png",
+      "sha256": "913946f08c9dee196882dad0e0036594af6c9d95cbeacf0ac842e38c841b8f5d",
+      "bytes": 57514,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-real-jaen.png": {
+      "source": "original-crests/es-real-jaen.gz",
+      "sha256": "dd3a8e93a85232fafcea900a9f67b616341ce54bde43b9fbc3aa9063e4b54b32",
+      "bytes": 38569,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "original-crests/es-juventud-de-torremolinos-cf.gz": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/63/Juventud_de_Torremolinos_CF_logo.svg",
+      "sha256": "1f48a89e7f89c11b08ed55f0539192be4320b542bd13246968fded021712b739",
+      "bytes": 118977,
+      "encoding": "gzip",
+      "rights": "Club crest/trademark; retained for identification, not an open-license claim."
+    },
+    "crests/es-juventud-de-torremolinos-cf.png": {
+      "source": "original-crests/es-juventud-de-torremolinos-cf.gz",
+      "sha256": "18becaa024f487d4ece7d0422913483d9d7aacf80138554cdf691a686f2ca9c6",
+      "bytes": 27714,
+      "processing": "PNG, fit within 256×256; original aspect ratio preserved"
+    },
+    "snapshots/zubieta-z7-osm.json.gz": {
+      "url": "https://www.openstreetmap.org/api/0.6/way/42735948/full.json",
+      "sha256": "fc6347460331a1128b2396fe058d60dcb5b05411830aa0febcc6216ef330e36b",
+      "bytes": 1201,
+      "encoding": "gzip"
+    },
+    "snapshots/villarreal-b-official.html.gz": {
+      "url": "https://villarrealcf.es/es/cronica-villarreal-b-antequera-j04-2627/",
+      "sha256": "12aa1fec0f80564cd000589fbe6c09df1ba57c3edae0f7822349043172e9a36c",
+      "bytes": 249947,
+      "encoding": "gzip"
+    },
+    "snapshots/zubieta-b-official.html.gz": {
+      "url": "https://www.realsociedad.eus/es/noticias/detalle/el-sanse-jugara-en-el-estadio-de-zubieta",
+      "sha256": "db191b35042a19433dadf2b56d5fbcbbe729044cf630f3aa866e2a3b0cad62a0",
+      "bytes": 131006,
+      "encoding": "gzip"
+    },
+    "snapshots/andorra-official.html.gz": {
+      "url": "https://www.fcandorra.com/ca/installacions",
+      "sha256": "b4fbe1b5a5e6e65804c28e8b1e419d91c42f2746c88db36e3d5abcc7ce96a084",
+      "bytes": 158595,
+      "encoding": "gzip"
+    },
+    "snapshots/betis-official.html.gz": {
+      "url": "https://www.realbetisbalompie.es/index.php/club/la-cartuja",
+      "sha256": "128f8675db654cf550d92380ed1b442afb23f4f17dba8363b4ce765a88bc74d6",
+      "bytes": 117646,
+      "encoding": "gzip"
+    },
+    "snapshots/zaragoza-official.html.gz": {
+      "url": "https://www.realzaragoza.com/ibercaja-estadio-real-zaragoza",
+      "sha256": "12aa1d482f5e67a586e70e06e0e9aa84800022c3cc8570c0132b84aaf3ea1a98",
+      "bytes": 376718,
+      "encoding": "gzip"
+    },
+    "snapshots/atletico-madrileno-official.html.gz": {
+      "url": "https://www.atleticodemadrid.com/noticias/el-atletico-madrileno-arrancara-este-jueves-la-pretemporada",
+      "sha256": "cc43b9ce701a4f99e50ebe35b322662ba4fb460f25d14c780757fe82f8b30da3",
+      "bytes": 75732,
+      "encoding": "gzip"
+    },
+    "snapshots/celta-fortuna-official.html.gz": {
+      "url": "https://rccelta.es/fundacion/actualidad/convocatoria-del-celta-fortuna-para-el-partido-ante-el-fc-andorra/",
+      "sha256": "6d9dd4e54d220b497deddcc047bc2c7d11d85ec1c3705336dd0ca7e2570c520f",
+      "bytes": 177774,
+      "encoding": "gzip"
+    },
+    "snapshots/mini-osm.json.gz": {
+      "url": "https://www.openstreetmap.org/api/0.6/way/199637860/full.json",
+      "sha256": "af18327c612093caec94401d6d82f3fb09476be804950ce0225da11ea2a22003",
+      "bytes": 1222,
+      "encoding": "gzip"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {gunzipSync} from 'node:zlib';import {createHash} from 'node:crypto';import sharp from 'sharp';
+const root='scripts/football-sources/france/',data=JSON.parse(fs.readFileSync(root+'clubs.json')),manifest=JSON.parse(fs.readFileSync(root+'manifest.json'));
+for(const [name,meta]of Object.entries(manifest.files)){const raw=fs.readFileSync(root+name+(name.startsWith('crests/')?'':'.gz')),bytes=name.startsWith('crests/')?raw:gunzipSync(raw);assert.equal(createHash('sha256').update(bytes).digest('hex'),meta.sha256,'Pinned source '+name);}
+assert.equal(data.country,'france');assert.equal(data.season,'2026–27');assert.equal(data.clubs.length,54);assert.equal(new Set(data.clubs.map(r=>r.id)).size,54);
+for(const league of data.leagues)assert.equal(data.clubs.filter(r=>r.tier===league.tier).length,18);
+for(const r of data.clubs){assert(r.en&&r.stadium&&r.city&&r.coordinateSource&&r.crestSource);assert(r.center.length===2&&r.center.every(Number.isFinite));assert(r.center[0]>-6&&r.center[0]<10&&r.center[1]>41&&r.center[1]<52);const m=await sharp(root+'crests/'+r.crest).metadata();assert(m.width&&m.height&&['png','svg'].includes(m.format));}
+const club=name=>data.clubs.find(r=>r.en===name);assert.equal(club('Versailles').city,'Saint-Germain-en-Laye');assert.equal(club('Thionville').stadium,'Stade de Guentrange');assert.equal(club('Annecy').crest,'fr-annecy.svg');assert.deepEqual(club('Rouen').center,club('Quevilly-Rouen').center);
+console.log('France: 54 clubs, 18/18/18 cumulative tiers, all crest assets, source pins, valid stadium coordinates and reviewed relocations verified.');

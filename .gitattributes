@@ -57,3 +57,6 @@ dist/vendor/flag-sk.svg -text
 dist/vendor/flag-ec.svg -text
 
 scripts/statistics-sources/cz-sk-ua/* -text
+
+# Preserve original club crest bytes and their recorded checksums.
+scripts/football-sources/**/crests/*.svg -text

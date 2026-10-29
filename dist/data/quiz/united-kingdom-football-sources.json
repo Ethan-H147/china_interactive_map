@@ -1,0 +1,984 @@
+{
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "rosterSha256": "e18b9b47d682e4292c55af757cac98ce4ae7c7e4ffc61567a37cba78ebcc2abd",
+  "rosterFile": "scripts/football-sources/england/clubs.json",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Premier League",
+      "count": 20,
+      "sourceUrl": "https://www.premierleague.com/en/news/4365156"
+    },
+    {
+      "tier": 2,
+      "name": "EFL Championship",
+      "count": 24,
+      "sourceUrl": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed"
+    },
+    {
+      "tier": 3,
+      "name": "EFL League One",
+      "count": 24,
+      "sourceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "FOOTBALL-en-349",
+      "en": "AFC Bournemouth",
+      "city": "Bournemouth",
+      "stadium": "Vitality Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619094",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png"
+    },
+    {
+      "id": "FOOTBALL-en-359",
+      "en": "Arsenal",
+      "city": "London",
+      "stadium": "Emirates Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q163995",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png"
+    },
+    {
+      "id": "FOOTBALL-en-362",
+      "en": "Aston Villa",
+      "city": "Birmingham",
+      "stadium": "Villa Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q175339",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png"
+    },
+    {
+      "id": "FOOTBALL-en-337",
+      "en": "Brentford",
+      "city": "Brentford",
+      "stadium": "Gtech Community Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q4961609",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png"
+    },
+    {
+      "id": "FOOTBALL-en-331",
+      "en": "Brighton & Hove Albion",
+      "city": "Falmer",
+      "stadium": "American Express Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619409",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png"
+    },
+    {
+      "id": "FOOTBALL-en-363",
+      "en": "Chelsea",
+      "city": "London",
+      "stadium": "Stamford Bridge",
+      "coordinateSource": "https://www.wikidata.org/entity/Q171458",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png"
+    },
+    {
+      "id": "FOOTBALL-en-388",
+      "en": "Coventry City",
+      "city": "Coventry",
+      "stadium": "Coventry Building Society Arena",
+      "coordinateSource": "https://www.wikidata.org/entity/Q842077",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png"
+    },
+    {
+      "id": "FOOTBALL-en-384",
+      "en": "Crystal Palace",
+      "city": "London",
+      "stadium": "Selhurst Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1066373",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png"
+    },
+    {
+      "id": "FOOTBALL-en-368",
+      "en": "Everton",
+      "city": "Liverpool",
+      "stadium": "Hill Dickinson Stadium",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q29347805",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+      "note": "Everton men moved from Goodison Park to Hill Dickinson Stadium in 2025."
+    },
+    {
+      "id": "FOOTBALL-en-370",
+      "en": "Fulham",
+      "city": "London",
+      "stadium": "Craven Cottage",
+      "coordinateSource": "https://www.wikidata.org/entity/Q318043",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png"
+    },
+    {
+      "id": "FOOTBALL-en-306",
+      "en": "Hull City",
+      "city": "Hull",
+      "stadium": "The MKM Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q630160",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png"
+    },
+    {
+      "id": "FOOTBALL-en-373",
+      "en": "Ipswich Town",
+      "city": "Ipswich",
+      "stadium": "Portman Road",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619558",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png"
+    },
+    {
+      "id": "FOOTBALL-en-357",
+      "en": "Leeds United",
+      "city": "Leeds",
+      "stadium": "Elland Road",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619505",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png"
+    },
+    {
+      "id": "FOOTBALL-en-364",
+      "en": "Liverpool",
+      "city": "Liverpool",
+      "stadium": "Anfield",
+      "coordinateSource": "https://www.wikidata.org/entity/Q45671",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png"
+    },
+    {
+      "id": "FOOTBALL-en-382",
+      "en": "Manchester City",
+      "city": "Manchester",
+      "stadium": "Etihad Stadium",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q48159",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png"
+    },
+    {
+      "id": "FOOTBALL-en-360",
+      "en": "Manchester United",
+      "city": "Manchester",
+      "stadium": "Old Trafford",
+      "coordinateSource": "https://www.wikidata.org/entity/Q83457",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png"
+    },
+    {
+      "id": "FOOTBALL-en-361",
+      "en": "Newcastle United",
+      "city": "Newcastle upon Tyne",
+      "stadium": "St. James' Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q191774",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png"
+    },
+    {
+      "id": "FOOTBALL-en-393",
+      "en": "Nottingham Forest",
+      "city": "Nottingham",
+      "stadium": "The City Ground",
+      "coordinateSource": "https://www.wikidata.org/entity/Q593446",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png"
+    },
+    {
+      "id": "FOOTBALL-en-366",
+      "en": "Sunderland",
+      "city": "Sunderland",
+      "stadium": "Stadium of Light",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q31969",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png"
+    },
+    {
+      "id": "FOOTBALL-en-367",
+      "en": "Tottenham Hotspur",
+      "city": "London",
+      "stadium": "Tottenham Hotspur Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q55074091",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png"
+    },
+    {
+      "id": "FOOTBALL-en-392",
+      "en": "Birmingham City",
+      "city": "Birmingham",
+      "stadium": "St. Andrew's Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q819179",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png"
+    },
+    {
+      "id": "FOOTBALL-en-365",
+      "en": "Blackburn Rovers",
+      "city": "Blackburn",
+      "stadium": "Ewood Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q245085",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png"
+    },
+    {
+      "id": "FOOTBALL-en-358",
+      "en": "Bolton Wanderers",
+      "city": "Bolton",
+      "stadium": "Toughsheet Community Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q242772",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png"
+    },
+    {
+      "id": "FOOTBALL-en-333",
+      "en": "Bristol City",
+      "city": "Bristol",
+      "stadium": "Ashton Gate",
+      "coordinateSource": "https://www.wikidata.org/entity/Q726370",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png"
+    },
+    {
+      "id": "FOOTBALL-en-379",
+      "en": "Burnley",
+      "city": "Burnley",
+      "stadium": "Turf Moor",
+      "coordinateSource": "https://www.wikidata.org/entity/Q683112",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png"
+    },
+    {
+      "id": "FOOTBALL-en-347",
+      "en": "Cardiff City",
+      "city": "Cardiff",
+      "stadium": "Cardiff City Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q867902",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png"
+    },
+    {
+      "id": "FOOTBALL-en-372",
+      "en": "Charlton Athletic",
+      "city": "London",
+      "stadium": "The Valley",
+      "coordinateSource": "https://www.wikidata.org/entity/Q958319",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png"
+    },
+    {
+      "id": "FOOTBALL-en-374",
+      "en": "Derby County",
+      "city": "Derby",
+      "stadium": "Pride Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q201612",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png"
+    },
+    {
+      "id": "FOOTBALL-en-314",
+      "en": "Lincoln City",
+      "city": "Lincoln",
+      "stadium": "LNER Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619105",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png"
+    },
+    {
+      "id": "FOOTBALL-en-369",
+      "en": "Middlesbrough",
+      "city": "Middlesbrough",
+      "stadium": "Riverside Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q822886",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png"
+    },
+    {
+      "id": "FOOTBALL-en-391",
+      "en": "Millwall",
+      "city": "London",
+      "stadium": "The Den",
+      "coordinateSource": "https://www.wikidata.org/entity/Q908481",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png"
+    },
+    {
+      "id": "FOOTBALL-en-381",
+      "en": "Norwich City",
+      "city": "Norwich",
+      "stadium": "Carrow Road",
+      "coordinateSource": "https://www.wikidata.org/entity/Q123017",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png"
+    },
+    {
+      "id": "FOOTBALL-en-385",
+      "en": "Portsmouth",
+      "city": "Portsmouth",
+      "stadium": "Fratton Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619531",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png"
+    },
+    {
+      "id": "FOOTBALL-en-394",
+      "en": "Preston North End",
+      "city": "Preston",
+      "stadium": "Deepdale",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1141958",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png"
+    },
+    {
+      "id": "FOOTBALL-en-334",
+      "en": "Queens Park Rangers",
+      "city": "London",
+      "stadium": "MATRADE Loftus Road",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q31670",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png"
+    },
+    {
+      "id": "FOOTBALL-en-398",
+      "en": "Sheffield United",
+      "city": "Sheffield",
+      "stadium": "Bramall Lane",
+      "coordinateSource": "https://www.wikidata.org/entity/Q897533",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png"
+    },
+    {
+      "id": "FOOTBALL-en-376",
+      "en": "Southampton",
+      "city": "Southampton",
+      "stadium": "St. Mary's Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q567339",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png"
+    },
+    {
+      "id": "FOOTBALL-en-336",
+      "en": "Stoke City",
+      "city": "Stoke-on-Trent",
+      "stadium": "bet365 Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q500922",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png"
+    },
+    {
+      "id": "FOOTBALL-en-318",
+      "en": "Swansea City",
+      "city": "Swansea",
+      "stadium": "Swansea.com Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q580480",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png"
+    },
+    {
+      "id": "FOOTBALL-en-395",
+      "en": "Watford",
+      "city": "Watford",
+      "stadium": "Vicarage Road",
+      "coordinateSource": "https://www.wikidata.org/entity/Q10626",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png"
+    },
+    {
+      "id": "FOOTBALL-en-383",
+      "en": "West Bromwich Albion",
+      "city": "West Bromwich",
+      "stadium": "The Hawthorns",
+      "coordinateSource": "https://www.wikidata.org/entity/Q31678",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png"
+    },
+    {
+      "id": "FOOTBALL-en-371",
+      "en": "West Ham United",
+      "city": "London",
+      "stadium": "London Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q172190",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png"
+    },
+    {
+      "id": "FOOTBALL-en-380",
+      "en": "Wolverhampton Wanderers",
+      "city": "Wolverhampton",
+      "stadium": "Molineux Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q380823",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png"
+    },
+    {
+      "id": "FOOTBALL-en-352",
+      "en": "Wrexham",
+      "city": "Wrexham",
+      "stadium": "STōK Cae Ras",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1202579",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png"
+    },
+    {
+      "id": "FOOTBALL-en-3802",
+      "en": "AFC Wimbledon",
+      "city": "London",
+      "stadium": "The Cherry Red Records Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q48699006",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png"
+    },
+    {
+      "id": "FOOTBALL-en-397",
+      "en": "Barnsley",
+      "city": "Barnsley",
+      "stadium": "Oakwell",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1138270",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png"
+    },
+    {
+      "id": "FOOTBALL-en-346",
+      "en": "Blackpool",
+      "city": "Blackpool",
+      "stadium": "Bloomfield Road",
+      "coordinateSource": "https://www.wikidata.org/entity/Q870859",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/346.png"
+    },
+    {
+      "id": "FOOTBALL-en-387",
+      "en": "Bradford City",
+      "city": "Bradford",
+      "stadium": "Valley Parade",
+      "coordinateSource": "https://www.wikidata.org/entity/Q969279",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png"
+    },
+    {
+      "id": "FOOTBALL-en-3129",
+      "en": "Bromley",
+      "city": "Bromley",
+      "stadium": "CopperJax Community Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q3986424",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png"
+    },
+    {
+      "id": "FOOTBALL-en-2567",
+      "en": "Burton Albion",
+      "city": "Burton upon Trent",
+      "stadium": "Pirelli Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619136",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png"
+    },
+    {
+      "id": "FOOTBALL-en-351",
+      "en": "Cambridge United",
+      "city": "Cambridge",
+      "stadium": "Cledara Abbey Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2444574",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png"
+    },
+    {
+      "id": "FOOTBALL-en-279",
+      "en": "Doncaster Rovers",
+      "city": "Doncaster",
+      "stadium": "Eco-Power Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1336402",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png"
+    },
+    {
+      "id": "FOOTBALL-en-335",
+      "en": "Huddersfield Town",
+      "city": "Huddersfield",
+      "stadium": "Accu Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619407",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png"
+    },
+    {
+      "id": "FOOTBALL-en-375",
+      "en": "Leicester City",
+      "city": "Leicester",
+      "stadium": "King Power Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q620031",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png"
+    },
+    {
+      "id": "FOOTBALL-en-309",
+      "en": "Leyton Orient",
+      "city": "London",
+      "stadium": "Gaughan Group Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q917727",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/309.png"
+    },
+    {
+      "id": "FOOTBALL-en-301",
+      "en": "Luton Town",
+      "city": "Luton",
+      "stadium": "Kenilworth Road",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1613767",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png"
+    },
+    {
+      "id": "FOOTBALL-en-304",
+      "en": "Mansfield Town",
+      "city": "Mansfield",
+      "stadium": "One Call Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619071",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/304.png"
+    },
+    {
+      "id": "FOOTBALL-en-390",
+      "en": "Milton Keynes Dons",
+      "city": "Milton Keynes",
+      "stadium": "Stadium MK",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1144973",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png"
+    },
+    {
+      "id": "FOOTBALL-en-340",
+      "en": "Notts County",
+      "city": "Nottingham",
+      "stadium": "Meadow Lane",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1192396",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/340.png"
+    },
+    {
+      "id": "FOOTBALL-en-311",
+      "en": "Oxford United",
+      "city": "Oxford",
+      "stadium": "The Kassam Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1672134",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png"
+    },
+    {
+      "id": "FOOTBALL-en-342",
+      "en": "Peterborough United",
+      "city": "Peterborough",
+      "stadium": "London Road Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1156350",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png"
+    },
+    {
+      "id": "FOOTBALL-en-307",
+      "en": "Plymouth Argyle",
+      "city": "Plymouth",
+      "stadium": "Home Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619350",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png"
+    },
+    {
+      "id": "FOOTBALL-en-338",
+      "en": "Reading",
+      "city": "Reading",
+      "stadium": "Select Car Leasing Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q31656",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/338.png"
+    },
+    {
+      "id": "FOOTBALL-en-399",
+      "en": "Sheffield Wednesday",
+      "city": "Sheffield",
+      "stadium": "Hillsborough",
+      "coordinateSource": "https://www.wikidata.org/entity/Q642557",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png"
+    },
+    {
+      "id": "FOOTBALL-en-285",
+      "en": "Stevenage",
+      "city": "Stevenage",
+      "stadium": "Lamex Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619353",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png"
+    },
+    {
+      "id": "FOOTBALL-en-400",
+      "en": "Stockport County",
+      "city": "Stockport",
+      "stadium": "Edgeley Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1284381",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png"
+    },
+    {
+      "id": "FOOTBALL-en-350",
+      "en": "Wigan Athletic",
+      "city": "Wigan",
+      "stadium": "Brick Community Stadium",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q494388",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png"
+    },
+    {
+      "id": "FOOTBALL-en-344",
+      "en": "Wycombe Wanderers",
+      "city": "High Wycombe",
+      "stadium": "Adams Park",
+      "coordinateSource": "https://www.wikidata.org/entity/Q351946",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png"
+    }
+  ],
+  "images": {
+    "vendor/football/united-kingdom/en-349.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+      "inputSha256": "0383002b303b31fd4672b7823672c472660be4f2175d84ac480a26e1a06e61bb",
+      "sha256": "8248d25f3a4a1c5738b71844597cc005e1543179aef49bd37bd7d60f5498b073",
+      "bytes": 19096
+    },
+    "vendor/football/united-kingdom/en-359.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+      "inputSha256": "92f1bb35662ff56dde09e1f8084221a458357a6df390bc97b2ed6495f6e39f53",
+      "sha256": "596e66bd533553403bf372fb630d71d042a1116d644e2c2e3d976eb1206e3b8e",
+      "bytes": 25058
+    },
+    "vendor/football/united-kingdom/en-362.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "inputSha256": "aad2e636ade60b485855deacfe74f831c8dcae46de72079c7f521b06c1b5865b",
+      "sha256": "0078e906fac8672ecc18b210867d27db15e7f3a35694b25ca8de5920c66dace2",
+      "bytes": 20226
+    },
+    "vendor/football/united-kingdom/en-337.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+      "inputSha256": "7104e162e0e5158336ac94dd895435c66f9c4cbf1a66719b6d1948eb11c2fbb3",
+      "sha256": "a55ab8bbb54e4fe56bff81fb5b8b6d6d517ca85c9207be44a28a8d74dbffef49",
+      "bytes": 25936
+    },
+    "vendor/football/united-kingdom/en-331.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+      "inputSha256": "b1a7041908644caca2c328a329aa8494d6c531cc32f4b11b7fceba43bc93e484",
+      "sha256": "b3d29e5b41ebdba82b5a162ed7b58a1b5866dd2b56d3782bd35f8d002def5ee0",
+      "bytes": 17020
+    },
+    "vendor/football/united-kingdom/en-363.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+      "inputSha256": "6f14d86b5e35074e91462c7ede6e822f6a6c9f6cb723cd04ea6b8d36f2fa5392",
+      "sha256": "856db4f57add7a9497195b7503e52df0bbdf5e53600eb2c90d6ef68c8f0b7403",
+      "bytes": 35802
+    },
+    "vendor/football/united-kingdom/en-388.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+      "inputSha256": "6959102823b1b8e3bad688a23bc24efed5cc02c606ff65a66a10c6ec15aa9b57",
+      "sha256": "a275f8e4b001edfcf603b0b5569550f941861db23bf23cf0edcd89ff06cbdd6d",
+      "bytes": 32988
+    },
+    "vendor/football/united-kingdom/en-384.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+      "inputSha256": "bc829f12cbd54aa1116888d68fda2cfe8bf4c16adea80033af748ca54a153920",
+      "sha256": "921791b26925829b67928d6a2c556160edee147d7e752fef09c2413945f28ba4",
+      "bytes": 25746
+    },
+    "vendor/football/united-kingdom/en-368.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+      "inputSha256": "eaedbe5e3b18ddef08c09d07fdca62bcac65165b7bb9af4780acce36841aee20",
+      "sha256": "a85e1a18972755f6ee2077f65d4c42d490736b226bf0ebe5988b261245f36a57",
+      "bytes": 23396
+    },
+    "vendor/football/united-kingdom/en-370.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+      "inputSha256": "b9148eac6e2150c0498eca2924e755ae710d04d3fce66993050cf45942ca4a19",
+      "sha256": "ded6f0c795e707d2cd273cb3b7847b081aa10d0195db3cebfd0f1b55732cabf1",
+      "bytes": 9146
+    },
+    "vendor/football/united-kingdom/en-306.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
+      "inputSha256": "8147c0d4c418e56f133dcc79e38120cd742aab84e7ce72fa3c873f872100ab65",
+      "sha256": "5f8a807f17f05c1f32215e3bc5bbeafb76e51e1780fec802011476a0712e2a72",
+      "bytes": 22102
+    },
+    "vendor/football/united-kingdom/en-373.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
+      "inputSha256": "e253aeaf39ff7c9d19f91ce78464de947b275fdbea4bf595e602d42367cea1b7",
+      "sha256": "26de07201990278d7801140289cf7ee0b1c6af769a184128d959e9cd0e217b96",
+      "bytes": 18052
+    },
+    "vendor/football/united-kingdom/en-357.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+      "inputSha256": "69d5d4251e740fc8d525c3c967e817575b0ac2e2af7be03f23e40d494c383790",
+      "sha256": "fd637600582c92ceced1aa0ec0bc8bb836b607cf2b23de577ba414240753da97",
+      "bytes": 34882
+    },
+    "vendor/football/united-kingdom/en-364.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+      "inputSha256": "9f2c56faf3631eb32fb5cccd84d31827ba38fcd9dd3280f597b221711a8797de",
+      "sha256": "0e43c9848cdc51450e345950b0944f5ff40dc8028753f45ff56d377f7226f9df",
+      "bytes": 10974
+    },
+    "vendor/football/united-kingdom/en-382.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "inputSha256": "70e005bdab0ada41a153760398b4a2ef99f956bf9e72954686caa70da8c30c0b",
+      "sha256": "a3bcabdefd771153cca4482910f0cbfb642e9ba78b26186d147422593efedbaf",
+      "bytes": 33326
+    },
+    "vendor/football/united-kingdom/en-360.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+      "inputSha256": "03486cf5cf90d580d6132ab115cc747be7b2e3519fd6e08be56675cf5897f0b7",
+      "sha256": "3106c5e473b0a3d7ea854d88dfbede00bc9e50964486b434f310e092215766cc",
+      "bytes": 35712
+    },
+    "vendor/football/united-kingdom/en-361.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+      "inputSha256": "5e926d9f8c18b1b20e2e86a830ad56d4a9094673f172c0f8fabf617917e1910d",
+      "sha256": "4f9255d8b934360ffc70c9c76418bb7563c487479d76e843916f58d1f2c97be9",
+      "bytes": 34874
+    },
+    "vendor/football/united-kingdom/en-393.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
+      "inputSha256": "766868d667069609a8904ba1ec6a66f09fccfe9fbad21300791bf778dd9ddaae",
+      "sha256": "e58d2947d530b5819500fd7d5550c0b6d50951acf9e02396403b7994358ea40d",
+      "bytes": 9072
+    },
+    "vendor/football/united-kingdom/en-366.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+      "inputSha256": "aee718a79be592a8bb36ab68b0960a1dbb5763692f4d91c3f4249f95edbf19af",
+      "sha256": "281d7158a4ccb62560d1e0b56fa91856c77500c90fd2645c015277a2072d291c",
+      "bytes": 29440
+    },
+    "vendor/football/united-kingdom/en-367.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+      "inputSha256": "f66f956414b0fd99df6a7e29bed0bd8a849f11d41bd749a1e08ff8d032570d35",
+      "sha256": "7fec5a4b9aa27f6d4c5562b088c65c0fd59abd7e1e60afb68604ade3e67be57a",
+      "bytes": 7606
+    },
+    "vendor/football/united-kingdom/en-392.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+      "inputSha256": "92d78233c718f49cc2365dad6337a88f7671e17a5386c13bdea1a8853307e17b",
+      "sha256": "eb987bbff4271f758373bd0e83ff22e30ff33214ea9c5643601fde5698753a62",
+      "bytes": 25976
+    },
+    "vendor/football/united-kingdom/en-365.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+      "inputSha256": "c70d39df76cbf98ac21f77389ba416eeb648a937991927ed158df0fbcf1d9e35",
+      "sha256": "5c8be30d5d2ca7a12796a8d39cc45231713b4e3dd064c4bb8791f3f8d4d64b4a",
+      "bytes": 41466
+    },
+    "vendor/football/united-kingdom/en-358.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+      "inputSha256": "7367263148cc4e8ce4a40e9097cddfbbb7fa22031084443fed86f941ef80585d",
+      "sha256": "3840bf8c309bf2e43b36c13c034a5bde2dc793499fbc95cc2595e06eaeb4a71f",
+      "bytes": 13268
+    },
+    "vendor/football/united-kingdom/en-333.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+      "inputSha256": "0bcc879e9a8597913b5dba73c85a379f33747b1487acff44da3ded02b69dd480",
+      "sha256": "06025b86a4be6ffd18295a21f6001024c8e25db2aa1ee641b1f7e22eb9cae7f6",
+      "bytes": 17578
+    },
+    "vendor/football/united-kingdom/en-379.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+      "inputSha256": "2a42d8838bc00f812f779fe30eefbc2bb159ba9bfce107eb412e3e6450fb60c5",
+      "sha256": "30367e533351db031965c275289a4db518d601bfa943b65988fb11a2309a8452",
+      "bytes": 16974
+    },
+    "vendor/football/united-kingdom/en-347.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+      "inputSha256": "128451f1d8302cc6a26d8f7b515a8826b330d43ea5f57b72c5dca9cca17db004",
+      "sha256": "1208278ea4dcb433c6bd5dc0bc05c15e9cf2ed9f7769b404d5b18ce7bee8fd73",
+      "bytes": 24364
+    },
+    "vendor/football/united-kingdom/en-372.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+      "inputSha256": "dc27ecad398b132ac057da6b930603f3b73acd7a79507080d381a161f74142c6",
+      "sha256": "c37f5decce7dc7d0c7d405086db8b5957ee14fb7908c7c014598c0f11411c6c0",
+      "bytes": 26170
+    },
+    "vendor/football/united-kingdom/en-374.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+      "inputSha256": "a5a16cd7d49670bd4cdcd23d072b9e12bc15e257e0ebac566ccb04e4c7c7282e",
+      "sha256": "dca1fca118d48a22497af4c65c8390931b1d604ec8c8909ab0e6f84127b6d534",
+      "bytes": 25436
+    },
+    "vendor/football/united-kingdom/en-314.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+      "inputSha256": "a266c2326fdf8c00c08a8b2d9dd4ef8f5c1bb85ee0f1a27f4c89cf17ea9fdeb6",
+      "sha256": "0fb5ce77d5540bfd769e48fb7dd165a138d2ede122f924d2d576b48ae849bc21",
+      "bytes": 7822
+    },
+    "vendor/football/united-kingdom/en-369.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+      "inputSha256": "493644c7f79c31692d7f82f2f15bb9db6fa63039474d5f49b30cd89005acf3f6",
+      "sha256": "2e7b52d18d291cd5947910f9bf6886eb5ab61ed2bc5aa60e51bf435f53e24a35",
+      "bytes": 29012
+    },
+    "vendor/football/united-kingdom/en-391.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+      "inputSha256": "cbedaa4f2fccf52919ac813951fa693ef6cadfa5a7f93131692dcf8f64dd1cda",
+      "sha256": "3394f39fdcb40d3cf307ec786205b8bd247336204d559c1f2972e09613f913ba",
+      "bytes": 20008
+    },
+    "vendor/football/united-kingdom/en-381.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+      "inputSha256": "d06b8b8d06c49ed01f36d4936052151c22b16ccaf27cae77dfd32c7df68b9451",
+      "sha256": "9ab610977a870ff17bf4346ffc392a60493c4c1134913fe8ec463ebc91ffa627",
+      "bytes": 15570
+    },
+    "vendor/football/united-kingdom/en-385.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+      "inputSha256": "f030a4c5beafabb21aa690e7a18c2b16585f145c9ac95ac24250b1e8bb948a4f",
+      "sha256": "d8e9106309ac09789fc6152ed6238f95239df01b15afe25adee0195fa97fbd78",
+      "bytes": 27546
+    },
+    "vendor/football/united-kingdom/en-394.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+      "inputSha256": "6d5ad6705de480b664a4e1f09479eb06fe4517fec8b34cea917ea283f0744a43",
+      "sha256": "cab7c4984ede1f6a5ab89f3432b2cc97489d4f5aca5608c6439215b2801b7118",
+      "bytes": 25548
+    },
+    "vendor/football/united-kingdom/en-334.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+      "inputSha256": "be48c68dbb1873af82f2523cae6bf0982179f3554706d0b3e40a42b4b001f67f",
+      "sha256": "3befaa139fb5a54b7f5fbd7ceb9a66a9db6413f9432f4a921872541a418531ac",
+      "bytes": 21670
+    },
+    "vendor/football/united-kingdom/en-398.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+      "inputSha256": "8022abe015092baee37ffce6f524e7561ab60b4f3e77990f7e7b69e1087e0bce",
+      "sha256": "c50e7f533a2c7f0047ba9c9aac6bd2fbb399407158a7b3909aea908d663bc646",
+      "bytes": 20540
+    },
+    "vendor/football/united-kingdom/en-376.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+      "inputSha256": "09b41343b46d3941a946ce5c2696550ec654d54614b7dbd22cef0cde91970335",
+      "sha256": "3bd36fd26fc23fc1b25476f79b2b08f522252f124b71b5e87fca4b30e296879a",
+      "bytes": 24762
+    },
+    "vendor/football/united-kingdom/en-336.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+      "inputSha256": "b02f23df8c991e3d0537f54746767f685029f766ffd72990c004f1c0f2aff8c2",
+      "sha256": "a0609476a9987f5c961ee6a754408ef5c2c756710910aff5761f2629852c9296",
+      "bytes": 12390
+    },
+    "vendor/football/united-kingdom/en-318.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+      "inputSha256": "5fcea5a909ca225a5389ea59b3f110c7826ac9449ba11e1fbf74d6433cae57aa",
+      "sha256": "bd68294a7a7453cb16fabe2774dd2e172d03a78f3d06f378199436b9e263965e",
+      "bytes": 6738
+    },
+    "vendor/football/united-kingdom/en-395.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+      "inputSha256": "d197bf6055579351059aa35603d60efeda1dd366463f3c7f9004bbf9e566c747",
+      "sha256": "82d43e6735b116b2154261fe40c84167f3239b67b1beb86498d6ab02700c5bd2",
+      "bytes": 14834
+    },
+    "vendor/football/united-kingdom/en-383.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+      "inputSha256": "52bd64391405c0b43683fd419a8182eeebd33cbece1fe556a12e3de5ec775220",
+      "sha256": "8d6930e12f99bdd47f5e13fde5417d9cae3fa8885af5c0ff05ea2e2ad9f19f40",
+      "bytes": 21872
+    },
+    "vendor/football/united-kingdom/en-371.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+      "inputSha256": "4e74106a88addf17a9f3f0af437cd9d85c28759e93e10da0f27dd00184c234b8",
+      "sha256": "067376ddf22cd3e05251093841c6950b85b08f88292da50dfd9436f51c53a3c7",
+      "bytes": 17148
+    },
+    "vendor/football/united-kingdom/en-380.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+      "inputSha256": "a1a06a97b433a7e1b32f9ec9ae5f9d60acdb95dc85f70794351df4dea31adfe4",
+      "sha256": "21b7bbbbe406325cbd8117baceba4808f4ba386ca8b8276bdfc5e8378ef68934",
+      "bytes": 9072
+    },
+    "vendor/football/united-kingdom/en-352.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+      "inputSha256": "c9d74ed375ee12fef411e2a45e21270b13485afda419ca7f496648a199941b8c",
+      "sha256": "eff6b18ab0bc0898d0dc2c347ad5c792060d649a2b81a280b7b479c876453f8e",
+      "bytes": 33684
+    },
+    "vendor/football/united-kingdom/en-3802.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
+      "inputSha256": "313ceb02cc73d39d6a4a918f1791bb771845441491490d41bdc2a14f62c2dca2",
+      "sha256": "00bf8aff35edc46cd72aa9404f53bdc776a7e83fdbdb1c1eadce139312ac52ba",
+      "bytes": 14550
+    },
+    "vendor/football/united-kingdom/en-397.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png",
+      "inputSha256": "5d4ec36703040bafd14a53abef5dfcb6e03d6cb919c31edf18967a8426d56d01",
+      "sha256": "6eebf67bc0158abb206d1d4a31ecdd2bb4ab0d69c10f073d34b2877a8ff3c7b8",
+      "bytes": 51184
+    },
+    "vendor/football/united-kingdom/en-346.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/346.png",
+      "inputSha256": "efe745b3833ea175c7e2aba54d69b3ce64120cfa0aea6578077bcf52189f479f",
+      "sha256": "94e65c41e61a5f4fe0ce9c0277672b258c9bef62a225badbd0a975060d8b1592",
+      "bytes": 30862
+    },
+    "vendor/football/united-kingdom/en-387.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
+      "inputSha256": "977d279d78255b2a669671c2eb62194370f934c3dc01c50d930a1d48a15e35e8",
+      "sha256": "7ce23314bcad0e04a9b3550489d8fffab27f18e4233cae284a852d0051da1c4f",
+      "bytes": 23024
+    },
+    "vendor/football/united-kingdom/en-3129.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
+      "inputSha256": "03ba96fffde95aa0c4c3dff385da0fd7ccc26c951c6b6e84a3e62e482fc9c0ac",
+      "sha256": "cca51184b02aa62b43d8fbe57f374d34947320051ad1b286a27d46ec406b2fcc",
+      "bytes": 23800
+    },
+    "vendor/football/united-kingdom/en-2567.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+      "inputSha256": "e1aa39f877b41e815d328295de078405c713cb8768703283af821ccc9678b51b",
+      "sha256": "744e2e439aabe21c528b6ecc24a842b320e319f64dba521c1726528c927e2a01",
+      "bytes": 30156
+    },
+    "vendor/football/united-kingdom/en-351.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
+      "inputSha256": "6ebfb8a9256a218d18f312a53cfc87b4ec1d45a443e661afb8e42ce02e730c90",
+      "sha256": "09b5e4215fa3a4c67656b26a69e36b8242b5fd4d67ccbfcf24cfb1e74eb2d48f",
+      "bytes": 12762
+    },
+    "vendor/football/united-kingdom/en-279.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png",
+      "inputSha256": "6e6aa49aed4e23b28848d9a6b00abaab961adc518c5412adf9d7592b43d00189",
+      "sha256": "4b9c0c91f4b9c2f22f869f5679633c16051a0760dba2bae3d5c2951708d5865b",
+      "bytes": 20152
+    },
+    "vendor/football/united-kingdom/en-335.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+      "inputSha256": "978b626b36ede5d31a068f31f29fe53576a62f2456d686de47b91879148a3a49",
+      "sha256": "1d39e908369f8cfc021d77740f83dae7e95ada4622d955b35b8d5fd13325f7e9",
+      "bytes": 32754
+    },
+    "vendor/football/united-kingdom/en-375.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
+      "inputSha256": "a21568e549d0f9389f56469b75d0866281a39c1e32f37a4908c2727e0a53050f",
+      "sha256": "9c86511fd7118e79278d1c0cabcf9171838084e1e1d8bd46550cdb54c23cd69a",
+      "bytes": 27764
+    },
+    "vendor/football/united-kingdom/en-309.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/309.png",
+      "inputSha256": "7c8d87e4d27046d7b14ecadeb91c853b42452a8b73d1c756cfc8ff101dd60a35",
+      "sha256": "fa87e3f785ac63b1e5b68eb4e907379e415703b126a5e60ea51ef9fcfcef9eab",
+      "bytes": 34400
+    },
+    "vendor/football/united-kingdom/en-301.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png",
+      "inputSha256": "bdb368111c1b51415d2b32798e79b11b7bc3c86923cb94356dd18bacb06c50a9",
+      "sha256": "375f386d8cb12a51c146493bd6f3b32be93b3a4359144f5014bebb5d9b06fb92",
+      "bytes": 18090
+    },
+    "vendor/football/united-kingdom/en-304.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/304.png",
+      "inputSha256": "bd6f3dc45851ab4db00c4be7167f9407c3fa38f57e6985a07af870114bbe8be6",
+      "sha256": "022806526f5a6f56accd0c8aadacb3f4f15010d0868918fa5c4bc6c99dc0980e",
+      "bytes": 9222
+    },
+    "vendor/football/united-kingdom/en-390.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png",
+      "inputSha256": "a474e4c39222dcdcf3b34684b5147ac5ccb07382551eb747549177caedeef274",
+      "sha256": "54e59855cd9f1f8ec50d61373c7e589b7c2504184499e3ba46f6128336386e34",
+      "bytes": 22152
+    },
+    "vendor/football/united-kingdom/en-340.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/340.png",
+      "inputSha256": "a3ed338d0e99909ace83163cdfbce692688ede02a45a8ba4c73eb4ab2fb0eb3e",
+      "sha256": "2864878c10d501351723904783ba4cf0fa77f7ceb686e65ac5b15bee2793c399",
+      "bytes": 16810
+    },
+    "vendor/football/united-kingdom/en-311.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
+      "inputSha256": "570652ecb0ade2908cdc1d79bb761af24d33663904e6c45bd433cfea601796ae",
+      "sha256": "8284cbcfec9d0fb57f7770582ccf1ee497c4dd3a46d13f639db586552fe978d0",
+      "bytes": 6312
+    },
+    "vendor/football/united-kingdom/en-342.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
+      "inputSha256": "0ce90c0a8a2c5ca16dfdfe4057525a61e42011b465bb1ec298df1bc2c628adf8",
+      "sha256": "cccb13357e20ecab97d08e0af3d6afc007664c34f5f919f40f92ea9c569f701d",
+      "bytes": 36260
+    },
+    "vendor/football/united-kingdom/en-307.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
+      "inputSha256": "3656f5edc614d89d1c1527659c3a19f9290d434a116cc9f9f375a0fb965aa09f",
+      "sha256": "f54af786f2c9bf5f67fcc1fd2be986af511ae116b6916d387dd020c7e8a5cf7f",
+      "bytes": 25552
+    },
+    "vendor/football/united-kingdom/en-338.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/338.png",
+      "inputSha256": "976c806c745cc6ac2a9b76069b9850473c4142e6d3b01272cab74aed0857884c",
+      "sha256": "2bc0c703173513a444763e5c57a00ea172535041e7cb1e052cf7cbc8f8aafb48",
+      "bytes": 31742
+    },
+    "vendor/football/united-kingdom/en-399.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
+      "inputSha256": "24e02e4c8ca0e1bdd73578c5a899dbb1273d539787bbfc821d7d781a3bebec46",
+      "sha256": "d03d090c07d4b9e4c9286f40e3290e9d6a165fe17f097c4ec44a61af676af4b3",
+      "bytes": 29478
+    },
+    "vendor/football/united-kingdom/en-285.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png",
+      "inputSha256": "6118dc773f7967739402a5e3260041d4b978a11eb2363a6c875909d9a065a213",
+      "sha256": "e17f34fde58e5fc24595b69c9fac9748d82f8ce2a09f143b9e6ac6a7e4423416",
+      "bytes": 15586
+    },
+    "vendor/football/united-kingdom/en-400.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
+      "inputSha256": "e4552bd1c57d4c7c9ac891d66b5c64e504c7f20e55788a84aacd784e026b1ef0",
+      "sha256": "be73dba8581c7d7a71c87338bb17046243226a2502dd9dc66ee23cc12dad70c7",
+      "bytes": 36482
+    },
+    "vendor/football/united-kingdom/en-350.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
+      "inputSha256": "dfb4e274658740cb0bcf847f262de4a88bb9b5c39863f261af31a28a7f6f2877",
+      "sha256": "06ebd5a522b63c047ebe64ff35c3a79ae3ca933d0ceb07e8f0c24ef411341f78",
+      "bytes": 25816
+    },
+    "vendor/football/united-kingdom/en-344.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png",
+      "inputSha256": "aadc54be77340617db59cb3ae8016a43cb9da2272b013984c6a5b9a6a0144126",
+      "sha256": "cb90f8a86b8bbe28c268a81f6d2b976e7add9cf755361b9fc2e9af972f2be3fa",
+      "bytes": 30780
+    }
+  },
+  "crestCredit": "Club crests remain the marks of their respective owners; retained source URLs identify the original artwork."
+}

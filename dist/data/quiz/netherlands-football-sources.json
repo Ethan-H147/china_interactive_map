@@ -1,0 +1,823 @@
+{
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "rosterSha256": "988602c1893ecb7c766d142991a8c8f9d44f392f6b1635e81d3561861a1ffaef",
+  "rosterFile": "scripts/football-sources/netherlands/clubs.json",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Eredivisie",
+      "count": 18,
+      "sourceUrl": "https://eredivisie.nl/competitie/clubs/"
+    },
+    {
+      "tier": 2,
+      "name": "Eerste Divisie",
+      "count": 20,
+      "sourceUrl": "https://keukenkampioendivisie.nl/teams"
+    },
+    {
+      "tier": 3,
+      "name": "Tweede Divisie",
+      "count": 18,
+      "sourceUrl": "https://www.knvb.nl/downloads/bestand/30111/indeling-2e-3e-en-4e-divisie-mannen"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "FOOTBALL-nl-2726",
+      "en": "ADO Den Haag",
+      "city": "Den Haag",
+      "stadium": "WerkTalent Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q720978",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png"
+    },
+    {
+      "id": "FOOTBALL-nl-140",
+      "en": "AZ",
+      "city": "Alkmaar",
+      "stadium": "AFAS Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q291590",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png"
+    },
+    {
+      "id": "FOOTBALL-nl-139",
+      "en": "Ajax",
+      "city": "Amsterdam",
+      "stadium": "Johan Cruijff Arena",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q207109",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png"
+    },
+    {
+      "id": "FOOTBALL-nl-2566",
+      "en": "Excelsior",
+      "city": "Rotterdam",
+      "stadium": "Stadion Woudestein",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2298643",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png"
+    },
+    {
+      "id": "FOOTBALL-nl-145",
+      "en": "FC Groningen",
+      "city": "Groningen",
+      "stadium": "Euroborg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1374804",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png"
+    },
+    {
+      "id": "FOOTBALL-nl-152",
+      "en": "FC Twente",
+      "city": "Enschede",
+      "stadium": "De Grolsch Veste",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q727389",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png"
+    },
+    {
+      "id": "FOOTBALL-nl-153",
+      "en": "FC Utrecht",
+      "city": "Utrecht",
+      "stadium": "Stadion Galgenwaard",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1675996",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png"
+    },
+    {
+      "id": "FOOTBALL-nl-142",
+      "en": "Feyenoord",
+      "city": "Rotterdam",
+      "stadium": "De Kuip",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q330298",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png"
+    },
+    {
+      "id": "FOOTBALL-nl-143",
+      "en": "Fortuna Sittard",
+      "city": "Sittard",
+      "stadium": "Fortuna Sittard Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1569222",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3706",
+      "en": "Go Ahead Eagles",
+      "city": "Deventer",
+      "stadium": "De Adelaarshorst",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q777926",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png"
+    },
+    {
+      "id": "FOOTBALL-nl-146",
+      "en": "SC Heerenveen",
+      "city": "Heerenveen",
+      "stadium": "Abe Lenstra Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q318125",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png"
+    },
+    {
+      "id": "FOOTBALL-nl-147",
+      "en": "NEC",
+      "city": "Nijmegen",
+      "stadium": "Goffertstadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q720983",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png"
+    },
+    {
+      "id": "FOOTBALL-nl-2565",
+      "en": "PEC Zwolle",
+      "city": "Zwolle",
+      "stadium": "MAC³PARK Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1141104",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png"
+    },
+    {
+      "id": "FOOTBALL-nl-148",
+      "en": "PSV",
+      "city": "Eindhoven",
+      "stadium": "Philips Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q500972",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3736",
+      "en": "SC Cambuur",
+      "city": "Leeuwarden",
+      "stadium": "Kooi Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q122459692",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png"
+    },
+    {
+      "id": "FOOTBALL-nl-151",
+      "en": "Sparta Rotterdam",
+      "city": "Rotterdam",
+      "stadium": "Sparta-Stadion Het Kasteel",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q668094",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3735",
+      "en": "Telstar",
+      "city": "Velsen-Zuid",
+      "stadium": "711 Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1851894",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png"
+    },
+    {
+      "id": "FOOTBALL-nl-156",
+      "en": "Willem II",
+      "city": "Tilburg",
+      "stadium": "Koning Willem II Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1408176",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png"
+    },
+    {
+      "id": "FOOTBALL-nl-5291",
+      "en": "Almere City",
+      "city": "Almere",
+      "stadium": "Yanmar Hanasaka Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q255387",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/5291.png"
+    },
+    {
+      "id": "FOOTBALL-nl-144",
+      "en": "De Graafschap",
+      "city": "Doetinchem",
+      "stadium": "De Vijverberg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q606265",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/144.png"
+    },
+    {
+      "id": "FOOTBALL-nl-271",
+      "en": "FC Den Bosch",
+      "city": "Den Bosch",
+      "stadium": "Stadion De Vliert",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1855763",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/271.png"
+    },
+    {
+      "id": "FOOTBALL-nl-4426",
+      "en": "FC Dordrecht",
+      "city": "Dordrecht",
+      "stadium": "M-Scores Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1139863",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/4426.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3732",
+      "en": "FC Eindhoven",
+      "city": "Eindhoven",
+      "stadium": "Jan Louwers Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q643426",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3732.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3707",
+      "en": "FC Emmen",
+      "city": "Emmen",
+      "stadium": "De Oude Meerdijk",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2093331",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3707.png"
+    },
+    {
+      "id": "FOOTBALL-nl-2727",
+      "en": "FC Volendam",
+      "city": "Volendam",
+      "stadium": "Kras Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q953663",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2727.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3775",
+      "en": "Helmond Sport",
+      "city": "Helmond",
+      "stadium": "MySteel Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q132997935",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3775.png",
+      "note": "Current home is the new MySteel Stadion, opened in 2025 and renamed in July 2026, rather than the old De Braak."
+    },
+    {
+      "id": "FOOTBALL-nl-3708",
+      "en": "Heracles Almelo",
+      "city": "Almelo",
+      "stadium": "Erve Asito",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q11969",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3708.png"
+    },
+    {
+      "id": "FOOTBALL-nl-18748",
+      "en": "Jong AZ",
+      "city": "Wijdewormer",
+      "stadium": "AFAS Trainingscomplex",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q108060876",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18748.png",
+      "note": "AZ’s reserve team plays at the AFAS Training Complex in Wijdewormer; the provider’s Den Haag locality is stale."
+    },
+    {
+      "id": "FOOTBALL-nl-10597",
+      "en": "Jong Ajax",
+      "city": "Amsterdam-Duivendrecht",
+      "stadium": "Sportpark De Toekomst",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2200744",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/10597.png"
+    },
+    {
+      "id": "FOOTBALL-nl-18278",
+      "en": "Jong FC Utrecht",
+      "city": "Utrecht",
+      "stadium": "Sportcomplex Zoudenbalch",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3264211",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18278.png"
+    },
+    {
+      "id": "FOOTBALL-nl-9983",
+      "en": "Jong PSV",
+      "city": "Eindhoven",
+      "stadium": "PSV Campus De Herdgang",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1958120",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9983.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3730",
+      "en": "MVV Maastricht",
+      "city": "Maastricht",
+      "stadium": "De Geusselt",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q391473",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3730.png"
+    },
+    {
+      "id": "FOOTBALL-nl-141",
+      "en": "NAC Breda",
+      "city": "Breda",
+      "stadium": "Rat Verlegh Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2132300",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/141.png"
+    },
+    {
+      "id": "FOOTBALL-nl-155",
+      "en": "RKC Waalwijk",
+      "city": "Waalwijk",
+      "stadium": "Mandemakers Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q942073",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/155.png"
+    },
+    {
+      "id": "FOOTBALL-nl-149",
+      "en": "Roda JC",
+      "city": "Kerkrade",
+      "stadium": "Parkstad Limburg Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q476674",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/149.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3728",
+      "en": "TOP Oss",
+      "city": "Oss",
+      "stadium": "Frans Heesen Stadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1320629",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3728.png"
+    },
+    {
+      "id": "FOOTBALL-nl-3731",
+      "en": "VVV-Venlo",
+      "city": "Venlo",
+      "stadium": "Covebo Stadion – De Koel",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2262017",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3731.png"
+    },
+    {
+      "id": "FOOTBALL-nl-154",
+      "en": "Vitesse",
+      "city": "Arnhem",
+      "stadium": "GelreDome",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1067235",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/154.png"
+    },
+    {
+      "id": "FOOTBALL-nl-afc",
+      "en": "AFC",
+      "city": "Amsterdam",
+      "stadium": "Sportpark Goed Genoeg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q131460707",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/d/de/Amsterdamsche_FC_%28logo%29.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-bvv-barendrecht",
+      "en": "BVV Barendrecht",
+      "city": "Barendrecht",
+      "stadium": "Sportpark De Bongerd",
+      "coordinateSource": "https://www.openstreetmap.org/way/89702722",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/43/BVV_Barendrecht_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-gvvv",
+      "en": "GVVV",
+      "city": "Veenendaal",
+      "stadium": "Sportpark Panhuis",
+      "coordinateSource": "https://www.openstreetmap.org/way/64605631",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/46/GVVV_football_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-hhc-hardenberg",
+      "en": "HHC Hardenberg",
+      "city": "Hardenberg",
+      "stadium": "Sportpark De Boshoek",
+      "coordinateSource": "https://www.openstreetmap.org/way/557664351",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/59/HHC_Hardenberg.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-hsv-hoek",
+      "en": "HSV Hoek",
+      "city": "Hoek",
+      "stadium": "Sportpark Denoek",
+      "coordinateSource": "https://www.openstreetmap.org/node/2751135821",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c8/HSV_Hoek_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-ijsselmeervogels",
+      "en": "IJsselmeervogels",
+      "city": "Spakenburg",
+      "stadium": "Sportpark De Westmaat",
+      "coordinateSource": "https://www.openstreetmap.org/way/74795003",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0e/IJsselmeervogels_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-jong-almere-city",
+      "en": "Jong Almere City",
+      "city": "Almere",
+      "stadium": "Sportpark Fanny Blankers Koen – Academyveld (veld 4)",
+      "coordinateSource": "https://www.europlan-online.de/sportpark-fanny-blankers-koen-veld1/stadion-26013.html",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8f/Almere_City_FC_logo.svg",
+      "note": "Normal home is academy field 4, separately mapped from Almere City’s senior stadium. The 15 August 2026 game exceptionally moved into the main stadium because of a youth tournament.",
+      "officialClub": "https://www.rijnsburgseboys.nl/nieuws/voorbeschouwing-jong-almere-city-fc-rijnsburgse-boys-3/"
+    },
+    {
+      "id": "FOOTBALL-nl-jong-sparta-rotterdam",
+      "en": "Jong Sparta Rotterdam",
+      "city": "Rotterdam",
+      "stadium": "Robey Academy (Nieuw Terbregge)",
+      "coordinateSource": "https://www.openstreetmap.org/way/490885432",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9f/Sparta_Rotterdam_logo.svg",
+      "note": "Current reserve-team home is Robey Academy, not the senior team’s Het Kasteel.",
+      "officialClub": "https://www.sparta-rotterdam.nl/sportcomplex-nieuw-terbregge-krijgt-nieuwe-naam-robey-academy/?wereld=clubliefde"
+    },
+    {
+      "id": "FOOTBALL-nl-koninklijke-hfc",
+      "en": "Koninklijke HFC",
+      "city": "Haarlem",
+      "stadium": "Sportpark Spanjaardslaan",
+      "coordinateSource": "https://www.openstreetmap.org/way/39323667",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/71/Koninklijke_HFC.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-vv-katwijk",
+      "en": "VV Katwijk",
+      "city": "Katwijk-Noord",
+      "stadium": "Sportpark De Krom",
+      "coordinateSource": "https://www.openstreetmap.org/way/6315929",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/5e/VV_Katwijk_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-vv-kloetinge",
+      "en": "VV Kloetinge",
+      "city": "Kloetinge",
+      "stadium": "Sportpark Wesselopark",
+      "coordinateSource": "https://www.openstreetmap.org/way/1025456884",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/87/VV_Kloetinge.png"
+    },
+    {
+      "id": "FOOTBALL-nl-kozakken-boys",
+      "en": "Kozakken Boys",
+      "city": "Werkendam",
+      "stadium": "Sportpark De Zwaaier",
+      "coordinateSource": "https://www.openstreetmap.org/way/1324650098",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/03/Kozakken_Boys_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-quick-boys",
+      "en": "Quick Boys",
+      "city": "Katwijk aan Zee",
+      "stadium": "Sportpark Nieuw Zuid",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q66004335",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kvv-quick-boys-logo.png"
+    },
+    {
+      "id": "FOOTBALL-nl-rijnsburgse-boys",
+      "en": "Rijnsburgse Boys",
+      "city": "Rijnsburg",
+      "stadium": "Sportpark Middelmors",
+      "coordinateSource": "https://www.openstreetmap.org/way/204869221",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9f/Rijnsburgse_Boys_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-rohda-raalte",
+      "en": "Rohda Raalte",
+      "city": "Raalte",
+      "stadium": "Sportpark Tijenraan",
+      "coordinateSource": "https://www.openstreetmap.org/node/2504160284",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/17/Rohda_Raalte.png",
+      "note": "Dot marks the football club’s ground address at Zwolsestraat 76; the adjacent Tijenraan swimming-pool sports centre is a different site."
+    },
+    {
+      "id": "FOOTBALL-nl-sv-spakenburg",
+      "en": "SV Spakenburg",
+      "city": "Spakenburg",
+      "stadium": "Sportpark De Westmaat",
+      "coordinateSource": "https://www.openstreetmap.org/way/74797649",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/67/SV_Spakenburg_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-de-treffers",
+      "en": "De Treffers",
+      "city": "Groesbeek",
+      "stadium": "Sportpark Zuid",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q14378307",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/25/De_Treffers_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-nl-rkav-volendam",
+      "en": "RKAV Volendam",
+      "city": "Volendam",
+      "stadium": "KWABO-stadion (Sportpark Volendam)",
+      "coordinateSource": "https://www.europlan-online.de/kwabo-stadion/stadion-7748.html",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/cb/RKAV_Volendam_logo.svg",
+      "note": "RKAV’s home pitch is separate from FC Volendam’s nearby Kras Stadion."
+    }
+  ],
+  "images": {
+    "vendor/football/netherlands/nl-2726.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
+      "inputSha256": "d2345a276eac5281222d4b9c2daad3a1b84d1a057eeb380c0a07fddef22f8362",
+      "sha256": "a05bfafe1337e42f1cc466d93a52ba1590933b0cd033167c8afc1bc02f73182b",
+      "bytes": 28238
+    },
+    "vendor/football/netherlands/nl-140.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
+      "inputSha256": "241b04b8bb4bd8407f99c01c1fa526d5f819d75053f1ca1acd4aa564ed7646cf",
+      "sha256": "8cabf24fa59d30847d2f091e049fee4fa9db3685ea29cd129a86899eff1cd763",
+      "bytes": 6612
+    },
+    "vendor/football/netherlands/nl-139.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+      "inputSha256": "cc0f6f96fafba7ca9f451f67727f9395ee8141112e4fef37b231b99763d38d27",
+      "sha256": "531e7f8650af97bf933aecd3887826d5d6290674ddf97728e04e1aea18e94998",
+      "bytes": 22376
+    },
+    "vendor/football/netherlands/nl-2566.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
+      "inputSha256": "d8aa6615acf15704d30007c566929e9f2a932e5945d0eb8f47dd5fa43121a18f",
+      "sha256": "6116dfacad337183f100721fe8b9fc51576b4c9428e74011adc5e3d6aabfae69",
+      "bytes": 11570
+    },
+    "vendor/football/netherlands/nl-145.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
+      "inputSha256": "2c64202333f9384e23073a2bf99d33fb3a25d0ef32ae24873faec7980f5d2aab",
+      "sha256": "d037a61d3a5912e62658d428ca1be6c70a7425c7cd5579299e56d77945d02e57",
+      "bytes": 14350
+    },
+    "vendor/football/netherlands/nl-152.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+      "inputSha256": "8fca71492fa5e02c31ece3f4b1f84b4022b15a76b8fb202f8effb8bf7bdd4c7b",
+      "sha256": "0fbcecede59ce09538255093fe1df8481ee55727b3bade66cec7f448f1593e17",
+      "bytes": 25516
+    },
+    "vendor/football/netherlands/nl-153.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
+      "inputSha256": "14bbbbe40b098db024a700048150b3e0e7dfca1cf995b8c1e7bec97b11b07fa6",
+      "sha256": "2059a4187f3577ea56600e9dc1408c2e314515b855a91c45e689bf8d818e6d2b",
+      "bytes": 11830
+    },
+    "vendor/football/netherlands/nl-142.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+      "inputSha256": "d5d8fe372eb2d09045881a7e4bd802dcd727bb312ca060c97bf943ef0a9d9beb",
+      "sha256": "35af9ff97e721b567e5fb9e4f8f84d376979fd100d63fef383ddadb7a80b24fd",
+      "bytes": 21750
+    },
+    "vendor/football/netherlands/nl-143.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png",
+      "inputSha256": "0fae198905cb7e25af670a14032575d64bc0be9bdb5498270c2ce57d8ee87b32",
+      "sha256": "6e53f97f45cbb4dd4e7c941ad49e211b8249c4853b25235a679a5b9c678f5657",
+      "bytes": 21470
+    },
+    "vendor/football/netherlands/nl-3706.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
+      "inputSha256": "67d619721d17bb7a48dde252340c632432259a1077b08770300ae273263270d9",
+      "sha256": "7db5eed1cf80052355188bde2db644fa2129f427868f1fa549791d285c1b8b01",
+      "bytes": 31672
+    },
+    "vendor/football/netherlands/nl-146.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
+      "inputSha256": "f9c6ecafe8a5e5848d2ab5597e51966057b71466fd334057c7d8aa50a7ff24b7",
+      "sha256": "ec88c5482a9f3ef82514c536cd064b40261d159825ceecac1e0381e5077ab35c",
+      "bytes": 19334
+    },
+    "vendor/football/netherlands/nl-147.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+      "inputSha256": "3a2cc8e602f2544c105c4c95fe71042b38c1528fbf6f42bd034f90e13ae88e5c",
+      "sha256": "e36dd829e9bd1fb1d89bb5a1c3e67dc24e8eaa48dc780cad788c455a165ce724",
+      "bytes": 24582
+    },
+    "vendor/football/netherlands/nl-2565.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
+      "inputSha256": "3d24db5d34f344717ab6ad0932d7a05820dc7cfd76ed9d2aecb23ccc8556e1e3",
+      "sha256": "53c913f68453ae82cb6e6dc24771e8a171bc9dc1febf2a1bf77eae86e3741453",
+      "bytes": 19582
+    },
+    "vendor/football/netherlands/nl-148.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+      "inputSha256": "ea19561d9ae97eb761ab39f5b400b3ce5f64db43f934a595183e4208030f2d0b",
+      "sha256": "180be69c67760be7c1abfe7f2a3b024f8c6b3b5c18f7142d3ad7eb189d69ca26",
+      "bytes": 23042
+    },
+    "vendor/football/netherlands/nl-3736.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png",
+      "inputSha256": "a5942c7a0a2a69224286ce7ab4879f6b0bec1d80c8871bacd4edde42ec2ad50d",
+      "sha256": "3b4ab6d8ca3a1937e9f5a191e5a4a0ad2c76274edb9beef046314006c77710bf",
+      "bytes": 15374
+    },
+    "vendor/football/netherlands/nl-151.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
+      "inputSha256": "1a54dad491e18231b3235e74598e2eddc48a9bcdfcc1108ec6060fee246e17ee",
+      "sha256": "8c33684d7a2eaae770f46c531ad7e938348005f8a5d4158e5983dbdf9752480c",
+      "bytes": 18740
+    },
+    "vendor/football/netherlands/nl-3735.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
+      "inputSha256": "57fec3c81aecd2efc56494b85031e43041533e1240a6abef0cf618abf2804d44",
+      "sha256": "cb89fe98e1d2a6913774b039a260693cdfdce8bb88757115c6615140899405e7",
+      "bytes": 24140
+    },
+    "vendor/football/netherlands/nl-156.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
+      "inputSha256": "1d693c20e28ab2b275d7e57635588e3784fad782f68429a11ca4d3c9136fa683",
+      "sha256": "03b82db0faa66e88e8073ab67f7da4b1853bc6d00855f32e36c7adf256bcc4d9",
+      "bytes": 14648
+    },
+    "vendor/football/netherlands/nl-5291.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/5291.png",
+      "inputSha256": "dadf9ebb0373842ba7cb4f30e5d328bdd3190e7e611e21ea5ae5ee98044dc21f",
+      "sha256": "5de7e11e2200f9cf7dd73198f9864f5cbc3d31eb6879f25ca4a3fe7791d614c1",
+      "bytes": 24280
+    },
+    "vendor/football/netherlands/nl-144.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/144.png",
+      "inputSha256": "202f7cef2fc04f4348f05c7b91ad8adf9b4b9fd50793d7d1497c7538ee988c33",
+      "sha256": "8ad1b8ee48121c82e5396b6d639e400fd810eb87592b7de8549c0c0e78521767",
+      "bytes": 21488
+    },
+    "vendor/football/netherlands/nl-271.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/271.png",
+      "inputSha256": "8d196c085b1c8218bd994f98007015e35b989e312e21d6b0859dfdaeb3dd1052",
+      "sha256": "a45ce6c5b8c2642fc35bd4cbdfb662d52e75796d2dae2998cfcddb9817fdc4a2",
+      "bytes": 18624
+    },
+    "vendor/football/netherlands/nl-4426.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/4426.png",
+      "inputSha256": "b0000a4c4a894d3d20fec045b448f22002fd1ba01af49b426c7aad6a6b2f80e1",
+      "sha256": "af2066ba1aae2afb17d489feb065e682b91a5e15d1993b04d37abb6bfdb65485",
+      "bytes": 19482
+    },
+    "vendor/football/netherlands/nl-3732.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3732.png",
+      "inputSha256": "4a6743e6c97c0f3a0af3f4d26ff2d0fec49dec9d77d96717c33d699ae568c3be",
+      "sha256": "3d7c8a795bc7d6480f244e50fbc5adeb0a46c8f6370a3bc6ae9bcd3976bcf874",
+      "bytes": 16896
+    },
+    "vendor/football/netherlands/nl-3707.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3707.png",
+      "inputSha256": "55337ad7a2d1d69989381bde666aa187dfac6214fb8fb3c732ee7369ceebee9f",
+      "sha256": "c2631129a80a5d7413180c3464e8f5bead11f2197a2c89590e31683d5f3b89c6",
+      "bytes": 13600
+    },
+    "vendor/football/netherlands/nl-2727.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/2727.png",
+      "inputSha256": "9cc89b7109038624b329413fe7f79cfb0ffb9cf4ee9233c0a5a1c19acd604654",
+      "sha256": "e91d60171d7122bc9beafc469784d49ab31072bf88573f588d8e80f94640b929",
+      "bytes": 25778
+    },
+    "vendor/football/netherlands/nl-3775.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3775.png",
+      "inputSha256": "aca1d22785d9bbf3ff0de0a35ce33ce0282229d97278c38a6ebd242c8b3caf94",
+      "sha256": "1df38bf003489298b9ea36fee84df38dc03c000de672646d1894b35ce179fac6",
+      "bytes": 11024
+    },
+    "vendor/football/netherlands/nl-3708.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3708.png",
+      "inputSha256": "af12d0a218bd141c0fbbf57d30581488bfefedac42f63f4b6e359f7436dbc6f2",
+      "sha256": "6c710a74e64c35d01b76f37925030aefd78b0472d32f88a78f7a47c2558e5741",
+      "bytes": 12884
+    },
+    "vendor/football/netherlands/nl-18748.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18748.png",
+      "inputSha256": "4e5ce52518a6de2da98e0ef27c2f53a021a0d06448f9740260257f52e3cec4b4",
+      "sha256": "78724371a026015cd3d5a68fadb52d240d15ad0bbd53f9fc8368784edb9baacb",
+      "bytes": 7746
+    },
+    "vendor/football/netherlands/nl-10597.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/10597.png",
+      "inputSha256": "60696ec63ecdcd6d3107e2c5825dbf7082e1f51f2deb7e65767d066dfb9f5013",
+      "sha256": "a53e52ed1f1300c82c08ac6dee51b6ab7ab29ef121f1e23f06d617b2f30d42e0",
+      "bytes": 22630
+    },
+    "vendor/football/netherlands/nl-18278.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18278.png",
+      "inputSha256": "8ff3d9064e9b8f731b0c22935335f6b07f86769e2890f13092d4518de33874cb",
+      "sha256": "f44bcfa2a7e15ef674268ef187940d78eea8eaa534b06098bec620ccf2f363b8",
+      "bytes": 12172
+    },
+    "vendor/football/netherlands/nl-9983.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/9983.png",
+      "inputSha256": "694ae269cb056b4299a8b420946f84c2e482b5d23ee3e636cd2e45226d4f9dfd",
+      "sha256": "d4bffbda98e274b71f191877bf9bbbbe9be27ff799cb635de860f5b6407728b9",
+      "bytes": 22508
+    },
+    "vendor/football/netherlands/nl-3730.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3730.png",
+      "inputSha256": "0398629d73d0ded0571f3214a58503f592535224ee42fc3139c028d012444c1f",
+      "sha256": "f04d3ad638d09288a4f63ca20fb507d3acce7200a336571627df283fceb9ea7c",
+      "bytes": 8488
+    },
+    "vendor/football/netherlands/nl-141.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/141.png",
+      "inputSha256": "3320a922f09ae822c1fceee9ad6df4a28ddf7708560bb7a9d7cf51a437ae97bb",
+      "sha256": "686975ffc3e9795b015302006c8d42956b03147d46a8659645cc7ac76a33c985",
+      "bytes": 13416
+    },
+    "vendor/football/netherlands/nl-155.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/155.png",
+      "inputSha256": "b03c7ed61e907d94fb3a559f1906560d0c7c6e289b70bbb3546f02f085641f8e",
+      "sha256": "bd79f16014b3d722a78ba25271b159f5c1f641118895f88302672291df427286",
+      "bytes": 12538
+    },
+    "vendor/football/netherlands/nl-149.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/149.png",
+      "inputSha256": "6023abead803e8eeec997db2c9eabae236ee03486868015c05713de869359087",
+      "sha256": "26bb6e78a970f4b2b25dae9343c16e78bae15dcd7441e0e4ab9e42ac2b6ddcf5",
+      "bytes": 16230
+    },
+    "vendor/football/netherlands/nl-3728.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3728.png",
+      "inputSha256": "2231fa3adeb7397981e52c38abd83abf022b3b3ee85a71e2369a602f03e875af",
+      "sha256": "6f9c9ff3935c32efd4257036991f76b03f3a394ea64f8e36861e5475e6accb7c",
+      "bytes": 12378
+    },
+    "vendor/football/netherlands/nl-3731.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/3731.png",
+      "inputSha256": "8cc59cc4e564526448110970356c74915ce73409f8ac7b3046f4801fc419992f",
+      "sha256": "36d2ec2caece34d26e097facf6a7ee18e4a052ed651a73645ce332891e3f962e",
+      "bytes": 13930
+    },
+    "vendor/football/netherlands/nl-154.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/154.png",
+      "inputSha256": "61b02c33ade555f9f315df8fccdd13928ed153e8250adc837aeb76bac7be74f2",
+      "sha256": "d5ac616858a4d40018ced8b1610efbe7a2946386c078083d14d2ce63e60416b5",
+      "bytes": 15712
+    },
+    "vendor/football/netherlands/nl-afc.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/de/Amsterdamsche_FC_%28logo%29.svg",
+      "inputSha256": "d4fca4da4761ea9151f8fcc8781b9cf720eaebc595ed74bd6351871d857e7c6b",
+      "sha256": "e3baf8a13e0862765ee9913e26420fb0a138fbb09595b0e2a7600ce71fe563f0",
+      "bytes": 14248
+    },
+    "vendor/football/netherlands/nl-bvv-barendrecht.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/43/BVV_Barendrecht_logo.svg",
+      "inputSha256": "346b16e7e9c08ef361a37c588519301851610a47a7dae50b011f70bb2476cacd",
+      "sha256": "e3dc1c009e3cf5647e3f18ab714b4f4c93350310dcd01a44fb11511345f24ec2",
+      "bytes": 12980
+    },
+    "vendor/football/netherlands/nl-gvvv.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/46/GVVV_football_logo.svg",
+      "inputSha256": "c63510f66144bf8d28e03183b6d1e0c4abbaabf1b8193aca6df14bd4fc0d2366",
+      "sha256": "04ea71bcfcad02705352c54a8abca15ce9364dbbca0cbf4f7995b95b480bc324",
+      "bytes": 8974
+    },
+    "vendor/football/netherlands/nl-hhc-hardenberg.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/59/HHC_Hardenberg.svg",
+      "inputSha256": "c4f0566bc366f85dbbb53238ab7f54d845b4daf11401ee8620cee5a4ee1575a9",
+      "sha256": "2910df2e59213c6735faa9bb030c84ac28508ec7e9212dac4f9db80d849444b6",
+      "bytes": 12776
+    },
+    "vendor/football/netherlands/nl-hsv-hoek.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/c8/HSV_Hoek_logo.svg",
+      "inputSha256": "a5b0f2ce65ce4f470fb9fbd9bb6c2669a8b0e0d718b1fdfd95efa1eb86d6e2e8",
+      "sha256": "68d578dd4b5730504c556aa6e740e605f21d6f6ec47a0b508f5c087b35807b9f",
+      "bytes": 17550
+    },
+    "vendor/football/netherlands/nl-ijsselmeervogels.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/0e/IJsselmeervogels_logo.svg",
+      "inputSha256": "21d0e637c3c7049813690e812d2b21d12bb17141ffe1eda1326102d2c39a352f",
+      "sha256": "239070133bc0e324780ec213445d8b31580ef49dc4617037a25c159bfafaea72",
+      "bytes": 9960
+    },
+    "vendor/football/netherlands/nl-jong-almere-city.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/8f/Almere_City_FC_logo.svg",
+      "inputSha256": "4f221ce44d51359d93336cb1d5fefed03b623c9f2682c84e444cba6776e3f7fc",
+      "sha256": "8b0ea6fe4689eb6eec0ba4a04acd0a9ba7330dc42aa90f4b9f86439ac15e24be",
+      "bytes": 17200
+    },
+    "vendor/football/netherlands/nl-jong-sparta-rotterdam.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/9f/Sparta_Rotterdam_logo.svg",
+      "inputSha256": "f026657ac3cf55f53ab77be06f882df9cd31b0755d0a487b12b493db0be90e9d",
+      "sha256": "f0500971659046617e075ca6213fa2ba4616dc7f7846a7bf659b531587330335",
+      "bytes": 13474
+    },
+    "vendor/football/netherlands/nl-koninklijke-hfc.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/71/Koninklijke_HFC.svg",
+      "inputSha256": "2706b461904544d238f07cdb6325870b0139f348e7df0f491d406f97f63a93e3",
+      "sha256": "f840f18481935d618e07695e0c7638a178428394b575c0322300c9bee0e39cb9",
+      "bytes": 6176
+    },
+    "vendor/football/netherlands/nl-vv-katwijk.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/5e/VV_Katwijk_logo.svg",
+      "inputSha256": "c49646f14d56c163153937edd5ffaf5c8060c0dc41e52a717e3c326983acb2d5",
+      "sha256": "f8f70257131595fb9e26ad65e77bd0fde1690eaf96d80caa18f8472a35e5e9d2",
+      "bytes": 7918
+    },
+    "vendor/football/netherlands/nl-vv-kloetinge.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/87/VV_Kloetinge.png",
+      "inputSha256": "7af8319c586093e22beaee4c063677662eb28466f8eda4bc4287151395919663",
+      "sha256": "c1072255cb0ae41000b6d2d8a4f6f94152eab83b19a40e3bbc7e887072089311",
+      "bytes": 32520
+    },
+    "vendor/football/netherlands/nl-kozakken-boys.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/03/Kozakken_Boys_logo.svg",
+      "inputSha256": "f370c2ceaeb9f0d566ce112c6db11a03f76a42d09c58c2e91311b95c7433260a",
+      "sha256": "ccd28c3e13978ed744b0e1178b3a940fa33337c576af30153abe18e05e56ff80",
+      "bytes": 8190
+    },
+    "vendor/football/netherlands/nl-quick-boys.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kvv-quick-boys-logo.png",
+      "inputSha256": "21f66952cfcaf9b17ceab7c1414770fe0c3eb2489c8a21f074f5bb118ae12b58",
+      "sha256": "746362541af1c502ee7655841f4c3ef51dd3c4d1cbac6631ac2c0666d54e6c1d",
+      "bytes": 10280
+    },
+    "vendor/football/netherlands/nl-rijnsburgse-boys.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/9f/Rijnsburgse_Boys_logo.svg",
+      "inputSha256": "c8dd2fa6f57cae614d99237007871564cbb474c9d05677a9684c8c7599f7708a",
+      "sha256": "712a42762bd8e0631bdb2cd3f0232808802b50428be52475c1e6de583db33d2b",
+      "bytes": 7810
+    },
+    "vendor/football/netherlands/nl-rohda-raalte.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/17/Rohda_Raalte.png",
+      "inputSha256": "c0ea146a59dcdfd41149446ca2e49e098071c30d9a6cf52c2a8dd9d13b34092e",
+      "sha256": "b333b49ac09932ea856a9c1fc784c96d5b526cca37b49e6fd2dac26974cd20a5",
+      "bytes": 16770
+    },
+    "vendor/football/netherlands/nl-sv-spakenburg.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/67/SV_Spakenburg_logo.svg",
+      "inputSha256": "571a29154b38044aac26fe5f2f1b1db06ca56fdc3e3bf0eb47fa19be8c4508e9",
+      "sha256": "5475de744cd8921bdfc496fd00d0aa93c6bf6553fa3223e2dc3dad8310fbeccb",
+      "bytes": 11506
+    },
+    "vendor/football/netherlands/nl-de-treffers.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/25/De_Treffers_logo.svg",
+      "inputSha256": "50d9b159d58ffa4d70c2e822d5b3aef5e605c5c1cd42ed5f275dc55dae017076",
+      "sha256": "453f5a26fa95d7b5c2698eaa468960652037baea10964b5c676a58cbc2c1d70d",
+      "bytes": 5312
+    },
+    "vendor/football/netherlands/nl-rkav-volendam.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/cb/RKAV_Volendam_logo.svg",
+      "inputSha256": "b8e8683f0a4c02d49a1b049d11f72a0108910336279385f325dc4f76a81d4148",
+      "sha256": "3e0f8b981eb01ae2d7aa7e64e689bbd3f572b949a9b9d4ddebb2f5bd6c44518f",
+      "bytes": 16186
+    }
+  },
+  "crestCredit": "Club crests remain the marks of their respective owners; retained source URLs identify the original artwork."
+}

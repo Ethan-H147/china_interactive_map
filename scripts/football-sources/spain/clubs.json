@@ -1,0 +1,1983 @@
+{
+  "country": "spain",
+  "season": "2026–27",
+  "retrieved": "2026-10-29",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "LaLiga",
+      "sourceUrl": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "count": 20
+    },
+    {
+      "tier": 2,
+      "name": "Segunda División",
+      "sourceUrl": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "count": 22
+    },
+    {
+      "tier": 3,
+      "name": "Primera Federación",
+      "sourceUrl": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "count": 40,
+      "groups": 2
+    }
+  ],
+  "clubs": [
+    {
+      "id": "es-athletic-club",
+      "tier": 1,
+      "en": "Athletic Club",
+      "aliases": [
+        "ATH"
+      ],
+      "city": "Bilbao",
+      "stadium": "Estadio San Mamés",
+      "venueQid": "Q182864",
+      "center": [
+        -2.949369,
+        43.264205
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q182864",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/athletic.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/athletic-club",
+      "season": "2026–27",
+      "crest": "es-athletic-club.png"
+    },
+    {
+      "id": "es-atletico-de-madrid",
+      "tier": 1,
+      "en": "Atlético de Madrid",
+      "aliases": [
+        "Club Atlético de Madrid SAD",
+        "ATM"
+      ],
+      "city": "Madrid",
+      "stadium": "Riyadh Air Metropolitano",
+      "venueQid": "Q1369687",
+      "center": [
+        -3.599444,
+        40.436111
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369687",
+      "crestSource": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/atletico-de-madrid",
+      "season": "2026–27",
+      "crest": "es-atletico-de-madrid.png"
+    },
+    {
+      "id": "es-c-a-osasuna",
+      "tier": 1,
+      "en": "CA Osasuna",
+      "aliases": [
+        "Club Atlético Osasuna",
+        "OSA"
+      ],
+      "city": "Pamplona",
+      "stadium": "Estadio El Sadar",
+      "venueQid": "Q735783",
+      "center": [
+        -1.636944,
+        42.796667
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q735783",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/osasuna.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/c-a-osasuna",
+      "season": "2026–27",
+      "crest": "es-c-a-osasuna.png"
+    },
+    {
+      "id": "es-rc-celta",
+      "tier": 1,
+      "en": "Celta",
+      "aliases": [
+        "Real Club Celta de Vigo SAD",
+        "CEL"
+      ],
+      "city": "Vigo",
+      "stadium": "Estadio ABANCA Balaídos",
+      "venueQid": "Q1326578",
+      "center": [
+        -8.740328,
+        42.211861
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1326578",
+      "crestSource": "https://assets.laliga.com/assets/2025/07/11/small/0a796827f9e758d7d750db805adde7c5.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/rc-celta",
+      "season": "2026–27",
+      "crest": "es-rc-celta.png",
+      "sharedGround": "balaidos"
+    },
+    {
+      "id": "es-d-alaves",
+      "tier": 1,
+      "en": "Deportivo Alavés",
+      "aliases": [
+        "Deportivo Alavés SAD",
+        "ALA"
+      ],
+      "city": "Vitoria-Gasteiz",
+      "stadium": "Mendizorroza",
+      "venueQid": "Q1369390",
+      "center": [
+        -2.688044,
+        42.837111
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369390",
+      "crestSource": "https://assets.laliga.com/assets/2020/09/01/small/27002754a98bf535807fe49a24cc63ea.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/d-alaves",
+      "season": "2026–27",
+      "crest": "es-d-alaves.png"
+    },
+    {
+      "id": "es-elche-c-f",
+      "tier": 1,
+      "en": "Elche CF",
+      "aliases": [
+        "Elche Club de Fútbol SAD",
+        "ELC"
+      ],
+      "city": "Elche",
+      "stadium": "Estadio Martínez Valero",
+      "venueQid": "Q953600",
+      "center": [
+        -0.663333,
+        38.266944
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q953600",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/elche.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/elche-c-f",
+      "season": "2026–27",
+      "crest": "es-elche-c-f.png"
+    },
+    {
+      "id": "es-fc-barcelona",
+      "tier": 1,
+      "en": "FC Barcelona",
+      "aliases": [
+        "Fútbol Club Barcelona",
+        "BAR"
+      ],
+      "city": "Barcelona",
+      "stadium": "Spotify Camp Nou",
+      "venueQid": "Q159848",
+      "center": [
+        2.122777777,
+        41.380833333
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q159848",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/barcelona.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/fc-barcelona",
+      "season": "2026–27",
+      "crest": "es-fc-barcelona.png"
+    },
+    {
+      "id": "es-getafe-cf",
+      "tier": 1,
+      "en": "Getafe CF",
+      "aliases": [
+        "Getafe Club de Fútbol SAD",
+        "GET"
+      ],
+      "city": "Getafe",
+      "stadium": "Coliseum",
+      "venueQid": "Q929109",
+      "center": [
+        -3.714722,
+        40.325556
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q929109",
+      "crestSource": "https://assets.laliga.com/assets/2023/05/12/small/dc59645c96bc2c9010341c16dd6d4bfa.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/getafe-cf",
+      "season": "2026–27",
+      "crest": "es-getafe-cf.png"
+    },
+    {
+      "id": "es-levante-ud",
+      "tier": 1,
+      "en": "Levante UD",
+      "aliases": [
+        "Levante Unión Deportiva SAD",
+        "LEV"
+      ],
+      "city": "Valencia",
+      "stadium": "Estadio Ciutat de València",
+      "venueQid": "Q1122715",
+      "center": [
+        -0.364167,
+        39.494722
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1122715",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/levante.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/levante-ud",
+      "season": "2026–27",
+      "crest": "es-levante-ud.png"
+    },
+    {
+      "id": "es-malaga-cf",
+      "tier": 1,
+      "en": "Málaga CF",
+      "aliases": [
+        "Málaga Club de Fútbol SAD",
+        "MGA"
+      ],
+      "city": "Málaga",
+      "stadium": "La Rosaleda",
+      "venueQid": "Q695879",
+      "center": [
+        -4.426422,
+        36.734092
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q695879",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/malaga.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/malaga-cf",
+      "season": "2026–27",
+      "crest": "es-malaga-cf.png"
+    },
+    {
+      "id": "es-r-racing-club",
+      "tier": 1,
+      "en": "Racing Santander",
+      "aliases": [
+        "Real Racing Club SAD",
+        "RAC",
+        "R. Racing Club"
+      ],
+      "city": "Santander",
+      "stadium": "El Sardinero",
+      "venueQid": "Q195391",
+      "center": [
+        -3.793333,
+        43.476389
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q195391",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/racing.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/r-racing-club",
+      "season": "2026–27",
+      "crest": "es-r-racing-club.png"
+    },
+    {
+      "id": "es-rayo-vallecano",
+      "tier": 1,
+      "en": "Rayo Vallecano",
+      "aliases": [
+        "Rayo Vallecano de Madrid SAD",
+        "RAY"
+      ],
+      "city": "Madrid",
+      "stadium": "Estadio de Vallecas",
+      "venueQid": "Q983806",
+      "center": [
+        -3.658961,
+        40.391944
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q983806",
+      "crestSource": "https://assets.laliga.com/assets/2023/04/27/small/57d9950a8745ead226c04d37235c0786.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/rayo-vallecano",
+      "season": "2026–27",
+      "crest": "es-rayo-vallecano.png"
+    },
+    {
+      "id": "es-rc-deportivo",
+      "tier": 1,
+      "en": "Deportivo La Coruña",
+      "aliases": [
+        "Real Club Deportivo de A Coruña SAD",
+        "DEP",
+        "RC Deportivo"
+      ],
+      "city": "A Coruña",
+      "stadium": "Estadio ABANCA-RIAZOR",
+      "venueQid": "Q22130",
+      "center": [
+        -8.417372,
+        43.368667
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q22130",
+      "crestSource": "https://assets.laliga.com/assets/2026/06/24/small/6b88661529a2c06840c8bf6bddd90970.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/rc-deportivo",
+      "season": "2026–27",
+      "crest": "es-rc-deportivo.png"
+    },
+    {
+      "id": "es-rcd-espanyol",
+      "tier": 1,
+      "en": "RCD Espanyol de Barcelona",
+      "aliases": [
+        "ESP"
+      ],
+      "city": "Cornellà de Llobregat / El Prat de Llobregat",
+      "stadium": "RCDE Stadium",
+      "venueQid": "Q473223",
+      "center": [
+        2.075667,
+        41.347861
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q473223",
+      "crestSource": "https://assets.laliga.com/assets/2025/07/02/small/e9177f6edd72c6360602adbca85e442f.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/rcd-espanyol",
+      "season": "2026–27",
+      "crest": "es-rcd-espanyol.png"
+    },
+    {
+      "id": "es-real-betis",
+      "tier": 1,
+      "en": "Real Betis",
+      "aliases": [
+        "Real Betis Balompié SAD",
+        "BET"
+      ],
+      "city": "Seville",
+      "stadium": "Estadio La Cartuja",
+      "venueQid": "Q368737",
+      "center": [
+        -6.004564,
+        37.417236
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q368737",
+      "crestSource": "https://assets.laliga.com/assets/2022/09/15/small/e4a09419d3bd115b8f3dab73d480e146.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/real-betis",
+      "venueSource": "https://www.realbetisbalompie.es/index.php/club/la-cartuja",
+      "season": "2026–27",
+      "crest": "es-real-betis.png"
+    },
+    {
+      "id": "es-real-madrid",
+      "tier": 1,
+      "en": "Real Madrid",
+      "aliases": [
+        "Real Madrid Club de Fútbol",
+        "RMA"
+      ],
+      "city": "Madrid",
+      "stadium": "Bernabéu",
+      "venueQid": "Q164027",
+      "center": [
+        -3.68835,
+        40.45306
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q164027",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/real-madrid",
+      "season": "2026–27",
+      "crest": "es-real-madrid.png"
+    },
+    {
+      "id": "es-real-sociedad",
+      "tier": 1,
+      "en": "Real Sociedad",
+      "aliases": [
+        "Real Sociedad de Fútbol SAD",
+        "RSO"
+      ],
+      "city": "San Sebastián",
+      "stadium": "Anoeta",
+      "venueQid": "Q917845",
+      "center": [
+        -1.973617,
+        43.301378
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q917845",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/real-sociedad",
+      "season": "2026–27",
+      "crest": "es-real-sociedad.png"
+    },
+    {
+      "id": "es-sevilla-fc",
+      "tier": 1,
+      "en": "Sevilla FC",
+      "aliases": [
+        "Sevilla Fútbol Club SAD",
+        "SEV"
+      ],
+      "city": "Seville",
+      "stadium": "Ramón Sánchez-Pizjuán",
+      "venueQid": "Q275429",
+      "center": [
+        -5.970467,
+        37.383878
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q275429",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/sevilla.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/sevilla-fc",
+      "season": "2026–27",
+      "crest": "es-sevilla-fc.png"
+    },
+    {
+      "id": "es-valencia-cf",
+      "tier": 1,
+      "en": "Valencia CF",
+      "aliases": [
+        "Valencia Club de Fútbol SAD",
+        "VAL"
+      ],
+      "city": "Valencia",
+      "stadium": "Camp de Mestalla",
+      "venueQid": "Q202762",
+      "center": [
+        -0.358333,
+        39.474722
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q202762",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/valencia.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/valencia-cf",
+      "season": "2026–27",
+      "crest": "es-valencia-cf.png"
+    },
+    {
+      "id": "es-villarreal-cf",
+      "tier": 1,
+      "en": "Villarreal CF",
+      "aliases": [
+        "Villarreal Club de Fútbol SAD",
+        "VIL"
+      ],
+      "city": "Villarreal",
+      "stadium": "Estadio de la Cerámica",
+      "venueQid": "Q741157",
+      "center": [
+        -0.103611,
+        39.944167
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q741157",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/villarreal.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/villarreal-cf",
+      "season": "2026–27",
+      "crest": "es-villarreal-cf.png"
+    },
+    {
+      "id": "es-ad-ceuta-fc",
+      "tier": 2,
+      "en": "Ceuta",
+      "aliases": [
+        "CEU",
+        "AD Ceuta FC"
+      ],
+      "city": "Ceuta",
+      "stadium": "Alfonso Murube",
+      "venueQid": "Q1369445",
+      "center": [
+        -5.3279,
+        35.8854
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369445",
+      "crestSource": "https://assets.laliga.com/assets/2019/11/18/small/dff48b7d706547a0c406464cb1ee9218.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/ad-ceuta-fc",
+      "season": "2026–27",
+      "crest": "es-ad-ceuta-fc.png"
+    },
+    {
+      "id": "es-albacete-bp",
+      "tier": 2,
+      "en": "Albacete",
+      "aliases": [
+        "Albacete Balompié SAD",
+        "ALB",
+        "Albacete BP"
+      ],
+      "city": "Albacete",
+      "stadium": "Carlos Belmonte",
+      "venueQid": "Q1369118",
+      "center": [
+        -1.852142,
+        38.981117
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369118",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/albacete.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/albacete-bp",
+      "season": "2026–27",
+      "crest": "es-albacete-bp.png"
+    },
+    {
+      "id": "es-burgos",
+      "tier": 2,
+      "en": "Burgos CF",
+      "aliases": [
+        "BUR"
+      ],
+      "city": "Burgos",
+      "stadium": "El Plantío",
+      "venueQid": "Q3321211",
+      "center": [
+        -3.680556,
+        42.344167
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3321211",
+      "crestSource": "https://assets.laliga.com/assets/2021/06/24/small/8de24d38ab1472bbae1620d36582d7bd.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/burgos",
+      "season": "2026–27",
+      "crest": "es-burgos.png"
+    },
+    {
+      "id": "es-cadiz-cf",
+      "tier": 2,
+      "en": "Cádiz CF",
+      "aliases": [
+        "Cádiz Club de Fútbol SAD",
+        "CAD"
+      ],
+      "city": "Cádiz",
+      "stadium": "JP Financial Estadio",
+      "venueQid": "Q2301915",
+      "center": [
+        -6.273056,
+        36.502778
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2301915",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/cadiz.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/cadiz-cf",
+      "season": "2026–27",
+      "crest": "es-cadiz-cf.png"
+    },
+    {
+      "id": "es-cd-castellon",
+      "tier": 2,
+      "en": "CD Castellón",
+      "aliases": [
+        "CAS"
+      ],
+      "city": "Castellón de la Plana",
+      "stadium": "Estadio SkyFi Castalia",
+      "venueQid": "Q264581",
+      "center": [
+        -0.038792,
+        39.996053
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q264581",
+      "crestSource": "https://assets.laliga.com/assets/2019/11/18/small/0cb9fb4e471b8fe16fe9f6f193188505.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/cd-castellon",
+      "season": "2026–27",
+      "crest": "es-cd-castellon.png"
+    },
+    {
+      "id": "es-eldense",
+      "tier": 2,
+      "en": "CD Eldense",
+      "aliases": [
+        "Club Deportivo Eldense",
+        "ELD"
+      ],
+      "city": "Elda",
+      "stadium": "Estadio Municipal Nuevo Pepico Amat",
+      "venueQid": "Q26709118",
+      "center": [
+        -0.796031,
+        38.467356
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q26709118",
+      "crestSource": "https://assets.laliga.com/assets/2023/09/28/small/58b0ce20fa615378dfe4d03ab2ce063e.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/eldense",
+      "season": "2026–27",
+      "crest": "es-eldense.png"
+    },
+    {
+      "id": "es-cd-leganes",
+      "tier": 2,
+      "en": "CD Leganés",
+      "aliases": [
+        "Club Deportivo Leganés SAD",
+        "LEG"
+      ],
+      "city": "Leganés",
+      "stadium": "Estadio Ontime Butarque",
+      "venueQid": "Q1369462",
+      "center": [
+        -3.7607,
+        40.3404
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369462",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/leganes.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/cd-leganes",
+      "season": "2026–27",
+      "crest": "es-cd-leganes.png"
+    },
+    {
+      "id": "es-cd-tenerife",
+      "tier": 2,
+      "en": "CD Tenerife",
+      "aliases": [
+        "Club Deportivo Tenerife SAD",
+        "TEN"
+      ],
+      "city": "Santa Cruz de Tenerife",
+      "stadium": "Estadio Heliodoro Rodríguez López",
+      "venueQid": "Q255447",
+      "center": [
+        -16.260555555,
+        28.463055555
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q255447",
+      "crestSource": "https://assets.laliga.com/assets/2026/07/11/small/58984797cc1fe6fdb08c0338719cd0e5.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/cd-tenerife",
+      "season": "2026–27",
+      "crest": "es-cd-tenerife.png"
+    },
+    {
+      "id": "es-ce-sabadell",
+      "tier": 2,
+      "en": "CE Sabadell",
+      "aliases": [
+        "Centre d’ Esports Sabadell Fútbol Club SAD",
+        "SAB"
+      ],
+      "city": "Sabadell",
+      "stadium": "Estadio Nova Creu Alta",
+      "venueQid": "Q1313926",
+      "center": [
+        2.091944,
+        41.554722
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1313926",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/sabadell.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/ce-sabadell",
+      "season": "2026–27",
+      "crest": "es-ce-sabadell.png"
+    },
+    {
+      "id": "es-rc-celta-b",
+      "tier": 2,
+      "en": "Celta Fortuna",
+      "aliases": [
+        "RC Celta Fortuna",
+        "CEF"
+      ],
+      "city": "Vigo",
+      "stadium": "Estadio ABANCA Balaídos",
+      "venueQid": "Q1326578",
+      "center": [
+        -8.740328,
+        42.211861
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1326578",
+      "crestSource": "https://assets.laliga.com/assets/2026/06/25/small/5c8f2e006573714fe5c8a7ef2a37122f.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/rc-celta-b",
+      "season": "2026–27",
+      "crest": "es-rc-celta-b.png",
+      "venueSource": "https://rccelta.es/fundacion/actualidad/convocatoria-del-celta-fortuna-para-el-partido-ante-el-fc-andorra/",
+      "sharedGround": "balaidos"
+    },
+    {
+      "id": "es-cordoba-cf",
+      "tier": 2,
+      "en": "Córdoba CF",
+      "aliases": [
+        "Córdoba Club de Fútbol",
+        "COR"
+      ],
+      "city": "Córdoba",
+      "stadium": "Estadio Bahrain Victorious Nuevo Arcángel de Córdoba",
+      "venueQid": "Q121879",
+      "center": [
+        -4.764642,
+        37.872294
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q121879",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/cordoba.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/cordoba-cf",
+      "season": "2026–27",
+      "crest": "es-cordoba-cf.png"
+    },
+    {
+      "id": "es-fc-andorra",
+      "tier": 2,
+      "en": "FC Andorra",
+      "aliases": [
+        "AND"
+      ],
+      "city": "Encamp, Andorra",
+      "stadium": "Estadi d'Encamp",
+      "venueQid": "Q134706123",
+      "center": [
+        1.575941,
+        42.533527
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q134706123",
+      "crestSource": "https://assets.laliga.com/assets/2022/06/17/small/33215c0212bcad95cc5d67b2b5a33fb8.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/fc-andorra",
+      "venueSource": "https://www.fcandorra.com/ca/installacions",
+      "note": "Andorran club playing in the Spanish league system; mapped at its real ground in Encamp.",
+      "season": "2026–27",
+      "crest": "es-fc-andorra.png"
+    },
+    {
+      "id": "es-girona-fc",
+      "tier": 2,
+      "en": "Girona FC",
+      "aliases": [
+        "Girona Fútbol Club SAD",
+        "GIR"
+      ],
+      "city": "Girona",
+      "stadium": "Estadio Municipal de Montilivi",
+      "venueQid": "Q2097709",
+      "center": [
+        2.828611,
+        41.961389
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2097709",
+      "crestSource": "https://assets.laliga.com/assets/2022/06/22/small/8f43addbb29e4a72f5e90b6edfe4728f.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/girona-fc",
+      "season": "2026–27",
+      "crest": "es-girona-fc.png"
+    },
+    {
+      "id": "es-granada-cf",
+      "tier": 2,
+      "en": "Granada CF",
+      "aliases": [
+        "Granada Club de Fútbol SAD",
+        "GRA"
+      ],
+      "city": "Granada",
+      "stadium": "Nuevo Los Cármenes",
+      "venueQid": "Q574565",
+      "center": [
+        -3.595736,
+        37.152967
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q574565",
+      "crestSource": "https://assets.laliga.com/assets/2023/01/17/small/f5db12f3a29fdfd14a0d50337016dc95.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/granada-cf",
+      "season": "2026–27",
+      "crest": "es-granada-cf.png"
+    },
+    {
+      "id": "es-r-sociedad-b",
+      "tier": 2,
+      "en": "Real Sociedad B",
+      "aliases": [
+        "RSB",
+        "R. Sociedad B"
+      ],
+      "city": "Zubieta, San Sebastián",
+      "stadium": "Estadio de Zubieta (Z7)",
+      "center": [
+        -2.0259755,
+        43.2577689
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/42735948",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/r-sociedad-b",
+      "season": "2026–27",
+      "crest": "es-r-sociedad-b.png",
+      "venueSource": "https://www.realsociedad.eus/es/noticias/detalle/el-sanse-jugara-en-el-estadio-de-zubieta",
+      "note": "Current home is the renovated Z7 pitch, not the older José Luis Orbegozo training ground or Anoeta."
+    },
+    {
+      "id": "es-rcd-mallorca",
+      "tier": 2,
+      "en": "RCD Mallorca",
+      "aliases": [
+        "Real Club Deportivo Mallorca SAD",
+        "MLL"
+      ],
+      "city": "Palma",
+      "stadium": "Estadi Mallorca Son Moix",
+      "venueQid": "Q276163",
+      "center": [
+        2.63,
+        39.59
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q276163",
+      "crestSource": "https://assets.laliga.com/assets/2023/03/22/small/013ae97735bc8e519dcf30f6826168ca.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/rcd-mallorca",
+      "season": "2026–27",
+      "crest": "es-rcd-mallorca.png"
+    },
+    {
+      "id": "es-real-oviedo",
+      "tier": 2,
+      "en": "Real Oviedo",
+      "aliases": [
+        "Real Oviedo SAD",
+        "OVI"
+      ],
+      "city": "Oviedo",
+      "stadium": "Estadio Carlos Tartiere",
+      "venueQid": "Q1369536",
+      "center": [
+        -5.870222,
+        43.360783
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369536",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/oviedo.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/real-oviedo",
+      "season": "2026–27",
+      "crest": "es-real-oviedo.png"
+    },
+    {
+      "id": "es-real-sporting",
+      "tier": 2,
+      "en": "Sporting Gijón",
+      "aliases": [
+        "Real Sporting de Gijón SAD",
+        "SPO",
+        "Real Sporting"
+      ],
+      "city": "Gijón",
+      "stadium": "El Molinón-Enrique Castro \"Quini\"",
+      "venueQid": "Q929315",
+      "center": [
+        -5.637222,
+        43.536111
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q929315",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/sporting.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/real-sporting",
+      "season": "2026–27",
+      "crest": "es-real-sporting.png"
+    },
+    {
+      "id": "es-r-valladolid-cf",
+      "tier": 2,
+      "en": "Real Valladolid CF",
+      "aliases": [
+        "Real Valladolid Club de Fútbol SAD",
+        "VLL"
+      ],
+      "city": "Valladolid",
+      "stadium": "Estadio Municipal José Zorrilla",
+      "venueQid": "Q151816",
+      "center": [
+        -4.761111,
+        41.644444
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q151816",
+      "crestSource": "https://assets.laliga.com/assets/2024/06/17/small/1467dcd5efb813a742d86f8eb39504a3.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/r-valladolid-cf",
+      "season": "2026–27",
+      "crest": "es-r-valladolid-cf.png"
+    },
+    {
+      "id": "es-sd-eibar",
+      "tier": 2,
+      "en": "SD Eibar",
+      "aliases": [
+        "Sociedad Deportiva Eibar SAD",
+        "EIB"
+      ],
+      "city": "Eibar",
+      "stadium": "Municipal de Ipurua",
+      "venueQid": "Q3320428",
+      "center": [
+        -2.475803,
+        43.181706
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3320428",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/eibar.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/sd-eibar",
+      "season": "2026–27",
+      "crest": "es-sd-eibar.png"
+    },
+    {
+      "id": "es-ud-almeria",
+      "tier": 2,
+      "en": "UD Almería",
+      "aliases": [
+        "Unión Deportiva Almería SAD",
+        "ALM"
+      ],
+      "city": "Almería",
+      "stadium": "UD Almería Stadium",
+      "venueQid": "Q1130617",
+      "center": [
+        -2.435278,
+        36.84
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1130617",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/almeria.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/ud-almeria",
+      "season": "2026–27",
+      "crest": "es-ud-almeria.png"
+    },
+    {
+      "id": "es-ud-las-palmas",
+      "tier": 2,
+      "en": "UD Las Palmas",
+      "aliases": [
+        "Unión Deportiva Las Palmas SAD",
+        "LPA"
+      ],
+      "city": "Las Palmas de Gran Canaria",
+      "stadium": "Estadio Gran Canaria",
+      "venueQid": "Q991419",
+      "center": [
+        -15.456667,
+        28.1
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q991419",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/las-palmas.png",
+      "rosterSource": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "clubSource": "https://www.laliga.com/en-GB/clubs/ud-las-palmas",
+      "season": "2026–27",
+      "crest": "es-ud-las-palmas.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Arenas",
+      "city": "Getxo",
+      "stadium": "Gobela",
+      "wiki": "https://en.wikipedia.org/wiki/Arenas_Club_de_Getxo",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Campo_Municipal_de_Gobela",
+      "id": "es-arenas-club-de-getxo",
+      "aliases": [
+        "Arenas Club de Getxo"
+      ],
+      "clubQid": "Q641649",
+      "venueQid": "Q20977917",
+      "center": [
+        -3.00646667,
+        43.33146944
+      ],
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/23/Arenas_Club_de_Getxo_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Arenas_Club_de_Getxo",
+      "season": "2026–27",
+      "crest": "es-arenas-club-de-getxo.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q20977917"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Real Avilés",
+      "city": "Avilés",
+      "stadium": "Román Suárez Puerta",
+      "wiki": "https://en.wikipedia.org/wiki/Real_Avilés_Industrial_CF",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Román_Suárez_Puerta",
+      "id": "es-real-aviles-industrial-cf",
+      "aliases": [
+        "Real Avilés Industrial CF",
+        "Real Avilés CF",
+        "Avilés Industrial"
+      ],
+      "clubQid": "Q720872",
+      "venueQid": "Q259637",
+      "center": [
+        -5.9306,
+        43.5575
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q259637",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b2/Real_Avil%C3%A9s_Industrial_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Real_Avilés_Industrial_CF",
+      "season": "2026–27",
+      "crest": "es-real-aviles-industrial-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Barakaldo",
+      "city": "Barakaldo",
+      "stadium": "Lasesarre",
+      "wiki": "https://en.wikipedia.org/wiki/Barakaldo_CF",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Campo_de_Lasesarre",
+      "id": "es-barakaldo-cf",
+      "aliases": [
+        "Barakaldo CF"
+      ],
+      "clubQid": "Q790195",
+      "venueQid": "Q2697083",
+      "center": [
+        -2.986389,
+        43.302778
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2697083",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/df/Barakaldo_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Barakaldo_CF",
+      "season": "2026–27",
+      "crest": "es-barakaldo-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Bilbao Athletic",
+      "city": "Lezama",
+      "stadium": "Lezama",
+      "wiki": "https://en.wikipedia.org/wiki/Athletic_Bilbao_B",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Lezama_Facilities",
+      "id": "es-athletic-bilbao-b",
+      "aliases": [
+        "Athletic Bilbao B"
+      ],
+      "clubQid": "Q794970",
+      "venueQid": "Q9008639",
+      "center": [
+        -2.83932,
+        43.2775
+      ],
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/98/Club_Athletic_Bilbao_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Athletic_Bilbao_B",
+      "season": "2026–27",
+      "crest": "es-athletic-bilbao-b.png",
+      "clubCity": "Bilbao",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q9008639"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Cacereño",
+      "city": "Cáceres",
+      "stadium": "Príncipe Felipe",
+      "wiki": "https://en.wikipedia.org/wiki/CP_Cacereño",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Príncipe_Felipe",
+      "id": "es-cp-cacereno",
+      "aliases": [
+        "CP Cacereño"
+      ],
+      "clubQid": "Q856415",
+      "venueQid": "Q597967",
+      "center": [
+        -6.412347222,
+        39.487130555
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q597967",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c1/CP_Cacere%C3%B1o_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CP_Cacereño",
+      "season": "2026–27",
+      "crest": "es-cp-cacereno.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Coria",
+      "city": "Coria",
+      "stadium": "La Isla",
+      "wiki": "https://en.wikipedia.org/wiki/CD_Coria",
+      "stadiumWiki": "",
+      "id": "es-cd-coria",
+      "aliases": [
+        "CD Coria"
+      ],
+      "clubQid": "Q5010073",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/89/CD_Coria_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CD_Coria",
+      "center": [
+        -6.5425827,
+        39.9780054
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/644959631",
+      "season": "2026–27",
+      "crest": "es-cd-coria.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Cultural Leonesa",
+      "city": "León",
+      "stadium": "Estadio Reino de León",
+      "wiki": "https://en.wikipedia.org/wiki/Cultural_y_Deportiva_Leonesa",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Reino_de_León",
+      "id": "es-cultural-y-deportiva-leonesa",
+      "aliases": [
+        "Cultural y Deportiva Leonesa"
+      ],
+      "clubQid": "Q582342",
+      "venueQid": "Q16822",
+      "center": [
+        -5.576699,
+        42.587482
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q16822",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/5c/Logo_of_Cultural_y_Deportiva_Leonesa.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Cultural_y_Deportiva_Leonesa",
+      "season": "2026–27",
+      "crest": "es-cultural-y-deportiva-leonesa.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Deportivo Fabril",
+      "city": "Abegondo",
+      "stadium": "Cidade Deportiva de Abegondo",
+      "wiki": "https://en.wikipedia.org/wiki/Deportivo_Fabril",
+      "stadiumWiki": "",
+      "id": "es-deportivo-fabril",
+      "aliases": [],
+      "clubQid": "Q1705764",
+      "venueQid": "Q3325536",
+      "center": [
+        -8.28472222,
+        43.25083333
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3325536",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/56/RC_Deportivo_A_Coru%C3%B1a_logo_2026.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Deportivo_Fabril",
+      "season": "2026–27",
+      "crest": "es-deportivo-fabril.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Extremadura",
+      "city": "Almendralejo",
+      "stadium": "Francisco de la Hera",
+      "wiki": "https://en.wikipedia.org/wiki/CD_Extremadura",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Francisco_de_la_Hera",
+      "id": "es-cd-extremadura",
+      "aliases": [
+        "CD Extremadura",
+        "Club Deportivo Extremadura"
+      ],
+      "clubQid": "Q116872269",
+      "venueQid": "Q2918684",
+      "center": [
+        -6.414606,
+        38.684411
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2918684",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/71/CD_Extremadura_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CD_Extremadura",
+      "season": "2026–27",
+      "crest": "es-cd-extremadura.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "UD Logroñés",
+      "city": "Logroño",
+      "stadium": "Las Gaunas",
+      "wiki": "https://en.wikipedia.org/wiki/UD_Logroñés",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Las_Gaunas",
+      "id": "es-ud-logrones",
+      "aliases": [],
+      "clubQid": "Q1067737",
+      "venueQid": "Q1369314",
+      "center": [
+        -2.453333,
+        42.453333
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369314",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/78/UD_Logro%C3%B1%C3%A9s_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/UD_Logroñés",
+      "season": "2026–27",
+      "crest": "es-ud-logrones.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Lugo",
+      "city": "Lugo",
+      "stadium": "Anxo Carro",
+      "wiki": "https://en.wikipedia.org/wiki/CD_Lugo",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Anxo_Carro",
+      "id": "es-cd-lugo",
+      "aliases": [
+        "CD Lugo",
+        "Club Deportivo Lugo"
+      ],
+      "clubQid": "Q11984",
+      "venueQid": "Q1348052",
+      "center": [
+        -7.570833,
+        43.003333
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1348052",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/09/CD_Lugo_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CD_Lugo",
+      "season": "2026–27",
+      "crest": "es-cd-lugo.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Mérida",
+      "city": "Mérida",
+      "stadium": "Estadio Romano",
+      "wiki": "https://en.wikipedia.org/wiki/Mérida_AD",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Romano",
+      "id": "es-merida-ad",
+      "aliases": [
+        "Mérida AD"
+      ],
+      "clubQid": "Q5726133",
+      "venueQid": "Q924700",
+      "center": [
+        -6.336406,
+        38.913933
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q924700",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8c/M%C3%A9rida_AD_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Mérida_AD",
+      "season": "2026–27",
+      "crest": "es-merida-ad.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Mirandés",
+      "city": "Miranda de Ebro",
+      "stadium": "Estadio Municipal de Anduva",
+      "wiki": "https://en.wikipedia.org/wiki/CD_Mirandés",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Municipal_de_Anduva",
+      "id": "es-cd-mirandes",
+      "aliases": [
+        "CD Mirandés"
+      ],
+      "clubQid": "Q11997",
+      "venueQid": "Q1348065",
+      "center": [
+        -2.935556,
+        42.680833
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1348065",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b8/CD_Mirand%C3%A9s_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CD_Mirandés",
+      "season": "2026–27",
+      "crest": "es-cd-mirandes.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "UD Ourense",
+      "city": "Ourense",
+      "stadium": "O Couto",
+      "wiki": "https://en.wikipedia.org/wiki/UD_Ourense",
+      "stadiumWiki": "",
+      "id": "es-ud-ourense",
+      "aliases": [],
+      "clubQid": "Q20543549",
+      "venueQid": "Q12388108",
+      "center": [
+        -7.87555,
+        42.34055
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q12388108",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b8/UD_Ourense_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/UD_Ourense",
+      "season": "2026–27",
+      "crest": "es-ud-ourense.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Ponferradina",
+      "city": "Ponferrada",
+      "stadium": "El Toralín",
+      "wiki": "https://en.wikipedia.org/wiki/SD_Ponferradina",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_El_Toralín",
+      "id": "es-sd-ponferradina",
+      "aliases": [
+        "SD Ponferradina",
+        "Sociedad Deportiva Ponferradina"
+      ],
+      "clubQid": "Q12168",
+      "venueQid": "Q979112",
+      "center": [
+        -6.599972,
+        42.5574
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q979112",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/38/SD_Ponferradina_emblem.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/SD_Ponferradina",
+      "season": "2026–27",
+      "crest": "es-sd-ponferradina.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Pontevedra",
+      "city": "Pontevedra",
+      "stadium": "Pasarón",
+      "wiki": "https://en.wikipedia.org/wiki/Pontevedra_CF",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Municipal_de_Pasarón",
+      "id": "es-pontevedra-cf",
+      "aliases": [
+        "Pontevedra CF"
+      ],
+      "clubQid": "Q849271",
+      "venueQid": "Q1369479",
+      "center": [
+        -8.641,
+        42.438
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369479",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/90/Pontevedra_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Pontevedra_CF",
+      "season": "2026–27",
+      "crest": "es-pontevedra-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Racing Ferrol",
+      "city": "Ferrol",
+      "stadium": "A Malata",
+      "wiki": "https://en.wikipedia.org/wiki/Racing_de_Ferrol",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Municipal_da_Malata",
+      "id": "es-racing-de-ferrol",
+      "aliases": [
+        "Racing de Ferrol",
+        "Racing Club de Ferrol"
+      ],
+      "clubQid": "Q843396",
+      "venueQid": "Q3327491",
+      "center": [
+        -8.239274,
+        43.491358
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3327491",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/1c/Racing_de_Ferrol_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Racing_de_Ferrol",
+      "season": "2026–27",
+      "crest": "es-racing-de-ferrol.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Real Unión",
+      "city": "Irun",
+      "stadium": "Stadium Gal",
+      "wiki": "https://en.wikipedia.org/wiki/Real_Unión",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Stadium_Gal",
+      "id": "es-real-union",
+      "aliases": [],
+      "clubQid": "Q726810",
+      "venueQid": "Q1493662",
+      "center": [
+        -1.785833,
+        43.345556
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1493662",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dd/Real_Uni%C3%B3n_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Real_Unión",
+      "season": "2026–27",
+      "crest": "es-real-union.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Unionistas",
+      "city": "Salamanca",
+      "stadium": "Reina Sofía",
+      "wiki": "https://en.wikipedia.org/wiki/Unionistas_de_Salamanca_CF",
+      "stadiumWiki": "",
+      "id": "es-unionistas-de-salamanca-cf",
+      "aliases": [
+        "Unionistas de Salamanca CF"
+      ],
+      "clubQid": "Q20278773",
+      "venueQid": "Q100977301",
+      "center": [
+        -5.665987632,
+        40.946684789
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q100977301",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/fa/Unionistas_de_Salamanca_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Unionistas_de_Salamanca_CF",
+      "season": "2026–27",
+      "crest": "es-unionistas-de-salamanca-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 1,
+      "en": "Zamora",
+      "city": "Zamora",
+      "stadium": "Ruta de la Plata",
+      "wiki": "https://en.wikipedia.org/wiki/Zamora_CF",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Ruta_de_la_Plata",
+      "id": "es-zamora-cf",
+      "aliases": [
+        "Zamora CF"
+      ],
+      "clubQid": "Q544120",
+      "venueQid": "Q2445114",
+      "center": [
+        -5.748056,
+        41.486389
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2445114",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/44/Zamora_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Zamora_CF",
+      "season": "2026–27",
+      "crest": "es-zamora-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Águilas",
+      "city": "Águilas",
+      "stadium": "El Rubial",
+      "wiki": "https://en.wikipedia.org/wiki/Águilas_FC",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_El_Rubial",
+      "id": "es-aguilas-fc",
+      "aliases": [
+        "Águilas FC"
+      ],
+      "clubQid": "Q9098124",
+      "venueQid": "Q5847932",
+      "center": [
+        -1.59004,
+        37.4043
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q5847932",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/56/%C3%81guilas_FC_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Águilas_FC",
+      "season": "2026–27",
+      "crest": "es-aguilas-fc.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Alcorcón",
+      "city": "Alcorcón",
+      "stadium": "Santo Domingo",
+      "wiki": "https://en.wikipedia.org/wiki/AD_Alcorcón",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Municipal_de_Santo_Domingo",
+      "id": "es-ad-alcorcon",
+      "aliases": [
+        "AD Alcorcón"
+      ],
+      "clubQid": "Q10383",
+      "venueQid": "Q1369483",
+      "center": [
+        -3.840556,
+        40.338889
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369483",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/28/AD_Alcorc%C3%B3n_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/AD_Alcorcón",
+      "season": "2026–27",
+      "crest": "es-ad-alcorcon.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Algeciras",
+      "city": "Algeciras",
+      "stadium": "Nuevo Mirador",
+      "wiki": "https://en.wikipedia.org/wiki/Algeciras_CF",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Nuevo_Mirador",
+      "id": "es-algeciras-cf",
+      "aliases": [
+        "Algeciras CF"
+      ],
+      "clubQid": "Q646281",
+      "venueQid": "Q3390591",
+      "center": [
+        -5.46527778,
+        36.16333333
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3390591",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d8/Algeciras_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Algeciras_CF",
+      "season": "2026–27",
+      "crest": "es-algeciras-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Antequera",
+      "city": "Antequera",
+      "stadium": "El Maulí",
+      "wiki": "https://en.wikipedia.org/wiki/Antequera_CF",
+      "stadiumWiki": "",
+      "id": "es-antequera-cf",
+      "aliases": [
+        "Antequera CF"
+      ],
+      "clubQid": "Q2852713",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/16/Antequera_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Antequera_CF",
+      "center": [
+        -4.572149,
+        37.020454
+      ],
+      "coordinateSource": "https://www.deportes.antequera.es/instalaciones/complejo-el-mauli.html",
+      "season": "2026–27",
+      "crest": "es-antequera-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Atlético Madrileño",
+      "city": "Alcalá de Henares",
+      "stadium": "Centro Deportivo Alcalá de Henares",
+      "wiki": "https://en.wikipedia.org/wiki/Atlético_Madrileño",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Centro_Deportivo_Wanda_Alcalá_de_Henares",
+      "id": "es-atletico-madrileno",
+      "aliases": [
+        "Atlético Madrid B"
+      ],
+      "clubQid": "Q780539",
+      "venueQid": "Q74119220",
+      "center": [
+        -3.3625000000000003,
+        40.50833333333333
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q74119220",
+      "crestSource": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Atlético_Madrileño",
+      "season": "2026–27",
+      "crest": "es-atletico-madrileno.png",
+      "venueSource": "https://www.atleticodemadrid.com/noticias/el-atletico-madrileno-arrancara-este-jueves-la-pretemporada"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Cartagena",
+      "city": "Cartagena",
+      "stadium": "Cartagonova",
+      "wiki": "https://en.wikipedia.org/wiki/FC_Cartagena",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Cartagonova",
+      "id": "es-fc-cartagena",
+      "aliases": [
+        "FC Cartagena"
+      ],
+      "clubQid": "Q611653",
+      "venueQid": "Q1369124",
+      "center": [
+        -0.995977,
+        37.609746
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369124",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dc/FC_Cartagena_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/FC_Cartagena",
+      "season": "2026–27",
+      "crest": "es-fc-cartagena.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Europa",
+      "city": "Barcelona",
+      "stadium": "Can Dragó",
+      "wiki": "https://en.wikipedia.org/wiki/CE_Europa",
+      "stadiumWiki": "#cite_note-38",
+      "id": "es-ce-europa",
+      "aliases": [
+        "CE Europa"
+      ],
+      "clubQid": "Q856024",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Club_Esportiu_Europa.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CE_Europa",
+      "center": [
+        2.1838496,
+        41.4382489
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/316544485",
+      "venueSource": "https://www.ceeuropa.cat/club/installacions/",
+      "note": "Temporary 2026–27 home on the former Can Dragó athletics infield; this is not the separate artificial-turf Camp de futbol Porta.",
+      "season": "2026–27",
+      "crest": "es-ce-europa.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Gimnàstic Tarragona",
+      "city": "Tarragona",
+      "stadium": "Nou Estadi",
+      "wiki": "https://en.wikipedia.org/wiki/Gimnàstic_de_Tarragona",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Nou_Estadi_Costa_Daurada",
+      "id": "es-gimnastic-de-tarragona",
+      "aliases": [
+        "Gimnàstic de Tarragona",
+        "Gimnàstic"
+      ],
+      "clubQid": "Q257984",
+      "venueQid": "Q1462770",
+      "center": [
+        1.272778,
+        41.126944
+      ],
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/be/Gimn%C3%A0stic_de_Tarragona_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Gimnàstic_de_Tarragona",
+      "season": "2026–27",
+      "crest": "es-gimnastic-de-tarragona.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1462770"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Hércules",
+      "city": "Alicante",
+      "stadium": "José Rico Pérez",
+      "wiki": "https://en.wikipedia.org/wiki/Hércules_CF",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_José_Rico_Pérez",
+      "id": "es-hercules-cf",
+      "aliases": [
+        "Hércules CF"
+      ],
+      "clubQid": "Q11963",
+      "venueQid": "Q945070",
+      "center": [
+        -0.4925,
+        38.357222
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q945070",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/84/Hercules_CF_crest.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Hércules_CF",
+      "season": "2026–27",
+      "crest": "es-hercules-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Huesca",
+      "city": "Huesca",
+      "stadium": "Estadio El Alcoraz",
+      "wiki": "https://en.wikipedia.org/wiki/SD_Huesca",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_El_Alcoraz",
+      "id": "es-sd-huesca",
+      "aliases": [
+        "SD Huesca",
+        "Sociedad Deportiva Huesca"
+      ],
+      "clubQid": "Q11971",
+      "venueQid": "Q1369197",
+      "center": [
+        -0.424444,
+        42.131944
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369197",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8a/Logo_of_SD_Huesca.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/SD_Huesca",
+      "season": "2026–27",
+      "crest": "es-sd-huesca.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Ibiza",
+      "city": "Ibiza",
+      "stadium": "Can Misses",
+      "wiki": "https://en.wikipedia.org/wiki/UD_Ibiza",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadi_Municipal_de_Can_Misses",
+      "id": "es-ud-ibiza",
+      "aliases": [
+        "UD Ibiza"
+      ],
+      "clubQid": "Q30587901",
+      "venueQid": "Q47490650",
+      "center": [
+        1.41511,
+        38.9138
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q47490650",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/ce/UD_Ibiza_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/UD_Ibiza",
+      "season": "2026–27",
+      "crest": "es-ud-ibiza.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Real Jaén",
+      "city": "Jaén",
+      "stadium": "La Victoria",
+      "wiki": "https://en.wikipedia.org/wiki/Real_Jaén",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Nuevo_Estadio_de_La_Victoria",
+      "id": "es-real-jaen",
+      "aliases": [
+        "Real Jaén",
+        "Jaén"
+      ],
+      "clubQid": "Q837183",
+      "venueQid": "Q2004437",
+      "center": [
+        -3.7675,
+        37.775416666
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2004437",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/ea/Real_Ja%C3%A9n_logo_2022.png",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Real_Jaén",
+      "season": "2026–27",
+      "crest": "es-real-jaen.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Juventud Torremolinos",
+      "city": "Torremolinos",
+      "stadium": "El Pozuelo",
+      "wiki": "https://en.wikipedia.org/wiki/Juventud_de_Torremolinos_CF",
+      "stadiumWiki": "",
+      "id": "es-juventud-de-torremolinos-cf",
+      "aliases": [
+        "Juventud de Torremolinos CF"
+      ],
+      "clubQid": "Q24185083",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/63/Juventud_de_Torremolinos_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Juventud_de_Torremolinos_CF",
+      "center": [
+        -4.5099021,
+        36.6213949
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/76820812",
+      "season": "2026–27",
+      "crest": "es-juventud-de-torremolinos-cf.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Real Murcia",
+      "city": "Murcia",
+      "stadium": "Enrique Roca",
+      "wiki": "https://en.wikipedia.org/wiki/Real_Murcia",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Nueva_Condomina",
+      "id": "es-real-murcia",
+      "aliases": [
+        "Real Murcia CF",
+        "Murcia"
+      ],
+      "clubQid": "Q12230",
+      "venueQid": "Q770946",
+      "center": [
+        -1.144722,
+        38.042222
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q770946",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/93/Real_Murcia_CF_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Real_Murcia",
+      "season": "2026–27",
+      "crest": "es-real-murcia.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Rayo Majadahonda",
+      "city": "Majadahonda",
+      "stadium": "Cerro del Espino",
+      "wiki": "https://en.wikipedia.org/wiki/CF_Rayo_Majadahonda",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_Cerro_del_Espino",
+      "id": "es-cf-rayo-majadahonda",
+      "aliases": [
+        "CF Rayo Majadahonda"
+      ],
+      "clubQid": "Q2511257",
+      "venueQid": "Q5400130",
+      "center": [
+        -3.860286111,
+        40.457558333
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q5400130",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8c/CF_Rayo_Majadahonda_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CF_Rayo_Majadahonda",
+      "season": "2026–27",
+      "crest": "es-cf-rayo-majadahonda.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Real Madrid Castilla",
+      "city": "Madrid",
+      "stadium": "Alfredo di Stéfano",
+      "wiki": "https://en.wikipedia.org/wiki/Real_Madrid_Castilla",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Alfredo_di_Stéfano_Stadium",
+      "id": "es-real-madrid-castilla",
+      "aliases": [],
+      "clubQid": "Q12217",
+      "venueQid": "Q645670",
+      "center": [
+        -3.61416667,
+        40.47666667
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q645670",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Real_Madrid_Castilla",
+      "season": "2026–27",
+      "crest": "es-real-madrid-castilla.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Sant Andreu",
+      "city": "Barcelona",
+      "stadium": "Narcís Sala",
+      "wiki": "https://en.wikipedia.org/wiki/UE_Sant_Andreu",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Camp_Municipal_Narcís_Sala",
+      "id": "es-ue-sant-andreu",
+      "aliases": [
+        "UE Sant Andreu"
+      ],
+      "clubQid": "Q908820",
+      "venueQid": "Q1029888",
+      "center": [
+        2.193047,
+        41.428836
+      ],
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/34/UE_Sant_Andreu_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/UE_Sant_Andreu",
+      "season": "2026–27",
+      "crest": "es-ue-sant-andreu.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1029888"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Teruel",
+      "city": "Teruel",
+      "stadium": "Pinilla",
+      "wiki": "https://en.wikipedia.org/wiki/CD_Teruel",
+      "stadiumWiki": "https://es.wikipedia.org/wiki/Estadio%20de%20Pinilla",
+      "id": "es-cd-teruel",
+      "aliases": [
+        "CD Teruel"
+      ],
+      "clubQid": "Q2128712",
+      "venueQid": "Q13049863",
+      "center": [
+        -1.105906,
+        40.332011
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q13049863",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a9/CD_Teruel_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/CD_Teruel",
+      "season": "2026–27",
+      "crest": "es-cd-teruel.png"
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Villarreal B",
+      "city": "Villarreal",
+      "stadium": "Mini Estadi José Manuel Llaneza",
+      "wiki": "https://en.wikipedia.org/wiki/Villarreal_CF_B",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Estadio_de_la_Cerámica",
+      "id": "es-villarreal-cf-b",
+      "aliases": [
+        "Villarreal CF B"
+      ],
+      "clubQid": "Q1094113",
+      "venueQid": "Q2438875",
+      "center": [
+        -0.11521709999999999,
+        39.9398058
+      ],
+      "coordinateSource": "https://www.openstreetmap.org/way/199637860",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b9/Villarreal_CF_logo-en.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Villarreal_CF_B",
+      "season": "2026–27",
+      "crest": "es-villarreal-cf-b.png",
+      "venueSource": "https://villarrealcf.es/es/cronica-villarreal-b-antequera-j04-2627/",
+      "note": "The current club match report places the reserve side at the Mini Estadi; the English Wikipedia season table incorrectly lists La Cerámica."
+    },
+    {
+      "tier": 3,
+      "group": 2,
+      "en": "Zaragoza",
+      "city": "Zaragoza",
+      "stadium": "Ibercaja Stadium",
+      "wiki": "https://en.wikipedia.org/wiki/Real_Zaragoza",
+      "stadiumWiki": "https://en.wikipedia.org/wiki/Ibercaja_Stadium",
+      "id": "es-real-zaragoza",
+      "aliases": [
+        "Real Zaragoza"
+      ],
+      "clubQid": "Q10308",
+      "venueQid": "Q135682568",
+      "center": [
+        -0.89544683,
+        41.683664995
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q135682568",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/69/Real_Zaragoza_logo.svg",
+      "rosterSource": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "clubSource": "https://en.wikipedia.org/wiki/Real_Zaragoza",
+      "note": "Temporary home at Ibercaja Stadium during reconstruction of La Romareda.",
+      "season": "2026–27",
+      "crest": "es-real-zaragoza.png"
+    }
+  ],
+  "sources": [
+    {
+      "title": "LaLiga official clubs 2026/27",
+      "url": "https://www.laliga.com/en-GB/laliga-easports/clubs"
+    },
+    {
+      "title": "LaLiga Hypermotion official clubs 2026/27",
+      "url": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs"
+    },
+    {
+      "title": "RFEF approved Primera Federación groups 2026/27",
+      "url": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627"
+    },
+    {
+      "title": "Wikidata geographic coordinates (CC0)",
+      "url": "https://www.wikidata.org/"
+    },
+    {
+      "title": "OpenStreetMap contributors (ODbL)",
+      "url": "https://www.openstreetmap.org/copyright"
+    }
+  ]
+}

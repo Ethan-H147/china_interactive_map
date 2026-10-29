@@ -1,0 +1,856 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "league-1.html": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga",
+      "sha256": "25946d6331e30761c98575e30e567e8c09533b99ae9a0e24299c507a3dcb939e",
+      "bytes": 716826
+    },
+    "league-2.html": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_Portugal_2",
+      "sha256": "cf4f080c29d5aef4e91a9e8eaead515d98ec1d039b9d7c55f80b22361c57ab67",
+      "bytes": 266674
+    },
+    "league-3.html": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Liga_3_(Portugal)",
+      "sha256": "5b305f4ddea7d62268f2103c9f1c7fd188bae250a7ebedaac5f38796602cbf47",
+      "bytes": 245849
+    },
+    "por.1-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/por.1/teams?limit=100",
+      "sha256": "ca2c03460bbfa2e12df541d0d55e314cfb27972b62704b3b3dfa0d28919c428a",
+      "bytes": 21744
+    },
+    "clubs/pt-academico-de-viseu.html": {
+      "url": "https://en.wikipedia.org/wiki/Acad%C3%A9mico_de_Viseu_F.C.",
+      "sha256": "38dd770a25ff31674996556776741464ad6728c7e2de7f7c714c455369ee1c18",
+      "bytes": 281953
+    },
+    "clubs/pt-arouca.html": {
+      "url": "https://en.wikipedia.org/wiki/F.C._Arouca",
+      "sha256": "6383ae617e29019c049a25ed97126f2988e66286ff8101ec5dc8bdc4256fdbd2",
+      "bytes": 352126
+    },
+    "clubs/pt-estoril-praia.html": {
+      "url": "https://en.wikipedia.org/wiki/G.D._Estoril_Praia",
+      "sha256": "2736823ea02e5fa2827b92b33179cd5f04613a72f6bb3c5162c2e470bd36b06a",
+      "bytes": 411190
+    },
+    "clubs/pt-benfica.html": {
+      "url": "https://en.wikipedia.org/wiki/S.L._Benfica",
+      "sha256": "600b392c52907edf1ee717f16609b8bb4b75436012d090d1f5a0a4b0364ef4d1",
+      "bytes": 1271864
+    },
+    "venues/pt-benfica.html": {
+      "url": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Luz",
+      "sha256": "ada6c707e55b8ed8e50ddebd30c7bd4b30dea2b2b103b223529ae898c7fcb7d2",
+      "bytes": 468531
+    },
+    "clubs/pt-porto.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Porto",
+      "sha256": "dc6a2f7444563a7169d8aa187dec7c0a050525673535f37278203ab0f0e2c085",
+      "bytes": 1242050
+    },
+    "clubs/pt-santa-clara.html": {
+      "url": "https://en.wikipedia.org/wiki/C.D._Santa_Clara",
+      "sha256": "b7282a1bff572b3bf2aa4a4f345cbddfb43435c18cf2084e0a8e7eb20b4edbc2",
+      "bytes": 420511
+    },
+    "original-crests/pt-benfica": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+      "sha256": "7d7d4ccb2896a77e613e4386d912fcc500c3bf023c3b12ec3aea0066af6925e5",
+      "bytes": 53571
+    },
+    "clubs/pt-vitoria-de-guimaraes.html": {
+      "url": "https://en.wikipedia.org/wiki/Vit%C3%B3ria_S.C.",
+      "sha256": "7448ade483d335369edc28e72f773c84a095e05df034e71b02f8af887d2ecb8d",
+      "bytes": 794788
+    },
+    "clubs/pt-academica.html": {
+      "url": "https://en.wikipedia.org/wiki/Acad%C3%A9mica_de_Coimbra_(football)",
+      "sha256": "8259d1a27e80e04097c6ed734fc903d73fab01345531f6ff9ed45e0c04917f38",
+      "bytes": 567346
+    },
+    "clubs/pt-feirense.html": {
+      "url": "https://en.wikipedia.org/wiki/C.D._Feirense",
+      "sha256": "151ca43ac531e20ef769206823b5737152f5f0227aec6c59da5c865788fc0121",
+      "bytes": 263052
+    },
+    "clubs-api-0.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cpageprops&piprop=original&pilicense=any&titles=Acad%C3%A9mico_de_Viseu_F.C.%7CF.C._Alverca%7CF.C._Arouca%7CS.L._Benfica%7CS.C._Braga%7CCasa_Pia_A.C.%7CG.D._Estoril_Praia%7CC.F._Estrela_da_Amadora%7CF.C._Famalic%C3%A3o%7CGil_Vicente_F.C.%7CC.S._Mar%C3%ADtimo%7CMoreirense_F.C.%7CC.D._Nacional%7CFC_Porto%7CRio_Ave_F.C.%7CC.D._Santa_Clara%7CSporting_CP%7CVit%C3%B3ria_S.C.%7CAcad%C3%A9mica_de_Coimbra_(football)%7CAVS_Futebol_SAD%7CAmarante_F.C.%7CS.L._Benfica_B%7CG.D._Chaves%7CS.C._Farense%7CC.D._Feirense%7CF.C._Felgueiras_(2006)%7CLeix%C3%B5es_S.C.%7CLusit%C3%A2nia_F.C.%7CF.C._Penafiel%7CPortimonense_S.C.%7CFC_Porto_B%7CSporting_CP_B%7CC.D._Tondela%7CS.C.U._Torreense%7CU.D._Leiria%7CF.C._Vizela%7CAD_Fafe%7CLe%C3%A7a_Futebol_Clube%7CA.D._Marco_09%7CF.C._Pa%C3%A7os_de_Ferreira",
+      "sha256": "95ba1f7d88e28a18802c7019ad5815735897b7c6ab3834eb666232e247c94b62",
+      "bytes": 17468
+    },
+    "clubs-api-1.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cpageprops&piprop=original&pilicense=any&titles=U.S.C._Paredes%7CSC_S%C3%A3o_Jo%C3%A3o_de_Ver%7CC.D._Trofense%7CVarzim_S.C.%7CSC_Vianense%7CVit%C3%B3ria_S.C._B%7CAtl%C3%A9tico_Clube_de_Portugal%7CC.F._Os_Belenenses%7CCaldas_S.C.%7CLouletano_Desportos_Clube%7CLusitano_G.C.%7CC.D._Mafra%7CU.D._Oliveirense%7CS.C._Covilh%C3%A3%7CUni%C3%A3o_de_Santar%C3%A9m%7CG.D._Vit%C3%B3ria_de_Sernache",
+      "sha256": "bac095feb3aeb7671c6476326910c02f9190d4621f41f4c2d52a3ec9260f4f3b",
+      "bytes": 6634
+    },
+    "venue-api-0.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates%7Cpageprops&colimit=max&titles=Est%C3%A1dio_do_Fontelo%7CEst%C3%A1dio_Municipal_de_Arouca%7CEst%C3%A1dio_da_Luz%7CEst%C3%A1dio_Municipal_de_Braga%7CEst%C3%A1dio_Municipal_de_Rio_Maior%7CEst%C3%A1dio_Ant%C3%B3nio_Coimbra_da_Mota%7CEst%C3%A1dio_Jos%C3%A9_Gomes%7CEst%C3%A1dio_Municipal_22_de_Junho%7CEst%C3%A1dio_Cidade_de_Barcelos%7CEst%C3%A1dio_do_Mar%C3%ADtimo%7CParque_de_Jogos_Comendador_Joaquim_de_Almeida_Freitas%7CEst%C3%A1dio_da_Madeira%7CEst%C3%A1dio_do_Drag%C3%A3o%7CEst%C3%A1dio_do_Rio_Ave_FC%7CEst%C3%A1dio_de_S%C3%A3o_Miguel_(Ponta_Delgada)%7CEst%C3%A1dio_Jos%C3%A9_Alvalade%7CEst%C3%A1dio_D._Afonso_Henriques%7CEst%C3%A1dio_Cidade_de_Coimbra%7CEst%C3%A1dio_do_CD_Aves%7CEst%C3%A1dio_Municipal_de_Amarante%7CBenfica_Campus%7CEst%C3%A1dio_Municipal_Eng._Manuel_Branco_Teixeira%7CEst%C3%A1dio_de_S%C3%A3o_Lu%C3%ADs%7CEst%C3%A1dio_Marcolino_de_Castro%7CEst%C3%A1dio_do_Mar%7CEst%C3%A1dio_Municipal_25_de_Abril%7CEst%C3%A1dio_Municipal_de_Portim%C3%A3o%7CEst%C3%A1dio_Jo%C3%A3o_Cardoso%7CEst%C3%A1dio_Manuel_Marques%7CEst%C3%A1dio_Dr._Magalh%C3%A3es_Pessoa%7CEst%C3%A1dio_do_Futebol_Clube_de_Vizela%7CEst%C3%A1dio_Municipal_de_Fafe%7CEst%C3%A1dio_Municipal_do_Marco_de_Canaveses%7CEst%C3%A1dio_Capital_do_M%C3%B3vel%7CEst%C3%A1dio_do_CD_Trofense%7CEst%C3%A1dio_do_Varzim_Sport_Club%7CEst%C3%A1dio_da_Tapadinha%7CEst%C3%A1dio_do_Restelo%7CEst%C3%A1dio_Algarve%7CEst%C3%A1dio_Carlos_Os%C3%B3rio",
+      "sha256": "2cb32d6cecc8d20412fe10e0646c230f28565b778c74013cf0e562c76a4efc6a",
+      "bytes": 17176
+    },
+    "venue-api-1.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates%7Cpageprops&colimit=max&titles=Est%C3%A1dio_Municipal_Jos%C3%A9_dos_Santos_Pinto",
+      "sha256": "24ec2c3e5d610d110e3b18f2315f3347dcc041dd270e03eac105dc97af9a2f9b",
+      "bytes": 555
+    },
+    "club-entities.json": {
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Clabels&languages=en%7Cpt&ids=Q1386850|Q75684|Q75729|Q17505449|Q6705180|Q5423714|Q3494112|Q1853273|Q1387855|Q3551889|Q10373917|Q3030038|Q17518847|Q2933726|Q3267802|Q618990|Q3551888|Q10291756",
+      "sha256": "0272933fffc1c20a7bd20085c2a7d247b703473aa97609b3337e1e4c6909e337",
+      "bytes": 247368
+    },
+    "venue-entities.json": {
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Clabels&languages=en%7Cpt&ids=Q849239|Q287359|Q3059094|Q10276896|Q15110461|Q5028447|Q3514314|Q1057274",
+      "sha256": "1865cfdc65f7bf7bbc77a38f11e90634efb1f39df63ce45a9f89a671037eae26",
+      "bytes": 86787
+    },
+    "clubs-pt-api.json": {
+      "url": "https://pt.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=pageimages%7Cpageprops&piprop=original&pilicense=any&titles=Le%C3%A7a%20Futebol%20Clube%7CLouletano%20Desportos%20Clube%7CAtl%C3%A9tico%20Clube%20de%20Portugal%7CLusitano%20Gin%C3%A1sio%20Clube",
+      "sha256": "d975e2d7815a72eaff5aa0066bb8e62f8d95f40c3ac6f6ca686a653d0d9e9881",
+      "bytes": 910
+    },
+    "specific-stadiums.json": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fstadium%20%3Fname%20%3Fcoord%20WHERE%20%7B%20VALUES%20%3Fname%20%7B%20%22Complexo%20Desportivo%20FC%20Alverca%22%40pt%20%22Complexo%20Desportivo%20FC%20Alverca%22%40en%20%22Complexo%20Desportivo%20Futebol%20Clube%20Alverca%22%40pt%20%22Complexo%20Desportivo%20Futebol%20Clube%20Alverca%22%40en%20%22Est%C3%A1dio%20Municipal%20de%20Braga%22%40pt%20%22Est%C3%A1dio%20Municipal%20de%20Braga%22%40en%20%22Est%C3%A1dio%20Jos%C3%A9%20Alvalade%22%40pt%20%22Est%C3%A1dio%20Jos%C3%A9%20Alvalade%22%40en%20%22Est%C3%A1dio%20Dr.%20Machado%20de%20Matos%22%40pt%20%22Est%C3%A1dio%20Dr.%20Machado%20de%20Matos%22%40en%20%22Est%C3%A1dio%20do%20Lusit%C3%A2nia%20de%20Lourosa%20FC%22%40pt%20%22Est%C3%A1dio%20do%20Lusit%C3%A2nia%20de%20Lourosa%20FC%22%40en%20%22Est%C3%A1dio%20do%20Lusit%C3%A2nia%20de%20Lourosa%20Futebol%20Clube%22%40pt%20%22Est%C3%A1dio%20do%20Lusit%C3%A2nia%20de%20Lourosa%20Futebol%20Clube%22%40en%20%22Est%C3%A1dio%20Lu%C3%ADs%20Filipe%20Menezes%22%40pt%20%22Est%C3%A1dio%20Lu%C3%ADs%20Filipe%20Menezes%22%40en%20%22Est%C3%A1dio%20Aur%C3%A9lio%20Pereira%22%40pt%20%22Est%C3%A1dio%20Aur%C3%A9lio%20Pereira%22%40en%20%22Est%C3%A1dio%20Manuel%20Marques%22%40pt%20%22Est%C3%A1dio%20Manuel%20Marques%22%40en%20%22Est%C3%A1dio%20do%20Futebol%20Clube%20de%20Vizela%22%40pt%20%22Est%C3%A1dio%20do%20Futebol%20Clube%20de%20Vizela%22%40en%20%22Est%C3%A1dio%20do%20Le%C3%A7a%20FC%22%40pt%20%22Est%C3%A1dio%20do%20Le%C3%A7a%20FC%22%40en%20%22Est%C3%A1dio%20do%20Le%C3%A7a%20Futebol%20Clube%22%40pt%20%22Est%C3%A1dio%20do%20Le%C3%A7a%20Futebol%20Clube%22%40en%20%22Est%C3%A1dio%20Municipal%20das%20Laranjeiras%22%40pt%20%22Est%C3%A1dio%20Municipal%20das%20Laranjeiras%22%40en%20%22Est%C3%A1dio%20Sporting%20Clube%20S%C3%A3o%20Jo%C3%A3o%20de%20Ver%22%40pt%20%22Est%C3%A1dio%20Sporting%20Clube%20S%C3%A3o%20Jo%C3%A3o%20de%20Ver%22%40en%20%22Est%C3%A1dio%20Dr.%20Jos%C3%A9%20de%20Matos%22%40pt%20%22Est%C3%A1dio%20Dr.%20Jos%C3%A9%20de%20Matos%22%40en%20%22Academia%20Vit%C3%B3ria%20Sport%20Clube%22%40pt%20%22Academia%20Vit%C3%B3ria%20Sport%20Clube%22%40en%20%22Campo%20da%20Mata%22%40pt%20%22Campo%20da%20Mata%22%40en%20%22Campo%20Estrela%22%40pt%20%22Campo%20Estrela%22%40en%20%22Est%C3%A1dio%20Municipal%20de%20Mafra%22%40pt%20%22Est%C3%A1dio%20Municipal%20de%20Mafra%22%40en%20%22Campo%20Ch%C3%A3%20das%20Padeiras%22%40pt%20%22Campo%20Ch%C3%A3%20das%20Padeiras%22%40en%20%22Est%C3%A1dio%20Municipal%20D.%20Nuno%20%C3%81lvares%20Pereira%22%40pt%20%22Est%C3%A1dio%20Municipal%20D.%20Nuno%20%C3%81lvares%20Pereira%22%40en%20%7D%20%3Fstadium%20rdfs%3Alabel%20%3Fname%3B%20wdt%3AP625%20%3Fcoord.%20%7D",
+      "sha256": "d328651de7ec8233e7c75533942fafb51a7f5691e04ba5a515d71df39980506b",
+      "bytes": 6835
+    },
+    "original-crests/pt-arouca": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9a/F.C._Arouca_logo.svg",
+      "sha256": "2af7a73f70787cf8c59eb7b25715c9572fc621b9ea0092003ec61e43da07f52a",
+      "bytes": 81350
+    },
+    "original-crests/pt-estoril-praia": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/94/GD_Estoril_Praia_logo.svg",
+      "sha256": "996a08a547b89ae1a26d2df7287c0805954111f2af6eb290f319288b76dadeb4",
+      "bytes": 5735
+    },
+    "original-crests/pt-estrela-da-amadora": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/S%C3%ADmbolo_Estrela_da_Amadora.svg",
+      "sha256": "6c57eac726282c48e169c344c0dc3ab8aa7c669869b243b4b623edef017633f8",
+      "bytes": 14625
+    },
+    "original-crests/pt-braga": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/79/S.C._Braga_logo.svg",
+      "sha256": "1679e96d829fd088e7c5ebb1ae14ce31a2dc780032365acddf635666be8099c9",
+      "bytes": 206060
+    },
+    "original-crests/pt-porto": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+      "sha256": "4b8681828feec23d707dd362a4124082d7795b645352c17d18c959e8930758a0",
+      "bytes": 317731
+    },
+    "original-crests/pt-rio-ave": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/0c/Rio_Ave_FC_logo.svg",
+      "sha256": "4b183e571fb69cb16379ca9badd98d48cab710fd7df00190eebd9d6a81cc35ff",
+      "bytes": 72546
+    },
+    "original-crests/pt-vitoria-de-guimaraes": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+      "sha256": "efff4df6dd586a055050dd7647d17426b3f3521d70f8bc357a323080a12b2e0e",
+      "bytes": 113560
+    },
+    "original-crests/pt-benfica-b": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+      "sha256": "5430a7d2ab72409f6b5de615d1f77a267910397d7b48a693aff8fa5c1127832b",
+      "bytes": 64251
+    },
+    "original-crests/pt-leixoes": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9d/Leix%C3%B5es_S.C._logo.svg",
+      "sha256": "72945bf97371612509b51e4ba3bfe30183af5a6416751b32a5d92471d190b434",
+      "bytes": 60563
+    },
+    "original-crests/pt-porto-b": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+      "sha256": "4b8681828feec23d707dd362a4124082d7795b645352c17d18c959e8930758a0",
+      "bytes": 317731
+    },
+    "original-crests/pt-marco-09": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/01/A.D._Marco_09_logo.svg",
+      "sha256": "c89c9b2206295095c87477df7423b9d2b435117270032c3f612acc24c6973c5e",
+      "bytes": 12772
+    },
+    "original-crests/pt-leca": {
+      "url": "https://upload.wikimedia.org/wikipedia/pt/d/de/Leca_FC.png",
+      "sha256": "10d36155eb2cee13011bf1e10a31fae697597c3c590a20032353c165a4161253",
+      "bytes": 22621
+    },
+    "original-crests/pt-pacos-de-ferreira": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/73/F.C._Pa%C3%A7os_de_Ferreira.svg",
+      "sha256": "8893a1872d40e7cc47ddb1011bf7fdb12b0718c5664d3662add0a87eb565b99c",
+      "bytes": 48285
+    },
+    "original-crests/pt-vitoria-sc-b": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+      "sha256": "efff4df6dd586a055050dd7647d17426b3f3521d70f8bc357a323080a12b2e0e",
+      "bytes": 113560
+    },
+    "original-crests/pt-alverca": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f5/F.C._Alverca_logo.svg",
+      "sha256": "2af8c23a9c4cebbd79140dd37247e055389aab57f57f8d542e4f4e6344ecb68e",
+      "bytes": 33893
+    },
+    "original-crests/pt-casa-pia": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/68/Casa_Pia_A.C._logo.svg",
+      "sha256": "9490a00c3dda4c5ebeebb7be20049b2682c0b9cc2007b9bb7ad99f597adc978e",
+      "bytes": 7095
+    },
+    "original-crests/pt-academico-de-viseu": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A.C._Viseu.svg",
+      "sha256": "d28d8654047ec32371d65dbfd18ffc65b96b1c35a810e6da6841d32550479de1",
+      "bytes": 261951
+    },
+    "original-crests/pt-famalicao": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/0e/F.C._Famalic%C3%A3o_logo.svg",
+      "sha256": "0e6b829879a457ee63a08539da95ad6074fb080ac7b075a0c8ccc4c91727c4ab",
+      "bytes": 182185
+    },
+    "original-crests/pt-gil-vicente": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/60/Gil_Vicente_F.C._logo.svg",
+      "sha256": "161fe9d3f7b61709908434312fb84fa8926abd77616a1b9cfffdee3de12f5272",
+      "bytes": 168944
+    },
+    "original-crests/pt-maritimo": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/30/C.S._Mar%C3%ADtimo_logo.svg",
+      "sha256": "ee3e57efeeac6f31fa8222687d50bfac95fbedc62e23167240762d9c629df467",
+      "bytes": 172105
+    },
+    "original-crests/pt-moreirense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Moreirense_Futebol_Clube_logo.svg",
+      "sha256": "e34616a5e978a111f3b8b5e70755eac61006efb9ca22b4c1bbcf018c17e8292a",
+      "bytes": 11349
+    },
+    "original-crests/pt-nacional": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Nacional_logo.svg",
+      "sha256": "172f88afe5cde6459d8f834ea00c786cc853728f07bcf880f9bdf57bf653a42a",
+      "bytes": 85024
+    },
+    "original-crests/pt-santa-clara": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/37/C.D._Santa_Clara_logo.svg",
+      "sha256": "8890309a4bec6be2c0901e37a90344363abf0636281425b74814cfc2fcb5897a",
+      "bytes": 21816
+    },
+    "original-crests/pt-sporting-cp": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+      "sha256": "13b4585ec6b174a564b9f67b14ae51a82ec7af154f4a2174c4ebe4af022ef58a",
+      "bytes": 19320
+    },
+    "original-crests/pt-academica": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f8/Acad%C3%A9mica_de_Coimbra_%28football%29_logo.svg",
+      "sha256": "22cd3be17a4d8a00a3783952a93737c4017b6bb02e97ec0f1adab33221b0eb27",
+      "bytes": 3310
+    },
+    "original-crests/pt-sporting-cp-b": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+      "sha256": "13b4585ec6b174a564b9f67b14ae51a82ec7af154f4a2174c4ebe4af022ef58a",
+      "bytes": 19320
+    },
+    "leca-official.html": {
+      "url": "https://lecafutebolclube.com/sobre-o-clube/area-do-adepto-2/",
+      "sha256": "13802580f7c2e3c52b26624d7346de5c9d5e395651584550da43309beb719af6",
+      "bytes": 118344
+    },
+    "atletico-official.html": {
+      "url": "https://www.atletico.pt/",
+      "sha256": "a2e240479938b19be8105240e10299e53c7a16fbf551e590826e1a16b52edc09",
+      "bytes": 1673464
+    },
+    "original-crests/pt-afs": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/34/AVS_Futebol_SAD_logo.svg",
+      "sha256": "ea09cda5946bf9c37ee12923ed3310c99cd3e306004db0cd054af1aaf96c0a73",
+      "bytes": 6860
+    },
+    "original-crests/pt-amarante": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/1a/Amarante_F.C._logo.svg",
+      "sha256": "4a9acd887980d271c5c19d6fe6497aca5882bc94a569d86bf4490ef6132e6471",
+      "bytes": 12462
+    },
+    "original-crests/pt-chaves": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/18/G.D._Chaves_logo.svg",
+      "sha256": "81d1c387e5bba3dbdb622216d6300c062412463e52cebb982de78328fd48c196",
+      "bytes": 37061
+    },
+    "original-crests/pt-farense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/be/S.C._Farense_logo.svg",
+      "sha256": "c8da8bd0bcce0bdbbad59f32253461f32bc8b7c0fadff9d1b623afc35e6cf25f",
+      "bytes": 509037
+    },
+    "original-crests/pt-feirense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/2d/C.D._Feirense_logo.svg",
+      "sha256": "e24ed2d2ce66f1d071bc80a0826bceae84bdc4fd7b6fd1b858bc388f1526cf9d",
+      "bytes": 300446
+    },
+    "original-crests/pt-felgueiras": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f2/F.C._Felgueiras_%282006%29_logo.svg",
+      "sha256": "db117aad5718a51c0e08bbf4d91de9f2635571b7879949819f473b9da6f536d4",
+      "bytes": 69782
+    },
+    "original-crests/pt-lusitania-lourosa": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/45/Lusit%C3%A2nia_F.C._logo.svg",
+      "sha256": "fa33aba4624e057da384c60825b12bacd0b225f851a699a8cbfd3df2ecf741c0",
+      "bytes": 65637
+    },
+    "original-crests/pt-penafiel": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/ff/F.C._Penafiel_logo.svg",
+      "sha256": "4ea158ff7e62f35432c04678e4b1b712689e98d6c19cb03e0c7d08ee5974ae7f",
+      "bytes": 55437
+    },
+    "original-crests/pt-portimonense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c0/Portimonense_Sporting_Clube_logo.svg",
+      "sha256": "92f6217ca5aeb7efc25b66be9308cd5c2a99f267532511981ccc74528f84398f",
+      "bytes": 26593
+    },
+    "original-crests/pt-tondela": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Tondela_logo.svg",
+      "sha256": "8a8762260ecdcd5b01b600efb65bf20a7a76521e1404e5d919901a0c2d0d7c43",
+      "bytes": 3238
+    },
+    "original-crests/pt-torreense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/dc/S.C.U._Torreense_logo.svg",
+      "sha256": "69ae0646ad646f656f35eb65f2be21da53941e3317a46ab527091e01ca7093ff",
+      "bytes": 108652
+    },
+    "original-crests/pt-uniao-de-leiria": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e5/U.D._Leiria_logo.svg",
+      "sha256": "05479dcf7040b3a8524aa265262d519ea6812f3583d471391a929ea0aba4cc51",
+      "bytes": 180570
+    },
+    "original-crests/pt-vizela": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a2/F.C._Vizela_logo.svg",
+      "sha256": "c6696e713540c2c11795576f770b0ff48b7975044c87cc8510d7bf24681a4359",
+      "bytes": 290159
+    },
+    "original-crests/pt-fafe": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9b/AD_Fafe_logo.svg",
+      "sha256": "894c2e20bd411479a2e5a424251aca2d9ca452ef4f418aa16551371a931e6066",
+      "bytes": 58440
+    },
+    "original-crests/pt-paredes": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a0/U.S.C._Paredes_logo.svg",
+      "sha256": "94df078727596a3b965138d8e451fa413fbb7f765499e9820465796d0843a168",
+      "bytes": 40909
+    },
+    "original-crests/pt-sao-joao-de-ver": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/08/SC_S%C3%A3o_Jo%C3%A3o_de_Ver_logo.svg",
+      "sha256": "51838abfc7ed96be94c2286b5f74933f4e9230356e3b4b5b6092b8ac97658cf8",
+      "bytes": 36677
+    },
+    "original-crests/pt-trofense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/41/C.D._Trofense_logo.svg",
+      "sha256": "fdb322d9817deb80856d318df4ad94a4015d915ab6b2287545cb27668c372121",
+      "bytes": 39816
+    },
+    "original-crests/pt-varzim": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/43/Varzim_S.C._logo.svg",
+      "sha256": "894df7461e2fdf19b4b6578b23bbf1f1bdcb4d4483ecf21377b931ebca016b61",
+      "bytes": 62572
+    },
+    "original-crests/pt-vianense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/06/SC_Vianense_logo.svg",
+      "sha256": "3b61526308321cf6afeb30726bb787739990b9e6dca184545fcf19d8b20f7cc5",
+      "bytes": 41088
+    },
+    "original-crests/pt-belenenses": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/08/C.F._Os_Belenenses_logo.svg",
+      "sha256": "f9a958b25e4d2fce80f770e11150fde933a6348f5bc30a6f1fee2cb4f508c6e0",
+      "bytes": 4651
+    },
+    "original-crests/pt-caldas": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/fd/Caldas_S.C._logo.svg",
+      "sha256": "57165b47e7b8e4bde925425761ce675a1824f9259c9060259c51a5441e966e4e",
+      "bytes": 120330
+    },
+    "original-crests/pt-louletano": {
+      "url": "https://upload.wikimedia.org/wikipedia/pt/3/33/Louletano_DC.png",
+      "sha256": "eaeda1b40c3a465a7b682e38ee84cb07718cfae31a0da293e2ebe0672f7bbb58",
+      "bytes": 59781
+    },
+    "original-crests/pt-mafra": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/18/C.D._Mafra_logo.svg",
+      "sha256": "a0816d9f5887d1ef5a4575e1205efab827947cf61617ffe35d08112c46d5afc5",
+      "bytes": 16317
+    },
+    "geocodes/pt-alverca.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Complexo%20Desportivo%20FC%20Alverca%20Alverca%20do%20Ribatejo",
+      "sha256": "2cc0d5c12d21fa88ce0de3a58998570c12deb64f8f9162e940430f8ff35a9975",
+      "bytes": 929
+    },
+    "geocodes/pt-lusitania-lourosa.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20do%20Lusit%C3%A2nia%20de%20Lourosa%20FC%20Lourosa",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocodes/pt-porto-b.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Lu%C3%ADs%20Filipe%20Menezes%20Vila%20Nova%20de%20Gaia",
+      "sha256": "3a2cb92813c0e3ee42e3647218e0cb24db36971d4a98f03dd521541104bf8ac3",
+      "bytes": 771
+    },
+    "geocodes/pt-sporting-cp-b.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Aur%C3%A9lio%20Pereira%20Alcochete",
+      "sha256": "eb7866f14c2b466510dea5a0ecb351947970554031618ec167222ecf91c85351",
+      "bytes": 673
+    },
+    "geocodes/pt-leca.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20do%20Le%C3%A7a%20FC%20Le%C3%A7a%20da%20Palmeira",
+      "sha256": "137f0f3b1d7477d681e30656c05247ad10e1b2d3e71b91d949024874e42d26b6",
+      "bytes": 860
+    },
+    "geocodes/pt-paredes.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Municipal%20das%20Laranjeiras%20Paredes",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocodes/pt-sao-joao-de-ver.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Sporting%20Clube%20S%C3%A3o%20Jo%C3%A3o%20de%20Ver%20Santa%20Maria%20da%20Feira",
+      "sha256": "b595d0202141e67ccf9e9d9dc1324755ef892511bd434d9c1bdb37fae55e4851",
+      "bytes": 873
+    },
+    "geocodes/pt-vianense.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Dr.%20Jos%C3%A9%20de%20Matos%20Viana%20do%20Castelo",
+      "sha256": "2d2a8c5522624aa7e6e13250859bb462c0a6d4f0c1ca4da98762dfc968882437",
+      "bytes": 871
+    },
+    "geocodes/pt-vitoria-sc-b.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Academia%20Vit%C3%B3ria%20Sport%20Clube%20Guimar%C3%A3es",
+      "sha256": "130d85921f8a611fde71c23fd0596a8d1e9e14b81cc42a529a6cadca3262fe79",
+      "bytes": 760
+    },
+    "geocodes/pt-mafra.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Municipal%20de%20Mafra%20Mafra",
+      "sha256": "f0493b22c51e3050ea89bc9b6b95c309f3fb6b8cade0e982031547ba24301e94",
+      "bytes": 792
+    },
+    "geocodes/pt-uniao-de-santarem.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Campo%20Ch%C3%A3%20das%20Padeiras%20Santar%C3%A9m",
+      "sha256": "113b47d2a4aced24529f482ca80995cca75adf6d7c440642f59756335ffd0777",
+      "bytes": 818
+    },
+    "geocodes/pt-vitoria-sernache.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Municipal%20D.%20Nuno%20%C3%81lvares%20Pereira%20Cernache%20do%20Bonjardim",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocodes/lourosa-extra.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=4&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Lusit%C3%A2nia%20Lourosa",
+      "sha256": "e026770bb063be087b5d87278d8c8fe7a70967410557f88d0482b877042ed28e",
+      "bytes": 1583
+    },
+    "geocodes/paredes-extra.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=4&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Municipal%20Laranjeiras",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocodes/sernache-extra.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=4&countrycodes=pt&addressdetails=1&q=Est%C3%A1dio%20Municipal%20D%20Nuno%20Alvares%20Pereira%20Cernache%20do%20Bonjardim",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "mafra-official.html": {
+      "url": "https://www.cm-mafra.pt/pages/1025?poi_id=27",
+      "sha256": "72881cccb7d85caa7d5311db12f62823f1122331da365bb221531c42d068fb3d",
+      "bytes": 317015
+    },
+    "academy-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=-8.284,41.445,-8.274,41.455",
+      "sha256": "9b8b58444341e427255ab2a66f08099f866537cfa97859a164d12e7256e7a9ca",
+      "bytes": 1017188
+    },
+    "primeira-benfica-calendar.html": {
+      "url": "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/07/02/futebol-benfica-calendario-liga-betclic-2026-27",
+      "sha256": "96657fe40618a487f2b75eab79e65457a1015905219f06bd1243632c4924c1ad",
+      "bytes": 499283
+    },
+    "paredes-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=-8.337,41.2,-8.33,41.206",
+      "sha256": "d2c5e56ae23ed35af2b0b77ac209ade2662e6476b4af62f95b530e018ca3e816",
+      "bytes": 1038116
+    },
+    "sernache-search.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=4&q=Cernache%20do%20Bonjardim",
+      "sha256": "839df089cb7a7b5aff333225c229812b46ba1cfd0aef0002909cbb14c7beb1a2",
+      "bytes": 936
+    },
+    "original-crests/pt-lusitano-evora": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lusitano_%C3%89vora.png",
+      "sha256": "cd3f3563939726081c16538cf15c89a7aef28727cb5ebaad20b5c03e327fe73f",
+      "bytes": 168597
+    },
+    "original-crests/pt-oliveirense": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/dd/U.D._Oliveirense_logo.svg",
+      "sha256": "cf7d206912e3fb7885c3958dc11e606aec5be39e00e2a78e9af30a783fd278b5",
+      "bytes": 48425
+    },
+    "original-crests/pt-sp-covilha": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/22/S.C._Covilh%C3%A3_logo.svg",
+      "sha256": "a55cdbed177615bb59031f340389ee8265f4acd6594c40250b48c09742517967",
+      "bytes": 37241
+    },
+    "original-crests/pt-uniao-de-santarem": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c9/Uni%C3%A3o_de_Santar%C3%A9m_logo.svg",
+      "sha256": "a53130829b024936ab297a4b079593816ac58ee8108b8a7edaee1c9bc2c6ed64",
+      "bytes": 97726
+    },
+    "original-crests/pt-vitoria-sernache": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7a/G.D._Vit%C3%B3ria_de_Sernache_logo.svg",
+      "sha256": "aadd4789428321de68d8767170ca65e12f34c74225011e58bc7ee14d7ab62bec",
+      "bytes": 16293
+    },
+    "sernache-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=-8.2,39.809,-8.176,39.822",
+      "sha256": "77e84351c1686c158b337775702a35a9391355471356f80521547cf4a8b71dea",
+      "bytes": 1745234
+    },
+    "sernache-osm-east.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=-8.179,39.803,-8.157,39.823",
+      "sha256": "146eb73f7e697d7050eab8c118f750592298ab20baca1f8bcc27213e1955303b",
+      "bytes": 1019575
+    },
+    "original-crests/pt-atletico-cp": {
+      "url": "https://static.wixstatic.com/media/d7ecec_5b3f5170f4144822be14e2313005b592~mv2.png",
+      "sha256": "7c4e7def2f4182dd9cf45a794f97c9383a6cff15defda9d3369df6d3807d8279",
+      "bytes": 332370
+    },
+    "sernache-parish.html": {
+      "url": "https://www.jf-cernachebonjardim.pt/freguesia/locais-a-visitar/10-estadio_municipal_d_nuno_alvares_pereira",
+      "sha256": "199858f00a87a3c721bd993d8daf280d34139d531dcea9457a0622f77492fc8e",
+      "bytes": 70205
+    },
+    "crests/pt-academica.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f8/Acad%C3%A9mica_de_Coimbra_%28football%29_logo.svg",
+      "sha256": "132af1df2782f7eeaf9b4b6c3b69e6e65157e523334ad1f86f52dc2152f95d6e",
+      "bytes": 4022,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-academico-de-viseu.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A.C._Viseu.svg",
+      "sha256": "927d5af6ac51c927a2289fcf62cabf06c888e65ee1e5803a6f0efa5ca1f89bb4",
+      "bytes": 11000,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-afs.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/34/AVS_Futebol_SAD_logo.svg",
+      "sha256": "4ad1ac606257cec0be9dc03c8b5becccdf92a0cfe518f8d47a5a10daaf2e4ddc",
+      "bytes": 11202,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-alverca.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f5/F.C._Alverca_logo.svg",
+      "sha256": "c3298712c3f7746273009d3f9b099b63561b364e3a78218d95e3c456372b4a3a",
+      "bytes": 24178,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-amarante.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/1a/Amarante_F.C._logo.svg",
+      "sha256": "8d10e3592b439f8790b532ed7a1cb85a0ac4eb1f18c2aa1aeb03903c972fd9a6",
+      "bytes": 23700,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-arouca.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9a/F.C._Arouca_logo.svg",
+      "sha256": "74ef2a6294b22722e59a2aa0c852b77fea093c177cfe6cc89ccf06e555a8eced",
+      "bytes": 37663,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-atletico-cp.png": {
+      "url": "https://static.wixstatic.com/media/d7ecec_5b3f5170f4144822be14e2313005b592~mv2.png",
+      "sha256": "3dc3e519f0838584f5ee02e3538c17dae92f6d9b097772cae874b61371323e35",
+      "bytes": 30708,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-belenenses.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/08/C.F._Os_Belenenses_logo.svg",
+      "sha256": "e7f1b7a2590fb8603f3f221a529d2cf9a5fe0d272fbfa918484879092e8d8928",
+      "bytes": 12436,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-benfica-b.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+      "sha256": "03b48c4db052f73680c1df677c0eb75008f8ff81f662a0fa70bfe154b5d2d6fc",
+      "bytes": 38133,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-benfica.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+      "sha256": "edd0683c6f36b8726018b2f8215c78df9afd6f0d754f3546da2ac96e43d927dc",
+      "bytes": 36957,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-braga.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/79/S.C._Braga_logo.svg",
+      "sha256": "0766c08809332791e78611e7bc7ab8776b3b0d7744413bbbd66e0b2f7213170a",
+      "bytes": 26477,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-caldas.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/fd/Caldas_S.C._logo.svg",
+      "sha256": "e5ff639f8bd54de2d5cb38cd8dbdf19ebf43b6446279778eafdd42c5f1a1a514",
+      "bytes": 33077,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-casa-pia.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/68/Casa_Pia_A.C._logo.svg",
+      "sha256": "710022dcd7f81a4c6b6e7024e40d9155d2c5535f1f7eb8779ab96aaa747a7afc",
+      "bytes": 13218,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-chaves.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/18/G.D._Chaves_logo.svg",
+      "sha256": "0df914802ca2c80d8ca911375355fa9f873c0cb0246a1b201d6a46bce2529f0e",
+      "bytes": 25538,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-estoril-praia.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/94/GD_Estoril_Praia_logo.svg",
+      "sha256": "fd26579df2b8d1377b9db07b1d6905938ac6ae601f0ae0715bfb3bb9622ba694",
+      "bytes": 15014,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-estrela-da-amadora.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/S%C3%ADmbolo_Estrela_da_Amadora.svg",
+      "sha256": "ae7fbc0e865eb124b0495fdf9e2e1261f6ff8bff4c5e768bf101cbc6e51e978a",
+      "bytes": 15493,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-fafe.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9b/AD_Fafe_logo.svg",
+      "sha256": "a4569b883c38e026591ddb687c3e965a1d0ef580b0618ede3498432f56e46ea9",
+      "bytes": 25369,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-famalicao.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/0e/F.C._Famalic%C3%A3o_logo.svg",
+      "sha256": "a5978cc98ee1f705b26f940bc70bc605ad8985157691b4ceb056820edf57b0d3",
+      "bytes": 25279,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-farense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/be/S.C._Farense_logo.svg",
+      "sha256": "2b5ad543ad0e7986b95e169cee8fede20a4354059920768ab3874adf632f2236",
+      "bytes": 23845,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-feirense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/2d/C.D._Feirense_logo.svg",
+      "sha256": "642e5ea3239c5b8681bf56e83aa146ec6a8e97bce8ccc261e449afe07ef61563",
+      "bytes": 40852,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-felgueiras.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f2/F.C._Felgueiras_%282006%29_logo.svg",
+      "sha256": "55974b80ce301f37dd2a94ed689fa5276b62b480e001b09536050cb43e25fe4e",
+      "bytes": 27978,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-gil-vicente.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/60/Gil_Vicente_F.C._logo.svg",
+      "sha256": "64f55d5b9d2c13618df99c485b8dfc161c541d785a6b0f45619fe89f1eb98207",
+      "bytes": 27492,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-leca.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/pt/d/de/Leca_FC.png",
+      "sha256": "c2673d51976aec59894675fa2346bb045d6e62c6d3043ec85e9c338f59d2f8be",
+      "bytes": 18133,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-leixoes.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9d/Leix%C3%B5es_S.C._logo.svg",
+      "sha256": "b4c55b0e24965aa0c05d5c32cbc34eb58fb9e1c6ffea2052086844a12e9e9741",
+      "bytes": 34406,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-louletano.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/pt/3/33/Louletano_DC.png",
+      "sha256": "e9962ab40465dbc55ca41cb813bc0b07db489758ff970c38a073679ca4d3ed98",
+      "bytes": 3677,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-lusitania-lourosa.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/45/Lusit%C3%A2nia_F.C._logo.svg",
+      "sha256": "42272de3690529f65308c1a93680c836e0df5c7ef2ad0afad2ddaa137445445a",
+      "bytes": 27375,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-lusitano-evora.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lusitano_%C3%89vora.png",
+      "sha256": "18af925e288b259c78edda37430ff493b2816dfee2ca8fbb5848258514420964",
+      "bytes": 40918,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-mafra.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/18/C.D._Mafra_logo.svg",
+      "sha256": "73e0d367d262089598bd4a1b5fbdca26417208a3e18311b413601893c838ff18",
+      "bytes": 15653,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-marco-09.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/01/A.D._Marco_09_logo.svg",
+      "sha256": "989f0ea3edc32255a12f1004e33ff86f59b629e6c88e5f5aa9f4ca49c589bf5e",
+      "bytes": 16987,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-maritimo.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/30/C.S._Mar%C3%ADtimo_logo.svg",
+      "sha256": "c49b09cd979cfc82cdf4f1757827d709b9f263f12d9b8d205b345b4a3ad89d9c",
+      "bytes": 47883,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-moreirense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Moreirense_Futebol_Clube_logo.svg",
+      "sha256": "5a516e86197e5bd076f7eade1debb78d1a66b083ed51d877825eac4f91fc7f09",
+      "bytes": 7984,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-nacional.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Nacional_logo.svg",
+      "sha256": "ece9153612be2213ea1c6316d5f9057825522e29f39624951fa0f68d32cdc614",
+      "bytes": 30712,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-oliveirense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/dd/U.D._Oliveirense_logo.svg",
+      "sha256": "7aebd62ff2593c97e5e95d86081ed5c40cc8f6f5af9f103318fc014b7eb4e45d",
+      "bytes": 23237,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-pacos-de-ferreira.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/73/F.C._Pa%C3%A7os_de_Ferreira.svg",
+      "sha256": "3ef6b0c820226a838b5364c814b515d140ca07f8bf5dc990f3cc230948285d56",
+      "bytes": 18776,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-paredes.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a0/U.S.C._Paredes_logo.svg",
+      "sha256": "68dc4d1583886fffefbd75ed3928a5a49e783faaa18da3c12ca623dcc59aab88",
+      "bytes": 31790,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-penafiel.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/ff/F.C._Penafiel_logo.svg",
+      "sha256": "8e1626184a7fa339da95d988a5bcc85aaf9bdb5c11a856c9976ad5616392b929",
+      "bytes": 27162,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-portimonense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c0/Portimonense_Sporting_Clube_logo.svg",
+      "sha256": "1393e7e6f94ced9fa400e4418e88e0d815a3a8b0ba8345ed9ae2c13719e15730",
+      "bytes": 20274,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-porto-b.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+      "sha256": "a38355ca7341c67aa6f167835123eb6ab8c0c6676e520a14461b412aa4b9e305",
+      "bytes": 43092,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-porto.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+      "sha256": "a38355ca7341c67aa6f167835123eb6ab8c0c6676e520a14461b412aa4b9e305",
+      "bytes": 43092,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-rio-ave.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/0c/Rio_Ave_FC_logo.svg",
+      "sha256": "decdc9ebb7408b0c9e1aa09fc80ff31f70dcd702b7d1152bc58105daceffa7b0",
+      "bytes": 30729,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-santa-clara.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/37/C.D._Santa_Clara_logo.svg",
+      "sha256": "e16b1df31881881122f2a9a7de350259d58bee24597b5e70d89845f952ef4ae8",
+      "bytes": 19358,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-sao-joao-de-ver.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/08/SC_S%C3%A3o_Jo%C3%A3o_de_Ver_logo.svg",
+      "sha256": "ccfc7079129411a29450877fe50fde3cb6fc088106030446cac79e926f7c4595",
+      "bytes": 18229,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-sp-covilha.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/22/S.C._Covilh%C3%A3_logo.svg",
+      "sha256": "a0d657aab3f1a2cda51558b884a1d9ee9c7512f900f5b9e1177ec2eef42fa355",
+      "bytes": 20683,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-sporting-cp-b.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+      "sha256": "fadaadf2c2032df662364ccc064ebabc0ef6722b2ee45be3488495857a8ec8fc",
+      "bytes": 15529,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-sporting-cp.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+      "sha256": "fadaadf2c2032df662364ccc064ebabc0ef6722b2ee45be3488495857a8ec8fc",
+      "bytes": 15529,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-tondela.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Tondela_logo.svg",
+      "sha256": "2c4bd3bb958a67c2182f59eaf45eed33a0146cfd760fcda94d373141c8345ff7",
+      "bytes": 14488,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-torreense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/dc/S.C.U._Torreense_logo.svg",
+      "sha256": "4aac167ec8f7060245a26b0b431fda8c3b114b32b8208662788393f93abb0c22",
+      "bytes": 33705,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-trofense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/41/C.D._Trofense_logo.svg",
+      "sha256": "b0298514c6dd9fa02d7491d07cb46060b5c20a6ae0020e067f219bf4d6f17c52",
+      "bytes": 34206,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-uniao-de-leiria.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e5/U.D._Leiria_logo.svg",
+      "sha256": "0a351d23e8505d9de46ebb0dfced6ae5f73bfacd0a4e64ba51acee5a1e9adeed",
+      "bytes": 37536,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-uniao-de-santarem.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c9/Uni%C3%A3o_de_Santar%C3%A9m_logo.svg",
+      "sha256": "0792e481c9727097076d62dad0cf27a5730ece3423c9b5c50b1aa4bb49246b13",
+      "bytes": 29396,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-varzim.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/43/Varzim_S.C._logo.svg",
+      "sha256": "617b557fd29a7e715fa50cadc5317edaad3df9f25adb848945caad481b2c01bb",
+      "bytes": 42273,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-vianense.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/06/SC_Vianense_logo.svg",
+      "sha256": "c8cc89bc54500899507225ac391992a0324fbd823788756f0f1bedca29e9a0e1",
+      "bytes": 26168,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-vitoria-de-guimaraes.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+      "sha256": "49a6b214aa396044327a6cb59f134247e62e1f06f546fd14f0773d9d489391ef",
+      "bytes": 21621,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-vitoria-sc-b.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+      "sha256": "49a6b214aa396044327a6cb59f134247e62e1f06f546fd14f0773d9d489391ef",
+      "bytes": 21621,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-vitoria-sernache.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7a/G.D._Vit%C3%B3ria_de_Sernache_logo.svg",
+      "sha256": "8d396d398bac60ad72dc6b64246405822256647a94aafecc86083c2512211941",
+      "bytes": 20794,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    },
+    "crests/pt-vizela.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a2/F.C._Vizela_logo.svg",
+      "sha256": "032024e27859a5a5bbdc88e13dc39720cf8703986ada1a866d046ff7665a02b0",
+      "bytes": 17281,
+      "derived": "256-pixel bound, PNG from original-crests source"
+    }
+  }
+}

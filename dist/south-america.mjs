@@ -1,3 +1,4 @@
+import {splitSouthAmericaContext} from './south-america-context.mjs';
 import {configureMapViewPicker,clearMapViewPicker} from './map-view-picker.mjs';
 import {createCountryPage,setSubdivisionHeading,setRegionBreadcrumb,showCountryPanel} from './country-page.mjs';
 import {createPlaceSearch} from './place-search.mjs';
@@ -117,11 +118,11 @@ export function createSouthAmerica(map,host){
   const candidates=visible.map(p=>argentinaMapLabel({...p,en:p.level===3&&p.boundaryAvailable&&p!==selected?p.boundaryName:p.en,local:p.id==='AR-94'?'':p.local,selected:p===selected}));
   labels=window.AtlasLabels.render(map,candidates,'province-label');
  }
- function contextFilters(){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...otherPreviews.filter(previewReady)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility','visible');}
+ function contextFilters(open=host.country()){const exclusion=installed.has(active)?active:'',available=availableCountries();if(map.getLayer('south-america-fill'))map.setFilter('south-america-fill',['all',['in',['get','country'],['literal',available]],['!=',['get','country'],exclusion],['!=',['coalesce',['get','contextHiddenFor'],''],open]]);if(map.getLayer('south-america-portal-fill')){map.setFilter('south-america-portal-fill',['in',['get','country'],['literal',available]]);map.setLayoutProperty('south-america-portal-fill','visibility',data?'none':'visible');}if(map.getLayer('world-land'))map.setFilter('world-land',['!',['in',['get','country'],['literal',[...available,...otherPreviews.filter(previewReady)]]]]);for(const id of ['south-land-boundaries','south-river-boundaries'])if(map.getLayer(id))map.setLayoutProperty(id,'visibility','visible');}
  async function warm(){
   if(data)return;if(loading)return loading;
   loading=(async()=>{
-   const context=await loadCompressed('data/flight-context.bin');data=context;
+   const context=splitSouthAmericaContext(await loadCompressed('data/flight-context.bin'));data=context;
    map.addSource('flight-context',{type:'geojson',data:context,tolerance:.25,buffer:64,maxzoom:16,attribution:'Country silhouettes: Natural Earth · IBGE · IGN · IGM / IDE Uruguay'});
    map.addLayer({id:'south-america-fill',metadata:{atlas:{role:'context'}},type:'fill',source:'flight-context',paint:{'fill-color':'#d7d7d3','fill-antialias':false}});
    map.addSource('south-land-borders',{...internationalLineSourceOptions,data:lineData(context.landBorders)});
@@ -253,5 +254,5 @@ export function createSouthAmerica(map,host){
  };}
  async function fly(bounds){await warm();const target=map.cameraForBounds(bounds,{padding:45,maxZoom:6});if(!target)return;return new Promise(resolve=>{map.once('moveend',resolve);map.flyTo({...target,duration:2800,curve:1.65,minZoom:.65,retainPadding:false,essential:false,easing:t=>t*t*(3-2*t)});});}
  contextFilters();updateLabels();
- return{portals:Object.fromEntries(Object.keys(countries).map(id=>[id,portal(id)])),fly,syncDeveloper,warmContext:warm};
+ return{portals:Object.fromEntries(Object.keys(countries).map(id=>[id,portal(id)])),fly,syncDeveloper,syncContext:contextFilters,warmContext:warm};
 }

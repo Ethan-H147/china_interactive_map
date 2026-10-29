@@ -1,0 +1,2 @@
+// Reuse pinned source snapshots, rebuilding the normalized 2026–27 roster and crests.
+await import('./parse.mjs');await import('./crests.mjs');await import('./extra.mjs');await import('./data-es.mjs');await import('./finalize.mjs');

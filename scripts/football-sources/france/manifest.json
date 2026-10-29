@@ -1,0 +1,1036 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "league-1.html": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1",
+      "sha256": "f5b66d0699415017c231d1a3fc12ffa022d2686018ccd3d68c16a1f7ca4013af",
+      "bytes": 568093
+    },
+    "league-2.html": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_2",
+      "sha256": "b7d3f7ef3816f4b3c35b381e74ae45e93e72de66b0c1404fa5514ddc75ce0fac",
+      "bytes": 449411
+    },
+    "league-3.html": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_3",
+      "sha256": "44949c67cd137cc00881955597a052d8e8e7684b369885f242c5ab980b80fd77",
+      "bytes": 279995
+    },
+    "clubs/fr-angers.html": {
+      "url": "https://en.wikipedia.org/wiki/Angers_SCO",
+      "sha256": "fcce4e6d0737e0233670e5147bb3d3924006b995ad277ae68a293ddbcc7e38f8",
+      "bytes": 369607
+    },
+    "clubs/fr-le-havre.html": {
+      "url": "https://en.wikipedia.org/wiki/Le_Havre_AC",
+      "sha256": "0492222a0de1f25c8e00cbe96a5c0126fc157b1446672754cc07c864f3806932",
+      "bytes": 319860
+    },
+    "clubs/fr-brest.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Brestois_29",
+      "sha256": "0c9fc4d5777c2a8fc6a6bcac1b06b783f886f9eb837a62a3aafda86609e467af",
+      "bytes": 432156
+    },
+    "clubs/fr-auxerre.html": {
+      "url": "https://en.wikipedia.org/wiki/AJ_Auxerre",
+      "sha256": "60c6ea8d8bf275f0c584be6135779aaafcba0466b91dc798ec888bdc59141f9b",
+      "bytes": 586782
+    },
+    "venues/fr-le-havre.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Oc%C3%A9ane",
+      "sha256": "e601267260d77d3558c13d249de8d6bc72b99374847fa2974fe2336c25deeac0",
+      "bytes": 154874
+    },
+    "venues/fr-angers.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Raymond_Kopa",
+      "sha256": "b43269bfe05e3e60a1d6b311113a37d4f4c90fb980177c0605a62f79ed1137d2",
+      "bytes": 120108
+    },
+    "clubs/fr-le-mans.html": {
+      "url": "https://en.wikipedia.org/wiki/Le_Mans_FC",
+      "sha256": "6c54161e992af33d54edff5461dd54433d1f559a88560bd39f062660ef68e125",
+      "bytes": 391812
+    },
+    "venues/fr-brest.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Francis-Le_Bl%C3%A9",
+      "sha256": "e3d31e27a47f5f678204ce197810244ac83a20ec8145fefaeff8d8d8d7ed2ecc",
+      "bytes": 126518
+    },
+    "venues/fr-le-mans.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Marie-Marvingt",
+      "sha256": "a26747df541a44b28fed62406c101ad54b8f9c833edaf9a34f9dd8f6e7b90f26",
+      "bytes": 100603
+    },
+    "clubs/fr-lens.html": {
+      "url": "https://en.wikipedia.org/wiki/RC_Lens",
+      "sha256": "5ef0318ab59ad95f71127569d99129f7f79dc28b6764499f8209ee5c0d899fef",
+      "bytes": 505099
+    },
+    "venues/fr-lens.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Bollaert-Delelis",
+      "sha256": "5387a860829a0f89024f04fdf03fbe42fae77ca7b457c086b73d3574e29f849e",
+      "bytes": 206370
+    },
+    "clubs/fr-lille.html": {
+      "url": "https://en.wikipedia.org/wiki/Lille_OSC",
+      "sha256": "bfcb626994f60afd9b9dfc51a32ef63682aaae2daad1181bad9cd26150503ddb",
+      "bytes": 1511042
+    },
+    "clubs/fr-lorient.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Lorient",
+      "sha256": "df7d79c8630f7b3cb1740043e6e2cbd4531642ac92cf9997bab54ccb3f748b9c",
+      "bytes": 319753
+    },
+    "venues/fr-auxerre.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Abb%C3%A9_Deschamps",
+      "sha256": "9ac0d709a04c1b197ec445a106ac8260b998476507900d4eadba19b3c6df2fc6",
+      "bytes": 138011
+    },
+    "clubs/fr-lyon.html": {
+      "url": "https://en.wikipedia.org/wiki/Olympique_Lyonnais",
+      "sha256": "bc9954a337ad797ed9479a46f746a33e075a925606af95cd899ce31714105764",
+      "bytes": 897329
+    },
+    "venues/fr-lorient.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_du_Moustoir",
+      "sha256": "12894eb00e495e7a68e531300680d8b3caaa0737deed22367ffc8cdc0d847b1c",
+      "bytes": 125769
+    },
+    "clubs/fr-marseille.html": {
+      "url": "https://en.wikipedia.org/wiki/Olympique_de_Marseille",
+      "sha256": "2e20277c347d7f8ecba25080d0b775a3b172f252356e05e6bdd572e18cb1647b",
+      "bytes": 943585
+    },
+    "venues/fr-lyon.html": {
+      "url": "https://en.wikipedia.org/wiki/Parc_Olympique_Lyonnais",
+      "sha256": "17130523b66bd07669da478259869a68f23287cd279d648b184be14948b1eeb2",
+      "bytes": 529664
+    },
+    "clubs/fr-monaco.html": {
+      "url": "https://en.wikipedia.org/wiki/AS_Monaco_FC",
+      "sha256": "5c23abafcddc8c2bcf2ad3bcfa2fcd3dfbb4b34f545e228d1f85ba5dfba2fb3d",
+      "bytes": 657633
+    },
+    "venues/fr-marseille.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_V%C3%A9lodrome",
+      "sha256": "c6d7ee6e47248a5bc209adac86bd596c79faae330a237d3b86056fa5f733fe66",
+      "bytes": 617310
+    },
+    "clubs/fr-nice.html": {
+      "url": "https://en.wikipedia.org/wiki/OGC_Nice",
+      "sha256": "54ff34be6a62a24e2ff4d9336be61dabcf4554f24f2512646a98e0e1dd8cf963",
+      "bytes": 550124
+    },
+    "venues/fr-monaco.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Louis_II",
+      "sha256": "a5b56542d5885355858ff54263718ee8dd682170dc97002a1aeb19be5bd3eaa2",
+      "bytes": 267976
+    },
+    "clubs/fr-paris-fc.html": {
+      "url": "https://en.wikipedia.org/wiki/Paris_FC",
+      "sha256": "da593e98255c7feb94143f5a566cc1b65d098f3dbac99f80001bd8bfc470f4e4",
+      "bytes": 599153
+    },
+    "venues/fr-lille.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Pierre-Mauroy",
+      "sha256": "0c63afc0c11d78df931995949003376859dcb76964f94ce5b359b3698111d8e1",
+      "bytes": 384086
+    },
+    "venues/fr-nice.html": {
+      "url": "https://en.wikipedia.org/wiki/Allianz_Riviera",
+      "sha256": "0af157ba0489c6440548d09a1b0b28a095eafa0f9ebc7b21d17987ad51d1a5d8",
+      "bytes": 279891
+    },
+    "clubs/fr-paris-saint-germain.html": {
+      "url": "https://en.wikipedia.org/wiki/Paris_Saint-Germain_FC",
+      "sha256": "8214ccd434a775168c75af10f17a098cef20da33469b565b3b8d678440852e77",
+      "bytes": 1467461
+    },
+    "clubs/fr-rennes.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Rennais_FC",
+      "sha256": "59b68ba5d1d797c30ec6ac8ec8aaff138238e6c21603c3e48fdda264bd972ae1",
+      "bytes": 559901
+    },
+    "clubs/fr-strasbourg.html": {
+      "url": "https://en.wikipedia.org/wiki/RC_Strasbourg_Alsace",
+      "sha256": "ed326b0980c7539d81500fb7a559d0e5503f66393f7746daf6b8a16fb28e84f0",
+      "bytes": 784691
+    },
+    "venues/fr-paris-saint-germain.html": {
+      "url": "https://en.wikipedia.org/wiki/Parc_des_Princes",
+      "sha256": "10e5fe6c5cc0cf4c05f19eb41578b68abe8d04a94d39e26f65bdc5b137750fbc",
+      "bytes": 1236913
+    },
+    "clubs/fr-toulouse.html": {
+      "url": "https://en.wikipedia.org/wiki/Toulouse_FC",
+      "sha256": "621ef0197044fc49d65e5d9a86e876cd7aba894e522eb93077416690d7b42503",
+      "bytes": 426516
+    },
+    "venues/fr-rennes.html": {
+      "url": "https://en.wikipedia.org/wiki/Roazhon_Park",
+      "sha256": "978eb717b59567aa29c803a0849cc4f6283ddccef161126d31c597fe71b685e5",
+      "bytes": 136225
+    },
+    "venues/fr-strasbourg.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_la_Meinau",
+      "sha256": "f6811b8e503c5d88fc2344bffe5709e5a4dfe713314a23431360d19853b9eef3",
+      "bytes": 281514
+    },
+    "venues/fr-toulouse.html": {
+      "url": "https://en.wikipedia.org/wiki/Stadium_de_Toulouse",
+      "sha256": "5dd21f240544761314aa35ea01f744c63cb64800c503c6066d1360ec19b3cf79",
+      "bytes": 331130
+    },
+    "venues/fr-paris-fc.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Jean-Bouin_(Paris)",
+      "sha256": "01e97a3682bcf506f1926cbf0f303471e2c0877ff34aa216d71d459fa6a8d73e",
+      "bytes": 238991
+    },
+    "clubs/fr-boulogne.html": {
+      "url": "https://en.wikipedia.org/wiki/US_Boulogne",
+      "sha256": "b337b1da1fe88031cc7e2ada789d75194825921c9bc7dd0275211c0aa9c50be2",
+      "bytes": 278428
+    },
+    "clubs/fr-clermont.html": {
+      "url": "https://en.wikipedia.org/wiki/Clermont_Foot",
+      "sha256": "c1bd8a451f92c1c4ae75d36fbbfdca0468a0d11e6e288e30790167add4519c12",
+      "bytes": 245868
+    },
+    "clubs/fr-annecy.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Annecy",
+      "sha256": "d7aace4f95f2c60deda0d0092fd9a76dc38254a4e3224245e00c9773bf36d5f7",
+      "bytes": 321549
+    },
+    "venues/fr-clermont.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Gabriel-Montpied",
+      "sha256": "41324f3ed29d4f7585fb41f8a49e6165b07bd221ec76aebb0d71b9543aec2809",
+      "bytes": 115522
+    },
+    "venues/fr-boulogne.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_la_Lib%C3%A9ration",
+      "sha256": "d0098242a2094eec80b315ec79bc7241319fc7419a4c977f477956fde96634f3",
+      "bytes": 114910
+    },
+    "clubs/fr-dijon.html": {
+      "url": "https://en.wikipedia.org/wiki/Dijon_FCO",
+      "sha256": "306419670fc2c1d9e47f25ed807c5e7afb9929299e53771a516cfaae9ff13cc9",
+      "bytes": 247548
+    },
+    "venues/fr-annecy.html": {
+      "url": "https://en.wikipedia.org/wiki/Parc_des_Sports,_Annecy",
+      "sha256": "f8132b667b9bb899ac4fa3bf8d8af21f6caf36f66026e73aa3a62f8bfb23de0d",
+      "bytes": 108988
+    },
+    "clubs/fr-troyes.html": {
+      "url": "https://en.wikipedia.org/wiki/ES_Troyes_AC",
+      "sha256": "855b6f1b1388f4ca3d29f2ad03c279035db52e8cc11cd0f5044224c61f1c97d9",
+      "bytes": 384932
+    },
+    "clubs/fr-grenoble.html": {
+      "url": "https://en.wikipedia.org/wiki/Grenoble_Foot_38",
+      "sha256": "3e33d3ab2a57aa952e82a8654aea8bd89d5a17acd0cd0a1113e3ae7e05846e0a",
+      "bytes": 260973
+    },
+    "clubs/fr-dunkerque.html": {
+      "url": "https://en.wikipedia.org/wiki/USL_Dunkerque",
+      "sha256": "68b1e044958aea91421449c77c3e3e605edd4176868d6c6d3e43ef79cef5cc12",
+      "bytes": 395123
+    },
+    "venues/fr-troyes.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_l'Aube",
+      "sha256": "1e550b95e96334060c64c40b6fd6932e4b1d31f3e95d4b6598df139188d56926",
+      "bytes": 115632
+    },
+    "venues/fr-grenoble.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_des_Alpes",
+      "sha256": "1cf22b523780595ba343e7e39caefa5b84a33e4c5011956723846b432660e15c",
+      "bytes": 138307
+    },
+    "venues/fr-dijon.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Gaston_G%C3%A9rard",
+      "sha256": "323d9d08a32e3f44c06257ed96dfdbfb28fe1a53a00f2a91375435c5e096c3bf",
+      "bytes": 115912
+    },
+    "clubs/fr-laval.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Lavallois",
+      "sha256": "c0501575403f2862d64b4a1b469d0c91f90528f18ba31e32b3f3256a1aa6b919",
+      "bytes": 290475
+    },
+    "clubs/fr-guingamp.html": {
+      "url": "https://en.wikipedia.org/wiki/En_Avant_Guingamp",
+      "sha256": "3c98d8ce30af6272650890809f4fdaddb08eb4c3075cb4133082b1412719213f",
+      "bytes": 367655
+    },
+    "venues/fr-dunkerque.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Marcel-Tribut",
+      "sha256": "743f1190cdee06130ea7c74630b7994f910f0553654fba664825002d3ed10550",
+      "bytes": 105851
+    },
+    "venues/fr-guingamp.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_Roudourou",
+      "sha256": "7e1ebeeeef3e2bc639b2a28d17caff740338cb44d4ac0aa0f8b76375d427ea1c",
+      "bytes": 129742
+    },
+    "clubs/fr-nancy.html": {
+      "url": "https://en.wikipedia.org/wiki/AS_Nancy_Lorraine",
+      "sha256": "5b222db7856cda66b39a82bf2a38cb54298078c40ff72aca0e594080abb9dd63",
+      "bytes": 416913
+    },
+    "clubs/fr-montpellier.html": {
+      "url": "https://en.wikipedia.org/wiki/Montpellier_HSC",
+      "sha256": "64c19bd4b54caf67fd66bb9945e8cb079484b7843f69ce163ca2817c41566900",
+      "bytes": 344006
+    },
+    "venues/fr-laval.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Francis_Le_Basser",
+      "sha256": "7415703e8057c763db72dd5b9757bc66e799630c6facb8e69dea458cdd5927cd",
+      "bytes": 92856
+    },
+    "clubs/fr-metz.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Metz",
+      "sha256": "6cffcf8fb0de48f7f2f5a426c658533f56e472fba3f849d7e26cf2f0be6eb75c",
+      "bytes": 536048
+    },
+    "venues/fr-nancy.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Marcel_Picot",
+      "sha256": "e44f822dbe32b4620cb0d506225ab675b074f4fefa74fe750e254c49aad4f362",
+      "bytes": 117315
+    },
+    "venues/fr-montpellier.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_la_Mosson",
+      "sha256": "fd2afd6a59ae131dc84397c6a6780e0a87b42070675a48057d35f0128a299f3d",
+      "bytes": 177181
+    },
+    "clubs/fr-nantes.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Nantes",
+      "sha256": "23b562f06f10fa4e7aeef7cd985f25aa7f32a95fae77d04f684efc6a931299dc",
+      "bytes": 549319
+    },
+    "clubs/fr-pau.html": {
+      "url": "https://en.wikipedia.org/wiki/Pau_FC",
+      "sha256": "2a086bc949c0ce29ea7b9af753a970f3c70157baeafcefbeb94680dfd9fbfa0b",
+      "bytes": 540827
+    },
+    "clubs/fr-red-star.html": {
+      "url": "https://en.wikipedia.org/wiki/Red_Star_FC",
+      "sha256": "0c96b3058ce1d5f2ea13f4a9813cc99aefdc09b7faa672a69aaa698def0b4bb6",
+      "bytes": 417421
+    },
+    "venues/fr-red-star.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Bauer",
+      "sha256": "1cbf14da5703ca96f7d84a2d74ccfa373ac1cfaff72d40c446eef4f439e96ed8",
+      "bytes": 164951
+    },
+    "venues/fr-nantes.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_la_Beaujoire",
+      "sha256": "d249b37fe0be9c687f753bb3ff274d87348af7f613538a87bb077f1d7d5b2e8d",
+      "bytes": 289301
+    },
+    "clubs/fr-reims.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_Reims",
+      "sha256": "b180d9151e0defa2902ac469360766f9ac036df590d217fb45d0fa408d06819b",
+      "bytes": 445983
+    },
+    "clubs/fr-rodez.html": {
+      "url": "https://en.wikipedia.org/wiki/Rodez_AF",
+      "sha256": "5f7e12316ad4d0c4d1e5d553e6d7b53dfb35f761874e0953981624a14f79cf7b",
+      "bytes": 205337
+    },
+    "venues/fr-pau.html": {
+      "url": "https://en.wikipedia.org/wiki/Nouste_Camp",
+      "sha256": "7fd1713409d21e53d63be9ad7ec5079d3633b723fe697dab1e25df372e2c49bc",
+      "bytes": 120660
+    },
+    "venues/fr-reims.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Auguste-Delaune",
+      "sha256": "465b3ee43658c579914767011fc9e096e4d7ec4e5cb0a21b04456b20b645b49e",
+      "bytes": 150242
+    },
+    "clubs/fr-saint-etienne.html": {
+      "url": "https://en.wikipedia.org/wiki/AS_Saint-%C3%89tienne",
+      "sha256": "3ef4121c8b46c03fdf5d6b1a77a3b520ed336a2332ebb8f4f9d3a8dc7ab39daf",
+      "bytes": 413377
+    },
+    "venues/fr-saint-etienne.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Geoffroy-Guichard",
+      "sha256": "008a173dbab07635a7526d605e9a0f82bece5359f91e5ab408ae7bf0f1352f26",
+      "bytes": 289965
+    },
+    "clubs/fr-sochaux.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Sochaux-Montb%C3%A9liard",
+      "sha256": "3e607a8d74cef5cdaac4c089190381418ee41529292936e905e8530efee2e8ae",
+      "bytes": 458247
+    },
+    "venues/fr-rodez.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Paul-Lignon",
+      "sha256": "3e409657081f06676718660992ef6cd57e3df3026a06b37ce6e94b717557161e",
+      "bytes": 100254
+    },
+    "clubs/fr-amiens.html": {
+      "url": "https://en.wikipedia.org/wiki/Amiens_SC",
+      "sha256": "2ffecd4037a29c7969b31c4f60cf8248515b58ccd358db3278986d5ba25c0a76",
+      "bytes": 340199
+    },
+    "venues/fr-amiens.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_la_Licorne",
+      "sha256": "67885eceb8ba2afb2da6df12545b8121f6cc4303b48dcb01f813b0ed9c31c65a",
+      "bytes": 116595
+    },
+    "clubs/fr-aubagne-air-bel.html": {
+      "url": "https://en.wikipedia.org/wiki/SC_Aubagne_Air_Bel",
+      "sha256": "4079ef07e8295f1707d2878aafd501a5fc4a635bd05ac73eef5b3645289ec294",
+      "bytes": 187719
+    },
+    "clubs/fr-bastia.html": {
+      "url": "https://en.wikipedia.org/wiki/SC_Bastia",
+      "sha256": "a425daf980a447ab4f6276f339d644b33a26c7d5611eed88ef991628f494de39",
+      "bytes": 539065
+    },
+    "venues/fr-sochaux.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Auguste-Bonal",
+      "sha256": "3d45b8d7878b9a01190acf884d0e84bcebc1ec1a1b21bcab04c5b1e3de08c7dc",
+      "bytes": 127277
+    },
+    "clubs/fr-bourg-peronnas.html": {
+      "url": "https://en.wikipedia.org/wiki/Football_Bourg-en-Bresse_P%C3%A9ronnas_01",
+      "sha256": "1eb357fb95fe014bcf333e5857b850b355bcae00e10b35756c9cedc2f1459555",
+      "bytes": 220523
+    },
+    "venues/fr-metz.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Saint-Symphorien",
+      "sha256": "0c04c1ec259ef0d021481593ac3c55d7990d9b8acc131406e4c0e7ba9788769e",
+      "bytes": 118083
+    },
+    "clubs/fr-caen.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Malherbe_Caen",
+      "sha256": "17097160a2f784f2f9b74ce26eabfec0301a33a92935600e2658f34263c17fcf",
+      "bytes": 358771
+    },
+    "venues/fr-bastia.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Armand-Cesari",
+      "sha256": "4e3a0eb5ecffff6cced4685054cfa2c1ca2a69a19ef32bbcb46d6b6dd5157021",
+      "bytes": 216943
+    },
+    "clubs/fr-cannes.html": {
+      "url": "https://en.wikipedia.org/wiki/AS_Cannes",
+      "sha256": "debb228ec4da4623d430d7324de929fa63a9d88c3f9c4d20cfe47f00628bd1c4",
+      "bytes": 271110
+    },
+    "clubs/fr-concarneau.html": {
+      "url": "https://en.wikipedia.org/wiki/US_Concarneau",
+      "sha256": "d4ca01af131d4587037175071bf696705f3ed6319aecc45d073c3b8451f22ff9",
+      "bytes": 205983
+    },
+    "venues/fr-caen.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Michel_d'Ornano",
+      "sha256": "3a0975bc9b1d338fa819c4db46ed5997d2cf24b9fb45e3eecc2e0d3990898e15",
+      "bytes": 126733
+    },
+    "venues/fr-cannes.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Pierre_de_Coubertin_(Cannes)",
+      "sha256": "5dccf067fcc44d96fc70b7ea2709bf06a7115a861dc63a88d47b68df5582a4cb",
+      "bytes": 120338
+    },
+    "venues/fr-bourg-peronnas.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Marcel-Verch%C3%A8re",
+      "sha256": "583907601446980036332f9796915507535b83394f845ec2854db5c587833bf8",
+      "bytes": 104237
+    },
+    "clubs/fr-fleury.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Fleury_91_(men)",
+      "sha256": "59a81ecf15d7cac867b7f03cafa5551f5f4aa63fa843d7947153b0e483c6cd88",
+      "bytes": 184853
+    },
+    "venues/fr-concarneau.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Guy-Piriou?action=edit&amp;redlink=1",
+      "sha256": "5c8e6b21932d676a916a18ebb4cc7e87c7bd699a8aeb07c2e137cebac8fd6bf4",
+      "bytes": 49928
+    },
+    "clubs/fr-la-roche.html": {
+      "url": "https://en.wikipedia.org/wiki/VFC_La_Roche-sur-Yon",
+      "sha256": "a4eedced1843c8f74a28937a1972812b49876ee994d196327efda6009e237ee1",
+      "bytes": 174452
+    },
+    "clubs/fr-paris-13-atletico.html": {
+      "url": "https://en.wikipedia.org/wiki/Paris_13_Atletico",
+      "sha256": "2872b9407eb387b38956b8502e305d5bbff4741570a1d2d1c639d0ce3fbda42c",
+      "bytes": 183295
+    },
+    "clubs/fr-le-puy.html": {
+      "url": "https://en.wikipedia.org/wiki/Le_Puy_Foot_43_Auvergne",
+      "sha256": "7048018ad55764facbb3733683c4e4f7f00a5cf5f5ae111637e728420079931b",
+      "bytes": 218759
+    },
+    "venues/fr-paris-13-atletico.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_S%C3%A9bastien_Charl%C3%A9ty",
+      "sha256": "1dc2e46a2802896448a13713d873b5d0e3c7fe23a78ed6b301b7042c5e1c1673",
+      "bytes": 226223
+    },
+    "clubs/fr-quevilly-rouen.html": {
+      "url": "https://en.wikipedia.org/wiki/US_Quevilly-Rouen_M%C3%A9tropole",
+      "sha256": "30f35aa51f35d7a5d75bb7127af6e258b8433b2bd2af527d01057b916faeea9b",
+      "bytes": 264454
+    },
+    "clubs/fr-orleans.html": {
+      "url": "https://en.wikipedia.org/wiki/US_Orl%C3%A9ans",
+      "sha256": "5c138628245325447f3d4b9fcd119ab2f477a898928af8fdc4931c43a1a9046b",
+      "bytes": 231177
+    },
+    "venues/fr-la-roche.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Henri_Desgranges",
+      "sha256": "115dedd1f352920aaebf1af2e9d9071f021fe3e789d6d79d217c75403c8c2073",
+      "bytes": 88471
+    },
+    "venues/fr-quevilly-rouen.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Robert_Diochon",
+      "sha256": "3fbd45570af620f82cc0112c36c56f3464bc519f4339b2dce37aed506240b601",
+      "bytes": 112593
+    },
+    "clubs/fr-rouen.html": {
+      "url": "https://en.wikipedia.org/wiki/Football_Club_de_Rouen_1899",
+      "sha256": "f3b247264b284f541bbdb0c4c8720d2c7a57e0fb91651f207b94e3df388d34d2",
+      "bytes": 282404
+    },
+    "venues/fr-orleans.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_la_Source",
+      "sha256": "a3eafdbb2f1403a168f8e4df935b8fd6deee62db19168721e2ab005921370327",
+      "bytes": 93784
+    },
+    "venues/fr-rouen.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Robert_Diochon",
+      "sha256": "3fbd45570af620f82cc0112c36c56f3464bc519f4339b2dce37aed506240b601",
+      "bytes": 112593
+    },
+    "clubs/fr-valenciennes.html": {
+      "url": "https://en.wikipedia.org/wiki/Valenciennes_FC",
+      "sha256": "6597d2d34c21b830fb73307f43fa400b7780d571f1bc2df685663f84903b076e",
+      "bytes": 366089
+    },
+    "clubs/fr-versailles.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Versailles_78",
+      "sha256": "a7b452eaceb2c5a2e0d6208f17354a900f65d838cf1e163e1672e64136bfd3e0",
+      "bytes": 218509
+    },
+    "clubs/fr-villefranche.html": {
+      "url": "https://en.wikipedia.org/wiki/FC_Villefranche_Beaujolais",
+      "sha256": "244ceb49ba87b9a426dfa9b215bc86771c4fa6725dce106f59ebe71c8b820fe1",
+      "bytes": 180465
+    },
+    "clubs/fr-thionville.html": {
+      "url": "https://en.wikipedia.org/wiki/US_Thionville_Lusitanos",
+      "sha256": "9d0ea83771822540061cfbc1278c1f937d67393b9e5e79c1db062562c728690b",
+      "bytes": 200753
+    },
+    "venues/fr-valenciennes.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_du_Hainaut",
+      "sha256": "00892b52b676d7407ff9a5229c475e6ae5221ce30696bd0ce576976280957ff8",
+      "bytes": 152183
+    },
+    "crests/fr-auxerre.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/51/AJAuxerreLogo.svg/250px-AJAuxerreLogo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "438d23a0dd3ba415ee972f5563557f89a482a4cc1f22a981293faa357f4a2bff",
+      "bytes": 25233,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-angers.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Angers_Sporting_Club_de_l%27Ouest_logo.svg/250px-Angers_Sporting_Club_de_l%27Ouest_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "ee47edd03f838db1f0faefa93ac870d2eb67f4bc0cbf39e9777058829da3b7a6",
+      "bytes": 23837,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-brest.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/05/Stade_Brestois_29_logo.svg/250px-Stade_Brestois_29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "e3fd82ad785867500207613ab86299030406a164563f32385feb117f0045eedc",
+      "bytes": 34621,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-le-mans.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/57/Le_Mans_FC_logo.svg/250px-Le_Mans_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "824a647a75ad6d8a1944c72ed72e6c53f4c31705dad14807cf4d7f90f1a82932",
+      "bytes": 30467,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-lens.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cc/RC_Lens_logo.svg/250px-RC_Lens_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "553462756277bd4d3670fd127e2ab119b2de1e268230bdd9aef6569c5e781a44",
+      "bytes": 28126,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-lille.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3f/Lille_OSC_2018_logo.svg/250px-Lille_OSC_2018_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "79a6f08deb4bd4ddd2dfb2a1babe51747bc7bfd56cc01ddeead6a42ccad93ee1",
+      "bytes": 21202,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-lorient.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/FC_Lorient_logo.svg/250px-FC_Lorient_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "6e067d546acc56a58845b2caa3d4059c6a2636e5580caf646ba05801adaf771b",
+      "bytes": 37134,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-lyon.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/250px-Olympique_Lyonnais_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "0c17a84d23dd244b6a67f5139f7c118173857d2d24afc2b2adf4c801b067a2e9",
+      "bytes": 21856,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-le-havre.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fc/Le_Havre_AC_logo.svg/250px-Le_Havre_AC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "73ef52aeafe33d76b9828ef28dd61c4a0593182967164329a75f15334d3cf67a",
+      "bytes": 27201,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-marseille.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Olympique_de_Marseille_2026_logo.svg/250px-Olympique_de_Marseille_2026_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "78dfef376cc453783e6a3144be184b468d6640eb202de7aa15ad17e4f30cf2c5",
+      "bytes": 25150,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-monaco.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cf/LogoASMonacoFC2021.svg/250px-LogoASMonacoFC2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "7063443ecc4c337d2c650516e670ccd8e730fe6366effdfc160895ca7bc528f2",
+      "bytes": 31142,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-nice.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/OGC_Nice_logo.svg/250px-OGC_Nice_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "9ac7c5c4ed0aac27730c8ce3e705f5f814f4144641fbe2212b7d7dd88ecfbb33",
+      "bytes": 65251,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-paris-saint-germain.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/250px-Paris_Saint-Germain_F.C..svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "bf6904fd3404b763997a14cb3bd441ea5f228b455b9ca354ef50758ccc0dd09a",
+      "bytes": 32299,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-paris-fc.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Paris_FCLogo_11-24.png/250px-Paris_FCLogo_11-24.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "f9a4efc56f12efd69cf7f5a1014a676deec0616941ce30c560665641f5a3b5d1",
+      "bytes": 59096,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-rennes.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9e/Stade_Rennais_FC.svg/250px-Stade_Rennais_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "52d00637b4d2670a99d4c30248277c2cb06e0ad4908cbd5ac87dfee9dcc78114",
+      "bytes": 28723,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-strasbourg.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/80/Racing_Club_de_Strasbourg_logo.svg/250px-Racing_Club_de_Strasbourg_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "f08b828f62936a3ccbe3ef5564286415280fbba4f276b401ed2cfe97f96952a9",
+      "bytes": 39836,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-toulouse.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/63/Toulouse_FC_2018_logo.svg/250px-Toulouse_FC_2018_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "1ca57e9e6e7d4d59a542c8afc91518fd10477489f2cda596c9afdf27e38d140f",
+      "bytes": 46193,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-troyes.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/ESTAC_Troyes_Logo.svg/250px-ESTAC_Troyes_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "5034a2d8a4301cfdc04fd6ea8bfbdd338af109c173c7da2d563ea2488e1ae8d5",
+      "bytes": 71315,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-boulogne.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/US_Boulogne_crest.svg/250px-US_Boulogne_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "7cc1d8219d7de15fb2cad7b749bb9db372264e06530001b758d385223a41b389",
+      "bytes": 39850,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-clermont.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/52/Clermont_Foot_logo.svg/250px-Clermont_Foot_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "ef763f803757cdf173dd2fe93c9205d394dbfa8d51a2b579c76181816e030dd8",
+      "bytes": 30558,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-dijon.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f7/Dijon_FCO_logo.svg/250px-Dijon_FCO_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "0c6f245862a5acfcb63caf9187b2f007757728a389fd0392a117de80593a42d0",
+      "bytes": 42703,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-dunkerque.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/USL_Dunkerque_crest.svg/250px-USL_Dunkerque_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "dfd13bd99f149efba8a6bf770856aef83738dd99e1beda0fc17dabe32b64044b",
+      "bytes": 43470,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-grenoble.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/de/Grenoble_Foot_38_logo.svg/250px-Grenoble_Foot_38_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "4bbe16f7593e80ad9205d9e92a912c78547c79c3e6dd89142cf8a949605b7f70",
+      "bytes": 28765,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-guingamp.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/56/En_Avant_Guingamp_logo.svg/250px-En_Avant_Guingamp_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "05434057dd83d8fc67af5410cc5cbec7e061b45c20c95aee7d2618d908692bfe",
+      "bytes": 19236,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-laval.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ca/Stade_Lavallois_logo.svg/250px-Stade_Lavallois_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "c11cd8fc11387e054edfd5dc05ced75088843fed635c6308bffde6de3eccf0d0",
+      "bytes": 25496,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-metz.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/FC_Metz_2021_Logo.svg/250px-FC_Metz_2021_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "4bf2d2053a6d27f65d4a229901f637ae2e0512c4111b8ce76e4184788b327b68",
+      "bytes": 3586,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-montpellier.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a8/Montpellier_HSC_logo.svg/250px-Montpellier_HSC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "c3cc7385ab0b45e23f2af94a5b2cd0c0398bbeb4f3f4ad3d7bdbb81ee191a8fd",
+      "bytes": 44099,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-nantes.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Logo_FC_Nantes_%28avec_fond%29_-_2019.svg/250px-Logo_FC_Nantes_%28avec_fond%29_-_2019.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "ba41090c9198cae028cd14e39f1d17aee40d80d72729901dd828655651199436",
+      "bytes": 13246,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-nancy.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4d/AS_Nancy_logo.svg/250px-AS_Nancy_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "93b5cc6912cceb13c1904d29223099d5d83292082c8784d7a31b087a37bab798",
+      "bytes": 28747,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-pau.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/82/Pau_FC_logo.svg/250px-Pau_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "477ec673f8a047c7be8f529f45fc302288656b77ef7c58025088a98bdb660c36",
+      "bytes": 53365,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-reims.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Stade_de_Reims_logo.svg/250px-Stade_de_Reims_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "8644cfa5ad5a45785d750f23f473fdfe8eb695c1ff893bfd6fc082d0f73df4af",
+      "bytes": 11308,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-red-star.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Red_Star_FC_logo.svg/250px-Red_Star_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "93de61ac2a9caf44049cce9b40a21c48a1a823f8ca12a7be8d26f31789dd2284",
+      "bytes": 19385,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-saint-etienne.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/AS_Saint-%C3%89tienne_logo.svg/250px-AS_Saint-%C3%89tienne_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "c67ec09b82736c0bf149741f4b060304a30e89634c7f40fd3c6c53ae359e2e64",
+      "bytes": 35048,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-rodez.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Rodez_AF_logo.svg/250px-Rodez_AF_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "325a04ee6a236ad722307f886c33eb2ca85f1b987c80a464c690bd9dc2d431ec",
+      "bytes": 30018,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-sochaux.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7c/FC_Sochaux-Montbeliard_logo.svg/250px-FC_Sochaux-Montbeliard_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "ff5206b9e88b9bd781ab6255604eff41497b3930cdb815fe38c84e34b26f8cba",
+      "bytes": 44203,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-aubagne-air-bel.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0c/SC_Aubagne_Air_Bel_logo.svg/250px-SC_Aubagne_Air_Bel_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "992f0ef7ac43dfa8b7794e17b03a5d77e8520e5b6b0346cc81dd14b4fa7df6cc",
+      "bytes": 12969,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-amiens.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Amiens_SC_logo.svg/250px-Amiens_SC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "8c5cc06b2ddb0361cbce6dbeef5b605743682b084941f67d4a47f8631058dd04",
+      "bytes": 14807,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-bourg-peronnas.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/42/Football_Bourg-en-Bresse_Peronnas_01_logo.svg/250px-Football_Bourg-en-Bresse_Peronnas_01_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "d95c562b8c9dfdb6804cf70dba1361f22e9eed2940d58e69a0d268e0585dd2b7",
+      "bytes": 42741,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-caen.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/aa/SM_Caen_2016_logo.svg/250px-SM_Caen_2016_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "7c4e0c84de479dcb1d85b9ad9fab5ba36351ed043aa9a66a8913f3d269bc3590",
+      "bytes": 35798,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-bastia.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d7/SC_Bastia_logo_2024.svg/250px-SC_Bastia_logo_2024.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "564f04b973b191ee75f369b3b9c0656b6630396f430752fab0b568282f207cbd",
+      "bytes": 48266,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-cannes.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/64/AS_Cannes_logo.svg/250px-AS_Cannes_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "5ba4ee34b4235651234aa53952c29c1e176e202da88f64b8e34cd1bd4f302111",
+      "bytes": 32767,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-concarneau.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/68/US_Concarneau_logo.svg/250px-US_Concarneau_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "4ffc7bd041d0862edba4012f158a210b8a36f7f5daf59fd2ee0f7a0ae3494490",
+      "bytes": 32891,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-fleury.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/eb/FC_Fleury_91_%28men%29_logo.svg/250px-FC_Fleury_91_%28men%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "c076211ba36b5502a942372e75bad83830ff8b732ccabe5ad382d090d2d581fc",
+      "bytes": 37741,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-la-roche.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/VFC_La_Roche-sur-Yon_crest.svg/250px-VFC_La_Roche-sur-Yon_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "763a5ef8a2a77c1f825614f8681a38cba95105ab9b87c2913a84efe44a96fab7",
+      "bytes": 46774,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-le-puy.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Le_Puy-en-Velay_FC_crest.svg/250px-Le_Puy-en-Velay_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "e222c35fe8f3c38205a6d20093367365b30c2a00b42069f059563129e49840e7",
+      "bytes": 42461,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-orleans.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/75/US_Orl%C3%A9ans_logo.svg/250px-US_Orl%C3%A9ans_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "504e7634a8af639fd55c00a7e896d2114b3f4091066d9372eab1edc600ff1c5e",
+      "bytes": 39908,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-paris-13-atletico.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/58/Paris_13_Atletico_logo.svg/250px-Paris_13_Atletico_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "d57600c43043a6f8f2a880f160139f8f317f580d52e416b95aea7d4a18cb5cfd",
+      "bytes": 44837,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-quevilly-rouen.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/39/US_Quevilly-Rouen_M%C3%A9tropole_logo.svg/250px-US_Quevilly-Rouen_M%C3%A9tropole_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "4521ce1c0cf3791b6f34e74b80a45287dabefd6f9d1462dfb4f1dc89121948c3",
+      "bytes": 36185,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-rouen.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/be/F.C._Rouen.svg/250px-F.C._Rouen.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "4cdb6f67a9fd908f3148e9dbdb2dc7d7a17eeac357ad3c3b8eaa5c441ea54751",
+      "bytes": 37468,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-valenciennes.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8c/Valenciennes_FC.svg/250px-Valenciennes_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "3c600f25c8a2757376aeabde76ff0204139c7e52dfd541db19d1fb8557e1941d",
+      "bytes": 28002,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-thionville.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fa/US_Thionville_Lusitanos_logo.svg/250px-US_Thionville_Lusitanos_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "ea125e6f3809edbfd16e5ad7d8d84d1fc8920ca8b67038f0cb86217ae11b165a",
+      "bytes": 54090,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-versailles.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/75/FC_Versailles_78_logo.svg/250px-FC_Versailles_78_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "2d506697c4111f0bbaa65ddd7c1d4a8b39e38b942eab0ff7ca881eb89c1b9059",
+      "bytes": 34897,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "crests/fr-villefranche.png": {
+      "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2f/FC_Villefranche_Beaujolais_logo.svg/250px-FC_Villefranche_Beaujolais_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "sha256": "85d99d6b23eec859f816f0aeab42864c1f779ed4dc9a298700aa12c0b2573fc7",
+      "bytes": 46249,
+      "credit": "Club emblem via Wikipedia",
+      "rights": "Club trademark; retain for identification, no free-license claim"
+    },
+    "extra/annecy.html": {
+      "url": "https://www.fc-annecy.fr/",
+      "sha256": "594be880856c4f766f660ff303fba21bd7989faa781687fe00f8d3f4eed00f75",
+      "bytes": 569066
+    },
+    "extra/concarneau.html": {
+      "url": "https://fr.wikipedia.org/wiki/Stade_Guy-Piriou",
+      "sha256": "4a5ffea61a786b6cf654d84d6abf81a21f5560ff4c903f2a66d17fee27514257",
+      "bytes": 285112
+    },
+    "extra/aubagne.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_de_Lattre-de-Tassigny",
+      "sha256": "94f5fa881edce06d5ef5f9f750d96eb97c79a18bce9e201a1e02298d56bd9f57",
+      "bytes": 122987
+    },
+    "extra/villefranche.html": {
+      "url": "https://fr.wikipedia.org/wiki/Stade_Armand-Chouffet",
+      "sha256": "1082bb012894c8c7c22ecfd015153592cc264e2520f2f879f139b63309b85049",
+      "bytes": 103490
+    },
+    "extra/versailles.html": {
+      "url": "https://en.wikipedia.org/wiki/Stade_Georges_Lefèvre",
+      "sha256": "142fb0de7d605c8cfdceebf65b714746a0baa66ab715f61506dfc7aa521a5b71",
+      "bytes": 164451
+    },
+    "extra/thionville.html": {
+      "url": "https://fr.wikipedia.org/wiki/Stade_de_Guentrange",
+      "sha256": "2229ee29ead0d444905f25397094e157817c992471c8fece22d482988913c2f2",
+      "bytes": 132346
+    },
+    "data-es/Gentelet.json": {
+      "url": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?where=search%28inst_nom%2C+%22Gentelet%22%29&limit=100",
+      "sha256": "0ee016986e1c5248a2111e72ab2f390ef2ea11d883ebc3d1d57285bcf864a406",
+      "bytes": 42970,
+      "credit": "Ministère des Sports, Data ES",
+      "license": "Licence Ouverte 2.0"
+    },
+    "data-es/Massot.json": {
+      "url": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?where=search%28inst_nom%2C+%22Massot%22%29&limit=100",
+      "sha256": "7fb3634477c92b2bab42118b3747065733c781b424bd349d29ae6f42af8438bc",
+      "bytes": 68441,
+      "credit": "Ministère des Sports, Data ES",
+      "license": "Licence Ouverte 2.0"
+    },
+    "data-es/Guy-Piriou.json": {
+      "url": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?where=search%28inst_nom%2C+%22Guy+Piriou%22%29&limit=100",
+      "sha256": "12351819c0cc79b4f61cf28f425d70e11056364b1e585048c3c4355d41bb4fc7",
+      "bytes": 7007,
+      "credit": "Ministère des Sports, Data ES",
+      "license": "Licence Ouverte 2.0"
+    },
+    "data-es/Chouffet.json": {
+      "url": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?where=search%28inst_nom%2C+%22Chouffet%22%29&limit=100",
+      "sha256": "6bb05f933bcdab791152f4ceb979916fb2ff555c6f4280756c1b24c9c65bea3d",
+      "bytes": 7366,
+      "credit": "Ministère des Sports, Data ES",
+      "license": "Licence Ouverte 2.0"
+    },
+    "data-es/Guentrange.json": {
+      "url": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?where=search%28inst_nom%2C+%22Guentrange%22%29&limit=100",
+      "sha256": "af0a3c3b141732505a68b6bf3c4fc0a91bb23f8a91bfc28610e0fe6cb6a637ef",
+      "bytes": 47544,
+      "credit": "Ministère des Sports, Data ES",
+      "license": "Licence Ouverte 2.0"
+    },
+    "data-es/Georges-Lefevre.json": {
+      "url": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?where=search%28inst_nom%2C+%22Georges+Lef%C3%A8vre%22%29&limit=100",
+      "sha256": "b40a5ce424590aa2d85084c9a423d90252d3ba8a22202193a62874533698a3a3",
+      "bytes": 33,
+      "credit": "Ministère des Sports, Data ES",
+      "license": "Licence Ouverte 2.0"
+    },
+    "data-es/Lattre.json": {
+      "url": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?where=search%28inst_nom%2C+%22Lattre%22%29&limit=100",
+      "sha256": "90f65f050274e81e62bc5615865d5f44aa128bd237dea8eb9f9e81efef204efc",
+      "bytes": 109222,
+      "credit": "Ministère des Sports, Data ES",
+      "license": "Licence Ouverte 2.0"
+    },
+    "official/ligue1.html": {
+      "url": "https://ligue1.com/fr/articles/l1_article_5293-les-dates-de-reprise-des-clubs-de-l1-2627",
+      "sha256": "9e5fba0ddcd805cab3beadfd120662dd7d99b935f01f62636d5ee5f020db58bb",
+      "bytes": 88663,
+      "credit": "League, federation, club or municipality source",
+      "role": "ligue1"
+    },
+    "official/ligue2.html": {
+      "url": "https://www.lfp.fr/article/ligue-2-bkt-le-calendrier-de-la-saison-2026-2027",
+      "sha256": "6e3ff6688db0ddddf941fea2f093c09cf7b127ab4ffdfccd09ebe944387f6a30",
+      "bytes": 109360,
+      "credit": "League, federation, club or municipality source",
+      "role": "ligue2"
+    },
+    "official/ligue3.html": {
+      "url": "https://www.fff.fr/article/17022-le-calendrier-2026-2027-est-servi.html",
+      "sha256": "274a94bf8f32f5fce0f679c2daf90d800f77f6efb5630283891688d0748268fb",
+      "bytes": 85684,
+      "credit": "League, federation, club or municipality source",
+      "role": "ligue3"
+    },
+    "official/versailles-stadium.html": {
+      "url": "https://billetterie.fcversailles.com/fr/evenement/2/details",
+      "sha256": "b0bdd02ab5cd08a1440a24e689b1cf0d5d607a5b6ff4a81ba172d3cd6c59a3b6",
+      "bytes": 108325,
+      "credit": "League, federation, club or municipality source",
+      "role": "versailles-stadium"
+    },
+    "official/paris13-stadium.html": {
+      "url": "https://district75foot.fff.fr/simple/le-paris-13-atletico-vous-invite/",
+      "sha256": "b653340bbbe5155152766dbd6c3ea1cbd233d6401737534fe15d07081c551623",
+      "bytes": 105629,
+      "credit": "League, federation, club or municipality source",
+      "role": "paris13-stadium"
+    },
+    "official/thionville-stadium.pdf": {
+      "url": "https://www.thionville.fr/fileadmin/mediatheque/kiosque/_THIONVILLE-05-2026.pdf",
+      "sha256": "aafabff8161a080557c98b4972257022ec58d7a52e94eade44251f01db1a64aa",
+      "bytes": 11678173,
+      "credit": "League, federation, club or municipality source",
+      "role": "thionville-stadium"
+    },
+    "official/annecy-identity.html": {
+      "url": "https://www.fc-annecy.fr/news/fiche-actualite/communique-officiel-nouveau-logo-pour-le-fc-annecy",
+      "sha256": "0a414f5baf36a0753db0b180d13f6ef2ae73a2556f27800d8e7318c5f7b71c37",
+      "bytes": 1727698,
+      "credit": "League, federation, club or municipality source",
+      "role": "annecy-identity"
+    },
+    "crests/fr-annecy.svg": {
+      "url": "https://www.fc-annecy.fr/uploads/65a0e86251d26/fca-logo.svg",
+      "sha256": "5967406d16ff2679edad921f3e83006180bbc89a94972fa86a47e60e6da0a1c4",
+      "bytes": 5548,
+      "credit": "FC Annecy official identity",
+      "rights": "Club emblem and trademark; no free-license claim"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# English football league clubs
+
+Pinned on 29 October 2026 for 2026–27. The English league system covers Premier League (20), EFL Championship (24) and EFL League One (24), giving cumulative pools of 20, 44 and 68 clubs. It includes the Welsh clubs Cardiff City, Swansea City and Wrexham, so these points must not be clipped to England's land outline. The atlas country is united-kingdom; competitionCountry is england.
+
+ESPN's league/club feeds supply club identity, venue names, cities and authentic club crest images. Club membership is checked against the retained Premier League season announcement and current line-up/fixture announcements from West Bromwich Albion and Leicester City. Wikidata stadium coordinates are matched by exact stadium name, then explicit reviewed stadium Q-ID for sponsorship aliases. Five missing/ambiguous venues have retained Wikipedia/Wikidata coordinate summaries. No club-office or city-center points are substituted, and all 68 stadium locations are unique.
+
+Everton uses Hill Dickinson Stadium at Bramley-Moore Dock, not Goodison Park, following its 2025 move; Everton's official stadium information is retained. ESPN's stale sponsor names are corrected using primary current venue/club sources: Bromley's CopperJax Community Stadium (Hayes Lane), Huddersfield's Accu Stadium, Wigan's Brick Community Stadium and Reading's Select Car Leasing Stadium. Old names are retained separately for audit. Oxford remains at Kassam Stadium for this season.
+
+All raw source responses are gzip-retained, with original bytes SHA-256 pinned in manifest.json. Local crest files are byte-identical to the retained original ESPN artwork. Club crests and marks remain the property of their owners; they are included for club identification and are not asserted to have an open artwork license. Wikidata coordinates are CC0; Wikipedia text is not reproduced in the quiz.
+
+Build normalized data with node scripts/football-sources/england/build.mjs after the source fetch. Validate with node scripts/football-sources/england/validate.mjs. The original source fetch remains scripts/fetch-england-football.mjs. Retained extra venue-summary and official venue snapshots are included in this folder.

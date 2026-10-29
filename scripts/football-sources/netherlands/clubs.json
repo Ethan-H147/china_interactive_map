@@ -1,0 +1,1040 @@
+{
+  "country": "netherlands",
+  "season": "2026–27",
+  "retrieved": "2026-10-29",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Eredivisie",
+      "count": 18,
+      "sourceUrl": "https://eredivisie.nl/competitie/clubs/"
+    },
+    {
+      "tier": 2,
+      "name": "Eerste Divisie",
+      "count": 20,
+      "sourceUrl": "https://keukenkampioendivisie.nl/teams"
+    },
+    {
+      "tier": 3,
+      "name": "Tweede Divisie",
+      "count": 18,
+      "sourceUrl": "https://www.knvb.nl/downloads/bestand/30111/indeling-2e-3e-en-4e-divisie-mannen"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "nl-2726",
+      "tier": 1,
+      "en": "ADO Den Haag",
+      "aliases": [
+        "ADO Den Haag",
+        "ADO"
+      ],
+      "city": "Den Haag",
+      "stadium": "WerkTalent Stadion",
+      "center": [
+        4.383056,
+        52.062778
+      ],
+      "crest": "nl-2726.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q720978",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png"
+    },
+    {
+      "id": "nl-140",
+      "tier": 1,
+      "en": "AZ",
+      "aliases": [
+        "AZ Alkmaar",
+        "AZ"
+      ],
+      "city": "Alkmaar",
+      "stadium": "AFAS Stadion",
+      "center": [
+        4.741667,
+        52.6125
+      ],
+      "crest": "nl-140.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q291590",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png"
+    },
+    {
+      "id": "nl-139",
+      "tier": 1,
+      "en": "Ajax",
+      "aliases": [
+        "Ajax Amsterdam",
+        "Ajax",
+        "AJA"
+      ],
+      "city": "Amsterdam",
+      "stadium": "Johan Cruijff Arena",
+      "center": [
+        4.941944444,
+        52.314166666
+      ],
+      "crest": "nl-139.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q207109",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png"
+    },
+    {
+      "id": "nl-2566",
+      "tier": 1,
+      "en": "Excelsior",
+      "aliases": [
+        "Excelsior",
+        "EXC"
+      ],
+      "city": "Rotterdam",
+      "stadium": "Stadion Woudestein",
+      "center": [
+        4.520556,
+        51.916944
+      ],
+      "crest": "nl-2566.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2298643",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png"
+    },
+    {
+      "id": "nl-145",
+      "tier": 1,
+      "en": "FC Groningen",
+      "aliases": [
+        "FC Groningen",
+        "GRO"
+      ],
+      "city": "Groningen",
+      "stadium": "Euroborg",
+      "center": [
+        6.591388888,
+        53.206111111
+      ],
+      "crest": "nl-145.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1374804",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png"
+    },
+    {
+      "id": "nl-152",
+      "tier": 1,
+      "en": "FC Twente",
+      "aliases": [
+        "FC Twente",
+        "TWE"
+      ],
+      "city": "Enschede",
+      "stadium": "De Grolsch Veste",
+      "center": [
+        6.8375,
+        52.236666666
+      ],
+      "crest": "nl-152.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q727389",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png"
+    },
+    {
+      "id": "nl-153",
+      "tier": 1,
+      "en": "FC Utrecht",
+      "aliases": [
+        "FC Utrecht",
+        "UTR"
+      ],
+      "city": "Utrecht",
+      "stadium": "Stadion Galgenwaard",
+      "center": [
+        5.145833333,
+        52.078333333
+      ],
+      "crest": "nl-153.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1675996",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png"
+    },
+    {
+      "id": "nl-142",
+      "tier": 1,
+      "en": "Feyenoord",
+      "aliases": [
+        "Feyenoord Rotterdam",
+        "Feyenoord",
+        "FEY"
+      ],
+      "city": "Rotterdam",
+      "stadium": "De Kuip",
+      "center": [
+        4.523252777,
+        51.893894444
+      ],
+      "crest": "nl-142.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q330298",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png"
+    },
+    {
+      "id": "nl-143",
+      "tier": 1,
+      "en": "Fortuna Sittard",
+      "aliases": [
+        "Fortuna Sittard",
+        "Fortuna",
+        "FOR"
+      ],
+      "city": "Sittard",
+      "stadium": "Fortuna Sittard Stadion",
+      "center": [
+        5.843611,
+        50.991944
+      ],
+      "crest": "nl-143.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1569222",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png"
+    },
+    {
+      "id": "nl-3706",
+      "tier": 1,
+      "en": "Go Ahead Eagles",
+      "aliases": [
+        "Go Ahead Eagles",
+        "GAE"
+      ],
+      "city": "Deventer",
+      "stadium": "De Adelaarshorst",
+      "center": [
+        6.1725,
+        52.260278
+      ],
+      "crest": "nl-3706.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q777926",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png"
+    },
+    {
+      "id": "nl-146",
+      "tier": 1,
+      "en": "SC Heerenveen",
+      "aliases": [
+        "Heerenveen",
+        "HEE"
+      ],
+      "city": "Heerenveen",
+      "stadium": "Abe Lenstra Stadion",
+      "center": [
+        5.936111,
+        52.958611
+      ],
+      "crest": "nl-146.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q318125",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png"
+    },
+    {
+      "id": "nl-147",
+      "tier": 1,
+      "en": "NEC",
+      "aliases": [
+        "NEC Nijmegen",
+        "NEC"
+      ],
+      "city": "Nijmegen",
+      "stadium": "Goffertstadion",
+      "center": [
+        5.836667,
+        51.8225
+      ],
+      "crest": "nl-147.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q720983",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png"
+    },
+    {
+      "id": "nl-2565",
+      "tier": 1,
+      "en": "PEC Zwolle",
+      "aliases": [
+        "PEC Zwolle",
+        "PEC"
+      ],
+      "city": "Zwolle",
+      "stadium": "MAC³PARK Stadion",
+      "center": [
+        6.121911,
+        52.517292
+      ],
+      "crest": "nl-2565.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1141104",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png"
+    },
+    {
+      "id": "nl-148",
+      "tier": 1,
+      "en": "PSV",
+      "aliases": [
+        "PSV Eindhoven",
+        "PSV"
+      ],
+      "city": "Eindhoven",
+      "stadium": "Philips Stadion",
+      "center": [
+        5.4674,
+        51.4417
+      ],
+      "crest": "nl-148.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q500972",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png"
+    },
+    {
+      "id": "nl-3736",
+      "tier": 1,
+      "en": "SC Cambuur",
+      "aliases": [
+        "SC Cambuur",
+        "Cambuur",
+        "CAM"
+      ],
+      "city": "Leeuwarden",
+      "stadium": "Kooi Stadion",
+      "center": [
+        5.768333333,
+        53.200555555
+      ],
+      "crest": "nl-3736.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q122459692",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png"
+    },
+    {
+      "id": "nl-151",
+      "tier": 1,
+      "en": "Sparta Rotterdam",
+      "aliases": [
+        "Sparta Rotterdam",
+        "Sparta",
+        "SPA"
+      ],
+      "city": "Rotterdam",
+      "stadium": "Sparta-Stadion Het Kasteel",
+      "center": [
+        4.433333,
+        51.919444
+      ],
+      "crest": "nl-151.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q668094",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png"
+    },
+    {
+      "id": "nl-3735",
+      "tier": 1,
+      "en": "Telstar",
+      "aliases": [
+        "Telstar",
+        "TEL"
+      ],
+      "city": "Velsen-Zuid",
+      "stadium": "711 Stadion",
+      "center": [
+        4.635,
+        52.455
+      ],
+      "crest": "nl-3735.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1851894",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png"
+    },
+    {
+      "id": "nl-156",
+      "tier": 1,
+      "en": "Willem II",
+      "aliases": [
+        "Willem II",
+        "WIL"
+      ],
+      "city": "Tilburg",
+      "stadium": "Koning Willem II Stadion",
+      "center": [
+        5.066944,
+        51.542778
+      ],
+      "crest": "nl-156.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1408176",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png"
+    },
+    {
+      "id": "nl-5291",
+      "tier": 2,
+      "en": "Almere City",
+      "aliases": [
+        "Almere City",
+        "ALM"
+      ],
+      "city": "Almere",
+      "stadium": "Yanmar Hanasaka Stadion",
+      "center": [
+        5.240556,
+        52.394444
+      ],
+      "crest": "nl-5291.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q255387",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/5291.png"
+    },
+    {
+      "id": "nl-144",
+      "tier": 2,
+      "en": "De Graafschap",
+      "aliases": [
+        "De Graafschap",
+        "GRA"
+      ],
+      "city": "Doetinchem",
+      "stadium": "De Vijverberg",
+      "center": [
+        6.309722,
+        51.955833
+      ],
+      "crest": "nl-144.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q606265",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/144.png"
+    },
+    {
+      "id": "nl-271",
+      "tier": 2,
+      "en": "FC Den Bosch",
+      "aliases": [
+        "FC Den Bosch",
+        "DBO"
+      ],
+      "city": "Den Bosch",
+      "stadium": "Stadion De Vliert",
+      "center": [
+        5.329722,
+        51.701667
+      ],
+      "crest": "nl-271.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1855763",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/271.png"
+    },
+    {
+      "id": "nl-4426",
+      "tier": 2,
+      "en": "FC Dordrecht",
+      "aliases": [
+        "FC Dordrecht",
+        "Dordrecht",
+        "DOR"
+      ],
+      "city": "Dordrecht",
+      "stadium": "M-Scores Stadion",
+      "center": [
+        4.69,
+        51.8025
+      ],
+      "crest": "nl-4426.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1139863",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/4426.png"
+    },
+    {
+      "id": "nl-3732",
+      "tier": 2,
+      "en": "FC Eindhoven",
+      "aliases": [
+        "FC Eindhoven",
+        "EIN"
+      ],
+      "city": "Eindhoven",
+      "stadium": "Jan Louwers Stadion",
+      "center": [
+        5.479444,
+        51.411667
+      ],
+      "crest": "nl-3732.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q643426",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3732.png"
+    },
+    {
+      "id": "nl-3707",
+      "tier": 2,
+      "en": "FC Emmen",
+      "aliases": [
+        "FC Emmen",
+        "Emmen",
+        "EMM"
+      ],
+      "city": "Emmen",
+      "stadium": "De Oude Meerdijk",
+      "center": [
+        6.945556,
+        52.774722
+      ],
+      "crest": "nl-3707.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2093331",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3707.png"
+    },
+    {
+      "id": "nl-2727",
+      "tier": 2,
+      "en": "FC Volendam",
+      "aliases": [
+        "FC Volendam",
+        "VOL"
+      ],
+      "city": "Volendam",
+      "stadium": "Kras Stadion",
+      "center": [
+        5.066389,
+        52.494444
+      ],
+      "crest": "nl-2727.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q953663",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2727.png"
+    },
+    {
+      "id": "nl-3775",
+      "tier": 2,
+      "en": "Helmond Sport",
+      "aliases": [
+        "Helmond Sport",
+        "Helmond Spor",
+        "HEL"
+      ],
+      "city": "Helmond",
+      "stadium": "MySteel Stadion",
+      "center": [
+        5.679116,
+        51.487363
+      ],
+      "crest": "nl-3775.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q132997935",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3775.png",
+      "note": "Current home is the new MySteel Stadion, opened in 2025 and renamed in July 2026, rather than the old De Braak."
+    },
+    {
+      "id": "nl-3708",
+      "tier": 2,
+      "en": "Heracles Almelo",
+      "aliases": [
+        "Heracles Almelo",
+        "Heracles",
+        "HER"
+      ],
+      "city": "Almelo",
+      "stadium": "Erve Asito",
+      "center": [
+        6.649722,
+        52.338611
+      ],
+      "crest": "nl-3708.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q11969",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3708.png"
+    },
+    {
+      "id": "nl-18748",
+      "tier": 2,
+      "en": "Jong AZ",
+      "aliases": [
+        "Jong AZ",
+        "JAZ"
+      ],
+      "city": "Wijdewormer",
+      "stadium": "AFAS Trainingscomplex",
+      "center": [
+        4.847011242,
+        52.473520301
+      ],
+      "crest": "nl-18748.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q108060876",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18748.png",
+      "note": "AZ’s reserve team plays at the AFAS Training Complex in Wijdewormer; the provider’s Den Haag locality is stale."
+    },
+    {
+      "id": "nl-10597",
+      "tier": 2,
+      "en": "Jong Ajax",
+      "aliases": [
+        "Jong Ajax",
+        "JAJ"
+      ],
+      "city": "Amsterdam-Duivendrecht",
+      "stadium": "Sportpark De Toekomst",
+      "center": [
+        4.928914,
+        52.313522
+      ],
+      "crest": "nl-10597.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2200744",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/10597.png"
+    },
+    {
+      "id": "nl-18278",
+      "tier": 2,
+      "en": "Jong FC Utrecht",
+      "aliases": [
+        "Jong FC Utrecht",
+        "Jong Utrecht",
+        "JUT"
+      ],
+      "city": "Utrecht",
+      "stadium": "Sportcomplex Zoudenbalch",
+      "center": [
+        5.146111,
+        52.075833
+      ],
+      "crest": "nl-18278.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3264211",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18278.png"
+    },
+    {
+      "id": "nl-9983",
+      "tier": 2,
+      "en": "Jong PSV",
+      "aliases": [
+        "Jong PSV",
+        "JPS"
+      ],
+      "city": "Eindhoven",
+      "stadium": "PSV Campus De Herdgang",
+      "center": [
+        5.4389,
+        51.4608
+      ],
+      "crest": "nl-9983.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1958120",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9983.png"
+    },
+    {
+      "id": "nl-3730",
+      "tier": 2,
+      "en": "MVV Maastricht",
+      "aliases": [
+        "MVV Maastricht",
+        "Maastricht",
+        "MVV"
+      ],
+      "city": "Maastricht",
+      "stadium": "De Geusselt",
+      "center": [
+        5.717778,
+        50.8575
+      ],
+      "crest": "nl-3730.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q391473",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3730.png"
+    },
+    {
+      "id": "nl-141",
+      "tier": 2,
+      "en": "NAC Breda",
+      "aliases": [
+        "NAC Breda",
+        "NAC"
+      ],
+      "city": "Breda",
+      "stadium": "Rat Verlegh Stadion",
+      "center": [
+        4.750278,
+        51.595556
+      ],
+      "crest": "nl-141.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2132300",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/141.png"
+    },
+    {
+      "id": "nl-155",
+      "tier": 2,
+      "en": "RKC Waalwijk",
+      "aliases": [
+        "RKC Waalwijk",
+        "RKC"
+      ],
+      "city": "Waalwijk",
+      "stadium": "Mandemakers Stadion",
+      "center": [
+        5.088611,
+        51.686944
+      ],
+      "crest": "nl-155.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q942073",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/155.png"
+    },
+    {
+      "id": "nl-149",
+      "tier": 2,
+      "en": "Roda JC",
+      "aliases": [
+        "Roda JC Kerkrade",
+        "Roda JC",
+        "RJC"
+      ],
+      "city": "Kerkrade",
+      "stadium": "Parkstad Limburg Stadion",
+      "center": [
+        6.005833333,
+        50.856944444
+      ],
+      "crest": "nl-149.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q476674",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/149.png"
+    },
+    {
+      "id": "nl-3728",
+      "tier": 2,
+      "en": "TOP Oss",
+      "aliases": [
+        "TOP Oss",
+        "TOP"
+      ],
+      "city": "Oss",
+      "stadium": "Frans Heesen Stadion",
+      "center": [
+        5.528056,
+        51.755
+      ],
+      "crest": "nl-3728.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1320629",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3728.png"
+    },
+    {
+      "id": "nl-3731",
+      "tier": 2,
+      "en": "VVV-Venlo",
+      "aliases": [
+        "VVV-Venlo",
+        "VVV Venlo",
+        "VVV"
+      ],
+      "city": "Venlo",
+      "stadium": "Covebo Stadion – De Koel",
+      "center": [
+        6.179722,
+        51.351944
+      ],
+      "crest": "nl-3731.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2262017",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3731.png"
+    },
+    {
+      "id": "nl-154",
+      "tier": 2,
+      "en": "Vitesse",
+      "aliases": [
+        "Vitesse",
+        "VIT"
+      ],
+      "city": "Arnhem",
+      "stadium": "GelreDome",
+      "center": [
+        5.893056,
+        51.9625
+      ],
+      "crest": "nl-154.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1067235",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/154.png"
+    },
+    {
+      "id": "nl-afc",
+      "tier": 3,
+      "en": "AFC",
+      "aliases": [
+        "Amsterdamsche FC"
+      ],
+      "city": "Amsterdam",
+      "stadium": "Sportpark Goed Genoeg",
+      "center": [
+        4.880833333,
+        52.337222222
+      ],
+      "crest": "nl-afc.svg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q131460707",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/d/de/Amsterdamsche_FC_%28logo%29.svg"
+    },
+    {
+      "id": "nl-bvv-barendrecht",
+      "tier": 3,
+      "en": "BVV Barendrecht",
+      "aliases": [
+        "BVV Barendrecht"
+      ],
+      "city": "Barendrecht",
+      "stadium": "Sportpark De Bongerd",
+      "center": [
+        4.5430926,
+        51.86099445
+      ],
+      "crest": "nl-bvv-barendrecht.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/89702722",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/43/BVV_Barendrecht_logo.svg"
+    },
+    {
+      "id": "nl-gvvv",
+      "tier": 3,
+      "en": "GVVV",
+      "aliases": [
+        "GVVV"
+      ],
+      "city": "Veenendaal",
+      "stadium": "Sportpark Panhuis",
+      "center": [
+        5.5393787,
+        52.0284149
+      ],
+      "crest": "nl-gvvv.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/64605631",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/46/GVVV_football_logo.svg"
+    },
+    {
+      "id": "nl-hhc-hardenberg",
+      "tier": 3,
+      "en": "HHC Hardenberg",
+      "aliases": [
+        "HHC Hardenberg"
+      ],
+      "city": "Hardenberg",
+      "stadium": "Sportpark De Boshoek",
+      "center": [
+        6.5880754,
+        52.5671443
+      ],
+      "crest": "nl-hhc-hardenberg.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/557664351",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/59/HHC_Hardenberg.svg"
+    },
+    {
+      "id": "nl-hsv-hoek",
+      "tier": 3,
+      "en": "HSV Hoek",
+      "aliases": [
+        "HSV Hoek"
+      ],
+      "city": "Hoek",
+      "stadium": "Sportpark Denoek",
+      "center": [
+        3.7881224,
+        51.3145816
+      ],
+      "crest": "nl-hsv-hoek.svg",
+      "coordinateSource": "https://www.openstreetmap.org/node/2751135821",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c8/HSV_Hoek_logo.svg"
+    },
+    {
+      "id": "nl-ijsselmeervogels",
+      "tier": 3,
+      "en": "IJsselmeervogels",
+      "aliases": [
+        "IJsselmeervogels"
+      ],
+      "city": "Spakenburg",
+      "stadium": "Sportpark De Westmaat",
+      "center": [
+        5.3774559,
+        52.2569774
+      ],
+      "crest": "nl-ijsselmeervogels.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/74795003",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0e/IJsselmeervogels_logo.svg"
+    },
+    {
+      "id": "nl-jong-almere-city",
+      "tier": 3,
+      "en": "Jong Almere City",
+      "aliases": [
+        "Jong Almere City",
+        "Jong Almere"
+      ],
+      "city": "Almere",
+      "stadium": "Sportpark Fanny Blankers Koen – Academyveld (veld 4)",
+      "center": [
+        5.239493845230072,
+        52.393808939177134
+      ],
+      "crest": "nl-jong-almere-city.svg",
+      "coordinateSource": "https://www.europlan-online.de/sportpark-fanny-blankers-koen-veld1/stadion-26013.html",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8f/Almere_City_FC_logo.svg",
+      "note": "Normal home is academy field 4, separately mapped from Almere City’s senior stadium. The 15 August 2026 game exceptionally moved into the main stadium because of a youth tournament.",
+      "officialClub": "https://www.rijnsburgseboys.nl/nieuws/voorbeschouwing-jong-almere-city-fc-rijnsburgse-boys-3/"
+    },
+    {
+      "id": "nl-jong-sparta-rotterdam",
+      "tier": 3,
+      "en": "Jong Sparta Rotterdam",
+      "aliases": [
+        "Jong Sparta Rotterdam",
+        "Jong Sparta"
+      ],
+      "city": "Rotterdam",
+      "stadium": "Robey Academy (Nieuw Terbregge)",
+      "center": [
+        4.50535915,
+        51.94840885
+      ],
+      "crest": "nl-jong-sparta-rotterdam.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/490885432",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9f/Sparta_Rotterdam_logo.svg",
+      "note": "Current reserve-team home is Robey Academy, not the senior team’s Het Kasteel.",
+      "officialClub": "https://www.sparta-rotterdam.nl/sportcomplex-nieuw-terbregge-krijgt-nieuwe-naam-robey-academy/?wereld=clubliefde"
+    },
+    {
+      "id": "nl-koninklijke-hfc",
+      "tier": 3,
+      "en": "Koninklijke HFC",
+      "aliases": [
+        "Koninklijke HFC"
+      ],
+      "city": "Haarlem",
+      "stadium": "Sportpark Spanjaardslaan",
+      "center": [
+        4.6234551,
+        52.3636054
+      ],
+      "crest": "nl-koninklijke-hfc.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/39323667",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/71/Koninklijke_HFC.svg"
+    },
+    {
+      "id": "nl-vv-katwijk",
+      "tier": 3,
+      "en": "VV Katwijk",
+      "aliases": [
+        "VV Katwijk"
+      ],
+      "city": "Katwijk-Noord",
+      "stadium": "Sportpark De Krom",
+      "center": [
+        4.4310926,
+        52.2117423
+      ],
+      "crest": "nl-vv-katwijk.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/6315929",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/5e/VV_Katwijk_logo.svg"
+    },
+    {
+      "id": "nl-vv-kloetinge",
+      "tier": 3,
+      "en": "VV Kloetinge",
+      "aliases": [
+        "VV Kloetinge"
+      ],
+      "city": "Kloetinge",
+      "stadium": "Sportpark Wesselopark",
+      "center": [
+        3.9194733,
+        51.5015329
+      ],
+      "crest": "nl-vv-kloetinge.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/1025456884",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/87/VV_Kloetinge.png"
+    },
+    {
+      "id": "nl-kozakken-boys",
+      "tier": 3,
+      "en": "Kozakken Boys",
+      "aliases": [
+        "Kozakken Boys"
+      ],
+      "city": "Werkendam",
+      "stadium": "Sportpark De Zwaaier",
+      "center": [
+        4.9083684,
+        51.8087359
+      ],
+      "crest": "nl-kozakken-boys.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/1324650098",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/03/Kozakken_Boys_logo.svg"
+    },
+    {
+      "id": "nl-quick-boys",
+      "tier": 3,
+      "en": "Quick Boys",
+      "aliases": [
+        "Quick Boys"
+      ],
+      "city": "Katwijk aan Zee",
+      "stadium": "Sportpark Nieuw Zuid",
+      "center": [
+        4.39414501,
+        52.195379
+      ],
+      "crest": "nl-quick-boys.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q66004335",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kvv-quick-boys-logo.png"
+    },
+    {
+      "id": "nl-rijnsburgse-boys",
+      "tier": 3,
+      "en": "Rijnsburgse Boys",
+      "aliases": [
+        "Rijnsburgse Boys"
+      ],
+      "city": "Rijnsburg",
+      "stadium": "Sportpark Middelmors",
+      "center": [
+        4.4429557,
+        52.2019509
+      ],
+      "crest": "nl-rijnsburgse-boys.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/204869221",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9f/Rijnsburgse_Boys_logo.svg"
+    },
+    {
+      "id": "nl-rohda-raalte",
+      "tier": 3,
+      "en": "Rohda Raalte",
+      "aliases": [
+        "Rohda Raalte"
+      ],
+      "city": "Raalte",
+      "stadium": "Sportpark Tijenraan",
+      "center": [
+        6.2690975,
+        52.3957331
+      ],
+      "crest": "nl-rohda-raalte.png",
+      "coordinateSource": "https://www.openstreetmap.org/node/2504160284",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/17/Rohda_Raalte.png",
+      "note": "Dot marks the football club’s ground address at Zwolsestraat 76; the adjacent Tijenraan swimming-pool sports centre is a different site."
+    },
+    {
+      "id": "nl-sv-spakenburg",
+      "tier": 3,
+      "en": "SV Spakenburg",
+      "aliases": [
+        "SV Spakenburg"
+      ],
+      "city": "Spakenburg",
+      "stadium": "Sportpark De Westmaat",
+      "center": [
+        5.37915145,
+        52.2559883
+      ],
+      "crest": "nl-sv-spakenburg.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/74797649",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/67/SV_Spakenburg_logo.svg"
+    },
+    {
+      "id": "nl-de-treffers",
+      "tier": 3,
+      "en": "De Treffers",
+      "aliases": [
+        "De Treffers"
+      ],
+      "city": "Groesbeek",
+      "stadium": "Sportpark Zuid",
+      "center": [
+        5.94269,
+        51.7688
+      ],
+      "crest": "nl-de-treffers.svg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q14378307",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/25/De_Treffers_logo.svg"
+    },
+    {
+      "id": "nl-rkav-volendam",
+      "tier": 3,
+      "en": "RKAV Volendam",
+      "aliases": [
+        "RKAV Volendam"
+      ],
+      "city": "Volendam",
+      "stadium": "KWABO-stadion (Sportpark Volendam)",
+      "center": [
+        5.062509,
+        52.493129
+      ],
+      "crest": "nl-rkav-volendam.svg",
+      "coordinateSource": "https://www.europlan-online.de/kwabo-stadion/stadion-7748.html",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/cb/RKAV_Volendam_logo.svg",
+      "note": "RKAV’s home pitch is separate from FC Volendam’s nearby Kras Stadion."
+    }
+  ]
+}

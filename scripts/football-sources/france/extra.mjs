@@ -1,0 +1,2 @@
+import{retain}from'./fetch.mjs';
+for(const [id,url]of [['annecy','https://www.fc-annecy.fr/'],['concarneau','https://fr.wikipedia.org/wiki/Stade_Guy-Piriou'],['aubagne','https://en.wikipedia.org/wiki/Stade_de_Lattre-de-Tassigny'],['villefranche','https://fr.wikipedia.org/wiki/Stade_Armand-Chouffet'],['versailles','https://en.wikipedia.org/wiki/Stade_Georges_Lefèvre'],['thionville','https://fr.wikipedia.org/wiki/Stade_de_Guentrange']])await retain('extra/'+id+'.html',url);

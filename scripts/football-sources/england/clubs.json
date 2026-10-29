@@ -1,0 +1,1603 @@
+{
+  "country": "united-kingdom",
+  "competitionCountry": "england",
+  "season": "2026-27",
+  "retrieved": "2026-10-29",
+  "locationMeaning": "Home stadium, not club offices. English league system includes Welsh clubs Cardiff City, Swansea City and Wrexham.",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Premier League",
+      "count": 20,
+      "sourceUrl": "https://www.premierleague.com/en/news/4365156"
+    },
+    {
+      "tier": 2,
+      "name": "EFL Championship",
+      "count": 24,
+      "sourceUrl": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed"
+    },
+    {
+      "tier": 3,
+      "name": "EFL League One",
+      "count": 24,
+      "sourceUrl": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "en-349",
+      "tier": 1,
+      "en": "AFC Bournemouth",
+      "aliases": [
+        "Bournemouth"
+      ],
+      "city": "Bournemouth",
+      "stadium": "Vitality Stadium",
+      "center": [
+        -1.838333,
+        50.735278
+      ],
+      "crest": "349.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619094",
+      "coordinateDetail": "Dean Court",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Dean Court",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/349?lang=en&region=us"
+    },
+    {
+      "id": "en-359",
+      "tier": 1,
+      "en": "Arsenal",
+      "aliases": [
+        "Gunners",
+        "Arsenal FC"
+      ],
+      "city": "London",
+      "stadium": "Emirates Stadium",
+      "center": [
+        -0.108333333,
+        51.555
+      ],
+      "crest": "359.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q163995",
+      "coordinateDetail": "Emirates Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Emirates Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/359?lang=en&region=us"
+    },
+    {
+      "id": "en-362",
+      "tier": 1,
+      "en": "Aston Villa",
+      "aliases": [
+        "Aston Villa FC"
+      ],
+      "city": "Birmingham",
+      "stadium": "Villa Park",
+      "center": [
+        -1.884722222,
+        52.509166666
+      ],
+      "crest": "362.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q175339",
+      "coordinateDetail": "Villa Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Villa Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/362?lang=en&region=us"
+    },
+    {
+      "id": "en-337",
+      "tier": 1,
+      "en": "Brentford",
+      "aliases": [
+        "Brentford FC"
+      ],
+      "city": "Brentford",
+      "stadium": "Gtech Community Stadium",
+      "center": [
+        -0.2887,
+        51.490825
+      ],
+      "crest": "337.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q4961609",
+      "coordinateDetail": "Brentford Community Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Brentford Community Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/337?lang=en&region=us"
+    },
+    {
+      "id": "en-331",
+      "tier": 1,
+      "en": "Brighton & Hove Albion",
+      "aliases": [
+        "Brighton",
+        "Seagulls",
+        "Brighton and Hove Albion"
+      ],
+      "city": "Falmer",
+      "stadium": "American Express Stadium",
+      "center": [
+        -0.083277777,
+        50.861822222
+      ],
+      "crest": "331.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619409",
+      "coordinateDetail": "Brighton Community Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Brighton Community Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/331?lang=en&region=us"
+    },
+    {
+      "id": "en-363",
+      "tier": 1,
+      "en": "Chelsea",
+      "aliases": [
+        "Blues",
+        "Chelsea FC"
+      ],
+      "city": "London",
+      "stadium": "Stamford Bridge",
+      "center": [
+        -0.191111111,
+        51.481666666
+      ],
+      "crest": "363.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q171458",
+      "coordinateDetail": "Stamford Bridge",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Stamford Bridge",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/363?lang=en&region=us"
+    },
+    {
+      "id": "en-388",
+      "tier": 1,
+      "en": "Coventry City",
+      "aliases": [
+        "Coventry",
+        "Sky Blues"
+      ],
+      "city": "Coventry",
+      "stadium": "Coventry Building Society Arena",
+      "center": [
+        -1.495556,
+        52.448056
+      ],
+      "crest": "388.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q842077",
+      "coordinateDetail": "Coventry Building Society Arena",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Coventry Building Society Arena",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/388?lang=en&region=us"
+    },
+    {
+      "id": "en-384",
+      "tier": 1,
+      "en": "Crystal Palace",
+      "aliases": [
+        "C Palace",
+        "Eagles",
+        "Crystal Palace FC"
+      ],
+      "city": "London",
+      "stadium": "Selhurst Park",
+      "center": [
+        -0.085555555,
+        51.398333333
+      ],
+      "crest": "384.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1066373",
+      "coordinateDetail": "Selhurst Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Selhurst Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/384?lang=en&region=us"
+    },
+    {
+      "id": "en-368",
+      "tier": 1,
+      "en": "Everton",
+      "aliases": [
+        "Toffees",
+        "Everton FC"
+      ],
+      "city": "Liverpool",
+      "stadium": "Hill Dickinson Stadium",
+      "center": [
+        -3.0028,
+        53.4251
+      ],
+      "crest": "368.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q29347805",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Hill_Dickinson_Stadium",
+      "coordinateSnapshot": "venue-hill-dickinson-stadium.json",
+      "coordinateName": "Hill Dickinson Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/368?lang=en&region=us",
+      "note": "Everton men moved from Goodison Park to Hill Dickinson Stadium in 2025.",
+      "groundSource": "https://www.evertonfc.com/stadium-information/"
+    },
+    {
+      "id": "en-370",
+      "tier": 1,
+      "en": "Fulham",
+      "aliases": [
+        "Fulham FC"
+      ],
+      "city": "London",
+      "stadium": "Craven Cottage",
+      "center": [
+        -0.221666666,
+        51.475
+      ],
+      "crest": "370.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q318043",
+      "coordinateDetail": "Craven Cottage",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Craven Cottage",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/370?lang=en&region=us"
+    },
+    {
+      "id": "en-306",
+      "tier": 1,
+      "en": "Hull City",
+      "aliases": [
+        "Hull",
+        "Tigers"
+      ],
+      "city": "Hull",
+      "stadium": "The MKM Stadium",
+      "center": [
+        -0.367777777,
+        53.746111111
+      ],
+      "crest": "306.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q630160",
+      "coordinateDetail": "MKM Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "MKM Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/306?lang=en&region=us"
+    },
+    {
+      "id": "en-373",
+      "tier": 1,
+      "en": "Ipswich Town",
+      "aliases": [
+        "Ipswich",
+        "Tractor Boys"
+      ],
+      "city": "Ipswich",
+      "stadium": "Portman Road",
+      "center": [
+        1.145277777,
+        52.055
+      ],
+      "crest": "373.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619558",
+      "coordinateDetail": "Portman Road",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Portman Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/373?lang=en&region=us"
+    },
+    {
+      "id": "en-357",
+      "tier": 1,
+      "en": "Leeds United",
+      "aliases": [
+        "Leeds"
+      ],
+      "city": "Leeds",
+      "stadium": "Elland Road",
+      "center": [
+        -1.572222222,
+        53.777777777
+      ],
+      "crest": "357.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619505",
+      "coordinateDetail": "Elland Road",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Elland Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/357?lang=en&region=us"
+    },
+    {
+      "id": "en-364",
+      "tier": 1,
+      "en": "Liverpool",
+      "aliases": [
+        "Reds",
+        "Liverpool FC"
+      ],
+      "city": "Liverpool",
+      "stadium": "Anfield",
+      "center": [
+        -2.960833333,
+        53.430833333
+      ],
+      "crest": "364.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q45671",
+      "coordinateDetail": "Anfield",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Anfield",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/364?lang=en&region=us"
+    },
+    {
+      "id": "en-382",
+      "tier": 1,
+      "en": "Manchester City",
+      "aliases": [
+        "Man City",
+        "Sky Blues",
+        "Manchester City FC"
+      ],
+      "city": "Manchester",
+      "stadium": "Etihad Stadium",
+      "center": [
+        -2.20039,
+        53.483144
+      ],
+      "crest": "382.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q48159",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Etihad_Stadium",
+      "coordinateSnapshot": "venue-etihad-stadium.json",
+      "coordinateName": "Etihad Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/382?lang=en&region=us"
+    },
+    {
+      "id": "en-360",
+      "tier": 1,
+      "en": "Manchester United",
+      "aliases": [
+        "Man Utd",
+        "Red Devils",
+        "Man United",
+        "Manchester Utd",
+        "Manchester United FC"
+      ],
+      "city": "Manchester",
+      "stadium": "Old Trafford",
+      "center": [
+        -2.291388888,
+        53.463055555
+      ],
+      "crest": "360.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q83457",
+      "coordinateDetail": "Old Trafford",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Old Trafford",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/360?lang=en&region=us"
+    },
+    {
+      "id": "en-361",
+      "tier": 1,
+      "en": "Newcastle United",
+      "aliases": [
+        "Newcastle",
+        "Magpies/Toon",
+        "Newcastle Utd"
+      ],
+      "city": "Newcastle upon Tyne",
+      "stadium": "St. James' Park",
+      "center": [
+        -1.621666666,
+        54.975555555
+      ],
+      "crest": "361.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q191774",
+      "coordinateDetail": "St James’ Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "St James’ Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/361?lang=en&region=us"
+    },
+    {
+      "id": "en-393",
+      "tier": 1,
+      "en": "Nottingham Forest",
+      "aliases": [
+        "Nottm Forest",
+        "Nottingham F.",
+        "Nottingham",
+        "Notts Forest"
+      ],
+      "city": "Nottingham",
+      "stadium": "The City Ground",
+      "center": [
+        -1.132778,
+        52.94
+      ],
+      "crest": "393.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q593446",
+      "coordinateDetail": "City Ground",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "City Ground",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/393?lang=en&region=us"
+    },
+    {
+      "id": "en-366",
+      "tier": 1,
+      "en": "Sunderland",
+      "aliases": [
+        "Black Cats/Wearsiders"
+      ],
+      "city": "Sunderland",
+      "stadium": "Stadium of Light",
+      "center": [
+        -1.38817297,
+        54.91442907
+      ],
+      "crest": "366.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q31969",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Stadium_of_Light",
+      "coordinateSnapshot": "venue-stadium-of-light.json",
+      "coordinateName": "Stadium of Light",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/366?lang=en&region=us"
+    },
+    {
+      "id": "en-367",
+      "tier": 1,
+      "en": "Tottenham Hotspur",
+      "aliases": [
+        "Spurs",
+        "Tottenham"
+      ],
+      "city": "London",
+      "stadium": "Tottenham Hotspur Stadium",
+      "center": [
+        -0.066388888,
+        51.604444444
+      ],
+      "crest": "367.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q55074091",
+      "coordinateDetail": "Tottenham Hotspur Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Tottenham Hotspur Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+      "rosterSource": "https://www.premierleague.com/en/news/4365156",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/367?lang=en&region=us"
+    },
+    {
+      "id": "en-392",
+      "tier": 2,
+      "en": "Birmingham City",
+      "aliases": [
+        "Birmingham",
+        "Blues"
+      ],
+      "city": "Birmingham",
+      "stadium": "St. Andrew's Stadium",
+      "center": [
+        -1.868188888,
+        52.475702777
+      ],
+      "crest": "392.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q819179",
+      "coordinateDetail": "St Andrew's",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "St Andrew's",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/392?lang=en&region=us"
+    },
+    {
+      "id": "en-365",
+      "tier": 2,
+      "en": "Blackburn Rovers",
+      "aliases": [
+        "Blackburn",
+        "Rovers"
+      ],
+      "city": "Blackburn",
+      "stadium": "Ewood Park",
+      "center": [
+        -2.489166666,
+        53.728611111
+      ],
+      "crest": "365.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q245085",
+      "coordinateDetail": "Ewood Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Ewood Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/365?lang=en&region=us"
+    },
+    {
+      "id": "en-358",
+      "tier": 2,
+      "en": "Bolton Wanderers",
+      "aliases": [
+        "Bolton",
+        "Trotters"
+      ],
+      "city": "Bolton",
+      "stadium": "Toughsheet Community Stadium",
+      "center": [
+        -2.535555555,
+        53.580555555
+      ],
+      "crest": "358.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q242772",
+      "coordinateDetail": "Toughsheet Community Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Toughsheet Community Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/358?lang=en&region=us"
+    },
+    {
+      "id": "en-333",
+      "tier": 2,
+      "en": "Bristol City",
+      "aliases": [
+        "Robins"
+      ],
+      "city": "Bristol",
+      "stadium": "Ashton Gate",
+      "center": [
+        -2.620278,
+        51.44
+      ],
+      "crest": "333.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q726370",
+      "coordinateDetail": "Ashton Gate Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Ashton Gate Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/333?lang=en&region=us"
+    },
+    {
+      "id": "en-379",
+      "tier": 2,
+      "en": "Burnley",
+      "aliases": [],
+      "city": "Burnley",
+      "stadium": "Turf Moor",
+      "center": [
+        -2.230225,
+        53.789064
+      ],
+      "crest": "379.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q683112",
+      "coordinateDetail": "Turf Moor",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Turf Moor",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/379?lang=en&region=us"
+    },
+    {
+      "id": "en-347",
+      "tier": 2,
+      "en": "Cardiff City",
+      "aliases": [
+        "Cardiff",
+        "Bluebirds"
+      ],
+      "city": "Cardiff",
+      "stadium": "Cardiff City Stadium",
+      "center": [
+        -3.203056,
+        51.472778
+      ],
+      "crest": "347.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q867902",
+      "coordinateDetail": "Cardiff City Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Cardiff City Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/347?lang=en&region=us"
+    },
+    {
+      "id": "en-372",
+      "tier": 2,
+      "en": "Charlton Athletic",
+      "aliases": [
+        "Charlton",
+        "Addicks"
+      ],
+      "city": "London",
+      "stadium": "The Valley",
+      "center": [
+        0.035632,
+        51.487489
+      ],
+      "crest": "372.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q958319",
+      "coordinateDetail": "The Valley",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "The Valley",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/372?lang=en&region=us"
+    },
+    {
+      "id": "en-374",
+      "tier": 2,
+      "en": "Derby County",
+      "aliases": [
+        "Derby"
+      ],
+      "city": "Derby",
+      "stadium": "Pride Park",
+      "center": [
+        -1.447222222,
+        52.915
+      ],
+      "crest": "374.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q201612",
+      "coordinateDetail": "Pride Park Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Pride Park Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/374?lang=en&region=us"
+    },
+    {
+      "id": "en-314",
+      "tier": 2,
+      "en": "Lincoln City",
+      "aliases": [
+        "Red Imps",
+        "Lincoln"
+      ],
+      "city": "Lincoln",
+      "stadium": "LNER Stadium",
+      "center": [
+        -0.540811,
+        53.218289
+      ],
+      "crest": "314.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619105",
+      "coordinateDetail": "Sincil Bank",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Sincil Bank",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/314?lang=en&region=us"
+    },
+    {
+      "id": "en-369",
+      "tier": 2,
+      "en": "Middlesbrough",
+      "aliases": [
+        "Boro"
+      ],
+      "city": "Middlesbrough",
+      "stadium": "Riverside Stadium",
+      "center": [
+        -1.216944444,
+        54.578333333
+      ],
+      "crest": "369.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q822886",
+      "coordinateDetail": "Riverside Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Riverside Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/369?lang=en&region=us"
+    },
+    {
+      "id": "en-391",
+      "tier": 2,
+      "en": "Millwall",
+      "aliases": [
+        "Lions"
+      ],
+      "city": "London",
+      "stadium": "The Den",
+      "center": [
+        -0.050833,
+        51.485833
+      ],
+      "crest": "391.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q908481",
+      "coordinateDetail": "The Den",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "The Den",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/391?lang=en&region=us"
+    },
+    {
+      "id": "en-381",
+      "tier": 2,
+      "en": "Norwich City",
+      "aliases": [],
+      "city": "Norwich",
+      "stadium": "Carrow Road",
+      "center": [
+        1.309166666,
+        52.622222222
+      ],
+      "crest": "381.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q123017",
+      "coordinateDetail": "Carrow Road",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Carrow Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/381?lang=en&region=us"
+    },
+    {
+      "id": "en-385",
+      "tier": 2,
+      "en": "Portsmouth",
+      "aliases": [
+        "Pompey"
+      ],
+      "city": "Portsmouth",
+      "stadium": "Fratton Park",
+      "center": [
+        -1.063888888,
+        50.796388888
+      ],
+      "crest": "385.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619531",
+      "coordinateDetail": "Fratton Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Fratton Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/385?lang=en&region=us"
+    },
+    {
+      "id": "en-394",
+      "tier": 2,
+      "en": "Preston North End",
+      "aliases": [
+        "Preston",
+        "Lilywhites"
+      ],
+      "city": "Preston",
+      "stadium": "Deepdale",
+      "center": [
+        -2.688055555,
+        53.772222222
+      ],
+      "crest": "394.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1141958",
+      "coordinateDetail": "Deepdale",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Deepdale",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/394?lang=en&region=us"
+    },
+    {
+      "id": "en-334",
+      "tier": 2,
+      "en": "Queens Park Rangers",
+      "aliases": [
+        "QPR",
+        "Rangers",
+        "Queens Park Rangers FC"
+      ],
+      "city": "London",
+      "stadium": "MATRADE Loftus Road",
+      "center": [
+        -0.23222222,
+        51.50916667
+      ],
+      "crest": "334.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q31670",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Loftus_Road",
+      "coordinateSnapshot": "venue-loftus-road.json",
+      "coordinateName": "Loftus Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/334?lang=en&region=us"
+    },
+    {
+      "id": "en-398",
+      "tier": 2,
+      "en": "Sheffield United",
+      "aliases": [
+        "Sheffield Utd"
+      ],
+      "city": "Sheffield",
+      "stadium": "Bramall Lane",
+      "center": [
+        -1.470833333,
+        53.370277777
+      ],
+      "crest": "398.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q897533",
+      "coordinateDetail": "Bramall Lane",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Bramall Lane",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/398?lang=en&region=us"
+    },
+    {
+      "id": "en-376",
+      "tier": 2,
+      "en": "Southampton",
+      "aliases": [
+        "Saints"
+      ],
+      "city": "Southampton",
+      "stadium": "St. Mary's Stadium",
+      "center": [
+        -1.39111111,
+        50.90583333
+      ],
+      "crest": "376.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q567339",
+      "coordinateDetail": "St Mary's Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "St Mary's Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/376?lang=en&region=us"
+    },
+    {
+      "id": "en-336",
+      "tier": 2,
+      "en": "Stoke City",
+      "aliases": [
+        "Stoke",
+        "Potters"
+      ],
+      "city": "Stoke-on-Trent",
+      "stadium": "bet365 Stadium",
+      "center": [
+        -2.175555555,
+        52.988333333
+      ],
+      "crest": "336.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q500922",
+      "coordinateDetail": "Britannia Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Britannia Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/336?lang=en&region=us"
+    },
+    {
+      "id": "en-318",
+      "tier": 2,
+      "en": "Swansea City",
+      "aliases": [
+        "Swansea",
+        "Swans"
+      ],
+      "city": "Swansea",
+      "stadium": "Swansea.com Stadium",
+      "center": [
+        -3.9351,
+        51.6422
+      ],
+      "crest": "318.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q580480",
+      "coordinateDetail": "Liberty Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Liberty Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/318?lang=en&region=us"
+    },
+    {
+      "id": "en-395",
+      "tier": 2,
+      "en": "Watford",
+      "aliases": [],
+      "city": "Watford",
+      "stadium": "Vicarage Road",
+      "center": [
+        -0.401606,
+        51.649928
+      ],
+      "crest": "395.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q10626",
+      "coordinateDetail": "Vicarage Road",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Vicarage Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/395?lang=en&region=us"
+    },
+    {
+      "id": "en-383",
+      "tier": 2,
+      "en": "West Bromwich Albion",
+      "aliases": [
+        "West Brom",
+        "WBA"
+      ],
+      "city": "West Bromwich",
+      "stadium": "The Hawthorns",
+      "center": [
+        -1.963888888,
+        52.509166666
+      ],
+      "crest": "383.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q31678",
+      "coordinateDetail": "The Hawthorns",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "The Hawthorns",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/383?lang=en&region=us"
+    },
+    {
+      "id": "en-371",
+      "tier": 2,
+      "en": "West Ham United",
+      "aliases": [
+        "West Ham",
+        "Hammers/Iron"
+      ],
+      "city": "London",
+      "stadium": "London Stadium",
+      "center": [
+        -0.016388888,
+        51.538611111
+      ],
+      "crest": "371.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q172190",
+      "coordinateDetail": "London Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "London Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/371?lang=en&region=us"
+    },
+    {
+      "id": "en-380",
+      "tier": 2,
+      "en": "Wolverhampton Wanderers",
+      "aliases": [
+        "Wolves"
+      ],
+      "city": "Wolverhampton",
+      "stadium": "Molineux Stadium",
+      "center": [
+        -2.130277777,
+        52.590277777
+      ],
+      "crest": "380.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q380823",
+      "coordinateDetail": "Molineux Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Molineux Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/380?lang=en&region=us"
+    },
+    {
+      "id": "en-352",
+      "tier": 2,
+      "en": "Wrexham",
+      "aliases": [
+        "Robins",
+        "Wrexham AFC"
+      ],
+      "city": "Wrexham",
+      "stadium": "STōK Cae Ras",
+      "center": [
+        -3.003611,
+        53.051944
+      ],
+      "crest": "352.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1202579",
+      "coordinateDetail": "Racecourse Ground",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Racecourse Ground",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+      "rosterSource": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/352?lang=en&region=us"
+    },
+    {
+      "id": "en-3802",
+      "tier": 3,
+      "en": "AFC Wimbledon",
+      "aliases": [
+        "Wimbledon",
+        "AFC Wimbledon FC"
+      ],
+      "city": "London",
+      "stadium": "The Cherry Red Records Stadium",
+      "center": [
+        -0.186669444,
+        51.431363888
+      ],
+      "crest": "3802.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q48699006",
+      "coordinateDetail": "Plough Lane",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Plough Lane",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/3802?lang=en&region=us"
+    },
+    {
+      "id": "en-397",
+      "tier": 3,
+      "en": "Barnsley",
+      "aliases": [],
+      "city": "Barnsley",
+      "stadium": "Oakwell",
+      "center": [
+        -1.4675,
+        53.552222
+      ],
+      "crest": "397.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1138270",
+      "coordinateDetail": "Oakwell",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Oakwell",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/397?lang=en&region=us"
+    },
+    {
+      "id": "en-346",
+      "tier": 3,
+      "en": "Blackpool",
+      "aliases": [
+        "Seasiders/Tangerines"
+      ],
+      "city": "Blackpool",
+      "stadium": "Bloomfield Road",
+      "center": [
+        -3.048056,
+        53.804722
+      ],
+      "crest": "346.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q870859",
+      "coordinateDetail": "Bloomfield Road",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Bloomfield Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/346.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/346?lang=en&region=us"
+    },
+    {
+      "id": "en-387",
+      "tier": 3,
+      "en": "Bradford City",
+      "aliases": [
+        "Bradford",
+        "Bantams"
+      ],
+      "city": "Bradford",
+      "stadium": "Valley Parade",
+      "center": [
+        -1.759022222,
+        53.804222222
+      ],
+      "crest": "387.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q969279",
+      "coordinateDetail": "Valley Parade",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Valley Parade",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/387?lang=en&region=us"
+    },
+    {
+      "id": "en-3129",
+      "tier": 3,
+      "en": "Bromley",
+      "aliases": [],
+      "city": "Bromley",
+      "stadium": "CopperJax Community Stadium",
+      "center": [
+        0.02108333,
+        51.39010278
+      ],
+      "crest": "3129.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q3986424",
+      "coordinateDetail": "Hayes Lane",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Hayes Lane",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/3129?lang=en&region=us",
+      "formerStadiumName": "RELOC8 EM Community Stadium",
+      "groundSource": "https://www.bromleyfc.co.uk/news/2026/october/08/tickets-on-sale--bromley-vs-burton-albion---sat-28th-nov/"
+    },
+    {
+      "id": "en-2567",
+      "tier": 3,
+      "en": "Burton Albion",
+      "aliases": [
+        "Brewers",
+        "Burton"
+      ],
+      "city": "Burton upon Trent",
+      "stadium": "Pirelli Stadium",
+      "center": [
+        -1.626958,
+        52.821906
+      ],
+      "crest": "2567.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619136",
+      "coordinateDetail": "Pirelli Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Pirelli Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/2567?lang=en&region=us"
+    },
+    {
+      "id": "en-351",
+      "tier": 3,
+      "en": "Cambridge United",
+      "aliases": [
+        "Cambridge",
+        "U's"
+      ],
+      "city": "Cambridge",
+      "stadium": "Cledara Abbey Stadium",
+      "center": [
+        0.153,
+        52.2114
+      ],
+      "crest": "351.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2444574",
+      "coordinateDetail": "Abbey Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Abbey Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/351?lang=en&region=us"
+    },
+    {
+      "id": "en-279",
+      "tier": 3,
+      "en": "Doncaster Rovers",
+      "aliases": [
+        "Doncaster",
+        "Rovers"
+      ],
+      "city": "Doncaster",
+      "stadium": "Eco-Power Stadium",
+      "center": [
+        -1.113889,
+        53.509722
+      ],
+      "crest": "279.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1336402",
+      "coordinateDetail": "Keepmoat Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Keepmoat Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/279?lang=en&region=us"
+    },
+    {
+      "id": "en-335",
+      "tier": 3,
+      "en": "Huddersfield Town",
+      "aliases": [
+        "Huddersfield",
+        "Terriers"
+      ],
+      "city": "Huddersfield",
+      "stadium": "Accu Stadium",
+      "center": [
+        -1.768333333,
+        53.654166666
+      ],
+      "crest": "335.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619407",
+      "coordinateDetail": "Kirklees Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Kirklees Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/335?lang=en&region=us",
+      "formerStadiumName": "John Smith's Stadium",
+      "groundSource": "https://www.htafc.com/hospitality/"
+    },
+    {
+      "id": "en-375",
+      "tier": 3,
+      "en": "Leicester City",
+      "aliases": [
+        "Leicester",
+        "Foxes"
+      ],
+      "city": "Leicester",
+      "stadium": "King Power Stadium",
+      "center": [
+        -1.142222222,
+        52.620277777
+      ],
+      "crest": "375.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q620031",
+      "coordinateDetail": "Leicester City Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Leicester City Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/375?lang=en&region=us"
+    },
+    {
+      "id": "en-309",
+      "tier": 3,
+      "en": "Leyton Orient",
+      "aliases": [
+        "Orient"
+      ],
+      "city": "London",
+      "stadium": "Gaughan Group Stadium",
+      "center": [
+        -0.012639,
+        51.560139
+      ],
+      "crest": "309.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q917727",
+      "coordinateDetail": "Brisbane Road",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Brisbane Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/309.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/309?lang=en&region=us"
+    },
+    {
+      "id": "en-301",
+      "tier": 3,
+      "en": "Luton Town",
+      "aliases": [
+        "Luton",
+        "Hatters"
+      ],
+      "city": "Luton",
+      "stadium": "Kenilworth Road",
+      "center": [
+        -0.431666666,
+        51.884166666
+      ],
+      "crest": "301.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1613767",
+      "coordinateDetail": "Kenilworth Road",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Kenilworth Road",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/301?lang=en&region=us"
+    },
+    {
+      "id": "en-304",
+      "tier": 3,
+      "en": "Mansfield Town",
+      "aliases": [
+        "Mansfield",
+        "Stags"
+      ],
+      "city": "Mansfield",
+      "stadium": "One Call Stadium",
+      "center": [
+        -1.200556,
+        53.138056
+      ],
+      "crest": "304.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619071",
+      "coordinateDetail": "Field Mill",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Field Mill",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/304.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/304?lang=en&region=us"
+    },
+    {
+      "id": "en-390",
+      "tier": 3,
+      "en": "Milton Keynes Dons",
+      "aliases": [
+        "MK Dons",
+        "Dons",
+        "Milton Keynes"
+      ],
+      "city": "Milton Keynes",
+      "stadium": "Stadium MK",
+      "center": [
+        -0.733333,
+        52.009444
+      ],
+      "crest": "390.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1144973",
+      "coordinateDetail": "Stadium MK",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Stadium MK",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/390?lang=en&region=us"
+    },
+    {
+      "id": "en-340",
+      "tier": 3,
+      "en": "Notts County",
+      "aliases": [
+        "Magpies",
+        "Notts County FC"
+      ],
+      "city": "Nottingham",
+      "stadium": "Meadow Lane",
+      "center": [
+        -1.137222,
+        52.9425
+      ],
+      "crest": "340.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1192396",
+      "coordinateDetail": "Meadow Lane",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Meadow Lane",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/340.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/340?lang=en&region=us"
+    },
+    {
+      "id": "en-311",
+      "tier": 3,
+      "en": "Oxford United",
+      "aliases": [
+        "Oxford Utd",
+        "U's",
+        "Oxford"
+      ],
+      "city": "Oxford",
+      "stadium": "The Kassam Stadium",
+      "center": [
+        -1.208067,
+        51.716419
+      ],
+      "crest": "311.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1672134",
+      "coordinateDetail": "Kassam Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Kassam Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/311?lang=en&region=us"
+    },
+    {
+      "id": "en-342",
+      "tier": 3,
+      "en": "Peterborough United",
+      "aliases": [
+        "Peterborough",
+        "Peterborou"
+      ],
+      "city": "Peterborough",
+      "stadium": "London Road Stadium",
+      "center": [
+        -0.240389,
+        52.564694
+      ],
+      "crest": "342.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1156350",
+      "coordinateDetail": "London Road Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "London Road Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/342?lang=en&region=us"
+    },
+    {
+      "id": "en-307",
+      "tier": 3,
+      "en": "Plymouth Argyle",
+      "aliases": [
+        "Plymouth",
+        "Argyle"
+      ],
+      "city": "Plymouth",
+      "stadium": "Home Park",
+      "center": [
+        -4.150833333,
+        50.388055555
+      ],
+      "crest": "307.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619350",
+      "coordinateDetail": "Home Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Home Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/307?lang=en&region=us"
+    },
+    {
+      "id": "en-338",
+      "tier": 3,
+      "en": "Reading",
+      "aliases": [
+        "Royals"
+      ],
+      "city": "Reading",
+      "stadium": "Select Car Leasing Stadium",
+      "center": [
+        -0.982777777,
+        51.422222222
+      ],
+      "crest": "338.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q31656",
+      "coordinateDetail": "Madejski Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Madejski Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/338.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/338?lang=en&region=us",
+      "formerStadiumName": "Madejski Stadium",
+      "groundSource": "https://www.readingfc.co.uk/news/2026/october/08/join-us-for-our-free-open-training-session-at-the-scl-/"
+    },
+    {
+      "id": "en-399",
+      "tier": 3,
+      "en": "Sheffield Wednesday",
+      "aliases": [
+        "Sheffield Wed",
+        "Owls",
+        "Sheffield Weds",
+        "Sheff Wed"
+      ],
+      "city": "Sheffield",
+      "stadium": "Hillsborough",
+      "center": [
+        -1.500555555,
+        53.411388888
+      ],
+      "crest": "399.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q642557",
+      "coordinateDetail": "Hillsborough Stadium",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Hillsborough Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/399?lang=en&region=us"
+    },
+    {
+      "id": "en-285",
+      "tier": 3,
+      "en": "Stevenage",
+      "aliases": [],
+      "city": "Stevenage",
+      "stadium": "Lamex Stadium",
+      "center": [
+        -0.193608,
+        51.889839
+      ],
+      "crest": "285.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q619353",
+      "coordinateDetail": "Broadhall Way",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Broadhall Way",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/285?lang=en&region=us"
+    },
+    {
+      "id": "en-400",
+      "tier": 3,
+      "en": "Stockport County",
+      "aliases": [
+        "Stockport"
+      ],
+      "city": "Stockport",
+      "stadium": "Edgeley Park",
+      "center": [
+        -2.166388888,
+        53.399722222
+      ],
+      "crest": "400.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1284381",
+      "coordinateDetail": "Edgeley Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Edgeley Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/400?lang=en&region=us"
+    },
+    {
+      "id": "en-350",
+      "tier": 3,
+      "en": "Wigan Athletic",
+      "aliases": [
+        "Wigan",
+        "Latics"
+      ],
+      "city": "Wigan",
+      "stadium": "Brick Community Stadium",
+      "center": [
+        -2.65388889,
+        53.54777778
+      ],
+      "crest": "350.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q494388",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Brick_Community_Stadium",
+      "coordinateSnapshot": "venue-brick-community-stadium.json",
+      "coordinateName": "Brick Community Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/350?lang=en&region=us",
+      "formerStadiumName": "DW Stadium",
+      "groundSource": "https://www.thebrickcommunitystadium.com/"
+    },
+    {
+      "id": "en-344",
+      "tier": 3,
+      "en": "Wycombe Wanderers",
+      "aliases": [
+        "Wycombe",
+        "Chairboys"
+      ],
+      "city": "High Wycombe",
+      "stadium": "Adams Park",
+      "center": [
+        -0.800277777,
+        51.630555555
+      ],
+      "crest": "344.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q351946",
+      "coordinateDetail": "Adams Park",
+      "coordinateSnapshot": "stadiums-wikidata.json",
+      "coordinateName": "Adams Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png",
+      "rosterSource": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "detailSource": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/344?lang=en&region=us"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Premier League 2026–27 clubs",
+      "url": "https://www.premierleague.com/en/news/4365156"
+    },
+    {
+      "title": "Championship 2026–27 line-up confirmed, West Bromwich Albion",
+      "url": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed"
+    },
+    {
+      "title": "League One 2026–27 fixtures, Leicester City",
+      "url": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released"
+    },
+    {
+      "title": "ESPN league participant and club venue feeds",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams?limit=100"
+    },
+    {
+      "title": "Wikidata stadium coordinates",
+      "url": "https://www.wikidata.org/"
+    }
+  ]
+}

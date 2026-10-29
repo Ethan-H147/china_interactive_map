@@ -1,0 +1,770 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "premier-official.html": {
+      "url": "https://www.premierleague.com/en/news/4365156",
+      "sha256": "616c3a2f021a604dbaea4d16c155c051011c6301bcd3fddd062d9c28b4510ea1",
+      "bytes": 111343
+    },
+    "championship-official.html": {
+      "url": "https://www.wba.co.uk/news/202627-sky-bet-championship-line-confirmed",
+      "sha256": "61548fc72613a167dbbb2f3651a3d9866e225c13395ffffd61886df3c51992ec",
+      "bytes": 234543
+    },
+    "leagueone-official.html": {
+      "url": "https://www.lcfc.com/media-article/leicester-city-lcfc-sky-bet-league-one-efl-fixtures-released",
+      "sha256": "57861dee718d44a58fc5e574d092f512b0bc61d00cc45b269625f31109316161",
+      "bytes": 1588215
+    },
+    "stadiums-wikidata.json": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fstadium%20%3FstadiumLabel%20%3FstadiumAltLabel%20%3Fcoord%20WHERE%20%7B%20%3Fstadium%20wdt%3AP17%20wd%3AQ145%3B%20wdt%3AP625%20%3Fcoord%3B%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ483110.%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%20%7D",
+      "sha256": "e3a877c3650f542a13a8de6afa170c043fb2c511172bf6d4fafee0e23c280704",
+      "bytes": 295310
+    },
+    "eng-1-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams?limit=100",
+      "sha256": "0746d7ba071771de6796ea769b18d090366e5fbffda7418acb6613533aaa4cf6",
+      "bytes": 24939
+    },
+    "eng-2-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.2/teams?limit=100",
+      "sha256": "b44a7030d490674efec4e22501d2c4a21f48c9b32d7ab05ce4804bcc519985ad",
+      "bytes": 29664
+    },
+    "eng-3-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.3/teams?limit=100",
+      "sha256": "088fc8ffcefc06e18a4115393165b1b3fa88c8a03d31bb887a8db73054889f58",
+      "bytes": 28552
+    },
+    "team-359.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/359?lang=en&region=us",
+      "sha256": "89dbb3974ed522d22bd2266673fda41a67ebba0ad252c4870fd7a9f8b6d7d70b",
+      "bytes": 5059
+    },
+    "team-337.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/337?lang=en&region=us",
+      "sha256": "2d1cc23b9a6e633c3edf241267b82124926bbd1dbc8483f53de94f7dfceb88d7",
+      "bytes": 5009
+    },
+    "team-362.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/362?lang=en&region=us",
+      "sha256": "98b6b7228c8a9fbd06f1d1e3c1851173b86c63059866a8d2d0fff3d9a1aad9ac",
+      "bytes": 5099
+    },
+    "team-349.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/349?lang=en&region=us",
+      "sha256": "04c98874e569afccd870d8b3127535dcc8da41a86f363dcfd6f56d70e4af4af3",
+      "bytes": 5171
+    },
+    "crest-359.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/359.png",
+      "sha256": "92f1bb35662ff56dde09e1f8084221a458357a6df390bc97b2ed6495f6e39f53",
+      "bytes": 36280
+    },
+    "crest-337.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/337.png",
+      "sha256": "7104e162e0e5158336ac94dd895435c66f9c4cbf1a66719b6d1948eb11c2fbb3",
+      "bytes": 121058
+    },
+    "crest-362.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/362.png",
+      "sha256": "aad2e636ade60b485855deacfe74f831c8dcae46de72079c7f521b06c1b5865b",
+      "bytes": 78018
+    },
+    "team-331.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/331?lang=en&region=us",
+      "sha256": "9ead4ccbe7c4563531ce951833b271636cf61c9ba3d6b14d7033e6e3be135888",
+      "bytes": 5055
+    },
+    "crest-349.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/349.png",
+      "sha256": "0383002b303b31fd4672b7823672c472660be4f2175d84ac480a26e1a06e61bb",
+      "bytes": 61133
+    },
+    "team-363.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/363?lang=en&region=us",
+      "sha256": "3b0a244f6bc791554632978d7f608b6c902227606096e47c5259a902b1d6dd56",
+      "bytes": 5054
+    },
+    "team-388.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/388?lang=en&region=us",
+      "sha256": "c6a0fb64b78f392ebb70258327c44f68f791a8f2039aa4218938941743986483",
+      "bytes": 5015
+    },
+    "crest-331.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/331.png",
+      "sha256": "b1a7041908644caca2c328a329aa8494d6c531cc32f4b11b7fceba43bc93e484",
+      "bytes": 77720
+    },
+    "crest-363.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/363.png",
+      "sha256": "6f14d86b5e35074e91462c7ede6e822f6a6c9f6cb723cd04ea6b8d36f2fa5392",
+      "bytes": 59969
+    },
+    "team-384.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/384?lang=en&region=us",
+      "sha256": "1aaa40b4f8f1b84900157b2f4b300633da13c06e75d047b7e60d547793c3e0ce",
+      "bytes": 5145
+    },
+    "crest-388.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/388.png",
+      "sha256": "6959102823b1b8e3bad688a23bc24efed5cc02c606ff65a66a10c6ec15aa9b57",
+      "bytes": 147977
+    },
+    "team-368.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/368?lang=en&region=us",
+      "sha256": "bf807967d7565866a7d2fee9f3a6faa5c42fa90b55d30d19ed46c8d4cca13b42",
+      "bytes": 5061
+    },
+    "team-370.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/370?lang=en&region=us",
+      "sha256": "65af1e22e833a535013cd075d6e53428315171ab37a36cb2cdcc6831c1dfb0c3",
+      "bytes": 5044
+    },
+    "crest-384.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/384.png",
+      "sha256": "bc829f12cbd54aa1116888d68fda2cfe8bf4c16adea80033af748ca54a153920",
+      "bytes": 80572
+    },
+    "crest-368.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/368.png",
+      "sha256": "eaedbe5e3b18ddef08c09d07fdca62bcac65165b7bb9af4780acce36841aee20",
+      "bytes": 146091
+    },
+    "crest-370.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/370.png",
+      "sha256": "b9148eac6e2150c0498eca2924e755ae710d04d3fce66993050cf45942ca4a19",
+      "bytes": 16696
+    },
+    "team-306.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/306?lang=en&region=us",
+      "sha256": "915319e1b409794daf7fa67f7c61c216359f5b6500acf8271881a47cdc5e5abb",
+      "bytes": 5095
+    },
+    "team-373.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/373?lang=en&region=us",
+      "sha256": "07fa9fbcec0ac0ba73177f73b2500142aee2e5728732b6a0399f6f27c6bbf612",
+      "bytes": 4979
+    },
+    "crest-306.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/306.png",
+      "sha256": "8147c0d4c418e56f133dcc79e38120cd742aab84e7ce72fa3c873f872100ab65",
+      "bytes": 75616
+    },
+    "team-357.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/357?lang=en&region=us",
+      "sha256": "2d82968f0e59a085a38f9307c975404d608d23cf78b87c9e1fc0b6e5de48cce2",
+      "bytes": 4965
+    },
+    "team-364.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/364?lang=en&region=us",
+      "sha256": "cb5ddb9d917d97fad2d094d4c2e9de64e8ee21ba06931cc9a8a9e330321ab9e4",
+      "bytes": 5536
+    },
+    "crest-373.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/373.png",
+      "sha256": "e253aeaf39ff7c9d19f91ce78464de947b275fdbea4bf595e602d42367cea1b7",
+      "bytes": 22565
+    },
+    "crest-364.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/364.png",
+      "sha256": "9f2c56faf3631eb32fb5cccd84d31827ba38fcd9dd3280f597b221711a8797de",
+      "bytes": 35827
+    },
+    "team-382.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/382?lang=en&region=us",
+      "sha256": "57778a51544031db835e6abf968c8bf70cfa5970b1e4942385a338bb06c142b8",
+      "bytes": 5158
+    },
+    "crest-357.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/357.png",
+      "sha256": "69d5d4251e740fc8d525c3c967e817575b0ac2e2af7be03f23e40d494c383790",
+      "bytes": 237616
+    },
+    "crest-382.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/382.png",
+      "sha256": "70e005bdab0ada41a153760398b4a2ef99f956bf9e72954686caa70da8c30c0b",
+      "bytes": 130387
+    },
+    "team-360.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/360?lang=en&region=us",
+      "sha256": "e0eefc8cdc4bb00f792185b78bac9e78f681dc037465d83d43f5f7f8da69e919",
+      "bytes": 5140
+    },
+    "team-361.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/361?lang=en&region=us",
+      "sha256": "c55e81cde9dd067ee42d14bdf0b343791d33bec9efd3de2d4e993a286da1c22d",
+      "bytes": 5180
+    },
+    "crest-361.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/361.png",
+      "sha256": "5e926d9f8c18b1b20e2e86a830ad56d4a9094673f172c0f8fabf617917e1910d",
+      "bytes": 189751
+    },
+    "team-393.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/393?lang=en&region=us",
+      "sha256": "976404f616bec038314c4e2f3a6cb81a3aeb4308d865022bdbeae9f51042447a",
+      "bytes": 5186
+    },
+    "crest-360.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/360.png",
+      "sha256": "03486cf5cf90d580d6132ab115cc747be7b2e3519fd6e08be56675cf5897f0b7",
+      "bytes": 73159
+    },
+    "crest-393.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/393.png",
+      "sha256": "766868d667069609a8904ba1ec6a66f09fccfe9fbad21300791bf778dd9ddaae",
+      "bytes": 20645
+    },
+    "team-366.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/366?lang=en&region=us",
+      "sha256": "f90500e526b574f38b4cfc3a959384868e8fcb150abb28af84f1e6fd40b0305c",
+      "bytes": 5105
+    },
+    "team-367.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/367?lang=en&region=us",
+      "sha256": "7fbd48e9ba9d2cb9c13630b0963de6b6db8f3d8f9b0221a670ab155949803e1e",
+      "bytes": 5186
+    },
+    "crest-366.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/366.png",
+      "sha256": "aee718a79be592a8bb36ab68b0960a1dbb5763692f4d91c3f4249f95edbf19af",
+      "bytes": 53898
+    },
+    "crest-367.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/367.png",
+      "sha256": "f66f956414b0fd99df6a7e29bed0bd8a849f11d41bd749a1e08ff8d032570d35",
+      "bytes": 26224
+    },
+    "team-365.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/365?lang=en&region=us",
+      "sha256": "1d11420aa079391c3c3bd5c7de350a5a048e50d0a46643ecc83ac0e8169a7e19",
+      "bytes": 5129
+    },
+    "team-392.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/392?lang=en&region=us",
+      "sha256": "c8264071e2b78111b50c74d96c08988b703171144c47e2136d593a74d810e6bc",
+      "bytes": 5126
+    },
+    "team-358.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/358?lang=en&region=us",
+      "sha256": "debf2de570b1caf7c04c64d0692ae63f869bfe7aec22b631336c1c70237915bb",
+      "bytes": 5052
+    },
+    "team-333.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/333?lang=en&region=us",
+      "sha256": "a7524d88086eb83d6af4bb80f64fc059cdcaf7a3a73693b5efa24485a8ecbbfc",
+      "bytes": 5008
+    },
+    "crest-333.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/333.png",
+      "sha256": "0bcc879e9a8597913b5dba73c85a379f33747b1487acff44da3ded02b69dd480",
+      "bytes": 69572
+    },
+    "crest-358.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/358.png",
+      "sha256": "7367263148cc4e8ce4a40e9097cddfbbb7fa22031084443fed86f941ef80585d",
+      "bytes": 23626
+    },
+    "team-379.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/379?lang=en&region=us",
+      "sha256": "c06a3d9b40ba60b0e9a144d3cdf2f6fbac67991baa0f5bee16f112d70615d791",
+      "bytes": 5051
+    },
+    "crest-365.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/365.png",
+      "sha256": "c70d39df76cbf98ac21f77389ba416eeb648a937991927ed158df0fbcf1d9e35",
+      "bytes": 64133
+    },
+    "crest-392.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/392.png",
+      "sha256": "92d78233c718f49cc2365dad6337a88f7671e17a5386c13bdea1a8853307e17b",
+      "bytes": 87076
+    },
+    "team-347.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/347?lang=en&region=us",
+      "sha256": "f80fdc32b668b4324bb07f7f9583bae5e84602d17f20d751dcbcb5e09ab0e77b",
+      "bytes": 5008
+    },
+    "team-372.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/372?lang=en&region=us",
+      "sha256": "e1b18862860055a2e73eeb5c59b52a44a987eb62a00290d28b9a4fc674066cb2",
+      "bytes": 5116
+    },
+    "crest-347.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/347.png",
+      "sha256": "128451f1d8302cc6a26d8f7b515a8826b330d43ea5f57b72c5dca9cca17db004",
+      "bytes": 76588
+    },
+    "crest-372.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/372.png",
+      "sha256": "dc27ecad398b132ac057da6b930603f3b73acd7a79507080d381a161f74142c6",
+      "bytes": 177458
+    },
+    "team-374.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/374?lang=en&region=us",
+      "sha256": "5fc2752e7eba870b96b8e142f8c73c023fdfc018857dd44b337b0aed31b683a5",
+      "bytes": 5067
+    },
+    "team-314.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/314?lang=en&region=us",
+      "sha256": "6195f0b927352bbb44c1e5eba788482b287eb218abeaeb7ec9bec56c8be1083b",
+      "bytes": 4881
+    },
+    "crest-374.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/374.png",
+      "sha256": "a5a16cd7d49670bd4cdcd23d072b9e12bc15e257e0ebac566ccb04e4c7c7282e",
+      "bytes": 45721
+    },
+    "team-369.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/369?lang=en&region=us",
+      "sha256": "88e11e46e2a7aa22d178ebe0b65dc8c48f55f66acf136f28985da9fbcacd837c",
+      "bytes": 5103
+    },
+    "crest-379.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/379.png",
+      "sha256": "2a42d8838bc00f812f779fe30eefbc2bb159ba9bfce107eb412e3e6450fb60c5",
+      "bytes": 49386
+    },
+    "team-391.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/391?lang=en&region=us",
+      "sha256": "fa028926920983be20b9f795b23d90fcd2a0884b1dc514dca2272a55041fad78",
+      "bytes": 4916
+    },
+    "crest-369.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/369.png",
+      "sha256": "493644c7f79c31692d7f82f2f15bb9db6fa63039474d5f49b30cd89005acf3f6",
+      "bytes": 77224
+    },
+    "team-381.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/381?lang=en&region=us",
+      "sha256": "5c26230640e8ed77a3537ebda1a38652523b65b82f8a5bab2c07e32a64b3ed40",
+      "bytes": 5103
+    },
+    "crest-314.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/314.png",
+      "sha256": "a266c2326fdf8c00c08a8b2d9dd4ef8f5c1bb85ee0f1a27f4c89cf17ea9fdeb6",
+      "bytes": 18336
+    },
+    "crest-391.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/391.png",
+      "sha256": "cbedaa4f2fccf52919ac813951fa693ef6cadfa5a7f93131692dcf8f64dd1cda",
+      "bytes": 33576
+    },
+    "team-385.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/385?lang=en&region=us",
+      "sha256": "6633de8b622444a926bb6d970a7b1b316872deeaf61dd1fbff3aa0d5d7ee1d01",
+      "bytes": 5086
+    },
+    "crest-381.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/381.png",
+      "sha256": "d06b8b8d06c49ed01f36d4936052151c22b16ccaf27cae77dfd32c7df68b9451",
+      "bytes": 65449
+    },
+    "team-394.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/394?lang=en&region=us",
+      "sha256": "5c8f34b1073de852f1ac488b619a2946620e5c5e8251acf09bd64a07c88a05d0",
+      "bytes": 5013
+    },
+    "team-334.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/334?lang=en&region=us",
+      "sha256": "1378d50ffc6157f5b31e7bb67cc4573235d47ac5d46d2c01992a3f2e3b42c0db",
+      "bytes": 5138
+    },
+    "team-398.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/398?lang=en&region=us",
+      "sha256": "53de15384929cff358bb57bd2b20042283c33209e45e002d60a77347f53220f0",
+      "bytes": 5125
+    },
+    "crest-334.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/334.png",
+      "sha256": "be48c68dbb1873af82f2523cae6bf0982179f3554706d0b3e40a42b4b001f67f",
+      "bytes": 48451
+    },
+    "crest-398.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/398.png",
+      "sha256": "8022abe015092baee37ffce6f524e7561ab60b4f3e77990f7e7b69e1087e0bce",
+      "bytes": 68769
+    },
+    "team-376.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/376?lang=en&region=us",
+      "sha256": "5b704bee567b5baf3644193ba0b1532c6e3234814fb095ca079a2bc494df02e0",
+      "bytes": 5094
+    },
+    "crest-385.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/385.png",
+      "sha256": "f030a4c5beafabb21aa690e7a18c2b16585f145c9ac95ac24250b1e8bb948a4f",
+      "bytes": 118340
+    },
+    "team-336.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/336?lang=en&region=us",
+      "sha256": "ddedb467b968a1c0636ebc5dc76d36bc39ff0803094591ea8924c39343fa0a5c",
+      "bytes": 5112
+    },
+    "team-318.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/318?lang=en&region=us",
+      "sha256": "559b8f5efc1b1592b447dcf2319fee142f5c5b108c704cbb3e4dcb02188ca3a1",
+      "bytes": 5133
+    },
+    "crest-394.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/394.png",
+      "sha256": "6d5ad6705de480b664a4e1f09479eb06fe4517fec8b34cea917ea283f0744a43",
+      "bytes": 72177
+    },
+    "crest-376.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/376.png",
+      "sha256": "09b41343b46d3941a946ce5c2696550ec654d54614b7dbd22cef0cde91970335",
+      "bytes": 39364
+    },
+    "crest-318.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/318.png",
+      "sha256": "5fcea5a909ca225a5389ea59b3f110c7826ac9449ba11e1fbf74d6433cae57aa",
+      "bytes": 17030
+    },
+    "team-395.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/395?lang=en&region=us",
+      "sha256": "18f16d2c57cdcc0489ae46d1affdc568d4488aebfcb9170019549aa01be9e6ed",
+      "bytes": 5083
+    },
+    "team-383.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/383?lang=en&region=us",
+      "sha256": "f95ed01eba1a33c8083b7941a9333b8722c6fa5c24acaa397953c49db3d31d7e",
+      "bytes": 5171
+    },
+    "team-371.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/371?lang=en&region=us",
+      "sha256": "fcd86503192b49adcee41c89c47f8985dd285393ece9b433a606c33e6853a9f6",
+      "bytes": 5026
+    },
+    "crest-383.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/383.png",
+      "sha256": "52bd64391405c0b43683fd419a8182eeebd33cbece1fe556a12e3de5ec775220",
+      "bytes": 39047
+    },
+    "crest-371.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/371.png",
+      "sha256": "4e74106a88addf17a9f3f0af437cd9d85c28759e93e10da0f27dd00184c234b8",
+      "bytes": 89392
+    },
+    "crest-395.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/395.png",
+      "sha256": "d197bf6055579351059aa35603d60efeda1dd366463f3c7f9004bbf9e566c747",
+      "bytes": 21666
+    },
+    "team-380.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/380?lang=en&region=us",
+      "sha256": "09a531e64676b549481a7e6cb3289018f077dc2b468db70fb514c54c47820a2f",
+      "bytes": 5065
+    },
+    "crest-336.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/336.png",
+      "sha256": "b02f23df8c991e3d0537f54746767f685029f766ffd72990c004f1c0f2aff8c2",
+      "bytes": 46801
+    },
+    "team-352.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.2/teams/352?lang=en&region=us",
+      "sha256": "b0672e3342e5558f52ff49f4fbd38778d644c807f134a3feab979a90b97f11f2",
+      "bytes": 4960
+    },
+    "crest-380.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/380.png",
+      "sha256": "a1a06a97b433a7e1b32f9ec9ae5f9d60acdb95dc85f70794351df4dea31adfe4",
+      "bytes": 35485
+    },
+    "crest-352.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/352.png",
+      "sha256": "c9d74ed375ee12fef411e2a45e21270b13485afda419ca7f496648a199941b8c",
+      "bytes": 238715
+    },
+    "team-3802.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/3802?lang=en&region=us",
+      "sha256": "4c56c09e4c5de3990d0c1937737d3f77ace7d54e27f61aa101383cc65fb3f8cf",
+      "bytes": 4857
+    },
+    "team-397.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/397?lang=en&region=us",
+      "sha256": "9df558bf9199852c7a24c7f4f274dbc52e3933171cdb26a7df64eb964d61224a",
+      "bytes": 4963
+    },
+    "team-346.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/346?lang=en&region=us",
+      "sha256": "f62449e1c9c3a192dba19e3763e768b2af49c03543efa7e9ed01a0b55b8a4523",
+      "bytes": 4960
+    },
+    "crest-3802.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3802.png",
+      "sha256": "313ceb02cc73d39d6a4a918f1791bb771845441491490d41bdc2a14f62c2dca2",
+      "bytes": 68185
+    },
+    "team-387.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/387?lang=en&region=us",
+      "sha256": "8cd6961bee4d1a5e84c8c3d10b039865a7a563a59c4ef70adae3a20d4acc99ab",
+      "bytes": 4829
+    },
+    "crest-387.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/387.png",
+      "sha256": "977d279d78255b2a669671c2eb62194370f934c3dc01c50d930a1d48a15e35e8",
+      "bytes": 123236
+    },
+    "team-3129.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/3129?lang=en&region=us",
+      "sha256": "7862effb02f37acccb07c8881164992eeaac4bab01f865d8155b765e36564893",
+      "bytes": 4667
+    },
+    "crest-346.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/346.png",
+      "sha256": "efe745b3833ea175c7e2aba54d69b3ce64120cfa0aea6578077bcf52189f479f",
+      "bytes": 71524
+    },
+    "team-2567.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/2567?lang=en&region=us",
+      "sha256": "5881a45612debe418f31ed20d6208d981b6e3fbf092ab5d81265f7deacacfff5",
+      "bytes": 5049
+    },
+    "crest-397.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/397.png",
+      "sha256": "5d4ec36703040bafd14a53abef5dfcb6e03d6cb919c31edf18967a8426d56d01",
+      "bytes": 246455
+    },
+    "team-351.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/351?lang=en&region=us",
+      "sha256": "8a3bda108885b550d2cf020ab42e245522448b326215e68f181d621ac4c732ce",
+      "bytes": 4898
+    },
+    "crest-2567.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2567.png",
+      "sha256": "e1aa39f877b41e815d328295de078405c713cb8768703283af821ccc9678b51b",
+      "bytes": 123593
+    },
+    "team-279.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/279?lang=en&region=us",
+      "sha256": "704b64277a97c2661afa6be0021e975f139a6432eb85472acaf77edf9d9c9030",
+      "bytes": 4847
+    },
+    "crest-3129.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3129.png",
+      "sha256": "03ba96fffde95aa0c4c3dff385da0fd7ccc26c951c6b6e84a3e62e482fc9c0ac",
+      "bytes": 209103
+    },
+    "crest-279.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/279.png",
+      "sha256": "6e6aa49aed4e23b28848d9a6b00abaab961adc518c5412adf9d7592b43d00189",
+      "bytes": 108070
+    },
+    "team-309.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/309?lang=en&region=us",
+      "sha256": "244948818224df96481667e1a5769e5a75933982db82354f9811b7986ec36ad4",
+      "bytes": 4836
+    },
+    "crest-351.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/351.png",
+      "sha256": "6ebfb8a9256a218d18f312a53cfc87b4ec1d45a443e661afb8e42ce02e730c90",
+      "bytes": 43503
+    },
+    "team-335.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/335?lang=en&region=us",
+      "sha256": "939ba76829559bd62346e6927c43bb803312cdc9c44cdf3a56e5ad5da8e0528f",
+      "bytes": 5031
+    },
+    "team-375.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/375?lang=en&region=us",
+      "sha256": "44a9e3ed2418658171135c87fb2742ec2efe17f5514f0b7aca6557340fa73451",
+      "bytes": 5024
+    },
+    "crest-309.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/309.png",
+      "sha256": "7c8d87e4d27046d7b14ecadeb91c853b42452a8b73d1c756cfc8ff101dd60a35",
+      "bytes": 177530
+    },
+    "crest-335.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/335.png",
+      "sha256": "978b626b36ede5d31a068f31f29fe53576a62f2456d686de47b91879148a3a49",
+      "bytes": 220546
+    },
+    "crest-375.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/375.png",
+      "sha256": "a21568e549d0f9389f56469b75d0866281a39c1e32f37a4908c2727e0a53050f",
+      "bytes": 54813
+    },
+    "team-301.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/301?lang=en&region=us",
+      "sha256": "98cdd047a78d39c39c731c97959d42d1961721ced04a887dc816a09eefdf9c0e",
+      "bytes": 4987
+    },
+    "crest-301.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/301.png",
+      "sha256": "bdb368111c1b51415d2b32798e79b11b7bc3c86923cb94356dd18bacb06c50a9",
+      "bytes": 200630
+    },
+    "team-390.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/390?lang=en&region=us",
+      "sha256": "22471d94e37f280da673d90ab64dd8491210dee0c072330612347f25eec78137",
+      "bytes": 4921
+    },
+    "team-304.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/304?lang=en&region=us",
+      "sha256": "58e69bb348c2d9432119e33232a3a0f301789e29379f86c1ff59764462bfce95",
+      "bytes": 5029
+    },
+    "team-340.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/340?lang=en&region=us",
+      "sha256": "4d6dadcabb11794bb0f6fe3b3952b975dedcea77317fff22bf4904538b975cdc",
+      "bytes": 4696
+    },
+    "crest-390.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/390.png",
+      "sha256": "a474e4c39222dcdcf3b34684b5147ac5ccb07382551eb747549177caedeef274",
+      "bytes": 57620
+    },
+    "crest-304.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/304.png",
+      "sha256": "bd6f3dc45851ab4db00c4be7167f9407c3fa38f57e6985a07af870114bbe8be6",
+      "bytes": 14756
+    },
+    "team-342.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/342?lang=en&region=us",
+      "sha256": "a30b9f4f821d62300818ae2a61001b13b37a7d34752cdb6195aef3a6062e4a27",
+      "bytes": 5091
+    },
+    "team-311.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/311?lang=en&region=us",
+      "sha256": "2687004c37c80fd9207e5b3ed82b933ca312f84e8c6626acb17106befbe13dda",
+      "bytes": 4858
+    },
+    "crest-340.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/340.png",
+      "sha256": "a3ed338d0e99909ace83163cdfbce692688ede02a45a8ba4c73eb4ab2fb0eb3e",
+      "bytes": 86867
+    },
+    "crest-311.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/311.png",
+      "sha256": "570652ecb0ade2908cdc1d79bb761af24d33663904e6c45bd433cfea601796ae",
+      "bytes": 16113
+    },
+    "team-307.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/307?lang=en&region=us",
+      "sha256": "2b3b386559370a6eba1c72a4fe0b3f341a90aca97575f0147c4a6ba9f89d1311",
+      "bytes": 4838
+    },
+    "team-399.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/399?lang=en&region=us",
+      "sha256": "044c2804be6ccf2f7c3c23cd25495d4269e99b955eee0922e5cfba1c59d7f1b1",
+      "bytes": 5026
+    },
+    "team-338.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/338?lang=en&region=us",
+      "sha256": "d0eddd41846eb44a813c7060c6c6bdf61fd4e92806b0103c78028308868f26ea",
+      "bytes": 5046
+    },
+    "crest-307.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/307.png",
+      "sha256": "3656f5edc614d89d1c1527659c3a19f9290d434a116cc9f9f375a0fb965aa09f",
+      "bytes": 106764
+    },
+    "crest-342.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/342.png",
+      "sha256": "0ce90c0a8a2c5ca16dfdfe4057525a61e42011b465bb1ec298df1bc2c628adf8",
+      "bytes": 69544
+    },
+    "crest-399.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/399.png",
+      "sha256": "24e02e4c8ca0e1bdd73578c5a899dbb1273d539787bbfc821d7d781a3bebec46",
+      "bytes": 57438
+    },
+    "crest-338.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/338.png",
+      "sha256": "976c806c745cc6ac2a9b76069b9850473c4142e6d3b01272cab74aed0857884c",
+      "bytes": 51463
+    },
+    "team-285.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/285?lang=en&region=us",
+      "sha256": "67c162752a8e19b1c7617c2f23176d7e27f1dde6d0af7b691b392a56658b38ea",
+      "bytes": 4989
+    },
+    "crest-285.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/285.png",
+      "sha256": "6118dc773f7967739402a5e3260041d4b978a11eb2363a6c875909d9a065a213",
+      "bytes": 21140
+    },
+    "team-350.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/350?lang=en&region=us",
+      "sha256": "61afa200e684eee063ea9857e1c7e884a3e5c3316c74d90197266cff817eeaed",
+      "bytes": 5084
+    },
+    "team-344.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/344?lang=en&region=us",
+      "sha256": "1ce6782c9e788b470c4f025ec00af1c556fc78d8e5e753341c5dd091e83027ef",
+      "bytes": 4855
+    },
+    "team-400.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.3/teams/400?lang=en&region=us",
+      "sha256": "3407dc1d9c06dcbe8d551dcf21fc2d585fa37773dddf08310174889dc18078ac",
+      "bytes": 4991
+    },
+    "crest-344.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/344.png",
+      "sha256": "aadc54be77340617db59cb3ae8016a43cb9da2272b013984c6a5b9a6a0144126",
+      "bytes": 210756
+    },
+    "crest-350.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/350.png",
+      "sha256": "dfb4e274658740cb0bcf847f262de4a88bb9b5c39863f261af31a28a7f6f2877",
+      "bytes": 46081
+    },
+    "crest-400.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/400.png",
+      "sha256": "e4552bd1c57d4c7c9ac891d66b5c64e504c7f20e55788a84aacd784e026b1ef0",
+      "bytes": 177563
+    },
+    "venue-etihad-stadium.json": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Etihad%20Stadium",
+      "sha256": "e08c2115b6007a216e94e0be05b545c301cfb353af900c98c248a58a772d729c",
+      "bytes": 2230
+    },
+    "venue-hill-dickinson-stadium.json": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Hill%20Dickinson%20Stadium",
+      "sha256": "bbe2fc2a592b91b0f9dd4f8ae3b1404dd912134b8885c3d04856d7aa9ece7a6c",
+      "bytes": 2556
+    },
+    "venue-loftus-road.json": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Loftus%20Road",
+      "sha256": "b15e4a04fcb581ff466de19583eb2dbc1f07bb38e04295401cee4016e3cb5a09",
+      "bytes": 2238
+    },
+    "venue-stadium-of-light.json": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Stadium%20of%20Light",
+      "sha256": "2969c883bd3170c207a40050c005b0dc97514c216fe9eaa512821bb2578492f3",
+      "bytes": 2949
+    },
+    "venue-brick-community-stadium.json": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Brick%20Community%20Stadium",
+      "sha256": "2abc70933237976e555b52b67914d525d2b00924ed11c69276b9f328e4b13774",
+      "bytes": 2421
+    },
+    "everton-ground-official.html": {
+      "url": "https://www.evertonfc.com/stadium-information/",
+      "sha256": "58820ae4e0e6ef425b677850a1b6eb39c0f9180f9899736b66fa52463c5e73dc",
+      "bytes": 281169
+    },
+    "bromley-ground-official.html": {
+      "url": "https://www.bromleyfc.co.uk/news/2026/october/08/tickets-on-sale--bromley-vs-burton-albion---sat-28th-nov/",
+      "sha256": "0439b5ef06e0f8825f35eeb2b35272a98ae844ba516fe5eeda85b89dc9d3cad5",
+      "bytes": 1118522
+    },
+    "huddersfield-ground-official.html": {
+      "url": "https://www.htafc.com/hospitality/",
+      "sha256": "fd920578a5a73d2dabd5f0f8014e76ae15d2ed8be7b97a59d4ca5dc788d59153",
+      "bytes": 1271807
+    },
+    "wigan-ground-official.html": {
+      "url": "https://www.thebrickcommunitystadium.com/",
+      "sha256": "213373f6b629a9d069a02f692926b3f54c66124f26d0f81f2f2a0f3e004712b1",
+      "bytes": 156357
+    },
+    "reading-ground-official.html": {
+      "url": "https://www.readingfc.co.uk/news/2026/october/08/join-us-for-our-free-open-training-session-at-the-scl-/",
+      "sha256": "de808c6726441cfaeac6776617ff96902926bd6516ca117ee058088170bfa546",
+      "bytes": 1291386
+    }
+  }
+}

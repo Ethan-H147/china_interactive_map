@@ -1,0 +1,1000 @@
+{
+  "retrieved": "2026-10-29",
+  "season": "2026–27",
+  "files": {
+    "ned.1-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.1/teams?limit=100",
+      "sha256": "0b13be10ac690bbabaa31d7175b8d19185a94894e77155576d447d569f18a4b7",
+      "bytes": 21823
+    },
+    "ned.2-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ned.2/teams?limit=100",
+      "sha256": "ffb2f1ee99e72654345224b1d71f6b210118e03e58532850cb6b35e416c8103a",
+      "bytes": 24307
+    },
+    "eredivisie.html": {
+      "url": "https://eredivisie.nl/competitie/clubs/",
+      "sha256": "d7f7193368c0beb7e3c4d0a142f37c8017f88e4ba9b598a46aba893c43a1ac30",
+      "bytes": 134985
+    },
+    "eerste.html": {
+      "url": "https://keukenkampioendivisie.nl/teams",
+      "sha256": "704ccd202b94b1f6c2f42a0e33065ba4a1d0ccd00faad9c3de6537a752e8e438",
+      "bytes": 57709
+    },
+    "knvb.html": {
+      "url": "https://www.knvb.nl/nieuws/betaald-voetbal/competitiezaken/71973/competitieschemas-topamateurvoetbal-mannen-20262027",
+      "sha256": "78dc2d1acc4932b9f23e99b3f887e2e797898b183bf89990627c83739447c305",
+      "bytes": 139767
+    },
+    "stadiums-wikidata.json": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fstadium%20%3FstadiumLabel%20%3FstadiumAltLabel%20%3Fcoord%20WHERE%20%7B%20%3Fstadium%20wdt%3AP17%20wd%3AQ55%3B%20wdt%3AP625%20%3Fcoord%3B%20wdt%3AP31%2Fwdt%3AP279*%20wd%3AQ483110.%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cnl%22.%20%7D%20%7D",
+      "sha256": "717b9610d1406f4601e2e9d4589f40304ea6ec3630f77a56c30926b44b95703a",
+      "bytes": 48131
+    },
+    "wiki-tweede.html": {
+      "url": "https://en.wikipedia.org/wiki/Tweede_Divisie",
+      "sha256": "e40a86c93c1879edeb526facde7b4190d0c00e32848c3d4fb2b0b323167c0768",
+      "bytes": 194258
+    },
+    "wiki-nl-tweede.html": {
+      "url": "https://nl.wikipedia.org/wiki/Tweede_divisie_2026/27",
+      "sha256": "e7e59b210185485884ba0863e4a29b22cb4b4e8ca266a093687dceaec9425b8f",
+      "bytes": 236811
+    },
+    "wiki-de-tweede.html": {
+      "url": "https://de.wikipedia.org/wiki/Tweede_Divisie_2026/27",
+      "sha256": "29b4f8f76ea9c66e55ccb592fb571c2d348454faf2b24732cae7e3febf782560",
+      "bytes": 152795
+    },
+    "knvb-allocations-2026-27.pdf": {
+      "url": "https://www.knvb.nl/downloads/bestand/30111/indeling-2e-3e-en-4e-divisie-mannen",
+      "sha256": "e4895d8e986b6a68b5b6eed5206777a4b76d6a68954f0eb9e02af7b5f96e5d59",
+      "bytes": 190986
+    },
+    "third-clubs-reviewed.json": {
+      "url": "https://nl.wikipedia.org/wiki/Tweede_divisie_2026/27",
+      "sha256": "89e5ad6be389c978cf64b890d38b3ea938655b0928580f3836f3e3ccf98cb749",
+      "bytes": 3050,
+      "role": "Reviewed structured extraction of the retained current-season table; roster independently checked against KNVB allocation PDF."
+    },
+    "third-pageimages.json": {
+      "url": "https://nl.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=pageimages|pageprops&piprop=original&pilicense=any&titles=Amsterdamsche_Football_Club%7CBVV_Barendrecht%7CGVVV%7CHHC_Hardenberg%7CHSV_Hoek%7CIJsselmeervogels%7CAlmere_City_FC%7CJong_Sparta_Rotterdam%7CKoninklijke_HFC%7CVV_Katwijk%7CVV_Kloetinge%7CKozakken_Boys%7CK.v.v._Quick_Boys%7CRijnsburgse_Boys%7CRohda_Raalte%7CSV_Spakenburg%7CDe_Treffers%7CRKAV_Volendam",
+      "sha256": "af8b5b3142e41c8f4368323c0008fc2e8d7f5c1bc37e4c07f716b4f56fab6690",
+      "bytes": 4653
+    },
+    "third-venues-wikidata.json": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Farticle%20%3Fclub%20%3FclubLabel%20%3Fvenue%20%3FvenueLabel%20%3Fcoord%20%3FclubCoord%20WHERE%20%7B%20VALUES%20%3Farticle%20%7B%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FAmsterdamsche_Football_Club%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FBVV_Barendrecht%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FGVVV%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FHHC_Hardenberg%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FHSV_Hoek%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FIJsselmeervogels%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FAlmere_City_FC%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FJong_Sparta_Rotterdam%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FKoninklijke_HFC%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FVV_Katwijk%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FVV_Kloetinge%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FKozakken_Boys%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FK.v.v._Quick_Boys%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FRijnsburgse_Boys%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FRohda_Raalte%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FSV_Spakenburg%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FDe_Treffers%3E%20%3Chttps%3A%2F%2Fnl.wikipedia.org%2Fwiki%2FRKAV_Volendam%3E%7D%20%3Farticle%20schema%3Aabout%20%3Fclub.%20OPTIONAL%20%7B%3Fclub%20wdt%3AP115%20%3Fvenue.%20OPTIONAL%7B%3Fvenue%20wdt%3AP625%20%3Fcoord.%7D%7D%20OPTIONAL%7B%3Fclub%20wdt%3AP625%20%3FclubCoord.%7D%20SERVICE%20wikibase%3Alabel%7Bbd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cnl%22.%7D%7D",
+      "sha256": "98c1a4c55b3a2a36b196b26884e6bb603ea30259bbb0590f3ac0f2e97d1b7bcb",
+      "bytes": 7209
+    },
+    "team-2726.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/2726?lang=en&region=us",
+      "sha256": "0ee66121a2b8c374c2413b70e996ad99ae7eab3765969c2f8c09dd415afed545",
+      "bytes": 4994
+    },
+    "team-2566.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/2566?lang=en&region=us",
+      "sha256": "514c108895b68ea0fd4c9300cbcc785051dd8ab53d7f904515eaccd206ad96f2",
+      "bytes": 5005
+    },
+    "team-140.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/140?lang=en&region=us",
+      "sha256": "b21727f59bde918973ac4644fd56490669a78bb0aa1f33bf7ea5cf9ed524b330",
+      "bytes": 4967
+    },
+    "team-139.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/139?lang=en&region=us",
+      "sha256": "9dc36b9298aafb0b7f031834449bf5b78b2612a0d875ca5efe9a058ba60e1c34",
+      "bytes": 4968
+    },
+    "crest-139.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/139.png",
+      "sha256": "cc0f6f96fafba7ca9f451f67727f9395ee8141112e4fef37b231b99763d38d27",
+      "bytes": 145869
+    },
+    "crest-2566.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2566.png",
+      "sha256": "d8aa6615acf15704d30007c566929e9f2a932e5945d0eb8f47dd5fa43121a18f",
+      "bytes": 43544
+    },
+    "crest-2726.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2726.png",
+      "sha256": "d2345a276eac5281222d4b9c2daad3a1b84d1a057eeb380c0a07fddef22f8362",
+      "bytes": 120634
+    },
+    "crest-140.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/140.png",
+      "sha256": "241b04b8bb4bd8407f99c01c1fa526d5f819d75053f1ca1acd4aa564ed7646cf",
+      "bytes": 24652
+    },
+    "team-142.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/142?lang=en&region=us",
+      "sha256": "4e2a0f93943f7c41d49d5a5d9a24df5924ee3d35d430cddc02414f4aacf6c224",
+      "bytes": 4994
+    },
+    "team-152.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/152?lang=en&region=us",
+      "sha256": "97b06e61fc50f7d6ede49f06808fa9a400249efb36bcf6848915490d924bef8a",
+      "bytes": 4975
+    },
+    "team-153.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/153?lang=en&region=us",
+      "sha256": "8e43f11f0842681762567e651be47017061d7d27622db9c78a670734b31a26f6",
+      "bytes": 4990
+    },
+    "team-145.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/145?lang=en&region=us",
+      "sha256": "1b86cea321a0dd4f95811a169283364b3432c7a4a6929fdfaba72bdde4cdc590",
+      "bytes": 4943
+    },
+    "crest-153.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/153.png",
+      "sha256": "14bbbbe40b098db024a700048150b3e0e7dfca1cf995b8c1e7bec97b11b07fa6",
+      "bytes": 54054
+    },
+    "crest-142.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/142.png",
+      "sha256": "d5d8fe372eb2d09045881a7e4bd802dcd727bb312ca060c97bf943ef0a9d9beb",
+      "bytes": 61699
+    },
+    "crest-145.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/145.png",
+      "sha256": "2c64202333f9384e23073a2bf99d33fb3a25d0ef32ae24873faec7980f5d2aab",
+      "bytes": 34740
+    },
+    "team-143.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/143?lang=en&region=us",
+      "sha256": "65ba8a598e03e44b672ed15a9c77d49c955b7c8e4354ad4d0ac1a5ad1946c9c5",
+      "bytes": 4996
+    },
+    "team-3706.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/3706?lang=en&region=us",
+      "sha256": "dc32f59d7cda8c054583c00f494f613879029304f9fa2b99f28d51df173ab144",
+      "bytes": 5029
+    },
+    "team-146.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/146?lang=en&region=us",
+      "sha256": "9f00c8e61aca67ef56b979b718f74b6119d85b30e1c40134a13644dbe8ffff0d",
+      "bytes": 4957
+    },
+    "crest-146.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/146.png",
+      "sha256": "f9c6ecafe8a5e5848d2ab5597e51966057b71466fd334057c7d8aa50a7ff24b7",
+      "bytes": 66011
+    },
+    "crest-152.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/152.png",
+      "sha256": "8fca71492fa5e02c31ece3f4b1f84b4022b15a76b8fb202f8effb8bf7bdd4c7b",
+      "bytes": 118267
+    },
+    "crest-3706.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3706.png",
+      "sha256": "67d619721d17bb7a48dde252340c632432259a1077b08770300ae273263270d9",
+      "bytes": 85243
+    },
+    "team-2565.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/2565?lang=en&region=us",
+      "sha256": "494d2cd3af35de822b5a06c4beacf6b499b2bfe2f20699892bdfd30ae3ebcb09",
+      "bytes": 5009
+    },
+    "team-147.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/147?lang=en&region=us",
+      "sha256": "26e16a50308a0f5faccb5a4245f9258217868d93845015bd30d2172a47097625",
+      "bytes": 4979
+    },
+    "team-148.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/148?lang=en&region=us",
+      "sha256": "9927d2fb04f13c69c289c5a84b982f6fd4a3649c5262e42aea6f25596c406f81",
+      "bytes": 4958
+    },
+    "crest-148.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/148.png",
+      "sha256": "ea19561d9ae97eb761ab39f5b400b3ce5f64db43f934a595183e4208030f2d0b",
+      "bytes": 60860
+    },
+    "crest-147.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/147.png",
+      "sha256": "3a2cc8e602f2544c105c4c95fe71042b38c1528fbf6f42bd034f90e13ae88e5c",
+      "bytes": 142919
+    },
+    "crest-143.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/143.png",
+      "sha256": "0fae198905cb7e25af670a14032575d64bc0be9bdb5498270c2ce57d8ee87b32",
+      "bytes": 73945
+    },
+    "team-3736.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/3736?lang=en&region=us",
+      "sha256": "4f4f89124c243b4e3b1138c4e94d3933631193da097eb7be6295db52d1921c3f",
+      "bytes": 4965
+    },
+    "crest-2565.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2565.png",
+      "sha256": "3d24db5d34f344717ab6ad0932d7a05820dc7cfd76ed9d2aecb23ccc8556e1e3",
+      "bytes": 107186
+    },
+    "team-3735.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/3735?lang=en&region=us",
+      "sha256": "72e4430898e057bf5d13ce8bded3c8c73e5c3f449807f72d80a9666b084904e2",
+      "bytes": 4944
+    },
+    "team-151.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/151?lang=en&region=us",
+      "sha256": "2480831fbb3a6061175155b33c48bf9342e73f86ffd6dfa44e29216fc1e1e63d",
+      "bytes": 5046
+    },
+    "team-156.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.1/teams/156?lang=en&region=us",
+      "sha256": "021732fecbdae089c24f399ce4419b39d143d081db57626a755b977d458ac771",
+      "bytes": 4986
+    },
+    "crest-151.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/151.png",
+      "sha256": "1a54dad491e18231b3235e74598e2eddc48a9bcdfcc1108ec6060fee246e17ee",
+      "bytes": 73052
+    },
+    "crest-3736.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3736.png",
+      "sha256": "a5942c7a0a2a69224286ce7ab4879f6b0bec1d80c8871bacd4edde42ec2ad50d",
+      "bytes": 105243
+    },
+    "crest-3735.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3735.png",
+      "sha256": "57fec3c81aecd2efc56494b85031e43041533e1240a6abef0cf618abf2804d44",
+      "bytes": 135379
+    },
+    "crest-156.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/156.png",
+      "sha256": "1d693c20e28ab2b275d7e57635588e3784fad782f68429a11ca4d3c9136fa683",
+      "bytes": 45717
+    },
+    "team-5291.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/5291?lang=en&region=us",
+      "sha256": "afdb15556b68b33a3580d72b45619d73ddc3becdb703892a16c9d9cef7a164f5",
+      "bytes": 4970
+    },
+    "team-144.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/144?lang=en&region=us",
+      "sha256": "7e9a769d39b91ad8459b90214417281e8552e69b606bc16799ecc14fde505cca",
+      "bytes": 4981
+    },
+    "team-271.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/271?lang=en&region=us",
+      "sha256": "2334220549a4593c5eac73b7354cd9f62b4ecfeafcc45df11dc7a9c4e9c44b6b",
+      "bytes": 4964
+    },
+    "team-4426.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/4426?lang=en&region=us",
+      "sha256": "e942ef41a68b73ae1f8262b84875311a7c9b6d895a25f3963ddd0a422f79ecde",
+      "bytes": 5028
+    },
+    "crest-144.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/144.png",
+      "sha256": "202f7cef2fc04f4348f05c7b91ad8adf9b4b9fd50793d7d1497c7538ee988c33",
+      "bytes": 104799
+    },
+    "crest-5291.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/5291.png",
+      "sha256": "dadf9ebb0373842ba7cb4f30e5d328bdd3190e7e611e21ea5ae5ee98044dc21f",
+      "bytes": 109286
+    },
+    "crest-4426.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4426.png",
+      "sha256": "b0000a4c4a894d3d20fec045b448f22002fd1ba01af49b426c7aad6a6b2f80e1",
+      "bytes": 113432
+    },
+    "team-3707.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/3707?lang=en&region=us",
+      "sha256": "a9dfdc38d8b3519e6b601d95a2d603af1ae58ed99a6a35e0e1b4bce5c7974128",
+      "bytes": 4987
+    },
+    "team-3732.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/3732?lang=en&region=us",
+      "sha256": "9bf3951b20c309c5aeeebe4af47b3dc85b7b9605bff1cc750ddcbfa59d96ee71",
+      "bytes": 5037
+    },
+    "crest-271.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/271.png",
+      "sha256": "8d196c085b1c8218bd994f98007015e35b989e312e21d6b0859dfdaeb3dd1052",
+      "bytes": 71281
+    },
+    "team-2727.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/2727?lang=en&region=us",
+      "sha256": "645408d1ccf7b412c64b1a34fc41331f5c5fe24121a6e41d492d39e5591eabba",
+      "bytes": 5012
+    },
+    "crest-3732.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3732.png",
+      "sha256": "4a6743e6c97c0f3a0af3f4d26ff2d0fec49dec9d77d96717c33d699ae568c3be",
+      "bytes": 55125
+    },
+    "crest-2727.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/2727.png",
+      "sha256": "9cc89b7109038624b329413fe7f79cfb0ffb9cf4ee9233c0a5a1c19acd604654",
+      "bytes": 66428
+    },
+    "team-3775.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/3775?lang=en&region=us",
+      "sha256": "adce4f6e5ef0f6134bec59728509477193dc445e8369fe50249558f1e12970d4",
+      "bytes": 5006
+    },
+    "crest-3707.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3707.png",
+      "sha256": "55337ad7a2d1d69989381bde666aa187dfac6214fb8fb3c732ee7369ceebee9f",
+      "bytes": 45925
+    },
+    "crest-3775.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3775.png",
+      "sha256": "aca1d22785d9bbf3ff0de0a35ce33ce0282229d97278c38a6ebd242c8b3caf94",
+      "bytes": 26976
+    },
+    "team-18748.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/18748?lang=en&region=us",
+      "sha256": "addbce81f3b0b4877fd65e30153a2919cfd7fc3997d0171c879178dc240c15ab",
+      "bytes": 5015
+    },
+    "team-3708.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/3708?lang=en&region=us",
+      "sha256": "2e444c4c2c4a46045116e2a7e28e75d1fe19ed2eadc1a5b0c81b23ead128c405",
+      "bytes": 4998
+    },
+    "team-10597.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/10597?lang=en&region=us",
+      "sha256": "eb09e7e4c73e3f45a7376d8a47b14d3336a7ea7cc4b3ba4b97595f40f00cce1f",
+      "bytes": 5028
+    },
+    "crest-18748.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18748.png",
+      "sha256": "4e5ce52518a6de2da98e0ef27c2f53a021a0d06448f9740260257f52e3cec4b4",
+      "bytes": 24938
+    },
+    "team-18278.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/18278?lang=en&region=us",
+      "sha256": "80db6d4bc592f96748d10e2ebaa8d5d08517db46d3e84dbdf1aa6e245cb047ff",
+      "bytes": 5094
+    },
+    "crest-3708.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3708.png",
+      "sha256": "af12d0a218bd141c0fbbf57d30581488bfefedac42f63f4b6e359f7436dbc6f2",
+      "bytes": 93902
+    },
+    "crest-10597.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/10597.png",
+      "sha256": "60696ec63ecdcd6d3107e2c5825dbf7082e1f51f2deb7e65767d066dfb9f5013",
+      "bytes": 167489
+    },
+    "team-9983.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/9983?lang=en&region=us",
+      "sha256": "52abe803cd5caa1d5d4793f53b898e7cfed3523d073ef2f47b63bd5e8d68306b",
+      "bytes": 5025
+    },
+    "team-3730.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/3730?lang=en&region=us",
+      "sha256": "cc317121e2ca912b273bb2be1447ed33e6ca91c6735e9b08de59a5e255169897",
+      "bytes": 5012
+    },
+    "team-141.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/141?lang=en&region=us",
+      "sha256": "2baf8a62303a081cabad570b8c5997deb81bce685e8eaedcb72d730caf5319ad",
+      "bytes": 4978
+    },
+    "crest-9983.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9983.png",
+      "sha256": "694ae269cb056b4299a8b420946f84c2e482b5d23ee3e636cd2e45226d4f9dfd",
+      "bytes": 112332
+    },
+    "crest-18278.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18278.png",
+      "sha256": "8ff3d9064e9b8f731b0c22935335f6b07f86769e2890f13092d4518de33874cb",
+      "bytes": 65624
+    },
+    "crest-3730.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3730.png",
+      "sha256": "0398629d73d0ded0571f3214a58503f592535224ee42fc3139c028d012444c1f",
+      "bytes": 23315
+    },
+    "team-155.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/155?lang=en&region=us",
+      "sha256": "e72b2baf77a5247c722dd7416837093e0af2707f3a83f5893f71b3535363de8a",
+      "bytes": 4973
+    },
+    "crest-141.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/141.png",
+      "sha256": "3320a922f09ae822c1fceee9ad6df4a28ddf7708560bb7a9d7cf51a437ae97bb",
+      "bytes": 69562
+    },
+    "team-149.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/149?lang=en&region=us",
+      "sha256": "b64f13aa6414458010b3a7e8e02dfc539dd6401a26325f20f680c0b94b343d30",
+      "bytes": 5001
+    },
+    "team-3728.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/3728?lang=en&region=us",
+      "sha256": "058af0d9f210d456738b401be50c815f8e07c03d90bb0ebb3536ebb39f4343b1",
+      "bytes": 4982
+    },
+    "crest-155.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/155.png",
+      "sha256": "b03c7ed61e907d94fb3a559f1906560d0c7c6e289b70bbb3546f02f085641f8e",
+      "bytes": 27758
+    },
+    "crest-149.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/149.png",
+      "sha256": "6023abead803e8eeec997db2c9eabae236ee03486868015c05713de869359087",
+      "bytes": 68406
+    },
+    "team-3731.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/3731?lang=en&region=us",
+      "sha256": "7ccfe29b50f84a1f2fb508a002598a624b5aa18125bc6fdd27517df11d5b87cb",
+      "bytes": 4969
+    },
+    "crest-3728.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3728.png",
+      "sha256": "2231fa3adeb7397981e52c38abd83abf022b3b3ee85a71e2369a602f03e875af",
+      "bytes": 58551
+    },
+    "team-154.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/ned.2/teams/154?lang=en&region=us",
+      "sha256": "da6ff8c994ac4fa48ed5a575cc0d922e853cee7631161d8e248393e4ea876b34",
+      "bytes": 4937
+    },
+    "crest-154.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/154.png",
+      "sha256": "61b02c33ade555f9f315df8fccdd13928ed153e8250adc837aeb76bac7be74f2",
+      "bytes": 37682
+    },
+    "crest-3731.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/3731.png",
+      "sha256": "8cc59cc4e564526448110970356c74915ce73409f8ac7b3046f4801fc419992f",
+      "bytes": 30459
+    },
+    "third-en-images.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=pageimages|pageprops&piprop=original&pilicense=any&titles=Amsterdamsche%20FC%7CBVV%20Barendrecht%7CGVVV%7CHHC%20Hardenberg%7CHSV%20Hoek%7CIJsselmeervogels%7CAlmere%20City%20FC%7CJong%20Sparta%7CKoninklijke%20HFC%7CVV%20Katwijk%7CVV%20Kloetinge%7CKozakken%20Boys%7CQuick%20Boys%7CRijnsburgse%20Boys%7CROHDA%20Raalte%7CSV%20Spakenburg%7CDe%20Treffers%7CRKAV%20Volendam",
+      "sha256": "2d0e75c2fb94e585912e1f86d903ae580023e319c4832ad52d3ec6f63e51e93f",
+      "bytes": 7223
+    },
+    "crest-nl-afc.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Amsterdamsche_FC_%28logo%29.svg",
+      "sha256": "d4fca4da4761ea9151f8fcc8781b9cf720eaebc595ed74bd6351871d857e7c6b",
+      "bytes": 36449
+    },
+    "crest-nl-bvv-barendrecht.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/43/BVV_Barendrecht_logo.svg",
+      "sha256": "346b16e7e9c08ef361a37c588519301851610a47a7dae50b011f70bb2476cacd",
+      "bytes": 44515
+    },
+    "crest-nl-gvvv.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/46/GVVV_football_logo.svg",
+      "sha256": "c63510f66144bf8d28e03183b6d1e0c4abbaabf1b8193aca6df14bd4fc0d2366",
+      "bytes": 10884
+    },
+    "crest-nl-hhc-hardenberg.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/59/HHC_Hardenberg.svg",
+      "sha256": "c4f0566bc366f85dbbb53238ab7f54d845b4daf11401ee8620cee5a4ee1575a9",
+      "bytes": 79483
+    },
+    "crest-nl-hsv-hoek.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c8/HSV_Hoek_logo.svg",
+      "sha256": "a5b0f2ce65ce4f470fb9fbd9bb6c2669a8b0e0d718b1fdfd95efa1eb86d6e2e8",
+      "bytes": 57352
+    },
+    "crest-nl-ijsselmeervogels.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/0e/IJsselmeervogels_logo.svg",
+      "sha256": "21d0e637c3c7049813690e812d2b21d12bb17141ffe1eda1326102d2c39a352f",
+      "bytes": 21743
+    },
+    "crest-nl-jong-almere-city.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/8f/Almere_City_FC_logo.svg",
+      "sha256": "4f221ce44d51359d93336cb1d5fefed03b623c9f2682c84e444cba6776e3f7fc",
+      "bytes": 11934
+    },
+    "crest-nl-jong-sparta-rotterdam.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Sparta_Rotterdam_logo.svg",
+      "sha256": "f026657ac3cf55f53ab77be06f882df9cd31b0755d0a487b12b493db0be90e9d",
+      "bytes": 45249
+    },
+    "crest-nl-koninklijke-hfc.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/71/Koninklijke_HFC.svg",
+      "sha256": "2706b461904544d238f07cdb6325870b0139f348e7df0f491d406f97f63a93e3",
+      "bytes": 11191
+    },
+    "crest-nl-vv-katwijk.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/5e/VV_Katwijk_logo.svg",
+      "sha256": "c49646f14d56c163153937edd5ffaf5c8060c0dc41e52a717e3c326983acb2d5",
+      "bytes": 5594
+    },
+    "crest-nl-vv-kloetinge.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/87/VV_Kloetinge.png",
+      "sha256": "7af8319c586093e22beaee4c063677662eb28466f8eda4bc4287151395919663",
+      "bytes": 97254
+    },
+    "crest-nl-kozakken-boys.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/03/Kozakken_Boys_logo.svg",
+      "sha256": "f370c2ceaeb9f0d566ce112c6db11a03f76a42d09c58c2e91311b95c7433260a",
+      "bytes": 10653
+    },
+    "named-grounds-wikidata.json": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fvenue%20%3FvenueLabel%20%3Fcoord%20WHERE%20%7BVALUES%20%3Flabel%7B%22Sportpark%20Goed%20Genoeg%22%40en%20%22Sportpark%20Goed%20Genoeg%22%40nl%20%22Sportpark%20De%20Bongerd%22%40en%20%22Sportpark%20De%20Bongerd%22%40nl%20%22Sportpark%20Panhuis%22%40en%20%22Sportpark%20Panhuis%22%40nl%20%22De%20Boshoek%22%40en%20%22De%20Boshoek%22%40nl%20%22Sportpark%20Denoek%22%40en%20%22Sportpark%20Denoek%22%40nl%20%22Sportpark%20De%20Westmaat%22%40en%20%22Sportpark%20De%20Westmaat%22%40nl%20%22Sportpark%20Spanjaardslaan%22%40en%20%22Sportpark%20Spanjaardslaan%22%40nl%20%22Sportpark%20De%20Krom%22%40en%20%22Sportpark%20De%20Krom%22%40nl%20%22Sportpark%20Wesselopark%22%40en%20%22Sportpark%20Wesselopark%22%40nl%20%22Sportpark%20De%20Zwaaier%22%40en%20%22Sportpark%20De%20Zwaaier%22%40nl%20%22Sportpark%20Nieuw%20Zuid%22%40en%20%22Sportpark%20Nieuw%20Zuid%22%40nl%20%22Sportpark%20Middelmors%22%40en%20%22Sportpark%20Middelmors%22%40nl%20%22Sportpark%20Tijenraan%22%40en%20%22Sportpark%20Tijenraan%22%40nl%20%22Sportpark%20Zuid%22%40en%20%22Sportpark%20Zuid%22%40nl%20%22Sportpark%20Volendam%22%40en%20%22Sportpark%20Volendam%22%40nl%20%22Sportcomplex%20Nieuw%20Terbregge%22%40en%20%22Sportcomplex%20Nieuw%20Terbregge%22%40nl%20%22Kooi%20Stadion%22%40en%20%22Kooi%20Stadion%22%40nl%20%22GS%20Staalwerken%20Stadion%22%40en%20%22GS%20Staalwerken%20Stadion%22%40nl%20%22MySteel%20Stadion%22%40en%20%22MySteel%20Stadion%22%40nl%20%22Sportcomplex%20Zoudenbalch%22%40en%20%22Sportcomplex%20Zoudenbalch%22%40nl%20%22De%20Herdgang%22%40en%20%22De%20Herdgang%22%40nl%20%22Sportpark%20De%20Toekomst%22%40en%20%22Sportpark%20De%20Toekomst%22%40nl%7D%20%3Fvenue%20rdfs%3Alabel%20%3Flabel%3Bwdt%3AP625%20%3Fcoord.%20SERVICE%20wikibase%3Alabel%7Bbd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cnl%22.%7D%7D",
+      "sha256": "c6bbb9a590b4e40107970c2ae620c8c2641cefcaf9a932fe1921de90c834a9ca",
+      "bytes": 3883
+    },
+    "crest-nl-quick-boys.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kvv-quick-boys-logo.png",
+      "sha256": "21f66952cfcaf9b17ceab7c1414770fe0c3eb2489c8a21f074f5bb118ae12b58",
+      "bytes": 16013
+    },
+    "crest-nl-rijnsburgse-boys.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Rijnsburgse_Boys_logo.svg",
+      "sha256": "c8dd2fa6f57cae614d99237007871564cbb474c9d05677a9684c8c7599f7708a",
+      "bytes": 6130
+    },
+    "crest-nl-rohda-raalte.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/17/Rohda_Raalte.png",
+      "sha256": "c0ea146a59dcdfd41149446ca2e49e098071c30d9a6cf52c2a8dd9d13b34092e",
+      "bytes": 24486
+    },
+    "crest-nl-sv-spakenburg.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/67/SV_Spakenburg_logo.svg",
+      "sha256": "571a29154b38044aac26fe5f2f1b1db06ca56fdc3e3bf0eb47fa19be8c4508e9",
+      "bytes": 14784
+    },
+    "crest-nl-de-treffers.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/25/De_Treffers_logo.svg",
+      "sha256": "50d9b159d58ffa4d70c2e822d5b3aef5e605c5c1cd42ed5f275dc55dae017076",
+      "bytes": 14867
+    },
+    "crest-nl-rkav-volendam.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/cb/RKAV_Volendam_logo.svg",
+      "sha256": "b8e8683f0a4c02d49a1b049d11f72a0108910336279385f325dc4f76a81d4148",
+      "bytes": 16073
+    },
+    "geocode-nl-bvv-barendrecht.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20De%20Bongerd%20Barendrecht",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocode-nl-gvvv.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20Panhuis%20Veenendaal",
+      "sha256": "d3a2f9e7f4d4dbef2cf1c450849ec95597868a543b047261e0283057cbe8d9fc",
+      "bytes": 682
+    },
+    "geocode-nl-hhc-hardenberg.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20De%20Boshoek%20Hardenberg",
+      "sha256": "645d973136df1b9d07c8eedd4dd50fe198a312009b96e8ced0410be81fed2671",
+      "bytes": 728
+    },
+    "geocode-nl-hsv-hoek.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20Denoek%20Hoek",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocode-nl-ijsselmeervogels.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20De%20Westmaat%20Spakenburg",
+      "sha256": "9ea0002e4ab3ab6530820055c29fd4e6fa0dadffb47317cf3edaf71146d484bd",
+      "bytes": 782
+    },
+    "geocode-nl-jong-sparta-rotterdam.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportcomplex%20Nieuw%20Terbregge%20Rotterdam",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocode-nl-koninklijke-hfc.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20Spanjaardslaan%20Haarlem",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocode-nl-vv-katwijk.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20De%20Krom%20Katwijk-Noord",
+      "sha256": "5925b31335e140114256aa7a02ccc3eedd74d2554dc81266671234c184411bab",
+      "bytes": 2345
+    },
+    "geocode-nl-vv-kloetinge.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20Wesselopark%20Kloetinge",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocode-nl-kozakken-boys.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20De%20Zwaaier%20Werkendam",
+      "sha256": "3e5932a31aa75b785f94e1b6f50a154c6161f35f36bd6b765d6706bb93d8dc9a",
+      "bytes": 786
+    },
+    "geocode-nl-rijnsburgse-boys.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20Middelmors%20Rijnsburg",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocode-nl-rohda-raalte.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20Tijenraan%20Raalte",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "geocode-nl-sv-spakenburg.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=Sportpark%20De%20Westmaat%20Spakenburg",
+      "sha256": "9ea0002e4ab3ab6530820055c29fd4e6fa0dadffb47317cf3edaf71146d484bd",
+      "bytes": 782
+    },
+    "geocode-nl-rkav-volendam.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=3&countrycodes=nl&q=RKAV%20Volendam%20Volendam",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "helmond-official.html": {
+      "url": "https://www.helmondsport.nl/nieuws/mysteel-nieuwe-naamgever-van-ons-stadion/",
+      "sha256": "44d35bf7ec6580431031b5a01da6460e70ba3edd5dd50a35a92fdf3f673584ef",
+      "bytes": 81691
+    },
+    "az-official.html": {
+      "url": "https://az.nl/jeugdopleiding/afas-trainingscomplex",
+      "sha256": "3e1de98edaa7b8c003042a770d72e81ed319ed8858817f126b4b1d1b77288aeb",
+      "bytes": 133415
+    },
+    "bongerd-official.html": {
+      "url": "https://bvvbarendrecht.nl/sportpark/",
+      "sha256": "10597961ab62f47b18653d6a0d9a6863fe48588a8cbc536ac96267e45c68da1c",
+      "bytes": 143284
+    },
+    "afc-official.html": {
+      "url": "https://www.afc.nl/sportpark-goed-genoeg/",
+      "sha256": "537d4076106fa55a047fbe174414c8a13191d299410c67778a11c6da01e1d18a",
+      "bytes": 83906
+    },
+    "club-ground-barendrecht.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=BVV%20Barendrecht",
+      "sha256": "6de08782a785ac2aeac8f7cd1e6d304617df1fb3040bfcab3bcbdd4ea85a1d13",
+      "bytes": 488
+    },
+    "club-ground-hoek.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=HSV%20Hoek",
+      "sha256": "d12504c1cd8aa7c677a0027ac26a523aed063a7b2bf8454202dae28d4ad3c16b",
+      "bytes": 477
+    },
+    "club-ground-sparta.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Sportcomplex%20Nieuw%20Terbregge%20Rotterdam",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "club-ground-hfc.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Koninklijke%20HFC",
+      "sha256": "236c9318f00e08fc860d40cbba1cd7df24691329f6342d3e4358ec231e830b11",
+      "bytes": 493
+    },
+    "club-ground-kloetinge.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=VV%20Kloetinge",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "club-ground-rohda.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Rohda%20Raalte",
+      "sha256": "2fe9188d30e5d9de688db3a1b5cc9dcda1a17b70bf68fb3e405b592b0cc82b0b",
+      "bytes": 492
+    },
+    "club-ground-rkav.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=RKAV%20Volendam",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "club-ground-rijnsburg.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Rijnsburgse%20Boys",
+      "sha256": "d4e06b539670d435ec1de17c769ab5b733b592a49c11d6ddef32fcb3ebe7abfb",
+      "bytes": 511
+    },
+    "address-ground-robey.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Bok%20de%20Korverweg%201%20Rotterdam",
+      "sha256": "4ce43763d09419d82bd600b17ee10b64d04cce0e99b64bdb016f484d2e7a27cd",
+      "bytes": 494
+    },
+    "address-ground-wesselopark.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Wesselopark",
+      "sha256": "4f3eac53677e7e6f1c8a9e1c19ea3fb10554b273cd7b11021d94ca154cb12814",
+      "bytes": 485
+    },
+    "address-ground-rkav.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Julianaweg%203a%20Volendam",
+      "sha256": "0f940d81f90677ac48814e0dd5629e9c8580722c79412cc51ed274058d98e196",
+      "bytes": 468
+    },
+    "address-ground-rohda.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=3&countrycodes=nl&q=Tijenraan%20Raalte",
+      "sha256": "f7444146f02a558a2a5829cdad36a07b158311ff4fc32b055554f68a1ea712f4",
+      "bytes": 477
+    },
+    "map-robey-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=4.5024476,51.9450003,4.5084476,51.9510003",
+      "sha256": "9a7c9ff1b3709489f8fd11d501530a56155c65c9f5686681a9389102d0120e66",
+      "bytes": 1131540
+    },
+    "map-rkav-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=5.0602244999999995,52.4904835,5.0662245,52.496483500000004",
+      "sha256": "5c0d2066879538fba170d5cb7ced97a9a73f2502d9f06161702dc92777c1d6d0",
+      "bytes": 2066439
+    },
+    "map-rohda-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=6.2660975,52.3927331,6.2720975,52.3987331",
+      "sha256": "6b75ccc3cad228a8dc0dd743f746e5598343492c8daf0b7e32f47eddd8b814fd",
+      "bytes": 969141
+    },
+    "map-westmaat-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=5.3749443999999995,52.2548796,5.3809444,52.2608796",
+      "sha256": "61915ef21952393805c178af27fa54fbdfbccfdc8b5d9bc7fb5c18cfb622441e",
+      "bytes": 982664
+    },
+    "map-bongerd-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=4.5392765,51.8576068,4.5452765,51.8636068",
+      "sha256": "99f7a9a33adf46af5e4e3ef0d68ea021f71f5c330c54843844943045d33411b7",
+      "bytes": 1440620
+    },
+    "map-hoek-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=3.7851223999999997,51.3115816,3.7911224,51.3175816",
+      "sha256": "d5dae6864576774c7735274a90715fc86806c5a936cd92a3eb2e21c37624c489",
+      "bytes": 561119
+    },
+    "map-kloetinge-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=3.9164733,51.4985329,3.9224733,51.5045329",
+      "sha256": "5f0ae7a11f8b4eca5cc3f745d0155bbd20a6b806c370407c3096802630bfddb2",
+      "bytes": 340167
+    },
+    "almere-current-ground.html": {
+      "url": "https://www.rijnsburgseboys.nl/nieuws/voorbeschouwing-jong-almere-city-fc-rijnsburgse-boys-3/",
+      "sha256": "d1035fee7eb78e950e640924df181e0c46acac518b5e9a8e5e757f8b9f800122",
+      "bytes": 88653
+    },
+    "map-almere-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=5.234,52.389,5.247,52.402",
+      "sha256": "9d4fa87cf1a8af5a5fadefdb15769614afe993d95f8d53126d09031d8b188326",
+      "bytes": 2554624
+    },
+    "rkav-kwabo.html": {
+      "url": "https://www.europlan-online.de/kwabo-stadion/stadion-7748.html",
+      "sha256": "3bbc02a426a81864080ad05ccdacb7cd3fef047cd1541186d3a9eead935d58d7",
+      "bytes": 74046
+    },
+    "almere-field4.html": {
+      "url": "https://www.europlan-online.de/sportpark-fanny-blankers-koen-veld1/stadion-26013.html",
+      "sha256": "9f7be6ea3cdba61e58b9955c8f8f32b068b4acb4dc123954163e76130067d33b",
+      "bytes": 69999
+    },
+    "almere-fixtures.html": {
+      "url": "https://www.hhc.nl/252/87769/laatste-uitslagen/wedstrijd-details/?tab=1",
+      "sha256": "e402fdff5a6ab94f7c8f6ae1e0c1e4e40a1df5bd108200d59f15bb08a6ae3b8f",
+      "bytes": 106074
+    }
+  },
+  "reviewedFiles": {
+    "venue-review.json": {
+      "sha256": "50f98ce689eecf3270079930ecaf2066ac171fbb798bd1ea8764fd4ab0b66668",
+      "bytes": 12338
+    },
+    "third-review.json": {
+      "sha256": "36230d746e24236ee88a082a5c5db3a0aa98696d2ae7a0f36f0f64ee58f1e909",
+      "bytes": 7864
+    },
+    "clubs.json": {
+      "sha256": "988602c1893ecb7c766d142991a8c8f9d44f392f6b1635e81d3561861a1ffaef",
+      "bytes": 27625
+    },
+    "crests/nl-2726.png": {
+      "sha256": "d2345a276eac5281222d4b9c2daad3a1b84d1a057eeb380c0a07fddef22f8362",
+      "bytes": 120634
+    },
+    "crests/nl-140.png": {
+      "sha256": "241b04b8bb4bd8407f99c01c1fa526d5f819d75053f1ca1acd4aa564ed7646cf",
+      "bytes": 24652
+    },
+    "crests/nl-139.png": {
+      "sha256": "cc0f6f96fafba7ca9f451f67727f9395ee8141112e4fef37b231b99763d38d27",
+      "bytes": 145869
+    },
+    "crests/nl-2566.png": {
+      "sha256": "d8aa6615acf15704d30007c566929e9f2a932e5945d0eb8f47dd5fa43121a18f",
+      "bytes": 43544
+    },
+    "crests/nl-145.png": {
+      "sha256": "2c64202333f9384e23073a2bf99d33fb3a25d0ef32ae24873faec7980f5d2aab",
+      "bytes": 34740
+    },
+    "crests/nl-152.png": {
+      "sha256": "8fca71492fa5e02c31ece3f4b1f84b4022b15a76b8fb202f8effb8bf7bdd4c7b",
+      "bytes": 118267
+    },
+    "crests/nl-153.png": {
+      "sha256": "14bbbbe40b098db024a700048150b3e0e7dfca1cf995b8c1e7bec97b11b07fa6",
+      "bytes": 54054
+    },
+    "crests/nl-142.png": {
+      "sha256": "d5d8fe372eb2d09045881a7e4bd802dcd727bb312ca060c97bf943ef0a9d9beb",
+      "bytes": 61699
+    },
+    "crests/nl-143.png": {
+      "sha256": "0fae198905cb7e25af670a14032575d64bc0be9bdb5498270c2ce57d8ee87b32",
+      "bytes": 73945
+    },
+    "crests/nl-3706.png": {
+      "sha256": "67d619721d17bb7a48dde252340c632432259a1077b08770300ae273263270d9",
+      "bytes": 85243
+    },
+    "crests/nl-146.png": {
+      "sha256": "f9c6ecafe8a5e5848d2ab5597e51966057b71466fd334057c7d8aa50a7ff24b7",
+      "bytes": 66011
+    },
+    "crests/nl-147.png": {
+      "sha256": "3a2cc8e602f2544c105c4c95fe71042b38c1528fbf6f42bd034f90e13ae88e5c",
+      "bytes": 142919
+    },
+    "crests/nl-2565.png": {
+      "sha256": "3d24db5d34f344717ab6ad0932d7a05820dc7cfd76ed9d2aecb23ccc8556e1e3",
+      "bytes": 107186
+    },
+    "crests/nl-148.png": {
+      "sha256": "ea19561d9ae97eb761ab39f5b400b3ce5f64db43f934a595183e4208030f2d0b",
+      "bytes": 60860
+    },
+    "crests/nl-3736.png": {
+      "sha256": "a5942c7a0a2a69224286ce7ab4879f6b0bec1d80c8871bacd4edde42ec2ad50d",
+      "bytes": 105243
+    },
+    "crests/nl-151.png": {
+      "sha256": "1a54dad491e18231b3235e74598e2eddc48a9bcdfcc1108ec6060fee246e17ee",
+      "bytes": 73052
+    },
+    "crests/nl-3735.png": {
+      "sha256": "57fec3c81aecd2efc56494b85031e43041533e1240a6abef0cf618abf2804d44",
+      "bytes": 135379
+    },
+    "crests/nl-156.png": {
+      "sha256": "1d693c20e28ab2b275d7e57635588e3784fad782f68429a11ca4d3c9136fa683",
+      "bytes": 45717
+    },
+    "crests/nl-5291.png": {
+      "sha256": "dadf9ebb0373842ba7cb4f30e5d328bdd3190e7e611e21ea5ae5ee98044dc21f",
+      "bytes": 109286
+    },
+    "crests/nl-144.png": {
+      "sha256": "202f7cef2fc04f4348f05c7b91ad8adf9b4b9fd50793d7d1497c7538ee988c33",
+      "bytes": 104799
+    },
+    "crests/nl-271.png": {
+      "sha256": "8d196c085b1c8218bd994f98007015e35b989e312e21d6b0859dfdaeb3dd1052",
+      "bytes": 71281
+    },
+    "crests/nl-4426.png": {
+      "sha256": "b0000a4c4a894d3d20fec045b448f22002fd1ba01af49b426c7aad6a6b2f80e1",
+      "bytes": 113432
+    },
+    "crests/nl-3732.png": {
+      "sha256": "4a6743e6c97c0f3a0af3f4d26ff2d0fec49dec9d77d96717c33d699ae568c3be",
+      "bytes": 55125
+    },
+    "crests/nl-3707.png": {
+      "sha256": "55337ad7a2d1d69989381bde666aa187dfac6214fb8fb3c732ee7369ceebee9f",
+      "bytes": 45925
+    },
+    "crests/nl-2727.png": {
+      "sha256": "9cc89b7109038624b329413fe7f79cfb0ffb9cf4ee9233c0a5a1c19acd604654",
+      "bytes": 66428
+    },
+    "crests/nl-3775.png": {
+      "sha256": "aca1d22785d9bbf3ff0de0a35ce33ce0282229d97278c38a6ebd242c8b3caf94",
+      "bytes": 26976
+    },
+    "crests/nl-3708.png": {
+      "sha256": "af12d0a218bd141c0fbbf57d30581488bfefedac42f63f4b6e359f7436dbc6f2",
+      "bytes": 93902
+    },
+    "crests/nl-18748.png": {
+      "sha256": "4e5ce52518a6de2da98e0ef27c2f53a021a0d06448f9740260257f52e3cec4b4",
+      "bytes": 24938
+    },
+    "crests/nl-10597.png": {
+      "sha256": "60696ec63ecdcd6d3107e2c5825dbf7082e1f51f2deb7e65767d066dfb9f5013",
+      "bytes": 167489
+    },
+    "crests/nl-18278.png": {
+      "sha256": "8ff3d9064e9b8f731b0c22935335f6b07f86769e2890f13092d4518de33874cb",
+      "bytes": 65624
+    },
+    "crests/nl-9983.png": {
+      "sha256": "694ae269cb056b4299a8b420946f84c2e482b5d23ee3e636cd2e45226d4f9dfd",
+      "bytes": 112332
+    },
+    "crests/nl-3730.png": {
+      "sha256": "0398629d73d0ded0571f3214a58503f592535224ee42fc3139c028d012444c1f",
+      "bytes": 23315
+    },
+    "crests/nl-141.png": {
+      "sha256": "3320a922f09ae822c1fceee9ad6df4a28ddf7708560bb7a9d7cf51a437ae97bb",
+      "bytes": 69562
+    },
+    "crests/nl-155.png": {
+      "sha256": "b03c7ed61e907d94fb3a559f1906560d0c7c6e289b70bbb3546f02f085641f8e",
+      "bytes": 27758
+    },
+    "crests/nl-149.png": {
+      "sha256": "6023abead803e8eeec997db2c9eabae236ee03486868015c05713de869359087",
+      "bytes": 68406
+    },
+    "crests/nl-3728.png": {
+      "sha256": "2231fa3adeb7397981e52c38abd83abf022b3b3ee85a71e2369a602f03e875af",
+      "bytes": 58551
+    },
+    "crests/nl-3731.png": {
+      "sha256": "8cc59cc4e564526448110970356c74915ce73409f8ac7b3046f4801fc419992f",
+      "bytes": 30459
+    },
+    "crests/nl-154.png": {
+      "sha256": "61b02c33ade555f9f315df8fccdd13928ed153e8250adc837aeb76bac7be74f2",
+      "bytes": 37682
+    },
+    "crests/nl-afc.svg": {
+      "sha256": "d4fca4da4761ea9151f8fcc8781b9cf720eaebc595ed74bd6351871d857e7c6b",
+      "bytes": 36449
+    },
+    "crests/nl-bvv-barendrecht.svg": {
+      "sha256": "346b16e7e9c08ef361a37c588519301851610a47a7dae50b011f70bb2476cacd",
+      "bytes": 44515
+    },
+    "crests/nl-gvvv.svg": {
+      "sha256": "c63510f66144bf8d28e03183b6d1e0c4abbaabf1b8193aca6df14bd4fc0d2366",
+      "bytes": 10884
+    },
+    "crests/nl-hhc-hardenberg.svg": {
+      "sha256": "c4f0566bc366f85dbbb53238ab7f54d845b4daf11401ee8620cee5a4ee1575a9",
+      "bytes": 79483
+    },
+    "crests/nl-hsv-hoek.svg": {
+      "sha256": "a5b0f2ce65ce4f470fb9fbd9bb6c2669a8b0e0d718b1fdfd95efa1eb86d6e2e8",
+      "bytes": 57352
+    },
+    "crests/nl-ijsselmeervogels.svg": {
+      "sha256": "21d0e637c3c7049813690e812d2b21d12bb17141ffe1eda1326102d2c39a352f",
+      "bytes": 21743
+    },
+    "crests/nl-jong-almere-city.svg": {
+      "sha256": "4f221ce44d51359d93336cb1d5fefed03b623c9f2682c84e444cba6776e3f7fc",
+      "bytes": 11934
+    },
+    "crests/nl-jong-sparta-rotterdam.svg": {
+      "sha256": "f026657ac3cf55f53ab77be06f882df9cd31b0755d0a487b12b493db0be90e9d",
+      "bytes": 45249
+    },
+    "crests/nl-koninklijke-hfc.svg": {
+      "sha256": "2706b461904544d238f07cdb6325870b0139f348e7df0f491d406f97f63a93e3",
+      "bytes": 11191
+    },
+    "crests/nl-vv-katwijk.svg": {
+      "sha256": "c49646f14d56c163153937edd5ffaf5c8060c0dc41e52a717e3c326983acb2d5",
+      "bytes": 5594
+    },
+    "crests/nl-vv-kloetinge.png": {
+      "sha256": "7af8319c586093e22beaee4c063677662eb28466f8eda4bc4287151395919663",
+      "bytes": 97254
+    },
+    "crests/nl-kozakken-boys.svg": {
+      "sha256": "f370c2ceaeb9f0d566ce112c6db11a03f76a42d09c58c2e91311b95c7433260a",
+      "bytes": 10653
+    },
+    "crests/nl-quick-boys.png": {
+      "sha256": "21f66952cfcaf9b17ceab7c1414770fe0c3eb2489c8a21f074f5bb118ae12b58",
+      "bytes": 16013
+    },
+    "crests/nl-rijnsburgse-boys.svg": {
+      "sha256": "c8dd2fa6f57cae614d99237007871564cbb474c9d05677a9684c8c7599f7708a",
+      "bytes": 6130
+    },
+    "crests/nl-rohda-raalte.png": {
+      "sha256": "c0ea146a59dcdfd41149446ca2e49e098071c30d9a6cf52c2a8dd9d13b34092e",
+      "bytes": 24486
+    },
+    "crests/nl-sv-spakenburg.svg": {
+      "sha256": "571a29154b38044aac26fe5f2f1b1db06ca56fdc3e3bf0eb47fa19be8c4508e9",
+      "bytes": 14784
+    },
+    "crests/nl-de-treffers.svg": {
+      "sha256": "50d9b159d58ffa4d70c2e822d5b3aef5e605c5c1cd42ed5f275dc55dae017076",
+      "bytes": 14867
+    },
+    "crests/nl-rkav-volendam.svg": {
+      "sha256": "b8e8683f0a4c02d49a1b049d11f72a0108910336279385f325dc4f76a81d4148",
+      "bytes": 16073
+    }
+  }
+}

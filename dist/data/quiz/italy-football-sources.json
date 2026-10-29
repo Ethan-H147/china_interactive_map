@@ -1,0 +1,1441 @@
+{
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "rosterSha256": "e07f8321f2526796e1b078148c8b93c3ef6873e01bf6013899c025ea8cfefffb",
+  "rosterFile": "scripts/football-sources/italy/clubs.json",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Serie A",
+      "count": 20,
+      "sourceUrl": "https://images.legaseriea.it/image/private/fl_attachment/prd/czailts3apyt3kuxjran.pdf"
+    },
+    {
+      "tier": 2,
+      "name": "Serie B",
+      "count": 20,
+      "sourceUrl": "https://www.legab.it/seriebkt/squadre"
+    },
+    {
+      "tier": 3,
+      "name": "Serie C",
+      "count": 60,
+      "sourceUrl": "https://www.lega-pro.com/campionato/classifiche/girone-a/"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "FOOTBALL-it-atalanta",
+      "en": "Atalanta",
+      "city": "Bergamo",
+      "stadium": "New Balance Arena",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_di_Bergamo",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Atalanta_BC_new_logo.svg/250px-Atalanta_BC_new_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-bologna",
+      "en": "Bologna",
+      "city": "Bologna",
+      "stadium": "Stadio Renato Dall'Ara",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Renato_Dall'Ara",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Bologna_F.C._1909_logo.svg/250px-Bologna_F.C._1909_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-cagliari",
+      "en": "Cagliari",
+      "city": "Cagliari",
+      "stadium": "Unipol Domus",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Unipol_Domus",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Cagliari_Calcio_1920.svg/250px-Cagliari_Calcio_1920.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-como",
+      "en": "Como",
+      "city": "Como",
+      "stadium": "Stadio Giuseppe Sinigaglia",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Sinigaglia",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Calcio_Como_-_logo_%28Italy%2C_2019-%29.svg/250px-Calcio_Como_-_logo_%28Italy%2C_2019-%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-fiorentina",
+      "en": "Fiorentina",
+      "city": "Florence",
+      "stadium": "Stadio Artemio Franchi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Artemio_Franchi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/ACF_Fiorentina_-_logo_%28Italy%2C_2022%29.svg/250px-ACF_Fiorentina_-_logo_%28Italy%2C_2022%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-frosinone",
+      "en": "Frosinone",
+      "city": "Frosinone",
+      "stadium": "Stadio Benito Stirpe",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Benito_Stirpe",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0b/Frosinone_Calcio_logo.svg/250px-Frosinone_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-genoa",
+      "en": "Genoa",
+      "city": "Genoa",
+      "stadium": "Stadio Luigi Ferraris",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2c/Genoa_CFC_crest.svg/250px-Genoa_CFC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-inter-milan",
+      "en": "Inter Milan",
+      "city": "Milan",
+      "stadium": "Stadio Giuseppe Meazza",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Meazza",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/250px-FC_Internazionale_Milano_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-juventus",
+      "en": "Juventus",
+      "city": "Turin",
+      "stadium": "Allianz Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Juventus_Stadium",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg/250px-Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-lazio",
+      "en": "Lazio",
+      "city": "Rome",
+      "stadium": "Stadio Olimpico",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/S.S._Lazio_badge.svg/250px-S.S._Lazio_badge.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-lecce",
+      "en": "Lecce",
+      "city": "Lecce",
+      "stadium": "Stadio Via del Mare-Ettore Giardiniero",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Via_del_mare",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/23/US_Lecce_crest.svg/250px-US_Lecce_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-ac-milan",
+      "en": "AC Milan",
+      "city": "Milan",
+      "stadium": "San Siro",
+      "coordinateSource": "https://en.wikipedia.org/wiki/San_Siro",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/250px-Logo_of_AC_Milan.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-monza",
+      "en": "Monza",
+      "city": "Monza",
+      "stadium": "Stadio Brianteo",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Brianteo",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/AC_Monza_logo_%282021%29.svg/250px-AC_Monza_logo_%282021%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-napoli",
+      "en": "Napoli",
+      "city": "Naples",
+      "stadium": "Stadio Diego Armando Maradona",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/SSC_Napoli_2025_%28white_and_azure%29.svg/250px-SSC_Napoli_2025_%28white_and_azure%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-parma",
+      "en": "Parma",
+      "city": "Parma",
+      "stadium": "Stadio Ennio Tardini",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ennio_Tardini",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Logo_Parma_Calcio_1913_%28adozione_2016%29.svg/250px-Logo_Parma_Calcio_1913_%28adozione_2016%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-roma",
+      "en": "Roma",
+      "city": "Rome",
+      "stadium": "Stadio Olimpico",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/250px-AS_Roma_logo_%282017%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-sassuolo",
+      "en": "Sassuolo",
+      "city": "Reggio Emilia",
+      "stadium": "Mapei Stadium – Città del Tricolore",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mapei_Stadium_%E2%80%93_Citt%C3%A0_del_Tricolore",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1c/US_Sassuolo_Calcio_logo.svg/250px-US_Sassuolo_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-torino",
+      "en": "Torino",
+      "city": "Turin",
+      "stadium": "Stadio Olimpico Grande Torino",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico_Grande_Torino",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/Torino_FC_Logo.svg/250px-Torino_FC_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-udinese",
+      "en": "Udinese",
+      "city": "Udine",
+      "stadium": "Bluenergy Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Friuli",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/Udinese_Calcio_logo.svg/250px-Udinese_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-venezia",
+      "en": "Venezia",
+      "city": "Venice",
+      "stadium": "Stadio Pier Luigi Penzo",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pier_Luigi_Penzo",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/39/Venezia_FC_crest.svg/250px-Venezia_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-arezzo",
+      "en": "Arezzo",
+      "city": "Arezzo",
+      "stadium": "Stadio Città di Arezzo",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Citt%C3%A0_di_Arezzo",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/SS_Arezzo_crest.svg/250px-SS_Arezzo_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-ascoli",
+      "en": "Ascoli",
+      "city": "Ascoli Piceno",
+      "stadium": "Stadio Cino e Lillo Del Duca",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Cino_e_Lillo_Del_Duca",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/23/Ascoli_Calcio_1898_logo.svg/250px-Ascoli_Calcio_1898_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-avellino",
+      "en": "Avellino",
+      "city": "Avellino",
+      "stadium": "Stadio Partenio-Adriano Lombardi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Partenio-Adriano_Lombardi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/86/US_Avellino.svg/250px-US_Avellino.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-benevento",
+      "en": "Benevento",
+      "city": "Benevento",
+      "stadium": "Stadio Ciro Vigorito",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ciro_Vigorito",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Benevento_Calcio_logo.svg/250px-Benevento_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-carrarese",
+      "en": "Carrarese",
+      "city": "Carrara",
+      "stadium": "Stadio dei Marmi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_dei_Marmi_(Carrara)",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/Carrarese_Calcio_1908_crest.svg/250px-Carrarese_Calcio_1908_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-catanzaro",
+      "en": "Catanzaro",
+      "city": "Catanzaro",
+      "stadium": "Stadio Nicola Ceravolo",
+      "coordinateSource": "https://www.europlan-online.de/us-catanzaro/stadion-4103.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/US_Catanzaro_1929_crest.svg/250px-US_Catanzaro_1929_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-cesena",
+      "en": "Cesena",
+      "city": "Cesena",
+      "stadium": "Stadio Dino Manuzzi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Dino_Manuzzi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5a/Cesena_FC_crest.svg/250px-Cesena_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-cremonese",
+      "en": "Cremonese",
+      "city": "Cremona",
+      "stadium": "Stadio Giovanni Zini",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giovanni_Zini",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e1/US_Cremonese_logo.svg/250px-US_Cremonese_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-empoli",
+      "en": "Empoli",
+      "city": "Empoli",
+      "stadium": "Stadio Carlo Castellani",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Carlo_Castellani",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fb/Empoli_FC_crest.svg/250px-Empoli_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-hellas-verona",
+      "en": "Hellas Verona",
+      "city": "Verona",
+      "stadium": "Stadio Marcantonio Bentegodi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Marcantonio_Bentegodi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/92/Hellas_Verona_FC_logo_%282020%29.svg/250px-Hellas_Verona_FC_logo_%282020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-juve-stabia",
+      "en": "Juve Stabia",
+      "city": "Castellammare di Stabia",
+      "stadium": "Stadio Comunale Romeo Menti",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Romeo_Menti_(Castellammare_di_Stabia)",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a4/SS_Juve_Stabia_crest.svg/250px-SS_Juve_Stabia_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-mantova",
+      "en": "Mantova",
+      "city": "Mantua",
+      "stadium": "Stadio Danilo Martelli",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Danilo_Martelli",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Mantova_1911_crest.svg/250px-Mantova_1911_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-modena",
+      "en": "Modena",
+      "city": "Modena",
+      "stadium": "Stadio Alberto Braglia",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alberto_Braglia",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d8/Modena_FC_2018_crest.svg/250px-Modena_FC_2018_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-padova",
+      "en": "Padova",
+      "city": "Padua",
+      "stadium": "Stadio Comunale Euganeo",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Euganeo",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Calcio_Padova_logo.svg/250px-Calcio_Padova_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-palermo",
+      "en": "Palermo",
+      "city": "Palermo",
+      "stadium": "Stadio Renzo Barbera",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Renzo_Barbera",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/df/Palermo_Calcio_logo_%282019%29.svg/250px-Palermo_Calcio_logo_%282019%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-pisa",
+      "en": "Pisa",
+      "city": "Pisa",
+      "stadium": "Arena Garibaldi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Arena_Garibaldi_%E2%80%93_Stadio_Romeo_Anconetani",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6b/Pisa_SC_crest.svg/250px-Pisa_SC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-sampdoria",
+      "en": "Sampdoria",
+      "city": "Genoa",
+      "stadium": "Stadio Luigi Ferraris",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d2/U.C._Sampdoria_logo.svg/250px-U.C._Sampdoria_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-sudtirol",
+      "en": "Südtirol",
+      "city": "Bolzano",
+      "stadium": "Stadio Marco Druso",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Druso",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7a/FC_Sudtirol_crest.svg/250px-FC_Sudtirol_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-vicenza",
+      "en": "Vicenza",
+      "city": "Vicenza",
+      "stadium": "Stadio Romeo Menti",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Romeo_Menti",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/LR_Vicenza_Virtus_%28logo%29.svg/250px-LR_Vicenza_Virtus_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-virtus-entella",
+      "en": "Virtus Entella",
+      "city": "Chiavari",
+      "stadium": "Stadio Comunale",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Comunale_(Chiavari)",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a8/Virtus_Entella_logo.svg/250px-Virtus_Entella_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-albinoleffe",
+      "en": "AlbinoLeffe",
+      "city": "Zanica",
+      "stadium": "AlbinoLeffe Stadium",
+      "coordinateSource": "https://www.europlan-online.de/albinoleffe-stadium/stadion-76571.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/UC_AlbinoLeffe_crest.svg/250px-UC_AlbinoLeffe_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "AlbinoLeffe Stadium is the main pitch at the Zanica campus, not the older municipal ground. The coarse article point was replaced with the named stadium point."
+    },
+    {
+      "id": "FOOTBALL-it-alcione-milano",
+      "en": "Alcione Milano",
+      "city": "Sesto San Giovanni",
+      "stadium": "Ernesto Breda",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ernesto_Breda",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f3/Alcione_Milano_crest.svg/250px-Alcione_Milano_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-arzignano-valchiampo",
+      "en": "Arzignano Valchiampo",
+      "city": "Arzignano",
+      "stadium": "Tommaso Dal Molin",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Tommaso_Dal_Molin",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4e/FC_Arzignano_Valchiampo_crest.svg/250px-FC_Arzignano_Valchiampo_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-carpi",
+      "en": "Carpi",
+      "city": "Carpi",
+      "stadium": "Sandro Cabassi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Sandro_Cabassi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/48/AC_Carpi_crest.svg/250px-AC_Carpi_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-cittadella",
+      "en": "Cittadella",
+      "city": "Cittadella",
+      "stadium": "Piercesare Tombolato",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pier_Cesare_Tombolato",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e3/AS_Cittadella_logo.svg/250px-AS_Cittadella_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-desenzano",
+      "en": "Desenzano",
+      "city": "Ospitaletto",
+      "stadium": "Comunale Gino Corioni",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-luigi-corioni/stadion-83126.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/62/Calcio_Desenzano_SSD_logo.svg/250px-Calcio_Desenzano_SSD_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "2026–27 home matches at Gino Corioni in Ospitaletto, away from Desenzano del Garda."
+    },
+    {
+      "id": "FOOTBALL-it-dolomiti-bellunesi",
+      "en": "Dolomiti Bellunesi",
+      "city": "Feltre",
+      "stadium": "Zugni Tauro",
+      "coordinateSource": "https://www.europlan-online.de/stadio-zugni-tauro/stadion-26415.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Logo_Dolomiti_Bellunesi_Calcio_2024.svg/250px-Logo_Dolomiti_Bellunesi_Calcio_2024.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "Home matches at Zugni Tauro in Feltre."
+    },
+    {
+      "id": "FOOTBALL-it-folgore-caratese",
+      "en": "Folgore Caratese",
+      "city": "Carate Brianza",
+      "stadium": "XXV Aprile",
+      "coordinateSource": "https://www.europlan-online.de/stadio-xxv-aprile/stadion-26253.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/50/US_Folgore_Caratese_ASD_logo.svg/250px-US_Folgore_Caratese_ASD_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-giana-erminio",
+      "en": "Giana Erminio",
+      "city": "Gorgonzola",
+      "stadium": "Città di Gorgonzola",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Citt%C3%A0_di_Gorgonzola",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/AS_Giana_Erminio_crest.svg/250px-AS_Giana_Erminio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-juventus-next-gen",
+      "en": "Juventus Next Gen",
+      "city": "Alessandria",
+      "stadium": "Giuseppe Moccagatta",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Moccagatta",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Juventus_Next_Gen.png/250px-Juventus_Next_Gen.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "2026–27 home ground is Giuseppe Moccagatta in Alessandria; do not use the former 2024–25 ground in Biella."
+    },
+    {
+      "id": "FOOTBALL-it-lecco",
+      "en": "Lecco",
+      "city": "Lecco",
+      "stadium": "Rigamonti-Ceppi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Rigamonti-Ceppi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/98/Calcio_Lecco_1912_crest.svg/250px-Calcio_Lecco_1912_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-lumezzane",
+      "en": "Lumezzane",
+      "city": "Lumezzane",
+      "stadium": "Tullio Saleri",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Tullio_Saleri",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/FC_Lumezzane_crest.svg/250px-FC_Lumezzane_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-novara",
+      "en": "Novara",
+      "city": "Novara",
+      "stadium": "Silvio Piola",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Silvio_Piola_(Novara)",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9a/Novara_FC_crest.svg/250px-Novara_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-ospitaletto",
+      "en": "Ospitaletto",
+      "city": "Ospitaletto",
+      "stadium": "Comunale Gino Corioni",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-luigi-corioni/stadion-83126.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/AC_Ospitaletto_Franciacorta_logo.svg/250px-AC_Ospitaletto_Franciacorta_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-pergolettese",
+      "en": "Pergolettese",
+      "city": "Crema",
+      "stadium": "Giuseppe Voltini",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Voltini",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/US_Pergolettese_1932_%28logo%29.svg/250px-US_Pergolettese_1932_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-pro-vercelli",
+      "en": "Pro Vercelli",
+      "city": "Vercelli",
+      "stadium": "Silvio Piola",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Silvio_Piola_(Vercelli)",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/FC_Pro_Vercelli_1892_crest.svg/250px-FC_Pro_Vercelli_1892_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-renate",
+      "en": "Renate",
+      "city": "Carate Brianza",
+      "stadium": "XXV Aprile",
+      "coordinateSource": "https://www.europlan-online.de/stadio-xxv-aprile/stadion-26253.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/AC_Renate_crest.svg/250px-AC_Renate_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "2026–27 home matches at XXV Aprile (Sportitalia Arena) in Carate Brianza."
+    },
+    {
+      "id": "FOOTBALL-it-trento",
+      "en": "Trento",
+      "city": "Trento",
+      "stadium": "Briamasco",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Briamasco",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c4/AC_Trento_1921_crest.svg/250px-AC_Trento_1921_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-treviso",
+      "en": "Treviso",
+      "city": "Treviso",
+      "stadium": "Omobono Tenni",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Omobono_Tenni",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/54/Treviso_FBC_1993_logo.svg/250px-Treviso_FBC_1993_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-union-brescia",
+      "en": "Union Brescia",
+      "city": "Brescia",
+      "stadium": "Mario Rigamonti",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Mario_Rigamonti",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c9/Union_Brescia_crest.svg/250px-Union_Brescia_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-atalanta-u23",
+      "en": "Atalanta U23",
+      "city": "Caravaggio",
+      "stadium": "Comunale di Caravaggio",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-di-caravaggio/stadion-25792.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Atalanta_BC_new_logo.svg/250px-Atalanta_BC_new_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "Home matches at the current Comunale di Caravaggio, not the old municipal ground or club offices."
+    },
+    {
+      "id": "FOOTBALL-it-campobasso",
+      "en": "Campobasso",
+      "city": "Campobasso",
+      "stadium": "Antonio Molinari",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Nuovo_Romagnoli",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Campobasso_FC_logo.svg/250px-Campobasso_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-forli",
+      "en": "Forlì",
+      "city": "Forlì",
+      "stadium": "Tullo Morgagni",
+      "coordinateSource": "https://www.europlan-online.de/stadio-tullo-morgagni/stadion-4146.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b2/Forl%C3%AC_FC_logo.svg/250px-Forl%C3%AC_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-grosseto",
+      "en": "Grosseto",
+      "city": "Grosseto",
+      "stadium": "Carlo Zecchini",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico_Carlo_Zecchini",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3c/US_Grosseto_1912_logo.svg/250px-US_Grosseto_1912_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-gubbio",
+      "en": "Gubbio",
+      "city": "Gubbio",
+      "stadium": "Pietro Barbetti",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pietro_Barbetti",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/AS_Gubbio_1910_crest.svg/250px-AS_Gubbio_1910_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-guidonia-montecelio",
+      "en": "Guidonia Montecelio",
+      "city": "Guidonia Montecelio",
+      "stadium": "Comunale di Guidonia Montecelio",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q138039517",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d7/Guidonia_Montecelio_1937_FC_logo.svg/250px-Guidonia_Montecelio_1937_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-latina",
+      "en": "Latina",
+      "city": "Latina",
+      "stadium": "Domenico Francioni",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Domenico_Francioni",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b3/Latina_Calcio_1932_crest.svg/250px-Latina_Calcio_1932_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-livorno",
+      "en": "Livorno",
+      "city": "Livorno",
+      "stadium": "Armando Picchi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Armando_Picchi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Livorno-Stemma_semplificato.svg/250px-Livorno-Stemma_semplificato.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-ostia-mare",
+      "en": "Ostia Mare",
+      "city": "Ostia, Rome",
+      "stadium": "Pasquale Giannattasio",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q140537125",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/75/AS_Ostia_Mare_Lido_Calcio_logo.svg/250px-AS_Ostia_Mare_Lido_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "2026–27 relocation to Pasquale Giannattasio (Stella Polare), replacing Anco Marzio."
+    },
+    {
+      "id": "FOOTBALL-it-pescara",
+      "en": "Pescara",
+      "city": "Pescara",
+      "stadium": "Stadio Adriatico – Giovanni Cornacchia",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Adriatico_%E2%80%93_Giovanni_Cornacchia",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/Delfino_Pescara_logo.svg/250px-Delfino_Pescara_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-perugia",
+      "en": "Perugia",
+      "city": "Perugia",
+      "stadium": "Renato Curi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Renato_Curi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/08/Ac_Perugia_logo.svg/250px-Ac_Perugia_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-pianese",
+      "en": "Pianese",
+      "city": "Piancastagnaio",
+      "stadium": "Comunale di Piancastagnaio",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-di-piancastagnaio/stadion-82501.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/US_Pianese_crest.svg/250px-US_Pianese_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-pineto",
+      "en": "Pineto",
+      "city": "Pineto",
+      "stadium": "Pavone-Mariani",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-%2593mimmo-pavone-e-alessandro-mariani%2594/stadion-36319.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/AS_Pineto_Calcio_crest.svg/250px-AS_Pineto_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-ravenna",
+      "en": "Ravenna",
+      "city": "Ravenna",
+      "stadium": "Bruno Benelli",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Bruno_Benelli",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0f/Ravenna_FC_logo.svg/250px-Ravenna_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-reggiana",
+      "en": "Reggiana",
+      "city": "Reggio Emilia",
+      "stadium": "MAPEI Stadium - Città del Tricolore",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mapei_Stadium_%E2%80%93_Citt%C3%A0_del_Tricolore",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/00/AC_Reggiana_1919_crest.svg/250px-AC_Reggiana_1919_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-sambenedettese",
+      "en": "Sambenedettese",
+      "city": "San Benedetto del Tronto",
+      "stadium": "Riviera delle Palme",
+      "coordinateSource": "https://www.europlan-online.de/stadio-riviera-delle-palme/stadion-4160.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/AS_Sambenedettese_logo.svg/250px-AS_Sambenedettese_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "Coarse article coordinate replaced with the center of the named Riviera delle Palme stadium."
+    },
+    {
+      "id": "FOOTBALL-it-spezia",
+      "en": "Spezia",
+      "city": "La Spezia",
+      "stadium": "Stadio Alberto Picco",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alberto_Picco",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6f/Spezia_Calcio_crest.svg/250px-Spezia_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-torres",
+      "en": "Torres",
+      "city": "Sassari",
+      "stadium": "Vanni Sanna",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Vanni_Sanna",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/60/SEF_Torres_1903_crest.svg/250px-SEF_Torres_1903_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-vado",
+      "en": "Vado",
+      "city": "Sestri Levante",
+      "stadium": "Giuseppe Sivori",
+      "coordinateSource": "https://www.europlan-online.de/stadio-giuseppe-sivori/stadion-26258.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0a/FC_Vado_logo.svg/250px-FC_Vado_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "2026–27 home matches at Giuseppe Sivori in Sestri Levante, while Ferruccio Chittolina is unavailable."
+    },
+    {
+      "id": "FOOTBALL-it-vis-pesaro",
+      "en": "Vis Pesaro",
+      "city": "Pesaro",
+      "stadium": "Tonino Benelli",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Tonino_Benelli",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9d/Vis_Pesaro_dal_1898_crest.svg/250px-Vis_Pesaro_dal_1898_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-altamura",
+      "en": "Altamura",
+      "city": "Altamura",
+      "stadium": "Antonio D'Angelo",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-tonino-d%2527angelo/stadion-26668.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/14/Team_Altamura_logo.svg/250px-Team_Altamura_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-audace-cerignola",
+      "en": "Audace Cerignola",
+      "city": "Cerignola",
+      "stadium": "Domenico Monterisi",
+      "coordinateSource": "https://www.europlan-online.de/stadio-domenico-monterisi/stadion-26327.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/41/SS_Audace_Cerignola_crest.svg/250px-SS_Audace_Cerignola_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-bari",
+      "en": "Bari",
+      "city": "Bari",
+      "stadium": "San Nicola",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_San_Nicola",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/SSC_Bari_crest.svg/250px-SSC_Bari_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-barletta",
+      "en": "Barletta",
+      "city": "Barletta",
+      "stadium": "Cosimo Puttilli",
+      "coordinateSource": "https://www.europlan-online.de/ita-barletta-ss-barletta-caldio-stadio-cosimo-puttilli/stadion-4252.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/SS_Barletta_1922_logo.svg/250px-SS_Barletta_1922_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-casarano",
+      "en": "Casarano",
+      "city": "Casarano",
+      "stadium": "Giuseppe Capozza",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Capozza",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cd/Casarano_Calcio_logo.svg/250px-Casarano_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-casertana",
+      "en": "Casertana",
+      "city": "Caserta",
+      "stadium": "Alberto Pinto",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alberto_Pinto",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e5/Casertana_FC_logo.svg/250px-Casertana_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-catania",
+      "en": "Catania",
+      "city": "Catania",
+      "stadium": "Angelo Massimino",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Angelo_Massimino",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Logo_CATANIA_FC.svg/250px-Logo_CATANIA_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-cavese",
+      "en": "Cavese",
+      "city": "Cava de' Tirreni",
+      "stadium": "Simonetta Lamberti",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Simonetta_Lamberti",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/26/Cavese_1919_crest.svg/250px-Cavese_1919_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-cosenza",
+      "en": "Cosenza",
+      "city": "Cosenza",
+      "stadium": "San Vito-Gigi Marulla",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_San_Vito-Gigi_Marulla",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/Cosenza_Calcio_crest.svg/250px-Cosenza_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-crotone",
+      "en": "Crotone",
+      "city": "Crotone",
+      "stadium": "Ezio Scida",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ezio_Scida",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/db/FC_Crotone_logo.svg/250px-FC_Crotone_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-foggia",
+      "en": "Foggia",
+      "city": "Foggia",
+      "stadium": "Pino Zaccheria",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pino_Zaccheria",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/21/Calcio_Foggia_1920_crest.svg/250px-Calcio_Foggia_1920_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-giugliano",
+      "en": "Giugliano",
+      "city": "Giugliano in Campania",
+      "stadium": "Alberto De Cristofaro",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-alberto-de-cristofaro/stadion-31156.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/64/Giugliano_Calcio_1928_crest.svg/250px-Giugliano_Calcio_1928_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-inter-milan-u23",
+      "en": "Inter Milan U23",
+      "city": "Sesto San Giovanni",
+      "stadium": "Ernesto Breda",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ernesto_Breda",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/250px-FC_Internazionale_Milano_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-monopoli",
+      "en": "Monopoli",
+      "city": "Monopoli",
+      "stadium": "Vito Simone Veneziani",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Vito_Simone_Veneziani",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fc/SS_Monopoli_1966_crest.svg/250px-SS_Monopoli_1966_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-picerno",
+      "en": "Picerno",
+      "city": "Picerno",
+      "stadium": "Donato Curcio",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-donato-curcio/stadion-26328.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a4/AZ_Picerno_crest.svg/250px-AZ_Picerno_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-potenza",
+      "en": "Potenza",
+      "city": "Potenza",
+      "stadium": "Alfredo Viviani",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alfredo_Viviani",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/da/Potenza_Calcio_crest.svg/250px-Potenza_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-salernitana",
+      "en": "Salernitana",
+      "city": "Salerno",
+      "stadium": "Stadio Arechi",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Arechi",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/US_Salernitana_1919_logo.svg/250px-US_Salernitana_1919_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-savoia",
+      "en": "Savoia",
+      "city": "Torre Annunziata",
+      "stadium": "Alfredo Giraud",
+      "coordinateSource": "https://www.europlan-online.de/stadio-alfredo-giraud/stadion-4231.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Coat_of_arms_of_the_Duchy_of_Savoy_%28XV-XVI_century%29.svg/250px-Coat_of_arms_of_the_Duchy_of_Savoy_%28XV-XVI_century%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-scafatese",
+      "en": "Scafatese",
+      "city": "Scafati",
+      "stadium": "Giovanni Vitiello",
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-28-settembre-1943-kr/stadion-39260.html",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/Scafatese_Calcio_1922_logo.svg/250px-Scafatese_Calcio_1922_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+    },
+    {
+      "id": "FOOTBALL-it-sorrento",
+      "en": "Sorrento",
+      "city": "Sorrento",
+      "stadium": "Italia",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Italia",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cd/Sorrento_Calcio_1945_crest.svg/250px-Sorrento_Calcio_1945_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "note": "Current 2026–27 venue is Stadio Italia in Sorrento, replacing the previous temporary use of Potenza."
+    }
+  ],
+  "images": {
+    "vendor/football/italy/it-atalanta.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Atalanta_BC_new_logo.svg/250px-Atalanta_BC_new_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "5884d1e90a4beecc4bffc525c6e793ef64180956b8e889b0c6adcf140f6f9941",
+      "sha256": "09fc656ffd9289e28b8f9374c19069ea182b2e42d007a797a339dbbc67d1d1b4",
+      "bytes": 21120
+    },
+    "vendor/football/italy/it-bologna.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Bologna_F.C._1909_logo.svg/250px-Bologna_F.C._1909_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "5972746e59226960204aaad737e47d7d2fd7e18e0c266dbd15d4832e9a3e4dee",
+      "sha256": "a58ad3080f025e037c42ca1b2ab29ec4c5d640dfc85bffa47a8d8b5bb7bdcfd6",
+      "bytes": 13842
+    },
+    "vendor/football/italy/it-cagliari.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Cagliari_Calcio_1920.svg/250px-Cagliari_Calcio_1920.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "acb5c822f8eb4850928caafeb350083e5adba24443221ac0157e0488382d2a91",
+      "sha256": "681be205248b2f25d65a3b81b5de817bbe1eb00e8dc9a0612b9229d04f7c5caa",
+      "bytes": 20684
+    },
+    "vendor/football/italy/it-como.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Calcio_Como_-_logo_%28Italy%2C_2019-%29.svg/250px-Calcio_Como_-_logo_%28Italy%2C_2019-%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "022bc1065050519b5ab9440a214c7e79e3b06dae4f4cd3eca48bac4fe44471ef",
+      "sha256": "0d61273071bb7aadde773e3807c1c3b006608b2c82b8a99f70a4ad2600f8fdbe",
+      "bytes": 13534
+    },
+    "vendor/football/italy/it-fiorentina.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/ACF_Fiorentina_-_logo_%28Italy%2C_2022%29.svg/250px-ACF_Fiorentina_-_logo_%28Italy%2C_2022%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "90201cbed189299bd4740799a2c40755169b3baf75a33abcba9e660f8e21b4ca",
+      "sha256": "75f85ae1aa772c87b60ec99c94882d3d51b492684cd2a354ca81ab8199d5bbb3",
+      "bytes": 8580
+    },
+    "vendor/football/italy/it-frosinone.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0b/Frosinone_Calcio_logo.svg/250px-Frosinone_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "9ac123699385c4fb1970ab06e0ccb9189d1d3156e267fdfad805030fb5b04d4a",
+      "sha256": "dcc53ad4222f1a45250f80dc7e79bb00d16db7adf0924f503416fcf5e55b3a4a",
+      "bytes": 29218
+    },
+    "vendor/football/italy/it-genoa.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2c/Genoa_CFC_crest.svg/250px-Genoa_CFC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "cfb797278c97b29930ac9e0562a8bfc98a852901a4ce24fb142fc1b6e85b1ffc",
+      "sha256": "0c10a6bba5b970ffb443681156da47fee8c669bd7ff6650d523138a7013d2046",
+      "bytes": 10496
+    },
+    "vendor/football/italy/it-inter-milan.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/250px-FC_Internazionale_Milano_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "73dd64cca0278349197dc3f18a7126713358503c5f0f64014f1271ad6c3954d4",
+      "sha256": "00aa992b75e2952038f3b583deb60f98521e3fdfc210dd702d9ffff14ecc14c3",
+      "bytes": 13604
+    },
+    "vendor/football/italy/it-juventus.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg/250px-Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "742df4b3c34d853265ac33c3742bbed34b95ff22321eac8a018e51d7da9a3247",
+      "sha256": "0bd578b26738c37ef095b1999094e35c393f902fddfbec322611d197e2a80839",
+      "bytes": 2078
+    },
+    "vendor/football/italy/it-lazio.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/S.S._Lazio_badge.svg/250px-S.S._Lazio_badge.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "93918619551b92da84c7a38e4f5246c9b0ff65c152aa665f23626c7933ae9c38",
+      "sha256": "4d7a00de2e3a9438a7f1c1a9610f0b053c8e71ee0d54004b54d3912299cbd41b",
+      "bytes": 14790
+    },
+    "vendor/football/italy/it-lecce.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/23/US_Lecce_crest.svg/250px-US_Lecce_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "32eef774e0128b446d57b112330ccf849c8a6be994ed85866b0f780a7ebaf322",
+      "sha256": "216d25c7f01150cc5b9df95c8d36e0c7822b79e938e5d3e42e5ba2124c8fe0f1",
+      "bytes": 22776
+    },
+    "vendor/football/italy/it-ac-milan.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/250px-Logo_of_AC_Milan.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "355af3122bfd8c250ee3d49c67f028c4598390ad9d5eaeb0910a5bb3fbc6065e",
+      "sha256": "8718f7ba610bb22347a0c5cc144cbebb6aa04636284fcab132bfc4154d9b2f25",
+      "bytes": 18902
+    },
+    "vendor/football/italy/it-monza.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/AC_Monza_logo_%282021%29.svg/250px-AC_Monza_logo_%282021%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "a12a571a9cb00dd89091bce020f0f2dc7d9f0f726e092906682062fc9fe2e205",
+      "sha256": "4d518397ebf3b43e10b011da3354cdc6ee27ba2cca50d50e8b0a0da2536d7794",
+      "bytes": 21298
+    },
+    "vendor/football/italy/it-napoli.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/SSC_Napoli_2025_%28white_and_azure%29.svg/250px-SSC_Napoli_2025_%28white_and_azure%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "eb9b9cf2ec44f4c34b4187140ee0c8027a214369ae54a6e50651ac5070edbb5e",
+      "sha256": "f1c6a6ce1c95341550e45756bf4d50057c1ee80605a01e736f5a68ed29f6fd65",
+      "bytes": 14722
+    },
+    "vendor/football/italy/it-parma.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Logo_Parma_Calcio_1913_%28adozione_2016%29.svg/250px-Logo_Parma_Calcio_1913_%28adozione_2016%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "d4a53dbb491b3c89969e9076477f6b816ea3be3e9a8f6416b0c056a67e38d058",
+      "sha256": "47251509c30fdca92b0da790133ee7677d363063ed7a0bfa1fe38978f28ffb35",
+      "bytes": 12578
+    },
+    "vendor/football/italy/it-roma.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/250px-AS_Roma_logo_%282017%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "f43000e4e4281ac8bbb716e96bf872e103e39de1dd2d53f294fc0951b7bdeea8",
+      "sha256": "ec1e4e8313a8ea125641ce4a247db201b28929079d5ae000f59b9420d5e57276",
+      "bytes": 22934
+    },
+    "vendor/football/italy/it-sassuolo.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1c/US_Sassuolo_Calcio_logo.svg/250px-US_Sassuolo_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "4537e107c9c224685cfdf20bc5354fc8abd16d945eebd281462fa81198dd97cc",
+      "sha256": "d608c9a6d999dca6bc4cca9d4e9b5cb3b58a8628df661d7d5ac109adef934f9b",
+      "bytes": 23438
+    },
+    "vendor/football/italy/it-torino.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/Torino_FC_Logo.svg/250px-Torino_FC_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "023113471596a69ed3055b06838878d72a50e5022f5ddb2cf3c86e656098d495",
+      "sha256": "4e036569b5f111f62c6c107eb4399e6e09748239c18845761706bac7a9b0e314",
+      "bytes": 23098
+    },
+    "vendor/football/italy/it-udinese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/Udinese_Calcio_logo.svg/250px-Udinese_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "44a1734365ae0943de0f2373b67ed3655c33eeb318dcf575bf9a46fada5a73d3",
+      "sha256": "5ca8214643f78521abd7bf1dd96d6f30c30c894ef4c52c6c5d2ba66d76e003a2",
+      "bytes": 26540
+    },
+    "vendor/football/italy/it-venezia.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/39/Venezia_FC_crest.svg/250px-Venezia_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "692b9a2bc06d7334297400f45a7f3717a6623debe4fd94bf4d79d42ae5e66c3b",
+      "sha256": "b748f2decece5a7d1694ac604ffca5fb092d0317be930ae5cbc4e40444e720b4",
+      "bytes": 7982
+    },
+    "vendor/football/italy/it-arezzo.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/SS_Arezzo_crest.svg/250px-SS_Arezzo_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "155fae22f231d1922e64549f1e0a5184555e022e64ccbc1852bb0c5cf59408d8",
+      "sha256": "5866bacb01081fae1ca06bd0a3ab84d2f3d47f1c311cedc79bd09f92eff90fd3",
+      "bytes": 26632
+    },
+    "vendor/football/italy/it-ascoli.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/23/Ascoli_Calcio_1898_logo.svg/250px-Ascoli_Calcio_1898_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "a601c548004a3b2b32a0fe8890e39e41e7313ba009ebf012515bb9c53f36d551",
+      "sha256": "cb472ac29415136f33737daaab8a6fd395c27c5bac0465e4946cbcfdecba5acc",
+      "bytes": 19544
+    },
+    "vendor/football/italy/it-avellino.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/86/US_Avellino.svg/250px-US_Avellino.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "6dc9fc21e0fed615e7152527fbfa237a0a1ffaf5141f3c298406c9909ac103e2",
+      "sha256": "074776d945fef30cb8da8adae2ed5fda53604b0a08efbc12f7d22a90ab75c7f7",
+      "bytes": 31334
+    },
+    "vendor/football/italy/it-benevento.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Benevento_Calcio_logo.svg/250px-Benevento_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "d8542aced30a8691bd4d023e11fa7753549e9ff1480ab3757055d6caece28889",
+      "sha256": "ea312fe4bf2bfd5fbf51ef527e1d81189615a40c3b99ad155bf706651fe4bed1",
+      "bytes": 21974
+    },
+    "vendor/football/italy/it-carrarese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/Carrarese_Calcio_1908_crest.svg/250px-Carrarese_Calcio_1908_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "67dd0bde3f44cdb679868a83652ba25c73b659435aafda062bac98dda6b12ffa",
+      "sha256": "663f6e1819263d89d5ccf40583ce555dba72771a9792e65e876081a46f3e46bf",
+      "bytes": 29022
+    },
+    "vendor/football/italy/it-catanzaro.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/US_Catanzaro_1929_crest.svg/250px-US_Catanzaro_1929_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "3cdb5c5552edb8c37a8c70377557d5a36eabd29db85408f7fc8b468b429386e0",
+      "sha256": "a0f1f0d016aab87cd985d65a6039088110ee82723cc8cf969c9c27d1e69e91df",
+      "bytes": 28614
+    },
+    "vendor/football/italy/it-cesena.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5a/Cesena_FC_crest.svg/250px-Cesena_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "2beee177cee0aa3dfac1f24b59af77af0467b0e5024a89b03dafff3540f62ce3",
+      "sha256": "ef46ba6bc82f73aa23b498d865c2e3af469eabd918382cb76acab345a1624dee",
+      "bytes": 11354
+    },
+    "vendor/football/italy/it-cremonese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e1/US_Cremonese_logo.svg/250px-US_Cremonese_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e7fb8f0f50d4280df389345b8d6521034348566a56664fd69a32b5d85a9a0e53",
+      "sha256": "f326cbd9ebc8e6459319eb89ce0a87a355e03d66ecca9a9cde6e3da00c49dfe3",
+      "bytes": 16696
+    },
+    "vendor/football/italy/it-empoli.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fb/Empoli_FC_crest.svg/250px-Empoli_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "a94e88d61e0885864e318b6f91ad5c8f22b9312e37a3c829dbbfc0d7299d30cd",
+      "sha256": "ac1b3795ed148d3ca4968c1b20ceb0609cf1bad87c2dac6e263e5ca375405775",
+      "bytes": 28088
+    },
+    "vendor/football/italy/it-hellas-verona.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/92/Hellas_Verona_FC_logo_%282020%29.svg/250px-Hellas_Verona_FC_logo_%282020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "8c1a2447b2f92391fff4b47c0840fd3fda3470002c29f606a1edd443c89c1ced",
+      "sha256": "276b94bfeb7a7018e4b818adebb0988655a6709c0fb25309d23d7e736babfaa7",
+      "bytes": 9254
+    },
+    "vendor/football/italy/it-juve-stabia.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a4/SS_Juve_Stabia_crest.svg/250px-SS_Juve_Stabia_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "33d3728269717f928480140382ec18a0c1a6750d4d5f510f12e08416feacbdea",
+      "sha256": "ba900b2a0e393225a8a6ddbc502c01602a8bf9a3a8a44a47144b88b46c4f4953",
+      "bytes": 23550
+    },
+    "vendor/football/italy/it-mantova.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Mantova_1911_crest.svg/250px-Mantova_1911_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "f235162faea3fc359e86037b966a4fa2c6202c927f414e24ba838f926c86d5b3",
+      "sha256": "6ecad3ff94892d7db3fdf18765cecb4e3999da61f588f8108026188f1f2bb76d",
+      "bytes": 20456
+    },
+    "vendor/football/italy/it-modena.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d8/Modena_FC_2018_crest.svg/250px-Modena_FC_2018_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "832375771772370b6bd0dfc02b3604326a35616ecf6cc141eb342687887daa03",
+      "sha256": "d337ac1dcb004d2df92817588014ddcc2c66fb429f2cc7ecc09c54662cbac472",
+      "bytes": 13128
+    },
+    "vendor/football/italy/it-padova.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Calcio_Padova_logo.svg/250px-Calcio_Padova_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "1a1341aa71461c303747f7b21fd204c935869680d6e1a85b38110f52048d3ccb",
+      "sha256": "558d0e9cf0fc3c84e6e7634c76c227f8d50c2941821ad33a0f63d11d5e5f07d1",
+      "bytes": 8652
+    },
+    "vendor/football/italy/it-palermo.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/df/Palermo_Calcio_logo_%282019%29.svg/250px-Palermo_Calcio_logo_%282019%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "90de47e5eaf1ecc91a0ce711354b82f24545c03e896b9e1d70dade0e2ce40817",
+      "sha256": "f9b661052bac1f72d11dcafb2cc774da5824a83cccb83c3cb1a1a8677598b3b9",
+      "bytes": 21122
+    },
+    "vendor/football/italy/it-pisa.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6b/Pisa_SC_crest.svg/250px-Pisa_SC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "656a99d1fcf39ae3a70cb4a3cc2a8cca04a05bf710a5096648c995740de0cff7",
+      "sha256": "256bcf91b82535f42b316eb9275e50603f320033ced9b3dde5168e975e177c18",
+      "bytes": 22686
+    },
+    "vendor/football/italy/it-sampdoria.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d2/U.C._Sampdoria_logo.svg/250px-U.C._Sampdoria_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "4d82ab2acb397faebcbd393b9a59f32bb1ee5f2645481c4ceb153131e3409445",
+      "sha256": "af0a95ce162cb536e72c3c93323d9102b93ec1edad7096d9cea1b05029779718",
+      "bytes": 14002
+    },
+    "vendor/football/italy/it-sudtirol.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7a/FC_Sudtirol_crest.svg/250px-FC_Sudtirol_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "5a33ebfb94932f3a1f90e32d5416032b1f1327ebfd1d6b7cdbaec9cd81832c76",
+      "sha256": "5dd81dd3388fc6041699d11da0e35ddb1014ba5156dc6ca7a124fad68fdbbe2f",
+      "bytes": 33990
+    },
+    "vendor/football/italy/it-vicenza.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/LR_Vicenza_Virtus_%28logo%29.svg/250px-LR_Vicenza_Virtus_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "ba10257142d8cab875de76359a2bcdd57338f904f5bc90bdf110a6599562494a",
+      "sha256": "b13b12793c43d8fc76e92e56e21f7085246a85a4acfc4b3f1ac09a2f9655a5bb",
+      "bytes": 13710
+    },
+    "vendor/football/italy/it-virtus-entella.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a8/Virtus_Entella_logo.svg/250px-Virtus_Entella_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "cec8e57345797f8023abc891fca0453b4e4ec4fdd5c1d383cf6c7efc7ed63ee8",
+      "sha256": "d6ece2bc80c8c215e3d3e071fbc986307945371b37ca67eb05a6ae1140fea4db",
+      "bytes": 24512
+    },
+    "vendor/football/italy/it-albinoleffe.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/UC_AlbinoLeffe_crest.svg/250px-UC_AlbinoLeffe_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "2929b2e2debdb0be8936f58e1116ba63358fa2e3427524fd6367f9799b3f9ee3",
+      "sha256": "a4013b9da69f66129ffdc431644cbc1c5746b816cc1af2eabbda79f21921a552",
+      "bytes": 37568
+    },
+    "vendor/football/italy/it-alcione-milano.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f3/Alcione_Milano_crest.svg/250px-Alcione_Milano_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "68675c702649c709c99c12ae143d9748f6f7d888aaa4719632abdd4bd9074b80",
+      "sha256": "a4ca95db703add21c70b7a92683200a22f45a539bc2fa20097f7a8e93d9e9255",
+      "bytes": 11722
+    },
+    "vendor/football/italy/it-arzignano-valchiampo.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4e/FC_Arzignano_Valchiampo_crest.svg/250px-FC_Arzignano_Valchiampo_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "42b0960a0b7df18dc5f81c65914ddd10326886da8d8a7bfc8ab94aecf65c630a",
+      "sha256": "f1e8bf8376eae5f359aa6db76e61ce9c408bd5b5bc815a870da4782a9c92372a",
+      "bytes": 35452
+    },
+    "vendor/football/italy/it-carpi.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/48/AC_Carpi_crest.svg/250px-AC_Carpi_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e3b0470867d76a3d6bc0b2271e9236dad4173bf671838e07601b9067f1ceb81c",
+      "sha256": "6eab1fe94a8a72c993619bae92acb83543c4211b1cec3cf25f8611272c5b1282",
+      "bytes": 31262
+    },
+    "vendor/football/italy/it-cittadella.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e3/AS_Cittadella_logo.svg/250px-AS_Cittadella_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "ab9ad25be9fee84aead8ee14f8ca06cdde627d11b45823335ebbb5b88e2e664e",
+      "sha256": "f2c4ec6ca885f1680d42c0e9a3a33c60aac738258d7a864392253f943a4ea807",
+      "bytes": 24326
+    },
+    "vendor/football/italy/it-desenzano.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/62/Calcio_Desenzano_SSD_logo.svg/250px-Calcio_Desenzano_SSD_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e379d1dec6a879b949c7e8a91402b320bf3f6c5e3491fa1eb6238f7d0c7f02a2",
+      "sha256": "784ce774df32e0db449fedf15815f249585a45161cba70994a2518f38ffe6c83",
+      "bytes": 26656
+    },
+    "vendor/football/italy/it-dolomiti-bellunesi.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Logo_Dolomiti_Bellunesi_Calcio_2024.svg/250px-Logo_Dolomiti_Bellunesi_Calcio_2024.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "211357a1d81d403c3a54557d780bcf9a731bc15be691b49ceff647069ab8f829",
+      "sha256": "74a83c0a218c4b45643c7b2270160c2902e03f2b9587cfaf0447cfa4c2fd71ed",
+      "bytes": 10958
+    },
+    "vendor/football/italy/it-folgore-caratese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/50/US_Folgore_Caratese_ASD_logo.svg/250px-US_Folgore_Caratese_ASD_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "1dc74fe1810b8d01ec3b0b7975d6538a0c2e483f127062894d322d78c7b2d336",
+      "sha256": "3e0baa0619dd51c85a2eff362861cb5ead3a4d73756c6b196e0cbcd5c30d4e62",
+      "bytes": 33610
+    },
+    "vendor/football/italy/it-giana-erminio.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/AS_Giana_Erminio_crest.svg/250px-AS_Giana_Erminio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "17f60c8c8989817a2fe94969e08f7566eb7746d28cd394b889cd3e38b5028297",
+      "sha256": "a6734cfca00bb278d1a4925ab493cb7a2a2eb0e9960d15c384ee99e82f4ae9aa",
+      "bytes": 15940
+    },
+    "vendor/football/italy/it-juventus-next-gen.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Juventus_Next_Gen.png/250px-Juventus_Next_Gen.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "4c77196a6a2eed12d9fe633382fcdd2a3cd775516d7caffc999803bed18dea83",
+      "sha256": "ce810adde422b6a65d744fbf526d76e694c070751115b1e3a3cb4c522ce17899",
+      "bytes": 13616
+    },
+    "vendor/football/italy/it-lecco.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/98/Calcio_Lecco_1912_crest.svg/250px-Calcio_Lecco_1912_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "b21dcc547d84cd760fa7ae6b54183c416eaed9eabf28ce63bb36993b3279b8ac",
+      "sha256": "d7a810526cf1479bd995c96234f41e874ecfa7ec12ae2ba8503a3194b0baba83",
+      "bytes": 21000
+    },
+    "vendor/football/italy/it-lumezzane.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/FC_Lumezzane_crest.svg/250px-FC_Lumezzane_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "baa2eb2c1640fe69a65bd5932efa0243694ee8ffc9e604e725e65901953a4485",
+      "sha256": "a0249df6877bfffff167bd4518c64fee583b838b314665b0d167e17bb10f1c32",
+      "bytes": 23212
+    },
+    "vendor/football/italy/it-novara.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9a/Novara_FC_crest.svg/250px-Novara_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e2b3f516f7c7feae6131b87285dd8a99a4a57b12f90156658331e48d86d67c02",
+      "sha256": "74ee6adffef131f11eb7b15f935a33531614f8246aeaca7ed0c95f24a4e7df22",
+      "bytes": 27386
+    },
+    "vendor/football/italy/it-ospitaletto.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/AC_Ospitaletto_Franciacorta_logo.svg/250px-AC_Ospitaletto_Franciacorta_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "3a6af94c587d2dbd69d6d5755d6c9115646fb764fd21c0c8030d48e25b70ac10",
+      "sha256": "78a4abbf223812a80f12946a43e5b3f96cccffef5ebb50c23fa46855a2def78c",
+      "bytes": 33966
+    },
+    "vendor/football/italy/it-pergolettese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/US_Pergolettese_1932_%28logo%29.svg/250px-US_Pergolettese_1932_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "35cdf2a105debcefe76492e61873af87778e7b9096fd81215a705e1779e90063",
+      "sha256": "37255ad9e4327d83f9056c197e88040b9e3d2ef6d2ce7e26b8325fe1eb4bfdca",
+      "bytes": 23134
+    },
+    "vendor/football/italy/it-pro-vercelli.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/FC_Pro_Vercelli_1892_crest.svg/250px-FC_Pro_Vercelli_1892_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "79224dbf52a092871d12f5dba218f7df931a84d7c239e80e904aa7dfd639f69e",
+      "sha256": "cd61719ef63865dcfdd1521f7113a4f0849cff35a125a043079b47d8bec5f35a",
+      "bytes": 9534
+    },
+    "vendor/football/italy/it-renate.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/AC_Renate_crest.svg/250px-AC_Renate_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "971b72be3defc1e84404881b0916cb4fd7de16087a963b462508874eae3f7f86",
+      "sha256": "4b223d5ab3db32b39a444c950fe85f35666ac4a0005ee0640d9e3cbabaa998d9",
+      "bytes": 29966
+    },
+    "vendor/football/italy/it-trento.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c4/AC_Trento_1921_crest.svg/250px-AC_Trento_1921_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "bbd8e03327bf6e21bd3d096de9e85a1f0b7307497b8d24f7c153cd3ef866b30d",
+      "sha256": "ceb815ae6bdb1e3533e7cfe27b40a3ccd3e96166cd185748fdf5836ebe6aefa6",
+      "bytes": 26904
+    },
+    "vendor/football/italy/it-treviso.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/54/Treviso_FBC_1993_logo.svg/250px-Treviso_FBC_1993_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "62d428bc966ecb1e996ddc5217e415b82b34f2fbf0016ca8e7cfce118692992b",
+      "sha256": "f6344033848bf727cf7f4a8b9cf85c94bc2d7841f357c0d44a3cc36349023045",
+      "bytes": 18688
+    },
+    "vendor/football/italy/it-union-brescia.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c9/Union_Brescia_crest.svg/250px-Union_Brescia_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "f629399c24a1c7ff29742d3a222bd61622e94a48bd49a8497ace06c79139bf59",
+      "sha256": "c770cef0d430ebcf20110732e5fa316107fc87419ec926804c1919b80c24d89c",
+      "bytes": 12220
+    },
+    "vendor/football/italy/it-atalanta-u23.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Atalanta_BC_new_logo.svg/250px-Atalanta_BC_new_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "5884d1e90a4beecc4bffc525c6e793ef64180956b8e889b0c6adcf140f6f9941",
+      "sha256": "09fc656ffd9289e28b8f9374c19069ea182b2e42d007a797a339dbbc67d1d1b4",
+      "bytes": 21120
+    },
+    "vendor/football/italy/it-campobasso.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Campobasso_FC_logo.svg/250px-Campobasso_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "6834d81d42773624be7f48e2f74d637f99978bfe46f031f15a9affc4bfbd3bb9",
+      "sha256": "e94efd02363824161bcd0a79b3362f307834858dc75b98826bb3cd59cedf28d1",
+      "bytes": 19352
+    },
+    "vendor/football/italy/it-forli.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b2/Forl%C3%AC_FC_logo.svg/250px-Forl%C3%AC_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "b9f1843bb9b0aa97869227a3bfd1fcf3868f321013f18f984d5ba2c2a196235a",
+      "sha256": "1008a46df9806f97f173698c1a92470116dcfbef5595d520286cb7a5abaf109e",
+      "bytes": 24802
+    },
+    "vendor/football/italy/it-grosseto.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3c/US_Grosseto_1912_logo.svg/250px-US_Grosseto_1912_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "6e7c4871233e768f90034a84b82642242413852037d4943f6d656aa6d82d7bbc",
+      "sha256": "f1792e2a7a7d1b09743bec25879eababd06f612036dbd71f81b52cf1f478d6ff",
+      "bytes": 39162
+    },
+    "vendor/football/italy/it-gubbio.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/AS_Gubbio_1910_crest.svg/250px-AS_Gubbio_1910_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "73645e8e2136e570635e6d44d0033aa96edb410780d58bd9a350e751c65ecdf6",
+      "sha256": "f342787acd1622098ed0d3554487c177f3e356c32e6bb3b398e73b4d3adda3c6",
+      "bytes": 27438
+    },
+    "vendor/football/italy/it-guidonia-montecelio.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d7/Guidonia_Montecelio_1937_FC_logo.svg/250px-Guidonia_Montecelio_1937_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e326d375808239cd51cb32593b665ba7410e2183c9506a0486acb9c505b3c74f",
+      "sha256": "20f165b70c7a8fa3c01360a51938cd57265166243a0993f5b69b1e35a1810dca",
+      "bytes": 35198
+    },
+    "vendor/football/italy/it-latina.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b3/Latina_Calcio_1932_crest.svg/250px-Latina_Calcio_1932_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "cd531e00110302bab2aa8eb236c0b081768dc27c87ab91ca79659adbe28d69a8",
+      "sha256": "0c746a176b294d2c48dd320b60e1e4f80d165fe599c46625f4259f1cc677d408",
+      "bytes": 22122
+    },
+    "vendor/football/italy/it-livorno.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Livorno-Stemma_semplificato.svg/250px-Livorno-Stemma_semplificato.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e2e48ee691430d0bc3088350a40c51e84184ec4bf34d28fcfa1f4ea696a2b888",
+      "sha256": "eb6c60e7012af53e60c0714aeb08e59a941df95420f75ea8f5bc320a938216e6",
+      "bytes": 24930
+    },
+    "vendor/football/italy/it-ostia-mare.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/75/AS_Ostia_Mare_Lido_Calcio_logo.svg/250px-AS_Ostia_Mare_Lido_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "4c23810f33e5e53d914ee87d7ee72ddeb52a081dfafeef1716ecb240903d9e5c",
+      "sha256": "ff4bebe3311c0d80023f1175d9dce1a2c811dd09081d444569e81ca45d9ded49",
+      "bytes": 55686
+    },
+    "vendor/football/italy/it-pescara.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/Delfino_Pescara_logo.svg/250px-Delfino_Pescara_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "54afea47c151e8ccb01bfe8c8e190c622c3c9dc6315e920ac90042faa6adfcc0",
+      "sha256": "295f50bb901506e7efdd68be79f95c52d77b6ebc39b0bb547e9266cb2bb6ed1c",
+      "bytes": 16630
+    },
+    "vendor/football/italy/it-perugia.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/08/Ac_Perugia_logo.svg/250px-Ac_Perugia_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "f1f28ca0129cf34bd474bb6b94f1e25312b2d45eb8ba9ad36ccb30430fed7679",
+      "sha256": "d3a9216a2b5929ade63aa6b077a3d0fa05547e14eb89dc148f1992a2036d969f",
+      "bytes": 22596
+    },
+    "vendor/football/italy/it-pianese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/US_Pianese_crest.svg/250px-US_Pianese_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "7b1c0baeed1bf5d95e2cab65583289931000f0149b6018c285444214f2714c77",
+      "sha256": "bd7f97656a7efec0971fdfc94cf706139a4d0c9ac158edf378138df9dd47a9f8",
+      "bytes": 10570
+    },
+    "vendor/football/italy/it-pineto.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/AS_Pineto_Calcio_crest.svg/250px-AS_Pineto_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "cbdc325e0e22a3f85a34d12c3f1e550f5dcb3f468a55e8ec7a1901594167c948",
+      "sha256": "ef1221b7aef844fb0d4c633cee8a333ccbd2c70f2cb12fafc2c49e64181d3dea",
+      "bytes": 26392
+    },
+    "vendor/football/italy/it-ravenna.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0f/Ravenna_FC_logo.svg/250px-Ravenna_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "c8e0b06ac3bcba81e32766b499a1f4adc375979883ae8762752c278056f7c6f7",
+      "sha256": "a61b50616a2d770ee0fad8e16b7d3017405c58ee45a61936e3d273ccf8a1d223",
+      "bytes": 23050
+    },
+    "vendor/football/italy/it-reggiana.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/00/AC_Reggiana_1919_crest.svg/250px-AC_Reggiana_1919_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "c9da74ff3d13581fb037bbd4062ef27f3e5b620bd0ebbc22946ea13be25383c3",
+      "sha256": "80213b5b6866289ec84db8b1413478b01421674e347560d7300c97fd5c98069b",
+      "bytes": 18780
+    },
+    "vendor/football/italy/it-sambenedettese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/AS_Sambenedettese_logo.svg/250px-AS_Sambenedettese_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "f3bbb4d46fc6f9cf4b43d056245f2c5abd0f93aae12a430834963306cb24a6a1",
+      "sha256": "800059f4cbab504aa58cf4a458fdff55e2f38855ba4a8dd7fb997fab44599fd0",
+      "bytes": 33546
+    },
+    "vendor/football/italy/it-spezia.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6f/Spezia_Calcio_crest.svg/250px-Spezia_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "bee1c75ca46d757b673c6f72211aa92ca805fb07dc56251f4f267af92f70f94c",
+      "sha256": "7791d9afbda7a42988e0285aa1010b5a82dfa942c3baa4ddf54d527afd4237da",
+      "bytes": 12044
+    },
+    "vendor/football/italy/it-torres.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/60/SEF_Torres_1903_crest.svg/250px-SEF_Torres_1903_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "6647ff80424ba624c1a4d7dc394da8b4f1ad23d7b337b108e79fcd7496bdce26",
+      "sha256": "2769ded8ff9cee0dee97577b2cba5b1c247dee4a642f4bf012275778681778d1",
+      "bytes": 17928
+    },
+    "vendor/football/italy/it-vado.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0a/FC_Vado_logo.svg/250px-FC_Vado_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "a4628fe05b26fb2733a433d1ca1c4daf95be2c0bd8ab32c5a1280460db91acb9",
+      "sha256": "85bb41daa7195ff805387e731bf4a1c6f449238bc70318463cee8d546b53aded",
+      "bytes": 17610
+    },
+    "vendor/football/italy/it-vis-pesaro.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9d/Vis_Pesaro_dal_1898_crest.svg/250px-Vis_Pesaro_dal_1898_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e290fc974a7d2745e80ef2e8a8cf6754bc2261869796d4e79a53c7d07fe24cd7",
+      "sha256": "cdb4a730b0e6f5f254e1516cd7a58479a5ed63d182b55a2fe568e195630cd6bf",
+      "bytes": 20526
+    },
+    "vendor/football/italy/it-altamura.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/14/Team_Altamura_logo.svg/250px-Team_Altamura_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "301e776b0c0a41aaf7c2560431f71597cf18432586475aaf6f94c53b0c8e581e",
+      "sha256": "248e1b9674dac3816c7bd46f313f81507b7a07a58436c1dfabfd3fbb1f4f2b8b",
+      "bytes": 25932
+    },
+    "vendor/football/italy/it-audace-cerignola.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/41/SS_Audace_Cerignola_crest.svg/250px-SS_Audace_Cerignola_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "bc80ba36387aa49240c8eece9c6ec3fb4ba4cb0fa82efdcce40d4ef0f2a0d24a",
+      "sha256": "aa14a741ef16d2b316f5c2cce66f3145651587cc526e7e901e473ea451591011",
+      "bytes": 42966
+    },
+    "vendor/football/italy/it-bari.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/SSC_Bari_crest.svg/250px-SSC_Bari_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "7a8306e7b402d70844cde7937925368150e84463f4b58d1a9122237be614378b",
+      "sha256": "5db601b1ac467d137aa083bf299babba4378836605fcc5586fa00ec059555b96",
+      "bytes": 11426
+    },
+    "vendor/football/italy/it-barletta.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/SS_Barletta_1922_logo.svg/250px-SS_Barletta_1922_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "cbbe198901f471521fcc97016c82ca35ed5396faf09e84c8f7b71eaee3554658",
+      "sha256": "ab9cbf4157c985a6b443196cf9d3fda1aaa8090a0e2ab959365d2f333df919af",
+      "bytes": 26890
+    },
+    "vendor/football/italy/it-casarano.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cd/Casarano_Calcio_logo.svg/250px-Casarano_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "d3b5ab4ab915be21af75dcf673e332ebd6251ca0f19168cd97453040203a8424",
+      "sha256": "555ac1948c7b90b0c50393073ee0c2a76435c51c8b6f83bdfd46fc17f7023040",
+      "bytes": 20894
+    },
+    "vendor/football/italy/it-casertana.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e5/Casertana_FC_logo.svg/250px-Casertana_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "aff67f6a478fe2e63c4d20f1bbc6acb7fa0d29361b720849632e72c96fd9f1dd",
+      "sha256": "19cf73ed81ac319abb091b67d283d89b34714cd3424b3734f671ccd12410cf00",
+      "bytes": 30990
+    },
+    "vendor/football/italy/it-catania.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Logo_CATANIA_FC.svg/250px-Logo_CATANIA_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "113c4de7069d1cd1888ea4c91985ac137725d4b3da2caa5e39f8328b21a12923",
+      "sha256": "59a95cd801ebcdae980f280c6eb55d88550c0097786cd06c2c0ba6d6a439f5e2",
+      "bytes": 11606
+    },
+    "vendor/football/italy/it-cavese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/26/Cavese_1919_crest.svg/250px-Cavese_1919_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "bf90ac0d2175306beedf13206b7aad6b24e001b11aa28357a8550202b5dbc21e",
+      "sha256": "704e0637f4747cb7541c71e9611748bdd054fad40882993b7d381ddaf78ef979",
+      "bytes": 21038
+    },
+    "vendor/football/italy/it-cosenza.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/Cosenza_Calcio_crest.svg/250px-Cosenza_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "1f6075141125a7f9d6c884d994901f180a288ebc8d3e753eb21187f9d24d29b0",
+      "sha256": "926ec4d22e1867e6e544f511a88521f9755b7e42c57a88e89810eebbbeb084cd",
+      "bytes": 21732
+    },
+    "vendor/football/italy/it-crotone.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/db/FC_Crotone_logo.svg/250px-FC_Crotone_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "71104aa369787c929d6ddab5d20dd63ae1c68c2cd744fdfac975b1a3733f9d73",
+      "sha256": "7c268b586ccff3092296429f5d68f22a0733ebffa2908c417c3d13139b478bab",
+      "bytes": 21316
+    },
+    "vendor/football/italy/it-foggia.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/21/Calcio_Foggia_1920_crest.svg/250px-Calcio_Foggia_1920_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "23d5a3dcbe403c2d51bcc1c98aab85a39f96a41358f0c640ff3c7ccdb525dc63",
+      "sha256": "770a814fa0504f344369778d1f25bbe891f507a7c8eb7689b7b17148c7eb2087",
+      "bytes": 20286
+    },
+    "vendor/football/italy/it-giugliano.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/64/Giugliano_Calcio_1928_crest.svg/250px-Giugliano_Calcio_1928_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "70284f259d67ef18df014e7ec0af977048e7c99c6228482daab5519355692736",
+      "sha256": "dcb52fc08d46fc7bdb6541340b673e27cb3ea95b7b05b65c7fe4e0e5788b9abd",
+      "bytes": 47888
+    },
+    "vendor/football/italy/it-inter-milan-u23.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/250px-FC_Internazionale_Milano_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "73dd64cca0278349197dc3f18a7126713358503c5f0f64014f1271ad6c3954d4",
+      "sha256": "00aa992b75e2952038f3b583deb60f98521e3fdfc210dd702d9ffff14ecc14c3",
+      "bytes": 13604
+    },
+    "vendor/football/italy/it-monopoli.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fc/SS_Monopoli_1966_crest.svg/250px-SS_Monopoli_1966_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "3c36dffab74bd62e3872a2d5ef1217bf0a5a6abd9e88c1e5feef9a974ad85e45",
+      "sha256": "71f08bceb98e35a01a7b2895a59911ae5a495c377fb95df469d4b43a0bcfde70",
+      "bytes": 31494
+    },
+    "vendor/football/italy/it-picerno.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a4/AZ_Picerno_crest.svg/250px-AZ_Picerno_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "ffde26f171bdabdf88a5d087ae57b53bb2be9f280b3f63b4a479f61e3609191b",
+      "sha256": "e2a92668516b50e94c4a3d4e4a04d12dde96b64841960eba7af7ce451bd5b1ed",
+      "bytes": 29642
+    },
+    "vendor/football/italy/it-potenza.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/da/Potenza_Calcio_crest.svg/250px-Potenza_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "675dfb878fb7499ee819f3e9e9ae8a3eb7c3ad1d2370245f186c61b3d47a1d31",
+      "sha256": "b67046ca1e14b0123c2cf9c78730772c6ee9847584a7a6ad71e9a63500926a0f",
+      "bytes": 19180
+    },
+    "vendor/football/italy/it-salernitana.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/US_Salernitana_1919_logo.svg/250px-US_Salernitana_1919_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "e9066db16b4eedc242a6f923f5721a87cee87f54135f2b29fd1f3290496355bd",
+      "sha256": "1bb3657398453600c293774f5650d6930ae89e6b63d73f6b75091ffdfc2ad906",
+      "bytes": 16194
+    },
+    "vendor/football/italy/it-savoia.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Coat_of_arms_of_the_Duchy_of_Savoy_%28XV-XVI_century%29.svg/250px-Coat_of_arms_of_the_Duchy_of_Savoy_%28XV-XVI_century%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "9d14296d544631820acfd78426d90844bf048bd273af8c70f2fba2be540a918b",
+      "sha256": "4d6dcc4e9c2df51f8dad04287797bdfc58dd4a27eefb91ec97771bc88ace7c60",
+      "bytes": 24148
+    },
+    "vendor/football/italy/it-scafatese.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/Scafatese_Calcio_1922_logo.svg/250px-Scafatese_Calcio_1922_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "7297cb468d9e1546d529706409de1160b6f1a3568266550adad6e140b807c440",
+      "sha256": "afaade61cb0a375eceb251fc8f7357f87fa115fbbc23bf4726940398c78b8bd0",
+      "bytes": 23364
+    },
+    "vendor/football/italy/it-sorrento.webp": {
+      "source": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cd/Sorrento_Calcio_1945_crest.svg/250px-Sorrento_Calcio_1945_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "inputSha256": "ba95664da5e9bc275ad496a6afc619832d8519601846124f5ef5b9658b3e66ad",
+      "sha256": "442dd97969c6aa793d0cfb4a124644e79ed3b0c0a03756e2303f777ebf602ec3",
+      "bytes": 24830
+    }
+  },
+  "crestCredit": "Club crests remain the marks of their respective owners; retained source URLs identify the original artwork."
+}

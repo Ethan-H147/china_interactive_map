@@ -1,0 +1,820 @@
+{
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "rosterSha256": "83e6b0dd25b034b33641f8d09fccc13b9fa1d9fd67a2ebfae5d1a6c71cf5ac1f",
+  "rosterFile": "scripts/football-sources/portugal/clubs.json",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Primeira Liga",
+      "count": 18,
+      "sourceUrl": "https://www.slbenfica.pt/pt-pt/agora/noticias/2026/07/02/futebol-benfica-calendario-liga-betclic-2026-27"
+    },
+    {
+      "tier": 2,
+      "name": "Liga Portugal 2",
+      "count": 18,
+      "sourceUrl": "https://www.ligaportugal.pt/news/28237/schedules-for-the-first-two-rounds-of-liga-meu-super"
+    },
+    {
+      "tier": 3,
+      "name": "Liga 3",
+      "count": 20,
+      "sourceUrl": "https://resultados.fpf.pt/Competition/Details?competitionId=23775&seasonId=106"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "FOOTBALL-pt-academico-de-viseu",
+      "en": "Académico de Viseu",
+      "city": "Viseu",
+      "stadium": "Estádio Municipal do Fontelo",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Fontelo",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A.C._Viseu.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-alverca",
+      "en": "Alverca",
+      "city": "Alverca do Ribatejo",
+      "stadium": "Complexo Desportivo FC Alverca",
+      "coordinateSource": "https://www.openstreetmap.org/way/1148238538",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f5/F.C._Alverca_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-arouca",
+      "en": "Arouca",
+      "city": "Arouca",
+      "stadium": "Estádio Municipal de Arouca",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Arouca",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9a/F.C._Arouca_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-benfica",
+      "en": "Benfica",
+      "city": "Lisbon",
+      "stadium": "Estádio da Luz",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Luz",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-braga",
+      "en": "Braga",
+      "city": "Braga",
+      "stadium": "Estádio Municipal de Braga",
+      "coordinateSource": "https://www.wikidata.org/entity/Q849239",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/79/S.C._Braga_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-casa-pia",
+      "en": "Casa Pia",
+      "city": "Rio Maior",
+      "stadium": "Estádio Municipal de Rio Maior",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Rio_Maior",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/68/Casa_Pia_A.C._logo.svg",
+      "note": "Lisbon-based club uses the municipal stadium in Rio Maior as its 2026–27 home ground."
+    },
+    {
+      "id": "FOOTBALL-pt-estoril-praia",
+      "en": "Estoril Praia",
+      "city": "Estoril",
+      "stadium": "Estádio António Coimbra da Mota",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Ant%C3%B3nio_Coimbra_da_Mota",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/94/GD_Estoril_Praia_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-estrela-da-amadora",
+      "en": "Estrela da Amadora",
+      "city": "Amadora",
+      "stadium": "Estádio José Gomes",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Jos%C3%A9_Gomes",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/0/08/S%C3%ADmbolo_Estrela_da_Amadora.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-famalicao",
+      "en": "Famalicão",
+      "city": "Vila Nova de Famalicão",
+      "stadium": "Estádio Municipal de Famalicão",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_22_de_Junho",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0e/F.C._Famalic%C3%A3o_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-gil-vicente",
+      "en": "Gil Vicente",
+      "city": "Barcelos",
+      "stadium": "Estádio Cidade de Barcelos",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Cidade_de_Barcelos",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/60/Gil_Vicente_F.C._logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-maritimo",
+      "en": "Marítimo",
+      "city": "Funchal",
+      "stadium": "Estádio do Marítimo",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Mar%C3%ADtimo",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/30/C.S._Mar%C3%ADtimo_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-moreirense",
+      "en": "Moreirense",
+      "city": "Moreira de Cónegos",
+      "stadium": "Estádio Comendador Joaquim de Almeida Freitas",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Parque_de_Jogos_Comendador_Joaquim_de_Almeida_Freitas",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/1b/Moreirense_Futebol_Clube_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-nacional",
+      "en": "Nacional",
+      "city": "Funchal",
+      "stadium": "Estádio da Madeira",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Madeira",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Nacional_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-porto",
+      "en": "Porto",
+      "city": "Porto",
+      "stadium": "Estádio do Dragão",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Drag%C3%A3o",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-rio-ave",
+      "en": "Rio Ave",
+      "city": "Vila do Conde",
+      "stadium": "Estadio dos Arcos",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Rio_Ave_FC",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0c/Rio_Ave_FC_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-santa-clara",
+      "en": "Santa Clara",
+      "city": "Ponta Delgada",
+      "stadium": "Estádio de São Miguel",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_de_S%C3%A3o_Miguel_(Ponta_Delgada)",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/37/C.D._Santa_Clara_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-sporting-cp",
+      "en": "Sporting CP",
+      "city": "Lisbon",
+      "stadium": "Estádio José Alvalade",
+      "coordinateSource": "https://www.wikidata.org/entity/Q287359",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-vitoria-de-guimaraes",
+      "en": "Vitória de Guimarães",
+      "city": "Guimarães",
+      "stadium": "Estádio D. Afonso Henriques",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_D._Afonso_Henriques",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-academica",
+      "en": "Académica",
+      "city": "Coimbra",
+      "stadium": "Estádio Cidade de Coimbra",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Cidade_de_Coimbra",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f8/Acad%C3%A9mica_de_Coimbra_%28football%29_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-afs",
+      "en": "AVS",
+      "city": "Vila das Aves",
+      "stadium": "Estádio do Clube Desportivo das Aves",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_CD_Aves",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/34/AVS_Futebol_SAD_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-amarante",
+      "en": "Amarante",
+      "city": "Amarante",
+      "stadium": "Estádio Municipal de Amarante",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Amarante",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/1a/Amarante_F.C._logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-benfica-b",
+      "en": "Benfica B",
+      "city": "Seixal",
+      "stadium": "Benfica Campus - Campo n.° 1",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Benfica_Campus",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-chaves",
+      "en": "Chaves",
+      "city": "Chaves",
+      "stadium": "Estádio Municipal Eng.° Manuel Branco Teixeira",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Eng._Manuel_Branco_Teixeira",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/18/G.D._Chaves_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-farense",
+      "en": "Farense",
+      "city": "Faro",
+      "stadium": "Estádio de São Luís",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_de_S%C3%A3o_Lu%C3%ADs",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/be/S.C._Farense_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-feirense",
+      "en": "Feirense",
+      "city": "Santa Maria da Feira",
+      "stadium": "Estádio Marcolino Castro",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Marcolino_de_Castro",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/2d/C.D._Feirense_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-felgueiras",
+      "en": "Felgueiras",
+      "city": "Felgueiras",
+      "stadium": "Estádio Dr. Machado de Matos",
+      "coordinateSource": "https://www.wikidata.org/entity/Q10276896",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f2/F.C._Felgueiras_%282006%29_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-leixoes",
+      "en": "Leixões",
+      "city": "Matosinhos",
+      "stadium": "Estádio do Mar",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Mar",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9d/Leix%C3%B5es_S.C._logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-lusitania-lourosa",
+      "en": "Lusitânia Lourosa",
+      "city": "Lourosa",
+      "stadium": "Estádio do Lusitânia de Lourosa FC",
+      "coordinateSource": "https://www.openstreetmap.org/way/870819809",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/45/Lusit%C3%A2nia_F.C._logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-penafiel",
+      "en": "Penafiel",
+      "city": "Penafiel",
+      "stadium": "Estádio Municipal 25 de Abril",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_25_de_Abril",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/ff/F.C._Penafiel_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-portimonense",
+      "en": "Portimonense",
+      "city": "Portimão",
+      "stadium": "Estádio Municipal de Portimão",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Portim%C3%A3o",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c0/Portimonense_Sporting_Clube_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-porto-b",
+      "en": "Porto B",
+      "city": "Olival, Vila Nova de Gaia",
+      "stadium": "Estádio Luís Filipe Menezes",
+      "coordinateSource": "https://www.openstreetmap.org/way/1003177522",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+      "note": "Reserve side plays at Estádio Luís Filipe Menezes in Olival, not Estádio do Dragão."
+    },
+    {
+      "id": "FOOTBALL-pt-sporting-cp-b",
+      "en": "Sporting CP B",
+      "city": "Alcochete",
+      "stadium": "Estádio Aurélio Pereira",
+      "coordinateSource": "https://www.openstreetmap.org/way/135459411",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-tondela",
+      "en": "Tondela",
+      "city": "Tondela",
+      "stadium": "Estádio João Cardoso",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Jo%C3%A3o_Cardoso",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Tondela_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-torreense",
+      "en": "Torreense",
+      "city": "Torres Vedras",
+      "stadium": "Estádio Manuel Marques",
+      "coordinateSource": "https://www.wikidata.org/entity/Q5028447",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dc/S.C.U._Torreense_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-uniao-de-leiria",
+      "en": "União de Leiria",
+      "city": "Leiria",
+      "stadium": "Estádio Dr. Magalhães Pessoa",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Dr._Magalh%C3%A3es_Pessoa",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e5/U.D._Leiria_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-vizela",
+      "en": "Vizela",
+      "city": "Vizela",
+      "stadium": "Estádio do Futebol Clube de Vizela",
+      "coordinateSource": "https://www.wikidata.org/entity/Q3514314",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a2/F.C._Vizela_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-fafe",
+      "en": "Fafe",
+      "city": "Fafe",
+      "stadium": "Estádio Municipal de Fafe",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Fafe",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9b/AD_Fafe_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-leca",
+      "en": "Leça",
+      "city": "Leça da Palmeira",
+      "stadium": "Estádio do Leça FC",
+      "coordinateSource": "https://www.openstreetmap.org/relation/6693198",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/pt/d/de/Leca_FC.png"
+    },
+    {
+      "id": "FOOTBALL-pt-marco-09",
+      "en": "Marco 09",
+      "city": "Marco de Canaveses",
+      "stadium": "Estádio Municipal do Marco de Canaveses",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_do_Marco_de_Canaveses",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/01/A.D._Marco_09_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-pacos-de-ferreira",
+      "en": "Paços de Ferreira",
+      "city": "Paços de Ferreira",
+      "stadium": "Estádio Capital do Móvel",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Capital_do_M%C3%B3vel",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/73/F.C._Pa%C3%A7os_de_Ferreira.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-paredes",
+      "en": "Paredes",
+      "city": "Paredes",
+      "stadium": "Estádio Municipal das Laranjeiras",
+      "coordinateSource": "https://www.openstreetmap.org/way/108386145",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a0/U.S.C._Paredes_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-sao-joao-de-ver",
+      "en": "São João de Ver",
+      "city": "São João de Ver",
+      "stadium": "Estádio Sporting Clube São João de Ver",
+      "coordinateSource": "https://www.openstreetmap.org/way/700433961",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/08/SC_S%C3%A3o_Jo%C3%A3o_de_Ver_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-trofense",
+      "en": "Trofense",
+      "city": "Trofa",
+      "stadium": "Estádio do Clube Desportivo Trofense",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_CD_Trofense",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/41/C.D._Trofense_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-varzim",
+      "en": "Varzim",
+      "city": "Póvoa de Varzim",
+      "stadium": "Estádio do Varzim Sport Club",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Varzim_Sport_Club",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/43/Varzim_S.C._logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-vianense",
+      "en": "Vianense",
+      "city": "Viana do Castelo",
+      "stadium": "Estádio Dr. José de Matos",
+      "coordinateSource": "https://www.openstreetmap.org/way/1001503638",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/06/SC_Vianense_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-vitoria-sc-b",
+      "en": "Vitória SC B",
+      "city": "Guimarães",
+      "stadium": "Academia Vitória SC — Campo 5",
+      "coordinateSource": "https://www.openstreetmap.org/way/130705820",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+      "note": "Reserve side plays on Campo 5 at the academy, not the first team’s Estádio D. Afonso Henriques."
+    },
+    {
+      "id": "FOOTBALL-pt-atletico-cp",
+      "en": "Atlético CP",
+      "city": "Lisbon",
+      "stadium": "Estádio da Tapadinha",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Tapadinha",
+      "crestSource": "https://static.wixstatic.com/media/d7ecec_5b3f5170f4144822be14e2313005b592~mv2.png"
+    },
+    {
+      "id": "FOOTBALL-pt-belenenses",
+      "en": "Belenenses",
+      "city": "Lisbon",
+      "stadium": "Estádio do Restelo",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Restelo",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/08/C.F._Os_Belenenses_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-caldas",
+      "en": "Caldas",
+      "city": "Caldas da Rainha",
+      "stadium": "Campo da Mata",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2935537",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/fd/Caldas_S.C._logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-louletano",
+      "en": "Louletano",
+      "city": "São João da Venda, Almancil",
+      "stadium": "Estádio Algarve",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Algarve",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/pt/3/33/Louletano_DC.png",
+      "note": "Estádio Algarve is by São João da Venda on the Faro–Loulé municipal boundary."
+    },
+    {
+      "id": "FOOTBALL-pt-lusitano-evora",
+      "en": "Lusitano Évora",
+      "city": "Évora",
+      "stadium": "Campo Estrela",
+      "coordinateSource": "https://www.wikidata.org/entity/Q97085787",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lusitano_%C3%89vora.png"
+    },
+    {
+      "id": "FOOTBALL-pt-mafra",
+      "en": "Mafra",
+      "city": "Mafra",
+      "stadium": "Estádio Municipal de Mafra",
+      "coordinateSource": "https://www.cm-mafra.pt/pages/1025?poi_id=27",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/18/C.D._Mafra_logo.svg",
+      "note": "Municipal stadium location comes from the municipality’s map; excludes the separately named training pitch immediately south."
+    },
+    {
+      "id": "FOOTBALL-pt-oliveirense",
+      "en": "Oliveirense",
+      "city": "Oliveira de Azeméis",
+      "stadium": "Estádio Carlos Osório",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Carlos_Os%C3%B3rio",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dd/U.D._Oliveirense_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-sp-covilha",
+      "en": "Sporting Covilhã",
+      "city": "Covilhã",
+      "stadium": "Estádio Municipal José dos Santos Pinto",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Jos%C3%A9_dos_Santos_Pinto",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/22/S.C._Covilh%C3%A3_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-uniao-de-santarem",
+      "en": "União de Santarém",
+      "city": "Santarém",
+      "stadium": "Campo Chã das Padeiras",
+      "coordinateSource": "https://www.openstreetmap.org/way/1293721404",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c9/Uni%C3%A3o_de_Santar%C3%A9m_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-pt-vitoria-sernache",
+      "en": "Vitória Sernache",
+      "city": "Cernache do Bonjardim",
+      "stadium": "Estádio Municipal D. Nuno Álvares Pereira",
+      "coordinateSource": "https://www.jf-cernachebonjardim.pt/freguesia/locais-a-visitar/10-estadio_municipal_d_nuno_alvares_pereira",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7a/G.D._Vit%C3%B3ria_de_Sernache_logo.svg"
+    }
+  ],
+  "images": {
+    "vendor/football/portugal/pt-academico-de-viseu.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A.C._Viseu.svg",
+      "inputSha256": "927d5af6ac51c927a2289fcf62cabf06c888e65ee1e5803a6f0efa5ca1f89bb4",
+      "sha256": "709c1c8c950c0b527398840412b9418709d1f16999f07833471ba8fe8a2a87bd",
+      "bytes": 8052
+    },
+    "vendor/football/portugal/pt-alverca.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/f5/F.C._Alverca_logo.svg",
+      "inputSha256": "c3298712c3f7746273009d3f9b099b63561b364e3a78218d95e3c456372b4a3a",
+      "sha256": "d220d54aaa1c1db74690ab951b9130ab942846d5bd3d5a2bdf49b82c1c48f6bd",
+      "bytes": 24910
+    },
+    "vendor/football/portugal/pt-arouca.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/9a/F.C._Arouca_logo.svg",
+      "inputSha256": "74ef2a6294b22722e59a2aa0c852b77fea093c177cfe6cc89ccf06e555a8eced",
+      "sha256": "0a8b8b75a249b825b6ea2f3c07f9ec18e6ee3300afe506c712f15117eeedd6f2",
+      "bytes": 39366
+    },
+    "vendor/football/portugal/pt-benfica.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+      "inputSha256": "edd0683c6f36b8726018b2f8215c78df9afd6f0d754f3546da2ac96e43d927dc",
+      "sha256": "aff83e318e144fabc4a56348be00b7fad8c0c6ccc785a662cbfd9e5e003d76f6",
+      "bytes": 34798
+    },
+    "vendor/football/portugal/pt-braga.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/79/S.C._Braga_logo.svg",
+      "inputSha256": "0766c08809332791e78611e7bc7ab8776b3b0d7744413bbbd66e0b2f7213170a",
+      "sha256": "f9565ae855430bb3d19c74849b69d616591c7a8bb4afcd6f4d0c93825bb99827",
+      "bytes": 25886
+    },
+    "vendor/football/portugal/pt-casa-pia.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/68/Casa_Pia_A.C._logo.svg",
+      "inputSha256": "710022dcd7f81a4c6b6e7024e40d9155d2c5535f1f7eb8779ab96aaa747a7afc",
+      "sha256": "7c7a4dff24ac63db1c13e65b010fe6b39a9aea4c7afddcd09d44ec623e60b5d0",
+      "bytes": 11254
+    },
+    "vendor/football/portugal/pt-estoril-praia.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/94/GD_Estoril_Praia_logo.svg",
+      "inputSha256": "fd26579df2b8d1377b9db07b1d6905938ac6ae601f0ae0715bfb3bb9622ba694",
+      "sha256": "c2cead141e2cae14480bbfaf1fe019b32d8cc23b46a87cfd542917d98f4ae019",
+      "bytes": 17126
+    },
+    "vendor/football/portugal/pt-estrela-da-amadora.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/0/08/S%C3%ADmbolo_Estrela_da_Amadora.svg",
+      "inputSha256": "ae7fbc0e865eb124b0495fdf9e2e1261f6ff8bff4c5e768bf101cbc6e51e978a",
+      "sha256": "1260e74639573e8fe0c39efadcf9fed55c41acc7032377c57f110fe7d7a76def",
+      "bytes": 18388
+    },
+    "vendor/football/portugal/pt-famalicao.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/0e/F.C._Famalic%C3%A3o_logo.svg",
+      "inputSha256": "a5978cc98ee1f705b26f940bc70bc605ad8985157691b4ceb056820edf57b0d3",
+      "sha256": "2a3368508bf17d157c1894cae1de6a8a708cd6fc2fa123f075598113e4ccf064",
+      "bytes": 33586
+    },
+    "vendor/football/portugal/pt-gil-vicente.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/60/Gil_Vicente_F.C._logo.svg",
+      "inputSha256": "64f55d5b9d2c13618df99c485b8dfc161c541d785a6b0f45619fe89f1eb98207",
+      "sha256": "9c60f934a0613850124ec9b10a79cf781b3eec725909acd6e01ca406656883df",
+      "bytes": 23798
+    },
+    "vendor/football/portugal/pt-maritimo.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/3/30/C.S._Mar%C3%ADtimo_logo.svg",
+      "inputSha256": "c49b09cd979cfc82cdf4f1757827d709b9f263f12d9b8d205b345b4a3ad89d9c",
+      "sha256": "185c58792dae1a2791fba39eb999b59f46af15d375aee481ed2283319b2af34c",
+      "bytes": 44740
+    },
+    "vendor/football/portugal/pt-moreirense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/1b/Moreirense_Futebol_Clube_logo.svg",
+      "inputSha256": "5a516e86197e5bd076f7eade1debb78d1a66b083ed51d877825eac4f91fc7f09",
+      "sha256": "95c4108c5e4217116b38283044876f9eaee5905429b5816d79472122a4b6fef9",
+      "bytes": 9120
+    },
+    "vendor/football/portugal/pt-nacional.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Nacional_logo.svg",
+      "inputSha256": "ece9153612be2213ea1c6316d5f9057825522e29f39624951fa0f68d32cdc614",
+      "sha256": "9b624f84c76959d2ee23fc150aa55d91f282f9686ec34e2a0656e36a5cce7d98",
+      "bytes": 30414
+    },
+    "vendor/football/portugal/pt-porto.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+      "inputSha256": "a38355ca7341c67aa6f167835123eb6ab8c0c6676e520a14461b412aa4b9e305",
+      "sha256": "5ca7d2e3e4db1823aaa1201369f648d1431382c16c6e8508b6e455c9ff8af8cf",
+      "bytes": 32236
+    },
+    "vendor/football/portugal/pt-rio-ave.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/0c/Rio_Ave_FC_logo.svg",
+      "inputSha256": "decdc9ebb7408b0c9e1aa09fc80ff31f70dcd702b7d1152bc58105daceffa7b0",
+      "sha256": "1a271d9d4637f15dc18a91c52a50aabb5bdacf061b1228302398d77a3a8d9fbf",
+      "bytes": 28372
+    },
+    "vendor/football/portugal/pt-santa-clara.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/3/37/C.D._Santa_Clara_logo.svg",
+      "inputSha256": "e16b1df31881881122f2a9a7de350259d58bee24597b5e70d89845f952ef4ae8",
+      "sha256": "35bb2f18ee15c1f7a1be057021bbbe615c9af7a47d1c4eb740c01f2c0964a25f",
+      "bytes": 20726
+    },
+    "vendor/football/portugal/pt-sporting-cp.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+      "inputSha256": "fadaadf2c2032df662364ccc064ebabc0ef6722b2ee45be3488495857a8ec8fc",
+      "sha256": "2dc4ec1ef2f1941d986604e2ed01c4f6cd061f8f947c16884b581febe7e2dcd5",
+      "bytes": 21746
+    },
+    "vendor/football/portugal/pt-vitoria-de-guimaraes.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+      "inputSha256": "49a6b214aa396044327a6cb59f134247e62e1f06f546fd14f0773d9d489391ef",
+      "sha256": "b02a84b2b432a489657c76d08aa9acaea2c04003629e8df8eea002a1445dafa2",
+      "bytes": 12108
+    },
+    "vendor/football/portugal/pt-academica.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/f8/Acad%C3%A9mica_de_Coimbra_%28football%29_logo.svg",
+      "inputSha256": "132af1df2782f7eeaf9b4b6c3b69e6e65157e523334ad1f86f52dc2152f95d6e",
+      "sha256": "476fa3d3b22266415eb3213ca443cf6b8d67a05ee79e1faa6c2f80b89226eff7",
+      "bytes": 4008
+    },
+    "vendor/football/portugal/pt-afs.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/3/34/AVS_Futebol_SAD_logo.svg",
+      "inputSha256": "4ad1ac606257cec0be9dc03c8b5becccdf92a0cfe518f8d47a5a10daaf2e4ddc",
+      "sha256": "d503ca09fbbf492ef2341c15b7ae26dc651c3fb836b59ba33413f06be89102b4",
+      "bytes": 11152
+    },
+    "vendor/football/portugal/pt-amarante.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/1a/Amarante_F.C._logo.svg",
+      "inputSha256": "8d10e3592b439f8790b532ed7a1cb85a0ac4eb1f18c2aa1aeb03903c972fd9a6",
+      "sha256": "757bf5ac5849859d722da9a516e42de14a1847865c3b7a8cf3115568773fd380",
+      "bytes": 25484
+    },
+    "vendor/football/portugal/pt-benfica-b.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+      "inputSha256": "03b48c4db052f73680c1df677c0eb75008f8ff81f662a0fa70bfe154b5d2d6fc",
+      "sha256": "94abde373b20f711143de6c385bcc117a9a43930a1ece77bd2013b2be47bed3e",
+      "bytes": 34540
+    },
+    "vendor/football/portugal/pt-chaves.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/18/G.D._Chaves_logo.svg",
+      "inputSha256": "0df914802ca2c80d8ca911375355fa9f873c0cb0246a1b201d6a46bce2529f0e",
+      "sha256": "ab17b3ccba32bad753e01359248bdfd9a10c0c293c3b0e2a0d977a219bb1bf3d",
+      "bytes": 29232
+    },
+    "vendor/football/portugal/pt-farense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/b/be/S.C._Farense_logo.svg",
+      "inputSha256": "2b5ad543ad0e7986b95e169cee8fede20a4354059920768ab3874adf632f2236",
+      "sha256": "da050a184ffb83b1149a93c1ebda6d6e597e9eef4bcfcbe3fc5cb68ebd18e8df",
+      "bytes": 23080
+    },
+    "vendor/football/portugal/pt-feirense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/2d/C.D._Feirense_logo.svg",
+      "inputSha256": "642e5ea3239c5b8681bf56e83aa146ec6a8e97bce8ccc261e449afe07ef61563",
+      "sha256": "9d6c8b3b888d51cd2344632b2d6dcdc9e8e5238bd087299b9a447dc3700b1b89",
+      "bytes": 38648
+    },
+    "vendor/football/portugal/pt-felgueiras.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/f2/F.C._Felgueiras_%282006%29_logo.svg",
+      "inputSha256": "55974b80ce301f37dd2a94ed689fa5276b62b480e001b09536050cb43e25fe4e",
+      "sha256": "d3299216545f4b0e0b8cc5a1d0e31e9f9e0da061f212998626078ae4961e8ba1",
+      "bytes": 31278
+    },
+    "vendor/football/portugal/pt-leixoes.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/9d/Leix%C3%B5es_S.C._logo.svg",
+      "inputSha256": "b4c55b0e24965aa0c05d5c32cbc34eb58fb9e1c6ffea2052086844a12e9e9741",
+      "sha256": "e795520b52d130ae694e511970ed788163deb8bf5584f4d6ab55a00bc0d47131",
+      "bytes": 29940
+    },
+    "vendor/football/portugal/pt-lusitania-lourosa.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/45/Lusit%C3%A2nia_F.C._logo.svg",
+      "inputSha256": "42272de3690529f65308c1a93680c836e0df5c7ef2ad0afad2ddaa137445445a",
+      "sha256": "f32c2312b8e8932261a2e6e4b845017c3369ee5d2914b4db7f32b349a46e90d0",
+      "bytes": 35454
+    },
+    "vendor/football/portugal/pt-penafiel.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/ff/F.C._Penafiel_logo.svg",
+      "inputSha256": "8e1626184a7fa339da95d988a5bcc85aaf9bdb5c11a856c9976ad5616392b929",
+      "sha256": "aafa4d0316896d0455be4e99c54876762b4af0e95581957c10d5bd4ce4f59e77",
+      "bytes": 26792
+    },
+    "vendor/football/portugal/pt-portimonense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/c0/Portimonense_Sporting_Clube_logo.svg",
+      "inputSha256": "1393e7e6f94ced9fa400e4418e88e0d815a3a8b0ba8345ed9ae2c13719e15730",
+      "sha256": "d694260d76332f89c514a31b600790d70e50197ae2cad8bd1296da78924591e6",
+      "bytes": 20630
+    },
+    "vendor/football/portugal/pt-porto-b.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+      "inputSha256": "a38355ca7341c67aa6f167835123eb6ab8c0c6676e520a14461b412aa4b9e305",
+      "sha256": "5ca7d2e3e4db1823aaa1201369f648d1431382c16c6e8508b6e455c9ff8af8cf",
+      "bytes": 32236
+    },
+    "vendor/football/portugal/pt-sporting-cp-b.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+      "inputSha256": "fadaadf2c2032df662364ccc064ebabc0ef6722b2ee45be3488495857a8ec8fc",
+      "sha256": "2dc4ec1ef2f1941d986604e2ed01c4f6cd061f8f947c16884b581febe7e2dcd5",
+      "bytes": 21746
+    },
+    "vendor/football/portugal/pt-tondela.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Tondela_logo.svg",
+      "inputSha256": "2c4bd3bb958a67c2182f59eaf45eed33a0146cfd760fcda94d373141c8345ff7",
+      "sha256": "04f2b7e8facd25bbff0a655730ec835937538a56a53205849a4a908b00eea4fa",
+      "bytes": 16080
+    },
+    "vendor/football/portugal/pt-torreense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/dc/S.C.U._Torreense_logo.svg",
+      "inputSha256": "4aac167ec8f7060245a26b0b431fda8c3b114b32b8208662788393f93abb0c22",
+      "sha256": "60558ac8922a32f43313bdfee771188a9cbf23a44dab6786c8f472a12cd818e1",
+      "bytes": 31534
+    },
+    "vendor/football/portugal/pt-uniao-de-leiria.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/e5/U.D._Leiria_logo.svg",
+      "inputSha256": "0a351d23e8505d9de46ebb0dfced6ae5f73bfacd0a4e64ba51acee5a1e9adeed",
+      "sha256": "1ad64767bef6866a9193e020e711038cc87a8a892467c2279ef61fa251bf1381",
+      "bytes": 46488
+    },
+    "vendor/football/portugal/pt-vizela.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/a/a2/F.C._Vizela_logo.svg",
+      "inputSha256": "032024e27859a5a5bbdc88e13dc39720cf8703986ada1a866d046ff7665a02b0",
+      "sha256": "6c436ac7dfcc677ad9681fa66236848138941edeb182ab074b250ea7310aeb68",
+      "bytes": 17530
+    },
+    "vendor/football/portugal/pt-fafe.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/9b/AD_Fafe_logo.svg",
+      "inputSha256": "a4569b883c38e026591ddb687c3e965a1d0ef580b0618ede3498432f56e46ea9",
+      "sha256": "3c9aaf2243f53c8c48726c78c7803d47af4daf0062cd2e358d131587fe0c880e",
+      "bytes": 24482
+    },
+    "vendor/football/portugal/pt-leca.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/pt/d/de/Leca_FC.png",
+      "inputSha256": "c2673d51976aec59894675fa2346bb045d6e62c6d3043ec85e9c338f59d2f8be",
+      "sha256": "1f40ac9ae574489304c032657634d17e3cd5bbb230e7a127720abbdb34039188",
+      "bytes": 21860
+    },
+    "vendor/football/portugal/pt-marco-09.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/01/A.D._Marco_09_logo.svg",
+      "inputSha256": "989f0ea3edc32255a12f1004e33ff86f59b629e6c88e5f5aa9f4ca49c589bf5e",
+      "sha256": "59c1808b0fb93591db492291535faf3b2678b98049d78444e49c622581da8c49",
+      "bytes": 16598
+    },
+    "vendor/football/portugal/pt-pacos-de-ferreira.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/73/F.C._Pa%C3%A7os_de_Ferreira.svg",
+      "inputSha256": "3ef6b0c820226a838b5364c814b515d140ca07f8bf5dc990f3cc230948285d56",
+      "sha256": "ac459a1d0cb737c05062ef6e6cae43b7a3f3f6b4be12af4bcb175303efcc0d1a",
+      "bytes": 22050
+    },
+    "vendor/football/portugal/pt-paredes.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/a/a0/U.S.C._Paredes_logo.svg",
+      "inputSha256": "68dc4d1583886fffefbd75ed3928a5a49e783faaa18da3c12ca623dcc59aab88",
+      "sha256": "d3a23c3795f6291dfb07f14c689eeceec0b1058e4f073b0f11b52f1613c8b166",
+      "bytes": 31658
+    },
+    "vendor/football/portugal/pt-sao-joao-de-ver.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/08/SC_S%C3%A3o_Jo%C3%A3o_de_Ver_logo.svg",
+      "inputSha256": "ccfc7079129411a29450877fe50fde3cb6fc088106030446cac79e926f7c4595",
+      "sha256": "f499fb6012ae355b0d56033344e79e17a79cd38cea02272165752b7fe9ba18eb",
+      "bytes": 16054
+    },
+    "vendor/football/portugal/pt-trofense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/41/C.D._Trofense_logo.svg",
+      "inputSha256": "b0298514c6dd9fa02d7491d07cb46060b5c20a6ae0020e067f219bf4d6f17c52",
+      "sha256": "a55625305bff774ce315d80e87deb7d1dfe7eb960da6a253d0f1eb7a79e8363c",
+      "bytes": 41632
+    },
+    "vendor/football/portugal/pt-varzim.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/43/Varzim_S.C._logo.svg",
+      "inputSha256": "617b557fd29a7e715fa50cadc5317edaad3df9f25adb848945caad481b2c01bb",
+      "sha256": "6f3e20b1b9fd83314c88db8d858ca6acf1d1c05d4c9d7a1d35f6928e15242ec4",
+      "bytes": 32464
+    },
+    "vendor/football/portugal/pt-vianense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/06/SC_Vianense_logo.svg",
+      "inputSha256": "c8cc89bc54500899507225ac391992a0324fbd823788756f0f1bedca29e9a0e1",
+      "sha256": "5101ec8ddb824fd75a58f13dd7066a0a37b31bc7344c2ab66127e1d2cea7b80e",
+      "bytes": 23712
+    },
+    "vendor/football/portugal/pt-vitoria-sc-b.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+      "inputSha256": "49a6b214aa396044327a6cb59f134247e62e1f06f546fd14f0773d9d489391ef",
+      "sha256": "b02a84b2b432a489657c76d08aa9acaea2c04003629e8df8eea002a1445dafa2",
+      "bytes": 12108
+    },
+    "vendor/football/portugal/pt-atletico-cp.webp": {
+      "source": "https://static.wixstatic.com/media/d7ecec_5b3f5170f4144822be14e2313005b592~mv2.png",
+      "inputSha256": "3dc3e519f0838584f5ee02e3538c17dae92f6d9b097772cae874b61371323e35",
+      "sha256": "328b537d621fe99701bc2c4fbdcf577842988b83bcc9f0a20d6809bcef8bee98",
+      "bytes": 18948
+    },
+    "vendor/football/portugal/pt-belenenses.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/08/C.F._Os_Belenenses_logo.svg",
+      "inputSha256": "e7f1b7a2590fb8603f3f221a529d2cf9a5fe0d272fbfa918484879092e8d8928",
+      "sha256": "17890ebd03b1ed99aee721891c7f9bbdbec34c376f891b59fa89536ec430d402",
+      "bytes": 15642
+    },
+    "vendor/football/portugal/pt-caldas.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/fd/Caldas_S.C._logo.svg",
+      "inputSha256": "e5ff639f8bd54de2d5cb38cd8dbdf19ebf43b6446279778eafdd42c5f1a1a514",
+      "sha256": "7e32e2fb4f6716f07de5abfd959835549cd25437b11b35bbe10085f4666cdd98",
+      "bytes": 30342
+    },
+    "vendor/football/portugal/pt-louletano.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/pt/3/33/Louletano_DC.png",
+      "inputSha256": "e9962ab40465dbc55ca41cb813bc0b07db489758ff970c38a073679ca4d3ed98",
+      "sha256": "3e2d5167d53d9113aaa1aafd721d938fb050f2d41246f6d5b44691088c837dd3",
+      "bytes": 11916
+    },
+    "vendor/football/portugal/pt-lusitano-evora.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lusitano_%C3%89vora.png",
+      "inputSha256": "18af925e288b259c78edda37430ff493b2816dfee2ca8fbb5848258514420964",
+      "sha256": "5d3bd5f69a0b3303d335c49f8451906484784526bf35d64e86313bde2aa29dd5",
+      "bytes": 23972
+    },
+    "vendor/football/portugal/pt-mafra.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/18/C.D._Mafra_logo.svg",
+      "inputSha256": "73e0d367d262089598bd4a1b5fbdca26417208a3e18311b413601893c838ff18",
+      "sha256": "48c013acc185ffdd78a852fe059733767a81bb913120c95eef6777048367c136",
+      "bytes": 16106
+    },
+    "vendor/football/portugal/pt-oliveirense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/dd/U.D._Oliveirense_logo.svg",
+      "inputSha256": "7aebd62ff2593c97e5e95d86081ed5c40cc8f6f5af9f103318fc014b7eb4e45d",
+      "sha256": "ea54c8e0479e4201d4ea00b031cee22d90c49c5fa038fc11acf14fd2e42065d5",
+      "bytes": 23466
+    },
+    "vendor/football/portugal/pt-sp-covilha.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/22/S.C._Covilh%C3%A3_logo.svg",
+      "inputSha256": "a0d657aab3f1a2cda51558b884a1d9ee9c7512f900f5b9e1177ec2eef42fa355",
+      "sha256": "7b98f1772dc814c6dd918d19ca646c74f321950364a629fa8a895c66ff994e36",
+      "bytes": 20478
+    },
+    "vendor/football/portugal/pt-uniao-de-santarem.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/c9/Uni%C3%A3o_de_Santar%C3%A9m_logo.svg",
+      "inputSha256": "0792e481c9727097076d62dad0cf27a5730ece3423c9b5c50b1aa4bb49246b13",
+      "sha256": "cc452d95ee6fcb00d3583f331a76845f1802c2f2b16073f638aa48ce3ac039fb",
+      "bytes": 28560
+    },
+    "vendor/football/portugal/pt-vitoria-sernache.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/7a/G.D._Vit%C3%B3ria_de_Sernache_logo.svg",
+      "inputSha256": "8d396d398bac60ad72dc6b64246405822256647a94aafecc86083c2512211941",
+      "sha256": "60ce19d124b6f123ccfad5dae8d1941d79d4b7525f1d30839c83457f37aab376",
+      "bytes": 22662
+    }
+  },
+  "crestCredit": "Club crests remain the marks of their respective owners; retained source URLs identify the original artwork."
+}

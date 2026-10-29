@@ -426,6 +426,9 @@
     "test:us-misc-quiz": "node scripts/validate-us-misc-quiz.mjs && node scripts/browser/run.mjs us-misc-quiz",
     "fetch:caribbean": "node scripts/fetch-caribbean.mjs",
     "build:caribbean": "npm run fetch:caribbean && node scripts/register-caribbean.mjs && node --max-old-space-size=10000 scripts/build-caribbean.mjs && node --max-old-space-size=10000 scripts/build-caribbean-assets.mjs",
-    "test:caribbean": "node scripts/validate-caribbean.mjs && node scripts/browser/run.mjs caribbean"
+    "test:caribbean": "node scripts/validate-caribbean.mjs && node scripts/browser/run.mjs caribbean",
+    "build:football-quizzes": "node scripts/build-football-quizzes.mjs",
+    "test:football-quizzes": "node scripts/validate-football-quizzes.mjs && node scripts/browser/run.mjs football-quiz football-shared-grounds football-preview-selection",
+    "test:falkland-background": "node scripts/validate-falkland-background.mjs && node scripts/browser/run.mjs falkland-background"
   }
 }

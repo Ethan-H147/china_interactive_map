@@ -1,0 +1,254 @@
+[
+  {
+    "en": "AFC",
+    "city": "Amsterdam",
+    "stadium": "Sportpark Goed Genoeg",
+    "clubWiki": "https://nl.wikipedia.org/wiki/Amsterdamsche_Football_Club",
+    "stadiumWiki": "",
+    "id": "nl-afc",
+    "crest": "nl-afc.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/commons/d/de/Amsterdamsche_FC_%28logo%29.svg",
+    "aliases": [
+      "Amsterdamsche FC"
+    ],
+    "wikidata": "Q2588082"
+  },
+  {
+    "en": "BVV Barendrecht",
+    "city": "Barendrecht",
+    "stadium": "Sportpark De Bongerd",
+    "clubWiki": "https://nl.wikipedia.org/wiki/BVV_Barendrecht",
+    "stadiumWiki": "",
+    "id": "nl-bvv-barendrecht",
+    "crest": "nl-bvv-barendrecht.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/43/BVV_Barendrecht_logo.svg",
+    "aliases": [
+      "BVV Barendrecht"
+    ],
+    "wikidata": "Q1770402"
+  },
+  {
+    "en": "GVVV",
+    "city": "Veenendaal",
+    "stadium": "Sportpark Panhuis",
+    "clubWiki": "https://nl.wikipedia.org/wiki/GVVV",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/Panhuis_(Veenendaal)",
+    "id": "nl-gvvv",
+    "crest": "nl-gvvv.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/46/GVVV_football_logo.svg",
+    "aliases": [
+      "GVVV"
+    ],
+    "wikidata": "Q1487578"
+  },
+  {
+    "en": "HHC Hardenberg",
+    "city": "Hardenberg",
+    "stadium": "Sportpark De Boshoek",
+    "clubWiki": "https://nl.wikipedia.org/wiki/HHC_Hardenberg",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/De_Boshoek",
+    "id": "nl-hhc-hardenberg",
+    "crest": "nl-hhc-hardenberg.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/59/HHC_Hardenberg.svg",
+    "aliases": [
+      "HHC Hardenberg"
+    ],
+    "wikidata": "Q1769496"
+  },
+  {
+    "en": "HSV Hoek",
+    "city": "Hoek",
+    "stadium": "Sportpark Denoek",
+    "clubWiki": "https://nl.wikipedia.org/wiki/HSV_Hoek",
+    "stadiumWiki": "",
+    "id": "nl-hsv-hoek",
+    "crest": "nl-hsv-hoek.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c8/HSV_Hoek_logo.svg",
+    "aliases": [
+      "HSV Hoek"
+    ],
+    "wikidata": "Q1770651"
+  },
+  {
+    "en": "IJsselmeervogels",
+    "city": "Spakenburg",
+    "stadium": "Sportpark De Westmaat",
+    "clubWiki": "https://nl.wikipedia.org/wiki/IJsselmeervogels",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/Sportpark_De_Westmaat",
+    "id": "nl-ijsselmeervogels",
+    "crest": "nl-ijsselmeervogels.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0e/IJsselmeervogels_logo.svg",
+    "aliases": [
+      "IJsselmeervogels"
+    ],
+    "wikidata": "Q1956680"
+  },
+  {
+    "en": "Jong Almere City",
+    "city": "Almere",
+    "stadium": "Yanmar Stadion",
+    "clubWiki": "https://nl.wikipedia.org/wiki/Almere_City_FC",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/Yanmar_Stadion",
+    "id": "nl-jong-almere-city",
+    "crest": "nl-jong-almere-city.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8f/Almere_City_FC_logo.svg",
+    "aliases": [
+      "Almere City FC"
+    ],
+    "wikidata": "Q653119"
+  },
+  {
+    "en": "Jong Sparta Rotterdam",
+    "city": "Rotterdam",
+    "stadium": "Robey Academy",
+    "clubWiki": "https://nl.wikipedia.org/wiki/Jong_Sparta_Rotterdam",
+    "stadiumWiki": "",
+    "id": "nl-jong-sparta-rotterdam",
+    "crest": "nl-jong-sparta-rotterdam.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9f/Sparta_Rotterdam_logo.svg",
+    "aliases": [
+      "Sparta Rotterdam"
+    ],
+    "wikidata": "Q209895"
+  },
+  {
+    "en": "Koninklijke HFC",
+    "city": "Haarlem",
+    "stadium": "Sportpark Spanjaardslaan",
+    "clubWiki": "https://nl.wikipedia.org/wiki/Koninklijke_HFC",
+    "stadiumWiki": "",
+    "id": "nl-koninklijke-hfc",
+    "crest": "nl-koninklijke-hfc.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/71/Koninklijke_HFC.svg",
+    "aliases": [
+      "Koninklijke HFC"
+    ],
+    "wikidata": "Q1781676"
+  },
+  {
+    "en": "VV Katwijk",
+    "city": "Katwijk-Noord",
+    "stadium": "Sportpark De Krom",
+    "clubWiki": "https://nl.wikipedia.org/wiki/VV_Katwijk",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/Sportpark_De_Krom",
+    "id": "nl-vv-katwijk",
+    "crest": "nl-vv-katwijk.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/5e/VV_Katwijk_logo.svg",
+    "aliases": [
+      "VV Katwijk"
+    ],
+    "wikidata": "Q2267313"
+  },
+  {
+    "en": "VV Kloetinge",
+    "city": "Kloetinge",
+    "stadium": "Sportpark Wesselopark",
+    "clubWiki": "https://nl.wikipedia.org/wiki/VV_Kloetinge",
+    "stadiumWiki": "",
+    "id": "nl-vv-kloetinge",
+    "crest": "nl-vv-kloetinge.png",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/87/VV_Kloetinge.png",
+    "aliases": [
+      "VV Kloetinge"
+    ],
+    "wikidata": "Q2243583"
+  },
+  {
+    "en": "Kozakken Boys",
+    "city": "Werkendam",
+    "stadium": "Sportpark De Zwaaier",
+    "clubWiki": "https://nl.wikipedia.org/wiki/Kozakken_Boys",
+    "stadiumWiki": "",
+    "id": "nl-kozakken-boys",
+    "crest": "nl-kozakken-boys.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/03/Kozakken_Boys_logo.svg",
+    "aliases": [
+      "Kozakken Boys"
+    ],
+    "wikidata": "Q2097336"
+  },
+  {
+    "en": "Quick Boys",
+    "city": "Katwijk aan Zee",
+    "stadium": "Sportpark Nieuw Zuid",
+    "clubWiki": "https://nl.wikipedia.org/wiki/K.v.v._Quick_Boys",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/Sportpark_Nieuw_Zuid",
+    "id": "nl-quick-boys",
+    "crest": "nl-quick-boys.png",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Kvv-quick-boys-logo.png",
+    "aliases": [
+      "Quick Boys"
+    ],
+    "wikidata": "Q2108810"
+  },
+  {
+    "en": "Rijnsburgse Boys",
+    "city": "Rijnsburg",
+    "stadium": "Sportpark Middelmors",
+    "clubWiki": "https://nl.wikipedia.org/wiki/Rijnsburgse_Boys",
+    "stadiumWiki": "",
+    "id": "nl-rijnsburgse-boys",
+    "crest": "nl-rijnsburgse-boys.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9f/Rijnsburgse_Boys_logo.svg",
+    "aliases": [
+      "Rijnsburgse Boys"
+    ],
+    "wikidata": "Q1926269"
+  },
+  {
+    "en": "Rohda Raalte",
+    "city": "Raalte",
+    "stadium": "Sportpark Tijenraan",
+    "clubWiki": "https://nl.wikipedia.org/wiki/Rohda_Raalte",
+    "stadiumWiki": "",
+    "id": "nl-rohda-raalte",
+    "crest": "nl-rohda-raalte.png",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/17/Rohda_Raalte.png",
+    "aliases": [
+      "Rohda Raalte"
+    ],
+    "wikidata": "Q2228733"
+  },
+  {
+    "en": "SV Spakenburg",
+    "city": "Spakenburg",
+    "stadium": "Sportpark De Westmaat",
+    "clubWiki": "https://nl.wikipedia.org/wiki/SV_Spakenburg",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/Sportpark_De_Westmaat",
+    "id": "nl-sv-spakenburg",
+    "crest": "nl-sv-spakenburg.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/67/SV_Spakenburg_logo.svg",
+    "aliases": [
+      "SV Spakenburg"
+    ],
+    "wikidata": "Q2426009"
+  },
+  {
+    "en": "De Treffers",
+    "city": "Groesbeek",
+    "stadium": "Sportpark Zuid",
+    "clubWiki": "https://nl.wikipedia.org/wiki/De_Treffers",
+    "stadiumWiki": "https://nl.wikipedia.org/wiki/Sportpark_Zuid_(Groesbeek)",
+    "id": "nl-de-treffers",
+    "crest": "nl-de-treffers.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/25/De_Treffers_logo.svg",
+    "aliases": [
+      "De Treffers"
+    ],
+    "wikidata": "Q2229157"
+  },
+  {
+    "en": "RKAV Volendam",
+    "city": "Volendam",
+    "stadium": "KWABO-stadion",
+    "clubWiki": "https://nl.wikipedia.org/wiki/RKAV_Volendam",
+    "stadiumWiki": "",
+    "id": "nl-rkav-volendam",
+    "crest": "nl-rkav-volendam.svg",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/cb/RKAV_Volendam_logo.svg",
+    "aliases": [
+      "RKAV Volendam"
+    ],
+    "wikidata": "Q2729734"
+  }
+]

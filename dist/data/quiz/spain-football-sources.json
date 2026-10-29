@@ -1,0 +1,1185 @@
+{
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "rosterSha256": "3fdc76111604047b3111b62de994d9f244b715941f835673bbe5c152c6ee0248",
+  "rosterFile": "scripts/football-sources/spain/clubs.json",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "LaLiga",
+      "sourceUrl": "https://www.laliga.com/en-GB/laliga-easports/clubs",
+      "count": 20
+    },
+    {
+      "tier": 2,
+      "name": "Segunda División",
+      "sourceUrl": "https://www.laliga.com/en-GB/laliga-hypermotion/clubs",
+      "count": 22
+    },
+    {
+      "tier": 3,
+      "name": "Primera Federación",
+      "sourceUrl": "https://rfef.es/es/noticias/aprobados-los-grupos-de-primera-federacion-para-la-temporada-202627",
+      "count": 40,
+      "groups": 2
+    }
+  ],
+  "clubs": [
+    {
+      "id": "FOOTBALL-es-athletic-club",
+      "en": "Athletic Club",
+      "city": "Bilbao",
+      "stadium": "Estadio San Mamés",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q182864",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/athletic.png"
+    },
+    {
+      "id": "FOOTBALL-es-atletico-de-madrid",
+      "en": "Atlético de Madrid",
+      "city": "Madrid",
+      "stadium": "Riyadh Air Metropolitano",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369687",
+      "crestSource": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png"
+    },
+    {
+      "id": "FOOTBALL-es-c-a-osasuna",
+      "en": "CA Osasuna",
+      "city": "Pamplona",
+      "stadium": "Estadio El Sadar",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q735783",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/osasuna.png"
+    },
+    {
+      "id": "FOOTBALL-es-rc-celta",
+      "en": "Celta",
+      "city": "Vigo",
+      "stadium": "Estadio ABANCA Balaídos",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1326578",
+      "crestSource": "https://assets.laliga.com/assets/2025/07/11/small/0a796827f9e758d7d750db805adde7c5.png"
+    },
+    {
+      "id": "FOOTBALL-es-d-alaves",
+      "en": "Deportivo Alavés",
+      "city": "Vitoria-Gasteiz",
+      "stadium": "Mendizorroza",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369390",
+      "crestSource": "https://assets.laliga.com/assets/2020/09/01/small/27002754a98bf535807fe49a24cc63ea.png"
+    },
+    {
+      "id": "FOOTBALL-es-elche-c-f",
+      "en": "Elche CF",
+      "city": "Elche",
+      "stadium": "Estadio Martínez Valero",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q953600",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/elche.png"
+    },
+    {
+      "id": "FOOTBALL-es-fc-barcelona",
+      "en": "FC Barcelona",
+      "city": "Barcelona",
+      "stadium": "Spotify Camp Nou",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q159848",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/barcelona.png"
+    },
+    {
+      "id": "FOOTBALL-es-getafe-cf",
+      "en": "Getafe CF",
+      "city": "Getafe",
+      "stadium": "Coliseum",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q929109",
+      "crestSource": "https://assets.laliga.com/assets/2023/05/12/small/dc59645c96bc2c9010341c16dd6d4bfa.png"
+    },
+    {
+      "id": "FOOTBALL-es-levante-ud",
+      "en": "Levante UD",
+      "city": "Valencia",
+      "stadium": "Estadio Ciutat de València",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1122715",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/levante.png"
+    },
+    {
+      "id": "FOOTBALL-es-malaga-cf",
+      "en": "Málaga CF",
+      "city": "Málaga",
+      "stadium": "La Rosaleda",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q695879",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/malaga.png"
+    },
+    {
+      "id": "FOOTBALL-es-r-racing-club",
+      "en": "Racing Santander",
+      "city": "Santander",
+      "stadium": "El Sardinero",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q195391",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/racing.png"
+    },
+    {
+      "id": "FOOTBALL-es-rayo-vallecano",
+      "en": "Rayo Vallecano",
+      "city": "Madrid",
+      "stadium": "Estadio de Vallecas",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q983806",
+      "crestSource": "https://assets.laliga.com/assets/2023/04/27/small/57d9950a8745ead226c04d37235c0786.png"
+    },
+    {
+      "id": "FOOTBALL-es-rc-deportivo",
+      "en": "Deportivo La Coruña",
+      "city": "A Coruña",
+      "stadium": "Estadio ABANCA-RIAZOR",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q22130",
+      "crestSource": "https://assets.laliga.com/assets/2026/06/24/small/6b88661529a2c06840c8bf6bddd90970.png"
+    },
+    {
+      "id": "FOOTBALL-es-rcd-espanyol",
+      "en": "RCD Espanyol de Barcelona",
+      "city": "Cornellà de Llobregat / El Prat de Llobregat",
+      "stadium": "RCDE Stadium",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q473223",
+      "crestSource": "https://assets.laliga.com/assets/2025/07/02/small/e9177f6edd72c6360602adbca85e442f.png"
+    },
+    {
+      "id": "FOOTBALL-es-real-betis",
+      "en": "Real Betis",
+      "city": "Seville",
+      "stadium": "Estadio La Cartuja",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q368737",
+      "crestSource": "https://assets.laliga.com/assets/2022/09/15/small/e4a09419d3bd115b8f3dab73d480e146.png"
+    },
+    {
+      "id": "FOOTBALL-es-real-madrid",
+      "en": "Real Madrid",
+      "city": "Madrid",
+      "stadium": "Bernabéu",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q164027",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png"
+    },
+    {
+      "id": "FOOTBALL-es-real-sociedad",
+      "en": "Real Sociedad",
+      "city": "San Sebastián",
+      "stadium": "Anoeta",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q917845",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png"
+    },
+    {
+      "id": "FOOTBALL-es-sevilla-fc",
+      "en": "Sevilla FC",
+      "city": "Seville",
+      "stadium": "Ramón Sánchez-Pizjuán",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q275429",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/sevilla.png"
+    },
+    {
+      "id": "FOOTBALL-es-valencia-cf",
+      "en": "Valencia CF",
+      "city": "Valencia",
+      "stadium": "Camp de Mestalla",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q202762",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/valencia.png"
+    },
+    {
+      "id": "FOOTBALL-es-villarreal-cf",
+      "en": "Villarreal CF",
+      "city": "Villarreal",
+      "stadium": "Estadio de la Cerámica",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q741157",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/villarreal.png"
+    },
+    {
+      "id": "FOOTBALL-es-ad-ceuta-fc",
+      "en": "Ceuta",
+      "city": "Ceuta",
+      "stadium": "Alfonso Murube",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369445",
+      "crestSource": "https://assets.laliga.com/assets/2019/11/18/small/dff48b7d706547a0c406464cb1ee9218.png"
+    },
+    {
+      "id": "FOOTBALL-es-albacete-bp",
+      "en": "Albacete",
+      "city": "Albacete",
+      "stadium": "Carlos Belmonte",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369118",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/albacete.png"
+    },
+    {
+      "id": "FOOTBALL-es-burgos",
+      "en": "Burgos CF",
+      "city": "Burgos",
+      "stadium": "El Plantío",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3321211",
+      "crestSource": "https://assets.laliga.com/assets/2021/06/24/small/8de24d38ab1472bbae1620d36582d7bd.png"
+    },
+    {
+      "id": "FOOTBALL-es-cadiz-cf",
+      "en": "Cádiz CF",
+      "city": "Cádiz",
+      "stadium": "JP Financial Estadio",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2301915",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/cadiz.png"
+    },
+    {
+      "id": "FOOTBALL-es-cd-castellon",
+      "en": "CD Castellón",
+      "city": "Castellón de la Plana",
+      "stadium": "Estadio SkyFi Castalia",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q264581",
+      "crestSource": "https://assets.laliga.com/assets/2019/11/18/small/0cb9fb4e471b8fe16fe9f6f193188505.png"
+    },
+    {
+      "id": "FOOTBALL-es-eldense",
+      "en": "CD Eldense",
+      "city": "Elda",
+      "stadium": "Estadio Municipal Nuevo Pepico Amat",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q26709118",
+      "crestSource": "https://assets.laliga.com/assets/2023/09/28/small/58b0ce20fa615378dfe4d03ab2ce063e.png"
+    },
+    {
+      "id": "FOOTBALL-es-cd-leganes",
+      "en": "CD Leganés",
+      "city": "Leganés",
+      "stadium": "Estadio Ontime Butarque",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369462",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/leganes.png"
+    },
+    {
+      "id": "FOOTBALL-es-cd-tenerife",
+      "en": "CD Tenerife",
+      "city": "Santa Cruz de Tenerife",
+      "stadium": "Estadio Heliodoro Rodríguez López",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q255447",
+      "crestSource": "https://assets.laliga.com/assets/2026/07/11/small/58984797cc1fe6fdb08c0338719cd0e5.png"
+    },
+    {
+      "id": "FOOTBALL-es-ce-sabadell",
+      "en": "CE Sabadell",
+      "city": "Sabadell",
+      "stadium": "Estadio Nova Creu Alta",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1313926",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/sabadell.png"
+    },
+    {
+      "id": "FOOTBALL-es-rc-celta-b",
+      "en": "Celta Fortuna",
+      "city": "Vigo",
+      "stadium": "Estadio ABANCA Balaídos",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1326578",
+      "crestSource": "https://assets.laliga.com/assets/2026/06/25/small/5c8f2e006573714fe5c8a7ef2a37122f.png"
+    },
+    {
+      "id": "FOOTBALL-es-cordoba-cf",
+      "en": "Córdoba CF",
+      "city": "Córdoba",
+      "stadium": "Estadio Bahrain Victorious Nuevo Arcángel de Córdoba",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q121879",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/cordoba.png"
+    },
+    {
+      "id": "FOOTBALL-es-fc-andorra",
+      "en": "FC Andorra",
+      "city": "Encamp, Andorra",
+      "stadium": "Estadi d'Encamp",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q134706123",
+      "crestSource": "https://assets.laliga.com/assets/2022/06/17/small/33215c0212bcad95cc5d67b2b5a33fb8.png",
+      "note": "Andorran club playing in the Spanish league system; mapped at its real ground in Encamp."
+    },
+    {
+      "id": "FOOTBALL-es-girona-fc",
+      "en": "Girona FC",
+      "city": "Girona",
+      "stadium": "Estadio Municipal de Montilivi",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2097709",
+      "crestSource": "https://assets.laliga.com/assets/2022/06/22/small/8f43addbb29e4a72f5e90b6edfe4728f.png"
+    },
+    {
+      "id": "FOOTBALL-es-granada-cf",
+      "en": "Granada CF",
+      "city": "Granada",
+      "stadium": "Nuevo Los Cármenes",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q574565",
+      "crestSource": "https://assets.laliga.com/assets/2023/01/17/small/f5db12f3a29fdfd14a0d50337016dc95.png"
+    },
+    {
+      "id": "FOOTBALL-es-r-sociedad-b",
+      "en": "Real Sociedad B",
+      "city": "Zubieta, San Sebastián",
+      "stadium": "Estadio de Zubieta (Z7)",
+      "coordinateSource": "https://www.openstreetmap.org/way/42735948",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      "note": "Current home is the renovated Z7 pitch, not the older José Luis Orbegozo training ground or Anoeta."
+    },
+    {
+      "id": "FOOTBALL-es-rcd-mallorca",
+      "en": "RCD Mallorca",
+      "city": "Palma",
+      "stadium": "Estadi Mallorca Son Moix",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q276163",
+      "crestSource": "https://assets.laliga.com/assets/2023/03/22/small/013ae97735bc8e519dcf30f6826168ca.png"
+    },
+    {
+      "id": "FOOTBALL-es-real-oviedo",
+      "en": "Real Oviedo",
+      "city": "Oviedo",
+      "stadium": "Estadio Carlos Tartiere",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369536",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/oviedo.png"
+    },
+    {
+      "id": "FOOTBALL-es-real-sporting",
+      "en": "Sporting Gijón",
+      "city": "Gijón",
+      "stadium": "El Molinón-Enrique Castro \"Quini\"",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q929315",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/sporting.png"
+    },
+    {
+      "id": "FOOTBALL-es-r-valladolid-cf",
+      "en": "Real Valladolid CF",
+      "city": "Valladolid",
+      "stadium": "Estadio Municipal José Zorrilla",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q151816",
+      "crestSource": "https://assets.laliga.com/assets/2024/06/17/small/1467dcd5efb813a742d86f8eb39504a3.png"
+    },
+    {
+      "id": "FOOTBALL-es-sd-eibar",
+      "en": "SD Eibar",
+      "city": "Eibar",
+      "stadium": "Municipal de Ipurua",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3320428",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/eibar.png"
+    },
+    {
+      "id": "FOOTBALL-es-ud-almeria",
+      "en": "UD Almería",
+      "city": "Almería",
+      "stadium": "UD Almería Stadium",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1130617",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/almeria.png"
+    },
+    {
+      "id": "FOOTBALL-es-ud-las-palmas",
+      "en": "UD Las Palmas",
+      "city": "Las Palmas de Gran Canaria",
+      "stadium": "Estadio Gran Canaria",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q991419",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/las-palmas.png"
+    },
+    {
+      "id": "FOOTBALL-es-arenas-club-de-getxo",
+      "en": "Arenas",
+      "city": "Getxo",
+      "stadium": "Gobela",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q20977917",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/23/Arenas_Club_de_Getxo_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-real-aviles-industrial-cf",
+      "en": "Real Avilés",
+      "city": "Avilés",
+      "stadium": "Román Suárez Puerta",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q259637",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b2/Real_Avil%C3%A9s_Industrial_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-barakaldo-cf",
+      "en": "Barakaldo",
+      "city": "Barakaldo",
+      "stadium": "Lasesarre",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2697083",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/df/Barakaldo_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-athletic-bilbao-b",
+      "en": "Bilbao Athletic",
+      "city": "Lezama",
+      "stadium": "Lezama",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q9008639",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/98/Club_Athletic_Bilbao_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cp-cacereno",
+      "en": "Cacereño",
+      "city": "Cáceres",
+      "stadium": "Príncipe Felipe",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q597967",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c1/CP_Cacere%C3%B1o_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cd-coria",
+      "en": "Coria",
+      "city": "Coria",
+      "stadium": "La Isla",
+      "coordinateSource": "https://www.openstreetmap.org/way/644959631",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/89/CD_Coria_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cultural-y-deportiva-leonesa",
+      "en": "Cultural Leonesa",
+      "city": "León",
+      "stadium": "Estadio Reino de León",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q16822",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/5c/Logo_of_Cultural_y_Deportiva_Leonesa.svg"
+    },
+    {
+      "id": "FOOTBALL-es-deportivo-fabril",
+      "en": "Deportivo Fabril",
+      "city": "Abegondo",
+      "stadium": "Cidade Deportiva de Abegondo",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3325536",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/56/RC_Deportivo_A_Coru%C3%B1a_logo_2026.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cd-extremadura",
+      "en": "Extremadura",
+      "city": "Almendralejo",
+      "stadium": "Francisco de la Hera",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2918684",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/71/CD_Extremadura_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-ud-logrones",
+      "en": "UD Logroñés",
+      "city": "Logroño",
+      "stadium": "Las Gaunas",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369314",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/78/UD_Logro%C3%B1%C3%A9s_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cd-lugo",
+      "en": "Lugo",
+      "city": "Lugo",
+      "stadium": "Anxo Carro",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1348052",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/09/CD_Lugo_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-merida-ad",
+      "en": "Mérida",
+      "city": "Mérida",
+      "stadium": "Estadio Romano",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q924700",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8c/M%C3%A9rida_AD_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cd-mirandes",
+      "en": "Mirandés",
+      "city": "Miranda de Ebro",
+      "stadium": "Estadio Municipal de Anduva",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1348065",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b8/CD_Mirand%C3%A9s_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-ud-ourense",
+      "en": "UD Ourense",
+      "city": "Ourense",
+      "stadium": "O Couto",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q12388108",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b8/UD_Ourense_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-sd-ponferradina",
+      "en": "Ponferradina",
+      "city": "Ponferrada",
+      "stadium": "El Toralín",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q979112",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/38/SD_Ponferradina_emblem.svg"
+    },
+    {
+      "id": "FOOTBALL-es-pontevedra-cf",
+      "en": "Pontevedra",
+      "city": "Pontevedra",
+      "stadium": "Pasarón",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369479",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/90/Pontevedra_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-racing-de-ferrol",
+      "en": "Racing Ferrol",
+      "city": "Ferrol",
+      "stadium": "A Malata",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3327491",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/1c/Racing_de_Ferrol_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-real-union",
+      "en": "Real Unión",
+      "city": "Irun",
+      "stadium": "Stadium Gal",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1493662",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dd/Real_Uni%C3%B3n_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-unionistas-de-salamanca-cf",
+      "en": "Unionistas",
+      "city": "Salamanca",
+      "stadium": "Reina Sofía",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q100977301",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/fa/Unionistas_de_Salamanca_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-zamora-cf",
+      "en": "Zamora",
+      "city": "Zamora",
+      "stadium": "Ruta de la Plata",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2445114",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/44/Zamora_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-aguilas-fc",
+      "en": "Águilas",
+      "city": "Águilas",
+      "stadium": "El Rubial",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q5847932",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/56/%C3%81guilas_FC_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-ad-alcorcon",
+      "en": "Alcorcón",
+      "city": "Alcorcón",
+      "stadium": "Santo Domingo",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369483",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/28/AD_Alcorc%C3%B3n_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-algeciras-cf",
+      "en": "Algeciras",
+      "city": "Algeciras",
+      "stadium": "Nuevo Mirador",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3390591",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d8/Algeciras_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-antequera-cf",
+      "en": "Antequera",
+      "city": "Antequera",
+      "stadium": "El Maulí",
+      "coordinateSource": "https://www.deportes.antequera.es/instalaciones/complejo-el-mauli.html",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/16/Antequera_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-atletico-madrileno",
+      "en": "Atlético Madrileño",
+      "city": "Alcalá de Henares",
+      "stadium": "Centro Deportivo Alcalá de Henares",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q74119220",
+      "crestSource": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png"
+    },
+    {
+      "id": "FOOTBALL-es-fc-cartagena",
+      "en": "Cartagena",
+      "city": "Cartagena",
+      "stadium": "Cartagonova",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369124",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dc/FC_Cartagena_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-ce-europa",
+      "en": "Europa",
+      "city": "Barcelona",
+      "stadium": "Can Dragó",
+      "coordinateSource": "https://www.openstreetmap.org/way/316544485",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Club_Esportiu_Europa.svg",
+      "note": "Temporary 2026–27 home on the former Can Dragó athletics infield; this is not the separate artificial-turf Camp de futbol Porta."
+    },
+    {
+      "id": "FOOTBALL-es-gimnastic-de-tarragona",
+      "en": "Gimnàstic Tarragona",
+      "city": "Tarragona",
+      "stadium": "Nou Estadi",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1462770",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/be/Gimn%C3%A0stic_de_Tarragona_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-hercules-cf",
+      "en": "Hércules",
+      "city": "Alicante",
+      "stadium": "José Rico Pérez",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q945070",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/84/Hercules_CF_crest.svg"
+    },
+    {
+      "id": "FOOTBALL-es-sd-huesca",
+      "en": "Huesca",
+      "city": "Huesca",
+      "stadium": "Estadio El Alcoraz",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1369197",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8a/Logo_of_SD_Huesca.svg"
+    },
+    {
+      "id": "FOOTBALL-es-ud-ibiza",
+      "en": "Ibiza",
+      "city": "Ibiza",
+      "stadium": "Can Misses",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q47490650",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/ce/UD_Ibiza_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-real-jaen",
+      "en": "Real Jaén",
+      "city": "Jaén",
+      "stadium": "La Victoria",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q2004437",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/ea/Real_Ja%C3%A9n_logo_2022.png"
+    },
+    {
+      "id": "FOOTBALL-es-juventud-de-torremolinos-cf",
+      "en": "Juventud Torremolinos",
+      "city": "Torremolinos",
+      "stadium": "El Pozuelo",
+      "coordinateSource": "https://www.openstreetmap.org/way/76820812",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/63/Juventud_de_Torremolinos_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-real-murcia",
+      "en": "Real Murcia",
+      "city": "Murcia",
+      "stadium": "Enrique Roca",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q770946",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/93/Real_Murcia_CF_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cf-rayo-majadahonda",
+      "en": "Rayo Majadahonda",
+      "city": "Majadahonda",
+      "stadium": "Cerro del Espino",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q5400130",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/8c/CF_Rayo_Majadahonda_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-real-madrid-castilla",
+      "en": "Real Madrid Castilla",
+      "city": "Madrid",
+      "stadium": "Alfredo di Stéfano",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q645670",
+      "crestSource": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png"
+    },
+    {
+      "id": "FOOTBALL-es-ue-sant-andreu",
+      "en": "Sant Andreu",
+      "city": "Barcelona",
+      "stadium": "Narcís Sala",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q1029888",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/34/UE_Sant_Andreu_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-cd-teruel",
+      "en": "Teruel",
+      "city": "Teruel",
+      "stadium": "Pinilla",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q13049863",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a9/CD_Teruel_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-es-villarreal-cf-b",
+      "en": "Villarreal B",
+      "city": "Villarreal",
+      "stadium": "Mini Estadi José Manuel Llaneza",
+      "coordinateSource": "https://www.openstreetmap.org/way/199637860",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b9/Villarreal_CF_logo-en.svg",
+      "note": "The current club match report places the reserve side at the Mini Estadi; the English Wikipedia season table incorrectly lists La Cerámica."
+    },
+    {
+      "id": "FOOTBALL-es-real-zaragoza",
+      "en": "Zaragoza",
+      "city": "Zaragoza",
+      "stadium": "Ibercaja Stadium",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q135682568",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/69/Real_Zaragoza_logo.svg",
+      "note": "Temporary home at Ibercaja Stadium during reconstruction of La Romareda."
+    }
+  ],
+  "images": {
+    "vendor/football/spain/es-athletic-club.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/athletic.png",
+      "inputSha256": "ef9d597d7df6104f18c0335d3902a1e02c454c5c10a9474b60de6daa5a84630a",
+      "sha256": "a352db75ae8d227d8a82d9bae456a5297bc2d0a4fa9d5d51adc87c6670e31ac1",
+      "bytes": 12802
+    },
+    "vendor/football/spain/es-atletico-de-madrid.webp": {
+      "source": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png",
+      "inputSha256": "fda1fd59439982e0fef3fab7eabcbbb2461f1c3ea66b38a7c0d4d2d64d2ec2b2",
+      "sha256": "20925433bad4782bc4fcded39e34dd41a1441690c8213b813133507c17051375",
+      "bytes": 17906
+    },
+    "vendor/football/spain/es-c-a-osasuna.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/osasuna.png",
+      "inputSha256": "4e38abe3645ef0759eef2cbab58cbe6205fbc80c7b3df7e8cc40aa5f41a8fcf5",
+      "sha256": "07cbe3d2eaeac741b84eadecf00b09f53fc55ddc11007e33aef3e70fe2a53709",
+      "bytes": 18294
+    },
+    "vendor/football/spain/es-rc-celta.webp": {
+      "source": "https://assets.laliga.com/assets/2025/07/11/small/0a796827f9e758d7d750db805adde7c5.png",
+      "inputSha256": "072597723c9cc6e2def2c6296d15bdc543266e1aa187a6572e436761603d4f3b",
+      "sha256": "0d059ce4629da2a1f570b558eb42b66d161f93b71aa037995d41433154b15f93",
+      "bytes": 15928
+    },
+    "vendor/football/spain/es-d-alaves.webp": {
+      "source": "https://assets.laliga.com/assets/2020/09/01/small/27002754a98bf535807fe49a24cc63ea.png",
+      "inputSha256": "75e9ba86141203214b486c7ccfc6e128e442247793d8e2c784356aa906300ba6",
+      "sha256": "66b8f257379dac135f81f43592b01814c1cb501896e21af40b8966a9eb8be559",
+      "bytes": 28030
+    },
+    "vendor/football/spain/es-elche-c-f.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/elche.png",
+      "inputSha256": "3c8658d2049c13cffc376ccb1cef4e2e1be1d1046b13834833a76afc5c53165e",
+      "sha256": "8835119bc58d8a1f507f2dc6455ac357b9b81cf6f560736140c5bee847201f29",
+      "bytes": 16190
+    },
+    "vendor/football/spain/es-fc-barcelona.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/barcelona.png",
+      "inputSha256": "50833a6f2f3b06dcd765fad5dee737e60d2e775a8e53372a3b5823d3419680c4",
+      "sha256": "aa160c9941c819b4107e29dc08234df8b18561ab1c26b624ca141b80e0fe434f",
+      "bytes": 16884
+    },
+    "vendor/football/spain/es-getafe-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2023/05/12/small/dc59645c96bc2c9010341c16dd6d4bfa.png",
+      "inputSha256": "a763960146e67758f153caa65e8a4eed5df94a5e4cd1de475a08979ec918f910",
+      "sha256": "3374f4458ac40ffd9984978ecd9d256a6dbda2ba24f6d056042c6fc2fc35221e",
+      "bytes": 28392
+    },
+    "vendor/football/spain/es-levante-ud.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/levante.png",
+      "inputSha256": "97ca09ead3f7d0f0f12490897c7df9a2ab5d04930bc656b5314aefcb01f2096c",
+      "sha256": "99a2cba05512e12610d6261dcadc289372c6a340f7bd2a9107e9a6bf42dc389e",
+      "bytes": 19526
+    },
+    "vendor/football/spain/es-malaga-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/malaga.png",
+      "inputSha256": "ded3cb41ba208141a74395347a73ee3919069bb3f9219cbce25f8ee0eb454b52",
+      "sha256": "b29dedc94ce135d40f2b7d0ab378642dcae1d4678dc143abf6c1c5e0c199b336",
+      "bytes": 19384
+    },
+    "vendor/football/spain/es-r-racing-club.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/racing.png",
+      "inputSha256": "45cc8e9808e12d382b06d0208d71b229270abf4607c995c836b9664f8b18db76",
+      "sha256": "a1612ab0f73b4c696790a898d7a06ea00c9d9f398fcf197ba10c5e75c8899ddc",
+      "bytes": 20256
+    },
+    "vendor/football/spain/es-rayo-vallecano.webp": {
+      "source": "https://assets.laliga.com/assets/2023/04/27/small/57d9950a8745ead226c04d37235c0786.png",
+      "inputSha256": "1b33da8a186ef81a8d55db3886e98519d321e9e25923fe94386b70420124609e",
+      "sha256": "f9adf63c39b746f7db991e77cf866b7e65241eaa817f87f8217f6f399201f5c7",
+      "bytes": 23582
+    },
+    "vendor/football/spain/es-rc-deportivo.webp": {
+      "source": "https://assets.laliga.com/assets/2026/06/24/small/6b88661529a2c06840c8bf6bddd90970.png",
+      "inputSha256": "cc25b452e822673b75161f1b90307d6a4e3169fdd2f2e523dc01de223f1496e9",
+      "sha256": "caaf5e2ed77fe3558e5b5c48f0393d00ece7e0254ef24376824edba7cdb179d0",
+      "bytes": 30580
+    },
+    "vendor/football/spain/es-rcd-espanyol.webp": {
+      "source": "https://assets.laliga.com/assets/2025/07/02/small/e9177f6edd72c6360602adbca85e442f.png",
+      "inputSha256": "0c5c92a45417e919b0b82caae168752341ae8504f0e66c81dc32a970812ec3e6",
+      "sha256": "b11c3041634ef97d2746f03b8a4def9f091c50c23093ffea5fe7ec3c04994ddb",
+      "bytes": 21724
+    },
+    "vendor/football/spain/es-real-betis.webp": {
+      "source": "https://assets.laliga.com/assets/2022/09/15/small/e4a09419d3bd115b8f3dab73d480e146.png",
+      "inputSha256": "854081050558ea6eeb6de633e4590f5c0dad13abeef024a46cf035129910eabd",
+      "sha256": "3ad992cd24b9df67f499443d1105c2ce5202c6fc0405dd7df5f219a7a9176bb8",
+      "bytes": 24480
+    },
+    "vendor/football/spain/es-real-madrid.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png",
+      "inputSha256": "74c551cd4d4009e39cfffb909343d7fd41e101510f7ce792d9692bb0810c8740",
+      "sha256": "8f0fb362254b7f68aba24514e48b52777a87455cba3408bdcb40ab0eb75304b3",
+      "bytes": 26206
+    },
+    "vendor/football/spain/es-real-sociedad.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      "inputSha256": "fe5765a590c587c810e705b2e220a494c5bd038aef257b5bd5978c1da99f24ca",
+      "sha256": "f4ce2451cf6310538c65f86ddf4074827888478af26212d794fd3d83683d1b19",
+      "bytes": 23620
+    },
+    "vendor/football/spain/es-sevilla-fc.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/sevilla.png",
+      "inputSha256": "01f9c10f3aa9912178f9206ec1c4b458581f1b764f4fbcab3d0d6402f3bd96a4",
+      "sha256": "ae31384c6e1128d68518d50cd30435c6d538624961183407e478f626747ecc75",
+      "bytes": 17672
+    },
+    "vendor/football/spain/es-valencia-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/valencia.png",
+      "inputSha256": "b8e01c75047acbfad5b787ce64bfd7c620de97dfaa7f7ac6619ed0d5add7d87d",
+      "sha256": "912f108aa311f1417fff286a95dc32612c819d6a91383efc1f425e7ca913c60e",
+      "bytes": 16454
+    },
+    "vendor/football/spain/es-villarreal-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/villarreal.png",
+      "inputSha256": "2cd36b619c5974af33c91b483217710ac92f2d169d1c7902df6717d73bac541c",
+      "sha256": "7bf77fb9744ba374c267ccbe12a3a1a84a7606d04b3ee2aeff852f1092f5a3c8",
+      "bytes": 23554
+    },
+    "vendor/football/spain/es-ad-ceuta-fc.webp": {
+      "source": "https://assets.laliga.com/assets/2019/11/18/small/dff48b7d706547a0c406464cb1ee9218.png",
+      "inputSha256": "9c3f2d452febbe62927d15e7ef5070af013adb38150032ece05d6960c0750f59",
+      "sha256": "b4a081c41dc396cf7c97cc065f01a3cb9097c9ef4ffdfe2ec4e2635ca21d1a10",
+      "bytes": 25004
+    },
+    "vendor/football/spain/es-albacete-bp.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/albacete.png",
+      "inputSha256": "9049578965a3d11a63b55bb24d03ac8d48386a0d8e61f6e042f3174fef25fb24",
+      "sha256": "5d6b977e11e5f845acbcf1310fd6ad3cb05d81ab74a35ea89aac52d2d771be08",
+      "bytes": 11562
+    },
+    "vendor/football/spain/es-burgos.webp": {
+      "source": "https://assets.laliga.com/assets/2021/06/24/small/8de24d38ab1472bbae1620d36582d7bd.png",
+      "inputSha256": "6aed3503e126675b57a74436961dcd79ab31b5b0828a93feef13aa727df5d107",
+      "sha256": "a97296d2658e0fb5bea361c24510c7f7dbff6db7ccf26b9e895bb11b6854c121",
+      "bytes": 31320
+    },
+    "vendor/football/spain/es-cadiz-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/cadiz.png",
+      "inputSha256": "c2b2c42af413fdebc3dcde90449d67f6934784a5906b93bf763285fd25f2aca0",
+      "sha256": "56b911165883696e0bb38cd1bf7236abf9f3debc48722571b9ed0d9eef8cecac",
+      "bytes": 18936
+    },
+    "vendor/football/spain/es-cd-castellon.webp": {
+      "source": "https://assets.laliga.com/assets/2019/11/18/small/0cb9fb4e471b8fe16fe9f6f193188505.png",
+      "inputSha256": "c221f61ca694ce2b0c7266b52b7097e9fa9acead0573b7b003272ac10ded5907",
+      "sha256": "02bd9b02180fed2d5f7e6b0440349a884a83bd98a56cd62b11cf39fda728b1bb",
+      "bytes": 20364
+    },
+    "vendor/football/spain/es-eldense.webp": {
+      "source": "https://assets.laliga.com/assets/2023/09/28/small/58b0ce20fa615378dfe4d03ab2ce063e.png",
+      "inputSha256": "2a2bd2d5cd96d998b81863b26de271dd6f62a7cc418eaa0ff26ca4233c3de5c6",
+      "sha256": "1e5aeef47f4c36f75c5c23411721cf64b55679892ef7b82ba8a7e83260648b2c",
+      "bytes": 24282
+    },
+    "vendor/football/spain/es-cd-leganes.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/leganes.png",
+      "inputSha256": "ce6b826143557f243ae31d135009356f208368dd27af21ebc3315ea7a3534716",
+      "sha256": "ce9988b220625b8e78ca2872b178b4028cdf144c5395b320207b244540b07b17",
+      "bytes": 24052
+    },
+    "vendor/football/spain/es-cd-tenerife.webp": {
+      "source": "https://assets.laliga.com/assets/2026/07/11/small/58984797cc1fe6fdb08c0338719cd0e5.png",
+      "inputSha256": "108237a1b447b766a03bae7d1a7068e238fd61848f013ca84fe808bb92d6981c",
+      "sha256": "c2e43471c407055e7515a1c36fda5681e41c1116f20d95d65099c555898bde4b",
+      "bytes": 22812
+    },
+    "vendor/football/spain/es-ce-sabadell.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/sabadell.png",
+      "inputSha256": "2a8b5ed5c0c9fe8cff28fb76df28241d831d9173d28818ae70f4af1deb7fc470",
+      "sha256": "be2c7852806705a7c01cf7daab19aafe1965bd1e1b4d5ff9493616a91b4c087c",
+      "bytes": 18600
+    },
+    "vendor/football/spain/es-rc-celta-b.webp": {
+      "source": "https://assets.laliga.com/assets/2026/06/25/small/5c8f2e006573714fe5c8a7ef2a37122f.png",
+      "inputSha256": "072597723c9cc6e2def2c6296d15bdc543266e1aa187a6572e436761603d4f3b",
+      "sha256": "0d059ce4629da2a1f570b558eb42b66d161f93b71aa037995d41433154b15f93",
+      "bytes": 15928
+    },
+    "vendor/football/spain/es-cordoba-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/cordoba.png",
+      "inputSha256": "538f6b0418b5b89bd044c604b7c698743cf0e4d968e606ea867b1d2f1cd44704",
+      "sha256": "6a17e7126857c0ca3a0e591f69dece7296039d508e705e1f0d4f072e1ae38622",
+      "bytes": 16254
+    },
+    "vendor/football/spain/es-fc-andorra.webp": {
+      "source": "https://assets.laliga.com/assets/2022/06/17/small/33215c0212bcad95cc5d67b2b5a33fb8.png",
+      "inputSha256": "dc76152b6e39cb9d4cb58e1b9fa568dc8959c16a98d71799e4faa2ba5795a701",
+      "sha256": "69667a9dabc86046e61d9489f6c91d12232e04283c273010010d2cac59631939",
+      "bytes": 24638
+    },
+    "vendor/football/spain/es-girona-fc.webp": {
+      "source": "https://assets.laliga.com/assets/2022/06/22/small/8f43addbb29e4a72f5e90b6edfe4728f.png",
+      "inputSha256": "630c5403aae2e160c89d22e073ad52bf5adca778be5c94a058d780ffb0f96107",
+      "sha256": "3fc1c8e6b3b0fa4ab91ecd52771efa07cda1812a38908ac0c4d88d93306438f6",
+      "bytes": 27960
+    },
+    "vendor/football/spain/es-granada-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2023/01/17/small/f5db12f3a29fdfd14a0d50337016dc95.png",
+      "inputSha256": "fddd3a8e855561ff3f34d6e9c465feea87cd7ce59cfb81d62daef6eafc897e21",
+      "sha256": "e3bcd558984ac053a8406bc9167cf63027238ca1e2fa5afeea08aa93f0cac8cd",
+      "bytes": 18470
+    },
+    "vendor/football/spain/es-r-sociedad-b.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/real-sociedad.png",
+      "inputSha256": "fe5765a590c587c810e705b2e220a494c5bd038aef257b5bd5978c1da99f24ca",
+      "sha256": "f4ce2451cf6310538c65f86ddf4074827888478af26212d794fd3d83683d1b19",
+      "bytes": 23620
+    },
+    "vendor/football/spain/es-rcd-mallorca.webp": {
+      "source": "https://assets.laliga.com/assets/2023/03/22/small/013ae97735bc8e519dcf30f6826168ca.png",
+      "inputSha256": "a99eec769dc28e04cf18246fc3a07b269cb814488f3af834f18b957c30dce01e",
+      "sha256": "617060c0526240055b76e2c9d6d0b087dfb9a41882987c822f54ef6cd1038740",
+      "bytes": 28028
+    },
+    "vendor/football/spain/es-real-oviedo.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/oviedo.png",
+      "inputSha256": "9d685bc87303572b2e223324638086d7fdc6a277d7f7fb7d029cf5c645702eff",
+      "sha256": "11937b208e6ab675674c6f0bfde89864d89617480f4f0bfc998ee43cf7e102a5",
+      "bytes": 12130
+    },
+    "vendor/football/spain/es-real-sporting.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/sporting.png",
+      "inputSha256": "6ff4532cdbd6a5e2e0a891bfce5756bbd3d53e3b4f853c802628f841bc7993d7",
+      "sha256": "1f787fb0a9348bfbb0055d18dcfbe845c2eb643c0b1cea08d390e337860e4574",
+      "bytes": 10994
+    },
+    "vendor/football/spain/es-r-valladolid-cf.webp": {
+      "source": "https://assets.laliga.com/assets/2024/06/17/small/1467dcd5efb813a742d86f8eb39504a3.png",
+      "inputSha256": "40f2fedbcf54cae14d981eb6a510a967db9b4907c25c17d8ef833c524c5c9ccb",
+      "sha256": "72aa9c5417dd714a7b77d4f0e40b44142d62d1c48356d4af0bed551237b1addf",
+      "bytes": 30416
+    },
+    "vendor/football/spain/es-sd-eibar.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/eibar.png",
+      "inputSha256": "8e946784a1c0a764d3456fd16d5b5e7681ba163abaab8473fc10db827b5c6924",
+      "sha256": "1cef74560513921ffbf47f6968d0fc046b490d8d96cd1ef0f30f053bf904fb07",
+      "bytes": 13586
+    },
+    "vendor/football/spain/es-ud-almeria.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/almeria.png",
+      "inputSha256": "e0da7c8cf24068398984867ba8a6fe98483b245071734cfac9bcb11d667d616f",
+      "sha256": "f87befa324f4f1e720978df330dcc340a6110a39b1b3a59b7a5fbb0d49e844a5",
+      "bytes": 17420
+    },
+    "vendor/football/spain/es-ud-las-palmas.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/las-palmas.png",
+      "inputSha256": "2b095ebf34b3232d283f67192343df483888d2be0c6677bf51b9f2a09caacca3",
+      "sha256": "f7eccfb88e69558bd1137becda0137882b359fe6a6f8d06e650bc28cd203807e",
+      "bytes": 22080
+    },
+    "vendor/football/spain/es-arenas-club-de-getxo.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/23/Arenas_Club_de_Getxo_logo.svg",
+      "inputSha256": "d1b1e6444b3515d7ce8a79c8e469afbf882f5f26bcb6274cacb7008d6f79b80a",
+      "sha256": "057633bab296e130ccbb05d815917fc24e152cdb387bf679c763b184e8694816",
+      "bytes": 21478
+    },
+    "vendor/football/spain/es-real-aviles-industrial-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/b/b2/Real_Avil%C3%A9s_Industrial_CF_logo.svg",
+      "inputSha256": "0c5ee5e37005ad5d94200ad1b5033110596f2cea03d0e299a8d6d1907a61c68b",
+      "sha256": "fe2026bb91b40e8b72e86e03ec605a8797f7fe059390bb032dbe4a1f66bedc6b",
+      "bytes": 20152
+    },
+    "vendor/football/spain/es-barakaldo-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/df/Barakaldo_CF_logo.svg",
+      "inputSha256": "6d45d266247e1a80cb65a50dc3999d8eae0aa35784a8a3e16d24d2c2f772886c",
+      "sha256": "a1b5d36cf6c3e4c46259696c17423984b591dfb7f749d321d9f8a9169116a658",
+      "bytes": 24870
+    },
+    "vendor/football/spain/es-athletic-bilbao-b.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/98/Club_Athletic_Bilbao_logo.svg",
+      "inputSha256": "a60be2765fa58a94124bcb058ba51706f28ef3a18cb04616f9d8efdc07712072",
+      "sha256": "2f7566e1eccf00e3e30e422e8f12e1af0438ed6c5f170c04e8b9d6ae046ba105",
+      "bytes": 6146
+    },
+    "vendor/football/spain/es-cp-cacereno.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/c1/CP_Cacere%C3%B1o_logo.svg",
+      "inputSha256": "d197509b5e71bf6f39604e3c19a9f5d78301cb468dcdc77d53ac458edb3fabf4",
+      "sha256": "5390954641aad4e2918b930c9a929b0151ff019f3d0b21d76d15c190b4af1220",
+      "bytes": 28228
+    },
+    "vendor/football/spain/es-cd-coria.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/89/CD_Coria_logo.svg",
+      "inputSha256": "0c9351f61c05e666c9d9bd1b78d96779d07240f7c2f8b3f06b603b170b89b77e",
+      "sha256": "5c466383df73879bd04cb2afd80a5e4ea58ff0f6efa83d40ac6f781bec862e70",
+      "bytes": 42100
+    },
+    "vendor/football/spain/es-cultural-y-deportiva-leonesa.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/5c/Logo_of_Cultural_y_Deportiva_Leonesa.svg",
+      "inputSha256": "98716ce37baed3aef7ef45eb86d794072687b4455c765bdffb7fa6522e91990c",
+      "sha256": "4ba2619e41f67be815c8f8e73d4055d26bb1047c7ea328e4599de30bcdbdd236",
+      "bytes": 7094
+    },
+    "vendor/football/spain/es-deportivo-fabril.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/56/RC_Deportivo_A_Coru%C3%B1a_logo_2026.svg",
+      "inputSha256": "f3b7c631a67d92ab8bb5d001276d2ba804077fa462ffbe197323c52ff5a0dfe4",
+      "sha256": "6a1baed60d55a18714c7e45227b8f36d938f4320444b9973bf37b6d0bc154af6",
+      "bytes": 29662
+    },
+    "vendor/football/spain/es-cd-extremadura.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/71/CD_Extremadura_logo.svg",
+      "inputSha256": "1021fd8baea9beef0ba3d953935ccf6dd641487d11455c8a1365ea4635ea40d5",
+      "sha256": "239a5b7f4e6c94c4f47b73e0cc68c793bd94ec62553b1e476c1490d8529494ba",
+      "bytes": 24570
+    },
+    "vendor/football/spain/es-ud-logrones.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/78/UD_Logro%C3%B1%C3%A9s_logo.svg",
+      "inputSha256": "fa9a36ef4ee992776f5ab47a092835fd4f2d1c8ca63f1db7feeb68490470e943",
+      "sha256": "379f788f94145d30b14e7c2f344a0a931e96fe71f17edc06ec2a2ae0b1498669",
+      "bytes": 27378
+    },
+    "vendor/football/spain/es-cd-lugo.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/09/CD_Lugo_logo.svg",
+      "inputSha256": "2ffb319c0927bbc8f5d6762135442dc08d8bb107ab3a9ba7e85fd51b39acf0b4",
+      "sha256": "39d7f1c2495b5ada09265af6f6b1635ba92e52449d5d222f8ab4fb8540e2d772",
+      "bytes": 18846
+    },
+    "vendor/football/spain/es-merida-ad.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/8c/M%C3%A9rida_AD_logo.svg",
+      "inputSha256": "a139ad581588bf020d9603f687a2500c5808859964a05369858879115eb60ce4",
+      "sha256": "30bb87f0a52c7e6ee8f489f1237a9671236d2223a5d8f84d5fc3b3f9a6e8b94f",
+      "bytes": 12690
+    },
+    "vendor/football/spain/es-cd-mirandes.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/b/b8/CD_Mirand%C3%A9s_logo.svg",
+      "inputSha256": "8e5184d0c3cb47cfa44ac35cf39b1e702ab0238ecda30006d48aa33a0ebe186e",
+      "sha256": "25514aedc00609ed58bbe2eb4c4f0655dd694ccdd4e9a66348b8b8c28b661f3e",
+      "bytes": 16584
+    },
+    "vendor/football/spain/es-ud-ourense.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/b/b8/UD_Ourense_logo.svg",
+      "inputSha256": "571e7f918080dcb9a047efdf9a0f4c8c422ffe4f69f7e03159c56e9f2598c890",
+      "sha256": "34c624aa80936d0d8b29b576f22f642769f38643fc0de6613d3966950f7dc736",
+      "bytes": 34268
+    },
+    "vendor/football/spain/es-sd-ponferradina.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/3/38/SD_Ponferradina_emblem.svg",
+      "inputSha256": "696741869187142156c739d6b4370c2dfafb6ca4888fc6d541c49e5efaf2ceda",
+      "sha256": "b6b3352e65e5ff405e9c96b3de518fc9f6d9f256095b637ccd2cb3c06673c783",
+      "bytes": 20930
+    },
+    "vendor/football/spain/es-pontevedra-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/90/Pontevedra_CF_logo.svg",
+      "inputSha256": "e3118832af9e810c3246d4f2634740c561404a8d5b92b8a39c0f45c9728eb5c5",
+      "sha256": "fc6e06aaa692b555273623f24e540ca3f757596789a01f1257b1a93116474aed",
+      "bytes": 32266
+    },
+    "vendor/football/spain/es-racing-de-ferrol.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/1c/Racing_de_Ferrol_logo.svg",
+      "inputSha256": "903a570dfc327a91f047a6d274641a8e6bbf9870bf52d6031c5d8697524dd4a6",
+      "sha256": "c8bd93689d7aff766b8f41808301d606e7601189e10bd86b701f9129f77cd7bb",
+      "bytes": 11754
+    },
+    "vendor/football/spain/es-real-union.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/dd/Real_Uni%C3%B3n_logo.svg",
+      "inputSha256": "822f440a5c95c6187fedd0a30bea8bac9de493648e0b02a4e9567b4e086be823",
+      "sha256": "e1507e050eecabc9f01f582813d543712812dd45d9b93aee93b8fed7242155e3",
+      "bytes": 29412
+    },
+    "vendor/football/spain/es-unionistas-de-salamanca-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/fa/Unionistas_de_Salamanca_CF_logo.svg",
+      "inputSha256": "02d4d17246c5e2cc1a027fafe9dfc50f90fd916bf6a6ac192e540cc8d8719db7",
+      "sha256": "d202592d1b52b4daced8b8dfe88adc3e181f9a7c04aa7455c47b2bc604b52033",
+      "bytes": 17602
+    },
+    "vendor/football/spain/es-zamora-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/44/Zamora_CF_logo.svg",
+      "inputSha256": "80dc3df7270b132c94c67823c07734fac704683ef2d768caea0d23da11e49703",
+      "sha256": "48a2b195fe3ec3ffa0d3a33898c208d3806f8f1bc30827613fa359783bd3c464",
+      "bytes": 27116
+    },
+    "vendor/football/spain/es-aguilas-fc.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/56/%C3%81guilas_FC_logo.svg",
+      "inputSha256": "95d35aa4b2c410c72e87ac7279eb7ad9647c3a0e8906c322e1e0b46aace99994",
+      "sha256": "2b7a3842057635a79aa5703def33baa649279ce2ca0199a15af9b2b7039c1de5",
+      "bytes": 33330
+    },
+    "vendor/football/spain/es-ad-alcorcon.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/28/AD_Alcorc%C3%B3n_logo.svg",
+      "inputSha256": "1e5d045bdfcf6bce112fd3cf4268f0dcf31e029bcce58f69fee0cfc9962413a4",
+      "sha256": "62c1129e89b92e49673580a38ad8ed250bc142ca88c71bd32f665a1be14cb70b",
+      "bytes": 19720
+    },
+    "vendor/football/spain/es-algeciras-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/d8/Algeciras_CF_logo.svg",
+      "inputSha256": "771e60ee2f9931c0744d2f29df2581fd22329807c2beb0a8c24e44261dc8ebc7",
+      "sha256": "aff6543440a5a9b77350be678ea71f7ad375831121d804f7ba3d5b5d7e4a4aff",
+      "bytes": 16354
+    },
+    "vendor/football/spain/es-antequera-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/16/Antequera_CF_logo.svg",
+      "inputSha256": "66f217681b8854619035b905f4280bf7facb13cf94e7ae18950c126e00687194",
+      "sha256": "5230d252209d60341bbb301917857732b45dab77652ef433f5e3ea3c81b3b0e3",
+      "bytes": 26272
+    },
+    "vendor/football/spain/es-atletico-madrileno.webp": {
+      "source": "https://assets.laliga.com/assets/2024/06/17/small/cbc5c8cc8c3e8abd0e175c00ee53b723.png",
+      "inputSha256": "fda1fd59439982e0fef3fab7eabcbbb2461f1c3ea66b38a7c0d4d2d64d2ec2b2",
+      "sha256": "20925433bad4782bc4fcded39e34dd41a1441690c8213b813133507c17051375",
+      "bytes": 17906
+    },
+    "vendor/football/spain/es-fc-cartagena.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/dc/FC_Cartagena_logo.svg",
+      "inputSha256": "707bb2cacec123f7b1da69b2d59fc63210e7f7d403ee875dc2a8593550f9d011",
+      "sha256": "aabb54f2c3630b3facf2e2291a2c7706d4614bc384e470b97ee95fd2ef0705c1",
+      "bytes": 17658
+    },
+    "vendor/football/spain/es-ce-europa.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Club_Esportiu_Europa.svg",
+      "inputSha256": "49a80c5b303bff890a042c354dbbb2e4ec5f7f151f8ea072c9e8e76ae1bd374b",
+      "sha256": "074d24a6b3137fc224f44d53af60fac03abc98f21b74d2672224a667c8c13e3d",
+      "bytes": 29296
+    },
+    "vendor/football/spain/es-gimnastic-de-tarragona.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/b/be/Gimn%C3%A0stic_de_Tarragona_logo.svg",
+      "inputSha256": "bd7e3aeddd062573667f06f60c8c721f1c3e003cf0c21ad0d6602187121efcec",
+      "sha256": "52b9685193b58d28aa735fd6432fc94feecea616ea0dd2870ef19fa743981b8c",
+      "bytes": 36276
+    },
+    "vendor/football/spain/es-hercules-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/84/Hercules_CF_crest.svg",
+      "inputSha256": "eb1469e1b7d41a67b1a394d034952a4692964307b543ef85c346d4b939eadc95",
+      "sha256": "d259d4200887de801a791789a6f7a316f79508a9140dfb9762bf6ec98489ae21",
+      "bytes": 20686
+    },
+    "vendor/football/spain/es-sd-huesca.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/8a/Logo_of_SD_Huesca.svg",
+      "inputSha256": "0a71b321a8306cab759b4729ecbb50f759bddac091fc047027de4921fd950ea2",
+      "sha256": "d6910c3acbd8ce732743dee8b6e1900bf0193739d9d501adaed05f7299ba669e",
+      "bytes": 7376
+    },
+    "vendor/football/spain/es-ud-ibiza.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/ce/UD_Ibiza_logo.svg",
+      "inputSha256": "3fce579ebf4f2ae35af45e9a8521ba167283bb1c9d9b59f910ae7042623179b0",
+      "sha256": "ac4b223a114bde7fd9e5730ab473dbe95b6fe7b66c596c002b495b15c7f2dc43",
+      "bytes": 29150
+    },
+    "vendor/football/spain/es-real-jaen.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/ea/Real_Ja%C3%A9n_logo_2022.png",
+      "inputSha256": "dd3a8e93a85232fafcea900a9f67b616341ce54bde43b9fbc3aa9063e4b54b32",
+      "sha256": "a411419d75ea40fa2082c7e77f3066584d0a8b43fe065e722f888fb41b2ae849",
+      "bytes": 22254
+    },
+    "vendor/football/spain/es-juventud-de-torremolinos-cf.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/63/Juventud_de_Torremolinos_CF_logo.svg",
+      "inputSha256": "18becaa024f487d4ece7d0422913483d9d7aacf80138554cdf691a686f2ca9c6",
+      "sha256": "19afb4f88ac94d15e78b2026b43d90a2cafdf00051ce8bfef6b8a1a7f179844b",
+      "bytes": 24604
+    },
+    "vendor/football/spain/es-real-murcia.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/93/Real_Murcia_CF_logo.svg",
+      "inputSha256": "3809ea1d89ee3860b8ca163d8debcde4f9c9f92c0d6aa4103e0eeaf16e7b012e",
+      "sha256": "da790267b781a8667160b2b0d1fb03f1a14397ff4df7363abc87650621dce8eb",
+      "bytes": 19976
+    },
+    "vendor/football/spain/es-cf-rayo-majadahonda.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/8c/CF_Rayo_Majadahonda_logo.svg",
+      "inputSha256": "330b2a3090483f60a0b49694d00e4453965f5053c282e2da788d4fa725f845e4",
+      "sha256": "1366eb8ece1d3d56fe8ce285512253399712803f6313756ae09ee535ed3c2141",
+      "bytes": 27618
+    },
+    "vendor/football/spain/es-real-madrid-castilla.webp": {
+      "source": "https://assets.laliga.com/assets/2019/06/07/small/real-madrid.png",
+      "inputSha256": "74c551cd4d4009e39cfffb909343d7fd41e101510f7ce792d9692bb0810c8740",
+      "sha256": "8f0fb362254b7f68aba24514e48b52777a87455cba3408bdcb40ab0eb75304b3",
+      "bytes": 26206
+    },
+    "vendor/football/spain/es-ue-sant-andreu.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/3/34/UE_Sant_Andreu_logo.svg",
+      "inputSha256": "0eaf27fd5c172bedff1a22b8093984e39d8bb6c53ad90f8ab15070aaf7c823e4",
+      "sha256": "452d1ddfa53f130442a62eb040f59e90b7918b6f99c6d23447598a6a8ce56ccb",
+      "bytes": 22216
+    },
+    "vendor/football/spain/es-cd-teruel.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/a/a9/CD_Teruel_logo.svg",
+      "inputSha256": "8512cfb9de225dba0b96489743b64a4ba1ee09c7976da325ba080ef7c6d499e2",
+      "sha256": "dffef53b62024261e4bc935c49c596cd1f871cd55063f2be82188d53d1548362",
+      "bytes": 28414
+    },
+    "vendor/football/spain/es-villarreal-cf-b.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/b/b9/Villarreal_CF_logo-en.svg",
+      "inputSha256": "eaeb9e0dfc47322350f8d652a0c55e73c18c6f29fb169ad16726d6384f3d09da",
+      "sha256": "c20744c32ab1b9748a7b2b25f3f09a551e07ce2090efbbbb719e90a6482aa8b0",
+      "bytes": 27814
+    },
+    "vendor/football/spain/es-real-zaragoza.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/69/Real_Zaragoza_logo.svg",
+      "inputSha256": "340e54cd615f7bbeb01c0582b82bd6b204293e7fd62a31a230115ba5fec81ed8",
+      "sha256": "74f37b7a2737e8b1f32cb57c709bbe71415c846d692309965c4d2b509ab14bc2",
+      "bytes": 22636
+    }
+  },
+  "crestCredit": "Club crests remain the marks of their respective owners; retained source URLs identify the original artwork."
+}

@@ -1,0 +1,630 @@
+{
+  "retrieved": "2026-10-29",
+  "season": "2026-27",
+  "files": {
+    "raw/bundesliga.html.gz": {
+      "url": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "credit": "Bundesliga / DFL official club directory",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "e5e6e50bf29143ae08fc900d93e4d9575209a21304ad4df3b1b139a45b91b0bc",
+      "bytes": 677107,
+      "compressed": true
+    },
+    "raw/bundesliga2.html.gz": {
+      "url": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "credit": "Bundesliga / DFL official club directory",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "7801b2072b346b6a0a88e9ef76acb105991c0a3a9521bef778ff327ab1feef6a",
+      "bytes": 675906,
+      "compressed": true
+    },
+    "raw/third-teams.html.gz": {
+      "url": "https://datencenter.dfb.de/competitions/4/seasons/2026-2027/teams",
+      "credit": "German Football Association (DFB) official 2026–27 participant list",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "13704873a361a0a15f0a0dc21a0e3ae5691c1755ba0131854190a456e6c2aa43",
+      "bytes": 17866,
+      "compressed": true
+    },
+    "raw/third-roster.html.gz": {
+      "url": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "credit": "DFB 2026–27 licensing announcement, 11 June 2026",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "068cc34bd50712f12c4d1b3053092e30ceb989d286ee56e58c187a956200acb6",
+      "bytes": 32055,
+      "compressed": true
+    },
+    "raw/stuttgart-ii-ground.html.gz": {
+      "url": "https://www.vfb.de/de/1893/junge-wilde/heimspielstaetten/heimspielstaetten/wirmachendruck-arena/",
+      "credit": "VfB Stuttgart official U21 home-ground information",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "12cb5eaf4511662edb98321305317b4bc37ab142089ead96c9c26e8efecd1d6e",
+      "bytes": 52253,
+      "compressed": true
+    },
+    "raw/havelse-ground.html.gz": {
+      "url": "https://www.dfb.de/news/eilenriedestadion-als-weitere-heimspielstaette-des-tsv-havelse-zugelassen",
+      "credit": "DFB approval of Eilenriedestadion, 12 October 2026",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "ebd5b18062501b6f1d98513fc3d5ad1f7e88d0d2db291694cdc921c0208d073f",
+      "bytes": 27729,
+      "compressed": true
+    },
+    "crests/de-fc-bayern-munchen.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000G.svg",
+      "credit": "FC Bayern München official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "fe1e059956ddc61feec68dd4aeee2eafd18a146af8473b6fa4c9a35378986504",
+      "bytes": 8180,
+      "compressed": false
+    },
+    "crests/de-borussia-dortmund.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000007.svg",
+      "credit": "Borussia Dortmund official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "29a0b1c5ffb1584cea00b76f0c80e64b4c8af2f207e88f6c21de0fb506673c31",
+      "bytes": 3381,
+      "compressed": false
+    },
+    "crests/de-rb-leipzig.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000017.svg",
+      "credit": "RB Leipzig official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "23311d1bbb634fa51827ddfa719965381f8623e4f64e3ceb657037003b177033",
+      "bytes": 25914,
+      "compressed": false
+    },
+    "raw/venue-mhparena.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/MHPArena",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "15e6f2d9b2fa645a7f42d20d3908b351de51b0492457258ff3d29fc6f7b1ffc5",
+      "bytes": 3223,
+      "compressed": true
+    },
+    "crests/de-vfb-stuttgart.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000D.svg",
+      "credit": "VfB Stuttgart official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "9fc3aa34178ff4e1a3929d89c614091ceaff44d78c887c9dc729eb9eafd84103",
+      "bytes": 13070,
+      "compressed": false
+    },
+    "crests/de-tsg-hoffenheim.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000002.svg",
+      "credit": "TSG Hoffenheim official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "2ac7debff648995167364b5adb919ae1510c15ab0d81bc70ca64fc5ee1cb5b22",
+      "bytes": 11675,
+      "compressed": false
+    },
+    "crests/de-bayer-04-leverkusen.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000B.svg",
+      "credit": "Bayer 04 Leverkusen official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "7e1fdcff8b5cfbefac9f1503aaa028ac254b6b6433a24a213cafd13bcb5049ee",
+      "bytes": 57557,
+      "compressed": false
+    },
+    "raw/venue-europa-park-stadion.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Europa-Park%20Stadion",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "f0aef085ddb45a1398bbad3dc59288485e2595b19c75ea3c73e59fc4ddd0fcba",
+      "bytes": 2495,
+      "compressed": true
+    },
+    "crests/de-sport-club-freiburg.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000A.svg",
+      "credit": "Sport-Club Freiburg official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "1f6832c0d3da34d9b11482bcebfc59610d16cf9420a003c8f06cf254babb549d",
+      "bytes": 9021,
+      "compressed": false
+    },
+    "crests/de-eintracht-frankfurt.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000F.svg",
+      "credit": "Eintracht Frankfurt official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "fbadda554b9478c540a85a269ebf7576fb881ccc2bcc4c710e4baee5241673a3",
+      "bytes": 13419,
+      "compressed": false
+    },
+    "crests/de-fc-augsburg.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000010.svg",
+      "credit": "FC Augsburg official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "26bf36a7d96b260b1ef7b9e814391c72e30bab5f50622a0be498439a64c90283",
+      "bytes": 12284,
+      "compressed": false
+    },
+    "crests/de-1-fsv-mainz-05.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000006.svg",
+      "credit": "1. FSV Mainz 05 official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "7175310c9ba3c48d082b16ca0ef0417fd6bffa007d1891df2ffda39e1ce10a0e",
+      "bytes": 3058,
+      "compressed": false
+    },
+    "crests/de-1-fc-union-berlin.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000V.svg",
+      "credit": "1. FC Union Berlin official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "16eef1b104c25f5a6f27dde730fd891629059885cd376762553acf467c34e5c9",
+      "bytes": 19740,
+      "compressed": false
+    },
+    "crests/de-borussia-monchengladbach.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000004.svg",
+      "credit": "Borussia Mönchengladbach official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "591635b97f81a4483258b9c0762619d9017cf71e45854561aad970df8951bccf",
+      "bytes": 2424,
+      "compressed": false
+    },
+    "crests/de-hamburger-sv.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000C.svg",
+      "credit": "Hamburger SV official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "5738d4e7ed8ef4bce0078a55029a785c50b3701dc5b591ae65ac6b79c25c3f1d",
+      "bytes": 564,
+      "compressed": false
+    },
+    "crests/de-1-fc-koln.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000008.svg",
+      "credit": "1. FC Köln official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "62cb979efdb29fd851d0a5890264e4674b4ccd22b3b33aeb23573b7d4becf188",
+      "bytes": 34343,
+      "compressed": false
+    },
+    "crests/de-sv-werder-bremen.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000E.svg",
+      "credit": "SV Werder Bremen official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "a10ef984868b7aec5b7b91ee93f85ed325fab22d18f0117e17b69520e3cb8ad6",
+      "bytes": 1404,
+      "compressed": false
+    },
+    "crests/de-fc-schalke-04.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000009.svg",
+      "credit": "FC Schalke 04 official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "1b9f37b99ea9754e5fb5aacba7326d33f0d7614dcde929fc8efe5876513ef080",
+      "bytes": 2537,
+      "compressed": false
+    },
+    "crests/de-sv-elversberg.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N6L.svg",
+      "credit": "SV Elversberg official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "90401b4a3afcd5dbc5c7764b8ff488fa74b0dc0abe015cbdaa3a95d9c8176578",
+      "bytes": 5024,
+      "compressed": false
+    },
+    "crests/de-sc-paderborn-07.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000L.svg",
+      "credit": "SC Paderborn 07 official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "b568c4b394b83b1af5149e166df46c1f5bf5572d59f16f7f738a8ce137d3a7bc",
+      "bytes": 6987,
+      "compressed": false
+    },
+    "crests/de-vfl-wolfsburg.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000003.svg",
+      "credit": "VfL Wolfsburg official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "b5d81518a3adf62553a7929c508d44c9028d38b733ae2ab46dffaa32a4846691",
+      "bytes": 1487,
+      "compressed": false
+    },
+    "crests/de-1-fc-heidenheim-1846.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000018.svg",
+      "credit": "1. FC Heidenheim 1846 official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "e1334b1fe122ecf0ca869317a22754cad85ae769ec155d884d4426b18eb5f37e",
+      "bytes": 24386,
+      "compressed": false
+    },
+    "crests/de-fc-st-pauli.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000H.svg",
+      "credit": "FC St. Pauli official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "0c7cf4c484d5f0f5dd742836f32619fc0dc456069e1b5bc5216e5dcd992644ec",
+      "bytes": 24677,
+      "compressed": false
+    },
+    "crests/de-hannover-96.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000001.svg",
+      "credit": "Hannover 96 official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "5ddc34aaac21b6abf7ed48891757c3e629ed86ca98223dd82957db0cf9f08d5a",
+      "bytes": 3539,
+      "compressed": false
+    },
+    "crests/de-sv-darmstadt-98.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000016.svg",
+      "credit": "SV Darmstadt 98 official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "fe3ed60da2e4247ae0fe343eb0db72f10554f1dde8605d48cbdf210079ac3b19",
+      "bytes": 40192,
+      "compressed": false
+    },
+    "crests/de-1-fc-kaiserslautern.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000I.svg",
+      "credit": "1. FC Kaiserslautern official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "6c72308efd48473ee421f780b9f55c68c9740d136adb66a68664bb06a0e55fe0",
+      "bytes": 2817,
+      "compressed": false
+    },
+    "crests/de-hertha-bsc.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000Z.svg",
+      "credit": "Hertha BSC official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "d0188f0e920a2c412fcbf6e597dd22f35a66f77500a9b8cac1957ae3b62bd010",
+      "bytes": 14215,
+      "compressed": false
+    },
+    "crests/de-1-fc-nurnberg.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000005.svg",
+      "credit": "1. FC Nürnberg official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "d6b4ae336616f2eb7b732c9a83676fc0254584ec17c77791d132697085a1156f",
+      "bytes": 1944,
+      "compressed": false
+    },
+    "crests/de-vfl-bochum-1848.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000S.svg",
+      "credit": "VfL Bochum 1848 official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "8cccba7d4b7c5b3eac5f4b1d80c82839bbbd9dfecc25c19db76560e668788d84",
+      "bytes": 14993,
+      "compressed": false
+    },
+    "crests/de-karlsruher-sc.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000T.svg",
+      "credit": "Karlsruher SC official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "9a9f7c24e98b62efb10b8861616bf39d63bae2954d8cf0644781248d8a147d84",
+      "bytes": 2112,
+      "compressed": false
+    },
+    "crests/de-sg-dynamo-dresden.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000N.svg",
+      "credit": "SG Dynamo Dresden official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "7fe7ade04efae1987156b512606828f99ea23828e943a8a49acaf095affd1984",
+      "bytes": 9819,
+      "compressed": false
+    },
+    "crests/de-holstein-kiel.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5P.svg",
+      "credit": "Holstein Kiel official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "ab6eab96f86b4cfbdd486f4a3ffe6c3c0852539729a43584c551a478f32aa83c",
+      "bytes": 15578,
+      "compressed": false
+    },
+    "crests/de-dsc-arminia-bielefeld.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000015.svg",
+      "credit": "DSC Arminia Bielefeld official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "55615ebb686e9f74e922a7e63928bf4b84da4542ea5beb1a6804395611349aca",
+      "bytes": 23524,
+      "compressed": false
+    },
+    "crests/de-1-fc-magdeburg.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5D.svg",
+      "credit": "1. FC Magdeburg official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "d09b8e81b6ab0eedcd5c721625e82bf94d7330201298433df9b8f15cf5d254e6",
+      "bytes": 8392,
+      "compressed": false
+    },
+    "crests/de-eintracht-braunschweig.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000X.svg",
+      "credit": "Eintracht Braunschweig official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "2405d9e113313e79aa30befe93f8c41a2ea1241621fce9eb8dd2aa7b3b396ac0",
+      "bytes": 40394,
+      "compressed": false
+    },
+    "crests/de-spvgg-greuther-furth.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000W.svg",
+      "credit": "SpVgg Greuther Fürth official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "2d07be0477339bc48983a5198194d9e545ed4e48ad96ce1c4ed949e402b2892e",
+      "bytes": 4286,
+      "compressed": false
+    },
+    "crests/de-fc-energie-cottbus.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000O.svg",
+      "credit": "FC Energie Cottbus official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "2c73cb99e29e598f416bcb643cbd284d0577db0fb26117b7039fdf25a7f57f9d",
+      "bytes": 13864,
+      "compressed": false
+    },
+    "crests/de-vfl-osnabruck.svg": {
+      "url": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000014.svg",
+      "credit": "VfL Osnabrück official crest via Bundesliga/DFL",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "15d934270087b2f23db1d17a31125a7d3d1d581c545d16f2f9c48e7d9abf8095",
+      "bytes": 2080,
+      "compressed": false
+    },
+    "crests/de-1-fc-saarbrucken.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/222/original_saarbruecken.jpg?1493059538",
+      "credit": "1. FC Saarbrücken official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "2b4b0a3d0ba693e667a9c3374869ad026cca3462ece4d5f3c57943e7eb1295d6",
+      "bytes": 130200,
+      "compressed": false
+    },
+    "raw/venue-new-tivoli.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/New%20Tivoli",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "668dff0ffc4141d28577b565fad075d4a46d092bef4706895d9b95f45159be47",
+      "bytes": 2551,
+      "compressed": true
+    },
+    "crests/de-alemannia-aachen.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/106/original_aachen.jpg?1493059500",
+      "credit": "Alemannia Aachen official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "ebee65ac18089ea40d5cfbdca9fee256f0ccec66e9f16524188e6b55d8bfc59f",
+      "bytes": 122306,
+      "compressed": false
+    },
+    "raw/venue-audi-sportpark.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Audi%20Sportpark",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "b69fc9836e2f072376f900b172f5368726868340f52a4ce9e04a6d12f570d168",
+      "bytes": 1744,
+      "compressed": true
+    },
+    "crests/de-fc-ingolstadt.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/200/946/original_FC_Ingolstadt_Logo.jpg?1560333603",
+      "credit": "FC Ingolstadt official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "81edc2a1d60fe7451d4d98dc3a1d09d347024480ef66a2fb720de94ca7c6e4da",
+      "bytes": 172024,
+      "compressed": false
+    },
+    "raw/venue-sportpark-h-henberg.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Sportpark%20H%C3%B6henberg",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "b5776e19ff1edfccc50d2e3a2b92085df22c0cc210786f9cc3178a6402e3af87",
+      "bytes": 2565,
+      "compressed": true
+    },
+    "crests/de-fc-viktoria-koln.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/201/050/original_Viktoria_Koeln.jpg?1560415707",
+      "credit": "FC Viktoria Köln official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "9a67b84c61c0410abc80d905a21bd03604597d9e049da3355c816cfe146f4f24",
+      "bytes": 131244,
+      "compressed": false
+    },
+    "crests/de-fc-wurzburger-kickers.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/229/379/original_54966-logo_wuerzburger_kickers_ro.jpg?1602679392",
+      "credit": "FC Würzburger Kickers official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "bf2321c03570ac77b0d9651097f25f84eaa50e2f55c51f2562b10a895f36190c",
+      "bytes": 54955,
+      "compressed": false
+    },
+    "crests/de-fortuna-dusseldorf.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/147/original_Fortuna_Duesseldorf.jpg?1493059512",
+      "credit": "Fortuna Düsseldorf official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "3e4732b2d8a6f3a5313e27bf3b26232ae688d02595ac4e0cab4dc6fae6738c8f",
+      "bytes": 185460,
+      "compressed": false
+    },
+    "raw/venue-s-dstadion.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/S%C3%BCdstadion",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "c2732ca43b0cb75d033d862825226f0fb9195d2c16fdc8c5b0f579fdc4a47fe4",
+      "bytes": 1984,
+      "compressed": true
+    },
+    "crests/de-fortuna-koln.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/321/765/original_Fortuna_Koeln.jpg?1750937579",
+      "credit": "Fortuna Köln official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "4a7aec6a61612f290e6c08864a64c6cb91b8338090736c256c0317b258dbb6eb",
+      "bytes": 172862,
+      "compressed": false
+    },
+    "crests/de-hansa-rostock.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/321/597/original_FC_Hansa_Rostock_500x500.jpg?1750666400",
+      "credit": "Hansa Rostock official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "7e6106b9851ed38a7d69254ccdf6dd79cc51e5e47debbed2dc15dc82bc0c2e7f",
+      "bytes": 206349,
+      "compressed": false
+    },
+    "raw/venue-jahnstadion-regensburg.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Jahnstadion%20Regensburg",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "d074679cbc26cd681fa260756805443ab635ff7980530ad5bd304e5b20eb64a4",
+      "bytes": 2067,
+      "compressed": true
+    },
+    "crests/de-jahn-regensburg.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/163/original_Jahn_Regensburg.jpg?1493059518",
+      "credit": "Jahn Regensburg official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "257a73f1b943b6b8dd423574d328a5ff18516a399c3e3b2a2e0a04ef81939dc2",
+      "bytes": 110445,
+      "compressed": false
+    },
+    "crests/de-msv-duisburg.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/300/936/original_MSV_Duisburg_500x500_2024.jpg?1712667217",
+      "credit": "MSV Duisburg official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "f504e6fe9e62a625ea7de666856e9bd4a6e9ead82f58f9e73391056166aee27f",
+      "bytes": 131337,
+      "compressed": false
+    },
+    "crests/de-preussen-munster.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/323/551/original_Preussen_Muenster.jpg?1756903050",
+      "credit": "Preußen Münster official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "e1bbbc1dbb0b51db001a78d2777600992a52b745fece2d7b24e8a97396a431bc",
+      "bytes": 111952,
+      "compressed": false
+    },
+    "raw/venue-stadion-essen.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Stadion%20Essen",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "f535ca5ec837f6cf056037ef9c91e1de84995ec78a64bce60d8acc35e654fa14",
+      "bytes": 2524,
+      "compressed": true
+    },
+    "crests/de-rot-weiss-essen.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/110/original_Rot-Weiss-Essen.jpg?1493059502",
+      "credit": "Rot-Weiss Essen official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "a34757a336d357a35144bba7e488c6b1b23356ff9543c599ff48d2a9ed7de60b",
+      "bytes": 130017,
+      "compressed": false
+    },
+    "raw/venue-sportclub-arena.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Sportclub%20Arena",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "7fa6c31a92907f61e929e6352d14fdc53a8b89e4d333f3554f40c8d63a67b50e",
+      "bytes": 2074,
+      "compressed": true
+    },
+    "crests/de-sc-verl.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/130/original_verl.jpg?1493059507",
+      "credit": "SC Verl official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "3cb782ee3b3fa598a91f58cee534d810e414defd3ca1c3c40356e1af3fa5f71b",
+      "bytes": 78131,
+      "compressed": false
+    },
+    "raw/venue-wirmachendruck-arena.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/WIRmachenDRUCK%20Arena",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "ef55444b044624dfe7373a1af49124809fab02355829cc7d7fbeae2ee89ce1eb",
+      "bytes": 2313,
+      "compressed": true
+    },
+    "crests/de-sg-sonnenhof-grossaspach.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/201/170/original_SG_Sonnenhof_Grossaspach.jpg?1560608045",
+      "credit": "SG Sonnenhof Großaspach official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "8ac537b2f9d263c51069c5195389230d770a0c37311343b6d8411d092d4d10cf",
+      "bytes": 158535,
+      "compressed": false
+    },
+    "raw/venue-h-nsch-arena.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/H%C3%A4nsch-Arena",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "fa3beec1dc91c398a1524f95219dadb18d0dd60ea929f369852ad3b596d39e4f",
+      "bytes": 2207,
+      "compressed": true
+    },
+    "crests/de-sv-meppen.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/335/753/original_SV_Meppen_2026.jpg?1783189254",
+      "credit": "SV Meppen official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "083a44dfbbfef59c5e0662004625fa170e0de8d61046089f3fca25dc81cae116",
+      "bytes": 154974,
+      "compressed": false
+    },
+    "raw/venue-carl-benz-stadion.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Carl-Benz-Stadion",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "2d81f75b20828f779c6a6eda85a165014956e0a45c793bd1716b55d43f73447c",
+      "bytes": 3360,
+      "compressed": true
+    },
+    "crests/de-sv-waldhof-mannheim.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/226/162/original_Waldhof_Mannheim.jpg?1598610609",
+      "credit": "SV Waldhof Mannheim official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "745c695bfb0de1fe404b71ea8d54718f016370a1d84f8d500167879e3cf413d6",
+      "bytes": 70479,
+      "compressed": false
+    },
+    "crests/de-sv-wehen-wiesbaden.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/173/original_Wehen_Wiesbaden.jpg?1493059521",
+      "credit": "SV Wehen Wiesbaden official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "d73fb6d47ff79db45ea63c53396b364605c90cfb2603f7ea076b924636a0f859",
+      "bytes": 211563,
+      "compressed": false
+    },
+    "raw/venue-dietmar-hopp-stadion.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Dietmar-Hopp-Stadion",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "7f58eac553f22c417f2b5053fae8a57db3e64ee7c1ef20fd42c974150b40bc9d",
+      "bytes": 2578,
+      "compressed": true
+    },
+    "crests/de-tsg-hoffenheim-ii.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/113/632/original_1899_hoffenheim.jpg?1493132487",
+      "credit": "TSG Hoffenheim II official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "684159c8495bff7d05e62966176822d8424736ab11a3c4619feb636a3d4dd591",
+      "bytes": 39398,
+      "compressed": false
+    },
+    "raw/venue-eilenriedestadion.json.gz": {
+      "url": "https://en.wikipedia.org/api/rest_v1/page/summary/Eilenriedestadion",
+      "credit": "Wikipedia/Wikidata stadium coordinates",
+      "license": "Coordinates CC0; Wikipedia descriptions CC BY-SA, not reproduced in quiz.",
+      "sha256": "7397095a91099e04e01f92cf382026bf2f3b3a78dac73d34e9d918d4664d4841",
+      "bytes": 2221,
+      "compressed": true
+    },
+    "crests/de-tsv-havelse.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/018/183/original_TSV_Havelse.jpg?1493059525",
+      "credit": "TSV Havelse official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "e761a05b85709b4ae9f51b728a1ee028c2cdb9424baad964bdb67c6731aee1ad",
+      "bytes": 199523,
+      "compressed": false
+    },
+    "crests/de-vfb-stuttgart-ii.jpg": {
+      "url": "https://assets.dfb.de/uploads/000/027/692/original_vfb.jpg?1493068594",
+      "credit": "VfB Stuttgart II official crest via German Football Association",
+      "license": "Club crest and trademark; rights retained by club. Included for identification in an educational quiz.",
+      "sha256": "9c9ade12aafcc30377499860248525ae1958034f392fa763dab3f1cf9c9e88c5",
+      "bytes": 192064,
+      "compressed": false
+    },
+    "raw/hoffenheim-ground-city.html.gz": {
+      "url": "https://events.tsg-hoffenheim.de/kontakt/anfahrt/",
+      "credit": "TSG Hoffenheim official stadium directions",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "ac552621c4d8fb8ac8dd08181228e4e0bf839495211f09b5283855bb507aed4c",
+      "bytes": 54310,
+      "compressed": true
+    },
+    "raw/elversberg-ground-city.html.gz": {
+      "url": "https://sv07elversberg.de/infos-fuer-gaestefans/",
+      "credit": "SV Elversberg official visiting fan directions",
+      "license": "Source publisher retains rights; factual data retained for audit.",
+      "sha256": "b353bc6c9796dbddef477bb90299bbd3297cf27495f9cf9b7f9ef41402d9fe35",
+      "bytes": 196563,
+      "compressed": true
+    }
+  }
+}

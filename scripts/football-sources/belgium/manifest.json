@@ -1,0 +1,1224 @@
+{
+  "retrieved": "2026-10-29",
+  "season": "2026–27",
+  "files": {
+    "raw/first.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Belgian_Pro_League",
+      "sha256": "1033e9b8df910badd7b8243094d67735e10609e8a6b36f2d9f6261e36d7d2a84",
+      "bytes": 404061,
+      "compressed": true
+    },
+    "raw/second.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Challenger_Pro_League",
+      "sha256": "756914ac6331c19d112ef69b82ebc61e6b67b3dec5181529d94aceb49b369f68",
+      "bytes": 229139,
+      "compressed": true
+    },
+    "raw/third.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Belgian_Division_1",
+      "sha256": "4482ceead9309f9a2efb06189c76fc974ce83b2c7aaaeea057ab21dc61cec36c",
+      "bytes": 246700,
+      "compressed": true
+    },
+    "raw/official1.html.gz": {
+      "url": "https://www.proleague.be/fr/jpl-clubs",
+      "sha256": "68ca9843b3133e5f6992c4744b68a4c20ac70c1c3c3a5b984d57fe45b60ade74",
+      "bytes": 179179,
+      "compressed": true
+    },
+    "raw/official2.html.gz": {
+      "url": "https://www.proleague.be/fr/cpl-clubs",
+      "sha256": "380fa184bcc91178b5a0752586f0de1bdc6389ec9a49e75f494a393240757710",
+      "bytes": 172475,
+      "compressed": true
+    },
+    "raw/thirdfr.html.gz": {
+      "url": "https://fr.wikipedia.org/wiki/Championnat_de_Belgique_de_football_de_troisi%C3%A8me_division_2026-2027",
+      "sha256": "ef409fad3e9581ac713c87d30054f9ddae7db6bb089c455cdee4c518c62cf611",
+      "bytes": 515539,
+      "compressed": true
+    },
+    "raw/officialvv.html.gz": {
+      "url": "https://www.voetbalvlaanderen.be/competitie/CHP_134760/overzicht",
+      "sha256": "817d02d822912d819a91d50a60fc0077c791d303bef884e206c00131f2617fba",
+      "bytes": 8668,
+      "compressed": true
+    },
+    "raw/format.html.gz": {
+      "url": "https://www.proleague.be/nieuws/challenger-pro-league-heeft-nieuw-format-zonder-quota-voor-u23",
+      "sha256": "9e992b77ad9d9501842228f7f9059fec89ce463257f15e9dbdccdb1d477a9659",
+      "bytes": 219729,
+      "compressed": true
+    },
+    "raw/club-pages-0.json.gz": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=pageprops|pageimages&piprop=original&pilicense=any&titles=RSC%20Anderlecht%7CRoyal%20Antwerp%20FC%7CSK%20Beveren%7CCercle%20Brugge%20KSV%7CRoyal%20Charleroi%20SC%7CClub%20Brugge%20KV%7CKRC%20Genk%7CKAA%20Gent%7CKV%20Kortrijk%7CRAAL%20La%20Louvi%C3%A8re%7CLommel%20SK%7CKV%20Mechelen%7COud-Heverlee%20Leuven%7CSint-Truidense%20VV%7CStandard%20Li%C3%A8ge%7CRoyale%20Union%20Saint-Gilloise%7CKVC%20Westerlo%7CSV%20Zulte%20Waregem%7CK%20Beerschot%20VA%7CFCV%20Dender%20EH%7CKAS%20Eupen%7CKSC%20Lokeren%20(2025)%7CFrancs%20Borains%7CSporting%20Hasselt%7CRoyal%20Excelsior%20Virton%7CPatro%20Eisden%20Maasmechelen%7CClub%20NXT%7CLierse%20SK%20(2018)%7CRFC%20Seraing%20(1922)%7CRFC%20Li%C3%A8ge%7CRSCA%20Futures%7CKFC%20Houtvenne%7CRoyal%20FC%20Mandel%20United%7CSK%20Roeselare%7CKFC%20Merelbeke%7CKSK%20Heist%7CHoogstraten%20VV%7CKVV%20Thes%20Sport%20Tessenderlo%7CKFC%20Dessel%20Sport%7CSV%20Belisia%20Bilzen%7CRoyal%20Knokke%20FC%7CKVK%20Tienen",
+      "sha256": "b7c505698be2e138ebb72ca213e5bf946f0ebba74f8e6038760d450d644c84bf",
+      "bytes": 17331,
+      "compressed": true
+    },
+    "raw/club-pages-45.json.gz": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=pageprops|pageimages&piprop=original&pilicense=any&titles=Lyra-Lierse%7CCercle%20Brugge%20KSV%7CKRC%20Harelbeke%20(2016%20club)%7CKVV%20Zelzate%7CUnion%20Rochefortoise%7CRFC%20Meux%7CRWDM%20Brussels%7CRoyale%20Union%20Saint-Gilloise%7CRAEC%20Mons%20(2015)%7CRoyale%20Union%20Tubize-Braine%7CStandard%20Li%C3%A8ge%7CRoyal%20Charleroi%20SC%7COlympic%20Charleroi%7CRSC%20Habay-la-Neuve%7CCS%20Onhaye%7CFC%20Fl%C3%A9nu",
+      "sha256": "90eae7c0866db8f1acfe7bf68ffd7d498a05c871b28d5ef0c84b21e25676d356",
+      "bytes": 5773,
+      "compressed": true
+    },
+    "raw/venues-wikidata.json.gz": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fclub%20%3FclubLabel%20%3Fstadium%20%3FstadiumLabel%20%3FstadiumAltLabel%20%3Fcoord%20WHERE%20%7B%20VALUES%20%3Fclub%20%7B%20wd%3AQ190916%20wd%3AQ113000%20wd%3AQ190561%20wd%3AQ19585%20wd%3AQ216032%20wd%3AQ364698%20wd%3AQ138248%20wd%3AQ849544%20wd%3AQ509170%20wd%3AQ196160%20wd%3AQ650917%20wd%3AQ1423718%20wd%3AQ18232%20wd%3AQ2308515%20wd%3AQ376635%20wd%3AQ618620%20wd%3AQ732002%20wd%3AQ1474239%20wd%3AQ916199%20wd%3AQ1347229%20wd%3AQ1668203%20wd%3AQ734426%20wd%3AQ1065328%20wd%3AQ925973%20wd%3AQ536651%20wd%3AQ18001655%20wd%3AQ2751851%20wd%3AQ187528%20wd%3AQ767875%20wd%3AQ2268833%20wd%3AQ2281096%20wd%3AQ2313985%20wd%3AQ2456491%20wd%3AQ3191560%20wd%3AQ95183770%20wd%3AQ101625593%20wd%3AQ38066559%20wd%3AQ126678588%20wd%3AQ2281326%20wd%3AQ2629291%20wd%3AQ114056326%20wd%3AQ1948626%20wd%3AQ291937%20wd%3AQ2141658%20wd%3AQ2010623%20wd%3AQ2062274%20wd%3AQ20979061%20wd%3AQ2674322%20wd%3AQ1871645%20wd%3AQ3446080%20wd%3AQ2474974%20wd%3AQ109450987%20wd%3AQ13447141%20wd%3AQ122459777%20%7D%20%3Fclub%20wdt%3AP115%20%3Fstadium.%20OPTIONAL%20%7B%20%3Fstadium%20wdt%3AP625%20%3Fcoord.%20%7D%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cnl%2Cfr%22.%20%7D%20%7D",
+      "sha256": "cbc7f8eada3be0a0d63f4baa41e55057c90b3d969d59cd3344cafe936686411a",
+      "bytes": 19646,
+      "compressed": true
+    },
+    "raw/club-rsc-anderlecht.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RSC_Anderlecht",
+      "sha256": "4e896b927231d2576cba1bb1bac0cd57d60d01653c76fb7f077e4dec65258a0f",
+      "bytes": 1130225,
+      "compressed": true
+    },
+    "raw/club-cercle-brugge-ksv.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Cercle_Brugge_KSV",
+      "sha256": "e8c54c27f567657469f183cf896d80b5c47c4346a5d2332f68c8e46786254c4a",
+      "bytes": 804194,
+      "compressed": true
+    },
+    "raw/club-sk-beveren.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/SK_Beveren",
+      "sha256": "4539b234abd6a74c07686826877713cc1abd83ab5ba096d63057922ffa9ea208",
+      "bytes": 271093,
+      "compressed": true
+    },
+    "raw/club-royal-charleroi-sc.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Royal_Charleroi_SC",
+      "sha256": "a25b6babd1fe4cd239540aec147057650e8a3e55e6f4f7805f3dfbf8d5a53c49",
+      "bytes": 392715,
+      "compressed": true
+    },
+    "raw/club-royal-antwerp-fc.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Royal_Antwerp_FC",
+      "sha256": "7d705051988e98cccfd4fa24bec751653d15eaab7cf85299cde8c1571b9e8b5b",
+      "bytes": 473202,
+      "compressed": true
+    },
+    "raw/club-club-brugge-kv.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Club_Brugge_KV",
+      "sha256": "3b81dbf984d558da037513d1b926d21e14ac038da5ff74a0b56ce7594d66f46b",
+      "bytes": 736302,
+      "compressed": true
+    },
+    "raw/club-krc-genk.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KRC_Genk",
+      "sha256": "6d8f26e6a779809289010a29ed5a1fc1ee3e0760a55edeb9fe8717b816e2946f",
+      "bytes": 517978,
+      "compressed": true
+    },
+    "raw/club-kaa-gent.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KAA_Gent",
+      "sha256": "72f336d9883689e72b85e899edfcb52136f2c1b6bd73170968d3a6c39a746b58",
+      "bytes": 799744,
+      "compressed": true
+    },
+    "raw/club-kv-kortrijk.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KV_Kortrijk",
+      "sha256": "e32b820c6162c149f7b1aeecc32f53decc8b7fbef90b3ba46931faa1b6ed5f9c",
+      "bytes": 298938,
+      "compressed": true
+    },
+    "raw/club-raal-la-louvi-re.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RAAL_La_Louvière",
+      "sha256": "b19fd11cfcfc6ac827af5827032e0d0342bc08fb05aac393c0a5f85340c89fca",
+      "bytes": 264897,
+      "compressed": true
+    },
+    "raw/club-lommel-sk.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Lommel_SK",
+      "sha256": "aa30c610e690e0fe1d6acab20445a0b56f7539bf8317a20acd90f5309cb78158",
+      "bytes": 237458,
+      "compressed": true
+    },
+    "raw/club-kv-mechelen.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KV_Mechelen",
+      "sha256": "cadab19f8b4ddfefce1b75d0fcfcc1bf720a4642080789cced782bb773cc103f",
+      "bytes": 656232,
+      "compressed": true
+    },
+    "raw/club-sint-truidense-vv.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Sint-Truidense_VV",
+      "sha256": "552d7fce53686254266ff1ce58a592ea588d0757ef1902192b43c619b4da1029",
+      "bytes": 310509,
+      "compressed": true
+    },
+    "raw/club-standard-li-ge.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Standard_Liège",
+      "sha256": "187ae68a6ea8f04b4ff977725e7c7a37dcc27e21d11594756a726a5e20a82601",
+      "bytes": 646582,
+      "compressed": true
+    },
+    "raw/club-royale-union-saint-gilloise.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Royale_Union_Saint-Gilloise",
+      "sha256": "68a3f0b512a659070586c0c3c9be53396f1f496bd21e1a54846098f7ca8a0ea4",
+      "bytes": 739168,
+      "compressed": true
+    },
+    "raw/club-kvc-westerlo.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KVC_Westerlo",
+      "sha256": "0e1216121cbaba0ae8ea0aabb3b86cf3fa4e573dac5930a3a2d4cb4a75106fc6",
+      "bytes": 278278,
+      "compressed": true
+    },
+    "raw/club-k-beerschot-va.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/K_Beerschot_VA",
+      "sha256": "3d00cc6710e11019fd6559b654070e76a6969be880571bd8e0dd5995ee173bd3",
+      "bytes": 302554,
+      "compressed": true
+    },
+    "raw/club-sv-zulte-waregem.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/SV_Zulte_Waregem",
+      "sha256": "ab092165e234f4fad7ed253c877629f311b51e343f2faebdf19e2f3fb20b3426",
+      "bytes": 309257,
+      "compressed": true
+    },
+    "raw/club-oud-heverlee-leuven.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Oud-Heverlee_Leuven",
+      "sha256": "0cdac35a1491af830e77440183ae86db190868bbae479f90e22f5f3c49a37c46",
+      "bytes": 529047,
+      "compressed": true
+    },
+    "raw/club-fcv-dender-eh.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/FCV_Dender_EH",
+      "sha256": "dcfdf756e3fb38e831dce216c86f1376ef973fa36eb24f7f496e174c9a1e7817",
+      "bytes": 255201,
+      "compressed": true
+    },
+    "raw/club-francs-borains.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Francs_Borains",
+      "sha256": "2a427256f9d425f73a332c97812c6f2da163502324726c9bc81c86f9149cb46f",
+      "bytes": 196059,
+      "compressed": true
+    },
+    "raw/club-ksc-lokeren--2025-.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KSC_Lokeren_(2025)",
+      "sha256": "2ca7fc3376c3044f806821453ccecb47f9da6089de2a5f4606e13f94d79c645b",
+      "bytes": 183445,
+      "compressed": true
+    },
+    "raw/club-kas-eupen.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KAS_Eupen",
+      "sha256": "24612f5084db300d97454e270c30cd5206e3052696e1ca9694b81ff0d6a178f7",
+      "bytes": 388769,
+      "compressed": true
+    },
+    "raw/club-royal-excelsior-virton.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Royal_Excelsior_Virton",
+      "sha256": "1becff9f3cda1e2d3000c83a08f35ab1ef6008726f5e5ae36d13dd0abb45a619",
+      "bytes": 182512,
+      "compressed": true
+    },
+    "raw/club-patro-eisden-maasmechelen.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Patro_Eisden_Maasmechelen",
+      "sha256": "dd25a8dac4586212be009dde68b3dd180018b2fbb32c5a05ac485ffd95a0e5b5",
+      "bytes": 211069,
+      "compressed": true
+    },
+    "raw/club-sporting-hasselt.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Sporting_Hasselt",
+      "sha256": "4fab37684d18d4dd0de5dbf4a9e5c2dc225a05c058d0d47971965b9b0347a51e",
+      "bytes": 156190,
+      "compressed": true
+    },
+    "raw/club-rfc-seraing--1922-.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RFC_Seraing_(1922)",
+      "sha256": "9576175a3b59a1fc35d2944b59fd7c8bccedef684cef94a5f3d5179a3d8b22ca",
+      "bytes": 212203,
+      "compressed": true
+    },
+    "raw/club-lierse-sk--2018-.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Lierse_SK_(2018)",
+      "sha256": "a96b602c69d467751c5581512eb1b87d967792a30398fc20dcff6fc253ee387e",
+      "bytes": 170403,
+      "compressed": true
+    },
+    "raw/club-rfc-li-ge.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RFC_Liège",
+      "sha256": "a6ce31a5baae15299c308d9fe2e94fe47f3966e4aa1607d951e4ea09755cfe98",
+      "bytes": 269647,
+      "compressed": true
+    },
+    "raw/club-rsca-futures.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RSCA_Futures",
+      "sha256": "7f84b5242bc2815bccde868b5e5d5b0889d4d4536b7f578a9db89cf509ced2b1",
+      "bytes": 182544,
+      "compressed": true
+    },
+    "raw/club-club-nxt.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Club_NXT",
+      "sha256": "a66e0b99bf1d38119bfc9cd765c219e70209c32bc1806797fc8b9c13f317b2ec",
+      "bytes": 224770,
+      "compressed": true
+    },
+    "raw/club-kfc-houtvenne.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KFC_Houtvenne",
+      "sha256": "fdb7c2a3da45e60a1d91d20dab9fe73e1fb8dd44c67e3f519d23e2baa6130ec7",
+      "bytes": 99944,
+      "compressed": true
+    },
+    "raw/club-sk-roeselare.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/SK_Roeselare",
+      "sha256": "a60f4503a9d89acbb748c56d6cf3277ea03f16f084e522668f88787eb50bc368",
+      "bytes": 146963,
+      "compressed": true
+    },
+    "raw/club-ksk-heist.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KSK_Heist",
+      "sha256": "b087687306a88956ca69033a015be5d28013ecbd9b719a58267dc02a84246892",
+      "bytes": 149765,
+      "compressed": true
+    },
+    "raw/club-royal-fc-mandel-united.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Royal_FC_Mandel_United",
+      "sha256": "32f345ad94a387f98011604bdfd2a77a2664f6e84c7bcf16445f3c968459260f",
+      "bytes": 159202,
+      "compressed": true
+    },
+    "raw/club-kfc-merelbeke.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KFC_Merelbeke",
+      "sha256": "abded44cfd0dd136a9d3428ef4862b9156f68eb5e23af7774b61d9398483c238",
+      "bytes": 141210,
+      "compressed": true
+    },
+    "raw/club-kvv-thes-sport-tessenderlo.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KVV_Thes_Sport_Tessenderlo",
+      "sha256": "0ecd833cc372b54ab63fcb665c70641cc3ae6cf0be1ba0b78804061c9b2f256f",
+      "bytes": 147293,
+      "compressed": true
+    },
+    "raw/club-hoogstraten-vv.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Hoogstraten_VV",
+      "sha256": "0b94971c5f50db33e622e14d2610d04f62a8a5981184ed7c5a69dbd7bda37c43",
+      "bytes": 112811,
+      "compressed": true
+    },
+    "raw/club-royal-knokke-fc.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Royal_Knokke_FC",
+      "sha256": "b8730b584f13e125c4aca0463c2686f3e2d8576a9357c3639c63bd8ef3911232",
+      "bytes": 162136,
+      "compressed": true
+    },
+    "raw/club-kfc-dessel-sport.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KFC_Dessel_Sport",
+      "sha256": "e6ec62eb4e5adb9b57df918fa0751419f178b9a2e28bd15c00cf120f636b12d2",
+      "bytes": 152700,
+      "compressed": true
+    },
+    "raw/club-kvk-tienen.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KVK_Tienen",
+      "sha256": "bda41b1db88cb9bbca3418c106633a823f03590a72a4c6d87d6c2874c0020519",
+      "bytes": 173812,
+      "compressed": true
+    },
+    "raw/club-krc-harelbeke--2016-club-.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KRC_Harelbeke_(2016_club)",
+      "sha256": "97f05d08f23ae37db2185d2dbabacf9122696706dedfa6f21a60a495f9423519",
+      "bytes": 118634,
+      "compressed": true
+    },
+    "raw/club-lyra-lierse.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Lyra-Lierse",
+      "sha256": "a206480f7856cfa63f652d96826153823be5870487d18133f1f7a830e5eb3c95",
+      "bytes": 142901,
+      "compressed": true
+    },
+    "raw/club-sv-belisia-bilzen.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/SV_Belisia_Bilzen",
+      "sha256": "f1f356a8adaa56224e7a77e8193c0c73ab2e79bd702406cbb3203af22f7077de",
+      "bytes": 153060,
+      "compressed": true
+    },
+    "raw/club-union-rochefortoise.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Union_Rochefortoise",
+      "sha256": "0fa03756a0004ad641ed6b941b4a705fcc56318c1b3bb3bb17109c899082913f",
+      "bytes": 124233,
+      "compressed": true
+    },
+    "raw/club-rfc-meux.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RFC_Meux",
+      "sha256": "9b6f49b30745ac779d7010660260e0728a9dc769124f9b1857119ac96dad61d8",
+      "bytes": 101719,
+      "compressed": true
+    },
+    "raw/club-raec-mons--2015-.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RAEC_Mons_(2015)",
+      "sha256": "2be91ca39e83c34216981af5084b8e7eb460a37bfc12b3e4ad4421e810297a38",
+      "bytes": 185117,
+      "compressed": true
+    },
+    "raw/club-rwdm-brussels.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RWDM_Brussels",
+      "sha256": "347acbdb1d54d805519a0b630d12fffef74f1a6b4f13a785e9d81d9f1492e9c5",
+      "bytes": 293758,
+      "compressed": true
+    },
+    "raw/club-kvv-zelzate.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/KVV_Zelzate",
+      "sha256": "7541fcb83f72e6a22281ce72581bb8927a059edbf2e85a0d0108323ca7a5f55c",
+      "bytes": 156855,
+      "compressed": true
+    },
+    "raw/club-olympic-charleroi.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Olympic_Charleroi",
+      "sha256": "f5d4076f59630b35d11a7b562c0c7eef6c580436420ac9a9f70281b801109128",
+      "bytes": 255211,
+      "compressed": true
+    },
+    "raw/club-cs-onhaye.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/CS_Onhaye",
+      "sha256": "520d3139226396f58f438294e07f9ddc2b80b177b35b1193f8a893dfb7693a2a",
+      "bytes": 70424,
+      "compressed": true
+    },
+    "raw/club-royale-union-tubize-braine.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/Royale_Union_Tubize-Braine",
+      "sha256": "06b082fe6760963325bc558d77786e094b9903f10db90b3d4f777f7c02c85aa4",
+      "bytes": 204244,
+      "compressed": true
+    },
+    "raw/club-rsc-habay-la-neuve.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/RSC_Habay-la-Neuve",
+      "sha256": "924d14db4dea04826c09c4f8f4ee63421111e6463d9f716cf5a60eeea4dd2e68",
+      "bytes": 81083,
+      "compressed": true
+    },
+    "raw/club-fc-fl-nu.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/FC_Flénu",
+      "sha256": "18bedea31bcbd491424bb4651d0ec2d88bffacdf9f2509c4f566303f8fe59e02",
+      "bytes": 128614,
+      "compressed": true
+    },
+    "raw/article-venues.json.gz": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20%3Farticle%20%3Fstadium%20%3Fcoord%20WHERE%20%7B%20VALUES%20%3Farticle%20%7B%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FConstant_Vanden_Stock_Stadium%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBosuilstadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFreethiel_Stadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJan_Breydel_Stadium%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStade_du_Pays_de_Charleroi%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCegeka_Arena%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPlanet_Group_Arena%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FGuldensporen_Stadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FEasi_Arena%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSoevereinstadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAchter_de_Kazerne%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDen_Dreef%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStayen%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStade_Maurice_Dufrasne%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStade_Joseph_Marien%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHet_Kuipje%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FElindus_Arena%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FOlympisch_Stadion_(Antwerp)%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FFlorent_Beeckmanstadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FKehrwegstadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDaknamstadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBoussu%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHasselt%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStade_Yvan_Georges%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMaasmechelen%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FSchiervelde_Stadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FHerman_Vanderpoortenstadion%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStade_du_Pairay%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_de_Rocourt%3E%20%3Chttps%3A%2F%2Fen.wikipedia.org%2Fwiki%2FKing_Baudouin_Stadium%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_du_Schiervelde%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_Julien_Berg%C3%A9%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FCentre_sportif_communal_(Heist-op-den-Berg)%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FSportcomplex_Seminarie%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_Armand_Melis%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_Forestier%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_Edmond_Machtens%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_Charles_Tondreau%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_Leburton%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FSL16_Football_Campus%3E%20%3Chttps%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FStade_de_la_Neuville%3E%20%7D%20%3Farticle%20schema%3Aabout%20%3Fstadium.%20OPTIONAL%20%7B%3Fstadium%20wdt%3AP625%20%3Fcoord.%7D%20%7D",
+      "sha256": "ed2988191d38a0e91800bfd35d5aed6e74eb2be7beac9f7230f23b719dd04ff3",
+      "bytes": 15310,
+      "compressed": true
+    },
+    "raw/mons-source.html.gz": {
+      "url": "https://www.raecmons44.be/table/d1-ffa-2026-2027/",
+      "sha256": "844aa83402cefe0cffbb545898e94b106a048c6957b9ff78faee9cc29c5ddef3",
+      "bytes": 114201,
+      "compressed": true
+    },
+    "raw/flenu-source.html.gz": {
+      "url": "https://www.telemb.be/actu/gros-succes-en-coulisses-et-en-tribunes-pour-la-premiere-du-fc-flenu-au-stade-tondreau-pas-encore/41202",
+      "sha256": "140c2a65851bde90870c172a082396abf4895a91c94cd8be37b16b8a74800f88",
+      "bytes": 79653,
+      "compressed": true
+    },
+    "raw/jonggent-source.html.gz": {
+      "url": "https://www.kaagent.be/nl/nieuws/23-08-2026/backline-arena-officieel-geopend",
+      "sha256": "c393e8dce07de6ca44b116b841098f5893a4d3004380d15aad47908d210c0b8d",
+      "bytes": 59730,
+      "compressed": true
+    },
+    "raw/gentaway-source.html.gz": {
+      "url": "https://www.rfc-seraing.be/informations-pratiques-ticketing-deplacement-au-jong-kaa-gent-dim-11-10/",
+      "sha256": "318d8cce521889b74c77c64efb46983ae4cfd15975f11341fbe450a603c574b2",
+      "bytes": 80265,
+      "compressed": true
+    },
+    "raw/vv-source.html.gz": {
+      "url": "https://www.voetbalexpress.be/seizoen2026-2027/herenamateurs1.html",
+      "sha256": "39f1850f67f5efa03e6a914de2d30926df8ac92bb5726ca06c997609b9f29842",
+      "bytes": 389393,
+      "compressed": true
+    },
+    "raw/stadium-index.json.gz": {
+      "url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fstadium%20%3FstadiumLabel%20%3FstadiumAltLabel%20%3Fcoord%20WHERE%20%7B%20%3Fstadium%20wdt%3AP17%20wd%3AQ31%3B%20wdt%3AP625%20%3Fcoord%3B%20wdt%3AP31%20%3Ftype.%20VALUES%20%3Ftype%20%7B%20wd%3AQ483110%20wd%3AQ1154710%20wd%3AQ1076486%20wd%3AQ627517%20wd%3AQ1689153%20%7D%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%2Cnl%2Cfr%22.%20%7D%20%7D",
+      "sha256": "fe8c054125a7a00c0450240b727f1396bd11fe8a16bbde27cbcb7b183138be72",
+      "bytes": 76228,
+      "compressed": true
+    },
+    "crests/be-anderlecht.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg",
+      "sha256": "b0623fbbcf374020a44abbdcbd1ae4f9fdf5c70b24cae3bc70872b0059c3dc4e",
+      "bytes": 39577,
+      "compressed": false
+    },
+    "crests/be-antwerp.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/0b/Royal_Antwerp_Football_Club_logo.svg",
+      "sha256": "536e154dc7ed4b82d5695d9f5b28b44e5d15506f14f9c6257b71a65d1b53a5dc",
+      "bytes": 83576,
+      "compressed": false
+    },
+    "crests/be-beveren.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9b/SK_Beveren_logo.svg",
+      "sha256": "60ea080f67e869b105ddc9c5c14cfda90027d040b9ed5dfc082e56acb86d60b3",
+      "bytes": 36737,
+      "compressed": false
+    },
+    "crests/be-cercle-brugge.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg",
+      "sha256": "858ab1a5657b24a2dcce84439ed939675118b9948d86af68c5e04341d4b4d3d8",
+      "bytes": 2360,
+      "compressed": false
+    },
+    "crests/be-charleroi.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg",
+      "sha256": "8927128ec6ba3be2afaf1b54d42e7c121ba2541ed894fc431feec2cb9b81e101",
+      "bytes": 20411,
+      "compressed": false
+    },
+    "crests/be-club-brugge.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d0/Club_Brugge_KV_logo.svg",
+      "sha256": "d33c5257d17b38bdb30f6cc9f05b4addef821ced6cfb9f154bd31d0cf0eb2824",
+      "bytes": 113194,
+      "compressed": false
+    },
+    "crests/be-gent.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg",
+      "sha256": "7d3e7a92afc139cd80a11b75d8d40976b3646537c332b48533f13b4c1df950ae",
+      "bytes": 19628,
+      "compressed": false
+    },
+    "crests/be-genk.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg",
+      "sha256": "094885175a4cb734f9e1a403f0f58286692f93293262b498e7ee43f29a5a0f22",
+      "bytes": 4396,
+      "compressed": false
+    },
+    "crests/be-la-louviere.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/40/RAAL_La_Louvi%C3%A8re_logo.svg",
+      "sha256": "1748ecd7c7ae14c566e6fe9939420fbab5acfa82942d1a16818f385ef88c842a",
+      "bytes": 17023,
+      "compressed": false
+    },
+    "crests/be-lommel-sk.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e6/Lommel_SK_logo.svg",
+      "sha256": "6bc7516317f531b9ddae413302879e8493e5768ac8ae5a0ef9410069618af4cc",
+      "bytes": 15387,
+      "compressed": false
+    },
+    "crests/be-kortrijk.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/17/KV_Kortrijk_logo_2016.svg",
+      "sha256": "92101146733bcf74cefc5339cdcd51da918dda4354e707baa1e8a807a27abe58",
+      "bytes": 124736,
+      "compressed": false
+    },
+    "crests/be-mechelen.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/28/KV_Mechelen_logo.svg",
+      "sha256": "b53c9a941671abef046cef30575f99314d3dc2bfb72a26e9a8923c43fdf1fea3",
+      "bytes": 29357,
+      "compressed": false
+    },
+    "crests/be-oh-leuven.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png",
+      "sha256": "11c19d691060e45fa3c8592ea9168780d48f0673de533520547c2c3ac7c76535",
+      "bytes": 49913,
+      "compressed": false
+    },
+    "crests/be-sint-truiden.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/60/Sint-Truidense_VV_logo.svg",
+      "sha256": "db00857e32fc4a7f715ca04f416ca8603ea4a026c75f8fbb94ec4fcf9a525615",
+      "bytes": 17340,
+      "compressed": false
+    },
+    "crests/be-standard-liege.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg",
+      "sha256": "13f489b277b30a8c10e8b304f89f2297a2299306ed72784d1f3810bc9a0dac66",
+      "bytes": 10800,
+      "compressed": false
+    },
+    "crests/be-westerlo.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/0b/KVC_Westerlo_logo.svg",
+      "sha256": "d956cc0f0d739817602d09bd291701744a11e896fa11971f08b00cd7813ac6b9",
+      "bytes": 122679,
+      "compressed": false
+    },
+    "crests/be-union-sg.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg",
+      "sha256": "49856c22b01d95baa4eb620f9f428011f92b3c53149378e1e499a4ea76d8a325",
+      "bytes": 9414,
+      "compressed": false
+    },
+    "crests/be-beerschot.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/27/Koninklijke_Beerschot_Voetbalclub_Antwerpen_logo.svg",
+      "sha256": "d82988a4c022d04e1a0f0340d47495507d48360536522c04c9e054eccbc031c0",
+      "bytes": 11092,
+      "compressed": false
+    },
+    "crests/be-dender-eh.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/24/FCV_Dender_EH_logo.svg",
+      "sha256": "2eff0cf82fe1335ab743a5e34d59b9eea26a5e599ae8886235c58d613468df49",
+      "bytes": 26387,
+      "compressed": false
+    },
+    "crests/be-zulte-waregem.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/67/Zulte-Waregem_logo.svg",
+      "sha256": "cb2aa9bdac75fc4a068d186240e653db8d31c2e00943303c8be843f688eb9604",
+      "bytes": 125128,
+      "compressed": false
+    },
+    "crests/be-lokeren.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/55/KSC_Lokeren_%282025%29_logo.svg",
+      "sha256": "cff238b6c9141a5217cfe2b4a99e505ba6905bb0a2c477a1ef1f5608311835ad",
+      "bytes": 65631,
+      "compressed": false
+    },
+    "crests/be-eupen.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d3/Kas_Eupen_Logo.svg",
+      "sha256": "3c737ec651e4191d442c5ab822d09682bf1ec30f270113e129035265a64a543e",
+      "bytes": 17332,
+      "compressed": false
+    },
+    "crests/be-hasselt.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e5/Sporting_hasselt_crest.svg",
+      "sha256": "7a7ad69a3354e8c20c28afaa8e056e11a065c6d0ec244394b4e1f12c157d4d49",
+      "bytes": 24609,
+      "compressed": false
+    },
+    "crests/be-virton.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/81/Royal_Excelsior_Virton_logo.svg",
+      "sha256": "38b4f4a1e6c689e93b7090e148227732628f54cb5d06a84d0623352a3a463bfc",
+      "bytes": 23664,
+      "compressed": false
+    },
+    "crests/be-francs-borains.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Logo_Francs_Borains.png",
+      "sha256": "9681d4ac6aac6c1b7d270256a40ba262c0a5bee90e28257776136e09cc80549f",
+      "bytes": 471558,
+      "compressed": false
+    },
+    "crests/be-club-nxtu23.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/62/Club_NXT_Logo.png",
+      "sha256": "53084bb55a2c60f8e9dfd5690b247b185f58b0385de283e743cef441560387b2",
+      "bytes": 15161,
+      "compressed": false
+    },
+    "crests/be-jong-genku23.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg",
+      "sha256": "094885175a4cb734f9e1a403f0f58286692f93293262b498e7ee43f29a5a0f22",
+      "bytes": 4396,
+      "compressed": false
+    },
+    "crests/be-patro-eisden-maasmechelen.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/43/PX_Logo.png",
+      "sha256": "ef4bb051fda25d4db38bf5a39af3e0fd3976d9d9299ac5a5ab9d8aaf1829f86a",
+      "bytes": 364553,
+      "compressed": false
+    },
+    "crests/be-jong-kaa-gentu23.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg",
+      "sha256": "7d3e7a92afc139cd80a11b75d8d40976b3646537c332b48533f13b4c1df950ae",
+      "bytes": 19628,
+      "compressed": false
+    },
+    "crests/be-seraing.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/59/RFC_Seraing_%281922%29_logo.svg",
+      "sha256": "ff2c0dc2482d245ff3e9e40d5fc59a885fb93286ce4c54caab8a333111e84da4",
+      "bytes": 15516,
+      "compressed": false
+    },
+    "crests/be-rfc-liege.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/21/RFC_Li%C3%A8ge_logo.svg",
+      "sha256": "0c80524371c0942098f4bcf350fbe7ddeed4df9eb8a334d2bb3ccda8acebfa40",
+      "bytes": 30956,
+      "compressed": false
+    },
+    "crests/be-lierse.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/53/Lierse_SK_%282018%29_logo.svg",
+      "sha256": "ba5fdb7cce2c5b6ca8b3e073ba3af758f23e1c6321f65fc0a59630fb751c8634",
+      "bytes": 9605,
+      "compressed": false
+    },
+    "crests/be-rsca-futuresu23.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg",
+      "sha256": "b0623fbbcf374020a44abbdcbd1ae4f9fdf5c70b24cae3bc70872b0059c3dc4e",
+      "bytes": 39577,
+      "compressed": false
+    },
+    "crests/be-houtvenne.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9d/KFC_Houtvenne_logo.png",
+      "sha256": "ea4f5081ad452c038a6614928514c9a1aa78a267cb5342f8cf23c08070aaacc4",
+      "bytes": 18458,
+      "compressed": false
+    },
+    "crests/be-mandel-united.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/75/Logo_of_Royal_FC_Mandel_United.png",
+      "sha256": "b5fe6a82a54c8754c111527b0711aa728add73c6cf4898bb3085e67fb71b4d4b",
+      "bytes": 100797,
+      "compressed": false
+    },
+    "crests/be-roeselare.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/91/S.K._Roeselare_logo.png",
+      "sha256": "080e63d0b33073a492977fa5b751f1c5a2a368bd8a21a7423f420e62a0e1cfca",
+      "bytes": 20159,
+      "compressed": false
+    },
+    "crests/be-oh-leuven-u-23.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png",
+      "sha256": "11c19d691060e45fa3c8592ea9168780d48f0673de533520547c2c3ac7c76535",
+      "bytes": 49913,
+      "compressed": false
+    },
+    "raw/zelzate-official.html.gz": {
+      "url": "https://www.kvv-zelzate.be/",
+      "sha256": "9216c4a4437dcd9cb61730aebff371e670dd97b8010823d7202bf27d6b184610",
+      "bytes": 113837,
+      "compressed": true
+    },
+    "crests/be-merelbeke.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/94/K.F.C._Merelbeke_logo.png",
+      "sha256": "9c1cff60fbd8ab72da096d9a675ff964b4d67996f42755028e921628c2672666",
+      "bytes": 37714,
+      "compressed": false
+    },
+    "crests/be-heist.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/23/K.S.K._Heist_logo.png",
+      "sha256": "2300b5e435b9bf5755fc78c268926724cb422272c67c70629a707388e47a5fa1",
+      "bytes": 24300,
+      "compressed": false
+    },
+    "crests/be-hoogstraten.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/ca/Hoogstraten_VV.png",
+      "sha256": "12f8f15eb61b53d294a96fa8e90d591e6c2f9d862f69dbc6bd2527c86e88a0be",
+      "bytes": 34719,
+      "compressed": false
+    },
+    "crests/be-thes.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/c/c8/K.V.V._Thes_Sport_Tessenderlo_logo.png",
+      "sha256": "ba266a64e7099978a043841f11d20d76e59d12c83580d63d351bd3e6c43e6780",
+      "bytes": 56661,
+      "compressed": false
+    },
+    "crests/be-dessel.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/4/43/KFC_Dessel_Sport_logo.svg",
+      "sha256": "977e756c26b6cc3c47f450dc140846ce239da4fb4c770c3cdc14231c574ecd69",
+      "bytes": 22432,
+      "compressed": false
+    },
+    "crests/be-belisia.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/96/S.V._Belisia_Bilzen_logo.png",
+      "sha256": "5b60e22fbf1b9b07b2f08faceb6cb3a75dec91aec827a48fa4c9a52817093eb5",
+      "bytes": 34373,
+      "compressed": false
+    },
+    "crests/be-knokke.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/85/R._Knokke_FC_logo.png",
+      "sha256": "2c53e4805b8fc082b4ff715f4fb1a6a7c05aaed14945bf46939f695c4a9d11d4",
+      "bytes": 45344,
+      "compressed": false
+    },
+    "crests/be-tienen.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/b/b1/K.V.K._Tienen_logo.svg",
+      "sha256": "524218d4898435db9a6566b2bd01f04b2b1bdf4489e9bf8d871d0c89ee9c55e1",
+      "bytes": 11647,
+      "compressed": false
+    },
+    "crests/be-lyra-lierse.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e4/K._Lyra-Lierse_Berlaar_logo.svg",
+      "sha256": "ab96c379aff247a07c5da496c5e27ef81322c1108ecc422d4dcf158d20bec7de",
+      "bytes": 3184,
+      "compressed": false
+    },
+    "crests/be-jong-cercle.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg",
+      "sha256": "858ab1a5657b24a2dcce84439ed939675118b9948d86af68c5e04341d4b4d3d8",
+      "bytes": 2360,
+      "compressed": false
+    },
+    "crests/be-harelbeke.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/f/fb/KRC_Harelbeke_%282016%29_logo.png",
+      "sha256": "7e212aaa15f5430c57a808cddc5087cd9170d425882ec3e8d139ee6db8b0687b",
+      "bytes": 87581,
+      "compressed": false
+    },
+    "crests/be-rochefort.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/82/Union_Rochefortoise_logo.png",
+      "sha256": "95e4f7108ccfe5db362e6f9125b49074ae7546b13f327bc765e25bc8f1d3122a",
+      "bytes": 10784,
+      "compressed": false
+    },
+    "crests/be-meux.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/d/d7/R.F.C._Meux_logo.png",
+      "sha256": "c31ca80e073d474fe8f54a91961045b249093c2e556f2afd0686674370fa2a00",
+      "bytes": 23956,
+      "compressed": false
+    },
+    "crests/be-rwdm-brussels.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/a0/RWDM_Brussels_logo.png",
+      "sha256": "99f26975ff2215c5becb9d5412a94a5b0686970b99ae061b3b2fb3971a65c56a",
+      "bytes": 19883,
+      "compressed": false
+    },
+    "crests/be-union-sg-b.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg",
+      "sha256": "49856c22b01d95baa4eb620f9f428011f92b3c53149378e1e499a4ea76d8a325",
+      "bytes": 9414,
+      "compressed": false
+    },
+    "crests/be-mons.png": {
+      "url": "https://www.raecmons44.be/wp-content/uploads/2024/06/cropped-icon.png",
+      "sha256": "fbaf7c12d9c240bff6e54f49d79198bcae6106f9758adf539ce1f6b7541c3fbe",
+      "bytes": 58223,
+      "compressed": false
+    },
+    "crests/be-tubize-braine.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/0/04/RoyaleUnionTubize-Braine_logo.png",
+      "sha256": "893f16a18ad5c8b895082ac93d7d7b1afff784c4b05814e244659da7c18fd451",
+      "bytes": 49657,
+      "compressed": false
+    },
+    "crests/be-sl16-fc.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg",
+      "sha256": "13f489b277b30a8c10e8b304f89f2297a2299306ed72784d1f3810bc9a0dac66",
+      "bytes": 10800,
+      "compressed": false
+    },
+    "crests/be-zebra-elites.svg": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg",
+      "sha256": "8927128ec6ba3be2afaf1b54d42e7c121ba2541ed894fc431feec2cb9b81e101",
+      "bytes": 20411,
+      "compressed": false
+    },
+    "crests/be-olympic-charleroi.png": {
+      "url": "https://upload.wikimedia.org/wikipedia/en/e/e7/Olympic_Charleroi_logo.png",
+      "sha256": "feac5300c17685bdc9bd43f7192245e0d9398be265a871a4d427ffbb87b49b1f",
+      "bytes": 87814,
+      "compressed": false
+    },
+    "crests/be-habay-la-neuve.png": {
+      "url": "https://www.raecmons44.be/wp-content/uploads/2025/07/Logo-Habay.png",
+      "sha256": "8c1065d1d57921b563b3f793064b6e108313d3bf36b959cadc77e7d5fa92320d",
+      "bytes": 28725,
+      "compressed": false
+    },
+    "crests/be-onhaye.png": {
+      "url": "https://www.raecmons44.be/wp-content/uploads/2026/08/onhaye.png",
+      "sha256": "a4a3e36c1a7e0460a8eb438d43fe68fb790931684324c88a901ca46848498d68",
+      "bytes": 168274,
+      "compressed": false
+    },
+    "crests/be-flenu.png": {
+      "url": "https://www.raecmons44.be/wp-content/uploads/2025/07/FC-Flenu-1.png",
+      "sha256": "b6d1f44f464f14930283d7fa752c0b5aceb7ebc851fded4494b0283d750564ea",
+      "bytes": 12123,
+      "compressed": false
+    },
+    "raw/nominatim-houtvenne.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Herman%20Wijnantsstadion",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-mandel-united.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Skyline%20Arena%20Izegem",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-oh-leuven-u-23.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Berg%C3%A9stadion%20Tienen",
+      "sha256": "c123ed2f30565f9abd9fe66fde3c6819c85c95885e48ca6b5089f2b60147a057",
+      "bytes": 842,
+      "compressed": true
+    },
+    "raw/nominatim-merelbeke.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Sportpark%20Molenkouter%20Merelbeke",
+      "sha256": "b3c09ee23e0f241a05397c17cb671b3f91e6801dd0ec3e52f00e954d6b19178d",
+      "bytes": 838,
+      "compressed": true
+    },
+    "raw/nominatim-thes.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Thes%20Sport%20Tessenderlo",
+      "sha256": "9a8ed8a24ea118c2928b32d40e7de20edfa848c8f7aa38a0b9fe2e06a664e451",
+      "bytes": 810,
+      "compressed": true
+    },
+    "raw/nominatim-belisia.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Sportpark%20Katteberg%20Bilzen",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-knokke.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Burgemeester%20Graaf%20Leopold%20Lippens%20Park",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-tienen.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Berg%C3%A9stadion%20Tienen",
+      "sha256": "c123ed2f30565f9abd9fe66fde3c6819c85c95885e48ca6b5089f2b60147a057",
+      "bytes": 842,
+      "compressed": true
+    },
+    "raw/nominatim-lyra-lierse.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Sportpark%20Lier",
+      "sha256": "d5970bee4217e91307a4c3a528e7afa9be4a4b66e8983e3b0a275b8f7be465a1",
+      "bytes": 800,
+      "compressed": true
+    },
+    "raw/nominatim-jong-cercle.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Valkaart%20Oostkamp",
+      "sha256": "9bb9119ce298fdf1a2c8b50899278e80ea08ef70f69b072e82f8341bd2210242",
+      "bytes": 4253,
+      "compressed": true
+    },
+    "raw/nominatim-zelzate.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Armand%20Seghers%20Sportcomplex",
+      "sha256": "55869f06a2136b8d9e25b08e955b09a4fbe6ac1d801e8c96d2f818d3bd3edb5d",
+      "bytes": 827,
+      "compressed": true
+    },
+    "raw/nominatim-rochefort.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Parc%20des%20Roches%20Rochefort",
+      "sha256": "910879b07c1660414bbc8dbd4f3020042935cf570d69667dcf88daa99b3667cb",
+      "bytes": 913,
+      "compressed": true
+    },
+    "raw/nominatim-meux.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=RFC%20Meux",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-union-sg-b.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Stade%20Neerstalle",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-sl16-fc.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=SL16%20Football%20Campus",
+      "sha256": "a9e561c318d93f57462d58725a665795aabbe572fdb24a76ad5b7dabba5b23eb",
+      "bytes": 809,
+      "compressed": true
+    },
+    "raw/nominatim-habay-la-neuve.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Stade%20Emile%20Mathieu%20Habay",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-onhaye.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Stade%20Jean%20Mathieu%20Onhaye",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/nominatim-jong-kaa-gent.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&addressdetails=1&q=Backline%20Arena%20Oostakker",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search2-Houtvenne.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=Oosterzonen",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search2-Mandel.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=Skyline%20Park",
+      "sha256": "2fbc70121e044dbbd825dae82dd97f33086a1dd01e49ca3abf898fdddb13017b",
+      "bytes": 530,
+      "compressed": true
+    },
+    "raw/search2-Belisia.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=Belisia",
+      "sha256": "69971dd8b44e5ada352e88ce85fe31c4fcac30a4dc6f1d6de1815f7d3fa4eb19",
+      "bytes": 960,
+      "compressed": true
+    },
+    "raw/search2-Meux.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=Royal%20Football%20Club%20Meux",
+      "sha256": "f675c5c8852e71bdb4c5366684f4413feef5fbbe841d04b95a3296c3a5532068",
+      "bytes": 523,
+      "compressed": true
+    },
+    "raw/search2-SL16.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=Acad%C3%A9mie%20Robert%20Louis%20Dreyfus",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search2-Habay.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=football%20Habay-la-Neuve",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search2-Onhaye.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=football%20Onhaye",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search2-Gent.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=Oostakker%20football",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search2-Futures.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=5&q=Burgemeester%20Van%20de%20Wielestadion",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "crests/be-zelzate.png": {
+      "url": "https://irp.cdn-website.com/026324a7/dms3rep/multi/opt/KVV+Zelzate+_+Main+Logo_Full+Colour+CMYK-232w.png",
+      "sha256": "2d73b922d9b2fb931b80006b5183625eadbb847a406eea460eff11901a383ebc",
+      "bytes": 16918,
+      "compressed": false
+    },
+    "raw/official-lyracalendar.html.gz": {
+      "url": "https://lyralierse.be/sportief/kalender/",
+      "sha256": "82d67a156150838d477ac97a97dfcc6d769248ec3e6e7d958c55b1fc0c3ca2a1",
+      "bytes": 68522,
+      "compressed": true
+    },
+    "raw/official-futures.html.gz": {
+      "url": "https://www.rsca.be/fr/faq/rscafutures",
+      "sha256": "c3070cf2a60e6024dfd63e0647f592c671a2ccdcdfc387ef09942b56481e80ac",
+      "bytes": 96902,
+      "compressed": true
+    },
+    "raw/official-standard.html.gz": {
+      "url": "https://standard.be/fr/sl16-football-campus",
+      "sha256": "4dba68a6634215f2fff0a0f117dd56b279186a8e593930c037537edf7f009a1a",
+      "bytes": 77551,
+      "compressed": true
+    },
+    "raw/official-zelzatestadium.html.gz": {
+      "url": "https://www.kdiegemsport.be/stadion/armand-seghers-sportcomplex/",
+      "sha256": "070fefc96962acab13055f4307944adf75c4ef43b8f4d801d456df3bcaac821a",
+      "bytes": 141323,
+      "compressed": true
+    },
+    "raw/osm-map-Merelbeke.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=3.7469,50.98086,3.7549,50.988859999999995",
+      "sha256": "f7d484ff46a8b4e31afc9594ab9217ad33920fac278026b5e9fbf2f630f23011",
+      "bytes": 1275304,
+      "compressed": true
+    },
+    "raw/osm-map-Thes.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=5.0845400000000005,51.07256,5.09254,51.08056",
+      "sha256": "f392986bb79d453e37f1dbd55f4c6232c71f007ffbb65f18f1b2c5cea8733205",
+      "bytes": 1411450,
+      "compressed": true
+    },
+    "raw/osm-map-Lier.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=4.569800000000001,51.11755,4.5778,51.12555",
+      "sha256": "b1cceae7be0da8ae4113c8d202403330ca54a28c5f611e915e359daae0e019dc",
+      "bytes": 803731,
+      "compressed": true
+    },
+    "raw/osm-map-JongCercle.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=3.2392,51.152350000000006,3.2472,51.16035",
+      "sha256": "8e2f28e4579be4a415bd45a6d20b6fd9ea9c104c1b0ddfea4d9aa1bf07d4ac16",
+      "bytes": 1527684,
+      "compressed": true
+    },
+    "raw/osm-map-Zelzate.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=3.8088,51.185300000000005,3.8168,51.1933",
+      "sha256": "7f78c9d8e8e6ea082591991500a2001b29579dae5ccc48ac9c054c22ee391e47",
+      "bytes": 594466,
+      "compressed": true
+    },
+    "raw/osm-map-Meux.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=4.792350000000001,50.54943,4.80035,50.55743",
+      "sha256": "8436dff6a84d522dd9eed26d46b8138e4620c44dc1730915d0e31e7eae21976f",
+      "bytes": 1137889,
+      "compressed": true
+    },
+    "raw/site-habay.html.gz": {
+      "url": "https://www.ostadium.com/stadium/7945/stade-emile-mathieu",
+      "sha256": "c4d7c42bffe4da07f819a5f6dcf210293fe2cb2b27af21267a8ad4c20a20cb9c",
+      "bytes": 36832,
+      "compressed": true
+    },
+    "raw/site-hout.html.gz": {
+      "url": "https://www.europlan-online.de/herman-wijnants-stadion/verein/17154",
+      "sha256": "94e362f8f68f1e5035d231b4c4661a9c27e0171e9101e66d01a621ff7864862e",
+      "bytes": 63251,
+      "compressed": true
+    },
+    "raw/site-mandel.html.gz": {
+      "url": "https://rfcmu.com/contact/",
+      "sha256": "55e24cf7cd9ea480e17da3d6d3ea9e3e2b9af000b0e29f1e8f01aa996228f594",
+      "bytes": 39439,
+      "compressed": true
+    },
+    "raw/site-lyra.html.gz": {
+      "url": "https://www.sportparklier.be/",
+      "sha256": "c4612f0b68c21659a268b08d03e20ce2226c44317b5fa28a098a3231e71601f9",
+      "bytes": 71676,
+      "compressed": true
+    },
+    "raw/site-rbfastandard.html.gz": {
+      "url": "https://static.rbfa.be/project/publiek/aanduidingenclub/fr/aanduiding_00016.htm",
+      "sha256": "1000922cb0f1e5cb62dcdc7ea46f9c5e859ea5d8bc55589e2353cec989d98498",
+      "bytes": 33594,
+      "compressed": true
+    },
+    "raw/exact-camp.html.gz": {
+      "url": "https://www.europlan-online.de/stadion-oosterzonen/stadion-4424.html",
+      "sha256": "59e6829cc422e3a927835116f4a35d70762305e216cbc883f78c35a70746eff4",
+      "bytes": 70251,
+      "compressed": true
+    },
+    "raw/exact-mandel.html.gz": {
+      "url": "https://www.europlan-online.de/gementelijk-sportstadion/verein/9867",
+      "sha256": "9b108583cf15b6e95613fbd34ed6ac6f7731c67976ddddb75ca41c75ba6b7ea2",
+      "bytes": 70026,
+      "compressed": true
+    },
+    "raw/exact-onhaye.html.gz": {
+      "url": "https://www.europlan-online.de/stade-jean-mathot/verein/17051",
+      "sha256": "1385409eb382eec81113b7efa761e2b50a044bc50279a1dddf5d1793e585ba92",
+      "bytes": 63051,
+      "compressed": true
+    },
+    "raw/exact-campus.html.gz": {
+      "url": "https://fr.wikipedia.org/wiki/SL16_Football_Campus",
+      "sha256": "9fc1ec22a7e33b7301912ff2198e95a39f3f9ddf2c718bb3d5a5089fd1f4a839",
+      "bytes": 182907,
+      "compressed": true
+    },
+    "raw/search3-gent.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=4&q=Eikstraat%2085%20Oostakker",
+      "sha256": "0bf135c9b4c3e127d82a2a79157942438d7660b199e9d9586367a2f0529f3a94",
+      "bytes": 492,
+      "compressed": true
+    },
+    "raw/search3-onhaye.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=4&q=Cercle%20sportif%20Onhaye",
+      "sha256": "cdb994b5f42d59b20522f8d34453feb3c468a1cfd5345407e768c859a91ed32b",
+      "bytes": 510,
+      "compressed": true
+    },
+    "raw/search3-campus.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=4&q=Standard%20de%20Li%C3%A8ge%20Angleur",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search3-camp.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=4&q=Bovemansstraat%2020%20Westerlo",
+      "sha256": "9d012c31e3718f0e1e6376960ca6ce671c2fbe79ae3fdac7f2e4a2e9800c35b0",
+      "bytes": 533,
+      "compressed": true
+    },
+    "raw/search3-mandel.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=4&q=Sint-Jorisstraat%2064%20Izegem",
+      "sha256": "1853c47dff8d9ec75ad0e1ac2e97cfd8f322a7d673043dc1edbc030b85d8014d",
+      "bytes": 489,
+      "compressed": true
+    },
+    "raw/osm-map-Mandel.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=3.20389,50.90648,3.21189,50.91448",
+      "sha256": "d849a04aaa1a174f465c7462e700a1f2765b4c04fae0b346ca7753c78696945e",
+      "bytes": 1645072,
+      "compressed": true
+    },
+    "raw/osm-map-Houtvenne.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=4.8543,51.125130000000006,4.862299999999999,51.13313",
+      "sha256": "69de1a8a6b79cce42d307016d89a72017b35f9e49190027b6e24ea7f28abcff4",
+      "bytes": 573675,
+      "compressed": true
+    },
+    "raw/osm-map-Belisia.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=5.50609,50.86005,5.5140899999999995,50.86805",
+      "sha256": "56861484c360f4ef5b47adb48f01bb2842de77a05a81710a3bbd97a9cf8fb2cf",
+      "bytes": 1756386,
+      "compressed": true
+    },
+    "raw/osm-map-Habay.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=5.65134,49.73069,5.659339999999999,49.73869",
+      "sha256": "ee01b3b1505c76e4f5b16b96f3b1e19927ee19e34256ef19b7ab05853ee546ef",
+      "bytes": 1321617,
+      "compressed": true
+    },
+    "raw/osm-map-Onhaye.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=4.845940000000001,50.23776,4.85394,50.24576",
+      "sha256": "4bc2f3728a1e215c3caf3b0d0c64d20be95d7aa8e96ba35213f2e1455af7e2a0",
+      "bytes": 377707,
+      "compressed": true
+    },
+    "raw/osm-map-Gent.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=3.76113,51.084720000000004,3.76913,51.09272",
+      "sha256": "c5f4b470895f12f6158e9966eb77064ebaf976639908e81fec39684a890d33e4",
+      "bytes": 877822,
+      "compressed": true
+    },
+    "raw/osm-map-SL16.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=5.545210000000001,50.57154,5.55321,50.579539999999994",
+      "sha256": "cd08e607f0b494b174cdcda52e6fab34b6bda61b83a81499e210be3f12d84366",
+      "bytes": 521783,
+      "compressed": true
+    },
+    "raw/confirmed-gent.html.gz": {
+      "url": "https://www.europlan-online.de/pgb-stadion/stadion-4402.html",
+      "sha256": "21e68963561c341d0be08f110b7885bfb34d50353562555a6d4d74e614932b97",
+      "bytes": 74464,
+      "compressed": true
+    },
+    "raw/confirmed-futures.html.gz": {
+      "url": "https://en.wikipedia.org/wiki/K.M.S.K._Deinze",
+      "sha256": "ea6138f1174b33b086b0bedda9cdcd238adfcfc361a68be68badb46c396775d7",
+      "bytes": 196763,
+      "compressed": true
+    },
+    "raw/confirmed-unionb.html.gz": {
+      "url": "https://rusg.brussels/nl/nieuws/bertram-kvist-tekent-contract-bij-union-u23",
+      "sha256": "e9dd9b4aa74d1596426148bed221149b267f4747ab7d501a6b2fbca3d4c1c52f",
+      "bytes": 57460,
+      "compressed": true
+    },
+    "raw/confirmed-habay.html.gz": {
+      "url": "https://rschabay.be/histoire-du-club/",
+      "sha256": "0da6d19549b3ee9bd482d9b660fe49f964a9d959d931f21e46008e3cd315220f",
+      "bytes": 138769,
+      "compressed": true
+    },
+    "raw/confirmed-belisia.html.gz": {
+      "url": "https://www.bilzenhoeselt.be/zaalzoeker/detail/16/sportpark-katteberg",
+      "sha256": "b2e8708dee3cd3e69256c46406a76af93162c2e50a9668c1dcb596461424f86b",
+      "bytes": 44603,
+      "compressed": true
+    },
+    "raw/search4-futures.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=3&q=Dakota%20Arena%20Deinze",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search4-futures2.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=3&q=Brielmeersen%20stadion",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2,
+      "compressed": true
+    },
+    "raw/search4-genk.json.gz": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&countrycodes=be&limit=3&q=Cegeka%20Arena",
+      "sha256": "4a83804ed8334ae8becb376db2149c38a857e1fd8fedb4a736f10393615b6542",
+      "bytes": 525,
+      "compressed": true
+    },
+    "raw/venue-easi.json.gz": {
+      "url": "https://api.openstreetmap.org/api/0.6/way/1256567898/full.json",
+      "sha256": "75b939aa6831686fa5816b203e11f4617c34cba773018d0c9b73333ceb8e3a4e",
+      "bytes": 3511,
+      "compressed": true
+    },
+    "raw/venue-easiprimary.json.gz": {
+      "url": "https://www.raal.be/infrastructures-3/",
+      "sha256": "e1d91143c3ca505af96375235889f2b7bec80eff3a4c8d1ea13a87b51501f22a",
+      "bytes": 287715,
+      "compressed": true
+    },
+    "raw/venue-futuresNL.json.gz": {
+      "url": "https://nl.wikipedia.org/wiki/Dakota_Arena",
+      "sha256": "e83d588e009a1c0f69babaefdcdd04e6eb9de1905cb016a215eb44da465d05f3",
+      "bytes": 75395,
+      "compressed": true
+    }
+  }
+}

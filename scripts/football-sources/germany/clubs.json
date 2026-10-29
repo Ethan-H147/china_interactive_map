@@ -1,0 +1,1221 @@
+{
+  "country": "germany",
+  "season": "2026-27",
+  "retrieved": "2026-10-29",
+  "locationMeaning": "Home stadium; source-pinned as of retrieval. Temporary and shared venues are explicitly noted.",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Bundesliga",
+      "count": 18,
+      "sourceUrl": "https://www.bundesliga.com/en/bundesliga/clubs"
+    },
+    {
+      "tier": 2,
+      "name": "2. Bundesliga",
+      "count": 18,
+      "sourceUrl": "https://www.bundesliga.com/en/2bundesliga/clubs"
+    },
+    {
+      "tier": 3,
+      "name": "3. Liga",
+      "count": 20,
+      "sourceUrl": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "de-fc-bayern-munchen",
+      "tier": 1,
+      "en": "Bayern Munich",
+      "aliases": [
+        "FC Bayern München",
+        "Bayern",
+        "FC Bayern München AG",
+        "Bayern München",
+        "FC Bayern"
+      ],
+      "city": "München",
+      "stadium": "Allianz Arena",
+      "center": [
+        11.6247072,
+        48.2187997
+      ],
+      "crest": "de-fc-bayern-munchen.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Allianz+Arena/@48.2187997,11.6225239,17z/data=!3m1!4b1!4m5!3m4!1s0x479e7385128a251f:0xed4d60428e32c423!8m2!3d48.2187997!4d11.6247072",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000G.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/fc-bayern-muenchen"
+    },
+    {
+      "id": "de-borussia-dortmund",
+      "tier": 1,
+      "en": "Borussia Dortmund",
+      "aliases": [
+        "Dortmund",
+        "Borussia Dortmund GmbH & Co. KGaA"
+      ],
+      "city": "Dortmund",
+      "stadium": "SIGNAL IDUNA PARK",
+      "center": [
+        7.4518574,
+        51.4925888
+      ],
+      "crest": "de-borussia-dortmund.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Signal+Iduna+Park/@51.4925888,7.4496741,17z/data=!3m1!4b1!4m5!3m4!1s0x47b919d39230d60f:0x8fd9c195ad02eddf!8m2!3d51.4925888!4d7.4518574",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000007.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/borussia-dortmund"
+    },
+    {
+      "id": "de-rb-leipzig",
+      "tier": 1,
+      "en": "RB Leipzig",
+      "aliases": [
+        "Leipzig",
+        "RasenBallsport Leipzig GmbH"
+      ],
+      "city": "Leipzig",
+      "stadium": "Red Bull Arena",
+      "center": [
+        12.3482562,
+        51.3459852
+      ],
+      "crest": "de-rb-leipzig.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Red+Bull+Arena/@51.3459852,12.3460675,17z/data=!3m1!4b1!4m5!3m4!1s0x47a6f794c5fbaa91:0x356640372e740fe!8m2!3d51.3459852!4d12.3482562",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000017.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/rb-leipzig"
+    },
+    {
+      "id": "de-vfb-stuttgart",
+      "tier": 1,
+      "en": "VfB Stuttgart",
+      "aliases": [
+        "Stuttgart",
+        "VfB Stuttgart 1893 AG"
+      ],
+      "city": "Stuttgart",
+      "stadium": "MHPArena",
+      "center": [
+        9.23194444,
+        48.79222222
+      ],
+      "crest": "de-vfb-stuttgart.svg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/MHPArena",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/MHPArena",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000D.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/vfb-stuttgart"
+    },
+    {
+      "id": "de-tsg-hoffenheim",
+      "tier": 1,
+      "en": "TSG Hoffenheim",
+      "aliases": [
+        "Hoffenheim",
+        "TSG 1899 Hoffenheim Fußball-Spielbetriebs GmbH"
+      ],
+      "city": "Sinsheim",
+      "stadium": "SNP Arena",
+      "center": [
+        8.8879801,
+        49.2380385
+      ],
+      "crest": "de-tsg-hoffenheim.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Rhein-Neckar-Arena/@49.2380385,8.8857914,17z/data=!3m1!4b1!4m5!3m4!1s0x479791b6e72c1d93:0x8807cb6393d1e827!8m2!3d49.2380385!4d8.8879801",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000002.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/tsg-hoffenheim"
+    },
+    {
+      "id": "de-bayer-04-leverkusen",
+      "tier": 1,
+      "en": "Bayer Leverkusen",
+      "aliases": [
+        "Bayer 04 Leverkusen",
+        "Leverkusen",
+        "Bayer 04 Leverkusen Fußball GmbH"
+      ],
+      "city": "Leverkusen",
+      "stadium": "BayArena",
+      "center": [
+        7.0022566,
+        51.0382091
+      ],
+      "crest": "de-bayer-04-leverkusen.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/BayArena/@51.0382091,7.0000733,17z/data=!3m1!4b1!4m5!3m4!1s0x47bf2ebbe66139e5:0xbce75509e2f3a288!8m2!3d51.0382091!4d7.0022566",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000B.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/bayer-04-leverkusen"
+    },
+    {
+      "id": "de-sport-club-freiburg",
+      "tier": 1,
+      "en": "SC Freiburg",
+      "aliases": [
+        "Sport-Club Freiburg",
+        "Freiburg",
+        "Sport-Club Freiburg e.V."
+      ],
+      "city": "Freiburg",
+      "stadium": "Europa-Park Stadion",
+      "center": [
+        7.8297,
+        48.0216
+      ],
+      "crest": "de-sport-club-freiburg.svg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Europa-Park%20Stadion",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Europa-Park_Stadion",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000A.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sport-club-freiburg"
+    },
+    {
+      "id": "de-eintracht-frankfurt",
+      "tier": 1,
+      "en": "Eintracht Frankfurt",
+      "aliases": [
+        "Frankfurt",
+        "Eintracht Frankfurt Fußball AG"
+      ],
+      "city": "Frankfurt am Main",
+      "stadium": "Deutsche Bank Park",
+      "center": [
+        8.645472,
+        50.0685807
+      ],
+      "crest": "de-eintracht-frankfurt.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Commerzbank-Arena/@50.0685807,8.6432833,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd0b82374086e1:0x72efad9b38279c0a!8m2!3d50.0685807!4d8.645472",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000F.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/eintracht-frankfurt"
+    },
+    {
+      "id": "de-fc-augsburg",
+      "tier": 1,
+      "en": "FC Augsburg",
+      "aliases": [
+        "Augsburg",
+        "FC Augsburg 1907 GmbH & Co. KGaA"
+      ],
+      "city": "Augsburg",
+      "stadium": "WWK ARENA",
+      "center": [
+        10.8860303,
+        48.3231683
+      ],
+      "crest": "de-fc-augsburg.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Augsburg+Arena/@48.3231683,10.883847,17z/data=!3m1!4b1!4m5!3m4!1s0x479ea27fd82b845b:0x67bb3264c3fa9af5!8m2!3d48.3231683!4d10.8860303",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000010.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/fc-augsburg"
+    },
+    {
+      "id": "de-1-fsv-mainz-05",
+      "tier": 1,
+      "en": "1. FSV Mainz 05",
+      "aliases": [
+        "Mainz",
+        "1. FSV Mainz 05 e.V.",
+        "Mainz 05"
+      ],
+      "city": "Mainz",
+      "stadium": "MEWA ARENA",
+      "center": [
+        8.2243816,
+        49.9839442
+      ],
+      "crest": "de-1-fsv-mainz-05.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/OPEL+ARENA/@49.9839442,8.2221929,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd96ee5c8e8509:0x5dd0481e90dbc1fd!8m2!3d49.9839442!4d8.2243816",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000006.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/1-fsv-mainz-05"
+    },
+    {
+      "id": "de-1-fc-union-berlin",
+      "tier": 1,
+      "en": "1. FC Union Berlin",
+      "aliases": [
+        "Union Berlin",
+        "1. FC Union Berlin e.V."
+      ],
+      "city": "Berlin",
+      "stadium": "An der Alten Försterei",
+      "center": [
+        13.5681581,
+        52.4578269
+      ],
+      "crest": "de-1-fc-union-berlin.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Stadion+An+der+Alten+F%C3%B6rsterei/@52.4578269,13.5659694,17z/data=!3m1!4b1!4m5!3m4!1s0x47a8485dbdf1a76f:0x23fad9e813ca47f8!8m2!3d52.4578269!4d13.5681581",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000V.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/1-fc-union-berlin"
+    },
+    {
+      "id": "de-borussia-monchengladbach",
+      "tier": 1,
+      "en": "Borussia Mönchengladbach",
+      "aliases": [
+        "M'gladbach",
+        "Borussia VfL 1900 Mönchengladbach GmbH",
+        "Borussia Monchengladbach",
+        "Gladbach"
+      ],
+      "city": "Mönchengladbach",
+      "stadium": "ista-Borussia-Park",
+      "center": [
+        6.3855055,
+        51.1745698
+      ],
+      "crest": "de-borussia-monchengladbach.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/BORUSSIA-PARK/@51.1745698,6.3833222,17z/data=!3m2!4b1!5s0x47b8ab32e15bbc7f:0xb9c9d1148cf1ec55!4m5!3m4!1s0x47b8ab329f7f7afb:0xbc2d05dc3af26862!8m2!3d51.1745698!4d6.3855055",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000004.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/borussia-moenchengladbach"
+    },
+    {
+      "id": "de-hamburger-sv",
+      "tier": 1,
+      "en": "Hamburger SV",
+      "aliases": [
+        "Hamburg",
+        "HSV Fußball AG & Co. KGaA"
+      ],
+      "city": "Hamburg",
+      "stadium": "Volksparkstadion",
+      "center": [
+        9.8986004,
+        53.5871279
+      ],
+      "crest": "de-hamburger-sv.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Volksparkstadion/@53.5871279,9.8964117,17z/data=!3m1!4b1!4m5!3m4!1s0x47b185d5e3884a41:0x2b93b45f7b4d3ce2!8m2!3d53.5871279!4d9.8986004",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000C.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/hamburger-sv"
+    },
+    {
+      "id": "de-1-fc-koln",
+      "tier": 1,
+      "en": "1. FC Köln",
+      "aliases": [
+        "Köln",
+        "1. FC Köln GmbH & Co. KGaA",
+        "FC Cologne",
+        "Cologne"
+      ],
+      "city": "Köln",
+      "stadium": "RheinEnergieSTADION",
+      "center": [
+        6.8751545,
+        50.9334609
+      ],
+      "crest": "de-1-fc-koln.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/RheinEnergieSTADION/@50.9334609,6.8729658,17z/data=!3m2!4b1!5s0x47bf3b27b8fde1b5:0x34db1559ac75f660!4m5!3m4!1s0x47bf3ad93b528799:0x839f348afc087fb5!8m2!3d50.9334609!4d6.8751545",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000008.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/1-fc-koeln"
+    },
+    {
+      "id": "de-sv-werder-bremen",
+      "tier": 1,
+      "en": "SV Werder Bremen",
+      "aliases": [
+        "Bremen",
+        "SV Werder Bremen GmbH & Co. KG aA",
+        "Werder Bremen"
+      ],
+      "city": "Bremen",
+      "stadium": "Weserstadion",
+      "center": [
+        8.8376051,
+        53.0664328
+      ],
+      "crest": "de-sv-werder-bremen.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Weser+Stadium/@53.0664328,8.8354164,17z/data=!3m1!4b1!4m8!1m2!2m1!1sweserstadion!3m4!1s0x47b127f7637d9395:0xabe8db3758157302!8m2!3d53.0664328!4d8.8376051",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000E.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sv-werder-bremen"
+    },
+    {
+      "id": "de-fc-schalke-04",
+      "tier": 1,
+      "en": "FC Schalke 04",
+      "aliases": [
+        "Schalke",
+        "Fußballclub Gelsenkirchen-Schalke 04 e.V."
+      ],
+      "city": "Gelsenkirchen",
+      "stadium": "VELTINS-Arena",
+      "center": [
+        7.0675262,
+        51.5546309
+      ],
+      "crest": "de-fc-schalke-04.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/VELTINS-Arena/@51.5546309,7.0653375,17z/data=!3m1!4b1!4m5!3m4!1s0x47b8e60a1cf65009:0xdfce5aff64fdbf72!8m2!3d51.5546309!4d7.0675262",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000009.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/fc-schalke-04"
+    },
+    {
+      "id": "de-sv-elversberg",
+      "tier": 1,
+      "en": "SV Elversberg",
+      "aliases": [
+        "Elversberg",
+        "Sportvereinigung 07 Elversberg e.V."
+      ],
+      "city": "Spiesen-Elversberg",
+      "stadium": "URSAPHARM-Arena",
+      "center": [
+        7.1215439,
+        49.3188002
+      ],
+      "crest": "de-sv-elversberg.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Waldstadion+an+der+Kaiserlinde/@49.3188002,7.1215439,15z/data=!4m2!3m1!1s0x0:0x2a4eec2cf669986?sa=X&ved=2ahUKEwjf4fjx4ez-AhXZgP0HHejlBG4Q_BJ6BAhwEAg",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N6L.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sv-elversberg"
+    },
+    {
+      "id": "de-sc-paderborn-07",
+      "tier": 1,
+      "en": "SC Paderborn 07",
+      "aliases": [
+        "Paderborn",
+        "SC Paderborn  07 GmbH & Co. KGaA"
+      ],
+      "city": "Paderborn",
+      "stadium": "Home Deluxe Arena",
+      "center": [
+        8.7112373,
+        51.7301715
+      ],
+      "crest": "de-sc-paderborn-07.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Benteler+Arena/@51.7301715,8.7090486,17z/data=!3m1!4b1!4m5!3m4!1s0x47ba4b0d5e8e5d19:0xb2c3db157acf873d!8m2!3d51.7301715!4d8.7112373",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000L.svg",
+      "rosterSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/bundesliga/clubs/sc-paderborn-07"
+    },
+    {
+      "id": "de-vfl-wolfsburg",
+      "tier": 2,
+      "en": "VfL Wolfsburg",
+      "aliases": [
+        "Wolfsburg",
+        "VfL Wolfsburg-Fußball GmbH"
+      ],
+      "city": "Wolfsburg",
+      "stadium": "Volkswagen Arena",
+      "center": [
+        10.8038854,
+        52.4326693
+      ],
+      "crest": "de-vfl-wolfsburg.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Volkswagen+Arena/@52.4326693,10.8016967,17z/data=!3m1!4b1!4m5!3m4!1s0x47af93c8d01e69e5:0xe2465df60ba210ae!8m2!3d52.4326693!4d10.8038854",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000003.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/vfl-wolfsburg"
+    },
+    {
+      "id": "de-1-fc-heidenheim-1846",
+      "tier": 2,
+      "en": "1. FC Heidenheim 1846",
+      "aliases": [
+        "Heidenheim",
+        "1. Fussballclub Heidenheim 1846 e.V."
+      ],
+      "city": "Heidenheim",
+      "stadium": "Voith-Arena",
+      "center": [
+        10.1392744,
+        48.6684699
+      ],
+      "crest": "de-1-fc-heidenheim-1846.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Voith-Arena/@48.6684699,10.1370911,17z/data=!3m1!4b1!4m5!3m4!1s0x479915d0e9768153:0x8780852efa9c5581!8m2!3d48.6684699!4d10.1392744",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000018.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-heidenheim-1846"
+    },
+    {
+      "id": "de-fc-st-pauli",
+      "tier": 2,
+      "en": "FC St. Pauli",
+      "aliases": [
+        "St. Pauli",
+        "FC St. Pauli von 1910 e.V.",
+        "St Pauli"
+      ],
+      "city": "Hamburg",
+      "stadium": "Millerntor-Stadion",
+      "center": [
+        9.9677482,
+        53.5545585
+      ],
+      "crest": "de-fc-st-pauli.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Millerntor-Stadion/@53.5545585,9.9655595,17z/data=!3m1!4b1!4m5!3m4!1s0x47b18f6cbedab441:0x6678f70133d32916!8m2!3d53.5545585!4d9.9677482",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000H.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/fc-st-pauli"
+    },
+    {
+      "id": "de-hannover-96",
+      "tier": 2,
+      "en": "Hannover 96",
+      "aliases": [
+        "Hannover",
+        "Hannover 96 GmbH & Co. KGaA"
+      ],
+      "city": "Hannover",
+      "stadium": "Heinz von Heiden Arena",
+      "center": [
+        9.7312249,
+        52.360017
+      ],
+      "crest": "de-hannover-96.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/HDI+Arena/@52.360017,9.7290362,17z/data=!3m1!4b1!4m5!3m4!1s0x47b074c66cbf6c53:0xd7015c9fba893089!8m2!3d52.360017!4d9.7312249",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000001.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/hannover-96"
+    },
+    {
+      "id": "de-sv-darmstadt-98",
+      "tier": 2,
+      "en": "SV Darmstadt 98",
+      "aliases": [
+        "Darmstadt",
+        "SV Darmstadt 1898 e.V."
+      ],
+      "city": "Darmstadt",
+      "stadium": "Merck-Stadion am Böllenfalltor",
+      "center": [
+        8.6716029,
+        49.8576447
+      ],
+      "crest": "de-sv-darmstadt-98.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Merck-Stadion+am+B%C3%B6llenfalltor/@49.8576447,8.6694196,17z/data=!3m1!4b1!4m5!3m4!1s0x47bd7aa062e1f471:0x86082992c80dc3d4!8m2!3d49.8576447!4d8.6716029",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000016.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/sv-darmstadt-98"
+    },
+    {
+      "id": "de-1-fc-kaiserslautern",
+      "tier": 2,
+      "en": "1. FC Kaiserslautern",
+      "aliases": [
+        "Kaiserslautern",
+        "1. FC Kaiserslautern GmbH & Co. KGaA"
+      ],
+      "city": "Kaiserslautern",
+      "stadium": "Fritz-Walter-Stadion",
+      "center": [
+        7.7768069,
+        49.4341714
+      ],
+      "crest": "de-1-fc-kaiserslautern.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Fritz-Walter-Stadion/@49.4341749,7.7746182,17z/data=!3m2!4b1!5s0x479612cc290fc1d3:0x25e9f0abb3fa117a!4m5!3m4!1s0x479612cdc067f1f1:0xce6472880c5b6034!8m2!3d49.4341714!4d7.7768069",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000I.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-kaiserslautern"
+    },
+    {
+      "id": "de-hertha-bsc",
+      "tier": 2,
+      "en": "Hertha BSC",
+      "aliases": [
+        "Hertha BSC GmbH & Co. KGaA",
+        "Hertha Berlin"
+      ],
+      "city": "Berlin",
+      "stadium": "Olympiastadion",
+      "center": [
+        13.2394987,
+        52.5146971
+      ],
+      "crest": "de-hertha-bsc.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Olympiastadion+Berlin/@52.5149039,13.2274177,15z/data=!4m8!1m2!2m1!1sOlympiastadion+Berlin!3m4!1s0x47a8571e82ebb629:0xce5194e63b0cd35d!8m2!3d52.5146971!4d13.2394987",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000Z.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/hertha-bsc"
+    },
+    {
+      "id": "de-1-fc-nurnberg",
+      "tier": 2,
+      "en": "1. FC Nürnberg",
+      "aliases": [
+        "Nürnberg",
+        "1. Fußball-Club Nürnberg e.V.",
+        "Nuremberg"
+      ],
+      "city": "Nürnberg",
+      "stadium": "Max-Morlock-Stadion",
+      "center": [
+        11.1257076,
+        49.4262526
+      ],
+      "crest": "de-1-fc-nurnberg.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Max-Morlock-Stadion/@49.4262526,11.123519,17z/data=!3m1!4b1!4m5!3m4!1s0x479f59c387db738b:0x684be76d61962f2c!8m2!3d49.4262526!4d11.1257076",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000005.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-nuernberg"
+    },
+    {
+      "id": "de-vfl-bochum-1848",
+      "tier": 2,
+      "en": "VfL Bochum",
+      "aliases": [
+        "VfL Bochum 1848",
+        "Bochum",
+        "VfL Bochum 1848 GmbH & Co. KGaA"
+      ],
+      "city": "Bochum",
+      "stadium": "Ruhrstadion",
+      "center": [
+        7.236513,
+        51.489917
+      ],
+      "crest": "de-vfl-bochum-1848.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Ruhrstadion/@51.4899166,7.2277797,15z/data=!4m8!1m2!2m1!1sOVonovia+Ruhrstadion!3m4!1s0x47b8e025b4fe3f73:0x3182d2e6b4b33055!8m2!3d51.489917!4d7.236513",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000S.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/vfl-bochum-1848"
+    },
+    {
+      "id": "de-karlsruher-sc",
+      "tier": 2,
+      "en": "Karlsruher SC",
+      "aliases": [
+        "Karlsruhe",
+        "Karlsruher Sport-Club Mühlburg-Phönix GmbH & Co. KGaA"
+      ],
+      "city": "Karlsruhe",
+      "stadium": "BBBank Wildpark",
+      "center": [
+        8.4130304,
+        49.0200279
+      ],
+      "crest": "de-karlsruher-sc.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Wildparkstadion/@49.0200279,8.4108417,17z/data=!3m1!4b1!4m5!3m4!1s0x479707b540de29b1:0xdb66dce63297a0b4!8m2!3d49.0200279!4d8.4130304",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000T.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/karlsruher-sc"
+    },
+    {
+      "id": "de-sg-dynamo-dresden",
+      "tier": 2,
+      "en": "Dynamo Dresden",
+      "aliases": [
+        "SG Dynamo Dresden",
+        "Dresden",
+        "SG Dynamo Dresden e.V."
+      ],
+      "city": "Dresden",
+      "stadium": "Rudolf-Harbig-Stadion",
+      "center": [
+        13.7479735,
+        51.0408071
+      ],
+      "crest": "de-sg-dynamo-dresden.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Rudolf-Harbig-Stadion+Dresden/@51.0408071,13.7479735,15z/data=!4m6!3m5!1s0x4709cf586f926da9:0xf919dcbed091dc33!8m2!3d51.0408071!4d13.7479735!16zL20vMGNna19t",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000N.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/sg-dynamo-dresden"
+    },
+    {
+      "id": "de-holstein-kiel",
+      "tier": 2,
+      "en": "Holstein Kiel",
+      "aliases": [
+        "Kiel",
+        "Kieler Sportvereinigung Holstein von 1900 e.V."
+      ],
+      "city": "Kiel",
+      "stadium": "Holstein-Stadion",
+      "center": [
+        10.1242099,
+        54.3488
+      ],
+      "crest": "de-holstein-kiel.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Holstein-Stadion/@54.3488,10.1220212,17z/data=!3m1!4b1!4m5!3m4!1s0x47b2560f65a089d3:0x93bc904ef9f9f60a!8m2!3d54.3488!4d10.1242099",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5P.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/holstein-kiel"
+    },
+    {
+      "id": "de-dsc-arminia-bielefeld",
+      "tier": 2,
+      "en": "Arminia Bielefeld",
+      "aliases": [
+        "DSC Arminia Bielefeld",
+        "Bielefeld",
+        "DSC Arminia Bielefeld GmbH & Co. KGaA"
+      ],
+      "city": "Bielefeld",
+      "stadium": "SchücoArena",
+      "center": [
+        8.5165205,
+        52.0318457
+      ],
+      "crest": "de-dsc-arminia-bielefeld.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Bielefelder+Alm/@52.0318457,8.5143372,17z/data=!3m1!4b1!4m5!3m4!1s0x47ba3d4760bda1bf:0x6467ea777ae4382!8m2!3d52.0318457!4d8.5165205",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000015.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/dsc-arminia-bielefeld"
+    },
+    {
+      "id": "de-1-fc-magdeburg",
+      "tier": 2,
+      "en": "1. FC Magdeburg",
+      "aliases": [
+        "Magdeburg",
+        "1. FC Magdeburg Spielbetriebs GmbH"
+      ],
+      "city": "Magdeburg",
+      "stadium": "Avnet Arena",
+      "center": [
+        11.6700024,
+        52.1252958
+      ],
+      "crest": "de-1-fc-magdeburg.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/MDCC-Arena/@52.1252958,11.6678137,17z/data=!3m1!4b1!4m5!3m4!1s0x47a5f61cc32fc6ef:0x5dde9148875ed330!8m2!3d52.1252958!4d11.6700024",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000N5D.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/1-fc-magdeburg"
+    },
+    {
+      "id": "de-eintracht-braunschweig",
+      "tier": 2,
+      "en": "Eintracht Braunschweig",
+      "aliases": [
+        "Braunschweig",
+        "Eintracht Braunschweig GmbH & Co. KGaA"
+      ],
+      "city": "Braunschweig",
+      "stadium": "EINTRACHT-STADION",
+      "center": [
+        10.5206206,
+        52.2900556
+      ],
+      "crest": "de-eintracht-braunschweig.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/EINTRACHT-STADION/@52.2900589,10.5184319,17z/data=!3m1!4b1!4m5!3m4!1s0x47aff5c36f8f9fc5:0x4968a3d6e970af13!8m2!3d52.2900556!4d10.5206206",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000X.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/eintracht-braunschweig"
+    },
+    {
+      "id": "de-spvgg-greuther-furth",
+      "tier": 2,
+      "en": "SpVgg Greuther Fürth",
+      "aliases": [
+        "Fürth",
+        "SpVgg Greuther Fürth GmbH & Co. KGaA",
+        "Greuther Fürth",
+        "Greuther Furth"
+      ],
+      "city": "Fürth",
+      "stadium": "Sportpark Ronhof | Thomas Sommer",
+      "center": [
+        10.9986001,
+        49.48657
+      ],
+      "crest": "de-spvgg-greuther-furth.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Sportpark+Ronhof+%7C+Thomas+Sommer/@49.48657,10.9964114,17z/data=!3m1!4b1!4m5!3m4!1s0x479f55f254697301:0x4530d21da6aa1cb7!8m2!3d49.48657!4d10.9986001",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000W.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/spvgg-greuther-fuerth"
+    },
+    {
+      "id": "de-fc-energie-cottbus",
+      "tier": 2,
+      "en": "Energie Cottbus",
+      "aliases": [
+        "FC Energie Cottbus",
+        "FC Energie",
+        "FC Energie Cottbus e.V."
+      ],
+      "city": "Cottbus",
+      "stadium": "LEAG Energie Stadion",
+      "center": [
+        14.345577,
+        51.7516371
+      ],
+      "crest": "de-fc-energie-cottbus.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.de/maps/place/Stadion+der+Freundschaft/@51.7516403,14.3407061,17z/data=!4m14!1m7!3m6!1s0x4708741301739e9b:0x4371f8534d4eb8c!2sStadion+der+Freundschaft!8m2!3d51.7516371!4d14.345577!16zL20vMGM5bmg1!3m5!1s0x4708741301739e9b:0x4371f8534d4eb8c!8m2!3d51.7516371!4d14.345577!16zL20vMGM5bmg1?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-00000O.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/fc-energie-cottbus"
+    },
+    {
+      "id": "de-vfl-osnabruck",
+      "tier": 2,
+      "en": "VfL Osnabrück",
+      "aliases": [
+        "Osnabrück",
+        "VfL Osnabrück GmbH & Co. KGaA"
+      ],
+      "city": "Osnabrück",
+      "stadium": "Stadion an der Bremer Brücke",
+      "center": [
+        8.072108,
+        52.2806537
+      ],
+      "crest": "de-vfl-osnabruck.svg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Bremer+Br%C3%BCcke/@52.2806537,8.072108,15z/data=!4m6!3m5!1s0x47b9e50a50e5ec5d:0x3c9421dc9a22f718!8m2!3d52.2806537!4d8.072108!16zL20vMGNyMHp4",
+      "crestSource": "https://assets.bundesliga.com/clublogos/DFL-SEA-0001KA/DFL-CLU-000014.svg",
+      "rosterSource": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "officialClub": "https://www.bundesliga.com/en/2bundesliga/clubs/vfl-osnabrueck"
+    },
+    {
+      "id": "de-1-fc-saarbrucken",
+      "tier": 3,
+      "en": "1. FC Saarbrücken",
+      "aliases": [
+        "Saarbrücken",
+        "Saarbrucken"
+      ],
+      "city": "Saarbrücken",
+      "stadium": "Ludwigsparkstadion",
+      "center": [
+        6.9840743,
+        49.2480303
+      ],
+      "crest": "de-1-fc-saarbrucken.jpg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Ludwigsparkstadion/@49.2480303,6.9840743,15z/data=!4m6!3m5!1s0x4795b12af0f94d97:0xc6b10e4dedc3da67!8m2!3d49.2480303!4d6.9840743!16zL20vMDl4MzZn",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/222/original_saarbruecken.jpg?1493059538",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/1-fc-saarbruecken?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-alemannia-aachen",
+      "tier": 3,
+      "en": "Alemannia Aachen",
+      "aliases": [],
+      "city": "Aachen",
+      "stadium": "Tivoli",
+      "center": [
+        6.09722222,
+        50.79333333
+      ],
+      "crest": "de-alemannia-aachen.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/New%20Tivoli",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/New_Tivoli",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/106/original_aachen.jpg?1493059500",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/alemannia-aachen?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-fc-ingolstadt",
+      "tier": 3,
+      "en": "FC Ingolstadt 04",
+      "aliases": [
+        "FC Ingolstadt"
+      ],
+      "city": "Ingolstadt",
+      "stadium": "Audi Sportpark",
+      "center": [
+        11.48555556,
+        48.74555556
+      ],
+      "crest": "de-fc-ingolstadt.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Audi%20Sportpark",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Audi_Sportpark",
+      "crestSource": "https://assets.dfb.de/uploads/000/200/946/original_FC_Ingolstadt_Logo.jpg?1560333603",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fc-ingolstadt?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-fc-viktoria-koln",
+      "tier": 3,
+      "en": "Viktoria Köln",
+      "aliases": [
+        "FC Viktoria Köln",
+        "Viktoria Cologne"
+      ],
+      "city": "Cologne",
+      "stadium": "Sportpark Höhenberg",
+      "center": [
+        7.0304,
+        50.9452
+      ],
+      "crest": "de-fc-viktoria-koln.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Sportpark%20H%C3%B6henberg",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Sportpark_H%C3%B6henberg",
+      "crestSource": "https://assets.dfb.de/uploads/000/201/050/original_Viktoria_Koeln.jpg?1560415707",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fc-viktoria-koeln?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-fc-wurzburger-kickers",
+      "tier": 3,
+      "en": "Würzburger Kickers",
+      "aliases": [
+        "FC Würzburger Kickers",
+        "Würzburg Kickers"
+      ],
+      "city": "Würzburg",
+      "stadium": "AKON ARENA",
+      "center": [
+        9.9328942,
+        49.76719
+      ],
+      "crest": "de-fc-wurzburger-kickers.jpg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/FLYERALARM+ARENA/@49.76719,9.9328942,15z/data=!4m2!3m1!1s0x0:0xe2aa3110ada1716d?sa=X&ved=2ahUKEwi-iJ_AspjqAhVjwcQBHVR7D9MQ_BIwE3oECBYQCA",
+      "crestSource": "https://assets.dfb.de/uploads/000/229/379/original_54966-logo_wuerzburger_kickers_ro.jpg?1602679392",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fc-wuerzburger-kickers?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-fortuna-dusseldorf",
+      "tier": 3,
+      "en": "Fortuna Düsseldorf",
+      "aliases": [
+        "Düsseldorf",
+        "Fortuna Dusseldorf"
+      ],
+      "city": "Düsseldorf",
+      "stadium": "Merkur Spielarena",
+      "center": [
+        6.7331902,
+        51.2615824
+      ],
+      "crest": "de-fortuna-dusseldorf.jpg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/MERKUR+SPIEL-ARENA/@51.2615824,6.7310069,17z/data=!3m1!4b1!4m5!3m4!1s0x47b8b63fa0519b5d:0x3eda90b2eb6b0184!8m2!3d51.2615824!4d6.7331902",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/147/original_Fortuna_Duesseldorf.jpg?1493059512",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fortuna-duesseldorf?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-fortuna-koln",
+      "tier": 3,
+      "en": "Fortuna Köln",
+      "aliases": [
+        "Fortuna Cologne"
+      ],
+      "city": "Cologne",
+      "stadium": "Südstadion",
+      "center": [
+        6.9436,
+        50.9175
+      ],
+      "crest": "de-fortuna-koln.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/S%C3%BCdstadion",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/S%C3%BCdstadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/321/765/original_Fortuna_Koeln.jpg?1750937579",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/fortuna-koeln?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-hansa-rostock",
+      "tier": 3,
+      "en": "Hansa Rostock",
+      "aliases": [
+        "F.C. Hansa Rostock",
+        "Rostock"
+      ],
+      "city": "Rostock",
+      "stadium": "Ostseestadion",
+      "center": [
+        12.0951651,
+        54.084948
+      ],
+      "crest": "de-hansa-rostock.jpg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Ostseestadion/@54.084948,12.0951651,15z/data=!4m2!3m1!1s0x0:0xca308fa0081f843e?sa=X&ved=2ahUKEwiC5ITrspjqAhVjqnEKHTByDkgQ_BIwAXoECBoQDw",
+      "crestSource": "https://assets.dfb.de/uploads/000/321/597/original_FC_Hansa_Rostock_500x500.jpg?1750666400",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/hansa-rostock?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-jahn-regensburg",
+      "tier": 3,
+      "en": "Jahn Regensburg",
+      "aliases": [],
+      "city": "Regensburg",
+      "stadium": "Jahnstadion Regensburg",
+      "center": [
+        12.10722222,
+        48.99083333
+      ],
+      "crest": "de-jahn-regensburg.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Jahnstadion%20Regensburg",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Jahnstadion_Regensburg",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/163/original_Jahn_Regensburg.jpg?1493059518",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/jahn-regensburg?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-msv-duisburg",
+      "tier": 3,
+      "en": "MSV Duisburg",
+      "aliases": [
+        "Duisburg"
+      ],
+      "city": "Duisburg",
+      "stadium": "SCHAUINSLAND-REISEN-ARENA",
+      "center": [
+        6.778121,
+        51.4088351
+      ],
+      "crest": "de-msv-duisburg.jpg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Schauinsland-Reisen-Arena/@51.4088351,6.778121,15z/data=!4m5!3m4!1s0x0:0xdbde450e5f2aa267!8m2!3d51.4088351!4d6.778121",
+      "crestSource": "https://assets.dfb.de/uploads/000/300/936/original_MSV_Duisburg_500x500_2024.jpg?1712667217",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/msv-duisburg?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-preussen-munster",
+      "tier": 3,
+      "en": "Preußen Münster",
+      "aliases": [
+        "SC Preußen Münster",
+        "Münster",
+        "Preussen Munster",
+        "Preussen Münster"
+      ],
+      "city": "Münster",
+      "stadium": "LVM-Preußenstadion",
+      "center": [
+        7.6250511,
+        51.9299196
+      ],
+      "crest": "de-preussen-munster.jpg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.de/maps/place/Preu%C3%9Fenstadion/@51.9299196,7.6224762,16z/data=!3m1!4b1!4m6!3m5!1s0x47b9a521128f6a5d:0x26e9a43d2b15a8dd!8m2!3d51.9299196!4d7.6250511!16s%2Fm%2F09k6mt8",
+      "crestSource": "https://assets.dfb.de/uploads/000/323/551/original_Preussen_Muenster.jpg?1756903050",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/preussen-muenster?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-rot-weiss-essen",
+      "tier": 3,
+      "en": "Rot-Weiss Essen",
+      "aliases": [
+        "Essen"
+      ],
+      "city": "Essen",
+      "stadium": "Stadion an der Hafenstraße",
+      "center": [
+        6.97638889,
+        51.48666667
+      ],
+      "crest": "de-rot-weiss-essen.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Stadion%20Essen",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Stadion_an_der_Hafenstra%C3%9Fe",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/110/original_Rot-Weiss-Essen.jpg?1493059502",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/rot-weiss-essen?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-sc-verl",
+      "tier": 3,
+      "en": "SC Verl",
+      "aliases": [
+        "Verl"
+      ],
+      "city": "Verl",
+      "stadium": "Sportclub Arena",
+      "center": [
+        8.5134,
+        51.8834
+      ],
+      "crest": "de-sc-verl.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Sportclub%20Arena",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Sportclub_Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/130/original_verl.jpg?1493059507",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sc-verl?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-sg-sonnenhof-grossaspach",
+      "tier": 3,
+      "en": "SG Sonnenhof Großaspach",
+      "aliases": [
+        "Sonnenhof Großaspach"
+      ],
+      "city": "Aspach",
+      "stadium": "WIRmachenDRUCK Arena",
+      "center": [
+        9.393005,
+        48.980485
+      ],
+      "crest": "de-sg-sonnenhof-grossaspach.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/WIRmachenDRUCK%20Arena",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/WIRmachenDRUCK_Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/201/170/original_SG_Sonnenhof_Grossaspach.jpg?1560608045",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sg-sonnenhof-grossaspach?datacenter_name=datencenter",
+      "sharedGround": "de-wirmachendruck-arena"
+    },
+    {
+      "id": "de-sv-meppen",
+      "tier": 3,
+      "en": "SV Meppen",
+      "aliases": [],
+      "city": "Meppen",
+      "stadium": "Hänsch-Arena",
+      "center": [
+        7.298025,
+        52.708019
+      ],
+      "crest": "de-sv-meppen.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/H%C3%A4nsch-Arena",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/H%C3%A4nsch-Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/335/753/original_SV_Meppen_2026.jpg?1783189254",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sv-meppen?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-sv-waldhof-mannheim",
+      "tier": 3,
+      "en": "SV Waldhof Mannheim",
+      "aliases": [
+        "Mannheim"
+      ],
+      "city": "Mannheim",
+      "stadium": "Carl-Benz-Stadion",
+      "center": [
+        8.5025,
+        49.47944444
+      ],
+      "crest": "de-sv-waldhof-mannheim.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Carl-Benz-Stadion",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Carl-Benz-Stadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/226/162/original_Waldhof_Mannheim.jpg?1598610609",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sv-waldhof-mannheim?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-sv-wehen-wiesbaden",
+      "tier": 3,
+      "en": "SV Wehen Wiesbaden",
+      "aliases": [
+        "Wiesbaden"
+      ],
+      "city": "Wiesbaden",
+      "stadium": "BRITA Arena",
+      "center": [
+        8.2564931,
+        50.0712828
+      ],
+      "crest": "de-sv-wehen-wiesbaden.jpg",
+      "coordinateSource": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "coordinateDetail": "https://www.google.com/maps/place/Brita-Arena/@50.0712828,8.2564931,15z/data=!4m6!3m5!1s0x47bdbd94ab1b42a9:0xbf3e1bc9b194630e!8m2!3d50.0712828!4d8.2564931!16s%2Fm%2F03cz4v6?sa=X&ved=2ahUKEwjHybnv7Oz-AhUE_rsIHZ-JAWoQ_BJ6BAh4EAg",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/173/original_Wehen_Wiesbaden.jpg?1493059521",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/sv-wehen-wiesbaden?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-tsg-hoffenheim-ii",
+      "tier": 3,
+      "en": "TSG Hoffenheim II",
+      "aliases": [],
+      "city": "Sinsheim",
+      "stadium": "Dietmar-Hopp-Stadion",
+      "center": [
+        8.84211111,
+        49.27827778
+      ],
+      "crest": "de-tsg-hoffenheim-ii.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Dietmar-Hopp-Stadion",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Dietmar-Hopp-Stadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/113/632/original_1899_hoffenheim.jpg?1493132487",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/tsg-hoffenheim-ii?datacenter_name=datencenter"
+    },
+    {
+      "id": "de-tsv-havelse",
+      "tier": 3,
+      "en": "TSV Havelse",
+      "aliases": [],
+      "city": "Hanover",
+      "stadium": "Eilenriedestadion",
+      "center": [
+        9.7729,
+        52.37658889
+      ],
+      "crest": "de-tsv-havelse.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/Eilenriedestadion",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/Eilenriedestadion",
+      "crestSource": "https://assets.dfb.de/uploads/000/018/183/original_TSV_Havelse.jpg?1493059525",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/tsv-havelse?datacenter_name=datencenter",
+      "note": "Garbsen club; Eilenriedestadion in Hanover approved as an additional home venue on 12 October 2026. Earlier 2026–27 home games used Heinz von Heiden Arena."
+    },
+    {
+      "id": "de-vfb-stuttgart-ii",
+      "tier": 3,
+      "en": "VfB Stuttgart II",
+      "aliases": [],
+      "city": "Aspach",
+      "stadium": "WIRmachenDRUCK Arena",
+      "center": [
+        9.393005,
+        48.980485
+      ],
+      "crest": "de-vfb-stuttgart-ii.jpg",
+      "coordinateSource": "https://en.wikipedia.org/api/rest_v1/page/summary/WIRmachenDRUCK%20Arena",
+      "coordinateDetail": "https://en.wikipedia.org/wiki/WIRmachenDRUCK_Arena",
+      "crestSource": "https://assets.dfb.de/uploads/000/027/692/original_vfb.jpg?1493068594",
+      "rosterSource": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "officialClub": "https://datencenter.dfb.de/competitions/3-liga/seasons/2026-2027/teams/vfb-stuttgart-ii?datacenter_name=datencenter",
+      "note": "Stuttgart reserve side; home matches at WIRmachenDRUCK Arena in Aspach, shared with SG Sonnenhof Großaspach.",
+      "sharedGround": "de-wirmachendruck-arena"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.bundesliga.com/en/bundesliga/clubs",
+      "title": "Bundesliga official club directory"
+    },
+    {
+      "url": "https://www.bundesliga.com/en/2bundesliga/clubs",
+      "title": "2. Bundesliga official club directory"
+    },
+    {
+      "url": "https://www.dfb.de/news/teilnehmerfeld-der-3-liga-steht-fest-havelse-rueckt-fuer-1860-nach",
+      "title": "DFB 2026–27 3. Liga participant announcement"
+    },
+    {
+      "url": "https://datencenter.dfb.de/competitions/4/seasons/2026-2027/teams",
+      "title": "DFB 3. Liga 2026–27 team directory"
+    }
+  ]
+}

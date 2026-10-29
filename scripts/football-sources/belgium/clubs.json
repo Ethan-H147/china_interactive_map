@@ -1,0 +1,1130 @@
+{
+  "country": "belgium",
+  "season": "2026–27",
+  "retrieved": "2026-10-29",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Jupiler Pro League",
+      "count": 18,
+      "sourceUrl": "https://www.proleague.be/fr/jpl-clubs"
+    },
+    {
+      "tier": 2,
+      "name": "Challenger Pro League",
+      "count": 15,
+      "sourceUrl": "https://www.proleague.be/fr/cpl-clubs"
+    },
+    {
+      "tier": 3,
+      "name": "Division 1 VV / FFA",
+      "count": 28,
+      "sourceUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_134760/overzicht",
+      "sourceUrls": [
+        "https://lyralierse.be/sportief/kalender/",
+        "https://www.raecmons44.be/table/d1-ffa-2026-2027/"
+      ],
+      "groups": [
+        {
+          "name": "Division 1 VV",
+          "count": 16
+        },
+        {
+          "name": "Division 1 FFA",
+          "count": 12
+        }
+      ]
+    }
+  ],
+  "clubs": [
+    {
+      "id": "be-anderlecht",
+      "tier": 1,
+      "en": "Anderlecht",
+      "aliases": [
+        "RSC Anderlecht"
+      ],
+      "city": "Anderlecht, Brussels",
+      "stadium": "Constant Vanden Stock Stadium",
+      "center": [
+        4.298333,
+        50.834167
+      ],
+      "crest": "be-anderlecht.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q262326",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg"
+    },
+    {
+      "id": "be-antwerp",
+      "tier": 1,
+      "en": "Antwerp",
+      "aliases": [
+        "Royal Antwerp FC"
+      ],
+      "city": "Antwerp",
+      "stadium": "Bosuilstadion",
+      "center": [
+        4.471667,
+        51.232222
+      ],
+      "crest": "be-antwerp.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q285074",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0b/Royal_Antwerp_Football_Club_logo.svg"
+    },
+    {
+      "id": "be-beveren",
+      "tier": 1,
+      "en": "Beveren",
+      "aliases": [
+        "SK Beveren"
+      ],
+      "city": "Beveren",
+      "stadium": "Freethiel Stadion",
+      "center": [
+        4.243931,
+        51.214139
+      ],
+      "crest": "be-beveren.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2135912",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9b/SK_Beveren_logo.svg"
+    },
+    {
+      "id": "be-cercle-brugge",
+      "tier": 1,
+      "en": "Cercle Brugge",
+      "aliases": [
+        "Cercle Brugge KSV"
+      ],
+      "city": "Bruges",
+      "stadium": "Jan Breydel Stadium",
+      "center": [
+        3.181311,
+        51.193269
+      ],
+      "crest": "be-cercle-brugge.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1070150",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg",
+      "sharedGround": "be-cercle-brugge-ground"
+    },
+    {
+      "id": "be-charleroi",
+      "tier": 1,
+      "en": "Charleroi",
+      "aliases": [
+        "Royal Charleroi SC"
+      ],
+      "city": "Charleroi",
+      "stadium": "Stade du Pays de Charleroi",
+      "center": [
+        4.453787,
+        50.414609
+      ],
+      "crest": "be-charleroi.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1147565",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg"
+    },
+    {
+      "id": "be-club-brugge",
+      "tier": 1,
+      "en": "Club Brugge",
+      "aliases": [
+        "Club Brugge KV"
+      ],
+      "city": "Bruges",
+      "stadium": "Jan Breydel Stadium",
+      "center": [
+        3.181311,
+        51.193269
+      ],
+      "crest": "be-club-brugge.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1070150",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d0/Club_Brugge_KV_logo.svg",
+      "sharedGround": "be-cercle-brugge-ground"
+    },
+    {
+      "id": "be-genk",
+      "tier": 1,
+      "en": "Genk",
+      "aliases": [
+        "KRC Genk"
+      ],
+      "city": "Genk",
+      "stadium": "Cegeka Arena",
+      "center": [
+        5.533333,
+        51.005
+      ],
+      "crest": "be-genk.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q925654",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg",
+      "sharedGround": "be-genk-ground"
+    },
+    {
+      "id": "be-gent",
+      "tier": 1,
+      "en": "Gent",
+      "aliases": [
+        "KAA Gent"
+      ],
+      "city": "Ghent",
+      "stadium": "Planet Group Arena",
+      "center": [
+        3.7341667,
+        51.0161111
+      ],
+      "crest": "be-gent.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1708705",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg"
+    },
+    {
+      "id": "be-kortrijk",
+      "tier": 1,
+      "en": "Kortrijk",
+      "aliases": [
+        "KV Kortrijk"
+      ],
+      "city": "Kortrijk",
+      "stadium": "Guldensporen Stadion",
+      "center": [
+        3.248889,
+        50.830278
+      ],
+      "crest": "be-kortrijk.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1554251",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/17/KV_Kortrijk_logo_2016.svg"
+    },
+    {
+      "id": "be-la-louviere",
+      "tier": 1,
+      "en": "La Louvière",
+      "aliases": [
+        "RAAL La Louvière"
+      ],
+      "city": "La Louvière",
+      "stadium": "Easi Arena",
+      "center": [
+        4.2032163,
+        50.4776328
+      ],
+      "crest": "be-la-louviere.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/1256567898",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/40/RAAL_La_Louvi%C3%A8re_logo.svg",
+      "note": "Easi Arena opened in 2025. Ground geometry corrects the English stadium article coordinate, which points at the former Tivoli ground."
+    },
+    {
+      "id": "be-lommel-sk",
+      "tier": 1,
+      "en": "Lommel SK",
+      "aliases": [
+        "Lommel SK"
+      ],
+      "city": "Lommel",
+      "stadium": "Soevereinstadion",
+      "center": [
+        5.307222,
+        51.239444
+      ],
+      "crest": "be-lommel-sk.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q3153676",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e6/Lommel_SK_logo.svg"
+    },
+    {
+      "id": "be-mechelen",
+      "tier": 1,
+      "en": "Mechelen",
+      "aliases": [
+        "KV Mechelen"
+      ],
+      "city": "Mechelen",
+      "stadium": "AFAS-stadion Achter de Kazerne",
+      "center": [
+        4.486389,
+        51.037222
+      ],
+      "crest": "be-mechelen.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q649755",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/28/KV_Mechelen_logo.svg"
+    },
+    {
+      "id": "be-oh-leuven",
+      "tier": 1,
+      "en": "OH Leuven",
+      "aliases": [
+        "Oud-Heverlee Leuven"
+      ],
+      "city": "Leuven",
+      "stadium": "Den Dreef",
+      "center": [
+        4.694167,
+        50.868333
+      ],
+      "crest": "be-oh-leuven.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q301760",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png"
+    },
+    {
+      "id": "be-sint-truiden",
+      "tier": 1,
+      "en": "Sint-Truiden",
+      "aliases": [
+        "Sint-Truidense VV"
+      ],
+      "city": "Sint-Truiden",
+      "stadium": "Stayen",
+      "center": [
+        5.165278,
+        50.813611
+      ],
+      "crest": "be-sint-truiden.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q515782",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/60/Sint-Truidense_VV_logo.svg"
+    },
+    {
+      "id": "be-standard-liege",
+      "tier": 1,
+      "en": "Standard Liège",
+      "aliases": [
+        "Standard Liège"
+      ],
+      "city": "Liège",
+      "stadium": "Stade Maurice Dufrasne",
+      "center": [
+        5.543344,
+        50.609908
+      ],
+      "crest": "be-standard-liege.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q959934",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg"
+    },
+    {
+      "id": "be-union-sg",
+      "tier": 1,
+      "en": "Union SG",
+      "aliases": [
+        "Royale Union Saint-Gilloise"
+      ],
+      "city": "Forest, Brussels",
+      "stadium": "Stade Joseph Marien",
+      "center": [
+        4.32917,
+        50.8178
+      ],
+      "crest": "be-union-sg.svg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3495665",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg"
+    },
+    {
+      "id": "be-westerlo",
+      "tier": 1,
+      "en": "Westerlo",
+      "aliases": [
+        "KVC Westerlo"
+      ],
+      "city": "Westerlo",
+      "stadium": "Het Kuipje",
+      "center": [
+        4.928333,
+        51.094722
+      ],
+      "crest": "be-westerlo.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q606856",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0b/KVC_Westerlo_logo.svg"
+    },
+    {
+      "id": "be-zulte-waregem",
+      "tier": 1,
+      "en": "Zulte Waregem",
+      "aliases": [
+        "SV Zulte Waregem"
+      ],
+      "city": "Waregem",
+      "stadium": "Regenboogstadion",
+      "center": [
+        3.428889,
+        50.883056
+      ],
+      "crest": "be-zulte-waregem.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1850335",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/67/Zulte-Waregem_logo.svg"
+    },
+    {
+      "id": "be-beerschot",
+      "tier": 2,
+      "en": "Beerschot",
+      "aliases": [
+        "K Beerschot VA"
+      ],
+      "city": "Antwerp",
+      "stadium": "Olympisch Stadion",
+      "center": [
+        4.382222,
+        51.185
+      ],
+      "crest": "be-beerschot.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1057087",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/27/Koninklijke_Beerschot_Voetbalclub_Antwerpen_logo.svg"
+    },
+    {
+      "id": "be-dender-eh",
+      "tier": 2,
+      "en": "Dender EH",
+      "aliases": [
+        "FCV Dender EH"
+      ],
+      "city": "Denderleeuw",
+      "stadium": "Florent Beeckmanstadion",
+      "center": [
+        4.070833,
+        50.883889
+      ],
+      "crest": "be-dender-eh.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2744854",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/24/FCV_Dender_EH_logo.svg"
+    },
+    {
+      "id": "be-eupen",
+      "tier": 2,
+      "en": "Eupen",
+      "aliases": [
+        "KAS Eupen"
+      ],
+      "city": "Eupen",
+      "stadium": "Kehrwegstadion",
+      "center": [
+        6.045833,
+        50.626389
+      ],
+      "crest": "be-eupen.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q469079",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d3/Kas_Eupen_Logo.svg"
+    },
+    {
+      "id": "be-lokeren",
+      "tier": 2,
+      "en": "Lokeren",
+      "aliases": [
+        "KSC Lokeren (2025)"
+      ],
+      "city": "Lokeren",
+      "stadium": "Daknamstadion",
+      "center": [
+        3.987222,
+        51.116389
+      ],
+      "crest": "be-lokeren.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q677582",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/55/KSC_Lokeren_%282025%29_logo.svg"
+    },
+    {
+      "id": "be-francs-borains",
+      "tier": 2,
+      "en": "Francs Borains",
+      "aliases": [
+        "Francs Borains"
+      ],
+      "city": "Boussu",
+      "stadium": "Stade Robert Urbain",
+      "center": [
+        3.7960902,
+        50.4331253
+      ],
+      "crest": "be-francs-borains.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q95126",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Logo_Francs_Borains.png"
+    },
+    {
+      "id": "be-hasselt",
+      "tier": 2,
+      "en": "Hasselt",
+      "aliases": [
+        "Sporting Hasselt"
+      ],
+      "city": "Hasselt",
+      "stadium": "Stedelijk Sportstadion Hasselt",
+      "center": [
+        5.3384972,
+        50.9304806
+      ],
+      "crest": "be-hasselt.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q58780",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e5/Sporting_hasselt_crest.svg"
+    },
+    {
+      "id": "be-virton",
+      "tier": 2,
+      "en": "Virton",
+      "aliases": [
+        "Royal Excelsior Virton"
+      ],
+      "city": "Virton",
+      "stadium": "Stade Yvan Georges",
+      "center": [
+        5.53059,
+        49.5625
+      ],
+      "crest": "be-virton.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q3495908",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/81/Royal_Excelsior_Virton_logo.svg"
+    },
+    {
+      "id": "be-patro-eisden-maasmechelen",
+      "tier": 2,
+      "en": "Patro Eisden",
+      "aliases": [
+        "Patro Eisden Maasmechelen",
+        "Patro Eisden Maasmechelen"
+      ],
+      "city": "Maasmechelen",
+      "stadium": "Gemeentelijk Sportparkstadion",
+      "center": [
+        5.7025,
+        50.9967
+      ],
+      "crest": "be-patro-eisden-maasmechelen.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q329633",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/4/43/PX_Logo.png"
+    },
+    {
+      "id": "be-club-nxtu23",
+      "tier": 2,
+      "en": "Club NXT",
+      "aliases": [
+        "Club NXT"
+      ],
+      "city": "Roeselare",
+      "stadium": "Schiervelde Stadion",
+      "center": [
+        3.1052778,
+        50.9519444
+      ],
+      "crest": "be-club-nxtu23.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q265477",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/62/Club_NXT_Logo.png",
+      "sharedGround": "be-club-nxtu23-ground"
+    },
+    {
+      "id": "be-lierse",
+      "tier": 2,
+      "en": "Lierse",
+      "aliases": [
+        "Lierse SK (2018)"
+      ],
+      "city": "Lier",
+      "stadium": "Herman Vanderpoortenstadion",
+      "center": [
+        4.573611,
+        51.144167
+      ],
+      "crest": "be-lierse.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1610381",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/53/Lierse_SK_%282018%29_logo.svg"
+    },
+    {
+      "id": "be-jong-genku23",
+      "tier": 2,
+      "en": "Jong Genk",
+      "aliases": [
+        "KRC Genk"
+      ],
+      "city": "Genk",
+      "stadium": "Cegeka Arena",
+      "center": [
+        5.533333,
+        51.005
+      ],
+      "crest": "be-jong-genku23.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q925654",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg",
+      "sharedGround": "be-genk-ground"
+    },
+    {
+      "id": "be-jong-kaa-gentu23",
+      "tier": 2,
+      "en": "Jong KAA Gent",
+      "aliases": [
+        "KAA Gent"
+      ],
+      "city": "Oostakker, Ghent",
+      "stadium": "Backline Arena",
+      "center": [
+        3.7655828,
+        51.0895268
+      ],
+      "crest": "be-jong-kaa-gentu23.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/367781256",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg",
+      "venueSource": "https://www.kaagent.be/nl/nieuws/10-09-2026/jong-kaa-gent-ontvangt-fc-dender-in-backline-arena",
+      "note": "Returned to the refurbished Oostakker ground in August 2026; formerly Chillax/PGB stadium."
+    },
+    {
+      "id": "be-seraing",
+      "tier": 2,
+      "en": "Seraing",
+      "aliases": [
+        "RFC Seraing (1922)"
+      ],
+      "city": "Seraing",
+      "stadium": "Stade du Pairay",
+      "center": [
+        5.50372,
+        50.6004
+      ],
+      "crest": "be-seraing.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q15694367",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/59/RFC_Seraing_%281922%29_logo.svg"
+    },
+    {
+      "id": "be-rfc-liege",
+      "tier": 2,
+      "en": "RFC Liège",
+      "aliases": [
+        "RFC Liège"
+      ],
+      "city": "Liège",
+      "stadium": "Stade de Rocourt",
+      "center": [
+        5.55184,
+        50.660334
+      ],
+      "crest": "be-rfc-liege.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q20751559",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/21/RFC_Li%C3%A8ge_logo.svg"
+    },
+    {
+      "id": "be-rsca-futuresu23",
+      "tier": 2,
+      "en": "RSCA Futures",
+      "aliases": [
+        "RSCA Futures"
+      ],
+      "city": "Deinze",
+      "stadium": "Dakota Arena",
+      "center": [
+        3.5204028,
+        50.9838444
+      ],
+      "crest": "be-rsca-futuresu23.svg",
+      "coordinateSource": "https://nl.wikipedia.org/wiki/Dakota_Arena",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg",
+      "venueSource": "https://www.rsca.be/fr/faq/rscafutures",
+      "note": "Anderlecht reserves play in Deinze; the old King Baudouin/Lotto Park listings are obsolete."
+    },
+    {
+      "id": "be-houtvenne",
+      "tier": 3,
+      "en": "Houtvenne",
+      "aliases": [
+        "KFC Houtvenne"
+      ],
+      "city": "Oosterwijk, Westerlo",
+      "stadium": "Camp Westel",
+      "center": [
+        4.8582832,
+        51.1292027
+      ],
+      "crest": "be-houtvenne.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/114794596",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9d/KFC_Houtvenne_logo.png",
+      "venueSource": "https://lyralierse.be/sportief/kalender/"
+    },
+    {
+      "id": "be-mandel-united",
+      "tier": 3,
+      "en": "Mandel United",
+      "aliases": [
+        "Royal FC Mandel United"
+      ],
+      "city": "Izegem",
+      "stadium": "Skyline Arena",
+      "center": [
+        3.2079015,
+        50.9104587
+      ],
+      "crest": "be-mandel-united.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/96479162",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/75/Logo_of_Royal_FC_Mandel_United.png",
+      "venueSource": "https://rfcmu.com/contact/"
+    },
+    {
+      "id": "be-roeselare",
+      "tier": 3,
+      "en": "Roeselare",
+      "aliases": [
+        "SK Roeselare"
+      ],
+      "city": "Roeselare",
+      "stadium": "Schierveldestadion",
+      "center": [
+        3.1052778,
+        50.9519444
+      ],
+      "crest": "be-roeselare.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q265477",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/91/S.K._Roeselare_logo.png",
+      "sharedGround": "be-club-nxtu23-ground"
+    },
+    {
+      "id": "be-oh-leuven-u-23",
+      "tier": 3,
+      "en": "OH Leuven U23",
+      "aliases": [
+        "Oud-Heverlee Leuven",
+        "OH Leuven U-23"
+      ],
+      "city": "Tienen",
+      "stadium": "Bergéstadion",
+      "center": [
+        4.94813,
+        50.8047
+      ],
+      "crest": "be-oh-leuven-u-23.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q16511464",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png",
+      "sharedGround": "be-tienen-ground",
+      "venueSource": "https://lyralierse.be/sportief/kalender/",
+      "note": "OH Leuven reserves play their 2026–27 home matches at Tienen."
+    },
+    {
+      "id": "be-merelbeke",
+      "tier": 3,
+      "en": "Merelbeke",
+      "aliases": [
+        "KFC Merelbeke"
+      ],
+      "city": "Merelbeke",
+      "stadium": "Sportpark Molenkouter",
+      "center": [
+        3.7487247,
+        50.9852843
+      ],
+      "crest": "be-merelbeke.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/1214123710",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/94/K.F.C._Merelbeke_logo.png",
+      "venueSource": "https://lyralierse.be/sportief/kalender/"
+    },
+    {
+      "id": "be-heist",
+      "tier": 3,
+      "en": "Heist",
+      "aliases": [
+        "KSK Heist"
+      ],
+      "city": "Heist-op-den-Berg",
+      "stadium": "Omoda Jaecoo Sportpark",
+      "center": [
+        4.7339972,
+        51.0668556
+      ],
+      "crest": "be-heist.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q16069237",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/23/K.S.K._Heist_logo.png"
+    },
+    {
+      "id": "be-hoogstraten",
+      "tier": 3,
+      "en": "Hoogstraten",
+      "aliases": [
+        "Hoogstraten VV"
+      ],
+      "city": "Hoogstraten",
+      "stadium": "Sportcomplex Seminarie",
+      "center": [
+        4.74964,
+        51.3985
+      ],
+      "crest": "be-hoogstraten.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q16062543",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/ca/Hoogstraten_VV.png"
+    },
+    {
+      "id": "be-thes",
+      "tier": 3,
+      "en": "THES Sport",
+      "aliases": [
+        "KVV Thes Sport Tessenderlo",
+        "Thes"
+      ],
+      "city": "Tessenderlo",
+      "stadium": "Gemeentelijk Sportpark",
+      "center": [
+        5.0886998,
+        51.0771659
+      ],
+      "crest": "be-thes.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/286651591",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c8/K.V.V._Thes_Sport_Tessenderlo_logo.png",
+      "venueSource": "https://jeugd.thes-sport.be/locatie/"
+    },
+    {
+      "id": "be-dessel",
+      "tier": 3,
+      "en": "Dessel",
+      "aliases": [
+        "KFC Dessel Sport"
+      ],
+      "city": "Dessel",
+      "stadium": "Stade Armand Melis",
+      "center": [
+        5.09278,
+        51.23847
+      ],
+      "crest": "be-dessel.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q16062424",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/43/KFC_Dessel_Sport_logo.svg"
+    },
+    {
+      "id": "be-belisia",
+      "tier": 3,
+      "en": "Belisia Bilzen",
+      "aliases": [
+        "SV Belisia Bilzen",
+        "Belisia"
+      ],
+      "city": "Bilzen",
+      "stadium": "Sportpark Katteberg",
+      "center": [
+        5.5123211,
+        50.8639459
+      ],
+      "crest": "be-belisia.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/211350107",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/96/S.V._Belisia_Bilzen_logo.png",
+      "venueSource": "https://www.bilzenhoeselt.be/zaalzoeker/detail/16/sportpark-katteberg"
+    },
+    {
+      "id": "be-knokke",
+      "tier": 3,
+      "en": "Knokke",
+      "aliases": [
+        "Royal Knokke FC"
+      ],
+      "city": "Knokke-Heist",
+      "stadium": "Burgemeester Graaf Leopold Lippens Park",
+      "center": [
+        3.293178,
+        51.338422
+      ],
+      "crest": "be-knokke.png",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q60729786",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/85/R._Knokke_FC_logo.png"
+    },
+    {
+      "id": "be-tienen",
+      "tier": 3,
+      "en": "Tienen",
+      "aliases": [
+        "KVK Tienen"
+      ],
+      "city": "Tienen",
+      "stadium": "Bergéstadion",
+      "center": [
+        4.94813,
+        50.8047
+      ],
+      "crest": "be-tienen.svg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q16511464",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b1/K.V.K._Tienen_logo.svg",
+      "sharedGround": "be-tienen-ground"
+    },
+    {
+      "id": "be-lyra-lierse",
+      "tier": 3,
+      "en": "Lyra-Lierse",
+      "aliases": [
+        "Lyra-Lierse"
+      ],
+      "city": "Lier",
+      "stadium": "L’Avenirstadion (Sportpark Lier)",
+      "center": [
+        4.5762218,
+        51.1220775
+      ],
+      "crest": "be-lyra-lierse.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/1414168678",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e4/K._Lyra-Lierse_Berlaar_logo.svg",
+      "venueSource": "https://lyralierse.be/sportief/kalender/",
+      "note": "New Sportpark Lier home since 2025; not the former Berlaar ground."
+    },
+    {
+      "id": "be-jong-cercle",
+      "tier": 3,
+      "en": "Jong Cercle",
+      "aliases": [
+        "Cercle Brugge KSV"
+      ],
+      "city": "Oostkamp",
+      "stadium": "De Valkaart",
+      "center": [
+        3.244984,
+        51.1555546
+      ],
+      "crest": "be-jong-cercle.svg",
+      "coordinateSource": "https://www.openstreetmap.org/way/88360298",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg",
+      "venueSource": "https://lyralierse.be/sportief/kalender/"
+    },
+    {
+      "id": "be-harelbeke",
+      "tier": 3,
+      "en": "Harelbeke",
+      "aliases": [
+        "KRC Harelbeke (2016 club)"
+      ],
+      "city": "Harelbeke",
+      "stadium": "Stade Forestier",
+      "center": [
+        3.311111,
+        50.845
+      ],
+      "crest": "be-harelbeke.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1987139",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/fb/KRC_Harelbeke_%282016%29_logo.png"
+    },
+    {
+      "id": "be-zelzate",
+      "tier": 3,
+      "en": "Zelzate",
+      "aliases": [
+        "KVV Zelzate"
+      ],
+      "city": "Zelzate",
+      "stadium": "Sportcomplex Armand Seghers",
+      "center": [
+        3.8135426,
+        51.1889551
+      ],
+      "crest": "be-zelzate.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/1319001940",
+      "crestSource": "https://irp.cdn-website.com/026324a7/dms3rep/multi/opt/KVV+Zelzate+_+Main+Logo_Full+Colour+CMYK-232w.png",
+      "venueSource": "https://www.kvv-zelzate.be/",
+      "note": "New ground opened in 2024. The previous A-complex and its location are obsolete."
+    },
+    {
+      "id": "be-rochefort",
+      "tier": 3,
+      "en": "Rochefort",
+      "aliases": [
+        "Union Rochefortoise"
+      ],
+      "city": "Rochefort",
+      "stadium": "Parc des Roches",
+      "center": [
+        5.2243676,
+        50.1608402
+      ],
+      "crest": "be-rochefort.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/97217817",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/82/Union_Rochefortoise_logo.png"
+    },
+    {
+      "id": "be-meux",
+      "tier": 3,
+      "en": "Meux",
+      "aliases": [
+        "RFC Meux"
+      ],
+      "city": "Meux",
+      "stadium": "Stade des Vert et Blanc",
+      "center": [
+        4.7966524,
+        50.5534753
+      ],
+      "crest": "be-meux.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/114197436",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d7/R.F.C._Meux_logo.png"
+    },
+    {
+      "id": "be-rwdm-brussels",
+      "tier": 3,
+      "en": "RWDM Brussels",
+      "aliases": [
+        "RWDM Brussels"
+      ],
+      "city": "Molenbeek-Saint-Jean",
+      "stadium": "Stade Edmond Machtens",
+      "center": [
+        4.310556,
+        50.855
+      ],
+      "crest": "be-rwdm-brussels.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2279580",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a0/RWDM_Brussels_logo.png"
+    },
+    {
+      "id": "be-union-sg-b",
+      "tier": 3,
+      "en": "Union SG B",
+      "aliases": [
+        "Royale Union Saint-Gilloise"
+      ],
+      "city": "Uccle",
+      "stadium": "Centre Sportif de Neerstalle",
+      "center": [
+        4.32006,
+        50.79768
+      ],
+      "crest": "be-union-sg-b.svg",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q109045022",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg",
+      "venueSource": "https://rusg.brussels/nl/nieuws/bertram-kvist-tekent-contract-bij-union-u23",
+      "note": "Regular home is Neerstalle, Uccle. Selected derby matches may be staged at Joseph Marien."
+    },
+    {
+      "id": "be-mons",
+      "tier": 3,
+      "en": "Mons",
+      "aliases": [
+        "RAEC Mons (2015)"
+      ],
+      "city": "Mons",
+      "stadium": "Stade Charles Tondreau",
+      "center": [
+        3.963822,
+        50.461957
+      ],
+      "crest": "be-mons.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q522930",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2024/06/cropped-icon.png",
+      "sharedGround": "be-mons-ground"
+    },
+    {
+      "id": "be-tubize-braine",
+      "tier": 3,
+      "en": "Tubize-Braine",
+      "aliases": [
+        "Royale Union Tubize-Braine"
+      ],
+      "city": "Tubize",
+      "stadium": "Stade Leburton",
+      "center": [
+        4.200436,
+        50.683795
+      ],
+      "crest": "be-tubize-braine.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2110834",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/04/RoyaleUnionTubize-Braine_logo.png"
+    },
+    {
+      "id": "be-sl16-fc",
+      "tier": 3,
+      "en": "SL16 FC",
+      "aliases": [
+        "Standard Liège"
+      ],
+      "city": "Angleur, Liège",
+      "stadium": "SL16 Football Campus",
+      "center": [
+        5.5492121,
+        50.5755353
+      ],
+      "crest": "be-sl16-fc.svg",
+      "coordinateSource": "https://fr.wikipedia.org/wiki/SL16_Football_Campus",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg",
+      "venueSource": "https://standard.be/fr/sl16-football-campus",
+      "note": "Standard reserves use the SL16 Football Campus in Angleur, rather than the first-team ground in Sclessin. Coordinate identifies the campus."
+    },
+    {
+      "id": "be-zebra-elites",
+      "tier": 3,
+      "en": "Zébra Élites",
+      "aliases": [
+        "Royal Charleroi SC"
+      ],
+      "city": "Montignies-sur-Sambre",
+      "stadium": "Stade de la Neuville",
+      "center": [
+        4.456877,
+        50.408524
+      ],
+      "crest": "be-zebra-elites.svg",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2703824",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg",
+      "sharedGround": "be-zebra-elites-ground"
+    },
+    {
+      "id": "be-olympic-charleroi",
+      "tier": 3,
+      "en": "Olympic Charleroi",
+      "aliases": [
+        "Olympic Charleroi"
+      ],
+      "city": "Montignies-sur-Sambre",
+      "stadium": "Stade de la Neuville",
+      "center": [
+        4.456877,
+        50.408524
+      ],
+      "crest": "be-olympic-charleroi.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2703824",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e7/Olympic_Charleroi_logo.png",
+      "sharedGround": "be-zebra-elites-ground"
+    },
+    {
+      "id": "be-habay-la-neuve",
+      "tier": 3,
+      "en": "Habay-la-Neuve",
+      "aliases": [
+        "RSC Habay-la-Neuve"
+      ],
+      "city": "Habay-la-Neuve",
+      "stadium": "Stade Émile Mathieu",
+      "center": [
+        5.6553034,
+        49.7346741
+      ],
+      "crest": "be-habay-la-neuve.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/87979516",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2025/07/Logo-Habay.png",
+      "venueSource": "https://rschabay.be/histoire-du-club/"
+    },
+    {
+      "id": "be-onhaye",
+      "tier": 3,
+      "en": "Onhaye",
+      "aliases": [
+        "CS Onhaye"
+      ],
+      "city": "Onhaye",
+      "stadium": "Stade Jean Mathot",
+      "center": [
+        4.8496157,
+        50.2419488
+      ],
+      "crest": "be-onhaye.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/99625923",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2026/08/onhaye.png"
+    },
+    {
+      "id": "be-flenu",
+      "tier": 3,
+      "en": "Flénu",
+      "aliases": [
+        "FC Flénu"
+      ],
+      "city": "Mons",
+      "stadium": "Stade Charles Tondreau",
+      "center": [
+        3.963822,
+        50.461957
+      ],
+      "crest": "be-flenu.png",
+      "coordinateSource": "https://www.wikidata.org/entity/Q522930",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2025/07/FC-Flenu-1.png",
+      "sharedGround": "be-mons-ground",
+      "venueSource": "https://www.telemb.be/actu/gros-succes-en-coulisses-et-en-tribunes-pour-la-premiere-du-fc-flenu-au-stade-tondreau-pas-encore/41202",
+      "note": "Temporary 2026–27 home at Stade Charles Tondreau while the Flénu ground is upgraded."
+    }
+  ],
+  "sources": [
+    "https://www.proleague.be/fr/jpl-clubs",
+    "https://www.proleague.be/fr/cpl-clubs",
+    "https://www.proleague.be/nieuws/challenger-pro-league-heeft-nieuw-format-zonder-quota-voor-u23",
+    "https://lyralierse.be/sportief/kalender/",
+    "https://www.raecmons44.be/table/d1-ffa-2026-2027/"
+  ],
+  "notes": [
+    "Belgian tier three consists of both regional divisions: 16 VV clubs and 12 FFA clubs. FFA was formerly named ACFF.",
+    "Challenger Pro League has 15 clubs after the 2026 format revision.",
+    "Shared grounds retain identical coordinates, including reserve teams."
+  ]
+}

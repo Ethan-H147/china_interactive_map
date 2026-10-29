@@ -1,0 +1,2016 @@
+{
+  "country": "italy",
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Serie A",
+      "count": 20,
+      "sourceUrl": "https://images.legaseriea.it/image/private/fl_attachment/prd/czailts3apyt3kuxjran.pdf"
+    },
+    {
+      "tier": 2,
+      "name": "Serie B",
+      "count": 20,
+      "sourceUrl": "https://www.legab.it/seriebkt/squadre"
+    },
+    {
+      "tier": 3,
+      "name": "Serie C",
+      "count": 60,
+      "sourceUrl": "https://www.lega-pro.com/campionato/classifiche/girone-a/"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "it-atalanta",
+      "tier": 1,
+      "en": "Atalanta",
+      "city": "Bergamo",
+      "stadium": "New Balance Arena",
+      "clubUrl": "https://en.wikipedia.org/wiki/Atalanta_BC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_di_Bergamo",
+      "center": [
+        9.68083,
+        45.70889
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Atalanta_BC_new_logo.svg/250px-Atalanta_BC_new_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Atalanta Bergamasca Calcio S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_di_Bergamo",
+      "crest": "it-atalanta.png"
+    },
+    {
+      "id": "it-bologna",
+      "tier": 1,
+      "en": "Bologna",
+      "city": "Bologna",
+      "stadium": "Stadio Renato Dall'Ara",
+      "clubUrl": "https://en.wikipedia.org/wiki/Bologna_FC_1909",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Renato_Dall'Ara",
+      "center": [
+        11.30972,
+        44.49222
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Bologna_F.C._1909_logo.svg/250px-Bologna_F.C._1909_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Bologna Football Club 1909 S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Renato_Dall'Ara",
+      "crest": "it-bologna.png"
+    },
+    {
+      "id": "it-cagliari",
+      "tier": 1,
+      "en": "Cagliari",
+      "city": "Cagliari",
+      "stadium": "Unipol Domus",
+      "clubUrl": "https://en.wikipedia.org/wiki/Cagliari_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Unipol_Domus",
+      "center": [
+        9.1375,
+        39.2
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Cagliari_Calcio_1920.svg/250px-Cagliari_Calcio_1920.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Cagliari Calcio S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Unipol_Domus",
+      "crest": "it-cagliari.png"
+    },
+    {
+      "id": "it-como",
+      "tier": 1,
+      "en": "Como",
+      "city": "Como",
+      "stadium": "Stadio Giuseppe Sinigaglia",
+      "clubUrl": "https://en.wikipedia.org/wiki/Como_1907",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Sinigaglia",
+      "center": [
+        9.07222,
+        45.81389
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Calcio_Como_-_logo_%28Italy%2C_2019-%29.svg/250px-Calcio_Como_-_logo_%28Italy%2C_2019-%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Como 1907 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Sinigaglia",
+      "crest": "it-como.png"
+    },
+    {
+      "id": "it-fiorentina",
+      "tier": 1,
+      "en": "Fiorentina",
+      "city": "Florence",
+      "stadium": "Stadio Artemio Franchi",
+      "clubUrl": "https://en.wikipedia.org/wiki/ACF_Fiorentina",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Artemio_Franchi",
+      "center": [
+        11.28222,
+        43.78083
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/ACF_Fiorentina_-_logo_%28Italy%2C_2022%29.svg/250px-ACF_Fiorentina_-_logo_%28Italy%2C_2022%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcio Firenze Fiorentina - \n S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Artemio_Franchi",
+      "crest": "it-fiorentina.png"
+    },
+    {
+      "id": "it-frosinone",
+      "tier": 1,
+      "en": "Frosinone",
+      "city": "Frosinone",
+      "stadium": "Stadio Benito Stirpe",
+      "clubUrl": "https://en.wikipedia.org/wiki/Frosinone_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Benito_Stirpe",
+      "center": [
+        13.32194,
+        41.63417
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0b/Frosinone_Calcio_logo.svg/250px-Frosinone_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Frosinone Calcio S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Benito_Stirpe",
+      "crest": "it-frosinone.png"
+    },
+    {
+      "id": "it-genoa",
+      "tier": 1,
+      "en": "Genoa",
+      "city": "Genoa",
+      "stadium": "Stadio Luigi Ferraris",
+      "clubUrl": "https://en.wikipedia.org/wiki/Genoa_CFC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris",
+      "center": [
+        8.9525,
+        44.41639
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2c/Genoa_CFC_crest.svg/250px-Genoa_CFC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Genoa Cricket and Football Club S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris",
+      "crest": "it-genoa.png",
+      "sharedGround": "it-luigi-ferraris"
+    },
+    {
+      "id": "it-inter-milan",
+      "tier": 1,
+      "en": "Inter Milan",
+      "city": "Milan",
+      "stadium": "Stadio Giuseppe Meazza",
+      "clubUrl": "https://en.wikipedia.org/wiki/Inter_Milan",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Meazza",
+      "center": [
+        9.12389,
+        45.47806
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/250px-FC_Internazionale_Milano_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football Club Internazionale Milano S.p.A.",
+        "Inter",
+        "Internazionale"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Meazza",
+      "crest": "it-inter-milan.png",
+      "sharedGround": "it-san-siro"
+    },
+    {
+      "id": "it-juventus",
+      "tier": 1,
+      "en": "Juventus",
+      "city": "Turin",
+      "stadium": "Allianz Stadium",
+      "clubUrl": "https://en.wikipedia.org/wiki/Juventus_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Juventus_Stadium",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg/250px-Juventus_FC_-_logo_black_%28Italy%2C_2020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Juventus Football Club S.p.A."
+      ],
+      "center": [
+        7.64111,
+        45.10944
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Juventus_Stadium",
+      "crest": "it-juventus.png"
+    },
+    {
+      "id": "it-lazio",
+      "tier": 1,
+      "en": "Lazio",
+      "city": "Rome",
+      "stadium": "Stadio Olimpico",
+      "clubUrl": "https://en.wikipedia.org/wiki/SS_Lazio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+      "center": [
+        12.45472,
+        41.93389
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/S.S._Lazio_badge.svg/250px-S.S._Lazio_badge.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Lazio S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+      "crest": "it-lazio.png",
+      "sharedGround": "it-olimpico"
+    },
+    {
+      "id": "it-lecce",
+      "tier": 1,
+      "en": "Lecce",
+      "city": "Lecce",
+      "stadium": "Stadio Via del Mare-Ettore Giardiniero",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Lecce",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Via_del_mare",
+      "center": [
+        18.20889,
+        40.36528
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/23/US_Lecce_crest.svg/250px-US_Lecce_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Lecce S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Via_del_mare",
+      "crest": "it-lecce.png"
+    },
+    {
+      "id": "it-ac-milan",
+      "tier": 1,
+      "en": "AC Milan",
+      "city": "Milan",
+      "stadium": "San Siro",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Milan",
+      "venueUrl": "https://en.wikipedia.org/wiki/San_Siro",
+      "center": [
+        9.12389,
+        45.47806
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Logo_of_AC_Milan.svg/250px-Logo_of_AC_Milan.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcio Milan S.p.A.",
+        "Milan"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/San_Siro",
+      "crest": "it-ac-milan.png",
+      "sharedGround": "it-san-siro"
+    },
+    {
+      "id": "it-monza",
+      "tier": 1,
+      "en": "Monza",
+      "city": "Monza",
+      "stadium": "Stadio Brianteo",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Monza",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Brianteo",
+      "center": [
+        9.30806,
+        45.58278
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/AC_Monza_logo_%282021%29.svg/250px-AC_Monza_logo_%282021%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcio Monza S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Brianteo",
+      "crest": "it-monza.png"
+    },
+    {
+      "id": "it-napoli",
+      "tier": 1,
+      "en": "Napoli",
+      "city": "Naples",
+      "stadium": "Stadio Diego Armando Maradona",
+      "clubUrl": "https://en.wikipedia.org/wiki/SSC_Napoli",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona",
+      "center": [
+        14.193,
+        40.828
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/SSC_Napoli_2025_%28white_and_azure%29.svg/250px-SSC_Napoli_2025_%28white_and_azure%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Calcio Napoli S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Diego_Armando_Maradona",
+      "crest": "it-napoli.png"
+    },
+    {
+      "id": "it-parma",
+      "tier": 1,
+      "en": "Parma",
+      "city": "Parma",
+      "stadium": "Stadio Ennio Tardini",
+      "clubUrl": "https://en.wikipedia.org/wiki/Parma_Calcio_1913",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Ennio_Tardini",
+      "center": [
+        10.33833,
+        44.795
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Logo_Parma_Calcio_1913_%28adozione_2016%29.svg/250px-Logo_Parma_Calcio_1913_%28adozione_2016%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Parma Calcio 1913 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ennio_Tardini",
+      "crest": "it-parma.png"
+    },
+    {
+      "id": "it-roma",
+      "tier": 1,
+      "en": "Roma",
+      "city": "Rome",
+      "stadium": "Stadio Olimpico",
+      "clubUrl": "https://en.wikipedia.org/wiki/AS_Roma",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+      "center": [
+        12.45472,
+        41.93389
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f7/AS_Roma_logo_%282017%29.svg/250px-AS_Roma_logo_%282017%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Sportiva Roma S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico",
+      "crest": "it-roma.png",
+      "sharedGround": "it-olimpico"
+    },
+    {
+      "id": "it-sassuolo",
+      "tier": 1,
+      "en": "Sassuolo",
+      "city": "Reggio Emilia",
+      "stadium": "Mapei Stadium – Città del Tricolore",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Sassuolo_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Mapei_Stadium_%E2%80%93_Citt%C3%A0_del_Tricolore",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1c/US_Sassuolo_Calcio_logo.svg/250px-US_Sassuolo_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva SassuoloCalcio S.r.l."
+      ],
+      "center": [
+        10.64972,
+        44.71472
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mapei_Stadium_%E2%80%93_Citt%C3%A0_del_Tricolore",
+      "crest": "it-sassuolo.png",
+      "sharedGround": "it-mapei"
+    },
+    {
+      "id": "it-torino",
+      "tier": 1,
+      "en": "Torino",
+      "city": "Turin",
+      "stadium": "Stadio Olimpico Grande Torino",
+      "clubUrl": "https://en.wikipedia.org/wiki/Torino_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Olimpico_Grande_Torino",
+      "center": [
+        7.65,
+        45.04167
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/Torino_FC_Logo.svg/250px-Torino_FC_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Torino Football Club S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico_Grande_Torino",
+      "crest": "it-torino.png"
+    },
+    {
+      "id": "it-udinese",
+      "tier": 1,
+      "en": "Udinese",
+      "city": "Udine",
+      "stadium": "Bluenergy Stadium",
+      "clubUrl": "https://en.wikipedia.org/wiki/Udinese_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Friuli",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/Udinese_Calcio_logo.svg/250px-Udinese_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Udinese Calcio S.p.A."
+      ],
+      "center": [
+        13.2001,
+        46.0816
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Friuli",
+      "crest": "it-udinese.png"
+    },
+    {
+      "id": "it-venezia",
+      "tier": 1,
+      "en": "Venezia",
+      "city": "Venice",
+      "stadium": "Stadio Pier Luigi Penzo",
+      "clubUrl": "https://en.wikipedia.org/wiki/Venezia_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Pier_Luigi_Penzo",
+      "center": [
+        12.36361,
+        45.42778
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/39/Venezia_FC_crest.svg/250px-Venezia_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Venezia Football Club S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pier_Luigi_Penzo",
+      "crest": "it-venezia.png"
+    },
+    {
+      "id": "it-arezzo",
+      "tier": 2,
+      "en": "Arezzo",
+      "city": "Arezzo",
+      "stadium": "Stadio Città di Arezzo",
+      "clubUrl": "https://en.wikipedia.org/wiki/SS_Arezzo",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Citt%C3%A0_di_Arezzo",
+      "center": [
+        11.89444,
+        43.45111
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/SS_Arezzo_crest.svg/250px-SS_Arezzo_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Arezzo"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Citt%C3%A0_di_Arezzo",
+      "crest": "it-arezzo.png"
+    },
+    {
+      "id": "it-ascoli",
+      "tier": 2,
+      "en": "Ascoli",
+      "city": "Ascoli Piceno",
+      "stadium": "Stadio Cino e Lillo Del Duca",
+      "clubUrl": "https://en.wikipedia.org/wiki/Ascoli_Calcio_1898_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Cino_e_Lillo_Del_Duca",
+      "center": [
+        13.59417,
+        42.86111
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/23/Ascoli_Calcio_1898_logo.svg/250px-Ascoli_Calcio_1898_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Ascoli Calcio 1898 FC S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Cino_e_Lillo_Del_Duca",
+      "crest": "it-ascoli.png"
+    },
+    {
+      "id": "it-avellino",
+      "tier": 2,
+      "en": "Avellino",
+      "city": "Avellino",
+      "stadium": "Stadio Partenio-Adriano Lombardi",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Avellino_1912",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Partenio-Adriano_Lombardi",
+      "center": [
+        14.7925,
+        40.92694
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/86/US_Avellino.svg/250px-US_Avellino.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Avellino 1912"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Partenio-Adriano_Lombardi",
+      "crest": "it-avellino.png"
+    },
+    {
+      "id": "it-benevento",
+      "tier": 2,
+      "en": "Benevento",
+      "city": "Benevento",
+      "stadium": "Stadio Ciro Vigorito",
+      "clubUrl": "https://en.wikipedia.org/wiki/Benevento_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Ciro_Vigorito",
+      "center": [
+        14.78111,
+        41.11639
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Benevento_Calcio_logo.svg/250px-Benevento_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Benevento Calcio S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ciro_Vigorito",
+      "crest": "it-benevento.png"
+    },
+    {
+      "id": "it-carrarese",
+      "tier": 2,
+      "en": "Carrarese",
+      "city": "Carrara",
+      "stadium": "Stadio dei Marmi",
+      "clubUrl": "https://en.wikipedia.org/wiki/Carrarese_Calcio_1908",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_dei_Marmi_(Carrara)",
+      "center": [
+        10.076806,
+        44.0653278
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/Carrarese_Calcio_1908_crest.svg/250px-Carrarese_Calcio_1908_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Carrarese Calcio 1908 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_dei_Marmi_(Carrara)",
+      "crest": "it-carrarese.png"
+    },
+    {
+      "id": "it-catanzaro",
+      "tier": 2,
+      "en": "Catanzaro",
+      "city": "Catanzaro",
+      "stadium": "Stadio Nicola Ceravolo",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Catanzaro_1929",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Nicola_Ceravolo",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/40/US_Catanzaro_1929_crest.svg/250px-US_Catanzaro_1929_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Catanzaro 1929"
+      ],
+      "center": [
+        16.587778,
+        38.919722
+      ],
+      "coordinateSource": "https://www.europlan-online.de/us-catanzaro/stadion-4103.html",
+      "crest": "it-catanzaro.png"
+    },
+    {
+      "id": "it-cesena",
+      "tier": 2,
+      "en": "Cesena",
+      "city": "Cesena",
+      "stadium": "Stadio Dino Manuzzi",
+      "clubUrl": "https://en.wikipedia.org/wiki/Cesena_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Dino_Manuzzi",
+      "center": [
+        12.26194,
+        44.14056
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5a/Cesena_FC_crest.svg/250px-Cesena_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Cesena Football Club"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Dino_Manuzzi",
+      "crest": "it-cesena.png"
+    },
+    {
+      "id": "it-cremonese",
+      "tier": 2,
+      "en": "Cremonese",
+      "city": "Cremona",
+      "stadium": "Stadio Giovanni Zini",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Cremonese",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Giovanni_Zini",
+      "center": [
+        10.03472,
+        45.14028
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e1/US_Cremonese_logo.svg/250px-US_Cremonese_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Cremonese S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giovanni_Zini",
+      "crest": "it-cremonese.png"
+    },
+    {
+      "id": "it-empoli",
+      "tier": 2,
+      "en": "Empoli",
+      "city": "Empoli",
+      "stadium": "Stadio Carlo Castellani",
+      "clubUrl": "https://en.wikipedia.org/wiki/Empoli_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Carlo_Castellani",
+      "center": [
+        10.955,
+        43.72639
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fb/Empoli_FC_crest.svg/250px-Empoli_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Empoli Football Club S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Carlo_Castellani",
+      "crest": "it-empoli.png"
+    },
+    {
+      "id": "it-hellas-verona",
+      "tier": 2,
+      "en": "Hellas Verona",
+      "city": "Verona",
+      "stadium": "Stadio Marcantonio Bentegodi",
+      "clubUrl": "https://en.wikipedia.org/wiki/Hellas_Verona_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Marcantonio_Bentegodi",
+      "center": [
+        10.96861,
+        45.43528
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/92/Hellas_Verona_FC_logo_%282020%29.svg/250px-Hellas_Verona_FC_logo_%282020%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Hellas Verona Football Club S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Marcantonio_Bentegodi",
+      "crest": "it-hellas-verona.png"
+    },
+    {
+      "id": "it-juve-stabia",
+      "tier": 2,
+      "en": "Juve Stabia",
+      "city": "Castellammare di Stabia",
+      "stadium": "Stadio Comunale Romeo Menti",
+      "clubUrl": "https://en.wikipedia.org/wiki/SS_Juve_Stabia",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Romeo_Menti_(Castellammare_di_Stabia)",
+      "center": [
+        14.49444,
+        40.70667
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a4/SS_Juve_Stabia_crest.svg/250px-SS_Juve_Stabia_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Juve Stabia"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Romeo_Menti_(Castellammare_di_Stabia)",
+      "crest": "it-juve-stabia.png"
+    },
+    {
+      "id": "it-mantova",
+      "tier": 2,
+      "en": "Mantova",
+      "city": "Mantua",
+      "stadium": "Stadio Danilo Martelli",
+      "clubUrl": "https://en.wikipedia.org/wiki/Mantova_1911",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Danilo_Martelli",
+      "center": [
+        10.79417,
+        45.14611
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/45/Mantova_1911_crest.svg/250px-Mantova_1911_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Mantova 1911 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Danilo_Martelli",
+      "crest": "it-mantova.png"
+    },
+    {
+      "id": "it-modena",
+      "tier": 2,
+      "en": "Modena",
+      "city": "Modena",
+      "stadium": "Stadio Alberto Braglia",
+      "clubUrl": "https://en.wikipedia.org/wiki/Modena_FC_2018",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Alberto_Braglia",
+      "center": [
+        10.92333,
+        44.65361
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d8/Modena_FC_2018_crest.svg/250px-Modena_FC_2018_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Modena Football Club 2018 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alberto_Braglia",
+      "crest": "it-modena.png"
+    },
+    {
+      "id": "it-padova",
+      "tier": 2,
+      "en": "Padova",
+      "city": "Padua",
+      "stadium": "Stadio Comunale Euganeo",
+      "clubUrl": "https://en.wikipedia.org/wiki/Calcio_Padova",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Euganeo",
+      "center": [
+        11.85833,
+        45.43222
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Calcio_Padova_logo.svg/250px-Calcio_Padova_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Calcio Padova SpA"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Euganeo",
+      "crest": "it-padova.png"
+    },
+    {
+      "id": "it-palermo",
+      "tier": 2,
+      "en": "Palermo",
+      "city": "Palermo",
+      "stadium": "Stadio Renzo Barbera",
+      "clubUrl": "https://en.wikipedia.org/wiki/Palermo_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Renzo_Barbera",
+      "center": [
+        13.342275,
+        38.1527667
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/df/Palermo_Calcio_logo_%282019%29.svg/250px-Palermo_Calcio_logo_%282019%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Palermo Football Club"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Renzo_Barbera",
+      "crest": "it-palermo.png"
+    },
+    {
+      "id": "it-pisa",
+      "tier": 2,
+      "en": "Pisa",
+      "city": "Pisa",
+      "stadium": "Arena Garibaldi",
+      "clubUrl": "https://en.wikipedia.org/wiki/Pisa_SC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Arena_Garibaldi_%E2%80%93_Stadio_Romeo_Anconetani",
+      "center": [
+        10.4,
+        43.72528
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6b/Pisa_SC_crest.svg/250px-Pisa_SC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Pisa Sporting Club S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Arena_Garibaldi_%E2%80%93_Stadio_Romeo_Anconetani",
+      "crest": "it-pisa.png"
+    },
+    {
+      "id": "it-sampdoria",
+      "tier": 2,
+      "en": "Sampdoria",
+      "city": "Genoa",
+      "stadium": "Stadio Luigi Ferraris",
+      "clubUrl": "https://en.wikipedia.org/wiki/Sampdoria",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris",
+      "center": [
+        8.9525,
+        44.41639
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d2/U.C._Sampdoria_logo.svg/250px-U.C._Sampdoria_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Calcio Sampdoria S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Luigi_Ferraris",
+      "crest": "it-sampdoria.png",
+      "sharedGround": "it-luigi-ferraris"
+    },
+    {
+      "id": "it-sudtirol",
+      "tier": 2,
+      "en": "Südtirol",
+      "city": "Bolzano",
+      "stadium": "Stadio Marco Druso",
+      "clubUrl": "https://en.wikipedia.org/wiki/FC_S%C3%BCdtirol",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Druso",
+      "center": [
+        11.346,
+        46.492
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7a/FC_Sudtirol_crest.svg/250px-FC_Sudtirol_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Fußball Club Südtirol s.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Druso",
+      "crest": "it-sudtirol.png"
+    },
+    {
+      "id": "it-vicenza",
+      "tier": 2,
+      "en": "Vicenza",
+      "city": "Vicenza",
+      "stadium": "Stadio Romeo Menti",
+      "clubUrl": "https://en.wikipedia.org/wiki/LR_Vicenza",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Romeo_Menti",
+      "center": [
+        11.55556,
+        45.54417
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/LR_Vicenza_Virtus_%28logo%29.svg/250px-LR_Vicenza_Virtus_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "L.R. Vicenza S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Romeo_Menti",
+      "crest": "it-vicenza.png"
+    },
+    {
+      "id": "it-virtus-entella",
+      "tier": 2,
+      "en": "Virtus Entella",
+      "city": "Chiavari",
+      "stadium": "Stadio Comunale",
+      "clubUrl": "https://en.wikipedia.org/wiki/Virtus_Entella",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Comunale_(Chiavari)",
+      "center": [
+        9.33722,
+        44.31556
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a8/Virtus_Entella_logo.svg/250px-Virtus_Entella_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Virtus Entella S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Comunale_(Chiavari)",
+      "crest": "it-virtus-entella.png"
+    },
+    {
+      "id": "it-albinoleffe",
+      "tier": 3,
+      "group": "A",
+      "en": "AlbinoLeffe",
+      "city": "Zanica",
+      "stadium": "AlbinoLeffe Stadium",
+      "clubUrl": "https://en.wikipedia.org/wiki/UC_AlbinoLeffe",
+      "venueUrl": "https://en.wikipedia.org/wiki/Zanica",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/UC_AlbinoLeffe_crest.svg/250px-UC_AlbinoLeffe_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Calcio AlbinoLeffe S.r.l."
+      ],
+      "center": [
+        9.67036858,
+        45.63215425
+      ],
+      "coordinateSource": "https://www.europlan-online.de/albinoleffe-stadium/stadion-76571.html",
+      "crest": "it-albinoleffe.png",
+      "note": "AlbinoLeffe Stadium is the main pitch at the Zanica campus, not the older municipal ground. The coarse article point was replaced with the named stadium point."
+    },
+    {
+      "id": "it-alcione-milano",
+      "tier": 3,
+      "group": "A",
+      "en": "Alcione Milano",
+      "city": "Sesto San Giovanni",
+      "stadium": "Ernesto Breda",
+      "clubUrl": "https://en.wikipedia.org/wiki/Alcione_Milano",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Ernesto_Breda",
+      "center": [
+        9.21972,
+        45.53389
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f3/Alcione_Milano_crest.svg/250px-Alcione_Milano_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Alcione MilanoSocietà Sportiva a r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ernesto_Breda",
+      "crest": "it-alcione-milano.png",
+      "sharedGround": "it-ernesto-breda"
+    },
+    {
+      "id": "it-arzignano-valchiampo",
+      "tier": 3,
+      "group": "A",
+      "en": "Arzignano Valchiampo",
+      "city": "Arzignano",
+      "stadium": "Tommaso Dal Molin",
+      "clubUrl": "https://en.wikipedia.org/wiki/FC_Arzignano_Valchiampo",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Tommaso_Dal_Molin",
+      "center": [
+        11.32417,
+        45.51917
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4e/FC_Arzignano_Valchiampo_crest.svg/250px-FC_Arzignano_Valchiampo_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football ClubArzignano Valchiampo srl"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Tommaso_Dal_Molin",
+      "crest": "it-arzignano-valchiampo.png"
+    },
+    {
+      "id": "it-carpi",
+      "tier": 3,
+      "group": "A",
+      "en": "Carpi",
+      "city": "Carpi",
+      "stadium": "Sandro Cabassi",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Carpi",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Sandro_Cabassi",
+      "center": [
+        10.88167,
+        44.77556
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/48/AC_Carpi_crest.svg/250px-AC_Carpi_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcio Carpi S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Sandro_Cabassi",
+      "crest": "it-carpi.png"
+    },
+    {
+      "id": "it-cittadella",
+      "tier": 3,
+      "group": "A",
+      "en": "Cittadella",
+      "city": "Cittadella",
+      "stadium": "Piercesare Tombolato",
+      "clubUrl": "https://en.wikipedia.org/wiki/AS_Cittadella",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Pier_Cesare_Tombolato",
+      "center": [
+        11.78111,
+        45.64278
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e3/AS_Cittadella_logo.svg/250px-AS_Cittadella_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Sportiva Cittadella S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pier_Cesare_Tombolato",
+      "crest": "it-cittadella.png"
+    },
+    {
+      "id": "it-desenzano",
+      "tier": 3,
+      "group": "A",
+      "en": "Desenzano",
+      "city": "Ospitaletto",
+      "stadium": "Comunale Gino Corioni",
+      "clubUrl": "https://en.wikipedia.org/wiki/Calcio_Desenzano_SSD",
+      "venueUrl": "https://en.wikipedia.org/wiki/Ospitaletto",
+      "center": [
+        10.06590825,
+        45.558187
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/62/Calcio_Desenzano_SSD_logo.svg/250px-Calcio_Desenzano_SSD_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Calcio DesenzanoSocietà Sportiva Dilettantistica a r.l."
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-luigi-corioni/stadion-83126.html",
+      "crest": "it-desenzano.png",
+      "sharedGround": "it-gino-corioni",
+      "note": "2026–27 home matches at Gino Corioni in Ospitaletto, away from Desenzano del Garda."
+    },
+    {
+      "id": "it-dolomiti-bellunesi",
+      "tier": 3,
+      "group": "A",
+      "en": "Dolomiti Bellunesi",
+      "city": "Feltre",
+      "stadium": "Zugni Tauro",
+      "clubUrl": "https://en.wikipedia.org/wiki/Dolomiti_Bellunesi_(football_club)",
+      "venueUrl": "https://en.wikipedia.org/wiki/Feltre",
+      "center": [
+        11.9043378,
+        46.0224382
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Logo_Dolomiti_Bellunesi_Calcio_2024.svg/250px-Logo_Dolomiti_Bellunesi_Calcio_2024.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Dolomiti Bellunesi s.r.l."
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-zugni-tauro/stadion-26415.html",
+      "crest": "it-dolomiti-bellunesi.png",
+      "note": "Home matches at Zugni Tauro in Feltre."
+    },
+    {
+      "id": "it-folgore-caratese",
+      "tier": 3,
+      "group": "A",
+      "en": "Folgore Caratese",
+      "city": "Carate Brianza",
+      "stadium": "XXV Aprile",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Folgore_Caratese_ASD",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/50/US_Folgore_Caratese_ASD_logo.svg/250px-US_Folgore_Caratese_ASD_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Folgore CarateseAssociazione Sportiva Dilettantistica"
+      ],
+      "crest": "it-folgore-caratese.png",
+      "center": [
+        9.22418535,
+        45.67715803
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-xxv-aprile/stadion-26253.html",
+      "sharedGround": "it-xxv-aprile"
+    },
+    {
+      "id": "it-giana-erminio",
+      "tier": 3,
+      "group": "A",
+      "en": "Giana Erminio",
+      "city": "Gorgonzola",
+      "stadium": "Città di Gorgonzola",
+      "clubUrl": "https://en.wikipedia.org/wiki/AS_Giana_Erminio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Citt%C3%A0_di_Gorgonzola",
+      "center": [
+        9.40194,
+        45.528778
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/AS_Giana_Erminio_crest.svg/250px-AS_Giana_Erminio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Sportiva Giana Erminio S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Citt%C3%A0_di_Gorgonzola",
+      "crest": "it-giana-erminio.png"
+    },
+    {
+      "id": "it-juventus-next-gen",
+      "tier": 3,
+      "group": "A",
+      "en": "Juventus Next Gen",
+      "city": "Alessandria",
+      "stadium": "Giuseppe Moccagatta",
+      "clubUrl": "https://en.wikipedia.org/wiki/Juventus_Next_Gen",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Moccagatta",
+      "center": [
+        8.61694,
+        44.92
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Juventus_Next_Gen.png/250px-Juventus_Next_Gen.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Moccagatta",
+      "crest": "it-juventus-next-gen.png",
+      "note": "2026–27 home ground is Giuseppe Moccagatta in Alessandria; do not use the former 2024–25 ground in Biella."
+    },
+    {
+      "id": "it-lecco",
+      "tier": 3,
+      "group": "A",
+      "en": "Lecco",
+      "city": "Lecco",
+      "stadium": "Rigamonti-Ceppi",
+      "clubUrl": "https://en.wikipedia.org/wiki/Calcio_Lecco_1912",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Rigamonti-Ceppi",
+      "center": [
+        9.39889,
+        45.85778
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/98/Calcio_Lecco_1912_crest.svg/250px-Calcio_Lecco_1912_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Calcio Lecco 1912 S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Rigamonti-Ceppi",
+      "crest": "it-lecco.png"
+    },
+    {
+      "id": "it-lumezzane",
+      "tier": 3,
+      "group": "A",
+      "en": "Lumezzane",
+      "city": "Lumezzane",
+      "stadium": "Tullio Saleri",
+      "clubUrl": "https://en.wikipedia.org/wiki/FC_Lumezzane",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Tullio_Saleri",
+      "center": [
+        10.23611,
+        45.65472
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/36/FC_Lumezzane_crest.svg/250px-FC_Lumezzane_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football Club Lumezzane srl"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Tullio_Saleri",
+      "crest": "it-lumezzane.png"
+    },
+    {
+      "id": "it-novara",
+      "tier": 3,
+      "group": "A",
+      "en": "Novara",
+      "city": "Novara",
+      "stadium": "Silvio Piola",
+      "clubUrl": "https://en.wikipedia.org/wiki/Novara_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Silvio_Piola_(Novara)",
+      "center": [
+        8.59583,
+        45.43583
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9a/Novara_FC_crest.svg/250px-Novara_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Novara Football Club"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Silvio_Piola_(Novara)",
+      "crest": "it-novara.png"
+    },
+    {
+      "id": "it-ospitaletto",
+      "tier": 3,
+      "group": "A",
+      "en": "Ospitaletto",
+      "city": "Ospitaletto",
+      "stadium": "Comunale Gino Corioni",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Ospitaletto_Franciacorta",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/AC_Ospitaletto_Franciacorta_logo.svg/250px-AC_Ospitaletto_Franciacorta_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione CalcioOspitaletto Franciacorta"
+      ],
+      "crest": "it-ospitaletto.png",
+      "center": [
+        10.06590825,
+        45.558187
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-luigi-corioni/stadion-83126.html",
+      "sharedGround": "it-gino-corioni"
+    },
+    {
+      "id": "it-pergolettese",
+      "tier": 3,
+      "group": "A",
+      "en": "Pergolettese",
+      "city": "Crema",
+      "stadium": "Giuseppe Voltini",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Pergolettese_1932",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Voltini",
+      "center": [
+        9.67556,
+        45.35778
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/US_Pergolettese_1932_%28logo%29.svg/250px-US_Pergolettese_1932_%28logo%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Pergolettese1932 Srl"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Voltini",
+      "crest": "it-pergolettese.png"
+    },
+    {
+      "id": "it-pro-vercelli",
+      "tier": 3,
+      "group": "A",
+      "en": "Pro Vercelli",
+      "city": "Vercelli",
+      "stadium": "Silvio Piola",
+      "clubUrl": "https://en.wikipedia.org/wiki/FC_Pro_Vercelli_1892",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Silvio_Piola_(Vercelli)",
+      "center": [
+        8.42111,
+        45.31972
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/04/FC_Pro_Vercelli_1892_crest.svg/250px-FC_Pro_Vercelli_1892_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football Club Pro Vercelli 1892 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Silvio_Piola_(Vercelli)",
+      "crest": "it-pro-vercelli.png"
+    },
+    {
+      "id": "it-renate",
+      "tier": 3,
+      "group": "A",
+      "en": "Renate",
+      "city": "Carate Brianza",
+      "stadium": "XXV Aprile",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Renate",
+      "venueUrl": "https://en.wikipedia.org/wiki/Carate_Brianza",
+      "center": [
+        9.22418535,
+        45.67715803
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/AC_Renate_crest.svg/250px-AC_Renate_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcio Renate Srl"
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-xxv-aprile/stadion-26253.html",
+      "crest": "it-renate.png",
+      "sharedGround": "it-xxv-aprile",
+      "note": "2026–27 home matches at XXV Aprile (Sportitalia Arena) in Carate Brianza."
+    },
+    {
+      "id": "it-trento",
+      "tier": 3,
+      "group": "A",
+      "en": "Trento",
+      "city": "Trento",
+      "stadium": "Briamasco",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Trento_1921",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Briamasco",
+      "center": [
+        11.1143139,
+        46.0642111
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c4/AC_Trento_1921_crest.svg/250px-AC_Trento_1921_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcio Trento 1921 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Briamasco",
+      "crest": "it-trento.png"
+    },
+    {
+      "id": "it-treviso",
+      "tier": 3,
+      "group": "A",
+      "en": "Treviso",
+      "city": "Treviso",
+      "stadium": "Omobono Tenni",
+      "clubUrl": "https://en.wikipedia.org/wiki/Treviso_FBC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Omobono_Tenni",
+      "center": [
+        12.25583,
+        45.67
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/54/Treviso_FBC_1993_logo.svg/250px-Treviso_FBC_1993_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Treviso Foot Ball Club"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Omobono_Tenni",
+      "crest": "it-treviso.png"
+    },
+    {
+      "id": "it-union-brescia",
+      "tier": 3,
+      "group": "A",
+      "en": "Union Brescia",
+      "city": "Brescia",
+      "stadium": "Mario Rigamonti",
+      "clubUrl": "https://en.wikipedia.org/wiki/Union_Brescia",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Mario_Rigamonti",
+      "center": [
+        10.23694,
+        45.57056
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/c9/Union_Brescia_crest.svg/250px-Union_Brescia_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Union Brescia srl"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Mario_Rigamonti",
+      "crest": "it-union-brescia.png"
+    },
+    {
+      "id": "it-atalanta-u23",
+      "tier": 3,
+      "group": "B",
+      "en": "Atalanta U23",
+      "city": "Caravaggio",
+      "stadium": "Comunale di Caravaggio",
+      "clubUrl": "https://en.wikipedia.org/wiki/Atalanta_Under_23",
+      "venueUrl": "https://en.wikipedia.org/wiki/Caravaggio,_Lombardy",
+      "center": [
+        9.63564969,
+        45.50044856
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f2/Atalanta_BC_new_logo.svg/250px-Atalanta_BC_new_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Atalanta Bergamasca Calcio Under-23"
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-di-caravaggio/stadion-25792.html",
+      "crest": "it-atalanta-u23.png",
+      "note": "Home matches at the current Comunale di Caravaggio, not the old municipal ground or club offices."
+    },
+    {
+      "id": "it-campobasso",
+      "tier": 3,
+      "group": "B",
+      "en": "Campobasso",
+      "city": "Campobasso",
+      "stadium": "Antonio Molinari",
+      "clubUrl": "https://en.wikipedia.org/wiki/Campobasso_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Nuovo_Romagnoli",
+      "center": [
+        14.630806,
+        41.570028
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Campobasso_FC_logo.svg/250px-Campobasso_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Campobasso Football Club"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Nuovo_Romagnoli",
+      "crest": "it-campobasso.png"
+    },
+    {
+      "id": "it-forli",
+      "tier": 3,
+      "group": "B",
+      "en": "Forlì",
+      "city": "Forlì",
+      "stadium": "Tullo Morgagni",
+      "clubUrl": "https://en.wikipedia.org/wiki/Forl%C3%AC_FC",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b2/Forl%C3%AC_FC_logo.svg/250px-Forl%C3%AC_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football Club Forlì"
+      ],
+      "crest": "it-forli.png",
+      "center": [
+        12.057763,
+        44.213533
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-tullo-morgagni/stadion-4146.html"
+    },
+    {
+      "id": "it-grosseto",
+      "tier": 3,
+      "group": "B",
+      "en": "Grosseto",
+      "city": "Grosseto",
+      "stadium": "Carlo Zecchini",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Grosseto_1912",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Olimpico_Carlo_Zecchini",
+      "center": [
+        11.1075,
+        42.75889
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3c/US_Grosseto_1912_logo.svg/250px-US_Grosseto_1912_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "SSD Unione Sportiva Grosseto 1912"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Olimpico_Carlo_Zecchini",
+      "crest": "it-grosseto.png"
+    },
+    {
+      "id": "it-gubbio",
+      "tier": 3,
+      "group": "B",
+      "en": "Gubbio",
+      "city": "Gubbio",
+      "stadium": "Pietro Barbetti",
+      "clubUrl": "https://en.wikipedia.org/wiki/AS_Gubbio_1910",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Pietro_Barbetti",
+      "center": [
+        12.56667,
+        43.35
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/AS_Gubbio_1910_crest.svg/250px-AS_Gubbio_1910_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Sportiva Gubbio 1910 Srl"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pietro_Barbetti",
+      "crest": "it-gubbio.png"
+    },
+    {
+      "id": "it-guidonia-montecelio",
+      "tier": 3,
+      "group": "B",
+      "en": "Guidonia Montecelio",
+      "city": "Guidonia Montecelio",
+      "stadium": "Comunale di Guidonia Montecelio",
+      "clubUrl": "https://en.wikipedia.org/wiki/Guidonia_Montecelio_1937_FC",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d7/Guidonia_Montecelio_1937_FC_logo.svg/250px-Guidonia_Montecelio_1937_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Guidonia Montecelio 1937Football Club",
+        "Guidonia"
+      ],
+      "crest": "it-guidonia-montecelio.png",
+      "center": [
+        12.726261,
+        42.001549
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q138039517"
+    },
+    {
+      "id": "it-latina",
+      "tier": 3,
+      "group": "B",
+      "en": "Latina",
+      "city": "Latina",
+      "stadium": "Domenico Francioni",
+      "clubUrl": "https://en.wikipedia.org/wiki/Latina_Calcio_1932",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Domenico_Francioni",
+      "center": [
+        12.89889,
+        41.46361
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b3/Latina_Calcio_1932_crest.svg/250px-Latina_Calcio_1932_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Latina Calcio 1932 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Domenico_Francioni",
+      "crest": "it-latina.png"
+    },
+    {
+      "id": "it-livorno",
+      "tier": 3,
+      "group": "B",
+      "en": "Livorno",
+      "city": "Livorno",
+      "stadium": "Armando Picchi",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Livorno_1915",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Armando_Picchi",
+      "center": [
+        10.31417,
+        43.52667
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Livorno-Stemma_semplificato.svg/250px-Livorno-Stemma_semplificato.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Livorno 1915"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Armando_Picchi",
+      "crest": "it-livorno.png"
+    },
+    {
+      "id": "it-ostia-mare",
+      "tier": 3,
+      "group": "B",
+      "en": "Ostia Mare",
+      "city": "Ostia, Rome",
+      "stadium": "Pasquale Giannattasio",
+      "clubUrl": "https://en.wikipedia.org/wiki/AS_Ostia_Mare_Lido_Calcio",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/75/AS_Ostia_Mare_Lido_Calcio_logo.svg/250px-AS_Ostia_Mare_Lido_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Sportiva Ostiamare Lido Calcio S.r.l.",
+        "Ostiamare"
+      ],
+      "crest": "it-ostia-mare.png",
+      "center": [
+        12.30151858,
+        41.73142514
+      ],
+      "coordinateSource": "https://www.wikidata.org/wiki/Q140537125",
+      "note": "2026–27 relocation to Pasquale Giannattasio (Stella Polare), replacing Anco Marzio."
+    },
+    {
+      "id": "it-pescara",
+      "tier": 3,
+      "group": "B",
+      "en": "Pescara",
+      "city": "Pescara",
+      "stadium": "Stadio Adriatico – Giovanni Cornacchia",
+      "clubUrl": "https://en.wikipedia.org/wiki/Delfino_Pescara_1936",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Adriatico_%E2%80%93_Giovanni_Cornacchia",
+      "center": [
+        14.23,
+        42.455
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/06/Delfino_Pescara_logo.svg/250px-Delfino_Pescara_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Delfino Pescara 1936 S.p.A."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Adriatico_%E2%80%93_Giovanni_Cornacchia",
+      "crest": "it-pescara.png"
+    },
+    {
+      "id": "it-perugia",
+      "tier": 3,
+      "group": "B",
+      "en": "Perugia",
+      "city": "Perugia",
+      "stadium": "Renato Curi",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Perugia_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Renato_Curi",
+      "center": [
+        12.35722,
+        43.10611
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/08/Ac_Perugia_logo.svg/250px-Ac_Perugia_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcistica Perugia Calcio S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Renato_Curi",
+      "crest": "it-perugia.png"
+    },
+    {
+      "id": "it-pianese",
+      "tier": 3,
+      "group": "B",
+      "en": "Pianese",
+      "city": "Piancastagnaio",
+      "stadium": "Comunale di Piancastagnaio",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Pianese",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ef/US_Pianese_crest.svg/250px-US_Pianese_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Pianese srl"
+      ],
+      "crest": "it-pianese.png",
+      "center": [
+        11.68882355,
+        42.85004322
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-di-piancastagnaio/stadion-82501.html"
+    },
+    {
+      "id": "it-pineto",
+      "tier": 3,
+      "group": "B",
+      "en": "Pineto",
+      "city": "Pineto",
+      "stadium": "Pavone-Mariani",
+      "clubUrl": "https://en.wikipedia.org/wiki/AS_Pineto_Calcio",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/AS_Pineto_Calcio_crest.svg/250px-AS_Pineto_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Sportiva DilettantisticaPineto Calcio"
+      ],
+      "crest": "it-pineto.png",
+      "center": [
+        14.05337247,
+        42.61016793
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-%2593mimmo-pavone-e-alessandro-mariani%2594/stadion-36319.html"
+    },
+    {
+      "id": "it-ravenna",
+      "tier": 3,
+      "group": "B",
+      "en": "Ravenna",
+      "city": "Ravenna",
+      "stadium": "Bruno Benelli",
+      "clubUrl": "https://en.wikipedia.org/wiki/Ravenna_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Bruno_Benelli",
+      "center": [
+        12.19472,
+        44.40639
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0f/Ravenna_FC_logo.svg/250px-Ravenna_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Ravenna Football Club 1913"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Bruno_Benelli",
+      "crest": "it-ravenna.png"
+    },
+    {
+      "id": "it-reggiana",
+      "tier": 3,
+      "group": "B",
+      "en": "Reggiana",
+      "city": "Reggio Emilia",
+      "stadium": "MAPEI Stadium - Città del Tricolore",
+      "clubUrl": "https://en.wikipedia.org/wiki/AC_Reggiana_1919",
+      "venueUrl": "https://en.wikipedia.org/wiki/Mapei_Stadium_%E2%80%93_Citt%C3%A0_del_Tricolore",
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/00/AC_Reggiana_1919_crest.svg/250px-AC_Reggiana_1919_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Associazione Calcio Reggiana 1919 S.r.l."
+      ],
+      "center": [
+        10.64972,
+        44.71472
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mapei_Stadium_%E2%80%93_Citt%C3%A0_del_Tricolore",
+      "crest": "it-reggiana.png",
+      "sharedGround": "it-mapei"
+    },
+    {
+      "id": "it-sambenedettese",
+      "tier": 3,
+      "group": "B",
+      "en": "Sambenedettese",
+      "city": "San Benedetto del Tronto",
+      "stadium": "Riviera delle Palme",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Sambenedettese",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Riviera_delle_Palme",
+      "center": [
+        13.890109,
+        42.930599
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/96/AS_Sambenedettese_logo.svg/250px-AS_Sambenedettese_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Sambenedettese S.r.l."
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-riviera-delle-palme/stadion-4160.html",
+      "crest": "it-sambenedettese.png",
+      "note": "Coarse article coordinate replaced with the center of the named Riviera delle Palme stadium."
+    },
+    {
+      "id": "it-spezia",
+      "tier": 3,
+      "group": "B",
+      "en": "Spezia",
+      "city": "La Spezia",
+      "stadium": "Stadio Alberto Picco",
+      "clubUrl": "https://en.wikipedia.org/wiki/Spezia_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Alberto_Picco",
+      "center": [
+        9.80861,
+        44.10222
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6f/Spezia_Calcio_crest.svg/250px-Spezia_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Spezia Calcio"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alberto_Picco",
+      "crest": "it-spezia.png"
+    },
+    {
+      "id": "it-torres",
+      "tier": 3,
+      "group": "B",
+      "en": "Torres",
+      "city": "Sassari",
+      "stadium": "Vanni Sanna",
+      "clubUrl": "https://en.wikipedia.org/wiki/SEF_Torres_1903",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Vanni_Sanna",
+      "center": [
+        8.57972,
+        40.71806
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/60/SEF_Torres_1903_crest.svg/250px-SEF_Torres_1903_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società per l'Educazione Fisica Torres"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Vanni_Sanna",
+      "crest": "it-torres.png"
+    },
+    {
+      "id": "it-vado",
+      "tier": 3,
+      "group": "B",
+      "en": "Vado",
+      "city": "Sestri Levante",
+      "stadium": "Giuseppe Sivori",
+      "clubUrl": "https://en.wikipedia.org/wiki/FC_Vado",
+      "venueUrl": "https://en.wikipedia.org/wiki/Sestri_Levante",
+      "center": [
+        9.41631232,
+        44.27301531
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0a/FC_Vado_logo.svg/250px-FC_Vado_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football Club Vado"
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-giuseppe-sivori/stadion-26258.html",
+      "crest": "it-vado.png",
+      "note": "2026–27 home matches at Giuseppe Sivori in Sestri Levante, while Ferruccio Chittolina is unavailable."
+    },
+    {
+      "id": "it-vis-pesaro",
+      "tier": 3,
+      "group": "B",
+      "en": "Vis Pesaro",
+      "city": "Pesaro",
+      "stadium": "Tonino Benelli",
+      "clubUrl": "https://en.wikipedia.org/wiki/Vis_Pesaro_dal_1898",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Tonino_Benelli",
+      "center": [
+        12.9055,
+        43.8996
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9d/Vis_Pesaro_dal_1898_crest.svg/250px-Vis_Pesaro_dal_1898_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Vis Pesaro dal 1898 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Tonino_Benelli",
+      "crest": "it-vis-pesaro.png"
+    },
+    {
+      "id": "it-altamura",
+      "tier": 3,
+      "group": "C",
+      "en": "Altamura",
+      "city": "Altamura",
+      "stadium": "Antonio D'Angelo",
+      "clubUrl": "https://en.wikipedia.org/wiki/ASD_Team_Altamura",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/14/Team_Altamura_logo.svg/250px-Team_Altamura_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Team Altamura srl"
+      ],
+      "crest": "it-altamura.png",
+      "center": [
+        16.55772266,
+        40.83666813
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-tonino-d%2527angelo/stadion-26668.html"
+    },
+    {
+      "id": "it-audace-cerignola",
+      "tier": 3,
+      "group": "C",
+      "en": "Audace Cerignola",
+      "city": "Cerignola",
+      "stadium": "Domenico Monterisi",
+      "clubUrl": "https://en.wikipedia.org/wiki/SS_Audace_Cerignola",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/41/SS_Audace_Cerignola_crest.svg/250px-SS_Audace_Cerignola_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società SportivaAudace Cerignola srl"
+      ],
+      "crest": "it-audace-cerignola.png",
+      "center": [
+        15.88891832,
+        41.26642251
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-domenico-monterisi/stadion-26327.html"
+    },
+    {
+      "id": "it-bari",
+      "tier": 3,
+      "group": "C",
+      "en": "Bari",
+      "city": "Bari",
+      "stadium": "San Nicola",
+      "clubUrl": "https://en.wikipedia.org/wiki/SSC_Bari",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_San_Nicola",
+      "center": [
+        16.8400722,
+        41.0847361
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/SSC_Bari_crest.svg/250px-SSC_Bari_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Calcio Bari SpA"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_San_Nicola",
+      "crest": "it-bari.png"
+    },
+    {
+      "id": "it-barletta",
+      "tier": 3,
+      "group": "C",
+      "en": "Barletta",
+      "city": "Barletta",
+      "stadium": "Cosimo Puttilli",
+      "clubUrl": "https://en.wikipedia.org/wiki/SSD_Barletta_1922",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/SS_Barletta_1922_logo.svg/250px-SS_Barletta_1922_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Barletta 1922"
+      ],
+      "crest": "it-barletta.png",
+      "center": [
+        16.28377676,
+        41.31262904
+      ],
+      "coordinateSource": "https://www.europlan-online.de/ita-barletta-ss-barletta-caldio-stadio-cosimo-puttilli/stadion-4252.html"
+    },
+    {
+      "id": "it-casarano",
+      "tier": 3,
+      "group": "C",
+      "en": "Casarano",
+      "city": "Casarano",
+      "stadium": "Giuseppe Capozza",
+      "clubUrl": "https://en.wikipedia.org/wiki/Casarano_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Capozza",
+      "center": [
+        18.1555,
+        40.0146
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cd/Casarano_Calcio_logo.svg/250px-Casarano_Calcio_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Casarano Calcio srl"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Giuseppe_Capozza",
+      "crest": "it-casarano.png"
+    },
+    {
+      "id": "it-casertana",
+      "tier": 3,
+      "group": "C",
+      "en": "Casertana",
+      "city": "Caserta",
+      "stadium": "Alberto Pinto",
+      "clubUrl": "https://en.wikipedia.org/wiki/Casertana_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Alberto_Pinto",
+      "center": [
+        14.3465,
+        41.074517
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e5/Casertana_FC_logo.svg/250px-Casertana_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Casertana Football Club S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alberto_Pinto",
+      "crest": "it-casertana.png"
+    },
+    {
+      "id": "it-catania",
+      "tier": 3,
+      "group": "C",
+      "en": "Catania",
+      "city": "Catania",
+      "stadium": "Angelo Massimino",
+      "clubUrl": "https://en.wikipedia.org/wiki/Catania_FC",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Angelo_Massimino",
+      "center": [
+        15.07139,
+        37.51583
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Logo_CATANIA_FC.svg/250px-Logo_CATANIA_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Catania Football Club S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Angelo_Massimino",
+      "crest": "it-catania.png"
+    },
+    {
+      "id": "it-cavese",
+      "tier": 3,
+      "group": "C",
+      "en": "Cavese",
+      "city": "Cava de' Tirreni",
+      "stadium": "Simonetta Lamberti",
+      "clubUrl": "https://en.wikipedia.org/wiki/Cavese_1919",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Simonetta_Lamberti",
+      "center": [
+        14.7025,
+        40.70972
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/26/Cavese_1919_crest.svg/250px-Cavese_1919_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Cavese 1919"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Simonetta_Lamberti",
+      "crest": "it-cavese.png"
+    },
+    {
+      "id": "it-cosenza",
+      "tier": 3,
+      "group": "C",
+      "en": "Cosenza",
+      "city": "Cosenza",
+      "stadium": "San Vito-Gigi Marulla",
+      "clubUrl": "https://en.wikipedia.org/wiki/Cosenza_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_San_Vito-Gigi_Marulla",
+      "center": [
+        16.23111,
+        39.31
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/6d/Cosenza_Calcio_crest.svg/250px-Cosenza_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Cosenza Calcio"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_San_Vito-Gigi_Marulla",
+      "crest": "it-cosenza.png"
+    },
+    {
+      "id": "it-crotone",
+      "tier": 3,
+      "group": "C",
+      "en": "Crotone",
+      "city": "Crotone",
+      "stadium": "Ezio Scida",
+      "clubUrl": "https://en.wikipedia.org/wiki/FC_Crotone",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Ezio_Scida",
+      "center": [
+        17.11667,
+        39.07917
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/db/FC_Crotone_logo.svg/250px-FC_Crotone_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football Club Crotone S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ezio_Scida",
+      "crest": "it-crotone.png"
+    },
+    {
+      "id": "it-foggia",
+      "tier": 3,
+      "group": "C",
+      "en": "Foggia",
+      "city": "Foggia",
+      "stadium": "Pino Zaccheria",
+      "clubUrl": "https://en.wikipedia.org/wiki/Calcio_Foggia_1920",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Pino_Zaccheria",
+      "center": [
+        15.5425,
+        41.45444
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/21/Calcio_Foggia_1920_crest.svg/250px-Calcio_Foggia_1920_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Calcio Foggia 1920S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Pino_Zaccheria",
+      "crest": "it-foggia.png"
+    },
+    {
+      "id": "it-giugliano",
+      "tier": 3,
+      "group": "C",
+      "en": "Giugliano",
+      "city": "Giugliano in Campania",
+      "stadium": "Alberto De Cristofaro",
+      "clubUrl": "https://en.wikipedia.org/wiki/Giugliano_Calcio_1928",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/64/Giugliano_Calcio_1928_crest.svg/250px-Giugliano_Calcio_1928_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Giugliano Calcio 1928 s.r.l."
+      ],
+      "crest": "it-giugliano.png",
+      "center": [
+        14.17212566,
+        40.92755294
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-alberto-de-cristofaro/stadion-31156.html"
+    },
+    {
+      "id": "it-inter-milan-u23",
+      "tier": 3,
+      "group": "C",
+      "en": "Inter Milan U23",
+      "city": "Sesto San Giovanni",
+      "stadium": "Ernesto Breda",
+      "clubUrl": "https://en.wikipedia.org/wiki/Inter_Milan_Under-23",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Ernesto_Breda",
+      "center": [
+        9.21972,
+        45.53389
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/FC_Internazionale_Milano_2021.svg/250px-FC_Internazionale_Milano_2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Football Club Internazionale Milano U23",
+        "Inter U23",
+        "Inter Under 23"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Ernesto_Breda",
+      "crest": "it-inter-milan-u23.png",
+      "sharedGround": "it-ernesto-breda"
+    },
+    {
+      "id": "it-monopoli",
+      "tier": 3,
+      "group": "C",
+      "en": "Monopoli",
+      "city": "Monopoli",
+      "stadium": "Vito Simone Veneziani",
+      "clubUrl": "https://en.wikipedia.org/wiki/SS_Monopoli_1966",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Vito_Simone_Veneziani",
+      "center": [
+        17.2937,
+        40.9571
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fc/SS_Monopoli_1966_crest.svg/250px-SS_Monopoli_1966_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Monopoli 1966"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Vito_Simone_Veneziani",
+      "crest": "it-monopoli.png"
+    },
+    {
+      "id": "it-picerno",
+      "tier": 3,
+      "group": "C",
+      "en": "Picerno",
+      "city": "Picerno",
+      "stadium": "Donato Curcio",
+      "clubUrl": "https://en.wikipedia.org/wiki/AZ_Picerno",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a4/AZ_Picerno_crest.svg/250px-AZ_Picerno_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Polisportiva AZ Picerno s.r.l."
+      ],
+      "crest": "it-picerno.png",
+      "center": [
+        15.6455728,
+        40.64129211
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-donato-curcio/stadion-26328.html"
+    },
+    {
+      "id": "it-potenza",
+      "tier": 3,
+      "group": "C",
+      "en": "Potenza",
+      "city": "Potenza",
+      "stadium": "Alfredo Viviani",
+      "clubUrl": "https://en.wikipedia.org/wiki/Potenza_Calcio",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Alfredo_Viviani",
+      "center": [
+        15.8043167,
+        40.6341333
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/da/Potenza_Calcio_crest.svg/250px-Potenza_Calcio_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Potenza Calcio S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Alfredo_Viviani",
+      "crest": "it-potenza.png"
+    },
+    {
+      "id": "it-salernitana",
+      "tier": 3,
+      "group": "C",
+      "en": "Salernitana",
+      "city": "Salerno",
+      "stadium": "Stadio Arechi",
+      "clubUrl": "https://en.wikipedia.org/wiki/US_Salernitana_1919",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Arechi",
+      "center": [
+        14.82389,
+        40.645
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/85/US_Salernitana_1919_logo.svg/250px-US_Salernitana_1919_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Unione Sportiva Salernitana 1919 S.r.l."
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Arechi",
+      "crest": "it-salernitana.png"
+    },
+    {
+      "id": "it-savoia",
+      "tier": 3,
+      "group": "C",
+      "en": "Savoia",
+      "city": "Torre Annunziata",
+      "stadium": "Alfredo Giraud",
+      "clubUrl": "https://en.wikipedia.org/wiki/SSD_Savoia_1908_FC",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Coat_of_arms_of_the_Duchy_of_Savoy_%28XV-XVI_century%29.svg/250px-Coat_of_arms_of_the_Duchy_of_Savoy_%28XV-XVI_century%29.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Savoia 1908"
+      ],
+      "crest": "it-savoia.png",
+      "center": [
+        14.43337088,
+        40.76251075
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-alfredo-giraud/stadion-4231.html"
+    },
+    {
+      "id": "it-scafatese",
+      "tier": 3,
+      "group": "C",
+      "en": "Scafatese",
+      "city": "Scafati",
+      "stadium": "Giovanni Vitiello",
+      "clubUrl": "https://en.wikipedia.org/wiki/Scafatese_Calcio_1922",
+      "venueUrl": null,
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/Scafatese_Calcio_1922_logo.svg/250px-Scafatese_Calcio_1922_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Società Sportiva Scafatese Calcio 1922"
+      ],
+      "crest": "it-scafatese.png",
+      "center": [
+        14.51767696,
+        40.75831393
+      ],
+      "coordinateSource": "https://www.europlan-online.de/stadio-comunale-28-settembre-1943-kr/stadion-39260.html"
+    },
+    {
+      "id": "it-sorrento",
+      "tier": 3,
+      "group": "C",
+      "en": "Sorrento",
+      "city": "Sorrento",
+      "stadium": "Italia",
+      "clubUrl": "https://en.wikipedia.org/wiki/Sorrento_Calcio_1945",
+      "venueUrl": "https://en.wikipedia.org/wiki/Stadio_Italia",
+      "center": [
+        14.38373194,
+        40.62979139
+      ],
+      "crestSource": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cd/Sorrento_Calcio_1945_crest.svg/250px-Sorrento_Calcio_1945_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "aliases": [
+        "Sorrento Calcio 1945"
+      ],
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadio_Italia",
+      "crest": "it-sorrento.png",
+      "note": "Current 2026–27 venue is Stadio Italia in Sorrento, replacing the previous temporary use of Potenza."
+    }
+  ]
+}

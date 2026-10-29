@@ -1,0 +1,932 @@
+[
+  {
+    "id": "pt-academico-de-viseu",
+    "tier": 1,
+    "en": "Académico de Viseu",
+    "city": "Viseu",
+    "stadium": "Estádio Municipal do Fontelo",
+    "clubUrl": "https://en.wikipedia.org/wiki/Acad%C3%A9mico_de_Viseu_F.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Fontelo",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/commons/9/9f/A.C._Viseu.svg",
+    "aliases": [
+      "Académico de Viseu F.C.",
+      "Académico de Viseu Futebol Clube"
+    ],
+    "clubQid": "Q2410944",
+    "center": [
+      -7.90083333,
+      40.65944444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Fontelo",
+    "venueQid": "Q1369675",
+    "crest": "pt-academico-de-viseu.png"
+  },
+  {
+    "id": "pt-alverca",
+    "tier": 1,
+    "en": "Alverca",
+    "city": "Alverca do Ribatejo",
+    "stadium": "Complexo Desportivo FC Alverca",
+    "clubUrl": "https://en.wikipedia.org/wiki/F.C._Alverca",
+    "venueUrl": null,
+    "clubQid": "Q1386850",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f5/F.C._Alverca_logo.svg",
+    "crest": "pt-alverca.png"
+  },
+  {
+    "id": "pt-arouca",
+    "tier": 1,
+    "en": "Arouca",
+    "city": "Arouca",
+    "stadium": "Estádio Municipal de Arouca",
+    "clubUrl": "https://en.wikipedia.org/wiki/F.C._Arouca",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Arouca",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9a/F.C._Arouca_logo.svg",
+    "aliases": [
+      "F.C. Arouca",
+      "Futebol Clube de Arouca"
+    ],
+    "clubQid": "Q1386869",
+    "center": [
+      -8.2503,
+      40.933
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Arouca",
+    "venueQid": "Q1370706",
+    "crest": "pt-arouca.png"
+  },
+  {
+    "id": "pt-benfica",
+    "tier": 1,
+    "en": "Benfica",
+    "city": "Lisbon",
+    "stadium": "Estádio da Luz",
+    "clubUrl": "https://en.wikipedia.org/wiki/S.L._Benfica",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Luz",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+    "aliases": [
+      "S.L. Benfica",
+      "Sport Lisboa e Benfica"
+    ],
+    "center": [
+      -9.1847,
+      38.7527
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Luz",
+    "crest": "pt-benfica.png",
+    "clubQid": "Q131499",
+    "venueQid": "Q7875112"
+  },
+  {
+    "id": "pt-braga",
+    "tier": 1,
+    "en": "Braga",
+    "city": "Braga",
+    "stadium": "Estádio Municipal de Braga",
+    "clubUrl": "https://en.wikipedia.org/wiki/S.C._Braga",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Braga",
+    "clubQid": "Q75684",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/79/S.C._Braga_logo.svg",
+    "crest": "pt-braga.png"
+  },
+  {
+    "id": "pt-casa-pia",
+    "tier": 1,
+    "en": "Casa Pia",
+    "city": "Lisbon",
+    "stadium": "Estádio Municipal de Rio Maior, at Rio Maior",
+    "clubUrl": "https://en.wikipedia.org/wiki/Casa_Pia_A.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Rio_Maior",
+    "clubQid": "Q1046440",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/68/Casa_Pia_A.C._logo.svg",
+    "center": [
+      -8.93527778,
+      39.34444444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Rio_Maior",
+    "venueQid": "Q2990539",
+    "crest": "pt-casa-pia.png"
+  },
+  {
+    "id": "pt-estoril-praia",
+    "tier": 1,
+    "en": "Estoril Praia",
+    "city": "Estoril",
+    "stadium": "Estádio António Coimbra da Mota",
+    "clubUrl": "https://en.wikipedia.org/wiki/G.D._Estoril_Praia",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Ant%C3%B3nio_Coimbra_da_Mota",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/94/GD_Estoril_Praia_logo.svg",
+    "aliases": [
+      "G.D. Estoril Praia",
+      "Grupo Desportivo Estoril Praia"
+    ],
+    "clubQid": "Q634829",
+    "center": [
+      -9.40638889,
+      38.71583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Ant%C3%B3nio_Coimbra_da_Mota",
+    "venueQid": "Q1370647",
+    "crest": "pt-estoril-praia.png"
+  },
+  {
+    "id": "pt-estrela-da-amadora",
+    "tier": 1,
+    "en": "Estrela da Amadora",
+    "city": "Amadora",
+    "stadium": "Estádio José Gomes",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.F._Estrela_da_Amadora",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Jos%C3%A9_Gomes",
+    "clubQid": "Q838134",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/commons/0/08/S%C3%ADmbolo_Estrela_da_Amadora.svg",
+    "center": [
+      -9.22805556,
+      38.75194444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Jos%C3%A9_Gomes",
+    "venueQid": "Q3059095",
+    "crest": "pt-estrela-da-amadora.png"
+  },
+  {
+    "id": "pt-famalicao",
+    "tier": 1,
+    "en": "Famalicão",
+    "city": "Vila Nova de Famalicão",
+    "stadium": "Estádio Municipal de Famalicão",
+    "clubUrl": "https://en.wikipedia.org/wiki/F.C._Famalic%C3%A3o",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_22_de_Junho",
+    "clubQid": "Q1387105",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0e/F.C._Famalic%C3%A3o_logo.svg",
+    "center": [
+      -8.5225,
+      41.40138889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_22_de_Junho",
+    "venueQid": "Q1293399",
+    "crest": "pt-famalicao.png"
+  },
+  {
+    "id": "pt-gil-vicente",
+    "tier": 1,
+    "en": "Gil Vicente",
+    "city": "Barcelos",
+    "stadium": "Estádio Cidade de Barcelos",
+    "clubUrl": "https://en.wikipedia.org/wiki/Gil_Vicente_F.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Cidade_de_Barcelos",
+    "clubQid": "Q926438",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/60/Gil_Vicente_F.C._logo.svg",
+    "center": [
+      -8.623,
+      41.551
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Cidade_de_Barcelos",
+    "venueQid": "Q1167583",
+    "crest": "pt-gil-vicente.png"
+  },
+  {
+    "id": "pt-maritimo",
+    "tier": 1,
+    "en": "Marítimo",
+    "city": "Funchal",
+    "stadium": "Estádio do Marítimo",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.S._Mar%C3%ADtimo",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Mar%C3%ADtimo",
+    "clubQid": "Q216503",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/30/C.S._Mar%C3%ADtimo_logo.svg",
+    "center": [
+      -16.92833056,
+      32.64556111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Mar%C3%ADtimo",
+    "venueQid": "Q1272724",
+    "crest": "pt-maritimo.png"
+  },
+  {
+    "id": "pt-moreirense",
+    "tier": 1,
+    "en": "Moreirense",
+    "city": "Guimarães",
+    "stadium": "Estádio Comendador Joaquim de Almeida Freitas",
+    "clubUrl": "https://en.wikipedia.org/wiki/Moreirense_F.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Parque_de_Jogos_Comendador_Joaquim_de_Almeida_Freitas",
+    "clubQid": "Q1346314",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/1b/Moreirense_Futebol_Clube_logo.svg",
+    "center": [
+      -8.35472222,
+      41.37805556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Parque_de_Jogos_Comendador_Joaquim_de_Almeida_Freitas",
+    "venueQid": "Q256588",
+    "crest": "pt-moreirense.png"
+  },
+  {
+    "id": "pt-nacional",
+    "tier": 1,
+    "en": "Nacional",
+    "city": "Funchal",
+    "stadium": "Estádio da Madeira",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.D._Nacional",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Madeira",
+    "clubQid": "Q216459",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Nacional_logo.svg",
+    "center": [
+      -16.883525,
+      32.670625
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Madeira",
+    "venueQid": "Q1370765",
+    "crest": "pt-nacional.png"
+  },
+  {
+    "id": "pt-porto",
+    "tier": 1,
+    "en": "Porto",
+    "city": "Porto",
+    "stadium": "Estádio do Dragão",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Porto",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Drag%C3%A3o",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+    "aliases": [
+      "FC Porto",
+      "Futebol Clube do Porto"
+    ],
+    "clubQid": "Q128446",
+    "center": [
+      -8.5839,
+      41.1618
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Drag%C3%A3o",
+    "venueQid": "Q271454",
+    "crest": "pt-porto.png"
+  },
+  {
+    "id": "pt-rio-ave",
+    "tier": 1,
+    "en": "Rio Ave",
+    "city": "Vila do Conde",
+    "stadium": "Estadio dos Arcos",
+    "clubUrl": "https://en.wikipedia.org/wiki/Rio_Ave_F.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Rio_Ave_FC",
+    "clubQid": "Q622432",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0c/Rio_Ave_FC_logo.svg",
+    "center": [
+      -8.74027778,
+      41.36277778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Rio_Ave_FC",
+    "venueQid": "Q550041",
+    "crest": "pt-rio-ave.png"
+  },
+  {
+    "id": "pt-santa-clara",
+    "tier": 1,
+    "en": "Santa Clara",
+    "city": "Ponta Delgada",
+    "stadium": "Estádio de São Miguel",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.D._Santa_Clara",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_de_S%C3%A3o_Miguel_(Ponta_Delgada)",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/37/C.D._Santa_Clara_logo.svg",
+    "aliases": [
+      "C.D. Santa Clara",
+      "Clube Desportivo Santa Clara"
+    ],
+    "clubQid": "Q740637",
+    "center": [
+      -25.6225,
+      37.76361111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_de_S%C3%A3o_Miguel_(Ponta_Delgada)",
+    "venueQid": "Q3514858",
+    "crest": "pt-santa-clara.png"
+  },
+  {
+    "id": "pt-sporting-cp",
+    "tier": 1,
+    "en": "Sporting CP",
+    "city": "Lisbon",
+    "stadium": "Estádio José Alvalade",
+    "clubUrl": "https://en.wikipedia.org/wiki/Sporting_CP",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Jos%C3%A9_Alvalade",
+    "clubQid": "Q75729",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+    "crest": "pt-sporting-cp.png"
+  },
+  {
+    "id": "pt-vitoria-de-guimaraes",
+    "tier": 1,
+    "en": "Vitória de Guimarães",
+    "city": "Guimarães",
+    "stadium": "Estádio D. Afonso Henriques",
+    "clubUrl": "https://en.wikipedia.org/wiki/Vit%C3%B3ria_S.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_D._Afonso_Henriques",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+    "aliases": [
+      "Vitória S.C.",
+      "Vitória Sport Clube"
+    ],
+    "clubQid": "Q223450",
+    "center": [
+      -8.30111111,
+      41.44583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_D._Afonso_Henriques",
+    "venueQid": "Q1057274",
+    "crest": "pt-vitoria-de-guimaraes.png"
+  },
+  {
+    "id": "pt-academica",
+    "tier": 2,
+    "en": "Académica",
+    "city": "Coimbra",
+    "stadium": "Estádio Cidade de Coimbra",
+    "clubUrl": "https://en.wikipedia.org/wiki/Acad%C3%A9mica_de_Coimbra_(football)",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Cidade_de_Coimbra",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f8/Acad%C3%A9mica_de_Coimbra_%28football%29_logo.svg",
+    "aliases": [
+      "Académica de Coimbra (football)",
+      "Associação Académica de Coimbra – Organismo Autónomo de Futebol"
+    ],
+    "clubQid": "Q243235",
+    "center": [
+      -8.40777778,
+      40.20333333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Cidade_de_Coimbra",
+    "venueQid": "Q1067308",
+    "crest": "pt-academica.png"
+  },
+  {
+    "id": "pt-afs",
+    "tier": 2,
+    "en": "AFS",
+    "city": "Vila das Aves",
+    "stadium": "Estádio do Clube Desportivo das Aves",
+    "clubUrl": "https://en.wikipedia.org/wiki/AVS_Futebol_SAD",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_CD_Aves",
+    "clubQid": "Q120775987",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/3/34/AVS_Futebol_SAD_logo.svg",
+    "center": [
+      -8.411789,
+      41.366932
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_CD_Aves",
+    "venueQid": "Q968244",
+    "crest": "pt-afs.png"
+  },
+  {
+    "id": "pt-amarante",
+    "tier": 2,
+    "en": "Amarante",
+    "city": "Amarante",
+    "stadium": "Estádio Municipal de Amarante",
+    "clubUrl": "https://en.wikipedia.org/wiki/Amarante_F.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Amarante",
+    "clubQid": "Q2841205",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/1a/Amarante_F.C._logo.svg",
+    "center": [
+      -8.07583333,
+      41.28222222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Amarante",
+    "venueQid": "Q25419598",
+    "crest": "pt-amarante.png"
+  },
+  {
+    "id": "pt-benfica-b",
+    "tier": 2,
+    "en": "Benfica B",
+    "city": "Seixal",
+    "stadium": "Benfica Campus - Campo n.° 1",
+    "clubUrl": "https://en.wikipedia.org/wiki/S.L._Benfica_B",
+    "venueUrl": "https://en.wikipedia.org/wiki/Benfica_Campus",
+    "clubQid": "Q7387221",
+    "center": [
+      -9.09194444,
+      38.64055556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Benfica_Campus",
+    "venueQid": "Q5510501",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a2/SL_Benfica_logo.svg",
+    "crest": "pt-benfica-b.png"
+  },
+  {
+    "id": "pt-chaves",
+    "tier": 2,
+    "en": "Chaves",
+    "city": "Chaves",
+    "stadium": "Estádio Municipal Eng.° Manuel Branco Teixeira",
+    "clubUrl": "https://en.wikipedia.org/wiki/G.D._Chaves",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Eng._Manuel_Branco_Teixeira",
+    "clubQid": "Q543467",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/18/G.D._Chaves_logo.svg",
+    "center": [
+      -7.46499,
+      41.7506
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Eng._Manuel_Branco_Teixeira",
+    "venueQid": "Q5402128",
+    "crest": "pt-chaves.png"
+  },
+  {
+    "id": "pt-farense",
+    "tier": 2,
+    "en": "Farense",
+    "city": "Faro",
+    "stadium": "Estádio de São Luís",
+    "clubUrl": "https://en.wikipedia.org/wiki/S.C._Farense",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_de_S%C3%A3o_Lu%C3%ADs",
+    "clubQid": "Q744353",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/be/S.C._Farense_logo.svg",
+    "center": [
+      -7.92844444,
+      37.02286111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_de_S%C3%A3o_Lu%C3%ADs",
+    "venueQid": "Q2586520",
+    "crest": "pt-farense.png"
+  },
+  {
+    "id": "pt-feirense",
+    "tier": 2,
+    "en": "Feirense",
+    "city": "Santa Maria da Feira",
+    "stadium": "Estádio Marcolino Castro",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.D._Feirense",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Marcolino_de_Castro",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/2d/C.D._Feirense_logo.svg",
+    "aliases": [
+      "C.D. Feirense",
+      "Clube Desportivo Feirense"
+    ],
+    "clubQid": "Q671042",
+    "center": [
+      -8.54581389,
+      40.92668889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Marcolino_de_Castro",
+    "venueQid": "Q1370693",
+    "crest": "pt-feirense.png"
+  },
+  {
+    "id": "pt-felgueiras",
+    "tier": 2,
+    "en": "Felgueiras",
+    "city": "Felgueiras",
+    "stadium": "Estádio Dr. Machado de Matos",
+    "clubUrl": "https://en.wikipedia.org/wiki/F.C._Felgueiras_(2006)",
+    "venueUrl": null,
+    "clubQid": "Q17505449",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f2/F.C._Felgueiras_%282006%29_logo.svg",
+    "crest": "pt-felgueiras.png"
+  },
+  {
+    "id": "pt-leixoes",
+    "tier": 2,
+    "en": "Leixões",
+    "city": "Matosinhos",
+    "stadium": "Estádio do Mar",
+    "clubUrl": "https://en.wikipedia.org/wiki/Leix%C3%B5es_S.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Mar",
+    "clubQid": "Q623730",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9d/Leix%C3%B5es_S.C._logo.svg",
+    "center": [
+      -8.66691944,
+      41.18396944
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Mar",
+    "venueQid": "Q1370792",
+    "crest": "pt-leixoes.png"
+  },
+  {
+    "id": "pt-lusitania-lourosa",
+    "tier": 2,
+    "en": "Lusitânia Lourosa",
+    "city": "Lourosa",
+    "stadium": "Estádio do Lusitânia de Lourosa FC",
+    "clubUrl": "https://en.wikipedia.org/wiki/Lusit%C3%A2nia_F.C.",
+    "venueUrl": null,
+    "clubQid": "Q6705180",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/45/Lusit%C3%A2nia_F.C._logo.svg",
+    "crest": "pt-lusitania-lourosa.png"
+  },
+  {
+    "id": "pt-penafiel",
+    "tier": 2,
+    "en": "Penafiel",
+    "city": "Penafiel",
+    "stadium": "Estádio Municipal 25 de Abril",
+    "clubUrl": "https://en.wikipedia.org/wiki/F.C._Penafiel",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_25_de_Abril",
+    "clubQid": "Q1387471",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/ff/F.C._Penafiel_logo.svg",
+    "center": [
+      -8.27791944,
+      41.2117
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_25_de_Abril",
+    "venueQid": "Q3514967",
+    "crest": "pt-penafiel.png"
+  },
+  {
+    "id": "pt-portimonense",
+    "tier": 2,
+    "en": "Portimonense",
+    "city": "Portimão",
+    "stadium": "Estádio Municipal de Portimão",
+    "clubUrl": "https://en.wikipedia.org/wiki/Portimonense_S.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Portim%C3%A3o",
+    "clubQid": "Q621120",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c0/Portimonense_Sporting_Clube_logo.svg",
+    "center": [
+      -8.53972222,
+      37.13583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Portim%C3%A3o",
+    "venueQid": "Q1308776",
+    "crest": "pt-portimonense.png"
+  },
+  {
+    "id": "pt-porto-b",
+    "tier": 2,
+    "en": "Porto B",
+    "city": "Vila Nova de Gaia",
+    "stadium": "Estádio Luís Filipe Menezes",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Porto_B",
+    "venueUrl": null,
+    "clubQid": "Q5423714",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f1/FC_Porto.svg",
+    "crest": "pt-porto-b.png"
+  },
+  {
+    "id": "pt-sporting-cp-b",
+    "tier": 2,
+    "en": "Sporting CP B",
+    "city": "Alcochete",
+    "stadium": "Estádio Aurélio Pereira",
+    "clubUrl": "https://en.wikipedia.org/wiki/Sporting_CP_B",
+    "venueUrl": null,
+    "clubQid": "Q3494112",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/97/Sporting_Clube_de_Portugal_logo_%282026%29.svg",
+    "crest": "pt-sporting-cp-b.png"
+  },
+  {
+    "id": "pt-tondela",
+    "tier": 2,
+    "en": "Tondela",
+    "city": "Tondela",
+    "stadium": "Estádio João Cardoso",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.D._Tondela",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Jo%C3%A3o_Cardoso",
+    "clubQid": "Q1023227",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/90/C.D._Tondela_logo.svg",
+    "center": [
+      -8.082825,
+      40.51204111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Jo%C3%A3o_Cardoso",
+    "venueQid": "Q16632396",
+    "crest": "pt-tondela.png"
+  },
+  {
+    "id": "pt-torreense",
+    "tier": 2,
+    "en": "Torreense",
+    "city": "Torres Vedras",
+    "stadium": "Estádio Manuel Marques",
+    "clubUrl": "https://en.wikipedia.org/wiki/S.C.U._Torreense",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Manuel_Marques",
+    "clubQid": "Q1853273",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dc/S.C.U._Torreense_logo.svg",
+    "crest": "pt-torreense.png"
+  },
+  {
+    "id": "pt-uniao-de-leiria",
+    "tier": 2,
+    "en": "União de Leiria",
+    "city": "Leiria",
+    "stadium": "Estádio Dr. Magalhães Pessoa",
+    "clubUrl": "https://en.wikipedia.org/wiki/U.D._Leiria",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Dr._Magalh%C3%A3es_Pessoa",
+    "clubQid": "Q211401",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e5/U.D._Leiria_logo.svg",
+    "center": [
+      -8.81305556,
+      39.74861111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Dr._Magalh%C3%A3es_Pessoa",
+    "venueQid": "Q1056864",
+    "crest": "pt-uniao-de-leiria.png"
+  },
+  {
+    "id": "pt-vizela",
+    "tier": 2,
+    "en": "Vizela",
+    "city": "Vizela",
+    "stadium": "Estádio do Futebol Clube de Vizela",
+    "clubUrl": "https://en.wikipedia.org/wiki/F.C._Vizela",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Futebol_Clube_de_Vizela",
+    "clubQid": "Q1387855",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a2/F.C._Vizela_logo.svg",
+    "crest": "pt-vizela.png"
+  },
+  {
+    "id": "pt-fafe",
+    "tier": 3,
+    "en": "Fafe",
+    "city": "Fafe",
+    "stadium": "Estádio Municipal de Fafe",
+    "clubUrl": "https://en.wikipedia.org/wiki/AD_Fafe",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Fafe",
+    "clubQid": "Q290860",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9b/AD_Fafe_logo.svg",
+    "center": [
+      -8.16819722,
+      41.44716111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_de_Fafe",
+    "venueQid": "Q7139650",
+    "crest": "pt-fafe.png"
+  },
+  {
+    "id": "pt-leca",
+    "tier": 3,
+    "en": "Leça",
+    "city": "Leça da Palmeira",
+    "stadium": "Estádio do Leça FC",
+    "clubUrl": "https://en.wikipedia.org/wiki/Le%C3%A7a_Futebol_Clube",
+    "venueUrl": null,
+    "crestSource": "https://upload.wikimedia.org/wikipedia/pt/d/de/Leca_FC.png",
+    "clubQid": "Q1822470",
+    "crest": "pt-leca.png"
+  },
+  {
+    "id": "pt-marco-09",
+    "tier": 3,
+    "en": "Marco 09",
+    "city": "Marco de Canaveses",
+    "stadium": "Estádio Municipal do Marco de Canaveses",
+    "clubUrl": "https://en.wikipedia.org/wiki/A.D._Marco_09",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_do_Marco_de_Canaveses",
+    "clubQid": "Q25419602",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/01/A.D._Marco_09_logo.svg",
+    "center": [
+      -8.146,
+      41.193
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_do_Marco_de_Canaveses",
+    "venueQid": "Q5401963",
+    "crest": "pt-marco-09.png"
+  },
+  {
+    "id": "pt-pacos-de-ferreira",
+    "tier": 3,
+    "en": "Paços de Ferreira",
+    "city": "Paços de Ferreira",
+    "stadium": "Estádio Capital do Móvel",
+    "clubUrl": "https://en.wikipedia.org/wiki/F.C._Pa%C3%A7os_de_Ferreira",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Capital_do_M%C3%B3vel",
+    "clubQid": "Q371136",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/73/F.C._Pa%C3%A7os_de_Ferreira.svg",
+    "center": [
+      -8.38527778,
+      41.27138889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Capital_do_M%C3%B3vel",
+    "venueQid": "Q1370763",
+    "crest": "pt-pacos-de-ferreira.png"
+  },
+  {
+    "id": "pt-paredes",
+    "tier": 3,
+    "en": "Paredes",
+    "city": "Paredes",
+    "stadium": "Estádio Municipal das Laranjeiras",
+    "clubUrl": "https://en.wikipedia.org/wiki/U.S.C._Paredes",
+    "venueUrl": null,
+    "clubQid": "Q3551889",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a0/U.S.C._Paredes_logo.svg",
+    "crest": "pt-paredes.png"
+  },
+  {
+    "id": "pt-sao-joao-de-ver",
+    "tier": 3,
+    "en": "São João de Ver",
+    "city": "Santa Maria da Feira",
+    "stadium": "Estádio Sporting Clube São João de Ver",
+    "clubUrl": "https://en.wikipedia.org/wiki/SC_S%C3%A3o_Jo%C3%A3o_de_Ver",
+    "venueUrl": null,
+    "clubQid": "Q10373917",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/08/SC_S%C3%A3o_Jo%C3%A3o_de_Ver_logo.svg",
+    "crest": "pt-sao-joao-de-ver.png"
+  },
+  {
+    "id": "pt-trofense",
+    "tier": 3,
+    "en": "Trofense",
+    "city": "Trofa",
+    "stadium": "Estádio do Clube Desportivo Trofense",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.D._Trofense",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_CD_Trofense",
+    "clubQid": "Q1023233",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/41/C.D._Trofense_logo.svg",
+    "center": [
+      -8.56436667,
+      41.33283333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_CD_Trofense",
+    "venueQid": "Q3446875",
+    "crest": "pt-trofense.png"
+  },
+  {
+    "id": "pt-varzim",
+    "tier": 3,
+    "en": "Varzim",
+    "city": "Póvoa de Varzim",
+    "stadium": "Estádio do Varzim Sport Club",
+    "clubUrl": "https://en.wikipedia.org/wiki/Varzim_S.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Varzim_Sport_Club",
+    "clubQid": "Q1429473",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/43/Varzim_S.C._logo.svg",
+    "center": [
+      -8.772575,
+      41.38783611
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Varzim_Sport_Club",
+    "venueQid": "Q5402247",
+    "crest": "pt-varzim.png"
+  },
+  {
+    "id": "pt-vianense",
+    "tier": 3,
+    "en": "Vianense",
+    "city": "Viana do Castelo",
+    "stadium": "Estádio Dr. José de Matos",
+    "clubUrl": "https://en.wikipedia.org/wiki/SC_Vianense",
+    "venueUrl": null,
+    "clubQid": "Q3030038",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/06/SC_Vianense_logo.svg",
+    "crest": "pt-vianense.png"
+  },
+  {
+    "id": "pt-vitoria-sc-b",
+    "tier": 3,
+    "en": "Vitória SC B",
+    "city": "Guimarães",
+    "stadium": "Academia Vitória Sport Clube",
+    "clubUrl": "https://en.wikipedia.org/wiki/Vit%C3%B3ria_S.C._B",
+    "venueUrl": null,
+    "clubQid": "Q17518847",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d5/Vit%C3%B3ria_Guimar%C3%A3es.svg",
+    "crest": "pt-vitoria-sc-b.png"
+  },
+  {
+    "id": "pt-atletico-cp",
+    "tier": 3,
+    "en": "Atlético CP",
+    "city": "Lisbon",
+    "stadium": "Estádio da Tapadinha",
+    "clubUrl": "https://en.wikipedia.org/wiki/Atl%C3%A9tico_Clube_de_Portugal",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Tapadinha",
+    "clubQid": "Q757422",
+    "center": [
+      -9.1809,
+      38.7097
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_da_Tapadinha",
+    "venueQid": "Q1370770",
+    "crestSource": "https://static.wixstatic.com/media/d7ecec_5b3f5170f4144822be14e2313005b592~mv2.png",
+    "crest": "pt-atletico-cp.png"
+  },
+  {
+    "id": "pt-belenenses",
+    "tier": 3,
+    "en": "Belenenses",
+    "city": "Lisbon",
+    "stadium": "Estádio do Restelo",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.F._Os_Belenenses",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Restelo",
+    "clubQid": "Q216510",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/08/C.F._Os_Belenenses_logo.svg",
+    "center": [
+      -9.20777778,
+      38.70277778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_do_Restelo",
+    "venueQid": "Q1370811",
+    "crest": "pt-belenenses.png"
+  },
+  {
+    "id": "pt-caldas",
+    "tier": 3,
+    "en": "Caldas",
+    "city": "Caldas da Rainha",
+    "stadium": "Campo da Mata",
+    "clubUrl": "https://en.wikipedia.org/wiki/Caldas_S.C.",
+    "venueUrl": "https://en.wikipedia.org/wiki/Campo_da_Mata?action=edit&amp;redlink=1",
+    "clubQid": "Q2933726",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/fd/Caldas_S.C._logo.svg",
+    "crest": "pt-caldas.png"
+  },
+  {
+    "id": "pt-louletano",
+    "tier": 3,
+    "en": "Louletano",
+    "city": "Loulé",
+    "stadium": "Estádio Algarve",
+    "clubUrl": "https://en.wikipedia.org/wiki/Louletano_Desportos_Clube",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Algarve",
+    "center": [
+      -7.97472222,
+      37.08833333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Algarve",
+    "venueQid": "Q646151",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/pt/3/33/Louletano_DC.png",
+    "clubQid": "Q618128",
+    "crest": "pt-louletano.png"
+  },
+  {
+    "id": "pt-lusitano-evora",
+    "tier": 3,
+    "en": "Lusitano Évora",
+    "city": "Évora",
+    "stadium": "Campo Estrela",
+    "clubUrl": "https://en.wikipedia.org/wiki/Lusitano_G.C.",
+    "venueUrl": null,
+    "clubQid": "Q3267802",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/commons/6/69/Lusitano_%C3%89vora.png",
+    "crest": "pt-lusitano-evora.png"
+  },
+  {
+    "id": "pt-mafra",
+    "tier": 3,
+    "en": "Mafra",
+    "city": "Mafra",
+    "stadium": "Estádio Municipal de Mafra",
+    "clubUrl": "https://en.wikipedia.org/wiki/C.D._Mafra",
+    "venueUrl": null,
+    "clubQid": "Q618990",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/18/C.D._Mafra_logo.svg",
+    "crest": "pt-mafra.png"
+  },
+  {
+    "id": "pt-oliveirense",
+    "tier": 3,
+    "en": "Oliveirense",
+    "city": "Oliveira de Azeméis",
+    "stadium": "Estádio Carlos Osório",
+    "clubUrl": "https://en.wikipedia.org/wiki/U.D._Oliveirense",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Carlos_Os%C3%B3rio",
+    "clubQid": "Q2061414",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/dd/U.D._Oliveirense_logo.svg",
+    "center": [
+      -8.4703,
+      40.8419
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Carlos_Os%C3%B3rio",
+    "venueQid": "Q5401985",
+    "crest": "pt-oliveirense.png"
+  },
+  {
+    "id": "pt-sp-covilha",
+    "tier": 3,
+    "en": "Sp. Covilhã",
+    "city": "Covilhã",
+    "stadium": "Estádio MunicipalJosé dos Santos Pinto",
+    "clubUrl": "https://en.wikipedia.org/wiki/S.C._Covilh%C3%A3",
+    "venueUrl": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Jos%C3%A9_dos_Santos_Pinto",
+    "clubQid": "Q1891367",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/22/S.C._Covilh%C3%A3_logo.svg",
+    "center": [
+      -7.511542,
+      40.283023
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Est%C3%A1dio_Municipal_Jos%C3%A9_dos_Santos_Pinto",
+    "venueQid": "Q25419597",
+    "crest": "pt-sp-covilha.png"
+  },
+  {
+    "id": "pt-uniao-de-santarem",
+    "tier": 3,
+    "en": "União de Santarém",
+    "city": "Santarém",
+    "stadium": "Campo Chã das Padeiras",
+    "clubUrl": "https://en.wikipedia.org/wiki/Uni%C3%A3o_de_Santar%C3%A9m",
+    "venueUrl": null,
+    "clubQid": "Q3551888",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c9/Uni%C3%A3o_de_Santar%C3%A9m_logo.svg",
+    "crest": "pt-uniao-de-santarem.png"
+  },
+  {
+    "id": "pt-vitoria-sernache",
+    "tier": 3,
+    "en": "Vitória Sernache",
+    "city": "Cernache do Bonjardim",
+    "stadium": "Estádio Municipal D. Nuno Álvares Pereira",
+    "clubUrl": "https://en.wikipedia.org/wiki/G.D._Vit%C3%B3ria_de_Sernache",
+    "venueUrl": null,
+    "clubQid": "Q10291756",
+    "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7a/G.D._Vit%C3%B3ria_de_Sernache_logo.svg",
+    "crest": "pt-vitoria-sernache.png"
+  }
+]

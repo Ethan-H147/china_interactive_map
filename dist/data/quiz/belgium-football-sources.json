@@ -1,0 +1,908 @@
+{
+  "season": "2026–27",
+  "asOf": "2026-10-29",
+  "rosterSha256": "76771624ed7a3796936c6325e45caebfa2165205dd80dff2f040346ae964c6fa",
+  "rosterFile": "scripts/football-sources/belgium/clubs.json",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Jupiler Pro League",
+      "count": 18,
+      "sourceUrl": "https://www.proleague.be/fr/jpl-clubs"
+    },
+    {
+      "tier": 2,
+      "name": "Challenger Pro League",
+      "count": 15,
+      "sourceUrl": "https://www.proleague.be/fr/cpl-clubs"
+    },
+    {
+      "tier": 3,
+      "name": "Division 1 VV / FFA",
+      "count": 28,
+      "sourceUrl": "https://www.voetbalvlaanderen.be/competitie/CHP_134760/overzicht",
+      "sourceUrls": [
+        "https://lyralierse.be/sportief/kalender/",
+        "https://www.raecmons44.be/table/d1-ffa-2026-2027/"
+      ],
+      "groups": [
+        {
+          "name": "Division 1 VV",
+          "count": 16
+        },
+        {
+          "name": "Division 1 FFA",
+          "count": 12
+        }
+      ]
+    }
+  ],
+  "clubs": [
+    {
+      "id": "FOOTBALL-be-anderlecht",
+      "en": "Anderlecht",
+      "city": "Anderlecht, Brussels",
+      "stadium": "Constant Vanden Stock Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q262326",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg"
+    },
+    {
+      "id": "FOOTBALL-be-antwerp",
+      "en": "Antwerp",
+      "city": "Antwerp",
+      "stadium": "Bosuilstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q285074",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0b/Royal_Antwerp_Football_Club_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-beveren",
+      "en": "Beveren",
+      "city": "Beveren",
+      "stadium": "Freethiel Stadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2135912",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9b/SK_Beveren_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-cercle-brugge",
+      "en": "Cercle Brugge",
+      "city": "Bruges",
+      "stadium": "Jan Breydel Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1070150",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-charleroi",
+      "en": "Charleroi",
+      "city": "Charleroi",
+      "stadium": "Stade du Pays de Charleroi",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1147565",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-club-brugge",
+      "en": "Club Brugge",
+      "city": "Bruges",
+      "stadium": "Jan Breydel Stadium",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1070150",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d0/Club_Brugge_KV_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-genk",
+      "en": "Genk",
+      "city": "Genk",
+      "stadium": "Cegeka Arena",
+      "coordinateSource": "https://www.wikidata.org/entity/Q925654",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-gent",
+      "en": "Gent",
+      "city": "Ghent",
+      "stadium": "Planet Group Arena",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1708705",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-kortrijk",
+      "en": "Kortrijk",
+      "city": "Kortrijk",
+      "stadium": "Guldensporen Stadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1554251",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/17/KV_Kortrijk_logo_2016.svg"
+    },
+    {
+      "id": "FOOTBALL-be-la-louviere",
+      "en": "La Louvière",
+      "city": "La Louvière",
+      "stadium": "Easi Arena",
+      "coordinateSource": "https://www.openstreetmap.org/way/1256567898",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/40/RAAL_La_Louvi%C3%A8re_logo.svg",
+      "note": "Easi Arena opened in 2025. Ground geometry corrects the English stadium article coordinate, which points at the former Tivoli ground."
+    },
+    {
+      "id": "FOOTBALL-be-lommel-sk",
+      "en": "Lommel SK",
+      "city": "Lommel",
+      "stadium": "Soevereinstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q3153676",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e6/Lommel_SK_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-mechelen",
+      "en": "Mechelen",
+      "city": "Mechelen",
+      "stadium": "AFAS-stadion Achter de Kazerne",
+      "coordinateSource": "https://www.wikidata.org/entity/Q649755",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/28/KV_Mechelen_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-oh-leuven",
+      "en": "OH Leuven",
+      "city": "Leuven",
+      "stadium": "Den Dreef",
+      "coordinateSource": "https://www.wikidata.org/entity/Q301760",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png"
+    },
+    {
+      "id": "FOOTBALL-be-sint-truiden",
+      "en": "Sint-Truiden",
+      "city": "Sint-Truiden",
+      "stadium": "Stayen",
+      "coordinateSource": "https://www.wikidata.org/entity/Q515782",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/60/Sint-Truidense_VV_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-standard-liege",
+      "en": "Standard Liège",
+      "city": "Liège",
+      "stadium": "Stade Maurice Dufrasne",
+      "coordinateSource": "https://www.wikidata.org/entity/Q959934",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-union-sg",
+      "en": "Union SG",
+      "city": "Forest, Brussels",
+      "stadium": "Stade Joseph Marien",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q3495665",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-westerlo",
+      "en": "Westerlo",
+      "city": "Westerlo",
+      "stadium": "Het Kuipje",
+      "coordinateSource": "https://www.wikidata.org/entity/Q606856",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/0b/KVC_Westerlo_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-zulte-waregem",
+      "en": "Zulte Waregem",
+      "city": "Waregem",
+      "stadium": "Regenboogstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1850335",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/67/Zulte-Waregem_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-beerschot",
+      "en": "Beerschot",
+      "city": "Antwerp",
+      "stadium": "Olympisch Stadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1057087",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/27/Koninklijke_Beerschot_Voetbalclub_Antwerpen_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-dender-eh",
+      "en": "Dender EH",
+      "city": "Denderleeuw",
+      "stadium": "Florent Beeckmanstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2744854",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/24/FCV_Dender_EH_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-eupen",
+      "en": "Eupen",
+      "city": "Eupen",
+      "stadium": "Kehrwegstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q469079",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d3/Kas_Eupen_Logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-lokeren",
+      "en": "Lokeren",
+      "city": "Lokeren",
+      "stadium": "Daknamstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q677582",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/55/KSC_Lokeren_%282025%29_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-francs-borains",
+      "en": "Francs Borains",
+      "city": "Boussu",
+      "stadium": "Stade Robert Urbain",
+      "coordinateSource": "https://www.wikidata.org/entity/Q95126",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Logo_Francs_Borains.png"
+    },
+    {
+      "id": "FOOTBALL-be-hasselt",
+      "en": "Hasselt",
+      "city": "Hasselt",
+      "stadium": "Stedelijk Sportstadion Hasselt",
+      "coordinateSource": "https://www.wikidata.org/entity/Q58780",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e5/Sporting_hasselt_crest.svg"
+    },
+    {
+      "id": "FOOTBALL-be-virton",
+      "en": "Virton",
+      "city": "Virton",
+      "stadium": "Stade Yvan Georges",
+      "coordinateSource": "https://www.wikidata.org/entity/Q3495908",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/81/Royal_Excelsior_Virton_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-patro-eisden-maasmechelen",
+      "en": "Patro Eisden",
+      "city": "Maasmechelen",
+      "stadium": "Gemeentelijk Sportparkstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q329633",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/4/43/PX_Logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-club-nxtu23",
+      "en": "Club NXT",
+      "city": "Roeselare",
+      "stadium": "Schiervelde Stadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q265477",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/6/62/Club_NXT_Logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-lierse",
+      "en": "Lierse",
+      "city": "Lier",
+      "stadium": "Herman Vanderpoortenstadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1610381",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/53/Lierse_SK_%282018%29_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-jong-genku23",
+      "en": "Jong Genk",
+      "city": "Genk",
+      "stadium": "Cegeka Arena",
+      "coordinateSource": "https://www.wikidata.org/entity/Q925654",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-jong-kaa-gentu23",
+      "en": "Jong KAA Gent",
+      "city": "Oostakker, Ghent",
+      "stadium": "Backline Arena",
+      "coordinateSource": "https://www.openstreetmap.org/way/367781256",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg",
+      "note": "Returned to the refurbished Oostakker ground in August 2026; formerly Chillax/PGB stadium."
+    },
+    {
+      "id": "FOOTBALL-be-seraing",
+      "en": "Seraing",
+      "city": "Seraing",
+      "stadium": "Stade du Pairay",
+      "coordinateSource": "https://www.wikidata.org/entity/Q15694367",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/5/59/RFC_Seraing_%281922%29_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-rfc-liege",
+      "en": "RFC Liège",
+      "city": "Liège",
+      "stadium": "Stade de Rocourt",
+      "coordinateSource": "https://www.wikidata.org/entity/Q20751559",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/21/RFC_Li%C3%A8ge_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-rsca-futuresu23",
+      "en": "RSCA Futures",
+      "city": "Deinze",
+      "stadium": "Dakota Arena",
+      "coordinateSource": "https://nl.wikipedia.org/wiki/Dakota_Arena",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg",
+      "note": "Anderlecht reserves play in Deinze; the old King Baudouin/Lotto Park listings are obsolete."
+    },
+    {
+      "id": "FOOTBALL-be-houtvenne",
+      "en": "Houtvenne",
+      "city": "Oosterwijk, Westerlo",
+      "stadium": "Camp Westel",
+      "coordinateSource": "https://www.openstreetmap.org/way/114794596",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/9d/KFC_Houtvenne_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-mandel-united",
+      "en": "Mandel United",
+      "city": "Izegem",
+      "stadium": "Skyline Arena",
+      "coordinateSource": "https://www.openstreetmap.org/way/96479162",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/75/Logo_of_Royal_FC_Mandel_United.png"
+    },
+    {
+      "id": "FOOTBALL-be-roeselare",
+      "en": "Roeselare",
+      "city": "Roeselare",
+      "stadium": "Schierveldestadion",
+      "coordinateSource": "https://www.wikidata.org/entity/Q265477",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/91/S.K._Roeselare_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-oh-leuven-u-23",
+      "en": "OH Leuven U23",
+      "city": "Tienen",
+      "stadium": "Bergéstadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q16511464",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png",
+      "note": "OH Leuven reserves play their 2026–27 home matches at Tienen."
+    },
+    {
+      "id": "FOOTBALL-be-merelbeke",
+      "en": "Merelbeke",
+      "city": "Merelbeke",
+      "stadium": "Sportpark Molenkouter",
+      "coordinateSource": "https://www.openstreetmap.org/way/1214123710",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/94/K.F.C._Merelbeke_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-heist",
+      "en": "Heist",
+      "city": "Heist-op-den-Berg",
+      "stadium": "Omoda Jaecoo Sportpark",
+      "coordinateSource": "https://www.wikidata.org/entity/Q16069237",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/2/23/K.S.K._Heist_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-hoogstraten",
+      "en": "Hoogstraten",
+      "city": "Hoogstraten",
+      "stadium": "Sportcomplex Seminarie",
+      "coordinateSource": "https://www.wikidata.org/entity/Q16062543",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/ca/Hoogstraten_VV.png"
+    },
+    {
+      "id": "FOOTBALL-be-thes",
+      "en": "THES Sport",
+      "city": "Tessenderlo",
+      "stadium": "Gemeentelijk Sportpark",
+      "coordinateSource": "https://www.openstreetmap.org/way/286651591",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/c/c8/K.V.V._Thes_Sport_Tessenderlo_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-dessel",
+      "en": "Dessel",
+      "city": "Dessel",
+      "stadium": "Stade Armand Melis",
+      "coordinateSource": "https://www.wikidata.org/entity/Q16062424",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/4/43/KFC_Dessel_Sport_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-belisia",
+      "en": "Belisia Bilzen",
+      "city": "Bilzen",
+      "stadium": "Sportpark Katteberg",
+      "coordinateSource": "https://www.openstreetmap.org/way/211350107",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/9/96/S.V._Belisia_Bilzen_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-knokke",
+      "en": "Knokke",
+      "city": "Knokke-Heist",
+      "stadium": "Burgemeester Graaf Leopold Lippens Park",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q60729786",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/85/R._Knokke_FC_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-tienen",
+      "en": "Tienen",
+      "city": "Tienen",
+      "stadium": "Bergéstadion",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q16511464",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/b/b1/K.V.K._Tienen_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-lyra-lierse",
+      "en": "Lyra-Lierse",
+      "city": "Lier",
+      "stadium": "L’Avenirstadion (Sportpark Lier)",
+      "coordinateSource": "https://www.openstreetmap.org/way/1414168678",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e4/K._Lyra-Lierse_Berlaar_logo.svg",
+      "note": "New Sportpark Lier home since 2025; not the former Berlaar ground."
+    },
+    {
+      "id": "FOOTBALL-be-jong-cercle",
+      "en": "Jong Cercle",
+      "city": "Oostkamp",
+      "stadium": "De Valkaart",
+      "coordinateSource": "https://www.openstreetmap.org/way/88360298",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-harelbeke",
+      "en": "Harelbeke",
+      "city": "Harelbeke",
+      "stadium": "Stade Forestier",
+      "coordinateSource": "https://www.wikidata.org/entity/Q1987139",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/f/fb/KRC_Harelbeke_%282016%29_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-zelzate",
+      "en": "Zelzate",
+      "city": "Zelzate",
+      "stadium": "Sportcomplex Armand Seghers",
+      "coordinateSource": "https://www.openstreetmap.org/way/1319001940",
+      "crestSource": "https://irp.cdn-website.com/026324a7/dms3rep/multi/opt/KVV+Zelzate+_+Main+Logo_Full+Colour+CMYK-232w.png",
+      "note": "New ground opened in 2024. The previous A-complex and its location are obsolete."
+    },
+    {
+      "id": "FOOTBALL-be-rochefort",
+      "en": "Rochefort",
+      "city": "Rochefort",
+      "stadium": "Parc des Roches",
+      "coordinateSource": "https://www.openstreetmap.org/way/97217817",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/8/82/Union_Rochefortoise_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-meux",
+      "en": "Meux",
+      "city": "Meux",
+      "stadium": "Stade des Vert et Blanc",
+      "coordinateSource": "https://www.openstreetmap.org/way/114197436",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/d/d7/R.F.C._Meux_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-rwdm-brussels",
+      "en": "RWDM Brussels",
+      "city": "Molenbeek-Saint-Jean",
+      "stadium": "Stade Edmond Machtens",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2279580",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/a/a0/RWDM_Brussels_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-union-sg-b",
+      "en": "Union SG B",
+      "city": "Uccle",
+      "stadium": "Centre Sportif de Neerstalle",
+      "coordinateSource": "https://www.wikidata.org/wiki/Q109045022",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg",
+      "note": "Regular home is Neerstalle, Uccle. Selected derby matches may be staged at Joseph Marien."
+    },
+    {
+      "id": "FOOTBALL-be-mons",
+      "en": "Mons",
+      "city": "Mons",
+      "stadium": "Stade Charles Tondreau",
+      "coordinateSource": "https://www.wikidata.org/entity/Q522930",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2024/06/cropped-icon.png"
+    },
+    {
+      "id": "FOOTBALL-be-tubize-braine",
+      "en": "Tubize-Braine",
+      "city": "Tubize",
+      "stadium": "Stade Leburton",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2110834",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/0/04/RoyaleUnionTubize-Braine_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-sl16-fc",
+      "en": "SL16 FC",
+      "city": "Angleur, Liège",
+      "stadium": "SL16 Football Campus",
+      "coordinateSource": "https://fr.wikipedia.org/wiki/SL16_Football_Campus",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg",
+      "note": "Standard reserves use the SL16 Football Campus in Angleur, rather than the first-team ground in Sclessin. Coordinate identifies the campus."
+    },
+    {
+      "id": "FOOTBALL-be-zebra-elites",
+      "en": "Zébra Élites",
+      "city": "Montignies-sur-Sambre",
+      "stadium": "Stade de la Neuville",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2703824",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg"
+    },
+    {
+      "id": "FOOTBALL-be-olympic-charleroi",
+      "en": "Olympic Charleroi",
+      "city": "Montignies-sur-Sambre",
+      "stadium": "Stade de la Neuville",
+      "coordinateSource": "https://www.wikidata.org/entity/Q2703824",
+      "crestSource": "https://upload.wikimedia.org/wikipedia/en/e/e7/Olympic_Charleroi_logo.png"
+    },
+    {
+      "id": "FOOTBALL-be-habay-la-neuve",
+      "en": "Habay-la-Neuve",
+      "city": "Habay-la-Neuve",
+      "stadium": "Stade Émile Mathieu",
+      "coordinateSource": "https://www.openstreetmap.org/way/87979516",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2025/07/Logo-Habay.png"
+    },
+    {
+      "id": "FOOTBALL-be-onhaye",
+      "en": "Onhaye",
+      "city": "Onhaye",
+      "stadium": "Stade Jean Mathot",
+      "coordinateSource": "https://www.openstreetmap.org/way/99625923",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2026/08/onhaye.png"
+    },
+    {
+      "id": "FOOTBALL-be-flenu",
+      "en": "Flénu",
+      "city": "Mons",
+      "stadium": "Stade Charles Tondreau",
+      "coordinateSource": "https://www.wikidata.org/entity/Q522930",
+      "crestSource": "https://www.raecmons44.be/wp-content/uploads/2025/07/FC-Flenu-1.png",
+      "note": "Temporary 2026–27 home at Stade Charles Tondreau while the Flénu ground is upgraded."
+    }
+  ],
+  "images": {
+    "vendor/football/belgium/be-anderlecht.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg",
+      "inputSha256": "b0623fbbcf374020a44abbdcbd1ae4f9fdf5c70b24cae3bc70872b0059c3dc4e",
+      "sha256": "3718b58c6aa9aa9ff619f2ef8ebb5e00f6082d162bcea36eb67a9aa0c7cfdbc0",
+      "bytes": 13738
+    },
+    "vendor/football/belgium/be-antwerp.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/0b/Royal_Antwerp_Football_Club_logo.svg",
+      "inputSha256": "536e154dc7ed4b82d5695d9f5b28b44e5d15506f14f9c6257b71a65d1b53a5dc",
+      "sha256": "a09ff9d7b6aa7cd76a483b3afbd0d29cea68441dfafa13d5c0b8d1324f0665d1",
+      "bytes": 10000
+    },
+    "vendor/football/belgium/be-beveren.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/9b/SK_Beveren_logo.svg",
+      "inputSha256": "60ea080f67e869b105ddc9c5c14cfda90027d040b9ed5dfc082e56acb86d60b3",
+      "sha256": "a566e1536423ff9bc2e458eb9311ed0d93aa59756e073f4c7cd8ac718aea77a6",
+      "bytes": 10434
+    },
+    "vendor/football/belgium/be-cercle-brugge.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg",
+      "inputSha256": "858ab1a5657b24a2dcce84439ed939675118b9948d86af68c5e04341d4b4d3d8",
+      "sha256": "f9ba7746bd6770b487598c3c3437721ae360112c81fb052dcdb27ffac9a5dfcb",
+      "bytes": 1224
+    },
+    "vendor/football/belgium/be-charleroi.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg",
+      "inputSha256": "8927128ec6ba3be2afaf1b54d42e7c121ba2541ed894fc431feec2cb9b81e101",
+      "sha256": "afec013b64becf7e278e5fe9421da78a9b1a55ec96fb9b6e4e3a8ddc9435895b",
+      "bytes": 7456
+    },
+    "vendor/football/belgium/be-club-brugge.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/d0/Club_Brugge_KV_logo.svg",
+      "inputSha256": "d33c5257d17b38bdb30f6cc9f05b4addef821ced6cfb9f154bd31d0cf0eb2824",
+      "sha256": "cbedb5b0c84dea7a9654530162fe2605be2f2a7fbcbea3973cc937e95d57a898",
+      "bytes": 12770
+    },
+    "vendor/football/belgium/be-genk.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg",
+      "inputSha256": "094885175a4cb734f9e1a403f0f58286692f93293262b498e7ee43f29a5a0f22",
+      "sha256": "10c8c412f407fd65bb8f37b05111b2979d3aaa71e2b46ff1e0b6cd1e53151851",
+      "bytes": 5246
+    },
+    "vendor/football/belgium/be-gent.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg",
+      "inputSha256": "7d3e7a92afc139cd80a11b75d8d40976b3646537c332b48533f13b4c1df950ae",
+      "sha256": "bdeb2ada1a40f09309379d12d90fe580c4ce238926916c88914bfdb0d07f473f",
+      "bytes": 14360
+    },
+    "vendor/football/belgium/be-kortrijk.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/17/KV_Kortrijk_logo_2016.svg",
+      "inputSha256": "92101146733bcf74cefc5339cdcd51da918dda4354e707baa1e8a807a27abe58",
+      "sha256": "8b842e1734b1329c3b8a385e45be98384e55c07ab61c921dc9438dc7347401c5",
+      "bytes": 10990
+    },
+    "vendor/football/belgium/be-la-louviere.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/40/RAAL_La_Louvi%C3%A8re_logo.svg",
+      "inputSha256": "1748ecd7c7ae14c566e6fe9939420fbab5acfa82942d1a16818f385ef88c842a",
+      "sha256": "ed55bc873ad24c5182983e807e96544aea94f167f3dce0e223f8b3e28fe3625d",
+      "bytes": 7058
+    },
+    "vendor/football/belgium/be-lommel-sk.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/e6/Lommel_SK_logo.svg",
+      "inputSha256": "6bc7516317f531b9ddae413302879e8493e5768ac8ae5a0ef9410069618af4cc",
+      "sha256": "b47ed3d28cfcf25e9daf212521f7b993e68ebe3c7df832e1c2d5de1830cc1030",
+      "bytes": 14748
+    },
+    "vendor/football/belgium/be-mechelen.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/28/KV_Mechelen_logo.svg",
+      "inputSha256": "b53c9a941671abef046cef30575f99314d3dc2bfb72a26e9a8923c43fdf1fea3",
+      "sha256": "70c1e3eff8a51b97628f554d0734ce5076099f7c165c3611e21ce1f6de5709ca",
+      "bytes": 9802
+    },
+    "vendor/football/belgium/be-oh-leuven.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png",
+      "inputSha256": "11c19d691060e45fa3c8592ea9168780d48f0673de533520547c2c3ac7c76535",
+      "sha256": "c4d3e0a8117f6c893f9f00faa60aac4e8ad973b99eea5a4e907f6132d9dee3b7",
+      "bytes": 9154
+    },
+    "vendor/football/belgium/be-sint-truiden.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/60/Sint-Truidense_VV_logo.svg",
+      "inputSha256": "db00857e32fc4a7f715ca04f416ca8603ea4a026c75f8fbb94ec4fcf9a525615",
+      "sha256": "1f5c68c36bcba5a41e11a82cedc23905489043f3cce0402cee6bbca8575aa7a0",
+      "bytes": 8646
+    },
+    "vendor/football/belgium/be-standard-liege.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg",
+      "inputSha256": "13f489b277b30a8c10e8b304f89f2297a2299306ed72784d1f3810bc9a0dac66",
+      "sha256": "4ec245196761856c2d577e1d2b7ed7e822c0e0538f1406345ee8d7d765dd7f69",
+      "bytes": 7940
+    },
+    "vendor/football/belgium/be-union-sg.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg",
+      "inputSha256": "49856c22b01d95baa4eb620f9f428011f92b3c53149378e1e499a4ea76d8a325",
+      "sha256": "2ea6720f2876defeccdfb7a926ddf5c5f685c03cefeb5ed75e2d4686fb251d7e",
+      "bytes": 10256
+    },
+    "vendor/football/belgium/be-westerlo.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/0b/KVC_Westerlo_logo.svg",
+      "inputSha256": "d956cc0f0d739817602d09bd291701744a11e896fa11971f08b00cd7813ac6b9",
+      "sha256": "18f54fb3d91339edf065161cff656d792315db09bbb28b8766335dc2e533de3a",
+      "bytes": 14952
+    },
+    "vendor/football/belgium/be-zulte-waregem.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/67/Zulte-Waregem_logo.svg",
+      "inputSha256": "cb2aa9bdac75fc4a068d186240e653db8d31c2e00943303c8be843f688eb9604",
+      "sha256": "42ff3b057a0f085fb4882811d37ac8f604f52d0b01b19283a78d1539809d1883",
+      "bytes": 11462
+    },
+    "vendor/football/belgium/be-beerschot.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/27/Koninklijke_Beerschot_Voetbalclub_Antwerpen_logo.svg",
+      "inputSha256": "d82988a4c022d04e1a0f0340d47495507d48360536522c04c9e054eccbc031c0",
+      "sha256": "fcf4573e46e40a18f430c33655b88c61233f98dc1a856cbc7c59a9c064e108d2",
+      "bytes": 7712
+    },
+    "vendor/football/belgium/be-dender-eh.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/24/FCV_Dender_EH_logo.svg",
+      "inputSha256": "2eff0cf82fe1335ab743a5e34d59b9eea26a5e599ae8886235c58d613468df49",
+      "sha256": "23a444ba0fa540aca594bc797ee45772111b9c8302067d7bb66d9570f85d6a9e",
+      "bytes": 13306
+    },
+    "vendor/football/belgium/be-eupen.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/d3/Kas_Eupen_Logo.svg",
+      "inputSha256": "3c737ec651e4191d442c5ab822d09682bf1ec30f270113e129035265a64a543e",
+      "sha256": "3987f40d97eb102cab699f966eada020864d0721a43cc76876cef8d411c9c306",
+      "bytes": 7722
+    },
+    "vendor/football/belgium/be-lokeren.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/55/KSC_Lokeren_%282025%29_logo.svg",
+      "inputSha256": "cff238b6c9141a5217cfe2b4a99e505ba6905bb0a2c477a1ef1f5608311835ad",
+      "sha256": "c4125f127432a22bffd29d5a79b9b031bc5820994141e5c1f2de2531f303d6d3",
+      "bytes": 16810
+    },
+    "vendor/football/belgium/be-francs-borains.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Logo_Francs_Borains.png",
+      "inputSha256": "9681d4ac6aac6c1b7d270256a40ba262c0a5bee90e28257776136e09cc80549f",
+      "sha256": "803b9bcce6ae7d4011e85e41805ae951ec1634554040cd259eb11c9c2b38af3b",
+      "bytes": 14786
+    },
+    "vendor/football/belgium/be-hasselt.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/e5/Sporting_hasselt_crest.svg",
+      "inputSha256": "7a7ad69a3354e8c20c28afaa8e056e11a065c6d0ec244394b4e1f12c157d4d49",
+      "sha256": "bfa7efcab367ceae49977f8a8e401e82642bcac4b5b99a50377b4064672c59f1",
+      "bytes": 16764
+    },
+    "vendor/football/belgium/be-virton.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/81/Royal_Excelsior_Virton_logo.svg",
+      "inputSha256": "38b4f4a1e6c689e93b7090e148227732628f54cb5d06a84d0623352a3a463bfc",
+      "sha256": "053ee6848e9d3c59969cf376c34b802a112584bb6a8a1b4ce84aa761d91fe7fb",
+      "bytes": 10592
+    },
+    "vendor/football/belgium/be-patro-eisden-maasmechelen.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/4/43/PX_Logo.png",
+      "inputSha256": "ef4bb051fda25d4db38bf5a39af3e0fd3976d9d9299ac5a5ab9d8aaf1829f86a",
+      "sha256": "3e100e66e0f407514b5d275af3b6392bc431449be2a5a6114b258f6f8ea3e9ab",
+      "bytes": 6460
+    },
+    "vendor/football/belgium/be-club-nxtu23.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/6/62/Club_NXT_Logo.png",
+      "inputSha256": "53084bb55a2c60f8e9dfd5690b247b185f58b0385de283e743cef441560387b2",
+      "sha256": "c3d6e470b4ab18dcbf573f9e4ea5075b5107124b963b4fc3f463b1549c6c51f6",
+      "bytes": 4646
+    },
+    "vendor/football/belgium/be-lierse.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/53/Lierse_SK_%282018%29_logo.svg",
+      "inputSha256": "ba5fdb7cce2c5b6ca8b3e073ba3af758f23e1c6321f65fc0a59630fb751c8634",
+      "sha256": "e904c0e18a1f6c1ce18e51d943a61945eac50b1f75a03ed26bfa055e2ac7c3c9",
+      "bytes": 5044
+    },
+    "vendor/football/belgium/be-jong-genku23.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/53/KRC_Genk_logo.svg",
+      "inputSha256": "094885175a4cb734f9e1a403f0f58286692f93293262b498e7ee43f29a5a0f22",
+      "sha256": "10c8c412f407fd65bb8f37b05111b2979d3aaa71e2b46ff1e0b6cd1e53151851",
+      "bytes": 5246
+    },
+    "vendor/football/belgium/be-jong-kaa-gentu23.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/f4/KAA_Gent_logo.svg",
+      "inputSha256": "7d3e7a92afc139cd80a11b75d8d40976b3646537c332b48533f13b4c1df950ae",
+      "sha256": "bdeb2ada1a40f09309379d12d90fe580c4ce238926916c88914bfdb0d07f473f",
+      "bytes": 14360
+    },
+    "vendor/football/belgium/be-seraing.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/5/59/RFC_Seraing_%281922%29_logo.svg",
+      "inputSha256": "ff2c0dc2482d245ff3e9e40d5fc59a885fb93286ce4c54caab8a333111e84da4",
+      "sha256": "92b133cda2ea5453a6c227bbdeba77781d6c56dc1d8127c058fa587d544cbe50",
+      "bytes": 10942
+    },
+    "vendor/football/belgium/be-rfc-liege.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/21/RFC_Li%C3%A8ge_logo.svg",
+      "inputSha256": "0c80524371c0942098f4bcf350fbe7ddeed4df9eb8a334d2bb3ccda8acebfa40",
+      "sha256": "e867778805a05f6eb13441c01341c66aad54c07c98f04d09c6457f2f1290754d",
+      "bytes": 9764
+    },
+    "vendor/football/belgium/be-rsca-futuresu23.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/77/R.S.C._Anderlecht.svg",
+      "inputSha256": "b0623fbbcf374020a44abbdcbd1ae4f9fdf5c70b24cae3bc70872b0059c3dc4e",
+      "sha256": "3718b58c6aa9aa9ff619f2ef8ebb5e00f6082d162bcea36eb67a9aa0c7cfdbc0",
+      "bytes": 13738
+    },
+    "vendor/football/belgium/be-houtvenne.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/9d/KFC_Houtvenne_logo.png",
+      "inputSha256": "ea4f5081ad452c038a6614928514c9a1aa78a267cb5342f8cf23c08070aaacc4",
+      "sha256": "080272ce5b23cb240018f36f5fd4233c644bc63ae437a8395ff238d8a76de926",
+      "bytes": 14406
+    },
+    "vendor/football/belgium/be-mandel-united.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/75/Logo_of_Royal_FC_Mandel_United.png",
+      "inputSha256": "b5fe6a82a54c8754c111527b0711aa728add73c6cf4898bb3085e67fb71b4d4b",
+      "sha256": "ae5e56695723a07bb928efb760b66a8b5b6929f2f0e0e04b57f1d59981ebcb8a",
+      "bytes": 25710
+    },
+    "vendor/football/belgium/be-roeselare.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/91/S.K._Roeselare_logo.png",
+      "inputSha256": "080e63d0b33073a492977fa5b751f1c5a2a368bd8a21a7423f420e62a0e1cfca",
+      "sha256": "317a33f26510ec4850d62765cf5a87ba7bca37ced4c11a253e60915982f03446",
+      "bytes": 15440
+    },
+    "vendor/football/belgium/be-oh-leuven-u-23.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/commons/2/24/OH_LEUVEN.png",
+      "inputSha256": "11c19d691060e45fa3c8592ea9168780d48f0673de533520547c2c3ac7c76535",
+      "sha256": "c4d3e0a8117f6c893f9f00faa60aac4e8ad973b99eea5a4e907f6132d9dee3b7",
+      "bytes": 9154
+    },
+    "vendor/football/belgium/be-merelbeke.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/94/K.F.C._Merelbeke_logo.png",
+      "inputSha256": "9c1cff60fbd8ab72da096d9a675ff964b4d67996f42755028e921628c2672666",
+      "sha256": "2c65d9dcda8b14635233abe5f1675e480631e9e0ee6a403c24adbce554ae38ae",
+      "bytes": 22120
+    },
+    "vendor/football/belgium/be-heist.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/2/23/K.S.K._Heist_logo.png",
+      "inputSha256": "2300b5e435b9bf5755fc78c268926724cb422272c67c70629a707388e47a5fa1",
+      "sha256": "063369c126446fa5fab244b09150cd78cfe7c7513ac218b667dbe677ca08ddff",
+      "bytes": 39532
+    },
+    "vendor/football/belgium/be-hoogstraten.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/ca/Hoogstraten_VV.png",
+      "inputSha256": "12f8f15eb61b53d294a96fa8e90d591e6c2f9d862f69dbc6bd2527c86e88a0be",
+      "sha256": "fc8b009ce101b1473769037ccba055f489f77f3e3d6940754231f432154a2ec0",
+      "bytes": 19678
+    },
+    "vendor/football/belgium/be-thes.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/c/c8/K.V.V._Thes_Sport_Tessenderlo_logo.png",
+      "inputSha256": "ba266a64e7099978a043841f11d20d76e59d12c83580d63d351bd3e6c43e6780",
+      "sha256": "7bf45a5c389fa58e32f55000abc34c00485ccddbd230c47dd5d1ed04b83a09bf",
+      "bytes": 39808
+    },
+    "vendor/football/belgium/be-dessel.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/4/43/KFC_Dessel_Sport_logo.svg",
+      "inputSha256": "977e756c26b6cc3c47f450dc140846ce239da4fb4c770c3cdc14231c574ecd69",
+      "sha256": "588430b580be84ab08804c277c12011e12c75809c4bd2130661e498f12e55d93",
+      "bytes": 11004
+    },
+    "vendor/football/belgium/be-belisia.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/9/96/S.V._Belisia_Bilzen_logo.png",
+      "inputSha256": "5b60e22fbf1b9b07b2f08faceb6cb3a75dec91aec827a48fa4c9a52817093eb5",
+      "sha256": "880791cf5ff3d3a90e6b899791b6a4ad4b03695f5cb1a7091226c3f798297762",
+      "bytes": 17164
+    },
+    "vendor/football/belgium/be-knokke.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/85/R._Knokke_FC_logo.png",
+      "inputSha256": "2c53e4805b8fc082b4ff715f4fb1a6a7c05aaed14945bf46939f695c4a9d11d4",
+      "sha256": "335c080625558620048cdb02c8efcc0c041ef10fa6e57d6d4995dfb2c01833f3",
+      "bytes": 34408
+    },
+    "vendor/football/belgium/be-tienen.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/b/b1/K.V.K._Tienen_logo.svg",
+      "inputSha256": "524218d4898435db9a6566b2bd01f04b2b1bdf4489e9bf8d871d0c89ee9c55e1",
+      "sha256": "2badaec578375eb57ad4d15ba517b91735e08cf7ad1fa6c57dc65e4b75afc87f",
+      "bytes": 6244
+    },
+    "vendor/football/belgium/be-lyra-lierse.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/e4/K._Lyra-Lierse_Berlaar_logo.svg",
+      "inputSha256": "ab96c379aff247a07c5da496c5e27ef81322c1108ecc422d4dcf158d20bec7de",
+      "sha256": "7f4a3f7b1c2651f6fd6a11b1e59b2a0f1e47de649f6c428227203bdf3c2e7181",
+      "bytes": 6132
+    },
+    "vendor/football/belgium/be-jong-cercle.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/7c/Cercle_Brugge_KSV_logo.svg",
+      "inputSha256": "858ab1a5657b24a2dcce84439ed939675118b9948d86af68c5e04341d4b4d3d8",
+      "sha256": "f9ba7746bd6770b487598c3c3437721ae360112c81fb052dcdb27ffac9a5dfcb",
+      "bytes": 1224
+    },
+    "vendor/football/belgium/be-harelbeke.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/f/fb/KRC_Harelbeke_%282016%29_logo.png",
+      "inputSha256": "7e212aaa15f5430c57a808cddc5087cd9170d425882ec3e8d139ee6db8b0687b",
+      "sha256": "54b6de1ef7392ca0595b76382e9f09db4603966b80837fed736ba73fef40d1de",
+      "bytes": 24214
+    },
+    "vendor/football/belgium/be-zelzate.webp": {
+      "source": "https://irp.cdn-website.com/026324a7/dms3rep/multi/opt/KVV+Zelzate+_+Main+Logo_Full+Colour+CMYK-232w.png",
+      "inputSha256": "2d73b922d9b2fb931b80006b5183625eadbb847a406eea460eff11901a383ebc",
+      "sha256": "d04a79f82959c4ba9ed7036ac45fbfd56da1a362410daa662f07c6fe91f06fdf",
+      "bytes": 11692
+    },
+    "vendor/football/belgium/be-rochefort.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/8/82/Union_Rochefortoise_logo.png",
+      "inputSha256": "95e4f7108ccfe5db362e6f9125b49074ae7546b13f327bc765e25bc8f1d3122a",
+      "sha256": "6a1fcfef1a540471eb073ffb1741952f93ade133c07b5cafbca85ec68359f151",
+      "bytes": 4552
+    },
+    "vendor/football/belgium/be-meux.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/d/d7/R.F.C._Meux_logo.png",
+      "inputSha256": "c31ca80e073d474fe8f54a91961045b249093c2e556f2afd0686674370fa2a00",
+      "sha256": "2f2f0b249bf73552e0ce01ebdfbfb62fa7ebcb2cb3cee86172d7a1f2c5dc97d1",
+      "bytes": 20916
+    },
+    "vendor/football/belgium/be-rwdm-brussels.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/a/a0/RWDM_Brussels_logo.png",
+      "inputSha256": "99f26975ff2215c5becb9d5412a94a5b0686970b99ae061b3b2fb3971a65c56a",
+      "sha256": "32f552109d259a5fa7d4fcd24b1fd08c54f1482d06f60d5ecef58c124fabb091",
+      "bytes": 6718
+    },
+    "vendor/football/belgium/be-union-sg-b.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/1/11/Royale_Union_Saint-Gilloise_logo.svg",
+      "inputSha256": "49856c22b01d95baa4eb620f9f428011f92b3c53149378e1e499a4ea76d8a325",
+      "sha256": "2ea6720f2876defeccdfb7a926ddf5c5f685c03cefeb5ed75e2d4686fb251d7e",
+      "bytes": 10256
+    },
+    "vendor/football/belgium/be-mons.webp": {
+      "source": "https://www.raecmons44.be/wp-content/uploads/2024/06/cropped-icon.png",
+      "inputSha256": "fbaf7c12d9c240bff6e54f49d79198bcae6106f9758adf539ce1f6b7541c3fbe",
+      "sha256": "723fb2a1ead817d34783a6f5f35d95f697a5874700cd4230b172aece784cf8d8",
+      "bytes": 23326
+    },
+    "vendor/football/belgium/be-tubize-braine.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/0/04/RoyaleUnionTubize-Braine_logo.png",
+      "inputSha256": "893f16a18ad5c8b895082ac93d7d7b1afff784c4b05814e244659da7c18fd451",
+      "sha256": "c3d0b11c235c67ab40bbf505ae7bc1c15cb1b29428939ae1645ca7784d0f6728",
+      "bytes": 15618
+    },
+    "vendor/football/belgium/be-sl16-fc.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/7/7e/Standard_Li%C3%A8ge_logo.svg",
+      "inputSha256": "13f489b277b30a8c10e8b304f89f2297a2299306ed72784d1f3810bc9a0dac66",
+      "sha256": "4ec245196761856c2d577e1d2b7ed7e822c0e0538f1406345ee8d7d765dd7f69",
+      "bytes": 7940
+    },
+    "vendor/football/belgium/be-zebra-elites.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/e1/Royal_Charleroi_Sporting_Club_logo.svg",
+      "inputSha256": "8927128ec6ba3be2afaf1b54d42e7c121ba2541ed894fc431feec2cb9b81e101",
+      "sha256": "afec013b64becf7e278e5fe9421da78a9b1a55ec96fb9b6e4e3a8ddc9435895b",
+      "bytes": 7456
+    },
+    "vendor/football/belgium/be-olympic-charleroi.webp": {
+      "source": "https://upload.wikimedia.org/wikipedia/en/e/e7/Olympic_Charleroi_logo.png",
+      "inputSha256": "feac5300c17685bdc9bd43f7192245e0d9398be265a871a4d427ffbb87b49b1f",
+      "sha256": "c6a39f6daea34ed65b1c3324bf0818a751e510ee14b5565c18ca354b3b67e214",
+      "bytes": 18196
+    },
+    "vendor/football/belgium/be-habay-la-neuve.webp": {
+      "source": "https://www.raecmons44.be/wp-content/uploads/2025/07/Logo-Habay.png",
+      "inputSha256": "8c1065d1d57921b563b3f793064b6e108313d3bf36b959cadc77e7d5fa92320d",
+      "sha256": "6302a5310b24bd66ef4ee30e12cce58160fec2e89d62cf5ccb55b51b311044e5",
+      "bytes": 12104
+    },
+    "vendor/football/belgium/be-onhaye.webp": {
+      "source": "https://www.raecmons44.be/wp-content/uploads/2026/08/onhaye.png",
+      "inputSha256": "a4a3e36c1a7e0460a8eb438d43fe68fb790931684324c88a901ca46848498d68",
+      "sha256": "51d9798d761c69127fd40721741ab92a2397842b48c0a0992061b5ee9a5e4886",
+      "bytes": 36976
+    },
+    "vendor/football/belgium/be-flenu.webp": {
+      "source": "https://www.raecmons44.be/wp-content/uploads/2025/07/FC-Flenu-1.png",
+      "inputSha256": "b6d1f44f464f14930283d7fa752c0b5aceb7ebc851fded4494b0283d750564ea",
+      "sha256": "b6380a4204336a26c9aa5f21e21e245f9714db14465edbdcdb20391ab3709435",
+      "bytes": 6364
+    }
+  },
+  "crestCredit": "Club crests remain the marks of their respective owners; retained source URLs identify the original artwork."
+}

@@ -1,0 +1,728 @@
+[
+  {
+    "id": "fr-angers",
+    "tier": 1,
+    "en": "Angers",
+    "city": "Angers",
+    "stadium": "Stade Raymond Kopa",
+    "clubUrl": "https://en.wikipedia.org/wiki/Angers_SCO",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Raymond_Kopa",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Angers_Sporting_Club_de_l%27Ouest_logo.svg/250px-Angers_Sporting_Club_de_l%27Ouest_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -0.5307,
+      47.4605
+    ]
+  },
+  {
+    "id": "fr-auxerre",
+    "tier": 1,
+    "en": "Auxerre",
+    "city": "Auxerre",
+    "stadium": "Stade Abbé Deschamps",
+    "clubUrl": "https://en.wikipedia.org/wiki/AJ_Auxerre",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Abb%C3%A9_Deschamps",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/51/AJAuxerreLogo.svg/250px-AJAuxerreLogo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      3.5886639,
+      47.7867528
+    ]
+  },
+  {
+    "id": "fr-brest",
+    "tier": 1,
+    "en": "Brest",
+    "city": "Brest",
+    "stadium": "Stade Francis-Le Blé",
+    "clubUrl": "https://en.wikipedia.org/wiki/Stade_Brestois_29",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Francis-Le_Bl%C3%A9",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/05/Stade_Brestois_29_logo.svg/250px-Stade_Brestois_29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -4.461694,
+      48.402932
+    ]
+  },
+  {
+    "id": "fr-le-havre",
+    "tier": 1,
+    "en": "Le Havre",
+    "city": "Le Havre",
+    "stadium": "Stade Océane",
+    "clubUrl": "https://en.wikipedia.org/wiki/Le_Havre_AC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Oc%C3%A9ane",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fc/Le_Havre_AC_logo.svg/250px-Le_Havre_AC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      0.16972,
+      49.49889
+    ]
+  },
+  {
+    "id": "fr-le-mans",
+    "tier": 1,
+    "en": "Le Mans",
+    "city": "Le Mans",
+    "stadium": "Stade Marie-Marvingt",
+    "clubUrl": "https://en.wikipedia.org/wiki/Le_Mans_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Marie-Marvingt",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/57/Le_Mans_FC_logo.svg/250px-Le_Mans_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      0.2234,
+      47.959
+    ]
+  },
+  {
+    "id": "fr-lens",
+    "tier": 1,
+    "en": "Lens",
+    "city": "Lens",
+    "stadium": "Stade Bollaert-Delelis",
+    "clubUrl": "https://en.wikipedia.org/wiki/RC_Lens",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Bollaert-Delelis",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cc/RC_Lens_logo.svg/250px-RC_Lens_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      2.815,
+      50.43278
+    ]
+  },
+  {
+    "id": "fr-lille",
+    "tier": 1,
+    "en": "Lille",
+    "city": "Villeneuve-d'Ascq",
+    "stadium": "Stade Pierre-Mauroy",
+    "clubUrl": "https://en.wikipedia.org/wiki/Lille_OSC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Pierre-Mauroy",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/3f/Lille_OSC_2018_logo.svg/250px-Lille_OSC_2018_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      3.1304,
+      50.6119
+    ]
+  },
+  {
+    "id": "fr-lorient",
+    "tier": 1,
+    "en": "Lorient",
+    "city": "Lorient",
+    "stadium": "Stade du Moustoir",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Lorient",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_du_Moustoir",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4c/FC_Lorient_logo.svg/250px-FC_Lorient_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -3.36944,
+      47.74889
+    ]
+  },
+  {
+    "id": "fr-lyon",
+    "tier": 1,
+    "en": "Lyon",
+    "city": "Décines-Charpieu",
+    "stadium": "Groupama Stadium",
+    "clubUrl": "https://en.wikipedia.org/wiki/Olympique_Lyonnais",
+    "venueUrl": "https://en.wikipedia.org/wiki/Parc_Olympique_Lyonnais",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1c/Olympique_Lyonnais_logo.svg/250px-Olympique_Lyonnais_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      4.982131,
+      45.765224
+    ]
+  },
+  {
+    "id": "fr-marseille",
+    "tier": 1,
+    "en": "Marseille",
+    "city": "Marseille",
+    "stadium": "Stade Vélodrome",
+    "clubUrl": "https://en.wikipedia.org/wiki/Olympique_de_Marseille",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_V%C3%A9lodrome",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Olympique_de_Marseille_2026_logo.svg/250px-Olympique_de_Marseille_2026_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      5.39583,
+      43.26972
+    ]
+  },
+  {
+    "id": "fr-monaco",
+    "tier": 1,
+    "en": "Monaco",
+    "city": "Monaco",
+    "stadium": "Stade Louis II",
+    "clubUrl": "https://en.wikipedia.org/wiki/AS_Monaco_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Louis_II",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/cf/LogoASMonacoFC2021.svg/250px-LogoASMonacoFC2021.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      7.41556,
+      43.7275
+    ]
+  },
+  {
+    "id": "fr-nice",
+    "tier": 1,
+    "en": "Nice",
+    "city": "Nice",
+    "stadium": "Allianz Riviera",
+    "clubUrl": "https://en.wikipedia.org/wiki/OGC_Nice",
+    "venueUrl": "https://en.wikipedia.org/wiki/Allianz_Riviera",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2e/OGC_Nice_logo.svg/250px-OGC_Nice_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      7.1925,
+      43.70528
+    ]
+  },
+  {
+    "id": "fr-paris-fc",
+    "tier": 1,
+    "en": "Paris FC",
+    "city": "Paris (Paris 16)",
+    "stadium": "Stade Jean-Bouin",
+    "clubUrl": "https://en.wikipedia.org/wiki/Paris_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Jean-Bouin_(Paris)",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Paris_FCLogo_11-24.png/250px-Paris_FCLogo_11-24.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      2.25278,
+      48.84306
+    ]
+  },
+  {
+    "id": "fr-paris-saint-germain",
+    "tier": 1,
+    "en": "Paris Saint-Germain",
+    "city": "Paris (Paris 16)",
+    "stadium": "Parc des Princes",
+    "clubUrl": "https://en.wikipedia.org/wiki/Paris_Saint-Germain_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Parc_des_Princes",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/250px-Paris_Saint-Germain_F.C..svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": null
+  },
+  {
+    "id": "fr-rennes",
+    "tier": 1,
+    "en": "Rennes",
+    "city": "Rennes",
+    "stadium": "Roazhon Park",
+    "clubUrl": "https://en.wikipedia.org/wiki/Stade_Rennais_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Roazhon_Park",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/9/9e/Stade_Rennais_FC.svg/250px-Stade_Rennais_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -1.71278,
+      48.1075
+    ]
+  },
+  {
+    "id": "fr-strasbourg",
+    "tier": 1,
+    "en": "Strasbourg",
+    "city": "Strasbourg",
+    "stadium": "Stade de la Meinau",
+    "clubUrl": "https://en.wikipedia.org/wiki/RC_Strasbourg_Alsace",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_la_Meinau",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/80/Racing_Club_de_Strasbourg_logo.svg/250px-Racing_Club_de_Strasbourg_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      7.755,
+      48.56
+    ]
+  },
+  {
+    "id": "fr-toulouse",
+    "tier": 1,
+    "en": "Toulouse",
+    "city": "Toulouse",
+    "stadium": "Stadium de Toulouse",
+    "clubUrl": "https://en.wikipedia.org/wiki/Toulouse_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stadium_de_Toulouse",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/63/Toulouse_FC_2018_logo.svg/250px-Toulouse_FC_2018_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      1.43417,
+      43.58306
+    ]
+  },
+  {
+    "id": "fr-troyes",
+    "tier": 1,
+    "en": "Troyes",
+    "city": "Troyes",
+    "stadium": "Stade de l'Aube",
+    "clubUrl": "https://en.wikipedia.org/wiki/ES_Troyes_AC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_l'Aube",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/ESTAC_Troyes_Logo.svg/250px-ESTAC_Troyes_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      4.098458,
+      48.307561
+    ]
+  },
+  {
+    "id": "fr-annecy",
+    "tier": 2,
+    "en": "Annecy",
+    "city": "Annecy",
+    "stadium": "Parc des Sports",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Annecy",
+    "venueUrl": "https://en.wikipedia.org/wiki/Parc_des_Sports,_Annecy",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/db/FC_Annecy_logo.svg/250px-FC_Annecy_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      6.118054,
+      45.916497
+    ]
+  },
+  {
+    "id": "fr-boulogne",
+    "tier": 2,
+    "en": "Boulogne",
+    "city": "Boulogne-sur-Mer",
+    "stadium": "Stade de la Libération",
+    "clubUrl": "https://en.wikipedia.org/wiki/US_Boulogne",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_la_Lib%C3%A9ration",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/31/US_Boulogne_crest.svg/250px-US_Boulogne_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      1.619411,
+      50.723742
+    ]
+  },
+  {
+    "id": "fr-clermont",
+    "tier": 2,
+    "en": "Clermont",
+    "city": "Clermont-Ferrand",
+    "stadium": "Stade Gabriel-Montpied",
+    "clubUrl": "https://en.wikipedia.org/wiki/Clermont_Foot",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Gabriel-Montpied",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/52/Clermont_Foot_logo.svg/250px-Clermont_Foot_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      3.121651,
+      45.81582
+    ]
+  },
+  {
+    "id": "fr-dijon",
+    "tier": 2,
+    "en": "Dijon",
+    "city": "Dijon",
+    "stadium": "Stade Gaston Gérard",
+    "clubUrl": "https://en.wikipedia.org/wiki/Dijon_FCO",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Gaston_G%C3%A9rard",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f7/Dijon_FCO_logo.svg/250px-Dijon_FCO_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      5.068342,
+      47.324383
+    ]
+  },
+  {
+    "id": "fr-dunkerque",
+    "tier": 2,
+    "en": "Dunkerque",
+    "city": "Dunkirk",
+    "stadium": "Stade Marcel-Tribut",
+    "clubUrl": "https://en.wikipedia.org/wiki/USL_Dunkerque",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Marcel-Tribut",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a7/USL_Dunkerque_crest.svg/250px-USL_Dunkerque_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      2.39028,
+      51.03556
+    ]
+  },
+  {
+    "id": "fr-grenoble",
+    "tier": 2,
+    "en": "Grenoble",
+    "city": "Grenoble",
+    "stadium": "Stade des Alpes",
+    "clubUrl": "https://en.wikipedia.org/wiki/Grenoble_Foot_38",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_des_Alpes",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/de/Grenoble_Foot_38_logo.svg/250px-Grenoble_Foot_38_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      5.740099,
+      45.187428
+    ]
+  },
+  {
+    "id": "fr-guingamp",
+    "tier": 2,
+    "en": "Guingamp",
+    "city": "Guingamp",
+    "stadium": "Stade de Roudourou",
+    "clubUrl": "https://en.wikipedia.org/wiki/En_Avant_Guingamp",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_Roudourou",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/56/En_Avant_Guingamp_logo.svg/250px-En_Avant_Guingamp_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -3.164599,
+      48.566285
+    ]
+  },
+  {
+    "id": "fr-laval",
+    "tier": 2,
+    "en": "Laval",
+    "city": "Laval",
+    "stadium": "Stade Francis Le Basser",
+    "clubUrl": "https://en.wikipedia.org/wiki/Stade_Lavallois",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Francis_Le_Basser",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ca/Stade_Lavallois_logo.svg/250px-Stade_Lavallois_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -0.75472,
+      48.0825
+    ]
+  },
+  {
+    "id": "fr-metz",
+    "tier": 2,
+    "en": "Metz",
+    "city": "Longeville-lès-Metz",
+    "stadium": "Stade Saint-Symphorien",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Metz",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Saint-Symphorien",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/FC_Metz_2021_Logo.svg/250px-FC_Metz_2021_Logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      6.159511,
+      49.109813
+    ]
+  },
+  {
+    "id": "fr-montpellier",
+    "tier": 2,
+    "en": "Montpellier",
+    "city": "Montpellier",
+    "stadium": "Stade de la Mosson",
+    "clubUrl": "https://en.wikipedia.org/wiki/Montpellier_HSC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_la_Mosson",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/a8/Montpellier_HSC_logo.svg/250px-Montpellier_HSC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      3.81194,
+      43.62222
+    ]
+  },
+  {
+    "id": "fr-nancy",
+    "tier": 2,
+    "en": "Nancy",
+    "city": "Tomblaine",
+    "stadium": "Stade Marcel Picot",
+    "clubUrl": "https://en.wikipedia.org/wiki/AS_Nancy_Lorraine",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Marcel_Picot",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/4d/AS_Nancy_logo.svg/250px-AS_Nancy_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      6.210687,
+      48.6955
+    ]
+  },
+  {
+    "id": "fr-nantes",
+    "tier": 2,
+    "en": "Nantes",
+    "city": "Nantes",
+    "stadium": "Stade de la Beaujoire",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Nantes",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_la_Beaujoire",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Logo_FC_Nantes_%28avec_fond%29_-_2019.svg/250px-Logo_FC_Nantes_%28avec_fond%29_-_2019.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -1.525,
+      47.256
+    ]
+  },
+  {
+    "id": "fr-pau",
+    "tier": 2,
+    "en": "Pau",
+    "city": "Pau",
+    "stadium": "Nouste Camp",
+    "clubUrl": "https://en.wikipedia.org/wiki/Pau_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Nouste_Camp",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/82/Pau_FC_logo.svg/250px-Pau_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -0.325917,
+      43.307667
+    ]
+  },
+  {
+    "id": "fr-red-star",
+    "tier": 2,
+    "en": "Red Star",
+    "city": "Paris (Saint-Ouen)",
+    "stadium": "Stade Bauer",
+    "clubUrl": "https://en.wikipedia.org/wiki/Red_Star_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Bauer",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Red_Star_FC_logo.svg/250px-Red_Star_FC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      2.34083,
+      48.90583
+    ]
+  },
+  {
+    "id": "fr-reims",
+    "tier": 2,
+    "en": "Reims",
+    "city": "Reims",
+    "stadium": "Stade Auguste-Delaune",
+    "clubUrl": "https://en.wikipedia.org/wiki/Stade_de_Reims",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Auguste-Delaune",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Stade_de_Reims_logo.svg/250px-Stade_de_Reims_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      4.025,
+      49.24667
+    ]
+  },
+  {
+    "id": "fr-rodez",
+    "tier": 2,
+    "en": "Rodez",
+    "city": "Rodez",
+    "stadium": "Stade Paul-Lignon",
+    "clubUrl": "https://en.wikipedia.org/wiki/Rodez_AF",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Paul-Lignon",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/70/Rodez_AF_logo.svg/250px-Rodez_AF_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      2.56361,
+      44.35167
+    ]
+  },
+  {
+    "id": "fr-saint-etienne",
+    "tier": 2,
+    "en": "Saint-Étienne",
+    "city": "Saint-Étienne",
+    "stadium": "Stade Geoffroy-Guichard",
+    "clubUrl": "https://en.wikipedia.org/wiki/AS_Saint-%C3%89tienne",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Geoffroy-Guichard",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/AS_Saint-%C3%89tienne_logo.svg/250px-AS_Saint-%C3%89tienne_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      4.39028,
+      45.46083
+    ]
+  },
+  {
+    "id": "fr-sochaux",
+    "tier": 2,
+    "en": "Sochaux",
+    "city": "Montbéliard",
+    "stadium": "Stade Auguste-Bonal",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Sochaux-Montb%C3%A9liard",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Auguste-Bonal",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7c/FC_Sochaux-Montbeliard_logo.svg/250px-FC_Sochaux-Montbeliard_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      6.81111,
+      47.5125
+    ]
+  },
+  {
+    "id": "fr-amiens",
+    "tier": 3,
+    "en": "Amiens",
+    "city": "Amiens",
+    "stadium": "Stade de la Licorne",
+    "clubUrl": "https://en.wikipedia.org/wiki/Amiens_SC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_la_Licorne",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/25/Amiens_SC_logo.svg/250px-Amiens_SC_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      2.263312,
+      49.894209
+    ]
+  },
+  {
+    "id": "fr-aubagne-air-bel",
+    "tier": 3,
+    "en": "Aubagne Air Bel",
+    "city": "Aubagne",
+    "stadium": "Stade de Lattre-de-Tassigny",
+    "clubUrl": "https://en.wikipedia.org/wiki/SC_Aubagne_Air_Bel",
+    "venueUrl": null,
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0c/SC_Aubagne_Air_Bel_logo.svg/250px-SC_Aubagne_Air_Bel_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+  },
+  {
+    "id": "fr-bastia",
+    "tier": 3,
+    "en": "Bastia",
+    "city": "Bastia",
+    "stadium": "Stade Armand-Cesari",
+    "clubUrl": "https://en.wikipedia.org/wiki/SC_Bastia",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Armand-Cesari",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d7/SC_Bastia_logo_2024.svg/250px-SC_Bastia_logo_2024.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      9.44278,
+      42.65139
+    ]
+  },
+  {
+    "id": "fr-bourg-peronnas",
+    "tier": 3,
+    "en": "Bourg-Péronnas",
+    "city": "Bourg-en-Bresse",
+    "stadium": "Stade Marcel-Verchère",
+    "clubUrl": "https://en.wikipedia.org/wiki/Football_Bourg-en-Bresse_P%C3%A9ronnas_01",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Marcel-Verch%C3%A8re",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/4/42/Football_Bourg-en-Bresse_Peronnas_01_logo.svg/250px-Football_Bourg-en-Bresse_Peronnas_01_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      5.23722,
+      46.21
+    ]
+  },
+  {
+    "id": "fr-caen",
+    "tier": 3,
+    "en": "Caen",
+    "city": "Caen",
+    "stadium": "Stade Michel d'Ornano",
+    "clubUrl": "https://en.wikipedia.org/wiki/Stade_Malherbe_Caen",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Michel_d'Ornano",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/a/aa/SM_Caen_2016_logo.svg/250px-SM_Caen_2016_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -0.3967667,
+      49.1794611
+    ]
+  },
+  {
+    "id": "fr-cannes",
+    "tier": 3,
+    "en": "Cannes",
+    "city": "Cannes",
+    "stadium": "Stade Pierre de Coubertin",
+    "clubUrl": "https://en.wikipedia.org/wiki/AS_Cannes",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Pierre_de_Coubertin_(Cannes)",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/64/AS_Cannes_logo.svg/250px-AS_Cannes_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      6.9646083,
+      43.5530556
+    ]
+  },
+  {
+    "id": "fr-concarneau",
+    "tier": 3,
+    "en": "Concarneau",
+    "city": "Concarneau",
+    "stadium": "Stade Guy-Piriou [fr]",
+    "clubUrl": "https://en.wikipedia.org/wiki/US_Concarneau",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Guy-Piriou?action=edit&amp;redlink=1",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/68/US_Concarneau_logo.svg/250px-US_Concarneau_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": null
+  },
+  {
+    "id": "fr-fleury",
+    "tier": 3,
+    "en": "Fleury",
+    "city": "Fleury-Mérogis",
+    "stadium": "Stade Auguste Gentelet",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Fleury_91_(men)",
+    "venueUrl": null,
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/eb/FC_Fleury_91_%28men%29_logo.svg/250px-FC_Fleury_91_%28men%29_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+  },
+  {
+    "id": "fr-la-roche",
+    "tier": 3,
+    "en": "La Roche",
+    "city": "La Roche-sur-Yon",
+    "stadium": "Stade Henri Desgranges",
+    "clubUrl": "https://en.wikipedia.org/wiki/VFC_La_Roche-sur-Yon",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Henri_Desgranges",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/ea/VFC_La_Roche-sur-Yon_crest.svg/250px-VFC_La_Roche-sur-Yon_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      -1.44083,
+      46.67139
+    ]
+  },
+  {
+    "id": "fr-le-puy",
+    "tier": 3,
+    "en": "Le Puy",
+    "city": "Le Puy-en-Velay",
+    "stadium": "Stade Charles Massot",
+    "clubUrl": "https://en.wikipedia.org/wiki/Le_Puy_Foot_43_Auvergne",
+    "venueUrl": null,
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/1f/Le_Puy-en-Velay_FC_crest.svg/250px-Le_Puy-en-Velay_FC_crest.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+  },
+  {
+    "id": "fr-orleans",
+    "tier": 3,
+    "en": "Orléans",
+    "city": "Orléans",
+    "stadium": "Stade de la Source",
+    "clubUrl": "https://en.wikipedia.org/wiki/US_Orl%C3%A9ans",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_de_la_Source",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/75/US_Orl%C3%A9ans_logo.svg/250px-US_Orl%C3%A9ans_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      1.94111,
+      47.84028
+    ]
+  },
+  {
+    "id": "fr-paris-13-atletico",
+    "tier": 3,
+    "en": "Paris 13 Atletico",
+    "city": "Paris (Paris 13)",
+    "stadium": "Stade Sébastien Charléty",
+    "clubUrl": "https://en.wikipedia.org/wiki/Paris_13_Atletico",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_S%C3%A9bastien_Charl%C3%A9ty",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/58/Paris_13_Atletico_logo.svg/250px-Paris_13_Atletico_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      2.34667,
+      48.81861
+    ]
+  },
+  {
+    "id": "fr-quevilly-rouen",
+    "tier": 3,
+    "en": "Quevilly-Rouen",
+    "city": "Le Petit-Quevilly",
+    "stadium": "Stade Robert Diochon",
+    "clubUrl": "https://en.wikipedia.org/wiki/US_Quevilly-Rouen_M%C3%A9tropole",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Robert_Diochon",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/39/US_Quevilly-Rouen_M%C3%A9tropole_logo.svg/250px-US_Quevilly-Rouen_M%C3%A9tropole_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      1.070738,
+      49.411078
+    ]
+  },
+  {
+    "id": "fr-rouen",
+    "tier": 3,
+    "en": "Rouen",
+    "city": "Le Petit-Quevilly",
+    "stadium": "Stade Robert Diochon",
+    "clubUrl": "https://en.wikipedia.org/wiki/Football_Club_de_Rouen_1899",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_Robert_Diochon",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/be/F.C._Rouen.svg/250px-F.C._Rouen.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      1.070738,
+      49.411078
+    ]
+  },
+  {
+    "id": "fr-thionville",
+    "tier": 3,
+    "en": "Thionville",
+    "city": "Thionville",
+    "stadium": "Stade de la Plaine",
+    "clubUrl": "https://en.wikipedia.org/wiki/US_Thionville_Lusitanos",
+    "venueUrl": null,
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/fa/US_Thionville_Lusitanos_logo.svg/250px-US_Thionville_Lusitanos_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+  },
+  {
+    "id": "fr-valenciennes",
+    "tier": 3,
+    "en": "Valenciennes",
+    "city": "Valenciennes",
+    "stadium": "Stade du Hainaut",
+    "clubUrl": "https://en.wikipedia.org/wiki/Valenciennes_FC",
+    "venueUrl": "https://en.wikipedia.org/wiki/Stade_du_Hainaut",
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/8c/Valenciennes_FC.svg/250px-Valenciennes_FC.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+    "center": [
+      3.531611,
+      50.348389
+    ]
+  },
+  {
+    "id": "fr-versailles",
+    "tier": 3,
+    "en": "Versailles",
+    "city": "Versailles",
+    "stadium": "Stade de Montbauron",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Versailles_78",
+    "venueUrl": null,
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/75/FC_Versailles_78_logo.svg/250px-FC_Versailles_78_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+  },
+  {
+    "id": "fr-villefranche",
+    "tier": 3,
+    "en": "Villefranche",
+    "city": "Villefranche-sur-Saône",
+    "stadium": "Stade Armand Chouffet",
+    "clubUrl": "https://en.wikipedia.org/wiki/FC_Villefranche_Beaujolais",
+    "venueUrl": null,
+    "crestUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2f/FC_Villefranche_Beaujolais_logo.svg/250px-FC_Villefranche_Beaujolais_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+  }
+]
