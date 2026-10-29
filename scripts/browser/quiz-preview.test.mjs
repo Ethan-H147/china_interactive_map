@@ -9,7 +9,7 @@ export default [
   const before=await p.evaluate('AtlasQuizRecords.quizRecords.data.summary.rounds');
   await p.tap(panel+' [data-city-preview-start]');await p.settle();
   assert(await p.evaluate('!document.querySelector('+JSON.stringify(panel+' [data-city-preview]')+').hidden'));
-  const expected=await p.evaluate('parseInt(document.querySelector('+JSON.stringify(panel+' [data-q=count]')+').textContent)');
+  assert(await p.evaluate('(()=>{const a=document.getElementById("quiz-satellite-toggle").getBoundingClientRect(),b=document.getElementById("home").getBoundingClientRect();return a.top>=b.bottom||a.bottom<=b.top||a.left>=b.right||a.right<=b.left})()'),'Satellite and End preview have separate touch targets'); const expected=await p.evaluate('parseInt(document.querySelector('+JSON.stringify(panel+' [data-q=count]')+').textContent)');
   assert.equal(await p.evaluate('(async()=> (await map.getSource('+JSON.stringify(key)+').getData()).features.length)()'),expected);
   const dot=await p.evaluate('(async()=>{const f=(await map.getSource('+JSON.stringify(key)+').getData()).features.find(f=>{const p=map.project(f.geometry.coordinates);return p.x>30&&p.x<map.getContainer().clientWidth-80&&p.y>180&&p.y<map.getContainer().clientHeight-180});if(!f)throw Error("No visible preview dot");const p=map.project(f.geometry.coordinates),b=map.getCanvas().getBoundingClientRect();return{x:b.left+p.x,y:b.top+p.y,id:f.properties.id}})()');
   if(width===390)await p.tap([dot.x,dot.y]);else await p.send('Input.dispatchMouseEvent',{type:'mouseMoved',x:dot.x,y:dot.y});
