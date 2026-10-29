@@ -1,3 +1,13 @@
+# Cloudflare production deployment
+
+The Cloudflare Worker is china-interactive-map at https://china-interactive-map.huyusheng777.workers.dev/. Its Git connection must be connected to Ethan-H147/china_interactive_map, production branch main, with builds enabled.
+
+In Cloudflare Settings > Builds, use root /, leave the build command empty (Wrangler runs the repository build hook), and set the deploy command to npm run deploy:cloudflare. The root wrangler.jsonc selects the correct Worker and dist/ assets. Its build hook runs focused checks and stamps version.json with the exact checked-out commit. Pushing main should create a fresh production build; retrying an old build is unnecessary. Verify the deployed /version.json matches the GitHub commit after rollout. Do not use --name boundary-atlas: that selects a different Worker.
+
+Quiz storage is Supabase with per-user RLS; Cloudflare has no database binding requirement. The configuration does not modify Supabase data or browser queues.
+
+The following describes the separate legacy ChatGPT Site adapter. Its immutable source pin and separate repository are not used for the Cloudflare static-assets deployment.
+
 # Atlas hosting adapter
 
 The atlas frontend remains static: use npm start and the normal build/data/browser checks. The hosted Site uses worker.mjs because its 1.03 GiB static tree exceeds the desktop archive uploader and remote build disk limits. Account quiz records use the same Worker's authenticated API and D1 database. No map features or data were removed.

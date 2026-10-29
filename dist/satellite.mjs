@@ -6,7 +6,7 @@ export const satelliteSource={
   tiles:['https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}?token=AAPTaRY-wBoaKL26yIgOLY0a4ZA..aIn4btMRn549Qv-dDUe7AoA-w3A_Cb71sZnvN25r3zbMDZBmTp7yqeC0COIM4hcmdMnXgoz5CkwOEavPR9veN0iuQvIzUjGRZWQTZg8Id2rin2bMBNji8nO9IQhigj6K911OkkItLEnz6tVY9mQ2s1nzz3JMIUcicr49obsHZ_U_wRBmIuk1Klxi6zboPMekzlV5o4aZCaxSU-Y6Atmiz-K09SxghVeXALUfuQXTOzVrKmB5joMDAT1_855Xcq7d'],
   attribution:'Powered by <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a> · Esri, Vantor, Earthstar Geographics, and the GIS User Community'
 };
-export function satelliteVisible({enabled,quiz}){return enabled&&!quiz;}
+export function satelliteVisible({enabled,quiz}){return enabled;}
 export function imageryOpacity(value){const number=Number(value);return Number.isFinite(number)?Math.max(0,Math.min(100,number))/100:1;}
 export function createSatelliteDisplay(map,host,ui={
   input:document.getElementById('satellite-layer'),
@@ -52,7 +52,7 @@ export function createSatelliteDisplay(map,host,ui={
       message('Loading imagery…');
       timer=schedule(()=>{timer=undefined;if(enabled&&!hasTile)fail();},25000);
     }
-    if(!visible){stopTimer();if(enabled)message('Imagery is hidden during quizzes.');}
+    if(!visible){stopTimer();}
     else if(hasTile)message('');
   }
   map.on('sourcedata',event=>{

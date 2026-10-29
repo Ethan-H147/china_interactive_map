@@ -407,6 +407,9 @@
     "test:city-quizzes": "node --check dist/city-quiz.mjs && node scripts/validate-city-quizzes.mjs && node scripts/browser/run.mjs city-quiz",
     "build:russia-lite": "node --max-old-space-size=6000 scripts/build-russia-lite.mjs",
     "test:russia-detail": "node scripts/browser/run.mjs russia-detail",
-    "test:supabase-quiz": "node scripts/validate-supabase-quiz.mjs && node scripts/browser/run.mjs supabase-migration quiz-record-recovery quiz-dashboard"
+    "test:supabase-quiz": "node scripts/validate-supabase-quiz.mjs && node scripts/browser/run.mjs supabase-migration quiz-record-recovery quiz-dashboard",
+    "build:cloudflare": "node --check dist/app.js && node --check dist/city-quiz.mjs && node scripts/validate-satellite.mjs && node scripts/validate-supabase-quiz.mjs && node scripts/prepare-cloudflare.mjs",
+    "deploy:cloudflare": "npx wrangler@4.152.0 deploy",
+    "test:quiz-preview": "node scripts/validate-satellite.mjs && node scripts/browser/run.mjs quiz-preview"
   }
 }

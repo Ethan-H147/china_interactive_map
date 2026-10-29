@@ -33,7 +33,7 @@ export function blendColor(from,to,amount){
 export function provinceOpacity(visible,opacity=1){
  const amount=visible?opacity:0;return ['case',
  ['boolean',['feature-state','inactive'],false],1-amount,
- ['boolean',['feature-state','quizActive'],false],1,
+ ['boolean',['feature-state','quizActive'],false],1-amount,
  ['boolean',['feature-state','quizCorrect'],false],.65,
  ['boolean',['feature-state','quizWrong'],false],.55,
  ['boolean',['feature-state','selected'],false],.3-.12*amount,
