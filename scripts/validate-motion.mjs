@@ -5,6 +5,8 @@ import {GeoJSONVT} from '@maplibre/geojson-vt';
 import earcut,{flatten,deviation} from 'earcut';
 import {createMotionRenderer,setFeatureState,queryRegions} from '../dist/motion.mjs';
 
+// Exercise the preview engine with an explicitly enabled fixture.
+const chinaPreviewSetting=globalThis.AtlasCountries.countries.china.motionLayers;globalThis.AtlasCountries.countries.china.motionLayers=true;
 const manifest=JSON.parse(fs.readFileSync('dist/data/motion-boundaries.parts.json'));
 const parts=manifest.parts.map(name=>fs.readFileSync('dist/data/'+name));
 assert(parts.every(part=>part.length<=3_000_000));
@@ -111,3 +113,8 @@ assert.equal(await loading,false);assert.equal(slow.getLayoutProperty('province-
 assert.equal(slow.getLayoutProperty('province-fill-motion','visibility'),'none');
 assert.equal(frames.at(-1).style.display,'none','Release the captured map after bounded fallback finishes');
 console.log('Motion renderer: seamless loading/refinement, bounded fallback, selection/quiz subsets, theme/filter/state preservation, interrupted refinement, source precision and Jilin fills passed.');
+
+// Native gestures interrupt a handoff without keeping a frozen frame over the map.
+const direct=fakeMap(),directMotion=createMotionRenderer(direct);await directMotion.ready;await directMotion.begin();direct.sourceLoaded=false;const refining=directMotion.end();await new Promise(resolve=>setImmediate(resolve));await directMotion.end({interactive:true});await refining;direct.emit('render');assert.equal(frames.at(-1).style.display,'none');assert.equal(direct.getLayoutProperty('province-fill','visibility'),'visible');assert.equal(direct.getLayoutProperty('province-fill-motion','visibility'),'none');console.log('Interactive handoff interruption releases the held frame immediately and resolves pending refinement.');
+
+globalThis.AtlasCountries.countries.china.motionLayers=chinaPreviewSetting;const nativeChina=createMotionRenderer(fakeMap());await nativeChina.ready;assert.equal(await nativeChina.begin(),false,'China retains its normal map without a preview handoff');

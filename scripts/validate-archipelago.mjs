@@ -43,7 +43,7 @@ assert.deepEqual(chooseChunks([{id:'near',level:1,bounds:[[0,0],[1,1]],center:[.
 // Exercise the real portal against a small DOM/MapLibre adapter, including
 // deferred workers, cold searches, cancellation and source disposal.
 const elements=new Map();
-class Element{constructor(){this.children=[];this.hidden=false;this.checked=true;this.value='';this.dataset={};this.attributes={};this.scrollTop=0;}append(...values){this.children.push(...values);}replaceChildren(...values){this.children=values;}setAttribute(k,v){this.attributes[k]=v;}getAttribute(k){return this.attributes[k];}querySelector(){return this;}insertBefore(){}focus(){}addEventListener(){}}
+class Element{constructor(){this.children=[];this.hidden=false;this.checked=true;this.value='';this.dataset={};this.attributes={};this.scrollTop=0;}append(...values){this.children.push(...values);}replaceChildren(...values){this.children=values;}setAttribute(k,v){this.attributes[k]=v;}getAttribute(k){return this.attributes[k];}querySelector(){return this;}querySelectorAll(){return [];}insertBefore(){}focus(){}addEventListener(){}}
 const element=id=>{if(!elements.has(id))elements.set(id,new Element());return elements.get(id);};
 globalThis.document={createElement:()=>new Element(),getElementById:element,querySelector:element};globalThis.Option=class extends Element{constructor(text,value){super();this.textContent=text;this.value=value;}};
 const statisticsCalls=[];globalThis.window={AtlasLabels:{render:()=>[]},AtlasStatistics:{renderStatistics:(_anchor,key)=>statisticsCalls.push(key),clearStatistics:()=>statisticsCalls.push(null)}};Object.defineProperty(globalThis,'navigator',{value:{connection:{}},configurable:true});

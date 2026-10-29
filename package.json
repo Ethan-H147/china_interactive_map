@@ -295,6 +295,7 @@
     "fetch:nordic-local": "node scripts/fetch-nordic-local.mjs",
     "build:nordic-local": "node --max-old-space-size=7000 scripts/build-nordic-local.mjs && node scripts/prepare-region-colors.mjs norway sweden finland iceland",
     "test:nordic-local": "node scripts/validate-nordic-local.mjs && node scripts/browser/run.mjs nordic-local",
+    "test:china-rendering": "node scripts/validate-selection-draw.mjs && node scripts/validate-source-elevation.mjs && node scripts/browser/run.mjs china-selection-draw china-selection-stability china-district-motion",
     "test:globe-renderer": "node --check dist/globe-renderer.mjs && node scripts/validate-globe-renderer.mjs && node scripts/validate-frame-timing.mjs && node scripts/browser/run.mjs globe-renderer tile-draw-lists",
     "measure:globe-renderer": "node scripts/browser/measure-globe-renderer.mjs",
     "test:denmark-settlements": "node scripts/validate-denmark-settlements.mjs && node scripts/browser/run.mjs denmark-settlements",
@@ -401,8 +402,8 @@
     "fetch:us-city-quiz": "node scripts/fetch-us-city-quiz.mjs",
     "build:us-city-quiz": "node scripts/build-us-city-quiz.mjs",
     "test:us-city-quiz": "node --check dist/city-quiz.mjs && node scripts/validate-us-city-quiz.mjs && node scripts/browser/run.mjs us-city-quiz",
-    "fetch:city-quizzes": "node scripts/fetch-city-quiz.mjs china && node scripts/fetch-city-quiz.mjs russia && node scripts/fetch-city-quiz.mjs spain && node scripts/fetch-city-quiz.mjs germany && node scripts/fetch-city-quiz.mjs united-kingdom && node scripts/fetch-city-quiz.mjs france && node scripts/fetch-city-quiz.mjs italy",
-    "build:city-quizzes": "node scripts/build-city-quiz.mjs china && node scripts/build-city-quiz.mjs russia && node scripts/build-city-quiz.mjs spain && node scripts/build-city-quiz.mjs germany && node scripts/build-city-quiz.mjs united-kingdom && node scripts/build-city-quiz.mjs france && node scripts/build-city-quiz.mjs italy",
+    "fetch:city-quizzes": "node scripts/fetch-city-quiz.mjs china && node scripts/fetch-city-quiz.mjs russia && node scripts/fetch-city-quiz.mjs spain && node scripts/fetch-city-quiz.mjs germany && node scripts/fetch-city-quiz.mjs united-kingdom && node scripts/fetch-city-quiz.mjs france && node scripts/fetch-city-quiz.mjs italy && node scripts/fetch-city-quiz.mjs brazil && node scripts/fetch-city-quiz.mjs canada && node scripts/fetch-city-quiz.mjs argentina",
+    "build:city-quizzes": "node scripts/build-city-quiz.mjs china && node scripts/build-city-quiz.mjs russia && node scripts/build-city-quiz.mjs spain && node scripts/build-city-quiz.mjs germany && node scripts/build-city-quiz.mjs united-kingdom && node scripts/build-city-quiz.mjs france && node scripts/build-city-quiz.mjs italy && node scripts/build-city-quiz.mjs brazil && node scripts/build-city-quiz.mjs canada && node scripts/build-city-quiz.mjs argentina",
     "test:city-quizzes": "node --check dist/city-quiz.mjs && node scripts/validate-city-quizzes.mjs && node scripts/browser/run.mjs city-quiz",
     "build:russia-lite": "node --max-old-space-size=6000 scripts/build-russia-lite.mjs",
     "test:russia-detail": "node scripts/browser/run.mjs russia-detail"

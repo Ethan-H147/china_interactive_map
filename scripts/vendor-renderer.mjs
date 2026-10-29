@@ -22,10 +22,13 @@ const coverage='n=Fo(e,{tileSize:this.usedForTerrain?this.tileSize:this._source.
 const update='_updateSources(e){for(let t in this.tileManagers)this.tileManagers[t].update(e,this.map.terrain)}';
 for(const needle of [coverage,update])assert.equal(main.split(needle).length,2,'MapLibre changed; review source coverage reuse');
 main=main.replace(coverage,'n=atlasCoveringTiles(Fo,e,{tileSize:this.usedForTerrain?this.tileSize:this._source.tileSize');
-main=main.replace(update,'_updateSources(e){return atlasRunSourceUpdate(e,()=>{for(let t in this.tileManagers)this.tileManagers[t].update(e,this.map.terrain)})}');
+main=main.replace(update,'_updateSources(e){return atlasRunSourceUpdate(e,()=>{for(let t in this.tileManagers)this.tileManagers[t].update(e,this.map.terrain)},this)}');
 
 // Native symbol ordering includes extra fading tiles and a bearing-dependent sort.
 // Sources without visible symbols and sources unused by every layer need no list.
+const elevation='maxContentElevation:this._updateMaxContentElevation()';
+assert.equal(main.split(elevation).length,2,'MapLibre changed; review symbol elevation scans');
+main=main.replace(elevation,'maxContentElevation:atlasMaxContentElevation(this._updateMaxContentElevation,this)');
 const tileDraws='a={},o={},s={};for(let e in i){let t=i[e];t.used&&t.prepare(this.context),a[e]=t.getVisibleCoordinates(!1),o[e]=a[e].slice().reverse(),s[e]=t.getVisibleCoordinates(!0).reverse()}';
 assert.equal(main.split(tileDraws).length,2,'MapLibre changed; review tile draw-list pruning');
 main=main.replace(tileDraws,'a={},o={},s={};const atlasTileDraws=atlasPrepareTileDraws(this);for(let e in i){let t=i[e];t.used&&t.prepare(this.context),a[e]=atlasVisibleCoordinates(t,!1,atlasTileDraws,e),o[e]=a[e].slice().reverse(),s[e]=atlasVisibleCoordinates(t,!0,atlasTileDraws,e).reverse()}');
@@ -57,4 +60,4 @@ const polarScales=[
 ];
 for(const [before,after]of polarScales){assert.equal(main.split(before).length,2,'MapLibre changed; review polar camera scale and release behavior');main=main.replace(before,after);}
 
-fs.writeFileSync(renderer,"import {latitudeScale as atlasLatitudeScale,freeGlobePan as atlasFreeGlobePan} from '../globe-navigation.mjs';\nimport {coveringTiles as atlasCoveringTiles,runSourceUpdate as atlasRunSourceUpdate,prepareTileDraws as atlasPrepareTileDraws,visibleCoordinates as atlasVisibleCoordinates} from '../globe-renderer.mjs';\n"+main);
+fs.writeFileSync(renderer,"import {latitudeScale as atlasLatitudeScale,freeGlobePan as atlasFreeGlobePan} from '../globe-navigation.mjs';\nimport {coveringTiles as atlasCoveringTiles,runSourceUpdate as atlasRunSourceUpdate,maxContentElevation as atlasMaxContentElevation,prepareTileDraws as atlasPrepareTileDraws,visibleCoordinates as atlasVisibleCoordinates} from '../globe-renderer.mjs';\n"+main);

@@ -4,7 +4,7 @@ export default [{name:'public counties keep their borders throughout district na
  await page.open(base,'#china');
  await page.waitFor('chinaCounties',{label:'public county boundaries',timeout:60000});
  assert.equal(await page.evaluate('AtlasDev.enabled'),false);
- assert.equal(await page.evaluate('districtCities.size'),329);
+ assert.equal(await page.evaluate('districtCities.size'),351);
  await searchAndSelect(page,'Jinjiang','Jinjiang District');
  await page.evaluate("zoomLock.set(false)");
  // Exercise three real district changes. A short flight on a slow renderer can
@@ -25,6 +25,6 @@ export default [{name:'public counties keep their borders throughout district na
  await page.evaluate("saveView(true);0");
  await page.send("Page.reload");await page.settle();
  await page.waitFor('chinaCounties',{label:'county coverage after reload',timeout:60000});
- assert.equal(await page.evaluate('districtCities.size'),329);
+ assert.equal(await page.evaluate('districtCities.size'),351);
  assert.equal(await page.evaluate('selected?.layer.feature.properties.adcode'),510105,'The county selection survives reload');
 }}];

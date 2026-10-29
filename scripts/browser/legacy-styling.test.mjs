@@ -21,7 +21,7 @@ const scenarios=[1280,390].map(width=>({name:'China uniform and legacy province 
  await p.evaluate('AtlasRegionColorController.setMetric("population")');await p.settle();const metric=await colors(p);assert(distinct(metric)>1,'Population shading is active');await toggle(p);assert.deepEqual(await colors(p),metric,'Changing base styling preserves active statistical shading');assert.deepEqual(await colors(p,'province-fragment-fill'),metric);
  await p.evaluate('AtlasRegionColorController.setMetric("none")');await p.settle();assert.deepEqual(await colors(p),uniform,'Leaving statistical shading restores current setting');
  await p.evaluate('selectRegion(provinceLayers.get(220000),220000,false)');await p.settle();const selection=await p.evaluate('selected.layer.feature.properties.adcode'),selectedColor=(await colors(p,'province-fill',true))[3];await toggle(p);assert.equal(await p.evaluate('selected.layer.feature.properties.adcode'),selection);assert.deepEqual((await colors(p,'province-fill',true))[3],selectedColor,'Selection remains highlighted');assert.deepEqual((await colors(p,'province-fragment-fill',true))[3],selectedColor);
- await p.tap('#tab-quiz');await p.tap('#quiz-start');await p.settle();assert(await p.evaluate('quiz.active'));const quizColors=await colors(p,'province-fill',true);await toggle(p);assert.deepEqual(await colors(p,'province-fill',true),quizColors,'Quiz backgrounds retain their answer-hiding colors');await p.tap('#home');await p.settle();assert(!await p.evaluate('quiz.active'));assert.deepEqual(await colors(p),uniform,'Uniform fill returns after quiz exit');
+ await p.tap('#tab-quiz');await p.evaluate("chinaQuizLevel='prefectures';openChinaQuiz()");await p.tap('#cn-prefectures-quiz-panel [data-q=start]');await p.settle();assert(await p.evaluate('quiz.active'));const quizColors=await colors(p,'province-fill',true);await toggle(p);assert.deepEqual(await colors(p,'province-fill',true),quizColors,'Quiz backgrounds retain their answer-hiding colors');await p.tap('#home');await p.settle();assert(!await p.evaluate('quiz.active'));assert.deepEqual(await colors(p),uniform,'Uniform fill returns after quiz exit');
  await p.evaluate('void changeAtlas("south-africa")');await p.settle();const other=await p.evaluate('mapScene.basePaint("south-africa-first-fill","fill-color")');await toggle(p);assert.deepEqual(await p.evaluate('mapScene.basePaint("south-africa-first-fill","fill-color")'),other,'Other countries keep their own themes');
  await p.evaluate('void changeAtlas("china")');await p.settle();assert.deepEqual(await colors(p),legacy,'Preference follows a country switch');await p.tap('#settings-open');await p.screenshot('settings-legacy-styling-'+width);await p.tap('#settings-reset');await p.tap('#settings-close');await p.settle();assert.deepEqual(await colors(p),uniform,'Reset restores shared colors');assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));
 }}));
@@ -42,11 +42,9 @@ scenarios.push({name:'Indonesia contrast fill; saved legacy styling hidden and i
 }});
 // Japan, the Philippines and Malaysia keep their earlier low-contrast fills as legacy colours too.
 const firstFill=(p,country)=>p.evaluate(`(()=>{const layer=map.style.getLayer(${JSON.stringify(country+'-first-fill')}),paint=layer.paint.get('fill-color');return paint.evaluate({properties:{id:'-'}},{})})()`);
-scenarios.push({name:'Japan, Philippines and Malaysia legacy fills in developer mode',options:{width:1280,height:900,developer:true},async run(p,base){
- for(const [country,legacy,current] of [['japan',[255,253,253],[244,230,231]],['philippines',[231,237,246],[220,229,242]],['malaysia',[245,240,221],[238,230,200]]]){
-  await p.open(base,'#'+country);await p.evaluate('AtlasSettings.setSettings({legacyStyling:true})');await p.open(base,'?reload#'+country);await p.waitFor(`!!map.getLayer(${JSON.stringify(country+'-first-fill')})`);
-  assert.deepEqual(rgb(await firstFill(p,country)),legacy,country+' legacy fill');
-  await toggle(p);assert.deepEqual(rgb(await firstFill(p,country)),current,country+' contrast fill without reload');
- }
+for(const [country,legacy,current] of [['japan',[255,253,253],[244,230,231]],['philippines',[231,237,246],[220,229,242]],['malaysia',[245,240,221],[238,230,200]]])scenarios.push({name:country+' legacy fill in developer mode',options:{width:1280,height:900,developer:true},async run(p,base){
+ await p.open(base,'#'+country);await p.evaluate('AtlasSettings.setSettings({legacyStyling:true})');await p.open(base,'?reload#'+country);await p.waitFor(`!!map.getLayer(${JSON.stringify(country+'-first-fill')})`);
+ assert.deepEqual(rgb(await firstFill(p,country)),legacy,country+' legacy fill');await toggle(p);assert.deepEqual(rgb(await firstFill(p,country)),current,country+' contrast fill without reload');
 }});
+
 export default scenarios;

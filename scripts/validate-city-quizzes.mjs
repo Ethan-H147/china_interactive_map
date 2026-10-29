@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import '../dist/countries.js';
 // City quizzes outside the US: cumulative levels, unique names, dots inside each quiz's frame
 // (France's frame is the mainland; its overseas cities sit behind an option).
-const expected={china:[15,46,93,167,231],russia:[8,31,63,106,149],spain:[8,28,61],germany:[9,31,61],'united-kingdom':[10,29,63],france:[8,31,68],italy:[10,32,64]};
+const expected={china:[15,46,93,167,231],russia:[8,31,63,106,149],spain:[8,28,61],germany:[9,31,61],'united-kingdom':[10,29,63],france:[8,31,68],italy:[10,32,64],brazil:[10,24,49,89,138],canada:[10,25,45,65],argentina:[8,25,45,65]};
 for(const [country,counts] of Object.entries(expected)){
  const data=JSON.parse(fs.readFileSync('dist/data/quiz/'+country+'-cities.json','utf8')),cities=globalThis.AtlasCountries.countries[country].quiz.cities,order=cities.levels.map(l=>l.id);
  assert.deepEqual(data.levels.map(l=>l.id),order,country+' levels match the app');assert.deepEqual(data.levels.map(l=>l.count),counts,country+' levels are cumulative');
@@ -24,3 +24,15 @@ assert.deepEqual(france.filter(r=>r.overseas).map(r=>r.en).sort(),['Cayenne','Fo
 for(const [c,name,point] of [['spain','Las Palmas',[-15.43,28.12]],['spain','Palma',[2.65,39.57]],['germany','Halle',[11.97,51.48]],['germany','Freiburg',[7.85,47.99]],['germany','Frankfurt',[8.68,50.11]],['united-kingdom','Bangor',[-4.13,53.23]],['united-kingdom','Newport',[-3.0,51.59]],['united-kingdom','Perth',[-3.43,56.4]],['italy','Syracuse',[15.29,37.07]]])assert(near(europe(c).find(r=>r.en===name),point),c+' '+name+' is the intended city');
 assert.equal(europe('germany').find(r=>r.en==='Munich').local,'München');
 console.log('Same-name cities, Taiwan and France overseas options and Russia levels passed.');
+
+const canada=europe('canada'),argentina=europe('argentina');
+assert.equal(new Set(canada.map(r=>r.region)).size,13,'Canada includes every province and territory');
+assert.equal(new Set(argentina.map(r=>r.region)).size,24,'Argentina includes every province and Buenos Aires City');
+for(const [name,region]of [["St. John's",'CA-NL'],['Saint John','CA-NB'],['Richmond','CA-BC'],['London','CA-ON'],['Victoria','CA-BC'],['Fort McMurray','CA-AB']])assert.equal(canada.find(r=>r.en===name)?.region,region,name+' is the intended Canadian city');
+for(const [name,region]of [['Buenos Aires','AR-02'],['Córdoba','AR-14'],['San Francisco','AR-14'],['Junín','AR-06'],['General Roca','AR-62'],['Río Grande','AR-94']])assert.equal(argentina.find(r=>r.en===name)?.region,region,name+' is the intended Argentine city');
+const {createNameRound,submitName}=await import('../dist/name-quiz-engine.mjs');
+for(const [records,inputs]of [[canada,['Montreal','Quebec City','Sudbury',"St Johns",'Saint John']],[argentina,['Cordoba','San Carlos de Bariloche','Catamarca','Oran']]]){
+ const round=createNameRound(records.map(r=>({code:r.id,en:r.en,zh:r.local,aliases:r.aliases})));
+ for(const input of inputs)assert.equal(submitName(round,input).status,'correct',input+' is accepted');
+}
+console.log('Canada and Argentina: four tiers, all province/territory coverage, intended same-name places and typing aliases passed.');

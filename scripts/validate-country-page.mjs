@@ -6,8 +6,8 @@ import {mountChinaPage} from '../dist/china-page.mjs';
 import {koreaPanel} from '../dist/korea-panel.mjs';
 import {mongoliaPanel} from '../dist/mongolia-panel.mjs';
 
-class Element{constructor(){this.dataset={};}setAttribute(){}insertBefore(){}}
-globalThis.document={createElement:()=>new Element(),querySelector:()=>new Element(),getElementById:()=>new Element()};
+class Element{constructor(){this.dataset={};}setAttribute(){}insertBefore(){}addEventListener(){}querySelectorAll(){return [];}}
+globalThis.document={body:{insertAdjacentHTML(){}},createElement:()=>new Element(),querySelector:()=>new Element(),getElementById:()=>new Element()};
 const pages=[['china',mountChinaPage().innerHTML],['korea',koreaPanel],['mongolia',mongoliaPanel]];
 function adapter(file,context){
  const source=fs.readFileSync('dist/'+file,'utf8'),assignment=/(?:const )?sidebar=createCountryPage\(/.exec(source);

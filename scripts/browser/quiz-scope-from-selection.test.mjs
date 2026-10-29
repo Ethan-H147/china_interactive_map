@@ -7,10 +7,10 @@ export default [{name:'China province selection opens its prefecture quiz',optio
  assert.equal(await p.evaluate('document.getElementById("cn-quiz-level").value'),'provinces','No selection keeps the province quiz');
  await p.tap('#tab-layers');await p.evaluate('selectRegion(provinceLayers.get(440000),440000,false)');await p.settle();
  await p.tap('#tab-quiz');await p.settle();
- assert.equal(await p.evaluate('document.getElementById("quiz-scope").value'),'440000','Guangdong is the quiz scope');
- assert.equal(await p.evaluate('document.getElementById("quiz-panel").hidden'),false,'Prefecture quiz panel is open');
+ assert.equal(await p.evaluate('document.getElementById("cn-prefectures-quiz-scope").value'),'440000','Guangdong is the quiz scope');
+ assert.equal(await p.evaluate('document.getElementById("cn-prefectures-quiz-panel").hidden'),false,'Prefecture quiz panel is open');
  assert.equal(await p.evaluate('document.getElementById("china-quiz-level").value'),'prefectures');
- assert.equal(await p.evaluate('document.getElementById("quiz-start").disabled'),false);
+ assert.equal(await p.evaluate('document.querySelector("#cn-prefectures-quiz-panel [data-q=start]").disabled'),false);
 }},{name:'US state selection opens its county quiz',options:{width:1280,height:900},async run(p,base){
  await p.open(base,'#united-states');
  await p.evaluate('void map.jumpTo({center:[-75.5,42.9],zoom:5.5})');await p.settle();

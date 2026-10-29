@@ -4,6 +4,7 @@ import './countries.js';
 
 const {countries}=globalThis.AtlasCountries;
 const suffix='-motion';
+const inQuiz=()=>globalThis.document?.getElementById?.('map-shell')?.dataset.quiz==='true';
 export function queryRegions(map,point,{layers,...options}){
  const ids=layers.filter(id=>map.getLayer(id)).flatMap(id=>map.getLayer(id+suffix)?[id,id+suffix]:[id]);
  return map.queryRenderedFeatures(point,{...options,layers:ids}).map(feature=>feature.layer.id.endsWith(suffix)?{...feature,layer:{...feature.layer,id:feature.layer.id.slice(0,-suffix.length)}}:feature);
@@ -17,8 +18,14 @@ export function setFeatureState(map,target,state){
 
 export function createMotionRenderer(map,initialCountry='china',{startAfter}={}){
  let nativeCountry=!!countries[initialCountry]&&!countries[initialCountry].motionLayers;
- let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise;
+ let sources,active=false,restoring=false,restoreListener,restoreResolve,restoreTimer,captureListener,capturePromise,captureCancel;
  let generation=0,restorePromise;
+ let warmCleanup,warmIdle;const warming=new Set();
+ function stopWarming(){
+  if(warmIdle){map.off('idle',warmIdle);warmIdle=null;}warmCleanup?.();warmCleanup=null;
+  for(const id of warming)if(map.getLayer(id)){setLayerVisible(map,id,false);getMapScene(map)?.setLayerWarming(id,false);}warming.clear();
+ }
+ function prepareWhenIdle(){if(!getMapScene(map)||warmIdle||nativeCountry||inQuiz())return;warmIdle=()=>{warmIdle=null;void prepare();};map.once('idle',warmIdle);}
  const urls=new Map(),layers=new Map(),dynamicKeys=new Map();
  const frame=document.createElement('canvas');
  frame.className='map-handoff-frame';frame.setAttribute('aria-hidden','true');
@@ -30,7 +37,7 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
   if(capturePromise)return capturePromise;
   capturePromise=new Promise(resolve=>{
    const timer=setTimeout(()=>finish(false),400);
-   const finish=value=>{clearTimeout(timer);map.off('render',captureListener);captureListener=undefined;capturePromise=undefined;resolve(value);};
+   const finish=value=>{clearTimeout(timer);map.off('render',captureListener);captureListener=undefined;capturePromise=undefined;captureCancel=undefined;resolve(value);};captureCancel=finish;
    captureListener=()=>{
     try{
      // Copy during render, before WebGL discards its drawing buffer.
@@ -49,7 +56,8 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
  function sourceUrl(source,data){const url=URL.createObjectURL(data),previous=urls.get(source);urls.set(source,url);return{url,previous};}
  const countryLoads=new Map(),countrySources=new Map(),workers=new Map();
  function loadCountry(country){
-  nativeCountry=country==='china'||globalThis.AtlasEntry?.lowMemory||!!countries[country]&&!countries[country].motionLayers;
+  stopWarming();
+  nativeCountry=globalThis.AtlasEntry?.lowMemory||!!countries[country]&&!countries[country].motionLayers;
   if(nativeCountry)return Promise.resolve(false);
   if(countryLoads.has(country))return countryLoads.get(country);
   const promise=new Promise(resolve=>{
@@ -116,6 +124,8 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
   restoring=false;
  }
  async function begin(){
+  stopWarming();
+  if(inQuiz())return false;
   if(nativeCountry)return false;
   if(active&&!restoring)return true;
   if(!sources)return false;
@@ -135,38 +145,49 @@ export function createMotionRenderer(map,initialCountry='china',{startAfter}={})
   for(const [original,entry] of layers){setLayerVisible(map,entry.id,entry.visibility==='visible');setLayerVisible(map,original,false);}
   // Wait for the small overlay, rather than unrelated satellite tile requests.
   // A failed source must never leave navigation locked or hide the real map.
-  const visible=[...new Set([...layers.values()].filter(entry=>entry.visibility==='visible').map(entry=>map.getLayer(entry.id).source))];
+  const visible=[...new Set([...layers.values()].filter(entry=>map.getLayer(entry.id)&&map.getLayoutProperty(entry.id,'visibility')!=='none').map(entry=>map.getLayer(entry.id).source))];
   const loaded=await new Promise(resolve=>{
    let timer;
    const finish=value=>{map.off('render',check);clearTimeout(timer);resolve(value);};
    const check=()=>{if(visible.every(id=>map.isSourceLoaded(id)))finish(true);};
-   map.on('render',check);timer=setTimeout(()=>finish(false),400);map.triggerRepaint();
+   map.on('render',check);timer=setTimeout(()=>finish(false),80);check();map.triggerRepaint();
   });
   if(token!==generation)return false;
-  if(!loaded){await end();return false;}
+  if(!loaded){active=false;restoreOriginals();clearOverlay(++generation);return false;}
   releaseFrame();
   return true;
  }
- function end(){
+ function end({interactive=false}={}){
+  if(interactive){captureCancel?.(false);stopWarming();if(active||restoring){active=false;restoreOriginals();clearOverlay(++generation);}else releaseFrame();return Promise.resolve();}
   if(restoring)return restorePromise;
-  if(!active)return Promise.resolve();active=false;restoring=true;
+  if(!active){prepareWhenIdle();return Promise.resolve();}active=false;restoring=true;
   const token=++generation;
   const complete=new Promise(resolve=>{restoreResolve=resolve;});
   restorePromise=complete;
   holdFrame().then(()=>{
    if(token!==generation)return;
    restoreOriginals();
-   const visible=[...new Set([...layers].filter(([,entry])=>entry.visibility==='visible').map(([id])=>map.getLayer(id).source))];
+   const visible=[...new Set([...layers].filter(([id])=>map.getLayer(id)&&map.getLayoutProperty(id,'visibility')!=='none').map(([id])=>map.getLayer(id).source))];
    restoreListener=()=>{if(visible.every(id=>map.isSourceLoaded(id)))clearOverlay(token);};
    restoreTimer=setTimeout(()=>clearOverlay(token),1000);
-   map.on('render',restoreListener);map.triggerRepaint();
+   map.on('render',restoreListener);restoreListener();map.triggerRepaint();
   });
   return complete;
  }
  window.addEventListener('pagehide',event=>{if(!event.persisted)urls.forEach(url=>URL.revokeObjectURL(url));});
- async function prepare(){if(sources&&!active&&!restoring&&map.getStyle())install();}
+ async function prepare(){
+  if(!sources||nativeCountry||active||restoring||inQuiz()||!map.getStyle())return;stopWarming();install();const scene=getMapScene(map);if(!scene?.canWarmLayers)return;
+  // Index the exact preview paint buckets while idle. The pinned renderer skips
+  // their draw passes and hit tests until the motion handoff takes ownership.
+  const visibleSources=new Set();
+  for(const [original,{id}]of layers){const layer=map.getLayer(id);if(!layer||!['fill','line'].includes(layer.type)||!sources[map.getLayer(original)?.source]?.data)continue;scene.setLayerWarming(id,true);warming.add(id);setLayerVisible(map,id,true);visibleSources.add(layer.source);}
+  if(!warming.size)return;
+  const check=()=>{if([...visibleSources].every(id=>map.isSourceLoaded(id)))stopWarming();};
+  const timer=setTimeout(stopWarming,2000);warmCleanup=()=>{clearTimeout(timer);map.off('render',check);};map.on('render',check);map.triggerRepaint();
+ }
  ready.then(prepare).catch(()=>{});
  return{ready,prepare,begin,end,loadCountry,unloadCountry(country){
+  stopWarming();
   const running=workers.get(country);if(running){running.worker.terminate();running.resolve(false);workers.delete(country);}
   for(const source of countrySources.get(country)||[]){
    for(const [original,entry]of [...layers])if(map.getLayer(entry.id)?.source===source+suffix){map.removeLayer(entry.id);layers.delete(original);}

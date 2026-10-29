@@ -31,7 +31,7 @@ const context=vm.createContext({applySharedPlacePages,sharedPlacePage,sharedPlac
  // Outlines are decoded in MapLibre's workers (geo-pack.mjs addWorkerSource); the source names its file.
  addWorkerSource:async(map,id,url,options,transform)=>{map.addSource(id,{...options,data:url,transform});return true;},
  addInternationalBorder(map,id,source){map.addLayer({id,type:'line',source,paint:{}});},setLayerVisible(map,id,visible){if(map.getLayer(id))map.setLayoutProperty(id,'visibility',visible?'visible':'none');},lineWidth:regionalLineWidth,lineSourceOptions:{type:'geojson'},internationalLineSourceOptions:{type:'geojson',tolerance:.125},adaptiveOpacity:()=>1,renderStatistics(anchor,key){statistics.push(key);},clearStatistics(){},renderPlaceOverview(anchor,record){anchor.hidden=!record?.overview;}});
-const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replace("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
+const source=fs.readFileSync('dist/regional-country.mjs','utf8').replace(/^import .*;\r?\n/gm,'').replace('export async function','async function').replaceAll("new URL('./country-boundary-worker.mjs',import.meta.url)","'worker.mjs'");
 const breadcrumbSource=fs.readFileSync('dist/country-page.mjs','utf8');
 vm.runInContext(breadcrumbSource.slice(breadcrumbSource.indexOf('export function setMapBreadcrumb')).replaceAll('export function','function'),context);
 vm.runInContext(source,context);
@@ -46,9 +46,9 @@ assert(atlas.ready);assert(!sources.has('test-second'),'Entry does not load dist
 const originalBounds=map.getBounds;map.getRenderWorldCopies=()=>true;map.getBounds=()=>({getWest:()=>-330,getEast:()=>-329,getSouth:()=>50,getNorth:()=>51});atlas.updateLabels();assert(labelRecords.some(r=>r.id==='A'&&r.center[0]===-329.5),'Regional labels follow the visible world copy');assert.equal(records[0].center[0],30.5,'Wrapped label positions never mutate the catalogue');map.getBounds=originalBounds;map.getRenderWorldCopies=()=>false;
 assert.equal(atlas.hoverAt(null,'A').en,'A','The shared overview resolves full catalogue names without selecting');assert.equal(atlas.getSelection(),null);
 const select=id=>{element('test-province').value=id;return element('test-province').onchange();};
-const first=select('A');await flush();const obsolete=jobs.at(-1);
-const second=select('B');await flush();assert(obsolete.terminated,'Selecting a new region terminates the previous worker');
-complete(jobs.at(-1));await second;await first;assert.equal(atlas.getSelection(),'B');assert.equal(fits.length,1,'Cancelled selections never move the camera');
+const first=select('A');await flush();const obsolete=jobs.at(-1);assert.equal(fits.length,1,'The camera starts before district loading finishes');
+const second=select('B');await flush();assert.equal(fits.length,2,'The latest selection immediately replaces the camera target');assert(obsolete.terminated,'Selecting a new region terminates the previous worker');
+complete(jobs.at(-1));await second;await first;assert.equal(atlas.getSelection(),'B');assert.equal(fits.length,2,'Stale boundary responses never start another camera movement');
 assert(sources.has('test-second'));assert.equal([...sources.keys()].filter(id=>id==='test-second').length,1);
 assert(states.get('test-first|B')?.selected,'Selection sets GPU state on the existing province source');const fillStyle=JSON.stringify(layers.get('test-first-fill').paint['fill-color']);await atlas.restore('B1');assert(!states.has('test-first|B'),'Moving to a district clears the old province selection');assert(states.get('test-second|B1')?.selected);assert.equal(JSON.stringify(layers.get('test-first-fill').paint['fill-color']),fillStyle,'Selection does not recompile fill paint');assert(!element('test-detail-flag-source').hidden);assert.equal(element('test-detail-flag').src,'city.svg');assert.equal(statistics.at(-1),'test:B1','City selection renders its own card');
 const third=select('A');await flush();assert(!sources.has('test-second'),'Previous district geometry is released before fetching another region');

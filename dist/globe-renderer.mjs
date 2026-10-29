@@ -3,11 +3,21 @@
 // for each source. Loading, retention, fading and source events still run normally.
 const sourceUpdates=new WeakMap(),coverageControls=new WeakMap();
 const coverageControl=transform=>{let value=coverageControls.get(transform);if(!value){value={enabled:true,updates:0,calculatedCoverages:0,reusedCoverages:0};coverageControls.set(transform,value);}return value;};
-export function runSourceUpdate(transform,update){
+export function runSourceUpdate(transform,update,style){
  const control=coverageControl(transform);control.updates++;
  if(!control.enabled)return update();
- const previous=sourceUpdates.get(transform);sourceUpdates.set(transform,{entries:[]});
+ const previous=sourceUpdates.get(transform);sourceUpdates.set(transform,{entries:[],style,symbols:style?new Set(style._order.map(id=>style._layers[id]).filter(layer=>layer.type==='symbol').map(layer=>layer.source)):null,order:style?._order,count:style?._order.length,changed:style?._changed});
  try{return update();}finally{if(previous)sourceUpdates.set(transform,previous);else sourceUpdates.delete(transform);}
+}
+// Non-symbol sources cannot add symbol height. Keep the native high-water mark,
+// and let symbol-bearing sources run their normal constant/data-driven scan.
+let elevationScanReuse=true;
+export const setElevationScanReuse=value=>{elevationScanReuse=!!value;};
+export function maxContentElevation(native,manager){
+ const batch=sourceUpdates.get(manager.transform);
+ if(!elevationScanReuse||!coverageControl(manager.transform).enabled||!batch?.symbols||batch.changed!==batch.style._changed||batch.order!==batch.style._order||batch.count!==batch.style._order.length||batch.symbols.has(manager.id))return native.call(manager);
+ const control=coverageControl(manager.transform);control.elevationScansAvoided=(control.elevationScansAvoided||0)+1;
+ return manager._maxContentElevationSeen??0;
 }
 export function coveringTiles(native,transform,options){
  // One prepared world tile has no distinct globe copies. Keep its identity

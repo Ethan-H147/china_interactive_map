@@ -1,4 +1,4 @@
-const quizOrigins=new Set(['https://china-boundary-atlas.hys0423.chatgpt.site','https://ethan-h147.github.io']);
+const quizOrigins=new Set(['https://china-boundary-atlas.hys0423.chatgpt.site','https://ethan-h147.github.io','https://china-interactive-map.huyusheng777.workers.dev']);
 const quizAuthUrl='https://odenagmobrswlzkljayf.supabase.co/auth/v1/user';
 const quizPublicKey='sb_publishable_P6e6nDasSVNyzSP2BgYcaw_BxX_Atsk';
 function quizHeaders(origin){return {'Content-Type':'application/json','Cache-Control':'private, no-store','Vary':'Origin',...(origin?{'Access-Control-Allow-Origin':origin}:{})};}
@@ -7,7 +7,7 @@ export function validateQuizAttempt(value){
  if(!value||typeof value!=='object'||Array.isArray(value))throw Error('Invalid quiz result');
  const text=(key,max,pattern)=>{const v=value[key];if(typeof v!=='string'||v.length>max||pattern&&!pattern.test(v))throw Error('Invalid '+key);return v;};
  const integer=(key,min,max)=>{const v=value[key];if(!Number.isSafeInteger(v)||v<min||v>max)throw Error('Invalid '+key);return v;};
- const id=text('id',36,/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i),country=text('country',60,/^[a-z0-9-]+$/),mode=text('mode',10,/^(find|name|identify)$/),level=integer('level',1,2),scope=text('scope',80,/^[\w-]*$/),scopeLabel=text('scopeLabel',160),poolHash=text('poolHash',32,/^[\da-f]+$/),total=integer('total',1,2000),correct=integer('correct',0,total),hints=integer('hints',0,total),reveals=integer('reveals',0,total),elapsedMs=integer('elapsedMs',0,604800000);
+ const id=text('id',36,/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i),country=text('country',60,/^[a-z0-9-]+$/),mode=text('mode',10,/^(find|name|identify)$/),level=integer('level',1,3),scope=text('scope',80,/^[\w-]*$/),scopeLabel=text('scopeLabel',160),poolHash=text('poolHash',32,/^[\da-f]+$/),total=integer('total',1,2000),correct=integer('correct',0,total),hints=integer('hints',0,total),reveals=integer('reveals',0,total),elapsedMs=integer('elapsedMs',0,604800000);
  if(typeof value.completed!=='boolean'||typeof value.fullRound!=='boolean')throw Error('Invalid completion');
  const at=Date.parse(value.finishedAt);if(!Number.isFinite(at)||at<Date.UTC(2020,0,1)||at>Date.now()+86400000)throw Error('Invalid result date');
  return {id,country,level,mode,scope,scopeLabel,poolHash,total,correct,hints,reveals,elapsedMs,completed:value.completed,fullRound:value.fullRound,finishedAt:new Date(at).toISOString()};

@@ -1,3 +1,4 @@
+import {createLatestScope} from './interaction-policy.mjs';
 import {loadCompressed} from './korea-data.mjs';
 const empty=()=>({type:'FeatureCollection',features:[]});
 
@@ -12,22 +13,11 @@ export async function prepareScopedCountry(country){
 // Keep one area in the renderer. Serial replacements bound memory use and prevent
 // a slower previous selection from replacing the most recent one.
 export function createSubdivisionScope(map,country,{changed=()=>{}}={}){
- let wanted=null,loaded=null,running=null,epoch=0;
  const suffixes=['','-edges','-selection-edges'];
- async function drain(token){
-  while(token===epoch&&wanted!==loaded){
-   const parent=wanted;loaded=undefined;changed();
-   for(const suffix of suffixes){const source=map.getSource(country+'-second'+suffix);if(!source||token!==epoch)return;await source.setData(empty());}
-   if(token!==epoch)return;if(parent!==wanted)continue;
-   if(parent)for(const suffix of suffixes){
-    if(token!==epoch||parent!==wanted)break;
-    const id=country+'-second'+suffix,url=new URL('data/scoped/'+country+'/second/'+parent+suffix+'.bin',import.meta.url);
-    await map.getSource(id).setData('atlas-data://'+id+'?url='+encodeURIComponent(url.href));
-   }
-   if(token!==epoch)return;
-   if(parent===wanted){loaded=parent;changed();}
+ return createLatestScope(async(parent,current)=>{
+  for(const suffix of suffixes){if(!current())return;
+   const id=country+'-second'+suffix,url=new URL('data/scoped/'+country+'/second/'+parent+suffix+'.bin',import.meta.url);
+   await map.getSource(id)?.setData('atlas-data://'+id+'?url='+encodeURIComponent(url.href)+(suffix==='-selection-edges'?'&transform=selection-outline':''));
   }
- }
- return {get loaded(){return loaded;},ensure(parent){wanted=parent||null;if(!running&&wanted!==loaded){const token=epoch,task=Promise.resolve().then(()=>drain(token)).finally(()=>{if(running===task)running=null;});running=task;}return running||Promise.resolve();},clear(){epoch++;wanted=loaded=null;running=null;for(const suffix of suffixes)Promise.resolve(map.getSource(country+'-second'+suffix)?.setData(empty())).catch(()=>{});}};
+ },{clear:async()=>{for(const suffix of suffixes)await map.getSource(country+'-second'+suffix)?.setData(empty());},changed});
 }
-

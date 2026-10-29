@@ -14,11 +14,11 @@ export default [
   assert.equal(await page.evaluate('AtlasCountryMemory.snapshot().limit'),mobile?1:3);
   assert.equal(await page.evaluate('chinaCounties'),true,'Every county remains searchable');
   assert.equal(await page.evaluate('chinaCountyScope.loaded'),null);
-  assert(!page.requests.some(url=>/china-(?:boundaries|overview|counties)\.pack\.bin|china-motion\.bin|china-mobile\/counties\//.test(url)),'Opening China does not download country-wide packs or county shapes');
+  assert(!page.requests.some(url=>/china-(?:boundaries|overview|counties)\.pack\.bin|china-mobile\/counties\//.test(url)),'Opening China does not download country-wide packs or county shapes');
   if(mobile)assert(!page.requests.some(url=>url.includes('/europe/')&&url.endsWith('/context.bin')),'Unused country previews remain unloaded');
-  assert.equal(await page.evaluate("map.getLayer('province-selection').source"),'provinces','Selection reuses the polygon index');
+  assert.equal(await page.evaluate("map.getLayer('province-selection').source"),'provinces-selection-edges','Selection shares the outline profile');
   await page.evaluate('selectRegion(provinceLayers.get(220000),220000,true)');await page.settle();
-  assert((await page.evaluate("map.queryRenderedFeatures({layers:['province-selection-repaired']}).length"))>0,'Jilin uses its exterior, not the internal repair triangles');
+  assert((await page.evaluate("map.queryRenderedFeatures({layers:['province-selection']}).length"))>0,'Jilin uses its exterior, not the internal repair triangles');
   await scope(page,510100,510000);
   await scope(page,440300,440000);
   await page.evaluate('selectRegion(regionByCode.get(510100),510000,false);selectRegion(regionByCode.get(440100),440000,false);selectRegion(regionByCode.get(440300),440000,false)');

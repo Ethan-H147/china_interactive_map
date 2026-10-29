@@ -56,11 +56,11 @@ answers. Full rounds and shorter question sets have separate records, as do
 different pools, scopes and quiz types. The dashboard's fastest display selects
 full rounds. Timers stop on the final answer. Practice does not replace a record.
 
-Both published frontends call the Site's /api/quiz-records endpoint. Its Worker
+The Site, GitHub Pages and Cloudflare frontends call the Site's /api/quiz-records endpoint. Its Worker
 verifies the user's bearer token against Supabase Auth and derives ownership from
 the verified response. Every database query binds that user ID; client-supplied
 ownership is ignored. Records live in the Site's D1 DB binding, not in Supabase
-metadata or JWT claims. No Supabase service-role key is used. CORS admits the two
+metadata or JWT claims. No Supabase service-role key is used. CORS admits those three
 published origins and local development origins; authenticated responses are
 private and uncached.
 

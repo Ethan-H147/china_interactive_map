@@ -37,39 +37,7 @@ export function mountChinaPage(){
  actions:`<div class="place-actions"><button id="save-place" class="quiet-button" data-nav aria-pressed="false">Save place</button><button id="compare-place" class="quiet-button" data-nav hidden>Compare</button><button id="copy-place" class="quiet-button" data-nav>Copy link</button></div><p id="place-action-status" class="quiz-note" role="status" hidden></p><input id="place-share-link" aria-label="Place link" readonly hidden><nav id="region-articles" class="region-articles" aria-label="Wikipedia articles" hidden></nav><section id="landmark-gallery" class="landmark-gallery" aria-label="Landmark photos" hidden></section>`,
  footer:`<button id="compare-open" data-nav disabled>Compare regions</button><button id="about-open">Sources & coverage</button><span class="creator-credit">Created by Ethan Hu</span>`,
  extraTabs:`<button id="tab-quiz" aria-pressed="false">Quiz</button><button id="tab-extra" aria-pressed="false">Extra info</button>`,
- extraPanels:`<section id="quiz-panel" hidden aria-labelledby="quiz-title">
-        <div id="quiz-setup">
-          <h2 id="quiz-title">Find the prefecture</h2>
-          <label class="field-label" for="quiz-type">Quiz type</label><select id="quiz-type" data-quiz-nav disabled><option value="find">Click the named prefecture</option><option value="name">Type every prefecture name</option><option value="identify">Name the highlighted prefecture</option></select><p id="quiz-description">Click the named place on the map.</p>
-          <label class="field-label" for="quiz-scope">Scope</label><select id="quiz-scope" data-quiz-nav disabled><option value="">All China</option></select>
-          <label class="quiz-toggle" id="quiz-taiwan-option"><span>Include Taiwan</span><input id="quiz-taiwan" type="checkbox" checked data-quiz-nav disabled></label>
-          <p id="quiz-scope-note" class="quiz-note"></p>
-          <label id="quiz-length-label" class="field-label" for="quiz-length">Questions</label><select id="quiz-length" data-quiz-nav disabled><option value="all" selected>All</option><option value="5">5</option><option value="10">10</option><option value="20">20</option></select>
-          <label class="quiz-toggle"><span>Keep answer colors</span><input id="quiz-keep-colors" type="checkbox" checked></label><p id="quiz-count" class="quiz-note" aria-live="polite">Loading places…</p>
-          <button id="quiz-start" class="quiz-primary" data-quiz-nav disabled>Start quiz</button><button id="quiz-resume" class="quiz-text-button" data-quiz-nav hidden>Resume saved round</button><p id="quiz-best" class="quiz-note" hidden></p>
-        </div>
-        <section id="quiz-naming" hidden aria-label="Name every prefecture">
-          <h2 id="name-scope"></h2><div class="quiz-progress"><span id="name-progress"></span><span id="name-timer" aria-label="Elapsed time">0:00</span></div>
-          <div class="quiz-progress-track"><div id="name-progress-bar"></div></div>
-          <form id="name-form" autocomplete="off"><label class="field-label" for="name-answer">Prefecture name</label><div class="name-entry"><input id="name-answer" placeholder="English or Chinese" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="160"><button class="quiz-primary" type="submit">Add</button></div></form>
-          <p id="name-feedback" role="status" aria-live="polite"></p>
-          <div id="name-live-actions" class="name-actions"><button id="name-hint" class="quiet-button" data-quiz-nav>Give me a hint</button><button id="name-finish" class="quiet-button" data-quiz-nav>Finish &amp; reveal</button><button id="name-pause" class="quiz-text-button" data-quiz-nav>Save &amp; exit</button></div>
-          <div id="name-results" hidden><h3 id="name-result-title" tabindex="-1"></h3><p id="name-summary"></p><p class="quiz-note">Green: named. Red: not named.</p><button id="name-practice" class="quiz-primary" data-quiz-nav>Practice missed places</button><button id="name-change" class="quiz-text-button" data-quiz-nav>Choose another province</button></div>
-          <p id="name-save-note" class="quiz-note"></p><h3 id="name-list-title" class="name-list-title">Named places</h3><div id="name-list" class="name-list"></div>
-        </section>
-        <section id="quiz-round" hidden aria-label="Current question">
-          <div class="quiz-progress"><span id="quiz-progress-text"></span><span id="quiz-score"></span></div>
-          <div class="quiz-progress-track" aria-hidden="true"><div id="quiz-progress-bar"></div></div>
-          <p class="quiz-instruction">Find on the map</p><h2 id="quiz-question" tabindex="-1"></h2><p id="quiz-question-chinese" lang="zh"></p>
-          <form id="quiz-identify-form" class="name-entry" hidden><label class="sr-only" for="quiz-identify-answer">Prefecture name</label><input id="quiz-identify-answer" placeholder="English or Chinese" autocomplete="off" maxlength="160"><button type="submit" class="quiz-primary">Submit</button></form><div id="quiz-feedback" class="quiz-feedback" role="status" aria-live="polite" hidden><strong id="quiz-feedback-title"></strong><p id="quiz-feedback-detail"></p></div>
-          <div class="quiz-round-actions"><button id="quiz-reveal" class="quiet-button" data-quiz-nav>Show answer</button><button id="quiz-view" class="quiet-button" data-quiz-nav hidden>View answer</button><button id="quiz-next" class="quiz-primary" data-quiz-nav hidden>Next question</button></div>
-        </section>
-        <section id="quiz-results" hidden aria-labelledby="quiz-results-title">
-          <h2 id="quiz-results-title" tabindex="-1">Results</h2><p id="quiz-result-score" class="quiz-result-score"></p><p id="quiz-result-detail"></p>
-          <div id="quiz-review" class="quiz-review"></div>
-          <button id="quiz-again" class="quiz-primary" data-quiz-nav>Play again</button><button id="quiz-configure" class="quiz-text-button" data-quiz-nav>Change scope</button>
-        </section>
-      </section>`,
+ extraPanels:`<section id="quiz-panel" hidden></section>`,
  afterPanels:chinaInfoPanel.replace('</section>',crossStraitLink+'</section>'),
  selectionId:`selection`,
  selectionHidden:true,

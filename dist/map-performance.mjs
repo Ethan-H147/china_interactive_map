@@ -38,8 +38,7 @@ export function attach(map,{refreshLabels=()=>{}}={}){
   if(context!==budgetContext||performance.now()-budgetLearnedAt>60000){budgetContext=context;budgetLearnedAt=performance.now();budget.reset();}
  }
  function applyRatio(){
-  const overview=globalThis.AtlasGlobeOverviewController?.snapshot();
-  const ratio=reduced&&!(overview?.ready&&map.getZoom()<6)?budget.ratio():targetRatio(globalThis.devicePixelRatio,preferences.quality,false);
+  const ratio=reduced?budget.ratio():targetRatio(globalThis.devicePixelRatio,preferences.quality,false);
   const boundedRatio=globalThis.AtlasEntry?.lowMemory?Math.min(ratio,2):ratio;
   if(Math.abs(map.getPixelRatio()-boundedRatio)>.001){settingRatio=true;try{if(!resizeDuringMotion(map,boundedRatio)){if(map.isMoving())return;map.setPixelRatio(boundedRatio);}}finally{settingRatio=false;}}
  }

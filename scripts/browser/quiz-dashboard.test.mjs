@@ -29,7 +29,7 @@ export async function chooseCountry(p,country){
 export async function launch(p,country,level=1){
  await chooseCountry(p,country);if(country==='china')await p.evaluate("document.querySelector('[data-quiz-level]').value="+JSON.stringify(String(level))+";document.querySelector('[data-quiz-level]').dispatchEvent(new Event('change'))");await p.tap('.quiz-mode-choice:has([data-quiz-mode=name])');
  await p.tap('[data-play-quiz]');await p.settle();await p.waitFor("currentAtlas()?.quiz?.panel&&!currentAtlas().quiz.panel.hidden");
- const id=await p.evaluate('currentAtlas().quiz.panel.id');await p.waitFor("!document.querySelector('#"+id+" [data-q=start]').disabled");await p.tap('#'+id+' [data-q=start]');await p.settle();return id;
+ const id=await p.evaluate('currentAtlas().quiz.panel.id');await p.waitFor("!document.querySelector('#"+id+" [data-q=start]').disabled");await p.tap('#'+id+' [data-q=start]');await p.waitFor('currentAtlas().quiz.active');await p.settle();return id;
 }
 
 const names=JSON.parse(gunzipSync(fs.readFileSync('dist/data/europe/san-marino/catalogue.bin'))).records.filter(r=>r.level===1).map(r=>r.en);
@@ -43,10 +43,10 @@ export default [
   await p.tap('[data-account-section=profile]');await p.tap('#account-signout');await p.waitFor(`document.getElementById('atlas-account').dataset.signedIn==='false'`);await p.key('Escape');await login(p,'second@example.test');assert.equal(await p.evaluate(`document.querySelectorAll('.quiz-history-row').length`),0,'Another account cannot see the first account’s results');
   await p.tap('[data-account-section=quizzes]');assert.equal(await p.evaluate(`document.querySelector('.quiz-stat strong').textContent`),'0');await p.screenshot('quiz-dashboard-account-isolation');
  }},
- {name:'Phone dashboard and new subdivision quiz overlay',options:{width:390,height:844,mobile:true},async run(p,base){
+ {name:'Phone dashboard and native subdivision quiz',options:{width:390,height:844,mobile:true},async run(p,base){
   await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.open(base,'#japan');await p.evaluate(`AtlasSettings.setSettings({motion:'reduce'})`);await login(p);await p.screenshot('quiz-dashboard-phone');assert(await p.evaluate(`document.getElementById('atlas-account').scrollWidth<=document.getElementById('atlas-account').clientWidth`));
-  await chooseCountry(p,'japan');await p.waitFor("document.querySelector('[data-country-flag] img').getBoundingClientRect().width>0");await p.screenshot('quiz-country-japan-phone');assert(await p.evaluate("document.getElementById('atlas-account').scrollWidth<=document.getElementById('atlas-account').clientWidth"));const panel=await launch(p,'japan');assert.match(await p.evaluate(`document.querySelector('#${panel} [data-q=progress]').textContent`),/47/);assert(await p.evaluate(`map.getLayer('quiz-overlay-japan-fill')!==undefined`));
+  await chooseCountry(p,'japan');await p.waitFor("document.querySelector('[data-country-flag] img').getBoundingClientRect().width>0");await p.screenshot('quiz-country-japan-phone');assert(await p.evaluate("document.getElementById('atlas-account').scrollWidth<=document.getElementById('atlas-account').clientWidth"));const panel=await launch(p,'japan');assert.match(await p.evaluate(`document.querySelector('#${panel} [data-q=progress]').textContent`),/47/);assert(await p.evaluate(`map.getLayoutProperty('japan-first-fill','visibility')!=='none'`));
   assert(await p.evaluate(`Array.from(document.querySelectorAll('#map .maplibregl-marker:not(.quiz-answer-label)')).every(e=>getComputedStyle(e).visibility==='hidden')`),'Ordinary map labels do not reveal answers');
-  await p.screenshot('japan-prefecture-quiz-phone');await p.tap('#'+panel+' [data-q=end]');assert(!await p.evaluate(`!!map.getLayer('quiz-overlay-japan-fill')`),'Quiz layers are removed on exit');
+  await p.screenshot('japan-prefecture-quiz-phone');await p.tap('#'+panel+' [data-q=end]');assert(await p.evaluate(`!!map.getLayer('japan-first-fill')`),'Native map remains installed on exit');
  }}
 ];

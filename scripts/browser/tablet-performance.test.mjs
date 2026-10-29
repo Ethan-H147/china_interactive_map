@@ -9,7 +9,7 @@ export default [{name:'tablet rendering resolution, full-quality restore, labels
  assert(await p.evaluate('!document.getElementById("map-performance").hidden'));
  await p.evaluate('window.renderRatios=[];map.on("move",()=>renderRatios.push(map.getPixelRatio()))');
  await p.drag('#map',{dx:200,dy:65},{steps:32,duration:600});await p.settle();
- assert((await p.evaluate('renderRatios')).every(r=>r===2),'Prepared world stays sharp during movement');
+ assert((await p.evaluate('renderRatios')).every(r=>r<=1.5&&r>=1),'The overview uses the shared Balanced motion budget');
  assert.equal(await p.evaluate('map.getPixelRatio()'),2,'Full sharpness restores after movement');
  assert.notDeepEqual(await p.evaluate('map.getCenter().toArray()'),start.center,'Changing resolution must not cancel the touch drag');
  assert.equal(await p.evaluate('currentAtlas().getSelection()'),start.selection);
@@ -20,7 +20,7 @@ export default [{name:'tablet rendering resolution, full-quality restore, labels
  await p.tap('[data-perf-labels]');await p.waitFor('document.querySelectorAll("#map [data-atlas-place]").length>0');
  await p.tap('[data-perf-report]');assert((await p.evaluate('document.querySelector("#map-performance textarea").value')).includes('p95'));await p.tap('[data-perf-report]');
  await p.tap('#settings-open');await select(p,'settings-rendering-quality','performance');await p.tap('#settings-close');
- await p.evaluate('renderRatios=[]');await p.drag('#map',{dx:-120,dy:20},{steps:24,duration:500});await p.settle();assert((await p.evaluate('renderRatios')).every(r=>r===2),'World view stays sharp in Performance mode');assert.equal(await p.evaluate('map.getPixelRatio()'),2);
+ await p.evaluate('renderRatios=[]');await p.drag('#map',{dx:-120,dy:20},{steps:24,duration:500});await p.settle();assert((await p.evaluate('renderRatios')).every(r=>r<=1&&r>=.75),'The overview uses the shared Performance motion budget');assert.equal(await p.evaluate('map.getPixelRatio()'),2);
  await p.tap('#settings-open');await select(p,'settings-rendering-quality','full');await p.tap('#settings-close');
  await p.evaluate('renderRatios=[]');await p.drag('#map',{dx:100,dy:10},{steps:24,duration:500});await p.settle();assert((await p.evaluate('renderRatios')).every(r=>r===2));
  await p.tap('#settings-open');await p.tap('#settings-rendering-antialias');assert(await p.evaluate('!document.getElementById("rendering-reload").hidden'));await p.tap('#rendering-reload');await p.waitFor('window.AtlasPerformanceController?.snapshot().antialiasRequested===false');await p.settle();

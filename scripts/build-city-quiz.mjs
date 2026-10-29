@@ -6,13 +6,14 @@ import fs from 'node:fs';
 import '../dist/countries.js';
 import {load,polygons,landIndex,lineIndex} from './geo-index.mjs';
 import {tiers,chinaProvinces,chinaCities,russiaCities,russiaRegions,russiaDisplay,cityAliases,europeCities,europeRegions,europeOverseas,europeDisplay,europeAliases,searchNames} from './city-quiz-definitions.mjs';
-const country=process.argv[2],codes={china:'CN',russia:'RU',spain:'ES',germany:'DE','united-kingdom':'GB',france:'FR',italy:'IT'};
+const country=process.argv[2],codes={china:'CN',russia:'RU',spain:'ES',germany:'DE','united-kingdom':'GB',france:'FR',italy:'IT',brazil:'BR',canada:'CA',argentina:'AR'};
 if(!codes[country])throw Error('Usage: build-city-quiz.mjs <country>');
 const levels=globalThis.AtlasCountries.countries[country].quiz.cities.levels,order=levels.map(l=>l.id);
 const source=load('scripts/boundary-sources/city-quiz/'+country+'-wikidata.json.gz');
 // Regions: China's provinces (with Hong Kong, Macau and Taiwan), or each atlas's first level.
 const regions=new Map();
 if(country==='china')for(const f of JSON.parse(fs.readFileSync('dist/data/provinces.json','utf8')).features){const id=String(f.properties.adcode);if(chinaProvinces[id])regions.set(id,{name:chinaProvinces[id],rings:polygons(f.geometry).flat()});}
+else if(['brazil','argentina'].includes(country)){const quiz=load('dist/data/south-america/'+country+'-first.bin'),names=new Map(quiz.records.map(r=>[r.id,r.en]));for(const f of quiz.regions.features){const r=regions.get(f.properties.id)||{name:names.get(f.properties.id),rings:[]};r.rings.push(...polygons(f.geometry).flat());regions.set(f.properties.id,r);}}
 else{const base=country==='russia'?'dist/data/russia/':'dist/data/europe/'+country+'/',names=new Map(load(base+'catalogue.bin').records.filter(r=>r.level===1).map(r=>[r.id,r.en]));for(const f of load(base+'first.bin').regions.features){const r=regions.get(f.properties.id)||{name:names.get(f.properties.id),rings:[]};r.rings.push(...polygons(f.geometry).flat());regions.set(f.properties.id,r);}}
 for(const r of regions.values()){r.inside=landIndex(r.rings);r.distance=lineIndex(r.rings);}
 // A coastal or island city may sit just off a simplified outline: within 15 km counts.
@@ -21,7 +22,7 @@ const regionId=name=>name?[...regions].find(([,r])=>r.name===name)?.[0]:null;
 const hints=country==='russia'?russiaRegions:europeRegions[country]||{},display=country==='russia'?russiaDisplay:europeDisplay[country]||{},overseas=new Set(europeOverseas[country]||[]);
 const entries=country==='china'?Object.entries(chinaCities).flatMap(([adcode,list])=>list.split(',').map(e=>{const [name,t]=[e.trim().replace(/ \w$/,''),e.trim().slice(-1)];return {name,tier:tiers[t],region:adcode};}))
  :Object.entries(country==='russia'?russiaCities:europeCities[country]).flatMap(([t,list])=>list.split(',').map(e=>({name:e.trim(),tier:tiers[t],region:regionId(hints[e.trim()])})));
-const typeScore=types=>{const t=types.join('|').toLowerCase();if(/former|constituency|electoral|subdistrict|neighbou?rhood|street|residential|community|village committee/.test(t)&&!/(city|town)/.test(t))return 0;if(/\b(province|oblast|krai|autonomous region|federal subject|island|mountain|river|lake|station|airport|temple|university|stadium|football|club)\b/.test(t)&&!/\b(city|town|commune|comune)\b/.test(t))return 0;return /city|town|metropolis|municipality|commune|comune|special administrative region|capital/.test(t)?3:/settlement|village|selo/.test(t)?2:/district|county|banner/.test(t)?1:0;};
+const typeScore=types=>{const t=types.join('|').toLowerCase();if(/former|constituency|electoral|subdistrict|neighbou?rhood|street|residential|community|village committee/.test(t)&&!/(city|town)/.test(t))return 0;if(/\b(province|oblast|krai|autonomous region|federal subject|island|mountain|river|lake|station|airport|temple|university|stadium|football|club)\b/.test(t)&&!/\b(city|town|commune|comune)\b/.test(t))return 0;return /city|town|metropolis|municipality|commune|comune|special administrative region|capital/.test(t)?3:/settlement|village|hamlet|urban service area|selo/.test(t)?2:/district|county|banner/.test(t)?1:0;};
 const fold=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'');
 // The item's own English label outranks an alias (Tolyatti was once called Stavropol).
 const nameScore=(item,name)=>item.label===name||item.label===fold(name)?3:item.names.includes(name)||item.names.includes(fold(name))?2:item.label===name+' City'||item.names.includes(name+' City')?1.5:item.names.includes(name+' District')?1:0;
@@ -37,8 +38,8 @@ for(const e of entries){
  records.push({...e,region,item});taken.add(item.id);
 }
 // Local names: the country's own language (Chinese in traditional characters for Taiwan).
-const localLabel=(item,taiwan)=>({china:taiwan?item.labels['zh-hant']||item.labels.zh:item.labels['zh-hans']||item.labels.zh,russia:item.labels.ru,spain:item.labels.es,germany:item.labels.de,france:item.labels.fr,italy:item.labels.it}[country]||'');
-const localLang=taiwan=>({china:taiwan?'zh-Hant':'zh-Hans',russia:'ru',spain:'es',germany:'de',france:'fr',italy:'it','united-kingdom':'en'}[country]);
+const localLabel=(item,taiwan)=>({china:taiwan?item.labels['zh-hant']||item.labels.zh:item.labels['zh-hans']||item.labels.zh,russia:item.labels.ru,spain:item.labels.es,germany:item.labels.de,france:item.labels.fr,italy:item.labels.it,brazil:item.labels.pt,canada:item.labels.fr,argentina:item.labels.es}[country]||'');
+const localLang=taiwan=>({china:taiwan?'zh-Hant':'zh-Hans',russia:'ru',spain:'es',germany:'de',france:'fr',italy:'it',brazil:'pt',canada:'fr',argentina:'es','united-kingdom':'en'}[country]);
 const counts=new Map();for(const r of records)counts.set(r.name,(counts.get(r.name)||0)+1);
 const ids=new Set(),out=records.map(({name,tier,region,item})=>{
  if(ids.has(item.id))throw Error(`City quiz ${country}: ${name} reuses ${item.id}`);ids.add(item.id);
