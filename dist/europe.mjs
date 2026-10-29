@@ -6,7 +6,7 @@ import {vaticanProfile} from './vatican-profile.mjs';
 const {countries,byAdapter}=globalThis.AtlasCountries;
 const definitions=Object.fromEntries(byAdapter('europe').map(id=>[id,{name:countries[id].en,prefix:countries[id].prefix,lang:countries[id].lang,...countries[id].map}]));
 const nationalThumbnails={'united-kingdom':'vendor/flag-gb-3x5.svg',ireland:'vendor/flag-ie-2x3.svg'};
-export const configurations=Object.fromEntries(Object.entries(definitions).map(([country,definition])=>[country,{country,firstLabel:'Country',searchLabel:'Find a place',...definition,base:`data/europe/${country}/`,nationalFlag:nationalThumbnails[country]||`vendor/flag-${definition.prefix}.svg`,contextLabels:true,flags:{},detailFlags:{},hasStatistics:()=>!!definition.statistics,attribution:`${definition.name}: <a href="data/europe/${country}/sources.json">Boundary sources & coverage</a>${definition.boundaryCredit?' · '+definition.boundaryCredit:''}`}]));
+export const configurations=Object.fromEntries(Object.entries(definitions).map(([country,definition])=>[country,{country,firstLabel:'Country',searchLabel:'Find a place',...definition,base:`data/europe/${country}/`,nationalFlag:nationalThumbnails[country]||`vendor/flag-${definition.prefix}.svg`,contextLabels:true,flags:{},detailFlags:{},hasStatistics:()=>!!definition.statistics,attribution:`${definition.name}: <a href="data/europe/${country}/sources.json">Boundary sources & coverage</a>${definition.boundaryCredit?' · '+definition.boundaryCredit:''}${['qatar','saudi-arabia'].includes(country)?' · Inlet coast © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>':''}`}]));
 export function createEurope(map,host){
  let flags;
  const registry=globalThis.AtlasCountries;

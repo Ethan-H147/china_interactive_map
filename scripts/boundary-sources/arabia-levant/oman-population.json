@@ -1,0 +1,66 @@
+{
+  "source": "oman-yearbook-2026.pdf",
+  "sourceSha256": "f6463214ba1458d4b947e56bdf99cdf2ac3350681b24971f91ed4a9dc9fe7d8e",
+  "year": 2025,
+  "method": "register",
+  "rows": [
+    {
+      "id": "OM-MA",
+      "ar": "مسقط",
+      "population": 1532486
+    },
+    {
+      "id": "OM-ZU",
+      "ar": "ظفار",
+      "population": 532897
+    },
+    {
+      "id": "OM-MU",
+      "ar": "مسندم",
+      "population": 56002
+    },
+    {
+      "id": "OM-BU",
+      "ar": "البريمي",
+      "population": 135509
+    },
+    {
+      "id": "OM-DA",
+      "ar": "الداخلية",
+      "population": 570269
+    },
+    {
+      "id": "OM-BS",
+      "ar": "شمال الباطنة",
+      "population": 939746
+    },
+    {
+      "id": "OM-BJ",
+      "ar": "جنوب الباطنة",
+      "population": 585794
+    },
+    {
+      "id": "OM-SJ",
+      "ar": "جنوب الشرقية",
+      "population": 374962
+    },
+    {
+      "id": "OM-SS",
+      "ar": "شمال الشرقية",
+      "population": 321045
+    },
+    {
+      "id": "OM-ZA",
+      "ar": "الظاهرة",
+      "population": 246823
+    },
+    {
+      "id": "OM-WU",
+      "ar": "الوسطى",
+      "population": 64024
+    }
+  ],
+  "date": "2025-12-31",
+  "page": 34,
+  "table": "2-6"
+}

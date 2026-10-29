@@ -1,0 +1,40 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Eleven governorates grouped from the pinned 2020 Oman National Geographic Structure wilayat geometry, using the official governorate membership list. Sixty-one mapped wilayats precede the two 2022 additions; these are not invented or back-projected. Musandam, Madha and the Nahwa enclave boundary are retained. Country overviews stay hidden. Shared administrative edges and land frontiers have strokes; coastline and open water do not.",
+  "counts": {
+    "1": 11,
+    "2": 61
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "omn-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/OMN/ADM2/",
+      "sha256": "c52032fc91443d44f98a84cd8c8a51211ae2dd8c23b8c920035ffc20ce53881e",
+      "bytes": 1702
+    },
+    "omn-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/OMN/ADM2/geoBoundaries-OMN-ADM2.geojson",
+      "credit": "Oman National Geographic Structure",
+      "license": "Other - Direct Permission",
+      "year": "2020",
+      "page": "nsdig2gapps.ncsi.gov.om/nsdiportal/",
+      "sha256": "7db83fa4cbd8f06f0ffaaa8c722f97d833ddcb06aa5104e61c6b0e6babd556f8",
+      "bytes": 2305410
+    },
+    "flag-om.svg": {
+      "url": "https://flagcdn.com/om.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "38f39605556392f32fc4aa12e6db9a9c6984acd3cc7f3ccfbca9a014bc44796a",
+      "bytes": 175888
+    },
+    "oman-yearbook-2026.pdf": {
+      "url": "https://api.ncsi.gov.om/uploads/pdfs/statistical_year_book_2026___issue_54_1777550341.pdf",
+      "credit": "Oman National Centre for Statistics and Information · Statistical Yearbook 2026",
+      "license": "Official factual statistical tables",
+      "sha256": "f6463214ba1458d4b947e56bdf99cdf2ac3350681b24971f91ed4a9dc9fe7d8e",
+      "bytes": 17310026
+    }
+  }
+}

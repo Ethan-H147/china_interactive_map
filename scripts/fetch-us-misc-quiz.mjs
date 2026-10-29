@@ -1,0 +1,26 @@
+import fs from 'node:fs';import {gzipSync,gunzipSync} from 'node:zlib';import {createHash} from 'node:crypto';import {pathToFileURL} from 'node:url';
+import {civilWar,revolution} from './us-misc-quiz-places.mjs';
+export const root='scripts/boundary-sources/us-misc/';
+export const npsService='https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer';
+export function source(name){const m=JSON.parse(fs.readFileSync(root+'manifest.json')),b=gunzipSync(fs.readFileSync(root+name+'.gz'));if(createHash('sha256').update(b).digest('hex')!==m.files[name].sha256)throw Error('Source checksum '+name);return b;}
+export async function retain(name,url,meta={},options={}){fs.mkdirSync(root,{recursive:true});let b;if(fs.existsSync(root+name+'.gz'))b=gunzipSync(fs.readFileSync(root+name+'.gz'));else{const r=await fetch(url,{...options,signal:AbortSignal.timeout(120000)});if(!r.ok)throw Error(name+' HTTP '+r.status);b=Buffer.from(await r.arrayBuffer());fs.writeFileSync(root+name+'.gz',gzipSync(b,{level:9}));}const file=root+'manifest.json',m=fs.existsSync(file)?JSON.parse(fs.readFileSync(file)):{retrieved:'2026-10-29',files:{}},sha256=createHash('sha256').update(b).digest('hex');if(m.files[name]?.sha256&&m.files[name].sha256!==sha256)throw Error('Pinned source changed '+name);m.files[name]={url,...meta,sha256,bytes:b.length};fs.writeFileSync(file,JSON.stringify(m,null,2)+'\n');console.log(name,b.length);return b;}
+export async function fetchSources(){
+ await retain('nps-service.json',npsService+'?f=json',{credit:'National Park Service Land Resources Division',license:'US federal public domain factual GIS data'});
+ await retain('nps-boundary-layer.json',npsService+'/2?f=json');
+ await retain('nps-centroids.geojson',npsService+'/0/query?'+new URLSearchParams({where:'1=1',outFields:'UNIT_CODE,UNIT_NAME,UNIT_TYPE,STATE,PARKNAME,DATE_EDIT',outSR:'4326',f:'geojson'}),{credit:'NPS Land Resources Division · official park-unit representative points'});
+ await retain('nps-national-parks.geojson',npsService+'/2/query?'+new URLSearchParams({where:"UNIT_TYPE='National Parks' OR UNIT_CODE='NERI'",outFields:'UNIT_CODE,UNIT_NAME,UNIT_TYPE,STATE,PARKNAME,DATE_EDIT',outSR:'4326',f:'geojson'}),{credit:'NPS Land Resources Division · legislative park boundaries',license:'US federal public domain factual GIS data'});
+ await retain('nps-system.html','https://www.nps.gov/aboutus/national-park-system.htm',{credit:'National Park Service · official system unit list'});
+ await retain('ipeds-hd2024.zip','https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip',{credit:'US Department of Education NCES · IPEDS 2024 institutional directory',license:'US federal public data'});
+ await retain('abpp-experience.json','https://www.arcgis.com/sharing/rest/content/items/a0484827a53843d4ac96bf6604920a73/data?f=json',{credit:'NPS American Battlefield Protection Program · map configuration',page:'https://www.nps.gov/orgs/2287/battlefield-boundaries-map.htm'});
+ await retain('abpp-webmap.json','https://www.arcgis.com/sharing/rest/content/items/19b9857a631e40b7a9129e45625d4e79/data?f=json',{credit:'NPS ABPP · official battlefield map'});
+ const bf='https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/Battlefield_Boundaries/FeatureServer/0';
+ await retain('abpp-layer.json',bf+'?f=json');
+ await retain('abpp-attributes.json',bf+'/query?'+new URLSearchParams({where:'1=1',outFields:'*',returnGeometry:'false',f:'json'}));
+ const ids=[...new Set([...civilWar,...revolution].flatMap(([id,name,extra])=>[id,...(extra?[extra]:[])]))];
+ await retain('battlefields.geojson',bf+'/query?'+new URLSearchParams({where:'SITE IN ('+ids.map(id=>"'"+id+"'").join(',')+')',outFields:'SITE,STATE,WAR,NAME,BOUNDARY',outSR:'4326',f:'geojson'}),{credit:'National Park Service American Battlefield Protection Program · surveyed battlefield study areas',license:'US federal public domain factual GIS data',page:'https://www.nps.gov/orgs/2287/battlefield-boundaries-map.htm'});
+ await retain('presidential-biographies.html','https://millercenter.org/president',{credit:'University of Virginia Miller Center · presidential biographies'});
+ for(const [name,url]of [['nfl-teams.html','https://www.nfl.com/teams/'],['nba-teams.html','https://www.nba.com/teams'],['mlb-teams.json','https://statsapi.mlb.com/api/v1/teams?sportId=1&hydrate=venue'],['nhl-teams.json','https://api.nhle.com/stats/rest/en/team']])await retain(name,url,{credit:'Official league team directory · reviewed 2026-10-29'});
+ const query='SELECT DISTINCT ?person ?personLabel ?birthplace ?birthplaceLabel ?coord WHERE { ?person p:P39/ps:P39 wd:Q11696; wdt:P19 ?birthplace. ?birthplace wdt:P625 ?coord. SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }';
+ await retain('presidents-wikidata.json','https://query.wikidata.org/sparql?'+new URLSearchParams({query,format:'json'}),{credit:'Wikidata · US presidents (P39) birthplace (P19) coordinates (P625)',license:'CC0 1.0'},{headers:{Accept:'application/sparql-results+json','User-Agent':'BoundaryAtlas/1.0 (local educational atlas)'}});
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)await fetchSources();

@@ -149,3 +149,28 @@ See [Caucasus and Gulf countries](caucasus-gulf.md) for sources, boundary dates 
 | 2026-10-27 | Antarctica | Local implementation | One continental map with 112 COMNAP research facilities south of 60°S, station search, dated operator/season/status details and real-coordinate station dots. Existing claim wedges appear only in their claimant country maps. |
 
 See [Antarctica](antarctica.md) for source dates and projection limits.
+
+| Added | Country | Commit | Commit description / status |
+| --- | --- | --- | --- |
+| 2026-10-29 | Papua New Guinea | GitHub batch | 22 province-level units, 87 districts, 326 LLGs; dated census statistics and province quiz. |
+| 2026-10-29 | Solomon Islands | GitHub batch | Nine provinces and Honiara, 50 constituencies, 183 wards; dated population estimates and province quiz. |
+| 2026-10-29 | Vanuatu | GitHub batch | Six provinces, 66 source local areas; 2020 census statistics and province quiz. |
+
+| Added | Country | Status | Coverage |
+| --- | --- | --- | --- |
+| 2026-10-29 | Oman | GitHub batch | 11 governorates, 61 dated wilayats; end-2025 registered population. |
+| 2026-10-29 | Yemen | GitHub batch | 22 governorates, 335 source districts; 2025 governorate population estimates. |
+| 2026-10-29 | Syria | GitHub batch | 14 governorates, 62 districts, 272 subdistricts; explicitly dated 2004 governorate census. |
+| 2026-10-29 | Jordan | GitHub batch | 12 governorates, 52 source districts; official end-2025 governorate population. |
+
+See [Arabia and Levant additions](arabia-levant.md) for source dates, coverage and frontier reconciliation.
+
+| Added | Country | Status | Coverage |
+| --- | --- | --- | --- |
+| 2026-10-29 | Bahamas | GitHub batch | 33 dated district/New Providence polygons; 14 matching 2022 census populations. |
+| 2026-10-29 | Cuba | GitHub batch | 16 provinces/special municipality, 168 municipalities; end-2024 effective population. |
+| 2026-10-29 | Dominican Republic | GitHub batch | 32 provinces/National District, 155 dated municipalities, 386 municipal seats/districts. |
+| 2026-10-29 | Haiti | GitHub batch | 10 departments, 140 source communes, 570 communal sections; matched 2024 estimates. |
+| 2026-10-29 | Jamaica | GitHub batch | 14 parishes and 775 communities; 12 separately published 2022 parish populations. |
+
+See [Caribbean additions](caribbean.md) for boundary vintages, mapped coverage, population limitations and the shared Hispaniola frontier.

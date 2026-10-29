@@ -15,7 +15,7 @@ try{
   modules.AtlasPlaceSearch='place-search.mjs';
   modules.AtlasInteractionPolicy='interaction-policy.mjs';
   modules.AtlasFirstLevelQuiz='first-level-quiz.mjs';
-  modules.AtlasMapQuiz='map-quiz.mjs';modules.AtlasUsCountyQuiz='us-county-quiz.mjs';modules.AtlasCityQuiz='city-quiz.mjs';
+  modules.AtlasMapQuiz='map-quiz.mjs';modules.AtlasUsCountyQuiz='us-county-quiz.mjs';modules.AtlasCityQuiz='city-quiz.mjs';modules.AtlasChinaMiscQuiz='china-misc-quiz.mjs';
   modules.AtlasQuizRecords='quiz-records.mjs';
   modules.AtlasQuizRecordsCore='quiz-records-core.mjs';
   modules.AtlasQuizModes='quiz-modes.mjs';

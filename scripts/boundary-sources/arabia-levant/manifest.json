@@ -1,0 +1,171 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "omn-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-omn",
+      "sha256": "dcca721fd65fa5c90952b7bd76fab9d848daa1872f10c075d8e927c73184e87d",
+      "bytes": 34203
+    },
+    "omn.zip": {
+      "url": "https://data.humdata.org/dataset/da87f54e-64bd-4cf4-bd31-3fc520f94609/resource/562549de-c1db-48dd-b50a-d3c27c54c963/download/omn_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-omn",
+      "sha256": "0b4333a5dc7953569e4cd56afd95f25d086e12d19c6703d9c059172dc2cb2d82",
+      "bytes": 1987832
+    },
+    "yem-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-yem",
+      "sha256": "30b85d2e5e571e23e283b5c10b53e6e8c2cf57a54cd58a79e6cc271cdc434baa",
+      "bytes": 34917
+    },
+    "yem.zip": {
+      "url": "https://data.humdata.org/dataset/6b2656e2-b915-4671-bfed-468d5edcd80a/resource/c79a3728-44cd-4d20-8ea4-ecfab88c1450/download/yem_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-yem",
+      "sha256": "4529c4450f4ef6e4728c80ab010a6bdc1ed9c4644294c14717fdddf6c2528972",
+      "bytes": 4980305
+    },
+    "syr-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-syr",
+      "sha256": "5d44fcae7b3650adf9a8ca975cf6cd5e759639e00f7930395246770ade38e8dd",
+      "bytes": 41846
+    },
+    "syr.zip": {
+      "url": "https://data.humdata.org/dataset/356a63e9-90aa-4b9c-a938-58ef24469c00/resource/ab4b6f19-3854-4b2b-8f5c-b5dc474a4c0c/download/syr_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-syr",
+      "sha256": "448f0603d6c2866c095bf684ba7c7d3875656a3a145a7bba1cd5516ffcf7ee29",
+      "bytes": 5605326
+    },
+    "omn-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/OMN/ADM2/",
+      "sha256": "c52032fc91443d44f98a84cd8c8a51211ae2dd8c23b8c920035ffc20ce53881e",
+      "bytes": 1702
+    },
+    "omn-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/OMN/ADM2/geoBoundaries-OMN-ADM2.geojson",
+      "credit": "Oman National Geographic Structure",
+      "license": "Other - Direct Permission",
+      "year": "2020",
+      "page": "nsdig2gapps.ncsi.gov.om/nsdiportal/",
+      "sha256": "7db83fa4cbd8f06f0ffaaa8c722f97d833ddcb06aa5104e61c6b0e6babd556f8",
+      "bytes": 2305410
+    },
+    "jor-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/JOR/ADM1/",
+      "sha256": "bd744edb258d9f3c423e584f96b52fc3e04a24dc679f326dec27133160f7ea91",
+      "bytes": 1696
+    },
+    "jor-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/JOR/ADM1/geoBoundaries-JOR-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "year": "2006",
+      "page": "commons.wikimedia.org/wiki/File",
+      "sha256": "7dd7cd7701a0b218d15752fc4339bb1a14834fd2376f9774997a1e50c6785777",
+      "bytes": 84165
+    },
+    "jor-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/JOR/ADM2/",
+      "sha256": "24ef0dad5292272a9ebb003f71da8e108f9d591a0df90318b55ecda6a09e6e89",
+      "bytes": 1675
+    },
+    "jor-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/JOR/ADM2/geoBoundaries-JOR-ADM2.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "license": "Public Domain",
+      "year": "2006",
+      "page": "commons.wikimedia.org/wiki/File",
+      "sha256": "d575a50ed8382a67aee5b716c9ca45b35447d857dadb2cf4af74ad936db8dc34",
+      "bytes": 1267706
+    },
+    "flag-om.svg": {
+      "url": "https://flagcdn.com/om.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "38f39605556392f32fc4aa12e6db9a9c6984acd3cc7f3ccfbca9a014bc44796a",
+      "bytes": 175888
+    },
+    "flag-ye.svg": {
+      "url": "https://flagcdn.com/ye.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "a92f3989182049dc218f7698c45d8cdfc64e6f945c71f20a9d188dd01698df2d",
+      "bytes": 179
+    },
+    "flag-sy.svg": {
+      "url": "https://flagcdn.com/sy.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "114f63ff44c34361216c25e49c65ade53ba07a4607e5e917b089c60a0df6c173",
+      "bytes": 367
+    },
+    "flag-jo.svg": {
+      "url": "https://flagcdn.com/jo.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "fb2b2896420258e37d2e27a1d07c6488b5ff14a587edfbe7c4153f93042b8424",
+      "bytes": 371
+    },
+    "yemen-population-estimates-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=yemen-population-estimates",
+      "sha256": "f3cb1c3ade6e5a8898ef9c330c03322c1b3547b4e43cd0718f0104be048e5b08",
+      "bytes": 31002
+    },
+    "yemen-population-2025.csv": {
+      "url": "https://data.humdata.org/dataset/1ffe81f1-b980-430f-b53e-dd79e936f291/resource/f7443827-7945-410b-8f72-1eb4e46b8525/download/yem_population_projection_2025_final_hxl.csv",
+      "credit": "OCHA Yemen",
+      "license": "Creative Commons Attribution International (CC BY)",
+      "page": "https://data.humdata.org/dataset/yemen-population-estimates",
+      "sha256": "d0fb3c2b759f9d62d6addb876c6c00e345754fb110ee8244cace17a92600d6c1",
+      "bytes": 19148
+    },
+    "syrian-arab-republic-baseline-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=syrian-arab-republic-baseline-population",
+      "sha256": "6483949a7cd4f15274b0f1642fe05aea37fb407d2a61f00cc868cdfeaa7350bf",
+      "bytes": 4616
+    },
+    "syrian-arab-republic-other-0-0-0-0-0-0-0-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=syrian-arab-republic-other-0-0-0-0-0-0-0",
+      "sha256": "ce9171b7cd44b0f4bef3b0b99a4fb262cd37c419cf47370c27198ea618a130b9",
+      "bytes": 4451
+    },
+    "jordan-population-2025.pdf": {
+      "url": "https://dosweb.dos.gov.jo/databank/Population/Population_Estimares/PopulationEstimates.pdf",
+      "credit": "Jordan Department of Statistics · Statistical Yearbook 2025",
+      "license": "Official factual population table",
+      "page": "https://dosweb.dos.gov.jo/ar/population/population-2/",
+      "sha256": "659587a2f4a243c912835720073c76974dd64bdb44dbab0411238cf425deacce",
+      "bytes": 144275
+    },
+    "syria-census-2004.xls": {
+      "url": "https://data.humdata.org/dataset/ad5cadf6-7dde-4bb3-8fc6-3c7c02966174/resource/35d4e236-b0d2-41ee-be06-7b04e70e319a/download/syr_pop_2004_sycensus_0.xls",
+      "credit": "OCHA Syria · Syrian Central Bureau of Statistics 2004 Census",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/syrian-arab-republic-other-0-0-0-0-0-0-0",
+      "sha256": "3ef15cc2cd20f4a37f07016a4e9485319caf4f4eeed7a4cd9ecadbdbd4af3d61",
+      "bytes": 2616832
+    },
+    "oman-yearbook-2026.pdf": {
+      "url": "https://api.ncsi.gov.om/uploads/pdfs/statistical_year_book_2026___issue_54_1777550341.pdf",
+      "credit": "Oman National Centre for Statistics and Information · Statistical Yearbook 2026",
+      "license": "Official factual statistical tables",
+      "sha256": "f6463214ba1458d4b947e56bdf99cdf2ac3350681b24971f91ed4a9dc9fe7d8e",
+      "bytes": 17310026
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/OMN;YEM;SYR;JOR/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2010:2025&format=json&per_page=1000",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "066f5ece9702da212fd644b1a040e9d6ff5b802e4ae4a9a98946d09b2f8e9130",
+      "bytes": 40414
+    }
+  }
+}

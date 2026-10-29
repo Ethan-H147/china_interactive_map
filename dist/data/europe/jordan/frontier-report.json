@@ -1,0 +1,25 @@
+{
+  "aligned": [
+    {
+      "pair": "JOR-SYR",
+      "owner": "syria",
+      "vertices": 147
+    },
+    {
+      "pair": "JOR-SAU",
+      "owner": "saudi-arabia",
+      "vertices": 100
+    },
+    {
+      "pair": "IRQ-JOR",
+      "owner": "iraq",
+      "vertices": 34
+    }
+  ],
+  "owned": [
+    "ISR-JOR",
+    "ISR-JOR",
+    "ISR-JOR",
+    "JOR-PSX"
+  ]
+}

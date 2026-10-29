@@ -1,0 +1,83 @@
+{
+  "source": "jordan-population-2025.pdf",
+  "sourceSha256": "659587a2f4a243c912835720073c76974dd64bdb44dbab0411238cf425deacce",
+  "year": 2025,
+  "method": "estimate",
+  "rows": [
+    {
+      "id": "JO-AM",
+      "en": "Amman",
+      "ar": "العاصمة",
+      "population": 5004600
+    },
+    {
+      "id": "JO-BA",
+      "en": "Balqa",
+      "ar": "البلقاء",
+      "population": 614000
+    },
+    {
+      "id": "JO-AZ",
+      "en": "Zarqa",
+      "ar": "الزرقاء",
+      "population": 1704500
+    },
+    {
+      "id": "JO-MD",
+      "en": "Madaba",
+      "ar": "مادبا",
+      "population": 236200
+    },
+    {
+      "id": "JO-IR",
+      "en": "Irbid",
+      "ar": "اربد",
+      "population": 2210500
+    },
+    {
+      "id": "JO-MA",
+      "en": "Mafraq",
+      "ar": "المفرق",
+      "population": 686800
+    },
+    {
+      "id": "JO-JA",
+      "en": "Jarash",
+      "ar": "جرش",
+      "population": 296000
+    },
+    {
+      "id": "JO-AJ",
+      "en": "Ajlun",
+      "ar": "عجلون",
+      "population": 219900
+    },
+    {
+      "id": "JO-KA",
+      "en": "Karak",
+      "ar": "الكرك",
+      "population": 395400
+    },
+    {
+      "id": "JO-AT",
+      "en": "Tafiela",
+      "ar": "الطفيلة",
+      "population": 120300
+    },
+    {
+      "id": "JO-MN",
+      "en": "Ma'an",
+      "ar": "معان",
+      "population": 197900
+    },
+    {
+      "id": "JO-AQ",
+      "en": "Aqaba",
+      "ar": "العقبة",
+      "population": 250900
+    }
+  ],
+  "date": "2025-12-31",
+  "page": 3,
+  "table": "2.2"
+}

@@ -1,0 +1,70 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Twenty provinces, the Autonomous Region of Bougainville and the National Capital District. The 2019 boundary snapshot has 87 districts and 326 local-level governments; later district/LLG reforms are not inferred. Population retains the matched 2011 census and its published geography. All parents dissolve from the same land partitions. Only shared internal edges and the Indonesia–Papua New Guinea land frontier have strokes; coasts and ocean gaps do not. Country overview pages remain hidden.",
+  "counts": {
+    "1": 22,
+    "2": 87,
+    "3": 326
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "png-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-png",
+      "sha256": "71d18dbfd45f7e1902aae74b7b36543bf4684109fd23977d32fe3b0bb69c7b91",
+      "bytes": 35454
+    },
+    "png.zip": {
+      "url": "https://data.humdata.org/dataset/f260301d-c32f-4e9e-a7d6-05bde2f70b6b/resource/3ef879e4-0896-4793-a0c2-6d0636395cf5/download/png_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-png",
+      "sha256": "3f80c8a73969ac53ba999143b8c0f7e729ef645ccccc9107a60b42d22c6de10e",
+      "bytes": 6261853
+    },
+    "png-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-png",
+      "sha256": "0320d931b9015d6f9bc07a7ab47fdc619ef5fea73dd52f544816536d8bfaaabb",
+      "bytes": 18067
+    },
+    "png_admpop_adm0_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/f34481a5-8c78-49de-8da0-fce8c915d9ae/download/png_admpop_adm0_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "0ad97a740c32685f433a64b9e3fed863918ddba3be3619e4be1e340c33663fba",
+      "bytes": 125
+    },
+    "png_admpop_adm1_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/8b4346b6-b0a4-4e65-8d15-b6c79dbacee2/download/png_admpop_adm1_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "ec78f09d2e068850da11eef219a7c3a01a6a84827110e42ac6e846a3f18c1f8c",
+      "bytes": 1896
+    },
+    "png_admpop_adm2_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/534798e8-372a-40b7-bc81-e5679acc07b9/download/png_admpop_adm2_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "807cc2b2583d99cf738c0ef9e9ce89781fadfabe91d1ae7acb8f7260bc2fc5b8",
+      "bytes": 9236
+    },
+    "png_admpop_adm3_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/fca6139c-15fc-4bad-bf62-5f21426e821b/download/png_admpop_adm3_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "289ade4d1ce597e217b03156ecf1743ba35169b3285320a104aa2a1ac4389827",
+      "bytes": 42109
+    },
+    "flag-pg.svg": {
+      "url": "https://flagcdn.com/pg.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "d98adee3bf8945b389144b04bc49824c85711e1d473236971ac8a48939328064",
+      "bytes": 2969
+    }
+  }
+}

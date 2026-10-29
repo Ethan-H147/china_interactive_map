@@ -1,0 +1,55 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Twelve governorates and 52 districts from the pinned geoBoundaries 2006 reference. Governorate populations use official Jordan Department of Statistics end-2025 estimates. Later district-level figures are not assigned to the older district geometry. Country overviews stay hidden. Shared administrative edges and land frontiers have strokes; coastline and open water do not.",
+  "counts": {
+    "1": 12,
+    "2": 52
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "jor-adm1-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/JOR/ADM1/",
+      "sha256": "bd744edb258d9f3c423e584f96b52fc3e04a24dc679f326dec27133160f7ea91",
+      "bytes": 1696
+    },
+    "jor-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/JOR/ADM1/geoBoundaries-JOR-ADM1.geojson",
+      "credit": "geoBoundaries, Wikimedia",
+      "license": "Creative Commons Attribution 2.5 Generic",
+      "year": "2006",
+      "page": "commons.wikimedia.org/wiki/File",
+      "sha256": "7dd7cd7701a0b218d15752fc4339bb1a14834fd2376f9774997a1e50c6785777",
+      "bytes": 84165
+    },
+    "jor-adm2-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/JOR/ADM2/",
+      "sha256": "24ef0dad5292272a9ebb003f71da8e108f9d591a0df90318b55ecda6a09e6e89",
+      "bytes": 1675
+    },
+    "jor-adm2.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/JOR/ADM2/geoBoundaries-JOR-ADM2.geojson",
+      "credit": "geoBoundaries, Wikimedia Commons",
+      "license": "Public Domain",
+      "year": "2006",
+      "page": "commons.wikimedia.org/wiki/File",
+      "sha256": "d575a50ed8382a67aee5b716c9ca45b35447d857dadb2cf4af74ad936db8dc34",
+      "bytes": 1267706
+    },
+    "flag-jo.svg": {
+      "url": "https://flagcdn.com/jo.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "fb2b2896420258e37d2e27a1d07c6488b5ff14a587edfbe7c4153f93042b8424",
+      "bytes": 371
+    },
+    "jordan-population-2025.pdf": {
+      "url": "https://dosweb.dos.gov.jo/databank/Population/Population_Estimares/PopulationEstimates.pdf",
+      "credit": "Jordan Department of Statistics · Statistical Yearbook 2025",
+      "license": "Official factual population table",
+      "page": "https://dosweb.dos.gov.jo/ar/population/population-2/",
+      "sha256": "659587a2f4a243c912835720073c76974dd64bdb44dbab0411238cf425deacce",
+      "bytes": 144275
+    }
+  }
+}

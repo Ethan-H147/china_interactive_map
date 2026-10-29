@@ -126,7 +126,7 @@ export function attachCityQuiz(map,host,atlas,country){
  const tab=document.getElementById(first.panel.id.replace(/-quiz-panel$/,'-tab-quiz'));if(!tab)return null;
  const pickers=[],openFirst=first.open.bind(first);let level='1',cities,countryActive=true;
  const select=value=>{level=value;for(const picker of pickers)picker.value=value;};
- function addPicker(panel,value){const label=document.createElement('label');label.className='field-label';label.textContent='Divisions';const picker=document.createElement('select');picker.id=panel.id+'-divisions';label.htmlFor=picker.id;picker.append(new Option(definition.quiz.plural,'1'),new Option(definition.quiz.cities.plural,'3'));picker.value=value;label.append(picker);panel.querySelector('[data-q=scope-label]').after(label);pickers.push(picker);picker.onchange=()=>picker.value==='3'?openCities():first.open();}
+ function addPicker(panel,value){const label=document.createElement('label');label.className='field-label';label.textContent='Category';const picker=document.createElement('select');picker.id=panel.id+'-divisions';label.htmlFor=picker.id;picker.append(new Option(definition.quiz.plural,'1'),new Option(definition.quiz.cities.plural,'3'));picker.value=value;label.append(picker);panel.querySelector('[data-q=scope-label]').after(label);pickers.push(picker);picker.onchange=()=>picker.value==='3'?openCities():first.open();}
  function openCities(options={}){if(!countryActive||!atlas.ready)return;select('3');cities??=createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix:country+'-cities',addPicker});cities?.open(options);}
  first.open=(options={})=>{select('1');openFirst(options);};addPicker(first.panel,'1');
  tab.onclick=()=>level==='3'?openCities():first.open();

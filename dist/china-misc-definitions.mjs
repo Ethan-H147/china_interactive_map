@@ -1,0 +1,10 @@
+export const chinaMiscQuizzes=[
+ {id:'misc-dynasty-capitals',label:'Dynasty capitals',plural:'Historical capitals',singular:'historical capital',description:'Historical names with dynasty context. Successive names at the same city share one dot; modern locations appear in answers and Preview.'},
+ {id:'misc-ancient-battles',label:'Ancient battlefields',plural:'Battlefields',singular:'battlefield',description:'Representative locations of major battles. Dots identify the locality or traditional site, not the full battlefield extent.'},
+ {id:'misc-silk-road',label:'Silk Road stops',plural:'Silk Road stops',singular:'Silk Road stop',description:'Oasis towns, gateways and archaeological sites from China into Central Asia.'},
+ {id:'misc-sacred-mountains',label:'Sacred mountains',plural:'Sacred mountains',singular:'sacred mountain',description:'The Five Great Mountains, four Buddhist mountains and four celebrated Taoist mountains. Dots are geographic references, not boundaries.'},
+ {id:'misc-wall-passes',label:'Great Wall passes',plural:'Great Wall passes',singular:'Great Wall pass',description:'Historic passes, gates and defensive junctions along the Great Wall.'},
+ {id:'misc-imperial-tombs',label:'Imperial tombs',plural:'Imperial tombs',singular:'imperial tomb',description:'Imperial mausoleums and grouped burial complexes from Qin through Qing. Groups use one reference dot.'},
+ {id:'misc-grottoes-temples',label:'Grottoes & ancient temples',plural:'Grottoes and temples',singular:'grotto or temple',description:'Cave-art complexes and major historic Buddhist temples across China.'},
+ {id:'misc-poet-birthplaces',label:"Poets’ birthplaces",plural:'Poets’ birthplaces',singular:'poet birthplace',description:'Locate poets by their birthplaces, using locality dots rather than exact birth houses. Li Bai uses the Suyab attribution in present-day Kyrgyzstan; disputed traditions are noted.'}
+];

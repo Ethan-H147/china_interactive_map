@@ -1,0 +1,62 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Thirty-two districts and New Providence from the retained 2017 OSM/Wambacher geoBoundaries layer. The release labels it ADM2 and claims 34 units, but its actual 33 polygons are a flat district geography, not a second tier. Harbour Island, Spanish Wells and Green Turtle Cay are mapped by their actual island footprints. This dated source lacks a separate Sweeting’s Cay district and does not represent the complete 2024 local-government reform. Some uninhabited cays lack detailed district geometry. Census 2022 population is assigned only to 14 exactly matching whole-island/group units; broader Abaco, Andros, Eleuthera, Exuma and Grand Bahama island totals are not spread among their districts. All levels dissolve from common land partitions. Only shared internal boundaries and the Haiti–Dominican Republic land frontier have lines; coastlines and ocean gaps have no stroke. Country overview pages remain hidden.",
+  "counts": {
+    "1": 33
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "flag-bs.svg": {
+      "url": "https://flagcdn.com/bs.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "44946f0ba5ad43cabe8bfa6c52e0f7a9562f7ff336d58478577f3b3a19c1ef08",
+      "bytes": 195
+    },
+    "bhs-adm1-reference.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BHS/ADM1/geoBoundaries-BHS-ADM1.geojson",
+      "credit": "Haiti GeoPortal / geoBoundaries",
+      "license": "CC BY 4.0",
+      "role": "Audit reference only; contains confirmed misassigned island labels and is not used for output geography",
+      "sha256": "f10a480530f18d4f5e3c1c4b5a3034a75488bfb0f81bf9ce7fb16bd12344a348",
+      "bytes": 12184633
+    },
+    "bhs-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BHS/ADM2/geoBoundaries-BHS-ADM2.geojson",
+      "credit": "OpenStreetMap contributors / Wambacher / geoBoundaries",
+      "license": "ODbL 1.0",
+      "sourceYear": 2017,
+      "role": "Flat district geography promoted from the release ADM2 label; actual 33 features including New Providence",
+      "sha256": "6ae183f43d1333d04d91551445e73a6150e84afc27480bb0a4904172b22beb1c",
+      "bytes": 19766018
+    },
+    "bhs-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BHS/ALL/",
+      "credit": "geoBoundaries",
+      "role": "Source metadata; response count for ADM2 differs from actual retained file count",
+      "sha256": "907f62f3b9b8bd8c3f6e9cab9d46e845674e5f85291143def4f9fdacf393f718",
+      "bytes": 5798
+    },
+    "bhs-population.json": {
+      "url": "https://cdn.bahamas.gov.bs/tenant/tenantbnsi/documents/2022-Census-Report-1st-Release-12-February-2025-FINAL-20250526040559.pdf",
+      "role": "Normalized primary census table",
+      "year": 2022,
+      "sha256": "b0424857bc7a443207eecf1c0988db85d50d6bb51cd4114ea1112c3ad2555ca1",
+      "bytes": 1667
+    },
+    "bhs-census-2022.pdf": {
+      "url": "https://cdn.bahamas.gov.bs/tenant/tenantbnsi/documents/2022-Census-Report-1st-Release-12-February-2025-FINAL-20250526040559.pdf",
+      "credit": "Bahamas National Statistical Institute",
+      "role": "Primary 2022 census first-release report",
+      "sha256": "e0aef7ebe9f2911bfbb52ed80cd294e1ac5cd7dcad8de2aca3df755239461bab",
+      "bytes": 4615935
+    },
+    "cod-populations.json": {
+      "url": "https://data.humdata.org/dataset/cod-ps-hti",
+      "role": "Normalized retained DOM and HTI COD-PS rows; Cuba legacy projections excluded from output",
+      "sha256": "1aa7a87d8ee39fdfa8db14f974d02a2a3585895ff03733095a04ddbe7c968cf0",
+      "bytes": 57036
+    }
+  }
+}

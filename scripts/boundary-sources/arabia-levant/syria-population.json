@@ -1,0 +1,93 @@
+{
+  "source": "syria-census-2004.xls",
+  "sourceSha256": "3ef15cc2cd20f4a37f07016a4e9485319caf4f4eeed7a4cd9ecadbdbd4af3d61",
+  "year": 2004,
+  "method": "census",
+  "rows": [
+    {
+      "id": "SY01",
+      "en": "Damascus",
+      "ar": "مدينة دمشق",
+      "population": 1552161
+    },
+    {
+      "id": "SY02",
+      "en": "Aleppo",
+      "ar": "حلب",
+      "population": 4045166
+    },
+    {
+      "id": "SY03",
+      "en": "Rural Damascus",
+      "ar": "ريف دمشق",
+      "population": 2273074
+    },
+    {
+      "id": "SY04",
+      "en": "Homs",
+      "ar": "حمص",
+      "population": 1529402
+    },
+    {
+      "id": "SY05",
+      "en": "Hama",
+      "ar": "حماة",
+      "population": 1384953
+    },
+    {
+      "id": "SY06",
+      "en": "Lattakia",
+      "ar": "اللاذقية",
+      "population": 879551
+    },
+    {
+      "id": "SY07",
+      "en": "Idleb",
+      "ar": "إدلب",
+      "population": 1258427
+    },
+    {
+      "id": "SY08",
+      "en": "Al-Hasakeh",
+      "ar": "الحسكة",
+      "population": 1275118
+    },
+    {
+      "id": "SY09",
+      "en": "Deir-ez-Zor",
+      "ar": "دير الزور",
+      "population": 1004747
+    },
+    {
+      "id": "SY10",
+      "en": "Tartous",
+      "ar": "طرطوس",
+      "population": 701395
+    },
+    {
+      "id": "SY11",
+      "en": "Ar-Raqqa",
+      "ar": "الرقة",
+      "population": 793514
+    },
+    {
+      "id": "SY12",
+      "en": "Daraa",
+      "ar": "درعا",
+      "population": 843478
+    },
+    {
+      "id": "SY13",
+      "en": "As-Sweida",
+      "ar": "السويداء",
+      "population": 313231
+    },
+    {
+      "id": "SY14",
+      "en": "Quneitra",
+      "ar": "القنيطرة",
+      "population": 66627
+    }
+  ],
+  "note": "2004 resident census. The separate 2010 civil-registration table is not used. Historical figures do not describe subsequent displacement."
+}

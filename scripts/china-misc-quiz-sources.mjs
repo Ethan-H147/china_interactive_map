@@ -1,0 +1,21 @@
+// Explicitly reviewed identities avoid ambiguous place-name or battle-coordinate matches.
+export const reviewedEntities={
+ 'Ye (ancient city)':'Q1274372','Huining Prefecture':'Q877229','Shangjing (Liao dynasty)':'Q15102448','Dali Town':'Q10936844','Xuanquanzhi':'Q2598504','Nevaket':'Q12555944','Zijing Pass':'Q202848','Daoma Pass':'Q10888275','Xifengkou':'Q2598217','Mausoleum of the First Qin Emperor':'Q910180','Han Yang Ling':'Q1350906','Qiaoling':'Q10922864','Song dynasty mausoleums':'Q1721528','Ming Xiaoling':'Q28769','Xianling (Ming dynasty)':'Q11087935','Fuling Tomb':'Q1473630','Yongling (Qing dynasty)':'Q11681626','Gongxian Grottoes':'Q1387840','Tiantishan Grottoes':'Q1800426','Bezeklik Caves':'Q980774','Zhangqiu District':'Q197392','Licheng District, Jinan':'Q1337346','Yiyang County':'Q1198654','Chaisang District':'Q1335940','Xiushui County':'Q1335431','Shou County':'Q1349884','Zhangshu':'Q197394','Battle of Muye':'Q1198636','Battle of Jingxing':'Q1362567','Battle of Julu':'Q1196872','Battle of Guandu':'Q10948440','Battle of Fei River':'Q1349884','Mount Heng (Shanxi)':'Q31684016'
+};
+const silkMaps='https://whc.unesco.org/en/list/1442/maps/';
+export const coordinateOverrides={
+ Suyab:{center:[75.2033333333,42.8019444444],url:silkMaps,component:'1442-008'},
+ Balasagun:{center:[75.2502777778,42.7466666667],url:silkMaps,component:'1442-009'},
+ Nevaket:{center:[75.015,42.9122222222],url:silkMaps,component:'1442-010'},
+ Talgar:{center:[77.2222222222,43.2777777778],url:silkMaps,component:'1442-012'}
+};
+export const historyReferences={
+ 'misc-dynasty-capitals':[{label:'Xi’an local history: Daxing and Chang’an',url:'https://xadfz.xa.gov.cn/xadq/rwxa/1960625284585664514.html'},{label:'Henan heritage: Luoyang capitals',url:'https://english.henan.gov.cn/2024/08-16/3051738.html'},{label:'UNESCO Beijing Central Axis',url:'https://whc.unesco.org/en/list/1714/'},{label:'Hebei Archaeology: Ye',url:'https://www.hbswwkg.com/2021-04/16/content_8466360.html'}],
+ 'misc-ancient-battles':[{label:'Shouxian: Fei River battlefield',url:'https://www.shouxian.gov.cn/lyzn/y/7847321.html'},{label:'Hechuan: Diaoyu Fortress',url:'https://www.hc.gov.cn/ztzl/hcly/zjjqjd/201912/t20191223_2616309.html'}],
+ 'misc-silk-road':[{label:'UNESCO Silk Roads',url:'https://whc.unesco.org/en/list/1442/'},{label:'UNESCO component coordinates',url:silkMaps}],
+ 'misc-sacred-mountains':[{label:'UNESCO Mount Taishan',url:'https://whc.unesco.org/en/list/437/'},{label:'UNESCO Wutai',url:'https://whc.unesco.org/en/list/1279/'},{label:'UNESCO Wudang',url:'https://whc.unesco.org/en/list/705/'}],
+ 'misc-wall-passes':[{label:'UNESCO Great Wall',url:'https://whc.unesco.org/en/list/438/'},{label:'Tang County: Daoma Pass',url:'https://wap.tangxian.gov.cn/wapcon-2-392615.html'}],
+ 'misc-imperial-tombs':[{label:'UNESCO Qin mausoleum',url:'https://whc.unesco.org/en/list/441/'},{label:'UNESCO Ming and Qing tombs',url:'https://whc.unesco.org/en/list/1004/'},{label:'Zhengzhou heritage: Song tombs',url:'https://wwj.zhengzhou.gov.cn/country/3177034.jhtml'}],
+ 'misc-grottoes-temples':[{label:'UNESCO Silk Roads cave temples',url:'https://whc.unesco.org/en/list/1442/'},{label:'UNESCO Mogao',url:'https://whc.unesco.org/en/list/440/'},{label:'UNESCO Longmen',url:'https://whc.unesco.org/en/list/1003/'},{label:'UNESCO Yungang',url:'https://whc.unesco.org/en/list/1039/'}],
+ 'misc-poet-birthplaces':[{label:'Academy of Chinese Studies: Li Bai',url:'https://chiculture.org.hk/en/china-five-thousand-years/1937'},{label:'UNESCO Suyab coordinates',url:silkMaps},{label:'Gongyi: Du Fu birthplace',url:'https://www.gongyishi.gov.cn/gyyw/8372206.jhtml'},{label:'Hangzhou Archives: Bai Juyi',url:'https://www.hzarchives.org.cn/info/4733'},{label:'Shouxian: Lu You birthplace',url:'https://www.shouxian.gov.cn/ztbd/ztzl/wxzxcjzl/8127061.html'},{label:'Jiangxi Daily: Wang Anshi chronology',url:'https://jiangxi.jxnews.com.cn/system/2021/12/16/019481587_03.shtml'},{label:'Palace Museum: Meng Haoran',url:'https://www.dpm.org.cn/lemmas/242693.html'}]
+};

@@ -1,0 +1,48 @@
+{
+  "bounds": [
+    51.18,
+    24.47,
+    51.65,
+    24.85
+  ],
+  "source": "scripts/boundary-sources/caucasus-gulf/manifest.json",
+  "coastVertices": 7621,
+  "landBorderVertices": 48,
+  "landBorderEndpoint": [
+    51.302165,
+    24.505507
+  ],
+  "endpointAdjustmentMetres": 137.49465494420883,
+  "countries": {
+    "qatar": {
+      "changed": [
+        "QAT005",
+        "QAT005094",
+        "QAT005098",
+        "QAT005094665",
+        "QAT005094818",
+        "QAT005098748",
+        "QAT005098819",
+        "QAT005098749",
+        "QAT005098760",
+        "QAT005098761",
+        "QAT005098762"
+      ],
+      "counts": {
+        "1": 8,
+        "2": 90,
+        "3": 781
+      }
+    },
+    "saudi-arabia": {
+      "changed": [
+        "SA04",
+        "SA-GB-3984122B39367206521153"
+      ],
+      "counts": {
+        "1": 13,
+        "2": 147
+      }
+    }
+  }
+}

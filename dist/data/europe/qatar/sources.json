@@ -2285,6 +2285,15 @@
       "purpose": "Independent Ras Laffan shoreline control for datum validation",
       "sha256": "26702daa096b83203572a126eb8ef5d387a4229f9f0a6aa584e6beb0aa731067",
       "bytes": 1468821
+    },
+    "qatar-khor-al-adaid-coast-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2824.45%2C51.15%2C24.9%2C51.7%29%3Bout+body%3B%3E%3Bout+skel+qt%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "purpose": "Land-only shoreline of Khor Al Adaid; omit maritime and coastal border strokes",
+      "retrieved": "2026-10-29",
+      "sha256": "3660022cadf729a827666dd089c7d70c1e78cb0d1e0bfd12005fca69a46bd82b",
+      "bytes": 894705
     }
   },
   "coordinateCorrection": {
@@ -2301,5 +2310,17 @@
       3.657065
     ],
     "url": "https://epsg.io/1840"
+  },
+  "coastalCorrection": {
+    "source": "scripts/boundary-sources/caucasus-gulf/qatar-khor-al-adaid-coast-osm.json.gz",
+    "credit": "© OpenStreetMap contributors",
+    "license": "ODbL 1.0",
+    "bounds": [
+      51.18,
+      24.47,
+      51.65,
+      24.85
+    ],
+    "method": "Continuous mapped coast through Khor Al Adaid; retain the inland reference frontier and stop its stroke at the shore. Parent and child land partitions share the correction."
   }
 }

@@ -5,10 +5,7 @@ body[data-atlas=brazil],.country-option[data-atlas=brazil]{--header-stripe:linea
 body[data-atlas=argentina],.country-option[data-atlas=argentina]{--header-stripe:linear-gradient(90deg,#75aadb 0 38%,#fff 38% 46%,#e0b53d 46% 54%,#fff 54% 62%,#75aadb 62%)}
 body[data-atlas=uruguay],.country-option[data-atlas=uruguay]{--header-stripe:linear-gradient(90deg,#3a6ea8 0 45%,#fff 45% 70%,#e0b53d 70%)}
 :root[data-atlas=brazil] .map-mode:has(#mode-province[hidden]){display:none}
-.south-america-sidebar .sidebar-scroll{padding-top:28px}.south-america-sidebar h2{font:42px Georgia,serif;margin:24px 0 8px}.country-local{color:var(--red);font-size:23px}.preview-note{color:var(--muted);font-size:14px;line-height:1.6;border-block:1px solid var(--line);padding:20px 0;margin:28px 0}
-.south-america-sidebar .selection-top img{width:auto;height:auto;max-width:40px;max-height:27px;border-radius:2px;display:block;flex:none}
-.south-flags{display:flex;flex-direction:column;align-items:center;gap:8px;margin-left:auto;width:40px;flex:none}.south-flags a{display:block}.south-flags a[hidden]{display:none}
-.south-america-sidebar .selection-top{display:grid;grid-template-columns:minmax(0,1fr) 40px;grid-template-rows:36px;align-items:start}.south-flags{grid-column:2;grid-row:1;align-self:start}.south-america-sidebar .selection-top .back-button{justify-self:start;width:max-content}.south-america-sidebar #south-kind{padding-right:60px}
+.preview-note{color:var(--muted);font-size:14px;line-height:1.6;border-block:1px solid var(--line);padding:20px 0;margin:28px 0}
 #south-division{width:100%;padding:12px;border:1px solid var(--line);border-radius:5px;background:var(--paper);font-size:14px}#south-results{max-height:240px;overflow:auto;border-bottom:1px solid var(--line)}#south-results button{width:100%;text-align:left}#south-results small{display:block;color:var(--muted);margin-top:4px}.south-america-sidebar .layers{margin-top:24px}
 .south-layer-status{font-size:12px;color:var(--muted);margin:8px 0 0}
 .south-code-details{font-size:14px;line-height:1.6;margin:0 0 24px;color:var(--muted)}

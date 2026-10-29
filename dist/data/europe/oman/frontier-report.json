@@ -1,0 +1,32 @@
+{
+  "aligned": [
+    {
+      "pair": "ARE-OMN",
+      "owner": "united-arab-emirates",
+      "vertices": 120
+    },
+    {
+      "pair": "ARE-OMN",
+      "owner": "united-arab-emirates",
+      "vertices": 1414
+    },
+    {
+      "pair": "ARE-OMN",
+      "owner": "united-arab-emirates",
+      "vertices": 165
+    },
+    {
+      "pair": "ARE-OMN",
+      "owner": "united-arab-emirates",
+      "vertices": 120
+    },
+    {
+      "pair": "OMN-SAU",
+      "owner": "saudi-arabia",
+      "vertices": 204
+    }
+  ],
+  "owned": [
+    "OMN-YEM"
+  ]
+}

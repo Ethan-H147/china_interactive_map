@@ -61,6 +61,15 @@
       "license": "No explicit license returned by public service; retained as factual bilingual-name reference, not chosen for app geometry",
       "sourceField": "Governorate_المحافظات_2023",
       "count": 149
+    },
+    "qatar-khor-al-adaid-coast-osm.json": {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bway%5B%22natural%22%3D%22coastline%22%5D%2824.45%2C51.15%2C24.9%2C51.7%29%3Bout+body%3B%3E%3Bout+skel+qt%3B",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "purpose": "Land-only shoreline of Khor Al Adaid; omit maritime and coastal border strokes",
+      "retrieved": "2026-10-29",
+      "sha256": "3660022cadf729a827666dd089c7d70c1e78cb0d1e0bfd12005fca69a46bd82b",
+      "bytes": 894705
     }
   },
   "depth": {
@@ -76,5 +85,17 @@
       "2": 2021
     },
     "method": "Regional polygons are dissolved from the same 147 governorates using official Taadeen emirate assignments, so all local areas nest consistently. The retained national land mask, context and international strokes remain unchanged. Deeper geometry loads by selected region."
+  },
+  "coastalCorrection": {
+    "source": "scripts/boundary-sources/caucasus-gulf/qatar-khor-al-adaid-coast-osm.json.gz",
+    "credit": "© OpenStreetMap contributors",
+    "license": "ODbL 1.0",
+    "bounds": [
+      51.18,
+      24.47,
+      51.65,
+      24.85
+    ],
+    "method": "Continuous mapped coast through Khor Al Adaid; retain the inland reference frontier and stop its stroke at the shore. Parent and child land partitions share the correction."
   }
 }

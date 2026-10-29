@@ -1,0 +1,58 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Ten departments, 140 communes and 570 communal sections from the dated CNIGS/OCHA reference valid in 2018, reviewed in 2025. This source omits the intermediate arrondissement layer and retains its older 140-commune framework; later new communes are not invented. Department and commune population uses matched UNFPA/COD-PS estimates at 1 September 2024, including the source’s displacement and mobility assumptions; section populations are unavailable. Administrative geography does not describe current territorial control. All levels dissolve from common land partitions. Only shared internal boundaries and the Haiti–Dominican Republic land frontier have lines; coastlines and ocean gaps have no stroke. Country overview pages remain hidden.",
+  "counts": {
+    "1": 10,
+    "2": 140,
+    "3": 570
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "hti-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-hti",
+      "sha256": "3e8b286a20a8c5b83e7b335a3838f96b25f05682d9b4d1581cdb4fe015a4030d",
+      "bytes": 45371
+    },
+    "hti.zip": {
+      "url": "https://data.humdata.org/dataset/777e8b06-337f-4295-80bc-ca1515244215/resource/1d89a0d5-897d-4c83-ab37-f363a0dca850/download/hti_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-hti",
+      "sha256": "9601ebe9bf79188d852cce50e846c789b801b10778701fc20355a4e35fd0a67a",
+      "bytes": 6569520
+    },
+    "flag-ht.svg": {
+      "url": "https://flagcdn.com/ht.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "65839463e163fd812f732f606111c68961e9bb23aa9624c8c448605fe0e086a1",
+      "bytes": 101261
+    },
+    "cod-populations.json": {
+      "url": "https://data.humdata.org/dataset/cod-ps-hti",
+      "role": "Normalized retained DOM and HTI COD-PS rows; Cuba legacy projections excluded from output",
+      "sha256": "1aa7a87d8ee39fdfa8db14f974d02a2a3585895ff03733095a04ddbe7c968cf0",
+      "bytes": 57036
+    },
+    "hti-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-hti",
+      "sha256": "e856daf5c882d6df9c414526f71c5a28848732266bbc87e6ba0c6c1fd2117bef",
+      "bytes": 39172
+    },
+    "hti_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/95ba5281-fd76-4d3a-ae29-247e1ff26447/resource/c2bbfc4a-d000-47fd-82d9-a74e44d7aa22/download/hti_admpop_adm1_2024.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "7637379d93e0645b4123f4d8e0ae8909fc7ba78f0328da890cc1a62d406885bd",
+      "bytes": 4172
+    },
+    "hti_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/95ba5281-fd76-4d3a-ae29-247e1ff26447/resource/fc2ae030-c37e-4070-9f81-0f5f1c3d446c/download/hti_admpop_adm2_2024.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "34a560ac45bf3f98a79592ecabdc05bdb13f65c7a1a70f8e5ca41370c72150a8",
+      "bytes": 47168
+    }
+  }
+}

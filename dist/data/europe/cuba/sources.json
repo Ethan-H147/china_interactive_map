@@ -1,0 +1,53 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Fifteen provinces and the Isla de la Juventud special municipality, with 168 municipalities. Boundaries retain the 2017 source geography, valid in the retained 2023 release; the source excludes the Guantánamo naval-base footprint. Province statistics use ONEI’s calculated effective population at 31 December 2024, rather than obsolete legacy projections. Effective population is a residence-based statistical measure, not a new census. Municipal populations are not inferred from province totals. All levels dissolve from common land partitions. Only shared internal boundaries and the Haiti–Dominican Republic land frontier have lines; coastlines and ocean gaps have no stroke. Country overview pages remain hidden.",
+  "counts": {
+    "1": 16,
+    "2": 168
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "cub-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cub",
+      "sha256": "2d4a66fc7d29409ad9bf754ef76a556160a1793e8faca234fa54dd25facaeb4e",
+      "bytes": 27580
+    },
+    "cub.zip": {
+      "url": "https://data.humdata.org/dataset/32b4ba2e-2ee5-4b2b-a7e4-9e4d323ffe73/resource/b9c9175f-b974-419b-8f2b-ef2ac55221fb/download/cub_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cub",
+      "sha256": "50f9fd96dc1a43a31fb995a650add95fe817817365cc1a4f1a2f093c98d21cb8",
+      "bytes": 13324947
+    },
+    "flag-cu.svg": {
+      "url": "https://flagcdn.com/cu.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "afba6d3e29d510e256c07b23f2afc00a9cea87296765138e5645fe995d24249f",
+      "bytes": 282
+    },
+    "cub-population.json": {
+      "url": "https://rotativo.com.mx/files/88746/00-anuario-demografico-2024.pdf",
+      "credit": "ONEI demographic yearbook 2024",
+      "role": "Normalized primary effective-population table 1.5",
+      "year": 2024,
+      "sha256": "58486ef8b376db102775f16c0b2b90a607769f762b05682560f580c07e786c78",
+      "bytes": 4482
+    },
+    "cub-yearbook-2024.pdf": {
+      "url": "https://rotativo.com.mx/files/88746/00-anuario-demografico-2024.pdf",
+      "credit": "ONEI (primary publication retained from public mirror)",
+      "year": 2024,
+      "sha256": "4ce6b2df9f03f94f6a0874e0762ed0c1c2b65d31b7d9cc074cc3ba0f93f6054d",
+      "bytes": 7936873
+    },
+    "cod-populations.json": {
+      "url": "https://data.humdata.org/dataset/cod-ps-hti",
+      "role": "Normalized retained DOM and HTI COD-PS rows; Cuba legacy projections excluded from output",
+      "sha256": "1aa7a87d8ee39fdfa8db14f974d02a2a3585895ff03733095a04ddbe7c968cf0",
+      "bytes": 57036
+    }
+  }
+}

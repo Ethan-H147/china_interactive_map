@@ -10,7 +10,7 @@ let state = 'peek', drag = null;
 const visibleSidebar = () => [...document.querySelectorAll('aside.sidebar')].find(a => !a.hidden && getComputedStyle(a).display !== 'none');
 function heights() {
   const aside = visibleSidebar(), tools = aside?.querySelector('.sidebar-tools'), handle = aside?.querySelector('.sheet-handle');
-  const peek = Math.round((handle?.offsetHeight || 26) + (tools?.offsetHeight || 120) + 14);
+  const peek = Math.round((handle?.offsetHeight || 26) + (tools?.offsetHeight ?? 120) + 14);
   const full = Math.max(peek, innerHeight - 72);
   return {peek, half: Math.min(full, Math.max(peek, Math.round(innerHeight * .48))), full};
 }
@@ -91,9 +91,9 @@ new MutationObserver(records => {
   const regionTab = records.some(r => r.attributeName === 'aria-pressed' && r.target.getAttribute('aria-pressed') === 'true' && /tab-(explore|quiz)$/.test(r.target.id));
   if (nowSelected && !wasSelected || regionTab) atLeast('half');
   else if (!nowSelected && wasSelected && state === 'half') apply('peek');
-  else if (records.some(r => r.attributeName === 'hidden' && r.target.matches?.('aside.sidebar'))) apply(state);
+  else if (records.some(r => r.attributeName === 'data-quiz' || r.attributeName === 'hidden' && r.target.matches?.('aside.sidebar'))) apply(state);
   wasSelected = nowSelected;
-}).observe(document.body, {subtree: true, attributes: true, attributeFilter: ['hidden', 'aria-pressed']});
+}).observe(document.body, {subtree: true, attributes: true, attributeFilter: ['hidden', 'aria-pressed', 'data-quiz']});
 // Choosing a place (from search, a list or the map) shows it: a full sheet comes down to
 // half, so the selected region is visible above it.
 let crumbText='';

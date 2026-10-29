@@ -1,0 +1,63 @@
+{
+  "retrieved": "2026-10-29",
+  "url": "https://whc.unesco.org/en/list/1442/maps/",
+  "method": "Coordinates transcribed from the UNESCO component table accessed through the web reader; not an HTML snapshot.",
+  "components": [
+    {
+      "id": "1442-008",
+      "name": "Suyab",
+      "latitude": [
+        42,
+        48,
+        7
+      ],
+      "longitude": [
+        75,
+        12,
+        12
+      ]
+    },
+    {
+      "id": "1442-009",
+      "name": "Balasagun",
+      "latitude": [
+        42,
+        44,
+        48
+      ],
+      "longitude": [
+        75,
+        15,
+        1
+      ]
+    },
+    {
+      "id": "1442-010",
+      "name": "Nevaket",
+      "latitude": [
+        42,
+        54,
+        44
+      ],
+      "longitude": [
+        75,
+        0,
+        54
+      ]
+    },
+    {
+      "id": "1442-012",
+      "name": "Talgar",
+      "latitude": [
+        43,
+        16,
+        40
+      ],
+      "longitude": [
+        77,
+        13,
+        20
+      ]
+    }
+  ]
+}

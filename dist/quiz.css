@@ -30,3 +30,12 @@
 
 .quiz-satellite-dock{flex:none;margin:0;border:0;padding:12px 24px 16px}.quiz-satellite-dock #satellite-controls>label{margin:0;min-height:44px}.quiz-satellite-dock .satellite-options{max-height:160px;overflow-y:auto}
 @media(max-width:760px){.quiz-satellite-dock{padding:8px 16px 12px}html[data-sheet="peek"] .quiz-satellite-dock{display:none}}
+
+.quiz-answer-row{display:grid;grid-template-columns:1.2em minmax(0,1fr);gap:8px;align-items:baseline;line-height:1.5}.quiz-answer-row+.quiz-answer-row{margin-top:8px}.quiz-answer-row>span:last-child{overflow-wrap:anywhere}.quiz-answer-icon{font-size:1.15em;font-weight:700;text-align:center;color:#b44737}.quiz-answer-row[data-answer=correct] .quiz-answer-icon{color:#38684a}
+
+/* Active rounds use the sidebar from the top; setup keeps its navigation. */
+.sidebar[data-quiz=true]>.sidebar-tools{display:none}
+
+.quiz-map-views{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px}.quiz-map-views button{min-height:36px;padding:6px 10px;border:1px solid var(--line);border-radius:4px;font-size:12px;background:var(--paper)}
+
+@media(max-width:760px){.quiz-map-views button{min-height:44px}}

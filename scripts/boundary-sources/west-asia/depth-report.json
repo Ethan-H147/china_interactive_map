@@ -276,11 +276,11 @@
       },
       "method": "Regional polygons are dissolved from the same 147 governorates using official Taadeen emirate assignments, so all local areas nest consistently. The retained national land mask, context and international strokes remain unchanged. Deeper geometry loads by selected region.",
       "preservedAssets": {
-        "context.bin": "6d57b1a9e72d35de7c12b2908938b7532de20a0723252bb1a19489da52a1916d",
+        "context.bin": "5857802de28354ea9d632a0f5f9bd322b49f1052cc7762d87a4e5242f1904987",
         "international.bin": "ddb92611ef7652eeec6db73baabac0669e041d8a87a66aff682318520f53e9d5"
       },
       "preservedStatistics": {
-        "saudi-arabia:SAU": "225d2d2660a0929f97714f30f9ccc1f8f82370d73f3de55380d2fe79e5ef9401"
+        "saudi-arabia:SAU": "451db5a58b8d3098dcfd79cb60fe96b8f1cd41b50ed8f77f2e871f1723bf0cca"
       },
       "preservedPopulation": {
         "saudi-arabia:SA04": "078d69c36f39bf4ee6166b36ceb20cce6c3384670a2a9f5b819c81d20c498d43",
@@ -296,6 +296,15 @@
         "saudi-arabia:SA11": "b0bf5d402b17c4fe002181a42c789ba5f827da313851d8b846e1c051014ea736",
         "saudi-arabia:SA09": "cb9d7d83783389b193cb040a8a35654e5b9cf7afe11395586e161dfa09319bb1",
         "saudi-arabia:SA14": "3cab1bcdeded1db13023c0e1f9d885a6e00a7b875725852a89420190bb12a7ec"
+      },
+      "coastalCorrection": {
+        "report": "dist/data/europe/qatar/khor-al-adaid-report.json",
+        "previousAssets": {
+          "context.bin": "6d57b1a9e72d35de7c12b2908938b7532de20a0723252bb1a19489da52a1916d"
+        },
+        "previousStatistics": {
+          "saudi-arabia:SAU": "225d2d2660a0929f97714f30f9ccc1f8f82370d73f3de55380d2fe79e5ef9401"
+        }
       }
     }
   }

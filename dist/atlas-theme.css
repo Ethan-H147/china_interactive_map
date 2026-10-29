@@ -156,3 +156,27 @@ body[data-atlas=antarctica],.country-option[data-atlas=antarctica]{--ink:#263c4b
 :root[data-atlas=iraq],body[data-atlas=iraq],.country-option[data-atlas=iraq]{--red:#96633e;--red-dark:#96633e;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f7f1eb;--surface-soft:#eee0d2;--accent-soft:#d9b99b;--header-stripe:linear-gradient(90deg,#ce1126 0 33.333%,#fff 33.333% 66.667%,#000 66.667%)}
 
 :root[data-atlas=saudi-arabia],body[data-atlas=saudi-arabia],.country-option[data-atlas=saudi-arabia]{--red:#477a43;--red-dark:#477a43;--ink:#293a36;--muted:#71817a;--gold:#ad893e;--line:#dce5df;--paper:#fcfdfa;--map:#f0f5ed;--surface-soft:#e0ebd9;--accent-soft:#b8d2a7;--header-stripe:linear-gradient(90deg,#006c35,#006c35)}
+
+:root[data-atlas=papua-new-guinea],body[data-atlas=papua-new-guinea],.country-option[data-atlas=papua-new-guinea]{--ink:#30372d;--muted:#77816f;--red:#99523a;--red-dark:#99523a;--gold:#b49a48;--line:#dde5d6;--paper:#fdfefb;--map:#f5ece5;--surface-soft:#efdfd4;--title-accent:#99523a;--header-stripe:linear-gradient(90deg,#242424 0 45%,#d19c3a 45% 50%,#bd3f35 50%)}
+
+:root[data-atlas=solomon-islands],body[data-atlas=solomon-islands],.country-option[data-atlas=solomon-islands]{--ink:#30372d;--muted:#77816f;--red:#3b7378;--red-dark:#3b7378;--gold:#b49a48;--line:#dde5d6;--paper:#fdfefb;--map:#edf4f2;--surface-soft:#dce9e7;--title-accent:#3b7378;--header-stripe:linear-gradient(90deg,#2363a7 0 45%,#e9c746 45% 55%,#38804d 55%)}
+
+:root[data-atlas=vanuatu],body[data-atlas=vanuatu],.country-option[data-atlas=vanuatu]{--ink:#30372d;--muted:#77816f;--red:#617e3b;--red-dark:#617e3b;--gold:#b49a48;--line:#dde5d6;--paper:#fdfefb;--map:#f0f3e9;--surface-soft:#e4ead7;--title-accent:#617e3b;--header-stripe:linear-gradient(90deg,#222 0 12%,#d9b440 12% 20%,#b93b34 20% 60%,#448352 60%)}
+
+:root[data-atlas=oman],body[data-atlas=oman],.country-option[data-atlas=oman]{--ink:#30372d;--muted:#77816f;--red:#647344;--red-dark:#647344;--gold:#b49a48;--line:#dde5d6;--paper:#fdfefb;--map:#f2f2e9;--surface-soft:#e6e7db;--title-accent:#647344;--header-stripe:linear-gradient(90deg,#c6362c 0 25%,#fff 25% 62%,#35844b 62%)}
+
+:root[data-atlas=yemen],body[data-atlas=yemen],.country-option[data-atlas=yemen]{--ink:#30372d;--muted:#77816f;--red:#9d5044;--red-dark:#9d5044;--gold:#b49a48;--line:#dde5d6;--paper:#fdfefb;--map:#f7efec;--surface-soft:#eee0dc;--title-accent:#9d5044;--header-stripe:linear-gradient(90deg,#bd342d 0 33.333%,#fff 33.333% 66.667%,#292929 66.667%)}
+
+:root[data-atlas=syria],body[data-atlas=syria],.country-option[data-atlas=syria]{--ink:#30372d;--muted:#77816f;--red:#397449;--red-dark:#397449;--gold:#b49a48;--line:#dde5d6;--paper:#fdfefb;--map:#eef4ed;--surface-soft:#dce9df;--title-accent:#397449;--header-stripe:linear-gradient(90deg,#007a3d 0 33.333%,#fff 33.333% 66.667%,#222 66.667%)}
+
+:root[data-atlas=jordan],body[data-atlas=jordan],.country-option[data-atlas=jordan]{--ink:#30372d;--muted:#77816f;--red:#49784b;--red-dark:#49784b;--gold:#b49a48;--line:#dde5d6;--paper:#fdfefb;--map:#f0f4ec;--surface-soft:#e1e9df;--title-accent:#49784b;--header-stripe:linear-gradient(90deg,#bd342d 0 22%,#252525 22% 48%,#fff 48% 74%,#38824c 74%)}
+
+:root[data-atlas=bahamas],body[data-atlas=bahamas],.country-option[data-atlas=bahamas]{--ink:#303731;--muted:#748078;--red:#347d80;--red-dark:#347d80;--gold:#b49a48;--line:#dbe4df;--paper:#fdfefb;--map:#eef5f3;--surface-soft:#dcebe9;--title-accent:#347d80;--header-stripe:linear-gradient(90deg,#252525 0 20%,#5aa9ae 20% 52%,#dec45c 52% 68%,#5aa9ae 68%)}
+
+:root[data-atlas=cuba],body[data-atlas=cuba],.country-option[data-atlas=cuba]{--ink:#303731;--muted:#748078;--red:#356a94;--red-dark:#356a94;--gold:#b49a48;--line:#dbe4df;--paper:#fdfefb;--map:#eff4f8;--surface-soft:#dfe9f1;--title-accent:#356a94;--header-stripe:linear-gradient(90deg,#b33d3c 0 20%,#24518a 20% 36%,#eee9de 36% 52%,#24518a 52% 68%,#eee9de 68% 84%,#24518a 84%)}
+
+:root[data-atlas=dominican-republic],body[data-atlas=dominican-republic],.country-option[data-atlas=dominican-republic]{--ink:#303731;--muted:#748078;--red:#465e8a;--red-dark:#465e8a;--gold:#b49a48;--line:#dbe4df;--paper:#fdfefb;--map:#f0f3f8;--surface-soft:#e1e7ef;--title-accent:#465e8a;--header-stripe:linear-gradient(90deg,#294679 0 45%,#ede8da 45% 55%,#b74742 55%)}
+
+:root[data-atlas=haiti],body[data-atlas=haiti],.country-option[data-atlas=haiti]{--ink:#303731;--muted:#748078;--red:#71558d;--red-dark:#71558d;--gold:#b49a48;--line:#dbe4df;--paper:#fdfefb;--map:#f3f0f7;--surface-soft:#e6e2ef;--title-accent:#71558d;--header-stripe:linear-gradient(90deg,#294889 0 50%,#b23d43 50%)}
+
+:root[data-atlas=jamaica],body[data-atlas=jamaica],.country-option[data-atlas=jamaica]{--ink:#303731;--muted:#748078;--red:#567c42;--red-dark:#567c42;--gold:#b49a48;--line:#dbe4df;--paper:#fdfefb;--map:#f1f5eb;--surface-soft:#e3eadb;--title-accent:#567c42;--header-stripe:linear-gradient(90deg,#2c754b 0 40%,#d5b345 40% 50%,#242424 50% 60%,#d5b345 60% 70%,#2c754b 70%)}

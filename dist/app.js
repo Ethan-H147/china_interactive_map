@@ -67,9 +67,9 @@ function syncDistrictLayers(){
   for(const id of ['city-district-fill','city-district-lines','city-district-selection'])if(map.getLayer(id)){map.setFilter(id,filter);layerVisible(id,visible);}
 }
 let provinceFeatures=[],manifest,selected=null,allReady=false,cameraBusy=false,activeCode=null,finishNavigation=null,hovered=null;
-let chinaFirstQuiz,chinaPrefectureQuiz,chinaCityQuiz;
+let chinaFirstQuiz,chinaPrefectureQuiz,chinaCityQuiz,chinaMiscQuiz;
 // Every China division uses the shared quiz controller and installed map layers.
-const activeChinaQuiz=()=>chinaFirstQuiz?.active?chinaFirstQuiz:chinaCityQuiz?.active?chinaCityQuiz:chinaPrefectureQuiz?.active?chinaPrefectureQuiz:null;
+const activeChinaQuiz=()=>chinaMiscQuiz?.active?chinaMiscQuiz:chinaFirstQuiz?.active?chinaFirstQuiz:chinaCityQuiz?.active?chinaCityQuiz:chinaPrefectureQuiz?.active?chinaPrefectureQuiz:null;
 const quiz={active:false,round:null,pool:[],saved:null,highlighted:[],reviewLayer:null};
 let failedCountry=null,recoveringCountry=false,chinaReady=false,chinaLoading,countrySwitching=false,countryEpoch=0,requestedCountry,countryPreparation,countryLoadFailed=false;
 // Keep all county search records; load boundary geometry for the selected area.
@@ -838,8 +838,9 @@ chinaFirstQuiz=window.AtlasFirstLevelQuiz.createFirstLevelQuiz(map,chinaQuizHost
  begin:async()=>{clearQuizHighlights();clearSelection();clearSearch();activeCode=null;$('province').value='';$('breadcrumb-region').hidden=true;setMode('province');},
  hideLabels:()=>{labels.forEach(label=>label.remove());labels.length=0;},review:()=>{},
  restore:async saved=>{if(saved.selected)selectRegion(saved.selected,saved.selected.feature.properties.provinceCode||saved.selected.feature.properties.adcode,false);else{activeCode=saved.activeCode;setMode(saved.mode||'province');syncLayers();}showPanel('layers');updateLabels();},onOpen:()=>{chinaQuizLevel='provinces';$('cn-quiz-level').value='provinces';$('quiz-panel').hidden=true;}});
-function chinaQuizLevelPicker(parent,value,id){const label=document.createElement('label');label.className='field-label quiz-level-choice';label.textContent='Divisions';label.htmlFor=id;const select=document.createElement('select');select.id=id;select.innerHTML='<option value="provinces">Provinces &amp; territories</option><option value="prefectures">Prefectures</option>'+(registry.countries.china.quiz?.cities?'<option value="cities">Cities</option>':'');select.value=value;select.onchange=()=>{chinaQuizLevel=select.value;openChinaQuiz();};label.append(select);parent.querySelector('[data-q=scope-label]').after(label);}
+function chinaQuizLevelPicker(parent,value,id){const label=document.createElement('label');label.className='field-label quiz-level-choice';label.textContent='Category';label.htmlFor=id;const select=document.createElement('select');select.id=id;select.innerHTML='<option value="provinces">Provinces &amp; territories</option><option value="prefectures">Prefectures</option>'+(registry.countries.china.quiz?.cities?'<option value="cities">Cities</option>':'')+'<option value="miscellaneous">Miscellaneous</option>';select.value=value;select.onchange=()=>{chinaQuizLevel=select.value;openChinaQuiz();};label.append(select);parent.querySelector('[data-q=scope-label]').after(label);}
 function openChinaCities(options={}){chinaCityQuiz??=window.AtlasCityQuiz.createCityQuiz(map,chinaQuizHost,{get ready(){return allReady&&chinaReady;}},{country:'china',sidebar:$('china-sidebar'),tab:chinaQuizTab,prefix:'cn-cities',addPicker:panel=>chinaQuizLevelPicker(panel.querySelector('[data-q=setup]'),'cities','cn-cities-quiz-level'),hidePrefix:null,lineLayer:'province-lines',hideLabels:()=>{labels.forEach(label=>label.remove());labels.length=0;},restore:()=>{syncLayers();updateLabels();}});$('cn-quiz-panel').hidden=true;$('quiz-panel').hidden=true;$('cn-cities-quiz-level').value='cities';chinaCityQuiz.open(options);}
+function openChinaMisc(options={}){chinaMiscQuiz??=window.AtlasChinaMiscQuiz.createChinaMiscQuiz(map,chinaQuizHost,{sidebar:$('china-sidebar'),tab:chinaQuizTab,ready:()=>allReady&&chinaReady,addPicker:(panel,id)=>chinaQuizLevelPicker(panel.querySelector('[data-q=setup]'),'miscellaneous',id),native:{capture:()=>({selected:selected?.layer,activeCode,mode:$('map-shell').dataset.level}),begin:async()=>{clearQuizHighlights();clearSelection();clearSearch();activeCode=null;$('province').value='';$('breadcrumb-region').hidden=true;setMode('province');},hideLabels:()=>{labels.forEach(label=>label.remove());labels.length=0;},restore:async saved=>{if(saved.selected)await selectRegion(saved.selected,saved.selected.feature.properties.provinceCode||saved.selected.feature.properties.adcode,false);else{activeCode=saved.activeCode;setMode(saved.mode||'province');syncLayers();}showPanel('layers');updateLabels();}}});chinaMiscQuiz.open(options);}
 function chinaPrefectureRecords(){return AtlasQuiz.candidates([...regionByCode.values()],{includeTaiwan:true}).map(layer=>{
  const p=layer.feature.properties,b=layer.getBounds();return{id:String(p.adcode),level:2,parent:String(p.provinceCode),en:englishName(p),local:p.name,localLang:'zh',aliases:[...(Array.isArray(p.regional)?p.regional:[]),...(p.searchAliases||'').split(/[;,|]/).filter(Boolean)],overseas:p.provinceCode===710000&&chinaPrefectureQuiz?.scope!=='710000',bounds:[[b.getWest(),b.getSouth()],[b.getEast(),b.getNorth()]],center:p.centroid||p.center};
 });}
@@ -864,7 +865,7 @@ function mountChinaPrefectureQuiz(){
   onOpen(){migrateChinaPrefectureDrafts();chinaQuizLevel='prefectures';$('china-quiz-level').value='prefectures';}
  });chinaQuizLevelPicker(chinaPrefectureQuiz.panel.querySelector('[data-q=setup]'),'prefectures','china-quiz-level');
 }
-function openChinaQuiz(options={}){if(activeChinaQuiz())return;for(const q of [chinaFirstQuiz,chinaPrefectureQuiz,chinaCityQuiz])if(q)q.panel.hidden=true;$('quiz-panel').hidden=true;if(chinaQuizLevel==='cities'){openChinaCities(options);return;}if(chinaQuizLevel==='provinces')chinaFirstQuiz.open(options);else{mountChinaPrefectureQuiz();chinaPrefectureQuiz.open(options);}}
+function openChinaQuiz(options={}){if(activeChinaQuiz())return;for(const q of [chinaFirstQuiz,chinaPrefectureQuiz,chinaCityQuiz,chinaMiscQuiz])if(q)q.panel.hidden=true;$('quiz-panel').hidden=true;if(chinaQuizLevel==='miscellaneous'){openChinaMisc(options);return;}if(chinaQuizLevel==='cities'){openChinaCities(options);return;}if(chinaQuizLevel==='provinces')chinaFirstQuiz.open(options);else{mountChinaPrefectureQuiz();chinaPrefectureQuiz.open(options);}}
 chinaQuizLevelPicker($('cn-quiz-panel').querySelector('[data-q=setup]'),'provinces','cn-quiz-level');
 // A selected province opens its prefectures; an unselected map keeps the last level.
 chinaQuizTab.onclick=()=>{const scope=!quiz.active&&activeCode&&chinaPrefectureRecords().some(r=>r.parent===String(activeCode))?String(activeCode):undefined;if(scope)chinaQuizLevel='prefectures';openChinaQuiz(scope?{scope}:{});};
@@ -876,7 +877,7 @@ globalThis.addEventListener('atlas-quiz-open',async event=>{
  if(quiz.active){if(activeChinaQuiz())await activeChinaQuiz().end();else if(activeCountryQuiz()?.active)await activeCountryQuiz().end();else{cancelNavigation();configureQuiz();}}
  if(epoch!==accountQuizNavigation||quiz.active)return;
  if(!await changeAtlas(country,true)||epoch!==accountQuizNavigation)return;mountCountryQuiz();
- if(country==='china'){chinaQuizLevel=intent.level===3?'cities':intent.level===2?'prefectures':'provinces';openChinaQuiz(intent);}
+ if(country==='china'){chinaQuizLevel=intent.level===4?'miscellaneous':intent.level===3?'cities':intent.level===2?'prefectures':'provinces';openChinaQuiz(intent);}
  else if(registry.countries[country].quiz.counties&&intent.level>=2)await currentAtlas()?.countyQuiz?.open(intent);
  else if(registry.countries[country].quiz.cities&&intent.level===3)currentAtlas()?.cityQuiz?.open(intent);
  else currentAtlas()?.quiz?.open(intent);

@@ -1,0 +1,15 @@
+{
+  "aligned": [
+    {
+      "pair": "OMN-YEM",
+      "owner": "oman",
+      "vertices": 15
+    },
+    {
+      "pair": "SAU-YEM",
+      "owner": "saudi-arabia",
+      "vertices": 334
+    }
+  ],
+  "owned": []
+}

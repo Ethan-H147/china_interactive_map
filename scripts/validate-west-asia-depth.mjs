@@ -1,3 +1,4 @@
+import {khorPatch} from './khor-al-adaid.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -33,7 +34,9 @@ for(const d of definitions){
   const raw=JSON.parse(source('saudi-governorates.geojson'));assert.deepEqual([...new Set(cat.records.filter(r=>r.level===2).map(r=>r.sourceId))].sort(),raw.features.map(f=>f.properties.shapeID).sort());
   assert.equal(cat.records.find(r=>r.en==='Riyadh Al Khabra').parent,'SA05','Official Qassim membership');
   const khubar=cat.records.find(r=>r.id==='SA-GB-3984122B30508649206602');assert(khubar.bounds[1][0]-khubar.bounds[0][0]<1&&khubar.bounds[1][1]-khubar.bounds[0][1]<1,'Local governorate bounds exclude distant coastal fragments');
-  const mask=JSON.parse(source('saudi-national-mask.geojson')),{missing,outside}=differences(mask,first);assert(planarArea(missing)<.05&&planarArea(outside)<.05,'Saudi national land mask unchanged');
+  const mask=JSON.parse(source('saudi-national-mask.geojson')),{missing,outside}=differences(mask,first);
+  const unchanged=value=>info.coastalCorrection?collection(polygonClipping.difference(lattice(value.features.flatMap(f=>polygons(f.geometry))),lattice(khorPatch))):value;
+  assert(planarArea(unchanged(missing))<.05&&planarArea(unchanged(outside))<.05,'Saudi national land mask unchanged outside the sourced inlet correction');
  }else{
   const zip=unzipSync(source(d.iso.toLowerCase()+'.zip'));
   for(const level of d.country==='iraq'?[2,3]:[2]){const raw=JSON.parse(Buffer.from(zip[d.iso.toLowerCase()+'_admin'+level+'.geojson'])),expected=raw.features.map(f=>f.properties['adm'+level+'_pcode']).sort(),actual=[...new Set(cat.records.filter(r=>r.level===level).map(r=>r.sourceId))].sort();assert.deepEqual(actual,expected,'Every original source identity retained '+d.country+' '+level);}

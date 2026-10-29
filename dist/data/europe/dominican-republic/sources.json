@@ -1,0 +1,58 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Thirty-one provinces and the National District, 155 municipalities and 386 municipal seats/districts from the dated 2017 source, retained as valid in 2021. The ten statistical regions are retained as record metadata, not presented as provinces. Source ADM2–4 becomes atlas levels 1–3. Later municipal reforms are not inferred. Province population uses matched 2023 COD-PS projections; the defective source ADM0 population row is discarded. No municipal population is invented. All levels dissolve from common land partitions. Only shared internal boundaries and the Haiti–Dominican Republic land frontier have lines; coastlines and ocean gaps have no stroke. Country overview pages remain hidden.",
+  "counts": {
+    "1": 32,
+    "2": 155,
+    "3": 386
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "dom-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dom",
+      "sha256": "f80036f938f500af2f27223d91c592fae0db04e8262a6a1f0e6f2c66b85a2188",
+      "bytes": 49997
+    },
+    "dom.zip": {
+      "url": "https://data.humdata.org/dataset/1b26ea94-4d28-4167-9209-4984ab087973/resource/66c7a7c9-5be1-4b1a-8b5a-a559e0c970a8/download/dom_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dom",
+      "sha256": "1edcc3e974d00fd0858d2673b88f53a60d536d38ef74bcd56a5d654fe0b70037",
+      "bytes": 54479365
+    },
+    "flag-do.svg": {
+      "url": "https://flagcdn.com/do.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "ed01134a6d931721c58fc34771e34e1d513e9e06e7241a1e6528172093c77880",
+      "bytes": 148257
+    },
+    "cod-populations.json": {
+      "url": "https://data.humdata.org/dataset/cod-ps-hti",
+      "role": "Normalized retained DOM and HTI COD-PS rows; Cuba legacy projections excluded from output",
+      "sha256": "1aa7a87d8ee39fdfa8db14f974d02a2a3585895ff03733095a04ddbe7c968cf0",
+      "bytes": 57036
+    },
+    "dom-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-dom",
+      "sha256": "cdc506f8254d7c161cf97e61d36d1af54584398fd67783b1b129eb111d2d7041",
+      "bytes": 28046
+    },
+    "dom_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/23eb98d2-e167-4b89-a026-f767cc81487e/resource/dc062d79-4679-4d37-a4dd-bd577979e411/download/dom_admpop_adm1_2023.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "5d0643e46c03cdd4c5e42976c7fc68284c649a2f4093e10bc6a71429da3b6b4d",
+      "bytes": 4488
+    },
+    "dom_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/23eb98d2-e167-4b89-a026-f767cc81487e/resource/c93ab474-c5ad-4a76-9532-5eaa9f5f5348/download/dom_admpop_adm2_2023.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "92f05bdbd6c58fe5fc2584dfc789e62a1cf05b6f5feb7d5908a7bb542665d41c",
+      "bytes": 12145
+    }
+  }
+}

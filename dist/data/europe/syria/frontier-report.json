@@ -1,0 +1,19 @@
+{
+  "aligned": [
+    {
+      "pair": "SYR-TUR",
+      "owner": "turkey",
+      "vertices": 1483
+    },
+    {
+      "pair": "IRQ-SYR",
+      "owner": "iraq",
+      "vertices": 149
+    }
+  ],
+  "owned": [
+    "ISR-SYR",
+    "LBN-SYR",
+    "JOR-SYR"
+  ]
+}

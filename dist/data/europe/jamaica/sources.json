@@ -1,0 +1,51 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Fourteen parishes and 775 Social Development Commission communities from the dated 2017 reference, validated in 2024. Communities are grouped directly by their published parish P-code; the ambiguous 131-unit intermediate source layer is not presented as an administrative tier. The 2022 STATIN table supplies 12 separate parish totals; its combined Kingston and Saint Andrew count is disclosed without splitting or duplicating it. No community populations are inferred. All levels dissolve from common land partitions. Only shared internal boundaries and the Haiti–Dominican Republic land frontier have lines; coastlines and ocean gaps have no stroke. Country overview pages remain hidden.",
+  "counts": {
+    "1": 14,
+    "2": 775
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "flag-jm.svg": {
+      "url": "https://flagcdn.com/jm.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "44504dda9d5bff31dfbcf5c8cce7acf0bfb9a7b16a697aadca3f9c4e854b62eb",
+      "bytes": 259
+    },
+    "jam-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-jam",
+      "sha256": "77105f71079fc98cf01931ccd25aa57a597de46ac53281bb666833ce40894428",
+      "bytes": 37059
+    },
+    "jam.zip": {
+      "url": "https://data.humdata.org/dataset/fee5299d-52f5-4273-a878-56175210da82/resource/11de4f91-d8a7-4a7c-9997-e9e17ca2fea9/download/jam_admin_boundaries.geojson.zip",
+      "credit": "Jamaica Social Development Commission / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "cd41d5fd0e3b18f5ddff92361b9ea60313cc20c4eb050995ebd3a96b75dbe29d",
+      "bytes": 5444581
+    },
+    "jam-population.json": {
+      "url": "https://statinja.gov.jm/PopCensus/Census2022/Population%20Change%20by%20Parish.aspx",
+      "role": "Normalized primary census table",
+      "year": 2022,
+      "sha256": "6ea320fe1cfa6e91cbe174eb1a3fad605fe9ca4cd3649a76ce0e28d4c78bc142",
+      "bytes": 907
+    },
+    "jam-census-2022.html": {
+      "url": "https://statinja.gov.jm/PopCensus/Census2022/Population%20Change%20by%20Parish.aspx",
+      "credit": "Statistical Institute of Jamaica",
+      "role": "Primary 2022 parish population table",
+      "sha256": "d8a9986410a96e37673670d4b1cee8e597b8fae4602b2dc7cda80de9e839cc3f",
+      "bytes": 123576
+    },
+    "cod-populations.json": {
+      "url": "https://data.humdata.org/dataset/cod-ps-hti",
+      "role": "Normalized retained DOM and HTI COD-PS rows; Cuba legacy projections excluded from output",
+      "sha256": "1aa7a87d8ee39fdfa8db14f974d02a2a3585895ff03733095a04ddbe7c968cf0",
+      "bytes": 57036
+    }
+  }
+}

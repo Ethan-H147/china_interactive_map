@@ -1,0 +1,51 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Fourteen governorates, 62 districts and 272 subdistricts from the retained UNCS/OCHA reference valid December 2020. Governorate populations are the explicitly dated 2004 resident census worksheet, not the separate civil-registration table. These historical counts do not estimate subsequent displacement. Administrative boundaries do not describe current territorial control. Country overviews stay hidden. Shared administrative edges and land frontiers have strokes; coastline and open water do not.",
+  "counts": {
+    "1": 14,
+    "2": 62,
+    "3": 272
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "syr-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-syr",
+      "sha256": "5d44fcae7b3650adf9a8ca975cf6cd5e759639e00f7930395246770ade38e8dd",
+      "bytes": 41846
+    },
+    "syr.zip": {
+      "url": "https://data.humdata.org/dataset/356a63e9-90aa-4b9c-a938-58ef24469c00/resource/ab4b6f19-3854-4b2b-8f5c-b5dc474a4c0c/download/syr_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-syr",
+      "sha256": "448f0603d6c2866c095bf684ba7c7d3875656a3a145a7bba1cd5516ffcf7ee29",
+      "bytes": 5605326
+    },
+    "flag-sy.svg": {
+      "url": "https://flagcdn.com/sy.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "114f63ff44c34361216c25e49c65ade53ba07a4607e5e917b089c60a0df6c173",
+      "bytes": 367
+    },
+    "syrian-arab-republic-baseline-population-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=syrian-arab-republic-baseline-population",
+      "sha256": "6483949a7cd4f15274b0f1642fe05aea37fb407d2a61f00cc868cdfeaa7350bf",
+      "bytes": 4616
+    },
+    "syrian-arab-republic-other-0-0-0-0-0-0-0-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=syrian-arab-republic-other-0-0-0-0-0-0-0",
+      "sha256": "ce9171b7cd44b0f4bef3b0b99a4fb262cd37c419cf47370c27198ea618a130b9",
+      "bytes": 4451
+    },
+    "syria-census-2004.xls": {
+      "url": "https://data.humdata.org/dataset/ad5cadf6-7dde-4bb3-8fc6-3c7c02966174/resource/35d4e236-b0d2-41ee-be06-7b04e70e319a/download/syr_pop_2004_sycensus_0.xls",
+      "credit": "OCHA Syria · Syrian Central Bureau of Statistics 2004 Census",
+      "license": "Other",
+      "page": "https://data.humdata.org/dataset/syrian-arab-republic-other-0-0-0-0-0-0-0",
+      "sha256": "3ef15cc2cd20f4a37f07016a4e9485319caf4f4eeed7a4cd9ecadbdbd4af3d61",
+      "bytes": 2616832
+    }
+  }
+}

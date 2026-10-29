@@ -1369,6 +1369,162 @@
           "scripts/build-west-asia.mjs"
         ]
       }
+    },
+    {
+      "country": "papua-new-guinea",
+      "name": "Papua New Guinea",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced subdivision maps, dated population statistics and province-level quizzes; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-melanesia.mjs"
+        ]
+      }
+    },
+    {
+      "country": "solomon-islands",
+      "name": "Solomon Islands",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced subdivision maps, dated population statistics and province-level quizzes; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-melanesia.mjs"
+        ]
+      }
+    },
+    {
+      "country": "vanuatu",
+      "name": "Vanuatu",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced subdivision maps, dated population statistics and province-level quizzes; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-melanesia.mjs"
+        ]
+      }
+    },
+    {
+      "country": "oman",
+      "name": "Oman",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced subdivision maps, dated population statistics and governorate quizzes; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-arabia-levant.mjs"
+        ]
+      }
+    },
+    {
+      "country": "yemen",
+      "name": "Yemen",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced subdivision maps, dated population statistics and governorate quizzes; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-arabia-levant.mjs"
+        ]
+      }
+    },
+    {
+      "country": "syria",
+      "name": "Syria",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced subdivision maps, dated population statistics and governorate quizzes; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-arabia-levant.mjs"
+        ]
+      }
+    },
+    {
+      "country": "jordan",
+      "name": "Jordan",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced subdivision maps, dated population statistics and governorate quizzes; kept local.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-arabia-levant.mjs"
+        ]
+      }
+    },
+    {
+      "country": "bahamas",
+      "name": "Bahamas",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Caribbean subdivision maps, dated population statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-caribbean.mjs"
+        ]
+      }
+    },
+    {
+      "country": "cuba",
+      "name": "Cuba",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Caribbean subdivision maps, dated population statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-caribbean.mjs"
+        ]
+      }
+    },
+    {
+      "country": "dominican-republic",
+      "name": "Dominican Republic",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Caribbean subdivision maps, dated population statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-caribbean.mjs"
+        ]
+      }
+    },
+    {
+      "country": "haiti",
+      "name": "Haiti",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Caribbean subdivision maps, dated population statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-caribbean.mjs"
+        ]
+      }
+    },
+    {
+      "country": "jamaica",
+      "name": "Jamaica",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced Caribbean subdivision maps, dated population statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-caribbean.mjs"
+        ]
+      }
     }
   ]
 }

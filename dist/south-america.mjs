@@ -56,7 +56,7 @@ export function createSouthAmerica(map,host){
 },
  settings:`<p id="south-cep-status" hidden>Exact CEP boundaries are pending a licensed dataset.</p><label class="field-label" for="south-division">Division</label><select id="south-division"></select><section class="layers"><h3>Visible layers</h3><label><span>Division outlines</span><input id="south-outlines" type="checkbox" checked></label><label><span>Region names</span><input id="south-names" type="checkbox" checked></label><label id="south-city-dots-control" hidden><span>City dots</span><input id="south-city-dots" type="checkbox" checked></label></section><details id="south-coverage" class="south-code-details" hidden><summary>Coverage &amp; sources</summary><p>23 provinces and Buenos Aires autonomous city. Detailed borders load within the selected province.</p><p>The 80 city markers follow a historical population list using 2010 and 2001 figures. Outlines show municipal jurisdictions; some cities share one municipality. Santiago del Estero and La Banda have no municipal polygon in this dataset.</p><p>Population and area cover all 24 jurisdictions. Nominal provincial GDP covers eight; other jurisdictions show separately labeled real economic output. Subdivision and city statistics are not yet included.</p><a href="data/south-america/argentina-cities/sources.json" target="_blank" rel="noopener">City boundary sources</a> · <a href="data/statistics-methodology.html" target="_blank" rel="noopener">Statistics coverage</a></details>`,
  heading:{
- navigation:`<button class="back-button" id="south-reset"></button><div class="south-flags"><img id="south-national-flag" alt=""><a id="south-flag-source" hidden target="_blank" rel="noopener"><img id="south-province-flag" alt="" decoding="async"></a></div>`,
+ navigation:`<button class="back-button" id="south-reset"></button><div class="division-flags"><img id="south-national-flag" alt=""><a id="south-flag-source" hidden target="_blank" rel="noopener"><img id="south-province-flag" alt="" decoding="async"></a></div>`,
  kindId:`south-kind`,
  nameId:``,
  nameLang:``,
@@ -205,8 +205,8 @@ export function createSouthAmerica(map,host){
   $('tab-explore').hidden=!selected;if(!selected)panel('layers');
   const c=countries[active],record=selected,ddd=active==='brazil'&&brazilLayer==='ddd',cep=active==='brazil'&&brazilLayer==='cep';
   sidebar.querySelector('h2').textContent=record?.en||(ddd?'DDD areas':cep?'CEP regions':c.name);
-  sidebar.querySelector('.country-local').textContent=record?(record.local===record.en?'':record.local):c.local;
-  $('kind').textContent=(record?.level===3?cityDescription(record):record?.kind)||(ddd?'TELEPHONE AREA CODES':cep?'TWO-DIGIT POSTCODES':'SOUTH AMERICA');
+  const local=sidebar.querySelector('.country-local');local.textContent=record?(record.local===record.en?'':record.local):c.local;local.hidden=!local.textContent;local.lang=record?.localLang||registry.countries[active].lang;
+  $('kind').textContent=((record?.level===3?cityDescription(record):record?.kind)||(ddd?'TELEPHONE AREA CODES':cep?'TWO-DIGIT POSTCODES':'SOUTH AMERICA')).toUpperCase();
   $('reset').textContent=ddd?'All DDD areas':'All '+c.name;$('division').value=provinceId(record)||'';
   sidebar.querySelector('.preview-note').textContent=ddd?(record?'+55 '+record.code+' · '+record.states.join(' / '):''):(cep?'Exact CEP boundaries are pending a licensed dataset. No postal boundaries are drawn here.':'');
   const details=$('code-details');details.replaceChildren();details.hidden=!cep&&!(ddd&&record);

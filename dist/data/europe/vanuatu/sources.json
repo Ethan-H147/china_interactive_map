@@ -1,0 +1,61 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Six provinces and 66 mapped area councils/municipalities from the 2017 SPC/OCHA reference. The 2020 census population table is joined by published P-code. This dated 66-area map is not presented as the later 72-area council system. Port Vila and Luganville are the two urban units in this source. All parents dissolve from the same land partitions. Only shared internal edges and the Indonesia–Papua New Guinea land frontier have strokes; coasts and ocean gaps do not. Country overview pages remain hidden.",
+  "counts": {
+    "1": 6,
+    "2": 66
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "vut-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-vut",
+      "sha256": "68363e2efa58cc02b084b364b4e6511d569337ddd215e1a10880a2f951ad13e3",
+      "bytes": 29653
+    },
+    "vut.zip": {
+      "url": "https://data.humdata.org/dataset/67887590-51b0-4d98-bc12-666ebedf7704/resource/bc5e23c4-9619-4811-8f15-51a1c5fce1c3/download/vut_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-vut",
+      "sha256": "f56cd75d33fa088a406383c2c7f2c9ab88d659e4156a4cf183f7592ac34066c1",
+      "bytes": 3687664
+    },
+    "vut-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-vut",
+      "sha256": "941b7777bf5348fd44cc022536c50815699c65c60abca74f3bb5d3eb6e4ba143",
+      "bytes": 11283
+    },
+    "vut_admpop_adm0_2020.csv": {
+      "url": "https://data.humdata.org/dataset/695576e6-d9c7-4dca-ae36-d114e957d035/resource/68331491-37ab-4448-8823-857adb7f7a62/download/vut_admpop_adm0_2020.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-vut",
+      "sha256": "b84477824d2ae23cab5a918026a9f3983aeadf309bf9cae3ffeead5a7cafbad6",
+      "bytes": 705
+    },
+    "vut_admpop_adm1_2020.csv": {
+      "url": "https://data.humdata.org/dataset/695576e6-d9c7-4dca-ae36-d114e957d035/resource/0b42a188-9eea-49ce-9eff-fda3ab09fe92/download/vut_admpop_adm1_2020.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-vut",
+      "sha256": "7c73806e5166eb2fded66f755e1516fefaa208280db3fa38bc7a2349afed78fa",
+      "bytes": 2321
+    },
+    "vut_admpop_adm2_2020.csv": {
+      "url": "https://data.humdata.org/dataset/695576e6-d9c7-4dca-ae36-d114e957d035/resource/cc9ec342-f5eb-4be8-a6dd-c300510a3398/download/vut_admpop_adm2_2020.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-vut",
+      "sha256": "c335146a117e31b2b4d5e331ea718fc566d3008a36bbc172487c8a7bd089ff4a",
+      "bytes": 15621
+    },
+    "flag-vu.svg": {
+      "url": "https://flagcdn.com/vu.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "18232f22b21730b4ec64a83c709f6546465c4777c2a3ad759686c3c2dfbc2745",
+      "bytes": 2615
+    }
+  }
+}

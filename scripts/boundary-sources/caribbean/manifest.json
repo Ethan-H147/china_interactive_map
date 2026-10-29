@@ -1,0 +1,214 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "cub-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-cub",
+      "sha256": "2d4a66fc7d29409ad9bf754ef76a556160a1793e8faca234fa54dd25facaeb4e",
+      "bytes": 27580
+    },
+    "cub.zip": {
+      "url": "https://data.humdata.org/dataset/32b4ba2e-2ee5-4b2b-a7e4-9e4d323ffe73/resource/b9c9175f-b974-419b-8f2b-ef2ac55221fb/download/cub_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-cub",
+      "sha256": "50f9fd96dc1a43a31fb995a650add95fe817817365cc1a4f1a2f093c98d21cb8",
+      "bytes": 13324947
+    },
+    "dom-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-dom",
+      "sha256": "f80036f938f500af2f27223d91c592fae0db04e8262a6a1f0e6f2c66b85a2188",
+      "bytes": 49997
+    },
+    "dom.zip": {
+      "url": "https://data.humdata.org/dataset/1b26ea94-4d28-4167-9209-4984ab087973/resource/66c7a7c9-5be1-4b1a-8b5a-a559e0c970a8/download/dom_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-dom",
+      "sha256": "1edcc3e974d00fd0858d2673b88f53a60d536d38ef74bcd56a5d654fe0b70037",
+      "bytes": 54479365
+    },
+    "hti-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-hti",
+      "sha256": "3e8b286a20a8c5b83e7b335a3838f96b25f05682d9b4d1581cdb4fe015a4030d",
+      "bytes": 45371
+    },
+    "hti.zip": {
+      "url": "https://data.humdata.org/dataset/777e8b06-337f-4295-80bc-ca1515244215/resource/1d89a0d5-897d-4c83-ab37-f363a0dca850/download/hti_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-hti",
+      "sha256": "9601ebe9bf79188d852cce50e846c789b801b10778701fc20355a4e35fd0a67a",
+      "bytes": 6569520
+    },
+    "flag-bs.svg": {
+      "url": "https://flagcdn.com/bs.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "44946f0ba5ad43cabe8bfa6c52e0f7a9562f7ff336d58478577f3b3a19c1ef08",
+      "bytes": 195
+    },
+    "flag-cu.svg": {
+      "url": "https://flagcdn.com/cu.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "afba6d3e29d510e256c07b23f2afc00a9cea87296765138e5645fe995d24249f",
+      "bytes": 282
+    },
+    "flag-do.svg": {
+      "url": "https://flagcdn.com/do.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "ed01134a6d931721c58fc34771e34e1d513e9e06e7241a1e6528172093c77880",
+      "bytes": 148257
+    },
+    "flag-ht.svg": {
+      "url": "https://flagcdn.com/ht.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "65839463e163fd812f732f606111c68961e9bb23aa9624c8c448605fe0e086a1",
+      "bytes": 101261
+    },
+    "flag-jm.svg": {
+      "url": "https://flagcdn.com/jm.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "44504dda9d5bff31dfbcf5c8cce7acf0bfb9a7b16a697aadca3f9c4e854b62eb",
+      "bytes": 259
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/BHS;CUB;DOM;HTI;JAM/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2010:2025&format=json&per_page=2000",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "434c5af665935707ac543a53a1dc766e25faa57478216c6f42d44b4bfbc1fb7c",
+      "bytes": 50100
+    },
+    "bhs-adm1-reference.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BHS/ADM1/geoBoundaries-BHS-ADM1.geojson",
+      "credit": "Haiti GeoPortal / geoBoundaries",
+      "license": "CC BY 4.0",
+      "role": "Audit reference only; contains confirmed misassigned island labels and is not used for output geography",
+      "sha256": "f10a480530f18d4f5e3c1c4b5a3034a75488bfb0f81bf9ce7fb16bd12344a348",
+      "bytes": 12184633
+    },
+    "bhs-adm1.geojson": {
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BHS/ADM2/geoBoundaries-BHS-ADM2.geojson",
+      "credit": "OpenStreetMap contributors / Wambacher / geoBoundaries",
+      "license": "ODbL 1.0",
+      "sourceYear": 2017,
+      "role": "Flat district geography promoted from the release ADM2 label; actual 33 features including New Providence",
+      "sha256": "6ae183f43d1333d04d91551445e73a6150e84afc27480bb0a4904172b22beb1c",
+      "bytes": 19766018
+    },
+    "bhs-metadata.json": {
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/BHS/ALL/",
+      "credit": "geoBoundaries",
+      "role": "Source metadata; response count for ADM2 differs from actual retained file count",
+      "sha256": "907f62f3b9b8bd8c3f6e9cab9d46e845674e5f85291143def4f9fdacf393f718",
+      "bytes": 5798
+    },
+    "jam-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-jam",
+      "sha256": "77105f71079fc98cf01931ccd25aa57a597de46ac53281bb666833ce40894428",
+      "bytes": 37059
+    },
+    "jam.zip": {
+      "url": "https://data.humdata.org/dataset/fee5299d-52f5-4273-a878-56175210da82/resource/11de4f91-d8a7-4a7c-9997-e9e17ca2fea9/download/jam_admin_boundaries.geojson.zip",
+      "credit": "Jamaica Social Development Commission / OCHA HDX",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "cd41d5fd0e3b18f5ddff92361b9ea60313cc20c4eb050995ebd3a96b75dbe29d",
+      "bytes": 5444581
+    },
+    "bhs-population.json": {
+      "url": "https://cdn.bahamas.gov.bs/tenant/tenantbnsi/documents/2022-Census-Report-1st-Release-12-February-2025-FINAL-20250526040559.pdf",
+      "role": "Normalized primary census table",
+      "year": 2022,
+      "sha256": "b0424857bc7a443207eecf1c0988db85d50d6bb51cd4114ea1112c3ad2555ca1",
+      "bytes": 1667
+    },
+    "bhs-census-2022.pdf": {
+      "url": "https://cdn.bahamas.gov.bs/tenant/tenantbnsi/documents/2022-Census-Report-1st-Release-12-February-2025-FINAL-20250526040559.pdf",
+      "credit": "Bahamas National Statistical Institute",
+      "role": "Primary 2022 census first-release report",
+      "sha256": "e0aef7ebe9f2911bfbb52ed80cd294e1ac5cd7dcad8de2aca3df755239461bab",
+      "bytes": 4615935
+    },
+    "jam-population.json": {
+      "url": "https://statinja.gov.jm/PopCensus/Census2022/Population%20Change%20by%20Parish.aspx",
+      "role": "Normalized primary census table",
+      "year": 2022,
+      "sha256": "6ea320fe1cfa6e91cbe174eb1a3fad605fe9ca4cd3649a76ce0e28d4c78bc142",
+      "bytes": 907
+    },
+    "jam-census-2022.html": {
+      "url": "https://statinja.gov.jm/PopCensus/Census2022/Population%20Change%20by%20Parish.aspx",
+      "credit": "Statistical Institute of Jamaica",
+      "role": "Primary 2022 parish population table",
+      "sha256": "d8a9986410a96e37673670d4b1cee8e597b8fae4602b2dc7cda80de9e839cc3f",
+      "bytes": 123576
+    },
+    "cub-population.json": {
+      "url": "https://rotativo.com.mx/files/88746/00-anuario-demografico-2024.pdf",
+      "credit": "ONEI demographic yearbook 2024",
+      "role": "Normalized primary effective-population table 1.5",
+      "year": 2024,
+      "sha256": "58486ef8b376db102775f16c0b2b90a607769f762b05682560f580c07e786c78",
+      "bytes": 4482
+    },
+    "cub-yearbook-2024.pdf": {
+      "url": "https://rotativo.com.mx/files/88746/00-anuario-demografico-2024.pdf",
+      "credit": "ONEI (primary publication retained from public mirror)",
+      "year": 2024,
+      "sha256": "4ce6b2df9f03f94f6a0874e0762ed0c1c2b65d31b7d9cc074cc3ba0f93f6054d",
+      "bytes": 7936873
+    },
+    "cod-populations.json": {
+      "url": "https://data.humdata.org/dataset/cod-ps-hti",
+      "role": "Normalized retained DOM and HTI COD-PS rows; Cuba legacy projections excluded from output",
+      "sha256": "1aa7a87d8ee39fdfa8db14f974d02a2a3585895ff03733095a04ddbe7c968cf0",
+      "bytes": 57036
+    },
+    "dom-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-dom",
+      "sha256": "cdc506f8254d7c161cf97e61d36d1af54584398fd67783b1b129eb111d2d7041",
+      "bytes": 28046
+    },
+    "dom_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/23eb98d2-e167-4b89-a026-f767cc81487e/resource/dc062d79-4679-4d37-a4dd-bd577979e411/download/dom_admpop_adm1_2023.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "5d0643e46c03cdd4c5e42976c7fc68284c649a2f4093e10bc6a71429da3b6b4d",
+      "bytes": 4488
+    },
+    "dom_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/23eb98d2-e167-4b89-a026-f767cc81487e/resource/c93ab474-c5ad-4a76-9532-5eaa9f5f5348/download/dom_admpop_adm2_2023.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "92f05bdbd6c58fe5fc2584dfc789e62a1cf05b6f5feb7d5908a7bb542665d41c",
+      "bytes": 12145
+    },
+    "hti-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-hti",
+      "sha256": "e856daf5c882d6df9c414526f71c5a28848732266bbc87e6ba0c6c1fd2117bef",
+      "bytes": 39172
+    },
+    "hti_admpop_adm1_2024.csv": {
+      "url": "https://data.humdata.org/dataset/95ba5281-fd76-4d3a-ae29-247e1ff26447/resource/c2bbfc4a-d000-47fd-82d9-a74e44d7aa22/download/hti_admpop_adm1_2024.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "7637379d93e0645b4123f4d8e0ae8909fc7ba78f0328da890cc1a62d406885bd",
+      "bytes": 4172
+    },
+    "hti_admpop_adm2_2024.csv": {
+      "url": "https://data.humdata.org/dataset/95ba5281-fd76-4d3a-ae29-247e1ff26447/resource/fc2ae030-c37e-4070-9f81-0f5f1c3d446c/download/hti_admpop_adm2_2024.csv",
+      "credit": "UNFPA",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "sha256": "34a560ac45bf3f98a79592ecabdc05bdb13f65c7a1a70f8e5ca41370c72150a8",
+      "bytes": 47168
+    }
+  }
+}

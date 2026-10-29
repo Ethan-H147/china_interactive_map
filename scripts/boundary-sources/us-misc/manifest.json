@@ -1,0 +1,111 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "nps-service.json": {
+      "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer?f=json",
+      "credit": "National Park Service Land Resources Division",
+      "license": "US federal public domain factual GIS data",
+      "sha256": "896dd5b664c0851f1ccb99613d7c3709d086dfa6446e1d6291afb8c695b43cd2",
+      "bytes": 7622
+    },
+    "nps-boundary-layer.json": {
+      "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2?f=json",
+      "sha256": "05749b9e4b62d5647515e12bff31bfc64be1279f5b3eaca78b54fba4b64719b4",
+      "bytes": 14245
+    },
+    "nps-centroids.geojson": {
+      "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/0/query?where=1%3D1&outFields=UNIT_CODE%2CUNIT_NAME%2CUNIT_TYPE%2CSTATE%2CPARKNAME%2CDATE_EDIT&outSR=4326&f=geojson",
+      "credit": "NPS Land Resources Division · official park-unit representative points",
+      "sha256": "73bbe0ccdcb9aa26db4a25181e24c53ce86d9dbc8f1d50583ba1cf98c59f46aa",
+      "bytes": 123965
+    },
+    "nps-system.html": {
+      "url": "https://www.nps.gov/aboutus/national-park-system.htm",
+      "credit": "National Park Service · official system unit list",
+      "sha256": "7a3d715b63efae7c2e230c5d08501648f758b4a02f0290ce01a1452be1bdb858",
+      "bytes": 127128
+    },
+    "ipeds-hd2024.zip": {
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+      "credit": "US Department of Education NCES · IPEDS 2024 institutional directory",
+      "license": "US federal public data",
+      "sha256": "d98425c123d7c0e872aec6e83960dfb501884818bf17385c340790f3d1f28345",
+      "bytes": 1088372
+    },
+    "abpp-experience.json": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/a0484827a53843d4ac96bf6604920a73/data?f=json",
+      "credit": "NPS American Battlefield Protection Program · map configuration",
+      "page": "https://www.nps.gov/orgs/2287/battlefield-boundaries-map.htm",
+      "sha256": "0635c78bfc29dfd75d20328c4734603f92fb7a53fe6eda5bd32a580aa045844f",
+      "bytes": 74158
+    },
+    "presidents-wikidata.json": {
+      "url": "https://query.wikidata.org/sparql?query=SELECT+DISTINCT+%3Fperson+%3FpersonLabel+%3Fbirthplace+%3FbirthplaceLabel+%3Fcoord+WHERE+%7B+%3Fperson+p%3AP39%2Fps%3AP39+wd%3AQ11696%3B+wdt%3AP19+%3Fbirthplace.+%3Fbirthplace+wdt%3AP625+%3Fcoord.+SERVICE+wikibase%3Alabel+%7B+bd%3AserviceParam+wikibase%3Alanguage+%22en%22.+%7D+%7D&format=json",
+      "credit": "Wikidata · US presidents (P39) birthplace (P19) coordinates (P625)",
+      "license": "CC0 1.0",
+      "sha256": "2e852f61e195cf60eac76c57d162b9ceede5d78f9e90261784ca3c9d5310fb3d",
+      "bytes": 31378
+    },
+    "abpp-webmap.json": {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/19b9857a631e40b7a9129e45625d4e79/data?f=json",
+      "credit": "NPS ABPP · official battlefield map",
+      "sha256": "36e5b7c2b3924275b0b1512f47b73fc402f873e337e97e3055586e306422f1f8",
+      "bytes": 1459
+    },
+    "nps-national-parks.geojson": {
+      "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2/query?where=UNIT_TYPE%3D%27National+Parks%27+OR+UNIT_CODE%3D%27NERI%27&outFields=UNIT_CODE%2CUNIT_NAME%2CUNIT_TYPE%2CSTATE%2CPARKNAME%2CDATE_EDIT&outSR=4326&f=geojson",
+      "credit": "NPS Land Resources Division · legislative park boundaries",
+      "license": "US federal public domain factual GIS data",
+      "sha256": "3080b41ef95ceaacf5816ad4f8e5d010eba498bc6a07c2f18120b3373312d829",
+      "bytes": 35588029
+    },
+    "abpp-layer.json": {
+      "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/Battlefield_Boundaries/FeatureServer/0?f=json",
+      "sha256": "d884979e947ef35ee343c15eb9dc68e9810ea36fff6c10edf1ce49ec1a48fb63",
+      "bytes": 8460
+    },
+    "abpp-attributes.json": {
+      "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/Battlefield_Boundaries/FeatureServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&f=json",
+      "sha256": "69a0eebf405d805b5ca1411ae9982420ff1d82e159e349ad148a8cd8e4b18d37",
+      "bytes": 114398
+    },
+    "battlefields.geojson": {
+      "url": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/Battlefield_Boundaries/FeatureServer/0/query?where=SITE+IN+%28%27SC001%27%2C%27VA005%27%2C%27VA026%27%2C%27MD003%27%2C%27PA002%27%2C%27TN003%27%2C%27MS011%27%2C%27VA032%27%2C%27VA028%27%2C%27VA048%27%2C%27VA046%27%2C%27VA062%27%2C%27VA063%27%2C%27VA097%27%2C%27TN010%27%2C%27GA004%27%2C%27TN024%27%2C%27GA017%27%2C%27GA015%27%2C%27TN002%27%2C%27AR001%27%2C%27MO004%27%2C%27NM002%27%2C%27VA014%27%2C%27VA021%27%2C%27VA035%27%2C%27VA122%27%2C%27MD007%27%2C%27NC020%27%2C%27TN038%27%2C%27TN036%27%2C%27MA200%27%2C%27MA202%27%2C%27NY203%27%2C%27NJ218%27%2C%27NJ213%27%2C%27NY222%27%2C%27NY224%27%2C%27PA200%27%2C%27PA203%27%2C%27NJ208%27%2C%27SC211%27%2C%27SC206%27%2C%27NC205%27%2C%27SC203%27%2C%27SC208%27%2C%27GA207%27%2C%27VA207%27%2C%27NY218%27%2C%27NY219%27%2C%27NY217%27%2C%27NY200%27%2C%27SC214%27%2C%27SC215%27%29&outFields=SITE%2CSTATE%2CWAR%2CNAME%2CBOUNDARY&outSR=4326&f=geojson",
+      "credit": "National Park Service American Battlefield Protection Program · surveyed battlefield study areas",
+      "license": "US federal public domain factual GIS data",
+      "page": "https://www.nps.gov/orgs/2287/battlefield-boundaries-map.htm",
+      "sha256": "2b7c847203d672b7f5b5e75e66d2a628939954227a8d3d10dc641b676b1b9452",
+      "bytes": 2017813
+    },
+    "presidential-biographies.html": {
+      "url": "https://millercenter.org/president",
+      "credit": "University of Virginia Miller Center · presidential biographies",
+      "sha256": "c757d7b15f08e8024effc5dce67378864c5a593bce6c93670f412543e36f50f9",
+      "bytes": 82695
+    },
+    "nfl-teams.html": {
+      "url": "https://www.nfl.com/teams/",
+      "credit": "Official league team directory · reviewed 2026-10-29",
+      "sha256": "17ca8f7a9d0f07fa765df907b12f1f374b69d35aef2881b9f823bf00effea51c",
+      "bytes": 279191
+    },
+    "nba-teams.html": {
+      "url": "https://www.nba.com/teams",
+      "credit": "Official league team directory · reviewed 2026-10-29",
+      "sha256": "95df1b1327ee99b8073f6da326b1b964ddeb849d70372eb9229d9a58fbbf0e5c",
+      "bytes": 274617
+    },
+    "mlb-teams.json": {
+      "url": "https://statsapi.mlb.com/api/v1/teams?sportId=1&hydrate=venue",
+      "credit": "Official league team directory · reviewed 2026-10-29",
+      "sha256": "8a32f78528b87cb6042d69e6067301733057fb43a261bdf99f3249ce1d7b48ea",
+      "bytes": 24119
+    },
+    "nhl-teams.json": {
+      "url": "https://api.nhle.com/stats/rest/en/team",
+      "credit": "Official league team directory · reviewed 2026-10-29",
+      "sha256": "d692a7b564603459d12462dd37de7347b6d52f8fce8d8004eb212742cc993337",
+      "bytes": 6664
+    }
+  }
+}

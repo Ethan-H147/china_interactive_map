@@ -1,6 +1,7 @@
 /* The same reading order applies to every country's details. */
 [data-country-page] .sidebar-tools .search-wrap input[type=search]{width:100%;padding:13px 12px 13px 40px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);font-size:14px}
 .country-selection-heading{display:block}
+.country-local{color:var(--red);font-size:23px}
 .country-info-cards,.country-subdivisions,.country-place-actions{min-width:0}
 .country-subdivisions:empty,.country-place-actions:empty{display:none}
 .country-info-cards>.country-card-anchor{display:none}
@@ -22,6 +23,7 @@
 @media(min-width:761px){.details-expanded .place-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}.details-expanded .place-overview>.country-note{grid-column:1/-1}}
 
 /* Flag stacks share the heading's right edge without enlarging its navigation row. */
+.division-flags{min-inline-size:40px;grid-column:2;grid-row:1;display:flex;flex-direction:column;gap:8px;align-items:center}.division-flags img{display:block;width:auto;height:auto;max-width:40px;max-height:30px;object-fit:contain;border-radius:3px;box-shadow:0 0 0 1px #00000012}.division-flags a{display:block}
 .country-selection-heading:has(.division-flags){position:relative;padding-inline-end:60px;min-block-size:106px}
 .country-selection-heading:has(.division-flags) .selection-top{display:block;min-height:0;margin-bottom:18px}
 .country-selection-heading:has(.division-flags) .selection-top .back-button{padding:0;max-width:100%;width:fit-content;text-align:start}

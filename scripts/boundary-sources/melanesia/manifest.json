@@ -1,0 +1,194 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "png-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-png",
+      "sha256": "71d18dbfd45f7e1902aae74b7b36543bf4684109fd23977d32fe3b0bb69c7b91",
+      "bytes": 35454
+    },
+    "png.zip": {
+      "url": "https://data.humdata.org/dataset/f260301d-c32f-4e9e-a7d6-05bde2f70b6b/resource/3ef879e4-0896-4793-a0c2-6d0636395cf5/download/png_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-png",
+      "sha256": "3f80c8a73969ac53ba999143b8c0f7e729ef645ccccc9107a60b42d22c6de10e",
+      "bytes": 6261853
+    },
+    "png-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-png",
+      "sha256": "0320d931b9015d6f9bc07a7ab47fdc619ef5fea73dd52f544816536d8bfaaabb",
+      "bytes": 18067
+    },
+    "png_admpop_adm0_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/f34481a5-8c78-49de-8da0-fce8c915d9ae/download/png_admpop_adm0_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "0ad97a740c32685f433a64b9e3fed863918ddba3be3619e4be1e340c33663fba",
+      "bytes": 125
+    },
+    "png_admpop_adm1_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/8b4346b6-b0a4-4e65-8d15-b6c79dbacee2/download/png_admpop_adm1_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "ec78f09d2e068850da11eef219a7c3a01a6a84827110e42ac6e846a3f18c1f8c",
+      "bytes": 1896
+    },
+    "png_admpop_adm2_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/534798e8-372a-40b7-bc81-e5679acc07b9/download/png_admpop_adm2_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "807cc2b2583d99cf738c0ef9e9ce89781fadfabe91d1ae7acb8f7260bc2fc5b8",
+      "bytes": 9236
+    },
+    "png_admpop_adm3_2011_v2.csv": {
+      "url": "https://data.humdata.org/dataset/5f76d06a-70f6-4cc4-a0f2-d9da9342fc06/resource/fca6139c-15fc-4bad-bf62-5f21426e821b/download/png_admpop_adm3_2011_v2.csv",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-png",
+      "sha256": "289ade4d1ce597e217b03156ecf1743ba35169b3285320a104aa2a1ac4389827",
+      "bytes": 42109
+    },
+    "flag-pg.svg": {
+      "url": "https://flagcdn.com/pg.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "d98adee3bf8945b389144b04bc49824c85711e1d473236971ac8a48939328064",
+      "bytes": 2969
+    },
+    "slb-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-slb",
+      "sha256": "510c2e9c9f4d49167b55e0d0ba2b188e1a95a19db85e87879df486497c0c5540",
+      "bytes": 20679
+    },
+    "slb-adm1.zip": {
+      "url": "https://data.humdata.org/dataset/776dd627-a97a-4f86-9b0d-52ce64525120/resource/7df578eb-5cb7-42c1-adad-1d882c0a3322/download/slb_admbnda_adm1.zip",
+      "credit": "OCHA Regional Office for Asia and the Pacific (ROAP) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-slb",
+      "sha256": "7c9021d2c201ac2aa58cfe2e7de202a63dee2c700d36847001ac28f094811505",
+      "bytes": 2235894
+    },
+    "slb-adm2.zip": {
+      "url": "https://data.humdata.org/dataset/776dd627-a97a-4f86-9b0d-52ce64525120/resource/b08401a2-25a4-4894-b677-1d8986a1b401/download/slb_admbnda_adm2.zip",
+      "credit": "OCHA Regional Office for Asia and the Pacific (ROAP) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-slb",
+      "sha256": "dd57913765816d86ed880d64269ec1804cd72c06593bff0b4aa0e7ad44572180",
+      "bytes": 2290406
+    },
+    "slb-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-slb",
+      "sha256": "4127c0fce374a395585046e74365185c31419baaf3951cccee13f15700ff81db",
+      "bytes": 26394
+    },
+    "slb_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/53e6df8b-ca6e-42b8-a13a-d16e033865eb/resource/3c88f1e5-333c-4910-9774-ce645d91fd9b/download/slb_admpop_adm0_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-slb",
+      "sha256": "058c803f0ff21f253796842bf3107b30b2c361bbe30d065d5c4ca1954aab8feb",
+      "bytes": 804
+    },
+    "slb_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/53e6df8b-ca6e-42b8-a13a-d16e033865eb/resource/149dcd48-5ba2-4ac0-896a-a1605fe834c1/download/slb_admpop_adm1_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-slb",
+      "sha256": "094444357e2862bedaedb81a0de4add80a3664f0b692429b52cfa8e0698aa21e",
+      "bytes": 3464
+    },
+    "slb_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/53e6df8b-ca6e-42b8-a13a-d16e033865eb/resource/b84d42cf-a0b2-48e8-bac2-14458754ab07/download/slb_admpop_adm2_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-slb",
+      "sha256": "bb60ffd2766a2714b0af575ae42da3e67289360e385637682a16a5d643652d9f",
+      "bytes": 14912
+    },
+    "slb_admpop_adm3_2023.csv": {
+      "url": "https://data.humdata.org/dataset/53e6df8b-ca6e-42b8-a13a-d16e033865eb/resource/3741b707-50b4-4a98-9713-bd79d2d46aac/download/slb_admpop_adm3_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-slb",
+      "sha256": "80c1509378bab8ee0fcc22a7d7ac0b6863d317f897c490be3f05b05716f3ccf1",
+      "bytes": 53192
+    },
+    "flag-sb.svg": {
+      "url": "https://flagcdn.com/sb.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "56e24d58d3912dcd3c89187ee9ec08ea09957055296e823007ad615a4485f751",
+      "bytes": 935
+    },
+    "vut-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-vut",
+      "sha256": "68363e2efa58cc02b084b364b4e6511d569337ddd215e1a10880a2f951ad13e3",
+      "bytes": 29653
+    },
+    "vut.zip": {
+      "url": "https://data.humdata.org/dataset/67887590-51b0-4d98-bc12-666ebedf7704/resource/bc5e23c4-9619-4811-8f15-51a1c5fce1c3/download/vut_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-vut",
+      "sha256": "f56cd75d33fa088a406383c2c7f2c9ab88d659e4156a4cf183f7592ac34066c1",
+      "bytes": 3687664
+    },
+    "vut-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-vut",
+      "sha256": "941b7777bf5348fd44cc022536c50815699c65c60abca74f3bb5d3eb6e4ba143",
+      "bytes": 11283
+    },
+    "vut_admpop_adm0_2020.csv": {
+      "url": "https://data.humdata.org/dataset/695576e6-d9c7-4dca-ae36-d114e957d035/resource/68331491-37ab-4448-8823-857adb7f7a62/download/vut_admpop_adm0_2020.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-vut",
+      "sha256": "b84477824d2ae23cab5a918026a9f3983aeadf309bf9cae3ffeead5a7cafbad6",
+      "bytes": 705
+    },
+    "vut_admpop_adm1_2020.csv": {
+      "url": "https://data.humdata.org/dataset/695576e6-d9c7-4dca-ae36-d114e957d035/resource/0b42a188-9eea-49ce-9eff-fda3ab09fe92/download/vut_admpop_adm1_2020.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-vut",
+      "sha256": "7c73806e5166eb2fded66f755e1516fefaa208280db3fa38bc7a2349afed78fa",
+      "bytes": 2321
+    },
+    "vut_admpop_adm2_2020.csv": {
+      "url": "https://data.humdata.org/dataset/695576e6-d9c7-4dca-ae36-d114e957d035/resource/cc9ec342-f5eb-4be8-a6dd-c300510a3398/download/vut_admpop_adm2_2020.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-vut",
+      "sha256": "c335146a117e31b2b4d5e331ea718fc566d3008a36bbc172487c8a7bd089ff4a",
+      "bytes": 15621
+    },
+    "flag-vu.svg": {
+      "url": "https://flagcdn.com/vu.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "18232f22b21730b4ec64a83c709f6546465c4777c2a3ad759686c3c2dfbc2745",
+      "bytes": 2615
+    },
+    "worldbank.json": {
+      "url": "https://api.worldbank.org/v2/country/PNG;SLB;VUT/indicator/SP.POP.TOTL;NY.GDP.MKTP.CD;NY.GDP.PCAP.CD?source=2&date=2020:2025&format=json&per_page=1000",
+      "credit": "World Bank World Development Indicators",
+      "license": "CC BY 4.0",
+      "sha256": "b4ff0e8bbfc0c65376f3733bcea154030f8ed123b0947bcf2d2a9dc1d9368811",
+      "bytes": 11551
+    },
+    "slb-adm3.zip": {
+      "url": "https://data.humdata.org/dataset/776dd627-a97a-4f86-9b0d-52ce64525120/resource/5b69c85c-392f-42da-81dc-ebb0a5659fa2/download/slb_admbnda_adm3.zip",
+      "credit": "OCHA Regional Office for Asia and the Pacific (ROAP) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-slb",
+      "sha256": "f85ac4946d5b52593d3f87009b32e2e32e495a3cbe14d1d3c1173f901f64e855",
+      "bytes": 2364550
+    }
+  }
+}

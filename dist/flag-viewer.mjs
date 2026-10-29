@@ -1,5 +1,5 @@
 import {nationalFlagImages} from './national-flags.mjs';
-const selector='img[alt^="Flag of"],.division-flags img,.japan-flags img,.south-flags img,#selection-flag,#k-selection-flag';
+const selector='img[alt^="Flag of"],.division-flags img,.japan-flags img,#selection-flag,#k-selection-flag';
 
 export function flagImageSize(width,height,viewportWidth,viewportHeight){
  const shortest=Math.min(viewportWidth,viewportHeight),frame=Math.max(24,Math.min(56,shortest*.055)),margin=Math.max(12,Math.min(32,shortest*.03));

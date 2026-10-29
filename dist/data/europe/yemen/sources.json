@@ -1,0 +1,45 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Twenty-two governorates and 335 districts from the 2023 OCHA reference. The 2025 population table covers 333 district records; its adjusted current-resident estimates are aggregated to the matching governorates. District population is withheld where the 333-record population geography cannot support the 335 mapped districts. Administrative geography is not a live control map. Country overviews stay hidden. Shared administrative edges and land frontiers have strokes; coastline and open water do not.",
+  "counts": {
+    "1": 22,
+    "2": 335
+  },
+  "processing": "Full available source resolution retained, cleaned together and rounded to six decimal places. Shared internal edges stored once; unselected coasts have no stroke. Deeper geometry loads only for the selected region. All views use the shared regional renderer, selected-outline index, adaptive detail, lifecycle and three-country cache. Territorial waters are excluded from land fills. Territory context features carry their own destination bounds.",
+  "sources": {
+    "yem-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-yem",
+      "sha256": "30b85d2e5e571e23e283b5c10b53e6e8c2cf57a54cd58a79e6cc271cdc434baa",
+      "bytes": 34917
+    },
+    "yem.zip": {
+      "url": "https://data.humdata.org/dataset/6b2656e2-b915-4671-bfed-468d5edcd80a/resource/c79a3728-44cd-4d20-8ea4-ecfab88c1450/download/yem_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-yem",
+      "sha256": "4529c4450f4ef6e4728c80ab010a6bdc1ed9c4644294c14717fdddf6c2528972",
+      "bytes": 4980305
+    },
+    "flag-ye.svg": {
+      "url": "https://flagcdn.com/ye.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "page": "https://flagcdn.com/",
+      "sha256": "a92f3989182049dc218f7698c45d8cdfc64e6f945c71f20a9d188dd01698df2d",
+      "bytes": 179
+    },
+    "yemen-population-estimates-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=yemen-population-estimates",
+      "sha256": "f3cb1c3ade6e5a8898ef9c330c03322c1b3547b4e43cd0718f0104be048e5b08",
+      "bytes": 31002
+    },
+    "yemen-population-2025.csv": {
+      "url": "https://data.humdata.org/dataset/1ffe81f1-b980-430f-b53e-dd79e936f291/resource/f7443827-7945-410b-8f72-1eb4e46b8525/download/yem_population_projection_2025_final_hxl.csv",
+      "credit": "OCHA Yemen",
+      "license": "Creative Commons Attribution International (CC BY)",
+      "page": "https://data.humdata.org/dataset/yemen-population-estimates",
+      "sha256": "d0fb3c2b759f9d62d6addb876c6c00e345754fb110ee8244cace17a92600d6c1",
+      "bytes": 19148
+    }
+  }
+}
