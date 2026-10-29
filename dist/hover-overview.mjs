@@ -8,9 +8,9 @@ export function overviewLines(place){
 }
 
 // One overview owns canvas hits and DOM labels for every country adapter.
-export function createHoverOverview(map,{resolve,blocked=()=>false,document:doc=document}){
+export function createHoverOverview(map,{resolve,blocked=()=>false,document:doc=document,id='atlas-hover-overview'}){
  const container=map.getContainer(),tip=doc.createElement('div');
- tip.className='region-tooltip gpu-tooltip atlas-hover-overview';tip.hidden=true;tip.id='atlas-hover-overview';tip.setAttribute('role','tooltip');container.append(tip);
+ tip.className='region-tooltip gpu-tooltip atlas-hover-overview';tip.hidden=true;tip.id=id;tip.setAttribute('role','tooltip');container.append(tip);
  let current=null,size=null;
  const update=createFrameTask(({clientX,clientY,id})=>{const bounds=container.getBoundingClientRect();show({x:clientX-bounds.left,y:clientY-bounds.top},id);});
  function clear(){update.cancel();current=null;size=null;tip.hidden=true;map.getCanvas().style.cursor='';}

@@ -176,10 +176,9 @@ function mountCountryQuiz(){
  for(const [country,overlay]of quizOverlayInstances)overlay.setCountryActive(country.split(':')[0]===atlasMode);
 }
 function controls(){
-  const imageryButton=$('quiz-satellite-toggle');if(imageryButton){imageryButton.hidden=!quiz.active;imageryButton.setAttribute('aria-pressed',String($('satellite-layer').checked));}
   syncMapActivity();mountCountryQuiz();
   const koreaLoading=atlasMode!=='china'&&!currentAtlas()?.ready;
-  document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=atlasStarting||countrySwitching||(cameraBusy&&el.matches('input[type="checkbox"],input[type="range"]'))||!allReady||koreaLoading||(quiz.active&&!['home','zoom-in','zoom-out','fit-map','quiz-satellite-toggle'].includes(el.id)));
+  document.querySelectorAll('[data-nav]').forEach(el=>el.disabled=atlasStarting||countrySwitching||(cameraBusy&&el.matches('input[type="checkbox"],input[type="range"]'))||!allReady||koreaLoading||(quiz.active&&!['home','zoom-in','zoom-out','fit-map','satellite-layer','satellite-opacity'].includes(el.id)));
   document.querySelectorAll('[data-quiz-nav]').forEach(el=>el.disabled=cameraBusy||!allReady);
   for(const id of ['tab-explore','tab-layers'])$(id).disabled=quiz.active;
 
@@ -617,13 +616,15 @@ async function init(){try{
   }
 }catch(e){console.error(e);$('map-loading').hidden=true;$('status').textContent='Map could not load';$('load-error').hidden=false;finishAtlases();}}
 function addSatelliteDisplay(){
- if(!$('quiz-satellite-toggle')){
-  const button=document.createElement('button');button.id='quiz-satellite-toggle';button.type='button';button.textContent='Satellite';button.hidden=true;button.dataset.nav='';button.setAttribute('aria-pressed','false');
-  button.onclick=()=>{const input=$('satellite-layer');input.checked=!input.checked;input.dispatchEvent(new Event('change'));controls();};
-  $('map-shell').append(button);
- }
 
- satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){const panel=$(registry.countries[atlasMode]?.panel||'layers-panel')?.querySelector('.layers');const block=$('satellite-controls');if(panel&&block.parentElement!==panel)panel.append(block);}});
+ satelliteDisplay=window.AtlasSatellite.createSatelliteDisplay(map,{mode:()=>atlasMode,quiz:()=>quiz.active,onVisible:satelliteAppearance,placeControls(){
+  const panel=$(registry.countries[atlasMode]?.panel||'layers-panel')?.querySelector('.layers'),block=$('satellite-controls'),sidebar=panel?.closest('.sidebar'),footer=sidebar?.querySelector('.sidebar-footer');
+  document.querySelectorAll('.quiz-satellite-dock').forEach(dock=>dock.hidden=true);
+  if(quiz.active&&footer){
+   let dock=sidebar.querySelector('.quiz-satellite-dock');if(!dock){dock=document.createElement('section');dock.className='layers quiz-satellite-dock';dock.setAttribute('aria-label','Satellite imagery');footer.before(dock);}
+   dock.hidden=false;if(block.parentElement!==dock)dock.append(block);
+  }else if(panel&&block.parentElement!==panel)panel.append(block);
+ }});
  satelliteDisplay.sync();if($('satellite-layer').checked)$('satellite-layer').dispatchEvent(new Event('change'));
 }
 // After an overview entry's first view, the shared land, borders and other countries arrive;

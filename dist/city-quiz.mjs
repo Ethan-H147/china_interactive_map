@@ -1,3 +1,4 @@
+import {createHoverOverview} from './hover-overview.mjs';
 import {createFirstLevelQuiz} from './first-level-quiz.mjs';
 import {createQuizMapSession} from './map-quiz.mjs';
 import {quizRecords} from './quiz-records.mjs';
@@ -10,11 +11,11 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  const definition=AtlasCountries.countries[country],cities=definition.quiz.cities,key='quiz-'+prefix,levels=cities.levels,order=levels.map(l=>l.id);
  const nativeSession=atlas.quizMap?createQuizMapSession(map,atlas,country):null;
  const contextLayers=new Set(context),hidden=new Map();
- let quiz,data,loading,cache={},enforcing=false,frame,reviewed=null,previewing=false,previewSaved,previewPopup,previewTarget;
+ let quiz,data,loading,cache={},enforcing=false,frame,reviewed=null,previewing=false,previewSaved,previewHover;
  const load=()=>data?Promise.resolve(data):loading??=fetch(cities.file).then(r=>{if(!r.ok)throw Error('City list unavailable');return r.json();}).then(value=>{data=value;quiz?.setup();updateMedal();renderCoverage();return value;}).finally(()=>{loading=undefined;});
  // Every level includes the easier ones. Records carry the chosen level as their parent scope.
  function records(){const scope=quiz?.scope||order[0];if(!data)return [];return cache[scope]??=data.records.filter(r=>order.indexOf(r.tier)<=order.indexOf(scope)).map(r=>({...r,level:3,parent:scope,local:r.local||''}));}
- function remove(){previewPopup?.remove();previewPopup=null;previewTarget=null;map.getCanvas().style.cursor='';if(map.getLayer(key+'-dots'))map.removeLayer(key+'-dots');if(map.getSource(key))map.removeSource(key);}
+ function remove(){previewHover?.clear();if(map.getLayer(key+'-dots'))map.removeLayer(key+'-dots');if(map.getSource(key))map.removeSource(key);}
  function enforce(){if(!(quiz?.active||previewing)||enforcing||!hidePrefix)return;enforcing=true;try{for(const layer of map.getStyle().layers)if(typeof layer.source==='string'&&layer.source.startsWith(hidePrefix)&&!contextLayers.has(layer.id)){const visibility=map.getLayoutProperty(layer.id,'visibility')||'visible';if(!hidden.has(layer.id))hidden.set(layer.id,visibility);if(visibility!=='none')map.setLayoutProperty(layer.id,'visibility','none');}}finally{enforcing=false;}}
  const state=name=>['boolean',['feature-state',name],false];
  function pick(point){
@@ -103,17 +104,13 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
   for(const b of sidebar.querySelectorAll('.panel-tabs button'))b.setAttribute('aria-pressed',String(b===tab));
   previewPanel.hidden=true;quiz.panel.querySelector('[data-q=setup]').hidden=false;quiz.setup();window.AtlasSheet?.expand();previewButton.focus({preventScroll:true});
  }
- function showPreviewLabel(event){
-  if(!previewing)return;const id=pick(event.point),r=records().find(r=>r.id===id);map.getCanvas().style.cursor=r?'pointer':'';
-  if(!r){previewPopup?.remove();previewPopup=null;previewTarget=null;return;}if(previewTarget===id)return;
-  previewPopup?.remove();previewTarget=id;const content=document.createElement('div');content.className='city-preview-popup';
-  const name=document.createElement('strong');name.textContent=r.en;content.append(name);
-  if(r.local){const local=document.createElement('span');local.textContent=r.local;local.lang=r.localLang;content.append(local);}
-  const region=document.createElement('span');region.textContent=r.regionName;content.append(region);
-  previewPopup=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:12}).setLngLat(r.center).setDOMContent(content).addTo(map);
- }
- previewButton.onclick=()=>void startPreview().catch(error=>{console.warn('City preview:',error.message);});map.on('mousemove',showPreviewLabel);map.on('click',showPreviewLabel);
- map.getCanvas().addEventListener('mouseleave',()=>{previewPopup?.remove();previewPopup=null;previewTarget=null;});
+ // Use the same hover renderer, type styles and positioning as ordinary atlas places.
+ previewHover=createHoverOverview(map,{id:key+'-preview-hover',blocked:()=>!previewing,resolve:point=>{
+  const r=records().find(r=>r.id===pick(point));return r?{en:r.en,local:r.local,kind:r.regionName||r.stateName}:null;
+ }});
+ previewButton.onclick=()=>void startPreview().catch(error=>{console.warn('City preview:',error.message);});
+ // Touch users tap a city; desktop pointer movement is handled by the shared renderer.
+ map.on('click',event=>{if(previewing)previewHover.show(event.point);});
  quiz.panel.querySelector('[data-q=start]').before(previewButton);quiz.panel.append(previewPanel);
 
  addPicker?.(quiz.panel,'3');quiz.panel.querySelector('[data-q=setup]').append(medal);quiz.panel.querySelector('[data-q=start]').before(coverage);

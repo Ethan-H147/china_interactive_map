@@ -9,18 +9,18 @@ export default [
   const before=await p.evaluate('AtlasQuizRecords.quizRecords.data.summary.rounds');
   await p.tap(panel+' [data-city-preview-start]');await p.settle();
   assert(await p.evaluate('!document.querySelector('+JSON.stringify(panel+' [data-city-preview]')+').hidden'));
-  assert(await p.evaluate('(()=>{const a=document.getElementById("quiz-satellite-toggle").getBoundingClientRect(),b=document.getElementById("home").getBoundingClientRect();return a.top>=b.bottom||a.bottom<=b.top||a.left>=b.right||a.right<=b.left})()'),'Satellite and End preview have separate touch targets'); const expected=await p.evaluate('parseInt(document.querySelector('+JSON.stringify(panel+' [data-q=count]')+').textContent)');
+  assert(await p.evaluate('(()=>{const input=document.getElementById("satellite-layer"),dock=input.closest(".quiz-satellite-dock"),footer=dock?.nextElementSibling;return !!dock&&!dock.hidden&&footer?.classList.contains("sidebar-footer")&&!input.disabled})()'),'Satellite checkbox sits immediately above the sidebar footer'); const expected=await p.evaluate('parseInt(document.querySelector('+JSON.stringify(panel+' [data-q=count]')+').textContent)');
   assert.equal(await p.evaluate('(async()=> (await map.getSource('+JSON.stringify(key)+').getData()).features.length)()'),expected);
   const dot=await p.evaluate('(async()=>{const f=(await map.getSource('+JSON.stringify(key)+').getData()).features.find(f=>{const p=map.project(f.geometry.coordinates);return p.x>30&&p.x<map.getContainer().clientWidth-80&&p.y>180&&p.y<map.getContainer().clientHeight-180});if(!f)throw Error("No visible preview dot");const p=map.project(f.geometry.coordinates),b=map.getCanvas().getBoundingClientRect();return{x:b.left+p.x,y:b.top+p.y,id:f.properties.id}})()');
   if(width===390)await p.tap([dot.x,dot.y]);else await p.send('Input.dispatchMouseEvent',{type:'mouseMoved',x:dot.x,y:dot.y});
-  await p.waitFor('!!document.querySelector(".city-preview-popup strong")');assert(await p.evaluate('document.querySelector(".city-preview-popup strong").textContent.length>0'));
-  await p.screenshot('city-preview-'+country+'-'+width); for(const value of [true,false]){await p.tap('#quiz-satellite-toggle');assert.equal(await p.evaluate('document.getElementById("satellite-layer").checked'),value);assert.equal(await p.evaluate('map.getLayoutProperty("satellite-imagery","visibility")'),value?'visible':'none');}
+  await p.waitFor('(()=>{const tip=document.getElementById('+JSON.stringify(key+'-preview-hover')+');return tip&&!tip.hidden&&tip.classList.contains("region-tooltip")&&tip.querySelector("small")})()');
+  await p.screenshot('city-preview-'+country+'-'+width); for(const value of [true,false]){await p.tap('#satellite-layer');assert.equal(await p.evaluate('document.getElementById("satellite-layer").checked'),value);assert.equal(await p.evaluate('map.getLayoutProperty("satellite-imagery","visibility")'),value?'visible':'none');}
   if(width===390)await p.tap('#home');else await p.tap(panel+' [data-city-preview-end]');await p.settle();
-  assert(!await p.evaluate('!!map.getLayer('+JSON.stringify(key+'-dots')+')'));assert(!await p.evaluate('!!document.querySelector(".city-preview-popup")'));
+  assert(!await p.evaluate('!!map.getLayer('+JSON.stringify(key+'-dots')+')'));assert(await p.evaluate('document.getElementById('+JSON.stringify(key+'-preview-hover')+').hidden'));
   assert.equal(await p.evaluate('AtlasQuizRecords.quizRecords.data.summary.rounds'),before);
-  await p.tap(panel+' [data-q=start]');await p.settle();assert(!await p.evaluate('document.getElementById("quiz-satellite-toggle").hidden'));
-  await p.tap('#quiz-satellite-toggle');assert.equal(await p.evaluate('map.getLayoutProperty("satellite-imagery","visibility")'),'visible');
-  assert(!await p.evaluate('!!document.querySelector(".city-preview-popup")'),'Scored rounds do not expose Preview labels');
-  await p.tap('#quiz-satellite-toggle');await p.tap('#home');await p.settle();
+  await p.tap(panel+' [data-q=start]');await p.settle();assert(await p.evaluate('document.getElementById("satellite-layer").closest(".quiz-satellite-dock").checkVisibility({visibilityProperty:true})'));
+  await p.tap('#satellite-layer');assert.equal(await p.evaluate('map.getLayoutProperty("satellite-imagery","visibility")'),'visible');
+  assert(await p.evaluate('document.getElementById('+JSON.stringify(key+'-preview-hover')+').hidden'),'Scored rounds do not expose Preview labels');
+  await p.tap('#satellite-layer');await p.tap('#home');await p.settle();
  }}))
 ];
