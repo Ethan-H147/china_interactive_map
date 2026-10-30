@@ -20,3 +20,7 @@ The full static atlas and retained source caches stay on GitHub. The current Sit
 # Country overview visibility
 
 Keep country overview pages and Country tabs hidden. Maps should open and reset to Map settings. Retain national statistics and their page code, and keep subdivision statistics visible. Do not reintroduce country overview pages when adding countries or statistics.
+
+# Center-dot review tracker
+
+Keep `docs/center-dot-usage.md` current when changing visible center-dot separators. Remove an entry when its last visible use is removed, and preserve the IDs of remaining entries. Strings converted into CSS dividers before rendering are not visible center-dot uses.

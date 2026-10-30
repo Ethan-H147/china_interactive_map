@@ -1,3 +1,5 @@
+import {quizAnswerRow} from './quiz-answer-feedback.mjs';
+import {nameParts} from './inline-typography.mjs';
 import {quizRecords} from './quiz-records.mjs';
 import {quizPoolHash,quizTime} from './quiz-records-core.mjs';
 import {createNameRound,submitName,nameHint,nameScore,serializeNameRound,shortEnglish,spellingWarning} from './name-quiz-engine.mjs';
@@ -37,7 +39,7 @@ export function createNameQuiz(host){
     const list=$('name-list');list.replaceChildren();
     for(const p of round.places.filter(p=>done||round.found.has(p.code))){
       const button=document.createElement('button');button.type='button';button.className='name-place '+(round.found.has(p.code)?'named':'missed');button.dataset.quizNav='';
-      const title=document.createElement('span');title.textContent=shortEnglish(p.en)+' · '+p.zh;
+      const title=document.createElement('span');nameParts(title,shortEnglish(p.en),p.zh);
       const note=document.createElement('small');note.textContent=round.found.has(p.code)?round.hinted.has(p.code)?'Named with hint':'Named':'Not named';
       button.append(title,note);button.onclick=()=>host.view(p.code);list.append(button);
     }
@@ -69,7 +71,7 @@ export function createNameQuiz(host){
     const result=submitName(round,$('name-answer').value),feedback=$('name-feedback');
     feedback.dataset.status=result.status;
     if(result.status==='correct'){
-      host.mark(result.place.code,true);feedback.textContent=`${shortEnglish(result.place.en)} · ${result.place.zh} — correct`;
+      host.mark(result.place.code,true);feedback.replaceChildren(quizAnswerRow({en:shortEnglish(result.place.en),local:result.place.zh}));
       $('name-answer').value='';save();render();if(round.complete)finish();
     }else{if(result.status==='spelling')save();feedback.textContent=result.status==='spelling'?spellingWarning(result.warnings):result.status==='incorrect'?'Incorrect spelling. Try again.':result.status==='duplicate'?`${shortEnglish(result.place.en)} is already named.`:result.status==='ambiguous'?'Use the full place name.':result.status==='empty'?'Enter a place name.':'No match in this province. Check the spelling or try its Chinese name.';}
     if(!round.complete)$('name-answer').focus({preventScroll:true});

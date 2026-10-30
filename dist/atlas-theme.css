@@ -188,3 +188,11 @@ body[data-atlas=antarctica],.country-option[data-atlas=antarctica]{--ink:#263c4b
 :root[data-atlas=madagascar],body[data-atlas=madagascar],.country-option[data-atlas=madagascar]{--red:#2e7655;--red-dark:#1f563c;--ink:#253c37;--muted:#657977;--gold:#b54c4e;--line:#dee9e4;--paper:#fdfefd;--map:#eff6ef;--surface-soft:#edf5ed;--accent-soft:#e4ede9;--title-accent:#2e7655;--header-stripe:linear-gradient(90deg,#fffdf8 0 25%,#bd4a4b 25% 62.5%,#36815a 62.5%)}
 
 :root[data-atlas=mozambique],body[data-atlas=mozambique],.country-option[data-atlas=mozambique]{--red:#276e73;--red-dark:#1b5055;--ink:#233a3f;--muted:#63777d;--gold:#b18a29;--line:#dce8e9;--paper:#fdfefe;--map:#eef5f3;--surface-soft:#ecf4f2;--accent-soft:#e3eced;--title-accent:#276e73;--header-stripe:linear-gradient(90deg,#ad4142 0 18%,#397a60 18% 43%,#fffdf8 43% 47%,#303636 47% 70%,#fffdf8 70% 74%,#d5b346 74%)}
+.meta-divider{display:inline-block;height:.85em;border-inline-start:1px solid color-mix(in srgb,var(--muted,#727780) 35%,transparent);margin-inline:.55em;vertical-align:-.08em;white-space:pre;width:0;overflow:hidden}
+.name-secondary{color:#737780;font-weight:400;font-size:.92em}.name-primary{font-weight:inherit}.quiz-answer-row .name-secondary{display:block;margin-top:2px;font-size:.9em}.quiz-answer-row .name-primary{font-weight:500}
+.country-selection-heading :is(.country-local,[id$="selection-local"],#selected-local),.country-selection-heading [id$="names"] p,.regional-name-row bdi,.comparison-output th>small:first-of-type,.atlas-hover-overview small,.maplibregl-marker small{color:#737780;font-weight:400}
+#selection-chinese,.country-local,.regional-names p,.first-level-quiz [data-q=local],.quiz-map-prompt [data-local],.first-quiz-map [data-local]{color:#737780;font-weight:400}
+.color-bin-tooltip{display:none;position:absolute;bottom:calc(100% + 8px);left:0;padding:7px 9px;white-space:nowrap;background:var(--paper,#fff);color:var(--ink,#29323a);border:1px solid var(--line,#ddd);border-radius:4px;font-size:12px;font-weight:400;z-index:50;pointer-events:none}.region-color-ramp>span:is(:hover,:focus) .color-bin-tooltip{display:block}
+
+
+.region-color-legend .region-color-ramp{position:relative;overflow:visible}

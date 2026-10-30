@@ -1,3 +1,4 @@
+import {bilingualText} from './inline-typography.mjs';
 // Country adapters supply content and controls; this module owns the page layout.
 const escape=value=>String(value||'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 function searchMarkup({id,label,placeholder=label,resultsId,disabled=false,dataNav=false}){
@@ -51,7 +52,7 @@ export function setMapBreadcrumb(items){
  const root=document.getElementById('breadcrumb-region');root.replaceChildren();root.hidden=!items.length;
  items.forEach(({label,select},i)=>{
   if(i){const separator=document.createElement('span');separator.className='breadcrumb-separator';separator.textContent=' / ';separator.setAttribute('aria-hidden','true');root.append(separator);}
-  const node=document.createElement(select?'button':'span');node.textContent=label;
+  const node=document.createElement(select?'button':'span');bilingualText(node,label);
   if(select){node.type='button';node.className='breadcrumb-parent';node.dataset.nav='';node.setAttribute('aria-label','View '+label);node.onclick=select;}
   else{node.className='breadcrumb-current';node.setAttribute('aria-current','location');}
   root.append(node);

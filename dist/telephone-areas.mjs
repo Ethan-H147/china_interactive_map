@@ -1,3 +1,4 @@
+import {splitMetadata,nameParts} from './inline-typography.mjs';
 import {configureMapViewPicker,clearMapViewPicker} from './map-view-picker.mjs';
 import {createCountryPage,setMapBreadcrumb} from './country-page.mjs';
 import {loadCompressed} from './korea-data.mjs';
@@ -49,9 +50,9 @@ export function withTelephoneAreas(map,host,administrative,config){
   const note=document.createElement('p');note.className='country-note';note.textContent=record.ambiguous?'This municipality contains several codes. Its internal telephone boundaries are not mapped.':catalogue.warning;card.append(note);
   if(record.codes?.length>1)for(const code of record.codes){const b=document.createElement('button');b.type='button';b.className='quiet-button';b.textContent='Area code '+code;b.onclick=()=>select(catalogue.records.find(r=>r.code===code));card.append(b);}
   if(record.note){const p=document.createElement('p');p.textContent=record.note;card.append(p);}
-  const areaPlaces=(record.placeIds||[]).map(id=>places.get(id)).filter(Boolean),details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Mapped places · '+areaPlaces.length;details.append(summary);for(const place of areaPlaces){const p=document.createElement('p');p.textContent=place.en+(place.local&&place.local!==place.en?' · '+place.local:'')+' · '+place.codes.join(' / ');details.append(p);}card.append(details);
+  const areaPlaces=(record.placeIds||[]).map(id=>places.get(id)).filter(Boolean),details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Mapped places · '+areaPlaces.length;details.append(summary);for(const place of areaPlaces){const p=document.createElement('p');nameParts(p,place.en,[place.local&&place.local!==place.en?place.local:'',place.codes.join(' / ')].filter(Boolean).join(' — '));details.append(p);}card.append(details);
   if(record.officialCoverage?.length){const details=document.createElement('details'),summary=document.createElement('summary');summary.textContent='Official coverage & address exceptions';details.append(summary);for(const row of record.officialCoverage){const p=document.createElement('p');p.lang='ja';p.textContent=row.text;details.append(p);}card.append(details);}
-  card.append(sourceLink(catalogue.sourceName+' · '+catalogue.asOf,catalogue.source));$('tab-explore').hidden=false;panel('explore');sidebar.querySelector('.sidebar-scroll').scrollTop=0;setMapBreadcrumb([{label:record.en}]);document.getElementById('map-shell').dataset.selected='true';if(fit&&record.bounds)await host.fit(record.bounds,12);updateLabels();
+  card.append(splitMetadata(sourceLink(catalogue.sourceName+' · '+catalogue.asOf,catalogue.source)));$('tab-explore').hidden=false;panel('explore');sidebar.querySelector('.sidebar-scroll').scrollTop=0;setMapBreadcrumb([{label:record.en}]);document.getElementById('map-shell').dataset.selected='true';if(fit&&record.bounds)await host.fit(record.bounds,12);updateLabels();
  }
  function picked(point){if(!thematic||!layers.length)return;const hit=map.queryRenderedFeatures(point,{layers:map.getLayer(key+'-town-fill')?[key+'-town-fill',key+'-fill']:[key+'-fill']})[0],g=hit&&groups.get(hit.properties.id);return g&&(g.codes.length===1?catalogue.records.find(r=>r.code===g.codes[0]):g);}
  function updateLabels(){

@@ -1,3 +1,4 @@
+import {metadata} from './inline-typography.mjs';
 import {onMapHover} from './pointer-performance.mjs';
 import {getMapScene} from './map-scene.mjs';
 import {countryColorData,colorMetrics,colorLabels,colorLayerProfile} from './region-color-data.mjs';
@@ -65,12 +66,12 @@ export function createRegionColors(map,host={}){
   legend.hidden=suspended||key==='none'||!scale;
   if(legend.hidden)return;
   title.textContent=(scale.constant?'Real ':'')+colorLabels[key];
-  period.textContent=[scale.label,scale.estimated?'≈ USD':scale.unit,scale.years.length===1?scale.years[0]:scale.years.length?scale.years[0]+'–'+scale.years.at(-1):null,scale.constant?'constant '+scale.baseYear+' prices':null].filter(Boolean).join(' · ');
-  ramp.replaceChildren();for(let i=0;i<scale.bins.length;i++){const bin=scale.bins[i],swatch=el('span');swatch.style.background=bin.color;swatch.title=(i?'>'+metricNumber(bin.min,key):metricNumber(bin.min,key))+' – '+metricNumber(bin.max,key)+' · '+bin.count+' regions';ramp.append(swatch);}
+  metadata(period,[scale.label,scale.estimated?'≈ USD':scale.unit,scale.years.length===1?scale.years[0]:scale.years.length?scale.years[0]+'–'+scale.years.at(-1):null,scale.constant?'constant '+scale.baseYear+' prices':null].filter(Boolean));
+  ramp.replaceChildren();for(let i=0;i<scale.bins.length;i++){const bin=scale.bins[i],swatch=el('span');swatch.style.background=bin.color;const range=(i?'>'+metricNumber(bin.min,key):metricNumber(bin.min,key))+' – '+metricNumber(bin.max,key),tip=el('span',undefined,'color-bin-tooltip');metadata(tip,[range,bin.count+' regions']);swatch.tabIndex=0;swatch.setAttribute('aria-label',range+', '+bin.count+' regions');swatch.append(tip);ramp.append(swatch);}
   limits.replaceChildren(el('span',metricNumber(scale.min,key,true)),el('span',metricNumber(scale.max,key,true)));
   hoverUnit=hoverMetric=undefined;hover.replaceChildren();notes.replaceChildren(el('p',scale.label+'. Up to seven groups based on this level’s value distribution; tied values stay together. Each country and subdivision level has its own scale.'));
   if(scale.level<viewLevel&&!getScale(key,viewLevel))notes.append(el('p','This measure is available only at the '+scale.label.toLowerCase()+' level.'));
-  const coverage=el('p'),chip=el('span',undefined,'region-color-missing');coverage.append(chip,document.createTextNode('No data · '+scale.count+'/'+scale.total+' regions covered'));notes.append(coverage);
+  const coverage=el('p'),chip=el('span',undefined,'region-color-missing');coverage.append(chip);const description=el('span');metadata(description,['No data',scale.count+'/'+scale.total+' regions covered']);coverage.append(description);notes.append(coverage);
   if(scale.years.length>1)notes.append(el('p','Latest available figures use different years. Check the date beside each value.'));
   if(scale.constant)notes.append(el('p','Inflation-adjusted GDP in '+scale.baseYear+' prices; dollar estimates retain that reference year.'));
   const urls=new Map();for(const r of scale.records){const m=scale.metric(r);if(!m)continue;for(const url of [m.sourceUrl,m.areaSourceUrl,m.exchangeSourceUrl].filter(Boolean))urls.set(url,true);}

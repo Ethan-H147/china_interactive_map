@@ -1,0 +1,13 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import sharp from 'sharp';
+const root='scripts/us-college-sources/',manifest=JSON.parse(fs.readFileSync(root+'manifest.json')),hash=b=>createHash('sha256').update(b).digest('hex'),out='dist/vendor/us-colleges/';fs.mkdirSync(out,{recursive:true});
+for(const[file,source]of Object.entries(manifest.files))assert.equal(hash(fs.readFileSync(root+file)),source.sha256,'Retained logo source '+file);
+const colleges={};
+for(const record of manifest.colleges){const images=record.images.map(image=>{const bytes=fs.readFileSync(image.path);assert.equal(hash(bytes),image.sha256,record.en+' image source');return{...image,bytes};});let crest;
+ assert(images.every(image=>['seal','shield','wordmark'].includes(image.kind)&&image.path.startsWith(root+'institutional/marks/')&&!/espn|athletics/.test(image.url)),record.en+' must use institutional artwork');
+ if(images.length===1){crest='vendor/us-colleges/'+record.id+'.webp';fs.writeFileSync('dist/'+crest,await sharp(images[0].bytes).resize({width:192,height:192,fit:'inside',withoutEnlargement:true}).webp({lossless:true}).toBuffer());}
+ else{crest='vendor/us-colleges/'+record.id+'.svg';const svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 200"><title>Harvard and MIT logos</title>'+images.map((image,i)=>'<image x="'+i*216+'" y="0" width="200" height="200" preserveAspectRatio="xMidYMid meet" href="data:image/'+(image.path.endsWith('.svg')?'svg+xml':'png')+';base64,'+image.bytes.toString('base64')+'"/>').join('')+'</svg>';fs.writeFileSync('dist/'+crest,svg);}
+ const bytes=fs.readFileSync('dist/'+crest),versioned='vendor/us-colleges/'+record.id+'-'+hash(bytes).slice(0,12)+crest.slice(crest.lastIndexOf('.'));fs.renameSync('dist/'+crest,'dist/'+versioned);crest=versioned;colleges[record.id]={name:record.en,institutions:record.institutions,crest,sha256:hash(bytes),sources:record.images.map(({institution,kind,url,sourcePage,sha256})=>({institution,kind,url,sourcePage,sha256}))};
+}
+assert.equal(Object.keys(colleges).length,44);fs.writeFileSync('dist/data/quiz/us-college-logo-sources.json',JSON.stringify({retrieved:manifest.retrieved,credit:manifest.credit,colleges},null,2)+'\n');
+const path='dist/data/quiz/us-misc.json';if(fs.existsSync(path)){const data=JSON.parse(fs.readFileSync(path));for(const record of data.records.filter(r=>r.parent==='misc-college-towns')){assert(colleges[record.id],record.en);record.crest=colleges[record.id].crest;}fs.writeFileSync(path,JSON.stringify(data));}
+console.log('44 college-town institutional marks prepared; Harvard shield and MIT wordmark share one paired mark.');

@@ -27,7 +27,7 @@ export default [1280,390].map(width=>({name:'Nigeria states, local areas, FCT co
  const question=await p.evaluate('document.querySelector("#ng-quiz-panel [data-q=question]").textContent'),answer=first.find(r=>r.en===question);assert(answer);
  await p.evaluate('void map.jumpTo({center:'+JSON.stringify(answer.center)+',zoom:7})');await p.settle();
  await p.tap(await p.evaluate('(()=>{const p=map.project('+JSON.stringify(answer.center)+'),r=map.getCanvas().getBoundingClientRect();return[r.x+p.x,r.y+p.y]})()'));
- await p.waitFor('document.querySelector("#ng-quiz-panel [data-q=feedback]").textContent==="Correct"');
+ await p.waitFor('document.querySelector("#ng-quiz-panel [data-q=feedback]").dataset.status==="correct"');
  await p.tap('#ng-quiz-panel [data-q=end]');await p.settle();
  assert(await p.evaluate('mapScene.assertOrder()'));
 }}));

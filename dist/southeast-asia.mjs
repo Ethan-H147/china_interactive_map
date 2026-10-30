@@ -54,7 +54,7 @@ export async function addCountryPortal(map,host,country){
  function selectionNames(){
   $('selection-name').textContent=name(selected);$('selection-name').lang=isMalaysia?'en':language;
   const alternatives=isMalaysia?[selected.local]:['en','zh','ms','ta'].filter(code=>code!==language).map(code=>selected.names[code]);
-  $('selection-local').textContent=[...new Set(alternatives.filter(v=>v&&v!==name(selected)))].join(' · ');$('selection-local').hidden=!$('selection-local').textContent;
+  $('selection-local').textContent=[...new Set(alternatives.filter(v=>v&&v!==name(selected)))].join(' / ');$('selection-local').hidden=!$('selection-local').textContent;
 
   setRegionBreadcrumb(selected,r=>{const p=index.get(r.parent);return p?.level>0?p:null;},name,select);
   for(const childButton of $('children').querySelectorAll('button'))childButton.textContent=name(index.get(childButton.dataset.region));

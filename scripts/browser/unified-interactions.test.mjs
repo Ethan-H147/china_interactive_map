@@ -11,7 +11,7 @@ export default [
   assert.match(await p.evaluate(`document.querySelector('${panel} [data-q=feedback]').textContent`),/correct/);await p.tap('#home');await p.settle();
   await p.tap('#tab-quiz');await p.evaluate(`chinaPrefectureQuiz.open({scope:'710000',mode:'identify'})`);assert.match(await p.evaluate(`document.querySelector('${panel} [data-q=count]').textContent`),/^22 /);
   await p.tap(panel+' [data-q=start]');await p.settle();const target=await p.evaluate(`chinaPrefectureRecords().find(r=>map.getFeatureState({source:'prefectures',id:regionByCode.get(Number(r.id))?.feature.properties.adcode||r.id}).quizTarget)`);assert(target);
-  await p.evaluate(`document.getElementById('cn-prefectures-quiz-answer').value=${JSON.stringify(target.en)};document.querySelector('${panel} [data-q=form]').requestSubmit()`);assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=feedback]').textContent`),'Correct');
+  await p.evaluate(`document.getElementById('cn-prefectures-quiz-answer').value=${JSON.stringify(target.en)};document.querySelector('${panel} [data-q=form]').requestSubmit()`);assert.equal(await p.evaluate(`document.querySelector('${panel} [data-q=feedback]').dataset.status`),'correct');
   assert(!await p.evaluate(`map.getLayer('province-selection-repaired')`));await p.tap('#home');await p.settle();assert(!await p.evaluate('quiz.active'));
  }},
  {name:'US counties borrow normal per-state sources and restore the selected state',options:{width:1280,height:900},async run(p,base){

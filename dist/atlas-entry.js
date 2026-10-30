@@ -22,7 +22,7 @@
   const place=country==='china'&&preservePlace?(/^#(?:china\/)?place=(.*)$/.exec(location.hash)?.[1]??null):null;
   history.replaceState(null,'',location.pathname+location.search+'#'+country+(place!==null?'/place='+place:''));
  }
- if(initial){persist(initial);setUrl(initial);document.title=countries[initial].en+(countries[initial].local?' · '+countries[initial].local:'');}
+ if(initial){persist(initial);setUrl(initial);document.title=countries[initial].en+(countries[initial].local?' ('+countries[initial].local+')':'');}
  function paint(){
   const info=countries[current];root.dataset.atlas=current;document.body.dataset.atlas=current;
   const historical=document.getElementById('historical-snapshot');if(historical){const child=Object.values(countries).find(c=>c.parent===current&&c.snapshot);historical.hidden=!info.snapshot&&!child;historical.textContent=info.snapshot?'Present day':'Historical snapshot';historical.onclick=()=>{location.hash='#'+(info.snapshot?info.parent:child.id);};}
@@ -30,7 +30,7 @@
   if($('atlas-title-english')){$('atlas-title-english').textContent=info?.en||'Atlas';$('atlas-title-english').className=(info?.titleClasses?.[0]||'korea-english')+' title-english';}
   if($('atlas-title-local')){$('atlas-title-local').textContent=info?.local||'';$('atlas-title-local').className=(info?.titleClasses?.[1]||'mongolia-title')+' title-local';$('atlas-title-local').lang=info?.lang||'en';}
   for(const id of new Set(Object.values(countries).flatMap(c=>c.extraTitles||[])))if($(id))$(id).hidden=!info?.extraTitles?.includes(id);
-  document.title=info.en+(info.local?' · '+info.local:'');
+  document.title=info.en+(info.local?' ('+info.local+')':'');
   document.querySelectorAll('[data-country-symbol]').forEach(el=>{el.innerHTML=info?AtlasSymbols.markup(current):'';});
   if($('loading-label'))$('loading-label').textContent=info?'Loading '+info.en+' map…':'Loading atlas…';
   if($('home'))$('home').textContent=info?.en||'Countries';

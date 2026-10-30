@@ -16,7 +16,7 @@ export default [{name:'Brazil native map restores selected states and DDD views 
   assert.equal(await p.evaluate('map.getLayoutProperty("south-brazil-fill","visibility")'),'visible');
   assert.equal(await p.evaluate('map.getLayoutProperty("south-brazil-borders","visibility")'),'visible');
   const point=await p.evaluate('(async()=>{const q=document.querySelector("#brazil-cities-quiz-panel [data-q=question]").textContent,data=await(await fetch("data/quiz/brazil-cities.json")).json(),r=data.records.find(r=>r.en===q),p=map.project(r.center),b=map.getCanvas().getBoundingClientRect();return[b.x+p.x,b.y+p.y]})()');await p.tap(point);
-  await p.waitFor('document.querySelector("#brazil-cities-quiz-panel [data-q=feedback]").textContent==="Correct"');
+  await p.waitFor('document.querySelector("#brazil-cities-quiz-panel [data-q=feedback]").dataset.status==="correct"');
   await p.tap('#home');await p.settle();assert.deepEqual(await p.evaluate('currentAtlas().quizMap.capture()'),saved);
  }
 }},{name:'Japan native quiz restores a selected prefecture and its map filters',options:{width:1280,height:900,developer:true},async run(p,base){

@@ -1,3 +1,4 @@
+import {bilingualText,splitMetadata} from './inline-typography.mjs';
 let sharedSearch;
 import {createPlaceSearch} from './place-search.mjs';
 import {createSubdivisionScope} from './scoped-country.mjs';
@@ -35,7 +36,7 @@ export async function addMongoliaPortal(map,host){
  }
  updateLabels();
 }
- function population(p){const record=p.level===1?host.population(p):null;$('population').hidden=!record;if(!record)return;$('population-total').textContent=record.total.toLocaleString('en-US');$('population-scope').textContent=p.iso==='MN-1'?'Entire capital municipality':'Entire province';$('population-date').textContent=record.dateLabel;$('population-source').href=record.sourceUrl;}
+ function population(p){const record=p.level===1?host.population(p):null;$('population').hidden=!record;if(!record)return;$('population-total').textContent=record.total.toLocaleString('en-US');$('population-scope').textContent=p.iso==='MN-1'?'Entire capital municipality':'Entire province';$('population-date').textContent=record.dateLabel;splitMetadata($('population-date'));$('population-source').href=record.sourceUrl;}
  async function select(f,shouldFit=true,camera={}){
   if(!active||!ready||host.isBusy()||!f)return;state(selected,{selected:false});selected=f;state(f,{selected:true});clearHover();clearSearch();
   const p=f.properties,parent=index.get(p.parent);$('province').value=p.level===1?p.id:p.parent;window.AtlasStatistics.renderStatistics($('selection-meta'),'mongolia:'+p.id);
@@ -66,7 +67,7 @@ function renderLabels(){
  onMapHover(map,event=>{if(!active||!ready||host.isBusy()||map.isMoving())return;const f=picked(event.point);if(f!==hovered){clearHover();hovered=f;state(f,{hover:true});}if(!f)return;map.getCanvas().style.cursor='pointer';});
  map.on('movestart',clearHover);map.on('moveend',updateLabels);map.on('resize',updateLabels);map.getCanvas().addEventListener('mouseleave',clearHover);
  const normalize=s=>s.normalize('NFD').replace(/\p{M}/gu,'').replace(/[^\p{L}\p{N}]/gu,'').toLowerCase();
- $('search').oninput=()=>{const q=normalize($('search').value),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const matches=(sharedSearch??=createPlaceSearch([...index.values()].map(f=>({...f.properties,local:f.properties.mn,feature:f}))))(q).map(r=>r.feature);for(const f of matches){const b=document.createElement('button');b.dataset.nav='';b.className='search-result';const strong=document.createElement('strong'),small=document.createElement('small');strong.textContent=name(f.properties);small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||'Mongolia');b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length)box.textContent='No matching places.';};
+ $('search').oninput=()=>{const q=normalize($('search').value),box=$('search-results');box.replaceChildren();box.hidden=!q;if(!q)return;const matches=(sharedSearch??=createPlaceSearch([...index.values()].map(f=>({...f.properties,local:f.properties.mn,feature:f}))))(q).map(r=>r.feature);for(const f of matches){const b=document.createElement('button');b.dataset.nav='';b.className='search-result';const strong=document.createElement('strong'),small=document.createElement('small');bilingualText(strong,name(f.properties));small.textContent=f.properties.type+' · '+(index.get(f.properties.parent)?.properties.en||'Mongolia');b.append(strong,small);b.onclick=()=>select(f);box.append(b);}if(!matches.length)box.textContent='No matching places.';};
  $('search').onkeydown=event=>{if(event.isComposing)return;const box=$('search-results');if(event.key==='Enter'&&!box.hidden){event.preventDefault();box.querySelector('button')?.click();}if(event.key==='Escape')box.hidden=true;};
  $('province').onchange=()=>{$('province').value?select(index.get($('province').value)):reset();};$('selection-reset').onclick=reset;
  for(const id of ['province-layer','district-layer','label-layer'])$(id).onchange=sync;
@@ -85,7 +86,7 @@ async function ensureData(){
    for(const level of ['second','first']){const id='mongolia-'+level+'-lines';layerIds.push(id);map.addLayer({id,type:'line',source:'mongolia-'+level+'-edges',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':level==='second'?'#94adbd':'#4e7d98','line-width':['interpolate',['linear'],['zoom'],3,level==='second'?.35:.65,8,level==='second'?.7:1.2],'line-opacity':adaptiveOpacity(level==='second'?.8:1)}});}
    for(const level of ['first','second']){const id='mongolia-'+level+'-selected';layerIds.push(id);map.addLayer({id,metadata:{atlas:{role:'selection'}},type:'line',source:'mongolia-'+level+'-selection-edges',layout:{'line-join':'round','line-cap':'round'},paint:{'line-color':'#ad4037','line-width':1.8,'line-opacity':adaptiveOpacity(['case',['boolean',['feature-state','selected'],false],1,0])}});}
    for(const id of layerIds)show(id,false);
-   for(const f of [...data.first.features].sort((a,b)=>a.properties.en.localeCompare(b.properties.en)))$('province').append(new Option(name(f.properties),f.properties.id));
+   for(const f of [...data.first.features].sort((a,b)=>a.properties.en.localeCompare(b.properties.en))){const option=new Option(name(f.properties),f.properties.id);bilingualText(option,option.textContent);$('province').append(option);}
    ready=true;host.controls();
   })().catch(error=>{for(const id of layerIds.splice(0))if(map.getLayer(id))map.removeLayer(id);for(const id of ['first','second','first-edges','second-edges','countries-edges','first-selection-edges','second-selection-edges'].map(id=>'mongolia-'+id))if(map.getSource(id))map.removeSource(id);urls.splice(0).forEach(url=>URL.revokeObjectURL(url));index.clear();$('province').replaceChildren(new Option('All Mongolia',''));loading=null;throw error;});return loading;
  }

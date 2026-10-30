@@ -1,3 +1,4 @@
+import {splitMetadata} from './inline-typography.mjs';
 import {prepareCountryDetails,insertInfoCard} from './country-page.mjs';
 import './countries.js';
 const pending=new Map();
@@ -29,7 +30,7 @@ function renderPopulation(panel,record,data,onRelatedPlace){
  if(metric.coverageNote)panel.append(element('p',metric.coverageNote,'population-note'));
  const meta=element('p',null,'population-period');
  if(metric.date){const full=metric.date.length===7?metric.date+'-01':metric.date;meta.append(document.createTextNode(new Intl.DateTimeFormat('en-GB',{...(metric.date.length===10?{day:'numeric'}:{}),month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(full+'T00:00:00Z'))+' · '));}
- meta.append(link(data.sources[metric.source],'Source'));panel.append(meta);
+ meta.append(link(data.sources[metric.source],'Source'));splitMetadata(meta);panel.append(meta);
 }
 export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
  if(!anchor?.parentElement)return;
@@ -66,11 +67,11 @@ export async function renderStatistics(anchor,key,provided,{onRelatedPlace}={}){
    dd.append(element('strong',field==='area'?new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(metric.value)+' km²':formatMoney(metric.value,metric.currency,perCapita)));
    if(field!=='area'&&metric.currency!=='USD')dd.append(element('span',metric.priceBasis==='constant'?(argentina?'Adjusted for inflation · '+metric.baseYear+' peso values':'Inflation-adjusted · constant '+metric.baseYear+' '+metric.currency):metric.usd?'≈ '+formatMoney(metric.usd,'USD',perCapita):'USD conversion unavailable','statistics-usd'));
    if(field!=='area'&&metric.priceBasis==='constant'&&metric.usd>0&&metric.usdBaseYear===metric.baseYear)dd.append(element('span','≈ '+formatMoney(metric.usd,'USD',perCapita)+' · '+metric.usdBaseYear+' dollars','statistics-usd'));
-   if(metric.scopeNote)dd.append(element('span',metric.scopeNote,'statistics-usd'));
-   const meta=element('small');meta.append(document.createTextNode((metric.period||metric.year||'Date not specified')+(metric.status?' · '+metric.status:'')+(metric.method==='calculated'?' · calculated':'')+' · '),link(data.sources[metric.source],'Source'));dd.append(meta);
+   for(const note of dd.querySelectorAll('.statistics-usd'))splitMetadata(note);if(metric.scopeNote)dd.append(element('span',metric.scopeNote,'statistics-usd'));
+   const meta=element('small');meta.append(document.createTextNode((metric.period||metric.year||'Date not specified')+(metric.status?' · '+metric.status:'')+(metric.method==='calculated'?' · calculated':'')+' · '),link(data.sources[metric.source],'Source'));splitMetadata(meta);dd.append(meta);
   }
-  if(countries[key.split(':')[0]]?.regionalStatistics&&record.population?.value>=0&&record.area?.value>0){const dd=element('dd');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(record.population.value/record.area.value)+' people/km²'),element('small',record.population.year+' · calculated from population and area'));areaValues.append(element('dt','Population density'),dd);}
-  if(record.facts?.length){const section=element('section',null,'statistics-facts'),values=element('dl',null,'statistics-values');section.append(element('h3','More figures'),values);for(const fact of record.facts){const dd=element('dd'),meta=element('small');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(fact.value)+(fact.unit||'')));meta.append(document.createTextNode(fact.year+' · '),link(data.sources[fact.source],'Source'));dd.append(meta);if(fact.note)dd.append(element('span',fact.note,'statistics-usd'));values.append(element('dt',fact.label),dd);}panel.append(section);}
+  if(countries[key.split(':')[0]]?.regionalStatistics&&record.population?.value>=0&&record.area?.value>0){const dd=element('dd');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:1}).format(record.population.value/record.area.value)+' people/km²'),element('small',record.population.year+' · calculated from population and area'));for(const note of dd.querySelectorAll('small'))splitMetadata(note);areaValues.append(element('dt','Population density'),dd);}
+  if(record.facts?.length){const section=element('section',null,'statistics-facts'),values=element('dl',null,'statistics-values');section.append(element('h3','More figures'),values);for(const fact of record.facts){const dd=element('dd'),meta=element('small');dd.append(element('strong',new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(fact.value)+(fact.unit||'')));meta.append(document.createTextNode(fact.year+' · '),link(data.sources[fact.source],'Source'));splitMetadata(meta);dd.append(meta);if(fact.note)dd.append(element('span',fact.note,'statistics-usd'));values.append(element('dt',fact.label),dd);}panel.append(section);}
   const notes=element('details',null,'statistics-details');notes.append(element('summary',argentina?'About these figures & sources':'Dates, sources & definitions'));
   if(argentina)notes.append(element('p','PBG is Argentina’s term for regional GDP. GDP per capita divides the economy’s output by its population; it is not a person’s salary. ARS means Argentine pesos. Inflation-adjusted economic output uses gross value added (GVA), a related measure with different tax treatment. Its 2004 reference prices remove inflation; the data year is shown beside the figure.'));
   if(record.note)notes.append(element('p',record.note));

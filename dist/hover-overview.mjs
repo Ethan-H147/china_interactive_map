@@ -4,7 +4,7 @@ import {createFrameTask} from './pointer-performance.mjs';
 export function overviewLines(place){
  if(!place)return [];
  const names=[...new Set([place.en,...(place.overviewNames||(place.names?Object.values(place.names).filter(v=>v&&v.type!=='historical language label').map(v=>typeof v==='string'?v:v.name):[place.local||place.ko||place.mn||place.ja]))].filter(Boolean))];
- return [names[0],names.slice(1).join(' · '),place.kind||place.type].filter(Boolean);
+ return [names[0],names.slice(1).join(' / '),place.kind||place.type].filter(Boolean);
 }
 
 // One overview owns canvas hits and DOM labels for every country adapter.

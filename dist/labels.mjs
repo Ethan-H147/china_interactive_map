@@ -30,7 +30,7 @@ export function render(map,candidates,className){
  // On the globe, places on the far side, or near its edge where they project poorly, are left out.
  if(map.getProjection?.()?.type==='globe'){const c=map.getCenter(),r=Math.PI/180;candidates=candidates.filter(({center:[x,y]})=>Math.sin(y*r)*Math.sin(c.lat*r)+Math.cos(y*r)*Math.cos(c.lat*r)*Math.cos((x-c.lng)*r)>Math.cos(65*r));}
  const items=candidates.sort((a,b)=>Number(!!b.selected)-Number(!!a.selected)||(b.priority||0)-(a.priority||0)||String(a.id).localeCompare(String(b.id))).map(item=>{
-  const point=map.project(item.center),font=i=>(item.selected?'600 ':'')+(large?(i?'16px Arial':'18px Arial'):(i?'14px Arial':'16px Arial'));
+  const point=map.project(item.center),font=i=>(item.selected&&!i?'600 ':'')+(large?(i?'16px Arial':'18px Arial'):(i?'14px Arial':'16px Arial'));
   let lines=item.lines||labelLines(item.en,item.local,item.countryLabel?settings.countryLanguage:language,item.district);
   let w=Math.max(...lines.map((line,i)=>textWidth(font(i),line)));
   if(item.shortMapLabel&&item.shortMapLabel!==item.en){

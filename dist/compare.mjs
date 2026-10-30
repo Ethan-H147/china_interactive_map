@@ -1,7 +1,8 @@
+import {bilingualText,splitMetadata} from './inline-typography.mjs';
 import {searchRank} from './search-ranking.mjs';
 import {loadStatistics,formatMoney} from './statistics.mjs';
 import {japanPopulation,japanLocalStatistics} from './japan-local-facts.mjs';
-const el=(tag,text)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;return n;};
+const el=(tag,text)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;if(tag==='small')splitMetadata(n);return n;};
 const normalize=value=>String(value??'').normalize('NFD').replace(/\p{M}/gu,'').toLowerCase();
 export const comparisonLevel=p=>p.level==='province'?'province':p.level==='taiwan-region'||p.level==='city'&&String(p.adcode).slice(2,4)!=='90'?'prefecture':null;
 export const matchesComparisonLevel=(p,level)=>comparisonLevel(p)===level||level==='prefecture'&&p.level==='province'&&[110000,120000,310000,500000].includes(p.adcode);
@@ -33,7 +34,7 @@ export function createComparison(initial){
  const matches=(p,value)=>profile.matches?profile.matches(p,value):profile.level(p)===value;
  const chosen=()=>slots.map(s=>profile.records.find(p=>p.id===s.select.value));
  const searchNames=p=>[p.en,p.local,p.id,p.parentName,p.scopeName].filter(Boolean);
- function options(i,preferred,preserve=true){const {search,select}=slots[i],q=normalize(search.value.trim()),other=slots[1-i].select.value,old=preferred!=null?String(preferred):(preserve?select.value:'');select.replaceChildren();for(const p of profile.records.filter(p=>matches(p,level.value)&&p.id!==other&&(!q||normalize(searchNames(p).join(' ')).includes(q))).sort((a,b)=>searchRank(q,searchNames(a))-searchRank(q,searchNames(b))||a.en.localeCompare(b.en))){const o=el('option',p.en+' · '+p.local+(p.parentName?' · '+p.parentName:'')+(p.scopeName?' · '+p.scopeName:''));o.value=p.id;select.append(o);}if([...select.options].some(o=>o.value===old))select.value=old;}
+ function options(i,preferred,preserve=true){const {search,select}=slots[i],q=normalize(search.value.trim()),other=slots[1-i].select.value,old=preferred!=null?String(preferred):(preserve?select.value:'');select.replaceChildren();for(const p of profile.records.filter(p=>matches(p,level.value)&&p.id!==other&&(!q||normalize(searchNames(p).join(' ')).includes(q))).sort((a,b)=>searchRank(q,searchNames(a))-searchRank(q,searchNames(b))||a.en.localeCompare(b.en))){const o=el('option',p.en+' · '+p.local+(p.parentName?' · '+p.parentName:'')+(p.scopeName?' · '+p.scopeName:''));bilingualText(o,o.textContent);o.value=p.id;select.append(o);}if([...select.options].some(o=>o.value===old))select.value=old;}
  const source=(cell,url,label='Source')=>{if(!url)return;const a=el('a',label);a.href=url;a.target='_blank';a.rel='noopener';cell.append(a);};
  const population=(p,cell)=>{const r=profile.population(p);if(r?.total==null){cell.append(el('span','Not available'));return;}cell.append(el('strong',r.total.toLocaleString('en-US')),el('small',r.dateLabel||r.date),el('small',r.measure||'Entire administrative region'));source(cell,r.sourceUrl);if(r.inconsistent)cell.append(el('small','Source figures contain inconsistencies.'));};
  async function render(){const ticket=++revision,current=profile;output.replaceChildren(el('p','Loading comparison…'));try{data=await loadStatistics();if(ticket!==revision||current!==profile)return;const pair=chosen();if(pair.some(p=>!p)){output.replaceChildren(el('p','No matching regions. Clear the search to choose another.'));return;}

@@ -4,7 +4,7 @@ export const mongoliaPanel=`<aside id="mongolia-sidebar" class="sidebar mongolia
  search:{
  id:`m-search`,
  label:`Find a place`,
- placeholder:`Find a place · Газар хайх`,
+ placeholder:`Find a place`,
  resultsId:`m-search-results`,
  disabled:true,
  dataNav:true

@@ -19,7 +19,7 @@ export default [
   assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));assert(await p.evaluate('mapScene.assertOrder()'));await p.screenshot('central-europe-'+country+'-'+width);
   await p.evaluate('currentAtlas().home()');await p.settle();await p.tap('#'+prefix+'-tab-quiz');await p.tap('#'+prefix+'-quiz-panel [data-q=start]');await p.settle();assert(await p.evaluate('currentAtlas().quiz.active'));
   const question=await p.evaluate('document.querySelector("#'+prefix+'-quiz-panel [data-q=question]").textContent'),answer=cat.records.find(r=>r.level===1&&r.en===question);assert(answer);
-  await p.evaluate('void map.jumpTo({center:'+JSON.stringify(answer.center)+',zoom:8})');await p.settle();await p.tap(await p.evaluate('(()=>{const p=map.project('+JSON.stringify(answer.center)+'),r=map.getCanvas().getBoundingClientRect();return[r.x+p.x,r.y+p.y]})()'));await p.waitFor('document.querySelector("#'+prefix+'-quiz-panel [data-q=feedback]").textContent==="Correct"');await p.tap('#'+prefix+'-quiz-panel [data-q=end]');
+  await p.evaluate('void map.jumpTo({center:'+JSON.stringify(answer.center)+',zoom:8})');await p.settle();await p.tap(await p.evaluate('(()=>{const p=map.project('+JSON.stringify(answer.center)+'),r=map.getCanvas().getBoundingClientRect();return[r.x+p.x,r.y+p.y]})()'));await p.waitFor('document.querySelector("#'+prefix+'-quiz-panel [data-q=feedback]").dataset.status==="correct"');await p.tap('#'+prefix+'-quiz-panel [data-q=end]');
  }}))),
  {name:'central-europe shared borders draw once in a third country and while either side is selected',options:{width:1280,height:900},async run(p,base){
   const data=load('scripts/boundary-sources/central-europe/resolved.bin');

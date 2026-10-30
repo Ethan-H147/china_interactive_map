@@ -28,7 +28,7 @@ export function mountChinaPage(){
   <h3 id="population-heading">Population</h3>
   <p class="population-total" id="population-total"></p>
   <p class="population-scope" id="population-scope">Entire administrative region</p>
-  <p class="population-period"><span id="population-date"></span><span id="population-boundaries"> · 2020 boundaries</span></p>
+  <p class="population-period"><span id="population-date"></span><span id="population-boundaries"><span class="meta-divider" aria-hidden="true"> </span>2020 boundaries</span></p>
   <dl class="population-breakdown" id="population-breakdown"><dt title="Residents in cities and towns (城镇人口)">Cities and towns</dt><dd id="population-towns"></dd><dt title="Residents in the urban core area (城区人口)">Urban core</dt><dd id="population-core"></dd></dl>
   <p id="population-quality" class="population-quality" hidden>The source’s population figures are inconsistent.</p>
   <a id="population-source" target="_blank" rel="noopener">Wikipedia: population data</a>

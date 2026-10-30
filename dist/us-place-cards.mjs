@@ -1,4 +1,5 @@
-const paragraph=(anchor,text,tag='p')=>{const el=document.createElement(tag);el.textContent=text;anchor.append(el);return el;};
+import {splitMetadata} from './inline-typography.mjs';
+const paragraph=(anchor,text,tag='p')=>{const el=document.createElement(tag);el.textContent=text;if(tag==='small')splitMetadata(el);anchor.append(el);return el;};
 export function renderZipCodeCard(anchor,record,data){
  anchor.replaceChildren();anchor.hidden=record?.thematic!=='zip-codes';if(anchor.hidden)return;
  paragraph(anchor,record.current?'USPS ZIP code':'Historical Census ZIP area','h3');

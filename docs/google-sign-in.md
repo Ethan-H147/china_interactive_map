@@ -1,6 +1,6 @@
 # Enable Google sign-in
 
-The app integration is ready locally. Google was disabled in this Supabase project when its public settings were checked on 29 October 2026. Complete the provider setup before expecting a real Google login to work.
+The atlas uses Supabase Auth for Google sign-in. The provider credentials and consent-screen branding are configured in Supabase and Google Cloud, while the browser code handles the redirect and restores the atlas view.
 
 ## 1. Create a Google OAuth web client
 
@@ -49,3 +49,13 @@ Use the Google account with the same email as your existing confirmed atlas acco
 Google credentials stay on Supabase; only authentication is requested. The app does not request Google Drive, Gmail or Calendar access. A real Google consent test must be completed by the account owner after backend setup. Local browser fixtures verify the app’s SDK redirects, callback exchange, existing-account records, provider cancellation and password sign-in compatibility without creating real users or sending email.
 
 Sources: [Supabase Google setup](https://supabase.com/docs/guides/auth/social-login/auth-google), [redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls), and [identity linking](https://supabase.com/docs/guides/auth/auth-identity-linking).
+
+## 5. Show Boundary Atlas instead of the project ID
+
+The default OAuth callback domain is `odenagmobrswlzkljayf.supabase.co`. Google can show that address as “Continue to …” while the app’s branding is unverified.
+
+In the Google Cloud project containing the OAuth web client, open **Google Auth Platform → Branding** and set **App name** to **Boundary Atlas**. Add your monitored support email and the required website/privacy links, save the draft, then follow **Verify branding** / **Verification Center** and publish the approved branding. Renaming the OAuth client, the Google Cloud project or the Supabase project does not change the public consent-screen name. Google requires brand verification before displaying the app name/logo.
+
+An optional Supabase custom auth domain, such as `auth.yourdomain.com`, can replace the random project hostname itself. Supabase offers this as a paid add-on on paid plans; it requires a domain you control. If you choose it, retain the existing callback while adding the new `https://auth.yourdomain.com/auth/v1/callback` in Google’s authorized redirect URIs, and update the atlas’s public Supabase URL after the custom domain is ready. A custom domain is not required merely to submit Google brand verification.
+
+Sources: [Google branding and verification](https://support.google.com/cloud/answer/15549049), [Supabase consent-screen branding](https://supabase.com/docs/guides/auth/social-login/auth-google#setup-consent-screen-branding), and [Supabase custom domains](https://supabase.com/docs/guides/platform/custom-domains).

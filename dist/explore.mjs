@@ -1,3 +1,4 @@
+import {bilingualText} from './inline-typography.mjs';
 export const landmarksFor=(data,code)=>data.landmarks.filter(place=>place.city===Number(code)||place.district===Number(code));
 
 export function createExplorer(articles,landmarks){
@@ -8,7 +9,7 @@ export function createExplorer(articles,landmarks){
  const close=event=>{if(event.target===dialog)dialog.close();};dialog.addEventListener('click',close);
  function open(place){
   const p=place.photo;photo.src=p.src;photo.alt=place.en;photo.width=p.width;photo.height=p.height;
-  document.getElementById('viewer-title').textContent=place.en+' · '+place.zh;
+  bilingualText(document.getElementById('viewer-title'),place.en+' · '+place.zh);
   const credits=document.getElementById('viewer-credit');credits.replaceChildren();
   credits.append(document.createTextNode(p.author+' · '),link(p.license,p.licenseUrl),document.createTextNode(' · '),link('Wikimedia Commons',p.source),document.createTextNode(' · '),link('Original image',p.original));
   document.getElementById('viewer-resolution').textContent=`${p.width.toLocaleString()} × ${p.height.toLocaleString()} pixels · Converted to WebP, original dimensions retained`;

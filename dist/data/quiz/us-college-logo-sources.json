@@ -1,0 +1,762 @@
+{
+  "retrieved": "2026-10-30",
+  "credit": "University seals and shields from the cited institutional reference pages; MIT wordmark from its official website, identified by the MIT Brand Guide. All marks belong to their respective institutions.",
+  "colleges": {
+    "US-COLLEGE-170976": {
+      "name": "University of Michigan",
+      "institutions": [
+        "University of Michigan-Ann Arbor"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-170976-0455ef57e417.webp",
+      "sha256": "0455ef57e4172299639c28936e420862fcb94157063299fdd95d1d5a9d94d18d",
+      "sources": [
+        {
+          "institution": "University of Michigan",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Seal_of_the_University_of_Michigan.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Michigan",
+          "sha256": "1c397de58da26e7cb08f34d62012d961e99aac24a2bc2c1cabe61ac753207886"
+        }
+      ]
+    },
+    "US-COLLEGE-171100": {
+      "name": "Michigan State",
+      "institutions": [
+        "Michigan State University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-171100-9bd4e644ee75.webp",
+      "sha256": "9bd4e644ee759c80f66d9e1b8dbb9b7d159150a249a64e0eea2caa781079aed7",
+      "sources": [
+        {
+          "institution": "Michigan State University",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/5/53/Michigan_State_University_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/Michigan_State_University",
+          "sha256": "772d2cf4643dc331a77d1ed0762cef041245e07208521c63497c661e5be82426"
+        }
+      ]
+    },
+    "US-COLLEGE-214777": {
+      "name": "Penn State",
+      "institutions": [
+        "Pennsylvania State University-Main Campus"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-214777-e228dea07411.webp",
+      "sha256": "e228dea07411e7bd74c7cce9e394306a7bd2042bd36a11fb1e7518de51d6b949",
+      "sources": [
+        {
+          "institution": "Pennsylvania State University",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/5/5c/Pennsylvania_State_University_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
+          "sha256": "db1cab6c628b60c37226198265252381391c3fc85828d9bf2190d0e82ba535ef"
+        }
+      ]
+    },
+    "US-COLLEGE-228723": {
+      "name": "Texas A&M",
+      "institutions": [
+        "Texas A&M University-College Station"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-228723-83252150a1d3.webp",
+      "sha256": "83252150a1d3010b0358ea3fe6d2b396a10befe9797726b774f61649b0327b89",
+      "sources": [
+        {
+          "institution": "Texas A&M University",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/f/f7/Texas_A%26M_University_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/Texas_A%26M_University",
+          "sha256": "57328ebe2b08c055470097a4cfa16c3ec1c4bfb6fba6400fe71f7b80f8edbad5"
+        }
+      ]
+    },
+    "US-COLLEGE-134130": {
+      "name": "University of Florida",
+      "institutions": [
+        "University of Florida"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-134130-94755299ea03.webp",
+      "sha256": "94755299ea0372d7284bfefc73d12adb72f00578365b8f4a3b3f6bd537475ce6",
+      "sources": [
+        {
+          "institution": "University of Florida",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/6/6d/University_of_Florida_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Florida",
+          "sha256": "ca1bee11fcac9db98f79077d2e10e54d77af5771d69cad1ea6c38b923841c09d"
+        }
+      ]
+    },
+    "US-COLLEGE-139959": {
+      "name": "University of Georgia",
+      "institutions": [
+        "University of Georgia"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-139959-451b25a680c3.webp",
+      "sha256": "451b25a680c36d62f9aec49c5a40462eb032b900db994a50f22bcf9152c06e16",
+      "sources": [
+        {
+          "institution": "University of Georgia",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/University_of_Georgia_seal_1801.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Georgia",
+          "sha256": "978e5b814351b7f1b4cf955a3af0858dba49e3ef3cd1e11421a42302a5790a0c"
+        }
+      ]
+    },
+    "US-COLLEGE-217882": {
+      "name": "Clemson",
+      "institutions": [
+        "Clemson University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-217882-1e03234242ad.webp",
+      "sha256": "1e03234242add796530dc5086e353d39105021da6e88368828df3852c234f46d",
+      "sources": [
+        {
+          "institution": "Clemson University",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/9/9c/Clemson_University_Seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/Clemson_University",
+          "sha256": "0e2c7e765fa45b047fb30c0570f966e4396b067194e01a69c7ec42a34d7e6b3d"
+        }
+      ]
+    },
+    "US-COLLEGE-100751": {
+      "name": "University of Alabama",
+      "institutions": [
+        "The University of Alabama"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-100751-d8ca85ff95fa.webp",
+      "sha256": "d8ca85ff95fa827a64e68a7b675bda76233996764f86f264b8bea72905c80a7f",
+      "sources": [
+        {
+          "institution": "University of Alabama",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/9/9a/University_of_Alabama_Seal.png",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Alabama",
+          "sha256": "11374f487ae406ba79a8a5c14551146a291b789d4c6386203024da4a097bf433"
+        }
+      ]
+    },
+    "US-COLLEGE-100858": {
+      "name": "Auburn",
+      "institutions": [
+        "Auburn University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-100858-1191fe4dfe61.webp",
+      "sha256": "1191fe4dfe614d05721d38c2eea54f7d667c0b81b6076a222959c5fcd2be7fc2",
+      "sources": [
+        {
+          "institution": "Auburn University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/7f/Auburn_University_seal.svg/120px-Auburn_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Auburn_University",
+          "sha256": "aa81081c4eee4cead6ce64c04679354a6d14635cbbebf487391818885424fae7"
+        }
+      ]
+    },
+    "US-COLLEGE-176017": {
+      "name": "Ole Miss",
+      "institutions": [
+        "University of Mississippi"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-176017-9a0e9123e825.webp",
+      "sha256": "9a0e9123e82533a14bab9e6696aeffe60e91d99bf6376601cf30283dd280badb",
+      "sources": [
+        {
+          "institution": "University of Mississippi",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/b/b5/University_of_Mississippi_seal.svg/250px-University_of_Mississippi_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Mississippi",
+          "sha256": "3b722d274afb21989ec9fadb194497d7f7edfbf493f0fda359bb4166bd932a90"
+        }
+      ]
+    },
+    "US-COLLEGE-233921": {
+      "name": "Virginia Tech",
+      "institutions": [
+        "Virginia Polytechnic Institute and State University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-233921-f0e745cc2215.webp",
+      "sha256": "f0e745cc22155c9652377f1db4838bfc37d769d88b8b4aefac6c2f549c4388dc",
+      "sources": [
+        {
+          "institution": "Virginia Tech",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/5/54/Virginia_Tech_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/Virginia_Tech",
+          "sha256": "90a93e0b3dab3d2ef8d9b69a556d0ba13eb363a24ca3298188f39f0f35abd11d"
+        }
+      ]
+    },
+    "US-COLLEGE-221759": {
+      "name": "University of Tennessee",
+      "institutions": [
+        "The University of Tennessee-Knoxville"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-221759-af8fcaa0d249.webp",
+      "sha256": "af8fcaa0d249dcccad79ecaaa6e742d3974958c2e8616444d4d8d40f9b9107a2",
+      "sources": [
+        {
+          "institution": "University of Tennessee",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/55/Seal_of_the_University_of_Tennessee.svg/330px-Seal_of_the_University_of_Tennessee.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Tennessee",
+          "sha256": "f21c3362139c9c95473ca3e4977b1e449d640f6e3bfa779f50c5e55f357bae27"
+        }
+      ]
+    },
+    "US-COLLEGE-157085": {
+      "name": "University of Kentucky",
+      "institutions": [
+        "University of Kentucky"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-157085-b62f298d1a38.webp",
+      "sha256": "b62f298d1a38f4909ecb9bfcfa4b671bbbf6a23b38119037c3e36ae871c09de6",
+      "sources": [
+        {
+          "institution": "University of Kentucky",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/2/2d/University_of_Kentucky_seal.svg/250px-University_of_Kentucky_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Kentucky",
+          "sha256": "e2088a46756603070f8c79a0d9d77281d80bc12ca691c617d88c371a2e59c612"
+        }
+      ]
+    },
+    "US-COLLEGE-106397": {
+      "name": "University of Arkansas",
+      "institutions": [
+        "University of Arkansas"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-106397-1cac2b98b5a1.webp",
+      "sha256": "1cac2b98b5a103260c46ddbd9c0239002502b2e53e2659bfd53c7ff4170eb1ad",
+      "sources": [
+        {
+          "institution": "University of Arkansas",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d1/University_of_Arkansas_seal.svg/250px-University_of_Arkansas_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Arkansas",
+          "sha256": "ee6a51d1550416cc722ed68bdfc7de871c2778c63444f16dcefb8fbfbb712c46"
+        }
+      ]
+    },
+    "US-COLLEGE-207500": {
+      "name": "University of Oklahoma",
+      "institutions": [
+        "University of Oklahoma-Norman Campus"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-207500-ecb7cd063bf8.webp",
+      "sha256": "ecb7cd063bf8e97c6f8a5b939a3cf7d80af99bf6eb14e2ba1faa26dbe03c99da",
+      "sources": [
+        {
+          "institution": "University of Oklahoma",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/56/University_of_Oklahoma_seal.svg/250px-University_of_Oklahoma_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
+          "sha256": "2627d9e5d40998fc65d6e87a1362f7135de8505fc2bb4bb6e825c589fb681ded"
+        }
+      ]
+    },
+    "US-COLLEGE-207388": {
+      "name": "Oklahoma State",
+      "institutions": [
+        "Oklahoma State University-Main Campus"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-207388-fb2456610488.webp",
+      "sha256": "fb245661048856f6c4130cae8b06c375bc716e62a39a46515bcd500b4c2ef873",
+      "sources": [
+        {
+          "institution": "Oklahoma State University–Stillwater",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/f/f4/Oklahoma_State_University_seal.svg/250px-Oklahoma_State_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Oklahoma_State_University%E2%80%93Stillwater",
+          "sha256": "11fdd4b933ef16cb82808f702091a8e6270dff0e7b2cbeb0a17cec11aa0ca534"
+        }
+      ]
+    },
+    "US-COLLEGE-155317": {
+      "name": "University of Kansas",
+      "institutions": [
+        "University of Kansas"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-155317-8394659a92ce.webp",
+      "sha256": "8394659a92cec68568f7a1f2a80b237d635b38d11573274bf8a9a121c1175a82",
+      "sources": [
+        {
+          "institution": "University of Kansas",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0b/University_of_Kansas_seal.svg/250px-University_of_Kansas_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Kansas",
+          "sha256": "82e0b0cc9c4805067b6e74289d7fe17549fef46c8363b449fdd4abcf39b65d44"
+        }
+      ]
+    },
+    "US-COLLEGE-155399": {
+      "name": "Kansas State",
+      "institutions": [
+        "Kansas State University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-155399-e6a1486f1395.webp",
+      "sha256": "e6a1486f1395d7b2cab010aaefc8353697a4dae9656e4daf42bdc35a565d664d",
+      "sources": [
+        {
+          "institution": "Kansas State University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/7/74/Kansas_State_University_seal.svg/250px-Kansas_State_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Kansas_State_University",
+          "sha256": "d00aa10bad1c9357ba809a615ab81d67bb32dca29e947a698704adc41db506c4"
+        }
+      ]
+    },
+    "US-COLLEGE-178396": {
+      "name": "University of Missouri",
+      "institutions": [
+        "University of Missouri-Columbia"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-178396-be0b893c5750.webp",
+      "sha256": "be0b893c575077ec9b02c218480e7d817d90e2588e5c8322e77741428045613c",
+      "sources": [
+        {
+          "institution": "University of Missouri",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/b/b8/University_of_Missouri_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Missouri",
+          "sha256": "bebcfa33217ea21fe01dfd7007c130b2c390347768456c916d03cadf7162a0b1"
+        }
+      ]
+    },
+    "US-COLLEGE-151351": {
+      "name": "Indiana University",
+      "institutions": [
+        "Indiana University-Bloomington"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-151351-feb2d894b267.webp",
+      "sha256": "feb2d894b2676a442cc1080654f132905e0413f3ea0282e62b1fc175da475e80",
+      "sources": [
+        {
+          "institution": "Indiana University Bloomington",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/5/5d/Indiana_University_seal.svg/250px-Indiana_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Indiana_University_Bloomington",
+          "sha256": "b63b56ede34c77592d50330451f0558a21b66841cef7eee7bd5f95940407f302"
+        }
+      ]
+    },
+    "US-COLLEGE-243780": {
+      "name": "Purdue",
+      "institutions": [
+        "Purdue University-Main Campus"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-243780-4a4e44fb8f26.webp",
+      "sha256": "4a4e44fb8f26e58347479fecc9958502ce71e7511165f885860e84b9b954dc58",
+      "sources": [
+        {
+          "institution": "Purdue University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/6/61/Purdue_University_seal.svg/120px-Purdue_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Purdue_University",
+          "sha256": "1e6151306700dcc54a97bfe67f1c3f28d80722e9e4cf481da8e7bbdf431c764d"
+        }
+      ]
+    },
+    "US-COLLEGE-152080": {
+      "name": "Notre Dame",
+      "institutions": [
+        "University of Notre Dame"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-152080-e61747270259.webp",
+      "sha256": "e617472702595d0f670449b5d41691cd12236ff63f0e34317e7212fd8199911d",
+      "sources": [
+        {
+          "institution": "University of Notre Dame",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/University_of_Notre_Dame_seal_%282%29.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
+          "sha256": "1817da5cb89a5f5d00275566e4e3e0b956f37df5775e75ab8aecafa28410ae9d"
+        }
+      ]
+    },
+    "US-COLLEGE-240444": {
+      "name": "University of Wisconsin",
+      "institutions": [
+        "University of Wisconsin-Madison"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-240444-dad7d82a871d.webp",
+      "sha256": "dad7d82a871d15b01037b96eee62c819415e415765d55fc5e86dfd5bc4d0b82b",
+      "sources": [
+        {
+          "institution": "University of Wisconsin–Madison",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Seal_of_the_University_of_Wisconsin.svg/250px-Seal_of_the_University_of_Wisconsin.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison",
+          "sha256": "a8b4d31eb30484327ca465b62530865879562802466b2ca963c3e511ce276ab4"
+        }
+      ]
+    },
+    "US-COLLEGE-153658": {
+      "name": "University of Iowa",
+      "institutions": [
+        "University of Iowa"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-153658-7d56e73425ad.webp",
+      "sha256": "7d56e73425ad641e16bd5b66f1258dfdbdbe52311f9869ad66fb9f3221d8cf9e",
+      "sources": [
+        {
+          "institution": "University of Iowa",
+          "kind": "seal",
+          "url": "https://upload.wikimedia.org/wikipedia/en/4/49/University_of_Iowa_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Iowa",
+          "sha256": "4d1f6d637fe244c76959bc3efd31d24fa74bf382d6ad029e271ea2772454a1ef"
+        }
+      ]
+    },
+    "US-COLLEGE-153603": {
+      "name": "Iowa State",
+      "institutions": [
+        "Iowa State University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-153603-fbf324623f78.webp",
+      "sha256": "fbf324623f783993176576607aacb8a2356a09dbf52ed813528788f77712e59b",
+      "sources": [
+        {
+          "institution": "Iowa State University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/8/80/Iowa_State_University_seal.svg/250px-Iowa_State_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Iowa_State_University",
+          "sha256": "9327e4cde66cd31de8b46a8d7c91047691f1c56700b2574fe307463b8e64d86d"
+        }
+      ]
+    },
+    "US-COLLEGE-126614": {
+      "name": "University of Colorado",
+      "institutions": [
+        "University of Colorado Boulder"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-126614-a80423a54299.webp",
+      "sha256": "a80423a5429917ea485ac6af958c009081c3baa55c6a99329d909e607867ee22",
+      "sources": [
+        {
+          "institution": "University of Colorado Boulder",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Seal_of_the_University_of_Colorado.svg/250px-Seal_of_the_University_of_Colorado.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Colorado_Boulder",
+          "sha256": "4719cfbc3a644c6d9c5fba96e9a9cca489c2badd63495c0767a8a269dc0f4381"
+        }
+      ]
+    },
+    "US-COLLEGE-209551": {
+      "name": "University of Oregon",
+      "institutions": [
+        "University of Oregon"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-209551-d649ec40eed7.webp",
+      "sha256": "d649ec40eed745d6f607070689a7336d599ffaa0bd5c47e4d551fcd7407ac0bc",
+      "sources": [
+        {
+          "institution": "University of Oregon",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Seal_of_the_University_of_Oregon.svg/250px-Seal_of_the_University_of_Oregon.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Oregon",
+          "sha256": "ef23bc9c48992c94437358e0a43f76f23c1c175cbbedb643f301938a406346ad"
+        }
+      ]
+    },
+    "US-COLLEGE-209542": {
+      "name": "Oregon State",
+      "institutions": [
+        "Oregon State University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-209542-88f153d681a7.webp",
+      "sha256": "88f153d681a7bb8f092e5419f6de1b9a25124cecd4607bc273cb8e6085b774c6",
+      "sources": [
+        {
+          "institution": "Oregon State University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/13/Oregon_State_University_seal.svg/250px-Oregon_State_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Oregon_State_University",
+          "sha256": "7111c3b15a7be1b2b755b60e6a80c8fa793d533a1eef06cfb81556fad20648d3"
+        }
+      ]
+    },
+    "US-COLLEGE-236939": {
+      "name": "Washington State",
+      "institutions": [
+        "Washington State University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-236939-403f1c0da44b.webp",
+      "sha256": "403f1c0da44beb7e7df92f636084b91d2af41c83a91cdca1f12592a42185b600",
+      "sources": [
+        {
+          "institution": "Washington State University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/0e/Washington_State_University_seal.svg/250px-Washington_State_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Washington_State_University",
+          "sha256": "2310a52f35eee99463eaa91f1c7112c233643391f9ca0156a4cc0ef9e2fbe320"
+        }
+      ]
+    },
+    "US-COLLEGE-110635": {
+      "name": "UC Berkeley",
+      "institutions": [
+        "University of California-Berkeley"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-110635-3267d5baf134.webp",
+      "sha256": "3267d5baf134fbf0d03eb27781894775fa47a1b8832fea01461f37f123c62d53",
+      "sources": [
+        {
+          "institution": "University of California, Berkeley",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/960px-Seal_of_University_of_California%2C_Berkeley.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley",
+          "sha256": "de8d21d6817c9f49af8025a309fbb016d40d1caaba6a6aecc0d22cf2965aec5b"
+        }
+      ]
+    },
+    "US-COLLEGE-243744": {
+      "name": "Stanford",
+      "institutions": [
+        "Stanford University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-243744-151c37ea3627.webp",
+      "sha256": "151c37ea36276e31ca2d202d79e0fe8137e30da9e83a126bbcd437b70875b352",
+      "sources": [
+        {
+          "institution": "Stanford University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/250px-Seal_of_Leland_Stanford_Junior_University.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Stanford_University",
+          "sha256": "4527bf7e131c1c297610c5d758d3804a57d2bfd28b5825787c9f65b82457099e"
+        }
+      ]
+    },
+    "US-COLLEGE-166027": {
+      "name": "Harvard & MIT",
+      "institutions": [
+        "Harvard University",
+        "Massachusetts Institute of Technology"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-166027-4dcf083c86af.svg",
+      "sha256": "4dcf083c86afac401ccda6e336afbb4a1c8b69bd73ead6decd5c2cf533b89e3e",
+      "sources": [
+        {
+          "institution": "Harvard University",
+          "kind": "shield",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Harvard_University_shield.svg",
+          "sourcePage": "https://commons.wikimedia.org/wiki/File:Harvard_University_shield.svg",
+          "sha256": "f5f57fa3f2a93113a0991d9b177edf22ebceacc9d142fe59d14ec21a249396dc"
+        },
+        {
+          "institution": "Massachusetts Institute of Technology",
+          "kind": "wordmark",
+          "url": "https://www.mit.edu/",
+          "sourcePage": "https://brand.mit.edu/logos-marks/mit-logo",
+          "sha256": "d945b6cbc309ac0d19b8837c4a066651ad037ab73f9d754d1c02a2a10a58cb60"
+        }
+      ]
+    },
+    "US-COLLEGE-186131": {
+      "name": "Princeton",
+      "institutions": [
+        "Princeton University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-186131-2cd623b6b386.webp",
+      "sha256": "2cd623b6b386b7350cb1f1f43fd2d7c7e5a577179c0a9a21e110488e4f6905dc",
+      "sources": [
+        {
+          "institution": "Princeton University",
+          "kind": "shield",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Princeton_seal.svg",
+          "sourcePage": "https://en.wikipedia.org/wiki/Princeton_University",
+          "sha256": "db5be7f3d4db80fae1e78a03cf4a39b592ea9d3d7782de32ebc773346cc6987b"
+        }
+      ]
+    },
+    "US-COLLEGE-130794": {
+      "name": "Yale",
+      "institutions": [
+        "Yale University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-130794-a715bb92d876.webp",
+      "sha256": "a715bb92d87674492896c8958c0e00d051b96ea9ec3626383cfe0b7904bdb167",
+      "sources": [
+        {
+          "institution": "Yale University",
+          "kind": "shield",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Yale_University_Shield_1.svg/250px-Yale_University_Shield_1.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Yale_University",
+          "sha256": "131726fee3a19e195a7c52bed2e7efed04d365b73b5654bcc5ce6b7a121a9413"
+        }
+      ]
+    },
+    "US-COLLEGE-190415": {
+      "name": "Cornell",
+      "institutions": [
+        "Cornell University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-190415-ba1cef32a5d3.webp",
+      "sha256": "ba1cef32a5d3766af34bc1e981ee457582002e875c06b9e153ab7b61b0a3cf81",
+      "sources": [
+        {
+          "institution": "Cornell University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Cornell_University_seal.svg/250px-Cornell_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Cornell_University",
+          "sha256": "6c91d7d014f1719072dbd8af05677c08955bca4ad25f2a818b6b1a6a843f1161"
+        }
+      ]
+    },
+    "US-COLLEGE-182670": {
+      "name": "Dartmouth",
+      "institutions": [
+        "Dartmouth College"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-182670-069b21129452.webp",
+      "sha256": "069b2112945272ac2efa59360f1acfb792dd9f8dfc7bbc23e5bce584a4638280",
+      "sources": [
+        {
+          "institution": "Dartmouth College",
+          "kind": "shield",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/e/e4/Dartmouth_College_shield.svg/250px-Dartmouth_College_shield.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Dartmouth_College",
+          "sha256": "615c9b77fbc1f4428f8f3947a1061efa76fb905852a765feab09ba5c49e9f962"
+        }
+      ]
+    },
+    "US-COLLEGE-198419": {
+      "name": "Duke",
+      "institutions": [
+        "Duke University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-198419-9fa9e1159178.webp",
+      "sha256": "9fa9e11591787dc14da7ab1afca8ea2b9f4b77af692aa7400c2b634d3eed07e3",
+      "sources": [
+        {
+          "institution": "Duke University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/c/ce/Duke_University_seal.svg/250px-Duke_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Duke_University",
+          "sha256": "28cb699fc89e82bdf0a50f33e89555f3a835498f27a0d1a586653a95bfd9c65f"
+        }
+      ]
+    },
+    "US-COLLEGE-199120": {
+      "name": "UNC Chapel Hill",
+      "institutions": [
+        "University of North Carolina at Chapel Hill"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-199120-290f121d6315.webp",
+      "sha256": "290f121d631560257f0e377528a47b82a41fc0d3e9a2c3cb94c9d14d796df4cd",
+      "sources": [
+        {
+          "institution": "University of North Carolina at Chapel Hill",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/120px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_North_Carolina_at_Chapel_Hill",
+          "sha256": "0320b541943947928ae757f7b6a62a367967e3948840a6b970200b3766e1f3f1"
+        }
+      ]
+    },
+    "US-COLLEGE-234076": {
+      "name": "University of Virginia",
+      "institutions": [
+        "University of Virginia-Main Campus"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-234076-ccdd03e5cbe1.webp",
+      "sha256": "ccdd03e5cbe1e63b547956bec219e47ff3f2924860def52978eb781ad6a6e798",
+      "sources": [
+        {
+          "institution": "University of Virginia",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/University_of_Virginia_seal.svg/250px-University_of_Virginia_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Virginia",
+          "sha256": "70efdfc1fc58fea8b65b52c6da59842cb63d6e72f4582c2a2b924e115e5bc1fc"
+        }
+      ]
+    },
+    "US-COLLEGE-147767": {
+      "name": "Northwestern",
+      "institutions": [
+        "Northwestern University"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-147767-11b0167d2281.webp",
+      "sha256": "11b0167d22810ef48f57e1c6cc7607c7cc63925155898e1ad1dce2e9e9c31b2f",
+      "sources": [
+        {
+          "institution": "Northwestern University",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Northwestern_University_seal.svg/250px-Northwestern_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Northwestern_University",
+          "sha256": "9d1eb6f6710bbc74976d8be1ad4894d406a2506486b4d3627e333292269eea0e"
+        }
+      ]
+    },
+    "US-COLLEGE-145637": {
+      "name": "University of Illinois",
+      "institutions": [
+        "University of Illinois Urbana-Champaign"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-145637-efc6a906ed13.webp",
+      "sha256": "efc6a906ed135faa6604ea1b6647c7746b77ccf4c2efce4f3be3f0268b9cdd2b",
+      "sources": [
+        {
+          "institution": "University of Illinois Urbana-Champaign",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/University_of_Illinois_seal.svg/250px-University_of_Illinois_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign",
+          "sha256": "b44200199f3b4382ca454174f927c21b5e56d3236ab2dc925170bded8d1ce9e4"
+        }
+      ]
+    },
+    "US-COLLEGE-181464": {
+      "name": "University of Nebraska",
+      "institutions": [
+        "University of Nebraska-Lincoln"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-181464-a9ca55ca0315.webp",
+      "sha256": "a9ca55ca0315c9466c716fd34c919d259b48ec5d8064f929f55a3e43e55a102c",
+      "sources": [
+        {
+          "institution": "University of Nebraska-Lincoln",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Seal_of_the_University_of_Nebraska.svg/250px-Seal_of_the_University_of_Nebraska.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/University_of_Nebraska%E2%80%93Lincoln",
+          "sha256": "6bd95848382d2cb74422d11a9459b2c83710af61cf761bdb21037dbc71963123"
+        }
+      ]
+    },
+    "US-COLLEGE-204857": {
+      "name": "Ohio University",
+      "institutions": [
+        "Ohio University-Main Campus"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-204857-8142e4e086a7.webp",
+      "sha256": "8142e4e086a7157d5790ef68581737d2edaac8ede656c2d174ee41cb962a3371",
+      "sources": [
+        {
+          "institution": "Ohio University-Main Campus",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/3/39/Ohio_University_seal.svg/250px-Ohio_University_seal.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Ohio_University",
+          "sha256": "93c325ee3c32dec66fcbc731dbdc2eb1875595ce06adfc3c3134d896f1af7a26"
+        }
+      ]
+    },
+    "US-COLLEGE-204024": {
+      "name": "Miami University",
+      "institutions": [
+        "Miami University-Oxford"
+      ],
+      "crest": "vendor/us-colleges/US-COLLEGE-204024-23558151678b.webp",
+      "sha256": "23558151678b399bba97d1c00bf0494c6b4b95efcaf2d805e1acc178e69bde67",
+      "sources": [
+        {
+          "institution": "Miami University-Oxford",
+          "kind": "seal",
+          "url": "https://thumb.wikimedia.org/wikipedia/en/thumb/1/16/Seal_of_Miami_University.png/250px-Seal_of_Miami_University.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+          "sourcePage": "https://en.wikipedia.org/wiki/Miami_University",
+          "sha256": "8de1ae8f40ddf71cf0b0ed6f1d98f0aed473e714e82eaaab7c8b12d694054783"
+        }
+      ]
+    }
+  }
+}
