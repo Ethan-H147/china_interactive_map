@@ -1,0 +1,1184 @@
+{
+  "source": "scripts/boundary-sources/brazil-bolivia/manifest.json",
+  "date": "2026-10-29",
+  "scope": "San Matías / Uberaba section only; exact existing shared endpoints and other international junctions retained.",
+  "referenceEndpoints": [
+    [
+      -58.478636,
+      -16.814186
+    ],
+    [
+      -57.741023,
+      -17.694876
+    ]
+  ],
+  "waterRelation": 456940,
+  "changedBolivia": [
+    "BO-M-071201",
+    "BO-P-0712",
+    "BO-D-07"
+  ],
+  "changedBrazil": {
+    "brazil-first.bin": [
+      "BR-50",
+      "BR-51"
+    ],
+    "brazil-ddd.bin": [
+      "BR-DDD-67",
+      "BR-DDD-65"
+    ],
+    "brazil-local/BR-50.bin": [
+      "BR-5003207"
+    ],
+    "brazil-local/BR-51.bin": [
+      "BR-5102504",
+      "BR-5106505"
+    ]
+  },
+  "preservedFeatures": {
+    "dist/data/europe/bolivia/first.bin": {
+      "BO-D-01": "a3c82fc3120438374cc7833aed64fe152bd768baf4716a49ae3f39ef08725211",
+      "BO-D-02": "d5f944d63f4206267feba17e271ad5ca0a22821a32afaace0bda3e46e72ec3b7",
+      "BO-D-03": "5783fd36a278852a11cfe01661a8bdc4f6f0951fd4309d934f0afc435b063f7d",
+      "BO-D-04": "57e83cc6ed6703034b397f8e911f6e4875b51439cb429aade7c5806354e71877",
+      "BO-D-05": "db6cc3fe338e80c49dd6e22631776efe4cd09d7591bfe5d762eec7e8f60994c4",
+      "BO-D-06": "f3c5af459e877ff793fabe9aa43be4f17b10319aabcd13bb2879504431985105",
+      "BO-D-08": "d401ba5e360f0ebfc36dedbcb26c7397b2a12856338857598e64e6b66b9d3f13",
+      "BO-D-09": "0049bf9d59325e74d682aa1830e8607bb65cbf92a8e19a1feb2c3a9d84724075"
+    },
+    "dist/data/europe/bolivia/second/BO-D-01.bin": {
+      "BO-P-0101": "cab8ae3be179400999b89f9e9d1d7eae3499b08ec145b9aefde1258677c1fbdd",
+      "BO-P-0102": "2fc8a1ef5e16accb765590653bf95d354a62399b34d787a30b5addeb21c54e8e",
+      "BO-P-0103": "4897e4e9c1a1001edcbb7ce6f46c4dec00d02fc62b447406f38fd0283b97e110",
+      "BO-P-0104": "6196f0ef9293cceff0f78be55430b3cd2743feaffeb99e64e5e5bc5174b55fb9",
+      "BO-P-0105": "bc9089db70531a2f9e0a637f4f9073ffb1ee10df305b9a7bcb5a712288c07be0",
+      "BO-P-0106": "a390f4a2ca61dad8ae2f031e0633ad1b38253502d924a8f0b8d5dfd3daef688d",
+      "BO-P-0107": "80af06ce68a1d9c261919c407d214d34ce187405915867e6842f068c84a24ba0",
+      "BO-P-0108": "cb4ac305f5cfa9986f112f441becab3c5685132fe16299d3fe362ad7dd996007",
+      "BO-P-0109": "458c207de71c543857eba45afe033188071f604bc45be999402ed50f4c5b34e7",
+      "BO-P-0110": "4451da0c5279b9400e13d7c85056ad9888693172001a0e70194d218fa0a521e3"
+    },
+    "dist/data/europe/bolivia/second/BO-D-02.bin": {
+      "BO-P-0201": "4502eb230d3100184c419dadb08b3a48cfa832981828458a5db3e6cde37d53b2",
+      "BO-P-0202": "e4c6e6e6e47594e0805600306077fa39a5ba10777a460d020a72b6636d614063",
+      "BO-P-0203": "806ebb033378df422a82c2d0620a32b1648350277a943aba67e3d24381aae6fc",
+      "BO-P-0204": "2ef1d3ffd9f7d949c40810bc66de30d901771e91cfeb465161005f7b5d095d99",
+      "BO-P-0205": "82060b1d049f54f5af7d465169fa0dda2f3b819269bf38cd165c3dec087eea7b",
+      "BO-P-0206": "43ee710db9b49d7eb679c3b56aa1fe445156d8829d62d46bcc58714f6fe75a98",
+      "BO-P-0207": "7de8ef884304c53ed1189386705b83240605bc8e3ea18f804159d5a570bea76d",
+      "BO-P-0208": "b7cdf6e8ca62af665262f98b05ef7b0e82fab9c0516b398fdb3d7357950bff22",
+      "BO-P-0209": "d5f1558cec4f69441fc321a083f3be777b5ecda4531058c0b060198374715805",
+      "BO-P-0210": "f89858c7853dfa4d808f0c4770134203708bb6e47da7d4067988c86d1808dc3f",
+      "BO-P-0211": "b84d52b1c7675d89492b48731f554bfc743800de41437f380dd9844cadcbcbfb",
+      "BO-P-0212": "fd771b1c48af0621c7fb37b8621f4350e44a496f7097b88248a704e7d1f94885",
+      "BO-P-0213": "8682294d19b9de4e977096d69d970f779b42fbaa76bfc31ea0d27a11ece2c39f",
+      "BO-P-0214": "074c242ab42c6a92dd9612e0db670fea45dbc7b559031b086eba123ec6b4317a",
+      "BO-P-0215": "a49d4aac830a65ae2051f67f26d73a9cf1f28ac538756851300e8facfdf8d209",
+      "BO-P-0216": "476d425470b32dd6c6d63f29d5257999440a188c3676b7283b4b87567c8734e3",
+      "BO-P-0217": "9823399bf0b923933d421d015b6603d83e3e5d88d8472d0027293a241204847a",
+      "BO-P-0218": "69716c4ac2814f861df8bbb2c5b590cf45890a6efefcf38d44d2e62d476de627",
+      "BO-P-0219": "2810b337da85137e64f4e9f112e68b9e0be54d0b4ba09347fe071dbe2a6a047b",
+      "BO-P-0220": "9b5619128c4779c14601df22d623869361216cdfb7d392f27e972a0f515e3642"
+    },
+    "dist/data/europe/bolivia/second/BO-D-03.bin": {
+      "BO-P-0301": "ac34a7d22a36391f4a1d1c44e5f402ec98d04057fd08632bcb1052ef008b55d4",
+      "BO-P-0302": "e52abc789eeca5b6b39a57143425702d7b6a183dd188b735fa128f30f34cb6df",
+      "BO-P-0303": "d1019e362fb797b6de1e81c843a4ca912be4f510cad9fe664fb858252c789e71",
+      "BO-P-0304": "03a48173b5a0bafe1b6d8a96051c9ae59271b9a0f698c38617b13ab2ea76edcf",
+      "BO-P-0305": "99654ac0a7e623982d3baac5a2f608ad2cb02dba3b2740fd1af49ecaf6cb7015",
+      "BO-P-0306": "20552daebfa51a75937a294042befe9bf0b92f3b4bad7f091c6cbc2f9453539f",
+      "BO-P-0307": "557a7fb492bf87628026e5bdb99e97bfad36a699e7aa3840a0f9f4664405ea97",
+      "BO-P-0308": "8a362dc49b3121909462ef38f81358f73c8f167b990471c80a19ac32eaeb7f53",
+      "BO-P-0309": "2ba1a34f999eac752192bf88820ccab1ac40f9586ac5f17ca6422cacdc0cad7a",
+      "BO-P-0310": "cab8df8093a6827ec8caeaa17befef3e4a13278ed71ece92e6c27b4a81242c1b",
+      "BO-P-0311": "a46eb55d9e80b8a9f4becb166aeba6d272e762987b45e8bbd59b89533bab58b5",
+      "BO-P-0312": "8a0f9be2159be4148daac03a61764f47b723af016908c8d4bc1b5cc3b2a9d63c",
+      "BO-P-0313": "cec2c27bd2b672d230a97eea2e22e2fc9e42191127e62547e897f3e6666926fc",
+      "BO-P-0314": "9c75a868877eaa5d71c54f4acf0e1e2aae46a4bed2c9526061ccc53c39c92b50",
+      "BO-P-0315": "2014d331a077fb3f6f802bb60675e2fe9a48cf7cdc88e46fecb37b4833b85feb",
+      "BO-P-0316": "f8f74fa06c1c183482c03598ce41a834a3d6d263220606610ccc0ddaff9a538a"
+    },
+    "dist/data/europe/bolivia/second/BO-D-04.bin": {
+      "BO-P-0401": "a2f77b2c74bcb8bbf35313c4e6f4da294879ed0f8cd7d6a279f1e34004b09d44",
+      "BO-P-0402": "1642c9b7024c9a076fd86413d474eeaa2867e74086712d36bc8a28feeb6be1e8",
+      "BO-P-0403": "4c1ea9df2682fb7032b01ad710928cc774d38b86660aaef0d452b22e07b5afe4",
+      "BO-P-0404": "a3fe51125c38c7e8acfc92c7782c751cb49bb03b3ecbfb5e7ba7d6db9626ea11",
+      "BO-P-0405": "3e51c866d13c1611c5cf8d1ad33a99864c9bf5eb6a60cf078fb171f8956c4f6e",
+      "BO-P-0406": "98771bdcfc941a508098e2afb3e4059339fb20718ea010b719e3e36bd97bd09b",
+      "BO-P-0407": "68a42f2bd52ea3e66cb6da704d6cd6e96905a7110f63e5290715912342de63cd",
+      "BO-P-0408": "151d8d359a8db50098cdb5945e8e2a212f23649fe2f607dc34b2d5143500f60a",
+      "BO-P-0409": "a722dc8483cba7af69d8acb5c75ecd33d23558cc51b5eb04e3296ac3699ab4e2",
+      "BO-P-0410": "b160f4b3dc4fac966c53c2f408496c8b3bc90531b7d848936bc61582df2bd6c9",
+      "BO-P-0411": "12a39878b623ff6f1ebe9b5e655f57cb0d645a5b8edd4dd5c366d0af2d0254bc",
+      "BO-P-0412": "596a35e701ee5de0815d77e4f6404eb4c679a531155d4cf74dd3e3e6cec59515",
+      "BO-P-0413": "2f8785f432d85148576be3a0fd8848bec5caeb29a85444676b47459f99f3bb98",
+      "BO-P-0414": "64fc39ec7e3f35cd920cf45cbc0bb1f7356633d3333e5aca34892ccfda80256e",
+      "BO-P-0415": "12354a87463cb8a9e9de9938714b799147b134fc82cd04f40157e0d4c6600f4c",
+      "BO-P-0416": "d8c71eb241c2df2885af472d3838d4039236b4257c0b786607cbf22f24bff83d"
+    },
+    "dist/data/europe/bolivia/second/BO-D-05.bin": {
+      "BO-P-0501": "7caaf75afa4e78cb3531f65e4d2a3d2e65f91992c5a94d503a4f4ceda554bcc4",
+      "BO-P-0502": "600117d9c311d044657ea1f812a6b2784e8eeafc3ed11f14185cd413b8b49b8d",
+      "BO-P-0503": "967dc2028427b082f2a9e8b2fa717c264f92bcb25e30154af0b90f62d29cc1ce",
+      "BO-P-0504": "5e2aab6a99d8f8dbc68123a00494ca7201145520bac3b73bc46703be24f1e59b",
+      "BO-P-0505": "448dee7667d530f5d1fe84a5bef857fad1b86aaa5408107515a7699a7d019d8b",
+      "BO-P-0506": "96e496b0784ad8370ce75d241a0c1122e6df5b6ecc1e7490ba405cef40c6d231",
+      "BO-P-0507": "932a416843645e7d4ff528f2af5a84b543d59fe080edc2dabb53c98ed8a0f129",
+      "BO-P-0508": "180ab02c418579f9fd552e9c23a6a48471bf237ed285e2fe1fc68afe66cdf1b3",
+      "BO-P-0509": "da52f8f7240b81116d3563b4d844af8441abe99f64fc4b88b8e497afc8f94ef2",
+      "BO-P-0510": "2e8fb7ff7e1855d9e03f39286ac54b234b11b7ada3d6bc182fae346bdeb93fb0",
+      "BO-P-0511": "74c411a2daaf3c3ffa6875766318aae9f4e95b8e797bcaaa5e0a2e00d585d849",
+      "BO-P-0512": "bfd89b4a4cc21384f28f77802b3b63bf6da4dd23f4ff3feab2a7136309843113",
+      "BO-P-0513": "d7adeed5b1bb9ff474a5425e25b9818990a80bdd8b4500c4295dc91b151d8003",
+      "BO-P-0514": "11b9169b6795904d404c19a8f4fd08c1149c334d1815cf6daabbb3af4bff3aea",
+      "BO-P-0515": "8e10b615ba939d91480acb2a6b44cf7db9e04977c853f5a57e5d16e64d9eff06",
+      "BO-P-0516": "4b0c3d15dda6f9efb58bd70c2bee757cfa24a7586c56c9075cb8b2380903573e"
+    },
+    "dist/data/europe/bolivia/second/BO-D-06.bin": {
+      "BO-P-0601": "9ecfbaacf94aa26a8af78c6b1cc2934c481136e17552dad047e108c54adf24b7",
+      "BO-P-0602": "ce7f270ea2c5300d688b4bbe6f02a5b53e4735ffb4acc360b94ec5dc69f8259a",
+      "BO-P-0603": "02f87c9118e043dd3854d01dd635e6237f3e767a2b2c73fb163a037a6acae833",
+      "BO-P-0604": "b19e936cc1c46d1d441edd7096ea4efe5d75f215dcd0fa4758777d42919e73da",
+      "BO-P-0605": "48d04834cd05609475124f03192f9052f28533b315d776c90c4e8daf0b1efefa",
+      "BO-P-0606": "26ee2aa1a32615a3bf31ad114804902ab344c22f1eaa9e1145a73777606a9a8e"
+    },
+    "dist/data/europe/bolivia/second/BO-D-07.bin": {
+      "BO-P-0701": "e350a77e5c0d5727942dce9b77ab773ff6a352a3b4454138b777eee5608ba02c",
+      "BO-P-0702": "797961bf81458b436541060e40942007348375a0c0a2d7c2ff950036541c1111",
+      "BO-P-0703": "1406dd8284f87a6c1d6db0481238363fcabd49e1251c440fa350bc8bdd0590e0",
+      "BO-P-0704": "33583d8ba9104f8cbe89f39e7e9fa71cbdcde869472282348eee4a7b5a5f175b",
+      "BO-P-0705": "7c118d3643c92d67e86c3751da451a5f3861a7db2f99b88bf93efe734d70324a",
+      "BO-P-0706": "632a4fc1af9ca3b16023ca99c9876829dd222fd03d38f68676c8720f77b5555e",
+      "BO-P-0707": "2ee5ceb34429abbc96fe852fb8fdf93c46d74d7408776ce109b4c11d2ce70251",
+      "BO-P-0708": "b660bee38e8b52b5003cb21a66764d64826f5bf080e7ec83bb8cb948d274c45f",
+      "BO-P-0709": "e732bf12bb687aebb5b0124530c344be4102319a0d75d9c5e4c77fd213c9e9ad",
+      "BO-P-0710": "244f9a552d2e1462c8b9c4385c1b13113dc64cdac3c5e7a9230bdfced17672ba",
+      "BO-P-0711": "0f31bc3dfd234cc69f43d97c1441d5d43e9c7013915372572343324b3815fc3d",
+      "BO-P-0713": "9a143dd93085ac62f5eb51e3ce1d2613b1093daab0eb571d43d5c5c5f4896988",
+      "BO-P-0714": "eb3b5071b5d82b5cd01b19085c728275e848bd9ac9ea39ccf42fb92ca4d3b4cf",
+      "BO-P-0715": "1b2b0569f461efa9873f41cccc9a9ff58f5a4f8df2aff8c6ba8a3e0c169bb7f3"
+    },
+    "dist/data/europe/bolivia/second/BO-D-08.bin": {
+      "BO-P-0801": "a91d59f55a8758af3ce93fa9d644019a6b85330b904f67929634247b050db60e",
+      "BO-P-0802": "dd10eb0b44a5fe133a4d293bc778f62df980dc51bb4c176c46a8975124d4214c",
+      "BO-P-0803": "8d50159e81239569b1b60ae8c3209b239bfc1a7efe72d549960dba06ae499ae6",
+      "BO-P-0804": "4e296ffb326654cd17c5856bad1afa112fa2cd9dde8da8098e6772ca4fc6aa73",
+      "BO-P-0805": "6ee2b05880bfbe25c0e9537b6db29083df0fc290a551d1b9bcb693d5b3ad2179",
+      "BO-P-0806": "a93a1e0f6b9805af7ff371e85491bb8aa95ff2af75a0c4259c24369caebb6a04",
+      "BO-P-0807": "efc8ffc532e9c15a648b35bd054c2d17ec2687e4772c9eea99310233fb78a67f",
+      "BO-P-0808": "75fb8ffc145e2aa98c0d6fa0a3137b19bd02010c4e251198cabdd267206237da",
+      "BO-M-080901": "4eaa8ee2a0641e246000b93d7b1c8336c3e241aa297a854aca019170c3b5e1e3"
+    },
+    "dist/data/europe/bolivia/second/BO-D-09.bin": {
+      "BO-P-0901": "9bdc0e99c3aefb5dc762d7920e07fb18b7f21400cdcaa928d6b30948ca07021e",
+      "BO-P-0902": "da78222fe7f05c942bbd59aa6a2bc3b5861aedaf1bb1cc443651c2f1e6aa5163",
+      "BO-P-0903": "372b43c4f30a9401e0a48933272fcdca842f32ad7767e376465eaf3e16dbda4b",
+      "BO-P-0904": "da902c0bc8113e9ca7ce0bab68183fb8ee6637293933fba94af0e5f33b14268a",
+      "BO-P-0905": "7477402ef9cb0f64ffd68b467ae4cd6970d22e591e7cd6ad01b2bf56c3e88557"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0101.bin": {
+      "BO-M-010101": "832df38e33df208fa365cc84f36389b22c364e107bc10263116fc66c7762e601",
+      "BO-M-010102": "f1217cd4880088b3cba2a40b80bc6907879bce9e5da32609b5af2294fbf0f2f7",
+      "BO-M-010103": "70d4d7cdef5b9b97144084ca349ebc437b43f6621d848e7b1ff280ce2fad2760"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0102.bin": {
+      "BO-M-010201": "ba6c40f4ef352ddfd36df11003e8c74d27df7e8dd0a03ca9785eb114935f8b75",
+      "BO-M-010202": "68e36ec34a9808ebfb683a56e956cdf2b26bce1784f3777be6538702baeb3a29"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0103.bin": {
+      "BO-M-010301": "25cfba787c689f9da8993af29ed45ca2ad43a88c51db3c30033ead7be41323ff",
+      "BO-M-010302": "8f75fe47bbc209a74820b67e7953136f110a2cc6a3300d50dfaed8595630f876",
+      "BO-M-010303": "4a876a298e2d983df8d747920bb2be57d4755822e204adaa382e6a1bb71816ce",
+      "BO-M-010304": "643a8078ef5ebf3aa4a21b0a8affb75092eaf6c80b9012434cd10914f2eeed87"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0104.bin": {
+      "BO-M-010401": "32596973a9edad6720fa45bd2e1af4c8a3f52be7358d1f18a1aa1c0ff6e89136",
+      "BO-M-010402": "e4339d1158207829e1a60adcf32f47239e93ea8681d4fc6349f6f3269678ece1",
+      "BO-M-010403": "b4f9f5a8062b8246f02b16a22d6cf5d71236e8e30b1364130813ce8bc0417621",
+      "BO-M-010404": "919feb8f5dbcd8bb0167ccbedaa441acacebaabd082513981cfc796569ec017c",
+      "BO-M-010405": "59c945dbe2280245c2812f72936036ae1f3e221becdb24860225301d9232a927"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0105.bin": {
+      "BO-M-010501": "ff51e28d268cd0315fe3b9e52efcd1cc53ccfaf97488943e6447bb2f2f484dcd",
+      "BO-M-010502": "85e8f5ac0cb138250e0cb81026abbdd78565bcbc39161a812ee737fff2afc943"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0106.bin": {
+      "BO-M-010601": "632ae903a811235f8776df7c0cd7db006fb57fc2f8c4f887e9807ed80e0583be",
+      "BO-M-010602": "b2af789a97611ada474763f3dfd9136052c7cb9897f862af92841bdc61b32e68"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0107.bin": {
+      "BO-M-010701": "5454053e508569a8cd0928d7a75fc1f4836ddc49f9a8d25adb4e702b4f79a426",
+      "BO-M-010702": "0df8fa04212654dad55693d4a20b8c38417276081c298bd8883a039d57ef01cb",
+      "BO-M-010703": "1b774d9d3986a044a2a148f0ec024d845141f972e9c650a12d63efba08977366",
+      "BO-M-010704": "9b9d51ab744b2b395bc9eff275927dd86f77cb555afb12e0a83b1e557fb7b622"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0108.bin": {
+      "BO-M-010801": "7d580c5e3a860b407a5c9dd566b4bb0ebc96fda0b9ef73376cff5836ab9c8c4e"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0109.bin": {
+      "BO-M-010901": "57cd16d063189763edc93f8db10e474f0f28fd117668dcaa5b16f4b33566a4b0",
+      "BO-M-010902": "ee6598d637a4a77c47f79a6f08b70a70a6224d44d90838dafb380688c31df6ba",
+      "BO-M-010903": "b480ff3cb8e6241aa812ebdbdad396dd4d2e982fc9ba956797cb9f3bcc16943d"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0110.bin": {
+      "BO-M-011001": "bb9d18e83a3601559c19ddfb4d339c0ae893e987cd98ad52d489d319cda17538",
+      "BO-M-011002": "4b50d9c9dd163d81b4bc186666d1d7f178d17a1bf429ac3dfde363e1f863039e",
+      "BO-M-011003": "5b3e5ca8d877fc42827d954344f0cd4d4201b582058aa7c1ea613afd7d493b4c"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0201.bin": {
+      "BO-M-020101": "87b723d7995a5573d9f3fdcabd8e445b75a576816005f5a5e9a77bce9493f17e",
+      "BO-M-020102": "170e42124bba12054700a62afa87117959c27ea041e690e1eebd48da0396dc10",
+      "BO-M-020103": "e650e80c7c85b599603aadca696829cf40cdae1ac0abbaa1161bde6b4f0bcec8",
+      "BO-M-020104": "7daf421009b3e1fb01368132e380e8981bb5401191ad9e89acfe7d8526d17110",
+      "BO-M-020105": "67d66be5bc4553d821c5bd0222aa10db5ece23238da740964a4e758f7e788aa7"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0202.bin": {
+      "BO-M-020201": "d5700486be39fffe6ce62b4bc21aab2e255c6d61e25822928dd65534f0b29457",
+      "BO-M-020202": "0392109b081801cc4200acd8acc4fad121548f2494ce17994d002331bea85549",
+      "BO-M-020203": "e5340e0c96624a660d45869526293f3a5fd17a9de853626b11fc8834b6ea0bc9",
+      "BO-M-020204": "7a6285c0c4d59a5c364c8c91c973a5270fd50761e26c3da8c1b216797ca1d804",
+      "BO-M-020205": "72e6c837a52e8d497415b0380ca24251421ed5ec2b2113c5b4f9fc860d9da21b",
+      "BO-M-020206": "679291987483f0dd076cbb1984aaab7f3584e9655c75c8404076fb01c47b3609"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0203.bin": {
+      "BO-M-020301": "520aca8b93752a6d05ff3346e105bfaa6724b3653e6bafde5308d1cf7327e522",
+      "BO-M-020302": "9a8bb7bbb638af7d7d35f9e0e74dac52be761e7941404581f64099e944dadd11",
+      "BO-M-020303": "20c9fc4b16f361bd94a9a786df18db404b5825772b937ae0e7edd7c6ab9154aa",
+      "BO-M-020304": "b7892e541c0df0b3f3d822078f63332b5793fde5532386ec30017e618a8d50ff",
+      "BO-M-020305": "3e49aa54bd51f246b218831f0d79fef6ae7bfd3729ef5014db41529d1245c8d7",
+      "BO-M-020306": "7ba015994944654e7785114647c1a646f0cd3c10db1b9c37e9775bf5a6edf64d",
+      "BO-M-020307": "99858852d045aad97561f8f7a851c9e99a2fdf0d02a6b57d9e32155b358afab0",
+      "BO-M-020308": "ae7cada1c1c6e9e536f065558d65c511b544cbf3a850bd9c38bf124111b17cca"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0204.bin": {
+      "BO-M-020401": "2484710041ceb5738e11325b2ebd6534b5959bb3751f45b81cfca505f157a004",
+      "BO-M-020402": "5a407a75290d8244f2cb1a53ed3fa6ea8111d1936dd423ebd86a6d963503bcbd",
+      "BO-M-020403": "c64f59dc7785cf3aa3e4221cde63354db603052e92c96f7e609a360b7071f6f3",
+      "BO-M-020404": "6d58030cd9b86b9feec1621f46577d37f2b9babf0c663ea89e00266c6ec3d0e2",
+      "BO-M-020405": "24dfe648c5a722b5da116ab7e91402ab0e005e9d36ad2033fa94d401016fe42d"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0205.bin": {
+      "BO-M-020501": "e1f260118d5fc62edce95341fac2284ba176fcbf550338d7d9baa3906d0ef115",
+      "BO-M-020502": "a1d79bd736969e5af89b2bb11c5ee67ea4587fe5c50526cc693b9a6fd87220b0",
+      "BO-M-020503": "55e301774963f6a984fd4a7f6e45404240572a7f8e7082ad9f4624cd1b680cb7"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0206.bin": {
+      "BO-M-020601": "395825047f8551239523110810eeaef52734a94f65238dbef67d7036d6419916",
+      "BO-M-020602": "a2a6895d4145ca5a57ee433152e25a1afb708b996093ff34981ed0a55dd3b9d0",
+      "BO-M-020603": "7253185066a0efc6e4320f6d189c9ba4aaf8bbbc5e44688cd28d6c2cfa09aa5c",
+      "BO-M-020604": "84282221f9ee234ac50ae2a49d32ce562702fc4d11c19cb7ce703855d02444c5",
+      "BO-M-020605": "f2f7e295e1e947dccaebabdc3797d0d587437d5f747d8116a3b4b5ed592ab425",
+      "BO-M-020606": "f2a261dd5e81f9ae4a2ea9eff9f2131f76f31dc2b723576fa4b5a7ef1877f588",
+      "BO-M-020607": "43f053843a2f336aa61cbafc43c060eb77a596d1ce4ce1404247fcc9ae167b0a",
+      "BO-M-020608": "b162f28a125d5d039391d6c8a091f093f16c832c9a937b12615beb8f88de808f"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0207.bin": {
+      "BO-M-020701": "0d7cced41e4482b64ab548c1314f211a627b788077649bd712b4f99433aca8aa",
+      "BO-M-020702": "e2b74a21f2d23fa2c26705ca67497ec7deba8a7164519d0868b76d52f417ebf6"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0208.bin": {
+      "BO-M-020801": "4ae856207d546ddd040e8f065044facc7d67cef866414bd7fd9d5f671463e121",
+      "BO-M-020802": "71d8d022d2f097c85ef9c8e6064519b3ec2d68d8ddec4afb02f6a02782bb9d4f",
+      "BO-M-020803": "84e04f5d8db9b1688b1bfe9b2dcda0e0b2dc3614722f1b77909349c9edbcf44f",
+      "BO-M-020804": "e5fd521f306da30b8a8d33937f9bf8a8809a37df332dadd3bf58e057d2f5fb0f",
+      "BO-M-020805": "f3e2a0674cc4f28dfcfbf31bd00c5333119686de4f7d708d2f04d19e20a156e1",
+      "BO-M-020806": "88003f8b145db7cdf8bd58d31fd05b1267e55d14baf1ad717ac3a69136fd2d49",
+      "BO-M-020807": "eccc795ed5963bd0340bc80a5874dce69d24b0aa7fdce6b97ae2fbdd40176c4f"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0209.bin": {
+      "BO-M-020901": "dce68d97cb7231865a2e4ab4c749160c5aa1f2b45a27cbde1f0a7717a1cb9ac6",
+      "BO-M-020902": "7bf5c0829bfc4131a288c7b66a03cbd9962e460f1380da90c9c482644dc3685e",
+      "BO-M-020903": "206ceb25810050f15c01eea33e141aea4fe0ec1739d8a87b4cb0084273e51f82",
+      "BO-M-020904": "24ee182ef8516b222853a70d91e45c2eb08dc36805bb41166734c469bbc8b096",
+      "BO-M-020905": "de157daa1791d3ed6f0fff5e37e95156bf6e7644571076fef5048f5bf38baa52"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0210.bin": {
+      "BO-M-021001": "aa90eb57d997fd2b1872493445268e922caed7a26c28581652fccf63e7f027ba",
+      "BO-M-021002": "190194e23c98d11a6f255ab92d237278733988fa9e744f6779a5945a6397c0ea",
+      "BO-M-021003": "1abe20568e364c025d8b9617651b88aaf68e1ac6284aaddf5b937a7cd2c54d38",
+      "BO-M-021004": "c0bfc12d28b257f2b4aa0e17ba88cded50fc336abe654260d0a9bdc5c27248be",
+      "BO-M-021005": "195d933036748c16c021ed97fd144e440ed0970576b76ef551fbe12f6eed7873",
+      "BO-M-021006": "31b3fc03ba1d4143da7e7aa5400678e843bd12c1f60513cd6e5acb5d44b7c21e"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0211.bin": {
+      "BO-M-021101": "fb39bc4d86d3826e707c6a91ebe5d7f47ccb03c5b7140cdeae66cd149a79fcee",
+      "BO-M-021102": "b39f888edbf4f7fec5d8aeff16966d081c4f92fc05b6ed8d213bccce1d8e92e6",
+      "BO-M-021103": "e03995e9fb6b4d15774177e03b694d57a80f87b0933319d08978fdd5b9eb7b2e",
+      "BO-M-021104": "6fb55a1bc5f65d782fafbbfd32ca6f9c0f2f1a36f2b8b10949e7d1153d41b475",
+      "BO-M-021105": "2b8bd39f2490a1cbbd8690c64fde5ac3bd91487009079f40d4f3938ef22ca803"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0212.bin": {
+      "BO-M-021201": "0089ab3d330f0ff13cb594763d098a4730c1f9549a706e4844d5a0594aaa93d3",
+      "BO-M-021202": "db77b03bc5f991fb855272ce410b0aa5ec3ef3bca00be7de31927a95fb39fc1a",
+      "BO-M-021203": "ba6e55168aba46c7a7f4ed7952e547acf5a667d7692d35c2f66bcdcee19a5883",
+      "BO-M-021204": "6e7da16869882878714e333ef116908230b9e1be90ca7649a53067f5528dd4da"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0213.bin": {
+      "BO-M-021301": "97bc545d79e6ae4046a9f723d222782c728bc3633c687b42da0218bb09c3a351",
+      "BO-M-021302": "06212d021d6a4e9e23a1948eb7ace5535d0aae056b8ded21cff713a742d4aef9",
+      "BO-M-021303": "8bfc5907e4ef4dd6a3e5d95eb88c0b4b22b1f93e640e2157fd0d691094cd205b",
+      "BO-M-021304": "d837ff0e0775da87c555365850862657df1aac071af434803811c65828bb5476",
+      "BO-M-021305": "216674286abb4ef1668f7e9d63c77a144ef19113b1367d821619c65a7e1f04de",
+      "BO-M-021306": "908b0745e3a185acaa9e6f6430a7a516107edc2ceb59a25ad9624c972276f548",
+      "BO-M-021307": "1f315430af2f28e5b84c0f06cddc862f3eafabc086fe235027a77de1b0ff31fc"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0214.bin": {
+      "BO-M-021401": "92ffb317fd77934b93329b3656e2f6281fe33d147dda983d64ec74fa9e53250e",
+      "BO-M-021402": "60da7b751c234e07d11b9d058e55022ec9e7f380449104a6416a1bdcc960998b"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0215.bin": {
+      "BO-M-021501": "634dfc61cdf4c84df526ba1f1afad54897ffaca61d72f02cc5271e021b7865dc",
+      "BO-M-021502": "718fd1d4a0b8ab4d07dd41b9fd5e183ab29d1efe6006bbb89f5f647aa0179bdd"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0216.bin": {
+      "BO-M-021601": "3e83feaafaee1c862cb7a914e8ec5e06dddf3cbe69205b6db8a370c2bd84c3d8",
+      "BO-M-021602": "cffb3e3c465d6aac34b9f7ddd0df73d6304e818ec16e1ced1253523dde00f630"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0217.bin": {
+      "BO-M-021701": "4d83633577e2f5ee0af2a3edaeb77c3e0c317a8d9d65a841398796bafe8224cc",
+      "BO-M-021702": "5e51ad84bf9c1402acc0d3b8762e01984a9bf0e7576562d91dee47473521ac93",
+      "BO-M-021703": "125a2e021c2b5303699bdd50ff52f7217539cdad603c1cb3ba067c5678edb110"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0218.bin": {
+      "BO-M-021801": "14d7bcdd1ac2c153a98b93d61e3ca0132cdd953851309a88385745e157cc0777",
+      "BO-M-021802": "9569be77f368160fee43e97ae75762ca97a42adf6af96898c23ed2a4c72480fe",
+      "BO-M-021803": "7382b24ac3f4a85f6b69f0c14f2a009b6857e55e30a9ed72d1e13f0329c946a3"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0219.bin": {
+      "BO-M-021901": "9f3899f811c36882cfc5f6314b8dcd619b0fc6ccd91738add9aee52995639a39",
+      "BO-M-021902": "b22e198ea5b8a599453213b0d6cfba4ebcc4d4756c858e0b76f2b905988afd49"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0220.bin": {
+      "BO-M-022001": "0dd6afa2465bdb5b8bd693d2c5acbf47bc6c6437ce292c91cdb8a2279c5a46ab",
+      "BO-M-022002": "773e1f85c54dcfa7aac27efc786c10992b614041ba78f7210d22c240d9f56287"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0301.bin": {
+      "BO-M-030101": "d2beeb228bd1ce2e9ac12275e41cb9debd0bb1805b90216438e726f059e003dd"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0302.bin": {
+      "BO-M-030201": "10f834f6843572128a1dbfe7f4be2f4e8e6f46c57d4cc102699cc67290a7c1cc",
+      "BO-M-030202": "ad41cdab6616ecb104d753d073a048c8af28de747f5f96c5654fa16fa76f13a0",
+      "BO-M-030203": "10b10ed68862c39803ac79d82fe5f40d52efbad7a11bb1644fd9aa4179375bff"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0303.bin": {
+      "BO-M-030301": "8a71af304f063ba3e4b4d4a9f7082454829fc560133b92eab5895fc1d6f7dbc6",
+      "BO-M-030302": "aa5c4407f55d41d134e1a70c88e35bf53eb2eafff7bf29d119dcc83b77548ba3",
+      "BO-M-030303": "d4731eaa82909b4915a1733fa8bb517f445dc059c7885b162a1a8d9939d305d0"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0304.bin": {
+      "BO-M-030401": "db21a732b3cc93a1d2737ea5b6d4cce1e5c056ed05bd7ff1b534e700046f9b65",
+      "BO-M-030402": "c50ff8a097218d6bdde356d1991345bc496979e859da1a007b7c338d80755605",
+      "BO-M-030403": "f7abac9b74a10811771dc38c90025d9e3f333c16580340ea3ad076c1e9d9dd2e",
+      "BO-M-030404": "b73d298ab925df76bca9b5488aae06dfb8d8b46e6b09f6b52193daeac093ba84"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0305.bin": {
+      "BO-M-030501": "20ec688f96c4395450771b4d70772a672c9e40282c99e383efbbecfd1d7e1e71",
+      "BO-M-030502": "269b2bbebaa38aaf58c5b58d281ee24c8bfedbaf66902e51bc990dbf866c4217"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0306.bin": {
+      "BO-M-030601": "985703921e7333e2ad24503bdfb3722e7aca5ec53563458201fd132407f979ab",
+      "BO-M-030602": "1090c3d19fb5a3fa80c9d9b10825aceac72b78f2122c4c86637c2f35fa59c7ae"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0307.bin": {
+      "BO-M-030701": "770b9191800beed4ed12fc2757cebe90bed774140f1c5c78edc2e75e8aab2256",
+      "BO-M-030702": "ec87bd7df1905b138c9d5e21f8497cf9f46e8535aa12a8c8c108ff24184b4418",
+      "BO-M-030703": "b8b2fd7788dcee17a86eb3fb91d15bc95c49a570a30eed85739fc9e87ed4fe14"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0308.bin": {
+      "BO-M-030801": "c7921ddcac6107c96f9f03568fdffb092329a95189f393bbf82f386fd91c5fea",
+      "BO-M-030802": "a6acdc6c80c36f615944573f7f8c614f538b271f90fb200edd1125c21f654a81",
+      "BO-M-030803": "20c05e7074dcea9db0212000291c0b956150fd031c3cca43e4a126cc3c8ede23"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0309.bin": {
+      "BO-M-030901": "474fd118ccdc0e387730d402502f1d87f6f9633e1cedf93fe3692b097fa386ba",
+      "BO-M-030902": "94d766795de5f5da5d8321deace6d1d9a720cce62c6453c32bad7a76f9b13704",
+      "BO-M-030903": "4774e7dbea7945afed42c228407abe3f98143487841495a4f659f8a46221c86a",
+      "BO-M-030904": "1ff11b2255e5b8bc297054d92f0f3b1c62a8b620bb079b54d5b251b90050f2ea",
+      "BO-M-030905": "8d689a73f5d50603a90dfbf36b70cd9462f8b84ce96a0816627d5606298a4337"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0310.bin": {
+      "BO-M-031001": "eb53cdb816a7bbc4c8ffa211ea7b41c49e353500b773d361906709ba99735a3a",
+      "BO-M-031002": "e17657a0af3e9bc4bbc785ccd19098e0952858d4120ef5cfaf5ce72124758ed8",
+      "BO-M-031003": "a4f1f1e65bb98ae9d0581e4b3bf3eb2393df4b68907c398740ad060e6a6038ba"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0311.bin": {
+      "BO-M-031101": "742d771c8614f835b66faf6c4fd47ce38c2902d8381a9e0dd4badaea43e43baf"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0312.bin": {
+      "BO-M-031201": "07cb9c67b2df34e289d2d0051d26d51487001564d2a7bfc03d2fb24c54490cc5",
+      "BO-M-031202": "13886f352157cd3ee1d51fd7fe19dbedbef7e3c91a46bfd9879913e3b7b05b9c",
+      "BO-M-031203": "ff65b885bcb3ed8174115c2d2ec2f759f3260438f08f357e0489ab0548def5cc",
+      "BO-M-031204": "2dc4c0aada72cb6af16722d63834384882b1a86e20f991727d3e58d1551c9448",
+      "BO-M-031205": "da6a811604d8973474f84e4eaa7b8b9b9e18dcfc86936171c1b8e62a9793a4df",
+      "BO-M-031206": "1454332fce933795a512b27b4aab2b9719d321909e45cf70fd65c503f9155eca"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0313.bin": {
+      "BO-M-031301": "4354bab28a22a9f39fe3b2f94c67eb286f81cd4aeb9944dcc3ade8cdf55c4291",
+      "BO-M-031302": "335a2d94e6853ccf4e0697dd9093e145567cf0d9c2464ab6154af88219fd38a3",
+      "BO-M-031303": "c236d3f1b36ded7c7f1b9ee167da54ec290d9c6a8ba5e4bc9ba924c165a029fb",
+      "BO-M-031304": "025be74330a131b6f75d033890cb54a1f6b64df02c094ac0e098ada7327f2d61"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0314.bin": {
+      "BO-M-031401": "22ae223386db81f062e472eb9b45771d3bd03286896b7662bed61e96f4cf36e9",
+      "BO-M-031402": "344ae622baf748ec6eef6420374b94c0029257ebc54f3cd65232ce6a644cb571",
+      "BO-M-031403": "dd581aa0ee55909135b11f875e2e52526027de342b5b5d648a40bfa1f478c2d5",
+      "BO-M-031404": "cc51e2958555245fb99f33a1a55f500f413ce3ef9609a47d833c10585a8e7bba",
+      "BO-M-031405": "dc21886ff3cd9cdccc2cbf5b9b4e5063a755d92d2ad1c483c69408168f7128a6"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0315.bin": {
+      "BO-M-031501": "d6161ceb3dd69fdbec9164b683f30258fe4db3ca84464a0876ee88f882ea22af"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0316.bin": {
+      "BO-M-031601": "2affe071949593f2b977e328f629f2f8ce165214cf8fc3fe3a631384c1469254",
+      "BO-M-031602": "b345a5f07d9bbfe4701ec6d69ed076ebd07930dd78396c4edd4ad36ad04f709a"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0401.bin": {
+      "BO-M-040101": "1b5586b8b3c6ab3e849d8a86dca900d76ed4af8cc9f7d7d898727f9d8ec1f30f",
+      "BO-M-040102": "dcc8a2738e0b36a490c3a8c5e006c4d2e095f18a21667e797583c5cbba3651c3",
+      "BO-M-040103": "3a64e60e58f278b6231f97d7f16ca57404a12fa11903270b4bafc2d262be4f03",
+      "BO-M-040104": "9d2ebb9c420af8f76a29efd80efe4a17e50846919bbfa0126f2bef10d89d02e1"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0402.bin": {
+      "BO-M-040201": "83075d57daa720d31885aa444cdeb6afe6262cc0d7b796ce0d6a7072282510bb",
+      "BO-M-040202": "26606fc7a9fba964493dec6e34757b9d1486fdb84370796bdfa3050ff39be638"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0403.bin": {
+      "BO-M-040301": "62e29a88fac1beebfae5ce209b5a4011218f51f6ad07115f1ed3fc6356f78267",
+      "BO-M-040302": "451e067e29f9d28f4a9cd1d8e77c543bcb4445fe5fb594f6efaa48947d7b23dc"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0404.bin": {
+      "BO-M-040401": "f43a4d4e481db2a3fef8d286ef2f81e4e9eba2621fd5e8edb4edae603089f025",
+      "BO-M-040402": "13ddc73ebcfb563716756b53d4d22aa3a4a4119a12c1d256667a91ce883567bb"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0405.bin": {
+      "BO-M-040501": "a99ac8997f3aae64e7cc28a4062612dc62f13f6aed2d37ee6c3f790df6202857",
+      "BO-M-040502": "cf137ba74b4963c9968b5bc35dfe84db7454c7b737b58ae2f84ce4a302dd1420",
+      "BO-M-040503": "852a69f69c36e4260d01e2620dc2dec7a6d45aba66f9dccbff0702be0f835669",
+      "BO-M-040504": "5cfc78d6ef7f781524902d321fb50e00277ccf498821487143011a24153c5f06",
+      "BO-M-040505": "e19123e2524ffcfeaaa3e47a09ffa5bde54c6a1c33bfa89d400c6af78771095f"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0406.bin": {
+      "BO-M-040601": "9b1960df8b01d0b45e7e034aebdfb474142a78b24363cd5d52531a7c9191b569",
+      "BO-M-040602": "b8c283b93cc983f858da45d33da70ed7064201bac43872e95e55e67d1eb7a5b2",
+      "BO-M-040603": "04ba0243cd2ded04a5013a14eb5824995c050d90485b13a88faff68182002b96"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0407.bin": {
+      "BO-M-040701": "9f1259f86a6ba2bbb80fde900cbe042fd8bfe0d22f19abf0a199d85f15b3a7e9",
+      "BO-M-040702": "fe16cdfab2c8ab31020bc2c1d02d3db57e80d137788d39d0620a0cca305207ae"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0408.bin": {
+      "BO-M-040801": "10c06abd3c51e04dc9efe8b5361d6862db5b09d2454cc19a412ccc0661807a41",
+      "BO-M-040802": "92b897b1d60140d87d0de791d7563657e2d411e3012229b522815058488376a1"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0409.bin": {
+      "BO-M-040901": "8eb7535f66afa3bc08b2fb20ba549c398335915351ad41385f37621fef24cc76",
+      "BO-M-040902": "40692a6985621be0bce59bef5b532b52943207154dafb56eb79eb523c6a6f4e2",
+      "BO-M-040903": "f43561d38e6edd3da66f6768e16b779614ade5778b49f81c02720cedf8be1836"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0410.bin": {
+      "BO-M-041001": "5792165d71de1c626a22247adef4cd1ac4e6c9b488285bfa1e27e88d84c69ce8"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0411.bin": {
+      "BO-M-041101": "ae732b207781b931f372216208ac0b19e89b46b4201d3a55af5d85393010f22c"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0412.bin": {
+      "BO-M-041201": "f73697c921a857fc9d391afc22c4edac039f8305c7875e4f5c400591457f5863",
+      "BO-M-041202": "5879ce7ce6facd47bf6c2874a8c013d3e23b8abe76d800fad7dff32841e830cd"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0413.bin": {
+      "BO-M-041301": "f55646e5ed3f6e92354a0f67bcf52a8ef90757ec9dc74398450d571ab5227273"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0414.bin": {
+      "BO-M-041401": "054ba444e276a99407b4a54cfe9ef66958841f9e43e543ab3070c043111a24c8"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0415.bin": {
+      "BO-M-041501": "711f76ce2547f9fda3c0801eb6f8d4b8a4eeaced3c44fa80745331cd6159732e",
+      "BO-M-041502": "fd377481eaa62635bbc52e48e653812c1dfbbf6643e06849aa383e8635bbbe39",
+      "BO-M-041503": "7a8fbf77347f466fb9ac3e4f28b3a0f99fd8824812f50d88cc1ef88ec0cb08f9"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0416.bin": {
+      "BO-M-041601": "f1cfa5a1a8ea8bdfbee52efbbd7bbc3b91974a61b0606dcd9fff01f9983260a1"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0501.bin": {
+      "BO-M-050101": "fb765fbc0d95cc54e34f8321c00f81aeb5357b1c1da4d0c19fa238cdb4b2c90f",
+      "BO-M-050102": "1bb64f4b9d8b24550b7f6b8b734ed1ae78bdb4f917fd5ac7428f79690d3bfa84",
+      "BO-M-050103": "15b3089bfd97e7e8d7915a99994d684f611f51a6e790dfdce277a144908b8754",
+      "BO-M-050104": "92ce0f9be89e0fb9455a1beda58eec97ef5727be60ea64463afa665df160cea9"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0502.bin": {
+      "BO-M-050201": "f6036e55fa94cd9e258cd8cded02ef878f8998f7f2d7e4cd270aaff6c10bae07",
+      "BO-M-050202": "362a57ec9d59905df78e9caf17a31fcfb8b3b00fd100f2695af74de9a220a150",
+      "BO-M-050203": "8182c8bb04f839ab768d89633d722e4a52ae58a2d2ba3252742546160ea6f245",
+      "BO-M-050204": "004a48c9d714f0d295ab394925d0904bba02e12c1a546a4cb156124031cfb415"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0503.bin": {
+      "BO-M-050301": "e7f2a59688ea901daa90cae3fc61a53f813cbf86cdae3e67fda265f49e3e8d85",
+      "BO-M-050302": "ad494b58c88fc915b9aec3841a37adf201c5aae4cc20eed9e1894e059bcba1eb",
+      "BO-M-050303": "61a79f0064735ea895131d422c7f87b0607cb132941ecbd61286185ae258571c"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0504.bin": {
+      "BO-M-050401": "5d2c2e4189f347c3f2354b0e3ddeb348c84c18f121af031f9fc49504e86488a6",
+      "BO-M-050402": "7db2537d6530d4232defb0d43dd11b5f5594c7664161f5a4371521459bf841a1",
+      "BO-M-050403": "ae15600e7f9a5ab8848867287d4ad12af2fcf88b7b4472c5362f26f19bce26ae",
+      "BO-M-050404": "8aceee9cc546820999ad30a3dfdb00b668e954d166a8f3aa7e7d4a5c64c2941f",
+      "BO-M-050405": "1e52e891fcc2a5d888fb1b6f2aabe3c3f29bca505f336ad43916acd1e1aa82f4"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0505.bin": {
+      "BO-M-050501": "c427e9b01bfcb5bdf8630ed7256a6cde9b8544968d30c34e9151c87bb0666913",
+      "BO-M-050502": "6cd16f5376d85ed61be2264519b1b52fbc164a30679c41204f3689e5b0ed8d86"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0506.bin": {
+      "BO-M-050601": "a9fbe97db0c79d2879b2738ac0ad0d80dc34867ca79420fe839ac7e3bd5fda0f",
+      "BO-M-050602": "e391e2adf98beef52ad44f82afe30a9b18f06fd7d1d541f5c6f9566bb680c61e"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0507.bin": {
+      "BO-M-050701": "a3180215538efb8f9feae6f379fa05a5beb30a53bc7df0430baac6a4d43ae341",
+      "BO-M-050702": "322062d3904ac254b441c84ac54d53a2a10730c5baa6a18bea450120f5a1ecbf"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0508.bin": {
+      "BO-M-050801": "0ccf1f4d03bf177768267b37f0dcbe597d49e6f94c862abbae516fc60f2ead7e",
+      "BO-M-050802": "e867b3ed77090da70f4a5ff9a357ed4dac58da6ef31798cf93a3b49f3be79567"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0509.bin": {
+      "BO-M-050901": "91b4a41625b9e11e118fd8846c9c0a544cb98db558c231795511ed0135135678",
+      "BO-M-050902": "2a487272709f916a95a627da32ab1bf2644268abbd09c239619f6acc4ee1e17d"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0510.bin": {
+      "BO-M-051001": "5bbad9001a6dd7c10749f996bfc3431678c1803bcd706e26d17f853c7b43644b",
+      "BO-M-051002": "dade4894044254a90bb2e3b98d21a79dae3b6866106fce81fdb05fcedf880d8b",
+      "BO-M-051003": "77a1d014e918100a64f5147f8f1e96f25468eedf6503dcabdb4a2d799e1e199f"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0511.bin": {
+      "BO-M-051101": "f370bbfb5d4c6accb7e0cb9664cbc7f8fcc90df436133dad8e5adda2d2155635",
+      "BO-M-051102": "3f79914c3acd1d85492924601331957b7338dcd2e189a6d8d042fdde77754351",
+      "BO-M-051103": "ee840e61ac00636ebe14907c7e15ebff32c3252c538b3296fca453261923a374"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0512.bin": {
+      "BO-M-051201": "4479d3f23cfd9f8ac1170ea490c502b8434e0fde6ad2c08812febbb7f036c75c",
+      "BO-M-051202": "cd915dd5ddfce80eaf68076631f692c48bd324d1fd6fc610c4158cd055b99adf",
+      "BO-M-051203": "4990b1b9825deac460cf643a16c02d9b4907901616f15da37717939e0ebaf624",
+      "BO-M-051204": "d7998985f19be98fb2ec29cb3fbca75f0d67e158f4eb6dde5276d77a7a0c1f23"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0513.bin": {
+      "BO-M-051301": "7137042a650af1abee7050ea50a13f56133e11cd9a0b6dffc6cc22c6b9f794f5",
+      "BO-M-051302": "89ef4917b39f7d4f26fb414de80d6af61cb765cf0ad5a884ba982a25906c724b"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0514.bin": {
+      "BO-M-051401": "f929d7ad1a4b67ca90b67610d67f4d170dc8019b7f8f24c73b2a95143cc26a63",
+      "BO-M-051402": "0ae76b2b6054a248edb26962208cee5c8cf20e123c40af9d9a4a2bd241623a25"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0515.bin": {
+      "BO-M-051501": "02bd9bf8626249b3f35a28778d5e694c93a6e32cefd70fd9075eea283b3daf6f"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0516.bin": {
+      "BO-M-051601": "a07a3504d87709388b87a5453d250b8218214f4fd9b94b824de7eabc3dbc7cf5"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0601.bin": {
+      "BO-M-060101": "5293b3ab92e65e8234ae74faf947a3d5ed39997820ff48fc97c7a3cf03158671"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0602.bin": {
+      "BO-M-060201": "59b706fa4edc350da99f5555e95c65b3eb7589d6361ac346891cd819e34b2044",
+      "BO-M-060202": "b0db6fd3bfaa9ece2421c3c9542600edffecea849138d3e49f9cc4e5b5fb22a0"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0603.bin": {
+      "BO-M-060301": "17f2516550c7a6ffd9c49148aaf7eacd0b414ef4b6e8ba19de4ab947df3aaec7",
+      "BO-M-060302": "fd71830da779b04a92d9401250841dac0fafcc51db86356594775951ebf8c7a5",
+      "BO-M-060303": "09e591821e90d012e4331dcc27e741c0cbd4115309f5ab21fbc437d5be110be8"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0604.bin": {
+      "BO-M-060401": "a91f2bd47fc63b77780fc77f3abab0e162fc4206c920b108bf1c073ed9758c08",
+      "BO-M-060402": "136be4fd869447966098f374cf9ce53e01527b6ae032c988838c28be4674e023"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0605.bin": {
+      "BO-M-060501": "5114ecf1934d658152677a728f8b15c16ce3d5daca14f7cf8965cbdeb3640d75",
+      "BO-M-060502": "0537bb6a3319fa690fbc65bba1107fa41eb628c2ab7b795b0fcd438d0a8e01e5"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0606.bin": {
+      "BO-M-060601": "6cbeea7d1c0613c7523fa2e084496b4a84d95f3752a9c74974af6746e6f4c40a"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0701.bin": {
+      "BO-M-070101": "900402a30fa179cd20b5ac07e51f4efd496dfd96af762bcb1107efe45b01f27b",
+      "BO-M-070102": "f1adf62c0b53e6d1207841170794b528adee90e17b6ff0929bd083515cc93450",
+      "BO-M-070103": "e33b4e7bad3b78f432b934d6b55f2d39581f80e28f6bf615651aa0f51502109a",
+      "BO-M-070104": "7fe49df2886688358d429079e3d9bbd3130c843428c1283cc6dbf98f386e4c88",
+      "BO-M-070105": "5543dc4c18979c762d485da1429abb1c2293891c787c6c523905671f57bbd1d3"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0702.bin": {
+      "BO-M-070201": "147761100e8823633057948212323a3f5c70faf7ba41c5e91a300d6adbc3d23d",
+      "BO-M-070202": "21f08e0d48057ef6952b0e118a2c63c9efe86c27eca5fc89065fa9ac1cbb9e1f"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0703.bin": {
+      "BO-M-070301": "0af9595ec2d0702f3eed1553846f30ec0e6568a62d6f01dc77a673d25deff5a9",
+      "BO-M-070302": "efd7edb8372d4ce308515248cf56fbdba0a73a7db7888ccde84667866e9e3593",
+      "BO-M-070303": "eb96830a4666e28654b5e5d72ac0e66ba1f2114120a5843bbc455b527401ffbd"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0704.bin": {
+      "BO-M-070401": "deb5f93a9810ffd322d881a8c680b1ac26421891d7429ba50202e16940b7b65e",
+      "BO-M-070402": "c74ed8f204232c4d9fdeeba56a450ad951d5fbae31c32f880db42ca9b28532b3",
+      "BO-M-070403": "eb8b30ebe5ca6154fa4e1811c233bda4d49cde176f205d70b0687a09e4596bc9",
+      "BO-M-070404": "c543947abbb115ab812dc33a274ef5c70c10d5c2909fb0023334b66cadbc6102"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0705.bin": {
+      "BO-M-070501": "ed4e55c660f1b98871fe7a98caac2f8e0d5516be7fbb2a0d8d0ff15bb2b1635e",
+      "BO-M-070502": "82c86d7aa1d9a5967527edd1816ff554176d42cd9501518fbcc41f16e2f8a0c8",
+      "BO-M-070503": "ea64d22dd9b061177afbcc58391144468948717d83caa25f794f6865deddb75c"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0706.bin": {
+      "BO-M-070601": "da7aff0abac50ae9ab4d611b69541818d235d347f62b4168449a930d0bf60e46",
+      "BO-M-070602": "10db792b0186885588a6e0c2d16195bfc92d749cc5fb70dae62e4d695eaa02e4",
+      "BO-M-070603": "8a2fcbe64e3e7b608c064be2026c8bc93cbcfafdf71987c4b6d2381a42b104fb"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0707.bin": {
+      "BO-M-070701": "fa422859bff2d79471bcc0ef4686fd6fc158051cda58ced75805de7b3dea36ef",
+      "BO-M-070702": "7f1f746860656c70eb21a04ff14f24d84ab104584cfb6a0e3960d3c8daa705fd",
+      "BO-M-070703": "07e5ec8daa2dc4e7779aa37a4e2de35f913ac3b309d598a4ecf1a2f5771e6fb8",
+      "BO-M-070704": "d0a59bd5594dd6f3e3643a579e1fe62cc0d19b6a32e0ac5394d27262ec163c47",
+      "BO-M-070705": "8fb55dd8e85ffce0bf70ca2a867c503cf77751a6a492680c9a1d9c9a89891a83",
+      "BO-M-070706": "2db0b0301a64fe7f85d713fd9cbb308ae563a9882c7e2b7afa78ed07f13d2f1e",
+      "BO-M-070707": "b9038439f6395772fa33daed9113a07d04f19bcc39b2a15eaf14e0909839c15f"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0708.bin": {
+      "BO-M-070801": "fcc16ecea58259951589ca730926a1c02caa2055492819a9dcd32a8b20f208a6",
+      "BO-M-070802": "40b486c753f2bb71cf7714ab87bdffd988e2e4361553db07f12afcb633021762",
+      "BO-M-070803": "35a171d28757a3e1aed39c56506ed08ffe728f43f97df030ec871f1630c3c848",
+      "BO-M-070804": "bdaa0c7777d396d8343e6b8bc9f83f357a654e4c34cb77f90dbabe129684408a",
+      "BO-M-070805": "850a8f445a960db0db0f5634ef0e1c46c2db088a55b8bf6eca947bb5cd8b65bc"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0709.bin": {
+      "BO-M-070901": "5ae58d32e20ef64b24bd8fe0b677bebebd069f38a7eed280baeab81c6fcb926e",
+      "BO-M-070902": "e9401e2cd40edd2bb5dbeced729dd066fa5023a9657ef8b41c22ecec16db907c",
+      "BO-M-070903": "35b5d259351770f4d5b14396bdeaba3bbda7280343064ce4c3735563f96f8706",
+      "BO-M-070904": "f5efda437c330c55d8aa3718c93b07cbe1c31299495a70c626a70c89927221b9"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0710.bin": {
+      "BO-M-071001": "eefd6f2d65a3770ae249eaca54af5f702323a396c84b8984c210ca965c2b99cf",
+      "BO-M-071002": "d9ee7bf446ddb269e7360ea2221537679313b56b99160ade39499f4cc9ac9643",
+      "BO-M-071003": "a424e4c14821fedfc639340ee958feea275c9819988e9fefc6413226350c543a",
+      "BO-M-071004": "92acbf164dcebc43c75f69b0a4cf0ad82624ad633ccf73a5358c267d81e50630",
+      "BO-M-071005": "5cc31ac18f1455e16635e729f349511729566b5aec12d2a324ada0d9151be6fc"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0711.bin": {
+      "BO-M-071101": "2e0e9b04a18d739a07af089c73d4753b7176a6aaef6c2942df1a25eb907acaff",
+      "BO-M-071102": "5c7f40218fe898e89a94dd01d5c585ccdeae1a3ae6a55d8748ffcf65f9988cd0",
+      "BO-M-071103": "eb4ca19b3527fdf88bf45ada05bb4a6e253796947d62c26f56fd2aa25577e75c",
+      "BO-M-071104": "9105b5872c3bd5c76ec7cca038632623877f6c335521e804b4424327ded4f2fa",
+      "BO-M-071105": "700b1a4222ecbf9ad5f7c6c60e10efa2a26b4105efce72e42e7d5d200f123008",
+      "BO-M-071106": "069c390e50266b36f51eb16d3f568d67f01b972e287304ddd2df1bf27d7742b2"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0712.bin": {},
+    "dist/data/europe/bolivia/third/BO-P-0713.bin": {
+      "BO-M-071301": "0bd73ed485df78214ecbbeeed97fa7e0f08f40d9830874304960381878edd3ce",
+      "BO-M-071302": "696c8b51ad9b582a85bc9acf0a5073fac2f9f31b798172d54eac08fc68d57346"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0714.bin": {
+      "BO-M-071401": "f4953ffd5a6351b6804431e612075b8060c8d5768a2411742b5c43e01e830808",
+      "BO-M-071402": "df3af6d6dbec9f0bd6f017071ef83e806510463a1a329ccba30539aa8c2c7bc7",
+      "BO-M-071403": "ab1408af5d41709a1f5bfd2c1a987cb5b76446d56dabe311110180036df63135"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0715.bin": {
+      "BO-M-071501": "728e27a7338797d12923e54bba7e8c92eba64fe5b4ac2ef0e9d0d8f3ddc5320c",
+      "BO-M-071502": "50ec68a17c0548d74415626868d85f30abbf959814404a96578608200e41c4d6",
+      "BO-M-071503": "cea2900422dba9ec2351aab57c4f55a83aae7ab95d9114084b02a91d655a1c50"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0801.bin": {
+      "BO-M-080101": "7099d6ba7d02b476de449c0e3a06fb65f839528b7e636f476af570efe2822cf9",
+      "BO-M-080102": "b8dbe63fc802904e8e78751795cd9493f0eb007edfc88ee77133cf2ca6c80928"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0802.bin": {
+      "BO-M-080201": "f1590828714913a44ff7358b83ef6fb78af383634a31fc8bf45162e8de45cb1d",
+      "BO-M-080202": "879f83b01342bc11ecec11cb494c53cb8e4f47d7e9f35ebac7ee2d8d0a57fa04"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0803.bin": {
+      "BO-M-080301": "49591efdeeada187ead72b0f1857a83aba4668158f9433055b2c7ab7fc9e5591",
+      "BO-M-080302": "7f69e3e46962b19d514a518232d09f229fcf0c1dd18aa181f74747bad34dd960",
+      "BO-M-080303": "2ab84a34dba7b065da51d4041099ac0e70a14db7c595bed0ec698f35372bae4f",
+      "BO-M-080304": "48f74681ad4df748e09ca5c9d54ba791d5587d472c4d4caf15f28d81fec6f95b"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0804.bin": {
+      "BO-M-080401": "353d07f0ec257e79a374cda791d5415b8425abb3e43b420827dd7c70c1c3437a",
+      "BO-M-080402": "cd63288da642b490ce43f9dbfbfed40d3a8993f35ba113c640dd2d4826a0f314"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0805.bin": {
+      "BO-M-080501": "58439d43fbbfe1d9e476e66d989a31b5524c362fe95d270453a19b26a05ba088"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0806.bin": {
+      "BO-M-080601": "2298666b8cded3d1250926e2cf9676e8b547638eb310159527e28bda773bfc32",
+      "BO-M-080602": "1e51d1ce204917a1cc62861deb3960a5171d29b9dbbf4919988f4b6650e1bb12"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0807.bin": {
+      "BO-M-080701": "ce2e029bacd18e7b87ec5f74b7cbc73933ff62d87f1092fb09f61d75a95f7503",
+      "BO-M-080702": "ce77a12607d54d66335c17af1765109be50d080885ba9037d9a117ff5401b1d5",
+      "BO-M-080703": "73a9ceaa58c6547a20936fb763a1e472b45471f664675cbbb4243df09347cf87"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0808.bin": {
+      "BO-M-080801": "bdfddfcd45549c8251149018228c7f63690df4f4c95452b15a58568dae2dbf62",
+      "BO-M-080802": "3a250c5e753b2425dbe3b8591d70905547bf62f03467c9383e80a37d86dbc7db",
+      "BO-M-080803": "7e8c388e504c438bc84f6b06b545c36f062eb0044b952f488d0d4a5bac43d2f5"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0901.bin": {
+      "BO-M-090101": "5a08efdb14e7887d95592e77c22874c389dc57e1c776bdc290a3a552c43dd912",
+      "BO-M-090102": "331bb2024557f664cd1f62bdd9120d5962d1ddb2f6d8fafe533c4fca79662069",
+      "BO-M-090103": "4538f4d2c9c7a82644d15776f3b96f67e514f436d0e48e5ec402c8c5f22c3034",
+      "BO-M-090104": "18794c2beb2fd2093887c1fe42235dc7f059b676506551f20b834fc91775d540"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0902.bin": {
+      "BO-M-090201": "3f1f65462dd422e0364691488486f54bdb642d6a0aeed01dd5eaea4e0f5e928d",
+      "BO-M-090202": "af16aa9330de605feca9447bfc1b78668a6e85a20714df9111ebbf3ee9a79a59",
+      "BO-M-090203": "00a3a32c706296ec8f10a9a13adade39a01a5b002946511f7a3d3c31b3e298d9"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0903.bin": {
+      "BO-M-090301": "d47b82a70fc3ca1248dbc2d3d3a67d18eef37082f2e2ebfe917e3ecfcf008101",
+      "BO-M-090302": "7dc3e038812359d5a974d296fd895a851654d55cbcd9be92103bd1e4e24375fb",
+      "BO-M-090303": "bcdb961cb2b959494e2c37d7052d2663c5aa719d574c2ac3741f2acd97da958a"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0904.bin": {
+      "BO-M-090401": "fa6b492ea1aa503cbd1858f7cd31cabe1c369e55f0b6b66ca6c785bcaa4532ce",
+      "BO-M-090402": "302a869c9bc71791a4bab07e603817a17023fb82b134a76a4b5c792aa54a2180"
+    },
+    "dist/data/europe/bolivia/third/BO-P-0905.bin": {
+      "BO-M-090501": "05c0328e69c2e27c9386603db546022c1e19b05e97390a8afbd984f4e22f0e86",
+      "BO-M-090502": "151a77fdbac8e167d2330762421ea5aef715bd1a845a48d411fda9a0ab5f7e81",
+      "BO-M-090503": "8aba092073622e0102b8381d0258031cc40c92e5250cd453312c52af73e75efb"
+    },
+    "dist/data/south-america/brazil-first.bin": {
+      "BR-43": "585780068a44e5a32e53c294f6aba21a94c2c59713be2a8a9ce28c59d51e1cc4",
+      "BR-35": "cdf31499dff02b594e07411e61a70be5d5df6e192a34ad1b8231a48adc38e12a",
+      "BR-32": "b397e8fd4d59d0170cb1f4c993d0f59a44dd2bb7622931d77e84eec1b4fbe763",
+      "BR-33": "d9c9f53decfdc595f63507c23be5e8306643ab1402336e8d76741d28f9b2d35f",
+      "BR-41": "ba81f64bf03d4a9640b5dc68b2036350d3b9c588b2b89a00bc79f2fffbf2b0da",
+      "BR-42": "1cb8db305d6823cec1d8912c9079aa166f3900ee6d6b0880efb30e8b5a8d0e27",
+      "BR-31": "24a9f595bd36d14093eb6d59614d666994c7434e0ed0485253965a32c6b81887",
+      "BR-23": "d27ad8390dee2f1f7395c858580ae93e5c6e6f8dc48c8892c68d0ae5393f158e",
+      "BR-52": "14ba49f5a8e3e02e34ec200953062f68da1bb850bc1eac719b5e58c74d525f08",
+      "BR-24": "99abf415d91623a47547f8716c40cc3124a912c816bff123c2af535b8cde660a",
+      "BR-21": "6aa839fd49daba59cd81280b612c9fa1aa39b7a917e72c6a7f6937a18f8b3e78",
+      "BR-53": "93d5fc9c1d664185f7c232c92d19533b49193d3bc0923086d0014bab4e906e45",
+      "BR-22": "b8d4ba2860e43c2b6ae60a9755e82f33c584b74b6b9b02342408a9c00a8e4826",
+      "BR-27": "7401e66a82e99ac1616f434d995097e7de26852895baaf13c21bd5f4354743bf",
+      "BR-12": "57f45f45545b67cee2ba8f30d4c0f179086ffd81a1b4f6b069dd0ce8514d365f",
+      "BR-28": "1d591e4e1e831f3aedba8e080beb8fc95e929f28a50859af8f011c659c73a76b",
+      "BR-13": "27f54855d062d8ae21111c31783cab5f1c2479e9c75b84feb78d07179dbebae0",
+      "BR-25": "91476a4a2acbca1227b20c1dd48b8b5a73cbca190a3fab9e41e056bcd1f3e534",
+      "BR-26": "27671ea3f504c3600dab22d0e55292273dbf90945322a2a81eb735f65eb971cc",
+      "BR-11": "195d065228e035f25413a828409986e345422383b6c462fda53769ba427d7d7a",
+      "BR-16": "9fb09c6b5b3bef87a6cabebfa345726474292294e30001093ecd4583e0f1f080",
+      "BR-17": "d5cd11159a5fd2f3189df8118ba3e916cf7859b2144f3c4f1aed8e5a3fcc8771",
+      "BR-29": "f8a11e9c27ad6a14fa142705a1b14b50aaba3359efe2ea529465b01f2cf5db19",
+      "BR-14": "0cf1b55c3e13db23088e352ea0522f4bd18a901939bcceb7db404e500479cf40",
+      "BR-15": "3587d36ca7d6574d644fef387ffa0535a712c49db14a215618d61c724d9ca56d"
+    },
+    "dist/data/south-america/brazil-ddd.bin": {
+      "BR-DDD-84": "bf6417f7bdbdddb3e3fffb7556cec0df3d3c90d00c1d12a8f57f067be90910e1",
+      "BR-DDD-49": "1aac2397f26651b1e07437c1a0a2d92436d0f130c73a516bc9ca0adfd75d31f5",
+      "BR-DDD-54": "7a2b3ca8bc8fd215c55b5d4f97399c1c269c14f9ca061e8cb5fe5cef61e9646c",
+      "BR-DDD-34": "ae573e860ab6cb322bea8d0a2bc369e54d231c08a15562fcc4aeb87ddb3b0653",
+      "BR-DDD-33": "fa9d6d8360b4471fb6efb4562f85f322fef4effc045665f41b4ec4d18878de10",
+      "BR-DDD-62": "2de8010d7a726753a6678173833967c8df53bfa3c6448ad77ee89ffab9306569",
+      "BR-DDD-47": "d3efd8a69ac095999120297ce0dbc89a8dabf98849a236299cb6dc95f92c43c9",
+      "BR-DDD-64": "0e103abfd82a4ddf47cc58ed0fbb3bc7cef1680776a1e3f8e4d062abcb85ec5b",
+      "BR-DDD-16": "072b9afe77f328656f7d550a8b3b919360c2992751541cfc7b7b3f955ab9f1b7",
+      "BR-DDD-44": "007a8e848f6e87394b4ff8c6ef929bf4956ce1fde68c499accc5d55b694624ec",
+      "BR-DDD-45": "628db25d3f5e00eced6a930982025833221f0953e4f6aa189a639e2d5d85ea9a",
+      "BR-DDD-74": "5a59293975aecbc23bae9a59c5a826f3f47c908e59140a427576dbf983c8f677",
+      "BR-DDD-32": "94b2a948418ad2056f9555a17b80e41330e0a24f830d61b190318a189a9e7f25",
+      "BR-DDD-89": "c6018fb6e4b220e014fb706b5e5f35debf94fcfbdc4cad48d72e6b5e4a012d52",
+      "BR-DDD-46": "39a2c6ed0dfb540c5b8a051c6205358e4bbc198554e8c7d7a6730a8b3f6145ce",
+      "BR-DDD-83": "c60a2b12a60072aecfadd95f6d5e2079561bb8a5ea21b7a2d3e9cffc334457b0",
+      "BR-DDD-98": "c44d7657e9a73b722309c4a38c89a05e26ce0e5761f7ccb181126e7aa3638c23",
+      "BR-DDD-82": "6fd9f80659473a6a5c83ee23b6ccad16461d6e881957cd4cee000fedb0ab0c8a",
+      "BR-DDD-55": "34b03dd0d0683dd30eb0e4d88364103dccc8f80ad70fdeffc45212fbe5412a21",
+      "BR-DDD-66": "528884290ae0e6841488e2fe790036c63d83e9c0e5aeb4f792304e91ac005d17",
+      "BR-DDD-35": "1a378581e89f3c00a15eb9f17c841175b45002f1e48657a99ba50538eeb08b09",
+      "BR-DDD-88": "fdb9b52f75222b5cd11c1af8b3bd4ea68b1e26d1b1ad0412ad817ebaa7298dd8",
+      "BR-DDD-18": "0ea0769d670b24c09d968c168a8122de0ba11511d8f2aa78dab5ace5fc7a6504",
+      "BR-DDD-48": "6104e896251a20ccdc3a49b56564ade13588aba93696bd79a9fea565a92fb004",
+      "BR-DDD-43": "3da95a67ff1dc01d66edb638a30fdcbb5bce3c4f5a43acb4e6d1c441863d7c80",
+      "BR-DDD-91": "a9fd43a31bb55a88d9871eb22c03e6d8a5c50d0c260cd3ff34096fa9cdb4201f",
+      "BR-DDD-63": "1aa41de441d03e4d26616216cf1075633d28d61f93ec0f14fd2b58acb524a587",
+      "BR-DDD-79": "c2016e319f506e8c30736825dcc2acc9fd0928d4ba6daddef51f092a1f60abeb",
+      "BR-DDD-85": "d9e4415c27485963a4881870dc1d743aced3bd613a43666664cc8c260aec67a2",
+      "BR-DDD-17": "434aa9299a2735b188c1afee21718097d61fc2f83ed2c09990eb094973c07cc4",
+      "BR-DDD-73": "b03abd2978b502a625d3b5341d6e99031520fb5768f456b04792049966127ca6",
+      "BR-DDD-42": "0a8f8a9fd62f8ba62d70bd1b65d88c737118667d4e1674deeb28d835e293298a",
+      "BR-DDD-51": "557095e90d90b891cbc0706821dc4db511c6d63bc87aa18208f889ec4450c16a",
+      "BR-DDD-31": "91e34f1e5629299ae3d4178a1eff98e6b5ec0a7e26a8bac2ecca3b08a478ddc4",
+      "BR-DDD-99": "f1567432dcc2632fb6f79f38561dd07b7edf4218541204435d1d697ad136d318",
+      "BR-DDD-95": "473aa2692978c154c6d8334ad8207a83647204811bd833f8ba9d415a7010669a",
+      "BR-DDD-86": "28191f8a484dc8eff2f08c291675e4d2ba6923c5e258b759454e97f589a35c44",
+      "BR-DDD-71": "db98b0214c9f7b329e62d33ef78e99556d23a18e1b1a21b60d48b6257170f9f0",
+      "BR-DDD-41": "392877f44d2152fc6cdc6fe4b1bf5266a1bc729387d2ec9a0484175d999fa930",
+      "BR-DDD-87": "6b5676e4c6aae57ae5f106434b288c322e3b2ffca25b2da7f2ae9b6fb292a9f6",
+      "BR-DDD-22": "99b1ba4d8117d7126cfaf78f904231019881088b5857a02bbda1fed2a09c1841",
+      "BR-DDD-94": "7892a7a24f6858a97d56752512a8b8dbc0c9f9f748f114011ac7b31204565810",
+      "BR-DDD-15": "2622cd481bcc6c145c43177e3a996d5286a43d7a6d6e7279db84650fdf8587ac",
+      "BR-DDD-77": "ef86b26fe3d2500114e581aeeb8317a6d8daa6d58d927c3fefc69caf2b6d8d83",
+      "BR-DDD-12": "d74e64bfcaf4310ccb8947608b5cd87568a34a7da14ec4b8bd03c6681d09dc24",
+      "BR-DDD-81": "e9cac25d96e048427477f7f96caf3ee2983f7d32c75b88eb506a20e2d2663bb3",
+      "BR-DDD-97": "ee15518e7492166ee4088cc704d08874f0891fa202055cc948f9e172ac9ea92a",
+      "BR-DDD-13": "626c1fef8b496e7f4f49543c794f51672faf8409274132ca252bd50932cd5dbb",
+      "BR-DDD-21": "1b320c9a3a1e926fdf0eb1fbc8734b40072d50da2da1713401634cfd39024018",
+      "BR-DDD-75": "c03064ca59780fa961f68c1942730f8ae9047e1ba5d584113c92e9a0828a64fd",
+      "BR-DDD-14": "77762d95038d1fc26f61150242e069c9eebbd9c872409fc73c5a15ba773e1172",
+      "BR-DDD-19": "7bfdf3191f6cce86c18f817d5192e3bae66c0f82ae5035f37ab8c20cdd924838",
+      "BR-DDD-37": "c2acc29a0034878122041a635d0c4535f9ad27da0a6b85faf42d429b48650e05",
+      "BR-DDD-38": "20708dbce464ca7f2b314dcdeaef750879ef4b88fba432c2582c3cd5d66971c1",
+      "BR-DDD-92": "cfaab6747b27d8a60ccab7053b98673d2225207596cec91bd3b642f14b8ac2ea",
+      "BR-DDD-53": "78d2dee49e8cbb0c443a0034725c2fcb1dbf7f5daf0a2f4c71db076c4595b57a",
+      "BR-DDD-11": "86cae8a159ef5e962656d6c53c5f57c1f98cc5ff603d22129039cf4e8c15a6c1",
+      "BR-DDD-24": "c261af4b5d9b092007314b1701c697b75c3ed5051cd8b36fee6a404c4b01a675",
+      "BR-DDD-61": "92a6117fc889a04a43ee8999efb6f27335d6a6ba241cf5d5647d11fe1dcb93fb",
+      "BR-DDD-93": "ec915dc8ca07cb102955a27940b5f81aa6d870015db9bd4e72e0b9bae0301206",
+      "BR-DDD-27": "3ce8822d8b3166871e751711a9dff1dc4f85539bd380e0f7559027872c05028a",
+      "BR-DDD-28": "aa1ecec95a23d8e6be1fe6407682a23046a77211d57b712005ac909b403c057f",
+      "BR-DDD-68": "a17237d534edafe2d99b7732fedce9ef03d2a59032982a0937a19e2e0f7a5a0c",
+      "BR-DDD-69": "9df8b9ef3cf4b5bcd9ae593ac3b97ded421b1697c4b3cd6d909ab1407786c3b0",
+      "BR-DDD-96": "4bcd0996f23d31464ba10c11ddc4b13e27caff3d01bc0944b09da85f1a0287c7"
+    },
+    "dist/data/south-america/brazil-local/BR-50.bin": {
+      "BR-5000203": "ebe6bdd5735a9090d76acf9cc406d1b150a949f086f9b1f258fffdac73b5114f",
+      "BR-5000252": "6fd02a7043de509283657d8da83c9c88fc8d6ffe43894e5fde67b7a3e7fd0eda",
+      "BR-5000609": "19a26ff01cd8dfbf79a764b7ff0b5a784d9be930b75c0e1726e4c4bdfc5382f0",
+      "BR-5000708": "4c0773167271fdca38a2ad069037b334beae0cbfe147f2b6e1cb30eba9746fbc",
+      "BR-5000807": "8af4650b9f7a311cf11936e3b39b0a558331a4052c0ba967ce996c6cd1f60c35",
+      "BR-5000856": "c05e81f311e6caf1a31284ecaf93a819774504d24923c2269faf50885a961b4b",
+      "BR-5000906": "f660c170dc811beff14bf14aac688ea609810189b5d104966d1377807bc6a28f",
+      "BR-5001003": "722d497cad1601372265ee3bdaacb43b18f2fd8b3102b1c45505e0b5aae9f3c5",
+      "BR-5001102": "57fe93bd88e005eeb884d9757f83f86af974f0ec1d9c13803f32f400e046715c",
+      "BR-5001243": "c15c024775e09a0e008d203222addc05aea76c70227b2dbf27d9b4772d542e3d",
+      "BR-5001508": "01ea15c6917188614fce147b017ba958d3e93c6654596980cba5070e357645e2",
+      "BR-5001904": "601e62bb37c61125226dd0c75bc6d246514f34ca6631b8e37107be2c8840ad68",
+      "BR-5002001": "8587343d7215a24c6620ce5514b7831e296a4b7b9db67a7713e4d41f060b6f0e",
+      "BR-5002100": "a289bdb714f0d1da3929f853f616054869bba3dd9fe03086417e9d29f994b6c4",
+      "BR-5002159": "369683d09ae5fd67cf2c7d8aa0ddf76bdd340be541ce86a087fa8d7a5d613d77",
+      "BR-5002209": "a8335be1f489f88a39d3aab2d85be64f6eb97d1f2e398f13d588927980aa3630",
+      "BR-5002308": "8b38a5ba59fe41a93fdfdab496f8e9c3a505d6b0acdd5935e6b244a2bdf29889",
+      "BR-5002407": "ff043b35dd4fb076c8660e5aedf5f96c4f3a1c5a3ce078a1e7e6cce945511ccd",
+      "BR-5002605": "37a3191212ae2018215d766d2fadb734267ee2cb7e8fe842254c6c6881e3e201",
+      "BR-5002704": "9e33e07fafbd7e85a0c2aac9aa645c604239f722b4cb1ec8386495179aff6e0c",
+      "BR-5002803": "0f8e0f1729ad00d0c80b59d629e5b711a35f1e2ac605ae925d092b66067d9a97",
+      "BR-5002902": "ca68a94448ce4d2eee567cc1862240daa88dedff74c19eff6168c2a9167a8de6",
+      "BR-5002951": "4dd3cfb5a441e8a71cc822640008773a17312bd533783617981260045ce2cbec",
+      "BR-5003108": "818ae8bbdf0d3d033972fb8974a7671bf30044113c3bb3ccd7484482c6394238",
+      "BR-5003157": "03d3eda0cdca5968d3edf1db6799b00baeac4ecd42dc352db17d282567afaa6c",
+      "BR-5003256": "d7c1b5f8de1708abf9c3094570c38b4d64664ccecfbc26aa1525ff8f21e49c22",
+      "BR-5003306": "ecae2d5d2bbb50425aeb21a23be08cd9ff1d44ad9796a0c37cd8225ee611c83d",
+      "BR-5003454": "ad23c76be7479a99720f7cc151277ce35d220f1916cb37d8e03cd2084c81f84a",
+      "BR-5003488": "f9d04cb0fd1067be9bc7208f74480f0ca0e929750a075a818b0e62c911bc63a3",
+      "BR-5003504": "244b66eb1fb898cb8c1e2a4a06caa21dea7ee3d7c1b0c6f0ea53c511a6c56cfd",
+      "BR-5003702": "ed8ed681ac42cbbc65a4ad2e74a34b7aae3a2ff6896690fb3d17d9d34dce12b5",
+      "BR-5003751": "15ecb8ebc71e43bc482cf5a1b8d83018653788ed85d4e3ae6577607fe3ef8709",
+      "BR-5003801": "426131b50827eea892548eafcca676a3609c88f2dc23eb773be0fa9cdb95daa9",
+      "BR-5003900": "e3d5f1f7b2b3448a0d07f5462bdd76b0ee9fb892dc65f99739aab200acb6cb2b",
+      "BR-5004007": "f0cd1810413074f10c3619affeb58a4cd11c9194eb5eaaa2df3f4d455bb40518",
+      "BR-5004106": "2949ec53981651748da295c7217ef26342518461d14c2aa8f772399279b51534",
+      "BR-5004304": "8851d106650cc2d263f9a360c650300e913426d7c963df43b8bf7b05e661246a",
+      "BR-5004403": "5041bae6abb6ccd1ebff012ea33ca640e2d088e7e342959c8993588b1c84f6b9",
+      "BR-5004502": "508771a09f8b9458ddfaba867d9b235fc073bff5414defdff769a6cc6c71baf4",
+      "BR-5004601": "d44af8ddb1e556d5c34615abedf129fdcd60ebb6019cdf8119c67a75f9a74688",
+      "BR-5004700": "a975d3f85e53da1260cbbe22b997a6ccefd53425dc1ff4e83299472dec603ff4",
+      "BR-5004809": "77b5a01241129a9b4fa2b6910615ace3845f940fca56cc1054ec8422960083c7",
+      "BR-5004908": "8b7db825b9a91e49da53883ee49da235c85e76a4aa9b34ab3e678c5357d7b466",
+      "BR-5005004": "9f2e43d0e9c8a23fa3064a5e8776883c1b207608a299cb84357f28fdb5de1a93",
+      "BR-5005103": "99cc788ae3ab3cfbd952ce700241b3bf773a3fdfb5e4e42e8b6448f143c14872",
+      "BR-5005152": "92cb7dece99b2092d32d8ee8621a5cc7af9b1afd90f130442deaa29f3f05d279",
+      "BR-5005202": "815fb47513c5b53e9d83888743cf5400ea1921a8acb7236bdfda07554b0f1837",
+      "BR-5005251": "8142f8f0eafc6cd740b2328e5e228224e8574688921757f8d7d64c349387fcbd",
+      "BR-5005400": "f1e74bc2637d315eda15810820347ed5ec5e90fbbf0f26f33b6894b6fa477080",
+      "BR-5005608": "dd2ac5a6b7018ed20cb6435ffe5c867f5d3d8a6edd7b0e7e29af7f970cd555b4",
+      "BR-5005681": "378aefac5387b4359bc7bfb08e50cf85ecdf48ef70e76d2e82e776e2f6c84fbc",
+      "BR-5005707": "5196541acc0effaebe5bfcf2674ecd6025e62fe82b2c63c6af9505d15c23276a",
+      "BR-5005806": "cd2b8eb3014a49a82308bd58a72243da6bc45f5ebecc44296780ecac2d32493a",
+      "BR-5006002": "e5a530df61108df359cc38701dafa5fcfb0bf9e5e539d435f241a89028deb9a9",
+      "BR-5006200": "1cc1f29fe31860e9d15a2101c74eaa5893babee5776b25695816b0040323294e",
+      "BR-5006259": "eff7360610d324df85de4a7e1aaf771eaa7bffb852d0dbbacdb786cd9fe4423c",
+      "BR-5006275": "1d5e894151c97e6a817bc3dc15c92f402cd6b537ee87f7094f1a3a283f63bf2e",
+      "BR-5006309": "16bcc027835e2cbf4f2c413a57d0a3ce3522835c604173010a2a96d1b0236980",
+      "BR-5006358": "6ea7574484396ef738b5bd8318aed780a6f7173ab511668090dc278335a3e94f",
+      "BR-5006408": "f0f822e223629f2cf586901135977d7d86f3a31b0aa60ec24e44df47a2e5659c",
+      "BR-5006606": "661aeddae28e2456b9f72e6b66640be41d659f628f057329d0efdb43ec3ee779",
+      "BR-5006903": "93f374cbdfd38ad5d8c4cbbca656c919c7b8ca2010bfe24d1a3a4fb6c96293c4",
+      "BR-5007109": "a29cc925ff319ae450eaec52b63af1cd3b8b4e5b6bc7939c2faae499acbc5b83",
+      "BR-5007208": "d9194d6e684c4275e8275ab50a680de878723080758112f132703dcf10199210",
+      "BR-5007307": "a1419b78188824220eca8bf2088268e5b4e429aa7663021c4da95e6ea99ddd29",
+      "BR-5007406": "72d293975db4123024bbd81c6f48e5d4fec3151a450c539e3022ff3b8705b532",
+      "BR-5007505": "d6c9721ea4ea3297616c70184172e86d1c62b765e3dd2eb2d6ffae474de4420d",
+      "BR-5007554": "634227c5a58f70c286f181a5738e0f8af0d5095401b5b03e90b3240dd7ba94d5",
+      "BR-5007695": "d78f8ac854e0d034f11d4a448fb959ee5b5ad2798ca0490d35ae297202e3960f",
+      "BR-5007802": "94f29a0a319dc3cc23e69eb67d35185eda226af611314661b30f14ddd248d35d",
+      "BR-5007703": "91df08e0ba82b96cddc2ca7513c8e7bd045afbd0f74a5c16102b2d2a879705e1",
+      "BR-5007901": "0f1af72c6fbfd9895f012c2241f32fd548b660a81d8f2b59d222192b08b7b1fd",
+      "BR-5007935": "8cda4d8b8d5bc85437e8d746c35661440ca6b8a1218be9260f2354fe591c6264",
+      "BR-5007950": "62cf2a13b857654433106b128e13aa82b585404fc1a0bfa072f1f418ba8e9bef",
+      "BR-5007976": "7196566a30bb9d5c580bd324674693a3931b619912ce20654fe2e86da3d49cf2",
+      "BR-5008008": "e4c52c2b7b311f6c928451f33f87bae94ecfe317005f123ec088cb8ef86d1249",
+      "BR-5008305": "590a26c28bc07f1a2b4a4b660422ce245abdc45273d8e6db57ee75bfc18188a1",
+      "BR-5008404": "a61898c25a5d8d8e2c0ec070251cde122a247ec6200e2ac8b24aec85e8306867"
+    },
+    "dist/data/south-america/brazil-local/BR-51.bin": {
+      "BR-5100102": "ee156db6fdb376398cb9c3ccefa6c8c2eb5aaa8fbce53f4b9d35a74d77160eb3",
+      "BR-5100201": "bf269a0ccf105b8bebd675be0d8dd2ae813e0393010ac3eb55975eb82f240324",
+      "BR-5100250": "93ced09fe2995ea9d76dc0cdea9a5992fa29af9ec6d97f3ef2b4a6c1e19f7fe1",
+      "BR-5100300": "e630c8b8a32feed5f32ede7db730969957f149f651db8f131776fb13d035c10b",
+      "BR-5100359": "49eae9b8e9c1dffe8c8045d028d36a31782cf5bdb60a52cea281c0046da94e15",
+      "BR-5100409": "f64d31c52efac10496569252fd6eaa8bd064cb93cd4f081be80c336dcbcd88b6",
+      "BR-5100508": "680e11ede56e96d5390487c3b2fe08066745df6ee2ffe5105509a4427f58525f",
+      "BR-5100607": "70a3aedc231f81fde2b56b9c6cf17e97820227b5a19ece9b6b8319e50120d4e6",
+      "BR-5100805": "edae91306c9b837159270c0c3c4857ef4496a6d32e8c1435360c9cabd08eea99",
+      "BR-5101001": "650af6ccaf16030049bbc6c1f547fde837221867cedcf54bd843fcfa7aebda94",
+      "BR-5101209": "c1dea3fa8712e572f75064177c4dcd2844aa631d69e0ab342f2093b327f8c97b",
+      "BR-5101258": "65dd6fbfd2d32f8aa1201bd8c644a5ea15e9ec30c587521ffa9743c704233523",
+      "BR-5101308": "94e5171b66033ac7b0b749c966c9464e3beca268c8fd33d7d09959cdb65c5f82",
+      "BR-5101407": "71258e003bc668065fbec5e3724e6cb8169cce9742209f7afd047f34a66fda0e",
+      "BR-5101605": "33c8abca6bb2335c6053401af95142274849e120cd8b4f2ede0f12ea96dbd93f",
+      "BR-5101704": "7c8a04713f3f1c3ccf66ab82ed10d125a184861938479803622d1aa4c5785bba",
+      "BR-5101803": "fedcbf0fe470290ddf6c78d8e567204da12fc86a00ed62b9e23905386aba8e25",
+      "BR-5101837": "c96672bffff42a81a0998d903a03ea3479f492ee15acaf7e356170ca1028d70d",
+      "BR-5101852": "d7c77e31f0576d4250b7901cb6d5a59d8d40192ab6d2ed618eddc2472f332450",
+      "BR-5101902": "40504f057958a10e88d9c63523b42eab88bcce6e9efe84ee9e2833fe7573b6ec",
+      "BR-5102603": "af204efbc7b7c8bf92b8fa5371e48dce211c0617c8ef1cad7e33480e58209b3a",
+      "BR-5102637": "cbaf2f02d7c5937fd719a7b9d966bed0b9f5be2bb306a99617f43037809ab8c3",
+      "BR-5102678": "d0d1835b50d97281b2c273ccd720b07832b3c596acea8d684b8df15d6680a5fb",
+      "BR-5102686": "cc7a7c02cfb8a644609a22b975c137ed2ef964323a05f608dcae86575426aa59",
+      "BR-5102694": "9a802290f573d18907d5b7bbf79ad43ad6bcfdf3ad388a908572d014d87c6f97",
+      "BR-5102702": "28fdd931a9aaa1435312f7ddac96a442a79ad64aa8deddfde8f39353bf88e0ad",
+      "BR-5102793": "c022b6b04df01186b9e135c6329e751951ac4844d2ef93b36222a910a557298e",
+      "BR-5102850": "80e8bab8e128ffe6c6016f83dab4f9456b0b72e602cd9b979230e036d3b975f9",
+      "BR-5103007": "5cae984dfcd36653ff0e099a7bde7ca1b6de9d1a199e254508dca958a2343382",
+      "BR-5103056": "d9792766ac3d34cc3734198d49f5f8d38a44472fae18b00a86594ac3c426a1e8",
+      "BR-5103106": "38117c0226d4214610e1f9a1330317592b2d803b73dfa9532bc0965d2306749d",
+      "BR-5103205": "1d0263967fd4e6d32bbf07f9a1fac2e4c3affd8363f51a33163d3728c3272ade",
+      "BR-5103254": "abcdb473e0fc26f7ee7e253705a1b53efcd5244e77d81f937d256c3f221745e5",
+      "BR-5103304": "3f29e4421ebe101dcc5fd4a6a17661765436184ca86cad3d9ae9be0214389be4",
+      "BR-5103353": "297a788f62a1c1f8280f039ce8af081a0beda18998ce236b4f7b4075ef29a5c5",
+      "BR-5103361": "e0a38d2e194b0f9dba7509bef9034b4791f252ec656f19b80ba2403a5df44c6b",
+      "BR-5103379": "2383cd379a83baa03485a961f95889d7a2d006e78e1b1409f4c2f98e3319007a",
+      "BR-5103403": "1886be2c69809b599f1a4a8a29ae2da284b90d55c96ab3bfb6453204c99d95c3",
+      "BR-5103437": "6d9e3b83fdf3473b6609c5d82d3586034857eaeb16c27415d5cb7c6b97a7fb8f",
+      "BR-5103452": "8e248e90048f8f60a45817266c97ec32fcd7e00da702f531d370cf3253d97564",
+      "BR-5103502": "51caa5b3c5195c846b41f284015ba9e1e82f91712e040cc58eff9ffea3d1a189",
+      "BR-5103601": "e27f7108a526cfea5dd811fd1644198921c9d24eef4defb46821d3a731dd523d",
+      "BR-5103700": "2fd239a3ce96b8989248b3c220b67bed543d3b7e407eadc77e5f232cd65042a7",
+      "BR-5103809": "5fa39f9f03f926a6d9eccebbeaaefc88b991e490be386f32ade653ef57fd5bf4",
+      "BR-5103858": "5a703240ca200ec4b3024d93f73967645f05e788e741fc1e11529b4b196927d2",
+      "BR-5103908": "3c5cb8c15e2e417bd9ea4911ee4fc55baf2711a0d2d08469b8d95b7526edd2f3",
+      "BR-5103957": "3fafcc0cf4a2d803adcd4db2bff880b17ff897e83beb625883b218a6ac32cdb7",
+      "BR-5104104": "4cb857e397d837ae9020466f26b03e50f3c13fcd8aa7c33e6dad30d786a90d52",
+      "BR-5104203": "ac62fc9acaa0e46b342096e366e0924fb4851d2d3f7264fd09a659bf195ea325",
+      "BR-5104500": "63d0748c4f4b57174c213bdb25b949bffbb9be9bfb4db223de4a779c29ec86e6",
+      "BR-5104526": "62828d0ffadcd6948a7dc793220dfc2f7212bbbb83ca6033245c643916340453",
+      "BR-5104542": "a3f29feb38ecb3e83943df0cf84285740e4996ecc49c768a9beb569f94f8097c",
+      "BR-5104559": "4b3cbcd989d3f65848f04ce6d2458a4b886f1eeea89b8a9ff9642f931cfd3e7d",
+      "BR-5104609": "b5e7c0fe34e0dafa288c6a91f75d0e14abe20dbc149f770ab51e8acb7dab546f",
+      "BR-5104807": "aa18c2248ce3adc4e23f187cf559c2c8a2b67bae11a04ec106b8a9f7b1e9be9d",
+      "BR-5104906": "1e81d921d73fe2ff6fc2586c18096e3ea167f05a2e99e1761d8c6a54d39cac5a",
+      "BR-5105002": "61697fa2890b0ea31510b9e2e1be39f7732dd16fee6adf418e44313c12b51e1c",
+      "BR-5105101": "1712a3c67f0509bb8d70a6c3e92c3cac2416ca1c7dca0c1787870abbfdd942cf",
+      "BR-5105150": "f87622b5a56d9a243b87409151adff2c5aabd2311e9660dc9551ea9a2cfa3bcb",
+      "BR-5105176": "2a1b28a0737a0c2e3c1bc6836e42b10dfca667b72c1d45725d57b99e9f5631f3",
+      "BR-5105200": "eb8d4b87740c930dd16e07845dd99a0af3045819ac34f1ed3faa3d711c0f5739",
+      "BR-5105234": "5411293d791481a90b85ac3e58d232bd6cba22f2a9c07c752c7097dfbb565f3f",
+      "BR-5105259": "3810aa5d4fac7dba2eedcbdef3048396dedb881c19b5b7e2157f57c04ac4e4b7",
+      "BR-5105309": "10cfeb1c66af2649d30c21db0220b92f95e90276579370756af7a891dbd16c10",
+      "BR-5105580": "33bff8e0dd97a6fff01ead00c5bdfd90f3ec913964f2bc8f1e33b7ad9f4b1691",
+      "BR-5105606": "46130b00fc3cf2692317710778636bdd9bcab7e55fefd4032b767907d998df1f",
+      "BR-5105622": "7c10ff4174a8ee110fd58c971acffb32f86d9f26842edcdaa2d8a81beb6c2d35",
+      "BR-5105903": "fa556feb94983cb41baf2056de94106e1c062118f7551ed38e17718da8d1efae",
+      "BR-5106000": "3e9418696a310ce48d91095ecf998baeda4019bd2cfd96f666224f0ec094ea64",
+      "BR-5106109": "9d71bb59ffac39e4e974d402881e6591aabc34fa52c338100e87b68e47d8c00b",
+      "BR-5106158": "09aeac2a62b9d1777d399406ac65351c27bf9800762a3e89d15567778a1f6d9f",
+      "BR-5106208": "ef807bc71bc086e6db5f30959e06336efaf69499277efde50e1d4ecf46291b3c",
+      "BR-5106216": "3b207d1d570ba491324be76b274069e4293465772c899286b635f45f9b2dc45a",
+      "BR-5108808": "daaf5e79ca179123a335f171eaaa5a29fe90fee7bb384d6df69a0a3e65687fc8",
+      "BR-5106182": "c1b1261ebc16b2adfd0127e66e2893319882fae7639ef304a9e3658823d7e503",
+      "BR-5108857": "e5f531640319952d159ac9365f4ca469f91d4e354496d328c6b732ef86c1a793",
+      "BR-5108907": "b550f5d34371dc529ab34024ff9a0d0dfcfeab134f629c7b36cfeb397f7eaf2a",
+      "BR-5108956": "9c4ca8a8c812f3ceb57070f366b11a12ec8f6be18a94cfd7c8dd74b9c564f9d5",
+      "BR-5106224": "5f8d7185b36cffe42e987acd5554211346700c32e80130ed5bc7fb4d570eccd5",
+      "BR-5106174": "c8820334d055b0acbde5f240f9d6ed26aebe8c80849c344312bfc913ca0a1268",
+      "BR-5106232": "1853ea2b0c7398d1cdb7c843897ac98918d5b842e382d83ad8d2e282adcb190e",
+      "BR-5106190": "108ae43907da1b172891f21e42fae372a1a82146931a273e11d551ae6965730f",
+      "BR-5106240": "3aa86ddcc00a447f327f43c2033f3ac2f25fac14f6a9bb1f3ddee3800f87c0b3",
+      "BR-5106257": "a7594060c96c4405de1a0ee06ab0758fed518a7490f8b883105182906820eb74",
+      "BR-5106273": "ec42da6b443d439783473f8653920b2fec451ab35db54d83b32cb8e2e614061f",
+      "BR-5106265": "23c4de6779317ea805a235b36c0c5cb250b611b2c86206c8767db80e5667d9fa",
+      "BR-5106315": "a6a242523fc89a71b4a7a107d98a188e4b06b64f8e81644698c77159828bfcbd",
+      "BR-5106281": "7c8d15ed35ffd63c76a53f1984e4b9e2b273450002f1dab554dc5e475b3a8e98",
+      "BR-5106299": "011015545d4ba078305568ed021e267df595a736c21b52af8b3c1546992dc1d3",
+      "BR-5106307": "fa7ba990958aac4fdf3f6314c01dd3565b5b388eec2bd446e5982d11f886eb17",
+      "BR-5106372": "9f5e2a77704fafe377ec491d7d68686ccf7f93772d33720138a2022a79520123",
+      "BR-5106422": "db4366cff3a9e15359a247740322b65eed9ea45afab6209c6799c081aa36a7b4",
+      "BR-5106455": "1f76608567ef2f5b4971e9ec188fa6abedc371c8877a1a5251f57cbb89a1fa55",
+      "BR-5106653": "f5881efae0871bfd19643df58534e4e93001fd7ffd48be388b4d289416e86951",
+      "BR-5106703": "ceb2eeffe9693fe5006585931103ebb7068e1131c3340b3a13209df4aa07e684",
+      "BR-5106752": "9fe12e13f8725d72cac26db3405f1d7857d881d3ffd91d07de9b9e17f4b031c4",
+      "BR-5106778": "3c74cfe016964969dec3cf31f5c03d7b5a9bf550bd17b06bdcfc4dc5ea985113",
+      "BR-5106802": "7aff8b5d7a80ae68e2f8d834d11cadaeeab0cdde8e8e638c5614e0ce2db42d3f",
+      "BR-5106828": "b8fab225860c07816989e49d822f4a38e6a7912b4e4403a4b3bdf420f5670e28",
+      "BR-5106851": "c92c6b780bca193c8e3016fbf73f1b57a2354a253bd4472cbc100fdb2d90d9fc",
+      "BR-5107008": "a672a7b956d6590dca7b2d7b10b95d61e61dca3010593ff4e5432427c34c65b2",
+      "BR-5107040": "b22fed97a98a6dce243fca288e4d6f203313105b140d24c0b2bcbd13daf96d45",
+      "BR-5107065": "510981c5117f39fc301342f95ab576822bcad591d8f823a2519d862110467d65",
+      "BR-5107156": "829ba33e61f9ceaf7311a6b89b9a935a7e84532c04fba7c3478857624f17e775",
+      "BR-5107180": "0eeaf2c2aeb28cc49247c9f909fa1d5ed08d47f9a7708b3f8542b8b748852b81",
+      "BR-5107198": "7464adc9d1382617e5dccf4802474498ab61e9faa87adc235d2237fcf6812ab1",
+      "BR-5107206": "2791d5f7cbf4f2d75453e95bf58174298574ee8ed85a2b57973438e27bfef397",
+      "BR-5107578": "569789a93bbdf4cff85bfe8a1b4ff17367450c2b62b4a6a070ce14e714d17028",
+      "BR-5107602": "9808304192ac52ced2d049d704c4ff351c781ab522746c17e27b80394095bafb",
+      "BR-5107701": "2464804d9575736d557f4a94c0b2e6c99867891a0410843e4bb1cf14f0916839",
+      "BR-5107750": "94962a449f40200ce931d44ed06bdd19d3497e81c2e87a50711ee7b96bae83c6",
+      "BR-5107248": "8259bd0afa8ee4b680151e1a595e28812ca61f2e6351eabdfd5ef22c61484643",
+      "BR-5107743": "95cdf6f369e618558c830eec5ecfe5d1c2978817e8f017e67bead8c92dff838f",
+      "BR-5107768": "91ae0a56a66df48d26cfdbd21d6efa14ab2fdbc65027b4026af456fee8d140de",
+      "BR-5107776": "8cf641aadb60122483eaece2f2073ec83f415295783b0f84d366cbdecd2c3e76",
+      "BR-5107263": "a4dba5f9ad2a9ebbdb27372914ce43c73a6dd00bd5cef7d7a359f3edfb439594",
+      "BR-5107800": "459c1db49fb105c4f1fb0086d7778517fcac9fd66c5587a3f76565fb05be641b",
+      "BR-5107792": "f71ad7b69eefc95e2e9467028ccaf4680db7349513dd21e9ddc5002f1e40fc6f",
+      "BR-5107859": "7b4869c6e4be99622f74de86dd979a865182554bd158b712a371af246a841052",
+      "BR-5107297": "9c5e517f277ea4165cb7a72549b256206d70bd5d480f206a02b4470ab347e6f9",
+      "BR-5107305": "1adb3a8bfebccd5683fed615204331ff063432d2db60304a39b9c8a646639b50",
+      "BR-5107354": "56b78bf9f85c1b3a3b3f2e04f6f570ab8135d814eaa63457574fe3a8eb8a8846",
+      "BR-5107107": "3ee2599eb13d7977c062660e59cb65842c0e205e92a4b2723bec45081ccca9ab",
+      "BR-5107404": "4cecc441e53733cc0fe54169ec3c5946a66d085647c27dd8bf471d56f35e69b5",
+      "BR-5107875": "4dcee96eb5009f64971391beb76a687afaf2e62b75199452274b92f318c20ef8",
+      "BR-5107883": "717d95609d45842b89ebb962ef6fa7e44825a73b714c8c41fd4d5c375623acd2",
+      "BR-5107909": "9e357e01da01760bd4f764c43fbe885a29a422c622b8f94c73ee572c4670cce2",
+      "BR-5107925": "4683105d360459d64d12c5eacc0868b07779d778d94677a8165b3bf86cd745b5",
+      "BR-5107941": "4db7babc86ba0e8be4d0829a6de45463e9a3b6b196dd270550677f5639bb3641",
+      "BR-5107958": "8d15ccaee4ae2a0d53149484428e6d467ef7260b148771c6bdbbf078cab4b641",
+      "BR-5108006": "54303e51a43f0776dacbf8b6b4b37c7a8e68d79abd4d605af46ed864a87b9162",
+      "BR-5108055": "1c195edd5a64a47ca529ae76914dd3274a94d636220afa526455e3abaf7d7171",
+      "BR-5108105": "f10f198f92ff3b470209af6c6ac4bd50f89e2afd75df4accd7352bb47e950963",
+      "BR-5108204": "7d580765c06b806d24d381447365514be235c43368e9e02ee348f807a10a80a4",
+      "BR-5108303": "2d8c5756fd5e68d68358ce779a2c022c075c4cdfb17d88baadd9fc1f6d00b9f8",
+      "BR-5108352": "22ce623172d4c045abe93c186cfeab15157c0ce1c942787db688bfa8b5d1af94",
+      "BR-5108402": "eba00664690e1be6223499691efc9b7ca45055dda77405fa34c94a4c5abb18da",
+      "BR-5108501": "48fb2b30cd3c28fddf6a2aa30e62ef4e4331343ec58b910353af78b2830b31a6",
+      "BR-5105507": "44f7e873be94044a7caed4b21769d9f27c75ccdd1219201c378d487c71c59b00",
+      "BR-5108600": "65f9f63119ea4f49f8a99170411b14acf3a36496b76f167af697eb0c0ec09ddf"
+    }
+  },
+  "preservedFiles": {
+    "dist/data/europe/peru/first.bin": "2e1221bec393b49561b6199ba730de57358a7f002fdb2568fcc9d62cca6f160e",
+    "dist/data/europe/peru/international.bin": "5d74e7a36bd3b9d67d0513078e25213930184c9ac559c86fdb96a1b1bae016e2",
+    "dist/data/europe/paraguay/first.bin": "e0efd94b5f4b9db17942b5797a72fdac43032d0d0873bbf251d62b2a60515eac",
+    "dist/data/europe/bolivia/peru-frontier.json": "d3e5d8da0b1b1c85d1b166294adaabf5f5141367c71f76299da01460bdb7d2b0",
+    "dist/data/russia/first.bin": "74b537afabe55b588e503583227f2a5317bb27d7e8d0ade0c6276332d09dd40b",
+    "dist/data/caucasus-frontiers.json": "2dbbda30282616b34e401afa21658bca1c3beccfacbb7896c0010b825d0722fb"
+  },
+  "preservedWorld": {
+    "__background": "519bbae710dc8ac3262a2e16349892c5e3a698074f55633b036a039963a8b6f7",
+    "belarus": "595f5e6b7beef127af9f5bbe6ae60e10f3f327fba0a1921b8b0213d2df449c74",
+    "romania": "33314a4ab108c2bf343ff16620564b5fadb729533de06762f68b9ccecd2c4f86",
+    "croatia": "d0d98481d19fe7cbee2888234dc0b15371af90e6f21dfc7f9b184a30180ce0b6",
+    "bosnia-herzegovina": "02756ddc9e51cb579b2cac219048eb2f27f7e464a6033995c07139b9ff8c5438",
+    "timor-leste": "cabd72f1aa225f668655418f6263b8d55a899a48401d6171e86da5e7dca39bfb",
+    "brunei": "0cd8e1b22031a9f450f54de416d5846693587e73675355182f1398969c59dac9",
+    "malaysia": "bb5531529c44c583eea76aaa0918ceefed8bb4df0d1c02dac076e30147511dd8",
+    "singapore": "8b1150933cd02d4d08f3df287ae1229fdf10bb8798cdb44843fd03c6c7375fd7",
+    "ecuador": "cdb02c508865c09acf7938821635c33c8b1fd94eb7372ab861ffd67c46e468d0",
+    "venezuela": "d0be7992f097bdc5ffa272ecf0179c7a2954f136e93bc2af727cdf0d95475f0b",
+    "colombia": "48e94090334ce90248451f75e2b5f66d0611aa74630567a20e01d809e5dea969",
+    "uruguay": "36cf94cf098f77b591f50b811c9bc02be7102209060acf79666b0261ce9ba298",
+    "argentina": "a32c29367199a91a82fce044c9d192fc51d6184610286a3f5541caea0d0520d1",
+    "south-africa": "b49d0e05c6da2899ac005388d6c02a8f153417dbebe3b1f582e7c004dda42f98",
+    "cambodia": "8f1981c0adf5759106fe899137d0f70da387dea781f04beacc2b7ae618bb7691",
+    "ukraine": "ffa58bb9fa73f3aafceac723531d86cee487f93a803fac32cac1ddea745d6b30",
+    "austria": "2d969914b0be626384a1a8bf3c52c31fe4e5a29bb7b8fb52ff5690ab25c788c0",
+    "hungary": "b0ac1ff7168075c043f3593599a53238bfca0f8970a6399389118d0c38411f68",
+    "slovenia": "2a5b3527d854d6de107a74654f4bcf6bf03b7d1e129567836139e4b9a8e24402",
+    "nigeria": "78968531d31b29e6db67f89f10460d1396c833802af3e1159fbf856a7bd6fef8",
+    "angola": "50ac9ccbfd9cebd3e8fd5477e3960bcdab7d4ab3208d5c93f093d74b9c7925b5",
+    "congo": "44b9b2b890341590c9ba6fff248fc67663ce7c0a0ed4e13539cea62ccc2a54b0",
+    "botswana": "cee80389cc8d48e39abe0306b47c5c0d23240dc3991a5c9ddd9b520d9a4da2e4",
+    "namibia": "986eba0a187e49903d7e6f208ca873d53cff3b49232e81ce47ed1c8597b7bb28",
+    "eswatini": "b0e7ac0b15da787358d7dbd5dd0712ae6ec83bf8cd607d9a10d669d22362c865",
+    "lesotho": "40d00b4ef8d122c1c69190797b1b37e6de8b57d308c0e756cd8109ef7968a443",
+    "united-kingdom": "0301ab2e73b8b52f5436bfb1067c44cae87d12f2c72c8a950e2368416174a870",
+    "spain": "326f531cc44057393cd2423a9c257d4237017506441482b2240f0570f0b1e748",
+    "france": "2439abb964421c8ef2f1b59cfa590912b3c3c4255e5f66e9880ec8e617f4fd88",
+    "luxembourg": "ff7fa3aeae71c6e9b8930e5f9c26b372472b1d27e0fe2adef97977f462bc3338",
+    "italy": "349767ea0a03b152947f0d1180cf7556ca77d5741737504e7ba16c34ee358eef",
+    "ireland": "f531883a90987bbd736d85c3164a62fbccf747d1303f80590e20eed25eddbd14",
+    "portugal": "a5a7907acc4eb99b676156a7a354859da8870ef3a03cf14c0d3723466b4838d2",
+    "australia": "0c85855dfd9643202f81338777a6e8c3cca70c8cba7d5288c0b7aa70ca1328d5",
+    "new-zealand": "08160ccdca5850558300e50ea97f78d4d4317fdd17d58d680a13fdd77822f137",
+    "norway": "9e2832d0748c7cf188b6881d5652f4586e5399bf3247eea4bc5b21c87b94fd3e",
+    "estonia": "1fb5341ce9f87ed0970d9e9cab56d03c83b00d481bd78f8906f3f2afaa5770e9",
+    "latvia": "e36724119337fa873b025f4b2a8580dfc1de79efd741dec591357d4c560cca78",
+    "lithuania": "055b928e267a7a7d82b4cce4bc52db7517fed7c3b82c9cfaae36070cbf8563e7",
+    "sweden": "aa3108f9fb662968bf0e5677aeedf8c8dd8ecafa3ce38749fdc438dccd13c107",
+    "finland": "f08d62d8bf39f3661e3e62936458fb35e0351265fd29739977b8ed5c1582537a",
+    "denmark": "158bcea9d1e040092e9df374200ba18aef8d5d7834b909af207163309ccd03cd",
+    "czechia": "3202e84dc528e4ae54805dcbda92b4e8b93a5adbc9940d7fbb514d67cbcfe537",
+    "slovakia": "3221090c20c906e67069191d87c07eb9eb2138b889b1a340d9279b2e8d9c14fa",
+    "poland": "c4635ff9a02245ed020104be757a5bc8384019b769603924f72ea5655f60836c",
+    "germany": "6bf8e24cc93d50aa0acc68a454c1d851140b2b503927720eb58e87c0e68508fb",
+    "belgium": "8f28803b4ec91a09197c374f76146af3bead0e5aa3d86117c2f856129ae4dbdb",
+    "switzerland": "9036c64b10488d1225d4daf93f28906a37d945e9d69bf840b9951e292ead0ced",
+    "netherlands": "f6c82465e3dfd38e2bea77eff212af2e6874b0eacd2bb2f1a08012edf96fcf2b",
+    "united-states": "0f05dd15d1ec6fa9b61edc49ee5fec9206131659d254d4554a4a8cf05e7ab695",
+    "canada": "2c6d2384e641f5a6cb23678bf23e23693d2a52663c231d7e3f945c0ba60d06f7",
+    "mexico": "408a3f495555dd58c54476bb0bda0bbd2aa6b9db0a3e27fa9f8ece3180787d6d",
+    "iceland": "0fc4511f349381700b884b45b0cbc38a685932646658880ac170309951c866d5",
+    "morocco": "52a9bd572a34fbcdd1d419bf7bfccad26abe6944502caed32ddd940c00e6201b",
+    "thailand": "da42998624e132cccfd3a6605f1679c0f1569270b387914b47dd976853738a86",
+    "vietnam": "d9d3bc2a827db26918d2b5b921a5a1005cf4d06e43fd54792cffa4693c720748",
+    "myanmar": "d83e9f99cbf8022b8cb43f44a862019b9b3c34cffb8a9d1b389cbd335fcf23f7",
+    "laos": "d46c7ed8e09beb41eecab9eb068280f6f9953bb9eb6ef81960dad47bd16fd532",
+    "afghanistan": "7bb6d8a606f91dbf6fd370680a215b4af23cdceed10b1c947c61703263ae74e0",
+    "pakistan": "85dcfd4d028233083dc649c472ef1df1d9a5d46dadeae2d6f51f12a8f935f13b",
+    "india": "7f608e2d2b6ba86300d16bdbcaa16bd8913b50668854e1a54e77d3c5d97857af",
+    "chile": "128027c92019402973f7e4533d1699b8cb4b0995df957175b459d1ed4086b138",
+    "paraguay": "7c10ee7d74a84d0b4ac56d026f8b1189d1710fbdf1fdb486a7e56c55e32c7463",
+    "peru": "035f9e4c256de75d17692d9f809d95a509775ca4e838254bf4fd995a2720d951",
+    "greece": "a03540d86d7e530a9eb01993a9de21b2f18d29ec672c548dcbe6e6125b8b9f6a",
+    "cyprus": "a02c27f52f4301f285b7ed5dae1cdf838404600df8cd9ba07a5dbf78058b76bf",
+    "turkey": "95b619b133c26a6f8d465c812e7aa4a4aaa430c5e45dd8e64d14fa7bdddbdcc1",
+    "albania": "fdb0aac8a39e23ddcc8f799b71c2afd2131605ca0194f1126eaa52a85a60f00e",
+    "montenegro": "69857d72b90a7d6e16715c3f2acc3fe9940423890bfd4e1b5bd39f8a30687c2e",
+    "kosovo": "4b5b133f99a46faa3096772c781db07583ee7b7f27e582d02ddecc98caa318a6",
+    "serbia": "ab3ab57b31ebb22edd8fe807eefc92d9e3f3a30aa246ec0809b02bf960eb6e5d",
+    "north-macedonia": "19518d88c831b94617895dcba0ddcb110375d21e4219be7d1a0a84b73b057feb",
+    "bulgaria": "d70b3332f2f88debb595437eaca7e1bb080c938f7d2acffd70418a97d2e0f38a",
+    "costa-rica": "fc801d006393b32edfc964905b92bdd30b62c3ea0e879049b93896d778bca3e3",
+    "panama": "a9a396b2a324dcab165b8a1ad8bed8810ff9417262390d16bba1da9adaf15af8",
+    "zimbabwe": "d91a7898ac865e69c9b3247b935588be81e0f1c4a1502fedb05d483268cc769c",
+    "zambia": "63bdd51182f217eeca391cd827d674bd25b7c7cf3be04d194f5f2b294298632d",
+    "tanzania": "34dae39424632f973cff6482b22249d585218669df5a0fbc9c31f01d769b07a9",
+    "kenya": "26ff6b53fd552dd26e4f60fc4e742d1f59e73a2da22d9bd4ef1b4ede5c5d84c0",
+    "bahrain": "1eeb7445cdd622debd0c93af0ed85d5583d3b83dff6746e788f9ac276f3dbcb0",
+    "united-arab-emirates": "c06c20d7cc957bb9ff37d8d833fb01845bf06837bb6ff5f9a00fe3e58f4a9bfc",
+    "kazakhstan": "41d3ccc24244bfaab4aab95af6b79a0e866d5636acc90b9071e30f4c469f4afc",
+    "kyrgyzstan": "521cd906fac788c58025dee7616836659a42e423210138ffe79773f7cfac460d",
+    "uzbekistan": "a8f5fde8b7f6693b80d7183de2b6338a65685fa8a65ff889c07a20e9f663d058",
+    "tajikistan": "0d6cc8c3e5d36df2e9500ef289d118d58068061e9c1d08d2225c72802f63fc89",
+    "turkmenistan": "c7aa71f9f5745c788eec47ae43a8a0d9db7ae6a81c121001901f87ec1ffe1f97",
+    "moldova": "76c4d133832e3b733f1fd5c9a069d2e4d21f743dceb0bf0f17d0b3bd9d0d1d42",
+    "iran": "9e4c7ee934d2486ff193beca802a4f9fb0f67ce8f1f8d94282ee6dce4a3a59e9",
+    "iraq": "566efd3cd6f57b52eded523ea5cbaba46230df22baa268093a0939b7f7174836",
+    "antarctica": "86dcc81f804724e2b857b8263f0e784ab010e7e0477b8205f06734b39211715e",
+    "qatar": "0ee1c505fea56372523b59a7da792e4dc770a851c53d134497b2baefbc156efb",
+    "saudi-arabia": "2fc05a02adc726fb95b742b1d0b1c8e32516a5b2cf2e519e70ece674f9eca0a6",
+    "papua-new-guinea": "fb8c2e3ee33cb6d3e1e88af8c899b6f236bb317b7681de736b8ddd488705bf73",
+    "solomon-islands": "3448ad04c549715be52094c9989b7b148cedfe475f4c925ea98287b4fd4badbe",
+    "vanuatu": "99c1c4c929c0168833d2bab4fc9d66331c1ebf027990d1497258a9b11abfd969",
+    "oman": "f4f3123b87e7f8f50dc7689d93e1d026bc05a8c14912a30d93416d38d6222277",
+    "yemen": "f0720c89f6af76e5bb527714041c0b18dd38f96842357446141ecffe9567f428",
+    "syria": "45eea78f44dbd2bb04416d18cad2710f810e8497aaccc21a59990d34c7e77d18",
+    "jordan": "c43e0cb84e4415506872bad117870db72a3d65f5bd0fd8f466ab89616e25df62",
+    "bahamas": "6b9150cc61e71e2bab263087ac3daa3b079f21b77e3634b82996513d48d2ad80",
+    "cuba": "f5a808d0b9b562129005a257c52ff6424a1b16131c352c10b7528e238086b6b5",
+    "dominican-republic": "a789f266c6f33d96eb605ef581a442be960f160249956741c9b1f9d751fc5c18",
+    "haiti": "14bca970d117ad9515446f89df9e32d86575ad9372beeec6b604286e6621d6a5",
+    "jamaica": "6e6bce73c32355ea13e08e4fb838ad9a054e11fb61bdad671f0e5ad4e41155d7",
+    "sri-lanka": "edaebd95b1ee8fd7d8ef72abe59d1f3374361dadcae141ccadcc1c8a3ceafbab",
+    "malawi": "bd1447df00b9883de9c4304bcc51640989e9ce7519b479fc8f1d37731ea1784d",
+    "madagascar": "30325cb2d1ca0836adb705f5180bfc1f1b98d9ef10b736cfdfa47060f5b3ec74",
+    "mozambique": "378434d3c1a99fc4b2309bd32b1dedcf4ee8b22a0c6f87c397ca1819e1062766",
+    "russia": "da531f9764857824c11a6e454314aa9fc1efe5cd3669ab09782dc1978b49c27c",
+    "armenia": "653e36806c54300c4e8cc25f4141c2f3b170ea2924ef4b521c7eaaa089289b91",
+    "azerbaijan": "855980e46c43f7e523a9f1cc87768d50a0cdba7d6ba6563c4f13e2370b5df240",
+    "georgia": "a6338215bb8d2f3053874ffa4afe668b1db40258ffc51bb5776d84ad86b07ca5"
+  },
+  "landProbes": 1064
+}

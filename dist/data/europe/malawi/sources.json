@@ -1,0 +1,137 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Malawi: 3 regions, 32 districts & cities and 432 traditional authorities & local areas. Retained HDX COD-AB reference, reviewed 2024. The 32 district-level polygons include four separately delineated cities, alongside 28 districts. Of 433 third-level source records, 432 have mapped land. The Lake Malombe water-only reference polygon is excluded. Local areas also include protected areas and lake-island units; they are not all traditional authorities. The small source polygons at Likoma, the Salima national-park islands are retained through the broad lake mask. The fourth administrative level is not exposed. Population is separately dated 2023 and never inferred from a national total. All displayed parents dissolve from the same child partition. Inland lakes are excluded. Only shared internal and land frontier lines are drawn; coastlines have no stroke.",
+  "counts": {
+    "1": 3,
+    "2": 32,
+    "3": 432
+  },
+  "processing": "Selected ADM1–3 HDX GeoJSON members are retained by checksum. Third-level polygons are cleaned and simplified together at 0.00015 degrees, reconciled to existing neighbors, and rounded to six decimals. All displayed parents dissolve from that partition. Shared internal edges are stored once; coastlines have no stroke. Only the selected parent’s deeper geometry loads.",
+  "sources": {
+    "mwi-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mwi",
+      "sha256": "cfb2fe19cb977ef9028f06234fbef96cbc027496fa6fd914bff21a19f2d3bdbe",
+      "bytes": 38521
+    },
+    "mwi.zip": {
+      "url": "https://data.humdata.org/dataset/20eb8e5b-134d-41d8-a56f-4f358f7faf16/resource/375ffef0-933e-434e-9ef5-145f6ae2d9df/download/mwi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mwi",
+      "sha256": "64b8d599ec0b10809e762372442780572e181035eb6c6e182d80b941dfbbf9f2",
+      "bytes": 63721987,
+      "retained": false
+    },
+    "mwi-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-mwi",
+      "sha256": "def2ff332e96db8acc949e314196d7a3a45e32d4c139efc17e1d221811494dec",
+      "bytes": 25951
+    },
+    "mwi_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/8ceb03ac-2272-447f-8887-39cfc4d78b59/resource/fc94d3bb-003b-4ae8-b27c-583a96dda128/download/mwi_admpop_adm0_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mwi",
+      "sha256": "b0ad896abf509af373d531bfc036b5bb0a71a9b9e5356b404a35651acd4db99f",
+      "bytes": 994
+    },
+    "mwi_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/8ceb03ac-2272-447f-8887-39cfc4d78b59/resource/6d8d11bc-03e7-4eb3-8a9b-dafa9f4baa02/download/mwi_admpop_adm1_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mwi",
+      "sha256": "08d717082734fac526e2b6c95fb755e7247dffc40885c677de2489f5fa43efd9",
+      "bytes": 1865
+    },
+    "mwi_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/8ceb03ac-2272-447f-8887-39cfc4d78b59/resource/28082779-76b1-49cb-bc4a-61efb19a7e1b/download/mwi_admpop_adm2_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mwi",
+      "sha256": "a9b8ad2c10270dc550fe8bb8c1ada6588bec47af0bbf194fae9b044273952fa0",
+      "bytes": 13118
+    },
+    "flag-mw.svg": {
+      "url": "https://flagcdn.com/mw.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "81a7dc8d3f32fcdc7cd98408f9602f53176a7ea3645770e4d852fc3646a2e576",
+      "bytes": 787
+    },
+    "mwi-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/20eb8e5b-134d-41d8-a56f-4f358f7faf16/resource/375ffef0-933e-434e-9ef5-145f6ae2d9df/download/mwi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mwi",
+      "sha256": "f278ce0afacba7137c6b633073cb6a2c46eaacff9b8957d1c8581c9c60fe7e5b",
+      "bytes": 19921587,
+      "member": "mwi_admin2.geojson",
+      "archiveSha256": "64b8d599ec0b10809e762372442780572e181035eb6c6e182d80b941dfbbf9f2",
+      "retained": true
+    },
+    "mwi-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/20eb8e5b-134d-41d8-a56f-4f358f7faf16/resource/375ffef0-933e-434e-9ef5-145f6ae2d9df/download/mwi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mwi",
+      "sha256": "c4242d8730db3df7d2dadb988654a85b6e6eda4f3d02fef7ca05ebb9b1086590",
+      "bytes": 49551466,
+      "member": "mwi_admin3.geojson",
+      "archiveSha256": "64b8d599ec0b10809e762372442780572e181035eb6c6e182d80b941dfbbf9f2",
+      "retained": true
+    },
+    "mwi-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/20eb8e5b-134d-41d8-a56f-4f358f7faf16/resource/375ffef0-933e-434e-9ef5-145f6ae2d9df/download/mwi_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mwi",
+      "sha256": "b4d92a036b26dde3df9257c22f7f66d3089e01ecd5b1155fce91e7386f1fff54",
+      "bytes": 9158456,
+      "member": "mwi_admin1.geojson",
+      "archiveSha256": "64b8d599ec0b10809e762372442780572e181035eb6c6e182d80b941dfbbf9f2",
+      "retained": true
+    },
+    "chiuta-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/2259615/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2259615",
+      "sha256": "fe8fcd434d23a4dc08465c2f7656c1ade7f9455c85af9aafb282bb6c82bd296a",
+      "bytes": 254309
+    },
+    "malombe-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/2631185/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2631185",
+      "sha256": "8dea8c276eff3a49cc2af86ae045eca2efe0dcff2c0c0c195f9dc49f8a029ecf",
+      "bytes": 106080
+    },
+    "chilwa-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/4656098/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/4656098",
+      "sha256": "092619613f2b408ae1b69724f0c7bba60049aa347d04257c1c924e0893b668bf",
+      "bytes": 363118
+    },
+    "amaramba-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/19351588/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/19351588",
+      "sha256": "ffca831eacbc65bde7c71227bb7fe23380c91b6483796527a3c7db8d7e43d062",
+      "bytes": 137648
+    }
+  },
+  "borderWater": {
+    "relations": {
+      "chiuta": 2259615,
+      "malombe": 2631185,
+      "chilwa": 4656098,
+      "amaramba": 19351588
+    },
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "method": "Detailed lake water is excluded from all levels and previews; source-mapped Malawian islands remain land."
+  }
+}

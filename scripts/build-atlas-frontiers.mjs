@@ -176,3 +176,15 @@ if(fs.existsSync('scripts/boundary-sources/north-andes/resolved.bin'))(await imp
 if(fs.existsSync('dist/data/guiana-frontier.json'))await import('./reconcile-guiana-frontier.mjs');
 
 (await import('./central-asian-frontiers.mjs')).preserveCentralAsianFrontiers();
+
+// Keep the exact three-country junction after all retained frontier restorations.
+await (await import('./repair-mekong-tripoint.mjs')).repairMekongTripoint();
+
+// Keep the shared Caucasus arcs and their exact three-country junction.
+(await import('./caucasus-frontiers.mjs')).preserveCaucasusBorders();
+
+// Restore the matched San Matías edge, with Uberaba crossings left unoutlined.
+await (await import('./brazil-bolivia-frontier.mjs')).preserveBrazilBoliviaBorder();
+
+// Restore the shared Thailand/Malaysia land border without the older spur.
+(await import('./thailand-malaysia-frontier.mjs')).preserveThailandMalaysiaBorder();

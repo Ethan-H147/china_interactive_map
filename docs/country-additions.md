@@ -174,3 +174,10 @@ See [Arabia and Levant additions](arabia-levant.md) for source dates, coverage a
 | 2026-10-29 | Jamaica | GitHub batch | 14 parishes and 775 communities; 12 separately published 2022 parish populations. |
 
 See [Caribbean additions](caribbean.md) for boundary vintages, mapped coverage, population limitations and the shared Hispaniola frontier.
+
+| 2026-10-29 | Sri Lanka | Local only | 9 provinces, 25 districts and 339 divisional secretariats; Sinhala/Tamil names, dated population and province quizzes. |
+| 2026-10-29 | Malawi | Local only | 3 regions, 32 district/city units and 433 local reference areas; lake islands retained. |
+| 2026-10-29 | Madagascar | Local only | 24 regions, 120 districts and 1,645 communes; partial exact-match 2018 population coverage disclosed. |
+| 2026-10-29 | Mozambique | Local only | 11 province/city units, 161 districts and 457 posts; reviewed province population crosswalk. |
+
+Sources, scope and local verification: [Indian Ocean additions](indian-ocean.md).

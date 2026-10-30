@@ -1,0 +1,137 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Mozambique: 11 provinces & maputo city, 161 districts and 457 administrative posts. Retained HDX COD-AB reference, reviewed 2026. Mozambique population province codes are crosswalked by unique names because the releases use different code rosters; district populations are not assigned across that mismatch. The fourth administrative level is not exposed. Population is separately dated 2025 and never inferred from a national total. All displayed parents dissolve from the same child partition. Inland lakes are excluded. Only shared internal and land frontier lines are drawn; coastlines have no stroke.",
+  "counts": {
+    "1": 11,
+    "2": 161,
+    "3": 457
+  },
+  "processing": "Selected ADM1–3 HDX GeoJSON members are retained by checksum. Third-level polygons are cleaned and simplified together at 0.00015 degrees, reconciled to existing neighbors, and rounded to six decimals. All displayed parents dissolve from that partition. Shared internal edges are stored once; coastlines have no stroke. Only the selected parent’s deeper geometry loads.",
+  "sources": {
+    "moz-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-moz",
+      "sha256": "72f3aafb5e59b8fd5efa13744d60f366d6c3fb288c66c4e37414923de9f64638",
+      "bytes": 22235
+    },
+    "moz.zip": {
+      "url": "https://data.humdata.org/dataset/5e8d83a5-1210-49be-b7d9-cf286dbc15df/resource/f1d97232-4cb5-4083-b3cc-d192aa9bdcfe/download/moz_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-moz",
+      "sha256": "5fd2e4ed6d7aa15f5d666716d215b28e3445c86b5a86c77e49362d20af63ebad",
+      "bytes": 61310853,
+      "retained": false
+    },
+    "moz-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-moz",
+      "sha256": "8a297c064874fa11d1878153b1106eee61c4c8d3e100e542e69dbbbcb6f9f2f5",
+      "bytes": 59366
+    },
+    "moz_admpop_adm0_2025.csv": {
+      "url": "https://data.humdata.org/dataset/46b79d47-0667-4baa-8d69-468b208855ed/resource/6eefb086-2a05-4944-9ad8-7d691eec2925/download/moz_admpop_adm0_2025.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-moz",
+      "sha256": "53268a83dbf44f433a255a54507b370561c16335b333bfb2cc687de18234620d",
+      "bytes": 901
+    },
+    "moz_admpop_adm1_2025.csv": {
+      "url": "https://data.humdata.org/dataset/46b79d47-0667-4baa-8d69-468b208855ed/resource/d19acc2d-e4e7-456d-a587-cce3b0187ed6/download/moz_admpop_adm1_2025.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-moz",
+      "sha256": "ca0fce2d4c34b895c763fead5cb89a83ef5bf69663855cf167ca2f45fc87705d",
+      "bytes": 4801
+    },
+    "moz_admpop_adm2_2025.csv": {
+      "url": "https://data.humdata.org/dataset/46b79d47-0667-4baa-8d69-468b208855ed/resource/8bbafaba-2ad5-41e6-9df1-34b25fa915f0/download/moz_admpop_adm2_2025.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-moz",
+      "sha256": "13f077294a634d77d8c55681f1ca50fe96083c0d1c0d59c8c9c536b00009e78c",
+      "bytes": 54277
+    },
+    "flag-mz.svg": {
+      "url": "https://flagcdn.com/mz.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "649e978eea07a70c6e7303a5291476b3f224063070abf4f6a5f4ddcbba7c1cf6",
+      "bytes": 2757
+    },
+    "moz-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/5e8d83a5-1210-49be-b7d9-cf286dbc15df/resource/f1d97232-4cb5-4083-b3cc-d192aa9bdcfe/download/moz_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-moz",
+      "sha256": "1d71be887345ad28407f21bbd72682035d4ddf806aee421ffc48356385e4fcfd",
+      "bytes": 44306227,
+      "member": "moz_admin3.geojson",
+      "archiveSha256": "5fd2e4ed6d7aa15f5d666716d215b28e3445c86b5a86c77e49362d20af63ebad",
+      "retained": true
+    },
+    "moz-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/5e8d83a5-1210-49be-b7d9-cf286dbc15df/resource/f1d97232-4cb5-4083-b3cc-d192aa9bdcfe/download/moz_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-moz",
+      "sha256": "5398b31cd0b0fba640b1f5a13a99094fdc4677f7f2b52de94c6d83c73b3380dc",
+      "bytes": 28492723,
+      "member": "moz_admin2.geojson",
+      "archiveSha256": "5fd2e4ed6d7aa15f5d666716d215b28e3445c86b5a86c77e49362d20af63ebad",
+      "retained": true
+    },
+    "moz-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/5e8d83a5-1210-49be-b7d9-cf286dbc15df/resource/f1d97232-4cb5-4083-b3cc-d192aa9bdcfe/download/moz_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-moz",
+      "sha256": "72fd4eb4f11b078e47e449e5ea64506ba33181833eed53ce193da42312ec6ef6",
+      "bytes": 6642742,
+      "member": "moz_admin1.geojson",
+      "archiveSha256": "5fd2e4ed6d7aa15f5d666716d215b28e3445c86b5a86c77e49362d20af63ebad",
+      "retained": true
+    },
+    "chiuta-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/2259615/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2259615",
+      "sha256": "fe8fcd434d23a4dc08465c2f7656c1ade7f9455c85af9aafb282bb6c82bd296a",
+      "bytes": 254309
+    },
+    "malombe-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/2631185/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/2631185",
+      "sha256": "8dea8c276eff3a49cc2af86ae045eca2efe0dcff2c0c0c195f9dc49f8a029ecf",
+      "bytes": 106080
+    },
+    "chilwa-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/4656098/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/4656098",
+      "sha256": "092619613f2b408ae1b69724f0c7bba60049aa347d04257c1c924e0893b668bf",
+      "bytes": 363118
+    },
+    "amaramba-osm.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/19351588/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/19351588",
+      "sha256": "ffca831eacbc65bde7c71227bb7fe23380c91b6483796527a3c7db8d7e43d062",
+      "bytes": 137648
+    }
+  },
+  "borderWater": {
+    "relations": {
+      "chiuta": 2259615,
+      "malombe": 2631185,
+      "chilwa": 4656098,
+      "amaramba": 19351588
+    },
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "method": "Detailed lake water is excluded from all levels and previews; source-mapped Malawian islands remain land."
+  }
+}

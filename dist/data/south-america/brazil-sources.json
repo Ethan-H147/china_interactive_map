@@ -6,9 +6,14 @@
   "boundaryYear": 2025,
   "processedInputSHA256": "f685a698e280c59b28f6598b699a393959cff94b68b9a4e5bc67f08870a953d6",
   "count": 27,
-  "bytes": 1398299,
-  "decodedBytes": 4226534,
+  "bytes": 1422855,
+  "decodedBytes": 4317091,
   "processing": "Shared topology across all three countries; 75 m detail simplification; shared exterior edges aligned within 2.5 km of the reference; rounded to 0.000001 degrees; matching context silhouettes. IGN service query uses 0.0005 degree geometry tolerance.",
   "coverageNote": "26 states and the Federal District.",
-  "outlineMethod": "Draw shared internal division boundaries; selection uses the same lines. Municipal jurisdiction lines exclude the parent exterior. Land polygons and record metadata remain unchanged."
+  "outlineMethod": "Draw shared internal division boundaries; selection uses the same lines. Municipal jurisdiction lines exclude the parent exterior. Land polygons and record metadata remain unchanged.",
+  "brazilBoliviaRepair": {
+    "source": "scripts/boundary-sources/brazil-bolivia/manifest.json",
+    "water": "© OpenStreetMap contributors · ODbL 1.0",
+    "method": "Shared exact land edge through San Matías; Laguna Uberaba water erased from all fill levels and previews; water crossings have no outline. Original identities, population and reported areas retained."
+  }
 }

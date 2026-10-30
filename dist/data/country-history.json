@@ -1525,6 +1525,58 @@
           "scripts/build-caribbean.mjs"
         ]
       }
+    },
+    {
+      "country": "sri-lanka",
+      "name": "Sri Lanka",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps, dated statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-indian-ocean.mjs"
+        ]
+      }
+    },
+    {
+      "country": "malawi",
+      "name": "Malawi",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps, dated statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-indian-ocean.mjs"
+        ]
+      }
+    },
+    {
+      "country": "madagascar",
+      "name": "Madagascar",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps, dated statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-indian-ocean.mjs"
+        ]
+      }
+    },
+    {
+      "country": "mozambique",
+      "name": "Mozambique",
+      "addedOn": "2026-10-29",
+      "basis": "local-implementation",
+      "evidence": {
+        "note": "Sourced administrative maps, dated statistics and first-level quizzes.",
+        "paths": [
+          "dist/countries.js",
+          "scripts/build-indian-ocean.mjs"
+        ]
+      }
     }
   ]
 }

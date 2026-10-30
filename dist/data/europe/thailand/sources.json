@@ -705,5 +705,10 @@
       "TH-710101",
       "TH-710102"
     ]
+  },
+  "thailandMalaysiaRepair": {
+    "source": "scripts/boundary-sources/thailand-malaysia/manifest.json",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "method": "Both detailed local partitions, dissolved parents and previews share complete non-maritime country ways. Old border spur removed. Original IDs, names, population, reported area and economic figures preserved."
   }
 }

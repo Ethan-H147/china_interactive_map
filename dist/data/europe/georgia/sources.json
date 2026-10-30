@@ -2261,5 +2261,21 @@
       "sha256": "e9b66b6cb33fbdadb63ee46225e4bec2c874935bc4d7aed18fce78312995fd82",
       "bytes": 61513
     }
+  },
+  "caucasusFrontiers": {
+    "source": "scripts/boundary-sources/caucasus-frontiers/manifest.json",
+    "retrieved": "2026-10-29",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "junctions": {
+      "russiaGeorgiaAzerbaijan": [
+        46.422069,
+        41.908043
+      ],
+      "armeniaGeorgiaAzerbaijan": [
+        45.014969,
+        41.297014
+      ]
+    },
+    "method": "Country and adjoining local geometry share complete source-way arcs and exact junctions. Unrelated regional IDs, census figures, reported areas and claim/control labels remain unchanged; country previews retain the shared edges."
   }
 }

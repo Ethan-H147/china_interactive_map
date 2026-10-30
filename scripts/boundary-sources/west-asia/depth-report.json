@@ -305,6 +305,23 @@
         "previousStatistics": {
           "saudi-arabia:SAU": "225d2d2660a0929f97714f30f9ccc1f8f82370d73f3de55380d2fe79e5ef9401"
         }
+      },
+      "northernBorderCorrection": {
+        "fromGovernorate": "SA-GB-3984122B16255149512867",
+        "toGovernorate": "SA-GB-3984122B93334986111826",
+        "fromRegion": "SA04",
+        "toRegion": "SA08",
+        "areaKm2": 48.154606683926076,
+        "sourceEndpoint": [
+          45.1719841,
+          29.1592544
+        ],
+        "nationalBorderEndpoint": [
+          45.172340412895814,
+          29.162726622565852
+        ],
+        "connectionMetres": 387.64090367935205,
+        "method": "Split the national-mask alignment band at the original Rafha–Hafar source junction, extending it to the nearest existing Iraq frontier point. Only added land on Rafha’s side moves; original governorate land and the national border are retained."
       }
     }
   }

@@ -1,0 +1,23 @@
+{
+  "retrieved": "2026-10-30",
+  "files": {
+    "malaysia.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/2108121/full.json",
+      "relation": 2108121,
+      "version": 263,
+      "sha256": "b091f369669293b8f7a8906bd9f95083af2d501b4b8d7d1400e6c1969bd52118",
+      "bytes": 5809669,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    },
+    "thailand.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/2067731.json",
+      "relation": 2067731,
+      "version": 382,
+      "sha256": "cb3a91bd01804017907673eba54630934f92dbed59735e82e24034fcc7e8cd92",
+      "bytes": 34442,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0"
+    }
+  }
+}

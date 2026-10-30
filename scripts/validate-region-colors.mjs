@@ -10,6 +10,7 @@ Object.assign(counts,{antarctica:0,zimbabwe:10,zambia:10,tanzania:31,kenya:47,'c
 Object.assign(counts,{'papua-new-guinea':22,'solomon-islands':10,vanuatu:6,armenia:11,georgia:13,azerbaijan:71,qatar:8,bahrain:4,'united-arab-emirates':7,iran:31,iraq:19,'saudi-arabia':13});
 Object.assign(counts,{oman:11,yemen:22,syria:14,jordan:12});
 Object.assign(counts,{bahamas:33,cuba:16,'dominican-republic':32,haiti:10,jamaica:14});
+Object.assign(counts,{'sri-lanka':9,malawi:3,madagascar:24,mozambique:11});
 for(const [country,data]of Object.entries(datasets)){
  assert.equal(comparisonRecords(data,1).length,counts[country],country+' first-level comparison units');assert.equal(new Set(data.records.map(r=>r.id)).size,data.records.length);
  for(const r of data.records)for(const [key,m]of Object.entries(r.metrics)){assert(Number.isFinite(m.value)&&m.value>=0,country+' '+r.id+' '+key);assert(m.sourceUrl,'Traceable metric source');if(key.startsWith('gdp'))assert.equal(m.unit,'USD','Economic values must share a currency');}

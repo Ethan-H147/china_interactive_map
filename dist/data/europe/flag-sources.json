@@ -1245,6 +1245,50 @@
       "page": "https://flagcdn.com/",
       "sha256": "44946f0ba5ad43cabe8bfa6c52e0f7a9562f7ff336d58478577f3b3a19c1ef08",
       "bytes": 195
+    },
+    "sri-lanka": {
+      "file": "vendor/flag-lk.svg",
+      "full": "vendor/flag-lk.svg",
+      "width": 1200,
+      "height": 600,
+      "url": "https://flagcdn.com/lk.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "c6d5351f0c9d5611cdfaf64b6b5324db73b437bc9d4e4bdc8a70a7d66533df93",
+      "bytes": 19240
+    },
+    "malawi": {
+      "file": "vendor/flag-mw.svg",
+      "full": "vendor/flag-mw.svg",
+      "width": 450,
+      "height": 300,
+      "url": "https://flagcdn.com/mw.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "81a7dc8d3f32fcdc7cd98408f9602f53176a7ea3645770e4d852fc3646a2e576",
+      "bytes": 787
+    },
+    "madagascar": {
+      "file": "vendor/flag-mg.svg",
+      "full": "vendor/flag-mg.svg",
+      "width": 900,
+      "height": 600,
+      "url": "https://flagcdn.com/mg.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "00a570504860576bcb032613cb185013ce9400e05fd9c1fdc274f9664d27f9d6",
+      "bytes": 194
+    },
+    "mozambique": {
+      "file": "vendor/flag-mz.svg",
+      "full": "vendor/flag-mz.svg",
+      "width": 900,
+      "height": 600,
+      "url": "https://flagcdn.com/mz.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "649e978eea07a70c6e7303a5291476b3f224063070abf4f6a5f4ddcbba7c1cf6",
+      "bytes": 2757
     }
   }
 }

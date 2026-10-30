@@ -3,7 +3,7 @@
     "owner": "brazil",
     "method": "Only national exterior edges inside the reference corridor, within 2500 m of the existing neighbour",
     "canonicalSource": "dist/data/flight-context.bin",
-    "canonicalSha256": "8b3852618869ea12a1738ac22add2b48d78c4193df6d1a40343176f44ce53dd9",
+    "canonicalSha256": "0399954686c6442177b6fda910e949e017882425649197e811d932c1000b7e77",
     "changedEdges": 21300,
     "maxDisplacementMetres": 2376.0321354295766,
     "changedRegions": [

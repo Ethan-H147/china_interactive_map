@@ -1,0 +1,22 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "uberaba.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/456940/full.json",
+      "relation": 456940,
+      "version": 21,
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "sha256": "530b22d299f5f7601ada43e5dedcbc99def07f25498d4bd9a6eb7b2bf1e38159",
+      "bytes": 1015045
+    },
+    "brazil-reference.json": {
+      "sourceFile": "dist/data/flight-context.bin",
+      "publisher": "IBGE",
+      "url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2025/Brasil/BR_UF_2025.zip",
+      "method": "Existing atlas Brazil outline, exact shared common endpoints north and south of the reported San Matías/Uberaba section; other international junctions unchanged.",
+      "sha256": "10ce5beb95e670928990f0cec8c46a20ccec34880a0faa8779e85fff6aef9691",
+      "bytes": 5460
+    }
+  }
+}

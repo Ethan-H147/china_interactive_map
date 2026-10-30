@@ -22,5 +22,10 @@
     "method": "Sarawak districts, state overview and national background share the Nadi.BN western Brunei and Temburong land frontier; complete outline runs retained.",
     "reference": "../europe/brunei/frontier-reference.json",
     "source": "../europe/brunei/sources.json"
+  },
+  "thailandMalaysiaRepair": {
+    "source": "scripts/boundary-sources/thailand-malaysia/manifest.json",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "method": "Both detailed local partitions, dissolved parents and previews share complete non-maritime country ways. Old border spur removed. Original IDs, names, population, reported area and economic figures preserved."
   }
 }

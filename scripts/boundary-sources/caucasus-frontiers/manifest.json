@@ -1,0 +1,41 @@
+{
+  "retrieved": "2026-10-29",
+  "files": {
+    "georgia.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/28699/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/28699",
+      "relation": 28699,
+      "sha256": "b648c8fc94ed93d504314136a333fdf6a159aacbeebf2d915c6714d2851a279a",
+      "bytes": 2603283
+    },
+    "azerbaijan.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/364110/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364110",
+      "relation": 364110,
+      "sha256": "1f56649cdcbe8748c3d163b86346f12f9527bb0ea68533730956a9d7a8461e6e",
+      "bytes": 2781227
+    },
+    "armenia.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/364066/full.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/364066",
+      "relation": 364066,
+      "sha256": "cd59e69c994d478d7c6ed8265727310c6d2f3f412866ee390c00048983cd3f47",
+      "bytes": 3395387
+    },
+    "russia.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/relation/60189.json",
+      "credit": "© OpenStreetMap contributors",
+      "license": "ODbL 1.0",
+      "page": "https://www.openstreetmap.org/relation/60189",
+      "relation": 60189,
+      "sha256": "21644c659a6e04ae12494a81245a696c774a3d574ff3dac543047c445e834e20",
+      "bytes": 244333
+    }
+  }
+}

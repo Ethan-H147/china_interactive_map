@@ -1,0 +1,14 @@
+import fs from 'node:fs';import path from 'node:path';import {pathToFileURL} from 'node:url';import assert from 'node:assert/strict';import {gzipSync} from 'node:zlib';import {createHash} from 'node:crypto';import {load,linesOf,metres} from './geo-index.mjs';import {command} from './build-regional-dataset.mjs';import {selectFrontierArc} from './frontier-arcs.mjs';import {lineData} from '../dist/adaptive-lines.mjs';import {encodeGeo} from '../dist/geo-pack.mjs';
+export async function repairMekongTripoint(){
+const root='dist/data/',file=root+'atlas-frontiers.bin',data=load(file),border=data.features.find(f=>f.properties.canonicalBorder==='LAO-MMR'),china=data.features.find(f=>f.properties.canonicalBorder==='LAO-CHN');assert(border&&china);const path=linesOf({features:[border]})[0],chinese=linesOf({features:[china]})[0],tip=chinese[0],start=path[0];assert(metres(start,tip)<3000,'Only repair the local junction');
+let extension=[];if(metres(start,tip)>.2){const outline=await command(load(root+'europe/myanmar/political.bin'),'-dissolve2');extension=selectFrontierArc(outline,[tip,start]).path;assert(metres(extension[0],tip)<.2&&metres(extension.at(-1),start)<.2,'Exact detailed outline endpoints');border.geometry={type:'LineString',coordinates:[...extension.slice(0,-1),...path]};}
+const save=(file,value)=>fs.writeFileSync(file,gzipSync(JSON.stringify(value),{level:9}));save(file,lineData(data));
+const reportFile=root+'europe/laos/alignment-report.json',report=load(reportFile);report.canonicalNeighbours.find(r=>r.neighbour==='MMR').canonical=linesOf({features:[border]})[0];fs.writeFileSync(reportFile,JSON.stringify(report,null,2)+'\n');
+// The shared atlas feature owns this whole frontier; remove obsolete local remnants.
+const mmFile=root+'europe/myanmar/international.bin',mm=load(mmFile);mm.features=mm.features.filter(f=>!['LAO-MMR','MMR-LAO'].includes(f.properties.pair));save(mmFile,lineData(mm));
+for(const relative of ['atlas-frontiers.bin','europe/myanmar/international.bin']){const value=load(root+relative),text=JSON.stringify(value),target=root+'compact/'+relative;fs.writeFileSync(target,gzipSync(encodeGeo(value,{source:createHash('sha256').update(text).digest('hex')}),{level:9}));}
+const metaFile=root+'atlas-frontiers-sources.json',meta=load(metaFile);meta.mekongTripoint={method:'Extend the northern Laos–Myanmar frontier along the existing detailed Myanmar outline to the exact common China endpoint; remove obsolete locally owned fragments.',junction:tip,source:'europe/myanmar/political.bin',extensionVertices:extension.length||meta.mekongTripoint?.extensionVertices||0};fs.writeFileSync(metaFile,JSON.stringify(meta,null,2)+'\n');
+console.log('Laos–Myanmar frontier meets China at',tip,'added outline vertices',extension.length);
+
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)await repairMekongTripoint();

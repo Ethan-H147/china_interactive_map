@@ -2611,5 +2611,21 @@
   "koreanFrontiers": {
     "source": "data/korean-frontiers-sources.json",
     "method": "Complete shared non-maritime OSM boundary arcs replace mismatched exterior runs, using a single Tumen tripoint. Interior subdivision boundaries and coasts outside the repair remain intact. The old Natural Earth junction is not used as a detailed geometry anchor. Border strokes are stored once and stay fully visible at every zoom. Display policy requested by the atlas owner suppresses all 22 small river enclaves: their separate outlines and Korean fill are removed, and the enclosing Chinese display region fills the cutouts. Original OSM island geometry and attribution remain separately retained; this is cartographic generalization, not a change to the source border claim."
+  },
+  "caucasusFrontiers": {
+    "source": "scripts/boundary-sources/caucasus-frontiers/manifest.json",
+    "retrieved": "2026-10-29",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "junctions": {
+      "russiaGeorgiaAzerbaijan": [
+        46.422069,
+        41.908043
+      ],
+      "armeniaGeorgiaAzerbaijan": [
+        45.014969,
+        41.297014
+      ]
+    },
+    "method": "Country and adjoining local geometry share complete source-way arcs and exact junctions. Unrelated regional IDs, census figures, reported areas and claim/control labels remain unchanged; country previews retain the shared edges."
   }
 }

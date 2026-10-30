@@ -2,7 +2,7 @@
   "description": "Frontiers of the public atlas countries not drawn by a dedicated layer: land frontiers from each country's own outline, and the water borders between two atlas countries from Natural Earth 1:10m boundary lines.",
   "retrieved": "2026-10-27",
   "frontierKm": 67118,
-  "pieces": 270,
+  "pieces": 266,
   "sources": {
     "ne-10m-countries.geojson": {
       "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/v5.1.2/geojson/ne_10m_admin_0_countries.geojson",
@@ -135,5 +135,87 @@
     "source": "data/guiana-frontier.json",
     "referenceOwner": "france",
     "method": "One complete French Guiana outline arc replaces fragmented French strokes and the separate Brazil-owned copy. The nearby rainforest tripoint joins the surviving Brazil–Suriname stroke. Administrative land geometry is unchanged."
+  },
+  "mekongTripoint": {
+    "method": "Extend the northern Laos–Myanmar frontier along the existing detailed Myanmar outline to the exact common China endpoint; remove obsolete locally owned fragments.",
+    "junction": [
+      101.143703,
+      21.563789
+    ],
+    "source": "europe/myanmar/political.bin",
+    "extensionVertices": 7
+  },
+  "caucasusFrontiers": {
+    "source": "scripts/boundary-sources/caucasus-frontiers/manifest.json",
+    "retrieved": "2026-10-29",
+    "license": "© OpenStreetMap contributors · ODbL 1.0",
+    "junctions": {
+      "russiaGeorgiaAzerbaijan": [
+        46.422069,
+        41.908043
+      ],
+      "armeniaGeorgiaAzerbaijan": [
+        45.014969,
+        41.297014
+      ]
+    },
+    "countries": {
+      "russia": {
+        "changedRegions": [
+          "RU-IN",
+          "RU-CE",
+          "RU-SE",
+          "RU-KB",
+          "RU-KDA",
+          "RU-KC",
+          "RU-DA"
+        ],
+        "updatedRecords": 162
+      },
+      "armenia": {
+        "changedRegions": [
+          "AM-TV"
+        ],
+        "updatedRecords": 1
+      },
+      "georgia": {
+        "changedRegions": [
+          "GE-AB",
+          "GE-SZ",
+          "GE-KA",
+          "GE-SJ",
+          "GE-KK",
+          "GE-MM",
+          "GE-RL",
+          "GE-SO"
+        ],
+        "updatedRecords": 8
+      },
+      "azerbaijan": {
+        "changedRegions": [
+          "AZ-AGA",
+          "AZ-AST",
+          "AZ-BAL",
+          "AZ-OGU",
+          "AZ-QAB",
+          "AZ-QAX",
+          "AZ-QAZ",
+          "AZ-QUS",
+          "AZ-SAK",
+          "AZ-SMX",
+          "AZ-XAC",
+          "AZ-ZAQ"
+        ],
+        "updatedRecords": 12
+      }
+    }
+  },
+  "brazilBoliviaRepair": {
+    "source": "scripts/boundary-sources/brazil-bolivia/manifest.json",
+    "landOnly": true
+  },
+  "thailandMalaysiaRepair": {
+    "source": "scripts/boundary-sources/thailand-malaysia/manifest.json",
+    "vertices": 9250
   }
 }

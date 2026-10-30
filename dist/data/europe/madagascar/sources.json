@@ -1,0 +1,103 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Madagascar: 24 regions, 120 districts and 1645 communes. Retained HDX COD-AB reference, reviewed 2026. The release contains 24 regions and 120 districts; its geometry creation date is older than its reviewed administrative roster. Population tables retain the older 2018 geography, so only exact code/name/parent matches are used. The fourth administrative level is not exposed. Population is separately dated 2018 and never inferred from a national total. All displayed parents dissolve from the same child partition. Inland lakes are excluded. Only shared internal and land frontier lines are drawn; coastlines have no stroke.",
+  "counts": {
+    "1": 24,
+    "2": 120,
+    "3": 1645
+  },
+  "processing": "Selected ADM1–3 HDX GeoJSON members are retained by checksum. Third-level polygons are cleaned and simplified together at 0.00015 degrees, reconciled to existing neighbors, and rounded to six decimals. All displayed parents dissolve from that partition. Shared internal edges are stored once; coastlines have no stroke. Only the selected parent’s deeper geometry loads.",
+  "sources": {
+    "mdg-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-mdg",
+      "sha256": "dd283d10773c707f95a7397ac2cfae9cfafcd5c70efa57255e7afc9f46c223d7",
+      "bytes": 19532
+    },
+    "mdg.zip": {
+      "url": "https://data.humdata.org/dataset/26fa506b-0727-4d9d-a590-d2abee21ee22/resource/4cefb60b-0986-4a91-8186-70ef5730ede6/download/mdg_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdg",
+      "sha256": "273badc1391c5663ea4dd5878def610b6f0aa7e6a91ef579db23b5692dfa4913",
+      "bytes": 81104333,
+      "retained": false
+    },
+    "mdg-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-mdg",
+      "sha256": "528bdd3c7b04567f97aca3cdce42a27aab3a0bcabbb4926c8f62c6521617046c",
+      "bytes": 15629
+    },
+    "mdg_admpop_adm0_2018.csv": {
+      "url": "https://data.humdata.org/dataset/0b6ce366-8651-43aa-8c36-9f3fdc8d6b4f/resource/0b408418-286e-47bc-a037-384e5de98dd2/download/mdg_admpop_adm0_2018.csv",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdg",
+      "sha256": "21aef684f68ce227467c2d39f481c555313ea5c46afecd0c5efb949c9861c74f",
+      "bytes": 223
+    },
+    "mdg_admpop_adm1_2018.csv": {
+      "url": "https://data.humdata.org/dataset/0b6ce366-8651-43aa-8c36-9f3fdc8d6b4f/resource/36a0fd53-78b9-4b3f-9c2e-f7beb0dbf705/download/mdg_admpop_adm1_2018.csv",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdg",
+      "sha256": "3aefa6f8fba72b52fba5c55ff87d2056c215800e91a7e0a10bba4b67d83ef77a",
+      "bytes": 2453
+    },
+    "mdg_admpop_adm2_2018.csv": {
+      "url": "https://data.humdata.org/dataset/0b6ce366-8651-43aa-8c36-9f3fdc8d6b4f/resource/5ecd33f3-87f2-4606-9174-92caaab408ea/download/mdg_admpop_adm2_2018.csv",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdg",
+      "sha256": "7ac16188fa5863afd47828f1cc9846d6182d98eda9baeb466762c96bd155a923",
+      "bytes": 14425
+    },
+    "mdg_admpop_adm3_2018.csv": {
+      "url": "https://data.humdata.org/dataset/0b6ce366-8651-43aa-8c36-9f3fdc8d6b4f/resource/f08856d0-fbaf-4354-8430-db5b0e2832d3/download/mdg_admpop_adm3_2018.csv",
+      "credit": "OCHA Regional Office for Southern and Eastern Africa (ROSEA) · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-mdg",
+      "sha256": "e099269fe3de11229b35bf332014b5c02c0bc77110768e9424265457dcace4e3",
+      "bytes": 233690
+    },
+    "flag-mg.svg": {
+      "url": "https://flagcdn.com/mg.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "00a570504860576bcb032613cb185013ce9400e05fd9c1fdc274f9664d27f9d6",
+      "bytes": 194
+    },
+    "mdg-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/26fa506b-0727-4d9d-a590-d2abee21ee22/resource/4cefb60b-0986-4a91-8186-70ef5730ede6/download/mdg_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdg",
+      "sha256": "5820a206ddcef5a48385dba8f0eee9f5a23db2927580c7afe109c564f4edc47f",
+      "bytes": 18253879,
+      "member": "mdg_admin1.geojson",
+      "archiveSha256": "273badc1391c5663ea4dd5878def610b6f0aa7e6a91ef579db23b5692dfa4913",
+      "retained": true
+    },
+    "mdg-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/26fa506b-0727-4d9d-a590-d2abee21ee22/resource/4cefb60b-0986-4a91-8186-70ef5730ede6/download/mdg_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdg",
+      "sha256": "cbd118bce74901ed1b9008ded84b554c36cd4843018100328b87b484c066a0df",
+      "bytes": 60634092,
+      "member": "mdg_admin3.geojson",
+      "archiveSha256": "273badc1391c5663ea4dd5878def610b6f0aa7e6a91ef579db23b5692dfa4913",
+      "retained": true
+    },
+    "mdg-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/26fa506b-0727-4d9d-a590-d2abee21ee22/resource/4cefb60b-0986-4a91-8186-70ef5730ede6/download/mdg_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-mdg",
+      "sha256": "f4a437a737e7b9c71b19db1eb41fc39abd9579aa95505471c6149b06be98c8b9",
+      "bytes": 26422765,
+      "member": "mdg_admin2.geojson",
+      "archiveSha256": "273badc1391c5663ea4dd5878def610b6f0aa7e6a91ef579db23b5692dfa4913",
+      "retained": true
+    }
+  }
+}

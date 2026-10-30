@@ -1,0 +1,95 @@
+{
+  "retrieved": "2026-10-29",
+  "coverage": "Sri Lanka: 9 provinces, 25 districts and 339 divisional secretariats. Retained HDX COD-AB reference, reviewed 2025. The fourth administrative level is not exposed. Population is separately dated 2023 and never inferred from a national total. All displayed parents dissolve from the same child partition. Inland lakes are excluded. Only shared internal and land frontier lines are drawn; coastlines have no stroke.",
+  "counts": {
+    "1": 9,
+    "2": 25,
+    "3": 339
+  },
+  "processing": "Selected ADM1–3 HDX GeoJSON members are retained by checksum. Third-level polygons are cleaned and simplified together at 0.00015 degrees, reconciled to existing neighbors, and rounded to six decimals. All displayed parents dissolve from that partition. Shared internal edges are stored once; coastlines have no stroke. Only the selected parent’s deeper geometry loads.",
+  "sources": {
+    "lka-ab-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ab-lka",
+      "sha256": "f54946225e1c7dcb48bf84a8e79184d8f2b73acc5842667c91e544094ece749d",
+      "bytes": 42190
+    },
+    "lka.zip": {
+      "url": "https://data.humdata.org/dataset/0bedcaf3-88cd-4591-b9d5-5d3220e26abf/resource/ac173fa4-dd42-4be4-aaed-a2e445525865/download/lka_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lka",
+      "sha256": "ae6af39f1d440d3b775f0936ff97e5b61c12b99264cc84721cf64e1070a703c7",
+      "bytes": 133318694,
+      "retained": false
+    },
+    "lka-ps-metadata.json": {
+      "url": "https://data.humdata.org/api/3/action/package_show?id=cod-ps-lka",
+      "sha256": "3c9538c7816c276cd8021ec19f5c297e85d5057486269634a17b2224eb4a0264",
+      "bytes": 29136
+    },
+    "lka_admpop_adm0_2023.csv": {
+      "url": "https://data.humdata.org/dataset/e982aec3-478e-4910-ae5c-072ae2cf6933/resource/c309ff4c-f435-4cad-85ea-97c39a963f90/download/lka_admpop_adm0_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-lka",
+      "sha256": "0d00e7119872579737c174bf00e0998a7091a6d0031604ad6cda3ce96fe67485",
+      "bytes": 878
+    },
+    "lka_admpop_adm1_2023.csv": {
+      "url": "https://data.humdata.org/dataset/e982aec3-478e-4910-ae5c-072ae2cf6933/resource/62dbf08d-a2bb-42bd-bdb5-aa5b6903ea98/download/lka_admpop_adm1_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-lka",
+      "sha256": "5e84f60c9b18e6713ec62099528531f42a5cb6c95f5300c7fcb6618ca6be9e96",
+      "bytes": 4572
+    },
+    "lka_admpop_adm2_2023.csv": {
+      "url": "https://data.humdata.org/dataset/e982aec3-478e-4910-ae5c-072ae2cf6933/resource/4405f46a-e4b3-4778-9290-131613a7ce71/download/lka_admpop_adm2_2023.csv",
+      "credit": "UNFPA · HDX COD-PS",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ps-lka",
+      "sha256": "6065aad4bdc4033ef8999eae966eb55cf5006039de56478a7e7e4cb6606dd6d0",
+      "bytes": 13882
+    },
+    "flag-lk.svg": {
+      "url": "https://flagcdn.com/lk.svg",
+      "credit": "National flag artwork via FlagCDN / flag-icons",
+      "license": "Flag artwork; source distribution MIT",
+      "sha256": "c6d5351f0c9d5611cdfaf64b6b5324db73b437bc9d4e4bdc8a70a7d66533df93",
+      "bytes": 19240
+    },
+    "lka-adm2.geojson": {
+      "url": "https://data.humdata.org/dataset/0bedcaf3-88cd-4591-b9d5-5d3220e26abf/resource/ac173fa4-dd42-4be4-aaed-a2e445525865/download/lka_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lka",
+      "sha256": "3573803d55c6c751439e5819b8c7c21c72d28cd6fc32bdda9a52dc57ffeef639",
+      "bytes": 22237954,
+      "member": "lka_admin2.geojson",
+      "archiveSha256": "ae6af39f1d440d3b775f0936ff97e5b61c12b99264cc84721cf64e1070a703c7",
+      "retained": true
+    },
+    "lka-adm3.geojson": {
+      "url": "https://data.humdata.org/dataset/0bedcaf3-88cd-4591-b9d5-5d3220e26abf/resource/ac173fa4-dd42-4be4-aaed-a2e445525865/download/lka_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lka",
+      "sha256": "ba7d0dc50965631b69ecdfb312213e84a4274b7c5a27c12703d26030318158ae",
+      "bytes": 58506705,
+      "member": "lka_admin3.geojson",
+      "archiveSha256": "ae6af39f1d440d3b775f0936ff97e5b61c12b99264cc84721cf64e1070a703c7",
+      "retained": true
+    },
+    "lka-adm1.geojson": {
+      "url": "https://data.humdata.org/dataset/0bedcaf3-88cd-4591-b9d5-5d3220e26abf/resource/ac173fa4-dd42-4be4-aaed-a2e445525865/download/lka_admin_boundaries.geojson.zip",
+      "credit": "OCHA Field Information Services Section (FISS) · HDX COD-AB",
+      "license": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+      "page": "https://data.humdata.org/dataset/cod-ab-lka",
+      "sha256": "56c74387ddd92a8b61d987a3d9461c46490dc4138cc84fa6e87fbcd16ffd26e2",
+      "bytes": 18283946,
+      "member": "lka_admin1.geojson",
+      "archiveSha256": "ae6af39f1d440d3b775f0936ff97e5b61c12b99264cc84721cf64e1070a703c7",
+      "retained": true
+    }
+  }
+}

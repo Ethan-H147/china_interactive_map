@@ -180,3 +180,11 @@ body[data-atlas=antarctica],.country-option[data-atlas=antarctica]{--ink:#263c4b
 :root[data-atlas=haiti],body[data-atlas=haiti],.country-option[data-atlas=haiti]{--ink:#303731;--muted:#748078;--red:#71558d;--red-dark:#71558d;--gold:#b49a48;--line:#dbe4df;--paper:#fdfefb;--map:#f3f0f7;--surface-soft:#e6e2ef;--title-accent:#71558d;--header-stripe:linear-gradient(90deg,#294889 0 50%,#b23d43 50%)}
 
 :root[data-atlas=jamaica],body[data-atlas=jamaica],.country-option[data-atlas=jamaica]{--ink:#303731;--muted:#748078;--red:#567c42;--red-dark:#567c42;--gold:#b49a48;--line:#dbe4df;--paper:#fdfefb;--map:#f1f5eb;--surface-soft:#e3eadb;--title-accent:#567c42;--header-stripe:linear-gradient(90deg,#2c754b 0 40%,#d5b345 40% 50%,#242424 50% 60%,#d5b345 60% 70%,#2c754b 70%)}
+
+:root[data-atlas=sri-lanka],body[data-atlas=sri-lanka],.country-option[data-atlas=sri-lanka]{--red:#8b2d48;--red-dark:#651d34;--ink:#3b2b34;--muted:#796974;--gold:#ad842a;--line:#ecdde2;--paper:#fefdfd;--map:#f8f3e9;--surface-soft:#f7efea;--accent-soft:#f0e4e7;--title-accent:#8b2d48;--header-stripe:linear-gradient(90deg,#d7ae3d 0 5%,#347451 5% 20%,#dc8b38 20% 35%,#d7ae3d 35% 40%,#8b2d48 40% 95%,#d7ae3d 95%)}
+
+:root[data-atlas=malawi],body[data-atlas=malawi],.country-option[data-atlas=malawi]{--red:#9d3b40;--red-dark:#75272e;--ink:#402e32;--muted:#7d6c72;--gold:#3c744e;--line:#efe0e0;--paper:#fefdfd;--map:#f7f1ee;--surface-soft:#f6eeec;--accent-soft:#f2e6e6;--title-accent:#9d3b40;--header-stripe:linear-gradient(90deg,#303331 0 33.333%,#b44747 33.333% 66.667%,#39734b 66.667%)}
+
+:root[data-atlas=madagascar],body[data-atlas=madagascar],.country-option[data-atlas=madagascar]{--red:#2e7655;--red-dark:#1f563c;--ink:#253c37;--muted:#657977;--gold:#b54c4e;--line:#dee9e4;--paper:#fdfefd;--map:#eff6ef;--surface-soft:#edf5ed;--accent-soft:#e4ede9;--title-accent:#2e7655;--header-stripe:linear-gradient(90deg,#fffdf8 0 25%,#bd4a4b 25% 62.5%,#36815a 62.5%)}
+
+:root[data-atlas=mozambique],body[data-atlas=mozambique],.country-option[data-atlas=mozambique]{--red:#276e73;--red-dark:#1b5055;--ink:#233a3f;--muted:#63777d;--gold:#b18a29;--line:#dce8e9;--paper:#fdfefe;--map:#eef5f3;--surface-soft:#ecf4f2;--accent-soft:#e3eced;--title-accent:#276e73;--header-stripe:linear-gradient(90deg,#ad4142 0 18%,#397a60 18% 43%,#fffdf8 43% 47%,#303636 47% 70%,#fffdf8 70% 74%,#d5b346 74%)}

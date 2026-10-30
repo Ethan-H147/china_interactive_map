@@ -1,3 +1,4 @@
+import {thailandMalaysiaReference} from './thailand-malaysia-frontier.mjs';
 // Outline lines without coastlines for the countries whose units were stroked as whole
 // polygons: Japan (prefectures and municipal chunks), the Philippines, Indonesia and Malaysia. Each
 // FeatureCollection gains `edgeRuns`, vertex ranges of its own polygons (see dist/edge-runs.mjs)
@@ -25,6 +26,8 @@ const timorFile=data+'europe/timor-leste/frontier-reference.json',timor=fs.exist
 const followsTimor=(a,b)=>timor&&[0,.25,.5,.75,1].every(t=>timor([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t])<1);
 const bruneiFile=data+'europe/brunei/frontier-reference.json',brunei=fs.existsSync(bruneiFile)?lineIndex(load(bruneiFile).paths):null;
 const followsBrunei=(a,b)=>brunei&&[0,.25,.5,.75,1].every(t=>brunei([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t])<1);
+const thaiMalay=fs.existsSync(data+'thailand-malaysia-repair.json')?lineIndex([thailandMalaysiaReference().path]):null;
+const followsThaiMalay=(a,b)=>thaiMalay&&[0,.25,.5,.75,1].every(t=>thaiMalay([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t])<1);
 const followsBorneo=(a,b)=>[0,.25,.5,.75,1].every(t=>borneo([a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t])<1);
 const write=(file,value)=>{const json=JSON.stringify(value),bytes=gzipSync(json,{level:9});fs.writeFileSync(data+file,bytes);return {bytes:bytes.length,decodedBytes:Buffer.byteLength(json)};};
 const key=(a,b)=>a[0]<b[0]||a[0]===b[0]&&a[1]<b[1]?a+';'+b:b+';'+a;
@@ -38,6 +41,7 @@ function frontierTest(own){
   if(own.some(iso=>iso==='IDN'||iso==='MYS')&&followsBorneo(a,b))return true;
   if(own.includes('IDN')&&followsTimor(a,b))return true;
   if(own.includes('MYS')&&followsBrunei(a,b))return true;
+  if(own.includes('MYS')&&followsThaiMalay(a,b))return true;
   const m=[(a[0]+b[0])/2,(a[1]+b[1])/2];if(near(m)>4000||!metres(a,b))return false;
   // Land 800 m out on both sides: a frontier (or a border river), never a coast.
   const c=Math.cos(m[1]*Math.PI/180),dx=(b[0]-a[0])*c,dy=b[1]-a[1],n=Math.hypot(dx,dy),step=800/111195;

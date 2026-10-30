@@ -1,3 +1,4 @@
+import {correctSaudiNorthernStrip} from './saudi-northern-border.mjs';
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
@@ -52,7 +53,7 @@ for(const d of definitions.filter(d=>!only||d.country===only)){
  const base='dist/data/europe/'+d.country+'/',catalogue=load(base+'catalogue.bin'),stats=load(base+'statistics.json'),sources=load(base+'sources.json');let first=load(base+'first.bin').regions;
  const retained=Object.fromEntries(['first.bin','context.bin','international.bin','political.bin'].map(f=>[f,fs.readFileSync(base+f)]));
  const units=new Map(catalogue.records.filter(r=>r.level===1).map(r=>[r.id,{...r,...(stats.regions[d.country+':'+r.id].population?{population:stats.regions[d.country+':'+r.id].population}:{})}]));
- const byLevel={1:first},year=d.country==='saudi-arabia'?2021:2019,raw={},sourceCounts={},portions=[];let saudiNames;
+ const byLevel={1:first},year=d.country==='saudi-arabia'?2021:2019,raw={},sourceCounts={},portions=[];let saudiNames,northernBorderCorrection;
  if(d.country==='saudi-arabia'){
   raw[2]=JSON.parse(source('saudi-governorates.geojson'));
   saudiNames=new Map(JSON.parse(source('saudi-governorate-names.json')).map(r=>[r.id,r]));assert.equal(raw[2].features.length,147);
@@ -69,6 +70,7 @@ for(const d of definitions.filter(d=>!only||d.country===only)){
    return {...f,properties:{id,parent}};
   }));
   raw[2]=await conform(children,national.features[0]);
+  const correction=await correctSaudiNorthernStrip(raw[2]);raw[2]=correction.regions;northernBorderCorrection=correction.report;
   first=await command(raw[2],'-dissolve2 parent -rename-fields id=parent -clean gap-fill-area=0');assert.equal(first.features.length,13);byLevel[1]=first;
   for(const u of units.values())if(u.level===1)u.areaYear=2021;
   sourceCounts[2]=147;
@@ -118,7 +120,7 @@ for(const d of definitions.filter(d=>!only||d.country===only)){
  for(const [file,bytes]of Object.entries(retained))if(d.country!=='saudi-arabia'||!['first.bin','political.bin'].includes(file))fs.writeFileSync(base+file,bytes);
  if(d.country==='saudi-arabia')save(base+'political.bin',first);
  const info={sourceCounts,displayedCounts:counts,referencePortions:portions,sourceYears:{2:year,...(byLevel[3]?{3:2019}:{})},method:d.country==='saudi-arabia'?'Regional polygons are dissolved from the same 147 governorates using official Taadeen emirate assignments, so all local areas nest consistently. The retained national land mask, context and international strokes remain unchanged. Deeper geometry loads by selected region.':'Deeper polygons load by selected parent, are clipped to its retained land geometry, and cover the same parent without changing country or first-level borders. Source identities and parent links are retained. Split historical Iraqi references are explicitly named as portions.'};
- sources.counts=counts;sources.depth=info;
+ sources.counts=counts;sources.depth=info;if(northernBorderCorrection){sources.northernBorderCorrection=northernBorderCorrection;info.northernBorderCorrection=northernBorderCorrection;fs.writeFileSync(base+'northern-border-correction.json',JSON.stringify(northernBorderCorrection,null,2)+'\n');}
  if(d.country==='saudi-arabia')for(const name of ['saudi-governorates.geojson','saudi-adm2-metadata.json','saudi-governorate-names.json','saudi-name-reference.geojson'])sources.sources[name]=manifest.files[name];
  sources.coverage=sources.coverage.split(' The deeper layer')[0].split(' Districts and subdistricts are dated')[0];
  sources.coverage=d.country==='saudi-arabia'?'13 regions and 147 governorates use a consistent hierarchy from the 2021 geoBoundaries/OpenStreetMap snapshot, with official Taadeen emirate assignments and Arabic names. The existing national land mask and international border strokes are retained. GASTAT 2022 population belongs only to the 13 regions. Older combined governorate areas, including Al Taif, are not assigned newer population totals. Country overview pages remain hidden.':sources.coverage+' '+(d.country==='iran'?'The deeper layer contains the retained 429 counties (shahrestan), dated 2019.':'Districts and subdistricts are dated 2019 references. Units cut by the newer Halabja governorate are shown as reference portions with their original source codes, not as current statutory districts.');

@@ -216,5 +216,10 @@
     ],
     "maxMunicipalJunctionDisplacementMetres": 0.057802300663553276,
     "lakeSources": "data/europe/peru/bolivia-frontier-sources.json"
+  },
+  "brazilBoliviaRepair": {
+    "source": "scripts/boundary-sources/brazil-bolivia/manifest.json",
+    "water": "© OpenStreetMap contributors · ODbL 1.0",
+    "method": "Shared exact land edge through San Matías; Laguna Uberaba water erased from all fill levels and previews; water crossings have no outline. Original identities, population and reported areas retained."
   }
 }

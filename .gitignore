@@ -32,3 +32,6 @@ scripts/boundary-sources/mainland-seasia/*.zip
 
 # Hash-pinned official Nordic source archive; restore with fetch:nordic-local.
 /scripts/boundary-sources/nordic-local/*.zip
+
+# Original HDX archives; selected ADM1–3 members are retained and hash-pinned.
+/scripts/boundary-sources/indian-ocean/*.zip.gz

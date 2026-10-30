@@ -1,0 +1,65 @@
+{
+  "source": "scripts/boundary-sources/caucasus-frontiers/manifest.json",
+  "retrieved": "2026-10-29",
+  "license": "© OpenStreetMap contributors · ODbL 1.0",
+  "junctions": {
+    "russiaGeorgiaAzerbaijan": [
+      46.422069,
+      41.908043
+    ],
+    "armeniaGeorgiaAzerbaijan": [
+      45.014969,
+      41.297014
+    ]
+  },
+  "countries": {
+    "russia": {
+      "changedRegions": [
+        "RU-IN",
+        "RU-CE",
+        "RU-SE",
+        "RU-KB",
+        "RU-KDA",
+        "RU-KC",
+        "RU-DA"
+      ],
+      "updatedRecords": 162
+    },
+    "armenia": {
+      "changedRegions": [
+        "AM-TV"
+      ],
+      "updatedRecords": 1
+    },
+    "georgia": {
+      "changedRegions": [
+        "GE-AB",
+        "GE-SZ",
+        "GE-KA",
+        "GE-SJ",
+        "GE-KK",
+        "GE-MM",
+        "GE-RL",
+        "GE-SO"
+      ],
+      "updatedRecords": 8
+    },
+    "azerbaijan": {
+      "changedRegions": [
+        "AZ-AGA",
+        "AZ-AST",
+        "AZ-BAL",
+        "AZ-OGU",
+        "AZ-QAB",
+        "AZ-QAX",
+        "AZ-QAZ",
+        "AZ-QUS",
+        "AZ-SAK",
+        "AZ-SMX",
+        "AZ-XAC",
+        "AZ-ZAQ"
+      ],
+      "updatedRecords": 12
+    }
+  }
+}
