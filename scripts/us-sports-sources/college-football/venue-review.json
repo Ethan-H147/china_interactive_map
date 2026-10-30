@@ -1,0 +1,1688 @@
+{
+  "2": {
+    "stadium": "Jordan–Hare Stadium",
+    "city": "Auburn",
+    "center": [
+      -85.48916667,
+      32.60222222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Jordan%E2%80%93Hare_Stadium",
+    "fullCollegeName": "Auburn University",
+    "stadiumPage": "Jordan–Hare Stadium",
+    "venueSources": []
+  },
+  "5": {
+    "stadium": "Protective Stadium",
+    "city": "Birmingham",
+    "center": [
+      -86.8092,
+      33.5278
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Protective_Stadium",
+    "fullCollegeName": "University of Alabama at Birmingham",
+    "stadiumPage": "Protective Stadium",
+    "venueSources": [],
+    "note": "UAB uses Protective Stadium, not its former Legion Field home."
+  },
+  "6": {
+    "stadium": "Hancock Whitney Stadium",
+    "city": "Mobile",
+    "center": [
+      -88.192013,
+      30.696904
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Hancock_Whitney_Stadium",
+    "fullCollegeName": "University of South Alabama",
+    "stadiumPage": "Hancock Whitney Stadium",
+    "venueSources": []
+  },
+  "8": {
+    "stadium": "Donald W. Reynolds Razorback Stadium",
+    "city": "Fayetteville",
+    "center": [
+      -94.17888889,
+      36.06805556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Razorback_Stadium",
+    "fullCollegeName": "University of Arkansas",
+    "stadiumPage": "Razorback Stadium",
+    "venueSources": []
+  },
+  "9": {
+    "stadium": "Mountain America Stadium",
+    "city": "Tempe",
+    "center": [
+      -111.9325,
+      33.42638889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Mountain_America_Stadium",
+    "fullCollegeName": "Arizona State University",
+    "stadiumPage": "Mountain America Stadium",
+    "venueSources": []
+  },
+  "12": {
+    "stadium": "Casino Del Sol Stadium",
+    "city": "Tucson",
+    "center": [
+      -110.949,
+      32.229
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Casino_Del_Sol_Stadium",
+    "fullCollegeName": "University of Arizona",
+    "stadiumPage": "Casino Del Sol Stadium",
+    "venueSources": []
+  },
+  "16": {
+    "stadium": "Hornet Stadium",
+    "city": "Sacramento",
+    "center": [
+      -121.423,
+      38.556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Hornet_Stadium_(Sacramento)",
+    "fullCollegeName": "Sacramento State University",
+    "stadiumPage": "Hornet Stadium (Sacramento)",
+    "venueSources": []
+  },
+  "21": {
+    "stadium": "Snapdragon Stadium",
+    "city": "San Diego",
+    "center": [
+      -117.12277778,
+      32.78444444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Snapdragon_Stadium",
+    "fullCollegeName": "San Diego State University",
+    "stadiumPage": "Snapdragon Stadium",
+    "venueSources": [],
+    "note": "San Diego State uses Snapdragon Stadium, not the demolished SDCCU Stadium."
+  },
+  "23": {
+    "stadium": "CEFCU Stadium",
+    "city": "San Jose",
+    "center": [
+      -121.86833333,
+      37.31972222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/CEFCU_Stadium",
+    "fullCollegeName": "San Jose State University",
+    "stadiumPage": "CEFCU Stadium",
+    "venueSources": []
+  },
+  "24": {
+    "stadium": "Stanford Stadium",
+    "city": "Stanford",
+    "center": [
+      -122.16111111,
+      37.43444444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Stanford_Stadium",
+    "fullCollegeName": "Stanford University",
+    "stadiumPage": "Stanford Stadium",
+    "venueSources": []
+  },
+  "25": {
+    "stadium": "California Memorial Stadium",
+    "city": "Berkeley",
+    "center": [
+      -122.25083333,
+      37.87111111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/California_Memorial_Stadium",
+    "fullCollegeName": "University of California, Berkeley",
+    "stadiumPage": "California Memorial Stadium",
+    "venueSources": []
+  },
+  "26": {
+    "stadium": "Rose Bowl Stadium",
+    "city": "Pasadena",
+    "center": [
+      -118.168,
+      34.161
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Rose_Bowl_(stadium)",
+    "fullCollegeName": "University of California, Los Angeles",
+    "stadiumPage": "Rose Bowl (stadium)",
+    "venueSources": []
+  },
+  "30": {
+    "stadium": "Los Angeles Memorial Coliseum",
+    "city": "Los Angeles",
+    "center": [
+      -118.28777778,
+      34.01416667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Los_Angeles_Memorial_Coliseum",
+    "fullCollegeName": "University of Southern California",
+    "stadiumPage": "Los Angeles Memorial Coliseum",
+    "venueSources": []
+  },
+  "36": {
+    "stadium": "Canvas Stadium",
+    "city": "Fort Collins",
+    "center": [
+      -105.0885,
+      40.57
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Canvas_Stadium",
+    "fullCollegeName": "Colorado State University",
+    "stadiumPage": "Canvas Stadium",
+    "venueSources": [],
+    "note": "Colorado State uses Canvas Stadium on campus, not the former Hughes Stadium."
+  },
+  "38": {
+    "stadium": "Folsom Field",
+    "city": "Boulder",
+    "center": [
+      -105.267,
+      40.009
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Folsom_Field",
+    "fullCollegeName": "University of Colorado Boulder",
+    "stadiumPage": "Folsom Field",
+    "venueSources": []
+  },
+  "41": {
+    "stadium": "Pratt & Whitney Stadium at Rentschler Field",
+    "city": "East Hartford",
+    "center": [
+      -72.61888889,
+      41.75972222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Pratt_%26_Whitney_Stadium_at_Rentschler_Field",
+    "fullCollegeName": "University of Connecticut",
+    "stadiumPage": "Pratt & Whitney Stadium at Rentschler Field",
+    "venueSources": []
+  },
+  "48": {
+    "stadium": "Delaware Stadium",
+    "city": "Newark",
+    "center": [
+      -75.7488,
+      39.6617
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Delaware_Stadium",
+    "fullCollegeName": "University of Delaware",
+    "stadiumPage": "Delaware Stadium",
+    "venueSources": []
+  },
+  "52": {
+    "stadium": "Doak Campbell Stadium",
+    "city": "Tallahassee",
+    "center": [
+      -84.30444444,
+      30.43805556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Doak_Campbell_Stadium",
+    "fullCollegeName": "Florida State University",
+    "stadiumPage": "Doak Campbell Stadium",
+    "venueSources": []
+  },
+  "55": {
+    "stadium": "AmFirst Stadium",
+    "city": "Jacksonville",
+    "center": [
+      -85.76638889,
+      33.82027778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/AmFirst_Stadium",
+    "fullCollegeName": "Jacksonville State University",
+    "stadiumPage": "AmFirst Stadium",
+    "venueSources": []
+  },
+  "57": {
+    "stadium": "Ben Hill Griffin Stadium",
+    "city": "Gainesville",
+    "center": [
+      -82.3486,
+      29.65
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Ben_Hill_Griffin_Stadium",
+    "fullCollegeName": "University of Florida",
+    "stadiumPage": "Ben Hill Griffin Stadium",
+    "venueSources": []
+  },
+  "58": {
+    "stadium": "Raymond James Stadium",
+    "city": "Tampa",
+    "center": [
+      -82.50333333,
+      27.97583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Raymond_James_Stadium",
+    "fullCollegeName": "University of South Florida",
+    "stadiumPage": "Raymond James Stadium",
+    "venueSources": []
+  },
+  "59": {
+    "stadium": "Bobby Dodd Stadium at Hyundai Field",
+    "city": "Atlanta",
+    "center": [
+      -84.39277778,
+      33.7725
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Bobby_Dodd_Stadium",
+    "fullCollegeName": "Georgia Tech",
+    "stadiumPage": "Bobby Dodd Stadium",
+    "venueSources": []
+  },
+  "61": {
+    "stadium": "Sanford Stadium",
+    "city": "Athens",
+    "center": [
+      -83.37336389,
+      33.94980278
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Sanford_Stadium",
+    "fullCollegeName": "University of Georgia",
+    "stadiumPage": "Sanford Stadium",
+    "venueSources": []
+  },
+  "62": {
+    "stadium": "Clarence T. C. Ching Athletics Complex",
+    "city": "Honolulu",
+    "center": [
+      -157.818,
+      21.294
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Clarence_T._C._Ching_Athletics_Complex",
+    "fullCollegeName": "University of Hawaiʻi at Mānoa",
+    "stadiumPage": "Clarence T. C. Ching Athletics Complex",
+    "venueSources": [
+      "https://hawaiiathletics.com/sports/2025/7/9/clarence-t-c-ching-athletics-complex.aspx"
+    ],
+    "note": "Hawai‘i has used Ching Athletics Complex since 2021; Aloha Stadium is an obsolete provider venue."
+  },
+  "66": {
+    "stadium": "Jack Trice Stadium",
+    "city": "Ames",
+    "center": [
+      -93.63583333,
+      42.01416667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Jack_Trice_Stadium",
+    "fullCollegeName": "Iowa State University",
+    "stadiumPage": "Jack Trice Stadium",
+    "venueSources": []
+  },
+  "68": {
+    "stadium": "Albertsons Stadium",
+    "city": "Boise",
+    "center": [
+      -116.196,
+      43.603
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Albertsons_Stadium",
+    "fullCollegeName": "Boise State University",
+    "stadiumPage": "Albertsons Stadium",
+    "venueSources": []
+  },
+  "77": {
+    "stadium": "Ryan Field",
+    "city": "Evanston",
+    "center": [
+      -87.6925,
+      42.06555556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Ryan_Field_(2026)",
+    "fullCollegeName": "Northwestern University",
+    "stadiumPage": "Ryan Field (2026)",
+    "venueSources": [
+      "https://nusports.com/news/2026/10/1/northwestern-to-open-new-ryan-field-on-friday-night-against-penn-state"
+    ],
+    "note": "The new Ryan Field opened on 2 October 2026. The first two 2026 home games were at Martin Stadium."
+  },
+  "84": {
+    "stadium": "Memorial Stadium",
+    "city": "Bloomington",
+    "center": [
+      -86.52555556,
+      39.18083333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Indiana_University)",
+    "fullCollegeName": "Indiana University Bloomington",
+    "stadiumPage": "Memorial Stadium (Indiana University)",
+    "venueSources": []
+  },
+  "87": {
+    "stadium": "Notre Dame Stadium",
+    "city": "Notre Dame",
+    "center": [
+      -86.23389,
+      41.69833
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Notre_Dame_Stadium",
+    "fullCollegeName": "University of Notre Dame",
+    "stadiumPage": "Notre Dame Stadium",
+    "venueSources": []
+  },
+  "96": {
+    "stadium": "Kroger Field",
+    "city": "Lexington",
+    "center": [
+      -84.50527778,
+      38.02277778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Kroger_Field",
+    "fullCollegeName": "University of Kentucky",
+    "stadiumPage": "Kroger Field",
+    "venueSources": []
+  },
+  "97": {
+    "stadium": "L&N Federal Credit Union Stadium",
+    "city": "Louisville",
+    "center": [
+      -85.75888889,
+      38.20583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/L%26N_Federal_Credit_Union_Stadium",
+    "fullCollegeName": "University of Louisville",
+    "stadiumPage": "L&N Federal Credit Union Stadium",
+    "venueSources": []
+  },
+  "98": {
+    "stadium": "Houchens Industries–L. T. Smith Stadium",
+    "city": "Bowling Green",
+    "center": [
+      -86.45944444,
+      36.98472222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Houchens_Industries%E2%80%93L._T._Smith_Stadium",
+    "fullCollegeName": "Western Kentucky University",
+    "stadiumPage": "Houchens Industries–L. T. Smith Stadium",
+    "venueSources": []
+  },
+  "99": {
+    "stadium": "Tiger Stadium",
+    "city": "Baton Rouge",
+    "center": [
+      -91.18388889,
+      30.41222222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Tiger_Stadium_(Louisiana)",
+    "fullCollegeName": "Louisiana State University",
+    "stadiumPage": "Tiger Stadium (Louisiana)",
+    "venueSources": []
+  },
+  "103": {
+    "stadium": "Alumni Stadium",
+    "city": "Chestnut Hill",
+    "center": [
+      -71.16638889,
+      42.335
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Alumni_Stadium",
+    "fullCollegeName": "Boston College",
+    "stadiumPage": "Alumni Stadium",
+    "venueSources": []
+  },
+  "113": {
+    "stadium": "Warren McGuirk Alumni Stadium",
+    "city": "Hadley",
+    "center": [
+      -72.53601944,
+      42.37730556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Warren_McGuirk_Alumni_Stadium",
+    "fullCollegeName": "University of Massachusetts Amherst",
+    "stadiumPage": "Warren McGuirk Alumni Stadium",
+    "venueSources": []
+  },
+  "120": {
+    "stadium": "SECU Stadium",
+    "city": "College Park",
+    "center": [
+      -76.94722222,
+      38.99027778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/SECU_Stadium",
+    "fullCollegeName": "University of Maryland, College Park",
+    "stadiumPage": "SECU Stadium",
+    "venueSources": []
+  },
+  "127": {
+    "stadium": "Spartan Stadium",
+    "city": "East Lansing",
+    "center": [
+      -84.48472222,
+      42.72805556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Spartan_Stadium",
+    "fullCollegeName": "Michigan State University",
+    "stadiumPage": "Spartan Stadium",
+    "venueSources": []
+  },
+  "130": {
+    "stadium": "Michigan Stadium",
+    "city": "Ann Arbor",
+    "center": [
+      -83.74875,
+      42.26588889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Michigan_Stadium",
+    "fullCollegeName": "University of Michigan",
+    "stadiumPage": "Michigan Stadium",
+    "venueSources": []
+  },
+  "135": {
+    "stadium": "Huntington Bank Stadium",
+    "city": "Minneapolis",
+    "center": [
+      -93.225,
+      44.976
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Huntington_Bank_Stadium",
+    "fullCollegeName": "University of Minnesota",
+    "stadiumPage": "Huntington Bank Stadium",
+    "venueSources": []
+  },
+  "142": {
+    "stadium": "Faurot Field at Memorial Stadium",
+    "city": "Columbia",
+    "center": [
+      -92.33305556,
+      38.93583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Faurot_Field",
+    "fullCollegeName": "University of Missouri",
+    "stadiumPage": "Faurot Field",
+    "venueSources": []
+  },
+  "145": {
+    "stadium": "Vaught–Hemingway Stadium",
+    "city": "University",
+    "center": [
+      -89.53416667,
+      34.36194444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Vaught%E2%80%93Hemingway_Stadium",
+    "fullCollegeName": "University of Mississippi",
+    "stadiumPage": "Vaught–Hemingway Stadium",
+    "venueSources": []
+  },
+  "150": {
+    "stadium": "Wallace Wade Stadium",
+    "city": "Durham",
+    "center": [
+      -78.94166667,
+      35.99527778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Wallace_Wade_Stadium",
+    "fullCollegeName": "Duke University",
+    "stadiumPage": "Wallace Wade Stadium",
+    "venueSources": []
+  },
+  "151": {
+    "stadium": "Dowdy–Ficklen Stadium",
+    "city": "Greenville",
+    "center": [
+      -77.36527778,
+      35.59638889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Dowdy%E2%80%93Ficklen_Stadium",
+    "fullCollegeName": "East Carolina University",
+    "stadiumPage": "Dowdy–Ficklen Stadium",
+    "venueSources": []
+  },
+  "152": {
+    "stadium": "Carter–Finley Stadium",
+    "city": "Raleigh",
+    "center": [
+      -78.71944444,
+      35.80083333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Carter%E2%80%93Finley_Stadium",
+    "fullCollegeName": "North Carolina State University",
+    "stadiumPage": "Carter–Finley Stadium",
+    "venueSources": []
+  },
+  "153": {
+    "stadium": "Kenan Stadium",
+    "city": "Chapel Hill",
+    "center": [
+      -79.04777778,
+      35.90694444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Kenan_Stadium",
+    "fullCollegeName": "University of North Carolina at Chapel Hill",
+    "stadiumPage": "Kenan Stadium",
+    "venueSources": []
+  },
+  "154": {
+    "stadium": "Allegacy Federal Credit Union Stadium",
+    "city": "Winston-Salem",
+    "center": [
+      -80.25472222,
+      36.13055556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Allegacy_Federal_Credit_Union_Stadium",
+    "fullCollegeName": "Wake Forest University",
+    "stadiumPage": "Allegacy Federal Credit Union Stadium",
+    "venueSources": []
+  },
+  "158": {
+    "stadium": "Memorial Stadium",
+    "city": "Lincoln",
+    "center": [
+      -96.70555556,
+      40.82055556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Lincoln)",
+    "fullCollegeName": "University of Nebraska–Lincoln",
+    "stadiumPage": "Memorial Stadium (Lincoln)",
+    "venueSources": []
+  },
+  "164": {
+    "stadium": "SHI Stadium",
+    "city": "Piscataway",
+    "center": [
+      -74.46527778,
+      40.51361111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/SHI_Stadium",
+    "fullCollegeName": "Rutgers University–New Brunswick",
+    "stadiumPage": "SHI Stadium",
+    "venueSources": []
+  },
+  "166": {
+    "stadium": "Aggie Memorial Stadium",
+    "city": "Las Cruces",
+    "center": [
+      -106.74111111,
+      32.27972222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Aggie_Memorial_Stadium",
+    "fullCollegeName": "New Mexico State University",
+    "stadiumPage": "Aggie Memorial Stadium",
+    "venueSources": []
+  },
+  "167": {
+    "stadium": "University Stadium",
+    "city": "Albuquerque",
+    "center": [
+      -106.62833333,
+      35.06694444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/University_Stadium_(Albuquerque)",
+    "fullCollegeName": "University of New Mexico",
+    "stadiumPage": "University Stadium (Albuquerque)",
+    "venueSources": []
+  },
+  "183": {
+    "stadium": "JMA Wireless Dome",
+    "city": "Syracuse",
+    "center": [
+      -76.13638889,
+      43.03611111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/JMA_Wireless_Dome",
+    "fullCollegeName": "Syracuse University",
+    "stadiumPage": "JMA Wireless Dome",
+    "venueSources": []
+  },
+  "189": {
+    "stadium": "Doyt L. Perry Stadium",
+    "city": "Bowling Green",
+    "center": [
+      -83.6225,
+      41.37805556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Doyt_Perry_Stadium",
+    "fullCollegeName": "Bowling Green State University",
+    "stadiumPage": "Doyt Perry Stadium",
+    "venueSources": []
+  },
+  "193": {
+    "stadium": "Yager Stadium",
+    "city": "Oxford",
+    "center": [
+      -84.73277778,
+      39.51944444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Yager_Stadium_(Miami_University)",
+    "fullCollegeName": "Miami University",
+    "stadiumPage": "Yager Stadium (Miami University)",
+    "venueSources": []
+  },
+  "194": {
+    "stadium": "Ohio Stadium",
+    "city": "Columbus",
+    "center": [
+      -83.01972222,
+      40.00166667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Ohio_Stadium",
+    "fullCollegeName": "Ohio State University",
+    "stadiumPage": "Ohio Stadium",
+    "venueSources": []
+  },
+  "195": {
+    "stadium": "Peden Stadium",
+    "city": "Athens",
+    "center": [
+      -82.10277778,
+      39.32111111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Peden_Stadium",
+    "fullCollegeName": "Ohio University",
+    "stadiumPage": "Peden Stadium",
+    "venueSources": []
+  },
+  "197": {
+    "stadium": "Boone Pickens Stadium",
+    "city": "Stillwater",
+    "center": [
+      -97.06638889,
+      36.12583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Boone_Pickens_Stadium",
+    "fullCollegeName": "Oklahoma State University–Stillwater",
+    "stadiumPage": "Boone Pickens Stadium",
+    "venueSources": []
+  },
+  "201": {
+    "stadium": "Gaylord Family Oklahoma Memorial Stadium",
+    "city": "Norman",
+    "center": [
+      -97.4425,
+      35.20583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Gaylord_Family_Oklahoma_Memorial_Stadium",
+    "fullCollegeName": "University of Oklahoma",
+    "stadiumPage": "Gaylord Family Oklahoma Memorial Stadium",
+    "venueSources": []
+  },
+  "202": {
+    "stadium": "H. A. Chapman Stadium",
+    "city": "Tulsa",
+    "center": [
+      -95.94388889,
+      36.14861111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Skelly_Field_at_H._A._Chapman_Stadium",
+    "fullCollegeName": "University of Tulsa",
+    "stadiumPage": "Skelly Field at H. A. Chapman Stadium",
+    "venueSources": []
+  },
+  "204": {
+    "stadium": "Reser Stadium",
+    "city": "Corvallis",
+    "center": [
+      -123.281,
+      44.559
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Reser_Stadium",
+    "fullCollegeName": "Oregon State University",
+    "stadiumPage": "Reser Stadium",
+    "venueSources": []
+  },
+  "213": {
+    "stadium": "Beaver Stadium",
+    "city": "University Park",
+    "center": [
+      -77.856,
+      40.8121
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Beaver_Stadium",
+    "fullCollegeName": "Pennsylvania State University",
+    "stadiumPage": "Beaver Stadium",
+    "venueSources": []
+  },
+  "218": {
+    "stadium": "Lincoln Financial Field",
+    "city": "Philadelphia",
+    "center": [
+      -75.1675,
+      39.90083333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Lincoln_Financial_Field",
+    "fullCollegeName": "Temple University",
+    "stadiumPage": "Lincoln Financial Field",
+    "venueSources": []
+  },
+  "221": {
+    "stadium": "Acrisure Stadium",
+    "city": "Pittsburgh",
+    "center": [
+      -80.01583333,
+      40.44666667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Acrisure_Stadium",
+    "fullCollegeName": "University of Pittsburgh",
+    "stadiumPage": "Acrisure Stadium",
+    "venueSources": []
+  },
+  "228": {
+    "stadium": "Memorial Stadium",
+    "city": "Clemson",
+    "center": [
+      -82.84305556,
+      34.67861111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Clemson)",
+    "fullCollegeName": "Clemson University",
+    "stadiumPage": "Memorial Stadium (Clemson)",
+    "venueSources": []
+  },
+  "235": {
+    "stadium": "Simmons Bank Liberty Stadium",
+    "city": "Memphis",
+    "center": [
+      -89.9774,
+      35.121
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Simmons_Bank_Liberty_Stadium",
+    "fullCollegeName": "University of Memphis",
+    "stadiumPage": "Simmons Bank Liberty Stadium",
+    "venueSources": []
+  },
+  "238": {
+    "stadium": "FirstBank Stadium",
+    "city": "Nashville",
+    "center": [
+      -86.80888889,
+      36.14416667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/FirstBank_Stadium",
+    "fullCollegeName": "Vanderbilt University",
+    "stadiumPage": "FirstBank Stadium",
+    "venueSources": []
+  },
+  "239": {
+    "stadium": "McLane Stadium",
+    "city": "Waco",
+    "center": [
+      -97.1157,
+      31.5582
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/McLane_Stadium",
+    "fullCollegeName": "Baylor University",
+    "stadiumPage": "McLane Stadium",
+    "venueSources": [],
+    "note": "Baylor uses McLane Stadium, not the demolished Floyd Casey Stadium."
+  },
+  "242": {
+    "stadium": "First Community Stadium",
+    "city": "Houston",
+    "center": [
+      -95.40916667,
+      29.71638889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/First_Community_Stadium",
+    "fullCollegeName": "Rice University",
+    "stadiumPage": "First Community Stadium",
+    "venueSources": []
+  },
+  "245": {
+    "stadium": "Kyle Field",
+    "city": "College Station",
+    "center": [
+      -96.3405,
+      30.6099
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Kyle_Field",
+    "fullCollegeName": "Texas A&M University",
+    "stadiumPage": "Kyle Field",
+    "venueSources": []
+  },
+  "248": {
+    "stadium": "TDECU Stadium",
+    "city": "Houston",
+    "center": [
+      -95.34916667,
+      29.72194444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/TDECU_Stadium",
+    "fullCollegeName": "University of Houston",
+    "stadiumPage": "TDECU Stadium",
+    "venueSources": [
+      "https://www.uh.edu/tdecu-stadium/"
+    ],
+    "note": "Current school and conference schedules retain TDECU Stadium branding; Robertson Stadium is the former venue on this site."
+  },
+  "249": {
+    "stadium": "DATCU Stadium",
+    "city": "Denton",
+    "center": [
+      -97.15944444,
+      33.20361111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/DATCU_Stadium",
+    "fullCollegeName": "University of North Texas",
+    "stadiumPage": "DATCU Stadium",
+    "venueSources": []
+  },
+  "251": {
+    "stadium": "Darrell K Royal–Texas Memorial Stadium",
+    "city": "Austin",
+    "center": [
+      -97.73256,
+      30.28367
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Darrell_K_Royal%E2%80%93Texas_Memorial_Stadium",
+    "fullCollegeName": "University of Texas at Austin",
+    "stadiumPage": "Darrell K Royal–Texas Memorial Stadium",
+    "venueSources": []
+  },
+  "252": {
+    "stadium": "LaVell Edwards Stadium",
+    "city": "Provo",
+    "center": [
+      -111.655,
+      40.258
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/LaVell_Edwards_Stadium",
+    "fullCollegeName": "Brigham Young University",
+    "stadiumPage": "LaVell Edwards Stadium",
+    "venueSources": []
+  },
+  "254": {
+    "stadium": "Rice–Eccles Stadium",
+    "city": "Salt Lake City",
+    "center": [
+      -111.84885324,
+      40.75997458
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Rice%E2%80%93Eccles_Stadium",
+    "fullCollegeName": "University of Utah",
+    "stadiumPage": "Rice–Eccles Stadium",
+    "venueSources": []
+  },
+  "256": {
+    "stadium": "Bridgeforth Stadium",
+    "city": "Harrisonburg",
+    "center": [
+      -78.87305556,
+      38.43527778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Bridgeforth_Stadium",
+    "fullCollegeName": "James Madison University",
+    "stadiumPage": "Bridgeforth Stadium",
+    "venueSources": []
+  },
+  "258": {
+    "stadium": "Scott Stadium",
+    "city": "Charlottesville",
+    "center": [
+      -78.51361111,
+      38.03111111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Scott_Stadium",
+    "fullCollegeName": "University of Virginia",
+    "stadiumPage": "Scott Stadium",
+    "venueSources": []
+  },
+  "259": {
+    "stadium": "Lane Stadium",
+    "city": "Blacksburg",
+    "center": [
+      -80.41805556,
+      37.22
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Lane_Stadium",
+    "fullCollegeName": "Virginia Tech",
+    "stadiumPage": "Lane Stadium",
+    "venueSources": []
+  },
+  "264": {
+    "stadium": "Husky Stadium",
+    "city": "Seattle",
+    "center": [
+      -122.3016,
+      47.6503
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Husky_Stadium",
+    "fullCollegeName": "University of Washington",
+    "stadiumPage": "Husky Stadium",
+    "venueSources": []
+  },
+  "265": {
+    "stadium": "Martin Stadium",
+    "city": "Pullman",
+    "center": [
+      -117.16,
+      46.732
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Martin_Stadium_(Pullman)",
+    "fullCollegeName": "Washington State University",
+    "stadiumPage": "Martin Stadium (Pullman)",
+    "venueSources": []
+  },
+  "275": {
+    "stadium": "Camp Randall Stadium",
+    "city": "Madison",
+    "center": [
+      -89.41277778,
+      43.07
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Camp_Randall_Stadium",
+    "fullCollegeName": "University of Wisconsin–Madison",
+    "stadiumPage": "Camp Randall Stadium",
+    "venueSources": []
+  },
+  "276": {
+    "stadium": "Joan C. Edwards Stadium",
+    "city": "Huntington",
+    "center": [
+      -82.42083333,
+      38.425
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Joan_C._Edwards_Stadium",
+    "fullCollegeName": "Marshall University",
+    "stadiumPage": "Joan C. Edwards Stadium",
+    "venueSources": []
+  },
+  "277": {
+    "stadium": "Milan Puskar Stadium",
+    "city": "Morgantown",
+    "center": [
+      -79.9551,
+      39.6502
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Milan_Puskar_Stadium",
+    "fullCollegeName": "West Virginia University",
+    "stadiumPage": "Milan Puskar Stadium",
+    "venueSources": []
+  },
+  "278": {
+    "stadium": "Valley Children's Stadium",
+    "city": "Fresno",
+    "center": [
+      -119.758,
+      36.814
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Valley_Children's_Stadium",
+    "fullCollegeName": "California State University, Fresno",
+    "stadiumPage": "Valley Children's Stadium",
+    "venueSources": []
+  },
+  "290": {
+    "stadium": "Allen E. Paulson Stadium",
+    "city": "Statesboro",
+    "center": [
+      -81.783135,
+      32.412161
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Allen_E._Paulson_Stadium",
+    "fullCollegeName": "Georgia Southern University",
+    "stadiumPage": "Allen E. Paulson Stadium",
+    "venueSources": []
+  },
+  "295": {
+    "stadium": "S. B. Ballard Stadium",
+    "city": "Norfolk",
+    "center": [
+      -76.30487778,
+      36.8889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/S.B._Ballard_Stadium",
+    "fullCollegeName": "Old Dominion University",
+    "stadiumPage": "S.B. Ballard Stadium",
+    "venueSources": []
+  },
+  "309": {
+    "stadium": "Our Lady of Lourdes Stadium",
+    "city": "Lafayette",
+    "center": [
+      -92.04194444,
+      30.21583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Cajun_Field",
+    "fullCollegeName": "University of Louisiana at Lafayette",
+    "stadiumPage": "Cajun Field",
+    "venueSources": [
+      "https://ragincajuns.com/facilities/our-lady-of-lourdes-stadium/1166"
+    ],
+    "note": "Renovated and renamed Our Lady of Lourdes Stadium in August 2025, formerly Cajun Field."
+  },
+  "324": {
+    "stadium": "Brooks Stadium",
+    "city": "Conway",
+    "center": [
+      -79.0175,
+      33.7929
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Brooks_Stadium",
+    "fullCollegeName": "Coastal Carolina University",
+    "stadiumPage": "Brooks Stadium",
+    "venueSources": []
+  },
+  "326": {
+    "stadium": "UFCU Stadium",
+    "city": "San Marcos",
+    "center": [
+      -97.92555556,
+      29.89111111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/UFCU_Stadium",
+    "fullCollegeName": "Texas State University",
+    "stadiumPage": "UFCU Stadium",
+    "venueSources": []
+  },
+  "328": {
+    "stadium": "Maverik Stadium",
+    "city": "Logan",
+    "center": [
+      -111.81166667,
+      41.75166667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Maverik_Stadium",
+    "fullCollegeName": "Utah State University",
+    "stadiumPage": "Maverik Stadium",
+    "venueSources": []
+  },
+  "333": {
+    "stadium": "Bryant–Denny Stadium",
+    "city": "Tuscaloosa",
+    "center": [
+      -87.55027778,
+      33.20833333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Bryant%E2%80%93Denny_Stadium",
+    "fullCollegeName": "University of Alabama",
+    "stadiumPage": "Bryant–Denny Stadium",
+    "venueSources": []
+  },
+  "338": {
+    "stadium": "Fifth Third Stadium",
+    "city": "Kennesaw",
+    "center": [
+      -84.567626,
+      34.028967
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Fifth_Third_Stadium",
+    "fullCollegeName": "Kennesaw State University",
+    "stadiumPage": "Fifth Third Stadium",
+    "venueSources": []
+  },
+  "344": {
+    "stadium": "Davis Wade Stadium",
+    "city": "Mississippi State",
+    "center": [
+      -88.79361111,
+      33.45638889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Davis_Wade_Stadium",
+    "fullCollegeName": "Mississippi State University",
+    "stadiumPage": "Davis Wade Stadium",
+    "venueSources": []
+  },
+  "349": {
+    "stadium": "Michie Stadium",
+    "city": "West Point",
+    "center": [
+      -73.96416667,
+      41.3875
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Michie_Stadium",
+    "fullCollegeName": "United States Military Academy",
+    "stadiumPage": "Michie Stadium",
+    "venueSources": []
+  },
+  "356": {
+    "stadium": "Gies Memorial Stadium",
+    "city": "Champaign",
+    "center": [
+      -88.23583333,
+      40.09916667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Gies_Memorial_Stadium",
+    "fullCollegeName": "University of Illinois Urbana-Champaign",
+    "stadiumPage": "Gies Memorial Stadium",
+    "venueSources": [
+      "https://fightingillini.com/facilities/gies-memorial-stadium/64"
+    ],
+    "note": "Correct ground is Gies Memorial Stadium in Champaign; the ESPN Foster Stadium reference is unrelated.",
+    "state": "IL"
+  },
+  "2005": {
+    "stadium": "Falcon Stadium",
+    "city": "USAF Academy",
+    "center": [
+      -104.843,
+      38.997
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Falcon_Stadium",
+    "fullCollegeName": "United States Air Force Academy",
+    "stadiumPage": "Falcon Stadium",
+    "venueSources": []
+  },
+  "2006": {
+    "stadium": "InfoCision Stadium–Summa Field",
+    "city": "Akron",
+    "center": [
+      -81.508019,
+      41.072347
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/InfoCision_Stadium%E2%80%93Summa_Field",
+    "fullCollegeName": "University of Akron",
+    "stadiumPage": "InfoCision Stadium–Summa Field",
+    "venueSources": []
+  },
+  "2026": {
+    "stadium": "Kidd Brewer Stadium",
+    "city": "Boone",
+    "center": [
+      -81.68555556,
+      36.21166667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Kidd_Brewer_Stadium",
+    "fullCollegeName": "Appalachian State University",
+    "stadiumPage": "Kidd Brewer Stadium",
+    "venueSources": []
+  },
+  "2032": {
+    "stadium": "Centennial Bank Stadium",
+    "city": "Jonesboro",
+    "center": [
+      -90.66722222,
+      35.84888889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Centennial_Bank_Stadium",
+    "fullCollegeName": "Arkansas State University",
+    "stadiumPage": "Centennial Bank Stadium",
+    "venueSources": []
+  },
+  "2050": {
+    "stadium": "Scheumann Stadium",
+    "city": "Muncie",
+    "center": [
+      -85.41666667,
+      40.21611111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Scheumann_Stadium",
+    "fullCollegeName": "Ball State University",
+    "stadiumPage": "Scheumann Stadium",
+    "venueSources": []
+  },
+  "2084": {
+    "stadium": "Broadview Stadium",
+    "city": "Amherst",
+    "center": [
+      -78.7775,
+      42.99916667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Broadview_Stadium",
+    "fullCollegeName": "University at Buffalo",
+    "stadiumPage": "Broadview Stadium",
+    "venueSources": [
+      "https://ubbulls.com/sports/football/schedule/?path=football"
+    ],
+    "note": "Current Broadview Stadium is on the Amherst campus, not in Buffalo city proper."
+  },
+  "2116": {
+    "stadium": "Acrisure Bounce House",
+    "city": "Orlando",
+    "center": [
+      -81.1924,
+      28.6091
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Acrisure_Bounce_House",
+    "fullCollegeName": "University of Central Florida",
+    "stadiumPage": "Acrisure Bounce House",
+    "venueSources": []
+  },
+  "2117": {
+    "stadium": "Kelly/Shorts Stadium",
+    "city": "Mount Pleasant",
+    "center": [
+      -84.77083333,
+      43.5775
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Kelly%2FShorts_Stadium",
+    "fullCollegeName": "Central Michigan University",
+    "stadiumPage": "Kelly/Shorts Stadium",
+    "venueSources": []
+  },
+  "2132": {
+    "stadium": "Nippert Stadium",
+    "city": "Cincinnati",
+    "center": [
+      -84.5162,
+      39.1312
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Nippert_Stadium",
+    "fullCollegeName": "University of Cincinnati",
+    "stadiumPage": "Nippert Stadium",
+    "venueSources": []
+  },
+  "2199": {
+    "stadium": "Rynearson Stadium",
+    "city": "Ypsilanti",
+    "center": [
+      -83.64722222,
+      42.25583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Rynearson_Stadium",
+    "fullCollegeName": "Eastern Michigan University",
+    "stadiumPage": "Rynearson Stadium",
+    "venueSources": []
+  },
+  "2226": {
+    "stadium": "Flagler Credit Union Stadium",
+    "city": "Boca Raton",
+    "center": [
+      -80.10166667,
+      26.37611111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Flagler_Credit_Union_Stadium",
+    "fullCollegeName": "Florida Atlantic University",
+    "stadiumPage": "Flagler Credit Union Stadium",
+    "venueSources": []
+  },
+  "2229": {
+    "stadium": "Pitbull Stadium",
+    "city": "University Park (Miami)",
+    "center": [
+      -80.37777778,
+      25.7525
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Pitbull_Stadium",
+    "fullCollegeName": "Florida International University",
+    "stadiumPage": "Pitbull Stadium",
+    "venueSources": []
+  },
+  "2247": {
+    "stadium": "Center Parc Stadium",
+    "city": "Atlanta",
+    "center": [
+      -84.38944444,
+      33.73527778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Center_Parc_Stadium",
+    "fullCollegeName": "Georgia State University",
+    "stadiumPage": "Center Parc Stadium",
+    "venueSources": []
+  },
+  "2294": {
+    "stadium": "Kinnick Stadium",
+    "city": "Iowa City",
+    "center": [
+      -91.55111111,
+      41.65861111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Kinnick_Stadium",
+    "fullCollegeName": "University of Iowa",
+    "stadiumPage": "Kinnick Stadium",
+    "venueSources": []
+  },
+  "2305": {
+    "stadium": "David Booth Kansas Memorial Stadium",
+    "city": "Lawrence",
+    "center": [
+      -95.24638889,
+      38.96333333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/David_Booth_Kansas_Memorial_Stadium",
+    "fullCollegeName": "University of Kansas",
+    "stadiumPage": "David Booth Kansas Memorial Stadium",
+    "venueSources": []
+  },
+  "2306": {
+    "stadium": "Bill Snyder Family Football Stadium",
+    "city": "Manhattan",
+    "center": [
+      -96.59388889,
+      39.20194444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Bill_Snyder_Family_Football_Stadium",
+    "fullCollegeName": "Kansas State University",
+    "stadiumPage": "Bill Snyder Family Football Stadium",
+    "venueSources": []
+  },
+  "2309": {
+    "stadium": "Dix Stadium",
+    "city": "Kent",
+    "center": [
+      -81.31333333,
+      41.13916667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Dix_Stadium",
+    "fullCollegeName": "Kent State University",
+    "stadiumPage": "Dix Stadium",
+    "venueSources": []
+  },
+  "2335": {
+    "stadium": "Arthur L. Williams Stadium",
+    "city": "Lynchburg",
+    "center": [
+      -79.175,
+      37.354
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Williams_Stadium",
+    "fullCollegeName": "Liberty University",
+    "stadiumPage": "Williams Stadium",
+    "venueSources": []
+  },
+  "2348": {
+    "stadium": "Joe Aillet Stadium",
+    "city": "Ruston",
+    "center": [
+      -92.655899,
+      32.532021
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Joe_Aillet_Stadium",
+    "fullCollegeName": "Louisiana Tech University",
+    "stadiumPage": "Joe Aillet Stadium",
+    "venueSources": []
+  },
+  "2390": {
+    "stadium": "Hard Rock Stadium",
+    "city": "Miami Gardens",
+    "center": [
+      -80.23888889,
+      25.95805556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Hard_Rock_Stadium",
+    "fullCollegeName": "University of Miami",
+    "stadiumPage": "Hard Rock Stadium",
+    "venueSources": []
+  },
+  "2393": {
+    "stadium": "Johnny \"Red\" Floyd Stadium",
+    "city": "Murfreesboro",
+    "center": [
+      -86.368223,
+      35.850513
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Johnny_%22Red%22_Floyd_Stadium",
+    "fullCollegeName": "Middle Tennessee State University",
+    "stadiumPage": "Johnny \"Red\" Floyd Stadium",
+    "venueSources": []
+  },
+  "2426": {
+    "stadium": "Navy–Marine Corps Memorial Stadium",
+    "city": "Annapolis",
+    "center": [
+      -76.507,
+      38.985
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Navy%E2%80%93Marine_Corps_Memorial_Stadium",
+    "fullCollegeName": "United States Naval Academy",
+    "stadiumPage": "Navy–Marine Corps Memorial Stadium",
+    "venueSources": []
+  },
+  "2429": {
+    "stadium": "Jerry Richardson Stadium",
+    "city": "Charlotte",
+    "center": [
+      -80.74027778,
+      35.31055556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Jerry_Richardson_Stadium",
+    "fullCollegeName": "University of North Carolina at Charlotte",
+    "stadiumPage": "Jerry Richardson Stadium",
+    "venueSources": []
+  },
+  "2433": {
+    "stadium": "FMOL Health | St. Francis Stadium",
+    "city": "Monroe",
+    "center": [
+      -92.06583333,
+      32.53083333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/FMOL_Health%2FSt._Francis_Stadium",
+    "fullCollegeName": "University of Louisiana at Monroe",
+    "stadiumPage": "FMOL Health/St. Francis Stadium",
+    "venueSources": [
+      "https://ulmwarhawks.com/facilities/malone-stadium/1"
+    ],
+    "note": "Renamed for the 2026 season; formerly Malone Stadium."
+  },
+  "2439": {
+    "stadium": "Allegiant Stadium",
+    "city": "Paradise",
+    "center": [
+      -115.18388889,
+      36.09055556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Allegiant_Stadium",
+    "fullCollegeName": "University of Nevada, Las Vegas",
+    "stadiumPage": "Allegiant Stadium",
+    "venueSources": [],
+    "note": "UNLV uses Allegiant Stadium in Paradise, not Sam Boyd Stadium."
+  },
+  "2440": {
+    "stadium": "Mackay Stadium",
+    "city": "Reno",
+    "center": [
+      -119.8175,
+      39.54694444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Mackay_Stadium",
+    "fullCollegeName": "University of Nevada, Reno",
+    "stadiumPage": "Mackay Stadium",
+    "venueSources": []
+  },
+  "2449": {
+    "stadium": "Fargodome",
+    "city": "Fargo",
+    "center": [
+      -96.80166667,
+      46.90305556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Fargodome",
+    "fullCollegeName": "North Dakota State University",
+    "stadiumPage": "Fargodome",
+    "venueSources": []
+  },
+  "2459": {
+    "stadium": "Huskie Stadium",
+    "city": "DeKalb",
+    "center": [
+      -88.778,
+      41.934
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Huskie_Stadium",
+    "fullCollegeName": "Northern Illinois University",
+    "stadiumPage": "Huskie Stadium",
+    "venueSources": []
+  },
+  "2483": {
+    "stadium": "Autzen Stadium",
+    "city": "Eugene",
+    "center": [
+      -123.06861111,
+      44.05833333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Autzen_Stadium",
+    "fullCollegeName": "University of Oregon",
+    "stadiumPage": "Autzen Stadium",
+    "venueSources": []
+  },
+  "2509": {
+    "stadium": "Ross–Ade Stadium",
+    "city": "West Lafayette",
+    "center": [
+      -86.91833333,
+      40.43444444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Ross%E2%80%93Ade_Stadium",
+    "fullCollegeName": "Purdue University",
+    "stadiumPage": "Ross–Ade Stadium",
+    "venueSources": []
+  },
+  "2534": {
+    "stadium": "Elliott T. Bowers Stadium",
+    "city": "Huntsville",
+    "center": [
+      -95.54166667,
+      30.71388889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Bowers_Stadium",
+    "fullCollegeName": "Sam Houston State University",
+    "stadiumPage": "Bowers Stadium",
+    "venueSources": []
+  },
+  "2567": {
+    "stadium": "Gerald J. Ford Stadium",
+    "city": "Dallas",
+    "center": [
+      -96.78399444,
+      32.83664444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Gerald_J._Ford_Stadium",
+    "fullCollegeName": "Southern Methodist University",
+    "stadiumPage": "Gerald J. Ford Stadium",
+    "venueSources": []
+  },
+  "2572": {
+    "stadium": "M. M. Roberts Stadium",
+    "city": "Hattiesburg",
+    "center": [
+      -89.33138889,
+      31.32888889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Renasant_Stadium",
+    "fullCollegeName": "University of Southern Mississippi",
+    "stadiumPage": "Renasant Stadium",
+    "venueSources": []
+  },
+  "2579": {
+    "stadium": "Williams–Brice Stadium",
+    "city": "Columbia",
+    "center": [
+      -81.01916667,
+      33.97305556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Williams%E2%80%93Brice_Stadium",
+    "fullCollegeName": "University of South Carolina",
+    "stadiumPage": "Williams–Brice Stadium",
+    "venueSources": []
+  },
+  "2623": {
+    "stadium": "Robert W. Plaster Stadium",
+    "city": "Springfield",
+    "center": [
+      -93.27972222,
+      37.19777778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Robert_W._Plaster_Stadium",
+    "fullCollegeName": "Missouri State University",
+    "stadiumPage": "Robert W. Plaster Stadium",
+    "venueSources": []
+  },
+  "2628": {
+    "stadium": "Amon G. Carter Stadium",
+    "city": "Fort Worth",
+    "center": [
+      -97.36805556,
+      32.70972222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Amon_G._Carter_Stadium",
+    "fullCollegeName": "Texas Christian University",
+    "stadiumPage": "Amon G. Carter Stadium",
+    "venueSources": []
+  },
+  "2633": {
+    "stadium": "Neyland Stadium",
+    "city": "Knoxville",
+    "center": [
+      -83.925,
+      35.955
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Neyland_Stadium",
+    "fullCollegeName": "University of Tennessee",
+    "stadiumPage": "Neyland Stadium",
+    "venueSources": []
+  },
+  "2636": {
+    "stadium": "Alamodome",
+    "city": "San Antonio",
+    "center": [
+      -98.47888889,
+      29.41694444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Alamodome",
+    "fullCollegeName": "University of Texas at San Antonio",
+    "stadiumPage": "Alamodome",
+    "venueSources": []
+  },
+  "2638": {
+    "stadium": "Sun Bowl Stadium",
+    "city": "El Paso",
+    "center": [
+      -106.508,
+      31.773
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Sun_Bowl_(stadium)",
+    "fullCollegeName": "University of Texas at El Paso",
+    "stadiumPage": "Sun Bowl (stadium)",
+    "venueSources": []
+  },
+  "2641": {
+    "stadium": "Galaxy Stadium",
+    "city": "Lubbock",
+    "center": [
+      -101.87277778,
+      33.59111111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Galaxy_Stadium",
+    "fullCollegeName": "Texas Tech University",
+    "stadiumPage": "Galaxy Stadium",
+    "venueSources": [
+      "https://texastech.com/news/2026/7/17/football-texas-tech-secures-landmark-naming-rights-agreement-with-galaxy"
+    ],
+    "note": "Renamed Galaxy Stadium for the 2026 season."
+  },
+  "2649": {
+    "stadium": "Glass Bowl",
+    "city": "Toledo",
+    "center": [
+      -83.61361111,
+      41.65694444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Glass_Bowl",
+    "fullCollegeName": "University of Toledo",
+    "stadiumPage": "Glass Bowl",
+    "venueSources": []
+  },
+  "2653": {
+    "stadium": "Veterans Memorial Stadium at Larry Blakeney Field",
+    "city": "Troy",
+    "center": [
+      -85.95194444,
+      31.79944444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Veterans_Memorial_Stadium_(Troy_University)",
+    "fullCollegeName": "Troy University",
+    "stadiumPage": "Veterans Memorial Stadium (Troy University)",
+    "venueSources": []
+  },
+  "2655": {
+    "stadium": "Yulman Stadium",
+    "city": "New Orleans",
+    "center": [
+      -90.116816,
+      29.94482
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Yulman_Stadium",
+    "fullCollegeName": "Tulane University",
+    "stadiumPage": "Yulman Stadium",
+    "venueSources": []
+  },
+  "2711": {
+    "stadium": "Waldo Stadium",
+    "city": "Kalamazoo",
+    "center": [
+      -85.60111111,
+      42.28583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Waldo_Stadium",
+    "fullCollegeName": "Western Michigan University",
+    "stadiumPage": "Waldo Stadium",
+    "venueSources": []
+  },
+  "2751": {
+    "stadium": "War Memorial Stadium",
+    "city": "Laramie",
+    "center": [
+      -105.568,
+      41.312
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/War_Memorial_Stadium_(Wyoming)",
+    "fullCollegeName": "University of Wyoming",
+    "stadiumPage": "War Memorial Stadium (Wyoming)",
+    "venueSources": []
+  }
+}

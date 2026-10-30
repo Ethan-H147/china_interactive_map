@@ -1,0 +1,1554 @@
+{
+  "retrieved": "2026-10-29",
+  "season": "2026",
+  "files": {
+    "raw/usa.1-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/teams?limit=100",
+      "sha256": "81b1074e351834171d7c3ae67bf0a8c454bfc805d26446d9602d64f779ff9961",
+      "bytes": 106332
+    },
+    "raw/usa.usl.1-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.usl.1/teams?limit=100",
+      "sha256": "48bc1580e73e1952ddbafeb6515236e850d8c4c141bb3e34de62086b58ec5152",
+      "bytes": 31293
+    },
+    "raw/usa.usl.l1-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.usl.l1/teams?limit=100",
+      "sha256": "34409ca6beb808b8e9f7312ed82d2d30c30e8f8424a4ef3870799ad23750b5dc",
+      "bytes": 21424
+    },
+    "raw/team-18418.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/18418?lang=en&region=us",
+      "sha256": "f1f24db00901674a7afc41b0d211ed0dee14a946275d807a879baa257fcd36ff",
+      "bytes": 7822
+    },
+    "raw/team-9720.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/9720?lang=en&region=us",
+      "sha256": "cd656187de5e6d63807c176a72e4f4210004204fc760b4b22014ba071c239a8d",
+      "bytes": 7750
+    },
+    "raw/team-20906.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/20906?lang=en&region=us",
+      "sha256": "f283b59dd6eb3aaddba0da1d0a9cd6ecb956a33580fb996ffe062ef54ffc4b4c",
+      "bytes": 7720
+    },
+    "raw/team-182.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/182?lang=en&region=us",
+      "sha256": "da0b060134b6a586df318bf0cfcc6e9e4b27688354fc4670f623930e55c2192c",
+      "bytes": 7726
+    },
+    "raw/team-21300.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/21300?lang=en&region=us",
+      "sha256": "cf5ca59583114c8feb5b5ef5a7770ceb22e9d5980089dce484405547068004d4",
+      "bytes": 7788
+    },
+    "raw/crest-9720.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+      "sha256": "0b8b61be58b10eeded04e1604f6d1236fdd6c2f758bbf9d68530981c8c1b3e19",
+      "bytes": 102401
+    },
+    "raw/crest-20906.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/20906.png",
+      "sha256": "887db8b0ca64f2dbb360ce0f42900a29432d24e6038f054402e923642955979c",
+      "bytes": 47316
+    },
+    "raw/crest-18418.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+      "sha256": "b6a887b8d5432f94efe26f7b972b8c501871f67dc8eac941540fb74c6d5ae975",
+      "bytes": 102261
+    },
+    "raw/crest-21300.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
+      "sha256": "1cc47a339c50dd3351302b60ee73912e2a6eb166b5f2d490d6f280b7d7e2aeea",
+      "bytes": 69217
+    },
+    "raw/crest-182.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "sha256": "b6c149b5cb0699cb5995cec3cb6cf9592222606091834ddad05e42d37f3e8a84",
+      "bytes": 48903
+    },
+    "raw/team-184.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/184?lang=en&region=us",
+      "sha256": "5db6ffce687e184311ae8f36652e4437dbcd8e0b371aef66cc883981bc47c7e2",
+      "bytes": 7743
+    },
+    "raw/team-193.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/193?lang=en&region=us",
+      "sha256": "13338f607032f993c67046ffd4a19de77c633a1b81bafe8103011e4acb51ae7f",
+      "bytes": 7722
+    },
+    "raw/team-183.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/183?lang=en&region=us",
+      "sha256": "f7699c8d6692a87aa817cc2dde714cb370c3813e2de426b63cbd59b456d13ef5",
+      "bytes": 7751
+    },
+    "raw/team-185.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/185?lang=en&region=us",
+      "sha256": "3ba5a1079c94e9c5ed612bd7c20a2c0e4066c26a547863bb450c57569eaa6aa1",
+      "bytes": 7656
+    },
+    "raw/team-18267.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/18267?lang=en&region=us",
+      "sha256": "2ef33b2052328a16a3c647aefe1dfc68d6153214464ac380d34f57bdc5f79f50",
+      "bytes": 7765
+    },
+    "raw/crest-193.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
+      "sha256": "4dec9599aed2944426c02d87d2d17ad7f3aad054bf9c0b1359272a97419e66f1",
+      "bytes": 45806
+    },
+    "raw/crest-184.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/184.png",
+      "sha256": "4b3350d57155d81d2ac711eb1dd5729c24dc80ce8ab1aa13c473cd2ddb31235e",
+      "bytes": 32677
+    },
+    "raw/crest-183.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+      "sha256": "bf45239688c9d69144f0d0c3efef4de38f3a0db2c0a2b3a32df054330f707664",
+      "bytes": 20940
+    },
+    "raw/crest-18267.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+      "sha256": "fb8309060d250fb14ec2b96bee86437c730e12bb9ad7b20d99352cb5c7a19c1b",
+      "bytes": 66989
+    },
+    "raw/crest-185.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/185.png",
+      "sha256": "16d36edbbfcb1bfcf252901b8d29386d07557e73e28b596dfbb5236d41c25603",
+      "bytes": 69775
+    },
+    "raw/team-6077.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/6077?lang=en&region=us",
+      "sha256": "c9e0102932b768441acfe8ac86094019f4c42c823c0275cf5862d8d1718507b1",
+      "bytes": 7802
+    },
+    "raw/team-187.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/187?lang=en&region=us",
+      "sha256": "b7a828e057c3f58b29e90985b5f104eb00ff57f1d60b4edd0424d26e4c042c93",
+      "bytes": 7813
+    },
+    "raw/team-20232.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/20232?lang=en&region=us",
+      "sha256": "0a3d04a14179c6ae62a5da35643b07111f6b28380b06c6698d85f70cc9010de2",
+      "bytes": 7722
+    },
+    "raw/team-17362.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/17362?lang=en&region=us",
+      "sha256": "812b95e77c785460c0a08d87ab99668e61f7f09304678b335acd7acf22fc7f38",
+      "bytes": 7831
+    },
+    "raw/team-18966.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/18966?lang=en&region=us",
+      "sha256": "3de42530a24b47365c7100bfbd56714cf49cb47d4d07e2d0bc3d20c33f10a46c",
+      "bytes": 7690
+    },
+    "raw/crest-6077.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png",
+      "sha256": "5bc8f15d3917f6d6ff8f106be70f7b8bf1dd38017fdbe3ec2467ab3a00494a62",
+      "bytes": 49040
+    },
+    "raw/crest-20232.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+      "sha256": "a1ea4f53629ee3849d72d928d4c54dadb1c3e4e57dc842aba4dbba59c08d12f4",
+      "bytes": 52451
+    },
+    "raw/crest-17362.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17362.png",
+      "sha256": "a3e9a44beb8b98670b163d8426300cb4b0a9d942dbaedbb2333da039e95a6ced",
+      "bytes": 52639
+    },
+    "raw/crest-187.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/187.png",
+      "sha256": "e0418f5d80a7c1f28d2ea234084d22006c8293131165d848869959b1be5f0d04",
+      "bytes": 28066
+    },
+    "raw/crest-18966.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
+      "sha256": "1433adb2ec11c30bbcd306fce3674f2d253372ae2fd4492e210b222d7d24439f",
+      "bytes": 70496
+    },
+    "raw/team-17606.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/17606?lang=en&region=us",
+      "sha256": "8b8dd9c0408aa698d9aeb7d63a2378da8a7bf9781f91a4dd60ae1644b4de6fcc",
+      "bytes": 7801
+    },
+    "raw/team-18986.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/18986?lang=en&region=us",
+      "sha256": "7c69ee0a5c31a3ead1c4ea3e5b3afe1a2c76e09231931cd8d857cd2469489204",
+      "bytes": 7759
+    },
+    "raw/team-189.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/189?lang=en&region=us",
+      "sha256": "99837fb4a4e47b993659f0c791ed8cef9d829ed54e71ffb2c74d48c9f636fbcc",
+      "bytes": 7787
+    },
+    "raw/team-10739.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/10739?lang=en&region=us",
+      "sha256": "5a1059df469f05237bb02a2828cf037ca8254e7ddfb6d6a0db029937080bb983",
+      "bytes": 7833
+    },
+    "raw/team-12011.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/12011?lang=en&region=us",
+      "sha256": "2108bca371205773148889abf57d263178d8aa5194737e0d1b2b4da892e502b6",
+      "bytes": 7794
+    },
+    "raw/crest-18986.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
+      "sha256": "2e94271db907c688336a869e40548158b1e5e5d625affd16e1188c4753e1aae5",
+      "bytes": 20788
+    },
+    "raw/crest-12011.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+      "sha256": "9a9535bc6c822cfd76a65026320c860350bd6b0a3016fa45bd280dd4a9ec7a1b",
+      "bytes": 63019
+    },
+    "raw/crest-17606.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+      "sha256": "df7836507d3a70537ea11964d614f19193a2cbc4dcf7c8476c22382e7122b9ed",
+      "bytes": 135728
+    },
+    "raw/crest-189.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+      "sha256": "a51f73cd32f2d68d342c497e98319665c99f9cd99e88095ebcf6be6d82998f83",
+      "bytes": 115609
+    },
+    "raw/crest-10739.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
+      "sha256": "10f562b29097b165975c82cc309a2fb70ff73e11b8bbc9a5847ba8181de7dd1f",
+      "bytes": 128883
+    },
+    "raw/team-9723.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/9723?lang=en&region=us",
+      "sha256": "155a79bead32d9bda65cd4e0c002b6f279fea5a6b528bb493e1bc1907758db88",
+      "bytes": 7790
+    },
+    "raw/team-190.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/190?lang=en&region=us",
+      "sha256": "bfecd33f05d6a8cd8caf06afe51c8e1fcd9b73f79a43a0ca472f39f59e215f92",
+      "bytes": 7758
+    },
+    "raw/team-4771.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/4771?lang=en&region=us",
+      "sha256": "1cf8d5834bfffc348d423a98ee366e0603a297af8af3b3ca2bd5a99d08a30308",
+      "bytes": 7790
+    },
+    "raw/team-191.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/191?lang=en&region=us",
+      "sha256": "1257bdedca2c94c79fdfc055a3f6d54f1cfa3789e8d37ab754189e9ab1fa00cb",
+      "bytes": 7795
+    },
+    "raw/team-22529.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/22529?lang=en&region=us",
+      "sha256": "69617c17f29f386e2e3318705389eccfd96713d5ad602ce0cc20ddd8f33c0c4d",
+      "bytes": 7773
+    },
+    "raw/crest-9723.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9723.png",
+      "sha256": "71df1e49bd21cc5a9565e1620dcb9f1f94b653d8e0b2ac3527518c7bebb5d868",
+      "bytes": 64674
+    },
+    "raw/crest-22529.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png",
+      "sha256": "97143b0d99103544e189654d23c2341896ec90900db809af149de47b6dfc9227",
+      "bytes": 102913
+    },
+    "raw/crest-4771.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png",
+      "sha256": "dc4210e86d165c280edbd1cb80959ac2f47999e153a344a1b3e3e5d30157aade",
+      "bytes": 54838
+    },
+    "raw/crest-190.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
+      "sha256": "84b94381a47ab86bc72cd9ee9def55c94163b0d9ba162dcbc54ddb56f4e464f8",
+      "bytes": 85720
+    },
+    "raw/crest-191.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/191.png",
+      "sha256": "b1504d5ddd5799a073634a712a3d0fbb1ad7c2e7a1f22f8a87c475ea46b6c54b",
+      "bytes": 52164
+    },
+    "raw/team-9726.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/9726?lang=en&region=us",
+      "sha256": "7aea958a65f78da77b0a37612404befd5292f0e4915fbcc529ef0aa82e4984ac",
+      "bytes": 7807
+    },
+    "raw/team-21812.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/21812?lang=en&region=us",
+      "sha256": "9fa22447a332f174df3c99a683c63bf837f8d8f767c3279422307d8896df1b2a",
+      "bytes": 7760
+    },
+    "raw/team-186.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/186?lang=en&region=us",
+      "sha256": "e9ae81a8a03d39eb999408d88703267718ff018147639e98e8edde4524a629e5",
+      "bytes": 7756
+    },
+    "raw/team-9727.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/9727?lang=en&region=us",
+      "sha256": "eec174d7d9dce64a4cd467c8cf9a63df420eaef3f388aac24ca79fe0328ec192",
+      "bytes": 7800
+    },
+    "raw/team-7318.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/seasons/2026/teams/7318?lang=en&region=us",
+      "sha256": "b225983219a29b09f7fc3ace9ebd16dc1ad854de23e25a6b21b43025c1ab7c0d",
+      "bytes": 7683
+    },
+    "raw/crest-21812.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/21812.png",
+      "sha256": "b2459c995f0be4c96ed622c21c795b1d53764ea58bb82a3e386ce6b9fb0a3a02",
+      "bytes": 42255
+    },
+    "raw/crest-9726.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9726.png",
+      "sha256": "2d44906cfcc797aefdc9010ac7d6b1438e54c72c12723384530d4378fc4578b4",
+      "bytes": 55362
+    },
+    "raw/crest-186.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/186.png",
+      "sha256": "21edfde914c500ae1d3ed2b2fdeb8e08131c4e8ce22a20bd88ed7da0f298e446",
+      "bytes": 85187
+    },
+    "raw/crest-9727.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png",
+      "sha256": "01b924e6ed2483ba9957bf9f523b2dab008721ef2b6591d7a3ca6f5ddef3137f",
+      "bytes": 73542
+    },
+    "raw/crest-7318.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+      "sha256": "46795e794ba0426fa0f8289d84049b06cb070ae3db5e42e1dd16cf36f1976683",
+      "bytes": 65557
+    },
+    "raw/team-19405.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/19405?lang=en&region=us",
+      "sha256": "66814bb0533f6acddc4298e48788997b37667246dc12758c6e4138faf3837554",
+      "bytes": 5007
+    },
+    "raw/team-9729.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/9729?lang=en&region=us",
+      "sha256": "32353c57c1bb90714b2518da5bdd9324e9d90466c76373d1eea95ea52bd1bbff",
+      "bytes": 5014
+    },
+    "raw/team-17830.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/17830?lang=en&region=us",
+      "sha256": "ec48d1ebfdaa24b93dc47029a9818c1a0aaabe763a5c4536b724a9be118a5c71",
+      "bytes": 5135
+    },
+    "raw/team-131579.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/131579?lang=en&region=us",
+      "sha256": "4303264fbcadfa9a9ef19fdfcf1ed88606ab8d9e0ec11cabfb324f2ac6a5d811",
+      "bytes": 4980
+    },
+    "raw/team-19179.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/19179?lang=en&region=us",
+      "sha256": "80b290f786465e130657775fff3ad159fb839590e87c8d95d84c1bdb2348e76c",
+      "bytes": 4983
+    },
+    "raw/crest-19405.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19405.png",
+      "sha256": "f6328981c0d96f23e98de511cf38f6098b0648b7095d943537e563d0b37967f1",
+      "bytes": 34747
+    },
+    "raw/crest-131579.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/131579.png",
+      "sha256": "d8a6893a4cb194829ca8722b5c4f5cdd2dd2234bd71e36563f7111132e5c07ac",
+      "bytes": 39438
+    },
+    "raw/crest-19179.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19179.png",
+      "sha256": "d509fbe9e3fe3d9b2af2e03faff76bce8e89376752ca00bca7fb7fdd8f5f7700",
+      "bytes": 99529
+    },
+    "raw/crest-17830.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17830.png",
+      "sha256": "e81dbdbebbfa49d1dddbe62204d55dd76373dcee60d9cd6ab99b2af8f8615dfc",
+      "bytes": 56636
+    },
+    "raw/crest-9729.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/9729.png",
+      "sha256": "f362ac250e9569cdc4379161f0962d98b54d3254d5501d5f1793bb179e8b0046",
+      "bytes": 106571
+    },
+    "raw/team-19411.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/19411?lang=en&region=us",
+      "sha256": "3d3b224c2ccdb1300b1d039d4705cbbf0a90c37ed30ced525a4c07eeafcc6591",
+      "bytes": 5016
+    },
+    "raw/team-18987.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/18987?lang=en&region=us",
+      "sha256": "52262d90a428205b312edb5b1f9541ef3d1f8c8517e60402a0475966d52b3f15",
+      "bytes": 5014
+    },
+    "raw/team-19407.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/19407?lang=en&region=us",
+      "sha256": "959f3208056dd4a0dc168ba204274bb770c6c574dc730c567ba5c36d41994caf",
+      "bytes": 5050
+    },
+    "raw/team-18446.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/18446?lang=en&region=us",
+      "sha256": "85806e451d6ff7e491ee93bda76400e5a26bb7acc1f32584dc8e58beca5c5bb1",
+      "bytes": 4913
+    },
+    "raw/team-17360.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/17360?lang=en&region=us",
+      "sha256": "c9dbae8e8bdf002f5367b206f6ab41631761518b434ead867fb85bcb869dd1fb",
+      "bytes": 4970
+    },
+    "raw/crest-19411.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19411.png",
+      "sha256": "d3e6811661725af3e94270b35c82b764113422b48a000bf60f00b3769ad31ac2",
+      "bytes": 64204
+    },
+    "raw/crest-18987.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18987.png",
+      "sha256": "4878aed7321c3fd5d98f76289e86eda9a36cc5985f1154f4ec86fe12d3fa6a57",
+      "bytes": 135181
+    },
+    "raw/crest-17360.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17360.png",
+      "sha256": "aae243860bf4dec600d8d8a8cafe38ca27acf306d7f0022e0721a4024b318b1a",
+      "bytes": 101888
+    },
+    "raw/crest-18446.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18446.png",
+      "sha256": "faf663876c9b837344bdc58a149e588440ec8690c904c620471fa7266ec18a9e",
+      "bytes": 52860
+    },
+    "raw/crest-19407.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19407.png",
+      "sha256": "29f53dd05a5e9f1e5dc9d96c9bca1f42a27ca06d899ad42b11fc4d0a54d76b2a",
+      "bytes": 61625
+    },
+    "raw/team-17832.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/17832?lang=en&region=us",
+      "sha256": "04a0faec8d2a7228d1bf7104b89ec58b76015cf93840f45602192ffb740f3e92",
+      "bytes": 5020
+    },
+    "raw/team-21822.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/21822?lang=en&region=us",
+      "sha256": "33561bdee301451915129b61ef18edd1351a6cd48206a11a49b0da850e9e0cee",
+      "bytes": 4891
+    },
+    "raw/team-19410.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/19410?lang=en&region=us",
+      "sha256": "c0d35170b0ba13d7303bdb5932a8fff685ff82b1f1461b920e1d2931ea5955cb",
+      "bytes": 4990
+    },
+    "raw/team-18159.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/18159?lang=en&region=us",
+      "sha256": "6d1bd99c44bb8423c72ef8f0078c1ef1d66bf2a1c6e887485be8a34f5b3b4134",
+      "bytes": 4927
+    },
+    "raw/team-21370.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/21370?lang=en&region=us",
+      "sha256": "01de7723b6e97de85ae4a7a7dad679a42e2071956153104a7d6d09bc4ccb8d52",
+      "bytes": 4964
+    },
+    "raw/crest-17832.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17832.png",
+      "sha256": "05c40eb7f484ba560ed2ff1150ebe9c877a831a5f5fca001597836c0ca1fdf88",
+      "bytes": 66033
+    },
+    "raw/crest-19410.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19410.png",
+      "sha256": "71f7f569284ed0c66b082411b20ce413b1c966013694ace6d690ecdd578ee3ef",
+      "bytes": 40488
+    },
+    "raw/crest-21370.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/21370.png",
+      "sha256": "a63d9add60af0f630175a0ee00dbf0cb403e0deab565c187588da406ee973da9",
+      "bytes": 56933
+    },
+    "raw/crest-18159.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18159.png",
+      "sha256": "caaa43740f00ba820497460358d0ef14b41e2a674de975b8d8d12272f0c17536",
+      "bytes": 82680
+    },
+    "raw/crest-21822.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/21822.png",
+      "sha256": "df0f5a2d4047fa07b6fbac0100db27f0bc57c6e4675a654e2acf95cef537099f",
+      "bytes": 39486
+    },
+    "raw/team-20687.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/20687?lang=en&region=us",
+      "sha256": "c60b44048b38160f048834f3955473d4c8aed436b97eacb3bb55566992cb42c4",
+      "bytes": 4996
+    },
+    "raw/team-19408.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/19408?lang=en&region=us",
+      "sha256": "ccfc5966373ec44d3f0c36e7f93a76fb11b09df54ec8920f505992f97fd0a734",
+      "bytes": 4958
+    },
+    "raw/team-18455.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/18455?lang=en&region=us",
+      "sha256": "c88fe87964395b82c0c96f3033c11151b6e0489edd30ecf7841b3c858fcbe012",
+      "bytes": 5020
+    },
+    "raw/team-17850.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/17850?lang=en&region=us",
+      "sha256": "0d8508a0691647c40476285b5edd684731a1d7613cd9acf6a44c6ba3e822d6ad",
+      "bytes": 5039
+    },
+    "raw/team-17827.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/17827?lang=en&region=us",
+      "sha256": "2a44c182160a16624fd447ba0ce3c6e19a759b5525d25a0257cc9387bb5b5000",
+      "bytes": 5054
+    },
+    "raw/crest-17850.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17850.png",
+      "sha256": "f602097f5e979865371f432b8199c8909716c745ad5c879e09c5125022e7ffec",
+      "bytes": 122763
+    },
+    "raw/crest-17827.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17827.png",
+      "sha256": "479e868ff7a99e4fe17e4afdf096ddcc0c7b459660b43503e4245e0ba3527322",
+      "bytes": 150311
+    },
+    "raw/crest-19408.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19408.png",
+      "sha256": "7f0808774757af32bb2bbb93c2fadb9a17a0e53475c3dc30c50ee6e6722cc6bf",
+      "bytes": 62000
+    },
+    "raw/crest-20687.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/20687.png",
+      "sha256": "fd85d9d479720a81ce3fea21b68210020f9781fe32160693c53b8a78076f9d21",
+      "bytes": 78972
+    },
+    "raw/crest-18455.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18455.png",
+      "sha256": "8d2515b047773df86a8a2e2c777159e60e8a1ccdd01be6531d4d737695952d65",
+      "bytes": 51315
+    },
+    "raw/team-131578.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/131578?lang=en&region=us",
+      "sha256": "e48050cacf2efeb6c8bb8a68721cc6782c75a109a514a2f4bf8d603835f713ed",
+      "bytes": 4983
+    },
+    "raw/team-22164.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/22164?lang=en&region=us",
+      "sha256": "f03257eda4ca893d78c4878e98c717b22151d9b515a8e2aadc6cb6435db38103",
+      "bytes": 4964
+    },
+    "raw/team-18265.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/18265?lang=en&region=us",
+      "sha256": "c6332316b9ef43f3d63b789fea3c1aadc0c0bc15b93ae9e55b7fc614c2694324",
+      "bytes": 4971
+    },
+    "raw/team-17828.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/17828?lang=en&region=us",
+      "sha256": "5e44f925abf52388f04610ffeb456e30655039f8ee4b5ec2b2798a2257986fa3",
+      "bytes": 5054
+    },
+    "raw/crest-131578.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/131578.png",
+      "sha256": "92fcf7cae5a7a21f91685d8829d2d155d53976354fa187ae6d85d21676950d93",
+      "bytes": 60082
+    },
+    "raw/team-17361.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/seasons/2026/teams/17361?lang=en&region=us",
+      "sha256": "3b7b0687f781d966e272cc35f52eaa87162d440a6bfa8a7385354476ae31fb3b",
+      "bytes": 5005
+    },
+    "raw/crest-22164.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22164.png",
+      "sha256": "879ace76c3ecd1ee3ffbeafba7bcfd622b46e9d80ffeb54556161a3745e94ce6",
+      "bytes": 39778
+    },
+    "raw/crest-17828.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17828.png",
+      "sha256": "3442bf7892a2506c80bcb0ec649532ff7a8f4babfbf67378fa18d4a27a2d17c9",
+      "bytes": 86827
+    },
+    "raw/crest-18265.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/18265.png",
+      "sha256": "3247ed9779abe2c8a87f816626a8b1aa15bd02771043698831e0b36e5193e431",
+      "bytes": 311567
+    },
+    "raw/crest-17361.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17361.png",
+      "sha256": "fb422dbc0b3c6fbe69d8e72c574f5cbf19d0ff0ce76421ea24595397f4e1daaa",
+      "bytes": 90694
+    },
+    "raw/team-22526.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/22526?lang=en&region=us",
+      "sha256": "a7a6f4d459e7c71d1cf27e6732807065d4631b992c1aa94e3c101a04d11bc8d7",
+      "bytes": 5090
+    },
+    "raw/team-20000.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/20000?lang=en&region=us",
+      "sha256": "131a94b8ea336cc9870437f0ac236c6f69e24024b148077e6fba1f3adf698a74",
+      "bytes": 5229
+    },
+    "raw/team-17826.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/17826?lang=en&region=us",
+      "sha256": "e433c3b3c6adf9fed804ae2853b0bc4f46b25b440196f4b96f13fadcf3df6ec0",
+      "bytes": 5263
+    },
+    "raw/team-20671.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/20671?lang=en&region=us",
+      "sha256": "dfb530fc2d00d41ba053bcf1344517413c013d817af28988379166bc747690ad",
+      "bytes": 5147
+    },
+    "raw/team-131581.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/131581?lang=en&region=us",
+      "sha256": "2f2266f802ff5cd6c4c6895cb5e10a297bf919568f5f793dab963d8fd28cfc74",
+      "bytes": 5192
+    },
+    "raw/crest-17826.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17826.png",
+      "sha256": "fde1bfbf66a80d851e1b0b1f1708cfe0701dcf2d5a625d124a345b603e90fffe",
+      "bytes": 154665
+    },
+    "raw/crest-20671.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/20671.png",
+      "sha256": "37a6e1d5b51e4564dbffddef131e56c3f3170e332c50740936d2c2885ded2c8e",
+      "bytes": 72243
+    },
+    "raw/crest-131581.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/131581.png",
+      "sha256": "14409084acd75d32dfc8b86b452ce9d5deb9c83bd7979f0257a21272ae0ce1cf",
+      "bytes": 43661
+    },
+    "raw/crest-22526.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22526.png",
+      "sha256": "e0dfef46c72e8017ae1350aeb536798fa9774949cad4d18e74e0ac49f0136c58",
+      "bytes": 76728
+    },
+    "raw/crest-20000.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/20000.png",
+      "sha256": "2c252f3911b95c67c2868c13875b29033464b51bed93deb3fec1648306780819",
+      "bytes": 100182
+    },
+    "raw/team-19995.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/19995?lang=en&region=us",
+      "sha256": "387cb18d273210cef4854e1c17e4efe66adee33944886c8b92a0717103f99616",
+      "bytes": 5186
+    },
+    "raw/team-22525.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/22525?lang=en&region=us",
+      "sha256": "fb0c299e36d14612f1d096c9313c579f9113d43852033e9b34bcf4157a0d8264",
+      "bytes": 5078
+    },
+    "raw/team-131580.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/131580?lang=en&region=us",
+      "sha256": "0a09402c6215168db239ff2672978847089eb5a34b132b6ff1eaa55fb9f88a71",
+      "bytes": 5118
+    },
+    "raw/team-131582.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/131582?lang=en&region=us",
+      "sha256": "32dc78a5954a9adef5232b1c8638c9dd06da56d126b12385fa9205797dd724e5",
+      "bytes": 5136
+    },
+    "raw/team-19964.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/19964?lang=en&region=us",
+      "sha256": "5f58559458791636d56babb6dff6ea1122d35bb20695fb6d180a890b0e2ab409",
+      "bytes": 5124
+    },
+    "raw/crest-22525.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22525.png",
+      "sha256": "076dbe07db1389aa600f52acb0162cc36ab10b476eb2c85a3eaae4e57a222c38",
+      "bytes": 110112
+    },
+    "raw/crest-131580.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/131580.png",
+      "sha256": "a22d3fdee4b4dc558f82f34bf9213cf3ec0a8bf0093b58f034aa24960e152ae2",
+      "bytes": 36481
+    },
+    "raw/crest-131582.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/131582.png",
+      "sha256": "b1911f34e4826cc22842318165e194b1cada580265f9f77c6112cf7c7c092a62",
+      "bytes": 72101
+    },
+    "raw/crest-19964.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19964.png",
+      "sha256": "b63dff3add4d4f28b80e5c8d516309fca147e3f3bbda85f28338626301fc550f",
+      "bytes": 41665
+    },
+    "raw/crest-19995.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/19995.png",
+      "sha256": "137ddda2e63d2a9aa93127386996684a800582e8f2f3a52a9ca3320a5fbdac3e",
+      "bytes": 126746
+    },
+    "raw/team-21821.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/21821?lang=en&region=us",
+      "sha256": "9b5bdb04ffa57e0156c698e226a00c20f30e6f0683d2188f15b947638a0cd116",
+      "bytes": 5102
+    },
+    "raw/team-17545.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/17545?lang=en&region=us",
+      "sha256": "0b2b577f2f7c6515c3569e0abcbdeb5159bfb81689d24474d052a1737916383f",
+      "bytes": 5147
+    },
+    "raw/team-22130.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/22130?lang=en&region=us",
+      "sha256": "293a3c48ec0a9f7ae49fc0c62874039a6fea493f614c72ab0196e55edbac06f2",
+      "bytes": 5148
+    },
+    "raw/team-22528.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/22528?lang=en&region=us",
+      "sha256": "2f631e3978f77fe138200823553312d46c29977d2052e25ad720f82399d18b7c",
+      "bytes": 5183
+    },
+    "raw/team-22542.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/22542?lang=en&region=us",
+      "sha256": "b582c4048aafa2faead404a18b9f2a0d6427ff2ef6dc5b6adbb1d614268c1bf9",
+      "bytes": 5136
+    },
+    "raw/crest-21821.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/21821.png",
+      "sha256": "5423ebdd667022ecd0fe17eeb3d751af6bb7cc51c449a33f12d5d6bbebbccc9a",
+      "bytes": 41567
+    },
+    "raw/crest-22542.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22542.png",
+      "sha256": "9f2f51fa88d7f829950e5757a93137cc38f616a5ebd3dc62d807fb46f38d8ae8",
+      "bytes": 93884
+    },
+    "raw/crest-17545.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/17545.png",
+      "sha256": "65d103225a1392bd701f001ad8fd790052684b4af77e86b1e8d9004dc1be626a",
+      "bytes": 98603
+    },
+    "raw/crest-22130.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22130.png",
+      "sha256": "d84fa9cc1ca271a91c8376bc3df788563ff356b314b2c8eb608d8fa3b40f6c16",
+      "bytes": 13424
+    },
+    "raw/crest-22528.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22528.png",
+      "sha256": "efd402b15d2185d3733aa3c1920c9602ba5fb474f674348dde1d2ad6701230f4",
+      "bytes": 216301
+    },
+    "raw/team-20684.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/20684?lang=en&region=us",
+      "sha256": "15784a834c3622b414fb52043a850efbedc9acf47db8d8f882616159ba808c1e",
+      "bytes": 5114
+    },
+    "raw/team-22524.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/seasons/2026/teams/22524?lang=en&region=us",
+      "sha256": "8c1c233403109279bbfbda2948dc5e07182638540fc31f3844d4aceec03c9ac2",
+      "bytes": 5132
+    },
+    "raw/crest-22524.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/22524.png",
+      "sha256": "f34812fdcfb0d17be93ad29282ba864a86313f1d8045f5e7fb22c290ddbf962e",
+      "bytes": 201791
+    },
+    "raw/crest-20684.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/soccer/500/20684.png",
+      "sha256": "083048960db72ed2465f5e7155055dbf31488164eaba17570f95f2ad06d944d4",
+      "bytes": 44159
+    },
+    "raw/venue-2266.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/2266?lang=en&region=us",
+      "sha256": "495328b1cc2248ec6299bd0deb4f3c69c409dd26452a39bb49583ed984445760",
+      "bytes": 261
+    },
+    "raw/venue-4418.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/4418?lang=en&region=us",
+      "sha256": "ba2c5d464776598333c1f4fc4ad2a452bd994d3eb104418c2e4af58738123495",
+      "bytes": 311
+    },
+    "raw/venue-3278.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/3278?lang=en&region=us",
+      "sha256": "2bfcd09b7a4ebee2c20ca9f06ceae38e989ae6e277443e9b47e4b013fddec025",
+      "bytes": 275
+    },
+    "raw/venue-7485.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/7485?lang=en&region=us",
+      "sha256": "fe1f9aba68d7918b08e7e528fc686ef0a7b39fbbebea723ad3c1ab6a9630e3ff",
+      "bytes": 298
+    },
+    "raw/venue-8673.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/8673?lang=en&region=us",
+      "sha256": "eb8373f6a3be0423f3eeb519b5c720d857a0b4f7ffacfa1ddc1825e958327bdd",
+      "bytes": 273
+    },
+    "raw/venue-7604.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/7604?lang=en&region=us",
+      "sha256": "afd25826a6fca1f910d61198d57f2e1295ba908fb809b8254da2ef970ccb794a",
+      "bytes": 292
+    },
+    "raw/venue-7474.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/7474?lang=en&region=us",
+      "sha256": "ef46bbd9d35d05996f42bebf56dacbea8430f27bbced6c121bd6bf8a624dacc0",
+      "bytes": 236
+    },
+    "raw/venue-2731.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/2731?lang=en&region=us",
+      "sha256": "eb82d11b4481e7807189dbbd33cbe912fb42e569181f7ae674ad2edf4e2c95a1",
+      "bytes": 274
+    },
+    "raw/venue-8674.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/8674?lang=en&region=us",
+      "sha256": "e8ff77c6fd1e5d1b2d52e51c757e2bf7960db49c570493c1a8ed9935b0047072",
+      "bytes": 278
+    },
+    "raw/venue-8689.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/8689?lang=en&region=us",
+      "sha256": "a69a676fc3fccacce033f53868b64853c845e1c6ffeea09e552646d7df274738",
+      "bytes": 300
+    },
+    "raw/venue-4791.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/4791?lang=en&region=us",
+      "sha256": "04dd9753a49ab26c01b29b407ce91d1c89630b7b7fe15374354bee74d794038a",
+      "bytes": 294
+    },
+    "raw/venue-6538.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/6538?lang=en&region=us",
+      "sha256": "ae6410c5dc5191f03553fa6de887b6bb5b3437388b827ba2fa305218d8a3ece1",
+      "bytes": 287
+    },
+    "raw/venue-7605.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/7605?lang=en&region=us",
+      "sha256": "acd10361982013e0e154a87b4dc0f39c04e6cd15489e4727807b8017e395d567",
+      "bytes": 285
+    },
+    "raw/venue-10661.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/10661?lang=en&region=us",
+      "sha256": "e2f04b3ee24fe8f9d42c9a2d4726a9bc6e185f389871cf48d6c2ac33778fc2dc",
+      "bytes": 230
+    },
+    "raw/venue-1423.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/1423?lang=en&region=us",
+      "sha256": "9964457604be985bd31a1d8bf943c6dc2a6671f6b17e99130f0357ea9e30207d",
+      "bytes": 269
+    },
+    "raw/venue-8993.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/8993?lang=en&region=us",
+      "sha256": "247485fc656f3537a969719714ceec2bdb5f093ebccfb5c2cfd6db7245b539e0",
+      "bytes": 282
+    },
+    "raw/venue-6971.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/6971?lang=en&region=us",
+      "sha256": "e04a36bff8835a5737aa9380d79d1d969122a6471a1c3dd1505e6fca73e11403",
+      "bytes": 288
+    },
+    "raw/venue-5146.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/5146?lang=en&region=us",
+      "sha256": "c9cc3bfe157fd6e9231ece57b96b677c412a63e291e1f7e7aac0d174ae189638",
+      "bytes": 278
+    },
+    "raw/venue-10660.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/10660?lang=en&region=us",
+      "sha256": "8885f409ed0390ca0fa07ab04bb47acd647ae4039e5be2135294be2f19b3f662",
+      "bytes": 253
+    },
+    "raw/venue-4061.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/4061?lang=en&region=us",
+      "sha256": "6f70137e041a6f4b676cad4dbd0b84f766321ef53899b29f9d4328ea2cd75dc9",
+      "bytes": 283
+    },
+    "raw/venue-4383.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/4383?lang=en&region=us",
+      "sha256": "4006d4e890597b7e3973f77ca50c34453811266feba33f49a5ac6a5ab3f0d498",
+      "bytes": 286
+    },
+    "raw/venue-9606.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/9606?lang=en&region=us",
+      "sha256": "99e1ea6d66bacd224d563ee710fae5ee9aef6ce457c178e5604706dbe6d69ddf",
+      "bytes": 266
+    },
+    "raw/venue-6072.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/6072?lang=en&region=us",
+      "sha256": "8d59d2b0bef069528a1fa2b199b0ede2286720b7aaa9b075266442ea945fa7cb",
+      "bytes": 282
+    },
+    "raw/venue-9195.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/9195?lang=en&region=us",
+      "sha256": "01fc9a0d68c34deefcd374cc42d9543b4066d2e63d069fdcee5c92081957aac7",
+      "bytes": 297
+    },
+    "raw/venue-3714.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/3714?lang=en&region=us",
+      "sha256": "c689274075105d4c8bfd7e52c88b75dd58aca62c6ff8887d78a6d4875a0c695c",
+      "bytes": 289
+    },
+    "raw/venue-4370.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/4370?lang=en&region=us",
+      "sha256": "a5e5ab365785b520c335f7a035a42133252c4fd455f54d746b78fdff11aac0f0",
+      "bytes": 268
+    },
+    "raw/venue-10143.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/10143?lang=en&region=us",
+      "sha256": "61f516a310094120cc19ef5adf4c13b1474a7bf0e0baae7dc463821eb751640b",
+      "bytes": 224
+    },
+    "raw/venue-6587.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/6587?lang=en&region=us",
+      "sha256": "af542fa007d9937f74a6673f0c358d25b2bc6a091e338ab1a16cfd4aaf5c55d4",
+      "bytes": 239
+    },
+    "raw/venue-4485.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/4485?lang=en&region=us",
+      "sha256": "f972c4d234d88b6743e72915a7e93c8087cca1bd434165fcd00df9c1788609d2",
+      "bytes": 281
+    },
+    "raw/venue-10421.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.1/venues/10421?lang=en&region=us",
+      "sha256": "4884634fc6295b6a603131f44a45a4f2ebdec1ce5c078106832303b23c6e3b87",
+      "bytes": 243
+    },
+    "raw/venue-10914.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/10914?lang=en&region=us",
+      "sha256": "d64a133b72baba85197f9e4dca5e0ece289badebc47a14bea0356e7e33bfafe6",
+      "bytes": 297
+    },
+    "raw/venue-7746.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7746?lang=en&region=us",
+      "sha256": "055892615b847f07abd885a1f558b93ff2d066b2e657b9d952575c1722497068",
+      "bytes": 295
+    },
+    "raw/venue-11610.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/11610?lang=en&region=us",
+      "sha256": "01e3ad8df2ae99deb20be368e06127c6d37a7680431d85feb1d778846850be80",
+      "bytes": 265
+    },
+    "raw/venue-7020.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7020?lang=en&region=us",
+      "sha256": "251cda4e46cb8da39f7f0e875c4945f39399d9e9427d3b10aca52e71359a4eee",
+      "bytes": 296
+    },
+    "raw/venue-6595.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/6595?lang=en&region=us",
+      "sha256": "bc361dc0f55e4e9d256889c8a72b409c97e386f2b45b2ab7f8b1473333a30ea3",
+      "bytes": 282
+    },
+    "raw/venue-7359.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7359?lang=en&region=us",
+      "sha256": "e76b0c9fa29783feb3a70cd2d8e395cac0063b185e11966b1304b2527bbefeee",
+      "bytes": 287
+    },
+    "raw/venue-7992.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7992?lang=en&region=us",
+      "sha256": "76e065777311ce1f4d1cac31f6c482567b8e36d5a4d727e85efce723aa2fd18a",
+      "bytes": 308
+    },
+    "raw/venue-7012.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7012?lang=en&region=us",
+      "sha256": "cf20dc5b844d4239f54feef111168a33ae476cb9cff4cd8b687b81e92bd2a5b5",
+      "bytes": 281
+    },
+    "raw/venue-7991.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7991?lang=en&region=us",
+      "sha256": "41b07eb6681b7902ebdc17e79a191b1d9538349defa9ba80af08f9119649e9df",
+      "bytes": 309
+    },
+    "raw/venue-6536.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/6536?lang=en&region=us",
+      "sha256": "c5ea19fdf65ddcba73b8ca48aa20b1a2e685f7fea2240b8f08cdb09a3188f1f7",
+      "bytes": 317
+    },
+    "raw/venue-10898.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/10898?lang=en&region=us",
+      "sha256": "ac3ade70b55f7189eb54d5ab6804765a432547213bc9c42779b0f5520f67ed0d",
+      "bytes": 253
+    },
+    "raw/venue-4419.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/4419?lang=en&region=us",
+      "sha256": "1bf13f610496ed5c9c618a87d3a588f59f1b4c96eb2ec1f8a34c58e529ca30b5",
+      "bytes": 302
+    },
+    "raw/venue-9009.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/9009?lang=en&region=us",
+      "sha256": "9de0772c5ac4656e1bc63c1a2bb1e4d3b47058d5aa537c7802dcf63590aa80fc",
+      "bytes": 297
+    },
+    "raw/venue-8160.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/8160?lang=en&region=us",
+      "sha256": "d33c767c69d27b3e7d841aabc40febbdbb73c5a75550cad3a8c2c3e990e28565",
+      "bytes": 284
+    },
+    "raw/venue-8390.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/8390?lang=en&region=us",
+      "sha256": "3689589307ea4e2a945ed0513bf58cd95d65c70778e10163a41fabb552486a65",
+      "bytes": 302
+    },
+    "raw/venue-6271.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/6271?lang=en&region=us",
+      "sha256": "39cd0959fd7ddad9d6bdeed8210a892c654f5d80f249162fa9b25b9289860b97",
+      "bytes": 300
+    },
+    "raw/venue-9538.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/9538?lang=en&region=us",
+      "sha256": "8cf8e3582ab45a9bc9e312b1a44d54a6f3ffc7f47d74cb3464261287b3d403c0",
+      "bytes": 336
+    },
+    "raw/venue-7063.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7063?lang=en&region=us",
+      "sha256": "de6fedf7f3fee54b6d9dcf1b91282b3f4df4d671a6c44f79e4ca6a83fcebe1a9",
+      "bytes": 316
+    },
+    "raw/venue-3789.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/3789?lang=en&region=us",
+      "sha256": "7f6056cbb07154d706bd6cf7323f8153d3c77a052eb96a21779d8011643de10f",
+      "bytes": 325
+    },
+    "raw/venue-10915.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/10915?lang=en&region=us",
+      "sha256": "5c973cf3f3339c4a449f76f688e7f1db4ae6a0725db39c44230674111c411b97",
+      "bytes": 249
+    },
+    "raw/venue-6542.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/6542?lang=en&region=us",
+      "sha256": "cbfbc1fa95f0318b29f4b6e203f8f69646d9f1a27efcfa4c1f30992a7c8910f9",
+      "bytes": 297
+    },
+    "raw/venue-7036.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/7036?lang=en&region=us",
+      "sha256": "6b9417821e71523081061de40c27fee04ba186339d497beef2e849df1efee252",
+      "bytes": 284
+    },
+    "raw/venue-6451.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/6451?lang=en&region=us",
+      "sha256": "43433ce1fb75a73f605778d39a9597bdf8cd27ee3c5bdfb03f13a178ef6d42f5",
+      "bytes": 286
+    },
+    "raw/venue-6632.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/6632?lang=en&region=us",
+      "sha256": "675c8b852d83d5cbf0ba050c1ec8bfa0b67e56df229fa22afb3d085202cf4ccc",
+      "bytes": 300
+    },
+    "raw/venue-10224.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.1/venues/10224?lang=en&region=us",
+      "sha256": "df037ccb15146e117c1f56fabd566d95e278f59d4bda2680f6b44fa5704bfafd",
+      "bytes": 271
+    },
+    "raw/venue-10228.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10228?lang=en&region=us",
+      "sha256": "71b0352890167ebf7d6acf6979d93128cebfaa9c6f09a6d1207187365d722fb2",
+      "bytes": 276
+    },
+    "raw/venue-11106.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/11106?lang=en&region=us",
+      "sha256": "0287529aabb85afe0ffb3ba293fb4a2e197298c5b63c95ed69a600db955045ef",
+      "bytes": 265
+    },
+    "raw/venue-7066.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/7066?lang=en&region=us",
+      "sha256": "b9d66dd940741720e31d4296ba69b2da67375c1053a826c5acb01d36b6cffc44",
+      "bytes": 342
+    },
+    "raw/venue-10916.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10916?lang=en&region=us",
+      "sha256": "8d7448f56360c0d018749e03ea01549bd95b8c99f9cd6b2d494bc4f29bbeb3a7",
+      "bytes": 272
+    },
+    "raw/venue-8504.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/8504?lang=en&region=us",
+      "sha256": "2b99d51fb4de405675e882ca720e3ca592972c70fe811fc5f0ec4fa205453059",
+      "bytes": 306
+    },
+    "raw/venue-10919.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10919?lang=en&region=us",
+      "sha256": "ede57d090ff1fe20ae91cda64248a168567ea5a6058ede58d8d0209226e09675",
+      "bytes": 245
+    },
+    "raw/venue-10226.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10226?lang=en&region=us",
+      "sha256": "deaf9969feeea47d358bef80689f298ab2d0e8f8d5f97faa39e6de905c53f112",
+      "bytes": 274
+    },
+    "raw/venue-11072.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/11072?lang=en&region=us",
+      "sha256": "fa1e2658c656a7c6cccfee0b226d9d20bc9e37b0fface7a632667d99c6119a4c",
+      "bytes": 238
+    },
+    "raw/venue-8439.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/8439?lang=en&region=us",
+      "sha256": "99b1021dff007b0e9ad5aa07a7b39ef1cc31b1866f5f716e3ef3b6469a081681",
+      "bytes": 303
+    },
+    "raw/venue-10917.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10917?lang=en&region=us",
+      "sha256": "83fa94ce31c9874ff20d745da62fceae441e55590df6b0419f40970b19846f0b",
+      "bytes": 255
+    },
+    "raw/venue-9837.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/9837?lang=en&region=us",
+      "sha256": "33f8fe7ac4fa27ed0a12dfe5d881bafa050625b2e10bbe111f6857f4dd1265a5",
+      "bytes": 256
+    },
+    "raw/venue-10252.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10252?lang=en&region=us",
+      "sha256": "664c07ad5875a8259e68a11fb0089ad5b20ad619645747adc02b6c3459c68ba7",
+      "bytes": 261
+    },
+    "raw/venue-10225.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10225?lang=en&region=us",
+      "sha256": "6ff01be9d4bb73675a94a61d2fb96b500fd0705ee5b755a100e06b96cdf65f84",
+      "bytes": 261
+    },
+    "raw/venue-6270.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/6270?lang=en&region=us",
+      "sha256": "5b1ec9adfb1c552b89e7d4814ae51a8b168f18d46e88275892b6c78309ff1767",
+      "bytes": 241
+    },
+    "raw/venue-10229.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10229?lang=en&region=us",
+      "sha256": "341efc314bca8ac31b49a47e9a5b655ccf9425fa8a26c1c2ab7505a3e6fe7fd7",
+      "bytes": 254
+    },
+    "raw/venue-8840.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/8840?lang=en&region=us",
+      "sha256": "0e95d46ae45744bbe18bb6bf8c741a8f4b9e8e6416d3abb90dda0410b31e3a5b",
+      "bytes": 296
+    },
+    "raw/venue-10230.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/soccer/leagues/usa.usl.l1/venues/10230?lang=en&region=us",
+      "sha256": "c4b166d1e1298d0e69680411df2c8cb7d225c7bf712067eab0795bdaf66c9923",
+      "bytes": 281
+    },
+    "raw/mls-official.html": {
+      "url": "https://www.mlssoccer.com/league-reports/competition-guidelines/",
+      "sha256": "1a9de98cfb91502381e047760e3fe64fa09afdef22786f94db502013020bccc8",
+      "bytes": 245534
+    },
+    "raw/uslc-official.html": {
+      "url": "https://www.uslsoccer.com/news_article/show/1351433",
+      "sha256": "7e25a5ccfb2acbac3402ec57bc682193149f634d5f7bb808dc543b4a8949a96c",
+      "bytes": 230903
+    },
+    "raw/usl1-official.html": {
+      "url": "https://www.uslsoccer.com/news_article/show/1351434",
+      "sha256": "fc56a0514a0454e9446dc97d1bf9f889a60ba110a52f7f83c8f55c5e28d7acd8",
+      "bytes": 116933
+    },
+    "raw/venue-wiki-0.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=Mercedes-Benz%20Stadium%7CQ2%20Stadium%7CSaputo%20Stadium%7CBank%20of%20America%20Stadium%7CSoldier%20Field%7CDick's%20Sporting%20Goods%20Park%7CLower.com%20Field%7CAudi%20Field%7CTQL%20Stadium%7CToyota%20Stadium%20(Texas)%7CShell%20Energy%20Stadium%7CNu%20Stadium%7CDignity%20Health%20Sports%20Park%7CBMO%20Stadium%7CAllianz%20Field%7CGeodis%20Park%7CGillette%20Stadium%7CYankee%20Stadium%7CCiti%20Field%7CInter%26Co%20Stadium%7CSubaru%20Park%7CProvidence%20Park%7CAmerica%20First%20Field%7CSports%20Illustrated%20Stadium%7CSnapdragon%20Stadium%7CPayPal%20Park%7CLumen%20Field%7CSporting%20Park%7CEnergizer%20Park%7CBMO%20Field%7CBC%20Place%7CProtective%20Stadium%7CDunnavant%20Valley%20Fields%7CMaimonides%20Park%7CPatriots%20Point%20Soccer%20Complex%7CWeidner%20Field%7CKeyworth%20Stadium%7CSouthwest%20University%20Park%7COneok%20Field%7CTrinity%20Health%20Stadium",
+      "sha256": "20c49413a19f602e4cf76da5e4a0ff7107f3318871fc1c1e8e80891e0bcb8559",
+      "bytes": 12842
+    },
+    "raw/venue-wiki-40.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=IU%20Michael%20A.%20Carroll%20Track%20%26%20Soccer%20Stadium%7CCashman%20Field%7CLexington%20SC%20Stadium%7CSegra%20Field%7CLynn%20Family%20Stadium%7CFIU%20Stadium%7CCardinale%20Stadium%7CIsotopes%20Park%7COakland%20Coliseum%7CChampionship%20Soccer%20Stadium%7CPhoenix%20Rising%20Soccer%20Stadium%7CHighmark%20Stadium%7CCentreville%20Bank%20Stadium%7CHeart%20Health%20Park%7CToyota%20Field%7CHodges%20Stadium%7CAl%20Lang%20Stadium%7CLancaster%20Municipal%20Stadium%7CAthletic%20Club%20Boise%7CSportsplex%20at%20Matthews%7CCHI%20Memorial%20Stadium%7CCabaniss%20Field%7CParadise%20Coast%20Sports%20Complex%7CRuoff%20Mortgage%20Stadium%7CBreese%20Stevens%20Field%7CGreenville%20Triumph%20SC%7CHinchliffe%20Stadium%7CCovenant%20Health%20Park%7CFitzpatrick%20Stadium%7CCity%20Stadium%20(Richmond)%7CPremier%20Sports%20Campus%7COne%20Spokane%20Stadium%7CMorrison%20Stadium%7CMemorial%20Field%20(Mount%20Vernon)",
+      "sha256": "fda2e2bab58bfaa3e32beef3e129e487c7e1bb23ee0fd61fb95460cdbb206711",
+      "bytes": 10178
+    },
+    "raw/venue-wiki-extra.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=F.N.B.%20Stadium%7CHighmark%20Stadium%20(Pennsylvania)%7CAmerican%20Legion%20Memorial%20Stadium%7CGE%20Vernova%20Park%7CStadium%20at%20Expo%20Idaho%7CPremier%20Sports%20Campus%20at%20Lakewood%20Ranch%7CMemorial%20Field%20(Mount%20Vernon%2C%20New%20York)%7CCabaniss%20Athletic%20Complex%7CCabaniss%20Stadium",
+      "sha256": "dbb55325b975dde593c2868410bed8165c5d42cd8f1d3c44b5282ee59750f283",
+      "bytes": 1897
+    },
+    "raw/miami-2026.html": {
+      "url": "https://www.intermiamicf.com/news/inter-miami-cf-facilities-host-record-number-of-national-teams-this-summer-with-13",
+      "sha256": "ef4e0b0f9f1bd96700e19853563c0db87dfa5d6739bf89a3d59f742ac921d9ac",
+      "bytes": 224999
+    },
+    "raw/chicago-2026.html": {
+      "url": "https://www.chicagofirefc.com/news/chicago-fire-fc-announces-2026-mls-regular-season-schedule",
+      "sha256": "e435da9b61ac44281889cfc62eef35741878ef73d8c6476ee750ad02c828ffef",
+      "bytes": 190191
+    },
+    "raw/chicago-alternate.html": {
+      "url": "https://www.chicagofirefc.com/news/chicago-fire-fc-announces-venue-change-for-home-match-against-columbus-crew",
+      "sha256": "ce2910401ee55543f972e879573c7c00ef8992baefd66a828b4b6711ef7c20db",
+      "bytes": 185037
+    },
+    "raw/birmingham-alternate.html": {
+      "url": "https://www.bhmlegion.com/news/2026/09/30/birmingham-legion-fc-moves-october-18-match-to-dunnavant-valley-fields/",
+      "sha256": "5e0d6da066c22ca9b43beceab075d36f292d60846a7f953d58557166f0813fc6",
+      "bytes": 256414
+    },
+    "raw/omaha-current.html": {
+      "url": "https://www.unionomaha.com/stadium/",
+      "sha256": "bc512184c38dae30a9cc7d02e3269ad041342d337bab250cf6b8e8b1dde37396",
+      "bytes": 246237
+    },
+    "raw/corpus-current.html": {
+      "url": "https://www.corpuscfc.com/cabaniss-athletic-complex/",
+      "sha256": "dbcb4647c5f2fe7806737e1bba88af331147e2e674b8abf8460553701739ec76",
+      "bytes": 252422
+    },
+    "raw/sarasota-current.html": {
+      "url": "https://www.sarasotaparadise.us/stadium/",
+      "sha256": "29e2b9ed8dcb468920f93b9f90f9a378451cd7c6d23104887002434bf4258f1d",
+      "bytes": 280317
+    },
+    "raw/sarasota-2026.html": {
+      "url": "https://www.sarasotaparadise.us/schedule/",
+      "sha256": "ddec07ce2d621bc44b3ef01c8f0d5d088991f69c4ec76c9f4adc14eaaaa485b1",
+      "bytes": 326730
+    },
+    "raw/geocode-Premier.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Premier%20Sports%20Campus%20Lakewood%20Ranch%20Florida",
+      "sha256": "5f9326fc24fe1d9d78d5da8ea9f8a1ce7b2353308681ded186dadcbe327ff783",
+      "bytes": 527
+    },
+    "raw/geocode-Memorial.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Memorial%20Field%20Mount%20Vernon%20New%20York",
+      "sha256": "caa31f1bda49a821e9d58314a103a10e89b06e085f5ea93f6abdba7dcd23caca",
+      "bytes": 488
+    },
+    "raw/geocode-Cabaniss.json": {
+      "url": "https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&q=Cabaniss%20Stadium%20Corpus%20Christi%20Texas",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "raw/map-cabaniss.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=-97.43526,27.701739999999997,-97.42725999999999,27.70974",
+      "sha256": "c9a3635156e46c8ecd7c3f60a9133fd54bd35ffbcce6d89b5d1df78fcbe72ffe",
+      "bytes": 376884
+    },
+    "raw/map-sarasota.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=-82.38664,27.429570000000002,-82.37664000000001,27.43957",
+      "sha256": "cf7d6466993aed7144fe9a97b254f2062fd23e6c5c73acd00dbe856f106e6dad",
+      "bytes": 337928
+    },
+    "raw/map-westchester.json": {
+      "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=-73.8200781,40.900155,-73.8140781,40.906155",
+      "sha256": "20c1d739e94c9feffd684394a5131de23b326e405cf94e6e55c6836695c9471c",
+      "bytes": 367127
+    },
+    "raw/venue-wiki-final.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=The%20Stadium%20at%20Memorial%20Field",
+      "sha256": "a4d5ddcf430b74cf4ceec1cec92df9d0ad7fa24444a853891808886792fdc3db",
+      "bytes": 421
+    },
+    "raw/premier-campus-map.pdf": {
+      "url": "https://www.smcsoccer.com/wp-content/uploads/2021/03/Field-Map-2021-Florida-Winter-Cup-Showcase.pdf",
+      "sha256": "1630b7d1392da7ae003a5e74fdda2d460756ad0c3be4e72ff22a02affc51b774",
+      "bytes": 314145
+    },
+    "raw/columbus-current.html": {
+      "url": "https://www.columbuscrew.com/news/columbus-crew-and-scottsmiracle-gro-expand-long-standing-partnership-highlighted-by-stadium-naming-rights",
+      "sha256": "5a3390b6806551020a955eb6053f740ae7d72e5b05fb9f7823d88f54bce61729",
+      "bytes": 229130
+    },
+    "raw/orlando-current.html": {
+      "url": "https://www.orlandocitysc.com/stadium/generalinfo",
+      "sha256": "8f2efa674bd25e14c3d950487fcce028ea07b944cb5f0a7835a076d2d528796a",
+      "bytes": 183045
+    },
+    "raw/sporting-current.html": {
+      "url": "https://www.sportingkc.com/stadium/",
+      "sha256": "92aaa9fd79c0fb4f95f9cfeff97bc8bc90de01dc26260a1836d05a887ea1a260",
+      "bytes": 203161
+    },
+    "raw/pittsburgh-current.html": {
+      "url": "https://www.riverhounds.com/news/2026/04/22/fnb-stadium-announcement/",
+      "sha256": "d0482df52856d8066d08be93cebfdd4b3cf7381e3bba2cf95d7a07be47d672a3",
+      "bytes": 244943
+    },
+    "raw/charlotte-2026.html": {
+      "url": "https://www.charlotteindependence.com/news/2025/12/16/charlotte-independence-announce-2026-schedule/",
+      "sha256": "baf583d2583c60c6e0cadb92b25c38fa500002a99f48a0459960a7d482182929",
+      "bytes": 256342
+    },
+    "raw/boise-current.html": {
+      "url": "https://www.acboise.com/faqs/",
+      "sha256": "9aee4eee890a2e8a4627e76c8208ed433d66291388704b2e46c2364257686f29",
+      "bytes": 251660
+    },
+    "raw/fortwayne-current.html": {
+      "url": "https://www.fortwaynefc.com/news/2026/04/02/ruoff-mortgage-stadium-naming-rights/",
+      "sha256": "00b209914a4d5922b241c0bbe6f5c51c64e0adb22be7c78ac45cdf9cab31c1fb",
+      "bytes": 268591
+    },
+    "raw/westchester-current.html": {
+      "url": "https://www.westchestersc.com/stadium/",
+      "sha256": "ffee4d2054d13c5d558db030043d45509fa2a9ebfc5fb6fb04304de98eca4ed3",
+      "bytes": 229229
+    },
+    "raw/nycfc-current.html": {
+      "url": "https://www.newyorkcityfc.com/citymember/news",
+      "sha256": "dda4f2ae98c857a5b9d0c6c04a8333f705953ee86d097031c875d87eca983f25",
+      "bytes": 396438
+    }
+  },
+  "reviewedFiles": {
+    "clubs.json": {
+      "sha256": "3db2fa39475ef5c9fd8bcc06b1dc361ff7a0a3a4baddd169ea00aafbe659e97a",
+      "bytes": 38843
+    },
+    "venue-review.json": {
+      "sha256": "7c3a7b344f22e17d77c3209fb468c91d2ac527dc6703cc9bf3a677d612caa341",
+      "bytes": 17432
+    },
+    "crests/18418.png": {
+      "sha256": "b6a887b8d5432f94efe26f7b972b8c501871f67dc8eac941540fb74c6d5ae975",
+      "bytes": 102261
+    },
+    "crests/20906.png": {
+      "sha256": "887db8b0ca64f2dbb360ce0f42900a29432d24e6038f054402e923642955979c",
+      "bytes": 47316
+    },
+    "crests/9720.png": {
+      "sha256": "0b8b61be58b10eeded04e1604f6d1236fdd6c2f758bbf9d68530981c8c1b3e19",
+      "bytes": 102401
+    },
+    "crests/21300.png": {
+      "sha256": "1cc47a339c50dd3351302b60ee73912e2a6eb166b5f2d490d6f280b7d7e2aeea",
+      "bytes": 69217
+    },
+    "crests/182.png": {
+      "sha256": "b6c149b5cb0699cb5995cec3cb6cf9592222606091834ddad05e42d37f3e8a84",
+      "bytes": 48903
+    },
+    "crests/184.png": {
+      "sha256": "4b3350d57155d81d2ac711eb1dd5729c24dc80ce8ab1aa13c473cd2ddb31235e",
+      "bytes": 32677
+    },
+    "crests/183.png": {
+      "sha256": "bf45239688c9d69144f0d0c3efef4de38f3a0db2c0a2b3a32df054330f707664",
+      "bytes": 20940
+    },
+    "crests/193.png": {
+      "sha256": "4dec9599aed2944426c02d87d2d17ad7f3aad054bf9c0b1359272a97419e66f1",
+      "bytes": 45806
+    },
+    "crests/18267.png": {
+      "sha256": "fb8309060d250fb14ec2b96bee86437c730e12bb9ad7b20d99352cb5c7a19c1b",
+      "bytes": 66989
+    },
+    "crests/185.png": {
+      "sha256": "16d36edbbfcb1bfcf252901b8d29386d07557e73e28b596dfbb5236d41c25603",
+      "bytes": 69775
+    },
+    "crests/6077.png": {
+      "sha256": "5bc8f15d3917f6d6ff8f106be70f7b8bf1dd38017fdbe3ec2467ab3a00494a62",
+      "bytes": 49040
+    },
+    "crests/20232.png": {
+      "sha256": "a1ea4f53629ee3849d72d928d4c54dadb1c3e4e57dc842aba4dbba59c08d12f4",
+      "bytes": 52451
+    },
+    "crests/187.png": {
+      "sha256": "e0418f5d80a7c1f28d2ea234084d22006c8293131165d848869959b1be5f0d04",
+      "bytes": 28066
+    },
+    "crests/18966.png": {
+      "sha256": "1433adb2ec11c30bbcd306fce3674f2d253372ae2fd4492e210b222d7d24439f",
+      "bytes": 70496
+    },
+    "crests/17362.png": {
+      "sha256": "a3e9a44beb8b98670b163d8426300cb4b0a9d942dbaedbb2333da039e95a6ced",
+      "bytes": 52639
+    },
+    "crests/18986.png": {
+      "sha256": "2e94271db907c688336a869e40548158b1e5e5d625affd16e1188c4753e1aae5",
+      "bytes": 20788
+    },
+    "crests/189.png": {
+      "sha256": "a51f73cd32f2d68d342c497e98319665c99f9cd99e88095ebcf6be6d82998f83",
+      "bytes": 115609
+    },
+    "crests/17606.png": {
+      "sha256": "df7836507d3a70537ea11964d614f19193a2cbc4dcf7c8476c22382e7122b9ed",
+      "bytes": 135728
+    },
+    "crests/12011.png": {
+      "sha256": "9a9535bc6c822cfd76a65026320c860350bd6b0a3016fa45bd280dd4a9ec7a1b",
+      "bytes": 63019
+    },
+    "crests/10739.png": {
+      "sha256": "10f562b29097b165975c82cc309a2fb70ff73e11b8bbc9a5847ba8181de7dd1f",
+      "bytes": 128883
+    },
+    "crests/9723.png": {
+      "sha256": "71df1e49bd21cc5a9565e1620dcb9f1f94b653d8e0b2ac3527518c7bebb5d868",
+      "bytes": 64674
+    },
+    "crests/4771.png": {
+      "sha256": "dc4210e86d165c280edbd1cb80959ac2f47999e153a344a1b3e3e5d30157aade",
+      "bytes": 54838
+    },
+    "crests/190.png": {
+      "sha256": "84b94381a47ab86bc72cd9ee9def55c94163b0d9ba162dcbc54ddb56f4e464f8",
+      "bytes": 85720
+    },
+    "crests/22529.png": {
+      "sha256": "97143b0d99103544e189654d23c2341896ec90900db809af149de47b6dfc9227",
+      "bytes": 102913
+    },
+    "crests/191.png": {
+      "sha256": "b1504d5ddd5799a073634a712a3d0fbb1ad7c2e7a1f22f8a87c475ea46b6c54b",
+      "bytes": 52164
+    },
+    "crests/9726.png": {
+      "sha256": "2d44906cfcc797aefdc9010ac7d6b1438e54c72c12723384530d4378fc4578b4",
+      "bytes": 55362
+    },
+    "crests/186.png": {
+      "sha256": "21edfde914c500ae1d3ed2b2fdeb8e08131c4e8ce22a20bd88ed7da0f298e446",
+      "bytes": 85187
+    },
+    "crests/21812.png": {
+      "sha256": "b2459c995f0be4c96ed622c21c795b1d53764ea58bb82a3e386ce6b9fb0a3a02",
+      "bytes": 42255
+    },
+    "crests/7318.png": {
+      "sha256": "46795e794ba0426fa0f8289d84049b06cb070ae3db5e42e1dd16cf36f1976683",
+      "bytes": 65557
+    },
+    "crests/9727.png": {
+      "sha256": "01b924e6ed2483ba9957bf9f523b2dab008721ef2b6591d7a3ca6f5ddef3137f",
+      "bytes": 73542
+    },
+    "crests/19405.png": {
+      "sha256": "f6328981c0d96f23e98de511cf38f6098b0648b7095d943537e563d0b37967f1",
+      "bytes": 34747
+    },
+    "crests/131579.png": {
+      "sha256": "d8a6893a4cb194829ca8722b5c4f5cdd2dd2234bd71e36563f7111132e5c07ac",
+      "bytes": 39438
+    },
+    "crests/9729.png": {
+      "sha256": "f362ac250e9569cdc4379161f0962d98b54d3254d5501d5f1793bb179e8b0046",
+      "bytes": 106571
+    },
+    "crests/17830.png": {
+      "sha256": "e81dbdbebbfa49d1dddbe62204d55dd76373dcee60d9cd6ab99b2af8f8615dfc",
+      "bytes": 56636
+    },
+    "crests/19179.png": {
+      "sha256": "d509fbe9e3fe3d9b2af2e03faff76bce8e89376752ca00bca7fb7fdd8f5f7700",
+      "bytes": 99529
+    },
+    "crests/19407.png": {
+      "sha256": "29f53dd05a5e9f1e5dc9d96c9bca1f42a27ca06d899ad42b11fc4d0a54d76b2a",
+      "bytes": 61625
+    },
+    "crests/18446.png": {
+      "sha256": "faf663876c9b837344bdc58a149e588440ec8690c904c620471fa7266ec18a9e",
+      "bytes": 52860
+    },
+    "crests/19411.png": {
+      "sha256": "d3e6811661725af3e94270b35c82b764113422b48a000bf60f00b3769ad31ac2",
+      "bytes": 64204
+    },
+    "crests/17360.png": {
+      "sha256": "aae243860bf4dec600d8d8a8cafe38ca27acf306d7f0022e0721a4024b318b1a",
+      "bytes": 101888
+    },
+    "crests/18987.png": {
+      "sha256": "4878aed7321c3fd5d98f76289e86eda9a36cc5985f1154f4ec86fe12d3fa6a57",
+      "bytes": 135181
+    },
+    "crests/21822.png": {
+      "sha256": "df0f5a2d4047fa07b6fbac0100db27f0bc57c6e4675a654e2acf95cef537099f",
+      "bytes": 39486
+    },
+    "crests/19410.png": {
+      "sha256": "71f7f569284ed0c66b082411b20ce413b1c966013694ace6d690ecdd578ee3ef",
+      "bytes": 40488
+    },
+    "crests/17832.png": {
+      "sha256": "05c40eb7f484ba560ed2ff1150ebe9c877a831a5f5fca001597836c0ca1fdf88",
+      "bytes": 66033
+    },
+    "crests/18159.png": {
+      "sha256": "caaa43740f00ba820497460358d0ef14b41e2a674de975b8d8d12272f0c17536",
+      "bytes": 82680
+    },
+    "crests/21370.png": {
+      "sha256": "a63d9add60af0f630175a0ee00dbf0cb403e0deab565c187588da406ee973da9",
+      "bytes": 56933
+    },
+    "crests/19408.png": {
+      "sha256": "7f0808774757af32bb2bbb93c2fadb9a17a0e53475c3dc30c50ee6e6722cc6bf",
+      "bytes": 62000
+    },
+    "crests/20687.png": {
+      "sha256": "fd85d9d479720a81ce3fea21b68210020f9781fe32160693c53b8a78076f9d21",
+      "bytes": 78972
+    },
+    "crests/18455.png": {
+      "sha256": "8d2515b047773df86a8a2e2c777159e60e8a1ccdd01be6531d4d737695952d65",
+      "bytes": 51315
+    },
+    "crests/17850.png": {
+      "sha256": "f602097f5e979865371f432b8199c8909716c745ad5c879e09c5125022e7ffec",
+      "bytes": 122763
+    },
+    "crests/17827.png": {
+      "sha256": "479e868ff7a99e4fe17e4afdf096ddcc0c7b459660b43503e4245e0ba3527322",
+      "bytes": 150311
+    },
+    "crests/22164.png": {
+      "sha256": "879ace76c3ecd1ee3ffbeafba7bcfd622b46e9d80ffeb54556161a3745e94ce6",
+      "bytes": 39778
+    },
+    "crests/17828.png": {
+      "sha256": "3442bf7892a2506c80bcb0ec649532ff7a8f4babfbf67378fa18d4a27a2d17c9",
+      "bytes": 86827
+    },
+    "crests/18265.png": {
+      "sha256": "3247ed9779abe2c8a87f816626a8b1aa15bd02771043698831e0b36e5193e431",
+      "bytes": 311567
+    },
+    "crests/131578.png": {
+      "sha256": "92fcf7cae5a7a21f91685d8829d2d155d53976354fa187ae6d85d21676950d93",
+      "bytes": 60082
+    },
+    "crests/17361.png": {
+      "sha256": "fb422dbc0b3c6fbe69d8e72c574f5cbf19d0ff0ce76421ea24595397f4e1daaa",
+      "bytes": 90694
+    },
+    "crests/22526.png": {
+      "sha256": "e0dfef46c72e8017ae1350aeb536798fa9774949cad4d18e74e0ac49f0136c58",
+      "bytes": 76728
+    },
+    "crests/131581.png": {
+      "sha256": "14409084acd75d32dfc8b86b452ce9d5deb9c83bd7979f0257a21272ae0ce1cf",
+      "bytes": 43661
+    },
+    "crests/17826.png": {
+      "sha256": "fde1bfbf66a80d851e1b0b1f1708cfe0701dcf2d5a625d124a345b603e90fffe",
+      "bytes": 154665
+    },
+    "crests/20000.png": {
+      "sha256": "2c252f3911b95c67c2868c13875b29033464b51bed93deb3fec1648306780819",
+      "bytes": 100182
+    },
+    "crests/20671.png": {
+      "sha256": "37a6e1d5b51e4564dbffddef131e56c3f3170e332c50740936d2c2885ded2c8e",
+      "bytes": 72243
+    },
+    "crests/22525.png": {
+      "sha256": "076dbe07db1389aa600f52acb0162cc36ab10b476eb2c85a3eaae4e57a222c38",
+      "bytes": 110112
+    },
+    "crests/131580.png": {
+      "sha256": "a22d3fdee4b4dc558f82f34bf9213cf3ec0a8bf0093b58f034aa24960e152ae2",
+      "bytes": 36481
+    },
+    "crests/19995.png": {
+      "sha256": "137ddda2e63d2a9aa93127386996684a800582e8f2f3a52a9ca3320a5fbdac3e",
+      "bytes": 126746
+    },
+    "crests/19964.png": {
+      "sha256": "b63dff3add4d4f28b80e5c8d516309fca147e3f3bbda85f28338626301fc550f",
+      "bytes": 41665
+    },
+    "crests/131582.png": {
+      "sha256": "b1911f34e4826cc22842318165e194b1cada580265f9f77c6112cf7c7c092a62",
+      "bytes": 72101
+    },
+    "crests/21821.png": {
+      "sha256": "5423ebdd667022ecd0fe17eeb3d751af6bb7cc51c449a33f12d5d6bbebbccc9a",
+      "bytes": 41567
+    },
+    "crests/22528.png": {
+      "sha256": "efd402b15d2185d3733aa3c1920c9602ba5fb474f674348dde1d2ad6701230f4",
+      "bytes": 216301
+    },
+    "crests/17545.png": {
+      "sha256": "65d103225a1392bd701f001ad8fd790052684b4af77e86b1e8d9004dc1be626a",
+      "bytes": 98603
+    },
+    "crests/22542.png": {
+      "sha256": "9f2f51fa88d7f829950e5757a93137cc38f616a5ebd3dc62d807fb46f38d8ae8",
+      "bytes": 93884
+    },
+    "crests/22130.png": {
+      "sha256": "d84fa9cc1ca271a91c8376bc3df788563ff356b314b2c8eb608d8fa3b40f6c16",
+      "bytes": 13424
+    },
+    "crests/20684.png": {
+      "sha256": "083048960db72ed2465f5e7155055dbf31488164eaba17570f95f2ad06d944d4",
+      "bytes": 44159
+    },
+    "crests/22524.png": {
+      "sha256": "f34812fdcfb0d17be93ad29282ba864a86313f1d8045f5e7fb22c290ddbf962e",
+      "bytes": 201791
+    }
+  }
+}

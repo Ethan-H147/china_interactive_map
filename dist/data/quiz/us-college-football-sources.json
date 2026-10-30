@@ -1,0 +1,2108 @@
+{
+  "season": "2026",
+  "asOf": "2026-10-29",
+  "rosterFile": "scripts/us-sports-sources/college-football/clubs.json",
+  "rosterSha256": "95bc862833f69055f7779e46e780ff44fde86edda53dd558670d8614b802441d",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Power Four",
+      "count": 67,
+      "sourceUrl": "https://www.ncaa.com/standings/football/fbs"
+    },
+    {
+      "tier": 2,
+      "name": "Other FBS programs",
+      "count": 71,
+      "sourceUrl": "https://www.ncaa.com/standings/football/fbs"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "US-SPORT-us-cfb-2636",
+      "en": "UTSA",
+      "city": "San Antonio",
+      "stadium": "Alamodome",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Alamodome",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-235",
+      "en": "Memphis",
+      "city": "Memphis",
+      "stadium": "Simmons Bank Liberty Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Simmons_Bank_Liberty_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-249",
+      "en": "North Texas",
+      "city": "Denton",
+      "stadium": "DATCU Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/DATCU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-349",
+      "en": "Army",
+      "city": "West Point",
+      "stadium": "Michie Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Michie_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2226",
+      "en": "Florida Atlantic",
+      "city": "Boca Raton",
+      "stadium": "Flagler Credit Union Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Flagler_Credit_Union_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-58",
+      "en": "South Florida",
+      "city": "Tampa",
+      "stadium": "Raymond James Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Raymond_James_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-5",
+      "en": "UAB",
+      "city": "Birmingham",
+      "stadium": "Protective Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Protective_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+      "note": "UAB uses Protective Stadium, not its former Legion Field home.",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-202",
+      "en": "Tulsa",
+      "city": "Tulsa",
+      "stadium": "H. A. Chapman Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Skelly_Field_at_H._A._Chapman_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-151",
+      "en": "East Carolina",
+      "city": "Greenville",
+      "stadium": "Dowdy–Ficklen Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dowdy%E2%80%93Ficklen_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2655",
+      "en": "Tulane",
+      "city": "New Orleans",
+      "stadium": "Yulman Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Yulman_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-218",
+      "en": "Temple",
+      "city": "Philadelphia",
+      "stadium": "Lincoln Financial Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lincoln_Financial_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2426",
+      "en": "Navy",
+      "city": "Annapolis",
+      "stadium": "Navy–Marine Corps Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Navy%E2%80%93Marine_Corps_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2429",
+      "en": "Charlotte",
+      "city": "Charlotte",
+      "stadium": "Jerry Richardson Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Jerry_Richardson_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-242",
+      "en": "Rice",
+      "city": "Houston",
+      "stadium": "First Community Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/First_Community_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+      "conference": "American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2390",
+      "en": "Miami (FL)",
+      "city": "Miami Gardens",
+      "stadium": "Hard Rock Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hard_Rock_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2567",
+      "en": "SMU",
+      "city": "Dallas",
+      "stadium": "Gerald J. Ford Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gerald_J._Ford_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-154",
+      "en": "Wake Forest",
+      "city": "Winston-Salem",
+      "stadium": "Allegacy Federal Credit Union Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allegacy_Federal_Credit_Union_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-259",
+      "en": "Virginia Tech",
+      "city": "Blacksburg",
+      "stadium": "Lane Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lane_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-150",
+      "en": "Duke",
+      "city": "Durham",
+      "stadium": "Wallace Wade Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Wallace_Wade_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-221",
+      "en": "Pittsburgh",
+      "city": "Pittsburgh",
+      "stadium": "Acrisure Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Acrisure_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-97",
+      "en": "Louisville",
+      "city": "Louisville",
+      "stadium": "L&N Federal Credit Union Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/L%26N_Federal_Credit_Union_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-228",
+      "en": "Clemson",
+      "city": "Clemson",
+      "stadium": "Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Clemson)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-153",
+      "en": "North Carolina",
+      "city": "Chapel Hill",
+      "stadium": "Kenan Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kenan_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-103",
+      "en": "Boston College",
+      "city": "Chestnut Hill",
+      "stadium": "Alumni Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Alumni_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-24",
+      "en": "Stanford",
+      "city": "Stanford",
+      "stadium": "Stanford Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stanford_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-258",
+      "en": "Virginia",
+      "city": "Charlottesville",
+      "stadium": "Scott Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Scott_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-52",
+      "en": "Florida State",
+      "city": "Tallahassee",
+      "stadium": "Doak Campbell Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Doak_Campbell_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-152",
+      "en": "NC State",
+      "city": "Raleigh",
+      "stadium": "Carter–Finley Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Carter%E2%80%93Finley_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-183",
+      "en": "Syracuse",
+      "city": "Syracuse",
+      "stadium": "JMA Wireless Dome",
+      "coordinateSource": "https://en.wikipedia.org/wiki/JMA_Wireless_Dome",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-25",
+      "en": "California",
+      "city": "Berkeley",
+      "stadium": "California Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/California_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-59",
+      "en": "Georgia Tech",
+      "city": "Atlanta",
+      "stadium": "Bobby Dodd Stadium at Hyundai Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bobby_Dodd_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+      "conference": "Atlantic Coast Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-254",
+      "en": "Utah",
+      "city": "Salt Lake City",
+      "stadium": "Rice–Eccles Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Rice%E2%80%93Eccles_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-252",
+      "en": "BYU",
+      "city": "Provo",
+      "stadium": "LaVell Edwards Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/LaVell_Edwards_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-12",
+      "en": "Arizona",
+      "city": "Tucson",
+      "stadium": "Casino Del Sol Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Casino_Del_Sol_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2641",
+      "en": "Texas Tech",
+      "city": "Lubbock",
+      "stadium": "Galaxy Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Galaxy_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+      "note": "Renamed Galaxy Stadium for the 2026 season.",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-248",
+      "en": "Houston",
+      "city": "Houston",
+      "stadium": "TDECU Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/TDECU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+      "note": "Current school and conference schedules retain TDECU Stadium branding; Robertson Stadium is the former venue on this site.",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-197",
+      "en": "Oklahoma State",
+      "city": "Stillwater",
+      "stadium": "Boone Pickens Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Boone_Pickens_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2132",
+      "en": "Cincinnati",
+      "city": "Cincinnati",
+      "stadium": "Nippert Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Nippert_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-277",
+      "en": "West Virginia",
+      "city": "Morgantown",
+      "stadium": "Milan Puskar Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Milan_Puskar_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-239",
+      "en": "Baylor",
+      "city": "Waco",
+      "stadium": "McLane Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/McLane_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+      "note": "Baylor uses McLane Stadium, not the demolished Floyd Casey Stadium.",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-9",
+      "en": "Arizona State",
+      "city": "Tempe",
+      "stadium": "Mountain America Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mountain_America_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2116",
+      "en": "UCF",
+      "city": "Orlando",
+      "stadium": "Acrisure Bounce House",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Acrisure_Bounce_House",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2306",
+      "en": "Kansas State",
+      "city": "Manhattan",
+      "stadium": "Bill Snyder Family Football Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bill_Snyder_Family_Football_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-66",
+      "en": "Iowa State",
+      "city": "Ames",
+      "stadium": "Jack Trice Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Jack_Trice_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2305",
+      "en": "Kansas",
+      "city": "Lawrence",
+      "stadium": "David Booth Kansas Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/David_Booth_Kansas_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2628",
+      "en": "TCU",
+      "city": "Fort Worth",
+      "stadium": "Amon G. Carter Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Amon_G._Carter_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-38",
+      "en": "Colorado",
+      "city": "Boulder",
+      "stadium": "Folsom Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Folsom_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+      "conference": "Big 12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-26",
+      "en": "UCLA",
+      "city": "Pasadena",
+      "stadium": "Rose Bowl Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Rose_Bowl_(stadium)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-84",
+      "en": "Indiana",
+      "city": "Bloomington",
+      "stadium": "Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Indiana_University)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-194",
+      "en": "Ohio State",
+      "city": "Columbus",
+      "stadium": "Ohio Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ohio_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-77",
+      "en": "Northwestern",
+      "city": "Evanston",
+      "stadium": "Ryan Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ryan_Field_(2026)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+      "note": "The new Ryan Field opened on 2 October 2026. The first two 2026 home games were at Martin Stadium.",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-30",
+      "en": "USC",
+      "city": "Los Angeles",
+      "stadium": "Los Angeles Memorial Coliseum",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Los_Angeles_Memorial_Coliseum",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-135",
+      "en": "Minnesota",
+      "city": "Minneapolis",
+      "stadium": "Huntington Bank Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Huntington_Bank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-275",
+      "en": "Wisconsin",
+      "city": "Madison",
+      "stadium": "Camp Randall Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Camp_Randall_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2294",
+      "en": "Iowa",
+      "city": "Iowa City",
+      "stadium": "Kinnick Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kinnick_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-158",
+      "en": "Nebraska",
+      "city": "Lincoln",
+      "stadium": "Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Lincoln)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-356",
+      "en": "Illinois",
+      "city": "Champaign",
+      "stadium": "Gies Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gies_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+      "note": "Correct ground is Gies Memorial Stadium in Champaign; the ESPN Foster Stadium reference is unrelated.",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2483",
+      "en": "Oregon",
+      "city": "Eugene",
+      "stadium": "Autzen Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Autzen_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-130",
+      "en": "Michigan",
+      "city": "Ann Arbor",
+      "stadium": "Michigan Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Michigan_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-264",
+      "en": "Washington",
+      "city": "Seattle",
+      "stadium": "Husky Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Husky_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2509",
+      "en": "Purdue",
+      "city": "West Lafayette",
+      "stadium": "Ross–Ade Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ross%E2%80%93Ade_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-213",
+      "en": "Penn State",
+      "city": "University Park",
+      "stadium": "Beaver Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Beaver_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-164",
+      "en": "Rutgers",
+      "city": "Piscataway",
+      "stadium": "SHI Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/SHI_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-120",
+      "en": "Maryland",
+      "city": "College Park",
+      "stadium": "SECU Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/SECU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-127",
+      "en": "Michigan State",
+      "city": "East Lansing",
+      "stadium": "Spartan Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Spartan_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+      "conference": "Big Ten Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2335",
+      "en": "Liberty",
+      "city": "Lynchburg",
+      "stadium": "Arthur L. Williams Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Williams_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-55",
+      "en": "Jacksonville State",
+      "city": "Jacksonville",
+      "stadium": "AmFirst Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/AmFirst_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-48",
+      "en": "Delaware",
+      "city": "Newark",
+      "stadium": "Delaware Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Delaware_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2393",
+      "en": "Middle Tennessee",
+      "city": "Murfreesboro",
+      "stadium": "Johnny \"Red\" Floyd Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Johnny_%22Red%22_Floyd_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2229",
+      "en": "Florida International",
+      "city": "University Park (Miami)",
+      "stadium": "Pitbull Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Pitbull_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-166",
+      "en": "New Mexico State",
+      "city": "Las Cruces",
+      "stadium": "Aggie Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Aggie_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-98",
+      "en": "Western Kentucky",
+      "city": "Bowling Green",
+      "stadium": "Houchens Industries–L. T. Smith Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Houchens_Industries%E2%80%93L._T._Smith_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2623",
+      "en": "Missouri State",
+      "city": "Springfield",
+      "stadium": "Robert W. Plaster Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Robert_W._Plaster_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-338",
+      "en": "Kennesaw State",
+      "city": "Kennesaw",
+      "stadium": "Fifth Third Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Fifth_Third_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2534",
+      "en": "Sam Houston",
+      "city": "Huntsville",
+      "stadium": "Elliott T. Bowers Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bowers_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+      "conference": "Conference USA"
+    },
+    {
+      "id": "US-SPORT-us-cfb-87",
+      "en": "Notre Dame",
+      "city": "Notre Dame",
+      "stadium": "Notre Dame Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Notre_Dame_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+      "conference": "FBS Independents"
+    },
+    {
+      "id": "US-SPORT-us-cfb-41",
+      "en": "UConn",
+      "city": "East Hartford",
+      "stadium": "Pratt & Whitney Stadium at Rentschler Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Pratt_%26_Whitney_Stadium_at_Rentschler_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+      "conference": "FBS Independents"
+    },
+    {
+      "id": "US-SPORT-us-cfb-195",
+      "en": "Ohio",
+      "city": "Athens",
+      "stadium": "Peden Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Peden_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2649",
+      "en": "Toledo",
+      "city": "Toledo",
+      "stadium": "Glass Bowl",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Glass_Bowl",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2711",
+      "en": "Western Michigan",
+      "city": "Kalamazoo",
+      "stadium": "Waldo Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Waldo_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2084",
+      "en": "Buffalo",
+      "city": "Amherst",
+      "stadium": "Broadview Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Broadview_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
+      "note": "Current Broadview Stadium is on the Amherst campus, not in Buffalo city proper.",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-193",
+      "en": "Miami (OH)",
+      "city": "Oxford",
+      "stadium": "Yager Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Yager_Stadium_(Miami_University)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-113",
+      "en": "Massachusetts",
+      "city": "Hadley",
+      "stadium": "Warren McGuirk Alumni Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Warren_McGuirk_Alumni_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2199",
+      "en": "Eastern Michigan",
+      "city": "Ypsilanti",
+      "stadium": "Rynearson Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Rynearson_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2309",
+      "en": "Kent State",
+      "city": "Kent",
+      "stadium": "Dix Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dix_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2050",
+      "en": "Ball State",
+      "city": "Muncie",
+      "stadium": "Scheumann Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Scheumann_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2117",
+      "en": "Central Michigan",
+      "city": "Mount Pleasant",
+      "stadium": "Kelly/Shorts Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kelly%2FShorts_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-189",
+      "en": "Bowling Green",
+      "city": "Bowling Green",
+      "stadium": "Doyt L. Perry Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Doyt_Perry_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2006",
+      "en": "Akron",
+      "city": "Akron",
+      "stadium": "InfoCision Stadium–Summa Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/InfoCision_Stadium%E2%80%93Summa_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-16",
+      "en": "Sacramento State",
+      "city": "Sacramento",
+      "stadium": "Hornet Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hornet_Stadium_(Sacramento)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
+      "conference": "Mid-American Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-167",
+      "en": "New Mexico",
+      "city": "Albuquerque",
+      "stadium": "University Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/University_Stadium_(Albuquerque)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2449",
+      "en": "North Dakota State",
+      "city": "Fargo",
+      "stadium": "Fargodome",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Fargodome",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2005",
+      "en": "Air Force",
+      "city": "USAF Academy",
+      "stadium": "Falcon Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Falcon_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2751",
+      "en": "Wyoming",
+      "city": "Laramie",
+      "stadium": "War Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/War_Memorial_Stadium_(Wyoming)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2439",
+      "en": "UNLV",
+      "city": "Paradise",
+      "stadium": "Allegiant Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allegiant_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+      "note": "UNLV uses Allegiant Stadium in Paradise, not Sam Boyd Stadium.",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-23",
+      "en": "San José State",
+      "city": "San Jose",
+      "stadium": "CEFCU Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/CEFCU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2440",
+      "en": "Nevada",
+      "city": "Reno",
+      "stadium": "Mackay Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mackay_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-62",
+      "en": "Hawai'i",
+      "city": "Honolulu",
+      "stadium": "Clarence T. C. Ching Athletics Complex",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Clarence_T._C._Ching_Athletics_Complex",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+      "note": "Hawai‘i has used Ching Athletics Complex since 2021; Aloha Stadium is an obsolete provider venue.",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2638",
+      "en": "UTEP",
+      "city": "El Paso",
+      "stadium": "Sun Bowl Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sun_Bowl_(stadium)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2459",
+      "en": "Northern Illinois",
+      "city": "DeKalb",
+      "stadium": "Huskie Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Huskie_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+      "conference": "Mountain West Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-68",
+      "en": "Boise State",
+      "city": "Boise",
+      "stadium": "Albertsons Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Albertsons_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-204",
+      "en": "Oregon State",
+      "city": "Corvallis",
+      "stadium": "Reser Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Reser_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-326",
+      "en": "Texas State",
+      "city": "San Marcos",
+      "stadium": "UFCU Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/UFCU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-278",
+      "en": "Fresno State",
+      "city": "Fresno",
+      "stadium": "Valley Children's Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Valley_Children's_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-36",
+      "en": "Colorado State",
+      "city": "Fort Collins",
+      "stadium": "Canvas Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Canvas_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+      "note": "Colorado State uses Canvas Stadium on campus, not the former Hughes Stadium.",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-21",
+      "en": "San Diego State",
+      "city": "San Diego",
+      "stadium": "Snapdragon Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Snapdragon_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+      "note": "San Diego State uses Snapdragon Stadium, not the demolished SDCCU Stadium.",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-328",
+      "en": "Utah State",
+      "city": "Logan",
+      "stadium": "Maverik Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Maverik_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-265",
+      "en": "Washington State",
+      "city": "Pullman",
+      "stadium": "Martin Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Martin_Stadium_(Pullman)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+      "conference": "Pac-12 Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-96",
+      "en": "Kentucky",
+      "city": "Lexington",
+      "stadium": "Kroger Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kroger_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-61",
+      "en": "Georgia",
+      "city": "Athens",
+      "stadium": "Sanford Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sanford_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-333",
+      "en": "Alabama",
+      "city": "Tuscaloosa",
+      "stadium": "Bryant–Denny Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bryant%E2%80%93Denny_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-99",
+      "en": "LSU",
+      "city": "Baton Rouge",
+      "stadium": "Tiger Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Tiger_Stadium_(Louisiana)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2633",
+      "en": "Tennessee",
+      "city": "Knoxville",
+      "stadium": "Neyland Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Neyland_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-57",
+      "en": "Florida",
+      "city": "Gainesville",
+      "stadium": "Ben Hill Griffin Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ben_Hill_Griffin_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-145",
+      "en": "Ole Miss",
+      "city": "University",
+      "stadium": "Vaught–Hemingway Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Vaught%E2%80%93Hemingway_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-142",
+      "en": "Missouri",
+      "city": "Columbia",
+      "stadium": "Faurot Field at Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Faurot_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-251",
+      "en": "Texas",
+      "city": "Austin",
+      "stadium": "Darrell K Royal–Texas Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Darrell_K_Royal%E2%80%93Texas_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-201",
+      "en": "Oklahoma",
+      "city": "Norman",
+      "stadium": "Gaylord Family Oklahoma Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gaylord_Family_Oklahoma_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-344",
+      "en": "Mississippi State",
+      "city": "Mississippi State",
+      "stadium": "Davis Wade Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Davis_Wade_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2",
+      "en": "Auburn",
+      "city": "Auburn",
+      "stadium": "Jordan–Hare Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Jordan%E2%80%93Hare_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2579",
+      "en": "South Carolina",
+      "city": "Columbia",
+      "stadium": "Williams–Brice Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Williams%E2%80%93Brice_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-245",
+      "en": "Texas A&M",
+      "city": "College Station",
+      "stadium": "Kyle Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kyle_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-8",
+      "en": "Arkansas",
+      "city": "Fayetteville",
+      "stadium": "Donald W. Reynolds Razorback Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Razorback_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-238",
+      "en": "Vanderbilt",
+      "city": "Nashville",
+      "stadium": "FirstBank Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/FirstBank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+      "conference": "Southeastern Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-256",
+      "en": "James Madison",
+      "city": "Harrisonburg",
+      "stadium": "Bridgeforth Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bridgeforth_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2026",
+      "en": "App State",
+      "city": "Boone",
+      "stadium": "Kidd Brewer Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kidd_Brewer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2247",
+      "en": "Georgia State",
+      "city": "Atlanta",
+      "stadium": "Center Parc Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Center_Parc_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-276",
+      "en": "Marshall",
+      "city": "Huntington",
+      "stadium": "Joan C. Edwards Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Joan_C._Edwards_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-290",
+      "en": "Georgia Southern",
+      "city": "Statesboro",
+      "stadium": "Allen E. Paulson Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allen_E._Paulson_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-324",
+      "en": "Coastal Carolina",
+      "city": "Conway",
+      "stadium": "Brooks Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Brooks_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-295",
+      "en": "Old Dominion",
+      "city": "Norfolk",
+      "stadium": "S. B. Ballard Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/S.B._Ballard_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2348",
+      "en": "Louisiana Tech",
+      "city": "Ruston",
+      "stadium": "Joe Aillet Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Joe_Aillet_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-309",
+      "en": "Louisiana",
+      "city": "Lafayette",
+      "stadium": "Our Lady of Lourdes Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Cajun_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+      "note": "Renovated and renamed Our Lady of Lourdes Stadium in August 2025, formerly Cajun Field.",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-6",
+      "en": "South Alabama",
+      "city": "Mobile",
+      "stadium": "Hancock Whitney Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hancock_Whitney_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2032",
+      "en": "Arkansas State",
+      "city": "Jonesboro",
+      "stadium": "Centennial Bank Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Centennial_Bank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2653",
+      "en": "Troy",
+      "city": "Troy",
+      "stadium": "Veterans Memorial Stadium at Larry Blakeney Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Veterans_Memorial_Stadium_(Troy_University)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2572",
+      "en": "Southern Miss",
+      "city": "Hattiesburg",
+      "stadium": "M. M. Roberts Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Renasant_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+      "conference": "Sun Belt Conference"
+    },
+    {
+      "id": "US-SPORT-us-cfb-2433",
+      "en": "UL Monroe",
+      "city": "Monroe",
+      "stadium": "FMOL Health | St. Francis Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/FMOL_Health%2FSt._Francis_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+      "note": "Renamed for the 2026 season; formerly Malone Stadium.",
+      "conference": "Sun Belt Conference"
+    }
+  ],
+  "images": {
+    "vendor/us-sports/college-football/us-cfb-2636.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+      "inputSha256": "37004059b144d56653764501b977eaa58463a70e10a83f7512e91c8b87530f17",
+      "sha256": "b44af0ff466220b122a38fc79f5502b62319e0f2d74aa8cc39c7dc6d4934298d",
+      "bytes": 8700
+    },
+    "vendor/us-sports/college-football/us-cfb-235.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+      "inputSha256": "e56cb7d0d332907b4f0e7fe4f70e98c1841b06f12334811f5054734cb3da27ea",
+      "sha256": "13d4231c166d872f011fae92a90e866b813848787621089d0aa93dd99c066b3b",
+      "bytes": 22524
+    },
+    "vendor/us-sports/college-football/us-cfb-249.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+      "inputSha256": "5953d0a7dd1e44d82402467043f2cd63003d74a0dc3bff754cb467ab93104436",
+      "sha256": "efe40bc68dc87c578025e9e3ad473f6ace4f20b65447fa3cc6b564ef073c74d2",
+      "bytes": 8836
+    },
+    "vendor/us-sports/college-football/us-cfb-349.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+      "inputSha256": "bbe36252ce70f54489fbd0a0c0ec27bfdbd4f84d2789fc9906bda5ccd93c7aab",
+      "sha256": "4dd22660e195a9482457f7da40160fc9b2c9c5d83445f9681cb664eed25fba04",
+      "bytes": 17280
+    },
+    "vendor/us-sports/college-football/us-cfb-2226.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+      "inputSha256": "2e799d7929cc276364cd90a4dc47903ec780b4f114c689a65d7e70a269316fc8",
+      "sha256": "c3ab601ee1928838df8b540ee27d9daec5cdd38c16153a41f243d615aa4245cc",
+      "bytes": 16196
+    },
+    "vendor/us-sports/college-football/us-cfb-58.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+      "inputSha256": "a74207f69d800eba006138acef12a1436166c868ba14c94e1578190358dd0d14",
+      "sha256": "b60fc0ee4f61d32c543e1db193bfb05947f98f9a23b13c4ed9892aa44558deb0",
+      "bytes": 14162
+    },
+    "vendor/us-sports/college-football/us-cfb-5.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+      "inputSha256": "905b2e96ff5a391a789276d4b211134ca295a91bc352d1ba5668c79fbfcc0bbb",
+      "sha256": "4f01300e680063d6a8f4899a239f2f8b5d784fd74666326713c0aea2b2c7a910",
+      "bytes": 17770
+    },
+    "vendor/us-sports/college-football/us-cfb-202.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+      "inputSha256": "0c131f5faf86ec1bf70679af3a7f13248aa5f9e764aeb0c927fc6f753ea85e73",
+      "sha256": "b85c2e0b9f3ef02dabe3207eaab9aae340ab3a5570efce971183cb5db15ed363",
+      "bytes": 12528
+    },
+    "vendor/us-sports/college-football/us-cfb-151.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+      "inputSha256": "0ae06f5e6518c5065c93cde42d17853ddc6c6abe56502ef2bbcbf3bd52f9adb5",
+      "sha256": "980330158c91cd342fa395af59d76aa0fd586b50cd8153ae7642ec0a05ea3fc6",
+      "bytes": 28314
+    },
+    "vendor/us-sports/college-football/us-cfb-2655.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+      "inputSha256": "35db0df8ce98e8180a3d6cffa1c2924f863874b3a4226d6b76192216fbfb4808",
+      "sha256": "92a87b5fbd8ca941c520de2f6d2b973fa615d0df9d4f416d8b75e530c5ba6e15",
+      "bytes": 22386
+    },
+    "vendor/us-sports/college-football/us-cfb-218.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+      "inputSha256": "2a7cb32da0408fbd277fa184f3eee42ce983ebab70c8e819abb2865ac440717c",
+      "sha256": "1f83af5c75c45e1d856400120bc5d1460f4f6ad2ad410a9a49a296aa720d5900",
+      "bytes": 1782
+    },
+    "vendor/us-sports/college-football/us-cfb-2426.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
+      "inputSha256": "82eb45dc0f8186430a637f42fc3746ae07fff74ca04fe6ea2099da720864f51d",
+      "sha256": "5cda55a5f045284fd402d9b2fbf55164a8ac15e526652f9590a0e20684c4a7c7",
+      "bytes": 9622
+    },
+    "vendor/us-sports/college-football/us-cfb-2429.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+      "inputSha256": "96a23e7c40183c7731402eae581979de7a704893cfd46be206f198a24bf948da",
+      "sha256": "bc15b2e109f95eaec741d2a27dbcfe4daee15a671853cf7a674764952eadcc7c",
+      "bytes": 4806
+    },
+    "vendor/us-sports/college-football/us-cfb-242.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+      "inputSha256": "3648d62f626f88f864e4c629cf50c92f50dcbccc9622e87eeb3210429383afdd",
+      "sha256": "de6a61276cbf27becbaec66ced260e654a6679e161d1e3d567aabaef4a11bf2b",
+      "bytes": 6848
+    },
+    "vendor/us-sports/college-football/us-cfb-2390.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+      "inputSha256": "55800e4867c87bf38281043628d2c0dfadd0bf44632b27a9ab20af27a9a728fb",
+      "sha256": "3644dd7f75731c0f7bc15fcd97e0efb9585517a6eb874a19b08b8624f63aba7d",
+      "bytes": 4264
+    },
+    "vendor/us-sports/college-football/us-cfb-2567.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+      "inputSha256": "1dbe095805cd1636fc5aac2918eedf81b4dad43329a8c1e665616ee1d79840a7",
+      "sha256": "4d2a98a0f805384f734ac57d43a010319f1b661416628970da32c1e415014cf6",
+      "bytes": 3948
+    },
+    "vendor/us-sports/college-football/us-cfb-154.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+      "inputSha256": "e307401dc8adf24492175e57a95f242b8943fe0fb3121ca84757095e6825d17a",
+      "sha256": "950f5b3d7ac861965cb668695384bff46191021d0fa7a31e1c7b44f856dddcea",
+      "bytes": 3508
+    },
+    "vendor/us-sports/college-football/us-cfb-259.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "inputSha256": "56dbddcf5acd291817b559a31b6d8aabc91fe1ef1d27f47a527d353dc706cd7a",
+      "sha256": "a60989386b12b8e505413b405289885bc122f29cf59869ac621641933446ab98",
+      "bytes": 7088
+    },
+    "vendor/us-sports/college-football/us-cfb-150.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+      "inputSha256": "5b614bdf00364d325be332b63dafb5f95d25e0f59e63a3e152faa43124c57112",
+      "sha256": "5608d15bf01390c44bc3cc6f67132ce9e61c1a78fcdac48ee91ec3ddce13519f",
+      "bytes": 2398
+    },
+    "vendor/us-sports/college-football/us-cfb-221.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+      "inputSha256": "c283722b1c9f4b47b7361d7d959422225de4ad4682b0eadcd66f707c015506f3",
+      "sha256": "0807b532ac4f509774b8e9534f6b67d230d681d4b8af65b906082e8f51ff9a19",
+      "bytes": 13922
+    },
+    "vendor/us-sports/college-football/us-cfb-97.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+      "inputSha256": "7c5e06bfb990c80176ef56e171bfb2de264355db54c592462d5f8a02404412e8",
+      "sha256": "dd4bce4efbf074b024165f29bc984c17b9a99ee92f3de1c104d71fdfc1a795bd",
+      "bytes": 11166
+    },
+    "vendor/us-sports/college-football/us-cfb-228.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+      "inputSha256": "20abd84754733106d0b91337456ab631597c159620f9fa3db259da526d5b656d",
+      "sha256": "2765e431daff81a9e28d19ab683d72163767624da27c05400960b1f478a03fa1",
+      "bytes": 9376
+    },
+    "vendor/us-sports/college-football/us-cfb-153.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+      "inputSha256": "c51339a92ebf5e7dbdbcb6c32dc2cc63f9e2f3dc0e5d47f60fd59fa22ceb32ec",
+      "sha256": "ce2793bec460d3f9562e2631273e175966d2378ad61643eac3945ea8c653f092",
+      "bytes": 12006
+    },
+    "vendor/us-sports/college-football/us-cfb-103.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+      "inputSha256": "fa59bb32e732327db77cef6c70e32db5f0faf0d1b35a02abc482d1bc187c6036",
+      "sha256": "95ff142d04b89c1b5d0efb30500f1b42a74eec283e55bb010f78672f603d45dc",
+      "bytes": 17672
+    },
+    "vendor/us-sports/college-football/us-cfb-24.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+      "inputSha256": "a25c3474889c6c9d966245814fdd29c51dd79b02ae9e7780965cf52aad1ee22b",
+      "sha256": "9341081afd740801fb4c45f3c420240ad9dfcc7515057be4f9c847198cf2e768",
+      "bytes": 8676
+    },
+    "vendor/us-sports/college-football/us-cfb-258.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+      "inputSha256": "d35c8362ad7a6f03b32e30bc0745cb481da320da96010c7327f3c78359ac9fe5",
+      "sha256": "e7bb56c148b2c68f294ce9025d79291bbae87abfa8c6d469202e30720599ed22",
+      "bytes": 12210
+    },
+    "vendor/us-sports/college-football/us-cfb-52.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+      "inputSha256": "2b8ccabe8c063ef5f2fbd4c21b489179d94782ca4ea6c14dd3e5d1728afa61a3",
+      "sha256": "77b208817ea361d3b3e50500859f1d9f8005496a2269a27b30fd896f5f445932",
+      "bytes": 22662
+    },
+    "vendor/us-sports/college-football/us-cfb-152.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+      "inputSha256": "ee51da26e5cdf389cc787c58478f10bb03503832e35f862b4f208d273819d8ec",
+      "sha256": "4ba4ff2a0a6eb2bbcee7949b446f156d7708a0485a0111daf51821f454f428b4",
+      "bytes": 13278
+    },
+    "vendor/us-sports/college-football/us-cfb-183.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+      "inputSha256": "cc978bd06e84d85870429294fd9a2f4908ec9c43635bd83ef3eee94387cfd100",
+      "sha256": "e5377041f2d0f640e170f11eca6f3a5174ca62aef2f04ac4ce129e6b6b9c2789",
+      "bytes": 3924
+    },
+    "vendor/us-sports/college-football/us-cfb-25.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+      "inputSha256": "e77c7a116c09151929c126691922a76de34689b273f0cf8748097fcbbde087a5",
+      "sha256": "b532121d52a657291d8f889970e93b04101a7ba0801b5128dd8dcab32714b725",
+      "bytes": 7410
+    },
+    "vendor/us-sports/college-football/us-cfb-59.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+      "inputSha256": "c50e6dcbe550c656e79729b1dc4d348a2deeb66dec33a331f9df4cb23885ce99",
+      "sha256": "1cbc1302ef9500586354d4972462438fa141ef1db83ca7dc920b456dba8d86ed",
+      "bytes": 7678
+    },
+    "vendor/us-sports/college-football/us-cfb-254.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+      "inputSha256": "54d1837e37240cb37dcbea2b2dfd518bdf8531344e5f5397ff02a1d2111b5b43",
+      "sha256": "125ef17a07fb9110de51d7fdb02b69486d55a6a0cb959514973dc9af45ea4120",
+      "bytes": 1812
+    },
+    "vendor/us-sports/college-football/us-cfb-252.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+      "inputSha256": "4c49b759151574b979556fb10f1e245ec8cb03b4b3b80d4d352b5f909293976d",
+      "sha256": "ee9feae022e3fb6b15974a2ffa29efd5413a90281c97387a482f1a8815ec971d",
+      "bytes": 6960
+    },
+    "vendor/us-sports/college-football/us-cfb-12.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+      "inputSha256": "f01db22fd85d00eaf8f9b5952bc8e7c0b458beae33753c312cb54c5515f7c967",
+      "sha256": "9c1695d80d66a5feca5c36c4d25994202e7c0c52a9d60ff708b65d090560b8aa",
+      "bytes": 9458
+    },
+    "vendor/us-sports/college-football/us-cfb-2641.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+      "inputSha256": "be16f2f868f97ef01961fe3332252aa767be3a860438b9f0da054bf7205b66e4",
+      "sha256": "ddecb86783b14a58ce359d70e0e25e3409d8188fcdf2d1a3677d151b09fa3d2a",
+      "bytes": 2402
+    },
+    "vendor/us-sports/college-football/us-cfb-248.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+      "inputSha256": "d8984a3cc57ea50d3002bb08515942af2be523c4fa404a670515da041261980d",
+      "sha256": "6dada78babeb38a88617ad34f5cdb4b2c44b255f873ff50b858bb8dcbc2e6bc1",
+      "bytes": 6026
+    },
+    "vendor/us-sports/college-football/us-cfb-197.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+      "inputSha256": "3d5ebde2aa002198a95ef2449a139270278cffd31419060b755616b7614697d1",
+      "sha256": "ba51a9fe166e1d7d51d5df1b2a05a8c333084e8084a370b574f67b9a987c44ba",
+      "bytes": 6610
+    },
+    "vendor/us-sports/college-football/us-cfb-2132.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+      "inputSha256": "2fd50a6f605fb9c0976541ceea04a6dca78de56fed0ea0186473da9fc39c651c",
+      "sha256": "f199fd1755b8af354e38feae92c54f390142ad86d56c92783650dca65f3ebda2",
+      "bytes": 3802
+    },
+    "vendor/us-sports/college-football/us-cfb-277.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+      "inputSha256": "5d80b2a5a79d7c5b8dfbb270f0140bd7353b87b6fcd8dc43a60ccff9a72baa29",
+      "sha256": "09b37c2814a0b6542ff76b7e4ac018b1bc9e2a9ddb57ea9a3282fb6d99a675e4",
+      "bytes": 4494
+    },
+    "vendor/us-sports/college-football/us-cfb-239.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+      "inputSha256": "0346c816dfe728010a42fc416ddb48ceb052126fd0675bbb8fc30a6df5fe8e8c",
+      "sha256": "d8c69b8d21602d082ed5f2d68857ab54c0b49e85698312389bf060789885dfdf",
+      "bytes": 2890
+    },
+    "vendor/us-sports/college-football/us-cfb-9.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+      "inputSha256": "12740d7f76563f339392d50d215e173925114d2ad48d576263165f3b31052998",
+      "sha256": "758319ae1b5b9c4afeb0080197e43e99beb1744476bde3ae2305bc845b75634c",
+      "bytes": 12664
+    },
+    "vendor/us-sports/college-football/us-cfb-2116.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+      "inputSha256": "4fdf8855a3d5842e5cb897277f93cad7422774b42d6d426e019591a0c596bf2c",
+      "sha256": "5948cbda1ae226dbdc1cb101ac7f39b4d72bc9d6f411078dd8578d88aff0a5ca",
+      "bytes": 10100
+    },
+    "vendor/us-sports/college-football/us-cfb-2306.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+      "inputSha256": "93f3e366a88ec89bfa8ed8d1cc2ce16cfdc17a736bcd1831b908241296b11e39",
+      "sha256": "32dfa934d2581ae41af5028c57b7db8ff040da2e4384e1b30f7c838dbf661f5a",
+      "bytes": 5974
+    },
+    "vendor/us-sports/college-football/us-cfb-66.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+      "inputSha256": "8b490fe0621ea18538cf38e2b9c462beff54b26ee4707c54d024547e82e7cd63",
+      "sha256": "6b5f97b7b1ba34fdadd7ba6ad53788ae1c2996747e0ddc229eb196022368f103",
+      "bytes": 18462
+    },
+    "vendor/us-sports/college-football/us-cfb-2305.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+      "inputSha256": "e1daa000b25e45917bfaa93464b8725980c8e3c1a859f1fb51174e9d37aee08b",
+      "sha256": "a3faee11f598cfb8c05d65f92965af592b85be9138835a0f6ab3d9740a976626",
+      "bytes": 26820
+    },
+    "vendor/us-sports/college-football/us-cfb-2628.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+      "inputSha256": "864561cb4ebf372171438c038fcf52eac3342a2c1d751e605901e144c70afda0",
+      "sha256": "e4cdb239ff40a43394622133745f8fbd3afc9b532ebc8a1f0f7488c71f9cfa34",
+      "bytes": 4328
+    },
+    "vendor/us-sports/college-football/us-cfb-38.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+      "inputSha256": "69f6e383b017d6494ff7e0456e90211ca41e4c746aa0532cf762256651aaf192",
+      "sha256": "af51202ce1b60b405b511abcd4e571c7226ebfb6ca03c5cecb84e87ad82beced",
+      "bytes": 10690
+    },
+    "vendor/us-sports/college-football/us-cfb-26.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+      "inputSha256": "5145c6eb67719f52cdf51c92ef6b30486c9a585ca129624d6c7837e369321a23",
+      "sha256": "34eed712ad94b6a71c588d8763e65589440876c48c75d2aebefc03a68a73ded0",
+      "bytes": 8066
+    },
+    "vendor/us-sports/college-football/us-cfb-84.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+      "inputSha256": "0dfc3e06f6e158d96df2b9729de6b1cd6a5a5756ec365cd0b998aa6ecb45aa66",
+      "sha256": "d970bd5a8608f882b2e56751e47facb86ba3105f70b2eedcbedfae4dcdeaaace",
+      "bytes": 1504
+    },
+    "vendor/us-sports/college-football/us-cfb-194.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "inputSha256": "6dbe512c1b9b4e8c0ebcfcb4b3620b6229a05619e8bf70b3051a8e6c4964240d",
+      "sha256": "4aa64d6abb0cd2f412ca24ad6d3c75aa8553f5b71aec476149fcadc650a6168f",
+      "bytes": 11748
+    },
+    "vendor/us-sports/college-football/us-cfb-77.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+      "inputSha256": "d447850b4a4d514fb7692fec4cda3e4fe7268c9d664b53e93f0f8fd476b1e6d3",
+      "sha256": "6f6ba5e51b6e3ab711e6127d1b926557be5da6d2d9bc63553931d4e1fb68d473",
+      "bytes": 4878
+    },
+    "vendor/us-sports/college-football/us-cfb-30.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+      "inputSha256": "abd4a69d1efca7bd1c944acf8a5a77b5bce41602da970e9779f0bf6079489c1a",
+      "sha256": "59c7ffaa9b29de1c555fa4ce28eb453bf3687b8a2a8a01e251a8fcf257365f20",
+      "bytes": 5208
+    },
+    "vendor/us-sports/college-football/us-cfb-135.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+      "inputSha256": "cb58131490de1f8724f1d53224aa7383671514e3a84df1d136c6f3e4429c302d",
+      "sha256": "3c8ad8da76f74bfa39d26e14eb5fffdabae63ec67b3bf57c8abfe47d56119954",
+      "bytes": 9742
+    },
+    "vendor/us-sports/college-football/us-cfb-275.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+      "inputSha256": "36a5c3e0fae73171c91f10ceb170ea820f4f46c4899ee8a66e900a60b597ee98",
+      "sha256": "9676253058341a2dd98dc26ff20922229f42e38f0750a4de120c0b565fe4892f",
+      "bytes": 8876
+    },
+    "vendor/us-sports/college-football/us-cfb-2294.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+      "inputSha256": "865b23c1e68385b0c0f2bbdd69a662382db1e9aa66310d3af5110b246b2ec472",
+      "sha256": "14b698e94f057369305bee1467adcec40e455dda76d93d918c50f1221f928ac7",
+      "bytes": 4256
+    },
+    "vendor/us-sports/college-football/us-cfb-158.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+      "inputSha256": "c09e5b394cfa5be2f2369c5e63210a12e25943b904d077c6469714ca9f8285e2",
+      "sha256": "56e1efc6e2f66004f25973ef1844337a2b90b9ce9ab6e93c661e94a41c7c6a44",
+      "bytes": 6614
+    },
+    "vendor/us-sports/college-football/us-cfb-356.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+      "inputSha256": "62c3b65a1ab3e8cad05832d76dd7b3fb695c8220c07f0fe5aa44ef12abcda56c",
+      "sha256": "76cfdf8a0a288675f369118e561cc75568de36fbabf9847ee9419fb164c034d9",
+      "bytes": 1134
+    },
+    "vendor/us-sports/college-football/us-cfb-2483.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+      "inputSha256": "57dca8a00b01bebcfb1e0c7ceafe0b046e175c47ec7225713b3930e7fcb7cd05",
+      "sha256": "7e0849ebc3ad23bf466797c4db4c84de6826b27e0408a5ec05271a96adaa4761",
+      "bytes": 5022
+    },
+    "vendor/us-sports/college-football/us-cfb-130.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+      "inputSha256": "910dbf467c9b442f1b493280bbc027ba5a1f91e2ce314fae099d637aade7d42b",
+      "sha256": "7de0da2a49ad7fe023670d8482a3b98b879c16c610a117a495ce231ed27a2e6e",
+      "bytes": 5370
+    },
+    "vendor/us-sports/college-football/us-cfb-264.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+      "inputSha256": "d1b99c2ea2a3336916b6906c38470338b07bd1e66c09c4433080b0d7017709b2",
+      "sha256": "8bdf1bd24686f8244a652122f2d19bef6cd2093d16afb5e859a8a5e2a76c25e0",
+      "bytes": 9670
+    },
+    "vendor/us-sports/college-football/us-cfb-2509.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+      "inputSha256": "4278337c6eb6dc808cbb8ff5e8fa0cb068db59aa75def6324a27f773201455cc",
+      "sha256": "f75215865ed056ee2f8855ac7de676e71bdf41f333326e67bd176cb01ccefdaa",
+      "bytes": 4632
+    },
+    "vendor/us-sports/college-football/us-cfb-213.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+      "inputSha256": "0efa003a56ec95d664b71d799fabe5e927d2ddd23cea90d5bab42df971abd080",
+      "sha256": "36a058661881352e84ef764cb324de73afdaec8323f3896a0ed76e5bd808c9ec",
+      "bytes": 7240
+    },
+    "vendor/us-sports/college-football/us-cfb-164.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+      "inputSha256": "5e75a7a68f9a6403f950f7ddf9c656698fcebcaa5fa16f0890135f2098c18686",
+      "sha256": "92613442393e59fa1e8ee16de6c9509364cea0c689516a214cc8f11817019359",
+      "bytes": 4698
+    },
+    "vendor/us-sports/college-football/us-cfb-120.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+      "inputSha256": "9b1951d140a87972ecf1e0564c190db1755f46997c4393813281194e62c83d45",
+      "sha256": "3a2ad79bcba96e0bb0cc0de1f8a5f7b7d5fea68c1334876fa4eda2b711c7167f",
+      "bytes": 11584
+    },
+    "vendor/us-sports/college-football/us-cfb-127.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+      "inputSha256": "9e3005c55a99e3bfc69da7df2d7a66b4851c9710e33c2f328ed471bf37638474",
+      "sha256": "839c3f80eaa6a93d4ff7603f0a06bcee98c89f53b6c7123ee81b6322867fb79d",
+      "bytes": 8158
+    },
+    "vendor/us-sports/college-football/us-cfb-2335.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+      "inputSha256": "2309e841473bc8b4297e83a1bbab7581d296189a20f904aa578c67f2327c2184",
+      "sha256": "ed2fe6c67033af7c0c9b2fd56e8c354b356a748b85d19e8333dc19ad49792deb",
+      "bytes": 19540
+    },
+    "vendor/us-sports/college-football/us-cfb-55.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+      "inputSha256": "ea8258009ea1024de674a785b6ab4229fbe55e3453e7931ebbaf61fe01f8c2d9",
+      "sha256": "0ce5cb0d7f096ee3dae448de1f8361c80333c19346b3f5e17ff68c6532f74273",
+      "bytes": 14884
+    },
+    "vendor/us-sports/college-football/us-cfb-48.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+      "inputSha256": "89e021f5f9b67d3024a17b83347dbb76d77a2b08fc67e8ac49411317228c7964",
+      "sha256": "0b192de53c2254a22de15e0b5f8b26bc11e5828c2b6c15e2c61a4234b560ae14",
+      "bytes": 22422
+    },
+    "vendor/us-sports/college-football/us-cfb-2393.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+      "inputSha256": "19b89c81e4b60f93b8cd496163324c375baeb9a2df627477a2cbcfd029639505",
+      "sha256": "51026f01e0ccb56a308cf5724f16be155590d4f2fee90ed7322f2a5c8b5e1c0c",
+      "bytes": 12768
+    },
+    "vendor/us-sports/college-football/us-cfb-2229.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+      "inputSha256": "454d8b98c02065b3ca16b6b64c9f71478b32dda5dbc5495670b79d202e1017b7",
+      "sha256": "1c20d250b5a88d3f68f6dd89f4fd73e2a125a5b2f032ac9b9fc477a80814a857",
+      "bytes": 21174
+    },
+    "vendor/us-sports/college-football/us-cfb-166.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+      "inputSha256": "e234e9b2d83ced87b58490b109ca1929ea3e97565e934de9f90a86ab51de64aa",
+      "sha256": "e41c02874ad95c3ac95b2c5ed41780653375dd5f5f96d4a4be9903366d6ef499",
+      "bytes": 12418
+    },
+    "vendor/us-sports/college-football/us-cfb-98.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+      "inputSha256": "4bb5d1cbe2d259b953977bce4f72c66dacd5a0e5afdd5a240ff3fe41c2daab17",
+      "sha256": "edd5f16ce8dcaa05321e686e579081183a7cfd3ed47555401a27aa86d5475cb4",
+      "bytes": 12134
+    },
+    "vendor/us-sports/college-football/us-cfb-2623.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+      "inputSha256": "46d36761e7c210f650db2499b48da428f5e5aa652e1ef9430868a932e3db88bf",
+      "sha256": "ee12cb1ac66a45faaffe27ccbe99c48df51a83690de13ae8d587caf50f115102",
+      "bytes": 20298
+    },
+    "vendor/us-sports/college-football/us-cfb-338.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+      "inputSha256": "b2697f1cc59faf361dfb9022c0e1a10af9803f9ee70b0ace29ce2abde3cd6618",
+      "sha256": "f040562e9c33725a9fc313d768e29a8437ba1e35189f17407047c59cfdd439fe",
+      "bytes": 14430
+    },
+    "vendor/us-sports/college-football/us-cfb-2534.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+      "inputSha256": "ce2765d5ba86d0c61b0fd7baff4aaffd8dc12a0e1e76c8f75699ab403cf0982c",
+      "sha256": "5d98609b99c4985db353308a077ccb020312d7c92e9db85589e500ff4b8a6607",
+      "bytes": 7154
+    },
+    "vendor/us-sports/college-football/us-cfb-87.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+      "inputSha256": "5c0412f57d3fdf05789d255595ce014bbed36c6468f8ec3d8471450efe5f9f10",
+      "sha256": "ac1559ee11ba22524fffcc4abf8807e8c110c8568154a54f94efaabe1e685353",
+      "bytes": 6862
+    },
+    "vendor/us-sports/college-football/us-cfb-41.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+      "inputSha256": "3ff5b782c09c76a90568f2d8434ca70efbecc7a4f65ab0cb66d5c00b1e384ad2",
+      "sha256": "e848c7ec3865668ff4a3d033b8e00e5239496783b6199fdfd5178b97899fc87f",
+      "bytes": 17542
+    },
+    "vendor/us-sports/college-football/us-cfb-195.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+      "inputSha256": "2fbdfa08adebb0be79d920a92b46e7e153e6dff49a4335b93b86a527525f836b",
+      "sha256": "5729bd0d13a3659a17a986262f70c4bfed67f7938dc5875c87e484409d6db310",
+      "bytes": 5612
+    },
+    "vendor/us-sports/college-football/us-cfb-2649.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
+      "inputSha256": "64a7bd6719c228709bd83551956fa1d28b0e4728dadc9dd14ed4c0fab3a0b0bb",
+      "sha256": "4115d234f55bc3ed7914022b4aabd5b4999a781168e994b41bd7a3b3a5955870",
+      "bytes": 15556
+    },
+    "vendor/us-sports/college-football/us-cfb-2711.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+      "inputSha256": "ef109dce0c75f0e11715f9f08bc2b3bd8b5b60fce7d15b5bc19a1c8702f4ed2e",
+      "sha256": "37ce68e0f409bd6c54b9f9fa69dd8cebda7e813f2463343cf4b1407f6c648c5b",
+      "bytes": 15650
+    },
+    "vendor/us-sports/college-football/us-cfb-2084.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
+      "inputSha256": "491bd78fc49a2d70fa934807beab1a0b3b1497f8ce93e7d98e94fcfe371353b3",
+      "sha256": "e7900417f93770b1ad1bef2586b26b8f0387e186678808b829f2300875bb7458",
+      "bytes": 8610
+    },
+    "vendor/us-sports/college-football/us-cfb-193.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+      "inputSha256": "cbc0ca1a53c76c0944315867f07facfbb31bfaa29b738038f50668b8b229d33e",
+      "sha256": "3c30c9edee38063a7ee8a9aa2b7897af81dccebca76be6d5e642a64bd9758d85",
+      "bytes": 4938
+    },
+    "vendor/us-sports/college-football/us-cfb-113.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+      "inputSha256": "864546bd6d0bdf4432ae552d6e3ed405b6fc6e2a78a07f5654eec22e110789bb",
+      "sha256": "324dac4f9a37e7dc224bb4f4f0b2a63c6d15d5d3eccc75edc4ac23aaa5c6b6f7",
+      "bytes": 12732
+    },
+    "vendor/us-sports/college-football/us-cfb-2199.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
+      "inputSha256": "f844b98efad3ea95ba434826c6e9f1707487000a0c65c51412e3dc067971433c",
+      "sha256": "12b580b94433de201d16f6b43b167b6ae8669d5ae052e4bfc5085314a63fc058",
+      "bytes": 1644
+    },
+    "vendor/us-sports/college-football/us-cfb-2309.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
+      "inputSha256": "e99c6598ff920716bf12c731a4b52039c2350d373d2a86d98df4dd592c491d4d",
+      "sha256": "d38dac24bf23036216dbf07c4a06e1d3d828309f7814075bea0cfcf373ff6e67",
+      "bytes": 22430
+    },
+    "vendor/us-sports/college-football/us-cfb-2050.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
+      "inputSha256": "543e3498d12ae3bcda1cf108af528755c3720dd730a32999ed48ad836d2996cb",
+      "sha256": "190b4f7d5b64a323c92ddf5c1ff7ca6b435232a2d0eb16a60fbfb42c5736d193",
+      "bytes": 12548
+    },
+    "vendor/us-sports/college-football/us-cfb-2117.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+      "inputSha256": "481cc74842d3688df1330548476ecda4ccca9aa4d7c0d8235bfc4a51c4e51bd6",
+      "sha256": "e9696cf6f8225e9f9074cec0035ad5513260ff531427cbf26425f9ff54a55f31",
+      "bytes": 6418
+    },
+    "vendor/us-sports/college-football/us-cfb-189.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+      "inputSha256": "39ecb7e2c79c967dcb27fee95b298fda3034d6617c69253336e61decc830bfd2",
+      "sha256": "63f49d1f6e2592fdf6111f1462797af1ee7cc6dc56b64d27197f7fd6f5d7d146",
+      "bytes": 12770
+    },
+    "vendor/us-sports/college-football/us-cfb-2006.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+      "inputSha256": "09739fb3e78ccaf6b6f468f252181a169984e325595126130ed7abf6e9683efa",
+      "sha256": "7f1ef3b2cee08c531e11781978b19ddbdf890915f2c4d379c499c1d06716637a",
+      "bytes": 7050
+    },
+    "vendor/us-sports/college-football/us-cfb-16.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
+      "inputSha256": "4384290d93eaceb6978916329a11fe5ee635b729c799339c65164721bb2c8afd",
+      "sha256": "ee05c3a1ebac09f960fa85627fc13773d03ab9035d724a0302eb423d77877bdd",
+      "bytes": 14806
+    },
+    "vendor/us-sports/college-football/us-cfb-167.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+      "inputSha256": "2d0fe74447bda664c751ef06faee17350920a5c40ee2a695ab0c9d161b9ecd5b",
+      "sha256": "965670ae360cafe1a863e10cf100af50db18c57f1a1f51aa669a4ab4616a0c29",
+      "bytes": 19698
+    },
+    "vendor/us-sports/college-football/us-cfb-2449.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
+      "inputSha256": "a807289822ded61aec1f3d412e0246464154c2af329002ac810a9bb5ca268228",
+      "sha256": "ad15d012bef2f444b3098d0ac132eca0e0bd86bc1eb41ec10abe55e6834e9f35",
+      "bytes": 14870
+    },
+    "vendor/us-sports/college-football/us-cfb-2005.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+      "inputSha256": "42d26e1bf89ec01fcd54caf37e52abb4b8fd8b25da97199c0766cbd5dfa04171",
+      "sha256": "ae9c1188c863266a63770aead0551f7ce3f3c9d2d3b34b22002bac815ec630c3",
+      "bytes": 3082
+    },
+    "vendor/us-sports/college-football/us-cfb-2751.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+      "inputSha256": "05bba88a8466751ad257c493aa035ac284f98772115faa19a5aedd330eb63447",
+      "sha256": "ad607353daeebc59bf156dd8cc06d31d7ab5995d1c5ed667b889a1b41b5d8448",
+      "bytes": 11868
+    },
+    "vendor/us-sports/college-football/us-cfb-2439.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+      "inputSha256": "3699f4337084b482b8b698fbecb4bdfdbced4370937be37a42842d96555b6df2",
+      "sha256": "b78258b8295f1de76592cefb1f26bb7dc93f2fa1af4b3cb40412008ba2a4e8ff",
+      "bytes": 11416
+    },
+    "vendor/us-sports/college-football/us-cfb-23.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+      "inputSha256": "b786de17b998fa272d6e02d193d2a84db93b4339975301d825af770d3b2ede5a",
+      "sha256": "04f2c63243fddd0db5a31e8d263a16e05ce7b25fcf6f0b5e433e40153135ed55",
+      "bytes": 17796
+    },
+    "vendor/us-sports/college-football/us-cfb-2440.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+      "inputSha256": "3b6335aec4a77d221c64d9b1ddf01c06f2847704ee6e6d3d930517e1b9665433",
+      "sha256": "9d0de4fafbd6bbc70f42d99ca78b0f26e21969156aadef08c0e989d9b912d33f",
+      "bytes": 8826
+    },
+    "vendor/us-sports/college-football/us-cfb-62.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+      "inputSha256": "0333c0f1e6c941c9207f9aee9088d7fbe952fc9eba1fc8ea5a075bea92ac92f4",
+      "sha256": "949e998342b30915d9124bad6a6258ecb8489cc87cc4a69a043d9277d20422cd",
+      "bytes": 12866
+    },
+    "vendor/us-sports/college-football/us-cfb-2638.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+      "inputSha256": "28406bdc850b40361bdaf2be3b0337b7a538368abc61e81d70ebe0d79434c5cd",
+      "sha256": "76129d36d9f2d433a66da6bb67217ba214dc48d16095659e85beccc5bea3fba7",
+      "bytes": 24626
+    },
+    "vendor/us-sports/college-football/us-cfb-2459.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+      "inputSha256": "8eaec08b517c299e9104ceec51d9fd92cdb1c5a8fdc029f605071b518ba94c1d",
+      "sha256": "ba8764b41fd29c5e59f73a15ccf8f444779e4588bb6cf3324ec0eef15f114be0",
+      "bytes": 13276
+    },
+    "vendor/us-sports/college-football/us-cfb-68.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+      "inputSha256": "0fe810a62f4c54b85bc0ab652c5acec912c7abcad5b8b2068827ac5f3385fccb",
+      "sha256": "a5275aa4256065e6a905db96f84b2d5c7edc1f727cc8f9c112186039722b757d",
+      "bytes": 21026
+    },
+    "vendor/us-sports/college-football/us-cfb-204.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+      "inputSha256": "64105e5b2d9a14525ecad678731eb6899ef6126165d1a37ec8ff4dfeb61b9a92",
+      "sha256": "59118a46ef9112f55a37337c7a03f84b8be55299cccb8b507b70a2f60b8ff2f0",
+      "bytes": 8882
+    },
+    "vendor/us-sports/college-football/us-cfb-326.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
+      "inputSha256": "0e81afbb4d334e48237c83fd2cea6239871e2f8167def9ce9a836b1e2a325366",
+      "sha256": "a6b4b18827ef60d1950c6abe8431c7b886775520c36da55d8ccca6eddec41b3d",
+      "bytes": 10824
+    },
+    "vendor/us-sports/college-football/us-cfb-278.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+      "inputSha256": "523302ba48abe65ce9d778912c43f72fb7322a2d5815d8ac324f89772a261d14",
+      "sha256": "22391ae7eee6166c492bb26b05075846fb2fc7d509bee64cbc07f717a1327f0f",
+      "bytes": 21602
+    },
+    "vendor/us-sports/college-football/us-cfb-36.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+      "inputSha256": "356212f740fd77198672d89b67e66d91c514c8892123f77cd2c63071ce6c8706",
+      "sha256": "4ee146b9712268ff8a87655e3ec263b2734ee798d2b7abfbec059487d94d3d47",
+      "bytes": 26540
+    },
+    "vendor/us-sports/college-football/us-cfb-21.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+      "inputSha256": "7b084aa3cbb580cc26253ef38134dc1f52c3605f66f0dc6542b2abcc0fdf1dcc",
+      "sha256": "12362d4e1df34bcbe535954fee73bd9ce58a17881ebc19f57ad754c9dbc34439",
+      "bytes": 4914
+    },
+    "vendor/us-sports/college-football/us-cfb-328.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+      "inputSha256": "d2cb5546e8f39a2cffebd99ddbb06be2bb4b4b634414a6e628573ad4bd04f1f2",
+      "sha256": "70dc25c5525a2f6d25986c274db1446708744898f23ca72b395835ad18a7f836",
+      "bytes": 7510
+    },
+    "vendor/us-sports/college-football/us-cfb-265.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+      "inputSha256": "13774f9131a5b477a7be0b6def39516c9a4c5752a7add4d0a4eb259a174db289",
+      "sha256": "07877714881a46a34825f15f38009da8b603b9c5f70e3653f2e74fa414098a86",
+      "bytes": 10182
+    },
+    "vendor/us-sports/college-football/us-cfb-96.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+      "inputSha256": "6f5dec8dea23de372677085b6ecc0d8f49420e3d0a0a5336e7165c94160f5015",
+      "sha256": "1d12c1e2230e5effe0f642b2aa34915fa42849090c1b3223b838bd49c7b03a91",
+      "bytes": 6540
+    },
+    "vendor/us-sports/college-football/us-cfb-61.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "inputSha256": "fa5c7fb14d5ffa38eaddfeb80161835e60a3d496b57db5e0ebda5e6475226d8a",
+      "sha256": "ad45a995ee1041a75221e572298cc18feec21e67504db6dd15a81fe0a53dac1b",
+      "bytes": 9314
+    },
+    "vendor/us-sports/college-football/us-cfb-333.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+      "inputSha256": "bb55649cd4257a7d13b58db3f6cc85af8672b43f6eb215b6e729c7916ba5e4b8",
+      "sha256": "897e71eb661cd800d12c0faa8733b0550944b98263ea08535a727e26f205c4e1",
+      "bytes": 7306
+    },
+    "vendor/us-sports/college-football/us-cfb-99.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+      "inputSha256": "d02e29a9f8824740d848b4a83c574b1c1942ba1cdee61b3ee08611634cc86b46",
+      "sha256": "876e2ff4f04fb0e11992597ebb8bf363dab3ef674ff1d2aeb17f38289e3f1d37",
+      "bytes": 3164
+    },
+    "vendor/us-sports/college-football/us-cfb-2633.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+      "inputSha256": "1ef03aa847164f52dee3c8bfea023e3b75915231c01250889a549ae08b2ec9b8",
+      "sha256": "475f1f7d8f65a92881e39a2b65b45db12f26a2cb48751f33870b9d1ef61191f8",
+      "bytes": 1570
+    },
+    "vendor/us-sports/college-football/us-cfb-57.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "inputSha256": "2e70460ca7c02a03d238ec4d9dce163a22401bfaa9842cbbf2f1ac1a991d6d50",
+      "sha256": "c1c4cc34f1d45ecae82f430fee7cfe28cc0c226b9a73879a74a4bd8cea3b8e1d",
+      "bytes": 26396
+    },
+    "vendor/us-sports/college-football/us-cfb-145.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+      "inputSha256": "61988dd6fb46c4c5dad612e7ef14eeee56b63ada3a0758b30ccf418213ecd826",
+      "sha256": "7fa9d63a06b5ddcf7750938fe8d4fd167b6934b30a21714c973e62c6b96dca7a",
+      "bytes": 11274
+    },
+    "vendor/us-sports/college-football/us-cfb-142.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "inputSha256": "bb4a26eac90ad2ca3557f18180dc0f1cbdf88ba013c15c3293071701a3f43b53",
+      "sha256": "fc32683f15801713a767e7516edfaa15788ff1e4d4c2b07e47ac967a8f9efbfb",
+      "bytes": 17060
+    },
+    "vendor/us-sports/college-football/us-cfb-251.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "inputSha256": "12d69bb78c3443bdbcc5a7659f288840a7a3862d70043eda3d8868a229eb7696",
+      "sha256": "ecd249cdbd8804a7860d9f912947fabc39d79a164c6bbb0c5aa0252cf3556c8a",
+      "bytes": 3684
+    },
+    "vendor/us-sports/college-football/us-cfb-201.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "inputSha256": "19f8f9a3254b9c85ffacf42de7b4d00e1186fbb0b55effdabe9c6d0a3f487ddf",
+      "sha256": "2042293ea118937fb27d3cbbc49718c1b07466ba3504aa9ef514964780ad959b",
+      "bytes": 3264
+    },
+    "vendor/us-sports/college-football/us-cfb-344.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+      "inputSha256": "1854b6d52609c4db7daacc59ce122017c3eabd2e70b9c66deeec297183d4d46b",
+      "sha256": "a52768bbc88268e1ccd73d6a6749cd67bae411aedecb2ff8b2ffbb4ba1350a13",
+      "bytes": 18250
+    },
+    "vendor/us-sports/college-football/us-cfb-2.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+      "inputSha256": "80b9ba2db8d91211dc4f1a57ea855d34f6ef1796795e60d5545f91a49af8bf39",
+      "sha256": "9b6490ffb5ed48728dd6444e219526153513265b6cd5fc0b4f4e57bc7de9753e",
+      "bytes": 10780
+    },
+    "vendor/us-sports/college-football/us-cfb-2579.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+      "inputSha256": "c9e93c5450038047b77651cc3713964b83147bfd8df1a96d299f1e190aad002c",
+      "sha256": "56202a1ae1588e213cea62c5077394de4bc645afcb639d582455cab10e109b97",
+      "bytes": 19692
+    },
+    "vendor/us-sports/college-football/us-cfb-245.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+      "inputSha256": "0da7ac07d04adcd38707b88a4198e988b830ed49a0ab6c9378cfb4cfb980aa08",
+      "sha256": "f11170d10e0ba2e8c659c851ef1324cad2e5698882eb091f0054b2a0dc733dbb",
+      "bytes": 3402
+    },
+    "vendor/us-sports/college-football/us-cfb-8.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+      "inputSha256": "16e44ba49923991c70b824707a4c541327834a308472ca471f0001805a6a8d91",
+      "sha256": "1bc783e5d4b0fa74707f16994a4d259db0b193e4909fa36cd1fe4f6375d13e20",
+      "bytes": 9902
+    },
+    "vendor/us-sports/college-football/us-cfb-238.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+      "inputSha256": "cdb3df344d224cae8b03a9f23f6e15424267095644cc211e0e0278c6e53986c4",
+      "sha256": "c6f4a171b47327316701fcd45ab16a4d98f79e767094c9774d66c58d8d746ea7",
+      "bytes": 6226
+    },
+    "vendor/us-sports/college-football/us-cfb-256.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+      "inputSha256": "585459126d87e56750ae902d78b198f63e44b8a6cac5c25b1a6c9483366229f5",
+      "sha256": "8d03ca628f45d23d95481a4a16b53abc05f0dc38d232e84850971513ad98f50c",
+      "bytes": 8526
+    },
+    "vendor/us-sports/college-football/us-cfb-2026.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
+      "inputSha256": "487c6f3fbe9c41cf532b6de285f1d35585ee7ca9510e5aa45000d97a1f597e5d",
+      "sha256": "0f05203973055febc7d8846c600ccbc81b528b5cc587d058c5b924de109a7aff",
+      "bytes": 8992
+    },
+    "vendor/us-sports/college-football/us-cfb-2247.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+      "inputSha256": "e8680ddd6596d15818a8fa489831f6e81605c59ba517eb10940f6eb31ba1a332",
+      "sha256": "93fc1a2508f8d240ba1c0324afeec7f4ab010adeb667095d1246c27bc0e86dbb",
+      "bytes": 14846
+    },
+    "vendor/us-sports/college-football/us-cfb-276.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+      "inputSha256": "1da7fba7069492d881b01a375a5ffde5632273d31118d4466d1b92db447daefb",
+      "sha256": "d2e9118e0a545bb6666c737422773c27a0cfdd352c1f105ab5d0f2d5f34068f0",
+      "bytes": 7914
+    },
+    "vendor/us-sports/college-football/us-cfb-290.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+      "inputSha256": "70309e48c4248f1eafe5cb07f266fe8210f46f6dfcd58590febd7f9b2f616eb9",
+      "sha256": "e74c4ce77fa00f07e6bd7e6f6701600cc81456b8bf768bd9b370018ef4c389bc",
+      "bytes": 22182
+    },
+    "vendor/us-sports/college-football/us-cfb-324.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
+      "inputSha256": "16b25eaa685f36feaa1fa315a91d58c83349fe7401eed3bd6e396552006a7f93",
+      "sha256": "20bbbe7f1bb53ee62400c9c59e2d6697665d549459333b8f91e53e1679c67f4a",
+      "bytes": 15972
+    },
+    "vendor/us-sports/college-football/us-cfb-295.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+      "inputSha256": "d7715a34978cfdb27bdb863a6c0de3d7a4c122e80de0c72397b8a23aa3d10fa7",
+      "sha256": "e3f8d540a349b7376ead789b2d1c97053da2b833525cdcccff51a856dea1e1a0",
+      "bytes": 23074
+    },
+    "vendor/us-sports/college-football/us-cfb-2348.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+      "inputSha256": "7623ee59943d7b5bd86839cc947791b42b407690366c5ce6106992f2510a46c7",
+      "sha256": "7e9a57860b1f83ae0cd389c09de0217264b92c0299515570fc9b94de003ef598",
+      "bytes": 4330
+    },
+    "vendor/us-sports/college-football/us-cfb-309.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+      "inputSha256": "504a8c3ff5469e6c367e3925e573324e8efd0c0e42a034658e1609a62f1b1ed3",
+      "sha256": "63eca91dda6ca7acd4fc5b98112c1d64c020d7c21e9779179a9df813b9d4afe4",
+      "bytes": 14518
+    },
+    "vendor/us-sports/college-football/us-cfb-6.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+      "inputSha256": "178ada0fb7df8fbf295d6001a992835876f2cbde64225d35ff0ca7dfdb374c2c",
+      "sha256": "ab34dc0ecc4c6259d9af53b05bffc3c5c11ef57755797a5f56348911447cc029",
+      "bytes": 18296
+    },
+    "vendor/us-sports/college-football/us-cfb-2032.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+      "inputSha256": "86231f0ce7486f40023e31609b666659c1538a6c2e4d8d3673a0eeab99cd05ba",
+      "sha256": "3bd05393ec67880a2d43f34853a05bf281a36de892308c07997be959237d1470",
+      "bytes": 15464
+    },
+    "vendor/us-sports/college-football/us-cfb-2653.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
+      "inputSha256": "d993ecfbd487072931fa99eb42b7c525768630a4a10884c7b7a1b6a2fc78bfe5",
+      "sha256": "41c20e283c7130bd12c132f85cc72ac70e072e431a17681ac1912e107a0f3f9f",
+      "bytes": 6000
+    },
+    "vendor/us-sports/college-football/us-cfb-2572.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+      "inputSha256": "4a210457f8f078c29cb143f9bd8b1ae666420e8973edd12c5ad5ce4fdc3f5945",
+      "sha256": "7dfec575901b6f7ada68e1c44b33e9628bd19bac3b09d633def32f03592f34bb",
+      "bytes": 8086
+    },
+    "vendor/us-sports/college-football/us-cfb-2433.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+      "inputSha256": "ccf675e2c704d23dc35eec58217202e2f50eb124275e6cd212df739326081e72",
+      "sha256": "a7d38879a7c198df211c659aad559479825ae3a34b0b87fa66277543023f4961",
+      "bytes": 13660
+    }
+  },
+  "crestCredit": "Team marks belong to their respective owners. Source URLs identify the original artwork."
+}

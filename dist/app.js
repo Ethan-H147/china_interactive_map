@@ -660,7 +660,7 @@ async function showFirstView(){
 // handed the files this visit loaded.
 function storeForRepeatVisits(){
  if(!('serviceWorker' in navigator))return;
- navigator.serviceWorker.register('sw.js').then(()=>navigator.serviceWorker.ready).then(registration=>registration.active?.postMessage({store:[...new Set(performance.getEntriesByType('resource').map(e=>e.name).filter(url=>url.startsWith(location.origin)))]})).catch(()=>{});
+ navigator.serviceWorker.register('sw.js',{updateViaCache:'none'}).then(()=>navigator.serviceWorker.ready).then(registration=>registration.active?.postMessage({store:[...new Set(performance.getEntriesByType('resource').map(e=>e.name).filter(url=>url.startsWith(location.origin)))]})).catch(()=>{});
 }
 let archipelagoHost,portalLoader,portalAdapters;
 function createPortals(){

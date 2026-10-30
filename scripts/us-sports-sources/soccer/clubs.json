@@ -1,0 +1,1407 @@
+{
+  "country": "united-states",
+  "season": "2026",
+  "retrieved": "2026-10-29",
+  "leagues": [
+    {
+      "id": "usa.1",
+      "tier": 1,
+      "name": "MLS",
+      "count": 30,
+      "sourceUrl": "https://www.mlssoccer.com/league-reports/competition-guidelines/"
+    },
+    {
+      "id": "usa.usl.1",
+      "tier": 2,
+      "name": "USL Championship",
+      "count": 25,
+      "sourceUrl": "https://www.uslsoccer.com/news_article/show/1351433"
+    },
+    {
+      "id": "usa.usl.l1",
+      "tier": 3,
+      "name": "USL League One",
+      "count": 17,
+      "sourceUrl": "https://www.uslsoccer.com/news_article/show/1351434"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "us-soccer-18418",
+      "tier": 1,
+      "en": "Atlanta United FC",
+      "aliases": [
+        "Atlanta United FC",
+        "Atlanta",
+        "ATL",
+        "Atlanta United"
+      ],
+      "city": "Atlanta, Georgia",
+      "stadium": "Mercedes-Benz Stadium",
+      "center": [
+        -84.4,
+        33.75555556
+      ],
+      "crest": "18418.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mercedes-Benz_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png"
+    },
+    {
+      "id": "us-soccer-20906",
+      "tier": 1,
+      "en": "Austin FC",
+      "aliases": [
+        "Austin FC",
+        "Austin",
+        "ATX"
+      ],
+      "city": "Austin, Texas",
+      "stadium": "Q2 Stadium",
+      "center": [
+        -97.7195,
+        30.3877
+      ],
+      "crest": "20906.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Q2_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20906.png"
+    },
+    {
+      "id": "us-soccer-9720",
+      "tier": 1,
+      "en": "CF Montréal",
+      "aliases": [
+        "CF Montréal",
+        "MTL"
+      ],
+      "city": "Montreal",
+      "stadium": "Saputo Stadium",
+      "center": [
+        -73.5525,
+        45.56305556
+      ],
+      "crest": "9720.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Saputo_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png"
+    },
+    {
+      "id": "us-soccer-21300",
+      "tier": 1,
+      "en": "Charlotte FC",
+      "aliases": [
+        "Charlotte FC"
+      ],
+      "city": "Charlotte, North Carolina",
+      "stadium": "Bank of America Stadium",
+      "center": [
+        -80.85277778,
+        35.22583333
+      ],
+      "crest": "21300.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bank_of_America_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png"
+    },
+    {
+      "id": "us-soccer-182",
+      "tier": 1,
+      "en": "Chicago Fire FC",
+      "aliases": [
+        "Chicago Fire FC",
+        "Chicago",
+        "CHI",
+        "Chicago Fire"
+      ],
+      "city": "Chicago, Illinois",
+      "stadium": "Soldier Field",
+      "center": [
+        -87.6167,
+        41.8623
+      ],
+      "crest": "182.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Soldier_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "note": "Primary home is Soldier Field. Some 2026 matches move to SeatGeek Stadium in Bridgeview because of Chicago Bears scheduling conflicts."
+    },
+    {
+      "id": "us-soccer-184",
+      "tier": 1,
+      "en": "Colorado Rapids",
+      "aliases": [
+        "Colorado Rapids",
+        "Colorado",
+        "COL"
+      ],
+      "city": "Commerce City, Colorado",
+      "stadium": "Dick's Sporting Goods Park",
+      "center": [
+        -104.89194444,
+        39.80555556
+      ],
+      "crest": "184.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dick's_Sporting_Goods_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/184.png"
+    },
+    {
+      "id": "us-soccer-183",
+      "tier": 1,
+      "en": "Columbus Crew",
+      "aliases": [
+        "Columbus Crew",
+        "Columbus",
+        "CLB"
+      ],
+      "city": "Columbus, Ohio",
+      "stadium": "ScottsMiracle-Gro Field",
+      "center": [
+        -83.01709,
+        39.96846
+      ],
+      "crest": "183.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/ScottsMiracle-Gro_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png"
+    },
+    {
+      "id": "us-soccer-193",
+      "tier": 1,
+      "en": "D.C. United",
+      "aliases": [
+        "D.C. United",
+        "DC"
+      ],
+      "city": "Washington, District of Columbia",
+      "stadium": "Audi Field",
+      "center": [
+        -77.012869,
+        38.868411
+      ],
+      "crest": "193.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Audi_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png"
+    },
+    {
+      "id": "us-soccer-18267",
+      "tier": 1,
+      "en": "FC Cincinnati",
+      "aliases": [
+        "FC Cincinnati",
+        "Cincinnati",
+        "CIN"
+      ],
+      "city": "Cincinnati, Ohio",
+      "stadium": "TQL Stadium",
+      "center": [
+        -84.52222222,
+        39.11138889
+      ],
+      "crest": "18267.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/TQL_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png"
+    },
+    {
+      "id": "us-soccer-185",
+      "tier": 1,
+      "en": "FC Dallas",
+      "aliases": [
+        "FC Dallas",
+        "Dallas",
+        "DAL"
+      ],
+      "city": "Frisco, Texas",
+      "stadium": "Toyota Stadium (Texas)",
+      "center": [
+        -96.83527778,
+        33.15444444
+      ],
+      "crest": "185.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Toyota_Stadium_(Texas)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/185.png"
+    },
+    {
+      "id": "us-soccer-6077",
+      "tier": 1,
+      "en": "Houston Dynamo FC",
+      "aliases": [
+        "Houston Dynamo FC",
+        "Houston",
+        "HOU",
+        "Houston Dynamo"
+      ],
+      "city": "Houston, Texas",
+      "stadium": "Shell Energy Stadium",
+      "center": [
+        -95.3524,
+        29.7522
+      ],
+      "crest": "6077.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Shell_Energy_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png"
+    },
+    {
+      "id": "us-soccer-20232",
+      "tier": 1,
+      "en": "Inter Miami CF",
+      "aliases": [
+        "Inter Miami CF"
+      ],
+      "city": "Miami, Florida",
+      "stadium": "Nu Stadium",
+      "center": [
+        -80.259,
+        25.7931
+      ],
+      "crest": "20232.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Nu_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+      "note": "Inter Miami moved to Nu Stadium at Miami Freedom Park in April 2026, replacing its former Fort Lauderdale ground."
+    },
+    {
+      "id": "us-soccer-187",
+      "tier": 1,
+      "en": "LA Galaxy",
+      "aliases": [
+        "LA Galaxy",
+        "LA"
+      ],
+      "city": "Carson, California",
+      "stadium": "Dignity Health Sports Park",
+      "center": [
+        -118.261,
+        33.864
+      ],
+      "crest": "187.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dignity_Health_Sports_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/187.png"
+    },
+    {
+      "id": "us-soccer-18966",
+      "tier": 1,
+      "en": "LAFC",
+      "aliases": [
+        "LAFC",
+        "Los Angeles FC",
+        "Los Angeles Football Club"
+      ],
+      "city": "Los Angeles, California",
+      "stadium": "BMO Stadium",
+      "center": [
+        -118.28408333,
+        34.01277778
+      ],
+      "crest": "18966.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/BMO_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png"
+    },
+    {
+      "id": "us-soccer-17362",
+      "tier": 1,
+      "en": "Minnesota United FC",
+      "aliases": [
+        "Minnesota United FC",
+        "Minnesota",
+        "MIN",
+        "Minnesota United"
+      ],
+      "city": "Saint Paul, Minnesota",
+      "stadium": "Allianz Field",
+      "center": [
+        -93.16472222,
+        44.95311111
+      ],
+      "crest": "17362.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allianz_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17362.png"
+    },
+    {
+      "id": "us-soccer-18986",
+      "tier": 1,
+      "en": "Nashville SC",
+      "aliases": [
+        "Nashville SC",
+        "Nashville",
+        "NSH"
+      ],
+      "city": "Nashville, Tennessee",
+      "stadium": "Geodis Park",
+      "center": [
+        -86.766,
+        36.13008333
+      ],
+      "crest": "18986.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Geodis_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png"
+    },
+    {
+      "id": "us-soccer-189",
+      "tier": 1,
+      "en": "New England Revolution",
+      "aliases": [
+        "New England Revolution",
+        "New England",
+        "NE"
+      ],
+      "city": "Foxborough, Massachusetts",
+      "stadium": "Gillette Stadium",
+      "center": [
+        -71.264,
+        42.091
+      ],
+      "crest": "189.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gillette_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png"
+    },
+    {
+      "id": "us-soccer-17606",
+      "tier": 1,
+      "en": "New York City FC",
+      "aliases": [
+        "New York City FC",
+        "NYCFC",
+        "NYC",
+        "New York City"
+      ],
+      "city": "New York, New York",
+      "stadium": "Yankee Stadium",
+      "center": [
+        -73.92638889,
+        40.82916667
+      ],
+      "crest": "17606.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Yankee_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+      "note": "Primary home is Yankee Stadium in the Bronx. Several 2026 fixtures use Citi Field in Queens; the new Etihad Park opens in 2027."
+    },
+    {
+      "id": "us-soccer-12011",
+      "tier": 1,
+      "en": "Orlando City SC",
+      "aliases": [
+        "Orlando City SC",
+        "Orlando",
+        "ORL",
+        "Orlando City"
+      ],
+      "city": "Orlando, Florida",
+      "stadium": "Inter.co Stadium",
+      "center": [
+        -81.3893,
+        28.5411
+      ],
+      "crest": "12011.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Inter.co_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png"
+    },
+    {
+      "id": "us-soccer-10739",
+      "tier": 1,
+      "en": "Philadelphia Union",
+      "aliases": [
+        "Philadelphia Union",
+        "Philadelphia",
+        "PHI"
+      ],
+      "city": "Chester, Pennsylvania",
+      "stadium": "Subaru Park",
+      "center": [
+        -75.37888889,
+        39.83222222
+      ],
+      "crest": "10739.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Subaru_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png"
+    },
+    {
+      "id": "us-soccer-9723",
+      "tier": 1,
+      "en": "Portland Timbers",
+      "aliases": [
+        "Portland Timbers"
+      ],
+      "city": "Portland, Oregon",
+      "stadium": "Providence Park",
+      "center": [
+        -122.69166667,
+        45.52138889
+      ],
+      "crest": "9723.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Providence_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9723.png"
+    },
+    {
+      "id": "us-soccer-4771",
+      "tier": 1,
+      "en": "Real Salt Lake",
+      "aliases": [
+        "Real Salt Lake",
+        "Salt Lake",
+        "RSL"
+      ],
+      "city": "Sandy, Utah",
+      "stadium": "America First Field",
+      "center": [
+        -111.8934,
+        40.5829
+      ],
+      "crest": "4771.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/America_First_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png"
+    },
+    {
+      "id": "us-soccer-190",
+      "tier": 1,
+      "en": "Red Bull New York",
+      "aliases": [
+        "Red Bull New York",
+        "Red Bull NY",
+        "RBNY",
+        "New York Red Bulls",
+        "NY Red Bulls",
+        "NYRB"
+      ],
+      "city": "Harrison, New Jersey",
+      "stadium": "Sports Illustrated Stadium",
+      "center": [
+        -74.15027778,
+        40.73666667
+      ],
+      "crest": "190.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sports_Illustrated_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png"
+    },
+    {
+      "id": "us-soccer-22529",
+      "tier": 1,
+      "en": "San Diego FC",
+      "aliases": [
+        "San Diego FC",
+        "San Diego",
+        "SD"
+      ],
+      "city": "San Diego, California",
+      "stadium": "Snapdragon Stadium",
+      "center": [
+        -117.12277778,
+        32.78444444
+      ],
+      "crest": "22529.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Snapdragon_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png"
+    },
+    {
+      "id": "us-soccer-191",
+      "tier": 1,
+      "en": "San Jose Earthquakes",
+      "aliases": [
+        "San Jose Earthquakes",
+        "San Jose",
+        "SJ"
+      ],
+      "city": "San Jose, California",
+      "stadium": "PayPal Park",
+      "center": [
+        -121.925,
+        37.35138889
+      ],
+      "crest": "191.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/PayPal_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/191.png"
+    },
+    {
+      "id": "us-soccer-9726",
+      "tier": 1,
+      "en": "Seattle Sounders FC",
+      "aliases": [
+        "Seattle Sounders FC",
+        "Seattle",
+        "SEA",
+        "Seattle Sounders"
+      ],
+      "city": "Seattle, Washington",
+      "stadium": "Lumen Field",
+      "center": [
+        -122.3316,
+        47.5952
+      ],
+      "crest": "9726.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lumen_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9726.png"
+    },
+    {
+      "id": "us-soccer-186",
+      "tier": 1,
+      "en": "Sporting Kansas City",
+      "aliases": [
+        "Sporting Kansas City",
+        "Kansas City",
+        "SKC"
+      ],
+      "city": "Kansas City, Kansas",
+      "stadium": "Sporting Park",
+      "center": [
+        -94.82318,
+        39.12174
+      ],
+      "crest": "186.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sporting_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/186.png"
+    },
+    {
+      "id": "us-soccer-21812",
+      "tier": 1,
+      "en": "St. Louis CITY SC",
+      "aliases": [
+        "St. Louis CITY SC",
+        "St. Louis",
+        "STL",
+        "St. Louis CITY"
+      ],
+      "city": "St. Louis, Missouri",
+      "stadium": "Energizer Park",
+      "center": [
+        -90.21027778,
+        38.63138889
+      ],
+      "crest": "21812.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Energizer_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21812.png"
+    },
+    {
+      "id": "us-soccer-7318",
+      "tier": 1,
+      "en": "Toronto FC",
+      "aliases": [
+        "Toronto FC",
+        "Toronto",
+        "TOR"
+      ],
+      "city": "Toronto",
+      "stadium": "BMO Field",
+      "center": [
+        -79.41861111,
+        43.63333333
+      ],
+      "crest": "7318.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/BMO_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png"
+    },
+    {
+      "id": "us-soccer-9727",
+      "tier": 1,
+      "en": "Vancouver Whitecaps",
+      "aliases": [
+        "Vancouver Whitecaps",
+        "Vancouver",
+        "VAN"
+      ],
+      "city": "Vancouver",
+      "stadium": "BC Place",
+      "center": [
+        -123.11194444,
+        49.27666667
+      ],
+      "crest": "9727.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/BC_Place",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png"
+    },
+    {
+      "id": "us-soccer-19405",
+      "tier": 2,
+      "en": "Birmingham Legion FC",
+      "aliases": [
+        "Birmingham Legion FC",
+        "Birmingham",
+        "BRM",
+        "Birmingham Legion"
+      ],
+      "city": "Birmingham, Alabama",
+      "stadium": "Protective Stadium",
+      "center": [
+        -86.8092,
+        33.5278
+      ],
+      "crest": "19405.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Protective_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19405.png",
+      "note": "Primary home is Protective Stadium. Several 2026 matches, including October 18, moved individually to Dunnavant Valley Fields; that temporary match venue is not the season’s primary ground."
+    },
+    {
+      "id": "us-soccer-131579",
+      "tier": 2,
+      "en": "Brooklyn FC",
+      "aliases": [
+        "Brooklyn FC",
+        "Brooklyn",
+        "BFKC"
+      ],
+      "city": "Brooklyn",
+      "stadium": "Maimonides Park",
+      "center": [
+        -73.98416667,
+        40.57444444
+      ],
+      "crest": "131579.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Maimonides_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131579.png"
+    },
+    {
+      "id": "us-soccer-9729",
+      "tier": 2,
+      "en": "Charleston Battery",
+      "aliases": [
+        "Charleston Battery",
+        "Charleston",
+        "CHS"
+      ],
+      "city": "Mount Pleasant, South Carolina",
+      "stadium": "Patriots Point Soccer Complex",
+      "center": [
+        -79.902983,
+        32.795143
+      ],
+      "crest": "9729.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Patriots_Point_Soccer_Complex",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9729.png"
+    },
+    {
+      "id": "us-soccer-17830",
+      "tier": 2,
+      "en": "Colorado Springs Switchbacks FC",
+      "aliases": [
+        "Colorado Springs Switchbacks FC",
+        "Switchbacks FC",
+        "Colorado Springs Switchbacks"
+      ],
+      "city": "Colorado Springs, Colorado",
+      "stadium": "Weidner Field",
+      "center": [
+        -104.828191,
+        38.826363
+      ],
+      "crest": "17830.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Weidner_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17830.png"
+    },
+    {
+      "id": "us-soccer-19179",
+      "tier": 2,
+      "en": "Detroit City FC",
+      "aliases": [
+        "Detroit City FC",
+        "Detroit",
+        "DET",
+        "Detroit City"
+      ],
+      "city": "Hamtramck, Michigan",
+      "stadium": "Keyworth Stadium",
+      "center": [
+        -83.04888889,
+        42.39222222
+      ],
+      "crest": "19179.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Keyworth_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19179.png"
+    },
+    {
+      "id": "us-soccer-19407",
+      "tier": 2,
+      "en": "El Paso Locomotive FC",
+      "aliases": [
+        "El Paso Locomotive FC",
+        "El Paso",
+        "ELP",
+        "El Paso Locomotive"
+      ],
+      "city": "El Paso, Texas",
+      "stadium": "Southwest University Park",
+      "center": [
+        -106.49266667,
+        31.75902778
+      ],
+      "crest": "19407.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Southwest_University_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19407.png"
+    },
+    {
+      "id": "us-soccer-18446",
+      "tier": 2,
+      "en": "FC Tulsa",
+      "aliases": [
+        "FC Tulsa",
+        "Tulsa ",
+        "TUL"
+      ],
+      "city": "Tulsa, Oklahoma",
+      "stadium": "Oneok Field",
+      "center": [
+        -95.98805556,
+        36.15972222
+      ],
+      "crest": "18446.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Oneok_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18446.png"
+    },
+    {
+      "id": "us-soccer-19411",
+      "tier": 2,
+      "en": "Hartford Athletic",
+      "aliases": [
+        "Hartford Athletic",
+        "Hartford",
+        "HFD"
+      ],
+      "city": "Hartford, Connecticut",
+      "stadium": "Trinity Health Stadium",
+      "center": [
+        -72.6611,
+        41.7538
+      ],
+      "crest": "19411.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Trinity_Health_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19411.png"
+    },
+    {
+      "id": "us-soccer-17360",
+      "tier": 2,
+      "en": "Indy Eleven",
+      "aliases": [
+        "Indy Eleven",
+        "Indy XI",
+        "INDY"
+      ],
+      "city": "Indianapolis, Indiana",
+      "stadium": "IU Michael A. Carroll Track & Soccer Stadium",
+      "center": [
+        -86.17788,
+        39.771146
+      ],
+      "crest": "17360.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/IU_Michael_A._Carroll_Track_%26_Soccer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17360.png"
+    },
+    {
+      "id": "us-soccer-18987",
+      "tier": 2,
+      "en": "Las Vegas Lights FC",
+      "aliases": [
+        "Las Vegas Lights FC",
+        "Las Vegas",
+        "LVL",
+        "Las Vegas Lights"
+      ],
+      "city": "Las Vegas, Nevada",
+      "stadium": "Cashman Field",
+      "center": [
+        -115.12997222,
+        36.17966667
+      ],
+      "crest": "18987.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Cashman_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18987.png"
+    },
+    {
+      "id": "us-soccer-21822",
+      "tier": 2,
+      "en": "Lexington SC",
+      "aliases": [
+        "Lexington",
+        "LEX"
+      ],
+      "city": "Lexington, Kentucky",
+      "stadium": "Lexington SC Stadium",
+      "center": [
+        -84.392,
+        37.962
+      ],
+      "crest": "21822.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lexington_SC_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21822.png"
+    },
+    {
+      "id": "us-soccer-19410",
+      "tier": 2,
+      "en": "Loudoun United FC",
+      "aliases": [
+        "Loudoun United FC",
+        "Loudoun",
+        "Loudoun United"
+      ],
+      "city": "Leesburg, Virginia",
+      "stadium": "Segra Field",
+      "center": [
+        -77.54558333,
+        39.06902778
+      ],
+      "crest": "19410.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Segra_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19410.png"
+    },
+    {
+      "id": "us-soccer-17832",
+      "tier": 2,
+      "en": "Louisville City FC",
+      "aliases": [
+        "Louisville City FC",
+        "Louisville",
+        "Louisville City"
+      ],
+      "city": "Louisville, Kentucky",
+      "stadium": "Lynn Family Stadium",
+      "center": [
+        -85.73194444,
+        38.25944444
+      ],
+      "crest": "17832.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lynn_Family_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17832.png"
+    },
+    {
+      "id": "us-soccer-18159",
+      "tier": 2,
+      "en": "Miami FC",
+      "aliases": [
+        "Miami FC"
+      ],
+      "city": "Miami, Florida",
+      "stadium": "Pitbull Stadium",
+      "center": [
+        -80.37777778,
+        25.7525
+      ],
+      "crest": "18159.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Pitbull_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18159.png"
+    },
+    {
+      "id": "us-soccer-21370",
+      "tier": 2,
+      "en": "Monterey Bay FC",
+      "aliases": [
+        "Monterey Bay",
+        "MTB"
+      ],
+      "city": "Seaside, California",
+      "stadium": "Cardinale Stadium",
+      "center": [
+        -121.805,
+        36.65083333
+      ],
+      "crest": "21370.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Cardinale_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21370.png"
+    },
+    {
+      "id": "us-soccer-19408",
+      "tier": 2,
+      "en": "New Mexico United",
+      "aliases": [
+        "New Mexico United",
+        "New Mexico",
+        "NMU"
+      ],
+      "city": "Albuquerque, New Mexico",
+      "stadium": "Isotopes Park",
+      "center": [
+        -106.62916667,
+        35.06972222
+      ],
+      "crest": "19408.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Isotopes_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19408.png"
+    },
+    {
+      "id": "us-soccer-20687",
+      "tier": 2,
+      "en": "Oakland Roots SC",
+      "aliases": [
+        "Oakland Roots",
+        "Oakland",
+        "OAK"
+      ],
+      "city": "Oakland, California",
+      "stadium": "Oakland Coliseum",
+      "center": [
+        -122.20055556,
+        37.75166667
+      ],
+      "crest": "20687.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Oakland_Coliseum",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20687.png"
+    },
+    {
+      "id": "us-soccer-18455",
+      "tier": 2,
+      "en": "Orange County SC",
+      "aliases": [
+        "Orange County SC",
+        "Orange County",
+        "OCSC"
+      ],
+      "city": "Irvine, California",
+      "stadium": "Championship Soccer Stadium",
+      "center": [
+        -117.739335,
+        33.67446
+      ],
+      "crest": "18455.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Championship_Soccer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18455.png"
+    },
+    {
+      "id": "us-soccer-17850",
+      "tier": 2,
+      "en": "Phoenix Rising FC",
+      "aliases": [
+        "Phoenix Rising FC",
+        "Phoenix",
+        "PHX",
+        "Phoenix Rising"
+      ],
+      "city": "Phoenix, Arizona",
+      "stadium": "Phoenix Rising Soccer Stadium",
+      "center": [
+        -112.00194444,
+        33.44527778
+      ],
+      "crest": "17850.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Phoenix_Rising_Soccer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17850.png"
+    },
+    {
+      "id": "us-soccer-17827",
+      "tier": 2,
+      "en": "Pittsburgh Riverhounds SC",
+      "aliases": [
+        "Pittsburgh Riverhounds",
+        "Pittsburgh",
+        "PIT"
+      ],
+      "city": "Pittsburgh, Pennsylvania",
+      "stadium": "F.N.B. Stadium (Pittsburgh)",
+      "center": [
+        -80.00944444,
+        40.43611111
+      ],
+      "crest": "17827.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/F.N.B._Stadium_(Pittsburgh)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17827.png"
+    },
+    {
+      "id": "us-soccer-22164",
+      "tier": 2,
+      "en": "Rhode Island FC",
+      "aliases": [
+        "Rhode Island FC",
+        "Rhode Island",
+        "RHI"
+      ],
+      "city": "Pawtucket, Rhode Island",
+      "stadium": "Centreville Bank Stadium",
+      "center": [
+        -71.38259,
+        41.86879
+      ],
+      "crest": "22164.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Centreville_Bank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22164.png"
+    },
+    {
+      "id": "us-soccer-17828",
+      "tier": 2,
+      "en": "Sacramento Republic FC",
+      "aliases": [
+        "Sacramento Republic FC",
+        "Sacramento",
+        "SAC",
+        "Sacramento Republic"
+      ],
+      "city": "Sacramento, California",
+      "stadium": "Heart Health Park",
+      "center": [
+        -121.43805556,
+        38.59111111
+      ],
+      "crest": "17828.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Heart_Health_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17828.png"
+    },
+    {
+      "id": "us-soccer-18265",
+      "tier": 2,
+      "en": "San Antonio FC",
+      "aliases": [
+        "San Antonio FC",
+        "San Antonio ",
+        "SAFC",
+        "San Antonio"
+      ],
+      "city": "San Antonio, Texas",
+      "stadium": "Toyota Field",
+      "center": [
+        -98.39472222,
+        29.53888889
+      ],
+      "crest": "18265.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Toyota_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18265.png"
+    },
+    {
+      "id": "us-soccer-131578",
+      "tier": 2,
+      "en": "Sporting JAX",
+      "aliases": [
+        "Sporting JAX",
+        "JAX"
+      ],
+      "city": "Jacksonville",
+      "stadium": "Hodges Stadium",
+      "center": [
+        -81.5117,
+        30.27526944
+      ],
+      "crest": "131578.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hodges_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131578.png"
+    },
+    {
+      "id": "us-soccer-17361",
+      "tier": 2,
+      "en": "Tampa Bay Rowdies",
+      "aliases": [
+        "Tampa Bay Rowdies",
+        "Tampa Bay",
+        "TBR"
+      ],
+      "city": "St. Petersburg, Florida",
+      "stadium": "Al Lang Stadium",
+      "center": [
+        -82.6331,
+        27.7681
+      ],
+      "crest": "17361.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Al_Lang_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17361.png"
+    },
+    {
+      "id": "us-soccer-22526",
+      "tier": 3,
+      "en": "AV Alta FC",
+      "aliases": [
+        "AV Alta FC",
+        "ALT",
+        "AV Alta"
+      ],
+      "city": "Lancaster, California",
+      "stadium": "The Hangar (Lancaster, California)",
+      "center": [
+        -118.17305556,
+        34.70277778
+      ],
+      "crest": "22526.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/The_Hangar_(Lancaster%2C_California)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22526.png"
+    },
+    {
+      "id": "us-soccer-131581",
+      "tier": 3,
+      "en": "Athletic Club Boise",
+      "aliases": [
+        "Athletic Club Boise",
+        "Boise",
+        "BOI"
+      ],
+      "city": "Garden City, Idaho",
+      "stadium": "Stadium at Expo Idaho",
+      "center": [
+        -116.2725,
+        43.6506
+      ],
+      "crest": "131581.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadium_at_Expo_Idaho",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131581.png"
+    },
+    {
+      "id": "us-soccer-17826",
+      "tier": 3,
+      "en": "Charlotte Independence",
+      "aliases": [
+        "Charlotte Independence"
+      ],
+      "city": "Charlotte, North Carolina",
+      "stadium": "American Legion Memorial Stadium",
+      "center": [
+        -80.8283,
+        35.2182
+      ],
+      "crest": "17826.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/American_Legion_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17826.png",
+      "note": "Primary home is American Legion Memorial Stadium. The 2026 home schedule is split with the Mecklenburg County Sportsplex at Matthews."
+    },
+    {
+      "id": "us-soccer-20000",
+      "tier": 3,
+      "en": "Chattanooga Red Wolves SC",
+      "aliases": [
+        "Chattanooga Red Wolves",
+        "Chattanooga",
+        "CRW"
+      ],
+      "city": "East Ridge, Tennessee",
+      "stadium": "CHI Memorial Stadium",
+      "center": [
+        -85.21138889,
+        34.99861111
+      ],
+      "crest": "20000.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/CHI_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20000.png"
+    },
+    {
+      "id": "us-soccer-20671",
+      "tier": 3,
+      "en": "Corpus Christi FC",
+      "aliases": [
+        "Corpus Christi FC",
+        "Corpus Christi",
+        "CCFC"
+      ],
+      "city": "Corpus Christi",
+      "stadium": "Cabaniss Athletic Complex – stadium",
+      "center": [
+        -97.43126305,
+        27.70574035
+      ],
+      "crest": "20671.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/262246098",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20671.png",
+      "officialClub": "https://www.corpuscfc.com/cabaniss-athletic-complex/",
+      "note": "Temporary 2026 ground uses the complex’s 8,000-seat stadium, not the adjacent baseball field or the new stadium still under construction."
+    },
+    {
+      "id": "us-soccer-22525",
+      "tier": 3,
+      "en": "FC Naples",
+      "aliases": [
+        "FC Naples",
+        "NAP"
+      ],
+      "city": "Naples, Florida",
+      "stadium": "Paradise Coast Sports Complex",
+      "center": [
+        -81.673358,
+        26.164715
+      ],
+      "crest": "22525.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Paradise_Coast_Sports_Complex",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22525.png"
+    },
+    {
+      "id": "us-soccer-131580",
+      "tier": 3,
+      "en": "Fort Wayne FC",
+      "aliases": [
+        "Fort Wayne",
+        "FOR"
+      ],
+      "city": "Fort Wayne",
+      "stadium": "Ruoff Mortgage Stadium",
+      "center": [
+        -85.224853,
+        41.088717
+      ],
+      "crest": "131580.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ruoff_Mortgage_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131580.png"
+    },
+    {
+      "id": "us-soccer-19995",
+      "tier": 3,
+      "en": "Forward Madison FC",
+      "aliases": [
+        "Forward Madison FC",
+        "Madison",
+        "MAD",
+        "Forward Madison"
+      ],
+      "city": "Madison, Wisconsin",
+      "stadium": "Breese Stevens Field",
+      "center": [
+        -89.37306,
+        43.08306
+      ],
+      "crest": "19995.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Breese_Stevens_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19995.png"
+    },
+    {
+      "id": "us-soccer-19964",
+      "tier": 3,
+      "en": "Greenville Triumph SC",
+      "aliases": [
+        "Greenville Triumph",
+        "Greenville",
+        "GRE"
+      ],
+      "city": "Mauldin, South Carolina",
+      "stadium": "GE Vernova Park",
+      "center": [
+        -82.2813527,
+        34.7947778
+      ],
+      "crest": "19964.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/GE_Vernova_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19964.png"
+    },
+    {
+      "id": "us-soccer-131582",
+      "tier": 3,
+      "en": "New York Cosmos",
+      "aliases": [
+        "New York Cosmos",
+        "Cosmos"
+      ],
+      "city": "Paterson",
+      "stadium": "Hinchliffe Stadium",
+      "center": [
+        -74.18111111,
+        40.91833333
+      ],
+      "crest": "131582.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hinchliffe_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131582.png"
+    },
+    {
+      "id": "us-soccer-21821",
+      "tier": 3,
+      "en": "One Knoxville SC",
+      "aliases": [
+        "One Knoxville",
+        "Knoxville",
+        "KNOX"
+      ],
+      "city": "Knoxville, Tennessee",
+      "stadium": "Covenant Health Park",
+      "center": [
+        -83.9143812,
+        35.9722125
+      ],
+      "crest": "21821.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Covenant_Health_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21821.png"
+    },
+    {
+      "id": "us-soccer-22528",
+      "tier": 3,
+      "en": "Portland Hearts of Pine",
+      "aliases": [
+        "Portland Hearts of Pine"
+      ],
+      "city": "Portland, Maine",
+      "stadium": "Fitzpatrick Stadium",
+      "center": [
+        -70.276741,
+        43.657875
+      ],
+      "crest": "22528.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Fitzpatrick_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22528.png"
+    },
+    {
+      "id": "us-soccer-17545",
+      "tier": 3,
+      "en": "Richmond Kickers",
+      "aliases": [
+        "Richmond Kickers",
+        "Richmond",
+        "RICH"
+      ],
+      "city": "Richmond, Virginia",
+      "stadium": "City Stadium",
+      "center": [
+        -77.486781,
+        37.549697
+      ],
+      "crest": "17545.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/City_Stadium_(Richmond)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17545.png"
+    },
+    {
+      "id": "us-soccer-22542",
+      "tier": 3,
+      "en": "Sarasota Paradise",
+      "aliases": [
+        "Sarasota Paradise",
+        "Sarasota",
+        "SAR"
+      ],
+      "city": "Lakewood Ranch, Florida",
+      "stadium": "Premier Sports Campus – stadium",
+      "center": [
+        -82.38200005,
+        27.43410515
+      ],
+      "crest": "22542.png",
+      "coordinateSource": "https://www.openstreetmap.org/way/678286744",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22542.png",
+      "officialClub": "https://www.sarasotaparadise.us/stadium/",
+      "note": "Dot marks the named stadium pitch within the 23-field Premier Sports Campus, matched against its retained field map; it is not a broad facility centroid."
+    },
+    {
+      "id": "us-soccer-22130",
+      "tier": 3,
+      "en": "Spokane Velocity FC",
+      "aliases": [
+        "Spokane Velocity FC",
+        "Spokane",
+        "SPV",
+        "Spokane Velocity"
+      ],
+      "city": "Spokane, Washington",
+      "stadium": "ONE Spokane Stadium",
+      "center": [
+        -117.41916667,
+        47.6675
+      ],
+      "crest": "22130.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/One_Spokane_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22130.png"
+    },
+    {
+      "id": "us-soccer-20684",
+      "tier": 3,
+      "en": "Union Omaha",
+      "aliases": [
+        "Union Omaha",
+        "Omaha",
+        "OMA"
+      ],
+      "city": "Omaha, Nebraska",
+      "stadium": "Morrison Stadium",
+      "center": [
+        -95.939398,
+        41.264743
+      ],
+      "crest": "20684.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Morrison_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20684.png",
+      "note": "Home for 2026–27 is Morrison Stadium in Omaha, replacing Werner Park in Papillion. The provider’s Papillion city field is stale."
+    },
+    {
+      "id": "us-soccer-22524",
+      "tier": 3,
+      "en": "Westchester SC",
+      "aliases": [
+        "Westchester SC",
+        "Westchester",
+        "WCH"
+      ],
+      "city": "Mount Vernon, New York",
+      "stadium": "The Stadium at Memorial Field",
+      "center": [
+        -73.8175,
+        40.90305556
+      ],
+      "crest": "22524.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/The_Stadium_at_Memorial_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22524.png"
+    }
+  ]
+}

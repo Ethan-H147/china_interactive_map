@@ -1,0 +1,2763 @@
+{
+  "retrieved": "2026-10-29",
+  "season": "2026",
+  "files": {
+    "teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/teams?limit=1000&groups=80",
+      "sha256": "a751871349438b2749d52fa273399aff785bc658dbba7e14b3802e3c0d232983",
+      "bytes": 1856850
+    },
+    "ncaa-standings.html": {
+      "url": "https://www.ncaa.com/standings/football/fbs",
+      "sha256": "ca373fda4e19db5f817b01ffab0ce26871228011b1fc047376a4b300dab8e3fe",
+      "bytes": 205685
+    },
+    "standings.json": {
+      "url": "https://site.api.espn.com/apis/v2/sports/football/college-football/standings?season=2026",
+      "sha256": "e2c1c2ec877fd0fb2585087f4e1af4bb42b3427a9fb44ad9eef193827aa15dde",
+      "bytes": 2588406
+    },
+    "team-130.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/teams/130",
+      "sha256": "245f83a4e1c6b5981823fc522f311b7865ddb25df23821d400e289aa5914cdd5",
+      "bytes": 17284
+    },
+    "team-core-130.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/130?lang=en&region=us",
+      "sha256": "dd8e0ef0c0dd27911ab0c260d5fde80f53f21f0c5f1e8e84304eb9f617935a60",
+      "bytes": 8630
+    },
+    "venue-michigan.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/venues/3558?lang=en&region=us",
+      "sha256": "6f4696ba2fd057ee84dcd3f7d5b8b9d256ecd4d22f7e0c2aa5416807991f26dc",
+      "bytes": 600
+    },
+    "teams/2226.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2226?lang=en&region=us",
+      "sha256": "b67c53109101c99fad24099bc27a455cea21d13787bcde9cfbfa48688582b222",
+      "bytes": 8546
+    },
+    "teams/58.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/58?lang=en&region=us",
+      "sha256": "ce6a55e70182aa88924c4f6c16c2393ac6b0279c6ed86c08663f56c095503a50",
+      "bytes": 8484
+    },
+    "teams/2636.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2636?lang=en&region=us",
+      "sha256": "50b9a26bd6674344887d05a9af1a836e589b96d506f02591e8c754f301fc517e",
+      "bytes": 8646
+    },
+    "teams/235.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/235?lang=en&region=us",
+      "sha256": "e2be483f382356c2cdb80d80831162604af981d4e5c783e82504c37cd4cab026",
+      "bytes": 8610
+    },
+    "logos/2636.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+      "sha256": "37004059b144d56653764501b977eaa58463a70e10a83f7512e91c8b87530f17",
+      "bytes": 31465
+    },
+    "logos/2226.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+      "sha256": "2e799d7929cc276364cd90a4dc47903ec780b4f114c689a65d7e70a269316fc8",
+      "bytes": 63237
+    },
+    "logos/58.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+      "sha256": "a74207f69d800eba006138acef12a1436166c868ba14c94e1578190358dd0d14",
+      "bytes": 56018
+    },
+    "logos/235.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+      "sha256": "e56cb7d0d332907b4f0e7fe4f70e98c1841b06f12334811f5054734cb3da27ea",
+      "bytes": 96183
+    },
+    "teams/349.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/349?lang=en&region=us",
+      "sha256": "560f460143351a1fcd50be17ecd429c19c551954e06378300abba01dab33fca3",
+      "bytes": 8627
+    },
+    "teams/5.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/5?lang=en&region=us",
+      "sha256": "acef95242838db634075969b8ce695b5ba617cb1044fb49d8cc02acc9a2e6ea6",
+      "bytes": 8389
+    },
+    "logos/349.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+      "sha256": "bbe36252ce70f54489fbd0a0c0ec27bfdbd4f84d2789fc9906bda5ccd93c7aab",
+      "bytes": 88544
+    },
+    "teams/202.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/202?lang=en&region=us",
+      "sha256": "ddfc6546ab82444c45a5abae740906703cec3f05ec953161c358f84d46ed8199",
+      "bytes": 8517
+    },
+    "teams/151.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/151?lang=en&region=us",
+      "sha256": "6898f17bb47dea26e44e7285bcb86150c5802e803000e434227ba9c851ef3498",
+      "bytes": 8659
+    },
+    "teams/2655.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2655?lang=en&region=us",
+      "sha256": "2ab8f7e873fdfa30ca02f202ce6ce07361e8f42711e62552620536ee5b423db4",
+      "bytes": 8517
+    },
+    "logos/202.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+      "sha256": "0c131f5faf86ec1bf70679af3a7f13248aa5f9e764aeb0c927fc6f753ea85e73",
+      "bytes": 45138
+    },
+    "teams/249.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/249?lang=en&region=us",
+      "sha256": "61e75b8f30c1111e617cdd33f7be336f6526899598bc9d96064157d7a379ecca",
+      "bytes": 8521
+    },
+    "teams/218.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/218?lang=en&region=us",
+      "sha256": "42b5c4fc2cb1a67c155e06a0a1836aaf3aff58551763664bcf2afa73191ad12c",
+      "bytes": 8460
+    },
+    "logos/249.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+      "sha256": "5953d0a7dd1e44d82402467043f2cd63003d74a0dc3bff754cb467ab93104436",
+      "bytes": 33187
+    },
+    "logos/2655.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+      "sha256": "35db0df8ce98e8180a3d6cffa1c2924f863874b3a4226d6b76192216fbfb4808",
+      "bytes": 107463
+    },
+    "logos/151.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+      "sha256": "0ae06f5e6518c5065c93cde42d17853ddc6c6abe56502ef2bbcbf3bd52f9adb5",
+      "bytes": 109723
+    },
+    "logos/5.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+      "sha256": "905b2e96ff5a391a789276d4b211134ca295a91bc352d1ba5668c79fbfcc0bbb",
+      "bytes": 73956
+    },
+    "teams/2426.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2426?lang=en&region=us",
+      "sha256": "adcc56765d9cad6626dffa6c60bfcb383e6f2c2da648ed88378e5b201f296382",
+      "bytes": 8648
+    },
+    "teams/2429.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2429?lang=en&region=us",
+      "sha256": "cc2d7577b76743087cb8e43c1810be4e3ad4ce37348c590a23bdf0de53c648f1",
+      "bytes": 8525
+    },
+    "teams/2390.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2390?lang=en&region=us",
+      "sha256": "4e59eb00ef4bad415ebacbf842ff41e76bb3f391dff24f2bf688681ebb1e2c24",
+      "bytes": 8509
+    },
+    "teams/242.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/242?lang=en&region=us",
+      "sha256": "921ec6c7f122e4d444ee4202603e240ed1b33aaca47e7eb111910c188f9b5178",
+      "bytes": 8441
+    },
+    "logos/2426.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
+      "sha256": "82eb45dc0f8186430a637f42fc3746ae07fff74ca04fe6ea2099da720864f51d",
+      "bytes": 33793
+    },
+    "logos/2429.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+      "sha256": "96a23e7c40183c7731402eae581979de7a704893cfd46be206f198a24bf948da",
+      "bytes": 15145
+    },
+    "logos/2390.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+      "sha256": "55800e4867c87bf38281043628d2c0dfadd0bf44632b27a9ab20af27a9a728fb",
+      "bytes": 13560
+    },
+    "logos/242.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+      "sha256": "3648d62f626f88f864e4c629cf50c92f50dcbccc9622e87eeb3210429383afdd",
+      "bytes": 23772
+    },
+    "logos/218.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+      "sha256": "2a7cb32da0408fbd277fa184f3eee42ce983ebab70c8e819abb2865ac440717c",
+      "bytes": 7296
+    },
+    "teams/2567.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2567?lang=en&region=us",
+      "sha256": "0023cec81ed4656424b9b0c107e8ed6047cad119ee962ef8b160eb724761c0ee",
+      "bytes": 8610
+    },
+    "teams/154.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/154?lang=en&region=us",
+      "sha256": "0234e7e1c47a92400da7f1c1e04da7ea70124dade551335bab40d6e61a37eb6b",
+      "bytes": 8698
+    },
+    "teams/259.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/259?lang=en&region=us",
+      "sha256": "eb12376639a2e3a389a3278b890c8d94ff6c4667112c4581980e9bf8301868d0",
+      "bytes": 8640
+    },
+    "logos/259.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "sha256": "56dbddcf5acd291817b559a31b6d8aabc91fe1ef1d27f47a527d353dc706cd7a",
+      "bytes": 36764
+    },
+    "logos/154.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+      "sha256": "e307401dc8adf24492175e57a95f242b8943fe0fb3121ca84757095e6825d17a",
+      "bytes": 9983
+    },
+    "logos/2567.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+      "sha256": "1dbe095805cd1636fc5aac2918eedf81b4dad43329a8c1e665616ee1d79840a7",
+      "bytes": 15945
+    },
+    "teams/150.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/150?lang=en&region=us",
+      "sha256": "fdda96e0ec23c7ffe02ced09b618ab91dea6b10354a6518d7c54878e2be09b62",
+      "bytes": 8605
+    },
+    "teams/221.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/221?lang=en&region=us",
+      "sha256": "5ea818f05e89c7b47c61425a32dc95b38791945029ed9b9c1bd8e9b8eb1624e5",
+      "bytes": 8494
+    },
+    "teams/97.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/97?lang=en&region=us",
+      "sha256": "cc6424caf46dabb82c664511b6094f712e4cb342b17d8165c5bff62d5fd0b676",
+      "bytes": 8627
+    },
+    "logos/150.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+      "sha256": "5b614bdf00364d325be332b63dafb5f95d25e0f59e63a3e152faa43124c57112",
+      "bytes": 9586
+    },
+    "logos/97.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+      "sha256": "7c5e06bfb990c80176ef56e171bfb2de264355db54c592462d5f8a02404412e8",
+      "bytes": 47737
+    },
+    "logos/221.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+      "sha256": "c283722b1c9f4b47b7361d7d959422225de4ad4682b0eadcd66f707c015506f3",
+      "bytes": 46974
+    },
+    "teams/228.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/228?lang=en&region=us",
+      "sha256": "b62da56343d9e466dac743c3e2851285fa2b9d455c92b45c3a851e0056b64a00",
+      "bytes": 8609
+    },
+    "teams/153.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/153?lang=en&region=us",
+      "sha256": "46814036f80e19eb41955a73ef7b3d4f8ecca501941683da1abe37aab63c47fb",
+      "bytes": 8669
+    },
+    "teams/103.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/103?lang=en&region=us",
+      "sha256": "5f18122fc483408dfa3d6e6d0899054ab5e20881b4c92c7727f58ad361627b61",
+      "bytes": 8674
+    },
+    "teams/24.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/24?lang=en&region=us",
+      "sha256": "cfaba335d0b59d5dd4350fd7b3552ef7620940dda4822ea75b7d446f2cfa25b4",
+      "bytes": 8587
+    },
+    "teams/258.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/258?lang=en&region=us",
+      "sha256": "7ce2f315704830881359d6cf36530d402734defbbdd1eda38476dc9bc1ef813c",
+      "bytes": 8626
+    },
+    "logos/228.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+      "sha256": "20abd84754733106d0b91337456ab631597c159620f9fa3db259da526d5b656d",
+      "bytes": 32916
+    },
+    "logos/103.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+      "sha256": "fa59bb32e732327db77cef6c70e32db5f0faf0d1b35a02abc482d1bc187c6036",
+      "bytes": 76783
+    },
+    "logos/153.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+      "sha256": "c51339a92ebf5e7dbdbcb6c32dc2cc63f9e2f3dc0e5d47f60fd59fa22ceb32ec",
+      "bytes": 50070
+    },
+    "teams/52.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/52?lang=en&region=us",
+      "sha256": "05bddc3c0d3484ebf39c5191b66b640d1523b2a8d57e59466681fe59a073ab13",
+      "bytes": 8505
+    },
+    "logos/24.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+      "sha256": "a25c3474889c6c9d966245814fdd29c51dd79b02ae9e7780965cf52aad1ee22b",
+      "bytes": 39181
+    },
+    "logos/258.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+      "sha256": "d35c8362ad7a6f03b32e30bc0745cb481da320da96010c7327f3c78359ac9fe5",
+      "bytes": 51802
+    },
+    "teams/152.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/152?lang=en&region=us",
+      "sha256": "92b33bff67cb9dc019bdacdc5b731082c33c9156a60969dff17964abd7789fcd",
+      "bytes": 8633
+    },
+    "teams/183.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/183?lang=en&region=us",
+      "sha256": "8ac59c4aa145ac7443465df564c29f2e624115122821906d83f2df236e34b607",
+      "bytes": 8605
+    },
+    "teams/25.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/25?lang=en&region=us",
+      "sha256": "20f744d94579e956f2c4d9fc390504cdda9fb5e54e231745ebebac3e2ebb0f52",
+      "bytes": 8638
+    },
+    "logos/52.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+      "sha256": "2b8ccabe8c063ef5f2fbd4c21b489179d94782ca4ea6c14dd3e5d1728afa61a3",
+      "bytes": 96920
+    },
+    "logos/183.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+      "sha256": "cc978bd06e84d85870429294fd9a2f4908ec9c43635bd83ef3eee94387cfd100",
+      "bytes": 15062
+    },
+    "logos/152.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+      "sha256": "ee51da26e5cdf389cc787c58478f10bb03503832e35f862b4f208d273819d8ec",
+      "bytes": 55357
+    },
+    "logos/25.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+      "sha256": "e77c7a116c09151929c126691922a76de34689b273f0cf8748097fcbbde087a5",
+      "bytes": 27781
+    },
+    "teams/59.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/59?lang=en&region=us",
+      "sha256": "438389dc49b156d1290cab41ae8d14255ba65beea3160bc15c46930d9c73687a",
+      "bytes": 8651
+    },
+    "teams/254.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/254?lang=en&region=us",
+      "sha256": "9e2ed3a192f31c79effac74768efe61f749ad5706e0abd9b0d9853c5a4f1352a",
+      "bytes": 8566
+    },
+    "teams/252.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/252?lang=en&region=us",
+      "sha256": "f119eb2d27d1972b2c48416862d31a7d785a8cf379dcac46a01263f9a8873977",
+      "bytes": 8573
+    },
+    "teams/12.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/12?lang=en&region=us",
+      "sha256": "359082e8fb4eb24ec17ee3fb3b571a55fba95ff8204d9fbfa9a5b54ea2142beb",
+      "bytes": 8585
+    },
+    "logos/59.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+      "sha256": "c50e6dcbe550c656e79729b1dc4d348a2deeb66dec33a331f9df4cb23885ce99",
+      "bytes": 28310
+    },
+    "logos/254.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+      "sha256": "54d1837e37240cb37dcbea2b2dfd518bdf8531344e5f5397ff02a1d2111b5b43",
+      "bytes": 6333
+    },
+    "logos/252.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+      "sha256": "4c49b759151574b979556fb10f1e245ec8cb03b4b3b80d4d352b5f909293976d",
+      "bytes": 23735
+    },
+    "logos/12.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+      "sha256": "f01db22fd85d00eaf8f9b5952bc8e7c0b458beae33753c312cb54c5515f7c967",
+      "bytes": 31305
+    },
+    "teams/2641.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2641?lang=en&region=us",
+      "sha256": "10487b2a252a8bc7c94182c524094894019c2e7eac79eb12746b2993c971f610",
+      "bytes": 8677
+    },
+    "teams/248.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/248?lang=en&region=us",
+      "sha256": "45625c708770893da74d1636d5db9c072c0682f62834c2e1effa9602111cfe23",
+      "bytes": 8502
+    },
+    "teams/197.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/197?lang=en&region=us",
+      "sha256": "830dd7bfb33330ce7594b8640c06f20c63e0a91026e2fa22e49d5645ba0a2b48",
+      "bytes": 8661
+    },
+    "teams/2132.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2132?lang=en&region=us",
+      "sha256": "a29c766701307aec7ba5b3c5b44ef57b95dd190ea9a6b624249e3eb431ccd4b9",
+      "bytes": 8663
+    },
+    "logos/2641.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+      "sha256": "be16f2f868f97ef01961fe3332252aa767be3a860438b9f0da054bf7205b66e4",
+      "bytes": 4918
+    },
+    "logos/248.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+      "sha256": "d8984a3cc57ea50d3002bb08515942af2be523c4fa404a670515da041261980d",
+      "bytes": 12778
+    },
+    "logos/197.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+      "sha256": "3d5ebde2aa002198a95ef2449a139270278cffd31419060b755616b7614697d1",
+      "bytes": 25524
+    },
+    "logos/2132.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+      "sha256": "2fd50a6f605fb9c0976541ceea04a6dca78de56fed0ea0186473da9fc39c651c",
+      "bytes": 15035
+    },
+    "teams/277.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/277?lang=en&region=us",
+      "sha256": "0ca53e19dd5ba8d31aa317c151be19993ed2cac553dce73a740f5ed78e9ca68c",
+      "bytes": 8687
+    },
+    "teams/239.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/239?lang=en&region=us",
+      "sha256": "4456ba4833f3f32cfc3bd215b774e4d0eddad018c89ab5a728c0395902b1d3c8",
+      "bytes": 8615
+    },
+    "teams/9.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/9?lang=en&region=us",
+      "sha256": "a808e115aacd9243fdd39666e627641b57d355b393936361a18cc7d1692a0b8c",
+      "bytes": 8607
+    },
+    "teams/2116.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2116?lang=en&region=us",
+      "sha256": "7f0d391dfedb54d23ec1fefffc7c88494a0fda6879b6e046458e0439395f5a42",
+      "bytes": 8603
+    },
+    "logos/277.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+      "sha256": "5d80b2a5a79d7c5b8dfbb270f0140bd7353b87b6fcd8dc43a60ccff9a72baa29",
+      "bytes": 19577
+    },
+    "logos/239.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+      "sha256": "0346c816dfe728010a42fc416ddb48ceb052126fd0675bbb8fc30a6df5fe8e8c",
+      "bytes": 9621
+    },
+    "logos/9.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+      "sha256": "12740d7f76563f339392d50d215e173925114d2ad48d576263165f3b31052998",
+      "bytes": 58753
+    },
+    "logos/2116.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+      "sha256": "4fdf8855a3d5842e5cb897277f93cad7422774b42d6d426e019591a0c596bf2c",
+      "bytes": 41563
+    },
+    "teams/2306.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2306?lang=en&region=us",
+      "sha256": "3ac6b3cc4c1008ead823904438350b6c4ee6e79bbb4a8a1959619a36a931987c",
+      "bytes": 8683
+    },
+    "teams/66.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/66?lang=en&region=us",
+      "sha256": "712c9330660f318629d132bb911787276f6f05c1b6bc1262799fda3013e5dab8",
+      "bytes": 8471
+    },
+    "logos/2306.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+      "sha256": "93f3e366a88ec89bfa8ed8d1cc2ce16cfdc17a736bcd1831b908241296b11e39",
+      "bytes": 21002
+    },
+    "teams/2305.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2305?lang=en&region=us",
+      "sha256": "913087958f4354426fe29151d75bf335827e10cb148f3aba240c76cac1d22925",
+      "bytes": 8647
+    },
+    "logos/66.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+      "sha256": "8b490fe0621ea18538cf38e2b9c462beff54b26ee4707c54d024547e82e7cd63",
+      "bytes": 68853
+    },
+    "teams/2628.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2628?lang=en&region=us",
+      "sha256": "afca471e7b5598394d43426af20a81a30f091163d41e7d7bbe3bd4ba0a4ff233",
+      "bytes": 8637
+    },
+    "teams/26.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/26?lang=en&region=us",
+      "sha256": "0ea386dad59861ca93d762ba39d1392992e7cf29fef7730a5fa82332580b4efa",
+      "bytes": 8537
+    },
+    "logos/2305.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+      "sha256": "e1daa000b25e45917bfaa93464b8725980c8e3c1a859f1fb51174e9d37aee08b",
+      "bytes": 103080
+    },
+    "teams/84.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/84?lang=en&region=us",
+      "sha256": "f82dc633d9f4d3b7176a2b9264482da7821a2119d4afa59dcc2cbc9cf3ffd4ff",
+      "bytes": 8599
+    },
+    "teams/38.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/38?lang=en&region=us",
+      "sha256": "ae0a7820a7e63ff3bcc4e7beb707d8c5f2c4f422626e7b16596d1106fdf884cd",
+      "bytes": 8589
+    },
+    "logos/26.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+      "sha256": "5145c6eb67719f52cdf51c92ef6b30486c9a585ca129624d6c7837e369321a23",
+      "bytes": 20669
+    },
+    "logos/2628.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+      "sha256": "864561cb4ebf372171438c038fcf52eac3342a2c1d751e605901e144c70afda0",
+      "bytes": 13174
+    },
+    "logos/84.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+      "sha256": "0dfc3e06f6e158d96df2b9729de6b1cd6a5a5756ec365cd0b998aa6ecb45aa66",
+      "bytes": 6318
+    },
+    "logos/38.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+      "sha256": "69f6e383b017d6494ff7e0456e90211ca41e4c746aa0532cf762256651aaf192",
+      "bytes": 39640
+    },
+    "teams/194.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/194?lang=en&region=us",
+      "sha256": "b8dc7135a010c023602f51f872ffc02b8bc7b66ca05ee335eb48603e35ba021b",
+      "bytes": 8628
+    },
+    "teams/77.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/77?lang=en&region=us",
+      "sha256": "b7e8841d0bdff583e124514b3a4b9d1a5ffe06e1d2251497e5b0c83c3b907bd6",
+      "bytes": 8618
+    },
+    "teams/30.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/30?lang=en&region=us",
+      "sha256": "ef9aa3dbdc6f1ccdc2510ff28246d42a60af685c195d3b3f8f69fd181a21dc51",
+      "bytes": 8553
+    },
+    "teams/135.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/135?lang=en&region=us",
+      "sha256": "768b45dbd9a434ae5e80d0604fdcab65ec4b5d156d8827f0b327696d6f6a14ac",
+      "bytes": 8542
+    },
+    "logos/194.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "sha256": "6dbe512c1b9b4e8c0ebcfcb4b3620b6229a05619e8bf70b3051a8e6c4964240d",
+      "bytes": 43467
+    },
+    "logos/77.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+      "sha256": "d447850b4a4d514fb7692fec4cda3e4fe7268c9d664b53e93f0f8fd476b1e6d3",
+      "bytes": 20398
+    },
+    "teams/275.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/275?lang=en&region=us",
+      "sha256": "343c77142673b0264ffe3ccb10eb76e5b81377e1debbf1911e38a90c1bed8f5a",
+      "bytes": 8617
+    },
+    "logos/30.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+      "sha256": "abd4a69d1efca7bd1c944acf8a5a77b5bce41602da970e9779f0bf6079489c1a",
+      "bytes": 16675
+    },
+    "logos/135.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+      "sha256": "cb58131490de1f8724f1d53224aa7383671514e3a84df1d136c6f3e4429c302d",
+      "bytes": 37596
+    },
+    "logos/275.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+      "sha256": "36a5c3e0fae73171c91f10ceb170ea820f4f46c4899ee8a66e900a60b597ee98",
+      "bytes": 32636
+    },
+    "teams/2294.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2294?lang=en&region=us",
+      "sha256": "08b8ca4387d07d00a9a7126f1522b786f4ce8fb8c04fa767237cf914afc65926",
+      "bytes": 8615
+    },
+    "logos/2294.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+      "sha256": "865b23c1e68385b0c0f2bbdd69a662382db1e9aa66310d3af5110b246b2ec472",
+      "bytes": 13210
+    },
+    "teams/356.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/356?lang=en&region=us",
+      "sha256": "35396a0dc08b40ab3bd172fec809452fda8b91eafb8bcda605f2a160a501cd79",
+      "bytes": 8527
+    },
+    "teams/158.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/158?lang=en&region=us",
+      "sha256": "33fe34728736397a9ed7b3915b2c31eb7f51ed56b8f8a55fd7726b253a1a06ac",
+      "bytes": 8648
+    },
+    "teams/2483.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2483?lang=en&region=us",
+      "sha256": "43da8e11111e613d9e991fd52db0320dcf3c43394e0ea895e1a1153919e7a59e",
+      "bytes": 8607
+    },
+    "teams/130.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/130?lang=en&region=us",
+      "sha256": "dd8e0ef0c0dd27911ab0c260d5fde80f53f21f0c5f1e8e84304eb9f617935a60",
+      "bytes": 8630
+    },
+    "teams/264.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/264?lang=en&region=us",
+      "sha256": "652055ccea77638f94f0a6e6e86d8efc2d317a10fc1653cb1a580c0c9dc76442",
+      "bytes": 8624
+    },
+    "logos/356.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+      "sha256": "62c3b65a1ab3e8cad05832d76dd7b3fb695c8220c07f0fe5aa44ef12abcda56c",
+      "bytes": 5504
+    },
+    "logos/2483.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+      "sha256": "57dca8a00b01bebcfb1e0c7ceafe0b046e175c47ec7225713b3930e7fcb7cd05",
+      "bytes": 19816
+    },
+    "logos/158.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+      "sha256": "c09e5b394cfa5be2f2369c5e63210a12e25943b904d077c6469714ca9f8285e2",
+      "bytes": 23526
+    },
+    "logos/130.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+      "sha256": "910dbf467c9b442f1b493280bbc027ba5a1f91e2ce314fae099d637aade7d42b",
+      "bytes": 20380
+    },
+    "logos/264.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+      "sha256": "d1b99c2ea2a3336916b6906c38470338b07bd1e66c09c4433080b0d7017709b2",
+      "bytes": 32900
+    },
+    "teams/164.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/164?lang=en&region=us",
+      "sha256": "213d1d2bc5c5c8529b3ee363fc023bf455247d4be2ef3afdc02511f37804a025",
+      "bytes": 8702
+    },
+    "teams/213.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/213?lang=en&region=us",
+      "sha256": "a22a11cdd06be44c35f256b6fdd42ec4f716279a7b835e79fdfa26f789d77be4",
+      "bytes": 8667
+    },
+    "teams/2509.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2509?lang=en&region=us",
+      "sha256": "443eb3b3732b482b94e94a2bfd85617fbc67693a8de3676d4e9f8b2729e01fa3",
+      "bytes": 8658
+    },
+    "logos/164.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+      "sha256": "5e75a7a68f9a6403f950f7ddf9c656698fcebcaa5fa16f0890135f2098c18686",
+      "bytes": 16356
+    },
+    "logos/2509.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+      "sha256": "4278337c6eb6dc808cbb8ff5e8fa0cb068db59aa75def6324a27f773201455cc",
+      "bytes": 20617
+    },
+    "logos/213.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+      "sha256": "0efa003a56ec95d664b71d799fabe5e927d2ddd23cea90d5bab42df971abd080",
+      "bytes": 21779
+    },
+    "teams/120.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/120?lang=en&region=us",
+      "sha256": "7b5201a83e5cf445ea37554d559d139dbefcc674642d1c12e0b8193ae872bbdc",
+      "bytes": 8621
+    },
+    "teams/2335.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2335?lang=en&region=us",
+      "sha256": "c799cd4a38c16b119f3fed1faca4052285d7abed4d77a205ee2fe1091907d424",
+      "bytes": 8357
+    },
+    "teams/127.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/127?lang=en&region=us",
+      "sha256": "fa62c9e8d55ece5404224cc924f50ef8f171375072215ffaaa0354276dea7ac4",
+      "bytes": 8660
+    },
+    "teams/48.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/48?lang=en&region=us",
+      "sha256": "9bca82d4dbaf42934edbd02669210f3719bc9d63b36b5b94595f71d5968ac478",
+      "bytes": 8155
+    },
+    "logos/120.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+      "sha256": "9b1951d140a87972ecf1e0564c190db1755f46997c4393813281194e62c83d45",
+      "bytes": 41396
+    },
+    "teams/55.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/55?lang=en&region=us",
+      "sha256": "91c6f9cbc1e5aef4bc66037a27a179c97a8c9b32c0f29a495696830a20bed05d",
+      "bytes": 8385
+    },
+    "logos/127.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+      "sha256": "9e3005c55a99e3bfc69da7df2d7a66b4851c9710e33c2f328ed471bf37638474",
+      "bytes": 28616
+    },
+    "logos/2335.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+      "sha256": "2309e841473bc8b4297e83a1bbab7581d296189a20f904aa578c67f2327c2184",
+      "bytes": 76455
+    },
+    "teams/2393.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2393?lang=en&region=us",
+      "sha256": "8a84a1a281f08295cb184d9f9eb47129319847fb2ae6a3d9ee2f2d008dce9c5d",
+      "bytes": 8605
+    },
+    "logos/48.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+      "sha256": "89e021f5f9b67d3024a17b83347dbb76d77a2b08fc67e8ac49411317228c7964",
+      "bytes": 80429
+    },
+    "logos/55.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+      "sha256": "ea8258009ea1024de674a785b6ab4229fbe55e3453e7931ebbaf61fe01f8c2d9",
+      "bytes": 49705
+    },
+    "logos/2393.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+      "sha256": "19b89c81e4b60f93b8cd496163324c375baeb9a2df627477a2cbcfd029639505",
+      "bytes": 55481
+    },
+    "teams/98.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/98?lang=en&region=us",
+      "sha256": "ae36be4a360089a7978a52f06996f30fda7133e805d6a85ef9de0bf7e4fe7b1e",
+      "bytes": 8557
+    },
+    "logos/98.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+      "sha256": "4bb5d1cbe2d259b953977bce4f72c66dacd5a0e5afdd5a240ff3fe41c2daab17",
+      "bytes": 42380
+    },
+    "teams/166.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/166?lang=en&region=us",
+      "sha256": "e69c06a6ebe3023f2d4b29779ded2451ba2dec69aad21a7546eaf5a72a78d0ba",
+      "bytes": 8544
+    },
+    "teams/87.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/87?lang=en&region=us",
+      "sha256": "574a7dd6535572ea3743f1051cf645f8fdbd3404b8d093b8c5b9f1ea77ba80ec",
+      "bytes": 8643
+    },
+    "teams/338.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/338?lang=en&region=us",
+      "sha256": "36a146c387a0416b27d38ca14ca1a169be4ae873c6ea8d74830e2f9f0022a40d",
+      "bytes": 8138
+    },
+    "teams/2623.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2623?lang=en&region=us",
+      "sha256": "831de34749b1043988122af55a4e5ef8c8dc66f2651ac61c5883394cdbaec47d",
+      "bytes": 8244
+    },
+    "teams/2229.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2229?lang=en&region=us",
+      "sha256": "1486106bd7b2464e2e346c5b647eaf024952690eb139648e4fb1f25d572fa7d9",
+      "bytes": 8587
+    },
+    "teams/2534.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2534?lang=en&region=us",
+      "sha256": "45bba89b76793533924683ad94216e71944a3de28ea9bb9c53793b540e0c2e53",
+      "bytes": 8413
+    },
+    "logos/166.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+      "sha256": "e234e9b2d83ced87b58490b109ca1929ea3e97565e934de9f90a86ab51de64aa",
+      "bytes": 48442
+    },
+    "logos/87.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+      "sha256": "5c0412f57d3fdf05789d255595ce014bbed36c6468f8ec3d8471450efe5f9f10",
+      "bytes": 19851
+    },
+    "logos/338.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+      "sha256": "b2697f1cc59faf361dfb9022c0e1a10af9803f9ee70b0ace29ce2abde3cd6618",
+      "bytes": 52523
+    },
+    "logos/2623.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+      "sha256": "46d36761e7c210f650db2499b48da428f5e5aa652e1ef9430868a932e3db88bf",
+      "bytes": 98134
+    },
+    "logos/2229.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+      "sha256": "454d8b98c02065b3ca16b6b64c9f71478b32dda5dbc5495670b79d202e1017b7",
+      "bytes": 82352
+    },
+    "teams/41.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/41?lang=en&region=us",
+      "sha256": "e7ee3ef7d4cb0bb4cb8ef5ba76e6303eed995acd276d888e6a4881876de4670a",
+      "bytes": 8570
+    },
+    "teams/195.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/195?lang=en&region=us",
+      "sha256": "3a16fec6b760d96c0b22d23c83f592889bbb226dd274a49351c0670bf110e540",
+      "bytes": 8426
+    },
+    "teams/2711.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2711?lang=en&region=us",
+      "sha256": "380915141c1937eea7844d43abc48a44b9a4c9e9a2a5cc14d0243e5d2138cc51",
+      "bytes": 8562
+    },
+    "logos/41.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+      "sha256": "3ff5b782c09c76a90568f2d8434ca70efbecc7a4f65ab0cb66d5c00b1e384ad2",
+      "bytes": 84169
+    },
+    "logos/195.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+      "sha256": "2fbdfa08adebb0be79d920a92b46e7e153e6dff49a4335b93b86a527525f836b",
+      "bytes": 17957
+    },
+    "logos/2711.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+      "sha256": "ef109dce0c75f0e11715f9f08bc2b3bd8b5b60fce7d15b5bc19a1c8702f4ed2e",
+      "bytes": 59428
+    },
+    "logos/2534.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+      "sha256": "ce2765d5ba86d0c61b0fd7baff4aaffd8dc12a0e1e76c8f75699ab403cf0982c",
+      "bytes": 21285
+    },
+    "teams/2649.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2649?lang=en&region=us",
+      "sha256": "6809fea561bb6055ac2c05e6c8ce053e8d3820a16075044b983e569824b9c52f",
+      "bytes": 8488
+    },
+    "teams/2084.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2084?lang=en&region=us",
+      "sha256": "deb88c1d01b355da567a6fd1c3168cab2ba5f5979ae0bd0e6f0ce16e37cb1e71",
+      "bytes": 8493
+    },
+    "logos/2649.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
+      "sha256": "64a7bd6719c228709bd83551956fa1d28b0e4728dadc9dd14ed4c0fab3a0b0bb",
+      "bytes": 52277
+    },
+    "teams/2309.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2309?lang=en&region=us",
+      "sha256": "1f7190f3c9f72b59806feb2d63becf394f4b951430c4701603241bbfaf94ca22",
+      "bytes": 8579
+    },
+    "logos/2084.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
+      "sha256": "491bd78fc49a2d70fa934807beab1a0b3b1497f8ce93e7d98e94fcfe371353b3",
+      "bytes": 27812
+    },
+    "teams/193.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/193?lang=en&region=us",
+      "sha256": "a837f6163cd8e18d390203ed1114baf625e7db5ce1fa70047185d20d1791e25d",
+      "bytes": 8486
+    },
+    "teams/113.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/113?lang=en&region=us",
+      "sha256": "a5f1c390b5e623e1fe94304eb27157e40cf938747549cffdd7fd7d7be58c1209",
+      "bytes": 8504
+    },
+    "teams/2199.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2199?lang=en&region=us",
+      "sha256": "af77366b241aafa1819809b314edb9408e952f2fd68643e6118350348a40bbcd",
+      "bytes": 8560
+    },
+    "logos/2309.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
+      "sha256": "e99c6598ff920716bf12c731a4b52039c2350d373d2a86d98df4dd592c491d4d",
+      "bytes": 85501
+    },
+    "logos/193.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+      "sha256": "cbc0ca1a53c76c0944315867f07facfbb31bfaa29b738038f50668b8b229d33e",
+      "bytes": 19996
+    },
+    "logos/2199.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
+      "sha256": "f844b98efad3ea95ba434826c6e9f1707487000a0c65c51412e3dc067971433c",
+      "bytes": 4397
+    },
+    "logos/113.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+      "sha256": "864546bd6d0bdf4432ae552d6e3ed405b6fc6e2a78a07f5654eec22e110789bb",
+      "bytes": 48451
+    },
+    "teams/2117.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2117?lang=en&region=us",
+      "sha256": "3067b2a0f4a24435dd3b5e3e35239fb74d6534cf2cfa9ce8a8a8d54b304c4197",
+      "bytes": 8586
+    },
+    "teams/189.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/189?lang=en&region=us",
+      "sha256": "76cdb901a093ad141ed77ed9390193ac62de4d0ec6f4a67a037a44a97d5f835f",
+      "bytes": 8534
+    },
+    "logos/2117.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+      "sha256": "481cc74842d3688df1330548476ecda4ccca9aa4d7c0d8235bfc4a51c4e51bd6",
+      "bytes": 33494
+    },
+    "logos/189.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+      "sha256": "39ecb7e2c79c967dcb27fee95b298fda3034d6617c69253336e61decc830bfd2",
+      "bytes": 46602
+    },
+    "teams/167.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/167?lang=en&region=us",
+      "sha256": "ad3175bc250dc8d513d6f754ac0e2d96bb7252a8e4a9f91f07ed69698e3405e1",
+      "bytes": 8497
+    },
+    "teams/2050.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2050?lang=en&region=us",
+      "sha256": "f7959a515b0e6afbef049a069490a4e2c3a25c773503b18c370946676018f7a6",
+      "bytes": 8540
+    },
+    "teams/16.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/16?lang=en&region=us",
+      "sha256": "c98d6842037f885f0932b5926247e18f32a4a05bba8fbe47f777963abbe72630",
+      "bytes": 8202
+    },
+    "logos/167.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+      "sha256": "2d0fe74447bda664c751ef06faee17350920a5c40ee2a695ab0c9d161b9ecd5b",
+      "bytes": 92885
+    },
+    "teams/2449.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2449?lang=en&region=us",
+      "sha256": "0e735ecb6a12e2313ca3351ee0a79eef8b093c2f30523c9551389be4c552c4d2",
+      "bytes": 8521
+    },
+    "logos/16.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
+      "sha256": "4384290d93eaceb6978916329a11fe5ee635b729c799339c65164721bb2c8afd",
+      "bytes": 48140
+    },
+    "logos/2050.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
+      "sha256": "543e3498d12ae3bcda1cf108af528755c3720dd730a32999ed48ad836d2996cb",
+      "bytes": 47128
+    },
+    "teams/2005.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2005?lang=en&region=us",
+      "sha256": "56a1c377ee7bc91a57e4ae4c8e6758334a880eaeb4602fb1c73e1b303c937ef7",
+      "bytes": 8659
+    },
+    "logos/2449.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
+      "sha256": "a807289822ded61aec1f3d412e0246464154c2af329002ac810a9bb5ca268228",
+      "bytes": 35037
+    },
+    "logos/2005.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+      "sha256": "42d26e1bf89ec01fcd54caf37e52abb4b8fd8b25da97199c0766cbd5dfa04171",
+      "bytes": 13031
+    },
+    "teams/2439.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2439?lang=en&region=us",
+      "sha256": "051de4c238e32849fa56f2962ffb6a84e257222bd297ae7b54270dbbd17b4bbe",
+      "bytes": 8605
+    },
+    "teams/23.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/23?lang=en&region=us",
+      "sha256": "6e7302decd3b706088265d9e9af5a75d64fa2eb4e76f4221472cd559bbfdb0fb",
+      "bytes": 8504
+    },
+    "teams/2440.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2440?lang=en&region=us",
+      "sha256": "762af1e7f45dbbdd864626a1c2c528009e0dea42cd767ebb17694892058dd183",
+      "bytes": 8631
+    },
+    "teams/62.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/62?lang=en&region=us",
+      "sha256": "097ed06ab217b2467c268c2061b8c4b65a11ee3ee21ea1c554156fe83f88180e",
+      "bytes": 8622
+    },
+    "teams/2751.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2751?lang=en&region=us",
+      "sha256": "111dc4f649bb714d60584514def0f5612021f54696be8653a9124225942f94ca",
+      "bytes": 8636
+    },
+    "logos/2439.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+      "sha256": "3699f4337084b482b8b698fbecb4bdfdbced4370937be37a42842d96555b6df2",
+      "bytes": 37626
+    },
+    "logos/2440.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+      "sha256": "3b6335aec4a77d221c64d9b1ddf01c06f2847704ee6e6d3d930517e1b9665433",
+      "bytes": 26250
+    },
+    "logos/23.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+      "sha256": "b786de17b998fa272d6e02d193d2a84db93b4339975301d825af770d3b2ede5a",
+      "bytes": 69323
+    },
+    "logos/2751.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+      "sha256": "05bba88a8466751ad257c493aa035ac284f98772115faa19a5aedd330eb63447",
+      "bytes": 57281
+    },
+    "logos/62.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+      "sha256": "0333c0f1e6c941c9207f9aee9088d7fbe952fc9eba1fc8ea5a075bea92ac92f4",
+      "bytes": 48079
+    },
+    "teams/2006.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2006?lang=en&region=us",
+      "sha256": "0ffda8129f3b3a8d349fe43928785ea0592ee0e65d6afeb253aa0aba6a761abd",
+      "bytes": 8469
+    },
+    "logos/2006.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+      "sha256": "09739fb3e78ccaf6b6f468f252181a169984e325595126130ed7abf6e9683efa",
+      "bytes": 31773
+    },
+    "teams/68.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/68?lang=en&region=us",
+      "sha256": "4259b87fe220f211dedb596a6cdc903ac6c8a2e90115b7cab05c4768fd48598c",
+      "bytes": 8600
+    },
+    "teams/2638.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2638?lang=en&region=us",
+      "sha256": "1bcb754d702cea446bd07b5d2f826e9c8ba78de70df2a53d3b808dfbea71f5a7",
+      "bytes": 8595
+    },
+    "teams/326.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/326?lang=en&region=us",
+      "sha256": "cddebe0415e7d69effbbe96d68e4237f257a58139b6e221c88ad2fb13ad72e4b",
+      "bytes": 8510
+    },
+    "teams/204.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/204?lang=en&region=us",
+      "sha256": "35a227a49076712fc1e0b011257ce99930bdb4e27600c781517a90de3b76918e",
+      "bytes": 8636
+    },
+    "teams/2459.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2459?lang=en&region=us",
+      "sha256": "a3350f2e133b61104a0f2a4a1c76186d8a923cd59d29bf6783cdd5c19c987c16",
+      "bytes": 8695
+    },
+    "logos/68.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+      "sha256": "0fe810a62f4c54b85bc0ab652c5acec912c7abcad5b8b2068827ac5f3385fccb",
+      "bytes": 86691
+    },
+    "logos/2638.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+      "sha256": "28406bdc850b40361bdaf2be3b0337b7a538368abc61e81d70ebe0d79434c5cd",
+      "bytes": 77967
+    },
+    "logos/326.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
+      "sha256": "0e81afbb4d334e48237c83fd2cea6239871e2f8167def9ce9a836b1e2a325366",
+      "bytes": 50586
+    },
+    "logos/204.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+      "sha256": "64105e5b2d9a14525ecad678731eb6899ef6126165d1a37ec8ff4dfeb61b9a92",
+      "bytes": 31691
+    },
+    "logos/2459.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+      "sha256": "8eaec08b517c299e9104ceec51d9fd92cdb1c5a8fdc029f605071b518ba94c1d",
+      "bytes": 52568
+    },
+    "teams/278.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/278?lang=en&region=us",
+      "sha256": "a8a17840bf1f61cb0c4ab925e1a19d359d7b38c28492bf03b70635bc18eb313e",
+      "bytes": 8651
+    },
+    "teams/21.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/21?lang=en&region=us",
+      "sha256": "9d3fb270964f4ab3ede4c5c623f3222c2bfeecdadbe5638f4ce5d1aad3374d86",
+      "bytes": 8495
+    },
+    "teams/36.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/36?lang=en&region=us",
+      "sha256": "4e6890d2e801361652beb532d7a23bb61ee9e245cf259da09f8328d4d0d4188e",
+      "bytes": 8595
+    },
+    "teams/328.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/328?lang=en&region=us",
+      "sha256": "e6aa57fedff9abb22c4c84b2a95fb078beb2049dd07b546f0b7e01a387e15269",
+      "bytes": 8617
+    },
+    "logos/278.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+      "sha256": "523302ba48abe65ce9d778912c43f72fb7322a2d5815d8ac324f89772a261d14",
+      "bytes": 103113
+    },
+    "logos/21.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+      "sha256": "7b084aa3cbb580cc26253ef38134dc1f52c3605f66f0dc6542b2abcc0fdf1dcc",
+      "bytes": 19592
+    },
+    "logos/328.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+      "sha256": "d2cb5546e8f39a2cffebd99ddbb06be2bb4b4b634414a6e628573ad4bd04f1f2",
+      "bytes": 17397
+    },
+    "logos/36.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+      "sha256": "356212f740fd77198672d89b67e66d91c514c8892123f77cd2c63071ce6c8706",
+      "bytes": 98471
+    },
+    "teams/265.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/265?lang=en&region=us",
+      "sha256": "53e49d48f121c0ff6e83d5c65f0374eb00eb42cce9a3b759dc7e93048409017f",
+      "bytes": 8666
+    },
+    "teams/96.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/96?lang=en&region=us",
+      "sha256": "4394647c73bc5cf3099f2b78489096ec03f599161dbe5d1b7f1b3914d4b4f139",
+      "bytes": 8583
+    },
+    "teams/61.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/61?lang=en&region=us",
+      "sha256": "8ac87995d4613d2ed5b15adef626d8660de12a075bed25f515735242927bd261",
+      "bytes": 8575
+    },
+    "teams/333.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/333?lang=en&region=us",
+      "sha256": "a9467eb1ef94807a6cbc49274b9f686be48f23d17bccd6a86a8d44faebfd3e58",
+      "bytes": 8637
+    },
+    "teams/99.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/99?lang=en&region=us",
+      "sha256": "330334f9e2c3371639b3f9bdc2e403d5898bb2f1096d6c68f97c524603657319",
+      "bytes": 8540
+    },
+    "logos/265.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+      "sha256": "13774f9131a5b477a7be0b6def39516c9a4c5752a7add4d0a4eb259a174db289",
+      "bytes": 33723
+    },
+    "logos/61.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "sha256": "fa5c7fb14d5ffa38eaddfeb80161835e60a3d496b57db5e0ebda5e6475226d8a",
+      "bytes": 31931
+    },
+    "logos/96.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+      "sha256": "6f5dec8dea23de372677085b6ecc0d8f49420e3d0a0a5336e7165c94160f5015",
+      "bytes": 15651
+    },
+    "logos/333.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+      "sha256": "bb55649cd4257a7d13b58db3f6cc85af8672b43f6eb215b6e729c7916ba5e4b8",
+      "bytes": 29455
+    },
+    "logos/99.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+      "sha256": "d02e29a9f8824740d848b4a83c574b1c1942ba1cdee61b3ee08611634cc86b46",
+      "bytes": 9913
+    },
+    "teams/2633.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2633?lang=en&region=us",
+      "sha256": "0e8fd2183314333cc1071baf98f8dda1a9388c1d0fd10069f62ca98488750d84",
+      "bytes": 7811
+    },
+    "logos/2633.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+      "sha256": "1ef03aa847164f52dee3c8bfea023e3b75915231c01250889a549ae08b2ec9b8",
+      "bytes": 9159
+    },
+    "teams/57.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/57?lang=en&region=us",
+      "sha256": "f52ed3bd337ca0248995e3dd8515410aa343ce97cab5195042ff72c61359ea2e",
+      "bytes": 8577
+    },
+    "teams/142.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/142?lang=en&region=us",
+      "sha256": "b632ac04bbfe6b93e96e5495097e85125c5a0dd39f32692b81db1d438bfafd60",
+      "bytes": 8604
+    },
+    "teams/251.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/251?lang=en&region=us",
+      "sha256": "7e7dafeb4b45add355323ee37f79069c3f8fa55280e922304f94fa038fb83d29",
+      "bytes": 8606
+    },
+    "teams/201.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/201?lang=en&region=us",
+      "sha256": "e1f5050db9d3e65ee9e203db453159a8f45f2453de13794ea61611fdc3d6a964",
+      "bytes": 8620
+    },
+    "logos/57.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "sha256": "2e70460ca7c02a03d238ec4d9dce163a22401bfaa9842cbbf2f1ac1a991d6d50",
+      "bytes": 99235
+    },
+    "logos/251.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "sha256": "12d69bb78c3443bdbcc5a7659f288840a7a3862d70043eda3d8868a229eb7696",
+      "bytes": 16632
+    },
+    "logos/201.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "sha256": "19f8f9a3254b9c85ffacf42de7b4d00e1186fbb0b55effdabe9c6d0a3f487ddf",
+      "bytes": 16066
+    },
+    "teams/145.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/145?lang=en&region=us",
+      "sha256": "70abd59bafaa1a9b29eb5b4d525e24b893979f8530cd534df94b189e58a802c5",
+      "bytes": 8611
+    },
+    "teams/344.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/344?lang=en&region=us",
+      "sha256": "b0323e4c7c252caf9b4763aee2dba07ca276c05d1330e9bc652f63c13d1fe0da",
+      "bytes": 8687
+    },
+    "logos/142.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "sha256": "bb4a26eac90ad2ca3557f18180dc0f1cbdf88ba013c15c3293071701a3f43b53",
+      "bytes": 63688
+    },
+    "logos/145.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+      "sha256": "61988dd6fb46c4c5dad612e7ef14eeee56b63ada3a0758b30ccf418213ecd826",
+      "bytes": 32145
+    },
+    "teams/2.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2?lang=en&region=us",
+      "sha256": "cce91fb7c34700e07a258aefc5dea8226723d5cfabed6068fbc4ba936a86b2ad",
+      "bytes": 8529
+    },
+    "teams/2579.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2579?lang=en&region=us",
+      "sha256": "44e8e97dc998f1d76a8b64c247f8afa30746c54ea7a3396f01d282de7ec1a9c8",
+      "bytes": 8704
+    },
+    "logos/344.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+      "sha256": "1854b6d52609c4db7daacc59ce122017c3eabd2e70b9c66deeec297183d4d46b",
+      "bytes": 71584
+    },
+    "logos/2.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+      "sha256": "80b9ba2db8d91211dc4f1a57ea855d34f6ef1796795e60d5545f91a49af8bf39",
+      "bytes": 36407
+    },
+    "logos/2579.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+      "sha256": "c9e93c5450038047b77651cc3713964b83147bfd8df1a96d299f1e190aad002c",
+      "bytes": 94680
+    },
+    "teams/8.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/8?lang=en&region=us",
+      "sha256": "8e1faa066ef7af8cc71da0fc3d9d6cf8240a2cd977e5ae37afa99af30222b9f6",
+      "bytes": 8595
+    },
+    "teams/256.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/256?lang=en&region=us",
+      "sha256": "3c18bdbbad2718fdf90f3498365a4a633c55f6549b8db899bc09552bff4f41d1",
+      "bytes": 8371
+    },
+    "teams/245.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/245?lang=en&region=us",
+      "sha256": "3cd0f638e0b7aa3a9892f6029b8636465eaa31425e708bd93abffd5bd491bfab",
+      "bytes": 8609
+    },
+    "teams/238.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/238?lang=en&region=us",
+      "sha256": "26a74ec57fb19f79efa3c96834b8af5d4a60aafe4bb46282954fc6c1e82e4d48",
+      "bytes": 8646
+    },
+    "logos/8.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+      "sha256": "16e44ba49923991c70b824707a4c541327834a308472ca471f0001805a6a8d91",
+      "bytes": 48398
+    },
+    "logos/256.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+      "sha256": "585459126d87e56750ae902d78b198f63e44b8a6cac5c25b1a6c9483366229f5",
+      "bytes": 27731
+    },
+    "logos/245.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+      "sha256": "0da7ac07d04adcd38707b88a4198e988b830ed49a0ab6c9378cfb4cfb980aa08",
+      "bytes": 10157
+    },
+    "logos/238.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+      "sha256": "cdb3df344d224cae8b03a9f23f6e15424267095644cc211e0e0278c6e53986c4",
+      "bytes": 31283
+    },
+    "teams/2026.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2026?lang=en&region=us",
+      "sha256": "bb59bdd93611b12ab1fc617b2cce5e77ba6599deab55b9bbe45b93254f9ae4b4",
+      "bytes": 8688
+    },
+    "teams/2247.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2247?lang=en&region=us",
+      "sha256": "d5ce4e42dda9a23fdab16b4b76179db6e7e9a6ffac487e65d18b3a5f3c6102a1",
+      "bytes": 8410
+    },
+    "teams/276.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/276?lang=en&region=us",
+      "sha256": "1ab4f84915a33f38f16576263680700a42eb27f276d633017eeed060d9fe5c33",
+      "bytes": 8542
+    },
+    "teams/290.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/290?lang=en&region=us",
+      "sha256": "9f49495dae50cd2271ab94f24af4be82fa3d5f65297cc027f126250da86d230e",
+      "bytes": 8395
+    },
+    "teams/324.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/324?lang=en&region=us",
+      "sha256": "da35df67422fb45cff82b0f21beaf4308cd9a303a060ad982b4f7d2a9b1c4b36",
+      "bytes": 8415
+    },
+    "logos/2026.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
+      "sha256": "487c6f3fbe9c41cf532b6de285f1d35585ee7ca9510e5aa45000d97a1f597e5d",
+      "bytes": 30233
+    },
+    "logos/2247.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+      "sha256": "e8680ddd6596d15818a8fa489831f6e81605c59ba517eb10940f6eb31ba1a332",
+      "bytes": 56122
+    },
+    "logos/276.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+      "sha256": "1da7fba7069492d881b01a375a5ffde5632273d31118d4466d1b92db447daefb",
+      "bytes": 25791
+    },
+    "logos/290.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+      "sha256": "70309e48c4248f1eafe5cb07f266fe8210f46f6dfcd58590febd7f9b2f616eb9",
+      "bytes": 90271
+    },
+    "logos/324.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
+      "sha256": "16b25eaa685f36feaa1fa315a91d58c83349fe7401eed3bd6e396552006a7f93",
+      "bytes": 78429
+    },
+    "teams/2348.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2348?lang=en&region=us",
+      "sha256": "98986de8321b776b19873420b6b8b8bbe754f02bd42b0b8155f208b2081d5ade",
+      "bytes": 8566
+    },
+    "teams/6.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/6?lang=en&region=us",
+      "sha256": "72b0bf7b26d980d400198dd4365e4c22cabb2eb3916e9d5e4a48cb7af3df6cee",
+      "bytes": 8452
+    },
+    "teams/309.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/309?lang=en&region=us",
+      "sha256": "1d41ff7cdfb1d8e633bd092a2a27fb2d47514a3481700f3104312f3395a5179f",
+      "bytes": 8535
+    },
+    "teams/295.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/295?lang=en&region=us",
+      "sha256": "2b23c915112b3e19fa3b507f7447642e649881c9f21a879e0962697ce11ac2d7",
+      "bytes": 8527
+    },
+    "logos/2348.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+      "sha256": "7623ee59943d7b5bd86839cc947791b42b407690366c5ce6106992f2510a46c7",
+      "bytes": 18637
+    },
+    "logos/309.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+      "sha256": "504a8c3ff5469e6c367e3925e573324e8efd0c0e42a034658e1609a62f1b1ed3",
+      "bytes": 56113
+    },
+    "logos/6.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+      "sha256": "178ada0fb7df8fbf295d6001a992835876f2cbde64225d35ff0ca7dfdb374c2c",
+      "bytes": 75924
+    },
+    "logos/295.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+      "sha256": "d7715a34978cfdb27bdb863a6c0de3d7a4c122e80de0c72397b8a23aa3d10fa7",
+      "bytes": 82106
+    },
+    "teams/2032.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2032?lang=en&region=us",
+      "sha256": "6db19bec385e307d9c48fe6c27cf378efa6028a16535fc542b5f62fe9240a51b",
+      "bytes": 8582
+    },
+    "teams/2653.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2653?lang=en&region=us",
+      "sha256": "4ba66cc7e47cbcdf01decd6c513e7e1d40b7f573db7659739a0aced20bf6e036",
+      "bytes": 8492
+    },
+    "teams/2572.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2572?lang=en&region=us",
+      "sha256": "b86e3526645c969a898302d0173abf088e1d1dc0731b1a332bf24ddceae213cf",
+      "bytes": 8587
+    },
+    "logos/2032.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+      "sha256": "86231f0ce7486f40023e31609b666659c1538a6c2e4d8d3673a0eeab99cd05ba",
+      "bytes": 64080
+    },
+    "logos/2653.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
+      "sha256": "d993ecfbd487072931fa99eb42b7c525768630a4a10884c7b7a1b6a2fc78bfe5",
+      "bytes": 23779
+    },
+    "teams/2433.json": {
+      "url": "https://sports.core.api.espn.com/v2/sports/football/leagues/college-football/seasons/2026/teams/2433?lang=en&region=us",
+      "sha256": "749469c57b08717169c397f64662b3d7214cfec6f2e85428067098da8aaa285d",
+      "bytes": 8382
+    },
+    "logos/2572.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+      "sha256": "4a210457f8f078c29cb143f9bd8b1ae666420e8973edd12c5ad5ce4fdc3f5945",
+      "bytes": 26399
+    },
+    "logos/2433.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+      "sha256": "ccf675e2c704d23dc35eec58217202e2f50eb124275e6cd212df739326081e72",
+      "bytes": 55851
+    },
+    "wiki-fbs-programs.html": {
+      "url": "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_programs",
+      "sha256": "74736be0dded70fc1f3bddfd9d1c95b7730f69a3886b1b13afba391218352131",
+      "bytes": 444733
+    },
+    "wiki-fbs-stadiums.html": {
+      "url": "https://en.wikipedia.org/wiki/List_of_NCAA_Division_I_FBS_football_stadiums",
+      "sha256": "b79c413f5ce93945343254f1ef44462eb88d91fdf8cbff9708e9ee2ae51350b5",
+      "bytes": 989442
+    },
+    "stadium-coordinates-0.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=Alamodome%7CSimmons%20Bank%20Liberty%20Stadium%7CDATCU%20Stadium%7CMichie%20Stadium%7CFlagler%20Credit%20Union%20Stadium%7CRaymond%20James%20Stadium%7CProtective%20Stadium%7CSkelly%20Field%20at%20H.%20A.%20Chapman%20Stadium%7CDowdy%E2%80%93Ficklen%20Stadium%7CYulman%20Stadium%7CLincoln%20Financial%20Field%7CNavy%E2%80%93Marine%20Corps%20Memorial%20Stadium%7CJerry%20Richardson%20Stadium%7CFirst%20Community%20Stadium%7CGerald%20J.%20Ford%20Stadium%7CAllegacy%20Federal%20Credit%20Union%20Stadium%7CLane%20Stadium%7CWallace%20Wade%20Stadium%7CAcrisure%20Stadium%7CL%26N%20Federal%20Credit%20Union%20Stadium%7CMemorial%20Stadium%20(Clemson)%7CKenan%20Stadium%7CAlumni%20Stadium%7CStanford%20Stadium%7CScott%20Stadium%7CDoak%20Campbell%20Stadium%7CCarter%E2%80%93Finley%20Stadium%7CJMA%20Wireless%20Dome%7CCalifornia%20Memorial%20Stadium%7CBobby%20Dodd%20Stadium%7CRice%E2%80%93Eccles%20Stadium%7CLaVell%20Edwards%20Stadium%7CCasino%20Del%20Sol%20Stadium%7CGalaxy%20Stadium%7CTDECU%20Stadium%7CBoone%20Pickens%20Stadium%7CNippert%20Stadium%7CMilan%20Puskar%20Stadium%7CMcLane%20Stadium%7CMountain%20America%20Stadium",
+      "sha256": "2be47e06a634b94720b5ea15800ea797cc296a1b13004157e8e10a79d40b0bce",
+      "bytes": 13278
+    },
+    "stadium-coordinates-40.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=Acrisure%20Bounce%20House%7CBill%20Snyder%20Family%20Football%20Stadium%7CJack%20Trice%20Stadium%7CDavid%20Booth%20Kansas%20Memorial%20Stadium%7CAmon%20G.%20Carter%20Stadium%7CFolsom%20Field%7CRose%20Bowl%20(stadium)%7CMemorial%20Stadium%20(Indiana)%7COhio%20Stadium%7CRyan%20Field%20(2026)%7CLos%20Angeles%20Memorial%20Coliseum%7CHuntington%20Bank%20Stadium%7CCamp%20Randall%20Stadium%7CKinnick%20Stadium%7CMemorial%20Stadium%20(Lincoln)%7CGies%20Memorial%20Stadium%7CAutzen%20Stadium%7CMichigan%20Stadium%7CHusky%20Stadium%7CRoss%E2%80%93Ade%20Stadium%7CBeaver%20Stadium%7CSHI%20Stadium%7CSECU%20Stadium%7CSpartan%20Stadium%20(East%20Lansing%2C%20Michigan)%7CWilliams%20Stadium%7CAmFirst%20Stadium%7CDelaware%20Stadium%7CJohnny%20%22Red%22%20Floyd%20Stadium%7CPitbull%20Stadium%7CAggie%20Memorial%20Stadium%7CHouchens%20Industries%E2%80%93L.%20T.%20Smith%20Stadium%7CRobert%20W.%20Plaster%20Stadium%7CFifth%20Third%20Stadium%7CBowers%20Stadium%7CNotre%20Dame%20Stadium%7CPratt%20%26%20Whitney%20Stadium%20at%20Rentschler%20Field%7CPeden%20Stadium%7CGlass%20Bowl%7CWaldo%20Stadium%7CUniversity%20at%20Buffalo%20Stadium",
+      "sha256": "6f5fdf71d0582d4ef3268bb8ace328eaba63122036d1f7181c46436078c125af",
+      "bytes": 13404
+    },
+    "stadium-coordinates-80.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=Warren%20McGuirk%20Alumni%20Stadium%7CRynearson%20Stadium%7CDix%20Stadium%7CScheumann%20Stadium%7CKelly%2FShorts%20Stadium%7CDoyt%20Perry%20Stadium%7CInfoCision%20Stadium%E2%80%93Summa%20Field%7CHornet%20Stadium%20(Sacramento)%7CUniversity%20Stadium%20(Albuquerque)%7CFargodome%7CFalcon%20Stadium%7CWar%20Memorial%20Stadium%20(Laramie%2C%20Wyoming)%7CAllegiant%20Stadium%7CCEFCU%20Stadium%7CMackay%20Stadium%7CClarence%20T.%20C.%20Ching%20Athletics%20Complex%7CSun%20Bowl%20(stadium)%7CAlbertsons%20Stadium%7CReser%20Stadium%7CUFCU%20Stadium%7CValley%20Children's%20Stadium%7CCanvas%20Stadium%7CSnapdragon%20Stadium%7CMaverik%20Stadium%7CMartin%20Stadium%7CKroger%20Field%7CSanford%20Stadium%7CBryant%E2%80%93Denny%20Stadium%7CTiger%20Stadium%20(LSU)%7CNeyland%20Stadium%7CBen%20Hill%20Griffin%20Stadium%7CFaurot%20Field%7CDarrell%20K%20Royal%E2%80%93Texas%20Memorial%20Stadium%7CGaylord%20Family%20Oklahoma%20Memorial%20Stadium%7CDavis%20Wade%20Stadium%7CJordan-Hare%20Stadium%7CWilliams%E2%80%93Brice%20Stadium%7CKyle%20Field%7CDonald%20W.%20Reynolds%20Razorback%20Stadium%7CFirstBank%20Stadium",
+      "sha256": "0104f05051a661a5b98a8f07d2cbfcbfa824c2da5fa85c3229c670dd36ffd44c",
+      "bytes": 13347
+    },
+    "stadium-coordinates-120.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=Bridgeforth%20Stadium%7CKidd%20Brewer%20Stadium%7CCenter%20Parc%20Stadium%7CJoan%20C.%20Edwards%20Stadium%7CAllen%20E.%20Paulson%20Stadium%7CBrooks%20Stadium%7CS.B.%20Ballard%20Stadium%7CJoe%20Aillet%20Stadium%7CCajun%20Field%7CHancock%20Whitney%20Stadium%7CCentennial%20Bank%20Stadium%7CVeterans%20Memorial%20Stadium%20(Troy%20University)%7CM.%20M.%20Roberts%20Stadium%7CMalone%20Stadium",
+      "sha256": "cd4591a1162e3b3bc974000436818efa00f1892955247d650983cd7893f76745",
+      "bytes": 4540
+    },
+    "stadium-coordinates-extra.json": {
+      "url": "https://en.wikipedia.org/w/api.php?action=query&format=json&redirects=1&prop=coordinates|pageprops&colimit=max&titles=Hard%20Rock%20Stadium%7CYager%20Stadium%20(Miami%20University)%7CHuskie%20Stadium%7CVaught%E2%80%93Hemingway%20Stadium",
+      "sha256": "4d29da8d1de8dc86566d0f81fc5c17b97cfa17fde68894dc8dc301f14ef62431",
+      "bytes": 1380
+    },
+    "official/houston-current.html": {
+      "url": "https://www.uh.edu/tdecu-stadium/",
+      "sha256": "5fe520dfb0c5171c145c40114766980010e490ee13892cc67b3d4d2a8710f594",
+      "bytes": 27526
+    },
+    "official/mw-2026.html": {
+      "url": "https://mountainwest.sidearmsports.com/news/2026/6/4/mw-announces-2026-football-schedule.aspx",
+      "sha256": "2afe8c395ac06b327a3e81f543739dd4b56e51e02c041a877491ccaaa64445b1",
+      "bytes": 312783
+    },
+    "official/northwestern-new-ryan.html": {
+      "url": "https://nusports.com/news/2026/10/1/northwestern-to-open-new-ryan-field-on-friday-night-against-penn-state",
+      "sha256": "15b6fdfed60a45cc089ec029e40db9b523d2668ac25aac54d564f54bb2073583",
+      "bytes": 608568
+    },
+    "official/hawaii-current.html": {
+      "url": "https://hawaiiathletics.com/sports/2025/7/9/clarence-t-c-ching-athletics-complex.aspx",
+      "sha256": "3fefc32f57989800fe7cdd5b85c5e6b446bfb63028c489f91ca95943ee595fa7",
+      "bytes": 518244
+    },
+    "official/ndsu-2026-fbs.html": {
+      "url": "https://gobison.com/news/2026/2/9/ndsu-football-joining-mountain-west-conference",
+      "sha256": "60ea1000bf95dab9510aba6da00c0d089253e5e8d43dd84912856fa960838501",
+      "bytes": 816285
+    },
+    "colleges/349.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/349?lang=en&region=us",
+      "sha256": "8582bb7f387274bd6d318c02d0cd40a7abf64760951701fd840759866f7bb638",
+      "bytes": 529
+    },
+    "colleges/2636.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2636?lang=en&region=us",
+      "sha256": "7b9408ccd970945754516665087bda703ffe785020f8b0e838bbed6ffaecbf2e",
+      "bytes": 531
+    },
+    "colleges/58.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/58?lang=en&region=us",
+      "sha256": "f9be4b012de9b680cb8c96bc78a1093baba28671ad4755a447f0d31a5110ccec",
+      "bytes": 534
+    },
+    "colleges/235.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/235?lang=en&region=us",
+      "sha256": "6e388843b8b5d3037bef5e37b8a8b81541f33f1e6b1073a7a172ab8c4a44996a",
+      "bytes": 527
+    },
+    "colleges/249.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/249?lang=en&region=us",
+      "sha256": "116aeb128429ebb2406ed35ee7e4e14e2e7a421fd711592890335fc5de250a73",
+      "bytes": 539
+    },
+    "colleges/2226.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2226?lang=en&region=us",
+      "sha256": "487a22e76ca7252ae940099602940ceaa632683dc9fb78b0c3d98fb05dc571c5",
+      "bytes": 534
+    },
+    "colleges/5.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/5?lang=en&region=us",
+      "sha256": "141eca40c1ab9e36b98ab9beb274aab92ab2f4f658a5f961279ab87b7fa9dd2a",
+      "bytes": 512
+    },
+    "colleges/202.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/202?lang=en&region=us",
+      "sha256": "10d5f99973196d0bd44037a72d12b984fdc865a6595cea0a12d231d4e4d27b34",
+      "bytes": 534
+    },
+    "colleges/151.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/151?lang=en&region=us",
+      "sha256": "7915c47e8020b72ab774ccee9574df159f94e76bd88bea6119a7a1ee578f85c0",
+      "bytes": 540
+    },
+    "colleges/2655.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2655?lang=en&region=us",
+      "sha256": "c7649939fe56c1ce1c63e9da17cd6453fb3ed871df802b0dd31f03f8dfb82f37",
+      "bytes": 534
+    },
+    "colleges/218.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/218?lang=en&region=us",
+      "sha256": "53f46e9fb47232e5f67e84843f987d7791061cb7752c725ae09bcfa6f8db6628",
+      "bytes": 523
+    },
+    "colleges/2426.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2426?lang=en&region=us",
+      "sha256": "77a040660087330dccd845852a973f262f914816326c0b3f640866628c5463a6",
+      "bytes": 530
+    },
+    "colleges/2429.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2429?lang=en&region=us",
+      "sha256": "f15f2555aba65eae97afc938910e46be80ac874a1d07e25071902209cee455a0",
+      "bytes": 534
+    },
+    "colleges/242.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/242?lang=en&region=us",
+      "sha256": "9d9b12a7b3104f6645ee8bf7adbd6eba02b08698d83c70a117950278f2525c8a",
+      "bytes": 520
+    },
+    "colleges/2390.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2390?lang=en&region=us",
+      "sha256": "d0e6425d838c2da928dec5a79ce71d01c395ca31f326fd018c39fd83e113ee36",
+      "bytes": 531
+    },
+    "colleges/2567.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2567?lang=en&region=us",
+      "sha256": "5c1a0f98f3dc38d3e4b4404c741b413da4082f74d91653061e061879714a34d2",
+      "bytes": 525
+    },
+    "colleges/154.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/154?lang=en&region=us",
+      "sha256": "9ff36f3132deb7d20ea84e187a3575e78cda30ffb2a23f32d65eff9eb000f070",
+      "bytes": 543
+    },
+    "colleges/259.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/259?lang=en&region=us",
+      "sha256": "3542a5d2882f1b62c650f47d10c664bddbb268b36ac18a4fff46e8d9651ffe7d",
+      "bytes": 538
+    },
+    "colleges/150.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/150?lang=en&region=us",
+      "sha256": "2192057cb3252ea588480546593adcc1a53198c714f6bab427bb20d4d281c9a9",
+      "bytes": 527
+    },
+    "colleges/97.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/97?lang=en&region=us",
+      "sha256": "feb99c3020ff271995bb4a4052d7ea8fa856790a8b882fd1011e9dc434470a95",
+      "bytes": 532
+    },
+    "colleges/221.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/221?lang=en&region=us",
+      "sha256": "d19afaf9487a949d8121c47a7446494617edb680f508e7ff08c371738244bda2",
+      "bytes": 530
+    },
+    "colleges/228.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/228?lang=en&region=us",
+      "sha256": "a38fab837c16209fb6787b7da97851aa1d0f3493fd256773bcede16126c68b2e",
+      "bytes": 528
+    },
+    "colleges/153.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/153?lang=en&region=us",
+      "sha256": "fcacc7fe1eb85788216d96dccde09a8e4c85ed5ea3f6eae1730f8fecf159a677",
+      "bytes": 544
+    },
+    "colleges/103.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/103?lang=en&region=us",
+      "sha256": "59fa43b6a80696dcf47c506cb2cc688a1ba5a8e11825c3f4d736a9392b977d11",
+      "bytes": 540
+    },
+    "colleges/24.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/24?lang=en&region=us",
+      "sha256": "cd6eb4cdd1d6ee1474208419e40031217fa06e7362d7a76c3fc1ab8e321717fc",
+      "bytes": 528
+    },
+    "colleges/258.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/258?lang=en&region=us",
+      "sha256": "da0f305ea3b4fffa487b552d5bfd4f12d8b4b65050bd976e3d13f4d3ce34e2dc",
+      "bytes": 532
+    },
+    "colleges/52.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/52?lang=en&region=us",
+      "sha256": "126dbc757d4245b4ed07f6ae4cfe3f094511e15c4c3e0a4c05c7b90a760413c3",
+      "bytes": 535
+    },
+    "colleges/152.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/152?lang=en&region=us",
+      "sha256": "970bad7ffa4c2eb6ade89c82bbd42620d3bbf32e0e07db7cf0b8b7b1a367f0c3",
+      "bytes": 532
+    },
+    "colleges/183.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/183?lang=en&region=us",
+      "sha256": "f1e09949ede15a78dec76d57f0ba20c2429ae96f25545ad74bdab4e10066f5d8",
+      "bytes": 529
+    },
+    "colleges/25.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/25?lang=en&region=us",
+      "sha256": "912efdc7e7997796448edb6f5565669c8a262f5391a5935abd1b063075ad1788",
+      "bytes": 535
+    },
+    "colleges/59.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/59?lang=en&region=us",
+      "sha256": "bbd5e7147b7a577c5b995101b3fd480ea49b3bae47661b95d52a731d1ee8e915",
+      "bytes": 540
+    },
+    "colleges/254.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/254?lang=en&region=us",
+      "sha256": "e172a7de59142dcd948130e6548e1938aaad6350b1c76993b84bc89b615a13a2",
+      "bytes": 520
+    },
+    "colleges/252.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/252?lang=en&region=us",
+      "sha256": "d5eeda1c80a2f051e650cb0f709e899126477ae6866351fae61fd73ea820ad13",
+      "bytes": 520
+    },
+    "colleges/12.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/12?lang=en&region=us",
+      "sha256": "359ab906f546acf1629e195ecb51e7d2f37905b3da37b1ca94eb185ffab77dd4",
+      "bytes": 526
+    },
+    "colleges/2641.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2641?lang=en&region=us",
+      "sha256": "784d9dc6511895c232953a9ff26a02d522ff07c4517f1c24a121a264aaba03cf",
+      "bytes": 542
+    },
+    "colleges/248.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/248?lang=en&region=us",
+      "sha256": "01b0c0550d2884459c1d8fec03ff6b6f8a751d8aa0298ab4647daa88e8906a26",
+      "bytes": 528
+    },
+    "colleges/197.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/197?lang=en&region=us",
+      "sha256": "7d73ebf0ed46798a4f8e36ff98cb82830f21612e34cd2929df8d97d3bcaa906c",
+      "bytes": 540
+    },
+    "colleges/277.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/277?lang=en&region=us",
+      "sha256": "953ff7579f5efd1725d8ac993d1c99898818297a7b83fdcb7e04263902825a08",
+      "bytes": 545
+    },
+    "colleges/2132.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2132?lang=en&region=us",
+      "sha256": "ea9e994a57576c97fbf41589b5fe972d652056a910eb1d59b024311a622dfdcf",
+      "bytes": 539
+    },
+    "colleges/239.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/239?lang=en&region=us",
+      "sha256": "31da477650d93fe9c44d60b3948a68a36be636fdac380c4f2540e5bad957cd1e",
+      "bytes": 524
+    },
+    "colleges/9.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/9?lang=en&region=us",
+      "sha256": "7421667e8e52fd87f5091865489a8f7225338ea86c7a23f64610bb5c146de3b5",
+      "bytes": 532
+    },
+    "colleges/2116.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2116?lang=en&region=us",
+      "sha256": "dbd84267f79f617cf20fac6df9885804f48f9e57c15d986495973e365d48f174",
+      "bytes": 524
+    },
+    "colleges/2306.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2306?lang=en&region=us",
+      "sha256": "862e8805877e3870b8db342de44531998726756cca4209c23e08c8d191687673",
+      "bytes": 540
+    },
+    "colleges/66.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/66?lang=en&region=us",
+      "sha256": "527459a5b42b581ff99dd91f82ba2e30a6790947e4810ceba9767d411dcc7092",
+      "bytes": 531
+    },
+    "colleges/2305.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2305?lang=en&region=us",
+      "sha256": "197e29828fba7f5cc43ebcfdd8d8f1dbea584cad701eacc13dbe5fa068f71833",
+      "bytes": 530
+    },
+    "colleges/2628.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2628?lang=en&region=us",
+      "sha256": "321d1fdf4568561200e19e8642278888ce07f763ecbc7ed7631f5e976da04a1c",
+      "bytes": 529
+    },
+    "colleges/38.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/38?lang=en&region=us",
+      "sha256": "10e7c2e62e21e75ced776e62fff3b983f06e7694204dce896a7104809c4ada82",
+      "bytes": 529
+    },
+    "colleges/26.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/26?lang=en&region=us",
+      "sha256": "1909d0ebdf3283b857aa37e0e851818801e7161283ba0070ea5c55eaa1481acb",
+      "bytes": 518
+    },
+    "colleges/84.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/84?lang=en&region=us",
+      "sha256": "5dae2b420639e87fcc3f16e2d259d900f660a430bfdbec6df4b33295b29e2f1a",
+      "bytes": 524
+    },
+    "colleges/194.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/194?lang=en&region=us",
+      "sha256": "2f10d003d92bcdac26bcbd1932b495f71c7b5bcc8a8eb9de2529e8cd0d68a7a3",
+      "bytes": 535
+    },
+    "colleges/77.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/77?lang=en&region=us",
+      "sha256": "26b321ff6e1a1a98c71b49a2cc1e46f7aa37ec0645043c5cf159208086fad798",
+      "bytes": 534
+    },
+    "colleges/30.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/30?lang=en&region=us",
+      "sha256": "3fdb175e3011ee74051c8a14b7bee784d0ac34c37c085e4453242e6f6170d79c",
+      "bytes": 516
+    },
+    "colleges/135.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/135?lang=en&region=us",
+      "sha256": "5c3929683a63c37fab4bd7d21220545386d8177a36195388b65b2f3475f42c8a",
+      "bytes": 540
+    },
+    "colleges/275.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/275?lang=en&region=us",
+      "sha256": "165229285a68e38122a844044d0c13d07936f5304aec1fb5d612e054d59480cc",
+      "bytes": 532
+    },
+    "colleges/2294.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2294?lang=en&region=us",
+      "sha256": "25eda3fe57d72e88bfd69949372c9856fe993cf832766b7786f0de250611570a",
+      "bytes": 528
+    },
+    "colleges/356.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/356?lang=en&region=us",
+      "sha256": "b4fb5c08f2f50194450c064925f6b2987c907b36504fd9d6f44096031bcbe77d",
+      "bytes": 538
+    },
+    "colleges/158.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/158?lang=en&region=us",
+      "sha256": "de2598df7c42c2d3d26cd5d04d57f6ad9240bd1af1bd8cb4457f68ece9dec500",
+      "bytes": 534
+    },
+    "colleges/2483.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2483?lang=en&region=us",
+      "sha256": "68c90b7fcd949454eb1b4286c55e863844f5bbb2478e3e04df3ff4208376f870",
+      "bytes": 528
+    },
+    "colleges/130.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/130?lang=en&region=us",
+      "sha256": "4283d63a438119faf568a55fb5a193b11f8cabf0bacb5f2ed0f52659f54c2af3",
+      "bytes": 534
+    },
+    "colleges/264.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/264?lang=en&region=us",
+      "sha256": "87adaa45747939e506625449b55d830180018d490d81ebffd2d4bf04ca434642",
+      "bytes": 535
+    },
+    "colleges/2509.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2509?lang=en&region=us",
+      "sha256": "c34a27c2790a784fccaef364933978cd1ceb3b4b9a09ee2b23bd0b3d69a494db",
+      "bytes": 535
+    },
+    "colleges/213.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/213?lang=en&region=us",
+      "sha256": "3df7c5314334c7c3182e9d5da89ed1a0f38ad015f4f2d54c059d54e636560d54",
+      "bytes": 540
+    },
+    "colleges/164.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/164?lang=en&region=us",
+      "sha256": "599755d13f3bdb47fda0046ad366aa20adf5737e2c381a44597635c60d7ff0fb",
+      "bytes": 537
+    },
+    "colleges/127.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/127?lang=en&region=us",
+      "sha256": "ad7c3b8b1f876779addd0a1922d64d18f482c1262fbcd943a3ee9e8cc5c72d08",
+      "bytes": 540
+    },
+    "colleges/120.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/120?lang=en&region=us",
+      "sha256": "379cf6f14a8e311b858fb1dd7b9202e5a5fb026c12a33b72b3aea063bb9f7349",
+      "bytes": 531
+    },
+    "colleges/2335.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2335?lang=en&region=us",
+      "sha256": "22e7ddeafe70966b3f5e07bd4c2418545d12e489615541f1bfc799ad3ab0b0b1",
+      "bytes": 531
+    },
+    "colleges/55.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/55?lang=en&region=us",
+      "sha256": "a89d3c9a7d3a529fdd8395c1db8393aec984c5c8a238c59769f2927ee545d1a7",
+      "bytes": 540
+    },
+    "colleges/2393.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2393?lang=en&region=us",
+      "sha256": "651a7bbd7cf6709004a9f01526e66b75cb14358ebc4878433524b111bf90151c",
+      "bytes": 544
+    },
+    "colleges/338.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/338?lang=en&region=us",
+      "sha256": "1e31fb4bf14eebb7d4f079d2f02e0b1b9964d69bf0a29eec8be38e48a521b6be",
+      "bytes": 537
+    },
+    "colleges/166.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/166?lang=en&region=us",
+      "sha256": "0c0811223d81b6f1122d89ceeda19dfc3b4bc2e9c587b3482d688198be03fbf9",
+      "bytes": 543
+    },
+    "colleges/98.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/98?lang=en&region=us",
+      "sha256": "d9fae3034cfd8c9f5fbc439467c7371b0d7ce46f3d2cf1bd17da5c96220626b3",
+      "bytes": 540
+    },
+    "colleges/48.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/48?lang=en&region=us",
+      "sha256": "70d95ec53505b963f78a8cad9f10d36178d243f072d13404e5f0af337d4b9c3b",
+      "bytes": 537
+    },
+    "colleges/2229.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2229?lang=en&region=us",
+      "sha256": "d3f051358703d1ac9874c9cb151c47399f678de67a9560f6ddedda004d3f93d5",
+      "bytes": 543
+    },
+    "colleges/2623.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2623?lang=en&region=us",
+      "sha256": "8cd3cc1ebb7d1144f3ff8506382696d77063b161b173c7b43d035d9128430c53",
+      "bytes": 542
+    },
+    "colleges/41.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/41?lang=en&region=us",
+      "sha256": "97ee6cd727ee7afb5c47069596761e80759e00e0eb0aba75fd78c1314a36a29c",
+      "bytes": 521
+    },
+    "colleges/2534.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2534?lang=en&region=us",
+      "sha256": "faf0e6311da6dcfbbc36f6d6df7a3442df59678f77db20eef41f9641879b9ddc",
+      "bytes": 542
+    },
+    "colleges/87.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/87?lang=en&region=us",
+      "sha256": "c1bec069fc4971a1f9b1d6a04738c98c962a4cf620fc34cbf63d1cca37711f64",
+      "bytes": 536
+    },
+    "colleges/195.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/195?lang=en&region=us",
+      "sha256": "81a01422f260621e40a58d6a5e82a260538d98dfd62eb534937e9eb6f3217179",
+      "bytes": 523
+    },
+    "colleges/2649.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2649?lang=en&region=us",
+      "sha256": "af57e89be28f8b6a1b780cd21de00a36c675805a65d4663f124d4023129b7122",
+      "bytes": 530
+    },
+    "colleges/2711.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2711?lang=en&region=us",
+      "sha256": "2bf696c70139b302b485a1062cc3c55de3256ce6499dbab17653e132fd7f8711",
+      "bytes": 544
+    },
+    "colleges/2084.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2084?lang=en&region=us",
+      "sha256": "788bd8751bae4a922952260e53a90367e9d3fa1c025a1d144c31aa1232310164",
+      "bytes": 530
+    },
+    "colleges/193.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/193?lang=en&region=us",
+      "sha256": "37800d7ec1dd1c9e6edb3f6848181c24b34e7e53b24bdfdd2474206311799c5a",
+      "bytes": 534
+    },
+    "colleges/113.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/113?lang=en&region=us",
+      "sha256": "26f6ee96a9b71b44d490cb6d8229880c311617320eed667de3ea74f3d3d14d68",
+      "bytes": 537
+    },
+    "colleges/2199.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2199?lang=en&region=us",
+      "sha256": "f594e1d1e8e04786820d805abc271679d491dd37f7504ab475bf11c42282beaf",
+      "bytes": 543
+    },
+    "colleges/2309.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2309?lang=en&region=us",
+      "sha256": "a5d8f68008699d65d6a8bdc70748125b097b0d182a4162c78910616a30f444a6",
+      "bytes": 546
+    },
+    "colleges/2050.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2050?lang=en&region=us",
+      "sha256": "65daf4ada2e201c88cc2736543641b2e9b0403ef65b3fc832543294fb3f60717",
+      "bytes": 541
+    },
+    "colleges/2117.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2117?lang=en&region=us",
+      "sha256": "52ae61579286c78982e2f270c512b44160d18ed73f3f0418cf0e42a29a82147e",
+      "bytes": 546
+    },
+    "colleges/2006.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2006?lang=en&region=us",
+      "sha256": "ee646849dd87b57fa41bcf9cc7af4a2ff9b75675b187745da75d4787b554f6fc",
+      "bytes": 525
+    },
+    "colleges/189.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/189?lang=en&region=us",
+      "sha256": "2947935ab71b1de7df1a0741cb972a2773f562218e09f49619c1539a2c958224",
+      "bytes": 541
+    },
+    "colleges/16.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/16?lang=en&region=us",
+      "sha256": "7e18256c4741d517f1193bf637c0f96e71832151757ee264d70c752d381ab283",
+      "bytes": 539
+    },
+    "colleges/167.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/167?lang=en&region=us",
+      "sha256": "f4aea17fc061331cb801f8efc0af2a3c44ccc9c50bc295d79b5dce500df6b022",
+      "bytes": 532
+    },
+    "colleges/2449.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2449?lang=en&region=us",
+      "sha256": "e4736f2ed9f6512daa9c22f13b85cf461e96d8bfbbe7591915ad6c3ff7001841",
+      "bytes": 546
+    },
+    "colleges/2751.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2751?lang=en&region=us",
+      "sha256": "adc312dea421f8dbfdc7f5e926e0170062fe75d53fb3dd2e1298e7e87bd1d487",
+      "bytes": 532
+    },
+    "colleges/2005.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2005?lang=en&region=us",
+      "sha256": "0859c76e81d6e3edc0e4c8af4bd98343b6f0e62802b86da49b5793f76f5396d9",
+      "bytes": 535
+    },
+    "colleges/23.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/23?lang=en&region=us",
+      "sha256": "1f4af1522af650cfbaf7b8c5e6102152cb99bf91272cf1e214346510e1bcecc3",
+      "bytes": 539
+    },
+    "colleges/2439.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2439?lang=en&region=us",
+      "sha256": "3c6980e7e01dcf82dc38653d300fda3ed2664415cf64ce3faebfdb278746b831",
+      "bytes": 526
+    },
+    "colleges/2440.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2440?lang=en&region=us",
+      "sha256": "6f49a22d8e0b6610cc8a345d7d3e97d5e5e445a5b4b8dbffb2fb99d4ed22947c",
+      "bytes": 532
+    },
+    "colleges/62.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/62?lang=en&region=us",
+      "sha256": "a38d7c9efa98be91a372bd9f49f445ecf0e217e05fb1fe580a22482d31d10ab2",
+      "bytes": 533
+    },
+    "colleges/2638.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2638?lang=en&region=us",
+      "sha256": "fe53dd4f3df904a8dc6413aff255c8fe575016a09755a68144cd07c02043b6c9",
+      "bytes": 526
+    },
+    "colleges/2459.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2459?lang=en&region=us",
+      "sha256": "a7eda3d1adac678a5a8050c0f71ecc79e7c36b710efd68f8ff20dd8be2c7d9f8",
+      "bytes": 545
+    },
+    "colleges/68.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/68?lang=en&region=us",
+      "sha256": "72f23fa723aa6849e7c8cee788183e55329511ca4e8f351b3c2593dc4a8b4678",
+      "bytes": 530
+    },
+    "colleges/204.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/204?lang=en&region=us",
+      "sha256": "55c1686f5325173d06a9ef0250564737492401a67972f89d3f6b0e65ee954c4f",
+      "bytes": 536
+    },
+    "colleges/326.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/326?lang=en&region=us",
+      "sha256": "20d160402dba4955ffd818139e16a48bc0335c6f0c2ab13891c7a4644088788c",
+      "bytes": 534
+    },
+    "colleges/278.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/278?lang=en&region=us",
+      "sha256": "25bf93723eb5e37dec1a85ff0dcd4cf8ffc9dcf718b756ad6fb02b4c10bd5eb7",
+      "bytes": 537
+    },
+    "colleges/36.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/36?lang=en&region=us",
+      "sha256": "f6c8d757eba2c7c388543058c25edd1a2ad6f7fedd73fcdac788e629d57e2fe6",
+      "bytes": 532
+    },
+    "colleges/328.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/328?lang=en&region=us",
+      "sha256": "2a25cdeb8fdf370f18805e4bad3177948bd9ebd180ddafcc58998f78a6b8113e",
+      "bytes": 533
+    },
+    "colleges/21.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/21?lang=en&region=us",
+      "sha256": "3884bc4deb888e81c4a43d92056691fbc43b89ed789318afcc8ea86d744e976d",
+      "bytes": 537
+    },
+    "colleges/265.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/265?lang=en&region=us",
+      "sha256": "c1b14724e047821b08007d7ca5a54ca6038bfd3dcafedabcabeca0764dcc27e3",
+      "bytes": 543
+    },
+    "colleges/61.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/61?lang=en&region=us",
+      "sha256": "d72bc992c4d2ac2b035d492572323f4863c4558f40a8cdc0e89583dbac51a242",
+      "bytes": 525
+    },
+    "colleges/96.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/96?lang=en&region=us",
+      "sha256": "da78529185d621addd0e262ed8c6cf61a91afecea9e586e3f1eba45bf1d6e774",
+      "bytes": 526
+    },
+    "colleges/2633.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2633?lang=en&region=us",
+      "sha256": "40a3a481ca8128a797d86add8167921842054cc442b045220fe024fc1db56208",
+      "bytes": 540
+    },
+    "colleges/99.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/99?lang=en&region=us",
+      "sha256": "c481dd04fdd6d53d7928c0de6825ee13c697bcabbac73d033aa55f322f680c6e",
+      "bytes": 515
+    },
+    "colleges/57.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/57?lang=en&region=us",
+      "sha256": "8e5871faa8ed03d71c3a5797ad027dac6c2f0ad4ea5a02a7d22ddc3993463078",
+      "bytes": 523
+    },
+    "colleges/145.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/145?lang=en&region=us",
+      "sha256": "32f58047031e93cf5c44a8d14eaf467d2797962c31139e3da3c065a0c0ab41e8",
+      "bytes": 530
+    },
+    "colleges/142.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/142?lang=en&region=us",
+      "sha256": "19ea73d5f5548fb6b8724c3d7ca634e0b9eb0c55d78bc0cfd98021aa26af2ea0",
+      "bytes": 529
+    },
+    "colleges/251.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/251?lang=en&region=us",
+      "sha256": "79690e058c038b4725365f7a009b4c7cf2e68f9a6ff3d926ef7d119239c5c1cd",
+      "bytes": 526
+    },
+    "colleges/201.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/201?lang=en&region=us",
+      "sha256": "1948d5e7d56323a29a82dc12828a6759d3b6f5b35b7f5f1a4062199d614bb3ec",
+      "bytes": 529
+    },
+    "colleges/344.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/344?lang=en&region=us",
+      "sha256": "3fb863b1587e53ab47701cc11e8ae7d05652fc424e60496d3b1d2567c07b6788",
+      "bytes": 547
+    },
+    "colleges/2.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2?lang=en&region=us",
+      "sha256": "7276d42476975adb05af93bfa9a154cd959066932c3ec3f4a516a8e22da74afb",
+      "bytes": 517
+    },
+    "colleges/2579.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2579?lang=en&region=us",
+      "sha256": "b651fa7132271d739a805ac228b6257708cd2ccd73162f358a5e1c9db1526983",
+      "bytes": 547
+    },
+    "colleges/8.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/8?lang=en&region=us",
+      "sha256": "0b9a2a0154971c04bf32dd6203f47303abff375daf88c38332ad9e9a0e327124",
+      "bytes": 525
+    },
+    "colleges/245.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/245?lang=en&region=us",
+      "sha256": "b25d8d4ed4e2afafbdeafceac0eebcf17189368033c4b25b4c44ea227dce50dc",
+      "bytes": 532
+    },
+    "colleges/238.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/238?lang=en&region=us",
+      "sha256": "cc2566e6d5976eb0bfcc844312d9cfb0870d5b33dd77cfff9120df95fee3bd6b",
+      "bytes": 537
+    },
+    "colleges/256.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/256?lang=en&region=us",
+      "sha256": "21041889516df7102bbeab8e4d68a9aeed5f16dea6227c68513ca90124415e87",
+      "bytes": 538
+    },
+    "colleges/333.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/333?lang=en&region=us",
+      "sha256": "e3c9805759909ed8755954fdd1b21a969c5ce33deaafbd7f82430ae56ab624e6",
+      "bytes": 533
+    },
+    "colleges/2026.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2026?lang=en&region=us",
+      "sha256": "e424f73afe1b9052e16f96cf55d7970982bafc1a1bc58cd95af5a7b70b036e90",
+      "bytes": 541
+    },
+    "colleges/2247.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2247?lang=en&region=us",
+      "sha256": "dea353496dd426438bce94fe7a4aaddf877fa266a45920640c3bada03036cdcd",
+      "bytes": 543
+    },
+    "colleges/276.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/276?lang=en&region=us",
+      "sha256": "f1b3639fc6ff905d30e7f6ff61af0039ae0dd86b5061aa25d29f84e2dc1121b7",
+      "bytes": 539
+    },
+    "colleges/290.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/290?lang=en&region=us",
+      "sha256": "57598d524c5dcd4794a0d236f2fd432e4f20e0166cbf79dddf1f141e1f5a198b",
+      "bytes": 541
+    },
+    "colleges/324.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/324?lang=en&region=us",
+      "sha256": "00f86e30b9dbb04f32d0745945405536e482dde9956ea442228f3c962d175089",
+      "bytes": 542
+    },
+    "colleges/295.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/295?lang=en&region=us",
+      "sha256": "2fc1525909847cbf977b845c08961d375443da400006c3dd461d5e9024b4f0f6",
+      "bytes": 539
+    },
+    "colleges/2348.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2348?lang=en&region=us",
+      "sha256": "e0afb49ae142b1476982900f0a2f84ef1f448e101c587b8d362e3d0f53e82dca",
+      "bytes": 546
+    },
+    "colleges/6.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/6?lang=en&region=us",
+      "sha256": "e811e4549160c5e72e9642cfeccdc432011b72b0b0347988c4288a6205b7630e",
+      "bytes": 532
+    },
+    "colleges/309.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/309?lang=en&region=us",
+      "sha256": "947171102c50e385189b64da7fc1470d1816dc58a20a1cc24719edc06aee6bcb",
+      "bytes": 537
+    },
+    "colleges/2653.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2653?lang=en&region=us",
+      "sha256": "90b9a65172c53ba10c2a7c3b4dc8c12f0bb2e8d76b1a59c4df0eb97c7633812d",
+      "bytes": 527
+    },
+    "colleges/2032.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2032?lang=en&region=us",
+      "sha256": "38decb3e831bba480351f3b25b759a3b5f216628602ed8a04493dd43f7861502",
+      "bytes": 547
+    },
+    "colleges/2572.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2572?lang=en&region=us",
+      "sha256": "d03d8dc96d07c01bcfd3148405b7914437b896144039e4788c2022980d0022b5",
+      "bytes": 550
+    },
+    "colleges/2433.json": {
+      "url": "https://sports.core.api.espn.com/v2/colleges/2433?lang=en&region=us",
+      "sha256": "15ae493c38835791df1ba9885c9d4ad1615428465aeb2b107af7a1f37b57ccea",
+      "bytes": 537
+    },
+    "official/louisiana-current.html": {
+      "url": "https://ragincajuns.com/facilities/our-lady-of-lourdes-stadium/1166",
+      "sha256": "64c2eb1fa57a5bcbfe10bcdb65020cd62379a0f971da970692ef1235bd7ad71f",
+      "bytes": 462951
+    },
+    "official/illinois-current.html": {
+      "url": "https://fightingillini.com/facilities/gies-memorial-stadium/64",
+      "sha256": "014aa07a81f83d142c984bc2730c8b77a0b707e8c3b5783b56f5ebe8a9e45bef",
+      "bytes": 946550
+    },
+    "official/sacramento-fbs.html": {
+      "url": "https://hornetsports.com/news/2026/2/16/hornet-football-to-join-the-mac-in-2026.aspx",
+      "sha256": "3c9143abc8150b98ebceeed0e0f33dad70a9442d8954bcbd1704b1bc93b63995",
+      "bytes": 656709
+    },
+    "official/buffalo-current.html": {
+      "url": "https://ubbulls.com/sports/football/schedule/?path=football",
+      "sha256": "7288de214216ee3615e3e2e2510c993d95f350f0f6fbd24234a994e2fc06ba02",
+      "bytes": 729619
+    },
+    "official/houston-schedule.html": {
+      "url": "https://big12sports.com/schedule.aspx?schedule=5318",
+      "sha256": "e6c261f243f62a25635f3b1b4b126bdeb6d8cc0be4efc5da895f0655a8f6394c",
+      "bytes": 390235
+    },
+    "official/texastech-galaxy.html": {
+      "url": "https://texastech.com/news/2026/7/17/football-texas-tech-secures-landmark-naming-rights-agreement-with-galaxy",
+      "sha256": "96bad2531a2b592cd46aca624b80e7fa6d77fc68fdc7d3b8fb7133cce8e491c8",
+      "bytes": 983270
+    },
+    "official/ulm-current.html": {
+      "url": "https://ulmwarhawks.com/facilities/malone-stadium/1",
+      "sha256": "f1b3808b4def4fcaa2c03fcb9785983cb3a842c93eb07d37d3bc681e1d8fddda",
+      "bytes": 282632
+    }
+  },
+  "reviewedFiles": {
+    "clubs.json": {
+      "sha256": "95bc862833f69055f7779e46e780ff44fde86edda53dd558670d8614b802441d",
+      "bytes": 86096
+    },
+    "venue-review.json": {
+      "sha256": "6de118d7ee96249e4f90f16fc0d2e52f2b138a50ab87d68b061fa5edeb0e43d6",
+      "bytes": 48289
+    },
+    "crests/us-cfb-2636.png": {
+      "sha256": "37004059b144d56653764501b977eaa58463a70e10a83f7512e91c8b87530f17",
+      "bytes": 31465
+    },
+    "crests/us-cfb-235.png": {
+      "sha256": "e56cb7d0d332907b4f0e7fe4f70e98c1841b06f12334811f5054734cb3da27ea",
+      "bytes": 96183
+    },
+    "crests/us-cfb-249.png": {
+      "sha256": "5953d0a7dd1e44d82402467043f2cd63003d74a0dc3bff754cb467ab93104436",
+      "bytes": 33187
+    },
+    "crests/us-cfb-349.png": {
+      "sha256": "bbe36252ce70f54489fbd0a0c0ec27bfdbd4f84d2789fc9906bda5ccd93c7aab",
+      "bytes": 88544
+    },
+    "crests/us-cfb-2226.png": {
+      "sha256": "2e799d7929cc276364cd90a4dc47903ec780b4f114c689a65d7e70a269316fc8",
+      "bytes": 63237
+    },
+    "crests/us-cfb-58.png": {
+      "sha256": "a74207f69d800eba006138acef12a1436166c868ba14c94e1578190358dd0d14",
+      "bytes": 56018
+    },
+    "crests/us-cfb-5.png": {
+      "sha256": "905b2e96ff5a391a789276d4b211134ca295a91bc352d1ba5668c79fbfcc0bbb",
+      "bytes": 73956
+    },
+    "crests/us-cfb-202.png": {
+      "sha256": "0c131f5faf86ec1bf70679af3a7f13248aa5f9e764aeb0c927fc6f753ea85e73",
+      "bytes": 45138
+    },
+    "crests/us-cfb-151.png": {
+      "sha256": "0ae06f5e6518c5065c93cde42d17853ddc6c6abe56502ef2bbcbf3bd52f9adb5",
+      "bytes": 109723
+    },
+    "crests/us-cfb-2655.png": {
+      "sha256": "35db0df8ce98e8180a3d6cffa1c2924f863874b3a4226d6b76192216fbfb4808",
+      "bytes": 107463
+    },
+    "crests/us-cfb-218.png": {
+      "sha256": "2a7cb32da0408fbd277fa184f3eee42ce983ebab70c8e819abb2865ac440717c",
+      "bytes": 7296
+    },
+    "crests/us-cfb-2426.png": {
+      "sha256": "82eb45dc0f8186430a637f42fc3746ae07fff74ca04fe6ea2099da720864f51d",
+      "bytes": 33793
+    },
+    "crests/us-cfb-2429.png": {
+      "sha256": "96a23e7c40183c7731402eae581979de7a704893cfd46be206f198a24bf948da",
+      "bytes": 15145
+    },
+    "crests/us-cfb-242.png": {
+      "sha256": "3648d62f626f88f864e4c629cf50c92f50dcbccc9622e87eeb3210429383afdd",
+      "bytes": 23772
+    },
+    "crests/us-cfb-2390.png": {
+      "sha256": "55800e4867c87bf38281043628d2c0dfadd0bf44632b27a9ab20af27a9a728fb",
+      "bytes": 13560
+    },
+    "crests/us-cfb-2567.png": {
+      "sha256": "1dbe095805cd1636fc5aac2918eedf81b4dad43329a8c1e665616ee1d79840a7",
+      "bytes": 15945
+    },
+    "crests/us-cfb-154.png": {
+      "sha256": "e307401dc8adf24492175e57a95f242b8943fe0fb3121ca84757095e6825d17a",
+      "bytes": 9983
+    },
+    "crests/us-cfb-259.png": {
+      "sha256": "56dbddcf5acd291817b559a31b6d8aabc91fe1ef1d27f47a527d353dc706cd7a",
+      "bytes": 36764
+    },
+    "crests/us-cfb-150.png": {
+      "sha256": "5b614bdf00364d325be332b63dafb5f95d25e0f59e63a3e152faa43124c57112",
+      "bytes": 9586
+    },
+    "crests/us-cfb-221.png": {
+      "sha256": "c283722b1c9f4b47b7361d7d959422225de4ad4682b0eadcd66f707c015506f3",
+      "bytes": 46974
+    },
+    "crests/us-cfb-97.png": {
+      "sha256": "7c5e06bfb990c80176ef56e171bfb2de264355db54c592462d5f8a02404412e8",
+      "bytes": 47737
+    },
+    "crests/us-cfb-228.png": {
+      "sha256": "20abd84754733106d0b91337456ab631597c159620f9fa3db259da526d5b656d",
+      "bytes": 32916
+    },
+    "crests/us-cfb-153.png": {
+      "sha256": "c51339a92ebf5e7dbdbcb6c32dc2cc63f9e2f3dc0e5d47f60fd59fa22ceb32ec",
+      "bytes": 50070
+    },
+    "crests/us-cfb-103.png": {
+      "sha256": "fa59bb32e732327db77cef6c70e32db5f0faf0d1b35a02abc482d1bc187c6036",
+      "bytes": 76783
+    },
+    "crests/us-cfb-24.png": {
+      "sha256": "a25c3474889c6c9d966245814fdd29c51dd79b02ae9e7780965cf52aad1ee22b",
+      "bytes": 39181
+    },
+    "crests/us-cfb-258.png": {
+      "sha256": "d35c8362ad7a6f03b32e30bc0745cb481da320da96010c7327f3c78359ac9fe5",
+      "bytes": 51802
+    },
+    "crests/us-cfb-52.png": {
+      "sha256": "2b8ccabe8c063ef5f2fbd4c21b489179d94782ca4ea6c14dd3e5d1728afa61a3",
+      "bytes": 96920
+    },
+    "crests/us-cfb-152.png": {
+      "sha256": "ee51da26e5cdf389cc787c58478f10bb03503832e35f862b4f208d273819d8ec",
+      "bytes": 55357
+    },
+    "crests/us-cfb-183.png": {
+      "sha256": "cc978bd06e84d85870429294fd9a2f4908ec9c43635bd83ef3eee94387cfd100",
+      "bytes": 15062
+    },
+    "crests/us-cfb-25.png": {
+      "sha256": "e77c7a116c09151929c126691922a76de34689b273f0cf8748097fcbbde087a5",
+      "bytes": 27781
+    },
+    "crests/us-cfb-59.png": {
+      "sha256": "c50e6dcbe550c656e79729b1dc4d348a2deeb66dec33a331f9df4cb23885ce99",
+      "bytes": 28310
+    },
+    "crests/us-cfb-254.png": {
+      "sha256": "54d1837e37240cb37dcbea2b2dfd518bdf8531344e5f5397ff02a1d2111b5b43",
+      "bytes": 6333
+    },
+    "crests/us-cfb-252.png": {
+      "sha256": "4c49b759151574b979556fb10f1e245ec8cb03b4b3b80d4d352b5f909293976d",
+      "bytes": 23735
+    },
+    "crests/us-cfb-12.png": {
+      "sha256": "f01db22fd85d00eaf8f9b5952bc8e7c0b458beae33753c312cb54c5515f7c967",
+      "bytes": 31305
+    },
+    "crests/us-cfb-2641.png": {
+      "sha256": "be16f2f868f97ef01961fe3332252aa767be3a860438b9f0da054bf7205b66e4",
+      "bytes": 4918
+    },
+    "crests/us-cfb-248.png": {
+      "sha256": "d8984a3cc57ea50d3002bb08515942af2be523c4fa404a670515da041261980d",
+      "bytes": 12778
+    },
+    "crests/us-cfb-197.png": {
+      "sha256": "3d5ebde2aa002198a95ef2449a139270278cffd31419060b755616b7614697d1",
+      "bytes": 25524
+    },
+    "crests/us-cfb-2132.png": {
+      "sha256": "2fd50a6f605fb9c0976541ceea04a6dca78de56fed0ea0186473da9fc39c651c",
+      "bytes": 15035
+    },
+    "crests/us-cfb-277.png": {
+      "sha256": "5d80b2a5a79d7c5b8dfbb270f0140bd7353b87b6fcd8dc43a60ccff9a72baa29",
+      "bytes": 19577
+    },
+    "crests/us-cfb-239.png": {
+      "sha256": "0346c816dfe728010a42fc416ddb48ceb052126fd0675bbb8fc30a6df5fe8e8c",
+      "bytes": 9621
+    },
+    "crests/us-cfb-9.png": {
+      "sha256": "12740d7f76563f339392d50d215e173925114d2ad48d576263165f3b31052998",
+      "bytes": 58753
+    },
+    "crests/us-cfb-2116.png": {
+      "sha256": "4fdf8855a3d5842e5cb897277f93cad7422774b42d6d426e019591a0c596bf2c",
+      "bytes": 41563
+    },
+    "crests/us-cfb-2306.png": {
+      "sha256": "93f3e366a88ec89bfa8ed8d1cc2ce16cfdc17a736bcd1831b908241296b11e39",
+      "bytes": 21002
+    },
+    "crests/us-cfb-66.png": {
+      "sha256": "8b490fe0621ea18538cf38e2b9c462beff54b26ee4707c54d024547e82e7cd63",
+      "bytes": 68853
+    },
+    "crests/us-cfb-2305.png": {
+      "sha256": "e1daa000b25e45917bfaa93464b8725980c8e3c1a859f1fb51174e9d37aee08b",
+      "bytes": 103080
+    },
+    "crests/us-cfb-2628.png": {
+      "sha256": "864561cb4ebf372171438c038fcf52eac3342a2c1d751e605901e144c70afda0",
+      "bytes": 13174
+    },
+    "crests/us-cfb-38.png": {
+      "sha256": "69f6e383b017d6494ff7e0456e90211ca41e4c746aa0532cf762256651aaf192",
+      "bytes": 39640
+    },
+    "crests/us-cfb-26.png": {
+      "sha256": "5145c6eb67719f52cdf51c92ef6b30486c9a585ca129624d6c7837e369321a23",
+      "bytes": 20669
+    },
+    "crests/us-cfb-84.png": {
+      "sha256": "0dfc3e06f6e158d96df2b9729de6b1cd6a5a5756ec365cd0b998aa6ecb45aa66",
+      "bytes": 6318
+    },
+    "crests/us-cfb-194.png": {
+      "sha256": "6dbe512c1b9b4e8c0ebcfcb4b3620b6229a05619e8bf70b3051a8e6c4964240d",
+      "bytes": 43467
+    },
+    "crests/us-cfb-77.png": {
+      "sha256": "d447850b4a4d514fb7692fec4cda3e4fe7268c9d664b53e93f0f8fd476b1e6d3",
+      "bytes": 20398
+    },
+    "crests/us-cfb-30.png": {
+      "sha256": "abd4a69d1efca7bd1c944acf8a5a77b5bce41602da970e9779f0bf6079489c1a",
+      "bytes": 16675
+    },
+    "crests/us-cfb-135.png": {
+      "sha256": "cb58131490de1f8724f1d53224aa7383671514e3a84df1d136c6f3e4429c302d",
+      "bytes": 37596
+    },
+    "crests/us-cfb-275.png": {
+      "sha256": "36a5c3e0fae73171c91f10ceb170ea820f4f46c4899ee8a66e900a60b597ee98",
+      "bytes": 32636
+    },
+    "crests/us-cfb-2294.png": {
+      "sha256": "865b23c1e68385b0c0f2bbdd69a662382db1e9aa66310d3af5110b246b2ec472",
+      "bytes": 13210
+    },
+    "crests/us-cfb-158.png": {
+      "sha256": "c09e5b394cfa5be2f2369c5e63210a12e25943b904d077c6469714ca9f8285e2",
+      "bytes": 23526
+    },
+    "crests/us-cfb-356.png": {
+      "sha256": "62c3b65a1ab3e8cad05832d76dd7b3fb695c8220c07f0fe5aa44ef12abcda56c",
+      "bytes": 5504
+    },
+    "crests/us-cfb-2483.png": {
+      "sha256": "57dca8a00b01bebcfb1e0c7ceafe0b046e175c47ec7225713b3930e7fcb7cd05",
+      "bytes": 19816
+    },
+    "crests/us-cfb-130.png": {
+      "sha256": "910dbf467c9b442f1b493280bbc027ba5a1f91e2ce314fae099d637aade7d42b",
+      "bytes": 20380
+    },
+    "crests/us-cfb-264.png": {
+      "sha256": "d1b99c2ea2a3336916b6906c38470338b07bd1e66c09c4433080b0d7017709b2",
+      "bytes": 32900
+    },
+    "crests/us-cfb-2509.png": {
+      "sha256": "4278337c6eb6dc808cbb8ff5e8fa0cb068db59aa75def6324a27f773201455cc",
+      "bytes": 20617
+    },
+    "crests/us-cfb-213.png": {
+      "sha256": "0efa003a56ec95d664b71d799fabe5e927d2ddd23cea90d5bab42df971abd080",
+      "bytes": 21779
+    },
+    "crests/us-cfb-164.png": {
+      "sha256": "5e75a7a68f9a6403f950f7ddf9c656698fcebcaa5fa16f0890135f2098c18686",
+      "bytes": 16356
+    },
+    "crests/us-cfb-120.png": {
+      "sha256": "9b1951d140a87972ecf1e0564c190db1755f46997c4393813281194e62c83d45",
+      "bytes": 41396
+    },
+    "crests/us-cfb-127.png": {
+      "sha256": "9e3005c55a99e3bfc69da7df2d7a66b4851c9710e33c2f328ed471bf37638474",
+      "bytes": 28616
+    },
+    "crests/us-cfb-2335.png": {
+      "sha256": "2309e841473bc8b4297e83a1bbab7581d296189a20f904aa578c67f2327c2184",
+      "bytes": 76455
+    },
+    "crests/us-cfb-55.png": {
+      "sha256": "ea8258009ea1024de674a785b6ab4229fbe55e3453e7931ebbaf61fe01f8c2d9",
+      "bytes": 49705
+    },
+    "crests/us-cfb-48.png": {
+      "sha256": "89e021f5f9b67d3024a17b83347dbb76d77a2b08fc67e8ac49411317228c7964",
+      "bytes": 80429
+    },
+    "crests/us-cfb-2393.png": {
+      "sha256": "19b89c81e4b60f93b8cd496163324c375baeb9a2df627477a2cbcfd029639505",
+      "bytes": 55481
+    },
+    "crests/us-cfb-2229.png": {
+      "sha256": "454d8b98c02065b3ca16b6b64c9f71478b32dda5dbc5495670b79d202e1017b7",
+      "bytes": 82352
+    },
+    "crests/us-cfb-166.png": {
+      "sha256": "e234e9b2d83ced87b58490b109ca1929ea3e97565e934de9f90a86ab51de64aa",
+      "bytes": 48442
+    },
+    "crests/us-cfb-98.png": {
+      "sha256": "4bb5d1cbe2d259b953977bce4f72c66dacd5a0e5afdd5a240ff3fe41c2daab17",
+      "bytes": 42380
+    },
+    "crests/us-cfb-2623.png": {
+      "sha256": "46d36761e7c210f650db2499b48da428f5e5aa652e1ef9430868a932e3db88bf",
+      "bytes": 98134
+    },
+    "crests/us-cfb-338.png": {
+      "sha256": "b2697f1cc59faf361dfb9022c0e1a10af9803f9ee70b0ace29ce2abde3cd6618",
+      "bytes": 52523
+    },
+    "crests/us-cfb-2534.png": {
+      "sha256": "ce2765d5ba86d0c61b0fd7baff4aaffd8dc12a0e1e76c8f75699ab403cf0982c",
+      "bytes": 21285
+    },
+    "crests/us-cfb-87.png": {
+      "sha256": "5c0412f57d3fdf05789d255595ce014bbed36c6468f8ec3d8471450efe5f9f10",
+      "bytes": 19851
+    },
+    "crests/us-cfb-41.png": {
+      "sha256": "3ff5b782c09c76a90568f2d8434ca70efbecc7a4f65ab0cb66d5c00b1e384ad2",
+      "bytes": 84169
+    },
+    "crests/us-cfb-195.png": {
+      "sha256": "2fbdfa08adebb0be79d920a92b46e7e153e6dff49a4335b93b86a527525f836b",
+      "bytes": 17957
+    },
+    "crests/us-cfb-2649.png": {
+      "sha256": "64a7bd6719c228709bd83551956fa1d28b0e4728dadc9dd14ed4c0fab3a0b0bb",
+      "bytes": 52277
+    },
+    "crests/us-cfb-2711.png": {
+      "sha256": "ef109dce0c75f0e11715f9f08bc2b3bd8b5b60fce7d15b5bc19a1c8702f4ed2e",
+      "bytes": 59428
+    },
+    "crests/us-cfb-2084.png": {
+      "sha256": "491bd78fc49a2d70fa934807beab1a0b3b1497f8ce93e7d98e94fcfe371353b3",
+      "bytes": 27812
+    },
+    "crests/us-cfb-193.png": {
+      "sha256": "cbc0ca1a53c76c0944315867f07facfbb31bfaa29b738038f50668b8b229d33e",
+      "bytes": 19996
+    },
+    "crests/us-cfb-113.png": {
+      "sha256": "864546bd6d0bdf4432ae552d6e3ed405b6fc6e2a78a07f5654eec22e110789bb",
+      "bytes": 48451
+    },
+    "crests/us-cfb-2199.png": {
+      "sha256": "f844b98efad3ea95ba434826c6e9f1707487000a0c65c51412e3dc067971433c",
+      "bytes": 4397
+    },
+    "crests/us-cfb-2309.png": {
+      "sha256": "e99c6598ff920716bf12c731a4b52039c2350d373d2a86d98df4dd592c491d4d",
+      "bytes": 85501
+    },
+    "crests/us-cfb-2050.png": {
+      "sha256": "543e3498d12ae3bcda1cf108af528755c3720dd730a32999ed48ad836d2996cb",
+      "bytes": 47128
+    },
+    "crests/us-cfb-2117.png": {
+      "sha256": "481cc74842d3688df1330548476ecda4ccca9aa4d7c0d8235bfc4a51c4e51bd6",
+      "bytes": 33494
+    },
+    "crests/us-cfb-189.png": {
+      "sha256": "39ecb7e2c79c967dcb27fee95b298fda3034d6617c69253336e61decc830bfd2",
+      "bytes": 46602
+    },
+    "crests/us-cfb-2006.png": {
+      "sha256": "09739fb3e78ccaf6b6f468f252181a169984e325595126130ed7abf6e9683efa",
+      "bytes": 31773
+    },
+    "crests/us-cfb-16.png": {
+      "sha256": "4384290d93eaceb6978916329a11fe5ee635b729c799339c65164721bb2c8afd",
+      "bytes": 48140
+    },
+    "crests/us-cfb-167.png": {
+      "sha256": "2d0fe74447bda664c751ef06faee17350920a5c40ee2a695ab0c9d161b9ecd5b",
+      "bytes": 92885
+    },
+    "crests/us-cfb-2449.png": {
+      "sha256": "a807289822ded61aec1f3d412e0246464154c2af329002ac810a9bb5ca268228",
+      "bytes": 35037
+    },
+    "crests/us-cfb-2005.png": {
+      "sha256": "42d26e1bf89ec01fcd54caf37e52abb4b8fd8b25da97199c0766cbd5dfa04171",
+      "bytes": 13031
+    },
+    "crests/us-cfb-2751.png": {
+      "sha256": "05bba88a8466751ad257c493aa035ac284f98772115faa19a5aedd330eb63447",
+      "bytes": 57281
+    },
+    "crests/us-cfb-2439.png": {
+      "sha256": "3699f4337084b482b8b698fbecb4bdfdbced4370937be37a42842d96555b6df2",
+      "bytes": 37626
+    },
+    "crests/us-cfb-23.png": {
+      "sha256": "b786de17b998fa272d6e02d193d2a84db93b4339975301d825af770d3b2ede5a",
+      "bytes": 69323
+    },
+    "crests/us-cfb-2440.png": {
+      "sha256": "3b6335aec4a77d221c64d9b1ddf01c06f2847704ee6e6d3d930517e1b9665433",
+      "bytes": 26250
+    },
+    "crests/us-cfb-62.png": {
+      "sha256": "0333c0f1e6c941c9207f9aee9088d7fbe952fc9eba1fc8ea5a075bea92ac92f4",
+      "bytes": 48079
+    },
+    "crests/us-cfb-2638.png": {
+      "sha256": "28406bdc850b40361bdaf2be3b0337b7a538368abc61e81d70ebe0d79434c5cd",
+      "bytes": 77967
+    },
+    "crests/us-cfb-2459.png": {
+      "sha256": "8eaec08b517c299e9104ceec51d9fd92cdb1c5a8fdc029f605071b518ba94c1d",
+      "bytes": 52568
+    },
+    "crests/us-cfb-68.png": {
+      "sha256": "0fe810a62f4c54b85bc0ab652c5acec912c7abcad5b8b2068827ac5f3385fccb",
+      "bytes": 86691
+    },
+    "crests/us-cfb-204.png": {
+      "sha256": "64105e5b2d9a14525ecad678731eb6899ef6126165d1a37ec8ff4dfeb61b9a92",
+      "bytes": 31691
+    },
+    "crests/us-cfb-326.png": {
+      "sha256": "0e81afbb4d334e48237c83fd2cea6239871e2f8167def9ce9a836b1e2a325366",
+      "bytes": 50586
+    },
+    "crests/us-cfb-278.png": {
+      "sha256": "523302ba48abe65ce9d778912c43f72fb7322a2d5815d8ac324f89772a261d14",
+      "bytes": 103113
+    },
+    "crests/us-cfb-36.png": {
+      "sha256": "356212f740fd77198672d89b67e66d91c514c8892123f77cd2c63071ce6c8706",
+      "bytes": 98471
+    },
+    "crests/us-cfb-21.png": {
+      "sha256": "7b084aa3cbb580cc26253ef38134dc1f52c3605f66f0dc6542b2abcc0fdf1dcc",
+      "bytes": 19592
+    },
+    "crests/us-cfb-328.png": {
+      "sha256": "d2cb5546e8f39a2cffebd99ddbb06be2bb4b4b634414a6e628573ad4bd04f1f2",
+      "bytes": 17397
+    },
+    "crests/us-cfb-265.png": {
+      "sha256": "13774f9131a5b477a7be0b6def39516c9a4c5752a7add4d0a4eb259a174db289",
+      "bytes": 33723
+    },
+    "crests/us-cfb-96.png": {
+      "sha256": "6f5dec8dea23de372677085b6ecc0d8f49420e3d0a0a5336e7165c94160f5015",
+      "bytes": 15651
+    },
+    "crests/us-cfb-61.png": {
+      "sha256": "fa5c7fb14d5ffa38eaddfeb80161835e60a3d496b57db5e0ebda5e6475226d8a",
+      "bytes": 31931
+    },
+    "crests/us-cfb-333.png": {
+      "sha256": "bb55649cd4257a7d13b58db3f6cc85af8672b43f6eb215b6e729c7916ba5e4b8",
+      "bytes": 29455
+    },
+    "crests/us-cfb-99.png": {
+      "sha256": "d02e29a9f8824740d848b4a83c574b1c1942ba1cdee61b3ee08611634cc86b46",
+      "bytes": 9913
+    },
+    "crests/us-cfb-2633.png": {
+      "sha256": "1ef03aa847164f52dee3c8bfea023e3b75915231c01250889a549ae08b2ec9b8",
+      "bytes": 9159
+    },
+    "crests/us-cfb-57.png": {
+      "sha256": "2e70460ca7c02a03d238ec4d9dce163a22401bfaa9842cbbf2f1ac1a991d6d50",
+      "bytes": 99235
+    },
+    "crests/us-cfb-145.png": {
+      "sha256": "61988dd6fb46c4c5dad612e7ef14eeee56b63ada3a0758b30ccf418213ecd826",
+      "bytes": 32145
+    },
+    "crests/us-cfb-142.png": {
+      "sha256": "bb4a26eac90ad2ca3557f18180dc0f1cbdf88ba013c15c3293071701a3f43b53",
+      "bytes": 63688
+    },
+    "crests/us-cfb-251.png": {
+      "sha256": "12d69bb78c3443bdbcc5a7659f288840a7a3862d70043eda3d8868a229eb7696",
+      "bytes": 16632
+    },
+    "crests/us-cfb-201.png": {
+      "sha256": "19f8f9a3254b9c85ffacf42de7b4d00e1186fbb0b55effdabe9c6d0a3f487ddf",
+      "bytes": 16066
+    },
+    "crests/us-cfb-344.png": {
+      "sha256": "1854b6d52609c4db7daacc59ce122017c3eabd2e70b9c66deeec297183d4d46b",
+      "bytes": 71584
+    },
+    "crests/us-cfb-2.png": {
+      "sha256": "80b9ba2db8d91211dc4f1a57ea855d34f6ef1796795e60d5545f91a49af8bf39",
+      "bytes": 36407
+    },
+    "crests/us-cfb-2579.png": {
+      "sha256": "c9e93c5450038047b77651cc3713964b83147bfd8df1a96d299f1e190aad002c",
+      "bytes": 94680
+    },
+    "crests/us-cfb-245.png": {
+      "sha256": "0da7ac07d04adcd38707b88a4198e988b830ed49a0ab6c9378cfb4cfb980aa08",
+      "bytes": 10157
+    },
+    "crests/us-cfb-8.png": {
+      "sha256": "16e44ba49923991c70b824707a4c541327834a308472ca471f0001805a6a8d91",
+      "bytes": 48398
+    },
+    "crests/us-cfb-238.png": {
+      "sha256": "cdb3df344d224cae8b03a9f23f6e15424267095644cc211e0e0278c6e53986c4",
+      "bytes": 31283
+    },
+    "crests/us-cfb-256.png": {
+      "sha256": "585459126d87e56750ae902d78b198f63e44b8a6cac5c25b1a6c9483366229f5",
+      "bytes": 27731
+    },
+    "crests/us-cfb-2026.png": {
+      "sha256": "487c6f3fbe9c41cf532b6de285f1d35585ee7ca9510e5aa45000d97a1f597e5d",
+      "bytes": 30233
+    },
+    "crests/us-cfb-2247.png": {
+      "sha256": "e8680ddd6596d15818a8fa489831f6e81605c59ba517eb10940f6eb31ba1a332",
+      "bytes": 56122
+    },
+    "crests/us-cfb-276.png": {
+      "sha256": "1da7fba7069492d881b01a375a5ffde5632273d31118d4466d1b92db447daefb",
+      "bytes": 25791
+    },
+    "crests/us-cfb-290.png": {
+      "sha256": "70309e48c4248f1eafe5cb07f266fe8210f46f6dfcd58590febd7f9b2f616eb9",
+      "bytes": 90271
+    },
+    "crests/us-cfb-324.png": {
+      "sha256": "16b25eaa685f36feaa1fa315a91d58c83349fe7401eed3bd6e396552006a7f93",
+      "bytes": 78429
+    },
+    "crests/us-cfb-295.png": {
+      "sha256": "d7715a34978cfdb27bdb863a6c0de3d7a4c122e80de0c72397b8a23aa3d10fa7",
+      "bytes": 82106
+    },
+    "crests/us-cfb-2348.png": {
+      "sha256": "7623ee59943d7b5bd86839cc947791b42b407690366c5ce6106992f2510a46c7",
+      "bytes": 18637
+    },
+    "crests/us-cfb-309.png": {
+      "sha256": "504a8c3ff5469e6c367e3925e573324e8efd0c0e42a034658e1609a62f1b1ed3",
+      "bytes": 56113
+    },
+    "crests/us-cfb-6.png": {
+      "sha256": "178ada0fb7df8fbf295d6001a992835876f2cbde64225d35ff0ca7dfdb374c2c",
+      "bytes": 75924
+    },
+    "crests/us-cfb-2032.png": {
+      "sha256": "86231f0ce7486f40023e31609b666659c1538a6c2e4d8d3673a0eeab99cd05ba",
+      "bytes": 64080
+    },
+    "crests/us-cfb-2653.png": {
+      "sha256": "d993ecfbd487072931fa99eb42b7c525768630a4a10884c7b7a1b6a2fc78bfe5",
+      "bytes": 23779
+    },
+    "crests/us-cfb-2572.png": {
+      "sha256": "4a210457f8f078c29cb143f9bd8b1ae666420e8973edd12c5ad5ce4fdc3f5945",
+      "bytes": 26399
+    },
+    "crests/us-cfb-2433.png": {
+      "sha256": "ccf675e2c704d23dc35eec58217202e2f50eb124275e6cd212df739326081e72",
+      "bytes": 55851
+    }
+  }
+}

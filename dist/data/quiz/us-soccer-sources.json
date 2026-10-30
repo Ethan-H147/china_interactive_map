@@ -1,0 +1,1050 @@
+{
+  "season": "2026",
+  "asOf": "2026-10-29",
+  "rosterFile": "scripts/us-sports-sources/soccer/clubs.json",
+  "rosterSha256": "3db2fa39475ef5c9fd8bcc06b1dc361ff7a0a3a4baddd169ea00aafbe659e97a",
+  "leagues": [
+    {
+      "id": "usa.1",
+      "tier": 1,
+      "name": "MLS",
+      "count": 30,
+      "sourceUrl": "https://www.mlssoccer.com/league-reports/competition-guidelines/"
+    },
+    {
+      "id": "usa.usl.1",
+      "tier": 2,
+      "name": "USL Championship",
+      "count": 25,
+      "sourceUrl": "https://www.uslsoccer.com/news_article/show/1351433"
+    },
+    {
+      "id": "usa.usl.l1",
+      "tier": 3,
+      "name": "USL League One",
+      "count": 17,
+      "sourceUrl": "https://www.uslsoccer.com/news_article/show/1351434"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "US-SPORT-us-soccer-18418",
+      "en": "Atlanta United FC",
+      "city": "Atlanta, Georgia",
+      "stadium": "Mercedes-Benz Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mercedes-Benz_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-20906",
+      "en": "Austin FC",
+      "city": "Austin, Texas",
+      "stadium": "Q2 Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Q2_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20906.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-9720",
+      "en": "CF Montréal",
+      "city": "Montreal",
+      "stadium": "Saputo Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Saputo_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-21300",
+      "en": "Charlotte FC",
+      "city": "Charlotte, North Carolina",
+      "stadium": "Bank of America Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bank_of_America_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-182",
+      "en": "Chicago Fire FC",
+      "city": "Chicago, Illinois",
+      "stadium": "Soldier Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Soldier_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "note": "Primary home is Soldier Field. Some 2026 matches move to SeatGeek Stadium in Bridgeview because of Chicago Bears scheduling conflicts."
+    },
+    {
+      "id": "US-SPORT-us-soccer-184",
+      "en": "Colorado Rapids",
+      "city": "Commerce City, Colorado",
+      "stadium": "Dick's Sporting Goods Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dick's_Sporting_Goods_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/184.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-183",
+      "en": "Columbus Crew",
+      "city": "Columbus, Ohio",
+      "stadium": "ScottsMiracle-Gro Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/ScottsMiracle-Gro_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-193",
+      "en": "D.C. United",
+      "city": "Washington, District of Columbia",
+      "stadium": "Audi Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Audi_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18267",
+      "en": "FC Cincinnati",
+      "city": "Cincinnati, Ohio",
+      "stadium": "TQL Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/TQL_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-185",
+      "en": "FC Dallas",
+      "city": "Frisco, Texas",
+      "stadium": "Toyota Stadium (Texas)",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Toyota_Stadium_(Texas)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/185.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-6077",
+      "en": "Houston Dynamo FC",
+      "city": "Houston, Texas",
+      "stadium": "Shell Energy Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Shell_Energy_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-20232",
+      "en": "Inter Miami CF",
+      "city": "Miami, Florida",
+      "stadium": "Nu Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Nu_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+      "note": "Inter Miami moved to Nu Stadium at Miami Freedom Park in April 2026, replacing its former Fort Lauderdale ground."
+    },
+    {
+      "id": "US-SPORT-us-soccer-187",
+      "en": "LA Galaxy",
+      "city": "Carson, California",
+      "stadium": "Dignity Health Sports Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dignity_Health_Sports_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/187.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18966",
+      "en": "LAFC",
+      "city": "Los Angeles, California",
+      "stadium": "BMO Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/BMO_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17362",
+      "en": "Minnesota United FC",
+      "city": "Saint Paul, Minnesota",
+      "stadium": "Allianz Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allianz_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17362.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18986",
+      "en": "Nashville SC",
+      "city": "Nashville, Tennessee",
+      "stadium": "Geodis Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Geodis_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-189",
+      "en": "New England Revolution",
+      "city": "Foxborough, Massachusetts",
+      "stadium": "Gillette Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gillette_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17606",
+      "en": "New York City FC",
+      "city": "New York, New York",
+      "stadium": "Yankee Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Yankee_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+      "note": "Primary home is Yankee Stadium in the Bronx. Several 2026 fixtures use Citi Field in Queens; the new Etihad Park opens in 2027."
+    },
+    {
+      "id": "US-SPORT-us-soccer-12011",
+      "en": "Orlando City SC",
+      "city": "Orlando, Florida",
+      "stadium": "Inter.co Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Inter.co_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-10739",
+      "en": "Philadelphia Union",
+      "city": "Chester, Pennsylvania",
+      "stadium": "Subaru Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Subaru_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-9723",
+      "en": "Portland Timbers",
+      "city": "Portland, Oregon",
+      "stadium": "Providence Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Providence_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9723.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-4771",
+      "en": "Real Salt Lake",
+      "city": "Sandy, Utah",
+      "stadium": "America First Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/America_First_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-190",
+      "en": "Red Bull New York",
+      "city": "Harrison, New Jersey",
+      "stadium": "Sports Illustrated Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sports_Illustrated_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-22529",
+      "en": "San Diego FC",
+      "city": "San Diego, California",
+      "stadium": "Snapdragon Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Snapdragon_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-191",
+      "en": "San Jose Earthquakes",
+      "city": "San Jose, California",
+      "stadium": "PayPal Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/PayPal_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/191.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-9726",
+      "en": "Seattle Sounders FC",
+      "city": "Seattle, Washington",
+      "stadium": "Lumen Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lumen_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9726.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-186",
+      "en": "Sporting Kansas City",
+      "city": "Kansas City, Kansas",
+      "stadium": "Sporting Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sporting_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/186.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-21812",
+      "en": "St. Louis CITY SC",
+      "city": "St. Louis, Missouri",
+      "stadium": "Energizer Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Energizer_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21812.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-7318",
+      "en": "Toronto FC",
+      "city": "Toronto",
+      "stadium": "BMO Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/BMO_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-9727",
+      "en": "Vancouver Whitecaps",
+      "city": "Vancouver",
+      "stadium": "BC Place",
+      "coordinateSource": "https://en.wikipedia.org/wiki/BC_Place",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19405",
+      "en": "Birmingham Legion FC",
+      "city": "Birmingham, Alabama",
+      "stadium": "Protective Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Protective_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19405.png",
+      "note": "Primary home is Protective Stadium. Several 2026 matches, including October 18, moved individually to Dunnavant Valley Fields; that temporary match venue is not the season’s primary ground."
+    },
+    {
+      "id": "US-SPORT-us-soccer-131579",
+      "en": "Brooklyn FC",
+      "city": "Brooklyn",
+      "stadium": "Maimonides Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Maimonides_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131579.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-9729",
+      "en": "Charleston Battery",
+      "city": "Mount Pleasant, South Carolina",
+      "stadium": "Patriots Point Soccer Complex",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Patriots_Point_Soccer_Complex",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/9729.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17830",
+      "en": "Colorado Springs Switchbacks FC",
+      "city": "Colorado Springs, Colorado",
+      "stadium": "Weidner Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Weidner_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17830.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19179",
+      "en": "Detroit City FC",
+      "city": "Hamtramck, Michigan",
+      "stadium": "Keyworth Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Keyworth_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19179.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19407",
+      "en": "El Paso Locomotive FC",
+      "city": "El Paso, Texas",
+      "stadium": "Southwest University Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Southwest_University_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19407.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18446",
+      "en": "FC Tulsa",
+      "city": "Tulsa, Oklahoma",
+      "stadium": "Oneok Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Oneok_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18446.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19411",
+      "en": "Hartford Athletic",
+      "city": "Hartford, Connecticut",
+      "stadium": "Trinity Health Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Trinity_Health_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19411.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17360",
+      "en": "Indy Eleven",
+      "city": "Indianapolis, Indiana",
+      "stadium": "IU Michael A. Carroll Track & Soccer Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/IU_Michael_A._Carroll_Track_%26_Soccer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17360.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18987",
+      "en": "Las Vegas Lights FC",
+      "city": "Las Vegas, Nevada",
+      "stadium": "Cashman Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Cashman_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18987.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-21822",
+      "en": "Lexington SC",
+      "city": "Lexington, Kentucky",
+      "stadium": "Lexington SC Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lexington_SC_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21822.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19410",
+      "en": "Loudoun United FC",
+      "city": "Leesburg, Virginia",
+      "stadium": "Segra Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Segra_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19410.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17832",
+      "en": "Louisville City FC",
+      "city": "Louisville, Kentucky",
+      "stadium": "Lynn Family Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lynn_Family_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17832.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18159",
+      "en": "Miami FC",
+      "city": "Miami, Florida",
+      "stadium": "Pitbull Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Pitbull_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18159.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-21370",
+      "en": "Monterey Bay FC",
+      "city": "Seaside, California",
+      "stadium": "Cardinale Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Cardinale_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21370.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19408",
+      "en": "New Mexico United",
+      "city": "Albuquerque, New Mexico",
+      "stadium": "Isotopes Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Isotopes_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19408.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-20687",
+      "en": "Oakland Roots SC",
+      "city": "Oakland, California",
+      "stadium": "Oakland Coliseum",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Oakland_Coliseum",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20687.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18455",
+      "en": "Orange County SC",
+      "city": "Irvine, California",
+      "stadium": "Championship Soccer Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Championship_Soccer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18455.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17850",
+      "en": "Phoenix Rising FC",
+      "city": "Phoenix, Arizona",
+      "stadium": "Phoenix Rising Soccer Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Phoenix_Rising_Soccer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17850.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17827",
+      "en": "Pittsburgh Riverhounds SC",
+      "city": "Pittsburgh, Pennsylvania",
+      "stadium": "F.N.B. Stadium (Pittsburgh)",
+      "coordinateSource": "https://en.wikipedia.org/wiki/F.N.B._Stadium_(Pittsburgh)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17827.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-22164",
+      "en": "Rhode Island FC",
+      "city": "Pawtucket, Rhode Island",
+      "stadium": "Centreville Bank Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Centreville_Bank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22164.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17828",
+      "en": "Sacramento Republic FC",
+      "city": "Sacramento, California",
+      "stadium": "Heart Health Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Heart_Health_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17828.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-18265",
+      "en": "San Antonio FC",
+      "city": "San Antonio, Texas",
+      "stadium": "Toyota Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Toyota_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/18265.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-131578",
+      "en": "Sporting JAX",
+      "city": "Jacksonville",
+      "stadium": "Hodges Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hodges_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131578.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17361",
+      "en": "Tampa Bay Rowdies",
+      "city": "St. Petersburg, Florida",
+      "stadium": "Al Lang Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Al_Lang_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17361.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-22526",
+      "en": "AV Alta FC",
+      "city": "Lancaster, California",
+      "stadium": "The Hangar (Lancaster, California)",
+      "coordinateSource": "https://en.wikipedia.org/wiki/The_Hangar_(Lancaster%2C_California)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22526.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-131581",
+      "en": "Athletic Club Boise",
+      "city": "Garden City, Idaho",
+      "stadium": "Stadium at Expo Idaho",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stadium_at_Expo_Idaho",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131581.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17826",
+      "en": "Charlotte Independence",
+      "city": "Charlotte, North Carolina",
+      "stadium": "American Legion Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/American_Legion_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17826.png",
+      "note": "Primary home is American Legion Memorial Stadium. The 2026 home schedule is split with the Mecklenburg County Sportsplex at Matthews."
+    },
+    {
+      "id": "US-SPORT-us-soccer-20000",
+      "en": "Chattanooga Red Wolves SC",
+      "city": "East Ridge, Tennessee",
+      "stadium": "CHI Memorial Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/CHI_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20000.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-20671",
+      "en": "Corpus Christi FC",
+      "city": "Corpus Christi",
+      "stadium": "Cabaniss Athletic Complex – stadium",
+      "coordinateSource": "https://www.openstreetmap.org/way/262246098",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20671.png",
+      "note": "Temporary 2026 ground uses the complex’s 8,000-seat stadium, not the adjacent baseball field or the new stadium still under construction."
+    },
+    {
+      "id": "US-SPORT-us-soccer-22525",
+      "en": "FC Naples",
+      "city": "Naples, Florida",
+      "stadium": "Paradise Coast Sports Complex",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Paradise_Coast_Sports_Complex",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22525.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-131580",
+      "en": "Fort Wayne FC",
+      "city": "Fort Wayne",
+      "stadium": "Ruoff Mortgage Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ruoff_Mortgage_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131580.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19995",
+      "en": "Forward Madison FC",
+      "city": "Madison, Wisconsin",
+      "stadium": "Breese Stevens Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Breese_Stevens_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19995.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-19964",
+      "en": "Greenville Triumph SC",
+      "city": "Mauldin, South Carolina",
+      "stadium": "GE Vernova Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/GE_Vernova_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/19964.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-131582",
+      "en": "New York Cosmos",
+      "city": "Paterson",
+      "stadium": "Hinchliffe Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hinchliffe_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/131582.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-21821",
+      "en": "One Knoxville SC",
+      "city": "Knoxville, Tennessee",
+      "stadium": "Covenant Health Park",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Covenant_Health_Park",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/21821.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-22528",
+      "en": "Portland Hearts of Pine",
+      "city": "Portland, Maine",
+      "stadium": "Fitzpatrick Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Fitzpatrick_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22528.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-17545",
+      "en": "Richmond Kickers",
+      "city": "Richmond, Virginia",
+      "stadium": "City Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/City_Stadium_(Richmond)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/17545.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-22542",
+      "en": "Sarasota Paradise",
+      "city": "Lakewood Ranch, Florida",
+      "stadium": "Premier Sports Campus – stadium",
+      "coordinateSource": "https://www.openstreetmap.org/way/678286744",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22542.png",
+      "note": "Dot marks the named stadium pitch within the 23-field Premier Sports Campus, matched against its retained field map; it is not a broad facility centroid."
+    },
+    {
+      "id": "US-SPORT-us-soccer-22130",
+      "en": "Spokane Velocity FC",
+      "city": "Spokane, Washington",
+      "stadium": "ONE Spokane Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/One_Spokane_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22130.png"
+    },
+    {
+      "id": "US-SPORT-us-soccer-20684",
+      "en": "Union Omaha",
+      "city": "Omaha, Nebraska",
+      "stadium": "Morrison Stadium",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Morrison_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/20684.png",
+      "note": "Home for 2026–27 is Morrison Stadium in Omaha, replacing Werner Park in Papillion. The provider’s Papillion city field is stale."
+    },
+    {
+      "id": "US-SPORT-us-soccer-22524",
+      "en": "Westchester SC",
+      "city": "Mount Vernon, New York",
+      "stadium": "The Stadium at Memorial Field",
+      "coordinateSource": "https://en.wikipedia.org/wiki/The_Stadium_at_Memorial_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/soccer/500/22524.png"
+    }
+  ],
+  "images": {
+    "vendor/us-sports/soccer/us-soccer-18418.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18418.png",
+      "inputSha256": "b6a887b8d5432f94efe26f7b972b8c501871f67dc8eac941540fb74c6d5ae975",
+      "sha256": "153265d4c84cff8b58034b2ed5efbcd122f9a82424e6f38532695ecfd169c554",
+      "bytes": 21088
+    },
+    "vendor/us-sports/soccer/us-soccer-20906.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/20906.png",
+      "inputSha256": "887db8b0ca64f2dbb360ce0f42900a29432d24e6038f054402e923642955979c",
+      "sha256": "6771d210395e254497140a534d54348db7b2faa818d645c21d9cc4c3413fd087",
+      "bytes": 11482
+    },
+    "vendor/us-sports/soccer/us-soccer-9720.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/9720.png",
+      "inputSha256": "0b8b61be58b10eeded04e1604f6d1236fdd6c2f758bbf9d68530981c8c1b3e19",
+      "sha256": "1b38c98e3e8ae4b8490defa89ab80f14fb6c384de15d5d12ddb8fbd2950a6aec",
+      "bytes": 23980
+    },
+    "vendor/us-sports/soccer/us-soccer-21300.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/21300.png",
+      "inputSha256": "1cc47a339c50dd3351302b60ee73912e2a6eb166b5f2d490d6f280b7d7e2aeea",
+      "sha256": "1709a495064c0218c37603665673581b0fb7513667b38adea68af7c3e55d124d",
+      "bytes": 18236
+    },
+    "vendor/us-sports/soccer/us-soccer-182.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/182.png",
+      "inputSha256": "b6c149b5cb0699cb5995cec3cb6cf9592222606091834ddad05e42d37f3e8a84",
+      "sha256": "d98e3f0d1a7c41a725eaeb686fd96e5b443d287e7a9c48fe9f09e2ad802aa48e",
+      "bytes": 14948
+    },
+    "vendor/us-sports/soccer/us-soccer-184.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/184.png",
+      "inputSha256": "4b3350d57155d81d2ac711eb1dd5729c24dc80ce8ab1aa13c473cd2ddb31235e",
+      "sha256": "abe22416167dac8c36712246a82835ec7f9005453502a227a6b9322012bb393b",
+      "bytes": 23448
+    },
+    "vendor/us-sports/soccer/us-soccer-183.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/183.png",
+      "inputSha256": "bf45239688c9d69144f0d0c3efef4de38f3a0db2c0a2b3a32df054330f707664",
+      "sha256": "07f3575bc44525b64ae033eb2e6e4f3a2acd233c57a9330626e6dded4932175e",
+      "bytes": 9566
+    },
+    "vendor/us-sports/soccer/us-soccer-193.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/193.png",
+      "inputSha256": "4dec9599aed2944426c02d87d2d17ad7f3aad054bf9c0b1359272a97419e66f1",
+      "sha256": "84da566ff306d5f6d7553e45255ac1040e80f6c8abf62441ebb67c39ce7a16a7",
+      "bytes": 12936
+    },
+    "vendor/us-sports/soccer/us-soccer-18267.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18267.png",
+      "inputSha256": "fb8309060d250fb14ec2b96bee86437c730e12bb9ad7b20d99352cb5c7a19c1b",
+      "sha256": "2392bae04655a176dc86e0f619afa38e4f222b4e964359f74a3916c261db1757",
+      "bytes": 21778
+    },
+    "vendor/us-sports/soccer/us-soccer-185.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/185.png",
+      "inputSha256": "16d36edbbfcb1bfcf252901b8d29386d07557e73e28b596dfbb5236d41c25603",
+      "sha256": "1e4ab9329576c96d85050c31ae2c731d852f8f0a10719f980561535f1418e0ad",
+      "bytes": 21178
+    },
+    "vendor/us-sports/soccer/us-soccer-6077.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/6077.png",
+      "inputSha256": "5bc8f15d3917f6d6ff8f106be70f7b8bf1dd38017fdbe3ec2467ab3a00494a62",
+      "sha256": "c453d42d22b69da6726d4509e68dd12eb5249bedf92010c6ecd9b252edd4ca7d",
+      "bytes": 13904
+    },
+    "vendor/us-sports/soccer/us-soccer-20232.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/20232.png",
+      "inputSha256": "a1ea4f53629ee3849d72d928d4c54dadb1c3e4e57dc842aba4dbba59c08d12f4",
+      "sha256": "41689d5ce93520650a23e905f2a956aa251f8f851b84448e622eeabdbf66ce57",
+      "bytes": 18060
+    },
+    "vendor/us-sports/soccer/us-soccer-187.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/187.png",
+      "inputSha256": "e0418f5d80a7c1f28d2ea234084d22006c8293131165d848869959b1be5f0d04",
+      "sha256": "c339c9a8a56570b771a651b088ab02603468bd19b16b9e9471bdf2dd0ffe23ba",
+      "bytes": 19980
+    },
+    "vendor/us-sports/soccer/us-soccer-18966.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
+      "inputSha256": "1433adb2ec11c30bbcd306fce3674f2d253372ae2fd4492e210b222d7d24439f",
+      "sha256": "e56688adfda51949f3dde0030ebeb1a0aead08caa5d14180829b4002712236aa",
+      "bytes": 12184
+    },
+    "vendor/us-sports/soccer/us-soccer-17362.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17362.png",
+      "inputSha256": "a3e9a44beb8b98670b163d8426300cb4b0a9d942dbaedbb2333da039e95a6ced",
+      "sha256": "38b5290b3e3d83e08f856c94ef6b4ba06f4a4e477d3074a6a29f42165711e9ba",
+      "bytes": 12946
+    },
+    "vendor/us-sports/soccer/us-soccer-18986.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18986.png",
+      "inputSha256": "2e94271db907c688336a869e40548158b1e5e5d625affd16e1188c4753e1aae5",
+      "sha256": "56a09a98fe8bec47bb2755e62e8b17a4293adf60818c20a10950935d1c67e80b",
+      "bytes": 9480
+    },
+    "vendor/us-sports/soccer/us-soccer-189.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/189.png",
+      "inputSha256": "a51f73cd32f2d68d342c497e98319665c99f9cd99e88095ebcf6be6d82998f83",
+      "sha256": "70ebe816fb966e096dc2b91ca0f37c2214052690d57a8baa366374b301d743dd",
+      "bytes": 25682
+    },
+    "vendor/us-sports/soccer/us-soccer-17606.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17606.png",
+      "inputSha256": "df7836507d3a70537ea11964d614f19193a2cbc4dcf7c8476c22382e7122b9ed",
+      "sha256": "0743d9c3855987090bb6c8954db7a0c72ebeee0b2a8dfa5a0f045a5007f618c8",
+      "bytes": 33380
+    },
+    "vendor/us-sports/soccer/us-soccer-12011.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/12011.png",
+      "inputSha256": "9a9535bc6c822cfd76a65026320c860350bd6b0a3016fa45bd280dd4a9ec7a1b",
+      "sha256": "16d748f4e7b00057fdaa6e2cb8bfeab8131c0e19ff3acff6422b5564de4d74ea",
+      "bytes": 23306
+    },
+    "vendor/us-sports/soccer/us-soccer-10739.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/10739.png",
+      "inputSha256": "10f562b29097b165975c82cc309a2fb70ff73e11b8bbc9a5847ba8181de7dd1f",
+      "sha256": "2d840d4c4ffa03aba72354a45c9c38f22a0d90457cb74ec52a6b7e306ec158e1",
+      "bytes": 31802
+    },
+    "vendor/us-sports/soccer/us-soccer-9723.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/9723.png",
+      "inputSha256": "71df1e49bd21cc5a9565e1620dcb9f1f94b653d8e0b2ac3527518c7bebb5d868",
+      "sha256": "4abafd96ee2bdeb826ef965d5c39de83a7ddf6968d1112eaa59a4a00e4e2c108",
+      "bytes": 17566
+    },
+    "vendor/us-sports/soccer/us-soccer-4771.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/4771.png",
+      "inputSha256": "dc4210e86d165c280edbd1cb80959ac2f47999e153a344a1b3e3e5d30157aade",
+      "sha256": "c13a8f5431b8de2c125619aaecb6855ef30676d04c791a2def288537e08840bf",
+      "bytes": 22682
+    },
+    "vendor/us-sports/soccer/us-soccer-190.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/190.png",
+      "inputSha256": "84b94381a47ab86bc72cd9ee9def55c94163b0d9ba162dcbc54ddb56f4e464f8",
+      "sha256": "280139214616fd55f14dbcedf0437cc53549c4d9626fde2287580f34bae0344a",
+      "bytes": 20832
+    },
+    "vendor/us-sports/soccer/us-soccer-22529.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22529.png",
+      "inputSha256": "97143b0d99103544e189654d23c2341896ec90900db809af149de47b6dfc9227",
+      "sha256": "ae1456927f3d9edd18d7a50a258631dc1117a5a9fd02f4f616571a157cd74f14",
+      "bytes": 28178
+    },
+    "vendor/us-sports/soccer/us-soccer-191.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/191.png",
+      "inputSha256": "b1504d5ddd5799a073634a712a3d0fbb1ad7c2e7a1f22f8a87c475ea46b6c54b",
+      "sha256": "eadaf3369ab7334dfb9a490b513e42d03448809318f32a0f244c1dfbbcedab21",
+      "bytes": 19278
+    },
+    "vendor/us-sports/soccer/us-soccer-9726.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/9726.png",
+      "inputSha256": "2d44906cfcc797aefdc9010ac7d6b1438e54c72c12723384530d4378fc4578b4",
+      "sha256": "d9b3ad23e450e3b33c240bc207191631111305d62e1bca0e1ac8ac8833cd6ef8",
+      "bytes": 17326
+    },
+    "vendor/us-sports/soccer/us-soccer-186.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/186.png",
+      "inputSha256": "21edfde914c500ae1d3ed2b2fdeb8e08131c4e8ce22a20bd88ed7da0f298e446",
+      "sha256": "525e092c468326be755fc569e3064468e0e67f8f1c89b31dd1683af8de4639f6",
+      "bytes": 22460
+    },
+    "vendor/us-sports/soccer/us-soccer-21812.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/21812.png",
+      "inputSha256": "b2459c995f0be4c96ed622c21c795b1d53764ea58bb82a3e386ce6b9fb0a3a02",
+      "sha256": "8f89d446bdc8278187d8f7f49f6197c02d8cb01797e9dfbfe3df768bdf82b149",
+      "bytes": 12348
+    },
+    "vendor/us-sports/soccer/us-soccer-7318.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/7318.png",
+      "inputSha256": "46795e794ba0426fa0f8289d84049b06cb070ae3db5e42e1dd16cf36f1976683",
+      "sha256": "61bb2786534d31db0fb5a9ee5cfbdc0b2a0c38312fcebc95bc839683f9cb97c9",
+      "bytes": 18174
+    },
+    "vendor/us-sports/soccer/us-soccer-9727.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/9727.png",
+      "inputSha256": "01b924e6ed2483ba9957bf9f523b2dab008721ef2b6591d7a3ca6f5ddef3137f",
+      "sha256": "2cf8ad3ba04506bdee75ecf36946a309fd1cfc8d2e43ba289f5b0bf40a6b1771",
+      "bytes": 16804
+    },
+    "vendor/us-sports/soccer/us-soccer-19405.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19405.png",
+      "inputSha256": "f6328981c0d96f23e98de511cf38f6098b0648b7095d943537e563d0b37967f1",
+      "sha256": "7e282209d6ef796242322aee8dc7e6c1c41d7cf47f7f8919ac53a6a70470c82b",
+      "bytes": 7972
+    },
+    "vendor/us-sports/soccer/us-soccer-131579.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/131579.png",
+      "inputSha256": "d8a6893a4cb194829ca8722b5c4f5cdd2dd2234bd71e36563f7111132e5c07ac",
+      "sha256": "a8e20d06d42acf6a62b407ceee9ae5c9017d83343bcd7fadf3fac7c239d9fef9",
+      "bytes": 11184
+    },
+    "vendor/us-sports/soccer/us-soccer-9729.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/9729.png",
+      "inputSha256": "f362ac250e9569cdc4379161f0962d98b54d3254d5501d5f1793bb179e8b0046",
+      "sha256": "a4542f55f1bf67172adebf6c53027ae13555c48635cd6fc4df952fa46cd17dc1",
+      "bytes": 22652
+    },
+    "vendor/us-sports/soccer/us-soccer-17830.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17830.png",
+      "inputSha256": "e81dbdbebbfa49d1dddbe62204d55dd76373dcee60d9cd6ab99b2af8f8615dfc",
+      "sha256": "19b193988ee10e23b79739554b9efc061c0a09db6423cd4d4e59333cae25abea",
+      "bytes": 16358
+    },
+    "vendor/us-sports/soccer/us-soccer-19179.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19179.png",
+      "inputSha256": "d509fbe9e3fe3d9b2af2e03faff76bce8e89376752ca00bca7fb7fdd8f5f7700",
+      "sha256": "a084a8140d91688a1499acef0cfd1c325bb66681f9d0de49289afe9e7e5dd18c",
+      "bytes": 20822
+    },
+    "vendor/us-sports/soccer/us-soccer-19407.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19407.png",
+      "inputSha256": "29f53dd05a5e9f1e5dc9d96c9bca1f42a27ca06d899ad42b11fc4d0a54d76b2a",
+      "sha256": "d477719eb153dfc7a78dd3aa7505e2f1de2e4e984fe373990d96e9692b5d3f23",
+      "bytes": 20886
+    },
+    "vendor/us-sports/soccer/us-soccer-18446.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18446.png",
+      "inputSha256": "faf663876c9b837344bdc58a149e588440ec8690c904c620471fa7266ec18a9e",
+      "sha256": "7f6a840bc27afc4299d4c748b02a631ee6e15e7c1a1fb84cff18a7611470b115",
+      "bytes": 13354
+    },
+    "vendor/us-sports/soccer/us-soccer-19411.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19411.png",
+      "inputSha256": "d3e6811661725af3e94270b35c82b764113422b48a000bf60f00b3769ad31ac2",
+      "sha256": "a4f671218830fa8adb73963a36397eaa4d8353d44a510d416a1b94483e157393",
+      "bytes": 18032
+    },
+    "vendor/us-sports/soccer/us-soccer-17360.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17360.png",
+      "inputSha256": "aae243860bf4dec600d8d8a8cafe38ca27acf306d7f0022e0721a4024b318b1a",
+      "sha256": "7d5c05550d9dcbf6f27b60cb20371367f6d69b2326f1f35193683cbd62a9abdc",
+      "bytes": 25616
+    },
+    "vendor/us-sports/soccer/us-soccer-18987.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18987.png",
+      "inputSha256": "4878aed7321c3fd5d98f76289e86eda9a36cc5985f1154f4ec86fe12d3fa6a57",
+      "sha256": "95a1fe504c3bbf0ae683cb923b59924de42a4f7a658c8228e80f01ac55ac22ef",
+      "bytes": 21372
+    },
+    "vendor/us-sports/soccer/us-soccer-21822.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/21822.png",
+      "inputSha256": "df0f5a2d4047fa07b6fbac0100db27f0bc57c6e4675a654e2acf95cef537099f",
+      "sha256": "71836d82e80f4a0a96ee4b3b286108a4d0a58028e28ba90531ae6d7a9197afe4",
+      "bytes": 9586
+    },
+    "vendor/us-sports/soccer/us-soccer-19410.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19410.png",
+      "inputSha256": "71f7f569284ed0c66b082411b20ce413b1c966013694ace6d690ecdd578ee3ef",
+      "sha256": "b9e68515ea3a5e47581c8919c926a168b0577455c116b08864851678e2b8fc44",
+      "bytes": 10890
+    },
+    "vendor/us-sports/soccer/us-soccer-17832.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17832.png",
+      "inputSha256": "05c40eb7f484ba560ed2ff1150ebe9c877a831a5f5fca001597836c0ca1fdf88",
+      "sha256": "51b301bf19444b1ecf2f9bad15f97edfa49bafbdd19204aff77fb89c82dd7f87",
+      "bytes": 17358
+    },
+    "vendor/us-sports/soccer/us-soccer-18159.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18159.png",
+      "inputSha256": "caaa43740f00ba820497460358d0ef14b41e2a674de975b8d8d12272f0c17536",
+      "sha256": "0d16a41331ff150c21e8492957b3325b993d04d94dc91dfe195c685afe972bfe",
+      "bytes": 22782
+    },
+    "vendor/us-sports/soccer/us-soccer-21370.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/21370.png",
+      "inputSha256": "a63d9add60af0f630175a0ee00dbf0cb403e0deab565c187588da406ee973da9",
+      "sha256": "c3686fff8c39214819276e8536efb1bf7cb06344ff5639f0ed69a8a060149c64",
+      "bytes": 14838
+    },
+    "vendor/us-sports/soccer/us-soccer-19408.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19408.png",
+      "inputSha256": "7f0808774757af32bb2bbb93c2fadb9a17a0e53475c3dc30c50ee6e6722cc6bf",
+      "sha256": "55271363f9652754b5eef66de2d864174d98cc4a115e382c3232dd3079b713cd",
+      "bytes": 17232
+    },
+    "vendor/us-sports/soccer/us-soccer-20687.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/20687.png",
+      "inputSha256": "fd85d9d479720a81ce3fea21b68210020f9781fe32160693c53b8a78076f9d21",
+      "sha256": "171b4918f58ce2209230683c315c7ec417026864e3961016569eb65a99f04971",
+      "bytes": 23870
+    },
+    "vendor/us-sports/soccer/us-soccer-18455.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18455.png",
+      "inputSha256": "8d2515b047773df86a8a2e2c777159e60e8a1ccdd01be6531d4d737695952d65",
+      "sha256": "eaf03f7dab3693e672110536f2d2b258f1d09989f382e0fe550e65fe106e638a",
+      "bytes": 11598
+    },
+    "vendor/us-sports/soccer/us-soccer-17850.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17850.png",
+      "inputSha256": "f602097f5e979865371f432b8199c8909716c745ad5c879e09c5125022e7ffec",
+      "sha256": "24acb476aca199ca417cb633d8c5b5dc3ebdc46f9f8dbd3e0d77b2af95af88b2",
+      "bytes": 21344
+    },
+    "vendor/us-sports/soccer/us-soccer-17827.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17827.png",
+      "inputSha256": "479e868ff7a99e4fe17e4afdf096ddcc0c7b459660b43503e4245e0ba3527322",
+      "sha256": "00d1ada983666e324a6c2d2d78b2a96f3de20138b58b4d1b48a3e3b61e483a07",
+      "bytes": 34276
+    },
+    "vendor/us-sports/soccer/us-soccer-22164.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22164.png",
+      "inputSha256": "879ace76c3ecd1ee3ffbeafba7bcfd622b46e9d80ffeb54556161a3745e94ce6",
+      "sha256": "ea192297d599c2f4cef81eaee588b839eb643c91f299a5bb101f3227c471f50f",
+      "bytes": 17968
+    },
+    "vendor/us-sports/soccer/us-soccer-17828.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17828.png",
+      "inputSha256": "3442bf7892a2506c80bcb0ec649532ff7a8f4babfbf67378fa18d4a27a2d17c9",
+      "sha256": "68ca427f04d5e78e98f53507b16fa987b0c79abb85ea283d077414a3ecf53e4c",
+      "bytes": 26572
+    },
+    "vendor/us-sports/soccer/us-soccer-18265.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/18265.png",
+      "inputSha256": "3247ed9779abe2c8a87f816626a8b1aa15bd02771043698831e0b36e5193e431",
+      "sha256": "3e520506892aa5fe9e2a405c2420c0c2e91504fc804f124ab2dfd83ba26cf3fa",
+      "bytes": 21230
+    },
+    "vendor/us-sports/soccer/us-soccer-131578.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/131578.png",
+      "inputSha256": "92fcf7cae5a7a21f91685d8829d2d155d53976354fa187ae6d85d21676950d93",
+      "sha256": "1ee8875120106d6d69cb589495ffb9c526acb2fe800500f57bded2c815d4b1d6",
+      "bytes": 17424
+    },
+    "vendor/us-sports/soccer/us-soccer-17361.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17361.png",
+      "inputSha256": "fb422dbc0b3c6fbe69d8e72c574f5cbf19d0ff0ce76421ea24595397f4e1daaa",
+      "sha256": "8402c6c50a344c5c504cba7d8da1553a843163f5f7dcbd1df188c46104ccdc5f",
+      "bytes": 16202
+    },
+    "vendor/us-sports/soccer/us-soccer-22526.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22526.png",
+      "inputSha256": "e0dfef46c72e8017ae1350aeb536798fa9774949cad4d18e74e0ac49f0136c58",
+      "sha256": "becc172bde05429f34fa8da5cad55bfa35bc23abf98396f2f864020f014125e1",
+      "bytes": 12590
+    },
+    "vendor/us-sports/soccer/us-soccer-131581.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/131581.png",
+      "inputSha256": "14409084acd75d32dfc8b86b452ce9d5deb9c83bd7979f0257a21272ae0ce1cf",
+      "sha256": "dfdccf7792bae3139e6437bb48ac1284bcd4bba6452f280210026aa4ed5c2ac8",
+      "bytes": 12986
+    },
+    "vendor/us-sports/soccer/us-soccer-17826.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17826.png",
+      "inputSha256": "fde1bfbf66a80d851e1b0b1f1708cfe0701dcf2d5a625d124a345b603e90fffe",
+      "sha256": "fc2610852d0d156acb506b9c8b94c415c4d8122ab516aa26535758787fdab8a5",
+      "bytes": 28952
+    },
+    "vendor/us-sports/soccer/us-soccer-20000.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/20000.png",
+      "inputSha256": "2c252f3911b95c67c2868c13875b29033464b51bed93deb3fec1648306780819",
+      "sha256": "79d1b1e159d61a405c5e9551680ff94437f1bdb530941330595f4806012ad4fe",
+      "bytes": 20876
+    },
+    "vendor/us-sports/soccer/us-soccer-20671.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/20671.png",
+      "inputSha256": "37a6e1d5b51e4564dbffddef131e56c3f3170e332c50740936d2c2885ded2c8e",
+      "sha256": "635b2a641a39d9900267113ee0052cd50ff6994bfef33afcef593e7eee27a2ca",
+      "bytes": 20286
+    },
+    "vendor/us-sports/soccer/us-soccer-22525.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22525.png",
+      "inputSha256": "076dbe07db1389aa600f52acb0162cc36ab10b476eb2c85a3eaae4e57a222c38",
+      "sha256": "fd22b112dcb6851effbabfd730314f1188efa76b440c8d480bf872567befd86b",
+      "bytes": 20194
+    },
+    "vendor/us-sports/soccer/us-soccer-131580.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/131580.png",
+      "inputSha256": "a22d3fdee4b4dc558f82f34bf9213cf3ec0a8bf0093b58f034aa24960e152ae2",
+      "sha256": "4e5cc7fee91c65682b5a7ba5797e69e627cdfcc8ebf65e9be1f78d0ea103f9ba",
+      "bytes": 11232
+    },
+    "vendor/us-sports/soccer/us-soccer-19995.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19995.png",
+      "inputSha256": "137ddda2e63d2a9aa93127386996684a800582e8f2f3a52a9ca3320a5fbdac3e",
+      "sha256": "a474a34f72c9877899c2dc39e6b0dc47bf004ebb76025de66eb914e487cdb0e1",
+      "bytes": 22924
+    },
+    "vendor/us-sports/soccer/us-soccer-19964.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/19964.png",
+      "inputSha256": "b63dff3add4d4f28b80e5c8d516309fca147e3f3bbda85f28338626301fc550f",
+      "sha256": "477a22b853cb02f0d29b8ec0329713d158d415528faf2a7809ca4f4c8eb05be2",
+      "bytes": 12026
+    },
+    "vendor/us-sports/soccer/us-soccer-131582.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/131582.png",
+      "inputSha256": "b1911f34e4826cc22842318165e194b1cada580265f9f77c6112cf7c7c092a62",
+      "sha256": "63f2a6ee1d27ff5e86aa3343e13debc02ed00cec603ad8b99c54e55f9634a1d4",
+      "bytes": 21364
+    },
+    "vendor/us-sports/soccer/us-soccer-21821.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/21821.png",
+      "inputSha256": "5423ebdd667022ecd0fe17eeb3d751af6bb7cc51c449a33f12d5d6bbebbccc9a",
+      "sha256": "399389fc7c81e42f8584bc2fc9c43cf125e300a2965a65c96fe4b14f6b522aa0",
+      "bytes": 10770
+    },
+    "vendor/us-sports/soccer/us-soccer-22528.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22528.png",
+      "inputSha256": "efd402b15d2185d3733aa3c1920c9602ba5fb474f674348dde1d2ad6701230f4",
+      "sha256": "216d2e25effe30297d40c220981af55d0fde857b5c704ab250a7c4f1be32408a",
+      "bytes": 31310
+    },
+    "vendor/us-sports/soccer/us-soccer-17545.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/17545.png",
+      "inputSha256": "65d103225a1392bd701f001ad8fd790052684b4af77e86b1e8d9004dc1be626a",
+      "sha256": "e622288348cdcd38f588ad3e6296fdaaae6fc573cbce4511d682ac0932ac3484",
+      "bytes": 24854
+    },
+    "vendor/us-sports/soccer/us-soccer-22542.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22542.png",
+      "inputSha256": "9f2f51fa88d7f829950e5757a93137cc38f616a5ebd3dc62d807fb46f38d8ae8",
+      "sha256": "502bd02e52153942b5018e2c2a8d74edc86c672c988eb8f5ad2af216c7c59cd6",
+      "bytes": 20450
+    },
+    "vendor/us-sports/soccer/us-soccer-22130.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22130.png",
+      "inputSha256": "d84fa9cc1ca271a91c8376bc3df788563ff356b314b2c8eb608d8fa3b40f6c16",
+      "sha256": "fe658c02f192f89cbc517e0e9f87119eae4ac368a2d94db4263631f42f11d626",
+      "bytes": 6414
+    },
+    "vendor/us-sports/soccer/us-soccer-20684.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/20684.png",
+      "inputSha256": "083048960db72ed2465f5e7155055dbf31488164eaba17570f95f2ad06d944d4",
+      "sha256": "c006206516d2aa4653e385a4d7f7bfcb184d6d4d2daf32d1abca6afd9206f2b1",
+      "bytes": 12702
+    },
+    "vendor/us-sports/soccer/us-soccer-22524.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/soccer/500/22524.png",
+      "inputSha256": "f34812fdcfb0d17be93ad29282ba864a86313f1d8045f5e7fb22c290ddbf962e",
+      "sha256": "e5b9a277fe1aab3d83fc813ee919b596b089c43b65d9560f0272c45cb06f5dee",
+      "bytes": 36282
+    }
+  },
+  "crestCredit": "Team marks belong to their respective owners. Source URLs identify the original artwork."
+}

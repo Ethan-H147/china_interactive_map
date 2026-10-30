@@ -57,7 +57,7 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
  // The medal shown is the chosen quiz type's own.
  function updateMedal(){if(points){medal.hidden=true;return;}const best=highestMedal(quizRecords.data.bests,country,3,levels,document.getElementById(prefix+'-quiz-type')?.value);medal.hidden=!best;if(best)medal.innerHTML=medalMarkup(best.medal)+'<span>Highest level · '+best.label+'</span>';}
  quiz=createFirstLevelQuiz(map,host,{country,sidebar,prefix,tab,attachTab:false,overlay:true,returnPanelId:prefix+'-quiz-panel',
-  config:{level:3,plural:cities.plural||'Cities',singular:cities.singular||'city',title:cities.title||'City quiz',findInstruction:cities.findInstruction,nameInstruction:cities.nameInstruction,identifyInstruction:cities.identifyInstruction,scopeLabel:'Difficulty',scopes:levels.map(l=>({id:l.id,label:l.label})),bounds:cities.bounds,overseasLabel:cities.overseasLabel,includeOverseas:cities.overseasDefault??!!cities.overseasLabel},storageKey:scope=>country+'-'+(points?'football':'cities')+':'+scope,
+  config:{level:3,plural:cities.plural||'Cities',singular:cities.singular||'city',title:cities.title||'City quiz',findInstruction:cities.findInstruction,nameInstruction:cities.nameInstruction,identifyInstruction:cities.identifyInstruction,scopeLabel:'Difficulty',scopes:levels.map(l=>({id:l.id,label:l.label})),bounds:cities.bounds,overseasLabel:cities.overseasLabel,includeOverseas:cities.overseasDefault??!!cities.overseasLabel},storageKey:scope=>country+'-'+(points?(cities.storageId||'football'):'cities')+':'+scope,
   records,fitScope,ready:()=>!!data&&atlas.ready!==false,onOpen:()=>void load().then(renderCoverage),onScopeChange:renderCoverage,
   fillLayers:[],lineLayer,
   questionImage:r=>cities.crests?r.crest:null,specifiedPlace:r=>cities.groupLocations?{...quizNamePlace(r),aliases:records().filter(other=>other.locationId===r.locationId).flatMap(other=>[other.en,...(other.aliases||[])])}:undefined,resolveChoice:(id,expected)=>cities.groupLocations&&records().find(r=>r.id===id)?.locationId===expected?.locationId?expected.id:id,
@@ -68,6 +68,7 @@ export function createCityQuiz(map,host,atlas,{country,sidebar,tab,prefix,addPic
   restore(saved){remove();reviewed=null;return nativeSession?nativeSession.restore(saved):restore();}
  });
  if(!quiz)return null;
+ if(levels.length===1)quiz.panel.querySelector('#'+prefix+'-quiz-scope').parentElement.hidden=true;
 
  function installDots(pool){remove();
    map.addSource(key,{type:'geojson',data:{type:'FeatureCollection',features:pool.filter((r,i)=>!cities.groupLocations||pool.findIndex(other=>other.locationId===r.locationId)===i).map(r=>({type:'Feature',properties:{id:r.id},geometry:{type:'Point',coordinates:r.center}}))},promoteId:'id'});

@@ -1,3 +1,4 @@
+import {usSportsQuizzes} from './us-sports-definitions.mjs';
 export const miscellaneousQuizzes=[
  {id:'misc-college-towns',label:'College towns',plural:'College towns',singular:'college town',description:'Find 40 college towns from their universities. Harvard and MIT share Cambridge; famous major-city campuses are omitted.'},
  {id:'misc-civil-war',label:'Civil War battlefields',plural:'Battlefields',singular:'battlefield',description:'Famous Civil War battlefields, shown as representative dots within NPS battlefield study areas.'},
@@ -6,3 +7,4 @@ export const miscellaneousQuizzes=[
  {id:'misc-revolution',label:'Revolutionary battlefields',plural:'Battlefields',singular:'battlefield',description:'Major American Revolutionary War battlefields, including grouped Lexington–Concord and Saratoga sites.'},
  {id:'misc-presidents',label:'Presidential birthplaces',plural:'Birthplaces',singular:'presidential birthplace',description:'Birthplaces of all 45 individual US presidents through October 2026. Both Adams presidents share one Quincy dot; repeat presidencies appear once.'}
 ];
+export const usMiscQuizzes=[...miscellaneousQuizzes,...usSportsQuizzes];

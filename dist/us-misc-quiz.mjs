@@ -2,14 +2,20 @@ import {createFirstLevelQuiz} from './first-level-quiz.mjs';
 import {createQuizMapSession} from './map-quiz.mjs';
 import {createHoverOverview} from './hover-overview.mjs';
 import {fetchBytes,decodeData} from './geo-pack.mjs';
-import {miscellaneousQuizzes} from './us-misc-definitions.mjs';
+import {usMiscQuizzes} from './us-misc-definitions.mjs';
+import {usSportsQuizzes,usSportsQuizForScope} from './us-sports-definitions.mjs';
+import {createCityQuiz} from './city-quiz.mjs';
 const mainland=[[-125,24],[-66,50]],views=[['Mainland',mainland],['Alaska',[[-170,51],[-129,72]]],['Hawaii',[[-161,18],[-154,23]]],['American Samoa',[[-171.2,-14.7],[-168,-13.6]]],['Virgin Islands',[[-65.2,17.5],[-64.2,18.7]]]];
 const state=key=>['boolean',['feature-state',key],false],element=(tag,text,cls)=>{const e=document.createElement(tag);if(text)e.textContent=text;if(cls)e.className=cls;return e;};
 export function createUsMiscQuiz(map,host,atlas,{sidebar,tab,addPicker}){
- const games=new Map();let current,chosen=miscellaneousQuizzes[0].id,data,loading,parks,parkLoading;
+ const games=new Map();let current,chosen=usMiscQuizzes[0].id,data,loading,parks,parkLoading;
  const load=()=>data?Promise.resolve(data):loading??=fetch('data/quiz/us-misc.json').then(r=>{if(!r.ok)throw Error('Quiz list could not load. Open this category again to retry.');return r.json();}).then(value=>data=value).finally(()=>loading=null);
  const parkShapes=()=>parks?Promise.resolve(parks):parkLoading??=fetchBytes('data/quiz/us-national-parks.bin').then(decodeData).then(value=>parks=value).finally(()=>parkLoading=null);
+ function topicPicker(quiz,pack){
+  const topicLabel=element('label','Quiz','field-label'),topic=document.createElement('select');topic.id=quiz.panel.id.replace(/-quiz-panel$/,'')+'-topic';topicLabel.htmlFor=topic.id;for(const p of usMiscQuizzes)topic.append(new Option(p.label,p.id));topic.value=pack.id;topic.onchange=()=>controller.open({scope:topic.value});topicLabel.append(topic);quiz.panel.querySelector('[data-q=scope-label]').after(topicLabel);addPicker(quiz.panel,'4');
+ }
  function mount(pack){
+  if(usSportsQuizzes.includes(pack))return createCityQuiz(map,host,atlas,{country:'united-states',sidebar,tab,prefix:'us-'+pack.id,points:pack,categoryValue:'4',addPicker:panel=>topicPicker({panel},pack)});
   const prefix='us-'+pack.id,key='quiz-'+prefix,session=createQuizMapSession(map,atlas,'united-states');let quiz,preview=false,previewSaved,hover,reviewed=null;
   const pool=()=>data?.records.filter(r=>r.parent===pack.id)||[],polygon=pack.id==='misc-national-parks';
   const remove=()=>{hover?.clear();for(const suffix of ['-dots','-outline','-fill'])if(map.getLayer(key+suffix))map.removeLayer(key+suffix);for(const id of [key+'-points',key])if(map.getSource(id))map.removeSource(id);};
@@ -27,7 +33,7 @@ export function createUsMiscQuiz(map,host,atlas,{sidebar,tab,addPicker}){
    review(r){if(reviewed&&reviewed!==r?.id)mark({id:reviewed},{review:false,selected:false});reviewed=r?.id||null;if(r)mark(r,{review:true,selected:true});},restore(saved){remove();return session.restore(saved);}
   });
   quiz.panel.querySelector('#'+prefix+'-quiz-scope').parentElement.hidden=true;
-  const topicLabel=element('label','Quiz','field-label'),topic=document.createElement('select');topic.id=prefix+'-topic';topicLabel.htmlFor=topic.id;for(const p of miscellaneousQuizzes)topic.append(new Option(p.label,p.id));topic.value=pack.id;topic.onchange=()=>controller.open({scope:topic.value});topicLabel.append(topic);quiz.panel.querySelector('[data-q=scope-label]').after(topicLabel);addPicker(quiz.panel,'4');
+  topicPicker(quiz,pack);
 
   const previewButton=element('button','Preview','quiz-text-button');previewButton.type='button';previewButton.dataset.miscPreviewStart='';quiz.panel.querySelector('[data-q=start]').before(previewButton);
   const previewPanel=element('div');previewPanel.hidden=true;previewPanel.dataset.miscPreview='';const back=element('button','Back to quiz','quiz-primary');back.type='button';back.dataset.miscPreviewEnd='';previewPanel.append(element('h2','Preview'),element('p',polygon?'Hover over or tap a park to see its name. Small parks also have a marker.':'Hover over or tap a dot to see the place and its location.','quiz-note'),back);quiz.panel.append(previewPanel);
@@ -40,6 +46,6 @@ export function createUsMiscQuiz(map,host,atlas,{sidebar,tab,addPicker}){
   previewButton.onclick=async()=>{if(quiz.active||preview)return;previewButton.disabled=true;try{await load();previewSaved={adapter:session.capture(),home:document.getElementById('home').textContent,hint:document.getElementById('map-hint').textContent};await session.begin();await install();preview=true;session.setActive(true);atlas.pauseLabels?.();for(const section of sidebar.querySelectorAll('.sidebar-scroll > section'))section.hidden=section!==quiz.panel;quiz.panel.hidden=false;for(const b of sidebar.querySelectorAll('.panel-tabs button'))b.setAttribute('aria-pressed',String(b===tab));tab.setAttribute('aria-controls',quiz.panel.id);quiz.panel.querySelector('[data-q=setup]').hidden=true;previewPanel.hidden=false;sidebar.dataset.quiz='true';for(const b of sidebar.querySelectorAll('.panel-tabs button'))b.disabled=b!==tab;document.getElementById('home').textContent='End preview';document.getElementById('map-hint').textContent='Explore '+pack.label.toLowerCase();host.setQuizActive(true);await window.AtlasSheet?.collapse();await host.fit(mainland,6,{manual:true,overview:false});back.focus({preventScroll:true});}catch(e){if(preview)await endPreview();else{remove();if(previewSaved)await session.restore(previewSaved.adapter);}error.textContent=e.message;error.hidden=false;}finally{previewButton.disabled=false;}};back.onclick=()=>void endPreview();
   return{get active(){return quiz.active||preview;},get panel(){return quiz.panel;},scope:pack.id,open(options={}){quiz.open({...options,scope:pack.id});error.hidden=true;void load().then(()=>{quiz.setup();renderCoverage();}).catch(e=>{error.textContent=e.message;error.hidden=false;});},end:()=>preview?endPreview():quiz.end(),fit:()=>preview?host.fit(mainland,6,{manual:true,overview:false}):quiz.fit(),release(){if(preview)void endPreview();else remove();}};
  }
- const controller={get active(){return !!current?.active;},get panel(){return current?.panel;},get scope(){return current?.scope||chosen;},open(options={}){if(current?.active)return;chosen=miscellaneousQuizzes.some(p=>p.id===options.scope)?options.scope:chosen;for(const game of games.values())game.panel.hidden=true;current=games.get(chosen);if(!current){current=mount(miscellaneousQuizzes.find(p=>p.id===chosen));games.set(chosen,current);}current.open(options);},end:()=>current?.end(),fit:()=>current?.fit(),hide(){for(const game of games.values())if(!game.active)game.panel.hidden=true;},release(){for(const game of games.values())game.release();}};
+ const controller={get active(){return !!current?.active;},get panel(){return current?.panel;},get scope(){return current?.scope||chosen;},open(options={}){if(current?.active)return;const sport=usSportsQuizForScope(options.scope);chosen=sport?.id||(usMiscQuizzes.some(p=>p.id===options.scope)?options.scope:chosen);for(const game of games.values())game.panel.hidden=true;current=games.get(chosen);if(!current){current=mount(usMiscQuizzes.find(p=>p.id===chosen));games.set(chosen,current);}current.open(options);},end:()=>current?.end(),fit:()=>current?.fit(),hide(){for(const game of games.values())if(!game.active)game.panel.hidden=true;},release(){for(const game of games.values())game.release();}};
  return controller;
 }

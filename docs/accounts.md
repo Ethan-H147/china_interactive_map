@@ -7,11 +7,11 @@ required. Passwords are sent to Supabase and never written to atlas storage.
 Supabase's SDK stores session tokens, refreshes sessions, and broadcasts auth
 changes between tabs. Sign out revokes this session on this device.
 
-Supported: email/password sign-up, confirmation resend, sign-in, sign-out,
+Supported: Google sign-in, email/password sign-up, confirmation resend, sign-in, sign-out,
 password-reset email, choosing a replacement password, and editing an account
 name. Names are saved as Supabase user metadata (display_name), shown beside the
 account icon on desktop, and hidden in the mobile header. They are display names,
-not unique login identifiers; sign-in still uses email.
+not unique login identifiers; sign-in uses email/password or Google. Google profile names provide a fallback until the user chooses an atlas account name.
 
 Settings sync automatically through the authenticated user's Supabase metadata.
 Each preference uses its own atlas_setting_ key, so saving a preference does not
@@ -31,6 +31,14 @@ heading size, legacy styling, motion and flat/globe projection. Completed quiz
 records use the account-owned database described below. Unfinished rounds remain
 on this device, separately for each account. User metadata is never used for
 authorization decisions.
+
+## Google sign-in
+
+The account dialog includes Continue with Google for sign-in and account creation. It delegates authentication to Supabase using the existing PKCE client. Google OAuth credentials belong only in the Supabase provider settings; the browser continues to use its existing public Supabase configuration.
+
+The provider is checked before leaving the app. A disabled provider or unavailable service reports an error and leaves email/password usable. A short-lived, tab-local return record stores only the map fragment, Google provider and SDK flow ID. The callback restores the map fragment, removes authentication parameters from the URL and exchanges the code through the real SDK. Provider cancellation returns to the account dialog. Google authentication enters the same account session, settings sync and quiz records flow as email/password; existing custom display names take precedence over Google profile names.
+
+See [Google sign-in setup](google-sign-in.md) for the exact project callback, Google Cloud client fields and Supabase redirect URLs. No new database table or SQL migration is required. `node scripts/browser/run.mjs google-account account` checks real SDK PKCE redirects and callbacks against deterministic fixtures, including the same user’s 40 existing rounds, cancellation, disabled-provider and connection errors, desktop/phone layouts, reload and existing email/recovery flows. A real Google consent/sign-in requires the provider setup and the user’s own Google account; fixture tests do not establish live provider readiness.
 
 ## Quiz dashboard and records
 
@@ -130,6 +138,8 @@ References:
 - https://supabase.com/docs/guides/getting-started/api-keys
 
 ## Collectible trophies
+
+Collection opens to **Medals**, with earned city, miscellaneous and football medals on country shelves. Each medal shows its completion in the three quiz modes. The cabinet’s name plaque follows the signed-in account’s display name, and its materials and ornament improve as medal points accumulate. Choose **Trinkets** for the existing 3D collectible models; their unlock requirements and saved progress are unchanged.
 
 Quiz dashboard > Collection contains thirteen 3D models for China, Japan, the US, France, Korea, Russia, Germany, Argentina, Chile, Brazil, the UK, Spain and Italy. Unlocked models can be rotated and downloaded. Locked cards reveal only the country, goal and progress; their artwork and names stay hidden.
 

@@ -1,0 +1,316 @@
+{
+  "retrieved": "2026-10-29",
+  "season": "2026",
+  "files": {
+    "mlb-teams-2026.json": {
+      "url": "https://statsapi.mlb.com/api/v1/teams?sportId=1&season=2026&hydrate=venue(location,fieldInfo)",
+      "sha256": "403c8822036c4a2ca53b8a563bbeff163348b849455df652d0a55b97a2d0b0d8",
+      "bytes": 36858
+    },
+    "espn-teams.json": {
+      "url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/teams?limit=100",
+      "sha256": "4c2682fcd76868189a5863a9683e865c70e687ae107a6bbae1534934f09a4cf5",
+      "bytes": 134837
+    },
+    "official-rays-return.html": {
+      "url": "https://www.mlb.com/amp/press-release/rays-open-the-2026-season-at-tropicana-field-with-a-two-team-six-game-homestand.html",
+      "sha256": "639da661e96afeed97c63f81a7b2aba220c3d47f1c06b7b1d8d795c164eae374",
+      "bytes": 48228
+    },
+    "official-athletics-ground.html": {
+      "url": "https://www.mlb.com/athletics/ballpark",
+      "sha256": "4ce0ceb978ab1a484570bfe791632767a54f2cfdc9493bfb9474f9fb3a475178",
+      "bytes": 902750
+    },
+    "raw/crest-15.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+      "sha256": "1c36c62410bbed29624672b006173af58bcdfbb066ae9d6f7c4cb99205e861d2",
+      "bytes": 41669
+    },
+    "raw/crest-29.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/ari.png",
+      "sha256": "b060f0fcc21d64b978be260f0c24880c50094f0ec8e640d14896dc5045bf0b21",
+      "bytes": 56069
+    },
+    "raw/crest-11.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/ath.png",
+      "sha256": "f430543a6db8d652e4fb1a81c4ac99ee32022ae587834234a029830a9653b8d2",
+      "bytes": 32297
+    },
+    "raw/crest-2.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png",
+      "sha256": "471966c3b3f4ab7b567b9cd29e7eefc138963182e98b31c01c922335ad265597",
+      "bytes": 37870
+    },
+    "raw/crest-1.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/bal.png",
+      "sha256": "e96827050e6079674fa20221f5b8b8acbd4f80843f861dbb4d0261b309741472",
+      "bytes": 46237
+    },
+    "raw/crest-17.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/cin.png",
+      "sha256": "57f685ca691ba291d8ed31378e489a44b71648b310bfb7ceb8017bd21373f23c",
+      "bytes": 21763
+    },
+    "raw/crest-16.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png",
+      "sha256": "39a2b071f52778bbaa9f7d58432db3dcf638bb9a25eb17a901d3551d5d859086",
+      "bytes": 56094
+    },
+    "raw/crest-4.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/chw.png",
+      "sha256": "f92f9c32cea65d9e697a254d09a8ae16326889796f380649b2fee64396cc4640",
+      "bytes": 76341
+    },
+    "raw/crest-5.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/cle.png",
+      "sha256": "8883a4e8b7c6bb75f308f1fb27a39eb7cf81ce431ba781edbc4afe082164410f",
+      "bytes": 25910
+    },
+    "raw/crest-27.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/col.png",
+      "sha256": "bd21e7588f021af3b44cc0aeab2b281ddc515b7d6b6a68e4c823086ed585ea75",
+      "bytes": 30750
+    },
+    "raw/crest-7.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/kc.png",
+      "sha256": "95188fdcf6d74b4e5437549ad33e20548ce8f3e696621765680354da25a0207b",
+      "bytes": 18936
+    },
+    "raw/crest-6.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/det.png",
+      "sha256": "0037b82f8f714da9f40b6a2ac036c5086f06ccb139473891135c3321a7a08750",
+      "bytes": 34147
+    },
+    "raw/crest-19.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "sha256": "aab854c59098d4f465c1c6f31b580f2a38d2ed4f5c0c03df2da76f62f5378dc4",
+      "bytes": 8909
+    },
+    "raw/crest-3.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "sha256": "712a4a6f37cac63156de1d17a170532fd6bbbf3a9690b276fec2a6aac751809f",
+      "bytes": 54504
+    },
+    "raw/crest-18.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/hou.png",
+      "sha256": "b7e6858d9d11fe9fade351624bfbab74ec12451749feef37bd1f083d59eb4f7b",
+      "bytes": 64184
+    },
+    "raw/crest-8.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+      "sha256": "d4f8fe1b5be4b266a7cb1520a46a863973467361a1d3fd528502e223cbe35490",
+      "bytes": 48378
+    },
+    "raw/crest-9.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/min.png",
+      "sha256": "3fbce769013cd44f2370505f8982d732c58c511eac9ede4e4d9bbe1b24ad4d39",
+      "bytes": 24252
+    },
+    "raw/crest-21.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/nym.png",
+      "sha256": "94c334280d388936cb193fca6c3b620d2ed6abb7b932f352fa575630ce6243bd",
+      "bytes": 43421
+    },
+    "raw/crest-10.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+      "sha256": "d98856c36bc8d3b0fb0bab5fabd79d2ae057619164365845cbc817b04ae74a26",
+      "bytes": 20024
+    },
+    "raw/crest-28.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/mia.png",
+      "sha256": "ef37342904a50d2807c45432909de83c62c6795e9e54ebe42ac85fdd5e24c91f",
+      "bytes": 81265
+    },
+    "raw/crest-22.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+      "sha256": "95997c9aaac40ec5d718b667c374561b782e5cb88665d69daf3178a16401d683",
+      "bytes": 10538
+    },
+    "raw/crest-23.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/pit.png",
+      "sha256": "0af791c91bc01b4c654a65c90c983c3f907bf2605c67cfaaed731985efff34a1",
+      "bytes": 8647
+    },
+    "raw/crest-26.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/sf.png",
+      "sha256": "dad3e0a51931bb8281ebb0215624849e0fd6cbec81aafc6a12d2260f583c04e5",
+      "bytes": 12565
+    },
+    "raw/crest-25.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+      "sha256": "8bb012967768a5f476ff427f433e89960149217777c6371d80eafb8725c2f175",
+      "bytes": 34927
+    },
+    "raw/crest-12.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/sea.png",
+      "sha256": "9273d78e456969b14ef9031f39fc0511d8e875a919d887daa6b0898b1ff52226",
+      "bytes": 80199
+    },
+    "raw/crest-30.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/tb.png",
+      "sha256": "3f16f721cfdbb929fac08c9e1d8f9e1ab410be8b409eed5dac9b5f5c9a7af5ae",
+      "bytes": 18323
+    },
+    "raw/crest-13.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/tex.png",
+      "sha256": "b19ee28a151164ed231d98cafbcebe471faaa876a202e9c558b925be3ac3dac9",
+      "bytes": 20268
+    },
+    "raw/crest-24.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/stl.png",
+      "sha256": "b738c8aaac9b726336cfa3e42745a4ddcc4c8d9537a9dc0b6abba02c5952e417",
+      "bytes": 14453
+    },
+    "raw/crest-14.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+      "sha256": "af6d5454549834ea4b8cd6687618a76f936209ecf39eabdb17deaf76d21dd989",
+      "bytes": 45523
+    },
+    "raw/crest-20.png": {
+      "url": "https://a.espncdn.com/i/teamlogos/mlb/500/wsh.png",
+      "sha256": "1d65931fe979aec3fe59a60b2d9df900e3f84da0eca81eb1646d0ea3a93fc810",
+      "bytes": 60754
+    },
+    "official-dodgers-name.html": {
+      "url": "https://www.mlb.com/press-release/press-release-dodgers-and-uniqlo-announce-historic-partnership",
+      "sha256": "de5c618fd669950c3ed7033cb903930d57d386db7b4b3eeb5633f02c67711679",
+      "bytes": 298896
+    },
+    "official-braves-city.html": {
+      "url": "https://www.mlb.com/braves/ballpark/transportation",
+      "sha256": "0ee6c3b1ae136ed123cb939caef865546cbfb9f27b167aa265611b5dfd8869cd",
+      "bytes": 864575
+    }
+  },
+  "reviewedFiles": {
+    "venue-review.json": {
+      "sha256": "155e53249f0addfd2b505f29fa451067cf421bd309b623754dc94c2a8e436361",
+      "bytes": 1160
+    },
+    "clubs.json": {
+      "sha256": "a6212f045ae61c76424629cd38723378d10e50a184df132923e5784c64e29f2b",
+      "bytes": 20343
+    },
+    "crests/crest-29.png": {
+      "sha256": "b060f0fcc21d64b978be260f0c24880c50094f0ec8e640d14896dc5045bf0b21",
+      "bytes": 56069
+    },
+    "crests/crest-11.png": {
+      "sha256": "f430543a6db8d652e4fb1a81c4ac99ee32022ae587834234a029830a9653b8d2",
+      "bytes": 32297
+    },
+    "crests/crest-15.png": {
+      "sha256": "1c36c62410bbed29624672b006173af58bcdfbb066ae9d6f7c4cb99205e861d2",
+      "bytes": 41669
+    },
+    "crests/crest-1.png": {
+      "sha256": "e96827050e6079674fa20221f5b8b8acbd4f80843f861dbb4d0261b309741472",
+      "bytes": 46237
+    },
+    "crests/crest-2.png": {
+      "sha256": "471966c3b3f4ab7b567b9cd29e7eefc138963182e98b31c01c922335ad265597",
+      "bytes": 37870
+    },
+    "crests/crest-16.png": {
+      "sha256": "39a2b071f52778bbaa9f7d58432db3dcf638bb9a25eb17a901d3551d5d859086",
+      "bytes": 56094
+    },
+    "crests/crest-4.png": {
+      "sha256": "f92f9c32cea65d9e697a254d09a8ae16326889796f380649b2fee64396cc4640",
+      "bytes": 76341
+    },
+    "crests/crest-17.png": {
+      "sha256": "57f685ca691ba291d8ed31378e489a44b71648b310bfb7ceb8017bd21373f23c",
+      "bytes": 21763
+    },
+    "crests/crest-5.png": {
+      "sha256": "8883a4e8b7c6bb75f308f1fb27a39eb7cf81ce431ba781edbc4afe082164410f",
+      "bytes": 25910
+    },
+    "crests/crest-27.png": {
+      "sha256": "bd21e7588f021af3b44cc0aeab2b281ddc515b7d6b6a68e4c823086ed585ea75",
+      "bytes": 30750
+    },
+    "crests/crest-6.png": {
+      "sha256": "0037b82f8f714da9f40b6a2ac036c5086f06ccb139473891135c3321a7a08750",
+      "bytes": 34147
+    },
+    "crests/crest-18.png": {
+      "sha256": "b7e6858d9d11fe9fade351624bfbab74ec12451749feef37bd1f083d59eb4f7b",
+      "bytes": 64184
+    },
+    "crests/crest-7.png": {
+      "sha256": "95188fdcf6d74b4e5437549ad33e20548ce8f3e696621765680354da25a0207b",
+      "bytes": 18936
+    },
+    "crests/crest-3.png": {
+      "sha256": "712a4a6f37cac63156de1d17a170532fd6bbbf3a9690b276fec2a6aac751809f",
+      "bytes": 54504
+    },
+    "crests/crest-19.png": {
+      "sha256": "aab854c59098d4f465c1c6f31b580f2a38d2ed4f5c0c03df2da76f62f5378dc4",
+      "bytes": 8909
+    },
+    "crests/crest-28.png": {
+      "sha256": "ef37342904a50d2807c45432909de83c62c6795e9e54ebe42ac85fdd5e24c91f",
+      "bytes": 81265
+    },
+    "crests/crest-8.png": {
+      "sha256": "d4f8fe1b5be4b266a7cb1520a46a863973467361a1d3fd528502e223cbe35490",
+      "bytes": 48378
+    },
+    "crests/crest-9.png": {
+      "sha256": "3fbce769013cd44f2370505f8982d732c58c511eac9ede4e4d9bbe1b24ad4d39",
+      "bytes": 24252
+    },
+    "crests/crest-21.png": {
+      "sha256": "94c334280d388936cb193fca6c3b620d2ed6abb7b932f352fa575630ce6243bd",
+      "bytes": 43421
+    },
+    "crests/crest-10.png": {
+      "sha256": "d98856c36bc8d3b0fb0bab5fabd79d2ae057619164365845cbc817b04ae74a26",
+      "bytes": 20024
+    },
+    "crests/crest-22.png": {
+      "sha256": "95997c9aaac40ec5d718b667c374561b782e5cb88665d69daf3178a16401d683",
+      "bytes": 10538
+    },
+    "crests/crest-23.png": {
+      "sha256": "0af791c91bc01b4c654a65c90c983c3f907bf2605c67cfaaed731985efff34a1",
+      "bytes": 8647
+    },
+    "crests/crest-25.png": {
+      "sha256": "8bb012967768a5f476ff427f433e89960149217777c6371d80eafb8725c2f175",
+      "bytes": 34927
+    },
+    "crests/crest-26.png": {
+      "sha256": "dad3e0a51931bb8281ebb0215624849e0fd6cbec81aafc6a12d2260f583c04e5",
+      "bytes": 12565
+    },
+    "crests/crest-12.png": {
+      "sha256": "9273d78e456969b14ef9031f39fc0511d8e875a919d887daa6b0898b1ff52226",
+      "bytes": 80199
+    },
+    "crests/crest-24.png": {
+      "sha256": "b738c8aaac9b726336cfa3e42745a4ddcc4c8d9537a9dc0b6abba02c5952e417",
+      "bytes": 14453
+    },
+    "crests/crest-30.png": {
+      "sha256": "3f16f721cfdbb929fac08c9e1d8f9e1ab410be8b409eed5dac9b5f5c9a7af5ae",
+      "bytes": 18323
+    },
+    "crests/crest-13.png": {
+      "sha256": "b19ee28a151164ed231d98cafbcebe471faaa876a202e9c558b925be3ac3dac9",
+      "bytes": 20268
+    },
+    "crests/crest-14.png": {
+      "sha256": "af6d5454549834ea4b8cd6687618a76f936209ecf39eabdb17deaf76d21dd989",
+      "bytes": 45523
+    },
+    "crests/crest-20.png": {
+      "sha256": "1d65931fe979aec3fe59a60b2d9df900e3f84da0eca81eb1646d0ea3a93fc810",
+      "bytes": 60754
+    }
+  }
+}

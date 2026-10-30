@@ -60,3 +60,8 @@ scripts/statistics-sources/cz-sk-ua/* -text
 
 # Preserve original club crest bytes and their recorded checksums.
 scripts/football-sources/**/crests/*.svg -text
+
+scripts/us-sports-sources/**/crests/*.svg -text
+
+# Preserve reviewed venue evidence exactly as recorded in its source manifest.
+scripts/us-sports-sources/**/venue-review.json -text whitespace=cr-at-eol

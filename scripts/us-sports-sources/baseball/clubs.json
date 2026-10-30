@@ -1,0 +1,731 @@
+{
+  "country": "united-states",
+  "season": "2026",
+  "retrieved": "2026-10-29",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "MLB",
+      "count": 30,
+      "sourceUrl": "https://statsapi.mlb.com/api/v1/teams?sportId=1&season=2026&hydrate=venue(location,fieldInfo)"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "us-mlb-arizona-diamondbacks",
+      "tier": 1,
+      "en": "Arizona Diamondbacks",
+      "aliases": [
+        "Arizona Diamondbacks",
+        "D-backs",
+        "Diamondbacks",
+        "Arizona",
+        "AZ",
+        "ARI",
+        "Phoenix"
+      ],
+      "city": "Phoenix",
+      "stadium": "Chase Field",
+      "center": [
+        -112.066687,
+        33.445302
+      ],
+      "crest": "crest-29.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/109?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/ari.png",
+      "mlbId": 109,
+      "espnId": "29",
+      "venueId": 15
+    },
+    {
+      "id": "us-mlb-athletics",
+      "tier": 1,
+      "en": "Athletics",
+      "aliases": [
+        "Athletics",
+        "ATH",
+        "Sacramento",
+        "West Sacramento",
+        "A's",
+        "As",
+        "Sacramento Athletics"
+      ],
+      "city": "West Sacramento",
+      "stadium": "Sutter Health Park",
+      "center": [
+        -121.51246,
+        38.57994
+      ],
+      "crest": "crest-11.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/133?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/ath.png",
+      "mlbId": 133,
+      "espnId": "11",
+      "venueId": 2529,
+      "note": "Sutter Health Park in West Sacramento is the Athletics’ temporary home for the 2025–27 seasons.",
+      "officialClub": "https://www.mlb.com/athletics/ballpark"
+    },
+    {
+      "id": "us-mlb-atlanta-braves",
+      "tier": 1,
+      "en": "Atlanta Braves",
+      "aliases": [
+        "Atlanta Braves",
+        "Braves",
+        "Atlanta",
+        "ATL",
+        "Cumberland"
+      ],
+      "city": "Cumberland",
+      "stadium": "Truist Park",
+      "center": [
+        -84.467641,
+        33.890672
+      ],
+      "crest": "crest-15.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/144?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+      "mlbId": 144,
+      "espnId": "15",
+      "venueId": 4705,
+      "note": "Truist Park is in the Cumberland area of unincorporated Cobb County; the club uses an Atlanta postal address.",
+      "officialClub": "https://www.mlb.com/braves/ballpark/transportation"
+    },
+    {
+      "id": "us-mlb-baltimore-orioles",
+      "tier": 1,
+      "en": "Baltimore Orioles",
+      "aliases": [
+        "Baltimore Orioles",
+        "Orioles",
+        "Baltimore",
+        "BAL"
+      ],
+      "city": "Baltimore",
+      "stadium": "Oriole Park at Camden Yards",
+      "center": [
+        -76.621689,
+        39.283787
+      ],
+      "crest": "crest-1.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/110?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/bal.png",
+      "mlbId": 110,
+      "espnId": "1",
+      "venueId": 2
+    },
+    {
+      "id": "us-mlb-boston-red-sox",
+      "tier": 1,
+      "en": "Boston Red Sox",
+      "aliases": [
+        "Boston Red Sox",
+        "Red Sox",
+        "Boston",
+        "BOS"
+      ],
+      "city": "Boston",
+      "stadium": "Fenway Park",
+      "center": [
+        -71.097441,
+        42.346456
+      ],
+      "crest": "crest-2.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/111?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png",
+      "mlbId": 111,
+      "espnId": "2",
+      "venueId": 3
+    },
+    {
+      "id": "us-mlb-chicago-cubs",
+      "tier": 1,
+      "en": "Chicago Cubs",
+      "aliases": [
+        "Chicago Cubs",
+        "Cubs",
+        "Chi Cubs",
+        "CHC"
+      ],
+      "city": "Chicago",
+      "stadium": "Wrigley Field",
+      "center": [
+        -87.655503,
+        41.948171
+      ],
+      "crest": "crest-16.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/112?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png",
+      "mlbId": 112,
+      "espnId": "16",
+      "venueId": 17
+    },
+    {
+      "id": "us-mlb-chicago-white-sox",
+      "tier": 1,
+      "en": "Chicago White Sox",
+      "aliases": [
+        "Chicago White Sox",
+        "White Sox",
+        "Chi White Sox",
+        "CWS",
+        "CHW"
+      ],
+      "city": "Chicago",
+      "stadium": "Rate Field",
+      "center": [
+        -87.634167,
+        41.83
+      ],
+      "crest": "crest-4.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/145?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/chw.png",
+      "mlbId": 145,
+      "espnId": "4",
+      "venueId": 4
+    },
+    {
+      "id": "us-mlb-cincinnati-reds",
+      "tier": 1,
+      "en": "Cincinnati Reds",
+      "aliases": [
+        "Cincinnati Reds",
+        "Reds",
+        "Cincinnati",
+        "CIN"
+      ],
+      "city": "Cincinnati",
+      "stadium": "Great American Ball Park",
+      "center": [
+        -84.506611,
+        39.097389
+      ],
+      "crest": "crest-17.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/113?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/cin.png",
+      "mlbId": 113,
+      "espnId": "17",
+      "venueId": 2602
+    },
+    {
+      "id": "us-mlb-cleveland-guardians",
+      "tier": 1,
+      "en": "Cleveland Guardians",
+      "aliases": [
+        "Cleveland Guardians",
+        "Guardians",
+        "Cleveland",
+        "CLE"
+      ],
+      "city": "Cleveland",
+      "stadium": "Progressive Field",
+      "center": [
+        -81.685255,
+        41.495861
+      ],
+      "crest": "crest-5.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/114?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/cle.png",
+      "mlbId": 114,
+      "espnId": "5",
+      "venueId": 5
+    },
+    {
+      "id": "us-mlb-colorado-rockies",
+      "tier": 1,
+      "en": "Colorado Rockies",
+      "aliases": [
+        "Colorado Rockies",
+        "Rockies",
+        "Colorado",
+        "COL",
+        "Denver"
+      ],
+      "city": "Denver",
+      "stadium": "Coors Field",
+      "center": [
+        -104.994136,
+        39.756042
+      ],
+      "crest": "crest-27.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/115?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/col.png",
+      "mlbId": 115,
+      "espnId": "27",
+      "venueId": 19
+    },
+    {
+      "id": "us-mlb-detroit-tigers",
+      "tier": 1,
+      "en": "Detroit Tigers",
+      "aliases": [
+        "Detroit Tigers",
+        "Tigers",
+        "Detroit",
+        "DET"
+      ],
+      "city": "Detroit",
+      "stadium": "Comerica Park",
+      "center": [
+        -83.048695,
+        42.3391151
+      ],
+      "crest": "crest-6.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/116?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/det.png",
+      "mlbId": 116,
+      "espnId": "6",
+      "venueId": 2394
+    },
+    {
+      "id": "us-mlb-houston-astros",
+      "tier": 1,
+      "en": "Houston Astros",
+      "aliases": [
+        "Houston Astros",
+        "Astros",
+        "Houston",
+        "HOU"
+      ],
+      "city": "Houston",
+      "stadium": "Daikin Park",
+      "center": [
+        -95.355509,
+        29.756967
+      ],
+      "crest": "crest-18.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/117?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/hou.png",
+      "mlbId": 117,
+      "espnId": "18",
+      "venueId": 2392
+    },
+    {
+      "id": "us-mlb-kansas-city-royals",
+      "tier": 1,
+      "en": "Kansas City Royals",
+      "aliases": [
+        "Kansas City Royals",
+        "Royals",
+        "Kansas City",
+        "KC"
+      ],
+      "city": "Kansas City",
+      "stadium": "Kauffman Stadium",
+      "center": [
+        -94.480483,
+        39.051567
+      ],
+      "crest": "crest-7.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/118?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/kc.png",
+      "mlbId": 118,
+      "espnId": "7",
+      "venueId": 7
+    },
+    {
+      "id": "us-mlb-los-angeles-angels",
+      "tier": 1,
+      "en": "Los Angeles Angels",
+      "aliases": [
+        "Los Angeles Angels",
+        "Angels",
+        "LA Angels",
+        "LAA",
+        "Anaheim"
+      ],
+      "city": "Anaheim",
+      "stadium": "Angel Stadium",
+      "center": [
+        -117.8823996,
+        33.80019044
+      ],
+      "crest": "crest-3.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/108?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "mlbId": 108,
+      "espnId": "3",
+      "venueId": 1
+    },
+    {
+      "id": "us-mlb-los-angeles-dodgers",
+      "tier": 1,
+      "en": "Los Angeles Dodgers",
+      "aliases": [
+        "Los Angeles Dodgers",
+        "Dodgers",
+        "LA Dodgers",
+        "LAD",
+        "Los Angeles"
+      ],
+      "city": "Los Angeles",
+      "stadium": "UNIQLO Field at Dodger Stadium",
+      "center": [
+        -118.24053,
+        34.07368
+      ],
+      "crest": "crest-19.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/119?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "mlbId": 119,
+      "espnId": "19",
+      "venueId": 22,
+      "note": "Dodger Stadium’s playing field added the UNIQLO sponsorship name for 2026; the official MLB venue name is retained.",
+      "officialClub": "https://www.mlb.com/press-release/press-release-dodgers-and-uniqlo-announce-historic-partnership"
+    },
+    {
+      "id": "us-mlb-miami-marlins",
+      "tier": 1,
+      "en": "Miami Marlins",
+      "aliases": [
+        "Miami Marlins",
+        "Marlins",
+        "Miami",
+        "MIA"
+      ],
+      "city": "Miami",
+      "stadium": "loanDepot park",
+      "center": [
+        -80.21951795,
+        25.77796236
+      ],
+      "crest": "crest-28.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/146?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/mia.png",
+      "mlbId": 146,
+      "espnId": "28",
+      "venueId": 4169
+    },
+    {
+      "id": "us-mlb-milwaukee-brewers",
+      "tier": 1,
+      "en": "Milwaukee Brewers",
+      "aliases": [
+        "Milwaukee Brewers",
+        "Brewers",
+        "Milwaukee",
+        "MIL"
+      ],
+      "city": "Milwaukee",
+      "stadium": "American Family Field",
+      "center": [
+        -87.97099,
+        43.02838
+      ],
+      "crest": "crest-8.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/158?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+      "mlbId": 158,
+      "espnId": "8",
+      "venueId": 32
+    },
+    {
+      "id": "us-mlb-minnesota-twins",
+      "tier": 1,
+      "en": "Minnesota Twins",
+      "aliases": [
+        "Minnesota Twins",
+        "Twins",
+        "Minnesota",
+        "MIN",
+        "Minneapolis"
+      ],
+      "city": "Minneapolis",
+      "stadium": "Target Field",
+      "center": [
+        -93.277891,
+        44.981829
+      ],
+      "crest": "crest-9.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/142?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/min.png",
+      "mlbId": 142,
+      "espnId": "9",
+      "venueId": 3312
+    },
+    {
+      "id": "us-mlb-new-york-mets",
+      "tier": 1,
+      "en": "New York Mets",
+      "aliases": [
+        "New York Mets",
+        "Mets",
+        "NY Mets",
+        "NYM",
+        "Flushing",
+        "New York City (Queens)"
+      ],
+      "city": "New York City (Queens)",
+      "stadium": "Citi Field",
+      "center": [
+        -73.84559155,
+        40.75753012
+      ],
+      "crest": "crest-21.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/121?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/nym.png",
+      "mlbId": 121,
+      "espnId": "21",
+      "venueId": 3289
+    },
+    {
+      "id": "us-mlb-new-york-yankees",
+      "tier": 1,
+      "en": "New York Yankees",
+      "aliases": [
+        "New York Yankees",
+        "Yankees",
+        "NY Yankees",
+        "NYY",
+        "Bronx",
+        "New York City (Bronx)"
+      ],
+      "city": "New York City (Bronx)",
+      "stadium": "Yankee Stadium",
+      "center": [
+        -73.9264977,
+        40.82919482
+      ],
+      "crest": "crest-10.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/147?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+      "mlbId": 147,
+      "espnId": "10",
+      "venueId": 3313
+    },
+    {
+      "id": "us-mlb-philadelphia-phillies",
+      "tier": 1,
+      "en": "Philadelphia Phillies",
+      "aliases": [
+        "Philadelphia Phillies",
+        "Phillies",
+        "Philadelphia",
+        "PHI"
+      ],
+      "city": "Philadelphia",
+      "stadium": "Citizens Bank Park",
+      "center": [
+        -75.16716957,
+        39.90539086
+      ],
+      "crest": "crest-22.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/143?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+      "mlbId": 143,
+      "espnId": "22",
+      "venueId": 2681
+    },
+    {
+      "id": "us-mlb-pittsburgh-pirates",
+      "tier": 1,
+      "en": "Pittsburgh Pirates",
+      "aliases": [
+        "Pittsburgh Pirates",
+        "Pirates",
+        "Pittsburgh",
+        "PIT"
+      ],
+      "city": "Pittsburgh",
+      "stadium": "PNC Park",
+      "center": [
+        -80.005753,
+        40.446904
+      ],
+      "crest": "crest-23.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/134?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/pit.png",
+      "mlbId": 134,
+      "espnId": "23",
+      "venueId": 31
+    },
+    {
+      "id": "us-mlb-san-diego-padres",
+      "tier": 1,
+      "en": "San Diego Padres",
+      "aliases": [
+        "San Diego Padres",
+        "Padres",
+        "San Diego",
+        "SD"
+      ],
+      "city": "San Diego",
+      "stadium": "Petco Park",
+      "center": [
+        -117.157278,
+        32.707861
+      ],
+      "crest": "crest-25.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/135?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+      "mlbId": 135,
+      "espnId": "25",
+      "venueId": 2680
+    },
+    {
+      "id": "us-mlb-san-francisco-giants",
+      "tier": 1,
+      "en": "San Francisco Giants",
+      "aliases": [
+        "San Francisco Giants",
+        "Giants",
+        "San Francisco",
+        "SF"
+      ],
+      "city": "San Francisco",
+      "stadium": "Oracle Park",
+      "center": [
+        -122.389448,
+        37.778383
+      ],
+      "crest": "crest-26.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/137?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/sf.png",
+      "mlbId": 137,
+      "espnId": "26",
+      "venueId": 2395
+    },
+    {
+      "id": "us-mlb-seattle-mariners",
+      "tier": 1,
+      "en": "Seattle Mariners",
+      "aliases": [
+        "Seattle Mariners",
+        "Mariners",
+        "Seattle",
+        "SEA"
+      ],
+      "city": "Seattle",
+      "stadium": "T-Mobile Park",
+      "center": [
+        -122.33251,
+        47.591333
+      ],
+      "crest": "crest-12.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/136?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/sea.png",
+      "mlbId": 136,
+      "espnId": "12",
+      "venueId": 680
+    },
+    {
+      "id": "us-mlb-st-louis-cardinals",
+      "tier": 1,
+      "en": "St. Louis Cardinals",
+      "aliases": [
+        "St. Louis Cardinals",
+        "Cardinals",
+        "St. Louis",
+        "STL"
+      ],
+      "city": "St. Louis",
+      "stadium": "Busch Stadium",
+      "center": [
+        -90.19286667,
+        38.62256667
+      ],
+      "crest": "crest-24.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/138?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/stl.png",
+      "mlbId": 138,
+      "espnId": "24",
+      "venueId": 2889
+    },
+    {
+      "id": "us-mlb-tampa-bay-rays",
+      "tier": 1,
+      "en": "Tampa Bay Rays",
+      "aliases": [
+        "Tampa Bay Rays",
+        "Rays",
+        "Tampa Bay",
+        "TB",
+        "St. Petersburg"
+      ],
+      "city": "St. Petersburg",
+      "stadium": "Tropicana Field",
+      "center": [
+        -82.6525,
+        27.767778
+      ],
+      "crest": "crest-30.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/139?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/tb.png",
+      "mlbId": 139,
+      "espnId": "30",
+      "venueId": 12,
+      "note": "The Rays returned to Tropicana Field in St. Petersburg in April 2026 after playing at Steinbrenner Field in Tampa in 2025.",
+      "officialClub": "https://www.mlb.com/amp/press-release/rays-open-the-2026-season-at-tropicana-field-with-a-two-team-six-game-homestand.html"
+    },
+    {
+      "id": "us-mlb-texas-rangers",
+      "tier": 1,
+      "en": "Texas Rangers",
+      "aliases": [
+        "Texas Rangers",
+        "Rangers",
+        "Texas",
+        "TEX",
+        "Arlington"
+      ],
+      "city": "Arlington",
+      "stadium": "Globe Life Field",
+      "center": [
+        -97.081818,
+        32.747299
+      ],
+      "crest": "crest-13.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/140?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/tex.png",
+      "mlbId": 140,
+      "espnId": "13",
+      "venueId": 5325
+    },
+    {
+      "id": "us-mlb-toronto-blue-jays",
+      "tier": 1,
+      "en": "Toronto Blue Jays",
+      "aliases": [
+        "Toronto Blue Jays",
+        "Blue Jays",
+        "Toronto",
+        "TOR"
+      ],
+      "city": "Toronto",
+      "stadium": "Rogers Centre",
+      "center": [
+        -79.38915,
+        43.64155
+      ],
+      "crest": "crest-14.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/141?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+      "mlbId": 141,
+      "espnId": "14",
+      "venueId": 14
+    },
+    {
+      "id": "us-mlb-washington-nationals",
+      "tier": 1,
+      "en": "Washington Nationals",
+      "aliases": [
+        "Washington Nationals",
+        "Nationals",
+        "Washington",
+        "WSH"
+      ],
+      "city": "Washington",
+      "stadium": "Nationals Park",
+      "center": [
+        -77.007501,
+        38.872861
+      ],
+      "crest": "crest-20.png",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/120?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/wsh.png",
+      "mlbId": 120,
+      "espnId": "20",
+      "venueId": 3309
+    }
+  ]
+}

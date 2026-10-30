@@ -25,4 +25,15 @@ export default [{name:'US Miscellaneous medals per topic and mode, question mark
  const m=await medal(p);assert(!m.hidden&&!m.locked,'Poets fan medal earned');assert(await p.evaluate(`document.querySelector('[data-mode-medal]').innerHTML.includes('#d24b5a')`),'Plum-blossom fan design');
  await pick(p,'[data-quiz-scope]','misc-dynasty-capitals');assert((await medal(p)).locked,'Unplayed topics show the question mark');
  await pick(p,'[data-quiz-scope]','misc-poet-birthplaces');await p.evaluate(`document.querySelector('.quiz-mode-fieldset').scrollIntoView({block:'center'})`);await p.screenshot('china-misc-medal-dashboard');
+}},{name:'Football club medals: league emblem in the highest difficulty material',options:{width:1280,height:1000},async run(p,base){
+ // Germany: a perfect top-two round earns the Platinum eagle; US soccer: all three leagues earn the Diamond shield.
+ await p.send('Page.addScriptToEvaluateOnNewDocument',{source:fixture});await p.open(base,'#germany');
+ await p.evaluate(`localStorage.setItem('quiz-test-cloud',JSON.stringify({'11111111-1111-4111-8111-111111111111':${JSON.stringify([{...attempt(4,'football-2026-27-tier1','find',18),country:'germany'},{...attempt(5,'football-2026-27-tier2','find',36),country:'germany'},{...attempt(6,'misc-soccer-2026-tier3','find',72)}])}}))`);await login(p);
+ const html=()=>p.evaluate(`document.querySelector('[data-mode-medal]').innerHTML`);
+ await chooseCountry(p,'germany');await pick(p,'[data-quiz-level]','4');await p.tap('.quiz-mode-choice:has([data-quiz-mode=find])');
+ let m=await medal(p);assert(!m.hidden&&!m.locked,'Bundesliga medal earned');assert.match(m.label,/Platinum medal/);let h=await html();assert(h.includes('#1f1c1a')&&h.includes('#c4bddc'),'Platinum eagle design');
+ await p.evaluate(`document.querySelector('.quiz-mode-fieldset').scrollIntoView({block:'center'})`);await p.screenshot('football-medal-dashboard');
+ await p.tap('.quiz-mode-choice:has([data-quiz-mode=name])');assert((await medal(p)).locked,'Other modes show the question mark');
+ await p.evaluate(`document.querySelector('[data-country-back]').click()`);await chooseCountry(p,'united-states');await pick(p,'[data-quiz-level]','4');await pick(p,'[data-quiz-scope]','misc-soccer');await p.tap('.quiz-mode-choice:has([data-quiz-mode=find])');
+ m=await medal(p);assert(!m.locked,'MLS medal earned');assert.match(m.label,/Diamond medal/);h=await html();assert(h.includes('medal-sparkle')&&h.includes('#0a2a66'),'Diamond stars-and-stripes shield with glints');
 }}];

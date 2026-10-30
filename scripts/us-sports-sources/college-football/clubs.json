@@ -1,0 +1,3105 @@
+{
+  "country": "united-states",
+  "season": "2026",
+  "retrieved": "2026-10-29",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "Power Four",
+      "count": 67,
+      "sourceUrl": "https://www.ncaa.com/standings/football/fbs"
+    },
+    {
+      "tier": 2,
+      "name": "Other FBS programs",
+      "count": 71,
+      "sourceUrl": "https://www.ncaa.com/standings/football/fbs"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "us-cfb-2636",
+      "tier": 2,
+      "en": "UTSA",
+      "aliases": [
+        "UTSA Roadrunners",
+        "UTSA",
+        "University of Texas at San Antonio"
+      ],
+      "city": "San Antonio",
+      "stadium": "Alamodome",
+      "center": [
+        -98.47888889,
+        29.41694444
+      ],
+      "crest": "us-cfb-2636.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Alamodome",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2636.png",
+      "conference": "American Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-235",
+      "tier": 2,
+      "en": "Memphis",
+      "aliases": [
+        "Memphis Tigers",
+        "Memphis",
+        "MEM",
+        "University of Memphis"
+      ],
+      "city": "Memphis",
+      "stadium": "Simmons Bank Liberty Stadium",
+      "center": [
+        -89.9774,
+        35.121
+      ],
+      "crest": "us-cfb-235.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Simmons_Bank_Liberty_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/235.png",
+      "conference": "American Conference",
+      "state": "TN"
+    },
+    {
+      "id": "us-cfb-249",
+      "tier": 2,
+      "en": "North Texas",
+      "aliases": [
+        "North Texas Mean Green",
+        "North Texas",
+        "UNT",
+        "University of North Texas"
+      ],
+      "city": "Denton",
+      "stadium": "DATCU Stadium",
+      "center": [
+        -97.15944444,
+        33.20361111
+      ],
+      "crest": "us-cfb-249.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/DATCU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/249.png",
+      "conference": "American Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-349",
+      "tier": 2,
+      "en": "Army",
+      "aliases": [
+        "Army Black Knights",
+        "Army",
+        "ARMY",
+        "United States Military Academy"
+      ],
+      "city": "West Point",
+      "stadium": "Michie Stadium",
+      "center": [
+        -73.96416667,
+        41.3875
+      ],
+      "crest": "us-cfb-349.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Michie_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/349.png",
+      "conference": "American Conference",
+      "state": "NY"
+    },
+    {
+      "id": "us-cfb-2226",
+      "tier": 2,
+      "en": "Florida Atlantic",
+      "aliases": [
+        "Florida Atlantic Owls",
+        "FAU",
+        "Florida Atlantic",
+        "Florida Atlantic University"
+      ],
+      "city": "Boca Raton",
+      "stadium": "Flagler Credit Union Stadium",
+      "center": [
+        -80.10166667,
+        26.37611111
+      ],
+      "crest": "us-cfb-2226.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Flagler_Credit_Union_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2226.png",
+      "conference": "American Conference",
+      "state": "FL"
+    },
+    {
+      "id": "us-cfb-58",
+      "tier": 2,
+      "en": "South Florida",
+      "aliases": [
+        "South Florida Bulls",
+        "South Florida",
+        "USF",
+        "University of South Florida"
+      ],
+      "city": "Tampa",
+      "stadium": "Raymond James Stadium",
+      "center": [
+        -82.50333333,
+        27.97583333
+      ],
+      "crest": "us-cfb-58.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Raymond_James_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/58.png",
+      "conference": "American Conference",
+      "state": "FL"
+    },
+    {
+      "id": "us-cfb-5",
+      "tier": 2,
+      "en": "UAB",
+      "aliases": [
+        "UAB Blazers",
+        "UAB",
+        "University of Alabama at Birmingham"
+      ],
+      "city": "Birmingham",
+      "stadium": "Protective Stadium",
+      "center": [
+        -86.8092,
+        33.5278
+      ],
+      "crest": "us-cfb-5.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Protective_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/5.png",
+      "conference": "American Conference",
+      "state": "AL",
+      "note": "UAB uses Protective Stadium, not its former Legion Field home."
+    },
+    {
+      "id": "us-cfb-202",
+      "tier": 2,
+      "en": "Tulsa",
+      "aliases": [
+        "Tulsa Golden Hurricane",
+        "Tulsa",
+        "TLSA",
+        "University of Tulsa"
+      ],
+      "city": "Tulsa",
+      "stadium": "H. A. Chapman Stadium",
+      "center": [
+        -95.94388889,
+        36.14861111
+      ],
+      "crest": "us-cfb-202.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Skelly_Field_at_H._A._Chapman_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/202.png",
+      "conference": "American Conference",
+      "state": "OK"
+    },
+    {
+      "id": "us-cfb-151",
+      "tier": 2,
+      "en": "East Carolina",
+      "aliases": [
+        "East Carolina Pirates",
+        "East Carolina",
+        "ECU",
+        "East Carolina University"
+      ],
+      "city": "Greenville",
+      "stadium": "Dowdy–Ficklen Stadium",
+      "center": [
+        -77.36527778,
+        35.59638889
+      ],
+      "crest": "us-cfb-151.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dowdy%E2%80%93Ficklen_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/151.png",
+      "conference": "American Conference",
+      "state": "NC"
+    },
+    {
+      "id": "us-cfb-2655",
+      "tier": 2,
+      "en": "Tulane",
+      "aliases": [
+        "Tulane Green Wave",
+        "Tulane",
+        "TULN",
+        "Tulane University"
+      ],
+      "city": "New Orleans",
+      "stadium": "Yulman Stadium",
+      "center": [
+        -90.116816,
+        29.94482
+      ],
+      "crest": "us-cfb-2655.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Yulman_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2655.png",
+      "conference": "American Conference",
+      "state": "LA"
+    },
+    {
+      "id": "us-cfb-218",
+      "tier": 2,
+      "en": "Temple",
+      "aliases": [
+        "Temple Owls",
+        "Temple",
+        "TEM",
+        "Temple University"
+      ],
+      "city": "Philadelphia",
+      "stadium": "Lincoln Financial Field",
+      "center": [
+        -75.1675,
+        39.90083333
+      ],
+      "crest": "us-cfb-218.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lincoln_Financial_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/218.png",
+      "conference": "American Conference",
+      "state": "PA"
+    },
+    {
+      "id": "us-cfb-2426",
+      "tier": 2,
+      "en": "Navy",
+      "aliases": [
+        "Navy Midshipmen",
+        "Navy",
+        "NAVY",
+        "United States Naval Academy"
+      ],
+      "city": "Annapolis",
+      "stadium": "Navy–Marine Corps Memorial Stadium",
+      "center": [
+        -76.507,
+        38.985
+      ],
+      "crest": "us-cfb-2426.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Navy%E2%80%93Marine_Corps_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png",
+      "conference": "American Conference",
+      "state": "MD"
+    },
+    {
+      "id": "us-cfb-2429",
+      "tier": 2,
+      "en": "Charlotte",
+      "aliases": [
+        "Charlotte 49ers",
+        "Charlotte",
+        "CLT",
+        "University of North Carolina at Charlotte"
+      ],
+      "city": "Charlotte",
+      "stadium": "Jerry Richardson Stadium",
+      "center": [
+        -80.74027778,
+        35.31055556
+      ],
+      "crest": "us-cfb-2429.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Jerry_Richardson_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2429.png",
+      "conference": "American Conference",
+      "state": "NC"
+    },
+    {
+      "id": "us-cfb-242",
+      "tier": 2,
+      "en": "Rice",
+      "aliases": [
+        "Rice Owls",
+        "Rice",
+        "RICE",
+        "Rice University"
+      ],
+      "city": "Houston",
+      "stadium": "First Community Stadium",
+      "center": [
+        -95.40916667,
+        29.71638889
+      ],
+      "crest": "us-cfb-242.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/First_Community_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/242.png",
+      "conference": "American Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-2390",
+      "tier": 1,
+      "en": "Miami (FL)",
+      "aliases": [
+        "Miami Hurricanes",
+        "Miami",
+        "MIA",
+        "University of Miami"
+      ],
+      "city": "Miami Gardens",
+      "stadium": "Hard Rock Stadium",
+      "center": [
+        -80.23888889,
+        25.95805556
+      ],
+      "crest": "us-cfb-2390.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hard_Rock_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2390.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "FL"
+    },
+    {
+      "id": "us-cfb-2567",
+      "tier": 1,
+      "en": "SMU",
+      "aliases": [
+        "SMU Mustangs",
+        "SMU",
+        "Southern Methodist University"
+      ],
+      "city": "Dallas",
+      "stadium": "Gerald J. Ford Stadium",
+      "center": [
+        -96.78399444,
+        32.83664444
+      ],
+      "crest": "us-cfb-2567.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gerald_J._Ford_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2567.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-154",
+      "tier": 1,
+      "en": "Wake Forest",
+      "aliases": [
+        "Wake Forest Demon Deacons",
+        "Wake Forest",
+        "WAKE",
+        "Wake Forest University"
+      ],
+      "city": "Winston-Salem",
+      "stadium": "Allegacy Federal Credit Union Stadium",
+      "center": [
+        -80.25472222,
+        36.13055556
+      ],
+      "crest": "us-cfb-154.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allegacy_Federal_Credit_Union_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/154.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "NC"
+    },
+    {
+      "id": "us-cfb-259",
+      "tier": 1,
+      "en": "Virginia Tech",
+      "aliases": [
+        "Virginia Tech Hokies",
+        "Virginia Tech",
+        "VT"
+      ],
+      "city": "Blacksburg",
+      "stadium": "Lane Stadium",
+      "center": [
+        -80.41805556,
+        37.22
+      ],
+      "crest": "us-cfb-259.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Lane_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/259.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "VA"
+    },
+    {
+      "id": "us-cfb-150",
+      "tier": 1,
+      "en": "Duke",
+      "aliases": [
+        "Duke Blue Devils",
+        "Duke",
+        "DUKE",
+        "Duke University"
+      ],
+      "city": "Durham",
+      "stadium": "Wallace Wade Stadium",
+      "center": [
+        -78.94166667,
+        35.99527778
+      ],
+      "crest": "us-cfb-150.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Wallace_Wade_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/150.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "NC"
+    },
+    {
+      "id": "us-cfb-221",
+      "tier": 1,
+      "en": "Pittsburgh",
+      "aliases": [
+        "Pittsburgh Panthers",
+        "Pitt",
+        "Pittsburgh",
+        "PITT",
+        "University of Pittsburgh"
+      ],
+      "city": "Pittsburgh",
+      "stadium": "Acrisure Stadium",
+      "center": [
+        -80.01583333,
+        40.44666667
+      ],
+      "crest": "us-cfb-221.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Acrisure_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/221.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "PA"
+    },
+    {
+      "id": "us-cfb-97",
+      "tier": 1,
+      "en": "Louisville",
+      "aliases": [
+        "Louisville Cardinals",
+        "Louisville",
+        "LOU",
+        "University of Louisville"
+      ],
+      "city": "Louisville",
+      "stadium": "L&N Federal Credit Union Stadium",
+      "center": [
+        -85.75888889,
+        38.20583333
+      ],
+      "crest": "us-cfb-97.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/L%26N_Federal_Credit_Union_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/97.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "KY"
+    },
+    {
+      "id": "us-cfb-228",
+      "tier": 1,
+      "en": "Clemson",
+      "aliases": [
+        "Clemson Tigers",
+        "Clemson",
+        "CLEM",
+        "Clemson University"
+      ],
+      "city": "Clemson",
+      "stadium": "Memorial Stadium",
+      "center": [
+        -82.84305556,
+        34.67861111
+      ],
+      "crest": "us-cfb-228.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Clemson)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/228.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "SC"
+    },
+    {
+      "id": "us-cfb-153",
+      "tier": 1,
+      "en": "North Carolina",
+      "aliases": [
+        "North Carolina Tar Heels",
+        "North Carolina",
+        "UNC",
+        "University of North Carolina at Chapel Hill"
+      ],
+      "city": "Chapel Hill",
+      "stadium": "Kenan Stadium",
+      "center": [
+        -79.04777778,
+        35.90694444
+      ],
+      "crest": "us-cfb-153.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kenan_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/153.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "NC"
+    },
+    {
+      "id": "us-cfb-103",
+      "tier": 1,
+      "en": "Boston College",
+      "aliases": [
+        "Boston College Eagles",
+        "Boston College",
+        "BC"
+      ],
+      "city": "Chestnut Hill",
+      "stadium": "Alumni Stadium",
+      "center": [
+        -71.16638889,
+        42.335
+      ],
+      "crest": "us-cfb-103.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Alumni_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/103.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "MA"
+    },
+    {
+      "id": "us-cfb-24",
+      "tier": 1,
+      "en": "Stanford",
+      "aliases": [
+        "Stanford Cardinal",
+        "Stanford",
+        "STAN",
+        "Stanford University"
+      ],
+      "city": "Stanford",
+      "stadium": "Stanford Stadium",
+      "center": [
+        -122.16111111,
+        37.43444444
+      ],
+      "crest": "us-cfb-24.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Stanford_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/24.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "CA"
+    },
+    {
+      "id": "us-cfb-258",
+      "tier": 1,
+      "en": "Virginia",
+      "aliases": [
+        "Virginia Cavaliers",
+        "Virginia",
+        "UVA",
+        "University of Virginia"
+      ],
+      "city": "Charlottesville",
+      "stadium": "Scott Stadium",
+      "center": [
+        -78.51361111,
+        38.03111111
+      ],
+      "crest": "us-cfb-258.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Scott_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/258.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "VA"
+    },
+    {
+      "id": "us-cfb-52",
+      "tier": 1,
+      "en": "Florida State",
+      "aliases": [
+        "Florida State Seminoles",
+        "Florida St",
+        "Florida State",
+        "FSU",
+        "Florida State University"
+      ],
+      "city": "Tallahassee",
+      "stadium": "Doak Campbell Stadium",
+      "center": [
+        -84.30444444,
+        30.43805556
+      ],
+      "crest": "us-cfb-52.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Doak_Campbell_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/52.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "FL"
+    },
+    {
+      "id": "us-cfb-152",
+      "tier": 1,
+      "en": "NC State",
+      "aliases": [
+        "NC State Wolfpack",
+        "NC State",
+        "NCSU",
+        "North Carolina State University"
+      ],
+      "city": "Raleigh",
+      "stadium": "Carter–Finley Stadium",
+      "center": [
+        -78.71944444,
+        35.80083333
+      ],
+      "crest": "us-cfb-152.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Carter%E2%80%93Finley_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/152.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "NC"
+    },
+    {
+      "id": "us-cfb-183",
+      "tier": 1,
+      "en": "Syracuse",
+      "aliases": [
+        "Syracuse Orange",
+        "Syracuse",
+        "SYR",
+        "Syracuse University"
+      ],
+      "city": "Syracuse",
+      "stadium": "JMA Wireless Dome",
+      "center": [
+        -76.13638889,
+        43.03611111
+      ],
+      "crest": "us-cfb-183.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/JMA_Wireless_Dome",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/183.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "NY"
+    },
+    {
+      "id": "us-cfb-25",
+      "tier": 1,
+      "en": "California",
+      "aliases": [
+        "California Golden Bears",
+        "California",
+        "CAL",
+        "University of California, Berkeley",
+        "Cal",
+        "Cal Berkeley",
+        "UC Berkeley"
+      ],
+      "city": "Berkeley",
+      "stadium": "California Memorial Stadium",
+      "center": [
+        -122.25083333,
+        37.87111111
+      ],
+      "crest": "us-cfb-25.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/California_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/25.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "CA"
+    },
+    {
+      "id": "us-cfb-59",
+      "tier": 1,
+      "en": "Georgia Tech",
+      "aliases": [
+        "Georgia Tech Yellow Jackets",
+        "Georgia Tech",
+        "GT"
+      ],
+      "city": "Atlanta",
+      "stadium": "Bobby Dodd Stadium at Hyundai Field",
+      "center": [
+        -84.39277778,
+        33.7725
+      ],
+      "crest": "us-cfb-59.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bobby_Dodd_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/59.png",
+      "conference": "Atlantic Coast Conference",
+      "state": "GA"
+    },
+    {
+      "id": "us-cfb-254",
+      "tier": 1,
+      "en": "Utah",
+      "aliases": [
+        "Utah Utes",
+        "Utah",
+        "UTAH",
+        "University of Utah"
+      ],
+      "city": "Salt Lake City",
+      "stadium": "Rice–Eccles Stadium",
+      "center": [
+        -111.84885324,
+        40.75997458
+      ],
+      "crest": "us-cfb-254.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Rice%E2%80%93Eccles_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/254.png",
+      "conference": "Big 12 Conference",
+      "state": "UT"
+    },
+    {
+      "id": "us-cfb-252",
+      "tier": 1,
+      "en": "BYU",
+      "aliases": [
+        "BYU Cougars",
+        "BYU",
+        "Brigham Young University"
+      ],
+      "city": "Provo",
+      "stadium": "LaVell Edwards Stadium",
+      "center": [
+        -111.655,
+        40.258
+      ],
+      "crest": "us-cfb-252.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/LaVell_Edwards_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/252.png",
+      "conference": "Big 12 Conference",
+      "state": "UT"
+    },
+    {
+      "id": "us-cfb-12",
+      "tier": 1,
+      "en": "Arizona",
+      "aliases": [
+        "Arizona Wildcats",
+        "Arizona",
+        "ARIZ",
+        "University of Arizona"
+      ],
+      "city": "Tucson",
+      "stadium": "Casino Del Sol Stadium",
+      "center": [
+        -110.949,
+        32.229
+      ],
+      "crest": "us-cfb-12.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Casino_Del_Sol_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/12.png",
+      "conference": "Big 12 Conference",
+      "state": "AZ"
+    },
+    {
+      "id": "us-cfb-2641",
+      "tier": 1,
+      "en": "Texas Tech",
+      "aliases": [
+        "Texas Tech Red Raiders",
+        "Texas Tech",
+        "TTU",
+        "Texas Tech University"
+      ],
+      "city": "Lubbock",
+      "stadium": "Galaxy Stadium",
+      "center": [
+        -101.87277778,
+        33.59111111
+      ],
+      "crest": "us-cfb-2641.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Galaxy_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2641.png",
+      "conference": "Big 12 Conference",
+      "state": "TX",
+      "officialClub": "https://texastech.com/news/2026/7/17/football-texas-tech-secures-landmark-naming-rights-agreement-with-galaxy",
+      "note": "Renamed Galaxy Stadium for the 2026 season."
+    },
+    {
+      "id": "us-cfb-248",
+      "tier": 1,
+      "en": "Houston",
+      "aliases": [
+        "Houston Cougars",
+        "Houston",
+        "HOU",
+        "University of Houston"
+      ],
+      "city": "Houston",
+      "stadium": "TDECU Stadium",
+      "center": [
+        -95.34916667,
+        29.72194444
+      ],
+      "crest": "us-cfb-248.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/TDECU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/248.png",
+      "conference": "Big 12 Conference",
+      "state": "TX",
+      "officialClub": "https://www.uh.edu/tdecu-stadium/",
+      "note": "Current school and conference schedules retain TDECU Stadium branding; Robertson Stadium is the former venue on this site."
+    },
+    {
+      "id": "us-cfb-197",
+      "tier": 1,
+      "en": "Oklahoma State",
+      "aliases": [
+        "Oklahoma State Cowboys",
+        "Oklahoma St",
+        "Oklahoma State",
+        "OKST",
+        "Oklahoma State University–Stillwater"
+      ],
+      "city": "Stillwater",
+      "stadium": "Boone Pickens Stadium",
+      "center": [
+        -97.06638889,
+        36.12583333
+      ],
+      "crest": "us-cfb-197.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Boone_Pickens_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/197.png",
+      "conference": "Big 12 Conference",
+      "state": "OK"
+    },
+    {
+      "id": "us-cfb-2132",
+      "tier": 1,
+      "en": "Cincinnati",
+      "aliases": [
+        "Cincinnati Bearcats",
+        "Cincinnati",
+        "CIN",
+        "University of Cincinnati"
+      ],
+      "city": "Cincinnati",
+      "stadium": "Nippert Stadium",
+      "center": [
+        -84.5162,
+        39.1312
+      ],
+      "crest": "us-cfb-2132.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Nippert_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2132.png",
+      "conference": "Big 12 Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-277",
+      "tier": 1,
+      "en": "West Virginia",
+      "aliases": [
+        "West Virginia Mountaineers",
+        "West Virginia",
+        "WVU",
+        "West Virginia University"
+      ],
+      "city": "Morgantown",
+      "stadium": "Milan Puskar Stadium",
+      "center": [
+        -79.9551,
+        39.6502
+      ],
+      "crest": "us-cfb-277.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Milan_Puskar_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
+      "conference": "Big 12 Conference",
+      "state": "WV"
+    },
+    {
+      "id": "us-cfb-239",
+      "tier": 1,
+      "en": "Baylor",
+      "aliases": [
+        "Baylor Bears",
+        "Baylor",
+        "BAY",
+        "Baylor University"
+      ],
+      "city": "Waco",
+      "stadium": "McLane Stadium",
+      "center": [
+        -97.1157,
+        31.5582
+      ],
+      "crest": "us-cfb-239.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/McLane_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/239.png",
+      "conference": "Big 12 Conference",
+      "state": "TX",
+      "note": "Baylor uses McLane Stadium, not the demolished Floyd Casey Stadium."
+    },
+    {
+      "id": "us-cfb-9",
+      "tier": 1,
+      "en": "Arizona State",
+      "aliases": [
+        "Arizona State Sun Devils",
+        "Arizona St",
+        "Arizona State",
+        "ASU",
+        "Arizona State University"
+      ],
+      "city": "Tempe",
+      "stadium": "Mountain America Stadium",
+      "center": [
+        -111.9325,
+        33.42638889
+      ],
+      "crest": "us-cfb-9.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mountain_America_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/9.png",
+      "conference": "Big 12 Conference",
+      "state": "AZ"
+    },
+    {
+      "id": "us-cfb-2116",
+      "tier": 1,
+      "en": "UCF",
+      "aliases": [
+        "UCF Knights",
+        "UCF",
+        "University of Central Florida"
+      ],
+      "city": "Orlando",
+      "stadium": "Acrisure Bounce House",
+      "center": [
+        -81.1924,
+        28.6091
+      ],
+      "crest": "us-cfb-2116.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Acrisure_Bounce_House",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2116.png",
+      "conference": "Big 12 Conference",
+      "state": "FL"
+    },
+    {
+      "id": "us-cfb-2306",
+      "tier": 1,
+      "en": "Kansas State",
+      "aliases": [
+        "Kansas State Wildcats",
+        "Kansas St",
+        "Kansas State",
+        "KSU",
+        "Kansas State University"
+      ],
+      "city": "Manhattan",
+      "stadium": "Bill Snyder Family Football Stadium",
+      "center": [
+        -96.59388889,
+        39.20194444
+      ],
+      "crest": "us-cfb-2306.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bill_Snyder_Family_Football_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2306.png",
+      "conference": "Big 12 Conference",
+      "state": "KS"
+    },
+    {
+      "id": "us-cfb-66",
+      "tier": 1,
+      "en": "Iowa State",
+      "aliases": [
+        "Iowa State Cyclones",
+        "Iowa State",
+        "ISU",
+        "Iowa State University"
+      ],
+      "city": "Ames",
+      "stadium": "Jack Trice Stadium",
+      "center": [
+        -93.63583333,
+        42.01416667
+      ],
+      "crest": "us-cfb-66.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Jack_Trice_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/66.png",
+      "conference": "Big 12 Conference",
+      "state": "IA"
+    },
+    {
+      "id": "us-cfb-2305",
+      "tier": 1,
+      "en": "Kansas",
+      "aliases": [
+        "Kansas Jayhawks",
+        "Kansas",
+        "KU",
+        "University of Kansas"
+      ],
+      "city": "Lawrence",
+      "stadium": "David Booth Kansas Memorial Stadium",
+      "center": [
+        -95.24638889,
+        38.96333333
+      ],
+      "crest": "us-cfb-2305.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/David_Booth_Kansas_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2305.png",
+      "conference": "Big 12 Conference",
+      "state": "KS"
+    },
+    {
+      "id": "us-cfb-2628",
+      "tier": 1,
+      "en": "TCU",
+      "aliases": [
+        "TCU Horned Frogs",
+        "TCU",
+        "Texas Christian University"
+      ],
+      "city": "Fort Worth",
+      "stadium": "Amon G. Carter Stadium",
+      "center": [
+        -97.36805556,
+        32.70972222
+      ],
+      "crest": "us-cfb-2628.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Amon_G._Carter_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2628.png",
+      "conference": "Big 12 Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-38",
+      "tier": 1,
+      "en": "Colorado",
+      "aliases": [
+        "Colorado Buffaloes",
+        "Colorado",
+        "COLO",
+        "University of Colorado Boulder"
+      ],
+      "city": "Boulder",
+      "stadium": "Folsom Field",
+      "center": [
+        -105.267,
+        40.009
+      ],
+      "crest": "us-cfb-38.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Folsom_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/38.png",
+      "conference": "Big 12 Conference",
+      "state": "CO"
+    },
+    {
+      "id": "us-cfb-26",
+      "tier": 1,
+      "en": "UCLA",
+      "aliases": [
+        "UCLA Bruins",
+        "UCLA",
+        "University of California, Los Angeles"
+      ],
+      "city": "Pasadena",
+      "stadium": "Rose Bowl Stadium",
+      "center": [
+        -118.168,
+        34.161
+      ],
+      "crest": "us-cfb-26.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Rose_Bowl_(stadium)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/26.png",
+      "conference": "Big Ten Conference",
+      "state": "CA"
+    },
+    {
+      "id": "us-cfb-84",
+      "tier": 1,
+      "en": "Indiana",
+      "aliases": [
+        "Indiana Hoosiers",
+        "Indiana",
+        "IU",
+        "Indiana University Bloomington"
+      ],
+      "city": "Bloomington",
+      "stadium": "Memorial Stadium",
+      "center": [
+        -86.52555556,
+        39.18083333
+      ],
+      "crest": "us-cfb-84.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Indiana_University)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/84.png",
+      "conference": "Big Ten Conference",
+      "state": "IN"
+    },
+    {
+      "id": "us-cfb-194",
+      "tier": 1,
+      "en": "Ohio State",
+      "aliases": [
+        "Ohio State Buckeyes",
+        "Ohio State",
+        "OSU",
+        "Ohio State University"
+      ],
+      "city": "Columbus",
+      "stadium": "Ohio Stadium",
+      "center": [
+        -83.01972222,
+        40.00166667
+      ],
+      "crest": "us-cfb-194.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ohio_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/194.png",
+      "conference": "Big Ten Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-77",
+      "tier": 1,
+      "en": "Northwestern",
+      "aliases": [
+        "Northwestern Wildcats",
+        "Northwestern",
+        "NU",
+        "Northwestern University"
+      ],
+      "city": "Evanston",
+      "stadium": "Ryan Field",
+      "center": [
+        -87.6925,
+        42.06555556
+      ],
+      "crest": "us-cfb-77.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ryan_Field_(2026)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/77.png",
+      "conference": "Big Ten Conference",
+      "state": "IL",
+      "officialClub": "https://nusports.com/news/2026/10/1/northwestern-to-open-new-ryan-field-on-friday-night-against-penn-state",
+      "note": "The new Ryan Field opened on 2 October 2026. The first two 2026 home games were at Martin Stadium."
+    },
+    {
+      "id": "us-cfb-30",
+      "tier": 1,
+      "en": "USC",
+      "aliases": [
+        "USC Trojans",
+        "USC",
+        "University of Southern California"
+      ],
+      "city": "Los Angeles",
+      "stadium": "Los Angeles Memorial Coliseum",
+      "center": [
+        -118.28777778,
+        34.01416667
+      ],
+      "crest": "us-cfb-30.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Los_Angeles_Memorial_Coliseum",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/30.png",
+      "conference": "Big Ten Conference",
+      "state": "CA"
+    },
+    {
+      "id": "us-cfb-135",
+      "tier": 1,
+      "en": "Minnesota",
+      "aliases": [
+        "Minnesota Golden Gophers",
+        "Minnesota",
+        "MINN",
+        "University of Minnesota"
+      ],
+      "city": "Minneapolis",
+      "stadium": "Huntington Bank Stadium",
+      "center": [
+        -93.225,
+        44.976
+      ],
+      "crest": "us-cfb-135.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Huntington_Bank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/135.png",
+      "conference": "Big Ten Conference",
+      "state": "MN"
+    },
+    {
+      "id": "us-cfb-275",
+      "tier": 1,
+      "en": "Wisconsin",
+      "aliases": [
+        "Wisconsin Badgers",
+        "Wisconsin",
+        "WIS",
+        "University of Wisconsin–Madison"
+      ],
+      "city": "Madison",
+      "stadium": "Camp Randall Stadium",
+      "center": [
+        -89.41277778,
+        43.07
+      ],
+      "crest": "us-cfb-275.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Camp_Randall_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+      "conference": "Big Ten Conference",
+      "state": "WI"
+    },
+    {
+      "id": "us-cfb-2294",
+      "tier": 1,
+      "en": "Iowa",
+      "aliases": [
+        "Iowa Hawkeyes",
+        "Iowa",
+        "IOWA",
+        "University of Iowa"
+      ],
+      "city": "Iowa City",
+      "stadium": "Kinnick Stadium",
+      "center": [
+        -91.55111111,
+        41.65861111
+      ],
+      "crest": "us-cfb-2294.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kinnick_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2294.png",
+      "conference": "Big Ten Conference",
+      "state": "IA"
+    },
+    {
+      "id": "us-cfb-158",
+      "tier": 1,
+      "en": "Nebraska",
+      "aliases": [
+        "Nebraska Cornhuskers",
+        "Nebraska",
+        "NEB",
+        "University of Nebraska–Lincoln"
+      ],
+      "city": "Lincoln",
+      "stadium": "Memorial Stadium",
+      "center": [
+        -96.70555556,
+        40.82055556
+      ],
+      "crest": "us-cfb-158.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Memorial_Stadium_(Lincoln)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/158.png",
+      "conference": "Big Ten Conference",
+      "state": "NE"
+    },
+    {
+      "id": "us-cfb-356",
+      "tier": 1,
+      "en": "Illinois",
+      "aliases": [
+        "Illinois Fighting Illini",
+        "Illinois",
+        "ILL",
+        "University of Illinois Urbana-Champaign"
+      ],
+      "city": "Champaign",
+      "stadium": "Gies Memorial Stadium",
+      "center": [
+        -88.23583333,
+        40.09916667
+      ],
+      "crest": "us-cfb-356.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gies_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/356.png",
+      "conference": "Big Ten Conference",
+      "state": "IL",
+      "officialClub": "https://fightingillini.com/facilities/gies-memorial-stadium/64",
+      "note": "Correct ground is Gies Memorial Stadium in Champaign; the ESPN Foster Stadium reference is unrelated."
+    },
+    {
+      "id": "us-cfb-2483",
+      "tier": 1,
+      "en": "Oregon",
+      "aliases": [
+        "Oregon Ducks",
+        "Oregon",
+        "ORE",
+        "University of Oregon"
+      ],
+      "city": "Eugene",
+      "stadium": "Autzen Stadium",
+      "center": [
+        -123.06861111,
+        44.05833333
+      ],
+      "crest": "us-cfb-2483.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Autzen_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2483.png",
+      "conference": "Big Ten Conference",
+      "state": "OR"
+    },
+    {
+      "id": "us-cfb-130",
+      "tier": 1,
+      "en": "Michigan",
+      "aliases": [
+        "Michigan Wolverines",
+        "Michigan",
+        "MICH",
+        "University of Michigan"
+      ],
+      "city": "Ann Arbor",
+      "stadium": "Michigan Stadium",
+      "center": [
+        -83.74875,
+        42.26588889
+      ],
+      "crest": "us-cfb-130.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Michigan_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/130.png",
+      "conference": "Big Ten Conference",
+      "state": "MI"
+    },
+    {
+      "id": "us-cfb-264",
+      "tier": 1,
+      "en": "Washington",
+      "aliases": [
+        "Washington Huskies",
+        "Washington",
+        "WASH",
+        "University of Washington"
+      ],
+      "city": "Seattle",
+      "stadium": "Husky Stadium",
+      "center": [
+        -122.3016,
+        47.6503
+      ],
+      "crest": "us-cfb-264.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Husky_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/264.png",
+      "conference": "Big Ten Conference",
+      "state": "WA"
+    },
+    {
+      "id": "us-cfb-2509",
+      "tier": 1,
+      "en": "Purdue",
+      "aliases": [
+        "Purdue Boilermakers",
+        "Purdue",
+        "PUR",
+        "Purdue University"
+      ],
+      "city": "West Lafayette",
+      "stadium": "Ross–Ade Stadium",
+      "center": [
+        -86.91833333,
+        40.43444444
+      ],
+      "crest": "us-cfb-2509.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ross%E2%80%93Ade_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2509.png",
+      "conference": "Big Ten Conference",
+      "state": "IN"
+    },
+    {
+      "id": "us-cfb-213",
+      "tier": 1,
+      "en": "Penn State",
+      "aliases": [
+        "Penn State Nittany Lions",
+        "Penn State",
+        "PSU",
+        "Pennsylvania State University"
+      ],
+      "city": "University Park",
+      "stadium": "Beaver Stadium",
+      "center": [
+        -77.856,
+        40.8121
+      ],
+      "crest": "us-cfb-213.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Beaver_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/213.png",
+      "conference": "Big Ten Conference",
+      "state": "PA"
+    },
+    {
+      "id": "us-cfb-164",
+      "tier": 1,
+      "en": "Rutgers",
+      "aliases": [
+        "Rutgers Scarlet Knights",
+        "Rutgers",
+        "RUTG",
+        "Rutgers University–New Brunswick"
+      ],
+      "city": "Piscataway",
+      "stadium": "SHI Stadium",
+      "center": [
+        -74.46527778,
+        40.51361111
+      ],
+      "crest": "us-cfb-164.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/SHI_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/164.png",
+      "conference": "Big Ten Conference",
+      "state": "NJ"
+    },
+    {
+      "id": "us-cfb-120",
+      "tier": 1,
+      "en": "Maryland",
+      "aliases": [
+        "Maryland Terrapins",
+        "Maryland",
+        "MD",
+        "University of Maryland, College Park"
+      ],
+      "city": "College Park",
+      "stadium": "SECU Stadium",
+      "center": [
+        -76.94722222,
+        38.99027778
+      ],
+      "crest": "us-cfb-120.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/SECU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/120.png",
+      "conference": "Big Ten Conference",
+      "state": "MD"
+    },
+    {
+      "id": "us-cfb-127",
+      "tier": 1,
+      "en": "Michigan State",
+      "aliases": [
+        "Michigan State Spartans",
+        "Michigan St",
+        "Michigan State",
+        "MSU",
+        "Michigan State University"
+      ],
+      "city": "East Lansing",
+      "stadium": "Spartan Stadium",
+      "center": [
+        -84.48472222,
+        42.72805556
+      ],
+      "crest": "us-cfb-127.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Spartan_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/127.png",
+      "conference": "Big Ten Conference",
+      "state": "MI"
+    },
+    {
+      "id": "us-cfb-2335",
+      "tier": 2,
+      "en": "Liberty",
+      "aliases": [
+        "Liberty Flames",
+        "Liberty",
+        "LIB",
+        "Liberty University"
+      ],
+      "city": "Lynchburg",
+      "stadium": "Arthur L. Williams Stadium",
+      "center": [
+        -79.175,
+        37.354
+      ],
+      "crest": "us-cfb-2335.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Williams_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2335.png",
+      "conference": "Conference USA",
+      "state": "VA"
+    },
+    {
+      "id": "us-cfb-55",
+      "tier": 2,
+      "en": "Jacksonville State",
+      "aliases": [
+        "Jacksonville State Gamecocks",
+        "Jax State",
+        "Jacksonville State",
+        "JXST",
+        "Jacksonville State University"
+      ],
+      "city": "Jacksonville",
+      "stadium": "AmFirst Stadium",
+      "center": [
+        -85.76638889,
+        33.82027778
+      ],
+      "crest": "us-cfb-55.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/AmFirst_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+      "conference": "Conference USA",
+      "state": "AL"
+    },
+    {
+      "id": "us-cfb-48",
+      "tier": 2,
+      "en": "Delaware",
+      "aliases": [
+        "Delaware Blue Hens",
+        "Delaware",
+        "DEL",
+        "University of Delaware"
+      ],
+      "city": "Newark",
+      "stadium": "Delaware Stadium",
+      "center": [
+        -75.7488,
+        39.6617
+      ],
+      "crest": "us-cfb-48.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Delaware_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+      "conference": "Conference USA",
+      "state": "DE"
+    },
+    {
+      "id": "us-cfb-2393",
+      "tier": 2,
+      "en": "Middle Tennessee",
+      "aliases": [
+        "Middle Tennessee Blue Raiders",
+        "MTSU",
+        "Middle Tennessee",
+        "Middle Tennessee State University"
+      ],
+      "city": "Murfreesboro",
+      "stadium": "Johnny \"Red\" Floyd Stadium",
+      "center": [
+        -86.368223,
+        35.850513
+      ],
+      "crest": "us-cfb-2393.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Johnny_%22Red%22_Floyd_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2393.png",
+      "conference": "Conference USA",
+      "state": "TN"
+    },
+    {
+      "id": "us-cfb-2229",
+      "tier": 2,
+      "en": "Florida International",
+      "aliases": [
+        "Florida International Panthers",
+        "FIU",
+        "Florida International",
+        "Florida International University"
+      ],
+      "city": "University Park (Miami)",
+      "stadium": "Pitbull Stadium",
+      "center": [
+        -80.37777778,
+        25.7525
+      ],
+      "crest": "us-cfb-2229.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Pitbull_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2229.png",
+      "conference": "Conference USA",
+      "state": "FL"
+    },
+    {
+      "id": "us-cfb-166",
+      "tier": 2,
+      "en": "New Mexico State",
+      "aliases": [
+        "New Mexico State Aggies",
+        "New Mexico St",
+        "New Mexico State",
+        "NMSU",
+        "New Mexico State University"
+      ],
+      "city": "Las Cruces",
+      "stadium": "Aggie Memorial Stadium",
+      "center": [
+        -106.74111111,
+        32.27972222
+      ],
+      "crest": "us-cfb-166.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Aggie_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/166.png",
+      "conference": "Conference USA",
+      "state": "NM"
+    },
+    {
+      "id": "us-cfb-98",
+      "tier": 2,
+      "en": "Western Kentucky",
+      "aliases": [
+        "Western Kentucky Hilltoppers",
+        "Western KY",
+        "Western Kentucky",
+        "WKU",
+        "Western Kentucky University"
+      ],
+      "city": "Bowling Green",
+      "stadium": "Houchens Industries–L. T. Smith Stadium",
+      "center": [
+        -86.45944444,
+        36.98472222
+      ],
+      "crest": "us-cfb-98.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Houchens_Industries%E2%80%93L._T._Smith_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/98.png",
+      "conference": "Conference USA",
+      "state": "KY"
+    },
+    {
+      "id": "us-cfb-2623",
+      "tier": 2,
+      "en": "Missouri State",
+      "aliases": [
+        "Missouri State Bears",
+        "Missouri St",
+        "Missouri State",
+        "MOST",
+        "Missouri State University"
+      ],
+      "city": "Springfield",
+      "stadium": "Robert W. Plaster Stadium",
+      "center": [
+        -93.27972222,
+        37.19777778
+      ],
+      "crest": "us-cfb-2623.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Robert_W._Plaster_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+      "conference": "Conference USA",
+      "state": "MO"
+    },
+    {
+      "id": "us-cfb-338",
+      "tier": 2,
+      "en": "Kennesaw State",
+      "aliases": [
+        "Kennesaw State Owls",
+        "Kennesaw St",
+        "Kennesaw State",
+        "KENN",
+        "Kennesaw State University"
+      ],
+      "city": "Kennesaw",
+      "stadium": "Fifth Third Stadium",
+      "center": [
+        -84.567626,
+        34.028967
+      ],
+      "crest": "us-cfb-338.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Fifth_Third_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/338.png",
+      "conference": "Conference USA",
+      "state": "GA"
+    },
+    {
+      "id": "us-cfb-2534",
+      "tier": 2,
+      "en": "Sam Houston",
+      "aliases": [
+        "Sam Houston Bearkats",
+        "Sam Houston",
+        "SHSU",
+        "Sam Houston State University"
+      ],
+      "city": "Huntsville",
+      "stadium": "Elliott T. Bowers Stadium",
+      "center": [
+        -95.54166667,
+        30.71388889
+      ],
+      "crest": "us-cfb-2534.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bowers_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2534.png",
+      "conference": "Conference USA",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-87",
+      "tier": 2,
+      "en": "Notre Dame",
+      "aliases": [
+        "Notre Dame Fighting Irish",
+        "Notre Dame",
+        "ND",
+        "University of Notre Dame"
+      ],
+      "city": "Notre Dame",
+      "stadium": "Notre Dame Stadium",
+      "center": [
+        -86.23389,
+        41.69833
+      ],
+      "crest": "us-cfb-87.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Notre_Dame_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/87.png",
+      "conference": "FBS Independents",
+      "state": "IN"
+    },
+    {
+      "id": "us-cfb-41",
+      "tier": 2,
+      "en": "UConn",
+      "aliases": [
+        "UConn Huskies",
+        "UConn",
+        "CONN",
+        "University of Connecticut"
+      ],
+      "city": "East Hartford",
+      "stadium": "Pratt & Whitney Stadium at Rentschler Field",
+      "center": [
+        -72.61888889,
+        41.75972222
+      ],
+      "crest": "us-cfb-41.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Pratt_%26_Whitney_Stadium_at_Rentschler_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/41.png",
+      "conference": "FBS Independents",
+      "state": "CT"
+    },
+    {
+      "id": "us-cfb-195",
+      "tier": 2,
+      "en": "Ohio",
+      "aliases": [
+        "Ohio Bobcats",
+        "Ohio",
+        "OHIO",
+        "Ohio University"
+      ],
+      "city": "Athens",
+      "stadium": "Peden Stadium",
+      "center": [
+        -82.10277778,
+        39.32111111
+      ],
+      "crest": "us-cfb-195.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Peden_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/195.png",
+      "conference": "Mid-American Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-2649",
+      "tier": 2,
+      "en": "Toledo",
+      "aliases": [
+        "Toledo Rockets",
+        "Toledo",
+        "TOL",
+        "University of Toledo"
+      ],
+      "city": "Toledo",
+      "stadium": "Glass Bowl",
+      "center": [
+        -83.61361111,
+        41.65694444
+      ],
+      "crest": "us-cfb-2649.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Glass_Bowl",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2649.png",
+      "conference": "Mid-American Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-2711",
+      "tier": 2,
+      "en": "Western Michigan",
+      "aliases": [
+        "Western Michigan Broncos",
+        "W Michigan",
+        "Western Michigan",
+        "WMU",
+        "Western Michigan University"
+      ],
+      "city": "Kalamazoo",
+      "stadium": "Waldo Stadium",
+      "center": [
+        -85.60111111,
+        42.28583333
+      ],
+      "crest": "us-cfb-2711.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Waldo_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2711.png",
+      "conference": "Mid-American Conference",
+      "state": "MI"
+    },
+    {
+      "id": "us-cfb-2084",
+      "tier": 2,
+      "en": "Buffalo",
+      "aliases": [
+        "Buffalo Bulls",
+        "Buffalo",
+        "BUFF",
+        "University at Buffalo"
+      ],
+      "city": "Amherst",
+      "stadium": "Broadview Stadium",
+      "center": [
+        -78.7775,
+        42.99916667
+      ],
+      "crest": "us-cfb-2084.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Broadview_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2084.png",
+      "conference": "Mid-American Conference",
+      "state": "NY",
+      "officialClub": "https://ubbulls.com/sports/football/schedule/?path=football",
+      "note": "Current Broadview Stadium is on the Amherst campus, not in Buffalo city proper."
+    },
+    {
+      "id": "us-cfb-193",
+      "tier": 2,
+      "en": "Miami (OH)",
+      "aliases": [
+        "Miami (OH) RedHawks",
+        "Miami OH",
+        "Miami (OH)",
+        "M-OH",
+        "Miami University"
+      ],
+      "city": "Oxford",
+      "stadium": "Yager Stadium",
+      "center": [
+        -84.73277778,
+        39.51944444
+      ],
+      "crest": "us-cfb-193.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Yager_Stadium_(Miami_University)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/193.png",
+      "conference": "Mid-American Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-113",
+      "tier": 2,
+      "en": "Massachusetts",
+      "aliases": [
+        "Massachusetts Minutemen",
+        "UMass",
+        "Massachusetts",
+        "MASS",
+        "University of Massachusetts Amherst"
+      ],
+      "city": "Hadley",
+      "stadium": "Warren McGuirk Alumni Stadium",
+      "center": [
+        -72.53601944,
+        42.37730556
+      ],
+      "crest": "us-cfb-113.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Warren_McGuirk_Alumni_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/113.png",
+      "conference": "Mid-American Conference",
+      "state": "MA"
+    },
+    {
+      "id": "us-cfb-2199",
+      "tier": 2,
+      "en": "Eastern Michigan",
+      "aliases": [
+        "Eastern Michigan Eagles",
+        "E Michigan",
+        "Eastern Michigan",
+        "EMU",
+        "Eastern Michigan University"
+      ],
+      "city": "Ypsilanti",
+      "stadium": "Rynearson Stadium",
+      "center": [
+        -83.64722222,
+        42.25583333
+      ],
+      "crest": "us-cfb-2199.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Rynearson_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2199.png",
+      "conference": "Mid-American Conference",
+      "state": "MI"
+    },
+    {
+      "id": "us-cfb-2309",
+      "tier": 2,
+      "en": "Kent State",
+      "aliases": [
+        "Kent State Golden Flashes",
+        "Kent State",
+        "KENT",
+        "Kent State University"
+      ],
+      "city": "Kent",
+      "stadium": "Dix Stadium",
+      "center": [
+        -81.31333333,
+        41.13916667
+      ],
+      "crest": "us-cfb-2309.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Dix_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2309.png",
+      "conference": "Mid-American Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-2050",
+      "tier": 2,
+      "en": "Ball State",
+      "aliases": [
+        "Ball State Cardinals",
+        "Ball State",
+        "BALL",
+        "Ball State University"
+      ],
+      "city": "Muncie",
+      "stadium": "Scheumann Stadium",
+      "center": [
+        -85.41666667,
+        40.21611111
+      ],
+      "crest": "us-cfb-2050.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Scheumann_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2050.png",
+      "conference": "Mid-American Conference",
+      "state": "IN"
+    },
+    {
+      "id": "us-cfb-2117",
+      "tier": 2,
+      "en": "Central Michigan",
+      "aliases": [
+        "Central Michigan Chippewas",
+        "C Michigan",
+        "Central Michigan",
+        "CMU",
+        "Central Michigan University"
+      ],
+      "city": "Mount Pleasant",
+      "stadium": "Kelly/Shorts Stadium",
+      "center": [
+        -84.77083333,
+        43.5775
+      ],
+      "crest": "us-cfb-2117.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kelly%2FShorts_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2117.png",
+      "conference": "Mid-American Conference",
+      "state": "MI"
+    },
+    {
+      "id": "us-cfb-189",
+      "tier": 2,
+      "en": "Bowling Green",
+      "aliases": [
+        "Bowling Green Falcons",
+        "Bowling Green",
+        "BGSU",
+        "Bowling Green State University"
+      ],
+      "city": "Bowling Green",
+      "stadium": "Doyt L. Perry Stadium",
+      "center": [
+        -83.6225,
+        41.37805556
+      ],
+      "crest": "us-cfb-189.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Doyt_Perry_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/189.png",
+      "conference": "Mid-American Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-2006",
+      "tier": 2,
+      "en": "Akron",
+      "aliases": [
+        "Akron Zips",
+        "Akron",
+        "AKR",
+        "University of Akron"
+      ],
+      "city": "Akron",
+      "stadium": "InfoCision Stadium–Summa Field",
+      "center": [
+        -81.508019,
+        41.072347
+      ],
+      "crest": "us-cfb-2006.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/InfoCision_Stadium%E2%80%93Summa_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2006.png",
+      "conference": "Mid-American Conference",
+      "state": "OH"
+    },
+    {
+      "id": "us-cfb-16",
+      "tier": 2,
+      "en": "Sacramento State",
+      "aliases": [
+        "Sacramento State Hornets",
+        "Sacramento St",
+        "Sacramento State",
+        "SAC",
+        "Sacramento State University",
+        "Sac State",
+        "California State University Sacramento"
+      ],
+      "city": "Sacramento",
+      "stadium": "Hornet Stadium",
+      "center": [
+        -121.423,
+        38.556
+      ],
+      "crest": "us-cfb-16.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hornet_Stadium_(Sacramento)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/16.png",
+      "conference": "Mid-American Conference",
+      "state": "CA"
+    },
+    {
+      "id": "us-cfb-167",
+      "tier": 2,
+      "en": "New Mexico",
+      "aliases": [
+        "New Mexico Lobos",
+        "New Mexico",
+        "UNM",
+        "University of New Mexico"
+      ],
+      "city": "Albuquerque",
+      "stadium": "University Stadium",
+      "center": [
+        -106.62833333,
+        35.06694444
+      ],
+      "crest": "us-cfb-167.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/University_Stadium_(Albuquerque)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/167.png",
+      "conference": "Mountain West Conference",
+      "state": "NM"
+    },
+    {
+      "id": "us-cfb-2449",
+      "tier": 2,
+      "en": "North Dakota State",
+      "aliases": [
+        "North Dakota State Bison",
+        "N Dakota St",
+        "North Dakota State",
+        "NDSU",
+        "North Dakota State University"
+      ],
+      "city": "Fargo",
+      "stadium": "Fargodome",
+      "center": [
+        -96.80166667,
+        46.90305556
+      ],
+      "crest": "us-cfb-2449.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Fargodome",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2449.png",
+      "conference": "Mountain West Conference",
+      "state": "ND"
+    },
+    {
+      "id": "us-cfb-2005",
+      "tier": 2,
+      "en": "Air Force",
+      "aliases": [
+        "Air Force Falcons",
+        "Air Force",
+        "AFA",
+        "United States Air Force Academy"
+      ],
+      "city": "USAF Academy",
+      "stadium": "Falcon Stadium",
+      "center": [
+        -104.843,
+        38.997
+      ],
+      "crest": "us-cfb-2005.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Falcon_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2005.png",
+      "conference": "Mountain West Conference",
+      "state": "CO"
+    },
+    {
+      "id": "us-cfb-2751",
+      "tier": 2,
+      "en": "Wyoming",
+      "aliases": [
+        "Wyoming Cowboys",
+        "Wyoming",
+        "WYO",
+        "University of Wyoming"
+      ],
+      "city": "Laramie",
+      "stadium": "War Memorial Stadium",
+      "center": [
+        -105.568,
+        41.312
+      ],
+      "crest": "us-cfb-2751.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/War_Memorial_Stadium_(Wyoming)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2751.png",
+      "conference": "Mountain West Conference",
+      "state": "WY"
+    },
+    {
+      "id": "us-cfb-2439",
+      "tier": 2,
+      "en": "UNLV",
+      "aliases": [
+        "UNLV Rebels",
+        "UNLV",
+        "University of Nevada, Las Vegas"
+      ],
+      "city": "Paradise",
+      "stadium": "Allegiant Stadium",
+      "center": [
+        -115.18388889,
+        36.09055556
+      ],
+      "crest": "us-cfb-2439.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allegiant_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2439.png",
+      "conference": "Mountain West Conference",
+      "state": "NV",
+      "note": "UNLV uses Allegiant Stadium in Paradise, not Sam Boyd Stadium."
+    },
+    {
+      "id": "us-cfb-23",
+      "tier": 2,
+      "en": "San José State",
+      "aliases": [
+        "San José State Spartans",
+        "San José St",
+        "San José State",
+        "SJSU",
+        "San Jose State University"
+      ],
+      "city": "San Jose",
+      "stadium": "CEFCU Stadium",
+      "center": [
+        -121.86833333,
+        37.31972222
+      ],
+      "crest": "us-cfb-23.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/CEFCU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/23.png",
+      "conference": "Mountain West Conference",
+      "state": "CA"
+    },
+    {
+      "id": "us-cfb-2440",
+      "tier": 2,
+      "en": "Nevada",
+      "aliases": [
+        "Nevada Wolf Pack",
+        "Nevada",
+        "NEV",
+        "University of Nevada, Reno"
+      ],
+      "city": "Reno",
+      "stadium": "Mackay Stadium",
+      "center": [
+        -119.8175,
+        39.54694444
+      ],
+      "crest": "us-cfb-2440.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Mackay_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2440.png",
+      "conference": "Mountain West Conference",
+      "state": "NV"
+    },
+    {
+      "id": "us-cfb-62",
+      "tier": 2,
+      "en": "Hawai'i",
+      "aliases": [
+        "Hawai'i Rainbow Warriors",
+        "Hawai'i",
+        "HAW",
+        "University of Hawaiʻi at Mānoa",
+        "Hawaii",
+        "Hawaiʻi",
+        "University of Hawaii"
+      ],
+      "city": "Honolulu",
+      "stadium": "Clarence T. C. Ching Athletics Complex",
+      "center": [
+        -157.818,
+        21.294
+      ],
+      "crest": "us-cfb-62.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Clarence_T._C._Ching_Athletics_Complex",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/62.png",
+      "conference": "Mountain West Conference",
+      "state": "HI",
+      "officialClub": "https://hawaiiathletics.com/sports/2025/7/9/clarence-t-c-ching-athletics-complex.aspx",
+      "note": "Hawai‘i has used Ching Athletics Complex since 2021; Aloha Stadium is an obsolete provider venue."
+    },
+    {
+      "id": "us-cfb-2638",
+      "tier": 2,
+      "en": "UTEP",
+      "aliases": [
+        "UTEP Miners",
+        "UTEP",
+        "University of Texas at El Paso"
+      ],
+      "city": "El Paso",
+      "stadium": "Sun Bowl Stadium",
+      "center": [
+        -106.508,
+        31.773
+      ],
+      "crest": "us-cfb-2638.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sun_Bowl_(stadium)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2638.png",
+      "conference": "Mountain West Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-2459",
+      "tier": 2,
+      "en": "Northern Illinois",
+      "aliases": [
+        "Northern Illinois Huskies",
+        "N Illinois",
+        "Northern Illinois",
+        "NIU",
+        "Northern Illinois University"
+      ],
+      "city": "DeKalb",
+      "stadium": "Huskie Stadium",
+      "center": [
+        -88.778,
+        41.934
+      ],
+      "crest": "us-cfb-2459.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Huskie_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2459.png",
+      "conference": "Mountain West Conference",
+      "state": "IL"
+    },
+    {
+      "id": "us-cfb-68",
+      "tier": 2,
+      "en": "Boise State",
+      "aliases": [
+        "Boise State Broncos",
+        "Boise St",
+        "Boise State",
+        "BOIS",
+        "Boise State University"
+      ],
+      "city": "Boise",
+      "stadium": "Albertsons Stadium",
+      "center": [
+        -116.196,
+        43.603
+      ],
+      "crest": "us-cfb-68.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Albertsons_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/68.png",
+      "conference": "Pac-12 Conference",
+      "state": "ID"
+    },
+    {
+      "id": "us-cfb-204",
+      "tier": 2,
+      "en": "Oregon State",
+      "aliases": [
+        "Oregon State Beavers",
+        "Oregon St",
+        "Oregon State",
+        "ORST",
+        "Oregon State University"
+      ],
+      "city": "Corvallis",
+      "stadium": "Reser Stadium",
+      "center": [
+        -123.281,
+        44.559
+      ],
+      "crest": "us-cfb-204.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Reser_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/204.png",
+      "conference": "Pac-12 Conference",
+      "state": "OR"
+    },
+    {
+      "id": "us-cfb-326",
+      "tier": 2,
+      "en": "Texas State",
+      "aliases": [
+        "Texas State Bobcats",
+        "Texas St",
+        "Texas State",
+        "TXST",
+        "Texas State University"
+      ],
+      "city": "San Marcos",
+      "stadium": "UFCU Stadium",
+      "center": [
+        -97.92555556,
+        29.89111111
+      ],
+      "crest": "us-cfb-326.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/UFCU_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/326.png",
+      "conference": "Pac-12 Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-278",
+      "tier": 2,
+      "en": "Fresno State",
+      "aliases": [
+        "Fresno State Bulldogs",
+        "Fresno St",
+        "Fresno State",
+        "FRES",
+        "California State University, Fresno"
+      ],
+      "city": "Fresno",
+      "stadium": "Valley Children's Stadium",
+      "center": [
+        -119.758,
+        36.814
+      ],
+      "crest": "us-cfb-278.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Valley_Children's_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/278.png",
+      "conference": "Pac-12 Conference",
+      "state": "CA"
+    },
+    {
+      "id": "us-cfb-36",
+      "tier": 2,
+      "en": "Colorado State",
+      "aliases": [
+        "Colorado State Rams",
+        "Colorado St",
+        "Colorado State",
+        "CSU",
+        "Colorado State University"
+      ],
+      "city": "Fort Collins",
+      "stadium": "Canvas Stadium",
+      "center": [
+        -105.0885,
+        40.57
+      ],
+      "crest": "us-cfb-36.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Canvas_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/36.png",
+      "conference": "Pac-12 Conference",
+      "state": "CO",
+      "note": "Colorado State uses Canvas Stadium on campus, not the former Hughes Stadium."
+    },
+    {
+      "id": "us-cfb-21",
+      "tier": 2,
+      "en": "San Diego State",
+      "aliases": [
+        "San Diego State Aztecs",
+        "San Diego St",
+        "San Diego State",
+        "SDSU",
+        "San Diego State University"
+      ],
+      "city": "San Diego",
+      "stadium": "Snapdragon Stadium",
+      "center": [
+        -117.12277778,
+        32.78444444
+      ],
+      "crest": "us-cfb-21.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Snapdragon_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/21.png",
+      "conference": "Pac-12 Conference",
+      "state": "CA",
+      "note": "San Diego State uses Snapdragon Stadium, not the demolished SDCCU Stadium."
+    },
+    {
+      "id": "us-cfb-328",
+      "tier": 2,
+      "en": "Utah State",
+      "aliases": [
+        "Utah State Aggies",
+        "Utah State",
+        "USU",
+        "Utah State University"
+      ],
+      "city": "Logan",
+      "stadium": "Maverik Stadium",
+      "center": [
+        -111.81166667,
+        41.75166667
+      ],
+      "crest": "us-cfb-328.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Maverik_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/328.png",
+      "conference": "Pac-12 Conference",
+      "state": "UT"
+    },
+    {
+      "id": "us-cfb-265",
+      "tier": 2,
+      "en": "Washington State",
+      "aliases": [
+        "Washington State Cougars",
+        "Washington St",
+        "Washington State",
+        "WSU",
+        "Washington State University"
+      ],
+      "city": "Pullman",
+      "stadium": "Martin Stadium",
+      "center": [
+        -117.16,
+        46.732
+      ],
+      "crest": "us-cfb-265.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Martin_Stadium_(Pullman)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/265.png",
+      "conference": "Pac-12 Conference",
+      "state": "WA"
+    },
+    {
+      "id": "us-cfb-96",
+      "tier": 1,
+      "en": "Kentucky",
+      "aliases": [
+        "Kentucky Wildcats",
+        "Kentucky",
+        "UK",
+        "University of Kentucky"
+      ],
+      "city": "Lexington",
+      "stadium": "Kroger Field",
+      "center": [
+        -84.50527778,
+        38.02277778
+      ],
+      "crest": "us-cfb-96.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kroger_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/96.png",
+      "conference": "Southeastern Conference",
+      "state": "KY"
+    },
+    {
+      "id": "us-cfb-61",
+      "tier": 1,
+      "en": "Georgia",
+      "aliases": [
+        "Georgia Bulldogs",
+        "Georgia",
+        "UGA",
+        "University of Georgia"
+      ],
+      "city": "Athens",
+      "stadium": "Sanford Stadium",
+      "center": [
+        -83.37336389,
+        33.94980278
+      ],
+      "crest": "us-cfb-61.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Sanford_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/61.png",
+      "conference": "Southeastern Conference",
+      "state": "GA"
+    },
+    {
+      "id": "us-cfb-333",
+      "tier": 1,
+      "en": "Alabama",
+      "aliases": [
+        "Alabama Crimson Tide",
+        "Alabama",
+        "ALA",
+        "University of Alabama"
+      ],
+      "city": "Tuscaloosa",
+      "stadium": "Bryant–Denny Stadium",
+      "center": [
+        -87.55027778,
+        33.20833333
+      ],
+      "crest": "us-cfb-333.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bryant%E2%80%93Denny_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
+      "conference": "Southeastern Conference",
+      "state": "AL"
+    },
+    {
+      "id": "us-cfb-99",
+      "tier": 1,
+      "en": "LSU",
+      "aliases": [
+        "LSU Tigers",
+        "LSU",
+        "Louisiana State University"
+      ],
+      "city": "Baton Rouge",
+      "stadium": "Tiger Stadium",
+      "center": [
+        -91.18388889,
+        30.41222222
+      ],
+      "crest": "us-cfb-99.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Tiger_Stadium_(Louisiana)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/99.png",
+      "conference": "Southeastern Conference",
+      "state": "LA"
+    },
+    {
+      "id": "us-cfb-2633",
+      "tier": 1,
+      "en": "Tennessee",
+      "aliases": [
+        "Tennessee Volunteers",
+        "Tennessee",
+        "TENN",
+        "University of Tennessee"
+      ],
+      "city": "Knoxville",
+      "stadium": "Neyland Stadium",
+      "center": [
+        -83.925,
+        35.955
+      ],
+      "crest": "us-cfb-2633.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Neyland_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2633.png",
+      "conference": "Southeastern Conference",
+      "state": "TN"
+    },
+    {
+      "id": "us-cfb-57",
+      "tier": 1,
+      "en": "Florida",
+      "aliases": [
+        "Florida Gators",
+        "Florida",
+        "FLA",
+        "University of Florida"
+      ],
+      "city": "Gainesville",
+      "stadium": "Ben Hill Griffin Stadium",
+      "center": [
+        -82.3486,
+        29.65
+      ],
+      "crest": "us-cfb-57.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Ben_Hill_Griffin_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/57.png",
+      "conference": "Southeastern Conference",
+      "state": "FL"
+    },
+    {
+      "id": "us-cfb-145",
+      "tier": 1,
+      "en": "Ole Miss",
+      "aliases": [
+        "Ole Miss Rebels",
+        "Ole Miss",
+        "MISS",
+        "University of Mississippi"
+      ],
+      "city": "University",
+      "stadium": "Vaught–Hemingway Stadium",
+      "center": [
+        -89.53416667,
+        34.36194444
+      ],
+      "crest": "us-cfb-145.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Vaught%E2%80%93Hemingway_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/145.png",
+      "conference": "Southeastern Conference",
+      "state": "MS"
+    },
+    {
+      "id": "us-cfb-142",
+      "tier": 1,
+      "en": "Missouri",
+      "aliases": [
+        "Missouri Tigers",
+        "Missouri",
+        "MIZ",
+        "University of Missouri"
+      ],
+      "city": "Columbia",
+      "stadium": "Faurot Field at Memorial Stadium",
+      "center": [
+        -92.33305556,
+        38.93583333
+      ],
+      "crest": "us-cfb-142.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Faurot_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/142.png",
+      "conference": "Southeastern Conference",
+      "state": "MO"
+    },
+    {
+      "id": "us-cfb-251",
+      "tier": 1,
+      "en": "Texas",
+      "aliases": [
+        "Texas Longhorns",
+        "Texas",
+        "TEX",
+        "University of Texas at Austin"
+      ],
+      "city": "Austin",
+      "stadium": "Darrell K Royal–Texas Memorial Stadium",
+      "center": [
+        -97.73256,
+        30.28367
+      ],
+      "crest": "us-cfb-251.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Darrell_K_Royal%E2%80%93Texas_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/251.png",
+      "conference": "Southeastern Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-201",
+      "tier": 1,
+      "en": "Oklahoma",
+      "aliases": [
+        "Oklahoma Sooners",
+        "Oklahoma",
+        "OU",
+        "University of Oklahoma"
+      ],
+      "city": "Norman",
+      "stadium": "Gaylord Family Oklahoma Memorial Stadium",
+      "center": [
+        -97.4425,
+        35.20583333
+      ],
+      "crest": "us-cfb-201.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Gaylord_Family_Oklahoma_Memorial_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/201.png",
+      "conference": "Southeastern Conference",
+      "state": "OK"
+    },
+    {
+      "id": "us-cfb-344",
+      "tier": 1,
+      "en": "Mississippi State",
+      "aliases": [
+        "Mississippi State Bulldogs",
+        "Mississippi St",
+        "Mississippi State",
+        "MSST",
+        "Mississippi State University"
+      ],
+      "city": "Mississippi State",
+      "stadium": "Davis Wade Stadium",
+      "center": [
+        -88.79361111,
+        33.45638889
+      ],
+      "crest": "us-cfb-344.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Davis_Wade_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/344.png",
+      "conference": "Southeastern Conference",
+      "state": "MS"
+    },
+    {
+      "id": "us-cfb-2",
+      "tier": 1,
+      "en": "Auburn",
+      "aliases": [
+        "Auburn Tigers",
+        "Auburn",
+        "AUB",
+        "Auburn University"
+      ],
+      "city": "Auburn",
+      "stadium": "Jordan–Hare Stadium",
+      "center": [
+        -85.48916667,
+        32.60222222
+      ],
+      "crest": "us-cfb-2.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Jordan%E2%80%93Hare_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+      "conference": "Southeastern Conference",
+      "state": "AL"
+    },
+    {
+      "id": "us-cfb-2579",
+      "tier": 1,
+      "en": "South Carolina",
+      "aliases": [
+        "South Carolina Gamecocks",
+        "South Carolina",
+        "SC",
+        "University of South Carolina"
+      ],
+      "city": "Columbia",
+      "stadium": "Williams–Brice Stadium",
+      "center": [
+        -81.01916667,
+        33.97305556
+      ],
+      "crest": "us-cfb-2579.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Williams%E2%80%93Brice_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png",
+      "conference": "Southeastern Conference",
+      "state": "SC"
+    },
+    {
+      "id": "us-cfb-245",
+      "tier": 1,
+      "en": "Texas A&M",
+      "aliases": [
+        "Texas A&M Aggies",
+        "Texas A&M",
+        "TA&M",
+        "Texas A&M University"
+      ],
+      "city": "College Station",
+      "stadium": "Kyle Field",
+      "center": [
+        -96.3405,
+        30.6099
+      ],
+      "crest": "us-cfb-245.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kyle_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/245.png",
+      "conference": "Southeastern Conference",
+      "state": "TX"
+    },
+    {
+      "id": "us-cfb-8",
+      "tier": 1,
+      "en": "Arkansas",
+      "aliases": [
+        "Arkansas Razorbacks",
+        "Arkansas",
+        "ARK",
+        "University of Arkansas"
+      ],
+      "city": "Fayetteville",
+      "stadium": "Donald W. Reynolds Razorback Stadium",
+      "center": [
+        -94.17888889,
+        36.06805556
+      ],
+      "crest": "us-cfb-8.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Razorback_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/8.png",
+      "conference": "Southeastern Conference",
+      "state": "AR"
+    },
+    {
+      "id": "us-cfb-238",
+      "tier": 1,
+      "en": "Vanderbilt",
+      "aliases": [
+        "Vanderbilt Commodores",
+        "Vanderbilt",
+        "VAN",
+        "Vanderbilt University"
+      ],
+      "city": "Nashville",
+      "stadium": "FirstBank Stadium",
+      "center": [
+        -86.80888889,
+        36.14416667
+      ],
+      "crest": "us-cfb-238.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/FirstBank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/238.png",
+      "conference": "Southeastern Conference",
+      "state": "TN"
+    },
+    {
+      "id": "us-cfb-256",
+      "tier": 2,
+      "en": "James Madison",
+      "aliases": [
+        "James Madison Dukes",
+        "James Madison",
+        "JMU",
+        "James Madison University"
+      ],
+      "city": "Harrisonburg",
+      "stadium": "Bridgeforth Stadium",
+      "center": [
+        -78.87305556,
+        38.43527778
+      ],
+      "crest": "us-cfb-256.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Bridgeforth_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/256.png",
+      "conference": "Sun Belt Conference",
+      "state": "VA"
+    },
+    {
+      "id": "us-cfb-2026",
+      "tier": 2,
+      "en": "App State",
+      "aliases": [
+        "App State Mountaineers",
+        "App State",
+        "APP",
+        "Appalachian State University",
+        "Appalachian State"
+      ],
+      "city": "Boone",
+      "stadium": "Kidd Brewer Stadium",
+      "center": [
+        -81.68555556,
+        36.21166667
+      ],
+      "crest": "us-cfb-2026.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Kidd_Brewer_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2026.png",
+      "conference": "Sun Belt Conference",
+      "state": "NC"
+    },
+    {
+      "id": "us-cfb-2247",
+      "tier": 2,
+      "en": "Georgia State",
+      "aliases": [
+        "Georgia State Panthers",
+        "Georgia St",
+        "Georgia State",
+        "GAST",
+        "Georgia State University"
+      ],
+      "city": "Atlanta",
+      "stadium": "Center Parc Stadium",
+      "center": [
+        -84.38944444,
+        33.73527778
+      ],
+      "crest": "us-cfb-2247.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Center_Parc_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2247.png",
+      "conference": "Sun Belt Conference",
+      "state": "GA"
+    },
+    {
+      "id": "us-cfb-276",
+      "tier": 2,
+      "en": "Marshall",
+      "aliases": [
+        "Marshall Thundering Herd",
+        "Marshall",
+        "MRSH",
+        "Marshall University"
+      ],
+      "city": "Huntington",
+      "stadium": "Joan C. Edwards Stadium",
+      "center": [
+        -82.42083333,
+        38.425
+      ],
+      "crest": "us-cfb-276.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Joan_C._Edwards_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/276.png",
+      "conference": "Sun Belt Conference",
+      "state": "WV"
+    },
+    {
+      "id": "us-cfb-290",
+      "tier": 2,
+      "en": "Georgia Southern",
+      "aliases": [
+        "Georgia Southern Eagles",
+        "GA Southern",
+        "Georgia Southern",
+        "GASO",
+        "Georgia Southern University"
+      ],
+      "city": "Statesboro",
+      "stadium": "Allen E. Paulson Stadium",
+      "center": [
+        -81.783135,
+        32.412161
+      ],
+      "crest": "us-cfb-290.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Allen_E._Paulson_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/290.png",
+      "conference": "Sun Belt Conference",
+      "state": "GA"
+    },
+    {
+      "id": "us-cfb-324",
+      "tier": 2,
+      "en": "Coastal Carolina",
+      "aliases": [
+        "Coastal Carolina Chanticleers",
+        "Coastal",
+        "Coastal Carolina",
+        "CCU",
+        "Coastal Carolina University"
+      ],
+      "city": "Conway",
+      "stadium": "Brooks Stadium",
+      "center": [
+        -79.0175,
+        33.7929
+      ],
+      "crest": "us-cfb-324.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Brooks_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/324.png",
+      "conference": "Sun Belt Conference",
+      "state": "SC"
+    },
+    {
+      "id": "us-cfb-295",
+      "tier": 2,
+      "en": "Old Dominion",
+      "aliases": [
+        "Old Dominion Monarchs",
+        "Old Dominion",
+        "ODU",
+        "Old Dominion University"
+      ],
+      "city": "Norfolk",
+      "stadium": "S. B. Ballard Stadium",
+      "center": [
+        -76.30487778,
+        36.8889
+      ],
+      "crest": "us-cfb-295.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/S.B._Ballard_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/295.png",
+      "conference": "Sun Belt Conference",
+      "state": "VA"
+    },
+    {
+      "id": "us-cfb-2348",
+      "tier": 2,
+      "en": "Louisiana Tech",
+      "aliases": [
+        "Louisiana Tech Bulldogs",
+        "Louisiana Tech",
+        "LT",
+        "Louisiana Tech University"
+      ],
+      "city": "Ruston",
+      "stadium": "Joe Aillet Stadium",
+      "center": [
+        -92.655899,
+        32.532021
+      ],
+      "crest": "us-cfb-2348.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Joe_Aillet_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2348.png",
+      "conference": "Sun Belt Conference",
+      "state": "LA"
+    },
+    {
+      "id": "us-cfb-309",
+      "tier": 2,
+      "en": "Louisiana",
+      "aliases": [
+        "Louisiana Ragin' Cajuns",
+        "Louisiana",
+        "UL",
+        "University of Louisiana at Lafayette"
+      ],
+      "city": "Lafayette",
+      "stadium": "Our Lady of Lourdes Stadium",
+      "center": [
+        -92.04194444,
+        30.21583333
+      ],
+      "crest": "us-cfb-309.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Cajun_Field",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/309.png",
+      "conference": "Sun Belt Conference",
+      "state": "LA",
+      "officialClub": "https://ragincajuns.com/facilities/our-lady-of-lourdes-stadium/1166",
+      "note": "Renovated and renamed Our Lady of Lourdes Stadium in August 2025, formerly Cajun Field."
+    },
+    {
+      "id": "us-cfb-6",
+      "tier": 2,
+      "en": "South Alabama",
+      "aliases": [
+        "South Alabama Jaguars",
+        "South Alabama",
+        "USA",
+        "University of South Alabama"
+      ],
+      "city": "Mobile",
+      "stadium": "Hancock Whitney Stadium",
+      "center": [
+        -88.192013,
+        30.696904
+      ],
+      "crest": "us-cfb-6.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Hancock_Whitney_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/6.png",
+      "conference": "Sun Belt Conference",
+      "state": "AL"
+    },
+    {
+      "id": "us-cfb-2032",
+      "tier": 2,
+      "en": "Arkansas State",
+      "aliases": [
+        "Arkansas State Red Wolves",
+        "Arkansas St",
+        "Arkansas State",
+        "ARST",
+        "Arkansas State University"
+      ],
+      "city": "Jonesboro",
+      "stadium": "Centennial Bank Stadium",
+      "center": [
+        -90.66722222,
+        35.84888889
+      ],
+      "crest": "us-cfb-2032.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Centennial_Bank_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+      "conference": "Sun Belt Conference",
+      "state": "AR"
+    },
+    {
+      "id": "us-cfb-2653",
+      "tier": 2,
+      "en": "Troy",
+      "aliases": [
+        "Troy Trojans",
+        "Troy",
+        "TROY",
+        "Troy University"
+      ],
+      "city": "Troy",
+      "stadium": "Veterans Memorial Stadium at Larry Blakeney Field",
+      "center": [
+        -85.95194444,
+        31.79944444
+      ],
+      "crest": "us-cfb-2653.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Veterans_Memorial_Stadium_(Troy_University)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2653.png",
+      "conference": "Sun Belt Conference",
+      "state": "AL"
+    },
+    {
+      "id": "us-cfb-2572",
+      "tier": 2,
+      "en": "Southern Miss",
+      "aliases": [
+        "Southern Miss Golden Eagles",
+        "Southern Miss",
+        "USM",
+        "University of Southern Mississippi"
+      ],
+      "city": "Hattiesburg",
+      "stadium": "M. M. Roberts Stadium",
+      "center": [
+        -89.33138889,
+        31.32888889
+      ],
+      "crest": "us-cfb-2572.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/Renasant_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2572.png",
+      "conference": "Sun Belt Conference",
+      "state": "MS"
+    },
+    {
+      "id": "us-cfb-2433",
+      "tier": 2,
+      "en": "UL Monroe",
+      "aliases": [
+        "UL Monroe Warhawks",
+        "UL Monroe",
+        "ULM",
+        "University of Louisiana at Monroe"
+      ],
+      "city": "Monroe",
+      "stadium": "FMOL Health | St. Francis Stadium",
+      "center": [
+        -92.06583333,
+        32.53083333
+      ],
+      "crest": "us-cfb-2433.png",
+      "coordinateSource": "https://en.wikipedia.org/wiki/FMOL_Health%2FSt._Francis_Stadium",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/ncaa/500/2433.png",
+      "conference": "Sun Belt Conference",
+      "state": "LA",
+      "officialClub": "https://ulmwarhawks.com/facilities/malone-stadium/1",
+      "note": "Renamed for the 2026 season; formerly Malone Stadium."
+    }
+  ]
+}

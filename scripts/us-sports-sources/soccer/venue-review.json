@@ -1,0 +1,660 @@
+{
+  "182": {
+    "center": [
+      -87.6167,
+      41.8623
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Soldier_Field",
+    "stadium": "Soldier Field",
+    "city": "Chicago, Illinois",
+    "note": "Primary home is Soldier Field. Some 2026 matches move to SeatGeek Stadium in Bridgeview because of Chicago Bears scheduling conflicts."
+  },
+  "183": {
+    "center": [
+      -83.01709,
+      39.96846
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/ScottsMiracle-Gro_Field",
+    "stadium": "ScottsMiracle-Gro Field",
+    "city": "Columbus, Ohio"
+  },
+  "184": {
+    "center": [
+      -104.89194444,
+      39.80555556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Dick's_Sporting_Goods_Park",
+    "stadium": "Dick's Sporting Goods Park",
+    "city": "Commerce City, Colorado"
+  },
+  "185": {
+    "center": [
+      -96.83527778,
+      33.15444444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Toyota_Stadium_(Texas)",
+    "stadium": "Toyota Stadium (Texas)",
+    "city": "Frisco, Texas"
+  },
+  "186": {
+    "center": [
+      -94.82318,
+      39.12174
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Sporting_Park",
+    "stadium": "Sporting Park",
+    "city": "Kansas City, Kansas"
+  },
+  "187": {
+    "center": [
+      -118.261,
+      33.864
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Dignity_Health_Sports_Park",
+    "stadium": "Dignity Health Sports Park",
+    "city": "Carson, California"
+  },
+  "189": {
+    "center": [
+      -71.264,
+      42.091
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Gillette_Stadium",
+    "stadium": "Gillette Stadium",
+    "city": "Foxborough, Massachusetts"
+  },
+  "190": {
+    "center": [
+      -74.15027778,
+      40.73666667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Sports_Illustrated_Stadium",
+    "stadium": "Sports Illustrated Stadium",
+    "city": "Harrison, New Jersey"
+  },
+  "191": {
+    "center": [
+      -121.925,
+      37.35138889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/PayPal_Park",
+    "stadium": "PayPal Park",
+    "city": "San Jose, California"
+  },
+  "193": {
+    "center": [
+      -77.012869,
+      38.868411
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Audi_Field",
+    "stadium": "Audi Field",
+    "city": "Washington, District of Columbia"
+  },
+  "4771": {
+    "center": [
+      -111.8934,
+      40.5829
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/America_First_Field",
+    "stadium": "America First Field",
+    "city": "Sandy, Utah"
+  },
+  "6077": {
+    "center": [
+      -95.3524,
+      29.7522
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Shell_Energy_Stadium",
+    "stadium": "Shell Energy Stadium",
+    "city": "Houston, Texas"
+  },
+  "7318": {
+    "center": [
+      -79.41861111,
+      43.63333333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/BMO_Field",
+    "stadium": "BMO Field",
+    "city": "Toronto"
+  },
+  "9720": {
+    "center": [
+      -73.5525,
+      45.56305556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Saputo_Stadium",
+    "stadium": "Saputo Stadium",
+    "city": "Montreal"
+  },
+  "9723": {
+    "center": [
+      -122.69166667,
+      45.52138889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Providence_Park",
+    "stadium": "Providence Park",
+    "city": "Portland, Oregon"
+  },
+  "9726": {
+    "center": [
+      -122.3316,
+      47.5952
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Lumen_Field",
+    "stadium": "Lumen Field",
+    "city": "Seattle, Washington"
+  },
+  "9727": {
+    "center": [
+      -123.11194444,
+      49.27666667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/BC_Place",
+    "stadium": "BC Place",
+    "city": "Vancouver"
+  },
+  "9729": {
+    "center": [
+      -79.902983,
+      32.795143
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Patriots_Point_Soccer_Complex",
+    "stadium": "Patriots Point Soccer Complex",
+    "city": "Mount Pleasant, South Carolina"
+  },
+  "10739": {
+    "center": [
+      -75.37888889,
+      39.83222222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Subaru_Park",
+    "stadium": "Subaru Park",
+    "city": "Chester, Pennsylvania"
+  },
+  "12011": {
+    "center": [
+      -81.3893,
+      28.5411
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Inter.co_Stadium",
+    "stadium": "Inter.co Stadium",
+    "city": "Orlando, Florida"
+  },
+  "17360": {
+    "center": [
+      -86.17788,
+      39.771146
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/IU_Michael_A._Carroll_Track_%26_Soccer_Stadium",
+    "stadium": "IU Michael A. Carroll Track & Soccer Stadium",
+    "city": "Indianapolis, Indiana"
+  },
+  "17361": {
+    "center": [
+      -82.6331,
+      27.7681
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Al_Lang_Stadium",
+    "stadium": "Al Lang Stadium",
+    "city": "St. Petersburg, Florida"
+  },
+  "17362": {
+    "center": [
+      -93.16472222,
+      44.95311111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Allianz_Field",
+    "stadium": "Allianz Field",
+    "city": "Saint Paul, Minnesota"
+  },
+  "17545": {
+    "stadium": "City Stadium",
+    "center": [
+      -77.486781,
+      37.549697
+    ],
+    "city": "Richmond, Virginia",
+    "coordinateSource": "https://en.wikipedia.org/wiki/City_Stadium_(Richmond)"
+  },
+  "17606": {
+    "center": [
+      -73.92638889,
+      40.82916667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Yankee_Stadium",
+    "stadium": "Yankee Stadium",
+    "city": "New York, New York",
+    "note": "Primary home is Yankee Stadium in the Bronx. Several 2026 fixtures use Citi Field in Queens; the new Etihad Park opens in 2027."
+  },
+  "17826": {
+    "center": [
+      -80.8283,
+      35.2182
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/American_Legion_Memorial_Stadium",
+    "stadium": "American Legion Memorial Stadium",
+    "city": "Charlotte, North Carolina",
+    "note": "Primary home is American Legion Memorial Stadium. The 2026 home schedule is split with the Mecklenburg County Sportsplex at Matthews."
+  },
+  "17827": {
+    "center": [
+      -80.00944444,
+      40.43611111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/F.N.B._Stadium_(Pittsburgh)",
+    "stadium": "F.N.B. Stadium (Pittsburgh)",
+    "city": "Pittsburgh, Pennsylvania"
+  },
+  "17828": {
+    "center": [
+      -121.43805556,
+      38.59111111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Heart_Health_Park",
+    "stadium": "Heart Health Park",
+    "city": "Sacramento, California"
+  },
+  "17830": {
+    "center": [
+      -104.828191,
+      38.826363
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Weidner_Field",
+    "stadium": "Weidner Field",
+    "city": "Colorado Springs, Colorado"
+  },
+  "17832": {
+    "center": [
+      -85.73194444,
+      38.25944444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Lynn_Family_Stadium",
+    "stadium": "Lynn Family Stadium",
+    "city": "Louisville, Kentucky"
+  },
+  "17850": {
+    "center": [
+      -112.00194444,
+      33.44527778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Phoenix_Rising_Soccer_Stadium",
+    "stadium": "Phoenix Rising Soccer Stadium",
+    "city": "Phoenix, Arizona"
+  },
+  "18159": {
+    "center": [
+      -80.37777778,
+      25.7525
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Pitbull_Stadium",
+    "stadium": "Pitbull Stadium",
+    "city": "Miami, Florida"
+  },
+  "18265": {
+    "center": [
+      -98.39472222,
+      29.53888889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Toyota_Field",
+    "stadium": "Toyota Field",
+    "city": "San Antonio, Texas"
+  },
+  "18267": {
+    "center": [
+      -84.52222222,
+      39.11138889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/TQL_Stadium",
+    "stadium": "TQL Stadium",
+    "city": "Cincinnati, Ohio"
+  },
+  "18418": {
+    "center": [
+      -84.4,
+      33.75555556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Mercedes-Benz_Stadium",
+    "stadium": "Mercedes-Benz Stadium",
+    "city": "Atlanta, Georgia"
+  },
+  "18446": {
+    "center": [
+      -95.98805556,
+      36.15972222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Oneok_Field",
+    "stadium": "Oneok Field",
+    "city": "Tulsa, Oklahoma"
+  },
+  "18455": {
+    "center": [
+      -117.739335,
+      33.67446
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Championship_Soccer_Stadium",
+    "stadium": "Championship Soccer Stadium",
+    "city": "Irvine, California"
+  },
+  "18966": {
+    "center": [
+      -118.28408333,
+      34.01277778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/BMO_Stadium",
+    "stadium": "BMO Stadium",
+    "city": "Los Angeles, California"
+  },
+  "18986": {
+    "center": [
+      -86.766,
+      36.13008333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Geodis_Park",
+    "stadium": "Geodis Park",
+    "city": "Nashville, Tennessee"
+  },
+  "18987": {
+    "center": [
+      -115.12997222,
+      36.17966667
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Cashman_Field",
+    "stadium": "Cashman Field",
+    "city": "Las Vegas, Nevada"
+  },
+  "19179": {
+    "center": [
+      -83.04888889,
+      42.39222222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Keyworth_Stadium",
+    "stadium": "Keyworth Stadium",
+    "city": "Hamtramck, Michigan"
+  },
+  "19405": {
+    "center": [
+      -86.8092,
+      33.5278
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Protective_Stadium",
+    "stadium": "Protective Stadium",
+    "city": "Birmingham, Alabama",
+    "note": "Primary home is Protective Stadium. Several 2026 matches, including October 18, moved individually to Dunnavant Valley Fields; that temporary match venue is not the season’s primary ground."
+  },
+  "19407": {
+    "center": [
+      -106.49266667,
+      31.75902778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Southwest_University_Park",
+    "stadium": "Southwest University Park",
+    "city": "El Paso, Texas"
+  },
+  "19408": {
+    "center": [
+      -106.62916667,
+      35.06972222
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Isotopes_Park",
+    "stadium": "Isotopes Park",
+    "city": "Albuquerque, New Mexico"
+  },
+  "19410": {
+    "center": [
+      -77.54558333,
+      39.06902778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Segra_Field",
+    "stadium": "Segra Field",
+    "city": "Leesburg, Virginia"
+  },
+  "19411": {
+    "center": [
+      -72.6611,
+      41.7538
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Trinity_Health_Stadium",
+    "stadium": "Trinity Health Stadium",
+    "city": "Hartford, Connecticut"
+  },
+  "19964": {
+    "center": [
+      -82.2813527,
+      34.7947778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/GE_Vernova_Park",
+    "stadium": "GE Vernova Park",
+    "city": "Mauldin, South Carolina"
+  },
+  "19995": {
+    "center": [
+      -89.37306,
+      43.08306
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Breese_Stevens_Field",
+    "stadium": "Breese Stevens Field",
+    "city": "Madison, Wisconsin"
+  },
+  "20000": {
+    "center": [
+      -85.21138889,
+      34.99861111
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/CHI_Memorial_Stadium",
+    "stadium": "CHI Memorial Stadium",
+    "city": "East Ridge, Tennessee"
+  },
+  "20232": {
+    "center": [
+      -80.259,
+      25.7931
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Nu_Stadium",
+    "stadium": "Nu Stadium",
+    "city": "Miami, Florida",
+    "note": "Inter Miami moved to Nu Stadium at Miami Freedom Park in April 2026, replacing its former Fort Lauderdale ground."
+  },
+  "20671": {
+    "center": [
+      -97.43126305,
+      27.70574035
+    ],
+    "stadium": "Cabaniss Athletic Complex – stadium",
+    "coordinateSource": "https://www.openstreetmap.org/way/262246098",
+    "officialClub": "https://www.corpuscfc.com/cabaniss-athletic-complex/",
+    "note": "Temporary 2026 ground uses the complex’s 8,000-seat stadium, not the adjacent baseball field or the new stadium still under construction.",
+    "city": "Corpus Christi"
+  },
+  "20684": {
+    "center": [
+      -95.939398,
+      41.264743
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Morrison_Stadium",
+    "stadium": "Morrison Stadium",
+    "city": "Omaha, Nebraska",
+    "note": "Home for 2026–27 is Morrison Stadium in Omaha, replacing Werner Park in Papillion. The provider’s Papillion city field is stale."
+  },
+  "20687": {
+    "stadium": "Oakland Coliseum",
+    "center": [
+      -122.20055556,
+      37.75166667
+    ],
+    "city": "Oakland, California",
+    "coordinateSource": "https://en.wikipedia.org/wiki/Oakland_Coliseum"
+  },
+  "20906": {
+    "center": [
+      -97.7195,
+      30.3877
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Q2_Stadium",
+    "stadium": "Q2 Stadium",
+    "city": "Austin, Texas"
+  },
+  "21300": {
+    "center": [
+      -80.85277778,
+      35.22583333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Bank_of_America_Stadium",
+    "stadium": "Bank of America Stadium",
+    "city": "Charlotte, North Carolina"
+  },
+  "21370": {
+    "center": [
+      -121.805,
+      36.65083333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Cardinale_Stadium",
+    "stadium": "Cardinale Stadium",
+    "city": "Seaside, California"
+  },
+  "21812": {
+    "center": [
+      -90.21027778,
+      38.63138889
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Energizer_Park",
+    "stadium": "Energizer Park",
+    "city": "St. Louis, Missouri"
+  },
+  "21821": {
+    "center": [
+      -83.9143812,
+      35.9722125
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Covenant_Health_Park",
+    "stadium": "Covenant Health Park",
+    "city": "Knoxville, Tennessee"
+  },
+  "21822": {
+    "center": [
+      -84.392,
+      37.962
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Lexington_SC_Stadium",
+    "stadium": "Lexington SC Stadium",
+    "city": "Lexington, Kentucky"
+  },
+  "22130": {
+    "center": [
+      -117.41916667,
+      47.6675
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/One_Spokane_Stadium",
+    "stadium": "ONE Spokane Stadium",
+    "city": "Spokane, Washington"
+  },
+  "22164": {
+    "center": [
+      -71.38259,
+      41.86879
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Centreville_Bank_Stadium",
+    "stadium": "Centreville Bank Stadium",
+    "city": "Pawtucket, Rhode Island"
+  },
+  "22524": {
+    "center": [
+      -73.8175,
+      40.90305556
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/The_Stadium_at_Memorial_Field",
+    "stadium": "The Stadium at Memorial Field",
+    "city": "Mount Vernon, New York"
+  },
+  "22525": {
+    "center": [
+      -81.673358,
+      26.164715
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Paradise_Coast_Sports_Complex",
+    "stadium": "Paradise Coast Sports Complex",
+    "city": "Naples, Florida"
+  },
+  "22526": {
+    "center": [
+      -118.17305556,
+      34.70277778
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/The_Hangar_(Lancaster%2C_California)",
+    "stadium": "The Hangar (Lancaster, California)",
+    "city": "Lancaster, California"
+  },
+  "22528": {
+    "center": [
+      -70.276741,
+      43.657875
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Fitzpatrick_Stadium",
+    "stadium": "Fitzpatrick Stadium",
+    "city": "Portland, Maine"
+  },
+  "22529": {
+    "center": [
+      -117.12277778,
+      32.78444444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Snapdragon_Stadium",
+    "stadium": "Snapdragon Stadium",
+    "city": "San Diego, California"
+  },
+  "22542": {
+    "stadium": "Premier Sports Campus – stadium",
+    "city": "Lakewood Ranch, Florida",
+    "center": [
+      -82.38200005,
+      27.43410515
+    ],
+    "coordinateSource": "https://www.openstreetmap.org/way/678286744",
+    "officialClub": "https://www.sarasotaparadise.us/stadium/",
+    "note": "Dot marks the named stadium pitch within the 23-field Premier Sports Campus, matched against its retained field map; it is not a broad facility centroid."
+  },
+  "131578": {
+    "center": [
+      -81.5117,
+      30.27526944
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Hodges_Stadium",
+    "stadium": "Hodges Stadium",
+    "city": "Jacksonville"
+  },
+  "131579": {
+    "center": [
+      -73.98416667,
+      40.57444444
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Maimonides_Park",
+    "stadium": "Maimonides Park",
+    "city": "Brooklyn"
+  },
+  "131580": {
+    "center": [
+      -85.224853,
+      41.088717
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Ruoff_Mortgage_Stadium",
+    "stadium": "Ruoff Mortgage Stadium",
+    "city": "Fort Wayne"
+  },
+  "131581": {
+    "center": [
+      -116.2725,
+      43.6506
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Stadium_at_Expo_Idaho",
+    "stadium": "Stadium at Expo Idaho",
+    "city": "Garden City, Idaho"
+  },
+  "131582": {
+    "center": [
+      -74.18111111,
+      40.91833333
+    ],
+    "coordinateSource": "https://en.wikipedia.org/wiki/Hinchliffe_Stadium",
+    "stadium": "Hinchliffe Stadium",
+    "city": "Paterson"
+  }
+}

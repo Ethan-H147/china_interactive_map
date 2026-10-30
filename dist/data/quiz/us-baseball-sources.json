@@ -1,0 +1,443 @@
+{
+  "season": "2026",
+  "asOf": "2026-10-29",
+  "rosterFile": "scripts/us-sports-sources/baseball/clubs.json",
+  "rosterSha256": "a6212f045ae61c76424629cd38723378d10e50a184df132923e5784c64e29f2b",
+  "leagues": [
+    {
+      "tier": 1,
+      "name": "MLB",
+      "count": 30,
+      "sourceUrl": "https://statsapi.mlb.com/api/v1/teams?sportId=1&season=2026&hydrate=venue(location,fieldInfo)"
+    }
+  ],
+  "clubs": [
+    {
+      "id": "US-SPORT-us-mlb-arizona-diamondbacks",
+      "en": "Arizona Diamondbacks",
+      "city": "Phoenix",
+      "stadium": "Chase Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/109?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/ari.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-athletics",
+      "en": "Athletics",
+      "city": "West Sacramento",
+      "stadium": "Sutter Health Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/133?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/ath.png",
+      "note": "Sutter Health Park in West Sacramento is the Athletics’ temporary home for the 2025–27 seasons."
+    },
+    {
+      "id": "US-SPORT-us-mlb-atlanta-braves",
+      "en": "Atlanta Braves",
+      "city": "Cumberland",
+      "stadium": "Truist Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/144?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+      "note": "Truist Park is in the Cumberland area of unincorporated Cobb County; the club uses an Atlanta postal address."
+    },
+    {
+      "id": "US-SPORT-us-mlb-baltimore-orioles",
+      "en": "Baltimore Orioles",
+      "city": "Baltimore",
+      "stadium": "Oriole Park at Camden Yards",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/110?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/bal.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-boston-red-sox",
+      "en": "Boston Red Sox",
+      "city": "Boston",
+      "stadium": "Fenway Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/111?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-chicago-cubs",
+      "en": "Chicago Cubs",
+      "city": "Chicago",
+      "stadium": "Wrigley Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/112?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-chicago-white-sox",
+      "en": "Chicago White Sox",
+      "city": "Chicago",
+      "stadium": "Rate Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/145?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/chw.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-cincinnati-reds",
+      "en": "Cincinnati Reds",
+      "city": "Cincinnati",
+      "stadium": "Great American Ball Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/113?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/cin.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-cleveland-guardians",
+      "en": "Cleveland Guardians",
+      "city": "Cleveland",
+      "stadium": "Progressive Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/114?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/cle.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-colorado-rockies",
+      "en": "Colorado Rockies",
+      "city": "Denver",
+      "stadium": "Coors Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/115?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/col.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-detroit-tigers",
+      "en": "Detroit Tigers",
+      "city": "Detroit",
+      "stadium": "Comerica Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/116?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/det.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-houston-astros",
+      "en": "Houston Astros",
+      "city": "Houston",
+      "stadium": "Daikin Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/117?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/hou.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-kansas-city-royals",
+      "en": "Kansas City Royals",
+      "city": "Kansas City",
+      "stadium": "Kauffman Stadium",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/118?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/kc.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-los-angeles-angels",
+      "en": "Los Angeles Angels",
+      "city": "Anaheim",
+      "stadium": "Angel Stadium",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/108?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-los-angeles-dodgers",
+      "en": "Los Angeles Dodgers",
+      "city": "Los Angeles",
+      "stadium": "UNIQLO Field at Dodger Stadium",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/119?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "note": "Dodger Stadium’s playing field added the UNIQLO sponsorship name for 2026; the official MLB venue name is retained."
+    },
+    {
+      "id": "US-SPORT-us-mlb-miami-marlins",
+      "en": "Miami Marlins",
+      "city": "Miami",
+      "stadium": "loanDepot park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/146?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/mia.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-milwaukee-brewers",
+      "en": "Milwaukee Brewers",
+      "city": "Milwaukee",
+      "stadium": "American Family Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/158?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-minnesota-twins",
+      "en": "Minnesota Twins",
+      "city": "Minneapolis",
+      "stadium": "Target Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/142?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/min.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-new-york-mets",
+      "en": "New York Mets",
+      "city": "New York City (Queens)",
+      "stadium": "Citi Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/121?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/nym.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-new-york-yankees",
+      "en": "New York Yankees",
+      "city": "New York City (Bronx)",
+      "stadium": "Yankee Stadium",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/147?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-philadelphia-phillies",
+      "en": "Philadelphia Phillies",
+      "city": "Philadelphia",
+      "stadium": "Citizens Bank Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/143?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-pittsburgh-pirates",
+      "en": "Pittsburgh Pirates",
+      "city": "Pittsburgh",
+      "stadium": "PNC Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/134?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/pit.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-san-diego-padres",
+      "en": "San Diego Padres",
+      "city": "San Diego",
+      "stadium": "Petco Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/135?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-san-francisco-giants",
+      "en": "San Francisco Giants",
+      "city": "San Francisco",
+      "stadium": "Oracle Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/137?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/sf.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-seattle-mariners",
+      "en": "Seattle Mariners",
+      "city": "Seattle",
+      "stadium": "T-Mobile Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/136?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/sea.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-st-louis-cardinals",
+      "en": "St. Louis Cardinals",
+      "city": "St. Louis",
+      "stadium": "Busch Stadium",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/138?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/stl.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-tampa-bay-rays",
+      "en": "Tampa Bay Rays",
+      "city": "St. Petersburg",
+      "stadium": "Tropicana Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/139?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/tb.png",
+      "note": "The Rays returned to Tropicana Field in St. Petersburg in April 2026 after playing at Steinbrenner Field in Tampa in 2025."
+    },
+    {
+      "id": "US-SPORT-us-mlb-texas-rangers",
+      "en": "Texas Rangers",
+      "city": "Arlington",
+      "stadium": "Globe Life Field",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/140?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/tex.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-toronto-blue-jays",
+      "en": "Toronto Blue Jays",
+      "city": "Toronto",
+      "stadium": "Rogers Centre",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/141?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png"
+    },
+    {
+      "id": "US-SPORT-us-mlb-washington-nationals",
+      "en": "Washington Nationals",
+      "city": "Washington",
+      "stadium": "Nationals Park",
+      "coordinateSource": "https://statsapi.mlb.com/api/v1/teams/120?season=2026&hydrate=venue(location,fieldInfo)",
+      "crestSource": "https://a.espncdn.com/i/teamlogos/mlb/500/wsh.png"
+    }
+  ],
+  "images": {
+    "vendor/us-sports/baseball/us-mlb-arizona-diamondbacks.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/ari.png",
+      "inputSha256": "b060f0fcc21d64b978be260f0c24880c50094f0ec8e640d14896dc5045bf0b21",
+      "sha256": "c35beb901695e3c2a40ae22aa0d8cc563edcc246970ed7db8b81fa12a16542be",
+      "bytes": 16210
+    },
+    "vendor/us-sports/baseball/us-mlb-athletics.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/ath.png",
+      "inputSha256": "f430543a6db8d652e4fb1a81c4ac99ee32022ae587834234a029830a9653b8d2",
+      "sha256": "885d15b41703a113bcb5bf230b65bd7c63537452ef1f0cacafdd7d733fb55c4e",
+      "bytes": 12282
+    },
+    "vendor/us-sports/baseball/us-mlb-atlanta-braves.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/atl.png",
+      "inputSha256": "1c36c62410bbed29624672b006173af58bcdfbb066ae9d6f7c4cb99205e861d2",
+      "sha256": "c51e53d9900fb9fdcc507804d5193466b8dcebe303031c22077838d1c31bf218",
+      "bytes": 11392
+    },
+    "vendor/us-sports/baseball/us-mlb-baltimore-orioles.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/bal.png",
+      "inputSha256": "e96827050e6079674fa20221f5b8b8acbd4f80843f861dbb4d0261b309741472",
+      "sha256": "a6e86e220a00cd5bf8a8836f27cbe3b94a4a989a5896fb43ae09593180a3e43e",
+      "bytes": 13114
+    },
+    "vendor/us-sports/baseball/us-mlb-boston-red-sox.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/bos.png",
+      "inputSha256": "471966c3b3f4ab7b567b9cd29e7eefc138963182e98b31c01c922335ad265597",
+      "sha256": "4db462a27051020b5b577556be0e5c73437ad0c9dbe6b0d3786b62d1d44ef9c4",
+      "bytes": 10504
+    },
+    "vendor/us-sports/baseball/us-mlb-chicago-cubs.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/chc.png",
+      "inputSha256": "39a2b071f52778bbaa9f7d58432db3dcf638bb9a25eb17a901d3551d5d859086",
+      "sha256": "efcde980849a2d95a018cc2d1884e0a20c54eb623b05881f81e3999b1d3943d1",
+      "bytes": 15576
+    },
+    "vendor/us-sports/baseball/us-mlb-chicago-white-sox.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/chw.png",
+      "inputSha256": "f92f9c32cea65d9e697a254d09a8ae16326889796f380649b2fee64396cc4640",
+      "sha256": "42ba8da8e3e405b94d5f366e1f9d069e71d5de62ad06f510f690ca77f8555cf7",
+      "bytes": 13344
+    },
+    "vendor/us-sports/baseball/us-mlb-cincinnati-reds.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/cin.png",
+      "inputSha256": "57f685ca691ba291d8ed31378e489a44b71648b310bfb7ceb8017bd21373f23c",
+      "sha256": "3620b175b29a54639fd765fec0efd6340f5752d500e725d09fbf8ddb944d77a2",
+      "bytes": 6258
+    },
+    "vendor/us-sports/baseball/us-mlb-cleveland-guardians.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/cle.png",
+      "inputSha256": "8883a4e8b7c6bb75f308f1fb27a39eb7cf81ce431ba781edbc4afe082164410f",
+      "sha256": "163a6ddc885f21748600acaa07c6b09a5f4f1b124396ebd89c52ee47a9b62192",
+      "bytes": 8972
+    },
+    "vendor/us-sports/baseball/us-mlb-colorado-rockies.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/col.png",
+      "inputSha256": "bd21e7588f021af3b44cc0aeab2b281ddc515b7d6b6a68e4c823086ed585ea75",
+      "sha256": "5a01fd3f3cfd94de565cf14060dc985538a3a0fe792a279ac6d5a3088a19e8ef",
+      "bytes": 8016
+    },
+    "vendor/us-sports/baseball/us-mlb-detroit-tigers.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/det.png",
+      "inputSha256": "0037b82f8f714da9f40b6a2ac036c5086f06ccb139473891135c3321a7a08750",
+      "sha256": "dbffaf5e618d458054f63e46e6ad6771062cae62ff60d58d255f73127846195c",
+      "bytes": 11046
+    },
+    "vendor/us-sports/baseball/us-mlb-houston-astros.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/hou.png",
+      "inputSha256": "b7e6858d9d11fe9fade351624bfbab74ec12451749feef37bd1f083d59eb4f7b",
+      "sha256": "11aee7dc5e9b0b3ccc0a5b138af86aefbb004f51214ecba057791ec94fcbbb51",
+      "bytes": 19970
+    },
+    "vendor/us-sports/baseball/us-mlb-kansas-city-royals.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/kc.png",
+      "inputSha256": "95188fdcf6d74b4e5437549ad33e20548ce8f3e696621765680354da25a0207b",
+      "sha256": "396eacf2528ce3fab0466d3ef457164cc1e67c772f633d8bc688826c22d01d81",
+      "bytes": 6580
+    },
+    "vendor/us-sports/baseball/us-mlb-los-angeles-angels.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "inputSha256": "712a4a6f37cac63156de1d17a170532fd6bbbf3a9690b276fec2a6aac751809f",
+      "sha256": "683dd95268276632174408e68d9288b7e4413e13f151688ae923ecd61c0f2782",
+      "bytes": 14724
+    },
+    "vendor/us-sports/baseball/us-mlb-los-angeles-dodgers.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "inputSha256": "aab854c59098d4f465c1c6f31b580f2a38d2ed4f5c0c03df2da76f62f5378dc4",
+      "sha256": "283a031b28ba22f6ff225ca36d5f20316ed61afa2c619421ca7e08eadab19d18",
+      "bytes": 3438
+    },
+    "vendor/us-sports/baseball/us-mlb-miami-marlins.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/mia.png",
+      "inputSha256": "ef37342904a50d2807c45432909de83c62c6795e9e54ebe42ac85fdd5e24c91f",
+      "sha256": "4d8348d53952c9cc672d1d6ca812e91d26a6ced4b9f315d0c0b3a4f37cbcdef5",
+      "bytes": 22342
+    },
+    "vendor/us-sports/baseball/us-mlb-milwaukee-brewers.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/mil.png",
+      "inputSha256": "d4f8fe1b5be4b266a7cb1520a46a863973467361a1d3fd528502e223cbe35490",
+      "sha256": "51dad16f85c37c21f92cf748f3beabbfa90c5e150c89a2623ebfa5ee0b48af3c",
+      "bytes": 14466
+    },
+    "vendor/us-sports/baseball/us-mlb-minnesota-twins.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/min.png",
+      "inputSha256": "3fbce769013cd44f2370505f8982d732c58c511eac9ede4e4d9bbe1b24ad4d39",
+      "sha256": "cfdb1d98930a7f4c527871e3af328e120458a2917d1b097b6ed3f0483cf43c86",
+      "bytes": 7110
+    },
+    "vendor/us-sports/baseball/us-mlb-new-york-mets.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/nym.png",
+      "inputSha256": "94c334280d388936cb193fca6c3b620d2ed6abb7b932f352fa575630ce6243bd",
+      "sha256": "5ce4610e8821df4bf47295b776eafb5f6ace275ea5aa5f63cd717d7f6a00f716",
+      "bytes": 13288
+    },
+    "vendor/us-sports/baseball/us-mlb-new-york-yankees.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/nyy.png",
+      "inputSha256": "d98856c36bc8d3b0fb0bab5fabd79d2ae057619164365845cbc817b04ae74a26",
+      "sha256": "4ea7d30fceaea848d845f4df9a8cd3a8a17ebc8cf75788ee2c4fe1355a5cf8a1",
+      "bytes": 6896
+    },
+    "vendor/us-sports/baseball/us-mlb-philadelphia-phillies.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/phi.png",
+      "inputSha256": "95997c9aaac40ec5d718b667c374561b782e5cb88665d69daf3178a16401d683",
+      "sha256": "6f5323cf6140c7acf2e1e6ce70515ae505b7c9be98db6d5cd7b05ddce48b432d",
+      "bytes": 3210
+    },
+    "vendor/us-sports/baseball/us-mlb-pittsburgh-pirates.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/pit.png",
+      "inputSha256": "0af791c91bc01b4c654a65c90c983c3f907bf2605c67cfaaed731985efff34a1",
+      "sha256": "7e3de8fd65ee4b8a7bc491424758220ea5185e5699832d09d4adb7f16144bffb",
+      "bytes": 2544
+    },
+    "vendor/us-sports/baseball/us-mlb-san-diego-padres.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+      "inputSha256": "8bb012967768a5f476ff427f433e89960149217777c6371d80eafb8725c2f175",
+      "sha256": "9009eec94e1be0859d33cfeca8497db6db594cf4c03780733e9875cd887ce54f",
+      "bytes": 4268
+    },
+    "vendor/us-sports/baseball/us-mlb-san-francisco-giants.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/sf.png",
+      "inputSha256": "dad3e0a51931bb8281ebb0215624849e0fd6cbec81aafc6a12d2260f583c04e5",
+      "sha256": "e4b2a7f0d22cf4ed75271f6d9615ac6e23f97c3b01db52b5c0bb89d6c66f6608",
+      "bytes": 4872
+    },
+    "vendor/us-sports/baseball/us-mlb-seattle-mariners.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/sea.png",
+      "inputSha256": "9273d78e456969b14ef9031f39fc0511d8e875a919d887daa6b0898b1ff52226",
+      "sha256": "cec3c98bbd884f5998796d8f7251ad3c4f8b71f016e193010aa0f8599bae6093",
+      "bytes": 20150
+    },
+    "vendor/us-sports/baseball/us-mlb-st-louis-cardinals.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/stl.png",
+      "inputSha256": "b738c8aaac9b726336cfa3e42745a4ddcc4c8d9537a9dc0b6abba02c5952e417",
+      "sha256": "ae995b6a8f0abd266d9f320711335ce4b4df827a5ad2fd2083279fb330cfc268",
+      "bytes": 6202
+    },
+    "vendor/us-sports/baseball/us-mlb-tampa-bay-rays.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/tb.png",
+      "inputSha256": "3f16f721cfdbb929fac08c9e1d8f9e1ab410be8b409eed5dac9b5f5c9a7af5ae",
+      "sha256": "d3677489cda55d0040cf30898d6236001928f4f1ac2947d8e2ba2c29572c5322",
+      "bytes": 8600
+    },
+    "vendor/us-sports/baseball/us-mlb-texas-rangers.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/tex.png",
+      "inputSha256": "b19ee28a151164ed231d98cafbcebe471faaa876a202e9c558b925be3ac3dac9",
+      "sha256": "5ee94699e8b2e664f00091af690cf3d92d11a36e852d46afeab2ab2037d8f67d",
+      "bytes": 4738
+    },
+    "vendor/us-sports/baseball/us-mlb-toronto-blue-jays.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/tor.png",
+      "inputSha256": "af6d5454549834ea4b8cd6687618a76f936209ecf39eabdb17deaf76d21dd989",
+      "sha256": "a3a202bb9a98a6bf2262ad2e7d623554865518aea3058413b197c1a7691b77c2",
+      "bytes": 12616
+    },
+    "vendor/us-sports/baseball/us-mlb-washington-nationals.webp": {
+      "source": "https://a.espncdn.com/i/teamlogos/mlb/500/wsh.png",
+      "inputSha256": "1d65931fe979aec3fe59a60b2d9df900e3f84da0eca81eb1646d0ea3a93fc810",
+      "sha256": "f30b7a91c3b2401d9e9876579e26d388d924bf7e33829eb46197d1c3739523c3",
+      "bytes": 17580
+    }
+  },
+  "crestCredit": "Team marks belong to their respective owners. Source URLs identify the original artwork."
+}

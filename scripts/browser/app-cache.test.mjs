@@ -1,0 +1,10 @@
+import assert from'node:assert/strict';
+export default [390,820].map(width=>({name:'Refresh app files preserves sign-in, settings, drafts and quiz records '+width,options:{width,height:1000,mobile:width===390},async run(p,base){
+ await p.send('Page.navigate',{url:base+'/refresh.html#united-kingdom'});await p.waitFor("!!document.getElementById('refresh-app')");
+ const entries={'boundary-atlas-auth-v1':'keep-signed-in','boundary-atlas-country-v1':'united-kingdom','boundary-atlas-settings-v1':'keep-settings','boundary-atlas-quiz-records-v1:account':'keep-40-rounds','boundary-atlas-quiz-pending-v1:account:attempt':'keep-pending','boundary-atlas-first-quiz-v1':'keep-unfinished-round'};
+ await p.evaluate(`(async()=>{for(const[k,v]of Object.entries(${JSON.stringify(entries)}))localStorage.setItem(k,v);for(const name of['atlas-'+ 'a'.repeat(40),'atlas-v2-'+ 'b'.repeat(40),'unrelated-cache']){const c=await caches.open(name);await c.put('/old-countries.js',new Response('old app copy'));}})()`);
+ await p.send('Network.setBypassServiceWorker',{bypass:true});
+ await p.send('Fetch.enable',{patterns:[{urlPattern:base+'/?app-refreshed=*',resourceType:'Document'}]});p.on('Fetch.requestPaused',e=>void p.send('Fetch.fulfillRequest',{requestId:e.requestId,responseCode:200,responseHeaders:[{name:'Content-Type',value:'text/html'}],body:Buffer.from('<!doctype html><title>App refreshed</title><link rel="icon" href="data:,"><p>App refreshed</p>').toString('base64')}));
+ await p.screenshot('refresh-app-'+width);await p.tap('#refresh-app');await p.waitFor("document.title==='App refreshed'",{timeout:45000});assert.equal(await p.evaluate('location.hash'),'#united-kingdom');assert(await p.evaluate("new URL(location.href).searchParams.has('app-refreshed')"));
+ assert.deepEqual(await p.evaluate(`Object.fromEntries(Object.keys(${JSON.stringify(entries)}).map(k=>[k,localStorage.getItem(k)]))`),entries);assert.deepEqual(await p.evaluate('caches.keys()'),['unrelated-cache']);assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));
+}}));
