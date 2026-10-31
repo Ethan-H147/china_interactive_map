@@ -24,7 +24,7 @@ export function createNameRound(places,saved){
   const valid=new Set(places.map(p=>p.code));
   const found=new Set((Array.isArray(saved?.found)?saved.found:[]).filter(c=>valid.has(c)));
   const hinted=new Set((Array.isArray(saved?.hinted)?saved.hinted:[]).filter(c=>valid.has(c)));
-  const spellingWarnings=new Map((Array.isArray(saved?.spellingWarnings)?saved.spellingWarnings:[]).filter(entry=>Array.isArray(entry)&&valid.has(entry[0])&&Number.isInteger(entry[1])&&entry[1]>=0&&entry[1]<=2));
+  const spellingWarnings=new Map(); // Older saved attempt counters do not apply to naming mode.
   return{places,found,hinted,spellingWarnings,complete:found.size===places.length,elapsed:Math.max(0,Number(saved?.elapsed)||0)};
 }
 export function submitName(round,value){
@@ -34,7 +34,7 @@ export function submitName(round,value){
   const exact=round.places.filter(p=>[p.en,p.zh].some(n=>n&&normalizeName(n)===text));
   const matches=exact.length?exact:round.places.filter(p=>aliases(p).has(text));
   if(matches.length>1)return{status:'ambiguous'};
-  if(!matches.length){const near=spellingCandidate(text,round.places.filter(p=>!round.found.has(p.code)));if(!near)return{status:'unknown'};const count=round.spellingWarnings.get(near.code)||0;if(count>=2)return{status:'incorrect'};round.spellingWarnings.set(near.code,count+1);return{status:'spelling',warnings:count+1};}
+  if(!matches.length){const near=spellingCandidate(text,round.places.filter(p=>!round.found.has(p.code)));if(!near)return{status:'unknown'};return{status:'spelling'};}
   const place=matches[0];if(round.found.has(place.code))return{status:'duplicate',place};
   round.found.add(place.code);round.spellingWarnings.delete(place.code);round.complete=round.found.size===round.places.length;
   return{status:'correct',place};

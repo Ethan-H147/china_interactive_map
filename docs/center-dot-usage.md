@@ -41,3 +41,5 @@ Only rendered center dots belong here. A string that is split into CSS divider n
 | 48 | Multiple place names in a ZIP-code card | `dist/us-place-cards.mjs` |
 
 IDs omitted from this list have already been removed or now use CSS dividers or primary/secondary name styling. Update the source-file pointers if a renderer moves.
+
+Quiz scope dropdowns use the same primary/secondary name styling as the map-settings province dropdown. Their stored bilingual label separator is converted to name spans and is not a visible center dot.

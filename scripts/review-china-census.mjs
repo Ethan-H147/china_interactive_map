@@ -10,13 +10,13 @@ Source: \`${data.census.source.filename}\`, sheet 人口基本状况, columns C 
 
 Read ${s.sourceRows.toLocaleString('en-US')} workbook records. Matched ${s.matchedRows.toLocaleString('en-US')} rows to mapped provinces, prefectures and county-level divisions. Added ${s.addedRegions.toLocaleString('en-US')} missing regional records (${s.addedPrefectures} prefecture-level and ${s.addedCounties.toLocaleString('en-US')} county-level), and filled ${s.filledFigures} missing figures in existing records. Regional population coverage is now ${Object.keys(data.regions).length.toLocaleString('en-US')} records.
 
-**${s.differingFigures} differing figures across ${s.differingRegions} existing website regions are flagged below and on their population panels. Existing reported website figures are preserved.** Differences are review candidates, not a declaration that either source is correct. The website comparison includes applied corrections from the preceding review. Province totals are compared with their separately sourced, dated website records.
+**${s.differingFigures} differing figures across ${s.differingRegions} existing website regions were corrected to the workbook values. Previous figures are retained below for audit.** The user selected the supplied workbook as the authority for these differences. The website comparison includes applied corrections from the preceding review. Province totals are compared with their separately sourced, dated website records.
 
 Blank source cells remain null / not reported. No missing urban-core value is inherited from a parent or filled with zero. A source-only number fills a missing website measure; its cell-level source is retained. County figures use the census geography, and known boundary changes are labeled on the map. Where the census tabulates functional areas separately, county rows can exclude those populations even though today's map includes the land. Separate development-zone totals are not allocated or added to county figures.
 
 Rebuild with \`npm run build:china-population\`. Full matching, additions, source-cell availability differences, and unmatched-row lists are in [the coverage report](china-census-coverage.md) and \`scripts/boundary-sources/china-population/census-comparison.json\`.
 
-| Code | Region | Measure | Website | Workbook | Workbook cell | PDF pages |
+| Code | Region | Measure | Previous website | Applied workbook | Workbook cell | PDF pages |
 | --- | --- | --- | ---: | ---: | --- | --- |
 ${report.differences.map(d=>`| ${d.adcode} | ${d.name} | ${label[d.field]} | ${fmt(d.website)} | ${fmt(d.workbook)} | ${d.cell} | ${d.pdfPages.join('–')} |`).join('\n')||'| — | None | — | — | — | — | — |'}
 `;

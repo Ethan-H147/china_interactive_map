@@ -16,13 +16,13 @@ Source: `china-census-2020-original.xlsx`, sheet 人口基本状况, columns C (
 
 Read 3,363 workbook records. Matched 3,211 rows to mapped provinces, prefectures and county-level divisions. Added 2,862 missing regional records (40 prefecture-level and 2,822 county-level), and filled 0 missing figures in existing records. Regional population coverage is now 3,180 records.
 
-**36 differing figures across 35 existing website regions are flagged below and on their population panels. Existing reported website figures are preserved.** Differences are review candidates, not a declaration that either source is correct. The website comparison includes applied corrections from the preceding review. Province totals are compared with their separately sourced, dated website records.
+**36 differing figures across 35 existing website regions were corrected to the workbook values. Previous figures are retained below for audit.** The user selected the supplied workbook as the authority for these differences. The website comparison includes applied corrections from the preceding review. Province totals are compared with their separately sourced, dated website records.
 
 Blank source cells remain null / not reported. No missing urban-core value is inherited from a parent or filled with zero. A source-only number fills a missing website measure; its cell-level source is retained. County figures use the census geography, and known boundary changes are labeled on the map. Where the census tabulates functional areas separately, county rows can exclude those populations even though today's map includes the land. Separate development-zone totals are not allocated or added to county figures.
 
 Rebuild with `npm run build:china-population`. Full matching, additions, source-cell availability differences, and unmatched-row lists are in [the coverage report](china-census-coverage.md) and `scripts/boundary-sources/china-population/census-comparison.json`.
 
-| Code | Region | Measure | Website | Workbook | Workbook cell | PDF pages |
+| Code | Region | Measure | Previous website | Applied workbook | Workbook cell | PDF pages |
 | --- | --- | --- | ---: | ---: | --- | --- |
 | 130100 | 石家庄市 | Cities and towns | 7,884,319 | 7,884,379 | H44 | 7–8 |
 | 130100 | 石家庄市 | Urban core | 4,332,382 | 4,423,882 | J44 | 7–8 |

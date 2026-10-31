@@ -28,7 +28,8 @@
         8
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "130100",
@@ -44,7 +45,8 @@
         8
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "130200",
@@ -60,7 +62,8 @@
         10
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "130500",
@@ -76,7 +79,8 @@
         10
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "130700",
@@ -92,7 +96,8 @@
         12
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "131000",
@@ -108,7 +113,8 @@
         14
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "210300",
@@ -124,7 +130,8 @@
         24
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "210600",
@@ -140,7 +147,8 @@
         26
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "210700",
@@ -156,7 +164,8 @@
         26
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "220200",
@@ -172,7 +181,8 @@
         28
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "230300",
@@ -188,7 +198,8 @@
         32
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "230400",
@@ -204,7 +215,8 @@
         32
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "230700",
@@ -220,7 +232,8 @@
         32
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "230900",
@@ -236,7 +249,8 @@
         34
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "340200",
@@ -252,7 +266,8 @@
         44
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "340800",
@@ -268,7 +283,8 @@
         46
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "341700",
@@ -284,7 +300,8 @@
         48
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "360700",
@@ -300,7 +317,8 @@
         52
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "411100",
@@ -316,7 +334,8 @@
         64
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "411600",
@@ -332,7 +351,8 @@
         66
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "420300",
@@ -348,7 +368,8 @@
         68
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "421200",
@@ -364,7 +385,8 @@
         70
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "430600",
@@ -380,7 +402,8 @@
         74
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "431100",
@@ -396,7 +419,8 @@
         74
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "440200",
@@ -412,7 +436,8 @@
         76
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "440400",
@@ -428,7 +453,8 @@
         78
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "451200",
@@ -444,7 +470,8 @@
         84
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "451300",
@@ -460,7 +487,8 @@
         84
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "469005",
@@ -476,7 +504,8 @@
         86
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "510400",
@@ -492,7 +521,8 @@
         90
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "511000",
@@ -508,7 +538,8 @@
         90
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "520400",
@@ -524,7 +555,8 @@
         96
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "540500",
@@ -540,7 +572,8 @@
         106
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "620700",
@@ -556,7 +589,8 @@
         112
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "640200",
@@ -572,7 +606,8 @@
         116
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     },
     {
       "adcode": "650400",
@@ -588,7 +623,8 @@
         118
       ],
       "websiteDate": "2020-11-01",
-      "workbookDate": "2020-11-01"
+      "workbookDate": "2020-11-01",
+      "resolved": true
     }
   ],
   "availability": [],

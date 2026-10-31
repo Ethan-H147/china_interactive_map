@@ -32,7 +32,7 @@ assert(Math.abs(sum(relevant)-sum(union.features))<.005,'No overlapping fills');
 for(const code of [110000,120000,130000])assert(Math.abs(sum(relevant.filter(f=>f.properties.provinceCode===code))-area(province.get(code).geometry))<.005,'Province fill equals its subdivisions');
 const changed=[];
 for(const f of before.subdivisions.features){const now=district.get(f.properties.adcode);if(JSON.stringify(now.geometry)!==JSON.stringify(f.geometry))changed.push(f.properties.adcode);}
-assert.deepEqual(changed.sort(),[110112,110115,110117,120114,120115,120118,120119]);
+assert.deepEqual(changed.sort(),[110112,110115,110117,120114,120115,120116,120117,120118,120119]);
 assert.deepEqual(district.get(131000).geometry,before.subdivisions.features.find(f=>f.properties.adcode===131000).geometry,'Langfang reference and all exclave components preserved');
 const counties=load('dist/data/china-counties.bin').regions.features.filter(f=>f.properties.parentCity===131000),countyUnion=await command(fc(counties),'-dissolve2',{precision:null}),parent=district.get(131000),missing=await command({'parent.json':fc([parent]),'counties.json':countyUnion},'-erase counties.json',{precision:null}),outside=await command({'counties.json':countyUnion,'parent.json':fc([parent])},'-erase parent.json',{precision:null});
 assert(sum(missing.features)+sum(outside.features)<.1,'Langfang county layers continue to tile their unchanged parent');

@@ -26,9 +26,9 @@ export default [false,true].map(mobile=>({name:'Census prefectures districts cou
  assert.match(await p.evaluate('document.getElementById("population-quality").textContent'),/孟津县/);
  assert.match(await p.evaluate('document.getElementById("population-source").title'),/1620, 1622/);
  await select(p,640200);
- assert.equal(await p.evaluate('document.getElementById("population-quality").hidden'),false);
+ assert.equal(await p.evaluate('document.getElementById("population-quality").hidden'),true);
  const warning=await p.evaluate('document.getElementById("population-quality").textContent');
- assert.match(warning,/2,859,074 on website/);assert.match(warning,/751,389 in workbook \(C3227\)/);
+ assert.equal(warning,'');assert.equal(await p.evaluate('document.getElementById("population-total").textContent'),'751,389');
  await p.evaluate('document.getElementById("population").scrollIntoView({block:"center"})');
  assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'),'Discrepancy fits the viewport');
  await p.screenshot('china-census-difference-'+(mobile?'phone':'desktop'));

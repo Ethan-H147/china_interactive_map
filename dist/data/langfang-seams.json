@@ -738,7 +738,7 @@
       "runs": [
         {
           "id": 110112,
-          "edges": 97
+          "edges": 92
         },
         {
           "id": 110113,
@@ -746,7 +746,7 @@
         },
         {
           "id": 110117,
-          "edges": 60
+          "edges": 52
         }
       ],
       "maxEndpointDisplacementMetres": 0
@@ -1636,11 +1636,11 @@
       "runs": [
         {
           "id": 120114,
-          "edges": 55
+          "edges": 53
         },
         {
           "id": 120115,
-          "edges": 79
+          "edges": 77
         },
         {
           "id": 120119,
@@ -2426,7 +2426,7 @@
         },
         {
           "id": 110115,
-          "edges": 187
+          "edges": 171
         }
       ],
       "maxEndpointDisplacementMetres": 0
@@ -3456,14 +3456,14 @@
         },
         {
           "id": 120114,
-          "edges": 168
+          "edges": 162
         },
         {
           "id": 120118,
-          "edges": 81
+          "edges": 77
         }
       ],
-      "maxEndpointDisplacementMetres": 27.759368475776764
+      "maxEndpointDisplacementMetres": 0
     },
     {
       "alignedProvince": 120000,
@@ -3654,7 +3654,7 @@
       "runs": [
         {
           "id": 120114,
-          "edges": 43
+          "edges": 44
         }
       ],
       "maxEndpointDisplacementMetres": 0

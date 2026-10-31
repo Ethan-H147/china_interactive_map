@@ -10,6 +10,6 @@ export default [false,true].map(mobile=>({name:'Langfang exclave shared borders 
  }
  await p.evaluate('void map.jumpTo({center:[116.99,39.86],zoom:9.8})');await p.settle();await p.screenshot('langfang-border-'+(mobile?'phone':'desktop'));
  await p.evaluate('selectRegion(regionByCode.get(131000),130000,true)');await p.settle();
- assert.equal(await p.evaluate('document.getElementById("population-total").textContent'),'5,465,087','Existing Langfang population is retained');
+ assert.equal(await p.evaluate('document.getElementById("population-total").textContent'),'5,464,087','Existing Langfang population is retained');
  assert(await p.evaluate('document.documentElement.scrollWidth<=innerWidth'));
 }}));

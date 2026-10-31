@@ -1,0 +1,6 @@
+{
+  "scope": "All mainland prefecture boundaries; segments at least 50 m, interior to a province, with another prefecture within 1.5 km. Coasts and province borders excluded. This is a targeted missing-stroke screen, not a worldwide geometry certification.",
+  "prefectures": 333,
+  "segmentsChecked": 181180,
+  "candidates": []
+}

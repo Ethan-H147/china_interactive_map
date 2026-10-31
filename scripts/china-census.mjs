@@ -1,4 +1,4 @@
-// Supplement the retained website population data; never overwrite reported values.
+// Use the supplied census workbook for approved numeric discrepancies and missing records.
 import fs from 'node:fs';
 import {gunzipSync} from 'node:zlib';
 import {readData} from './read-data.mjs';
@@ -64,7 +64,7 @@ export function matchCensusRows(source,features,config){
 const provenance=(source,row)=>({workbook:source.filename,sha256:source.sha256,sheet:source.sheet,row:row.row,record:row.record,sourceName:row.name,pdfPages:row.pdfPages,values:Object.fromEntries(measures.map(k=>[k,row[k]]))});
 export function supplementCensus(regions,source,features,config,provincePopulation){
  const matches=matchCensusRows(source,features,config),differences=[],availability=[],added=[],filled=[],sourceIssues=[];
- const before=structuredClone(regions),provinceComparisons={};
+ const provinceComparisons={};
  for(const m of matches.matched){
   const {adcode,row}=m,census=provenance(source,row),existing=m.level==='province'?provincePopulation.china[adcode]:regions[adcode];
   if(m.sourceRows)census.components=m.sourceRows.map(r=>provenance(source,r));
@@ -81,7 +81,7 @@ export function supplementCensus(regions,source,features,config,provincePopulati
     const website=existing[field]??null,workbook=row[field];
     if(website===workbook)continue;
     const detail={adcode,name:m.mapName,level:m.level,field,website,workbook,cell:source.columns[field]+row.row,sheet:source.sheet,pdfPages:row.pdfPages,websiteDate:existing.date,workbookDate:source.date};
-    if(website!==null&&workbook!==null){differences.push(detail);census.differences.push(detail);}
+    if(website!==null&&workbook!==null){differences.push({...detail,resolved:true});census.appliedCorrections??=[];census.appliedCorrections.push(detail);existing[field]=workbook;existing.sourceLabel=source.sourceLabel;existing.sourceUrl=source.sourceUrl;}
     else{
      availability.push({...detail,reason:website===null?'Missing on website':'Blank in workbook'});
      if(m.level!=='province'&&website===null&&workbook!==null){existing[field]=workbook;existing.fieldSources??={};existing.fieldSources[field]={sourceLabel:source.sourceLabel,sourceUrl:source.sourceUrl,sheet:source.sheet,cell:detail.cell};filled.push(detail);}
@@ -95,8 +95,8 @@ export function supplementCensus(regions,source,features,config,provincePopulati
   }
   if(m.level!=='province'&&m.scopeNote)regions[adcode].scopeNote=m.scopeNote;
  }
- // Already-reported website figures must survive the import unchanged.
- for(const [id,r] of Object.entries(before))for(const k of measures)if(r[k]!==null&&regions[id][k]!==r[k])throw Error('Census replaced existing website figure '+id+' '+k);
+ // Verify that every approved numeric override uses the exact workbook value.
+ for(const [id,r] of Object.entries(regions))for(const correction of r.census?.appliedCorrections||[])if(r[correction.field]!==correction.workbook)throw Error('Workbook correction not applied '+id);
  const summary={sourceRows:source.rows.length,matchedRows:matches.matched.reduce((n,m)=>n+(m.sourceRows?.length||1),0),matchedRegions:matches.matched.length,unmatchedRows:matches.unmatched.length,addedRegions:added.length,addedPrefectures:added.filter(r=>r.level==='prefecture').length,addedCounties:added.filter(r=>r.level==='county').length,filledFigures:filled.length,differingFigures:differences.length,differingRegions:new Set(differences.map(d=>d.adcode)).size,missingMappedRegions:matches.missing.length,sourceIssues:sourceIssues.length};
  return {summary,differences,availability,added,filled,provinceComparisons,sourceIssues,matches};
 }

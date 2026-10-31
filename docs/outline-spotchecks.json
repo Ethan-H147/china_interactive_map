@@ -1,0 +1,45 @@
+{
+  "scope": "First-level exact shared edges in eight country datasets; a quick screen, not an exhaustive world audit.",
+  "results": [
+    {
+      "country": "germany",
+      "sharedSegmentsChecked": 6727,
+      "missing": []
+    },
+    {
+      "country": "france",
+      "sharedSegmentsChecked": 26156,
+      "missing": []
+    },
+    {
+      "country": "united-kingdom",
+      "sharedSegmentsChecked": 11235,
+      "missing": []
+    },
+    {
+      "country": "austria",
+      "sharedSegmentsChecked": 11032,
+      "missing": []
+    },
+    {
+      "country": "romania",
+      "sharedSegmentsChecked": 6676,
+      "missing": []
+    },
+    {
+      "country": "egypt",
+      "sharedSegmentsChecked": 1972,
+      "missing": []
+    },
+    {
+      "country": "india",
+      "sharedSegmentsChecked": 81776,
+      "missing": []
+    },
+    {
+      "country": "australia",
+      "sharedSegmentsChecked": 17325,
+      "missing": []
+    }
+  ]
+}

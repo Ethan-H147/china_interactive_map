@@ -62,7 +62,7 @@ const stale=colors.setCountry('russia'),latest=colors.setCountry('argentina');pe
 add('south-argentina-fill');colors.sync();assert(Array.isArray(layers.get('south-argentina-fill').paint['fill-color']),'Dynamically installed country geometry picks up the scale');assert.equal(layers.get('south-brazil-fill').paint['fill-color'],'#fff','Previous country colors are restored');
 layers.delete('south-argentina-fill');colors.sync();add('south-argentina-fill','#abcdab');colors.sync();colors.setMetric('none');assert.equal(layers.get('south-argentina-fill').paint['fill-color'],'#abcdab','Replacement layers keep their own original color');
 // Finer levels compare their own figures, including terminal metros beside local municipalities.
-assert.equal(metricScale(datasets.china,'population',2).count,312);
+assert.equal(metricScale(datasets.china,'population',2).count,449);
 assert.equal(metricScale(datasets.china,'gdp',2).count,335);
 const hefei=datasets.china.records.find(r=>r.id==='340100');assert.equal(hefei.metrics.gdp.year,2024);assert(hefei.metrics.gdp.value<3e11,'Reject the infobox’s erroneous 1,421-trillion figure and retain the consistent annual table value');
 assert.equal(metricScale(datasets['south-africa'],'population',2).count,52);
@@ -74,7 +74,7 @@ assert.equal(metricScale(datasets.singapore,'population',2).count,55);
 assert.equal(metricScale(datasets.philippines,'gdp',2).count,82);
 assert.equal(metricScale(datasets.russia,'population',2),null,'City-proper populations must not color the wider urban okrug as though they were its total');
 const chinese=metricScale(datasets.china,'population',2),city=chinese.resolve('130100');assert.equal(city.metrics.population.value,11235086);assert.notEqual(city.id,'130000');
-assert.equal(chinese.resolve('110101').id,'110101');assert.equal(chinese.metric(chinese.resolve('110101')),undefined,'Districts missing population cannot inherit Beijing’s total');
+assert.equal(chinese.resolve('110101').id,'110101');assert.equal(chinese.metric(chinese.resolve('110101')).value,708829,'District shading uses its own census total');
 assert.equal(chinese.resolve('130000'),undefined,'Broader units cannot appear in the finer comparison');
 assert.equal(metricScale(datasets['south-africa'],'gdp',2),null,'Do not fabricate municipal GDP from a provincial total');
 assert.equal(colorLayerProfile({id:'south-africa-city-fill',type:'fill'},'south-africa'),null,'Selected settlement outlines do not become admin-level statistics');

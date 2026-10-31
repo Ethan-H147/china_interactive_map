@@ -21,7 +21,7 @@ assert.deepEqual(report.sourceIssues,[]);
 // Independent baseline: the original website figures plus prior reviewed fixes.
 const wiki=read('population-source.json'),display=readData('display-boundaries.json'),before=matchRows(wiki.rows,[...display.provinces.features,...display.subdivisions.features]).regions;
 applyPopulationCorrections(before,read('population-corrections.json'));
-for(const [id,r] of Object.entries(before))for(const field of measures)if(r[field]!==null)assert.equal(data.regions[id][field],r[field],'Existing website figure preserved: '+id+' '+field);
+for(const [id,r] of Object.entries(before))for(const field of measures)if(r[field]!==null)assert.equal(data.regions[id][field],report.differences.find(d=>d.adcode===id&&d.field===field)?.workbook??r[field],'Workbook override or unchanged figure: '+id+' '+field);
 for(const [id,r] of Object.entries(data.regions)){
  assert(byCode.has(id),'Every population identifies a mapped area');
  for(const field of measures)assert(r[field]===null||Number.isSafeInteger(r[field])&&r[field]>=0);
@@ -50,10 +50,10 @@ assert.equal(new Set(report.differences.map(d=>d.adcode)).size,35);
 assert.equal(report.availability.length,0);
 for(const d of report.differences){
  const record=data.regions[d.adcode];
- assert(record.census.differences.some(x=>x.field===d.field&&x.workbook===d.workbook&&x.website===d.website));
+ assert(record.census.appliedCorrections.some(x=>x.field===d.field&&x.workbook===d.workbook&&x.website===d.website));assert.equal(record[d.field],d.workbook);
  assert.equal(d.websiteDate,d.workbookDate,'Numerical differences are on the same census date');
 }
-assert.equal(data.regions[640200].total,2859074,'Shizuishan remains flagged rather than silently replaced');
+assert.equal(data.regions[640200].total,751389,'Shizuishan uses the workbook total');
 assert.equal(data.regions[640200].census.values.total,751389);
 assert.equal(data.regions[652300].total,1613585,'New autonomous prefecture');
 assert.equal(data.regions[110101].total,708829,'Municipal district');
@@ -88,4 +88,4 @@ assert.throws(()=>matchCensusRows(source,features,{...config,aliases:[{...config
 assert.equal(report.summary.matchedRows+report.summary.unmatchedRows,source.rows.length);
 assert.equal(report.summary.addedRegions,Object.keys(data.regions).length-Object.keys(before).length);
 assert.deepEqual(report.summary,data.census.summary);
-console.log(JSON.stringify({censusValidated:true,coverage:report.summary,records:Object.keys(data.regions).length,existingFiguresPreserved:true,sourceRowsAccountedFor:true,parentScopingVerified:true}));
+console.log(JSON.stringify({censusValidated:true,coverage:report.summary,records:Object.keys(data.regions).length,workbookCorrectionsApplied:true,sourceRowsAccountedFor:true,parentScopingVerified:true}));
