@@ -469,6 +469,8 @@
     "test:china-population": "node --check dist/china-population.mjs && node scripts/validate-population.mjs && node scripts/validate-china-census.mjs && node scripts/browser/run.mjs china-population china-census",
     "build:china-population": "node scripts/population.mjs && npm run audit:china-population",
     "test:china-census": "node scripts/validate-china-census.mjs",
-    "audit:china-population": "node scripts/audit-china-population.mjs"
+    "audit:china-population": "node scripts/audit-china-population.mjs",
+    "fetch:major-city-flags": "node scripts/fetch-major-city-flags.mjs",
+    "test:major-city-flags": "node scripts/validate-major-city-flags.mjs && node scripts/browser/run.mjs major-city-flags"
   }
 }

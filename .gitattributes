@@ -71,3 +71,7 @@ scripts/us-college-sources/institutional/marks/* binary
 # Retained county and regional flag originals are byte-for-byte checksum inputs.
 dist/vendor/liberia-flags/*.svg binary
 dist/vendor/regional-flags/* binary
+
+# Reviewed municipal flag artwork is checked byte for byte.
+dist/vendor/major-city-flags/* binary
+scripts/boundary-sources/major-city-flags/*.svg binary

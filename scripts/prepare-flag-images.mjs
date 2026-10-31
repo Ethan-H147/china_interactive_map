@@ -46,6 +46,8 @@ const centralEurope='dist/data/central-europe-flag-sources.json';
 if(fs.existsSync(centralEurope))Object.values(read(centralEurope).flags).forEach(add);
 // Administration artwork remains local to its country adapter.
 if(fs.existsSync('dist/horn-islands-flags.mjs')){const {hornIslandsFlags}=await import('../dist/horn-islands-flags.mjs');for(const set of Object.values(hornIslandsFlags))for(const flag of Object.values({...set.firstFlags,...set.detailFlags}))images[flag.file]=flag;}
+const majorCities='dist/data/major-city-flag-sources.json';
+if(fs.existsSync(majorCities))Object.values(read(majorCities).flags).forEach(add);
 const regional='dist/data/regional-flag-sources.json';
 if(fs.existsSync(regional))Object.values(read(regional).flags).forEach(add);
 const liberia='dist/data/liberia-flag-sources.json';
